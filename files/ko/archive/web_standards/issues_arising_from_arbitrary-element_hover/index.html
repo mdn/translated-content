@@ -1,0 +1,66 @@
+---
+title: Issues Arising From Arbitrary-Element hover
+slug: Archive/Web_Standards/Issues_Arising_From_Arbitrary-Element_hover
+tags:
+  - CSS
+translation_of: Archive/Web_Standards/Issues_Arising_From_Arbitrary-Element_hover
+---
+<p><span class="comment">Summary: Thanks to long-standing limitations, we're used to thinking of hover styles as applying only to hyperlinks, which has led to some sloppy authoring practices that are now causing problems for some Web sites. This technote explains the source of the problems and how to avoid encountering them.</span></p>
+<p>많은 저자들이 링크의 스타일을 위해서 CSS 슈도(pseudo)-클래스 <code>:hover</code>를 사용하고 있습니다. 처음 마이크로소프트 인터넷 익스플로러로 소개되고, 이후 CSS규약으로 받아들여진 이 혁신적인 클래스는 텍스트 링크를 스타일화 하는데, 특히, 자바스크립트로 구현되는 "롤오버(rollovers)"같은 모습과 작동을 하도록 하는 곳에 인기있게 사용되고 있습니다. 그러나 브라우저들에서 CSS지원의 이러한 향상은 몇몇 페이지에서 예기치않게 심한 호버링 현상(또는, 호버링시 반응, hovering behavior)을 야기해 왔습니다.</p>
+<h3 id="Hover_.EA.B7.B8.EB.A6.AC.EA.B3.A0_.EB.B9.84-.EB.A7.81.ED.81.AC_.EC.97.98.EB.A6.AC.EB.A8.BC.ED.8A.B8.EB.93.A4" name="Hover_.EA.B7.B8.EB.A6.AC.EA.B3.A0_.EB.B9.84-.EB.A7.81.ED.81.AC_.EC.97.98.EB.A6.AC.EB.A8.BC.ED.8A.B8.EB.93.A4">Hover 그리고 비-링크 엘리먼트들</h3>
+<p><a class="external" href="http://www.w3.org/TR/CSS2/selector.html#x36">Section 5.11.3 of CSS2</a>는 세개의 동적 슈도-클래스들(<code>:hover</code>, <code>:active</code>, 그리고 <code>:focus</code>)을 정의하고 다음과 같이 언급하고 있습니다:</p>
+<blockquote>
+ CSS 는 어떤 엘리먼트들에게 위의 상태들(states)이 허용될 수 있을 지 또 어떻게 각 상태에 진입하고 빠져나갈 수 있는지 정의하지 않는다. 스크립팅으로 엘리먼트들이 사용자 이벤트들에 반응할지, 안 할지를 변경할 수 있으며, 각각의 장치와 UA들은 각기 다른 방식으로 엘리먼트들을 가리키거나 또는 작동시킬 수 있다.</blockquote>
+<p>따라서, 저자들이 보통 이들 상태들이 배타적으로 하이퍼링크에만 적용되는 것으로 생각하지만, CSS2는 그렇게 한정지어 놓고 있지 않습니다. 어떤 엘리먼트도, 이론상, 위의 3 상태중의 하나가 될 수 있으며, 따라서 이 상태들에 근거해거 스타일 지워질 수 있습니다. 과거에는 이렇지 않았습니다.</p>
+<h3 id=".EC.88.9C.28bare.29_.EC.8A.88.EB.8F.84.28Pseudo.29-.ED.81.B4.EB.9E.98.EC.8A.A4" name=".EC.88.9C.28bare.29_.EC.8A.88.EB.8F.84.28Pseudo.29-.ED.81.B4.EB.9E.98.EC.8A.A4">순(bare) 슈도(Pseudo)-클래스</h3>
+<p>두번째 문제는 선별자내의 "순" 슈도-클래스의 효과를 고려할 때 생기게 됩니다. 예를 들면:</p>
+<pre>:hover {color: red;}</pre>
+<p>이것은 다음의 CSS2 규칙과 동등합니다:</p>
+<pre>*:hover {color: red;}</pre>
+<p>..이들은 "위에 마우스 포인터가 놓이게 되는(being hovered) 어떤 엘리먼트든 표면색(foreground color)으로 붉은색을 가져야만 한다"라고 옮길 수 있습니다. 따라서 문서내의 단락, 표, 표제어 그리고 다른 어떤 엘리먼트위로 (포인터가) 떠 있게 되면 텍스트가 붉은색이 되게 할 것입니다.</p>
+<p>흔한 변형예는 순 클래스와 hover 슈도-클래스를 다음과 같이 함께 사용하는 것입니다.</p>
+<pre>.nav:hover {color: red;}</pre>
+<p><code>class</code>값 <code>nav</code>의 인스턴스만이 하이퍼링크들에 적용되는 상황에선 아무 문제가 없을 것입니다. 그러나, 이 유형의 규칙들은 보통 아래와 같은 마크업(markup)과 결부되어 나타납니다.</p>
+<pre>&lt;td class="nav"&gt;
+&lt;a href="one.html" class="nav"&gt;one&lt;/a&gt; |
+&lt;a href="two.html" class="nav"&gt;two&lt;/a&gt; |
+&lt;a href="thr.html" class="nav"&gt;three&lt;/a&gt; |
+&lt;a href="fou.html" class="nav"&gt;four&lt;/a&gt;
+&lt;/td&gt;</pre>
+<p>둘러싸고 있는 표의 셀이 <code>nave</code> <code>class</code>를 가지고 있기때문에 사용자가 마우스 포인터를 표의 셀안의 어느 곳으로든 움직이게 되면 수직-바 문자들은 붉은 색이 될것이며, 링크들도 그들 위로 (포인터가) 떠다니게 되면 붉은 색으로 바뀔 것입니다.</p>
+<h3 id="Gecko_.EC.9E.91.EB.8F.99.EB.B0.A9.EC.8B.9D" name="Gecko_.EC.9E.91.EB.8F.99.EB.B0.A9.EC.8B.9D">Gecko 작동방식</h3>
+<p>20020410 이후의 넷스케이프 Gecko 빌드(넷스케이프 6.1+)에 기반을 둔 브라우저들에선, <code>:hover</code> 스타일이 문서안의 어느 엘리먼트에든 적용될 수 있습니다. 따라서, 순 슈도-클래스들을, 또는 순 클래스와 슈도-클래스의 조합을 사용해온 저자들은 hover 스타일이 링크들 이상으로 적용되어 보여질 위험이 있습니다. 가장 믿을 만한 수정안은 다음과 같이 선별자들에 앵커 엘리먼트를 더하는 것입니다.</p>
+<pre>a:hover {color: red;}
+a.nav:hover {color: red;}</pre>
+<p>레거시(legacy) 문서들에의 문제야기를 피하기 위해서, 모질라 1.0 과 그 이후 버전(넷스케이프 7+)에 기반한 브라우저들은 문서를 "특별(quirks)"모드로 렌더링할 경우 순 슈도-클래스들이 링크에만 한정되도록 하는 코드를 포함하고 있습니다. 모질라 1.3b와 그 이후 버전에서 발견되는 엔진에 기반을 둔 브라우저들에선, 이 특별 모드를 확장해서 순 클래스 선별자와 <code>:hover</code> 슈도-클래스를 조합하는 선별자들을 커버하도록 하고 있습니다.</p>
+<h3 id=".EC.9D.B4.EB.A6.84.EC.9D.B4_.EC.A3.BC.EC.96.B4.EC.A7.84_.EC.95.B5.EC.BB.A4_.EB.AC.B8.EC.A0.9C.EB.93.A4" name=".EC.9D.B4.EB.A6.84.EC.9D.B4_.EC.A3.BC.EC.96.B4.EC.A7.84_.EC.95.B5.EC.BB.A4_.EB.AC.B8.EC.A0.9C.EB.93.A4">이름이 주어진 앵커 문제들</h3>
+<p>위에 기술한 효과들에 더해서, 저자들이 예상치 못할 수 있는 두개의 다른 상대적으로 흔한 현상들이 있습니다. 하나는 validation으로 쉽게 고칠 수 있으나, 다른 문제는 좀더 까다롭습니다.</p>
+<p>첫번째로, 이름이 주어진 앵커를 열고서는 닫지 않는 저자로부터 문제가 생깁니다. 예를 들면:</p>
+<pre>&lt;a name="pagetop"&gt;
+&lt;h2&gt;My Page&lt;/h2&gt;</pre>
+<p><code>&lt;/a&gt;</code>없이 이 이름은 문서의 나머지 부분들 모두에 영향을 끼칠 것입니다. 더 일반적으로 말하자면, 문서의 나머지 부분들이 hover 스타일을 가지게 될 것이라는 것입니다. 다음 규칙의 효과를 생각해 보세요:</p>
+<pre>a:hover {color: red;}</pre>
+<p>닫히지 않은 이름이 주어진 앵커가 있는 문서에서, 앵커의 열린 택이후에 나오는 모든 텍스트는 (다른 CSS 규칙이 끼워들지 않는 한) 붉은 색이 될것입니다.</p>
+<p>이는 두번째 흔한 문제를 불러오는 데, 그것은 이름이 주어진 앵커들이 hover스타일을 허용할 수 있다는 것입니다. 비록 저자가 선별자 <code>a:hover</code>가 하이퍼링크에만 적용되도록 의도한다 해도,선별자는 이름이 주어진 앵커에도 적용될 것입니다. 왜냐하면 선별자가 단순히 hover 상태에 있는 모든 <code>a</code> 엘리먼트들을 스타일화 할 것을 선언하고 있기 때문입니다. 이 문제를 피하기 위해서, CSS2가 기술하고 있는 조합된 슈도-클래스 문법(the combined pseudo-class syntax)을 사용해야 합니다:</p>
+<pre>a:link:hover {color: red;}
+a:visited:hover {color: maroon;}</pre>
+<p>이 구문에서 링크들에 마우스가 놓여졌을 때 방문된 그리고 아직 방문하지 않은 링크들이 다르게 스타일화 될 수 있다는 점을 볼 수가 있습니다. 이것은 단순한 <code>a:hover</code>로는 불가능 했습니다. 물론, 선별자 <code>a:link:hover</code>는 오직 아직 방문하지 않은 링크에만 적용될 것입니다. 따라서, 같은 hover스타일이 방문된 그리고 아직 방문하지 않은 링크 모두에 적용되기를 원한다면, 두 선별자를 하나의 규칙으로 그룹지어 놓아야 합니다.</p>
+<h3 id=".EA.B6.8C.EA.B3.A0_.EC.82.AC.ED.95.AD" name=".EA.B6.8C.EA.B3.A0_.EC.82.AC.ED.95.AD">권고 사항</h3>
+<p>예상치 못한 문제들을 피하기 위해서 하이퍼링크에 적용될 동적-상태(dynamic-state) 슈도-클래스(pseudo-class) 내에 엘리먼트 이름을 포함시킬 것을
+ <i>
+  강력하게</i>
+ 권합니다. 더나아가, 슈도-클래스들을 조합하는 것은 호버(hover) 스타일이 비-하이퍼링크 앵커에 적용되는 것을 막아줍니다. 따라서, 단지 <code>:hover</code> 대신 항상 <code>a:hover</code>이 사용되어야 하며, <code>a:link:hover</code> (그리고 <code>a:visited:hover</code>)이 보다 단순한 a:hover보다 선호됩니다.</p>
+<h3 id=".EA.B4.80.EB.A0.A8_.EB.A7.81.ED.81.AC.EB.93.A4" name=".EA.B4.80.EB.A0.A8_.EB.A7.81.ED.81.AC.EB.93.A4">관련 링크들</h3>
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS2/selector.html#x36">The dynamic pseudo-classes: :hover, :active, and :focus</a></li>
+</ul>
+<div class="originaldocinfo">
+ <h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+ <ul>
+  <li>Author(s): Eric A. Meyer, Netscape Communications</li>
+  <li>Last Updated Date: Published 07 Mar 2003; Revised 21 Mar 2003</li>
+  <li>Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.</li>
+  <li>Note: This reprinted article was originally part of the DevEdge site.</li>
+ </ul>
+</div>
+<p> </p>

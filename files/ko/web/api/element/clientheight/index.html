@@ -1,0 +1,70 @@
+---
+title: Element.clientHeight
+slug: Web/API/Element/clientHeight
+translation_of: Web/API/Element/clientHeight
+---
+<p>{{ APIRef() }}</p>
+
+<p><code>읽기 전용 속성인<strong> Element.clientHeight</strong>은</code> 엘리먼트의 내부 높이를 픽셀로 반환합니다. 이 내부 높이라는 것은 내부 여백(padding)을 포함하지만, 수평 스크롤바의 높이, 경계선, 또는 외부 여백(margin)은 포함하지 않습니다.</p>
+
+<p><code>clientHeight는 CSS상의 높이 + CSS상의 내부 여백 - 수평 스크롤바의 높이(존재하는 경우에만)로 </code> 계산됩니다.</p>
+
+<div class="note">
+<p><strong>Note:</strong> 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면, {{ domxref("element.getBoundingClientRect()") }}을 사용하시기 바랍니다.</p>
+</div>
+
+<h2 id="Syntax_and_values" name="Syntax_and_values">구문</h2>
+
+<pre class="syntaxbox">var <var>h</var> = <var>element</var>.clientHeight;</pre>
+
+<p><code><var>h는</var></code> 엘리먼트의 높이를 나타내는 픽셀 단위의 integer입니다.</p>
+
+<h2 id="Example" name="Example">예</h2>
+
+<div id="offsetContainer" style="margin: 26px 0px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: absolute; left: 260px;">
+<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+
+<p>Gentle, individualistic and very loyal, Birman cats fall between Siamese and Persian in character. If you admire cats that are non aggressive, that enjoy being with humans and tend to be on the quiet side, you may well find that Birman cats are just the felines for you.</p>
+
+<p><span style="float: right;"><img alt="Image:BirmanCat.jpg"></span>All Birmans have colorpointed features, dark coloration of the face, ears, legs and tail.</p>
+
+<p>Cat image and text coming from <a class="external" href="http://www.best-cat-art.com/" rel="freelink">http://www.best-cat-art.com/</a></p>
+
+<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
+</div>
+<strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;">Left</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -20px;">Top</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong><em>margin-top</em><em>margin-bottom</em><em>border-top</em><em>border-bottom</em></div>
+
+<p style="margin-top: 270px;"> </p>
+
+<h2 id="Specification" name="Specification">스펙 정의</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">스펙</th>
+   <th scope="col">상태</th>
+   <th scope="col">코멘트</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-htmlelement-clientheight', 'clientheight')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Notes" name="Notes">주의</h3>
+
+<p><code>clientHeight는 </code>Internet Explorer의 객체 모델에서 소개된 속성입니다.</p>
+
+<h2 id="See_Also" name="See_Also">같이 보기</h2>
+
+<ul>
+ <li>{{domxref("Element.offsetHeight")}}</li>
+ <li>{{domxref("Element.scrollHeight")}}</li>
+ <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Determining_the_dimensions_of_elements">MSDN Determining the dimensions of elements</a></li>
+</ul>

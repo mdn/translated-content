@@ -1,0 +1,119 @@
+---
+title: Provare le modifiche al codice di Gaia
+slug: Archive/B2G_OS/Guida_rapida_allo_sviluppo_di_Gaia/Testing_Gaia_code_changes
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guide
+  - Integrazione
+  - Performance
+  - Testing
+translation_of: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+---
+<div class="summary">
+<p><span class="seoSummary">Prima di sottomettere una patch al progetto dovrai eseguire alcune procedure di test per verificare che le modifiche che hai apportato al codice siano realmente funzionanti, e lo siano con tutto il resto del codice di Gaia. Questo articolo spiega come.</span></p>
+</div>
+
+<p>La procedura di test generalmente consiste in:</p>
+
+<ul>
+ <li>Procedura di debugging standard</li>
+ <li>Esecuzione di test automatici</li>
+</ul>
+
+<p>Esaminiamole ora entrambe.</p>
+
+<h2 id="Debugging_standard">Debugging standard</h2>
+
+<p>Se sei uno sviluppatore web esperto debuggare il codice potrebbe risultare un processo familiare. Abbiamo già discusso come <a href="https://developer.mozilla.org/it/Firefox_OS/Guida_rapida_allo_sviluppo_di_Gaia/Running_the_Gaia_codebase">eseguire il codice di Gaia</a> tramite Firefox e come <a href="/en-US/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes#Simple_code_change_example">m</a><a href="https://developer.mozilla.org/en-US/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes">odificare il codice di Gaia</a>. Per modifiche più complesse farai sicuramente un uso maggiore degli strumenti di debugging messi a disposizione da Firefox.</p>
+
+<p><strong>Nota</strong>: Ulteriori informazioni sull'utilizzo di questi strumenti sono disponibili nella nostra <a href="/en-US/docs/Tools">zona degli strumenti</a>.</p>
+
+<h2 id="Test_automatici">Test automatici</h2>
+
+<p>Prima di sottomettere una patch, dovrai eseguire la sequenza di test standard automatici abbinati a Gaia <span id="result_box" lang="it"><span class="hps">per assicurarti che le</span> <span class="hps">modifiche al codice</span> <span class="hps">non incidano negativamente</span> <span class="hps">su nessuna delle</span> <span class="hps">funzionalità essenziali</span> offerte dal <span class="hps">telefono</span><span>.</span> <span class="hps">I test</span> <span class="hps">che si possono eseguire</span> <span class="hps">sono</span></span>:</p>
+
+<ul>
+ <li>unit testing</li>
+ <li>test di integrazione</li>
+ <li>test prestazionali</li>
+ <li>test sulla UI</li>
+</ul>
+
+<p>Noi generalmente ti chiediamo di eseguire i test prima di sottomettere una patch; se sei alla tua prima esperienza puoi anche sottomettere senza eseguire i test, ma devi chiedere aiuto per poterli eseguire in futuro. Devi aggiornare il repository di Gaia per assicurarti di avere l'ultima versione.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Puoi trovare maggiori informazioni alla pagina <a href="/en-US/Firefox_OS/Platform/Automated_testing">test automatici di Firefox OS</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Dovresti prendere in considerazione di eseguire ciascun set di test su un dispositivo reale se disponibile (alcune funzionalità non sono supportate su un emulatore), in alternativa puoi utilizzare l'emultare B2G Desktop o Firefox Nightly.</p>
+</div>
+
+<h3 id="Unit_testing">Unit testing</h3>
+
+<p>Gli unit testing sono test che vengono eseguiti sulle singole unità di codice di una più grande applicazione - nel caso di Gaia, le singole app. Gaia utilizza:</p>
+
+<ul>
+ <li><a href="http://visionmedia.github.io/mocha/">mocha</a> come framework per i test</li>
+ <li><a href="http://chaijs.com/api/assert/">chai</a> come libreria per le asserzioni</li>
+ <li><a href="http://sinonjs.org/">sinon.js</a> come libreria per mock object e stub</li>
+ <li><a href="http://blanketjs.org/">blanket.js</a> come stumento di gestione della copertura dei test</li>
+</ul>
+
+<p>Puoi utilizzare il seguente comando per scaricare, installare e avviare un server di unit testing (le operazioni impiegano alcuni minuti, potrebbe essere un buon momento per una tazza di caffè):</p>
+
+<pre class="brush: bash">DEBUG=1 make
+export FIREFOX=/Applications/FirefoxNightly.app/Contents/MacOS/firefox
+bin/gaia-test</pre>
+
+<p>Verrà aperta una pagina web locale con una lista di unit testing. Per eseguirli:</p>
+
+<ul>
+ <li>Seleziona i test che vuoi eseguire dalla lista presente nella pagina (apparirà un asterisco a fianco)</li>
+ <li>Clicca il tasto "Execute"</li>
+ <li>Vai alla fine della pagina per vedere i risultati</li>
+</ul>
+
+<p>Con la finestra aperta, puoi eseguire l'intera suite di test tramite il seguente comando:</p>
+
+<pre class="brush: bash">make test-agent-test</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: Questa azione può richiedere molto tempo in quanto verranno eseguiti parecchi test (anche un'ora o più), ti converrebbe eseguire solo i test sulla app che hai mdificato. Potrai farlo aggiungendo <code>APP=&lt;app nome cartella&gt;</code> al comando precedente, per esempio <code>APP=settings</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Per ulteriori informazioni puoi leggere l'articolo <a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests">uniit testing di Gaia</a>.</p>
+</div>
+
+<h3 id="Test_di_integrazione">Test di integrazione</h3>
+
+<p>I test di integrazione prevedono il testing di differenti unità di codice assieme per verificare la correttezza dell'interazione fra le stesse, logicamente questo step avviene successivamente agli unit testing. I test di integrazione di Gaia sono gestiti tramite uno script <em>marionette</em> scritto in JavaScript e un server basato su python. Il server può comunicare con Gecko quindi è possibile controllare sia il browser che il dispositivo Firefox OS, facendoli interagire l'un l'altro.</p>
+
+<p>Puoi eseguire il seguente comando per avviare i test di integrazione:</p>
+
+<pre class="brush: bash">make test-integration</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: Analogamente agli unit testing, eseguire i test di integrazione completi può richiedere parecchio tempo, puoi aggiungere <code>APP=&lt;app nome cartella&gt;</code> al comando precedente per provare una singola app, per esempio <code>APP=calendar</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: per eseguire test di integrazione su dispositivi differenti (non smartphone) aggiungi GAIA_DEVICE_TYPE=&lt;device type name&gt; al precedente comando per specificare la tipologia di dispositivo, per esempio GAIA_DEVICE_TYPE=tv. Se non lo farai il test potrà fallire.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: per ulteriori informazioni puoi leggere l'articolo sui <a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">test di integrazione di Gaia</a>.</p>
+</div>
+
+<h3 id="Test_prestazionali">Test prestazionali</h3>
+
+<p>I test prestazionali di Gaia vengono eseguiti utilizzando il tool esterno <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Raptor">Raptor CLI tool</a>. Tramite Raptor puoi automatizzare l'esecuzione di un applicazione più volte e ottenere statistiche sui tempi di caricamento. Dopo aver eseguito un test, Raptor inoltre mostra l'utilizzo di memoria dell'applicazione.</p>
+
+<p>Per utilizzare Raptor, per favore leggi il seguente articolo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Raptor#Getting_Started">Raptor: Getting Started.</a></p>
+
+<h3 id="Test_sulla_UI">Test sulla UI</h3>
+
+<p>Fai riferimento all'articolo <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">introduzione ai test sulla UI di Gaia</a>.</p>

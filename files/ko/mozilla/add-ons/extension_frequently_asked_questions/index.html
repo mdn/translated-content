@@ -1,0 +1,59 @@
+---
+title: Extension Frequently Asked Questions
+slug: Mozilla/Add-ons/Extension_Frequently_Asked_Questions
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Extension_Frequently_Asked_Questions
+---
+<h3 id=".EB.94.94.EB.B2.84.EA.B9.85" name=".EB.94.94.EB.B2.84.EA.B9.85"><b>디버깅</b></h3>
+<p>확장기능을 디버깅하기 전에<a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">development preferences</a> 를 올바르게 설정하시기를 권장합니다.</p>
+<p>자바스크립트 디버거인 <a href="ko/Venkman">Venkman</a>은 복잡한 디버깅 상황에서 유용한 디버거가 되어 줄 것입니다. 디버깅 하실 때, "Debug -&gt; Exclude Browser Files" 옵션이 활성화 되어 있지 않아야 합니다.</p>
+<p> </p>
+<h4 id=".EC.96.B4.EB.96.BB.EA.B2.8C.ED.95.98.EB.A9.B4_.EC.BD.94.EB.93.9C.EB.82.B4_.EC.97.90.EB.9F.AC.EB.A5.BC_.EB.B3.BC_.EC.88.98_.EC.9E.88.EC.9D.84.EA.B9.8C.3F" name=".EC.96.B4.EB.96.BB.EA.B2.8C.ED.95.98.EB.A9.B4_.EC.BD.94.EB.93.9C.EB.82.B4_.EC.97.90.EB.9F.AC.EB.A5.BC_.EB.B3.BC_.EC.88.98_.EC.9E.88.EC.9D.84.EA.B9.8C.3F"><b>어떻게하면 코드내 에러를 볼 수 있을까?</b></h4>
+<p><a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">preference 의 <b>javascript.options.showInConsole</b>옵션이 <b>true</b> 값이 되도록 설정</a>하시면, 모든 종류의 에러 메시지는 자바스크립트 콘솔을 통해서 보고될 것입니다.</p>
+<h4 id=".EC.96.B4.EB.96.BB.EA.B2.8C.ED.95.98.EB.A9.B4_.ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5.EC.9D.B4_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EB.8F.99.EC.9E.91_.ED.95.98.EB.8A.94.EC.A7.80_.ED.99.95.EC.9D.B8.ED.95.A0_.EC.88.98_.EC.9E.88.EC.9D.84.EA.B9.8C.3F" name=".EC.96.B4.EB.96.BB.EA.B2.8C.ED.95.98.EB.A9.B4_.ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5.EC.9D.B4_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EB.8F.99.EC.9E.91_.ED.95.98.EB.8A.94.EC.A7.80_.ED.99.95.EC.9D.B8.ED.95.A0_.EC.88.98_.EC.9E.88.EC.9D.84.EA.B9.8C.3F"><b>어떻게하면 확장기능이 제대로 동작 하는지 확인할 수 있을까?</b></h4>
+<p><a href="ko/DOM/window.alert">alert()</a> 이나 <a href="ko/DOM/window.dump">dump()</a> 함수, 또는 <a href="ko/NsIConsoleService">nsIConsoleService</a>를 사용하실 수 있습니다.</p>
+<h4 id=".EC.99.9C_.EB.82.B4.EA.B0.80_.EB.A7.8C.EB.93.A0_.EC.8A.A4.ED.81.AC.EB.A6.BD.ED.8A.B8.EB.8A.94_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EB.8F.99.EC.9E.91.ED.95.98.EC.A7.80_.EC.95.8A.EC.9D.84.EA.B9.8C.3F" name=".EC.99.9C_.EB.82.B4.EA.B0.80_.EB.A7.8C.EB.93.A0_.EC.8A.A4.ED.81.AC.EB.A6.BD.ED.8A.B8.EB.8A.94_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EB.8F.99.EC.9E.91.ED.95.98.EC.A7.80_.EC.95.8A.EC.9D.84.EA.B9.8C.3F"><b>왜 내가 만든 스크립트는 제대로 동작하지 않을까?</b></h4>
+<p>만약 스크립트가 예상대로 동작하지 않는다면, 자바스크립트 콘솔의 에러 메시지를 확인해 보시기를 권합니다. (어떻게하면 코드내 에러를 볼 수 있을까? <a href="#.EC.96.B4.EB.96.BB.EA.B2.8C.ED.95.98.EB.A9.B4_.EC.BD.94.EB.93.9C.EB.82.B4_.EC.97.90.EB.9F.AC.EB.A5.BC_.EB.B3.BC_.EC.88.98_.EC.9E.88.EC.9D.84.EA.B9.8C.3F">위에 있음</a>)</p>
+<p>한가지 흔한 실수는 윈도우가 완전히 로드되기 전에, 윈도우에 있는 DOM에 접근하려고 하는 것입니다. 이러한 실수는 초기화 코드가 스크립트내의 상위 레벨에서(다른 말로하면, 함수 밖에서) 실행될때 발생합니다. 이를 찾아내기 위해서는 윈도우가 완전히 로드될때까지 특정 부분의 코드가 실행되지 않도록 해주는 <code>load</code> event listener를 사용하시기 바랍니다.</p>
+<pre class="eval">function exampleBrowserStartup(event)
+{
+  // place your startup code here
+}
+window.addEventListener("load", exampleBrowserStartup, false);
+</pre>
+<h4 id=".EC.9B.B9.ED.8E.98.EC.9D.B4.EC.A7.80.EC.97.90_.EC.9E.88.EB.8A.94_.EB.AC.B8.EC.84.9C.EB.A5.BC_.EC.9D.BD.EC.96.B4.EB.93.A4.EC.9D.BC_.EC.88.98_.EC.97.86.EC.9D.84_.EB.95.8C" name=".EC.9B.B9.ED.8E.98.EC.9D.B4.EC.A7.80.EC.97.90_.EC.9E.88.EB.8A.94_.EB.AC.B8.EC.84.9C.EB.A5.BC_.EC.9D.BD.EC.96.B4.EB.93.A4.EC.9D.BC_.EC.88.98_.EC.97.86.EC.9D.84_.EB.95.8C"><b>웹페이지에 있는 문서를 읽어들일 수 없을 때</b></h4>
+<p>browser.xul 오버레이로 부터 현재 웹페이지의 문서를 가져올 때, 브라우저의 윈도우 문서를 읽어오도록 하는 <code>document</code> 를 사용하는 대신에 브라우저의 윈도우 내에 포함되어 있는 문서를 읽어오도록 하는 <code>content.document</code> 를 사용하시기 바랍니다. 보다 자세한 내용은 <a href="ko/Working_with_windows_in_chrome_code#Content_windows">Working with windows in chrome code</a> 에서 확인하실 수 있습니다.</p>
+<p>또한, <a href="ko/XPCNativeWrapper">XPCNativeWrapper</a>는 기본적으로 웹페이지에 있는 script-defined 객체에 접근하는 것과 그 외 다른 것들을 하지 못 하도록 방지해 줍니다.</p>
+<p> </p>
+<h4 id="XML_.ED.8C.8C.EC.8B.B1.EC.97.90.EB.9F.AC.EA.B0.80_.EB.82.AC.EC.A7.80.EB.A7.8C.2C_.ED.8C.8C.EC.9D.BC.EC.97.90_.EB.AC.B8.EC.A0.9C.EA.B0.80_.EC.97.86.EC.96.B4_.EB.B3.B4.EC.9D.BC_.EB.95.8C" name="XML_.ED.8C.8C.EC.8B.B1.EC.97.90.EB.9F.AC.EA.B0.80_.EB.82.AC.EC.A7.80.EB.A7.8C.2C_.ED.8C.8C.EC.9D.BC.EC.97.90_.EB.AC.B8.EC.A0.9C.EA.B0.80_.EC.97.86.EC.96.B4_.EB.B3.B4.EC.9D.BC_.EB.95.8C"><b>XML 파싱에러가 났지만, 파일에 문제가 없어 보일 때</b></h4>
+<p>일반적으로 파싱에러(<font color="red">붉은색 문구</font>와 붉은색 밑줄<font color="red">-------------^</font>로 표시됨)는 XML에서 의미있게 사용되는 특정한 문자나 속성 값이 소스코드내에서 잘 못 사용됐을 때 발생합니다. 예를들면,</p>
+<pre class="eval">&lt;button oncommand="window.open('<span class="nowiki">http://example.com/</span>q?param1=value<b>&amp;param2</b>=val2')"/&gt;
+</pre>
+<p>또는,</p>
+<pre class="eval">&lt;script&gt;function lesser(a,b) { return <b>a &lt; b</b> ? a : b; }&lt;/script&gt;
+</pre>
+<p>이러한 문제는 다음과 같은 방법으로 해결될 수 있습니다.</p>
+<ol>
+ <li>에러가 발생한 문자를 XML에서 특정한 의미로 사용되지 않는 표현으로 바꾸십시오. (예: "&amp;" -&gt; "&amp;amp;", "&lt;" -&gt; "&amp;lt;")</li>
+ <li>(만일 텍스트 노드라면, 이를테면 스크립트) CDATA 태그로 텍스트 노드를 에워싸십시오:
+  <pre>&lt;script&gt;&lt;![CDATA[
+   function lesser(a,b) {
+     return a &lt; b ? a : b;
+   }
+ ]]&gt;&lt;/script&gt;</pre>
+ </li>
+ <li>스크립트를 다른 파일로 저장한 후, 이를 포함시키도록 하는 코드를 삽입하십시오:
+  <pre>&lt;script type="application/x-javascript" src="our.js"/&gt;</pre>
+ </li>
+</ol>
+<p> </p>
+<h3 id=".EC.98.88.EC.A0.9C_.EC.BD.94.EB.93.9C" name=".EC.98.88.EC.A0.9C_.EC.BD.94.EB.93.9C"><b>예제 코드</b></h3>
+<p>무엇인가 유용한 동작을 구현하기 위해서 필요한 코드가 있다면, 가장 쉬운 방법은 이미 그러한 동작을 구현한 확장기능 (또는 Mozilla의 일부분)을 찾아내어 살펴보는 것입니다. (XPI와 JAR 파일은 ZIP 포멧을 사용합니다.)</p>
+<p>이와 관련된 문서는 <a>the list of extension-related articles on MDC</a> 와 <a class="external" href="http://kb.mozillazine.org/Category:Example_code">Example code page on MozillaZine</a>에서 찾아 보실수 있습니다.</p>
+<p> </p>
+<h3 id=".EB.8F.84.EC.9B.80.EC.9D.84_.EC.96.BB.EC.9D.84_.EC.88.98_.EC.9E.88.EB.8A.94_.EA.B3.B3" name=".EB.8F.84.EC.9B.80.EC.9D.84_.EC.96.BB.EC.9D.84_.EC.88.98_.EC.9E.88.EB.8A.94_.EA.B3.B3"><b>도움을 얻을 수 있는 곳</b></h3>
+<p><a href="ko/Extensions/Other_Resources">Extensions:Other Resources</a> 와 <a href="ko/Extensions/Community">Extensions:Community</a>를 꼭 읽어 주십시오.</p>
+<p>도움을 청하시기 전에, <a href="#.EB.94.94.EB.B2.84.EA.B9.85">디버깅</a>과 <a href="#.EC.96.B4.EB.96.BB.EA.B2.8C.ED.95.98.EB.A9.B4_.ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5.EC.9D.B4_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EB.8F.99.EC.9E.91_.ED.95.98.EB.8A.94.EC.A7.80_.ED.99.95.EC.9D.B8.ED.95.A0_.EC.88.98_.EC.9E.88.EC.9D.84.EA.B9.8C.3F">자바스크립트 콘솔</a>의 내용을 읽어주십시오. 또한, 질문을 하시기 전에, 질문에 대한 간단한 검색을 해주실 것과 자주묻는질문(FAQ)을 읽어주시길 부탁드립니다.</p>
+<p>{{ languages( { "es": "es/Preguntas_frecuentes_sobre_Extensiones", "fr": "fr/Foire_aux_questions_sur_les_extensions", "it": "it/Domande_frequenti_sulle_Estensioni", "ko": "ko/\ud655\uc7a5\uae30\ub2a5\uc5d0_\uad00\ud55c_\uc790\uc8fc\ud558\ub294_\uc9c8\ubb38" } ) }}</p>

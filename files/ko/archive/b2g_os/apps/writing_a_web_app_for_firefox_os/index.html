@@ -1,0 +1,25 @@
+---
+title: Writing a web app for Firefox OS
+slug: Archive/B2G_OS/Apps/Writing_a_web_app_for_Firefox_OS
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>B2G 앱은 HTML, CSS, Javascript 로 작성된 웹앱입니다. 다른 일반적인 웹 사이트를 공개하는 것과 같이 웹 상에 배포할 수 있습니다. 웹 사이트를 단말에 웹앱으로 설치 가능하게 하려면, 아래 설명에 따라 매니페스트를 꾸며야하고 설치 버튼과 연결해야 합니다.</p>
+<p>우선 아래의 기사를 먼저 읽는 것을 추천합니다.</p>
+<ul>
+  <li><a href="/en-US/docs/Apps/Getting_Started">Getting started with making apps</a></li>
+  <li><a href="/en-US/docs/Apps/Manifest">App manifest</a></li>
+</ul>
+<p>물론, <a href="/en-US/docs/Apps">Open Web Apps 에 대해 보다 깊게 배우기</a>도 좋을 것입니다.</p>
+<h2 id="Installing_the_Web_app">Installing the Web app</h2>
+<p>앱과 매니페스트를 웹 상에 배포한 뒤, Gecko 에 인식시킬 필요가 있습니다. 설치 시, Gecko 는 매니페스트의 내용을 읽고 홈 화면에 아이콘을 추가하는 등 필요한 처리를 합니다.</p>
+<p>앱을 인스톨하려면, <a href="/en-US/docs/Apps/Apps_JavaScript_API/navigator.mozApps.install"><code>navigator.mozApps.install</code> API</a> 를 호출해야합니다. 아래는 앱을 스스로 배포하는 경우 앱에 포함되는 설치 버튼에 대한 예제입니다.</p>
+<pre>&lt;script&gt;
+var manifest_url = "http://my.webapp.com/manifest.json";
+&lt;/script&gt;
+
+&lt;button onclick="navigator.mozApps.install(manifest_url); return false;"&gt;
+  Install this awesome app on your homescreen!
+&lt;/button&gt;
+</pre>
+<p>Note: 설치 버튼은 <a href="/en-US/docs/Apps/Submitting_an_app">Firefox Marketplace</a> 와 같은 앱 마켓에서 찾을 수 있습니다. 그러나 사이트의 메인 페이지에 "Install as web app" 버튼이 있다면 아주 편리할 것입니다.</p>
+<p>이제 B2G 브라우저 앱으로 웹 사이트에 방문하고 인스톨 버튼을 눌러보세요.</p>

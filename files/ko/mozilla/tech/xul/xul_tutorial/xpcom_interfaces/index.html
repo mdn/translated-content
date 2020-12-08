@@ -1,0 +1,187 @@
+---
+title: XPCOM Interfaces
+slug: Mozilla/Tech/XUL/XUL_Tutorial/XPCOM_Interfaces
+tags:
+  - XPConnect
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Interfaces
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Box_Objects" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:XPCOM_Examples">다음  »</a></p>
+</div><p></p>
+
+<p>이번 단원에서는, Mozilla가 사용하는 객체 시스템인 <a href="ko/XPCOM">XPCOM</a> (Cross-platform Component Object Model)에 대해 간단히 알아보겠습니다.</p>
+
+<h3 id=".EB.84.A4.EC.9D.B4.ED.8B.B0.EB.B8.8C_.EA.B0.9D.EC.B2.B4_.ED.98.B8.EC.B6.9C.ED.95.98.EA.B8.B0" name=".EB.84.A4.EC.9D.B4.ED.8B.B0.EB.B8.8C_.EA.B0.9D.EC.B2.B4_.ED.98.B8.EC.B6.9C.ED.95.98.EA.B8.B0">네이티브 객체 호출하기</h3>
+
+<p>우리는 XUL을 사용해서 복잡한 사용자 인터페이스를 작성할 수 있습니다. 또한, 인터페이스를 변경하고 어떤 작업을 수행하는 스크립트를 붙일 수도 있습니다. 그러나 아직도 JavaScript를 이용해서 직접적으로 수행할 수 없는 많은 것들이 존재합니다. 예를 들어, 메일 응용프로그램을 작성하고자 한다면, 메일 서버에 접속해서 메일을 보내거나 받을 수 있는 스크립트를 작성해야 할 것입니다. 그러나 JavaScript로는 이러한 것들을 할 수 없습니다.</p>
+
+<p>이러한 기능을 처리할 수 있는 유일한 방법은 메일을 주고 받을 수 있는 네이티브(native) 코드를 작성하는 것입니다. 또한 작성된 네이티브 코드를 스크립트에서 손쉽게 호출할 수 있는 방법도 있어야 할 것입니다. Mozilla는 <a href="ko/XPCOM">XPCOM</a> (Cross-platform Component Object Model)을 사용해 이러한 것들을 수행할 수 있는 방법을 제공합니다.</p>
+
+<div class="note">
+<p>Mozilla에서는 많은 수의 XPCOM 컴포넌트와 인터페이스를 제공합니다. 따라서 대부분의 경우 직접 네이티브 코드를 작성할 필요는 없을 것입니다. 이번 단원을 학습한 후에 <a class="external" href="http://xulplanet.com/references/xpcomref/">XULPlanet XPCOM Reference</a>를 보면서 필요한 인터페이스를 찾을 수 있을 것입니다.</p>
+</div>
+
+<h3 id="XPCOM.EC.97.90_.EA.B4.80.ED.95.98.EC.97.AC" name="XPCOM.EC.97.90_.EA.B4.80.ED.95.98.EC.97.AC">XPCOM에 관하여</h3>
+
+<p>Mozilla는 각각의 고유한 작업을 수행하는 컴포넌트들의 집합으로 구성되어 있습니다. 예를 들어, 메뉴, 버튼, 요소들에 해당하는 컴포넌트가 있습니다. 컴포넌트들은 인터페이스라고 불리는 정의들로부터 구축됩니다.</p>
+
+<p>Mozilla에서의 인터페이스는 컴포넌트들에 의해 구현되어야 하는 기능들의 집합입니다. 컴포넌트는 무엇인가를 수행하는 Mozilla에 있는 코드를 구현한 것입니다. 각각의 컴포넌트는 인터페이스에 서술된데로 기능을 구현합니다. 단일 컴포넌트가 여러 개의 인터페이스를 구현할 수도 있고, 여러 개의 컴포넌트들이 하나의 인터페이스를 구현할 수도 있습니다.</p>
+
+<p>파일 컴포넌트를 예로 들어 보겠습니다. 인터페이스는 파일이 수행할 수 있는 함수와 속성을 서술하여 작성할 필요가 있을 것입니다. 파일에는 이름, 수정일자, 크기와 같은 속성과 파일의 이동, 복사, 삭제를 수행하는 함수가 포함되어야 할 것입니다.</p>
+
+<p>파일 인터페이스는 파일의 특성에 대해서만 서술하고, 이를 구현하지는 않습니다. 파일 인터페이스의 구현은 컴포넌트의 몫입니다. 컴포넌트는 파일의 이름과 날짜, 크기 등을 가져올 수 있는 코드를 가질 것입니다. 또한 파일을 복사하거나 이름을 바꾸는 코드도 있을 것입니다.</p>
+
+<p>컴포넌트가 인터페이스를 올바르게 구현했다면 어떻게 구현되는지에 대해서는 신경쓰지 않아도 됩니다. 물론 플랫폼에 따라 서로 다른 구현이 있을 것입니다. 파일 컴포넌트의 Windows와 Macintosh 버전은 꽤 틀릴 것입니다. 그러나 그들은 모두 동일한 인터페이스를 구현할 것입니다. 따라서 우리는 인터페이스를 통해 알게 된 함수로 접근함으로서 해당 컴포넌트를 사용할 수 있습니다.</p>
+
+<p>Mozilla에서 인터페이스 이름을 쉽게 알아볼 수 있도록, 보통 'nsI', 'mozI'가 이름 앞에 붙습니다. 예를 들어 <code>nsIAddressBook</code>는 주소록과 관련된 인터페이스이며, <code>nsISound</code>는 음악 파일을 플레이 하는데 사용되며, <code>nsILocalFile</code>는 파일을 사용하는 것과 관련된 인터페이스 입니다. Mozilla에 있는 많은 인터페이스에 대해서는 <a href="ko/Interfaces">인터페이스</a>를 참조하세요.</p>
+
+<p>XPCOM 컴포넌트는 대부분 네이티브 코드로 구현되어 있으며, 이는 JavaScript가 자체적으로는 하지 못하는 것들을 할 수 있다는 것을 의미합니다. 그러나 잠시 후 보시겠지만, 이를 호출할 수 있는 방법이 있습니다. 우리는 인터페이스에서 기술한데로 이를 구현한 컴포넌트에서 제공되는 어떤 함수도 호출할 수 있습니다. 예를 들어 어떤 컴포넌트를 가지고 있다면, 그것이 <code>nsISound</code> 인터페이스를 구현하는지 검사할 수 있으며, 그렇다면 그것을 통해 음악을 플레이 할 수 있습니다.</p>
+
+<p>스크립트에서 XPCOM을 호출하는 절차를 <a href="ko/XPConnect">XPConnect</a>라고 부르며, 이는 스크립트 객체를 네이티브 객체로 변환해주는 계층(layer)입니다.</p>
+
+<h3 id="XPCOM_.EA.B0.9D.EC.B2.B4_.EC.83.9D.EC.84.B1" name="XPCOM_.EA.B0.9D.EC.B2.B4_.EC.83.9D.EC.84.B1">XPCOM 객체 생성</h3>
+
+<p>XPCOM 컴포넌트를 호출하는데는 3가지 단계가 있습니다.</p>
+
+<ol>
+ <li>컴포넌트를 얻는다.</li>
+ <li>사용하고자 하는 인터페이스를 구현한 컴포넌트의 일부를 얻는다.</li>
+ <li>필요한 함수를 호출한다.</li>
+</ol>
+
+<p>처음 두 단계만 실행하면, 마지막 단계는 필요시마다 반복할 수 있습니다. 우리가 파일 이름을 바꾼다고 합시다. 이를 위해 우리는 <code>nsILocalFile</code> 인터페이스를 사용할 수 있습니다. 첫번째 단계는 파일 컴포넌트를 얻어오는 것입니다. 두번째는 파일 컴포넌트에 질의해서 <code>nsILocalFile</code> 인터페이스를 구현하는 부분은 얻어오는 것입니다. 마지막으로 해당 인터페이스에서 제공하는 함수를 호출합니다. 이 인터페이스는 하나의 파일을 표현하는데 사용됩니다.</p>
+
+<p>우리는 인터페이스 이름이 'nsI'나 'mozI'로 시작하는 것을 자주 봤습니다. 그러나 컴포넌트는 URI와 같은 문자열을 사용해서 참조됩니다. Mozilla는 내부 레지스트리에 사용 가능한 모든 컴포넌트의 목록을 저장하고 있습니다. 사용자는 필요한 경우 새로운 컴포넌트를 설치할 수 있습니다. 이는 플러그인과 아주 비슷하게 동작합니다.</p>
+
+<p>Mozilla에서는 파일 컴포넌트를 제공하며, 이는 <code><a href="ko/NsILocalFile">nsILocalFile</a></code> 인터페이스를 구현합니다. 이 컴포넌트는 <code><a class="link-mailto" href="mailto:'@mozilla.org" rel="freelink">'@mozilla.org</a>/file/local;1'</code>로 참조될 수 있으며 이 문자열을 계약(contract)ID라고 부릅니다. 계약ID의 구문은 다음과 같습니다.</p>
+
+<pre class="eval">@&lt;internetdomain&gt;/module[/submodule[...]];&lt;version&gt;[?&lt;name&gt;=&lt;value&gt;[&amp;&lt;name&gt;=&lt;value&gt;[...]]]
+</pre>
+
+<p>다른 컴포넌트들도 이와 비슷한 방법으로 참조할 수 있습니다.</p>
+
+<p>컴포넌트의 계약ID는 컴포넌트를 얻기 위해 사용할 수 있으며, JavaScript 코드를 사용해 컴포넌트를 얻는 방법은 다음과 같습니다.</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+</pre>
+
+<p>파일 컴포넌트를 얻어와<em>aFile</em> 변수에 저장하였습니다. 예제의 <code><a href="ko/Components_object">Components</a></code>는 컴포넌트와 관련된 함수를 제공하는 범용 객체를 참조합니다. 여기서 우리는 <code>classes</code> 속성으로부터 컴포넌트 클래스를 얻어옵니다. <code>classes</code> 속성은 사용할 수 있는 모든 컴포넌트를 가지고 있는 배열입니다. 다른 컴포넌트를 얻어오려면 대괄호 안에 있는 계약ID를 사용하고자 하는 컴포넌트의 ID로 변경하면 됩니다. 마지막으로 <code>createInstance()</code> 함수를 이용해 인스턴스를 생성하였습니다.</p>
+
+<p>여러분은 <code>createInstance()</code>함수의 반환값이, 컴포넌트가 존재하지 않는다는 것을 의미하는 null이 아닌지 확인하는게 좋습니다.</p>
+
+<p>그러나 이 시점에서 우리는 파일 컴포넌트 자체에 대한 참조만을 얻었을 뿐입니다. 컴포넌트 내의 함수를 호출하기 위해서는 컴포넌트의 인스턴스를 얻어야만 합니다. 이 경우에는 <code><a href="ko/NsILocalFile">nsILocalFile</a></code>로 다음의 두번째 줄에서 필요한 코드가 추가되어 있습니다.</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile) aFile.QueryInterface(Components.interfaces.nsILocalFile);
+</pre>
+
+<p><code>QueryInterface()</code> 는 모든 컴포넌트에서 제공되는 함수로, 해당 컴포넌트의 특정 인터페이스를 얻기 위해 사용됩니다. 이 함수는 얻고자 하는 인터페이스를 명시한 한 개의 인자를 받습니다. <code>Components</code> 객체의 <code>interfaces</code> 속성에는 해당 컴포넌트에서 사용 가능한 모든 인터페이스의 목록이 들어 있습니다. 여기서 우리는 <code>nsILocalFile</code> 인터페이스를 사용하고자 하므로, 이를 <code>QueryInterface()</code>의 인자로 넘겼습니다. 결과적으로 <code>aFile</code> 변수는 파일 컴포넌트에서 nsILocalFile 인터페이스를 구현하는 부분을 참조하게 됩니다.</p>
+
+<p>위의 JavaScript 코드는 아무 컴포넌트의 어떤 인터페이스에서도 사용할 수 있습니다. 코드의 컴포넌트 이름을 사용하고자 하는 컴포넌트와 인터페이스 이름으로 바꿔서 사용하면 됩니다. 또 당연히 변수 이름도 바꿀 수 있습니다. 예를 들어 사운드 인터페이스를 얻으려면 다음과 같이 수정하면 됩니다.</p>
+
+<pre>var sound = Components.classes["@mozilla.org/sound;1"].createInstance();
+if (sound) sound.QueryInterface(Components.interfaces.nsISound);
+</pre>
+
+<p>XPCOM 인터페이스는 다른 인터페이스로부터 상속될 수 있습니다. 다른 인터페이스로부터 상속된 인터페이스는 자신의 함수와 부모 인터페이스가 가진 모든 함수를 가지게 됩니다. 모든 인터페이스는 <code>nsISupports</code>라고 불리는 최상위 인터페이스에서 상속됩니다. 이 인터페이스에는 앞서 보았던 JavaScript를 지원하기 위한 목적인 <code>QueryInterface()</code>라는 한가지 함수만 있습니다. <code>nsISupports</code> 인터페이스가 모든 컴포넌트에 의해 구현되기 때문에, <code>QueryInterface()</code> 함수도 모든 컴포넌트에서 사용할 수 있는 것입니다.</p>
+
+<p>몇몇 컴포넌트들은 동일한 인터페이스를 구현할 수도 있습니다. 그러한 경우 보통은 어떤 클래스의 서브클래스들인 경우이겠지만, 꼭 그래야 하는것은 아닙니다. 아무 컴포넌트나 <code>nsILocalFile</code>의 기능을 구현할 수 있습니다. 또한 하나의 컴포넌트가 여러개의 인터페이스를 구현할 수도 있습니다. 이런 이유들 때문에 위와 같이 두 단계로 진행되는 것입니다.</p>
+
+<p>그러나 위의 코드를 자주 사용하기 때문에 다음과 같이 줄여서도 사용할 수 있습니다.</p>
+
+<pre>var aLocalFile = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+</pre>
+
+<p>이 코드는 앞서의 두줄 짜리 코드와 동일한 일을 하는 한줄 짜리 코드입니다. 여기서는 앞서의 두 단계에 있었던 인스턴스를 생성한 후에 인터페이스를 얻기 위해 쿼리하는 부분이 제거되었습니다.</p>
+
+<p>만일 객체에 <code>QueryInterface()</code>를 호출하고 해당 객체에서 지원하지 않는 인터페이스를 요청하면 예외가 발생합니다. 어떤 컴포넌트에서 어떤 인터페이스가 지원되는지 확신이 없을 경우 이를 확인하기 위해 <code><a href="ko/Core_JavaScript_1.5_Reference/Operators/Special_Operators/instanceof_Operator">instanceof</a></code> 연산자를 사용할 수 있습니다.</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  // do something
+}
+</pre>
+
+<p>위 코드에서 <code>instanceof</code> 연산자는 aFile이 nsILocalFile 인터페이스를 구현하였다면 true를 반환합니다. 이것은 <code>QueryInterface()</code>를 호출하는 것에 대한 부작용이 있으며, 따라서 aFile은 이후에 유효해집니다.</p>
+
+<h3 id=".EC.9D.B8.ED.84.B0.ED.8E.98.EC.9D.B4.EC.8A.A4.EC.9D.98_.ED.95.A8.EC.88.98_.ED.98.B8.EC.B6.9C" name=".EC.9D.B8.ED.84.B0.ED.8E.98.EC.9D.B4.EC.8A.A4.EC.9D.98_.ED.95.A8.EC.88.98_.ED.98.B8.EC.B6.9C">인터페이스의 함수 호출</h3>
+
+<p>이제 우리는 nsILocalFile 인터페이스를 구현한 컴포넌트를 참조하는 객체를 가지고 있으므로, 이로부터 nsILocalFile의 함수를 호출할 수 있습니다. 아래의 표는 nsILocalFile 인터페이스에 있는 함수와 메소드의 일부를 보여주고 있습니다.</p>
+
+<dl>
+ <dt>initWithPath </dt>
+ <dd>이 메소드는 nsILocalFile에서 사용할 파일명과 경로를 초기화하는데 사용됩니다. 첫번째 인자는 '/usr/local/mozilla'와 같은 파일 경로이어야 합니다.</dd>
+ <dt>leafName </dt>
+ <dd>디렉토리 부분을 뺀 파일명.</dd>
+ <dt>fileSize </dt>
+ <dd>파일 크기.</dd>
+ <dt>isDirectory() </dt>
+ <dd>nsILocalFile이 디렉토리이며 true를 반환합니다.</dd>
+ <dt>remove(recursive) </dt>
+ <dd>파일을 삭제합니다. 만일 recursive 인자가 true이면 디렉토리와 이 안에 있는 모든 파일, 하위 디렉토리 모두 삭제됩니다.</dd>
+ <dt>copyTo(directory,newname) </dt>
+ <dd>파일을 다른 디렉토리로 복사하며, 선택적으로 파일명을 바꿀 수 있습니다. directory 인자는 파일이 복사될 디렉토리에 대한 nsILocalFile 객체이어야 합니다.</dd>
+ <dt>moveTo(directory,newname) </dt>
+ <dd>파일을 다른 디렉토리로 이동하거나 이름을 변경합니다. directory 인자는 파일이 이동할 대상 디렉토리에 대한 nsILocalFile 객체이어야 합니다.</dd>
+</dl>
+
+<p>파일을 삭제하기 위해서 먼저 해당 파일을 nsILocalFile에 할당해야 합니다. <code>initWithPath()</code> 메소드를 호출함으로서 어떤 파일인지를 알려줍니다. 이 속성에는 그냥 파일의 경로만 할당하세요. 다음으로 <code>remove()</code> 함수를 호출합니다. 이 함수는 재귀적으로 삭제할지를 나타내는 한개 인자만을 받습니다. 아래 코드는 이러한 두 단계를 보여줍니다.</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  aFile.initWithPath("/mozilla/testfile.txt");
+  aFile.remove(false);
+}
+</pre>
+
+<p>이 코드는 /mozilla/testfile.txt 파일을 삭제할 것입니다. 임의의 이벤트 핸들러에 위 코드를 추가해서 실행해 보세요. 위의 파일명은 삭제하고자 하는 것으로 바꿔주어야 할 것입니다.</p>
+
+<p>위 표에 있는 함수들 중 copyTo()와 moveTo() 함수는 각각 파일을 복사하고 이동하기 위해 사용됩니다. 여기서 주의할 것은 이 함수들의 복사하거나 이동할 대상 디렉토리 인자가 문자열 값이 아닌 nsILocalFile 이어야 한다는 점입니다. 이것은 이 함수를 실행하려면 두 개의 파일 컴포넌트가 필요하다는 것을 의미합니다. 아래 예제는 어떻게 파일을 복사하는지를 보여줍니다.</p>
+
+<pre>function copyFile(sourcefile,destdir)
+{
+  // get a component for the file to copy
+  var aFile = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aFile) return false;
+
+  // get a component for the directory to copy to
+  var aDir = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aDir) return false;
+
+  // next, assign URLs to the file components
+  aFile.initWithPath(sourcefile);
+  aDir.initWithPath(destdir);
+
+  // finally, copy the file, without renaming it
+  aFile.copyTo(aDir,null);
+}
+
+copyFile("/mozilla/testfile.txt","/etc");
+</pre>
+
+<h3 id="XPCOM_.EC.84.9C.EB.B9.84.EC.8A.A4" name="XPCOM_.EC.84.9C.EB.B9.84.EC.8A.A4">XPCOM 서비스</h3>
+
+<p>어떤 XPCOM 컴포넌트들은 서비스라 불리는 특별한 컴포넌트들입니다. 이것들은 꼭 하나만 존재해야 하기 때문에 인스턴스를 만들지 않습니다. 서비스는 전역 데이터를 획득 또는 지정하거나 다른 객체들에 대한 어떤 동작을 수행하기 위한 범용 함수를 제공합니다. 서비스 컴포넌트에 대한 참조를 얻어오기 위해서는 <code>createInstance()&lt;code&gt; 함수 대신 &lt;code&gt;getService()</code> 함수를 호출해야 합니다. 이것 이외에는 다른 컴포넌트들과 특별히 다른점은 없습니다.</p>
+
+<p>Mozilla에서 제공하는 서비스들 중 북마크 서비스가 이에 해당합니다. 이 서비스를 이용하면 현재 사용자의 북마크 목록에 북마크를 추가할 수 있습니다. 다음은 이에 대한 예입니다.</p>
+
+<pre>var bmarks = Components.classes["@mozilla.org/browser/bookmarks-service;1"].getService();
+bmarks.QueryInterface(Components.interfaces.nsIBookmarksService);
+bmarks.addBookmarkImmediately("http://www.mozilla.org","Mozilla",0,null);
+</pre>
+
+<p>먼저 "@mozilla.org/browser/bookmarks-service;1" 컴포넌트가 반환되고 이의 서비스가 <code>bmarks</code> 변수에 저장되었습니다. 우리는 nsIBookmarksService 인터페이스를 얻기 위해 <code>QueryInterface()</code>를 사용했습니다. 이 인터페이스에서 제공하는 <code>addBookmarkImmediately()</code> 함수는 북마크를 추가하기 위해 사용됩니다. 이 함수의 처음 두개의 인자는 북마크의 URL과 제목입니다. 세번째 인자는 북마크 유형으로 보통 0이며, 마지막 인자는 북마크될 문서의 문자 인코딩으로 null일 수 있습니다.</p>
+
+<p>다음에는 우리가 사용할 수 있는 <a href="ko/XUL_Tutorial/XPCOM_Examples">Mozilla에서 제공하는 몇가지 인터페이스</a>에 대해 알아보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Box_Objects" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:XPCOM_Examples">다음  »</a></p>
+</div><p></p>
+
+<p></p>

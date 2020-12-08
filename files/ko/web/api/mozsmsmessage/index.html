@@ -1,0 +1,56 @@
+---
+title: MozSmsMessage
+slug: Web/API/MozSmsMessage
+tags:
+  - Non-standard
+translation_of: Archive/B2G_OS/API/MozSmsMessage
+---
+<p>{{ ApiRef() }}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+
+<h2 id="요약">요약</h2>
+
+<p>DOM <code>MozSmsMessage</code> 객체는 SMS 문자 메시지를 나타내며 발신자, 수신자, 본문, 날짜와 같은 모든 정보를 가지고 있다.</p>
+
+<h2 id="속성">속성</h2>
+
+<dl>
+ <dt>{{domxref("MozSmsMessage.type")}} {{readonlyinline}}</dt>
+ <dd><code>sms라는 값을 가지는 문자열이다</code>.</dd>
+ <dt>{{domxref("MozSmsMessage.id")}} {{readonlyinline}}</dt>
+ <dd>메시지의 id를 나타내는 숫자를 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.threadId")}} {{readonlyinline}}</dt>
+ <dd>메시지 일부의 스레드의 id를 나타내는 숫자를 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.body")}} {{readonlyinline}}</dt>
+ <dd>메시지의 본문을 나타내는 {{ domxref("DOMString") }} 를 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.delivery")}} {{readonlyinline}}</dt>
+ <dd><code>received</code>, <code>sending</code>, <code>sent</code>, <code>error</code> 중 하나의 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.deliveryStatus")}} {{readonlyinline}}</dt>
+ <dd><code>delivery 속성 값에 따라 다음과 같은 </code>{{ domxref("DOMString") }} 을 반환한다:<br>
+ * <code>received</code> : <code>success</code><br>
+ * <code>sending </code> : <code>pending</code> 또는 <code>not-applicable</code> (만약 메시지가 상태 보고 요청없이 전송되었다면)<br>
+ * <code>sent    </code> : <code>pending</code>, <code>success</code>, <code>error</code> 또는 <code>not-applicable</code> (만약 메시지가 상태 보고 요청없이 전송되었다면)<br>
+ * <code>error   </code> : <code>error</code></dd>
+ <dt>{{domxref("MozSmsMessage.read")}} {{readonlyinline}}</dt>
+ <dd>메시지를 읽었는지 읽지 않았는지를 가리키는 Boolean을 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.receiver")}} {{readonlyinline}}</dt>
+ <dd>수신자 이름을 나타내는 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.sender")}} {{readonlyinline}}</dt>
+ <dd>발신자 이름을 나타내는 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozSmsMessage.timestamp")}} {{readonlyinline}}</dt>
+ <dd>메시지의 타임스탬프인 <code><a href="/en/JavaScript/Reference/Global_Objects/Date" title="Date">Date</a> 객체를 반환한다.</code></dd>
+ <dt>{{domxref("MozSmsMessage.messageClass")}} {{readonlyinline}}</dt>
+ <dd><code>normal</code>, <code>class-0</code>, <code>class-1</code>, <code>class-2</code>, <code>class-3</code> 중 하나의 {{ domxref("DOMString") }} 을 반환한다.</dd>
+</dl>
+
+<h2 id="참고_자료">참고 자료</h2>
+
+<div id="compat-mobile"> </div>
+
+<ul>
+ <li>{{ domxref("window.navigator.mozSms") }}</li>
+ <li>{{ domxref("MozSmsManager") }}</li>
+</ul>

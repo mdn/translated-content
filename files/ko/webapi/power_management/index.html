@@ -1,0 +1,102 @@
+---
+title: Power Management
+slug: WebAPI/Power_Management
+translation_of: Archive/B2G_OS/API/Power_Management_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="요약">요약</h2>
+<p>전력 관리 API는 기기의 전력 소모를 관리하는 도구를 제공합니다.</p>
+<h2 id="전력_관리">전력 관리</h2>
+<p>전력 관리는 과도한 연산이나 화면을 다시그리는 등과 같은 실제 전력과는 조금 다릅니다. 이 모든 것이 다 전력 관리에 들어가게 됩니다. 하지만 전력 관리 API는 직접적인 전력 소모(화면, CPU 등)에 보다 집중합니다. 전력 관리에 대한 주요 인터페이스는 {{domxref("PowerManager")}} 인터페이스의 인스턴스인 {{domxref("window.navigator.mozPower","navigator.mozPower")}}를 통해서 접근합니다.</p>
+<h3 id="기본_전력_처리">기본 전력 처리</h3>
+<p>{{domxref("PowerManager")}} 인터페이스는 기본 전력 처리 인터페이스를 제공합니다.</p>
+<h4 id="전역_전력_처리">전역 전력 처리</h4>
+<p>{{domxref("PowerManager.powerOff()","powerOff()")}} 메서드를 사용해서 아주 쉽게 기기의 전원을 끌 수 있고 {{domxref("PowerManager.reboot()","reboot()")}} 메서드를 통해서는 재부팅도 할 수 있습니다.</p>
+<pre class="brush: js">navigator.mozPower.powerOff();</pre>
+<h4 id="화면_전력_처리">화면 전력 처리</h4>
+<p>화면은 읽기/쓰기 속성인 {{domxref("PowerManager.screenEnabled","screenEnabled")}}를 이용해서 켜고 끌 수 있습니다. 또한 화면의 밝기도 변경할 수 있습니다. 읽기/쓰기 속성인 {{domxref("PowerManager.screenBrightness","screenBrightness")}}를 이용해서 변경할 수 있고 0(아주 어두움)에서 1(최대 밝기)까지의 값을 이용해서 화면의 백라이트 밝기를 설정할 수 있습니다.</p>
+<pre class="brush: js">// It doesn't make sense to change the brightness if the screen is off
+if (navigator.mozPower.screenEnabled) {
+  navigator.mozPower.screenBrightness = 0.5;
+}</pre>
+<h4 id="CPU_전력_처리">CPU 전력 처리</h4>
+<p>CPU를 직접 끄는 일은 가능하지 않지만 화면이 꺼져 있을 때에는 CPU가 꺼져도 되는지 아닌지를 알릴 수 있습니다. 이는 {{domxref("PowerManager.cpuSleepAllowed","cpuSleepAllowed")}}를 이용해서 설정할 수 있습니다. 이는 기기의 CPU가 화면이 꺼지거나(<code>true</code>) 켜져 있을(<code>false</code>) 때 잠자기 모드로 들어갈 수 있는지를 결정합니다; 화면이 켜져있다면 정지모드로 들어가지 않게 합니다.</p>
+<h3 id="향상된_전력_처리">향상된 전력 처리</h3>
+<p>전력 관리는 전력을 다루는 어플리케이션이 다른 어플리케이션의 요청에 대해 알림을 받을 수 있다면 더 잘 다뤄질 수 있습니다. 예를 들어서 사용자가 동영상을 보고 있다면 몇 초 후에 화면을 자동으로 끄지 않는 것이 더 좋을 수 있습니다.</p>
+<h4 id="잠금_해제_요청">잠금 해제 요청</h4>
+<p>어떤 어플리케이션이든 잠금 해체를 요청할 수 있습니다. 잠금 해제는 기기의 자원이 꺼지지 않도록 요청하는 방법입니다. 잠금 해체는 {{domxref("window.navigator.requestWakeLock","navigator.requestWakeLock()")}} 메서드를 통해서 요청됩니다.</p>
+<p>잠금 해제는 다양한 이유로 사용할 수 없게 되는 특정 자원에 대한 요청입니다. 예를 들어서 모바일 기기의 전력 관리 기능은 전력 소모를 줄이기 위해서 어느정도 사용을 안하고 있으면 화면을 끕니다. 그 자원을 사용하는 어플리케이션은 자원이 꺼지기 전에 자원의 잠금 상태를 확인합니다. 예를 들어서 페이지는 화면 보호기가 나타나거나 화면이 꺼지는 것을 막기 위해서 <code>screen</code>에 대한 잠금을 막을 수 있습니다.</p>
+<p>기본 설정으로 Firefox OS는 <code>screen</code>과 <code>cpu</code>, <code>wifi</code> 자원에 대한 잠금 허용을 합니다. 하지만 자원을 다루는 어떤 어플리케이션도 자원의 이름을 설정하고 잠금에 대한 정책을 정할 수 있습니다. 예를 들어서 자원 관리 기능은 현재 보이지 않는 어플리케이션이 <code>screen</code>에 대한 설정한 잠금 해제를 무시할 수 있습니다.</p>
+<pre class="brush: js">var lock = navigator.requestWakeLock('screen');</pre>
+<p>{{domxref("window.navigator.requestWakeLock","requestWakeLock")}} 메서드는 잠금을 할 자원의 이름을 나타내는 <code>topic</code> 속성을 가지고 있는 객체를 반환합니다. <code>unlock()</code> 메서드는 잠금을 수동으로 반환하는데 사용합니다. 어플리케이션이 종료(대기 상태가 아닌 실제 종료)된다면 자동으로 모든 잠금 요청이 해제됩니다.</p>
+<h4 id="잠금_해제_다루기">잠금 해제 다루기</h4>
+<p>잠금을 관리할 수 있는 인증된 애플리케이션은 잠금 상태가 변경되게 되면 알림을 받습니다. 실제로 전력을 관리하고자 하는 모든 애플리케이션은 <code>screen</code>과 <code>cpu</code>의 잠금 상태를 추적하고 있어야 합니다. 이는 {{domxref("PowerManager.addWakeLockListener()")}} 메서드를 통해 이루어집니다({{domxref("PowerManager.removeWakeLockListener()","")}} 메서드를 이용해서 잠금 요청에 대한 추적을 멈출 수 있습니다).</p>
+<p>{{domxref("PowerManager.addWakeLockListener()","addWakeLockListener")}} 메서드에는 두개의 파라메터를 전달 받는 콜백함수를 전달해야 합니다: 첫번째 문자열은 다룰 자원(여기서는 <code>screen</code>이나 <code>cpu</code>)을 나타내고 두번째 문자열은 잠금 상태를 나타냅니다.</p>
+<p>잠김은 세가지 상태가 있습니다:</p>
+<dl>
+  <dt>
+    <code>unlocked</code></dt>
+  <dd>
+    주어진 자원에 대해 잠금 해제를 할 수 없습니다.</dd>
+  <dt>
+    <code>locked-foreground</code></dt>
+  <dd>
+    최소한 하나의 어플리케이션이 잠금 해제를 제어 할 수 있고 그 어플리케이션은 보이는 상태입니다..</dd>
+  <dt>
+    <code>locked-background</code></dt>
+  <dd>
+    최소한 하나의 어플리케이션이 잠금 해제를 제어하지만 모든 애플리케이션이 보이지 않는 상태입니다.</dd>
+</dl>
+<pre class="brush: js">// This is used to keep track of the last change on the lock state
+var screenTimeout;
+
+// A reference to the Power Manager
+var power = window.navigator.mozPower;
+
+// Here are the actions to handle based on the lock state
+var powerAction = {
+
+  // If there is no lock at all, we will suspend the device:
+  // * Turn the screen off
+  // * Allow the cpu to shut down
+  unlocked: function suspendDevice() {
+    power.cpuSleepAllowed = true;
+    power.screenEnabled   = false;
+  },
+
+  // If there is a lock but the applications requesting it
+  // are all in the background, we just turn the screen off
+  'locked-background': function shutOffOnlyScreen() {
+    power.cpuSleepAllowed = false;
+    power.screenEnabled   = false;
+  },
+
+  // At last, if there is an active application that requests a lock,
+  // actually there is nothing to do. That's the whole point.
+}
+
+function screenLockListener(topic, state) {
+  // If the lock is not about the screen, there is nothing to do.
+  if ('screen' !== topic) return;
+
+  // Each time the lock changes state, we stop any pending power management operations
+  window.clearTimeout(screenTimeout);
+
+  // If there is an action defined for the given state
+  if (powerAction[state]) {
+    // We delay that action by 3s
+    screenTimeout = window.setTimeout(powerAction[state], 3000);
+  }
+}
+
+// We make sure our power management application is listening for any change on locks.
+power.addWakeLockListener(screenLockListener);</pre>
+<h2 id="Specification" name="Specification">명세</h2>
+<p>관련된 명세가 없습니다.</p>
+<h2 id="관련_내용">관련 내용</h2>
+<ul>
+  <li>{{ domxref("window.navigator.mozPower","navigator.mozPower") }}</li>
+  <li>{{ domxref("PowerManager") }}</li>
+  <li>{{ domxref("window.navigator.requestWakeLock()","navigator.requestWakeLock()") }}</li>
+</ul>

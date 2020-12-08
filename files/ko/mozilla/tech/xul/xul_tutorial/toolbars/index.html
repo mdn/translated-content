@@ -1,0 +1,107 @@
+---
+title: Toolbars
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Toolbars
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Toolbars
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Scroll_Bars" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Simple_Menu_Bars">다음  »</a></p>
+</div><p></p>
+
+<p>툴바(toolbar)는 보통 창의 상단에 위치하면서 일반적인 기능을 수행하는 여러 버튼을 포함합니다. XUL은 툴바를 만드는 방법을 제공합니다.</p>
+
+<h2 id=".ED.88.B4.EB.B0.94_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".ED.88.B4.EB.B0.94_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">툴바 추가하기</h2>
+
+<p>다른 요소들처럼 XUL 툴바도 상자 유형 중 하나입니다. 보통 툴바에는 <a href="ko/XUL_Tutorial/Adding_Buttons">버튼</a>들이 놓여지지만, 어떤 요소도 툴바에 놓을 수 있습니다. 예를 들어, Mozilla 브라우저에는 페이지 URL을 표시하는 <a href="ko/XUL_Tutorial/Input_Controls#Text_Entry_Fields">글상자</a>를 포함한 툴바가 있습니다.</p>
+
+<p>툴바는 창내의 가로 혹은 세로 어떤 방향으로도 위치될 수 있습니다. 물론 글상자를 세로 툴바에 두지는 않을 것입니다. 사실 툴바는 그냥 상자이기 때문에 원하는 곳 어디든 위치할 수 있으며, 창의 중앙에도 배치할 수 있습니다. 그러나 대개 툴바들은 창의 상단에 나타나는게 보통입니다. 여러개의 툴바가 순서대로 위치하면, 보통 '툴박스(toolbox)'라고 불리는 것으로 묶게 됩니다.</p>
+
+<p>툴바의 좌측면에는 작은 무늬(notch)가 있는데, 이것을 클릭하면 툴바가 접혀지고 무늬만 보이게 됩니다. 무늬는 '그리피(grippy)'라고도 부릅니다. 여러개의 툴바가 하나의 툴박스 내에 있을때, 그리피들을 클릭하면 한 줄로 닫힙니다. 이렇게 해서 툴바가 사용하는 공간을 줄이게 됩니다. 세로 방향의 툴바는 상단 모서리에 그리피가 있습니다. 일반적으로, 사용자들은 메인 윈도우의 공간을 넓히기 위해 툴바를 닫습니다.</p>
+
+<h5 id="toolbox_.EC.95.88.EC.97.90_.EC.9E.88.EB.8A.94_.EA.B0.84.EB.8B.A8.ED.95.9C_toolbar" name="toolbox_.EC.95.88.EC.97.90_.EC.9E.88.EB.8A.94_.EA.B0.84.EB.8B.A8.ED.95.9C_toolbar"><code>toolbox</code> 안에 있는 간단한 <code>toolbar</code></h5>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul">View</a></p>
+
+<div class="float-right"><img alt="Image:toolbar1.jpg"></div>
+
+<pre class="brush: xml">&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton label="Back"/&gt;
+    &lt;toolbarbutton label="Forward"/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>이 예제는 뒤로가기(Back)와 앞으로가기(Forward) 버튼을 가진 툴바를 만듭니다. 하나의 툴바가 툴박스내에 위치하고 있습니다. 툴바와 관련하여 4가지 새로운 태그가 있는데 각 내용은 다음과 같습니다.</p>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></dt>
+ <dd>툴바를 포함하는 상자.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></dt>
+ <dd>버튼과 같은 툴바 아이템을 포함하는 하나의 툴바. 툴바는 왼쪽 혹은 위쪽에 있는 그리피를 사용하여 접을 수 있습니다..</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code></dt>
+ <dd>툴바에 있는 버튼으로 일반 버튼과 동일한 기능을 가지고 있지만 조금 다르게 출력됩니다.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbargrippy" title="toolbargrippy">toolbargrippy</a></code></dt>
+ <dd>이 요소는 툴바를 접거나 여는데 사용되는 무늬를 만듭니다. 자동으로 추가되기 때문에 직접 사용할 필요는 없습니다.</dd>
+</dl>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code>는 실제 툴바를 만드는 메인 요소입니다. 일반적으로 툴바에는 버튼들이 포함되는데 다른 요소들도 넣을 수 있습니다. 툴바는 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성을 가지는게 좋으며, 그렇지 않으면 접거나 펼칠 수 없게 될 수도 있습니다.</p>
+
+<p>위 예제에서는 단지 한개의 툴바만 작성되었습니다. 첫 번째 툴바 다음에 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code>요소를 더 추가해서 다중 툴바도 쉽게 만들 수 있습니다.</p>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>는 툴바의 컨테이너입니다. 일부 응용프로그램에서는 창의 상단에 여러개의 툴바가 있을 것입니다. 이들 모두를 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> 안에 넣을 수 있습니다.</p>
+
+<p>여러분은 <code>toolbar</code> 요소를 <code>toolbox</code> 안에 넣어야 하는 것은 아닙니다.</p>
+
+<h3 id=".ED.88.B4.EB.B0.95.EC.8A.A4.EC.97.90_.EC.9E.88.EB.8A.94_.EA.B7.B8.EB.A6.AC.ED.94.BC" name=".ED.88.B4.EB.B0.95.EC.8A.A4.EC.97.90_.EC.9E.88.EB.8A.94_.EA.B7.B8.EB.A6.AC.ED.94.BC">툴박스에 있는 그리피</h3>
+
+<div class="note"><b>주의</b>: Firefox에는 <code>toolbargrippy</code> 요소가 없습니다.</div>
+
+<p>툴박스에 있는 그리피들은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbargrippy" title="toolbargrippy">toolbargrippy</a></code></code>라는 요소를 이용해서 작성됩니다. 그리피의 목적이 툴바를 접기 위한 것이기 때문에, 툴바 밖에서 이 요소를 사용하는 것은 아무 의미가 없습니다. 그러나 좀 다른 스타일을 원할 수 도 있습니다. 여러분은 <code>toolbar</code> 요소의 <code><code id="a-grippyhidden"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/grippyhidden">grippyhidden</a></code></code> 속성을 <code>true</code>로 설정하면 그리피를 숨길 수 있습니다.</p>
+
+<div class="float-right">
+<p>동일 툴바들이지만 두 개는 접혀 있습니다.<br>
+ <img alt="Image:toolbar3.jpg"></p>
+</div>
+
+<p>3개의 툴바를 가진 툴박스<br>
+ <img alt="Image:toolbar2.jpg"></p>
+
+<div class="highlight">
+<h3 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">우리의 파일 찾기 예제</h3>
+
+<p>파일 찾기 대화창에 툴바를 넣어 보겠습니다. 사실 툴바가 꼭 필요한 것은 아니지만 설명을 위해서 추가할 것입니다. 2개의 버튼이 추가될 것인데, 열기(Open)와 저장(Save) 버튼입니다. 아마도 이것들은 사용자가 검색 결과를 저장하고 나중에 다시 열어볼 수 있게 해줄 것 같습니다.</p>
+
+<pre class="eval">&lt;vbox flex="1"&gt;
+  <span class="highlightblue">&lt;toolbox&gt;
+    &lt;toolbar id="findfiles-toolbar"&gt;
+      &lt;toolbarbutton id="opensearch" label="Open"/&gt;
+      &lt;toolbarbutton id="savesearch" label="Save"/&gt;
+    &lt;/toolbar&gt;
+  &lt;/toolbox&gt;</span>
+  &lt;tabbox&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:toolbar5.png"></div>
+
+<p>2개의 버튼을 가진 툴바가 추가되었습니다. 그림에서 여러분은 툴바가 상단에 가로방향으로 나타나 있는 것을 볼 수 있습니다. 그리피 또한 툴바의 왼쪽면에 보입니다. 주목할 점은 툴바가 세로 상자 내 탭상자 바로 위의 위치하고 있다는 것입니다. 이것은 툴바가 모든 것보다 앞에 나타나도록 하기 위해 세로방향을 사용했기 때문입니다.</p>
+
+<p>지금까지의 파일 찾기 예제 : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul">View</a></p>
+</div>
+
+<p>다음에는 창에 <a href="ko/XUL_Tutorial/Simple_Menu_Bars">메뉴바</a>를 넣는 방법에 대해 알아보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Scroll_Bars" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Simple_Menu_Bars">다음  »</a></p>
+</div><p></p>

@@ -1,0 +1,162 @@
+---
+title: Atomics
+slug: Web/JavaScript/Reference/Global_Objects/Atomics
+translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
+---
+<div>{{JSRef}} {{SeeCompatTable}}</div>
+
+<div><strong>Atomics 오브젝트</strong>는 atomic operations  정적메소드로서 제공됩니다. 다음과 같은 오브젝트와 함께 {{jsxref("SharedArrayBuffer")}} 사용합니다.</div>
+
+<p>Atomic operations Atomic Module을 인스톨해야합니다. 다른 global objects들과 다르게 Atomic은 constructor가 아닙니다. <strong>new operator</strong>를 사용하면 안되고 invoke Atomics object 함수로 사용하면됩니다. Atomics의 속성과 함수들은 static입니다.  (as is the case with the {{jsxref("Math")}} object, for example).</p>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="Atomic_operations">Atomic operations</h3>
+
+<p>메모리가 공유되었을때, 멀티쓰레드는 메모리안에 같은 데이터들을 읽거나 쓸 수 있습니다.<br>
+ Atomic operations은 예측 가능한 값을 쓰고 읽으며 다음 작업이 시작되기 전에 작업이 완료되고,작업이 중단되지 않도록합니다.</p>
+
+<dl>
+ <dt>{{jsxref("Atomics.add()")}}</dt>
+ <dd>Adds a given value at a given position in the array. Returns the old value at that position.</dd>
+ <dt>{{jsxref("Atomics.and()")}}</dt>
+ <dd>Computes a bitwise AND at a given position in the array. Returns the old value at that position.</dd>
+ <dt>{{jsxref("Atomics.compareExchange()")}}</dt>
+ <dd>Stores a given value at a given position in the array, if it equals a given value. Returns the old value.</dd>
+ <dt>{{jsxref("Atomics.exchange()")}}</dt>
+ <dd>Stores a given value at a given position in the array. Returns the old value.</dd>
+</dl>
+
+<dl>
+ <dt>{{jsxref("Atomics.load()")}}</dt>
+ <dd>Returns the value at the given position in the array.</dd>
+ <dt>{{jsxref("Atomics.or()")}}</dt>
+ <dd>Computes a bitwise OR at a given position in the array. Returns the old value at that position.</dd>
+ <dt>{{jsxref("Atomics.store()")}}</dt>
+ <dd>Stores a given value at the given position in the array. Returns the value.</dd>
+ <dt>{{jsxref("Atomics.sub()")}}</dt>
+ <dd>Subtracts a given value at a given position in the array. Returns the old value at that position.</dd>
+ <dt>{{jsxref("Atomics.xor()")}}</dt>
+ <dd>Computes a bitwise XOR at a given position in the array. Returns the old value at that position.</dd>
+</dl>
+
+<h3 id="Wait_and_wake">Wait and wake</h3>
+
+<p>The <code>wait()</code> and <code>wake()</code> methods are modeled on Linux futexes ("fast user-space mutex") and provide ways for waiting until a certain condition becomes true and are typically used as blocking constructs.</p>
+
+<dl>
+ <dt>{{jsxref("Atomics.wait()")}}</dt>
+ <dd>
+ <p>Verifies that a given position in the array still contains a given value and sleeps awaiting or times out. Returns either <code>"ok"</code>, <code>"not-equal"</code>, or <code>"timed-out"</code>. If waiting is not allowed in the calling agent then it throws an Error exception (most browsers will not allow <code>wait()</code> on the browser's main thread).</p>
+ </dd>
+ <dt>{{jsxref("Atomics.wake()")}}</dt>
+ <dd>Wakes up some agents that are sleeping in the wait queue on the given array position. Returns the number of agents that were woken up.</dd>
+ <dt>{{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}</dt>
+ <dd>
+ <p>An optimization primitive that can be used to determine whether to use locks or atomic operations. Returns <code>true</code>, if an atomic operation on arrays of the given element size will be implemented using a hardware atomic operation (as opposed to a lock). Experts only.</p>
+ </dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Shared Memory', '#AtomicsObject', 'Atomics')}}</td>
+   <td>{{Spec2('Shared Memory')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}} [2]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("46")}} [1] [3]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("46")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] This feature is disabled by a preference setting. In about:config, set <code>javascript.options.shared_memory</code> to <code>true</code>. </p>
+
+<p>[2] The implementation is under development and needs these runtime flags: <code>--js-flags=--harmony-sharedarraybuffer --enable-blink-feature=SharedArrayBuffer</code></p>
+
+<h2 id="Compatibility_notes">Compatibility notes</h2>
+
+<p>[3] The Shared memory specification is still stabilizing. Prior to SpiderMonkey 48 {{geckoRelease(48)}}, the latest API names and semantics weren't implemented yet. The changes between Firefox version 46 and version 48 are:</p>
+
+<ul>
+ <li>The methods <code>Atomics.futexWakeOrRequeue()</code> and <code>Atomics.fence()</code> are now removed entirely ({{bug(1259544)}} and {{bug(1225028)}}).</li>
+ <li>The methods {{jsxref("Atomics.wait()")}} and {{jsxref("Atomics.wake()")}} were named <code>Atomics.futexWait()</code> and <code>Atomics.futexWake()</code> ({{bug(1260910)}}). Note: The old names have been removed in version 49 and later ({{bug(1262062)}}).</li>
+ <li>The properties <code>Atomics.OK</code>, <code>Atomics.TIMEDOUT</code>, <code>Atomics.NOTEQUAL</code> have been removed. The {{jsxref("Atomics.wait()")}} method now returns the strings "ok", "timed-out" and "not-equal" ({{bug(1260835)}}).</li>
+ <li>
+  <p>The <code>count</code> parameter of the {{jsxref("Atomics.wake()")}} method has been changed: it now defaults to <code>+Infinity</code>, not <code>0</code> ({{bug(1253350)}}).</p>
+ </li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+ <li><a href="https://github.com/lars-t-hansen/parlib-simple">parlib-simple </a>– a simple library providing synchronization and work distribution abstractions.</li>
+ <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
+ <li><a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks</a></li>
+</ul>

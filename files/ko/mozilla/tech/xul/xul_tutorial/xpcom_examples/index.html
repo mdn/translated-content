@@ -1,0 +1,132 @@
+---
+title: XPCOM Examples
+slug: Mozilla/Tech/XUL/XUL_Tutorial/XPCOM_Examples
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Examples
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:XPCOM_Interfaces" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Trees">다음  »</a></p>
+</div>
+<p></p><p>본 단원에서는 몇가지 인터페이스와 함께 XPCOM를 이용하는 예제를 제공합니다.
+</p>
+<h3 id=".EC.B0.BD_.EA.B4.80.EB.A6.AC" name=".EC.B0.BD_.EA.B4.80.EB.A6.AC"> 창 관리 </h3>
+<div class="note">
+<p>본 예제에는 <a href="ko/XUL_Tutorial/Templates">이후 단원</a>에서 보게될 RDF 데이터소스에 대한 내용이 들어 있습니다. 따라서 이에 대한 지식이 없다면 넘어가도 괜찮습니다.
+</p>
+</div>
+<h4 id=".EC.B0.BD_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".EC.B0.BD_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0"> 창 메뉴 만들기 </h4>
+<p>The list of currently open Mozilla windows can be used as an <a href="ko/XUL_Tutorial/RDF_Datasources">RDF datasource</a>. This allows you to create a Window menu with a list of the currently open windows in the application. The datasource for this is <code>rdf:window-mediator</code>. We can use this as in the following example:
+</p><p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xpcomex_1.xul.txt">Source</a>
+</p>
+<pre>&lt;toolbox&gt;
+ &lt;menubar id="windowlist-menubar"&gt;
+  &lt;menu label="Window"&gt;
+   &lt;menupopup id="window-menu" datasources="rdf:window-mediator" ref="NC:WindowMediatorRoot"&gt;
+    &lt;template&gt;
+     &lt;rule&gt;
+      &lt;menuitem uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+     &lt;/rule&gt;
+    &lt;/template&gt;
+   &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>A Window menu will be created with a list of all the open windows. Try this example by opening a number of browser windows and you'll see that they are all listed on the menu.
+</p>
+<h4 id="Window_mediator_component" name="Window_mediator_component"> Window mediator component </h4>
+<p>This is fine for displaying a list of open windows, but we would like to enhance this so that clicking on the menu item will switch to that window. This is accomplished by using the <a class="external" href="http://xulplanet.com/references/xpcomref/comps/c_rdfdatasource1namewindowmediator.html">window mediator component</a>. It implements the interface nsIWindowDataSource. The code below shows how to get a component which implements it:
+</p>
+<pre>var wmdata = Components.classes["@mozilla.org/rdf/datasource;1?name=window-mediator"].getService();
+wmdata.QueryInterface(Components.interfaces.nsIWindowDataSource);
+</pre>
+<p>This code retrieves a window mediator data source component. The component used here is the same one that handles the window-mediator RDF datasource. You can also get this component through the RDF service, which is another service that manages RDF datasources.
+</p><p>The <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIWindowDataSource.html">nsIWindowDataSource</a> interface has a function <code>getWindowForResource</code>, which can be used to get the window given a resource. In the earlier example, we generated the list of windows and added it to a menu via a template. The template generates an <code>id</code> attribute on each <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> element. The value of this attribute can be used as the resource. That means that in order to switch the window focus, we need to do the following:
+</p>
+<ol><li> Determine the element that the user clicked on.
+</li><li> Get the value of the <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> attribute from the element.
+</li><li> Pass this value to <code>getWindowForResource()</code> to get a window object.
+</li><li> Switch the focus to this window.
+</li></ol>
+<p>The example below shows how we might do this:
+</p>
+<pre>&lt;toolbox&gt;
+ &lt;menubar id="windowlist-menubar"&gt;
+  &lt;menu label="Window" oncommand="switchFocus(event.target);"&gt;
+   &lt;menupopup id="window-menu" datasources="rdf:window-mediator" ref="NC:WindowMediatorRoot"&gt;
+    &lt;template&gt;
+     &lt;rule&gt;
+      &lt;menuitem uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+     &lt;/rule&gt;
+    &lt;/template&gt;
+   &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;
+&lt;/toolbox&gt;
+
+&lt;script&gt;
+function switchFocus(elem)
+{
+  var mediator = Components.classes["@mozilla.org/rdf/datasource;1?name=window-mediator"].getService();
+  mediator.QueryInterface(Components.interfaces.nsIWindowDataSource);
+
+  var resource = elem.getAttribute('id');
+  switchwindow = mediator.getWindowForResource(resource);
+
+  if (switchwindow){
+    switchwindow.focus();
+  }
+}
+&lt;/script&gt;
+</pre>
+<p>A command handler was added to the menu element which calls the function switchFocus() with a parameter of the element that was selected from the menu. The function switchFocus():
+</p>
+<ul><li> first gets a reference to a component which implements the window mediator interface. </li><li> Next, we get the <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> attribute for the element. We can use the value of the <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> attribute as the resource. </li><li> The function <code>getWindowForResource()</code> takes the resource and returns a window that matches it. This window, stored in the <code>switchwindow</code> variable, is the same as the JavaScript window object. </li><li> This means that you can call any of the functions provided by it, one of which is the <code><span id="m-focus"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/focus">focus()</a></code></span></code> function.
+</li></ul>
+<h3 id=".EC.BF.A0.EA.B8.B0.28cookies.29" name=".EC.BF.A0.EA.B8.B0.28cookies.29"> 쿠기(cookies) </h3>
+<p>다음으로 브라우저에 저장된 쿠키 목록을 가져와 보겠습니다. 쿠키 서비스는 다양한 목적으로 사용될 수 있습니다. 쿠키 서비스는 <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsICookieManager.html">nsICookieManager</a></code> 인터페이스를 구현하고 있으며, 저장된 모든 쿠키를 열거하는데 사용할 수 있습니다. 다음은 MozillaZine에서 설정된 모든 쿠키의 이름을 메뉴 목록에 출력하는 예제입니다.
+</p>
+<pre>&lt;script&gt;
+
+function getCookies()
+{
+  var menu = document.getElementById("cookieMenu");
+  menu.removeAllItems();
+
+  var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"]
+                        .getService(Components.interfaces.nsICookieManager);
+
+  var iter = cookieManager.enumerator;
+  while (iter.hasMoreElements()){
+    var cookie = iter.getNext();
+    if (cookie instanceof Components.interfaces.nsICookie){
+      if (cookie.host == "www.mozillazine.org")
+        menu.appendItem(cookie.name,cookie.value);
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;menulist id="cookieMenu" onpopupshowing="getCookies();"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><br>
+getCookies() 함수는 메뉴가 열릴때마다 호출되는데, 이는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 요소의 <code><code id="a-onpopupshowing"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/onpopupshowing">onpopupshowing</a></code></code> 속성에 지정되어 있습니다. getCookies() 함수의 처음 두줄은 menulist를 가져와서 현재 메뉴에 있는 모든 항목을 삭제하는 것입니다. 이것은 getCookies() 함수가 메뉴가 열릴때마다 호출되고, 매번 이전 항목이 남아있지 않아야 하기 때문입니다.
+</p><p>다음은 쿠키 관리자에 대한 참조를 받아옵니다. 쿠키 관리자에는 <code><a href="ko/NsISimpleEnumerator">nsISimpleEnumerator</a></code> 인터페이스를 구현하는 객체를 반환하는 <code>enumerator</code> 메소드가 있습니다. 이 메소드는 모든 쿠키별로 반복(iteratee)하기 위해 사용됩니다. 해당 인터페이스(nsISimpleEnumerator)에는 <code>hasMoreElements()</code> 메소드가 있으며 마지막 쿠키에 도달하기 전까지는 true를 반환합니다. <code>getNext()</code> 메소드는 쿠키를 가져온 후 열거자(enumerator)의 인덱스를 다음 쿠키로 이동합니다. <code>enumerator</code>는 범용 객체를 반환하기 때문에, 사용하기 전에 QueryInterface() 함수로 <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsICookie.html">nsICookie</a></code> 인터페이스를 얻어와야 합니다. 예제에서는 <code>instanceof</code> 연산자를 사용하였습니다.
+</p><p>마지막으로 메뉴에 쿠키를 추가하며, 이를 위해 쿠키의 호스트, 이름, 값이 사용되었습니다. 메뉴에는 <code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem()</a></code></span></code> 함수가 있으며, 이 함수는 주어진 라벨과 값으로 메뉴 항목을 추가하는데 사용됩니다.
+</p>
+<h3 id=".EB.98.90_.EB.B3.BC.EA.B3.B3" name=".EB.98.90_.EB.B3.BC.EA.B3.B3"> 또 볼곳 </h3>
+<p>아래에서 좀더 많은 예제를 볼 수 있습니다.
+</p>
+<ul><li> <a href="ko/Code_snippets">Code snippets</a>
+</li><li> <a class=" external" href="http://kb.mozillazine.org/Category:XPCOM_example_code" rel="freelink">http://kb.mozillazine.org/Category:XPCOM_example_code</a>
+</li></ul>
+<p>다음에는 <a href="ko/XUL_Tutorial/Trees">트리의 작성방법</a>에 대해 알아보겠습니다.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:XPCOM_Interfaces" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Trees">다음  »</a></p>
+</div>
+<p></p>

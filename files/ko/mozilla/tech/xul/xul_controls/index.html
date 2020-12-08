@@ -1,0 +1,548 @@
+---
+title: XUL controls
+slug: Mozilla/Tech/XUL/XUL_controls
+tags:
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_controls
+---
+<p>아래의 표는 <a href="/ko/XUL" title="ko/XUL">XUL</a>에서 제공하는 사용자 인터페이스 컨트롤들의 목록입니다. 컨트롤들의 단계별 사용 방법은 <a href="/ko/XUL_Tutorial" title="ko/XUL_Tutorial">XUL Tutorial</a>을, 레퍼런스 정보는 <a href="/ko/XUL_Reference" title="ko/XUL_Reference">XUL Reference</a>를 참고하세요.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><strong>&lt;button&gt;</strong>
+
+    <p>사용자가 누를 수 있는 버튼.</p>
+
+    <pre>
+&lt;button label="Save" accesskey="S"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Adding_Buttons" title="ko/XUL_Tutorial/Adding_Buttons">버튼 요소에 대한 좀더 많은 정보</a>.</li>
+     <li><a href="/ko/XUL/button" title="ko/XUL/button">버튼 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;button type="menu"&gt;</strong>
+    <p>드롭다운 메뉴가 붙은 버튼. 버튼을 누르면 메뉴가 열립니다.</p>
+
+    <pre>
+&lt;button type="menu" label="View"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="List"/&gt;
+    &lt;menuitem label="Details"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/More_Button_Features#Button_with_menupopup" title="ko/XUL_Tutorial/More_Button_Features#Button_with_menupopup">메뉴 버튼 요소의 유형에 대한 좀더 많은 정보</a>.</li>
+     <li><a href="/ko/XUL/button" title="ko/XUL/button">버튼 레퍼런스</a></li>
+     <li>관련 요소: <code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;button type="menu-button"&gt;</strong>
+    <p>메뉴가 붙은 별도의 화살표 버튼이 있는 버튼. '<code>menu</code>' 유형과 달리 버튼의 메인 부분을 눌렀을 때 다른 행위를 수행할 수 있습니다.</p>
+
+    <pre>
+&lt;button type="menu-button" label="New"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="New Document"/&gt;
+    &lt;menuitem label="New Image"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/More_Button_Features#Button_with_menupopup" title="ko/XUL_Tutorial/More_Button_Features#Button_with_menupopup">메뉴 버튼 요소의 유형에 대한 좀더 많은 정보</a>.</li>
+     <li><a href="/ko/XUL/button" title="ko/XUL/button">버튼 레퍼런스</a></li>
+     <li>관련 요소: <code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li>
+    </ul>
+   </td>
+   <td><span class="comment"><a href="/ko/Image/Controlsguide-button-menubutton.png">Image:Controlsguide-button-menubutton.png</a></span></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;checkbox&gt;</strong>
+    <p>켜거나 끌 수 있는 컨트롤로, 일반적으로 가능 혹은 불가능할 수 있는 옵션을 만드는데 사용됩니다.</p>
+
+    <pre>
+&lt;checkbox label="Show Toolbar Labels" checked="true"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Elements" title="ko/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Elements">체크박스 요소에 대한 좀더 많은 정보</a>.</li>
+     <li><a href="/ko/XUL/checkbox" title="ko/XUL/checkbox">체크박스 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;colorpicker&gt;</strong>
+    <p>색을 선택하는데 사용하는 컨트롤.</p>
+
+    <pre>
+&lt;colorpicker color="#FF0000"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/colorpicker" title="ko/XUL/colorpicker">색선택기(colorpicker) 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td><span class="comment"><a href="/ko/Image/Controlsguide-colorpicker.png">Image:Controlsguide-colorpicker.png</a></span></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;colorpicker type="button"&gt;</strong>
+    <p>버튼만 있는 특수한 색 선택기로, 버튼이 눌려지면 색을 선택할 수 있는 팝업이 출력됩니다.</p>
+
+    <pre>
+&lt;colorpicker type="button" color="#CC0080"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/colorpicker" title="ko/XUL/colorpicker">색선택기(colorpicker) 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;datepicker&gt;</strong>
+
+
+    <p>날짜 입력에 사용할 수 있는 텍스트박스 집합.</p>
+
+    <pre>
+&lt;datepicker value="2007/03/26"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/datepicker" title="ko/XUL/datepicker">날짜선택기(datepicker) 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;datepicker type="grid"&gt;</strong>
+
+
+    <p>날짜를 선택할 수 있는 달력이 출력되는 형태의 날짜선택기(datepicker).</p>
+
+    <pre>
+&lt;datepicker type="grid" value="2007/02/20"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/datepicker" title="ko/XUL/datepicker">날짜선택기(datepicker) 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;datepicker type="popup" &gt;</strong>
+
+
+    <p>날짜를 입력할 수 있는 텍스트박스와 함께 달력 팝업을 출력할 수 있는 버튼이 같이 있는 날짜 선택기.</p>
+
+    <pre>
+&lt;datepicker type="popup" value="2008/08/24"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/datepicker" title="ko/XUL/datepicker">날짜선택기(datepicker) 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;description&gt;</strong>
+    <p>긴 문장의 텍스트를 출력하는데 사용되는 요소</p>
+
+    <pre>
+&lt;description&gt;
+  Select a time for the event to start
+&lt;/description&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Adding_Labels_and_Images#Description_Element" title="ko/XUL_Tutorial/Adding_Labels_and_Images#Description_Element">description 요소에 대한 자세한 정보</a>.</li>
+     <li><a href="/ko/XUL/description" title="ko/XUL/description">description 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;groupbox&gt;</strong>
+    <p>다른 사용자 인터페이스 컨트롤들을 포함하는 제목이 있는 상자 요소</p>
+
+    <pre>
+&lt;groupbox&gt;
+  &lt;caption label="Network"/&gt;
+&lt;/groupbox&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Groupboxes" title="ko/XUL_Tutorial/Groupboxes">groupbox 요소에 대한 자세한 정보</a>.</li>
+     <li><a href="/ko/XUL/groupbox" title="ko/XUL/groupbox">Groupbox 레퍼런스</a></li>
+     <li>관련 요소: <code><a href="/ko/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;image&gt;</strong>
+    <p>URL로 지정한 이미지</p>
+
+    <pre>
+&lt;image src="start.png"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Adding_Labels_and_Images#Images" title="ko/XUL_Tutorial/Adding_Labels_and_Images#Images">image 요소에 대한 자세한 정보</a>.</li>
+     <li><a href="/ko/XUL/image" title="ko/XUL/image">Image 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;label&gt;</strong>
+    <p>label은 특정 컨트롤의 제목을 출력하기 위해 사용됩니다.</p>
+
+    <pre>
+&lt;label control="volume" value="Volume:"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Adding_Labels_and_Images#Label_Element" title="ko/XUL_Tutorial/Adding_Labels_and_Images#Label_Element">label 요소에 대한 자세한 정보</a>.</li>
+     <li><a href="/ko/XUL/label" title="ko/XUL/label">Label 레퍼런스</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;listbox&gt;</strong>
+    <p>listbox는 라벨이 달린 항목 중 하나를 선택하는데 사용됩니다.</p>
+
+    <pre>
+&lt;listbox&gt;
+  &lt;listitem label="Chocolate"/&gt;
+  &lt;listitem label="Jelly Beans"/&gt;
+&lt;/listbox&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/List_Controls#List_Boxes" title="ko/XUL_Tutorial/List_Controls#List_Boxes">listbox 요소에 대한 자세한 정보</a>.</li>
+     <li><a href="/ko/XUL/listbox" title="ko/XUL/listbox">Listbox 레퍼런스</a></li>
+     <li>관련 요소: <code><a href="/ko/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;menulist&gt;</strong>
+    <p>A menulist (or combobox) is used to create a control with a drop down to select a value.</p>
+
+    <pre>
+&lt;menulist&gt;
+  &lt;menupopup&gt;
+    &lt;menulist label="Lions" value="l"/&gt;
+    &lt;menuitem label="Tigers" value="t"/&gt;
+    &lt;menuitem label="Bears" value="b"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/List_Controls#Drop-down_Lists" title="ko/XUL_Tutorial/List_Controls#Drop-down_Lists">More information about the menulist element</a>.</li>
+     <li><a href="/ko/XUL/menulist" title="ko/XUL/menulist">Menulist Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;menulist editable="true"&gt;</strong>
+    <p>An editable menulist is like a standard menulist except that the selected value is displayed in a textbox where it may be modified directly or values not in the popup list may be entered.</p>
+
+    <pre>
+&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Elephants" value="Elephants"/&gt;
+    &lt;menuitem label="Kangaroos" value="Kangaroos"/&gt;
+    &lt;menuitem label="Bats" value="Bats"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/List_Controls#Editable_menulist" title="ko/XUL_Tutorial/List_Controls#Editable_menulist">More information about the editable menulist element</a>.</li>
+     <li><a href="/ko/XUL/menulist" title="ko/XUL/menulist">Menulist Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;progressmeter&gt;</strong>
+    <p>A progress meter is used to display the progress of a lengthy task.</p>
+
+    <pre>
+&lt;progressmeter value="40"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Progress_Meters" title="ko/XUL_Tutorial/Progress_Meters">More information about the progressmeter element</a>.</li>
+     <li><a href="/ko/XUL/progressmeter" title="ko/XUL/progressmeter">Progressmeter Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;radio&gt;</strong>
+    <p>A radio button is used when only one of a set of options may be selected at a time.</p>
+
+    <pre>
+&lt;radiogroup&gt;
+  &lt;radio label="Light" value="light"/&gt;
+  &lt;radio label="Heavy" value="heavy"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons" title="ko/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">More information about the radio element</a>.</li>
+     <li><a href="/ko/XUL/radio" title="ko/XUL/radio">Radio Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;richlistbox&gt;</strong>
+    <p>The richlistbox displays a list of items where one or more may selected. Unlike the listbox which is designed to display only text, the richlistbox may display any type of content.</p>
+
+    <pre>
+&lt;richlistbox&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="happy.png"/&gt;
+  &lt;/richlistitem&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="sad.png"/&gt;
+  &lt;/richlistitem&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="angry.png"/&gt;
+  &lt;/richlistitem&gt;
+&lt;/richlistbox&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/richlistbox" title="ko/XUL/richlistbox">Richlistbox Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/richlistitem" title="richlistitem">richlistitem</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;scale&gt;</strong>
+
+
+    <p>A scale displays a bar with a thumb that may be slid across the bar to select between a range of values.</p>
+
+    <pre>
+&lt;scale min="1" max="10"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/scale" title="ko/XUL/scale">Scale Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;textbox&gt;</strong>
+    <p>A textbox which allows a single line of text to be entered.</p>
+
+    <pre>
+&lt;textbox value="firefox"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Input_Controls#Text_Entry_Fields" title="ko/XUL_Tutorial/Input_Controls#Text_Entry_Fields">More information about the textbox element</a>.</li>
+     <li><a href="/ko/XUL/textbox" title="ko/XUL/textbox">Textbox Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;textbox multiline="true"&gt;</strong>
+    <p>A textbox which allows multiple lines of text to be entered.</p>
+
+    <pre>
+&lt;textbox multiline="true"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Input_Controls#Multiline_textbox" title="ko/XUL_Tutorial/Input_Controls#Multiline_textbox">More information about the multiple line textbox element</a>.</li>
+     <li><a href="/ko/XUL/textbox" title="ko/XUL/textbox">Textbox Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;textbox type="autocomplete"&gt;</strong>
+    <p>A textbox which provides a dropdown showing matches that would complete what the user types. The user can select one to have it filled into the textbox.</p>
+
+    <pre>
+&lt;textbox type="autocomplete" autocompletesearch="history"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/textbox" title="ko/XUL/textbox">Textbox Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;textbox type="number"&gt;</strong>
+
+
+    <p>A textbox for entering numbers. Two arrow buttons are displayed for cycling through values.</p>
+
+    <pre>
+&lt;textbox type="number" min="1" max="20"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/textbox" title="ko/XUL/textbox">Textbox Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;textbox type="password"&gt;</strong>
+    <p>A textbox that hides the characters typed, used for entering passwords.</p>
+
+    <pre>
+&lt;textbox type="password"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/textbox" title="ko/XUL/textbox">Textbox Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;timepicker&gt;</strong>
+
+
+    <p>A timepicker displays a set of textboxes for entering a time.</p>
+
+    <pre>
+&lt;timepicker value="12:05"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL/timepicker" title="ko/XUL/timepicker">Timepicker Reference</a></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;toolbarbutton&gt;</strong>
+    <p>A button that is displayed on a toolbar.</p>
+
+    <pre>
+&lt;toolbarbutton label="Reload"/&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Toolbars" title="ko/XUL_Tutorial/Toolbars">More information about the toolbarbutton element</a>.</li>
+     <li><a href="/ko/XUL/toolbarbutton" title="ko/XUL/toolbarbutton">Toolbarbutton Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;toolbarbutton type="menu"&gt;</strong>
+    <p>A button that is displayed on a toolbar with a drop down menu attached to it.</p>
+
+    <pre>
+&lt;toolbarbutton type="menu" label="Show"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Toolbars"/&gt;
+    &lt;menuitem label="Status Bar"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbarbutton&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Toolbars" title="ko/XUL_Tutorial/Toolbars">More information about this type of menu toolbarbutton element</a>.</li>
+     <li><a href="/ko/XUL/toolbarbutton" title="ko/XUL/toolbarbutton">Toolbarbutton Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;toolbarbutton type="menu-button"&gt;</strong>
+    <p>A button on a toolbar that that has a separate arrow button with a menu attached to it. Unlike with the 'menu' type, a separate action may be performed when the main part of the button is pressed.</p>
+
+    <pre>
+&lt;toolbarbutton type="menu-button" label="Open"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Open Changed Files"/&gt;
+    &lt;menuitem label="Open All"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbarbutton&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Toolbars" title="ko/XUL_Tutorial/Toolbars">More information about this type of menu toolbarbutton element</a>.</li>
+     <li><a href="/ko/XUL/toolbarbutton" title="ko/XUL/toolbarbutton">Toolbarbutton Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><strong>&lt;tree&gt;</strong>
+    <p>A tree displays a hierarchy of items in multiple columns.</p>
+
+    <pre>
+&lt;tree&gt;
+  &lt;treecols&gt;
+    &lt;treecol label="Name" flex="1"/&gt;
+    &lt;treecol label="Size" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Popcorn"/&gt;
+        &lt;treecell label="Large"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Root Beer"/&gt;
+        &lt;treecell label="Small"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+
+    <ul>
+     <li><a href="/ko/XUL_Tutorial/Trees" title="ko/XUL_Tutorial/Trees">More information about the tree element</a>.</li>
+     <li><a href="/ko/XUL/tree" title="ko/XUL/tree">Tree Reference</a></li>
+     <li>Related Elements: <code><a href="/ko/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> <code><a href="/ko/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></li>
+    </ul>
+   </td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>

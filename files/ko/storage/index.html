@@ -1,0 +1,396 @@
+---
+title: Storage
+slug: Storage
+tags:
+  - Guide
+  - Interfaces
+  - Storage
+  - Toolkit API
+translation_of: Mozilla/Tech/XPCOM/Storage
+---
+<p><strong>저장소(Storage)</strong>는 <a class="external" href="http://www.sqlite.org/">SQLite</a> 데이터베이스 API입니다. 이는 신뢰할 수 있는 호출자에게 제공되는데 여기에는 확장과 Firefox 콤포넌트만 해당합니다.</p>
+
+<p>API는 현재 "확정되지 않은 상태(unfrozen)"로서 언제든지 바뀔 수 있습니다. 사실 Storage 기능이 도입되고 파이어폭스 릴리즈 때마다 변화가 있었습니다. 그리고 앞으로도 변화가 있을 것입니다.</p>
+
+<div class="note"><strong>참고:</strong> Storage는 웹 페이지가 영속적인 데이터를 저장하는데 사용하는 <a href="/ko/DOM/Storage" title="ko/DOM/Storage">DOM:Storage</a> 기능이나 (확장이 사용하기 위한 <a href="/ko/XPCOM" title="ko/XPCOM">XPCOM</a> 저장소 유틸리티인) <a href="/ko/Session_store_API" title="ko/Session_store_API">Session store API</a> 기능과는 다릅니다.</div>
+
+<h2 id="시작하기">시작하기</h2>
+
+<p>이 문서는 mozStorage API와 sqlite의 몇 가지 특성에 대해 다룹니다. SQL이나 "일반적인" sqlite에 대해서는 다루지 <em>않습니다</em>. 하지만, <a href="#See_also"> 참고 섹션</a>에서 유용한 링크를 찾을 수 있습니다. mozStorage API에 대한 도움을 얻으려면 news.mozilla.org 뉴스 서버의 mozilla.dev.apps.firefox 그룹으로 질문을 올릴 수 있습니다. 버그를 신고하려면 <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit&amp;component=Storage">Bugzilla</a> (product "Toolkit", component "Storage")를 이용하십시오.</p>
+
+<p>이제 시작하겠습니다. mozStorage는 많은 다른 데이터베이스 시스템과 유사하게 설계되었습니다. 사용을 위한 전반적인 절차는 다음과 같습니다.</p>
+
+<ol>
+ <li><a href="/ko/mozIStorageService" title="https://developer.mozilla.org/ko/mozIStorageService">Storage 서비스</a> 얻기</li>
+ <li>선택한 데이터베이스로 접속을 엽니다.</li>
+ <li>접속에서 실행할 구문을 생성합니다.</li>
+ <li>필요한 경우에 매개 변수를 구문에 대입합니다.</li>
+ <li>구문을 실행합니다.</li>
+ <li>오류를 확인합니다.</li>
+ <li>구문을 초기화합니다.</li>
+</ol>
+
+<h2 id="Opening_a_connection" name="Opening_a_connection">데이터베이스에 연결하기</h2>
+
+<p>아래의 자바스크립트의 예제는 profile디렉토리의 <code>my_db_file_name.sqlite</code>를 여는 예제입니다.</p>
+
+<pre class="brush: js">var file = Components.classes["@mozilla.org/file/directory_service;1"]
+                     .getService(Components.interfaces.nsIProperties)
+                     .get("ProfD", Components.interfaces.nsIFile);
+file.append("my_db_file_name.sqlite");
+
+var storageService = Components.classes["@mozilla.org/storage/service;1"]
+                        .getService(Components.interfaces.mozIStorageService);
+var mDBConn = storageService.openDatabase(file); // Will also create the file if it does not exist
+</pre>
+
+<p>똑같이 C++에서는 아래와 같습니다.:</p>
+
+<pre class="brush: cpp">nsCOMPtr&lt;nsIFile&gt; dbFile;
+rv = NS_GetSpecialDirectory(NS_APP_USER_PROFILE_50_DIR,
+                            getter_AddRefs(dbFile));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = dbFile-&gt;Append(NS_LITERAL_STRING("my_db_file_name.sqlite"));
+NS_ENSURE_SUCCESS(rv, rv);
+nsCOMPtr&lt;mozIStorageService&gt; dbService =
+  do_GetService(MOZ_STORAGE_SERVICE_CONTRACTID, &amp;rv);
+NS_ENSURE_SUCCESS(rv, rv);
+
+nsCOMPtr&lt;mozIStorageConnection&gt; dbConn;
+rv = dbService-&gt;OpenDatabase(dbFile, getter_AddRefs(dbConn));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<div class="note">Note:  <code>MOZ_STORAGE_SERVICE_CONTRACTID</code>는 <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/build/mozStorageCID.h" rel="custom">storage/build/mozStorageCID.h</a></code>에서 정의 되어있습니다..</div>
+
+<p></p><div class="blockIndicator warning">
+    <p><strong>Warning:</strong> 아마도 sqlite database라는 의미로 '.sdb'라고 확장자를 쓰고 싶을 겁니다. 그러나 이 건 추천하고 싶지 않네요. 이 확장자는윈도우즈에서는 'Application Compatibility Database'라는 의미로 특별히 취급하고 있습니다. 그래서 이 확장자의 파일이 바뀌면 시스템 복원 기능이 자동으로 백업을 하게 됩니다. 그러므로 이 확장자를 쓰는 것은 파일시스템에 오버헤드를 발행하게 만듭니다.</p>
+</div><p></p>
+
+<h2 id="Statements" name="Statements">연결 끊기</h2>
+
+<p>동기 트랜젝션을 사용 중에 연결을 끊으려면 <code><a href="https://developer.mozilla.org/ko/docs/XPCOM_Interface_Reference/mozIStorageConnection#close()">mozIStorageConnection.close()</a></code> 함수를 사용하세요. 비동기 트랜젝션을 사용한다면 <code><a href="https://developer.mozilla.org/ko/docs/XPCOM_Interface_Reference/mozIStorageConnection#asyncClose()">mozIStorageConnection.asyncClose()</a></code> 함수를 사용해야 합니다. 후자는 모든 연결이 끊어지기 전의 모든 진행중인 트랜젝션에 사용할 수 있습니다. 그리고 부차적으로 연결이 끊어졌을 때 콜백함수를 사용할 수 있습니다.</p>
+
+<h2 id=".EA.B5.AC.EB.AC.B8" name=".EA.B5.AC.EB.AC.B8">구문</h2>
+
+<p>아래 단계에 따라 SQLite 데이터베이스에 구문을 생성하고 실행할 수 있습니다. 전체 레퍼런스는 <a href="/ko/MozIStorageStatement" title="ko/MozIStorageStatement">mozIStorageStatement</a>를 참고하십시오.</p>
+
+<h3 id="Creating_a_statement" name="Creating_a_statement">구문생성</h3>
+
+<p>SQL문을 실행하는 방법은 두가지가 있습니다.</p>
+
+<h4 id="실행_결과를_반환하지_않는_방법">실행 결과를 반환하지 않는 방법</h4>
+
+<p>실행한 결과가 있어야 하는 경우 자바스크립트에서는 <code><a href="https://developer.mozilla.org/ko/docs/XPCOM_Interface_Reference/mozIStorageConnection#executeSimpleSQL()">mozIStorageConnection.executeSimpleSQL()</a></code> API를 사용하세요. :</p>
+
+<pre class="brush: js">dbConn.executeSimpleSQL("CREATE TEMP TABLE table_name (column_name INTEGER)");
+</pre>
+
+<p>마찬가지로 C++에서는 아래와 같습니다.:</p>
+
+<pre class="brush: cpp">rv = mDBConn-&gt;ExecuteSimpleSQL(NS_LITERAL_CSTRING("CREATE TEMP TABLE table_name (column_name INTEGER)"));
+NS_ENSURE_SUCCESS(rv, rv);</pre>
+
+<h4 id="실행결과를_보여주는_방법">실행결과를 보여주는 방법</h4>
+
+<p>반면 실행 결과물이 필요한 경우 자바스크립트에서는 <code><a href="https://developer.mozilla.org/ko/docs/XPCOM_Interface_Reference/mozIStorageConnection#createStatement()">mozIStorageConnection.createStatement()</a></code> API를 사용하세요.:</p>
+
+<pre class="brush: js">var statement = dbConn.createStatement("SELECT * FROM table_name WHERE column_name = :parameter");
+</pre>
+
+<p>This example uses a named placeholder called "parameter" to be bound later (described in <a href="#Binding_Parameters">Binding Parameters</a>).  Similarly, the C++ looks like this:</p>
+
+<pre class="brush: cpp">nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = dbConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM table_name WHERE column_name = ?1"),
+                             getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<p>This example uses the numbered placeholder indexed by zero for a parameter to be bound later (described in <a href="#Binding_Parameters">Binding Parameters</a>).</p>
+
+<p></p><div class="blockIndicator note"><strong>주의:</strong> Numerical indexes for parameters are always one less than the number you write in the SQL.  The use of numerical indexes for parameters is strongly discouraged in JavaScript where named parameters are much easier to use.</div><p></p>
+
+<p></p><div class="blockIndicator note"><strong>주의:</strong> If you need to execute a statement multiple times, caching the result of createStatement will give you a noticeable performance improvement because the SQL query does not need to be parsed each time.</div><p></p>
+
+<h3 id=".EB.A7.A4.EA.B0.9C_.EB.B3.80.EC.88.98_.EB.8C.80.EC.9E.85" name=".EB.A7.A4.EA.B0.9C_.EB.B3.80.EC.88.98_.EB.8C.80.EC.9E.85">매개 변수 대입</h3>
+
+<p>일반적으로 실행 중에 매개 변수를 포함한 SQL 문자열을 생성하는 것보다 모든 매개 변수를 별도로 대입하는 것이 가장 좋은 방법입니다. 다른 무엇보다도 이는 SQL 주입 공격을 방지할 수 있는데, 대입한 매개 변수는 절대 SQL로 실행되지 않기 때문입니다.</p>
+
+<p>여러분은 플레이스홀더를 포함한 구문에 매개 변수를 대입합니다. 플레이스홀더는 색인으로 참조하는데, "?1"로 시작하고 그 다음 "?2"...와 같습니다. 플레이스홀더를 대입하려면 구문 함수 BindXXXParameter(0) BindXXXParameter(1)... 를 사용합니다.</p>
+
+<dl>
+ <dd>
+ <div class="note">주의: 플레이스홀더의 색인은 1부터 시작합니다. 대입 함수로 전달하는 정수는 0부터 시작합니다. 이는 "?1"가 매개 변수 0에 대응하고 "?2"가 매개 변수 1에 대응한다는 것을 의미합니다.</div>
+ </dd>
+</dl>
+
+<p>"?xx" 대신 ":example"와 같은 이름있는 매개 변수를 사용할 수도 있습니다.</p>
+
+<p>플레이스홀더는 하나의 SQL 구문에 여러 번 나타날 수 있으며 모든 인스턴스는 대입한 값으로 대체합니다. 대입하지 않은 매개 변수는 NULL로 해석합니다.</p>
+
+<p>아래 예제는 <code>bindUTF8StringParameter()</code>와 <code>bindInt32Parameter()</code>만 사용하고 있습니다. 모든 대입 함수 목록은 <a href="/ko/MozIStorageStatement#Binding_functions" title="ko/MozIStorageStatement#Binding_functions">mozIStorageStatement</a>를 참고하시기 바랍니다.</p>
+
+<p>C++ 예제:</p>
+
+<pre>nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM foo WHERE a = ?1 AND b &gt; ?2"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = statement-&gt;BindUTF8StringParameter(0, "hello"); // "hello" will be substituted for "?1"
+NS_ENSURE_SUCCESS(rv, rv);
+rv = statement-&gt;BindInt32Parameter(1, 1234); // 1234 will be substituted for "?2"
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<p>자바스크립트 예제:</p>
+
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1 AND b &gt; ?2");
+statement.bindUTF8StringParameter(0, "hello");
+statement.bindInt32Parameter(1, 1234);
+</pre>
+
+<p>이름있는 매개 변수를 사용하는 경우에는 <code>getParameterIndex</code> 메소드를 사용하여 이름있는 매개 변수의 색인을 얻어야 합니다. 자바스크립트 예제는 다음과 같습니다.</p>
+
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = :myfirstparam AND b &gt; :mysecondparam");
+
+var firstidx = statement.getParameterIndex(":myfirstparam");
+statement.bindUTF8StringParameter(firstidx, "hello");
+
+var secondidx = statement.getParameterIndex(":mysecondparam");
+statement.bindInt32Parameter(secondidx, 1234);
+</pre>
+
+<p>같은 질의에 이름있는 매개 변수와 색인된 매개 변수를 혼합할 수도 있습니다.</p>
+
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1 AND b &gt; :mysecondparam");
+
+statement.bindUTF8StringParameter(0, "hello");
+// you can also use
+// var firstidx = statement.getParameterIndex("?1");
+// statement.bindUTF8StringParameter(firstidx, "hello");
+
+var secondidx = statement.getParameterIndex(":mysecondparam");
+statement.bindInt32Parameter(secondidx, 1234);
+</pre>
+
+<p><code>IN ( value-list )</code> 표현식과 함께 <code>WHERE</code> 절을 사용하는 경우에 대입은 동작하지 않게 됩니다. 대신 문자열을 생성하시기 바랍니다. 사용자 입력을 처리하는 경우가 아니라면 보안 문제는 없습니다.</p>
+
+<pre>var ids = "3,21,72,89";
+var sql = "DELETE FROM table WHERE id IN ( "+ ids +" )";
+</pre>
+
+<h3 id=".EA.B5.AC.EB.AC.B8_.EC.8B.A4.ED.96.89" name=".EA.B5.AC.EB.AC.B8_.EC.8B.A4.ED.96.89">구문 실행</h3>
+
+<p>구문을 실행하는 주 방법은 <code>mozIStorageStatement.executeStep</code>입니다. 이 함수는 구문이 생성하는 모든 결과 행을 나열할 수 있도록 해주고 더 이상 결과가 없을 때를 알려줍니다.</p>
+
+<p><code>executeStep</code>를 호출할 후에 <a href="/ko/MozIStorageValueArray" title="ko/MozIStorageValueArray">mozIStorageValueArray</a>에서 <strong>적절한 getter 함수를 사용하여</strong> 결과 행의 값을 얻을 수 있습니다(mozIStorageStatement는 mozIStorageValueArray를 구현합니다). 아래의 예제는 <code>getInt32()</code>만 사용하고 있습니다.</p>
+
+<p>값의 형식은 지정한 열의 형식을 반환하는 <code>mozIStorageValueArray.getTypeOfIndex</code>로 구할 수 있습니다. 그러나, 주의하십시오. sqlite는 형식있는 데이터베이스가 아닙니다. 열에 선언한 형식과 무관하게 모든 셀에 아무 형식이나 입력할 수 있습니다. 다른 형식을 요청하면 sqlite는 최선을 다하여 그것을 변환하고 변환이 불가능하면 기본 값으로 처리합니다. 그러므로 형식 오류를 얻을 수 없으며 이상한 데이터 출력을 얻을 수도 있습니다.</p>
+
+<p>C++ 코드는 <code>AsInt32</code>, <code>AsDouble</code>과 같은 함수를 이용할 수도 있는데, 이는 더 편리한 C++ 반환 값으로 값을 반환합니다. 하지만, 색인이 잘못된 경우에도 오류가 발생하지 않으므로 주의하십시오. 다른 오류가 발생하는 것도 불가능한데, sqlite는 사리에 맞지 않는 경우에도 항상 형식을 변환하기 때문입니다.</p>
+
+<p>C++ 예제:</p>
+
+<pre>PRBool hasMoreData;
+while (NS_SUCCEEDED(statement-&gt;ExecuteStep(&amp;hasMoreData)) &amp;&amp; hasMoreData) {
+  PRInt32 value = statement-&gt;AsInt32(0);
+  // use the value...
+}
+</pre>
+
+<p>자바스크립트 예제:</p>
+
+<pre>while (statement.executeStep()) {
+  var value = statement.getInt32(0); // use the correct function!
+  // use the value...
+}
+</pre>
+
+<p><code>mozIStorageStatement.execute()</code>는 구문에서 얻을 데이터가 없는 경우에 편리한 함수입니다. 이는 구문을 한 번 실행하고 초기화합니다. 이는 삽입 구문에 대해 유용한데 코드를 매우 간단하게 하기 때문입니다.</p>
+
+<pre>var statement = mDBConn.createStatement("INSERT INTO my_table VALUES (?1)");
+statement.bindInt32Parameter(52);
+statement.execute();
+</pre>
+
+<p>파일 <img alt="Image:TTRW2.zip">은 데이터베이스에 대하여 SQL SELECT를 실행하는 간단하지만 완전한 자바스크립트입니다.</p>
+
+<h3 id=".EA.B5.AC.EB.AC.B8_.EC.B4.88.EA.B8.B0.ED.99.94" name=".EA.B5.AC.EB.AC.B8_.EC.B4.88.EA.B8.B0.ED.99.94">구문 초기화</h3>
+
+<p>더 이상 사용하지 않는 구문을 초기화하는 것은 중요합니다. 초기화되지 않은 쓰기 구문은 테이블에 잠금을 유지하여 다른 구문이 테이블을 접근하는 것을 막게 됩니다. 초기화되지 않은 읽기 구문은 쓰기를 막게 됩니다.</p>
+
+<p>구문 개체가 해제되면 해당 데이터베이스 구문은 닫힙니다. C++을 사용 중인 경우, 모든 참조가 소멸된다는 것을 알고 있다면 따로 구문을 초기화할 필요가 없습니다. 또한 <code>mozIStorageStatement.execute()</code>를 사용하는 경우에도 따로 구문을 초기화할 필요가 없습니다. 이 함수는 여러분을 대신하여 구문을 초기화합니다. 나머지 경우에는 <code>mozIStorageStatement.reset()</code>를 호출하십시오.</p>
+
+<p>자바스크립트 호출자는 확실하게 구문을 초기화해야 합니다. 특히 예외에 대해서 주의하십시오. 예외가 발생하거나 데이터베이스에 접근하는 것이 불가능해진 경우에도 구문을 초기화하는 것을 확실하게 해야 합니다. 구문 초기화는 비교적 가벼운 작업이고 이미 초기화된 경우에도 아무런 문제가 발생하지 않기 때문에 불필요한 초기화에 대해서 걱정할 필요는 없습니다.</p>
+
+<pre>var statement = connection.createStatement(...);
+try {
+  // use the statement...
+} finally {
+  statement.reset();
+}
+</pre>
+
+<p>C++ 호출자도 같은 일을 해야 합니다. <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code>에는 mozStorageStatementScoper라고 불리우는 유효 영역이 있는 개체가 있는데, 이 개체는 둘러싼 영역을 빠져 나갈 때 주어진 구문이 초기화되는 것을 보장합니다. 가능하면 이 개체를 사용하는 것이 바람직합니다.</p>
+
+<pre>void someClass::someFunction()
+{
+  mozStorageStatementScoper scoper(mStatement)
+  // use the statement
+}
+</pre>
+
+<h2 id=".EC.B5.9C.EC.A2.85_insert_.EC.95.84.EC.9D.B4.EB.94.94" name=".EC.B5.9C.EC.A2.85_insert_.EC.95.84.EC.9D.B4.EB.94.94">최종 insert 아이디</h2>
+
+<p>연결의 <code>lastInsertRowID</code> 속성을 이용하면 데이터베이스의 마지막 <code>INSERT</code> 작업에서 할당한 아이디(rowid)를 구할 수 있습니다.<br>
+ 이는 여러분이 테이블에 <code>INTEGER PRIMARY KEY</code>나 <code>INTEGER PRIMARY KEY AUTOINCREMENT</code>로 지정된 열을 가지고 있을 때 유용한데, 이 경우 SQLite는 여러분이 값을 제공하지 않으면 삽입하는 각 행에 대하여 자동으로 값을 할당합니다. 반환 값은 자바스크립트에서는 <code>number</code> 형식이고 C++에서는 <code>long long</code>입니다.</p>
+
+<p><code>lastInsertRowID</code>를 이용하는 자바스크립트 예제는 다음과 같습니다.</p>
+
+<pre>var sql = "INSERT INTO contacts_table (number_col, name_col) VALUES (?1, ?2)"
+var statement = mDBConn.createStatement(sql);
+    statement.bindUTF8StringParameter(0, number);
+    statement.bindUTF8StringParameter(1, name);
+    statement.execute();
+    statement.reset();
+
+var rowid = mDBConn.lastInsertRowID;
+</pre>
+
+<h2 id=".ED.8A.B8.EB.9E.9C.EC.9E.AD.EC.85.98" name=".ED.8A.B8.EB.9E.9C.EC.9E.AD.EC.85.98">트랜잭션</h2>
+
+<p>mozIStorageConnection는 트랜잭션을 시작하고 끝내는 함수를 가지고 있습니다. 명시적으로 트랜잭션을 사용하지 않으면 각 구문에 대하여 암시적인 트랜잭션이 생성됩니다. 이는 성능과 밀접한 관계가 있습니다. 각 트랜잭션에 대해 부하가 걸리는데 특히 커밋에 대해서 그렇습니다. 그러므로 하나의 행에서 여러 구문을 실행할 때 하나의 트랜잭션으로 처리하면 커다란 성능 향상을 얻을 수 있습니다. 성능에 대한 자세한 정보는 <a href="/ko/Storage/Performance" title="ko/Storage/Performance">Storage:Performance</a>를 참고하십시오.</p>
+
+<p>다른 데이터베이스 시스템과의 주요한 차이점은 sqlite가 중첩 트랜잭션을 지원하지 않는다는 것입니다. 이는 하나의 트랜잭션을 열면 다른 트랜잭션을 열 수 없다는 뜻입니다. <code>mozIStorageConnection.transactionInProgress</code>를 확인하면 현재 진행 중인 트랜잭션이 있는지 알 수 있습니다.</p>
+
+<p>SQL 구문으로 "BEGIN TRANSACTION"과 "END TRANSACTION"을 직접 실행할 수도 있습니다(이는 함수를 호출할 때 연결에서 실행하는 것입니다). 하지만 <code>mozIStorageConnection.beginTransaction</code>와 관련 함수를 사용하는 것이 바람직한데, 트랜잭션의 상태를 연결에 저장하기 때문입니다. 그렇지 않으면 <code>transactionInProgress</code> 속성은 잘못된 값을 갖게 됩니다.</p>
+
+<p>sqlite는 다음과 같은 트랜잭션 형식을 가지고 있습니다.</p>
+
+<ul>
+ <li>mozIStorageConnection.TRANSACTION_DEFERRED: 기본 값. 필요할 때(보통 트랜잭션의 구문을 처음으로 실행할 때) 데이터베이스 잠금을 얻습니다.</li>
+</ul>
+
+<ul>
+ <li>mozIStorageConnection.TRANSACTION_IMMEDIATE: 곧바로 데이터베이스에 대한 읽기 잠금을 얻습니다.</li>
+</ul>
+
+<ul>
+ <li>mozIStorageConnection.TRANSACTION_EXCLUSIVE: 곧바로 데이터베이스에 대한 쓰기 잠금을 얻습니다.</li>
+</ul>
+
+<p>이 트랜잭션의 형식을 <code>mozIStorageConnection.beginTransactionAs</code>로 전달하여 여러분에게 필요한 트랜잭션의 종류를 지정할 수 있습니다. 다른 트랜잭션이 이미 시작되었다면 이 작업은 성공하지 못한다는 것을 잊지 마십시오. 보통 기본 TRANSACTION_DEFERRED 형식으로 충분하며 다른 형식이 필요한 이유를 제대로 알지 못한다면 사용해서는 안됩니다. 더 자세한 정보는 <a class="external" href="http://www.sqlite.org/lang_transaction.html">BEGIN TRANSACTION</a>과 <a class="external" href="http://www.sqlite.org/lockingv3.html">locking</a>에 대한 sqlite 문서를 참고하십시오.</p>
+
+<pre>var ourTransaction = false;
+if (!mDBConn.transactionInProgress) {
+  ourTransaction = true;
+  mDBConn.beginTransactionAs(mDBConn.TRANSACTION_DEFERRED);
+}
+
+// ... use the connection ...
+
+if (ourTransaction)
+  mDBConn.commitTransaction();
+</pre>
+
+<p>C++ 코드에서는 <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code>에 정의된 mozStorageTransaction 도우미 클래스를 사용할 수 있습니다. 이 클래스는 유효 범위에 들어오면 지정한 연결에서 지정한 형식의 트랜잭션을 시작하고 유효 범위를 벗어나면 트랜잭션을 커밋하거나 롤백합니다. 트랜잭션이 이미 진행 중이라면 트랜잭션 도우미 클래스는 어떤 작업도 하지 않습니다.</p>
+
+<p>또한 명시적으로 커밋하는 함수도 가지고 있습니다. 전형적인 용법은 롤백을 기본으로 하는 클래스를 생성하고 나서 처리가 성공하면 명시적으로 트랜잭션을 커밋하는 것입니다.</p>
+
+<pre>nsresult someFunction()
+{
+  // deferred transaction (the default) with rollback on failure
+  mozStorageTransaction transaction(mDBConn, PR_FALSE);
+
+  // ... use the connection ...
+
+  // everything succeeded, now explicitly commit
+  return transaction.Commit();
+}
+</pre>
+
+<h2 id=".EB.8D.B0.EC.9D.B4.ED.84.B0.EB.B2.A0.EC.9D.B4.EC.8A.A4.EB.A5.BC_.EC.86.90.EC.83.81.ED.95.98.EB.8A.94_.EA.B2.BD.EC.9A.B0" name=".EB.8D.B0.EC.9D.B4.ED.84.B0.EB.B2.A0.EC.9D.B4.EC.8A.A4.EB.A5.BC_.EC.86.90.EC.83.81.ED.95.98.EB.8A.94_.EA.B2.BD.EC.9A.B0">데이터베이스를 손상하는 경우</h2>
+
+<ul>
+ <li>다음 문서에서 손상(corruption)에 대한 섹션을 참고하십시오. <a class="external" href="http://www.sqlite.org/lockingv3.html">File locking and concurrency in sqlite version 3</a>.</li>
+</ul>
+
+<ul>
+ <li><code>strcmp</code>로 비교하면 정확하게 같은 이름은 아니지만 실제 동일한 파일로 하나 이상의 연결을 엽니다. "my.db"와 "../dir/my.db" 또는 (대소문자 구별이 없는) 윈도우에서 "my.db"와 "My.db"가 여기에 포함됩니다. Sqlite는 많은 경우를 처리하려고 시도하지만 여러분은 그것에 의존하면 안됩니다.</li>
+</ul>
+
+<ul>
+ <li>심볼릭 링크나 하드 링크로 데이터베이스를 접근합니다.</li>
+</ul>
+
+<ul>
+ <li>하나 이상의 스레드에서 같은 데이터베이스로 연결을 엽니다(아래의 "스레드 안전성" 참고).</li>
+</ul>
+
+<ul>
+ <li>하나 이상의 스레드에서 연결이나 구문을 접근합니다(아래의 "스레드 안전성" 참고).</li>
+</ul>
+
+<ul>
+ <li>데이터베이스가 열려 있는 동안 외부 프로그램에서 데이터베이스를 엽니다. 우리의 캐시는 이 작업을 안전하게 처리할 수 있도록 하는 sqlite의 일반 파일 잠금을 방해합니다.</li>
+</ul>
+
+<h2 id="SQLite_.EC.9E.A0.EA.B8.88" name="SQLite_.EC.9E.A0.EA.B8.88">SQLite 잠금</h2>
+
+<p>SQLite는 전체 데이터베이스를 잠급니다. 즉, 읽기 동작 중인 경우에 쓰기 시도는 SQLITE_BUSY를 반환하고, 쓰기 동작 중인 경우에 읽기 시도는 SQLITE_BUSY를 반환합니다. 구문은 첫 번째 step()부터 reset() 호출 때까지 동작 중인 것으로 간주합니다. execute()는 하나의 실행으로 step()과 reset()을 호출합니다. 흔한 문제는 step()하기를 마친 후에 reset() 구문을 빠뜨리는 것입니다.</p>
+
+<p>주어진 SQLite 연결은 여러 구문을 동시에 열 수 있지만, 잠금 모델은 이 구문들이 동시에 처리할 수 있는 작업(읽기 또는 쓰기)을 제한합니다. 사실 여러 구문이 동시에 읽는 것은 가능합니다. 그러나 여러 구문이 같은 테이블을 동시에 읽고 쓰는 것은 불가능합니다. 이는 같은 연결에서 동작하더라도 마찬가지입니다.</p>
+
+<p>SQLite는 연결 수준과 테이블 수준의 2층 잠금 모델을 가지고 있습니다. 많은 사람들이 연결(데이터베이스) 수준 잠금 모델에 대해서 잘 알고 있습니다. 이는 읽는 작업은 여럿이지만 쓰는 작업은 단 하나입니다. 테이블 수준(B-트리) 잠금은 가끔 헷갈리는 것입니다. (내부적으로 데이터베이스의 각 테이블은 자신의 B-트리를 가지고 있으므로 "테이블"과 "B-트리"는 기술적으로 동의어입니다).</p>
+
+<h3 id=".ED.85.8C.EC.9D.B4.EB.B8.94_.EC.88.98.EC.A4.80_.EC.9E.A0.EA.B8.88" name=".ED.85.8C.EC.9D.B4.EB.B8.94_.EC.88.98.EC.A4.80_.EC.9E.A0.EA.B8.88">테이블 수준 잠금</h3>
+
+<p>하나의 연결만 가지고 있고 그것이 쓰기 작업을 위하여 데이터베이스를 잠궜다면 원하는 작업을 처리하기 위해 여러 구문을 사용할 수 있다고 생각할 지도 모릅니다. 전적으로 그렇지는 않습니다. 여러분은 데이터베이스를 탐색 중인 구문 핸들(예를 들어, 열려 있는 SELECT 구문)이 관리하는 테이블(B-트리) 수준 잠금에 대해서 알아야 합니다.</p>
+
+<p>일반적인 규칙은 다음과 같습니다. 구문 핸들은 다른 구문 핸들이 읽고 있는(열려 있는 커서가 있는) 테이블(B-트리)을 수정하지 <strong>않습니다</strong>. 구문 핸들이 다른 구문 핸들과 같은 연결(트랜잭션 문맥, 데이터베이스 잠금 등)을 공유하더라도 마찬가지입니다. <strong>그러한 작업 시도는 여전히 차단됩니다(즉, SQLITE_BUSY를 반환합니다)</strong>.</p>
+
+<p>이 문제는 하나의 구문으로 테이블을 탐색(iterate)하고 다른 구문으로 그 안의 레코드를 수정하려고 할 때 자주 발생합니다. 이 작업은 제대로 동작하지 않습니다(또는 최적화 수행의 개입에 따라 동작하지 않을 가능성을 수반합니다(아래 참고)). 수정 구문은 차단되는데 읽기 구문이 테이블에 열린 커서를 가지고 있기 때문입니다.</p>
+
+<h3 id=".EC.9E.A0.EA.B8.88_.EB.AC.B8.EC.A0.9C_.ED.94.BC.ED.95.98.EA.B8.B0" name=".EC.9E.A0.EA.B8.88_.EB.AC.B8.EC.A0.9C_.ED.94.BC.ED.95.98.EA.B8.B0">잠금 문제 피하기</h3>
+
+<p>해결책은 위에서 설명한대로 (1)을 따르는 것입니다. 이론적으로 (2)는 SQLite 3.x에서 제대로 동작하지 않습니다. 이 시나리오에서는 여러 개의 연결에 대하여 테이블 잠금과 더불어 데이터베이스 잠금이 역할을 하게 됩니다. 연결 2(수정 연결)는 연결 1(읽기 연결)이 테이터베이스를 읽는 동안 그것을 수정할 수 없습니다. 연결 2는 수정하는 SQL 구문을 실행하기 위하여 배타적인 잠금이 필요한데, 연결 1이 데이터베이스를 읽는 구문을 가지고 있는 한 이를 얻을 수 없습니다(연결 1은 이 때 공유하는 읽기 잠금을 가지고 있는데 이는 다른 연결이 배타적인 잠금을 얻을 수 없도록 합니다).</p>
+
+<p>다른 선택 사항은 임시 테이블을 이용하는 것입니다. 해당 테이블의 결과를 포함한 임시 테이블을 생성하고 (읽기 구문의 테이블 잠금을 임시 테이블에 두면서) 그것을 탐색하십시오. 그러면 수정 구문은 문제 없이 실제 테이블을 바꿀 수 있습니다. 이 작업은 하나의 연결(트랜잭션 문맥)에서 나온 구문으로 수행할 수 있습니다. 이 시나리오는 ORDER BY가 내부적으로 임시 테이블을 생성할 수 있는 것처럼 가끔 보이지 않게 일어나기도 합니다. 그러나 최적화 수행이 모든 경우에 이렇게 할 것이라고 가정하는 것은 안전하지 않습니다. 오직 명시적으로 임시 테이블을 생성하는 것이 후자의 선택 사항을 수행하는 안전한 방법입니다.</p>
+
+<h2 id=".EC.8A.A4.EB.A0.88.EB.93.9C_.EC.95.88.EC.A0.84.EC.84.B1" name=".EC.8A.A4.EB.A0.88.EB.93.9C_.EC.95.88.EC.A0.84.EC.84.B1">스레드 안전성</h2>
+
+<p>mozStorage 서비스와 sqlite는 스레드에 대해 안전합니다. 그러나 다른 mozStorage나 sqlite 개체나 작업은 스레드에 대해 안전하지 않습니다.</p>
+
+<ul>
+ <li>저장소 서비스는 주 스레드에서 생성해야 합니다. 다른 스레드에서 서비스를 접근하려면 주 스레드에서 미리 getService를 호출해야 합니다.</li>
+</ul>
+
+<ul>
+ <li>연결이나 구문을 여러 스레드에서 접근할 수 없습니다. 저장소 개체는 스레드에 대해 안전하지 않으므로 그것의 sqlite 표현 또한 스레드에 대해 안전하지 않습니다. 잠금을 실행하고 한 순간에 하나의 스레드만 작업하는 것을 보장하더라도 문제가 발생할 수 있습니다. 이러한 경우는 테스트를 거치지 않았으며 sqlite에 어떤 내부적인 스레드별 상태가 있을지도 모릅니다. 이렇게 하지 않는 것이 바람직합니다.</li>
+</ul>
+
+<ul>
+ <li>다른 스레드에서 여러 연결로 하나의 데이터베이스를 접근할 수 없습니다. 일반적으로 sqlite는 이를 허용합니다. 그러나, 우리는 <code>sqlite3_enable_shared_cache(1);</code>을 이용하여 여러 연결에서 같은 캐시를 공유하고 있습니다. 이는 성능을 위하여 매우 중요합니다. 그러나 캐시 접근에 잠금이 없어서 하나 이상의 스레드에서 이를 사용하면 문제가 발생합니다.</li>
+</ul>
+
+<p>그러나, 자바스크립트 브라우저 확장 작성자는 처음 보기보다 이 제약의 영향을 덜 받는다는 사실에 주목할 만합니다. 자바스크립트 안에서 배타적으로 데이터베이스가 생성되고 이용되면 보통 스레드 안전성은 문제가 되지 않습니다. SpiderMonkey(파이어팍스의 자바스크립트 엔진)는 자바스크립트가 다른 스레드에서 실행되는 경우나 다른 스레드에서 만든 콜백에서 실행되는 경우를 제외하고 하나의 영구적인 스레드에서 자바스크립트를 실행합니다. 다중 스레드 자바스크립트의 잘못된 사용을 제외하면, 자바스크립트 스레드가 아닌 시스템 수준 스레드가 사용 중인 데이터베이스를 mozStorage를 통해 접근하는 경우에만 문제가 발생합니다.</p>
+
+<h2 id=".EC.B0.B8.EA.B3.A0" name=".EC.B0.B8.EA.B3.A0">참고</h2>
+
+<ul>
+ <li><a href="/ko/MozIStorageConnection" title="ko/MozIStorageConnection">mozIStorageConnection</a> Database connection to a specific file or in-memory data storage</li>
+ <li><a href="/ko/MozIStorageStatement" title="ko/MozIStorageStatement">mozIStorageStatement</a> Create and execute SQL statements on a SQLite database.</li>
+ <li><a href="/ko/MozIStorageValueArray" title="ko/MozIStorageValueArray">mozIStorageValueArray</a> Wraps an array of SQL values, such as a result row.</li>
+ <li><a href="/ko/MozIStorageFunction" title="ko/MozIStorageFunction">mozIStorageFunction</a> Create a new SQLite function.</li>
+ <li><a href="/ko/MozIStorageAggregateFunction" title="ko/MozIStorageAggregateFunction">mozIStorageAggregateFunction</a> Create a new SQLite aggregate function.</li>
+ <li><a href="/ko/MozIStorageProgressHandler" title="ko/MozIStorageProgressHandler">mozIStorageProgressHandler</a> Monitor progress during the execution of a statement.</li>
+ <li><a href="/ko/MozIStorageStatementWrapper" title="ko/MozIStorageStatementWrapper">mozIStorageStatementWrapper</a> Storage statement wrapper</li>
+</ul>
+
+<ul>
+ <li><a href="/ko/Storage/Performance" title="ko/Storage/Performance">Storage:Performance</a> How to get your database connection performing well.</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/3072">Storage Inspector Extension</a> Makes it easy to view any sqlite database files in the current profile.</li>
+ <li><a class="external" href="http://www.sqlite.org/lang.html">SQLite Syntax</a> Query language understood by SQLite</li>
+ <li><a class="external" href="http://sqlitebrowser.sourceforge.net/">SQLite Database Browser</a> is a capable free tool available for many platforms. It can be handy for examining existing databases and testing SQL statements.</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5817">SQLite Manager Extension</a> helps manage sqlite database files on your computer.</li>
+</ul>

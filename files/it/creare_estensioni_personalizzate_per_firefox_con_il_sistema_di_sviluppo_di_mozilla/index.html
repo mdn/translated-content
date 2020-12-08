@@ -1,0 +1,588 @@
+---
+title: >-
+  Creare Estensioni personalizzate per Firefox con il sistema di sviluppo di
+  Mozilla
+slug: >-
+  Creare_Estensioni_personalizzate_per_Firefox_con_il_sistema_di_sviluppo_di_Mozilla
+tags:
+  - Documentazione_build
+  - Estensioni
+  - TraduzioneIncompleta
+  - Tutte_le_categorie
+  - XPCOM
+translation_of: >-
+  Archive/Add-ons/Creating_Custom_Firefox_Extensions_with_the_Mozilla_Build_System
+---
+<div class="note"><strong>Nota:</strong> Tutte le istruzioni contenute in questo articolo si applicano solo al ramo di Mozilla 1.8 (cioè Firefox 1.5). Cercheremo di tenere questo articolo aggiornato ai cambiamenti. Ciò che può sicuramente essere escluso è che funzioni con i rami 1.7 (firefox 1.0) o precedenti.</div>
+
+<p>Esiste <a href="it/Estensioni">un'abbondanza di materiale</a> su come creare un'estensione per Firefox. Tutta questa documentazione però presume che si stia sviluppando un'estensione utilizzando esclusivamente <a href="it/XUL">XUL</a> e <a href="it/JavaScript">JavaScript</a>. Per estensioni più complesse, potrebbe essere necessario creare dei componenti in C++ per fornire funzionalità aggiuntive. Le ragioni per la quale potrebbe essere necessario includere componenti C++ nell'estensione, possono essere:</p>
+
+<ul>
+ <li>Necessità di ottenere alte prestazioni al di là di quanto possa essere effettuato con codice JavaScript.</li>
+ <li>L'utilizzo di librerie di terze parti scritte in C o C++.</li>
+ <li>L'utilizzo di interfacce di Mozilla che non sono accessibile attraverso <a href="it/XPCOM">XPCOM</a> (es. <a href="it/NSPR">NSPR</a>).</li>
+</ul>
+
+<p>Questo articolo descrive come impostare l'ambiente di sviluppo per un'estensioni di Firefox grande e complessa con alcuni o tutti i requisiti menzionati più sotto. Il processo di raccolta di queste informazioni è stato un pò faticoso a causa della mancanza di informazioni pubblicate su questo argomento, ma è stato assistito da vari membri della comunità di sviluppo di Mozilla, che hanno mostrato una pazienza estrema nel rispondere alle domande di novizi impreparati. In quest'articolo potrebbero esserci molte cose inesatte, poco chiare o non accurate. L'obbiettivo è quello di limare queste istruzioni fino a farle divenire una guida definitiva per seri programmatori che intendano estendere la piattaforma di Firefox. Se sei uno dei tanti che ne sanno di più, il tuo aiuto per migliorare questo articolo sarà enormemente apprezzato.</p>
+
+<p>Devo ricordare che<em>non</em> è necessario compilare Mozilla o usare il Mozilla build system se si vogliono creare componenti C++ per Mozilla. Se si vuole solo creare un componente <a href="it/XPCOM">XPCOM</a> o due, questa è probailmente una guida troppo elaborata, e si farebbe meglio a dare invece uno sguardo a <a class="external" href="http://www.iosart.com/firefox/xpcom/">questo documento</a>. D'altra parte, si si è uno sviluppatore (o un team di sviluppo) con una certa esperienza, e si sa che si andrà a realizzare una estensione grande e complessa, si può tenere in considerazione l'approccio descritto in questo documento.</p>
+
+<p>Un'ultima nota: ho provato queste tecniche solo con Firefox, ma probabilmente funzionano più o meno bene anche con altre piattaforme basate su Gecko, come Thunderbird o Seamonkey. Se qualcuno può confermarmelo e/o fornire linee guida su cosa differisce, Aggiorenrò l'articolo per incorporare tali informazioni.</p>
+
+<h3 id="Bambi_Incontra_Mozilla" name="Bambi_Incontra_Mozilla">Bambi Incontra Mozilla</h3>
+
+<p>Niente di questo doocumento è per i deboli di cuore, In particolare, i passi iniziali richiedono di effettuare il build di Mozilla, che è un enorme - no, gargantuesco! - progetto. Più di uno sviluppatore è stato portato sull'orlo della pazzia provando ad effettuare il build per la prima volta. Se non si è sviluppatori C++ esperti, non me ne preoccuperò. Passate a JavaScript.</p>
+
+<h4 id="Su_piattaforme_Windows" name="Su_piattaforme_Windows">Su piattaforme Windows</h4>
+
+<p>Per il mio primo build di Mozilla ho usato <a href="it/Windows_Build_Prerequisites">questa guida</a>. Non riesco a ricordare perché, ma mi sono bloccato per diverse maniere, ed il tutto è terminato solo dopo aver preso molto più tempo di quanto avessi preventivato. Ecco una <a class="external" href="http://whereswalden.com/mozilla/msvcfree/">guida di insieme</a> che ha ricevuto buone critiche. Seguite metodicamente ogni passo e probabilmente avrete la meglio. Tenete in mente che una volta fatto funzionare il build, probabilmente da lì in poi potrete lavorare senza sforzi. Forse.</p>
+
+<p><span class="comment">I can’t even remember why anymore, but I got stuck in a number of places, and the whole affair ended up taking far longer than I originally expected. Much furniture was smashed, much hair torn out by the roots. Here’s a {{ mediawiki.external('http://whereswalden.com/mozilla/msvcfree/ comprehensive looking guide') }} that’s gotten good reviews. Follow every step methodically and you’ll probably be alright. Focus on the fact that once you get the build working, it’ll probably work effortlessly from then on. Maybe.</span></p>
+
+<h4 id="Su_altre_piattaforme" name="Su_altre_piattaforme">Su altre piattaforme</h4>
+
+<p>Non ho mai provato ad effettuare build su altre piattaforme, per cui non so nulla di questo. Immagino comunuque che nei sistemi Unix-like il procedimento sia più semplice. Si può consultare questa <a href="it/Documentazione_per_build">lista completa di piattaforme</a> per cui sono disponibili istruzioni per il building.</p>
+
+<h3 id="Strutturare_il_proprio_progetto" name="Strutturare_il_proprio_progetto">Strutturare il proprio progetto</h3>
+
+<p>Mozilla include un insieme di estensioni complesse che sono integrate nel suo processo di build. Per questo motivo si rende necessario risolvere tutti i problemi correlati alla creazione e registrazione di componenti XPCOM, build di file JAR e manifests, installazione del tutto nella directory <code>extensions/</code> di Firefox e così via. Si rende quindi necessario fare riferimento a questa struttura per costruire la nostra estensione.</p>
+
+<p>Prima di tutto, pensiamo ad un nome accattivante per l'estensione e creiamo la directory con quel nome come sottodirectory di <code>/mozilla/extensions/</code>. Usare solo lettere minuscole. Ci dovrebbe essere un insieme di altre directory (<code>inspector/</code>, <code>reporter/</code> e così via) nello stesso livello dell'albero di build.</p>
+
+<p><br>
+ Notare che prima di effettuare il build di qualcosa, il build system di Mozilla invoca un processo di configurazione che genera i makefile usati per effettuare il build, a partire dallo schema di makefile chiamato <code>Makefile.in</code>. Il makefile attuale tende ad essere molto simile o anche identico allo schema, ma la maggiore flessibilità data dalla sua generaziione automatica è uno dei punti che rendono il sistema di build così potente.</p>
+
+<h4 id="Anatomia_di_una_semplice_estensione_C.2B.2B" name="Anatomia_di_una_semplice_estensione_C.2B.2B">Anatomia di una semplice estensione C++</h4>
+
+<p>Assumiamo stiate usando C++ per scrivere componenti XPCOM che possono essere usati da altri componenti C++ o da JavaScript. Il processo di creazione di un componente è relativamente lineare, utilizzando il build system di Mozilla.</p>
+
+<p>Nel caso più semplice, un componente consisterà di una singola directory principale con due sottodirectory, <code>public/</code> e <code>src/</code>. La directory principale deve contenere un <code>Makefile.in</code> (da ora in poi ci riferiremo a questo come al makefile anche se sappiamo che viene usato per generare quello vero). Questo Makefile ci dà due informazioni. Primo, elenca le sotodirectory che compongono l'estensione, di modo che il build system sa dove cercare per makefile aggiuntivi. Secondo, istruisce il build system sul creare una nuova estensione, piuttosto che copiare i componenti direttamente nella directory binaria di Firefox. Il primo vantaggio di usare una estensione è che diventa veramente facile realizzare un pacchetto con tutto il necessario ed installarlo su un'altra macchina.</p>
+
+<p>Detto ciò ecco il makefile di base, puro e semplice (<code>Makefile.in</code> nella directory principale dell'estensione):</p>
+
+<pre>DEPTH		= ../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+MODULE = myextension
+
+DIRS		= public src
+
+XPI_NAME		= myextension
+INSTALL_EXTENSION_ID	= myextension@mycompany.com
+XPI_PKGNAME		= myextension
+
+DIST_FILES = install.rdf
+
+include $(topsrcdir)/config/rules.mk
+</pre>
+
+<p>Una descrizione dettagliata del processo di build, che descrive le caratteristiche chiave di questo makefile, può essere trovata <a class="external" href="http://www.mozilla.org/build/build-system.html">a questo indirizzo</a>. <strong>MODULE</strong> e <strong>XPI_NAME</strong> sono entrambi impostati come il nome della propria estensione. sono ripetuti in tutti i makefile del progetto di modo che ogni file sia inserito nella stessa posizione all'interno dell'area operativa XPI (<em>XPI staging area</em> , v. sotto). <strong>INSTALL_EXTENSION_ID</strong> è l'ID univoco della propria estensione. Questo può essere un GUID, ma il formato visto sopra è più grazioso e, diciamocelo, molto più semplice da ricordare. Non è necessario fornire un <strong>XPI_PKGNAME</strong>, ma se si crea un file XPI, pronto per la distribuzione, viene automaticamente creato nella radice dell'area operativa XPI (<code>/mozilla/$(MOZ_OBJDIR)/dist/xpi-stage/</code>).</p>
+
+<p>Ogni estensione deve includere un file <code>install.rdf</code> che indica a Firefox come deve essere installata. Questo file dovrebbe essere posizionato nella directory principale dell'estensione ed essere simile a questo:</p>
+
+<pre>&lt;?xml version=\"1.0\"?&gt;
+
+&lt;RDF xmlns=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"
+     xmlns:em=\"http://www.mozilla.org/2004/em-rdf#\"&gt;
+  &lt;Description about=\"urn:mozilla:install-manifest\"&gt;
+    &lt;em:id&gt;myextension@mycompany.com&lt;/em:id&gt;
+    &lt;em:version&gt;0.1&lt;/em:version&gt;
+
+    &lt;em:targetApplication&gt;
+      &lt;!-- Firefox --&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;1.0+&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;1.0+&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- front-end metadata --&gt;
+    &lt;em:name&gt;My First Extension&lt;/em:name&gt;
+    &lt;em:description&gt;Just an example.&lt;/em:description&gt;
+    &lt;em:creator&gt;allpeers.com&lt;/em:creator&gt;
+    &lt;em:homepageURL&gt;http://www.allpeers.com/blog/&lt;/em:homepageURL&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+
+<p>MozillaZine ha una <a class="external" href="http://kb.mozillazine.org/Install.rdf">descrizione dettagliata</a> del formato del file <code>install.rdf</code>. Usare la variabile <strong>DIST_FILES</strong> nel makefile per dire a <code>make</code> di copiare il file nella directory dell'estensione e (opzionalmente) nel file XPI.</p>
+
+<h4 id="Interfacce_pubbliche" name="Interfacce_pubbliche">Interfacce pubbliche</h4>
+
+<p>La directory <code>public/</code> contiene ogni interfaccia che deve essere accedibile da altri moduli. Questi possono essere file <a class="external" href="http://www.mozilla.org/scriptable/xpidl/idl-authors-guide/index.html">IDL</a> che descrivono interfacce <a href="it/XPCOM">XPCOM</a>, i quali vengono usati per generare file header C++ per l'inclusione all'interno del proprio file sorgente. Possono anche essere normali file header C++ che vengono usati direttamente da altri moduli. Il modo più facile per permettere questa ultimaoperazione è l'implementazione inline di tutti i metodi, così da non avere dipendenze aggiuntive in fase di linking. Si dovrà altrimenti eseguire illink statico al proprio modulo se si usano questi header pubblici in altri moduli. Personalmente scoraggerei qyesta pratica (tra l'altro, il linking static significa avere lo stesso codice caricato più di una volta in memoria, il quale non sarà poi disponibile per Javascript o altri linguaggi diversi dal C++) e incoraggerei l'uso di XPCOM dove possibile.</p>
+
+<p>Il Makefile nella directory <code>public/</code> dovrebbe seguire questo modello:</p>
+
+<pre>DEPTH		= ../../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+MODULE		= myextension
+XPIDL_MODULE	= myextension
+
+XPI_NAME = myextension
+
+EXPORTS = \
+		myHeader.h \
+		$(NULL)
+
+XPIDLSRCS	= \
+		myIFirstComponent.idl \
+		myISecondComponent.idl \
+		$(NULL)
+
+include $(topsrcdir)/config/rules.mk
+</pre>
+
+<p><strong>XPIDL_MODULE</strong> è il nome del file XPT generato che contine informazioni de tipo riguardanto le proprie interfacce <a class="external" href="http://www.mozilla.org/scriptable/xpidl/idl-authors-guide/index.html">IDL</a>. Se si hanno più moduli, assicurarsi assolutamente di usare un valore differente di <strong>XPIDL_MODULE</strong> per ognuno. In caso contrario il primo modulo XPT verrà sovrascritto dal secondo e si otterrnno errori <strong>NS_ERROR_XPC_BAD_IID</strong> quando si proverà ad accedere alle interfacce IDL dal proprio codice. I file sotto <strong>EXPORTS</strong> vengono copiati direttamente nella directory <code>/mozilla/$(MOZ_OBJDIR)/dist/include/myextension/</code> e sono quindi accedibili da altri moduli (il valore di <strong>MOZ_OBJDIR</strong> è definito in <code>/mozilla/.mozconfig</code>). XPIDLSRCS sono eseguiti attraverso il processore IDL, e gli header C++ generati vengono copiati nella stesa directory di inclusione. In aggiunta, viene generato un file XPT (tipo libreria) e posizionato nella sottodirectory <code>components/</code> dell'estensione.</p>
+
+<h4 id="File_sorgenti" name="File_sorgenti">File sorgenti</h4>
+
+<p>Ora è il momento di creare il makefile ed i file sorgente nella sottodirectory src/. Se si stanno reimplementando interfacce descritte usando IDL, la maniera più facile di farlo è lasciare la directory src/ vuota ed eseguire make solo nella directory public/; spiegheremo tra breve il perché.</p>
+
+<p>Si può poi aprire il file header generato per la propria interfaccia da /mozilla/$(MOZ_OBJDIR)/dist/include/myextension/. QUesta directory contiene i file .H e .CPP dei componenti che possono essere copiati ed incollati all'interno dei propri file di implementazione. Tutto ciò che c'è da fare è riempire gli abbozzi di implementazione presenti nel file C++ e si è pronti per partire.</p>
+
+<p>Ecco un esempio del makefile da inserire all'interno della directory src:</p>
+
+<pre class="eval">DEPTH		= ../../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+IS_COMPONENT = 1
+MODULE = myextension
+LIBRARY_NAME =  myExtension
+
+XPI_NAME = myextension
+
+REQUIRES	= xpcom \
+		  string \
+		  $(NULL)
+
+CPPSRCS		= \
+		  myFirstComponent.cpp \
+		  mySecondComponent.cpp \
+		  myExtension.cpp \
+		  $(NULL)
+
+include $(topsrcdir)/config/rules.mk
+
+EXTRA_DSO_LDOPTS += \
+  $(XPCOM_GLUE_LDOPTS) \
+  $(NSPR_LIBS) \
+  $(NULL)
+
+# <span class="highlightred">NOTE: If you are coding against the 1.8.0 branch (not 1.8 branch or trunk), the</span>
+# <span class="highlightred">above line won't work, due to linker flag issues.</span> Use the following
+# variables instead:
+#
+# EXTRA_DSO_LDOPTS += \
+#   $(MOZ_COMPONENT_LIBS) \
+#   $(NULL)
+#
+# Unfortunately, using MOZ_COMPONENT_LIBS links against xpcom_core, which means
+# your components will not work in future versions of Firefox.
+</pre>
+
+<p>La sezione <code>REQUIRES</code> dice a make quali moduli sono utilizzati dal proprio componente. Questo causa l'aggiunta delle sottodirectory di /mozilla/$(MOZ_OBJDIR)/dist/include/ interessate nel path di inclusione del compilatore C++. Se si stanno includendo header Mozilla ed il compilatore non riesce a trovarli, potrebbe benissimo significare che in REQUIRES non sono stati elencati tutti i moduli necessari. <code>CPPSRCS</code> i file sorgente che devono essere compilati.</p>
+
+<p>In questo esempio, i primi due file contengono l'implementazione dei due componenti dell'estensione. Il fuile finale, myExtension.cpp, contiene il codice necessario per registrare questi componenti, come descritto nella prossima sezione.</p>
+
+<h4 id="Registrare_i_componenti" name="Registrare_i_componenti">Registrare i componenti</h4>
+
+<p>Pre poter utilizzare i propri componenti da altri moduli C++ e JavaScript, devono prima essere registrati. Per fare ciò, l'estensione deve implementare una classe che espone l'interfaccia <code><a href="it/NsIModule">nsIModule</a></code>, che ha i metodi per accedere ai componenti definiti in un modulo. Fortunatamente, questo può essere fatto attraverso l'uso di semplici macro, in modo da non doversi preoccupare dei dettagli di funzionamento.</p>
+
+<p>Il primo passo è la definizione di un CID, ID di contratto (<em>contract ID</em> ) ed un nome di classe per ogni componente. Inserire il codice seguente (adattando alle proprie esigenze i vari <strong>#defines</strong>) all'interno dell'header di ogni componente che si vuole istanziare tramite il component manager (<em>gestore dei componenti</em> ):</p>
+
+<pre>// {00000000-0000-0000-0000-000000000000}
+#define MYFIRSTCOMPONENT_CID \
+	{ 0x00000000, 0x0000, 0x0000, \
+	{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 } }
+
+#define MYFIRSTCOMPONENT_CONTRACTID	\"@mycompany.com/myfirst;1\"
+#define MYFIRSTCOMPONENT_CLASSNAME	\"My First Component\"
+</pre>
+
+<p>Ovviamente è necessario compilare il CID con GUID vero. In Windows, questo può essere fatto usando <a class="external" href="http://www.microsoft.com/downloads/details.aspx?familyid=94551F58-484F-4A8C-BB39-ADB270833AFC">guidgen.exe</a>. Gli utenti Unix possono usare uuidgen (fornito direttamente da molte distribuzioni unix e Linux).</p>
+
+<p>Si deve poi creare il file <code>myExtension.cpp</code> in modo simile a questo:</p>
+
+<pre>#include \"nsXPCOM.h\"
+
+#include \"nsIGenericFactory.h\"
+
+/**
+ * Componenti da registrare
+ */
+#include \"myFirstComponent.h\"
+#include \"mySecondComponent.h\"
+
+NS_GENERIC_FACTORY_CONSTRUCTOR(myFirstComponent)
+NS_GENERIC_FACTORY_CONSTRUCTOR(mySecondComponent)
+
+//----------------------------------------------------------
+
+static const nsModuleComponentInfo components[] =
+{
+	{
+		MYFIRSTCOMPONENT_CLASSNAME,
+		MYFIRSTCOMPONENT_CID,
+		MYFIRSTCOMPONENT_CONTRACTID,
+		myFirstComponentConstructor
+	},
+	{
+		MYSECONDCOMPONENT_CLASSNAME,
+		MYSECONDCOMPONENT_CID,
+		MYSECONDCOMPONENT_CONTRACTID,
+		mySecondComponentConstructor
+	},
+};
+
+NS_IMPL_NSGETMODULE(MyExtension, components)
+</pre>
+
+<p>La macro <strong>NS_IMPL_NSGETMODULE</strong> crea l'oggetto modulo appropriato fornendo l'accesso a tutti i componenti elencati nell'array <code><a href="it/NsModuleComponentInfo">nsModuleComponentInfo</a></code>.</p>
+
+<h4 id="Effettuare_il_build" name="Effettuare_il_build">Effettuare il build</h4>
+
+<p>Come detto prima, probabilmente si vuole effettuare il build di una estensione immediatamente dopo aver creato i propri file IDL in modo da generare gli abbozzi C++ per le proprie implementazioni dei componenti. Assumo che abbiate già compilato con successo Firefox. Se non è così, andate all'inizio di questo articolo e non tornate finché non avrete un <code>firefox.exe</code> fuzionante. Non passate dal via. Non ritirate 20 Euro.</p>
+
+<p>Ancora qui? Okay, ora va modificato il proprio <code>.mozconfig</code> (nella directory radice <code>/mozilla/</code>) di modo che la propria estensione venga compilata con insieme Mozilla. Aggiungere le seguenti linee alla fine del file:</p>
+
+<pre>ac_add_options --enable-extensions=default,myextension
+</pre>
+
+<p>Lanciare poi <code>make</code> dalla directory radice di Mozilla:</p>
+
+<pre>make -f client.mk build
+</pre>
+
+<p>Anche si si ha una versione compilata recentemente di Firefox, si dovrà attendere per un po' mentre il <code>make</code> visita ricorsivamente tutto l'albero di directory del codice sorgente di Mozilla cercando nuovo materiale (la mia macchina, che è abbastanza veloce, impiega 10-15 minuti). Raggiungerà anche la vostra estensione e genererà una serie di elementi all'interno di <code>/mozilla/$(MOZ_OBJDIR)/</code>:</p>
+
+<ul>
+ <li>File header file esportati e generati (da IDL) in <code>dist/include/myextension/</code></li>
+ <li>Librerie statiche per il proprio modulo in <code>dist/lib/</code> (in altri moduli vogliano effettuare il link static di questi moduli invece di usare XPCOM).</li>
+ <li>File XPI in <code>dist/xpi-stage/myextension.xpi</code>.</li>
+ <li>Makefile generati per il proprio prgetto in <code>extensions/myextension/</code> (ricordiamo che ci troviamo in <code>/mozilla/$(MOZ_OBJDIR)/</code>).</li>
+ <li>Tutto il resto in <code>dist/bin/extensions/<a class="link-mailto" href="mailto:myextension@mycompany.com" rel="freelink">myextension@mycompany.com</a>/</code>.</li>
+</ul>
+
+<p>Gran parte di questo materiale non è creato in questo primo passo finché make segnalerà di non trovare i file sorgenti per i componenti. Non c'è da preoccuparsi di questo: tutto ciò che serve sono i file header generati che contengono gli abbozzi delle implementazioni C++. Perché la compilazone possa terminare devono essere rimpolpate le implementazioni dei componenti. Va ricordato che non si dovrebbe mai modificare uno di questi file generati automaticamente. Vanno sempre modificati i file usati per generarli e riavviari <code>make</code>. Possono esserci delle eccezioni, a questa regola, ma se si stanno cambiando i file automaticamente generati, molto ptobabilmente si sta sbagliando qualcosa.</p>
+
+<p>Il processo di esplorazione dell'intero albero di Mozilla dura molto tempo. Se si ha già una build di Mozilla, è possibile evitarlo creando un makefile direttamente per ogni estensione. Nella directory radice del proprio $(MOZ_OBJDIR) si digita (da una shell compatibile con bash):</p>
+
+<pre class="eval">../build/autoconf/make-makefile extensions/myextension
+</pre>
+
+<p>Se la propria $(MOZ_OBJDIR) è posizionata fuori da $(TOPSRCDIR), è necessario digitare:</p>
+
+<pre class="eval">$(TOPSRCDIR)/build/autoconf/make-makefile -t $(TOPSRCDIR) extensions/myextension
+</pre>
+
+<p>perché lo script sappia dove si trovano i sorgenti (it'll use the extension path you gave it relative to the current dir to figure out where you want your makefiles to go).</p>
+
+<p>Questo genererà il makefile appropriato per l'estensoine. Che si effettui il build di tutto l'albero Mozilla o si prenda questa scorciatoia, da ora in poi è possibile compilare andando in <code>/mozilla/$(MOZ_OBJDIR)/extensions/myextension/</code> e digitando "make" sulla linea di comando. Questo dovrebbe effettuare il build del proprio componente senza disturbare il resto di Mozilla. Se tutto funziona, si vedrà il proprio file XPI nell'area operativa XPI. Si vedrà anche la versione "esplosa" del pacchetto XPI (ad esempio la struttura decompressa delle directory) all'interno di <code>/mozilla/$(MOZ_OBJDIR)/dist/bin/extensions</code>. (se qualcosa va storto, cercate cosa, risolvetelo e poi tornate qui ed aggiungete la soluzione a questo articolo.)</p>
+
+<p>Per assicurarsi che il processo di build sia veramente finito, lanciare Firefox e controllare che la propria estensione sia elencate selezionando Tools/Extensions. Se si usa Firefox come browser predefinto (e se no, perché?), potrebbe essere necessario chiudere la versione "regolare" di Frefox prima di eseguire quella modificata. Se questo accade, si può provare ad impostare la variabile d'ambiente <strong>MOZ_NO_REMOTE</strong> al valore "1" prima di eseguire la versione di Firefox di sviluppo. Si avràa bisogno inoltre di usare un profilo differente per questa versione:</p>
+
+<pre class="eval">firefox -P<em>development</em>
+</pre>
+
+<p>Dove è sostituito dal nome del nuovo profilo creato. Questo permetterà di eseguire entrambe le versioni di Firefox simultaneamente, permettendo di risparmiare tempo durante il ciclo di build/test.</p>
+
+<h4 id="Chrome.2C_dolce_Chrome" name="Chrome.2C_dolce_Chrome">Chrome, dolce Chrome</h4>
+
+<p><span class="comment">Nota: il titolo originale e' "No Place Like Chrome", una parafrasi di "No Place Like Home", che non ha equivalenti validi in italiano ma che rassomiglia a "Casa dolce Casa"</span> Yippee-ki-yay! Ora abbiamo una estensione che fa, be', assolutamente nulla. E' ora di fare qualcosa con questi fantastici componenti che sono stati implementati e registrati. Il modo più semplice per fare questo è scrivere un po' di codice <a href="it/JavaScript">JavaScript</a> e <a href="it/XUL">XUL</a>. A questo punto, sarebbe di aiuto avere un po' di esperienza nella <a href="it/Estensioni"> scrittura di estensioni "regolari"</a> (ad esempio, che non utilizzano componenti C++ personali). Se non si ha mai provato, il mio consiglio è di pensare ad una idea carina per qualcosa di semplice che avreste sempre voluto avere in Firefox e scriverla. Anche solo visualizzare un nuovo elemento di menu che apre una finestra di dialogo "Hello, World!" è pur sempre un grande esercizio di riscaldamento.</p>
+
+<p>Assumiamo ora che sappiate scrivere estensioni in XUL/JavaScript, siete a conoscenza del fatto che molte delle parti importanti vanno a finire nella directory <code>chrome/</code> della vostra estensione. Bene, il fatto che si stiano usando anche componenti C++ non cambia nulla. Per questo bisogna creare le solite directory <code>content/</code>, <code>locale/</code> e <code>skin/</code> in cui inserire i propri file chrome. Personalmente mi piace posizionare questi direttamente nella directory radice del modulo, ma suppongo non faccia alcuna differenza se si preferisce inserirli in delle sottodirectory <code>chrome/</code> o altro ancora. Spazio alla libertà!</p>
+
+<p>Una volta scritti i necessari file chrome (ad esempio un overlay che aggiunga una voce di menu per istanziare ed usare uno dei propri componenti), è necessario inserirli in un pacchetto come parte della propria estensione. Questo si fa utilizzando un <a href="it/Manifest_JAR">Manifest JAR</a>. Per il nostro semplice esempio di estensione, il file potrebbe somigliare a questo:</p>
+
+<pre>myextension.jar:
+%  content myextension %content/
+%  locale myextension en-US %locale/en-US/
+%  skin myextension classic/1.0 %skin/classic/
+%  overlay chrome://browser/content/browser.xul chrome://myextension/content/MyExtensionOverlay.xul
+	content/MyExtensionOverlay.js		(content/MyExtensionOverlay.js)
+	content/MyExtensionOverlay.xul		(content/MyExtensionOverlay.xul)
+	locale/en-US/MyExtension.dtd		(locale/en-US/MyExtension.dtd)
+	locale/en-US/MyExtension.properties	(locale/en-US/MyExtension.properties)
+	skin/classic/MyExtension.css		(skin/classic/MyExtension.css)
+</pre>
+
+<p>Questo codice va inserito in un file chiamato <code>jar.mn</code> nella directory radice della propria estensione, assicurandosi che i percorsi tra parentesi puntino ai file attuali (se interpretati in relazione con la directory radice). Deve inoltre essere fatta una piccola modifica al makefile nella stessa directory, aggiungendo la linea:</p>
+
+<pre class="eval">USE_EXTENSION_MANIFEST = 1
+</pre>
+
+<p>Questo indica al <code>make</code> di creare un singolo file manifest chiamato <code>chrome.manifest</code> invece di creare file manifest con strani nomi per ogni pacchetto.</p>
+
+<p>Dopo aver lanciato ancora <code>make</code>, si dovrebbe veder apparire una nuova sottodirectory <code>chrome</code> nella propria estensione (<code>/mozilla/$(MOZ_OBJDIR)/dist/bin/extensions/<a class="link-mailto" href="mailto:myextension@mycompany.com" rel="freelink">myextension@mycompany.com</a>/</code>). Da notare che la directory <code>chrome</code> contiene un file JAR (ad esempio ZIP) con tutti i file chrome elencati in <code>jar.mn</code> cos'ì come una completa struttura delle directory alla strgua di quella presente nel file JAR. La struttura, comunque, è vuota. Perché? Non lo so. Non preoccupatevi di questo, i file contenuti nel JAR gli unici che vengono utilizzati.</p>
+
+<h4 id="Complicare_il_tutto" name="Complicare_il_tutto">Complicare il tutto</h4>
+
+<p>Se si sta sviluppando una estensione veramente complessa con molti componenti <a href="it/XPCOM">XPCOM</a>, probabilmente si vorrà dividere il proprio codice in moduli più piccoli.</p>
+
+<h5 id="Estensioni_un_po.27_complicate" name="Estensioni_un_po.27_complicate">Estensioni un po' complicate</h5>
+
+<p>Per una estensione moderatamente complicata, probabilmente è sufficiente dividere il codice in un livello singolo di moduli. Assumiamo che abbiate un modulo <code>base/</code> che definisce un insieme base di componenti XPCOM ed un modulo <code>advanced/</code> che definisce alcuni chrome così come altri componenti che utilizzano quelli di base. La struttura completa delle directory somiglierà a questa:</p>
+
+<ul>
+ <li>myextension
+  <ul>
+   <li>base
+    <ul>
+     <li>public</li>
+     <li>src</li>
+    </ul>
+   </li>
+   <li>advanced
+    <ul>
+     <li>content</li>
+     <li>locale
+      <ul>
+       <li>en-US</li>
+       <li>...other locales...</li>
+      </ul>
+     </li>
+     <li>public</li>
+     <li>skin
+      <ul>
+       <li>classic</li>
+       <li>...other skins...</li>
+      </ul>
+     </li>
+     <li>src</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Oltre a ciò, non cambia molto altro. I makefile in <code>base/</code> e <code>advanced/</code> dovrebbero essere più o meno simili al makefile originale nella directory radice, ricordando di cambiare la variabile <strong>DEPTH</strong> poiché questi sono stati spostati di un livello di directory rispetto alla radice di Mozilla.</p>
+
+<p>Va inoltre rimossa la variabile <strong>DIST_FILES</strong> poiché il suo valore viene preso dal makefile di livello più alto. Ogni makefile che genera qualcosa dovrebbe definire la variabile <strong>XPI_NAME</strong> per assicurarsi che i file generati finiscano nella directory della propria estensione e non nella directory globale <code>components/</code>. Basta comunuque definire la variabile in ogni makefile per stare tranquilli. Si può usare lo stesso valore di <strong>MODULE</strong> sia in <code>base/</code> che in <code>advanced/</code> di modo che tutti i file<em>include</em> vadano nella stessa directory, assicurandosi però di non usare lo stesso stesso valore <strong>XPIDL_MODULE</strong> nelle due directory <code>public/</code>, o una delle librerie di tipo componenti (ad es. file XPT) sovrascriverà l'altra e si scatenerà l'inferno.</p>
+
+<p>Ogni modulo deve inoltre avere un valore differente per la variabile <strong>LIBRARY_NAME</strong>. Questo è il nome della libreria dinamica generata, per cui se devono essere richiamate le librerie "myBase" e "myAdvanced", useremo i nomi con estensione <code>myBase.dll</code> e <code>myAdvanced.dll</code> (almeno in Windows). Ognuno dei due moduli andrà ad avere un file C++ separato per la registrazione dei componenti. Per questo motivo ci saranno due file simili a <code>myExtension.cpp</code> visto nell'esempio orginale, diciamo <code>Base.cpp</code> e <code>Advanced.cpp</code>. Infine, ogni modulo avrà ovviamente il proprio <code>jar.mn</code>, anche se essi possono fare riferimento allo stesso nome di file e pacchetto JAR, se si vuole che tutti i file chrome siano organizzati in un singolo pacchetto/file JAR. L'unico file che resta immutato è <code>install.rdf</code>, che ancora esiste unicamente nella directory radice dell'estensione.</p>
+
+<p>Il makefile di livello più alto sarà ora simile a questo:</p>
+
+<pre>DEPTH		= ../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+MODULE = myextension
+
+DIRS		= base advanced
+
+XPI_NAME               = myextension
+INSTALL_EXTENSION_ID   = myextension@mycompany.com
+XPI_PKGNAME		= myextension
+
+DIST_FILES = install.rdf
+
+include $(topsrcdir)/config/rules.mk
+</pre>
+
+<h5 id="Estensioni_veramente_complicate" name="Estensioni_veramente_complicate">Estensioni veramente complicate</h5>
+
+<p>Ad un certo momento, anche un singolo modulo potrebbe crescere al punto da dover essere diviso in sottomoduli. La differenza tra avere moduli separati ed avere un modulo singolo con sottomoduli separati è che i sottomoduli condividono lo stesso file per la registrazione dei componenti (il famoso file <code>myExtension.cpp</code>), e se compilato creano una unica libreria dinamica. La decisione di dividere un modulo in sotomoduli riguarda solo l'organizzazione del codice; non avrà ripercussioni sul prodotto finale.</p>
+
+<p>Per dividere un modulo in sottomoduli, va prima creata una sottodirectory per ognuno. Dopodiché va creata una directory <code>build/</code>. Ogni sottomodulo sarà configurato per creare una libreria static, che la directory build riunirà per creare una unica libreria dinamica dei componenti. Confusi? Ecco un esempio, che mostra il ramo <code>advanced/</code> della directory <code>myextension/</code>:</p>
+
+<ul>
+ <li>advanced
+  <ul>
+   <li>build</li>
+   <li>intricate
+    <ul>
+     <li>public</li>
+     <li>src</li>
+    </ul>
+   </li>
+   <li>multifarious
+    <ul>
+     <li>public</li>
+     <li>src</li>
+    </ul>
+   </li>
+   <li>content</li>
+   <li>locale
+    <ul>
+     <li>en-US</li>
+     <li>...other locales...</li>
+    </ul>
+   </li>
+   <li>skin
+    <ul>
+     <li>classic</li>
+     <li>...other skins...</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Come si vede, abbiamo diviso <code>advanced/</code> in due sottomoduli: <code>intricate/</code> e <code>multifarious/</code>, ed abbiamo aggiunto una sottodirectory <code>build/</code>. Abbiamo lasciato le directory chrome direttamente in <code>advanced/</code>, dato che non appartengono a nessun sottomodulo in particolare. QUesto vuol dire che il file <code>jar.mn</code> sarà nello stesso posto.</p>
+
+<p>I makefile di <code>intricate/</code> and <code>multifarious/</code> somiglieranno molto al makefile originale di <code>advanced/</code> anche se devono essere un po' manipolati. COme al solito, va aggiustato il valore della variabile <strong>DEPTH</strong> dato che i makefile sono ora più in profondità nella struttura delle directory. Andrebbe inoltre cambiato il valore di <strong>LIBRARY_NAME</strong> per indicare che si sta generando una libreria static per ogni sottomodulo. Per convenzione viene usato il suffisso "_s" a questo scopo . Chiamiamo quindi le librerie "myIntricate_s" e "myMultifarious_s". Infine, definiamo la variabile <strong>FORCE_STATIC_LIB</strong>, ottenendo un makefile il cui inizio è simile a questo:</p>
+
+<pre>DEPTH		= ../../../../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+MODULE = myextension
+LIBRARY_NAME = myIntricate_s
+FORCE_STATIC_LIB = 1
+
+XPI_NAME = myextension
+
+...altre cose qui...
+</pre>
+
+<p>Il makefile di <code>build</code> compone insieme tutte le librerie statiche generate dai sottomoduli e crea una libreria (dinamica)dei componenti:</p>
+
+<pre>DEPTH		= ../../../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+IS_COMPONENT = 1
+MODULE = myextension
+LIBRARY_NAME = myAdvanced
+
+XPI_NAME = myextension
+
+DEFINES += XPCOM_GLUE
+
+SHARED_LIBRARY_LIBS = \
+		$(DIST)/lib/$(LIB_PREFIX)myIntricate_s.$(LIB_SUFFIX) \
+		$(DIST)/lib/$(LIB_PREFIX)myMultifarious_s.$(LIB_SUFFIX) \
+                $(DIST)/lib/$(LIB_PREFIX)xpcomglue_s.$(LIB_SUFFIX) \
+                $(DIST)/lib/$(LIB_PREFIX)xpcom.$(LIB_SUFFIX) \
+                $(DIST)/lib/$(LIB_PREFIX)nspr4.$(LIB_SUFFIX) \
+                $(DIST)/lib/$(LIB_PREFIX)plds4.$(LIB_SUFFIX) \
+                $(DIST)/lib/$(LIB_PREFIX)plc4.$(LIB_SUFFIX) \
+		$(NULL)
+
+REQUIRES	= \
+		xpcom \
+		string \
+		$(NULL)
+
+CPPSRCS		= \
+		Advanced.cpp \
+		$(NULL)
+
+include $(topsrcdir)/config/rules.mk
+
+LOCAL_INCLUDES += \
+        -I$(srcdir)/../intricate/src \
+        -I$(srcdir)/../multifarious/src \
+        $(NULL)
+</pre>
+
+<p>Il makefile nella directory <code>advanced/</code> dovrebbe elencare le directory <code>intricate/</code>, <code>multifarious/</code> e <code>build/</code> nel calore della sua variabile <strong>DIRS</strong>. CIs i deve assicurare che <code>build/</code> sia elencato come ultimo, dato che non può essere creata la libreria di componenti fino a quando gli altri makefile non hanno terminato.</p>
+
+<h3 id="Altri_argomenti" name="Altri_argomenti">Altri argomenti</h3>
+
+<h4 id="Aggiungere_file_di_dati_alle_proprie_estensioni" name="Aggiungere_file_di_dati_alle_proprie_estensioni">Aggiungere file di dati alle proprie estensioni</h4>
+
+<p>In alcuni casi, si potrebbe voler includere file aggiuntivi nella propria estensione che non appartengono alla sottodirectory <code>chrome/</code>. Alcuni esempi potrebbero essere file di database o schemas XML. A questo proposito è possibile aggiungere un passo all'interno del makefile, per copiare i file dall'albero sorgente alla directory di destinazione dell'estensione.</p>
+
+<h5 id="Copiare_file_di_dati_nella_directory_di_destinazione" name="Copiare_file_di_dati_nella_directory_di_destinazione">Copiare file di dati nella directory di destinazione</h5>
+
+<p>Diciamo che avete alcuni file di dati contenti informazioni statistiche che volete include nella vostra estensione e rendere disponibile ai vostri componenti. Avete inserito questi file, con estensione .TXT, in una sottodirectory <code>stats/</code> nella directory sorgente dell'estensione. La seguente regola di makefile può essere usata per copiare tali file nella directory di destinazione finale dell'estensione:</p>
+
+<pre>libs::
+	if test ! -d $(FINAL_TARGET)/stats; then \
+		$(NSINSTALL) -D $(FINAL_TARGET)/stats; \
+	fi
+	$(INSTALL) $(srcdir)/*.txt $(FINAL_TARGET)/stats
+</pre>
+
+<h5 id="Accedere_ai_file_di_dati_tramite_Componenti" name="Accedere_ai_file_di_dati_tramite_Componenti">Accedere ai file di dati tramite Componenti</h5>
+
+<p>Il trucco per accedere ai propri file di dati è immaginare dove si trova la home directory della propria estensione. Alcune voci sostengono che in un prossimo futuro, questo sarà possibile attraverso l'interfaccia <code><a href="it/NsIExtensionManager">nsIExtensionManager</a></code> o qualcosa di simile. Nel frattempo, c'è un hack semplice ed affidabile che può essere usato per raggiungere lo scopo. Nell'implementazione di ogni compoente JavaScript XPCOM, è presente uno speciale simbolo <strong>__LOCATION__</strong> (due caratteri di underscore all'inizio e alla fine del nome) che punta al file di implementazione del componente. Perciò si può scrivere un semplice componente che deduce la directory radice della propria estensione estrapolandola da lì.</p>
+
+<p><a class="external" href="http://www.builderau.com.au/program/soa/Creating_XPCOM_components_with_JavaScript/0,39024614,39206503,00.htm">Questo articolo</a> spiega come creare un componente XPCOM in JavaScript. Si avrà bisogno di un file IDL per una interfaccia simile a questa:</p>
+
+<pre>interface myILocation : nsISupports
+{
+    readonly attribute nsIFile locationFile;
+};
+</pre>
+
+<p>Il file IDL va posizionato nella directory <code>public/</code> del progetto o sottoprogetto. Nella directory <code>src/</code>, va inserito il file JavaScript che implementa il componente. L'implementazione del componente includerà i metodi per ottenere il percorso o il file per la home directory dell'estensione:</p>
+
+<pre>myLocation.prototype =
+{
+  QueryInterface: function(iid)
+  {
+    if (iid.equals(nsISupports))
+      return this;
+    if (iid.equals(myILocation))
+      return this;
+
+    Components.returnCode = Components.results.NS_ERROR_NO_INTERFACE;
+    return null;
+  },
+
+  get locationFile()
+  {
+     return __LOCATION__.parent.parent;
+  }
+}
+</pre>
+
+<p>Questo metodo assume che il componente risieda in una sottodirectory di quella dell'estensione (per convenzione, questa directory viene chiamata <code>components/</code>). La proprietà <code>parent</code> di <strong>__LOCATION__</strong> ritorna <code>components/</code>, ed il suo valore <code>parent</code> è la home directory dell'estensione.</p>
+
+<p>L'ultimo passo è la modifica del makefile della directory sorgente dove si ha inserito il proprio file JavaScript di modo che venga copiato nel luogo appropriato all'interno dell'estensione:</p>
+
+<pre>libs::
+	$(INSTALL) $(srcdir)/*.js $(FINAL_TARGET)/components
+</pre>
+
+<p>Ora è possibile istanziare il componente ed usare la proprietà <code>locationFile</code> per ottenere una interfaccia <code><a href="it/NsIFile">nsIFile</a></code> che punti alla home directory dell'estensione.</p>
+
+<h4 id="Usare_librerie_di_terze_parti" name="Usare_librerie_di_terze_parti">Usare librerie di terze parti</h4>
+
+<p>Per estensioni più sofosticate, si potrebbe voler integrare librerie di terze parti che forniscono funzionalità specializzare per la connettività al database, processing di immagini, rete e simili. Se si vuole che la propria estensione funzioni su tutte le piattaforme Firefox, è necessario avere il codice sorgente della libreria in questione, quindi assumo che questo sia disponibile.</p>
+
+<p>l'approccio migliore nell'ottica del ciclo di sviluppo è creare un makefile come quello di Mozilla per la libreria. Questa maniera funziona bene per librerie che hanno un processo di make lineare, senza necessità di configurazioni eccessive. Un buon esempio di questo è la libreria SQLite inclusa nell'albero di build di Mozilla in <code>db/sqlite</code>. Adattando il makefile in quetso modo, la libreria è creata come parte del processo standard di build di Mozilla, il che elimina eventuali altri passi di compilazione. Il difetto di questo procedimento è che il makefile va aggiornato ogni qualvolta viene rilasciata una nuova versione della libreria.</p>
+
+<p>Per librerie che hanno un complesso procedimento di configurazione, usano un compilatore non standard o altre caratteristiche speciali. potrebbe non essere praticabile la creazione di un Makefile compatibile con Mozilla. In questo caso, raccomanderei di inserire l'intera distribuzione della libreria all'interno del progetto o del sottoprogetto che la usa. Per cui se la libreria <code>acmelib</code> viene usata all'interno del sottoprogetto <code>multifarious/</code> visto nell'esempio sopra, dovrebbe essere inserita in una sottodirectory di quella del sottoprogetto (allo stesso livello di <code>public/</code> e <code>src/</code>).</p>
+
+<p>Ovviamente, questo significa che si dovrà compilare manualmente <code>acmelib</code> su tutte le piattaforme prima di lanciare il build di Mozilla. Ma alla fine ci si potrà riferire ai file include ed importare le librerie dal proprio componente usando percorsi dei path relativi.</p>
+
+<h4 id="Build_per_pi.C3.B9_piattaforme" name="Build_per_pi.C3.B9_piattaforme">Build per più piattaforme</h4>
+
+<p>TODO</p>
+
+<div class="originaldocinfo">
+<h3 id="Informazioni_riguardo_il_documento_originale" name="Informazioni_riguardo_il_documento_originale">Informazioni riguardo il documento originale</h3>
+
+<ul>
+ <li>Autore: Matthew Gertner - July 26, 2005.</li>
+ <li>Permesso accordato a migrare nel Gennaio 2006, incluso il permesso alla nuova licenza sotto il CC:By-SA.</li>
+ <li>Fonte originale: <a class="external" href="http://www.allpeers.com/blog/creating-complex-firefox-extensions/" rel="freelink">http://www.allpeers.com/blog/creatin...ox-extensions</a></li>
+</ul>
+</div>

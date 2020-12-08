@@ -1,0 +1,61 @@
+---
+title: 단말기로 Firefox OS 다운로드 하기
+slug: Archive/B2G_OS/Installing_on_a_mobile_device
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<p></p>
+<div class="warning">
+  <strong>중요</strong>: 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/02/26)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.</div>
+<p>일단 Boot to Gecko의 빌드가 완료 되고 나면 단말기로 인스톨 할수 있게 됩니다.여기서는 이와 같은 과정에 대해 설명 하도록 하겠습니다.</p>
+<div class="note">
+  <strong>Note:</strong> 처음 단말기로 Firefox OS를 다운로드 해 넣을 경우 반드시 해당 단말기의 OS가 안드로이드 4 (아이스크림 샌드위치)이어야 합니다. 그렇지 않을 경우 제대로 다운로드가 되지 않을 것입니다. 그러나 한번 B2G를 다운로드 하고 나면 그 다음 부터는 단순하게 맨위 업데이트 부터 진행 하시면 됩니다.</div>
+<h2 id="폰으로_다운로드_하기">폰으로 다운로드 하기</h2>
+<p>폰으로 다운로드 하는 방법은 단순하게 단말기를 연결 한 후 아래와 같이 수행 합니다.</p>
+<pre>./flash.sh
+</pre>
+<p>이게 다입니다. 막 빌드 완료한 당신의 B2G 이미지가 당신의 폰으로 들어갔습니다.</p>
+<h3 id="udev_rule에_단말기_환경_설정">udev rule에 단말기 환경 설정</h3>
+<p>리눅스에서 아래와 같은 메시지가 나타난다면,</p>
+<pre>&lt; waiting for device &gt;</pre>
+<p>아마도 udev rule에 단말기 정보 추가 하는 것을 잊어 버린 것이 아닌지 확인 해보세요. <code>"lsusb"를 실행해 보면 단말기의 USB vendor ID를 확인 할 수 있으니 아래와 같이 추가하세요. 대부분의 구글단말기 ID는 </code>18d1입니다. 구글 ID로 추가 하는 아래 예시를 참고하세요.</p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+<div class="note">
+  <strong>주의 1:</strong> 리눅스에서 '<code>libusb</code> error "-3"'가 발생한다면 루팅 권한이 필요하다는 의미 입니다.  <code>'&gt;sudo</code> ./flash.sh'를 입력 해 보세요.</div>
+<div class="note">
+  <strong>주의 2</strong>: 만약 타겟 단말기가 우나기라면, udev rule에 단말기 vendor ID와 구글 ID 두가지를 다 추가 하세요.</div>
+<h3 id="삼성_Galaxy_S2_단말기인_경우_특별한_주의사항들">삼성 Galaxy S2 단말기인 경우 특별한 주의사항들</h3>
+<p>만약 타겟 단말기가 Galaxy S2이고 heimdall 1.3.2 버젼 (가장 최근 버젼임. 버젼 확인은 hiemdall version 명령어 사용) 을 사용한다면, "Heimdall flashing failed" 메시지 이후에 "FACTORYFS upload failed!" 메시지를 포함한 추가적인 정보가 출력되는 것을 보실수도 있습니다.<span style="font-size: 14px; line-height: inherit;"> 이 메시지는 uploading이 성공한 경우이니, 해당 경고 메시지는 무시하셔도 됩니다.</span></p>
+<p>이 비정상적인 행동을 제거하기 위해서는 heimdall의 1.3.1의 release된 source copy를 얻은 후에 (<span style="font-size: 14px; line-height: inherit;">"</span><code style="font-size: 14px; line-height: inherit;">git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06</code><span style="font-size: 14px; line-height: inherit;">" 명령어 사용), README file의 정의에 따라 컴파일을 하십시요. 컴파일 이후에 install을 하시면 그 에러 메시지는 사라질 것입니다. 하지만, 이 방법은 강력하게 요구되어지는 않습니다.</span></p>
+<p>Heimdall 도구의 모든 version에서 100MB 보다 큰 system.img 화일을 update를 할 수는 없습니다. 따라서 굽기 전에 다음 명령어를 실행하여 build된 system.img 화일의 크기를 확인해야 합니다. 만약 크기가 너무 크다면 IRC 내에서 문의하시기 바랍니다. 크기가 큰 경우에는 두 단계로 update를 분리할 수 있는 방법들이 있습니다.</p>
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+<p><span style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 1.628em; line-height: inherit;">Samsung Galaxy S2의 추가 작업</span></p>
+<p>Galaxy S2로 작업 할 경우, 다음과 같은 추가 작업이 필요합니다. Galaxy S2는 <code>flash.sh</code> script를 통해 Gaia는 다운로드가 되지 않습니다. 따라서 아래와 같이 추가 작업을 실행 해야 합니다.</p>
+<pre>./flash.sh gaia
+</pre>
+<h2 id="특정_영역_다운로드_하기">특정 영역 다운로드 하기</h2>
+<p>Samsung Galaxy S2를 제외한 다른 모든 단말기에서 특정 영역을 다운로드 하려면 아래와 같이 하세요.</p>
+<pre>./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+<h2 id="특정_모듈_다운로드_하기">특정 모듈 다운로드 하기</h2>
+<p>아래와 같이 특정 모듈이름으로 B2G의 특정 모듈만 다운로드도 가능합니다.</p>
+<pre>./flash.sh gaia
+./flash.sh gecko
+</pre>
+<p>특정 어플리케이션만 업데이트 하려면 환경 설정 변수 BUILD_APP_NAME 를 통해서 가능합니다.</p>
+<pre>BUILD_APP_NAME=calendar ./flash.sh gaia</pre>
+<h2 id="다음_단계">다음 단계</h2>
+<p>이 단계에서, 당신의 타켓은 Boot to Gecko!를 실행시킬 수 있을 것입니다. 이제 실험하고, 코드를 작성하고, 테스트 하고 디버깅을 하실 시간입니다.</p>
+<div class="note">
+  <strong>Note:</strong> 도움이 되는 사용 팁 : 만약 타켓이 잠겨있어서 타겟의 잠금을 해제할 필요가 있을 때는 default 숫자는 0000 입니다.</div>
+<h2 class="note" id="문제_해결방법">문제 해결방법</h2>
+<p>B2G를 설치한 후에 타겟이 정상적으로 동작하지 않는 경우에 대비하여 몇 가지 tip을 알려 드립니다.</p>
+<h3 class="note" id="UI가_시작되지_않는다면">UI가 시작되지 않는다면</h3>
+<p>만약 당신의 타겟이 update되고, UI가 정상적으로 실행되지 않는다면, 오래된 configuration을 초기화 할 수 있습니다. 다음은 그 방법입니다.</p>
+<pre>cd gaia
+make reset-gaia
+</pre>
+<h3 class="note" id=".flash.sh_실행_후에_image_is_too_large_에러_메시지가_출력되는_경우">./flash.sh 실행 후에 "image is too large" 에러 메시지가 출력되는 경우</h3>
+<p>이 메시지는 이미지를 flash에 writing하기 전에 당신의 타겟이 rooting될 필요가 있음을 뜻할 수 있습니다. b2g는 root partition 영역에 data를 writing 할 필요가 있으므로 당신의 타겟은 b2g image를 정상적으로 설치하기 위해서 rooting 되어져야 합니다.</p>

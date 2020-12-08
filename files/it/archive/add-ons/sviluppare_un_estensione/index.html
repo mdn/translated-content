@@ -1,0 +1,242 @@
+---
+title: Sviluppare un'Estensione
+slug: Archive/Add-ons/Sviluppare_un_Estensione
+tags:
+  - Estensioni
+  - Tutte_le_categorie
+translation_of: Archive/Add-ons/Developing_add-ons
+---
+<p> </p>
+<h4 id="Introduzione" name="Introduzione">Introduzione</h4>
+<p>Questo tutorial accompagnerà passo-passo nella creazione di un'estensione semplice e basilare che permetta di aggiungere un pannello alla barra di stato contenente il testo "Hello, World!"</p>
+<div class="note">
+ <p><b>Nota</b> Questo tutorial si rifersice allo sviluppo di un'estensione per Firefox 1.5. Esistono altri tutorial per le precedenti versioni di Firefox.</p>
+</div>
+<h4 id="Organizzare_l.27ambiente_di_sviluppo" name="Organizzare_l.27ambiente_di_sviluppo">Organizzare l'ambiente di sviluppo</h4>
+<p>Le estensioni vengono impacchettate e distribuite in file ZIP, o <a href="it/Bundles">Bundles</a>, con l'estensione &lt;tt&gt;xpi&lt;/tt&gt; (
+ <i>
+  pronunciata “zippy”</i>
+ ). Lo schema del contenuto di un file XPI è simile a questo:</p>
+<pre class="eval">extension.xpi:
+              /<a href="it/Install.rdf">install.rdf</a>
+              <a href="#Componenti_XPCOM">/components/*</a>
+              <a href="#Linea_di_comando_per_l.27applicazione">/components/cmdline.js</a>
+              <a href="#File_predefiniti">/defaults/</a>
+              <a href="#File_predefiniti">/defaults/preferences/*.js</a>
+              /plugins/*
+              /<a href="it/Chrome.manifest">chrome.manifest</a>
+              /<a href="it/Chrome_window_icons">chrome/icons/default/*</a>
+              /chrome/
+              /chrome/content/
+
+</pre>
+<p>Per questo motivo è consigliabile organizzare i file sorgente in una struttura simile, a meno che non si voglia scrivere un qualche tipo di Makefile or shell script per impacchettare e comprimere i propri file. Anche qualora si sia in grado di farlo, è molto più semplice eseguire i test attraverso la struttura sopra indicata a causa delle caratteristiche del sistema di installazione delle estensioni di Firefox 1.5.</p>
+<p>Iniziamo. Crea una cartella per l'estensione da qualche parte sull'hard disk, ad es. &lt;tt&gt;C:\extensions\myExtension\&lt;/tt&gt; o &lt;tt&gt;~/extensions/myExtension/&lt;/tt&gt;. Dentro questa cartella crea un'altra cartella chiamata &lt;tt&gt;chrome&lt;/tt&gt;, e all'interno della cartella &lt;tt&gt;chrome&lt;/tt&gt; crea un'altra cartella chiamata &lt;tt&gt;content&lt;/tt&gt;. (Su sistemi di tipo Unix è possibile creare tutte e tre le directory eseguendo semplicemente &lt;tt&gt;mkdir -p chrome/content&lt;/tt&gt; dalla directory di root dell'estensione.)</p>
+<p>Dentro alla <b>root</b> della cartella dell'estensione, insieme alla cartella &lt;tt&gt;chrome&lt;/tt&gt;, crea due nuovi file di testo vuoti, uno chiamato &lt;tt&gt;chrome.manifest&lt;/tt&gt;, l'altro invece &lt;tt&gt;install.rdf&lt;/tt&gt;.</p>
+<p>Altri suggerimenti sull'organizzazione dell'ambiente di sviluppo possono essere trovati su <a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">Mozillazine Knowledge Base</a>(EN).</p>
+<h4 id="Creare_il_manifesto_di_installazione" name="Creare_il_manifesto_di_installazione">Creare il manifesto di installazione</h4>
+<p>Apri il file chiamato &lt;tt&gt;<a href="it/Install_Manifests">install.rdf</a>&lt;/tt&gt; che hai creato al vertice della gerarchia delle cartelle dell'estensione e scrivici dentro:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;<b><a class="link-mailto" href="mailto:sample@foo.net" rel="freelink">sample@foo.net</a></b>&lt;/em:id&gt;
+    &lt;em:version&gt;<b>1.0</b>&lt;/em:version&gt;
+    &lt;em:type&gt;2&lt;/em:type&gt;
+
+    &lt;!-- Target Application this extension can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;<b>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</b>&lt;/em:id&gt;
+        &lt;em:minVersion&gt;<b>1.0+</b>&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;<b>1.5.0.*</b>&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;<b>Esempio!</b>&lt;/em:name&gt;
+    &lt;em:description&gt;<b>Estensione di prova</b>&lt;/em:description&gt;
+    &lt;em:creator&gt;<b>Il tuo nome</b>&lt;/em:creator&gt;
+    &lt;em:homepageURL&gt;<b><span class="nowiki">http://www.iltuositoweb.com/</span></b>&lt;/em:homepageURL&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<ul>
+ <li><b><a class="link-mailto" href="mailto:sample@foo.net" rel="freelink">sample@foo.net</a></b> - è l'ID dell'estensione. E' un valore che serve ad identificare l'estensione con il formato di un indirizzo e-mail (N.B. non deve essere il
+  <i>
+   tuo</i>
+  indirizzo e-mail). Rendilo unico. Si può anche usare un GUID.</li>
+ <li>Specifica &lt;tt&gt;&lt;em:type&gt;2&lt;/em:type&gt;&lt;/tt&gt; -- il 2 indica che viene descritta un'estensione (vedere <a href="it/Manifesti_di_installazione#Tipi">Manifesti di installazione#Tipi</a> per i codici di altri tipi).</li>
+ <li><b>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</b> - rappresenta l'ID della applicazione per Firefox.</li>
+ <li><b>1.0+</b> - la versione minima di Firefox con la quale si afferma che funzioni l'estensione. Imposta questo valore come la minima versione di Firefox sulla quale si ha l'intenzione di eseguire test e di correggere gli errori.</li>
+ <li><b>1.5.0.*</b> - rappresenta la massima versione di Firefox con la quale si afferma che funzioni l'estensione. Non impostare questo valore ad una versione maggiore di quella più nuova attualmente disponibile!</li>
+</ul>
+<p>Guarda <a href="it/Manifesti_di_installazione">Manifesti di installazione</a> per un elenco completo delle proprietà richieste e opzionali.</p>
+<p>Salva il file.</p>
+<h4 id="Estendere_il_browser_con_XUL" name="Estendere_il_browser_con_XUL">Estendere il browser con XUL</h4>
+<p>L'interfaccia utente di Firefox è scritta in XUL e JavaScript. <a href="it/XUL">XUL</a> è una grammatica XML che fornisce all'interfaccia utente dei componenti come pulsanti, menu, barre degli strumenti, strutture ad albero, etc. Le azioni dell'utente sono invece collegate alle funzionalità attraverso dei JavaScript.</p>
+<p>Per estendere il borwser si modificano parti dell'UI del browser aggiungendo o modificando i componenti. Si aggiungono componenti inserendo nuovi elementi XUL DOM nella finestra del browser, e si modificano usando script e associando dei gestori di eventi.</p>
+<p>Il browser è implementato in un file XUL chiamato &lt;tt&gt;browser.xul&lt;/tt&gt; (&lt;tt&gt;$FIREFOX_INSTALL_DIR/chrome/browser.jar&lt;/tt&gt; che contiene &lt;tt&gt;content/browser/browser.xul&lt;/tt&gt;). Dentro browser.xul si può trovare la barra di stato, che assomiglierà a qualcosa del genere:</p>
+<pre class="eval">&lt;statusbar id="status-bar"&gt;
+ ... &lt;statusbarpanel&gt;s ...
+&lt;/statusbar&gt;
+</pre>
+<p>&lt;tt&gt;&lt;statusbar id="status-bar"&gt;&lt;/tt&gt; è un "punto di fusione" per un Overlay XUL.</p>
+<h5 id="Overlay_XUL" name="Overlay_XUL">Overlay XUL</h5>
+<p>Gli <a href="it/Overlay_XUL">Overlay XUL</a> sono un modo di associare altri oggetti UI a un documento XUL al momento dell'esecuzione. Un Overlay XUL è un file .xul che specifica dei frammenti del file XUL da inserire in specifici "punti di fusione" contenuti nel documento principale. Questi frammenti possono indicare l'inserimento, la rimozione o la modifica degli oggetti.</p>
+<p><b>Esempio di un documento di Overlay XUL</b></p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;overlay id="sample"
+         xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+ &lt;statusbar id="<b>status-bar</b>"&gt;
+  &lt;statusbarpanel id="my-panel" label="Hello, World"/&gt;
+ &lt;/statusbar&gt;
+&lt;/overlay&gt;
+</pre>
+<p>La &lt;tt&gt;&lt;statusbar&gt;&lt;/tt&gt; chiamata &lt;tt&gt;<b>status-bar</b>&lt;/tt&gt; indica il "punto di fusione" all'interno della finestra del browser al quale si intende associare la modifica.</p>
+<p>Il figlio &lt;tt&gt;&lt;statusbarpanel&gt;&lt;/tt&gt; rappresenta un nuovo oggetto da inserire all'interno del punto di fusione.</p>
+<p>Usa questo semplice codice e salvalo in un file chiamato &lt;tt&gt;<b>sample.xul</b>&lt;/tt&gt; dentro la cartella &lt;tt&gt;chrome/content&lt;/tt&gt; che hai creato.</p>
+<p>Per ulteriori informazioni circa l'inserimento di oggetti e la modifica dell'interfaccia utente attraverso gli Overlay, guarda sotto.</p>
+<h4 id="URI_Chrome" name="URI_Chrome">URI Chrome</h4>
+<p>I file XUL sono parti del "<a href="it/Registrazione_del_Chrome">Pacchetto Chrome</a>" - una serie di componenti dell'interfaccia utente che vengono caricati attraverso indirizzi URI &lt;tt&gt;<a class="external" rel="freelink">chrome://</a>&lt;/tt&gt;. Invece di caricare il browser da disco usando un URI &lt;tt&gt;<a class="external" rel="freelink">file://</a>&lt;/tt&gt; (poichè l'ubicazione di Firefox nel sistema può cambiare da piattaforma a piattaforma e da sitema a sistema), gli sviluppatori di Mozilla hanno trovato una soluzione per creare degli URI al contenuto XUL che l'applicazione installata possa conoscere.</p>
+<p>Ad esempio, la finestra del browser è: &lt;tt&gt;<a class="external" rel="freelink">chrome://browser/content/browser.xul</a>&lt;/tt&gt; Prova a digitare questa URL nella barra degli indirizzi di Firefox!</p>
+<p>Gli URI Chrome sono composti da diversi componenti:</p>
+<ul>
+ <li>Primo, lo <b>schema URI</b> (&lt;tt&gt;chrome&lt;/tt&gt;) che comunica alla libreria del networking di Firefox che si è in presenza di un URI Chrome e che il contenuto in fase di caricamento dovrà essere trattato in modo particolare.</li>
+ <li>Secondo, il nome del pacchetto (nel esempio sopra, &lt;tt&gt;<b>browser</b>&lt;/tt&gt;) che identifica la serie dei componenti dell'interfaccia utente. Tale nome dovrebbe essere unico per l'applicazione, per evitare collisioni tra le estensioni.</li>
+ <li>Terzo, il tipo di dati che viene richiesto. Ce ne sono di tre tipi: &lt;tt&gt;content&lt;/tt&gt; (XUL, JavaScript, XBL bindings, etc. che plasmano la struttura ed il comportamento di un'applicazione UI), &lt;tt&gt;locale&lt;/tt&gt; (file DTD, .properties, etc che contengono le stringhe per la <a href="it/Localizzazione">localizzazione</a>), e &lt;tt&gt;skin&lt;/tt&gt; (CSS e immagini che disegnano il <a href="it/Temi">Tema</a> della UI)</li>
+ <li>Da ultimo, il percorso del file da caricare.</li>
+</ul>
+<p>Quindi, &lt;tt&gt;<a class="external" rel="freelink">chrome://foo/skin/bar.png</a>&lt;/tt&gt; carica il file &lt;tt&gt;bar.png&lt;/tt&gt; dalla sezione &lt;tt&gt;skin&lt;/tt&gt; del tema &lt;tt&gt;foo&lt;/tt&gt;.</p>
+<p>Quando si carica un file mediante l'URI Chrome, Firefox usa il Registro del Chrome per tradurre questi URI nella effettiva sorgente del file su disco (o nel pacchetto JAR).</p>
+<h4 id="Creare_il_manifesto_di_installazione_2" name="Creare_il_manifesto_di_installazione_2">Creare il manifesto di installazione</h4>
+<p>Per maggiori informazioni sul Chrome Manifest e le proprietà supportate, guarda il riferimento sul <a href="it/Chrome_Manifest">Chrome Manifest</a>.</p>
+<p>Apri il file chiamato &lt;tt&gt;<b>chrome.manifest</b>&lt;/tt&gt; che hai creato insieme alla directory &lt;tt&gt;chrome&lt;/tt&gt; nella root dell'estensione.</p>
+<p>Aggiungi questo codice:</p>
+<pre class="eval">content     sample    chrome/content/
+</pre>
+<p>(<b>Non dimenticare gli slash posteriori, "&lt;tt&gt;/&lt;/tt&gt;"!</b> Senza, l'estensione non verrà caricata.)</p>
+<p>Il codice indica:</p>
+<ol>
+ <li>il tipo di materiale all'interno del pacchetto chrome</li>
+ <li>il nome del pacchetto chrome</li>
+ <li>la ubicazione dei file del pacchetto chrome</li>
+</ol>
+<p>Quindi, la stringa indicata sopra dice che per il pacchetto chrome <b>sample</b>, si possono trovare i suoi file <b>content</b> all'ubicazione &lt;tt&gt;chrome/content&lt;/tt&gt; che è un percorso relativo alla ubicazione di &lt;tt&gt;chrome.manifest&lt;/tt&gt;.</p>
+<p>N.B. i file content, locale e skin devono essere contenuti nelle cartelle chiamate content, locale e skin all'interno della sotto-directory &lt;tt&gt;chrome&lt;/tt&gt;.</p>
+<p>Salva il file. Quando Firefox verrà eseguito con questa estensione, (più avanti in questo tutorial), il chrome.manifest registrerà il pacchetto chrome.</p>
+<h4 id="Registrare_un_Overlay" name="Registrare_un_Overlay">Registrare un Overlay</h4>
+<p>E' necessario che Firefox fonda il tuo overlay con la finestra del browser ogni volta che ne mostra una. Quindi aggiungi questa stringa al file &lt;tt&gt;chrome.manifest&lt;/tt&gt;:</p>
+<pre class="eval">overlay <a class="external" rel="freelink">chrome://browser/content/browser.xul</a> <a class="external" rel="freelink">chrome://sample/content/sample.xul</a>
+</pre>
+<p>Questo dice a Firefox di fondere &lt;tt&gt;sample.xul&lt;/tt&gt; in &lt;tt&gt;browser.xul&lt;/tt&gt; quando viene caricato &lt;tt&gt;browser.xul&lt;/tt&gt; .</p>
+<h4 id="Test" name="Test">Test</h4>
+<p>Primo, devi far sapere a Firefox della tua estensione. Nei vecchi e bui giorni di Firefox 1.0 questo significava impacchettare l'estensione come un XPI e installarla attraverso l'interfaccia utente, che era davvero una faticaccia. Ora è più semplice.</p>
+<ol>
+ <li>Apri la <a class="external" href="http://kb.mozillazine.org/Profile_folder">cartella del Profilo</a></li>
+ <li>Apri la cartella dell'<b>estensione</b> (creala se non esiste)</li>
+ <li>Crea un nuovo file di testo e scrivici dentro il percorso alla cartella dell'estensione, ad es. &lt;tt&gt;C:\extensions\myExtension\&lt;/tt&gt; o &lt;tt&gt;~/extensions/myExtension&lt;/tt&gt;. Salva il file con l'ID dell'estensione, per esempio &lt;tt&gt;<a class="link-mailto" href="mailto:sample@foo.net" rel="freelink">sample@foo.net</a>&lt;/tt&gt;</li>
+</ol>
+<p>Ora sei pronto a fare un test dell'estensione!</p>
+<p>Avvia Firefox. Firefox rileverà il link testuale alla directory dell'estensione e la installerà. Quando apparirà la finestra del browser si dovrebbe vedere la scritta "Hello, World!" sulla destra della barra di stato.</p>
+<p>Ora puoi tornare indietro ed effettuare dei cambiamenti al file .xul, chiudere e riavviare Firefox e questi dovrebbero essere mostrati.</p>
+&lt;center&gt;
+ <p><img alt="Image:Helloworld_tools_menu.PNG"></p>
+ <p><img alt="Image:Helloworld_extensions_wnd.PNG"></p>
+&lt;/center&gt;
+<h4 id="Impacchettamento" name="Impacchettamento">Impacchettamento</h4>
+<p>Ora che l'estensione funziona, può essere impacchettata per l'installazione e la circolazione.</p>
+<p>Comprimi il <b>contenuto</b> della cartella dell'estensione (non la cartella stessa), e rinomina il file .zip con l'estensione .xpi. In ambiente Windows XP, si può facilmente esguire questa operazione selezionando tutti i file e le sottocartelle presenti nella cartella dell'estensione, cliccando col tasto destro del mouse e scegliendo "Invia a -&gt; Cartella compressa". Verrà creato un file .zip. Basta rinominarlo ed il gioco è fatto!</p>
+<p>Ora è possibile caricare il file .xpi su un server, avendo cura di controllare che offra il servizio di &lt;tt&gt;application/x-xpinstall&lt;/tt&gt;. Basta quindi creare un collegamento al file sul server per permettere alle persone di scaricare e installare l'estensione su Firefox.</p>
+<p> </p>
+<h5 id="Utilizzare_addons.mozilla.org" name="Utilizzare_addons.mozilla.org">Utilizzare addons.mozilla.org</h5>
+<p>Mozilla Update è un sito di distribuzione dove è possibile ospitare (hosting) le proprie estensioni gratuitamente.
+ <i>
+  Your extension will be hosted on Mozilla's mirror network to guarantee your download even though it might be very popular.</i>
+ Il sito di Mozilla garantisce inoltre agli utenti un'installazione semplificata delle estensioni, e rende automaticamente disponibili, per gli utenti che già le possiedano, gli aggiornamenti ogni volta che viene effettuato l'upload delle nuove versioni delle estensioni. In più Mozilla Update consente agli utenti di commentare e lasciare un feedback sulla estensione. E' vivamente consigliabile di utilizzare Mozilla Update per distribuire le tue estensioni!</p>
+<p>Visita <a class="external" href="http://addons.mozilla.org/developers/" rel="freelink">http://addons.mozilla.org/developers/</a> per creare un account ed iniziare a distribuire le tue estensioni!</p>
+<p>
+ <i>
+  N.B.</i>
+ Le tue estensioni saranno promosse più velocemente e maggiormente scaricate se fornisci una descrizione accurata e alcuni screenshot delle funzionalità dell'estensione.</p>
+<h5 id="Registrare_le_Estensioni_nel_registro_di_Windows" name="Registrare_le_Estensioni_nel_registro_di_Windows">Registrare le Estensioni nel registro di Windows</h5>
+<p>Su Windows, possono essere aggiunte nel registro delle informazioni sulle estensioni, cosicché l'estensione sarà automaticamente caricata all'avvio dell'applicazione. Questo permette ai programmi di installazione delle applicazioni di aggiungere facilmente dei punti di acesso perl'integrazione sottoforma di estensioni. Guarda <a href="it/%22Aggiugere_estensioni_utilizzando_il_Registro_di_Windows%22">"Aggiugere estensioni utilizzando il Registro di Windows"</a> per ulteriori informazioni.</p>
+<h4 id="Altre_informazioni_sugli_Overlay_XUL" name="Altre_informazioni_sugli_Overlay_XUL">Altre informazioni sugli Overlay XUL</h4>
+<p>Oltre che per inserire dei componenti UI ai "punti di fusione", si possono usare i frammenti di XUL negli Overlay per:</p>
+<ul>
+ <li>Modificare degli attributi al punto di fusione, es. &lt;tt&gt;&lt;statusbar id="status-bar" hidden="true"/&gt;&lt;/tt&gt; (nasconde la barra di stato)</li>
+ <li>Rimuovere il punto di fusione dal documento principale, e.g. &lt;tt&gt;&lt;statusbar id="status-bar" removeelement="true"/&gt;&lt;/tt&gt;</li>
+ <li>Controllare la posizione dei componenti inseriti:</li>
+</ul>
+<pre class="eval">&lt;statusbarpanel position="1" .../&gt;
+
+&lt;statusbarpanel insertbefore="other-id" .../&gt;
+
+&lt;statusbarpanel insertafter="other-id" .../&gt;
+</pre>
+<h4 id="Creare_nuovi_componenti_per_l.27interfaccia_utente" name="Creare_nuovi_componenti_per_l.27interfaccia_utente">Creare nuovi componenti per l'interfaccia utente</h4>
+<p>E' possibile creare proprie finestre (e finestre di dialogo) come file .xul separati, fornire nuove funzionalità implementando le azioni disponibili per l'utente nei file .js, usando il metodo DOM per manipolare i componenti UI. Si possono definire le regole di stile nei file .css per associare delle immagini, impostare i colori, etc.</p>
+<p>Guarda la documentazione su <a href="it/XUL">XUL</a> per ulteriori risorse sullo sviluppo con XUL.</p>
+<h4 id="File_predefiniti" name="File_predefiniti">File predefiniti</h4>
+<p>I file predefiniti con i quali modificare il profilo dell'utente dovrebbero essere posti nella cartella &lt;tt&gt;defaults/&lt;/tt&gt; sotto la root della gerarchia di cartelle dell'estensione. I file .js che settano impostazioni predefinite dovrebbero invece essere posti nella cartella &lt;tt&gt;defaults/preferences/&lt;/tt&gt; - infatti, qualora vengano ubicati in queste cartelle, saranno automaticamente caricati dal sistema di preferenze di Firefox all'avvio e sarà possibile accedervi facilmente utilizzando l'<a href="it/API_delle_Preferenze">API delle Preferenze</a>.</p>
+<h4 id="Componenti_XPCOM" name="Componenti_XPCOM">Componenti XPCOM</h4>
+<p>Firefox supporta anche i componenti <a href="it/XPCOM">XPCOM</a> all'interno delle estensioni. Questi componenti possono essere facilmente creati con JavaScript o C++ (utilizzando il <a href="it/Gecko_SDK">Gecko SDK</a>).</p>
+<p>Riponi tutti i file .js o .dll nella directory &lt;tt&gt;components/&lt;/tt&gt; - saranno automaticamente registrati al primo avvio di Firefox successivo all'installazione dell'estensione.</p>
+<p>Per maggiori informazioni guarda <a href="it/Come_costruire_un_componente_XPCOM_con_Javascript">Come costruire un componente XPCOM con Javascript</a> e il libro <a href="it/Creare_componenti_XPCOM">Creare componenti XPCOM</a>.</p>
+<h5 id="Linea_di_comando_per_l.27applicazione" name="Linea_di_comando_per_l.27applicazione">Linea di comando per l'applicazione</h5>
+<p>Uno dei possibili usi dei componenti XPCOM personalizzati è quello di aggiungere una gestione a linea di comando per Firefox o Thunderbird. Questa tecnica è utile per eseguire l'estensione come se fosse un'applicazione:</p>
+<pre class="eval"> firefox.exe -myapp
+</pre>
+<p>Guarda <a href="it/Chrome/Linea_di_comando">Chrome: Linea di comando</a> ed una <a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=365297">discussione sul forum</a>(EN) per maggiori dettagli.</p>
+<h4 id="Localizzazione" name="Localizzazione">Localizzazione</h4>
+<p>Per supportare più di una lingua, occorre separare le stringhe dal contenuto utilizzando le <a href="it/XUL_Tutorial/Localization">entities</a> e le <a href="it/XUL_Tutorial/Property_Files">string bundles</a>. E' più semplice effettuare questa operazione mentre si sviluppa l'estensione che dover tornare indietro e farlo alla fine!</p>
+<p>Le informazioni sulla Localizzazione sono immagazzinate nella directory del locale dell'estensione. Per esempio, per aggiungere un locale all'estensione che abbiamo sviluppato fin ora, basta creare una directory chiamata "locale" nel chrome (dove è ubicata la directory "content") e aggiungere la seguente stringa al file chrome.manifest:</p>
+<pre class="eval">locale sample sampleLocale chrome/locale/
+</pre>
+<p>Per creare valori localizzabili per gli attributi XUL, è necessario inserire tali valori in un file &lt;tt&gt;.ent&lt;/tt&gt; (o &lt;tt&gt;.dtd&lt;/tt&gt;), che deve essere ubicato nella directory del locale ed avere questo aspetto:</p>
+<pre class="eval">&lt;!ENTITY  button.label     "Click Me!"&gt;
+&lt;!ENTITY  button.accesskey "C"&gt;
+</pre>
+<p>E quindi includere all'inizio del documento XUL (ma dopo il prologo "&lt;?xml version"1.0"?&gt;") qualcosa del genere:</p>
+<pre class="eval">&lt;!DOCTYPE <b>window</b> SYSTEM "<a class="external" rel="freelink">chrome://packagename/locale/filename.ent</a>"&gt;
+</pre>
+<p>dove <code><b>window</b></code> è il valore <code><a href="it/DOM/element.localName">localName</a></code> dell'elemento di root del documento XUL, ed il valore della proprietà &lt;tt&gt;SYSTEM&lt;/tt&gt; è l'URI chrome al file dell'entità (entity). Nell'estensione dell'esempio, l'elemento di root è <code><b>overlay</b></code>.</p>
+<p>Per usare le entità occorre modificare il proprio XUL così:</p>
+<pre class="eval">&lt;button label="&amp;button.label;" accesskey="&amp;button.accesskey;"/&gt;
+</pre>
+<p>Il Registro del Chrome farà in modo che il file dell'entità venga caricato dalla cartella del locale corrispondente al locale selezionato.</p>
+<p>Per le stringhe usate negli script crea un file .properties: un file di testo che contiene una stinga per ogni linea in questo formato:</p>
+<pre class="eval">chiave=valore
+</pre>
+<p>e utilizza il tag &lt;tt&gt;<a href="it/NsIStringBundleService">nsIStringBundleService</a>&lt;/tt&gt;/&lt;tt&gt;<a href="it/NsIStringBundle">nsIStringBundle</a>&lt;/tt&gt; o il tag &lt;tt&gt;<a class="external" href="http://xulplanet.com/references/elemref/ref_stringbundle.html">&lt;stringbundle&gt;</a>&lt;/tt&gt; per caricare i valori negli script.</p>
+<h4 id="Conoscere_il_Browser" name="Conoscere_il_Browser">Conoscere il Browser</h4>
+<p>Usa il <a href="it/DOM_Inspector">DOM Inspector</a> (non è parte dell'installazione <b>Standard</b> di Firefox, se manca dal menu Strumenti occorre reinstallare Firefox con l'opzione "installazione personalizzata" e selezionare <b>Strumenti di sviluppo</b>) per esplorare la finestra del browser ed ogni altra finestra XUL che hai l'intenzione di estendere.</p>
+<p>Utilizza il pulsante in alto a sinistra nella bara degli strumenti del DOM Inspector per attivare la modalità di ricerca dei nodi "punta-e-clicca": in tal modo basterà un clic visuale su un nodo nella finestra XUL per selezionarlo. Effettuando quest'operazione l'albero della gerarchia DOM del DOM inspector salterà automaticamente al nodo selezionato.</p>
+<p>Usa il pannello di destra del DOM Inspector per trovare i punti di fusione e gli "id" da usare per inserire gli elementi tramite l'overlay. Se non riesci a trovare un elemento che abbia un'id sulla quale sia possibile effettuare l'inserimento, potrebbe essere necessario aggiungere uno script nell'overlay per inserire i propri elementi quando l'evento &lt;tt&gt;load&lt;/tt&gt; si attiva nella finestra XUL principale.</p>
+<h4 id="Effettuare_il_debug_sull.27estensione" name="Effettuare_il_debug_sull.27estensione">Effettuare il debug sull'estensione</h4>
+<p><b>Strumenti per il debug analitico</b></p>
+<ul>
+ <li>Il <a href="it/DOM_Inspector">DOM Inspector</a> - ispeziona gli attributi, la struttura DOM, le regole di stile CSS che sono attive (ad es. si può capire perché le proprie regole di stile non sembrano funzionare per un elemento - uno strumento inestimabile!)</li>
+ <li><a href="it/Venkman">Venkman</a> - imposta i punti d'arresto in JavaScript ed esamina le
+  <i>
+   call stacks</i>
+ </li>
+ <li><code><a href="it/Core_JavaScript_1.5_Reference/Objects/Function/arguments/callee">arguments.callee</a>.<a href="it/Core_JavaScript_1.5_Reference/Objects/Function/caller">caller</a></code> in JavaScript - accede allo stack di chiamata di una funzione</li>
+</ul>
+<p><b>Debug con printf</b></p>
+<ul>
+ <li>Esegui Firefox con il parametro &lt;tt&gt;-console&lt;/tt&gt; sulla linea di comando e utilizza <code><a href="it/DOM/window.dump">dump</a>("string")</code> (guarda il link per dettagli)</li>
+ <li>Utilizza <code><a href="it/NsIConsoleService">nsIConsoleService</a></code> per accedere alla console JavaScript</li>
+</ul>
+<p><b>Debug avanzato</b></p>
+<ul>
+ <li>Esegui una build di debug di Firefox ed imposta dei punti di arresto in Firefox stesso, o nei tuoi componenti C++. Per gli sviluppatori esperti, questa è spesso il modo più veloce per diagnosticare un problema. Guarda la <a href="it/Documentazione_sulla_build">Documentazione sulla build</a> e <a href="it/Sviluppare_Mozilla">Sviluppare Mozilla</a> per ulteriori informazioni.</li>
+ <li>Guarda <a href="it/Eseguire_un_debug_su_un'applicazione_XULRunner">Eseguire un debug su un'applicazione XULRunner</a> per altri suggerimenti utili.</li>
+</ul>
+<h3 id="Iniziare_velocemente" name="Iniziare_velocemente">Iniziare velocemente</h3>
+<p>Può essere utilizzato lo strumento online <a class="external" href="http://ted.mielczarek.org/code/mozilla/extensionwiz/">Extension Wizard</a>(EN) per generare una semplice estensione.</p>
+<p>Un'estensione <a class="external" href="http://mozilla.doslash.org/stuff/helloworld.zip">"Hello World"</a>(EN) simile a quella prodotta dall'Extension Wizard è spiegata passo-passo in <a class="external" href="http://kb.mozillazine.org/Getting_started_with_extension_development">un altro tutorial di MozillaZine</a>(EN).</p>
+<p>{{ languages( { "en": "en/Building_an_Extension", "de": "de/Erweiterung_erstellen", "es": "es/Creando_una_extensi\u00f3n", "fr": "fr/Construire_une_extension", "ja": "ja/Building_an_Extension", "pl": "pl/Tworzymy_rozszerzenie", "pt": "pt/Construir_uma_Extens\u00e3o" } ) }}</p>

@@ -1,0 +1,66 @@
+---
+title: Idle API
+slug: WebAPI/Idle
+translation_of: Archive/B2G_OS/API/Idle_API
+---
+<div>
+  {{non-standard_header}} {{B2GOnlyHeader2('certified')}}</div>
+<h2 id="Summary">Summary</h2>
+<p>Idle API 는 사용자가 유휴상태(idle) 상태가 되었음을 앱에 알려주는데 사용됩니다.</p>
+<p>이것은 사용자가 자신의 디바이스에 아무것도 하지 않을 때에 앱이 동작을 취할 수 있게 해줍니다. 가장 많이 사용하는 경우는 배터리를 아끼기 위한 것으로 이 경우 보통 <a href="/en-US/docs/WebAPI/Power_Management">Power Management API</a> 와 함께 사용됩니다.</p>
+<h2 id="유휴_상태의_사용자_관찰하기">유휴 상태의 사용자 관찰하기</h2>
+<p>시스템이 유휴상태일 때 어플리케이션으로 부터 알림을 받기 위해서는 <strong>idle observer</strong>에 꼭 등록을 하여야 한다. idle observer는 세가지 특성을 가지고 있는 오브젝트이다:</p>
+<ul>
+  <li><code>time</code>은 사용자의 마지막 동작 이후부터 유휴 상태라고 여길때까지의 시간(초)을 정의한다.</li>
+  <li><code>onidle</code>은 사용자가 유휴 상태라고 여겨질 때 함수를 호출한다.</li>
+  <li><code>onactive</code>는 사용자가 유휴 상태였다가 활성화 되었을 때 함수를 호출한다.</li>
+</ul>
+<h3 id="예제_사용자가_반응이_없을때_화면을_어둡게_하기">예제: 사용자가 반응이 없을때 화면을 어둡게 하기</h3>
+<p>이 예제에서, 10초 동안 사용자의 반응이 없을 때 유휴 관찰자(=idle observer)는 화면을 50% 밝기로 어둡게 한다 그리고 다시 사용자의 반응이 나타나면 100% 밝기로 돌려 놓는다. 두번째 유휴 관찰자 는 15초 동안 사용자 반응이 없을때 화면을 꺼 버린다.</p>
+<pre class="brush: js">// NOTE: mozPower is part of the Power Management API
+
+var fadeLight = {
+  time: 10, // Ten seconds
+
+  onidle: function () {
+    // The user does not seem active, let's dim the screen down
+    navigator.mozPower.screenBrightness = 0.5;
+  },
+
+  onactive: function () {
+    // Ok, the user is back, let's brighten the screen up
+    navigator.mozPower.screenBrightness = 1;
+  }
+}
+
+var screenOff = {
+  time: 15, // fifteen seconds
+
+  onidle: function () {
+    // Ok, the user had his chance but he's really idle, let's turn the screen off
+    navigator.mozPower.screenEnabled = false;
+  },
+
+  onactive: function () {
+    // Ok, the user is back, let's turn the screen on
+    navigator.mozPower.screenEnabled = true;
+  }
+}
+
+// Register the idle observers
+
+navigator.addIdleObserver(fadeLight);
+navigator.addIdleObserver(screenOff);
+</pre>
+<p>이 코드에는 <code>fadeLight</code> 와 <code>screenOff 라는 두 유휴 관찰자를 정의한뒤</code>, <span style="line-height: inherit;">시스템에 등록하기 위하여 각각 </span><span style="line-height: inherit;">{{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver()")}} 를 한번씩 호출한다. 어플리케이션은 필요한 만큼에 유휴 관찰자를 등록할 수 있다.</span></p>
+<p>만약 어플리케이션에서 사용자의 반응이 없어지는지 더이상 관찰이 필요 없는 경우, 아래 예제 코드의 예처럼 유휴 관찰자를{{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver()")}} 메서드를 통해 제거할 수 있다.</p>
+<pre class="brush:js">navigator.removeIdleObserver(fadeLight);
+navigator.removeIdleObserver(screenOff);
+</pre>
+<h2 id="Specification">Specification</h2>
+<p>Not part of any specification yet; however, this API will be discussed at W3C as part of the <a href="http://www.w3.org/2012/sysapps/" rel="external">System Applications Working Group</a>.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+  <li>{{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver()")}}</li>
+  <li>{{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver()")}}</li>
+</ul>

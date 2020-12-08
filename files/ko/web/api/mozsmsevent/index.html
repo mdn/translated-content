@@ -1,0 +1,109 @@
+---
+title: MozSmsEvent
+slug: Web/API/MozSmsEvent
+translation_of: Archive/B2G_OS/API/MozSmsEvent
+---
+<p>{{ Apiref() }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="요약">요약</h2>
+<p>DOM <code>MozSmsEvent</code> 는 WebSMS 문자 메시지와 관련된 이벤트 객체이다.</p>
+<h2 id="속성">속성</h2>
+<dl>
+ <dt>
+  {{domxref("MozSmsEvent.message")}} {{readonlyinline}}</dt>
+ <dd>
+  해당 이벤트에 의해 발생된 {{ domxref("MozSmsMessage") }} 이다.</dd>
+</dl>
+<p><code>MozSmsEvent</code> 는 또한 {{domxref("Event")}} 의 속성들을 상속받는다.</p>
+<p>{{page("/en-US/docs/Web/API/Event","Properties")}}</p>
+<h2 id="메소드">메소드</h2>
+<p><code>MozSmsEvent</code> 는 {{domxref("Event")}} 의 메소드들을 상속받는다.</p>
+<p>{{page("/en-US/docs/Web/API/Event","Methods")}}</p>
+<h2 id="이벤트">이벤트</h2>
+<p><code>MozSmsEvent</code> 는 다음과 같은 이벤트들에 사용된다:</p>
+<dl>
+ <dt>
+  {{event("deliverysuccess")}}</dt>
+ <dd>
+  SMS가 수신자에게 전달되었을 때 발생한다.</dd>
+ <dt>
+  {{event("received")}}</dt>
+ <dd>
+  SMS를 받았을 때 발생한다.</dd>
+ <dt>
+  {{event("sent")}}</dt>
+ <dd>
+  SMS를 보냈을 때 발생한다.</dd>
+</dl>
+<h2 id="스펙">스펙</h2>
+<p>이 API는 비 표준 스펙의 구현체입니다. 하지만 W3C의 <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">System Application Working Group</a>에서 논의되고 있습니다.</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Messaging')}}</td>
+   <td>{{Spec2('Messaging')}}</td>
+   <td>Editor Draft (WIP).</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<p>당연하게도, 모바일 브라우저를 주로 지원할 것으로 예상됩니다.</p>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Basic support</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Basic support</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatGeckoMobile("12.0") }} {{property_prefix("Moz")}}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h2 id="참고_자료">참고 자료</h2>
+<ul>
+ <li>{{ domxref("window.navigator.mozSms") }}</li>
+ <li>{{ domxref("MozSmsManager") }}</li>
+ <li>{{ domxref("MozSmsMessage") }}</li>
+</ul>

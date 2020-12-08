@@ -1,0 +1,99 @@
+---
+title: Box Model Details
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Box_Model_Details
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Box_Model_Details
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Element_Positioning" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Groupboxes">다음  »</a></p>
+</div><p></p>
+<p>지금까지 우리는 상자모델의 많은 기능을 살펴 보았습니다. 여기서는 몇 가지 예제를 가지고 좀 더 세부적인 내용을 알아보겠습니다.</p>
+<h3 id=".EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83.EC.97.90_.EB.8C.80.ED.95.9C_.EC.B6.94.EA.B0.80_.EB.82.B4.EC.9A.A9" name=".EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83.EC.97.90_.EB.8C.80.ED.95.9C_.EC.B6.94.EA.B0.80_.EB.82.B4.EC.9A.A9">레이아웃에 대한 추가 내용</h3>
+<p><code>min-width</code>와 <code>max-height</code>같은 스타일 속성은 어떤 요소에든 적용할 수 있습니다. 지금까지는 이 속성들을 버튼과 글상자에만 적용했지만, 여백이나 상자 요소에도 적용할 수 있습니다. 게다가, <code>flex</code> 속성은 어떤 요소에든 적용할 수 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_1.xul">View</a></p>
+<pre>&lt;hbox flex="1"&gt;
+  &lt;button label="Left" style="min-width: 100px;" flex="1"/&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;button label="Right" style="min-width: 100px;" flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p>위의 예제에서, 3개 요소는 유연하기 때문에 스스로 크기가 조절됩니다. 2개의 버튼은 최소 넓이를 100픽셀로 하고 있습니다. 버튼은 이 크기 이하로 절대 작아지지 않지만 더 늘어날 수는 있습니다. 여기서 해당 창은 대략 200픽셀 정도의 넓이가 될 것입니다. 이는 두개의 버튼이 들어가기에 충분한 공간입니다. 3개 요소 모두가 유연하기 때문에, 더 많은 공간을 필요로 하지 않으며 flex 속성에 의해 빈 공간이 생기지 않습니다.</p>
+<div class="float-right">
+ <img alt="Image:boxdet1.png"></div>
+<p>그림에서처럼, 두 개의 버튼은 이들을 포함하는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code>에 맞도록 수직 방향으로도 늘어나는 것을 볼 수 있습니다. <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성은 가로상자에서 이러한 동작을 제어하는데 사용됩니다. 또한 여러분은 요소나 상자에 최대 높이를 지정해서 늘어나지 못하게도 할 수 있습니다. 어떤 상자가 최대 높이값을 가지면, 상자내에 있는 요소들은 이것에 의해 제약을 받게 된다. 그러나 여기에도 문제가 있는데, 사전에 해당 요소가 얼마나 커야 할지 알아야 한다는 것입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_2.xul">View</a></p>
+<pre>&lt;hbox flex="1" align="top"&gt;
+  &lt;button label="Left" style="min-width: 100px;" flex="1"/&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;button label="Right" style="min-width: 100px;" flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<h4 id=".EC.83.81.EC.9E.90_.EB.AA.A8.EB.8D.B8_.EC.A0.95.EB.A6.AC" name=".EC.83.81.EC.9E.90_.EB.AA.A8.EB.8D.B8_.EC.A0.95.EB.A6.AC">상자 모델 정리</h4>
+<p>복잡한 레이아웃을 만드려면, 일반적으로 중첩된 상자를 추가하고 일부 요소에 최대 최소 크기를 지정해주고, 어떤 요소가 flex 속성을 가지도록 해야 합니다. 가장 좋은 인터페이스는 다양한 크기에서도 문제없이 표시될 수 있는 것입니다. 여러분 스스로 여러 경우를 시험해 보지 않으면 상자 모델을 이해하기 어려우실 겁니다.</p>
+<p>다음은 두 가지 상자 형식의 기본적인 내용을 설명하고 있습니다.</p>
+<p><b>가로상자</b></p>
+<ol>
+ <li>서로 이웃하는 요소를 가로 방향으로 배치합니다.</li>
+ <li>유연한 요소(flex 속성을 가진 요소)는 가로로 크기를 조절합니다.</li>
+ <li>pack 속성은 자식 요소의 가로 방향 위치를 제어합니다.</li>
+ <li>align 속성은 요소의 행이 어떻게 세로로 정렬될 지를 제어합니다.</li>
+</ol>
+<p><b>세로상자</b></p>
+<ol>
+ <li>세로 방향으로 요소들을 배치합니다.</li>
+ <li>유연한 요소(flex 속성을 가진 요소)는 세로로 크기를 조절합니다.</li>
+ <li>pack 속성은 자식 요소의 세로 방향 위치를 제어합니다.</li>
+ <li>align 속성은 자식 요소의 가로 정렬 방식을 제어합니다.</li>
+</ol>
+<p>상자는 테이블과 같은 HTML 요소 내부를 포함해서 XUL 어디에든 사용할 수 있습니다. 그러나 그러한 레이아웃은 일부 HTML 요소에 의해 제어되게 됩니다. 이는 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성이 여러분이 원하는 대로 작동하지 않을 수도 있다는 것을 의미합니다. flex 속성은 상자 또는 상자 타입 요소 바로 안에 있는 요소들에 대해서만 적용된다는 점을 기억하세요.</p>
+<h3 id=".EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83_.EC.98.88.EC.A0.9C" name=".EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83_.EC.98.88.EC.A0.9C">레이아웃 예제</h3>
+<h4 id=".EC.97.AC.EB.B0.B1_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0" name=".EC.97.AC.EB.B0.B1_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0">여백 사용하기</h4>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_3.xul">View</a></p>
+<pre>&lt;hbox&gt;
+  &lt;button label="One"/&gt;
+  &lt;spacer style="width: 5px"/&gt;
+  &lt;button label="Two"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p>여기서, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> 요소는 두개의 버튼 사이의 구분자로 사용되고 있으며, 정확하게 5픽셀로 설정되어 있습니다. 여러분은 CSS의 <code>margin</code> 속성을 사용해서 여백을 설정할 수도 있습니다.</p>
+<h4 id=".EB.B2.84.ED.8A.BC_.EC.A4.91.EC.95.99.EC.A0.95.EB.A0.AC" name=".EB.B2.84.ED.8A.BC_.EC.A4.91.EC.95.99.EC.A0.95.EB.A0.AC">버튼 중앙정렬</h4>
+<p><span id="%EC%98%88%EC%A0%9C_4"><a id="%EC%98%88%EC%A0%9C_4"></a><strong>예제 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_4.xul">View</a></p>
+<pre>&lt;hbox pack="center" align="center" flex="1"&gt;
+  &lt;button label="Look at Me!"/&gt;
+  &lt;button label="Push Me!"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p>이 예제는 2개의 버튼을 포함하고 flex 속성이 지정된 가로 상자입니다. 해당 상자는 버튼들을 가로 중앙 정렬하기 위해 <code><code id="a-pack"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 속성을 사용합니다. <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성은 버튼들을 세로로 정렬하고 있습니다. 결과적으로 상자 내 버튼들은 양방향에서 중앙에 위치하게 됩니다. 이 예제는 세로상자에도 마찬가지로 적용되는데, 다른점은 2번째 버튼이 우측이 아니라 아래에 놓이게 된다는 것입니다.</p>
+<h4 id=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EB.8C.80.ED.99.94.EC.B0.BD" name=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EB.8C.80.ED.99.94.EC.B0.BD">파일 찾기 대화창</h4>
+<p><span id="%EC%98%88%EC%A0%9C_5"><a id="%EC%98%88%EC%A0%9C_5"></a><strong>예제 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_5.xul">View</a></p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="findtext" title="Find Text" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;vbox flex="3"&gt;
+    &lt;label control="t1" value="Search Text:"/&gt;
+    &lt;textbox id="t1" style="min-width: 100px;" flex="1"/&gt;
+  &lt;/vbox&gt;
+
+  &lt;vbox style="min-width: 150px;" flex="1" align="start"&gt;
+    &lt;checkbox id="c1" label="Ignore Case"/&gt;
+    &lt;spacer flex="1" style="max-height: 30px;"/&gt;
+    &lt;button label="Find"/&gt;
+  &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+<div class="float-right">
+ <img alt="Image:boxdet-ex3.jpg"></div>
+<p>여기서 2개의 세로상자가 만들어 지는데, 하나는 글상자를 포함하고 다른 하나는 체크상자와 버튼을 포함합니다. 좌측 상자는 우측보다 3배 큰 유연성을 가지고 있어(flex값이 3배 큼) 창의 크기가 커지면 추가 공간도 그만큼 커지게 된다. 오른쪽 상자는 최소 넓이를 150픽셀로 제한하고 있습니다.</p>
+<p>글상자는 flex 속성을 가지고 있기 때문에 창 크기가 바뀌면 따라서 바뀌게 됩니다. 글상자 또한 최소넓이를 100픽셀로 제한하고 있습니다. 오른쪽 상자에는 라벨이 있는 체크상자가 있습니다. 체크상자 바로 아래에는 여백(spacer) 요소가 있습니다. 여백(spacer)은 커지거나 줄어들게 되지만 30픽셀보다 커지지는 않습니다. 결과적으로 체크상자와 찾기(Find) 버튼은 30픽셀 보다 크지는 않을 공간으로 서로 떨어져 나타나게 됩니다.</p>
+<p>2번째 상자는 <code>start</code>라는 정렬 속성을 가지고 있습니다. 이 속성은 자식요소를 좌측 끝에 정렬시킵니다. 이를 지정하지 않았다면, 기본값은 <code>stretch</code>가 되는데, 자식요소를 가로으로 주욱 펼치게 되었을 것입니다. 찾기(Find) 버튼의 크기가 변하지 않게 하기 위해서는 정렬 속성을 지정해야 합니다.</p>
+<p>다음에는 좀 더 특별한 유형의 상자인 <a href="ko/XUL_Tutorial/Groupboxes">the groupbox</a>에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Element_Positioning" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Groupboxes">다음  »</a></p>
+</div><p></p>
+<p></p>

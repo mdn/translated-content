@@ -1,0 +1,181 @@
+---
+title: Alarm API
+slug: WebAPI/Alarm
+translation_of: Archive/B2G_OS/API/Alarm_API
+---
+<p>{{ SeeCompatTable() }}</p>
+<h2 id="개요">개요</h2>
+<p>Alarm API는 스케줄 알림, 또는 어플리케이션이 동작할 특정 시간을 설정한다. 알람 같은 어플리케이션 -시계, 달력, 자동 업데이트 등-은 특정 시간의 동작을 활성화해주는 <span style="line-height: inherit;">Alarm API가 필요하다.</span></p>
+<p>알람은 시스템 메시지 API를 통해 어플리케이션으로 전달된다. 알람 메시지에 허가된 어플리케이션은 알람을 사용할 수 있다.</p>
+<p>알람은 {{domxref("MozAlarmsManager")}} 인터페이스의 인스턴스 객체인 <span style="line-height: inherit;">{{domxref("window.navigator.mozAlarms")}} 로 설정한다.</span></p>
+<p> </p>
+<h2 id="example" name="example">알람 일정 설정하기 </h2>
+<p>알람을 사용할 때는 시간 설정 부터 시작한다. 표준 시간대(타임존) 기준으로 두가지의 알람이 있지만 공통적으로 {{domxref("MozAlarmsManager.add")}} 메소드를 사용한다.</p>
+<div class="note">
+  <p><strong>Note:</strong>  알람이 특정 어플리케이션에 타겟팅 되지 않았다면 시스템은 알람을 기다리는 모든 어플리케이션에 신호를 전달할 것이다.</p>
+</div>
+<h3 id="표준_시간대를_무시하는_알람">표준 시간대를 무시하는 알람</h3>
+<p>이 알람은 기기의 로컬 시간대에 맞춰 전송된다. 사용자가 시간대를 변경하면, 알람은 새로운 시간대에 맞춰 전송될 것이다. 예를 들면, 파리의 사용자가 CET <span style="line-height: inherit;">(</span><em>Central European Time</em><span style="line-height: inherit;">) 기준으로 오후 12시에 알람을 설정하다가 샌프란시스코로 이동하면 PDT </span><span style="line-height: inherit;">(</span><em>Pacific Daylight Time</em><span style="line-height: inherit;">) 기준의 오후 12시에 알람을 받는다.</span></p>
+<pre class="brush: js">// 알람 일정
+var myDate  = new Date("May 15, 2012 16:20:00");
+
+// 알람이 울릴 때 사용할 임의의 데이터
+
+var data    = {
+  foo: "bar"
+}
+
+// 표준시간대를 무시하도록 "ignoreTimezone" 설정
+var request = navigator.mozAlarms.add(myDate, "ignoreTimezone", data);
+
+request.onsuccess = function () {
+  console.log("The alarm has been scheduled");
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};
+</pre>
+<h3 id="표준_시간대_기준의_알람">표준 시간대 기준의 알람</h3>
+<p>이 알람은 알람 일정을 정한 당시의 표준 시간에 맞춰 알람 신호가 전송된다. 사용자가 시간대를 변경하더라도 표준 시간대에 맞춰 알람이 울릴 것이다. 예를 들면, 파리의 사용자가 CET 기준 오후 12시에 설정하고 샌프란시스코로 이동한다면 PDT 기준 오전 3시에 알람이 울릴 것이다.</p>
+<pre class="brush: js">// 알람 일정
+var myDate  = new Date("May 15, 2012 16:20:00");
+
+// 알람이 울릴 때 사용할 임의의 데이터
+var data    = {
+  foo: "bar"
+}
+
+// 표준 시간대를 반영한 알람을 사용하도록 "honorTimezone" 설정
+var request = navigator.mozAlarms.add(myDate, "honorTimezone", data);
+
+request.onsuccess = function () {
+  console.log("The alarm has been scheduled");
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};
+</pre>
+<h2 id="알람_관리">알람 관리 </h2>
+<p>알람을 한번 생성하면 계속 관리할 수 있다.</p>
+<p>{{domxref("MozAlarmsManager.getAll")}} 메소드는 현재 설정된 모든 알람 리스트를 반환한다. 이 리스트는 {{Anch("mozAlarm")}} 객체의 배열이다.</p>
+<h3 id="mozAlarm">mozAlarm</h3>
+<p>{{page("/en-US/docs/Web/API/MozAlarmsManager.getAll","mozAlarm")}}</p>
+<pre class="brush: js">var request = navigator.mozAlarms.getAll();
+
+request.onsuccess = function () {
+  this.result.forEach(function (alarm) {
+    console.log('Id: ' + alarm.id);
+    console.log('date: ' + alarm.date);
+    console.log('respectTimezone: ' + alarm.respectTimezone);
+    console.log('data: ' + JSON.stringify(alarm.data));
+  });
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};
+</pre>
+<p>{{domxref("MozAlarmsManager.remove")}} : 알람 설정 해제</p>
+<pre class="brush: js">var alarmId;
+
+// 알람 설정 &amp; request 변수에 알람 id 저장
+var request = navigator.mozAlarms.add(new Date("May 15, 2012 16:20:00"), "honorTimezone");
+
+request.onsuccess = function () {
+  alarmId = this.result.id;
+}
+
+// ...
+
+// 알람 해제
+if (alarmId) {
+  navigator.mozAlarms.remove(alarmId);
+}
+</pre>
+<h2 id="알람_다루기">알람 다루기 </h2>
+<p>시스템이 알람 신호를 전송할 때는 모든 어플리케이션에서 받아 쓸 수 있다. 어플리케이션에서 알람을 사용하려면 알람 핸들러의 권한을 추가해야 한다. 이는, 시스템 메시징 API의 두 단계를 거치면 된다.: </p>
+<p>1, <a href="/en-US/docs/Apps/Manifest#messages" title="/en-US/docs/Apps/Manifest#messages">application manifest</a> 의 message property에 <code>alarm property를 추가하고 알람 신호를 받아서 사용할 콜백 함수가 등록된 문서의 URL 경로를 입력한다.</code></p>
+<pre class="brush: js">"messages": [
+  { "alarm": "/index.html" }
+]</pre>
+<p>2. 어플리케이션에 <code>alarm</code> message에 대한 콜백 함수를 추가한다. {{domxref("window.navigator.mozSetMessageHandler","navigator.mozSetMessageHandler")}} 메소드를 사용한다. 이 콜백 함수는 알람 관련 데이터가 포함된 {{Anch("mozAlarm")}} 객체에 접근할 수 있다.</p>
+<pre class="brush: js">navigator.mozSetMessageHandler("alarm", function (mozAlarm) {
+  alert("alarm fired: " + JSON.stringify(mozAlarm.data));
+});
+</pre>
+<p>어플리케이션이 시스템 레벨에서 아직 동작하지 않은 알람의 유무를 파악하고 싶다면 {{domxref("window.navigator.mozHasPendingMessage","navigator.mozHasPendingMessage")}} 메소드의 value를 "<code>alarm"으로 설정하면 된다.</code></p>
+<pre class="brush: js">navigator.mozHasPendingMessage("alarm");
+</pre>
+<h2 id="명세">명세 </h2>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Alarm API')}}</td>
+      <td>{{Spec2('Alarm API')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="브라우저_호환">브라우저 호환</h2>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Feature</th>
+        <th>Chrome</th>
+        <th>Firefox (Gecko)</th>
+        <th>Internet Explorer</th>
+        <th>Opera</th>
+        <th>Safari</th>
+      </tr>
+      <tr>
+        <td>Basic support</td>
+        <td>{{ CompatUnknown()}}</td>
+        <td>{{CompatGeckoDesktop("16")}} {{ property_prefix("moz") }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="compat-mobile">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Feature</th>
+        <th>Android</th>
+        <th>Chrome for Android</th>
+        <th>Firefox Mobile (Gecko)</th>
+        <th>IE Mobile</th>
+        <th>Opera Mobile</th>
+        <th>Safari Mobile</th>
+      </tr>
+      <tr>
+        <td>Basic support</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{CompatGeckoMobile("10")}} {{ property_prefix("moz") }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="관련">관련 </h2>
+<ul>
+  <li>{{domxref("window.navigator.mozAlarms","navigator.mozAlarms")}}</li>
+  <li>{{domxref("MozAlarmsManager")}}</li>
+  <li>{{domxref("window.navigator.mozSetMessageHandler")}}</li>
+</ul>

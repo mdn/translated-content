@@ -1,0 +1,120 @@
+---
+title: Compilare e installare B2G OS
+slug: Archive/B2G_OS/Building_and_installing_Firefox_OS
+tags:
+  - B2G OS
+  - Documentazione compilazione
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Compilazione e installazione</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Panoramica su compilazione ed installazione</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">Sommario del processo di compilazione di B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Prerequisiti per la compilazione</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparare la tua prima compilazione</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building">Compilare B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">Add-on per l"installazione di B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Compilare B2G OS per Flame su Mac OS X</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Scegliere come eseguire Gaia e B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Dispositivi compatibili</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installare B2G OS su dispositivo mobile</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creare e applicare pacchetti di aggiornamento per B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Compilare e installare aggiornamenti via Internet prodotti dalla comunità</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">Foglio di riferimento per le variabili di compilazione di B2G OS</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Portabilità di B2G OS</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS">Panoramica sulla portabilità</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Basi della portabilità</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Portabilità su CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia">Panoramica sullo sviluppo di Gaia</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Eseguire il codice base di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Mulet">Esegui Gaia su desktop usando Mulet</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Comprendere il codice base di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Fare variazioni al codice di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Verificare le variazioni al codice di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Inviare una patch di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Sistema di compilazione primario di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Differenti modi per eseguire Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Riferimento per le opzioni di Make</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Riferimento per gli strumenti di Gaia</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/it/docs/Mozilla/B2G_OS/API">API di B2G OS</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>Poiché B2G OS è attualmente in sviluppo ed in stato di pre-release, il modo migliore per assicurarti di avere installata la versione più aggiornata è compilarla ed installarla da solo. Gli articoli mostrati in questa pagina ti guideranno attraverso compilazione e l'installazione di B2G OS su un emulatore, su un dispositivo compatibile o sull'interfaccia <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Introduction_to_Gaia" title="en-US/docs/Mozilla/Boot_to_Gecko/Introduction_to_Gaia">Gaia</a> del browser Firefox.</p>
+</div>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 class="Documentation" id="Ottenere_e_compilare_B2G_OS">Ottenere e compilare B2G OS</h2>
+
+    <dl>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">Sommario del processo di compilazione di B2G OS</a></dt>
+     <dd>Compilare ed installare B2G OS richiede un consistente impiego di tempo, banda e potenza computazionale. Questa pagina delina gli obiettivi del processo di compilazione ed i relativi passaggi per aiutare l'utente lungo il suo percorso.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Boot_to_Gecko/B2G build prerequisites">Prerequisiti per la compilazione</a></dt>
+     <dd>Di cosa avrai bisogno (e cosa è necessario fare) prima di compilare B2G OS per la prima volta.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build" title="/en-US/docs/Mozilla/Boot_to_Gecko/Preparing for your first B2G build">Preparare la tua prima compilazione</a></dt>
+     <dd>Prima che tu possa compilare B2G OS, sarà necessario clonare il repository e configurare la compilazione. Questo articolo spiega come fare.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Building" title="en-US/docs/Mozilla/Boot_to_Gecko/Building Boot to Gecko">Compilare B2G OS</a></dt>
+     <dd>Come compilare B2G OS.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">Add-on per l'installazione di B2G</a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on"> OS</a></dt>
+     <dd>L'add-on <strong>B2G installer</strong> aiuta a risolvere il problema, di non poco conto, di non poter ridistribuire compilazioni dell'intero sistema operativo, per via dei cd. "blobs" (ovvero i componenti proprietari). Questo articolo illustra il funzionamento dell'add-on e come installarlo.</dd>
+    </dl>
+
+    <h2 id="Ulteriore_materiale_di_riferimento">Ulteriore materiale di riferimento</h2>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Compilare B2G OS per Flame su Mac OS X</a></dt>
+     <dd>Una guida scritta dalla comunità per compilare B2G OS per il dispositivo di riferimento Flame, su Mac OS X.</dd>
+     <dt><a href="/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Dispositivi compatibili</a></dt>
+     <dd>Un elenco ufficiale delle dei dispositivi di sviluppo che supportano B2G OS.</dd>
+     <dt><a href="/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creare e applicare pacchetti di aggiornamento per B2G OS</a></dt>
+     <dd>Questa guida estremamente dettagliata spiega come creare pacchetti di aggiornamento OTA/FOTA, che possano poi essere distribuiti ai dispositivi degli utenti per fornire aggiornamenti software.</dd>
+     <dt><a href="/en-US/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Compilare e installare community builds FOTA</a></dt>
+     <dd>Una guida scritta dalla comunità per creare ed installare pacchetti FOTA.</dd>
+     <dt><a href="/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">Foglio di riferimento per le variabili di compilazione di B2G OS</a></dt>
+     <dd>Un utile riferimento per tutte le variabili di compilazione di B2G, Gaia e Gecko e dei comandi di cui potresti avere bisogno durante le operazioni di compilazione legate a B2G OS.</dd>
+    </dl>
+   </td>
+   <td>
+    <h2 class="Community" id="Installare_B2G_OS_eo_Gaia">Installare B2G OS e/o Gaia</h2>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Choosing_how_to_run_Gaia_or_B2G" title="en-US/docs/Mozilla/Boot_to_Gecko/Choosing how to run Gaia or B2G">Scegliere come eseguire Gaia e B2G OS</a></dt>
+     <dd>Puoi usare Gaia all'interno di B2G, oppure far girare B2G OS su un dispositivo mobile o ancora su un simulatore per desktop. Questa guida ti aiuterà a decidere quale scelta è la migliore per le tue esigenze.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Building_the_B2G_OS_simulator">Compilare il simulatore di B2G OS</a></dt>
+     <dd>Una guida per compilare il simulatore di B2G OS, che permette di eseguire Gaia e le Web apps in un ambiente basato su Gecko simile ai dispositivi odierni, sul tuo computer desktop.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators" title="en-US/docs/Mozilla/Boot_to_Gecko/Using the B2G emulators">Utilizzare degli emulatori di B2G OS</a></dt>
+     <dd>Una guida per compilare ed utilizzare gli emulatori di B2G OS, con spiegazioni su quali usare a seconda della necessità.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device" title="en-US/docs/Mozilla/Boot_to_Gecko/Installing Boot to Gecko on a mobile device">Installare B2G OS su dispositivo mobile</a></dt>
+     <dd>Come installare B2G OS su un vero dispositivo mobile.</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

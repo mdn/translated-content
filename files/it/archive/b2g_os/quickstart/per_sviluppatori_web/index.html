@@ -1,0 +1,52 @@
+---
+title: Sviluppo delle App per Sviluppatori web
+slug: Archive/B2G_OS/Quickstart/per_sviluppatori_web
+translation_of: Archive/B2G_OS/Quickstart/For_Web_developers
+---
+<div class="summary">
+ <p>Se sei uno Sviluppatore web e hai un sito o una applicazione web che vuoi trasformare in una app installabile, ci sono <em>tecnicamente</em> poche cose da fare. Questo articolo spiega i requisiti minimi, insieme alle idee da conoscere sulle web app e quanto sono diverse dai siti web comuni.</p>
+</div>
+<p>I requisiti minimi sono pochi:</p>
+<ol>
+ <li>Creare un <a href="/en-US/docs/Web/Apps/Manifest">app manifest</a>.</li>
+ <li>Distribuire il file app manifest con l'estensione <code>.webapp</code>. Impostare l'header <code>Content-Type</code> in <code>application/x-web-app-manifest+json</code>.</li>
+ <li>Pubblicare l'app, sul proprio sito, nell' app store o su entrambi. Pubblicare in proprio richiede  <a href="/en-US/docs/Web/Apps/JavaScript_API">l'aggiunta di codice al tuo sito, per gestire l'installazione e l'aggiornamento dell'app</a> nel browser degli utilizzatori.</li>
+</ol>
+<h2 id="Funzionalità_facoltative">Funzionalità facoltative</h2>
+<p><em>Filosoficamente</em>, l'idea di una Open Web App installabile è molto di più che aggiungere semplicemente un file manifest al sito.  Le tecnologie degli Standard Web possono essere viste come piattaforme per applicazioni in piena regola che permettono ad un browser di rappresentare le interfacce utente, interpretare il codice e utilizzare i protocolli Web per comunicare con il server.</p>
+<p>Mozilla offre eseguibili "<a href="/en-US/docs/Web/Apps/Architecture#Web_runtime">Web runtime</a>" per varie piattaforme in modo che le applicazioni siano in grado di funzionare nella propria finestra senza il contorno di un browser.</p>
+<p>Per "appificare" un sito Web ci sono alcune aspetti specifici da considerare:</p>
+<ul>
+ <li>La mia app dovrebbe funzionare senza essere collegati al Web?</li>
+ <li>Come usa i dati la mia app? Come occorre memorizzarli?</li>
+ <li>Le performance della mia app possono trarre beneficio dalle funzionalità avanzate come i <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> oppure i <a href="/en-US/docs/WebSockets">WebSockets</a>?</li>
+ <li>E molte altre domande</li>
+</ul>
+<p>Se vuoi avvantaggiarti completamente delle capacità offerte alle app installabili, hai cose da fare in abbondanza, ad esempio:</p>
+<ul>
+ <li>Usa <a href="/en-US/docs/Web_Development/Responsive_Web_design">Web design responsive</a> per apparire meglio su tutte le periferiche.</li>
+ <li>Guadagna denaro con le app.</li>
+ <li>Fornisci un modo per <a href="/en-US/docs/Web/Apps/Identity_integration">identificare gli utenti</a></li>
+ <li><a href="/en-US/docs/Web/Apps/Offline_apps">Abilita il caching offline</a> affinché la app sia usabile quando il dispositivo è scollegato da Internet.</li>
+ <li>Memorizza dati in locale utilizzando <a href="/en-US/docs/IndexedDB">IndexedDB</a> o <a href="/en-US/docs/Web/Guide/DOM/Storage">localStorage</a>.</li>
+ <li><a href="/en-US/docs/Web/Apps/Platform-specific_details">Avvia l'app</a> nativamente (con una icona sul desktop del pc oppure nella schermata iniziale del dispositivo).</li>
+ <li>Usa le API del dispositivo per interagire con l'hardware, ad esempio <a href="/en-US/docs/WebAPI/Using_geolocation">geolocalizzazione</a> e <a href="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">orientamento</a>.</li>
+ <li>Permetti agli utenti di inviarti feedback. Le ricerche di Mozilla sugli utenti sottolineano che loro vogliono dare feedback agli sviluppatori e vogliono che sia un umano a rispondere. Vogliono esprimere suggerimenti ed aiutare a risolvere i problemi. Possono smettere di usare una app se riscontrano problemi che nessuno dà loro una mano a risolvere.</li>
+</ul>
+<h2 id="Tecnologie_utili">Tecnologie utili</h2>
+<p>Ci sono alcune tecnologie web che potrebbero essere utili per scrivere app installabili. Nella lista seguente non c'è nulla ad uso esclusivo delle sole app ma dell'intero Web.</p>
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a></li>
+ <li><a href="/en-US/docs/Web/CSS">CSS</a></li>
+ <li><a href="/en-US/docs/JavaScript">JavaScript</a></li>
+ <li><a href="/en-US/docs/HTML/Canvas">Canvas</a></li>
+ <li><a href="/en-US/docs/AJAX">Ajax</a></li>
+ <li><a href="/en-US/docs/HTML/Using_the_application_cache">Risorse offline in Firefox</a></li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Storage">DOM Storage</a></li>
+ <li><a href="/en-US/docs/IndexedDB">IndexedDB</a></li>
+ <li><a href="/en-US/docs/DragDrop/Drag_and_Drop">Drag and drop</a></li>
+</ul>
+<h2 id="Leggi_anche">Leggi anche</h2>
+<ul>
+ <li><a class="external" href="http://smus.com/mobile-web-app-tech-stack">A mobile web application stack </a></li>
+</ul>

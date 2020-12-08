@@ -1,0 +1,26 @@
+# FROM-URL	TO-URL
+/id/docs/HTML	/id/docs/Web/HTML
+/id/docs/JavaScript	/id/docs/Web/JavaScript
+/id/docs/JavaScript/Getting_Started	/id/docs/Web/JavaScript/Getting_Started
+/id/docs/JavaScript/Panduan	/id/docs/Web/JavaScript/Panduan
+/id/docs/JavaScript/Pengenalan_JS	/id/docs/Web/JavaScript/Getting_Started
+/id/docs/JavaScript/Reference	/id/docs/Web/JavaScript/Reference
+/id/docs/JavaScript/Reference/About	/id/docs/Web/JavaScript/Reference/About
+/id/docs/JavaScript/Reference/Global_Objects	/id/docs/Web/JavaScript/Reference/Global_Objects
+/id/docs/JavaScript/Reference/Global_Objects/Math	/id/docs/Web/JavaScript/Reference/Global_Objects/Math
+/id/docs/JavaScript/Reference/Global_Objects/Math/pow	/id/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
+/id/docs/JavaScript/Reference/Statements	/id/docs/Web/JavaScript/Reference/Statements
+/id/docs/JavaScript/Reference/Statements/block	/id/docs/Web/JavaScript/Reference/Statements/block
+/id/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
+/id/docs/Learn/CSS/Introduction_to_CSS/Box_model	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+/id/docs/MDN/Contribute/Content	/id/docs/MDN/Guidelines
+/id/docs/MDN/Contribute/Content/Layout	/id/docs/MDN/Guidelines/Layout
+/id/docs/MDN/Contribute/Content/Writing_style_guide	/id/docs/MDN/Guidelines/Writing_style_guide
+/id/docs/MDN/Langkah_Awal	/id/docs/MDN/Contribute/Getting_started
+/id/docs/Web/Guide/CSS	/id/docs/Learn/CSS
+/id/docs/Web/Guide/HTML	/id/docs/Learn/HTML
+/id/docs/Web/Guide/HTML/Pengenalan	/id/docs/Learn/HTML/Introduction_to_HTML
+/id/docs/Web/JavaScript/Reference/Methods_Index	/id/docs/Web/JavaScript/Reference
+/id/docs/Web/JavaScript/Reference/Properties_Index	/id/docs/Web/JavaScript/Reference
+/id/docs/Web/WebGL	/id/docs/Web/API/WebGL_API
+/id/docs/en	/en-US/

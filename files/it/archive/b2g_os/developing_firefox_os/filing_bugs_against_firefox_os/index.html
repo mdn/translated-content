@@ -1,0 +1,197 @@
+---
+title: Filing bugs against Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+<div class="tw-swapa">
+<div class="_wYb"> </div>
+</div>
+
+<pre class="tw-data-text vk_txt tw-ta tw-text-small" dir="ltr" id="tw-target-text" style="text-align: left; height: 96px;"><span>Questo articolo fornisce una guida per l'archiviazione di errori (bugs) individuati nel contesto del progetto Firefox OS , che include anche Gaia e B2G .</span></pre>
+</div>
+
+<h2 id="Bugzilla">Bugzilla</h2>
+
+<div class="almost_half_cell" id="gt-res-content">
+<div dir="ltr" style="zoom: 1;">
+<p><span id="result_box" lang="it"><span class="hps">Come nella</span> <span class="hps">maggior parte dei progetti</span> <span class="hps">Mozilla</span><span>,</span> <span class="hps">Bugzilla</span> viene utilizzato <span class="hps">per gestire lo stato di bugs</span> <span class="hps">e</span> <span class="hps">problemi individuati in programmi appartenenti al progetto</span><span class="hps">.</span> <span class="hps">Dopo aver scopeto un </span><span class="hps">bug</span></span><span lang="it"> puoi archiviarlo in <span class="hps">Bugzilla</span>  <span class="hps">-</span> nota che esiste<span class="hps"> un</span> <span class="hps">prodotto specifico</span> <span class="hps">per Firefox</span> <span class="hps">OS, contenente</span><span class="hps"> componenti</span> che trattano <span class="hps">argomenti</span> <span class="hps">che possono essere classificati nel contesto di</span> <span class="hps">Gaia</span><span>,</span> <span class="hps">Gonk</span> <span class="hps">e</span> <span class="hps">Gecko</span><span>.</span> <span class="hps">Si consiglia di utilizzare</span> <span class="hps">questo componente per</span> <span class="hps">archiviare</span> <span class="hps">i bugs</span> individuati in <span class="hps">Firefox</span> <span class="hps">OS</span><span>,</span> <span class="hps">Gaia</span><span>,</span> <span class="hps">etc.</span></span></p>
+</div>
+</div>
+
+<h3 id="Archiviazione_dei_bugs">Archiviazione dei bugs</h3>
+
+<p>Per archiviare un bug, <span id="result_box" lang="it"><span class="hps">è possibile</span> <span class="hps">utilizzare questo modello</span> proposto da <span class="hps">Bugzilla</span> <span class="hps">e seguire le istruzioni riportate qui di seguito nel</span><span class="hps"> compilarlo</span><span class="hps">.</span></span></p>
+
+<h3 id="Campi_obbligatori_e_facoltativi">Campi obbligatori e facoltativi</h3>
+
+<p>Quando si archivia un bug, alcuni campi sono obbligatori:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Campo</strong></th>
+   <th scope="col"><strong>Descrizione</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Componente</td>
+   <td>Scegliete la categoria di appartenenza del bug. <span id="result_box" lang="it"><span class="hps">Se</span> <span class="hps">non avete idea di</span> <span class="hps">quale categoria</span> assegnare, scegliete la categoria<span class="atn hps"> "</span><span>Generale"</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>Sommario</td>
+   <td>Fornite un sintesi della descrizione del bug</td>
+  </tr>
+  <tr>
+   <td>Descrizione</td>
+   <td><span id="result_box" lang="it"><span class="hps">Descrivete</span> <span class="hps">chiaramente la situazione</span><span>.</span> <span class="hps">Un buon</span> <span class="hps">bug dovrebbe</span> <span class="hps">contenere una descrizione,</span><span class="alt-edited hps"> passo per passo, </span><span class="hps">della </span><span class="alt-edited hps">procedura p</span></span><span lang="it"><span class="alt-edited hps">er riprodurre il problema</span> <span class="hps">(Steps To Reproduce -STR)</span><span>,</span> <span class="hps">dei risultati che uno si aspetta</span> <span class="hps">e dei risultati riscontrati</span><span>.</span> <span class="hps">Si prega di indicare</span> <span class="hps">anche la</span> <span class="hps">frequenza di</span> <span class="hps">riproduzione</span> <span class="hps">(cioè</span> <span class="hps">quante volte</span> <span class="hps">il bug</span> <span class="hps">appare</span> <span class="hps">se ripetete</span> <span class="hps">i passi</span> <span class="hps">più e più volte</span><span>)</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>Informazione relativa al Build</td>
+   <td><span id="result_box" lang="it"><span class="hps">Andate a</span> <span class="hps">Impostazioni&gt;</span> <span class="hps">Informazioni sul dispositivo</span><span>&gt;</span> <span class="hps">Ulteriori informazioni</span> <span class="hps">e</span> <span class="hps">menzionate</span> <span class="hps">nel bug </span></span><span lang="it"><span class="hps">le seguenti caratteristiche</span><span>:</span> <span class="hps">versione del sistema operativo</span><span>,</span> <span class="hps">il numero dei build</span><span>,</span> <span class="hps">la Versione</span><span> della </span><span class="hps">Piattaforma</span><span>,</span>  l' i<span class="hps">dentificatore del Build</span><span>,</span> <span class="hps">l' Aggiornamento del canale</span> <span class="hps">e</span> l'informazione del <span class="hps">Git</span> <span class="hps">Commit</span><span>.</span> <span class="atn hps">(</span><span>Se si dispone di</span> <span class="hps">un computer Mac</span> <span class="hps">/</span> <span class="hps">Linux con</span> <span class="hps">adb</span> <span class="hps">e</span> <span class="hps">git</span> <span class="hps">installato, è possibile</span> <span class="hps">eseguire questo script</span> <span class="hps">e</span> <span class="hps">incollare</span> <span class="hps">l'output</span> <span class="hps">dello script</span> <span class="hps">del</span> <span class="hps">bug</span><span>.</span><span>)</span></span></td>
+  </tr>
+  <tr>
+   <td>Immagini delle schermate</td>
+   <td><span id="result_box" lang="it"><span class="hps">Si prega di allegare</span> <span class="hps">una immagine dello schermo</span> <span class="hps">che possa essere utile per</span><span class="hps"> analizzare</span> <span class="hps">il bug</span><span>.</span> <span class="atn hps">(</span><span>Sul dispositivo</span> <span class="hps">Fiamma</span><span>,</span> <span class="hps">tenere premuto il</span> <span class="hps">tasto Power e</span> <span class="hps">Abbassa Volume</span> <span class="hps">simultaneamente per 2 secondi</span> <span class="hps">fino a quando</span> <span class="hps">il telefono</span> <span class="hps">non mostri</span> <span class="hps">una notifica</span> <span class="hps">della avvenuta acquisizione ddell'immagine dello schermo</span><span>.</span> <span class="hps">Succesivamente trasferire</span> <span class="hps">l'immagine acquisita sul</span><span class="hps"> computer</span> <span class="hps">utilizzando un attacco USB</span><span>.</span><span>)</span></span></td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td><span id="result_box" lang="it"><span class="hps">Se il</span> <span class="hps">bug</span> <span class="hps">riguarda</span><span class="hps"> transizioni</span> <span class="hps">dello schermo</span> <span class="hps">che sono</span> <span class="hps">difficili da catturare</span> attraverso l'acquisizione di immagini delle schermate<span class="hps">,</span> <span class="hps">si prega di</span> <span class="hps">girare un video</span><span>.</span> C<span class="hps">aricate </span><span class="hps">il</span> <span class="hps">file del video come allegato</span> <span class="hps">al bug oppure</span><span class="hps"> caricate</span> <span class="hps">il video su YouTube</span> <span class="hps">e</span> poi allegate l'indirizzo del<span class="hps">l'URL del video</span></span><span lang="it"> utilizzando la funzione di <span class="hps">copia-incolla</span> <span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>Registrazioni ADB</td>
+   <td>Se il vostro computer contiene una installazione di ADB, <span id="result_box" lang="it"><span class="hps">per favore collegatelo al</span> <span class="hps">telefono</span> <span class="hps">ed eseguite il comando</span> <span class="hps">|</span> <span class="hps">adb logcat</span> <span class="hps">|</span><span>.</span> <span class="hps">Si prega di</span> <span class="hps">inserire</span> <span class="hps">l'output</span> <span class="hps">di questo comando</span> <span class="hps">in</span> <span class="hps">un file di testo</span> <span class="hps">e quindi allegarlo</span> <span class="hps">al bug</span><span>.</span></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The following fields are optional:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Campo</strong></th>
+   <th scope="col"><strong>Descrizione</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Dipedenze/blocchi</td>
+   <td>Mostare la dipendenza fra i vari bugs.</td>
+  </tr>
+  <tr>
+   <td>Parola chiave</td>
+   <td><span id="result_box" lang="it"><span class="hps">Parole chiave per</span> <span class="hps">Bugzilla.</span> <span class="hps">Gruppi specifici</span> <span class="hps">le useranno</span> <span class="hps">per rintracciare il bug</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>Lavagna</td>
+   <td><span id="result_box" lang="it"><span class="hps">Contiene</span> <span class="alt-edited hps">etichette.</span> <span class="hps">Inserisci</span><span class="alt-edited hps"> etichette utili per rintracciare il bug</span><span>.</span> <span class="hps">Si consiglia di non</span> <span class="hps">rimuovereetichette assegnate da altri </span><span class="hps">senza permesso.</span></span></td>
+  </tr>
+  <tr>
+   <td>Vedi Anche</td>
+   <td>A volte due diversi problemi sono in qualche modo collegati. La loro connessione puo' essere riportata qui</td>
+  </tr>
+  <tr>
+   <td>Bandierine</td>
+   <td><span id="result_box" lang="it"><span class="hps">Bandierine per</span> <span class="hps">il monitoraggio</span> <span class="hps">dello stato</span><span>;</span> <span class="hps">la bandierina</span> <span class="hps">più utilizzata nei</span> <span class="hps">bugs</span> <span class="hps">del sistema operativo</span> <span class="hps">Firefox</span> e' "B<span class="hps">locca</span><span class="atn">-</span><span>B2G"</span><span>.</span> <span class="hps">Se un bug</span> contiene la bandierina <span class="hps">blocco</span><span class="atn">-</span><span>B2G</span><span>, significa che</span> <span class="hps">e' necessario prestare</span> <span class="hps">più attenzione alle specificahe del bug in quanto puo'</span><span class="hps"> </span><span class="hps">bloccare</span> <span class="hps">la distribuzione</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>Sicurezza</td>
+   <td><span id="result_box" lang="it"><span class="hps">Se un bug</span> <span class="hps">è relativo</span> <span class="hps">alla sicurezza</span> <span class="hps">dei dati personali,</span> <span class="hps">la perdita</span> <span class="hps">di guadagno o simili</span> <span class="hps">questioni</span><span>,</span> selezionat <span class="hps">la casella di controllo</span> cosicche<span class="hps"> sarà</span> <span class="hps">visiable</span> <span class="hps">solamente ai dipendenti</span> <span class="hps">interessati</span><span>.</span></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span id="result_box" lang="it"><span class="hps">Per</span> <span class="hps">ulteriori informazioni sui campi</span> <span class="hps">Bugzilla,</span> <span class="hps">è possibile visualizzare la</span> <span class="hps">pagina dei campi</span></span><span lang="it"> <span class="hps">Bugzilla</span> <span class="hps">su</span> <span class="hps">Bugzilla</span><span>.</span></span></p>
+
+<h3 id="Archiviazione_di_bugs_di_localizzazione">Archiviazione di bugs di localizzazione</h3>
+
+<p>Quando uncontrate un stringa non tradotta puo' significare due cose:</p>
+
+<ul>
+ <li>
+  <div id="gt-src-tools">
+  <div id="tts_button"><span id="result_box" lang="it"><span class="hps">Il</span> <span class="hps">localizzatore</span> <span class="hps">non</span> <span class="hps">ha tradotto</span> <span class="hps">la stringa</span><span>.</span> <span class="hps">Non</span> <span class="hps">segnalate un bug</span> <span class="hps">in questo caso!</span></span></div>
+  </div>
+ </li>
+ <li><span id="result_box" lang="it"><span class="hps">Il</span> <span class="hps">localizzatore</span> <span class="hps">non ha potuto</span> <span class="hps">tradurre</span> <span class="hps">la stringa</span> <span class="hps">a causa di</span> <span class="hps">un problema legato alla localizzabilita'</span> <span class="atn hps">(</span><span>l12y</span><span>)</span><span>.</span> <span class="hps">Si prega di</span> <span class="hps">inviare un bug</span> <span class="hps">in</span> <span class="hps">questo</span> <span class="hps">caso</span><span>.</span></span></li>
+</ul>
+
+<h4 id="Come_archiviare_bugs_di_localizzazione_(l12y)">Come archiviare bugs di localizzazione (l12y)</h4>
+
+<ol>
+ <li><span id="result_box" lang="it"><span class="hps">Nel sistema operativo Firefox</span><span>,</span> <span class="hps">andate su</span> <span class="hps">Impostazioni&gt;</span> <span class="hps">Informazioni sul dispositivo</span><span>&gt;</span> <span class="hps">Ulteriori informazioni</span> <span class="hps">e</span> <span class="hps">attivate il</span><span class="hps"> menu</span> <span class="hps">Developer</span></span></li>
+ <li><span id="result_box" lang="it"><span class="hps">Andate a Impostazioni</span><span>&gt;</span> <span class="hps">Developer e</span> <span class="hps">attivate</span> <span class="hps">pseudo</span><span>-localizzazione</span><span>.</span></span></li>
+ <li>Andate<span id="result_box" lang="it"><span class="hps"> a</span> <span class="hps">Impostazioni&gt; Lingua</span> <span class="hps">e</span> <span class="hps">scorrere fino alla fine</span> <span class="hps">per selezionare</span> inglese accentato.</span></li>
+ <li><span id="result_box" lang="it"><span class="hps">Tornate indietro e</span> <span class="hps">guardate</span> <span class="hps">la stringa</span> <span class="hps">non tradotta</span><span>.</span> <span class="hps">Se appare</span> <span class="hps">in</span> <span class="hps">normale</span> <span class="hps">inglese</span> <span class="hps">e non</span> inglese <span class="hps">accentato</span><span>,</span> <span class="hps">si tratta molto probabilmente</span> <span class="hps">di</span> <span class="hps">un</span> poblema legato alla<span class="hps">localizzabilità</span> <span class="atn hps">(</span><span>l12y</span><span>)</span><span>.</span></span></li>
+ <li><span id="result_box" lang="it"><span class="hps">In</span> <span class="hps">Bugzilla</span><span>,</span> <span class="hps">aprite un bug</span> <span class="hps">sotto la sezione del</span> <span class="hps">prodotto</span> <span class="atn hps">'</span><span>Firefox</span> <span class="hps">OS'</span><span>.</span> <span class="hps">Selezionate il componente dove la stringa non tradotta appare. </span><span class="hps">Aggiungete</span> <span class="atn hps">'</span><span>l12y</span><span>'</span> <span class="hps">nel campo Parola chiave</span><span>.</span></span></li>
+ <li><span id="result_box" lang="it"><span class="hps">Si prega di compilare</span> <span class="hps">tutti</span> <span class="hps">gli altri</span> <span class="hps">campi obbligatori</span><span>.</span></span></li>
+</ol>
+
+<h3 id="Tipiche_Parole_chiave">Tipiche Parole chiave</h3>
+
+<p><span lang="it"><span class="hps">La seguente tabella</span> <span class="hps">fornisce</span> <span class="hps">informazioni</span> <span class="hps">sulle tipiche parole chiave</span> che <span class="hps">vedrete</span> <span class="hps">utilizzate</span> <span class="hps">nei</span> <span class="hps">bug</span>s <span class="hps">del sistema operativo</span> <span class="hps">Firefox</span><span>.</span><br>
+ <br>
+ <br>
+ <span class="hps">Si deve sempre</span> <span class="hps">indicare il</span> <span class="hps">build /</span> <span class="hps">l'OS</span> <span class="hps">/</span> la <span class="hps">piattaforma</span> <span class="atn hps">(</span><span>e</span><span>) utilizzati</span> <span class="hps">per verificare</span> <span class="hps">il bug</span> <span class="hps">nei commenti</span> <span class="hps">relativi all' errore riscontrato</span><span>,</span> <span class="hps">prima di modificare</span> <span class="hps">lo <em>stato</em></span> a</span><span lang="it"> <em><span class="hps">ve</span></em></span><span lang="it"><span class="hps"><em>rificato</em>.</span> <span class="hps">Se</span> <span class="hps">il bug è</span> <span class="hps">riportato</span> <span class="hps">su tutte e tre</span> <span class="hps">le piattaforme</span> <span class="hps">e si dispone di</span> <span class="hps">una sola piattaforma</span> <span class="hps">per verificare</span> <span class="hps">la correzione</span><span>,</span> <span class="hps">andate avanti e</span> <span class="hps">annotate le vostre osservazioni nel bug</span><span class="hps">,</span> <span class="hps">ma</span> <span class="hps">non</span> <span class="hps">segnalate</span> <span class="hps">il bug</span> <span class="hps">come</span> <span class="hps"><em>verificato</em>.</span> <span class="hps">Tutte le piattaforme</span> <span class="hps">devono essere controlle</span> <span class="hps">prima di modificare</span> <span class="hps">lo</span> <em><span class="hps">Stato</span></em> <span class="hps">a <em>verificato</em>.</span><br>
+ <br>
+ <span class="hps">Infine, se</span> <span class="hps">altri bug</span> <span class="hps">sono stati contrassegnati come</span> <span class="hps">un duplicato</span> <span class="hps">del bug</span> <span class="hps">che state</span> <span class="hps">verificando</span><span>,</span> <span class="hps">assicuratevi di controllare</span> <span class="hps">e</span> annotare pure <span class="hps">quelli</span><span class="hps">.</span> <span class="hps">Spesso i programmatori</span> <span class="hps">indicano bug correlati, ma non identici, come duplicati </span> <span class="hps">e questi possono essere</span> <span class="hps">trascurati</span> <span class="hps">se non appaiono selezionati</span><span>.</span></span></p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Parola Chiave</strong></th>
+   <th scope="col"><strong>Descrizione</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td><span id="result_box" lang="it"><span class="hps">Indica che</span> <span class="hps">il bug</span> <span class="hps">è un bug</span> <span class="hps">di monitoraggio</span> <span class="hps">dello stato</span><span>.</span> <span class="hps">Mozilla usa</span> <span class="hps">questa etichetta per</span> controllare lo stato di vari  <span class="hps">bugs</span> <span class="hps">o</span> <span class="hps">delle implementazioni</span> <span class="hps">delle storie degli utenti</span><span>.</span> <span class="hps">Una volta</span> <span class="hps">segnalato</span> <span class="hps">in questo modo,</span> <span class="hps">i programmatori non</span> <span class="hps">dovrebbero</span> <span class="hps">mettere delle pezze sopra a</span> <span class="hps">questi bugs</span><span>.</span> <span class="hps">Si ricorda che</span> <span class="hps">i responsabili di progetto</span> <span class="hps">e il personale</span> <span class="hps">che si occupa della qualita'</span> <span class="hps">usano</span> <span class="hps">meta</span> <span class="hps">bugs</span> <span class="alt-edited hps">per sequire lo stato delle varie applicazioni</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td><span id="result_box" lang="it"><span class="hps">Utilizzare questa parola chiave</span> <span class="hps">per i bug</span> <span class="hps">che stanno bloccando</span><span class="hps"> test di verifica</span> <span class="atn hps">(</span><span>manuali o</span> <span class="hps">automatizzati</span> <span class="hps">di</span> <span class="hps">un aspetto specifico</span><span class="hps">)</span> <span class="hps">e che devono essere</span> <span class="hps">risolti prima della scadenza relativa alla pubblicazione della prossima versione </span><span class="hps">Beta</span> <span class="hps">o RC</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td><span id="result_box" lang="it"><span class="hps">Utilizzare</span> <span class="hps">questa parola chiave</span> <span class="hps">per i bug</span> <span class="hps">che</span> <span class="hps">hanno bisogno di più</span> <span class="hps">informazioni</span><span>,</span> <span class="hps">che richiedono di essere riprodotti o verificati di nuovo</span><span>,</span> <span class="hps">o che sono</span> <span class="hps">duplicati</span> <span class="atn hps">(</span><span>ma</span> <span class="hps">non si riesce a trovare</span> <span class="hps">il bug</span> <span class="hps">originale</span> che e' stato duplicato<span>)</span><span>.</span> Sulla lavagna viene riportato l' a<span class="hps">vanzamento delle verifiche di qualita'</span> <span class="hps">obbligatorie</span><span>;</span> <span class="hps">questa parola chiave deve essere rimossa</span> <span class="hps">quando le verifiche di qualita' richieste sono state completate</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>
+    <p><span id="result_box" lang="it"><span class="hps">Questa parola chiave</span> <span class="hps">significa che il</span> <span class="hps">problema è stato risolto</span><span>,</span> <span class="hps">ma</span> <span class="hps">poi</span> <span class="hps">è ritornato</span> <span class="atn hps">(</span><span>regredito</span><span>)</span> <span class="hps">e</span> <span class="hps">il bug</span> <span class="hps">in questione è un</span> <span class="hps">nuovo bug</span><span>, archiviato</span> <span class="hps">per registrare la</span> <span class="hps">regressione.</span> </span><span lang="it"><span class="hps">Può anche</span> riferirsi<span class="hps"> a</span> <span class="hps">problemi al di fuori</span> <span class="hps">quelli identificati </span><span class="hps">nella registrazione iniziale del bug o riscontrati n</span><span class="hps">ei test</span> <span class="hps">di fumo e </span><span class="hps">che sono stati</span> individuti<span class="hps"> nei build attuali</span> <span class="hps">e</span> <span class="hps">che</span> <span class="hps">funzionavano</span><span class="hps"> in</span> <span class="hps">build precedenti</span><span>.</span> <span class="hps">Il monitoraggio di tali</span> <span class="hps">errori</span> <span class="hps">aiuta ad</span> <span class="hps">identificare </span><span class="hps">aree di fragilita'</span><span> e </span><span class="hps">soggette a</span> <span class="hps">rottura. Tali errori sono utili per la identificazione di nuovi test da aagiungere ai test di verifica che appaionno nelle liste dei pre-Test </span>e dei test di fumo.</span></p>
+   </td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>
+    <p><span lang="it"><span class="hps">Indica che</span> <span class="hps">il bug è</span> <span class="hps">una regressione</span><span class="hps"> e che sarebbe importante che qualcuno</span> <span class="hps">identificasse il momento in cui </span><span class="hps">è accaduto e il relativo specifico</span><span class="hps"> controllo</span><span>.</span></span></p>
+   </td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td><span id="result_box" lang="it"><span class="hps">Mette in evidenza</span> <span class="hps">un bug</span> <span class="hps">che potrebbe</span> migliorare<span class="hps"> se</span><span class="hps"> qualcuno</span> identificasse <span class="hps">la procedura per</span> <span class="hps">riprodurlo</span><span>.</span></span></td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td><span id="result_box" lang="it"><span class="hps">Significa che</span> <span class="hps">questo bug</span> <span class="hps">è pronto per essere verificato</span> <span class="hps">con</span> <span class="hps">l'ultima build</span> <span class="hps">FX</span> <span class="hps">OS</span> <span class="hps">da</span> <span class="hps">una persona diversa dal</span> <span class="hps">contatto</span> di verifica qualita' <span class="hps">indicato nel bug</span><span>.</span> <span class="hps">Il bug</span> <span class="hps">contiene</span> <span class="hps">specifici</span> <span class="hps">dettagli di configurazione</span> <span class="hps">della macchina</span>da utilizzarsi<span class="hps"> per</span> <span class="hps">verificare</span> <span class="hps">la correzione</span><span>.</span> <span class="hps">Si dovrebbe cercare di</span> <span class="hps">riprodurre l'errore</span><span>,</span> <span class="hps">e</span><span>,</span> <span class="hps">se d'accordo</span> <span class="hps">che la stato</span> <em><span class="hps">Fixed</span></em> <span class="hps">è</span> <span class="hps">corretto</span><span>,</span> <span class="hps">cambiare</span> <span class="hps">lo stato</span> a<em> </em><span class="hps"><em>verificato</em>.</span></span><br>
+     </td>
+  </tr>
+  <tr>
+   <td>crash</td>
+   <td>Aggiungete questa parola chiave se si incontra un rottura del programma in FX OS.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Nota</strong>: <span id="result_box" lang="it"><span class="hps">È possibile</span> <span class="hps">fare riferimento alle</span> "G<span class="hps">uida</span> <span class="hps">di come scrivere un</span> <span class="hps">Bug</span><span>".</span> <span class="hps">La pagina WIKI di</span> <span class="hps">Mozilla</span> <span class="hps">B2G</span> <span class="hps">QA</span> <span class="hps">ha anche alcune</span> <span class="hps">risorse utili</span> <span class="hps">sulla gestione dei</span> <span class="hps">bug</span> <span class="hps">del sistema operativo</span> <span class="hps">di Firefox</span><span>;</span> <span class="hps">le pagine</span> <span class="hps">più utili sono</span> <span class="hps">Uso di Bugzilla</span> <span class="hps"> e</span> <span class="hps">Incoming</span> <span class="hps">triage</span> <span class="hps">bug</span> <span class="hps">per Firefox</span> <span class="hps">OS</span><span>.</span></span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: For more information on handling bugs during Gaia development, read <a href="/en-US/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a>.</p>
+</div>
+
+<p> </p>

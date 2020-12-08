@@ -1,0 +1,17 @@
+---
+title: Using components
+slug: XPConnect/Using_components
+translation_of: Mozilla/Tech/XPCOM/Language_bindings/XPConnect/Using_components
+---
+<p><a href="/en/XPConnect" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/XPConnect">XPConnect</a>은 모질라와 <a href="/en/XPConnect/xpcshell" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/XPConnect/xpcshell">xpcshell</a>에서 <a href="/en/XPCOM" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/XPCOM">XPCOM</a> 콤포넌트에 투명하게 접근할 수 있도록 해줍니다.</p>
+<p>일반적으로 스크립트는 다음과 같이 시작합니다 :</p>
+<pre>var Cc = <a style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/Components.classes">Components.classes</a>;
+var Ci = <a style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/Components.interfaces">Components.interfaces</a>;
+</pre>
+<p>콤포넌트에 대한 연결을 가지고 있으려면, 다음과 같이 합니다 :</p>
+<pre>var rc = Cc["@mozilla.org/registry;1"]; var rs = rc.getService(Ci.nsIRegistry);</pre>
+<hr>
+<p>See also :</p>
+<ul>
+ <li><a href="/en/XPConnect/xpcshell" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/XPConnect/xpcshell">xpcshell</a> -- 자바스크립트를 위한 커맨드라인 환경</li>
+</ul>

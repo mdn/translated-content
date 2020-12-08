@@ -1,0 +1,51 @@
+---
+title: 'SyntaxError: return not in function'
+slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
+translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="메시지">메시지</h2>
+
+<pre class="syntaxbox">SyntaxError: return not in function
+SyntaxError: yield not in function
+</pre>
+
+<h2 id="에러_타입">에러 타입</h2>
+
+<p>{{jsxref("SyntaxError")}}.</p>
+
+<h2 id="뭐가_잘못된_걸까요">뭐가 잘못된 걸까요?</h2>
+
+<p><code><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 또는 <code><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 문장이 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98">function</a> 밖에서 호출되었기 때문입니다. 혹시 어딘가에 중괄호를 빠트리신 건 아닌가요? <code>return</code> 과 <code>yield</code> function 내에 있어야 합니다, 왜냐하면 이것들은 function의 실행 종료 (또는 일시정지 및 재개)를 의미하고 function 호출자에게 특정 값을 반환하기 위해 사용되기 때문입니다.</p>
+
+<h2 id="예제">예제</h2>
+
+<pre class="brush: js example-bad">var cheer = function(score) {
+  if (score === 147)
+    return 'Maximum!';
+  };
+  if (score &gt; 100) {
+    return 'Century!';
+  }
+}
+
+// SyntaxError: return not in function</pre>
+
+<p>처음 볼 때는 중괄호가 제대로 있는 것처럼 보인다, 하지만 이 코드 조각에는 if 문장 다음에 중괄호가 하나 빠져 있다. 다음처럼 고쳐야 한다:</p>
+
+<pre class="brush: js example-good">var cheer = function(score) {
+  if (score === 147) {
+    return 'Maximum!';
+  }
+  if (score &gt; 100) {
+    return 'Century!';
+  }
+};</pre>
+
+<h2 id="또_다른_내용">또 다른 내용</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code></li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code></li>
+</ul>

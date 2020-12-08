@@ -1,0 +1,187 @@
+---
+title: Promise.race()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Promise
+  - Reference
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
+---
+<div>{{JSRef}}</div>
+
+<p><code><strong>Promise.race()</strong></code> 메소드는 Promise 객체를 반환합니다. 이 프로미스 객체는 iterable 안에 있는 프로미스 중에 가장 먼저 완료된 것의 결과값으로 그대로 이행하거나 거부합니다.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/promise-race.html")}}</div>
+
+<p class="hidden">해당 예제의 소스 코드는 GitHub 리포지토리에 저장되어 있습니다. 인터랙티브 데모 프로젝트에 기여하고 싶다면 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 를 클론하고 pull request를 보내 주세요.</p>
+
+<h2 id="구문">구문</h2>
+
+<pre class="syntaxbox">Promise.race(<em>iterable</em>);</pre>
+
+<h3 id="매개변수">매개변수</h3>
+
+<dl>
+ <dt><code>iterable</code></dt>
+ <dd>{{jsxref("Array")}}와 같은 iterable 객체. <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols">iterable</a>을 참고하세요.</dd>
+</dl>
+
+<h3 id="반환값">반환값</h3>
+
+<p>주어진 iterable에서 처음으로 이행하거나 거부한 프로미스의 값을 <strong>비동기적으로</strong> 전달받는 <strong>대기 중</strong>인 {{jsxref("Promise")}}.</p>
+
+<h2 id="설명">설명</h2>
+
+<p><code>race</code> 함수는 인자로 주어진 iterable의 프로미스 중 가장 먼저 완료(settle)되는 것과 같은 방식으로 완료(이행/거부)되고, 같은 결과값을 전달하는 <code>Promise</code>를 반환합니다.</p>
+
+<p>전달받은 iterable이 비어 있을 경우, 반환한 프로미스는 영원히 대기 상태가 됩니다.</p>
+
+<p>Iterable에 프로미스가 아닌 값이나 이미 완료된 프로미스가 포함되어 있을 경우, <code>Promise.race</code>는 전달받은 iterable에서 처음으로 등장하는 이러한 값을 결과값으로 이행합니다.</p>
+
+<h2 id="예제">예제</h2>
+
+<h3 id="Promise.race의_비동기성"><font face="consolas, Liberation Mono, courier, monospace"><code>Promise.race</code>의 비동기성</font></h3>
+
+<p>다음 예제에서 <code>Promise.race</code>의 비동기성을 확인할 수 있습니다.</p>
+
+<pre class="brush: js">// Promise.race를 최대한 빨리 완료시키기 위해
+// 이미 이행된 프로미스로 배열을 만들어 인자로 전달
+var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+
+var p = Promise.race(resolvedPromisesArray);
+// 실행 즉시 p의 값을 기록
+console.log(p);
+
+// 호출 스택을 비운 다음 실행하기 위해 setTimeout을 사용
+setTimeout(function(){
+    console.log('the stack is now empty');
+    console.log(p);
+});
+
+// 로그 출력 결과 (순서대로):
+// Promise { &lt;state&gt;: "pending" }
+// the stack is now empty
+// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 33 }</pre>
+
+<p>비어 있는 iterable을 전달하면 반환한 프로미스는 영원히 대기 상태가 됩니다.</p>
+
+<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+console.log(foreverPendingPromise);
+setTimeout(function(){
+    console.log('the stack is now empty');
+    console.log(foreverPendingPromise);
+});
+
+// 로그 출력 결과 (순서대로):
+// Promise { &lt;state&gt;: "pending" }
+// the stack is now empty
+// Promise { &lt;state&gt;: "pending" }
+</pre>
+
+<p>Iterable에 프로미스가 아닌 값이나 이미 완료된 프로미스가 포함되어 있을 경우, <code>Promise.race</code>는 전달받은 iterable에서 처음으로 등장하는 이러한 값을 결과값으로 이행합니다.</p>
+
+<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+var alreadyFulfilledProm = Promise.resolve(666);
+
+var arr = [foreverPendingPromise, alreadyFulfilledProm, "프로미스 아님"];
+var arr2 = [foreverPendingPromise, "프로미스 아님", Promise.resolve(666)];
+var p = Promise.race(arr);
+var p2 = Promise.race(arr2);
+
+console.log(p);
+console.log(p2);
+setTimeout(function(){
+    console.log('the stack is now empty');
+    console.log(p);
+    console.log(p2);
+});
+
+// 로그 출력 결과 (순서대로):
+// Promise { &lt;state&gt;: "pending" }
+// Promise { &lt;state&gt;: "pending" }
+// the stack is now empty
+// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 666 }
+// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "프로미스 아님" }
+</pre>
+
+<h3 id="setTimeout과_함께_Promise.race_사용_예"><code>setTimeout</code>과 함께 <code>Promise.race</code> 사용 예</h3>
+
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> p1 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">resolve<span class="punctuation token">,</span> reject</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="function token">resolve</span><span class="punctuation token">(</span><span class="string token">'하나'</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">500</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> p2 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">resolve<span class="punctuation token">,</span> reject</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="function token">resolve</span><span class="punctuation token">(</span><span class="string token">'둘'</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">100</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+Promise<span class="punctuation token">.</span><span class="function token">race</span><span class="punctuation token">(</span><span class="punctuation token">[</span>p1<span class="punctuation token">,</span> p2<span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">value</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "둘"</span>
+  <span class="comment token">// 둘 다 이행하지만 p2가 더 빠르므로</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> p3 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">resolve<span class="punctuation token">,</span> reject</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="function token">resolve</span><span class="punctuation token">(</span><span class="string token">'셋'</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">100</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> p4 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">resolve<span class="punctuation token">,</span> reject</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="function token">reject</span><span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'넷'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">500</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+Promise<span class="punctuation token">.</span><span class="function token">race</span><span class="punctuation token">(</span><span class="punctuation token">[</span>p3<span class="punctuation token">,</span> p4<span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">value</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "셋"</span>
+  <span class="comment token">// p3이 더 빠르므로 이행함</span>
+<span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">reason</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="comment token">// 실행되지 않음</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> p5 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">resolve<span class="punctuation token">,</span> reject</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="function token">resolve</span><span class="punctuation token">(</span><span class="string token">'다섯'</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">500</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> p6 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">resolve<span class="punctuation token">,</span> reject</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="function token">reject</span><span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'여섯'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">100</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+Promise<span class="punctuation token">.</span><span class="function token">race</span><span class="punctuation token">(</span><span class="punctuation token">[</span>p5<span class="punctuation token">,</span> p6<span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">value</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="comment token">// 실행되지 않음</span>
+<span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">error</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>error<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "여섯"</span>
+  <span class="comment token">// p6이 더 빠르므로 거부함</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<h2 id="명세">명세</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">명세</th>
+   <th scope="col">상태</th>
+   <th scope="col">설명</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-promise.race', 'Promise.race')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>ECMA 표준에서 초기 정의.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Promise.race")}}</p>
+
+<h2 id="같이_보기">같이 보기</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+ <li>{{jsxref("Promise.all()")}}</li>
+</ul>

@@ -1,0 +1,28 @@
+---
+title: MSX Emulator (jsMSX)
+slug: MSX_Emulator_(jsMSX)
+translation_of: Archive/Web/MSX_Emulator_(jsMSX)
+---
+<p> </p>
+<h3 id="What_is_it.3F" name="What_is_it.3F">간략한 소개</h3>
+<p><strong>jsMSX</strong> 는 100% <a href="/en/JavaScript" style="line-height: 1.5;" title="en/JavaScript">JavaScript</a>로만 구현한 <span style="line-height: 1.5;">첫 </span><a class="external" href="http://en.wikipedia.org/wiki/MSX" style="line-height: 1.5;">MSX</a><span style="line-height: 1.5;"> 에뮬레이터입니다. </span></p>
+<p>MSX 팬이라면 잘 알고 계시는 <a class="external" href="http://en.wikipedia.org/wiki/Z80">Z80 CPU</a>, <a class="external" href="http://en.wikipedia.org/wiki/TMS9918">TMS9918 Video Display Processor (VDP)</a>, PPI, RAM slots, 그리고 Megaram 등을 에뮬레이션합니다. MSX1.0 기반으로 개발된 다양한 프로그램이나 게임을 실행할 수 있습니다.</p>
+<p>JavaScript는 웹브라우저 상에서 가장 활발히 사용하는 스크립트 언어이지만 C언어나 Java언어에 비해서는 성능이 많이 떨어집니다. 따라서, jSMSX가 초당 5~60번의 인터럽트를 처리하려면 상당히 빠른 컴퓨터가 필요합니다. </p>
+<h3 id="Why.3F" name="Why.3F">구현 이유?</h3>
+<p>개발 동기는  <a href="/en/Drawing_Graphics_with_Canvas" title="en/Drawing_Graphics_with_Canvas">&lt;canvas&gt; tag</a> 의 기능을 많은 사람들에게 알리는데 적당하겠다고 생각했고 <a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> 브라우저가 이런 기능을 잘  지원하였습니다.</p>
+<p>아시다시피 javascript의 성능이 그리 좋지 않아 많은 해결해야할 도전 과제들이 있습니다. jsMSX는 javascript의 성능을 평가하고 이를 개선하는데 비교 자료로 사용될 수 있습니다.</p>
+<p>jsMSX는 웹 로직과 MSX 프로그램을 긴밀하게 연결하는데 사용할 수 있을 것입니다.</p>
+<h3 id="How_to_help" name="How_to_help">도울 수 있는 방법</h3>
+<p>성능 향상이 필요한 많은 일들이 있고, MSX 2.0, MSX 2.0+ 그리고 TurboR 기능들도 여전히 구현이 필요한 부분으로 남아있습니다. 버젼 1.0은 MSX1.0에 적합하도록 최적화된 뒤에 릴리즈될 예정입니다. 버젼 2.0, 3.0 그리고 4.0도 각각 MSX 2.0, 2.0+ 그리고 TurboR에 각각 대응되어 릴리즈할 생각입니다.</p>
+<p>zip파을을 풀 수 있는 JavaScript 펑션이 압축된 ROM을 읽고 풀어내는데 도움이 될 것입니다. 이러한 다양한 일에 참여를 원한다면,다음을 방문해주세요. <a class="external" href="http://sourceforge.net/projects/jsmsx">please have a look at the project</a>, <a class="external" href="http://sourceforge.net/forum/?group_id=175343">please drop a line to the project forum</a>.</p>
+<h3 id="External_Links" name="External_Links">링크</h3>
+<ul>
+ <li><a class="external" href="http://jsmsxdemo.googlepages.com/jsmsx.html">View the online demo (requires Firefox 2+)</a></li>
+ <li><a class="external" href="http://jsmsx.sourceforge.net">jsMSX Project</a></li>
+</ul>
+<h3 id="See_Also" name="See_Also">참고</h3>
+<ul>
+ <li><a href="/en/Drawing_Graphics_with_Canvas" title="en/Drawing_Graphics_with_Canvas">Drawing Graphics with Canvas</a></li>
+ <li><a href="/en/Canvas_tutorial" title="en/Canvas_tutorial">Canvas tutorial</a></li>
+ <li><a class="external" href="http://www.kingsquare.nl/jsc64" title="http://www.kingsquare.nl/jsc64">jsC64 The 100% JavaScript / Canvas Commodore 64 emulator</a></li>
+</ul>

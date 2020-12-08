@@ -1,0 +1,204 @@
+---
+title: Headless mode
+slug: Mozilla/Firefox/Headless_mode
+tags:
+  - QA
+  - node.js
+  - 모질라
+  - 자동화
+  - 테스트
+  - 테스팅
+  - 헤드리스
+  - 헤드리스 모드
+translation_of: Mozilla/Firefox/Headless_mode
+---
+<p class="summary">Headless mode는 Firefox를 실행시키기 위한 유용한 방법입니다, 즉 UI컴포넌트가 보이지 않더라도 Firefox는 정상적으로 움직인다는 것입니다. 웹서핑하기에는 불편할 지라도 테스트를 자동화하기에는 매우 유용합니다. 이 글은 Headless Firefox 실행을 위해 알아야할 모든 것을 제공합니다.</p>
+
+<h2 id="headless_mode를_사용하기">headless mode를 사용하기</h2>
+
+<p><code>-headless</code> flag를 붙이는 것만으로 코맨드라인에서 headless mode를 실행할 수 있습니다.</p>
+
+<pre class="brush: bash">/path/to/firefox -headless</pre>
+
+<p>지금은 심플하게 되어있습니다만 앞으로 옵션을 추가할 예정입니다. </p>
+
+<p>하나의 예를 들자면, headless Firefox를 이용해서 간단하게 스크린샷을 찍을 수 있는 <code>-screenshot</code> 옵션을 작업하고 있습니다.  현재 진행사항은 여기서 {{bug(1378010)}} 볼 수 있습니다.</p>
+
+<h3 id="Browser_support">Browser support</h3>
+
+<p>Headless Firefox는 리눅스에서는 Firefox55이상, 윈도우즈와 맥에서는 Firefox56이상의 버전에서 지원하고 있습니다.</p>
+
+<h2 id="headless_mode를_이용한_테스트_자동화">headless mode를 이용한 테스트 자동화</h2>
+
+<p>headless Firefox를 이용하는 가장 유용한 방법은 자동화된 테스트와 함께 이용하는 것입니다. 즉,테스트의 과정을 더욱 더 효율적으로 만들어 낼 수 있다는 것입니다. </p>
+
+<h3 id="Selenium_in_Node.js">Selenium in Node.js</h3>
+
+<p>여기서는 <a href="https://nodejs.org/">Node.js</a> 와 <code><a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a></code> 패키지를 이용해서 <a href="http://www.seleniumhq.org/">Selenium</a>테스트를 만들어 볼 것입니다. 이 가이드는 Selenium, Webdriver 그리고 Node에 대한 기본적인 지식과 테스팅 환경 설정이 완료되어 있다는 가정하에 쓰여져 있습니다. 그렇지 않다면 <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#Setting_up_Selenium_in_Node">Setting up Selenium in Node</a> 를 먼저 보시고 난 후에 본 가이드를 이용하실 것을 권장합니다.</p>
+
+<p>먼저 Node와 <code>selenium-webdriver</code>패키지가 설치되어 있는지 확인합니다. 그리고 <code>selenium-test.js</code>라는 파일을 만들어서 불러옵니다. 그런 후 아래의 내용을 단계별로 진행합니다.</p>
+
+<div class="note">
+<p><strong>Note</strong>: 다른 방법으로는 <a href="https://github.com/mdn/headless-examples">headless-examples repo</a>;가 이용 가능합니다.<br>
+ <code>npm install</code>을 이용하는 것만으로 필요한 라이브러리를 설치해 포함시킬수 있습니다.</p>
+</div>
+
+<ol>
+ <li>
+  <p><code>selenium-webdriver</code> module과 <code>firefox</code> submodule을 불러오는 로직을 추가합니다.</p>
+
+  <pre class="brush: js">var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
+
+var firefox = require('selenium-webdriver/firefox');</pre>
+ </li>
+ <li>
+  <p>다음으로, Firefox Nightly를 설정한 <code>binary</code> objecet를 작성합니다. 그리고 argument를 <code>-headless</code>로 해서 추가하면 headless mode를 실행시키기 위한 준비가 완료됩니다. </p>
+
+  <pre class="brush: js">var binary = new firefox.Binary(firefox.Channel.NIGHTLY);
+binary.addArguments("-headless");</pre>
+ </li>
+ <li>
+  <p>Firefox용으로 웹드라이버 인스탄스를 작성합니다. 그리고 <code>setFirefoxOptions()</code> 를 이용해서 작성해둔 바이너리를 설정합니다. ( 이 작업은 리눅스와 윈도우즈와 맥에서 headless mode가 릴리즈 되면 불필요합니다. 하지만 Nightly-specific feature에서 테스트하기를 원한다면 유용합니다 )</p>
+
+  <pre class="brush: js">var driver = new webdriver.Builder()
+    .forBrowser('firefox')
+    .setFirefoxOptions(new firefox.Options().setBinary(binary))
+    .build();</pre>
+ </li>
+ <li>
+  <p>구글 검색페이지를 이용하는 간단한 테스트를 수행하는 코드를 추가합니다.</p>
+
+  <pre class="brush: js">driver.get('https://www.google.com');
+driver.findElement(By.name('q')).sendKeys('webdriver');
+
+driver.sleep(1000).then(function() {
+  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+});
+
+driver.findElement(By.name('btnK')).click();
+
+driver.sleep(2000).then(function() {
+  driver.getTitle().then(function(title) {
+    if(title === 'webdriver - Google Search') {
+      console.log('Test passed');
+    } else {
+      console.log('Test failed');
+    }
+  });
+});
+
+driver.quit();</pre>
+ </li>
+ <li>
+  <p>마지막으로 아래의 명령어와 함께 테스트를 실행해주세요.</p>
+
+  <pre class="brush: bash">node selenium-test</pre>
+ </li>
+</ol>
+
+<p>몇 초 후 콘솔에서 "Test passed"를 보게될 겁니다.  이게 다입니다! </p>
+
+<p>headless mode를 이용한 Node.js Selenium tests에 관한 유용한 팁이나 트릭은 이 글 (<a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">Headless Firefox in Node.js with selenium-webdriver</a> by Myk Melez) 을 참고해주세요.</p>
+
+<h3 id="Selenium_in_Java">Selenium in Java</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Thanks a lot to nicholasdipiazza for writing these instructions!</p>
+</div>
+
+<p> Gradle projects를 지원하는 IDE를 사용하고 있고 <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#Setting_up_Selenium_in_Node">Setting up Selenium in Node</a> 가이드에 설명되어진대로 Geckodriver가 설치되어져 있다는 가정하에 쓰여져 있습니다.</p>
+
+<ol>
+ <li>
+  <p><a href="https://github.com/mdn/headless-examples/blob/master/headlessfirefox-gradle.zip">headlessfirefox-gradle.zip</a> 를 다운로드합니다. (<a href="https://github.com/mdn/headless-examples/tree/master/headlessfirefox-gradle">see the source here</a>), 압축을 풉니다, 그리고 headlessfirefox폴더를 IED에 gradle project로 Import합니다.</p>
+ </li>
+ <li>
+  <p><code>build.gradle파일에 </code>selenium을 설정합니다. 필요에 따라 다른 버전을 이용하셔도 상관없습니다. 이번 글에서는 3.5.3을 이용합니다.<code> </code></p>
+
+  <pre class="brush: java">group 'com.mozilla'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   compile('org.seleniumhq.selenium:selenium-api:3.5.3')
+   compile('org.seleniumhq.selenium:selenium-remote-driver:3.5.3')
+   compile('org.seleniumhq.selenium:selenium-server:3.5.3')
+
+   testCompile group: 'junit', name: 'junit', version: '4.12'
+}</pre>
+ </li>
+ <li>
+  <p>geckodriver를 설치한 경로와 같은 곳에 있는 HeadlessFirefoxSeleniumExample.java 파일에서 <code>webdriver.gecko.driver</code> property를 수정합니다. (see line 15 below).</p>
+
+  <pre class="brush: java">package com.mozilla.example;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.util.concurrent.TimeUnit;
+
+public class HeadlessFirefoxSeleniumExample {
+ public static void main(String [] args) {
+   FirefoxBinary firefoxBinary = new FirefoxBinary();
+   firefoxBinary.addCommandLineOptions("--headless");
+   System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
+   FirefoxOptions firefoxOptions = new FirefoxOptions();
+   firefoxOptions.setBinary(firefoxBinary);
+   FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
+   try {
+     driver.get("http://www.google.com");
+     driver.manage().timeouts().implicitlyWait(4,
+         TimeUnit.SECONDS);
+     WebElement queryBox = driver.findElement(By.name("q"));
+     queryBox.sendKeys("headless firefox");
+     WebElement searchBtn = driver.findElement(By.name("btnK"));
+     searchBtn.click();
+     WebElement iresDiv = driver.findElement(By.id("ires"));
+     iresDiv.findElements(By.tagName("a")).get(0).click();
+     System.out.println(driver.getPageSource());
+   } finally {
+     driver.quit();
+   }
+ }
+}</pre>
+ </li>
+ <li>
+  <p>자바 클래스를 실행시킵니다. 그러면 컨솔 또는 터미널에 출력된 HTML컨텐츠를 확인할 수 있습니다.</p>
+ </li>
+</ol>
+
+<h3 id="(headless_Firefox를_지원하는)_다른_테스팅_솔루션">(headless Firefox를 지원하는) 다른 테스팅 솔루션</h3>
+
+<p>Slimerjs는 리눅스에서 Firefox를 지원합니다. 윈도우즈와 맥은 지원 예정입니다. 상세한 내용은 이 글 ( <a href="https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/">Headless SlimerJS with Firefox</a> by Brendan Dahl) 을 참고해주세요.</p>
+
+<p>그 외에 환경변수가 설정가능하다면 거의 모든 일반적인 테스팅 어플리케이션에서 쓰여진 자동화된 테스트에서 headless Firefox를 이용할 수 있습니다. </p>
+
+<h2 id="트러블슈팅과_상세_지원에_관해">트러블슈팅과 상세 지원에 관해</h2>
+
+<p>headless mode를 이용중에 문제가 발생했을 경우에는 걱정하시지 말고 이 섹션을 찾아주세요.  이 섹션은 질문이 더 생기거나 답을 찾았을 경우에 내용을 추가 할 수 있도록 설계되어있습니다.</p>
+
+<ul>
+ <li>현재 리눅스에서 사용하고 있는 시스템 안에서 headless mode가 쓰이지 않더라도  특정 라이브러리를 필요로 합니다. — 왜냐하면 Firefox에서 사용하고 있기 때문입니다. 상세한 내용과 진행상황은 여기를 {{bug(1372998)}} 참고해주세요.</li>
+</ul>
+
+<p>엔지니어에게 질문이 있다면 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>의 <code>#headless 채널이 최고의 장소입니다.</code> 그리고 버그를 확실하게 발견하셨다면 <a href="https://bugzilla.mozilla.org/">Mozilla Bugzilla</a>에서 내용을 알려주세요. </p>
+
+<h2 id="관련_글">관련 글</h2>
+
+<ul>
+ <li><a href="https://intoli.com/blog/running-selenium-with-headless-firefox/">Using Selenium with Headless Firefox (on Windows)</a> by Andre Perunicic (uses Python)</li>
+ <li><a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">Headless Firefox in Node.js with selenium-webdriver</a> by Myk Melez</li>
+ <li><a href="https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/">Headless SlimerJS with Firefox</a> by Brendan Dahl</li>
+</ul>

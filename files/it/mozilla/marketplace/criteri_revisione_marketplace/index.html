@@ -1,0 +1,79 @@
+---
+title: Criteri di revisione del Marketplace
+slug: Mozilla/Marketplace/criteri_revisione_marketplace
+translation_of: Archive/Mozilla/Marketplace/Publishing/Marketplace_review_criteria
+---
+<div class="summary">
+ <p>Questo articolo descrive i requisiti che un'app deve soddisfare per essere distribuita su Firefox Marketplace. Tali requisiti sono stati elaborati per conservare un equilibrio tra le esigenze degli sviluppatori e quelle degli utenti. Gli sviluppatori cercano requisiti equi, coerenti, non troppo rigorosi e affidabili per costituire le basi del loro business. D'altra parte, gli utenti esigono la garanzia che le app siano sicure, in grado di funzionare sui loro dispositivi e che rispettino quanto dichiarato nelle note di versione. I seguenti requisiti tentano di conciliare tutte queste esigenze.</p>
+</div>
+<p>Di seguito le prospettive di Mozilla riguardo alle revisioni:</p>
+<ul>
+ <li>I criteri vanno applicati in modo equo, coerente e con una certa clemenza. Il processo di revisione non deve essere visto come una barriera, ma piuttosto come un punto di vista degno di fiducia che fornisce dei suggerimenti per aiutare lo sviluppatore ad avere successo.</li>
+ <li>I revisori non si sostituiscono al Controllo qualità. Durante il processo di revisione un volontario verificherà la validità del manifesto e dedicherà qualche minuto a utilizzare l'app come farebbe un normale utente.</li>
+ <li>Nel caso in cui un'app non passi il processo di revisione, allo sviluppatore verrà fornita una chiara spiegazione dei problemi riscontrati, dei passaggi per riprodurli e, dove possibile, il revisore proverà a indicare la giusta strada da seguire fornendo link alla documentazione o suggerendo le modifiche da effettuare.</li>
+ <li>I revisori non danno giudizi estetici sull'<em>aspetto</em> dell'app, ma solo sul suo <em>funzionamento</em>. Ad esempio, un'app che contiene un paragrafo di testo rosso su sfondo arancione può essere rifiutata non perché esteticamente sgradevole, ma a causa della scarsa leggibilità.</li>
+ <li>Agli sviluppatori viene sempre concesso il beneficio del dubbio. Quando un revisore non è sicuro se un'app debba o meno essere rifiutata, <em>prima</em> di procedere col rifiuto chiederà delucidazioni allo sviluppatore. Un'app non verrà, almeno consapevolmente, rifiutata per problemi legati alla piattaforma e fuori dal controllo dello sviluppatore, tuttavia ci riserviamo di sospendere l'approvazione finché l'app non sarà in condizioni di funzionare correttamente.</li>
+</ul>
+<h2 id="Sicurezza">Sicurezza</h2>
+<p>Tutte le specifiche di sicurezza per la progettazione di app sono disponibili in questa pagina:<a href="https://wiki.mozilla.org/Apps/Security">https://wiki.mozilla.org/Apps/Security</a> </p>
+<ul>
+ <li>Il manifesto dell'app deve essere distribuito dalla stessa origine dell'app.</li>
+ <li>Il manifesto dell'app deve essere distribuito utilizzando l'header HTTP <code>Content-Type</code> <code>application/x-web-app-manifest+json</code>.</li>
+ <li>Un'app non deve utilizzare reindirizzamenti o iframe per caricare contenuti altrui senza autorizzazione.</li>
+ <li>Il manifesto deve specificare quali sono i privilegi richiesti dall'app e per quale scopo vengono utilizzati.</li>
+</ul>
+<h2 id="Privacy">Privacy</h2>
+<ul>
+ <li>Durante il caricamento dell'app ti verrà chiesto di fornire l'indirizzo della tua Informativa sulla privacy. Per l'informativa non sono richiesti formati o contenuti specifici. Sentiti libero di utilizzare il nostro <a href="https://github.com/flamsmark/privacy-policy-template">modello di Informativa sulla privacy</a>. Dai anche un'occhiata alle <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies">linee guida per l'Informativa sulla privacy</a>.</li>
+</ul>
+<h2 id="Contenuto">Contenuto</h2>
+<ul>
+ <li>Tutte le app che non rispettano le linee guida sui contenuti, riportate qui di seguito, verranno rifiutate. Se ritieni che la tua app rappresenti un caso limite, richiedi delucidazioni al team di revisione, anche se l'app non è ancora pronta per la pubblicazione. Vogliamo aiutarti a rimanere sulla strada giusta piuttosto che sprecare del tempo prezioso a sviluppare un'app che verrà rifiutata.</li>
+ <li>Da gennaio 2014 tutte le app devono ricevere una classificazione dei contenuti da parte della IARC (International Age Rating Coalition). La classificazione viene attribuita durante il processo di caricamento dell'app rispondendo a un breve questionario. Ulteriori informazioni sul <a href="https://developer.mozilla.org/en-US/Marketplace/Submission/Rating_Your_Content">processo di classificazione</a>.</li>
+ <li>Gli screenshot e le descrizioni inserite in Firefox Marketplace devono essere una rappresentazione fedele dell'app.</li>
+ <li>Nel manifesto di un'app le <a href="/en-US/docs/Web/Apps/Manifest#locales">chiavi di tipo <code>locale</code></a> devono corrispondere alle rispettive lingue supportate dall'app. Per esempio, se fornisci una chiave <code>locale</code> in polacco gli utenti si aspetteranno che l'app sia disponibile in questa lingua.</li>
+</ul>
+<h3 id="Linee_guida_per_i_contenuti"><strong>Linee guida per i contenuti</strong></h3>
+<p>Questa lista descrive contenuti considerati inappropriati su Firefox Marketplace. Non è una lista definitiva ma solo illustrativa e potrebbe essere aggiornata. Se un'applicazione viola queste linee guida, Mozilla si riserva il diritto di rimuoverla da Firefox Marketplace.</p>
+<ul>
+ <li>Nessun materiale osceno, pornografico o rappresentazioni grafiche di sesso e violenza.</li>
+ <li>Nessun contenuto che violi i diritti altrui, inclusi proprietà intellettuale e altri diritti di proprietà, diritti di privacy e di pubblicità.</li>
+ <li>Nessun contenuto concepito per danneggiare Mozilla o gli utenti (quali codici potenzialmente dannosi, virus, spyware o malware).</li>
+ <li>Nessun contenuto illegale o che promuova attività illegali.</li>
+ <li>Nessun contenuto ingannevole, fuorviante, fraudolento, concepito per attività di phishing o altri furti di identità.</li>
+ <li>Nessun contenuto che promuova il gioco d'azzardo.</li>
+ <li>Nessun contenuto coinvolto nella promozione di prodotti e servizi illegali o controllati.</li>
+ <li>Nessun contenuto che sfrutti i minori.</li>
+ <li>Nessun contenuto che degradi, intimidisca, inciti alla violenza o incoraggi l'azione pregiudizievole nei confronti di persone o gruppi sulla base di età, sesso, razza, etnia, nazionalità, religione, orientamento sessuale, disabilità, posizione geografica o altre categorie protette, o che costituisca un incitamento all'odio.</li>
+ <li>Nessun contenuto che induca disonestamente l'utente a prendere una decisione d'acquisto.</li>
+</ul>
+<h2 id="Funzionalità">Funzionalità</h2>
+<ul>
+ <li>Il revisore deve essere in grado di verificare il corretto funzionamento delle caratteristiche principali pubblicizzate dall'app. Difetti estetici e piccoli inconvenienti verranno comunicati allo sviluppatore, ma non impediranno l'approvazione dell'app.</li>
+ <li>L'app non deve compromettere le prestazioni e la stabilità del sistema.</li>
+</ul>
+<h2 id="Usabilità">Usabilità</h2>
+<ul>
+ <li>Lo sviluppatore deve fare un ragionevole tentativo di ottimizzare il layout dell'app per la piattaforma di riferimento. Questo requisito è stato implementato per impedire le mancanze più grossolane, come ad esempio:
+  <ul>
+   <li>Dichiarare un'app che è chiaramente un sito web per desktop compatibile con un dispositivo mobile.</li>
+   <li>Progettare un'app con il layout che non si espande per riempire lo spazio a disposizione sullo schermo (immagina un'app con una schermata 320x480 che occupa solo l'angolo in alto a destra di un tablet, lasciando il resto della pagina vuoto: non è esattamente l'effetto desiderato!)</li>
+  </ul>
+ </li>
+ <li>L'app deve implementare un proprio sistema di navigazione e non dipendere dalla finestra nativa del browser o da un pulsante hardware, che potrebbe non essere disponibile su tutti i dispositivi.
+  <ul>
+   <li>Se, per esempio, un revisore si trovasse bloccato su una schermata dell'app perché nell'interfaccia non è stato implementato un collegamento per tornare indietro, questo costituirebbe un motivo di rifiuto. Questo non significa che l'app debba necessariamente implementare la barra di pulsanti tipica delle app native.</li>
+   <li>Nelle versioni di Firefox OS 1.1 e superiori è possibile inserire nel manifesto la proprietà <code><a href="/en-US/Apps/Build/Manifest#chrome">chrome</a></code>, che dota l'app di un sistema di navigazione essenziale.</li>
+  </ul>
+ </li>
+ <li>Gli elementi di navigazione, come pulsanti e link, devono essere facilmente attivabili con un clic o un tocco.</li>
+</ul>
+<h2 id="Politica_sulle_app_bloccate">Politica sulle app bloccate</h2>
+<p>Nella speranza di non arrivare mai a esercitarlo, ci riserviamo il diritto di eliminare ("bloccare") qualsiasi app già pubblicata che in un secondo momento riveli di aver violato i requisiti di sicurezza, privacy o contenuto, oppure di causare un peggioramento significativo nelle prestazioni del sistema o del network. Gli sviluppatori verranno informati prima del blocco della loro app, saranno considerati in buona fede in assenza di prove che dimostrino il contrario e potranno contare sulla piena collaborazione del team di revisione, che comunicherà loro la situazione e li assisterà nella risoluzione del problema. Esempi specifici di casi in cui si procede al blocco di un'app:</p>
+<ul>
+ <li>Phishing</li>
+ <li>Spam</li>
+ <li>Modifica radicale della tipologia di contenuti, ad esempio da "Foto di cuccioli v1.0" a "Violenza Brutale v1.0", senza aggiornare appropriatamente la classificazione dei contenuti.</li>
+ <li>Comportamenti anomali gravi dell'app per una significativa percentuale di utenti, anche nel caso in cui non si riesca a stabilire una responsabilità diretta di quest'ultima. Questi includono: peggioramento nelle prestazioni del telefono, riavvii continui, perdita dei dati dell'utente non risolti da un riavvio del dispositivo.</li>
+ <li>Utilizzo dell'app per attacchi alla Rete come il Distributed denial of service (DDOS).</li>
+</ul>

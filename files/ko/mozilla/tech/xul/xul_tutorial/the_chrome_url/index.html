@@ -1,0 +1,45 @@
+---
+title: The Chrome URL
+slug: Mozilla/Tech/XUL/XUL_Tutorial/The_Chrome_URL
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Chrome_URL
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:XUL_Structure" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Manifest_Files">다음  »</a></p>
+</div><p></p>
+<p>이번 섹션에서는 XUL 문서와 다른 chrome 파일을 참조하는 방법을 설명합니다.</p>
+<h3 id="Chrome_URL" name="Chrome_URL">Chrome URL</h3>
+<p>XUL 파일은 HTML 파일처럼 일반적인 HTTP URL(또는 어떤 형태의 URL이든)로 참조될 수 있습니다. 그러나 Mozilla의 chrome 시스템에 설치된 꾸러미는 특별한 chrome URL로 참조될 수 있습니다. Mozilla에 포함된 꾸러미들은 미리 설치되어 있는 것들이지만 여러분은 여러분의 것을 등록할 수 있습니다.</p>
+<p>설치된 꾸러미는 보안 제한사항에 구애받지 않는다는 장점을 가지는데, 이것은 많은 응용프로그램에 필요한 것입니다. 다른 URL 타입에 대한 또 다른 장점은 이것들이 다중 테마와 로케일을 자동으로 처리한다는 점입니다. 예를 들어 chrome URL은 여러분이 현재 사용중인 테마가 무엇인지 몰라도 테마에 포함된 이미지와 같은 파일을 참조하도록 해 줍니다. 각 테마내 파일 이름이 같다면 여러분은 chrome URL을 이용해서 파일을 참조할 수 있습니다. Mozilla는 파일이 어디에 위치하는지 결정하는데 신경 쓸 것이고 올바른 데이터를 반환할 것입니다. 이는 꾸러미가 이에 접근하기 위해 설치되어 있는 장소에 구애받지 않는다는 것을 의미합니다. Chrome URL은 파일들의 물리적인 위치에 독립적입니다. 이는 파일의 위치와 관련된 많은 부분을 신경 쓰지 않고도 다수의 파일을 가진 응용프로그램을 작성하기 쉽게 만들어 줍니다.</p>
+<p>Chrome URL의 기본 구문은 다음과 같습니다.</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://</a><i>&lt;package name&gt;</i>/<i>&lt;part&gt;</i>/<i>&lt;file.xul&gt;</i>
+</pre>
+<p>&lt;package name&gt;은 messenger나 editor와 같은 꾸러미 이름을 가리킵니다. &lt;part&gt;는 'content', 'skin', 'locale' 중에 하나가 될 수 있으며 여러분이 원하는 것에 따라 달라집니다. 'file.xul'은 그냥 파일 이름입니다.</p>
+<p><b>Example</b>: <a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a></p>
+<p>위의 예제는 메신저 창을 가리킵니다. 여러분은 부분(part)에 해당하는 'content'를 'skin'으로 변경하고 파일명을 바꾸기만 하면 파일을 가리킬 수 있습니다. 비슷하게 'content' 대신 'locale'을 사용하면 로케인 부분의 파일을 가리킬 수 있습니다.</p>
+<p>여러분이 chrome URL을 열면, Mozilla는 설치된 꾸러미 리스트를 조사하여 꾸러미 이름과 부분(part)이 일치하는 JAR 파일이나 디렉토리를 위치시키려고 합니다. Chrome URL과 JAR 파일들간의 연결은 chrome 디렉토리에 저장되어 있는 선언 파일에 명시되어 있습니다. 여러분이 messenger.jar 파일을 다른 곳으로 옮기더라도 선언 파일을 이에 맞게 수정한다면, Thunderbird는 특정 설치 위치에 의존하지 않기 때문에 정상적으로 동작합니다. Chrome URL을 사용함으로써 이와 같은 세부 사항은 Mozilla가 처리하도록 할 수 있습니다. 이와 유사하게, 사용자가 테마를 바꾸더라도 chrome URL의 'skin' 부분이 다른 파일들로 번역되고 따라서 XUL과 스크립트는 수정할 필요가 없게 됩니다.</p>
+<p>아래 몇가지 예제가 있습니다. 어떠한 URL도 어떤 테마나 로케일을 사용하는지 명시하지 않았고 특정 디렉토리 또한 명시되지 않았음을 잘 보세요.</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a>
+<a class="external" rel="freelink">chrome://messenger/content/attach.js</a>
+<a class="external" rel="freelink">chrome://messenger/skin/icons/folder-inbox.gif</a>
+<a class="external" rel="freelink">chrome://messenger/locale/messenger.dtd</a>
+</pre>
+<p>하위 디렉토리를 참조하기 위해서는 chrome URL의 끝에 하위 디렉토리를 붙여 주기만 하면 됩니다. 다음 URL들은 북마크 창을 참조하는 것으로 꾸러미 이름이 Mozilla Suite와 Firefox에서 서로 틀리기 때문에 모두 열거하였습니다.</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a> (Mozilla)
+<a class="external" rel="freelink">chrome://browser/content/bookmarks/b...rksManager.xul</a> (Firefox)
+</pre>
+<p>여러분은 일반적인 URL이 사용되는 어디서나 chrome URL을 사용할 수 있습니다. 여러분은 Mozilla 브라우저 창의 URL 바에도 직접 입력할 수 있습니다. 만일 브라우저의 주소 영역에 위에서 언급한 URL 중의 하나를 입력하면, 웹 페이지가 출력되는 것과 같이 창이 출력되는 것을 보게 될 것이고, 별도의 창인 것처럼 대부분의 기능들이 동작합니다. 그러나 어떤 대화상자들은 올바로 작동하지 않을 수도 있는데 이는 그들이 열릴 때 윈도우에서 특정 인자(argument)를 제공해야 할 필요가 있기 때문일 수도 있습니다.</p>
+<p>여러분은 다음과 같이 파일명을 명시하지 않은 chrome URL을 볼 수도 있습니다.</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://browser/content/</a>
+</pre>
+<p>이 경우에는 꾸러미 이름과 부분(part)만이 명시되어 있습니다. 이런 종류의 참조는 자동으로 올바른 디렉토리에서 적절한 파일이 선택됩니다. Content일 경우에는 꾸러미 이름과 동일한 이름인 xul 확장자를 가진 파일이 선택됩니다. 위의 예제에서는 browser.xul 파일이 선택됩니다. messenger일 경우에는 messenger.xul 파일이 선택될 것입니다. 여러분의 응용 프로그램을 만들 때는 짧은 형태를 사용하여 참조할 수 있도록 메인 윈도우에 해당하는 파일을 꾸러미 이름과 동일하게 만들고자 할 것입니다. 이렇게 하면 사용자는 꾸러미 이름만 알면 되므로 응용프로그램을 여는데 수월해 집니다. 물론, 확장 기능과 같이 브라우저의 인터페이스를 수정하는 경우에는 UI를 통해 자신을 표현하기 때문에 사용자가 URL을 꼭 알 필요가 없습니다.</p>
+<p>스킨인 경우에는 &lt;package name&gt;.css 파일이 선택되고, 로케일에서는 &lt;package name&gt;.dtd가 선택됩니다.</p>
+<p>Chrome URL은 디스크 상의 위치와 관련 없다는 것을 기억하세요. Chrome URL의 앞 두 부분은 꾸러미 이름과 부분(part)(content, skin, locale 중 하나)입니다. 컨텐츠 파일은 보통 'content'라는 디렉토리에 넣지만 이건 관습적인 것일 뿐이고, 이러한 파일들이 완전히 다른 구조에 위치해도 상관없습니다.</p>
+<p>다음 섹션에서는 .manifest 파일과 꾸러미를 어떻게 만드는지 알아볼 것입니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:XUL_Structure" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Manifest_Files">다음  »</a></p>
+</div><p></p>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p></p>

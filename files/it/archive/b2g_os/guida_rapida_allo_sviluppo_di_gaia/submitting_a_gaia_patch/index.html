@@ -1,0 +1,117 @@
+---
+title: Sottoporre una patch di Gaia
+slug: Archive/B2G_OS/Guida_rapida_allo_sviluppo_di_Gaia/Submitting_a_Gaia_patch
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guida
+  - Sottoporre una patch
+translation_of: Archive/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch
+---
+<div class="summary">
+<p><span class="seoSummary">Ora dovresti aver apportato una modifica e verificato che non abbia introdotto regressioni sul codice di Gaia. Il prossimo passo consiste nel sottoporre la patch sul repository centrale. Viene descritto in questo articolo.</span></p>
+</div>
+
+<p>Sottoporre patch a Gaia può risultare un po' complicato in quanto la procedura richiede l'utilizzo di Bugzilla e Github, e la compilazione di alcuni flag speciali in Bugzilla per garantire la corretta sequenza delle azioni.</p>
+
+<h2 id="Sottoporre_una_patch_facilmente_con_Autolander">Sottoporre una patch facilmente con Autolander</h2>
+
+<p><a href="https://github.com/mozilla/autolander">Autolander </a>è uno strumento che automaticamente gestisce molti dei passi richiesti per la sottomissione di patch di Gaia (e di altri progetti in cui viene utilizzato), risparmiando tempo e riducendo errori manuali di processo. Autolander integra Bugzilla con il workflow di Github agganciando richieste di pull ai bug automaticamente e altre cose simili. Per utilizzare Autolander:</p>
+
+<ol>
+ <li>Primo, apri un bug su Bugzilla per indicare cosa stai facendo, se non ne è già stato aperto uno per la medesima modifica al codice. Dovrai aprirlo come <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">prodotto Firefox OS</a> e dovrai assegnargli un titolo descrittivo.</li>
+ <li>Ora è il momento di <a href="https://help.github.com/articles/creating-a-pull-request">creare una richiesta di pull</a> (<em>pull request</em>, PR in breve) per proporre la tua patch. Se hai seguito la nostra guida dall'inizio, dovresti avere le tue modifiche localmente in un'alberatura duplicata del repository di Gaia a cui hai assegnato un nome univoco. Successivamente, dovrai eseguire il comando <code>git add .</code>  e  <code>git commit -m 'messaggio di commit'</code>.</li>
+ <li><code>'messaggio di commit'</code> dovrà essere sostituito con una stringa che conterrà il numero di bug di Bugzilla, il titolo utilizzato per l'apertura, le informazioni che descrivono cosa fa la patch e chi sta committando. Per esempio:
+  <pre class="brush: bash">Bug 9999999 - Fix per la risoluzione del bug R=johndoe</pre>
+ </li>
+ <li>Deposita il codice sul tuo fork di Gaia su github, quindi crea la richiesta di PR per proporre l'inclusione nella branch main.</li>
+ <li>Non appena la richiesta di pull verrà aperta, verrà associata al bug tracciato nel titolo della richiesta di PR.</li>
+ <li>Successivamente, quando sull'allegato verrà posto il flag <code>r+</code> da un revisore, potrai aggiungere la parola chiave <code>autoland</code>  all'interno del campo <code>keywords </code>affinchè il codice venga depositato nel branch master di Gaia (Autolander depositerà il codice, farà il merge della richiesta di PR, farà la commit e segnalerà il bug come fissato). Attualmente questa parte è ancora in revisione, pertanto dovra ancora aggiungere la parola chiave <code>checkin-needed</code> e attendere che il codice venga depositato per tuo conto.</li>
+</ol>
+
+<div class="note">
+<p><strong>Nota</strong>: Autolander esegue i test di integrazione prima di depositare il codice nella master. Se i test di integrazione falliscono, Autolander non depositerà il codice. Autolander esegue alcune regole semplici di validazione quali la verifica della presenza del numero di bug nella richeista di pull e nel messaggio di commit.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: le richieste di pull vengono depositate secondo l'ordine in cui arrivano, in un branch di integrazione e quindi vengono eseguiti i test di integrazione in parallelo su tutte le richieste. Se i test falliscono per una PR, essa viene rigettata, e la branch di integrazione viene ricostruita con le richieste rimanenti. Quando una richiesta passa i test viene depositata nella branch master.</p>
+</div>
+
+<h2 id="Sottoporre_una_patch_manualmente">Sottoporre una patch manualmente</h2>
+
+<p>In alternativa a Autolander, puoi seguire la seguente procedura per sottoporre una patch di Gaia:</p>
+
+<ol>
+ <li>Primo, apri un bug su Bugzilla per indicare cosa stai facendo, se non ne è già stato aperto uno per la medesima modifica. Dovrai aprirlo come <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">prodotto Firefox OS</a> e dovrai assegnargli un titolo descrittivo.</li>
+ <li>Ora è il momento di <a href="https://help.github.com/articles/creating-a-pull-request">creare una richiesta di pull</a> (<em>pull request</em>, PR in breve) per proporre la tua patch. Se hai seguito la nostra guida dall'inizio, dovresti avere le tue modifiche localmente in un'alberatura duplicata del repository di Gaia a cui hai assegnato un nome univoco. Successivamente, dovrai eseguire il comando <code>git add .</code>  e  <code>git commit -m 'messaggio di commit'</code>.</li>
+ <li><code>'messaggio di commit'</code> dovrà essere sostituito con una stringa che conterrà il numero di bug di Bugzilla, il titolo utilizzato per l'apertura, le informazioni che descrivono cosa fa la patch e chi sta committando. Per esempio:
+  <pre class="brush: bash">Bug 9999999 - Fix per la risoluzione del bug R=johndoe</pre>
+ </li>
+ <li>Sottoponi il codice e crea la richiesta di PR.</li>
+ <li>Aggiungi la URL della PR come allegato del Bug di Bugzilla (segui il link <em>Add an attachment </em>e inserisci la URL del PR come contenuto dell'allegato, aggiungi quindi una breve descrizione).</li>
+ <li>All'interno della scheda dove hai allegato la richiesta di PR richiedi un revisore per la tua patch. Potrai farlo aggiungendo un flag <code>review: ?</code>, quindi includendo il possessore del modulo che intendi modificare (vedi la <a href="https://wiki.mozilla.org/Modules/FirefoxOS">pagina dei possessori dei moduli</a> per maggiori dettagli).</li>
+ <li>Attendi che venga assegnato un revisore e che riveda la tua patch. Il revisore potrebbe aggiungere alcuni commenti e chiederti di apportare modifiche direttamente sulla tua richiesta  di PR in github.</li>
+ <li>Gestisci le richieste del revisore e quindi carica le nuove modifiche al medesimo PR come fatto in precedenza, rimettendo il flag <code>review: ?</code>.</li>
+ <li>Se vengono approvate, al bug verrà assegnato il flag <code>r+</code> (significa che è stato rivisto/approvato). Dovrai <a href="https://github.com/ginatrapani/todo.txt-android/wiki/Squash-All-Commits-Related-to-a-Single-Issue-into-a-Single-Commit">aggregare tutti i commit in uno</a> (leggi anche la sezione sottostante {{ anch("Suggerimenti_per_il_riallineamento") }}).</li>
+ <li>Aggiungi la parola chiave <code>checkin-needed</code> nel campo <em>keywords</em>. A questo punto devi solo attendere che qualcuno depositi la tua patch nei sorgenti di Gaia..</li>
+ <li>Congratulazione il tuo codice è ora parte di Firefox OS!</li>
+</ol>
+
+<div class="note">
+<p><strong>Nota</strong>: vi raccomandiamo di attenervi ad una commit per revisione.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: per ulteriori informazioni sulla sottomissione di patch puoi leggere l'artcolo  <a href="https://github.com/mozilla-b2g/gaia/blob/master/CONTRIBUTING.md">contributing.md</a>.</p>
+</div>
+
+<h2 id="Suggerimenti_per_il_riallineamento">Suggerimenti per il riallineamento</h2>
+
+<p>Il branch master di Gaia cambia continuamente (molte volte al giorno). Dopo aver creato una patch in 2 ore, potresti trovare che il branch master sia cambiato nel frattempo.<br>
+ <br>
+ Dal tuo branch di lavoro (per esempio <code>my-code-fix</code>) il primo tentativo di riallineamento potrebbe somigliare al seguente:</p>
+
+<pre class="brush: bash">git checkout -b my-code-fix-r1
+git pull --rebase upstream master</pre>
+
+<p>Se non ci sono conflitti, puoi procedere come segue:</p>
+
+<pre class="brush: bash">git checkout my-code-fix
+git pull --rebase upstream master
+git branch -D my-code-fix-r1</pre>
+
+<p>Se trovi dei conflitti, discutili con gli sviluppatori responsabili delle modifiche che hanno generato i conflitti e una volta risolti ripeti la procedura di riallineamento appena descritta.</p>
+
+<h2 id="Bug_di_tracciamento_di_stato_e_bug_di_ingegneria">Bug di tracciamento di stato e bug di ingegneria</h2>
+
+<p>Mozilla ha una figura speciale chiamata <a href="/en-US/docs/Developer_Guide/Committing_Rules_and_Responsibilities">Sceriffo</a> (<em>sheriff</em>). Gli sceriffi hanno il compito di effettuare i merge di codice e di manutenere lo stato dei branch. Poichè il numero degli sceriffi è limitato, è difficile per loro gestire tutte le patch imperfette.</p>
+
+<p>Per questo motivo per Firefox OS preferiamo aprire un nuovo bug e quindi gestire una nuova patch ogni qualvolta la patch inviata non lavora come dovrebbe. Ciò potrebbe causare qualche difficoltà nell'interpretazione dello stato del bug in QA e nei team di project management.</p>
+
+<p>Per questo motivo i bugs vengono classificati fra bug di tracciamento di stato (<em>status</em> <em>tracking bugs</em>) e bug di ingegneria (<em>engineering bugs</em>).</p>
+
+<ul>
+ <li>I bug di tracciamento di stato vengono identificati tramite una "meta" parola chiave. Un bug di stato può essere riaperto se non soddisfa i criteri di accettazione oppure se fallisce durante lo step di riproduzione.</li>
+ <li>Un bug di ingegneria dovrebbe essere riaperto <strong>solo</strong> se fallisce un test automatico o la parch non è corretta. Se una patch fissa il bug solo parzialmente, dovresti chiudere il bug a utilizzare il campo "see also" per referenziare il bug originale e descrivere il punto di fallimento.</li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: Se si tartta di un bug "user story", il project manager dorvebbe scrivere nel campo user story la storia e i criteri di accettazione.</p>
+</div>
+
+<h3 id="Come_recuperare_se_accidentalmente_carichi_una_patch_su_un_bug_di_tracciamento_di_stato">Come recuperare se accidentalmente carichi una patch su un bug di tracciamento di stato</h3>
+
+<p>Se ti succede, non andare in panico. Se accidentalmente sottoponi una patch, ricevi un review+, la sottoponi sul trunk, o viene riportato che non è risolutiva per nulla, segui le seguenti istruzioni:</p>
+
+<ol>
+ <li>Premi "Clone this bug" in alto a destra dell'interfaccia utente di Bugzilla per creare un nuovo bug copiando la maggior parte dei campi originali. Verifiche che i campi whiteboard, keyword, e STR/user story siano stati copiati nel nuovo bug.</li>
+ <li>Imposta il nuovo bug come bloccato dal vecchio bug. Il nuovo bug sarà di tipo bug di tracciamento di stato.</li>
+ <li>Utiliza il flag <em>needinfo</em> per avvisare il project manager del cambiamento di stato. <a href="https://wiki.mozilla.org/FirefoxOS/Teams">Puoi trovare gli indirizzi email dei differenti project managers di Firefox OS</a> sul nostro Wiki.</li>
+ <li>Crea un nuovo bug di ingegneria per descrivere lo step che fallisce o il criterio di accettazione. Inoltre utilizza il nuovo bug per bloccare il bug di tracciamento.</li>
+ <li>Infine prova a sviluppare una fix per il nuovo bug. Felice hacking!</li>
+</ol>
+
+<h2 id="Applicare_patch_su_vecchi_branch">Applicare patch su vecchi branch</h2>
+
+<p>Potresti trovare differenti tag di versione associati a bug. Se vuoi applicare patch a vecchi branch di  Firefox OS, verifica che soddisfino le regole di sottomissione. Puoi trovare maggiori dettagli nel seguente aricolo <a href="https://wiki.mozilla.org/Release_Management/B2G_Landing">B2G Landing</a>.</p>

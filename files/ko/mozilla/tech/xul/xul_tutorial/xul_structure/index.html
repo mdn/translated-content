@@ -1,0 +1,166 @@
+---
+title: XUL Structure
+slug: Mozilla/Tech/XUL/XUL_Tutorial/XUL_Structure
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/XUL_Structure
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Introduction" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:The_Chrome_URL">다음  »</a></p>
+</div><p></p>
+
+<p><br>
+ 우리는 먼저 Mozilla에서 XUL의 작동 방식에 대해 알아볼 것 입니다.</p>
+
+<h3 id="XUL.EC.9D.98_.EC.9E.91.EB.8F.99_.EB.B0.A9.EC.8B.9D" name="XUL.EC.9D.98_.EC.9E.91.EB.8F.99_.EB.B0.A9.EC.8B.9D">XUL의 작동 방식</h3>
+
+<p>Mozilla에서 XUL은 HTML이나 다른 유형의 컨텐츠가 동작하는 것과 매우 비슷한 방법으로 동작합니다. 사용자가 브라우저의 주소 영역에 HTML 페이지의 URL을 입력하면, 브라우저는 해당 웹 사이트를 찾고 내용을 다운로드합니다. Mozilla의 렌더링 엔진은 HTML 소스 형태인 내용을 가져와서 <a href="ko/DOM">DOM</a>이라고 하는 문서 트리 구조로 변환합니다. 그 후 트리는 화면에 출력될 수 있는 객체 집합으로 변경됩니다. <a href="ko/CSS">CSS</a>, 이미지, 기타 다른 기술들이 출력을 제어하는데 사용됩니다. XUL도 동일한 방식으로 동작합니다.</p>
+
+<p>사실 Mozilla에서는 문서 형태가 HTML, XUL 혹은 <a href="ko/SVG">SVG</a> 인지 상관없이 동일한 내부 코드에 의해 작동됩니다. 이것은 동일한 CSS 속성을 HTML과 XUL 모두의 스타일에 사용할 수 있으며, 많은 기능들을 공유할 수 있다는 것을 의미합니다. 그러나 HTML에서의 폼(form)이나 XUL에서의 <a href="ko/XUL_Tutorial/Overlays">overlays</a>같이 고유한 것들도 존재합니다. XUL과 HTML은 동일한 방법으로 동작하므로 둘 다 로컬 파일 시스템, 웹 페이지, 확장 기능 혹은 독립형 <a href="ko/XULRunner">XULRunner</a> 응용프로그램을 통해 로드할 수 있습니다.</p>
+
+<p><code><span class="nowiki">http://localhost/~username/</span></code>과 같은 원격지의 컨텐츠는 문서 형태가 HTML이나 XUL 혹은 다른 형태인지에 상관없이 보안상의 이유로 컨텐츠가 수행할 수 있는 동작에 제한을 가지게 됩니다. 이러한 이유 때문에 Mozilla에서는 컨텐츠를 로컬에 설치하고 <strong><a href="ko/Chrome">chrome</a></strong> 시스템의 일부분으로 등록할 수 있는 방법을 제공하고 있습니다. 이는 <code><a class="external" rel="freelink">chrome://</a></code> URL이라고 불리는 특별한 URL 형식에 의해 가능합니다. Chrome URL을 사용하여 파일에 접근하게 되면, 해당 파일들은 로컬 파일이나 설정, 북마크 등에 접근할 수 있는 향상된 권한을 가지며, 또 다른 권한이 필요한 동작을 수행할 수 있습니다. 전자 인증서로 서명되거나 그러한 행위를 수행하도록 허가되지 않는다면, 당연히 웹 페이지들은 이러한 권한을 얻을 수 없습니다.</p>
+
+<p>이러한 <strong>chrome</strong> 꾸러미의 등록이 Firefox 확장 기능이 브라우저에 기능을 추가할 수 있는 방법입니다. 확장 기능은 XUL, 자바스크립트, 스타일시트, 이미지들을 단일 파일로 묶어 놓은 작은 꾸러미입니다. 이 파일은 ZIP 유틸리티를 이용하여 생성할 수 있습니다. 사용자가 꾸러미 파일을 다운로드 받으면, 컴퓨터에 확장 기능이 설치될 것입니다. 꾸러미는 브라우저의 XUL과 확장 기능의 XUL을 조합하는 <a href="ko/Overlay">overlay</a>라는 고유 기능을 사용하여 브라우저에 잡히게 됩니다. 사용자에게는 마치 확장 기능이 브라우저를 <strong>수정</strong>한것 처럼 보이겠지만 사실 모든 코드는 분리되어 있으며 확장 기능은 쉽게 설치 해제(uninstall)할 수 있습니다. 물론 등록된 꾸러미가 꼭 overlay를 사용해야 할 필요는 없습니다. Overlay를 사용하지 않는 꾸러미들은 메인 브라우저의 인터페이스를 통해서는 접근할 수 없지만, chrome URL을 이용해서 여전히 접근할 수 있습니다.</p>
+
+<p>독립형 XUL 응용프로그램들은 유사한 방법으로 XUL코드를 포함할 수 있지만, 당연히 확장기능처럼 별도로 설치되어야만 하는 것과는 달리 응용프로그램을 위한 XUL이 설치의 일부분에 포함되어야만 합니다. 그러나 이러한 XUL 코드가 응용프로그램이 UI를 출력할 수 있는 것과 같은 chrome 시스템에 등록될 것입니다.</p>
+
+<p>Mozilla 브라우저 자체는 XUL 파일, 자바스크립트, 스타일시트를 포함하는 꾸러미 집합이라는 것을 알 필요가 있습니다. 이러한 파일들은 chrome URL을 통해 접근 가능하고 보다 강화된 권한을 가지며 다른 꾸러미들처럼 동작합니다. 물론 브라우저는 대부분의 확장기능보다 더 크고 복잡합니다. 수 많은 다른 컴포넌트들뿐만 아니라 Firefox와 Thunderbird도 모두 XUL로 작성되어 있고 chrome URL을 통해 접근할 수 있습니다. 여러분은 이러한 꾸러미를 Firefox나 다른 XUL 응용 프로그램이 설치된 chrome 디렉토리에서 확인할 수 있습니다.</p>
+
+<p>Chrome URL은 항상 '<a class="external" rel="freelink">chrome://'로</a> 시작합니다. <span class="nowiki">'http://'</span> URL이 항상 HTTP를 사용해 접근하는 원격 웹 사이트를 참조하고, '<a class="external" rel="freelink">file://</a>' URL이 항상 로컬 파일을 참조하는 것과 마찬가지로 '<a class="external" rel="freelink">chrome://</a>' URL은 항상 설치된 꾸러미와 확장기능을 참조합니다. 다음 섹션에서 chrome URL의 구문에 대해 좀 더 자세히 알아 볼 것입니다. Chrome URL을 통해 컨텐츠에 접근할 때는 위에서 언급한 다른 종류의 URL이 갖지 못한 강화된 권환을 획득한다는 것에 유의하십시요. 예를 들어 HTTP URL은 특별한 권한을 가지고 있지 않으므로, 웹 페이지가 로컬 파일을 읽으려고 하면 오류가 발생할 것입니다. 그러나 chrome URL을 이용하여 로드된 파일은 제약 없이 파일을 읽을 수 있습니다.</p>
+
+<p>이러한 차이는 중요합니다. 이것은 사용자의 북마크를 읽는 것과 같이 웹 페이지상의 컨텐츠가 할 수 없는 것이 있다는 것을 의미합니다. 이러한 차이점은 출력되는 컨텐츠의 종류에 따른 것은 아니고 단지 사용된 URL의 종류에 따른 것입니다. 웹 사이트에 위치한 HTML과 XUL은 모두 특별한 퍼미션이 없지만, chrome URL을 통해 로드되면 강화된 퍼미션을 가지게 됩니다.</p>
+
+<p>만일 여러분이 웹사이트에서 XUL을 사용한다면, HTML 파일들을 웹 사이트에 올리것처럼 XUL 파일을 올리고 브라우저 <small><span class="nowiki">http://localhost/xul.php</span></small>에서 URL을 로드합니다. 여러분의 웹 서버가 XUL 파일을 <strong><code>application/vnd.mozilla.xul+xml</code></strong>의 컨텐츠 타입(PHP에서는 <code>header('content-type:application/vnd.mozilla.xul+xml');</code>)으로 보낼 수 있도록 설정되어 있는지 확인하세요. 이 컨텐츠 타입은 Mozilla가 HTML과 XUL을 구분하는데 사용됩니다. Mozilla는 파일 시스템을 통해 파일을 읽은 것이 아니면 파일 확장자를 사용하는 것은 아니지만, 모든 XUL 파일들에 대해 .xul 확장자를 사용하는 것이 좋습니다. 여러분은 여러분의 컴퓨터의 브라우저에서 열거나 파일 매니저에서 더블 클릭하여 XUL 파일을 로드할 수 있습니다.</p>
+
+<div class="note">원격 XUL은 기능상의 중대한 제약 조건을 가지는 것을 기억하세요.</div>
+
+<h4 id=".EB.AC.B8.EC.84.9C_.EC.9C.A0.ED.98.95:_HTML_XML_XUL_CSS" name=".EB.AC.B8.EC.84.9C_.EC.9C.A0.ED.98.95:_HTML_XML_XUL_CSS">문서 유형: HTML XML XUL CSS</h4>
+
+<p>Mozilla는 문서 유형들 간의 대부분의 기능들은 공유하지만 HTML과 XUL에 대해 완전히 다른 종류의 문서 객체(<a href="ko/DOM">DOM</a>)를 사용합니다. Mozilla에는 HTML, XML, XUL의 세 가지 종류의 주요 문서 유형이 존재합니다. 본질적으로 HTML 문서는 HTML 문서에 사용되고 XUL 문서는 XUL 문서에 XML 문서는 다른 종류의 XML 문서에 사용됩니다. XUL 역시 XML이기 때문에 XUL 문서는 좀 더 일반적인 XML 문서의 서브 타입입니다. 기능상의 사소한 차이점이 존재합니다. 예를 들어 HTML 페이지에서의 폼 컨트롤은 <code>document.forms</code> 속성을 통해 접근할 수 있는 반면, XUL은 HTML에서의 폼이 없기 때문에 이러한 속성은 XUL 문서에서는 사용할 수 없습니다. 비슷하게 overlayer나 template과 같은 XUL 고유 기능은 XUL문서에서만 가능합니다.</p>
+
+<p>이러한 문서간의 차이는 중요합니다. 문서 타입에 특정하지 않은 많은 XUL의 기능을 HTML이나 XML 문서에서도 사용할 수 있습니다. 그러나 다른 기능들은 올바른 유형의 문서를 필요로 합니다. 예를 들어 여러분은 XUL layout 타입은 XUL 문서 타입에 의존하지 않기 때문에 다른 문서에서도 사용할 수 있습니다.</p>
+
+<p>위에서 언급한 점을 요약하면 다음과 같습니다.</p>
+
+<ul>
+ <li>Mozilla는 <a href="ko/HTML">HTML</a>과 <a href="ko/XUL">XUL</a>을 동일한 내부 엔진으로 출력하고 출력 양식을 결정하기 위해 <a href="ko/CSS">CSS</a>를 사용합니다.</li>
+</ul>
+
+<ul>
+ <li>XUL은 원격지, 로컬 파일 시스템이나 설치된 꾸러미로부터 로드될 수 있고, <a href="ko/Chrome">chrome</a> URL을 사용해서 접근할 수 있습니다. 마지막 방법은 브라우저의 확장 기능이 하는 것입니다.</li>
+</ul>
+
+<ul>
+ <li>Chrome URL은 설치된 꾸러미에 접근하고 강화된 권한으로 여는데 사용할 수 있습니다.</li>
+</ul>
+
+<ul>
+ <li>HTML, XML, XUL은 서로 다른 문서 타입을 가집니다. 어떠한 기능들은 아무 문서 타입에서도 사용할 수 있지만 어떠한 기능들은 특정 유형의 문서에서만 사용할 수 있습니다.</li>
+</ul>
+
+<p>다음 섹션에서는 Mozilla에 설치될 수 있는 chrome 꾸러미의 기본 구조에 대해 설명합니다. 그러나 여러분이 지금 당장 간단한 응용 프로그램을 작성하고 싶다면, <a href="ko/XUL_Tutorial/Creating_a_Window">Creating a Window</a>로 건너뛰고 다음을 위해 본 섹션은 저장하세요.</p>
+
+<h3 id="Package_Organization" name="Package_Organization">Package Organization</h3>
+
+<p>Mozilla is organized in such a way that you can have as many components as you want pre-installed. Each extension is also a component with a separate chrome URL. It also has one component for each installed theme and locale. Each of these components, or packages, is made up of a set of files that describe the user interface for it. For example, the messenger component has descriptions of the mail messages list window, the composition window and the address book dialogs.</p>
+
+<p>The packages that are provided with Mozilla are located within the chrome directory, which are in the directory where you installed Mozilla. The chrome directory is where you find all the files that describe the user interface used by the Mozilla browser, mail client, and other applications. Typically, you put all the XUL files for an application in this directory, although extensions are installed in the extensions directory for a particular user. Just copying a XUL file into the chrome directory doesn't give the file any extra permissions, nor can it be accessed via a chrome URL. To gain the extra privileges, you will need to create a manifest file and put that in the chrome directory. This file is easy to create, as it is typically only a couple of lines long. It is used to map a chrome URL to a file or directory path on the disk where the XUL files are located. Details of how to create this file will be discussed in a <a href="ko/XUL_Tutorial/Manifest_Files">later section</a>.</p>
+
+<p>The only way to create content that can be accessed through a chrome URL is by creating a package as described in the next few sections. This directory is called 'chrome' likely because it seemed like a convenient name to use for the directory where the chrome packages that are included with Mozilla are kept.</p>
+
+<p>To further the confusion, there are two other places where the word "chrome" might appear. These are the <code>-chrome</code> command line argument and the <code>chrome</code> modifier to the <code><a href="ko/DOM/window.open">window.open()</a></code> function. Neither of these features grant extra privileges; instead they are used to open a new top-level window without the browser UI such as the menu and toolbar. You will commonly use this feature in more complex XUL applications since you wouldn't want the browser UI to exist around your dialog boxes.</p>
+
+<p>The files for a package are usually combined into a single JAR file. A JAR file may created and examined using a ZIP utility. For instance, you can open the JAR files in Mozilla's chrome directory to see the basic structure of a package. Although it's normal to combine the files into a JAR file, packages may also be accessed in expanded form into a directory. Although you don't normally distribute a package this way, it is handy during development since you can edit the file directly and then reload the XUL file without having to repackage or reinstall the files.</p>
+
+<p>By default, Mozilla applications parse XUL files and scripts, and store a pre-compiled version in memory for the remainder of the application session. This improves performance. However, because of this, the XUL will be not be reloaded even when the source files are changed. To disable this mechanism, it is necessary to change the preference <code>nglayout.debug.disable_xul_cache</code>. In Firefox, this preference may be added to the user preferences by typing "about:config" in the address field, and setting this value to true. Or, just manually edit your user.js preferences file and add the following line:</p>
+
+<pre class="eval">pref("nglayout.debug.disable_xul_cache", true);
+</pre>
+
+<p>There are usually three different parts to a chrome package, although they are all optional. Each part is stored in a different directory. These three sets are the content, the skin, and the locale, which are all described below. A particular package might provide one or more skins and locales, but a user can replace them with their own. In addition, the package might include several different applications, each accessible via different chrome URLs. The packaging system is flexible enough so that you can include whatever parts you need and allow other parts, such as the text for different languages, to be downloaded separately.</p>
+
+<p>The three types of chrome packages are:</p>
+
+<ul>
+ <li><strong>Content</strong> - Windows and scripts<br>
+  The declarations of the windows and the user interface elements contained within them. These are stored in XUL files, which have a .xul extension. A content package can have multiple XUL files, but the main window should have a filename that is the same as the package name. For example, the editor package will have a file within it called editor.xul. Scripts are placed in separate files alongside the XUL files.</li>
+ <li><strong>Skin</strong> - Style sheets, images and other theme specific files<br>
+  Style sheets describe details of the appearance of a window. They are stored separately from XUL files to facilitate modifying the skin (theme) of an application. Any images used are stored here also.</li>
+ <li><strong>Locale</strong> - Locale specific files<br>
+  All the text that is displayed within a window is stored separately. This way, a user can have a set for their own language.</li>
+</ul>
+
+<h3 id="Content_Packages" name="Content_Packages">Content Packages</h3>
+
+<p>The name of the JAR file might describe what it contains, but you can't be sure unless you view its contents. Let's use the browser package included with Firefox as an example. If you extract the files in browser.jar, you will find that it contains a directory structure much like the following:</p>
+
+<pre>content
+   browser
+      browser.xul
+      browser.js
+      -- other browser XUL and JS files goes here --
+      bookmarks
+         -- bookmarks files go here --
+      preferences
+         -- preferences files go here --
+.
+.
+.
+</pre>
+
+<p>This is easily recognizable as a content package, as the top-level directory is called content. For skins, this directory will usually be called skin and for locales, it will usually be called locale. This naming scheme isn't necessary, but this is a common convention to make the parts of a package clearer. Some packages may include a content section, a skin, and a locale. In this case, you will find a subdirectory for each type. For example, Chatzilla is distributed in this way.</p>
+
+<p>The content/browser directory contains a number of files with .xul and .js extensions. The XUL files are the ones with the .xul extension. The files with .js extensions are JavaScript files containing scripts that handle the functionality of a window. Many XUL files have a script file associated with them, and some may have more than one.</p>
+
+<p>In the listing above, two files have been shown. There are of course others, but for simplicity they aren't shown. The file browser.xul is the XUL file that describes the main browser window. The main window for a content package should have the same name as the package with a .xul extension. In this case, the package name is "browser" so we expect to find browser.xul. Some of the other XUL files describe separate windows. For example, the file pageInfo.xul describes the page info dialog.</p>
+
+<p>Many packages will include a contents.rdf file, which describes the package, its author, and the overlays it uses. However, this file is obsolete and has been replaced with a simpler mechanism. This newer method is the manifest file mentioned earlier, and you will find these as files with the .manifest extension in the chrome directory. For instance, browser.manifest describes the browser package.</p>
+
+<p>Several subdirectories, such as bookmarks and preferences, describe additional sections of the browser component. They are placed in different directories only to keep the files more organized.</p>
+
+<h3 id="Skins_or_Themes" name="Skins_or_Themes">Skins or Themes</h3>
+
+<p>Although the underlying code for Mozilla calls them skins and the user interface calls them themes, they're both referring to the same thing. The classic.jar file describes the default theme provided with Firefox. The structure is similar to the content packages. For example, examining classic.jar:</p>
+
+<pre>skin
+   classic
+      browser
+         browser.css
+         -- other browser skin files go here --
+      global
+         -- global skin files go here --
+.
+.
+.
+</pre>
+
+<p>Again, this directory structure isn't necessary and is used for convenience. You can actually put all the files in one directory at the top level and not use subdirectories. However, for larger applications, subdirectories are used to separate the different components. In the example above, a directory exists for theme related files for the browser and another for global theme related files. The global directory contains skin files that are general to all packages. These files will apply to all components and will be included with your own standalone applications. The global part defines the appearance of all of the common XUL widgets, whereas the other directories have files that are specific to those applications. Firefox includes both the global and browser theme files in one archive, but they can be included separately.</p>
+
+<p>A skin is made up of CSS files and a number of images used to define the look of an interface. The file browser.css is used by browser.xul and contains styles that define the appearance of various parts of the browser interface. Again, note how the file browser.css has the same name as the package. By changing the CSS files, you can adjust the appearance of a window without changing its function. This is how you can create a new theme. The XUL part remains the same but the skin part changes independently.</p>
+
+<h3 id="Locales" name="Locales">Locales</h3>
+
+<p>The file en-US.jar describes the language information for each component, in this case for US English. Like the skins, each language file contains files that specify text used by the package for a specific language. The locale structure is similar to the others, so it won't be listed here.</p>
+
+<p>The localized text is stored in two types of files: DTD files and properties files. The DTD files have a .dtd extension and contain entity declarations, one for each text string that is used in a window. For example, the file browser.dtd contains entity declarations for each menu command. In addition, keyboard shortcuts for each command are also defined, because they may be different for each language. DTD files are used by XUL files so, in general, you will have one per XUL file. The locale part also contains properties files, which are similar, but are used by script files. The file browser.properties contains a few such localized strings.</p>
+
+<p>This structure allows you to translate Mozilla or a component into a different language by just adding a new locale for that language. You don't have to change the XUL code at all. In addition, another person could supply a separate package that applies a skin or locale to your content part, thus providing support for a new theme or language without having to change the original package.</p>
+
+<h3 id="Other_Packages" name="Other_Packages">Other Packages</h3>
+
+<p>There is a one special package called toolkit (or global). We saw the global directory earlier for skins. The file toolkit.jar contains the corresponding content part for it. It contains some global dialogs and definitions. It also defines the default appearance and functionality of the various common XUL widgets such as textboxes and buttons. The files located in the global part of a skin package contain the default look for all of the XUL interface elements. The toolkit package is used by all XUL applications.</p>
+
+<h3 id="Adding_a_Package" name="Adding_a_Package">Adding a Package</h3>
+
+<p>Mozilla places the packages that are included with the installation in the chrome directory. However, they do not need to be placed there. When installing another package, you can place it anywhere on the disk, as long as a manifest file points to it. It is common to place packages into the chrome directory simply because it is convenient; however, they will work just as well from another directory or somewhere on your local network. You cannot store them on a remote site, unless the remote site is mounted through the local file system.</p>
+
+<p>There are two chrome directories used for XUL applications: one is installed in the same place where the application is installed, while the other is part of user's profile. The former allows packages that are shared by all users while the latter allows packages to be created only for a specific user or users. Extensions, while installed in a separate extensions directory, are also usually user specific. Any manifest files located in either chrome directory will be examined to see which packages are installed.</p>
+
+<p>In the next section, we'll look at how to refer to chrome packages using the chrome URL.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Introduction" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:The_Chrome_URL">다음  »</a></p>
+</div> <span class="comment">Interwiki Language Links</span><p></p>
+
+<p></p>

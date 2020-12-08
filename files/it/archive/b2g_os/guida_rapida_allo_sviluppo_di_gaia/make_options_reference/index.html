@@ -1,0 +1,347 @@
+---
+title: Riferimento alle opzioni di make
+slug: Archive/B2G_OS/Guida_rapida_allo_sviluppo_di_Gaia/make_options_reference
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guida
+  - Riferimento alle opzioni di make
+translation_of: Archive/B2G_OS/Developing_Gaia/make_options_reference
+---
+<div class="summary">
+<p><span class="seoSummary">Il comando <code>make</code> viene utilizzato all'interno del repository di Gaia per creare il profilo che verrà poi caricato sul dispositivo o eseguito in <a href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>. Questo articolo descrive in dettaglio le differenti opzioni di make disponibili.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Sono disponibili molte variabili di ambiente nel Makefile. In futuro potrebbero cambiare.</p>
+</div>
+
+<p>I profili creati sono generalmente posti sotto la root della directory gaia, per esempio <code>/gaia/profile</code>, e contengono i seguenti elementi:</p>
+
+<ul>
+ <li><code>defaults/</code>: Cartella che contiene le configurazioni di default che verranno caricate dopo il reset del dispositivo</li>
+ <li><code>extensions/</code>: Cartella che contiene le estensioni</li>
+ <li><code>settings.json</code>: File di configurazione</li>
+ <li><code>user.js</code>: Altro file contenente configurazioni/preferenze</li>
+ <li><code>webapps/</code>: Cartelle contenente tutte le app che verranno installate sul dispositivo</li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: Ricordati di rimuovere un profilo già esistete, rimuovendo l'intera cartella, prima di  crearne uno nuovo.</p>
+</div>
+
+<h2 id="Default">Default</h2>
+
+<pre class="brush: bash">make</pre>
+
+<p>Senza opzioni verrà creato un profilo anonimo, non di debug. Per un profil<em>o </em>marcato Mozilla vedi {{ anch("Opzione per build Mozilla ufficiale") }}; per un profilo di debug vedi {{ anch("Opzione di debug") }}.</p>
+
+<h2 id="Installare_sul_dispositivo">Installare sul dispositivo</h2>
+
+<pre class="brush: bash">make install-gaia
+
+make reset-gaia
+</pre>
+
+<p>Dopo aver installato <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android Debug Bridge) sul tuo sistema, queste opzioni di make ti consentiranno di installare Gaia sul dispositivo. Mentre <code>install-gaia</code> installerà solo gli aggiornamenti/update, <code>reset-gaia</code> installerà completamente Gaia rimuovendo prima configurazioni, profili e web app.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Installando Gaia sul tuo dispositivo utilizzando  <code>make install-gaia</code> / <code>make reset-gaia</code> verrà costruito Gaia con una risoluzione pari a 1x per default. Per specificare una più alta risoluzione dovrai utilizzare le opzioni  <code>GAIA_DEV_PIXELS_PER_PX</code> o <code>GAIA_DPPX</code>  (vedi <a href="/it/Firefox_OS/Guida_rapida_allo_sviluppo_di_Gaia/make_options_reference#Immagini_ad_alta_risoluzione">Immagini ad alta risoluzione </a>per maggiori dettagli). Quando installi Gaia sul tuo dispositivo in questo modo, dovresti specificare le opzioni rilevanti assieme al fattore di scala del tuo dispositivo, ad esempio <code>make install-gaia GAIA_DEV_PIXELS_PER_PX=1.5</code> per un Flame  (o 2, o 2.5, ecc; trovi i valori di scala nella tabella all'interno di questo articolo <a href="/en-US/Apps/Build/Icon_implementation_for_apps#512_icon_for_device_display">512 icon for device display</a>.)</p>
+</div>
+
+<h2 id="Costruire_app_specifiche">Costruire app specifiche</h2>
+
+<pre class="brush: bash">APP=system make
+
+APP=system make install-gaia</pre>
+
+<p>Se un profilo è già esistente, l'opzione <code>APP </code>ti consente di specificare quale app ricostruire invece di ricostruire e reinstallare tutte le app. Nota che mentre questo comando ti consente di pubblicare il nuovo package e il file di manifest della app sul dispositivo, le modifiche apportate al file di manifest  (nuovi permessi, layout della tastiera, ecc) non verranno recepite da Gecko.</p>
+
+<h2 id="Specificare_una_cartella_per_il_profilo">Specificare una cartella per il profilo</h2>
+
+<p>Puoi specificare una cartella custom per costruire il tuo profilo utilizzando<code> PROFILE_FOLDER</code>, per esempio:</p>
+
+<pre class="brush: bash">PROFILE_FOLDER=profile-b2g-desktop make</pre>
+
+<h2 id="Build_specifiche_per_dispositivi">Build specifiche per dispositivi</h2>
+
+<p>Ci sono alcune opzioni di make che ti consentono di costruire build per differenti device, per differenti scopi.</p>
+
+<h3 id="Creare_una_build_di_Gaia_per_telefono">Creare una build di Gaia per telefono</h3>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=phone make</pre>
+
+<p>La lista delle app è quella contenuta nel file /<code>gaia/build/config/phone/apps-engineering.list</code>.</p>
+
+<h3 id="Crea_una_build_di_Gaia_per_tablet">Crea una build di Gaia per tablet</h3>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=tablet make</pre>
+
+<p>La lista delle app è quella definita nel file <code>/gaia/build/config/tablet/apps-engineering.list</code>.</p>
+
+<h3 id="Crea_una_build_per_Spark">Crea una build per Spark</h3>
+
+<pre><code>GAIA_DISTRIBUTION_DIR=distros/spark make reset-gaia</code></pre>
+
+<p>Per Installare spark sul tuo dispositivo. L'opzione equivalente per B2G build.sh:</p>
+
+<pre><code>GAIA_DISTRIBUTION_DIR=distros/spark ./build.sh</code></pre>
+
+<h2 id="Differenti_opzioni_di_Build">Differenti opzioni di Build</h2>
+
+<p>Differenti opzioni di make consentono di costruire differenti tipi di build per scopi differenti.</p>
+
+<h3 id="Build_di_produzione">Build di produzione</h3>
+
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+
+<p>Costruisce una build di produzione di Gaia:</p>
+
+<ul>
+ <li>Le app di Gaia vengono eseguite in modalità <em>packaged</em>. Rappresenta la soluzione migliore per le app, ad esempio in termini di permessi, ma rendondo difficoltoso il debugging</li>
+ <li>Le app di test non sono incluse</li>
+ <li>La funzionalità di debugging remoto è spenta per default</li>
+ <li>La schermata di blocco (l<em>ock screen</em>) è abilitata di default (interferisce con le connessioni USB)</li>
+ <li>Marionette è disabilitato</li>
+ <li>L'esperienza utente di primo utilizzo (<em>first time user experience)</em> è abilitata</li>
+ <li>La funzionalità di cache offline è abilitata</li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: Puoi anche utilizzare l'alias <code>make production</code>.</p>
+</div>
+
+<h3 id="Opzione_di_debug">Opzione di debug</h3>
+
+<pre class="brush: bash">DEBUG=1 make</pre>
+
+<p>Tramite la variabile di <code>DEBUG</code> le app vengono eseguite in modalità <em>hosted</em> su un web server interno su una specifica <code>GAIA_PORT</code>. Rispetto alla modalità di default <em>packaged,</em> in cui le app dovranno essere reinstallate dopo ogni modifica, la modalità hosted semplifica il testing. Utilizzando il profilo all'interno delle più recenti Nightly di Firefox sarà disponibile un pannello specifico per B2G all'interno dei Firefox Developer Tools. Una volta apportata la modifica sarà sufficiente effettuare un refresh del browser per rendere la modifica disponibile sul simulatore.</p>
+
+<p>Inoltre:</p>
+
+<ul>
+ <li>Le app di test sono inlcuse nella build</li>
+ <li>Il debugging remoto è abilitato di default.</li>
+ <li>La schermata di blocco è disabilitata di default (non interferisce con le connessioni USB)</li>
+ <li><a href="/en-US/docs/Mozilla/QA/Marionette">Marionette</a> è abilitato, è prerequisito per eseguire lo <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">unit testing</a> di Gaia</li>
+ <li>L'esperienza utente di primo utilizzo è disabilitata</li>
+ <li>la cache offline non viene utilizzata sebbene viene resa disponibile</li>
+</ul>
+
+<h3 id="Opzione_di_debug_per_dispositivo">Opzione di debug per dispositivo</h3>
+
+<pre class="brush: bash">DEVICE_DEBUG=1 make</pre>
+
+<p>Questa opzione crea un profilo di debug per dispositivo, con lo schermo di blocco disabilitato e la funzione di debugging via ADB abilitata.</p>
+
+<p>In Firefox OS con versione superiore a 1.2 puoi utilizzare questo paramatro per abilitare la funzionalità di debugging attraverso <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>.</p>
+
+<h3 id="Opzione_di_debug_per_desktop">Opzione di debug per desktop</h3>
+
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+
+<p>Questa opzione crea un profilo di debug che potrà essere eseguita all'interno di <a href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a>.</p>
+
+<h3 id="Opzione_per_build_Mozilla_ufficiale">Opzione per build Mozilla ufficiale</h3>
+
+<pre class="brush: bash">MOZILLA_OFFICIAL=1 make</pre>
+
+<p>Utilizza questa opzione per costruire una build con brand Mozilla ufficiale.</p>
+
+<h3 id="Opzione_Dogfood">Opzione Dogfood</h3>
+
+<pre class="brush: bash">DOGFOOD=1 make</pre>
+
+<p>Questa opzione attiva la modalità Dogfood e le relative utility. Per esempio l'app di feedback, che consente di sottomettere feedback facilmente.</p>
+
+<h3 id="Opzione_per_installare_sotto_la_cartella_system">Opzione per installare sotto la cartella system</h3>
+
+<pre class="brush: bash">B2G_SYSTEM_APPS=1 make</pre>
+
+<p>Questa opzione consente di installare le app sotto la cartella <code>/system/b2g</code> invece di <code>/data/local</code>. Dovresti utilizzarla quando lavori su una build utente. Viene automaticamente impostata quando viene eseguito <code>make production</code>. Può essere utilizzata anche per le opzioni <code>install-gaia</code> o <code>reset-gaia</code> .</p>
+
+<h3 id="Opzione_per_distribuzione_commerciale">Opzione per distribuzione commerciale</h3>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=./dir</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: Leggi l'articolo <a href="/en-US/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Customizzazioni Commerciali</a> per maggiori dettagli.</p>
+</div>
+
+<h2 id="Opzioni_per_sviluppo_e_debugging">Opzioni per sviluppo e debugging</h2>
+
+<p>A scopo di debugging vengono introdotte alcune opzioni specifiche per aggiungere/rimuovere funzionalità o modificare configurazioni/setting.</p>
+
+<h3 id="Abilitare_il_debugging_remoto">Abilitare il debugging remoto</h3>
+
+<pre class="brush: bash">REMOTE_DEBUGGER=1</pre>
+
+<p>Abilita il debugging remoto su dispositivo, analogamente all'utilizzo dell'opzione specifica all'interno del menù delle <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Remote_debugging">configurazioni per sviluppatore (developer settings).</a></p>
+
+<h3 id="Opzione_di_ottimizzazione_JavaScript">Opzione di ottimizzazione JavaScript</h3>
+
+<pre class="brush: bash">GAIA_OPTIMIZE=1 make</pre>
+
+<p>Abilita lo step di ottimizzazione del codice JavaScript di Gaia, concatenando/comprimendo i file. Viene automaticamente abilitato quando viene eseguito <code>make production</code>. Può anche essere utilizzato per <code>install-gaia</code> o <code>reset-gaia</code>.</p>
+
+<h3 id="Immagini_ad_alta_risoluzione">Immagini ad alta risoluzione</h3>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+
+<p>Analogamento con:</p>
+
+<pre class="brush: bash">GAIA_DPPX=1.5 make</pre>
+
+<p>Questa opzione sostituisce le immagini con le corrispettive <code>*@1.5x.(gif|jpg|png)</code> se disponibili. Dovresti utilizzare questa opzione come parte del comando <code>make</code>, per esempio:</p>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</pre>
+
+<p>Gaia di default utilizza le seguenti risoluzioni per lo schermo:</p>
+
+<ul>
+ <li>qHD: ~540×960; device pixel ratio = 1.6875</li>
+ <li>WVGA: ~480×800; device pixel ratio = 1.5</li>
+ <li>HBGA (320x240); device pixel ratio = 1</li>
+</ul>
+
+<p>utilizza <code>GAIA_DEV_PIXELS_PER_PX</code> per essere certo che le immagini appaiano limpide su dispositivi qHD e WVGA. Fai riferimento all'articolo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">un pixel non è un pixel</a> per maggiori informazioni.</p>
+
+<h3 id="Eseguire_i_tesi_di_integrazione">Eseguire i tesi di integrazione</h3>
+
+<p>Puoi eseguire i test di integrazione su Gaia utilizzando make. Vedi <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia integration tests</a> per maggiori dettagli.</p>
+
+<h3 id="Eseguire_i_test_di_performance_Raptor">Eseguire i test di performance Raptor</h3>
+
+<p>Prima di eseguire i test devi configurare il tuo dispositivo per eseguire i test Raptor. Per i dettagli vedi direttamente <a href="https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor">Raptor</a>.</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">make raptor</code></pre>
+
+<h3 id="Build_di_profili_per_dispositivi_con_scarsa_memoria">Build di profili per dispositivi con scarsa memoria</h3>
+
+<pre class="brush: bash">GAIA_MEMORY_PROFILE=low make</pre>
+
+<p>Tramite questa opzione viene generato un profilo specifico per dispositivi con scarsa memoria quale ad esempio il Tarako.</p>
+
+<h3 id="Disabilitare_l'esperienza_utente_di_primo_utilizzo_(first_time_use_experience_FTU)">Disabilitare l'esperienza utente di primo utilizzo (first time use experience, FTU)</h3>
+
+<pre class="brush: bash">NOFTU=1
+</pre>
+
+<p>Tramite questa variabile di ambiente viene disabilitata la FTU.</p>
+
+<h3 id="Disabilitare_lo_schermo_di_blocco">Disabilitare lo schermo di blocco</h3>
+
+<p>Puoi disabilitare lo schermo di blocco di Firefox OS utilizzando l'opzione NO_LOCK_SCREEN, per esempio:</p>
+
+<pre class="brush: bash">NO_LOCK_SCREEN=1 make</pre>
+
+<h3 id="Attivare_carichi_di_lavoro_(workloads)">Attivare carichi di lavoro (workloads)</h3>
+
+<p>Le seguenti opzioni permettono a sviluppatori/tester di installare grandi quantità di dati in differenti applicazioni, generalmente su dispositivi nuovi e appena installati.</p>
+
+<p>I comandi da utilizzare (dalla cartella di Gaia) sono:</p>
+
+<pre class="brush: bash">make reference-workload-light</pre>
+
+<ul>
+ <li>200 contatti</li>
+ <li>200 sms</li>
+ <li>50 chiamate nello storico del dialer</li>
+ <li>20 immagini</li>
+ <li>20 canzoni</li>
+ <li>5 video</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-medium</pre>
+
+<ul>
+ <li>500 contatti</li>
+ <li>500 sms</li>
+ <li>100 chiamate nello storico del dialer</li>
+ <li>50 immagini</li>
+ <li>50 canzoni</li>
+ <li>10 video</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-heavy</pre>
+
+<ul>
+ <li>1000 contatti</li>
+ <li>1000 sms</li>
+ <li>200 chiamate nello storico del dialer</li>
+ <li>100 immagini</li>
+ <li>100 canzoni</li>
+ <li>20 video</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-x-heavy</pre>
+
+<ul>
+ <li>2000 contatti</li>
+ <li>2000 sms</li>
+ <li>500 chiamate nello storico del dialer</li>
+ <li>250 immagini</li>
+ <li>250 canzoni</li>
+ <li>50 video</li>
+</ul>
+
+<p>Tramite le variabili di ambiente<code> APP </code>o <code>APPS</code> puoi speficare la singola app o le singole app, ad esempio:</p>
+
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+
+<p>La variabile APP può assumere i seguenti valori:</p>
+
+<pre class="brush: bash">APPS="gallery music video communications/contacts sms communications/dialer"</pre>
+
+<p>Per installare canzoni, devi avere installato sul tuo sistema il programma mid3v2. Ad esempio tramite il comando:</p>
+
+<pre class="brush: bash">sudo apt-get install python-mutagen</pre>
+
+<p>Se hai un sistema Fedora o RHEL, utilizza:</p>
+
+<pre class="brush: bash">sudo yum install python-mutagen</pre>
+
+<h3 id="Opzioni_per_la_documentazione">Opzioni per la documentazione</h3>
+
+<p>I documenti di Gaia vengono generati tramite jsdoc3, utilizzando il seguente comando:</p>
+
+<pre class="brush: bash">make docs</pre>
+
+<h3 id="Abilitare_layout_e_dizionario_IME">Abilitare layout e dizionario IME</h3>
+
+<p>Per abilitare tastiera e dizionari IME utilizza il seguente comando:</p>
+
+<pre class="brush: bash">GAIA_KEYBOARD_LAYOUTS=en,zh-Hant-Zhuyin,el,de,fr,zh-Hans-Pinyin make</pre>
+
+<p>Attualmente non vengono distribuiti tutti i layout di default, per via dell'occupazione di spazio disco. Il <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1029951" id="yui_3_7_3_2_1407926266649_781">bug 1029951</a> è stato aperto per disaccoppiare la distribuzione di layout e dizionari (offrendo all'utente la possibilità di scaricare quelli di interesse).</p>
+
+<p>Per favore dai un'occhiata al seguente file <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/keyboard-layouts.json">build/config/keyboard-layouts.json</a> per trovare tutti i layout disponibili.</p>
+
+<article class="localized">
+<div class="ckeditor-container editor-container dirty">
+<div class="editor">
+<div style="height: 172px;">
+<div style="border: 1px solid rgb(182, 182, 182); width: 678px; position: fixed; top: 0px;"> </div>
+</div>
+</div>
+</div>
+</article>
+
+<div id="content-fields">
+<article class="localized">
+<div class="ckeditor-container editor-container dirty">
+<div class="editor">
+<div class="cke" dir="ltr" id="cke_id_content" lang="en">
+<div>
+<div id="cke_1_contents" style="height: 8077.37px;"> </div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>

@@ -1,0 +1,93 @@
+---
+title: Automated Testing of Firefox OS
+slug: Archive/B2G_OS/Automated_testing
+translation_of: Archive/B2G_OS/Automated_testing
+---
+<p><strong><span style="line-height: 1.5; background-color: rgb(255, 255, 255);">Dato che </span></strong><span style="font-weight: bold; line-height: 1.5; background-color: rgb(244, 247, 248);"> Firefox OS </span><strong>è ancora in fase di sviluppo</strong><span style="font-weight: bold; line-height: 1.5; background-color: rgb(244, 247, 248);">, </span><strong>e il supporto per nuovo hardware sarà imminente per il prossimo futuro</strong><span style="font-weight: bold; line-height: 1.5; background-color: rgb(244, 247, 248);">, </span><strong>è importante sapere come provarlo</strong><span style="font-weight: bold; line-height: 1.5; background-color: rgb(244, 247, 248);">. </span><span class="seoSummary" style="font-weight: bold; line-height: 1.5; background-color: rgb(244, 247, 248);">Questa pagina offre articoli che forniscono informazioni su vari aspetti della sperimentazione Firefox OS, tra cui l'esecuzione di test differenti, l'automazione, e risultato di reporting e di monitoraggio.</span></p>
+
+<h2 id="Inziamo">Inziamo</h2>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Running_Tests_on_Firefox_OS_for_Developers">Esecuzione di test su Firefox OS: Una guida per gli sviluppatori</a></dt>
+ <dd><strong>A, guida pratica sviluppatori focalizzati ad ottenere iniziato con l'esecuzione dei test. Questo è dove si dovrebbe cominciare se non siete esperti nella gestione di test di Mozilla e sistemi di automazione. Se si, allora probabilmente avete un'idea di ciò che i test che si desidera eseguire e come, e si può saltare a delle guide dettagliate più specifici indicati di seguito.</strong></dd>
+</dl>
+
+<h2 id="Gaia_tests">Gaia tests</h2>
+
+<p>These articles cover the primary test suites designed to put Gaia through its paces.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests">Gaia UI tests</a></dt>
+ <dd>Python tests for Gaia UI interactions and features.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia integration tests</a></dt>
+ <dd>JavaScript integration tests for Gaia, based on Marionette.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia unit tests</a></dt>
+ <dd>Gaia unit tests with no UI interaction; written in JavaScript, not Marionette-based.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests">Gaia performance tests</a></dt>
+ <dd>Measures Gaia app performance based on internal instrumentation. The testing harness is in-tree.</dd>
+</dl>
+
+<h2 id="B2G_tests">B2G tests</h2>
+
+<p>The guides below cover a number of different test harnesses that test various aspects of B2G functionality.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests">Mochitests</a></dt>
+ <dd>Gecko functional and API tests; HTML &amp; JS based.  No Gaia interaction.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests">Reftests</a></dt>
+ <dd>Gecko rendering correctness tests.</dd>
+ <dt><a href="/en-US/docs/Marionette/Marionette_JavaScript_Tests" title="/en-US/docs/Marionette/Marionette_JavaScript_Tests">WebAPI tests</a></dt>
+ <dd>Gecko JS-based WebAPI tests; most of these require an emulator.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/XPCShell" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/XPCShell">xpcshell tests</a></dt>
+ <dd>Headless tests of Gecko XPCOM APIs.</dd>
+ <dt><a href="https://github.com/mozilla/b2gperf" title="https://github.com/mozilla/b2gperf">B2GPerf</a></dt>
+ <dd>Measures Gaia app performance based on internal instrumentation.</dd>
+ <dt><a href="https://wiki.mozilla.org/Project_Eideticker" title="https://github.com/mozilla/eideticker">Eideticker</a></dt>
+ <dd>Provides performance measurements for Firefox OS based on video captures.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/endurance_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/endurance_tests">Endurance tests</a></dt>
+ <dd>Long-running repetitive tests designed to find memory leaks and stability problems.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/MTBF_tests">MTBF test</a></dt>
+ <dd>This is a test framework based on non-restart gaia-ui-test. It tries to locate all kinds of issue prevents tests from running in a long time. (Currently, it is owned by Taiwan QA team and still a developing test framework)</dd>
+ <dt>Memory tests - coming soon</dt>
+ <dd>Repetitive tests run per-commit to mozilla-central, reporting to <a href="https://areweslimyet.com/" title="https://areweslimyet.com/">https://areweslimyet.com/</a>, designed to find problems with memory usage.</dd>
+</dl>
+
+<h2 id="Supporting_documentation">Supporting documentation</h2>
+
+<p>This section provides links to some of the supporting technologies that underpin Mozilla's tests, which you may want to find more information about.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a></dt>
+ <dd>A remote test driver based on Selenium WebDriver.</dd>
+ <dt><a href="/en-US/docs/Marionette/Marionette_JavaScript_Tools" title="/en-US/docs/Marionette/Marionette_JavaScript_Tools">Marionette JavaScript tests</a></dt>
+ <dd>A node.js-based runner for Marionette.</dd>
+ <dt><a href="/en-US/docs/Marionette/Python_Marionette" title="/en-US/docs/Marionette/Python_Marionette">Marionette Python tests</a></dt>
+ <dd>A Python runner for Marionette.</dd>
+</dl>
+
+<div class="note">
+<p><strong>Note</strong>: If you want to run Marionette against a production build (to run gaia integration tests, gaia-ui-tests, etc.), you can <a href="https://github.com/mozilla-b2g/marionette-extension">install Marionette as an extension</a> (this currently only works for 1.3 builds, but more support will be added soon.)</p>
+</div>
+
+<h2 id="Continuous_integration_and_result_reporting">Continuous integration and result reporting</h2>
+
+<p>The following articles cover the continuous integration and result reporting mechanisms Mozilla uses to store and intepret test data.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/TBPL">TBPL</a></dt>
+ <dd>Understand the tests and builds that run on TBPL.</dd>
+ <dt><a href="https://wiki.mozilla.org/QA/Execution/Web_Testing/Automation/Jenkins">Jenkins</a></dt>
+ <dd>Understand the tests that are run on real devices via Jenkins.</dd>
+ <dt><a href="https://wiki.mozilla.org/B2G/Datazilla" title="https://wiki.mozilla.org/B2G/Datazilla">Datazilla</a></dt>
+ <dd>Understand which performance tests are reporting to the <a href="https://datazilla.mozilla.org/b2g/" title="https://datazilla.mozilla.org/b2g/">Datazilla dashboard</a>, and what those tests measure.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Test_Execution_Chart" title="/en-US/docs/Mozilla/Firefox_OS/Testing/Test_Execution_Chart">Test execution chart</a></dt>
+ <dd>A chart showing which tests are being run — on what devices and where — and which platforms are supported for each test.</dd>
+</dl>
+
+<h2 class="Community" id="Community" name="Community">Unit testing framework video</h2>
+
+<p>{{EmbedYouTube("LxnRIm0wLLo")}}</p>
+
+<dl>
+ <dt> </dt>
+</dl>

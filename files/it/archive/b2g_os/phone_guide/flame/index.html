@@ -1,0 +1,323 @@
+---
+title: Flame
+slug: Archive/B2G_OS/Phone_guide/Flame
+translation_of: Archive/B2G_OS/Phone_guide/Flame
+---
+<p> </p>
+
+<div class="note">
+<p><strong>Aggiornamenti sul tuo Flame</strong>: ti incoraggiamo a iscriverti alla maililng list per ricevere aggiornamenti periodici sulle nuove versioni del software e altre notizie riguardo il tuo dispositivo Flame: <a href="https://mail.mozilla.org/listinfo/flamenews">https://mail.mozilla.org/listinfo/flamenews</a></p>
+</div>
+
+<p><img alt="A picture of the Flame device, showing the Firefox OS homescreen containing several app icons." src="https://mdn.mozillademos.org/files/8373/flame-dev-hud.png" style="float: left; margin-bottom: 20px; margin-right: 50px; width: 25%;"></p>
+
+<h2 id="Disponibile_per_l'ordine" style="text-indent: 100%; white-space: nowrap; overflow: hidden; margin: 0; height: 0;">Disponibile per l'ordine</h2>
+
+<p><span class="seoSummary">Il telefono di riferimento per gli sviluppatori, il Flame, è una pietra miliare nel rilascio di dispositivi Firefox OS. L'hardware del Flame offre un insieme rappresentativo di specifiche, incluso un display FWVGA e un processore dual-core per aiutare gli sviluppatori a creare fantastici contenuti ed esperienze. Una singola piattaforma hardware è anche una buona cosa per i tester, rendendo semplice provare e indirizzare problemi software specifici senza doversi preoccupare dei bug di un determinato dispositivo o di altro.</span></p>
+
+<p style="">Se già possiedi il telefono e vuoi cominciare a sperimentare, sviluppare e distribuire app o contribuire alla piattaforma Firefox, i seguenti link sono utili per iniziare a muovere i primi passi:</p>
+
+<ul>
+ <li><a href="/docs/Firefox_OS">Zona Firefox OS</a>: per creare le proprie distribuzioni di Firefox OS e contribuire ai progetti B2G e Gaia.</li>
+ <li><a href="/docs/Apps">Zona App Center</a>: per sviluppare app web open compatibili con Firefox OS.</li>
+ <li><a href="/Marketplace">Zona Marketplace</a>: per informazioni sulla pubblicazione e distribuzione delle app.</li>
+ <li><a href="https://marketplace.firefox.com/">Firefox Marketplace</a>: la fonte migliore per scoprire e pubblicare nuove app per Firefox OS.</li>
+</ul>
+
+<p style="">Se cerchi ulteriori informazioni riguardo all'aggiornamento del sistema operativo, al ripristino, al caricamento delle app o alle specifiche del telefono, qui troverai tutte le informazioni necessarie.</p>
+
+<h2 id="Acquistare_il_dispositivo">Acquistare il dispositivo</h2>
+
+<p>Il nostro partner per la realizzazione dei dispositivi ha reso il telefono <a href="http://www.everbuying.com/product549652.html">disponibile per l'ordine</a> sul sito everbuying.com al prezzo di 170 US$, spese di spedizione in tutto il mondo incluse (il dispositivo costa 145 $, la spedizione 25 $ e potrebbero essere addebitate tasse doganali, a seconda della destinazione). Il dispositivo non ha blocchi nel bootloader né per quanto riguarda gli operatori. Utilizza una radio quadri-band GSM+UMTS funzionante con una vasta gamma di operatori.</p>
+
+<h2 id="Operazioni_preliminari_importanti">Operazioni preliminari importanti</h2>
+
+<p>Ci sono alcune operazioni da eseguire a seconda del sistema operativo che utilizzi prima di aggiornare il tuo dispositivo, per esempio per aggiornare la versione di Firefox OS presente nel Flame o inviare app al proprio telefono (entrambe le operazioni sono discusse più avanti).</p>
+
+<h3 id="Tutti_i_sistemi_operativi">Tutti i sistemi operativi</h3>
+
+<p>È necessario installare ADB e Fastboot sul proprio computer. Queste applicazioni permettono al computer di interagire con il telefono quando quest'ultimo è connesso con il cavo USB. Sono necessarie per installare una nuova versione di Firefox OS sul telefono, per ripristinarlo nel caso si blocchi, per caricare app sul telefono ecc.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: se utilizzi Ubuntu puoi installare ADB e Fastboot semplicemente usando i comandi <code>sudo apt-get install android-tools-adb android-tools-fastboot</code> in un terminale.</p>
+</div>
+
+<p>ADB e Fastboot sono disponibili nell'<a class="external external-icon" href="http://developer.android.com/sdk/index.html" title="Android Developer Tookit">Android Developer Toolkit</a>:</p>
+
+<ol>
+ <li>Visita il link</li>
+ <li>Fai clic sul pulsante <em>Download Eclipse ADT</em></li>
+ <li>Accetta i termini della licenza</li>
+ <li>Scegli tra la versione a 32 o 64 bit (la versione a 32 bit andrà bene se non sei sicuro)</li>
+ <li>Fai clic sul pulsante <em>Download Eclipse ADT with the Android SDK...</em> .</li>
+ <li>Quando il download è terminato, estrai i contenuti del file zip sul tuo desktop</li>
+ <li>Visto che il nome della cartella è abbastanza complicato, puoi cambiare il nome semplicemente in <em>adt</em></li>
+</ol>
+
+<p>ADB è uno strumento che va eseguito dalla riga di comando. Se apri un terminale o prompt dei comandi, ti posizioni nella cartella adt/sdk/platform-tools ed esegui il comando <code>adb</code>, dovresti vedere varie informazioni riguardo a quello che puoi fare con ADB. Eseguire <code>adb devices</code> dovrebbe mostrarti la riga <code>List of devices attached</code>, e nient'altro, poiché non hai ancora collegato alcun dispositivo.</p>
+
+<p>A questo punto, è necessario impostare la variabile PATH per puntare allo strumento ADB, così da poterlo eseguire ovunque, non solo quando ti trovi nella cartella che lo contiene. Per farlo:</p>
+
+<ul>
+ <li>In Windows 8 (Windows 7 funziona in maniera simile, ma con voci di menu leggermente differenti):</li>
+ <li>fai clic col tasto destro sul pulsante Windows in basso a sinistra e seleziona Pannello di Controllo &gt; Sistema e Sicurezza &gt; Sistema &gt; Impostazioni avanzate &gt; Variabili d'ambiente.</li>
+ <li>Nella lista <em>Variabili di sistema</em> trova quella che si chiama Path, selezionala e fai clic su <em>Modifica...</em></li>
+ <li>Nel campo Valore della variabile della finestra che si è appena aperta, posizionati alla fine della stringa già presente, inserisci un punto e virgola (;) seguito dalla cartella in cui hai estratto adb, che dovrebbe essere <em>C:\Users\[IL TUO NOME UTENTE]\Desktop\adt\sdk\platform-tools</em>.</li>
+ <li>Quindi, se il tuo nome utente è jamessmith, dovresti inserire ;<em>C:\Users\jamessmith\Desktop\adt\sdk\platform-tools</em>.</li>
+ <li>Fai cilck su OK su tutte le finestre che hai aperto fin'ora.</li>
+ <li>Chiudi il prompt dei comandi, aprine uno nuovo e verifica che tutto funzioni correttamente digitando il comando <code>adb devices</code>. Se ottieni il messaggio <code>List of devices attached</code>, l'operazione si è conclusa correttamente!</li>
+</ul>
+
+<p>Su Mac/Linux:</p>
+
+<ul>
+ <li>NelFinder, vai nella tua cartella home (quella con l'icona a forma di casa)</li>
+ <li>Se non visualizzi già i file nascosti (ovvero quelli il cui nome inizia con un punto (.)) apri il terminale e digita il comando <code>defaults write com.apple.finder AppleShowAllFiles YES</code>, poi riavvia Finder</li>
+ <li>Apri il file .bash_profile oppure .bashrc con un editor di testo come Text Wrangler o Sublime Text (dev'essere un editor di testo, non un programma di videoscrittura)</li>
+ <li>Nel file aggiungi la riga PATH=/Users/[IL TUO NOME UTENTE]/Desktop/adt/sdk/platform-tools:$PATH (inserire il proprio nome utente al posto di "chrismills")</li>
+ <li>Salva e chiudi il file</li>
+ <li>Riavvia il terminale ed effettua un test scrivendo <code>adb devices</code>. Se visualizzi il messaggio <code>List of devices attached</code>, l'operazione si è conclusa correttamente!</li>
+</ul>
+
+<h3 id="Linux_Mac">Linux &amp; Mac</h3>
+
+<p>Se stai usando un sistema Linux o Mac non sono necessarie ulteriori operazioni anche se, a seconda della distribuzione Linux che utilizzi, potresti dover <a href="https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">aggiungere una regola udev</a> per il telefono, con una configurazione simile a questa:</p>
+
+<pre class="language-html">SUBSYSTEM=="usb", ATTRS{idVendor}=="05c6", ATTRS{idProduct}=="9025", GROUP="users", MODE="0666"</pre>
+
+<p>Assicurati di ricaricare le regole con <code>--reload-rules</code>, poi stacca e riattacca il dispositivo prima di procedere.</p>
+
+<h3 id="Windows">Windows</h3>
+
+<p>Per inviare le app al telefono utilizzando <a href="/it/Firefox_OS/Using_the_App_Manager">AppManager</a> o <a href="/it/Firefox_OS/Debugging/Installing_ADB">ADB</a> avrai bisogno di installare un driver per consentire la comunicazione via USB. Segui le istruzioni seguenti per installarli.</p>
+
+<h4 id="Scaricare_il_driver">Scaricare il driver</h4>
+
+<p>Scarica da <a href="http://cds.w5v8t3u9.hwcdn.net/Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall.zip">qui</a> il driver per Windows. Quando l'avrai scaricato estrai il contenuto del file ZIP in una cartella del tuo hard drive.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: l'Android Debug Bridge (<a href="/it/Firefox_OS/Debugging/Installing_ADB">ADB</a>) deve essere già installato.</p>
+</div>
+
+<h4 id="Installare_il_driver_USB">Installare il driver USB</h4>
+
+<p>A questo punto connetti il tuo Flame al computer utilizzando un cavo USB.</p>
+
+<p>Per installare il driver apri la cartella <code>Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall</code> all'interno della cartella nella quale hai estratto il file ZIP e fai doppio clic sull'eseguibile <code>DriverInstaller.exe</code> . Potresti ricevere un avvertimento che ti informa che l'eseguibile proviene da un autore sconosciuto. Se accade fai clic sul pulsante <em>Sì</em> e l'eseguibile verrà avviato.</p>
+
+<p><img alt="Simple dialog box showing a picture of a phone along with install and uninstall buttons." src="https://mdn.mozillademos.org/files/8079/driver-install.png" style="display: block; height: 523px; margin: 0px auto; width: 358px;"></p>
+
+<p>Fai clic sul pulsante <em>Install </em>per installare il driver.</p>
+
+<p>Dopo che il driver è stato installato puoi verificare che funzioni aprendo una riga di comando su Windows e digitando <code>adb devices</code> . Questo dovrebbe fornire un elenco di dispositivi connessi simile a:</p>
+
+<pre class="language-html">List of devices attached
+3561d02a          device</pre>
+
+<p>Se il tuo dispositivo non viene visualizzato, controlla la Gestione Dispositivi di Windows. Il tuo Flame potrebbe essere indicato come "ACER ADB Interface". Puoi confermarlo scollegando e ricollegando il dispositivo e verificando che scompaia dalla gestione dispositivi. Disinstalla il driver facendo clic col tasto destro del mouse su "ACER ADB Interface" e facendo poi clic su Disinstalla. Poi esegui nuovamente l'installazione come sopra. È consigliabile impostare il conto alla rovescia per lo spegnimento dello schermo del Flame ad un valore alto (su Impostazioni &gt; Schermo &gt; Blocca schermo dopo) poiché pare che Windows disinstalli e reinstalli il driver di default quando lo schermo si spegne.</p>
+
+<h2 id="Aggiornare_il_software_del_tuo_Flame">Aggiornare il software del tuo Flame</h2>
+
+<p>Saranno disponibili due "canali" principali per le versioni di Firefox OS rilasciate per il Flame:</p>
+
+<ul>
+ <li>Il primo è il nostro canale di rilascio. Il Flame viene fornito con questo canale pre-installato e riceverà gli aggiornamenti via Internet per le versioni successive del sistema operativo, vale a dire che si aggiornerà dalla versione 1.3 alla 1.4, alla 2.0 alla 2.1 ecc.</li>
+ <li>Il secondo è il canale nightly. Sul Flame è possibile installare manualmente questo canale e, dopo l'installazione iniziale, si riceveranno aggiornamenti via Internet quotidianamente o quasi.</li>
+</ul>
+
+<p>Puoi scaricare i file e gli strumenti di ripristino ai seguenti link:</p>
+
+<ul>
+ <li><a href="http://cds.w5v8t3u9.hwcdn.net/Flame_2.0_v180_1.zip">Base image v180.zip</a>: un archivio contenente le immagini base di Firefox OS 2.0 per il Flame. Per installarle è sufficiente decomprimere il file e avviare lo script (./flash.sh).</li>
+</ul>
+
+<p>Per installare l'immagine di base sul tuo dispositivo:</p>
+
+<ol>
+ <li>Assicurati che l'opzione di debug remoto sia attivata sul tuo Flame, utilizzando l'opzione <em>Debug Remoto/Debug via USB</em> nelle Impostazioni di sviluppo del tuo dispositivo (l'opzione potrebbe chiamarsi in modo diverso a seconda che tu abbia installato una versione pari o inferiore alla 1.3 o pari o superiore alla 1.4).</li>
+ <li>Collega il Flame al tuo computer attraverso il cavo USB. Verifica che il computer sia connesso al dispositivo eseguendo il comando <code>adb devices</code> in un terminale.</li>
+ <li>Scarica ed estrai il software appropriato per il tuo sistema (il file <code>.zip</code> se utilizzi Mac o Linux, oppure il <code>.exe</code> se utilizzi Windows).</li>
+ <li>Entra nella directory in cui hai estratto il software ed eseguilo:
+  <ul style="margin-left: 40px;">
+   <li>In Windows, entra nella directory tramite il prompt dei comandi, poi avvia lo script <code>flash.bat</code> (o fai doppio clic sul file).<br>
+    NOTA: Se il file non fosse presente, puoi rinominare il file <code>flash.sh</code> in <code>file.bat </code>e usare quello.</li>
+   <li>In Linux / OSX, utilizza il terminale per entrare nella directory, poi esegui lo script flash.sh utilizzando il comando <code>sudo ./flash.sh</code> (se non lo avvii utilizzando <code>sudo</code>, lo script potrebbe non riconoscere il telefono e non funzionare).</li>
+  </ul>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: ti incoraggiamo, inoltre, a compilare da te Firefox OS per installarlo sul tuo Flame. Vedi l'articolo <a href="/it/Firefox_OS/Building_and_installing_Firefox_OS">Compilare e installare Firefox OS</a>.</p>
+</div>
+
+<h3 id="Aggiornare_il_Flame_ad_una_versione_nightly">Aggiornare il Flame ad una versione nightly</h3>
+
+<div class="note">
+<p><strong>Nota</strong>: al momento le versioni di sviluppo Nightly di Firefox OS non supportano l'A-GPS. Questo potrebbe causare problemi di performance delle funzionalità GPS. Contiamo di risolvere il problema con un aggiornamento futuro sul canale Nightly.</p>
+</div>
+
+<ol>
+ <li>Prima di aggiornare il tuo telefono alla versione nightly dovresti installare l'ultima immagine di base per assicurarti che il sistema sottostante sia aggiornato. Puoi scaricare un'immagine di base tramite i collegamenti qui sopra.</li>
+ <li>Poiché i passi descritti sopra installano una nuova versione del sistema operativo, dovrai abilitare nuovamente il debug remoto sul Flame, usando l'opzione Debug remoto nelle <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings">opzioni Sviluppo</a>.</li>
+ <li>Scegli la versione Nightly che vuoi installare. Puoi trovarne varie all'indirizzo <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/</a>. Probabilmente quella che ti interessa è una tra:
+  <ul style="margin-left: 40px;">
+   <li>Versioni di produzione (includono le varie lingue)
+    <ul>
+     <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central-flame-kk/">Ultima versione master</a> (al momento 2.2)</li>
+     <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-aurora-flame-kk/">Ultima versione Aurora</a> (al momento 2.1)</li>
+     <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g32_v2_0-flame-kk/">Ultima versione di rilascio</a> (al momento 2.0)</li>
+    </ul>
+   </li>
+   <li>Versioni di sviluppo (includono app di prova e solo le pseudo-lingue)
+    <ul>
+     <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central-flame-kk-eng/">Ultima versione master</a> (al momento 2.2)</li>
+     <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-aurora-flame-kk-eng/">Ultima versione Aurora</a> (al momento 2.1)</li>
+     <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g30_v1_4-flame/">Ultima versione di rilascio </a>(al momento 2.0)</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Scegli una versione e scarica sia il file <code>b2g-XX.XX.en-US.android-arm.tar.gz</code> che <code>gaia.zip</code>.</li>
+ <li>Scarica il <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh">shallow flash script</a> e salvalo in una directory appropriata (ad esempio la stessa directory dove hai salvato i due file scaricati prima).</li>
+ <li>Installa le immagini sul telefono col seguente comando:
+  <h4 id="Mac" style="line-height: 24px;">Mac</h4>
+
+  <pre class="brush: bash">./shallow_flash.sh -g /path/to/gaia.zip -G /path/to/b2g-XX.XX.en-US.android-arm.tar.gz</pre>
+
+  <h4 id="Linux" style="line-height: 24px;">Linux</h4>
+
+  <pre class="brush: bash">./shallow_flash.sh -ggaia.zip -Gb2g-XX.XX.en-US.android-arm.tar.gz</pre>
+
+  <h4 id="Windows_(Nota_istruzioni_provvisorie_potrebbe_non_funzionare_al_momento_funzionante_con_Cygwin)">Windows (Nota: istruzioni provvisorie, potrebbe non funzionare al momento; funzionante con Cygwin)</h4>
+
+  <pre class="brush: bash language-html"><code class="language-bash">shallow_flash.sh -g gaia.zip -G b2g-XX.XX.en-US.android-arm.tar.gz</code>
+</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Nota</strong>: se ricevi un errore "permission denied" (permesso negato) durante l'esecuzione del comando, probabilmente lo script non ha i permessi corretti. Eseguire <code>chmod +x shallow_flash.sh</code> dovrebbe risolvere il problema.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: uno "shallow flash" aggiorna solamente <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko">Gecko</a> e <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gaia">Gaia</a>, al contrario di un'installazione completa che aggiorna Gecko/Gaia ma anche il livello <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gonk">Gonk</a> sottostante e i binari associati al particolare tipo di dispositivo. Per questo è il caso di installare prima l'immagine di base ufficiale, come suggerito sopra, e poi effettuare lo "shallow flash" sopra di essa, una volta che i livello Gonk e quello dei binari sono a posto.</p>
+</div>
+
+<div class="warning">
+<p id="Shallow_flash_flashes_more_than_just_Gecko_and_Gaia_so_all_the_data_on_the_device_is_lost!">Le immagini Shallow contengono altro oltre a Gecko e Gaia, quindi tutti i dati nel dispositivo verranno cancellati!</p>
+</div>
+
+<p>Una volta terminato, il telefono dovrebbe riavviarsi con la versione aggiornata e mostrare la sequenza di primo avvio.</p>
+
+<h4 id="Risoluzione_dei_problemi_dei_font">Risoluzione dei problemi dei font</h4>
+
+<p>Dopo aver aggiornato Gecko e Gaia alla versione nightly con l'immagine base v180, si verifica un'incongruenza tra i font che Gecko e Gaia si aspettano e quelli forniti dall'immagine base. Per sopperire al problema, scarica il <a href="https://people.mozilla.org/~mwu/fira-font-update.zip">pacchetto di aggiornamento dei font</a>, estrailo, entra nella cartella creata dall'estrazione ed esegui lo script flash.sh.</p>
+
+<h4 id="Spostartsi_sul_canale_di_aggiornamento_nightly">Spostartsi sul canale di aggiornamento nightly</h4>
+
+<ol>
+ <li>Assicurati che il debug remoto sia abilitato sul tuo Flame, utilizzando l'opzione Debug remoto/Debug USB nelle <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings">Impostazioni di sviluppo </a>del dispositivo.</li>
+ <li>Scarica lo script di <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/change_channel.sh">modifica del canale</a>: segui il link, fai clic sul pulsante <em>Raw</em>, poi utilizza la funzionalità di salvataggio del browser per salvare la pagina direttamente come<code> change_channel.sh</code>.</li>
+ <li>Nel terminale, utilizza <code>cd </code>per entrare nella cartella in cui hai salvato lo script e spostati nel canale di aggiornamento desiderato eseguendo il seguente comando:<br>
+
+  <pre class="brush: bash language-html"><code class="language-bash">./change_channel.sh -v nightly</code></pre>
+ </li>
+ <li>Quando il telefono si sarà riavviato puoi verificare se esistono aggiornamenti tramite la voce <em>Impostazioni &gt; Informazioni dispositivo &gt; Controlla ora</em></li>
+</ol>
+
+<p>Dovresti ora essere in grado di ricevere aggiornamenti OTA sul tuo telefono.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Puoi scegliere tra vari canali di aggiornamento. Esegui il comando "./change_channel.sh -h" per scoprire quali sono gli altri canali.</p>
+</div>
+
+<h3 id="Modalità_Fastboot">Modalità Fastboot</h3>
+
+<p>Se l'installazione di una nuova versione non va a buon fine, il telefono potrebbe smettere di rispondere, portandolo a riavviarsi in modalità ripristino. Questa modalità mette a disposizione alcune opzioni (<em>Reboot</em>, <em>Update from adb</em>, <em>Wipe data</em>, <em>Wipe cache</em>, e <em>Update from sdcard</em>). Purtroppo, selezionare <em>Update from adb</em> avvia una modalità di caricamento che non permette di utilizzare altri comandi di adb. Il comando <code>adb sideload</code> funzionerebbe, ma i vari script per l'installazione fanno affidamento su altri comandi che non funzionano in questa modalità.</p>
+
+<p>Dalla modalità sideload, puoi forzare la modalità fastboot:</p>
+
+<ol>
+ <li>Spegni il telefono (potrebbe comportare la rimozione della batteria in casi estremi...)</li>
+ <li>Collega il cavo USB.</li>
+ <li>Riaccendi il telefono premendo contemporaneamente il pulsante di accensione e quello Volume giù.</li>
+</ol>
+
+<p>Il telefono dovrebbe mostrare il testo "FASTBOOT": si trova in modalità fastboot e in attesa di una connessione USB. Una volta connesso, adb dovrebbe riconoscerlo quando si esegue il comando <code>fastboot devices</code>. Nota che adb non lo riconosce. Lo riconosce solo fastboot. In questa modalità puoi usare lo script di installazione per la versione v180 come spiegato precedentemente. Poiché lo script utilizza sia comandi adb che comandi fastboot, potrebbero apparire alcuni errori iniziali riguardanti adb, ma l'installazione nel dispositivo dovrebbe essere avvenuta con successo al termine della procedura.</p>
+
+<h3 id="Modalità_di_download_di_emergenza">Modalità di download di emergenza</h3>
+
+<p>Quando l'installazione di una nuova distribuzione fallisce, il telefono diventa inutilizzabile e non si riesce ad avviarlo in modalità fastboot, è possibile utilizzare la modalità di download di emergenza per recuperare l'uso del telefono.</p>
+
+<p>Per entrare nella modalità di download di emergenza sono necessari un cavo USB e lo <a href="http://1drv.ms/1rCAQHk">Strumento per il Download di Emergenza</a>. Installa questo strumento e segui le istruzioni.</p>
+
+<h3 id="Modalità_ripristino">Modalità ripristino</h3>
+
+<p>È possibile avviare la modalità ripristino per eliminare i dati presenti nel telefono o per aggiornare manualmente il firmware. Ci sono due procedure per entrare in questa modalità:</p>
+
+<ul>
+ <li>Se gli strumenti <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> sono disponibili, assicurati che l'opzione Debug remoto sia attivata nelle <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Remote_debugging">Opzioni sviluppatore</a>, connettere il telefono al computer via USB e digitare alla riga di comando <code>adb reboot recovery</code>.</li>
+ <li>Se il telefono è spento, premi il pulsante di accensione e quello per alzare il volume contemporaneamente.</li>
+</ul>
+
+<p>In modalità ripristino, utilizza i pulsanti di controllo volume per muoversi tra le voci disponibili e il pulsante di accensione per selezionare. Assicurati di aver effettuato un backup dei dati del telefono (contatti, SMS, ecc.) prima di eliminarli e di avere pronti i pacchetti di aggiornamento.</p>
+
+<h2 id="Caricare_app_sul_tuo_Flame">Caricare app sul tuo Flame</h2>
+
+<p>Lo strumento App Manager semplifica l'invio di app al telefono per provarle ecc. Le istruzioni complete sono disponibili nell'articolo <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">Usare l'App Manager</a>.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: se stai utilizzando Firefox Nightly, puoi utilizzare il nostro nuovo strumento <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">WebIDE</a>, con le stesse funzionalità dell'app manager e molto di più.</p>
+</div>
+
+<p> </p>
+
+<h2 id="Regolazione_della_RAM">Regolazione della RAM</h2>
+
+<p>È possibile regolare la quantità di RAM disponibile per testare come le app si comportino su terminali Firefox OS con minore memoria disponibile.</p>
+
+<p>La procedura consiste nell'entrare in modalità fastboot (è necessario installare prima di tutto fastboot, disponibile nella stessa pagina dell'SDK insieme ad <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a>) e digitare:</p>
+
+<pre class="brush: bash">adb reboot bootloader
+fastboot oem mem [0|256-1024]</pre>
+
+<p>“0” indica la memoria rilevata automaticamente, mentre “256-1024” è la quantità in megabyte. Ad esempio, se si volesse impostare la quantità di RAM a 512 M, si dovrebbe digitare <code>fastboot oem mem 512</code>.</p>
+
+<p>Sarà necessario riavviare il telefono affinché l'impostazione diventi effettiva. Sarà sufficiente digitare:</p>
+
+<pre class="brush: bash">fastboot reboot</pre>
+
+<p>La quantità di memoria correntemente impostata può essere letta entrando in modalità fastboot e digitando:</p>
+
+<pre class="brush: bash">fastboot getvar mem
+</pre>
+
+<h2 id="Specifiche_di_rete_e_del_dispositivo">Specifiche di rete e del dispositivo</h2>
+
+<p><strong>Reti</strong>:</p>
+
+<ul>
+ <li>802.11b/g/n wireless internet</li>
+ <li>GSM 850/900/1800/1900MHz</li>
+ <li>UMTS 850/900/1900/2100MHz</li>
+</ul>
+
+<p><strong>Hardware</strong>: ulteriori informazioni sono disponibili nell'articolo <a href="https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Phone_specs">Specifiche di telefoni e dispositivi</a>.</p>
+
+<p>Altre caratteristiche includono:</p>
+
+<ul>
+ <li>NFC</li>
+ <li>Bluetooth 3.0</li>
+ <li>Accelerometro</li>
+ <li>Radio FM</li>
+ <li>Sensore di prossimità</li>
+ <li>Supporto GPS W / A-GPS</li>
+ <li>Sensore di luce ambientale</li>
+</ul>
+
+<h2 id="Vedi_anche">Vedi anche</h2>
+
+<ul>
+ <li><a href="https://hacks.mozilla.org/2014/08/videos-getting-started-with-your-flame-device/">Getting started with your Flame</a>: Video guide di Chris Heilmann</li>
+</ul>

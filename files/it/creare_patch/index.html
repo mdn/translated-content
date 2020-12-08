@@ -1,0 +1,37 @@
+---
+title: Creare patch
+slug: Creare_patch
+translation_of: Mercurial/Using_Mercurial
+---
+<p>Dopo aver avuto <a href="it/Accesso_al_codice_di_Mozilla_via_CVS">accesso al codice</a>, dopo aver apportato ad esso delle modifiche, una volta <a href="it/Compilare_e_installare">costruito</a> e testato, può darsi che si desideri che queste modifiche vengano <a class="external" href="http://www.mozilla.org/hacking/life-cycle.html">riviste e accettate</a>. Per far ciò, occorre creare una lista dei file che sono stati modificati, che chiameremo
+  <i>
+    patch</i>
+  o
+  <i>
+    diff file</i>
+  .</p>
+<p>Creare il diff di un singolo file == Per creare il diff di un singolo file locale rispetto al file attualmente nel repository, si utilizzi:</p>
+<pre class="eval">$ cvs diff -u8p Winning eleven 11 by Tony Montana
+</pre>
+<p>Questo comando crea un diff nel cosiddetto formato 'unificato' (opzione &lt;tt&gt;-u&lt;/tt&gt;), con 8 righe di contesto. Il diff è inviato per default allo stdout. Per ridirigere l'output su un file, si utilizzi qualcosa come:</p>
+<pre class="eval">$ cvs diff -u8p Winning eleven 11 by Tony Montana &gt;
+</pre>
+<h3 id="Creare_un_diff_su_pi.C3.B9_file" name="Creare_un_diff_su_pi.C3.B9_file">Creare un diff su più file</h3>
+<p>Se, invece di utilizzare un normale file per NOMEFILE, si fornisce una directory, questa directory e tutte le sue sottodirectory verranno lette in modo ricorsivo. Per esempio</p>
+<pre class="eval">$ cvs diff -u8p . &gt; FILE_DI_OUTPUT
+</pre>
+<p>compara tutti i file nella directory corrente e nelle sue subdirectory con tutte le versioni nel repository, e scrive le differenze combinate in un file chiamato FILE_DI_OUTPUT, utilizzando 8 righe di contesto.</p>
+<p>Vi dovrebbe essere sufficiente contesto nella patch perchè venga compreso senza aprire il file sorgente. Le linee guida di default utilizzano 8 righe di contesto; se non sono sufficienti, verrà richiesto di rendere la patch comprensibile, si rimpiazzi 8 con un numero più elevato. Inoltre si noti che più contesto si include, più probabilità vi sono che il file venga incluso, se esso differisce pesantemente dal sorgente originale.</p>
+<h3 id="Includere_i_nuovi_file_in_una_patch" name="Includere_i_nuovi_file_in_una_patch">Includere i nuovi file in una patch</h3>
+<p>Per includere i nuovi file in una patch, si utilizzi l'opzione &lt;tt&gt;-N&lt;/tt&gt;:</p>
+<pre class="eval">$ cvs diff -u8pN . &gt; FILE_DI_OUTPUT
+</pre>
+<p>Un problema comune è che
+  <i>
+    cvs diff'</i>
+  non include i nuovi file su cui non è stato eseguito un <b>cvs add</b>, e questo comando richiede accesso al repository.</p>
+<p>La soluzione è utilizzare la utility <b>cvsdo</b> (<a class="external" href="http://viper.haque.net/~timeless/redbean/">), che modifica &lt;tt&gt;CVS/Entries&lt;/tt&gt; per far credere al cvs che il file sia stato aggiunto al repository: </a></p>
+<pre class="eval"><a class="external" href="http://viper.haque.net/~timeless/redbean/">$ cvsdo add NUOVOFILE
+$ cvs diff -u8pN NEWFILE &gt; FILE_DI_OUTPUT
+</a></pre>
+<p><a class="external" href="http://viper.haque.net/~timeless/redbean/">Si noti che questo trucco non funziona per le nuove directory; per queste, <code>cvs add</code> deve realmente modificare il repository immediatamente, il chè richiede un accesso in scrittura. </a></p>

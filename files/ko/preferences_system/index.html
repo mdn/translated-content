@@ -1,0 +1,49 @@
+---
+title: Preferences System
+slug: Preferences_System
+tags:
+  - Preferences system
+  - XUL
+---
+<p>이 문서는 Aviary Toolkit의 새 preferences system을 설명합니다. 이 시스템을 쓰면 여러 플랫폼(Windows, MacOS X, GNOME)에서 알맞게 동작하고 표시하는 preferences 창을 만들 수 있습니다.
+</p><p><b>주의:</b> Preferences System은 오직 Firefox/Thunderbird 1.5(alpha와 beta 포함)에서 시작할 수 있습니다. Firefox 1.0 기반 응용프로그램과 확장기능에서는 쓸 수 없습니다.
+</p><p>새 시스템은 <a href="ko/XUL">XUL</a> 요소와 속성 몇 개로 구현됩니다. 이에 관한 참조 정보는 아래 링크 가운데 하나를 클릭하면 이용할 수 있습니다.
+</p><div class="moreinfo">  <p><strong><a href="/ko/docs/Preferences_System">Preferences System</a> 문서:</strong></p>  <ul>    <li>소개: <a href="/ko/docs/Preferences_System/Getting_Started">시작하기</a> | <a href="/ko/docs/Preferences_System/Examples">예제</a> | <a href="/ko/docs/Preferences_System/Troubleshooting">문제 해결하기</a></li>    <li>참조: <code><a href="/ko/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/ko/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/ko/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/ko/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/ko/docs/Preferences_System/New_attributes">새 속성</a></li>  </ul></div>
+
+<h3 id=".EC.82.AC.EC.9A.A9" name=".EC.82.AC.EC.9A.A9"> 사용 </h3>
+<p><span class="comment">this will eventually be moved from here</span>
+</p><p>전형이 될 만한 preferences 창을 위한 코드는 아래처럼 보일 수 있습니다:
+</p>
+<pre>&lt;prefwindow id="appPreferences"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;prefpane id="pane1" label="&amp;pane1.title;"&gt;
+    &lt;preferences&gt;
+      &lt;preference id="pref1" name="pref.name" type="bool"/&gt;
+    &lt;/preferences&gt;
+
+   .. 위 preferences를 참조하는 UI 요소, 예를 들면:
+    &lt;checkbox id="check1" preference="pref1"
+              label="&amp;check1.label;" accesskey="&amp;check1.accesskey;"/&gt;
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="pane2" label="&amp;pane2.title;" src="chrome://uri/to/pane.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p>Pane content는 inline이나 dynamic 오버레이(overlay)를 거쳐 로드될 pane content를 위해 공급된 외부 chrome URI로 지정할 수 있습니다. 여러분은 대상으로 삼는 플랫폼을 위한 <abbr title="Human Interface Guidelines">HIG</abbr>를 읽는데 주의하고 서로 다른 창 제목을 알맞게 설정하기 위해 필요하다면 XUL 전처리기(preprocessor)를 써야 합니다. 또한 창 크기가 선택(된) panel이 바뀜에 따라 바뀌지 않는 플랫폼(예 Windows)을 위한 높이(em으로)뿐만 아니라, 각 대상 플랫폼을 위한 전처리기를 써서 알맞게 창 너비(em으로)를 지정하는데 주의해야 합니다.
+</p>
+<h3 id="XULRunner_.EC.9D.91.EC.9A.A9.ED.94.84.EB.A1.9C.EA.B7.B8.EB.9E.A8.EC.97.90.EC.84.9C_.EC.93.B0.EB.8A.94_.EB.B2.95" name="XULRunner_.EC.9D.91.EC.9A.A9.ED.94.84.EB.A1.9C.EA.B7.B8.EB.9E.A8.EC.97.90.EC.84.9C_.EC.93.B0.EB.8A.94_.EB.B2.95"> XULRunner 응용프로그램에서 쓰는 법 </h3>
+<p>XULRunner 응용프로그램에서 preferences 대화상자를 열 때는, 반드시 다음사항을 점검하세요:
+</p>
+<ul><li> 두 boolean preferences(browser.preferences.animateFadeIn과 browser.preferences.instantApply)는 기본 preferences로 정의돼야 합니다(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=350528" title="FIXED: XULRunner needs to ship with some additional preferences">bug 350528</a> 참조). 예:
+</li></ul>
+<pre class="eval">pref("browser.preferences.animateFadeIn", false);
+pref("browser.preferences.instantApply", true);
+</pre>
+<ul><li> preferences 대화상자를 열기 위해 openDialog()를 호출할 때는, "toolbar"가 features 문자열에 포함돼야 합니다. 예:
+</li></ul>
+<pre class="eval">var features = "chrome,titlebar,toolbar,centerscreen,modal";
+window.openDialog(url, "Preferences", features);
+</pre>
+<h3 id="Bugzilla" name="Bugzilla"> Bugzilla </h3>
+<p>Preferences 바인딩의 bug를 위한 컴포넌트(하지만 Firefox/Thunderbird Options UI용은 아님)는 Toolkit:Preferences (<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit">file a bug</a> <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Toolkit&amp;component=Preferences&amp;resolution=---&amp;chfieldto=Now">list open bugs</a>)
+</p>

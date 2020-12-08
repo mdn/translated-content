@@ -1,0 +1,17 @@
+---
+title: Cambiamenti di XMLHttpRequest in Gecko1.8
+slug: Cambiamenti_di_XMLHttpRequest_in_Gecko1.8
+tags:
+  - Estensioni
+  - Tutte_le_categorie
+  - XMLHttpRequest
+translation_of: Mozilla/XMLHttpRequest_changes_for_Gecko_1.8
+---
+<p>Questo documento descrive alcuni dei cambiamento che sono stati fatti all'implementazione di <a href="it/XMLHttpRequest">XMLHttpRequest</a> di <a href="it/Gecko">Gecko</a> dalla versione 1.7 (che era usata per esempio da Firefox 1.0) alla 1.8. Queste modifiche si applicano solo alle estensioni e alle applicazioni in XUL. Non si applicano invece alle pagine web.
+</p>
+<h3 id="Cambiamenti_a_XMLHttpRequest.send" name="Cambiamenti_a_XMLHttpRequest.send"> Cambiamenti a XMLHttpRequest.send </h3>
+<p>Se si passa un'istanza di <a href="it/NsIInputStream">nsIInputStream</a> al metodo <code>send</code>, non bisogna più includere le intestazioni &lt;tt&gt;Content-Length&lt;/tt&gt; e &lt;tt&gt;Content-Type&lt;/tt&gt; all'inizio dello stream. Invece, l'intestazione &lt;tt&gt;Content-Length&lt;/tt&gt; verrà dedotta dalla lunghezza dello stream e &lt;tt&gt;Content-Type&lt;/tt&gt; sarà specificato manualmente chiamando il metodo <code>setRequestHeader</code>. Queste modifiche sono pienamente documentate in <a class="external" href="http://lxr.mozilla.org/mozilla1.8/source/extensions/xmlextras/base/public/nsIXMLHttpRequest.idl#213">nsIXMLHttpRequest.idl</a>.
+</p>
+<h3 id="Cambiamenti_a_XMLHttpRequest.onreadystatechange" name="Cambiamenti_a_XMLHttpRequest.onreadystatechange"> Cambiamenti a XMLHttpRequest.onreadystatechange </h3>
+<p>Il tipo di questo attributo ora è <code>nsIOnReadyStateChangeHandler</code>, non più <code>nsIOnReadystatechangehandler</code> (a S di State ora è maiuscola).
+</p>{{ languages( { "en": "en/XMLHttpRequest_changes_for_Gecko1.8" } ) }}

@@ -1,0 +1,113 @@
+---
+title: Creating a Window
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Creating_a_Window
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Manifest_Files" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_Buttons">다음  »</a></p>
+</div><p></p>
+
+<div class="highlight">
+<p>우리는 이 입문서를 통해 간단한 파일 찾기(find files) 유틸리티를 만들어 볼 작정입니다.</p>
+</div>
+
+<p>하지만, 먼저 XUL 파일의 기본 구문을 살펴보겠습니다.</p>
+
+<h3 id="XUL_.ED.8C.8C.EC.9D.BC_.EB.A7.8C.EB.93.A4.EA.B8.B0" name="XUL_.ED.8C.8C.EC.9D.BC_.EB.A7.8C.EB.93.A4.EA.B8.B0">XUL 파일 만들기</h3>
+
+<p>XUL 파일은 어떤 이름도 줄 수 있지만 사실 확장자는 .xul입니다. 가장 간단한 XUL 파일의 구조는 다음과 같습니다.</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+&lt;!-- Other elements go here --&gt;
+&lt;/window&gt;
+</pre>
+
+<p>이 창은 아무런 UI 요소를 담고 있지 않기 때문에 아무것도 하지 않습니다. UI 요소는 다음 절(section)에서 추가합니다. 여기서는 위 코드를 한줄한줄 설명합니다.</p>
+
+<ol>
+ <li><strong>&lt;?xml version="1.0"?&gt;</strong><br>
+  이 줄은 이 파일이 XML 파일임을 간단히 선언합니다. 보통 HTML 파일 상단에 HTML 태그를 놓는 것과 같이 이 줄을 각 xul 파일 상단에 추가합니다.</li>
+ <li><strong>&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</strong><br>
+  이 줄은 파일에 쓸 스타일 시트를 지정하는 데 씁니다. 이는 XML 파일이 스타일 시트를 가져오는(import) 데 쓰는 구문입니다. 이 경우에, 우리는 스킨 꾸러미(package)의 전역(global) 부분에 있는 스타일을 가져옵니다. 우리가 특정 파일을 지정하지 않기에 Mozilla가 디렉토리에서 어떤 파일을 쓸 지 결정합니다. 위 경우에, 가장 중요한 global.css 파일이 선택됩니다. 이 파일은 모든 XUL 요소를 위한 기본 선언 전부를 담고 있습니다. XML은 요소가 표시되는 법에 관한 아무런 지식이 없기 때문에, 그 파일은 방법을 나타냅니다. 보통, 모든 XUL 파일 상단에 이 줄을 놓습니다. 또한 비슷한 구문을 써서 다른 스타일 시트를 가져오기도 합니다. 보통은 자신의 스타일 시트 파일 안에서 전역 스타일 시트를 가져옴을 유념하세요.</li>
+ <li><strong>&lt;window</strong><br>
+  이 줄은 창(<code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>)을 기술함을 선언합니다. 각 사용자 인터페이스 창은 개별 파일에서 기술합니다. 이 태그는 대체로 HTML에서 전체 내용(content)을 둘러싸는 BODY 태그와 같습니다. <a href="ko/XUL/window#Attributes">여러 속성</a>이 <code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> 태그에 놓일 수 있습니다 -- 이 경우에는 넷입니다. 예제에서, 각 속성은 각 줄에 놓이지만 그래야만 하는 건 아닙니다.</li>
+ <li><strong>id="findfile-window"</strong><br>
+  <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성은 창이 스크립트에 의해 참조될 수 있도록 식별자(identifier)로 쓰입니다. 여러분은 보통 모든 요소에 <code>id</code> 속성을 놓습니다. 이름은 여러분이 원하는 아무거나 될 수 있지만 뭔가 관련이 있으면 좋습니다.</li>
+ <li><strong>title="Find Files"</strong><br>
+  <code><code id="a-title"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code></code> 속성은 창이 표시될 때 제목 표시줄에 나타나는 텍스트를 기술합니다. 이번 경우에는 '파일 찾기' 텍스트가 나타납니다.</li>
+ <li><strong>orient="horizontal"</strong><br>
+  <code><code id="a-orient"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 속성은 창의 항목 배열을 지정합니다. <code>horizontal</code>값은 항목이 창을 가로질러 가로로 놓임음 나타냅니다. 여러분은 또한 항목이 세로로 놓임을 뜻하는 <code>vertical</code>값을 써도 됩니다. 이 값이 기본값이므로, 혹시 여러분이 세로 방향이길 바라면 속성을 아주 빼도 됩니다.</li>
+ <li><strong>xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;</strong><br>
+  이 줄은 여러분이 창 요소의 자식 모두가 XUL임을 나타내기 위해 창 요소에 놓는 XUL용 이름공간(namespace)을 선언합니다. 이 URL은 실제로 결코 내려받지 않음을 유념하세요. Mozilla는 이 URL을 내부로 인지합니다.</li>
+ <li><strong><span class="nowiki">&lt;!-- Other elements go here --&gt;</span></strong><br>
+  이 주석 블록을 창에 나타내기 위해 다른 요소(버튼, 메뉴, 다른 사용자 인터페이스 컴포넌트)로 바꾸세요. 우리는 이 가운데 일부를 다음 여러 절에서 추가합니다.</li>
+ <li><strong>&lt;/window&gt;</strong><br>
+  그리고 끝으로, 파일 끝에서 <code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> 태그를 닫을 필요가 있습니다.</li>
+</ol>
+
+<h3 id=".EC.B0.BD_.EC.97.B4.EA.B8.B0" name=".EC.B0.BD_.EC.97.B4.EA.B8.B0">창 열기</h3>
+
+<p>XUL 창을 열기 위해, 쓸 수 있는 여러 방법이 있습니다. 혹시 여러분이 단지 개발 단계에 있다면, 그냥 Mozilla 브라우저 창 주소 표시줄에 URL(chrome:, file:이든 다른 URL 형이든)을 입력할 수 있습니다. 여러분은 또한 파일 관리자에서 Mozilla와 관련된 XUL 파일로 생각하는 파일을 두 번 클릭할 수 있습니다. XUL 창은 새 창이 아닌 브라우저 창에 나타나지만 이는 개발 초기 단계 동안은 대개 충분합니다.</p>
+
+<p>물론 옳은 방법은 JavaScript를 써서 창을 여는 겁니다. <a href="ko/HTML">HTML</a> 문서를 위해 할 수 있는 것처럼 <a href="ko/DOM/window.open">window.open()</a> 함수를 쓰는 것 같은 새 구문이 필요하지 않습니다. 그러나, 'chrome'으로 불리는 추가 flag 하나가 이것이 여는 <a href="ko/DOM/window.open#Window_functionality_features">chrome</a> 문서임을 브라우저에 나타내기 위해 필요합니다. 이는 보통 브라우저 창에 있는 도구 표시줄, 메뉴 등이 없이 창을 엽니다. 구문은 아래에 기술합니다:</p>
+
+<pre>window.open(url,windowname,flags);
+
+where the flags contains the flag "chrome" as in this example
+
+window.open("chrome://navigator/content/navigator.xul", "bmarks", "chrome,width=600,height=300");
+</pre>
+
+<div class="highlight">
+<h5 id="findfile.xul_.EC.98.88.EC.A0.9C" name="findfile.xul_.EC.98.88.EC.A0.9C">findfile.xul 예제</h5>
+
+<p>파일 찾기 대화상자를 위한 기본 파일을 만들면서 시작하죠. findfile.xul 파일을 만들어 findfile.manifest 파일(우리가 이전 절에서 만들었슴)에 지정된 content 디렉토리에 넣으세요. 이 페이지 상단에 보이는 XUL 템플릿을 파일에 추가하고 저장하세요.</p>
+</div>
+
+<p>여러분은 Mozilla가 시작할 때 XUL 파일을 지정하기 위해 명령줄 매개변수 '-chrome'을 쓸 수 있습니다. 지정하지 않으면, 기본 창 열기가 열립니다(보통은 브라우저 창). 예를 들어, 우리는 다음 가운데 어느 쪽으로도 파일 찾기 대화상자를 엽니다.</p>
+
+<pre>mozilla -chrome chrome://findfile/content/findfile.xul
+
+mozilla -chrome resource:/chrome/findfile/content/findfile.xul
+</pre>
+
+<p>여러분이 명령줄(여러분의 플랫폼에 있다고 가정)에서 이 명령을 실행하면, 파일 찾기 대화상자를 Mozilla 브라우저 창 대신에 기본값으로 엽니다. 물론, 우리가 창에 아무런 UI 요소도 넣지 않았기 때문에, 나타난 창을 볼 수 없습니다. 다음 절에서 일부 요소를 추가합니다.</p>
+
+<p>효과를 보기 위해, 다음은 북마크 관리자 창을 엽니다.</p>
+
+<pre class="eval">mozilla -chrome <a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a>
+
+<span class="highlightred">혹시 Firefox를 쓴다면, 아래로 해보세요.</span>
+firefox -chrome <a class="external" rel="freelink">chrome://browser/content/bookmarks/b...rksManager.xul</a>
+</pre>
+
+<p>'-chrome' 인수는 파일에 아무런 추가 특권(privilege)을 주지 않습니다. 대신, 주소 표시줄이나 메뉴와 같은 브라우저 chrome 없이 최상위 창으로 지정된 파일을 열게 합니다. 오직 chrome URL에 추가 특권이 있습니다.</p>
+
+<div class="note"><a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Extension Developer's Extension</a>은 여러분이 XUL 코드를 쳐 넣고 Mozilla 안에서 실시간으로 결과를 보게 하는 XUL 편집기를 담고 있습니다!</div>
+
+<h3 id=".EB.AC.B8.EC.A0.9C_.ED.95.B4.EA.B2.B0.ED.95.98.EA.B8.B0" name=".EB.AC.B8.EC.A0.9C_.ED.95.B4.EA.B2.B0.ED.95.98.EA.B8.B0">문제 해결하기</h3>
+
+<ul>
+ <li>혹시 XUL 창을 데스크탑에 보이지는 않지만 데스크탑 도구 표시줄에 아이콘이 있다면, xml-stylesheet 선언을 점검하세요. 여러분이 스타일시트를 바르게 포함했는지 확인하세요.</li>
+</ul>
+
+<pre class="eval"> &lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+</pre>
+
+<p>다음 절에서, 우리는 <a href="ko/XUL_Tutorial/Adding_Buttons">창에 버튼 몇 개를 추가</a>합니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Manifest_Files" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_Buttons">다음  »</a></p>
+</div><p></p>
+
+<p></p>

@@ -1,0 +1,46 @@
+---
+title: Scrolling Menus
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Scrolling_Menus
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Scrolling_Menus
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Popup_Menus" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_Event_Handlers">다음  »</a></p>
+</div><p></p>
+<p>이번 단원에서는 스크롤 메뉴와 스크롤 기능의 사용 방법에 대해 알아보겠습니다.</p>
+<h3 id=".ED.81.B0_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".ED.81.B0_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0">큰 메뉴 만들기</h3>
+<p>화면에 다 넣을수 없을만큼 많은 명령을 가진 메뉴를 작성하면 어떻게 될지 궁금하실 것입니다. Mozilla에서는 이런 경우를 위해 항목이 스크롤되는 기능을 제공합니다.</p>
+<div class="float-right">
+ <img alt="Image:menuscroll1.png"></div>
+<p>만약 사용할 수 있는 공간이 모자라면 메뉴의 양 끝에 화살표가 나타납니다. 이 때 마우스를 화살표 위에 갖다 대면 메뉴가 위, 아래로 스크롤됩니다. 공간이 충분하다면 화살표는 나타나지 않습니다. 이 때 주의할 것은 스크롤의 작동 방식은 테마에 따라 다르다는 것입니다.</p>
+<p>스크롤 기능은 자동으로 실행됩니다. 따라서 스크롤 메뉴를 만들기 위해 다른 것을 건드릴 필요는 없습니다. 스크롤 기능은 <code>menubar</code>, <code>popup</code>, <code>menulist</code>에 있는 메뉴에 적용됩니다. 이 기능은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> 요소를 이용하여 구현됩니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> 요소는 화살표가 있는 스크롤 상자를 만들 때도 사용할 수 있습니다.</p>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> 요소는 일반 상자가 사용될 수 있는 곳 어디서나 사용될 수 있습니다. 꼭 메뉴에만 사용해야 하는 것은 아닙니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> 요소는 항상 세로 상자이며 어떤 요소든 포함할 수 있습니다. 여러분은 드롭다운이 아닌 목록을 구현하기 위해 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> 요소를 사용할 수도 있습니다.</p>
+<h4 id=".EC.98.88.EC.A0.9C_-_.EC.8A.A4.ED.81.AC.EB.A1.A4.EB.90.98.EB.8A.94_.EB.B2.84.ED.8A.BC_.EB.AA.A9.EB.A1.9D" name=".EC.98.88.EC.A0.9C_-_.EC.8A.A4.ED.81.AC.EB.A1.A4.EB.90.98.EB.8A.94_.EB.B2.84.ED.8A.BC_.EB.AA.A9.EB.A1.9D">예제 - 스크롤되는 버튼 목록</h4>
+<p>아래는 스크롤할 수 있는 버튼 목록을 만드는 방법을 보여주는 예제입니다(화살표를 보려면 창을 줄여야 할것입니다).</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul">View</a></p>
+<pre>&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Red"/&gt;
+  &lt;button label="Blue"/&gt;
+  &lt;button label="Green"/&gt;
+  &lt;button label="Yellow"/&gt;
+  &lt;button label="Orange"/&gt;
+  &lt;button label="Silver"/&gt;
+  &lt;button label="Lavender"/&gt;
+  &lt;button label="Gold"/&gt;
+  &lt;button label="Turquoise"/&gt;
+  &lt;button label="Peach"/&gt;
+  &lt;button label="Maroon"/&gt;
+  &lt;button label="Black"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+<p>예제를 실행하면 전체 화면으로 표시될 것입니다. 하지만 창의 높이를 줄이면, 스크롤 화살표가 나타날 것입니다. 다시 창을 키우면 화살표가 사라질 것입니다.</p>
+<p>항상 화살표가 보이도록 하고 싶다면 <code>arrowscrollbox</code>에 CSS의 <code>max-height</code> 속성을 사용하여 크기를 제한하면 됩니다.</p>
+<p><code>arrowscrollbox</code>는 주로 메뉴와 팝업에서 유용하게 사용됩니다.</p>
+<p>다음에는 XUL 요소에 <a href="ko/XUL_Tutorial/Adding_Event_Handlers">이벤트 핸들러</a>를 지정하는 방법에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Popup_Menus" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_Event_Handlers">다음  »</a></p>
+</div><p></p>
+<p></p>

@@ -1,0 +1,137 @@
+---
+title: Persona
+slug: Mozilla/Persona
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona
+---
+<div class="callout-box">
+<p><strong>연락 및 도움을 얻고 싶다면!</strong></p>
+
+<p><a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">블로그</a>를 확인하거나, <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">메일링 리스트</a>에 가입하거나, <a class="link-https" href="https://wiki.mozilla.org/IRC" title="https://wiki.mozilla.org/IRC">IRC</a>에서 <a class="link-irc" href="irc://irc.mozilla.org/identity" title="irc://irc.mozilla.org/identity"><u><font color="#0066cc">#identity</font></u></a>를 찾아보세요.</p>
+</div>
+
+<p><a class="link-https" href="https://www.mozilla.org/en-US/persona/" title="https://www.mozilla.org/en-US/persona/">Mozilla Persona</a>는 웹을 위한 크로스-브라우저 로그인 시스템으로, 쉽고 알맞은 사용이 가능합니다. Persona는 <a href="https://developer.mozilla.org/ko/docs/persona/Browser_compatibility">모든 주요 브라우저</a>에서 작동하며, <a href="https://developer.mozilla.org/ko/docs/Persona/Quick_Setup">오늘 당장 시작할 수 있습니다.</a></p>
+
+<p>왜 우리와 우리의 사이트가 Persona를 사용해야 합니까?</p>
+
+<ol>
+ <li><strong>Persona는 사이트별 암호에 대한 </strong>사용자의 생성, 관리, 안전하게 관리하는 부담을 사용자와 웹사이트로부터<strong> 완전히 제거합니다.</strong></li>
+ <li><strong>Persona는 사용이 간편합니다.</strong> 두 번의 클릭 만으로도 Persona 사용자는 <a href="http://voo.st" title="http://voo.st">Voost</a>나 <a href="http://crossword.thetimes.co.uk/" title="http://crossword.thetimes.co.uk/">The Times Crossword</a>와 같은 사이트에 새로운 계정을 생성하지 않고도 로그인할 수 있습니다.</li>
+ <li><strong>Persona는 쉽게 구현할 수 있습니다</strong><strong>.</strong> 개발자는 반나절만에 Persona를 사이트에 추가할 수 있습니다.</li>
+ <li>무엇보다도, <strong>변경 불가능이 없습니다</strong>. 개발자는 모든 사용자의 확인 된 E-Mail 주소를 받고, 사용자는 Persona에 어떠한 E-Mail 주소도 사용할 수 있습니다.</li>
+</ol>
+
+<p>여기에 더해, Persona는 점점 나아지고 있습니다: Persona는 공개된 분산프로트콜로 제작되었으며, 직접 브라우저와 통합할 수 있으며 이메일 제공자가 네이티브 지원을 할 수 있도록 합니다. Persona를 사용한 사이트들은 오늘날 코드를 전혀 바꾸지 않아도 자동적으로 UX가 개선됩니다.</p>
+
+<p>시작하기 위해 읽어보세요!</p>
+
+<div class="note"><strong>노트:</strong> Persona는 개발 중입니다. <a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">블로그</a>로부터 새로운 기능에 대해 알아보거나, <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">메일링 리스트</a>에 가입하여 여러분의 의견을 피드백 해주세요!</div>
+
+<h2 id="사이트에서_Persona_사용하기">사이트에서 Persona 사용하기</h2>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h3 id="시작하기">시작하기</h3>
+
+    <dl>
+     <dt><a href="/ko/docs/Persona/Why_Persona" title="ko/Persona/Why_Persona">왜 Persona를 사용해야 합니까?</a></dt>
+     <dd>여러분의 사이트에 Persona를 지원해야 하는지, 그리고 어떻게 다른 ID와 인증 시스템이 다른지 비교해보십시오.</dd>
+     <dt><a href="/en/Persona/Quick_Setup" title="BrowserID/Quick setup">빠른 설치</a></dt>
+     <dd>여러분의 웹 사이트에 Persona를 빠르게 추가하는 방법을 알아보세요.</dd>
+    </dl>
+   </td>
+   <td>
+    <h3 id="Persona_API_레퍼런스">Persona API 레퍼런스</h3>
+
+    <p><a href="/en/DOM/navigator.id" title="navigator.id">navigator.id API 레퍼런스</a></p>
+
+    <dl>
+     <dd>웹 개발자가 Persona를 사이트에 추가할 수 있는 <code>navigator.id</code> 객체를 위한 레퍼런스입니다.</dd>
+     <dt><a href="/en/Persona/Remote_Verification_API" title="en/BrowserID/Remote_Verification_API">인증 API 레퍼런스</a></dt>
+     <dd>원격 인증 API에 대한 레퍼런스를 아래 링크에서 제공하고 있습니다.</dd>
+     <dd><code><a href="https://verifier.login.persona.org/verify">https://verifier.login.persona.org/verify</a></code></dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <h3 id="가이드">가이드</h3>
+
+    <dl>
+     <dt><a href="/en/Persona/Security_Considerations" title="BrowserID/Security considerations">보안 고려 사항</a></dt>
+     <dd>따라하기와 기술은 여러분의 Persona 개발을 안전하게 만듭니다.</dd>
+     <dt><a href="/en/Persona/Browser_compatibility" title="/Browser_compatibility">브라우저 호환성</a></dt>
+     <dd>브라우저의 Persona 지원에 대해 자세히 알아보세요.</dd>
+     <dt><a href="/en/Persona/Internationalization" title="/Internationalization">국제화</a></dt>
+     <dd>다른 언어에서는 어떻게 Persona를 관리하는지 알아보세요.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/The_implementor_s_guide">운영자 가이드</a></dt>
+     <dd>Persona에 도움을 보탠 사이트에서 제공하는 팁을 알아보세요.</dd>
+    </dl>
+   </td>
+   <td>
+    <h3 id="리소스">리소스</h3>
+
+    <dl>
+     <dt><a class="link-https" href="https://github.com/mozilla/browserid/wiki/Persona-Libraries" title="https://github.com/mozilla/browserid/wiki/BrowserID-Libraries">라이브러리와 플러그인</a></dt>
+     <dd>당신이 가장 선호하는 프로그래밍 언어, 웹 프레임워크, 블로그 또는 컨텐츠 관리 시스템(CMS)의 드롭인 라이브러리를 찾아보세요.</dd>
+     <dt><a class="link-https" href="https://github.com/mozilla/browserid-cookbook" title="https://github.com/mozilla/browserid-cookbook">Persona 설명서</a></dt>
+     <dd>Persona 사이트를 위한 예제 소스 코드입니다. C# (MVC3), PHP, Node.JS와 그 외에 대한 미리보기를 포함합니다.</dd>
+     <dt> </dt>
+     <dt><a href="https://developer.mozilla.org/ko/Persona/User_interface_guidelines">UI 가이드라인</a></dt>
+     <dd>사이트 이용자들에게 어떻게 Persona 로그인 시스템을 선사할 수 있는 지 담겨있습니다.</dd>
+     <dd> </dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="ID_제공에_대한_정보">ID 제공에 대한 정보</h2>
+
+    <p>만약 여러분이 E-Mail 제공 업체 또는 다른 ID 제공 서비스라면 Persona ID 제공자에 대해 링크를 통해 익혀보세요.</p>
+
+    <dl>
+     <dt><a href="/en-US/docs/Persona/Identity_Provider_Overview" title="IdP">IdP 개요</a></dt>
+     <dd>Persona ID 제공자의 고수준 보기.</dd>
+     <dt><a href="/en/Persona/Implementing_a_Persona_IdP" title="Guide to Implementing a Persona IdP">IdP 구현</a></dt>
+     <dd>IdP에 대해 기술적으로 세세한 가이드입니다.</dd>
+     <dt><a href="/en-US/Persona/IdP_Development_tips" title="Developer tips">개발 팁</a></dt>
+     <dd>A set of tips and tricks useful while developing a new Identity Provider.</dd>
+     <dt><a href="/en-US/docs/Persona/.well-known-browserid" title="https://developer.mozilla.org/en-US/docs/Persona/.well-known-browserid">.well-known/browserid</a></dt>
+     <dd>IdP가 광고를 사용할 경우 프로토콜에 대한 지원과 <code>.well-known/browserid</code> 파일에 대한 목적과 구조에 대한 개요입니다.</dd>
+    </dl>
+   </td>
+   <td>
+    <h2 id="Persona_프로젝트">Persona 프로젝트</h2>
+
+    <dl>
+     <dt><a href="/en/Persona/Glossary" title="navigator.id">어휘</a></dt>
+     <dd>BrowserID와 Persona의 용어 정의입니다.</dd>
+     <dt><a href="/en/Persona/FAQ" title="en/BrowserID/FAQ">FAQ</a></dt>
+     <dd>일반적인 질문에 대한 답변입니다.</dd>
+     <dt><a href="/en/Persona/Protocol_Overview" title="BrowserID/Protocol overview">프로토콜 개요</a></dt>
+     <dd>기본적인 BrowserID 프로토콜의 중간 수준 기술 개요입니다.</dd>
+     <dt><a href="/en/persona/Crypto" title="MDN">암호화</a></dt>
+     <dd>Persona와 BrowserID에 대한 암호화 개념을 살펴봅니다.</dd>
+     <dt><a class="link-https" href="https://github.com/mozilla/id-specs/blob/master/browserid/index.md" title="https://github.com/mozilla/id-specs/blob/master/browserid/index.md">명세</a></dt>
+     <dd>세부적인 기술은 여기에 있습니다.</dd>
+     <dt><a href="/Persona/Bootstrapping_Persona" title="en/BrowserID/Bootstrapping_BrowserID">Persona 웹 사이트</a></dt>
+     <dd>To get Persona going, we're hosting three services at <a class="link-https" href="https://login.persona.org" rel="freelink">https://login.persona.org</a>: a fallback Identity Provider, a portable implementation of the {{ domxref("navigator.id") }} APIs, and an identity assertion verification service.</dd>
+     <dt><a href="https://github.com/mozilla/browserid">Persona</a> 소스코드</dt>
+     <dd>Persona의 소스코드를 GitHub에서 찾으실 수 있습니다!</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

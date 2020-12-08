@@ -1,0 +1,112 @@
+---
+title: Using Spacers
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Using_Spacers
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Using_Spacers
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_HTML_Elements" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Button_Features">다음  »</a></p>
+</div><p></p>
+<p>이 단원에는 우리가 만든 요소들 사이에 여백을 넣는 방법을 알아볼 것입니다.</p>
+<h3 id=".EC.97.AC.EB.B0.B1.28spacer.29_.EB.84.A3.EA.B8.B0" name=".EC.97.AC.EB.B0.B1.28spacer.29_.EB.84.A3.EA.B8.B0">여백(spacer) 넣기</h3>
+<p>사용자 인터페이스를 개발하는데 있어서의 문제점 중 하나는 사용자마다 서로 다른 화면 장치를 가진다는 것입니다. 어떤 사용자는 고해상도에 큰 화면을 가지고 있으며, 또 다른 사용자는 저해상도를 가지고 있을 수 있습니다. 더군다나, 다른 플랫폼은 사용자 인터페이스에 특별한 요구조건을 가지고 있을 수 있습니다. 다중 언어를 지원할 경우, 어떤 언어에 사용된 텍스트는 다른 언어보다 더 많은 공간이 필요할지도 모릅니다.</p>
+<p>다중 플랫폼과 언어를 지원해야 하는 응용프로그램은 이를 위해 많은 여백을 가지는 창 배치를 합니다. 일부 플랫폼과 사용자인터페이스 툴킷은 사용자의 요구에 맞게 크기 조절과 위치 설정을 잘 처리하는 구성요소를 제공합니다. (예를 들어, 자바에서는 레이아웃 관리자를 사용합니다.)</p>
+<p>XUL은 요소의 위치와 크기 재설정을 자동으로 처리할 수 있는 기능을 제공하고 있습니다. 앞서 본것 처럼, 파일 찾기 창은 내부 요소 크기에 맞게 표시되었습니다. 우리가 새로운 요소를 추가할 때마다 창 크기는 더욱 커졌습니다.</p>
+<p>XUL은 '상자 모델(Box Model)'이라고 하는 레이아웃 시스템을 사용합니다. 이에 대해서는 <a href="ko/XUL_Tutorial/The_Box_Model">다음 단원</a>에서 언급할텐데, 이는 기본적으로 창을 요소를 포함한 일련의 상자로 나눌 수 있게 해줍니다. 상자는 사용자가 정의한 사양에 근거하여 위치와 크기를 조절하게 된다. 현재로써는, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 요소가 상자 형식이라는 것만 알도록 하자.</p>
+<p>상자에 대한 세부 내용을 다루기 전에, 레이아웃에 유용한 또 다른 XUL 요소인 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>를 소개할 것입니다. 여백(spacer)는 매우 단순하고 한가지 속성만을 필요로 하는데, 곧 설명하겠습니다. 가장 단순한 여백(spacer)은 다음과 같습니다.</p>
+<pre class="eval">&lt;spacer flex="1"/&gt;
+</pre>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>는 창에 공백을 넣는 데 사용됩니다. 공백 요소의 가장 유용한 점은 사용자가 창의 크기를 조절하는 것처럼 공백 자체가 늘어나거나 줄어들 수 있다는 것입니다. 창의 크기와 상관없이 버튼을 창의 오른쪽 또는 하단에 두면서 오른쪽 또는 하단 모서리에 고정시키는 것이라고 보면 됩니다. 앞으로 보겠지만, 수많은 레이아웃 효과를 주기 위해서 여러개의 공백 요소를 사용할 수 있습니다.</p>
+<p>위의 구문에서, 공백 요소는 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>라는 한 가지 속성을 가지고 있습니다. 이것은 공백의 유연성을 정의하는 데 사용됩니다. 위의 경우에서, 공백은 1이라는 flex를 가집니다. 이것은 공백 요소를 신축성 있게 만들어 줍니다. 사용자가 직접 창 내부에 공백 요소를 위치시키면, 창의 크기가 변경됨에 따라 공백도 같이 늘어나게 됩니다.</p>
+<p>잠시 후 파일찾기 대화창에 공백 요소를 추가할 것입니다. 그 전에 먼저 현재 대화창의 크기를 조절할 때 어떤일이 일어나는지 보도록 하겠습니다.</p>
+<p><img alt="Image:springs1.jpg"></p>
+<p>파일찾기 창의 크기를 변경하더라도 포함된 요소들은 그것들의 원래 위치에 그대로 있는 것을 볼 수 있습니다. 창이 더 많은 공간을 가지게 되더라도, 이들 중 어느 것도 이동하거나 크기를 변경하지 않습니다. 글상자(text box)와 찾기(Fine) 버튼 사이에 공백 요소를 추가하였을 때는 어떻게 될지 보겠습니다.</p>
+<p><img alt="Image:springs2.jpg"></p>
+<p>공백 요소를 추가하고 창 크기를 조절하면, 공백이 여백을 채우기 위해 확장되는 것을 볼 수 있습니다. 버튼들은 밀려나 위치하게 됩니다.</p>
+<div class="highlight">
+ <h5 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">우리의 파일 찾기 예제</h5>
+ <p>공백 요소를 추가한 코드는 아래와 같습니다. 해당 요소를 Find 버튼 앞에 삽입하세요.</p>
+ <pre class="eval"><span class="highlightred">&lt;spacer flex="1"/&gt;</span>
+
+&lt;button id="find-button" label="Find"/&gt;
+</pre>
+</div>
+<h3 id=".EC.9C.A0.EC.97.B0.EC.84.B1.EC.97.90_.EB.8C.80.ED.95.9C_.EB.8D.94_.EB.A7.8E.EC.9D.80_.EA.B2.83.EB.93.A4" name=".EC.9C.A0.EC.97.B0.EC.84.B1.EC.97.90_.EB.8C.80.ED.95.9C_.EB.8D.94_.EB.A7.8E.EC.9D.80_.EA.B2.83.EB.93.A4">유연성에 대한 더 많은 것들</h3>
+<p>XUL은 요소에 적당한 넓이와 높이를 계산하여 여백을 추가하는 식으로 창에 있는 요소를 배치합니다. 사용자가 요소의 넓이와 높이에 대한 정보를 지정하지 않으면, 요소의 기본 크기는 내용에 의해 결정됩니다. 대화상자의 취소(Cancel) 버튼이 항상 기본 넓이로 설정되어 있어서 글에 맞출 수 있습니다. 매우 긴 라벨을 가진 버튼을 만든다면, 버튼의 기본 크기는 전체 라벨을 담기에 충분하게 커지게 됩니다. 글상자와 같은 다른 요소는 적당한 기본 크기를 선택한 것을 볼 수 있습니다.</p>
+<p><code>flex</code> 속성은 어떤 요소가 상자(이 경우, 창)에 맞출 수 있도록 크기 변경 여부를 지정하는 데 사용됩니다. 앞에서, 공백 요소에 적용된 flex 속성을 봤지만, 이 속성은 어떤 요소에도 적용할 수 있습니다. 예를 들어, 여러분은 아마 Find 버튼 크기가 수정되도록 하기를 원하실 수도 있습니다.</p>
+<p><img alt="Image:springs3.jpg"></p>
+<p>그림에서 보는 것처럼, 찾기(Find) 버튼에 flex 속성을 지정하면, 창의 크기가 바뀌었을 때 버튼의 크기도 변경됩니다. 공백 요소는 특별한 것이 아니고 그냥 숨겨진 버튼이라고 생각하시면 됩니다. 이것은 화면에서 출력되지 않을 뿐이지, 버튼과 동일한 방식으로 동작합니다.</p>
+<p>여러분이 위 그림에서 뭔가를 눈치챘을 지 모르겠습니다. 찾기(Find) 버튼의 크기가 커졌을 뿐만 아니라, 주 라벨과 버튼 사이에 약간의 여백이 나타난 것을 보실 수 있습니다. 당연한 것이지만, 이것은 앞에서 공백 요소를 넣은 것입니다. 공백 요소가 그 자체 크기를 조절한 것입니다. 자세히 보면, 변경되는 크기가 공백 요소와 버튼에 균등하게 나누어져 적용되는 것을 볼 수 있습니다. 여유 공간의 절반은 공백 요소에 나머지 절반은 버튼에 적용되는 것입니다.</p>
+<p>이런 효과를 보는 이유는 공백 요소와 찾기(Find) 버튼 모두 flex 속성을 가지고 있기 때문입니다. 둘 다 <code>flex</code>을 가지기 때문에, 버튼과 공백 요소 모두 균일하게 크기를 변경한 것입니다.</p>
+<p>만일 요소를 어떤 요소를 다른 것에 비해 두배 크기로 적용하려면 어떻게 할까? 그렇게 하려면 <code>flex</code> 속성값을 더 높은 숫자로 쓰면 됩니다. 요소의 flex 값은 비율을 나타냅니다. 만일 어떤 요소의 flex값이 1이고 다음 요소의 값은 2라면, 후자는 첫 번째의 두배 비율로 커지게 됩니다. 사실, flex 값이 2라는 것은 flex가 1인 요소 2개 가지고 있다고 말하는 것과 같습니다.</p>
+<p><code>flex</code> 속성은 실제 크기를 나타내기 위해 사용되는 것이 아닙니다. 대신 그것은 포함하는 상자의 자식들 중간에 어떻게 빈 공간을 넣을지를 나타내는 것입니다. 우리는 다음 섹션에서 상자에 대해 알아볼 것입니다. 상자의 자식들의 기본 크기가 정해지면 유연성 값(flex)은 상자 내의 빈 공간을 나누는데 사용됩니다. 예를 들어 상자의 너비가 200픽셀이고 두 개의 유연한 버튼(flex값을 가진 버튼)을 포함한 경우, 첫 번째 버튼이 50픽셀이고 다음 버튼은 90픽셀이면, 남은 공간은 60픽셀입니다. 만일 버튼 모두의 flex값이 1이면 각 버튼의 너비가 30픽셀씩 추가되어 나눠집니다. 만일 두번째 버튼의 flex값이 2로 증가하면, 첫번째 버튼은 20픽셀의 남은 공간을 두번째 버튼은 40픽셀의 추가 공간을 할당받게 됩니다.</p>
+<p><code>flex</code> 속성은 어떠한 요소에도 포함될 수 있지만 XUL 상자에 바로 포함되어 있는 요소에서만 의미가 있습니다. 이것은 HTML 요소에도 <code>flex</code>를 넣을 수 있지만, 해당 요소가 비상자(non-box) 요소의 내부에 있다면 아무 효과도 일어나지 않는다는 것을 의미합니다.</p>
+<h5 id="Flex_.EC.98.88.EC.A0.9C" name="Flex_.EC.98.88.EC.A0.9C">Flex 예제</h5>
+<pre class="eval">예제 1:
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="1"/&gt;
+
+예제 2:
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="10"/&gt;
+
+예제 3:
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace"/&gt;
+  &lt;button label="Cancel" flex="4"/&gt;
+
+예제 4:
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace" flex="2"/&gt;
+  &lt;button label="Cancel" flex="3"/&gt;
+
+예제 5:
+  &lt;html:div&gt;
+    &lt;button label="Find" flex="2"/&gt;
+    &lt;button label="Replace" flex="2"/&gt;
+  &lt;/html:div&gt;
+
+예제 6:
+  &lt;button label="Find" flex="145"/&gt;
+  &lt;button label="Replace" flex="145"/&gt;
+</pre>
+<dl>
+ <dt>
+  예제 1 </dt>
+ <dd>
+  이 경우 유연성(flexibility)은 두 버튼에서 균등하게 나뉘어집니다. 두 버튼은 균등하게 크기를 변경하게 됩니다.</dd>
+ <dt>
+  예제 2 </dt>
+ <dd>
+  이 경우, 두 버튼은 커지긴 하지만, Cancel 버튼의 flex값이 Find 버튼의 flex값보다 10배 크기 때문에, 찾기(Find) 버튼은 항상 취소(Cancel)버튼의 크기 증가값의 1/10 크기만큼만 변하게 됩니다. 가능한 공간은 1만큼의 Find 버튼 영역과 10만큼의 Cancel 버튼 영역으로 나누어지게 됩니다.</dd>
+ <dt>
+  예제 3 </dt>
+ <dd>
+  버튼 중 2개만이 유연하도록 표시되어 있습니다. Replace 버튼은 절대 크기가 변하지 않을 것이고, 나머지는 변할 것입니다. 취소(Cancel) 버튼은 항상 찾기(Find) 버튼의 두 배만큼 커지는데 이는 flex 값이 두배이기 때문입니다.</dd>
+ <dt>
+  예제 4 </dt>
+ <dd>
+  이 경우, 3개 모두 유연함을 가지고 있습니다. 찾기(Find)와 바꾸기(Replace) 버튼은 항상 같은 크기이지만 취소(Cancel)은 약간은 더 크게 됩니다(정확히 말하면 50% 더 커집니다).</dd>
+ <dt>
+  예제 5 </dt>
+ <dd>
+  여기서는 두 개 버튼이 div 요소내에 있습니다. 이처럼 버튼이 상자내에 직접 사용되지 않은 경우에는 flex의 의미가 없어집니다. 이 경우에는 flex가 없는 것과 동일한 효과를 보이게 됩니다.</dd>
+ <dt>
+  예제 6 </dt>
+ <dd>
+  두 버튼의 flex 값이 모두 같기 때문에, 동일하게 변합니다. flex에 145 대신 1값을 적용하더라도 동일하게 동작할 것입니다. 이 경우에는 전혀 차이가 없습니다. 여러분은 가독성을 위해서 가능한 낮은 숫자를 사용할 것을 권장합니다.</dd>
+</dl>
+<p>버튼의 라벨과 최소 크기 같은 다른 요인들이 버튼의 실제 크기에 영향을 준다는 점을 반드시 명심하세요. 예를 들어 버튼에 포함된 라벨이 필요로 하는 공간보다 작게는 줄어들지는 않을 것입니다.</p>
+<p>flex값을 0으로 설정하는 것은 <code>flex</code> 속성을 사용하지 않은 것과 같은 효과를 나타냅니다. 이것은 해당 요소가 전혀 유연하지 않게 된다는 것을 의미합니다. 여러분은 때때로 flex 값을 백분률로 지정한 것을 볼 수도 있을 것입니다. 이것은 특별한 의미는 없고 백분률 기호(%)가 없는 것처럼 처리됩니다.</p>
+<p>여러분은 파일 찾기 대화상자를 수직으로 크기 조절을 했을 때 버튼의 크기가 자동적으로 창의 높이에 맞게 늘어나는 것을 보실 수 있을 것입니다. 이것은, 모든 버튼들은 내부적으로 수직 flex가 지정되어 있기 때문입니다. 다음 섹션에서는 이것을 어떻게 수정할 수 있는지에 대해 공부하겠습니다.</p>
+<div class="highlight">
+ <h5 id=".EC.97.AC.ED.83.9C.EA.B9.8C.EC.A7.80.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".EC.97.AC.ED.83.9C.EA.B9.8C.EC.A7.80.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">여태까지의 파일 찾기 예제</h5>
+ <p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul">View</a></p>
+</div>
+<p>다음에는 <a href="ko/XUL_Tutorial/More_Button_Features">버튼의 부가적인 기능들</a>에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_HTML_Elements" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Button_Features">다음  »</a></p>
+</div><p></p>
+<p></p>

@@ -1,0 +1,88 @@
+---
+title: Pengantar Firefox OS
+slug: Archive/B2G_OS/Introduction
+tags:
+  - B2G
+  - Firefox OS
+translation_of: Archive/B2G_OS/Introduction
+---
+<p><strong>Firefox OS</strong> (juga disebut dengan codename "Boot to Gecko" atau "B2G") adalah sistem operasi open source Mozilla berbasis Linux dan teknologi Mozilla Gecko. Firefox OS adalah sistem operasi mobile yang bebas dari teknologi ekslusif saat ini menjadi platform yang kuat yang memberikan pengembang aplikasi kesempatan untuk menciptakan produk unggulan Selain itu, Firefox OS fleksibel dan cukup mampu membuat pengguna bahagia.</p>
+<p>Untuk pengembang Web bagian yang paling penting untuk dipahami adalah bahwa seluruh antarmuka pengguna adalah aplikasi web, yang mampu menampilkan dan meluncurkan aplikasi Web lainnya. Modifikasi yang Anda buat ke antarmuka pengguna dan aplikasi yang Anda buat untuk berjalan di Firefox OS adalah halaman Web, meskipun dengan meningkatkan akses ke perangkat kerasa dan layanan mobile.</p>
+<p>Anda dapat belajar bagaimana membangun dan memasang Firefox OS dengan <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">mengikuti panduan praktis kami</a>.</p>
+<h2 id="Persyaratan_perangkat_keras">Persyaratan perangkat keras</h2>
+<p>Perangakat mobile berbasis ARM terbaru cukup kuat untuk mendukung proting Firefox OS. Bagian ini mencakup persyaratan perangkat  keras dasar serta fitur perangkat keras yang direkomendasikan.</p>
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Komponen</th>
+   <th scope="col">Minimum</th>
+   <th scope="col">Rekomendasi</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">CPU</th>
+   <td>ARMv6</td>
+   <td>Cortex A5 class atau lebih<br>
+    ARMv7a dengan NEON</td>
+  </tr>
+  <tr>
+   <th scope="row">GPU</th>
+   <td>—</td>
+   <td>Adreno 200 class atau lebih</td>
+  </tr>
+  <tr>
+   <th scope="row">Connectivity</th>
+   <td>—</td>
+   <td>WiFi<br>
+    3G</td>
+  </tr>
+  <tr>
+   <th scope="row">Sensors</th>
+   <td>—</td>
+   <td>Accelerometer<br>
+    Proximity<br>
+    Ambient light<br>
+    A-GPS</td>
+  </tr>
+ </tbody>
+</table>
+<p>Untuk pengalaman pengguna yang baik, itu ide yang baik untuk memilih perangakat yang menawarkan profil warna seragam (Implementasi dengan graphics device driver) dan dukungan headphone untuk mematikan dan menyalakan dan untuk menghentikan dan memutar media. Fitur ini umumnya ada di kalangan smartphone modern.</p>
+<h2 id="Tips_penggunaan">Tips penggunaan</h2>
+<p>Bagian ini  memberikan beberapa tips yang akan membantu Anda menggunakan Firefox OS. Ini adalah penampung sampai kita memiliki dokumentasi penggunaan nyata.</p>
+<h3 id="Membuka_Kunci_telepone">Membuka Kunci telepone</h3>
+<p>Jika Anda membangun Firefox OS, pada saat dijalankan meminta kode pass untuk membuka kunci perangkat Anda, kode standar adalah 0000. Beberapa Firefox OS akan melakukan ini seraya kami mengembangkan dan menguki layar kunci.</p>
+<h3 id="Menangkap_screenshot">Menangkap screenshot</h3>
+<p>Menangkap screenshot simpel dengan menekan tombol power dan home secara bersamaan. Gambar screenshot akan berada di <code>/sdcard/screenshots</code> pada perangkat Anda; Anda dapat mengaksesnya menggunakan aplikasi Galeri pada telepon Anda, juga.</p>
+<p>Jika karena alasan tertentu tidak dapat bekerja, Anda juga dpaat melakukannya dari terminal Linux atau Mac OS X komputer yang memiliki sistem Firefox OS.</p>
+<ol>
+ <li>Pastikan Anda telah memasang aplikasi ffmpeg.
+  <ol>
+   <li>Pada Mac, Jika Anda menggunakan, Anda dapat melakukan ini dengan <code>sudo port install ffmpeg</code>. untuk homebrew, jalankan <code>brew install ffmpeg</code>.</li>
+   <li>Pada Linux (Ubuntu/Debian), gunakan <code>sudo apt-get install ffmpeg</code>.</li>
+  </ol>
+ </li>
+ <li>Sambungkan telepon ke komputer menggunakan kabel USB.</li>
+ <li>Arahkan telepon Anda kedalam situasi apapun yang ingin Anda screenshot.</li>
+ <li><code>cd</code> ke direktori <code>B2G/gaia</code></li>
+ <li><code>make screenshot</code></li>
+ <li>Anda sekarang memiliki screenshot bernama <code>screenshot.png</code>.</li>
+</ol>
+<h3 id="Remote_debugging_dengan_ADB">Remote debugging dengan ADB</h3>
+<p>Untuk mengaktifkan USB Debugging via adb, buka aplikasi Pengaturan dan arahkan ke Informasi Pernagkat &gt; Informasi Lebih Lanjut &gt; Pengembang. Dari daftar, berikan tanda centang pada Remote Debugging. Terakhir, hubungkan perankat via USB dengan komputer Anda.</p>
+<h3 id="Tombol_dan_kontrol">Tombol dan kontrol</h3>
+<p>sebuah perangkat Firefox OS memiliki sejumlah tombol fisik:</p>
+<dl>
+ <dt>
+  Tombol Home</dt>
+ <dd>
+  Tombol ini umumnya berpusat dibawah layar. Menekannya akan mengembalikan Anda ke peluncur aplikasi. Menekannya secara lama membuka tampilan card switching; gesekan ke atas pada tampilan tersebut akan hilang.</dd>
+ <dt>
+  Volume rocker kontrol</dt>
+ <dd>
+  Pada sisi kiri adalah volume rocker; Menekan bagian atas dari rocker akan meningkatkan volume dan menekan bagian bawah akan menurunkan volume.</dd>
+ <dt>
+  Tombol Power</dt>
+ <dd>
+  Tombol power berada di pojok kanan atas perangkat.</dd>
+</dl>

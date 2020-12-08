@@ -1,0 +1,137 @@
+---
+title: Adding Event Handlers
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Adding_Event_Handlers
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Scrolling_Menus" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Event_Handlers">다음  »</a></p>
+</div><p></p>
+
+<p>지금까지의 파일 찾기 대화창은 꽤 괜찮은 모양세를 갖추고 있습니다. 다 끝나지는 않았지만 손쉽게 간단한 사용자 인터페이스를 만들었습니다. 다음으로는 스크립트를 추가하는 방법에 대해 알아보겠습니다.</p>
+
+<h3 id=".EC.8A.A4.ED.81.AC.EB.A6.BD.ED.8A.B8_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0" name=".EC.8A.A4.ED.81.AC.EB.A6.BD.ED.8A.B8_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0">스크립트 사용하기</h3>
+
+<p>파일 찾기 대화창이 제대로 동작하려면 대화창과 사용자의 상호작용시 실행해야하는 스크립트를 추가해야 합니다. 우리는 Find 및 Cancel 버튼과 각 메뉴 명령을 처리할 스크립트를 추가하려고 합니다. 이를 위해 <a href="ko/HTML">HTML</a>에서와 거의 동일한 방법으로 <a href="ko/JavaScript">JavaScript</a> 함수를 이용해서 작성할 것입니다.</p>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code> 요소를 사용해서 XUL 파일에 스크립트를 포함할 수 있습니다. XUL 파일에서 <code>script</code> 태그 내에 직접 코드를 넣을수도 있지만 별도의 파일에 코드를 포함하는게 더 좋으며, 이렇게 하면 XUL창의 로딩 속도가 약간 빨라집니다. 외부 스크립트 파일과 연결하기 위해서는 <code><code id="a-src"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> 속성을 사용합니다.</p>
+
+<div class="highlight">
+<h5 id=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">파일 찾기 예제</h5>
+
+<p>파일 찾기 대화창에 스크립트를 넣어보도록 하겠습니다. 스크립트 파일의 이름을 무엇으로 하든 상관없지만, 보통 XUL 파일과 이름은 같으면서 확장자만 .js로 하여 작성합니다. 이 경우 findfile.js가 사용될 것입니다. 여는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 태그 아래 그리고 다른 요소들 앞에 아래 줄을 추가하세요.</p>
+
+<pre class="eval"><span class="highlightred">&lt;script src="findfile.js"/&gt;</span>
+</pre>
+
+<p>우리는 스크립트 파일에 무엇을 써야하는지를 안 후에 이 파일을 생성할것 입니다. 스크립트 파일에는 이벤트 핸들러에서 호출할 수 있도록 몇 개의 함수를 정의할 것입니다.</p>
+</div>
+
+<p>여러분은 하나의 XUL 파일에 여러개의 스크립트를 포함할 수 있습니다. 이를 위해서는 각각 다른 스크립트를 가리키는 여러개의 <code>script</code> 태그를 사용하면 됩니다. <code>src</code> 속성에는 상대 혹은 절대 URL을 사용할 수 있습니다. 예를 들어 다음과 같은 형식으로 URL을 사용할 수 있습니다.</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+&lt;script src="<a class="external" rel="freelink">chrome://findfiles/content/help.js</a>"/&gt;
+&lt;script src="<span class="nowiki">http://www.example.com/js/items.js</span>"/&gt;
+</pre>
+
+<p>본 자습서에서는 JavaScript의 사용법과 관련된 내용에 대해서는 다루지 않겠습니다. 이는 아주 넓은 주제이며 이를 위한 다양한 리소스들이 있습니다.</p>
+
+<div class="note">
+<p>기본적으로 JavaScript 콘솔은 웹 페이지에서 발생하는 오류만 보여줍니다. Chrome JavaScript에서 발생하는 오류를 출력하려면 설정에서 <code>javascript.options.showInConsole</code> 값을 <code>true</code>로 변경해야 합니다. 또한 디버깅을 위해 <code>javascript.options.strict</code> 설정값을 바꿀 수 있습니다. 이 값을 <code>true</code>로 설정하면, 표준에 맞지 않고 잘못 쓰여졌거나 구문에 맞지 않아서 로직 오류를 발생시킬 수 있는 것들이 JavaScript 콘솔에 기록될 것입니다.</p>
+</div>
+
+<h3 id=".EC.9D.B4.EB.B2.A4.ED.8A.B8.EC.97.90_.EC.9D.91.EB.8B.B5.ED.95.98.EA.B8.B0" name=".EC.9D.B4.EB.B2.A4.ED.8A.B8.EC.97.90_.EC.9D.91.EB.8B.B5.ED.95.98.EA.B8.B0">이벤트에 응답하기</h3>
+
+<p>스크립트는 사용자 혹은 다른 상황에 의해 발생하는 다양한 이벤트에 응답하는 코드를 포함합니다. 대략 30개 이상의 서로 다른 이벤트가 존재하며 이것들은 각각 서로 다른 방식으로 처리됩니다. 사용자가 마우스 버튼이나 키를 누르는 것과 같은 것들이 일반적인 이벤트입니다. 각각의 XUL 요소는 서로 다른 상황에서 특정 이벤트를 발생시킬 수 있는 능력이 있습니다. 어떤 이벤트는 특정 요소에 의해서만 발생됩니다.</p>
+
+<p>각 이벤트는 이름을 가지고 있으며, 'mousemove' 이벤트의 경우는 사용자가 UI 요소 위에서 마우스를 움직일 경우에 발생하는 이벤트 이름입니다. XUL은 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/">DOM Events</a>에서 정의한 것과 동일한 이벤트 메카니즘을 사용합니다. 사용자가 마우스를 움직이는 것과 같이, 이벤트를 발생시킬 수 있는 어떤 행위가 발생하면 해당 이벤트 유형에 해당하는 이벤트 객체가 생성됩니다. 이벤트 객체에는 마우스 위치나 눌러진 키와 같은 다양한 속성이 설정됩니다.</p>
+
+<p>그리고 나면 이벤트는 다음의 단계에 따라 XUL로 전송됩니다.</p>
+
+<ul>
+ <li>캡쳐 단계(capturing phase)에서는 이벤트는 맨 먼저 창으로 전송되고 다음으로는 문서로, 다음으로는 이벤트가 발생한 XUL 요소의 부모 요소들로 하위방향으로 대상 요소에 도착할때까지 전송됩니다.</li>
+ <li>타겟 단계(target phase)에서는 대상 XUL 요소로 이벤트가 전달됩니다.</li>
+ <li>버블링 단계(bubbling phase)에서는 이벤트가 다시 창에 도착할 때까지 위로 각 요소들에 전송됩니다.</li>
+</ul>
+
+<p>여러분은 캡쳐나 버블링 단계에서 이벤트에 응답할 수 있습니다. 이벤트의 전파가 모두 끝난 후에 대상 요소에 미리 정의된 기본 행위가 발생합니다.</p>
+
+<p>예를 들어, 마우스가 상자안에 있는 버튼위에서 움직였다면 'mousemove' 이벤트가 발생되고, 창, 문서, 상자 순으로 전송됩니다. 여기까지오면 캡쳐 단계가 끝이 납니다. 다음으로는 버튼으로 'mousemove' 이벤트가 전달됩니다. 최종 버블링 단계에서는 다시 상자, 문서, 창으로 이벤트가 전송됩니다. 버블링 단계는 당연히 캡처 단계의 역순으로 진행됩니다. 어떤 이벤트는 버블링 단계를 수행하지 않는다는 것을 알아 두십시요.</p>
+
+<p>여러분은 이벤트 전파 단계별로 각 요소가 이벤트에 응답하도록 리스너를 부착할 수 있습니다. 하나의 이벤트는 대상 요소의 모든 부모 요소들에게도 전달되기 때문에 특정 요소나 계층 구조상 상위에 있는 요소에도 리스너를 부착할 수 있습니다. 당연히 더 높은 위치에 있는 요소에 부착된 이벤트는 이 요소 내부에 있는 모든 요소의 알림을 받게 됩니다. 반대로 버튼에 부착된 이벤트는 해당 버튼과 관련된 이벤트만 받게 됩니다. 이것은 동일하거나 유사한 코드를 사용해서 여러개의 요소의 이벤트를 처리하고자 할 때 유용합니다.</p>
+
+<p>가장 일반적으로 사용되는 이벤트는 'command' 이벤트입니다. command 이벤트는 사용자가 어떤 요소를 활성화할 때 발생합니다. 예를 들어 버튼을 누르거나, 체크박스를 변경한다던지, 메뉴의 한 항목을 선택하는 것들이 이에 해당됩니다. command 이벤트는 해당 요소를 활성화하는 여러가지 방법을 자동으로 처리하기 때문에 유용하게 사용됩니다. 예를 들어 command 이벤트는 사용자가 버튼을 클릭하기 위해 마우스를 이용하던지 Enter 키를 누르던지 상관없이 발생됩니다.</p>
+
+<p>이벤트 리스너를 요소에 부착하는데는 2가지 방법이 있습니다. 첫 번째는 속성값에 스크립트를 사용하는 것입니다. 두 번째는 대상 요소의 <code>addEventListener</code> 메소드를 호출하는 것입니다. 전자는 버블링 단계에서 발생하는 이벤트만을 처리할 수 있긴 하지만, 사용하기 쉽다는 장점이 있습니다. 후자는 어떠한 단계의 이벤트도 처리할 수 있으며 한 요소의 특정 이벤트에 대해 여러개의 리스너를 부착할 수도 있습니다. 보통 대부분의 이벤트에 대해 속성을 이용하여 처리하는 형식이 더 많이 사용됩니다.</p>
+
+<h3 id=".EC.86.8D.EC.84.B1_.EC.9D.B4.EB.B2.A4.ED.8A.B8_.EB.A6.AC.EC.8A.A4.EB.84.88" name=".EC.86.8D.EC.84.B1_.EC.9D.B4.EB.B2.A4.ED.8A.B8_.EB.A6.AC.EC.8A.A4.EB.84.88">속성 이벤트 리스너</h3>
+
+<p>속성 형태를 사용하기 위해서는 이벤트에 반응해야 할 요소에 이벤트 이름 앞에 'on'이 붙은 이름의 속성을 위치시키면 됩니다. 예를 들어, 'command' 이벤트에 해당하는 속성은 'oncommand'입니다. 속성 값은 어떤 이벤트가 발생할 때 실행될 스크립트이어야 합니다. 일반적으로 이 코드는 짧은 내용이거나 별도의 스크립트에서 정의된 함수를 호출할 것입니다. 다음은 버튼이 눌러졌을때 응답하는 예제입니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul">View</a></p>
+
+<pre class="eval">&lt;button label="OK" oncommand="alert('Button was pressed!');"/&gt;
+</pre>
+
+<p>command 이벤트는 버블링 단계를 거치기 때문에 해당 요소를 감싸는 요소(부모 요소)에도 이벤트 리스너를 부착시킬 수 있습니다. 아래의 예제에서 상자는 이벤트 리스너가 부착되어 있으며, 이 상자의 자식 요소들 모두에서 발생하는 이벤트에 응답하게 됩니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul">View</a></p>
+
+<pre class="eval">&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>예제에서 command 이벤트는 버튼이나 체크박스에서 vbox로의 버블링 단계를 거칩니다. 만일 또 다른 리스너가 버튼에 위치해 있었다면, 이 코드가 먼저 호출되고 다음에 vbox의 핸들러가 실행될 것입니다. 이벤트 핸들러는 이벤트 객체인 'event'라는 미리 정의된 인자를 전달 받습니다. 이것은 이벤트에 관한 특정 정보를 얻기 위해 사용됩니다. 이벤트 객체에서 자주 사용되는 속성은 이벤트의 'target' 속성으로 이것은 실제로 이벤트가 발생한 대상 요소를 포함하고 있습니다. 예제에서는 대상 요소의 태그 이름이 포함된 경고창을 출력하였습니다. 버블링 단계에서 'target' 속성은 유용하게 사용할 수 있는데, 여러분은 하나의 스크립트로 여러개의 버튼들을 처리할 수 있습니다.</p>
+
+<p>여러분은 속성 구문이 HTML 문서에서 이벤트에 사용된것과 비슷하다는 것을 발견하였을 것입니다. 사실 HTML과 XUL 모두 동일한 이벤트 메카니즘을 공유합니다. 한 가지 중요한 차이는 HTML에서는 버튼의 응답에 'click' 이벤트(<code>onclick</code> 속성)가 사용되는 반면, XUL에서는 command 이벤트가 사용된다는 것입니다. XUL에서도 click 이벤트가 존재하지만 키보드가 아닌 마우스 클릭에만 응답합니다. 따라서, XUL에서는 특정 요소가 꼭 마우스에 의해서만 처리되어야만 하는 이유가 없다면 click 이벤트를 사용하지 않는게 좋습니다. 또한, command 이벤트는 요소가 사용할 수 없는 상태(disabled)일때는 전송되지 않지만 click 이벤트는 대상 요소의 상태와 상관없이 전송됩니다.</p>
+
+<div class="highlight">
+<h5 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">우리의 파일 찾기 예제</h5>
+
+<p>파일 찾기 대화창에 있는 Find와 Cancel 버튼에는 command 이벤트 핸들러를 부착할 수 있습니다. Find 버튼을 누르면 검색을 시작해야 할 것입니다. 이 부분은 아직 구현되지 않았기 때문에 지금은 그냥 두겠습니다. 그러나 Cancel 버튼을 눌렀을때는 창이 닫히게 하는 것이 좋을것 같습니다. 아래의 코드는 이것을 어떻게 하는지 보여줍니다. 동일한 코드를 Close 메뉴 항목에도 넣어 보겠습니다.</p>
+
+<pre class="eval">&lt;menuitem label="Close" accesskey="c" <span class="highlightred">oncommand="window.close();"</span>/&gt;
+...
+
+&lt;button id="cancel-button" label="Cancel"
+     <span class="highlightred">oncommand="window.close();</span>"/&gt;
+</pre>
+
+<p>두 개의 핸들러가 추가되었습니다. <code>oncommand</code> 속성이 Close 메뉴 항목에 추가되었습니다. 이 핸들러를 사용해서 사용자는 마우스로 메뉴 항목을 클릭하거나 키보드로 선택함으로서 창을 닫을 수 있습니다. Cancel 버튼에도 <code>oncommand</code> 핸들러가 추가되었습니다.</p>
+</div>
+
+<h3 id="DOM_.EC.9D.B4.EB.B2.A4.ED.8A.B8_.EB.A6.AC.EC.8A.A4.EB.84.88" name="DOM_.EC.9D.B4.EB.B2.A4.ED.8A.B8_.EB.A6.AC.EC.8A.A4.EB.84.88">DOM 이벤트 리스너</h3>
+
+<p>이벤트 핸들러를 추가하는 두 번째 방법은 해당 요소의 <code>addEventListener</code> 메소드를 호출하는 것입니다. 이 방법은 동적으로 이벤트 리스너를 부착할 수 있게 해주며 캡처 단계에서 이벤트에 응답하게 해 줍니다. 구문은 다음과 같습니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul">View</a></p>
+
+<pre>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Button was pressed!');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</pre>
+
+<p><code><a href="ko/DOM/document.getElementById">getElementById()</a></code> 함수는 주어진 <code>id</code>에 해당하는 요소를 반환하며, 이 경우에는 버튼 요소입니다. <code><a href="ko/DOM/element.addEventListener">addEventListener()</a></code> 함수는 새로운 캡처 단계의 이벤트 리스너를 추가하기 위해 호출되었습니다. 첫 번째 인자는 응답할 대상 이벤트 이름입니다. 두 번째 인자는 이벤트가 발생했을 때 호출될 이벤트 리스너 함수입니다. 마지막 인자는 캡처 단계에서 사용하기 위해 <code>true</code>이어야 합니다. 여러분은 마지막 인자를 <code>false</code>로 설정하면 캡쳐 단계가 아닌 버블링 단계에서 응답하도록 합니다. 두 번째 인자로 주어진 이벤트 리스너 함수는 위의 <code>buttonPressed</code> 함수에서 선언된 것과 같이 인자로 event 객체 하나만 받아야 합니다.</p>
+
+<div class="highlight"><span id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>지금까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul">View</a></div>
+
+<p>다음에는 <a href="ko/XUL_Tutorial/More_Event_Handlers">이벤트 객체</a>에 대해 좀 더 자세히 알아보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Scrolling_Menus" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Event_Handlers">다음  »</a></p>
+</div><p></p>
+
+<p></p>

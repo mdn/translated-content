@@ -1,0 +1,195 @@
+---
+title: Sommario del processo di compilazione di B2G OS
+slug: >-
+  Archive/B2G_OS/Building_and_installing_Firefox_OS/Sommario_del_processo_di_compilazione_di_B2G_OS
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Compilazione e installazione</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Panoramica su compilazione ed installazione</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">Sommario del processo di compilazione di B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Prerequisiti per la compilazione</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparare la tua prima compilazione</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building">Compilare B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">Add-on per l"installazione di B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Compilare B2G OS per Flame su Mac OS X</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Scegliere come eseguire Gaia e B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Dispositivi compatibili</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installare B2G OS su dispositivo mobile</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creare e applicare pacchetti di aggiornamento per B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Compilare e installare aggiornamenti via Internet prodotti dalla comunità</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">Foglio di riferimento per le variabili di compilazione di B2G OS</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Portabilità di B2G OS</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS">Panoramica sulla portabilità</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Basi della portabilità</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Portabilità su CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia">Panoramica sullo sviluppo di Gaia</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Eseguire il codice base di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Mulet">Esegui Gaia su desktop usando Mulet</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Comprendere il codice base di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Fare variazioni al codice di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Verificare le variazioni al codice di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Inviare una patch di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Sistema di compilazione primario di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Differenti modi per eseguire Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Riferimento per le opzioni di Make</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Riferimento per gli strumenti di Gaia</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/it/docs/Mozilla/B2G_OS/API">API di B2G OS</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>Building and installing B2G OS requires a significant amount of time, network bandwidth, and computational power. Unfortunately, along the way, things are liable to go wrong. This page outlines the goals of the build process and the steps of that process in order to help users along the way. Details of each step are discussed in the linked pages.</p>
+</div>
+
+<div class="note">
+<p><strong style="font-weight: bold;">Note:</strong> The B2G OS build process is full of references to 'B2G' or 'Boot2Gecko'. 'Boot2Gecko' was the original code name of the B2G OS project.</p>
+</div>
+
+<h2 id="The_Build_Goal_three_'image'_files">The Build Goal: three 'image' files</h2>
+
+<p>The overall purpose of the build process is to build three files that can be installed onto a device compatible with B2G OS.</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>boot.img</strong></td>
+   <td>The Linux kernel and a root filesystem image, the latter providing a usable set of basic Unix tools.</td>
+  </tr>
+  <tr>
+   <td><strong>system.img</strong></td>
+   <td>The core of B2G OS including parts of Gonk, the port of Gecko, and the b2g executable.</td>
+  </tr>
+  <tr>
+   <td><strong>recovery.img</strong></td>
+   <td>A Linux kernel and a root filesystem image along with a simple tool to enable users to fix a bad installation.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Once the three images have been created, they can be installed onto a device.</p>
+
+<p>B2G OS is built on top of the lower levels of Android Open Source Project (AOSP). The AOSP tools <code>adb</code> and <code>fastboot</code> provide powerful tools to access and manipulate a device. Specifically, the command <code>adb reboot bootloader</code> instructs a connected device to reboot and pause at the early bootloader stage. The command <code>fastboot flash $partition $image</code> can be used to install an image onto the device.</p>
+
+<h3 id="The_Boot_Image">The Boot Image</h3>
+
+<p>The Boot Image (<code>boot.img</code>) is a combination of the Linux kernel and an initial root partition providing the core utility software and initialization scripts. The latter will be copied into device memory for efficient use by the device and therefore is called a "ramdisk". The Boot Image will be copied to the 'boot' partition on the device and the contents of the ramdisk are visible starting in the root directory when the device filesystem is accessed at runtime, such as when using <code>adb shell</code>.</p>
+
+<p>The Boot Image also establishes the permissions of the root user in the <code>default.prop</code> file in the root directory.</p>
+
+<p>It is also possible to modify an existing boot image by inspecting the file, splitting the file into the kernel and ramdisk image, extracting the contents of the ramdisk image, modifying those contents, re-assembling the ramdisk image, then rebuilding a functional boot.img. See, for example, the <a href="http://k.japko.eu/alcatel-otf-hackers-guide-1.html">Alcatel One Touch Fire Hacking (Mini) Guide</a> page.</p>
+
+<p>Boot Images can be tested before being installed by 'sideloading' them; the device can be started and paused in the bootloader and then <code>fastboot</code> can be used to boot from the Boot Image without installing it using the command <code>fastboot boot boot.img</code>.</p>
+
+<h3 id="The_System_Image">The System Image</h3>
+
+<p>The System Image (<code>system.img</code>) provides the core of B2G OS:</p>
+
+<ul>
+ <li><strong>Gonk</strong>: the low-level components of the operating system</li>
+ <li><strong>Gecko</strong>: the port of the B2G HTML display and JavaScript engine</li>
+ <li><strong>B2G</strong>: the core runtime process of the operating system.</li>
+ <li><strong>Gaia</strong>: the web applications available to the user.</li>
+</ul>
+
+<div class="note">
+<p>See <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform">the B2G OS platform</a> guide for more information about the platform architecture.</p>
+</div>
+
+<p>The System Image will be copied to the <code>system</code> partition on the device and will be visible in the <code>/system/</code> directory when the device filesystem is accessed at runtime.</p>
+
+<div class="note">
+<p><strong>Note</strong>: The System Image also provides the binary blobs that may be used by the device, notably the RIL (Radio Interface Layer) blob controlling the cellular radio on the device.</p>
+</div>
+
+<h3 id="The_Recovery_Image">The Recovery Image</h3>
+
+<p>The Recovery Image (<code>recovery.img</code>) contains the same kernel and a similar ramdisk as present on the Boot Image partition. The recovery image however uses a different initialization script, which leads the user to a set of recovery commands accessible using the hardware buttons on the device.</p>
+
+<p>The Recovery Image will be copied to the <code>recovery</code> partition on the device, which is not mounted onto the filesystem at regular runtime.</p>
+
+<h2 id="The_Build_Process_setup_configure_build_install">The Build Process: setup, configure, build, install</h2>
+
+<p>The overall process of building and installing B2G OS involves four steps:</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>Setup</strong></td>
+   <td>Obtain copies of all the programs used by the build process, such as the right compilers and libraries.</td>
+  </tr>
+  <tr>
+   <td><strong>Configure</strong></td>
+   <td>Download the source code that will be built and create the <code>.configure</code> file that defines environmental variables specifying the paths and other values used in the build.</td>
+  </tr>
+  <tr>
+   <td><strong>Build</strong></td>
+   <td>Build the Gecko profile of the user and the Gaia web applications for the device.</td>
+  </tr>
+  <tr>
+   <td><strong>Install</strong></td>
+   <td>Install the files on a device.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<h3 id="Setup">Setup</h3>
+
+<p>Inital setup must be done to ensure the computer running the build has all of the software required during the build, such as compilers and build tools.</p>
+
+<p>This step can be done by hand or using a script. Details are discussed in the <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites" title="Firefox OS build prerequisites">B2G OS build prerequisites</a> page.</p>
+
+<div class="note">
+<p><strong>Note</strong>: On UNIX and UNIX-like machines, the presence of the required software can be checked using the unix command <code>which</code> with the name of the required program as a parameter.</p>
+</div>
+
+<h3 id="Configuration">Configuration</h3>
+
+<p>The actual build process starts with obtaining a copy of the B2G OS (or B2G) software, usually by creating a Git clone of the <code>B2G</code> project. The build configuration will both obtain copies of all the source code which is to be built and create the <code>.config</code> file that specifies variables for the build.</p>
+
+<p>This is run with the <code>config.sh</code> script. Details are discussed in the <a href="/en-US/Firefox_OS/Preparing_for_your_first_B2G_build" title="Preparing for your first B2G build">Preparing for your first B2G build</a> page.</p>
+
+<p>The configure script needs a parameter specifying the type of device to build. The build names are code names linked to the CPU architecture rather than a specific device, and there is currently no way to establish which build works for which physical device. A list of available code names can be <a href="/en-US/Firefox_OS/Phones">found here</a>.</p>
+
+<p>The configure step will also use the Android Open Source Project <code>repo</code> tool to download (or update) a copy of all the code used in the build. These copies will be stored in the <code>.repo/projects</code> directory. Due to this activity, the configure step can take a long time and will download a lot of data.</p>
+
+<h3 id="Build">Build</h3>
+
+<p>The build step will actually compile all of the source code and produce the output images.</p>
+
+<p>This is run with the <code>build.sh</code> script. Details are discussed in the <a href="/en-US/Firefox_OS/Building" title="Building">Building B2G OS</a> page.</p>
+
+<p>By default, the build step is monolithic, attempting to build everything at once from the Android Open Source Project tools to the Linux kernel to the Gaia web applications. When the build fails, it can sometimes be unclear in which step it has failed.</p>
+
+<p>It is possible to build only certain parts of the whole B2G  stack. For example, the Gecko system only can be built by calling the build script with the <code>gecko</code> parameter. Similarly, Gaia can be built on its own using the <code>gaia</code> parameter. These parts can then be installed separately onto the device as explained next.</p>
+
+<p>It is also possible to build the images discussed in the first part of this page. For example, the system image can be built using <code>./build.sh out/platform/$target/system.img</code>, where the <code>$target</code> parameter is the same as given in the Configuration step.</p>
+
+<h3 id="Install">Install</h3>
+
+<p>The install step will place the newly compiled code onto a device. This is run with the <code>flash.sh</code> script.</p>
+
+<p>Individual parts of the build can be installed by adding a parameter to the flash script. For example, it is possible to install only the gaia web applications by specifying <code>./flash.sh gaia</code>.</p>

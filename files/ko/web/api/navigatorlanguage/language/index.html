@@ -1,0 +1,133 @@
+---
+title: NavigatorLanguage.language
+slug: Web/API/NavigatorLanguage/language
+translation_of: Web/API/NavigatorLanguage/language
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p> </p>
+
+<p>NavigatorLanguage.language 읽기 전용 속성은 사용자의 기본 언어 (일반적으로 브라우저 UI의 언어)를 나타내는 문자열을 반환합니다.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>lang</em> = navigator.language
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("DOMString")}}. <em><code>lang</code></em> stores a string representing the language version as defined in <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a>. Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.</p>
+
+<p>Note that in Safari on macOS and iOS prior to 10.2, the country code returned is lowercase: "en-us", "fr-fr" etc.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">if (window.navigator.language != 'en') {
+  doLangSelect(window.navigator.language);
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5.1', '#dom-navigator-language', 'NavigatorLanguage.language') }}</td>
+   <td>{{ Spec2('HTML5.1') }}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.0")}}<sup>[2]</sup><br>
+    {{CompatGeckoDesktop("5.0")}}<sup>[3]</sup></td>
+   <td>11.0<sup>[4]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("35")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(1.0)}}</td>
+   <td>{{CompatNo}}<sup>[4]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("35")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Returns the browser UI language, not the value of the <code>Accept-Language</code> <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</p>
+
+<p>[2] Prior to Gecko 2.0 {{geckoRelease("2.0")}}, this property's value was also part of the user agent string, as reported by {{domxref("window.navigator.userAgent", "navigator.userAgent")}}.</p>
+
+<p>[3] Starting in Gecko 5.0 {{geckoRelease("5.0")}}, this property's value is based on the value of the <code>Accept-Language</code> <a href="en-US/docs/Web/HTTP/Headers">HTTP header</a>.</p>
+
+<p>[4] Closest available (non-standard) properties are <code><a href="http://msdn.microsoft.com/en-us/library/ie/ms534713.aspx">userLanguage</a></code> and <code><a href="http://msdn.microsoft.com/en-us/library/ie/ms533542.aspx">browserLanguage</a></code>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("NavigatorLanguage.languages", "navigator.languages")}}</li>
+ <li>{{domxref("navigator")}}</li>
+</ul>

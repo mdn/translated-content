@@ -1,0 +1,110 @@
+---
+title: Una breve guida alle preferenze di Mozilla
+slug: Mozilla/Preferences/Una_breve_guida_alle_impostazioni_di_Mozilla
+translation_of: Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences
+---
+<div class="indent">
+<p>Questo articolo è rivolto agli utenti con conoscenze avanzate e agli amministratori di sistema. In questo articolo troverete una panoramica generale delle impostazioni di Mozilla ( note come preferenze ), compreso l'elenco dei file in cui esse vengono memorizzate ed un'analisi della sequenza di caricamento di questi file, oltre alle informazioni necessarie alla modifica di tali impostazioni.</p>
+</div>
+
+<h2 id="Cos'è_una_preferenza"><span id="def">Cos'è una preferenza?</span></h2>
+
+<div class="indent">
+<p>Una preferenza è un qualsiasi valore oppure un particolare comportamento che possa essere selezionato fra altri valori o comportamenti ( presumibilmente, un valore o un comportamento è "preferibile" ad un altro ). Le modifiche alle preferenze, apportate attraverso l'interfaccia utente, normalmente diventano effettive immediatamente. I valori vengono salvati nel profilo utente ( nel file <code>prefs.js</code> ), sia per Firefox che per Thunderbird.</p>
+
+<p>Una preferenza viene letta da un file e può invocare fino a quattro metodi: <code>pref()</code>, <code>user_pref(), sticky_pref()</code> e <code>lockPref()</code>. Tutti i file che conservano le preferenze possono invocare <code>pref()</code>, <code>user_pref()</code> e sticky_pref(), mentre il file di configurazione può invocare anche <code>lockPref()</code>.</p>
+</div>
+
+<h2 id="I_file_delle_preferenze"><span id="file">I file delle preferenze</span></h2>
+
+<div class="indent">
+<p><span id="files-skipline">Per proteggere la privacy, prevenendo la possibilità di un caricamento involontario, nel browser, di un file delle preferenze, la prima riga del file viene resa "</span>un-parseable" ( non analizzabile ) e saltata in fase di caricamento. La sola eccezione è per il file <code>user.js</code> .</p>
+
+<p>Al lancio dell'applicazione, vengono caricati diversi file delle preferenze:</p>
+
+<dl>
+ <dt class="term"><span id="files-def">I file delle preferenze di default</span></dt>
+ <dd>
+ <p>Firefox trova le preferenze di default in più file, tutti all'interno della directory dell'applicazione:</p>
+
+ <ul>
+  <li>greprefs.js - contiene le preferenze condivise da tutte le applicazioni che utilizzano la piattaforma Mozilla.</li>
+  <li>services/common/services-common.js - contiene le preferenze per alcuni servizi condivisi. Verosimilmente, potrebbe essere incluso in qualche altro file.</li>
+  <li>defaults/pref/services-sync.js - contiene le preferenze di default per la sincronizzazione di Firefox ( Firefox Sync ): salvato anche in posizione strana.</li>
+  <li>browser/app/profile/channel-prefs.js - un file che contiene il nome del canale dell'utente da usare per gli aggiornamenti. Viene tenuto separato dalle altre preferenze, poichè può agire sulle modalità di applicazione degli aggiornamenti.</li>
+  <li>browser/app/profile/firefox.js - contiene le preferenze di default specifiche per Firefox.</li>
+  <li>browser/app/profile/firefox-branding.js - contiene le preferenze di default specifiche per la versione di Firefox installata (Nightly, Aurora, Beta, Release).</li>
+  <li>browser/defaults/preferences/firefox-l10n.js - contiene le preferenze di default specifiche per la lingua installata in Firefox. Nessuno degli altri file delle  preferenze contiene preferenze locali specifiche.</li>
+ </ul>
+ </dd>
+ <dt class="term"><span id="files-conf"><abbr title="configuration">Config.</abbr></span> file</dt>
+ <dd>
+ <p>Un file di configurazione, normalmente con estensione <code>.cfg</code>, può essere invocato da un file di default delle preferenze utilizzando la preferenza <code>general.config.filename</code>. Questo file permette il blocco delle preferenze (preference locking) attraverso la funzione <code>lock_pref()</code>. I dettagli sul file di configurazione sono al di fuori dello scopo di questo documento.</p>
+ </dd>
+ <dt class="term"><span id="files-user">User pref. files</span></dt>
+ <dd>
+ <p>Nella directory di profilo ci sono due file delle preferenze riservate all'utente:  <code>prefs.js</code> e <code>user.js</code>.  <code>prefs.js</code> viene generato automaticamente dall'applicazione e non dovrebbe essere modificato manualmente, mentre <code>user.js</code> è un file opzionale che l'utente può creare per sovrascrivere le preferenze inizializzate in altri file delle preferenze.</p>
+ </dd>
+</dl>
+</div>
+
+<h2 id="Caricamento_delle_preferenze_e_risoluzione"><span id="loading">Caricamento delle preferenze e risoluzione</span></h2>
+
+<div class="indent">
+<p>Al lancio dell'applicazione, l'applicazione carica le preferenze nel seguente ordine:</p>
+
+<ol>
+ <li>
+  <p>tutti i file di default delle preferenze.</p>
+ </li>
+ <li>
+  <p>Se c'è, il file di configurazione.</p>
+ </li>
+ <li>
+  <p>I file delle preferenze dell'utente: il file <code>prefs.js prima</code>, il file <code>user.js</code>  poi.</p>
+ </li>
+</ol>
+
+<p>I conflitti vengono risolti in favore dell'ultimo record caricato; per esempio, <code>user.js</code> ha la precedenza su <code>prefs.js</code> .</p>
+
+<p>Se l'applicazione incontra un qualsiasi errore durante il caricamento di un file di default delle preferenze, l'applicazione emette un messaggio di avviso che informa che il caricamento del file è fallito e si chiude. Questo permette agli amministratori di sistema di sapere velocemente se c'è un errore di configurazione nell'installazione. Se l'applicazione incontra un qualsiasi errore durante il caricamento di un file delle preferenze dell'utente, invece, l'applicazione emette un messaggio di avviso, ma continua nell'esecuzione.</p>
+</div>
+
+<h2 id="Salvare_le_preferenze"><span id="saving">Salvare le preferenze</span></h2>
+
+<div class="indent">
+<p>Normalmente, quando un utente conferma una modifica di una preferenza, effettuata attraverso l'interfaccia utente, come, ad esempio, la finestra di dialogo Preferenze, l'applicazione salva la modifica sovrascrivendo il file <code>prefs.js</code> . Alla chiusura dell'applicazione, tutte le preferenze utente vengono salvate nel file <code>prefs.js</code> . Questo significa anche che le preferenze inizialmente impostate nel file <code>user.js</code> verranno anche salvate nel file <code>prefs.js</code>.</p>
+
+<p class="note"><strong>NON modificare il file</strong> <code>prefs.js</code> direttamente.</p>
+
+<p>Nota: l'applicazione non modifica mai il file <code>user.js</code>. In questo modo, al lancio dell'applicazione, il file <code>user.js</code> sovrascrive le preferenze in conflitto con la precedente sessione dell'applicazione.</p>
+
+<p>Quando viene scritto il file <code>prefs.js</code>, vengono salvate solo le preferenze utente che hanno valori differenti dai valori di default. La sola eccezione a questo è la preferenza letta utilizzando la funzione <code>sticky_pref()</code> - questa preferenza viene scritta comunque, basta che contenga un valore dato dall'utente, anche se questo valore fosse identico al valore di default.</p>
+</div>
+
+<h2 id="Modificare_le_preferenze"><span id="modifying">Modificare le preferenze</span></h2>
+
+<div class="indent">
+<p>Gli utenti avanzati possono impostare le preferenze utilizzando l'editor avanzato delle preferenze, digitando <code>about:config</code> nella barra degli indirizzi del browser. Questa interfaccia utente ( UI ) non è da raccomandare alla gran parte degli utenti. Le modifiche alle preferenze da effettuarsi da un programma possono essere richieste utilizzando il modulo JS <a href="http://dxr.mozilla.org/mozilla-central/source/toolkit/modules/Preferences.jsm" title="http://dxr.mozilla.org/mozilla-central/source/toolkit/modules/Preferences.jsm">Preferences.jsm</a> ( <span class="ital">JavaScript Module )</span>, oppure i metodi della classe statica mozilla::Preferences del codice C++.</p>
+
+<h3 id="Modificare_i_valori_di_default">Modificare i valori di default</h3>
+
+<p>Un amministratore di sistema può modificare una preferenza di default in due modi:</p>
+
+<ol>
+ <li>l'amministratore può aggiungere un file delle preferenze chiamato <code>all-<em>companyname</em>.js</code> (<code>install_directory/browser/defaults/preferences/all-<em>companyname</em>.js</code>). Questo file verrà analizzato per ultimo, nel corso del processo di caricamento delle preferenze.</li>
+ <li>
+  <p>l'amministratore, in alternativa, può salvare il file <code>user.js</code> nella directory <code><em>app_dir</em>/defaults/profile/</code> ; in questo modo, una copia del file <code>user.js</code> verrà salvata in ogni nuovo profilo creato. Questo metodo ha il vantaggio di riportare, ad ogni start-up, le preferenze ai valori voluti dall'amministratore. Ricorda, però, che un utente, detenendo i privilegi necessari ad accedere alla propria directory di profilo, potrà sempre modificare i valori di default, sempre che sappia come farlo. Un altro svantaggio di questa alternativa è che i profili esistenti non verranno influenzati dai nuovi valori assegnati. <em>Questo metodo è considerato user-hostile ( ostile all'utente ). Qualsiasi uso di questa tecnica, fatta da software quali le estensioni Firefox, al fine di sovrascrivere le preferenze utente normali, darà, come risultato, quello di essere inseriti nella blocklist di Firefox oppure di vedere rimosse forzatamente le preferenze stesse.</em></p>
+ </li>
+</ol>
+
+<div class="note">
+<p>Nota: a causa degli abusi del file user.js, il supporto per il file user.js potrebbe essere rimosso nelle versioni future di Firefox.</p>
+</div>
+</div>
+
+<h2 id="Le_Sticky_Preference">Le Sticky Preference</h2>
+
+<p>Le Sticky preference furono introdotte in Firefox 40, via <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1098343">bug 1098343</a>.</p>
+
+<p>Le Sticky preference vengono create con la funzione <code>sticky_pref()</code>. Queste preferenze si comportano come le preferenze di default, ma ovunque venga stabilito un valore per la preferenza, quel valore viene sempre scritto, anche se uguale al valore di default. Le Sticky preference vengono usate, generalmente, per le preferenze che hanno un valore di default differente per ciascun canale. L'intento è di impostare il valore di una preferenza per un canale e far sì che quel valore resti invariato, anche utilizzando un differente canale, per il quale sia previsto un diverso valore di default. Per esempio, ipotizziamo che Nightly abbia una preferenza "some.preference" con valore di default impostato a "<code>true", mentre </code>DeveloperEdition assegna alla stessa preferenza il valore di default "<code>false". </code>Ipotizziamo ora che l'utente desideri che la preferenza abbia valore<code> "true" </code>per entrambi i canali. Se la preferenza non è una Sticky preference e l'utente esegue DeveloperEdition e cambia la preferenza in "<code>true", </code>la modifica verrà salvata perchè non è uguale al valore di default. Quando l'utente eseguirà Nightly, la preferenza avrà lo stesso valore di default e, di conseguenza, <em>non</em> verrà salvata da Nightly. Quando l'utente eseguirà ancora DeveloperEdition, il valore della preferenza sarà "<code>false", </code>poichè  Nightly non aveva salvato alcuna preferenza utente. Se la preferenza viene definita come Sticky preference, il valore "<code>true" </code>verrà salvato da Nightly anche se riconosciuto come valore corrente di default, così che quando verrà eseguita DeveloperEdition, la preferenza avrà il valore desiderato di "<code>true</code>".</p>

@@ -1,0 +1,100 @@
+---
+title: Background Themes
+slug: Temi/Background
+tags:
+  - Documentazione
+translation_of: Mozilla/Add-ons/Themes/Lightweight_themes
+---
+<h2 id="Come_creare_il_vostro_Tema_di_sfondo">Come creare il vostro Tema di sfondo</h2>
+
+<div class="primary auto" id="getting-started">
+<p>I temi sono costituiti da un file grafico(immagine) "intestazione", che ricopre lo sfondo dell'interfaccia utente (UI) Firefox.</p>
+
+<p>Hai finito il tuo disegno? Puoi <a href="https://addons.mozilla.org/developers/theme/submit">inviarlo immediatamente!</a></p>
+
+<h3 id="Creare_un'immagine_Intestazione_per_il_Tema">Creare un'immagine Intestazione per il Tema</h3>
+
+<p>L'immagine di intestazione viene visualizzata come sfondo della parte alta della finestra del browser e si innesta dietro le barre degli strumenti, la barra degli indirizzi, la barra di ricerca e la barra delle schede. Verrà ancorata nell'angolo in alto a destra della finestra del browser.</p>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9929/header-step.jpg" style="height: 215px; width: 1059px;"></p>
+
+<ul>
+ <li><a href="https://addons.cdn.mozilla.net/static/img/docs/themes/header.jpg">Vedi qui un esempio di Intestazione di Tema.</a></li>
+</ul>
+
+<h4 id="Requisiti_per_l'immagine">Requisiti per l'immagine</h4>
+
+<ul>
+ <li>Le dimensioni devono essere: <strong>3000px larghezza × 200px altezza</strong></li>
+ <li>formato file: PNG o JPG</li>
+ <li>L'immagine non deve superare i 300 KB in dimensione</li>
+</ul>
+
+<h4 id="Suggerimenti">Suggerimenti</h4>
+
+<ul>
+ <li>Immagini piccole, a debole contrasto e gradienti funzionano meglio; immagini ad alta risoluzione faticheranno ad andare d'accordo con la UI del browser.</li>
+ <li>Firefox può visualizzare una porzione maggiore della parte bassa dell'immagine se altre barre strumenti o elementi dell'interfaccia grafica vengono aggiunti nella parte alta della finestra.</li>
+ <li>La parte in alto a destra dell'immagine dovrebbe contenere le informazioni più importanti-dal momento che, aumentando la larghezza della finestra, il browser lascia vedere di più sul lato sinistro dell'immagine.</li>
+</ul>
+
+<h4 id="Elaborazione_di_Immagini_Online">Elaborazione di Immagini Online</h4>
+
+<ul>
+ <li><a href="http://www.pixlr.com">Pixlr</a> — Pixlr offre strumenti per creazione ed elaborazione di immagini incorporati in un browser a livello professionale e facili da usare.</li>
+ <li><a href="http://www.photoshop.com">Photoshop</a> — Ritaglia, ruota e ritocca fotografie con Photoshop® Express, un elaboratore di fotografie gratis online.</li>
+</ul>
+
+<h3 id="Creare_un'immagine_Piè_di_pagina_per_il_Tema">Creare un'immagine Piè di pagina per il Tema</h3>
+
+<p>Nelle versioni più vecchie di Firefox, o nelle versioni più recenti con determinati add-ons installati, l'immagine piè di pagina si vede come sfondo della parte bassa della finestra del browser, dietro le barre degli add-on e di ricerca. Verrà ancorata nell'angolo in basso a sinistra della finestra del browser. Le immagini piè di pagina sono opzionali.</p>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9935/footer-step.jpg" style="height: 56px; width: 1249px;"></p>
+
+<ul>
+ <li><a href="https://addons.cdn.mozilla.net/static/img/docs/themes/header.jpg">Vedi qui un esempio di Piè di pagina per il Tema.</a></li>
+</ul>
+
+<h4 id="Requisiti_per_l'immagine_2">Requisiti per l'immagine</h4>
+
+<ul>
+ <li>Le dimensioni devono essere: <strong>3000px larghezza × 100px altezza</strong></li>
+ <li>formato file: PNG o JPG</li>
+ <li>L'immagine non deve superare i 300 KB in dimensione</li>
+</ul>
+
+<h4 id="Suggerimenti_2">Suggerimenti</h4>
+
+<ul>
+ <li>Immagini piccole, a debole contrasto e gradienti funzionano meglio; immagini ad alta risoluzione faticheranno ad andare d'accordo con la UI del browser.</li>
+ <li>Firefox può visualizzare una porzione maggiore della parte alta dell'immagine se la barra di ricerca è aperta o se una delle estensioni aumenta l'altezza della parte bassa della finestra.</li>
+ <li>La parte sinistra dell'immagine dovrebbe contenere le informazioni più importanti-dal momento che, aumentando la larghezza della finestra, il browser lascia vedere di più sul lato destro dell'immagine.</li>
+</ul>
+
+<h3 id="Presentazione_dei_tuoi_temi_personalizzati">Presentazione dei tuoi temi personalizzati</h3>
+
+<p>Per iniziare a presentare le tue immagini, vai alla pagina di Presentazione Temi:</p>
+
+<ol class="itemized">
+ <li><strong>Dai un nome al tuo tema</strong> — assegna un nome unico per il tuo tema. Nomi duplicati non sono ammessi, pertanto potresti aver bisogno di tentare alcune volta prima di trovarne uno.</li>
+ <li><strong>Assegna una categoria e parole-chiave</strong> — seleziona una categoria e inserisci alcune parole-chiave che meglio descrivano il tuo tema. Tieni in mente che un revisore potrebbe rifiutare il tuo tema se risultasse che categoria e/o parole chiave non c'entrano molto con il tuo tema.</li>
+ <li><strong>Descrivi il tuo tema</strong> — scrivi una breve descrizione del tuo tema. Tieni in mente che un revisore potrebbe rifiutare il tuo tema se risultasse che la tua descrizione non rappresenta accuratamente il tuo tema.</li>
+ <li><strong>Sciegli un tipo di licenza per il tuo tema</strong> — decidi il tipo di licenza copyright per la tua creazione. <a href="http://creativecommons.org/licenses/">Approfondisci il tema del tipo licenze Creative Common.</a>
+  <ul>
+   <li><strong>Importante:</strong> Assicurati di avere il diritto di utilizzare l'immagine nel tuo tema!</li>
+  </ul>
+ </li>
+ <li><strong>Carica le tue immagini</strong> — assicurati che siano in formato JPG or PNG e che non eccedano i 300 KB!</li>
+ <li><strong>Scegli i colori di testo e schede</strong> — puoi scegliere il colore di scheda("sfondo") e di testo in primo piano che meglio si adatta alla tua immagine di intestazione.</li>
+ <li><strong>Anteprima del tuo tema</strong> — sei pronto per un'anteprima del tuo tema! Semplicemente passa il mouse sull'immagine sopra il pulsante "Inoltra il tema" e vedi all'istante come appare.</li>
+ <li><strong>Inoltra il tuo tema</strong> — se ti sembra tutto a posto, premi il bottone "Inoltra il tema" e hai finito! Puoi vedere tutti i temi pubblicati da te sulla pagina del tuo profilo.
+  <ul>
+   <li><strong>Suggerimento:</strong> per assicurarti che il tuo tema venga approvato, controlla bene che sia risppondente con le linee guida dei contenuti e con i termini di servizio!</li>
+  </ul>
+ </li>
+</ol>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9933/submission-step.jpg" style="height: 1800px; width: 785px;"></p>
+
+<p class="call-to-submit"><a class="button prominent" href="https://addons.mozilla.org/en-US/developers/theme/submit">Submit Your Theme Now</a></p>
+</div>

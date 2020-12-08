@@ -1,0 +1,179 @@
+---
+title: AudioContext
+slug: Web/API/AudioContext
+tags:
+  - 오디오
+translation_of: Web/API/AudioContext
+---
+<p>{{APIRef()}}</p>
+
+<div>
+<p><code>AudioContext는 오디오 모듈과 연동시켜 {{domxref("AudioNode")}}를 통해 음원을 그래프화 시킨다. 오디오 컨택스트는 음원정보를 담은 노드를 생성하거나 음원을 실행또는 디코딩 시키는 일을 한다.</code> 당신이 음원을 다룰일이 있다면 우선 AudioContext를 생성해야 관련된 모든 작업을 진행할 수 있다.</p>
+
+<p><code>AudioContext 이벤트의 타겟이 되므로 </code>{{domxref("EventTarget")}} 인터페이스를 통해 구현되어야 한다.</p>
+</div>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt>{{domxref("AudioContext.currentTime")}} {{readonlyInline}}</dt>
+ <dd>double형으로 리턴되는 음원을 스케쥴링하기 위한 초단위로 증가하는 시간을 나타낸다. 이는 0부터 시작해서 진행되며 멈추거나 일시정지, 리셋을 할수는 없다.</dd>
+ <dt>{{domxref("AudioContext.destination")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("AudioDestinationNode")}} 은 컨텍스트 상의 모든 음원의 마지막 지점을 리턴한다. It can be thought of as the audio-rendering device.</dd>
+ <dt>{{domxref("AudioContext.listener")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("AudioListener")}} 오브젝트를 리턴하여 3D 사운드를 다루기 위해 사용된다.</dd>
+ <dt>{{domxref("AudioContext.sampleRate")}} {{readonlyInline}}</dt>
+ <dd>컨택스트 상의 모든 노드에서 사용될 샘플rate를 float형으로 매초 리턴한다.  {{domxref("AudioContext")}} 의 sample-rate는 변경되지 않는다.</dd>
+ <dt>{{domxref("AudioContext.mozAudioChannelType")}} {{ non-standard_inline() }} {{readonlyInline}}</dt>
+ <dd>Firefox OS의 디바이스에서 재생될 {{domxref("AudioContext")}}상의 음원의 채널을 리턴받는다.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>{{domxref("EventTarget")}}<em>을 부모로 가지는 메서드</em>.</p>
+
+<dl>
+ <dt>{{domxref("AudioContext.createBuffer()")}}</dt>
+ <dd>새롭게 빈 {{ domxref("AudioBuffer") }}를 생성해 음원데이터를 넣거나 {{domxref("AudioBufferSourceNode") }}를 통해 재생하는 역할을 한다.</dd>
+ <dt>{{domxref("AudioContext.createBufferSource()")}}</dt>
+ <dd>{{domxref("AudioBufferSourceNode")}}를 생성하여 {{ domxref("AudioBuffer")}} 객체상에 담긴 데이터를 재생하거나 수정할때 사용된다.  {{ domxref("AudioBuffer")}}들은 {{domxref("AudioContext.createBuffer")}}을 통해 생성이 되거나 {{domxref("AudioContext.decodeAudioData")}}에 의해 음원트랙이 성공적으로 디코드 되었을 경우에 리턴이 된다.</dd>
+ <dt>{{domxref("AudioContext.createMediaElementSource()")}}</dt>
+ <dd>{{domxref("HTMLMediaElement")}}와 연관된 {{domxref("MediaElementAudioSourceNode")}}을 생성한다.  이는 {{HTMLElement("video")}} 나 {{HTMLElement("audio")}} 를 재생하거나 음원을 조작할때 사용한다.</dd>
+ <dt>{{domxref("AudioContext.createMediaStreamSource()")}}</dt>
+ <dd>{{domxref("MediaStream")}} 과 연관된 {{domxref("MediaStreamAudioSourceNode")}}를 생성하여 내 컴퓨터의 마이크나 다른 소스를 통해 발생한 오디오 스트림의 정보를 보여준다.</dd>
+ <dt>{{domxref("AudioContext.createMediaStreamDestination()")}}</dt>
+ <dd>{{domxref("MediaStream")}} 과 연관된 {{domxref("MediaStreamAudioDestinationNode")}}를 생성하여 로컬파일로 저장된 혹은 다른 컴퓨터에 저장된 오디오 스트림정보를 보여준다.</dd>
+ <dt>{{domxref("AudioContext.createScriptProcessor()")}}</dt>
+ <dd>{{domxref("ScriptProcessorNode")}} 자바스크립트를 통해 음원의 진행상태에 직접접근에 사용된다.</dd>
+ <dt>{{domxref("AudioContext.createAnalyser()")}}</dt>
+ <dd>{{domxref("AnalyserNode")}}를 생성하여 오디오의 시간이나 주파수 정보를 알아내어 데이터를 시각화 하는 작업등에 사용을 할 수 있다.</dd>
+ <dt>{{domxref("AudioContext.createBiquadFilter()")}}</dt>
+ <dd>{{domxref("BiquadFilterNode")}} 를 생성하여 high-pass, low-pass, band-pass등  2차 필터의 정보를 설정 할 수 있다.</dd>
+ <dt>{{domxref("AudioContext.createChannelMerger()")}}</dt>
+ <dd>{{domxref("ChannelMergerNode")}} 두개의 오디오 스트림 정보를 하나의 오디오 스트림으로 합칠 수 있다.</dd>
+ <dt>{{domxref("AudioContext.createChannelSplitter()")}}</dt>
+ <dd>{{domxref("ChannelSplitterNode")}}를 통해 오디오 스트림의 각각의 채널정보에 접근 할 때와 스트림을 구분지어 처리할때 사용한다.</dd>
+ <dt>{{domxref("AudioContext.createConvolver()")}}</dt>
+ <dd>{{domxref("ConvolverNode")}}를 통해 convolution effects를 당신의 오디오 그래프에 적용할 때 사용한다. 예를 들면 reverberation effect 가 있다.</dd>
+ <dt>{{domxref("AudioContext.createDelay()")}}</dt>
+ <dd>{{domxref("DelayNode")}}를 통해 특정 시간동안 오디오의 입력신호를 딜레이 시킨다. 이 노드는 Web Audio API에서 피드백 루프를 생성할때 유용하다.</dd>
+ <dt>{{domxref("AudioContext.createDynamicsCompressor()")}}</dt>
+ <dd>{{domxref("DynamicsCompressorNode")}}는 음원의 신호를 암축할때 사용된다.</dd>
+ <dt>{{domxref("AudioContext.decodeAudioData()")}}</dt>
+ <dd>{{domxref("ArrayBuffer") }} 에 담긴 오디오 파일을 비동기적으로 디코딩 시킬때 사용한다. 이 경우에 일반적으로 ArrayBuffer는 <code>arraybuffer의 <code>responseType을 세팅한 후 </code></code>{{domxref("XMLHttpRequest")}}의 <code>response를 통해 데이터가 로드된다.</code> 이 메서드는 오직 완벽한 파일에서만 동작을 한다. 파편화된 오디오 파일들에서는 동작하지 않는다.</dd>
+ <dt>{{domxref("AudioContext.createGain()")}}</dt>
+ <dd>{{domxref("GainNode")}}를 생성하여 오디오 그래프의 전반적인 볼륨을 조절할때 사용한다.</dd>
+ <dt>{{domxref("AudioContext.createOscillator()")}}</dt>
+ <dd>{{domxref("OscillatorNode")}}를 통해 시간별 음원의 파형을 볼수 있다. 이는 일반적으로 음색(a tone) 을 생성한다.</dd>
+ <dt>{{domxref("AudioContext.createPanner()")}}</dt>
+ <dd>{{domxref("PannerNode")}}를 통해 입력되는 음원을 3차원으로 공간화 시킬때 사용한다.</dd>
+ <dt>{{domxref("AudioContext.createPeriodicWave()")}}</dt>
+ <dd>{{domxref("PeriodicWave")}}를 생성하여 {{ domxref("OscillatorNode") }}를 통해 출력되는 파형을 확인할수 있다.</dd>
+ <dt>{{domxref("AudioContext.createWaveShaper()")}}</dt>
+ <dd>{{domxref("WaveShaperNode")}}는 non-linear distortion effects를 적용할 때 사용한다.</dd>
+ <dt>{{domxref("AudioContext.createAudioWorker()")}}</dt>
+ <dd>{{domxref("AudioWorkerNode")}}는 Web Worker의 스레드와 상호작용을 하며 오디오를 생성, 처리, 분석등의 작업을 직접한다. 이는 2014년 8월 29일에 스펙으로 추가되어 아직 다른 브라우저에는 적용되지 않은 상태이다.</dd>
+</dl>
+
+<h2 id="Obsolete_methods">Obsolete methods</h2>
+
+<dl>
+ <dt>{{domxref("AudioContext.createJavaScriptNode()")}}</dt>
+ <dd>Creates a {{domxref("JavaScriptNode")}}, used for direct audio processing via JavaScript. This method is obsolete, and has been replaced by {{domxref("AudioContext.createScriptProcessor()")}}.</dd>
+ <dt>{{domxref("AudioContext.createWaveTable()")}}</dt>
+ <dd>Creates a {{domxref("WaveTableNode")}}, used to define a periodic waveform. This method is obsolete, and has been replaced by {{domxref("AudioContext.createPeriodicWave()")}}.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Basic audio context declaration:</p>
+
+<pre class="brush: js">var audioCtx = new AudioContext;</pre>
+
+<p>Cross browser variant:</p>
+
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioCtx = new AudioContext();
+
+var oscillatorNode = audioCtx.createOscillator();
+var gainNode = audioCtx.createGain();
+var finish = audioCtx.destination;
+// etc.</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#the-audiocontext-interface', 'AudioContext')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
+   <td>{{CompatGeckoDesktop(25.0)}} </td>
+   <td>{{CompatNo}}</td>
+   <td>15.0{{property_prefix("webkit")}}<br>
+    22 (unprefixed)</td>
+   <td>6.0{{property_prefix("webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>26.0</td>
+   <td>1.2</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>33.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul style="margin-left: 40px;">
+ <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

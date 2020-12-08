@@ -1,0 +1,63 @@
+---
+title: Installazione e uso di ADB
+slug: Archive/B2G_OS/Debugging/Installazione_ADB
+translation_of: Archive/B2G_OS/Debugging/Installing_ADB
+---
+<div class="summary">
+ <p>Molti aspetti dello sviluppo del SO Firefox richiedono l'installazione di ADB, l'Android Debug Bridge. Questo articolo spiega come fare, e condivide alcuni comandi ADB comuni utili.</p>
+</div>
+<h2 id="Installazione_di_ADB">Installazione di ADB</h2>
+<p>Puoi scaricare ed installare <code>adb</code> come parte del pacchetto Android SDK, per Mac, Linux o Windows — visita la pagina <a href="http://developer.android.com/sdk/index.html">Ottenere l'Android SDK</a>.</p>
+<p>Le distribuzioni Linux più nuove hanno <code>adb</code> già nei loro repositories. Per Ubuntu 12.10 e successivi, esegui il seguente comando:</p>
+<pre>sudo apt-get install android-tools-adb</pre>
+<p>O per Fedora 18/19:</p>
+<pre>sudo yum install android-tools</pre>
+<p>O su OSX tramite <a href="http://brew.sh/">Homebrew</a>:</p>
+<pre>brew install android-platform-tools</pre>
+<p>Se la tua distribuzione non dispone di pacchetti per <code>adb </code>(es. Ubuntu 12.04 o Fedora 17), sarà necessario installare il pacchetto <a class="external" href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">Android SDK</a> per la tua piattaforma (avrai bisogno dell'<em>ADT Bundle</em>, non dell'opzione <em>SDK Tools Only</em>). Esegui quindi il loro gestore di pacchetti, <code>$SDK_HOME/tools/android</code>, e usa la GUI per installare "Android SDK Platform-tools".</p>
+<p>Scopri dove <code>adb</code> viene installato (di solito in <code>usr/bin</code>, eventualmente anche dentro <code>adt/platform-tools</code>, a seconda di come lo hai installato). Assicurati di aggiungere questa cartella alla tua <code>PATH</code>. Questo può esser fatto aggiungendo la riga</p>
+<pre>PATH=$SDK_HOME:$PATH</pre>
+<p>sostituendo <code>$SDK_HOME</code> con il percorso dell'Android SDK, al tuo file <code>~/.bashrc</code> o equivalente.</p>
+<h2 id="Risoluzione_dei_problemi">Risoluzione dei problemi</h2>
+<p>Se stai installando la versione 64-bit, e ottieni un errore "File non trovato" quando esegui 'adb' anche se il file è presente, è necessario installare le librerie di compatibilità a 32-bit. Per fare questo con apt:</p>
+<pre>sudo apt-get install ia32-libs</pre>
+<h2 id="Comandi_ADB_comuni">Comandi ADB comuni</h2>
+<p><span id="result_box" lang="it"><span class="hps">Le sezioni seguenti spiegano</span> <span class="hps">alcuni</span> <span class="hps">comandi </span></span><code>adb</code> <span id="result_box" lang="it"><span class="hps">comuni, <span id="result_box" lang="it"><span class="hps">utili</span></span></span><span>.</span></span></p>
+<h2 id="Riavvio_del_processo_b2g">Riavvio del processo b2g</h2>
+<p>b2g è l'equivalente di un'applicazione <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> <span id="result_box" lang="it"><span class="hps">in esecuzione</span> <span class="hps">sul telefono</span> <span class="hps">in cima ad un</span> <span class="hps">kernel</span> <span id="result_box" lang="it"><span class="hps">basato su Android</span><span>.</span></span></span> A volte potresti volerlo riavviare; questo è un modo per ripristinare l'ambiente applicativo senza riavviare l'intero dispositivo. E' possibile effettuarlo inserendo quanto segue nel tuo terminale mentre il tuo dispositivo è connesso al tuo computer (o durante l'esecuzione del debugger):</p>
+<pre>adb shell killall b2g</pre>
+<h2 id="Abilitazione_port_forwarding_per_il_debug">Abilitazione port forwarding per il debug</h2>
+<p>Per abilitare semplicemente il <em>port forwarding</em> (trasferimento dati tramite una specifica porta; per esempio se stai usando il Gestore di Applicazioni per il debug di applicazioni su un dispositivo Firefox OS), immetti il seguente comando nel tuo terminale:</p>
+<pre class="language-html">adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+<p><span id="result_box" lang="it"><span class="hps">Avrete</span> <span class="hps">bisogno di fare questo</span> <span class="hps">ogni volta che il</span> <span class="hps">telefono viene</span> <span class="hps">riavviato o</span> <span class="hps">scollegato</span> <span class="hps">e poi ri</span><span class="atn">-</span><span>collegato</span><span>.</span> <span class="hps">È possibile modificare il</span> <span class="hps">numero di socket</span><span>, se necessario</span><span>.</span></span></p>
+<h2 id="Forwarding_delle_porte_a_una_macchina_locale">Forwarding delle porte a una macchina locale</h2>
+<p>Per il forwarding delle porte a un computer locale, è necessario scaricare i <a href="http://people.mozilla.org/~jmuizelaar/forward/">binari netcat e ssh</a>, ed eseguire i seguenti comandi:</p>
+<pre class="brush: bash"># questo è un trucco enorme, ma di fatto funziona...
+host$ adb forward tcp:7979 tcp:6969
+
+# crea qualche <em>named pipe</em> <span class="short_text" id="result_box" lang="it"><span class="hps">in modo da</span> <span class="hps">fare un</span> <span class="hps">netcat</span> <span class="hps">bidirezionale</span></span>
+phone$ mknod readback p
+host$ mknod readback p
+
+# <span id="result_box" lang="it"><span class="hps">questo</span> <span class="hps">stabilisce</span> <span class="hps">una connessione</span> <span class="hps">all'host</span></span> <span id="result_box" lang="it"><span class="hps">usata una volta sola</span></span>
+# ascolto sulle porte 6969 e 5959 e inoltro di tutte le informazioni tra loro
+phone$ ./netcat -l -p 6969 &lt; readback | ./netcat -l -p 5959 &gt; readback
+# connessione alla porta 7979 (porta 6969 sul dispositivo) e il server ssh locale e inoltro di tutte le informazioni tra loro
+host$ ./netcat localhost 7979 &lt; readback | ./netcat localhost 22 &gt; readback
+
+# ora, quando ci colleghiamo alla porta 5959 sul telefono, sarà come connettersi al server ssh sull'host
+
+# uso inverso di netcat per impostare una connessione ssh all'host e inoltro della porta 9999 sul dispositivo verso il 'localhost:8000' (questo potrebbe essere qualsiasi cosa come 'google.com:80')
+phone$ ./ssh localhost -p 5959 -L 9999:localhost:8000</pre>
+<p>Questo inoltrerà la porta 9999 sul dispositivo verso la porta 8000 dell'host.</p>
+<p>Alternativamente, puoi usare un server ssh (<a href="http://people.mozilla.org/~jmuizelaar/forward/dropbear">dropbear</a> e <a href="http://people.mozilla.org/~jmuizelaar/forward/host_key">host_key</a>) direttamente sul dispositivo, usando i comandi seguenti:</p>
+<pre class="brush: bash">phone$ DROPBEAR_PASSWORD=root ./dropbear -p 9000 -F -v -a -r host_key ./dropbear
+host$ adb forward tcp:8888 tcp:9000
+# l'autenticazione con chiave pubblica è stata <em>hard-coded</em> per avere successo (<span id="result_box" lang="it"><span class="hps">assicuratevi di avere</span> <span class="hps">una chiave pubblica</span> <span class="hps">per</span> <span class="hps">ssh</span> <span class="hps">da usare</span></span>)
+host$ ssh -vvv root@localhost -p 8888 -R 9999:people.mozilla.org:80
+</pre>
+<p>Ulteriori risorse:</p>
+<ul>
+ <li><a href="http://k.japko.eu/android-dropbear.html">Istruzioni per la compilazione di dropbear</a></li>
+ <li><a href="http://people.mozilla.org/~jmuizelaar/forward/dropbear-b2g.patch">dropbear patch</a> per disabilitare il crash da variabili ambientali mancanti e il successo dell'autenticazione <em>hard-code</em>.</li>
+</ul>

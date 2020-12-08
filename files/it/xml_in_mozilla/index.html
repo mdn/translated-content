@@ -1,0 +1,283 @@
+---
+title: XML in Mozilla
+slug: XML_in_Mozilla
+tags:
+  - NeedsUpdate
+  - Tutte_le_categorie
+  - XML
+translation_of: Archive/Mozilla/XML_in_Mozilla
+---
+<p>Mozilla gestisce ampiamente <a href="/it/XML" title="it/XML">XML</a>. Sono gestite diverse Raccomandazioni e bozze del World Wide Web Consortium (<a class="external" href="http://w3c.org/">W3C</a>) per la famiglia XML, così come altre tecnologie relative.</p>
+
+<h3 id="Supporto_principale_alle_Raccomandazioni_W3C_per_l.27XML" name="Supporto_principale_alle_Raccomandazioni_W3C_per_l.27XML">Supporto principale alle Raccomandazioni W3C per l'XML</h3>
+
+<p>Il supporto principale ad XML include: il parsing senza validazione (utilizzando Expat parser), la visualizzazione di XML con CSS, la manipolazione di documenti XML con script che utilizzano la tecnologia DOM, l'associazione dei fogli di stile ai documenti XML, e i namespace. Il supporto principale è buono, ma ha ancora qualche bug.</p>
+
+<h4 id="DTD_e_altre_entit.C3.A0_esterne" name="DTD_e_altre_entit.C3.A0_esterne">DTD e altre entità esterne</h4>
+
+<p>Mozilla non utilizza entità esterne prese dalla rete.</p>
+
+<p>Mozilla può caricare entità esterne solamente se l'identificatore di sistema utilizza il protocollo <code>chrome</code>. Questa caratteristica viene usata principalmente per <a href="/it/XUL_Tutorial/Regionalizzazione" title="it/XUL_Tutorial/Regionalizzazione">regionalizzare Mozilla in lingue diverse dall'Inglese</a> (le stringhe UI vengono mantenute in file DTD esterni). Mozilla carica entità esterne in un altro caso: se l'identificatore di sistema ha un percorso relativo, e se la dichiarazione XML definisce il documento come <strong>non</strong> autonomo (standalone), che è l'attributo di default. In questo caso Mozilla proverà a cercare l'entità nella cartella <code>&lt;bin&gt;/res/dtd</code>.</p>
+
+<p>Mozilla può fare eccezioni sulle entità esterne anche per documenti XHTML. Si veda sotto.</p>
+
+<p>Mozilla leggerà i subset interni (DTD), e in casi speciali anche le DTD esterne (come è stato spiegato sopra) e utilizzarà queste informazioni per riconoscere gli attributi di tipo ID, i valori di default per gli attributi e le entità generali.</p>
+
+<h4 id="Altre_note" name="Altre_note">Altre note</h4>
+
+<p>Gran parte del Document Object Model (<a class="external" href="http://www.w3.org/DOM/">DOM</a>, Raccomandazioni e bozze W3C) si applica ad XML. Per esempio il linguaggio Cascading Style Sheets (<a class="external" href="http://www.w3.org/Style/CSS/">CSS</a>, Raccomandazioni e bozze W3C) può essere utilizzato per formattare documenti XML.</p>
+
+<p>Il codice per il supporto principale ad XML può essere trovato nelle seguenti cartelle presenti sul server CVS di Mozilla: <code><a href="https://dxr.mozilla.org/mozilla-central/source/content/xml/" rel="custom">content/xml/</a></code>, <code><a href="https://dxr.mozilla.org/mozilla-central/source/parser/expat/" rel="custom">parser/expat/</a></code>, e <code><a href="https://dxr.mozilla.org/mozilla-central/source/parser/htmlparser/" rel="custom">parser/htmlparser/</a></code>.</p>
+
+<p>La scelta del newsgroup dove discutere (in Inglese) sul supporto di XML in Mozilla, dipende dalla natura della domanda. Per esempio, le domande su DOM dovrebbero essere discusse sul newsgroup mozilla.dev.tech.dom, mentre le discussioni sullo stile dovrebbero essere svolte su mozilla.dev.tech.css e così via. Le discussioni di carattere generale su XML si trovano su mozilla.dev.tech.xml.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Specificazione o tecnologia</td>
+   <td class="header">Status e/o maggiore documentazione</td>
+  </tr>
+  <tr>
+   <td>XML</td>
+   <td><a class="external" href="http://www.w3.org/TR/REC-xml">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>Namespace in XML</td>
+   <td><a class="external" href="http://www.w3.org/TR/REC-xml-names/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>Associare i fogli di stile ai documenti XML</td>
+   <td><a class="external" href="http://www.w3.org/TR/xml-stylesheet/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>Formattare documenti XML con CSS</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Manipolare documenti XML con script che usano DOM</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Convertire un albero DOM di un foglio XML in un albero di oggetti Javascript (<a href="/it/Costruire_e_decostruire_un_documento_XML#JXON" title="it/Costruire_e_decostruire_un_documento_XML#JXON">JXON</a>)</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Altre_Raccomandazioni_XML_del_W3C_gestite" name="Altre_Raccomandazioni_XML_del_W3C_gestite">Altre Raccomandazioni XML del W3C gestite</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Specificazione o Technologia</td>
+   <td class="header">Documentazione</td>
+  </tr>
+  <tr>
+   <td>XHTML</td>
+   <td><a class="external" href="http://www.w3.org/TR/xhtml1/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>XML Base (solo per collegamenti, non per <code>:visited</code> ecc. Proprietà <a href="/it/CSS" title="it/CSS">CSS</a>)</td>
+   <td><a class="external" href="http://www.w3.org/TR/xmlbase/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>XLink (solo XLinks semplici)</td>
+   <td><a class="external" href="http://www.w3.org/TR/xlink/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>FIXptr</td>
+   <td><a class="external" href="http://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm">W3C "proposal"</a></td>
+  </tr>
+  <tr>
+   <td>XPointer Framework</td>
+   <td><a class="external" href="http://www.w3.org/TR/xptr-framework/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>XPointer <code>element()</code> scheme</td>
+   <td><a class="external" href="http://www.w3.org/TR/xptr-element/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>XPointer <code>xmlns()</code> scheme</td>
+   <td><a class="external" href="http://www.w3.org/TR/xptr-xmlns/">W3C Recommendation</a></td>
+  </tr>
+  <tr>
+   <td>XPointer <code>fixptr()</code> scheme</td>
+   <td>Questo schema è solo un wrapper per FIXptr</td>
+  </tr>
+  <tr>
+   <td>XPointer <code>xpath1()</code> scheme</td>
+   <td><a class="external" href="http://www.simonstl.com/ietf/draft-stlaurent-xpath-frag-00.html">Internet-Draft</a></td>
+  </tr>
+  <tr>
+   <td><code>document.load()</code>, <code>document.async</code></td>
+   <td><a class="external" href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS">Part of DOM Level 3 Load &amp; Save module, a W3C Working Draft</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="XHTML" name="XHTML">XHTML</h4>
+
+<p><a href="/it/XHTML" title="it/XHTML">XHTML</a> è ampiamente supportato, la maggior parte delle cose dovrebbero funzionare. I documenti XHTML vengo trattati in maniera differente a seconda del mime type (o a seconda dei suffissi dei file se vengono caricati da dischi locali). Per i file che passano attraverso il code path <a href="/it/HTML" title="it/HTML">HTML</a> non si controlla se sono ben formati. E' possibile inoltre notare che non tutte le caratteristiche di XHTML vengono supportate se passano con il code path HTML.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">MIME Type</td>
+   <td class="header">Suffisso del file</td>
+   <td class="header">Code Path</td>
+  </tr>
+  <tr>
+   <td>text/xml<br>
+    application/xml<br>
+    application/xhtml+xml</td>
+   <td>xml<br>
+    xht<br>
+    xhtml</td>
+   <td>XML</td>
+  </tr>
+  <tr>
+   <td>text/html</td>
+   <td>html<br>
+    htm</td>
+   <td>HTML</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>L'intero documento deve essere XHTML. Possono essere utilizzati elementi XHTML all'interno di documenti XML specificando il namespace XHTML. Per degli esempi si veda la sezione <a href="#Testing_and_QA">Testing and QA</a>. Il namespace corretto per XHTML è <code><span class="nowiki">http://www.w3.org/1999/xhtml</span></code></p>
+
+<p>Si noti che le entità XHTML, come <code>&amp;auml;</code>, funzionano solo in conformità ai documenti XHTML che hanno un XHTML Formal Public Identifier valido (cioè, in parole povere, una sezione DOCTYPE con un identificatore PUBLIC). Le entità XHTML non funzioneranno in documenti XML, neanche se viene specificato il namespace XHTML. Gli identificatori pubblici riconosciuti sono:</p>
+
+<pre>-//W3C//DTD XHTML 1.0 Transitional//EN
+-//W3C//DTD XHTML 1.1//EN
+-//W3C//DTD XHTML 1.0 Strict//EN
+-//W3C//DTD XHTML 1.0 Frameset//EN
+-//W3C//DTD XHTML Basic 1.0//EN
+-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN
+-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN
+-//W3C//DTD SVG 20001102//EN
+-//WAPFORUM//DTD XHTML Mobile 1.0//EN
+</pre>
+
+<h4 id="XML_Linking_e_Pointing" name="XML_Linking_e_Pointing">XML Linking e Pointing</h4>
+
+<p>Il supporto per XML Linking include <a class="external" href="http://www.w3.org/TR/xmlbase">XML Base</a> (utilizzato solamente quando il mouse è posizionato sopra un collegamente o quando viene cliccato)) e semplici <a class="external" href="http://www.w3.org/TR/xlink/">XLinks</a>. Si può traformare qualsiasi elemento XML in un XLink utilizzando il namespace XLink <code><span class="nowiki">http://www.w3.org/1999/xlink</span></code>. Si possono anche utilizzare gli elementi di collegamento del namespace XHTML. Per degli esempi si veda la sezione <a href="#Testing_and_QA">Testing and QA</a>.</p>
+
+<p>Per il puntamento a risorse all'interno di documenti XML, Mozilla supporta anche <a class="external" href="http://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm">FIXptr</a>, una versione semplificata e non compatibile di XPointer. Oltre a poter utilizzare FIXptr nei collegamenti, è posibile utilizzarlo negli script. Si veda l'interfaccia proprietaria <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/public/idl/core/nsIDOMXMLDocument.idl" rel="custom">dom/public/idl/core/nsIDOMXMLDocument.idl</a></code>. E' possibile trovare un test per <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=46954&amp;action=view">FIXptr links</a> e un <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=61629&amp;action=view">esempio di script</a>.</p>
+
+<p>A partire dalla versione 1.4alpha, Mozilla supporta anche <a class="external" href="http://www.w3.org/TR/xptr-framework/">XPointer Framework</a>, <a class="external" href="http://www.w3.org/TR/xptr-element/">XPointer <code>element()</code> scheme</a>, <a class="external" href="http://www.w3.org/TR/xptr-xmlns/">XPointer <code>xmlns()</code> scheme</a>, XPointer <code>fixptr()</code> scheme e <a class="external" href="http://www.simonstl.com/ietf/draft-stlaurent-xpath-frag-00.html">XPointer <code>xpath1()</code> scheme</a>. Il processore XPointer è estensibile ed è semplice implentare supporto per altri schemi. Si veda l'<a href="https://dxr.mozilla.org/mozilla-central/source/content/xml/document/public/nsIXPointer.idl" rel="custom">API</a>. L'<code>xpath1()</code> scheme è stato <a href="https://dxr.mozilla.org/mozilla-central/source/content/xslt/src/xpath/nsXPath1Scheme.cpp" rel="custom">implementato utilizzando questo meccanismo estensibile</a>. E' inoltre possibile trovare <a href="https://dxr.mozilla.org/mozilla-central/source/dom/public/idl/core/nsIDOMXMLDocument.idl" rel="custom">API proprietari</a> per il processore XPointer. Inoltre si potrebbe considerare di visionare anche il</p>
+
+<p><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=119333&amp;action=view">test per XPointers</a>.</p>
+
+<p>Infine, è disponibile uno script predefinito (molto utile con FIXptr) che seleziona il target del collegamento passandoci sopra con il mouse. Non c'è ancora un UI per impostare questo script predefinito, quindi sarà necessario modificare manualmente il file delle preferenze. Si aggiunga questa linea.</p>
+
+<pre>pref("layout.selectanchor", true);
+</pre>
+
+<h4 id="DOM_Load_and_Save_Methods" name="DOM_Load_and_Save_Methods">DOM Load and Save Methods</h4>
+
+<p><code>document.load()</code> is a part of an old version of the W3C <a class="external" href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a>. Mozilla currently implements only the <code>load()</code> method and the <code>async</code> property. Since 1.4alpha it has been possible to load documents synchronously, before that it was only asynchronous. <a href="https://dxr.mozilla.org/mozilla-central/source/content/xml/tests/load/" rel="custom">See the load sample</a> in the XML tests directory. (Loading the load.html file from the LXR generated page will not work because LXR will munge the test.xml file into HTML and serve it as HTML. To test this functionality, create the files on your local disk or on a webserver.)</p>
+
+<h3 id="Outside_Supported_XML_W3C_Recommendations" name="Outside_Supported_XML_W3C_Recommendations">Outside Supported XML W3C Recommendations</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Specification or Technology</td>
+   <td class="header">Documentation</td>
+   <td class="header">Mozilla Project</td>
+  </tr>
+  <tr>
+   <td><a href="/it/XSLT" title="it/XSLT">XSLT</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/xslt">W3C Recommendation</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/xslt/">XSLT</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/XPath" title="it/XPath">XPath</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/xpath">W3C Recommendation</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/xslt/">XSLT</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/XMLHttpRequest" title="it/XMLHttpRequest">XMLHttpRequest</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/XMLHttpRequest/">W3C Draft</a></td>
+   <td><a class="external" href="http://www.mozilla.org/xmlextras/">XML Extras</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/DOMParser" title="it/DOMParser">DOMParser</a> and <a href="/it/XMLSerializer" title="it/XMLSerializer">XMLSerializer</a></td>
+   <td><a class="external" href="http://www.mozilla.org/xmlextras/">Mozilla</a></td>
+   <td><a class="external" href="http://www.mozilla.org/xmlextras/">XML Extras</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/SAX" title="it/SAX">SAX</a></td>
+   <td><a class="external" href="http://www.saxproject.org/" rel="freelink">http://www.saxproject.org/</a></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><a href="/it/SOAP_in_Gecko-based_Browsers" title="it/SOAP_in_Gecko-based_Browsers">SOAP</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/SOAP/">W3C Note</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/webservices/">Web Services</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/XML-RPC" title="it/XML-RPC">XML-RPC</a></td>
+   <td><a class="external" href="http://www.xmlrpc.com/spec">UserLand Software</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/xmlrpc/">XML-RPC</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/RDF" title="it/RDF">RDF</a></td>
+   <td><a class="external" href="http://www.w3.org/RDF/">W3C Recommendations</a></td>
+   <td><a href="/it/RDF" title="it/RDF">RDF</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/SVG" title="it/SVG">SVG</a></td>
+   <td><a class="external" href="http://www.w3.org/Graphics/SVG/">W3C Proposed Recommendation</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/svg/">SVG</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/MathML" title="it/MathML">MathML</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/MathML/">W3C Recommendation</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/mathml/">MathML</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/P3P" title="it/P3P">P3P</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/P3P/">W3C Recommendation</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/p3p/">P3P</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/Accessing_Web_Services_in_Mozilla_Using_WSDL_Proxying" title="it/Accessing_Web_Services_in_Mozilla_Using_WSDL_Proxying">WSDL</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/wsdl">W3C Note</a></td>
+   <td><a class="external" href="http://www.mozilla.org/projects/webservices/">Web Services</a></td>
+  </tr>
+  <tr>
+   <td><a href="/it/XBL" title="it/XBL">XBL</a></td>
+   <td><a href="/it/XBL/XBL_1.0_Reference" title="it/XBL/XBL_1.0_Reference">Mozilla's XBL reference</a></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><a href="/it/XUL" title="it/XUL">XUL</a></td>
+   <td><a href="/it/XUL_Reference" title="it/XUL_Reference">Mozilla's XUL reference</a></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Roadmap" name="Roadmap">Roadmap</h3>
+
+<p>Next big tasks would include support for XPointer <code>xpointer()</code> scheme (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=32832" title="Implement XPointer">bug 32832</a>), XInclude, XML Catalogs (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=98413" title="Implement XML Catalogs">bug 98413</a>), XForms (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=97806" title="Implement W3C XForms in browser and composer">bug 97806</a>; work being done on implementing this as an extension), validating parser (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=196355" title="Implement validating XML parser (validate with DTDs)">bug 196355</a>), XML Schemas, and incremental layout of XML document (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=18333" title="FIXED: XML Content Sink should be incremental">bug 18333</a>).</p>
+
+<p>To fully implement XLink, we need something called a link manager. See some initial <a class="external" href="http://www.mozilla.org/newlayout/xml/lmdesign.html">design documents</a>.</p>
+
+<h3 id="Testing_and_QA" name="Testing_and_QA">Testing and QA</h3>
+
+<p>We have a lot of testcases linked to from the <a class="external" href="http://www.mozilla.org/quality/browser_sc.html">browser standards compliance</a> QA page.</p>
+
+<p>Most of the core XML test documents on the CVS server are located in <code><a href="https://dxr.mozilla.org/mozilla-central/source/content/xml/tests" rel="custom">content/xml/tests</a></code>. We also have a couple online: the books demo and the IRS table of contents demo. Both of them demonstrate XML, Associating stylesheets with XML, displaying XML with CSS, Namespaces in XML, XHTML, simple XLinks, and manipulation of XML with scripts via DOM.</p>
+
+<p>There is an XML component in Bugzilla.</p>
+
+<p>We also have the "xhtml" keyword for XHTML bugs (these tend to be scattered across components).</p>
+
+<h3 id="How_can_I_help.3F" name="How_can_I_help.3F">How can I help?</h3>
+
+<p>If you can code, look for <a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;product=Browser&amp;component=XML&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=helpwanted&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;namedcmd=joki_not_fixed_not_future&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">helpwanted keyword in XML bugs</a>. We don't use that always, so if you want to avoid doing duplicate work you could start working on bugs that have <a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;product=Browser&amp;component=XML&amp;target_milestone=Future&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;namedcmd=joki_not_fixed_not_future&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Future milestone</a>, or otherwise have a milestone that is set way into the future.</p>
+
+<p>You can always test our XML support. We'd really like to get tests that can be run automatically (this would require knowledge of web development; <code>document.load()</code> and/or XML Extras might be needed), but probably most of the bugs we get have just been found by normal people trying to do something that works in some other browser and does not work in Mozilla.</p>

@@ -1,0 +1,160 @@
+---
+title: Simple Menu Bars
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Simple_Menu_Bars
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Simple_Menu_Bars
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Toolbars" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Menu_Features">다음  »</a></p>
+</div><p></p>
+
+<p>이번 단원에서는 메뉴를 포함하는 메뉴바의 작성 방법에 대해 알아보겠습니다.</p>
+
+<h3 id=".EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0">메뉴 만들기</h3>
+
+<p>XUL에는 메뉴를 만들 수 있는 여러가지 다양한 방법이 있습니다. 가장 기본적인 방식은 많은 응용프로그램이 그러하듯이 메뉴들을 포함하는 메뉴바를 추가하는 방법이며, 또한 팝업 메뉴도 만들 수 있습니다. XUL의 메뉴 기능은 메뉴바나 팝업 메뉴를 만들 수 있는 여러가지 요소들로 구성되어 있습니다. 메뉴에 있는 항목들은 쉽게 커스터마이징 할 수 있습니다. 우리는 이미 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>를 사용해서 <a href="ko/XUL_Tutorial/List_Controls#Drop-down_Lists">메뉴를 만드는 방법</a>을 살펴보았습니다. 이 단원은 이 내용을 기반으로 진행될 것입니다.</p>
+
+<p>메뉴바는 대개 툴바와 비슷한 방법으로 작성됩니다. 메뉴바는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> 요소 내부에 위치할 수 있으며, 메뉴바의 왼쪽에 이를 닫을 수 있는 그리피가 나타납니다(주의: Firefox에서는 더 이상 그리피를 지원하지 않습니다). 메뉴는 툴바와 작동방식도 비슷합니다. XUL은 메뉴에만 특별한 몇 가지 요소를 가지고 있습니다.</p>
+
+<p>메뉴바와 메뉴의 작성과 관련된 4가지 요소가 있으며, 여기서는 간략하게 다루고 진행하면서 자세히 다루겠습니다.</p>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></dt>
+ <dd>메뉴들의 컨테이너.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></dt>
+ <dd>이름과 달리, 실제로는 메뉴바에 있는 메뉴의 제목을 나타낼 뿐입니다. 이 요소는 메뉴바 내에 위치하거나 독립적으로 위치할 수 있습니다.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></dt>
+ <dd>메뉴 제목을 클릭하였을 때 나타나는 팝업 상자입니다. 이 상자는 메뉴 명령 목록을 포함합니다.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></dt>
+ <dd>메뉴의 개별 명령으로 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>에 위치합니다.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/ko/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></dt>
+ <dd>메뉴의 구분 막대로 <code>menupopup</code>에 위치합니다.</dd>
+</dl>
+
+<div class="note">
+<p>맥킨토시를 제외한 모든 플랫폼에서 원하는 대로 메뉴바에 있는 메뉴를 변경할 수 있습니다. 이것은 메킨토시에는 시스템에 의해 화면 상단을 따라 자신만의 메뉴를 만들기 때문입니다. 여러분은 커스텀 메뉴를 만들 수는 있지만, 메뉴에 적용한 특별한 서식 규칙이나 비(非)-메뉴 요소는 적용되지 않을 수 있습니다. 메뉴를 만들 때 이 점을 염두에 두어야 합니다.</p>
+</div>
+
+<h5 id=".EA.B0.84.EB.8B.A8.ED.95.9C_.EB.A9.94.EB.89.B4.EB.B0.94_.EC.98.88.EC.A0.9C" name=".EA.B0.84.EB.8B.A8.ED.95.9C_.EB.A9.94.EB.89.B4.EB.B0.94_.EC.98.88.EC.A0.9C">간단한 메뉴바 예제</h5>
+
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul">View</a></p>
+
+<div class="float-right"><img alt="Image:menubar-ex1.png"></div>
+
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="New"/&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edit"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Undo"/&gt;
+        &lt;menuitem label="Redo"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>위 예제에서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> 요소를 사용해서 간단한 메뉴바와 메뉴바에 위치한 메뉴들을 만들었습니다. 여기서는 File과 Edit 2개 메뉴가 작성되었습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> 요소는 메뉴상단에 제목을 만들며, 메뉴바에 나타납니다. 팝업은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소를 사용하여 만들어집니다. 팝업은 사용자가 이의 부모 메뉴 제목을 클릭할 때 튀어나오게 됩니다. 팝업의 크기는 팝업에 포함된 명령에 맞게 충분히 크게 나타납니다. 명령 자체는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>를 사용해서 만들어집니다. 각 <code>menuitem</code>은 메뉴 팝업에서 하나의 명령을 나타냅니다.</p>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code> 요소를 사용해서 메뉴에 구분자를 만들 수도 있습니다. 이것은 menuitem 그룹들을 나눌 때 사용됩니다.</p>
+
+<h4 id="menubar_.EC.9A.94.EC.86.8C" name="menubar_.EC.9A.94.EC.86.8C"><code>menubar</code> 요소</h4>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>는 메뉴를 담는 상자입니다. 메뉴바가 flex 속성을 갖는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> 내부에 위치하고 있다는 점을 주의깊게 보시기 바랍니다. 메뉴바는 특별한 속성을 가지지는 않지만 상자 유형에 속합니다. 이것은 <code><code id="a-orient"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 속성값을 <code>vertical</code>로 하면 세로 방향의 메뉴바를 만들 수 있다는 것을 의미합니다.</p>
+
+<h4 id="menu_.EC.9A.94.EC.86.8C" name="menu_.EC.9A.94.EC.86.8C"><code>menu</code> 요소</h4>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> 요소는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 요소와 비슷하게 동작합니다. <code>menu</code> 요소는 <code>button</code>과 몇 가지 동일한 속성을 가지며 그 외 추가적인 속성을 포함합니다.</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>메뉴의 유일 식별자.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>File 또는 Edit와 같은 메뉴에 나타나는 텍스트.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>이 불린(boolean) 속성은 메뉴 사용여부를 결정합니다. 할 수는 있지만, 전체 메뉴를 사용 중지할 필요는 극히 드뭅니다. 이 속성은 <code>true</code> 또는 <code>false</code> 중 한가지 값을 가집니다. 물론, 기본값은 후자입니다.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>이 속성은 사용자가 메뉴 항목을 활성화하기 위해 누를 수 있는 키입니다. 이 문자는 대개 메뉴 제목에 밑줄이 그어진 문자로 출력됩니다. Mozilla는 label 속성을 검토해서 여기에 지정된 문자를 찾아 밑줄을 추가합니다. 그렇기 때문에 라벨 텍스트에 있는 문자 중 하나를 이 속성으로 지정하는 것이 좋습니다. 물론 여기에 지정한 문자가 라벨 텍스트에 없더라도 동작합니다.</dd>
+</dl>
+
+<div class="float-right"><img alt="Image:menubar-ex2.png"></div>
+
+<p>꼭은 아니지만, <code>menu</code> 요소는 보통 <code>menubar</code>에 위치합니다. 만약 menubar에 포함되어 있지 않으면 다른 형태로 출력됩니다. 여기에 있는 그림은 메뉴바가 없는 경우 앞서의 예제가 어떤 모습이 되는지 보여주고 있습니다.</p>
+
+<h4 id="menupopup_.EC.9A.94.EC.86.8C" name="menupopup_.EC.9A.94.EC.86.8C"><code>menupopup</code> 요소</h4>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소는 메뉴 명령들을 포함하는 팝업창을 만듭니다. 이 요소는 세로 방향을 기본으로 하는 상자입니다. 원할 경우 가로 방향으로 바꿀 수 있으며, 그렇게 하면 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>들은 행으로 위치하게 됩니다. 일반적으로 <code>menuitem</code>과 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code>만 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>에 위치합니다. 여려분은 <code>menupopup</code>에 어떤 요소든 넣을 수 있지만, 앞서 말한바와 같이 맥킨토시에서는 무시될 것입니다.</p>
+
+<h4 id="menuitem_.EC.9A.94.EC.86.8C" name="menuitem_.EC.9A.94.EC.86.8C"><code>menuitem</code> 요소</h4>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 요소는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> 요소와 아주 비슷하며 일부 동일한 속성들을 가지고 있습니다.</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>메뉴 제목버튼의 유일 식별자.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>Open 또는 Save같은 메뉴 항목에 나타날 텍스트.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>이 불린(boolean) 속성은 메뉴 사용여부를 결정합니다. 이 속성은 <code>true</code> 또는 <code>false</code> 중에서 하나의 값으로 지정될 수 있으며 후자가 기본값입니다.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>이 속성은 사용자가 메뉴 항목을 활성화하기 위해 누를 수 있는 키입니다. 이 문자는 대개 메뉴제목에 밑줄이 그어진 문자로 출력됩니다. Mozilla는 label 속성을 검토해서 여기에 지정한 문자를 찾아 밑줄을 추가합니다. 그렇기 때문에 라벨 텍스트에 있는 문자 중 하나를 이 속성으로 지정하는 것이 좋습니다.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-acceltext"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code></dt>
+ <dd>이것은 메뉴 명령글 옆에 표시될 단축키 텍스트를 지정합니다. 그렇다고 해당 단축키와 <code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>을 바로 연결하는 것은 아닙니다(이 속성을 지정한다고 단축키를 눌렀을때 해당 메뉴가 실행되는 것은 아닙니다). 이 방법에 대해서는 <a href="ko/XUL_Tutorial/Keyboard_Shortcuts">이후</a>에 다룰 것이다.</dd>
+</dl>
+
+<h4 id="menuseparator_.EC.9A.94.EC.86.8C" name="menuseparator_.EC.9A.94.EC.86.8C"><code>menuseparator</code> 요소</h4>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code>에는 특별한 속성이 없습니다. 단지 메뉴 항목들 사이에 가로막대를 만들 뿐입니다.</p>
+
+<p>다음 단원에서는 <a href="ko/XUL_Tutorial/More_Menu_Features">다양한 메뉴 기능들</a>에 대해 알아 보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Toolbars" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Menu_Features">다음  »</a></p>
+</div><p></p>
+
+<p></p>

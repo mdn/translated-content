@@ -1,0 +1,280 @@
+---
+title: Firefox OS 시뮬레이터
+slug: Archive/B2G_OS/Simulator
+translation_of: Archive/B2G_OS/Simulator
+---
+<div class="note">
+ <p><span id="result_box" lang="ko"><span class="hps atn">Firefox OS 시뮬레이터는</span> <span class="hps">아직</span> <span class="hps atn">개발 초기 단계</span><span>입니다. </span><span class="hps atn">저희가 원하는</span><span class="atn">만큼</span><span>의 안정성과</span> <span class="hps atn">완성도</span><span>가</span> <span class="hps">없습니다.</span></span></p>
+ <p>버그를 발견하셨다면 <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">GitHub에 보고</a> 해주세요. 만약에 물어보실게 있으시다면 <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">개발자 도구 메일링 리스트</a>나<a href="irc://irc.mozilla.org/#devtools"> irc.mozilla.org의 #devtools</a>에서 질문해 주세요.</p>
+ <p>도움 받기 항목의 Verbose logging을 활성화 하는 방법과 최신 빌드를 받는 법을 읽어 주세요.</p>
+</div>
+<p><span id="result_box" lang="ko"><span class="hps">Firefox OS 시뮬레이터</span> <span class="hps atn">부가 기능</span><span>을 이용해</span> <span class="hps">데스크톱</span> <span class="hps atn">환경</span><span>에서</span> <span class="hps">Firefox OS</span> <span class="hps atn">응용 프로그램</span><span>을 테스트하고 디버깅</span> <span class="hps">할 수</span> <span class="hps">있습니다.</span> <span>시뮬레이터에서는</span> <span class="hps atn">실제 장치</span><span>를</span> <span class="hps">사용하는 것보다도</span> <span class="hps atn">Code</span><span class="atn">-</span><span class="atn">Test</span><span class="atn">-</span><span class="atn">Debug </span><span>주기가</span> <span class="hps atn">빨라집니다</span><span>.</span> <span class="hps">또한</span> <span class="hps">당연히</span> 시뮬레이터를 <span class="hps">사용하기 위해</span> <span class="hps">실제</span> <span class="hps">디바이스가 필요</span> <span class="hps">없습니다.</span></span></p>
+<p><span class="short_text" id="result_box" lang="ko"><span class="hps">근본적으로,</span> <span class="hps">시뮬레이터 부가 </span><span class="hps atn">기능</span><span>을</span> <span class="hps">구성하는 것은</span> <span class="hps">다음과 같습니다</span> <span class="hps">:</span></span></p>
+<ul>
+ <li><strong>시뮬레이터</strong>:<span id="result_box" lang="ko"><span class="hps">여기에는</span> <span class="hps">Firefox OS</span> <span class="hps atn">데스크톱 클라이언트</span><span>가</span> <span class="hps">포함되어</span> <span class="hps">있습니다.</span> <span class="hps">이것은</span> <span class="hps atn">데스크탑 환경</span><span>에서 실행되는</span> <span class="hps">Firefox OS</span> <span class="hps">고수준</span> <span class="hps">계층</span> <span class="hps">버전입니다.</span> 시뮬레이터<span>에는</span> <span class="hps">표준</span> <span class="hps">Firefox OS</span> <span class="hps atn">데스크톱 빌드</span><span class="atn">에는</span><span> 없는</span> <span class="hps">추가적인</span> <span class="hps">에뮬레이션</span> <span class="hps">기능도</span> <span class="hps">포함되어</span> <span class="hps">있습니다.</span></span></li>
+ <li><strong>대시보드</strong>: <span id="result_box" lang="ko"><span class="hps atn">시뮬레이터</span><span>의</span> <span class="hps">시작과 종료</span> <span class="hps">및 응용 프로그램의</span> <span class="hps">설치</span>,<span class="hps">제거</span> 및 <span class="hps">디버깅을</span> <span class="hps">가능하게하는</span> <span class="hps atn">Firefox 브라우저</span><span>에서</span> <span class="hps">제공하는</span> <span class="hps">도구입니다.</span> <span class="hps">또한</span> <span class="hps">Dashboard</span> <span class="hps atn">앱</span><span>을</span> <span class="hps">실제 디바이스에</span> <span class="hps atn">푸시</span><span>하거나</span> <span class="hps atn">앱 매니페스트</span><span>에 대한</span> <span class="hps">일반적인</span> <span class="hps">문제를 확인</span> <span class="hps">할</span> <span class="hps">수 있습니다.</span></span></li>
+</ul>
+<p><span class="short_text" id="result_box" lang="ko"><span class="hps">아래 스크린</span> <span class="hps atn">샷</span><span>은</span> 시뮬레이터를 <span class="hps">사용한</span> <span class="hps">디버깅 세션을</span> <span class="hps atn">보여줍니다</span><span>.</span></span></p>
+<p><span id="result_box" lang="ko"><span class="hps">Dashboard</span>는 오른쪽 상단의 Firefox 탭 안에서 돌아가고 있습니다<span class="hps">.</span> <span class="hps">여기에</span> <span class="hps atn">"</span><span class="atn">Where am I</span><span class="atn">?</span><span class="atn">"</span><span>라는 이름의 패키지</span><span class="hps">형</span> <span class="hps atn">애플리케이션</span><span>을</span> <span class="hps atn">추가</span><span>했습니다.</span> <span>상좌단의 앱은 시뮬레이터를 돌리고 있습니다.</span> <span class="hps">또한</span> 아래쪽의 패널에서 보시다시피 <span class="hps">디버깅</span> <span class="hps">도구와</span> <span class="hps atn">연결</span><span>하고 있습니다. </span><span class="hps">콘솔</span> <span class="hps">창에</span> <span class="hps">앱에 대한</span> <span class="hps">메시지가</span> <span class="hps atn">표시</span><span>되는</span> <span class="hps atn">것을</span><span>보실 수</span> <span class="hps">있습니다.</span></span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5513/Simulator-overview-4.0.png"></p>
+<p>이 가이드는 다음과 같은 주제를 다룹니다:</p>
+<ul>
+ <li><a href="#시뮬레이터 설치하기" title="#Installing">시뮬레이터 부가 기능을 설치하기</a></li>
+ <li><a href="#Adding-updating-removing" title="#Adding-updating-removing">앱을 추가하고-제거하고-새로고침하기</a></li>
+ <li><a href="#Manifest-validation" title="#Manifest-validation">manifest validation</a></li>
+ <li><a href="#Running-the-Simulator" title="#Running-the-Simulator">how to run the Simulator</a></li>
+ <li><a href="#Attaching-developer-tools" title="#Attaching-developer-tools">how to connect developer tools such as the JS debugger to apps running in the Simulator</a></li>
+ <li><a href="#Simulator-receipts" title="#Simulator-receipts">how to get test receipts for a paid app</a></li>
+ <li><a href="#Push-to-device" title="#Push-to-device">how to push apps to a connected device</a></li>
+ <li><a href="#Limitations" title="#Limitations">the limitations of the Simulator compared with a real Firefox OS device</a></li>
+</ul>
+<div class="note">
+ <span id="result_box" lang="ko"><span class="hps">실제</span> <span class="hps">Web</span> <span class="hps atn">응용 프로그램</span><span>을 디버깅하는데 </span> <span class="hps">Simulator를</span> <span class="hps">사용하는 방법을</span> <span class="hps">보여주는</span> <span class="hps">실질적인</span> <span class="hps">자세한</span> <span class="hps">설명은</span> <span class="hps">Simulator Walkthrough</span> <span class="hps atn">페이지</span><span>를 참조하십시오.</span></span></div>
+<h2 id="Installing_the_Simulator_add-on" name="Installing_the_Simulator_add-on"><a name="시뮬레이터 설치하기">시뮬레이터 설치하기</a></h2>
+<p><span id="result_box" lang="ko"><span title="Simulator は、Firefox のアドオンとしてパッケージ化および頒布しています。">시뮬레이터 는 Firefox 부가 기능 에서 배포 하고 있습니다 . </span><span title="インストール方法は以下のとおりです:">설치 방법은 다음과 같습니다 :</span></span><br>
+  </p>
+<ol>
+ <li><span title="Firefox で addons.mozilla.org 内の Simulator のページを訪れてください。">Firefox에서 addons.mozilla.org 에서 시뮬레이터 페이지 를 방문 하십시오.</span></li>
+ <li><span lang="ko"><span title='"Firefox に追加" をクリックしてください。'>"Firefox 에 추가" 를 클릭 하십시오.</span></span></li>
+ <li><span lang="ko"><span title='"Firefox に追加" をクリックしてください。'> </span><span title='アドオンをダウンロードすると確認のメッセージが表示されますので、"今すぐインストール" をクリックしてください。'>기능을 다운로드 한뒤 확인 메시지가 표시 되면 " 지금 설치 " 를 클릭 하십시오.</span></span></li>
+</ol>
+<p><br>
+ <span lang="ko"><span title='アドオンのサイズの都合上、インストール中に Firefox が数秒間フリーズしたり、"警告: 応答のないスクリプト" というタイトルのダイアログが表示される場合があります。'>부가 기능의 크기가 큰 관계로 설치 중에 Firefox가 몇 초 동안 정지되거나 "경고 : 응답하지 않는 스크립트" 라는 제목의 대화 상자가 표시 될 수 있습니다. </span><span title='ダイアログが表示された場合は、インストールが完了するまで待つために "処理を続行" をクリックしてください。'>대화 상자가 표시 되면 설치가 완료 될 때까지 기다리기 위하여 " 처리 를 계속 " 을 클릭 하십시오.</span><span title="この問題は bug 814505 で追跡しています。"> 이 문제는 Firefox 27부터 발생하지 않습니다.</span><br>
+ <br>
+ <span title="Simulator アドオンのインストールが完了すると、Firefox は定期的に新しいバージョンを確認して最新の状態を維持します。">시뮬레이터 부가 기능 의 설치 가 완료되면 Firefox는 정기적으로 새로운 버전을 확인 하여 최신 상태 를 유지 합니다.</span><br>
+ <br>
+ <span title='Simulator をインストールすると Dashboard が自動的に開きますが、"Firefox" メニュー (または OS X や Linux では "ツール" メニュー) の "Web 開発" で "Firefox OS Simulator" を選択することで、いつでも Dashboard を開く'>시뮬레이터를 설치 하면 대시보드가 자동으로 열리지 만 "Firefox" 메뉴 (OS X 및 Linux에서는 "도구" 메뉴 ) 의 "웹 개발 도구" 에서 " Firefox OS 시뮬레이터 " 를 선택하여 언제든지 대시보드를 열 </span><span title="ことができます:">수 있습니다 :</span></span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5141/simulator-open-on-windows-7.png" style="margin-right: auto; margin-left: auto; display: block;"><br>
+ <span id="result_box" lang="ko"><span class="hps atn">아래 보여지는 대시보드는</span> <span class="hps">애플리케이션</span> 시뮬레이터에<span class="atn"> 추가</span><span class="atn">하고 실행</span><span class="atn">하는 데 사용</span><span>하는 도구입니다:</span></span><img alt="" src="https://mdn.mozillademos.org/files/5491/dashboard-4.0.png"></p>
+<h2 id="앱을_추가하고_제거하고_새로고침하기"><a name="추가하고-제거하고-새로고침하기">앱을 추가하고, 제거하고, 새로고침하기</a></h2>
+<h3 id="앱_추가하기">앱 추가하기</h3>
+<p><span id="result_box" lang="ko"><span title='パッケージ型アプリを Simulator に追加するには、Dashboard を開いて "Add Directory" をクリックします。'><a href="https://developer.mozilla.org/ko/docs/Apps/Packaged_apps">패키지 형 응용 프로그램</a>을 시뮬레이터 에 추가 하려면 대시보드를 열고 " Add Directory " 를 클릭합니다. </span><span title="そして、アプリのマニフェストファイルを選択してください。">그리고 앱의 <a href="https://developer.mozilla.org/ko/docs/Web/Apps/Developing/Manifest/Manifest">매니페스트 파일</a>을 선택 하십시오.</span><br>
+ <br>
+ <span title='ホスト型アプリを追加するには、"URL for page or manifest.webapp" と表示されているテキストボックスに URL を入力して "Add URL" をクリックしてください。'>호스트 형 응용 프로그램을 추가 하려면 " URL for page or manifest.webapp "라고 표시 되는 텍스트 상자에 URL 을 입력 하고 " Add URL " 을 클릭 하십시오. </span><span title="URL がマニフェストを指している場合は、そのマニフェストが使用されます。">URL이 매니페스트를 가리키는 경우 해당 매니페스트가 사용 됩니다. </span><span title="そうでない場合は、Dashboard が当該 URL 向けのマニフェストを生成します: よって、URL を入力するだけで任意の Web サイトをアプリとして追加できます。">그렇지 않은 경우 는 Dashboard 가 해당 URL 위한 매니페스트를 생성 합니다 : 따라서, URL을 입력 하는 것만으로 모든 Web 사이트를 앱 으로 추가 할 수 있습니다 .</span><br>
+ <br>
+ <span title="アプリを追加すると、Dashboard がマニフェストファイルに対して一連のテストを行って、一般的な問題のチェックを行います。">앱 을 추가 하면 대시보드가 매니페스트 파일 에 대해 일련 의 테스트 를 수행하여 일반적인 문제를 확인 합니다. </span><span title="どのようなテストを行うかについて詳しくは、マニフェストの検証の章をご覧ください。">어떤 테스트 를 실시할지 에 대한 자세한 내용 은 매니페스트 검증 섹션을 참조하십시오.</span><br>
+ <br>
+ <span title="マニフェストの検証でアプリにエラーが発見されなければ、Dashboard は自動的に Simulator でアプリを実行します。">매니페스트 유효성 검사 응용 프로그램 오류가 발견 되지 않으면 대시보드는 자동으로 시뮬레이터에서 응용 프로그램을 실행 합니다.</span></span></p>
+<h3 id="앱_관리하기">앱 관리하기</h3>
+<p><span class="short_text" id="result_box" lang="ko"><span class="hps atn">앱</span><span>을</span> <span class="hps atn">추가</span><span>하면</span> <span class="hps atn">매니저</span><span>에서</span> <span class="hps">설치된</span> <span class="hps atn">응용 프로그램 목록</span><span class="atn">에 표시</span><span>됩니다</span> <span class="hps">:</span></span><br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5493/dashboard-list-apps-4.0.png"><br>
+ <span class="short_text" id="result_box" lang="ko"><span class="hps">각</span> <span class="hps">항목은</span> <span class="hps">앱에 대한</span> <span class="hps">다음과 같은 </span><span class="hps">정보를</span> <span class="hps">보여줍니다:</span></span></p>
+<ul>
+ <li>매니페스트 내에 써 있는 앱의 이름</li>
+ <li>앱의 타입(패키지형, 호스팅형, 생성형)</li>
+ <li>매니페스트 파일로의 링크</li>
+ <li>매니페스트 검증의  결과</li>
+</ul>
+<p>또 다음과 같은 네개의 명령을 제공합니다.</p>
+<ul>
+ <li><strong>"Refresh":</strong> <span id="result_box" lang="ko"><span class="hps atn">앱</span><span class="atn">에 대한 변경</span><span>을 한</span> <span class="hps">후</span> 시뮬레이터 <span class="hps">응용 프로그램을</span> <span class="hps">업데이트</span> <span class="hps">및</span> <span class="hps atn">다시 로드</span><span>합니다.</span> <span class="hps">또한</span> 대시보드에서 <span class="hps">매니페스트</span> 검증을 <span class="hps atn">다시 실행</span><span>합니다.</span> <span>앱에 어떤 수정을 가해도 바로 변경 사항이 적용되지 않습니다</span> <span class="hps">:</span> <span class="hps atn">변경 사항</span><span>을</span> <span class="hps atn">적용</span><span>하기 위해</span> <span class="hps atn">응용 프로그램</span><span>의</span> <span class="hps atn">업데이트</span><span>가 필요합니다.</span></span></li>
+ <li><strong>"Connect":<span id="result_box" lang="ko"><span class="hps"> </span></span></strong><span lang="ko"><span class="hps">선택한</span> <span class="hps">애플리케이션</span>의<span class="hps"> 개발</span> <span class="hps atn">도구</span><span>에</span> <span class="hps">연결합니다.</span> <span class="hps atn">앱</span><span>을</span> <span class="hps atn">실행</span><span>하지 않는</span> <span class="hps">경우</span> <span class="hps atn">대시보드가</span> 시뮬레이터 <span class="hps">및</span> <span class="hps atn">응용 프로그램을 자동으로 시작</span><span>합니다.</span></span></li>
+ <li><strong>"Remove" ("X"):</strong> <span id="result_box" lang="ko"><span class="hps">애플리케이션</span>을 시뮬레이터 <span class="hps">및</span> 대시보드에서 <span class="hps">삭제합니다.</span> 대시보드를<span class="atn"> 열고</span><span class="atn">있는 동안</span><span class="atn">에는 작업</span><span>을</span> <span class="hps">실행취소 할 수</span> <span class="hps">있습니다.</span></span></li>
+ <li><strong>"Receipt":</strong> 유료 앱의<span id="result_box" lang="ko"> <span class="hps">영수증</span> <span class="hps">검증</span> <span class="hps atn">테스트</span><span>를</span> <span class="hps">수행합니다.</span> <span class="hps">테스트하려는</span> <span class="hps atn">영수증</span><span>의</span> <span class="hps atn">종류</span><span>를</span> <span class="hps atn">선택</span><span>하면</span> <span class="hps">테스트</span> <span class="hps atn">영수증</span><span>과 함께</span> <span class="hps">응용 프로그램을 다시</span> <span class="hps atn">설치</span><span>합니다.</span></span></li>
+</ul>
+<div class="note">
+ <p><span id="result_box" lang="ko"><strong><span class="hps">시뮬레이터</span> <span class="hps">창에서</span> <span class="hps">애플리케이션</span> </strong><span class="hps"><strong>업데이트</strong> :</span> <span class="hps atn">애플리케이션</span><span>을</span> <span class="hps">실행하는</span> <span class="hps">경우 메뉴</span> <span class="hps atn">바</span><span>에서</span> <span class="hps">작업</span> <span class="hps">또는</span> <span class="hps">할당 된</span> <span class="hps">바로 가기</span> <span class="hps">키로 </span><span class="hps">시뮬레이터 </span><span class="hps">창에서</span> <span class="hps atn">직접 응용 프로그램</span><span>을</span> <span class="hps">업데이트</span> <span class="hps">및</span> <span class="hps">다시로드</span> <span class="hps">할 수 있습니다.</span></span></p>
+</div>
+<h3 id="매니페스트_검증"><a name="매니페스트 인증">매니페스트 검증</a></h3>
+<p><span id="result_box" lang="ko"><span title="マニフェストを与えると、Manager はマニフェストの検証テストをいくらか実行します。">매니페스트를 제출하면 매니저는 매니페스트 여러개의 검증 테스트를 실행 합니다. 검증 테스트는</span><span title="これは、3 つのカテゴリについて問題を報告します:"> 세 가지 범주 에 대해 문제를 보고합니다 :</span></span><br>
+  </p>
+<ul>
+ <li><span title="manifest errors: アプリのインストールや実行ができなくなる問題です。">manifest errors : 응용 프로그램을 설치 및 실행을 할 수가 없게되는 문제입니다.</span></li>
+ <li><span lang="ko"><span title="manifest warnings: アプリの正常な動作を妨げる問題です。">manifest warnings : 응용 프로그램 의 정상적인 작동을 방해</span></span>하는 문제입니다.</li>
+ <li><span lang="ko"><span title="simulator-specific warnings: アプリが使用している機能で、Simulator が未サポートであるものです。">simulator - specific warnings : 응용 프로그램이 사용하는 기능중에 시뮬레이터가 제공하지 않는 기능이 있는 경우입니다.</span></span></li>
+</ul>
+<p>이것은 앱 의 항목에 발생한 문제의 간략적인 정보를 제공합니다 : 요약된 항목을 클릭 하면 세부 정보가 표시 됩니다.</p>
+<h4 id="매니페스트_에러">매니페스트 에러</h4>
+<p>대시보드 는 다음과 같은 상황을 오류로 보고 합니다. 이 문제를 해결 하지 않으면 해당 응용 프로그램은 시뮬레이터에서 실행되지 않을 것입니다:</p>
+<ul>
+ <li>매니페스트 필수 필드 " name " 이 없다.</li>
+ <li>매니페스트가 올바른 JSON가 아니다.</li>
+ <li>응용 프로그램은 호스트형 애플리케이션 이지만, 매니페스트의 type 필드를 패키지형에만 사용할수 있는 " privileged " 또는 " certified " 이다.</li>
+ <li>일반적인 appCache 오류 (패키지 형 응용 프로그램은 appCache 를 사용할수 없습니다. 매니페스트 파일을 요청하면 HTTP 리디렉션 또는 HTTP 오류 상태를 반환할 것입니다.)</li>
+</ul>
+<p>다음은 매니페스트 필수 필드 "name"이 없는 매니페스트를 추가하려고 할 때의 예시입니다.<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5495/dashboard-missing-name-4.0.png"></p>
+<h4 id="매니페스트_경고">매니페스트 경고</h4>
+<p>대시보드는 다음과 같은 매니페스트 이슈들의 대한 경고를 보고할 것입니다:</p>
+<ul>
+ <li>아이콘이 없음</li>
+ <li>아이콘이 128픽셀보다 작음: Marketplace에 올려지는 모든 앱들은 최소 128픽셀의 1개의 아이콘을 가져야 합니다.</li>
+ <li> <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a>필드가 인식되지 않습니다.</li>
+ <li>매니페스트가 알려지지 않은 <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a>(권한)을 요구한다.</li>
+ <li>매니페스트가 거부될 <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a>(권한)을 요구한다.</li>
+ <li>접근할수 있는지 규정할수 없는 <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a>(권한)을 요구한다.</li>
+</ul>
+<h4 id="시뮬레이터_한정_경고들">시뮬레이터 한정 경고들</h4>
+<p>마지막으로, 매니저는 앱이 사용하는 Firefox OS 기능중 시뮬레이터에서 완벽하게 지원되지 않는 기능들에 관해서 경고를 할 것입니다:</p>
+<ul>
+ <li><a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> 필드가 인증됨(certified)일 경우, 인증된 앱들은 시뮬레이터에서 완벽하게 지원하지 않습니다.</li>
+ <li>앱이 요구하는 API로의 permission(권한)중 시뮬레이터가 아직 지원하지 않는 API가 있을때</li>
+</ul>
+<h2 id="시뮬레이터_돌리기"><a name="시뮬레이터 돌리기">시뮬레이터 돌리기</a></h2>
+<p>시뮬레이터를 실행시키는 방법엔 다음과 같은 두가지 방법이 있습니다:</p>
+<ul>
+ <li>만약에 앱을 추가하셨거나 앱 추가 옆에 있는  "Refresh"나 "Connect" 버튼을 다음에 클릭하셨으면, 대시보드는 자동으로 추가하신 앱이 띄워저 있는 시뮬레이터를 실행할 것입니다.</li>
+ <li>만약에 대시보드의 좌측에 있는 "Stopped"를 클릭하신다면, 시뮬레이터는 홈 스크린으로 시작할 것이며, 여러분은 수동적으로 여러분의 앱을 실행시켜야 합니다.</li>
+</ul>
+<p>어떤 방법을 쓰던지와 상관 없이 시뮬레이터가 작동하기 시작되면, "Stopped"라고 써 있던 버튼이 초록색으로 된 "Running"라고 써 있는 버튼이 됩니다. 시뮬레이터를 정지하실려면 이 버튼을 한번 더 클릭해 주세요.<br>
+  </p>
+<p>시뮬레이터는 320x480 픽셀의 시뮬레이션된 화면과 하단에 툴바와 상단에 메뉴바를 가지는 분리된 새로운 창으로 나타납니다:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5505/simulator-bars.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<p>터치 이벤트를 시뮬레이션 하기 위해서는 마우스 버튼 클릭을 유지하면서 드래그 해 주세요. 홈스크린에서 오른쪽으로부터 왼쪽으로 클릭하시고 드래그 하시는걸 통해서 여러분은 여러분이 추가한 앱들과 내장된 앱들을 보실수 있습니다:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5517/simulator-homescreen.png"></p>
+<h3 id="시뮬레이터_툴바"><a name="시뮬레이터 툴바">시뮬레이터 툴바</a></h3>
+<p>하단 툴바에는 왼쪽에서부터 오른쪽으로 <strong>홈 버튼</strong>, <strong>스크린 회전 버튼</strong>, 그리고<strong> Geolocation 버튼</strong>이 있습니다.</p>
+<ul>
+ <li><strong>홈 버튼</strong>은 여러분을 홈 스크린으로 데리고 갑니다(혹은 길게 몇초간 누르시면 최근 태스크 리스트로 데리고 갑니다)</li>
+ <li><strong>스크린 회전 버튼</strong>은 시뮬레이터 화면의 방향을 가로나 세로로 변경합니다. 이 버튼은 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/en-US/docs/WebAPI/Detecting_device_orientation">orientationchange</a> 이벤트를 일으킬 것입니다.</li>
+ <li><strong>Geolocation 버튼</strong>은 여러분의 위치나 따로 지정한 위치를 물어보게 합니다: 이 위치는 <a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Geolocation API</a>을 이용해 여러분의 앱에서 설정할수 있습니다.</li>
+</ul>
+<p><a href="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png"><img alt="" src="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png" style="width: 520px; height: 309px;"></a><a href="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png"><img alt="" src="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png" style="width: 500px; height: 297px;"></a></p>
+<h3 id="시뮬레이터_메뉴바"><a name="시뮬레이터 메뉴바"></a>시뮬레이터 메뉴바</h3>
+<p>상단 메뉴바에서는 여러분은 개발을 더 효율적으로 만들수 있게 해주는 여러 명령들을 쓰실수 있습니다.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5525/simulator-menubar.png"></p>
+<ul>
+ <li><strong>File -&gt; Quit</strong> (<em>Ctrl/Cmd - Q</em>): 시뮬레이터를 종료합니다.</li>
+ <li><strong>App -&gt; Refresh</strong> (<em>Ctrl/Cmd - R</em>): 시뮬레이터를 새로고침합니다.</li>
+</ul>
+<p>"<strong>App Refresh</strong>"를 실행하는 키보드 단축키는 앱을 웹 페이지처럼 반복적으로 개발하는걸 가능하게 합니다:</p>
+<ul>
+ <li>코드에 대한 변경을 만듬 (그리고 필요하다면 빌드 툴을 다시 동작함, e.g. volo / yeoman / grunt)</li>
+ <li>키보드 단축키를 입력하셔서 시뮬레이터에서 실행중인 앱을 새로 고침한다.</li>
+</ul>
+<div class="note">
+ <p><strong>"앱을 새로 고침하고 데이터를 제거하기" 숨겨진 지름길:</strong> 가끔씩 시뮬레이터가 앱을 위해서 저장한 데이터를 초기화 시키는게 도움이 될 때도 있습니다, 그래서 시뮬레이터는 이와 관련된 숨겨진 단축키를 가지고 있습니다. <em>Shift - Ctrl/Cmd - R를 이용하면 시뮬레이터는 다음과 같은 여러 데이터를 초기화한뒤 앱을 새로 고침할 것입니다:</em></p>
+ <ul>
+  <li>
+   <p>로컬 스토리지 / 세션 스토리지</p>
+  </li>
+  <li>
+   <p>쿠키</p>
+  </li>
+  <li>
+   <p>인덱스된 DB</p>
+  </li>
+  <li>
+   <p>앱 캐시</p>
+  </li>
+ </ul>
+</div>
+<h2 id="개발자_도구들과_연결하기"><a name="개발자 도구들과 연결하기">개발자 도구들과 연결하기</a></h2>
+<p>여러분의 앱의 디버깅에 도움을 주기 위해 여러가지 개발자 도구들을 시뮬레이터 연결하실수 있습니다. 지금부로는 오직 <a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a>, <a href="/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Style_Editor">Style Editor</a>, <a href="/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Profiler">Profiler</a> 그리고 <a href="/en-US/docs/Tools/Network_Monitor" title="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>만 연결할수 있지만, 저희는 더 많은 <a href="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window" title="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window">developer tools</a>을 연결할수 있도록 노력중입니다.</p>
+<div class="geckoVersionNote">
+ <p>이 중에 몇몇 툴은 파이어폭스의 베타, Aurora 혹은 Nightly builds 버전에서만 이용하실수 있습니다.</p>
+</div>
+<p>개발자 도구들을 시뮬레이터와 연결하실려면, <strong>"Connect" </strong>버튼을 클릭해 주세요:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5497/connect-to-app-button.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<p>대시보드는 대시보드 하단에 개발자 도구 창을 열고 앱과 연결합니다:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5501/simulator-devtools-connected.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<h3 id="웹_콘솔">웹 콘솔</h3>
+<p>앱은 <a href="/en-US/docs/DOM/console" title="/en-US/docs/DOM/console">console</a> object(콘솔 객체)를 이용해 log를 남길수 있습니다. 웹 콘솔은 다음과 같은 앱이 작성한 메세지를 표시합니다: 네트워크 요구, CSS 그리고 J S 경고/오류, 보안 오류들. (<a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Learn more about the Web Console.</a>)</p>
+<h3 id="디버거">디버거</h3>
+<p>문제를 더 빨리 발견하고 해결하기 위해 디버거를 사용하면 여러분은 손쉽게 연결된 앱의 자바스크립트의 단계별 실행 , 분기점 관리, 식 보기 등을 할수가 있습니다. (<a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Web_Console">Learn more about the Debugger.</a>)</p>
+<h3 id="스타일_편집기">스타일 편집기</h3>
+<p><span id="result_box" lang="ko"><span class="hps">스타일</span> <span class="hps">편집기를</span> <span class="hps atn">연결</span><span>하면</span> <span class="hps atn">앱</span><span>에서</span> <span class="hps">참조하는</span> <span class="hps atn">CSS 파일</span><span>의 열람이나</span> <span class="hps atn">편집</span><span class="atn">이 가능</span><span>합니다.</span> <span class="hps">변경 한</span> <span class="hps">부분은</span> <span class="hps atn">앱</span><span>을</span> <span class="hps">업데이트</span> <span class="hps">할</span> <span class="hps">필요없이</span> <span class="hps">실시간으로</span> <span class="hps atn">앱</span><span>에</span> <span class="hps atn">반영</span><span>됩니다.</span></span> (<a href="/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Web_Console">Learn more about the Style Editor.</a>)</p>
+<h3 id="프로파일러">프로파일러</h3>
+<p><span id="result_box" lang="ko"><span class="hps atn">앱</span><span>에 연결된 </span><span class="hps">프로파일러</span> <span class="hps">도구를</span> <span class="hps">사용하여</span> <span class="hps atn">JavaScript 코드</span><span>에서</span> <span class="hps atn">시간이 너무 많이 소요하는 구간을 찾을수 있습니다</span><span class="hps">.</span> <span class="hps">프로파일러는</span> <span class="hps">JavaScript</span> <span class="hps atn">최근 호출 스택을 샘플하고</span> <span class="hps">컴파일</span> <span class="hps">상태를</span> <span class="hps">주기적으로</span> <span class="hps atn">샘플링</span><span>합니다.</span></span> (<a href="/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Web_Console">Learn more about the Profiler.</a>)</p>
+<h3 id="네트워크_모니터">네트워크 모니터</h3>
+<p><span id="result_box" lang="ko"><span class="hps">새로운</span> <span class="hps">네트워크</span> <span class="hps">모니터</span> <span class="hps">덕분에,</span> <span class="hps">앱이</span> <span class="hps">시작한</span> <span class="hps">모든</span> <span class="hps">네트워크</span> <span class="hps">요청 상태</span> <span class="hps atn">헤더</span><span>, 콘텐츠</span> <span class="hps atn">타이밍</span><span>을</span> <span class="hps">사용자</span> <span class="hps">친화적인 인터페이스를</span> 통해 <span class="hps">분석</span> <span class="hps">할 수 있습니다.</span></span>(<a href="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/" title="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/">Learn more about the Network Monitor.</a>)</p>
+<h2 id="영수증"><a name="Simulator-receipts"></a>영수증</h2>
+<p>만약에 여러분이 유료 앱을 개발중이시라면 여러분은 여러분의 앱의 유효한 (cryptographically signed) 영수증(valid receipt)을 가진 영수증 인증 코드 (receipt validation code, 코드는 유저가 이미 앱을 구매했거나 환불을 요구했음을 보여주고 유저에게 앱의 기능을 제한하거나 허락함을 알립니다)를 테스트 하셔야 합니다.</p>
+<p><span id="result_box" lang="ko">시뮬레이터의 대시보드의 <span class="hps">각</span> <span class="hps atn">앱</span><span>의</span> <span class="hps atn">항목에있는 "</span><strong><span class="atn">Receipts</span></strong><span class="atn">"</span><span>메뉴를 이용해 각 앱을</span> <span class="hps atn">"</span><strong><span class="atn">Valid</span></strong><span class="atn">, "</span><strong><span class="atn">Invalid</span></strong><span class="atn">", "</span><strong><span class="atn">Refunded</span></strong><span class="atn">"</span><span> 테스트</span> <span class="hps atn">영수증</span><span>과 </span>함께 설치할수 있습니다. <span class="hps">테스트하려는</span> <span class="hps atn">영수증</span><span>의</span> <span class="hps atn">종류</span><span>를</span> <span class="hps">선택하면</span> <span class="hps atn">대시보드가</span> <span class="hps atn">Marketplace</span><span>의</span> <span class="hps">영수증</span> <span class="hps atn">서비스</span><span>에서</span> <span class="hps">그</span> <span class="hps atn">종류</span><span>의</span> <span class="hps">테스트</span> <span class="hps">영수증을</span> <span class="hps">가져오고</span> 시뮬레이터에서 <span class="hps">테스트</span> <span class="hps atn">영수증</span><span>과 함께</span> <span class="hps">응용 프로그램을 다시</span> <span class="hps atn">설치</span><span>합니다</span> <span class="hps">:</span></span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5523/simulator-receipts-selector-4.0.png"></p>
+<h2 id="기기로의_전송"><a name="기기로의 전송">기기로의 전송</a></h2>
+<p>만약에 여러분이 별도의 Firefox OS 기기들이 있으시다면, 여러분을 그 기기들을 시뮬레이터에 연결할수 있고, 추가하신 앱들을 대시보드에서 기기들로 바로 전송할수 있습니다.</p>
+<h3 id="기기에_연결하기">기기에 연결하기</h3>
+<p>기기를 연결하시려면 <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop">connecting a Firefox OS device to the desktop</a>에 있는 가이드를 따르십시오.시뮬레이터가 ADB를 미리 포함하고 있기 때문에 따로 설치를 하실 필요가 없다는걸 염두해 두세요.</p>
+<h3 id="앱을_디바이스로_전송하기">앱을 디바이스로 전송하기</h3>
+<p>일단 데스크탑과 기기를 준비하시고 기기를 데스크탑에 USB로 연결하셨다면, 대시보드에서 디바이스가 연결되었음을 알리는 "Device connected"가 뜨는걸 보실수 있습니다. 그리고 "Push"라고 되어 있는 새로운 명령 버튼이 나타납니다:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5521/simulator-push2device.png"></p>
+<p> <strong>"Push"</strong>버튼을 클릭하시면 선택하신 앱은 자동적으로 Firefox OS 기기에 전송되었을 것입니다.</p>
+<div class="note">
+ <p><strong>수동적 방법:</strong></p>
+ <ul>
+  <li>
+   <p><span id="result_box" lang="ko"><span class="hps">응용 프로그램을</span> <span class="hps atn">장치</span><span>에</span> <span class="hps atn">푸시한뒤</span> <span class="hps">업데이트 된</span> <span class="hps atn">콘텐츠</span><span>를</span> <span class="hps">얻기 위해선</span> <span class="hps">수동으로</span> <span class="hps">응용 프로그램을</span> <span class="hps atn">닫고 다시 시작</span><span class="atn">해야</span><span>합니다.</span></span></p>
+  </li>
+  <li>
+   <p>매니페스트에 어떤 변경(예를 들어서 앱 이름, 화면 방향, 타입, 권한)을 한 경우에는 운영체제를 재부팅 해야지 효과를 적용할수 있습니다.</p>
+  </li>
+ </ul>
+</div>
+<h3 id="Firefox_OS_기기_연결_확인">Firefox OS 기기 연결 확인</h3>
+<p>어느 기기에서 재부팅 할때나 첫번째 "<strong>Push"(전송) </strong>요구는 디바이스에서 확인되어야 합니다:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5527/device-push-confirmation.png" style="width: 320px; height: 480px;"></p>
+<h3 id="Linux에서_문제해결">Linux에서 문제해결</h3>
+<p>udev rules를 생성하신뒤에 기기에 연결이 안 된다면 이 <a href="https://github.com/mozilla/r2d2b2g/issues/515" title="https://github.com/mozilla/r2d2b2g/issues/515">bug</a>를 참조하세요.</p>
+<h2 id="시뮬레이터의_제약"><a name="제약">시뮬레이터의 제약</a></h2>
+<p>Firefox OS 시뮬레이터가 완벽한 시뮬레이션을 제공하지 않음을 염두해 두세요.</p>
+<h3 id="하드웨어_제약">하드웨어 제약</h3>
+<p>스크린 사이즈를 제외하고도, Firefox OS 시뮬레이터는 Firefox OS 기기들의 CPU 속도나 메모리같은 하드웨어 제약을 시뮬레이트하지 않습니다.</p>
+<h3 id="오디오비디오_코덱">오디오/비디오 코덱</h3>
+<p>다음과 같은 코덱들은 하드웨어 가속에 의존하므로 아직 지원되지 않습니다:</p>
+<ul>
+ <li>MP3</li>
+ <li>AAC</li>
+ <li>H.264 (MP4)</li>
+ <li>WebM</li>
+</ul>
+<p>이것은 위에 리스트 되어있는 코덱을 사용하는 앱이나 유튜브같은 웹사이트들은 작동하는것이 불가능하다는걸 의미합니다.</p>
+<h3 id="지원되지_않는_API들"><a name="지원되지 않는 API들">지원되지 않는 API들</a></h3>
+<p>데스크탑 하드웨어의 제약 때문에, 몇가지의 API들은 시뮬레이터에서 작동을 하지 않습니다. 저희는 geolocation과 같은 몇몇 API들을 위한 시뮬레이션을 넣었습니다. 하지만, 지금으로서는 다음 리스트에 있는 API들은 작동하지 않습니다. 다음과 같은 API를 사용하면 에러가 뜨거나 맞지 않은 결과를 가져다 줄 것입니다:</p>
+<ul>
+ <li><a href="/en-US/WebAPI/WebTelephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+</ul>
+<h2 id="도움_받기"><a name="Simulator-help"></a>도움 받기</h2>
+<p><span id="result_box" lang="ko"><span class="hps atn">Firefox OS 시뮬레이터는</span> <span class="hps">아직</span> <span class="hps atn">개발 초기 단계</span><span>입니다. </span><span class="hps atn">저희가 원하는</span><span class="atn">만큼</span><span>의 안정성과</span> <span class="hps atn">완성도</span><span>가</span> <span class="hps">없습니다.</span></span></p>
+<p>버그를 발견하셨다면 <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">GitHub에 보고</a> 해주세요. 만약에 물어보실게 있으시다면 <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">개발자 도구 메일링 리스트</a>나<a href="irc://irc.mozilla.org/#devtools"> irc.mozilla.org의 #devtools</a>에서 질문해 주세요.</p>
+<h3 id="verbose_logging을_활성화하는_방법"><a name="Simulator-verbose-logging"></a>verbose logging을 활성화하는 방법</h3>
+<p>설정하기 위해 about:config를 사용해 주세요. <a href="mailto:extensions.r2d2b2g@mozilla.org.sdk.console.logLevel">extensions.r2d2b2g@mozilla.org.sdk.console.logLevel</a>를 정수값 0으로 설정해 주세요, 그리고 부가 기능을 비활성화하고 재활성화를 해주세요. 시뮬레이터 구동에 관련한 추가적 메세지들은 에러 콘솔에서 나타날 것입니다(혹은 최신 버전의 Firefox의 브라우저 콘솔에서)</p>
+<h3 id="어떻게_시뮬레이터의_가장_최신_프리뷰_빌드를_받을수_있을까요"><a name="시뮬레이터 최신 프리뷰 빌드 받기"></a>어떻게 시뮬레이터의 가장 최신 프리뷰 빌드를 받을수 있을까요?</h3>
+<p>이 문서의 한 섹션이 설명하는 대로, 여러분은 최신 Firefox OS 빌드 추가기능을 <a href="https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/">addons.mozilla.org</a>에서 받을수 있습니다.</p>
+<p>가끔 여러분은 아직 공식적으로 릴리즈 되지 않는 기능들을 사용할수도 있을텐데요. 그렇다면, 여러분들은 최신 프리뷰 빌드들을 다음과 같은 URL들에서 받으실수 있습니다.</p>
+<ul>
+ <li>Windows: <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-windows.xpi">https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-windows.xpi</a></li>
+ <li>Mac: <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-mac.xpi">https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-mac.xpi</a></li>
+ <li>Linux: <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-linux.xpi">https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-linux.xpi</a></li>
+</ul>
+<p>프리뷰 빌드들은 릴리즈된 빌드들보다 덜 안정적이고 테스트 되어야 함을 염두해 두세요.</p>
+<h2 id="Subnav">Subnav</h2>
+<ol>
+ <li><a href="/en-US/docs/Tools/Toolbox">Toolbox</a>
+  <ol>
+   <li><a href="/en-US/docs/Tools/Page_Inspector" title="Tools/Page_Inspector">Page Inspector</a></li>
+   <li><a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a></li>
+   <li><a href="/en-US/docs/Tools/Style_Editor" title="Style Editor">Style Editor</a></li>
+   <li><a href="/en-US/docs/Tools/Debugger" title="Debugger">Debugger</a></li>
+   <li><a href="/en-US/docs/Tools/Profiler" title="Profiler">Profiler</a></li>
+   <li><a href="/en-US/docs/Tools/Network_Monitor" title="Network Monitor">Network Monitor</a></li>
+   <li><a href="/en-US/docs/Tools/Shader_Editor">Shader Editor</a></li>
+  </ol>
+ </li>
+ <li><a href="#">Mobile</a>
+  <ol>
+   <li><a href="/en-US/docs/Tools/Remote_Debugging" title="Remote Debugging">Remote Debugging</a></li>
+   <li><a href="https://developer.mozilla.org/ko/docs/%EB%8F%84%EA%B5%AC%EB%93%A4/Firefox_OS_Simulator">Firefox OS 시뮬레이터</a></li>
+   <li><a href="/en-US/docs/Tools/Responsive_Design_View" title="Responsive Design View">Responsive Design View</a></li>
+  </ol>
+ </li>
+ <li><a href="#">Standalone tools</a>
+  <ol>
+   <li><a href="/en-US/docs/Tools/Scratchpad" title="Scratchpad">Scratchpad</a></li>
+   <li><a href="/en-US/docs/Tools/Browser_Console" title="Browser Console">Browser Console</a></li>
+   <li><a href="/en-US/docs/Tools/GCLI" title="GCLI">Developer Toolbar</a></li>
+   <li><a href="/en-US/docs/Tools/3D_View" title="3D View">3D View</a></li>
+   <li><a href="/en-US/docs/Tools/Paint_Flashing_Tool" title="Paint Flashing Tool">Paint Flashing Tool</a></li>
+   <li><a href="/en-US/docs/Tools/Browser_Toolbox" title="Browser Toolbox">Browser Toolbox</a></li>
+  </ol>
+ </li>
+</ol>
+<p> </p>
+<p> </p>

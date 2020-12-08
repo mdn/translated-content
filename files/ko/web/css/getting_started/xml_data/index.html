@@ -1,0 +1,186 @@
+---
+title: XML data
+slug: Web/CSS/Getting_Started/XML_data
+tags:
+  - 'CSS:Getting_Started'
+translation_of: Archive/Beginner_tutorials/XML_data
+---
+<p>이 페이지는 XML 데이터와 함께 CSS를 사용할 수 있는 방법에 대한 예제들을 담고 있습니다.
+</p><p>샘플 XML 문서와 이 문서를 브라우저에 디스플레이할 때 사용할 수 있는 스타일 시트를 만듭니다.
+</p>
+<h3 id=".EC.A0.95.EB.B3.B4:_XML_.EB.8D.B0.EC.9D.B4.ED.84.B0" name=".EC.A0.95.EB.B3.B4:_XML_.EB.8D.B0.EC.9D.B4.ED.84.B0"> 정보: XML 데이터 </h3>
+<p><i><a href="ko/XML">XML</a></i>(확장 마크업 언어, eXtensible Markup Lanugage)는 모든 종류의 구조화 된 데이터를 위한 범용(general-purpose) 언어입니다.
+</p><p>디폴트로, 모질라 브라우저는 XML을 XML파일의 원래 데이터와 매우 유사한 포맷으로 디스플레이합니다.
+데이터의 구조를 정의하는 실제 택들을 볼 수 있습니다.
+</p><p>CSS 스타일 시트를 XML 문서와 링크함으로써, 이를 디스플레이하는 다른 방식을 정의할 수 있습니다.
+이를 위해, 스타일 시트는 XML 문서의 택들과 HTML에 의해 사용되는 디스플레이 유형들(types)에 매핑(map)시키는 규칙들을 사용합니다.
+</p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+<caption>Example
+</caption><tbody><tr>
+<td> XML 문서의 데이터는 <code>html:input</code> 택들을 사용합니다. 문서의 <small>INFO</small> 엘리먼트들이 HTML 단락처럼 디스플레이 되기 원한다고 가정합시다.
+<p>문서의 스타일 시트에 <small>INFO</small>엘리먼트가 어떻게 디스플레이 될 것인지 지정합니다:
+</p>
+<div style="width: 30em;">
+<pre class="eval">INFO {
+  display: block;
+  margin: 1em 0;
+  }
+</pre>
+</div>
+</td></tr></tbody></table>
+<p>가장 흔한 <code>display</code> 속성 값은 다음과 같습니다:
+</p>
+<table style="margin-left: 2em;">
+<tbody><tr>
+<td style="padding-right: 2em;"><code>block</code></td><td>HTML의 <small>DIV</small>처럼 나타남 (머리글, 문단 등)
+</td></tr>
+<tr>
+<td><code>inline</code></td><td>HTML의 <small>SPAN</small>처럼 나타남 (문서의 강조)
+</td></tr></tbody></table>
+<p>HTML에서와 같은 방식으로 폰트, 스페이싱(spacing) 그리고 다른 세부사항들을 지정하는 자기 자신의 스타일 규칙을 더하세요.
+</p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+<caption>More details
+</caption><tbody><tr>
+<td> <code>display</code>의 다른 값들은 그 엘리먼트를 리스트 아이템 처럼 , 또는 표의 컴포넌트(component) 처럼 디스플레이 합니다.
+<p>디스플레이 유형들(types)의 완전한 리스트를 원하시면, CSS 규약의 <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-display">The display property</a>을 보세요.
+</p><p>CSS 만을 사용하면, 디스플레이의 구조가 문서의 구조와 똑 같을 것입니다.
+다른 기술을 사용해서 디스플레이 구조를 수정할 수 있습니다 — 예를 들면, XBL로 내용물을 더할 수 있으며 자바스크립트로 DOM을 수정할 수 있습니다.
+</p><p>모질라에서의 XML에 관해서 더 많은 정보를 원하시면, 이 위키의 <a href="ko/XML">XML</a> 페이지를 보세요.
+</p>
+</td></tr></tbody></table>
+<h3 id=".EC.95.A1.EC.85.98:_XML_.EC.98.88.EC.A0.9C" name=".EC.95.A1.EC.85.98:_XML_.EC.98.88.EC.A0.9C"> 액션: XML 예제 </h3>
+<p>새로운 XML 문서를 텍스트 파일 <code>doc9.xml</code>로 만드세요.
+아래의 내용물을 복사해서 붙여넣되 스크롤해서 전체를 다 넣을 수 있도록 하세요:
+</p>
+<div style="width: 48em; height: 12em; overflow: auto;"><pre>&lt;?xml version="1.0"?&gt;
+&lt;!-- XML demonstration --&gt;
+
+&lt;?xml-stylesheet type="text/css" href="style9.css"?&gt;
+
+&lt;!DOCTYPE planet&gt;
+&lt;planet&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Arctic&lt;/name&gt;
+&lt;area&gt;13,000&lt;/area&gt;
+&lt;depth&gt;1,200&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Atlantic&lt;/name&gt;
+&lt;area&gt;87,000&lt;/area&gt;
+&lt;depth&gt;3,900&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Pacific&lt;/name&gt;
+&lt;area&gt;180,000&lt;/area&gt;
+&lt;depth&gt;4,000&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Indian&lt;/name&gt;
+&lt;area&gt;75,000&lt;/area&gt;
+&lt;depth&gt;3,900&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Southern&lt;/name&gt;
+&lt;area&gt;20,000&lt;/area&gt;
+&lt;depth&gt;4,500&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;/planet&gt;
+</pre></div>
+<p>새로운 CSS 문서를 텍스트 파일 <code>style9.css</code>로 만드세요.
+아래의 내용물을 복사해서 붙여넣되 스크롤해서 전체를 다 넣을 수 있도록 하세요:
+</p>
+<div style="width: 48em; height: 12em; overflow: auto;"><pre>/*** XML demonstration ***/
+
+planet:before {
+  display: block;
+  width: 8em;
+  font-weight: bold;
+  font-size: 200%;
+  content: "Oceans";
+  margin: -.75em 0px .25em -.25em;
+  padding: .1em .25em;
+  background-color: #cdf;
+  }
+
+planet {
+  display: block;
+  margin: 2em 1em;
+  border: 4px solid #cdf;
+  padding: 0px 1em;
+  background-color: white;
+  }
+
+ocean {
+  display: block;
+  margin-bottom: 1em;
+  }
+
+name {
+  display: block;
+  font-weight: bold;
+  font-size: 150%;
+  }
+
+area {
+  display: block;
+  }
+
+area:before {
+  content: "Area: ";
+  }
+
+area:after {
+  content: " million km\B2";
+  }
+
+depth {
+  display: block;
+  }
+
+depth:before {
+  content: "Mean depth: ";
+  }
+
+depth:after {
+  content: " m";
+  }
+</pre></div>
+<p>브라우저에서 문서를 여세요:
+</p>
+<table style="border: 2px outset #36b; padding: 1em;">
+<tbody><tr>
+<td><div style="border: 2px solid #cdf; border-bottom: none; padding: .5em 8em 1em .5em;">
+<p style="font-size: 150%; font-weight: bold; margin: -1em 0px 0px 0px; padding: .1em .25em; background-color: #cdf; width: 8em;">Oceans</p>
+<p style="font-size: 75%; margin: .25em 0px 0px 0px; line-height: 110%;"><b>Arctic</b><br>
+Area: 13,000 million km²<br>
+Mean depth: 1,200 m</p>
+<p style="font-size: 75%; margin: .5em 0px 0px 0px; line-height: 110%;"><b>Atlantic</b><br>
+Area: 87,000 million km²<br>
+Mean depth: 3,900 m</p>
+<p style="font-size: 75%; margin: .5em 0px 0px 0px; line-height: 110%;"><b>. . .</b></p>
+</div>
+</td></tr></tbody></table>
+<p>이 예제에서 주의할 점:
+</p>
+<ul><li>수퍼스크립트(superscript) 2 ("million km²" 에 있는)는 CSS파일에 <code>\B2</code>로 코딩되어있는 유니코드(Unicode) 문자입니다.
+</li><li>헤딩(heading) "Oceans"는 음수인 상단 마진(negative top margin)을 갖고 있어 보더의 상단에 디스플레이 되도록 위쪽으로 이동 됩니다.
+</li></ul>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+<caption>Challenge
+</caption><tbody><tr>
+<td> 스타일 시트를 변경해서 문서를 표로 디스플레이하게 하세요.
+<p>(수정할 예문들을 원하시면, CSS 규약의 <a class="external" href="http://www.w3.org/TR/CSS21/tables.html">Tables</a> 챕터를 보세요.) </p>
+</td></tr></tbody></table>
+<h4 id=".EA.B7.B8.EB.9F.BC_.EB.8B.A4.EC.9D.8C.EC.9D.80" name=".EA.B7.B8.EB.9F.BC_.EB.8B.A4.EC.9D.8C.EC.9D.80"> 그럼 다음은 </h4>
+<p>이 페이지를 이해하기 어렵거나 다른 코멘트가 있다면 <a>Discussion</a>에 기여하세요.
+</p><p>이 페이지는 입문서의 마지막 페이지입니다.
+모질라에서의 CSS에 관한 더 많은 정보를 원하시면, 이 위키의 <a href="ko/CSS">CSS</a> 메인 페이지(main page)를 보세요.
+</p>{{ languages( { "en": "en/CSS/Getting_Started/XML_data", "fr": "fr/CSS/Premiers_pas/Donn\u00e9es_XML", "pl": "pl/CSS/Na_pocz\u0105tek/Dane_XML", "pt": "pt/CSS/Como_come\u00e7ar/Dados_XML" } ) }}

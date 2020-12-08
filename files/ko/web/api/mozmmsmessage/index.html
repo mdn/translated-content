@@ -1,0 +1,83 @@
+---
+title: MozMmsMessage
+slug: Web/API/MozMmsMessage
+tags:
+  - Firefox OS
+  - Mobile
+  - Non-standard
+  - Obsolete
+  - Reference
+  - WebSMS
+translation_of: Archive/B2G_OS/API/MozMmsMessage
+---
+<div>{{APIRef("Mobile Messaging API")}}</div>
+
+<div class="warning">
+<p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">internal applications</a> only.</p>
+</div>
+
+<h2 id="요약">요약</h2>
+
+<p>DOM <code>MozMmsMessage</code> 객체는 MMS 메시지를 나타내며 발신자, 수신자, 본문, 첨부 파일, 날짜와 같은 모든 정보를 가지고 있다.</p>
+
+<h2 id="속성">속성</h2>
+
+<dl>
+ <dt> </dt>
+ <dt>{{domxref("MozMmsMessage.type")}} {{readonlyinline}}</dt>
+ <dd><code>mms라는 값을 가지는 문자열이다.</code></dd>
+ <dt>{{domxref("MozMmsMessage.id")}} {{readonlyinline}}</dt>
+ <dd>메시지의 id를 나타내는 숫자를 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.threadId")}} {{readonlyinline}}</dt>
+ <dd>메시지 일부의 스레드의 id를 나타내는 숫자를 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.subject")}} {{readonlyinline}}</dt>
+ <dd>메시지의 제목을 나타내는 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.smil")}} {{readonlyinline}}</dt>
+ <dd>메시지의 SMIL 콘텐츠를 나타내는 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.attachments")}} {{readonlyinline}}</dt>
+ <dd>SMIL 콘텐츠에 필요한 첨부 파일을 나타내는 객체의 배열을 반환한다. 이 객체들은 <code>id</code>, <code>location,</code> <code>content</code>(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/Web/API/Blob"><code>Blob</code></a>)를 포함하고 있다.</dd>
+ <dt>{{domxref("MozMmsMessage.expiryDate")}} {{readonlyinline}}</dt>
+ <dd>MMS를 수동으로 다운로드 받게 되는 만기일을 나타내는 <code><a href="/en/JavaScript/Reference/Global_Objects/Date" title="Date">Date</a></code> 객체를 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.delivery")}} {{readonlyinline}}</dt>
+ <dd><code>not-download</code>, <code>received</code>, <code>sending</code>, <code>sent</code>, <code>error</code> 중 하나의 값을 가지게 되는 {{ domxref("DOMString") }} 의 배열을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.deliveryStatus")}} {{readonlyinline}}</dt>
+ <dd><code>delivery</code> 속성 값에 따른 상태를 나타내는 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.read")}} {{readonlyinline}}</dt>
+ <dd>메시지를 읽었는지 읽지 않았는지를 가리키는 Boolean을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.receivers")}} {{readonlyinline}}</dt>
+ <dd>각 수신자의 이름을 가진 {{ domxref("DOMString") }} 의 배열을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.sender")}} {{readonlyinline}}</dt>
+ <dd>발신자의 이름을 가진 {{ domxref("DOMString") }} 을 반환한다.</dd>
+ <dt>{{domxref("MozMmsMessage.timestamp")}} {{readonlyinline}}</dt>
+ <dd>메시지의 타임스탬프인 <code><a href="/en/JavaScript/Reference/Global_Objects/Date" title="Date">Date</a></code> 객체를 반환한다.</dd>
+</dl>
+
+<h2 id="명세">명세</h2>
+
+<p>이 API는 비 표준 스펙의 구현체이다. 그러나 W3C의 <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">System Application Working Group</a>에서 논의되고 있다.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Messaging')}}</td>
+   <td>{{Spec2('Messaging')}}</td>
+   <td>Editor Draft (WIP).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="같이_보기">같이 보기</h2>
+
+<div id="compat-mobile"> </div>
+
+<ul>
+ <li>{{ domxref("window.navigator.mozMobileMessage") }}</li>
+ <li>{{ domxref("MozMobileMessageManager") }}</li>
+</ul>

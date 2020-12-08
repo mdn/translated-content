@@ -1,0 +1,71 @@
+---
+title: Scroll Bars
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Scroll_Bars
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Scroll_Bars
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Splitters" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Toolbars">다음  »</a></p>
+</div><p></p>
+<p>이제, 창에 스크롤바를 추가해 보도록 하겠습니다.</p>
+<h3 id=".EC.8A.A4.ED.81.AC.EB.A1.A4.EB.B0.94_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".EC.8A.A4.ED.81.AC.EB.A1.A4.EB.B0.94_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">스크롤바 추가하기</h3>
+<p>스크롤바는 대개 사용자가 긴 문서를 이동하기 위해 사용됩니다. 또한 어떤 범위에 해당하는 값을 선택하기 위해서도 사용될 수 있습니다. 스크롤바는 여러 방식으로 생성될 수 있는데, XUL에서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/scrollbar" title="scrollbar">scrollbar</a></code></code> 태그를 이용해서 만들어 집니다. 글상자와 같은 일부 요소는 내용이 너무 긴 경우와 같이, 필요에 따라 스크롤바를 추가할 수 있습니다.</p>
+<p>이 단원에서는 독립적인 스크롤바의 생성 방법에 대해 다룰 것입니다. 사용자는 스크롤바를 조정하여 값을 설정하게 될 것입니다. 여러분은 그리 많이 사용할 일이 없을 것입니다. 스크롤바는 주요 부분인 조정 가능한 스크롤상자(thumb)와 양 끝단에 있는 2개의 화살표 버튼들로 구성됩니다. 스크롤바는 이러한 모든 요소들을 자동으로 생성합니다.</p>
+<p><img alt="Image:scroll1.png"></p>
+<p>스크롤바의 구문은 다음과 같습니다.</p>
+<pre>&lt;scrollbar
+    id="identifier"
+    orient="horizontal"
+    curpos="20"
+    maxpos="100"
+    increment="1"
+    pageincrement="10"/&gt;
+</pre>
+<p>속성은 다음과 같습니다.</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>
+  스크롤바의 유일 식별자.</dd>
+</dl>
+<dl>
+ <dt>
+  <code id="a-orient"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></dt>
+ <dd>
+  이 속성은 스크롤바의 방향을 지정합니다. 기본값은 <code>horizontal</code>로, 좌측에서 우측으로 늘어나는 스크롤바를 만듭니다. <code>vertical</code>이라는 속성을 지정할 수도 있는데, 이는 상단에서 하단으로 늘어나는 스크롤바를 만듭니다.</dd>
+</dl>
+<dl>
+ <dt>
+  <code id="a-curpos"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code></dt>
+ <dd>
+  이 속성은 스크롤상자(여러분이 스크롤바에서 앞뒤로 움직일 수 있는 막대)의 현재 위치를 나타냅니다. 이 속성값은 0부터 <code>maxpos</code> 속성에 지정한 값의 범위를 가집니다. 이 속성값은 단위를 필요로 하지 않으며, 기본값은 0입니다.</dd>
+</dl>
+<dl>
+ <dt>
+  <code id="a-maxpos"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/maxpos">maxpos</a></code></dt>
+ <dd>
+  이것은 스크롤상자의 최대 위치를 가리킵니다. 숫자로 나타내며 단위는 없습니다. 기본값은 100입니다.</dd>
+</dl>
+<dl>
+ <dt>
+  <code id="a-increment"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code></dt>
+ <dd>
+  여기에 명시한 값은 사용자가 스크롤바에 있는 화살표 버튼을 클릭했을 때 <code>curpos</code> 값을 얼마나 변경할 지 지정합니다. 기본값은 1입니다.</dd>
+</dl>
+<dl>
+ <dt>
+  <code id="a-pageincrement"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/pageincrement">pageincrement</a></code></dt>
+ <dd>
+  여기에 명시한 값은 사용자가 스크롤바의 구간의 쪽를 클릭했을 때, 즉 스크롤상자와 화살표 사이의 영역을 클릭할 때 얼만큼의 <code>curpos</code>값이 변경될지를 지정합니다. 기본값은 10입니다.</dd>
+</dl>
+<p>위에 있는 구문 예제는 0부터 100까지의 범위를 가지는 스크롤바를 생성할 것입니다. 100이라는 값은 목록에 있는 줄 수 일수 있지만, 여러분이 원하는 어떤 것일 수도 있습니다. 이 예제에서 초기값은 20입니다. 스크롤바의 화살표 중 하나를 클릭하면, 값은 위나 아래로 1씩 바뀌게 됩니다. 스크롤바의 페이지 영역(스크롤박스와 화살표 버튼 사이 영역)을 클릭하면 10만큼 바뀌게 됩니다.</p>
+<p>사용자가 스크롤바 화살표를 클릭하면 스크롤상자는 <code>increment</code>값에 지정한 양만큼 이동하게 됩니다. 이 속성값을 증가시키면 클릭할 때마다 더 멀리 이동하게 됩니다. 스크롤바의 좌측단 또는 최상단 위치는 0값을 가지며 우측단과 최하단 위치는 <code>maxpos</code>에 지정된 값을 가집니다.</p>
+<p>스크롤바의 값을 조정함으로써, 스크롤상자 부분을 원하는 곳에 위치시키고 화살표를 클릭했을 때 이동범위를 변경할 수 있습니다.</p>
+<p>다음에는 <a href="ko/XUL_Tutorial/Toolbars">툴바</a>를 만드는 방법에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Splitters" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Toolbars">다음  »</a></p>
+</div><p></p>
+<p></p>

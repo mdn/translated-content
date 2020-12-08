@@ -1,0 +1,127 @@
+---
+title: Date.prototype.setTime()
+slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
+translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
+---
+<div>{{JSRef}}</div>
+
+<p>setTime () 메서드는 {{jsxref ( "Date")}} 객체를 1970 년 1 월 1 일 00:00:00 UTC부터 밀리 초 단위로 나타내는 시간으로 설정합니다.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code><var>dateObj</var>.setTime(<var>timeValue</var>)</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>timeValue</code></dt>
+ <dd>1970 년 1 월 1 일 00:00:00 UTC 이후의 밀리 초 수를 나타내는 정수입니다.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>1970 년 1 월 1 일 00:00:00 UTC와 업데이트 된 날짜 (사실상 인수의 값) 사이의 밀리 초 수입니다.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>setTime () 메서드를 사용하면 다른 {{jsxref ( "Date")}} 객체에 날짜와 시간을 지정할 수 있습니다.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_setTime()">Using <code>setTime()</code></h3>
+
+<pre class="brush: js">var theBigDay = new Date('July 1, 1999');
+var sameAsBigDay = new Date();
+sameAsBigDay.setTime(theBigDay.getTime());
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Initial definition. Implemented in JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Date.prototype.getTime()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
+</ul>

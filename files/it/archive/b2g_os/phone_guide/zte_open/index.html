@@ -1,0 +1,179 @@
+---
+title: The Firefox OS ZTE OPEN
+slug: Archive/B2G_OS/Phone_guide/ZTE_OPEN
+translation_of: Archive/B2G_OS/Phone_guide/ZTE_OPEN
+---
+<div class="summary">
+ <p>Mozilla have partnered with ZTE to create the ZTE OPEN, a powerful Firefox OS-based device aimed at developers and early adopters worldwide. They are unlocked and open for testing and experimentation.</p>
+</div>
+<h2 id="Purchasing_a_device">Purchasing a device</h2>
+<p>These devices are available through ZTE's US and UK eBay stores, and a separate Hong Kong page aimed at Asian and Oceanian customers who don't want to pay high postage costs. They are priced at $79.99/£59.99.</p>
+<ul>
+ <li><a href="http://stores.ebay.com/ztemobileuk">Buy from UK eBay store</a></li>
+ <li><a href="http://stores.ebay.com/ztemobileus">Buy from US eBay store</a></li>
+ <li><a href="http://www.ebay.com/itm/331031989534">Buy from Hong Kong page</a></li>
+</ul>
+<h2 id="Upgrading_Firefox_OS">Upgrading Firefox OS</h2>
+<p>This section provides instructions for upgrading Firefox OS on your ZTE OPEN device.</p>
+<h3 id="General">General</h3>
+<p>In general, Firefox OS builds, updates and testing are done by connecting your phone to a computer using a USB cable, and using ADB (Android Debugging Bridge) and Fastboot to join the devices together and issue commands. You'll therefore need to install ADB and fastboot from the <a href="http://developer.android.com/sdk/index.html" title="Android Developer Tookit">Android Developer Toolkit</a> on your desktop machine. It is not necessary to install the entire toolkit. adb and fastboot are found in the <code>/platform-tools/</code> folder.</p>
+<p>Next, you need to go to your phone and <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Remote_debugging">enable remote debugging</a>.</p>
+<h3 id="Firefox_OS_1.1">Firefox OS 1.1</h3>
+<p>On 10th December 2013: ZTE released a Firefox OS 1.1 upgrade for the ZTE OPEN. <strong>This now has fastboot enabled</strong>, which was caused the problems with the previous published builds.</p>
+<p>At this point, it's best to first upgrade your phone to version 1.1, even if you wanted to go to version 1.2. To do this, download the 1.1 package that corresponds to your phone (<a href="http://www.ztedevices.com/support/smart_phone/b5a2981a-1714-4ac7-89e1-630e93e220f8.html">OPEN (American Standard)</a> or <a href="http://www.ztedevices.com/support/smart_phone/cba40ed6-d3ab-44c0-bdee-3a15803dc187.html">OPEN (European Standard)</a>) and unzip it to get a PDF of instructions plus a firmware ZIP.</p>
+<div class="note">
+ <p><strong>Note</strong>: User data will be wiped by the SD package installation. You should <a href="https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition">backup your data</a> before starting.</p>
+</div>
+<p>Now follow these steps:</p>
+<ol>
+ <li>Power off your phone, remove the battery to access the microSD card and extract the card from its holder.</li>
+ <li>Connect the microSD card to your desktop machine.</li>
+ <li>Move US_DEV_FFOS_V1.1.0B04_UNFUS_SD.zip or EU_DEV_FFOS_V1.1.0B04_UNFUS_SD.zip (depending on the version you downloaded) to the root directory of your microSD card. Do not unzip the file.</li>
+ <li>Disconnect the microSD card from your desktop computer and return it to your phone.</li>
+ <li>Hold the volume up and power keys down simultaneously. Volume up is activated by pressing the upper part of the long key on the left side of the phone. If you did it properly, you’ll enter the Firefox OS recovery mode. (Note that the Firefox OS logo may display briefly before you enter the recovery mode; sometimes this can take a little while.)</li>
+ <li>Use the volume up/down key to move from one item to the other in the menu, and chose “apply update from external storage.”</li>
+ <li>Press the power key to confirm the selection. You’ll see a new screen listing the files you have on the microSD card.</li>
+ <li>Again use volume up/down key to select the firmware: either US_DEV_FFOS_V1.1.0B04_UNFUS_SD.zip or EU_DEV_FFOS_V1.1.0B04_UNFUS_SD.zip (depending on the version you downloaded), and press the power key to confirm.</li>
+</ol>
+<p>If everything went well, you’ll see a sequence of status messages, culminating with one that says, “Install from sdcard complete.” You’ll need to select “reboot system now”: your phone will reboot, and you’ll see the configuration screen you saw the first time you powered on the phone.</p>
+<h3 id="Firefox_OS_1.2">Firefox OS 1.2</h3>
+<p>In January 2014, ZTE released a beta version of Firefox OS 1.2 (fastboot enabled, with root access). It is basically version 1.1 baseline + version 1.2 Gecko and Gaia, and doesn't require the build to be put on the phone's SD Card.</p>
+<p>With 1.1 installed as described above, open a terminal and check that the connection is made with the following command:</p>
+<pre class="brush: bash">adb devices -l
+</pre>
+<p>You should see your device as something like, "roamer2    device usb:2-1.2", in response.</p>
+<p>Download the appropriate version of the build from the Dropbox account ZTE has set up: <a href="https://www.dropbox.com/sh/rnj3rja7gd54s98/32KXfFmedN/P752D04_DEV_US_20131212_v1.2.7z" title="Firefox OS 1.2 build for ZTE Open US">US version</a> or <a href="https://www.dropbox.com/sh/rnj3rja7gd54s98/_twgXEkMFH/P752D04_DEV_EU_20131212_v1.2.7z" title="Firefox OS 1.2 build for ZTE Open UK">UK version</a>. For Windows users, you can also <a href="https://www.dropbox.com/sh/rnj3rja7gd54s98/6ZoJwmlRjn/Installation%20Instruction.docx" title="Special upgrade instructions for Windows users">download special instructions</a>, and <a href="https://www.dropbox.com/sh/rnj3rja7gd54s98/-fyi2XHFPG/upgrade_tool" title="Upgrade tool">an upgrade tool</a> to help you to install the new version easily. The steps below however will work on <strong>all operating systems</strong> – Linux, OS X, and Windows – without relying on the special tool.</p>
+<p>Once you have the file, extract the contents, and open a console. Note that those steps will erase your personal data, so be sure to make a (<a href="https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition">backup</a>) first. Then navigate to the folder where the files are. Still in the console, type this command:</p>
+<pre class="brush: bash" style="font-family: monospace;">adb reboot bootloader</pre>
+<p>While the phone is rebooting, execute the following command. (Fastboot only works inside a reboot):</p>
+<pre class="brush: bash" style="font-family: monospace;">sudo fastboot devices
+</pre>
+<p>If you see, "&lt; waiting for device &gt;", hit Ctrl-C and retry the command until you see something like, "ROAMER2    fastboot", in response.</p>
+<p>Then, quickly execute the following commands while it is still rebooting:</p>
+<pre class="brush: bash" style="font-family: monospace;">fastboot flash boot boot.img
+fastboot flash userdata userdata.img
+fastboot flash system system.img
+fastboot flash recovery recovery.img
+fastboot erase cache
+fastboot reboot</pre>
+<p>(The reboot completed before I was done entering all the commands as I was distracted. I simply restarted from the, "adb reboot bootloader".)</p>
+<p>If everything went well, your phone should reboot at this point. You’ll find that this version of 1.2 from ZTE includes many test applications, which you can remove if you like.</p>
+<div class="note">
+ <p><strong>Note</strong>: <a href="https://hacks.mozilla.org/2014/01/upgrading-your-zte-open-to-firefox-1-1-or-1-2-fastboot-enabled/">Upgrading your ZTE Open to Firefox 1.1 or 1.2 (fastboot enabled)</a> by <span class="url">Frédéric Harper</span> also provides a useful breakdown of the install process.</p>
+</div>
+<h2 id="Phone_features">Phone features</h2>
+<ul>
+ <li>CPU Qualcomm MSM7225A 1.0Ghz</li>
+ <li>UMTS 850/1900 or UMTS900/2100</li>
+ <li>GSM 850/900/1800/1900 (2G EDGE)</li>
+ <li>Screen 3.5" HVGA</li>
+ <li>Camera 2 MP (back)</li>
+ <li>256 MB (RAM)</li>
+ <li>MicroSD (support up to 32GB)</li>
+ <li>Battery 1200 mAh</li>
+ <li>Wifi b, g, n, Bluetooth 2.1 EDR</li>
+ <li>Light &amp; Prox. Sensor, G-Sensor</li>
+ <li>Radio FM, GPS</li>
+ <li>MicroUSB</li>
+</ul>
+<div class="note">
+ <p><strong>Note</strong>: the Hong Kong phones also support tri-band 3G Networks — HSDPA 850/1900/2100 (850/1900 for US, CA, 850/1900/2100 for Asia, AU, and 900/2100 for EU.)</p>
+</div>
+<h2 id="Wireless_carriers">Wireless carriers</h2>
+<div class="warning">
+ <p>Pricing information is for reference only and may not be accurate. Visit the associated link for official information.</p>
+</div>
+<h3 id="US_carriers">US carriers</h3>
+<h4 id="ATT">AT&amp;T</h4>
+<ul>
+ <li><a href="http://www.att.com/shop/wireless.html">Website</a></li>
+ <li>Nationwide coverage for 2G EDGE and 3G</li>
+</ul>
+<h5 id="Sampling_of_prepaid_ATT_plans">Sampling of prepaid AT&amp;T plans</h5>
+<p><a href="http://www.att.com/shop/wireless/gophone.html">Prepaid GoPhone®</a>, Smartphone Plans</p>
+<ul>
+ <li>$25/month, $5/50MB 3G data</li>
+ <li>$60/month with 2GB data, $10/GB additional 3G data</li>
+</ul>
+<h4 id="Aio">Aio</h4>
+<ul>
+ <li><a href="http://www.aiowireless.com/home.html">Website</a></li>
+ <li>{{ anch("AT&amp;T") }}'s own MVNO</li>
+</ul>
+<h5 id="Sampling_of_prepaid_Aio_plans">Sampling of prepaid Aio plans</h5>
+<ul>
+ <li>Aio Smart - $55/month with 2GB 3G data, $10/GB additional 3G data</li>
+ <li>Aio Pro - $70/month with 7GB 3G data, $10/GB additional 3G data</li>
+</ul>
+<h4 id="Good2GO">Good2GO</h4>
+<ul>
+ <li><a href="https://us.good2gomobile.com/">Website</a></li>
+ <li>{{ anch("AT&amp;T") }} MVNO</li>
+</ul>
+<h5 id="Sampling_of_prepaid_Good2GO_plans">Sampling of prepaid Good2GO plans</h5>
+<ul>
+ <li>$50/month with 1GB 3G data, $20/GB additional 3G data</li>
+</ul>
+<h4 id="Other_anch(ATT)_MVNOs">Other {{ anch("AT&amp;T") }} MVNOs</h4>
+<p>These carriers do not offer additional 3G data.</p>
+<ul>
+ <li><a href="http://goredpocket.com/">RedPocket</a></li>
+ <li><a href="http://www.net10wireless.com/">Net10</a></li>
+ <li><a href="http://www.straighttalk.com/">Straight Talk</a></li>
+ <li><a href="https://www.airvoicewireless.com/">Airvoice</a></li>
+</ul>
+<h4 id="T-Mobile">T-Mobile</h4>
+<ul>
+ <li><a href="http://www.t-mobile.com/">Website</a></li>
+ <li>Nationwide coverage for 2G EDGE, limited metropolitan coverage for 3G</li>
+</ul>
+<h3 id="Canadian_carriers">Canadian carriers</h3>
+<p>The US version of the ZTE Open also work in Canada on carriers that use the Bell/Telus network, or the Rogers network. Some regional carriers like Sasktel or MTS that have UMTS should work too.</p>
+<p>It will not work on carriers that do not use UMTS or GSM, like Public Mobile, nor on the carriers that use the AWS band like WIND Mobile, Mobilicity, Videotron or Eastlink.</p>
+<h2 id="Memory_card">Memory card</h2>
+<h3 id="File_system">File system</h3>
+<p>In order to be recognized by the phone, the MicroSD card must be formatted as a FAT32 file system. If a card is new or has never been reformatted, it should work as is.</p>
+<h2 id="Device_revisions">Device revisions</h2>
+<h3 id="Revision_01">Revision 01</h3>
+<p>Phones produced before 09/27/2013 do not have fastboot enabled and must be updated. Normally, this would be handled by Software Updates, but since some users have reported trouble with this method, ZTE have made SD card packages available to enable fastboot on earlier devices. Flash images for:</p>
+<ul>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/b5a2981a-1714-4ac7-89e1-630e93e220f8.html">Phones purchased at ZTE eBay US/Hong Kong store</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/cba40ed6-d3ab-44c0-bdee-3a15803dc187.html">Phones purchased at ZTE eBay UK store</a></li>
+</ul>
+<p>The zip file is linked under Downloads. Once the file is downloaded and unzipped, follow the instructions in the bundled PDF to flash the package to your phone.</p>
+<p>Related Support Forum Questions:</p>
+<ul>
+ <li><a href="https://support.mozilla.org/en-US/questions/971252">ZTE Open update crashes</a></li>
+ <li><a href="https://support.mozilla.org/en-US/questions/967817">Why is my ZTE Open unable to update Firefox OS?</a></li>
+ <li><a href="https://support.mozilla.org/en-US/questions/976414?page=3">How can I unbrick ZTE Open with adb debug Disabled?</a></li>
+</ul>
+<h3 id="Revision_02">Revision 02</h3>
+<p>Phones produced on or after 09/27/2013 are fastboot enabled by default. <strong>This includes the Hong Kong phones.</strong></p>
+<div class="note">
+ <p><strong>Note</strong>: If you are unsure of your phone's revision, check it in <strong>Settings &gt; Device Information &gt; Software</strong>. If it is older than the following version numbers, you will need to update your phone using the above SD packages to enable fastboot.</p>
+ <ul>
+  <li>Phones from UK store：OPEN_EU_DEV_FFOS_V1.0.0B02</li>
+  <li>Phones from US store：OPEN_US_DEV_FFOS_V1.0.0B02 <em>(Some phones may display this version incorrectly, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916098#c39">bug 916098</a>.)</em></li>
+ </ul>
+</div>
+<h2 id="Device_support">Device support</h2>
+<p>Once your phone has {{ anch("Device revisions","fastboot enabled") }}, you will then be able to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">build and install new Firefox OS/B2G</a> builds on it (start at the <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">build prerequisite</a> instructions, and treat the ZTE like it is an Inari device, for the purposes of configuration), and recover your phone if necessary, using the procedure cited in the {{ anch("I bricked my phone") }} section.</p>
+<p>If you encounter errors about setting the system time while flashing a custom build, you may need to download a <a href="http://sl.edujose.org/2013/10/adapted-boot-image-for-use-with-b2g.html">modified boot image</a>.</p>
+<h3 id="I_bricked_my_phone">I bricked my phone</h3>
+<p>If you are in the process of modifying your phone and it becomes “unresponsive” you should be able to recover it using fastboot with the following simple procedure.</p>
+<p>First remove the USB cable and then remove the battery from the phone for 30 seconds. Then reinsert the battery and press the volume up button while holding the power button for a few seconds. Next reconnect the USB cable and run the following commands from a terminal window in the directory that contains the SD package files described above (it is worth checking for an update to the SD package before you do this):</p>
+<pre class="brush: bash" lang="bash">fastboot flash recovery recovery.img
+fastboot flash boot boot.img
+fastboot flash userdata userdata.img
+fastboot flash system system.img
+fastboot reboot
+</pre>
+<p>This process should recover your phone. If it doesn't seem to work, you may have to try it a second time.</p>
+<h3 id="Headphones_not_working">Headphones not working?</h3>
+<p>We found that the headset jack is designed by a Chinese manufacturer that has compatibility problems with other brands of headsets that include microphones. You may have voice mute problems when you try to use headsets made by Apple, Samsung, HTC, and others. You can buy a 3.5 mm headset adapter that reverses the microphone and ground pins to avoid this problem. For more information, see {{ Bug("812607") }}.</p>
+<h3 id="Other_support_notes">Other support notes</h3>
+<p>Some customers have come across an Issue of FOTA updates failing to enable fastboot; this is still under investigation, and we are assisting ZTE to analyze every scenario. We will post more information as it is available.</p>
+<p>If your phone was unfortunately damaged during the FOTA update because of ZTE providing false or wrong update files, you can attempt to restore it to factory settings using the appropriate SD image and instructions referenced in {{ anch("Revision 01") }}. Otherwise, send your phone back to the eBay store you purchased it from in exchange for a new one. You may contact the store owner directly via an eBay message.</p>
+<h2 id="See_also">See also</h2>
+<p><a href="https://marketplace.firefox.com/developers/dev_phone">Official Dev Phone page on Firefox Marketplace</a></p>
+<p><a href="http://www.movistar.co/documentos/manualesProductos/ZTE_Mozilla_Open_P752-Manual_de_Usuario.pdf">Draft User Manual [en-US]</a> - PDF</p>

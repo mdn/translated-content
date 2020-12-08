@@ -1,0 +1,158 @@
+---
+title: Pelokalan dengan Verbatim
+slug: Mozilla/Localization/Localizing_with_Verbatim
+translation_of: Mozilla/Localization/Localizing_with_Pontoon
+---
+<p><span class="seoSummary">Verbatim adalah suatu alat berbasis web (khususnya Pootle yang dihosting Mozilla) untuk melokalkan konten web Mozilla. Alat tersebut dapat digunakan untuk melokalkan berbagai proyek Mozilla dan mampu mendukung bahasa apa saja. Panduan ini akan membantu Anda melakukan pelokalan proyek Mozilla pada umumnya.</span> Tutorial yang disediakan di sini akan memberi Anda landasan yang bermanfaat dalam penggunaan Verbatim untuk melokalkan setiap proyek Mozilla yang ingin Anda ikut sertakan dalam upaya komunitas pelokalan Anda. Kita akan membahas proyek-proyek khusus yang sedang menggunakan Verbatim, cara untuk mulai menggunakan Verbatim, dan pekerjaan-pekerjaan yang umumnya dapat diselesaikan dengan Verbatim.</p>
+
+<h2 id="Mulai_menggunakan_Verbatim">Mulai menggunakan Verbatim</h2>
+
+<p>Being that it is web-based, localizers must be online to use Verbatim. There are essentially two ways to get started with Verbatim: start a new localization or join an existing localization community's efforts. Either way, you will need to follow these steps to start working on a Verbatim project.</p>
+
+<table style="border-color: #000000; border-style: solid; width: 100%;">
+ <thead>
+  <tr style="text-align: center;">
+   <th scope="col" style="text-align: center;"><strong>Start a new localization on Verbatim</strong></th>
+   <th scope="col" style="text-align: center;"><strong>Join an existing localization on Verbatim</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <ol>
+     <li>Point your browser to <a class="external" href="http://localize.mozilla.org/">http://localize.mozilla.org</a>. This is where Verbatim is hosted.</li>
+    </ol>
+   </td>
+   <td>
+    <ol>
+     <li>Point your browser to <a class="external" href="http://localize.mozilla.org/">http://localize.mozilla.org</a>. This is where Verbatim is hosted.</li>
+    </ol>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <ol start="2">
+     <li>If you have a Mozilla LDAP account, simply sign in using your LDAP credentials. If not, register for an account and sign in once you've completed registration. The links for both are located in the upper right-hand corner of the page.</li>
+    </ol>
+   </td>
+   <td>
+    <ol start="2">
+     <li>If you have a Mozilla LDAP account, simply sign in using your LDAP credentials. If not, register for an account and sign in once you've completed registration. The links for both are located in the upper right-hand corner of the page.</li>
+    </ol>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <ol start="3">
+     <li>File a <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;blocked=&amp;bug_file_loc=https%3A%2F%2Flocalize.mozilla.org%2F&amp;bug_severity=normal&amp;bug_status=NEW&amp;cf_blocking_191=---&amp;cf_blocking_192=---&amp;cf_status_191=---&amp;cf_status_192=---&amp;cf_status_firefox10=---&amp;cf_status_firefox11=---&amp;cf_status_firefox8=---&amp;cf_status_firefox9=---&amp;cf_tracking_firefox10=---&amp;cf_tracking_firefox11=---&amp;cf_tracking_firefox8=---&amp;cf_tracking_firefox9=---&amp;comment=I%20would%20like%20to%20request%20that%20you%20add%20the%20%5Binsert%20your%20locale%20code%20here%5D%20as%20a%20new%20localization%20in%20Verbatim.%0D%0A%0D%0A%5BAdd%20any%20other%20comments%20you%20may%20have%20here.%5D&amp;component=Verbatim&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-4=X&amp;flag_type-607=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Webtools&amp;qa_contact=verbatim%40webtools.bugs&amp;rep_platform=All&amp;requestee_type-325=&amp;requestee_type-4=&amp;requestee_type-607=&amp;short_desc=Request%20for%20new%20localization%20on%20Verbatim&amp;status_whiteboard=&amp;target_milestone=---&amp;version=Trunk" title="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;blocked=&amp;bug_file_loc=https%3A%2F%2Flocalize.mozilla.org%2F&amp;bug_severity=normal&amp;bug_status=NEW&amp;cf_blocking_191=---&amp;cf_blocking_192=---&amp;cf_status_191=---&amp;cf_status_192=---&amp;cf_status_firefox10=---&amp;cf_status_firefox11=---&amp;cf_status_firefox8=---&amp;cf_status_firefox9=---&amp;cf_tracking_firefox10=---&amp;cf_tracking_firefox11=---&amp;cf_tracking_firefox8=---&amp;cf_tracking_firefox9=---&amp;comment=I%20would%20like%20to%20request%20that%20you%20add%20the%20%5Binsert%20your%20locale%20code%20here%5D%20as%20a%20new%20localization%20in%20Verbatim.%0D%0A%0D%0A%5BAdd%20any%20other%20comments%20you%20may%20have%20here.%5D&amp;component=Verbatim&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-4=X&amp;flag_type-607=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Webtools&amp;qa_contact=verbatim%40webtools.bugs&amp;rep_platform=All&amp;requestee_type-325=&amp;requestee_type-4=&amp;requestee_type-607=&amp;short_desc=Request%20for%20new%20localization%20on%20Verbatim&amp;status_whiteboard=&amp;target_milestone=---&amp;version=Trunk">bug</a> using this prefilled bugzilla template. Add your locale code and language name to the description field, as well as any other information you'd like to share. See the following example.</li>
+    </ol>
+
+    <div class="note"><strong>Example</strong>: I would like to request that you add the <em><strong>en-US</strong></em> as a new localization in Verbatim. The langauge is <em><strong>English</strong></em>. Also, I like cookies. Lots and lots of cookies. I can easily be motivated by any and all baked goods.</div>
+   </td>
+   <td>
+    <ol start="3">
+     <li><a class="link-https" href="https://wiki.mozilla.org/Category:L10n_Teams" title="https://wiki.mozilla.org/Category:L10n_Teams">Contact the community</a> to find out which projects they need you to concentrate your efforts on. See the following example for what you could include in your email to the community leaders.</li>
+    </ol>
+
+    <div class="note"><strong>Example</strong>: I would like to join your localization efforts on Verbatim for this locale. Where would be the best place for me to begin? Also, I would like to buy you a drink to encourage you to let me join the team!</div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Now that you're registered and logged in, we'll outline the general translation workflow, using the <a class="link-https" href="https://localize.mozilla.org/projects/mdn" title="https://localize.mozilla.org/projects/mdn/">MDN project page</a> as our example.</p>
+
+<h2 id="Translating">Translating</h2>
+
+<p>First thing's first, you need to find untranslated source strings to translate.</p>
+
+<ol>
+ <li>Navigate to the <a class="link-https" href="https://localize.mozilla.org/projects/mdn" title="https://localize.mozilla.org/projects/mdn/">MDN project page</a>.</li>
+ <li>Select your language from the <strong>Overview</strong> tab.</li>
+ <li>Now click on the the <strong>Translate</strong> tab. This tab will display the directories for the MDN user interface.</li>
+ <li>Select the <strong>LC Messages</strong> directory. This is where the project's <code>.po</code> files containing translatable strings are located. You will now see an overview of each <code>.po</code> file.</li>
+ <li>In the summary column, the number of words untranslated will be shown as a link. Click on that link to be taken directly to the first string that needs to be translated.</li>
+</ol>
+
+<p>Now you're ready to contribute translations and you won't believe how easy it is. Check it out, you can contribute translations in two simple steps:</p>
+
+<ol>
+ <li>Simply type your translation in the box to below the English string</li>
+ <li>Select <strong>Suggest</strong>. If you have approval permission, select <strong>Submit</strong>. You will then be taken to the next string that needs translating.</li>
+ <li>Hooray! You're translating! Repeat steps one and two for the remainder of the untranslated strings.</li>
+</ol>
+
+<div class="note"><strong>Note</strong>: If you come across a string that already has a suggested translation, you can still suggest your own translation if you feel it is more accurate.</div>
+
+<h3 id="Some_extra_cool_features_on_Verbatim">Some extra cool features on Verbatim</h3>
+
+<p>Here are a few additional items about the Verbatim interface that you should be aware of. Some of these can be seen in the screen shot below.</p>
+
+<p><a href="/@api/deki/files/5930/=Translate_Tab.png" title="Translate Tab.png"><img alt="Translate Tab.png" class="default internal" src="/@api/deki/files/5930/=Translate_Tab.png" style="height: 221px; width: 1113px;"></a></p>
+
+<ul>
+ <li>You can copy the English string over to the translation box by clicking the <strong>Copy</strong> icon.</li>
+ <li>You can use machine translation by clicking on the <strong>Google Translate</strong> icon.</li>
+ <li>You can move forward and back through the strings by clicking the <strong>Next</strong> and <strong>Previous</strong> buttons.</li>
+ <li>You can navigate directly to a particular string by clicking it's string number on the far left.</li>
+ <li>You can mark a translation as <strong>Fuzzy</strong> if you think there could be a better way to say something. This will mark it so it can be found and updated later. Remember that only submitted strings will be commited to the localization's repository, not fuzzy strings. If strings remain marked as fuzzy, the source string will appear in your localized version instead of a translated string.</li>
+ <li>You can add notes about a particular string in the <strong>Translator Comments</strong> section.</li>
+ <li>When translating a string with both singular and plural forms you will see two boxes on the right hand side. The box for the singular form is labeled <strong>Plural Form 0</strong> and the box for the plural form is labeled <strong>Plural Form 1</strong>.</li>
+</ul>
+
+<h2 id="Additional_tasks">Additional tasks</h2>
+
+<p>If you are a localizer with approval priviledges, here are a few more tasks that you should be aware of.</p>
+
+<h3 id="Review_suggested_translations">Review suggested translations</h3>
+
+<ol start="1">
+ <li>Click on the <strong>Review</strong> tab. It will show how many strings are waiting for review for each <code>.po</code> file.<a href="/@api/deki/files/5931/=Review_Tab1.png" title="Review Tab1.png"><img alt="Review Tab1.png" class="internal rwrap" src="/@api/deki/files/5931/=Review_Tab1.png?size=webview" style="float: right; height: 145px; width: 274px;"></a></li>
+ <li>Select <strong style="font-weight: bold;">Review</strong><strong> suggestions</strong> to start approving suggestions. It will take you to the first string that needs to be reviewed.</li>
+ <li>You can accept the suggestion by clicking the green checkmark or reject the suggestion by clicking the red X (see the screen shot from the previous section).</li>
+</ol>
+
+<p>It is important to note that <em>only</em> submitted strings will appear in your localized pages. Neither suggestions nor fuzzy strings will appear. Before commiting your final localized product, make sure all strings have been submitted.</p>
+
+<h3 id="Using_VCS_on_Verbatim">Using VCS on Verbatim</h3>
+
+<p>VCS (<strong>V</strong>ersion <strong>C</strong>ontrol <strong>S</strong>ystem) is the repository system we use to update the project's strings as well as push your translated content onto the web. The difference between the two tasks is simply a matter of which link to click.</p>
+
+<p><img alt="VCS.png" class="internal rwrap" src="/@api/deki/files/5925/=VCS.png" style="float: right;">To push your strings onto the web and see your changes, simply select the <strong>Commit to VCS</strong> link underneath each file name. It usually takes about an hour before you can see your changes on the project site.</p>
+
+<p>To update your <code>.po</code> files with new untranslated strings, simple select the <strong>Update from VCS</strong> link underneath each file name.</p>
+
+<p> </p>
+
+<div class="note"><br>
+<strong>Note</strong>: Some projects are automatically updated nightly while others require you to manually update them to receive new source content. Be sure to pay close attention to this, as it can alter your workflow.</div>
+
+<h2 id="Translating_Verbatim_files_with_an_external_application">Translating Verbatim files with an external application</h2>
+
+<p>While in the <strong>Translate</strong> tab, you have the option to export the <code>.po </code>and <code>.xliff</code> files and translate the strings with an external application (i.e., a text editor or translation memory tool).</p>
+
+<ol>
+ <li>To download the <code>.po</code> file, select the <strong>Download</strong> link found underneath each file name. To download the .<code>xliff</code> file, select the <strong>Download XLIFF</strong> link.</li>
+ <li>Proceed to translate the strings using your selected tool.</li>
+</ol>
+
+<p>Once you've finished your translations, you'll need to upload your file to Verbatim. You can do this from the <strong>Translate</strong> tab.</p>
+
+<ol>
+ <li>Navigate to the bottom of the files list to the <strong>Upload File</strong> section.</li>
+ <li>Click on the <strong>Browse</strong> button and select the file you wish to upload.</li>
+ <li>Select an upload setting from the options provided.</li>
+ <li>Once your upload setting has been selected, click <strong>Upload</strong>.</li>
+</ol>
+
+<div class="warning">
+<p class="warning"><strong>Important</strong>: There have been some problems in the past with community members updating their source strings while others are in the process of localizing the previous updated files. This can cause community members to overlook new source strings, producing untranslated strings in a localized project. Be sure to coordinate these manual updates within your community to avoid this problem.</p>
+</div>
+
+<h2 id="You're_ready_to_go!">You're ready to go!</h2>
+
+<p>Whew! You've arrived at the end! Time to take what you've learned and put it to good use spreading Mozilla to everyone in your region. Have fun and <a class="link-mailto" href="mailto:l10n-drivers@mozilla.com" title="l10n-drivers@mozilla.com">let us know</a> if you run into any difficulties. We'll be happy to help in any way we can.</p>
+
+<p> </p>
+
+<p><a href="/en/Localization_Quick_Start_Guide:_Translation" title="Localization Quick Start Guide: Translation">Back: Quick Start Guide</a></p>

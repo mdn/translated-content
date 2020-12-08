@@ -1,0 +1,150 @@
+---
+title: Macromedia Flash
+slug: Mozilla/Add-ons/Plugins/Macromedia_Flash
+tags:
+  - Plugins
+translation_of: Archive/Plugins/Scripting_Plugins_Adobe_Flash
+---
+<p>스크립트로 제어할 수 말은 <a href="ko/JavaScript">JavaScript</a>와 플러그인이 상호 작용할 수 있다는 말입니다. 특히 Macromedia® Flash™ 플러그인은 JavaScript에서 플러그인에 접근할 수 있는 기능을 제공하고 있으며, 플러그인 안에서 JavaScript 메소드에 접근할 수도 있습니다. 이 문서는 Flash 플러그인이 노출하고 있는 메소드에 JavaScript로 접근하는 방법에 대해서, 그리고 Flash 애니메이션에서 JavaScript 함수에 접근하기 위해 FSCommand라는 기능을 사용하는 방법에 대해서 설명하고 있습니다. 이 문서는 <a href="ko/Gecko">Gecko</a>™ 기반 웹브라우저에서 Flash 플러그인을 사용할 때의 팁에 초점을 두고 있습니다.</p>
+
+<h3 id=".EC.98.AC.EB.B0.94.EB.A5.B8_Flash_.ED.94.8C.EB.9F.AC.EA.B7.B8.EC.9D.B8.28.EA.B3.BC_.EB.B8.8C.EB.9D.BC.EC.9A.B0.EC.A0.80.29.EB.A5.BC_.EC.95.8C.EC.95.84.EB.82.B4.EA.B8.B0" name=".EC.98.AC.EB.B0.94.EB.A5.B8_Flash_.ED.94.8C.EB.9F.AC.EA.B7.B8.EC.9D.B8.28.EA.B3.BC_.EB.B8.8C.EB.9D.BC.EC.9A.B0.EC.A0.80.29.EB.A5.BC_.EC.95.8C.EC.95.84.EB.82.B4.EA.B8.B0">올바른 Flash 플러그인(과 브라우저)를 알아내기</h3>
+
+<p>Macromedia Flash는 Flash 6r49 버전부터 Netscape Gecko 브라우저에서 스크립트로 제어할 수 있는 기능을 제공합니다. Flash 5 같이 6r49 이전 버전은 Netscape Gecko 브라우저에서 스크립트로 제어할 수 없습니다. 그러므로 클라이언트에 설치된 Flash 버전을 알아내는 일은 Flash를 스크립트로 제어함에 있어서 아주 중요한 일입니다. Mac OS X에서는 피해야 할 문제점이 하나 더 있습니다. Mach-O 바이너리 형식을 사용하는 <a class="external" href="http://mozilla.org/projects/camino/">Camino</a> (이전에는 Chimera였음) 브라우저, <a class="external" href="http://www.mozilla.org/">Mozilla</a> 브라우저 최신 버전, 앞으로 나올 Netscape 브라우저들은 Flash 플러그인을 스크립트로 제어하는 기능을 사용할 수 없습니다. Macromedia가 Flash 플러그인을 수정하기 전까지는 Mac OS X에서 Gecko 기반 브라우저들은 스크립트로 Flash를 제어할 수 없습니다. 다음에 나오는 예제는 실제로 Flash 버전을 알아내는 휴리스틱(heuristic)한 방법을 보여줍니다.</p>
+
+<h4 id=".EC.98.88.EC.A0.9C_1_Flash_.ED.94.8C.EB.9F.AC.EA.B7.B8.EC.9D.B8_.EB.B2.84.EC.A0.84.EC.9D.84_.EA.B2.80.EC.82.AC.ED.95.98.EA.B8.B0" name=".EC.98.88.EC.A0.9C_1:_Flash_.ED.94.8C.EB.9F.AC.EA.B7.B8.EC.9D.B8_.EB.B2.84.EC.A0.84.EC.9D.84_.EA.B2.80.EC.82.AC.ED.95.98.EA.B8.B0">예제 1: Flash 플러그인 버전을 검사하기</h4>
+
+<p>아래의 JavaScript는 Flash 버전을 알아내고, Netscape Gecko에서 스크립트로 제어 가능한지 알아내는 기능을 합니다.</p>
+
+<pre>can we have javascript in a wiki page?
+&lt;script type="text/javascript"&gt;identifyFlash();&lt;/script&gt;
+</pre>
+
+<p>일반적으로, 어느 버전 플러그인이 설치돼있는지 알아내는 JavaScript 코드는 navigator 개체(object)안의 mimeTypes 배열을 찾아봅니다. 모든 플러그인은 보통 플러그인 이름과 버전을 포함하고 있는 description 문자열을 제공합니다. Flash 플러그인의 descripton 문자열은 의미있는 정보를 뽑아낼 수 있는 표준적인 버전 번호 명명법으로 기록되어 있습니다. 예를 들어 현재 Flash 플러그인 버전은 Flash 6 r79입니다. description 문자열은 이 버전을 담고 있습니다. 이외에도 OS X에서 Mach-O 바이너리를 사용하는 브라우저에서 스크립트로 제어할 수 없는 Flash 버전은 골라낼 수 있는 방법이 필요합니다. 다행히 Netscape Gecko 기반 Mach-O 브라우저는 user-agent 문자열에 그 정보를 보여줍니다. Flash 플러그인 버전을 알아내는 알고리즘적 접근 방법은 다음과 같을 것입니다.</p>
+
+<pre>var plugin = navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin;
+var description = plugin.description;
+// 1.description 문자열을 구성요소 별로 나눈다
+
+var versionArray = description.match(/[\d.]+/g);
+
+// 2. Flash 버전이 6r.49보다 큰지 결정한다
+// 3. 그렇다면 Windows와 Linux에서 스크립트로 제어 가능한 버전이다
+// 4. 브라우저가 Mach-O 바이너리를 사용하는지 검사한다
+// 5. 그렇다면 플러그인 버전이 12보다 큰지 검사한다
+// 버전 12는 Mach-O 브라우저에서도 Flash 플러그인을 스크립트로 제어할 수 있게
+// 수정될 것이라 예상되는 Flash 버전이다
+
+var flashVersionOSXScriptable = 12;
+if(navigator.userAgent.indexOf("Mach-O")!=-1)
+{
+	if(flashversion &lt; flashVersionOSXScriptable)
+		// Flash 버전이 12보다 작으므로 OS X에서 스크립트로 제어할 수 없다
+}
+// 6. 에러 처리(Flash가 설치되지 않은 경우 등)
+</pre>
+
+<p><strong>예제 1</strong>에서는 JavaScript 문자열의 <a class="external" href="http://developer.netscape.com/docs/manuals/js/client/jsref/regexp.htm#1193136">RegExp</a> (정규 표현식) 개체를 사용합니다. description 문자열은 <a class="external" href="http://developer.netscape.com/docs/manuals/js/client/jsref/string.htm#1205239">match</a> 메소드 호출로 인해 구성요소별로 나누어져 배열에 들어갑니다. 여기 사용된 정규 표현식은 문자열이 Flash Major rMinor 같은 식으로 구성되어 있을 것이라고 가정합니다. Major는 "5"나 "6" 같은 메이저 버전 번호이고, Minor는 마이너 버전 번호입니다. 또 <strong>예제 1</strong>에서는 flashVersionOSXScriptable 상수를 만들어서 12를 할당하는데, 이것은 OS X용 Mach-O 브라우저에서 Flash를 스크립트로 제어할 수 있도록 수정된 Flash 버전이 12일 것이라고 임의로 정한 것입니다. 12 정도면 충분히 큰 버전 번호라고 생각됩니다(현재 버전은 6r.79입니다). Mac OS X에 있는 문제점이 언제 수정될 지 정보를 얻게 된다면 flashVersionOSXScriptable 상수를 좀 더 정확한 값으로 바꿀 수 있을 것입니다. 이 예제를 실제로 구현한 코드는 <a class="external" href="http://devedge-temp.mozilla.org/viewsource/2003/scripting-flash/flashversion.js.txt">flashversion.js</a> 파일을 보시면 됩니다.</p>
+
+<h3 id="HTML.EC.9D.84_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0" name="HTML.EC.9D.84_.EC.A0.9C.EB.8C.80.EB.A1.9C_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0">HTML을 제대로 사용하기</h3>
+
+<p>Netscape Gecko 브라우저에서 object 요소나 embed 요소를 사용하면 플러그인을 불러낼 수 있습니다. object 요소는 W3C HTML 4 표준에 포함된 반면 embed 요소는 사용하지 않기를 권장하는 요소입니다. 플러그인을 불러올 때 올바른 마크업 사용하기(Using the Right Markup to Invoke Plugins)에서 관련된 논의를 볼 수 있습니다. 그러나 FSCommand를 이용해서 HTML 페이지에 포함된 JavaScript 함수를 실행하려면 embed 요소를 써야 합니다.</p>
+
+<h3 id="JavaScript.EC.97.90.EC.84.9C_Flash.EC.97.90_.EC.A0.91.EA.B7.BC.ED.95.98.EA.B8.B0" name="JavaScript.EC.97.90.EC.84.9C_Flash.EC.97.90_.EC.A0.91.EA.B7.BC.ED.95.98.EA.B8.B0">JavaScript에서 Flash에 접근하기</h3>
+
+<p>아래에 있는 간단한 예제는 HTML 텍스트 상자에 입력한 내용을 Flash 애니메이션(아래의 회색 텍스트 상자)으로 전달하는 방법을 보여줍니다.</p>
+
+<h4 id=".EC.98.88.EC.A0.9C_2_JavaScript_to_Flash_Communication" name=".EC.98.88.EC.A0.9C_2:_JavaScript_to_Flash_Communication">예제 2: JavaScript to Flash Communication</h4>
+
+<p><strong>참고:</strong> 사용자가 컴퓨터 한 대에 Mozilla 기반 브라우저를 여러 개 설치했다면, JavaScript에서 Flash로의 통신 방법은 버전 8보다 이전에 나온 Flash Player에서는 동작하지 않을 수도 있습니다. (see {{ Bug(284057) }} and {{ Bug(233533) }})</p>
+
+<p>아래에 있는 HTML 텍스트 상자에 아무 텍스트나 넣은 다음 텍스트 상자 밖을 마우스로 클릭하거나 엔터키를 누르면 입력한 텍스트가 Flash로 전달됩니다.</p>
+
+<pre>The example is missing.
+</pre>
+
+<p><strong>예제 2</strong>에서는 Macromedia Flash에 미리 정의된 <a class="external" href="http://www.macromedia.com/support/flash/publishexport/scriptingwithflash/scriptingwithflash_03.html">SetVariable</a> 메소드를 사용했습니다. 일반적으로 Netscape Gecko 브라우저에서 Macromedia에서 Flash에 미리 정의해 놓은 메소드를 호출하려면,</p>
+
+<ul>
+ <li>DOM 메소드를 사용해서, Flash 플러그인을 생성하는 HTML 요소의 핸들을 얻으십시오. 여기서 핸들이란 embed 요소의 name 속성이나 object 요소의 ID 속성을 의미합니다.</li>
+ <li>HTML 요소의 핸들을 실제 Flash 플러그인에 대한 핸들이라고 생각하여 공개된 메소드를 호출하십시오. 즉 다음의 코드에서 처럼 사용하면 됩니다.</li>
+</ul>
+
+<pre>&lt;object id="myFlash" ..... &gt;
+&lt;param name="movie" value="somefile.swf" /&gt;
+
+....
+
+var myFlash = document.getElementById("myFlash").SetVariable("myVar", sendText);
+</pre>
+
+<p><br>
+ <strong>예제 2</strong>가 어떻게 만들어졌는지 보여주는 더 확장된 코드는 <a class="external" href="http://devedge-temp.mozilla.org/viewsource/2003/scripting-flash/document-write.html.txt">이 파일</a>에서 볼 수 있습니다.</p>
+
+<h3 id="FSCommand_Flash.EC.97.90.EC.84.9C_JavaScript.EC.97.90_.EC.A0.91.EA.B7.BC.ED.95.98.EA.B8.B0" name="FSCommand:_Flash.EC.97.90.EC.84.9C_JavaScript.EC.97.90_.EC.A0.91.EA.B7.BC.ED.95.98.EA.B8.B0">FSCommand: Flash에서 JavaScript에 접근하기</h3>
+
+<p><strong>참고:</strong> 사용자가 컴퓨터 한 대에 Mozilla 기반 브라우저를 여러 개 설치했다면, 버전 8보다 이전에 나온 Flash Player에서는 FSCommand가 동작하지 않을 수도 있습니다. (see {{ Bug(284057) }} and {{ Bug(233533) }})</p>
+
+<p><strong>예제 2</strong>에서, 플러그인을 생성한 HTML(object 요소 또는 embed 요소)의 핸들을 JavaScript 함수에서 일단 얻었습니다. 그 후에 핸들을 이용해서 <a class="external" href="http://www.macromedia.com/support/flash/publishexport/scriptingwithflash/">Flash 플러그인에서 공개된 메소드</a>를 호출했습니다. FSCommand를 이용하면 Macrodedia ActionScript 언어에서 Flash 애니메이션을 포함하는 환경(HTML 페이지 등)에 콜백을 보낼 수 있습니다. 다음의 예제에서 두 가지 통신 방법이 실제로 동작하는 모습을 볼 수 있습니다.</p>
+
+<h4 id=".EC.98.88.EC.A0.9C_3_JavaScript.EC.97.90.EC.84.9C_Flash.EB.A1.9C_.ED.86.B5.EC.8B.A0_.EB.B0.A9.EB.B2.95.EA.B3.BC_FSCommand_--_Flash.EC.97.90.EC.84.9C_JavaScript.EB.A1.9C_.ED.86.B5.EC.8B.A0_.EB.B0.A9.EB.B2.95" name=".EC.98.88.EC.A0.9C_3:_JavaScript.EC.97.90.EC.84.9C_Flash.EB.A1.9C_.ED.86.B5.EC.8B.A0_.EB.B0.A9.EB.B2.95.EA.B3.BC_FSCommand_--_Flash.EC.97.90.EC.84.9C_JavaScript.EB.A1.9C_.ED.86.B5.EC.8B.A0_.EB.B0.A9.EB.B2.95">예제 3: JavaScript에서 Flash로 통신 방법과 FSCommand -- Flash에서 JavaScript로 통신 방법</h4>
+
+<pre>The example is missing.
+</pre>
+
+<p><strong>예제 3</strong>에서는 HTML 버튼을 클릭하면 Flash 애니메이션에 있는 공이 움직입니다. 이것은 JavaScript에서 Flash로의 통신을 보여주는 것입니다. HTML 버튼을 클릭하면 JavaScript 이벤트가 발생하고 그 이벤트가 Flash 애니메이션을 움직이게 합니다. 더 아래쪽에서, 색이 칠해진 탭을 클릭하면 HTML 페이지의 전체 색깔이 바뀝니다. 이것은 반대 방향으로의 통신 즉, Flash 애니메이션이 자신을 포함하고 있는 HTML 페이지에 뭔가 영향을 준다는 것을 보여줍니다.</p>
+
+<p><strong>예제 3</strong>에서 FSCommand의 사용법을 볼 수 있습니다. Netscape Gecko 브라우저에서 Flash 애니메이션을 HTML 페이지에 포함시키고 FSCommand를 사용하려고 한다면, 반드시 embed 요소를 사용해야만 합니다. IE도 지원하려면 object 요소 안에 embed 요소를 포함시킬 수 있습니다. 앞으로 나올 Flash 플러그인은 Netscape Gecko 브라우저에서도 object 요소와 함께 FSCommand를 사용할 수 있게 될 수도 있습니다. 이 문제는 Mozilla 프로젝트의 {{bug(184722) }}에 관리중입니다.</p>
+
+<p>Flash 애니메이션 안에서 색깔을 클릭하면 전체 페이지의 배경색이 토글됩니다. 클릭을 하면 Flash를 포함하는 외부 환경(즉 HTML 페이지)에 콜백을 보내게 되고, 콜백을 처리할 JavaScript 메소드를 찾게 됩니다. Flash 애니메이션의 ActionScript 함수를 호출함으로써 콜백을 보내는 것입니다. 이 콜백을 처리할 JavaScript 함수 이름은 Flash 플러그인이 찾을 수 있는 특별한 이름을 가져야 합니다. embed요소의 이름에 밑줄("_")과 "DoFSCommand"라는 문자열을 붙인 함수 이름이 바로 그것입니다. <strong>예제 3</strong>에서 사용된 기법을 보여주는 간단한 코드가 아래에 있습니다.</p>
+
+<pre>&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+id="myFlash" width="250" height="150" VIEWASTEXT&gt;
+
+ &lt;param name="movie" value="js2flash.swf" /&gt;
+ &lt;param name="quality" value="high"&gt;&lt;/param&gt;
+
+  &lt;embed src="js2flash.swf" width="250" height="150" swLiveConnect="true"
+  quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"
+  type="application/x-shockwave-flash" name="myFlash"&gt;
+  &lt;/embed&gt;
+
+&lt;/object&gt;
+ .....
+
+function myFlash_DoFSCommand(command, args)
+{
+	// Flash 애니메이션에 여러분이 만들어놓은 모든 콜백을 처리합니다
+	// Flash 플러그인이 command와 args에 값을 전달해 줄 것입니다.
+	// Flash 애니메이션이 보내는 모든 정보를 처리하는 함수가 바로 이 함수입니다
+	// FSCommand만 있으면 ActionScript가 JavaScript와 통신할 수 있습니다!
+}
+</pre>
+
+<p>위의 코드에서, Flash에서 보낸 것을 처리하는 JavaScript 함수는 embed 요소의 name 속성에 "_DoFSCommand" 문자열을 덧붙여서 만든 이름을 가지고 있습니다. 이 예제의 전체 소스는 <a class="external" href="http://devedge-temp.mozilla.org/viewsource/2003/scripting-flash/flash-to-js.html.txt">flash-to-js.html</a>에서 볼 수 있습니다. <a class="external" href="http://www.macromedia.com/support/flash/action_scripts/actionscript_dictionary/">Macromedia ActionScript 사전</a>을 보면 Flash 애니메이션 코드에서 FSCommand를 사용할 때 참고할 만한 내용이 있습니다.</p>
+
+<h3 id="Additional_References" name="Additional_References">Additional References</h3>
+
+<h4 id="Macromedia_Flash_Developer_Documentation" name="Macromedia_Flash_Developer_Documentation">Macromedia Flash Developer Documentation</h4>
+
+<ul>
+ <li><a class="external" href="http://www.macromedia.com/support/flash/publishexport/scriptingwithflash/">Scripting The Flash Player Plugin</a></li>
+ <li><a class="external" href="http://www.macromedia.com/support/flash/ts/documents/java_script_comm.htm">Communication Between JavaScript and Macromedia Flash</a></li>
+ <li><a class="external" href="http://www.macromedia.com/support/flash/action_scripts/actions/fscommand.html">FSCommands (Definition from the ActionScript Dictonary)</a></li>
+ <li><a class="external" href="http://www.macromedia.com/support/flash/action_scripts/actionscript_dictionary/">ActionScript Dictionary</a></li>
+</ul>
+
+<h4 id="MDC_Resources" name="MDC_Resources">MDC Resources</h4>
+
+<ul>
+ <li><a href="ko/Using_the_Right_Markup_to_Invoke_Plugins">플러그인을 불러올 때 올바른 마크업 사용하기</a></li>
+ <li><a href="ko/Plugins">Plugin Central</a></li>
+</ul>
+
+<h4 id="Notable_Bugs" name="Notable_Bugs">Notable Bugs</h4>
+
+<ul>
+ <li>{{bug(184722) }}</li>
+ <li>{{bug(180378) }}</li>
+ <li>{{bug(203861)}}</li>
+</ul>

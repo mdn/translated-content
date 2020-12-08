@@ -1,0 +1,372 @@
+---
+title: nsILoginManager
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager
+tags:
+  - Firefox 3
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - Login Manager
+  - NeedsTranslation
+  - Thunderbird 3
+  - TopicStub
+  - XPCOM
+  - XPCOM API Reference
+  - thunderbird
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/passwordmgr/public/nsILoginManager.idl" rel="custom">toolkit/components/passwordmgr/public/nsILoginManager.idl</a></code><span style="text-align: right; float: right;"><a href="/ko/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">스크립트에서 사용 가능</a></span></div>
+<span style="padding: 4px 2px;">
+
+Used to interface with the built-in Password Manager
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 8.571428571428571%;"></div>
+
+<div style="height: 8px; top: 16px; left: 8.571428571428571%; background: #00dd00; position: absolute; width: 91.42857142857143%;" title="Introduced in Gecko 1.9 (Firefox 3)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 8.571428571428571%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 8.571428571428571%;">Gecko 1.9</div>
+
+    <div style="height: 8px; top: 16px; left: 9.976190285714287%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)</span></div>
+</div><p></p>
+<p>Replaces <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPasswordManager" title="">nsIPasswordManager</a></code> which was used in older versions of Gecko.</p>
+<p>Implemented by: <code>@mozilla.org/login-manager;1</code>. To create an instance, use:</p>
+<pre class="eval">var loginManager = Components.classes["@mozilla.org/login-manager;1"]
+                   .getService(Components.interfaces.nsILoginManager);
+</pre>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void <a href="#addLogin()">addLogin</a>(in nsILoginInfo aLogin);</code></td>
+    </tr>
+    <tr>
+      <td><code>nsIAutoCompleteResult <a href="#autoCompleteSearch()">autoCompleteSearch</a>(in AString aSearchString, in nsIAutoCompleteResult aPreviousResult, in nsIDOMHTMLInputElement aElement);</code></td>
+    </tr>
+    <tr>
+      <td><code>unsigned long <a href="#countLogins()">countLogins</a>(in AString aHostname, in AString aActionURL, in AString aHttpRealm);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#fillForm()">fillForm</a>(in nsIDOMHTMLFormElement aForm);</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#findLogins()">findLogins</a>(out unsigned long count, in AString aHostname, in AString aActionURL, in AString aHttpRealm, [retval, array, size_is(count)] out nsILoginInfo logins);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#getAllDisabledHosts()">getAllDisabledHosts</a>([optional] out unsigned long count, [retval, array, size_is(count)] out wstring hostnames);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#getAllLogins()">getAllLogins</a>([optional] out unsigned long count, [retval, array, size_is(count)] out nsILoginInfo logins);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#getLoginSavingEnabled()">getLoginSavingEnabled</a>(in AString aHost);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#modifyLogin()">modifyLogin</a>(in nsILoginInfo oldLogin, in nsISupports newLoginData);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#removeAllLogins()">removeAllLogins</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#removeLogin()">removeLogin</a>(in nsILoginInfo aLogin);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#searchLogins()">searchLogins</a>(out unsigned long count, in nsIPropertyBag matchData, [retval, array, size_is(count)] out nsILoginInfo logins);</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#setLoginSavingEnabled()">setLoginSavingEnabled</a>(in AString aHost, in boolean isEnabled);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="addLogin()" name="addLogin()">addLogin()</h3>
+<p>Stores a new login in the Login Manager.</p>
+<p></p><div class="blockIndicator note"><strong>주의:</strong> Default values for the <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginMetaInfo" title="">nsILoginMetaInfo</a></code> properties are created if the specified login doesn't explicitly specify them.</div><p></p>
+<pre class="eval">void addLogin(
+  in nsILoginInfo aLogin
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aLogin</code></dt>
+  <dd>
+    The login to store.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    An exception is thrown if the login information is already stored in the Login Manager. To change a login, you have to use <code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager#modifyLogin()">modifyLogin()</a></code>.</dd>
+</dl>
+<h3 id="autoCompleteSearch()" name="autoCompleteSearch()">autoCompleteSearch()</h3>
+<p>Generates results for a user field autocomplete menu.</p>
+<p></p><div class="blockIndicator note"><strong>주의:</strong> This method is provided for use only by the <code>FormFillController</code>, which calls it directly. It should not be used for any other purpose.</div><p></p>
+<pre class="eval">nsIAutoCompleteResult autoCompleteSearch(
+  in AString aSearchString,
+  in nsIAutoCompleteResult aPreviousResult,
+  in nsIDOMHTMLInputElement aElement
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aSearchString</code></dt>
+  <dd>
+    Missing Description</dd>
+  <dt>
+    <code>aPreviousResult</code></dt>
+  <dd>
+    Missing Description</dd>
+  <dt>
+    <code>aElement</code></dt>
+  <dd>
+    Missing Description</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>Missing Description</p>
+<h3 id="countLogins()" name="countLogins()">countLogins()</h3>
+<p>Returns the number of logins matching the specified criteria. Called when only the number of logins is needed, and not the actual logins (which avoids prompting the user for a Master Password, as the logins don't need to be decrypted).</p>
+<pre class="eval">unsigned long countLogins(
+  in AString aHostname,
+  in AString aActionURL,
+  in AString aHttpRealm
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aHostname</code></dt>
+  <dd>
+    The hostname to which to restrict searches, formatted as a URL. For example, "<a class="external" href="http://www.bar.com" rel="freelink">http://www.bar.com</a>". To match all hostnames, specify <code>""</code> (empty string). A value of <code>null</code> will cause countLogins() to not match any logins.</dd>
+  <dt>
+    <code>aActionURL</code></dt>
+  <dd>
+    For form logins, this parameter should specify the URL to which the form will be submitted. To match any form login, specify <code>""</code> (empty string). To not match any form logins (For example when interested in protocol logins only), specify <code>null</code>.</dd>
+  <dt>
+    <code>aHttpRealm</code></dt>
+  <dd>
+    For protocol logins, specify the HTTP Realm for which the login applies; this is obtained from the WWW-Authenticate header (see <a class="external" href="http://tools.ietf.org/html/rfc2617" title="http://tools.ietf.org/html/rfc2617">RFC 2617</a>). To match any protocol login, specify <code>""</code> (empty string). To not match any protocol logins (For example when interested in form logins only), specify <code>null</code>.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>The number of logins matching the parameters passed.</p>
+<p></p><h3 id="fillForm()">fillForm()</h3><p></p>
+<p>Fills out a form with login information, if appropriate information is available.</p>
+<p></p><div class="blockIndicator note"><strong>주의:</strong> This method will attempt to fill out the form regardless of the setting of the <code>signon.autofillForms</code> preference.</div><p></p>
+<pre class="eval">boolean fillForm(
+  in nsIDOMHTMLFormElement aForm
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aForm</code></dt>
+  <dd>
+    The HTMLform to attempt to fill out.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if the form was successfully filled out; otherwise <code>false</code>.</p>
+<h3 id="findLogins()" name="findLogins()">findLogins()</h3>
+<p>Searches for logins matching the specified criteria. Called when looking for logins that might be applicable to a given form or authentication request.</p>
+<pre class="eval">void findLogins(
+  out unsigned long count,
+  in AString aHostname,
+  in AString aActionURL,
+  in AString aHttpRealm,
+  [retval, array, size_is(count)] out nsILoginInfo logins
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>count</code></dt>
+  <dd>
+    The number of elements in the returned array. JavaScript callers can simply use the array's <code>length</code> property and supply a dummy argument for this parameter.</dd>
+  <dt>
+    <code>aHostname</code></dt>
+  <dd>
+    The hostname to restrict searches to, formatted as a URL. For example, "<a class="external" href="http://www.bar.com" rel="freelink">http://www.bar.com</a>".</dd>
+  <dt>
+    <code>aActionURL</code></dt>
+  <dd>
+    For form logins, this parameter should specify the URL to which the form will be submitted. For protocol logins, specify <code>null</code>. An empty string ("") will match any value (except <code>null</code>).</dd>
+  <dt>
+    <code>aHttpRealm</code></dt>
+  <dd>
+    For protocol logins, specify the HTTP Realm for which the login applies; this is obtained from the WWW-Authenticate header (see <a class="external" href="http://tools.ietf.org/html/rfc2617" title="http://tools.ietf.org/html/rfc2617">RFC 2617</a>). For form logins, this parameter should be <code>null</code>. An empty string ("") will match any value (except <code>null</code>).</dd>
+  <dt>
+    <code>logins</code></dt>
+  <dd>
+    An array of <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code> objects.</dd>
+</dl>
+<h6 id="Example" name="Example">Example</h6>
+<p>This method can be called from JavaScript like this:</p>
+<pre class="brush: js"> var logins = myLoginMgr.findLogins({}, hostname, ...);
+</pre>
+<h3 id="getAllDisabledHosts()" name="getAllDisabledHosts()">getAllDisabledHosts()</h3>
+<p>Returns a list of all hosts for which login saving is disabled.</p>
+<pre class="eval">void getAllDisabledHosts(
+  [optional] out unsigned long count,
+  [retval, array, size_is(count)] out wstring hostnames
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>count</code></dt>
+  <dd>
+    The number of elements in the returned array. JavaScript callers can simply use the array's <code>length</code> property and supply a dummy argument for this parameter.</dd>
+  <dt>
+    <code>hostnames</code></dt>
+  <dd>
+    An array of hostname strings in URL format without a pathname. For example: <span class="nowiki">"https://www.site.com"</span>.</dd>
+</dl>
+<h6 id="Example" name="Example">Example</h6>
+<p>You can call this method from JavaScript like this:</p>
+<pre class="brush: js"> var disabledHosts = myLoginMgr.getAllDisabledHosts({});
+</pre>
+<h3 id="getAllLogins()" name="getAllLogins()">getAllLogins()</h3>
+<p>Returns an array containing all logins recorded by the Login Manager.</p>
+<p>If you just want to see if any logins are stored, use <code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager#countLogins()">countLogins()</a></code> instead. It's more efficient, and avoids the possibility of the user being prompted for their master password.</p>
+<pre class="eval">void getAllLogins(
+  [optional] out unsigned long count,
+  [retval, array, size_is(count)] out nsILoginInfo logins
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>count</code></dt>
+  <dd>
+    The number of elements in the returned array. JavaScript callers can simply use the array's <code>length</code> property and supply a dummy argument for this parameter.</dd>
+  <dt>
+    <code>logins</code></dt>
+  <dd>
+    An array of <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code> objects containing all the logins the Login Manager has on record.</dd>
+</dl>
+<h6 id="Example" name="Example">Example</h6>
+<p>You can call this method from JavaScript like this:</p>
+<pre class="brush: js"> var logins = myLoginMgr.getAllLogins({});
+</pre>
+<h3 id="getLoginSavingEnabled()" name="getLoginSavingEnabled()">getLoginSavingEnabled()</h3>
+<p>Reports whether or not saving login information is enabled for a host.</p>
+<pre class="eval">boolean getLoginSavingEnabled(
+  in AString aHost
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aHost</code></dt>
+  <dd>
+    The hostname to check. This argument should be in the origin URL format, with no pathname. For example: <span class="nowiki">"https://www.site.com"</span>.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if login saving is enabled for the host, otherwise <code>false</code>.</p>
+<h3 id="modifyLogin()" name="modifyLogin()">modifyLogin()</h3>
+<p>Modifies an existing login by replacing it with a new one.</p>
+<p>If newLoginData is a <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code>, all of the old login's <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code> properties are changed to the values from newLoginData (but the old login's <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginMetaInfo" title="">nsILoginMetaInfo</a></code> properties are unmodified).</p>
+<p>If newLoginData is a <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPropertyBag" title="">nsIPropertyBag</a></code>, only the specified properties will be changed. The <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginMetaInfo" title="">nsILoginMetaInfo</a></code> properties of oldLogin can be changed in this manner.</p>
+<p>If the propertybag contains an item named "timesUsedIncrement", the login's timesUsed property will be incremented by the item's value.</p>
+<pre class="eval">void modifyLogin(
+  in nsILoginInfo oldLogin,
+  in nsISupports newLoginData
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>oldLogin</code></dt>
+  <dd>
+    The login to be modified.</dd>
+  <dt>
+    <code>newLoginData</code></dt>
+  <dd>
+    The login information to replace the <code>oldLogin</code> with. This may be specified as either an <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code> or an <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPropertyBag2" title="">nsIPropertyBag2</a></code> object.</dd>
+</dl>
+<h3 id="removeAllLogins()" name="removeAllLogins()">removeAllLogins()</h3>
+<p>Removes all logins known by the Login Manager. This works without a need for the master password, if one is set.</p>
+<pre class="eval">void removeAllLogins();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h3 id="removeLogin()" name="removeLogin()">removeLogin()</h3>
+<p>Removes a login from the Login Manager.</p>
+<p></p><div class="blockIndicator note"><strong>주의:</strong> The specified login must exactly match a stored login. However, the values of any <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginMetaInfo" title="">nsILoginMetaInfo</a></code> properties are ignored.</div><p></p>
+<pre class="eval">void removeLogin(
+  in nsILoginInfo aLogin
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aLogin</code></dt>
+  <dd>
+    The login to remove from the Login Manager. Only a login that is an exact match is deleted.</dd>
+</dl>
+<p></p><h3 id="searchLogins()">searchLogins()</h3><p></p>
+<p>Searches for logins in the login manager's data store, returning an array of matching logins. If there are no matching logins, an empty array is returned.</p>
+<pre class="eval">void searchLogins(
+  out unsigned long count,
+  in nsIPropertyBag matchData,
+  [retval, array, size_is(count)] out nsILoginInfo logins
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>count</code></dt>
+  <dd>
+    The number of elements in the returned array.</dd>
+  <dt>
+    <code>matchData</code></dt>
+  <dd>
+    The data used for the search. This does not follow the same requirements as <code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager#findLogins()">findLogins()</a></code> for those fields; wildcard matches are not specified.</dd>
+  <dt>
+    <code>logins</code></dt>
+  <dd>
+    An array of matching <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code> objects.</dd>
+</dl>
+<h6 id="Example" name="Example">Example</h6>
+<p>This method can be called from JavaScript like this:</p>
+<pre class="brush: js"> var logins = myLoginMgr.searchLogins({}, matchData);
+ var numLogins = logins.length;
+</pre>
+<h3 id="setLoginSavingEnabled()" name="setLoginSavingEnabled()">setLoginSavingEnabled()</h3>
+<p>Enables or disables storing logins for a specified host. When login storing is disabled, the Login Manager won't prompt the user to store logins for that host. Existing logins are not affected.</p>
+<pre class="eval">void setLoginSavingEnabled(
+  in AString aHost,
+  in boolean isEnabled
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aHost</code></dt>
+  <dd>
+    The hostname to adjust the setting for. This argument should be in the origin URL format, with no pathname. For example: <span class="nowiki">"https://www.site.com"</span>.</dd>
+  <dt>
+    <code>isEnabled</code></dt>
+  <dd>
+    If <code>true</code>, login saving is enabled for the specified host. If <code>false</code>, login saving is disabled.</dd>
+</dl>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+  <li><code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code></li>
+  <li><a href="/en/XPCOM_Interface_Reference/nsILoginManager/Using_nsILoginManager" title="en/Using_nsILoginManager">Using nsILoginManager</a></li>
+</ul>
+<p></p>

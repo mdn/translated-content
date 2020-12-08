@@ -1,0 +1,132 @@
+---
+title: Focus and Selection
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Focus_and_Selection
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Focus_and_Selection
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Keyboard_Shortcuts" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Commands">다음  »</a></p>
+</div><p></p>
+<p>본 단원에서는 요소의 포커스(focus)와 선택(selection)을 다루는 방법에 대해 알아보겠습니다.</p>
+<h3 id=".ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EC.96.BB.EC.9D.80_.EC.9A.94.EC.86.8C" name=".ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EC.96.BB.EC.9D.80_.EC.9A.94.EC.86.8C">포커스를 얻은 요소</h3>
+<p>포커스를 얻은 요소라는 것은 현재의 입력 이벤트를 받는 요소를 의미합니다. 만일 창에 세 개의 텍스트 상자가 있다면, 포커스를 가진 것이 사용자가 현재 텍스트를 입력할 수 있는 텍스트 상자가 됩니다. 창 별로 한번에 하나의 요소만이 포커스를 가질 수 있습니다.</p>
+<p>사용자는 마우스로 요소를 클릭하거나 Tab 키를 눌러서 포커스를 변경할 수 있습니다. Tab 키가 눌러지면, 다음 요소가 포커스를 받습니다. 이전 요소가 포서스를 받게 하려면 Shift와 Tab 키를 누르면 됩니다.</p>
+<h4 id=".ED.83.AD_.EC.88.9C.EC.84.9C_.EB.B0.94.EA.BE.B8.EA.B8.B0" name=".ED.83.AD_.EC.88.9C.EC.84.9C_.EB.B0.94.EA.BE.B8.EA.B8.B0">탭 순서 바꾸기</h4>
+<p>사용자가 Tab 키를 눌렀을 때 포커스를 받는 요소의 순서를 바꾸기 위해서는 요소에 <code><code id="a-tabindex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></code> 속성을 넣으면 됩니다. 이 속성은 숫자값으로 지정되어야 합니다. 사용자가 Tab을 누르면, 다음 번 <code>tabindex</code> 값을 가진 요소로 이동합니다. 이것은 요소의 인덱스값을 순서대로 지정해서 요소의 순서를 지정할 수 있다는 것을 의미합니다. 일반적으로는 <code><code id="a-tabindex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></code> 속성을 지정하지 않을 것입니다. 이럴 경우에는 Tab을 누르면 다음에 출력된 요소로 포커스가 이동할 것입니다. 여러분은 순서를 바꾸고 싶을 때만 탭 인덱스를 지정하면 됩니다. 예제는 다음과 같습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul">View</a></p>
+<pre>&lt;button label="Button 1" tabindex="2"/&gt;
+&lt;button label="Button 2" tabindex="1"/&gt;
+&lt;button label="Button 3" tabindex="3"/&gt;
+</pre>
+<h4 id="focus_.EC.9D.B4.EB.B2.A4.ED.8A.B8" name="focus_.EC.9D.B4.EB.B2.A4.ED.8A.B8">focus 이벤트</h4>
+<p><code>focus</code> 이벤트는 어떤 요소가 포커스를 받았을 때 반응하기 위해 사용됩니다. <code>blur</code> 이벤트는 요소에서 포커스가 벗어났을 때 반응하기 위해 사용됩니다. 여러분은 code&gt;<a href="ko/DOM/element.onfocus">onfocus</a>&lt;/code&gt;나 <code><a href="ko/DOM/element.onblur">onblur</a></code> 속성을 요소에 붙여 포커스의 변화에 반응할 수 있습니다. 이 속성들은 HTML에 있는 해당 속성과 아주 비슷합니다. 이 이벤트 핸들러들은 요소를 강조(highlight)하거나 상태바에 텍스트를 출력하고자 할 때 보통 사용됩니다. 다음 예제는 포커스 이벤트를 처리하는 함수를 적용한 것을 보여주고 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul">View</a></p>
+<pre>&lt;script&gt;
+
+function displayFocus(){
+  var elem=document.getElementById('sbar');
+  elem.setAttribute('value','Enter your phone number.');
+}
+
+&lt;/script&gt;
+
+&lt;textbox id="tbox1"/&gt;
+&lt;textbox id="tbox2" onfocus="displayFocus();"/&gt;
+&lt;description id="sbar" value=""/&gt;
+</pre>
+<p>예제에서 focus 이벤트가 발생하면 <code>displayFocus</code> 함수가 호출될 것입니다. 이 함수는 텍스트 라벨의 값을 변경합니다. 우리는 이 예제를 확장해서 blur 이벤트가 발생할 때 텍스트가 제거되도록 만들수도 있을 것입니다. 일반적으로 사용자가 요소를 선택함에 따라 인터페이스의 일부분을 변경하기 위해 focus와 blur 이벤트를 사용합니다. 예를 들어 여러분은 사용자가 필드에 값을 입력함에 따라 합계를 갱신하거나 값의 유효성을 검증하는데 focus 이벤트를 사용할 수 있습니다. focus나 blur 이벤트에서 alert 창을 띄우지 마세요. 이렇게 하는 것은 사용자를 혼란스럽게 만들며, 아주 나쁜 사용자 인터페이스 디자인입니다.</p>
+<p>또한 DOM 함수인 <code><a href="ko/DOM/element.addEventListener">addEventListener</a></code>를 사용해서 이벤트 핸들러를 동적으로 등록할 수 있습니다. 이 함수는 어떤 요소나 이벤트에도 사용할 수 있습니다. 여기에는 3개의 인자가 있는데 이들은 이벤트 유형, 이벤트가 발생했을 때 실행할 함수, 이벤트 캡쳐를 수행할지를 여부를 나타내는 불린값(boolean) 입니다.</p>
+<h4 id=".ED.98.84.EC.9E.AC_.ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EA.B0.80.EC.A7.84_.EC.9A.94.EC.86.8C_.EA.B0.80.EC.A0.B8.EC.98.A4.EA.B8.B0" name=".ED.98.84.EC.9E.AC_.ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EA.B0.80.EC.A7.84_.EC.9A.94.EC.86.8C_.EA.B0.80.EC.A0.B8.EC.98.A4.EA.B8.B0">현재 포커스를 가진 요소 가져오기</h4>
+<p>현재 포커스를 가진 요소는 명령 발송자(command dispatcher)라고 불리는 객체에 저장되며, 이 객체는 창에 하나만 존재합니다. 명령 발송자는 사용자가 인터페이스를 사용함에 따라 포커스를 가진 요소의 변화를 추적하는 역활을 수행합니다. 명령 발송자는 또 다른 역활도 수행하는데 이에 대해서는 <a href="ko/XUL_Tutorial/Commands">다음 단원</a>에서 자세히 알아 보겠습니다. 지금은 명령 발송자가 가진 기능들 중 포커스와 관련된 것들에 대해서만 알아보겠습니다.</p>
+<p>여러분은 <code>document</code>의 <code>commandDispatcher</code> 속성을 이용해서 창의 명령 발송자 객체를 얻을 수 있습니다. 이곳에서 발송자의 <code>focusedElement</code> 속성으로부터 포커스를 가진 요소를 얻을 수 있습니다( <code>document.commandDispatcher.focusedElement</code>).</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul">View</a></p>
+<pre>&lt;window id="focus-example" title="Focus Example"
+        onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init(){
+  addEventListener("focus",setFocusedElement,true);
+}
+
+function setFocusedElement(){
+  var focused = document.commandDispatcher.focusedElement;
+  document.getElementById("focused").value = focused.tagName;
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;label control="username" value="User Name:"/&gt;
+  &lt;textbox id="username"/&gt;
+&lt;/hbox&gt;
+
+&lt;button label="Hello"/&gt;
+&lt;checkbox label="Remember This Decision"/&gt;
+
+&lt;label id="focused" value="-No focus-"/&gt;
+
+&lt;/window&gt;
+</pre>
+<p>예제에서 창에 <code>focus</code> 이벤트 핸들러를 부착하였습니다. 우리는 캡처 이벤트 핸들러를 사용하려고 하기 때문에 <code><a href="ko/DOM/element.addEventListener">addEventListener</a></code> 메소드를 사용하였습니다. 이 메소드를 이용해 창에 캡처 이벤트 핸들러를 등록하고 <code>setFocusedElement</code> 메소드가 호출되도록 하였습니다. 이 메소드는 명령 발송자로부터 포커스를 가진 요소를 가져와서 이 요소의 태그 이름을 라벨에 출력하게 됩니다. 포커스를 가진 요소가 바뀌면, 라벨도 해당 요소의 태그 이름으로 변경됩니다.</p>
+<p>여기서 몇 가지 확인해야 할 점이 있습니다.</p>
+<ul>
+ <li>첫번째로, textbox에 포커스가 가면, 태그 이름이 우리의 예상과 달리 'textbox'가 아니라 'html:input'으로 출력됩니다. 이것은 XUL 텍스트 상자가 HTML input 위젯으로 구현되어 있기 때문이며, 따라서 focus 이벤트는 이 요소가 받게 됩니다.</li>
+ <li>두번째로, 텍스트 상자의 라벨을 클릭하면 포커스가 텍스트 상자로 갑니다. 이것은 라벨의 <code><code id="a-control"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 속성이 텍스트 상자의 id를 가리키고 있기 때문입니다.</li>
+ <li>마지막으로, 태그 이름을 출력하는 라벨은 <code><code id="a-control"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 속성이 없으며, 따라서 이를 클릭하더라도 포커스에 영향을 주지 않습니다. 포커스를 가질 수 있는 요소만이 포커스를 가질 수 있습니다.</li>
+</ul>
+<h4 id=".EB.9D.BC.EB.B2.A8.EC.9D.B4_.ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EA.B0.80.EC.A7.88_.EC.88.98_.EC.9E.88.EA.B2.8C_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".EB.9D.BC.EB.B2.A8.EC.9D.B4_.ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EA.B0.80.EC.A7.88_.EC.88.98_.EC.9E.88.EA.B2.8C_.EB.A7.8C.EB.93.A4.EA.B8.B0">라벨이 포커스를 가질 수 있게 만들기</h4>
+<p>만일 <a href="ko/XUL_Tutorial/Introduction_to_XBL">사용자 정의 요소(XBL)</a>를 만들어 봤다면, 어떤 요소가 포커스를 가질 수 있는지의 여부를 수정할 필요가 있었을 것입니다. 이를 위해, <code>-moz-user-focus</code>라는 특별한 스타일 속성을 사용할 수 있습니다. 이 속성은 요소가 포커스를 받을 수 있는지의 여부를 제어합니다. 예를 들어, 다음 예제와 같이 라벨이 포커스를 가질 수 있게도 할 수 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_4"><a id="%EC%98%88%EC%A0%9C_4"></a><strong>예제 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul">View</a></p>
+<pre>&lt;label id="focused" style="-moz-user-focus: normal;"
+          onkeypress="alert('Label Focused');" value="Focus Me"/&gt;
+</pre>
+<p>해당 스타일 속성이 <code>normal</code>로 지정되었습니다. 여러분은 요소가 포커스를 가질 수 없게 하기 위해 <code>ignore</code>값을 지정할 수도 있습니다. 이 값은 요소를 사용 불가능한 상태로 만들기 위해 사용해서는 안되며 대신 <code>disabled</code> 속성을 사용하는 것이 좋습니다. 왜냐하면 이 속성이 이런 목적을 위해 존재하는 것이기 때문입니다. 일단 예제의 라벨에 포커스가 주어지면 키 입력에 응답할 수 있습니다. 원래 라벨은 일반적으로 포커스를 받지 않도록 되어 있기 때문에 포커스가 주어져도 어떤 표시도 나타나지는 않습니다.</p>
+<h4 id=".ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EB.B0.94.EA.BE.B8.EA.B8.B0" name=".ED.8F.AC.EC.BB.A4.EC.8A.A4.EB.A5.BC_.EB.B0.94.EA.BE.B8.EA.B8.B0">포커스를 바꾸기</h4>
+<p>현재 포커스를 가진 요소를 바꾸는 몇 가지 방법이 있습니다. 가장 간단한 방법은 포커스를 지정하고자 하는 XUL 요소의 <code><a href="ko/DOM/element.focus">focus</a></code> 메소드를 호출하는 것입니다. 요소에서 포커스를 제거하려면 <code><a href="ko/DOM/element.blur">blur</a></code> 메소드를 호출하면 됩니다. 다음은 이러한 내용의 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_5"><a id="%EC%98%88%EC%A0%9C_5"></a><strong>예제 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul">View</a></p>
+<pre>&lt;textbox id="addr"/&gt;
+
+&lt;button label="Focus" oncommand="document.getElementById('addr').focus()"/&gt;
+</pre>
+<p>또는 명령 발송자 객체의 <code>advanceFocus</code>나 <code>rewindFocus</code> 메소드를 호출할 수도 있습니다. 이 메소드들은 포커스를 순서대로 다음 요소나 이전 요소로 옮깁니다. 이것은 사용자가 Tab이나 Shift+Tab 키를 눌렀을때와 동일한 것입니다.</p>
+<p>텍스트 상자는 포커스를 받을때마다 <code>focused</code>라는 특별한 속성이 추가됩니다. 스크립트나 스타일시트에서 텍스트 상자가 포커스를 가지고 있는지 검사하려면 이 속성이 존재하는지 검사하면 됩니다. 만일 텍스트 상자가 포커스를 가지고 있다면 이 속성은 <code>true</code>값을 가지고, 포커스가 없다면 속성이 존재하지 않습니다.</p>
+<p>여러분이 포커스를 다음 요소로 옮기고 싶다고 가정해 봅시다. 사용자는 보통 Tab 키를 눌러 포커스를 옮깁니다. XUL 브라우저에서는 다음과 같이 아무데서나 할 수 있습니다.</p>
+<pre>      document.commandDispatcher.advanceFocus();
+</pre>
+<p>사실 <code>commandDispatcher</code>는 <a href="ko/Interfaces">nsIDOMXULCommandDispatcher interface</a>를 구현한 것입니다. 포커스를 처리하는 방법과 관련해 다른 많은 함수들이 존재합니다.</p>
+<h4 id=".ED.94.8C.EB.9E.AB.ED.8F.BC.EC.97.90_.EB.94.B0.EB.A5.B8_.EB.8F.99.EC.9E.91" name=".ED.94.8C.EB.9E.AB.ED.8F.BC.EC.97.90_.EB.94.B0.EB.A5.B8_.EB.8F.99.EC.9E.91">플랫폼에 따른 동작</h4>
+<dl>
+ <dt>
+  Mac OS X</dt>
+ <dd>
+  "Full Keyboard Access" (FKA)라는 설정이 존재합니다. XUL은 이 값에 충실하다는 것을 알아두세요. 이것은 FKA 설정이 off로 되어 있으면 텍스트 상자와 리스트/트리만이 키보드 또는 <code>focus()</code>를 사용한 코드로 포커스를 가질 수 있습니다.</dd>
+</dl>
+<h3 id=".ED.85.8D.EC.8A.A4.ED.8A.B8_.EB.B3.80.EA.B2.BD_.EC.B2.98.EB.A6.AC" name=".ED.85.8D.EC.8A.A4.ED.8A.B8_.EB.B3.80.EA.B2.BD_.EC.B2.98.EB.A6.AC">텍스트 변경 처리</h3>
+<p>사용자가 텍스트 상자의 값을 변경할 때와 관련된 2가지 이벤트가 있습니다. 당연히 이 이벤트들은 포커스를 가진 텍스트 상자로만 전송됩니다.</p>
+<ul>
+ <li>input 이벤트는 텍스트가 수정될때마다 발생합니다. 새로운 값은 기존 값과 틀릴것입니다. 여러분은 key 이벤트 대신 이 이벤트를 사용하려고 할텐데, Shift 키와 같은 몇가지 키들은 값을 변경하지 않기 때문입니다. 또한 input 이벤트는 문자키가 눌러졌지만 텍스트상자의 최대 입력 가능 문자의 개수를 초과한 경우에는 발생하지 않습니다.</li>
+ <li>change 이벤트는 필드가 변경될때만 발생한다는 점에서 input 이벤트와 비슷합니다. 그러나 이 이벤트는 텍스트 상자가 포커스를 잃을때만 발생하며, 따라서 한번의 변경만이 존재하게 됩니다.</li>
+</ul>
+<h3 id=".ED.85.8D.EC.8A.A4.ED.8A.B8_.EC.84.A0.ED.83.9D" name=".ED.85.8D.EC.8A.A4.ED.8A.B8_.EC.84.A0.ED.83.9D">텍스트 선택</h3>
+<p>텍스트 상자로 작업할 경우 입력된 전체 텍스트가 아닌 사용자가 선택한 것만을 가져오길 원할때가 있을 것입니다. 또는 현재 선택한 텍스트를 변경하고자 할 때도 있을 것입니다.</p>
+<p>XUL 텍스트상자는 선택을 가져오거나 수정하는 방법을 제공합니다. 가장 단순한 것은 텍스트상자에 있는 모든 텍스트를 선택하는 것입니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>의 <code><span id="m-select"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/select">select</a></code></span></code> 메소드를 이용해서 이를 수행합니다.</p>
+<pre>tbox.select();
+</pre>
+<p>그러나 텍스트의 일부분만 선택하고자 할 수도 있습니다. 이를 위해서는 <code><span id="m-setSelectionRange"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/setSelectionRange">setSelectionRange</a></code></span></code> 함수를 사용할 수 있습니다. 이 함수는 두개의 인자를 가지며, 첫번째 인자는 시작 문자의 위치이고 두번째는 선택하고자 하는 텍스트의 마지막 문자 위치입니다. 이 값들은 0 기반으로 첫번째 문자는 0이고 두번째는 1과 같이 진행됩니다.</p>
+<pre>tbox.setSelectionRange(4,8);
+</pre>
+<p>예제는 다섯번째 부터 여덟번째 문자까지를 선택합니다. 만일 필드에 여섯개의 문자만 입력되어 있다면, 다섯번째와 여섯번째 문자만 선택되고 오류가 발생하지는 않습니다.</p>
+<p>만일 두 인자에 동일한 값을 사용하면, 선택의 시작과 끝이 같이 위치가 됩니다. 이는 텍스트상자에서 커서의 위치를 변하게 할 뿐입니다. 예를 들어 아래는 커서를 텍스트의 처음으로 이동하게 하기 위해 사용될 수 있습니다.</p>
+<pre>tbox.setSelectionRange(0,0);
+</pre>
+<p>여러분은 또한 <code><code><span><a href="https://developer.mozilla.org/ko/docs/XUL/Property/selectionStart">selectionStart</a></span></code></code>와 <code><code><span><a href="https://developer.mozilla.org/ko/docs/XUL/Property/selectionEnd">selectionEnd</a></span></code></code> 속성을 이용해서 현재 선택된 위치를 가져올 수 있습니다. 이 속성들은 현재 선택된 것의 시작과 끝 위치를 나타냅니다. 만일 둘다 동일한 값으로 설정되어 있으면 아무런 텍스트도 선택되어 있지 않다는 것이며, 커서는 해당 위치로 이동합니다. 만일 시작과 끝 위치를 안다면, 전체 텍스트 중 일부 문자열을 뽑아낼 수 있습니다.</p>
+<p>텍스트 상자의 내용을 수정하거나 가져오려면 <code><code><span><a href="https://developer.mozilla.org/ko/docs/XUL/Property/value">value</a></span></code></code> 속성을 사용하면 됩니다.</p>
+<p>텍스트 상자의 또 한가지 유용한 속성은 <code><code><span><a href="https://developer.mozilla.org/ko/docs/XUL/Property/textLength">textLength</a></span></code></code>로 입력된 문자의 개수를 담고 있습니다.</p>
+<p>다음 단원에서는 <a href="ko/XUL_Tutorial/Commands">commands</a>를 사용하는 방법에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Keyboard_Shortcuts" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Commands">다음  »</a></p>
+</div><p></p>
+<p></p>

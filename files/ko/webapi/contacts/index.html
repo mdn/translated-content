@@ -1,0 +1,210 @@
+---
+title: Contacts
+slug: WebAPI/Contacts
+translation_of: Archive/B2G_OS/API/Contacts_API
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Web/API/Contacts_API">Contacts API</a></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/ContactManager"><code>ContactManager</code></a></li>
+   <li><a href="/en-US/docs/Web/API/MozContact"><code>MozContact</code></a></li>
+   <li><a href="/en-US/docs/Web/API/MozContactChangeEvent"><code>MozContactChangeEvent</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/Navigator/mozContacts"><code>Navigator.mozContacts</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Events</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/Events/success"><code>success</code></a></li>
+   <li><a href="/en-US/docs/Web/Events/error"><code>error</code></a></li>
+   <li><a href="/en-US/docs/Web/Events/contactchange"><code>contactchange</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+<div class="overheadIndicator nonStandard nonStandardHeader">
+<p><strong>Non-standard</strong><br>
+ This feature is not on a current W3C standards track, but it is supported on the Firefox OS platform. Although implementations may change in the future and it is not supported widely across browsers, it is suitable for use in code dedicated to Firefox OS apps.</p>
+</div>
+
+<div class="warning">
+<p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">privileged or certified applications</a> only.</p>
+</div>
+
+<h2 id="요약">요약</h2>
+
+<p>주소록 API는 사용자 시스템의 주소록을 관리할 수 있는 간단한 인터페이스를 제공합니다. 주소록 API의 전형적인 사용 예는 주소록을 관리하는 어플리케이션을 제작하는 일입니다.</p>
+
+<div class="note">
+<p><strong>주의:</strong> 사용자의 연락처와 같은 개인 정보는 민감한 자료이기 때문에 권한 앱이나 인증입만이 이 API에 직접 접근할 수 있습니다. 다른 어플리케이션은 <a href="/ko/docs/WebAPI/Web_Activities" title="/ko/docs/WebAPI/Web_Activities">Web Activities</a>를 사용해서 연락처에 접근하는 작업을 수행하게 하는 일을 권장합니다.</p>
+</div>
+
+<h2 id="연락처_관리">연락처 관리</h2>
+
+<p>시스템의 주소록에 저장된 연락처는 {{domxref("window.navigator.mozContacts","navigator.mozContacts")}} 속성을 통해서 접근할 수 있습니다. 이 속성은 {{domxref("ContactManager")}} 인터페이스의 인스턴스입니다.</p>
+
+<h3 id="연락처_추가">연락처 추가</h3>
+
+<p>시스템의 주소록에 새로운 항목을 추가하는 일은 두가지 단계를 거칩니다:</p>
+
+<ol>
+ <li>필요한 속성이 담긴 새로운 {{domxref("mozContact")}} 객체와 필드 인스턴스를 만듭니다. {{domxref("mozContact")}} 인터페이스는 추가할 연락처의 모든 가능한 속성을 정의하고 있습니다. 이 속성들은 대부분 아래에 나온 예외를 제외하고 vCard 4.0 명세의 내용과 거의 비슷합니다:
+  <ul>
+   <li>vCard N 속성은 다음 5개의 속성으로 나눠졌습니다: {{domxref("mozContact.familyName","familyName")}}, {{domxref("mozContact.givenName","givenName")}}, {{domxref("mozContact.additionalName","additionalName")}}, {{domxref("mozContact.honorificPrefix","honorificPrefix")}}, {{domxref("mozContact.honorificSuffix","honorificSuffix")}}</li>
+   <li>vCard FN 속성은 {{domxref("mozContact.name","name")}}으로 이름이 변경되었습니다.</li>
+   <li>vCard GENDER 속성은 다음 2개의 속성으로 나눠졌습니다: {{domxref("mozContact.sex","sex")}}, {{domxref("mozContact.genderIdentity","genderIdentity")}}</li>
+  </ul>
+ </li>
+ <li>연락처 객체를 첫번째 파라메터로 해서 {{domxref("ContactManager.save()")}} 메서드를 사용합니다. 이 메서드는 {{domxref("DOMRequest")}}를 반환해서 성공 여부를 확인할 수 있게 해줍니다.</li>
+</ol>
+
+<pre class="brush: js">var person = new mozContact();
+person.givenName  = ["John"];
+person.familyName = ["Doe"];
+person.nickName   = ["No kidding"];
+
+var saving = navigator.mozContacts.save(person);
+
+saving.onsuccess = function() {
+  console.log('new contact saved');
+  // This update the person as it is stored
+  // It includes its internal unique ID
+  // Note that saving.result is null here
+};
+
+saving.onerror = function(err) {
+  console.error(err);
+};
+</pre>
+
+<h3 id="연락처_찾기">연락처 찾기</h3>
+
+<p>시스템의 주소록에서 연락처를 가져오는 두개의 메서드가 있습니다:</p>
+
+<ul>
+ <li>특정 목록을 가져오기 위해서는 {{domxref("ContactManager.find()")}}를 사용합니다.</li>
+ <li>모든 연락처를 가져오기 위해서는 {{domxref("ContactManager.getAll()")}}를 사용합니다.</li>
+</ul>
+
+<p>두 메서드는 필터와 정렬 옵션을 정의하는 객체를 파라메터로 사용합니다. {{domxref("ContactManager.getAll")}}은 정렬 옵션만을 사용합니다. 이 옵션은 다음과 같습니다:</p>
+
+<ul>
+ <li><code>sortBy</code>: 검색 결과가 정렬될 필드를 나타내는 문자열입니다. 현재는 givenName과 familyName 만 지원합니다.</li>
+ <li><code>sortOrder</code>: 결과의 정렬 순서를 나타내는 문자열입니다. <code>descending</code>과 <code>ascending</code>을 사용할 수 있습니다.</li>
+</ul>
+
+<p>필터 옵션은 다음과 같습니다:</p>
+
+<ul>
+ <li><code>filterBy</code>: 필터가 적용될 필드를 나타내는 문자열의 배열입니다.</li>
+ <li><code>filterValue</code>: 대조할 값을 나타냅니다.</li>
+ <li><code>filterOp</code>: 사용할 필터 비교 연산입니다. 가능한 값으로는 equals, startsWith, match가 있습니다. 후자는 특정 전화번호를 나타냅니다.</li>
+ <li><code>filterLimit</code>: {{domxref("ContactManager.find()","find")}} 메서드로 가져올 연락처의 갯수입니다.</li>
+</ul>
+
+<p>{{domxref("ContactManager.find","find")}}는 {{domxref("DOMRequest")}} 객체를 반환하고 {{domxref("ContactManager.getAll","getAll")}}는 {{domxref("DOMCursor")}} 객체를 반환해서 검색의 성공 실패 여부를 확인할 수 있습니다.</p>
+
+<p>검색이 성공적으로 완료되면 검색 결과는 {{domxref("DOMRequest.result")}} 속성을 통해서 사용할 수 있고 {{domxref("ContactManager.find","find")}}의 경우에는 {{domxref("mozContact")}} 객체의 배열이, {{domxref("ContactManager.getAll","getAll")}}의 경우에는 하나의 {{domxref("mozContact")}} 객체가 반환됩니다. {{domxref("ContactManager.getAll","getAll")}}에서 다음 결과를 사용하려면 커서의 <code>continue()</code> 메서드를 사용합니다.</p>
+
+<pre class="brush: js">var options = {
+  filterValue : "John",
+  filterBy    : ["givenName","name","nickName"],
+  filterOp    : "contains",
+  filterLimit : 1,
+  sortBy      : "familyName"
+  sortOrder   : "ascending"
+}
+
+var search = navigator.mozContacts.find(options);
+
+search.onsuccess = function() {
+  if (search.result.length === 1) {
+    var person = search.result[0];
+    console.log("Found:" + person.givenName[0] + " " + person.familyName[0]);
+  } else {
+    console.log("Sorry, there is no such contact.")
+  }
+}
+
+search.onerror = function() {
+  console.warn("Uh! Something goes wrong, no result found!");
+}
+
+var allContacts = navigator.mozContacts.getAll({sortBy: "familyName", sortOrder: "descending"});
+
+allContacts.onsuccess = function(event) {
+  var cursor = event.target;
+  if (cursor.result) {
+    console.log("Found: " + cursor.result.givenName[0] + " " + cursor.result.familyName[0]);
+    cursor.continue();
+  } else {
+    console.log("No more contacts");
+  }
+}
+
+allContacts.onerror = function() {
+  console.warn("Something went terribly wrong! :(");
+}
+</pre>
+
+<h3 id="연락처_수정">연락처 수정</h3>
+
+<p>{{domxref("ContactManager.find()","find()")}}나 {{domxref("ContactManager.getAll()","getAll()")}}(또는 새 연락처를 {{domxref("ContactManager.save()","save()")}}로 성공적으로 저장한 후)로 연락처를 가져오면 이 연락처에는 몇가지 메타데이터가 붙습니다:</p>
+
+<ul>
+ <li>{{domxref("mozContact.id")}}로 사용할 수 있는 유일한 ID 값</li>
+ <li>마지막으로 연락처가 수정된 시각을 나타내는 {{domxref("mozContact.updated")}}의 <a href="/ko/docs/JavaScript/Reference/Global_Objects/Date" title="/ko/docs/JavaScript/Reference/Global_Objects/Date">Date</a> 객체</li>
+</ul>
+
+<p>연락처를 수정하기 위해서는 속성값을 변경한 다음에 {{domxref("ContactManager.save()","save()")}} 메서드를 사용해서 저장하면 됩니다.</p>
+
+<div class="note">
+<p><strong>주의:</strong> 연락처가 추가되거나 수정, 삭제되면 {{event("contactchange")}} 이벤트가 발생하고 이를 통해 시스템 주소록의 변경사항을 추적할 수 있습니다. 이 이벤트는 {{domxref("ContactManager.oncontactchange")}} 속성을 이용해서 다룰 수 있습니다.</p>
+</div>
+
+<h3 id="연락처_삭제">연락처 삭제</h3>
+
+<p>{{domxref("ContactManager.remove()")}} 메서드를 사용해서 간단하게 전달된 {{domxref("mozContact")}} 객체를 삭제할 수 있습니다.</p>
+
+<p>특수한 경우에는 모든 연락처 정보를 삭제할 수도 있습니다. {{domxref("ContactManager.clear()")}}를 사용하면 됩니다. 이 메서드를 사용할 때에는 특히 주의해야 합니다. 다시 되돌릴 수 있는 방법이 없습니다.</p>
+
+<h2 id="Specifications" name="Specifications">명세</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Contacts', '', 'Contacts Manager API') }}</td>
+   <td>{{ Spec2('Contacts') }}</td>
+   <td>First Working Draft (unstable)</td>
+  </tr>
+  <tr>
+   <td><a href="http://tools.ietf.org/html/rfc6350" title="http://tools.ietf.org/html/rfc6350">vCard Format Specification</a></td>
+   <td>RFC</td>
+   <td><code>RFC6350</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
+
+<h2 id="참고_자료">참고 자료</h2>
+
+<ul>
+ <li>{{domxref("window.navigator.mozContacts","navigator.mozContacts")}}</li>
+ <li>{{domxref("mozContact")}}</li>
+ <li>{{domxref("ContactManager")}}</li>
+ <li>{{domxref("MozContactChangeEvent")}}</li>
+</ul>

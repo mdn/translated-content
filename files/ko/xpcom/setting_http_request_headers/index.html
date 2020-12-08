@@ -1,0 +1,209 @@
+---
+title: Setting HTTP request headers
+slug: XPCOM/Setting_HTTP_request_headers
+tags:
+  - Add-ons
+  - Extensions
+  - HTTP
+  - XUL
+  - XULRunner
+translation_of: Mozilla/Tech/XPCOM/Setting_HTTP_request_headers
+---
+<p> </p>
+<p>HTTP는 웹 내부의 핵심 기술들 중의 하나입니다. 실제 컨텐츠 외에도 HTTP 헤더를 통해 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">중요한 정보들</a>이 HTTP 요청과 응답에 포함되어 전송됩니다.</p>
+<p>여러분은 응용프로그램이 생성하는 요청에 고유한 HTTP 헤더를 추가할 수 있는데, 이러한 요청들은 <a href="/ko/XMLHttpRequest" title="ko/XMLHttpRequest">XMLHttpRequest</a>로 인해서 HTTP 채널을 명시적으로 여는 코드로부터 컨테츠 내의 <a href="/ko/HTML/element/img" title="ko/HTML/element/img">&lt;img&gt;</a> 요소에 대한 요청, <a href="/ko/CSS" title="ko/CSS">CSS</a>로 부터 발생하는 요청 등을 모두 포함합니다.</p>
+<h3 id="HTTP_Channels" name="HTTP_Channels">HTTP Channels</h3>
+<p>HTTP 요청과 응답을 처리하기 위해서는 일반적으로 <code><a href="/ko/NsIHttpChannel" title="ko/NsIHttpChannel">nsIHttpChannel</a></code>을 사용하게 됩니다. <code>nsIHttpChannel</code> 인터페이스는 많은 속성과 메소드를 포함하고 있지만, 우리가 관심을 가질 메소드는 <code>setRequestHeader</code>입니다. 이 메소드는 우리가 <em>HTTP 요청 헤더를 설정할 수</em> 있게 해줍니다.</p>
+<p>아래는 HTTP 헤더를 설정하는 예제 코드입니다.</p>
+<pre class="eval">// "X-Hello: World" 헤더를 요청에 넣습니다.
+httpChannel.setRequestHeader("X-Hello", "World", false);
+</pre>
+<p>위 예제 코드에는 <code>httpChannel</code>라는 변수가 있는데, 이는 <code>nsIHttpChannel</code>를 구현하는 객체입니다(변수 이름은 아무거나 상관없습니다).</p>
+<p><code>setRequestHeader</code> 메소드는 3개의 인자를 가집니다. 첫 번째 인자는 HTTP 요청 헤더의 <em>이름</em>입니다. 두번째 인자는 HTTP 요청 헤더의 <em>값</em>입니다. 그리고 마지막 세번째 인자는 일단 무시하고 항상 <code>false</code>로 지정하세요.</p>
+<p>위 예제에서 우리가 추가한 HTTP 요청 헤더는 <em>이름</em>이 <code>X-Hello</code>이고 <em>값</em>은 <code>World</code>입니다.</p>
+<div class="note">
+ <p><strong>주의</strong>: 만일 고유한 HTTP 헤더를 만들 경우, 반드시 이름 앞에 <code>X-</code>를 붙이세요(예제에서는 이름 앞에 <code>X-</code>를 붙여서 <code>Hello</code>가 아닌 <code>X-Hello</code>인 HTTP 헤더를 만들었습니다).</p>
+</div>
+<h3 id=".EC.95.8C.EB.A6.BC.28notifications.29" name=".EC.95.8C.EB.A6.BC.28notifications.29">알림(notifications)</h3>
+<p>이제 여러분은 HTTP 요청이 만들어질 때 어떻게 <code>nsIHttpChannel</code>을 얻는지에 대해 궁금하실 것입니다.</p>
+<p>여러분의 코드가 요청을 초기화하는 경우에는, 이미 이 객체를 가지고 있게 됩니다. 다른 요청을 가로챌(trapping) 경우에는 알림(notification)의 방식으로 처리되며, 이는 다른 언어와 프레임워크에서 볼 수 있는 <em>events</em> 또는 <em>signals</em>과 유사합니다.</p>
+<p>특별히 HTTP 요청이 일어나기 직전에 <code>nsIHttpChannel</code>을 얻기 위해서는 <code>"http-on-modify-request"</code> 토픽(topic)을 <em>관찰(observe)</em>해야 합니다. (<code>"http-on-modify-request"</code>은 문자열입니다.)</p>
+<div class="note">
+ <p><strong>주의</strong>: <code>"http-on-modify-request"</code>외에도 여러가지 토픽이 존재하며, <code>"http-on-examine-response"</code> , <code>"xpcom-shutdown"</code>와 같은 알림을 받을 수 있습니다. 또한 자신만의 토픽을 만들고 알림을 발송할 수 있습니다.</p>
+ <p>알림 프레임워크와 일반적인 알림 토픽의 목록에 관한 정보는 <a href="/ko/Observer_Notifications" title="ko/Observer_Notifications">Observer Notifications</a>을 참조하세요.</p>
+</div>
+<h3 id=".EA.B4.80.EC.B0.B0.EC.9E.90.28observers.29" name=".EA.B4.80.EC.B0.B0.EC.9E.90.28observers.29">관찰자(observers)</h3>
+<p><code>"http-on-modify-request"</code>와 같은 토픽에 대한 알림을 받으려면, <strong>관찰자(observer)</strong>를 생성해야 합니다. 관찰자는 <a href="/ko/NsIObserver" title="ko/NsIObserver">nsIObserver</a> 인터페이스를 구현하는 컴포넌트입니다. 일단 관찰자에 토픽을 <em>등록</em>하면, 관찰자는 자신의 <code>observe</code> 메소드가 호출됨으로써 등록한 토픽에 대한 알림을 받게 됩니다.</p>
+<p>아래는 관찰자 예제로 <code>http-on-modify-request</code> 알림으로 전송된 채널에 사용자 정의 헤더인 "X-Hello"를 추가합니다.</p>
+<pre>var httpRequestObserver =
+{
+  observe: function(subject, topic, data)
+  {
+    if (topic == "http-on-modify-request") {
+      var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+      httpChannel.setRequestHeader("X-Hello", "World", false);
+    }
+  }
+};
+</pre>
+<p><span class="comment">div class="note"&gt; Doesn't seem very suitable for this article; readers should are typically assumed to be familiar with JS. Nickolay '''NOTE''': Often people expect <a href="/ko/JavaScript">JavaScript</a> to be just like <a href="/ko/Java">Java</a>. And while superficially, they look very similar, there are some important differences between the two. For example, while Java is an &lt;em&gt;object-oriented programming language&lt;/em&gt;, JavaScript is not. JavaScript is &lt;em&gt;prototype-based programming language&lt;/em&gt; and as such while it has &lt;em&gt;objects&lt;/em&gt; it does not have &lt;em&gt;classes&lt;/em&gt;. (Which is why, if you are not well versed with JavaScript, the object creation in the sample code above may look strange.) &lt;/div</span></p>
+<p><code>observe</code> 메소드가 가지는 파라미터의 개수가 중요하다는 점을 명심하세요. 이 메소드는 위 예제 코드에서 본 바와 같이 3개의 파라미터를 가집니다. <code>"http-on-modify-request"</code> 토픽의 경우, 첫번째 파라미터(위 코드에서 <code>subject</code>)는 <code>nsIHttpChannel</code>이 됩니다. 그러나 우리에게는 <code><a href="/ko/NsISupports" title="ko/NsISupports">nsISupports</a></code>로 전달됩니다. 따라서 이 파라미터를 <code>QueryInterface</code>를 통하여 <code>nsISupports</code>에서 <code>nsIHttpChannel</code>로 <em>변경</em>할 필요가 있습니다. 당연히, 어떤 객체를 다른것으로 <em>변환</em>하는 것은 매우 보기 않좋은 것이고, <em><a class="external" href="http://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a></em>가 떨어지게 됩니다.</p>
+<p><code>if</code> 블럭 내 두 번째 줄은 아마 친근할 것입니다. 본 기사의 앞에서 사용한 것과 동일한 코드로 HTTP 요청 헤더를 추가하는 것입니다.</p>
+<p><code>httpRequestObserver</code>라는 객체의 이름은 중요하지 않습니다. 이 이름은 우리가 원하는데로 지정할 수 있습니다.</p>
+<h3 id=".EB.93.B1.EB.A1.9D.28registering.29" name=".EB.93.B1.EB.A1.9D.28registering.29">등록(registering)</h3>
+<p>관찰자(observer)를 생성한 뒤에는 이를 등록해 주어야 합니다. 우리의 경우에 <code>"http-on-modify-request"</code> 토픽에 등록하고자 합니다. 아래의 코드로 이를 수행할 수 있습니다.</p>
+<pre class="eval">var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                .getService(Components.interfaces.<a href="/ko/NsIObserverService" title="ko/NsIObserverService">nsIObserverService</a>);
+observerService.addObserver(httpRequestObserver, "http-on-modify-request", false);
+</pre>
+<p>첫번째 문장에서는 알림을 받고자하는 토픽을 등록할 객체를 얻습니다. 즉, 관찰자 객체를 생성합니다.</p>
+<p>두번째 문장에서 실제 등록을 합니다. 이 코드는 <code>"http-on-modify-request"</code> 토픽이 발생하면(이 토픽은 HTTP 요청의 바로 전에 발생한다는 것을 알고 있습니다) <code>httpRequestObserver</code>에게 (<code>observe</code> 메소드를 실행함으로써) 알려달라고 말하는 것입니다.</p>
+<h3 id=".EB.93.B1.EB.A1.9D_.ED.95.B4.EC.A0.9C.28unregistering.29" name=".EB.93.B1.EB.A1.9D_.ED.95.B4.EC.A0.9C.28unregistering.29">등록 해제(unregistering)</h3>
+<p>여러분은 종료 전에 관측자의 등록을 해제하는게 좋습니다. 그렇지 않으면 메모리 누수가 발생할 수 있습니다. 관측자의 등록을 해제하려면 다음과 같이 <code>nsIObserverService.removeObserver</code>를 사용하면 됩니다.</p>
+<pre class="eval">observerService.removeObserver(httpRequestObserver, "http-on-modify-request");
+</pre>
+<h3 id="XPCOM_components" name="XPCOM_components">XPCOM components</h3>
+<p>여러분은 (창이 아니라)응용 프로그램마다 <code>http-on-modify-request</code> 관찰자를 등록해주어야 합니다. 이는 관찰자의 구현을 <a href="/ko/XUL_Overlays" title="ko/XUL_Overlays">overlay</a>가 아닌 <a href="/ko/How_to_Build_an_XPCOM_Component_in_Javascript" title="ko/How_to_Build_an_XPCOM_Component_in_Javascript">XPCOM component</a>에서 해야 한다는 것을 의미합니다.</p>
+<h3 id=".EC.9A.94.EC.95.BD" name=".EC.9A.94.EC.95.BD">요약</h3>
+<p>기본적인 사항은 여기까지입니다. 하지만 여러분을 위해 <code>httpRequestObserver</code> 객체를 이용하는 약간 다른 버전을 보여 주겠습니다.</p>
+<p>앞서 보았던 버전은 학습을 위해서는 유용하지만, 실제 응용 프로그램에서는 다음과 같이 코딩될 것입니다.</p>
+<pre>var httpRequestObserver =
+{
+  observe: function(subject, topic, data)
+  {
+    if (topic == "http-on-modify-request") {
+      var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+      httpChannel.setRequestHeader("X-Hello", "World", false);
+    }
+  },
+
+  get observerService() {
+    return Components.classes["@mozilla.org/observer-service;1"]
+                     .getService(Components.interfaces.nsIObserverService);
+  },
+
+  register: function()
+  {
+    this.observerService.addObserver(this, "http-on-modify-request", false);
+  },
+
+  unregister: function()
+  {
+    this.observerService.removeObserver(this, "http-on-modify-request");
+  }
+};
+</pre>
+<p>이 객체는 편의를 위해 <code>register()</code>와 <code>unregister()</code> 메소드가 있으므로 다음과 같이 호출해서 활성화할 수 있습니다.</p>
+<pre class="eval">httpRequestObserver.register();
+</pre>
+<p>또한 프로그램이 종료되는 시점에 관찰자를 등록 해제하는 것을 잊지 마세요.</p>
+<pre class="eval">httpRequestObserver.unregister();
+</pre>
+<p>여기까지 입니다.</p>
+<p><span class="comment">We need downloadable XPCOM component for this</span></p>
+<h3 id=".EC.98.88.EC.A0.9C_.EC.BD.94.EB.93.9C" name=".EC.98.88.EC.A0.9C_.EC.BD.94.EB.93.9C">예제 코드</h3>
+<pre>var headerName  = "X-hello";
+var headerValue = "world";
+
+function LOG(text)
+{
+    //    var consoleService = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
+    //    consoleService.logStringMessage(text);
+}
+
+function myHTTPListener() { }
+
+myHTTPListener.prototype = {
+
+  observe: function(subject, topic, data)
+  {
+      if (topic == "http-on-modify-request") {
+
+          LOG("----------------------------&gt; (" + subject + ") mod request");
+
+          var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+          httpChannel.setRequestHeader(headerName, headerValue, false);
+          return;
+      }
+
+
+      if (topic == "app-startup") {
+
+          LOG("----------------------------&gt; app-startup");
+
+          var os = Components.classes["@mozilla.org/observer-service;1"]
+                             .getService(Components.interfaces.nsIObserverService);
+
+          os.addObserver(this, "http-on-modify-request", false);
+          return;
+      }
+  },
+
+  QueryInterface: function (iid) {
+        if (iid.equals(Components.interfaces.nsIObserver) ||
+            iid.equals(Components.interfaces.nsISupports))
+            return this;
+
+        Components.returnCode = Components.results.NS_ERROR_NO_INTERFACE;
+        return null;
+    },
+};
+
+var myModule = {
+    registerSelf: function (compMgr, fileSpec, location, type) {
+
+        var compMgr = compMgr.QueryInterface(Components.interfaces.nsIComponentRegistrar);
+        compMgr.registerFactoryLocation(this.myCID,
+                                        this.myName,
+                                        this.myProgID,
+                                        fileSpec,
+                                        location,
+                                        type);
+
+
+          LOG("----------------------------&gt; registerSelf");
+
+        var catMgr = Components.classes["@mozilla.org/categorymanager;1"].getService(Components.interfaces.nsICategoryManager);
+        catMgr.addCategoryEntry("app-startup", this.myName, this.myProgID, true, true);
+    },
+
+
+    getClassObject: function (compMgr, cid, iid) {
+
+          LOG("----------------------------&gt; getClassObject");
+
+        return this.myFactory;
+    },
+
+    myCID: Components.ID("{9cf5f3df-2505-42dd-9094-c1631bd1be1c}"),
+
+    myProgID: "@dougt/myHTTPListener;1",
+
+    myName:   "Simple HTTP Listener",
+
+    myFactory: {
+        QueryInterface: function (aIID) {
+            if (!aIID.equals(Components.interfaces.nsISupports) &amp;&amp;
+                !aIID.equals(Components.interfaces.nsIFactory))
+                throw Components.results.NS_ERROR_NO_INTERFACE;
+            return this;
+        },
+
+        createInstance: function (outer, iid) {
+
+          LOG("----------------------------&gt; createInstance");
+
+          return new myHTTPListener();
+        }
+    },
+
+    canUnload: function(compMgr) {
+        return true;
+    }
+};
+
+function NSGetModule(compMgr, fileSpec) {
+    return myModule;
+}
+</pre>
+<p> </p>

@@ -1,0 +1,135 @@
+---
+title: Pontoon 지역화 하기
+slug: Mozilla/지역화/Pontoon_지역화
+translation_of: Mozilla/Localization/Localizing_with_Pontoon
+---
+<p><a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon</a> 은 보시면 알만한 (WYSIWYG) 웹 기반 지역화 (l10n) 도구 입니다. Mozilla 에서, 우리는 Firefox 부터 Mozilla.org 까지 모든 Mozilla 제품과 웹사이트들을 지역화하는데 Pontoon 을 사용합니다. Pontoon 은 지역화 작업흐름에서 기술적인 능력이 거의 없이도 사용할 수 있는 아주 간단하고 교육적인 도구입니다. 여기서 우리는 로그인 하는 것 부터 여러분의 공헌을 마무리하는 것 까지 Pontoon 을 사용해 프로젝트를 지역화하는 방법에 대해 이야기 할 것입니다. 그 과정 중에, 여러분이 지역화 공헌을 더 쉽게 그리고 더 효과적으로 할 수 있게 해주는 몇 가지 매력적인 특징들을 짚어볼 것입니다.</p>
+
+<div class="note">
+<p><strong>개발자이십니까?</strong> <a href="/en-US/docs/Implementing_Pontoon_Mozilla">implementing Pontoon in your project</a> 를 읽어 보시거나 <a href="https://github.com/mozilla/pontoon">GitHub</a> 에서 참여하는 방법에 대해 배워보세요.</p>
+</div>
+
+<h2 id="첫_단계">첫 단계</h2>
+
+<p><a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon 홈페이지</a>는 아주 사용하기 쉽습니다. 프로젝트 지역화를 시작하기 위해, Persona 아이콘을 클릭하여 로그인 하세요. 다음으로, 여러분이 작업하고 싶은 프로젝트와 여러분의 언어를 드롭다운 메뉴에서 선택하세요. Pontoon 은 여러분이 지역화를 시작할 수 있도록 선택한 언어를 자동으로 열어줍니다. 참고하세요, 여기서 우리의 목적은 <a href="https://affiliates.mozilla.org/">Firefox Affiliates</a> 웹사이트를 사용해 Pontoon 의 기능과 작업흐름을 데모해 보는겁니다. 이것이 Photoon 에서 그것을 열었을 때 입니다:</p>
+
+<p><em><img alt="Browser app and workspace" src="https://mdn.mozillademos.org/files/8323/affiliates.png" style="height: 558px;"></em></p>
+
+<h3 id="메인_툴바">메인 툴바</h3>
+
+<p>보시다시피 인터페이스의 대부분은 번역되는 웹사이트에 달려있습니다. 단지 다음 항목들(왼쪽에서 오른쪽으로)을 포함하는 상단의 툴바가 Pontoon 에 속해있습니다:</p>
+
+<p><img alt="Main toolbar" src="https://mdn.mozillademos.org/files/8325/toolbar.png"></p>
+
+<h4 id="문자열의_리스트">문자열의 리스트</h4>
+
+<p>지역화를 위한 리스트를 가진 사이드바를 엽니다.</p>
+
+<h4 id="프로젝트_셀렉터_(제휴된것)"><span id="cke_bm_939S" style="display: none;"> </span>프로젝트 셀렉터 (제휴된것)</h4>
+
+<p>지역화를 위한 프로젝트를 변경합니다.</p>
+
+<h4 id="리소스_셀렉터_(홈페이지)"><span id="cke_bm_940S" style="display: none;"> </span>리소스 셀렉터 (홈페이지)</h4>
+
+<p>부속 페이지나 지역화 파일들같은 지역화를 위한 프로젝트 자원들을 변경합니다. 프로젝트를 위한 가용 자원이 없다면 숨깁니다.</p>
+
+<h4 id="sect1"><span id="cke_bm_941S" style="display: none;"> </span></h4>
+
+<dl>
+</dl>
+
+<h4 id="언어_셀렉터_(Slovenian)">언어 셀렉터 (Slovenian)</h4>
+
+<p>지역화를 위한 언어를 변경합니다.</p>
+
+<h4 id="Go">Go</h4>
+
+<p>프로젝트-자원-언어 선택을 엽니다.</p>
+
+<h4 id="진행상황_표시기">진행상황 표시기</h4>
+
+<p>지역화중인 자원에 대한 여러분의 진행상황을 나타냅니다. 팝업에서 세부사항을 볼 수 있습니다.</p>
+
+<dl>
+</dl>
+
+<h4 id="사용자_메뉴"><span id="cke_bm_943S" style="display: none;"> </span>사용자 메뉴</h4>
+
+<p>저장소에 커밋하거나 파일을 다운받고 로그아웃하기 같은 여러분만의 작업을 할 수 있도록 해줍니다.</p>
+
+<h4 id="정보_메뉴">정보 메뉴</h4>
+
+<p>키보드 단축기 목록과 기대하는 프로젝트 타임라인같은 중요한 정보를 줍니다.</p>
+
+<dl>
+</dl>
+
+<p>좋습니다, 이제 번역 좀 해볼까요?<span id="cke_bm_608E" style="display: none;"> </span></p>
+
+<dl>
+</dl>
+
+<h2 id="번역하기">번역하기</h2>
+
+<p>지역화를 위해 Pontoon 을 사용할 때 몇 가지 번역을 위한 옵션이 있습니다. 컨텍스트에서 번역하거나, 컨텍스트 밖에서 하거나, 둘의 조합에서 할 수 있습니다. 컨텍스트 단위 번역을 살펴봅시다.</p>
+
+<h3 id="컨텍스트에서">컨텍스트에서</h3>
+
+<p>Pontoon's in-context translation mode is what puts it above others. 웹 페이지(또는 웹 앱)를 열고 페이지의 실시간 편집을 활성화합니다. 여기 여러분이 번역할 첫번째 문자열이 있습니다:</p>
+
+<p><img alt="In-context localization" src="https://mdn.mozillademos.org/files/8331/in-context.png"></p>
+
+<ol>
+ <li>마우스를 번역할 문자위에 올려놓으세요.</li>
+ <li>문자위에 수정 버튼이 나타납니다. 클릭하여 번역 모드를 활성화하세요.</li>
+ <li>원본 문자를 여러분의 언어로 번역한 문자로 바꾸세요.</li>
+ <li>저장 버튼을 눌러 번역을 저장하세요.</li>
+</ol>
+
+<div>
+<h3 id="컨텍스트_밖에서">컨텍스트 밖에서</h3>
+
+<p>어떤 문자열은 컨텍스트 안에서 번역하는 것이 불가능합니다. 예를들면, 웹사이트의 &lt;title&gt; 태그 안의 내용과 유동적이거나 다양한 복수형 문자열이 있습니다. 메인 툴바의 햄버거 아이콘을 클릭하는 것으로 사이드바에 모든 번역가능한 문자열의 목록을 열 수 있습니다. 또한 컨텍스트 밖 지역화를 위해 사이드바를 사용할 수도 있습니다:</p>
+
+<p><img alt="Out-of-context localization: list" src="https://mdn.mozillademos.org/files/8337/out-of-context-1.png"> <img alt="Out-of-context localization: translate" src="https://mdn.mozillademos.org/files/8335/out-of-context-2.png"></p>
+
+<ol>
+ <li>번역할 문자열을 클릭하세요.</li>
+ <li>원본 문자열과 세부 사항(코멘트들)을 포함하는 번역 패널을 여세요.</li>
+ <li>아래 번역 공간에서 문자열을 번역하세요.</li>
+ <li>저장 버튼을 클릭해 번역을 저장하세요.</li>
+</ol>
+
+<p>만약 해당 문자열이 컨텍스트 안에서도 번역 가능한 것이라면 컨텍스트 밖에서 문자열을 번역한 것 처럼 웹사이트에 번역한 내용이 나타날 것입니다. </p>
+
+<h3 id="번역_도우미">번역 도우미</h3>
+</div>
+
+<p>보시다시피 번역 영역 바깥에 있는 히스토리, 번역 기록, 기계 번역 그리고 다른 로케일로부터 제안을 받으실 수 있습니다. 여러분이 문장을 번역하실 때 각 도우미들은 다음과 같이 도움을 드릴 것입니다:</p>
+
+<p><img alt="Translation helpers: History" src="https://mdn.mozillademos.org/files/8339/helpers-history.png"> <img alt="Translation helpers: Machinery" src="https://mdn.mozillademos.org/files/8341/helpers-machinery.png"> <img alt="Translation helpers: Other locales" src="https://mdn.mozillademos.org/files/8343/helpers-locales.png"> <img alt="Translation helpers: Search" src="https://mdn.mozillademos.org/files/8345/helpers-menu.png"></p>
+
+<h4 id="History">History</h4>
+
+<p>이전에 다른 사용자들이 사용했던 제안 번역을 표시합니다.</p>
+
+<h4 id="Machinery">Machinery</h4>
+
+<p>여러 서비스에서 사용된 예를 표시합니다: 내부적으로 저장된 번역 기록, <a href="http://transvision.mozfr.org/">Mozilla Transvision</a>, <a href="https://amagama-live.translatehouse.org/">open source translation memory</a>, <a href="http://www.microsoft.com/Language/">Microsoft terminology</a> 그리고 <a href="http://www.bing.com/translator">machine translation</a>.</p>
+
+<h4 id="Other_locales">Other locales</h4>
+
+<p>다른 로케일에서 사용한 번역을 표시합니다.</p>
+
+<h4 id="Search">Search</h4>
+
+<p>Almost like machinery, but takes provided keyword as input parameter instead of the original string.</p>
+
+<p>추천단어를 클릭하면, 번역 영역으로 내용이 복사됩니다.</p>
+
+<dl>
+</dl>
+
+<h2 id="게시하기">게시하기</h2>
+
+<p>이제 여러분은 repo 에 커밋하는 것으로 지역화 작업을 게시하실 것입니다. Pontoon 으로도 가능합니다! 실제로, Pontoon 은 시간 단위로 저장소와 자동으로 동기화됩니다. 이제 이 작업을 기념하기 위해 스스로 격려하거나, 가벼운 춤을 추거나, 잠을 자거나 또는 다른 것을 해도 좋습니다!</p>

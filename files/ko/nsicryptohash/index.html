@@ -1,0 +1,271 @@
+---
+title: nsICryptoHash
+slug: nsICryptoHash
+tags:
+  - Add-ons
+  - Extensions
+  - Interfaces
+  - 'Interfaces:Scriptable'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsICryptoHash
+---
+<p> </p>
+
+<h3 id=".EC.86.8C.EA.B0.9C" name=".EC.86.8C.EA.B0.9C">소개</h3>
+
+<p><code>nsICryptoHash</code>는 자료의 암호 해쉬 함수를 계산하기 위해 사용합니다. 예를 들어 파일이 담고 있는 데이터가 기대한 것인지 확인하기 위해 MD5 해쉬를 계산할 수 있습니다. 제공되는 해쉬 알고리즘은 MD2, MD5, SHA-1, SHA-256, SHA-384, SHA-512입니다. 이 인터페이스는 <a href="ko/Firefox_1.5">파이어폭스 1.5</a> 버전 이상에서만 사용할 수 있습니다.</p>
+
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsICryptoHash.idl" rel="custom">netwerk/base/public/nsICryptoHash.idl</a></code><span style="text-align: right; float: right;"><a href="/ko/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">스크립트에서 사용 가능</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
+</div><p></p>
+
+<h3 id=".EC.83.81.EC.88.98" name=".EC.83.81.EC.88.98">상수</h3>
+
+<h4 id=".ED.95.B4.EC.89.AC_.EC.95.8C.EA.B3.A0.EB.A6.AC.EC.A6.98" name=".ED.95.B4.EC.89.AC_.EC.95.8C.EA.B3.A0.EB.A6.AC.EC.A6.98">해쉬 알고리즘</h4>
+
+<p>이 상수들은 인터페이스가 제공하는 해쉬 알고리즘을 나타냅니다. 사용가능한 것은 다음과 같습니다. :</p>
+
+<ul>
+ <li><code>MD2</code></li>
+ <li><code>MD5</code></li>
+ <li><code>SHA1</code></li>
+ <li><code>SHA512</code></li>
+ <li><code>SHA256</code></li>
+ <li><code>SHA384</code></li>
+</ul>
+
+<h3 id=".EB.A9.94.EC.84.9C.EB.93.9C" name=".EB.A9.94.EC.84.9C.EB.93.9C">메서드</h3>
+
+<h4 id="init" name="init">init</h4>
+
+<pre>void init(in unsigned long aAlgorithm);
+</pre>
+
+<p><code>init()</code>는 인터페이스에 정의된 상수를 이용하여 해쉬 알고리즘을 결정하여 객체를 초기화합니다. 객체의 자료를 갱신하기 전에 반드시 이 메서드나 <code><a href="#initWithString">initWithString()</a></code>를 호출해야 합니다.</p>
+
+<h5 id=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0" name=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0">패러미터</h5>
+
+<p><code>aAlgorithm</code></p>
+
+<dl>
+ <dd>해쉬 알고리즘을 선택합니다. 인터페이스에 정의된 상수 중 하나를 선택해야 합니다.</dd>
+</dl>
+
+<h5 id=".EC.98.88.EC.99.B8" name=".EC.98.88.EC.99.B8">예외</h5>
+
+<p><code><span class="nowiki">NS_ERROR_INVALID_ARG</span></code></p>
+
+<dl>
+ <dd>지원하지 않는 해쉬 알고리즘이 선택되었다는 것을 알립니다.</dd>
+</dl>
+
+<h4 id="initWithString" name="initWithString">initWithString</h4>
+
+<pre>void initWithString(in ACString aAlgorithm);
+</pre>
+
+<p><code>initWithString()</code>는 <code>"MD5"</code>와 같이 문자열로 된 알고리즘의 이름으로 해쉬 알고리즘을 선택하여 객체를 초기화한다. 객체의 자료를 갱신하기 전에 반드시 이 메서드나 <code><a href="#init">init()</a></code>를 호출해야 합니다.</p>
+
+<h5 id=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_2" name=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_2">패러미터</h5>
+
+<p><code>aAlgorithm</code></p>
+
+<dl>
+ <dd>사용할 해쉬 알고리즘이 선택합니다.</dd>
+</dl>
+
+<h5 id=".EC.98.88.EC.99.B8_2" name=".EC.98.88.EC.99.B8_2">예외</h5>
+
+<p><code>NS_ERROR_INVALID_ARG</code></p>
+
+<dl>
+ <dd>지원하지 않는 해쉬 알고리즘이 선택되었다는 것을 알립니다.</dd>
+</dl>
+
+<h4 id="update" name="update">update</h4>
+
+<pre>void update([const, array, size_is(aLen)] in octet aData, in unsigned long aLen);
+</pre>
+
+<p><code>update()</code>는 해쉬된 자료 배열을 객체에 추가합니다. 이 메서드 사용 예제는 <a href="#.EB.AC.B8.EC.9E.90.EC.97.B4_.ED.95.B4.EC.89.AC_.EC.97.B0.EC.82.B0.ED.95.98.EA.B8.B0">문자열 해쉬 연산하기</a>를 보세요.</p>
+
+<h5 id=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_3" name=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_3">패러미터</h5>
+
+<p><code>aData</code></p>
+
+<dl>
+ <dd>해쉬를 계산하기 위해 넘기는 버퍼</dd>
+</dl>
+
+<p><code>aLen</code></p>
+
+<dl>
+ <dd>버퍼 <code>aData</code>의 길이</dd>
+</dl>
+
+<h5 id=".EC.98.88.EC.99.B8_3" name=".EC.98.88.EC.99.B8_3">예외</h5>
+
+<p><code>NS_ERROR_NOT_INITIALIZED</code></p>
+
+<dl>
+ <dd><code><a href="#init">init()</a></code>나 <code><a href="#initWithString">initWithString()</a></code>가 호출되지 않았다는 것을 알립니다.</dd>
+</dl>
+
+<h4 id="updateFromStream" name="updateFromStream">updateFromStream</h4>
+
+<pre>void updateFromStream(in nsIInputStream aStream, in unsigned long aLen);
+</pre>
+
+<p><code>updateFromStream()</code>는 <code><a href="ko/NsIInputStream">nsIInputStream</a></code>로 해쉬될 데이터를 추가합니다. 이 메서드의 사용 예제는 <a href="#.ED.8C.8C.EC.9D.BC_.ED.95.B4.EC.89.AC_.EC.97.B0.EC.82.B0.ED.95.98.EA.B8.B0">파일 해쉬 연산하기</a>를 보세요.</p>
+
+<h5 id=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_4" name=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_4">패러미터</h5>
+
+<p><code>aStream</code></p>
+
+<dl>
+ <dd>읽어올 입력 스트림</dd>
+</dl>
+
+<p><code>aLen</code></p>
+
+<dl>
+ <dd><code>aStream</code>으로 부터 읽을 양을 결정합니다. 해쉬 갱신할 수 있는 최대 양으로 지정하려면 <code>PR_UINT32_MAX</code>를 전달하면 됩니다.</dd>
+</dl>
+
+<h5 id=".EC.98.88.EC.99.B8_4" name=".EC.98.88.EC.99.B8_4">예외</h5>
+
+<p><code>NS_ERROR_NOT_INITIALIZED</code></p>
+
+<dl>
+ <dd><code><a href="#init">init()</a></code>나 <code><a href="#initWithString">initWithString()</a></code>가 호출되지 않았다는 것을 알립니다.</dd>
+</dl>
+
+<p><code>NS_ERROR_NOT_AVAILABLE</code></p>
+
+<dl>
+ <dd>해쉬 연산 자료량이 허용되지 않습니다.</dd>
+</dl>
+
+<h4 id="finish" name="finish">finish</h4>
+
+<pre>ACString finish(in PRBool aASCII);
+</pre>
+
+<p><code>finish()</code> 메서드는 해쉬 객체를 완성시켜 실제 해쉬 자료를 생성합니다.</p>
+
+<h5 id=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_5" name=".ED.8C.A8.EB.9F.AC.EB.AF.B8.ED.84.B0_5">패러미터</h5>
+
+<p><code>aASCII</code></p>
+
+<dl>
+ <dd>참이면 반환 값은 base 64 인코딩된 문자열입니다. 거짓이면 이진(binary) 자료로 반환합니다.</dd>
+</dl>
+
+<h5 id=".EB.B0.98.ED.99.98_.EA.B0.92" name=".EB.B0.98.ED.99.98_.EA.B0.92">반환 값</h5>
+
+<p>이 메서드는 객체가 읽은 자료의 해쉬를 반환합니다. 이 반환 값은 이진 자료일 수 있고 base 64 인코딩된 문자열일 수 있습니다.</p>
+
+<h5 id=".EC.98.88.EC.99.B8_5" name=".EC.98.88.EC.99.B8_5">예외</h5>
+
+<p><code>NS_ERROR_NOT_INITIALIZED</code></p>
+
+<dl>
+ <dd><code><a href="#init">init()</a></code>나 <code><a href="#initWithString">initWithString()</a></code>가 호출되지 않았다는 것을 알립니다.</dd>
+</dl>
+
+<div class="note"><strong>주의:</strong> 이 메서드는 <code><a href="#init">init()</a></code>가 호출된 후로 수회 실행이 가능합니다. 이 호출은 객체를 초기상태로 만듭니다.</div>
+
+<h3 id=".EC.98.88.EC.A0.9C_.EC.BD.94.EB.93.9C" name=".EC.98.88.EC.A0.9C_.EC.BD.94.EB.93.9C">예제 코드</h3>
+
+<div class="note"><strong>주의:</strong> 아래의 예제는 파이어폭스 2에 구현된 <a href="ko/New_in_JavaScript_1.7">자바스크립트 1.7</a>의 특성을 사용합니다. 파이어폭스 1.5에서 예제를 사용할려면 배열 통합(array comprehension) 대신에 반복을 사용하세요.</div>
+
+<h4 id=".ED.8C.8C.EC.9D.BC_.ED.95.B4.EC.89.AC_.EC.97.B0.EC.82.B0.ED.95.98.EA.B8.B0" name=".ED.8C.8C.EC.9D.BC_.ED.95.B4.EC.89.AC_.EC.97.B0.EC.82.B0.ED.95.98.EA.B8.B0">파일 해쉬 연산하기</h4>
+
+<p><code>nsICryptoHash</code>를 사용하여 파일 해쉬 연산을 쉽게할 수 있습니다. <code>nsICryptoHash</code> 인스턴스를 생성하고 파일을 입력 스트림으로 열고 파일의 자료로 해쉬를 갱신하길 원할 겁니다. 아래의 예제가 파일 MD5 해쉬 연산을 어떻게 하는지 보여줍니다.</p>
+
+<pre>// hardcoded here for convenience
+var path = "c:\\windows\\notepad.exe";
+var f = Components.classes["@mozilla.org/file/local;1"]
+                  .createInstance(Components.interfaces.nsILocalFile);
+f.initWithPath(path);
+var istream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                        .createInstance(Components.interfaces.nsIFileInputStream);
+// open for reading
+istream.init(f, 0x01, 0444, 0);
+var ch = Components.classes["@mozilla.org/security/hash;1"]
+                   .createInstance(Components.interfaces.nsICryptoHash);
+// we want to use the MD5 algorithm
+ch.init(ch.MD5);
+// this tells updateFromStream to read the entire file
+const PR_UINT32_MAX = 0xffffffff;
+ch.updateFromStream(istream, PR_UINT32_MAX);
+// pass false here to get binary data back
+var hash = ch.finish(false);
+
+// return the two-digit hexadecimal code for a byte
+function toHexString(charCode)
+{
+  return ("0" + charCode.toString(16)).slice(-2);
+}
+
+// convert the binary hash data to a hex string.
+var s = Array.from(hash, (c, i) =&gt; toHexString(hash.charCodeAt(i))).join("");
+// s now contains your hash in hex
+</pre>
+
+<p>내 윈도우즈 XP SP2 시스템에서 해쉬 값으로 <code>5eb63bbbe01eeed093cb22bb8f5acdc3</code>를 주었지만 여러분의 경우는 수가 다를 수 있습니다. 이 간단한 예제는 인터페이스의 기능을 대부분 보여줍니다.</p>
+
+<p>첫번째로 주목할 부분은 <code><a href="#init">init()</a></code> 메서드를 호출할 때 해쉬 알고리즘을 결정하는 것입니다. 가능한 모든 올고리즘은 인터페이스의 <a href="#.EC.83.81.EC.88.98">상수</a>에 규정되어 있습니다.</p>
+
+<p>또 주목할 곳은 <code><a href="#updateFromStream">updateFromStream()</a></code> 메서드를 호출할 때 두번째 패러미터가 읽어들일 바이트 수라는 것입니다. 여기에 <code>PR_UINT32_MAX</code>를 보내면 전체 파일을 읽길 원한다고 지시하는 겁니다.</p>
+
+<p>마지막으로 <code><a href="#finish">finish()</a></code> 메서드 호출이 해쉬 값을 생성하는 것입니다. 예제처럼 첫번째 패러미터가 <code>false</code>이면 이진 값을 반환합니다. <code>true</code>를 보내면 해쉬 값은 base 64 인코딩된 문자열로 옵니다. 이 예제에서 해쉬 프로그램에 의해 이진 자료를 입력하고 그 결과로 기본 출력인 16진 문자열을 얻습니다.</p>
+
+<h4 id=".EB.AC.B8.EC.9E.90.EC.97.B4_.ED.95.B4.EC.89.AC_.EC.97.B0.EC.82.B0.ED.95.98.EA.B8.B0" name=".EB.AC.B8.EC.9E.90.EC.97.B4_.ED.95.B4.EC.89.AC_.EC.97.B0.EC.82.B0.ED.95.98.EA.B8.B0">문자열 해쉬 연산하기</h4>
+
+<p>또다른 기본 연산은 문자열 해쉬 값을 연산하는 것입니다. 해쉬 함수가 여러 바이트를 연산하기 때문에 먼저 문자열을 <code><a href="ko/NsIScriptableUnicodeConverter">nsIScriptableUnicodeConverter</a></code>를 사용하여 바이트의 순열로 바꾸고 원하는 유니코드 인코딩으로 바꿔야 합니다.</p>
+
+<div class="note"><strong>주의:</strong> 다른 인코딩은 다른 해쉬 값을 만듭니다! 결과 값을 비교할려면 항상 같은 인코딩을 사용해야 합니다.</div>
+
+<p>아래의 예제는 문자열을 UTF-8 인코딩의 바이트로 바꾸고 MD5 해쉬 값을 계산하는 방법을 보여줍니다. 결과 값은 이전 예제 처럼 16진 문자열입니다.</p>
+
+<pre>var str = "hello world";
+var converter =
+  Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
+    createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+
+// we use UTF-8 here, you can choose other encodings.
+converter.charset = "UTF-8";
+// result is an out parameter,
+// result.value will contain the array length
+var result = {};
+// data is an array of bytes
+var data = converter.convertToByteArray(str, result);
+var ch = Components.classes["@mozilla.org/security/hash;1"]
+                   .createInstance(Components.interfaces.nsICryptoHash);
+ch.init(ch.MD5);
+ch.update(data, data.length);
+var hash = ch.finish(false);
+
+// return the two-digit hexadecimal code for a byte
+function toHexString(charCode)
+{
+  return ("0" + charCode.toString(16)).slice(-2);
+}
+
+// convert the binary hash data to a hex string.
+var s = Array.from(hash, (c, i) =&gt; toHexString(hash.charCodeAt(i))).join("");
+// s now contains your hash in hex: should be
+// 5eb63bbbe01eeed093cb22bb8f5acdc3
+</pre>
+
+<p>이 예제에서 해쉬 배열을 보내기 위해 <code><a href="#update">update()</a></code> 메서드를 씁니다. 이전 예제처럼 이진 결과를 16진 문자열로 변경했습니다.</p>
+
+<p></p>

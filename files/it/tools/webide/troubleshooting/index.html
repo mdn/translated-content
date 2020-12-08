@@ -1,0 +1,106 @@
+---
+title: 'WebIDE, risoluzione dei problemi'
+slug: Tools/WebIDE/Troubleshooting
+tags:
+  - 'etichette{locale}'
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<h2 id="Connettere_un_dispositivo_Firefox_OS_tramite_USB">Connettere un dispositivo Firefox OS tramite USB</h2>
+
+<p>Se stai tentando di connettere un dispositivo con Firefox Os al WebIDE e non viene mostrato, ecco alcuni consigli che puoi provare a mettere in atto.</p>
+
+<ul>
+ <li>Controlla la tua versione di Firefox OS: assicurati  che la versione sia<strong> Firefox OS 1.2/Boot2Gecko 1.2 o superiore</strong>. Per controllare la versione, apri la app Impostazioni e seleziona <code>Info sul dispositivo &gt; Software</code>. Se la versione non è abbastanza recente, cerca il tuo dispositivo nella <a href="/en-US/Firefox_OS/Developer_phone_guide">guida ai dispositivi per sviluppatori</a> e segui le instruzioni per aggiornare il tuo dispositivo.</li>
+ <li>Attiva il debug remoto: nella app Impostazioni del dispositivo seleziona <code>Info sul dispositivo &gt; Altre informazioni &gt; Sviluppatore</code> .
+  <ul>
+   <li>Firefox OS 1.3 e precedenti: "Debug Remoto" è attivabile tramite una casella. Spunta la casella.</li>
+   <li>Firefox OS 1.4 e successivi: il "Debug Remoto" può essere richiesto per ADB o per ADB e gli stumenti per lo sviluppo. Seleziona <strong>ADB e strumenti per lo sviluppo</strong> per utilizzare il WebIDE.</li>
+  </ul>
+ </li>
+ <li>Disattiva il blocco schermo sul tuo dispostivo: nella app Impostazioni del dispositivo, seleziona <code>Blocca Schermo</code> e disattiva l'opzione Blocca Schermo. Disattivare il blocco schermo impedisce al telefono di perdere la connessione con il debugger.</li>
+ <li>Assicurati di non aver connesso contemporaneamente un dispositivo Android ed un dispositivo Firefox OS al computer.</li>
+ <li>Controlla il cavo USB che stai usando:
+  <ul>
+   <li>Prova ad staccare ed reinserire il cavo USB.</li>
+   <li>Prova ad inserire il cavo USB in porte differenti nel tuo computer. Potrebbe essere necessario alternare le porte.</li>
+   <li>Prova a utilizzare un altro cavo USB. I cavi forniti con i telefoni sono spesso di bassa qualità e malfunzionanti.</li>
+   <li>Prova un cavo USB più corto. I cavi USB lunghi non funzionano molto bene.</li>
+  </ul>
+ </li>
+ <li> Prova a disattivare e riattivare  il debug remoto nell'app Impostazioni sul tuo dispositivo.</li>
+ <li>Se <a href="/en-US/docs/Tools/WebIDE#Custom_runtimes">hai disattivato l'addon ADB Helper</a> hai anche eseguito con successo il comando <code>adb forward</code> ?</li>
+ <li>Se utilizzi Linux sei sicuro di avere aggiunto la regola udev al file come richiesto al passo 3 della guida per  <a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">impostare un dispositivo Android</a>. Lo <code>idVendor</code> per utilizzare un Geeksphone è "05c6", in  <a class="external external-icon" href="http://developer.android.com/tools/device.html#VendorIds">questa pagina</a> puoi trovare la lista degli altri <code>idVendor</code> che puoi utilizzare. Una volta aggiunta la regola <code>udev</code> esegui il comando <code>adb devices</code>, se il tuo dispositivo non appare nella lista o appare la scritta <code>"no permission"</code> devi riavviare il server adb (<code>adb kill-server; adb start-server</code>).</li>
+ <li>Se utilizzi Windows:
+  <ul>
+   <li>devi installare i driver per il tuo dispositivo come richiesto al passo 3 della guida per  <a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">impostare un dispositivo Android</a>. Puoi trovare i driver per il dispositivo Geeksphone sul <a class="external external-icon" href="http://downloads.geeksphone.com/">sito di Geeksphone</a> ed i driver per un dispositivo Google su <a href="http://developer.android.com/sdk/win-usb.html">Google web site</a>. Di defailt Windows 8 non permette di installare dei driver non firmati. Leggi questo tutorial su <a class="external-icon external" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"Come installare un driver non firmato su Windows 8"</a>.</li>
+   <li>Se il WebIDE non riesce a  mostrare il tuo dispositivo dopo aver seguito questi passaggi potresti modificare il file <a class="external-icon external" href="http://blog.fh-kaernten.at/wehr/?p=1182">adb_usb.ini</a>.</li>
+  </ul>
+ </li>
+ <li>Se utilizzi EasyTether (OS X), dovrai rimuovere o disabilitare EasyTether: <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></li>
+</ul>
+
+<h2 id="Connettere_un_dispositivo_Firefox_OS_tramite_Wi-Fi">Connettere un dispositivo Firefox OS tramite Wi-Fi</h2>
+
+<ul>
+ <li>Controlla le versioni del software: il debug tramite Wi-Fi richiede Firefox 39 o più recente ed un dispositivo con Firefox OS 3.0 del 2015-03-27 o più recente.</li>
+</ul>
+
+<h2 id="Connettersi_a_Firefox_per_Android">Connettersi a Firefox per Android</h2>
+
+<p>Se stai cercando di connettere il WebIDE con un dispositivo Android su cui esegui Firefox e questo non viene mostrato nel WebIDE ecco alcuni consigli che puoi provare a mettere in atto:</p>
+
+<ul>
+ <li>Controlla la versione di Firefox per Android, assicurati che <strong> sia superiore a Firefox 36</strong>. Il WebIDE non mostra le versioni meno recenti automaticamente e dovrai abilitare il <code>port forwarding</code> e connettere il dispositivo nuovamente - segui le instruzioni <a class="external external-icon" href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">qui</a>.</li>
+ <li>Assicurati di aver abilitato il debug remoto in Firefox: apri Firefox per Android, apri il suo menu, seleziona <code>Impostazioni</code> e spunta la casella in <code>Strumenti di sviluppo &gt; Debug remoto</code>.</li>
+ <li>Assicurati che il Debug USB sia permesso nelle impostazioni del dispositivo.</li>
+ <li>Se continui a non rilevare il tuo dispositivo nella finestra nel WebIDE prova ad spuntare di nuovo la casella <code>Debug remoto</code> sul dispositivo.
+  <ul>
+   <li>Disconnetti il tuo dispositivo dal computer e disabilita il <code>Debug remoto</code> sul telefono.</li>
+   <li>Connetti il dispositivo e abilita il <code>Debug remoto</code> - questo riavvia il debugger sul telefono.</li>
+   <li>Prova a connetterti tramite il WebIDE nuovamente.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Connettersi_ad_altri_browser_(Chrome_Safari)">Connettersi ad altri browser (Chrome, Safari)</h2>
+
+<p>Il WebIDE usa il progetto<a class="here" href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android"> </a><a href="/en-US/docs/Tools/Firefox_Tools_Adapter">Valence (conosciuto come Firefox Tools Adapter)</a> per comunicare con altri browser, come  Chrome e  Safari. </p>
+
+<p>Se ha problemi a connettersi ad altri browser controlla i passaggi per impostare il tuo dispositivo per quel browser sulla pagina del <a href="/en-US/docs/Tools/Firefox_Tools_Adapter">progetto Valence.</a></p>
+
+<h3 id="Problemi_con_il_debug_delle_app">Problemi con il debug delle app</h3>
+
+<p>Se non riesci a effettuare il debug di app certificate, di sistema o precedentemente installate potresti essere incappato in un problema di insufficenti permessi. Per saperne di più leggi la sezione<a href="/en-US/docs/Tools/WebIDE#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29"> debug senza restrizioni (app certificate, di sistema, processi, etc.)</a>.</p>
+
+<h2 id="Impossibile_caricare_la_lista_dei_progetti">Impossibile caricare la lista dei progetti</h2>
+
+<p>Se usi il WebIDE ed effettui il downgrade di Firefox ad una versione precedente e continui ad utilizzare lo stesso profilo potresti incontrare l'errore "Impossibile carica la lista dei progetti" quando apri il WebIDE nella versione precedente.</p>
+
+<p>Questo problema può accadere quando il sistema di salvataggio dei progetti del WebIDE (<a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>) ha aggiornato o cambiato i suoi file durante l'uso della versione più recente di Firefox. La lista dei progetti è a tutti gli effetti inaccessibile alle versioni più vecchie di Firefox.</p>
+
+<p>Non è stata persa nessuna informazione ma dovrai necessariamente continuare ad utilizzare la versione più recente di Firefox per recuperare la lista dei progetti.</p>
+
+<p>Se vuoi veramente utilizzare la versione meno recente di Firefox puoi provare a cancelleare la lista dei progetti nel seguente modo, ma questa procedura non è supportata e potresti incorrere in altri problemi o altre perdite di informazioni.</p>
+
+<ol>
+ <li>Chiudi Firefox</li>
+ <li>Trova la tua cartella dei profili</li>
+ <li>Trova la cartella <code>storage</code> dentro alla cartella del tuo profilo</li>
+ <li>Nel contenuto della cartella ci saranno dei file o cartelle il cui nome comincia per<code>4268914080AsptpcPerjo</code> (una hash del nome del database)</li>
+ <li>Rimuovi tutte le cartelle ed i file in questione</li>
+ <li>Avvia Firefox ed il WebIDE nuovamente</li>
+</ol>
+
+<h2 id="Abilitare_i_log">Abilitare i log</h2>
+
+<p>Puoi inoltre abilitare un logging senza filtri per raccogliere informazioni diagnostiche:</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li>Apri <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>, aggiunti una nuova preferenza chiamata <code>extensions.adbhelper@mozilla.org.sdk.console.logLevel</code>, con il valore in forma di Stringa impostato ad <code>all</code>, ed imposta la proprietà <code>extensions.adbhelper@mozilla.org.debug</code> al valore <code>true</code>.</li>
+ <li>Nella pagina <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons">Add-ons Manager</a>, disabilita e abilita nuovamente l'add-on ADB Helper.</li>
+ <li>Apri la <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">Console del Browser</a> e vedrai dei messaggi che hanno come prefisso la stringa <code>adb</code>. Se i messaggi non sono comprensibili per te  <a href="/en-US/docs/Tools/WebIDE/Troubleshooting#Get_help">chiedi aiuto</a>.</li>
+</ol>
+
+<h2 id="Chiedere_aiuto">Chiedere aiuto</h2>
+
+<p>Vai <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">alla stanza #devtools su IRC</a> e proveremo ad aiutarti.</p>

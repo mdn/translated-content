@@ -1,0 +1,126 @@
+---
+title: New in JavaScript 1.8.5
+slug: Web/JavaScript/New_in_JavaScript/1.8.5
+tags:
+  - ECMAScript5
+  - JavaScript
+  - JavaScript 1.8.5
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8.5
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>다음은 JavaScript 1.8.5에 대한 변경기록입니다. 이 버전은 <a href="/ko/Firefox/Releases/4">Firefox 4</a>에서 포함되었습니다.</p>
+
+<h2 id="JavaScript_1.8.5의_새로운_기능">JavaScript 1.8.5의 새로운 기능</h2>
+
+<h3 id="새로운_함수">새로운 함수</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">함수</th>
+   <th scope="col">설명</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Object.create()")}}</td>
+   <td>지정된 프로토타입 객체 및 속성을 갖는 새로운 객체 생성. {{bug("492840")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.defineProperty()")}}</td>
+   <td>객체에 주어진 설명자로 기술된 유명(named) 속성을 추가.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.defineProperties()")}}</td>
+   <td>객체에 주어진 설명자로 기술된 유명 속성을 추가.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}</td>
+   <td>객체의 유명 속성에 대한 속성 설명자를 반환. {{bug("505587")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.keys()")}}</td>
+   <td>객체의 모든 열거가능 속성 배열을 반환. {{bug("307791")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.getOwnPropertyNames()")}}</td>
+   <td>객체의 모든 열거가능 및 열거불가 속성 배열을 반환. {{bug("518663")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.preventExtensions()")}}</td>
+   <td>객체 확장을 막음. {{bug("492849")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isExtensible()")}}</td>
+   <td>객체 확장이 허용되는지 판단. {{bug("492849")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.seal()")}}</td>
+   <td>다른 코드가 객체의 속성을 삭제하는 것으로부터 막음. {{bug("492845")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isSealed()")}}</td>
+   <td>객체가 봉인되었는지 판단. {{bug("492845")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.freeze()")}}</td>
+   <td>객체 동결: 다른 코드가 어떤 속성도 삭제 또는 변경할 수 없음. {{bug("492844")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isFrozen()")}}</td>
+   <td>객체가 동결됐는지 판단. {{bug("492844")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Array.isArray()")}}</td>
+   <td>변수가 배열인지 확인. {{bug("510537")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Date.prototype.toJSON()")}}</td>
+   <td><code>Date</code> 객체의 JSON 형식 문자열 반환.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Function.prototype.bind()")}}</td>
+   <td>호출될 때 그 자체가 (주어진 인수열과 함께) 주어진 문맥에서 이 함수를 호출하는 새로운 함수 생성 {{bug("429507")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="ECMAScript5_새로운_기능">ECMAScript5 새로운 기능</h3>
+
+<ul>
+ <li><code><a href="/ko/docs/Web/JavaScript/Reference/Operators/get">get</a></code> 및 <code><a href="/ko/docs/Web/JavaScript/Reference/Operators/set">set</a></code> 연산자는 이제 식별자가 숫자 또는 문자열이 될 수 있습니다. {{bug("520696")}}</li>
+ <li>{{jsxref("Function.apply()")}}는 인수 목록으로 모든 배열같은 객체를 받아들일 수 있습니다, 실제 배열만이 아니라.</li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">엄격 모드 지원</a></li>
+ <li>{{jsxref("Array.toString()")}}은 이제 가능한 경우 그 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join"><code>join()</code></a> 메서드 호출 결과를 반환 또는 그 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/toString"><code>toString()</code></a> 메서드를 호출하여 심지어 비배열에서도 동작합니다.</li>
+</ul>
+
+<h3 id="다른_표준화_작업">다른 표준화 작업</h3>
+
+<p>getter 및 setter를 정의하는 다양한 비표준 구문이 제거되었습니다; ECMAScript 5에서 정의된 구문은 변경되지 않았습니다. 이들은 모두 꽤 난해하고 거의 쓰이지 않았습니다; 영향을 미치는 경우, 자세한 사항은 <a class="external" href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">이 블로그 게시글</a> 참조.</p>
+
+<h3 id="새로운_객체">새로운 객체</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">객체</th>
+   <th scope="col">설명</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Proxy")}}</td>
+   <td>JavaScript에서 메타프로그래밍을 가능케 하는 <code>Object</code> 및 <code>Function</code> 프록시 생성 지원을 제공.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="JavaScript_1.8.5에서_바뀐_기능">JavaScript 1.8.5에서 바뀐 기능</h2>
+
+<ul>
+ <li><code>Date</code> 객체 ISO 8601 지원: {{jsxref("Date")}} 객체의 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/parse">parse()</a> 메서드가 이제 단순한 ISO 8601 형식 date 문자열을 지원합니다.</li>
+ <li>Global 객체가 읽기 전용이 됨: <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>, <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a> 및 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a> global 객체는 읽기 전용이 되었습니다, ECMAScript 5 스펙에 따라.</li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent"><code>obj.__parent__</code></a> 및 <code>obj.__count__</code>는 폐기(obsolete)되었습니다. 이유에 대한 일부 정보: <a class="external" href="http://whereswalden.com/2010/05/07/spidermonkey-change-du-jour-the-special-__parent__-property-has-been-removed/">SpiderMonkey change du jour: the special __parent__ property has been removed</a> {{bug("551529")}} &amp; {{bug("552560")}}.</li>
+ <li>후행(trailing) 쉼표는 {{jsxref("JSON.parse()")}}에서 더 이상 허용되지 않습니다.</li>
+</ul>

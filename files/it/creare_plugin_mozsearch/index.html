@@ -1,0 +1,190 @@
+---
+title: Creare Plugin MozSearch
+slug: Creare_Plugin_MozSearch
+tags:
+  - Plugin_di_ricerca
+translation_of: Mozilla/Creating_MozSearch_plugins
+---
+<p>Firefox 2 supporta MozSearch, una versione semplificata del formato OpenSearch di A9 per creare i plugin di ricerca. Anche i plugin OpenSearch sono supportati; vedi il sito di <a class="external" href="http://opensearch.a9.com/">OpenSearch</a> per ulteriori dettagli.</p>
+
+<p>Un plugin MozSearch è un file XML che descrive il motore di ricerca, il suo URL e i parametri che occorre passare a questo URL.</p>
+
+<div class="note"><strong>Nota:</strong> MozSearch è un formato specifico di Firefox; se si desidera scrivere un plugin che sia compatibile con altri browser, occorre utilizzare il sistema OpenSearch. Fortunatamente i due formati sono molto simili ed è facile passare da uno all'altro a seconda delle proprie necessità.</div>
+
+<h2 id="Il_file_di_plugin" name="Il_file_di_plugin">Il file di plugin</h2>
+
+<p>Il file XMl che descrive un motore di ricerca è abbastanza semplice e segue il template basilare sotto riportato. Le sezioni in corsivo devono essere personalizzate basandosi sui bisogni dello specifico plugin di ricerca che si sta scrivendo.</p>
+
+<pre class="eval">&lt;SearchPlugin xmlns="<span class="nowiki">http://www.mozilla.org/2006/browser/search/</span>"&gt;
+&lt;ShortName&gt;<em>nomeMotore</em>&lt;/ShortName&gt;
+&lt;Description&gt;<em>descrizioneMotore</em>&lt;/Description&gt;
+&lt;InputEncoding&gt;<em>codificaInput</em>&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,<em>immagine</em>&lt;/image&gt;
+&lt;Url type="text/html" method="<em>metodo</em>" template="<em>URLdiRicerca</em>"&gt;
+  &lt;Param name="<em>nomeParametro1</em>" value="<em>valoreParametro1</em>"/&gt;
+  ...
+  &lt;Param name="<em>nomeParametroN</em>" value="<em>valoreParametroN</em>"/&gt;
+&lt;/Url&gt;
+&lt;Url type="application/x-suggestions+json" template="<em>suggerimentoURL</em>"/&gt;
+&lt;SearchForm&gt;<em>cercaDaURL</em>&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+
+<dl>
+ <dt><strong>nomeMotore</strong></dt>
+ <dd>Un nome in breve per il motore di ricerca.</dd>
+</dl>
+
+<dl>
+ <dt><strong>descrizioneMotore</strong></dt>
+ <dd>Una breve descrizione del motore di ricerca.</dd>
+</dl>
+
+<dl>
+ <dt><strong>codificaInput</strong></dt>
+ <dd>La codifica utilizzata per i dati in input.</dd>
+</dl>
+
+<dl>
+ <dt><strong>immagine</strong></dt>
+ <dd>Un'icona a 64 bit di 16x16 pixel che rappresenta il logo del motore di ricerca. Un tool utile per costruire i dati da immettere qui si trova al seguente URL: <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The data: URI kitchen</a>.</dd>
+</dl>
+
+<dl>
+ <dt><strong>URLdiRicerca</strong></dt>
+ <dd>Descrive l'URL o gli URL da usare per la ricerca. L'attributo <code>metodo</code> indica se si debba utilizzare il metodo di ricerca <code>GET</code> o <code>POST</code>. L'attributo <code>template</code> indica l'URL di base per l'interrogazione del motore di ricerca.</dd>
+</dl>
+
+<dl>
+ <dd>E' possibile specificare due tipi di URL:</dd>
+</dl>
+
+<ul>
+ <li><code>type="text/html"</code> è utilizzato per indicare l'URL dell'interrogazione effettiva.</li>
+ <li><code>type="application/x-suggestions+json"</code> è utilizzato per indicare l'URL da usare per i suggerimenti sulla ricerca..</li>
+</ul>
+
+<dl>
+ <dd>Per entrambi i tipi di URL è possibile utilizzare <code>{searchTerms}</code> per sostituire i termini di ricerca inseriti dall'utente nella barra di ricerca.</dd>
+</dl>
+
+<dl>
+ <dd>Per i suggerimenti sulla ricerca, l'URL del template specificato viene utilizzato per recuperare una lista di suggerimenti nel formato JavaScript Object Notation (JSON). Per ulteriori dettagli su come implementare il supporto ai suggerimenti di ricerca su un server, si veda <a href="it/Supportare_i_suggerimenti_nei_plugin_di_ricerca">Supportare i suggerimenti nei plugin di ricerca</a>.</dd>
+</dl>
+
+<p><img alt="Image:SearchSuggestionSample.png"></p>
+
+<dl>
+ <dt><strong>Parametri</strong></dt>
+ <dd>I parametri che occorre passare insieme all'interrogazione, come coppie chiave/valore. Quando si specifica i valori, è possibile utilizzare <code>{searchTerms}</code> per inserire i termini di ricerca inseriti dall'utente nella barra di ricerca.</dd>
+</dl>
+
+<dl>
+ <dt><strong>Form di ricerca</strong></dt>
+ <dd>L'URL da richiedere per aprire la pagina di ricerca nel sito per il quale il plugin di ricerca è stato progettato. Questo fornisce un modo per Firefox per permettere all'utente di visitare il direttamente il sito.</dd>
+</dl>
+
+<h2 id="Ricerca_automatica_dei_plugin" name="Ricerca_automatica_dei_plugin">Ricerca automatica dei plugin</h2>
+
+<p>Un sito web che offre un plugin di ricerca può pubblicizzarlo in modo che gli utenti di Firefox possano facilmente scaricarlo e installarlo.</p>
+
+<p>Per supportare la ricerca automatica dei plugin, occorre semplicemente aggiungere una linea alla sezione <code>&lt;HEAD&gt;</code> della pagina web:</p>
+
+<pre class="eval">&lt;link rel="search" type="application/opensearchdescription+xml" title="<em>nomeRicerca</em>" href="<em>urlPlugin</em>"&gt;
+</pre>
+
+<p>Gli elementi da sostituire sono spiegati di seguito:</p>
+
+<dl>
+ <dt><strong>nomeRicerca</strong></dt>
+ <dd>Il nome della ricerca, come "Cerca in MDC" o "Cerca in Yahoo!".</dd>
+</dl>
+
+<dl>
+ <dt><strong>urlPlugin</strong></dt>
+ <dd>L'URL del plugin di ricerca in XML, dal quale il browser può scaricarlo.</dd>
+</dl>
+
+<p>Se il sito offre più plugin di ricerca, è possibile supportare la ricerca automatica per tutti quanti. Un esempio:</p>
+
+<pre class="eval">&lt;link rel="search" type="application/opensearchdescription+xml" title="MioSito: cerca per autore" href="<a class="external" href="http://www.miosito.com/per_autore.xml" rel="freelink">http://www.miosito.com/per_autore.xml</a>"&gt;
+&lt;link rel="search" type="application/opensearchdescription+xml" title="Miosito: cerca per titolo" href="<a class="external" href="http://www.miosito.com/per_titolo.xml" rel="freelink">http://www.miosito.com/per_titolo.xml</a>"&gt;
+</pre>
+
+<p>In questo modo, il sito può offrire entrambi i plugin di ricerca (ricerca per titolo e ricerca per autore) come entità separate.</p>
+
+<h2 id="Esempio:_cercare_in_Yahoo.21" name="Esempio:_cercare_in_Yahoo.21">Esempio: cercare in Yahoo!</h2>
+
+<p>Il seguente XML è il plugin di ricerca per Firefox 2 per le ricerche attraverso Yahoo!:</p>
+
+<pre>&lt;SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/"&gt;
+&lt;ShortName&gt;Yahoo&lt;/ShortName&gt;
+&lt;Description&gt;Cerca in Yahoo&lt;/Description&gt;
+&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;
+&lt;SuggestionUrl&gt;http://ff.search.yahoo.com/gossip?output=fxjson&amp;command=&lt;/SuggestionUrl&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,R0lGODlhEAAQAJECAP8AAAAAAP///wAAACH5BAEAAAIALAAAAAAQABAAAAIplI+py+0NogQuyBDEnEd2kHkfFWUamEzmpZSfmaIHPHrRguUm/fT+UwAAOw==&lt;/Image&gt;
+&lt;Url type="text/html" method="GET" template="http://search.yahoo.com/search"&gt;
+  &lt;Param name="p" value="{searchTerms}"/&gt;
+  &lt;Param name="ei" value="UTF-8"/&gt;
+  &lt;Param name="fr" value="moz2"/&gt;
+&lt;/Url&gt;
+&lt;SearchForm&gt;http://search.yahoo.com/&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+
+<p>Diciamo che l'utente sceglie di utilizzare Yahoo! come motore di ricerca: inserisce "mozilla" nella barra di ricerca e preme il tasto invio. Firefox utilizzerà la descrizione qui sopra per costruire il seguente URL:</p>
+
+<p><span class="nowiki">http://search.yahoo.com/search?p=mozilla&amp;ei=UTF-8&amp;fr=moz2</span></p>
+
+<p>Se l'utente clicca sull'icona nella barra di ricerca, o sceglie l'opzione "Cerca sul web" nel menu Strumenti quando la barra non è visibile, il browser lo porterà a <span class="nowiki">http://search.yahoo.com/</span>, il valore dell'elemento <code>&lt;SearchForm&gt;</code>.</p>
+
+<h2 id="Esempio:_cercare_in_MDC" name="Esempio:_cercare_in_MDC">Esempio: cercare in MDC</h2>
+
+<p>Questo plugin permette di cercare facilmente dei termini nel sito Mozilla Developer Center.</p>
+
+<pre>&lt;SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/"&gt;
+&lt;ShortName&gt;MDC&lt;/ShortName&gt;
+&lt;Description&gt;Cerca in Mozilla Developer Center&lt;/Description&gt;
+&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAABGdBTUEAAK%2FINwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHWSURBVHjaYvz%2F%2Fz8DJQAggJiQOe%2Ffv2fv7Oz8rays%2FN%2BVkfG%2FiYnJfyD%2F1%2BrVq7ffu3dPFpsBAAHEAHIBCJ85c8bN2Nj4vwsDw%2F8zQLwKiO8CcRoQu0DxqlWrdsHUwzBAAIGJmTNnPgYa9j8UqhFElwPxf2MIDeIrKSn9FwSJoRkAEEAM0DD4DzMAyPi%2FG%2BQKY4hh5WAXGf8PDQ0FGwJ22d27CjADAAIIrLmjo%2BMXA9R2kAHvGBA2wwx6B8W7od6CeQcggKCmCEL8bgwxYCbUIGTDVkHDBia%2BCuotgACCueD3TDQN75D4xmAvCoK9ARMHBzAw0AECiBHkAlC0Mdy7x9ABNA3obAZXIAa6iKEcGlMVQHwWyjYuL2d4v2cPg8vZswx7gHyAAAK7AOif7SAbOqCmn4Ha3AHFsIDtgPq%2FvLz8P4MSkJ2W9h8ggBjevXvHDo4FQUQg%2FkdypqCg4H8lUIACnQ%2FSOBMYI8bAsAJFPcj1AAEEjwVQqLpAbXmH5BJjqI0gi9DTAAgDBBCcAVLkgmQ7yKCZxpCQxqUZhAECCJ4XgMl493ug21ZD%2BaDAXH0WLM4A9MZPXJkJIIAwTAR5pQMalaCABQUULttBGCCAGCnNzgABBgAMJ5THwGvJLAAAAABJRU5ErkJggg%3D%3D&lt;/Image&gt;
+&lt;Url type="text/html" method="GET" template="http://developer.mozilla.org/en/docs/Special:Search?search={searchTerms}"/&gt;
+&lt;SearchForm&gt;http://developer.mozilla.org/en/docs/Special:Search&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+
+<p>Si noti in questo caso che invece di utilizzare <code>&lt;Param&gt;</code> per definire i parametri del motore di ricerca, sono stati semplicemente incorporati dentro il modello di URL. Questo in effetti è il metodo preferibile quando si utilizza il metodo <code>GET</code>. <code>&lt;Param&gt;</code> dovrebbe essere utilizzato per il metodo <code>POST</code>.</p>
+
+<h2 id="Suggerimenti_per_la_risoluzione_dei_problemi" name="Suggerimenti_per_la_risoluzione_dei_problemi">Suggerimenti per la risoluzione dei problemi</h2>
+
+<p>Se c'è un errore nell'XML del plugin di ricerca, si dovrebbero incontrare degli errori mentre il plugin viene aggiunto in Firefox (Bon Echo) Alpha 3. Il messaggio d'errore però potrebbe non essere molto d'aiuto, perciò i seguenti suggerimenti potrebbero aiutare a risolvere il problema.</p>
+
+<ul>
+ <li>Assicurarsi per l'XML sia ben formato. E' possibile eseguire questo controllo caricando il file direttamente in Firefox. Le "e commerciali" nell'URL del template devono essere sostituite con &amp;amp; e i tag devono essere chiusi con un / finale o con un tag di chiusura.</li>
+ <li>L'attributo <code>xmlns</code> è importante: senza di esso potrebbe apparire un messaggio di errore che dice: "Bon Echo could not download the plugin from (URL)" (o la sua traduzione in italiano).</li>
+</ul>
+
+<p>Inoltre, servizio di plugin di ricerca fornisce un meccanismo di log che potrebbe tornare utile agli sviluppatori di plugin. Si utilizzi<em>about:config</em> per impostare la preferenza '<code>browser.search.log</code>' a <code>true</code>. Quando si aggiunge un plugin di ricerca, appariranno le informazioni loggate nella Console degli errori (Tools-&gt;Error Console).</p>
+
+<h2 id="OpenSearch" name="OpenSearch">OpenSearch</h2>
+
+<p>Firefox 2 supporta anche il formato <a class="external" href="http://opensearch.a9.com/">OpenSearch</a> di Amazon A9 per condividere i risultari delle ricerche. Se si scrive un plugin XML utilizzando le specifiche che si trovano in <a class="external" href="http://opensearch.a9.com/spec/1.1/description/">OpenSearch description syntax</a>, può successivamente essere inserito nella directory searchengines.</p>
+
+<p>Il formato OpenSearch Description è simile al formato Mozilla SearchPlugin. Le differenze principali sono l'elemento radice e il namespace XML:</p>
+
+<pre>&lt;xml version="1.0"  encoding="UTF-8"?&gt;
+&lt;OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"&gt;
+...
+&lt;/OpenSearchDescription&gt;
+</pre>
+
+<h2 id="Materiale_di_riferimento" name="Materiale_di_riferimento">Materiale di riferimento</h2>
+
+<ul>
+ <li>A9.com <a class="external" href="http://opensearch.a9.com/">OpenSearch Documentation</a></li>
+ <li>Su technorati.com: <a class="external" href="http://technorati.com/osd.xml">working osd.xml</a></li>
+ <li>Ulteriori informazioni sui problemi della ricerca automatica su Bugzilla [<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=340208">] </a></li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Data:_URL">Data:</a> Schema degli URI</li>
+ <li><a class="external" href="http://www.edazzle.net/os/generate.aspx">OpenSearch Plugin Generator</a> - crea dei plugin OpenSearch per Firefox2. - <a class="external" href="http://www.edazzle.net/os/pluginlist.aspx">Lista dei plugin generati</a></li>
+</ul>
+
+<p>{{ languages( { "ca": "ca/Creaci\u00f3_de_connectors_MozSearch", "ja": "ja/Creating_MozSearch_plugins", "en": "en/Creating_MozSearch_plugins" } ) }}</p>

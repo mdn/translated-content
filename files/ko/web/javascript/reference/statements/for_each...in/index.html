@@ -1,0 +1,85 @@
+---
+title: for each...in
+slug: Web/JavaScript/Reference/Statements/for_each...in
+tags:
+  - Deprecated
+  - E4X
+  - JavaScript
+  - Obsolete
+  - Statement
+translation_of: Archive/Web/JavaScript/for_each...in
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<div class="warning">
+<p>The <code>for each...in</code> statement is deprecated as the part of ECMA-357 (<a href="/en-US/docs/Archive/Web/E4X" title="/en-US/docs/E4X">E4X</a>) standard. E4X support has been removed. Consider using <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> instead.<br>
+ <br>
+ <strong>Firefox now warns about the usage of <code>for each...in</code> and it no longer works starting with Firefox 57.<br>
+ Please see <a href="/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated">Warning: JavaScript 1.6's for-each-in loops are deprecated</a> for migration help.</strong></p>
+</div>
+
+<p><code><strong>for each...in</strong></code> 문은 객체의 모든 속성 값에 대해 지정된 변수를 반복합니다. 각각의 고유한 특성에 대해 지정된 명령문이 실행됩니다.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">for each (<em>variable</em> in <em>object</em>) {
+  <em>statement</em>
+}</pre>
+
+<dl>
+ <dt><code>variable</code></dt>
+ <dd>var 키워드로 선택적으로 선언된 속성 값을 반복하는 변수입니다. 이 변수는 루프가 아니라 함수의 local이 됩니다.</dd>
+</dl>
+
+<dl>
+ <dt><code>object</code></dt>
+ <dd>반복될 객체입니다.</dd>
+</dl>
+
+<dl>
+ <dt><code>statement</code></dt>
+ <dd>각 속성에 대해 실행할 명령문입니다. 루프 내에서 여러 명령문을 실행하려면 블록 명령문 ({...})을 사용하여 해당 명령문을 그룹화하십시오.</dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p>일부 기본 제공 속성은 반복되지 않습니다. 여기에는 객체 기본 제공 메서드 전부가 포함됩니다.</p>
+
+<p>ex) String의 indexOf 메소드.</p>
+
+<p>그러나 사용자가 정의한 모든 속성은 반복됩니다.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_for_each...in">Using <code>for each...in</code></h3>
+
+<p><strong>Warning:</strong> Never use a loop like this on arrays. Only use it on objects. See <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> for more details.</p>
+
+<p>The following snippet iterates over an object's properties, calculating their sum:</p>
+
+<pre class="brush:js">var sum = 0;
+var obj = {prop1: 5, prop2: 13, prop3: 8};
+
+for each (var item in obj) {
+  sum += item;
+}
+
+console.log(sum); // logs "26", which is 5+13+8</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>Not part of a current ECMA-262 specification. Implemented in JavaScript 1.6 and deprecated.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("javascript.statements.for_each_in")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> - a similar statement that iterates over the property <em>names</em>.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> - a similar statement that iterates over the property <em>values</em> but can only be used for iteratable types, so not for generic objects</li>
+ <li><code><a href="/en-US/docs/JavaScript/Reference/Statements/for">for</a></code></li>
+</ul>

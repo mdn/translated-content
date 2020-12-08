@@ -1,0 +1,73 @@
+---
+title: 'Midas editor, cambiare le impostazioni di sicurezza'
+slug: Midas/Security_preferences
+tags:
+  - Firefox
+  - Gecko
+  - Midas
+  - Non-standard
+  - Sicurezza
+  - editor
+translation_of: Mozilla/Projects/Midas/Security_preferences
+---
+<div class="note">
+<p><strong>Nota:</strong> Se hai raggiunto questa pagina da un messaggio di Firefox oppure da un altro prodotto Mozilla, prova ad utilizzare gli shortcut da tastiera : taglia,copia ed incolla :</p>
+
+<ul>
+ <li>Copia : Ctrl+C or Ctrl+Insert (command+C sul Mac)</li>
+ <li>Incolla : Ctrl+V or Shift+Insert (command+V sul Mac)</li>
+ <li>Taglia : Ctrl+X or Shift+Delete (command+X sul Mac)</li>
+</ul>
+
+<p>Il resto delle informazioni presenti in questa pagina sono per sviluppatori web ed utenti esperti. Per favore non tentare di modificare questa pagina</p>
+</div>
+
+<p>Per proteggere la privacy degli utenti, gli scripts non autorizzati non possono invocare taglia, copia ed incolla in Midas, il text editor di Mozilla. Questo significa che i pulsanti corrispondenti in <a href="http://www-archive.mozilla.org/editor/midasdemo/" title="http://www-
+archive.mozilla.org/editor/midasdemo/">Mozilla Rich Text Editing demo page</a> non funzioneranno. Per abilitare queste funzioni, devi modificare le preferenze del tuo browser.</p>
+
+<div class="warning">
+<p><strong>Attenzione :</strong> Cambiando queste impostazioni, il tuo browser diventa vulnerabile, soprattutto se fornisci permessi a siti poco sicuri. Cambia questi settaggi solo se hai bisogno di testare il demo sopra oppure per testare un tuo addon per Firefox. Assicurati di ripristinare questi settaggi quando hai concluso</p>
+</div>
+
+<h2 id="Cambiare_le_preferenze_in_Firefox">Cambiare le preferenze in Firefox</h2>
+
+<ol>
+ <li>Chiudi Firefox. Se hai il quick launch attivo (su Windows è un icona nella toolbar), chiudi anche quella.</li>
+ <li><a class="external" href="http://support.mozilla.com/en-US/kb/Profiles">Cerca la directory contenente il tuo profilo Firefox</a></li>
+ <li>Apri il file <code class="filename">user.js</code> presente nella cartella in un text editor. Se il file <code>user.js</code> non è presente, creane uno.</li>
+ <li>Aggiungi queste righe al file <code class="filename">user.js</code>:
+  <pre class="code">user_pref("capability.policy.policynames", "allowclipboard");
+user_pref("capability.policy.allowclipboard.sites", "https://www-archive.mozilla.org");
+user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
+user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+</pre>
+ </li>
+ <li>Modifica l' URL <span class="external"><code class="url">https://www.mozilla.org</code></span> con il sito verso cui vuoi abilitare questa funzione.</li>
+ <li>Salva il file e apri Firefox. I bottoni della Clipboard nel demo, o bottoni simili nel sito da te indicato, ora dovrebbero funzionare.</li>
+</ol>
+
+<div class="note"><strong>Nota:</strong> E' preferibile un sito come da protocollo specifico.. Esempio:
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "http://www-archive.mozilla.org")
+</pre>
+
+<p>non è uguale a :</p>
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "https://www-archive.mozilla.org")
+</pre>
+
+<p>Questo perchè il primo esempio usa <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP</a> mentre il secondo usa HTTPS.</p>
+Se vuoi consentire a multipli url di accere alla funzione "Incolla", separa gli URLs con uno spazio. Esempio :
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "https://www-archive.mozilla.org https://developer.mozilla.org")
+</pre>
+</div>
+
+<p>Ancora, non dimenticare i rischi per la sicurezza a cui incorri e assicurati alla conclusione, di aver rimosso i permessi di accesso .</p>
+
+<h2 id="Guarda_anche">Guarda anche</h2>
+
+<ul>
+ <li id="For_more_information_about_security_policies.2C_see_this_article_about_Configurable_Security_Policies.">Per maggiori informazioni riguardo le regole sulla sicurezza, leggi questo articolo <a href="http://www.mozilla.org/projects/security/components/ConfigPolicy.html" title="http://www.mozilla.org/projects/security/components/ConfigPolicy.html">Regole sulla sicurezza configurabili</a>.</li>
+ <li><a href="/en-US/docs/Web/Security/CSP">CSP</a> e <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">Politica sulle direttive</a>.</li>
+</ul>

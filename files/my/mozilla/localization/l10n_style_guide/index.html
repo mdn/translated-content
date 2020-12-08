@@ -1,0 +1,485 @@
+---
+title: Mozilla L10n ပုံစံပြလမ်းညွှန်
+slug: Mozilla/Localization/L10n_Style_Guide
+translation_of: Mozilla/Localization/L10n_Style_Guide
+---
+<h3 id="မိတ်ဆက်"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">မိတ်ဆက်</span></h3>
+
+<div id="magicdomid8"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Style guides define the standard against which we determine a translation's quality. They contain rules that are both defined by Mozilla and by Mozilla's localization communities on how to best translate text in Mozilla products, websites, and other projects. Style guides are used to both translate and evaluate a translation's quality. By following these rules, a translator has a better chance of producing a high quality translation that represents Mozilla values and culture. Some examples of international style guides created by other organizations are:</span></div>
+
+<ul>
+ <li id="magicdomid9"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf">https://help.apple.com/asg/mac/2013/ASG_2013.pdf</a></span></li>
+ <li id="magicdomid10"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://www.microsoft.com/Language/en-US/StyleGuides.aspx">https://www.microsoft.com/Language/en-US/StyleGuides.aspx</a></span></li>
+ <li><a href="https://www.facebook.com/translations/style_guides">https://www.facebook.com/translations/style_guides</a></li>
+</ul>
+
+<div><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">This style guide is broken up into two main parts: the first contains rules that are language-specific and must be defined by each Mozilla l10n community (covering language-specific style, terminology, and units); the second contains general rules that Mozilla has defined for translators of all languages that can help you translate well (covering principles of accuracy and fluency). Please adapt part one of this style guide to your l10n community's rules for style, terminology, and units. Wherever possible, refer to existing national standards for units, spelling, and grammar in your community's adaptation of the first part of this style guide.</span></div>
+
+<h3 id="sect1"> </h3>
+
+<h2 id="Language-specific_Mozilla_style">Language-specific Mozilla style</h2>
+
+<ol style="margin-left: 80px;">
+</ol>
+
+<h3 id="ပုံစံ">ပုံစံ</h3>
+
+<div id="magicdomid16"><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Your localization community's style is largely up to you to define. It is a part of your community's instructions and standards for translating strings within each project type. Style encompasses various elements, such as formality, tone, natural expression, handling cultural references, idioms, or slang, and maintaining consistency with Mozilla and 3rd party branding and style guides. Your localization community should define these style elements for localizing Mozilla projects into your language. Let's go through these main aspects of Style.</span></div>
+
+<div id="magicdomid17"> </div>
+
+<h5 id="Formality_and_Tone">Formality and Tone</h5>
+
+<div id="magicdomid18"><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">When determining the formality or tone of a Mozilla l10n project in your language, ask yourself these questions:</span></div>
+
+<ul>
+ <li>Who is the target user for this project and what is their background?</li>
+ <li>How would a target user for this project expect to interact with this project? For example, would they expect a friendly, casual interaction?</li>
+ <li>Is formal language appropriate for all of your language's Mozilla l10n projects, or only some of them? Which ones?</li>
+ <li>Is informal language appropriate for all of your language's Mozilla l10n projets, or only some of them? Which ones?</li>
+</ul>
+
+<div><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">In fact, localization should not use a level of formality higher or lower than required by this community-defined style guideline. An example of this would be using "click here" (not formal) vs. "please click here" (more formal). Also, the tone employed throughout a l10n project(s) should stay consistent within itself. </span></div>
+
+<div> </div>
+
+<h5 id="Natural_expression">Natural expression</h5>
+
+<div id="magicdomid22"><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Using natural expressions make your localization sound natural to a native speaker. If your translation does not follow the community defined language guidelines for translating content that contains local or natural expressions, this results in a mediocre and/or awkward translation. Teams should be careful to address those and keep them in mind while translating, which is why it is an important section to address in a Style Guide. An example of a natural expression in a translation would be translating the Spanish phrase, "En ocho días." In English, one might translate this as, "in eight days" or "in a week." The latter is the more natural translation, although both could be considered correct. </span></div>
+
+<div> </div>
+
+<div><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">In this section, form guidelines for how to perform a natural sounding localization. This might take some time and experience to find the right examples to include or create the right guidelines for your language.</span></div>
+
+<div> </div>
+
+<h5 id="Handling_cultural_references_idioms_and_slang">Handling cultural references, idioms, and slang</h5>
+
+<p><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Cultural references, idioms, and slang require a full understanding of these references between the cultures of your source and target languages. An example of a cultural reference in English would be the phrase, "kick-off meeting." This is a reference that uses an American football term. It means a meeting to begin a project. To translate it, you can follow one of two approaches:</span></p>
+
+<ol>
+ <li><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Find an equivalent reference phrase in your language.</span></li>
+ <li><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Remove the cultural reference and translate the core meaning (e.g., "a commencement meeting") </span></li>
+</ol>
+
+<p><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Define a policy for handling these cultural references, idioms, and slang that you can make standard across all projects. Consider resources you can refer back to in order to find cultural equivalents and list them in this section of your style guide (e.g., a slang dictionary in your language).  </span></p>
+
+<h5 id="Style_consistency">Style consistency</h5>
+
+<div id="magicdomid22"><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">Finally, adherence to Mozilla and third-party branding and style guides should be respected throughout a localization project. More information on Mozilla-specific branding rules can be found here: </span><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z url"><a href="https://www.mozilla.org/en-US/styleguide/identity/firefox/branding/">https://www.mozilla.org/en-US/styleguide/identity/firefox/branding/</a></span><span class="author-a-nz76zz86zs2xc75rz78zz66zz80zxz85zz71z">. For example, some brand names should never be translated, such as "Firefox".  For other brands that do not have any branding guidelines, your localization community must define whether to translate them. Be extra careful to check on branding rules before deciding to translate a name or not (whether for Mozilla or for a third-party) and to list them here in your community's l10n style guide.</span></div>
+
+<div> </div>
+
+<div>
+<h3 id="ပညာရပ်ဝေါဟာရ"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd b"><strong>ပညာရပ်ဝေါဟာရ</strong></span></h3>
+
+<div id="magicdomid29"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Here are a few existing term bases we approve of for software/internet terminology and definitions (though not limited to):</span></div>
+
+<ul>
+ <li id="magicdomid30"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Microsoft key terms and target languages  </span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://www.microsoft.com/Language/en-US/Default.aspx">https://www.microsoft.com/Language/en-US/Default.aspx</a></span></li>
+ <li id="magicdomid31"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Pootle's own term list: </span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://mozilla.locamotion.org/xx/terminology/essential.po">https://mozilla.locamotion.org/xx/terminology/essential.po</a></span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> (replace *xx* with a locale code)</span></li>
+</ul>
+
+<div id="magicdomid33"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">You should be consistent in the use of existing reliable appropriate term bases in your language.  These term bases could be developed and approved by the community, or leveraged from another party that adhere to national, international or local standards</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> for software and internet terminology</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">.  Avoid</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> the following:</span></div>
+
+<ul>
+ <li id="magicdomid34"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Inconsistent use of terminology within the project</span></li>
+ <li id="magicdomid35"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Inconsistent use of terminology with term base</span></li>
+ <li id="magicdomid36"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Inconsistent use of terminology across all of your projects</span></li>
+ <li id="magicdomid37"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">U</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">sing terminology from another subject matter (e.g., don't use medical terminology in Firefox)</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">.</span></li>
+</ul>
+
+<h5 id="Tips_on_translating_difficult_concepts"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq b"><strong>Tips on translating difficult concepts</strong></span></h5>
+
+<div id="magicdomid40"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Translating terms representing difficult concepts is a tricky task. Here are some ideas to help you translate terms that do not have equivalents in your language:</span></div>
+
+<ul>
+ <li id="magicdomid41"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Understand the meaning of the term in English. Definitions of a few key terms </span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="http://techterms.com/category/internet">http://techterms.com/category/internet</a></span></li>
+ <li id="magicdomid42"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Know your product and understand the function of the feature. </span></li>
+ <li id="magicdomid43"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Consider similar ideas for those functions in your culture.</span></li>
+ <li id="magicdomid44"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Associate a culturally specific image with the meaning and function of the term.</span></li>
+</ul>
+
+<h5 id="Developing_new_term_bases"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq b"><strong>Developing new term base</strong></span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd b"><strong>s</strong></span></h5>
+
+<div id="magicdomid47"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">What is your </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">community's</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> process </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">for</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> identifying and creating a new t</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">ermbase</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">? Here are a few things to keep in mind:</span></div>
+
+<ul>
+ <li id="magicdomid48"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Avoid </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">o</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">verly borrowing English expressions</span></li>
+ <li id="magicdomid49"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Referenc</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">ing</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> another language f</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">rom</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> the same language </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">family</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> may inspire you to come up with your own terms</span></li>
+ <li id="magicdomid50"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Consider the product target audience (age</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">,</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> level of literacy, education</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">,</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> social </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">and</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> economic status)</span></li>
+ <li id="magicdomid51"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Will you use l</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">oan words</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> from another language</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">or coin new terms in your language to maintain</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">language purity?</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> Is there government requirement or policy to encourage creating new terms for new concepts</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">, o</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">r </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">will </span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">loan words </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">be sufficient to</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> reach broader masses </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">and</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> expedite new technology adoption</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">?</span></li>
+ <li id="magicdomid52"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">If there are two acceptable scripts commonly used by the general public, what is the commonly used script on the web or government sites?  What is the script used by major web technology companies?</span></li>
+</ul>
+
+<h3 id="အတိုင်းအတာနှင့်_သဒ္ဒါ"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">အတိုင်းအတာနှင့် သဒ္ဒါ</span></h3>
+
+<div id="magicdomid57"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Many elements of unit or grammar do not exist or apply to all languages. If you find one of these elements that does not apply to your language, please remove it from your style guide.</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> For those definitions of units and grammar that apply document the reference used or how it will be applied to the translation.</span></div>
+
+<div id="magicdomid58"> </div>
+
+<div id="magicdomid59"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">The translation should strive to achieve proper unit conversions for currency, measurements, etc. for the target audience.</span></div>
+
+<div id="magicdomid60"> </div>
+
+<h4 id="Units_and_Unit_Conversion"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Units and Unit Conversion</span></h4>
+
+<h5 id="Date_Format"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Date Format</span></h5>
+
+<div id="magicdomid64"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">How are the date formats for weeks and months expressed in the following forms: </span></div>
+
+<ul>
+ <li><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">1). Fully spelled out</span> 2).<span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> 2 or 3 letters  </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">3). Single letter</span></li>
+ <li id="magicdomid65"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What is the order of Year, Month and Day?  </span></li>
+</ul>
+
+<div id="magicdomid66"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Reference material can be find here: </span>https://en.wikipedia.org/wiki/Date_format_by_country</div>
+
+<div> </div>
+
+<h5 id="Calendar_view"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">C</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">alendar</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> view: </span></h5>
+
+<ul>
+ <li id="magicdomid68"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">   Which date is considered the first day of the week, Sunday or Monday?  </span></li>
+ <li id="magicdomid69"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">   Is Lunar calendar observed?  Other regional calendar observed?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> </span></li>
+</ul>
+
+<h5 id="Time_Format"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Time Format</span></h5>
+
+<div id="magicdomid72"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">How is time expressed in your language? </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">I</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">ncluding 0-24 hr expression, hour, minute and second.</span></div>
+
+<div> </div>
+
+<h5 id="Numerals"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Numerals </span></h5>
+
+<div id="magicdomid76"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">How are numerals an</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">d percentages</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> expressed in your language?  </span></div>
+
+<div><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">    Example: 1.23 (decimal separator) or 1,000 (thousand separator) using comma or period. </span></div>
+
+<div> </div>
+
+<h5 id="Currency"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Currency  </span></h5>
+
+<div><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What are other widely used currency and symbols used in your country/language for paid apps. </span></div>
+
+<div id="magicdomid79"> </div>
+
+<h5 id="Units"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Units</span></h5>
+
+<div id="magicdomid81"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Do you use the imperial, metric or nautical system for measuring weight, distance, etc.? Source strings will use the imperial system (e.g., miles, pounds, feet, gallons, etc.). Target translations should convert imperial metrics to their measurement system.</span></div>
+
+<div id="magicdomid82"> </div>
+
+<h5 id="Names"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Name</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">s</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  </span></h5>
+
+<div id="magicdomid84">
+<p><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What are the order of family name and given name in your language</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  Here is the guideline on the naming convention from w3c.org:</span></p>
+</div>
+
+<h5 id="Address_and_Postal_Code_Format"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Address and Postal Code Format </span></h5>
+
+<div id="magicdomid87"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What is the format in your language?  </span></div>
+
+<div id="magicdomid88"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">    Example: most Asian countries start from big to small: [Country] [postal code][state/province][city][district][street number and name][building and suite numbers][addressee]</span></div>
+
+<div id="magicdomid89"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">    Countries of European languages start from small to big: [addressee][street number and name][building and suite numbers][district][city][state/province][postal code][Country]</span></div>
+
+<div id="magicdomid90"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">   </span></div>
+
+<h5 id="Telephone_Number_format"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Telephone Number format</span></h5>
+
+<div id="magicdomid92"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Space separators between digits can be different for area codes such as State (Province) and City, </span></div>
+
+<div id="magicdomid94"> </div>
+
+<h4 id="Spelling_And_Grammar_Checks"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>Spelling And Grammar Checks</strong></span></h4>
+
+<div id="magicdomid96"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Many languages have national or international standards that define spelling and grammar rules. When defining these rules for your community, make reference to those standards wherever possible. </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Do you have automated tests for spell checking and grammar</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">List those tools and dictionaries here and how regularly they should be used.</span></div>
+
+<div id="magicdomid97"> </div>
+
+<h5 id="Tense"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>Tense</strong></span></h5>
+
+<div id="magicdomid99"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Do you have standards for verb forms that indicate or express the time, such as past, present, or future, of the action or state</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">? What is your policy on tense consistency for certain use cases? For example, for phrases that ask a user to make an action (like "Download Firefox"), do you use a future tense, a command tense, or a neutral tense? </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> (See: </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Grammatical_tense">https://en.wikipedia.org/wiki/Grammatical_tense</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> )</span></div>
+
+<div id="magicdomid100"> </div>
+
+<h4 id="Word_Forms"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>Word Forms</strong></span></h4>
+
+<h5 id="Pluralization"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Pluralization  </span></h5>
+
+<div id="magicdomid106"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What is the appropriate form of expressing pluralization in your language?  </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">L</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">ist all forms of plural forms and examples if there is more than one.  </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Additional discussions can be found Here. </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals">https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> and here:  </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html</a></span></div>
+
+<div id="magicdomid107"> </div>
+
+<h5 id="Abbreviations"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Abbreviations  </span></h5>
+
+<p><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">How are abbreviations expressed in your language?</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> </span><br>
+ <span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">    Example, in English, abbreviations are made by removing most vowels and only using the first 3-5 consonants followed by a period (e.g., abbreviation = abbr.).</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  (see: </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Abbreviation%29">https://en.wikipedia.org/wiki/Abbreviation)</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">    </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> </span></p>
+
+<p><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">If your language does not have a standard way of expressing abbreviations, do you simply leave them in English?</span></p>
+
+<h5 id="Acronyms"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Acronyms </span></h5>
+
+<div id="magicdomid113">
+<p><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Are there standard</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> translat</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">ions of</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> widely accepted acronyms such as CD, DVD, MB</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> in your language? If not, do they remain in English?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> (see: </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Acronym">https://en.wikipedia.org/wiki/Acronym</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> )</span></p>
+</div>
+
+<h5 id="Punctuation"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>Punctuation</strong></span></h5>
+
+<div id="magicdomid117"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Do you use different punctuation rules in your Firefox localization than what your language standard defines? </span></div>
+
+<div><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">    Example: do you use a period at the end of every user interface element translation or only some? </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">W</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">hat is the international/national standard for punctuation in your language</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">?</span></div>
+
+<div id="magicdomid118"> </div>
+
+<h5 id="Emphasis"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Emphasis</span></h5>
+
+<p><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Is there an international/national standard for capitalization</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> in your language? </span></p>
+
+<ul>
+ <li><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">If so, do those standard rules apply in all product translations? </span></li>
+ <li><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">I</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">f this doe</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">sn</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">'t apply, how </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">do you</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> indicate importance or name of a movie, book title, product UIs (</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq u"><u>S</u></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">ave, </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj u"><u>F</u></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">ile...)</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd"> in your language?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> </span></li>
+ <li><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">How does your language handle the use of bold, italic, or underline types to express emphasis?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  ( See: </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Italic_type">https://en.wikipedia.org/wiki/Italic_type</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> )</span></li>
+</ul>
+
+<h5 id="Hyphens_and_compounds"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Hyphens and compounds </span></h5>
+
+<div id="magicdomid123"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What is the appropriate </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">way</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> of </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">using</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> hyphens and compounds in your language?  ( </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Compound_%28linguistics%29">https://en.wikipedia.org/wiki/Compound_%28linguistics%29</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> ) </span></div>
+
+<div id="magicdomid124"> </div>
+
+<h5 id="Prepositions_and_articles"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Prepositions and articles</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> </span></h5>
+
+<div id="magicdomid126"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">What is the appropriate form of expressing prepositions and articles in your language?</span></div>
+
+<div id="magicdomid127"> </div>
+
+<h5 id="Diacritics_and_Special_characters"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Diacritics and </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Special characters</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  </span></h5>
+
+<div id="magicdomid129"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Does your language use</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> any special </span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">or accented characters</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> and will they be applied and preserved in sort orders, and other aspects of the translation</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">?</span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> (see: </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Diacritic">https://en.wikipedia.org/wiki/Diacritic</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> )</span></div>
+
+<div id="magicdomid130"> </div>
+
+<h5 id="Quotes"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Quotes  </span></h5>
+
+<div id="magicdomid132">
+<p><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Does your language have a standard use for quotation marks, parenthesis, or brackets?</span></p>
+</div>
+
+<h5 id="Whitespace"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Whitespace </span></h5>
+
+<div id="magicdomid135">
+<p><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Does your language require the</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> use of white space around words, sentences, paragraphs, etc</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">.? If so, in what ways?</span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  (see: </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj url"><a href="https://en.wikipedia.org/wiki/Sentence_spacing_in_language_and_style_guides">https://en.wikipedia.org/wiki/Sentence_spacing_in_language_and_style_guides</a></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj"> )</span></p>
+</div>
+
+<h5 id="User_Interface_Elements"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>User Interface Elements</strong></span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">        </span></h5>
+
+<div id="magicdomid139"> </div>
+
+<ul>
+ <li id="magicdomid140"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Titles :  Should be brief and precise. Localizers can assume that source content reaches 2/3 of the total available line space. This allows localization text to expand and not be truncated or resolved through ellipsis. Title on the final page (meaning no more click through) should allow enough room to display full text.         </span></li>
+ <li id="magicdomid142"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Buttons: Capitalize the first letter of each word. Limit to one or two words. Use verbs that precisely describe the button's action. For example, "Cancel", "Clear History", "Add Email", "Select All", etc.          </span></li>
+ <li id="magicdomid144"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Value Selector Lists: Capitalize the first letter of the first word and the first letter of any proper nouns. Limit to one or two words. </span></li>
+ <li id="magicdomid147"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Articles:  </span><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Avoid them where possible. Articles (such as the word "the" in English) should be avoided wherever possible. User interface elements have limited space available for text. Avoiding articles will help ensure that your translations will be accommodated within the user interface.              </span></li>
+ <li id="magicdomid149"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Ellipsis: Ellipsis are often inserted automatically in the UI where strings are truncated. Ellipsis should only be used at high level of UI pages, but not be on the final page (after a series of click-through) where detailed instruction is given. Ellipsis should not be used as a way to solve truncation issue.  Focus on making the UI short and precise.  The sequence of the sentence structure in another language may not translate well, when a sentence is half finished as such.     </span></li>
+</ul>
+</div>
+
+<h2 id="အထွေထွေ_Mozilla_l10n_ပုံစံ">အထွေထွေ Mozilla l10n ပုံစံ</h2>
+
+<h3 id="မှန်ကန်မှု">မှန်ကန်မှု</h3>
+
+<h4 id="Meaning-based_translation"><span class="author-p-1460 b"><strong>Meaning-based translation</strong></span></h4>
+
+<div id="magicdomid3"><span class="author-p-1460">When it comes to translation, meaning is everything. A translator needs to understand the source text's meaning exactly. You then find its most closely linked equivalent in your own language, without adding or subtracting meaning in your translation. Finding meaning-based equivalents between languages can be difficult. To help concentrate your thoughts, ask yourself questions like:</span></div>
+
+<ul>
+ <li><span class="author-p-1460">What does this word/sentence/string mean in English?</span></li>
+ <li><span class="author-p-1460">What is the message the author is trying to send?</span></li>
+ <li><span class="author-p-1460">How would I express that meaning in my own language?</span></li>
+</ul>
+
+<p><span class="author-p-1460">Sometimes translation memory and machine translation tools can offer bad suggestions for a translation. If you use either as part of your translation workflow, make sure to correct the suggestions before submitting them. Avoid literal translation at all costs. Watch out for words that might sound or look the same between English and your language, but have a different meaning. </span></p>
+
+<h4 id="Should_not_be_translated">Should not be translated</h4>
+
+<h5 id="Shortcuts_and_accesskeys">Shortcuts and accesskeys</h5>
+
+<p>In Firefox and other software it's possible to use keyboard shortcuts to invoke a specific command. For example, to open a file in Firefox you can press the combination of keys <code>CTRL+O</code> (<code>Cmd+O</code> on Mac). The accelerator key depends on the operative system, but the letter itself is normally localizable. This is what is called a shortcut, or commandkey. For example, the <code>Open File…</code> menu item is stored as</p>
+
+<pre class="sourcelines stripes"><span id="l61"><span class="k">&lt;!ENTITY</span> <span class="ni">openFileCmd.label</span> <span class="s2">"Open File…"</span><span class="k">&gt;</span></span>
+<span id="l62"><span class="k">&lt;!ENTITY</span> <span class="ni">openFileCmd.accesskey</span> <span class="s2">"O"</span><span class="k">&gt;</span></span>
+<span id="l63"><span class="k">&lt;!ENTITY</span> <span class="ni">openFileCmd.commandkey</span> <span class="s2">"o"</span><span class="k">&gt;</span></span></pre>
+
+<p>The commandkey is stored in <code>openFileCmd.commandkey</code> (sometimes the string has <code>.key</code> in the identifier). Normally you should not localize this key, since shortcuts are often common across the entire operative system (e.g. <code>CTRL+S</code> to Save) or similar products (<code>CTRL+T</code> to open a new tab in most browsers). But it needs to be localized if the letter is not available in your keyboard layout. For example, in Italian the character <code>[</code> can be accessed through <code>ALT+è</code>, a command key <code>[</code> would not work.</p>
+
+<p>In the code fragment above you see also an accesskey defined for <code>Open File…</code>. Accesskeys are used to access a UI element from the keyboard. Example: if File menu has an accesskey F, and the Open file… menu has O, you can press ALT+F to access the menu, and then O to open a file.</p>
+
+<p>If the label is File, and the accesskey is F, it will be displayed as "<u>F</u>ile" on Windows and Linux, with an underscored F. If the accesskey was "O", so a character not available in the original label, it will be displayed underlined between parenthesis: "File (<u>O</u>)".</p>
+
+<p>One important thing to determine is if, for your locale, it makes sense to have localized accesskeys: for example, if most users will use a keyboard with a different layout (English), it might make sense to keep the English original accesskey instead of using a letter available in your localization.</p>
+
+<p>Accesskeys, like commandkeys, have their own lines within .dtd and .properties files and are usually identified by .accesskey in the string ID.</p>
+
+<h5 id="Variables"><span class="author-p-1460">Variables</span></h5>
+
+<p><span class="author-p-1460">Variables should never be translated. You can recognize a variable within a string by its beginning with a specific character (e.g., <span class="author-p-1460">$, #, %, etc.)</span> followed by a combination of words without spacing. For example, $BrandShortName and %S are variables.  </span>You can move a variable around within a string, if the translation of the string requires it.</p>
+
+<h5 id="Brands_copyright_and_trademark"><strong><span class="author-p-1460">Brands, copyright, and trademark</span></strong></h5>
+
+<p><span class="author-p-1460">Brand names, as well as copyright and trademarks should never be translated, nor transliterated into a non-Latin based script. See the <a href="https://www.mozilla.org/en-US/styleguide/communications/translation/">Mozilla branding guide</a> for more details.</span></p>
+
+<p><span style="font-family: open sans light,helvetica,arial,sans-serif; font-size: 1.286rem; letter-spacing: -0.014em; line-height: 1;">Translating c</span><span style="font-family: open sans light,helvetica,arial,sans-serif; font-size: 1.286rem; letter-spacing: -0.014em; line-height: 1;">ulture-specific references</span></p>
+
+<p>At times there will be English content included in Mozilla products or web projects (e.g., marketing campaigns) that makes references to American culture and concepts. When translating these, it is best to find an equivalent cultural reference within your own culture that accurately conveys the meaning of the English reference. For example, an American might say, "Good job, home run!" A home run is a baseball reference for a successful outcome. An appropriate translation would be an equivalent metaphor within your culture. Using soccer as an example, you might translate "Good job, home run!" into "Good job, nice goal!" in your language.</p>
+
+<p>[Add a note about Mozilla culture.]</p>
+
+<h4 id="Legal_content">Legal content</h4>
+
+<p>Mozilla projects will often contain legal content in the form of user agreements, privacy statements, etc. When reviewing the translation of legal content, Mozilla localizers should do so according to the criteria concerning accuracy, fluency, style, and terminology found within this style guide and according to Mozilla culture and values.</p>
+
+<h3 id="ကောင်းမွန်သော_ပြန်ဆိုမှု"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">ကောင်းမွန်သော ပြန်ဆိုမှု</span></h3>
+
+<div id="magicdomid153"> </div>
+
+<div id="magicdomid154"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">To produce a fluent translation, not only should the translation follow the language's standard grammar, punctuation, and spelling rules, but it should avoid being ambiguous, incoherent, or inconsistent, and unintelligible.</span></div>
+
+<div id="magicdomid155"> </div>
+
+<div id="magicdomid156"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">To avoid ambiguity, the translator must thoroughly understand the meaning behind the source text, including any references that text might include. For example, if the English source text uses the word, "it", the translator must know what "it" is to avoid an ambiguous translation. Clearly understanding the source text will also allow a translator to make the source text's logical connections in their own translation. This helps to keep the translation coherent.</span></div>
+
+<div id="magicdomid157"> </div>
+
+<div id="magicdomid158"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Inconsistency can pop up in many forms. A translator must be consistent in their use of abbreviations, references, and links within each localization project. They must also be consistent with Mozilla and the localization communities' style guides and approved terminology. Abbreviations, like terminology, should come from either a standard reference (like a dictionary of abbreviations) or should follow your language's rules for creating abbreviations. Once used, the abbreviation must remain consistent every place that it is used in the translation. Cross-references (or links) must also be consistently used within a translation. If a text contains a hyperlink URL to a support article in English, the translation should also contain a hyperlink to a translation of that support article (if available) or the English version. Links should not redirect to other pages nor should they be broken and unusable.</span></div>
+
+<div id="magicdomid159"> </div>
+
+<div id="magicdomid160"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">Finally, there are times that a translation simply doesn't make sense. It's hard to put your finger on what exactly is wrong with it, but you know it is unintelligible and not fluent. While this is uncommon, it's important to report these unintelligible translations and offer suggestions to correct them.</span></div>
+
+<div> </div>
+
+<h2 id="အခြားသိကောင်းစရာများ"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">အခြားသိကောင်းစရာများ</span></h2>
+
+<table dir="ltr" style="border-collapse: collapse; border: 1px solid #cccccc; font-family: arial,sans,sans-serif; font-size: 13px;">
+ <colgroup>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+ </colgroup>
+ <tbody>
+  <tr style="height: 21px;">
+   <td colspan="8" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom; font-weight: bold;">အနက်ပြန်ခြင်း</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၁။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">အနက်ပြန်သောကိစ္စ၌ မြန်မာလို ပြောဆိုရိုးဖြစ်သော စကားရှိလျှင် ထိုစကားမျိုးကို သုံးသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၂။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">မျိုးခြား ဝေါဟာရတခုအတွက် မြန်မာဝေါဟာရတခုကို ပြုရာတွင် ထိုမျိုးခြားဝေါဟာရ၏ အဓိပ္ပါယ်တို့ကို အစုံပါစေလိုသော ဆန္ဒဖြင့် ပြုသောအခါ တခါတရံ မြန်မာမဆံခြင်း သော်လည်းကောင်း၊ ဆို၍ မကောင်းခြင်း သော်လည်းကောင်း ဖြစ်တန်ရာသည်။ ထိုအခါမျိုးတွင် အရေးကြီးဆုံးဖြစ်သော အဓိပ္ပါယ် တခု နှစ်ခုလောက်ကို သင့်တော်အောင် ပေါင်းစပ်၍ မြန်မာဝေါဟာရ ပြုသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">(နောင်တနေ့တွင် ဝေါဟာရအဘိဓါန် စီရင်နိုင်လာသောအခါ ထိုစကားမျိုးအတွက် အသေးစိတ် အနက်ဖွင့်ရန် လိုပါလိမ့်မည်။)</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၃။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">အနက်ပြန် ဝေါဟာရတခုသည် သုံးရိုးစွဲရိုးဖြစ်၍ ထိုဝေါဟာရကို လက်ခံခဲ့ကြပြီးဖြစ်လျှင် လက်ခံခဲ့ကြသည့်အတိုင်း ထားရှိသင့်သည်။ သို့ရာတွင် ခြွင်းချက်လည်း ရှိသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom; font-weight: bold;">အသံလှယ်ခြင်း</td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၄။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">အသံလှယ်ရာ၌ သာမန်အားဖြင့် အင်္ဂလိပ်အသံထွက်ကို လှယ်သင့်ပါသည်။ (Daniel Jones ၏ English Pronouncing Dictionary ကို သုံးသင့်သည်။) သို့ရာတွင် ခြွင်းချက်လည်း ရှိသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၅။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">မြန်မာ့နှုတ် အာလျှာတို့ဖြင့် ဆို၍ ကောင်းအောင် သို့မဟုတ် မြန်မာ့နားဖြင့် ကြား၍ ကောင်းအောင် အသံလှယ်သင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၆။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">သာမန်အားဖြင့် မျိုးခြားဝေါဟာရရှိ အဆုံးသတ်အသံအတိုင်း အသံလှယ်သင့်သည်။ သို့ရာတွင် အသံထွက်တူ၍ အနက်ကွဲပြားနေလျှင် ကွဲပြားချက်ထင်ရှားအောင် ပြုပြင်သင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၇။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">အသံလှယ် ဝေါဟာရတခုသည် သုံးရိုးစွဲရိုးဖြစ်၍ ထိုဝေါဟာရကို လက်ခံခဲ့ကြပြီးဖြစ်လျှင် လက်ခံခဲ့ကြသည့်အတိုင်း ထားရှိသင့်သည်။ သို့ရာတွင် ခြွင်းချက်လည်း ရှိသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom; font-weight: bold;">အထွေထွေ</td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၈။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">ဝေါဟာရသည် သိလွယ်သော ဝေါဟာရ ဖြစ်သင့်သည်။ ကြားရုံမျှဖြင့် နားလည်သင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၉။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">သင့်တော်သည် ထင်မြင်လျှင် အရပ်သုံးစကားကိုပင် လက်ခံသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၁၀။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">မျိုးခြားဝေါဟာရတခု၌ ပညာရပ်ကိုလိုက်၍ အဓိပ္ပါယ်တမျိုးစီ ရှိနေလျှင်</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">(က)</td>
+   <td colspan="6" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">ပညာရပ်အလိုက် အဓိပ္ပါယ်ထွက်သော မြန်မာဝေါဟာရ တမျိုးစီ ရှိသင့်သည်။ သို့မဟုတ်</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">(ခ)</td>
+   <td colspan="6" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">အသံလှယ်သင့်သည်။ သို့မဟုတ်</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">(ဂ)</td>
+   <td colspan="6" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">ထိုမျိုးခြားဝေါဟာရ ပေါ်ထွက်ရာဖြစ်သော အရင်းခံပညာရပ်အလိုက် အနက်ပြန်၍ ဝေါဟာရပြုသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၁၁။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">မျိုးခြားဝေါဟာရတခုအတွက် မြန်မာပြန် ဝေါဟာရနှင့် ပါဠိဝေါဟာရရှိနေလျှင် သာမန်အားဖြင့် မြန်မာဝေါဟာရကို ယူသင့်သည်။ မလွှဲမရှောင်မှသာလျှင် အသိလွယ်သော ပါဠိဝေါဟာရကို လက်ခံသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;">၁၂။</td>
+   <td colspan="7" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">မျိုးခြားဝေါဟာရတခုအတွက် အနက်ပြန်ဝေါဟာရသော်လည်းကောင်း၊ အသံလှယ် ဝေါဟာရသော်လည်းကောင်း တခုလုံးထက် ပို၍ရှိနေလျှင် အသင့်တော်ဆုံးဟု ထင်ရသော တလုံးကို သာမန်အားဖြင့် ရွေးချယ်သင့်သည်။ သို့ရာတွင် လုံလောက်သော အကြောင်းရှိလျှင် ခြွင်းချက်လည်း ရှိသင့်သည်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+   <td style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+  </tr>
+  <tr style="height: 21px;">
+   <td colspan="8" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">ဝေါဟာရဟူသည် နာမပညတ်မျှသာဖြစ်ရာ နာမပညတ်ကို ကြားသိရုံမျှဖြင့် သက်ဆိုင်ရာ အဓိပ္ပါယ်အလုံးစုံကို သိနိုင်မည် မဟုတ်ပါ။<br>
+    ယခုညှိပြီး ဝေါဟာရတို့သည် ပြီးပြည့်စုံပြီဟု မယူဆသင့်ပါ။ ထပ်မံပြုပြင်စရာ၊ ဖြည့်စွက်စရာတို့ ရှိနေဦးမည်သာ ဖြစ်ပါသည်။ ထို့ကြောင့် ဤဝေါဟာရများကို သုံးသွားယင်း ပိုမိုကောင်းမွန်သော ဝေါဟာရများတွေ့ခဲ့သော် တက္ကသိုလ် ဘာသာပြန်နှင့် စာအုပ်ထုတ်ဝေရေးဌာနသို့ အကြံဉာဏ်ပေးပို့ကြရန် မေတ္တာရပ်ခံပါသည်။ ထိုသို့ ပေးပို့ကြသည့် အကြံဉာဏ်များအတိုင်း သင့်လျော်သလို ပြုပြင်ဖြည့်စွက်သွားမည် ဖြစ်ပါသည်။ စင်စစ်မှာ ဝေါဟာရပြုစုရေးလုပ်ငန်းသည် အစဉ်တစိုက် ဆက်၍ လုပ်ရဦးမည့်လုပ်ငန်းသာ ဖြစ်ပါသည်။<br>
+    ဝိုင်းဝန်းပြုစုကြသည့် ပညာရှင်အားလုံးကို ကျေးဇူး ဥပကာရ တင်ပါကြောင်း</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td colspan="8" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom;"> </td>
+  </tr>
+  <tr style="height: 21px;">
+   <td colspan="8" rowspan="1" style="padding: 2px 3px 2px 3px; vertical-align: bottom; font-weight: bold;">ရင်းမြစ်။</td>
+  </tr>
+  <tr style="height: 21px;">
+   <td colspan="8" style="padding: 2px 3px 2px 3px; vertical-align: bottom;">ပညာရေးဝန်ကြီးဌာန<br>
+    အထက်တန်းပညာဦးစီးဌာန<br>
+    တက္ကသိုလ်ပို့ချစာစဉ် (၃၆)<br>
+    ပညာရေးတက္ကသိုလ်<br>
+    ပညာရပ်ဝေါဟာရ<br>
+    ၁၉၇၉</td>
+  </tr>
+ </tbody>
+</table>

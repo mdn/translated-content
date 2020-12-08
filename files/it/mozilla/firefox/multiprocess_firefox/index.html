@@ -1,0 +1,73 @@
+---
+title: Multiprocess Firefox
+slug: Mozilla/Firefox/Multiprocess_Firefox
+translation_of: Mozilla/Firefox/Multiprocess_Firefox
+---
+<div>{{FirefoxSidebar}}</div><p>Nelle attuali versioni di Firefox Desktop, l'intero browser gira in un singolo processo del sistema operativo. In particolare, JavaScript che avvia la UI del browser (conosciuta anche come "codice chrome") gira nello stesso processo così come nelle pagine web (meglio conosciute come "contenuto" o "contenuto web").<br>
+ <br>
+ Le future versioni di Firefox avvieranno la UI del browser in un processo separato dal contenuto web. Nella iniziale iterazione di questa architettura tutte le schede del browser funzioneranno nello stesso processo, e la UI del browser girerà in un processo differente. Nelle prossime iterazioni, ci aspettiamo di avere più di un unico processo di contenuti. Il progetto di Firefox multiprocesso che stiamo consegnando è chiamato Electrolysis, a volte abbreviato in e10s.</p>
+
+<p>Le normali pagine web non sono influenzate da Firefox multiprocesso. Lo staff che sta lavorando a Firefox stesso e gli sviluppatori di Firefox add-on saranno influenzati se il loro i loro rilasci di codice potranno aver accesso diretto al contenuto web.</p>
+
+<p>Anziché accedere direttamente al contenuto, JavaScript di chrome dovrà usare il <a href="https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox/The_message_manager">message manager</a> per accedere al contenuto. Per rendere più semplice la transizione abbiamo implementato il <a href="https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">Cross Process Object Wrappers</a> e alcuni <a href="https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts#Compatibility_shims">integratori di compatibilità per sviluppatori di add-on</a>. Se sei uno sviluppatore di add-on che si sta chiedendo se ne sei influenzato, vedi la <a href="https://developer.mozilla.org/en-US/Add-ons/Working_with_multiprocess_Firefox">guida per operare con Firefox multiprocesso</a>.</p>
+
+<p>Firefox Multiprocesso è attualmente abilitato di default nelle builds di <a class="external-icon external" href="https://nightly.mozilla.org/">Nightly</a>.</p>
+
+<hr>
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Technical_overview">Technical overview</a></dt>
+ <dd>A very high-level view of how multiprocess Firefox is implemented.</dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Glossary">Glossary</a></dt>
+ <dd>A reference for the jargon used in multiprocess Firefox.</dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">The message manager</a></dt>
+ <dd>How to communicate between chrome and content.</dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager_Interfaces">Message Manager interfaces</a></dt>
+ <dd>Includes links to the API reference for the message manager interfaces.</dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Frame_script_environment">Frame script environment</a></dt>
+ <dd>The environment frame scripts run in, and especially how it differs from the environment for chrome code.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Motivation">Motivation</a></dt>
+ <dd>Why we're implementing multiprocess Firefox: performance, security, and stability.</dd>
+ <dt><a href="/en-US/Add-ons/Working_with_multiprocess_Firefox">Add-on migration guide</a></dt>
+ <dd>If you're an add-on developer, find out if you're affected and how to update your code.</dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">Cross Process Object Wrappers</a></dt>
+ <dd>Cross Process Object Wrappers are a migration aid, giving chrome code synchronous access to content.</dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Debugging_frame_scripts">Debugging frame scripts</a></dt>
+ <dd>Using the Browser Content Toolbox to debug frame scripts.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts">Limitations of chrome scripts</a></dt>
+ <dd>Practices that will no longer work in chrome code, and how to fix them.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">Limitations of frame scripts</a></dt>
+ <dd>Practices that will not work inside frame scripts, and what to do instead.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Contact_us">Contact us</h2>
+
+<p>Find out more about the project, get involved, or ask us your questions.</p>
+
+<ul>
+ <li><strong>Electrolysis project page</strong>: <a href="https://wiki.mozilla.org/Electrolysis">https://wiki.mozilla.org/Electrolysis</a></li>
+ <li><strong>IRC</strong>: #e10s on <a href="https://wiki.mozilla.org/IRC">irc.mozilla.org</a></li>
+ <li><strong>Mailing list</strong>: <a href="https://groups.google.com/forum/#!forum/mozilla.dev.tech.electrolysis">dev.tech.electrolysis</a></li>
+</ul>

@@ -1,0 +1,166 @@
+---
+title: Trees
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Trees
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:XPCOM_Examples" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Tree_Features">다음  »</a></p>
+</div><p></p>
+<p>XUL은 tree를 사용하여 표형태 또는 계층목록을 만드는 방법을 제공합니다.</p>
+<h3 id=".ED.8A.B8.EB.A6.AC" name=".ED.8A.B8.EB.A6.AC">트리</h3>
+<p><a href="ko/XUL/tree">tree</a>에서 가장 복잡한 요소중 하나가 tree입니다. listbox처럼, tree는 항목을 만드는 데 사용할 수 있습니다. tree 요소는 계층적 목록 또는 표를 만들 수도 있습니다. 예를 들어 메일 프로그램에서 메시지 목록, 또는 모질라의 북마크 편집창을 tree를 사용하여 만들 수 있습니다.</p>
+<p>어떤 측면에서 tree는 <code><a href="ko/XUL/listbox">listbox</a></code>와 유사합니다. 둘다 다중 행과 열을 가진 표를 만드는 데 사용할 수 있으며, 둘다 열 머릿말(header)을 담을 수 있습니다. tree는 안쪽(netsted) 행을 지원하지만, listbox는 그렇지 않습니다. 하지만, listbox는 어떤 형태의 내용도 담을 수 있습니다. 반면 tree는 글과 그림 내용만 담을 수 있습니다. listbox는 단순하게 처리할 경우, tree에 대한 대안으로 만들어졌기 때문에, 필요한 경우 대신 사용할 수 있습니다. (프로그레스 바나 체크 박스 같은 경우 트리에 추가할 수 있습니다.)</p>
+<p>tree는 칼럼 세트와 tree body 두 가지 부분으로 나누어 집니다. A tree consists of two parts, the set of columns, and the tree body.</p>
+<ul>
+ <li>칼럼 세트는 <code><a href="ko/XUL/treecol">treecol</a></code> 요소의 갯수로 표시합니다. 각 칼럼은 tree의 상위 헤더로 나타납니다.</li>
+</ul>
+<p>elements, one for each column. Each column will appear as a header at the top of the tree.</p>
+<ul>
+ <li>tree body는 tree에 포함되거나 <code><a href="ko/XUL/treechildren">treechildren</a></code> 태그로 만든 데이터를 말합니다.</li>
+</ul>
+<p>The tree is unique in that the body of the tree consists only of a single widget which draws all of the data in the tree. This contrasts with the listbox, where individual <code><a href="ko/XUL/listitem">listitem</a></code> and <code><a href="ko/XUL/listcell">listcell</a></code> tags are used to specify the rows in the listbox. In a tree, all of the data to be displayed is supplied by a separate object, called a tree view. When it comes time to display a cell, the tree widget will call out to this tree view to determine what to display, which in turn will be drawn by the tree. The tree is smart enough to only ask for information from the view for those rows that need to be displayed. This allows the view to be optimized such that it only needs to load the data for displayed content. For instance, a tree might have thousands of rows, yet most of them will be scrolled off the border of the tree, hidden from view. This means that the tree is scalable to any number of rows without any performance problems. Of course, this is independant of the performance of the view object itself.</p>
+<p>A tree view is an object which implements the <a href="ko/NsITreeView">nsITreeView</a> interface. This interface contains thirty properties and functions which you may implement. These functions will be called by the tree as necessary to retrieve data and state about the tree. For instance, the <code>getCellText()</code> function will be called to get the label for a particular cell in the tree.</p>
+<p>An advantage of using a tree view is that it allows the view to store the data in a manner which is more suitable for the data, or to load the data on demand as rows are displayed. This allows more flexibility when using trees.</p>
+<p>Naturally, having to implement a tree view with thirty or so properties and methods for every tree can be very cumbersome, especially for simple trees. Fortunately, XUL provides a couple of built-in view implementations which do most of the hard work for you. For most trees, especially when you first start to use trees, you will use one of these built-in types. However, you can create a view entirely from scratch if necessary. If you do, you might store the data in an <a href="ko/A_re-introduction_to_JavaScript#Arrays">array</a> or JavaScript data structure, or load the data from an XML file.</p>
+<p>Since the entire body of the tree is a single widget, you can't change the style of individual rows or cells in the normal way. This is because there are no elements that display the individual cells, like there is with the <a href="ko/XUL_Tutorial/List_Controls#Multi-Column_List_Boxes">listbox</a>. Instead, all drawing is done by the tree body using data supplied by the view. This is an important point and many XUL developers have trouble understanding this aspect. To modify the appearance of a tree cell, the view must instead associate a set of keywords for a row and cell. A special CSS syntax is used which styles components of the tree body with those keywords. In a sense, it is somewhat like using CSS classes. Tree styling will be discussed in detail in a <a href="ko/XUL_Tutorial/Styling_a_Tree">later section</a>.</p>
+<h3 id="Tree_.EC.9A.94.EC.86.8C" name="Tree_.EC.9A.94.EC.86.8C">Tree 요소</h3>
+<p>Trees can be created with the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> element, which is described in the following sections. There are also two elements used to define the columns to be displayed in the tree.</p>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></dt>
+ <dd>
+  This is the outer element of a tree.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></dt>
+ <dd>
+  This element is a placeholder for a set of <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> elements.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></dt>
+ <dd>
+  This is used to declare a column of the tree. By using this element, you can specify additional information about how the data in the columns are sorted and if the user can resize the columns. You should always place an <code><a href="/ko/XUL/Attribute/id" title="ko/XUL/Attribute/id">id</a></code> attribute on a column, as Mozilla uses the ids to identify the columns when rearranging and hiding them. This is no longer required in Mozilla 1.8 and later, but it is still a good idea to use ids on columns.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></dt>
+ <dd>
+  This contains the main body of the tree where the individual rows of data will be displayed.</dd>
+</dl>
+<h5 id=".EB.91.90.EA.B0.9C_.EC.B9.BC.EB.9F.BC.EC.9D.84_.EA.B0.80.EC.A7.84_.ED.8A.B8.EB.A6.AC" name=".EB.91.90.EA.B0.9C_.EC.B9.BC.EB.9F.BC.EC.9D.84_.EA.B0.80.EC.A7.84_.ED.8A.B8.EB.A6.AC">두개 칼럼을 가진 트리</h5>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_1.xul">View</a></p>
+<pre>&lt;tree flex="1"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="nameColumn" label="Name" flex="1"/&gt;
+    &lt;treecol id="addressColumn" label="Address" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren/&gt;
+
+&lt;/tree&gt;
+</pre>
+<p>First, the entire table is surrounded with a <code><code><a href="/ko/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> element. This declares an element that is used as a table or tree. As with HTML tables, the data in a tree is always organized into rows. The columns are specified using the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></code> tag.</p>
+<p>You may place as many columns as you wish in a tree. As with <a href="/ko/XUL_Tutorial/List_Controls" title="ko/XUL_Tutorial/List_Controls">listboxes</a>, a header row will appear with column labels. A drop-down menu will appear in the upper-right corner of the tree, which the user may use to show and hide individual columns. Each column is created with a <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> element. You can set the header label using the <code>label</code> attribute. You may also want to make the columns flexible if your tree is flexible, so that the columns stretch as the tree does. In this example, the second column will be approximately twice as wide as the first column. All of the columns should be placed directly inside a <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></code> element.</p>
+<p>In this case we haven't specified a view to supply the tree's data, so we'll only see column headers and an empty tree body. You may have to resize the window to see anything since there isn't any data to display. Since the tree has been marked as flexible, the body will stretch to fit the available space. Making a tree flexible is quite commonly done, as it is often the case that the data in the tree is the most significant information displayed, so it makes sense to make the tree grow to fit. However, you may specify a specific number of rows to appear in a tree by setting the <code><code id="a-rows"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> attribute on the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> element. This attribute specifies how many rows are displayed in the user interface, not how many rows of data there are. The total number of rows is supplied by the tree view. If there are more rows of data in the tree, a scrollbar will appear to allow the user to see the rest of them. If you don't specify the <code><code id="a-rows"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> attribute, the default value is 0, which means that none of the rows will appear. In this case, you would make the tree flexible. If your tree is flexible, it doesn't need a <code><code id="a-rows"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> attribute since it will grow to fit the available space.</p>
+<h3 id="The_Content_Tree_View" name="The_Content_Tree_View">The Content Tree View</h3>
+<p>Having said that the data to be displayed in a tree comes from a view and not from XUL tags, there happens to be a built-in tree view which gets its data from XUL tags. This may be a bit confusing, but essentially, one of the built-in tree views uses a set of tags which can be used to specify information about the data in the tree. The following tags are used:</p>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></dt>
+ <dd>
+  This contains a single parent row and all its descendants. This element also serves as the item which can be selected by the user. The treeitem tag would go around the entire row so that it is selectable as a whole.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></dt>
+ <dd>
+  A single row in the tree, which should be placed inside a <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> tag.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></dt>
+ <dd>
+  A single cell in a tree. This element would go inside a treerow element.</dd>
+</dl>
+<p>Conveniently, these tags may be placed directly inside the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> tag, nested in the order above. The tags define the data to be displayed in the tree body. In this case, the tree uses the built-in tree view, called a content tree view, which uses the labels and values specified on these elements as the data for the tree. When the tree needs to display a row, the tree asks the content tree view for a cell's label by calling the view's getCellText function, which in turn gets the data from the label of the appropriate <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code>.</p>
+<p>However, the three elements listed above are not displayed directly. They are used only as the source for the data for the view. Thus, only a handful of attributes apply to the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> and related elements. For instance, you cannot change the appearance of the tree rows using the <code><code id="a-style"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> attribute or with other CSS properties and the box related features such as flexibility and orientation cannot be used.</p>
+<p>In fact, apart from some tree specific attributes, the only attributes that will have any effect will be the <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> attribute to set a text label for a cell and the <code><code id="a-src"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> attribute to set an image. However, there are special ways of styling the tree and setting other features which we will see in later sections.</p>
+<p>Also, events do not get sent to <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> element and their children; instead they get sent to the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> element.</p>
+<p>That the treeitems are unlike other XUL elements is a common source of confusion for XUL developers. Essentially, the tree content view is a view where the data for the cells is supplied from tags placed inside the tree. Naturally, if you are using a different kind of view, the data will be supplied from another source, and there won't be any <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> elements at all.</p>
+<p>Let's start by looking at how to create a simple tree with multiple columns using the tree content view. This could be used to create a list of mail messages. There might be multiple columns, such as the sender and the subject.</p>
+<h4 id="treechildren_.EC.98.88.EC.A0.9C" name="treechildren_.EC.98.88.EC.A0.9C"><code>treechildren</code> 예제</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_2.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:trees1.png"></div>
+<pre>&lt;tree flex="1"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="sender" label="Sender" flex="1"/&gt;
+    &lt;treecol id="subject" label="Subject" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="joe@somewhere.com"/&gt;
+        &lt;treecell label="Top secret plans"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="mel@whereever.com"/&gt;
+        &lt;treecell label="Let's do lunch"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+</pre>
+<p>그림에서 보듯이, 두개의 자료 열을 가진 tree가 만들어졌습니다.</p>
+<p>이 tree는 두개의 열을 가지고 있고, 이 중 두번째는 첫번째보다 더많은 공간을 차지하게 되어있습니다. 이 경우 해당 열에 flex 속성을 줄 것입니다. CSS의 <code><code id="a-width"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code> 속성으로 넓이값을 줄 수도 있습니다. tree에 있는 열의 숫자만큼 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 요소를 포함시켜야 한다. 그렇지않으면 엉뚱한 일이 발생합니다.</p>
+<p><br>
+ 머릿말 행(header row)은 자동으로 만들어집니다. 오른쪽 위에 있는 버튼은 해당 열을 숨기고 감출 수 있습니다. 이 버튼을 숨기고 싶다면 <code><code id="a-hidecolumnpicker"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/hidecolumnpicker">hidecolumnpicker</a></code></code> 속성을 tree에 넣거나 true 값을 주면 됩니다. 각 열에 id 속성을 설정했는 지 또는 행의 숨김과 보기가 작동하는 지를 확인하도록 합니다.</p>
+<p>Make sure that you set an <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> attribute on each column or the hiding and showing of columns will not work in all versions of Mozilla.</p>
+<p>The <code>treechildren</code> element surrounds all of the rows. Inside the body are individual rows, which may in turn contain other rows. For a simpler tree, each row is created with the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> and <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code> elements. The <code>treerow</code> element surrounds all of the cells in a single row, while a <code>treeitem</code> element would surround a row and all of its children. Trees with nested rows are described in the next section.</p>
+<p>Inside the rows, you will put individual tree cells. These are created using the <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> element. You can set the text for the cell using the <code>label</code> attribute. The first <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> in a row determines the content that will appear in the first column, the second <code><code><a href="/ko/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> determines the content that will appear in the second column, and so on.</p>
+<p><br>
+ 사용자는 마우스로 항목을 클릭하거나 키보드를 사용해서, treeitem을 선택할 수 있습니다. Shift 또는 Control 키를 누른 상태에서 다른 행을 클릭해서 다중 항목을 선택할 수 있습니다. 다중선택을 사용 못하게 하려면, tree에 <code><code id="a-seltype"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code></code> 속성을 넣고, 값을 <code>single</code>로 합니다. 이렇게하면, 한번에 한 행만 선택할 수 있습니다.</p>
+<div class="highlight">
+ <h4 id=".EC.B0.BE.EC.9D.80_.ED.8C.8C.EC.9D.BC.EC.97.90.EC.84.9C_tree_.EC.B6.94.EA.B0.80" name=".EC.B0.BE.EC.9D.80_.ED.8C.8C.EC.9D.BC.EC.97.90.EC.84.9C_tree_.EC.B6.94.EA.B0.80">찾은 파일에서 tree 추가</h4>
+ <p>검색결과가 표시되도록 파일찾기(find files) 창에 tree를 추가해보자. 다음 코드는 iframe에 추가해야 한다. tree는 treeview를 사용합니다. 아래 코드는 <a href="ko/XUL_Tutorial/Content_Panels#iframe_example">iframe</a>에 추가할 수 있습니다.</p>
+ <pre class="eval"><span class="highlightred">&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Filename" flex="1"/&gt;
+    &lt;treecol id="location" label="Location" flex="2"/&gt;
+    &lt;treecol id="size" label="Size" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+   &lt;treeitem&gt;
+     &lt;treerow&gt;
+       &lt;treecell label="mozilla"/&gt;
+       &lt;treecell label="/usr/local"/&gt;
+       &lt;treecell label="2520 bytes"/&gt;
+     &lt;/treerow&gt;
+   &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</span>
+
+&lt;splitter collapse="before" resizeafter="grow"/&gt;
+</pre>
+ <p>파일명(filename), 위치(location) 그리고 파일크기(file size)라는 3개의 행을 가진 tree를 추가한 것입니다. 두번째 열은 더 큰 flex(flex="2")값을 가지고 있기 때문에 넓이가 2배가 됩니다. 하나의 행이 추가되었는 데, 하나의 행을 가진 표가 어떤 모습인지 설명하기 위한 것입니다. 실제 마무리 단계에서는, 검색했을 경우 해당 열은 스크립트에 의해 추가될 것입니다.</p>
+ <p>지금까지 예제는 <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-trees.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-trees.xul">View</a>에서 보실 수 있습니다.</p>
+</div>
+<p><br>
+ 다음 장에서는 <a href="ko/XUL_Tutorial/More_Tree_Features">고급 tree 기능</a>에 대해 알아 보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:XPCOM_Examples" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:More_Tree_Features">다음  »</a></p>
+</div><p></p>
+<p></p>

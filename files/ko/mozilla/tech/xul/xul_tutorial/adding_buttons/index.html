@@ -1,0 +1,102 @@
+---
+title: Adding Buttons
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Adding_Buttons
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Buttons
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_Labels_and_Images">다음  »</a></p>
+</div><p></p>
+<p>이 절에서, 우리는 창에 간단한 버튼 몇 개를 추가하는 법을 살펴보겠습니다.</p>
+<h3 id=".EC.B0.BD.EC.97.90_.EB.B2.84.ED.8A.BC_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".EC.B0.BD.EC.97.90_.EB.B2.84.ED.8A.BC_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">창에 버튼 추가하기</h3>
+<p>우리가 지금까지 만든 창은 안에 아무것도 없습니다, 그래서 아직까지는 재미있지 않습니다. 이 절에서, 우리는 찾기(Find)와 취소(Cancel) 버튼 둘을 추가합니다. 또한 창에 버튼을 두는 간단한 방법을 배웁니다.</p>
+<p>HTML처럼, XUL은 UI 요소를 만드는 데 쓸 수 있는 태그가 다수 있습니다. 이 가운데 가장 기본은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 태그입니다. 이 요소는 간단한 버튼을 만드는 데 씁니다.</p>
+<p>button 요소에는 요소와 관련된 두 주요 프로퍼티 <code>label</code>과 <code>image</code>가 있습니다. 여러분은 하나나 둘 다 필요합니다. 이와 같이, button은 label, image만이나 label과 image 둘 다 있을 수 있습니다. 예를 들어, button은 보통 대화상자에서 확인(OK)과 취소(Cancel) 버튼에 씁니다.</p>
+<h4 id="button_.EA.B5.AC.EB.AC.B8" name="button_.EA.B5.AC.EB.AC.B8">button 구문</h4>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 태그의 구문은 다음과 같습니다.</p>
+<pre>&lt;button
+    id="identifier"
+    class="dialog"
+    label="OK"
+    image="images/image.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+<p>속성은 다음과 같고, 모두 선택 속성입니다.</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>
+  여러분이 식별할 수 있도록 버튼에 붙이는 유일한 식별자. 여러분은 모든 요소에서 이 속성을 봅니다. 여러분이 스타일시트나 스크립트에서 버튼을 참조하고 싶다면 이를 쓰고 싶을 겁니다. 그러나, 여러분은 거의 모든 요소에 이 속성을 추가해야 합니다. 단순함을 위해 항상 이 입문서의 요소에 두지는 않습니다.</dd>
+ <dt>
+  <code id="a-class"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt>
+ <dd>
+  버튼의 스타일 클래스. 이는 HTML에서와 같이 작동합니다. 버튼이 안에 보이는 스타일을 나타내는 데 씁니다. 이 경우에는 <code>dialog</code>값이 쓰입니다. 대개의 경우, 여러분은 버튼에 클래스를 쓰지 않습니다.</dd>
+ <dt>
+  <code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt>
+ <dd>
+  버튼에 보이는 label. 예를 들어, 확인(
+  <i>
+   OK</i>
+  )이나 취소(
+  <i>
+   Cancel</i>
+  ). 이 속성을 빼면, 텍스트가 보이지 않습니다.</dd>
+ <dt>
+  <code id="a-image"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> </dt>
+ <dd>
+  버튼에 보이는 image의 URL. 이 속성을 빼면, image가 보이지 않습니다. 여러분은 또한 <code><a href="ko/CSS/list-style-image">list-style-image</a></code> 프로퍼티를 써서 스타일시트에 image를 지정할 수 있습니다.</dd>
+ <dt>
+  <code id="a-disabled"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+ <dd>
+  이 속성을 <code>true</code>로 설정하면, button이 기능하지 않습니다. 이는 보통 회색으로 텍스트를 그립니다. 버튼이 기능하지 않으면, 버튼의 기능이 수행될 수 없습니다. 이 속성을 아주 빼면, 버튼이 작동합니다. 여러분은 <a href="ko/JavaScript">JavaScript</a>를 써서 버튼의 기능 상태를 엇바꿀(switch) 수 있습니다.</dd>
+ <dt>
+  <code id="a-accesskey"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt>
+ <dd>
+  이는 단축키(shortcut key)로 쓸 문자로 설정돼야 합니다. 이 문자는 label 텍스트에 보여야 하고 대체로 밑줄이 그려집니다. 사용자가 ALT(나 각 플랫폼마다 다른 비슷한 키)와 access key를 눌렀을 때, 버튼은 창의 어디에서나 focus를 받습니다.</dd>
+</dl>
+<p>button은 위에 나열된 것보다 더 많은 속성을 지원함을 유념하세요. 그 밖의 속성은 <a href="ko/XUL_Tutorial/More_Button_Features">나중에 논의</a>합니다.</p>
+<h4 id=".EB.B2.84.ED.8A.BC_.EC.98.88.EC.A0.9C" name=".EB.B2.84.ED.8A.BC_.EC.98.88.EC.A0.9C">버튼 예제</h4>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:buttons1.png"></div>
+<pre>&lt;button label="Normal"/&gt;
+&lt;button label="Disabled" disabled="true"/&gt;
+</pre>
+<p>위 예제는 그림(image)처럼 버튼을 생성합니다. 첫째 버튼은 보통 버튼입니다. 둘째 버튼은 기능하지 않으므로 회색으로 나옵니다.</p>
+<p>파일 찾기(find files) 유틸리티를 위한 간단한 찾기(Find) 버튼을 만들면서 시작합니다. 아래 예제 코드는 그 방법을 보입니다.</p>
+<pre>&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<div class="note">
+ Firefox는 웹 페이지에서 chrome 창 열기를 허용하지 않으므로, 입문서의 View 링크는 보통 브라우저 창에 열림을 유념하세요. 이 때문에, button은 창을 가로질러 늘어나 보입니다. 여러분은 늘어남을 막기 위해 window 태그에 align="start"를 추가할 수 있습니다.</div>
+<div class="highlight">
+ <h5 id="findfile.xul_.EC.98.88.EC.A0.9C" name="findfile.xul_.EC.98.88.EC.A0.9C">findfile.xul 예제</h5>
+ <p>우리가 이전 절에서 만든 findfile.xul 파일에 이 코드를 추가합시다. 코드는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 태그 사이에 삽입이 필요합니다. 추가한 코드는 아래에 빨간 색으로 보입니다.</p>
+ <pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+  <span class="highlightred">&lt;button id="find-button" label="Find"/&gt;</span>
+  <span class="highlightred">&lt;button id="cancel-button" label="Cancel"/&gt;</span>
+
+&lt;/window&gt;
+</pre>
+ <div class="float-right">
+  <img alt="Image:buttons2.png"></div>
+ <p>여러분은 취소(Cancel) 버튼 또한 추가됐음을 알아챌 겁니다. 창은 두 버튼이 서로 곁에 보이도록 horizontal 방향을 주었습니다. 혹시 여러분이 Mozilla에서 그 파일을 열면, 여기 보이는 그림 같은 것을 얻습니다.</p>
+</div>
+<p> </p>
+<div class="note">
+ 우리가 XUL 파일에 직접 텍스트 label을 넣지 않았음을 유념하세요. 우리는 <a href="ko/XUL_Tutorial/Localization">텍스트가 쉽게 번역될 수 있도록 대신 엔티티</a>를 쓸 겁니다.</div>
+<p>다음 절에서, 우리는 <a href="ko/XUL_Tutorial/Adding_Labels_and_Images"> XUL 창에 label과 image를 추가</a>하는 법을 알아보겠습니다.</p>
+<p><small>같이 보기 <a href="ko/XUL_Tutorial/More_Button_Features">more button fetaures</a></small></p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_Labels_and_Images">다음  »</a></p>
+</div><p></p>
+<p></p>

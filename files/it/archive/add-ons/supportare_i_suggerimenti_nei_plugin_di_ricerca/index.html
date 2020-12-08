@@ -1,0 +1,52 @@
+---
+title: Supportare i suggerimenti nei plugin di ricerca
+slug: Archive/Add-ons/Supportare_i_suggerimenti_nei_plugin_di_ricerca
+tags:
+  - Plugin_di_ricerca
+translation_of: Archive/Add-ons/Supporting_search_suggestions_in_search_plugins
+---
+<p>MozSearch supporta i suggerimenti di ricerca; mentre l'utente scrive nella barra di ricerca, <a href="it/Firefox_2">Firefox 2</a> interroga l'URL specificato dal plugin di ricerca per ottenere i suggerimenti di ricerca.
+</p><p>Una volta che la lista è stata ottenuta, viene mostrata in una casella popup che appare sotto la barra di ricerca, che permette all'utente di selezionare uno dei termini suggeriti. Se l'utente continua a scrivere, una nuova lista di suggerimenti viene richiesta dal motore di ricerca e la casella si aggiorna.
+</p><p>I plugin di ricerca per Yahoo e Google inclusi in Firefox 2 supportano i suggerimenti di ricerca.
+</p>
+<h2 id="Implementare_il_supporto_per_i_suggerimenti_nel_plugin" name="Implementare_il_supporto_per_i_suggerimenti_nel_plugin">Implementare il supporto per i suggerimenti nel plugin</h2>
+<p>Per supportare i suggerimenti di ricerca, un plugin deve definire un elemento <code>&lt;Url&gt;</code> con un attributo <code>type</code> impostato a <code>"application/x-suggestions+json"</code>. Questo significa che ci saranno due elementi <code>&lt;Url&gt;</code>: l'altro è l'URL principale della ricerca.
+</p><p>Per esempio, il plugin di Yahoo ha il seguente <code>&lt;Url&gt;</code>:
+</p>
+<pre>&lt;Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}"/&gt;
+</pre>
+<p>Se l'utente scrive "fir" nella barra di ricerca e poi fa una pausa, Firefox inserirà "fir" al posto di <code>{searchTerms}</code> e interrogherà l'URL:
+</p>
+<pre>&lt;Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command=fir"/&gt;
+</pre>
+<p>I risultati dell'interrogazione costituiranno la lista di suggerimenti.
+</p><p>Si veda <a href="it/Creare_Plugin_MozSearch">Creare Plugin MozSearch</a> per ulteriori informazioni su come implementare un plugin di ricerca.
+</p>
+<h2 id="Implementare_il_supporto_per_i_suggerimenti_sul_server" name="Implementare_il_supporto_per_i_suggerimenti_sul_server">Implementare il supporto per i suggerimenti sul server</h2>
+<p>La maggior parte del lavoro per gestire i suggerimenti di ricerca è effettivamente implementarli lato server. Se si desidera farlo, si deve implementare un programma che, ricevendo come parametri i termini di ricerca, restituisca i suggerimenti. Il programma sarà scritto in <a class="external" href="http://www.json.org/">JavaScript Object Notation</a> (JSON).
+</p><p>Quando un browser vuole ricevere una lista di corrispondenze per un dato termine, invia una richiesta HTTP GET all'URL specificato dall'elemento <code>&lt;Url&gt;</code>.
+</p><p>Il server dovrà allora decidere quali suggerimenti offrire utilizzando quelli che vi si addicono e costruire un JSON che consiste di un minimo di due e un massimo di quattro elementi:
+</p>
+<dl><dt> <b>query string</b>
+</dt><dd> Il primo elemento nella query string originale in JSON. Questo permette a Firefox di verificare che il suggerimento corrisponda a quanto digitato dall'utente.
+</dd></dl>
+<dl><dt> <b>completion list</b>
+</dt><dd> Un array di suggerimenti. L'array deve essere racchiuso tra parentesi quadre. Per esempio: &lt;tt&gt;{{ mediawiki.external('\"termine 1\", \"termine 2\", \"termine 3\", \"termine 4\"') }}&lt;/tt&gt;
+</dd></dl>
+<dl><dt> <b>descriptions</b>
+</dt><dd> Questo elemento è opzionale ed è un array di descrizioni per ognuno dei suggerimenti presenti nella <i>completion list</i>. Queste possono essere informazioni aggiuntive che il motore di ricerca potrebbe restituire perchè vengano visualizzate dal browser, così come il numero di risultati che verranno trovati.
+</dd></dl>
+<div class="note">Questo elemento non è supportato in Firefox 2 e se presente sarà ignorato.</div>
+<dl><dt> <b>URL</b>
+</dt><dd> Questo elemento è opzionale ed è un array di URL alternativi per ognuno dei suggerimenti presenti nella <i>completion list</i>. Per esempio, se si desidera offrire una mappa di link invece di una semplice pagina di risultati, è possibile restituire un URL a una mappa in questo array.
+</dd></dl>
+<dl><dd> Se non si specifica un URL da interrogare, viene utilizzato l'URL di default specificato nell'elemento <code>&lt;Url&gt;</code> del plugin.
+</dd></dl>
+<div class="note">Questo elemento non è supportato in Firefox 2 e se presente sarà ignorato.</div>
+<p>Per esempio, se il termine di ricerca è "fir" e non si necessita di restituire alcuna descrizione o URL di ricerca alternativo, si può restituire il sequente JSON:
+</p>
+<pre class="eval">["fir", ["firefox", "first choice", "mozilla firefox"]]
+</pre>
+<p>Si noti che in questo esempio sono stati specificati solo la query string e l'array di completamento, tralasciando tutti gli elementi opzionali.
+</p><p>La completion list può includere tanti suggerimenti quanti si desidera offrirne, sebbene sia meglio mantenerla maneggevole, dato che la casella dei suggerimenti si aggiorna mente l'utente continua a scrivere. Inoltre, il criterio utilizzato per selezionare i suggerimenti da offrire viene lasciato interamente allo sviluppatore.
+</p>{{ languages( { "en": "en/Supporting_search_suggestions_in_search_plugins" } ) }}

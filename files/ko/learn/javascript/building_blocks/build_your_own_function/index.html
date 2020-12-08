@@ -1,0 +1,251 @@
+---
+title: Build your own function
+slug: Learn/JavaScript/Building_blocks/Build_your_own_function
+translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}</div>
+
+<p class="summary">이번 장에선 앞의 글에서 배운 function이론을 사용하여 사용자 정의 함수를 만들어 봅니다. 사용자 정의 함수 연습과 더불어, 함수를 다루는 몇 가지 유용한 사항들도 설명을 하겠습니다. </p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">알아야 할 것:</th>
+   <td>기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해, 자바스크립트 첫걸음, 함수 - 재사용 가능한 블록 코드</td>
+  </tr>
+  <tr>
+   <th scope="row">목표:</th>
+   <td>사용자 정의 함수를 만드는 방법에 대한 몇가지 예제 제공, 그와 관련된 여러가지 유용한 세부 사항 설명. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Active_learning_Lets_build_a_function">Active learning: Let's build a function</h2>
+
+<p>여기서 만들 사용자 정의 함수는 <code>displayMessage()</code>라고 명명하겠습니다. 이 함수는 내장함수 <a href="/en-US/docs/Web/API/Window/alert">alert()</a> 을 사용하여 메시지를 표시하는 대신 다른 방법으로 페이지에 메시지 박스를 만듭니다. 이전에도 봐온 기능이지만 다시한번 연습해보자는 의미로 브라우저의 JavaScript 콘솔에 아래처럼 입력하세요 :</p>
+
+<pre class="brush: js notranslate">alert('This is a message');</pre>
+
+<p><code>alert</code> 함수는 하나의 인수만 사용합니다. — 전달받는 인수는 브라우저의 alert박스에 표시됩니다. 인수를 다른 문자로 교체하여 시험해보세요.</p>
+
+<p><code>alert</code> 함수는 제한적 입니다. : 원하는 메시지를 출력할 순 있지만 글자 색, 아이콘 등 다른 요소는 첨부할 수 없습니다. 아래서 다른 방법을 사용하여 재미있는 무언가를 만드는 방법을 소개하겠습니다.</p>
+
+<div class="note">
+<p><strong>Note</strong>: 이 예제는 모든 모던 브라우저에서 잘 작동합니다. 하지만 조금 오래된 브라우저는 스타일이 이상하게 적용될 수 있습니다. 이번 예제를 원활하게 즐기려면 Firefox, Opera, Chrome 브라우저를 사용해주세요</p>
+</div>
+
+<h2 id="The_basic_function">The basic function</h2>
+
+<p>본격적으로 시작하기 앞서, 기본적인 함수를 만들어봅시다..</p>
+
+<div class="note">
+<p><strong>Note</strong>: 함수 명명규칙은 <a href="/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules">변수 명명규칙</a>과 동일하게 사용하는것이 좋습니다. 명명규칙이 동일해서 헷갈리지 않습니다.  — 함수는 이름 뒤에 ()괄호가 함께 쓰이지만 변수는 그렇지 않습니다.</p>
+</div>
+
+<ol>
+ <li><a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html">function-start.html</a> 파일을 연습하고있는 컴퓨터에 복사하여 저장합니다. HTML 구조는 매우 간단합니다. — body 태그에는 한 개의 버튼이 있습니다. 그리고 style 태그에 메시지 박스를 위한 CSS 블럭이 있습니다. 그리고 비어있는 {{htmlelement("script")}} 엘리먼트에 연습할 자바스크립트 코드를 앞으로 쓰겠씁니다..</li>
+ <li>다음으로 아래의 코드를 <code>&lt;script&gt;</code> 엘리먼트에 써봅시다. :
+  <pre class="brush: js notranslate">function displayMessage() {
+
+}</pre>
+  <code>function</code>이라는 키워드로 블럭 작성을 시작했습니다. 이 의미는 방금 우리가 함수를 정의했다는 뜻 입니다. 그리고 뒤에는 만들고자 하는 이름을 정의했고, 괄호에 이어 중괄호를 넣었습니다. 함수에 전달하고자 하는 인수는 괄호()안에 작성합니다. 그리고 우리가 만들고자 하는 로직은 중괄호 안에 작성합니다..</li>
+ <li>마지막으로 아래의 코드를 중괄호 안에 작성합니다.:
+  <pre class="brush: js notranslate">const html = document.querySelector('html');
+
+const panel = document.createElement('div');
+panel.setAttribute('class', 'msgBox');
+html.appendChild(panel);
+
+const msg = document.createElement('p');
+msg.textContent = 'This is a message box';
+panel.appendChild(msg);
+
+const closeBtn = document.createElement('button');
+closeBtn.textContent = 'x';
+panel.appendChild(closeBtn);
+
+closeBtn.onclick = function() {
+  panel.parentNode.removeChild(panel);
+}</pre>
+ </li>
+</ol>
+
+<p>코드가 꽤 긴 편이니 조금씩 설명을 이어가겠습니다..</p>
+
+<p>첫 번째 줄에서 {{domxref("document.querySelector()")}} 라는 DOM API를 사용했습니다. 이 API는 {{htmlelement("html")}} 엘리먼트를 선택하여 <code>html</code>이라는 변수에 저장합니다. 따라서 아래와 같은 작업을 수행할 수 있습니다. :</p>
+
+<pre class="brush: js notranslate">const html = document.querySelector('html');</pre>
+
+<p>다음 줄에선 마찬가지로 DOM API인 {{domxref("document.createElement()")}} 을 사용하여 {{htmlelement("div")}} 엘리먼트를 생성한 후 <code>panel</code>변수에 저장합니다. 이 엘리먼트는 메시지 상자 바깥쪽 컨테이너가 될 것 입니다.</p>
+
+<p>그리고 또 다른 DOM API인 {{domxref("Element.setAttribute()")}} 을 사용하여 <code>class</code> 속성을 만들고 그 이름을 <code>msgBox</code>로 지정했습니다. 이 작업으로 스타일을 좀 더 쉽게 적용할 수 있습니다. — HTML 파일의 CSS 블럭을 살펴보면 <code>.msgBox</code> 클래스 셀렉터를 사용하여 메시지 박스와 그 내용을 스타일링할 수 있음을 알 수 있습니다.</p>
+
+<p>마지막으로, {{domxref("Node.appendChild()")}} DOM 함수를 사용하여 <code>html</code> 변수 안의 엘리먼트에 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">panel</span></font> 변수에 저장된 <code>&lt;div&gt;</code>엘리먼트를 자식 엘리먼트로 삽입했습니다. 변수 선언만으로는 페이지에 표시할 수 없습니다. 반드시 아래처럼 작성하여 엘리먼트가 어디에 표시되는지 명시할 필요가 있습니다. </p>
+
+<pre class="brush: js notranslate">const panel = document.createElement('div');
+panel.setAttribute('class', 'msgBox');
+html.appendChild(panel);</pre>
+
+<p>다음 두 섹션은 위에서 봤던것과 동일한 <code>createElement()</code> 그리고 <code>appendChild()</code> 함수를 사용합니다. —  {{htmlelement("p")}} 그리고 {{htmlelement("button")}} — 만들어  <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">panel</span></font>의 <code>&lt;div&gt;</code>태그의 자식 엘리먼트로 넣습니다. 우리는 {{domxref("Node.textContent")}} 속성을 사용하여 버튼에 x 라는 글자를 새겨넣습니다. 이 버튼은 사용자가 메시지 박스를 닫기를 원할 때 클릭/활성화 해야 하는 버튼입니다..</p>
+
+<pre class="brush: js notranslate">const msg = document.createElement('p');
+msg.textContent = 'This is a message box';
+panel.appendChild(msg);
+
+const closeBtn = document.createElement('button');
+closeBtn.textContent = 'x';
+panel.appendChild(closeBtn);</pre>
+
+<p>마지막으로 {{domxref("GlobalEventHandlers.onclick")}} 이벤트 핸들러를 사용하여 사용자가 x버튼을 클릭하면 메시지상자를 닫을 수 있게 만듭니다. </p>
+
+<p>간단히 말하면 <code>onclick</code> 핸들러는 버튼 (또는 실제 페이지의 다른 엘리먼트) 에서 사용할 수 있으며 버튼이 클릭됐을때 실행될 코드를 작성할 수 있습니다. 더 자세한 기능은 <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events article</a>을 참조하세요. 이제 <code>onclick</code> 핸들러를 익명 함수와 동일하게 만들고, 그 안에 버튼이 클릭됐을 때 실행될 코드를 작성합니다. 함수 안쪽에서 {{domxref("Node.removeChild()")}} DOM API 함수를 사용하여 HTML 엘리먼트를 삭제하도록 명령합니다. — 이 경우 <code>panel</code> 변수의 <code>&lt;div&gt;</code>입니다.</p>
+
+<pre class="brush: js notranslate">closeBtn.onclick = function() {
+  panel.parentNode.removeChild(panel);
+}</pre>
+
+<p>기본적으로 전체 코드 블럭은 아래처럼 보이는 HTML 블록을 생성하고 페이지에 나타내줍니다. :</p>
+
+<pre class="brush: html notranslate">&lt;div class="msgBox"&gt;
+  &lt;p&gt;This is a message box&lt;/p&gt;
+  &lt;button&gt;x&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+<p>많은 코드를 살펴봤습니다. — 예제에 포함된 CSS코드를 포함한 모든 코드를 지금 당장 이해할 필요는 없습니다. 이 예제에서 중점적으로 다루고자 하는 부분은 함수의 구조와 사용 방법 이었습니다. CSS 코드는 학습자의 흥미를 유도하기 위해 재미있는 것을 보여주고자 만들었습니다.</p>
+
+<h2 id="Calling_the_function">Calling the function</h2>
+
+<p>You've now got your function definition written into your <code>&lt;script&gt;</code> element just fine, but it will do nothing as it stands.</p>
+
+<ol>
+ <li>Try including the following line below your function to call it:
+  <pre class="brush: js notranslate">displayMessage();</pre>
+  This line invokes the function, making it run immediately. When you save your code and reload it in the browser, you'll see the little message box appear immediately, only once. We are only calling it once, after all.</li>
+ <li>
+  <p>Now open your browser developer tools on the example page, go to the JavaScript console and type the line again there, you'll see it appear again! So this is fun — we now have a reusable function that we can call any time we like.</p>
+
+  <p>But we probably want it to appear in response to user and system actions. In a real application, such a message box would probably be called in response to new data being available, or an error having occurred, or the user trying to delete their profile ("are you sure about this?"), or the user adding a new contact and the operation completing successfully, etc.</p>
+
+  <p>In this demo, we'll get the message box to appear when the user clicks the button.</p>
+ </li>
+ <li>Delete the previous line you added.</li>
+ <li>Next, we'll select the button and store a reference to it in a constant. Add the following line to your code, above the function definition:
+  <pre class="brush: js notranslate">const btn = document.querySelector('button');</pre>
+ </li>
+ <li>Finally, add the following line below the previous one:
+  <pre class="brush: js notranslate">btn.onclick = displayMessage;</pre>
+  In a similar way to our <code>closeBtn.onclick...</code> line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our function name directly.</li>
+ <li>Try saving and refreshing the page — now you should see the message box appear when you click the button.</li>
+</ol>
+
+<p>You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to</p>
+
+<pre class="brush: js notranslate">btn.onclick = displayMessage();</pre>
+
+<p>and saving and reloading, you'll see that the message box appears without the button being clicked! The parentheses in this context are sometimes called the "function invocation operator". You only use them when you want to run the function immediately in the current scope. In the same respect, the code inside the anonymous function is not run immediately, as it is inside the function scope.</p>
+
+<p>If you tried the last experiment, make sure to undo the last change before carrying on.</p>
+
+<h2 id="Improving_the_function_with_parameters">Improving the function with parameters</h2>
+
+<p>As it stands, the function is still not very useful — we don't want to just show the same default message every time. Let's improve our function by adding some parameters, allowing us to call it with some different options.</p>
+
+<ol>
+ <li>First of all, update the first line of the function:
+  <pre class="brush: js notranslate">function displayMessage() {</pre>
+
+  <div>to this:</div>
+
+  <pre class="brush: js notranslate">function displayMessage(msgText, msgType) {</pre>
+  Now when we call the function, we can provide two variable values inside the parentheses to specify the message to display in the message box, and the type of message it is.</li>
+ <li>To make use of the first parameter, update the following line inside your function:
+  <pre class="brush: js notranslate">msg.textContent = 'This is a message box';</pre>
+
+  <div>to</div>
+
+  <pre class="brush: js notranslate">msg.textContent = msgText;</pre>
+ </li>
+ <li>Last but not least, you now need to update your function call to include some updated message text. Change the following line:
+  <pre class="brush: js notranslate">btn.onclick = displayMessage;</pre>
+
+  <div>to this block:</div>
+
+  <pre class="brush: js notranslate">btn.onclick = function() {
+  displayMessage('Woo, this is a different message!');
+};</pre>
+  If we want to specify parameters inside parentheses for the function we are calling, then we can't call it directly — we need to put it inside an anonymous function so that it isn't in the immediate scope and therefore isn't called immediately. Now it will not be called until the button is clicked.</li>
+ <li>Reload and try the code again and you'll see that it still works just fine, except that now you can also vary the message inside the parameter to get different messages displayed in the box!</li>
+</ol>
+
+<h3 id="A_more_complex_parameter">A more complex parameter</h3>
+
+<p>On to the next parameter. This one is going to involve slightly more work — we are going to set it so that depending on what the <code>msgType</code> parameter is set to, the function will display a different icon and a different background color.</p>
+
+<ol>
+ <li>First of all, download the icons needed for this exercise (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">warning</a> and <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">chat</a>) from GitHub. Save them in a new folder called <code>icons</code> in the same location as your HTML file.
+
+  <div class="note"><strong>Note</strong>: The warning and chat icons were originally found on <a href="https://www.iconfinder.com/">iconfinder.com</a>, and designed by <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a> — Thanks! (The actual icon pages were since moved or removed.)</div>
+ </li>
+ <li>Next, find the CSS inside your HTML file. We'll make a few changes to make way for the icons. First, update the <code>.msgBox</code> width from:
+  <pre class="brush: css notranslate">width: 200px;</pre>
+
+  <div>to</div>
+
+  <pre class="brush: css notranslate">width: 242px;</pre>
+ </li>
+ <li>Next, add the following lines inside the <code>.msgBox p { ... }</code> rule:
+  <pre class="brush: css notranslate">padding-left: 82px;
+background-position: 25px center;
+background-repeat: no-repeat;</pre>
+ </li>
+ <li>Now we need to add code to our <code>displayMessage()</code> function to handle displaying the icons. Add the following block just above the closing curly brace (<code>}</code>) of your function:
+  <pre class="brush: js notranslate">if (msgType === 'warning') {
+  msg.style.backgroundImage = 'url(icons/warning.png)';
+  panel.style.backgroundColor = 'red';
+} else if (msgType === 'chat') {
+  msg.style.backgroundImage = 'url(icons/chat.png)';
+  panel.style.backgroundColor = 'aqua';
+} else {
+  msg.style.paddingLeft = '20px';
+}</pre>
+  Here, if the <code>msgType</code> parameter is set as <code>'warning'</code>, the warning icon is displayed and the panel's background color is set to red. If it is set to <code>'chat'</code>, the chat icon is displayed and the panel's background color is set to aqua blue. If the <code>msgType</code> parameter is not set at all (or to something different), then the <code>else { ... }</code> part of the code comes into play, and the paragraph is simply given default padding and no icon, with no background panel color set either. This provides a default state if no <code>msgType</code> parameter is provided, meaning that it is an optional parameter!</li>
+ <li>Let's test out our updated function, try updating the <code>displayMessage()</code> call from this:
+  <pre class="brush: js notranslate">displayMessage('Woo, this is a different message!');</pre>
+
+  <div>to one of these:</div>
+
+  <pre class="brush: js notranslate">displayMessage('Your inbox is almost full — delete some mails', 'warning');
+displayMessage('Brian: Hi there, how are you today?','chat');</pre>
+  You can see how useful our (now not so) little function is becoming.</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: If you have trouble getting the example to work, feel free to check your code against the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">finished version on GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">see it running live</a> also), or ask us for help.</p>
+</div>
+
+<h2 id="Test_your_skills!">Test your skills!</h2>
+
+<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a>. These tests require skills that are covered in the next article, so you might want to read those first before trying it.</p>
+
+<h2 id="Conclusion">Conclusion</h2>
+
+<p>Congratulations on reaching the end! This article took you through the entire process of building up a practical custom function, which with a bit more work could be transplanted into a real project. In the next article we'll wrap up functions by explaining another essential related concept — return values.</p>
+
+<ul>
+</ul>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}</p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+</ul>

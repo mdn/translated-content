@@ -1,0 +1,39 @@
+---
+title: Download Manager improvements in Firefox 3
+slug: Download_Manager_improvements_in_Firefox_3
+tags:
+  - Download Manager
+  - Firefox 3
+translation_of: Archive/Mozilla/Download_Manager_improvements_in_Firefox_3
+---
+<p>{{ Fx_minversion_header(3) }} Firefox 3는 다운로드 관리자에 대한 개선을 제공하는데 이는 다중 진행 리스너, 데이터 관리를 위한 <a href="ko/Storage">Storage</a> API의 사용, 다운로드 재시작 등을 가능하게 합니다. 덧붙여, 새로운 {{ Interface("nsIDownloadManagerUI") }} 인터페이스를 구현하는 것으로 다운로드 관리자의 인터페이스를 바꿀 수 있습니다.</p>
+<p>{{ Note("이러한 변경 사항은 다운로드 관리자를 사용하는 코드의 적당한 수정을 요구합니다. 몇 가지 메소드에 작은 변경이 있었기 때문입니다.") }}</p>
+<h3 id="Download_Manager_interfaces" name="Download_Manager_interfaces">Download Manager interfaces</h3>
+<dl>
+ <dt>
+  {{ Interface("nsIDownloadManager") }}</dt>
+ <dd>
+  애플리케이션과 확장이 다운로드 관리자를 접근할 수 있도록 하여 다운로드 목록에 파일을 추가하거나 삭제하고, 과거 및 현재의 다운로드에 대한 정보를 구하고, 다운로드 진행에 대한 알림을 요청할 수 있도록 합니다.</dd>
+ <dt>
+  {{ Interface("nsIDownload") }}</dt>
+ <dd>
+  다운로드 대기열에 있는 파일을 설명합니다. 파일은 다운로드를 위하여 대기열에 있거나 다운로드 중이거나 다운로드를 마쳤을 수 있습니다.</dd>
+ <dt>
+  {{ Interface("nsIDownloadProgressListener") }}</dt>
+ <dd>
+  애플리케이션과 확장이 이 이 인터페이스를 구현하면 다운로드 상태의 변경을 감지할 수 있습니다.</dd>
+ <dt>
+  {{ Interface("nsIDownloadManagerUI") }}</dt>
+ <dd>
+  이 인터페이스를 구현하면 다운로드 관리자의 사용자 인터페이스를 대체할 수 있습니다.</dd>
+</dl>
+<h3 id=".EC.98.88.EC.A0.9C" name=".EC.98.88.EC.A0.9C">예제</h3>
+<dl>
+ <dt>
+  <a href="ko/%eb%82%b4%eb%a0%a4%eb%b0%9b%ea%b8%b0_%ea%b0%90%ec%8b%9c">내려받기 감시</a></dt>
+ <dd>
+  과거 및 현재의 모든 다운로드와 다운로드 시작 및 끝 시간, 다운로드 속도 등을 포함한 다운로드 상태를 보여주는 다운로드 로그 윈도우를 생성하기 위하여 새로운 다운로드 관리자 API를 사용하는 방법을 보여주는 예제입니다. <a href="ko/Storage">Storage</a> API의 사용도 보여주고 있습니다.</dd>
+</dl>
+<div class="noinclude">
+  </div>
+<p>{{ languages( { "en": "en/Download_Manager_improvements_in_Firefox_3" } ) }}</p>

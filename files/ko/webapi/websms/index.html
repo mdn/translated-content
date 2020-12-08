@@ -1,0 +1,85 @@
+---
+title: WebSMS
+slug: WebAPI/WebSMS
+tags:
+  - Non-standard
+translation_of: Archive/B2G_OS/API/Mobile_Messaging_API
+---
+<p>{{DefaultAPISidebar("Mobile Messaging API")}}</p>
+
+<div class="blockIndicator nonStandard">
+<p><strong>Non-standard</strong><br>
+ This feature is not on a current W3C standards track, but it is supported on the Firefox OS platform. Although implementations may change in the future and it is not supported widely across browsers, it is suitable for use in code dedicated to Firefox OS apps.</p>
+</div>
+
+<div class="blockIndicator warning">
+<p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">internal applications</a> only.</p>
+</div>
+
+<h2 id="요약">요약</h2>
+
+<p>WebSMS는 웹 콘텐츠에서 단문 메시지 서비스 (SMS) 또는 멀티미디어 메시지 서비스 (MMS)의 메시지들을 만들고, 보내고, 받을수 있도록 해주는 API 입니다.</p>
+
+<p>이 API는 {{ domxref("MozSmsManager") }} 객체를 반환하는 {{ domxref("window.navigator.mozSms") }} 또는 {{ domxref("MozMobileMessageManager") }} 객체를 반환하는 {{ domxref("window.navigator.mozMobileMessage") }} 를 사용하여 이용 가능합니다. 자세한 내용은 아래의 인터페이스 전체 목록을 통해 보실 수 있습니다.</p>
+
+<h2 id="DOM_인터페이스">DOM 인터페이스</h2>
+
+<h3 id="SMS_인터페이스">SMS 인터페이스</h3>
+
+<ul>
+ <li>{{ domxref("window.navigator.mozSms") }}</li>
+ <li>{{ domxref("MozSmsManager") }}</li>
+ <li>{{ domxref("MozSmsMessage") }}</li>
+ <li>{{ domxref("MozSmsEvent") }}</li>
+ <li>{{ domxref("MozSmsFilter") }}</li>
+ <li>{{ domxref("MozSmsSegmentInfo") }}</li>
+</ul>
+
+<h3 id="MMS_SMS_인터페이스">MMS, SMS 인터페이스</h3>
+
+<ul>
+ <li>{{ domxref("window.navigator.mozMobileMessage") }}</li>
+ <li>{{ domxref("MozMobileMessageManager")}}</li>
+ <li>{{ domxref("MozMmsMessage") }}</li>
+ <li>{{ domxref("MozMmsEvent") }}</li>
+ <li>{{ domxref("MozMobileMessageThread") }}</li>
+</ul>
+
+<h2 id="예제_코드와_소개">예제 코드와 소개</h2>
+
+<ul>
+ <li><a href="/ko/WebAPI/WebSMS/Introduction_to_WebSMS" title="ko/WebAPI/WebSMS/Introduction_to_WebSMS">WebSMS 소개</a></li>
+</ul>
+
+<h2 id="명세">명세</h2>
+
+<p>이 API는 비 표준 스펙의 구현체입니다. 하지만 W3C의 <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">System Application Working Group</a>에서 논의되고 있습니다.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Messaging')}}</td>
+   <td>{{Spec2('Messaging')}}</td>
+   <td>Editor Draft (WIP).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="설정_이용_가능한_환경">설정 &amp; 이용 가능한 환경</h2>
+
+<div id="compat-mobile"> </div>
+
+<ul>
+ <li>WebSMS는 기본적으로 비활성화 되어있습니다. <code>dom.sms.enabled 설정을 true로 지정하여야 활성화됩니다.</code></li>
+ <li>WebSMS API를 사용하도록 허가된 호스트명들의 화이트 리스트(콤마로 구분)는 반드시 <code>dom.sms.whitelist 설정에 명시되어야 합니다. 이 문자열은 기본적으로 빈 문자열입니다.</code></li>
+ <li>WebSMS는 오직 Firefox OS (B2G) 에 인증된 앱에서만 이용 가능합니다.</li>
+ <li>MMS는 Firefox OS 1.1 부터 이용 가능합니다.고 자료</li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebSMS" title="https://wiki.mozilla.org/WebAPI/WebSMS">WebSMS API</a> (설계 문서)</li>
+</ul>

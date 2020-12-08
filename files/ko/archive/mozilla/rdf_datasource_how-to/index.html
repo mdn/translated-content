@@ -1,0 +1,224 @@
+---
+title: RDF Datasource How-To
+slug: Archive/Mozilla/RDF_Datasource_How-To
+tags:
+  - RDF
+translation_of: Archive/Mozilla/RDF_Datasource_How-To
+---
+<div class="warning">
+ <p>이 문서는 최신의 정보를 포함하지 않을 수 있습니다. 가능하면 이 문서가 최신 정보로 유지될 수 있도록 도와주시기 바랍니다. <span class="comment">XPCOM 등록(registration) 부분과 "As of this writing, it is not currently possible to implement JavaScript XPCOM components" 부분이 최신 정보와 다른 것 같습니다. 전체 문서를 다 체크해 보지는 않았습니다.</span></p>
+</div>
+<p>이 문서는 Mozilla 의 <a href="ko/RDF">RDF</a> 구현과 함께 동작하는
+ <i>
+  고유한(native), 클라이언트 측 데이터 소스</i>
+ 를 생성하는 방법을 설명하는 cookbook 문서입니다. 이 문서는 <a class="link-mailto" href="mailto:rjc@netscape.com">Robert Churchill</a> 이 작성한 <a class="external" href="http://www.mozilla.org/rdf/doc/rdfdatasources.html">원본 문서</a>를 대체하며 많은 부분은 원본 문서에서 가져온 것입니다.</p>
+<h3 id=".EB.8D.B0.EC.9D.B4.ED.84.B0_.EC.86.8C.EC.8A.A4.EB.9E.80_.EB.AC.B4.EC.97.87.EC.9D.B8.EA.B0.80.3F" name=".EB.8D.B0.EC.9D.B4.ED.84.B0_.EC.86.8C.EC.8A.A4.EB.9E.80_.EB.AC.B4.EC.97.87.EC.9D.B8.EA.B0.80.3F">데이터 소스란 무엇인가?</h3>
+<p>"RDF의 세계"는 인터넷
+ <i>
+  자원</i>
+ 들을 설명하는
+ <i>
+  문장</i>
+ (statement)으로 이루어진다. 예를 들어, "내 홈페이지의 최종 변경일은 4월 2일이다" 라던가 "이 뉴스 기사는 밥(Bob)이 보내온 것이다" 등이 있을 것이다. 가장 추상적인 단계에서 볼 때,
+ <i>
+  데이터 소스</i>
+ 는 이러한 문장들의 모임(collection)이다.</p>
+<p>더 자세히 살펴보면, 데이터 소스는 어떤 정보를 RDF 문장의 모임으로
+ <i>
+  변환</i>
+ 하는 역할을 한다. 예를 들어, "파일 시스템 데이터 소스"라면 파일 시스템 정보를 다음과 같은 문장들로 변환할 것이다: "/tmp 는 디렉토리이다", "/tmp/foo 는 /tmp 안에 포함되어 있다". "IMAP 데이터 소스"라면 IMAP 프로토콜을 이용하여 당신의 메일함에 있는 데이터를 다음과 같은 문장으로 변환할 것이다: "126번 메시지의 제목은 '인터넷으로 쉽게 돈벌기'이다", "126번 메시지를 보낸 사람은 <a class="link-mailto" href="mailto:'spammer128@hotmail.com'이다" rel="freelink">'spammer128@hotmail.com'이다</a>". "주소록 데이터 소스"라면 데이터베이스 파일을 다음과 같은 문장으로 변환할 것이다: "<a class="link-mailto" href="mailto:spammer128@hotmail.com의" rel="freelink">spammer128@hotmail.com의</a> 실제 이름은 'Billy Dumple'이다", "<a class="link-mailto" href="mailto:spammer128@hotmail.com은" rel="freelink">spammer128@hotmail.com은</a> '중요한 친구'이다".</p>
+<p>한 데이터 소스 내에 존재하는 문장은
+ <i>
+  composite datasource</i>
+ 를 사용해서 다른 데이터 소스에 있는 문장과 결합(combine)될 수 있다. IMAP 데이터 소스와 주소록 데이터 소스를 결합하면, 위의 예제에서 "126번 메시지"를 보낸 사람은 "중요한 친구"라는 것을 알 수 있다.</p>
+<h3 id=".EC.96.B4.ED.9C.98_.EC.84.A0.ED.83.9D.ED.95.98.EA.B8.B0" name=".EC.96.B4.ED.9C.98_.EC.84.A0.ED.83.9D.ED.95.98.EA.B8.B0">어휘 선택하기</h3>
+<p>
+ <i>
+  어휘</i>
+ (vocabulary)는 데이터 모델 내에서 원소(자원이나 문자열)들간의 관계를 표현하기 위해 사용하는 속성들의 집합입니다. 제일 먼저 생각해야 할 것은 '기존의 어휘를 사용해야 할지? 아니면 새로운 어휘를 만들어야 할지?'에 대한 것입니다.
+ <i>
+  반드시</i>
+ 새로운 어휘를 만들어야 필요가 있는 경우가 아니라면 당연히 기존의 어휘를 쓰는 것이 좋습니다. 그러면 당신이 만든 데이터 소스를 손쉽게 다른 데이터 소스와 통합할 수 있게 됩니다.</p>
+<p>이미 만들어진 다음과 같은 여러 종류의 어휘들이 있습니다.</p>
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/PR-rdf-schema/">RDF 스키마(Schema) 명세</a>. 이 어휘는 다른 어휘들을 설명하기 위한 "메타 어휘(meta vocabulary)"입니다.</li>
+ <li><a class="external" href="http://purl.oclc.org/dc/">더블린 코어(The Dublin Core)</a>. 이 어휘는 웹 상의 자원(electronic resouces)들을 설명하기 위해 사용되는 어휘입니다. 여기에는 작성자, 주제, 공개일(출판일) 등의 원소가 포함됩니다.</li>
+</ul>
+<h3 id=".EB.8D.B0.EC.9D.B4.ED.84.B0.EB.A5.BC_.EB.85.B8.EB.93.9C.EC.99.80_.EC.95.84.ED.81.AC.28arc.29.EB.A1.9C_.EB.A7.A4.ED.95.91.ED.95.98.EA.B8.B0" name=".EB.8D.B0.EC.9D.B4.ED.84.B0.EB.A5.BC_.EB.85.B8.EB.93.9C.EC.99.80_.EC.95.84.ED.81.AC.28arc.29.EB.A1.9C_.EB.A7.A4.ED.95.91.ED.95.98.EA.B8.B0">데이터를 노드와 아크(arc)로 매핑하기</h3>
+<p><b>{{ mediawiki.external('write me!') }}</b></p>
+<h3 id="nsIRDFDataSource_.EC.9D.B8.ED.84.B0.ED.8E.98.EC.9D.B4.EC.8A.A4_.EA.B5.AC.ED.98.84.ED.95.98.EA.B8.B0" name="nsIRDFDataSource_.EC.9D.B8.ED.84.B0.ED.8E.98.EC.9D.B4.EC.8A.A4_.EA.B5.AC.ED.98.84.ED.95.98.EA.B8.B0">&lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; 인터페이스 구현하기</h3>
+<p>가장 먼저 해야할 일은 &lt;tt&gt;<a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/idl/nsIRDFDataSource.idl">nsIRDFDataSource</a>&lt;/tt&gt; 인터페이스를 구현하는 일입니다. 이를 위한 두 가지 기본적인 방법이 있습니다:</p>
+<ol>
+ <li>
+  <p>
+   <i>
+    내부 프록시(inner proxy)에 위임(delegate)하기</i>
+   . 예를 들면, &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; 인터페이스를 구현한 일반적인 데이터 소스인
+   <i>
+    메모리 상의 데이터 소스(in-memory datasource)</i>
+   에 위임할 수 있습니다.</p>
+  <p>일반적으로, 해당 저장 장치(즉, 데이터 파일)를 위한 구문 분석기(parser)를 제공해야 합니다. 구문 분석기는 데이터 파일을 메모리 상의 데이터 소스로 구성하기 위한 일련의 &lt;tt&gt;Assert()&lt;/tt&gt; 문으로 변환합니다. &lt;tt&gt;Flush()&lt;/tt&gt; 문이 호출되거나, 데이터 소스에 대한 마지막 참조가 해제되는 경우에는 메모리 상의 데이터 소스를 순환하여 그래프(데이터)를 원래의 파일 형식으로 다시 저장합니다(re-serialize). 아래의 예제를 살펴보기 바랍니다. <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/src/nsRDFXMLDataSource.cpp">RDF/XML 데이터 소스</a> 혹은 <a class="external" href="http://lxr.mozilla.org/seamonkey/source/xpfe/components/bookmarks/src/nsBookmarksService.cpp">북마크 데이터 소스</a>.</p>
+  <p>기존의 데이터들을 "래핑"(wrapping)하기 위한 목적이라면 이 구현 방식을 선택하면 됩니다. 이 구현은 기존의 데이터 저장 공간이 다른 에이전트들에 의해 "동적으로"(on-the-fly) 변경되고 있다면 문제를 일으킬 수도 있습니다.</p>
+ </li>
+ <li>
+  <p>
+   <i>
+    메모리 상의 데이터 소스를 모으기(aggregate)</i>
+   . 이 방법은 위임의 극단적인 경우로서, XPCOM
+   <i>
+    모음</i>
+   (aggregation)을 이용하여 &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; 인터페이스를 구현하는 것입니다. 기술적인 자세한 사항은 <a href="ko/Aggregating_the_In-Memory_Datasource">메모리 상의 데이터 소스 모으기</a> 문서를 참고하기 바랍니다.</p>
+  <p>이 방법은 선택한다면, &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; 인터페이스의 메소드들을 선택적으로 구현할 수 없으며, 대신
+   <i>
+    모든</i>
+   메소드들은 메모리 상의 데이터 소스로 보내져야 합니다(forwarding). 이것은 당신이 가진 데이터 소스들이 "읽기 전용"인 경우에 유용하며 &lt;tt&gt;Assert()&lt;/tt&gt; 등의 메소드를 이용한 데이터의 변경에 대한 걱정이 필요없게 됩니다.</p>
+ </li>
+ <li>
+  <p>
+   <i>
+    직접 인터페이스를 구현하기</i>
+   . 이 방법을 선택한다면, &lt;tt&gt;nsIRDFDataStore&lt;/tt&gt; 인터페이스의 모든 메소드들을 "직접" 구현해야 합니다. 비록 이 방법에는 더 많은 작업이 요구되지만, 이것은 다른 외부 에이전트들에 의해 변경될 수 있는 "라이브"(live) 데이터 소스를 생성하기 위한 유일한 방법입니다.</p>
+  <p><a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/datasource/src/nsFileSystemDataSource.cpp">파일 시스템 데이터 소스</a>와 <a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/local/src/nsMSGFolderDataSource.cpp">로컬 메일 데이터 소스</a> 는 이 방법을 이용해 구현된 좋은 예제입니다.</p>
+  <p>만약 당신의 데이터 소스가 "라이브" 데이터 소스 - 새로운 메일이 도착하는 것과 같이 외부 에이전트에 의해 데이터가 변경될 수 있는 데이터 소스 - 라면 이 방법을 선택해야 합니다. 또한 데이터 소스가 (전체 파일 시스템 구조와 같이) 아주 크고 많은 데이터를 위해 모델링된 경우에도 이 방법을 선택해야 합니다.</p>
+ </li>
+</ol>
+<p><b>{{ mediawiki.external('각 방법들에 필요한 더 많은 정보가 제공되어야 함') }}</b></p>
+<h4 id="RDF_.EC.BB.A4.EB.A7.A8.EB.93.9C" name="RDF_.EC.BB.A4.EB.A7.A8.EB.93.9C">RDF 커맨드</h4>
+<p><b>{{ mediawiki.external('커맨드의 종류와 커맨드를 구현한 이유 등을 설명') }}</b></p>
+<h3 id=".EB.8D.B0.EC.9D.B4.ED.84.B0_.EC.86.8C.EC.8A.A4_.EC.BB.B4.ED.8F.AC.EB.84.8C.ED.8A.B8_.EB.93.B1.EB.A1.9D.ED.95.98.EA.B8.B0" name=".EB.8D.B0.EC.9D.B4.ED.84.B0_.EC.86.8C.EC.8A.A4_.EC.BB.B4.ED.8F.AC.EB.84.8C.ED.8A.B8_.EB.93.B1.EB.A1.9D.ED.95.98.EA.B8.B0">데이터 소스 컴포넌트 등록하기</h3>
+<p>데이터 소스는 <a href="ko/XPCOM">XPCOM</a> 컴포넌트입니다. 따라서 다음과 같은 특징을 가집니다.</p>
+<ol>
+ <li>데이터 소스 구현체를 구분(identify)하기 위한 XPCOM
+  <i>
+   CLSID</i>
+ </li>
+ <li>DLL 내에 코드가 존재하는 (CLSID에 대응하는) 구현 클래스. DLL은 XPCOM &lt;tt&gt;components&lt;/tt&gt; 디렉토리 내에 존재해야 함.</li>
+ <li>저장소 내에 존재(instantiate)하기 위해 XPCOM
+  <i>
+   ProgID</i>
+  에
+  <i>
+   등록</i>
+  할
+  <i>
+   팩토리</i>
+  (factory)</li>
+</ol>
+<p>컴포넌트를 위해 DLL을 구성하는 방법에 대한 것은 이 문서의 범위를 넘어가므로 생략합니다. 이에 대한 내용은 <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/build/nsRDFFactory.cpp">the RDF factory</a>를 참조해 보기 바랍니다.</p>
+<p>RDF 데이터 소스를 등록하는 것은 꽤 간단합니다. DLL의 &lt;tt&gt;NSRegisterSelf()&lt;/tt&gt; 메소드에서
+ <i>
+  컴포넌트 관리자</i>
+ 의 &lt;tt&gt;RegisterComponent()&lt;/tt&gt; 메소드를 호출하기만 하면 됩니다.</p>
+<pre class="eval">extern "C" PR_IMPLEMENT(nsresult)
+NSRegisterSelf(nsISupports* aServiceManager, const char* aPath)
+{
+   nsresult rv;
+   ...
+   // compMgr 는 컴포넌트 관리자 객체를 참조하고 있다고 가정합니다.
+   rv = compMgr-&gt;RegisterComponent(kMyDataSourceCID,
+            "My Data Source",
+            NS_RDF_DATASOURCE_PROGID_PREFIX "my-datasource",
+            aPath, PR_TRUE, PR_TRUE);
+   ...
+}
+</pre>
+<p>&lt;tt&gt;kMyDataSourceCID&lt;/tt&gt; 를 당신의 CLSID 로 대체하고 &lt;tt&gt;"My Data Source"&lt;/tt&gt; 부분을 저장소에 표시될 데이터 소스에 대한 설명을 포함하는 문장으로 대체합니다. 마지막으로, &lt;tt&gt;"my-datasource"&lt;/tt&gt; 를 당신의 데이터 소스에 알맞은 값으로 바꿉니. 이 값은 &lt;tt&gt;"rdf:"&lt;/tt&gt; 라는 접두어가 붙은 경우
+ <i>
+  데이터 소스 ID</i>
+ 가 되고, &lt;tt&gt;<a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/idl/nsRDFInterfaces.idl#384">nsIRDFService::GetDataSource()</a>&lt;/tt&gt; 메소드를 이용하여 RDF 서비스로부터 당신의 데이터 소스를 얻어오기 위해 사용됩니다. 예를 들어 위의 데이터 소스는 아래와 같은 방법으로 접근할 수 있습니다.</p>
+<pre class="eval">nsIRDFService* rdf;
+rv = nsServiceManager::GetService(kRDFServiceCID,
+          kIRDFServiceIID,
+          (nsISupports**) &amp;rdf);
+
+if (NS_SUCCEEDED(rv)) {
+    nsIRDFDataSource* myDataSource;
+    rv = rdf-&gt;GetDataSource("rdf:my-datasource",
+                 &amp;myDataSource);
+
+    if (NS_SUCCEEDED(rv)) {
+        // 이 부분에서 myDataSource 를 이용하여 원하는 작업을 수행합니다...
+        NS_RELEASE(myDataSource);
+    }
+    nsServiceManager::ReleaseService(kRDFServiceCID, rdf);
+}
+</pre>
+<h3 id="RDF.EC.9D.98_.EB.82.B4.EC.9A.A9.EC.9D.84_.ED.91.9C.EC.8B.9C.ED.95.98.EA.B8.B0" name="RDF.EC.9D.98_.EB.82.B4.EC.9A.A9.EC.9D.84_.ED.91.9C.EC.8B.9C.ED.95.98.EA.B8.B0">RDF의 내용을 표시하기</h3>
+<p>지금까지 당신이 가지고 있는 정보를 데이터 소스로 표현하기 위해 험난한 길을 헤져 왔다면, 이제 그 정보를 프로그램 상에
+ <i>
+  표시</i>
+ 하고 싶을 것입니다. <a class="external" href="http://www.mozilla.org/xpfe/languageSpec.html">XUL</a>을 이용하면, 데이터 소스의 내용을
+ <i>
+  트리 컨트롤</i>
+ 혹은
+ <i>
+  메뉴</i>
+ 또는
+ <i>
+  툴바</i>
+ 에 표시할 수 있습니다. 사실, <a href="ko/XUL/Template_Guide">XUL 템플릿</a>을 이용하면
+ <i>
+  어떠한</i>
+ 형태의 컨텐트 모델에도 RDF 의 내용을 표시할 수 있습니다.</p>
+<p>다음의 XUL 코드는 데이터 소스가 설명하는 자원(&lt;tt&gt;<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>&lt;/tt&gt;)을 "루트"로 하는 트리 컨트롤을 생성하는 방법을 설명합니다.</p>
+<pre class="eval">&lt;window
+  xmlns:html="<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"
+  xmlns:rdf="<a class="external" href="http://www.w3.org/TR/WD-rdf-syntax#" rel="freelink">http://www.w3.org/TR/WD-rdf-syntax#</a>"
+  xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+  &lt;tree <b>datasources="rdf:my-datasource" ref="<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>"</b>&gt;
+    <b>&lt;template&gt;</b>
+      <b>&lt;treechildren&gt;</b>
+        <b>&lt;treeitem uri="..."&gt;</b>
+          <b>&lt;treerow&gt;</b>
+            <b>&lt;treecell&gt;</b>
+              <b>&lt;text value="rdf:<a class="external" href="http://home.netscape.com/NC-rdf#Name" rel="freelink">http://home.netscape.com/NC-rdf#Name</a>" /&gt;</b>
+            <b>&lt;/treecell&gt;</b>
+            <b>&lt;treecell&gt;</b>
+              <b>&lt;text value="rdf:<a class="external" href="http://home.netscape.com/NC-rdf#URL" rel="freelink">http://home.netscape.com/NC-rdf#URL</a>" /&gt;</b>
+            <b>&lt;/treecell&gt;</b>
+          <b>&lt;/treerow&gt;</b>
+        <b>&lt;/treeitem&gt;</b>
+      <b>&lt;/treechildren&gt;</b>
+    <b>&lt;/template&gt;</b>
+
+    &lt;treehead&gt;
+      &lt;treeitem&gt;
+        &lt;treecell&gt;Name&lt;/treecell&gt;
+        &lt;treecell&gt;URL&lt;/treecell&gt;
+      &lt;/treeitem&gt;
+    &lt;/treehead&gt;
+
+    &lt;!-- treechildren은 여기에 빌드되어 있습니다. --&gt;
+  &lt;/tree&gt;
+
+&lt;/window&gt;
+</pre>
+<p>위에서 굵은 글씨로 표시된 중요한 "매직 속성"들은 다음과 같습니다:</p>
+<ul>
+ <li>
+  <p>&lt;tt&gt;datasources="rdf:my-datasource"&lt;/tt&gt;. 이것은 공백 문자로 구분되는 (위에서 설명한) 내부의 XPCOM 데이터 소스 "ID" 와 로컬이나 원격 RDF/XML 문서의 URI 들을 포함합니다. 목록에 포함된 각 데이터 소스는 로드되어 데이터 소스 내에 포함된 어서션(assertion)들이 트리 콘트롤을 구성하여 표시될 것입니다.</p>
+ </li>
+ <li>
+  <p>&lt;tt&gt;ref="<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>"&lt;/tt&gt;. 이것은 당신의 컨텐츠 모델 내의 그래프의 루트가 됩니다. &lt;tt&gt;tree&lt;/tt&gt; 태그는 &lt;tt&gt;<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>&lt;/tt&gt; 라는 값의 &lt;tt&gt;ID&lt;/tt&gt; 속성을 가진 것처럼 처리됩니다.</p>
+ </li>
+ <li>
+  <p>&lt;tt&gt;&lt;template&gt;...&lt;/template&gt;&lt;/tt&gt;. 그래프로 부터 컨텐츠를 구성하는 XUL
+   <i>
+    템플릿</i>
+   입니다. &lt;tt&gt;tree&lt;/tt&gt; 원소에 해당하는 자원(여기서는 &lt;tt&gt;<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>&lt;/tt&gt;에 해당합니다)을 지정하는 것으로 시작해서, 그래프를 순회하여 &lt;tt&gt;template&lt;/tt&gt; 태그 내에 지정된 패턴들을 사용해서 컨텐츠를 구성합니다.</p>
+ </li>
+</ul>
+<p>RDF에서 어떻게 컨텐츠가 구성되는지에 대한 자세한 설명을 원한다면 <a href="ko/XUL/Template_Guide">XUL 템플릿 가이드</a> 문서를 살펴보기 바랍니다.</p>
+<hr>
+<p><br>
+ 연락처: <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a> <a class="link-mailto" href="mailto:(waterson@netscape.com)" rel="freelink">(waterson@netscape.com)</a></p>
+<div class="originaldocinfo">
+ <h2 id=".EC.9B.90.EB.B3.B8_.EB.AC.B8.EC.84.9C_.EC.A0.95.EB.B3.B4" name=".EC.9B.90.EB.B3.B8_.EB.AC.B8.EC.84.9C_.EC.A0.95.EB.B3.B4">원본 문서 정보</h2>
+ <ul>
+  <li>저자: <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></li>
+  <li>최종 변경일: 2000년 6월 19일</li>
+  <li>저작권: Copyright (C) <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></li>
+ </ul>
+</div>
+<p> </p>

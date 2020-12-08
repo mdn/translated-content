@@ -1,0 +1,74 @@
+---
+title: Introduction to RDF
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Introduction_to_RDF
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_RDF
+---
+<p>이 장에서는 RDF ( Resource Description Framework )에 대해 살펴봅니다.</p>
+<h3 id="Resource_Description_Framework" name="Resource_Description_Framework">Resource Description Framework</h3>
+<p>북마크나 메일 메세지등과 같은 데이터의 집합을 표시하는 목적으로 트리 요소를 사용할 수 있습니다. 그렇지만, XUL 파일에 직접 데이터를 넣는것은 귀찮은 일입니다. 북마크가 직접 XUL 파일에 쓰여져 있다고 한다면 그 변경은 어려운 것이 됩니다. 그래서 이것을 해결하는 방법은 RDF 데이터소스를 이용하는 것입니다.</p>
+<p>RDF ( Resource Description Framework )란 북마크나 메일등의 리소스를 저장하기 위한 형식입니다. 다른 방법으로서 다른 형식의 데이터를 이용해 그 파일로부터 RDF 데이터를 생성하는 코드가 쓰여져 있는 경우도 있습니다. 이것이 Mozilla 가 북마크나 히스토리, 메일 메세지등의 데이터를 읽어들일 때 가고 있는 방법입니다. 개발자에게 편의를 도모하기 위해서 Mozilla 는 이러한 공통되어 이용되는 데이터를 위한 데이터소스를 제공합니다.</p>
+<p>Mozilla 가 제공하고 있는 어느 RDF 데이터 소스도 데이터로부터의 트리 생성에 이용할 수 있거나 데이터를 포함한 XML 로서 보존하고 있는 RDF 파일을 참조할 수도 있습니다. 이것에 의해 여러 줄이 있는 트리의 표시가 매우 편해집니다. RDF 는 리스트 박스나 메뉴등이 같은 다른 요소에 있어서의 생성에도 이용할 수 있습니다. 이것에 대해서는 다음 절에서 다룹니다.</p>
+<p>여기에서는 RDF 에 대해 아주 대략적으로 설명합니다. RDF 에 대한 자세한 안내는 RDF 모델 입문을 읽어 바랍니다. RDF 에 처음으로 접한다면 이 안내를 읽는 것을 추천합니다. RDF/XML 파일의 몇개의 예는 Mozilla 가 제공하고 있는 것을 보면 좋을 것입니다. RDF/XML 파일의 확장자(extension)는 rdf 입니다.</p>
+<p>RDF 는 그래프 구조로 표현되는 데이터의 모델로부터 됩니다. RDF/XML 는 RDF 데이터를 표현하기 위해서 이용되는 XML 언어입니다. 그것은 필요 충분한 단순한 요소로 설정 됩니다. 아래에 간단한 RDF 의 구조를 나타냅니다.</p>
+<pre>&lt;? xml version="1.0"? &gt;
+&lt;RDF:RDF
+  xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+  ...
+&lt;/RDF:RDF&gt;
+</pre>
+<p>이것은 XUL 의 헤더와 닮아 있습니다. window 요소 대신에 RDF 요소가 이용되고 있습니다. RDF 의 요소가 올바르게 인식되도록하기 위해서 RDF 의 네임스페이스가 선언되고 있는 것이 알 수 있네요. RDF 요소의 안쪽에 데이터를 기술합니다.</p>
+<p>여기에서는 RDF 에 대해 매우 간단하게 설명합니다. 보다 자세한 것은 RDF 사양을 참조해 주세요. 예로 RDF 로부터 생성되는 북마크의 리스트에 대해 보겠습니다. 북마크의 리스트는 레코드의 집합을 포함하고 있어 각각에는 URL, 타이틀, 방문일등의 일련의 데이터가 주어지고 있습니다.</p>
+<p>북마크는 얼마든지의 필드로부터 되는 거대한 테이블로서 보존되고 있는 데이타베이스의 일종이라고 생각합니다. 다만, RDF 에서는 리스트는 동시에 계층적으로도 될 수 있습니다. 이것은 북마크를 폴더 마다 정리하거나 종류별 정리하기 위해서 필요한 일입니다. RDF 데이타베이스내의 각 필드는 첨부이름의 리소스입니다. 이름은 URI 로 기술됩니다.</p>
+<p>예를 들면, Mozilla 의 북마크 리스트에 있어서의 필드의 몇개인가는 아래에 URI 로 기술되고 있습니다.</p>
+<pre>Name 	http://home.netscape.com/NC-rdf#Name 	북마크명
+URL 	http://home.netscape.com/NC-rdf#URL 	링크 URL
+Description 	http://home.netscape.com/NC-rdf#Description 	북마크의 설명
+Last Visited 	http://home.netscape.com/WEB-rdf#LastVisitDate 	최종 방문일
+</pre>
+<p>이것들은 네임스페이스명으로 얘기되는 필드명으로부터 생성됩니다. 다음 절에서는 이것들을 사용해 필드의 값을 자동 생성시키는 방식에 대해 보고 갑니다. 최종 방문일은 다른 3개의 필드와 조금 다른 네임스페이스가 되어 있는 것에 주의해 주세요.</p>
+<p>아래에 3개의 레코드와 3개의 필드를 가지는 RDF/XML 의 예를 나타냅니다.</p>
+<pre>&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"&gt;
+
+  &lt;RDF:Seq about="http://www.some-fictitious-zoo.com/all-animals"&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/lion"&gt;
+         &lt;ANIMALS:name&gt;Lion&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Panthera leo&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammal&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/arachnids/tarantula"&gt;
+         &lt;ANIMALS:name&gt;Tarantula&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Avicularia avicularia&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Arachnid&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/hippopotamus"&gt;
+         &lt;ANIMALS:name&gt;Hippopotamus&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Hippopotamus amphibius&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammal&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+  &lt;/RDF:Seq&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+<p>여기에서는 각 동물( animal )에 대응해 3개의 레코드가 선언되고 있습니다. 각 RDF:Description 태그가 하나의 레코드를 나타냅니다. 각각의 레코드의 내부에는 3개의 필드： name, species, class 가 기술되고 있습니다. 모든 레코드가 같은 필드에서 구성되어 있지 않으면 안 되는 것은 아닙니다만, 그렇게 하는 편이 보다 자연스럽습니다.</p>
+<p>3개의 필드 각각 네임스페이스로서 ANIMALS 가 주어지고 있어 ANIMALS 의 URL 는 RDF 태그내에서 선언되고 있습니다. 이름은 이유가 적당하게 선택한 것만으로 있지만 무엇이든 다른 이름이라도 괜찮습니다. 네임스페이스의 이용은 class 필드가 스타일의 필드와 충돌하지 않게 하는 것에 도움이 되고 있습니다.</p>
+<p>Seq 요소와 li 요소는 레코드의 리스트를 지정하기 위해서 이용하는 것입니다. 이것은 HTML 의 리스트의 선언과 잘 닮은 것입니다. Seq 요소는 요소가 순서로 나타내질 수 있는 것을 나타냅니다. 순서를 가지지 않는 경우는 Seq 요소 대신에 Bag 요소를 이용합니다. Alt 요소를 이용하면 데이터의 각 레코드가(미러 URL 등의) 대체값을 지정하고 있는 것을 지시할 수가 있습니다.</p>
+<p>네임스페이스 URL 와 거기에 계속되는 필드명에 의해 XUL 파일내의 리소스를 참조할 수가 있습니다. 위의 예에서는 다음에 특정 필드의 참조에 이용할 수 있는 URI 가 생성됩니다.</p>
+<pre>Name 	http://www.some-fictitious-zoo.com/rdf#name
+Species 	http://www.some-fictitious-zoo.com/rdf#species
+Class 	http://www.some-fictitious-zoo.com/rdf#class
+
+</pre>
+<p>다음 절에서는 RDF 를 사용한 XUL 요소의 생성 방법에 대해 살펴봅니다.</p>
+<p><br>
+ </p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Tree_Box_Objects" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Templates">다음  »</a></p>
+</div><p></p>

@@ -1,0 +1,188 @@
+---
+title: Localizzazione di B2G OS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Localizing_Firefox_OS
+tags:
+  - B2G OS
+  - Localizzazione
+translation_of: Archive/B2G_OS/Developing_Gaia/Localizing_B2G_OS
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Compilazione e installazione</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Panoramica su compilazione ed installazione</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">Sommario del processo di compilazione di B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Prerequisiti per la compilazione</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparare la tua prima compilazione</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building">Compilare B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">Add-on per l"installazione di B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Compilare B2G OS per Flame su Mac OS X</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Scegliere come eseguire Gaia e B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Dispositivi compatibili</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installare B2G OS su dispositivo mobile</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creare e applicare pacchetti di aggiornamento per B2G OS</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Compilare e installare aggiornamenti via Internet prodotti dalla comunità</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">Foglio di riferimento per le variabili di compilazione di B2G OS</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Portabilità di B2G OS</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS">Panoramica sulla portabilità</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Basi della portabilità</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Portabilità su CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia">Panoramica sullo sviluppo di Gaia</a></strong></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Eseguire il codice base di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Mulet">Esegui Gaia su desktop usando Mulet</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Comprendere il codice base di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Fare variazioni al codice di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Verificare le variazioni al codice di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Inviare una patch di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Sistema di compilazione primario di Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Differenti modi per eseguire Gaia</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Riferimento per le opzioni di Make</a></li>
+            <li><a href="/it/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Riferimento per gli strumenti di Gaia</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/it/docs/Mozilla/B2G_OS/API">API di B2G OS</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">In questa guida, vi mostreremo quanto è semplice localizzare B2G OS, soprattutto per quanto riguarda Gaia e le applicazioni. Iniziermo aiutandoti ad impostare il tuo computer, assistendoti nella localizzazione delle stringhe di Gaia e, infine, nel performare i test L10n sul lavoro svolto.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Questa è una guida pensata per aiutare nella localizzazione di B2G OS. Gli sviluppatori interessati a scrivere applicazioni localizzabili devono invece iniziare con <a href="/en-US/Apps/Build/Localization/Localizing_Firefox_OS_Apps">Localizzazione delle applicazioni B2G OS</a>, e poi dare uno sguardo a <a href="/en-US/Firefox_OS/Developing_Gaia/L10n_Best_Practices">Best practices L10n</a>.</p>
+</div>
+
+<h2 id="Recuperare_gli_strumenti">Recuperare gli strumenti</h2>
+
+<p>Per ottenere i file sorgenti di Gaia e testare il vostro lavoro di localizzazione sul vostro PC è necessario che vi assicuriate che le seguenti utility e i seguenti linguaggi siano installati:</p>
+
+<dl>
+ <dt>GNU make</dt>
+ <dd>make è uno strumento utilie per la creazione di build direttamente da codice sorgente. Risulterà utile quando sarete pronti ad effettuare test l10n sul vostro lavoro con il vostro PC. Scaricare e installare make è facile e può essere effettuato <a href="http://www.gnu.org/software/make/" title="http://www.gnu.org/software/make/">direttamente dal sito web GNU</a>. Se utilizzate Mac OSX, dovrete installare XCode e gli strumenti XCode's Command line dall'<a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12" title="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=7&amp;cad=rja&amp;ved=0CFQQFjAG&amp;url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fxcode%2Fid497799835%3Fmt%3D12&amp;ei=6ZItUeDqDeejiAK90IDYCA&amp;usg=AFQjCNGrxKmVtXUdvUU3MhqZhP4MHT6Gtg&amp;bvm=bv.42965579,d.cGE">App Store</a>.</dd>
+ <dt>git</dt>
+ <dd>git è il sistema di controllo di versioning utilizzato per archiviare il codice sorgente sviluppato attivamente di Gaia. Scaricare e installare git è semplice e può essere fatto <a href="http://git-scm.com/" title="http://git-scm.com/">direttamente dal loro sito web</a>.</dd>
+ <dt>Python</dt>
+ <dd>Python è un linguaggio di programmazione che vi aiuterà a creare le build di Firefox OS per il testing l10n. Scaricare e installare Python è semplice e può essere effettuato <a href="http://www.python.org/getit/" title="http://www.python.org/getit/">direttamente dal loro sito web.</a></dd>
+ <dt>Mercurial (hg)</dt>
+ <dd>Mercurial (hg) è un altro systema di controllo di versioning che ospita le versioni stabili di Gaia usate per l'l10n e i repository localizzati. Scaricare e installare Mercurial è facile e può essere effettuato <a href="http://mercurial.selenic.com/downloads/" title="http://mercurial.selenic.com/downloads/">direttamente dal loro sito web.</a></dd>
+ <dt>compare-locales</dt>
+ <dd>compare-locales è uno script Python che aiuta i localizzatori a valutare il proprio lavoro e a separare il contenuto nuovo dal materiale già localizzato (chiamato diff). Scaricare e installare compare-locales è facile e può essere <a href="https://developer.mozilla.org/en-US/docs/Compare-locales" title="https://developer.mozilla.org/en-US/docs/Compare-locales">effettuato direttamente dalla pagina wiki di compare-locales </a>(sudo apt-get install python-setuptools &amp;&amp; sudo easy_install -U compare-locales). Tenete presente che è necessario solo se localizzate Gaia usando la linea di comando o un editor di testo. Se utilizzate Pootle, Transifex o Pontoon non ne avrete bisogno.</dd>
+</dl>
+
+<h2 id="Creare_un_repository_locale">Creare un repository locale</h2>
+
+<p>Una volta che avrete installato il software elencato sopra, sarà il momento di scaricare i sorgenti e le stringhe localizzate sul vostro computer.</p>
+
+<ol>
+ <li>Da linea di comando andate nella directory dove archivierete i sorgenti di Gaia e le stringhe localizzate.</li>
+ <li>Usando hg, clonare il repository en-US inserendo questo comando:
+  <pre>hg clone https://hg.mozilla.org/gaia-l10n/en-US</pre>
+ </li>
+ <li>Adesso clonate il vostro repository locale usando il comando seguente. Come esempio, la seconda linea di codice provvede un esempio di clonazione del repository in cinese tradizionale nella cartela adeguata:
+  <pre>hg clone https://hg.mozilla.org/gaia-l10n/your-locale-code
+hg clone https://hg.mozilla.org/gaia-l10n/zh-TW/ B2G/gaia/locales/zh-TW</pre>
+ </li>
+ <li>Per l'italiano, il comando dovrebbe essere simile al seguente:
+  <pre>hg clone https://hg.mozilla.org/gaia-l10n/it</pre>
+ </li>
+ <li>Now run the following command:
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">LOCALE_BASEDIR<span class="operator token">=</span>locales<span class="operator token">/</span> LOCALES_FILE<span class="operator token">=</span>locales<span class="operator token">/</span>languages_mine<span class="punctuation token">.</span>json make</code></pre>
+ </li>
+ <li>I file locali dovrebbero essere indicati nel file <code>languages_mine.json</code>, che utilizza una struttura simile alla seguente:
+  <pre class="brush: json line-numbers  language-json">  <code class="language-json"><span class="punctuation token">{</span>
+  <span class="key token">"en-US" :</span> <span class="string token">"English (US)"</span><span class="punctuation token">,</span>
+  <span class="key token">"fr" :</span> <span class="string token">"Français (fr)"</span>
+  <span class="punctuation token">}</span></code></pre>
+ </li>
+ <li>Infine scrivere questo comando per creare un diff tra il repo localizzato e quello en-US:
+  <pre>compare-dirs en-US it</pre>
+ </li>
+</ol>
+
+<p>Adesso dovreste avere un <em>diff</em> di stringhe non localizzate pronte per essere tradotte! Tenete presente che se state iniziando una nuova localizzazione di B2G OS non sarà necessario creare un diff dato che tutte le stringhe dovranno essere tradotte.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Fare riferimento a <a href="https://gist.github.com/timdream/7716684">questo gist</a> per uno script che automatizzi la procedura.</p>
+</div>
+
+<h2 id="Traduzione_delle_stringhe_di_Gaia">Traduzione delle stringhe di Gaia</h2>
+
+<p>Il workflow per la traduzione delle stringhe di Gaia è fortemente influenzato dagli strumenti utilizzati per tradurre. Questa parte del processo è simile alla fase tradizionale di traduzione degli altri prodotti Mozilla. La pagina <a href="https://developer.mozilla.org/en-US/docs/Localization_Quick_Start_Guide/Translation_phase" title="https://developer.mozilla.org/en-US/docs/Localization_Quick_Start_Guide/Translation_phase">Fase della traduzione della Guida rapida alla localizzazione</a> contiene una lista di tutti gli strumenti usati per tradurre le stringhe contenute nei prodotti Mozilla oltre a dei tutorial su come tradurre con tali strumenti. Questa pagina risulterà utile sia se farete parte di un team l10n che dovrà decidere quali strumenti usare per tradurre le stringhe di Gaia, ma anche se starete cercando il tutorial giusto per lo strumento che il vostro team utilizza.</p>
+
+<h2 id="Testing_L10n_per_B2G_OS">Testing L10n per B2G OS</h2>
+
+<p>Sono due i metodi principali per effettuare testing l10n su B2G OS: build desktop e build mobile. Attualmente il metodo desktop è quello utilizzato maggiormente per il testing l10n.</p>
+
+<h3 id="Testing_l10n_su_desktop">Testing l10n su desktop</h3>
+
+<ol>
+ <li>Scaricate e installate l'<a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">ultima nightly build di boot2gecko</a> in versione desktop, scaricando il pacchetto corrispondente al vostro sistema operativo. Cercate i pacchetti che contengono la parola <em>localizer</em>. Questo indica che la build ha tutte le localizzazioni elencate in <a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json" title="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json"><code>languages-all.json</code></a> attivate.</li>
+ <li>Clonate l'ultima versione di Gaia andando alla directory del vostro PC dove volete che venga scaricato e scrivete questo comando nella linea di comando<code>:</code><code>git clone git://github.com/mozilla-b2g/gaia.git</code></li>
+ <li>Se il vostro team sta localizzando B2G OS per la prima volta, dovrete abilitare la vostra lingua (altrimenti preparatevi un bel drink in attesa che sia qualcun altro ad abitarla):
+  <ol>
+   <li>Sempre da linea di comando, andate nella directory contenente la clonazione di Gaia ed eseguite questo comando per clonare il vostro repo locale:<code> hg clone ssh://hg.mozilla.org/gaia-l10n/it</code></li>
+   <li>Aprite il file <code>languages.json</code> che si trova nella directory  <code>shared/resources</code> della directory locale appena clonata.</li>
+   <li>Aggiungete le informazioni della localizzazione secondo il formato: "it-IT" : "Italian (IT)", e salvate il file.</li>
+   <li>Infine eseguite il comando: <code>make multilocale</code> che abilita la vostra localizzazione nella build sul vostro PC.</li>
+  </ol>
+ </li>
+ <li>Create il vostro profilo Gaia profile eseguendo questo comando: <code>DEBUG=1 make -C gaia profile</code></li>
+ <li>Infine, eseguite B2G OS con il profilo della vostra localizzazione e iniziate il test. Per farlo, inserite questo comando: <code>b2g/b2g -profile gaia/profile</code>. Se state usando Mac OS X, eseguite questo  comando: <code>/Applications/B2G.app/Contents/MacOS/b2g -profile gaia/profile</code></li>
+ <li>Per aggiornare le vostre build desktop dovrete semplicemente andare nella directory della clonazione del repo di Gaia e inserire questo comando: <code>git pull</code></li>
+</ol>
+
+<h3 id="Testing_l10n_su_mobile">Testing l10n su mobile</h3>
+
+<p><em>This section will come as more devices that support B2G OS become available to localizers.</em></p>
+
+<h3 id="Cosa_cercare_durante_i_test_l10n">Cosa cercare durante i test l10n</h3>
+
+<p>Effettuare un test sulla localizzazione per un sistema operativo mobile ha alcune similarità con gli analoghi test che si effettuano nella localizzazione di applicazioni desktop. Ecco alcune linee guida su cosa verificare quando eseguite i test di localizzazione sul vostro lavoro:</p>
+
+<ol>
+ <li>Controllate che la traduzione "stia" all'interno degli elementi testuali dell'interfaccia utente;</li>
+ <li>Assicuratevi che il tolo, lo stile e la terminologia siano coerenti con l'intero prodotto;</li>
+ <li>Cercate stringhe inglesi non ancora tradotte all'interno dell'interfaccia. Queste potrebbero essere codificate nel codice sorgente di Gaia o potrebbero essere causate da un errore nell'identificativo dell'elmento ID.</li>
+ <li>Accertatevi che tempo e data siano visualizzati correttamente, secondo gli standard della vostra regione.</li>
+</ol>
+
+<h2 id="Individuate_bachi_relativi_alla_localizzazione">Individuate bachi relativi alla localizzazione</h2>
+
+<p>Ecco alcuni link a bugzilla, per farti degli esempi di bachi che sono stati incontrati nell'utilizzo di telefoni. Ti darà un'idea di dove guardare per individuare questa tipologia di errori e su come riportarli.</p>
+
+<ul>
+ <li><a class="moz-txt-link-freetext" href="http://bit.ly/100bcsC">http://bit.ly/100bcsC</a> - questa è una lista generale dei bug di B2g relativi a l10n</li>
+ <li><a class="moz-txt-link-freetext" href="https://bugzilla.mozilla.org/show_bug.cgi?id=846060">https://bugzilla.mozilla.org/show_bug.cgi?id=846060</a></li>
+ <li><a class="moz-txt-link-freetext" href="https://bugzilla.mozilla.org/show_bug.cgi?id=852739">https://bugzilla.mozilla.org/show_bug.cgi?id=852739</a></li>
+</ul>
+
+<p>Regole generali per la segnalazione di bug di localizzazione:</p>
+
+<ul>
+ <li>se il bug è relativo ad una lingua nello specifico, va inserito sotto Mozilla Localization (sotto Other Products), mettendo in cc il localizzatore. Non dimenticare di indicare le flag appropriate per il bug segnalato;</li>
+ <li>se non si tratta di un bug specifico di una lingua, inseritelo all'interno della categoria FirefoxOS Product, sempre inserendo in cc il localizzatore. Non dimenticare di indicare le flag appropriate per il bug segnalato;</li>
+ <li>se siete in dubbio,  inserite comunque il bug nella categoria FirefoxOS Product, and cc the localizer. Non dimenticare di indicare le flag appropriate per il bug segnalato.</li>
+</ul>
+
+<p>Per coloro i quali utilizzano <a href="http://moztrap.mozilla.org/" title="http://moztrap.mozilla.org/">Moztrap</a>, un buon modo per verificare la localizzazione di B2G OS è guardare ai test presenti sotto il tag "localization" di FirefoxOS e verificare se avreste passato quel stes sul vostro dispositivo.</p>
+
+<h2 id="E_ora">E ora?</h2>
+
+<p>Ora sei pronto per iniziare la localizzazione! Apri il tuo strumento di localizzazione preferito per l10n, forza! Come sempre, se hai domande cui non hai trovato risposta in questo documento, puoi inviarle a <a href="http://www.mozilla.org/about/forums/#dev-l10n" title="http://mailto:_dev-l10n@lists.mozilla.org">mozilla.dev.l10n newsgroup</a>.</p>

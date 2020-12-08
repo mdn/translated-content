@@ -1,0 +1,23 @@
+---
+title: WebSMS 소개
+slug: WebAPI/WebSMS/Introduction_to_Mobile_Message_API/Introduction_to_WebSMS
+translation_of: Archive/B2G_OS/API/Mobile_Messaging_API/Introduction_to_Mobile_Message_API
+---
+<p>휴대전화의 핵심 기능 중 하나는 SMS 메시지 전송과 수신이다. 이 기능은 <a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebSMS">WebSMS API</a>를 사용하여 구현 가능하다. 다음은 구현 방법 예제이다.</p>
+<pre class="brush: js">// SMS object
+var sms = navigator.mozSms;
+
+// Send a message
+sms.send("123456789", "Hello world!");
+
+// Receive a message
+sms.onreceived = function (event) {
+    // Read message
+    console.log(event.message);
+};
+</pre>
+<h2 id="참조_문서">참조 문서</h2>
+<ul>
+  <li><a href="/en/API/WebSMS" title="WebSMS">WebSMS</a></li>
+  <li><a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebSMS">WebSMS API</a> (설계 문서)</li>
+</ul>

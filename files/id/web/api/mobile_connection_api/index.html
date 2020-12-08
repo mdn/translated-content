@@ -1,0 +1,149 @@
+---
+title: Mobile Connection
+slug: Web/API/Mobile_Connection_API
+translation_of: Archive/B2G_OS/API/Mobile_Connection_API
+---
+<p>{{ draft }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="Summary">Summary</h2>
+<p>This API has 2 purposes:</p>
+<ul>
+ <li>Giving access to detailed information about the current states of the mobile connection of the device</li>
+ <li>Giving access to the specific capacities embedded within the <abbr title="Integrated Circuit Card">ICC</abbr> (the <abbr title="Subscriber Identity Module">SIM</abbr>/<abbr title="Removable User Identity Module">RUIM</abbr> card)</li>
+</ul>
+<p>As this API can access functionalities that can have an impact on the mobile plan subscribed by the user (some of the functionalities can cost money to use or can damage the <abbr title="Integrated Circuit Card">ICC</abbr>), it is restricted to certified applications only.</p>
+<p>The main entry point for this API is the {{domxref("window.navigator.mozMobileConnection","navigator.mozMobileConnection")}} property which is an instance of the {{domxref("MozMobileConnection")}} interface.</p>
+<h2 id="State_of_mobile_connection">State of mobile connection</h2>
+<p>The state of the mobile connection is divided in two: on the one hand the <code>voice</code> connection, on the other hand the <code>data</code> connection. The data related to each type of connection are accessible through the {{domxref("MozMobileConnection.voice")}} and {{domxref("MozMobileConnection.data")}} properties which both return a {{domxref("MozMobileConnectionInfo")}} object.</p>
+<p>Those objects give access to all information related to the quality of the network (<a href="/en-US/docs/DOM/MozMobileConnectionInfo.signalStrength" title="/en-US/docs/DOM/MozMobileConnectionInfo.signalStrength">signal strength</a>, <a href="/en-US/docs/DOM/MozMobileConnectionInfo.relSignalStrength" title="/en-US/docs/DOM/MozMobileConnectionInfo.relSignalStrength">quality of the signal</a>, position of the <a href="/en-US/docs/DOM/MozMobileConnectionInfo.cell" title="/en-US/docs/DOM/MozMobileConnectionInfo.cell">network's cells</a>, <a href="/en-US/docs/DOM/MozMobileConnectionInfo.emergencyCallsOnly" title="/en-US/docs/DOM/MozMobileConnectionInfo.emergencyCallsOnly">restricted usage</a>, <a href="/en-US/docs/DOM/MozMobileConnectionInfo.roaming" title="/en-US/docs/DOM/MozMobileConnectionInfo.roaming">roaming</a>, etc.), and related to <a href="/en-US/docs/DOM/MozMobileConnectionInfo.network" title="/en-US/docs/DOM/MozMobileConnectionInfo.network">the carrier operating the network</a>.</p>
+<pre class="brush: js">var cnx = navigator.mozMobileConnection;
+
+console.log("The voice operator is " + cnx.voice.network.longName);
+
+if (cnx.voice.connected) {
+  console.log("The signal has a strength of " + (+cnx.voice.relSignalStrength) + "%");
+} else {
+  console.log("The state of the connection is: " + cnx.voice.state);
+}
+</pre>
+<h2 id="ICC_Functionalities">ICC Functionalities</h2>
+<p>The functionalities available for the <abbr title="Integrated Circuit Card">ICC</abbr> can be divided into two categories: the management of the <abbr title="Integrated Circuit Card">ICC</abbr> itself and the use of the integrated command available within the <a href="http://en.wikipedia.org/wiki/SIM_Application_Toolkit" title="http://en.wikipedia.org/wiki/SIM_Application_Toolkit">STK</a> (<em>SIM Application Toolkit</em>).</p>
+<h3 id="Basic_actions">Basic actions</h3>
+<p>The {{domxref("MozMobileConnection")}} provides a set of methods to deal with common behaviors on <abbr title="Integrated Circuit Card">ICC</abbr>s.</p>
+<div class="note">
+ <p><strong>Note:</strong> All original methods from the <code>MozMobileConnection</code> interface are fully asynchronous. They all return a {{domxref("DOMRequest")}} object which has an <code>onsuccess</code> and <code>onerror</code> event handler to handle the success or failure of the method call.</p>
+</div>
+<h4 id="Card_lock">Card lock</h4>
+<p>As long as a card is locked, a user is unable to use it to reach its mobile network. It's possible to manage the card lock with the {{domxref("MozMobileConnection.getCardLock","getCardLock()")}}, {{domxref("MozMobileConnection.setCardLock","setCardLock()")}}, and {{domxref("MozMobileConnection.unlockCardLock","unlockCardLock()")}} methods.</p>
+<p>If {{domxref("MozMobileConnection.getCardLock","getCardLock()")}} allows to get some detailed information about the lock, it's also possible to have quick info about the lock through {{domxref("MozMobileConnection.cardState")}} which returns a string representing the current state of the lock.</p>
+<div class="note">
+ <p><strong>Note:</strong> Even if the state change requests are successfully handled, it does not mean that the operations are necessarily successful. For that reason, any change in the card state is tracked independently through events:</p>
+ <ul>
+  <li>The {{event("icccardlockerror")}} event is triggered each time a call to {{domxref("MozMobileConnection.setCardLock","setCardLock()")}} or {{domxref("MozMobileConnection.unlockCardLock","unlockCardLock()")}} fails.</li>
+  <li>The {{event("cardstatechange")}} event is triggered each time the {{domxref("MozMobileConnection.cardState","cardState")}} property changes.</li>
+ </ul>
+</div>
+<pre class="brush: js">var cnx = navigator.mozMobileConnection;
+
+function unlockCard() {
+  var unlockOptions = {
+    lockType: "pin",
+    pin     : prompt("Please, enter your PIN")
+  }
+
+  var unlock = cnx.unlockCardLock(unlockOptions);
+
+  unlock.onsuccess = function () {
+    console.log("The card has successfully handled the PIN number.");
+
+    if (this.result.success === false) {
+      if (this.result.retryCount &gt; 0) {
+        console.log("But you mistyped your PIN, you have " + this.result.retryCount + " tries left.");
+      } else {
+        console.log("But your card is hard locked, you need to contact your carrier to get a special unlocking code.");
+      }
+    }
+  }
+
+  unlock.onerror = function () {
+    console.log("Hu! Something goes very wrong!")
+  }
+}
+
+cnx.addEventListener('icccardlockerror', function () {
+  // In case of error, ask the user for his PIN again
+  unlockCard();
+});
+
+cnx.addEventListener('cardsatechange', function () {
+  // In case the card state change and required to be unlocked
+  if (cnx.cardState === 'pinRequired') {
+    unlockCard();
+  }
+}
+
+// First call to unlockCard if required
+if (cnx.cardState === 'pinRequired') {
+  unlockCard();
+}
+</pre>
+<h4 id="MMI_Messages">MMI Messages</h4>
+<p><abbr title="Man Machine Interface">MMI</abbr> messages are human understandable code that, once typed with a phone keyboard, allow to trigger specific action from the <a class="external" href="http://en.wikipedia.org/wiki/Radio_Interface_Layer" title="Wikipedia: Radio Interface Layer">RIL</a> or get response from the network through a <a class="external" href="http://en.wikipedia.org/wiki/USSD" title="Wikipedia: Unstructured Supplementary Service Data">USSD</a> request. A common example is typing a short code to get the <a href="http://en.wikipedia.org/wiki/International_Mobile_Station_Equipment_Identity" title="http://en.wikipedia.org/wiki/International_Mobile_Station_Equipment_Identity">IMEI</a> phone number.</p>
+<p>Such messages are sent using the {{domxref("MozMobileConnection.sendMMI()")}} method (and can be canceled with {{domxref("MozMobileConnection.cancelMMI","cancelMMI()")}}). Even if it will return a {{domxref("DOMRequest")}} object, the response to such messages are handled in two ways:</p>
+<ul>
+ <li>If the <abbr title="Man Machine Interface">MMI</abbr> code requires sending a <abbr title="Unstructured Supplementary Service Data">USSD</abbr> request, the request's <code>success</code> means that the <abbr title="Radio Interface Layer">RIL</abbr> has successfully processed and sent the <abbr title="Unstructured Supplementary Service Data">USSD</abbr> request to the network. However, the network reply is reported through the {{event("ussdreceived")}} event.</li>
+ <li>If the <abbr title="Man Machine Interface">MMI</abbr> code is not associated with a <abbr title="Unstructured Supplementary Service Data">USSD</abbr> but with another <abbr title="Radio Interface Layer">RIL</abbr> request, its result, if one is needed, is sent via the returned request's <code>success</code> or <code>error</code>.</li>
+</ul>
+<pre class="brush: js">var cnx = navigator.mozMobileConnection;
+
+cnx.addEventHandler('ussdreceived', function (evt) {
+  console.log('Network message: ' + evt.data.message);
+});
+
+var MMIRequest = cnx.sendMMI(prompt('Provide a valid MMI'));
+
+MMIRequest.onerror = function() {
+  console.log("Mmmh... Something goes wrong.");
+}
+</pre>
+<h4 id="Call_forwarding_options">Call forwarding options</h4>
+<p>Call forwarding options allow to define how a call can or cannot be forwarded to another phone number.</p>
+<p>Those options are handled with the {{domxref("MozMobileConnection.getCallForwardingOption","getCallForwardingOption()")}} and {{domxref("MozMobileConnection.setCallForwardingOption","setCallForwardingOption()")}} methods.</p>
+<pre class="brush: js">var options = {
+  action      : MozMobileCFInfo.CALL_FORWARD_ACTION_ENABLE,
+  reason      : MozMobileCFInfo.CALL_FORWARD_REASON_UNCONDITIONAL,
+  serviceClass: MozMobileConnectionInfo.ICC_SERVICE_CLASS_VOICE,
+  number      : prompt('To which phone number would you wish to forward the calls?'),
+  timeSeconds : 5
+};
+
+var setOption = navigator.mozMobileConnection.setCallForwardingOption(options);
+
+setOption.onsuccess = function () {
+  console.log('Options successfully set');
+}
+
+setOption.onerror = function () {
+  console.log('Unable to set options: ' + this.error.name);
+}
+</pre>
+<h3 id="STK_commands">STK commands</h3>
+<p>The STK commands depend on many factors (carriers, chips model, etc.) but can always be accessed through the {{domxref("MozMobileConnection.icc")}} property which returns a {{domxref("MozIccManager")}} object.</p>
+<div class="warning">
+ <p><strong>Warning:</strong> It's recommended to use the STK command only if you already know exactly what you are doing, as a misusage can damage the chip and make it unusable.</p>
+</div>
+<h2 id="Specification">Specification</h2>
+<p>Not part of any specification.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li>{{domxref("window.navigator.mozMobileConnection","navigator.mozMobileConnection")}}</li>
+ <li>{{domxref("MozMobileConnection")}}</li>
+ <li>{{domxref("MozMobileConnectionInfo")}}</li>
+ <li>{{domxref("MozMobileICCInfo")}}</li>
+ <li>{{domxref("MozMobileNetworkInfo")}}</li>
+ <li>{{domxref("MozMobileCFInfo")}}</li>
+ <li>{{domxref("MozMobileCellInfo")}}</li>
+ <li>{{domxref("MozIccManager")}}</li>
+ <li>{{domxref("MozStkCommandEvent")}}</li>
+</ul>

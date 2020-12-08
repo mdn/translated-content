@@ -1,0 +1,89 @@
+---
+title: '-moz-border-bottom-colors'
+slug: Web/CSS/-moz-border-bottom-colors
+translation_of: Archive/Web/CSS/-moz-border-bottom-colors
+---
+<div>{{Non-standard_header}}{{CSSRef}}</div>
+
+<p> </p>
+
+<p>Nelle applicazioni di Mozilla come Firefox, la  proprietà di CSS -moz-border-bottom-colors imposta una lista di colori per il bordo inferiore.</p>
+
+<pre class="brush:css no-line-numbers">/* Single &lt;color&gt; value */
+-moz-border-bottom-colors: #f0f0f0;
+
+/* Multiple &lt;color&gt; values */
+-moz-border-bottom-colors: #f0f0f0 #a0a0a0 #505050 #000000;
+
+/* Global values */
+-moz-border-bottom-colors: inherit;
+-moz-border-bottom-colors: initial;
+-moz-border-bottom-colors: unset;
+</pre>
+
+<p>Quando un elemento ha un margine che è più grande di un singolo pixel CSS, tutta la linea dei pixel assume il colore accanto specificato in questa proprietà, dall'esterno verso l'interno.Questo elimina il bisogno di box annidati.Se il margine è più largo del numero dei colori specificati, la rimanente parte del margine è del colore specificato più interno. </p>
+
+<p>{{cssinfo}}</p>
+
+<p>It does not apply</p>
+
+<ol>
+ <li>if {{Cssxref("border-style")}} is <code>dashed</code> or <code>dotted</code>.</li>
+ <li>to tables with <code>border-collapse: collapse</code>.</li>
+</ol>
+
+<h2 id="Sintassi">Sintassi</h2>
+
+<h3 id="Valori">Valori</h3>
+
+<p>Accetta una lista di colori separati dallo spazio.</p>
+
+<dl>
+ <dt>&lt;color&gt;</dt>
+ <dd>
+ <p class="syntaxbox">Specifica il colore di una linea di pixel del margine inferiore. Il trasparente è valido.Vedi i valori {{cssxref("&lt;color&gt;")}} per le unità possibili.</p>
+ </dd>
+ <dt>none</dt>
+ <dd>Di default, nessun colore è applicato o è usato {{cssxref("border-color")}}, se specificato.</dd>
+</dl>
+
+<h3 id="Sintassi_2">Sintassi</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Esempio">Esempio</h2>
+
+<pre class="brush:html">&lt;div id="example"&gt;Example&lt;/div&gt;
+</pre>
+
+<pre class="brush:css">#example {
+  padding: 20px;
+  background-color: gray;
+  border: 10px solid black;
+  -moz-border-top-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+  -moz-border-right-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-bottom-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-left-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Example", 120, 90)}}</p>
+
+<h2 id="Specificazioni">Specificazioni</h2>
+
+<p>QUesta proprietà non è parte di nessun specificazione.</p>
+
+<h2 id="Compatibilità_dei_browser">Compatibilità dei browser</h2>
+
+
+
+<p>{{Compat("css.properties.-moz-border-bottom-colors")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("border-color")}}</li>
+ <li>{{Cssxref("-moz-border-right-colors")}}</li>
+ <li>{{Cssxref("-moz-border-top-colors")}}</li>
+ <li>{{Cssxref("-moz-border-left-colors")}}</li>
+</ul>

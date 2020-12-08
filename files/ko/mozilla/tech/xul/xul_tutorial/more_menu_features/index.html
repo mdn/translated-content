@@ -1,0 +1,109 @@
+---
+title: More Menu Features
+slug: Mozilla/Tech/XUL/XUL_Tutorial/More_Menu_Features
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Menu_Features
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Simple_Menu_Bars" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Popup_Menus">다음  »</a></p>
+</div><p></p>
+<p>이번 단원에서는 하위 메뉴와 체크 메뉴를 만드는 방법을 알아 보겠습니다.</p>
+<h3 id=".ED.95.98.EC.9C.84_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".ED.95.98.EC.9C.84_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0">하위 메뉴 만들기</h3>
+<p>여러분은 기존에 있는 요소들을 사용하여 다른 메뉴 내에 있는 서브메뉴(중첩 메뉴)를 만들 수 있습니다. <code>menupopup</code>안에는 어떤 요소든 넣을 수 있다는 것을 기억해보세요. 지난 단원에서는 <code>menupopup</code>안에 <code>menuitem</code>과 <code>menuseparator</code>를 넣는 방법을 알아 보았습니다. 그러나 여러분은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소내에 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code>를 넣기만 하면 하위 메뉴를 만들 수 있습니다. 이것은 <code>menu</code> 요소가 꼭 메뉴바의 바로 아래에 있지 않더라도 유효한 것이기 때문에 동작하게 됩니다. 아래는 File 메뉴내에 간단한 하위 메뉴가 존재하는 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:menubar-ex3.png"></div>
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menu id="new-menu" label="New"&gt;
+          &lt;menupopup id="new-popup"&gt;
+            &lt;menuitem label="Window"/&gt;
+            &lt;menuitem label="Message"/&gt;
+          &lt;/menupopup&gt;
+        &lt;/menu&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<div class="highlight">
+ <h3 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C.EC.97.90_.EB.A9.94.EB.89.B4_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C.EC.97.90_.EB.A9.94.EB.89.B4_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">우리의 파일 찾기 예제에 메뉴 추가하기</h3>
+ <p>이제 파일 찾기 대화창에 메뉴를 넣어 봅시다. 우리는 File 메뉴와 Edit 메뉴에 간단한 명령 몇 가지를 넣을 것입니다. 이 방법은 위의 예제와 비슷합니다.</p>
+ <pre class="eval">&lt;toolbox&gt;
+
+ <span class="highlightred">&lt;menubar id="findfiles-menubar"&gt;
+  &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem label="Open Search..." accesskey="o"/&gt;
+      &lt;menuitem label="Save Search..." accesskey="s"/&gt;
+      &lt;menuseparator/&gt;
+      &lt;menuitem label="Close" accesskey="c"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem label="Cut" accesskey="t"/&gt;
+      &lt;menuitem label="Copy" accesskey="c"/&gt;
+      &lt;menuitem label="Paste" accesskey="p" disabled="true"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;</span>
+
+&lt;toolbar id="findfiles-toolbar&gt;
+</pre>
+ <div class="float-right">
+  <img alt="Image:menubar1.png"></div>
+ <p>여기서 여러개의 명령을 가진 두 개의 메뉴를 만들었습니다. 툴박스 내에 어떻게 메뉴바가 추가되었는지를 유심히 보세요. Open Search와 Save Search 뒤에 불은 세 개의 점은 사용자가 해당 명령을 선택할 때 대화창이 열릴것이라는 것을 알려주는 일반적인 방법입니다. 각 메뉴와 메뉴 항목에는 접근글쇠(Access key)가 지정되어 있습니다. 그림을 보면 지정된 글자가 메뉴 제목에 밑줄로 표시된 것을 알 수 있습니다. 또 붙이기(Paste) 명령은 현재 사용불가 상태입니다. 우리는 아무 것도 붙일 것이 없다고 가정할 것입니다.</p>
+ <p><span id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>지금까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul">View</a></p>
+</div>
+<h3 id=".EB.A9.94.EB.89.B4.EC.97.90_.EC.B2.B4.ED.81.AC_.ED.91.9C.EC.8B.9C_.EB.84.A3.EA.B8.B0" name=".EB.A9.94.EB.89.B4.EC.97.90_.EC.B2.B4.ED.81.AC_.ED.91.9C.EC.8B.9C_.EB.84.A3.EA.B8.B0">메뉴에 체크 표시 넣기</h3>
+<p>많은 프로그램들에서는 체크할 수 있는 메뉴를 사용합니다. 예를 들어 현재 사용하고 있는 기능은 명령 옆에 체크가 있고 그렇지 않은 기능은 체크가 없는 메뉴 같은 것입니다. 사용자가 메뉴를 선택하면 체크 상태가 바뀝니다. 또 메뉴 항목에 라디오 버튼을 넣고 싶을 때도 있을 것입니다.</p>
+<p>체크 메뉴를 만드는 방법은 <code><a href="/ko/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code>와 <code><a href="/ko/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code>를 만드는 방법과 비슷합니다. 이를 위해서는 두 개의 속성이 필요한데, <code><a href="ko/XUL/Attribute/button.type">type</a></code> 속성은 체크의 형식을 지정할 때, <code><a href="ko/XUL/Attribute/menuitem.name">name</a></code> 속성은 관련된 명령을 하나로 묶을 때 사용합니다. 아래는 체크 항목을 가진 메뉴를 만드는 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul">View</a></p>
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="options-menubar"&gt;
+    &lt;menu id="options_menu" label="Options"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem label="Make Backups" type="checkbox"/&gt;
+        &lt;menuitem label="Email Administrator" type="checkbox" checked="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>메뉴 항목이 체크될 수 있도록 <code><a href="ko/XUL/Attribute/button.type">type</a></code> 속성이 추가되었습니다. 해당 속성값을 <code>checkbox</code>로 설정하면 메뉴 항목을 클릭할 때마다 체크가 설정/해제됩니다.</p>
+<h4 id=".EB.9D.BC.EB.94.94.EC.98.A4.EB.B2.84.ED.8A.BC.EC.9D.B4_.EC.9E.88.EB.8A.94_.EB.A9.94.EB.89.B4" name=".EB.9D.BC.EB.94.94.EC.98.A4.EB.B2.84.ED.8A.BC.EC.9D.B4_.EC.9E.88.EB.8A.94_.EB.A9.94.EB.89.B4">라디오버튼이 있는 메뉴</h4>
+<p>일반 체크 외에도 <code><a href="ko/XUL/Attribute/button.type">type</a></code> 속성의 값을 <code>radio</code>로 지정하면 라디오 형식의 체크를 만들 수 있습니다. 라디오 체크는 한 그룹의 메뉴 항목 중 하나만 선택할 수 있도록 만들 때 사용됩니다. 예를 들면 한번에 하나의 글꼴만 선택할 수 있는 글꼴 메뉴 같은 것입니다. 이 때 다른 항목이 선택되면 이전에 선택되었던 항목은 체크가 해제됩니다.</p>
+<p>여러 개의 메뉴 항목을 하나의 그룹으로 묶을 때는 각 메뉴 항목의 <code><a href="ko/XUL/Attribute/menuitem.name">name</a></code> 속성을 같은 값으로 지정하면 됩니다. 아래 예제를 보겠습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul">View</a></p>
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="planets-menubar"&gt;
+    &lt;menu id="planet-menu" label="Planet"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="jupiter" label="Jupiter" type="radio" name="ringed"/&gt;
+        &lt;menuitem id="saturn" label="Saturn" type="radio" name="ringed" checked="true"/&gt;
+        &lt;menuitem id="uranus" label="Uranus" type="radio" name="ringed"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem id="earth" label="Earth" type="radio" name="inhabited" checked="true"/&gt;
+        &lt;menuitem id="moon" label="Moon" type="radio" name="inhabited"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>예제를 실행시키면, 처음 세 개의 메뉴 항목 중 한 가지만 선택할 수 있다는 것을 알게 될 것입니다. 이 메뉴 항목들은 모두 동일한 <code>name</code> 속성값을 가지고 있기 때문에 하나의 그룹으로 엮인 것입니다. 마지막 메뉴 항목인 Earth는 라디오 메뉴이지만 <code>name</code> 속성값이 다르기 때문에 그 무리에 속하지 않습니다.</p>
+<p>물론 하나의 그룹 항목들은 모두 동일한 메뉴 안에 있어야 합니다. 꼭 붙어 있어야 할 필요는 없지만, 상식적으로 생각할 때 서로 붙어 있는 것이 좋을 것입니다.</p>
+<p>다음 단원에서는 <a href="ko/XUL_Tutorial/Popup_Menus">팝업 메뉴</a>를 작성하는 방법에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Simple_Menu_Bars" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Popup_Menus">다음  »</a></p>
+</div><p></p>
+<p></p>

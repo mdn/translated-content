@@ -1,0 +1,6 @@
+# FROM-URL	TO-URL
+/ms/docs/HTML-840092-dup	/ms/docs/HTML
+/ms/docs/HTML/Borang	/ms/docs/Learn/HTML/Forms
+/ms/docs/MDN/Contribute/Howto/Bagaimana	/ms/docs/MDN/Contribute/Howto/Bagaimana_membuat_akaun_MDN
+/ms/docs/MDN/Getting_started	/ms/docs/MDN/Contribute/Getting_started
+/ms/docs/en	/en-US/

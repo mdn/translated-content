@@ -1,0 +1,61 @@
+---
+title: Stacks and Decks
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Stacks_and_Decks
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Stacks_and_Decks
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_More_Elements" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Stack_Positioning">다음  »</a></p>
+</div><p></p>
+<p>여러분은 여러 요소를 카드를 쌓아 올리듯이 표시해야 할 때가 있을 수도 있습니다. 스택(stack)과 덱(deck) 요소를 이런 용도로 사용하실 수 있습니다.</p>
+<h3 id=".EC.BB.A8.ED.85.8C.EC.9D.B4.EB.84.88.28containers.29" name=".EC.BB.A8.ED.85.8C.EC.9D.B4.EB.84.88.28containers.29">컨테이너(containers)</h3>
+<p>XUL의 모든 상자 요소는 다른 요소를 포함할 수 있는 개체입니다. <a href="ko/XUL_Tutorial/Toolbars">툴바</a>나 <a href="ko/XUL_Tutorial/Tabboxes">탭패널</a>처럼 특수화된 상자도 여러 가지가 있습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 태그는 아무런 특징이 없는 가장 단순한 상자를 만듭니다. 하지만 특수화된 상자들은 일반 상자처럼 내부의 요소들을 <code id="a-배치"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/배치">배치</a></code>하는 것 외에 다른 기능들도 가지고 있습니다.</p>
+<p>실제로 여러 가지 구성 요소들은 다른 요소를 포함할 수 있습니다. 우리는 앞에서 버튼이 다른 요소를 포함하는 것을 살펴 보았습니다. 스크롤바는 여러분이 지정하지 않아도 필요한 요소를 만드는 특수화된 상자입니다. 그리고 막대가 이동하는 것도 스스로 제어합니다.</p>
+<p>앞으로 몇 단원에 걸쳐 다른 요소를 포함하는 요소들에 대해 알아 볼 것입니다. 그들은 모두 특수화된 상자로서 상자의 모든 속성을 사용할 수 있습니다.</p>
+<h3 id=".EC.8A.A4.ED.83.9D.28stack.29" name=".EC.8A.A4.ED.83.9D.28stack.29">스택(stack)</h3>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/Stack" title="Stack">Stack</a></code></code> 요소는 단순한 상자입니다. 일반 상자와 똑같이 작동하지만 자식 요소를 아래에서부터 쌓는 특징을 가지고 있습니다. 첫 번째 자식 요소가 바닥에 표시되고, 두 번째 자식 요소가 그 위에, 그리고 세 번째 자식 요소가 그 위에 표시되는 방식입니다. 쌓아 올릴 수 있는 요소의 수에는 제한이 없습니다.</p>
+<p>스택은 자식 요소가 나란히 표시되는 상자와 달리, 아래에서부터 위로 쌓이기 때문에 <code><code><span><a href="https://developer.mozilla.org/ko/docs/XUL/Property/orient">orient</a></span></code></code> 속성의 의미가 없습니다. 스택의 크기는 가장 큰 자식 요소에 의해 결정되지만 스택과 그 자식 요소에 <code>width</code>, <code>height</code>, <code>min-width</code> 등의 CSS 속성을 사용할 수도 있습니다.</p>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 요소는 기존의 요소 위에 상태를 표시하는 개체를 표시하고 싶을 때 사용할 수도 있습니다. 예를 들어, 상태바를 막대와 그 위에 중첩된 라벨로 만들 수도 있습니다.</p>
+<h4 id=".EC.8A.A4.ED.83.9D.EC.9D.84_.EC.9D.B4.EC.9A.A9.ED.95.B4.EC.84.9C_.EA.B7.B8.EB.A6.BC.EC.9E.90_.ED.9A.A8.EA.B3.BC_.EC.A3.BC.EA.B8.B0" name=".EC.8A.A4.ED.83.9D.EC.9D.84_.EC.9D.B4.EC.9A.A9.ED.95.B4.EC.84.9C_.EA.B7.B8.EB.A6.BC.EC.9E.90_.ED.9A.A8.EA.B3.BC_.EC.A3.BC.EA.B8.B0">스택을 이용해서 그림자 효과 주기</h4>
+<p>또한 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>을 사용하여 손쉽게 많은 CSS 속성을 흉내낼 수 있습니다. 아래는 text-shadow 속성과 비슷한 효과를 내는 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul">View</a></p>
+<pre>&lt;stack&gt;
+  &lt;description value="Shadowed" style="padding-left: 1px; padding-top: 1px; font-size: 15pt"/&gt;
+  &lt;description value="Shadowed" style="color: red; font-size: 15pt;"/&gt;
+&lt;/stack&gt;
+</pre>
+<div class="float-right">
+ <img alt="Image:stacks1.png"></div>
+<p>두 개의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>은 15포인트 크기의 문자열을 생성합니다. 하지만 첫 번째 것은 왼쪽과 위쪽에 여백을 주어 1픽셀씩 오른쪽과 아래쪽으로 밀려나게 하였습니다. 그래서 똑같이 'Shadowed'란 문자열을 표시하지만 두 번째 것과 조금 위치가 다릅니다. 두 번째 <code>description</code> 요소는 빨간색으로 표시되기 때문에 효과를 쉽게 알아 볼 수 있습니다.</p>
+<p>이 방법이 <code>text-shadow</code>보다 좋은 이유는 그림자를 원하는 대로 꾸밀 수 있기 때문입니다. 예를 들어 그림자를 다른 글꼴과 크기로 표시하거나 밑줄을 그을 수도 있습니다. (깜빡이는 효과도 줄 수 있습니다). 게다가 아직까지 Mozilla는 CSS의 text-shadow를 지원하지 않고 있습니다. 단점은 그림자가 차지하는 공간 때문에 스택의 크기가 커진다는 것입니다. 그림자 효과는 사용 불가 버튼을 표시할 때 매우 유용합니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul">View</a></p>
+<pre>&lt;stack style="background-color: #C0C0C0"&gt;
+  &lt;description value="Disabled" style="color: white; padding-left: 1px; padding-top: 1px;"/&gt;
+  &lt;description value="Disabled" style="color: grey;"/&gt;
+&lt;/stack&gt;
+</pre>
+<p>이렇게 하면 사용 불가능한 것처럼 보입니다.</p>
+<p>한 가지 주의할 점은 마우스 클릭과 키 누름 같은 이벤트는 가장 위의 요소 즉, 스택의 마지막 요소에만 적용된다는 것입니다. 이는 버튼이 스택의 마지막 요소일때만 제대로 동작한다는 것을 의미합니다.</p>
+<h3 id=".EB.8D.B1.28decks.29" name=".EB.8D.B1.28decks.29">덱(decks)</h3>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> 요소는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>처럼 자식 요소들을 쌓아 놓지만 한 번에 하나의 자식 요소만 표시하는 요소입니다. 덱은 유사한 여러 판넬이 순차적으로 표시되는 마법사 인터페이스를 만들 때 유용하게 사용할 수 있습니다. 개별 창을 만들고 각 창에 네비게이션 버튼을 만드는 것보다, 하나의 창에서 내용이 변하는 곳에 덱을 사용하는 것이 보다 편리합니다.</p>
+<p>스택에서처럼 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code>의 바로 아래 자식 요소들은 덱의 한 쪽(page)이 됩니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code>의 자식 요소가 세 개라면 덱은 세 쪽을 갖고 있는 셈입니다. 화면에 나타나는 쪽은 <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 속성을 이용하여 조절할 수 있습니다. 인덱스는 표시하고 싶은 쪽에 해당하는 번호입니다. 쪽의 번호는 0부터 시작하기 때문에 덱의 첫 번째 자녀 요소는 0, 두 번째는 1의 순서가 됩니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul">View</a></p>
+<pre>&lt;deck selectedIndex="2"&gt;
+  &lt;description value="This is the first page"/&gt;
+  &lt;button label="This is the second page"/&gt;
+  &lt;box&gt;
+    &lt;description value="This is the third page"/&gt;
+    &lt;button label="This is also the third page"/&gt;
+  &lt;/box&gt;
+&lt;/deck&gt;
+</pre>
+<p>예제에는 세 쪽이 있는데 기본적으로 표시되는 것은 세 번째 쪽입니다. 세 번째 쪽은 두 개의 요소를 포함하는 상자입니다. 상자와 그 안의 요소들이 쪽을 구성합니다. 덱의 크기는 가장 큰 자식 요소의 크기와 같기 때문에 여기서는 세 번째 자식 요소의 크기가 덱의 크기가 됩니다.</p>
+<p>여러분은 스크립트를 사용하여 <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code>의 값을 변경하면 표시되는 쪽을 바꿀 수 있습니다. 이에 대해서는 이벤트와 DOM에 대한 단원에서 좀더 알아 보도록 하겠습니다.</p>
+<p>다음 섹션에서는 <a href="ko/XUL_Tutorial/Stack_Positioning">자식 요소의 위치를 지장하기 위해</a> 어떻게 스택을 사용할 수 있는지에 대해 설명하겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_More_Elements" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Stack_Positioning">다음  »</a></p>
+</div><p></p>
+<p></p>

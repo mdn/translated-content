@@ -1,0 +1,458 @@
+---
+title: WebIDE
+slug: Tools/WebIDE
+translation_of: Archive/WebIDE
+---
+<div>{{ToolsSidebar}}</div><div class="geckoVersionNote">
+<p>WebIDE is available from Firefox 34 onwards.</p>
+</div>
+
+<div class="summary">
+<p>WebIDE is the replacement for the <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>. Like the App Manager, it enables you to run and debug <a href="/en-US/Firefox_OS">Firefox OS</a> apps using the <a href="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS Simulator</a> or a real Firefox OS device.</p>
+
+<p>However, it also provides an editing environment for you to create and develop Firefox OS apps, including a tree view of all the files in your app with the ability to edit and save them, and two app templates to help you get started.</p>
+
+<p>Finally, WebIDE enables you to connect the <a href="/en-US/docs/Tools">Firefox Developer Tools</a> to a number of other browsers, including Firefox for Android, Chrome on Android, and Safari on iOS. See the <a href="/en-US/docs/Tools/Remote_Debugging">Remote Debugging</a> page for instructions on how to connect to a specific browser.</p>
+</div>
+
+<p>With WebIDE, you first <a href="/en-US/docs/Tools/WebIDE#Setting_up_runtimes">set up one or more runtimes</a>. A runtime is an environment in which you'll run and debug the app. A runtime could be a Firefox OS device connected to the desktop over USB, or it could be a Firefox OS Simulator installed on the desktop itself.</p>
+
+<p>Next, you <a href="/en-US/docs/Tools/WebIDE#Creating_and_opening_apps">create an app, or open an existing app</a>. If you're creating a new app you start with a template that includes the directory structure and the minimum boilerplate you need to get started, or a more complete template that shows how to use a privileged API. WebIDE shows your app's files in a tree, and you can edit and save them using a built-in source editor. Of course, you don't have to use the built-in editor: you can develop your app entirely outside WebIDE, and only use it for debugging.</p>
+
+<p>Finally, you can <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Running_and_debugging_apps">install the app in one of the runtimes and run it</a>. You can then open the usual suite of developer tools - the <a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>, <a href="/en-US/docs/Tools/Web_Console">Console</a>, <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a> and so on - to examine and modify the running app.</p>
+
+<h2 id="System_requirements">System requirements</h2>
+
+<p>To develop and debug apps using WebIDE, all you need is Firefox version 33 or later. To test on a real Firefox OS device, you need a device running Firefox OS 1.2 or later, and a USB cable.</p>
+
+<p>You can only use WebIDE for Firefox OS if you're targeting Firefox OS 1.2 or later.</p>
+
+<h2 id="Opening_WebIDE">Opening WebIDE</h2>
+
+<p>There are three ways to open WebIDE:</p>
+
+<ul>
+ <li>In the Web Developer menu, click on the "WebIDE" entry and WebIDE opens.</li>
+ <li>Use the keybinding Shift-F8.</li>
+ <li>A dedicated icon in the Firefox toolbar. This is always present if you're using <a href="/en-US/Firefox/Developer_Edition">Firefox Developer Edition</a>, and with any Firefox from version 36 onwards it appears after you've opened the WebIDE once:</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9437/webide-icon.png" style="display: block; margin-left: auto; margin-right: auto; width: 897px;"></p>
+
+<p>Here's what the WebIDE looks like:<img alt="" src="https://mdn.mozillademos.org/files/8033/webide-initial.png" style="display: block; height: 560px; margin-left: auto; margin-right: auto; width: 720px;">The dropdown on the left labeled "Open App" lets you open existing apps or create new ones. The dropdown on the right labeled "Select Runtime" lets you select a runtime or set up a new runtime.</p>
+
+<p>The buttons in the middle run, stop, and debug the app: they are only enabled when you have opened an app and selected a runtime.</p>
+
+<p>From Firefox 36, you can change the font size throughout WebIDE using the standard keyboard shortcuts (use <code>Command</code> instead of <code>Control</code> on OS X):</p>
+
+<ul>
+ <li><code>Ctrl +</code> increases font size</li>
+ <li><code>Ctrl -</code> decreases font size</li>
+ <li><code>Ctrl 0</code> resets the font size to the default</li>
+</ul>
+
+<h2 id="Setting_up_runtimes">Setting up runtimes</h2>
+
+<p>Under the "Select Runtime" dropdown, runtimes are grouped into three types:</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Connecting_a_Firefox_OS_device">USB devices</a>: Firefox OS devices connected over USB. From Firefox 36 this also gets you connected to <a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Firefox for Android over USB</a>.</li>
+ <li><a href="/en-US/docs/Tools/WebIDE#Adding_a_Simulator">Simulators</a>: instances of the Firefox OS Simulator that you've installed</li>
+ <li><a href="/en-US/docs/Tools/WebIDE#Custom_runtimes">Custom</a>: use this to connect a runtime to WebIDE using an arbitrary name and port. From Firefox 36, this runtime type is renamed "Other". If you have the <a href="/en-US/docs/Tools/Valence">Valence</a> add-on installed, this section will also list the <a href="/en-US/docs/Tools/WebIDE#Valence-enabled_runtimes">additional runtimes it enables</a>.</li>
+</ul>
+
+<p>The first time you click the dropdown, you might not see any runtimes here:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8043/webide-no-runtimes.png" style="display: block; height: 564px; margin-left: auto; margin-right: auto; width: 723px;">The rest of this section describes how you can add some runtimes.</p>
+
+<h3 id="Connecting_a_Firefox_OS_device">Connecting a Firefox OS device</h3>
+
+<p>Before you can connect a Firefox OS device, there's some setup you have to go through:</p>
+
+<ul>
+ <li><strong>check your Firefox OS version: </strong>make sure your device is running Firefox OS 1.2/Boot2Gecko 1.2 or higher. To check the version, go to the Settings app on the device, then <code>Device Information &gt; Software</code>. If you don't have a high enough version, find your device in the <a href="/en-US/Firefox_OS/Developer_phone_guide">developer phone guide</a> and follow the instructions for upgrading.</li>
+ <li><strong>enable remote debugging: </strong>in the Settings app on the device, go to <code>Device information &gt; More information &gt; Developer</code>.
+  <ul>
+  </ul>
+
+  <ul>
+   <li>Firefox OS 1.3 and earlier: "Remote Debugging" is just a simple checkbox. Check it.</li>
+   <li>Firefox OS 1.4 and later: "Remote Debugging" asks you to enable for just ADB, or for ADB and DevTools. Select "ADB and DevTools".</li>
+  </ul>
+ </li>
+ <li><strong>disable Screen lock on your device:</strong> in the Settings app on the device, go to <code>Screen Lock</code> and unchecking the <code>Lock Screen</code> checkbox. This is a good idea because when the screen gets locked, the phone connection gets lost, meaning it is no longer available for debugging.</li>
+ <li><strong>if you want unrestricted debugging privileges, including certified apps, built-in apps, and apps already installed on a real device</strong>: see the section on <a href="/en-US/docs/Tools/WebIDE#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29">Unrestricted app debugging (including certified apps, main process, etc.)</a>.</li>
+</ul>
+
+<div class="note">
+<p><strong>Linux only:</strong></p>
+
+<ul>
+ <li>add a <code>udev</code> rules file, as documented in step 3 of this guide to <a href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>. The <code>idVendor</code> attribute to use for the Geeksphone is "05c6", and <a href="http://developer.android.com/tools/device.html#VendorIds">this page</a> lists other <code>idVendor</code> values.</li>
+</ul>
+</div>
+
+<div class="note">
+<p><strong>Windows only:</strong></p>
+
+<ul>
+ <li>you need to install drivers, as documented in step 3 of this guide to <a href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>. You can find drivers for Geeksphone devices on the <a href="http://downloads.geeksphone.com/">Geeksphone web site</a>. Windows 8 by default will not let you install unsigned drivers. See this tutorial on <a class="external external-icon" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"How to install an unsigned driver on Windows 8"</a>.</li>
+ <li>if WebIDE can't see your device after following all the steps, you may have to <a class="external external-icon" href="http://blog.fh-kaernten.at/wehr/?p=1182">edit adb_usb.ini</a>.</li>
+</ul>
+</div>
+
+<p>If there are any other Android devices connected to your computer, disconnect them. Now connect the device to the computer using USB. You should see the device appear under "USB DEVICES":</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8045/webide-select-runtime-keon.png" style="display: block; height: 562px; margin-left: auto; margin-right: auto; width: 710px;"></p>
+
+<p>If you don't see your device, see the <a href="/en-US/docs/Tools/WebIDE/Troubleshooting">Troubleshooting</a> page.</p>
+
+<h3 id="Connecting_to_Firefox_for_Android">Connecting to Firefox for Android</h3>
+
+<p>From Firefox 36 onwards Android devices connected over USB and running Firefox for Android appear as a runtime under "USB devices". See the article on <a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">connecting to Firefox for Android from WebIDE</a>.</p>
+
+<p>Before Firefox 36, you can <a href="/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">connect to Firefox for Android without using WebIDE at all</a>, or can use WebIDE by setting up a <a href="/en-US/docs/Tools/WebIDE#Remote_runtime">custom remote runtime</a>.</p>
+
+<h3 id="Adding_a_Simulator">Adding a Simulator</h3>
+
+<p><span style="line-height: 1.5;">The <a href="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS Simulator</a> is <span style="line-height: 1.5;">a version of the higher layers of Firefox OS</span> that simulates a Firefox OS device, but runs on the desktop</span><span style="line-height: 1.5;">. </span><span style="line-height: 1.5;">It runs in a window the same size as a Firefox OS device, includes the Firefox OS user interface and built-in apps, and simulates many of the Firefox OS device APIs.</span></p>
+
+<p><span style="line-height: 1.5;">This means that in many cases, you don't need a real device to test and debug your app. </span></p>
+
+<p>The Simulator is big, so it doesn't ship inside Firefox but as a Firefox <a href="/en-US/Add-ons">add-on</a>. If you click "Install Simulator" in the Runtimes dropdown menu, you will go to a page from which you can install Simulators for various versions of Firefox OS.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8039/webide-install-simulator.png" style="display: block; height: 560px; margin-left: auto; margin-right: auto; width: 720px;">You can install as many as you like. Be patient, though: the Simulator is large and may take a few minutes to download. Once you've installed some Simulators you can close this "Extra Components" window, and the Simulators you've installed appear as options in the Runtimes dropdown menu:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8047/webide-select-runtime-keon-simulator.png" style="display: block; height: 559px; margin-left: auto; margin-right: auto; width: 712px;">To learn more about the Simulator, see its <a href="/en-US/docs/Tools/Firefox_OS_Simulator">documentation page</a>.</p>
+
+<h3 id="Custom_runtimes">Custom runtimes</h3>
+
+<h4 id="Remote_runtime">Remote runtime</h4>
+
+<p>With a custom remote runtime you can use an arbitrary hostname and port to connect to the remote device.</p>
+
+<p>Under the hood, Firefox OS devices and Android devices connect to the desktop using a program called the Android Debug Bridge, or <a href="http://developer.android.com/tools/help/adb.html">ADB</a>. By default, WebIDE uses an add-on called the ADB Helper: this simplifies the process for you by installing ADB and setting up port forwarding so the Firefox desktop tools can exchange messages with the device.</p>
+
+<p>This is convenient in most cases, but sometimes you might want to use ADB outside of WebIDE: for example, you might be running ADB directly from the command line. In that case you'll connect to the device by specifying a host and port using the <a href="http://developer.android.com/tools/help/adb.html#forwardports"><code>adb forward</code></a> command (example: <code>adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</code>).<br>
+ <br>
+ If you then want to use WebIDE to connect as well, you should <a href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons#w_how-to-disable-extensions-and-themes">disable the ADB Helper add-on</a> and connect WebIDE using the Custom runtime option, entering the host and port that you passed to <code>adb forward</code> (example: <code>localhost:6000</code>).</p>
+
+<p>Also, before Firefox 36, the ADB Helper does not yet support connecting to Firefox for Android, so if you want to connect WebIDE to Firefox for Android, you'll need to set up your own port forwarding and use a custom runtime. <a href="/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">See more about connecting to Firefox for Android using ADB prior to Firefox 36</a>.</p>
+
+<h4 id="Valence-enabled_runtimes">Valence-enabled runtimes</h4>
+
+<p>If you have the <a href="/en-US/docs/Tools/Valence">Valence</a> add-on installed, you'll see three additional runtimes:</p>
+
+<ul>
+ <li>Chrome on Android</li>
+ <li>Safari on iOS</li>
+ <li>Chrome Desktop</li>
+</ul>
+
+<p>For instructions on how to connect to these runtimes, see the relevant entry in the <a href="/en-US/docs/Tools/Remote_Debugging">Remote Debugging</a> page.</p>
+
+<h2 id="Selecting_a_runtime">Selecting a runtime</h2>
+
+<p>Once you've set up a runtime you can select it using the "Select Runtime" menu.</p>
+
+<ul>
+ <li>If you select a Simulator, WebIDE launches the Simulator.</li>
+ <li>If you select a Firefox OS device WebIDE connects to the device. On the device a dialog will ask you to confirm that you wish to connect: press "OK".</li>
+</ul>
+
+<p>Now the "play" button in the center of the WebIDE toolbar is enabled: click it to install and run the app in the selected runtime.</p>
+
+<h3 id="Runtime_menu_items">Runtime menu items</h3>
+
+<p>When a runtime is selected, the Runtimes dropdown menu has up to five extra items:</p>
+
+<dl>
+ <dt><strong>Runtime Info</strong></dt>
+ <dd>Information on the current runtime</dd>
+ <dt><strong>Permissions Table</strong></dt>
+ <dd>A table summarising <a href="/en-US/Apps/Build/App_permissions">app permissions</a> for the current runtime, indicating, for each API and each <a href="/en-US/Marketplace/Options/Packaged_apps#Types_of_packaged_apps">app type</a>, whether access is allowed (✓), denied (✗), or whether the user is prompted (!)</dd>
+</dl>
+
+<dl>
+ <dt><strong>Device Preferences</strong></dt>
+ <dd>A table listing, and letting you edit, the preferences that are made available in the runtime via the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService">Preferences service</a>. These are platform-level configuration values exposing the same set of data as Firefox's about:config (but for the device). Because these preferences are highly security-sensitive, you need to disable the <a href="/en-US/docs/Tools/WebIDE#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29">DevTools restricted privileges setting</a> before you can modify them.</dd>
+ <dt><strong>Device Settings</strong> (new in Firefox 38/Firefox OS 3)</dt>
+ <dd>A table listing, and letting you edit, the settings that can be controlled in the Firefox OS Settings app. Most things on the device which have a UI control to change (volume, alarm, etc.) are found in Device Settings. Because these settings are less sensitive than the device preferences, you can modify them without removing the restricted privileges setting. However, since this feature is new in Gecko 38 you need the WebIDE in Firefox 38 and a nightly build of Firefox OS or the Simulator.</dd>
+ <dt><strong>Screenshot</strong></dt>
+ <dd>A command to take a screenshot from the runtime.</dd>
+</dl>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10185/webide-runtimes.png" style="display: block; height: 601px; margin-left: auto; margin-right: auto; width: 833px;"></p>
+
+<p> </p>
+
+<h2 id="Creating_and_opening_apps">Creating and opening apps</h2>
+
+<p>Under the "Open App" menu you get three options: create a new app, open a packaged app, and open a hosted app:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8049/webide-open-app-empty.png" style="display: block; height: 562px; margin-left: auto; margin-right: auto; width: 723px;"></p>
+
+<h3 id="Create_a_new_app">Create a new app</h3>
+
+<p>Select "New App..." to create a new app. You'll see a dialog offering you a choice between two templates, "Privileged Empty App" and "Privileged App".</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8053/webide-new-app.png" style="display: block; height: 591px; margin-left: auto; margin-right: auto; width: 739px;"></p>
+
+<p>Both templates are from Mozilla's <a href="https://github.com/mozilla/mortar">app template collection</a>, and provide you with the basic structure you need to get started. The "Privileged App" shows how an app can use permissions to load cross-origin content.</p>
+
+<p>Once you've selected a template you'll be asked to name the app and select a directory to store the files, and then the new app is opened in the <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Editing_apps">project editor</a>.</p>
+
+<h3 id="Open_a_packaged_app">Open a packaged app</h3>
+
+<p>Select "Open Packaged App..." to open a <a href="/en-US/Marketplace/Options/Packaged_apps">packaged app</a>. You'll be asked to select a directory containing the app's <a href="/en-US/Apps/Build/Manifest">manifest</a>, and the app will be opened in the <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Editing_apps">project editor</a>.</p>
+
+<h3 id="Open_a_hosted_app">Open a hosted app</h3>
+
+<p>Select "Open Hosted App..." to open a <a href="/en-US/Marketplace/Options/Hosted_apps">hosted app</a>. You'll be asked to enter a URL pointing to the app's <a href="/en-US/Apps/Build/Manifest">manifest</a>, and the app will be opened in the <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Editing_apps">project editor</a>.</p>
+
+<h2 id="Editing_apps">Editing apps</h2>
+
+<p>The project editor provides an environment for editing apps. There's a tree view on the left of all the files in the app: you can add and delete files here using a context menu. There's an editor pane on the right.</p>
+
+<h3 id="The_app_summary_page">The app summary page</h3>
+
+<p>When you first open or create an app, the editor pane is occupied by the app summary page, which is shown below:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8055/webide-new-app-editor.png" style="display: block; height: 625px; margin-left: auto; margin-right: auto; width: 846px;"></p>
+
+<p>You can always get back to the app summary page by clicking on the root of the tree on the left.</p>
+
+<h3 id="Manifest_validation">Manifest validation</h3>
+
+<p>WebIDE automatically checks the manifest for certain common problems. If it finds a problem it indicates that the app is invalid and describes the problem in the app's summary:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8063/webide-invalid-manifest.png" style="display: block; height: 626px; margin-left: auto; margin-right: auto; width: 847px;"></p>
+
+<p>Of course, you can edit the <a href="/en-US/Apps/Build/Manifest">manifest.webapp</a> file right in the project editor as well.</p>
+
+<h3 id="The_source_editor">The source editor</h3>
+
+<p>WebIDE uses the <a href="http://codemirror.net/">CodeMirror</a> source editor.</p>
+
+<h4 id="Source_editor_shortcuts">Source editor shortcuts</h4>
+
+<p>{{ Page ("en-US/docs/tools/Keyboard_shortcuts", "source-editor") }}</p>
+
+<h4 id="Code_completion">Code completion</h4>
+
+<p>When editing CSS and JavaScript, the editor provides autocomplete suggestions. CSS autocompletion is always enabled:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8057/webide-css-autocomplete.png" style="display: block; height: 628px; margin-left: auto; margin-right: auto; width: 849px;">To display autocomplete suggestions in JavaScript press Control + Space:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8059/webide-js-autocomplete.png" style="display: block; height: 653px; margin-left: auto; margin-right: auto; width: 867px;"></p>
+
+<h4 id="Inline_documentation">Inline documentation</h4>
+
+<p>The editor also shows inline documentation for JavaScript. Press Shift + Space to see a popup containing documentation for the symbol your cursor is on:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8061/webide-js-inline-docs.png" style="display: block; height: 652px; margin-left: auto; margin-right: auto; width: 872px;"></p>
+
+<p>Clicking the <code>[docs]</code> link in the popup will take you to the MDN page for the symbol.</p>
+
+<h4 id="Saving_files">Saving files</h4>
+
+<p>For changes to your files to take effect you need to save them. Files with unsaved changes get an asterisk next to their name in the tree view, and you can save files using the menu or Control+S (Command+S on Mac OS X).</p>
+
+<h3 id="Removing_projects">Removing projects</h3>
+
+<p>To remove an app from WebIDE, go to the <a href="/en-US/docs/Tools/WebIDE#The_app_summary_page">app summary page</a> and click "Remove Project".</p>
+
+<h2 id="Running_a_custom_build_step">Running a custom build step</h2>
+
+<div class="geckoVersionNote">
+<p>New in Firefox 37.</p>
+</div>
+
+<p>For some use cases you need to run a custom command before pushing your app to the device. For example, you might want to satisfy JavaScript dependencies or minify CSS, or use WebIDE to develop Gaia apps or Cordova apps, both of which require a custom build step.</p>
+
+<p>From Firefox 37 you can do this by including a file called "package.json" in the root of your app. This is the same file that's used to <a href="https://docs.npmjs.com/files/package.json">package a node.js library</a>, so you might already have one in the root of your project. If you don't, you can create one for this purpose.</p>
+
+<p>Inside package.json, WebIDE looks for a property called "webide". The table below summarises the syntax of "webide":</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 10%;"><code>webide</code></td>
+   <td style="width: 10%;"> </td>
+   <td style="width: 10%;"> </td>
+   <td style="width: 70%;">
+    <p>Object containing instructions for WebIDE.</p>
+
+    <p>This may contain two properties, both optional: "<code>prepackage</code>" and "<code>packageDir</code>".</p>
+   </td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td><code>prepackage</code></td>
+   <td> </td>
+   <td>
+    <p>Specifies a command-line command for WebIDE to run before pushing the app to the runtime.</p>
+
+    <p>This may be a string, in which case the command is just executed as-is, or may be an object which must contain "<code>command</code>", and may contain any of "<code>env</code>", "<code>args</code>", and "<code>cwd</code>".</p>
+   </td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td> </td>
+   <td><code>command</code></td>
+   <td>
+    <p>The command to execute in the command shell.</p>
+
+    <p>For example: "<code>echo</code>".</p>
+   </td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td> </td>
+   <td><code>env</code></td>
+   <td>
+    <p>Any environment variables to set.</p>
+
+    <p>This is specified as an array of strings in the form "NAME=value". For example: <code>["NAME=world"]</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td> </td>
+   <td><code>args</code></td>
+   <td>
+    <p>Any arguments to pass along with the command.</p>
+
+    <p>This is specified as an array of strings.</p>
+   </td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td> </td>
+   <td><code>cwd</code></td>
+   <td>
+    <p>The directory from which to run the command.</p>
+
+    <p>This may be absolute or relative to the current directory.</p>
+   </td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td><code>packageDir</code></td>
+   <td> </td>
+   <td>
+    <p>The directory from which WebIDE should look for the app to push to the runtime.</p>
+
+    <p>Use this if you want the project in WebIDE to be the source from which to build a packaged app. The build step specified in <code>prepackage</code> would place the built app in an output directory, you will specify the output directory in <code>packageDir</code>, and WebIDE will install the app from that output directory rather than the project directory.</p>
+
+    <p>This property is optional, and if it's omitted WebIDE will package the app from the project root, just as if package.json was omitted.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Examples">Examples</h3>
+
+<p>A "package.json" to build a Gaia app:</p>
+
+<pre class="brush: json">{
+  "webide": {
+    "prepackage": {
+      "command": "make",
+      "env": ["APP=settings"],
+      "cwd": "../.."
+    },
+    "packageDir": "../../build_stage/settings/"
+  }
+}</pre>
+
+<p>A "package.json" for working with Cordova:</p>
+
+<pre class="brush: json">{
+  "webide": {
+    "prepackage": "cordova prepare",
+    "packageDir": "./platforms/firefoxos/www"
+  }
+}</pre>
+
+<h2 id="Running_and_debugging_apps">Running and debugging apps</h2>
+
+<p>When you're ready to run the app, you need to <a href="/en-US/docs/Tools/WebIDE#Selecting_a_runtime">select a runtime from the "Select Runtime" dropdown menu</a>. If you don't have any available runtimes here, find out how to add some in <a href="/en-US/docs/Tools/WebIDE#Setting_up_runtimes">Setting up runtimes</a>.</p>
+
+<p>The "play" button in the center of the WebIDE toolbar is now enabled: click it to install and run the app in the selected runtime:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8065/webide-running.png" style="display: block; height: 718px; margin-left: auto; margin-right: auto; width: 1314px;">To debug the app, click the "Pause" button and the Developer Tools <a href="/en-US/docs/Tools/Tools_Toolbox">Toolbox</a> appears, connected to your app:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8067/webide-debugging.png" style="display: block; height: 688px; margin-left: auto; margin-right: auto; width: 1310px;"></p>
+
+<div class="geckoVersionNote">
+<p>From Firefox 36 onwards, the "Pause" button is replaced with a wrench icon.</p>
+</div>
+
+<p>Exactly which tools you'll have available depends on the runtime, but you will at least have the basics: the <a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>, <a href="/en-US/docs/Tools/Web_Console">Console</a>, <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a>, <a href="/en-US/docs/Tools/Profiler">Profiler</a> and <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a>. Just as in a web page, any changes you make in the tools are visible immediately in the app, but are not persistent. Conversely, any changes you make in the editor pane can be saved straight back to disk, but are not visible without restarting the app.</p>
+
+<h3 id="Unrestricted_app_debugging_(including_certified_apps_main_process_etc.)">Unrestricted app debugging (including certified apps, main process, etc.)</h3>
+
+<p>You can run the debugger against the simulator, b2g desktop, or a real device.</p>
+
+<p>With the Simulator, if you click on the app dropdown menu while the runtime is selected, you can see and debug not only your app but all apps running in that runtime, including <a href="/en-US/Marketplace/Options/Packaged_apps#Certified_app">certified apps</a>:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8069/webide-debugging-builtin.png" style="display: block; height: 681px; margin-left: auto; margin-right: auto; width: 1302px;"></p>
+
+<p><br>
+ However, when connecting to a real device we have a security policy in force:</p>
+
+<ul>
+ <li>On devices running Firefox OS versions up to 2.1, all installed apps on device that are <strong>not</strong> certified apps (so privileged and web / regular apps) appear in "Runtime Apps" by default.</li>
+ <li>On Firefox 2.1 and above, we changed this so that only apps installed via DevTools / WebIDE appear in "Runtime Apps", regardless of app type. We did this to protect potentially sensitive data that could be present in apps.</li>
+</ul>
+
+<p>To remove this restriction:</p>
+
+<ul>
+ <li>The device must be running a development build of Firefox OS 1.2+</li>
+ <li>You must disable the <code>DevTools restricted privileges</code> setting.</li>
+</ul>
+
+<p>To disable <code>DevTools restricted privileges</code>, connect to the runtime, and then, in the menu, go to <code>Runtime &gt; Runtime Info</code>. The path then differs depending on what you are debugging against:</p>
+
+<ul>
+ <li>Real device
+  <ul>
+   <li>If it can be rooted, clicking <code>"request higher privileges"</code> will enable unrestricted app debugging (Firefox OS will restart). You may need to select your device again in the 'Select Runtime' drop down.</li>
+  </ul>
+ </li>
+ <li>Simulator
+  <ul>
+   <li>The simulators come with unrestricted app debugging enabled by default.</li>
+  </ul>
+ </li>
+ <li>B2G desktop
+  <ul>
+   <li>Manually edit the B2G desktop client <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager#Using_the_B2G_desktop_client">preferences</a> before connecting to enable unrestricted app debugging.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>Now (or after a restart of the B2G desktop client) in WebIDE you should see all the apps on the device.</p>
+
+<div class="note">
+<p><strong>Note</strong>: As indicated above, to enable unrestricted privileges on a real device through WebIDE you'll need a rooted device. There is however a developer setting available in Firefox OS 2.2 onwards called <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Reset_and_enable_full_DevTools">Reset and enable full DevTools</a> — when activated this will wipe all user data (for security reasons), reset the device, and enable unrestricted priviledges on <em>any</em> device.</p>
+</div>
+
+<h2 id="Monitoring_performance">Monitoring performance</h2>
+
+<p>If you're interested in the performance of your apps, there are a few ways to measure their impact on the runtime in WebIDE:</p>
+
+<ul>
+ <li>The <a href="/docs/Tools/WebIDE/Monitor">Monitor</a> panel offers a good overview of a device's performance. This can help you detect problems, e.g. a sudden, excessive increase in an app's memory usage (leak).</li>
+ <li>The <a href="/docs/Tools/Profiler">Profiler</a> tool gives you a way to analyze a single app's footprint in great detail. This is especially useful when investigating a known performance problem.</li>
+</ul>
+
+<h2 id="Troubleshooting">Troubleshooting</h2>
+
+<p>If you have any problems working with WebIDE, see the <a href="/en-US/docs/Tools/WebIDE/Troubleshooting">Troubleshooting</a> page.</p>
+
+<p> </p>
+
+<p> </p>

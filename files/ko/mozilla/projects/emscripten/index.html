@@ -1,0 +1,37 @@
+---
+title: Emscripten
+slug: Mozilla/Projects/Emscripten
+translation_of: Mozilla/Projects/Emscripten
+---
+<p><span class="seoSummary">엠스크립튼은 자바스크립트 컴파일러의 LLVM입니다. 엠스크립튼은 LLVM 바이트 코드를 받아 웹에서 동작할 수 있는 자바스크립트로 컴파일해줍니다. (예를 들어, Clang을 이용한 C/C++ 코드나 그 외의 언어로부터 생성된 LLVM 바이트 코드)</span></p>
+
+<div class="warning">
+<p><span style="font-size: 14px;"><strong>중요</strong></span>: 이 페이지는 엠스크립튼에 대한 굉장히 간략한 설명만을 다루고 있습니다. 엠스크립튼에 대해 더욱 자세히 알고 싶다면, <a href="http://kripken.github.io/emscripten-site/index.html">공식 홈페이지의 엠스크립튼 Wiki</a>에서 정보를 찾아보세요.</p>
+</div>
+
+<p>엠스크립튼을 사용하면, 당신은</p>
+
+<ul>
+ <li>C나 C++ 코드를 자바스크립트로 컴파일할 수 있습니다.</li>
+ <li>LLVM 바이트코드로 변환될 수 있는 다른 코드들을 자바스크립트로 컴파일할 수 있습니다.</li>
+ <li>다른 언어에서의 C/C++ 런타임을 자바스크립트로 컴파일 한 후 간접적인 방법을 통해 다른 언어의 코드를 실행시킬 수 있습니다(파이썬과 루아에 대해서는 이미 테스트 되었어요)!</li>
+</ul>
+
+<p>엠스크립튼은 네이티브 코드를 웹에서 사용 가능하게 만들어줍니다. 아시다시피 웹은 표준 기반이면서, 독립적인 서로 호환 가능한 수많은 구현체들이 존재하며, PC부터 아이패드까지 모든 곳에서 동작하는 플랫폼이지요!</p>
+
+<p>엠스크립튼을 이용하면 C나 C++ 개발자들은 일일히 코드를 자바스크립트로 포팅하는 고된 작업을 할 필요가 없습니다. 아니, 아예 자바스크립트를 배울 필요도 없습니다. 웹 개발자들에게도 또한 이점이 있는데, 이미 존재하는 수많은 네이티브 유틸리티나 라이브러리들을 그들의 사이트에 사용할 수 있기 때문입니다.</p>
+
+<p>사실상 거의 모든 포팅 가능한 C나 C++ 코드베이스가 엠스크립튼을 이용하여 자바스크립트로 컴파일 될 수 있으며, 그 범위는 그래픽 렌더링이나 소리 재생, 파일 처리 등을 요구하는 고성능 게임에서부터 Qt와 같은 어플리케이션 프레임워크까지 다양합니다.</p>
+
+<p>엠스크립튼은 빠른 코드를 생성해내며, 기본적인 컴파일 결과 값은 네이티브 속도에 가까운 성능을 낼 수 있도록 고성능으로 최적화 된 자바스크립트의 서브셋인 <a href="/en-US/docs/Games/Tools/asm.js">asm.js</a> 포맷입니다.</p>
+
+<div class="note">
+<p><strong>주의</strong>: 꽤 재미있을 것 같지요? <a href="http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html">엠스크립튼에 대해 좀 더 읽어보고, 한번 직접 데모를 실행</a>시켜본 다음에, <a href="http://kripken.github.io/emscripten-site/docs/getting_started/index.html">어떻게 사용하는지 시작해보세요</a>.</p>
+</div>
+
+<h2 id="비슷한_주제의_다른_MDN_글">비슷한 주제의 다른 MDN 글</h2>
+
+<ul>
+ <li>MDN의 <a href="/en-US/docs/Games">Games zone</a> 에서는 게임 개발과 관련하여 유용한 정보들이 있습니다. 게임 개발에서는 엠스크립튼의 사용이 꽤나 일반적이지요.</li>
+ <li>MDN의 <a href="/en-US/docs/Mozilla/Projects/Emscripten/Techniques">Emscripten techniques</a> 페이지에서는 엠스크립튼과 관련한 유용한, 엠스크립튼 Wiki에 서술되지 않은 생각들을 담고 있습니다.</li>
+</ul>

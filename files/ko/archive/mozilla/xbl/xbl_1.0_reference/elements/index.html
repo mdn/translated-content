@@ -1,0 +1,387 @@
+---
+title: Elements
+slug: Archive/Mozilla/XBL/XBL_1.0_Reference/Elements
+translation_of: Archive/Mozilla/XBL/XBL_1.0_Reference/Elements
+---
+<p> </p>
+<h2 id="bindings" name="bindings">bindings</h2>
+<p><span class="comment">This section is tested and adjusted for the current Firefox implementation. Please edit only if an actual behavior differs from the described one. Please do not edit only on the basis of another XBL specification.</span></p>
+<pre>&lt;!ELEMENT bindings ( binding* ) &gt;
+
+Hierarchy:   root element
+May contain: &lt;binding&gt;
+</pre>
+<p>The <code>bindings</code> element is the root element of any XBL document. It should usually declare XBL as the default namespace (unless an XBL namespace prefix is used) and it may additionally declare other namespace prefixes used in your binding.</p>
+<p><code>bindings</code> contains zero or more <code><a href="ko/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code> elements as children. Each <code><a href="ko/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code> child element defines a unique binding that can be attached to elements in other documents.</p>
+<p>An element can have only one binding attached (explicitly or inherited) at one moment. From several bindings only the last in the sequence will be used (like with any CSS rule).</p>
+<pre>HelloWorld example:
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello world!&lt;/title&gt;
+&lt;style type="text/css"&gt;
+p {
+ -moz-binding: url(hello.xml#default);
+}
+#p03 {
+ -moz-binding: url(hello.xml#hello2);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body
+
+  &lt;p&gt;Default content&lt;/p&gt;
+  &lt;p&gt;Default content&lt;/p&gt;
+  &lt;p id="p03"&gt;Default content&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+// hello.xml
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"
+ xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+  &lt;binding id="default"&gt;
+    &lt;content&gt;&lt;html:b&gt;Hello world! &lt;/html:b&gt;&lt;children/&gt;&lt;/content&gt;
+  &lt;/binding&gt;
+  &lt;binding id="hello2"&gt;
+    &lt;content&gt;&lt;html:b&gt;Hello from my binding! &lt;/html:b&gt;&lt;children/&gt;&lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p><a class="external" href="http://www.nskom.com/external/xbl/mdc/HelloWorld.html">View this example</a></p>
+<p>Next: <code>&lt;big&gt;bindings &gt; <a href="ko/XBL/XBL_1.0_Reference/Elements#binding">binding</a>&lt;/big&gt;</code> element.</p>
+<h3 id="Notes" name="Notes">Notes</h3>
+<ul>
+ <li>In the current stable releases of Mozilla products (e.g. Firefox 2) it is impossible to attach bindings to table sub-elements (rows, cells etc.) You can attach binding only to the table element itself. This has been fixed for future versions of Mozilla products. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=83830" title="FIXED: Binding TD cells (with XBL) doesn't work, at all">bug 83830</a> for more information and for workarounds.</li>
+ <li>Default encoding in XML documents (including XBL files) is UTF-8. An explicit encoding declarations may be present to override the default, for example <code>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</code></li>
+ <li>URI in namespace declarations is an opaque string used to uniquely identify the namespace. It doesn't have to (and often it doesn't) point to some actual schema or a namespace-related resource. <a class="external" href="http://www.w3.org/TR/REC-xml-names/#ns-decl">Namespaces in XML</a></li>
+ <li>Besides the default namespace, you can declare any amount of additional namespaces to handle your content. The most useful namespaces could be HTML/XHTML, <a href="ko/XUL">XUL</a> (XML User Interface Language), <a href="ko/SVG">SVG</a> (Scalable Vector Graphics) and <a class="external" href="http://www.w3.org/TR/xlink/">XLink</a>. This way a more-or-less universal namespace declaration in your <code>bindings</code> could be like:</li>
+</ul>
+<pre>&lt;bindings xmlns="http://www.mozilla.org/xbl"
+ xmlns:html = "http://www.w3.org/1999/xhtml"
+ xmlns:xul  = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+ xmlns:svg  = "http://www.w3.org/2000/svg"
+ xmlns:xlink= "http://www.w3.org/1999/xlink"&gt;
+</pre>
+<h2 id=".EB.B0.94.EC.9D.B8.EB.94.A9" name=".EB.B0.94.EC.9D.B8.EB.94.A9">바인딩</h2>
+<pre>&lt;!ENTITY % binding-content "(resources?,content?,implementation?,handlers?)"&gt;
+&lt;!ELEMENT binding %binding-content;&gt;
+&lt;!ATTLIST binding
+   id                     ID             #REQUIRED
+   extends                CDATA          #IMPLIED
+   display                CDATA          #IMPLIED
+   inheritstyle           true           #IMPLIED
+&gt;
+</pre>
+<p><code>binding</code> 요소는 단일 XBL 바인딩을 기술합니다. XBL 바인딩은 HTML/XML 요소에
+ <i>
+  <a href="ko/XBL/XBL_1.0_Reference/Elements#_content">anonymous content</a></i>
+ ,
+ <i>
+  <a href="ko/XBL/XBL_1.0_Reference/Elements#field">fields</a></i>
+ ,
+ <i>
+  <a href="ko/XBL/XBL_1.0_Reference/Elements#property">properties</a></i>
+ ,
+ <i>
+  <a href="ko/XBL/XBL_1.0_Reference/Elements#method">methods</a></i>
+ ,
+ <i>
+  <a href="ko/XBL/XBL_1.0_Reference/Elements#handlers">event handlers</a></i>
+ 를 추가할 수 있습니다.</p>
+<p>단일 XBL 바인딩은 스타일 시트나 스크립팅을 사용하여 요소에 붙일 수 있습니다 (&lt;table&gt;에 특정한 사항은 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=83830" title="FIXED: Binding TD cells (with XBL) doesn't work, at all">bug 83830</a>를 참고하십시오).</p>
+<p>CSS:</p>
+<pre>div {
+ -moz-binding: url(myBinding.xml#default);
+}
+</pre>
+<p>DOM:</p>
+<pre>elementReference.style.MozBinding = "url(myBinding.xml#default}";
+</pre>
+<p>위의 두 가지 경우 모두는 <code>myBinding.xml</code>에 포함된 <code>id="default"</code>를 가진 바인딩을 사용하고 있습니다.</p>
+<p> Firefox 3부터는 바인딩을 인라인으로 삽입하기 위해 <code>data:</code> URL을 사용할 수 있습니다.</p>
+<pre>div {
+  -moz-binding: url(data:text/xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%0A%3Cbindings%20id%3D%22xbltestBindings%22%20xmlns%3D%22http%3A//www.mozilla.org/xbl%22%3E%0A%20%20%3Cbinding%20id%3D%22xbltest%22%3E%3Ccontent%3EPASS%3C/content%3E%3C/binding%3E%0A%3C/bindings%3E%0A);
+}
+</pre>
+<p><code>data:</code> URL은 부분 식별자(fragment identifier)를 지원하지 않기 때문에 대신 삽입된 XML에서 발견한 첫 번째 바인딩을 사용합니다. 바인딩은 참조하지 않더라도 아이디가 있어야 한다는 점을 염두해 두십시오.</p>
+<p>앞선 예제의 삽입된 XML은 다음과 같습니다.</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings id="xbltestBindings" xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="xbltest"&gt;&lt;content&gt;PASS&lt;/content&gt;&lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>CSS 선언만이 바인딩을 임의의 요소 집합에 붙이는 쉬운 방법을 제공합니다. 이는 또한 스크립팅이 비할성화되어 있을 때 바인딩이 부분적으로 동작하게 만듭니다. 이 경우 모든 메소드와 핸들러는 차단되지만 익명의 내용과 스타일은 계속 사용됩니다. 그러므로 실행 중에 개별 요소에 바인딩을 추가할 필요가 없다면 항상 CSS 선언을 사용해야 합니다.</p>
+<p><code>binding</code> 요소는 <a href="ko/XBL/XBL_1.0_Reference/Elements#resources">resources</a> 태그, <a href="ko/XBL/XBL_1.0_Reference/Elements#_content">content</a> 태그, <a href="ko/XBL/XBL_1.0_Reference/Elements#implementation">implementation</a> 태그, <a href="ko/XBL/XBL_1.0_Reference/Elements#handlers">handlers</a> 태그를 포함할 수 있습니다.</p>
+<ul>
+ <li><code><b>id</b></code> - <code>id</code> 속성은 문서에서 유일한(document-unique) 식별자입니다. <code>binding</code> 요소에서 이 속성은 바인딩을 붙이는데 사용되므로 꼭 필요합니다.</li>
+ <li><code><b>extends</b></code> - <code>extends</code> 속성은 이 바인딩이 물려 받은 바인딩의 URL을 지정하는데 사용합니다 (<a href="ko/XBL/XBL_1.0_Reference/Binding_Implementations#Inheritance_of_Implementations">Inheritance of Implementations</a> 참고). URL은 특정한 바인딩 문서를 지정합니다. 바인딩 문서 내에서 특정 바인딩 <code>id</code>를 가리키려면 # 표시를 꼭 사용해야 합니다. 내용은 상속할 수 없으며 동작만 상속된다는 점에 주의하십시오.</li>
+ <li><code><b>display</b></code> - 이 속성은 태그가 표시되는 방법을 지정합니다. 이 속성을 지정함으로써 기존 요소의 레이아웃과 표시 특성을 가진 요소를 가질 수 있습니다. 예를 들어, 'xul:button' 값을 사용하면 버튼처럼 표시되는 요소를 생성할 수 있습니다. 콜론 이전의 부분은 이름 공간 접두어이므로 XUL 이름 공간도 정의해야 합니다. 다음 XML 표시 형식을 사용할 수 있습니다: browser, button, checkbox, description, editor, grippy, iframe, image, label, menu, menuitem, menubar, progressmeter, radio, resizer, scrollbar, scrollbox, spacer, splitter, titlebar, treechildren, treecol. 또한 다수의 HTML, MathML, SVG 태그를 사용할 수 있습니다. 'display' 속성은 <code>extends</code> 속성이 지정되지 않으면 동작하지 않는데, 이는 버그 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119389" title="display= doesn't work if extends= is not present">bug 119389</a>를 참고하십시오. 이러한 경우에는 <code>display</code> 속성의 값을 <code>extends</code>에 넣으십시오.</li>
+ <li><code><b>inheritstyle</b></code> - <code>inheritstyle</code> 속성은 문서의 스타일 규칙이 XBL 바인딩이 생성한 익명의 내용에 영향을 미칠 것인지 가리킵니다. 속성이 true이면 문서의 스타일은 XBL이 생성한 익명의 내용에도 영향을 미칩니다.</li>
+</ul>
+<p> </p>
+<h2 id="content" name="content">content</h2>
+<pre>&lt;!ELEMENT content ANY&gt;
+&lt;!ATTLIST content
+   id               ID           #IMPLIED
+&gt;
+</pre>
+<p>A binding can specify new content that is placed inside the bound element. Although you can see this content on screen as if it was directly in the file, this content is anonymous and is hidden from the normal <a href="ko/DOM">DOM</a>. To access anonymous nodes on an XBL bound element, you can use the <a href="ko/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousElementByAttribute">getAnonymousElementByAttribute</a> and <a href="ko/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes</a> functions. The only XBL element that can appear inside the content tag is the <a href="ko/XBL/XBL_1.0_Reference/Elements#children">children</a> tag. Attributes on the &lt;content&gt; element in the binding are set on the bound element.</p>
+<ul>
+ <li><code><b>id</b></code> - The id attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="children" name="children">children</h2>
+<pre>&lt;!ELEMENT children EMPTY&gt;
+&lt;!ATTLIST children
+   id               ID                           #IMPLIED
+   includes         CDATA                        #IMPLIED
+&gt;
+</pre>
+<p>Specifies the location where any child elements of the bound element are placed in the generated content.</p>
+<p>Normally, if the element bound to has its own content, the anonymous content is not generated. However, with a <code>children</code> element, you can merge the content from the HTML/XML element and the XBL content.</p>
+<p>If the children tag contains content itself, that content will become the default content. If the element the binding is attached to contains content, the default content will be ignored. If the element does not contain content, the default content will be added.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>includes</b></code> - The <code>includes</code> attribute can be used to indicate that only certain content should be placed at the insertion point specified by the <code>children</code> element. Its value can be a tag name or multiple tag names separated by commas. A child can only be placed within the insertion point if it is matched by the value in the <code>includes</code> attribute. Only immediate children are matched against the selector. For example, an XML fragment <code>&lt;customElement&gt;&lt;foobar&gt;&lt;hoge/&gt;&lt;/foobar&gt;&lt;/customElement&gt;</code> with an binding definition <code>&lt;binding id="customElement"&gt;&lt;content&gt;&lt;xul:box&gt;&lt;children includes="hoge"/&gt;&lt;/xul:box&gt;&lt;/content&gt;&lt;/binding&gt;</code> for the <code>customElement</code> element, <code>&lt;xul:box/&gt;</code> becomes empty because the selector <code>includes="hoge"</code> doesn't match for the immediate child <code>foobar</code> element.</li>
+</ul>
+<h2 id="implementation" name="implementation">implementation</h2>
+<pre>&lt;!ENTITY % implementation-content "(method|property)*"&gt;
+&lt;!ELEMENT implementation %implementation-content;&gt;
+&lt;!ATTLIST implementation
+   id               ID           #IMPLIED
+   name             CDATA        #IMPLIED
+   implements       CDATA        #IMPLIED
+&gt;
+</pre>
+<p>The <code>implementation</code> element describes the set of methods and properties that are attached to the bound element. Once the binding is attached, these methods and properties can be invoked directly from the bound element.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>name</b></code> - The <code>name</code> attribute can be used to provide a specific name for an implementation. This name can then be used to reference the implementation. For example, in JavaScript the value of this attribute represents the name of the corresponding class that is constructed for the implementation. If no name attribute is specified then the binding's document URI and id are used to uniquely reference the binding's implementation.</li>
+ <li><code><b>implements</b></code> - The <code>implements</code> attribute can be used to describe the set of interfaces that are implemented by the binding. Its value is a comma-separated list of named interfaces. If supported, in strongly typed languages the bound element can be referenced not only as any of the interfaces that the element might already support (e.g., HTMLElement) but also as any of the interfaces described by this attribute. Support of this capability is optional.</li>
+</ul>
+<h2 id="constructor" name="constructor">constructor</h2>
+<p>The code inside the <code>constructor</code> is called when a <code>binding</code> has just been attached to an element. So full access to anonymous nodes generated by the binding is already possible. The <code>constructor</code> tag must be placed inside the <code>implementation</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<div class="note">
+ <b>Note:</b>  Prior to Firefox 3, the constructor could be called at a time when reflow of the document layout was locked down, so that attempting to get layout information from within the constructor could return out of date information. In Firefox 3 and later, the constructor is called when reflow can take place, which results in up-to-date information being returned. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=398404" title="FIXED: [FIX]Disallow reflow while processing constructors">bug 398404</a> for details.</div>
+<h2 id="destructor" name="destructor">destructor</h2>
+<p>The code inside the <code>destructor</code> is called when a <code>binding</code> is being removed from an element. You can use this to unload resources to free memory. However the <code>destructor</code> is often not called when it should, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=230086" title="Destructor of XBL element isn't called when I remove this element from DOM">bug 230086</a>. The <code>destructor</code> tag must be placed inside the <code>implementation</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="method" name="method">method</h2>
+<pre>&lt;!ENTITY % method-content "(parameter*,body?)"&gt;
+&lt;!ELEMENT method %method-content;&gt;
+&lt;!ATTLIST method
+   id               ID           #IMPLIED
+   name             CDATA        #REQUIRED
+   type             CDATA        #IMPLIED
+&gt;
+</pre>
+<p>The <code>method</code> element is used to describe a single method of a binding implementation.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>name</b></code> - The <code>name</code> attribute's value is the name given to the method when it is attached to the bound element. The method can be invoked directly from the bound element using this value.</li>
+</ul>
+<p>
+ <i>
+  Example</i>
+</p>
+<pre>&lt;method name="scrollTo"&gt;
+  &lt;parameter name="index"/&gt;
+  &lt;body&gt;
+    this.setAttribute("scrollpos", index);
+  &lt;/body&gt;
+&lt;/method&gt;
+</pre>
+<h2 id="parameter" name="parameter">parameter</h2>
+<pre>&lt;!ELEMENT parameter EMPTY&gt;
+&lt;!ATTLIST parameter
+   id               ID           #IMPLIED
+   name             CDATA        #REQUIRED
+&gt;
+</pre>
+<p>The <code>parameter</code> element is used inside a <code>method</code> element. It represents a single parameter of a method.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>name</b></code> - The value of the <code>name</code> attribute is used by script within a method's <code>body</code> element to reference this parameter.</li>
+</ul>
+<h2 id="body" name="body">body</h2>
+<pre>&lt;!ELEMENT body CDATA&gt;
+&lt;!ATTLIST body
+   id               ID           #IMPLIED
+&gt;
+</pre>
+<p>The <code>body</code> element represents the implementation of its corresponding <code>method</code>. Its contents are the script that is executed when the method is invoked.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="field" name="field">field</h2>
+<pre>&lt;!ELEMENT field EMPTY&gt;
+&lt;!ATTLIST field
+   id               ID                  #IMPLIED
+   name             CDATA               #REQUIRED
+   readonly         (true|false)        #IMPLIED
+&gt;
+</pre>
+<p>A field is similar to a <code><a href="ko/XBL/XBL_1.0_Reference/Elements#property">property</a></code>, except that it should not have a getter or setter. It is useful as a simple holder for a value. The field element must have content which is code that determines the initial value of the field. The <code>field</code> tag must be inside the <code>implementation</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>name</b></code> - The name of the field. This is the name used to refer to the field on the bound element.</li>
+ <li><code><b>readonly</b></code> - If true, this field is read-only. If this attribute is omitted, the field will be readable and writable.</li>
+</ul>
+<div class="note">
+ <b>Note:</b>  In Firefox 3, fields are now evaluated the first time they're accessed instead of at binding attachment time. This shouldn't cause any problems in typical use cases, but there are cases in which this will impact the behavior of your code. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=372769" title="FIXED: [FIX]&lt;field> evaluation happens at an unsafe time">bug 372769</a> for details.</div>
+<p>Here are some examples of cases in which the behavior of your code may change due to this change in Firefox 3:</p>
+<ol>
+ <li>If you have two fields, one named <code>A</code> and one named <code>B</code>, and field <code>A</code> sets <code>.B</code>, the value of <code>.B</code> will depend on whether or not <code>.A</code> has already been accessed.</li>
+ <li>If a proto is inserted into the proto chain after binding instantiation, doing so may affect field values (this wasn't the case in prior versions of Firefox).</li>
+ <li>At binding attachment time, <code><span class="nowiki">&lt;field name="parentNode"&gt;this.parentNode&lt;/field&gt;</span></code> is undefined instead of the value of <code>parentNode</code>.</li>
+ <li>A field no longer changes the value of a property set on the object itself (rather than a proto) before binding attachment.</li>
+</ol>
+<h2 id="property" name="property">property</h2>
+<pre>&lt;!ENTITY % property-content "(getter?,setter?)"&gt;
+&lt;!ELEMENT property %property-content;&gt;
+&lt;!ATTLIST property
+   id               ID                  #IMPLIED
+   name             CDATA               #REQUIRED
+   readonly         (true|false)        #IMPLIED
+   onget            CDATA               #IMPLIED
+   onset            CDATA               #IMPLIED
+&gt;
+</pre>
+<p>The <code>property</code> element represents a single property of an implementation. A property consists of a pair of getter/setter functions that can be defined using <code>onget</code>/<code>onset</code> attributes or <a href="ko/XBL/XBL_1.0_Reference/Elements#getter">getter</a>/<a href="ko/XBL/XBL_1.0_Reference/Elements#setter">setter</a> elements underneath the <code>property</code> element. Like methods, once the binding is attached, the property can be obtained directly from the bound element. The <code>property</code> tag must be inside the <code>implementation</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>name</b></code> - The name of the property. This is the name used to refer to the property on the bound element.</li>
+ <li><code><b>readonly</b></code> - The <code>readonly</code> attribute is used to designate a property as read-only. If set to <code>true</code>, the value of the property cannot be altered. If this attribute is omitted, the property will be readable and writable.</li>
+ <li><code><b>onget</b></code> - The <code>onget</code> attribute's value is a script that executes when the value of the property is requested. If this attribute is set, any initial value contained underneath the element will be ignored. The return value of the script represents the value of the property that will be returned to the requestor. A property getter can also be specified as a child of the <code>property</code> element using the <code>getter</code> tag.</li>
+ <li><code><b>onset</b></code> - The <code>onset</code> attribute's value is a script that executes when the value of the property is being altered. If this attribute is set, any initial value contained underneath the element will be ignored. Within the script, the parameter <code>val</code> represents the new value being assigned. The script should always return the actual value assigned in order to allow for chained assignment operations. A property setter can also be specified as a child of the <code>property</code> element using a <code>setter</code> tag.</li>
+</ul>
+<h2 id="getter" name="getter">getter</h2>
+<pre>&lt;!ELEMENT getter PCDATA&gt;
+&lt;!ATTLIST getter
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p>The <code>getter</code> element contains script that gets executed when a specific property gets called. The <code>getter</code> tag must be inside the <code>property</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="setter" name="setter">setter</h2>
+<pre>&lt;!ELEMENT setter PCDATA&gt;
+&lt;!ATTLIST setter
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p>The <code>setter</code> element contains script that gets executed when a specific property is being set. The <code>setter</code> tag must be inside the <code>property</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="handlers" name="handlers">handlers</h2>
+<pre>&lt;!ENTITY % handlers-content "handler*"&gt;
+&lt;!ELEMENT handlers %handlers-content;&gt;
+&lt;!ATTLIST handlers
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p>The <code>handlers</code> element contains event handlers that can be attached to elements within the bound document. These handlers are installed when the binding is attached and removed when the binding is detached. The <code>handlers</code> tag must be inside the <code>binding</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="handler" name="handler">handler</h2>
+<pre>&lt;!ENTITY % handler-content "PCDATA"&gt;
+&lt;!ELEMENT handler %handler-content;&gt;
+&lt;!ATTLIST handler
+   id               ID                                  #IMPLIED
+   event            NMREF                               #REQUIRED
+   action           CDATA                               #IMPLIED
+   phase            (capturing|bubbling|target)         #IMPLIED
+   button           (1|2|3)                             #IMPLIED
+   modifiers        CDATA                               #IMPLIED
+   keycode          CDATA                               #IMPLIED
+   key              CDATA                               #IMPLIED
+   charcode         CDATA                               #IMPLIED
+   clickcount       (1|2|3)                             #IMPLIED
+   command          ID                                  #IMPLIED
+   preventdefault   false|true                          #IMPLIED
+&gt;
+</pre>
+<p>The <code>handler</code> element describes a single event handler. This handler is attached to its target at the time the binding is attached and unhooked when the binding is detached from the bound element. The script inside the <code>handler</code> is executed when the event handler is matched. The <code>handler</code> tag must be inside the <code>handlers</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>event</b></code> - The <code>event</code> attribute describes the specific event that this handler is listening for. Its value can be any legal DOM event name (including custom events created using the DocumentEvent interface of the DOM).</li>
+ <li><code><b>action</b></code> - The <code>action</code> attribute contains script that is invoked when the handler fires. The <code>type</code> attribute on the enclosing <code>handlers</code> element determines the language of the script. The handler script can also be specified as a child of the <code>handler</code> element.</li>
+ <li><code><b>phase</b></code> - This attribute specifies the phase of the event flow that this handler should monitor. The possible values are <code>capturing</code>, <code>bubbling</code>, and <code>target</code>. If a phase is specified, the handler will only be invoked during that phase of the event handling process. If no phase is specified, a default of <code>bubbling</code> is assumed.</li>
+ <li><code><b>button</b></code> - The <code>button</code> attribute imposes a
+  <i>
+   filter</i>
+  on the handler. It is used with mouse handlers to specify a particular button. The event handler will only be matched if the value of the <code>button</code> field in the DOM mouse event object matches the value of the attribute.</li>
+ <li><code><b>modifiers</b></code> - The <code>modifiers</code> attribute imposes a filter on key and mouse handlers. Its value is a whitespace- or comma-separated list of modifier keys. If present in the list, then the modifier key must be set in the DOM event object in order for the handler to be matched. If the <code>modifiers</code> is not empty and the modifier is not present in the list, then the modifier key must not be set in the DOM event object in order for the handler to be matched.<br>
+  Supported modifiers are:
+  <ul>
+   <li><code>shift</code></li>
+   <li><code>alt</code></li>
+   <li><code>control</code></li>
+   <li><code>meta</code></li>
+   <li><code>accel</code> - the platform's primary accelerator key. It is left up to the user agent to decide which modifier key represents the primary key. (It's the Control key on Windows and Meta on Mac.)</li>
+   <li><code>accesskey</code> - the platform's primary shortcut mnemonic key should be used (the Alt key on Windows and Linux, has no effect on Mac).</li>
+  </ul>
+ </li>
+ <li><code><b>keycode</b></code> - The <code>keycode</code> attribute imposes a filter on key handlers. Its value is a key identifier for a specific keycode, e.g., <code>vk_enter</code>.<br>
+  <i>
+   [Editor's Note: A forthcoming DOM events specification will presumably outline the list of valid keycode strings.]</i>
+  <br>
+  If this attribute is present, then its value must match the <a href="ko/DOM/event.keyCode">keyCode</a> field of the DOM key event object in order for the handler to fire.</li>
+ <li><code><b>charcode</b></code> - The <code>charcode</code> attribute imposes a filter on key handlers. Its value is a single character, e.g., "<code>z</code>". If this attribute is present, then its value must match the <a href="ko/DOM/event.charCode">charCode</a> field of the DOM key event object in order for the handler to fire.<br>
+  <i>
+   [Editor's note: As DOM Events mature more attributes may be added. For example, mutation events define several new fields such as relatedTarget that could be supported in the filtering syntax.]</i>
+ </li>
+ <li><code><b>key</b></code> - The <code>key</code> attribute has the same meaning as <code>charcode</code>.</li>
+ <li><code><b>clickcount</b></code> - The <code>clickcount</code> attribute imposes a
+  <i>
+   filter</i>
+  on the handler. It is used with mouse handlers to specify how many times a button has been clicked. The event handler will only be matched if the value of the <code>clickcount</code> field in the DOM mouse event object matches the value of the attribute.</li>
+ <li><code><b>command</b></code> - The id of a command to invoke when the event occurs. If used in a non-chrome document, the entire handler will be ignored.</li>
+ <li><code><b>preventdefault</b></code> - If set to true, the default action of the event is not performed. See also <a href="ko/DOM/event.preventDefault">preventDefault</a> method of the Event object.</li>
+</ul>
+<h2 id="resources" name="resources">resources</h2>
+<pre>&lt;!ENTITY % resources-content "(image?,stylesheet?)"&gt;
+&lt;!ELEMENT resources %resources-content;&gt;
+&lt;!ATTLIST property
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p>Used for inclusion of <a href="ko/XBL/XBL_1.0_Reference#image">image</a> elements, to cache them for later use, and for inclusion of <a href="ko/XBL/XBL_1.0_Reference#stylesheet">stylesheet</a> elements. The <code>resources</code> tag must be used directly inside the <code>binding</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+</ul>
+<h2 id="stylesheet" name="stylesheet">stylesheet</h2>
+<pre>&lt;!ELEMENT stylesheet EMPTY&gt;
+&lt;!ATTLIST stylesheet
+   id               ID                  #IMPLIED
+   src              URI                 #REQUIRED
+&gt;
+</pre>
+<p>The <code>stylesheet</code> element declares a style sheet used by the binding. The style rules in the style sheet will only be applied to the binding, not to other elements in the document. The <code>stylesheet</code> tag must be inside the <code>resources</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>src</b></code> - The URL of the style sheet to apply to the binding content.</li>
+</ul>
+<h2 id="image" name="image">image</h2>
+<pre>&lt;!ELEMENT image EMPTY&gt;
+&lt;!ATTLIST image
+   id               ID                  #IMPLIED
+   src              URI                 #REQUIRED
+&gt;
+</pre>
+<p>Declares an image resource used by the binding. The image is loaded as soon as the binding is used. You can use this to preload a number of images for later use. The <code>image</code> tag must be inside the <code>resources</code> tag.</p>
+<ul>
+ <li><code><b>id</b></code> - The <code>id</code> attribute is a document-unique identifier.</li>
+ <li><code><b>src</b></code> - The URL of the image to load.</li>
+</ul>

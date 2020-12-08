@@ -1,0 +1,84 @@
+---
+title: Debugging on Firefox OS
+slug: Archive/B2G_OS/Debugging
+tags:
+  - B2G
+  - Debugging
+  - Firefox OS
+  - NeedsTranslation
+  - QA
+  - Testing
+  - TopicStub
+translation_of: Archive/B2G_OS/Debugging
+---
+<div class="summary">
+ <p><span class="seoSummary">There are two main types of debugging you'll want to with Firefox OS: debugging apps, and debugging other aspects of the system.</span> This section of the site provides articles covering the different tools at your disposal to debug your Firefox OS code.</p>
+</div>
+<h2 id="Debugging_apps">Debugging apps</h2>
+<p>When debugging your web apps, the best tool at your disposal is Mozilla's powerful <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>, which allows you to run your apps directly on a real device or simulator, update any changes instantly, and debug them directly on the device using Mozilla's excellent <a href="https://developer.mozilla.org/en-US/docs/Tools" title="en-US/docs/Tools">developer tools</a>. This should be your first choice, especially for app/Gaia debugging.</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Tools/WebIDE">Using WebIDE</a></dt>
+ <dd>
+  The WebIDE is the replacement for the App Manager. Like the App Manager, it enables you to run and debug Firefox OS apps using the Firefox OS Simulator or a real Firefox OS device. However, it also provides an editing environment for you to create and develop apps.</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Using_the_App_Manager">Using the App Manager</a></dt>
+ <dd>
+  The App Manager is a new tool available in Firefox for Desktop, which provides a number of useful tools to help you test, deploy and debug HTML5 web apps on Firefox OS phones and the Firefox OS Simulator, directly from your browser.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_OOMs">Debugging out of memory errors on Firefox OS</a></dt>
+ <dd>
+  This article describes how B2G's multiprocess architecture affects what the phone does when we run out of memory, and how to understand and debug OOM crashes.</dd>
+</dl>
+<h2 id="Debugging_GaiaB2G">Debugging Gaia/B2G</h2>
+<p>If you want to debug code from the Gaia apps suite or B2G itself, the following tools will be of use to you.</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_using_the_desktop_B2G_client" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_using_the_desktop_B2G_client">Debugging using the desktop B2G client</a></dt>
+ <dd>
+  You can use the dedicated B2G desktop application (and associated tools) to debug multiple aspects of B2G and Gaia.</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Debugging/Firefox_OS_crash_reporting">Firefox OS crash reporting</a></dt>
+ <dd>
+  This page details how to handle crash reporting on Firefox OS, including retrieving crash reports, and forcing crashes.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_gdb" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_gdb">Debugging B2G using gdb</a></dt>
+ <dd>
+  The popular gdb debugger can be used to debug Firefox OS and web apps running on a device, or on an emulator. This guide will show you how it's done.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_valgrind" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_gdb">Debugging B2G using Valgrind</a></dt>
+ <dd>
+  Valgrind gives developers access to information about memory allocations, threads, and other information important to performance. This guide shows how to run Valgrind either on desktop B2G or select phone hardware.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Debugging/HTTP_logging#Firefox_OS_phones" title="/en-US/docs/Mozilla/Debugging/HTTP_logging#Firefox_OS_phones">Getting NSPR logs in B2G</a></dt>
+ <dd>
+  You can use NSPR logs to record HTTP and other networking.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Debugging/Debugging_OpenGL" title="/en-US/docs/Mozilla/Debugging/Debugging_OpenGL">Debugging OpenGL</a></dt>
+ <dd>
+  How to debug OpenGL code on Firefox OS.</dd>
+</dl>
+<h2 id="General_setup_and_information"><strong>General setup and information</strong></h2>
+<p>The following articles provide information on individual aspects of setup for Firefox OS development. The chances are that you won't need these, especially if you are just debugging apps using the App Manager. But we have made them available here in case you do.</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Developer settings for Firefox OS</a></dt>
+ <dd>
+  There are a number of settings options available for developers on Firefox OS. This guide explains what they do and how to take advantage of them.</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">Installing and using ADB</a></dt>
+ <dd>
+  Many aspects of Firefox OS development require installation of <code>adb</code>, the Android Debug Bridge. This article explains how to do that, and shares some common useful ADB commands.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">On-device console logging</a></dt>
+ <dd>
+  How to log to console on a Firefox OS device, and how to access the resulting logs for review on your computer.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_Firefox_OS_apps_in_desktop_Firefox">Connecting a Firefox OS device to the desktop</a></dt>
+ <dd>
+  This short guide explains how to set up your Firefox OS device and your desktop so that the desktop can communicate with the device over USB.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Setting_up" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Setting_up">Setting up to debug Firefox OS code</a></dt>
+ <dd>
+  Before you can begin using most of the tools integrated into Firefox for debugging code running under Firefox OS, you need to do a little configuration work. This article explains what you need to do.</dd>
+</dl>

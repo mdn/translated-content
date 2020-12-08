@@ -1,0 +1,74 @@
+---
+title: AudioChannelManager
+slug: Web/API/AudioChannelManager
+tags:
+  - API
+  - Audio
+  - Non-standard
+translation_of: Archive/B2G_OS/API/AudioChannelManager
+---
+<p>{{APIRef("Web Audio API")}} {{Non-standard_header}}</p>
+
+<p>AudioChannelManager는 디바이스의 오디오 채널을 관리하는 기능을 포함하는 오디오 채널 API(<a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels API</a>)의 인터페이스이다. 특정한 앱 내에서 볼륨 버튼이 눌렸을 때 어떤 채널의 볼륨이 적용될지를 설정하는 기능을 포함하고 있다.</p>
+
+<h2 id="메소드">메소드</h2>
+
+<div class="note">
+<p><strong>Note</strong>: 부모클래스인 {{domxref("EventTarget")}}의 메소드를 상속받는다.</p>
+</div>
+
+<h2 id="속성">속성</h2>
+
+<div class="note">
+<p><strong>Note</strong>: 부모클래스인 {{domxref("EventTarget")}}의 속성을 상속받는다.</p>
+</div>
+
+<dl>
+ <dt>{{domxref("AudioChannelManager.headphones")}} {{readonlyinline}}</dt>
+ <dd>헤드폰이 디바이스에 장착되었는지 여부를 나타내는 불리언 값.</dd>
+ <dt>{{domxref("AudioChannelManager.telephonySpeaker")}}</dt>
+ <dd><span class="short_text" id="result_box" lang="ko"><span class="atn">"</span><span class="atn">telephony</span><span class="atn">" </span><span>오디오</span> <span class="hps">채널이</span> <span class="hps">장치의</span> <span class="hps">스피커</span> <span class="hps">밖으로</span> <span class="atn hps">재생</span><span>할지 여부를</span> <span class="hps">설정할</span> <span class="hps">수 있도록하는</span> <span class="atn hps">불리언 값</span><span>.</span></span></dd>
+ <dt>{{domxref("AudioChannelManager.volumeControlChannel")}}</dt>
+ <dd>하드웨어 볼륨 버튼을 눌렀을 때 변경해야 할 오디오 채널에 대한 {{domxref("DOMString")}} 값.</dd>
+</dl>
+
+<h3 id="이벤트_핸들러">이벤트 핸들러</h3>
+
+<dl>
+ <dt>{{domxref("AudioChannelManager.onheadphoneschange")}}</dt>
+ <dd>헤드폰이 장착되었는지 혹은 해제되었는지 알려주는 트리거.</dd>
+</dl>
+
+<h2 id="예제">예제</h2>
+
+<p>아래 간단한 예제를 보면, 앱의 <code>AudioChannelManager 객체에 접근하기 위해 </code>{{domxref("Navigator.mozAudioChannelManager","navigator.mozAudioChannelManager")}} 속성을 사용한다.  먼저 첫번째로 수신된 변수에 따라 {{domxref("AudioChannelManager.volumeControlChannel")}} 속성을 설정한 후, 몇 가지 기본적인 특징을 검출한다.</p>
+
+<pre class="brush: js">var channelValue = 'content';
+
+if (navigator.mozAudioChannelManager) {
+  if(channelValue == 'normal') {
+    navigator.mozAudioChannelManager.volumeControlChannel = 'normal';
+  } else if(channelValue == 'content') {
+    navigator.mozAudioChannelManager.volumeControlChannel = 'content';
+  }
+  console.log(navigator.mozAudioChannelManager.volumeControlChannel);
+}</pre>
+
+<div class="note">
+<p><strong>Note</strong>: 완전히 동작하는 예제를 보기 위해서는 <a href="https://github.com/mdn/audio-channels-demo">audio-channels-demo</a>를 확인하기 바란다. Firefox OS 디바이스에 앱을 설치하고 음악을 재생한 뒤, 채널을 normal 그리고 content로 지정하여 앱을 백그라운드로 전환 후 어떤 일이 발생하는지 확인하도록 한다.</p>
+</div>
+
+<h2 id="명세">명세</h2>
+
+<p>현재 오디오 채널 API는 공식적인 명세(스펙)가 정의되어있지 않다. <a href="https://wiki.mozilla.org/WebAPI/AudioChannels">https://wiki.mozilla.org/WebAPI/AudioChannels</a>를 참고하면 WebIDL에 대한 자세한 구현사항에 대해 확인할 수 있다.</p>
+
+<h2 id="함께_보기">함께 보기</h2>
+
+<div id="compat-mobile"> </div>
+
+<ul>
+ <li><a href="/en-US/Apps/Build/App_permissions">App permissions for Firefox OS</a></li>
+ <li><a href="/en-US/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API">Using the AudioChannels API</a></li>
+ <li>{{domxref("Navigator.mozAudioChannelManager","navigator.mozAudioChannelManager")}}</li>
+ <li>{{domxref("HTMLMediaElement")}}</li>
+</ul>

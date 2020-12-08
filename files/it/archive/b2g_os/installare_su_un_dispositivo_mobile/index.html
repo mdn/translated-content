@@ -1,0 +1,136 @@
+---
+title: Come installare Firefox OS su un dispositivo mobile
+slug: Archive/B2G_OS/Installare_su_un_dispositivo_mobile
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<div class="summary">
+<p><span class="seoSummary">Dopo avere compilato "Boot to Gecko" per uno dei <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Have_a_compatible_device_or_use_an_emulator">dispositivi supportati, </a> puoi installare Firefox OS. Questa articolo ti guiderà nel processo.</span></p>
+</div>
+
+<div class="note"><strong>Nota:</strong> La prima volta che effettuerai il flash al tuo cellulare, questo <strong>deve</strong> avere Android 4 (Ice Cream Sandwich) installato, altrimenti il processo non andrà a buon fine. Una volta effettuata la prima installazione di B2G, si potrà quindi aggiornare alle versioni successive.</div>
+
+<div class="note"><strong>Nota: </strong>Per alcuni dispositivi (per es. Flame) è possibile saltare l'intero processo di compilazione. Vedere <a href="https://developer.mozilla.org/en-US/Firefox_OS/Phone_guide/Flame/Updating_your_Flame">questa guida</a> per maggiori informazioni.</div>
+
+<h2 id="Installare_ADB">Installare ADB</h2>
+
+<p><strong>Su OSX</strong></p>
+
+<p>Se hai Homebrew :</p>
+
+<pre>brew install android-platform-tools</pre>
+
+<p>Altrimenti scarica l'Android Developer Tools e aggiungi i sorgenti al tua PATH.</p>
+
+<p><strong>Su Ubuntu</strong></p>
+
+<pre>sudo apt-get install android-tools-adb</pre>
+
+<h2 id="Effettuare_il_flash_al_tuo_cellulare">Effettuare il flash al tuo cellulare</h2>
+
+<p>Per effettuare il flash al tuo cellulare, semplicemente connetti il tuo dispositivo e digita:</p>
+
+<pre>./flash.sh
+</pre>
+
+<p>Fatto! Adesso il B2G che avevi compilato si installerà nel tuo dispositivo.</p>
+
+<p>Nota che se avevi effettuato precedenti installazioni di Gaia potresti aver bisogno anche di scrivere:</p>
+
+<pre class="brush: bash">cd gaia
+make reset-gaia</pre>
+
+<p>Questo cancellerà sia tutti i tuoi dati memorizzati in Gaia, sia anche le impostazioni e le preferenze obsolete di Gaia in modoo da effettuare una installazione pulita. Teoricamente <code>./flash.sh</code> dovrebbe fare tutto questo automaticamente ma per alcuni dispositivi, come hamachi, <code>./flash.sh</code> effettua il flash solo ad alcuni moduli (<code>./flash.sh -f</code> farà effettuare il flash a tutto.)</p>
+
+<h3 id="Configurare_le_regole_udev_rule_per_il_tuo_dispositivo">Configurare le regole udev rule per il tuo dispositivo</h3>
+
+<p>Su Linux se ricevi questo messaggio</p>
+
+<pre>&lt; waiting for device &gt;</pre>
+
+<p>significa che probabilmente non hai aggiunto una udev rule per l'avvio veloce del dispositivo (che per ADB non è lo stesso), oppure significa che hai semplicemente bisogno di far partire ./flash.sh con "sudo". Puoi ottenere l'USB vendor ID con "<code>lsusb"</code>, ma di solito è quello di Google: 18d1, quindi aggiungendo la riga successiva in <code>/etc/udev/rules.d/51-android.rules</code> dovrebbe funzionare:</p>
+
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+
+<div class="note"><strong>Note:</strong> Se su linux ottieni l'errore <code>libusb</code>  error "-3" significa che per avere l'accesso al dispositivo USB devi essere root. Esegui di nuovo lo script usando Sudo.</div>
+
+<div class="note"><strong>Note 2</strong>: Se possiedi un Unagi o un Geeksphone Keon, ti servono due linee: una per l'ID del Vendor del telefono e una per l'ID di Google.</div>
+
+<h3 id="Note_speciali_per_dispositivi_Hamachi_Helix_e_Leo">Note speciali per dispositivi Hamachi, Helix e Leo</h3>
+
+<p>Se il tuo telefono è un dispositivo hamachi, helix o leo, lo script ./flash.sh al momento eseguirà il flash solamente per gecko e gaia.  It is recommended that you flash with the OEM as a base build to get the firmware and the gonk layers and then flash the gecko and gaia on top.  If you want to flash using the images, there is an override flash where you can ./flash.sh -f and it will use the image files to flash your device.</p>
+
+<h3 id="Special_notes_for_the_Samsung_Galaxy_S2">Special notes for the Samsung Galaxy S2</h3>
+
+<p>If your phone is a Galaxy S2 and you are using heimdall 1.3.2 (the latest version; use <code>heimdall version</code> to check), you may see an alarming error "FACTORYFS upload failed!" followed by "Heimdall flashing failed" and some additional information. This is actually a success condition, and you can ignore the advice.</p>
+
+<p>To get rid of this strange behavior, grab a <a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">source copy</a> of heimdall, downgrading to the 1.3.1 release ("<code>git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06</code>"), then compile it  according to the <code>README</code>, then install that to make the error go away. However, this isn't strictly necessary.</p>
+
+<p>All versions of heimdall are unable to flash a system.img larger than 100MB. Do:</p>
+
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+
+<p>to see how big yours is. If it's too large, ask in IRC for advice; there are ways to do it in two stages.</p>
+
+<h2 id="Added_step_for_the_Samsung_Galaxy_S2">Added step for the Samsung Galaxy S2</h2>
+
+<p>If you're flashing onto the Galaxy S2, there is an additional step to follow. Gaia does not get flashed automatically by the <code>flash.sh</code> script; you'll need to also do:</p>
+
+<pre>./flash.sh gaia
+</pre>
+
+<h2 id="Flashing_specific_partitions_to_fastboot_phones">Flashing specific partitions to fastboot phones</h2>
+
+<p>You can flash specific partitions to fastboot phones (that is, any phone other than the Samsung Galaxy S2). For example:</p>
+
+<pre>./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+
+<p><strong>WARNING</strong>: flashing user (at least) may delete your user-specific data (contacts, etc.).</p>
+
+<h2 id="Updating_specific_modules">Updating specific modules</h2>
+
+<p>You can update specific components of B2G by specifying their names when flashing. For example:</p>
+
+<pre>./flash.sh gaia
+./flash.sh gecko
+</pre>
+
+<p>In order to update only one application you can use BUILD_APP_NAME environment variable:</p>
+
+<pre>BUILD_APP_NAME=calendar ./flash.sh gaia</pre>
+
+<p>If your phone is not for developer (you aren't interested on test apps and/or require optimization), you can update gaia using:</p>
+
+<pre>VARIANT=user ./flash.sh gaia</pre>
+
+<h2 id="Next_steps">Next steps</h2>
+
+<p>At this point, your phone should be running Boot to Gecko! It's time to experiment, <a href="/en-US/docs/Mozilla/Firefox_OS/Application_development" title="en-US/docs/Mozilla/Firefox_OS/Application_development">write some code</a>, <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing" title="en-US/docs/Mozilla/Firefox_OS/Platform/Testing">test</a>, or <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging" title="en-US/docs/Mozilla/Firefox_OS/Debugging">do some debugging</a>!</p>
+
+<div class="note"><strong>Note:</strong> A helpful usage tip: if your build of B2G starts up with the lock screen requesting a pass code to unlock the phone, the default code is 0000.</div>
+
+<h2 class="note" id="Troubleshooting">Troubleshooting</h2>
+
+<p>Here are a some tips for what to do if your device doesn't work right after installing B2G, or updating it to a new version</p>
+
+<h3 class="note" id="If_the_UI_doesnt_start_up">If the UI doesn't start up</h3>
+
+<p>If you update your phone and the user interface doesn't start up, you can reset it to clear out out-of-date configuration and the like. This may bring it back to life, but note that it may also delete your user-specific data (contacts, etc.). Here's how:</p>
+
+<pre>cd gaia
+make reset-gaia
+</pre>
+
+<h3 class="note" id="If_you_want_change_from_developer_to_production_mode">If you want change from developer to production mode</h3>
+
+<pre>cd gaia
+make reset-gaia PRODUCTION=1</pre>
+
+<p><strong>WARNING</strong>: reset-gaia may delete your user-specific data (contacts, etc.).</p>
+
+<h3 class="note" id="image_is_too_large_error_message_on_.flash.sh_execution">"image is too large" error message on ./flash.sh execution</h3>
+
+<p>It might mean that you phone needs to be rooted first before flashing it. As b2g needs to be written on root partition, your phone needs to be rooted in order to install it.</p>

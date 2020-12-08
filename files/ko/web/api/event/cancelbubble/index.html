@@ -1,0 +1,90 @@
+---
+title: Event.cancelBubble
+slug: Web/API/Event/cancelBubble
+translation_of: Web/API/Event/cancelBubble
+---
+<p>{{APIRef("DOM Events")}}</p>
+
+<p><strong>Event.cancelBubble</strong> 속성은 {{domxref("Event.stopPropagation()")}}의 별칭입니다. 이벤트 핸들러에서 반환되기 전에 값을 true로 설정하면 이벤트가 전파되지 않습니다.</p>
+
+<p>Syntax</p>
+
+<pre class="syntaxbox">event.cancelBubble = <em>bool;</em>
+<em>var bool</em> = event.cancelBubble;
+</pre>
+
+<h2 id="Example">Example</h2>
+
+<pre>elem.onclick = function(e) {
+ // do cool things here
+  e.cancelBubble = true;
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancellBubble')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(53)}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(53)}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Previous to Firefox 53, this property was defined on the {{domxref("UIEvent")}} interface. See {{bug(1298970)}} for more details.</p>

@@ -1,0 +1,148 @@
+---
+title: 처음 B2G 빌드를 위한 준비
+slug: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<p></p>
+
+<div class="warning"><strong>중요</strong>: 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/02/25)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.</div>
+
+<p>여기서는 B2G 빌드를 하기 전에 수행 해야 하는 repository를 가져오고 빌드 환경을 설정에 대해 알아 봅니다.</p>
+
+<h2 id="B2G_repository_가져_오기">B2G repository 가져 오기</h2>
+
+<p>첫번째로, 빌드를 처음으로 시작하기에 앞서, B2G repository를 가져 와야 합니다. 이 단계가 모든 것을 다 가져 오는 것은 아니고, B2G build system을 가져 오고 빌드에 필요한 각종 툴들을 가져 옵니다. 대부분의 B2G code는 아직 main Mozilla <a href="/en-US/docs/Mercurial" title="Mercurial">Mercurial</a> repository에 존재 합니다.</p>
+
+<p>Repository를 가져 오기 위해 "git"을 사용합니다.</p>
+
+<pre>git clone git://github.com/mozilla-b2g/B2G.git</pre>
+
+<p>몇분간의 git작업 진행 후 새로 생긴 "B2G"폴더로 이동하세요.</p>
+
+<pre>cd B2G
+</pre>
+
+<h2 id="작업중이던_B2G_tree를_새로_구성한_빌드_환경으로_복사하기(작업_중일_경우만_진행_그외는_다음_단계로)">작업중이던 B2G tree를 새로 구성한 빌드 환경으로 복사하기(작업 중일 경우만 진행, 그외는 다음 단계로)</h2>
+
+<p>If you've gotten a new computer (lucky you!), you'll find your life will be much easier if you simply migrate your entire B2G tree from one computer to another.</p>
+
+<p>To do that, mount your old computer's drive onto your new computer, then do this:</p>
+
+<pre>rsync -a <em>source</em>/ <em>dest</em>/
+</pre>
+
+<p>Where <code>source</code> is the full path (including the trailing slash) of the source tree, and <code>dest</code> is where you want to put it (the trailing slash is also important!).</p>
+
+<div class="note">
+<p>Note: If you copy the files from a computer with another platform ensure to run '<em>./build.sh clean'</em> before you start the build process. If you don't do this you might encounter compilation issues.</p>
+</div>
+
+<p>If you do this, you can skip all of the rest of this article and move right on to <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">building</a>.</p>
+
+<h2 id="단말기용_B2G_환경_설정">단말기용 B2G 환경 설정</h2>
+
+<div class="warning"><strong>중요</strong>: 단말기는 <strong>안드로이드 4</strong> (즉 <strong>아이스크림 샌드위치(ICS)</strong>) 가 설치 되어 있어야 합니다. 단말기에 구동중인 안드로이드 버전을 확인하시고, 그렇지 않으면 대부분 이단계 부터 실패를 할 것입니다. 또한 USB에 연결된 단말기로 다운로드를 할 경우 만약 USB허브로 연결 되어 있을 경우는 문제를 발생할 수 있으므로, 허브가 아닌 직접 PC에 연결된 USB와 연결 하시기 바랍니다.</div>
+
+<p>Core B2G build system을 다 받고 나면, 설치하고자 하는 단말기에 맞는 환경을 설정 해야 합니다. 지원되는 단말기의 종류를 보려면 아래와 같이 실행 하세요.</p>
+
+<pre>./config.sh
+</pre>
+
+<p>리스트는 아래와 같이 보일 것입니다.</p>
+
+<pre>Usage: ./config.sh [-cdflnq] (device name)
+Flags are passed through to |./repo sync|.
+
+Valid devices to configure are:
+- galaxy-s2
+- galaxy-nexus
+- nexus-4
+- nexus-4-kk
+- nexus-5
+- nexus-5-l
+- nexus-s
+- nexus-s-4g
+- flo (Nexus 7 2013)
+- otoro
+- unagi
+- inari
+- keon
+- peak
+- hamachi
+- helix
+- tarako
+- dolphin
+- dolphin-512
+- pandaboard
+- vixen
+- flatfish
+- flame
+- flame-kk
+- flame-l
+- rpi (Revision B)
+- emulator
+- emulator-jb
+- emulator-kk
+- emulator-l
+- emulator-x86
+- emulator-x86-jb
+- emulator-x86-kk
+- emulator-x86-l
+&gt; Sony Xperia devices
+- aries (Z3 Compact KK)
+- aries-l (Z3 Compact L)
+- leo-kk (Z3 KK)
+- leo-l (Z3 L)
+- scorpion-l (Z3 Tablet Compact L)
+- sirius-l (Z2 L)
+- tianchi-l (T2U L)
+- flamingo-l (E3 L)</pre>
+
+<p>만약 해당 단말기가 리스트에 없다면, 바로 모든 과정을 중단하고 B2G 포팅 도움을 요청하거나 누군가 해당 단말기용 작업을 완료 하기를 기다리세요. Mozilla에서는 당신의 도움을 환영합니다!</p>
+
+<div class="note"><strong>Note:</strong> 특정 버전의 Gecko와 상관 없이 빌드를 하고자 한다면, 진행 하기 전에<a href="#Building_against_a_custom_Gecko">Building against a custom Gecko</a> 를 참고 하세요.</div>
+
+<h3 id="모바일_단말기_환경_설정">모바일 단말기 환경 설정</h3>
+
+<p>우선, 환경설정시 단말기와 통신을 하게 되므로, 설정 하고자 하는 단말기를 연결하세요.</p>
+
+<p>원하는 단말기의 종류가 위에 나와 있다면, 아래와 같이 config.sh + 단말기 이름을 입력 하세요. Samsung Google Nexus S를 예로 들면 아래와 같습니다.</p>
+
+<pre>./config.sh nexus-s
+</pre>
+
+<p>설정 시작하고 바로 아마도 색상 환경 설정을 입력 해야 할 것입니다. 색상 선택이 완료되면 환경 설정은 계속 진행 됩니다. 지금부터는 Boot to Gecko빌드에 필요한 모든 코드를 복하게될 것이며, 이는 상당한 시간이 소요 될 것이니 잠깐 쉬는 시간을 가지도록 하세요.(2시간 이상 소요 예상됨)</p>
+
+<p>If your phone no longer has Android on and your B2G tree doesn't have the binary blobs in it, and you wisely made a backup of the <code>/system</code> partition like an earlier page told you to, you can use it like this:</p>
+
+<pre>ANDROIDFS_DIR=&lt;absolute path to parent dir of system dir&gt; ./config.sh &lt;target&gt;
+</pre>
+
+<h3 id="에뮬레이터_빌드_환경_설정">에뮬레이터 빌드 환경 설정</h3>
+
+<p>ARM 에뮬레이터는 "emulator", x86 에뮬레이터는 "emulator-x86"로 아래와 같이 수행 하시면 에뮬레이터용 환경 설정도 가능합니다. x86 에뮬레이터가 ARM용 에뮬레이터보다 수행 속도는 빠르지만 실제 단말기와 다르게 동작 할 수도 있습니다.</p>
+
+<p>아래는 ARM용 에뮬레이터 환경 설정입니다.</p>
+
+<pre>./config.sh emulator
+</pre>
+
+<div class="note">
+<p>주의: ./config.sh수행은 시간이 많이 걸리므로 Ctrl-C로 중단이 가능하며 이후 다시 진행도 가능합니다. 만약 일부 진행이 문제가 있어 보인다면 './repo sync'를 실행 하시면 문제가 수정될지 모릅니다.</p>
+</div>
+
+<h2 id="Building_against_a_custom_Gecko">Building against a custom Gecko</h2>
+
+<p>There may be times that you want or need to build Boot to Gecko based on a different version of Gecko than the one that's used by default (as specified in the manifest). You can do so by editing the file <code>.userconfig</code> before you pull the repository (before the <code>config.sh</code> step above). For example, if you want to build against mozilla-central:</p>
+
+<pre>GECKO_PATH=/path/to/mozilla-central
+GECKO_OBJDIR=/path/to/mozilla-central/objdir-gonk
+</pre>
+
+<div class="note">
+<p><strong>Note</strong>: if building against a custom Gecko in Mac OS X, the mozilla-central directory must be in a case sensitive file system.</p>
+</div>
+
+<p>See <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a> for additional customizations you can do.</p>
+
+<p>다음은, <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">빌드 시작 하기</a>.</p>

@@ -1,0 +1,110 @@
+---
+title: Input Controls
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Input_Controls
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Input_Controls
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:List_Controls">다음  »</a></p>
+</div><p></p>
+<p>XUL은 HTML의 <a href="ko/DOM/form">form</a> 컨트롤과 비슷한 요소들을 가지고 있습니다.</p>
+<h3 id=".ED.85.8D.EC.8A.A4.ED.8A.B8_.EC.9E.85.EB.A0.A5_.EC.BB.A8.ED.8A.B8.EB.A1.A4" name=".ED.85.8D.EC.8A.A4.ED.8A.B8_.EC.9E.85.EB.A0.A5_.EC.BB.A8.ED.8A.B8.EB.A1.A4">텍스트 입력 컨트롤</h3>
+<p>HTML은 텍스트 입력 컨트롤로 사용할 수 있는 input 요소를 가집니다. XUL 또한 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>라고 하는 텍스트를 입력하는데 사용되는 비슷한 요소를 가지고 있습니다. 아무런 속성이 지정되어 있지 않으면 <code>textbox</code> 요소는 사용자가 텍스트를 입력할 수 있는 상자를 만들어 냅니다. Textbox는 HTML의 input 컨트롤과 많은 동일한 속성을 사용할 수 있습니다. 다음은 속성들의 일부입니다.</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>
+  Textbox를 실별하는데 사용할 수 있는 유일식별자(unique identifier) 입니다.</dd>
+ <dt>
+  <code id="a-class"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt>
+ <dd>
+  Textbox의 스타일 클래스 입니다.</dd>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt>
+ <dd>
+  Textbox의 기본 텍스트를 지정하고 싶으면, 이 속성값에 적용하면 됩니다.</dd>
+ <dt>
+  <code id="a-disabled"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+ <dd>
+  입력을 할 수 없게 하려면 이 속성을 <code>true</code>로 지정합니다.</dd>
+ <dt>
+  <code id="a-type"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> </dt>
+ <dd>
+  입력한 텍스트를 숨기는 textbox를 만드려면 이 속성을 <code>password</code>라는 특별한 값으로 지정할 수 있습니다.</dd>
+ <dt>
+  <code id="a-maxlength"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/maxlength">maxlength</a></code> </dt>
+ <dd>
+  Textbox에 입력할 수 있는 최대 문자수를 지정합니다.</dd>
+</dl>
+<p>HTML에서는 <code>input</code> 요소로 다양한 종류의 컨트롤 타입을 만들 수 있지만, XUL에서는 각 타입에 대응되는 별도의 요소가 있습니다.</p>
+<p>다음은 몇 가지 textbox 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul">View</a></p>
+<pre>&lt;label control="some-text" value="Enter some text"/&gt;
+&lt;textbox id="some-text"/&gt;
+&lt;label control="some-password" value="Enter a password"/&gt;
+&lt;textbox id="some-password" type="password" maxlength="8"/&gt;
+</pre>
+<h4 id=".EC.97.AC.EB.9F.AC.EC.A4.84.28multiline.29_textbox" name=".EC.97.AC.EB.9F.AC.EC.A4.84.28multiline.29_textbox">여러줄(multiline) textbox</h4>
+<p>위의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 예제는 한줄짜리 텍스트만 입력하는데 사용할 수 있는 입력 컨트롤을 생성합니다. HTML에서는 더 많은 텍스트 입력 영역이 있는 <code>textarea</code> 요소가 존재합니다. XUL에서는 <code>textbox</code> 요소를 이러한 목적으로 사용할 수 있늡니다(서로 다른 두개 요소는 필요 없습니다). <code><code id="a-multiline"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/multiline">multiline</a></code></code>속성을 true로 지정하면 텍스트 입력 필드는 다중 행을 표시합니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul">View</a></p>
+<pre>&lt;textbox multiline="true"
+           value="This is some text that could wrap onto multiple lines."/&gt;
+</pre>
+<p>HTML의 <code>textarea</code>처럼, 크기를 지정하기 위해 <code>rows</code>와 <code>cols</code>를 사용할 수 있습니다. 이 속성들은 출력될 문자의 행과 열수를 지정합니다.</p>
+<div class="highlight">
+ <h4 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">우리의 파일 찾기 예제</h4>
+ <p>이제 파일 찾기 대화상자에 검색을 위한 입력 필드를 추가합니다. <code>Textbox</code> 요소를 사용할 것입니다.</p>
+ <pre class="eval"><span class="highlightred">&lt;label value="Search for:" control="find-text"/&gt;</span>
+<span class="highlightred">&lt;textbox id="find-text"/&gt;</span>
+
+&lt;button id="find-button" label="Find"/&gt;
+</pre>
+ <div class="float-right">
+  <img alt="Image:inputs1.png"></div>
+ <p>앞선 섹션에서 만든 버튼 앞 부분에 위의 코드를 추가하세요. 창을 열면, 이미지와 같이 보일 것입니다.</p>
+ <p>라벨과 텍스트 input 필드가 윈도우에 출력됩니다. 텍스트박스는 완전히 작동하며 텍스트를 입력하거나 선택할 수 있습니다. 예제에서 라벨의 <code><code id="a-control"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 속성이 사용되어서 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code>이 클릭되면 텍스트 박스가 선택됩니다.</p>
+</div>
+<h3 id=".EC.B2.B4.ED.81.AC.EB.B0.95.EC.8A.A4.EC.99.80_.EB.9D.BC.EB.94.94.EC.98.A4_.EB.B2.84.ED.8A.BC" name=".EC.B2.B4.ED.81.AC.EB.B0.95.EC.8A.A4.EC.99.80_.EB.9D.BC.EB.94.94.EC.98.A4_.EB.B2.84.ED.8A.BC">체크박스와 라디오 버튼</h3>
+<p>체크박스와 라디오 버튼을 만들기 위해서는 두 개의 추가적인 요소를 사용합니다. 이것들은 버튼의 일종입니다. 체크박스 요소는 가능 또는 불가능될 수 있는 옵션을 위해 사용할 수 있습니다. 라디오 버튼은 비슷한 목적으로 사용할 수 있는 것으로 여러개의 항목 중 하나만 선택할 수 있을 때 사용합니다.</p>
+<p>체크박스와 라디오 버튼은 버튼과 대부분 동일한 속성을 사용합니다. 아래 예제는 간단한 체크박스와 라디오 버튼을 보여줍니다.</p>
+<pre>&lt;checkbox id="case-sensitive" checked="true" label="Case sensitive"/&gt;
+&lt;radio id="orange" label="Orange"/&gt;
+&lt;radio id="violet" selected="true" label="Violet"/&gt;
+&lt;radio id="yellow" label="Yellow"/&gt;
+</pre>
+<p>첫번째 줄에서는 간단한 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code></code>를 생성합니다. 사용자가 체크박스를 클릭하면 선택 또는 선택되지 않은 상태를 교환합니다. <code><code id="a-checked"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></code> 속성은 처음 상태를 나타내기 위해 사용할 수 있습니다. 이것은 <code>true</code>또는 <code>false</code>로 지정되어야 합니다. <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성은 체크박스 옆에 출력될 라벨을 지정하기 위해 사용합니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> 버튼에서는 <code><code id="a-checked"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></code> 속성 대신 <code><code id="a-selected"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code>를 사용해야 합니다. 라디오 버튼이 처음 선택된 상태로 마들기 위해서는 <code><code id="a-selected"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code>을 <code>true</code>로 설정하세요.</p>
+<h4 id=".EB.9D.BC.EB.94.94.EC.98.A4.EA.B7.B8.EB.A3.B9_.EC.9A.94.EC.86.8C" name=".EB.9D.BC.EB.94.94.EC.98.A4.EA.B7.B8.EB.A3.B9_.EC.9A.94.EC.86.8C">라디오그룹 요소</h4>
+<p>라디오 버튼들을 그룹짖기 위해서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 요소를 사용할 필요가 있습니다. 라디오 그룹내에 있는 라디오 버튼들 중 하나만 선택할 수 있습니다. 하나를 선택하면 같은 그룹 내의 다른 것들은 모두 꺼지게 됩니다. 다음 예제는 이러한 내용을 보여줍니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul">View</a></p>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Orange"/&gt;
+  &lt;radio id="violet" selected="true" label="Violet"/&gt;
+  &lt;radio id="yellow" label="Yellow"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+<h4 id=".EC.86.8D.EC.84.B1" name=".EC.86.8D.EC.84.B1">속성</h4>
+<p>버튼처럼, 체크박스와 라디오 버튼들도 라벨과 이미지로 구성되며, 버튼들이 눌러졌을 때체크된 상태와 체크되지 않은 상태의 이미지가 바뀌어집니다. 체크 박스는 버튼과 많은 동일한 속성을 가집니다.</p>
+<dl>
+ <dt>
+  <code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt>
+ <dd>
+  체크 박스나 라디오 버튼의 라벨를 설정합니다.</dd>
+ <dt>
+  <code id="a-disabled"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+ <dd>
+  체크 박스나 라디오 버튼을 가능 또는 불가능 하게 하기 위해서 본 속성을 <code>true</code>나 <code>false</code>로 설정하세요.</dd>
+ <dt>
+  <code id="a-accesskey"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt>
+ <dd>
+  요소를 선택할 때 사용하는 단축키입니다. 여기에 지정된 문자는 보통 라벨에 아랫줄을 그어 출력합니다.</dd>
+</dl>
+<div class="highlight">
+ <p><span id="%EC%97%AC%EA%B8%B0%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%97%AC%EA%B8%B0%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>여기까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul">View</a></p>
+</div>
+<p>다음 섹션에서는 <a href="ko/XUL_Tutorial/List_Controls">리스트 박스 만들기</a>를 위한 몇 가지 요소들에 대해 알아볼 것입니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:List_Controls">다음  »</a></p>
+</div><p></p>
+<p></p>

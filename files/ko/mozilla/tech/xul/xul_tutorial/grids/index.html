@@ -1,0 +1,156 @@
+---
+title: Grids
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Grids
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Grids
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Tabboxes" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Content_Panels">다음  »</a></p>
+</div><p></p>
+<p>XUL에는 표 형식의 격자를 만들기 위한 요소들이 있습니다.</p>
+<h3 id="XUL_.ED.91.9C_.ED.98.95.EC.8B.9D.EC.9D.98_.EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83" name="XUL_.ED.91.9C_.ED.98.95.EC.8B.9D.EC.9D.98_.EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83">XUL 표 형식의 레이아웃</h3>
+<p>XUL에는 표와 같은 방식으로 배치하기 위해 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> 및 관련 요소들을 사용합니다. 이것은 HTML의 <code>table</code> 태그와 약간 비슷합니다. Grid는 자체만으로는 아무것도 출력되지 않으며, 단지 행과 열을 가진 표 형식으로 요소들을 배치시키기 위해서만 사용합니다.</p>
+<p>Grid에는 table처럼 행으로 정렬되는 요소가 있습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> 내부에는 사용되는 행과 열을 선언합니다. HTML의 table 처럼, 행 안에 라벨이나 버튼과 같은 내용을 넣을 수 있습니다. 그러나 grid는 행 또는 열 기반의 구조로 작성할 수 있어, 행이나 열 아무쪽에 내용을 포함할 수 있습니다. Table과 같이 행 기반으로 사용하는 것이 가장 일반적입니다. 행 기반으로 사용하더라도 격자 내 열의 크기와 모양을 설정하기 위해 열을 사용할 수 있습니다. 다른 방법으로는 열에 내용을 넣고, 모양은 행에서 설정할 수도 있습니다.</p>
+<h4 id="Grid_.EC.84.A0.EC.96.B8.ED.95.98.EA.B8.B0" name="Grid_.EC.84.A0.EC.96.B8.ED.95.98.EA.B8.B0">Grid 선언하기</h4>
+<p>행 묶음을 선언하기 위해서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code></code> 태그를 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>의 자식 요소로 사용해야 합니다. 이 요소 내부에는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code> 요소를 추가해야 하며, 이는 각 행을 표현하기 위해 사용합니다. 행 내부에 넣고자 하는 내용은 row 요소 내에 두면 됩니다.</p>
+<p>비슷하게 열 묶음은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code></code> 요소로 선언하고, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>를 자식요소로 두어야 합니다. 이 요소 내에는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code> 요소가 들어가게 되고, 각 요소는 격자 내의 각 열에 해당하게 됩니다.</p>
+<p>예제를 통해 여태까지의 내용을 쉽게 이해하실 수 있을 것입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:grids1.png"></div>
+<pre>&lt;grid flex="1"&gt;
+
+  &lt;columns&gt;
+    &lt;column flex="2"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;button label="Rabbit"/&gt;
+      &lt;button label="Elephant"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;button label="Koala"/&gt;
+      &lt;button label="Gorilla"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+
+&lt;/grid&gt;
+</pre>
+<p>예제에는 격자에 2개의 행과 열이 추가되어 있습니다. 각각의 열은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code> 태그로 선언되어 있고 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성이 주어져 있습니다. 각 행은 두 개의 버튼 요소를 포함하고 있습니다. 각각의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code> 요소에 있는 첫 번째 버튼은 격자의 첫 번째 열에 위치하고 두 번째 버튼은 두 번째 열에 위치합니다. XUL의 grid에서는 방(cell)을 정의하는 요소가 존재하지 않습니다. 이는 HTML의 <code>td</code>와 같은 요소가 없다는 것을 의미합니다. 대신 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code> 요소에 내용을 직접 넣으면 됩니다.</p>
+<h4 id=".EC.97.AC.EB.9F.AC.EA.B0.9C.EC.9D.98_.EC.9A.94.EC.86.8C.EB.A5.BC_.EA.B0.80.EC.A7.80.EB.8A.94_.EA.B2.A9.EC.9E.90" name=".EC.97.AC.EB.9F.AC.EA.B0.9C.EC.9D.98_.EC.9A.94.EC.86.8C.EB.A5.BC_.EA.B0.80.EC.A7.80.EB.8A.94_.EA.B2.A9.EC.9E.90">여러개의 요소를 가지는 격자</h4>
+<p>당연히, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 요소의 위치에는 어떤 요소든 사용할 수 있습니다. 만일 특정 방에 여러개의 요소들을 넣고자 한다면, 중첩된 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code>나 다른 상자 요소를 사용하면 됩니다. <code>hbox</code>는 단일 요소지만 내부에 원하는 만큼의 요소를 넣을 수 있습니다. 다음은 이러한 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul">View</a></p>
+<pre>&lt;grid flex="1"&gt;
+
+  &lt;columns&gt;
+    &lt;column/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label control="doctitle" value="Document Title:"/&gt;
+      &lt;textbox id="doctitle" flex="1"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;label control="docpath" value="Path:"/&gt;
+      &lt;hbox flex="1"&gt;
+        &lt;textbox id="docpath" flex="1"/&gt;
+        &lt;button label="Browse..."/&gt;
+      &lt;/hbox&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+
+&lt;/grid&gt;
+</pre>
+<div class="float-right">
+ <img alt="Image:grids2.png"></div>
+<p>그림에서 라벨 요소를 포함하는 첫 번째 열에는 각 행별로 한개 요소씩만 있는 것을 볼 수 있습니다. 두 번째 열, 두 번째 행은 상자를 포함하며, 상자에는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>와 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 두 가지 요소를 포함하고 있습니다. 여러분은 하나의 방안에 중첩된 상자나 다른 격자도 추가할 수 있습니다.</p>
+<p>예제에서 창의 크기를 조절하면, 다른 요소들은 그대로이지만 글상자들의 크기만 변하는 것을 볼 수 있습니다. 이것은 글상자들과 두 번째 column 요소에 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성이 설정되어 있기 때문입니다. 라벨은 크기를 조절할 필요가 없기 때문에, 첫 번째 열에는 flex 속성을 지정할 필요가 없습니다.</p>
+<p>열의 초기 넓이는 열에 있는 요소들 중 가장 큰 것에 의해 결정됩니다. 마찬가지로 행의 높이는 행에 있는 요소들의 크기에 의해 결정됩니다. 여러분은 격자의 크기를 좀 더 자세히 정의하기 위해 <code><code id="a-minwidth"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code></code>와 <code><code id="a-maxwidth"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code></code>, 그리고 관련 속성을 사용할 수 있습니다.</p>
+<h4 id=".EC.97.B4_.EA.B8.B0.EB.B0.98_.EA.B5.AC.EC.A1.B0" name=".EC.97.B4_.EA.B8.B0.EB.B0.98_.EA.B5.AC.EC.A1.B0">열 기반 구조</h4>
+<p>행 대신에 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code> 요소 내에 요소를 넣을 수 있습니다. 이렇게 할 경우, rows는 단지 행의 개수를 지정하기 위해서만 사용됩니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul">View</a></p>
+<pre>&lt;grid&gt;
+  &lt;rows&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+  &lt;/rows&gt;
+
+  &lt;columns&gt;
+    &lt;column&gt;
+      &lt;label control="first" value="First Name:"/&gt;
+      &lt;label control="middle" value="Middle Name:"/&gt;
+      &lt;label control="last" value="Last Name:"/&gt;
+    &lt;/column&gt;
+    &lt;column&gt;
+      &lt;textbox id="first"/&gt;
+      &lt;textbox id="middle"/&gt;
+      &lt;textbox id="last"/&gt;
+    &lt;/column&gt;
+  &lt;/columns&gt;
+
+&lt;/grid&gt;
+</pre>
+<p>이 격자는 3개의 행과 2개의 열을 가집니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code> 요소는 행이 필요로하는 공간을 확보하기 위해서 사용한 것입니다. 여러분은 행이 유연하게 동작하도록 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성을 추가할 수 있습니다. 내용은 각 열에 위치합니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code> 요소 내에 있는 첫 번째 요소는 첫 번째 행에, 그리고 두 번째 요소는 두 번째 행에 그리고 세 번째 요소는 세 번째 행에 위치합니다.</p>
+<p>만일 column과 row 양쪽 모두에 내용을 넣는다면, 동일한 위치에 있는 내용들은 중첩되어 출력됩니다. 이렇게 하면 격자 내에 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 요소를 포함하는 것처럼 보입니다.</p>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> 태그 내 요소들의 순서는 어떤 것이 위에 출력되고 어떤 것이 아래에 놓이는지를 결정합니다. 만일 <code>rows</code> 요소가 <code>columns</code> 요소 다음에 위치하면, rows 안에 있는 내용이 상위에 표시되고, <code>columns</code> 요소가 <code>rows</code> 요소 다음에 오면, columns 내의 내용이 상위에 표시됩니다. 마찬가지로, 마우스 버튼과 키누름과 같은 이벤트는 맨 위에 있는 요소들에게만 전달됩니다. 이런 이유로 위의 예제에서는 행이 먼저 오고 다음에 열이 선언되었습니다. 만약 columns가 먼저 위치했다면, rows가 이벤트를 잡아채기 때문에 입력란에 아무것도 입력할 수 없게 됩니다.</p>
+<h4 id=".EA.B2.A9.EC.9E.90.EC.9D.98_.EC.9C.A0.EC.97.B0.EC.84.B1" name=".EA.B2.A9.EC.9E.90.EC.9D.98_.EC.9C.A0.EC.97.B0.EC.84.B1">격자의 유연성</h4>
+<p>중첩된 상자 대신 격자를 사용하면 수직, 수평 모두 유연한 공간을 만들 수 있는 장점이 있습니다. 이렇게 하기 위해서는 행과 열 모두에 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성을 설정하면 됩니다. 다음은 이러한 효과를 보여주는 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_4"><a id="%EC%98%88%EC%A0%9C_4"></a><strong>예제 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul">View</a></p>
+<pre>&lt;grid flex="1"&gt;
+ &lt;columns&gt;
+  &lt;column flex="5"/&gt;
+  &lt;column/&gt;
+  &lt;column/&gt;
+ &lt;/columns&gt;
+ &lt;rows&gt;
+  &lt;row flex="10"&gt;
+    &lt;button label="Cherry"/&gt;
+    &lt;button label="Lemon"/&gt;
+    &lt;button label="Grape"/&gt;
+  &lt;/row&gt;
+  &lt;row flex="1"&gt;
+    &lt;button label="Strawberry"/&gt;
+    &lt;button label="Raspberry"/&gt;
+    &lt;button label="Peach"/&gt;
+  &lt;/row&gt;
+ &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>예제에서 첫 번째 열과 두 개의 행이 유연하게 작성되었습니다. 이것은 첫 번째 열에 있는 모든 방이 가로 방향의 유연성을 가진다는 것을 의미합니다. 또한, 모든 행이 유연하도록 설정되어 모든 방은 세로 방향의 유연성을 가집니다. 첫 번째 행과 열에 해당하는 방(Cherry 버튼)은 가로 방향으로는 5만큼, 세로 방향으로는 10의 유연성을 가지며, 그 다음 방(Lemon 버튼)은 세로 방향으로만 유동적입니다.</p>
+<p>또한 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> 요소에도 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성이 설정되어 있기 때문에 전체 격자가 유연하며, 이렇지 않을 경우는 한 방향으로만 늘어나게 됩니다.</p>
+<h3 id=".EC.97.B4_.EA.B1.B8.EC.B9.A8.28column_spanning.29" name=".EC.97.B4_.EA.B1.B8.EC.B9.A8.28column_spanning.29">열 걸침(column spanning)</h3>
+<p>격자에는 몇 개의 행 또는 열을 병합한 방을 만들 수 있는 방법이 없습니다(<a> Discussion</a>에서 동일한 효과를 내기 위한 여러가지 방법을 볼 수 있습니다). 그러나 격자의 전체 높이나 너비 만큼에 걸치는 행이나 열을 만들 수는 있습니다. 이렇게 하기 위해서는 <code>row</code> 요소에 내용을 넣지 말고 그냥 <code>rows</code>요소에 내용을 넣으면 됩니다. 예를 들어 상자 타입의 요소를 사용할 수 있으며, 여러개의 요소들을 포함시키려면 상자 내에 다른 요소들을 넣으면 됩니다. 다음은 이러한 내용에 대한 간단한 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_5"><a id="%EC%98%88%EC%A0%9C_5"></a><strong>예제 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul">View</a></p>
+<pre>&lt;grid&gt;
+  &lt;columns&gt;
+    &lt;column flex="1"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label value="Northwest"/&gt;
+      &lt;label value="Northeast"/&gt;
+    &lt;/row&gt;
+    &lt;button label="Equator"/&gt;
+    &lt;row&gt;
+      &lt;label value="Southwest"/&gt;
+      &lt;label value="Southeast"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>버튼은 하나의 행에 포함되지 않아서 격자 전체 너비에 맞게 늘어날 것입니다. 여러분은 동일한 기법을 열에도 적용할 수 있습니다. 이 경우에는 격자의 전체 높이에 맞게 늘어나게 됩니다. 또한 만일 원한다면 행과 열 모두에도 사용할 수 있습니다.</p>
+<p>다음에는 <a href="ko/XUL_Tutorial/Content_Panels">내용 패널</a>을 추가하는 것에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Tabboxes" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Content_Panels">다음  »</a></p>
+</div><p></p>
+<p></p>

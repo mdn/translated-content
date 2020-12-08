@@ -1,0 +1,82 @@
+---
+title: Introduction to XBL
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Introduction_to_XBL
+tags:
+  - XBL
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_XBL
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Property_Files" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Anonymous_Content">다음  »</a></p>
+</div><p></p>
+<p><a href="ko/XUL">XUL</a>은 자매(sister) 언어 <a href="ko/XBL">XBL</a> (eXtensible Bindings Language)이 있습니다. 이 언어는 XUL 위젯의 behavior를 선언하는데 쓰입니다.</p>
+<h3 id=".EB.B0.94.EC.9D.B8.EB.94.A9" name=".EB.B0.94.EC.9D.B8.EB.94.A9">바인딩</h3>
+<p>어플리케이션 사용자 인터페이스의 레이아웃을 정의하기 위해 XUL을 쓸 수 있습니다. 요소에 <a href="ko/XUL_Tutorial/Adding_Style_Sheets">스타일을 적용하여</a> 입맛대로 모양(look)을 바꿀 수 있습니다. 또한 스타일을 바꿔 <a href="ko/XUL_Tutorial/Creating_a_Skin">새 스킨을 만들</a> 수 있습니다.</p>
+<p><a href="ko/XUL_Tutorial/Scroll_Bars">스크롤 바</a>와 <a href="ko/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">체크 박스</a> 같은 요소 모두의 기본 겉모양은 스타일 조정(adjust)이나 요소에 속성을 주어 수정해도 좋습니다. 그러나, XUL은 요소가 작동하는 법을 바꿀 수 있는 수단은 제공하지 않습니다. 예를 들면, 스크롤 바 막대가 기능하는 법을 바꾸고 싶을지도 모릅니다. 이를 이해서는, <a href="ko/XBL">XBL</a>이 필요합니다.</p>
+<p>XBL 파일은 바인딩 집합을 포함합니다. 각 바인딩은 XUL 위젯의 behavior를 기술합니다. 예를 들면, 바인딩은 스크롤 바에 부착될지도 모릅니다. behavior는 스크롤 바를 만드는 XUL 요소 기술뿐만 아니라 속성(property)과 메소드도 기술합니다.</p>
+<p>XUL처럼 XBL도 XML 언어입니다. 그래서 비슷한 구문 규칙이 있습니다. 다음 예는 XBL 파일의 기본 뼈대(skeleton)를 보입니다.</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="binding1"&gt;
+    &lt;!-- content, property, method and event descriptions go here --&gt;
+  &lt;/binding&gt;
+  &lt;binding id="binding2"&gt;
+    &lt;!-- content, property, method and event descriptions go here --&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code></code> 요소는 XBL 파일의 루트 요소고 하나 이상의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code></code> 요소를 포함합니다. 각 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code></code> 요소는 단일 바인딩으로 선언합니다. <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성은 위 보기처럼 바인딩을 식별하기 위해 쓰일 수 있습니다. 템플릿에는 두 바인딩이 있습니다. 하나는 <code>binding1</code>으로 부르고 다른 하나는 <code>binding2</code>입니다. 하나는 스크롤 바에 다른 하나는 메뉴에 부착될지도 모릅니다. 바인딩은 어떤 XUL 요소에도 부착할 수 있습니다. CSS 클래스를 쓰면, 필요에 따라 많은 다양한 바인딩을 쓸 수 있습니다. 이것은 XBL 구문을 써서 선언합니다.</p>
+<p>바인딩 파일의 URL에 CSS 속성(property) <code><a href="ko/CSS/-moz-binding">-moz-binding</a></code>을 주어 요소에 바인딩을 할당합니다. 예를 들면,</p>
+<pre>scrollbar {
+    -moz-binding: url('chrome://findfile/content/findfile.xml#binding1');
+}
+</pre>
+<p>URL은 파일 '<a class="external" rel="freelink">chrome://findfile/content/findfile.xml</a>' 안 id가 'binding1'인 바인딩을 가리킵니다.</p>
+<p>'#binding1' 구문은 HTML 파일에서 앵커(anchor)를 가리키는 것처럼 특정 바인딩을 가리키는데 쓰입니다. 보통 파일 하나에 바인딩을 전부 둘 겁니다. 이 예에서 결과는 모든 스크롤바 요소가 바인딩 'binding1'에 기술한 behavior를 지닐 겁니다.</p>
+<p>바인딩은 선언하는 다섯 가지 종류가 있습니다.</p>
+<ol>
+ <li>컨텐트: 바인딩이 바운드되는 요소에 더하는 자식 요소.</li>
+ <li>속성: 요소에 더하는 속성. 스크립트로 접근할 수 있습니다.</li>
+ <li>메소드: 요소에 더하는 메소드. 스크립트에서 호출할 수 있습니다.</li>
+ <li>이벤트: 요소가 반응할 마우스 클릭과 키누름 같은 이벤트. 바인딩은 기본 처리(handling)를 제공하는 스크립트를 더할 수 있습니다. 게다가 새 이벤트를 정의할 수도 있습니다.</li>
+ <li>스타일: XBL이 정의한 요소의 사용자 정의 스타일 속성.</li>
+</ol>
+<h3 id=".EB.B0.94.EC.9D.B8.EB.94.A9_.EC.98.88.EC.A0.9C" name=".EB.B0.94.EC.9D.B8.EB.94.A9_.EC.98.88.EC.A0.9C">바인딩 예제</h3>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>는 사용자 정의 위젯을 만드는데 쓸 수 있을 만큼 충분히 일반적(generic)입니다(비록 어떤 요소라도 쓸 수 있지만). <code><code><a href="/ko/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 태그에 <code>class</code>를 할당하여 바인딩을 오직 그 클래스에 속하는 상자에 관련지을 수 있습니다. 다음 예가 이를 보입니다.</p>
+<pre class="eval"><b>XUL (example.xul):</b>
+
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://example/skin/example.css</a>" type="text/css"?&gt;
+
+&lt;window xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;box class="okcancelbuttons"/&gt;
+&lt;/window&gt;
+
+<b>CSS (example.css):</b>
+
+box.okcancelbuttons {
+    -moz-binding: url('<a class="external" rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<b>XBL (example.xml):</b>
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="<span class="nowiki">http://www.mozilla.org/xbl</span>"
+         xmlns:xul="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;binding id="okcancel"&gt;
+    &lt;content&gt;
+      &lt;xul:button label="OK"/&gt;
+      &lt;xul:button label="Cancel"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>이 예는 상자 하나가 있는 창을 만듭니다. 상자는 <code>okcancelbuttons</code>의 <code>class</code>가 있게 선언되었습니다. 파일과 관련 있는 스타일 시트는 <code>okcancelbuttons</code> 클래스가 있는 상자가 XBL 파일에 정의한 특수 바인딩을 갖는다고 말합니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 말고도 다른 요소, 심지어 사용자 정의 테그를 쓸지도 모릅니다.</p>
+<p>다음 절에서 XBL의 세부 부분을 더 살펴보겠습니다. 그러나, 간략히 말하면 상자 안에 자동으로 버튼 2개(확인 버튼과 취소 버튼)를 더하게 합니다.</p>
+<p>다음 절에서는, <a href="ko/XUL_Tutorial/Anonymous_Content">XBL로 컨텐트 만들기</a>를 보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Property_Files" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Anonymous_Content">다음  »</a></p>
+</div><p></p>
+<p></p>

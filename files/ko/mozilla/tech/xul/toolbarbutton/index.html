@@ -1,0 +1,477 @@
+---
+title: toolbarbutton
+slug: Mozilla/Tech/XUL/toolbarbutton
+translation_of: Archive/Mozilla/XUL/toolbarbutton
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ko/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">예제</a> |
+ <a href="#Attributes">Attributes</a> |
+ <a href="#Properties">Properties</a> |
+ <a href="#Methods">Methods</a> |
+ <a href="#Related">관련 항목</a> ]
+</span></div>
+<p><code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code>에 올라가는 버튼입니다. 일반 <code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>과 유사하지만 조금 다르게 출력됩니다. 보통 이미지를 포함합니다.</p>
+<p>자세한 사항은 <a href="ko/XUL_Tutorial/Toolbars">XUL tutorial</a>를 참조하세요.</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-accesskey">accesskey</a>, <a href="#a-autoCheck">autoCheck</a>, <a href="#a-checkState">checkState</a>, <a href="#a-checked">checked</a>, <a href="#a-command">command</a>, <a href="#a-crop">crop</a>, <a href="#a-dir">dir</a>, <a href="#a-disabled">disabled</a>, <a href="#a-dlgType">dlgType</a>, <a href="#a-group">group</a>, <a href="#a-image">image</a>, <a href="#a-label">label</a>, <a href="#a-open">open</a>, <a href="#a-orient">orient</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-toolbarbutton.type">type</a>, <a href="#a-validate">validate</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-accessKey">accessKey</a>, <a href="#p-accessible">accessible</a>, <a href="#p-autoCheck">autoCheck</a>, <a href="#p-checkState">checkState</a>, <a href="#p-checked">checked</a>, <a href="#p-command">command</a>, <a href="#p-crop">crop</a>, <a href="#p-dir">dir</a>, <a href="#p-disabled">disabled</a>, <a href="#p-dlgType">dlgType</a>, <a href="#p-group">group</a>, <a href="#p-image">image</a>, <a href="#p-label">label</a>, <a href="#p-open">open</a>, <a href="#p-orient">orient</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-type">type</a></dd>
+</dl>
+<h3 id=".EC.98.88.EC.A0.9C" name=".EC.98.88.EC.A0.9C">예제</h3>
+<p>(example needed)</p>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-accesskey">
+
+
+<dl>
+ <dt>
+  <code id="a-accesskey"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>
+  타입:
+  <i>
+   character</i>
+ </dd>
+ <dd>
+  이 속성에는 단축키로 사용될 문자를 지정합니다. 문자는 대상 요소의 <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성값인 텍스트에 포함된 문자 중 하나를 사용하는 것이 좋습니다.
+
+ </dd>
+</dl>
+<h4 id=".EC.98.88.EC.A0.9C" name=".EC.98.88.EC.A0.9C">예제</h4>
+<div class="float-right">
+ <img alt="Image:XUL_ref_accesskey_attr.png"></div>
+<pre>&lt;vbox&gt;
+  &lt;label value="Enter Name" accesskey="e" control="myName"/&gt;
+  &lt;textbox id="myName"/&gt;
+  &lt;button label="Cancel" accesskey="n"/&gt;
+  &lt;button label="Ok" accesskey="O"/&gt;
+&lt;/vbox&gt;
+</pre>
+<h4 id=".EB.98.90_.EB.B3.BC_.EA.B3.B3" name=".EB.98.90_.EB.B3.BC_.EA.B3.B3">또 볼 곳</h4>
+<p><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> attribute, <code id="a-acceltext"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code> attribute</p>
+
+<p></p>
+</div> <div id="a-autoCheck">
+
+
+<dl>
+ <dt><code id="a-autocheck"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/autocheck">autocheck</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If this attribute is <code>true</code> or left out, the checked state of the button will be switched each time the button is pressed. If this attribute is <code>false</code>, the checked state must be adjusted manually. When autocheck is true, the button type should be "checkbox" or "radio".</dd>
+</dl>
+</div> <div id="a-checkState">
+
+
+<dl>
+ <dt><code id="a-checkState"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/checkState">checkState</a></code></dt>
+ <dd>Type: <em>integer</em>, values <code>0</code>, <code>1</code>, or <code>2</code></dd>
+ <dd>This attribute may be used to create three state buttons, numbered 0, 1 and 2. When in state 0 or 1, pressing the button will switch to the opposite state. When in state 2, pressing the button will switch to state 0. This means that the button acts like a checkbox except that there is a third state which must be set manually by adjusting the check state. If you wish to have different behavior for how the states are adjusted, set the <code id="a-autoCheck"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/autoCheck">autoCheck</a></code> attribute to <code>false</code> and adjust the state with a script. The <code id="a-type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> attribute must be set to <code>checkbox</code> for buttons with a check state. Constants for the possible values for this attribute are in the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMXULButtonElement" title="">nsIDOMXULButtonElement</a></code> interface.</dd>
+</dl>
+</div> <div id="a-checked">
+
+
+<dl>
+ <dt><code id="a-checked"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Indicates whether the element is checked or not.</dd>
+ <dd>Use <code>hasAttribute()</code> to determine whether this attribute is set instead of <code>getAttribute()</code>.</dd>
+ <dd>For buttons, the <code>type</code> attribute must be set to <code>checkbox</code> or <code>radio</code> for this attribute to have any effect.</dd>
+</dl>
+</div> <div id="a-command">
+
+
+<dl>
+ <dt><code id="a-command"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/command">command</a></code></dt>
+ <dd>Type: <em>id</em></dd>
+ <dd>Set to the <code id="a-id"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> of a <code><a href="/en-US/docs/Mozilla/Tech/XUL/command" title="command">command</a></code> element that is being observed by the element.</dd>
+</dl>
+
+
+</div> <div id="a-crop">
+
+<dl>
+  <dt>
+    <code id="a-crop"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></dt>
+  <dd>
+    Type: <em>one of the values below</em></dd>
+  <dd>
+    If the label of the element is too big to fit in its given space, the text will be cropped on the side specified by the <code>crop</code> attribute. An ellipsis will be used in place of the cropped text. If the box direction is reversed, the cropping is reversed.</dd>
+  <dd>
+    <dl>
+      <dt>
+        <code>start</code></dt>
+      <dd>
+        The text will be cropped on its left side in left-to-right text locales, and the right side in right-to-left locales.</dd>
+      <dt>
+        <code>end</code></dt>
+      <dd>
+        The text will be cropped on its right side in left-to-right text locales, and the right side in right-to-left locales.</dd>
+      <dt>
+        <code>left</code></dt>
+      <dd>
+        <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> The text will be cropped on its left side.</dd>
+      <dt>
+        <code>right</code></dt>
+      <dd>
+        <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> The text will be cropped on its right side.</dd>
+      <dt>
+        <code>center</code></dt>
+      <dd>
+        The text will be cropped in the middle, showing both the start and end of the text normally.</dd>
+      <dt>
+        <code>none</code></dt>
+      <dd>
+        The text will be not be cropped using an ellipsis. However, the text will simply be cut off if it is too large. The side depends on the CSS text alignment.</dd>
+    </dl>
+  </dd>
+  <dd>
+    Depending on the platform and theme being used, some elements will have set a maximum width so they will always appear cropped. If you wish to use the value <code>none</code> and the displayed text is larger than this maximum width, you may be able to use the max-width CSS property (or the maxwidth attribute) to override this size. For example, for a menuitem in a menu you can add the following CSS rule when you want to use the value <code>none</code>:</dd>
+  <dd>
+    <pre class="eval">menupopup &gt; menuitem, menupopup &gt; menu { max-width: none; }
+</pre>
+  </dd>
+</dl>
+</div> <div id="a-dir">
+
+
+<dl>
+ <dt><code id="a-dir"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>The direction in which the child elements of the element are placed.
+ <dl>
+  <dt><code>normal</code></dt>
+  <dd>For scales, the scale's values are ordered from left to right (for horizontal scales) or from top to bottom (for vertical scales)  For other elements, the elements are placed left to right or top to bottom in the order they appear in the XUL code.</dd>
+  <dt><code>reverse</code></dt>
+  <dd>For scales, the scale's values are ordered from right to left (for horizontal scales) or from bottom to top (for vertical scales). For other elements, they are placed right to left or bottom to top. This is reverse of the order in which they appear in the XUL code.</dd>
+ </dl>
+ </dd>
+</dl>
+
+
+</div> <div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Indicates whether the element is disabled or not. If this attribute is set, the element is disabled. Disabled elements are usually drawn with grayed-out text. If the element is disabled, it does not respond to user actions, it cannot be focused, and the <code>command</code> event will not fire. In the case of form elements, it will not be submitted. Do not set the attribute to <code>true</code>, as this will suggest you can set it to <code>false</code> to enable the element again, which is not the case.
+
+ <div>The <code>disabled</code> attribute is allowed only for form controls. Using it with an anchor tag (an <code>&lt;a&gt;</code> link) will have no effect.</div>
+
+ <div>
+ The element will, however, still respond to mouse events. To enable the element, leave this attribute out entirely.</div>
+ </dd>
+ <dd>Visible controls have a <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disabled">disabled</a></span></code> property which, except for menus and menuitems, is normally preferred to use of the attribute, as it may need to update additional state.</dd>
+</dl>
+
+
+</div> <div id="a-dlgType">
+
+
+<dl>
+ <dt><code id="a-dlgtype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/dlgtype">dlgtype</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>The dialog type of the button, used only when the button is in a dialog box. You can use this feature to replace the standard dialog box buttons with custom buttons, yet the dialog event methods will still function. For example, if the <code>dlgType</code> is set to <code>accept</code>, the button will replace the dialog box's accept button, which is usually labeled <code>OK</code>. Using this attribute on a button that is not in a dialog box has no effect. The following values can be used as the dialog type:</dd>
+ <dd>
+ <dl>
+  <dt><code>accept</code></dt>
+  <dd>The OK button, which will accept the changes when pressed.</dd>
+  <dt><code>cancel</code></dt>
+  <dd>The cancel button which will cancel the operation.</dd>
+  <dt><code>help</code></dt>
+  <dd>A help button for displaying help about the dialog.</dd>
+  <dt><code>disclosure</code></dt>
+  <dd>A button to show more information. This might be a button or a disclosure triangle.</dd>
+  <dt><code>extra1</code></dt>
+  <dd>An optional additional button.</dd>
+  <dt><code>extra2</code></dt>
+  <dd>A second optional additional button.</dd>
+ </dl>
+ </dd>
+</dl>
+</div> <div id="a-group">
+
+
+<dl>
+ <dt><code id="a-group"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/group">group</a></code></dt>
+ <dd>Type: <em>string group name</em> </dd>
+ <dd>Buttons with type="radio" and the same value for their group attribute are put into the same group. Only one button from each group can be checked at a time. If the user selects one the buttons, the others in the group are unchecked.</dd>
+</dl>
+</div> <div id="a-image">
+
+<dl>
+  <dt><code id="a-image"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></dt>
+  <dd>Type: <em>URI</em></dd>
+  <dd>The URI of the image to appear on the element. If this attribute is empty or left out, no image appears. The position of the image is determined by the <code id="a-dir"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> and <code id="a-orient"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> attributes.</dd>
+</dl>
+
+
+
+</div> <div id="a-label">
+
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The label that will appear on the element. If this is left out, no text appears. For an editable <code><a href="/en-US/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> element the value of this attribute is copied to the <code><a href="/en-US/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>.value property upon user selection of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>.</dd>
+</dl>
+
+
+</div> <div id="a-open">
+
+
+<dl>
+ <dt><code id="a-open"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>For the <code>menu</code> <code id="a-type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> buttons, the <code>open</code> attribute is set to <code>true</code> when the menu is open. The <code>open</code> attribute is not present if the menu is closed.</dd>
+</dl>
+</div> <div id="a-orient">
+
+
+<dl>
+ <dt><code id="a-orient"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>Used to specify whether the children of the element are oriented horizontally or vertically. The default value depends on the element. You can also use the <a href="/en-US/docs/Web/CSS/-moz-box-orient" title="The documentation about this has not yet been written; please consider contributing!"><code>-moz-box-orient</code></a> style property.
+ <dl>
+  <dt><code>horizontal</code></dt>
+  <dd>Child elements of the element are placed next to each other in a row in the order that they appear in the XUL source.</dd>
+  <dt><code>vertical</code></dt>
+  <dd>Child elements of the element are placed under each other in a column in the order that they appear in the XUL source.</dd>
+ </dl>
+ </dd>
+</dl>
+
+
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The tab order of the element. The tab order is the order in which the focus is moved when the user presses the "<code>tab</code>" key. Elements with a higher <code>tabindex</code> are later in the tab sequence.</dd>
+</dl>
+</div> <div id="a-toolbarbutton.type">
+
+
+<dl>
+ <dt><code id="a-toolbarbutton.type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/toolbarbutton.type">type</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The type of button. If this attribute is not present, a normal button is created. You can set this attribute to the value <code>menu</code> to create a button with a <a href="/en/XUL/menupopup" title="en/XUL/menupopup">menu popup</a>. This will typically cause the button to be displayed differently.</dd>
+</dl>
+
+<ul>
+ <li><code>menu</code>: Set the type attribute to the value <code>menu</code> to create a button with a menu popup. Place a <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> element inside the button in this case. The user may click anywhere on the button to open and close the menu.</li>
+ <li><code>menu-button</code>: You can also use the value <code>menu-button</code> to create a button with a menu. Unlike the <code>menu</code> type, this type requires the user to press the arrow to open the menu, but a different command may be invoked when the main part of the button is pressed.</li>
+ <li><code>checkbox</code>: Use this type to create a toggle button which will switch the <code id="a-checkState"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/checkState">checked state</a></code> each time the button is pressed.</li>
+ <li><code>radio</code>: Use this type to create a radio button. You can also create a group of toolbarbuttons using this type and the attribute <code id="a-group"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/group">group</a></code>.</li>
+</ul>
+
+<table class="standard-table">
+ <caption>Examples:</caption>
+ <thead>
+  <tr>
+   <th scope="row">type value</th>
+   <th scope="col">&lt;<code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code> &gt;</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row"> </th>
+   <td><img alt="Toolbarbutton without a type attribute" src="https://mdn.mozillademos.org/files/13601/toolbarbutton,%20type%20no%20value.png" style="height: 41px; width: 41px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">menu</th>
+   <td><img alt='Toolbarbutton with type attribute equals "menu"' src="https://mdn.mozillademos.org/files/13603/toolbarbutton,%20type%20eq%20menu.png" style="height: 42px; width: 45px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">menu-button</th>
+   <td><img alt='Toolbarbutton with type attribute equals "menu-button"' src="https://mdn.mozillademos.org/files/13605/toolbarbutton,%20type%20eq%20menu-button.png" style="height: 39px; width: 53px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">checkbox</th>
+   <td><img alt='Toolbarbutton with type attribute equals "checkbox"' src="https://mdn.mozillademos.org/files/13607/toolbarbutton,%20type%20eq%20checkbox.png" style="height: 41px; width: 47px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">radio</th>
+   <td><img alt='Toolbarbutton with type attribute equals "radio"' src="https://mdn.mozillademos.org/files/13609/toolbarbutton,%20type%20eq%20radio.png" style="height: 41px; width: 38px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+
+</div> <div id="a-validate">
+
+
+<dl>
+ <dt><code id="a-validate"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/validate">validate</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>This attribute indicates whether to load the image from the cache or not. This would be useful if the images are stored remotely or you plan on swapping the image frequently. The following values are accepted, or leave out the attribute entirely for default handling:</dd>
+ <dd>
+ <dl>
+  <dt><code>always</code></dt>
+  <dd>The image is always checked to see whether it should be reloaded.</dd>
+  <dt><code>never</code></dt>
+  <dd>The image will be loaded from the cache if possible.</dd>
+ </dl>
+ </dd>
+</dl>
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p> </p><div id="p-accessKey">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/accessKey">accessKey</a></span></code></dt>
+  <dd>
+    Type: <em>character</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-accesskey"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> attribute.</dd>
+</dl></div> <div id="p-accessible">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/accessible">accessible</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessible" title="">nsIAccessible</a></code></em></dd>
+  <dd>
+    Returns the accessibility object for the element.</dd>
+</dl></div> <div id="p-autoCheck">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/autoCheck">autoCheck</a></span></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Gets and sets the value of the <code id="a-autoCheck"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/autoCheck">autoCheck</a></code> attribute.</dd>
+</dl></div> <div id="p-checkState">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/checkState">checkState</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em>, values <code>0</code>, <code>1</code>, or <code>2</code></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-checkState"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/checkState">checkState</a></code> attribute.</dd>
+</dl></div> <div id="p-checked">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/checked">checked</a></span></code></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-checked"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code> attribute.</dd>
+</dl></div> <div id="p-command">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/command">command</a></span></code></dt>
+ <dd>Type: <em>element id</em></dd>
+ <dd>Gets and sets the value of the <code id="a-command"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/command">command</a></code> attribute.</dd>
+</dl></div> <div id="p-crop">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/crop">crop</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-crop"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code> attribute.</dd>
+</dl></div> <div id="p-dir">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/dir">dir</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-dir"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> attribute.</dd>
+</dl></div> <div id="p-disabled">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disabled">disabled</a></span></code></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-disabled"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> attribute.</dd>
+</dl>
+</div> <div id="p-dlgType">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/dlgType">dlgType</a></span></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>Gets and sets the value of the <code id="a-dlgType"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/dlgType">dlgType</a></code> attribute.</dd>
+</dl></div> <div id="p-group">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/group">group</a></span></code></dt>
+ <dd>Type: <em>string group name</em></dd>
+ <dd>Gets and sets the value of the <code id="a-group"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/group">group</a></code> attribute.</dd>
+</dl></div> <div id="p-image">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/image">image</a></span></code></dt>
+  <dd>
+    Type: <em>image URL</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-image"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> attribute.</dd>
+</dl></div> <div id="p-label">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/label">label</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-label"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> attribute.</dd>
+</dl>
+</div> <div id="p-open">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/open">open</a></span></code></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-open"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code> attribute.</dd>
+</dl>
+</div> <div id="p-orient">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/orient">orient</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-orient"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> attribute.</dd>
+</dl></div> <div id="p-tabIndex">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabIndex">tabIndex</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-tabindex"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> attribute.</dd>
+</dl></div> <div id="p-type">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/type">type</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> attribute.</dd>
+</dl>
+</div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>XUL 요소에서 상속됨</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>DOM 요소에서 상속됨</strong><br> <small> <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ko/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+<h3 id=".EA.B4.80.EB.A0.A8_.ED.95.AD.EB.AA.A9" name=".EA.B4.80.EB.A0.A8_.ED.95.AD.EB.AA.A9">관련 항목</h3>
+<dl>
+ <dt>
+  요소</dt>
+ <dd>
+  <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbargrippy" title="toolbargrippy">toolbargrippy</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbaritem" title="toolbaritem">toolbaritem</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbarpalette" title="toolbarpalette">toolbarpalette</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbarseparator" title="toolbarseparator">toolbarseparator</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbarset" title="toolbarset">toolbarset</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbarspacer" title="toolbarspacer">toolbarspacer</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbarspring" title="toolbarspring">toolbarspring</a></code>, <code><a href="/ko/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></dd>
+</dl>
+<dl>
+ <dt>
+  인터페이스</dt>
+ <dd>
+  <a href="ko/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="ko/NsIDOMXULButtonElement">nsIDOMXULButtonElement</a></dd>
+</dl>
+<p></p>

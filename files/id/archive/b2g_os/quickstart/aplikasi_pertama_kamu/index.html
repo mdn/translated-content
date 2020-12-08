@@ -1,0 +1,210 @@
+---
+title: Aplikasi Pertama Kamu
+slug: Archive/B2G_OS/Quickstart/aplikasi_pertama_kamu
+translation_of: Archive/B2G_OS/Quickstart/Your_first_app
+---
+<article class="brush: js">
+ <div class="summary">
+  <p>Aplikasi Open web memberikan kemudahan kepada Pengembang web persis seperti apa yang mereka inginkan selama ini: lingkungan cross-platform yang didedikasikan untuk aplikasi yang diinstal dan dibuat hanya dengan menggunakan HTML, CSS, dan JavaScript saja - dengan Firefox OS sebagai yang pertama yang mendedikasikan platform Aplikasi Open web ini. Panduan ini bertujuan untuk membuat Anda belajar dan membangun aplikasi, dengan petunjuk arsitektur dasar dan petunjuk membangun Aplikasi sehingga Anda dapat membuat aplikasi besar berikutnya!</p>
+ </div>
+ <p>Jika Anda tidak ingin mengikuti panduan ini, Anda dapat men-download template aplikasi <a href="https://github.com/chrisdavidmills/mdn-app-template">quick start </a>kami. Cari tahu lebih banyak tentang apa ini, dengan membaca panduan <a href="https://developer.mozilla.org/en-US/docs/Project:MDN/Style_guide/Sample_app_coding_guidelines#Apps_template">Template aplikasi</a> kami.</p>
+ <h2 id="Struktur_Aplikasi">Struktur Aplikasi</h2>
+ <h3 id="Paket_vs._Aplikasi_yang_dihost">Paket vs. Aplikasi yang dihost</h3>
+ <p>Ada dua jenis aplikasi Open web yaitu: dikemas dan dihosting.</p>
+ <ul>
+  <li>Aplikasi dikemas dasarnya berformat file zip yang berisi semua aset aplikasi: HTML, CSS, JavaScript, gambar, manifest, dll.</li>
+  <li>Aplikasi Hosted  dijalankan dari server di domain yang diberikan, seperti situs web standar.</li>
+ </ul>
+ <p>Kedua jenis aplikasi ini memerlukan file manifest yang valid. Ketika tiba saatnya Anda ingin untuk mendaftarkan aplikasi Anda di Firefox Marketplace, Anda akan meng-upload aplikasi Anda sebagai file .zip atau memberikan URL di mana aplikasi anda dihosting.</p>
+ <div style="width: 480px; margin: 0 auto;">
+  <p><iframe frameborder="0" height="270" src="https://www.youtube.com/embed/Q7x-B13y33Q/?feature=player_detailpage" width="480"></iframe></p>
+  <div class="video-caption">
+   <p><span class="long_text short_text" id="result_box" lang="id"><span class="hps">Dibuat</span> <span class="hps">dalam kemitraan dengan</span> <span class="hps">Treehouse</span><span>:</span></span> <a class="button" href="http://teamtreehouse.com/?cid=1154"><span class="long_text short_text" id="result_box" lang="id"><span class="hps">Periksa mereka</span><span>!</span></span></a></p>
+  </div>
+ </div>
+ <p>Untuk tujuan panduan ini, Anda akan membuat aplikasi host yang akan tinggal di alamat localhost Anda. Setelah aplikasi Anda sudah siap untuk daftar di Firefox Marketplace, Anda dapat membuat keputusan untuk bundel sebagai aplikasi dikemas atau meluncurkannya sebagai aplikasi host.</p>
+ <h3 id="Manifests_Aplikasi">Manifests Aplikasi</h3>
+ <p>Every Firefox app requires a manifest.webapp file at the app root. The <a href="/en-US/docs/Web/Apps/Manifest"><code>manifest.webapp</code></a> file provides important information about the app, such as version, name, description, icon location, locale strings, domains the app can be installed from, and much more. Only the name and description are required. The simple manifest included within the app template is similar to the following:</p>
+ <pre class="brush: js">{
+  "version": "0.1",
+  "name": "Open Web App",
+  "description": "Your new awesome Open Web App",
+  "launch_path": "/app-template/index.html",
+  "icons": {
+    "16": "/app-template/app-icons/icon-16.png",
+    "48": "/app-template/app-icons/icon-48.png",
+    "128": "/app-template/app-icons/icon-128.png"
+  },
+  "developer": {
+    "name": "Your Name",
+    "url": "http://yourawesomeapp.com"
+  },
+  "locales": {
+    "es": {
+      "description": "Su nueva aplicación impresionante Open Web",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    },
+    "it": {
+      "description": "La tua nuova fantastica Open Web App",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    }
+  },
+  "default_locale": "en"
+}</pre>
+ <div style="width: 480px; margin: 0 auto;">
+  <p><iframe frameborder="0" height="270" src="https://www.youtube.com/embed/dgAUgHQOm8M#t/?feature=player_detailpage" width="480"></iframe></p>
+  <div class="video-caption">
+   <p>Made in partnership with Treehouse: <a class="button" href="http://teamtreehouse.com/?cid=1154">Check them out!</a></p>
+  </div>
+ </div>
+ <p> </p>
+ <p>A basic manifest is all you need to get started. For more details about manifests, read <a href="/en-US/docs/Web/Apps/Manifest">App Manifest</a>.</p>
+ <h2 id="App_Layout_Design">App Layout &amp; Design</h2>
+ <p>Responsive design has become increasingly important as more screen resolutions become standard on different devices. Even if the main target of your app is mobile platforms such as Firefox OS, other devices will likely have access to it as well. <a href="//developer.mozilla.org/docs/CSS/Media_queries">CSS media queries</a> allow you to adapt layout to device, as shown in this skeleton CSS example:</p>
+ <pre class="brush: css">/* The following are examples of different CSS media queries */
+
+/* Basic desktop/screen width sniff */
+@media only screen and (min-width : 1224px) {
+  /* styles */
+}
+
+/* Traditional iPhone width */
+@media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+  /* styles */
+}
+
+/* Device settings at different orientations */
+@media screen and (orientation:portrait) {
+  /* styles */
+}
+@media screen and (orientation:landscape) {
+  /* styles */
+}</pre>
+ <p>There are many JavaScript and CSS frameworks available to aid in responsive design and mobile app development (<a href="http://twitter.github.com/bootstrap">Bootstrap</a>, etc.) Choose the framework(s) that best fit your app and development style.</p>
+ <h2 id="Web_APIs">Web APIs</h2>
+ <p>JavaScript APIs are being created and enhanced as quickly as devices are. Mozilla's <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> effort brings dozens of standard mobile features to JavaScript APIs. A list of device support and status is available on the <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> page. JavaScript feature detection is still the best practice, as shown in the following example:</p>
+ <pre class="brush: js">// If this device supports the vibrate API...
+if('vibrate' in navigator) {
+    // ... vibrate for a second
+    navigator.vibrate(1000);
+}</pre>
+ <p>In the following example, the display style of a <code>&lt;div&gt;</code> is modified based on changes in the battery state of the device:</p>
+ <pre class="brush: java">// Create the battery indicator listeners
+(function() {
+  var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery,
+      indicator, indicatorPercentage;
+
+  if(battery) {
+    indicator = document.getElementById('indicator'),
+    indicatorPercentage = document.getElementById('indicator-percentage');
+
+    // Set listeners for changes
+    battery.addEventListener('chargingchange', updateBattery);
+    battery.addEventListener('levelchange', updateBattery);
+
+    // Update immediately
+    updateBattery();
+  }
+
+  function updateBattery() {
+    // Update percentage width and text
+    var level = (battery.level * 100) + '%';
+    indicatorPercentage.style.width = level;
+    indicatorPercentage.innerHTML = 'Battery: ' + level;
+    // Update charging status
+    indicator.className = battery.charging ? 'charging' : '';
+  }
+})();</pre>
+ <p>In the code sample above, once you confirm that the <a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.battery">Battery API</a> is supported, you can add event listeners for <code>chargingchange</code> and <code>levelchange</code> to update the element's display. Try adding the following to the quickstart template, and see if you can get it working.</p>
+ <p>Check the <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> page frequently to keep up to date with device API statuses.</p>
+ <h3 id="Install_API_functionality">Install API functionality</h3>
+ <p>In our sample quickstart app template, we've implemented an install button that you can click when viewing the app as a standard Web page, to install that site on Firefox OS as an app. The button markup is nothing special:</p>
+ <pre class="brush: html">&lt;button id="install-btn"&gt;Install app&lt;/button&gt;</pre>
+ <p>This button's functionality is implemented using the Install API (see install.js):</p>
+ <pre class="brush: js">var manifest_url = location.href + 'manifest.webapp';
+
+function install(ev) {
+  ev.preventDefault();
+  // define the manifest URL
+  // install the app
+  var installLocFind = navigator.mozApps.install(manifest_url);
+  installLocFind.onsuccess = function(data) {
+    // App is installed, do something
+  };
+  installLocFind.onerror = function() {
+    // App wasn't installed, info is in
+    // installapp.error.name
+    alert(installLocFind.error.name);
+  };
+};
+
+// get a reference to the button and call install() on click if the app isn't already installed. If it is, hide the button.
+var button = document.getElementById('install-btn');
+
+var installCheck = navigator.mozApps.checkInstalled(manifest_url);
+
+installCheck.onsuccess = function() {
+  if(installCheck.result) {
+    button.style.display = "none";
+  } else {
+    button.addEventListener('click', install, false);
+  };
+};
+</pre>
+ <p>Let's run through briefly what is going on:</p>
+ <ol>
+  <li>We get a reference to the install button and store it in the variable <code>button</code>.</li>
+  <li>We use <code>navigator.mozApps.checkInstalled</code> to check whether the app defined by the manifest at <code>http://people.mozilla.com/~cmills/location-finder/manifest.webapp</code> is already installed on the device. This test is stored in the variable <code>installCheck</code>.</li>
+  <li>When the test is successfully carried out, its success event is fired, therefore <code>installCheck.onsuccess = function() { ... }</code> is run.</li>
+  <li>We then test for the existence of <code>installCheck.result</code> using an <code>if</code> statement. If it does exist, meaning that the app is installed, we hide the button. An install button isn't needed if it is already installed.</li>
+  <li>If the app isn't installed, we add a click event listener to the button, so the <code>install()</code> function is run when the button is clicked.</li>
+  <li>When the button is clicked and the <code>install()</code> function is run, we store the manifest file location in a variable called <code>manifest_url</code>, and then install the app using <code>navigator.mozApps.install(manifest_url)</code>, storing a reference to that installation in the <code>installLocFind</code> variable. You'll notice that this installation also fires success and error events, so you can run actions dependent on whether the install happened successfully or not.</li>
+ </ol>
+ <p>You may want to verify the <a href="/en-US/docs/Web/Apps/JavaScript_API">implementation state of the API</a> when first coming to Installable web apps.</p>
+ <div class="note">
+  <p>Note: Installable open web apps have a "single app per origin" security policy; basically, you can't host more than one installable app per origin. This makes testing a bit more tricky, but there are still ways around this, such as creating different sub-domains for apps, testing them using the Firefox OS Simulator, or testing the install functionality on Firefox Aurora/Nightly, which allows you to install installable web apps on the desktop. See <a href="/en-US/docs/Web/Apps/FAQs/About_app_manifests">FAQs about apps manifests</a> for more information on origins.</p>
+ </div>
+ <h2 id="WebRT_APIs_(Permissions-based_APIs)">WebRT APIs (Permissions-based APIs)</h2>
+ <p>There are a number of WebAPIs that are available but require permissions for that specific feature to be enabled. Apps may register permission requests within the <code>manifest.webapp</code> file like so:</p>
+ <pre class="brush: js">// New key in the manifest: "permissions"
+// Request access to any number of APIs
+// Here we request permissions to the systemXHR API
+"permissions": {
+    "systemXHR": {}
+}</pre>
+ <p>The three levels of permission are as follows:</p>
+ <ul>
+  <li>Normal — APIs that don't need any kind of special access permissions.</li>
+  <li>Privileged — APIs available to developers to use in their applications, as long as they set access permissions in the app manifest files, and distribute them through a trusted source.</li>
+  <li>Certified — APIs that control critical functions on a device, such as the call dialer and messaging services. These are generally not available for third party developers to use.</li>
+ </ul>
+ <p>For more information on app permission levels, read <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps">Types of packaged apps</a>. You can find out more information about what APIs require permissions, and what permissions are required, at <a href="/en-US/docs/Web/Apps/App_permissions">App permissions</a>.</p>
+ <div class="note">
+  <p>It's important to note that not all Web APIs have been implemented within the Firefox OS Simulator.</p>
+ </div>
+ <h2 id="Tools_Testing">Tools &amp; Testing</h2>
+ <p>Testing is incredibly important when supporting mobile devices. There are many options for testing installable open web apps.</p>
+ <h3 id="Firefox_OS_Simulator">Firefox OS Simulator</h3>
+ <p>Installing and using the <a href="https://marketplace.firefox.com/developers/docs/firefox_os_simulator">Firefox OS Simulator</a> is the easiest way to get up and running with your app. After you install the simulator, it is accessible from the Tools -&gt; Web Developer -&gt; Firefox OS Simulator menu. The simulator launches with a JavaScript console so you can debug your application from within the simulator.</p>
+ <h3 id="App_Manager">App Manager</h3>
+ <p>The new kid on the block with regards to testing tools is called the <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager">App Manager</a>. This tool allows you to connect desktop Firefox to a compatible device via USB (or a Firefox OS simulator), push apps straight to the device, validate apps, and debug them as they run on the device.</p>
+ <h3 id="Unit_Testing">Unit Testing</h3>
+ <p>Unit tests are extremely valuable when testing on different devices and builds. jQuery's <a href="http://qunitjs.com">QUnit</a> is a popular client-side testing utility, but you can use any set of testing tools you'd like.</p>
+ <h3 id="Installing_Firefox_OS_on_a_Device">Installing Firefox OS on a Device</h3>
+ <p>Since Firefox OS is an open source platform, code and tools are available to build and install Firefox OS on your own device. Build and installation instructions, as well as notes on what devices it can be installed on, can be found on <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform">MDN</a>.</p>
+ <p>Dedicated Firefox OS developer preview devices are also available: read our <a href="https://marketplace.firefox.com/developers/dev_phone">Developer preview phone page</a> for more information.</p>
+ <h2 id="App_Submission_and_Distribution">App Submission and Distribution</h2>
+ <p>Once your app is complete, you can host it yourself like a standard web site or app (read <a href="/en-US/docs/Web/Apps/Publishing/Self-publishing_Apps">Self-publishing apps</a> for more information), or it can be <a href="https://marketplace.firefox.com/developers/submit/app/manifest">submitted</a> to the <a href="https://marketplace.firefox.com">Firefox Marketplace</a>. Your app's manifest will be validated and you may choose which devices your app will support (e.g. Firefox OS, Desktop Firefox, Firefox Mobile, Firefox Tablet). Once validated, you can add additional details about your app (screenshots, descriptions, price, etc.) and officially submit the app for listing within the Marketplace. Once approved, your app is available to the world for purchase and installation.</p>
+ <h3 id="More_Marketplace_Listing_Information">More Marketplace &amp; Listing Information</h3>
+ <ol>
+  <li><a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Submitting an App to the Firefox OS Marketplace </a></li>
+  <li><a href="/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria">Marketplace Review Criteria </a></li>
+  <li><a href="http://s.vid.ly/embeded.html?link=8k2n4w&amp;autoplay=false">App Submission Video Walkthrough </a></li>
+ </ol>
+</article>

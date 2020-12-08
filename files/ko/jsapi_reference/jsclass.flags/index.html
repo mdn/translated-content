@@ -1,0 +1,177 @@
+---
+title: JSClass.flags
+slug: JSAPI_Reference/JSClass.flags
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSClass.flags
+---
+<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+
+<div class="summary">
+<p>The <strong>{{jsapixref("JSClass", "JSClass.flags")}}</strong> field allows an application to enable optional <code>JSClass</code> features on a per-class basis.</p>
+</div>
+
+<p>The <code>flags</code> field is of type <code>uint32_t</code>. Its value is the logical OR of zero or more of the following constants:</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Flag</th>
+   <th>Meaning</th>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_HAS_PRIVATE</code></p>
+   </td>
+   <td>
+    <p>This class uses private data. If this flag is set, each instance of the class has a field for private data. The field can be accessed using {{jsapixref("JS_GetPrivate")}} and {{jsapixref("JS_SetPrivate")}}.</p>
+
+    <p>{{ LXRSearch("ident", "i", "JSCLASS_HAS_PRIVATE") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_PRIVATE_IS_NSISUPPORTS</code></p>
+   </td>
+   <td>
+    <p>Mozilla extension. The private field of each object of this class points to an <a href="/en/XPCOM" title="XPCOM">XPCOM</a> object (see <code><a href="/en/XPCOM_Interface_Reference/nsISupports" title="nsISupports">nsISupports</a></code>). This is only meaningful if SpiderMonkey is built with <a href="/en/XPConnect" title="XPConnect">XPConnect</a> and the <code>JSCLASS_HAS_PRIVATE</code> flag is also set.</p>
+
+    <p>{{ LXRSearch("ident", "i", "JSCLASS_PRIVATE_IS_NSISUPPORTS") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_IS_DOMJSCLASS</code></p>
+   </td>
+   <td>
+    <p>{{ Jsapi_minversion_inline("17") }} Objects are DOM.</p>
+
+    <p>{{ LXRSearch("ident", "i", "JSCLASS_IS_DOMJSCLASS") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>JSCLASS_EMULATES_UNDEFINED</code></td>
+   <td>
+    <p>{{ Jsapi_minversion_inline("24") }} Causes objects which have this class to <dfn>emulate <code>undefined</code></dfn> in certain circumstances.  An object <code>obj</code> that emulates <code>undefined</code> behaves like any other object, except in the following ways:</p>
+
+    <ul>
+     <li><code>typeof obj === "undefined"</code></li>
+     <li><code>obj</code> converts to <code>false</code> when <code>obj</code> is converted to a boolean when used in boolean contexts (<code>if</code> conditions, loop continuation/termination conditions [<code>for</code>/<code>while</code>/<code>do { } while</code>], the condition in a ternary <code>?:</code> expression, and so on)</li>
+     <li><code>(obj == undefined)</code> is true, and <code>(obj != undefined)</code> is <code>false</code></li>
+     <li><code>(obj == null)</code> is true, and <code>(obj != null)</code> is <code>false</code></li>
+    </ul>
+
+    <p><code>==</code> and <code>!=</code> comparisons to values other than <code>null</code> or <code>undefined</code> (including to an object that emulates <code>undefined</code>) are unaffected by this flag.  Strict equality (<code>===</code> and <code>!==</code>) comparisons are also unaffected by this flag.</p>
+
+    <p>{{ LXRSearch("ident", "i", "JSCLASS_EMULATES_UNDEFINED") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_HAS_RESERVED_SLOTS(n)</code></p>
+   </td>
+   <td>
+    <p>Indicates that instances of this class have <code>n</code> <em>reserved slots</em>. <code>n</code> is an integer in the range <code>{{ mediawiki.external('0..255') }}</code>. The slots initially contain unspecified valid <code>jsval</code> values. They can be accessed using {{jsapixref("JS_GetReservedSlot")}} and {{jsapixref("JS_GetReservedSlot", "JS_SetReservedSlot")}}.</p>
+
+    <p>(The {{jsapixref("JSClass.reserveSlots")}} hook also allocates reserved slots to objects.)</p>
+
+    <p>{{ LXRSearch("ident", "i", "JSCLASS_HAS_RESERVED_SLOTS") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_GLOBAL_FLAGS</code></p>
+   </td>
+   <td>
+    <p>This flag is only relevant for the class of an object that is used as a global object. (ECMAScript specifies a single global object, but in SpiderMonkey the global object is the last object in the {{jsapixref("JS_GetScopeChain", "scope chain", "", 1)}}, which can be different objects at different times. This is actually quite subtle. {{jsapixref("JS_ExecuteScript")}} and similar APIs set the global object for the code they execute. {{jsapixref("JS_SetGlobalObject")}} sets an object which is sometimes used as the global object, as a last resort.)</p>
+
+    <p>Enable standard ECMAScript behavior for setting the prototype of certain objects, such as <code>Function</code> objects. If the global object does not have this flag, then scripts may cause nonstandard behavior by replacing standard constructors or prototypes (such as <code>Function.prototype</code>.)</p>
+
+    <p>Objects that can end up with the wrong prototype object, if this flag is not present, include: <code>arguments</code> objects (<span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>10.1.8 specifies "the original <code>Object</code> prototype"), <code>Function</code> objects (<span class="pl-s1"><span class="pl-s">ECMA 262-3 </span></span>§13.2 specifies "the original <code>Function</code> prototype"), and objects created by many standard constructors (<span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>15.4.2.1 and others).</p>
+
+    <p>{{ LXRSearch("ident", "i", "JSCLASS_GLOBAL_FLAGS") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>JSCLASS_FOREGROUND_FINALIZE</code></td>
+   <td>
+    <p>Objects of this class must be finalized on the main thread. </p>
+
+    <p>If this class has a finalizer that makes use of state shared with the main thread then this option must be specified.  It is always safe to specify this option.</p>
+
+    <p>One of <code>JSCLASS_FOREGROUND_FINALIZE</code> and <code>JSCLASS_BACKGROUND_FINALIZE</code> must be specified.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>JSCLASS_BACKGROUND_FINALIZE</code></td>
+   <td>
+    <p>It is safe to finalize objects of this class on a background thread.</p>
+
+    <p>If this class has a finalizer that can be safely run concurrently with the main thread then this option can be specified.  It results in finalization work being offloaded to another thread which improves performance.</p>
+
+    <p>One of <code>JSCLASS_FOREGROUND_FINALIZE</code> and <code>JSCLASS_BACKGROUND_FINALIZE</code> must be specified.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>JSCLASS_IMPLEMENTS_BARRIERS</code></td>
+   <td>{{ obsolete_inline("jsapi43") }} Correctly implements GC read and write barriers.</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_NEW_ENUMERATE</code></p>
+   </td>
+   <td>{{ obsolete_inline("jsapi37") }} This class's <code>enumerate</code> hook is actually a {{jsapixref("JSClass.enumerate", "JSNewEnumerateOp")}}, not a {{jsapixref("JSEnumerateOp")}}.</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_NEW_RESOLVE</code></p>
+   </td>
+   <td>{{ obsolete_inline("jsapi36") }} This class's <code>resolve</code> hook is actually a {{jsapixref("JSNewResolveOp")}}, not a {{jsapixref("JSClass.resolve", "JSResolveOp")}}.</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_SHARE_ALL_PROPERTIES</code></p>
+   </td>
+   <td>{{ obsolete_inline("js1.8.5") }} Instructs SpiderMonkey to automatically give all properties of objects of this class the {{jsapixref("JS_GetPropertyAttributes", "JSPROP_SHARED")}} attribute.</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_NEW_RESOLVE_GETS_START</code></p>
+   </td>
+   <td>{{ obsolete_inline("jsapi16") }} The <code>resolve</code> hook expects to receive the starting object in the prototype chain passed in via the <code>*objp</code> in/out parameter. (This is meaningful only if the <code>JSCLASS_NEW_RESOLVE</code> flag is also set.)</td>
+  </tr>
+  <tr>
+   <td id="JSCLASS_CONSTRUCT_PROTOTYPE">
+    <p><code>JSCLASS_CONSTRUCT_PROTOTYPE</code></p>
+   </td>
+   <td>{{ obsolete_inline("jsapi11") }} Instructs {{jsapixref("JS_InitClass")}} to invoke the constructor when creating the class prototype.</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_IS_EXTENDED</code></p>
+   </td>
+   <td>{{ obsolete_inline("jsapi17") }}Indicates that this <code>JSClass</code> is really a {{jsapixref("JSExtendedClass")}}.</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>JSCLASS_MARK_IS_TRACE</code></p>
+   </td>
+   <td>{{ obsolete_inline("jsapi5") }} Indicates that the {{jsapixref("JSClass.mark", "mark")}} hook implements the new {{jsapixref("JSTraceOp")}} signature instead of the old {{jsapixref("JSClass.mark", "JSMarkOp")}} signature. This is recommended for all new code that needs custom marking.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>SpiderMonkey reserves a few other flags for its internal use. They are <code>JSCLASS_IS_ANONYMOUS</code>, <code>JSCLASS_IS_GLOBAL</code>, <code>JSCLASS_IS_PROXY</code>, and <code>JSCLASS_HAS_CACHED_PROTO</code>. JSAPI applications should not use these flags.</p>
+
+<h2 id="See_Also" name="See_Also">See Also</h2>
+
+<ul>
+ <li>{{bug(527805)}} - removed <code>JSCLASS_SHARE_ALL_PROPERTIES</code></li>
+ <li>{{bug(571789)}} - removed <code>JSCLASS_IS_EXTENDED</code></li>
+ <li>{{bug(638291)}} - removed <code>JSCLASS_MARK_IS_TRACE</code></li>
+ <li>{{bug(641025)}} - added <code>JSCLASS_IMPLEMENTS_BARRIERS</code></li>
+ <li>{{bug(702507)}} - removed <code>JSCLASS_CONSTRUCT_PROTOTYPE</code></li>
+ <li>{{bug(758913)}} - removed <code>JSCLASS_NEW_RESOLVE_GETS_START</code></li>
+ <li>{{bug(766447)}} - added <code>JSCLASS_IS_DOMJSCLASS</code></li>
+ <li>{{bug(792108)}} - added <code>JSCLASS_EMULATES_UNDEFINED</code></li>
+ <li>{{bug(993026)}} - removed <code>JSCLASS_NEW_RESOLVE</code></li>
+ <li>{{bug(1097267)}} - removed <code>JSCLASS_NEW_ENUMERATE</code></li>
+</ul>

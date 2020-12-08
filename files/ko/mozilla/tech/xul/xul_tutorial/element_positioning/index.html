@@ -1,0 +1,259 @@
+---
+title: Element Positioning
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Element_Positioning
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:The_Box_Model" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Box_Model_Details">다음  »</a></p>
+</div><p></p>
+
+<p>이번에는 XUL 요소의 크기와 위치를 지정하는 방법을 알아 보겠습니다.</p>
+
+<h2 id="Box_.EC.9A.94.EC.86.8C.EC.9D.98_.EC.9C.84.EC.B9.98_.EC.A7.80.EC.A0.95" name="Box_.EC.9A.94.EC.86.8C.EC.9D.98_.EC.9C.84.EC.B9.98_.EC.A7.80.EC.A0.95">Box 요소의 위치 지정</h2>
+
+<p>지금까지 상자 속의 요소들을 가로나 세로로 정렬하는 방법을 배웠습니다. 우리는 상자 속 요소의 크기와 위치를 제어할 필요가 있으며, 이를 위해 먼저 상자가 작동하는 원리에 대해 좀 더 알아볼 필요가 있습니다.</p>
+
+<p>XUL에서는 배치 방식(layout style)에 따라 내부 요소들의 위치가 결정됩니다. 예를 들어 가로 상자에 버튼을 추가하면 만약 추가된 버튼의 앞에 다른 요소가 있다면, 앞 버튼의 오른쪽에 위치하게 됩니다. 요소의 크기는 그 요소가 필요로 하는 크기와 사용자가 지시한 크기, 두 가지 요인에 의해 결정됩니다. 요소가 필요로 하는 크기는 그 요소 안에 무엇이 있느냐에 따라 달라집니다. 예를 들어 버튼의 너비는 버튼에 표시되는 문자열의 길이에 의해 결정됩니다.</p>
+
+<p>일반적으로 요소의 크기는 내부의 것들을 표시하기에 딱 알맞은 크기로 결정됩니다. 글상자(textbox) 같은 몇몇 요소들에는 기본 크기가 지정되어 있습니다. 일반 상자는 그 내부의 요소들을 모두 포함할 수 있을 만큼 충분한 크기를 가지게 됩니다. 예를 들어 세 개의 버튼을 포함하는 가로 상자의 너비는 세 개의 버튼과 약간의 여백을 포함할 정도의 넓어집니다.</p>
+
+<div class="float-right"><img alt="Image:boxstyle1n.png"></div>
+
+<p>그림에서 앞의 두 버튼은 문자열을 표시하기에 알맞은 크기로 되어 있습니다. 세 번째 버튼은 글자가 더 많기 때문에 크기가 더 큽니다. 버튼을 포함하고 있는 상자의 너비는 세 버튼의 너비와 버튼들 간의 사이 공간을 더한 전체 너비가 됩니다. 버튼의 높이도 글씨의 크기에 맞춰져 있습니다.</p>
+
+<h3 id="Width.EC.99.80_height_.EC.86.8D.EC.84.B1" name="Width.EC.99.80_height_.EC.86.8D.EC.84.B1">Width와 height 속성</h3>
+
+<p>여러분은 아마 창 내의 요소 크기를 좀 더 세밀히 제어할 필요가 있을 것입니다. 그래서 XUL은 요소의 크기를 조정할 수 있는 다양한 기능을 제공합니다. 그 중에서 가장 쉬운 방법은, HTML의 <code>img</code>에 너비와 높이를 주는 방식과 아주 비슷하게, 해당 요소에 <code><code id="a-width"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code>와 <code><code id="a-height"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></code> 속성을 사용하는 것입니다. 다음은 이러한 예를 보여주고 있습니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">View</a></p>
+
+<pre>&lt;button label="OK" width="100" height="40"/&gt;
+</pre>
+
+<p>하지만 이러한 방법은 사용 환경이나 테마에 따라 문제가 발생할 수 있기 때문에 그렇게 추천할 만한 방법이 아닙니다. 더 나은 방법은 style 속성을 이용하는 것인데, 이는 HTML의 스타일 시트와 유사하게 작동합니다. 이 때는 다음의 CSS 속성을 사용할 수 있습니다.</p>
+
+<dl>
+ <dt><a href="/ko/docs/Web/CSS/width" title="width CSS 속성은 요소의 너비를 설정합니다. 기본값은 콘텐츠 영역의 너비이지만, box-sizing이 border-box라면 테두리 영역의 너비를 설정합니다."><code>width</code></a> </dt>
+ <dd>요소의 너비를 지정합니다.</dd>
+ <dt><a href="/ko/docs/Web/CSS/height" title="height CSS 속성은 요소의 높이를 지정합니다. 기본값은 콘텐츠 영역의 높이지만, box-sizing이 border-box라면 테두리 영역의 높이를 설정합니다."><code>height</code></a> </dt>
+ <dd>요소의 높이를 지정합니다.</dd>
+</dl>
+
+<p>이 속성을 사용하면 지정된 너비와 높이를 가진 요소가 생성됩니다. 만약 하나의 값만 지정하면 나머지 값은자동으로 계산됩니다. 이러한 크기 스타일을 지정할 때는 수치와 단위를 함께 입력해야 합니다.</p>
+
+<h4 id=".EC.9C.A0.EC.97.B0.ED.95.9C_.EC.9A.94.EC.86.8C.EB.93.A4" name=".EC.9C.A0.EC.97.B0.ED.95.9C_.EC.9A.94.EC.86.8C.EB.93.A4">유연한 요소들</h4>
+
+<p>유연하지 않은(non-flexible) 요소의 크기는 쉽게 계산됩니다. 이런 요소들은 지정된 크기 그대로 화면에 나타나며, 만약 크기가 지정되지 않으면 내용을 표시하기에 알맞게 크기가 정해집니다. 하지만 유연한(flexible) 요소의 크기를 계산하는 것은 조금 까다롭습니다.</p>
+
+<p>유연한 요소란 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성의 값이 0보다 큰 요소입니다. 이들은 사용 가능한 공간에 맞추어 크기가 커지거나 줄어든다는 것을 이전 섹션에서 말씀드렸습니다. 이들의 처음 크기는 유연하지 않은(inflexible) 요소와 똑같이 계산됩니다. 다음의 예제는 앞서 말한 내용에 대해 보여줍니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">View</a></p>
+
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;hbox&gt;
+  &lt;button label="Yes" flex="1"/&gt;
+  &lt;button label="No"/&gt;
+  &lt;button label="I really don't know one way or the other"/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>이 창을 열면 처음에는 위에서 본 그림처럼 나타날 것입니다. 앞의 두 버튼은 너비가 기본값과 같을 것이고 세 번째 버튼은 글자가 더 많기 때문에 너비가 더 클 것입니다. 첫번째 버튼은 유연하도록 설정되었으며 세 버튼 모두 상자에 포함되어 있습니다. 상자의 너비는 세 버튼의 총 너비(그림에서는 약 430 픽셀)로 맞춰질 것입니다.</p>
+
+<p>만일 창의 크기를 늘리면 XUL은 빈 공간을 매꾸기 위해서 유연한 요소들이 있는지 검사합니다. 위 예제에서첫번째 버튼이 유연한 요소이지만, 창을 늘려도 버튼의 크기가 변하지 않을 것입니다. 이는 버튼을 포함하는 상자가 유연하지 않기 때문입니다. 유연하지 않은 요소는 사용 가능한 공간이 늘어나도 크기가 변하지 않으며 따라서 버튼도 더 커질 수가 없는 것입니다.</p>
+
+<p>상자도 유연 요소로 만들면 문제가 해결됩니다. 그리고 나서 창을 늘리면 빈 공간이 생기고 이 빈 공간을 채우기 위해 상자의 크기도 변경됩니다. 상자가 더 커지면 상자 내부에 빈 공간이 생기고 그러면 상자 내부의 유연 요소인 버튼이 늘어나 빈 공간을 채우게 됩니다. 이러한 과정은 중첩된 상자에 대해 반복되어 처리됩니다.</p>
+
+<h2 id=".EC.B5.9C.EC.86.8C_.ED.81.AC.EA.B8.B0.EC.99.80_.EC.B5.9C.EB.8C.80_.ED.81.AC.EA.B8.B0_.EC.A7.80.EC.A0.95.ED.95.98.EA.B8.B0" name=".EC.B5.9C.EC.86.8C_.ED.81.AC.EA.B8.B0.EC.99.80_.EC.B5.9C.EB.8C.80_.ED.81.AC.EA.B8.B0_.EC.A7.80.EC.A0.95.ED.95.98.EA.B8.B0">최소 크기와 최대 크기 지정하기</h2>
+
+<p>여러분은 어떤 요소가 유연하면서도 특정 크기보다는 더 커지지 않도록 크기를 제한해야 할 때도 있을 수 있습니다. 또 그 반대로 최소 크기를 지정하고 싶을 때도 있을 것입니다. 이러한 제한들은 다음의 네 가지 속성을 사용해서 설정할 수 있습니다.</p>
+
+<dl>
+ <dt><code id="a-minwidth"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code> </dt>
+ <dd>요소의 최소 너비를 지정한다.</dd>
+ <dt><code id="a-minheight"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/minheight">minheight</a></code> </dt>
+ <dd>요소의 최소 높이를 지정한다.</dd>
+ <dt><code id="a-maxwidth"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code> </dt>
+ <dd>요소의 최대 너비를 지정한다.</dd>
+ <dt><code id="a-maxheight"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/maxheight">maxheight</a></code> </dt>
+ <dd>요소의 최대 높이를 지정한다.</dd>
+</dl>
+
+<p>위의 모든 값은 픽셀로 계산됩니다. 그리고 위의 속성 대신 CSS의 <code>min-width</code>, <code>min-height</code>, <code>max-width</code>, <code>max-height</code>를 이용해도 됩니다.</p>
+
+<p>이 속성들은 유연한 요소에만 적용됩니다. 예를 들어 최대 높이를 지정한 유연한 버튼은 지정된 높이만큼만 늘어날 수 있습니다. 최대 높이까지 늘어난 버튼은 창의 크기를 늘려도 더 이상 늘어나지 않습니다. 이 버튼을 포함하는 상자에 최대 높이를 지정하지 않으면 상자는 버튼과 상관 없이 계속해서 늘어날 것입니다.</p>
+
+<p>만약 두 버튼이 동일하게 유연하다면, 두 버튼이 빈 공간을 똑같이 나누어 가질 것이다. 이 때 한 버튼에 최대 너비가 지정되어 있다면 남은 하나의 버튼이 남은 공간을 차지하게 됩니다.</p>
+
+<p>만약 상자에 최대 너비나 높이가 지정되어 있다면 상자 내의 요소들은 그 이상 커질 수가 없습니다. 마찬가지로 상자에 최소 너비나 높이가 지정되어 있으면 상자 내의 요소들은 그 이하로 줄어들 수가 없습니다.</p>
+
+<h5 id=".EB.84.88.EB.B9.84.EC.99.80_.EB.86.92.EC.9D.B4.EB.A5.BC_.EC.A7.80.EC.A0.95.ED.95.9C_.EC.98.88.EC.A0.9C.EB.93.A4" name=".EB.84.88.EB.B9.84.EC.99.80_.EB.86.92.EC.9D.B4.EB.A5.BC_.EC.A7.80.EC.A0.95.ED.95.9C_.EC.98.88.EC.A0.9C.EB.93.A4">너비와 높이를 지정한 예제들</h5>
+
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-width: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;This is some boring but simple
+wrapping text.&lt;/description&gt;
+</pre>
+
+<dl>
+ <dt>예제 1</dt>
+ <dd>첫 번째 버튼은 너비가 100픽셀(px는 픽셀을 의미)이 될 것입니다. 만약 단위를 입력하지 않으면 너비가 적용되지 않을 것입니다.</dd>
+ <dt>예제 2</dt>
+ <dd>두 번째 버튼은 높이가 10px, 너비가 100em(em은 사용하고 있는 글꼴의 한 글자 크기)으로 표시될 것입니다.</dd>
+ <dt>예제 3</dt>
+ <dd>세 번째 버튼은 유연한 요소이므로 버튼을 포함하는 상자의 크기에 따라 크기가 변경될 것입니다. 하지만 이 버튼은 50px 이하로는 줄어들지 않을 것입니다. 이 때는 다른 유연한 요소들이 유동비(flex값의 비율)와 상관 없이 남은 공간을 채울 것입니다.</dd>
+ <dt>예제 4</dt>
+ <dd>네 번째 버튼은 유연하지만 높이가 2ex(ex는 사용하고 있는 글꼴의 x의 크기) 이하로 줄어들지 않고, 100px 이상으로 늘어나지도 않을 것입니다.</dd>
+ <dt>예제 5</dt>
+ <dd>글상자는 유연하지만 크기가 10em 이상으로 늘어나지 않을 것입니다. 글자와 관련된 크기를 정할 때는 주로 em을 사용합니다. 글꼴이 변경되면서 글자의 크기가 변할 수 있지만 글상자의 크기를 em으로 지정하면 언제나 글꼴에 맞추어서 크기가 정해지기 때문에 매우 유용합니다.</dd>
+ <dt>예제 6</dt>
+ <dd><code><code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 요소의 최대 너비가 50픽셀로 지정되어 있습니다. 글자가 50픽셀을 넘으면 나머지 글자는 다음 줄에 표시될 것입니다.</dd>
+</dl>
+
+<div class="highlight">
+<h5 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EB.8C.80.ED.99.94.EC.B0.BD" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EB.8C.80.ED.99.94.EC.B0.BD">우리의 파일 찾기 대화창</h5>
+
+<p>위에서 본 스타일들 중 몇 가지를 파일 찾기 대화창에 추가해 보도록 하겠습니다. 우리는 글상자의 크기가 창의 크기에 맞추어 변하도록 만들어 볼 것입니다.</p>
+
+<pre>&lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxstyle1.png"></div>
+
+<p>위에서 글상자를 유연하게 만들었습니다. 이제 사용자가 대화창의 크기를 변경하면 글상자도 함께 늘어날 것입니다. 이는 사용자가 긴 문자열을 입력하고자 할 때 유용합니다. 또 최소 너비가 15em이기 때문에 글상자는 항상 적어도 15글자를 표시할 수 있게 되었습니다. 사용자가 창을 아주 작은 크기로 줄여도 글상자는 15em 이하로는 줄어들지 않을 것입니다. 이 때는 글상자가 마치 대화창의 경계를 벗어난 것처럼 그려질 것입니다. 그림에서와 같이 글상자가 창의 크기에 딱 맞추어져 있습니다.</p>
+</div>
+
+<h2 id=".EC.83.81.EC.9E.90_.EB.AC.B6.EA.B8.B0" name=".EC.83.81.EC.9E.90_.EB.AC.B6.EA.B8.B0">상자 묶기</h2>
+
+<p>유연한 상자가 두 개의 자녀 요소를 갖고 있는데, 둘 다 유연하지 않다면 어떻게 될까요? 아래의 예를 보겠습니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">View</a></p>
+
+<pre>&lt;box flex="1"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>창의 크기가 변경되면 상자의 크기도 이에 맞추어 변경됩니다. 하지만 두 개의 버튼은 크기가 고정되어 있기 때문에 변하지 않을 것입니다. 따라서 상자의 내부에 빈 공간이 생겨 창의 오른쪽 부분에 빈 공간이 생긴 것처럼 보이게 됩니다. 하지만 아마 여러분은 왼쪽에 빈 공간이 생기고, 창의 오른쪽으로 버튼이 정렬되게끔 하고 싶을 때도 있을 것입니다.</p>
+
+<p>상자 안에 여백(<code><code><a href="/ko/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>)를 넣으면 되지만, 매번 그렇게 하는 것은 너무 성가실 것입니다. 더 좋은 방법은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>의 <code><code id="a-pack"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 속성을 이용하는 것입니다. 이 속성은 상자내의 자식 속성을 어떻게 포장 할지를 나타내는 속성입니다. 수평 상자에서는 자식 요소들의 수평 위치를 제어하는데 사용되며, 수직 정렬 상자에서는 수직 위치를 제어하는데 사용됩니다. 이 속성에 사용할 수 있는 값은 다음의 세 가지입니다.</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>자식 요소를 수평 상자에서는 왼쪽에, 수직 상자에서는 위쪽에 위치시키며 이것이 기본값입니다.</dd>
+ <dt>center </dt>
+ <dd>자식 요소를 상자의 중앙에 위치시킵니다.</dd>
+ <dt>end </dt>
+ <dd>자식 요소를 수평 상자에서는 오른쪽에, 수직 상자에서는 아래쪽에 위치시킵니다.</dd>
+</dl>
+
+<p><code><code id="a-pack"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 속성은 자식 요소가 아니라 자식 요소를 포함하는 상자에 적용해야 합니다.</p>
+
+<p>앞의 예제를 자식 요소들이 중앙에 오도록 하려면 다음과 같이 수정할 수 있습니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_4"><a id="%EC%98%88%EC%A0%9C_4"></a><strong>예제 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">View</a></p>
+
+<pre>&lt;box flex="1" pack="center"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>이제 창의 크기가 변경되면 버튼이 모두 가로 방향의 중앙에 위치합니다. 이를 앞의 예와 비교해 보세요.</p>
+
+<h2 id=".EC.83.81.EC.9E.90_.EC.A0.95.EB.A0.AC" name=".EC.83.81.EC.9E.90_.EC.A0.95.EB.A0.AC">상자 정렬</h2>
+
+<p>위의 Happy-Sad 예에서 창의 너비를 변경하면 상자의 너비도 함께 변경됩니다. 창의 높이를 변경하면 버튼의 높이도 변하는 것을 보실 것입니다. 이것은 다른 방향으로는 자동으로 크기 유연성이 지정되기 때문입니다.</p>
+
+<p>이러한 동작 방법은 <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성을 이용하면 조정할 수 있습니다. <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성은 수평 상자에서는 자식 요소의 수직 위치를, 수직 상자에서는 자식 요소의 수평 위치를 조정하는데 사용합니다. 사용할 수 있는 값은 <code><code id="a-pack"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code>과 비슷합니다.</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>자식 요소를 수평 상자의 윗부분에, 수직 상자의 왼쪽에 정렬합니다.</dd>
+ <dt>center </dt>
+ <dd>자식 요소를 상자의 중앙에 정렬합니다.</dd>
+ <dt>end </dt>
+ <dd>자식 요소를 수평 정렬 상자의 아래쪽에, 수직 정렬 상자의 오른쪽에 정렬합니다.</dd>
+ <dt>baseline </dt>
+ <dd>문자열이 위로 올라오도록 자식 요소를 정렬합니다. 이 속성은 수평 정렬 상자에만 적용됩니다.</dd>
+ <dt>stretch </dt>
+ <dd>이 속성의 기본값으로, 자식 요소들이 유연한 요소처럼 상자의 크기에 맞춰 늘어나도록 합니다. 단, 상자의 정렬 방향의 반대 방향에만 적용됩니다.</dd>
+</dl>
+
+<p><code><code id="a-pack"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 속성과 마찬가지로 <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성도 자식 요소가 아닌 자식 요소를 포함하는 상자에 적용해야 합니다.</p>
+
+<p>다음의 예제에서 첫 번째 상자는 <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성이 지정되지 않았기 때문에 자식 요소들이 늘어나게 됩니다. 하지만 두 번째 상자는 <code><code id="a-align"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 속성에 따라 자식 요소들이 한 가운데에 정렬되는 것을 볼 수 있을 것입니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_5"><a id="%EC%98%88%EC%A0%9C_5"></a><strong>예제 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">View</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="yesno" title="Question" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Yes"/&gt;
+    &lt;button label="No"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Maybe"/&gt;
+    &lt;button label="Perhaps"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxstyle2-b.png"></div>
+
+<p>여러분은 pack과 align 속성 대신 style의 <code><a href="ko/CSS/-moz-box-pack">-moz-box-pack</a></code>과 <code><a href="ko/CSS/-moz-box-align">-moz-box-align</a></code>을 사용할 수 있습니다.</p>
+
+<div class="note">상자의 여러 가지 속성에 대해 직접 시험해 보시려면, <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/aligner.xul">상자 정렬 예제</a>를 이용해 보시기 바랍니다.</div>
+
+<h2 id=".EB.AC.B8.EC.9E.90.EC.97.B4.EA.B3.BC_.EB.B2.84.ED.8A.BC_.EC.9E.90.EB.A5.B4.EA.B8.B0" name=".EB.AC.B8.EC.9E.90.EC.97.B4.EA.B3.BC_.EB.B2.84.ED.8A.BC_.EC.9E.90.EB.A5.B4.EA.B8.B0">문자열과 버튼 자르기</h2>
+
+<p>여러분은 아마 버튼의 최대 너비보다 긴 라벨을 가진 버튼 요소를 만들지도 모릅니다. 물론 문자열이 들어갈 만큼 버튼을 크게 만들면 되겠지만, 버튼(과 라벨을 가진 다른 요소)의 <code>crop</code> 속성을 이용하면 라벨이 너무 큰 경우 라벨이 잘려지는 방법을 제어할 수 있습니다.</p>
+
+<p>문자열이 잘리면 잘린 부분에 말줄임표(...)가 나타납니다. crop 속성에 사용할 수 있는 값은 아래의 네 가지입니다.</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>문자열의 왼쪽이 잘립니다.</dd>
+ <dt>end </dt>
+ <dd>문자열의 오른쪽이 잘립니다.</dd>
+ <dt>center </dt>
+ <dd>문자열의 왼쪽과 오른쪽이 모두 잘립니다.</dd>
+ <dt>none </dt>
+ <dd>이 속성의 기본값으로 문자열이 잘리지 않습니다.</dd>
+</dl>
+
+<p>이 속성은 대화창이 어떤 크기에서든 사용할 수 있도록 만들 때 정말로 유용합니다. <code>crop</code> 속성은 <code>label</code> 속성을 갖는 요소들에서 사용할 수 있습니다. 아래의 예는 crop 속성의 사용법을 보여줍니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_6"><a id="%EC%98%88%EC%A0%9C_6"></a><strong>예제 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">View</a></p>
+
+<div class="float-right"><img alt="Image:boxstyle2.png"></div>
+
+<pre>&lt;button label="Push Me Please!" crop="end" flex="1"/&gt;
+</pre>
+
+<p>창이 줄어들면 문자열의 오른쪽이 잘리는 것을 볼 수 있습니다.</p>
+
+<div class="highlight">
+<p><span id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>지금까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">View</a></p>
+</div>
+
+<p>다음에는 지금까지 살펴본 상자 모델에 대한 요약과 함께 <a href="ko/XUL_Tutorial/Box_Model_Details">박스 모델에 대한 추가적인 세부 사항</a>에 대해 알아보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:The_Box_Model" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Box_Model_Details">다음  »</a></p>
+</div><p></p>

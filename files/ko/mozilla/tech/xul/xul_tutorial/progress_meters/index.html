@@ -1,0 +1,59 @@
+---
+title: Progress Meters
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Progress_Meters
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Progress_Meters
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:List_Controls" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_HTML_Elements">다음  »</a></p>
+</div><p></p>
+<p>본 섹션에서는 진행 지시자를 생성하는 방법에 대해 알아보겠습니다.</p>
+<h3 id=".EC.A7.84.ED.96.89_.EC.A7.80.EC.8B.9C.EC.9E.90_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".EC.A7.84.ED.96.89_.EC.A7.80.EC.8B.9C.EC.9E.90_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">진행 지시자 추가하기</h3>
+<p>진행 지시자는 작업이 얼마나 진행되었는지를 나타내는 막대입니다. 여러분은 보통 파일을 다운로드 받을때나 시간이 긴 작업이 진행될 때 보실 수 있습니다. XUL에서는 이러한 진행 지시자를 생성하기 위해 <code><a href="/ko/docs/Mozilla/Tech/XUL/progressmeter" title="progressmeter">progressmeter</a></code> 요소를 사용합니다. 진행 지시자에는 결정(determinate)과 미결정(undeterminate)의 두가지 종류가 있습니다.</p>
+<p>결정 진행 지시자는 어떠한 작업이 수행될 전체 시간의 길이를 알고 있을 때 사용합니다. 진행 지시자는 점점 차게 되고 다 차게 되면 작업이 완료되었음을 나타냅니다. 이러한 진행 지시자는 파일의 크기를 알고 있는 다운로드 대화상자의 경우에 사용할 수 있습니다.</p>
+<p>미결정 진행 지시자는 작업이 수행될 전체 시간 길이를 모를때 사용합니다. 진행 지시자는 사용중인 플랫폼이나 테마에 따라, 회전하는 이발소 간판(barbaer pole)이나 미끄러지는 상자와 같은 에니메이션으로 표시됩니다.</p>
+<p>결정 진행 지시자: <img alt="Image:prog-det.png"></p>
+<p>미결정 진행 지시자: <img alt="Image:prog-udet.png"></p>
+<p>진행 지시자는 다음과 같은 구문으로 표현됩니다.:</p>
+<pre>&lt;progressmeter
+    id="identifier"
+    mode="determined"
+    value="50%"/&gt;
+</pre>
+<p>속성은 다음과 같습니다.</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>
+  진행 지시자의 유일 식별자 입니다.</dd>
+ <dt>
+  <a href="ko/XUL/Attribute/progressmeter.mode">mode</a></dt>
+ <dd>
+  진행 지시자의 유형을 나타냅니다. 만일 <code>determined</code>로 지정하면 결정 진행 지시자를 의미하는 것으로 작업이 진행됨에 따라 채워지게 됩니다. 만일 <code>undetermined</code>로 지정하면 미결정 진행 지시자를 나타내는 것으로 작업이 진행될 시간을 모르는 경우에 사용됩니다. 본 속성을 지정하지 않은 경우에는 <code>determined</code>가 기본값입니다.</dd>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt>
+ <dd>
+  진행 지시자의 현재값을 나타내며, 결정 진행 지시자일 경우에만 사용할 수 있습니다. 값은 0에서 100사이의 백분률(퍼센트)로 입력해야 합니다. 보통은 작업이 진행됨에 따라 스크립트로 변경하게 됩니다.</dd>
+</dl>
+<div class="highlight">
+ <h5 id=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">파일 찾기 예제</h5>
+ <p>우리의 파일 찾기 대화상자에 진행 지시자를 추가해 보겠습니다. 파일 찾기에서는 얼마나 많은 파일이 검색될지, 검색 시간이 얼마나 걸릴지 모르기 때문에 보통 미결정 진행 지시자를 사용합니다. 그러나 개발단계에서는 좀 혼란스러울 수 있으므로, 여기서는 결정 진행 지시자를 추가하겠습니다. 진행 지시자는 보통 검색이 진행중인 때만 나타납니다. 진행 지시자를 켜고 끄기 위한 스크립트는 나중에 추가하겠습니다.</p>
+ <pre class="eval">&lt;hbox&gt;
+
+  <span class="highlightred">&lt;progressmeter value="50%" style="margin: 4px;"/&gt;</span>
+
+  &lt;spacer flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+ <p>창에서 계기값을 볼 수 있도록 value를 50%로 설정하였습니다. 창의 가장자리와 구분하기 위해 지시자의 여백을 4픽셀로 설정하였습니다. 앞서 말씀드린 바와 같이, 우리는 검색이 수행될 동안만 진행 바가 표시되기를 원합니다. 필요에 따라 스크립트가 보이거나 숨길 것입니다.</p>
+ <p>여태까지의 예제입니다. <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul">View</a></p>
+ <p><img alt="Image:progress1.png"></p>
+ <p> </p>
+</div>
+<p>다음 섹션에서는 <a href="ko/XUL_Tutorial/Adding_HTML_Elements">HTML을 사용하여 창에 더 많은 요소를 추가하는 방법</a>에 대해 배울 것입니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:List_Controls" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_HTML_Elements">다음  »</a></p>
+</div><p></p>
+<p></p>

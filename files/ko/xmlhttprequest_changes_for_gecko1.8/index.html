@@ -1,0 +1,19 @@
+---
+title: XMLHttpRequest changes for Gecko1.8
+slug: XMLHttpRequest_changes_for_Gecko1.8
+tags:
+  - Add-ons
+  - Extensions
+  - XMLHttpRequest
+translation_of: Mozilla/XMLHttpRequest_changes_for_Gecko_1.8
+---
+<p>이 문서는 버전 1.7(Firefox 1.0과 함께 들어간 Gecko 버전) 이래로 <a href="ko/Gecko">Gecko</a>의
+<a href="ko/XMLHttpRequest">XMLHttpRequest</a> 구현에 만들어진 변화를 설명한다. 이 변화는 XUL확장과 XUL응용에만 적용한다.
+웹 응용프로그램에 적용하지 않는다.
+</p>
+<h3 id="XMLHttpRequest.send_.EB.B3.80.ED.99.94" name="XMLHttpRequest.send_.EB.B3.80.ED.99.94"> XMLHttpRequest.send 변화</h3>
+<p><code>send</code> method에 <a href="ko/NsIInputStream">nsIInputStream</a> instance를 보내면, 스트림의 시작에 더 이상&lt;tt&gt;Content-Length&lt;/tt&gt;와 &lt;tt&gt;Content-Type&lt;/tt&gt;을 포함하지 않아야 한다. 대신, &lt;tt&gt;Content-Length&lt;/tt&gt; header 는 스트림의 길이로부터 추론되고, &lt;tt&gt;Content-Type&lt;/tt&gt; header 는 <code>setRequestHeader</code> method를 불러 수동으로 서술되어야 한다.이 요구는 <a class="external" href="http://lxr.mozilla.org/mozilla1.8/source/extensions/xmlextras/base/public/nsIXMLHttpRequest.idl#213">nsIXMLHttpRequest.idl</a>에서 좀더 전체적으로 설명된다.
+</p>
+<h3 id="XMLHttpRequest.onreadystatechange_.EB.B3.80.ED.99.94" name="XMLHttpRequest.onreadystatechange_.EB.B3.80.ED.99.94"> XMLHttpRequest.onreadystatechange 변화</h3>
+<p>이 속성은 <code>nsIOnReadystatechangehandler</code> 대신 <code>nsIOnReadyStateChangeHandler</code> 형식을 가진다.
+</p>

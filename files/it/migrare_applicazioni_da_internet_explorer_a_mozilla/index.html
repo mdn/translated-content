@@ -1,0 +1,1268 @@
+---
+title: Migrare applicazioni da Internet Explorer a Mozilla
+slug: Migrare_applicazioni_da_Internet_Explorer_a_Mozilla
+tags:
+  - Da_unire
+  - Standard_Web
+  - Sviluppo_Web
+  - Tutte_le_categorie
+translation_of: Archive/Mozilla/Migrate_apps_from_Internet_Explorer_to_Mozilla
+---
+<p> </p>
+
+<h3 id="Introduzione" name="Introduzione">Introduzione</h3>
+
+<p>Quando Netscape diede il via al browser Mozilla, prese la decisione conscia di supportare gli standard W3C. Come risultato, Mozilla non è pienamente retrocompatibile con il vecchio codice di Netscape Navigator e Microsoft Internet Explorer; ad esempio, Mozilla non supporta <code>&lt;layer&gt;</code> come discuteremo in seguito. I browser, come Internet Explorer 4, realizzati prima della concezione degli standard W3C hanno ereditato molti comportamenti anomali (quirks). In questo articolo, descriveremo il quirks mode di Mozilla, che fornisce una forte retrocompatibiltà HTML con Internet Explorer ed altri browser datati.</p>
+
+<p>Verranno considerate anche tecnologie non standard, come XMLHttpRequest ed il rich text editing, supportati da Mozilla perche' non esistevano all'epoca equivalenti del W3C. Esse includono:</p>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/html401/">HTML 4.01</a>, <a class="external" href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a> e<a class="external" href="http://www.w3.org/TR/xhtml11/">XHTML 1.1</a></li>
+ <li>Fogli di stile (CSS): <a class="external" href="http://www.w3.org/TR/REC-CSS1">CSS Level 1</a>, <a class="external" href="http://www.w3.org/TR/CSS21/">CSS Level 2.1</a> e parti del <a class="external" href="http://www.w3.org/Style/CSS/current-work.html">CSS Level 3</a></li>
+ <li>Document Object Model (DOM): <a class="external" href="http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/">DOM Level 1</a>, <a class="external" href="http://www.w3.org/DOM/DOMTR#dom2">DOM Level 2</a> e parti di <a class="external" href="http://www.w3.org/DOM/DOMTR#dom3">DOM Level 3</a></li>
+ <li>Mathematical Markup Language: <a class="external" href="http://www.w3.org/Math/">MathML Version 2.0</a></li>
+ <li>Extensible Markup Language (XML): <a class="external" href="http://www.w3.org/TR/REC-xml">XML 1.0</a>, <a class="external" href="http://www.w3.org/TR/REC-xml-names/">Namespaces in XML</a>, <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">Associating Style Sheets with XML Documents 1.0</a>, <a class="external" href="http://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJ%20un/att-0074/01-NOTE-FIXptr-20010425.htm">Fragment Identifier for XML</a></li>
+ <li>XSL Transformations: <a class="external" href="http://www.w3.org/TR/xslt">XSLT 1.0</a></li>
+ <li>XML Path Language: <a class="external" href="http://www.w3.org/TR/xpath">XPath 1.0</a></li>
+ <li>Resource Description Framework: <a class="external" href="http://www.w3.org/RDF/">RDF</a></li>
+ <li>Simple Object Access Protocol: <a class="external" href="http://www.w3.org/TR/soap">SOAP 1.1</a></li>
+ <li>ECMA-262, revision 3 (JavaScript 1.5): <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a></li>
+</ul>
+
+<h3 id="Consigli_generali_di_programmazione_cross-browser" name="Consigli_generali_di_programmazione_cross-browser">Consigli generali di programmazione cross-browser</h3>
+
+<p>Anzhe se esistono gli standard Web, browser differenti si comportano in maniera differente (infatti, lo stesso browser potrebbe agire in modi diversi in base alla piattaforma). Molti browser, come Internet Explorer, supportano inoltre API precedenti a quelle definite dal W3C, e non hanno mai aggiunto un suporto estensivo per quelle definite dal W3C stesso.</p>
+
+<p>Prima di entrare nello specifico delle differenze tra Mozilla ed Internet Explorer, verranno introdotti alcuni metodi base per rendere una applicazione Web estensibile in modo da aggiungere in un secondo momento il supporto per nuovi browser.</p>
+
+<p>Poiché browser differenti a volte usano API differenti per le stesse funzionalità, di solito si trovano molti blocchi <code>if() else()</code> all'interno del codice per stabilire la differenza tra i vari browser. Il codice seguente mostra blocchi disegnati per Internet Explorer:</p>
+
+<pre>. . .
+
+var elm;
+
+if (ns4)
+  elm = document.layers["myID"];
+else if (ie4)
+  elm = document.all["myID"]
+</pre>
+
+<p>Il codice appena visto non è estensibile, perciò se si vuole supportare un nuovo browser, bisogna necessariamente aggiornare questi blocchi all'interno dell'applicazione Web.</p>
+
+<p>Il modo più semplice per eliminare il bisogno di riprogrammare per un nuovo browser è asttrarre le funzionalità. Piuttosto di molteplici blocchi <code>if() else()</code>, è possibile aumentare l'efficienza prendendo le azioni comuni e ed astraendole dalle proprie funzioni. Non solo questeo rende il codice più facile da leggere, semplifica l'aggiunta del supporto per nuovi client:</p>
+
+<pre>var elm = getElmById("myID");
+
+function getElmById(aID){
+  var element = null;
+
+  if (isMozilla || isIE5)
+    element = document.getElementById(aID);
+  else if (isNetscape4)
+    element = document.layers[aID];
+  else if (isIE4)
+    element = document.all[aID];
+
+  return element;
+}
+</pre>
+
+<p>Il codice soprastante ha ancora il problema del <em>browser sniffing</em>, o le rilevazione del browser che l'utente sta usando. Il browser sniffing viene solitamente eseguito attraverso lo useragent, come ad esempio:</p>
+
+<pre>Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.5) Gecko/20031016
+</pre>
+
+<p>Mentre l'uso dell'useragent per rilevare il browser fornisce dettagliate informazioni sul browser in uso, il codice che gestisce gli useragent è soggetto ad errori nel momento in cui arrivano nuove versioni di un browser, il che richiede un cambiamento nel codice.</p>
+
+<p>Se il tipo di browser non è importante (supponiamo siano stati già bloccati i browser non supportati dall'accesso all'applicazione Web), <strong>è molto meglio e più sicuro rilevare le funzionalità del browser o il supporto di caratteristiche degli oggetti</strong>. Solitamenre è possibile fare questo testando le funzionalità richieste in JavaScript. Ad esempio, piuttosto che:</p>
+
+<pre>if (isMozilla || isIE5)
+</pre>
+
+<p>Si preferisce usare:</p>
+
+<pre>if (document.getElementById)
+</pre>
+
+<p>Questo potrebbe permettere ad altri browser che supportano i metodi standard del W3C, come Opera o Safari, di funzionare senza altri cambiamenti.</p>
+
+<p>Lo sniffing dello useragent, in ogni caso, ha senso quando è importante l'accuratezza, ad esempio quando si sta verificando che un browser venga incontro ai requisiti di versione dell'applicazione Web o si sta provando ad evitare un bug.</p>
+
+<p>JavaScript permette inoltre l'uso di statement condizionali abbreviati, il che può semplificare la leggibilità del codice:</p>
+
+<pre> var foo = (condition) ? conditionIsTrue : conditionIsFalse;
+</pre>
+
+<p>Ad esempio, per ottenere un elemento, è possibile usare:</p>
+
+<pre> function getElement(aID){
+   return (document.getElementById) ? document.getElementById(aID)
+                                    : document.all[aID]);
+ }
+</pre>
+
+<p>Oppure un'altra maniera è l'uso dell'operatore <code>||</code>:</p>
+
+<pre> function getElement(aID){
+   return (document.getElementById(aID)) || document.all[aID]);
+ }
+</pre>
+
+<p> </p>
+
+<h3 id="Differenze_tra_Mozilla_e_Internet_Explorer" name="Differenze_tra_Mozilla_e_Internet_Explorer">Differenze tra Mozilla e Internet Explorer</h3>
+
+<p>Anzitutto, discuteremo le differenze nel modo in cui HTML lavora tra Mozilla ed Internet Explorer.</p>
+
+<p> </p>
+
+<h4 id="Tooltip" name="Tooltip">Tooltip</h4>
+
+<p>I browser più datati hanno introdotto i tooltip in HTML mostrandoli sui link ed usando il valore dell'attributo <code>alt</code> come contenuto del tooltip. Le ultile specifice del W3C hanno dato vita all'attributo <code>title</code>, che serve per contenere una dettagliata descrizione del link. I browser moderni useranno l'attributo <code>title</code> per mostrare i tooltip, e Mozilla supporta solo la visualizzazione dei tooltip per questo attributo e non per <code>alt</code>.</p>
+
+<h4 id="Entit.C3.A0" name="Entit.C3.A0">Entità</h4>
+
+<p>Il marcatore HTML può contenere molte entità, come definito dal <a class="external" href="http://www.w3.org/TR/REC-html40/sgml/entities.html">W3C web standards body</a>. Le entità possono essere riferite attraverso il loro riferimento numerico o a caratteri. Ad esempio, è possibile riferire il carattere di spazio bianco #160 con <code>&amp;#160;</code>, o con il suo equivalente riferimento a caratteri <code>&amp;nbsp;</code>.</p>
+
+<p>Alcuni browser più vecchi, come Internet Explorer, hanno comportamenti strani che permettono l'uso di entità sostituendo il carattere <code>;</code> (punto e virgola) alla fine con del testo normale:</p>
+
+<pre>&amp;nbsp Foo
+&amp;nbsp&amp;nbsp Foo
+</pre>
+
+<p>Mozilla interpreterà il precedente <code>&amp;nbsp</code> con spazi bianchi, anche se contro le specifiche W3C. Il browser non effettuerà il parsing di un <code>&amp;nbsp</code> se è direttamente seguito da più caratteri, come ad esempio:</p>
+
+<pre>&amp;nbsp12345
+</pre>
+
+<p>Questo codice non funziona in Mozilla, poiché contro gli standard web del W3C. Per evitare discrepanze, è buona norma usare sempre la forma corretta (<code>&amp;nbsp;</code>).</p>
+
+<h3 id="Differenze_del_DOM" name="Differenze_del_DOM">Differenze del DOM</h3>
+
+<p>Il Document Object Model (DOM) è la '<em>struttura ad albero che contiene gli elemendi del documento</em>. Si può manipolarlo tramite le API JavaScript, che il W3C ha reso standard. In ogni caso, prima della standardizzazione del W3c, Netscape 4 ed Internet Explorer 4 implementavano delle API simili. Mozilla implementa solo le vecchie API che non sono riprodotte dagli standard W3C</p>
+
+<p> </p>
+
+<h4 id="Accedere_agli_elementi" name="Accedere_agli_elementi">Accedere agli elementi</h4>
+
+<p>Per ottenere un riferimento ad un elemento usando l'approccio cross-browser, si utilizza <code>document.getElementById(aID)</code>, che funziona in Internet Explorer 5.0 e superiori, nei browser basati su Mozilla, altri browser che si attengono allo standard W3C ed è parte delle specifiche DOM Level 1.</p>
+
+<p>Mozilla non supporta l'accesso agli elementi attraverso <code>document.elementName</code> o anche tramite il nome dell'elemento, come accade in Internet Explorer (una pratica chiamata anche <em>inquinamento globale dei namspace</em>). Mozilla inoltre non supporta il metodo <code>document.layers</code> di Netscape 4 né il <code>document.all</code> di Internet Explorer. Mentre <code>document.getElementById</code> permette di ottenere un elemento, si possono usare <code>document.layers</code> e <code>document.all</code> per avere una lista di tutti gli elementi del documento con un certo tag, come ad esempio tutti gli elementi <code>&lt;div&gt;</code>.</p>
+
+<p>I metodi del DOM Level 1 del W3c fanno riferimento a tutti gli elementi con lo stesso tag attraverso <code>getElementsByTagName()</code>. Il metodo ritorna un array in JavaScript, e può essere chiamato sull'elemento <code>document</code> o altri nodi per cercare solo un il loro sottoalbero. Per ottenenere un array di elementi nell'albero DOM, è possibile usare <code>getElementsByTagName("*")</code>.</p>
+
+<p>Come mostrato nella Tabella 1, i metodi del DOM Level1 sono comunemente usati per muovere un elemento da una certa posizione e cambiare la sua visibilità (menu, animazioni). Netscape 4 usava il tag <code>&lt;layer&gt;</code>, che non è supportato da Mozilla, dato che un elemento HTML può essere posizionato ovunque. In Mozilla, è possibile posizionare ogni elemento usando il tag <code>&lt;div&gt;</code>, che usa anche Internet Esplorer e che si trova nella specifica di HTML.</p>
+
+<p> </p>
+
+<table class="standard-table">
+ <caption>Tabella 1. Metodi usati per accedere agli elementi</caption>
+ <tbody>
+  <tr>
+   <th>Metodo</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>document.getElementById( aId )</td>
+   <td>Ritorna un riferimento all'elemento con l'ID specificato.</td>
+  </tr>
+  <tr>
+   <td>document.getElementsByTagName( aTagName )</td>
+   <td>Ritorna un array di elementi avebti il nome specifico nel documento.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Attraversare_il_DOM" name="Attraversare_il_DOM">Attraversare il DOM</h4>
+
+<p>Mozilla supporta le API DOM W3C per attraversare l'albero DOM tramite JavaScript (vedi Tabella 2). Le API esistono per ogni nodo nel documento e permettono di esplorare l'albero in ogni direzione. Anche Internet Explorer supporta queste API, ma support anche le sue vecchie API per per l'esplorazione dell'albero DOM, come la proprietà <code>children</code></p>
+
+<table class="standard-table">
+ <caption>Tabella 2. Metodi usati per attraversare il DOM</caption>
+ <tbody>
+  <tr>
+   <th>Proprietà/Metodo</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>childNodes</td>
+   <td>Ritorna un array di tutti i nodi figli child dell'elemento.</td>
+  </tr>
+  <tr>
+   <td>firstChild</td>
+   <td>Ritorna il primo nodo figlio dell'elemento.</td>
+  </tr>
+  <tr>
+   <td>getAttribute( aAttributeName )</td>
+   <td>Ritorna il valore per l'attributo specifico.</td>
+  </tr>
+  <tr>
+   <td>hasAttribute( aAttributeName )</td>
+   <td>Ritorna un valore booleano indicante se il nodo corrente ha un attributo definito con il nome specifico.</td>
+  </tr>
+  <tr>
+   <td>hasChildNodes()</td>
+   <td>Ritorna un valore booleano se il nodo corrente ha nodi figli.</td>
+  </tr>
+  <tr>
+   <td>lastChild</td>
+   <td>Ritorna l'ultimo nodo figlio dell'elemento.</td>
+  </tr>
+  <tr>
+   <td>nextSibling</td>
+   <td>Ritorna il nodo immediatamente seguente a quello considerato.</td>
+  </tr>
+  <tr>
+   <td>nodeName</td>
+   <td>Ritorna il nome del nodo in forma di stringa.</td>
+  </tr>
+  <tr>
+   <td>nodeType</td>
+   <td>Ritorna il tipo del nodo corrente.
+    <table>
+     <tbody>
+      <tr>
+       <th>Valore</th>
+       <th>Descrizione</th>
+      </tr>
+      <tr>
+       <td>1</td>
+       <td>Nodo Element</td>
+      </tr>
+      <tr>
+       <td>2</td>
+       <td>Nodo Attribute</td>
+      </tr>
+      <tr>
+       <td>3</td>
+       <td>Nodo Text</td>
+      </tr>
+      <tr>
+       <td>4</td>
+       <td>Nodo Sezione CDATA</td>
+      </tr>
+      <tr>
+       <td>5</td>
+       <td>Nodo Entity Reference</td>
+      </tr>
+      <tr>
+       <td>6</td>
+       <td>Nodo Entity</td>
+      </tr>
+      <tr>
+       <td>7</td>
+       <td>Nodo Processing Instruction</td>
+      </tr>
+      <tr>
+       <td>8</td>
+       <td>Nodo Comment</td>
+      </tr>
+      <tr>
+       <td>9</td>
+       <td>Nodo Document</td>
+      </tr>
+      <tr>
+       <td>10</td>
+       <td>Nodo Document Type</td>
+      </tr>
+      <tr>
+       <td>11</td>
+       <td>Nodo Document Fragment</td>
+      </tr>
+      <tr>
+       <td>12</td>
+       <td>Nodo Notation</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <td>nodeValue</td>
+   <td>Ritorna il valore del nodo corrente. Per nodi che contengono testo, ad esempio nodi text e comment, ritorna il loro valore in stringa. Per nodi attribute, viene ritornato il valore dell'attributo. Per tutti gli altri nodi, viene ritornato <code>null</code>.</td>
+  </tr>
+  <tr>
+   <td>ownerDocument</td>
+   <td>Ritorna l'oggetto <code>document</code> contenente il nodo corrente.</td>
+  </tr>
+  <tr>
+   <td>parentNode</td>
+   <td>Ritorna il nodo padre del nodo corrente.</td>
+  </tr>
+  <tr>
+   <td>previousSibling</td>
+   <td>Ritorna il nodo immediatamente precedente a quello corrente.</td>
+  </tr>
+  <tr>
+   <td>removeAttribute( aName )</td>
+   <td>Rimuove l'attributo specificato dal nodo corrente.</td>
+  </tr>
+  <tr>
+   <td>setAttribute( aName, aValue )</td>
+   <td>Setta il valore dell'attributo specificato con il valore specificato.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Internet Explorer ha un comportamento non standard, dove molte delle API vanno ad evitare i nodi di spazi bianchi che sono generati, ad esempio, da caratteri di ritorno a capo. Mozilla non li evita, per questo alcune volte si ha bisogno di distinguere questi nodi. Ogni nodo ha una propietà <code>nodeType</code> che specifica il tipo di nodo. Ad esempio, un nodo element ha tipo 1, mentre un nodo text ha tipo 3 ed un nodo comment è di tipo 8. Il modo migliore per processare solo i nodi elemento è iterare su tutti i nodi figli e processare solo quelli con un nodeType di 1:</p>
+
+<p> </p>
+
+<pre>HTML:
+  &lt;div id="foo"&gt;
+    &lt;span&gt;Test&lt;/span&gt;
+  &lt;/div&gt;
+
+JavaScript:
+  var myDiv = document.getElementById("foo");
+  var myChildren = myXMLDoc.childNodes;
+  for (var i = 0; i &lt; myChildren.length; i++) {
+    if (myChildren[i].nodeType == 1){
+      // element node
+    };
+  };
+</pre>
+
+<p> </p>
+
+<h4 id="Generare_e_manipolare_contenuto" name="Generare_e_manipolare_contenuto">Generare e manipolare contenuto</h4>
+
+<p>Mozilla supporta i metodi più datati per aggiungere dinamicamente contenuto al DOM, come <code>document.write</code>, <code>document.open</code> w <code>document.close</code>. Mozilla supporta inoltre il metodo di Internet Explorer <code>innerHTML</code>, che può essere richiamato su quasi tutti i nodi. Non supporta <code>outerHTML</code> (che aggiunge marcatori intorno all'elemento e non ha equivalenti standard) e <code>innerText</code> (che modifica il valore del testo del nodo ed il cui comportamento viene ripreso in Mozilla usando <code>textContent</code>).</p>
+
+<p>Internet Explorer ha diversi metodi per la manipolazione del contenuto che non sono né standard né supportati da Mozilla, incluso la ricezione del valore, l'inserimento di testo e di elementi adiacenti ad un nodo, come <code>getAdjacentElement</code> e <code>insertAdjacentHTML</code>. La Tabella 3 mostra i modi con cui standard W3C e Mozilla manipolano il contenuto, ognuno dei quali è metodo di un nodo DOM.</p>
+
+<table class="standard-table">
+ <caption>Tabella 3. Metodi usati da Mozilla per manipolare contenuti</caption>
+ <tbody>
+  <tr>
+   <th>Metodo</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>appendChild( aNode )</td>
+   <td>Crea un nuovo nodo figlio. Ritorna un riferimento al nuovo nodo figlio.</td>
+  </tr>
+  <tr>
+   <td>cloneNode( aDeep )</td>
+   <td>Crea una copia del nodo sul quale viene chiamato e ritorna la copia. Se aDeep è true, la copia viene estesa all'intero sottoalbero del nodo.</td>
+  </tr>
+  <tr>
+   <td>createElement( aTagName )</td>
+   <td>Crea e ritorna un nuvo nodo DOM senza genitori, del tipo specificato da aTagName.</td>
+  </tr>
+  <tr>
+   <td>createTextNode( aTextValue )</td>
+   <td>Crea e ritorna un nuovo nodo di testo DOM senza genitori, con il valore specificato da aTextValue.</td>
+  </tr>
+  <tr>
+   <td>insertBefore( aNewNode, aChildNode )</td>
+   <td>Inserisce aNewNode prima di aChildNode, il quale deve essere figlio del nodo corrente.</td>
+  </tr>
+  <tr>
+   <td>removeChild( aChildNode )</td>
+   <td>rimuove aChildNode e ritorna un riferimento ad esso</td>
+  </tr>
+  <tr>
+   <td>replaceChild( aNewNode, aChildNode )</td>
+   <td>Sostituisce aChildNode con aNewNode e ritorna un riferimento al nodo rimosso.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Frammenti_del_documento" name="Frammenti_del_documento">Frammenti del documento</h4>
+
+<p>per ragioni di performance, è possibile creare il documento in memoria piuttosto che lavorare nel DOM del documento esistente. La specifica DOM Level 1 Core ha introdotto i <strong>document fragments</strong> (frammenti di documento), ovvero documenti leggeri che contengono un sottoinsieme della normale interfaccia del documento. Ad esempio, <code>getElementById</code> non esiste, al contrario di <code>appendChild</code>. Inoltre è possbile aggiungere facilmente frammenti di documento al documento esistente.</p>
+
+<p>Mozilla crea frammenti i documento attraverso <code>document.createDocumentFragment()</code>, che ritorna un frammento vuoto.</p>
+
+<p>L'implementazione di Internet Explorer dei frammenti, comunque, non si attiene allo standard web del W3C e semplicemente ritorna un documento regolare.</p>
+
+<h3 id="Differenze_di_JavaScript" name="Differenze_di_JavaScript">Differenze di JavaScript</h3>
+
+<p>Molte differenze tra Mozilla e Internet Explorer sono solitamente notate in JavaScript. IN ogni caso, ilproblema risiede solitamente nelle API che un browser fornisce a JavaScript, come ad esempio gli agganci al DOM. I due browser possiedono alcune differenze nel linguaggio JavaScript stesso; i problemi incontrati sono spesso legati a fattori temporali.</p>
+
+<p> </p>
+
+<h4 id="Differenza_di_Date_in_JavaScript" name="Differenza_di_Date_in_JavaScript">Differenza di Date in JavaScript</h4>
+
+<p>L'unica differenza di <code>Date</code> è il metodo <code>getYear</code>. Secondo le specifiche ECMAScript (che sono le specifiche seguite da JavaScript), il metodo non è Y2k-compliant, e l'esecuzione di <code>new Date().getYear()</code> nel 2004 ritorna "104". Per la specifica ECMAScript, <code>getYear</code> ritorna l'anno meno 1900, originariamente inteso come "98" per "1998". <code>getYear</code> è assunto come deprecato nella versione 3 di ECMAScript ed è sostituito da <code>getFullYear()</code>. Internet Explorer ha modificato <code>getYear()</code> in modo da funzionare nella stessa maniera di <code>getFullYear()</code> rendendolo Y2K-compliant, mentre Mozilla ha mantenuto il metodo standard.</p>
+
+<h4 id="Differenze_nell.27esecuzione_di_JavaScript" name="Differenze_nell.27esecuzione_di_JavaScript">Differenze nell'esecuzione di JavaScript</h4>
+
+<p>Browser differenti eseguono JavaScript in maniera differente. Ad esempio, il codice seguente assume che il nodo <code>div</code> esista al momento in cui il blocco di codice <code>script</code> viene eseguito:</p>
+
+<pre>...
+&lt;div id="foo"&gt;Loading...&lt;/div&gt;
+
+&lt;script&gt;
+  document.getElementById("foo").innerHTML = "Done.";
+&lt;/script&gt;
+</pre>
+
+<p>Ovviamente, ciò non è garantito. Per assicurarsi che l'elemento esisya, è necessario usare il gestore di evento <code>onload</code> nel tag <code>&lt;body&gt;</code>:</p>
+
+<pre>&lt;body onload="doFinish();"&gt;
+
+&lt;div id="foo"&gt;Loading...&lt;/div&gt;
+
+&lt;script&gt;
+  function doFinish() {
+    var element = document.getElementById("foo");
+    element.innerHTML = "Done.";
+  }
+&lt;/script&gt;
+...
+</pre>
+
+<p>Problemi collegati al tempo sono inoltre legati all'hardware -- sistemi più lenti possono manifestare dei bug che invece sistemi più veloci nascondono. Un esempio concreto è <code>window.open</code>, che apre una nuova finestra:</p>
+
+<pre>&lt;script&gt;
+  function doOpenWindow(){
+    var myWindow = window.open("about:blank");
+    myWindow.location.href = "http://www.ibm.com";
+  }
+&lt;/script&gt;
+</pre>
+
+<p>Il problema con il codice è dato dal fatto che <code>window.open</code> è asincrona -- non blocca l'esecuzione di JavaScript finché la finestra non ha terminato il caricamento. Per questo, è possibile eseguire le linee di codice dopo <code>window.open</code> anche prima che la nuova finestra abbia terminato. Si può cercare di risolvere il problema usando un gestore <code>onload</code> nella nuova finestra e quindi tornare indietro alla finestra progenitrice (usando <code>window.opener</code>)</p>
+
+<h4 id="Differenza_nella_generazione_di_HTML_con_JavaScript" name="Differenza_nella_generazione_di_HTML_con_JavaScript">Differenza nella generazione di HTML con JavaScript</h4>
+
+<p>Javascript può, attraverso <code>document.write</code>, generare HTML al volo da una stringa. Il primo problema qui si ha quando JavaScript, inserito all'interno del documento HTML (cioè all'interno dei tag <code>&lt;script&gt;</code>), genera HTML che contiene un tag <code>&lt;script&gt;</code>. Se il documento è nel modo di impaginazione <strong>strict</strong>, verrà effettuato il parsing di <code>&lt;script&gt;</code> all'interno della stringa fino al tag di chiusura di <code>&lt;script&gt;</code>. Il codice seguente illustra meglio questa situazione:</p>
+
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+...
+&lt;script&gt;
+  document.write("&lt;script type='text\/javascript'&gt;alert('Hello');&lt;\/script&gt;")
+&lt;/script&gt;
+</pre>
+
+<p>Dato che la pagina è in modo <strong>strict</strong>, il parser di Mozilla vedrà prima <code>&lt;script&gt;</code> ed effettuerà il parsing fino a trovare un tag di chiusura, che sarà la prima occorrenza di <code>&lt;/script&gt;</code>. Questo perché il parser non è a conoscenza di JavaScript (o altri linguaggi) nella modalità <strong>strict</strong>. Nel modo <strong>quirks</strong>, il parser tiene conto di JavaScript nella sua esecuzione (il che lo rallenta). Internet Explorer è sempre in modalità <strong>quirks</strong>, poiché non supporta veramente XHTML. Per fare in modo che il funzionamento sia lo stesso in Mozilla, basta separare la stringa in due parti:</p>
+
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+...
+&lt;script&gt;
+  document.write("&lt;script type='text\/javascript'&gt;alert('Hello');&lt;/" + "script&gt;")
+&lt;/script&gt;
+</pre>
+
+<h4 id="Debug_di_JavaScript" name="Debug_di_JavaScript">Debug di JavaScript</h4>
+
+<p>Mozilla fornisce diversi modi per il debugging di problemi legati a JavaScript trovati in applicazioni create per Internet Explorer. Il primo strumento è la console JavaScript integrata, mostrata in figura 1, dove errori ed avvertenze sono registrate. Vi si può accedere in Mozilla andando su <strong>Tools -&gt; Web Development -&gt; JavaScript Console</strong> o in Firefox (il prodotto solo browser di Mozilla) da <strong>Tools -&gt; JavaScript Console</strong>.</p>
+
+<p><br>
+ Figura 1. console JavaScript</p>
+
+<p><img alt="Console Javascript" class="internal" src="/@api/deki/files/1601/=Migrationguide-jsconsole.jpg"></p>
+
+<p>La console JavaScript può mostrare l'intera lista registrata o solamente errori, avvertenze e messaggi. Il messaggio di errore in Figura 1 indica che, su aol.com, la linea 95 prova ad accedere ad una variabile non definita chiamata is_ns70. Cliccando sil link si apre la finestra di visualizzazione sorgente di Mozilla con la riga interessata dall'errore evidenziata.</p>
+
+<p>La console permette inoltre di valutare espressioni JavaScript. Per fare una prova della sinatssi JavaScript, inserire <code>1+1</code> nel campo di input e premere <strong>Evaluate</strong>,come mostrato dalla Figura 2.</p>
+
+<p>Figura 2. valutazione di codice JavaScript</p>
+
+<p><img alt="JavaScript Console evaluating" class="internal" src="/@api/deki/files/1600/=Migrationguide-jsconsole-eval.jpg"></p>
+
+<p>Il motore JavaScript di Mozilla ha un supporto integrato per il debugging, ovvero fornisce strumenti potenti per gli sviluppatori JavaScript. Venkman, mostrato nella Figura 3, è un potente debugger JavaScript multipiattaforma integrato con Mozilla. usualmente viene incluso insieme con le varie release di Mozilla; si può trovare in <strong>Tools -&gt; Web Development -&gt; JavaScript Debugger</strong>. Firefox non include ill debugger; invece, si può installarlo dalla <a class="external" href="http://www.mozilla.org/projects/venkman/">pagina del progetto Venkman</a>. Sono disponibili anche dei tutorial nella pagina di sviluppo, situati nella <a class="external" href="http://www.hacksrus.com/%7Eginda/venkman/">pagina di sviluppo Venkman</a>.</p>
+
+<p>Figura 3. Debugger JavaScript di Mozilla</p>
+
+<p><img alt="Mozilla's JavaScript debugger" class="internal" src="/@api/deki/files/1603/=Migrationguide-venkman.jpg"></p>
+
+<p>Il debugger JavaScript può effettuare il debug di JavaScript in esecuzione nella finestra browser di Mozilla. Supporta molte caratteristiche standard per il debugging, come la gestione breakpoint, l'inspezione dello stack di chiamata, e l'ispezione di variabile/oggetto. Tutte le caratteristiche sono accedibili attraverso l'interfaccia utente oppure tramite la console interattiva del debugger. Con la console, può essere eseguito codice JavaScript arbitrario nello stesso scope del codice JavaScript in corso di debugging.</p>
+
+<h3 id="Differenze_sui_CSS" name="Differenze_sui_CSS">Differenze sui CSS</h3>
+
+<p>I prodotti basati su Mozilla hanno il più forte supporto per i fogli di stile a cascata (CSS), inclusi la gran parte di CSS1, CSS2.1 e parti di CSS3, in rapporto ad Internet Explorer così come con altri browser.</p>
+
+<p>Per molti dei problemi menzionati sotto, Mozilla aggiunge una riga di errore o di avvertenza nella console JavaScript. Per problemi legati a CSS, è sufficiente quindi controllare la console JavaScript.</p>
+
+<h4 id="Mimetypes_.28Quando_i_file_CSS_non_vengono_applicati.29" name="Mimetypes_.28Quando_i_file_CSS_non_vengono_applicati.29">Mimetypes (Quando i file CSS non vengono applicati)</h4>
+
+<p>Il più comune problema legato ai CSS è dato dal fatto che le definizioni dei CSS all'interno di file CSS referenziati non vengono applicate. Questo solitamente a causa del server che invia un errato mimetype per il file CSS. Le specifiche CSS indicano che il file CSS deve essere servito con il tipo mime <code>text/css</code>. Mozilla rispetta questa indicazione e carica solo file CSS con questo mimetype se la pagina web è visualizzata con in modalità strettamente standard. Internet Explorer carica sempre il file CSS, senza tenere conto del mimetype con il quale viene servito. Le pagine web vengono considerate nel modo strettamente standard quando iniziano con un doctype <strong>strict</strong>. Discuteremo dei doctype nella sezione seguente.</p>
+
+<h4 id="CSS_e_unit.C3.A0" name="CSS_e_unit.C3.A0">CSS e unità</h4>
+
+<p>Molte applicazioni web non usano unità con i propri CSS, specialmente se viene utilizzato Javascript per impostare i CSS. Mozilla tollera questo comportamento, nel momento in cui la pagina non viene visualizzata nel modo <strong>strict</strong>. Poiché Internet Explorer non supporta XHTML, non considera per niente se vengono specificate delle unità. Se la pagina è in modo strettamente standard, e nessuna unità viene usata, Mozilla ignora lo stile:</p>
+
+<pre class="eval">&lt;DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "<span class="nowiki">http://www.w3.org/TR/html4/strict.dtd</span>"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+   &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;
+   &lt;title&gt;CSS and units example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    // works in strict mode
+    &lt;div style="width: 40<span class="boldcode">px</span>; border: 1px solid black;"&gt;
+      Text
+    &lt;/div&gt;
+
+    // will fail in strict mode
+    &lt;div style="width: 40; border: 1px solid black;"&gt;
+      Text
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Dato che l'esempio mostrato ha un doctype <strong>strict</strong>, la pagina viene visualizzata con modo di impaginazione strettamente standard. Il primo div ha una lunghezza di 40px, poiché usa una unità, ma il secondo div non avrà una lunghezza, cioè tornerà alla lunghezza di default di 100%, la qual cosa accadrebbe se la stessa lunghezza fosse impostata tramite JavaScript.</p>
+
+<h4 id="JavaScript_e_CSS" name="JavaScript_e_CSS">JavaScript e CSS</h4>
+
+<p>Dato che Mozilla supporta gli standard CSS, supporta inoltre lo standard DOM CSS per impostare i CSS attraverso JavaScript. Si può accedere, rimuovere e cambiare la regola di un elemento CSS attraverso il membro <code>style</code> dell'elemento:</p>
+
+<pre>&lt;div id="myDiv" style="border: 1px solid black;"&gt;
+  Text
+&lt;/div&gt;
+
+&lt;script&gt;
+  var myElm = document.getElementById("myDiv");
+  myElm.style.width = "40px";
+&lt;/script&gt;
+</pre>
+
+<p>In questo modo si può raggiungere ogni attributo CSS. Ancora, se la pagina Web è in modo <em>strict</em>, va impostata una unità o Mozilla ignorerà il comando. Nella richiesta di un valore, diciamo per <code>.style.width</code>, in Mozilla ed Internet Explorer, il valore ritornato conterrà l'unità, il che implica il ritorno di una stringa. La stringa può essere convertita attraverso <code>parseFloat("40px")</code>.</p>
+
+<h4 id="Differenze_nell.27overflow_dei_CSS" name="Differenze_nell.27overflow_dei_CSS">Differenze nell'overflow dei CSS</h4>
+
+<p>CSS aggiunge la nozione di <em>overflow</em> (<em>traboccamento</em>), che permette di definire come gestire un traboccamento; ad esempio, quando il contenuto di un <code>div</code> con una specifica altezza risulta più alto. Lo standard CSS definisce che se non è impostato alcun comportamento nel caso di overflow, il contenuto del <code>div</code> traboccherà dallo stesso. In ogni caso, Internet Explorer non rispetta questa indicazione e va ad espandere il <code>div</code> oltre l'altezza impostata per poter riprendere il contenuto. Sotto un esempio che mostra la differenza:</p>
+
+<pre>&lt;div style="height: 100px; border: 1px solid black;"&gt;
+  &lt;div style="height: 150px; border: 1px solid red; margin: 10px;"&gt;
+    a
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>Come si vede dalla Figura 4, Mozilla agisce secondo le specifiche dello standard W3C. Lo standard dice che, in questo caso, il <code>div</code> interno trabocca verso il basso poiché il suo contenuto ha una maggiore altezza relativa al suo contenitore. Se si preferisce il comportamento di Internet Explorer, semplicemente non va specificata alcuna altezza per l'elemento esterno.</p>
+
+<p>Figura 4. overflow DIV</p>
+
+<p><img alt="DIV Overflow" class="internal" src="/@api/deki/files/1602/=Migrationguide-overflow.jpg"></p>
+
+<h4 id="differenza_di_hover" name="differenza_di_hover">differenza di hover</h4>
+
+<p>Il comportamento non standard del selettore hover in Internet Exloprer si può riconoscere in diversi siti web. Usualmente si manifesta cambiando lo stile del testo se attraversato dal mouse con Mozilla, ma non con Internet Explorer. Questo perché il selettore <code>a:hover</code> in Internet Explorer considera <code>&lt;a href=""&gt;...&lt;/a&gt;</code> ma non <code>&lt;a name=""&gt;...&lt;/a&gt;</code>, che imposta una ancora in HTML. Il cambio di testo avviene perché gli autori incapsulano l'area con un marcatore di impostazione ancora:</p>
+
+<pre>CSS:
+  a:hover {color: green;}
+
+HTML:
+  &lt;a href="foo.com"&gt;This text should turn green when you hover over it.&lt;/a&gt;
+
+  &lt;a name="anchor-name"&gt;
+    This text should change color when hovered over, but doesn't
+    in Internet Explorer.
+  &lt;/a&gt;
+</pre>
+
+<p>Mozilla segue le specifiche CSS correttamente e cambia il colore in verde in questo esempio. SI possono usare due maniere per far agire Mozilla come Internet Explorer a non cambiare il colore del testo al passaggio del mouse:</p>
+
+<ul>
+ <li>In primo luogo, è possibile cambiare la regola CSS in <code>a:link:hover {color: green;}</code>, che cambierà solo il colore se l'elemento è un link (ha un attributo <code>href</code>).</li>
+ <li>Alternativamente, si può cambiare il marcatore e chiudere <code>&lt;a /&gt;</code> prima dell'inizio del testo -- in questo modo l'ancora continuerà a funzionare.</li>
+</ul>
+
+<h3 id="Quirks_vs._modo_standard" name="Quirks_vs._modo_standard">Quirks vs. modo standard</h3>
+
+<p>Le versioni più antiquate di alcuni browser, come Internet Exlporer 4, impaginano insernedo artefatti in determinate condizioni. Mentre Mozilla tende ad essere un browser aderente agli standard, fornisce tre modi per sopportare pagine Web meno recenti realizzate con in mente questi comportamenti particolari. Recapito e contenuto della pagina determinano quale modo sarà utilizzato. Mozilla indicherà il modo di impaginazione in <strong>View -&gt; Page Info</strong> (o premendo <code>Ctrl+I</code>); Firefox lo mostrerà in <strong>Tools -&gt; Page Info</strong>.</p>
+
+<p><span class="comment">The mode in which a page is located depends on its doctype.</span></p>
+
+<p>Un Doctype (abbreviazione per document type declaration) è simile a questo:</p>
+
+<p><code>&lt;!DOCTYPE HTML PUBLIC <span style="color: blue;">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span style="color: green;">"<span class="nowiki">http://www.w3.org/TR/html4/loose.dtd</span>"</span>&gt;</code></p>
+
+<p>La sezione in blu viene chiamata <em>identificatore pubblico</em> (<em>public identifier</em>), la parte vedere è <em>l'identificatore di sistema</em> (<em>system identifier</em>), nella forma di URI.</p>
+
+<h4 id="Modo_standard" name="Modo_standard">Modo standard</h4>
+
+<p>Il modo standard di impaginazione è qullo più restrittivo -- l'impaginazione avviene attenendosi alle specifiche HTML e CSS del W3C e non saranno supportati artefatti. Mozilla lo utilizza alle seguenti condizioni:</p>
+
+<ul>
+ <li>se una pagina viene inviata con un mimetype <code>text/xml</code> o altri XML o XHTML,</li>
+ <li>per ogni doctype "DOCTYPE HTML SYSTEM" (ad esempio, <code>&lt;!DOCTYPE HTML SYSTEM "<span class="nowiki">http://www.w3.org/TR/REC-html40/strict.dtd</span>"&gt;</code>), ad eccezione del doctype IBM,</li>
+ <li>per doctype sconosciuti o doctype privi di DTD.</li>
+</ul>
+
+<h4 id="Modo_quasi_standard" name="Modo_quasi_standard">Modo quasi standard</h4>
+
+<p>Mozilla ha introdotto il modo <em>quasi standard</em> (almost standard mode) per una ragione: una sezione nella specifica CSS 2 rompe i design basati su un preciso schema fatto di piccole immagini in celle di tabelle. Invece di fornire una immagine intera all'utente, ogni piccola immagine finisce con un piccolo spazio a seguire. La vecchia homepage IBM mostrata in Figura 5 offre un esempio di questo comportamento.</p>
+
+<p>Figura 5. Spazio tra immagini</p>
+
+<p><img alt="Image Gap" class="internal" src="/@api/deki/files/1599/=Migrationguide-imagegap.jpg"></p>
+
+<p>Il modo quasi standard agisce quasi esattamente come il modo standard, fatta eccezione nel trattamento di immagini con un problema di spazio finale. Il problema occorre solitamente nelle pagine aderenti agli standard e causa la loro incorretta visualizzazione.</p>
+
+<p>Mozilla usa il modo quasi standard alle seguenti condizioni:</p>
+
+<ul>
+ <li>per ogni doctype "loose" (ad esempio, <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"&gt;</code>, <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "<span class="nowiki">http://www.w3.org/TR/html4/loose.dtd</span>"&gt;</code>),</li>
+ <li>per il doctype IBM <code>&lt;!DOCTYPE html SYSTEM "<span class="nowiki">http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd</span>"&gt;</code>)</li>
+</ul>
+
+<p><br>
+ Per altre informazioni, consultare l'articolo riguardante il <a href="/it/Immagini,_Tabelle,_e_Spazi_Misteriosi" title="it/Immagini,_Tabelle,_e_Spazi_Misteriosi"> problema di spazio tra immagini</a></p>
+
+<h4 id="Modo_Quirks" name="Modo_Quirks">Modo Quirks</h4>
+
+<p>Ad oggi, il Web è pieno di marcatori HTML invalidi, così come altri che funzionano solo a causa di bug di alcuni browser. I vecchi browser Netscape, nel periodo della loro leadership di mercato, contenevano bug. Quando fece il suo ingresso Internet Explorer, cercò di imitare gli stessi bug per poter funzionare con i contenuti dell'epoca. Con l'introduzione di nuovi browser nel mercato, molti di questi bug originali, solitamente chiamati <em>quirks</em> (artefatti), sono stati mantenuti per avere retrocompatibilità. Mozilla supporta molti di questi nel suo modo di impaginazione quirks. Si noti che a causa di questi artefatti, i documenti vengono impaginati più lentamente che se fossero stati aderenti agli standard. Molte pagine web sono trattate in questa maniera.</p>
+
+<p>Mozilla usa il modo quirks alle seguenti condizioni:</p>
+
+<ul>
+ <li>Quando non è specificato alcun doctype</li>
+ <li>Per i doctype senza identificatore di sistema (ad esempio, <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code>)</li>
+</ul>
+
+<p>Per approfondimenti, si vedano: <a href="/it/Funzionamento_del_Quirks_Mode_di_Mozilla" title="it/Funzionamento_del_Quirks_Mode_di_Mozilla">Funzionamento del Quirks Mode di Mozilla</a> e <a href="/it/Sniffing_DOCTYPE_di_Mozilla" title="it/Sniffing_DOCTYPE_di_Mozilla">Sniffing DOCTYPE di Mozilla</a></p>
+
+<h3 id="Differenze_nella_gestione_eventi" name="Differenze_nella_gestione_eventi">Differenze nella gestione eventi</h3>
+
+<p>Mozilla e Internet Explorer sono completamente differenti nell'area degli eventi Il modello eventi di Mozilla segue i modelli W3C e Netscale. In Internet Explorer, se una funzione viene chiamata tramite evento, ha accesso all'oggetto <code>event</code> attraverso <code>window.event</code> Mozilla passa un oggetto <code>event</code> ai gestori di eventi, i quali devono specificatamente passare l'oggetto alla funzione chiamata tramite un argomento.</p>
+
+<p>Ecco un esempio di gestione cross-browser (nota: implica l'impossibilità di definire una vasriabile globale chiamata <code>event</code> nel proprio codice):</p>
+
+<pre>&lt;div onclick="handleEvent(event);"&gt;Click me!&lt;/div&gt;
+
+&lt;script&gt;
+  function handleEvent(aEvent) {
+    var myEvent = window.event ? window.event : aEvent;
+  }
+&lt;/script&gt;
+</pre>
+
+<p>Funzioni e proprietà esposte dell'oggetto event sono solitamente chiamate in maniera differente in Mozilla e Internet Explorer, come mostrato dalla Tabella 4.</p>
+
+<table class="standard-table">
+ <caption>Tabella 4. Differenze delle proprietà di event tra Mozilla e Internet Explorer</caption>
+ <tbody>
+  <tr>
+   <th>Nome Internet Explorer</th>
+   <th>Nome Mozilla</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>altKey</td>
+   <td>altKey</td>
+   <td>Proprietà booleana ritornata in caso di pressione del tasto ALT durante l'evento.</td>
+  </tr>
+  <tr>
+   <td>cancelBubble</td>
+   <td>stopPropagation()</td>
+   <td>Usata per fermate la propagazione dell'evento verso la radice dell'alberoUsed to stop the event.</td>
+  </tr>
+  <tr>
+   <td>clientX</td>
+   <td>clientX</td>
+   <td>Ordinata dell'evento, in relazione al viewport dell'elemento.</td>
+  </tr>
+  <tr>
+   <td>clientY</td>
+   <td>clientY</td>
+   <td>Ascissa dell'evento, in relazione al viewport dell'elemento.</td>
+  </tr>
+  <tr>
+   <td>ctrlKey</td>
+   <td>ctrlKey</td>
+   <td>proprietà ritornata in caso di pressione del tasto CTRL durante l'evento.</td>
+  </tr>
+  <tr>
+   <td>fromElement</td>
+   <td>relatedTarget</td>
+   <td>per eventi del mouse, l'elemento dal quale il mouse si è spostato.</td>
+  </tr>
+  <tr>
+   <td>keyCode</td>
+   <td>keyCode</td>
+   <td>Per eventi da tastiera, il numero che rappresentante il tasto premuto. Per eventi del mouse è 0. Per eventi keypress (non keyup o keydown) riguardanti tasti che producono output, l'equivalente Mozilla è charCode, non keyCode.</td>
+  </tr>
+  <tr>
+   <td>returnValue</td>
+   <td>preventDefault()</td>
+   <td>usato per prevenire l'esecuzione dell'azione di default dell'evento.</td>
+  </tr>
+  <tr>
+   <td>screenX</td>
+   <td>screenX</td>
+   <td>Ordinata dell'evento, in relazione allo schermo.</td>
+  </tr>
+  <tr>
+   <td>screenY</td>
+   <td>screenY</td>
+   <td>Ascissa dell'evento, in relazione allo schermo.</td>
+  </tr>
+  <tr>
+   <td>shiftKey</td>
+   <td>shiftKey</td>
+   <td>Proprietà booleana ritornata in caso di pressione del tasto SHIFT durante l'evento.</td>
+  </tr>
+  <tr>
+   <td>srcElement</td>
+   <td>target</td>
+   <td>Elemento dal quale l'evento ha avuto origine.</td>
+  </tr>
+  <tr>
+   <td>toElement</td>
+   <td>currentTarget</td>
+   <td>Per eventi del mouse, l'elemento verso il quale il mouse si è mosso.</td>
+  </tr>
+  <tr>
+   <td>type</td>
+   <td>type</td>
+   <td>Ritorna il nome dell'evento.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Aggiungere_gestori_di_eventi" name="Aggiungere_gestori_di_eventi">Aggiungere gestori di eventi</h4>
+
+<p>Mozilla supporta due modi per aggiungere eventi attraverso JavaScript. Il primo, supportato da tutti i browser, imposta le proprietà event direttamente sugli oggetti. Per impostare un gestore di evento <code>click</code>, un riferimento di funzione viene passato alla proprietà <code>onclick</code> dell'oggetto:</p>
+
+<pre>&lt;div id="myDiv"&gt;Click me!&lt;/div&gt;
+
+&lt;script&gt;
+  function handleEvent(aEvent) {
+    // if aEvent is null, means the Internet Explorer event model,
+    // so get window.event.
+    var myEvent = aEvent ? aEvent : window.event;
+  }
+
+  function onPageLoad(){
+    document.getElementById("myDiv").onclick = handleEvent;
+  }
+&lt;/script&gt;
+</pre>
+
+<p>Mozilla supporta pienamente il metodo standard del W3C di aggiungere dei <em>listener</em> (letterarmente <em>ascoltatori</em>) ai nodi DOM. L'uso dei metodi <code>addEventListener()</code> e <code>removeEventListener()</code> ha il beneficio di permettere l'impostazione di molteplici listener per lo stesso tipo di evento. Entrambi i metodi richiedono tre paramentri: Il tipo di evento, una riferimento a funzione, ed un valore booleano che indica se il listener debba o meno catturare eventi nella sua fase di cattura. Se il valore del booleano è <em>false</em>, verranno catturati solo gli eventi propagati. Gli eventi W3C hanno tre fasi: cattura (<em>capturing</em>), obbiettivo (<em>at target</em>) e propagazione (<em>bubbling</em>). Ogni oggetto evet ha un attributo <code>eventPhase</code> che indica la fase numericamente (a partire da 0). Ogni qualvolta viene eseguito un evento, esso parte dall'elemento più esterno del DOM, quello alla radice dell'albero DOM. L'evento poi viaggia all'interno del DOM usando il percorso più diretto verso l'obbiettivo, realizzando la fase di capturing. Appena arriva, l'evento si trova nella fase obbiettivo. Dopo il suo arrivo, effettua un nuovo viaggio nell'albero verso il nodo più esterno: la fase di propagazione. Il modello eventi di Internet Explorer ha solo la fase di propagazione; questo significa che impostare il terzo parametro come <em>false</em> equivale ad imitare il comportamento di Internet Explorer:</p>
+
+<pre>&lt;div id="myDiv"&gt;Click me!&lt;/div&gt;
+
+&lt;script&gt;
+
+  function handleEvent(aEvent) {
+    // if aEvent is null, it is the Internet Explorer event model,
+    // so get window.event.
+    var myEvent = aEvent ? aEvent : window.event;
+  }
+
+  function onPageLoad() {
+    var element = document.getElementById("myDiv");
+    element.addEventListener("click", handleEvent, false);
+  }
+&lt;/script&gt;
+</pre>
+
+<p>Un vantaggio di <code>addEventListener()</code> e <code>removeEventListener()</code> rispetto ad impostare proprietà è la possibilità di impostare molteplici listener per lo stesso evento, ognuno dei quali richiama una funzione. Per questo la rimozione di un listener richiede che i tre parametri siano gli stessi usati per la sua aggiunta.</p>
+
+<p>Mozilla non supporta il metodo di Internet Explorer di conversione dei tag &lt;script&gt; in gestori di event, che estende &lt;script&gt; con gli attributi <code>for</code> e <code>event</code> (vedi Tabella 5). Inoltre non supporta i metodi <code>attachEvent</code> e <code>detachEvent</code>. Al loro posto si consiglia l'utilizzo dei metodi <code>addEventListener</code> e <code>removeEventListener</code>. Internet Explorer non supporta le specifiche degli eventi del W3C</p>
+
+<table class="standard-table">
+ <caption>Tabella 5. Differenze dei metodi di eventi tra Mozilla e Internet Explorer</caption>
+ <tbody>
+  <tr>
+   <th>Metodo Internet Explorer</th>
+   <th>Metodo Mozilla</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>attachEvent(aEventType, aFunctionReference)</td>
+   <td>addEventListener(aEventType, aFunctionReference, aUseCapture)</td>
+   <td>Aggiunge un listener di evento ad un elemento DOM.</td>
+  </tr>
+  <tr>
+   <td>detachEvent(aEventType, aFunctionReference)</td>
+   <td>removeEventListener(aEventType, aFunctionReference, aUseCapture)</td>
+   <td>Rimuove un listener di evento da un elemento DOM.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Rich_text_editing" name="Rich_text_editing">Rich text editing</h3>
+
+<p>Mentre Mozilla si vanta di essere il milgior browser attinente agli standard W3C, supporta inoltre funzionalità standard, come <code>innerHTML</code> ed il <a href="/it/Midas" title="it/Midas">rich text editing</a>, nel momento in cui non esistenti equivalenti W3C.</p>
+
+<p>Mozilla 1.3 ha introdotto una implementazione del <a href="/it/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode" title="it/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">designMode</a> di Internet Explorer, che converte un documento HTML in un rich text editor. Una volta fatto questo, possono essere esguiti comandi attraverso il comando <code>execCommand</code>. Mozilla non supporta l'attributo <code>contentEditable</code> di Internet Explorer per rendere ogni widget modificabile. Si può usare un iframe per aggiungere un rich text editor.</p>
+
+<h4 id="Differenze_nel_Rich_text" name="Differenze_nel_Rich_text">Differenze nel Rich text</h4>
+
+<p>Mozilla supporta lo standard W3C per accedere all'oggetto document di un iframe attraverso <code>IFrameElmRef.contentDocument</code>, mentre Internet Explorer richiede l'accesso attraverso <code>document.frames{{ mediawiki.external('\"IframeName\"') }}</code> e poi l'accesso al <code>document</code> risultante.</p>
+
+<pre>&lt;script&gt;
+function getIFrameDocument(aID) {
+  var rv = null;
+
+  // if contentDocument exists, W3C compliant (Mozilla)
+  if (document.getElementById(aID).contentDocument){
+    rv = document.getElementById(aID).contentDocument;
+  } else {
+    // IE
+    rv = document.frames[aID].document;
+  }
+  return rv;
+}
+&lt;/script&gt;
+</pre>
+
+<p>Un'altra differenza tra Internet Explorer e Mozilla è nell'HTML creato dal rich text editor. Mozilla usa come modo predefinito i CSS per i marcatori generati. In ogni caso, Mozilla permette anche di scegliere tra i modi HTML e CSS usando il comando execCommand <code>useCSS</code> e scegliendo tra i valori true e false. Internet Explorer usa sempre il modo HTML.</p>
+
+<pre>Mozilla (CSS):
+  &lt;span style="color: blue;"&gt;Big Blue&lt;/span&gt;
+
+Mozilla (HTML):
+  &lt;font color="blue"&gt;Big Blue&lt;/font&gt;
+
+Internet Explorer:
+  &lt;FONT color="blue"&gt;Big Blue&lt;/FONT&gt;
+</pre>
+
+<p>Sotto una lista di comandi supportati in execCommand di Mozilla:</p>
+
+<table class="standard-table">
+ <caption>Tabella 6. Comandi rich text editing</caption>
+ <tbody>
+  <tr>
+   <th>Nome comando</th>
+   <th>Descrizione</th>
+   <th>Argomento</th>
+  </tr>
+  <tr>
+   <td>bold</td>
+   <td>Cambia l'attributo bold (grassetto) della selezione.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>createlink</td>
+   <td>genera un link HTML dal testo selezionato.</td>
+   <td>URL da usare per il link</td>
+  </tr>
+  <tr>
+   <td>delete</td>
+   <td>Cancella la selezione.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>fontname</td>
+   <td>Cambia il font usato nel testo selezionato.</td>
+   <td>Nome del font da usare (ad esempio Arial)</td>
+  </tr>
+  <tr>
+   <td>fontsize</td>
+   <td>Cambia la dimensione del font usato nel testo selezionato.</td>
+   <td>Dimensione da usare</td>
+  </tr>
+  <tr>
+   <td>fontcolor</td>
+   <td>Cambia il colore del font usato nel testo selezionato.</td>
+   <td>Colore da usare</td>
+  </tr>
+  <tr>
+   <td>indent</td>
+   <td>Indenta il blocco su cui è posizionato il cursore.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>inserthorizontalrule</td>
+   <td>Inserisce un elemeto &lt;hr&gt; alla posizione del cursore.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>insertimage</td>
+   <td>Inserisce una immagine alla posizione del cursore.</td>
+   <td>URL dell'immagine da usare</td>
+  </tr>
+  <tr>
+   <td>insertorderedlist</td>
+   <td>Inserisce un elemento di lista ordinata (&lt;ol&gt;) alla posizione del cursore.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>insertunorderedlist</td>
+   <td>Inserisce un elemento di lista non ordinata (&lt;ul&gt;) alla posizione del cursore.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>italic</td>
+   <td>Cambia l'attributo italic (corsivo) della selezione.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>justifycenter</td>
+   <td>Centra il contenuto della linea corrente.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>justifyleft</td>
+   <td>Giustifica il contenuto della linea corrente a sinistra.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>justifyright</td>
+   <td>Giustifica il contenuto della linea corrente a destra.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>outdent</td>
+   <td>Indenta all'indietro il blocco su cui è posizionato il cursore.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>redo</td>
+   <td>Riesegue un comando precedentemente annullato</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>removeformat</td>
+   <td>Rimuove la formattazione del testo selezionato</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>selectall</td>
+   <td>Seleziona tutto all'interno del rich text editor.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>strikethrough</td>
+   <td>Cambia l'attributo strikethrough (segnato) della selezione.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>subscript</td>
+   <td>Converte la selezione corrente in pedice.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>superscript</td>
+   <td>Converte la selezione corrente in apice.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>underline</td>
+   <td>Cambia l'attributo underline (sottolineato) della selezione.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>undo</td>
+   <td>Annulla l'ultimo comando eseguito</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>unlink</td>
+   <td>Rimuove le informazioni di link del testo selezionato.</td>
+   <td>---</td>
+  </tr>
+  <tr>
+   <td>useCSS</td>
+   <td>Cambia l'uso dei CSS nel marcatore generato</td>
+   <td>Valore booleano</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Per altre informazioni, consultare <a href="/it/Rich-Text_Editing_in_Mozilla" title="it/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a>.</p>
+
+<h3 id="Differenze_in_XML" name="Differenze_in_XML">Differenze in XML</h3>
+
+<p>Mozilla ha un robusto supporto per XML e tecnologie ad esso correlato, come <a href="/it/XSLT" title="it/XSLT">XSLT</a> e Web service. Supporta inoltrer alcune estensioni non standard di Internet Explorer, come <code><a href="/it/XMLHttpRequest" title="it/XMLHttpRequest">XMLHttpRequest</a></code>.</p>
+
+<h4 id="Come_gestire_XML" name="Come_gestire_XML">Come gestire XML</h4>
+
+<p>Come con lo standard HTML, Mozilla supporta le specifiche W3C XML DOM, che permettono di manipolare quasi ogni aspetto di un documento XML. Differenze tra il DOM XML in Internet Explorer e Mozilla sono solitamente causate da comportamenti non standard di Internet Explorer. Probabilmente la più comune è la gestione nodi di spazi bianchi. Solitamente un documento generato in XML contiene spazi tra i nodi XML. Internet Explorer, nell'uso di <code><a href="/it/DOM/element.childNodes" title="it/DOM/element.childNodes">Node.childNodes</a></code>, non contiene tali nodi di spazio. In Mozilla, questi nodi saranno contenuti nell'array.</p>
+
+<pre>XML:
+  &lt;?xml version="1.0"?&gt;
+  &lt;myXMLdoc xmlns:myns="http://myfoo.com"&gt;
+    &lt;myns:foo&gt;bar&lt;/myns:foo&gt;
+  &lt;/myXMLdoc&gt;
+
+JavaScript:
+  var myXMLDoc = getXMLDocument().documentElement;
+  alert(myXMLDoc.childNodes.length);
+</pre>
+
+<p>La prima linea di javaScript carica il documento XML ed accede all'elemento radice (<code>myXMLDoc</code>) usando <code><a href="/it/DOM/document.documentElement" title="it/DOM/document.documentElement">documentElement</a></code>. La seconda linea semplicemente annuncia il numero di nodi figli. Secondo le specifiche W3C, gli spazi bianchi ed i ritorno a capo si fondono in un solo nodo di testo, se essi si susseguono. Per Mozilla, il nodo <code>myXMLdoc</code> ha tre figli: un nodo testo contenente un ritorno a capo e due spazi; il nodo the <code>myns:foo</code>: ed un altro nodo di testo con un ritorno a capo. Internet Explorer, comunque, Internet Explorer non tollera questo e ritorna "1" per il codice soprastante, indicando solo il nodo <code>myns:foo</code>. Per questo, per scorrere gli elementi figli evitando i nodi testo, questi vanno identificati.</p>
+
+<p>Come detto prima, ogni nodo ha una proprietà <code><a href="/it/DOM/element.nodeType" title="it/DOM/element.nodeType">nodeType</a></code> rappresentante il tipo di nodo. Ad esempio, un nodo element ha tipo1, mentre un nodo document ha tipo 9. Per evitare i nodi di testo, è sufficiente controllare i tipi 3 (nodo testo) e 8 (nodo commento).</p>
+
+<pre>XML:
+  &lt;?xml version="1.0"?&gt;
+  &lt;myXMLdoc xmlns:myns="http://myfoo.com"&gt;
+    &lt;myns:foo&gt;bar&lt;/myns:foo&gt;
+  &lt;/myXMLdoc&gt;
+
+JavaScript:
+  var myXMLDoc = getXMLDocument().documentElement;
+  var myChildren = myXMLDoc.childNodes;
+
+  for (var run = 0; run &lt; myChildren.length; run++){
+    if ( (myChildren[run].nodeType != 3) &amp;&amp;
+          myChildren[run].nodeType != 8) ){
+      // not a text or comment node
+    };
+  };
+</pre>
+
+<p>Vedere <a href="/it/Spazi_nel_DOM" title="it/Spazi_nel_DOM">Spazi nel DOM</a> per una discussione dettagliata e possibili soluzioni.</p>
+
+<h4 id="Isole_dati_XML" name="Isole_dati_XML">Isole dati XML</h4>
+
+<p>Internet Explorer ha una caratteristica non standard chiamata <a class="external" href="http://msdn.microsoft.com/workshop/author/dhtml/reference/objects/xml.asp">Isole dati XML</a> (XML data islands), che permette di integrare XML all'interno di tag di un documento HTML. La stessa funzionalità è raggiungibile tramite l'uso di XHTML: comunque, poiché il supporto ad XHTML di Internet Explorer è debole, questa non si rivela una opzione usuale.</p>
+
+<p>IE XML data island:</p>
+
+<pre class="eval">&lt;xml id="xmldataisland"&gt;
+  &lt;foo&gt;bar&lt;/foo&gt;
+&lt;/xml&gt;
+</pre>
+
+<p><br>
+ Una soluzione cross-browser consiste nell'usare i parser DOM, che effettuano i parsing di una stringa che contiene un documento XML serializzato e generano il documento per l'XML sottoposto al parsing. Mozilla usa l'oggetto <code><a href="/it/DOMParser" title="it/DOMParser">DOMParser</a></code>, che prende una stringa serializzata e genera un documento da essa. Il codice seguente mostra come:</p>
+
+<pre class="eval">var xmlString = "&lt;xml id=\"xmldataisland\"&gt;&lt;foo&gt;bar&lt;/foo&gt;&lt;/xml&gt;";
+var myDocument;
+
+if (window.DOMParser) {
+  // This browser appears to support DOMParser
+  var parser = new DOMParser();
+  myDocument = parser.parseFromString(xmlString, "text/xml");
+} else if (window.ActiveXObject){
+  // Internet Explorer, create a new XML document using ActiveX
+  // and use loadXML as a DOM parser.
+  myDocument = new ActiveXObject("Microsoft.XMLDOM");
+  myDocument.async = false;
+
+  myDocument.loadXML(xmlString);
+} else {
+  // Not supported.
+}
+</pre>
+
+<p>vedere <a href="/it/Uso_di_Isole_dati_XML_in_Mozilla" title="it/Uso_di_Isole_dati_XML_in_Mozilla">Uso di Isole dati XML in Mozilla</a> per un approccio alternativo.</p>
+
+<h4 id="XMLHttpRequest" name="XMLHttpRequest">XMLHttpRequest</h4>
+
+<p>Internet Explorer permette di inviare e ricevere file XML usando la classe MSXML <code>XMLHTTP</code>. Istanzata attraverso ActiveX usando <code>new ActiveXObject("Msxml2.XMLHTTP")</code> o <code>new ActiveXObject("Microsoft.XMLHTTP")</code>. Poiché non esiste metodo standard per fare questo, Mozilla fornisce la stessa funzionalità nell'oggetto globale <code><a href="/it/XMLHttpRequest" title="it/XMLHttpRequest">XMLHttpRequest</a></code>. Dalla versione 7 IE stesso supporta un oggetto <code>XMLHttpRequest</code> "nativo".</p>
+
+<p>Dopo aver instanziato l'oggetto usando <code>new XMLHttpRequest()</code>, si può usare il metodo <code>open</code> per specificare il tipo di richiesta (GET o POST) da usare, quale file caricare, e l'asincronicità o meno della chiamata. Se la chiamata è asincrona, va dato un riferimento a funzione al membro <code>onload</code>, chiamato una volta completata la richiesta.</p>
+
+<p>Synchronous request:</p>
+
+<pre class="eval">var myXMLHTTPRequest = new XMLHttpRequest();
+myXMLHTTPRequest.open("GET", "data.xml", false);
+
+myXMLHTTPRequest.send(null);
+
+var myXMLDocument = myXMLHTTPRequest.responseXML;
+</pre>
+
+<p>Asynchronous request:</p>
+
+<pre class="eval">var myXMLHTTPRequest;
+
+function <span class="boldcode">xmlLoaded</span>() {
+  var myXMLDocument = myXMLHTTPRequest.responseXML;
+}
+
+function loadXML(){
+  myXMLHTTPRequest = new XMLHttpRequest();
+  myXMLHTTPRequest.open("GET", "data.xml", true);
+  myXMLHTTPRequest.onload = <span class="boldcode">xmlLoaded</span>;
+  myXMLHTTPRequest.send(null);
+}
+</pre>
+
+<p>La Tabella 7 mostra a lista di metodi e proprietà disponibili per <code><a href="/it/XMLHttpRequest" title="it/XMLHttpRequest">XMLHttpRequest</a></code> di Mozilla.</p>
+
+<table class="standard-table">
+ <caption>Tabella 7. Proprietà e metodi XMLHttpRequest</caption>
+ <tbody>
+  <tr>
+   <th>Nome</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>void abort()</td>
+   <td>Ferma la richiesta se ancora in esecuzione.</td>
+  </tr>
+  <tr>
+   <td>string getAllResponseHeaders()</td>
+   <td>Ritorna tutte le intestazioni di risposta in un'unica stringa.</td>
+  </tr>
+  <tr>
+   <td>string getResponseHeader(string headerName)</td>
+   <td>Ritorna il valore dell'intestazione specificata.</td>
+  </tr>
+  <tr>
+   <td>functionRef onerror</td>
+   <td>Se impostata, la funzione riferita viene chiamata ogni qualvolta si presenta un errore durante la richiesta.</td>
+  </tr>
+  <tr>
+   <td>functionRef onload</td>
+   <td>Se impostata, la funzione riferita viene chiamata quando la richiesta termina con successo e viene ricevuta la risposta. Metodo usato per richieste asincrone.</td>
+  </tr>
+  <tr>
+   <td>void open (string HTTP_Method, string URL)<br>
+    <br>
+    void open (string HTTP_Method, string URL, boolean async, string userName, string password)</td>
+   <td>Inizializza la richiesta per lo URL dato, usando uno dei metodi HTTP GET o POST. Per inviare la richiesta, viene chiamato il metodo <code>send()</code> dopo l'inizializzazione. Se <code>async</code> è false, la richiesta è sincrona, altrimento automaticamente asincrona. Opzionalmente, possono essere specificati username e password per lo URL se necessario.</td>
+  </tr>
+  <tr>
+   <td>int readyState</td>
+   <td>Stato della richiesta. valori possibili:
+    <table>
+     <tbody>
+      <tr>
+       <th>Valore</th>
+       <th>Descrizione</th>
+      </tr>
+      <tr>
+       <td>0</td>
+       <td>UNINITIALIZED - open() non è ancora stato chiamato.</td>
+      </tr>
+      <tr>
+       <td>1</td>
+       <td>LOADING - send() non è ancora stato chiamato.</td>
+      </tr>
+      <tr>
+       <td>2</td>
+       <td>LOADED - send() è stato chiamato, sono disponibili stato e intestazioni.</td>
+      </tr>
+      <tr>
+       <td>3</td>
+       <td>INTERACTIVE - In fase di download, responseText mantiene i dati parziali.</td>
+      </tr>
+      <tr>
+       <td>4</td>
+       <td>COMPLETED - Tutte le operazioni terminate.</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <td>string responseText</td>
+   <td>Stringa contenente la risposta.</td>
+  </tr>
+  <tr>
+   <td>DOMDocument responseXML</td>
+   <td>DOM Document contenente la risposta.</td>
+  </tr>
+  <tr>
+   <td>void send(variant body)</td>
+   <td>Inizia la richiesa. Se <code>body</code> è definito, viene inviato come corpo della richiesta POST. <code>body</code> puo essere un XML document o un XML document serializzato come stringa.</td>
+  </tr>
+  <tr>
+   <td>void setRequestHeader (string headerName, string headerValue)</td>
+   <td>Imposta una intestazione HTTP da usare per la richista. Deve essere invocato dopo la chiamata di <code>open()</code>.</td>
+  </tr>
+  <tr>
+   <td>string status</td>
+   <td>Codice di stato della risposta HTTP.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Differenze_in_XSLT" name="Differenze_in_XSLT">Differenze in XSLT</h4>
+
+<p>Mozilla supporta XSL Transformations (<a href="/it/XSLT" title="it/XSLT">XSLT</a>) 1.0. Permette inoltre a JavaScript di eseguire trasformazioni XSLT e di eseguire <a href="/it/XPath" title="it/XPath">XPath</a> su un documento.</p>
+
+<p>Mozilla richiede di inviare i file XML ed XSLT con un mimetype XML (<code>text/xml</code> or <code>application/xml</code>). Questa è la ragione più comune per cui XSLT solitamente non funziona con Mozilla ma funziona con Internet Explorer. Mozilla è molto esigente per questo.</p>
+
+<p>Internet Explorer 5.0 e 5.5 supportano il working draft di XSLT, il quale è sostanzialmente differente dalla raccomandazione finale 1.0. Un semplice modo per distinguere quale versione viene utilizzata per scrivere un file XSLT è dato dal controllo del namespace. Il namespace per la raccomandazione 1.0 è <code><span class="nowiki">http://www.w3.org/1999/XSL/Transform</span></code>, mentre il namespace del draft è <code><span class="nowiki">http://www.w3.org/TR/WD-xsl</span></code>. Internet Explorer 6 supporta il draft per retrocompatibilità ma Mozilla non supporta il draft, ma solo la raccomandazione finale.</p>
+
+<p>Se XSLT richiede l'identificazione del browser, è possibile interrogare la proprietà di sistema "xsl:vendor". Il motore XSLT di Mozilla dà come risposta "Transformiix", e Internet Explorer risponde "Microsoft".</p>
+
+<pre>&lt;xsl:if test="system-property('xsl:vendor') = 'Transformiix'"&gt;
+  &lt;!-- Mozilla specific markup --&gt;
+&lt;/xsl:if&gt;
+&lt;xsl:if test="system-property('xsl:vendor') = 'Microsoft'"&gt;
+  &lt;!-- Internet Explorer specific markup --&gt;
+&lt;/xsl:if&gt;
+</pre>
+
+<p>Mozilla fornisce inoltre interfacce JavaScript per XSLT, permettendo ad un sito Web di completare trasformazioni XSLT in memoria, attraverso l'oggetto globale <code><a href="/it/XSLTProcessor" title="it/XSLTProcessor">XSLTProcessor</a></code>. <code>XSLTProcessor</code> richiede di caricare i file XML ed XSLT, in quanto necessita i loro DOM document. Il document XSLT, importato attraverso <code>XSLTProcessor</code>, permette di manipolare parametri XSLT.</p>
+
+<p><code>XSLTProcessor</code> può generare un documento a sé usando <code>transformToDocument()</code>, o creare un frammento di documento tramite <code>transformToFragment()</code>, che può essere facilmente aggiunto ad un altro document DOM. Un esempio sotto:</p>
+
+<pre>var xslStylesheet;
+var xsltProcessor = new XSLTProcessor();
+
+// load the xslt file, example1.xsl
+var myXMLHTTPRequest = new XMLHttpRequest();
+myXMLHTTPRequest.open("GET", "example1.xsl", false);
+myXMLHTTPRequest.send(null);
+
+// get the XML document and import it
+xslStylesheet = myXMLHTTPRequest.responseXML;
+
+xsltProcessor.importStylesheet(xslStylesheet);
+
+// load the xml file, example1.xml
+myXMLHTTPRequest = new XMLHttpRequest();
+myXMLHTTPRequest.open("GET", "example1.xml", false);
+myXMLHTTPRequest.send(null);
+
+var xmlSource = myXMLHTTPRequest.responseXML;
+
+var resultDocument = xsltProcessor.transformToDocument(xmlSource);
+</pre>
+
+<p>Dopo la creazione di un <code>XSLTProcessor</code>, è possibile caricare un file XSLT usando <code>XMLHttpRequest</code>. Il membro <code>responseXML</code> di XMLHttpRequest contiene il documento XML per il file XSLT, il quale viene passato <code>importStylesheet</code>. Si può ancora usare <code>XMLHttpRequest</code> per caricare il documento sorgente XML da trasformare; tale documento viene passato al metodo <code>transformToDocument</code> metodo di <code>XSLTProcessor</code>. La Tabella 8 mostra una lista di metodi <code>XSLTProcessor</code>.</p>
+
+<table class="standard-table">
+ <caption>Tabella 8. Metodi XSLTProcessor</caption>
+ <tbody>
+  <tr>
+   <th>Method</th>
+   <th>Descrizione</th>
+  </tr>
+  <tr>
+   <td>void importStylesheet(Node styleSheet)</td>
+   <td>Importa il foglio di stile XSLT. L'argomento <code>styleSheet</code> è il nodo radice del documento DOM del foglio si stile XSLT.</td>
+  </tr>
+  <tr>
+   <td>DocumentFragment transformToFragment(Node source, Document owner)</td>
+   <td>Trasforma il nodo <code>source</code> applicando il foglio di stile importato tramite il metodo <code>importStylesheet</code> e genera un DocumentFragment. <code>owner</code> il documento DOM a cui DocumentFragment deve appartenere, permettendone l'aggiunta.</td>
+  </tr>
+  <tr>
+   <td>Document transformToDocument(Node source)</td>
+   <td>Trasforma il nodo <code>source</code> applicando il foglio di stile importato usando <code>importStylesheet</code> e ritorna un documento DOM a sé.</td>
+  </tr>
+  <tr>
+   <td>void setParameter(String namespaceURI, String localName, Variant value)</td>
+   <td>Imposta un parametro nel foglio di stile XSLT importato.</td>
+  </tr>
+  <tr>
+   <td>Variant getParameter(String namespaceURI, String localName)</td>
+   <td>Ritorna il valore di un parametro nel foglio di stile XSLT importato.</td>
+  </tr>
+  <tr>
+   <td>void removeParameter(String namespaceURI, String localName)</td>
+   <td>Rimuove tutti i valori impostati nel foglio di stile XSLT e riporta i parametri ai valori predefiniti</td>
+  </tr>
+  <tr>
+   <td>void clearParameters()</td>
+   <td>Removes all set parameters and sets them to defaults specified in the XSLT stylesheet.</td>
+  </tr>
+  <tr>
+   <td>void reset()</td>
+   <td>Rimuove tutti i parametri e fogli di stile.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author(s): Doron Rosenberg, IBM Corporation</li>
+ <li>Published: 26 Jul 2005</li>
+ <li>Link: <a class="external" href="http://www.ibm.com/developerworks/web/library/wa-ie2mozgd/" rel="freelink">http://www.ibm.com/developerworks/we...y/wa-ie2mozgd/</a></li>
+</ul>
+</div>
+
+<p> </p>

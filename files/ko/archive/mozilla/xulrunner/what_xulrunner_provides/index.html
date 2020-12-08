@@ -1,0 +1,64 @@
+---
+title: What XULRunner Provides
+slug: Archive/Mozilla/XULRunner/What_XULRunner_Provides
+tags:
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/What_XULRunner_Provides
+---
+<p> </p>
+<p><a href="/ko/XULRunner" title="ko/XULRunner">XULRunner</a>의 목적은 XUL 어플리케이션(주요하게 파이어폭스와 썬더버드)을 구축하기 위한 방안 뿐만 아니라 내장 기법을 제공하는 것입니다. 다음 특징이 이미 구현되어 있거나 계획되어 있습니다.</p>
+<p> </p>
+<h3 id="Gecko_Features" name="Gecko_Features">Gecko Features</h3>
+<ul>
+ <li><a href="/ko/XPCOM" title="ko/XPCOM">XPCOM</a></li>
+ <li>네트워킹</li>
+ <li>Gecko 렌더링 엔진</li>
+ <li>DOM 편집과 트랜잭션 지원 (no UI)</li>
+ <li>암호화</li>
+ <li><a href="/ko/XBL" title="ko/XBL">XBL</a> (XBL2 계획됨)</li>
+ <li><a href="/ko/XUL" title="ko/XUL">XUL</a></li>
+ <li><a href="/ko/SVG" title="ko/SVG">SVG</a></li>
+ <li><a href="/ko/XSLT" title="ko/XSLT">XSLT</a></li>
+ <li>XML Extras (<code><a href="/ko/XMLHttpRequest" title="ko/XMLHttpRequest">XMLHttpRequest</a></code>, <code><a href="/ko/DOMParser" title="ko/DOMParser">DOMParser</a></code>, etc.)</li>
+ <li>웹서비스 (SOAP)</li>
+ <li>자동 업데이트 지원 <em>(아직 완성 안됨)</em></li>
+ <li>Type ahead find toolbar</li>
+ <li>히스토리 구현 (the places implementation in the 1.9 cycle)</li>
+ <li>Accessibility 지원</li>
+ <li>gecko 기반 어플리케이션 간의 IPC 서비스 <em>(아직 완성 안됨)</em></li>
+ <li><a href="/ko/Storage" title="ko/Storage">Storage</a>/sqlite interfaces <em>(기본으로 활성화되지 않음)</em></li>
+</ul>
+<h3 id=".EC.82.AC.EC.9A.A9.EC.9E.90_.EC.9D.B8.ED.84.B0.ED.8E.98.EC.9D.B4.EC.8A.A4_Features" name=".EC.82.AC.EC.9A.A9.EC.9E.90_.EC.9D.B8.ED.84.B0.ED.8E.98.EC.9D.B4.EC.8A.A4_Features">사용자 인터페이스 Features</h3>
+<p>XULRunner는 다음과 같은 사용자 인터페이스를 제공하며, 특정 조건하에 XULRunner기반 어플리케이션에서 사용하게 됩니다.</p>
+<ul>
+ <li>XUL 어플리케이션을 설치 및 제거하고 업그레이드하는데 필요한 API와 사용자 인터페이스를 제공합니다. 더 많은 정보는 <a class="wikimo" href="https://wiki.mozilla.org/XUL:Installation_Story" title="wikimo:XUL:Installation Story">wikimo:XUL:Installation Story</a>를 보세요.</li>
+ <li>Extension Manager</li>
+ <li>File picker (uses native OS filepicker as appropriate)</li>
+ <li>Find toolbar</li>
+ <li>Helper app dialog/UI</li>
+ <li>Security UI (maintenance of SSL keychains, etc)</li>
+</ul>
+<h3 id="Embedding_APIs" name="Embedding_APIs">Embedding APIs</h3>
+<p>XULRunner는 다음과 같은 임베딩 API를 제공합니다.</p>
+<ul>
+ <li>크로스 플랫폼 임베딩(Cross-platform embedding) (XRE_InitEmbedding)</li>
+ <li><a href="/ko/JavaXPCOM" title="ko/JavaXPCOM">JavaXPCOM</a> 임베딩</li>
+ <li>gtkmozembed (리눅스 only)</li>
+ <li>ActiveX 콘트롤 (윈도즈 only) <em>(아직 완성 안됨)</em></li>
+ <li>NSView 기반 위젯 (Mac OS X only) <em>(아직 완성 안됨)</em></li>
+</ul>
+<h3 id="The_.22Maybe.22_List" name="The_.22Maybe.22_List">The "Maybe" List</h3>
+<p>다음 기능은 이미 논의되어왔고 향후 추가될 예정입니다.</p>
+<ul>
+ <li>LDAP 지원</li>
+ <li>Spellchecking 지원 (사전 제공 또는 제공없이) <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=285977">bug 285977</a>참고</li>
+ <li>프로파일 로밍을 위한 코어 지원(with application-specific extensibility)</li>
+ <li><a href="/ko/PyXPCOM" title="ko/PyXPCOM">PyXPCOM</a> 임베딩 <em>(아직 완성 안됨)</em></li>
+</ul>
+<h3 id="What.27s_out" name="What.27s_out">What's out</h3>
+<p>다음과 같은 기능은 제공하지 않습니다.</p>
+<ul>
+ <li>북마크 또는 히스토리 UI (애플리케이션에 의해 관리되어야함)</li>
+ <li>XForms (XForms은 확장으로 제공됨)</li>
+</ul>

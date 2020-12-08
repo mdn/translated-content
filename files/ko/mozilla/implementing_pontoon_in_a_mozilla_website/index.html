@@ -1,0 +1,73 @@
+---
+title: 모질라 프로젝트에서 Pontoon 실행하기
+slug: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+translation_of: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+---
+<p><a class="external external-icon" href="https://pontoon.mozilla.org/">Pontoon</a> 은 보는 대로 얻을 수 있는 웹기반 지역화 도구입니다. 모질라에서는 현재 다양한 모질라 프로젝트와 Gaia라고 알려진 파이어 폭스 OS 인터페이스를 지역화시키기 위하여 폰툰을 사용하고 있습니다. 폰툰은 매우 간단하고 직관적인 도구입니다. 이는 지역화를 위한 시간을 줄여주기 위하여 어떤 전문적인 기술을 요구하지 않습니다. 여기서 저희는 어떻게 폰툰을 당신의 모질라 프로젝트에 추가하는지 이야기할 것입니다.</p>
+
+<div class="note">
+<p><strong>폰툰을 개선하고 싶으신가요?</strong> <a href="https://github.com/mozilla/pontoon">GitHub</a>에서 어떻게 관여하는지 배우세요.</p>
+</div>
+
+<div class="note">
+<p><strong>단지 당신의 l10n 프로젝트를 시작하고 싶으신가요?</strong> <a href="https://wiki.mozilla.org/L10n:NewProjects">getting your project localized</a>를 확인하세요</p>
+</div>
+
+<h2 id="A._당신의_프로젝트를_번역할_수_있도록_만드세요">A. 당신의 프로젝트를 번역할 수 있도록 만드세요</h2>
+
+<p>저희는 모질라 프로젝트를 지역화하기 위한 표준이 되는 <a class="external external-icon" href="https://mozweb.readthedocs.org/en/latest/reference/l10n.html">best practices</a> 이 이미 있다는 것을 알고 있지만, 그 방법들을 여기에 추가하는 것이 기억하기에 좋다고 생각하였습니다. </p>
+
+<ol>
+ <li>당신의 프로젝트가 l10n 프레임 워크들중 하나를 지원한다는 것을 보증하세요(<a class="external external-icon" href="https://www.gnu.org/software/gettext/">gettext</a>, <a class="external external-icon" href="https://docs.oasis-open.org/xliff/xliff-core/v2.0/xliff-core-v2.0.html">XLIFF</a>, <a class="external external-icon" href="https://projectfluent.org/">L20n</a>, <a class="external external-icon" href="https://github.com/mozilla-l10n/langchecker/wiki/.lang-files-format">lang</a>, <a class="external external-icon" href="https://wikipedia.org/wiki/.properties">properties</a>, etc.).</li>
+ <li>resource files에 번역할만한 문자들을 넣어주세요</li>
+ <li>resource files를 저장소(SVN, HG, Git) 에 Push하세요
+  <ul>
+   <li>각각의 지역 폴더들은 반드시 그 디렉토리 트리의 같은 레벨에 위치하고 있어야 합니다. Source locale은 영어로 templates라고 불릴 필요가 있습니다. 당신은 이러한 목적을 위하여 섬세한 지역 폴더를 생성하기 원할지도 모릅니다. 지역 코드는 반드시 그 파일명의 일부가 되서는 안됩니다.</li>
+   <li>올바른 패턴:
+    <pre>/locales/{locale_code}/path/to/file.extension</pre>
+   </li>
+   <li>부적절한 패턴:
+    <pre>/locales/{locale_code}/path/to/file.{locale_code}.extension</pre>
+   </li>
+  </ul>
+ </li>
+ <li>폰툰이 저장소에 쓰기 권한을 가질 수 있도록 확인하세요.
+  <ul>
+   <li>만약 GitHub를 사용한다면, 당신의 프로젝트에 <a href="https://github.com/mozilla-pontoon">mozilla-pontoon</a> 혹은 <a href="https://github.com/orgs/mozilla/teams/pontoon-l10n-robots">pontoon-l10n-robots</a>를 추가하세요</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="B._선택사항_당신의_웹_프로젝트의_in-page_지역화를_활성화하세요">B. (선택사항) 당신의 웹 프로젝트의 in-page 지역화를 활성화하세요</h2>
+
+<ol>
+ <li>폰툰이 당신의 사이트에 접속하고, 내용을 찾아 올바르게 번역할 수 있도록 HTML &lt;body&gt; element로 부터 오는 스크립트를 연결하세요.
+  <ul>
+   <li>
+    <pre id="line1"><span>  </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value">https://pontoon.mozilla.org/pontoon.js</a>"</span><span>&gt;&lt;/<span class="end-tag">script</span>&gt;</span></pre>
+   </li>
+  </ul>
+ </li>
+ <li>만약 당신의 사이트가 <a class="external external-icon" href="/ko/docs/Web/HTTP/CSP">CSP</a>를 사용한다면, 부디 다음의 사항들이 pontoon.mozilla.org 도메인에 허가될 수 있도록 확인해주세요
+  <ol>
+   <li>iframe 내부를 로딩하는 것</li>
+   <li>멀리 있는 CSS를 로딩하는 것</li>
+   <li>멀리 있는 이미지들을 로딩하는 것</li>
+  </ol>
+ </li>
+ <li>만약 당신의 사이트가 <a class="external external-icon" href="/ko/docs/Web/HTTP/X-Frame-Options">X-Frame-Options</a> header를 사용한다면, 부디 iframe 내부가 도메인에 허가될 수 있도록 확인해주세요</li>
+ <li>당신의 사이트가 HTTPS를 지원하는지 확인해주세요. HTTPS는 무료이며, 자동적으로 열립니다. <a href="https://letsencrypt.org/">암호화합시다</a>!</li>
+</ol>
+
+<h2 id="C._폰툰에_당신의_프로젝트를_추가하세요">C. 폰툰에 당신의 프로젝트를 추가하세요</h2>
+
+<p>당신의 프로젝트는 이제 폰툰에 설치될 준비가 되었습니다. 부디 <a class="external external-icon" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Localization%20Infrastructure%20and%20Tools&amp;component=Administration%20%2F%20Setup">Localization Infrastructure and Tools :: Administration / Setup</a>에 버그를 기록하여 주세요 그리고 아래 사항 정보들을 제공해 주세요</p>
+
+<ul>
+ <li>프로젝트 이름</li>
+ <li>저장소 URL</li>
+ <li>요청된 지역들의 목록</li>
+ <li>웹 사이트 URL, 모든 subpage를 포함한 URL들(오직 in-page 지역화를 사용하고 있을 경우에만)</li>
+</ul>
+
+<p>더 자세한 사항을 원한다면, <a class="external external-icon" href="mailto:pontoon-team@mozilla.com">Project Management Team</a>과 연락해주세요.</p>

@@ -1,0 +1,79 @@
+---
+title: Novità in JavaScript 1.7
+slug: Web/JavaScript/New_in_JavaScript/Novità_in_JavaScript_1.7
+tags:
+  - JavaScript
+  - Tutte_le_categorie
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.7
+---
+<p>{{jsSidebar("New_in_JS")}}JavaScript 1.7 è un aggiornamento del linguaggio che include diverse nuove funzionalità, in particolare i generatori, gli iteratori, novità per gli array, le espressioni <code>let</code> e l'assegnazione destrutturante. Inoltre include tutte le funzionalità di <a href="it/Novit%c3%a0_in_JavaScript_1.6">JavaScript 1.6</a>.</p>
+
+<p>Il supporto a JavaScript 1.7 è disponibile a partire da <a href="it/Firefox_2">Firefox 2</a> Beta 1.</p>
+
+<p>Gli esempi di codice riportati in questo articolo possono essere sperimentati con la shell di JavaScript. Si veda <a href="it/Introduzione_alla_shell_di_JavaScript">Introduzione alla shell di JavaScript</a>.</p>
+
+<h2 id="Usare_JavaScript_1.7" name="Usare_JavaScript_1.7">Usare JavaScript 1.7</h2>
+
+<p>Per poter usare alcune delle nuove funzionalità, occorre specificare che si intende usare JavaScript 1.7. Nel codice HTML o XUL, si inserisca:</p>
+
+<pre class="eval"> &lt;script type="application/javascript;version=1.7"/&gt;
+</pre>
+
+<p>Quando si utilizza la shell di JavaScript, occorre impostare la versione di JavaScript che si intende usare tramite la funzione <code>version()</code>:</p>
+
+<pre class="eval"> version(170);
+</pre>
+
+<p>Per usare le funzionalità che richiedono l'uso delle nuove parole chiave <code>yield</code> e <code>let</code> bisogna specificare che si sta usando la versione 1.7 perchè il codice scritto per le vecchie versioni potrebbe utilizzare quelle parole come nome di variabile o come nome di funzione. Le funzionalità che non richiedono l'utilizzo di nuove parole chiave (funzionalità riguardanti gli array e l'assegnamento destrutturante) possono essere usate senza specificare la versione di JavaScript.</p>
+
+<h2 id="Generatori_e_iteratori" name="Generatori_e_iteratori">Generatori e iteratori</h2>
+
+<p>Quando si sviluppa del codice che comprende un algoritmo iterativo (come l'iterazione su una lista o calcoli che si ripetono su un insieme di dati), vi sono spesso variabili di stato i cui valori devono essere mantenuti per tutta la durata del ciclo. Tradizionalmente, si utilizza una funzione di callback per ottenere i valori intermedi di un algoritmo iterativo.</p>
+
+<h3 id="Generatori" name="Generatori">Generatori</h3>
+
+<p>Si consideri il programma che calcola i numeri di Fibonacci:</p>
+
+<pre>function do_callback(num) {
+  document.write(num + "&lt;BR&gt;\n");
+}
+
+function fib() {
+  var i = 0, j = 1, n = 0;
+  while (n &lt; 10) {
+    do_callback(i);
+    var t = i;
+    i = j;
+    j += t;
+    n++;
+  }
+}
+
+fib();
+</pre>
+
+<p>Questo codice utilizza una routine di callback per effettuare operazioni ad ogni passo dell'iterazione. In questo caso, ogni numero di Fibonacci è semplicemente scritto sulla console.</p>
+
+<p>I generatori e gli iteratori lavorano insieme per fornire un metodo nuovo e migliore per fare questo. Vediamo come scrivere la stessa routine utilizzando un generatore:</p>
+
+<pre>function fib() {
+  var i = 0, j = 1;
+  while (true) {
+    yield i;
+    var t = i;
+    i = j;
+    j += t;
+  }
+}
+
+var g = fib();
+for (var i = 0; i &lt; 10; i++) {
+  document.write(g.next() + "&lt;BR&gt;\n");
+}
+</pre>
+
+<p>La funzione contenente la parola chiave <code>yield</code> è un generatore. Quando viene chiamata i suoi parametri formali sono legati agli argomenti attuali, ma il corpo non viene realmente eseguito. Invece, viene restituito un generatore-iteratore. Ogni chiamata al metodo <code>next()</code> del generatore-iteratore effettua un nuovo ciclo. Il valore di ogni ciclo è il valore specificato dalla parola chiave <code>yield</code>. Si può pensare a <code>yield</code> come alla versione per generatori-iteratori di <code>yield</code>. Ogni volta che si chiama <code>next()</code>, il codice del generatore riprende dall'istruzione che segue la parola chiave <code>yield</code>.</p>
+
+<p>Il ciclo di un generatore-iteratore si esegue quindi chiamando ripetutamente il suo metodo <code>next()</code>, associandolo alla condizione desiderata. In questo esempio, possiamo ottenere tutti i numeri di Fibonacci che vogliamo chiamando <code>g.next()</code> fino a quando abbiamo il numero di risultati che desideriamo.</p>
+
+<p>{{ languages( { "es": "es/New_in_JavaScript_1.7", "es": "es/Novedades_en_JavaScript_1.7", "fr": "fr/Nouveaut\u00e9s_dans_JavaScript_1.7", "ja": "ja/New_in_JavaScript_1.7", "pl": "pl/Nowo\u015bci_w_JavaScript_1.7" } ) }}</p>

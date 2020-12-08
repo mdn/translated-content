@@ -1,0 +1,87 @@
+---
+title: Adding More Elements
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Adding_More_Elements
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Groupboxes" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Stacks_and_Decks">다음  »</a></p>
+</div><p></p>
+<p>파일 찾기 대화창에 몇 가지 상자를 추가하면서 상자에 대한 논의를 마무리 하겠습니다.</p>
+<div class="highlight">
+ <h3 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C.EC.97.90_.EB.AA.87.EA.B0.80.EC.A7.80_.EC.9A.94.EC.86.8C_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C.EC.97.90_.EB.AA.87.EA.B0.80.EC.A7.80_.EC.9A.94.EC.86.8C_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">우리의 파일 찾기 예제에 몇가지 요소 추가하기</h3>
+ <p>이제 파일 찾기 대화창에 몇 가지 요소를 추가하겠습니다. 먼저 파일크기 및 날짜와 같은 정보를 검색할 수 있는 기능을 추가할 것입니다.</p>
+ <pre class="eval">&lt;hbox&gt;
+  <span class="highlightred">&lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;</span>
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+</pre>
+ <div class="float-right">
+  <img alt="Image:boxfinal1.png"></div>
+ <p>2 개의 <a href="ko/XUL_Tutorial/List_Controls#_Drop-down_Lists">드롭 다운 상자</a>가 대화창에 추가되었습니다. 이들을 구분짓기 위해서 각 요소 사이에 <a href="ko/XUL_Tutorial/Using_Spacers">spacer</a>가 추가되어 있습니다. 이들 spacer는 각각 10픽셀 너비가 주어졌습니다. 창 크기가 바뀌면, 글상자는 커지지만 다른 구성요소는 그대로 있는 것을 보실 수 있습니다. 또한 라벨이 제거된 것을 보실 수 있습니다.</p>
+ <p>세로 방향의 창 크기를 바꾸더라도, 해당 요소들의 크기는 변하지 않습니다. 이것은 해당 요소가 가로상자 내부에 있기 때문입니다. 만일 찾기(Find)와 취소(Cancel) 버튼이 항상 창 하단에 있게되면 보기가 더 좋을 것입니다. 이것은 2개의 가로상자 사이에 spacer를 추가해서 간단하게 처리할 수 있습니다.</p>
+ <pre class="eval"><span class="highlightred">&lt;spacer style="height: 10px"/&gt;</span>
+&lt;hbox&gt;
+  &lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+
+<span class="highlightred">&lt;spacer style="height: 10px" flex="1"/&gt;</span>
+
+&lt;hbox&gt;
+</pre>
+ <p>이제 대화창 크기가 바뀌면, 2개의 버튼은 항상 대화창 하단에 있도록 움직이게 됩니다. 첫번째 <code><a href="/ko/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>는 제목 라벨과 검색 기준 요소 사이에 여백을 추가한 것입니다.</p>
+ <p>검색 기준 둘레에 선이 있다면 더 보기 좋을 것입니다. 이를 처리할 수 있는 방법에는 두 가지가 있습니다. CSS의 <code>border</code> 속성을 사용하거나 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> 요소를 사용할 수 있습니다. 첫 번째 방식은 상자 자체에 스타일 속성을 사용하면 됩니다. 우리는 후자의 방식을 사용할 것입니다. <a href="ko/XUL_Tutorial/Groupboxes">groupbox</a>는 현재의 테마에 어울리는 보기 좋은 둥근 테두리를 가진 상자를 그려주는 장점이 있습니다.</p>
+ <p><code>groupbox</code>로 상자를 변경해 보겠습니다.</p>
+ <pre class="eval"><span class="highlightred">&lt;groupbox orient="horizontal"&gt;</span>
+  <span class="highlightred"><span class="nowiki">&lt;caption label="Search Criteria"/&gt;</span></span>
+  &lt;menulist id="searchtype"&gt;
+  .
+  .
+  .
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+<span class="highlightred">&lt;/groupbox&gt;</span>
+</pre>
+ <div class="float-right">
+  <img alt="Image:boxfinal2.png"></div>
+ <p>마찬가지로 다른 표면적인 문제가 있습니다. groupbox가 상자 하단 세로방향으로 확장되도록 groupbox를 늘릴 수도 있습니다. 또한 해당 요소가 잘 위치되도록 여백의 일부를 수정할 수도 있습니다.</p>
+ <p>본 자습서를 통해 요소들을 추가하면서 상자 모델과 그것들의 몇 가지 기능들에 대한 기능들에 대한 더 많은 예제를 보게 될 것입니다..</p>
+ <p>지금까지의 파일 찾기 예제 <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">View</a></p>
+</div>
+<p>다음에는 <a href="ko/XUL_Tutorial/Stacks_and_Decks">스택을 작성하는 방법</a>에 대해 알아 보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Groupboxes" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Stacks_and_Decks">다음  »</a></p>
+</div><p></p>
+<p></p>

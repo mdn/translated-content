@@ -1,0 +1,133 @@
+---
+title: List Controls
+slug: Mozilla/Tech/XUL/XUL_Tutorial/List_Controls
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/List_Controls
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Input_Controls" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Progress_Meters">다음  »</a></p>
+</div><p></p>
+<p>XUL은 목록 상자를 생성하는 여러 요소의 형식을 가지고 있습니다.</p>
+<h3 id=".EB.AA.A9.EB.A1.9D_.EC.83.81.EC.9E.90" name=".EB.AA.A9.EB.A1.9D_.EC.83.81.EC.9E.90">목록 상자</h3>
+<p>목록 상자는 목록에서 여러 항목을 표시하는 데 사용됩니다. 사용자는 리스트에서 어떤 항목을 선택할 수 있습니다.</p>
+<p>XUL은 목록을 생성하기 위해 두 가지 요소 타입을 제공하는데, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code> 요소는 다중 행 목록 상자를, 그리고 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>요소는 드롭다운 목록 상자를 생성합니다. 이들은 HTML <code>select</code> 요소와 유사한 방식으로 작업을 하면서, 두 가지 기능 모두 수행하지만, XUL의 요소는 추가적인 기능을 가지고 있습니다.</p>
+<p>가장 단순한 목록 상자는 상자 자체에 대해서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>를 사용하고, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code> 요소는 각 항목으로 사용합니다. 예제를 보면, 이 목록 상자는 4개의 행을 가지면서, 각 항목마다 하나씩입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:lists1.png"></div>
+<pre>&lt;listbox&gt;
+  &lt;listitem label="Butter Pecan"/&gt;
+  &lt;listitem label="Chocolate Chip"/&gt;
+  &lt;listitem label="Raspberry Ripple"/&gt;
+  &lt;listitem label="Squash Swirl"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>HTML의 <code>option</code> 요소가 가진 것과 마찬가지로, 사용자는 <code><code id="a-value"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 속성을 사용해서 각 항목에 대해 값을 할당할 수 있습니다. 그리고 나서 스크립트로 해당 값을 사용할 수 있습니다. 목록 상자는 적당한 크기를 기본으로 설정하지만, <code><code id="a-rows"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> 속성으로 크기를 제어할 수 있습니다. 목록 상자에 출력될 행 수를 지정하기 위해 값을 설정하세요. <code>rows</code> 값 보다 더 많은 행이 있으면 이를 표시할 수 있는 스크롤바가 나타납니다.</p>
+<p>다음의 예제는 이러한 추가 기능을 설명합니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul">View</a></p>
+<pre>&lt;listbox rows="3"&gt;
+  &lt;listitem label="Butter Pecan" value="bpecan"/&gt;
+  &lt;listitem label="Chocolate Chip" value="chocchip"/&gt;
+  &lt;listitem label="Raspberry Ripple" value="raspripple"/&gt;
+  &lt;listitem label="Squash Swirl" value="squash"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>이 예제는 한번에 단 3개 행만을 표시하도록 변경된 것입니다. 또한 목록에 있는 각 항목에 값이 추가되었습니다. 목록 상자는 더 많은 기능을 제공하며, 다음에서 설명하고 있습니다.</p>
+<h3 id=".EB.8B.A4.EC.A4.91.EC.97.B4_.EB.AA.A9.EB.A1.9D_.EC.83.81.EC.9E.90" name=".EB.8B.A4.EC.A4.91.EC.97.B4_.EB.AA.A9.EB.A1.9D_.EC.83.81.EC.9E.90">다중열 목록 상자</h3>
+<p>목록 상자는 다중열을 지원합니다. 셀에는 보통 텍스트가 쓰이지만 어떤 컨텐츠도 포함할 수 있습니다. 사용자가 목록에서 항목을 선택하면 행 전체가 선택되며, 하나의 셀만 선택되도록 할 수는 없습니다.</p>
+<p>목록 상자에 열을 명시하기 위해서는 2개의 태그가 사용됩니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code></code> 요소는 열의 정보를 담기 위해 사용되며, 각 열에 대한 정보는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code></code>요소를 사용해 명시합니다. 목록 상자의 각 열별로 하나의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code></code> 요소가 필요합니다.</p>
+<p>행에 포함되는 각 셀은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code> 요소를 사용해 표현합니다. 3개의 열을 표현하려면, 각각의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code> 내부에 3개의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code>을 넣어야 합니다. 셀의 텍스트 컨텐츠를 명시하려면 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code> 요소의 <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성을 사용합니다. 하나의 열만 있는 단순한 경우에는 <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성을 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code> 요소에 직접 넣을 수 있으며, 이럴 경우에는 앞서 보았던 목록 상자 예제처럼 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code> 요소가 전혀 필요 없습니다.</p>
+<p>다음은 두 개의 열과 세개의 행을 가진 목록 박스 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul">View</a></p>
+<pre>&lt;listbox&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="House Painter"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Candle Maker"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Swashbuckler"/&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+<h3 id=".EB.A8.B8.EB.A6.AC_.ED.96.89" name=".EB.A8.B8.EB.A6.AC_.ED.96.89">머리 행</h3>
+<p>목록 상자에서는 특별한 머리 행을 사용할 수 있습니다. 이것은 일반적인 행과 비슷하지만 다른 모양으로 출력됩니다. 이것은 열 머리를 만들기 위해 사용할 수 있으며, 두 개의 새로운 요소가 사용됩니다.</p>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code></code> 요소는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>가 보통 행에 사용되는 것처럼, 머리 행을 위해 사용합니다. 머리 행은 보통 행이 아니라서, 스크립트를 이용해 목록 상자의 첫번째 행을 얻으려고 할 경우 무시됩니다.</p>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code></code> 요소는 머리 행의 각 셀에 사용됩니다. 머리 셀의 라벨을 지정하기 위해서는 <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성을 사용하세요.</p>
+<p>다음은 예제 3에 머리 행을 추가한 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_4"><a id="%EC%98%88%EC%A0%9C_4"></a><strong>예제 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:morelists1.png"></div>
+<pre>&lt;listbox&gt;
+
+  &lt;listhead&gt;
+    &lt;listheader label="Name"/&gt;
+    &lt;listheader label="Occupation"/&gt;
+  &lt;/listhead&gt;
+
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol flex="1"/&gt;
+  &lt;/listcols&gt;
+
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="House Painter"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Candle Maker"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Swashbuckler"/&gt;
+  &lt;/listitem&gt;
+
+&lt;/listbox&gt;
+</pre>
+<p>위 예제에서는 열을 유연하게 만들기 위해 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 속성을 사용하였습니다. 이 속성은 다음 절에서 설명하겠지만, 여기서는 열이 남은 공간을 모두 채우도록 하는데 사용하고 있습니다. 여러분이 창의 크기를 변경하면 열이 창만큼 늘어나는 것을 볼 수 있을 것입니다. 창의 크기가 줄어들면, 셀안에 있는 라벨이 자동으로 잘려 지고 생략부호가 출력됩니다. 생략부호가 출력되지 않도록 하기 위해서는 셀이나 아이템에 <code><code id="a-crop"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></code> 속성을 <code>none</code>으로 설정하면 됩니다.</p>
+<h3 id=".EB.93.9C.EB.A1.AD.EB.8B.A4.EC.9A.B4_.EB.AA.A9.EB.A1.9D" name=".EB.93.9C.EB.A1.AD.EB.8B.A4.EC.9A.B4_.EB.AA.A9.EB.A1.9D">드롭다운 목록</h3>
+<p>드롭다운 목록은 <code>select</code> 요소를 사용하여 HTML에서 생성할 수 있습니다. 사용자는 텍스트상자에서 하나만 선택된 것을 볼 수도 그리고 화살표를 클릭하거나 다른 선택을 하기 위해 텍스트상자 옆에 있는 유사한 버튼을 클릭할 수도 있습니다. 다른 선택사항은 팝업창에 나타날 것입니다. XUL은 이런 목적에 사용할 수 잇는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 요소를 가지고 있습니다. 이것은 텍스트상자와 그 옆에 있는 버튼으로 이루어집니다. 이름이 선택된 것은 내부에서 선택된 메뉴로 띄워졌기 때문입니다.</p>
+<p>드롭다운 상자를 기술하기 위해서는 세 가지 요소가 필요합니다. 첫번째는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 요소로 버튼을 가진 텍스트상자를 생성합니다. 두번째는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>으로 버튼을 클릭했을 때 나타나는 팝업창을 생성합니다. 세번재는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>으로 개별 선택 항목을 생성합니다.</p>
+<p>다음의 예제는 이런한 점을 잘 설명하고 있는 구문입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_5"><a id="%EC%98%88%EC%A0%9C_5"></a><strong>예제 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:inputs2.png"></div>
+<pre>&lt;menulist label="Bus"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Car"/&gt;
+    &lt;menuitem label="Taxi"/&gt;
+    &lt;menuitem label="Bus" selected="true"/&gt;
+    &lt;menuitem label="Train"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>위의 menulist는 4가지 선택 항목을 담고있는 데, 각각은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 요소에 해당 합니다. 선택 항목을 보이도록 하려면 menulist에서 화살 버튼(▼)을 클릭합니다. 하나를 선택하면, menulist에서 선택된 것이 나타납니다. <code><code id="a-selected"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code> 속성은 기본적으로 선택된 값을 지정하는 데 사용됩니다.</p>
+<h4 id=".ED.8E.B8.EC.A7.91_.EA.B0.80.EB.8A.A5.ED.95.9C_.EB.A9.94.EB.89.B4.EB.AA.A9.EB.A1.9D" name=".ED.8E.B8.EC.A7.91_.EA.B0.80.EB.8A.A5.ED.95.9C_.EB.A9.94.EB.89.B4.EB.AA.A9.EB.A1.9D">편집 가능한 메뉴목록</h4>
+<p>기본적으로 사용자는 목록에서 선택항목을 선택할 수만 있습니다. 여러분은 직접 타이핑해서 입력 할 수는 없습니다. 또 다른 종류의 menulist은 필드에서 텍스트 편집을 허용합니다. 예를 들면, 브라우저의 URL 필드 이전에 타이핑한 URL 선택을 위한 드롭다운 메뉴가 있는 데, 거기에 입력할 수도 있습니다.</p>
+<p>편집가능한 menulist를 만들려면, 다음과 같은 <code><code id="a-editable"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/editable">editable</a></code></code> 속성을 추가하면 됩니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_6"><a id="%EC%98%88%EC%A0%9C_6"></a><strong>예제 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul">View</a></p>
+<pre>&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="www.mozilla.org"/&gt;
+    &lt;menuitem label="www.xulplanet.com"/&gt;
+    &lt;menuitem label="www.dmoz.org"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>생성된 URL 필드는 사용자가 선택할 수 있는 이미 설정된 선택 항목을 가지고 있으면서 또한 필드에다 사용자 자신이 타이핑할 수도 있습니다. 사용자가 입력한 텍스트는 새로운 선택항목으로 추가되지는 않습니다. <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성은 이 예제에선 사용되지 않았기 때문에, 기본 값은 공백으로 처리되게 됩니다.</p>
+<p>다음 장에서는 <a href="ko/XUL_Tutorial/Progress_Meters">진행 지시자 만들기</a>를 익혀 보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Input_Controls" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Progress_Meters">다음  »</a></p>
+</div><p></p>
+<p></p>

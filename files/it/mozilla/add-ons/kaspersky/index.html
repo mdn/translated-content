@@ -1,0 +1,82 @@
+---
+title: Firma e distribuzione del vostro componente aggiuntivo
+slug: Mozilla/Add-ons/kaspersky
+translation_of: Mozilla/Add-ons/Distribution
+---
+<p>Dopo che avete compilato il vostro add-on, voi vorrete distribuirlo di modo che gli altri possano provarlo. Sia che vogliate distribuirlo pubblicamente o privatamente, attraverso <a href="https://addons.mozilla.org/">addons.mozilla.org</a> (AMO) o altrove, voi vorrete avere il vostro pacchetto add-on firmato.</p>
+
+<h2 id="Firmare_il_vostro_add-on">Firmare il vostro add-on</h2>
+
+<p>Ad iniziare dalla versione n. 43 di Firefox, esistono delle restrizioni per distribuire un componente aggiuntivo. <span id="result_box" lang="it"><span>Le estensioni e i programmi di installazione multipackage che supportano Firefox devono essere firmati da Mozilla affinché possano essere installati nelle versioni beta e di rilascio di Firefox.</span> <span>Si noti che questo si applica solo ai componenti aggiuntivi di tipo 2 e 32;</span> </span> <a href="/en-US/Add-ons/Install_Manifests#type">altri tipi di componenti aggiuntivi</a> <span lang="it"><span>come temi e language pack non richiedono la firma.</span> <span>Sono esclusi anche i componenti aggiuntivi che supportano solo altre applicazioni come Thunderbird e SeaMonkey.</span> <span>I componenti aggiuntivi non firmati possono ancora essere installati nelle versioni </span></span><a href="/en-US/Firefox/Developer_Edition">Developer Edition</a>,<span lang="it"><span> Nightly e versioni </span></span><a href="/en-US/Firefox/Enterprise_deployment">ESR</a> <span lang="it"><span>di Firefox, dopo aver attivato la preferenza </span></span><em>xpinstall.signatures.required</em><span lang="it"><span> in about: config.</span></span></p>
+
+<p>Solo Mozilla può firmare il componente aggiuntivo in modo che Firefox lo installi per impostazione predefinita.I componenti aggiuntivi vengono firmati<a href="https://addons.mozilla.org/en-US/developers/addon/submit/1">submitting them to AMO</a> o utilizzando l'API e passando una revisione automatica o manuale del codice. Si noti che non è necessario elencare o distribuire il componente aggiuntivo tramite AMO. Se stai distribuendo il componente aggiuntivo da soli, di può scegliere l'opzione Unlisted e AMO servirà solo per firmare il pacchetto contenente il componente aggiuntivo.</p>
+
+<h3 id="API_per_la_firma">API per la firma</h3>
+
+<p>Voi potete firmare il vostro file <a href="/en-US/docs/XPI">XPI</a> usando le <a href="http://olympia.readthedocs.org/en/latest/topics/api/signing.html">addons.mozilla.org signing API</a>. Se usate il tool <a href="/en-US/Add-ons/SDK/Tools/jpm">jpm</a>, il comando <a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_sign">jpm sign</a> utilizza le API per firmare il vostro componente aggiuntivo.</p>
+
+<h2 id="Inviare_ad_AMO">Inviare ad AMO</h2>
+
+<p>Il nuovo componente aggiuntivo è inviato ad AMO tramite <a href="https://addons.mozilla.org/en-US/developers/addon/submit/1">questa form di invio</a>. Il primo passo è leggere e poi accettare <a href="/en-US/Add-ons/AMO/Policy/Agreement">Developer Agreement</a>.</p>
+
+<p>Successivamente, dovrete decidere se vorrete distribuire e pubblicizzare il vostro componente aggiuntivo tramite AMO oppure no. Ecco alcune cose da prendere in considerazione per prendere questa decisione:</p>
+
+<ul>
+ <li>AMO is a very popular distribution platform, with millions of monthly visitors and installations. It is integrated into the Firefox Add-ons Manager, allowing easy installation of published AMO add-ons directly from the Firefox UI.</li>
+ <li>All add-ons listed on AMO are code-reviewed and tested by a team of employees and volunteers. They need to meet various technical and content policies in order to be accepted. Because of this, review times can range between a few hours to a number of weeks, depending on add-on complexity and other factors.</li>
+ <li>Unlisted add-ons are for the most part automatically reviewed and signed. The add-ons review team may from time to time perform a manual review of your signed files and give you feedback about it.</li>
+ <li>When you make updates to your add-on to add features or fix bugs, you'll want any previously installed versions of the add-on to update themselves to the new version.
+  <ul>
+   <li>If you list your add-on on AMO, then all you have to do here is submit the new version to AMO: add-ons default to checking AMO for new versions of themselves.</li>
+   <li>If you do not list your add-on on AMO, you need to tell the host application (e.g. Firefox) where it can find new versions of your add-on. To do this, include a URL in the add-on's manifest called the <a href="/en-US/Add-ons/Install_Manifests#updateURL">updateURL</a>: the host application will go here to get information about updates. At the updateURL you host a file in the <a href="/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Update_RDF_Format">update RDF format</a>: among other things, this file includes another URL called updateLink which points to the updated XPI itself. If you're using the Add-on SDK, see <a href="/en-US/Add-ons/SDK/Tools/jpm#Supporting_updates_for_self-hosted_add-ons">Supporting updates for self-hosted add-ons</a>.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>You should make this decision carefully, as it isn't easy to switch between Listed and Unlisted at present. Due to some platform limitations, in order to make the switch you'll need to delete your add-on entry and then <a href="mailto:amo-admins@mozilla.org">contact the AMO Admins list</a> in order to enable your add-on ID so you can submit it again. You should also know that if you switch from Listed to Unlisted, your current users won't be automatically migrated to the unlisted versions of your add-on. Switching from Unlisted to Listed is easier because Firefox will check for updates on AMO if an add-on doesn't have an updateURL in its install manifest.</p>
+
+<h3 id="Unlisted_add-ons">Unlisted add-ons</h3>
+
+<p>After accepting the Developer Agreement, you'll be asked if you want to list your add-on on AMO. Make sure you choose not to list it.</p>
+
+<p>You'll then be asked if you want your add-on to be side-loaded or not. Side-loading is when your add-on XPI isn't installed directly by users but instead it is bundled in an application installer. An example of this would be an antivirus software package that includes a companion security extension. If your add-on XPI will be installed directly from the web or downloaded and installed manually by your users, then you don't need this option.</p>
+
+<div class="note">
+<p>Internally, AMO labels unlisted add-on submissions that require side-loading as Full Review submissions, and all the rest as Preliminary Review submissions. You may find these labels when looking at your add-on review status. Note that there's no difference between full and preliminary review for unlisted add-ons, other than the ability to side-load the add-on.</p>
+</div>
+
+<p>Choose the platforms your add-on supports and upload your XPI. The file will be scanned by an automatic code validator which will show a number or warnings or errors depending on what it detects. If no errors are found in your package, your add-on management page will be created and your file will be immediately signed. You'll receive an email with instructions on how to download the signed file.</p>
+
+<p>All new versions of your add-ons will also need to signed. Once your first version has been submitted, you can upload new versions in the developer page for your add-on.  The signing process is the same as with new add-ons.</p>
+
+<h3 id="Listed_add-ons">Listed add-ons</h3>
+
+<p>After accepting the Developer Agreement, you'll be asked if you want to list your add-on on AMO. Listing it should be the default option.</p>
+
+<p>Choose the platforms your add-on supports and upload your XPI. The file will be scanned by an automatic code validator which will show a number of warnings or errors depending on what it detects. Errors only show up for listed add-ons if there's something wrong in the package that needs to be fixed before it can be accepted. Warnings can vary in importance and severity; you should read through all of them carefully and see if there's anything you can fix in your add-on in order to avoid them showing up. This doesn't mean that you should obfuscate your code to bypass validation warnings. That practice can lead to your add-on being rejected and potentially blocklisted.</p>
+
+<p>Once you finish your listed add-on submission, it will be placed in a review queue, where one member of our review team will eventually give it a look. This can take between a couple of hours to a number of weeks, depending on add-on complexity and other factors. It also takes longer for the first submission, since all of the code needs to be reviewed. Updates are reviewed based on a diff, so they are quicker. Once your add-on passes review, the file is signed and published on AMO.</p>
+
+<p>Listed add-ons can be submitted for Preliminary Review or Full Review.  Preliminary Review consists of security and content checks, focused on the add-on's code. Full Review is a higher standard, and reviews include feature testing and performance checks. Add-ons with Full Review have more prominence on the site and can be nominated to be <a href="/en-US/Add-ons/AMO/Policy/Featured">featured</a>. Add-ons that are nominated for Full Review and don't meet that standard may receive Preliminary Review approval instead.</p>
+
+<h4 id="Beta_versions">Beta versions</h4>
+
+<p>Beta channels are only available to fully-reviewed add-ons.</p>
+
+<p>To create a beta channel, upload a file with a unique version string that contains any of the following strings: <code>a,b,alpha,beta,pre,rc</code>, with an optional number at the end. This text must come at the end of the version string. If you understand regex format, here's what we look for in the version number: <code>"(a|alpha|b|beta|pre|rc)\d*$"</code>.</p>
+
+<p>Once a file meeting this criteria is uploaded to AMO, it will automatically be detected as a beta version. Users of add-ons with these unique version numbers will automatically be served the newest beta updates. Beta versions are treated like unlisted add-on versions, in that they will be accepted and signed immediately if they pass automatic validation.</p>
+
+<p>While we call these "Beta versions", you can use this channel for nightlies, or alphas, or prerelease versions as you wish. Please note that there is only one channel for this purpose and all of your users on this channel will receive the latest add-ons submitted. For instance, if you upload <code>1.0beta1</code> to the release channel and then upload <code>1.1alpha1</code>, all users of <code>1.0beta1</code> will be offered an upgrade to <code>1.1alpha1</code>. Updates are pushed by submission date and not version number, so users will always get the most recent channel update regardless of any kind of alphabetical sorting.</p>
+
+<h2 id="Ownership">Ownership</h2>
+
+<p>Add-ons can have multiple users with permission to update and manage the listing. Existing authors of an add-on can transfer ownership and add additional developers to an add-on's listing through the Developer Tools provided. No interaction with Mozilla representatives is necessary for a transfer of ownership.</p>
+
+<h2 id="Code_disputes">Code disputes</h2>
+
+<p>Many add-ons allow their source code to be openly viewed. This does not mean that the source code is open source or available for use in another add-on. The original author of an add-on retains copyright of their work unless otherwise noted in the add-on's license.</p>
+
+<p>In the event that we're notified of a copyright or license infringement, we will take steps to address the situation per the DMCA, which may include taking down the add-on listing. Details about this process and how to report trademark or licensing issues can be <a href="https://www.mozilla.org/en-US/about/legal/report-abuse/">found here</a>.</p>
+
+<p>If you are unsure of the current copyright status of an add-on's source code, you must contact the original author and receive explicit permission before using the source code.</p>

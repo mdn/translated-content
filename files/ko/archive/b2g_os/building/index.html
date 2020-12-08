@@ -1,0 +1,125 @@
+---
+title: Firefox OS 빌드하기
+slug: Archive/B2G_OS/Building
+translation_of: Archive/B2G_OS/Building
+---
+<div>
+  </div>
+<div class="warning">
+  <strong>중요</strong>: 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/02/25)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.</div>
+<p><a href="/en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites" title="en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites">빌드환경 설정</a>과 <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build" title="en-US/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build">코드 복사 및 초기 환경 설정</a>이 완료 되고 나면, Boot to Gecko를 시작 할 수 있습니다.</p>
+<h2 id="최신_코드로_업데이트">최신 코드로 업데이트</h2>
+<p>B2G빌드가 처음이 아닐 경우, 빌드를 시작하기 전에 최신 코드를 가져 오고 싶다면 아래와 같이 빌드용 툴과 코드를 최신으로 업데이트 하실 수 있습니다.</p>
+<pre>git pull
+./repo sync
+</pre>
+<p>원하는 repository의 이름만 입력 함으로서 부분적으로 업데이트도 가능합니다.</p>
+<pre>./repo sync gaia
+</pre>
+<p>"repo"의 다른 옵션들에 관심이 있다면 "<code>repo help</code>"를 입력 해 보세요.</p>
+<h2 id="빌드하기">빌드하기</h2>
+<div class="note">
+  <p><strong>주의:</strong> 빌드 하기 전에, 빌드 환경을 개조 하려면 .userconfig파일을 수정하시면 됩니다.  <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">.userconfig 파일 개조하기</a>를 참고하세요.</p>
+</div>
+<p>아래와 같이 입력하면 B2G를 빌드 하실 수 있습니다.</p>
+<pre>cd B2G
+./build.sh
+</pre>
+<p>이번 과정 또한 수행 시간이 많이(2시간 이상)걸리므로 잠깐 다른 일을 처리 하셔도 됩니다. As in the configure step on the previous page, if you are using a directory of previously-extracted Android system files, you should set ANDROIDFS_DIR before running build.sh.</p>
+<h3 id="특정_모듈_빌드하기">특정 모듈 빌드하기</h3>
+<p>Gecko와 같은 특정 모듈만 빌드하려면 아래와 같습니다.</p>
+<pre>./build.sh gecko
+</pre>
+<p>특정 애플리케이션 하나만 빌드하려면, 아래와 같이 환경 변수<code> BUILD_APP_NAME에 "gaia"를 설정 하여 gaia만 빌드 하실 수 있습니다.</code></p>
+<pre>BUILD_APP_NAME=calendar ./build.sh gaia</pre>
+<p>빌드 가능한 모듈을 확인 하고 싶으시면 아래와 같이 수행 하십시오.</p>
+<pre>./build.sh modules
+</pre>
+<h3 id="빌드에_사용되는_코어_갯수_변경">빌드에 사용되는 코어 갯수 변경</h3>
+<p>기본적으로, B2G 빌드 스크립트는 시스템이 가진 코어보다 2개 더 많은 수로 병렬 빌드를 진행 합니다. <code>"</code><code>build.sh" 수행시 -j 파라미터를 통해 그 갯수를 변경 하실 수 있습니다.</code> 이를 통해 빌드 시스템의 CPU로드를 조정하실 수 있습니다. 빌드에서 에러가 발생하면 병렬 빌드의 경우 에러 가 복잡하게 보이므로 코어 갯수를 줄이거나 하나로 한다면 빌드 에러 추적이 용이합니다.</p>
+<p>아래는 2개의 코어로 설정하여 빌드하는 예입니다.</p>
+<pre>./build.sh -j2
+</pre>
+<p>빌드 에러가 발생시는 아래처럼 1개의 코어로 할 경우 에러 결과를 읽고 분석하기 용이 합니다.</p>
+<pre>./build.sh -j1
+</pre>
+<h3 id="다국어_빌드하기">다국어 빌드하기</h3>
+<p>다국어 지원하도록 한다면:</p>
+<h4 id="Gaia">Gaia</h4>
+<ol>
+  <li>먼저 어떤 언어를 지원할 것인지 정하시고. 현재는 <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-dev.json"><code>locales/languages_dev.json</code></a>와 <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-all.json"><code>locales/languages_all.json</code></a>가 Gaia의 언어 설정 관련 파일로 사용됩니다.</li>
+  <li><a href="http://hg.mozilla.org/gaia-l10n">http://hg.mozilla.org/gaia-l10n</a>에서 지원하고자 하는 언어를 가져옵니다. 언어 파일에 리스트 된 각 언어를 가져 오려면 "repo"를 사용해야 합니다.</li>
+  <li>환경 설정으로, set <code>LOCALE_BASEDIR</code>에 위의 2번에서 가져온 파일 절대 경로를 설정합니다. <code>LOCALES_FILE을 1번 설정의 절대 경로로 설정합니다.</code></li>
+</ol>
+<p>예를 들면,</p>
+<pre>export LOCALE_BASEDIR=$PWD/gaia-l10n
+export LOCALES_FILE=$PWD/gecko/gaia/shared/resources/languages-dev.json
+</pre>
+<h4 id="Gecko">Gecko</h4>
+<ol>
+  <li>Determine which Gecko languages file to use. We're currently using <a href="http://hg.mozilla.org/releases/mozilla-b2g18/file/default/b2g/locales/all-locales">b2g/locales/all-locales</a> as our Gecko languages file.</li>
+  <li>Clone the appropriate locales into a directory; this can be <code>gecko-l10n/</code> .
+    <ul>
+      <li>For mozilla-central, use <a href="http://hg.mozilla.org/l10n-central/">http://hg.mozilla.org/l10n-central/</a></li>
+      <li>For mozilla-aurora, use <a href="http://hg.mozilla.org/releases/l10n/mozilla-aurora/">http://hg.mozilla.org/releases/l10n/mozilla-aurora/</a></li>
+      <li>For mozilla-beta or mozilla-b2g18, use <a href="http://hg.mozilla.org/releases/l10n/mozilla-beta/">http://hg.mozilla.org/releases/l10n/mozilla-beta/</a></li>
+    </ul>
+  </li>
+  <li>Clone <a href="http://hg.mozilla.org/build/compare-locales">compare-locales</a>.</li>
+  <li>
+    <p>In your environment, set <code>L10NBASEDIR</code> to the absolute path of the directory in step 2. Set <code>MOZ_CHROME_MULTILOCALE</code> to a string of space-delimited locales from step 1.</p>
+    <p>Add the <code>compare-locales/scripts</code> dir to your <code>PATH</code>, and <code>compare-locales/lib</code> to your <code>PYTHONPATH</code>.</p>
+    For instance,
+    <pre>export L10NBASEDIR=$PWD/gecko-l10n
+export MOZ_CHROME_MULTILOCALE="ja zh-TW"
+export PATH="$PATH:$PWD/compare-locales/scripts"
+export PYTHONPATH="$PWD/compare-locales/lib"
+</pre>
+    <p>Once you have the above set up, you can run build.sh .</p>
+    <p>It looks like you can <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=818560#c9/">use .userconfig</a> as well.</p>
+    <p>These instructions may change as we smooth things out.</p>
+    <h2 id="Known_errors">Known errors</h2>
+    <ul>
+      <li>
+        <h3 id="KeyedVector.h19331_error_indexOfKey_was_not_declared_in_this_scope">KeyedVector.h:193:31: error: indexOfKey was not declared in this scope</h3>
+      </li>
+    </ul>
+    <p>This error appears when your gcc version is too recent. Install gcc/g++/g++-multilib 4.6.x versions.</p>
+    <p>See <a href="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customizing with the .userconfig file</a> for more information.</p>
+    <div class="note">
+      <p><strong>Community Note:</strong> It is possible to use gcc 4.7.x with slight modifications to the B2G code (gcc will guide you) but you won't get any help! Neither with modifying the code nor with bugs you encounter.</p>
+    </div>
+    <ul>
+      <li>
+        <h3 id="arm-linux-androideabi-g_Internal_error_Killed_(program_cc1plus)">arm-linux-androideabi-g++: Internal error: Killed (program cc1plus)</h3>
+      </li>
+    </ul>
+    <p>If you see this message, it most likely means that are lacking of free memory. Ensure having enough free memory before running <code>./build.sh</code>. It should run fine if you system has 4GB of ram.</p>
+    <ul>
+      <li>
+        <h3 id="If_you_get_build_errors_while_the_build_system_is_running_tests">If you get build errors while the build system is running tests</h3>
+      </li>
+    </ul>
+    <p>Sometimes (especially after build tool or operating system updates) you'll get weird errors like this when the build system runs its post-build tests:</p>
+    <pre>Generating permissions.sqlite...
+test -d profile || mkdir -p profile
+run-js-command  permissions
+WARNING: permission unknown:offline-app
+WARNING: permission unknown:indexedDB-unlimited
+build/permissions.js:122: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPermissionManager.add]
+make[1]: *** [permissions] Error 3
+make: *** [gaia/profile.tar.gz] Error 2</pre>
+    <p>In this situation, try deleting the <code>gaia/xulrunner-sdk</code> directory and re-pulling the code:</p>
+    <pre>rm -r gaia/xulrunner-sdk
+</pre>
+    <p>This deletes the downloaded, precompiled copy of <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> that the build system retrieves automatically; on your next build, a new copy of XULRunner will be automatically retrieved.</p>
+    <h2 id="다음_단계">다음 단계</h2>
+    <p>빌드가 완료되면 다음 단계로는 에뮬레이터로 넣을 것인지 단말기로 놓을 것인지에 따라 아래와 같은 선택사항이 있습니다. 자세한 사항은 각각을 참고 하세요.</p>
+    <ul>
+      <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators" title="en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators">B2G 에뮬레이터 사용하기</a></li>
+      <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client" title="en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client">PC용 B2G 클라이언트 사용하기</a></li>
+      <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device" title="en-US/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device">단말기에 Boot to Gecko 설치하기</a></li>
+      <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Pandaboard" title="en-US/docs/Mozilla/Boot_to_Gecko/Pandaboard">판다보드에 Boot to Gecko 설치하기</a></li>
+    </ul>
+  </li>
+</ol>

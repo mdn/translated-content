@@ -1,0 +1,14 @@
+---
+title: Server-Side JavaScript
+slug: Archive/Web/Server-Side_JavaScript
+translation_of: Archive/Web/Server-Side_JavaScript
+---
+<p>Vi propongo la mia idea: usare un solo linguaggio per scrivere intere Web Apps, lo stesso linguaggio che milioni di persone usano già tutti i giorni. </p>
+
+<p>Sembra scontato, ma per almeno i primi dodici anni dell'evoluzione del Web, gli sviluppatori hanno usato parecchi linguaggi diversi sul server che erano disponibili sul browser, il che ha portato a uno disgregamento di gruppi, un know-how inconsistente e un mucchio di esercitazioni di string manipulation server-side per fare in modo di generare pagine HTML o AJAX.</p>
+
+<p><span style="line-height: 1.572;">La semplicità nell'usare JavaScript lato server faceva parte della vision che Netscape aveva ai tempi di Netscape LiveWire. Ma allora i server da 350 MHz erano il meglio che si poteva trovare e Mozilla ancora non emergeva come tecnologia Web poichè ancora ancorata a Netscape.  Oggi, i cicli computazionali sono aumentati di 10 volte e grazie al lavoro di Mozilla su </span><a class="internal" href="/en/Rhino" style="line-height: 1.572;" title="En/Rhino">Rhino </a>(interpreter JavaScript di Java) e <a class="internal" href="/en/SpiderMonkey" style="line-height: 1.572;" title="En/SpiderMonkey">SpiderMonkey </a><span style="line-height: 1.572;">(interprete JavaScript di C) e </span><a class="internal" href="/en/JavaScript" style="line-height: 1.572;" title="En/JavaScript">JavaScript </a>stesso, abbiamo a disposizione basi molto solide per usare JavaScript in maniera straordinaria ed utile su lato server, con performance della stessa gamma di ambienti di sviluppo lato server come PHP e Ruby on Rails. </p>
+
+<p><span style="line-height: 1.572;">Adesso grazie a </span><a class="external" href="https://brendaneich.com/2008/08/tracemonkey-javascript-lightspeed/" style="line-height: 1.572;" title="http://weblogs.mozillazine.org/roadmap/archives/2008/08/tracemonkey_javascript_lightsp.html">TraceMonkey</a><span style="line-height: 1.572;"> , JavaScript(sia lato client che server) vede un aumento della velocità di 20 e 40 volte, secondo quanto afferma Brendan Eich, CTO di Mozilla e creatore di JavaScript. JavaScript lato server è un altro modo in cui, come afferma in questo articolo Eich : "Mozilla vuole che la gente pensi a JavaScript come un linguaggio di uso più generico e che mostri quanto possa essere una piattaforma per creare intere applicazioni.</span></p>
+
+<p>Oggi, molti vendors stanno incorporando Mozilla Rhino o Mozilla SpiderMonkey nei Web server. Alcuni, come ad esempio Aptana che ha il <a class="external" href="http://www.aptana.com/jaxer" title="http://www.aptana.com/jaxer">Jaxer server</a>(open source), ha incorporato l'intero motore Mozilla(che include SpiderMonkey) all'interno di un Web server per attivare AJAX lato server e gli accessi al DOM lato server oltre all'esecuzione di JavaScript su lato server.</p>

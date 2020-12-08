@@ -1,0 +1,90 @@
+---
+title: Localizing extension descriptions
+slug: Localizing_extension_descriptions
+tags:
+  - Add-ons
+  - Extensions
+  - Localization
+translation_of: Mozilla/Localization/Localizing_extension_descriptions
+---
+<p> </p>
+<h3 id="Gecko_1.9.EC.9D.98_.EC.A7.80.EC.97.AD.ED.99.94" name="Gecko_1.9.EC.9D.98_.EC.A7.80.EC.97.AD.ED.99.94">Gecko 1.9의 지역화</h3>
+<p>{{ Gecko_minversion_header(1.9) }} {{ Fx_minversion_header(3) }}</p>
+<p>Gecko 1.9는 부가 기능 설명과 기타 메타데이터를 지역화하는 새롭고 더욱 견고한 방법을 포함합니다. 모든 다양한 설명은 이제 <code>em:localized</code> 속성을 사용하여 <a href="ko/Install_Manifests">install.rdf</a> 파일에 나타납니다. 각각은 정보가 사용되는 로케일을 표시하는 적어도 하나 이상의 <code>em:locale</code> 속성을 포함하고 나서 로케일에 대한 다양한 문자열을 포함합니다. 다음 예제는 이를 잘 보여줍니다(명료하게 하려고 대부분의 일반적인 선언 속성은 삭제했습니다).</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;TabSidebar@blueprintit.co.uk&lt;/em:id&gt;
+    &lt;em:localized&gt;
+      &lt;Description&gt;
+        &lt;em:locale&gt;de-DE&lt;/em:locale&gt;
+        &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+        &lt;em:description&gt;Zeigt in einer Sidebar Vorschaubilder der Inhalte aller offenen Tabs an.&lt;/em:description&gt;
+      &lt;/Description&gt;
+    &lt;/em:localized&gt;
+    &lt;em:localized&gt;
+      &lt;Description&gt;
+        &lt;em:locale&gt;es-ES&lt;/em:locale&gt;
+        &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+        &lt;em:description&gt;Muestra una vista previa de sus pestañas en su panel lateral.&lt;/em:description&gt;
+      &lt;/Description&gt;
+    &lt;/em:localized&gt;
+    &lt;em:localized&gt;
+      &lt;Description&gt;
+        &lt;em:locale&gt;nl-NL&lt;/em:locale&gt;
+        &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+        &lt;em:description&gt;Laat voorbeeldweergaven van uw tabbladen in de zijbalk zien.&lt;/em:description&gt;
+      &lt;/Description&gt;
+    &lt;/em:localized&gt;
+    &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+    &lt;em:description&gt;Displays previews of your tabs in your sidebar.&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>아래에 언급한 모든 메타데이터는 이러한 방식으로 지역화합니다. <code>em:localized</code> 속성이 제공하는 지역화 정보는 아래에 자세히 설명하듯이 지역화 선택 사항을 사용하여 덮어 쓸 수 있습니다.</p>
+<p>주어진 로케일에 대해서 사용할 <code>em:localized</code> 속성을 선택하는 과정은 다음과 같습니다.</p>
+<ol>
+ <li>로케일과 정확하게 일치하는 <code>em:locale</code>을 가진 속성이 있으면 그것을 사용합니다.</li>
+ <li>부분적으로 일치하는 것이 있으면 대시로 구분된 가장 일치하는 부분을 가진 것을 사용합니다 (예: es는 es-ES와 일치하고 반대로도 마찬가지).</li>
+ <li>일치하는 부분의 수가 같은 하나 이상의 로케일이 있으면 가장 일반적인 것을 사용합니다 (예: en-US를 찾을 때 en-GB보다 en을 선호).</li>
+</ol>
+<p>현재의 애플리케이션 로케일을 검색하고 나서 en-US에 대한 대체(fallback) 검색을 합니다.</p>
+<p>선택 사항이 지정되어 있지 않고 현재 로케일이나 en-US에 대해 일치하는 <code>em:localized</code> 속성이 없는 경우에는 최후 방편으로 설치 선언에 직접 지정된 속성을 사용합니다. 이는 Gecko 1.9 이전에 항상 사용되었기 때문입니다.</p>
+<h3 id="Gecko_1.9_.EC.9D.B4.EC.A0.84_.EB.B2.84.EC.A0.84.EC.9D.98_.EC.A7.80.EC.97.AD.ED.99.94" name="Gecko_1.9_.EC.9D.B4.EC.A0.84_.EB.B2.84.EC.A0.84.EC.9D.98_.EC.A7.80.EC.97.AD.ED.99.94">Gecko 1.9 이전 버전의 지역화</h3>
+<p>Gecko 1.9 이전 버전에서는 (Firefox나 Thunderbird와 같은) 툴킷 기반의 애플리케이션을 대상으로 하는 부가 기능에 대한 지역화된 부가 기능 설명을 정의하려면 부가 기능 개발자가 특별한 과정을 밟아야 합니다.</p>
+<ul>
+ <li><a href="ko/Localizing_an_extension#Localizing_strings_in_JavaScript_code">지역화된 속성 파일</a>이 없으면 만듭니다. 외국어 문자가 제대로 표시될 수 있도록 꼭 UTF-8 인코딩을 사용해야 합니다.</li>
+ <li>각각의 지역화된 속성 파일에 (<var>EXTENSION_ID</var>가 여러분의 확장 아이디(<a href="ko/Install.rdf">install.rdf</a>의 <code>&lt;em:id&gt;</code>)와 일치하고 <var>LOCALIZED_DESCRIPTION</var>이 주어진 언어에서 표시할 여러분의 확장에 대한 설명인 곳에) 다음 줄을 추가합니다:
+  <pre>extensions.EXTENSION_ID.description=LOCALIZED_DESCRIPTION</pre>
+ </li>
+ <li><a href="ko/Building_an_Extension#Defaults_Files">기본 선택 사항 파일</a>이 없으면 만듭니다.</li>
+ <li>그 파일에 (<var>EXTENSION_ID</var>가 여러분의 <a href="ko/Install_Manifests">install.rdf</a>의 애플리케이션 아이디와 일치하고 <var>PATH_TO_LOCALIZATION_FILE</var>가 앞서 추가한 지역화 파일의 크롬 경로인 곳에) 다음 줄을 추가합니다:
+  <pre>pref("extensions.EXTENSION_ID.description", "PATH_TO_LOCALIZATION_FILE");</pre>
+ </li>
+</ul>
+<h4 id=".EC.A7.80.EC.97.AD.ED.99.94_.EA.B0.80.EB.8A.A5_.EB.AC.B8.EC.9E.90.EC.97.B4" name=".EC.A7.80.EC.97.AD.ED.99.94_.EA.B0.80.EB.8A.A5_.EB.AC.B8.EC.9E.90.EC.97.B4">지역화 가능 문자열</h4>
+<p>다음의 부가 기능 메타데이터를 이 과정에 따라 지역화할 수 있습니다.</p>
+<ul>
+ <li>name</li>
+ <li>description</li>
+ <li>creator</li>
+ <li>homepageURL</li>
+</ul>
+<h4 id=".EC.A7.80.EC.97.AD.ED.99.94_.EA.B0.80.EB.8A.A5_.EB.AA.A9.EB.A1.9D" name=".EC.A7.80.EC.97.AD.ED.99.94_.EA.B0.80.EB.8A.A5_.EB.AA.A9.EB.A1.9D">지역화 가능 목록</h4>
+<p>여러 값이 존재하는 경우에 대비하여 숫자 색인이 선택 사항 이름 뒤에 붙습니다.</p>
+<pre>extensions.EXTENSION_ID.contributor.1=FIRST_LOCALIZED_CONTRIBUTOR_NAME
+extensions.EXTENSION_ID.contributor.2=SECOND_LOCALIZED_CONTRIBUTOR_NAME
+extensions.EXTENSION_ID.contributor.3=THRID_LOCALIZED_CONTRIBUTOR_NAME
+
+pref("extensions.EXTENSION_ID.contributor.1", "PATH_TO_LOCALIZATION_FILE");
+pref("extensions.EXTENSION_ID.contributor.2", "PATH_TO_LOCALIZATION_FILE");
+pref("extensions.EXTENSION_ID.contributor.3", "PATH_TO_LOCALIZATION_FILE");
+</pre>
+<p>다음의 부가 기능 메타데이터를 이 과정에 따라 지역화할 수 있습니다.</p>
+<ul>
+ <li>developer</li>
+ <li>translator</li>
+ <li>contributor</li>
+</ul>

@@ -1,0 +1,118 @@
+---
+title: Manifest Files
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Manifest_Files
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Manifest_Files
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:The_Chrome_URL" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Creating_a_Window">다음  »</a></p>
+</div><p></p>
+<p><br>
+ 이번 섹션에서는 꾸러미에 chrome과 XUL 파일을 넣는 방법과 꾸러미를 위한 선언 파일(manifest file)을 생성하는 방법에 대해 알아 보겠습니다.</p>
+<h3 id=".EA.BE.B8.EB.9F.AC.EB.AF.B8" name=".EA.BE.B8.EB.9F.AC.EB.AF.B8">꾸러미</h3>
+<p>꾸러미는 사용자 인터페이스의 기능을 정의하는 XUL 파일과 스크립트의 집합입니다. 꾸러미는 모질라에 설치될 수 있으며, chrome URL로 참조될 수도 있습니다. 꾸러미는 어떤 종류의 파일도 포함할 수 있고, 필요한 경우에는 꾸러미의 여러 부분을 하위 디렉토리에 나누어 담을 수도 있습니다. 꾸러미는 디렉토리나 JAR 아카이브로 저장될 수 있습니다.</p>
+<h3 id=".EC.84.A0.EC.96.B8_.ED.8C.8C.EC.9D.BC" name=".EC.84.A0.EC.96.B8_.ED.8C.8C.EC.9D.BC">선언 파일</h3>
+<p>선언 파일은 꾸러미를 설명하고 꾸러미의 디스크에서의 위치와 chrome URL을 연결하는데 사용됩니다. Mozilla 응용 프로그램이 시작될 때 어떤 꾸러미들이 설치되어 있는지 확인하기 위해 chrome 디렉토리에 있는 선언 파일을 검사합니다. 이것은 새로운 꾸러미를 설치하기 위해 여러분이 해야 할 작업은 새로운 선언 파일을 어플리케이션 chrome 디렉토리나 사용자 chrome 디렉토리에 추가하는 것 뿐이라는 것을 의미합니다. 후자의 chrome 디렉토리는 보통 어플리케이션 디렉토리에 쓰기 권한이 없을 수 있기 때문에 사용되는 방법입니다.</p>
+<p>만일 여러분이 권한이 있는 XUL 코드를 Firefox 브라우저에서 테스트 하려고 한다며, 다음의 절차와 같이 한줄만 있는 선언 파일을 가지고 쉽게 할 수 있습니다.</p>
+<ol>
+ <li>어딘가에 새로운 디렉토리를 생성하세요. 예를 들어, Windows일 경우 C:\testfiles일 수 있겠습니다.</li>
+ <li>Chrome 디렉토리에 test.manifest라는 이름을 가진 새로운 <b>ASCII</b><sup>1</sup> 파일을 만드세요. 파일은 .manifest라는 확장자를 가지기만 하면 어떤 이름이든 상관 없습니다. <sup>(1. BOM을 가진 UTF-8은 작동하지 않습니다.)</sup></li>
+ <li>선언 파일에 다음 라인을 추가하세요.</li>
+</ol>
+<pre class="eval"> content tests <a class="external" rel="freelink">file:///C:/testfiles/</a>
+</pre>
+<p>위 라인상의 파일 경로는 앞서 생성한 디렉토리를 가리켜야 합니다. 파일 경로를 정확히 모를 경우에는 브라우저에서 해당 경로를 열고 주소 영역에서 URL을 복사하세요.</p>
+<p>이게 답니다! 이제 여러분이 새로운 디렉토리에 몇 가지 XUL 파일들을 추가만 하면, <a class="external" rel="freelink">chrome://tests/content/</a>&lt;filename&gt; 형식으로 chrom URL을 입력하여 해당 파일을을 로드할 수 있을 것입니다. 물론 변경된 내용을 반영하기 위해서는 브라우저를 재시작 해야 합니다. 만일 파일이 로드되지 않는다면, 파일 경로가 정확한지 확인하세요.</p>
+<p>내용(content) 꾸러미를 위한 선언 파일 라인의 기본 구문은 다음과 같습니다.</p>
+<p>'content &lt;packagename&gt; &lt;filepath&gt;'</p>
+<p>첫 번째 필드인 'content'는 내용(content) 꾸러미라는 것을 나타냅니다. 테마일 경우에는 'skin'을 쓰고, 로케일인 경우에는 'locale'을 사용합니다. 위 예제에서 packagename은 'tests'이고, 이것은 <a class="external" rel="freelink">chrome://tests/content/sample.xul의</a> chrome URL 첫번째 필드가 'tests'라는 것을 의미합니다. 만일 꾸러미 이름이 'browser'였다면 chrom URL은 <a class="external" rel="freelink">chrome://browser/content/가</a> 될 수 있습니다. 마지막 필드는 파일들이 위치한 경로 입니다. 이것은 파일 URL을 사용한 로컬 파일 경로이거나 jar URL을 사용한 JAR 아카이브(archive) 일 수 있습니다. JAR 아카이브에 대해서는 잠시 후에 설명할 것입니다. 선언 파일에 또 다른 라인을 포함하여 여러개의 꾸러미를 명시할 수도 있습니다.</p>
+<p>Firefox에서 사용하는 browser.manifest 파일은 다음과 같습니다.</p>
+<pre>content branding jar:browser.jar!/content/branding/ xpcnativewrappers=yes
+content browser jar:browser.jar!/content/browser/ xpcnativewrappers=yes
+overlay chrome://global/content/viewSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://global/content/viewPartialSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://browser/content/pageInfo.xul chrome://pippki/content/PageInfoOverlay.xul
+</pre>
+<p>여기에는 'branding'과 'browser' 두 개의 꾸러미가 나열되어 있습니다. 또 세 개의 overlays가 명시되어 있는데, 이는 다른 꾸러미의 내용(content)이 함께 조합될 수 있게 해 줍니다. 확장기능들은 대부분 브라우저의 UI와 확장기능의 UI가 병합(merge)되기 때문에 overlays를 사용하게 됩니다.</p>
+<p>branding과 browser 꾸러미의 파일 경로는 content가 아카이브로 꾸려져 있기 때문에 jar URL을 사용하고 있습니다. JAR 아카이브는 ZIP 유틸리티를 이용해 생성할 수 있습니다. Chrome 디렉토리에 위치한 JAR 파일인 경우에는 다음과 같이 아주 간단합니다.</p>
+<p>jar:&lt;filename.jar&gt;!/&lt;path_in_archive&gt;</p>
+<p>browser 꾸러미에서 아카이브는 browser.jar이며 chrome 디렉토리에 선언 파일과 함께 위치합니다. 'content/browser' 경로는 XUL 파일이 위치한 아카이브 내의 경로를 나타냅니다. 만일 아카이브 내에 어떤 경로도 존재하지 않을 경우에는 경로를 명시할 필요가 없습니다. 여기서는 하나의 아카이브에 branding 꾸러미가 다른 경로로 저장되어 있으므로 명시되어 있습니다.</p>
+<p>위에서 생성한 'tests' 꾸러미의 경우, 아카이브로 파일을 꾸리지 않았기 때문에 파일 경로가 직접 사용되었습니다. 개발시에는 변경이 발생할 때마다 매번 모든 파일을 꾸릴 필요가 없기 때문에, 이렇게 하는 것이 좋습니다. 그러나 응용프로그램이나 확장기능으로 배포할 경우에는 조그만 다수의 파일을 설치해야 하는 번거로움을 피하기 위해 하나의 아카이브로 묶길 원할 것입니다.</p>
+<p>선언 파일의 라인 끝에 있는 xpcnativewrappers=yes 부분은 선택적으로 사용되는 플래그입니다. 자바스크립트에서는 웹 페이상에서 있는 코드가 내장(built-in) 함수를 재정의(override) 할 수 있습니다. 만일 xpcnativewrappers 플래그(flag)가 명시되어 있다면, 권한이 부여된 컨텍스트(privileged context)에서 실행되는 스크립트는 재정의된 함수가 아닌 원래의 내장 함수를 호출한다는 것을 의미합니다. 플래그 없이 확장기능이 수정된 버전의 함수를 호출하려고 하면 제대로 작동하지 않을 수도 있고, 더욱이 보안 구멍이 생겨날 수 있습니다. 이 플래그는 이러한 문제점을 방지하기 위해 추가되었으며, 새로운 확장 기능들에서는 항상 사용하는게 좋습니다. 그러나 이러한 변화에 호환되지 않는 오래된 학장기능들에서는 무시됩니다. 이 기능에 대한 자세한 정보는 <a href="ko/XPCNativeWrapper">XPCNativeWrapper</a>를 참조하세요.</p>
+<h3 id=".ED.85.8C.EB.A7.88.EC.99.80_.EB.A1.9C.EC.BC.80.EC.9D.BC" name=".ED.85.8C.EB.A7.88.EC.99.80_.EB.A1.9C.EC.BC.80.EC.9D.BC">테마와 로케일</h3>
+<p>테마와 로케일에서의 구문은 내용 꾸러미와 유사하지만, 여러분은 테마나 로케일을 제공할 내용 꾸러미를 명시해야 할 필요가 있습니다.</p>
+<pre>skin browser classic/1.0 jar:classic.jar!/skin/classic/browser/
+locale browser en-US jar:en-US.jar!/locale/browser/
+</pre>
+<p>위의 예에서 browser에 스킨과 로케일을 적용한다는 것을 나타내기 위한 특별한 필드가 추가되었습니다. 스킨 이름은 'classic/1.0'입니다. 이 경우에 테마 이름의 일부분으로 버전 번호가 사용되었지만, 여러분의 테마를 만들 경우에는 선택적인 사항입니다. Mozilla는 버전 번호를 특별한 방법으로 처리하지 않습니다. 위의 경우 버전 번호는 그냥 테마 이름의 일부분일 뿐입니다. 로케일은 'en-US'입니다. 이것들을 연결하는 chrome URL은 <a class="external" rel="freelink">chrome://browser/skin과</a> <a class="external" rel="freelink">chrome://browser/locale일</a> 수 있습니다. 여러분의 테마나 로케일을 작성할 경우에는 위의 두 줄중 하나를 가진 선언 파일을 생성하고 테마나 로케일에 맞게 수정하기만 하면 됩니다.</p>
+<p>테마에 대한 자세한 정보는 <a href="ko/Themes">Themes</a>를 참조하시고 로케일에 대한 자세한 정보는 <a href="ko/Localization">Localization</a>을 참조하세요.</p>
+<div class="highlight">
+ <h3 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EB.8C.80.ED.99.94.EC.83.81.EC.9E.90_.EC.98.88.EC.A0.9C" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EB.8C.80.ED.99.94.EC.83.81.EC.9E.90_.EC.98.88.EC.A0.9C">우리의 파일 찾기 대화상자 예제</h3>
+ <p>이제 우리가 작성하려고 하는 파일 찾가 대화 상자를 위한 선언 파일을 만들어 보도록 하겠습니다. 원한다면 세 가지 타입을 하나의 파일에 넣을 수 있습니다. 모든 부분(content, skin, locale)이 하나의 파일에 포함되는 확장 기능을 작성할 때 보통 이렇게 합니다. 파일 찾기 대화상자에서는 이러한 방법을 사용할 것입니다. Chrome 디렉토리에 findfile.manifest 파일을 생성하고 다음의 내용을 추가하세요.</p>
+ <pre>content findfile file:///findfile/content/
+skin findfile classic/1.0 file:///findfile/skin/
+locale findfile en-US file:///findfile/locale/
+</pre>
+ <p>위에서 열거된 새로운 디렉토리들을 생성하세요. 디렉토리를 어디에 생성하는지에는 상관이 없지만 선언 파일에서 명시한 파일 경로는 반드시 해당 디렉토리를 가리켜야 합니다. 당연히 여러분의 시스템에 맞는 디렉토리 경로를 사용하면 됩니다. 만일 꾸러미를 배포할 경우에는 JAR 파일로 묶길 원할 수도 있고 그렇게 되면 경로를 수정해야 합니다. 이번 경우에는 선언 파일에 대해 설명하고 다음 섹션에서 볼 예제를 위한 디렉토리를 준비할 목적으로 생성할 것입니다.</p>
+ <p>스킨과 로케일 줄의 두번째 필드가 'findfile'로 명시되었다는 것을 확인하세요. 이것은 스킨과 로케일이 첫 번째 줄에서 명시한 findfile 꾸러미를 수정한다는 것을 의미합니다. 위의 세 가지 경로는 각 부분을 위한 하위 디렉토리를 명시합니다. 여러분은 각 부분에 해당하는 파일을 분리하여 관리하기 위해 하위 디렉토리를 작성하길 원할 것입니다.</p>
+</div>
+<h3 id=".EA.BE.B8.EB.9F.AC.EB.AF.B8_.EC.84.A4.EC.B9.98.ED.95.98.EA.B8.B0" name=".EA.BE.B8.EB.9F.AC.EB.AF.B8_.EC.84.A4.EC.B9.98.ED.95.98.EA.B8.B0">꾸러미 설치하기</h3>
+<p>응용 프로그램을 설치하기 위해서는 설치 프로그램을 만들거나 다른 응용 프로그램에 포함시킬 필요가 있습니다. 어떤 방법을 사용할 것인지는 여러분이 작성하는 응용 프로그램의 종류에 따라 달라집니다. 확장 기능일 경우에는 설치 파일인 <a href="ko/Install_Manifests">install.rdf</a>를 작성해야 하는데, 이는 어떤 것들을 설치할 것인지, 확장기능의 제작자가 누구인지, 호환되는 브라우저 버전이나 응용프로그램 등과 같은 내용을 포함하고 있습니다. 또한 확장 기능은 파일이 설치되는 장소에 제약이 있으므로 <a href="ko/Bundles">고유의 디렉토리 구조</a>를 필요로 합니다. 확장 기능은 <a href="ko/XPI">XPI</a> 파일로 꾸려지게 됩니다. XPI는 <a href="ko/XPInstall">XPInstall</a>의 약자로 Mozilla에서 컴포넌트를 설치할 때 사용됩니다. JAR 파일과 마찬가지로 XPI 파일도 확장자만 다른 ZIP 파일 이기 때문에 ZIP 유틸리티로 보거나 생성할 수 있습니다.</p>
+<p>Firefox의 확장 기능 관리자는 XPI 파일로 꾸려져 있는 확장 기능의 설치를 자동으로 처리해 줍니다. 작성한 확장 기능은 사용자들이 설치를 위해 위치할 수 있는 <a class="link-https" href="https://addons.mozilla.org/">Mozilla Add-ons site</a>로 업로드 할 것을 권장합니다. 어떤 사이트에서나 설치할 수는 있지만, 특정 사이트는 기본적으로 설치가 허가되지 않도록 되어 있을 수 있습니다.</p>
+<p>파일들을 설치하기 위해서는 JavaScript로 작성된 스크립트를 이용할 수도 있습니다. 이러한 방법은 아무 위치에나 파일을 복사할 수 있으며, 다른 방법의 파일 관리 작업을 수행할 수 있게 해 줍니다. 그러나 스크립트로 설치된 응용프로그램은 확장 기능 관리자에 표시되지 않을 것이고, 따라서 자동화된 설치 해제 방법이 존재하지 않습니다. 이런 이유로 설치 스크립트는 잘 사용되지 않습니다.</p>
+<p>독립형 응용 프로그램일 경우에는 XULRunner를 사용하여 꾸려질 수 있습니다. 이렇게 하면 별도의 실행 파일이 가능하며, 브라우저와는 독립적으로 응용 프로그램을 배포할 수 있습니다.</p>
+<p>확장기능을 작성하는 좀 더 자세한 정보는 <a href="ko/Extensions">Extensions</a>을 참조하시고, XULRunner에 대한 상세한 정보는 <a href="ko/XULRunner">XULRunner</a>를 참조하세요.</p>
+<h3 id=".EC.98.A4.EB.9E.98.EB.90.9C_.EC.96.B4.ED.94.8C.EB.A6.AC.EC.BC.80.EC.9D.B4.EC.85.98" name=".EC.98.A4.EB.9E.98.EB.90.9C_.EC.96.B4.ED.94.8C.EB.A6.AC.EC.BC.80.EC.9D.B4.EC.85.98">오래된 어플리케이션</h3>
+<p>만일 Mozilla 소프트웨어의 옛 버전(Firefox 1.5나 Mozilla 1.8 이전 버전)을 위한 응용 프로그램을 작성할 경우에는 좀 더 많은 단계가 추가됩니다. 다음은 옛 버전을 위한 꾸러미를 설정하는 방법에 대해 설명합니다. 여러분이 새로운 확장기능이나 XUL 응용 프로그램을 작성할 경우에는 본 섹션을 건너 뛰어도 됩니다.</p>
+<div class="note">
+ <b>주의</b>: 언급되는 예전 절차는 새로운 SeaMonkey 1.0에도 적용됩니다. SeaMonkey 1.0의 코드베이스는 아직 "선언" 포맷을 채택하지 않고 있습니다.</div>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+         xmlns:chrome="<span class="nowiki">http://www.mozilla.org/rdf/chrome#</span>"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:<span class="highlightred">myapplication</span>"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:<span class="highlightred">myapplication</span>"
+          chrome:displayName="<span class="highlightblue">Application Title</span>"
+          chrome:author="<span class="highlightblue">Author Name</span>"
+          chrome:name="<span class="highlightred">myapplication</span>"
+          chrome:extension="true"/&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+<pre class="eval">content,install,url,<span class="highlightred"><a class="external" rel="freelink">file:///main/app/</a></span>
+</pre>
+<ol>
+ <li>Create a directory somewhere on your disk. Many people put this as a subdirectory inside Mozilla's chrome directory, but this isn't necessary. The directory could be anywhere and on any disk. Put your XUL files in this directory.</li>
+ <li>Create a file called contents.rdf and place it in this directory. Copy the text in the box below into the new contents.rdf file. This file is used to identify the application id, its name, author, version and so on.</li>
+ <li>Change the highlighted parts of the file above to your own information. The red text 'myapplication' should be the ID of your application. You make this up, but typically, the ID is similar to your application's name. Replace the blue highlighted text above with your application's title and author.</li>
+ <li>If the 'chrome:extension' field is true, the application is a Mozilla Firefox Extension and it will show up in the Extensions window of the browser. If false, it will not appear.</li>
+ <li>Save the contents.rdf and make sure it is in the directory you created in step 1.</li>
+ <li>Open the file &lt;mozilla-directory&gt;/chrome/installed-chrome.txt, where &lt;mozilla-directory&gt; is the directory where Mozilla is installed. Exit Mozilla before you do this.</li>
+ <li>Next, you are going to register the new application with Mozilla so it will know where to find it. Add a line at the end of installed-chrome.txt pointing to the new directory you created in step 1. Change the highlighted text to the file URL below of the directory. Make sure that it URL ends with a slash and that you press enter at the end of the line. If you aren't sure what the URL is, open the directory created in step 1 into a Mozilla browser and copy the URL from the location field. Note that the reference should always be a directory, not a file.</li>
+ <li>Delete the file &lt;mozilla-directory&gt;/chrome/chrome.rdf.</li>
+ <li>Start Mozilla. You should be able to view any XUL files you put into the directory using a URL of the form: <b><a class="external" rel="freelink">chrome://</a><span class="highlightred">applicationid</span>/content/file.xul</b> where file.xul is the filename. Your main XUL file should be applicationid.xul which you can load using the shortcut URL <b><a class="external" rel="freelink">chrome://</a><span class="highlightred">applicationid</span>/content/</b>.</li>
+</ol>
+<p>If you are creating skin and/or locale portions, repeat the steps above, except that the format of the contents.rdf file is slightly different. Look at the contents.rdf files in other applications for details.</p>
+<h3 id=".EB.AC.B8.EC.A0.9C_.ED.95.B4.EA.B2.B0" name=".EB.AC.B8.EC.A0.9C_.ED.95.B4.EA.B2.B0">문제 해결</h3>
+<p>Chrome 꾸러미를 작성하는 것은 종종 꼼수가 필요하고, 문제 발생의 원인을 찾기가 어려울 수 있습니다. 여기에서는 여러분들이 작업을 시작하는데 있어서의 몇 가지 팁을 제공하고자 합니다.</p>
+<ul>
+ <li>&lt;mozilla 디렉토리&gt;/chrome/chrome.rdf 파일을 열어보세요. 아마 여러분의 어플리케이션 ID에 대한 참조를 찾을 수 있을 것입니다. 발견할 수 없을 경우에는 등록이 잘못된 것입니다. 만약 참조를 발견하셨다면 아마도 파일을 로드할 때 chrome URL을 잘못 사용했을 것입니다.</li>
+ <li>&lt;mozilla 디렉토리&gt;/chrom/chrome.rdf 파일을 삭제해 보세요. 그 파일은 다시 생성됩니다. 또한 만약 overlays를 사용한다면 &lt;mozilla 디렉토리&gt;/chrome/overlayinfo/ 디렉토리 전체를 삭제해 보세요.</li>
+ <li>Make sure that the URL in the line you added to installed-chrome.txt ends with a slash and the file itself ends with a blank line.</li>
+ <li>윈도우즈에서는 파일 URL이 <a class="external" rel="freelink">file://C/files/app/</a> 형식이어야 하며, 여기서 C는 드라이브 문자입니다.</li>
+ <li>contents.rdf 파일이 올바른 디렉토리에 존재하며 바른 형태(well-formed)인지를 확인 하십시요. Mozilla에서 contents.rdf 파일을 열어, 바른 형태의 XML로 구문 분석되는지 보세요. 그렇지 않다면 노란 배경에 오류가 보일것입니다.</li>
+ <li>여러분이 Mozilla 디버그 빌드(debug build)를 사용하고 있다면, 시작시에 어떤 chrome 어플리케이션이 검사되는지를 나타내는 몇 가지 정보가 터미널에 출력될 것입니다. 여러분이 작성한 어플리케이션이 목록상에 나타나는지 확인하세요.</li>
+ <li>XUL 파일 내 "XML Parsing Error: undefined entity"라는 오류 메시지는 선언 파일의 오류이거나 선언 파일에서 참조하는 jar 파일상의 오류에 의해 발생할 수 있습니다. 예를 들어 &lt;!DOCTYPE window SYSTEM "<a class="external" rel="freelink">chrome://fireclipse/locale/fireclipse.dtd</a>"&gt;에서의 dtd 파일은 반드시 존재해야 하고 디렉토리도 "로케일" 선언 파일에서 정확히 언급되어 있어야만 하며, 만일 그렇지 않다면 XML 구문분석이 실패할 것입니다.</li>
+</ul>
+<p>선언 파일에 대한 좀더 자세한 정보는 <a href="ko/Chrome_Registration">Chrome Registration</a>를 참조하세요.</p>
+<p>다음 섹션에서는 XUL 언어에 대해 좀 더 자세히 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:The_Chrome_URL" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Creating_a_Window">다음  »</a></p>
+</div><p></p>
+<p></p>

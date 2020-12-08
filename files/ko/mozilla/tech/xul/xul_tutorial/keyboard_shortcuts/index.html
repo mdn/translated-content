@@ -1,0 +1,384 @@
+---
+title: Keyboard Shortcuts
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Keyboard_Shortcuts
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Keyboard_Shortcuts
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:More_Event_Handlers" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Focus_and_Selection">다음  »</a></p>
+</div><p></p>
+
+<p>여러분은 키보드에 응답하는 키보드 이벤트 핸들러를 사용할 수 있습니다. 그러나 모든 버튼과 메뉴 항목에 이벤트 핸들러를 사용하는 것은 정말 번거로운 일일 것입니다.</p>
+
+<h3 id=".ED.82.A4.EB.B3.B4.EB.93.9C_.EB.8B.A8.EC.B6.95.ED.82.A4_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".ED.82.A4.EB.B3.B4.EB.93.9C_.EB.8B.A8.EC.B6.95.ED.82.A4_.EB.A7.8C.EB.93.A4.EA.B8.B0">키보드 단축키 만들기</h3>
+
+<p>XUL에서는 키보드 단축키를 정의할 수 있는 방법을 제공합니다. 우리는 <a href="ko/XUL_Tutorial/Simple_Menu_Bars">메뉴 단원</a>에서 <code>accesskey</code> 속성에 대해 알아 보았습니다. 이 속성은 메뉴나 메뉴 항목을 활성화하기 위해 사용자가 누를 수 있는 키를 명시하는데 사용됩니다. 아래 예제에서는 Alt와 F(어떤 플랫폼에서는 다른 키 조합) 키를 눌러 File 메뉴를 선택할 수 있는 것을 보여주고 있습니다. File 메뉴가 열리면 Close 메뉴 항목은 C 키를 눌러 선택할 수 있습니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul">View</a></p>
+
+<pre>&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem id="close-command" label="Close" accesskey="c"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p>여러분은 버튼에도 <code><code id="a-accesskey"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></code> 속성을 사용할 수 있습니다. 버튼에 이 속성을 사용하고 키를 누르면 버튼이 선택(클릭)됩니다.</p>
+
+<p>그러나 여러분은 아마 좀 더 일반적인 방법으로 키보드 단축키를 설정하고 싶어할 것입니다. 예를 들어 클립보드로 텍스트를 복사하기 위해 Control+C를 누르는 것과 같은 것 말입니다. 이와 같은 단축키를 항상 사용할 수 있는 것은 아니지만 창이 열려있는 동안에는 대부분 동작할 것입니다. 보통 키보드 단축키는 아무때나 사용할 수 있고 스크립트를 사용해 무엇인지를 수행할지 여부를 검사할 수 있습니다. 예를 들어 텍스트가 선택되었을 때만 클립보드로 텍스트를 복사하는 것이 가능하도록 하게 검사할 수 있습니다.</p>
+
+<h4 id="key_.EC.9A.94.EC.86.8C" name="key_.EC.9A.94.EC.86.8C">key 요소</h4>
+
+<p>XUL에서는 하나의 창에서 사용할 키보드 단축키를 정의할 수 있게 해주는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소를 제공합니다. 이 요소에는 누를 키와 같이 눌러야 하는 변경키(modifier key, Shift나 Control)를 명시할 수 있는 속성이 있습니다. 예제는 다음과 같습니다.</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="sample-key" modifiers="shift" key="R"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>위의 예제는 Shift와 R 키를 누를 때 활성화되는 단축키를 정의하고 있습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 속성(요소 이름과 동일합니다)은 어떤 키를 눌러야 할지를 나타내기 위해 사용되며 예제에서는 R 키입니다. 이 속성에는 눌러야하는 키에 해당하는 어떤 문자도 넣을 수 있습니다. 변경자는 항상 같이 눌러야 하는 키를 의미하며 <code><code id="a-modifiers"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/modifiers">modifiers</a></code></code> 속성으로 지정합니다. 이 속성은 공백으로 분리된 변경자 키 목록으로 입력하며, 아래의 값을 가질 수 있습니다.</p>
+
+<dl>
+ <dt>alt </dt>
+ <dd>사용자는 항상 Alt 키를 눌러야 합니다. Mac에서는 Option 키에 해당합니다.</dd>
+ <dt>control </dt>
+ <dd>사용자는 항상 Control 키를 눌러야 합니다.</dd>
+ <dt>meta </dt>
+ <dd>사용자는 항상 Meta 키를 눌러야 합니다. Mac에서는 Command 키에 해당합니다.</dd>
+ <dt>shift </dt>
+ <dd>사용자는 항상 Shift 키를 눌러야 합니다.</dd>
+ <dt>accel </dt>
+ <dd>사용자는 항상 특별한 가속키(accelerator key)를 눌러야 합니다. 여기에 사용되는 키는 사용자의 플랫폼에 따라 달라집니다. 보통 이 값을 사용하게 될 것입니다.</dd>
+</dl>
+
+<p>여러분의 키보드에서 이러한 모든 키를 제공하지 않을 것이며, 이 경우 키보드에 있는 변경키 중 하나와 연결될 것입니다.</p>
+
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/keyset" title="keyset">keyset</a></code></code> 요소 내부에 위치해야 합니다. 이 요소는 <code>key</code> 요소를 포함하기 위해 고안된 것으로, 파일내 한 곳에서 모든 키 정의를 묶는 용도로 사용됩니다. <code>keyset</code> 요소 밖에 있는 <code>key</code> 요소는 동작하지 않습니다.</p>
+
+<p>일반적으로 각각의 플랫폼은 단축키를 위해 서로 다른 키를 사용합니다. 예를 들어, Windows는 Control 키를 사용하며, Mac에서는 Command 키를 사용합니다. 이렇게 플랫폼별로 서로 다른 <code>key</code> 요소를 정의하는 것은 불편할 것입니다. 운 좋게 해결책이 있습니다. <code>accel</code> 변경자는 플랫폼별로 단축키로 사용되는 특수 키를 나타냅니다. 이것은 다른 변경키와 동일하게 작동하면서도 각 플랫폼별로 동일하지 않을 수 있습니다.</p>
+
+<p>여기에 몇 가지 추가 예제가 있습니다.</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="control" key="C"/&gt;
+  &lt;key id="explore-key" modifiers="control alt" key="E"/&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<h4 id="keycode_.EC.86.8D.EC.84.B1" name="keycode_.EC.86.8D.EC.84.B1">keycode 속성</h4>
+
+<p><code><code id="a-key"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 속성은 눌러야 하는 키를 지정하기 위해 사용됩니다. 그러나 문자로 나타낼 수 없는 키(Enter키나 기능키)를 지정하고 싶을 때도 있을 것입니다. <code><code id="a-key"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 속성은 출력 가능한 문자에 대해서만 사용할 수 있습니다. 출력할 수 없는 문자는 <code><code id="a-keycode"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/keycode">keycode</a></code></code>라는 또 다른 속성을 이용해서 지정할 수 있습니다.</p>
+
+<p><code><code id="a-keycode"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/keycode">keycode</a></code></code> 속성에는 키를 나타내는 특별한 코드를 설정해야 합니다. 키 목록은 다음 표와 같습니다. 모든 키가 키보드 상에 있는 것은 아닙니다.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>VK_CANCEL</td>
+   <td>VK_BACK</td>
+   <td>VK_TAB</td>
+   <td>VK_CLEAR</td>
+  </tr>
+  <tr>
+   <td>VK_RETURN</td>
+   <td>VK_ENTER</td>
+   <td>VK_SHIFT</td>
+   <td>VK_CONTROL</td>
+  </tr>
+  <tr>
+   <td>VK_ALT</td>
+   <td>VK_PAUSE</td>
+   <td>VK_CAPS_LOCK</td>
+   <td>VK_ESCAPE</td>
+  </tr>
+  <tr>
+   <td>VK_SPACE</td>
+   <td>VK_PAGE_UP</td>
+   <td>VK_PAGE_DOWN</td>
+   <td>VK_END</td>
+  </tr>
+  <tr>
+   <td>VK_HOME</td>
+   <td>VK_LEFT</td>
+   <td>VK_UP</td>
+   <td>VK_RIGHT</td>
+  </tr>
+  <tr>
+   <td>VK_DOWN</td>
+   <td>VK_PRINTSCREEN</td>
+   <td>VK_INSERT</td>
+   <td>VK_DELETE</td>
+  </tr>
+  <tr>
+   <td>VK_0</td>
+   <td>VK_1</td>
+   <td>VK_2</td>
+   <td>VK_3</td>
+  </tr>
+  <tr>
+   <td>VK_4</td>
+   <td>VK_5</td>
+   <td>VK_6</td>
+   <td>VK_7</td>
+  </tr>
+  <tr>
+   <td>VK_8</td>
+   <td>VK_9</td>
+   <td>VK_SEMICOLON</td>
+   <td>VK_EQUALS</td>
+  </tr>
+  <tr>
+   <td>VK_A</td>
+   <td>VK_B</td>
+   <td>VK_C</td>
+   <td>VK_D</td>
+  </tr>
+  <tr>
+   <td>VK_E</td>
+   <td>VK_F</td>
+   <td>VK_G</td>
+   <td>VK_H</td>
+  </tr>
+  <tr>
+   <td>VK_I</td>
+   <td>VK_J</td>
+   <td>VK_K</td>
+   <td>VK_L</td>
+  </tr>
+  <tr>
+   <td>VK_M</td>
+   <td>VK_N</td>
+   <td>VK_O</td>
+   <td>VK_P</td>
+  </tr>
+  <tr>
+   <td>VK_Q</td>
+   <td>VK_R</td>
+   <td>VK_S</td>
+   <td>VK_T</td>
+  </tr>
+  <tr>
+   <td>VK_U</td>
+   <td>VK_V</td>
+   <td>VK_W</td>
+   <td>VK_X</td>
+  </tr>
+  <tr>
+   <td>VK_Y</td>
+   <td>VK_Z</td>
+   <td>VK_NUMPAD0</td>
+   <td>VK_NUMPAD1</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD2</td>
+   <td>VK_NUMPAD3</td>
+   <td>VK_NUMPAD4</td>
+   <td>VK_NUMPAD5</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD6</td>
+   <td>VK_NUMPAD7</td>
+   <td>VK_NUMPAD8</td>
+   <td>VK_NUMPAD9</td>
+  </tr>
+  <tr>
+   <td>VK_MULTIPLY</td>
+   <td>VK_ADD</td>
+   <td>VK_SEPARATOR</td>
+   <td>VK_SUBTRACT</td>
+  </tr>
+  <tr>
+   <td>VK_DECIMAL</td>
+   <td>VK_DIVIDE</td>
+   <td>VK_F1</td>
+   <td>VK_F2</td>
+  </tr>
+  <tr>
+   <td>VK_F3</td>
+   <td>VK_F4</td>
+   <td>VK_F5</td>
+   <td>VK_F6</td>
+  </tr>
+  <tr>
+   <td>VK_F7</td>
+   <td>VK_F8</td>
+   <td>VK_F9</td>
+   <td>VK_F10</td>
+  </tr>
+  <tr>
+   <td>VK_F11</td>
+   <td>VK_F12</td>
+   <td>VK_F13</td>
+   <td>VK_F14</td>
+  </tr>
+  <tr>
+   <td>VK_F15</td>
+   <td>VK_F16</td>
+   <td>VK_F17</td>
+   <td>VK_F18</td>
+  </tr>
+  <tr>
+   <td>VK_F19</td>
+   <td>VK_F20</td>
+   <td>VK_F21</td>
+   <td>VK_F22</td>
+  </tr>
+  <tr>
+   <td>VK_F23</td>
+   <td>VK_F24</td>
+   <td>VK_NUM_LOCK</td>
+   <td>VK_SCROLL_LOCK</td>
+  </tr>
+  <tr>
+   <td>VK_COMMA</td>
+   <td>VK_PERIOD</td>
+   <td>VK_SLASH</td>
+   <td>VK_BACK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_OPEN_BRACKET</td>
+   <td>VK_BACK_SLASH</td>
+   <td>VK_CLOSE_BRACKET</td>
+   <td>VK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_HELP</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>예를 들어, 사용자가 Alt와 F5를 눌렀을 때 활성화되는 단축키를 만드려면 다음과 같이 하세요.</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="test-key" modifiers="alt" keycode="VK_F5"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>아래 예제는 좀 더 많은 단축키를 보여줍니다.</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C"/&gt;
+  &lt;key id="find-key" keycode="VK_F3"/&gt;
+  &lt;key id="switch-key" modifiers="control alt" key="1"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>첫 번째 키는 사용자가 사용하는 플랫폼에 해당하는 단축키와 C를 눌렀을 때 호출됩니다. 두번째는 F3을 눌렀을 때 호출됩니다. 세 번째는 Control키와 Alt키 그리고 1을 눌렀을 때 호출됩니다. 만일 키보드의 메인 영역에 있는 키와 숫자 패드에 있는 키를 구분하기 위해서는 VK_NUMPAD 키(VK_NUMPAD1과 같은 것)를 사용하세요.</p>
+
+<div class="note">
+<p>응용 프로그램에서 사용할 단축키의 선택과 관련된 더 많은 정보는 <a class="external" href="http://www.mozilla.org/access/keyboard/">Mozilla Keyboard Planning FAQ and Cross Reference</a>를 참조하세요.</p>
+</div>
+
+<h3 id=".ED.82.A4.EB.B3.B4.EB.93.9C_.EB.8B.A8.EC.B6.95.ED.82.A4_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0" name=".ED.82.A4.EB.B3.B4.EB.93.9C_.EB.8B.A8.EC.B6.95.ED.82.A4_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0">키보드 단축키 사용하기</h3>
+
+<p>어떻게 키보드 단축키를 정의하는지를 알았으니까, 이제는 사용 방법에 대해 알아보겠습니다. 두 가지 방법이 있습니다. 첫 번째는 가장 간단한 방법으로 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소에서 키입력(keypress) 이벤트 핸들러를 사용하는 방법입니다. 사용자가 키를 누르면 스크립트가 호출됩니다. 예제는 다음과 같습니다.</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C" oncommand="DoCopy();"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p><code>DoCopy</code> 함수는 사용자가 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소에서 명시한 키를 눌렀을때 호출됩니다. 위 예제에서는 클립보드에 복사하는 키(Control+C)입니다. 이 단축키는 창이 열려있는 동안은 계속 동작합니다. <code>DoCopy</code> 함수는 텍스트가 선택되어 있는지 검사한 후 클립보드에 선택한 텍스트를 복사할 것입니다. 텍스트상자는 원래 클립보드와 관련된 단축키가 있으므로 구현할 필요는 없다는 것을 기억하세요.</p>
+
+<h4 id=".EB.A9.94.EB.89.B4.EC.97.90_.ED.82.A4.EB.B3.B4.EB.93.9C_.EB.8B.A8.EC.B6.95.ED.82.A4_.EC.A7.80.EC.A0.95.ED.95.98.EA.B8.B0" name=".EB.A9.94.EB.89.B4.EC.97.90_.ED.82.A4.EB.B3.B4.EB.93.9C_.EB.8B.A8.EC.B6.95.ED.82.A4_.EC.A7.80.EC.A0.95.ED.95.98.EA.B8.B0">메뉴에 키보드 단축키 지정하기</h4>
+
+<p>메뉴에 있는 명령에 대한 키보드 단축키를 지정할 경우에는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소와 메뉴 명령을 직접 연결할 수 있습니다. 이를 위해서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 요소에 <code><code id="a-key"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 속성을 추가하면 됩니다. 이 속성에는 사용할 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소의 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code>값을 지정하면 됩니다. 예제는 다음과 같습니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul">View</a></p>
+
+<div class="float-right"><img alt="Image:keyshort1.jpg"></div>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"
+          oncommand="alert('Paste invoked')"/&gt;
+&lt;/keyset&gt;
+
+&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem id="paste-command"
+         accesskey="p" key="paste-key"
+         label="Paste" oncommand="alert('Paste invoked')"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p>위 예제에서 메뉴 항목의 <code><code id="a-key"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 속성값은 <code>paste-key</code>로 앞에서 정의된 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 요소의 <code>id</code>와 동일한 값입니다. 여러분은 이 값을 여러개의 메뉴 항목에 대한 키보드 단축키로 여러번 사용할 수 있습니다.</p>
+
+<p>여러분은 그림에서 보듯이 Paste 메뉴 옆에 Control과 V키 텍스트가 위치하는 것을 볼 수 있으며, 이는 이 메뉴를 호출하기 위해 이 키 조합을 누르면 된다는 것을 나타냅니다. 이것은 <code>key</code> 요소에 있는 <code>modifier</code> 속성에 따라 자동으로 추가됩니다. 메뉴에 연결되는 키보드 단축키는 메뉴가 열리지 않은 상태에서도 동작합니다.</p>
+
+<p>키 정의의 또 다른 기능은 쉽게 사용 불가능한 상태로 만들 수 있다는 것입니다. 이를 위해서는 <code>key</code> 요소에 <code><code id="a-disabled"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 속성을 추가하고 <code>true</code>값으로 설정하면 됩니다. 이렇게 지정하면 해당 키보드 단축키는 사용 불가능한 상태이면 따라서 키를 누르더라도 호출되지 않습니다. 스크립트를 이용해 <code>disabled</code> 속성을 변경는 것은 유용한 기능입니다.</p>
+
+<div class="highlight">
+<h4 id=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">파일 찾기 예제</h4>
+
+<p>파일 찾기 대화창을 위한 키보드 단축키를 추가해 보겠습니다. 4개의 단축키를 넣을 것인데, Cut, Copy, Paste 명령에 각각 하나씩과 ESC를 눌렀을 경우 사용할 Close 명령에 하나를 추가할 것입니다.</p>
+
+<pre class="eval"><span class="highlightred">&lt;keyset&gt;
+  &lt;key id="cut_cmd" modifiers="accel" key="X"/&gt;
+  &lt;key id="copy_cmd" modifiers="accel" key="C"/&gt;
+  &lt;key id="paste_cmd" modifiers="accel" key="V"/&gt;
+  &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+ &lt;toolbox&gt;
+  &lt;menubar id="findfiles-menubar"&gt;
+   &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+     &lt;menupopup id="file-popup"&gt;
+       &lt;menuitem label="Open Search..." accesskey="o"/&gt;
+       &lt;menuitem label="Save Search..." accesskey="s"/&gt;
+       &lt;menuseparator/&gt;
+       &lt;menuitem label="Close" accesskey="c" <span class="highlightred">key="close_cmd"</span>
+         oncommand="window.close();"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+   &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+     &lt;menupopup id="edit-popup"&gt;
+       &lt;menuitem label="Cut" accesskey="t" <span class="highlightred">key="cut_cmd"</span>/&gt;
+       &lt;menuitem label="Copy" accesskey="c" <span class="highlightred">key="copy_cmd"</span>/&gt;
+       &lt;menuitem label="Paste" accesskey="p" <span class="highlightred">key="paste_cmd"</span> disabled="true"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+</pre>
+
+<p>이제 우리는 명령을 실행하기 위해 단축키를 사용할 수 있습니다. 물론 아직 클립보드와 관련된 스크립트를 작성하지 않았기 때문에 아무것도 수행되지는 않을 것입니다.</p>
+</div>
+
+<h3 id=".ED.82.A4_.EC.9D.B4.EB.B2.A4.ED.8A.B8" name=".ED.82.A4_.EC.9D.B4.EB.B2.A4.ED.8A.B8">키 이벤트</h3>
+
+<p>위에서 언급한 키와 관련된 기능이 적당하지 않은 경우에 사용할 수 있는 세 가지 키보드 이벤트가 있습니다. 이 이벤트는 다음과 같습니다.</p>
+
+<dl>
+ <dt>keypress </dt>
+ <dd>포커스를 가진 요소에 키가 눌러졌다가 때어질때 호출됩니다. 입력필드에 특정 문자만 입력 가능 하도록 하고자 할 때 사용할 수 있습니다.</dd>
+ <dt>keydown </dt>
+ <dd>포커스를 가진 요소에 키가 눌러졌을 때 호출됩니다. 이 이벤트는 키를 누른 후 때지 않더라도 발생합니다.</dd>
+ <dt>keyup </dt>
+ <dd>포커스를 가진 요소에 눌러진 키가 떨어질 때 호출됩니다.</dd>
+</dl>
+
+<p>키 이벤트는 포커스를 가진 요소로만 전달됩니다. 일반적으로 텍스트상자, 버튼, 체크박스 등이 이에 해당합니다. 포커스를 가진 요소가 아무것도 없다면 XUL 문서가 이벤트의 대상이 됩니다. 이 경우, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 태그에 이벤트 리스너를 추가할 수 있습니다. 그렇지만 일반적으로 전역적인 키에 응답하는 경우에는 앞에서 언급한 키보드 단축키를 사용합니다.</p>
+
+<p>키의 <a href="ko/DOM/event">이벤트 객체</a>는 눌러진 키에 대한 정보를 담고 있는 두 가지 속성이 있습니다. <code><a href="ko/DOM/event.keyCode">keyCode</a></code> 속성은 키 코드를 가지고 있으며 앞 절에서 본 키 테이블에 있는 상수들 중 하나와 비교될 수 있습니다. <code><a href="ko/DOM/event.charCode">charCode</a></code> 속성은 출력 가능한 문자로 눌러진 키에 해당하는 문자 코드를 담고 있습니다.</p>
+
+<div class="highlight"><span id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>지금까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-keyshort.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-keyshort.xul">View</a></div>
+
+<p>다음 절에서는 <a href="ko/XUL_Tutorial/Focus_and_Selection">포커스와 선택을 처리</a>하는 방법에 대해 알아보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:More_Event_Handlers" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Focus_and_Selection">다음  »</a></p>
+</div><p></p>
+
+<p></p>

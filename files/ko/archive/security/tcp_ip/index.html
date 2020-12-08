@@ -1,0 +1,50 @@
+---
+title: TCP/IP 보안
+slug: Archive/Security/TCP_IP
+translation_of: Archive/Security/TCP_IP
+---
+<p>{{draft}}</p>
+
+<p>TCP/IP 는 네트워크 통신을 위해 전세계적으로 사용되고 있다.  TCP/IP 통신에서는 네 개의 계층이 관여한다. 유저가 네트워크를 통해 데이터를 보내고 싶은 경우, 데이터는 높은 계층에서 중간 계층을 거쳐 하위 계층으로 전달되며, 전달되는 과정에서 추가적인 정보들이 추가된다.  각 계층에서 logical unit은 header와 payload로 구성되어 있다. <em>Payload</em>는 이전의 계층에서 받은 정보들을 담고 있으며, <em>header</em>는 주소와 같이 계층의 상세정보를 담고있다. 응용계층에서 payload는 실제 application 데이터다. 가장 낮은 계층은 축적된 모든 정보를 물리적인 네트워크를 통해 데이터를 전달한다. 전달된 데이터는 다시 하위 계층에서 상위 계층으로 전달되어 목적지에 도달한다. 한 계층에서 캡슐화된 데이터는 하위 계층에 있는 더 큰 컨테이너에 캡슐화된다. 아래는 네 개의 TCP/IP 계층을 높은 계층 순으로 나열한 것이다.</p>
+
+<ul>
+ <li><strong>응용 계층(Application Layer).</strong>  이 계층은 Domain Name System (DNS), HyperText Transfer Protocol (HTTP), Simple Mail Transfer Protocol (SMTP)와 같은 특정 어플리케이션들을 위해 데이터를 송수신한다.</li>
+ <li><strong>전송 계층(Transport Layer).</strong> 이 계층은 네트워크 간에 응용 계층 서비스들을 위한 연결 지향적(connection-oriented), 비연결 지향적(connectionless) 서비스들을 제공한다. 전송 계층은 선택적으로 통신의 신뢰성을 보장할 수 있다.Transmission Control Protocol (TCP) 와 User Datagram Protocol (UDP)는 흔하게 사용하는 전송 계층 프로토콜이다.</li>
+ <li><strong>네트워크 계층(Network Layer)</strong><strong>.</strong> 이 계층은 패킷(packet)을 네트워크 상에서 이동시키는 역할을 한다. Internet Protocol (IP)는 TCP/IP를 위한 가장 기초적인 네트워크 계층 프로토콜이다. 네트워크 계층에서 사용되는 또 다른 프로토콜은 Internet Control Message Protocol (ICMP) 와 Internet Group Management Protocol (IGMP)가 있다.</li>
+ <li><strong>링크 계층(Link Layer)</strong><strong>.</strong> 이 계층은 물리적인 네트워크 구성 요소에서 사이에서 일어나는 통신을 담당한다. 가장 잘 알려진 링크 계층 프로토콜로는 이더넷(Ethernet)이 있다.</li>
+</ul>
+
+<dl>
+ <dt>TCP/IP 모델에서 각 계층마다 네트워크 통신을 위한 보안 제어(security control)가 존재한다. 이전에 언급되었듯이, 데이터를 상위계층에서 하위계층으로 전달되며, 각 계층을 통과할 때마다 정보가 추가된다. 이러한 이유로, 상위 계층에서의 보안 제어(security control)는 하위 계층의 보안을 제공할 수 없다. 또한, 하위 계층에서는 상위 계층이 모르게 작동하는 부분들을 상위 계층이 커버해줄 수 없다. 각 계층에서 담당하는 보안 제어 방법들:</dt>
+</dl>
+
+<ul style="list-style-type: square;">
+ <li><strong>응용계층</strong><strong>.</strong> 각 어플리케이션마다 제어 방법을 따로 수립해야한다. 예를 들어, 만약 어플리케이션이 네트워크를 통해 민감한 정보를 보내려 할 때 이 정보를 보호하고 싶다면, 어플리케이션에서의 설정을 변경하여 정보보호를 제공해 줄 수 있을것이다. 이러한 방식은 어플리케이션에 높은 수준의 보안과 유연함을 제공해주지만, 제어방법들을 추가하고 설정하는데에 많은 양의 자원과 투자가 요구된다. 암호학적으로 안전한 응용 프로토콜을 디자인하는 것은 매우 어려운 작업이며, 이를 올바르게 사용하는 것은 더욱 어렵다. 그러므로, 새로운 응용 계층 보안 프로토콜을 만드는 것은 취약점을 만들기 마련이다. 그에 더해, 특히 상용 소프트웨어들은 안전하지 않을 수 있다. 응용 계층 프로토콜들은 응용 계층의 정보를 보호할 수 있지만, 하위 계층에 존재하는 IP주소와 같은 TCP/IP 정보들은 보호하지 못한다. 가급적이면 네트워크 통신을 보호하기 위한 응용 계층의 제어 방식들은 어느 정도의 기간동안 사용되어온 표준 기반 해결책들이어야 한다. 한 가지 예로 이메일을 암호화하기 위해 쓰이는 Secure Multipurpose Internet Mail Extensions (S/MIME)가 있다.</li>
+ <li><strong>전송계층</strong><strong>.</strong>  이 계층에서의 제어는 두 호스트 간에 단일 통신 세션 안에서의 데이터를 보호할 수 있다. IP주소는 네트워크 계층에서 추가되기 때문에, 전송 계층에서는 이를 보호할 방법이 없다. 전송 계층 프로토콜에서 가장 대표적으로 사용되는 것은 TLS로, HTTP 트래픽을 보호하는데에 사용된다. (TLS는 SSL 버전 3의 표준 기반 버전이다. TLS에 관한 추가 정보는 RFC 4346, <em>The TLS Protocol Version 1.1</em>, <a href="https://www.ietf.org/rfc/rfc4346.txt">https://www.ietf.org/rfc/rfc4346.txt</a>에서 찾아볼 수 있다.  또 다른 좋은 자료: NIST SP 800-52,<em> Guidelines on the Selection and Use of Transport Layer Security</em>, 에서 확인 가능<a href="https://csrc.nist.gov/publications/nistpubs/">https://csrc.nist.gov/publications/nistpubs/</a>.) TLS는 어플리케이션이 TLS를 지원해야만 사용가능하다, 그러나 응용 계층 제어와 달리, 전송 계층에서의 TLS와 같은 제어는 응용 계층에서의 작업을 이해 못하기 때문에 침입에 덜 취약하다. TLS를 사용하므로써 어플리케이션에 변동이 필요하겠지만, TLS은 많이 사용되고 있으며 많은 어플리케이션에 적용된, 잘 테스트된 프로토콜이다. 그러므로 응용 계층에 보호를 더하는 것보다 TLS를 선택하는 것이 비교적 안전한 선택이다. 관습적으로, TLS는 HTTP기반의 통신들을 보호하기 위해 사용되어 왔으며 SSL 포털 VPN을 통해 사용될 수 있다.</li>
+ <li><strong>네트워크 계층</strong><strong>.</strong>  이 계층에서의 제어는 모든 어플리케이션에 적용될 수 있으나, 어플리케이션에 특화된 것은 아니다. For example, all network communications between two hosts or networks can be protected at this layer without modifying any applications on the clients or the servers.  In some environments, network layer controls such as Internet Protocol Security (IPsec) provide a much better solution than transport or application layer controls because of the difficulties in adding controls to individual applications.  Network layer controls also provide a way for network administrators to enforce certain security policies.  Another advantage of network layer controls is that since IP information (e.g., IP addresses) is added at this layer, the controls can protect both the data within the packets and the IP information for each packet.  However, network layer controls provide less control and flexibility for protecting specific applications than transport and application layer controls.  SSL tunnel VPNs provide the ability to secure both TCP and UDP communications including client/server and other network traffic, and therefore act as network layer VPNs.</li>
+ <li><strong>링크 계층</strong><strong>.</strong>  Data link layer controls are applied to all communications on a specific physical link, such as a dedicated circuit between two buildings or a dial-up modem connection to an Internet Service Provider (ISP).  Data link layer controls for dedicated circuits are most often provided by specialized hardware devices known as<em> data link encryptors</em>; data link layer controls for other types of connections, such as dial-up modem communications, are usually provided through software.  Because the data link layer is below the network layer, controls at this layer can protect both data and IP information.  Compared to controls at the other layers, data link layer controls are relatively simple, which makes them easier to implement; also, they support other network layer protocols besides IP.  Because data link layer controls are specific to a particular physical link, they cannot protect connections with multiple links, such as establishing a VPN over the Internet.  An Internet-based connection is typically composed of several physical links chained together; protecting such a connection with data link layer controls would require deploying a separate control to each link, which is not feasible.  Data link layer protocols have been used for many years primarily to provide additional protection for specific physical links that should not be trusted.</li>
+</ul>
+
+<p>Because they can provide protection for many applications at once without modifying them, network layer security controls have been used frequently for securing communications, particularly over shared networks such as the Internet.  Network layer security controls provide a single solution for protecting data from all applications, as well as protecting IP information.  Nevertheless, in many cases, controls at another layer are better suited to providing protection than network layer controls.  For example, if only one or two applications need protection, a network layer control may be excessive.  Transport layer protocols such as SSL are most commonly used to provide security for communications with individual HTTP-based applications, although they are also used to provide protection for communication sessions of other types of applications such as SMTP, Point of Presence (POP), Internet Message Access Protocol (IMAP), and File Transfer Protocol (FTP).  Because all major Web browsers include support for TLS, users who wish to use Web-based applications that are protected by TLS normally do not need to install any client software or reconfigure their systems.  Newer applications of transport layer security protocols protect both HTTP and non-HTTP application communications, including client/server applications and other network traffic.  Controls at each layer offer advantages and features that controls at other layers do not.</p>
+
+<p>SSL is the most commonly used transport layer security control.  Depending on how SSL is implemented and configured, it can provide any combination of the following types of protection:</p>
+
+<ul style="list-style-type: square;">
+ <li><strong>Confidentiality</strong><strong>.</strong>  SSL can ensure that data cannot be read by unauthorized parties.  This is accomplished by encrypting data using a cryptographic algorithm and a secret key—a value known only to the two parties exchanging data.  The data can only be decrypted by someone who has the secret key.</li>
+ <li><strong>Integrity</strong><strong>.</strong>  SSL can determine if data has been changed (intentionally or unintentionally) during transit.  The integrity of data can be assured by generating a message authentication code (MAC) value, which is a keyed cryptographic checksum of the data.  If the data is altered and the MAC is recalculated, the old and new MACs will differ.</li>
+ <li><strong>Peer Authentication</strong><strong>.</strong>  Each SSL endpoint can confirm the identity of the other SSL endpoint with which it wishes to communicate, ensuring that the network traffic and data is being sent from the expected host.  SSL authentication is typically performed one-way, authenticating the server to the client, but it can be performed mutually.</li>
+ <li><strong>Replay Protection</strong><strong>.  </strong>The same data is not delivered multiple times, and data is not delivered grossly out of order.</li>
+</ul>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author(s): Sheila Frankel, Paul Hoffman, Angela Orebaugh, and Richard Park</li>
+ <li>Title: National Institute of Standards and Technology (NIST) Special Publication 800-113, Guide to SSL VPNs</li>
+ <li>Last Updated Date: July 2008</li>
+ <li>Copyright Information: This document is not subject to copyright.</li>
+</ul>
+</div>
+
+<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

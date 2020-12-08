@@ -1,0 +1,37 @@
+---
+title: New in JavaScript 1.5
+slug: Web/JavaScript/New_in_JavaScript/1.5
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.5
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>다음은 JavaScript 1.5의 변경 내역입니다. 이 버전은 2000년 11월 14일에 출시된 Netscape Navigator 6.0과 그 이 후 버전 그리고 Firefox 1.0에 포함되어 있습니다. You can compare JavaScript 1.5 to JScript version 5.5 and Internet Explorer 5.5, which was released in July 2000. 해당하는 ECMA 표준은 ECMA-262 Edition 3(1999년 12월 이후) 입니디.</p>
+
+<h2 id="New_features_in_JavaScript_1.5">New features in JavaScript 1.5</h2>
+
+<ul>
+ <li>{{jsxref("Number.prototype.toExponential()")}}</li>
+ <li>{{jsxref("Number.prototype.toFixed()")}}</li>
+ <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> is now a <code><a href="/en-US/docs/Web/JavaScript/Reference/Reserved_Words">reserved word</a></code>.</li>
+ <li>Multiple catch clauses in a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>try...catch</code></a> statement are supported.</li>
+ <li>JavaScript authors can now add getters and setters to their objects.</li>
+</ul>
+
+<h2 id="Changed_functionality_in_JavaScript_1.5">Changed functionality in JavaScript 1.5</h2>
+
+<ul>
+ <li>Runtime errors are now reported as exceptions.</li>
+ <li>Regular Expression changes:
+  <ul>
+   <li>Quantifiers — +, *, ? and {} — can now be followed by a ? to force them to be non-greedy.</li>
+   <li>Non-capturing parentheses, (?:x) can be used instead of capturing parentheses, (x). When non-capturing parentheses are used, matched subexpressions are not available as back-references.</li>
+   <li>Positive and negative lookahead assertions are supported. Both assert a match depending on what follows the string being matched.</li>
+   <li>The m flag has been added to specify that the regular expression should match over multiple lines.</li>
+  </ul>
+ </li>
+ <li>Functions can now be declared inside an if clause.</li>
+ <li>
+  <p>Functions can now be declared inside an expression.</p>
+ </li>
+</ul>

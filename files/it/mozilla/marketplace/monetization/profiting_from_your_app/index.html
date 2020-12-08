@@ -1,0 +1,53 @@
+---
+title: Publishing your app for profit
+slug: Mozilla/Marketplace/Monetization/Profiting_from_your_app
+tags:
+  - italiano tags
+translation_of: Archive/Marketplace/Monetization/Profiting_from_your_app
+---
+<div class="summary">
+<p>Creating Web Apps is not only fun; it's also a great way to turn your passion into revenue! This article sumarizes how you publish app using various the monetization models available.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If you're looking for more information on monetization models or advice on which one to use, check out <a href="/en-US/Marketplace/Prepare/Choosing_your_business_model">Choosing your business model</a>. In addition, the <a href="/en-US/Marketplace/FAQ#Payments">payments section of the Marketplace FAQ</a> provides answers to many common questions about Marketplace payments.</p>
+</div>
+
+<h2 id="How_to_...">How to ...</h2>
+
+<h3 id="Release_a_premium_app">Release a premium app</h3>
+
+<p>To offer a premium (paid) app you need to set it so it's installed from Firefox Marketplace. Then include code to verify a receipt issued by Marketplace, to make sure the app has been paid for before allowing it to run. For more information, see the <a href="/en-US/Marketplace/Monetization/App_payments_guide">App payments guide</a>.</p>
+
+<p>To setup an app as premium in Firefox Marketplace you first identify it as Paid in the <a href="/en-US/Marketplace/Publishing/Submit/Load_your_app#Monetization">initial (monetization)</a> section of the Submit an App page. You then <a href="/en-US/Marketplace/Publishing/Pricing/Payment_Accounts">create an account with one or more payment providers</a>. Once this is done you can select a <a href="/en-US/Marketplace/Monetization/App_pricing">price point</a> for your app. Bear in mind that currently only apps installed into Firefox OS can be premium apps, because payments are not yet supported on desktop or Android.</p>
+
+<h3 id="Release_a_promote_as_upgrade_app">Release a promote as upgrade app</h3>
+
+<p>For this approach you obviously need two apps — the free one and the premium app you'll promote as an upgrade.</p>
+
+<p>Once your apps are ready, first add the free version of the app to Firefox Marketplace, then the premium version. While submitting the premium app select the <a href="/en-US/Marketplace/Publishing/Pricing/Promote_as_upgrade_to_free_version">promote as upgrade to free version</a> option at the bottom of the <strong>Compatibility &amp; Pricing</strong> page.</p>
+
+<h3 id="Release_an_app_with_in-app_payments">Release an app with in-app payments</h3>
+
+<p>You have two options for adding in-app payments to your apps: <a href="/en-US/Marketplace/Monetization/In-app_payments_section/fxPay_iap">fxPay</a> and <a href="/en-US/Marketplace/Monetization/In-app_payments_section/mozPay_iap">mozPay</a>. The principal difference between the two options is that fxPay works without the need for your own server, while mozPay requires you to have a server to store transaction receipts.</p>
+
+<p>In simple terms, development of your app involves defining a number of in-app products you have for sale, reading those products into your app, providing a purchase 'button', and validating the receipt when the product is 'consumed' to ensure it was validly purchased. Full details on the coding required is provided in the <a href="/en-US/Marketplace/Monetization/In-app_payments_section/Introduction_In-app_Payments">In-app payments</a> section.</p>
+
+<div class="note">
+<p><strong>Note</strong>: While we encourage apps using in-app payments to be free for download, it's possible to have a paid app that also uses in-app payments.</p>
+</div>
+
+<p>To setup an app with in-app purchases in Firefox Marketplace, you first identify it as <strong>Paid / In-app</strong> in the <a href="/en-US/Marketplace/Publishing/Submit/Load_your_app#Monetization">initial (monetization)</a> section of the Submit an App page (noting that you will do this for a stub app before development starts to get a API key for mozPay or load in-app products for fxPay). You then <a href="/en-US/Marketplace/Publishing/Pricing/Payment_Accounts">create an account with one or more payment providers</a>, before publishing your app. Bear in mind that currently only apps installed into Firefox OS can be premium apps, because payments are not yet supported on desktop or Android.</p>
+
+<h3 id="Releasing_an_app_with_in-app_advertising">Releasing an app with in-app advertising</h3>
+
+<p>Mozilla has no special relationship with any advertising network, so you are free to choose the ad network or networks. You'll need to consult the developer resources from your chosen network to get full details of the development process, but in general the process is likely to involve: getting a key that will identify to the network that an ad has been displayed or clicked in your app, and coding the ads into your app.</p>
+
+<p>To publish on Firefox Marketplace you now simply identify it as <strong>Free</strong> or <strong>Paid / In-app</strong> as appropriate in the <a href="/en-US/Marketplace/Publishing/Submit/Load_your_app#Monetization">initial (monetization)</a> section of the Submit an App page and compete the apps details. There are no special steps to follow, compared to posting an app without in-app adverts.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/Marketplace/Prepare/Choosing_your_business_model">Choosing your business model</a> for details on the monetization options offered in Firefox Marketplace and advice on choosing the right one for your app.</li>
+ <li><a href="/en-US/Marketplace/Publishing/Submit/Overview">Submit your app</a> for detailed information on the process for submitting an app to Firefox Marketplace.</li>
+</ul>

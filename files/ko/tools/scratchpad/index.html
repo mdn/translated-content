@@ -1,0 +1,90 @@
+---
+title: Scratchpad
+slug: Tools/Scratchpad
+translation_of: Archive/Tools/Scratchpad
+---
+<div>{{ gecko_minversion_header("6.0") }}</div>
+
+<p>Firefox 6 이후 내장되고 있는 스크래치패드(Scratchpad)는 JavaScript 코드의 실험에 편리한 환경을 제공합니다. 웹 페이지의 컨텐츠와 직접 연결해서 코드를 조작할 수 있기 때문에 실제 서비스하는 웹 페이지를 최종적으로 테스트하거나 아이디어를 시험해 볼 수 있습니다. 또한 기존의 웹 사이트를 조작하거나 사이트에서 하고 싶은 조작을 할 수도 있습니다.</p>
+
+<p>한 번에 1 행의 코드를 실행하도록 설계되고 있는 <a href="/ko/Tools/Web_Console" title="Using the Web Console">웹 콘솔</a>과는 달리 스크래치패드는 보다 큰 JavaScript 코드 덩어리를 편집할 수 있고 그리고 출력 결과의 용도에 다양한 방법으로 코드를 실행할 수 있습니다.</p>
+
+<h2 id="스크래치패드를_사용하기">스크래치패드를 사용하기</h2>
+
+<p>스크래치패드 윈도우를 열려면 웹 개발자 메뉴(Mac 에서는 도구모음 메뉴의 부메뉴로서 존재)로 스크래치패드를 선택합니다. 그러면 스크래치패드의 편집 윈도우가 열립니다. 윈도우내에는 스크래치패드의 사용법을 간단하게 나타내 보이는 코멘트가 기재되어 있습니다. 거기에 즉시 JavaScript 의 코드를 쓰기 시작할 수 있습니다.</p>
+
+<p>스크래치패드의 윈도우는 아래와 같은 모양입니다. (Windows 나 Linux 에서는 도구모음도 표시되어 한편 Mac 에서는 화면상부에 도구모음이 표시됩니다):</p>
+
+<p><img alt="scratchpad.png" class="default internal" src="/@api/deki/files/5566/=scratchpad.png"></p>
+
+<p>유용한 키보드 바로가기을 포함한 에디터 그 자체에 관한 문서에 대해서는 <a href="/ko/Tools/Using_the_Source_Editor" title="Using the Source Editor">소스 에디터 사용</a>을 참고하세요.</p>
+
+<p>윈도우의 아래에 코드의 현재의 실행 범위가 표시 됩니다. 여기에는 스크래치패드의 내용 또는 현재의 페이지의 컨텐츠가 됩니다. 자세한 것은 <a href="/ko/Tools/Scratchpad#Scratchpad_scope" title="Scratchpad scope">스크래치패드의 범위</a>를 참고하세요.</p>
+
+<div class="geckoVersionNote">{{ gecko_callout_heading("10.0") }}
+<p>Gecko 10.0 {{ geckoRelease("10.0") }} 로 스크래치패드의 에디터가 문법상 하이라이트나 개량된 인덴트등의 기능을 가지는 <a class="external" href="http://eclipse.org/orion/" title="http://eclipse.org/orion/">Orion</a> 로 옮겨졌습니다.여기에 스크래치패드의 내용이 Firefox 의 세션 복원 기능을 이용해 저장되게 되었으므로 Firefox 다시 시작 후에도 내용이 남습니다.</p>
+</div>
+
+<p>파일 메뉴에서는 JavaScript 코드의 저장이나 읽기를 실행할 수 있기 때문에 다음에 코드를 재이용할 수 있습니다.</p>
+
+<h3 id="코드_실행하기">코드 실행하기</h3>
+
+<p>코드를 기술하면 실행하고 싶은 위치 범위를 선택해 오른쪽 클릭해 (또는 도구모음의 실행 메뉴로) 코드의 실행 방법을 선택해 주세요. 코드의 실행 방법은 세 가지 종류 있습니다.</p>
+
+<div class="note"><strong>주의:</strong> 범위 선택을 실시하지 않는 경우는 윈도우내의 코드 모두 실행됩니다.</div>
+
+<h4 id="실행">실행</h4>
+
+<p>실행 옵션을 선택하면 선택한 코드가 실행됩니다. 이것은 함수나 그 외의 코드를 실행하거나 페이지내의 컨텐츠를 조작하거나 하는 것입니다.</p>
+
+<h4 id="검사">검사</h4>
+
+<p>검사 옵션은 코드를 실행 옵션과 같이 실행합니다. 다만 실행 후에 반환값의 검증을 실시할 수 있는 객체 검사기가 열립니다.</p>
+
+<p>예를 들면 이하의 코드를 입력합니다:</p>
+
+<pre>window
+</pre>
+
+<p>그리고 검사를 선택하면 이하와 같은 검사기의 윈도우가 표시됩니다:</p>
+
+<p><img alt="inspector.png" class="default internal" src="/@api/deki/files/5565/=inspector.png"></p>
+
+<h4 id="표시">표시</h4>
+
+<p>표시 옵션은 선택된 코드를 실행하고 그 결과를 스크래치패드의 에디터내에 코멘트로서 삽입합니다. 이것은 작업중에 테스트 결과의 실행 로그를 남기는데 편리한 방법입니다. 또 이 기능은 큰 문제를 떠안았을 때에 보다 좋은 계산기 프로그램을 가지고 있지 않은 경우에서도 만일의 경우의 계산기로서 사용할 수 있습니다.</p>
+
+<h2 id="지우기">지우기</h2>
+
+<p>실행 메뉴 또는 스크래치패드의 윈도우로 오른쪽 클릭한다고 표시되는 context menu의 "변수 재설정"을 선택하면 모든 변수를 재설정 할 수 있습니다.</p>
+
+<h2 id="스크래치패드_사용_예제">스크래치패드 사용 예제</h2>
+
+<p>아래에 도움이 되는 사례는 많이 있습니다. 여기에서 몇 가지를 소개합니다.</p>
+
+<h3 id="새로운_코드_테스트">새로운 코드 테스트</h3>
+
+<p>스크래치패드는 새로운 코드를 실제의 브라우저 환경에서 테스트하는 것에 특별히 도움이 됩니다. 디버그 중의 코드를 스크래치패드에 붙여넣기하여 실행해 그것이 동작할 때까지 조정합니다. 동작하게 되면 코드를 본래의 파일에 되돌려 완성합니다. 많은 경우 웹 페이지를 다시 읽고 코드를 작성한 후, 디버그 및 테스트를 실시할 수 있습니다.</p>
+
+<h3 id="재활용_가능한_코드">재활용 가능한 코드</h3>
+
+<p>스크래치패드의 도구 모음에는 JavaScript 코드의 저장이나 읽기를 실시하는 명령어가 있습니다. 이 기능은 잘 사용하는 JavaScript는 작은 코드의 보관에 사용할 수 있습니다. 예를 들면 데이터 읽기에 AJAX 리퀘스트를 이용하는 사이트에서 작업을 실시하고 있는 경우 테스트나 데이터의 검증을 위해서 그러한 읽기 조작을 실시하는 코드 영역을 저장해 둘 수 있습니다. 같이 DOM 에 관한 특정의 정보를 덤프 하는 함수와 같은 유용한 범용 디버그 함수를 저장해 둘 수도 있습니다.</p>
+
+<h2 id="스크래치패드_범위"><a name="Scratchpad_scope">스크래치패드 범위</a></h2>
+
+<p><a name="Scratchpad_scope"> </a></p>
+
+<p><a name="Scratchpad_scope">스크래치패드로 실행하는 코드는 페이지 전체에 접근 가능한 샌드 박스내에서 실행됩니다만 신규 작성한 변수는 페이지에 나가지 않습니다. 명시적으로 변수를 페이지로 보내고 싶은 경우는,{{ domxref("window") }} 객체에 그 변수를 두는 것으로 실현할 수 있습니다:</a></p>
+
+<pre><a name="Scratchpad_scope">window.myVariable = value;
+</a></pre>
+
+<p><a name="Scratchpad_scope">이 경우 신규 작성한 <code>window.myVariable</code> 변수는 페이지상에서 실행하고 있는 스크립트에 접근 가능하게 됩니다.</a></p>
+
+<div class="note"><a name="Scratchpad_scope"><strong>주의:</strong> 이 샌드 박스의 동작은 </a><a href="/ko/Tools/Web_Console" title="Using the Web Console">웹 콘솔</a>과 유사합니다. 다만 스크래치패드는 탭을 바꾸어 사용하는 점이 웹 콘솔과는 다릅니다. 즉, 스크래치패드로 실행하는 코드는 맨 앞면의 브라우저 윈도우로 현재 선택하고 있는 탭에 대해서만 실행됩니다. 예를 들면 같은 테스트를 복수의 웹 서버에 대해서 실행 할 수 있게 됩니다.</div>
+
+<h3 id="스크래치패드를_Firefox_내부_접근_사용">스크래치패드를 Firefox 내부 접근 사용</h3>
+
+<p>Firefox 자체에 대하고 작업을 하는 경우나 확장 기능을 개발하는 경우는 스크래치패드를 이용해 브라우저의 내부 모두에게 액세스 할 수 있어 편리합니다. 이를 위해서는 <code>about:config</code>로 설정 <code>devtools.chrome.enabled</code> 를 <code>true</code> 로 설정하는 것이 필요합니다. 이 설정을 하면 실행 환경 메뉴에 브라우저라고 하는 선택 사항이 추가됩니다.이것을 선택하면 범위가 웹 페이지의 컨텐츠로부터 브라우저 전체로 바뀝니다.</p>
+
+<p>{{ languages( { "en": "en/Tools/Scratchpad", "es": "es/Herramientas/Borrador", "fr": "fr/Outils/Ardoise" } ) }}</p>

@@ -1,0 +1,114 @@
+---
+title: Listening to events
+slug: Archive/Add-ons/Listening_to_events_in_Firefox_extensions
+translation_of: Archive/Add-ons/Listening_to_events_in_Firefox_extensions
+---
+<p>Gecko는 사용자가 알기 원하는 흥미로운 것들에 대해 정보를 전달하기 위한 이벤트들을 사용합니다. 이벤트들은 여러 종류 를 가지지만, 이 문헌은 여러분이 그것들에 대해 배우고 여러분이 그것들에 대한 더 특정한 문서들을 직접적(쉽게)으로 접근하는데 도와 줄 것입니다. 또 이 문헌은 관심을 가질 만한 몇 가지 케이스를 제공합니다.</p>
+<h2 id="이벤트들의_타입들">이벤트들의 타입들</h2>
+<p>개발자들은 어플리케이션과 확장기능 안에 포함된 콘텐트의 load와 그 변경에 대해 알기 위해, <a class="internal" href="/en/XUL/browser" title="En/XUL/Browser"><code>browser</code></a> 와 <code><a class="internal" href="/en/XUL/tabbrowser" title="En/XUL/Tabbrowser">tabbrowser</a></code>의 요소들로 부터의 알림을 받을 수 있는데 이것은 여러 이벤트들의 타입들로 가능합니다.</p>
+<h3 id="간단한_DOM_이벤트들">간단한 DOM 이벤트들</h3>
+<p>DOM 이벤트는 다음과 같은 코드로 등록할 수 있습니다:</p>
+<pre>function callback(evt) {
+  // Do your processing here. Check evt.target for the target of the event.
+}
+
+b.addEventListener("event", callback, false)
+</pre>
+<p>위에서 b는 <code>여러분이 이벤트로부터 보기 원하는 </code><code>browser</code> 또는 <code>tabbrowser 입니다. 명심해야 할것은 이벤트들은 </code><code>browser의 프레임이나 또는 </code><code>tabbrowser</code>, 브라우저들의 안에 존재해야 될 것입니다.</p>
+<p>아래 리스트는 여러분이 여러 상황을 모니터하기 원하는 좀 더 흥미로운 DOM 이벤트들입니다.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">이벤트</td>
+   <td class="header">설명</td>
+  </tr>
+  <tr>
+   <td><code>DOMLinkAdded</code></td>
+   <td>새로운 HTML <a class="internal" href="/en/HTML/Element/link" title="En/HTML/Element/Link"><code>&lt;link&gt;</code></a> 요소를 문서에서 감지했을 때 dispatch됩니다.</td>
+  </tr>
+  <tr>
+   <td><code>DOMTitleChanged</code></td>
+   <td>페이지의 타이틀이 변경 되었을 때 dispatch됩니다.</td>
+  </tr>
+  <tr>
+   <td><code>DOMContentLoaded</code></td>
+   <td>페이지의 초기 DOM이 완전히 로드되었을 때 dispatch됩니다.</td>
+  </tr>
+  <tr>
+   <td><code>load</code></td>
+   <td>dispatch된 후에 페이지가(이미지를 포함하여) 처음으로 로딩을 완료했을 때.</td>
+  </tr>
+  <tr>
+   <td><code>unload</code></td>
+   <td>유저가 페이지로부터 떨어져 탐색할 때 dispatch됩니다.</td>
+  </tr>
+  <tr>
+   <td><code>pageshow</code></td>
+   <td>페이지가 새롭게 표시되었을 때 dispacth됩니다.</td>
+  </tr>
+  <tr>
+   <td><code>pagehide</code></td>
+   <td>페이지가 감춰졌을 때 dispatch됩니다.</td>
+  </tr>
+ </tbody>
+</table>
+<p><code>load</code>, <code>unload</code>, <code>pageshow</code> and <code>pagehide 이벤트의 dispatch 유무에 대해서는 </code><a class="internal" href="/En/Using_Firefox_1.5_caching" title="En/Using Firefox 1.5 caching">Firefox's caching behaviour</a>의 기사에서 더 자세하게 다룹니다.</p>
+<h3 id="웹_progress의_listener들">웹 progress의 listener들</h3>
+<p>웹 로드들의 자세한 내용을 보려면 web progress listener를 사용하면 됩니다. 이들은 웹에서 데이터 로드의 progress 상황에 대한 자세한 내용을 제공합니다. 아래는 <code>browser</code> 와 <code>tabbrowser를 요소들을 지원하는 코드입니다:</code></p>
+<pre>var progressListener = {
+  // add nsIWebProgressImplementation here
+}
+
+b.addProgressListener(progressListener);
+</pre>
+<p><code>위에서 b는 여러분이 </code><code>이벤트들에 대해 litsen하기 원하는</code><code> </code><code>browser</code> 또는 <code>tabbrowser 입니다.</code><code> </code><a class="internal" href="/en/Code_snippets/Progress_Listeners" title="en/Code snippets/Progress Listeners">using web progress listeners</a>의 링크는 코드 snippet의 더 자세한 사용 가능을 다룹니다.</p>
+<p>tabbrowser는 오직 현재 이벤트가 발생할 때 표시하는 브라우저부터 이벤트들을 받을 수 있습니다. 모든 브라우저들로부터 이벤트들을 listen하기 위해서는 현재 이벤트에 대해 표시하지않는 코드를 포함하면 됩니다. 아래는 그 예를 설명합니다:</p>
+<pre>var tabsProgressListener = {
+  // add tabs progress listener implementation here
+}
+
+gBrowser.addTabsProgressListener(tabsProgressListener);
+</pre>
+<p>이렇게 하면 여러분은 모든 tab들과 관련된 이벤트들을 받을 수 있습니다. <a class="internal" href="/En/Listening_to_events_on_all_tabs" title="En/Listening to events on all tabs"><span class="external">listening to events from all tabs</span></a> 링크는 더 자세한 사용 가능을 다룹니다.</p>
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/ko/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">모든 탭들로부터 이벤트들을 listen하는 능력은 Firefox 3.5. 버전에 포함 되었습니다.</p>
+</div><p></p>
+<h2 id="파이어폭스에서는_이벤트들을_어떻게_처리하는가">파이어폭스에서는 이벤트들을 어떻게 처리하는가</h2>
+<p>파이어 폭스에서는 이미 어느 정도 progress 이벤트들을 웹 페이지들로 부터 listen합니다. 이 중 대부분은 <code>browser로 가게됩니다.js.</code></p>
+<h3 id="DOMLinkHandler">DOMLinkHandler</h3>
+<p><code>DOMLinkHandler 오브젝트는 </code><code>어떤 RSS 피드들이나 사이트 아이콘들, 또는 웹 사이트에 대한 오픈서치 플러그인을 감지하기 위한 DOMLinkAdded 이벤트라고 할 수 있습니다.</code></p>
+<h3 id="pageShowEventHandlers">pageShowEventHandlers</h3>
+<p><code>pageShowEventHandlers()</code> 함수는 메뉴에 문자세트를 삽입하거나 피드(feed)들을 감지 또는 웹 사이틀을 위한 오픈서치 플러그인과 관련된 UI 요소들의 업데이트 등의 <code>pageshow 이벤트라고 할 수 있습니다.</code></p>
+<h3 id="XULBrowserWindow">XULBrowserWindow</h3>
+<p>이 오브젝트는 현재 브라우저에 표시되고 있는 이벤트들의 progress를 얻기 위한 <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code>입니다. 이 오브젝트는 아래와 같은 많은 이유로 UI를 업데이트하기 위해 사용합니다:</p>
+<ul>
+ <li>progress 바의 업데이트와 페이지를 불러오는 과정의 status 메시지</li>
+ <li>페이지를 로드 할 때의 실행색인기를 켜고 끔.</li>
+ <li>사이트 아이콘을 배치할 때</li>
+ <li>사용자가 인터넷을 이용 할 때 주소창의 업데이트</li>
+ <li>사용자가 인터넷을 항해 할 때 알림 표시줄을 적절한 때에 숨기기</li>
+ <li>페이지들를 새로고침 하여도 사이트를 확대해서 보는 설정을 그대로 적용하기.</li>
+ <li>북마크 버튼 UI을 활성화 하기.</li>
+ <li>사이트의 보안 변경에 대한 표시를 알릴 때.</li>
+</ul>
+<h3 id="TabsProgressListener">TabsProgressListener</h3>
+<p>이 오브젝트는 탭들의 progress listener 와 윈도우 안의 모든 브라우저에 대한 이벤트들을 받을 수 있습니다.  웹페이지가 새로고침을 시도할 때나 이를 저지하려는 시도를 사용자가 허락 할 때를 감지하는데 사용됩니다.</p>
+<h2 id="tabbrowser는_이벤트를_어떻게_처리하는가">tabbrowser는 이벤트를 어떻게 처리하는가</h2>
+<p><code>tabbrowser는 </code>두가지 모드 중 한가지로 실행됩니다. 처음에는 non-tabbed 모드로 시작하고 이 모드는 아래와 같은 상황이 발생하기 전까지 유지 됩니다.</p>
+<ul>
+ <li>탭바가 보여질 때</li>
+ <li>탭이 추가되었을 때</li>
+ <li>한개 보다 많은 webprogress listener가 추가 되었을 때</li>
+ <li>탭 progress listener가 추가 되었을 때</li>
+</ul>
+<h3 id="Non-tabbed_모드">Non-tabbed 모드</h3>
+<p>non-tabbed 모드에서, <code>tabbrowser는 </code>오직 하나의 탭만이 존재 할 수 있습니다. 이 모드에서는 단 하나의 web progress listener만이 브라우저로부터 progress 이벤트의 listen을 추가할 수있습니다. 첫째로 <code>browser-status-filter를 만들고 브라우저에 대한 </code>web progress listener를 추가 합니다. 다음은 브라우저로부터 모든 web progress 이벤트들을 받기 위한 내부 오브젝트를 만듭니다. 이는 <code>mTabProgressListener()</code> 메소드가 처리합니다. 이것은 <code>browser-status-filte로부터 이벤트들을 받습니다. </code>필터 성능 향상을 위해 진행 상태 및 이벤트의 수를 줄이는 역할을 합니다.<code> 필터들은 </code><code>mTabListeners<span style="font-family: Verdana,Tahoma,sans-serif;"><span style="font-family: monospace;">가 배열된 내부</span></span></code><code> </code>listener<code>와 </code><code>mFilters의 배열</code><code>로 도움을 받습니다. 내부 </code>listener들은 progress 이벤트들을 <a class="internal" href="/en/XUL/Method/addProgressListener" title="En/XUL/Method/AddProgressListener"><code>addProgressListener()</code></a> (현재 보이는 브라우저부터 받은 이벤트들)와 <a class="internal" href="/En/XUL/Method/AddTabsProgressListener" title="En/XUL/Method/AddTabsProgressListener"><code>addTabsProgressListener()</code></a> (모든 브라우저로부터 받은 이벤트들)가 지정된 listener들로 내보내게 됩니다.</p>
+<p> </p>
+<h2 id="또_보기">또 보기</h2>
+<ul>
+ <li><a class="internal" href="/en/DOM/event" title="En/DOM/Event"><code>event</code></a></li>
+ <li><a class="internal" href="/En/Listening_to_events_on_all_tabs" title="En/Listening to events on all tabs">Listening to events on all tabs</a></li>
+ <li><a class="internal" href="/En/DOM/Mouse_gesture_events" title="en/Mouse gesture events">Mouse gesture events</a></li>
+ <li><a class="internal" href="/en/Code_snippets/Progress_Listeners" title="en/Code snippets/Progress Listeners">Code snippets: Progress listeners</a></li>
+</ul>

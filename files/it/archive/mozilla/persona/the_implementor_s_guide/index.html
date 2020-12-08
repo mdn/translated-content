@@ -1,0 +1,57 @@
+---
+title: The implementor's guide
+slug: Archive/Mozilla/Persona/The_implementor_s_guide
+tags:
+  - NeedsTranslation
+  - Persona
+  - TopicStub
+translation_of: Archive/Mozilla/Persona/The_implementor_s_guide
+---
+<p>The <a href="/en-US/docs/Persona/Quick_setup" title="/en-US/docs/Persona/Quick_setup">Quick setup guide</a> should be enough to get you started, but when building a full production site you'll probably need features that aren't covered in that guide. In this page we've collected features that are commonly needed by sign-in systems, and explained the best-practice way to implement them with Persona.</p>
+<div class="section">
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Call_logout%28%29_after_a_failed_login" title="BrowserID/Why_BrowserID">Call logout() after a failed login</a></dt>
+  <dd>
+   Always call logout() if you reject an assertion, to avoid a mismatch between your idea of the current user and Persona's idea, which can lead to an endless loop of failed logins.</dd>
+ </dl>
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Adding_extra_email_addresses_with_Persona" title="BrowserID/Quick setup">Adding extra email addresses with Persona</a></dt>
+  <dd>
+   How to let your users add secondary email addresses using Persona.</dd>
+ </dl>
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Enabling_users_to_change_their_email_address" title="BrowserID/Quick setup">Enabling users to change their email address</a></dt>
+  <dd>
+   How to let your users change their email address using Persona.</dd>
+ </dl>
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Problems_integrating_with_CRSF_protection" title="BrowserID/Quick setup">Problems integrating with CSRF protection</a></dt>
+  <dd>
+   A problem caused by the interaction between a common mechanism for CSRF (Cross Site Request Forgery) protection and Persona's Observer API.</dd>
+ </dl>
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Supporting_users_without_JavaScript" title="BrowserID/Quick setup">Supporting users who don't have JavaScript</a></dt>
+  <dd>
+   Persona requires JavaScript. This page has some tips for supporting users who have JavaScript disabled.</dd>
+ </dl>
+ <dl>
+ </dl>
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Call_request()_only_from_a_click_handler" title="BrowserID/Quick setup">Call request() or get() only from a key handler or in response to a keypress</a></dt>
+  <dd>
+   Because Persona uses popup windows, you must call request() or get() only in response to a click or a key press, not some other event.</dd>
+ </dl>
+ <dl>
+  <dt>
+   <a href="/en-US/docs/Persona/The_implementor_s_guide/Testing" title="BrowserID/Quick setup">Testing your system</a></dt>
+  <dd>
+   Some pointers for simulating users logging in and out of your website.</dd>
+ </dl>
+</div>
+<p> </p>

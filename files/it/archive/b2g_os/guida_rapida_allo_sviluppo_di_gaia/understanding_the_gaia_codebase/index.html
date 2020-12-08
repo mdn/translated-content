@@ -1,0 +1,153 @@
+---
+title: Capire il codice di Gaia
+slug: >-
+  Archive/B2G_OS/Guida_rapida_allo_sviluppo_di_Gaia/Understanding_the_Gaia_codebase
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guida
+  - capire il codice di Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase
+---
+<div class="summary">
+<p><span class="seoSummary"><span id="result_box" lang="it"><span class="hps">Prima di iniziare</span> <span class="hps">a</span> <span class="hps">fare le proprie </span><span class="hps">modifiche al</span> <a href="https://github.com/mozilla-b2g/gaia/"><span class="hps">codice di </span><span class="hps">Gaia</span></a> <span class="hps">è necessario comprendere</span> <span class="hps">le nozioni di base sulla struttura</span> <span class="hps">di Gaia e quali</span> <span class="hps">convenzioni</span> <span class="hps">di programmazione</span> <span class="hps">utilizzare</span><span>.</span> <span class="hps">Questo articolo descrive</span> <span class="hps">entrambi questi</span> aspetti.</span></span></p>
+</div>
+
+<h2 id="Branch_di_Gaia">Branch di Gaia</h2>
+
+<p>Nel codice di Gaia sono presenti differenti branch, e in funzione del tuo obiettivo (o del dispositivo in tuo possesso), potresti non necessariamente scaricare o lavorare sulla branch master. Segue una guida sintetica ai repository principali:</p>
+
+<ul>
+ <li><strong>master</strong> — l'ultima branch di sviluppo. Potrai utilizzare questa branch se vorrai sviluppare nuove funzionalità (o fissare bug), oppure se vorrai utilizzare l'ultima versione di Gaia sul tuo telefono o emulatore.</li>
+ <li><strong>v2.1</strong>, <strong>v2.0</strong>, <strong>v1.4</strong>, ecc. — branch per le versioni di Gaia 2.1, 2.0, 1.4, ecc. Utilizzerai queste branch se vorrai fissare bug per versioni specifiche di Gaia oppure se vorrai sviluppare una App e vorrai essere certo della compatibilità rispetto a versioni specifiche (ad esempio, se utilizzerai i Building Block di Firefox OS vorrai verificare la compatibilità nelle differenti versioni di Gaia).</li>
+ <li><strong>v1.3t</strong> — la versione di Gaia per dispositivi a bassa memoria, quali il Tarako o lo Spice Fire One. Se vorrai sviluppare una app per tali dispositivi, questo è il branch che dovrai utilizzare.</li>
+</ul>
+
+<h2 id="Struttura_del_codice_di_Gaia">Struttura del codice di Gaia</h2>
+
+<p><span id="result_box" lang="it"><span class="hps">Questa sezione </span><span class="hps">descrive</span> <span class="hps">le parti più</span> <span class="hps">importanti del</span> codice di <span class="hps">Gaia</span><span>.</span></span></p>
+
+<h3 id="apps">apps/</h3>
+
+<p><span id="result_box" lang="it"><span class="hps">Questo direttorio contiene</span> <span class="hps">tutte le principali</span> <span class="hps">applicazioni di</span> <span class="hps">Gaia</span><span>,</span> sia <span class="hps">le applicazioni</span> presenti sulla <span class="hps">home screen</span> <span class="hps">- come</span> <span class="hps">il calendar</span> <span class="hps">e la camera</span> <span class="hps">-</span>  ch<span class="hps">e</span> <span class="hps">le applicazioni</span> <span class="hps">sottostanti</span> <span class="hps">- quali l'app di </span><span class="hps">sistema</span><span> (<em>system app</em>),</span> la <span class="hps">home screen</span><span>,</span> <span class="hps">e la tastiera</span><span>.</span></span></p>
+
+<p><span lang="it"><span class="hps">Sebbene le app</span> lavorino <span class="hps">con modalità leggermente differenti</span><span> fra loro,</span> <span class="hps">tutte hanno</span> <span class="hps">un</span> <span class="hps">certo numero</span> <span class="hps">di</span> <span class="hps">caratteristiche in comune</span><span>,</span> <span class="hps">fra cui</span><span>:</span></span></p>
+
+<ul>
+ <li><code>index.html</code>: il file principale di ciascuna app</li>
+ <li><code>manifest.webapp</code>: il file di manifesto, definisce la app</li>
+ <li><code>locales</code>: le stringhe di localizzazione per quella app</li>
+ <li><code>test</code>: test unitari e di integrazione specifici per quella app</li>
+ <li><code>js</code>, <code>style</code>: script e stili per quella app</li>
+ <li><code>resources</code>: immagini, suoni e altre risorse</li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: Puoi trovare ulteriori informazioni sulle app di default di Gaia nella <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps">guida delle app di Gaia</a>.</p>
+</div>
+
+<h3 id="build">build/</h3>
+
+<p>Questo direttorio contiene gli script di build.</p>
+
+<h3 id="dev_apps">dev_apps/</h3>
+
+<p><span id="result_box" lang="it"><span class="hps">Questo direttorio</span> <span class="hps">contiene</span> <span class="hps">tutte le altre app</span> <span class="hps">che si vogliono includere in una</span> build<span> customizzata.</span></span></p>
+
+<div class="note">
+<p><strong>Nota</strong>: Per maggiori informzazioni sulla customizzazione di Gaia, leggi la specifica <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide">Guida alla customizzazione commerciale.</a></p>
+</div>
+
+<h3 id="keyboard">keyboard/</h3>
+
+<p>Questo direttorio contiene dizionari e layout di tastiere in differenti lingue.</p>
+
+<h3 id="locales">locales/</h3>
+
+<p>Questo direttorio contiene un file JSON, <code>languages_all.json</code>, che definisce quali lingue sono supportati in Gaia. <span id="result_box" lang="it"><span class="hps">Per maggiori</span> informazioni sulla localizzazione delle app</span>, leggi la guida di <a href="/en-US/Apps/Build/Localization/Getting_started_with_app_localization">Avvio alla localizzazione delle app</a>.</p>
+
+<h3 id="shared">shared/</h3>
+
+<p>Questo direttorio contiene una serie di risorse condivise da più app, fra cui le più importanti sono:</p>
+
+<ul>
+ <li><code>gaia/shared/js</code>: Librerie JavaScript che eseguono funzioni comuni.</li>
+ <li><code>l10n.js</code>: L<span id="result_box" lang="it"><span class="hps">ibreria</span> <span class="hps">di localizzazione</span> <span class="hps">che individua la lingua utilizzata dal dispositivo e sostituisce le stringhe <em>localizzabili</em> con quelle contenute in un file di properties presente nel direttorio <em>locales</em> della app. </span>Le s<span class="hps">tringhe</span> <span class="hps">localizzabili</span> <span class="hps">da sostituire</span> <span class="hps">sono contenute</span> <span class="hps">in</span> <span class="hps">elementi con</span> <span class="hps">attributi</span> <span class="atn hps"><code>data-l10n-id</code></span></span>.</li>
+ <li><code>gaia/shared/locales</code>: Risorse di sistema localizzabili in alcune lingue.</li>
+ <li><code>gaia/shared/resources</code>: Icone, suonerie e allarmi.</li>
+ <li><code>gaia/shared/style</code>: <span id="result_box" lang="it"><span class="hps">Fogli di stile</span> <span class="hps">e altre risorse</span> di stile per oggetti comuni quali <span class="hps">pulsanti,</span> <span class="hps">barre di avanzamento</span><span>, barre degli strumenti</span><span>,</span> <span class="hps">schede,</span> <span class="hps">ecc</span></span></li>
+ <li><code>gaia/shared/style_unstable</code>: Risorse di stile instabili o sperimentali.</li>
+ <li><code>gaia/shared/test</code>: JavaScript per definire test unitari e di integrazione.</li>
+</ul>
+
+<h3 id="tools">tools/</h3>
+
+<p>Questo direttorio contiene strumenti per gli script di build e test.</p>
+
+<h2 id="Stile_di_programmazione_di_Gaia">Stile di programmazione di Gaia</h2>
+
+<p>Gaia segue lo <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">stile di programmazione Javascript definito da Google</a>.</p>
+
+<p>Informazioni di base:</p>
+
+<ul>
+ <li>Stile di codifica: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#General_practices">General practices</a></li>
+ <li>Stile di codifica: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#JavaScript_practices">JavaScript practices</a></li>
+ <li>Stile di codifica: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#Naming_and_Formatting_code">Naming and formatting code</a></li>
+</ul>
+
+<h3 id="Regole_specifiche">Regole specifiche</h3>
+
+<ol>
+ <li>Assicurati che i file HTML sono dichiarati con <code>&lt;!DOCTYPE html&gt;</code> (come nei documenti HTML5). Se non lo fai, Internet Explorer 9 e successivi caricheranno le pagine in modalità compatibile.</li>
+ <li>Includi l'istruzione <code>"use strict";</code> (esattamente così, compresi gli apici) all'inizio del tuo file javaScript per abilitare la modalità <em>strict</em>.</li>
+ <li>Utilizza sempre due spazi per l'indentazione, piuttosto che il tab.</li>
+ <li>Per favore utilizza separatori di linea per separare blocchi logici di codice!</li>
+ <li>I file che hanno nomi con più parole dovrebbero utilizzare il carattere di "underscore" per separare le parole, <code>like_this.js</code>.</li>
+ <li>Utilizza gli apici singoli invece che doppi per le stringhe.</li>
+ <li>Utilizza la struttura condizionale estesa:
+  <pre class="brush: js">Bad
+if (expression) doSomething();
+
+Correct
+if (expression) {
+  doSomething();
+}</pre>
+ </li>
+ <li>Se stai lavorando sulla <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">system app</a>, leggi la <a href="https://groups.google.com/forum/#!msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">convenzione qui descritta</a>.</li>
+</ol>
+
+<h3 id="Controllo_dello_stile_di_programmazione_su_base_commit">Controllo dello stile di programmazione su base commit</h3>
+
+<p>Gaia utilizza <a href="http://www.jshint.com/">JSHint</a> per automatizzare i controlli sullo stile di programmazione Javascript prima di ogni commit (sfruttando una funzionalità di git che consente di automatizzarne l'esecuzione).</p>
+
+<p>Lo script di pre-commit <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/pre-commit">gaia/tools/pre-commit</a> verrà copiato nel direttorio <code>.git/hooks</code> di progetto una volta eseguito il comando <code>make.</code></p>
+
+<div class="note">
+<p><strong>Nota</strong>: Inizialmente utilizzavamo <a href="https://developers.google.com/closure/utilities/docs/linter_howto">gjslint</a> per controllare lo stile di programmazione, successivamente è stato deprecato a favore di JSHint in quanto permette controlli più stringenti e produce risultati migliori. Stiamo utilizzando JSHint da Firefox OS 1.4, mentre gjslint è unicamente consigliato per quei file che non sono ancora gestiti con JSHint.</p>
+</div>
+
+<h3 id="Eseguire_i_controlli_manualmente">Eseguire i controlli manualmente</h3>
+
+<p>Prima di sottomettere una patch ti consigliamo di eseguire JSHint manualmente per controllare eventuali errori di stile.<br>
+ <br>
+ Dovresti guardare nel direttorio <a href="https://github.com/mozilla-b2g/gaia/tree/master/build/jshint">gaia/build/jshint</a> per maggiori dettagli sull'utilizzo di JSHint in Gaia; Gaia ti fornisce gli script di build. Puoi eseguire il comando:</p>
+
+<pre class="brush: bash">$ make lint</pre>
+
+<p>per eseguire sia gjslint che jshint. Oppure puoi eseguire:</p>
+
+<pre class="brush: bash">$ make hint</pre>
+
+<p>per eseguire solamente jshint.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Se vuoi installare JSHint da te stesso, senza utilizzare Gaia, puoi utilizzare i seguenti comandi:</p>
+
+<pre class="brush: bash">npm install jshint -g
+jshint myfile.js
+</pre>
+</div>
+
+<p> </p>

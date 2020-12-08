@@ -1,0 +1,32 @@
+---
+title: Examples
+slug: Preferences_System/Examples
+tags:
+  - NeedsContent
+  - Preferences system
+---
+<p>{{ Preferences_System_TOC() }}
+</p>
+<h3 id="Preferences_.EB.8C.80.ED.99.94.EC.83.81.EC.9E.90_.EC.98.88"> Preferences 대화상자 예 </h3>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<span>chrome://global/skin/</span>" type="text/css"?&gt;
+
+&lt;prefwindow id="stockwatcher2-prefs"
+     title="StockWatcher 2 Options"
+     xmlns="<span>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;prefpane id="sw2-stock-pane" label="Stock Settings"&gt;
+  &lt;preferences&gt;
+    &lt;preference id="pref_symbol" name="stockwatcher2.symbol" type="string"/&gt;
+  &lt;/preferences&gt;
+
+  &lt;hbox align="center"&gt;
+    &lt;label control="symbol" value="Stock to watch: "/&gt;
+    &lt;textbox preference="pref_symbol" id="symbol" maxlength="4"/&gt;
+  &lt;/hbox&gt;
+&lt;/prefpane&gt;
+
+&lt;/prefwindow&gt;
+</pre>
+<p>같이 보기: <a href="ko/Adding_preferences_to_an_extension"> 확장기능에 preferences 추가하기</a>
+</p>{{ languages( { "en": "en/Preferences_System/Examples", "ja": "ja/Preferences_System/Examples" } ) }}

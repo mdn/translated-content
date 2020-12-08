@@ -1,0 +1,98 @@
+---
+title: ECMAScript Next support in Mozilla
+slug: Archive/Web/JavaScript/ECMAScript_7_support_in_Mozilla
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>ECMAScript 2016 는 (흔히 <a href="/en-US/docs/Web/JavaScript">JavaScript</a>로 알려져 있는) ECMA-262 표준의 차세대 버전 입니다. ECMAScript 2015이 2015년 6월 17일에 확정되었음에도 불구하고 새로운 특징들이 이미 제안되고 있습니다. 기능 제안에 대한 최신 후보들은 <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> GitHub 저장소에서 보실 수 있습니다.</p>
+
+<p>현재 규격 개발에 관한 사항들은 각 기능들에 대한 <em>stages</em>와 <em>champions</em>를 안내하면서 해결할 예정입니다. 또한, 2년마다 표준을 배포하는 것이 제안되어 있습니다. post-ES2015 규격 처리방안에 대해 더 알고싶으시다면, <a href="http://slides.com/rafaelweinstein/tc39-process">Rafael Weinstein의 발표자료</a>를 참고하세요.</p>
+
+<p>ECMAScript 표준에 대한 피드백을 위한 채널은 <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a> 입니다.</p>
+
+<h2 id="ECMAScript_2016">ECMAScript 2016</h2>
+
+<p> </p>
+
+<p>다음 ES2016기능들이 구현되었습니다.</p>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (Firefox 43)</li>
+ <li>{{jsxref("TypedArray.prototype.includes()")}} (Firefox 43)</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generators</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">generator methods</a> are no longer constructable (Firefox 43)</li>
+ <li>Proxy <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate">enumerate</a> handler removed (Firefox 47)</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Exponentiation operator</a> (Firefox 52)</li>
+ <li>{{jsxref("Functions/rest_parameters", "Rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} (Firefox 52)</li>
+</ul>
+
+<h2 id="ECMAScript_2017">ECMAScript 2017</h2>
+
+<p>다음 ES2017기능들이 구현되었습니다.</p>
+
+<p> </p>
+
+<ul>
+ <li>{{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} (Firefox 47)</li>
+ <li>{{jsxref("String.prototype.padEnd()")}} (Firefox 48)</li>
+ <li>{{jsxref("String.prototype.padStart()")}} (Firefox 48)</li>
+ <li>{{jsxref("Object.getOwnPropertyDescriptors()")}} (Firefox 50)</li>
+ <li>Async Functions
+  <ul>
+   <li>{{jsxref("Statements/async_function", "async function")}} (Firefox 52)</li>
+   <li>{{jsxref("Operators/async_function", "async function expression")}} (Firefox 52)</li>
+   <li>{{jsxref("AsyncFunction")}} (Firefox 52)</li>
+   <li>{{jsxref("Operators/await", "await")}} (Firefox 52)</li>
+  </ul>
+ </li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas">Trailing commas in function parameter lists</a> (Firefox 52)</li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+
+<h2 id="실험_단계(특성)">실험 단계(특성)</h2>
+
+<p>다음 기능은 이미 구현되어 있지만,  <a href="http://nightly.mozilla.org/">Firefox Nightly channel</a>에서만 이용 가능합니다.:</p>
+
+<h3 id="Additions_to_the_ArrayBuffer_object">Additions to the <code>ArrayBuffer</code> object</h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spec</a>)</li>
+</ul>
+
+<h3 id="New_TypedObject_objects">New TypedObject objects</h3>
+
+<ul>
+ <li>Based on <a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects draft</a>, and exposed via a global <code>TypedObject</code> object, e.g. <code>TypedObject.StructType</code> &amp; <code>TypedObject.ArrayType</code>. This feature is non-standard and not documented.</li>
+</ul>
+
+<div class="hidden">
+<p>See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1336740">https://bugzilla.mozilla.org/show_bug.cgi?id=1336740</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=578700">https://bugzilla.mozilla.org/show_bug.cgi?id=578700</a>.</p>
+</div>
+
+<h3 id="New_SIMD_objects">New SIMD objects</h3>
+
+<ul>
+ <li><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD specification draft and polyfill</a></li>
+</ul>
+
+<p> </p>
+
+<h3 id="New_Shared_Memory_objects">New Shared Memory objects</h3>
+
+<ul>
+ <li>{{jsxref("SharedArrayBuffer")}}</li>
+ <li>{{jsxref("Atomics")}}</li>
+</ul>
+
+<p> </p>
+
+<h2 id="참조">참조</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">ECMAScript web site</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Mozilla ES2016 tracking bug</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/" title="http://kangax.github.io/es5-compat-table">ECMAScript 2016 support across browsers</a></li>
+</ul>

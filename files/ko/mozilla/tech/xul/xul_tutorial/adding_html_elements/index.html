@@ -1,0 +1,114 @@
+---
+title: Adding HTML Elements
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Adding_HTML_Elements
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_HTML_Elements
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Progress_Meters" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Using_Spacers">다음  »</a></p>
+</div><p></p>
+<p>버튼을 넣었으니 이제 다른 요소들을 더 넣어 보도록 하겠습니다.</p>
+<h3 id=".EC.B0.BD.EC.97.90_HTML_.EC.9A.94.EC.86.8C_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0" name=".EC.B0.BD.EC.97.90_HTML_.EC.9A.94.EC.86.8C_.EC.B6.94.EA.B0.80.ED.95.98.EA.B8.B0">창에 HTML 요소 추가하기</h3>
+<p>XUL 파일에는 XUL 요소뿐만 아니라 HTML 요소들도 바로 넣을 수 있습니다. 모든 HTML 요소를 XUL 파일에서 사용할 수 있기 때문에 자바 애플릿이나 테이블을 창에 표시하는 것도 가능합니다. 될 수 있으면 HTML 요소를 사용하지 않는 것이 바람직하지만(몇 가지 이유가 있지만 가장 중요한 것은 다음에 설명할 <a href="ko/XUL_Tutorial/Box_Model_Details">컨트롤의 배치</a>와 관련된 것입니다.), 그래도 이번 단원에서는 XUL에서 HTML 요소를 사용하는 방법을 알아 보도록 하겠습니다. XML은 대소문자를 구별하기 때문에 모든 태그와 속성은 소문자로 입력해야 한다는 점에 유의하세요.</p>
+<h4 id="XHTML_.EC.9D.B4.EB.A6.84.EA.B3.B5.EA.B0.84" name="XHTML_.EC.9D.B4.EB.A6.84.EA.B3.B5.EA.B0.84">XHTML 이름공간</h4>
+<p>HTML 요소를 XUL 파일에서 사용하려면 먼저 XHTML 이름공간을 사용한다는 것을 선언해야 합니다. 이렇게 함으로써, Mozilla는 HTML 태그와 XUL 태그를 구별할 수 있습니다. 아래 속성이 XUL 파일의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 태그나 제일 바깥 HTML 요소에 추가되어야 합니다.</p>
+<pre class="eval"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span>
+</pre>
+<p>이것은 XUL 을 선언하기 위해 사용했던 것과 비슷한 것으로, HTML을 선언하는 것입니다. 이것은 위와 정확히 일치하도록 입력되어야 하며, 그렇지 않아면 제대로 작동하지 않을 것입니다. 실제로는 Mozilla가 위의 URL을 다운로드하는 것은 아니며, 그냥 HTML이라는 것을 인식하기 위한 것입니다.</p>
+<p>다음은 파일 찾기 창에 추가한 예제입니다.</p>
+<pre class="eval"> &lt;?xml version="1.0"?&gt;
+ &lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+ &lt;window
+   id="findfile-window"
+   title="Find Files"
+   orient="horizontal"
+   <span class="highlightred"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span></span>
+   xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+<p>이제 다음 내용만 잘 세겨두고 있으면, HTML 태그를 사용하실 수 있습니다.</p>
+<ul>
+ <li>HTML 이름 공간을 위와 같이 정의했다고 하면, 각각의 HTML 태그의 시작부분에는 <code>html:</code> 접두어가 들어가야 합니다.</li>
+ <li>모든 태그는 "소문자로 입력"해야만 합니다.</li>
+ <li>모든 속성값은 "인용부호"로 묶여야 합니다.</li>
+ <li>XML에서는 내용이 없는 태그의 끝에 마침 슬래쉬(/&gt;)가 필요합니다. 이것은 다음 예제를 통해 보다 명확히 알 수 있을 것입니다.</li>
+</ul>
+<h4 id="HTML_.EC.9A.94.EC.86.8C_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0" name="HTML_.EC.9A.94.EC.86.8C_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0">HTML 요소 사용하기</h4>
+<p>여러분은 어떠한 HTML 태그도 사용하실 수 있습니다(사실 <code>head</code>나 <code>body</code>같은 것들은 쓸데가 없습니다). HTML 요소를 사용하는 몇 가지 예제를 아래에서 보실 수 있습니다.</p>
+<pre>&lt;html:img src="banner.jpg"/&gt;
+
+&lt;html:input type="checkbox" value="true"/&gt;
+
+&lt;html:table&gt;
+  &lt;html:tr&gt;
+    &lt;html:td&gt;
+      A simple table
+    &lt;/html:td&gt;
+  &lt;/html:tr&gt;
+&lt;/html:table&gt;
+</pre>
+<p>위의 예제는 banner.jpg 이미지와 체크 박스, 단일 셀 테이블을 생성합니다. 여러분은 가능하면 XUL의 기능을 사용하는 것이 좋고, 레이아웃을 위해 테이블을 사용하지 않는게 좋습니다(레이아웃을 위한 XUL 요소가 존재합니다). 각 태그 앞에 <code>html:</code> 접두어가 추가되어 있는 것을 보실 수 있습니다. 이것은 Mozilla에게 이러한 태그가 XUL이 아닌 HTML 태그라는 것을 알려 줍니다. 만일 <code>html:</code> 부분이 빠지면 브라우저는 해당 요소가 XUL 요소인 것으로 생각할 것이며, img, input, table들은 유효한 XUL 태그가 아니기 때문에 출력되지 않을 것입니다.</p>
+<p>XUL에서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>나 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 요소를 이용해서 라벨을 넣을 수 있습니다. 가능하면 이런 요소들을 사용하세요. 여러분은 컨트롤에 라벨을 넣기 위해 HTML의 <code>label</code> 요소를 사용하거나, 아래의 예제와 같이 다른 블럭 요소(<code>p</code>나 <code>div</code> 같은 것들)내에 직접 텍스트를 넣어서 사용할 수 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul">View</a></p>
+<pre>&lt;html:p&gt;
+  Search for:
+  &lt;html:input id="find-text"/&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/html:p&gt;
+</pre>
+<p>위의 코드에서는 'Search for:'라는 텍스트가 출력되고, 다음에는 input 요소와 OK 버튼이 출력됩니다. 위에서와 같이 XUL 버튼이 HTML 요소 내에 나타날 수 있다는 점에 유의하세요. 텍스트는 보통 출력을 위해 사용되는 HTML 요소 내에 위치해야지만 출력됩니다. 바깥쪽에 있는 텍스트는 <code>description</code>와 같이 텍스트를 포함할 수 있는 XUL 요소외에서는 출력되지 않습니다. 아래의 예제가 도움이 될것입니다.</p>
+<h3 id="HTML_.EC.9A.94.EC.86.8C_.EC.98.88.EC.A0.9C" name="HTML_.EC.9A.94.EC.86.8C_.EC.98.88.EC.A0.9C">HTML 요소 예제</h3>
+<p>다음은 HTML 요소를 창에 추가하는 몇 가지 예제입니다. 단순하게 하기 위해 창과 다른 중복된 내용은 생략하였습니다.</p>
+<h4 id=".EC.B2.B4.ED.81.AC_.EB.B0.95.EC.8A.A4.EA.B0.80_.EC.9E.88.EB.8A.94_.EB.8C.80.ED.99.94.EC.83.81.EC.9E.90" name=".EC.B2.B4.ED.81.AC_.EB.B0.95.EC.8A.A4.EA.B0.80_.EC.9E.88.EB.8A.94_.EB.8C.80.ED.99.94.EC.83.81.EC.9E.90">체크 박스가 있는 대화상자</h4>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:htmlelem-ex1.png"></div>
+<pre>&lt;html:p&gt;
+  Click the box below to remember this decision.
+  &lt;html:p&gt;
+    &lt;html:input id="rtd" type="checkbox"/&gt;
+    &lt;html:label for="rtd"&gt;Remember This Decision&lt;/html:label&gt;
+  &lt;/html:p&gt;
+&lt;/html:p&gt;
+</pre>
+<p>위 예제에서는 하나의 <code>p</code> 태그는 텍스트를 감싸고 있고, 다른 <code>p</code> 태그는 여러 줄로 텍스트를 분리하기 위해 사용되고 있습니다.</p>
+<h4 id="HTML_.EB.B8.94.EB.9F.AD_.EB.B0.94.EA.B9.A5.EC.AA.BD.EC.97.90_.EC.9E.88.EB.8A.94_.ED.85.8D.EC.8A.A4.ED.8A.B8" name="HTML_.EB.B8.94.EB.9F.AD_.EB.B0.94.EA.B9.A5.EC.AA.BD.EC.97.90_.EC.9E.88.EB.8A.94_.ED.85.8D.EC.8A.A4.ED.8A.B8">HTML 블럭 바깥쪽에 있는 텍스트</h4>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:htmlelem-ex2.png"></div>
+<pre>&lt;html:div&gt;
+    Would you like to save the following documents?
+    &lt;html:hr/&gt;
+&lt;/html:div&gt;
+Expense Report 1
+What I Did Last Summer
+&lt;button id="yes" label="Yes"/&gt;
+&lt;button id="no" label="No"/&gt;
+</pre>
+<p>그림에서 보듯이, <code>div</code> 태그 안에 있는 텍스트는 출력되지만 바깥쪽에 있는 텍스트(Expense Report 1과 What I Did Last Summer)는 출력되지 않습니다. 이것은 텍스트를 출력하기 위해 감싸고 있는 HTML 혹은 XUL 요소가 없기 때문입니다. 이 텍스트를 출력하기 위해서는 <code>div</code> 태그나 <code>description</code> 태그 내로 들어가야 합니다.</p>
+<h4 id=".EC.9E.98.EB.AA.BB.EB.90.9C_HTML_.EC.9A.94.EC.86.8C" name=".EC.9E.98.EB.AA.BB.EB.90.9C_HTML_.EC.9A.94.EC.86.8C">잘못된 HTML 요소</h4>
+<pre>&lt;html:po&gt;Case 1&lt;/html:po&gt;
+&lt;div&gt;Case 2&lt;/div&gt;
+&lt;html:description value="Case 3"/&gt;
+</pre>
+<p>위의 세 가지 경우는 모두, 서로 다른 이유 때문에 출력되지 않습니다.</p>
+<dl>
+ <dt>
+  Case 1 </dt>
+ <dd>
+  <code>po</code>는 유효한 HTML 태그가 아니며, Mozilla는 어떻게 처리해야 할지에 대해 알지 못합니다.</dd>
+ <dt>
+  Case 2 </dt>
+ <dd>
+  <code>div</code>는 HTML에서만 유효합니다. 제대로 동작하려면 <code>html:</code>한정사를 추가해야 합니다.</dd>
+ <dt>
+  Case 3 </dt>
+ <dd>
+  A <code>description</code>는 XUL에서만 유효한 요소입니다. <code>html:</code> 한정사가 없어야 합니다.</dd>
+</dl>
+<p>다음번에는 <a href="ko/XUL_Tutorial/Using_Spacers">요소들 간에 공백(spacer) 주기</a>에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Progress_Meters" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Using_Spacers">다음  »</a></p>
+</div><p></p>
+<p></p>

@@ -1,0 +1,175 @@
+---
+title: TV e dispositivi connessi
+slug: Archive/B2G_OS/TVs_connected_devices
+tags:
+  - B2G
+  - Firefox OS
+  - Firefox OS e dispositivi connessi
+  - Gaia
+  - Guida
+  - TV
+translation_of: Mozilla/Firefox_OS_for_TV
+---
+<p class="summary">Questo articolo è scritto per sviluppatori web interessanti a Firefox OS per TV, allo stato attuale dei lavori e futuro, e allo sviluppo di web app per TV. Descrive come realizzare ed eseguire un simulatore di Firefox OS per TV, quindi come iniziare a scrivere app e installarle su TV.</p>
+
+<p>Le differenze principali nell'utilizzo di Firefox OS su un TV piuttosto che su un telefono (o su un desktop) sono:</p>
+
+<ul>
+ <li><strong>Meccanismi di controllo</strong>: Firefox OS su TV probabilmente ha il solo telecomando per interagire, non offre la stessa praticità di una tastiera, mouse o touch screen.</li>
+ <li><strong>Risoluzione</strong>: Le moderne smart TV sono generalmente Full HD (1920x1080) o Ultra HD (4K). La proporzione di un pixel sulle TV è sicuramente differente rispetto ad un dispositivo mobile.</li>
+</ul>
+
+<h2 id="Stato_attuale_e_piani_futuri">Stato attuale e piani futuri</h2>
+
+<p>Dalla versione 2.2 in avanti Gaia può essere eseguito su una TV. Puoi trovare le app out-of-the-box per smart TV nella cartella <a href="https://github.com/mozilla-b2g/gaia/tree/master/tv_apps">gaia/tv_apps</a>; le app con prefisso <code>smart-</code> identificano le app per smart TV. A partire dalla prima metà del 2015, saranno disponibili sul mercato televisori con interfaccia uente (UI) basate sulle app che vedremo di seguito.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: <code>smart-home</code> e <code>smart-deck</code> sono delle buone app da utilizzare come template iniziale per lo sviluppo delle tue app, piuttosto che come fonte di idee o ispirazione.</p>
+</div>
+
+<h2 id="Sviluppare_app_per_TV">Sviluppare app per TV</h2>
+
+<p>In questa sezione esplorerai come predisporre un ambiente per eseguire e testare le tue app per TV, e come scrivere una semplice app di test.</p>
+
+<h3 id="Scaricare_gli_strumenti">Scaricare gli strumenti</h3>
+
+<p>Ti servono tre componenti principali per costruire l'ambiente di sviluppo:</p>
+
+<ul>
+ <li><strong>Simulatore per desktop</strong>: Dovresti scaricare e installare l'ultimo <a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">Simulatore Nightly per Desktop</a> (anche conosciuto come B2G Desktop), o — se ti senti veramente avventuroso  — <a href="/en-US/Firefox_OS/Building_the_Firefox_OS_simulator">costruiscilo da te stesso</a>. Dovrai scaricare quello appropriato per il tuo sistema, il file inizierà per <code>b2g-</code>.</li>
+ <li><strong>Firefox Nightly/Developer Edition:</strong> Dovresti inoltre installare Firefox Nightly (o la Developer Edition). <a href="https://nightly.mozilla.org/">Scarica la Nightly</a> o la <a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a> dalle loro pagine ufficiali.</li>
+ <li><strong>Un fork locale del <a href="https://github.com/mozilla-b2g/gaia">repository di Gaia</a></strong>: Puoi configurarlo seguendo le istruzioni sottostanti (vedi inoltre <a href="https://developer.mozilla.org/it/Firefox_OS/Guida_rapida_allo_sviluppo_di_Gaia/Running_the_Gaia_codebase#Eseguire il tuo build di Gaia">Eseguire il tuo build di Gaia</a> per ulteriori informazioni):
+  <ol>
+   <li>Primo, fai un fork del <a href="https://github.com/mozilla-b2g/gaia">repository principale di Gaia su Github</a>.</li>
+   <li>Quindi, fai una copia locale tramite il comando:
+    <pre class="brush: bash"><code>git clone https://github.com/your-username/gaia.git</code></pre>
+   </li>
+   <li>Aggiungi l'upstream remoto al repository locale:
+    <pre class="brush: bash"><code>cd gaia
+git remote add upstream https://github.com/mozilla-b2g/gaia</code></pre>
+   </li>
+  </ol>
+ </li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: Non ti serve fare il fork del repository di Gaia ne configurare l'upstream, ma è una buona pratica se vuoi contribuire al progetto riportando indietro le eventuali modifiche.</p>
+</div>
+
+<h3 id="Configurare_il_tuo_ambiente">Configurare il tuo ambiente</h3>
+
+<p>Ora devi creare un profilo di Gaia specifico per TV. Dal tuo repository locale esegui il seguente comando:</p>
+
+<pre class="brush: bash"><code>make GAIA_DEVICE_TYPE=tv DEVICE_DEBUG=1</code></pre>
+
+<p>Verrà creato un profilo per TV all'interno della cartella <code>profile</code> ottimizzato per il debugging. Verrà creata una versione <em>hosted</em> delle app di Gaia che potrà essere servita direttamente dal server HTTPD disponibile in Firefox Desktop come estensione. Quando apporterai una modifica sarà sufficiente effettuare un refresh della app (o della finestra del browser) per verificarne il risultato, invece di ricostruire il profilo, pubblicarlo sul dispositivo, e così via. Questa modalità è molto utile per un rapido sviluppo di CSS/JS/HTML.</p>
+
+<h3 id="Eseguire_nel_simulatore">Eseguire nel simulatore</h3>
+
+<p>Ora esegui il Simulatore di Firefox Desktop configurando opportunamente la dimensione dello schermo, abilitando il debug remoto lato server e impostando il path del profilo:</p>
+
+<pre><code>path/to/b2g-bin -screen 1920x1080 -start-debugger-server 6000 -profile /path/to/gaia/profile</code>
+</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: Se la risoluzione dello schermo è superiore a quella del tuo PC, le app di sistema non lavoreranno correttamente. Riduci la dimensione dello schermo per adattarla a quella del tuo sistema.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Trovi <code>b2g-bin</code> nel pacchetto <code>b2g</code> installato assieme al simulatore di Firefox OS.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Il path <code>-profile /path/to/gaia/profile</code> che devi impostare è quello che ti stato restituito quando hai creato il profilo (dopo aver eseguito il comando di <code>make</code> come mostrato precedentemente).</p>
+</div>
+
+<p>Se tutto procede correttamente dovresti vedere la app di orologio. Temporaneamente è la app di atterraggio.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10472/Screen%20Shot%202015-04-21%20at%205.52.12%20PM.png" style="display: block; height: 376px; margin: 0px auto; width: 640px;"></p>
+
+<p>Premendo il tasto di <code>Home</code> nella parte inferiore della finestra viene avviata la app di Home, che rappresenta il punto di ingresso principale per le app per Smart TV. Puoi navigare utilizzando i tasti con le frecce; puoi anche selezionare l'icona <code>Apps</code> per avviare il contenitore delle App (App deck), dove potrai trovare la tua app di test dopo che l'avremo creata (vedi la sezione sottostante {{anch("Esempio Hello World ")}}).</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10474/Screen%20Shot%202015-04-21%20at%205.51.49%20PM.png" style="display: block; height: 376px; margin: 0px auto; width: 640px;"></p>
+
+<p>Lo schermata principale che contiene le App (App deck) è simile alla seguente:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10476/Screen%20Shot%202015-04-21%20at%205.51.19%20PM.png" style="display: block; height: 376px; margin: 0px auto; width: 640px;"></p>
+
+<h2 id="Esempio_Hello_World">Esempio Hello World</h2>
+
+<p>Ora proverai a svluppare una app di test, così potrai renderti conto di quanto sia facile iniziare. Utilizzerai lo strumento <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> di Mozilla. Ti consente di avviare facilmente una web app, di modificare il codice HTML/CSS/JS, di fare attività di test/debug delle app — senza avere a disposizione un dispositivo reale.</p>
+
+<p>Per aprire WebIDE in Firefox per Desktop, seleziona <em>Tools &gt; Web Developer &gt; WebIDE</em> dal menù principale. <img alt="" src="https://mdn.mozillademos.org/files/10444/11.09.37.png" style="display: block; height: 490px; margin: 0px auto; width: 640px;">Ora clicca <em>Open App</em> nell'angolo in alto a sinistra di WebIDE e scegli <em>New App…</em> dal menu.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10446/11.14.38.png"></p>
+
+<p>Seleziona <em>HelloWorld</em>, inserisci il <em>Project Name</em> (nome del progetto) e clicca <em>OK</em>.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10448/11.15.06.png"></p>
+
+<p>Dopo aver specificato la cartella in cui salvare il progetto, WebIDE produrrà un template di App con poche righe di codice:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10450/11.15.37.png"></p>
+
+<p>Ora puoi programmare la tua app direttamente da WebIDE, piuttosto che utilizzare qualsiasi altro editor.</p>
+
+<h3 id="Esuguire_la_tua_app_sulla_TV"><strong>Esuguire la tua app sulla TV</strong></h3>
+
+<p>Se hai una televisione Panasonic VIERA con Firefox OS puoi eseguire le tue applicazioni sulla TV via WebIDE e trovi le spiegazioni nell'articolo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/How_to_connect_WebIDE_to_TV_%28VIErA%29">How to connect WebIDE to TV (VIErA CX/CR series)</a>. </p>
+
+<p>Poichè non è ancora presente alcun simulatore per TV in WebIDE, dovrai provare l'applicazione di esempio nel simulatore di Firefox OS scaricato precedentemente.</p>
+
+<ol>
+ <li>Se non l'hai ancora avviato, segui le istruzioni nella sezione precedente {{anch("Eseguire nel simulatore")}} per avviare l'ambiente per TV all'interno del simulatore di Firefox OS (ricordati di aggiungere il parametro <code>-start-debugger-server 6000</code>).</li>
+ <li>Da WebIDE, clicca <em>Select Runtime</em> nell'angolo in alto a destra quindi seleziona <em>Remote Runtime</em> dal menu.<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10452/11.37.40.png"></li>
+ <li>Assicurati di digitare <em>localhost:6000</em> nella form e premi <em>OK</em>.<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10454/11.37.47.png"></li>
+ <li>Clicca sull'icona <em>Install and Run</em> (l'icona di "avvio") di WebIDE. Dovresti ora vedere la tua app in esecuzione all'interno del Simulatore di Firefox OS.<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10466/11.39.40%202.png"></li>
+ <li>Ora clicca sull'icona di <em>Debug App</em> (l'icona "strumento") di WebIDE per avviare il debug della tua app direttamente nel simulatore utilizzando la <a href="/en-US/docs/Tools/Tools_Toolbox">Toolbox</a> di DevTools.<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10468/11.40.10%202.png"></li>
+</ol>
+
+<div class="note">
+<p><strong>Nota</strong>: Puoi trovare maggiori informazioni sulle modalità di debug delle tue app leggendo <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Debugging_apps">Debugging apps</a>.</p>
+</div>
+
+<h2 id="Interagire_con_meccanismi_di_controllo_remoto_per_TV">Interagire con meccanismi di controllo remoto per TV</h2>
+
+<p>Una delle differenze più evidenti fra telefoni e TV è la disponibilità di meccanismi di input. In generale, la TV non ha un touch screen, di conseguenza le app non possono essere controllate da eventi di mouse o di touch. In questo caso il meccanismo di controllo è rappresentato dal telecomando del televisore attraverso la pressione dei tasti.</p>
+
+<p>Il focus è un altro aspetto importante da evidenziare. E' importante assicurarsi che il focus sia sempre sull'elemento corretto, non potendo selezionare direttamente l'elemento sulla TV tramite pressione sullo schermo.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: I tasti dei telecomandi sono definiti nella specifica W3C <em>DOM Level 3 KeyboardEvent key Values</em>; vedi la sezione <a href="http://www.w3.org/TR/DOM-Level-3-Events-key/#keys-media-controller">Media Controller Keys</a>.</p>
+</div>
+
+<h2 id="Vedi_inoltre">Vedi inoltre</h2>
+
+<p>Sviluppare app per TV è molto simile a come avviene per ogni altro dispositivo. Devi sviluppare codice seguendo gli standard Web, progettare l'interfaccia in modalità responsive e rispettare le caratteristiche specifiche di piattaforma.</p>
+
+<ul>
+ <li><a href="/en-US/Firefox_OS/Introduction">Firefox OS introduction</a></li>
+ <li><a href="/en-US/Apps/Build">Building Web apps</a></li>
+ <li><a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS">Building apps for Firefox OS</a></li>
+ <li><a href="/en-US/Apps/Design/UI_layout_basics">UI layout basics</a></li>
+</ul>
+
+<p>Ci sono comunque alcune differenze di concetto e di interazione, Molte di queste sono descritte nella sezione <a href="/en-US/Apps/Design/Firefox_OS_TV_UX">Firefox OS for TV UX Overview</a> di MDN.</p>
+
+<ul>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_TV_UX/App_layout_guide">TV app layout guide</a></li>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_TV_UX/Building_blocks">TV building blocks</a></li>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_TV_UX/Icon_design">TV icon design</a></li>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_TV_User_Interface_Animation_Design">Firefox OS TV User Interface &amp; Animation Design</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/Web_animations_on_large_screen">Web animations on large screens</a></li>
+</ul>
+
+<p>Inoltre, leggi i seguenti:</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/How_to_connect_WebIDE_to_TV_%28VIErA%29">How to connect WebIDE to TV (VIErA CX/CR series)</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV">Keyboard events in Firefox OS TV</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_broadcast_streams_Firefox_OS">TV broadcast streams on Firefox OS products</a></li>
+</ul>

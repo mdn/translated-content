@@ -1,0 +1,104 @@
+---
+title: Problemi Derivanti Dall Hover Su Elementi Arbitrari
+slug: Archive/Standard_Web/Issues_Arising_From_Arbitrary-Element_hover
+tags:
+  - CSS
+  - Tutte_le_categorie
+translation_of: Archive/Web_Standards/Issues_Arising_From_Arbitrary-Element_hover
+---
+<p> </p>
+
+<p><span class="comment">Summary: Thanks to long-standing limitations, we're used to thinking of hover styles as applying only to hyperlinks, which has led to some sloppy authoring practices that are now causing problems for some Web sites. This technote explains the source of the problems and how to avoid encountering them.</span></p>
+
+<p>Molti sviluppatori fanno uso della pseudo-classe CSS2 <code>:hover</code> per applicare uno stile ai collegamenti. Questa innovazione, introdotta per la prima volta da Microsoft® Internet Explorer e poi introdotta nelle specifiche CSS, è molto utilizzata per modificare i collegamenti testuali, in particolare quelli che sono si vuole far apparire e agire come "rollover" in JavaScript. Tuttavia, il progredire del supporto ai CSS da parte dei browser, ha portato in qualche caso ad un utilizzo spregiudicato di questa funzionalità.</p>
+
+<h3 id="Hover_ed_elementi_che_non_sono_collegamenti" name="Hover_ed_elementi_che_non_sono_collegamenti">Hover ed elementi che non sono collegamenti</h3>
+
+<p>La <a class="external" href="http://www.w3.org/TR/CSS2/selector.html#x36">Sezione 5.11.3 dei CSS2</a> definisce tre pseudo-classi dinamiche (<code>:hover</code>, <code>:active</code>, e <code>:focus</code>) e dice:</p>
+
+<blockquote>La specifica non definisce quali elementi possano essere nei suddetti stati, o come si entra e si esce da tali stati. Uno scipt può modificare se certi elementi reagiscono o meno agli eventi geenrati dall'utente, e su dispositivi differenti ci possono essere differenti metodi di puntamento e attivazione.</blockquote>
+
+<p>Quindi, benchè gli sviluppatori siano abituati a pensare che questi stati si applicano esclusivamente ai collegamenti, in realtà non ci sono tali limitazioni nei CSS2. Ogni elemento, in teoria, potrebbe assumere uno dei tre stati sopra elencati, e quindi assumere lo stile ad essi associato.</p>
+
+<p> </p>
+
+<h3 id="Pseudo-classi_generiche" name="Pseudo-classi_generiche">Pseudo-classi generiche</h3>
+
+<p>La seconda parte del problema si manifesta quando si considera l'effetto della pseudo-classe generica nel selettore. Per esempio:</p>
+
+<pre>:hover {color: red;}</pre>
+
+<p>Questo è equivalente alla regola CSS2:</p>
+
+<pre>*:hover {color: red;}</pre>
+
+<p>..che si traduce in "ogni elemento su cui si passa deve assumere il colore rosso". Quindi, passando sopra paragrafi, tabelle, intestazioni e ogni altro elemento in un documento, dovrebbe far diventare il testo rosso.</p>
+
+<p>Una comune variante è utilizzare insieme una classe generica e la pseudo-classe hover, come in questo caso:</p>
+
+<pre>.nav:hover {color: red;}</pre>
+
+<p>Nei casi in cui la classe <code>nav</code> viene applicata solo a collegamenti, non si verificano problemi. Ma nei casi comuni in cui è associata anche ad altri marcatori, come in questo caso:</p>
+
+<pre>&lt;td class="nav"&gt;
+&lt;a href="one.html" class="nav"&gt;one&lt;/a&gt; |
+&lt;a href="two.html" class="nav"&gt;two&lt;/a&gt; |
+&lt;a href="thr.html" class="nav"&gt;three&lt;/a&gt; |
+&lt;a href="fou.html" class="nav"&gt;four&lt;/a&gt;
+&lt;/td&gt;</pre>
+
+<p>Poichè si applica la classe <code>nav</code> anche alla cella della tabella, anche i caratteri esterni ai collegamenti (|) diventeranno rossi quando l'utente passerà con il puntatore del mouse sopra un qualsiasi punto della tabella, oltre che quando passerà sopra i collegamenti.</p>
+
+<h3 id="Il_comportamento_di_Gecko" name="Il_comportamento_di_Gecko">Il comportamento di Gecko</h3>
+
+<p>In browser basati su Netscape Gecko build 20020410 o successivi (Netscape 6.1+), gli stili associati a <code>:hover</code> possono essere applicati a qualsiasi elemento del documento. Quindi gli sviluppatori che utilizzano pseudo-classi generiche, o combinazioni simili, sono a rischio di vedere questi stili applicati ad altri elementi oltre che ai collegamenti. Il metodo più corretto di correggere questo problema è aggiungere il giusto marcatore come selettore dello stile, come in questo esempio:</p>
+
+<pre>a:hover {color: red;}
+a.nav:hover {color: red;}</pre>
+
+<p>In un tentativo di evitare l'insorgere di problemi con vecchie pagine, i browser basati su Mozilla 1.0 e successivi (Netscape 7+) includono un accorgimento che restringe l'applicazione di pseudo-classi generiche solo ai collegamenti, nel caso in cui il documento venga interpretato nel modo "quirks". Nei browser basati sul motore di Mozilla 1.3b e successivi, questa modalità viene estesa a comprendere selettori che combinano classi generiche con la pseudo-classe <code>:hover</code> (si veda {{ Bug(169078) }} per dettagli).</p>
+
+<h3 id="Problemi_dei_collegamenti_con_attributo_Name" name="Problemi_dei_collegamenti_con_attributo_Name">Problemi dei collegamenti con attributo Name</h3>
+
+<p>In aggiunti agli effetti sopra descritti, ci sono due altri effetti relativamente comuni, che gli sviluppatori possono non aspettarsi. Uno può essere facilmente corretto con la validazione, ma il secondo è un po' più sottile.</p>
+
+<p>Prima di tutto, c'è il problema degli sviluppatori che utilizzano collegamenti con attributo Name, senza marcatore di chiusura. Per esempio:</p>
+
+<pre>&lt;a name="pagetop"&gt;
+&lt;h2&gt;My Page&lt;/h2&gt;</pre>
+
+<p>Senza un <code>&lt;/a&gt;</code>, tutto quanto viene dopo viene formalmente considerato come facente parte del collegamento. E questo generalmente significa che tutto il resto del documento assume lo stile associato a hover. Si consideri l'effetto generato da questo stile:</p>
+
+<pre>a:hover {color: red;}</pre>
+
+<p>In un documento con un collegamento con attributo Name e che non viene correttamente chiuso, tutto il testo che segue l'apertura del collegamento, assumerà il colore rosso (sempre che un'altra regola del CSS non intervenga).</p>
+
+<p>Questo ci porta al secondo problema, che consiste nel fatto che collegamenti con attributo Name possono avere stile hover. Benchè gli sviluppatori vogliano che il selettore <code>a:hover</code> sia associato solo ai veri collegamenti, esso sarà associato anche a quelli con attributo Name, dato che il selettore dichiara semplicemente che qualsiasi elemento <code>a</code> può passare nello stato hover. Per evitare questo problema, gli sviluppatori possono utilizzare una sintassi con pseudo-classi multiple descritta nei CSS2:</p>
+
+<pre>a:link:hover {color: red;}
+a:visited:hover {color: maroon;}</pre>
+
+<p>Si noti che, con questa sintassi, è possibile associare stili diversi a collegamenti visitati e non visitati, quando ci si passa sopra con il puntatore del mouse. Questo non era possibile con il solo <code>a:hover</code>. Ovviamente questo significa che il selettore <code>a:link:hover</code> si applica solamente ai collegamenti non visitati, per cui gli sviluppatori che vogliono applicare lo stesso stile sia a collegamenti visitati e non visitati, devono raggruppare i due selettori in una regola singola.</p>
+
+<h3 id="Raccomandazioni" name="Raccomandazioni">Raccomandazioni</h3>
+
+<p>Per evitare problemi inattesi, gli sviluppatori sono <strong>fortemente</strong> incoraggiati ad associare nomi agli elementi che usano pseudo-classi dinamiche per i collegamenti. Inoltre, le pseudo-classi multiple evitano che gli stili hover siano applicati a collegamenti non reali. Quindi, usare sempre <code>a:hover</code> invece di <code>:hover</code>, e <code>a:link:hover</code> (e <code>a:visited:hover</code>) sono preferiti al più semplice a:hover.</p>
+
+<h3 id="Collegamenti" name="Collegamenti">Collegamenti</h3>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS2/selector.html#x36">The dynamic pseudo-classes: :hover, :active, and :focus</a></li>
+</ul>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author(s): Eric A. Meyer, Netscape Communications</li>
+ <li>Last Updated Date: Published 07 Mar 2003; Revised 21 Mar 2003</li>
+ <li>Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.</li>
+ <li>Note: This reprinted article was originally part of the DevEdge site.</li>
+</ul>
+</div>
+
+<p> </p>

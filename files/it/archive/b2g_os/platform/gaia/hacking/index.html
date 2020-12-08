@@ -1,0 +1,132 @@
+---
+title: Hacking Gaia
+slug: Archive/B2G_OS/Platform/Gaia/Hacking
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Sviluppo
+  - linee guida
+translation_of: Firefox_OS/Developing_Gaia
+---
+<div class="warning">
+ <p>Questa pagina è diretta agli sviluppatori Gaia. Se stai cercando informazioni su come compilare e installare Firefox OS dovresti leggere <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Compilare e installare Firefox OS.</a></p>
+</div>
+<p>Gaia è un insieme di <a href="https://developer.mozilla.org/apps" rel="nofollow">web apps</a> che creano l'interfaccia di <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>. Ciò che vedi sullo schermo in Firefox OS è scritto usando le open Web technologies. Anche la schermata home e le app di default usano le stesse tecnologie.</p>
+<h2 id="Ottenere_i_sorgenti">Ottenere i sorgenti</h2>
+<p>Per ottenere  i sorgenti per Gaia, <a href="https://github.com/mozilla-b2g/gaia" title="https://github.com/mozilla-b2g/gaia">effettua un fork su GitHub</a>  e usalo per scaricare i file tramite <a href="http://git-scm.com/" title="http://git-scm.com/">git</a>.</p>
+<pre>$ git clone https://github.com/mozilla-b2g/gaia.git</pre>
+<h2 id="Eseguire_Gaia">Eseguire Gaia</h2>
+<p>Puoi usare Gaia sia su un desktop, dentro a Firefox, sia su un apparecchio mobile compatibile.</p>
+<h3 id="B2G_desktop">B2G desktop</h3>
+<p>B2G desktop è una build per desktop del runtime applicativo usato su Firefox OS che è possibile utilizzare per eseguire Gaia su un computer desktop.</p>
+<p>Puoi scaricare una nightly build di B2G desktop da <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">qui</a>. In base alla versione su cui desideri lavorare potresti volere una versione specifica di latest-mozilla-b2g18. Esistono versioni per Linux (32 bit and 64 bit), Mac OS X e Windows.</p>
+<p>Le nightly builds sono pacchettizate con una versione di Gaia recente. Una volta scaricato l'archivio, tutto ciò che dovrai fare è estrarlo in una cartella ed eseguire il file compilato di b2g nella cartella.</p>
+<pre class="brush: bash">$ cd b2g
+$ ./b2g</pre>
+<p>Se vuoi usare una versione personalizzata di Gaia usando B2G devi creare un profilo:</p>
+<pre class="brush: bash">$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+<p>Questo comando genera una cartella chiamata <code>profile</code><code> </code>nella directory <code>gaia</code>. L'opzione <code>DEBUG</code> esegue Gaia come una hosted app su di un web-server invece che come app pacchettizzate che devono essere ricompilate e ripacchettizate dopo ogni cambiamento. Una volta creato il nuovo profilo puo trovare la sua posizione leggendo l'ultima riga dell'output del comando precedente:</p>
+<pre>Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+<p>A questo punto puoi usare il profilo personalizzato in B2G passandolo come variabile:</p>
+<pre>$ ./b2g /path/to/gaia/profile</pre>
+<p>Inoltre se vuoi puoi compilare B2G sai sorgenti.</p>
+<h3 id="Usare_Gaia_in_Firefox">Usare Gaia in Firefox</h3>
+<p>Puoi anche usare Gaia dentro a Firefox. Questo ti permette di mantenere veloce il ciclo di sviluppo e di avere gli strumenti per lo sviluppo ed il debug integrati in Firefox. Vedi <a href="/en-US/docs/Mozilla/Firefox_OS/Using_Gaia_in_Firefox" title="/en-US/docs/Mozilla/Firefox_OS/Using_Gaia_in_Firefox">Usare Gaia in Firefox</a> per i dettagli su come usare Gaia in Firefox.</p>
+<h3 id="Usare_Gaia_su_un_dispositivo">Usare Gaia su un dispositivo</h3>
+<p>Se possiedi un dispositivo compatibile puoi usare Gaia installando Firefox OS. Vedi <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Compilare ed installare Firefox OS</a> per i dettagli. Puoi inoltre consultare la documentazione su <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing">come testare Firefox OS</a>.</p>
+<h2 id="Test_di_unità">Test di unità</h2>
+<p>Vedi <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia unit tests</a> per la documentazione su come creare ed eseguire i test di unità per Gaia.</p>
+<h2 id="Segnala_i_Bug">Segnala i Bug</h2>
+<p>I bug sono segnalati su Bugzilla nella sezione <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---" rel="nofollow">Boot2Gecko &gt; Gaia</a>. Segnala un nuovo bug <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Boot2Gecko" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Boot2Gecko">under the Gaia component</a> (or one of the sub-components).</p>
+<h2 id="Contribuisci_a_Gaia">Contribuisci a Gaia</h2>
+<p>Mozilla dipende dalle dalla comunità open source  per sviluppare Gaia e le app e ci piacerebbe che tu partecipassi.</p>
+<p>Alcuni posti da cui trovare bug su cui lavorare:</p>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component:gaia%20sw:polish%20@nobody;list_id=4566236" rel="nofollow">Unowned Gaia polish bugs on Bugzilla</a></li>
+ <li><a href="http://www.joshmatthews.net/bugsahoy/?b2g=1" rel="nofollow">Mentored bugs</a></li>
+</ul>
+<h3 id="Direttive_sul_codice">Direttive sul codice</h3>
+<ul>
+ <li>Background:
+  <ul>
+   <li><a href="/en-US/docs/Developer_Guide/Coding_Style#General_practices" title="Developer_Guide/Coding_Style#General_practices">Coding Style: General practices</a></li>
+   <li><a href="/en-US/docs/Developer_Guide/Coding_Style#JavaScript_practices" title="Developer_Guide/Coding_Style#JavaScript_practices">Coding Style: JavaScript practices</a></li>
+   <li><a href="/en-US/docs/Developer_Guide/Coding_Style#Naming_and_formatting_guide" title="Developer_Guide/Coding_Style#Naming_and_formatting_guide">Coding Style: Naming and formatting guide</a></li>
+  </ul>
+ </li>
+ <li>Aggiungi sempre <code>&lt;!DOCTYPE html&gt;</code>ai file HTML (that is, as HTML5 documents). Se non lo farai, Internet Explorer 9 e seguenti caricheranno le tue pagine in modalità di compatibilità.</li>
+ <li>Aggiungi sempre <code>"use strict";</code> all'inizio dei tuoi fie  JavaScript per usare la modalità strict.</li>
+ <li>Usa due spazi per l'indentazione, non le tabulazioni.</li>
+ <li>Please use line breaks to separate logical bits of code!</li>
+ <li>Usa un trattino basso per separare le parole nei titoli dei file, <code>fai_cosi.js</code>.</li>
+ <li>Usa ' invece di " per le stringhe.</li>
+</ul>
+<h4 id="Regole_in_più">Regole in più</h4>
+<p>Sbagliato:</p>
+<pre>if (expression) doSomething();
+</pre>
+<p>Corretto:</p>
+<pre>if (expression) {
+  doSomething();
+}
+</pre>
+<p>Se lavori su un'app di sistema assicurati di leggere <a href="https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ" title="See_here_for_some_rules._https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">questo</a>.</p>
+<p>Prima di pubblicare una patch esegui <a href="http://closure-linter.googlecode.com/svn/trunk/closure_linter/gjslint.py" title="http://closure-linter.googlecode.com/svn/trunk/closure_linter/gjslint.py">gjslint</a>  per controllare gli errori di formattazione:</p>
+<pre>gjslint --nojsdoc my_file.js</pre>
+<h3 id="Pubblicare_una_patch">Pubblicare una patch</h3>
+<p>Prima di tutto riporta il bug su <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---">Bugzilla</a> e segnala checi stai lavorando, usa il tuo account account Bugzilla.</p>
+<p>Crea una nuova branch di Gaia in locale:</p>
+<pre>$ git branch branchname
+$ git checkout branchname</pre>
+<p>Segnala i tuoi cambiamenti:</p>
+<pre>$ git add /file/to/add
+$ git commit -m "Bug XXXXX - Fix the broken Gaia and save the world"</pre>
+<p>Esegui il push della tua branch:</p>
+<pre>$ git push origin branchname</pre>
+<p>Usando il bottone Pull sulla tua branch in GitHub segnala che sei disponibile a pubblicare il tuo codice.</p>
+<p>Per richiedere una revisione della tua patch, <a href="http://globau.wordpress.com/2013/10/21/github-pull-requests-and-bugzilla/">allega la pull request</a> al bug segnalato su Bugzilla aggiungendo l'URL della pull request e settando "review" ("r") a "?" quindi aggiungi il bugzilla ID di uno tra i <a href="https://wiki.mozilla.org/Modules/FirefoxOS" title="https://wiki.mozilla.org/Modules/FirefoxOS">proprietari del modulo</a> (Molto importante - altrimenti il tuo bug non verrà controllato da nessuno). Puoi usare l'addon <a href="https://addons.mozilla.org/en-US/firefox/addon/github-tweaks-for-bugzilla/" title="https://addons.mozilla.org/en-US/firefox/addon/github-tweaks-for-bugzilla/">Github tweaks for bugzilla extension on AMO</a> per aiutarti ad automatizzare questo processo. Questo addon ti aiuterà creando automaticamente l'allegato e  lo aggiungerà al bug su bugzilla; <strong>dovrai però segnalare che il bug ha bisogno della revisione di un proprietario</strong>.</p>
+<p>I revisori potrebbero chiederti qualche modifica; potresti dover annulare i tuoi cambiamenti sulla tua branch ma una volta che avrai soddisfattole loro richieste incorporeranno la tua branch nella master del loro modulo. Potrebbero chiederti di anullare tutti i tuoi cambiamenti graduali per crearne uno singolo finale in modo che il tuo lavoro possa essere seguito meglio.</p>
+<p>La persona che incorporerà il cambiamento nella master branch aggiungerà il tag <code>r=</code> flag nel commento al momento dell'incorporamento.</p>
+<h2 id="Opzioni_per_il_comando_make">Opzioni per il comando make</h2>
+<p>Ci sono molte variabili nel Makefile che fanno riferimento a ambienti di sviluppo non più supportati o non sono ben documentate, non fare affidamento su queste perché potrebbero essere rimosse in futuro.</p>
+<h3 id="Default">Default</h3>
+<pre>make</pre>
+<p>Compile un profilo con le app packaged che può essere usato dalla versione B2G Desktop e può essere portato sul dispositivo.</p>
+<h3 id="Debug_make">Debug make</h3>
+<pre>DEBUG=1 make</pre>
+<p>Con questa opzione attivata (<code>DEBUG</code>=1) Gaia può essere utilizzata come una hosted app su un webserver invece che come una app packaged che deve essere pacchettizzata dopo ogni cambiamento. Visita la pagina con l'ultima versione di Firefox Nightly per avere anche gli ultimi strumenti per sviluppatori specifici per B2G.</p>
+<h3 id="Push_to_device">Push to device</h3>
+<pre>make install-gaia
+
+make reset-gaia</pre>
+<p>Usando <code>adb</code> (Android Debug Bridge) puoi mandare al dispositivo la versione di Gaia che hai compilato. <code>reset-gaia</code> rimuoverà completamente tutti i file relativi al profilo utente e le web app prima di mandare al dispositivo la nuova versione di Gaia.</p>
+<h3 id="Selective_build">Selective build</h3>
+<pre>APP=system make
+
+APP=system make install-gaia</pre>
+<p>L'opzione APP permette di specificare quali app mettere nella versione di Gaia che compilerai, questo è utile se non vuoi metterle tutte ogni volta che vuoi aggiornare Gaia sul tuo disposistivo.</p>
+<h3 id="High_resolution_image_assets">High resolution image assets</h3>
+<pre>GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+<p>Questa variabile permette di usare diverse risoluzioni per le immagini di sistema, rimpiazzandole con  le rispettive versioni indicate,<code>*@1.5x.(gif|jpg|png)</code>, se esistono.</p>
+<p>Al momento Gaia è rivolta a tre differenti versioni di schermo, HBGA (320x240), qHD (540×960) e WVGA (480×800) ; puoi usare la variabile GAIA_DEV_PIXELS_PER_PX per essere sicuro che le immagini siano alla corretta risoluzione per dispositivi qHD e WVGA . Vedi l'articolo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">A pixel is not a pixel</a> per maggiori informazioni sulla relazione tra pixel del dispositivo e i pixel css..</p>
+<h3 id="Script_compression_and_optimization">Script compression and optimization</h3>
+<pre>GAIA_OPTIMIZE=1 make</pre>
+<p>Concatena le risorse di Gaia e ottimizza i file javascript interni per avere un minor tempo di caricamento.</p>
+<h3 id="Preference_shortcuts">Preference shortcuts</h3>
+<pre>NOFTU=1
+</pre>
+<p>Disattiva la guida introduttiva per l'utente.</p>
+<pre>REMOTE_DEBUGGER=1</pre>
+<p>Abilita il debug tramite lo strumento <code>adb</code>.</p>
+<pre>DEVICE_DEBUG=1</pre>
+<p>Per le versioni di Firefox Os successive alla 1.2,  puoi usare questo parametro quando vuoi eseguire il debug delle app tramite lo strumento AppManager.</p>
+<h3 id="Distribution_and_market_customization_build">Distribution and market customization build</h3>
+<pre>GAIA_DISTRIBUTION_DIR=./dir</pre>
+<p>Leggi <a href="https://wiki.mozilla.org/B2G/MarketCustomizations" title="https://wiki.mozilla.org/B2G/MarketCustomizations">Customization Overview</a> per i dettagli.</p>
+<h2 id="Contatta_il_team_in_questi_modi">Contatta il team in questi modi</h2>
+<ul>
+ <li><a href="https://lists.mozilla.org/listinfo/dev-gaia" rel="nofollow">Gaia Mailing List</a></li>
+ <li>#gaia IRC channel on irc.mozilla.org</li>
+</ul>

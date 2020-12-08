@@ -1,0 +1,44 @@
+---
+title: The Thread Manager
+slug: XPCOM/The_Thread_Manager
+tags:
+  - Firefox 3
+  - Threads
+translation_of: Mozilla/Tech/XPCOM/The_Thread_Manager
+---
+<p> </p><div class="blockIndicator draft">
+    <p><strong>초안</strong><br>
+    이 문서는 작성중입니다.</p>
+
+</div><p></p>
+<p>Firefox 3에서 도입된 스레드 관리자는 스레드를 생성하고 이벤트를 처리하기 위해 스레드에 디스패치하는 사용하기 쉬운 방법을 제공합니다.</p>
+<p>스레드 지원을 제공하는 몇 가지 인터페이스가 있습니다.</p>
+<dl>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadManager" title="">nsIThreadManager</a></code></dt>
+ <dd>
+  스레드를 생성할 수 있게 해주는 스레드 관리자.</dd>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code></dt>
+ <dd>
+  운영체제 스레드를 캡슐화하고 코드에서 손쉬운 플랫폼 중립적인 접근을 제공하는 <code>nsIThread</code> 인터페이스.</dd>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadPool" title="">nsIThreadPool</a></code></dt>
+ <dd>
+  작업 스레드(worker threads)의 제한된 집합을 제공하는 스레드 풀. 이벤트를 풀로 디스패치할 때 풀은 이용 가능한 작업 스레드를 선택하고 이벤트를 처리.</dd>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal" title="">nsIThreadInternal</a></code></dt>
+ <dd>
+  XPCOM 스레드 개체가 구현하는 <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code>의 하위 클래스로서 스레드의 디스패치 동작을 관찰하기 위한 지원을 추가.</dd>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadObserver" title="">nsIThreadObserver</a></code></dt>
+ <dd>
+  이벤트가 스레드에 디스패치될 때와 그 처리를 마쳤을 때에 알림을 받기 위하여 스레드를 감시하는 능력을 제공.</dd>
+ <dt>
+  <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadEventFilter" title="">nsIThreadEventFilter</a></code></dt>
+ <dd>
+  이벤트 여과를 위하여 <code><a href="/ko/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal" title="">nsIThreadInternal</a></code>의 <code><a href="ko/NsIThreadInternal#pushEventQueue.28.29">pushEventQueue()</a></code> 메소드가 이용하는 인테페이스.</dd>
+</dl>
+<div class="noinclude">
+  </div>
+<p></p>

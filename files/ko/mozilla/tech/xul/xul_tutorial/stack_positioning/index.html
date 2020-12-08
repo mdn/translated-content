@@ -1,0 +1,35 @@
+---
+title: Stack Positioning
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Stack_Positioning
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Stack_Positioning
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Stacks_and_Decks" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Tabboxes">다음  »</a></p>
+</div><p></p>
+<p>이 단원에서는 스택 내에 있는 요소들의 위치를 지정하는 방법에 대해 알아보겠습니다.</p>
+<h3 id=".EC.8A.A4.ED.83.9D_.EB.82.B4_.EC.9E.90.EC.8B.9D_.EC.9A.94.EC.86.8C.EC.9D.98_.EC.9C.84.EC.B9.98" name=".EC.8A.A4.ED.83.9D_.EB.82.B4_.EC.9E.90.EC.8B.9D_.EC.9A.94.EC.86.8C.EC.9D.98_.EC.9C.84.EC.B9.98">스택 내 자식 요소의 위치</h3>
+<p>일반적으로 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>의 자식 요소는 스택의 크기에 맞추어 늘어납니다. 그러나 여려분은 특정 좌표에 자식 요소를 배치할 수도 있습니다. 예를 들어, 스택에 두개의 자식 버튼이 있다면, 첫번째 버튼은 좌측에서 20픽셀 그리고 상단에서는 50픽셀 떨어진 곳에, 두번째 버튼은 좌측에서 100픽셀 그리고 상단에서 5픽셀 떨어진 곳에 위치시킬 수 있습니다.</p>
+<p>자식 요소의 위치는 요소에 두 가지 속성을 사용해서 지정할 수 있습니다. 가로 위치의 경우 <code>left</code> 속성을 사용하고 세로위치는 <code>top</code>속성을 사용합니다. 스택의 자식에 이들 속성을 사용하지 않으며, 해당 자식들은 stack 크기에 맞쳐 늘어나게 됩니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:bulletins1.png"></div>
+<pre>&lt;stack&gt;
+  &lt;button label="Goblins" left="5" top="5"/&gt;
+  &lt;button label="Trolls" left="60" top="20"/&gt;
+  &lt;button label="Vampires" left="10" top="60"/&gt;
+&lt;/stack&gt;
+</pre>
+<p>여기서 <code>stack</code>은 3가지 요소를 포함하고 있는데, 각 요소들에 <code>left</code>와 <code>top</code> 속성이 지정되어 있어 그림과 같이 위치하고 있습니다. 예제에서 3가지 자식 요소가 모두 버튼이지만, 요소들이 모두 같은 형식일 필요는 없습니다. 그것은 상자와 다른 스택을 포함해서 어떤 요소든 될 수 있습니다.</p>
+<p><code>stack</code>의 크기는 자식 요소의 위치에 의해 결정됩니다. 즉, 모든 자식 요소가 볼 수 있도록 항상 크기가 조정됩니다. 따라서 <code>left</code> 속성을 400으로 설정했으면, 스택은 해당 요소의 넓이에 400픽셀을 더한 정도의 너비를 가지게 됩니다. <code>width</code>와 <code>max-width</code> 같은 여러 스타일 속성을 사용해서 이 크기를 재정의할 수 있습니다.</p>
+<p>여러분은 스크립트를 사용해서 <code>left</code>와 <code>top</code> 속성 값을 조정할 수 있으며, 요소를 이동하게 만들 수 있습니다. 스택은 절대위치값을 가지는 요소가 위치를 바꿀 때, 다른 요소의 위치에는 영향을 주지 않는다는 장점이 있습니다. 보통 상자에서는 요소의 위치를 옮기면, 다른 요소의 위치가 섞이게 됩니다.</p>
+<p>자식 요소가 겹쳐질 수 있도록 하는 것 역시 가능합니다. 자식 요소들이 그려질 때는, <code>stack</code>에 나타난 순서대로 보이게 됩니다. 즉, <code>stack</code>의 첫 번째 자식이 맨 뒤에 나타나고, 다음 자식 요소는 그 위에 나타나고, 마지막 요소는 최상위에 오게 됩니다. 해당 요소의 순서를 옮기기 위해 DOM 함수를 이용할 수 있습니다.</p>
+<p>마우스 이벤트에 응답하는 경우, 상위에 있는 요소가 해당 이벤트를 먼저 인식하게 됩니다. 이것은 두 개의 버튼이 겹쳐있을 경우, 다른 버튼을 덮고 있는 상위 버튼이 마우스 클릭을 인식하게 된다는 것을 의미합니다.</p>
+<p>다음 섹션에서는 덱과 비슷하지만 고유한 네비게이션 방법을 제공하는 <a href="ko/XUL_Tutorial/Tabboxes">탭박스</a>에 대해 설명하겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Stacks_and_Decks" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Tabboxes">다음  »</a></p>
+</div><p></p>
+<p></p>

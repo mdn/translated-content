@@ -1,0 +1,29 @@
+---
+title: Impacchettare l'Estensione
+slug: Impacchettare_l'Estensione
+tags:
+  - Estensioni
+  - Toolkit API
+  - Tutte_le_categorie
+translation_of: Archive/Add-ons/Extension_Packaging
+---
+<p>Le estensioni sono una forma di <a href="/it/docs/Pacchetti">pacchetti installabili</a> che possono essere scaricati e installati dall'utente, o forniti pre-impacchettati insieme all'applicazione o ad un programma esterno. Le estensioni utilizzano una <a href="/it/docs/Pacchetti">struttura della directory</a> che può essere fornita di chrome, componenti, ed altri file per estendere le funzionalità di un programma XUL.</p>
+<p>Ogni estensione deve essere fornita di un file <a href="/it/docs/Install.rdf">install.rdf</a> che contiene i metadati sull'estensione, come le informazioni sul suo ID univoco, sulla versione, sull'autore e sulla compatibilità.</p>
+<p>Dopo che i file dell'estensione e install.rdf sono pronti, ci sono molti modi di preparare l'estensione per l'installazione: comprimere il contenuto della directory dell'estensione in un file <a href="/it/docs/XPI">XPI</a> installabile dall'utente, decomprimere direttamente l'estensione nell'applicazione o nella cartella del profilo dell'utente, o registrarla nel registro di Windows.</p>
+<h2 id="Realizzare_un_XPI_di_un.27estensione" name="Realizzare_un_XPI_di_un.27estensione">Realizzare un XPI di un'estensione</h2>
+<p>Un file <a href="/it/docs/XPI">XPI</a> (XPInstall) è semplicemente un file (ZIP) compresso che contiene i file dell'estensione, ed il file <a href="/it/docs/Install.rdf">install.rdf</a> nella root dell'archivio. Gli utenti possono scaricare i file XPI ed installarli sia da un sito web che da un file in locale, aprendo il file o trascinandolo nella finestra delle Estensioni.</p>
+<p>Il tipo MIME riconosciuto da Firefox per i file XPI è <i>application/x-xpinstall</i>. Poichè molti server non sono normalmente configurati per restituire questi tipo MIME per l'estensione .xpi, sarà probablimente necessario configurare il proprio server. Nei server Apache HTTP, questa operazione può essere effettuata aggiungendo la seguente istruzione al file di configurazione o .htaccess:</p>
+
+<pre>AddType application/x-xpinstall .xpi
+</pre>
+
+<h2 id="Installare_i_file_dell.27estensione_direttamente" name="Installare_i_file_dell.27estensione_direttamente">Installare i file dell'estensione direttamente</h2>
+<p>Se si conosce l'ubicazione dell'applicazione (se si sta installando l'estensione come parte dell'installer dell'applicazione, ad esempio) è possibile installare i file dell'estensione direttamente in &lt;appdir&gt;/extensions/&lt;extensionID&gt;. L'estensione sarà trovata automaticamente dal programma di gestione delle estensioni al successivo riavvio dell'applicazione.</p>
+<p>Quando si usa questo metodo, bisogna verificare che i permessi del file system per le directory ed i file sia settati opportunamente. In caso contrario il programma di gestione delle estensioni potrebbe non funzionare correttamente con l'estensione, o l'estensione stessa potrebbe non funzionare a dovere.</p>
+<h2 id="Registrare_l.27ubicazione_di_un.27estensione_utilizzando_il_Registro_di_Windows" name="Registrare_l.27ubicazione_di_un.27estensione_utilizzando_il_Registro_di_Windows">Registrare l'ubicazione di un'estensione utilizzando il Registro di Windows</h2>
+<p>I programmi di installazione esterni (come Java runtime) potrebbero volere installare punti di integrazione dell'applicazione così come dell'estensione anche se l'applicazione non è ancora installata. Questo su Windows può essere fatto <a href="/it/docs/Aggiungere_estensioni_utilizzando_il_Registro_di_Windows">utilizzando il Registro</a>.</p>
+<h2 id="XPI_di_estensioni_contenenti_pi.C3.B9_elementi" name="XPI_di_estensioni_contenenti_pi.C3.B9_elementi">XPI di estensioni contenenti più elementi</h2>
+<p>In alcuni casi un singolo file XPI potrebbe voler installare più estensioni/temi. Un tipo speciale di XPI di estensioni chiamata <a href="/it/docs/Impacchettare_pi%c3%b9_elementi">Pacchetto multi-elementi</a> spiega come creare questo tipo di pacchetti. (è richiesto Firefox 1.5/XULRunner 1.8.)</p>
+
+<h2 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official References for <a href="/it/docs/Toolkit_API">Toolkit API</a></h2>
+<div>{{page("/it/docs/Toolkit_API/Official_References")}}</div>

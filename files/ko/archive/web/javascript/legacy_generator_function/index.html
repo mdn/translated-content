@@ -1,0 +1,58 @@
+---
+title: 구형 생성기 함수 표현식
+slug: Archive/Web/JavaScript/Legacy_generator_function
+tags:
+  - JavaScript
+  - Non-standard
+  - Obsolete
+  - Operator
+  - Reference
+translation_of: Archive/Web/JavaScript/Legacy_generator_function
+---
+<div>{{JSSidebar("Operators")}}{{Non-standard_Header}}{{Obsolete_Header("gecko58")}}
+<div class="warning">The legacy generator function expression was a SpiderMonkey-specific feature, which is removed in Firefox 58+. For future-facing usages, consider using the {{JSxRef("Operators/function*", "function* expression")}}.</div>
+</div>
+
+<p>The <strong><code>function</code></strong> keyword can be used to define a legacy generator function inside an expression. To make the function a legacy generator, the function body should contain at least one {{JSxRef("Operators/yield", "yield")}} expression.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
+   <em>statements</em>
+}</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>The function name. Can be omitted, in which case the function is <em>anonymous</em>. The name is only local to the function body.</dd>
+ <dt><code>paramN</code></dt>
+ <dd>The name of an argument to be passed to the function. A function can have up to 255 arguments.</dd>
+ <dt><code>statements</code></dt>
+ <dd>The statements which comprise the body of the function. This should contain at least one {{JSxRef("Operators/yield", "yield")}} expression.</dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p>An overview of the usage is available on the <a href="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">Iterators and Generators</a> page.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>Supported nowhere.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{JSxRef("Generator")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">The legacy generator function</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol">The legacy Iterator protocol</a></li>
+ <li>{{JSxRef("Operators/yield", "yield")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope">Functions and function scope</a></li>
+ <li>{{JSxRef("Statements/function", "function")}}</li>
+ <li>{{JSxRef("Operators/function", "function expression")}}</li>
+ <li>{{JSxRef("Function")}}</li>
+ <li>{{JSxRef("Statements/function*", "function*")}}</li>
+ <li>{{JSxRef("Operators/function*", "function* expression")}}</li>
+ <li>{{JSxRef("GeneratorFunction")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
+</ul>

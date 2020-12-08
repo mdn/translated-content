@@ -1,0 +1,65 @@
+---
+title: Adding Labels and Images
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Adding_Labels_and_Images
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_Buttons" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Input_Controls">다음  »</a></p>
+</div><p></p>
+<p>이 절은 창에 label과 image를 추가하는 법을 기술합니다. 게다가, 그룹에 요소를 포함하는 법을 살펴봅니다.</p>
+<h3 id="Text_.EC.9A.94.EC.86.8C" name="Text_.EC.9A.94.EC.86.8C">Text 요소</h3>
+<p>여러분은 태그 없이는 XUL 파일에 바로 텍스트를 끼워 넣고 표시되기를 기대할 수 없습니다. 여러분을 이런 목적을 위해 XUL 요소 둘을 쓸 수 있습니다.</p>
+<h4 id="Label_.EC.9A.94.EC.86.8C" name="Label_.EC.9A.94.EC.86.8C">Label 요소</h4>
+<p>창에 텍스트를 포함하는 가장 기본 방법은 <code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> 요소를 쓰는 겁니다. 예제를 아래에 보입니다.</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul">View</a></p>
+<pre>&lt;label value="This is some text"/&gt;
+</pre>
+<p><code><code id="a-value"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 속성(attribute)은 여러분이 표시되길 바라는 텍스트를 지정하는 데 쓸 수 있습니다. 텍스트는 넘겨지지(wrap) 않아서 오직 한 줄에 보입니다. 이는 짧은 텍스트 절에 어울립니다.</p>
+<h4 id="Description_.EC.9A.94.EC.86.8C" name="Description_.EC.9A.94.EC.86.8C">Description 요소</h4>
+<p>더 긴 텍스트를 위해, 여러분은 열고 닫는 <code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> 태그 안에 content를 둘 수 있습니다. <code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> 요소와 <code>value</code> 속성으로 지정된 텍스트와는 달리, child 텍스트는 필요하다면 여러 줄로 넘겨집니다. 넘겨짐(wrapping)을 보기 위해 창 크기를 조정해 보세요. HTML처럼, 줄바꿈(line break)과 여분 공백(whitespace)은 space 하나로 축약됩니다. 우리가 더 쉽게 넘겨짐을 볼 수 있도록 <a href="ko/XUL_Tutorial/Element_Positioning">나중에 요소의 너비를 강제하는 법을 알아봅니다</a>.</p>
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul">View</a></p>
+<pre>&lt;description&gt;
+  This longer section of text is displayed.
+&lt;/description&gt;
+</pre>
+<p>내부에서, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 요소와 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 요소 둘은 같습니다. 이는 label은 여러분이 태그 안에 둔 텍스트가 넘겨질 수 있고 description은 <code><code id="a-value"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 속성이 있을 수 있음을 뜻합니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 요소 text field와 같은 컨트롤(control)의 label을 위한 목적입니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 요소는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code> 상자의 상단에 informative text와 같은 other descriptive text를 위한 목적입니다. 관례에 따라, 여러분은 이 지침을 따르면 좋습니다.</p>
+<h4 id="Control_.EC.86.8D.EC.84.B1" name="Control_.EC.86.8D.EC.84.B1">Control 속성</h4>
+<p>여러분은 to set which control the label is associated with <code><code id="a-control"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 속성을 쓸 수 있습니다. 사용자가 label을 클릭할 때, 그 컨트롤이 focus를 받습니다. <code>control</code> 속성값을 focus 받을 요소의 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code>로 설정하세요.</p>
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul">View</a></p>
+<pre>&lt;label value="Click here:" control="open-button"/&gt;
+&lt;button id="open-button" label="Open"/&gt;
+</pre>
+<p>위 예제에서, label을 클릭하면 button이 focus를 받게 됩니다.</p>
+<h3 id="Image" name="Image">Image</h3>
+<p>HTML처럼, XUL은 창 안에 image를 표시하는 요소가 있습니다. 이 요소는 어울리게 <code><a href="/ko/docs/Mozilla/Tech/XUL/image" title="image">image</a></code>로 이름 지었습니다. 태그 이름이 HTML(
+ <i>
+  img</i>
+ 대신
+ <i>
+  image</i>
+ )과 다름을 유념하세요. 여러분은 image 파일의 URL을 지정하기 위해 <code><code id="a-src"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> 속성을 쓸 수 있습니다. 아래 예제는 이를 보입니다.</p>
+<pre>&lt;image src="images/banner.jpg"/&gt;
+</pre>
+<p>비록 여러분이 이 구문을 쓸 수 있을지라도, image URL을 설정하기 위해 스타일시트를 쓰는 것이 더 낫습니다. 더 나중 절에서 <a href="ko/XUL_Tutorial/Adding_Style_Sheets">스타일시트 쓰는</a> 법을 설명하지만 예제는 완결함을 위해 여기에 보입니다. 여러분은 image URL을 설정하기 위해 <code><a href="ko/CSS/list-style-image">list-style-image</a></code> CSS 프로퍼티를 쓸 수 있습니다. 여기 예제가 있습니다.</p>
+<pre class="eval"><b>XUL:</b>
+ &lt;image id="image1"/&gt;
+ &lt;image id="search"/&gt;
+</pre>
+<pre class="eval"><b>Style Sheet:</b>
+ #image1 {
+   list-style-image: url("<a class="external" rel="freelink">chrome://findfile/skin/banner.jpg</a>");
+ }
+
+ #search {
+   list-style-image: url("<span class="nowiki">http://example.com/images/search.png</span>");
+ }
+</pre>
+<p>이 이미지들은 findfile 꾸러미(package)용 skin의 chrome 디렉토리에서 났습니다. image가 skin에 따라 바뀌기 때문에, 여러분은 보통 skin 디렉토리에 image를 둘 겁니다.</p>
+<p>다음 절에서, 우리는 <a href="ko/XUL_Tutorial/Input_Controls">창에 입력 컨트롤을 추가</a>하는 법을 배웁니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Adding_Buttons" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Input_Controls">다음  »</a></p>
+</div><p></p>
+<p></p>

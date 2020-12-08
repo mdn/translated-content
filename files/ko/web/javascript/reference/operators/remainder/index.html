@@ -1,0 +1,73 @@
+---
+title: 나머지 연산자 (%)
+slug: Web/JavaScript/Reference/Operators/Remainder
+translation_of: Web/JavaScript/Reference/Operators/Remainder
+---
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>나머지 연산자(<code>%</code>)는 피제수가 제수에 의해 나누어진 후, 그 나머지를 반환합니다. 항상 피제수의 부호를 따릅니다.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}</div>
+
+<div></div>
+
+
+
+<h2 id="문법">문법</h2>
+
+<pre class="syntaxbox notranslate"><strong>Operator:</strong> <var>var1</var> % <var>var2</var>
+</pre>
+
+<h2 id="예시">예시</h2>
+
+<h3 id="피제수의_나머지">(+)피제수의 나머지</h3>
+
+<pre class="brush: js notranslate"> 12 % 5  //  2
+ 1 % -2 //  1
+ 1 % 2  //  1
+ 2 % 3  //  2
+5.5 % 2 // 1.5
+</pre>
+
+<h3 id="-피제수의_나머지">(-)피제수의 나머지</h3>
+
+<pre class="brush: js notranslate">-12 % 5 // -2
+-1 % 2  // -1
+-4 % 2  // -0</pre>
+
+<h3 id="NaN의_나머지">NaN의 나머지</h3>
+
+<pre class="brush: js notranslate">NaN % 2 // NaN</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-multiplicative-operators', 'Remainder operator')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("javascript.operators.remainder")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
+</ul>

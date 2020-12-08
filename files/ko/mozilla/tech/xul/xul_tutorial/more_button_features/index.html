@@ -1,0 +1,69 @@
+---
+title: More Button Features
+slug: Mozilla/Tech/XUL/XUL_Tutorial/More_Button_Features
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Button_Features
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Using_Spacers" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:The_Box_Model">다음  »</a></p>
+</div><p></p>
+<p>이번 단원에서는 버튼의 부가적인 기능들에 대해 알아 보겠습니다.</p>
+<h3 id=".EA.B7.B8.EB.A6.BC_.EB.84.A3.EA.B8.B0" name=".EA.B7.B8.EB.A6.BC_.EB.84.A3.EA.B8.B0">그림 넣기</h3>
+<p>버튼에 그림을 넣을 때는 <code><code id="a-image"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></code> 속성에 URL을 지정해 주면 됩니다. 그림은 상대든 절대 URL이든 상관없이 로드되며, 읽어온 그림을 버튼에 표시합니다.</p>
+<p>아래의 버튼은 <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>과 <code><code id="a-image"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></code>(happy.png)을 모두 포함하고 있습니다. 그림은 라벨의 왼쪽에 표시되는데 다른 두 가지 속성을 이용하여 그림의 위치를 바꿀 수 있습니다. 이에 대해서는 잠시 후에 설명하겠습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul">View</a></p>
+<pre>&lt;button label="Help" image="happy.png"/&gt;
+</pre>
+<h4 id="CSS.EB.A1.9C_.EA.B7.B8.EB.A6.BC_.EB.84.A3.EA.B8.B0" name="CSS.EB.A1.9C_.EA.B7.B8.EB.A6.BC_.EB.84.A3.EA.B8.B0">CSS로 그림 넣기</h4>
+<p>이미지를 지정하는 또 다른 방법은 버튼에 CSS의 <code>list-style-image</code> 스타일 속성을 이용하는 것입니다. 이 방법은 XUL 파일을 바꾸지 않고도 '스킨'(이 경우는 그림)을 변경할 수 있도록 고안된 것입니다. 예제는 아래와 같습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul">View</a></p>
+<pre>&lt;button id="find-button"
+  label="Find" style="list-style-image: url('happy.png')"/&gt;
+</pre>
+<p>위의 예에서도 'happy.png'라는 그림이 버튼에 표시됩니다. <code><code id="a-style"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> 속성은 HTML에서의 style 속성과 비슷하게 동작합니다. 일반적으로, style 속성은 모든 XUL 요소에 사용할 수 있습니다. 스타일 선언은 별도의 스타일 시트에 넣는 것이 좋다는 점을 명심하세요.</p>
+<h3 id=".EA.B7.B8.EB.A6.BC_.EC.9C.84.EC.B9.98_.EC.A7.80.EC.A0.95.ED.95.98.EA.B8.B0" name=".EA.B7.B8.EB.A6.BC_.EC.9C.84.EC.B9.98_.EC.A7.80.EC.A0.95.ED.95.98.EA.B8.B0">그림 위치 지정하기</h3>
+<p>기본적으로 버튼의 그림은 글씨의 왼쪽에 표시됩니다. 그림의 위치를 지정하기 위해서는 두 가지의 속성을 사용할 수 있습니다.</p>
+<p><code><code id="a-dir"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code> 속성은 그림과 글씨의 방향을 제어합니다. dir 속성값을 <code>reverse</code>로 지정하면 그림이 글씨의 오른쪽에 출력됩니다. 반대로 <code>normal</code>을 사용하거나 값을 지정하지 않으면 그림은 글씨의 왼쪽에 나타납니다.</p>
+<p><code><code id="a-orient"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 속성을 사용하면 그림과 글씨의 상하 관계를 조정할 수 있습니다. 기본값은 <code>horizontal</code>로 그림이 글자의 왼쪽이나 오른쪽에 표시되도록 합니다. 이 값을 <code>vertical</code>로 지정하면 그림이 글자의 위나 아래에 나타나게 됩니다. 이 때는 <code>dir</code> 속성은 위, 아래의 방향을 지정하기 위해 사용할 수 있는데 <code>normal</code>일 때는 그림이 글씨 위에, <code>reverse</code>일 때는 그림이 글씨 아래에 표시됩니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:advbtns1.png"></div>
+<pre>&lt;button label="Left" image="happy.png"/&gt;
+&lt;button label="Right" image="happy.png" dir="reverse"/&gt;
+&lt;button label="Above" image="happy.png" orient="vertical"/&gt;
+&lt;button label="Below" image="happy.png" orient="vertical" dir="reverse"/&gt;
+</pre>
+<p>위의 예제는 앞에서 말한 네 가지 정렬 방식이 모두 사용되었습니다. 기본값을 사용할 때는 위와 같이 속성값을 지정하지 않아도 됩니다.</p>
+<h3 id=".ED.8A.B9.EB.B3.84.ED.95.9C_.EB.82.B4.EC.9A.A9.EC.9D.84_.EA.B0.80.EC.A7.80.EB.8A.94_.EB.B2.84.ED.8A.BC" name=".ED.8A.B9.EB.B3.84.ED.95.9C_.EB.82.B4.EC.9A.A9.EC.9D.84_.EA.B0.80.EC.A7.80.EB.8A.94_.EB.B2.84.ED.8A.BC">특별한 내용을 가지는 버튼</h3>
+<p>버튼 내부에는 임의의 마크업을 포함할 수 있으며 이런것들은 버튼의 안쪽에 표시됩니다. 이 기능을 자주 사용하지는 않겠지만, XUL이 제공하지 않는 사용자 정의 요소(custom element)를 만들 때 유용하게 쓰일 수 있습니다.</p>
+<p>아래는 두 단어가 빨간색인 버튼을 만드는 예입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_4"><a id="%EC%98%88%EC%A0%9C_4"></a><strong>예제 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul">View</a></p>
+<pre>&lt;button&gt;
+  &lt;description value="This is a"/&gt;
+  &lt;description value="rather strange" style="color: red;"/&gt;
+  &lt;description value="button"/&gt;
+&lt;/button&gt;
+</pre>
+<p>어떠한 XUL 요소도 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>에 삽입될 수 있습니다. 하지만 HTML 요소들은 무시되기 때문에, 대신 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>을 사용해야 합니다. 그리고 버튼에 <code><code id="a-label"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 속성값을 지정하면 버튼 내부의 모든 내용이 사라진다는 것에 유념하세요.</p>
+<h4 id="Menupopup.EC.9D.B4_.EC.9E.88.EB.8A.94_.EB.B2.84.ED.8A.BC" name="Menupopup.EC.9D.B4_.EC.9E.88.EB.8A.94_.EB.B2.84.ED.8A.BC">Menupopup이 있는 버튼</h4>
+<p>여러분은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>처럼 버튼을 눌렀을때 드롭 다운 메뉴가 나오도록 하기 위해, <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소를 버튼 내부에 넣을 수 있습니다. 이 때 <code><a href="ko/XUL/Attribute/button.type">type</a></code> 속성을 반드시 <code>menu</code>로 지정해야 합니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_5"><a id="%EC%98%88%EC%A0%9C_5"></a><strong>예제 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:advbtns2.png"></div>
+<pre>&lt;button type="menu" label="Device"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Printer"/&gt;
+    &lt;menuitem label="Mouse"/&gt;
+    &lt;menuitem label="Keyboard"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+<p>위의 예를 실행시키고 버튼을 클릭하면 세 가지 항목이 있는 메뉴가 펼쳐집니다. 하지만 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>와 달리 항목을 선택해도 버튼의 라벨은 변하지 않습니다. 이런 종류의 버튼은 각 항목마다 스크립트를 지정하여 작업을 수행하게 함으로써 메뉴처럼 사용할 수 있습니다. 메뉴에 대한 더 자세한 내용은 나중에 알아보겠습니다.</p>
+<p>여러분은 <code><a href="ko/XUL/Attribute/button.type">type</a></code> 속성을 <code>menu-button</code>으로 지정하여 메뉴가 있는 버튼을 만들 수 있는데, 이렇게 만들어진 버튼은 위의 버튼과는 모양이 다릅니다. 위 그림의 왼쪽은 'menu'이고 두번째는 'menu-button'을 사용한 것입니다. 둘 다 메뉴를 가리키는 화살표를 가지고 있습니다. 하지만 'menu'를 사용한 버튼은 사용자가 버튼의 아무 곳이나 클릭하면 메뉴가 나타나는 반면 'menu-button'을 사용한 버튼은 사용자가 화살표를 눌러야 메뉴가 나타납니다.</p>
+<p>다음에서는 <a href="ko/XUL_Tutorial/The_Box_Model">XUL 요소가 창내에 배치되는 방법</a>에 대해 좀 더 자세히 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Using_Spacers" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:The_Box_Model">다음  »</a></p>
+</div><p></p>
+<p></p>

@@ -1,0 +1,126 @@
+---
+title: Persona
+slug: Mozilla/Persona
+translation_of: Archive/Mozilla/Persona
+---
+<div class="callout-box">
+<p><strong>Tetap berhubungan atau dapatkan bantuan!</strong></p>
+
+<p>Ikuti <a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">blog kami</a>, bergabung dalam <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">milis kami</a>, atau cari kami dalam <a class="link-irc" href="irc://irc.mozilla.org/identity" title="irc://irc.mozilla.org/identity">#identity</a> di <a class="link-https" href="https://www.facebook.com/tb.k.makmur" title="https://wiki.mozilla.org/IRC"> IRC</a>.</p>
+</div>
+
+<p><a class="link-https" href="https://www.mozilla.org/en-US/persona/" title="https://www.mozilla.org/en-US/persona/">Mozilla Persona</a> adalah Sistem otentikasi yang sepenuhnya aman dan desentralisasi untuk web berdasarkan pada protokol BrowserID. Untuk memastikan Persona berkerja dimana saja dan untuk siapa saja, Mozilla saat ini mengoperasikan serangkaian kecil <a href="/en-US/docs/Persona/Bootstrapping_Persona" title="Persona/Bootstrapping_Persona">optional, centralized services</a> yang terkait dengan Persona.</p>
+
+<p>Mengapa Anda seharusnya menggunakan Persona pada situs web anda?</p>
+
+<ol>
+ <li><strong>Persona <span class="short_text" id="result_box" lang="id"><span class="hps">sepenuhnya menghilangkan</span> <span class="hps">password situs</span><span class="atn">-</span><span>spesifik</span></span></strong>, membebaskan pengguna dan situs jejaring dari beban dalam menciptakan, mengatur, dan menyimpan kata sandi dengan aman.</li>
+ <li><strong>Persona mudah digunakan.</strong> Hanya dengan dua kali klik pengguna Persona dapat masuk kedalam sebuah situs baru seperti<a href="http://voo.st" title="http://voo.st"> Voost</a> atau <a href="http://crossword.thetimes.co.uk/" title="http://crossword.thetimes.co.uk/">The Times Crossword</a>, melewati kesulitan yang berhubungan dengan pembuatan akun.</li>
+ <li><strong>Persona mudah diimplementasikan</strong><strong>. </strong>Pengembang dapat menambah Persona kedalam sebuah situs hanya dalam semalam.</li>
+ <li>Yang terbaik dari semuanya, tidak adanya <strong>ketergantungan</strong>. Pengembang mendapat alamat-alamat surel yang telah diverifikasi dari semua pengguna mereka, dan pengguna situs dapat menggunakan surel apapun dengan Persona.</li>
+ <li><strong>Persona dibuat dengan protokol BrowserID. </strong>Sekali penyedia peramban populer menggunakan BrowserID, <b>mereka tidak perlu lagi ke Mozilla untuk log in.</b></li>
+</ol>
+
+<p>Baca Memulai!</p>
+
+<div class="note"><strong>Note:</strong> Persona sedang dalam pengembangan. ikuti <a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">blog kami</a> untuk menemukan fitur-fitur baru, atau bergabunglah dengan <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">milis kami</a> dan tawarkan umpan-balik anda!</div>
+
+<h2 id="Gunakan_Persona_untuk_laman_anda">Gunakan Persona untuk laman anda</h2>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h3 id="Memulai">Memulai</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Persona/Why_Persona" title="BrowserID/Why_BrowserID">Kenapa Persona?</a></dt>
+     <dd>Pelajari tentang alasan Persona untuk pendukung dalam laman anda, dan bandingkan dengan sistem identitas otentikasi lainnya.</dd>
+     <dt><a href="/en-US/docs/Persona/Quick_Setup" title="BrowserID/Quick setup">Pengaturan cepat</a></dt>
+     <dd>Pedoman cepat bagaimana cara untuk menambahkan Persona dalam laman/website anda.</dd>
+    </dl>
+   </td>
+   <td>
+    <h3 id="Persona_API">Persona API</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/DOM/navigator.id" title="navigator.id">Referensi navigator.id API</a></dt>
+     <dd>Referensi untuk the <code>navigator.id</code> object, yang mana web developers dapat gunakan untuk memadukan Persona kedalam laman.</dd>
+     <dt><a href="/en-US/docs/Persona/Remote_Verification_API" title="BrowserID/Remote_Verification_API">Verifikasi API</a></dt>
+     <dd>Referensi untuk remote verification API hosted at <code>https://verifier.login.persona.org/verify</code>.</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <h3 id="Panduan">Panduan</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Persona/Security_Considerations" title="BrowserID/Security considerations">Perhatian Keamanan</a></dt>
+     <dd>Latihan dan Teknik untuk memastikan Persona anda aman.</dd>
+     <dt><a href="/en-US/docs/Persona/Browser_compatibility" title="/Browser_compatibility">Kococokan Peramban (Browser)</a></dt>
+     <dd>Pelajari dengan cermat peramban/browser mana yang mendukung Persona.</dd>
+     <dt><a href="/en-US/docs/Persona/Internationalization" title="/Internationalization">Internasionalisasi</a></dt>
+     <dd>Pelajari bagaimana Persona menangani Bahasa yang berbeda.</dd>
+    </dl>
+   </td>
+   <td>
+    <dl>
+     <dt><a class="link-https" href="https://github.com/mozilla/browserid/wiki/Persona-Libraries" title="https://github.com/mozilla/browserid/wiki/BrowserID-Libraries">Pustaka dan plugins</a></dt>
+     <dd>Temukan pustaka Drop-in untuk Bahasa pemrograman favorit, web framework, blog, atau sistem konten manajemen anda.</dd>
+     <dt><a class="link-https" href="https://github.com/mozilla/browserid-cookbook" title="https://github.com/mozilla/browserid-cookbook">Persona cookbook</a></dt>
+     <dd>Contoh kode sumber/source code untuk laman Persona. Termasuk snippets dalam C# (MVC3), PHP, Node.JS, dan lainnya.</dd>
+     <dt><a href="/en-US/docs/persona/branding" title="persona/branding">Branding resources</a></dt>
+     <dd>Tombol Sign in dan gambar lainnya untuk membantu menampilkan Persona kepada anda.</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="Informasi_untuk_penyedia_layanan_identitas">Informasi untuk penyedia layanan identitas</h2>
+
+    <p>Jika anda penyedia layanan surel atau layanan penyedia Identitas lainnya, Periksa tautan/link dibawah ini untuk mempelajari bagaimana menjadi penyedia layanan Identitas untuk Persona.</p>
+
+    <dl>
+     <dt><a href="/en-US/docs/Persona/Identity_Provider_Overview" title="IdP">Ringkasan IdP</a></dt>
+     <dd>Gambaran Persona Identity Providers.</dd>
+     <dt><a href="/en-US/docs/Persona/Implementing_a_Persona_IdP" title="Guide to Implementing a Persona IdP">Implementasi IdP</a></dt>
+     <dd>Pedoman teknis terinci untuk menjadi idP (Penyedia layanan Identitas).</dd>
+     <dt><a href="/en-US/Persona/IdP_Development_tips" title="Developer tips">Tips Pengembangan</a></dt>
+     <dd>Kumpulan tips dan trik yang berguna saat mengembangkan penyedia identitas baru.</dd>
+     <dt><a href="/en-US/docs/Persona/.well-known-browserid" title="https://developer.mozilla.org/en-US/docs/Persona/.well-known-browserid">.well-known/browserid</a></dt>
+     <dd>Ringkasan setruktur dan tujuan dari <code>.well-known/browserid</code> file, yang mana IdPs gunakan untuk meyatakan dukungannya.</dd>
+    </dl>
+   </td>
+   <td>
+    <h2 id="Proyek_Persona">Proyek Persona</h2>
+
+    <dl>
+     <dt><a href="/en-US/docs/Persona/Glossary" title="navigator.id">Istilah</a></dt>
+     <dd>Definisi istilah BrowserID and Persona.</dd>
+     <dt><a href="/en-US/docs/Persona/FAQ" title="BrowserID/FAQ">FAQ</a></dt>
+     <dd>Jawaban untuk pertanyaan umum.</dd>
+     <dt><a href="/en-US/docs/Persona/Protocol_Overview" title="BrowserID/Protocol overview">Ringkasan Protokol</a></dt>
+     <dd>Ringkasan teknik menengah yang mendasar dari BrowserID protocol.</dd>
+     <dt><a href="/en-US/docs/persona/Crypto" title="MDN">Keriptografi</a></dt>
+     <dd>lihat konsep kriptografi dibalik Persona dan BrowserID.</dd>
+     <dt><a class="link-https" href="https://github.com/mozilla/id-specs/blob/master/browserid/index.md" title="https://github.com/mozilla/id-specs/blob/master/browserid/index.md">Sepesifikasi</a></dt>
+     <dd>Detail teknis mendalam langsung sisini.</dd>
+     <dt><a href="/en-US/docs/Persona/Bootstrapping_Persona" title="Persona/Bootstrapping_Persona">Laman Persona</a></dt>
+     <dd>To get Persona going, we're hosting three services at <a class="link-https" href="https://login.persona.org" rel="freelink">https://login.persona.org</a>: a fallback Identity Provider, a portable implementation of the {{ domxref("navigator.id") }} APIs, and an identity assertion verification service.</dd>
+     <dt><a href="https://github.com/mozilla/browserid">Kode sumber Persona</a></dt>
+     <dd>The code behind the Persona website lives in a repository on GitHub. Patches welcome!</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<div id="__if72ru4ruh7fewui_once"> </div>

@@ -1,0 +1,73 @@
+---
+title: Modificare il codice di Gaia
+slug: Archive/B2G_OS/Guida_rapida_allo_sviluppo_di_Gaia/Making_Gaia_code_changes
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guida
+  - modificare il codice di Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+---
+<div class="summary">
+ <p><span id="result_box" lang="it"><span class="hps">Ora che sai come eseguire Gaia all'interno di Firefox desktop e hai</span> <span class="hps">un certo livello</span> <span class="hps">di comprensione della struttura del </span><span class="hps">codice</span><span>,</span> <span class="hps">dovresti essere</span> <span class="hps">pronto per</span> <span class="hps">iniziare a contribuire</span> <span class="hps">al progetto</span><span>.</span> <span class="hps">In questo articolo</span> <span class="hps">viene descritto come</span> <span class="hps">apportare modifiche</span> <span class="hps">e</span> <span class="hps">dove trovare</span> <span class="hps">i bug</span> <span class="hps">su cui lavorare.</span></span></p>
+</div>
+<h2 id="Come_utilizzare_Git">Come utilizzare Git</h2>
+<ol>
+ <li><span id="result_box" lang="it"><span class="hps">Quando apporti modifiche</span> <span class="hps">a</span> <span class="hps">Gaia</span><span>,</span> <span class="hps">dovresti sempre prendere l'ultima versione dalla master</span></span>:
+  <pre class="brush: bash">cd path/to/gaia
+git checkout master
+git pull upstream master</pre>
+ </li>
+ <li><span id="result_box" lang="it"><span class="hps">Successivamente</span><span>,</span> <span class="hps">fai checkout su un</span> <span class="hps">nuovo branch</span><span>:</span></span>
+  <pre class="brush: bash">git checkout -b my-code-fix</pre>
+ </li>
+ <li><span id="result_box" lang="it"><span class="hps">Infine</span><span>,</span> vai <span class="hps"> al</span> <span class="hps">direttorio </span><code>gaia/apps</code> <span class="hps">e</span> <span class="hps">applica lì le modifiche</span><span>.</span></span></li>
+</ol>
+<h2 id="Esempio_di_modifica_semplice_al_codice">Esempio di modifica semplice al codice</h2>
+<p>Per apportare le modifiche al codice:</p>
+<ol>
+ <li><span id="result_box" lang="it"><span class="hps">Fai le modifiche al codice di Gaia come richiesto e salva.</span></span></li>
+ <li><span lang="it">Arresta </span>Firefox Mulet o il simulatore in WebIDE.</li>
+ <li>Ricostruisci il tuo profilo di Gaia utilizzando make.</li>
+ <li>Riavvia Firefox Mulet o il simulatore in WebIDE.</li>
+</ol>
+<p><span lang="it"><span class="hps">Facciamo qualcosa</span> <span class="hps">di semplice, come</span> <span class="hps">cambiare</span> <span class="hps">il colore del testo</span> <span class="hps">del</span><span class="hps">l'orologio sulla</span> <span class="hps">schermata di blocco</span><span>:</span></span></p>
+<p><img alt="Gaia lockscreen showing the clock display in white text" src="https://mdn.mozillademos.org/files/7929/gaia-lockscreen-clock.png" style="width: 369px; height: 623px; margin: 0px auto; display: block;"></p>
+<ol>
+ <li>
+  <div class="almost_half_cell" id="gt-res-content">
+   <div dir="ltr" style="zoom: 1;">
+    <span id="result_box" lang="it"><span class="hps">Il modo migliore per</span> <span class="hps">scoprire</span> <span class="hps">come è impostato</span> <span class="hps">questo stile</span> <span class="hps">è quello di utilizzare</span> <span class="hps">gli</span> <span class="hps">strumenti di sviluppo</span><span>.</span> Premi il taso destro del mouse <span class="hps">(oppure tasto Ctrl + clic su Mac OS X) sull'orologio</span> <span class="hps">in Firefox</span> desktop<span class="hps"> e</span> <span class="hps">seleziona</span> <em>Inspect Element</em> <span class="hps">dal menu contestuale</span><span>.</span></span></div>
+  </div>
+ </li>
+ <li>Puoi scoprire facilmente quale foglio CSS da modificare — <code>gaia/apps/system/lockscreen/style/lockscreen.css</code>  in questo caso — ed effettuare le modifiche che vuoi direttamente sul foglio di stile nel box di destra dello schermo.</li>
+ <li>Quando sei soddisfatto con le modifiche, vai e apporta le modifiche direttamente nel file.</li>
+ <li>Quindi, segui le indicazioni fornite all'inizio di questa sezione per visualizzare le tue modifiche.</li>
+</ol>
+<p><img alt="Gaia lockscreen showing the clock display modified from white to red text" src="https://mdn.mozillademos.org/files/7931/gaia-lockscreen-clock-modified.png" style="width: 366px; height: 622px; margin: 0px auto; display: block;"><br>
+ <br>
+ <br>
+ Limiti di rendering della modalità di esecuzione di Gaia in Firefox desktop: </p>
+<ul>
+ <li>Sebbene il rendering delle app in Firefox Desktop sia abbastanza accurato se paragonato ad un dispositivo reale, potrai comunque notare alcune differenze qua e là.</li>
+ <li>Non tutte le API di dispositivo sono supportate in Firefox desktop; trovi quelle abilitate nel file  <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/preferences.js">preferences.js</a>.</li>
+</ul>
+<h2 id="Dove_puoi_trovare_i_bug_su_cui_lavorare">Dove puoi trovare i bug su cui lavorare</h2>
+<p>Il modo migliore per trovare bug di Firefox OS su cui lavorare è quello di consultare l'applicazione di Josh Matthews <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">Bugs Ahoy </a>— che raccoglie i bug direttamente dal Bugzilla di Mozilla e li rappresenta in una forma che semplifica la  ricerca e consultazione. Una volta che hai identificato il bug su cui lavorare vai alla pagina di Bugzilla, assegnati il bug utilizzando il campo "assigned to" e inizia a lavorarlo, come indicato sotto.</p>
+<h3 id="Suggerimenti_utili">Suggerimenti utili</h3>
+<ul>
+ <li>Se stai lavorando sui mentored bug, qualcuno del core team di Gaia controllerà i tuoi progressi e ti fornirà aiuto su codice e processo. Se sei agli inizi, lavorare su qualcuno di questi ti potrà essere d'aiuto. Questi bug sono contraddistinti da una nota nel campo "Mentors" nelle pagine di Firefox OS di Bugzilla. Buys Ahoy elenca questi bug.</li>
+ <li>Inoltre, se sei un nuovo utente di Bugzilla, potresti non essere in grado di assegnarti un bug in lavorazione. Nel caso, dopo aver identificato un bug da lavorare, chiedi al mentore se ne è stato assegnato uno, altrimenti chiedi scrivendo direttamente nei commenti.</li>
+ <li>Dopo aver acquisito un po' di esperienza, dovresti chiedere di assegnarti i permessi per poterti assegnare direttamente i bug.</li>
+ <li><code>S</code>e sei un nuovo collaboratore e vuoi iniziare con qualcosa di semplice. potresti  selezionare l'opzione "simple bugs" dell'applicazione Bugs Ahoy. Puoi accedere direttamente tramite il link <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1">http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1</a>.</li>
+ <li>Dovresti salvare le ricerche per i progetti a cui vuoi contribuire. Per esempio la seguente URL ti fornisce l'elenco dei bug aperti sull'app <em>Clock</em> (orologio) di Gaia:</li>
+</ul>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=10497922">https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=9776392</a></p>
+<h2 id="Vedi_inoltre">Vedi inoltre</h2>
+<ul>
+ <li><a href="https://mozilla.app.box.com/s/wzgsb3lkqglv0dnfdgzs">Gaia powerpoints for visual/interaction specifications</a></li>
+ <li><a href="https://etherpad.mozilla.org/gaia-meeting-notes">Weekly Gaia meeting Etherpad</a></li>
+ <li><a href="https://datazilla.mozilla.org/">Datazilla</a>: Strumento per i test prestazionali di Mozilla<br>
+   </li>
+</ul>

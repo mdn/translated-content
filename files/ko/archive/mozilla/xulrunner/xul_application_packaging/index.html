@@ -1,0 +1,107 @@
+---
+title: XUL Application Packaging
+slug: Archive/Mozilla/XULRunner/XUL_Application_Packaging
+tags:
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/XUL_Application_Packaging
+---
+<p><a href="ko/XULRunner">XULRunner</a> 응용프로그램 꾸러미(package)는 (Firefox 확장 기능처럼) 표준 <a href="ko/Bundles">toolkit 묶음</a>인데, 응용프로그램 기술을 돕는 추가 manifest 파일(&lt;tt&gt;application.ini&lt;/tt&gt;)을 하나 갖습니다. XUL 응용프로그램 꾸러미는 대체로 ZIP으로 압축되며 확장자는 .xulapp나 .xpi입니다. XULRunner 명령줄 flag "-install-app"로 설치할 수 있습니다(<a href="ko/XULRunner_1.8.0.4_Release_Notes">XULRunner 1.8.0.4 출시 노트</a> 참조).</p>
+<h3 id="application.ini" name="application.ini">application.ini</h3>
+<p>&lt;tt&gt;application.ini&lt;/tt&gt; manifest는 확장기능의 루트에 위치하고 XULRunner가 바르게 응용프로그램을 띄우게 하는 메타데이터(metadata)를 제공합니다. 파일은 &lt;tt&gt;[Headings]&lt;/tt&gt;와 &lt;tt&gt;Key=Value&lt;/tt&gt; 쌍을 갖는 Windows 방식 INI 파일로 분석됩니다. &lt;tt&gt;;&lt;/tt&gt;이나 &lt;tt&gt;#&lt;/tt&gt;으로 시작하는 줄은 주석으로 여깁니다.</p>
+<p>본보기 application.ini 파일은 <a href="https://dxr.mozilla.org/mozilla-central/source/xulrunner/examples/simple/application.ini" rel="custom">mozilla source tree</a>에 있습니다.</p>
+<h4 id=".5BApp.5D_.EC.A0.88" name=".5BApp.5D_.EC.A0.88">[App] 절</h4>
+<p>&lt;tt&gt;App&lt;/tt&gt; 절(section)은 응용프로그램에 관한 메타데이터를 지정합니다.</p>
+<p> </p>
+<dl>
+ <dt>
+  Name</dt>
+ <dd>
+  응용프로그램 이름을 지정합니다.<br>
+  필수.<br>
+  보기: &lt;tt&gt;Name=TestApplication&lt;/tt&gt;
+  <p> </p>
+ </dd>
+ <dt>
+  Version</dt>
+ <dd>
+  응용프로그램 판 번호를 지정합니다.<br>
+  필수.<br>
+  판 번호 매김 세부 사항은 <a href="ko/Toolkit_version_format">Toolkit 판 구성</a> 참조.<br>
+  보기: &lt;tt&gt;Version=0.1&lt;/tt&gt;
+  <p> </p>
+ </dd>
+ <dt>
+  BuildID</dt>
+ <dd>
+  유일한 build 식별자(identifier)를 지정합니다. 이는 대체로 날짜 식별자이고 매 응용프로그램 출시 때마다 달라야 합니다.<br>
+  필수.<br>
+  보기: &lt;tt&gt;BuildID=20060201&lt;/tt&gt;
+  <p> </p>
+ </dd>
+ <dt>
+  ID</dt>
+ <dd>
+  유일한 응용프로그램 ID를 지정합니다.<br>
+  필수.<br>
+  응용프로그램 ID는, <a href="ko/Install_Manifests#id">확장 기능 ID</a>와 같이, email &lt;tt&gt;<a class="link-mailto" href="mailto:ApplicationName@vendor.tld" rel="freelink">ApplicationName@vendor.tld</a>&lt;/tt&gt;이나 UUID &lt;tt&gt;{12345678-1234-1234-1234-123456789abc}&lt;/tt&gt; 형식 중 하나처럼 구성할 수 있습니다. 새로 개발된 응용프로그램은 email 형식을 권장합니다.<br>
+  보기: &lt;tt&gt;<a class="link-mailto" href="mailto:ID=TestApplication@example.tld" rel="freelink">ID=TestApplication@example.tld</a>&lt;/tt&gt;
+  <p> </p>
+ </dd>
+ <dt>
+  Vendor</dt>
+ <dd>
+  응용프로그램 vendor를 지정합니다.<br>
+  선택.<br>
+  보기: &lt;tt&gt;Vendor=Grinch Productions&lt;/tt&gt;
+  <p> </p>
+ </dd>
+</dl>
+<h4 id=".5BGecko.5D_.EC.A0.88" name=".5BGecko.5D_.EC.A0.88">[Gecko] 절</h4>
+<p>&lt;tt&gt;Gecko&lt;/tt&gt; 절은 응용프로그램에 필요한 XULRunner 판을 지정합니다.</p>
+<p> </p>
+<p> </p>
+<dl>
+ <dt>
+  MinVersion</dt>
+ <dd>
+  이 응용프로그램에 필요한 XULRunner 최소판을 지정합니다.<br>
+  필수.<br>
+  보기: &lt;tt&gt;MinVersion=1.8&lt;/tt&gt;
+  <p> </p>
+ </dd>
+ <dt>
+  MaxVersion</dt>
+ <dd>
+  이 응용프로그램에 필요한 XULRunner 최대판을 지정합니다.<br>
+  선택 - 기본값은 XULRunner 2판보다 작은 판입니다.<br>
+  보기: &lt;tt&gt;MaxVersion=1.8.0.*&lt;/tt&gt;
+  <p> </p>
+ </dd>
+</dl>
+<h4 id=".5BXRE.5D_.EC.A0.88" name=".5BXRE.5D_.EC.A0.88">[XRE] 절</h4>
+<p>&lt;tt&gt;XRE&lt;/tt&gt; 절은 사용할 수 있는 다양한 XULRunner 시동 기능들을 지정합니다.</p>
+<p> </p>
+<p> </p>
+<dl>
+ <dt id="em">
+  EnableExtensionManager</dt>
+ <dd>
+  확장 기능과 확장 기능 관리를 사용 여부를 지정합니다. 맞는 값은 1과 0입니다.<br>
+  선택 - 기본값은 0입니다.<br>
+  주의: 이 옵션은 확장 기능/테마 관리자를 UI에서 이용할 수 있게 하는 메뉴 항목을 추가하지 않습니다; 그 일은 응용프로그램 제작자 몫입니다.<br>
+  보기: &lt;tt&gt;EnableExtensionManager=1&lt;/tt&gt;
+  <p> </p>
+ </dd>
+ <dt>
+  EnableProfileMigrator&lt;/dt&gt;</dt>
+ <dd>
+  응용프로그램을 처음으로 띄우고 프로파일이 없을 때, nsIProfileMigrator 인터페이스를 통해 프로파일 이전 코드 사용 여부를 지정합니다. 맞는 값은 1과 0입니다.<br>
+  선택 - 기본값은 0입니다.<br>
+  주의: 응용프로그램 제작자에게 <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/profile/public/nsIProfileMigrator.idl" rel="custom">nsIProfileMigrator 인터페이스</a>를 구현할 책임이 있습니다; 만약 구현이 없으면 이전이 수행되지 않습니다.<br>
+  보기: &lt;tt&gt;EnableProfileMigrator=1&lt;/tt&gt;
+  <p> </p>
+ </dd>
+</dl>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p></p>

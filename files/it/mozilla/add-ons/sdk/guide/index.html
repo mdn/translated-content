@@ -1,0 +1,114 @@
+---
+title: Guide
+slug: Mozilla/Add-ons/SDK/Guide
+tags:
+  - Add-on SDK
+translation_of: Archive/Add-ons/Add-on_SDK/Guides
+---
+<p>Questa pagina contiene più articoli approfonditi sull'SDK.</p>
+
+<hr>
+<h3 id="Contributor's_guide"><a name="contributors-guide">Contributor's guide</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Getting_Started">Per cominciare</a></dt>
+ <dd>Scopri come contribuire all'SDK: ottieni il codice sorgente, apri/lavora su un bug, presenta una patch, ottieni recensioni e aiuto.</dd>
+ <dt><a href="Guides/Modules">Moduli</a></dt>
+ <dd>Impara di più sul sitema a moduli usato dall'SDK (che è basato sulla specifica CommonJS), su come i sandbox e i compartimenti possono essere usati per migliorare la sicurezza, o sull'SDK Module Loader incorporato, Cuddlefish.</dd>
+ <dt><a href="Guides/Classes_and_Inheritance">Classi ed ereditarietà</a></dt>
+ <dd>Impara come le classi e l'ereditarietà può essere implementata in JavaScript, usando costruttori e prototipi, e su come la funzione di aiuto fornita dall'SDK semplifica tutto ciò.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Private_Properties">Proprietà Private</a></dt>
+ <dd>Scopri come le proprietà private possono essere implementate in JavaScript usando prefissi, chiusure (closures), e le WeakMaps, e come l'SDK supporta le proprietà private usando i namespace (che sono una generalizzazione delle WeakMaps).</dd>
+ <dt><a href="Guides/Content_Processes">Content Processes</a></dt>
+ <dd>L'SDK è stata concepita per lavorare in un ambiente dove il codice per manipolare il contenuto web viene eseguito in un processo diverso dal codice principale del componente aggiuntivo. Questo articolo mette in risalto le funzioni principali di questo design.</dd>
+ <dt><a href="Guides/Testing_the_Add-on_SDK">Testare il Componente Aggiuntivo nell'SDK</a></dt>
+ <dd>Impara come eseguire il Componente Aggiuntivo nella suite per il testing contenuta nell'SDK.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Strutture_dell'SDK"><a id="sdk-infrastructure" name="sdk-infrastructure">Strutture dell'SDK</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Module_structure_of_the_SDK">Struttura a moduli dell'SDK</a></dt>
+ <dd>L'SDK, e i Componenti Aggiuntivi sviluppati con esso, sono formati a partire da moduli riusabili di JavaScript. Questo articolo spiega cosa sono questi moduli, come caricare i moduli, e come l'albero dei moduli dell'SDK è strutturato.</dd>
+ <dt><a href="Guides/SDK_API_Lifecycle">Ciclo Vitale delle API dell'SDK</a></dt>
+ <dd>Definizione di ciclo vitale per le API dell'SDK, incluso il rating di stabilità.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Program_ID">Program ID</a></dt>
+ <dd>Il Program ID è un identificativo unico per il tuo Add-on. Questa guida spiega come è creato, come viene usato e come crearne uno tuo.</dd>
+ <dt><a href="Guides/Firefox_Compatibility">Compatibilità con Firefox</a></dt>
+ <dd>Controlla quale versione di Firefox è compatibile con la versione dell'SDK in uso, e controlla i problemi di compatibilità.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Linguaggi_dell'SDK"><a name="sdk-idioms">Linguaggi dell'SDK</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Working_with_Events">Lavorare con gli Eventi</a></dt>
+ <dd>Scrivi codice attraverso gli Eventi. L'SDK ti permette di fare ciò usando il suo framework concepito per lavorare con gli eventi.</dd>
+ <dt><a href="Guides/Content_Scripts">Guida sui Content Scripts</a></dt>
+ <dd>Una panoramica sui content scripts, includendo: cosa sono, cosa possono fare, come caricarli e come comunicare con loro.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Two_Types_of_Scripts">Due tipi di script</a></dt>
+ <dd>Questo articolo illustra le differenze tra le API disponibili al codice principale del tuo Add-On e quelle disponibili ai Content Scripts.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="XUL_migration"><a name="xul-migration">XUL migration</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/XUL_Migration_Guide">XUL - Guida al Porting</a></dt>
+ <dd>Tecniche per aiutare il porting dall'add-on in XUL all'SDK.</dd>
+ <dt><a href="Guides/XUL_vs_SDK">XUL contro SDK</a></dt>
+ <dd>Le debolezze e le forze dell'SDK, confrontate ad un tradizionale add-on basato su XUL.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Porting_the_Library_Detector">Esempio di Porting</a></dt>
+ <dd>Una procedura dettagliata sul porting di un semplice add-on basato su XUL all'SDK.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Firefox_Multiprocesso"><a name="multiprocess-firefox">Firefox Multiprocesso</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="Guides/Multiprocess_Firefox_and_the_SDK">Firefox Multiprocesso e l'SDK</a></dt>
+ <dd>Come controllare che il tuo add-on sia compatibile con Firefox Multiprocesso e, in caso di non-compatibilita, come correggere.</dd>
+</dl>
+</div>
+
+<div class="column-half"></div>
+</div>

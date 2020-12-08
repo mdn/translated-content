@@ -1,0 +1,49 @@
+---
+title: DOMApplicationsRegistry.getInstalled()
+slug: Web/API/DOMApplicationsRegistry/getInstalled
+translation_of: Archive/Marketplace/API/DOMApplicationsRegistry/getInstalled
+---
+<p> </p>
+
+<p> </p>
+
+<p>{{ ApiRef("Apps") }}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>Get a list of all installed apps from this origin. For example, if you call this on the Firefox Marketplace, you will get the list of apps installed by the Firefox Marketplace.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Installable open web apps used to have a "single app per origin" security policy, but this was lifted as of Firefox 34/Firefox OS 2.1 (read <a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps_for_Firefox_OS/App_manifest_FAQ#Can_I_have_more_than_one_app_at_my_origin.3F">this FAQ entry</a> for more information). If you still need to support older versions, consider hosting your apps at separate origins; one strategy is to <a href="/en-US/Marketplace/Publishing/Adding_a_subdomain">create different subdomains</a> for your apps.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre><code>var request = window.navigator.mozApps.<code>getInstalled</code>()</code>;
+</pre>
+
+<h3 id="Errors">Errors</h3>
+
+<p>The string <code>ERROR</code> can be returned in <code>DOMRequest.error</code>.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">var request = window.navigator.mozApps.getInstalled();
+request.onerror = function(e) {
+  alert("Error calling getInstalled: " + request.error.name);
+};
+request.onsuccess = function(e) {
+  alert("Success, number of apps: " + request.result.length);
+  var appsRecord = request.result;
+};</pre>
+
+<p>Callers are expected to set the <code>onsuccess</code> and <code>onerror</code> callback properties of the returned object, as shown in this example. If the call is successful an array of <a href="/en-US/docs/Web/API/App"><code>App</code> objects</a> is returned in the <code>result</code> property of the returned object. In the example this is <code>request.result</code>.</p>
+
+<h2 id="Related_topics">Related topics</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/App"><code>App</code> object</a></li>
+ <li><a href="/en-US/docs/Web/Apps/JavaScript_API">Apps JavaScript API</a></li>
+</ul>

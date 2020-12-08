@@ -1,0 +1,6 @@
+# FROM-URL	TO-URL
+/kab/docs/Learn/Getting_started_with_the_web	/kab/docs/Lmed/Getting_started_with_the_web
+/kab/docs/Learn/Getting_started_with_the_web/HTML_basics	/kab/docs/Lmed/Getting_started_with_the_web/HTML_basics
+/kab/docs/Learn/HTML	/kab/docs/Lmed/HTML
+/kab/docs/Learn/HTML/Introduction_to_HTML	/kab/docs/Lmed/HTML/Introduction_to_HTML
+/kab/docs/MDN/Iwenniten	/kab/docs/MDN/Contribute/Feedback

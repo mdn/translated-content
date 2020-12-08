@@ -1,0 +1,74 @@
+---
+title: Groupboxes
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Groupboxes
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Groupboxes
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Box_Model_Details" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_More_Elements">다음  »</a></p>
+</div><p></p>
+<p>이 단원에서는 요소들을 그룹에 포함하는 방법에 대해 알아 보겠습니다.</p>
+<h3 id=".EA.B7.B8.EB.A3.B9.EC.83.81.EC.9E.90" name=".EA.B7.B8.EB.A3.B9.EC.83.81.EC.9E.90">그룹상자</h3>
+<p>HTML에서는 여러 가지 요소를 그룹핑하기 위한 목적으로 사용할 수 있는 <code>fieldset</code> 요소를 제공합니다. 이 때 요소들을 둘러 싸는 테두리가 생기기 때문에 각 요소가 서로 연관되어 있음을 알 수 있게 됩니다. 체크박스의 그룹이 하나의 예가 될 수 있습니다. XUL은 비슷한 기능을 위해 사용될 수 있는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> 요소를 제공합니다.</p>
+<p>이름에서 알 수 있듯이 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code>는 상자의 한 형태입니다. 따라서 groupbox 내부의 요소들은 상자에 적용되는 규칙에 따라 정렬됩니다. 하지만 groupbox와 일반 상자 사이에는 다음의 두 가지 차이점이 있습니다.</p>
+<ul>
+ <li>기본적으로 groupbox에는 둥근 사각형 테두리가 그려지며, CSS를 이용해서 이를 변경할 수 있습니다.</li>
+ <li>groupbox는 테두리의 위쪽에 제목(caption)을 넣을 수 있습니다.</li>
+</ul>
+<p>groupbox도 상자의 한 유형이기 때문에 상자에서 사용하는 <code><code id="a-orient"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code>나 <code><code id="a-flex"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>같은 속성을 사용할 수 있습니다. groupbox에는 어떤 요소들도 넣을 수 있지만, 보통 서로 관련된 요소들만 넣습니다.</p>
+<p>groupbox의 위쪽 제목은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 요소를 사용해서 생성할 수 있습니다. caption은 HTML의 <code>legend</code> 요소와 비슷한 기능을 합니다. 제목을 넣을 때는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code>을 첫 번째 자녀 요소로 넣어 주면 됩니다.</p>
+<h4 id=".EA.B0.84.EB.8B.A8.ED.95.9C_groupbox_.EC.98.88.EC.A0.9C" name=".EA.B0.84.EB.8B.A8.ED.95.9C_groupbox_.EC.98.88.EC.A0.9C">간단한 groupbox 예제</h4>
+<p>아래는 간단한 groupbox 예제입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:titledbox1.png"></div>
+<pre>&lt;groupbox&gt;
+  &lt;caption label="Answer"/&gt;
+  &lt;description value="Banana"/&gt;
+  &lt;description value="Tangerine"/&gt;
+  &lt;description value="Phone Booth"/&gt;
+  &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>이 예제를 실행하면 네 개의 문자열을 둘러 싸는
+ <i>
+  Answer</i>
+ 라는 제목을 가진 상자가 표시됩니다. groupbox의 정렬 속성은 세로 정렬이 기본이기 때문에 문자열이 세로로 차곡차곡 쌓이게 됩니다.</p>
+<h4 id=".EC.A2.80_.EB.8D.94_.EB.B3.B5.EC.9E.A1.ED.95.9C_.EC.A0.9C.EB.AA.A9" name=".EC.A2.80_.EB.8D.94_.EB.B3.B5.EC.9E.A1.ED.95.9C_.EC.A0.9C.EB.AA.A9">좀 더 복잡한 제목</h4>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 요소에 자식 요소를 넣으면 더 다양한 기능을 구현할 수 있습니다. 예를 들어 모질라의 글꼴 설정 판넬은 펼침 메뉴(drop-down menu)를 제목으로 사용하고 있습니다. 자식 요소는 무엇이든 쓸 수 있지만 보통 체크박스나 펼침 메뉴가 사용됩니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:groupbox2.png"></div>
+<pre>&lt;groupbox flex="1"&gt;
+  &lt;caption&gt;
+    &lt;checkbox label="Enable Backups"/&gt;
+  &lt;/caption&gt;
+  &lt;hbox&gt;
+    &lt;label control="dir" value="Directory:"/&gt;
+    &lt;textbox id="dir" flex="1"/&gt;
+  &lt;/hbox&gt;
+  &lt;checkbox label="Compress archived files"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>이 예제에서는 <a href="ko/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">checkbox</a>가 제목으로 사용되었습니다. 스크립트를 사용하면 <code><a href="/ko/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code>의 선택 여부에 따라 groupbox의 내용을 사용 가능/불가로 전환할 수 있습니다. 이 groupbox는 수평 <code><a href="/ko/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> 하나를 갖고 있는데 그 안에는 <code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>과 <code><a href="/ko/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>가 포함되어 있습니다. 글상자와 groupbox 둘 다 flex 속성이 적용되었기 때문에 창이 늘어나면 글상자도 함께 늘어납니다. 그 다음의 체크박스는 글상자의 아래에 표시되는데 이는 groupbox의 정렬 방식이 세로 정렬이기 때문입니다. 다음 단원에서는 파일 찾기 대화창에 groupbox를 넣어 보도록 하겠습니다.</p>
+<h3 id=".EB.9D.BC.EB.94.94.EC.98.A4_.EA.B7.B8.EB.A3.B9" name=".EB.9D.BC.EB.94.94.EC.98.A4_.EA.B7.B8.EB.A3.B9">라디오 그룹</h3>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 요소를 사용하면 여러 개의 라디오 버튼을 하나로 묶을 수 있습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code>도 상자의 일종입니다. radiogroup은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> 버튼을 다룰 수 있는 특수 기능 외에는 다른 상자와 다를 게 없기 때문에 안에 어떠한 요소를 넣어도 상관 없습니다.</p>
+<p>radiogroup 안에 있는 라디오 버튼들은 그것들이 중첩된 상자내에 있더라도 모두 하나의 그룹이 됩니다. 이는 아래의 예제처럼 라디오 버튼으로 이루어진 구조에 다른 요소를 넣을 때 유용하게 사용될 수 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul">View</a></p>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="no" value="no" label="No Number"/&gt;
+  &lt;radio id="random" value="random" label="Random Number"/&gt;
+  &lt;hbox&gt;
+    &lt;radio id="specify" value="specify" label="Specify Number:"/&gt;
+    &lt;textbox id="specificnumber"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>한 가지 유의할 점은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 요소는 테두리가 생기지 않는다는 것입니다. 만약 테두리와 제목이 필요하다면 radiogroup을 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code>에 포함시켜 사용하시면 됩니다.</p>
+<p>다음에는, 지금까지 배워온 내용을 이용해서 <a href="ko/XUL_Tutorial/Adding_More_Elements">몇 가지 요소들을 파일 찾기 대화창에 추가해</a> 보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Box_Model_Details" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Adding_More_Elements">다음  »</a></p>
+</div><p></p>
+<p></p>

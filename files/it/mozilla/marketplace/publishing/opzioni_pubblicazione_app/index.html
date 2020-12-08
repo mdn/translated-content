@@ -1,0 +1,152 @@
+---
+title: Autopubblicare un'app
+slug: Mozilla/Marketplace/Publishing/opzioni_pubblicazione_app
+translation_of: Archive/Mozilla/Marketplace/Options/Self_publishing
+---
+<div class="summary">
+<p><span class="seoSummary">In alcune circostanze è preferibile non distribuire un'app attraverso Firefox Marketplace, per esempio nel caso si desideri condividerla soltanto con i membri della propria organizzazione, eseguire un test su una versione beta o semplicemente farne un uso privato. In questa pagina è spiegato come autopubblicare le proprie app al di fuori di Firefox Marketplace.</span></p>
+</div>
+
+<p>Le app open web possono essere installate su Firefox OS e dispositivi dotati di Firefox per Android o Firefox per desktop utilizzando {{ domxref("Apps.install") }} o {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }}. Il ruolo di entrambe le API è trasmettere l'URL del manifesto contenente la descrizione dell'app da installare. Dunque i requisiti di base per autopubblicare un'app sono:</p>
+
+<ol>
+ <li>un server dove ospitare il manifesto dell'app,</li>
+ <li>un server dove ospitare l'app (nel caso di app remota) o l'app stessa compressa in un file zip,</li>
+ <li>un codice nel sito web che richiami {{ domxref("Apps.install") }} o {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} a seconda del caso.</li>
+</ol>
+
+<h2 id="Limitazioni">Limitazioni</h2>
+
+<p>Prima di autopubblicare un'app open web è bene considerare le seguenti limitazioni:</p>
+
+<ul>
+ <li>Le app autopubblicate non sono in grado di utilizzare le <a href="/en-US/Apps/Build/App_permissions">API con privilegi</a>. Per usufruire di tali API un'app dev'essere di tipo locale (packaged) e contenuta in un file zip firmato tramite il processo di caricamento dell'app su Firefox Marketplace.</li>
+ <li>Le app autopubblicate non possono usufruire dei pagamenti in-app di Firefox Marketplace.</li>
+ <li>È necessario implementare autonomamente una propria strategia di diffusione, in quanto l'app non comparirà negli elenchi di Firefox Marketplace.</li>
+</ul>
+
+<h2 id="App_locali_autopubblicate">App locali autopubblicate</h2>
+
+<p>È possibile pubblicare un'app locale ospitando il file zip su un server insieme a un mini-manifesto. Il mini-manifesto, utilizzato per identificare l'app durante il processo di installazione, deve essere ospitato nella stessa directory del file zip. Il passo successivo è creare uno script per richiamare {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} e trasmettergli le informazioni contenute nel mini-manifesto. Ecco il procedimento dettagliato:</p>
+
+<ol>
+ <li>
+  <p>Comprimere i contenuti dell'app in un file zip e rinominarlo <code>package.zip</code>. Questo file deve contenere tutte le risorse dell'app, compreso il <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest" title="Documentazione sul manifesto">manifesto</a> principale.</p>
+
+  <div class="warning">
+  <p><strong>Attenzione</strong>: al momento di creare il file zip, posizionare tutti i contenuti che devono comparire nell'app nella cartella principale, senza sottocartelle. Comprimendo la cartella genitore con all'interno le sottocartelle, il manifesto risulterebbe in una posizione sbagliata, invalidando l'app.</p>
+  </div>
+ </li>
+ <li>Creare un file e nominarlo <code>manifest.webapp</code>, poi aggiungere i contenuti riportati di seguito. Questo file è chiamato mini-manifesto perché consiste in una versione leggermente ridotta del manifesto incluso nel file zip dell'app locale. Viene utilizzato da {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} per installare l'app. Per informazioni dettagliate sul contenuto del file leggere <a href="#Campi del mini-manifesto">Campi del mini-manifesto</a> di seguito.
+  <pre class="brush: js">{
+    "name": "My sample app",
+    "package_path" : "<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/my-app.zip" title="Linkification: http://my-server.com/my-app-directory/my-app.zip">http://my-server.com/my-app-directory/package.zip</a>",
+    "version": "1",
+    "developer": {
+        "name": "A. Developer",
+        "url": "<a class="LinkyMobile-ext" href="http://my-server.com" title="Linkification: http://my-server.com">http://my-server.com</a>"
+    }
+}</pre>
+ </li>
+ <li>Creare lo script di installazione. Nell'esempio viene utilizzato un semplice file html nominato <code>index.html</code> , ma è possibile anche aggiungere lo script a un pulsante o utilizzare qualsiasi altro metodo appropriato per richiamarlo al sito web. Il codice JavaScript di questa pagina richiama l'API di installazione per le app locali ({{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }}), includendo anche dei callback per notificare l'esito dell'installazione.
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;Packaged app installation page&lt;/p&gt;
+    &lt;script&gt;
+      // This URL must be a full url.
+      var manifestUrl = '<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/manifest.webapp</a>';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li>Caricare i file su un server o sito web copiando <code>package.zip</code>, <code>manifest.webapp</code> e <code>index.html</code> nella directory desiderata (nel codice di esempio <code>my-app-directory</code>).</li>
+ <li>Ora è possibile installare l'app su un dispositivo compatibile (come uno smartphone Firefox OS). Aprire il file <code>index.html</code> (nel testo di esempio posizionato al percorso <code> <a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/index.html</a></code>). Verrà visualizzata una richiesta di conferma per procedere con l'installazione. Confermando inizierà il processo di installazione. Al termine del processo, lo script della pagina web notificherà l'esito positivo o negativo dell'operazione.</li>
+</ol>
+
+<div class="note">
+<p><strong>Suggerimento</strong>: per eseguire i test su dispositivo è possibile anche ospitare un'app locale su un server locale. Il server web e il dispositivo devono essere sullo stesso network, inoltre il server deve essere abilitato a servire richieste dal network locale. Sarà sufficiente includere il percorso assoluto nel <code>package_path</code> del mini-manifesto, esattamente come viene incluso normalmente (vedi sotto). Se si sta utilizzando una porta non predefinita, includere anche le informazioni della porta (es. <code><a class="LinkyMobile-ext" href="http://10.10.12.1:8080/package.zip" title="Linkification: http://10.10.12.1:8080/package.zip">http://10.10.12.1:8080/package.zip</a></code>).</p>
+</div>
+
+<h3 id="Campi_del_mini-manifesto">Campi del mini-manifesto</h3>
+
+<p>Gli sviluppatori che scelgono di pubblicare le proprie app con Firefox Marketplace non hanno bisogno di compilare il mini-manifesto, in quanto esso viene generato automaticamente dal Marketplace, estrapolando le informazioni necessarie dal manifesto dell'app incluso nel file zip. I dettagli sui contenuti del manifesto principale si trovano nell'articolo <a href="/en-US/Apps/Build/Manifest">App manifest</a>.</p>
+
+<p>Gli sviluppatori che desiderano autopubblicare un'app devono invece compilare il mini-manifesto. Il metodo più sicuro per ottenere un mini-manifesto è fare una copia del manifesto principale e modificare le parti necessarie. Lavorare su una copia garantisce il rispetto del primo requisito di un mini-manifesto, ovvero che i campi <strong><code>name</code>, <code>version</code>, <code>developer</code> e <code>locales</code> siano esattamente uguali a quelli del manifesto principale</strong>. Occorre poi aggiungere i campi esclusivi del mini-manifesto: <code>package_path</code>, <code>release_notes</code> e <code>size</code>.</p>
+
+<dl>
+ <dt><code>package_path</code> (obbligatorio)</dt>
+ <dd>Il percorso assoluto (ovvero l'url completo, ad esempio <code><a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/manifest.webapp</a></code>) della posizione in cui è stato archiviato il file zip dell'app.</dd>
+ <dt><code>release_notes</code> (facoltativo)</dt>
+ <dd>Informazioni sulla versione corrente dell'app. Su Firefox Marketplace queste informazioni vengono fornite durante il processo di caricamento.</dd>
+</dl>
+
+<dl>
+ <dt><code>size</code> (facoltativo)</dt>
+ <dd>Le dimensioni del file zip espresse in byte. Questa informazione viene utilizzata da {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} per mostrare l'avanzamento del processo di installazione.</dd>
+</dl>
+
+<p>Esempio:</p>
+
+<pre class="brush: js">{
+  "name": "My app",
+  "package_path": "<a class="LinkyMobile-ext" href="http://thisdomaindoesnotexist.org/myapp.zip" title="Linkification: http://thisdomaindoesnotexist.org/myapp.zip">http://thisdomaindoesnotexist.org/myapp.zip</a>",
+  "version": "1.0",
+  "size": 172496,
+  "release_notes": "First release",
+  "developer": {
+    "name": "Developer Name",
+    "url": "<a class="LinkyMobile-ext" href="http://thisdomaindoesnotexist.org/" title="Linkification: http://thisdomaindoesnotexist.org/">http://thisdomaindoesnotexist.org/</a>"
+  },
+  "locales": {
+    "fr-FR": {
+      "name": "Mon application"
+    },
+    "se-SE": {
+      "name": "Min balla app"
+    }
+  },
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "256": "/icons/256.png"
+  }
+}
+</pre>
+
+<p>Gli altri campi presenti nell'esempio sono:</p>
+
+<dl>
+ <dt><code>name</code> (obbligatorio)</dt>
+ <dd>Il nome dell'app. Lunghezza massima 128 caratteri.</dd>
+ <dt><code>version</code> (facoltativo)</dt>
+ <dd>La versione dell'app.</dd>
+ <dt><code>developer</code>  (facoltativo)</dt>
+ <dd>Informazioni sullo sviluppatore, contiene i campi <code>name</code> e <code>url</code>. Le informazioni sullo sviluppatore presenti nel manifesto principale e nel mini-manifesto devono coincidere.</dd>
+ <dt><code>locales</code> (facoltativo)</dt>
+ <dd>Informazioni sulla localizzazione. I codici del locale devono essere espressi nel formato <code>xx-YY</code>.</dd>
+ <dt><code>icons</code> (facoltativo)</dt>
+ <dd>Le icone in uso dell'app.</dd>
+</dl>
+
+<p>Per informazioni più dettagliate sui contenuti dei manifesti leggere <a href="/en-US/Apps/Build/Manifest" title="Documentazione sul manifesto">App manifest</a>.</p>
+
+<h2 id="App_remote_autopubblicate">App remote autopubblicate</h2>
+
+<p>Rispetto a quello per le app locali, il processo di autopubblicazione di un'app remota (hosted) è più diretto: basta creare i contenuti con lo stesso metodo utilizzato per la pubblicazione su Firefox Marketplace. In pratica occorre creare il <a href="/en-US/Apps/Build/Manifest" title="Documentazione sul manifesto">file manifest</a> dell'app. In seguito si aggiunge il codice per richiamare {{ domxref("Apps.install") }}. Il codice è essenzialmente lo stesso che si utilizza per le app locali, mostrato precedentemente, con la sola differenza che è anche possibile utilizzare un riferimento relativo alla posizione del file manifest.</p>
+
+<h2 id="Vedi_anche">Vedi anche</h2>
+
+<ul>
+ <li><a href="/en-US/Apps/Build/JavaScript_API">App Installation and Management APIs</a></li>
+ <li>{{ domxref("Apps.install") }}</li>
+ <li>{{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }}</li>
+ <li><a href="/en-US/Apps/Build/Manifest" title="Documentazione sul manifesto">App manifest</a></li>
+ <li><a href="/en-US/Apps/Build/App_permissions">App permissions</a></li>
+</ul>

@@ -1,0 +1,34 @@
+---
+title: Extension Packaging
+slug: Mozilla/Add-ons/Extension_Packaging
+tags:
+  - Add-ons
+  - Extensions
+  - Toolkit API
+translation_of: Archive/Add-ons/Extension_Packaging
+---
+<p>확장기능은 <a href="ko/Bundles">설치 가능한 번들</a>의 한 형태입니다. 확장기능은 사용자가 직접 내려받아 설치할 수 있으며 응용프로그램에 미리 포함되어 있거나 외부 프로그램에 의해서 제공되기도 합니다. 확장기능은 chrome, components 등의 <a href="ko/Bundles">디렉토리 구조</a>로 되어 있는데 개별 구조는 XUL 프로그램으로 확장됩니다.</p>
+<p>모든 확장기능은 자신의 메타정보를 담은 <a href="ko/Install.rdf">install.rdf</a> 파일을 제공해야 하는데 파일은 유일한 ID, 버전, 저자, 호환성 정보를 담고 있습니다.</p>
+<p>확장기능 파일과 install.rdf가 준비된 다음 확장 기능의 설치를 위한 몇가지 준비 단계가 있습니다. 사용자 설치가능한 확장기능 디렉토리의 ZIP 포맷인 <a href="ko/XPI">XPI</a>(xpinstall) 파일, 사용자 응용프로그램이나 프로필 디렉토리에 확장기능을 직접 압축 풀기, 윈도우즈 레즈스트리에 확장기능을 등록의 단계입니다.</p>
+<h3 id=".ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_XPI_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_XPI_.EB.A7.8C.EB.93.A4.EA.B8.B0">확장기능 XPI 만들기</h3>
+<p><a href="ko/XPI">XPI</a>(XPInstall) 파일은 단순히 <a href="ko/Install.rdf">install.rdf</a> 파일이 ZIP 파일의 최상단에 위치하는 확장기능 파일을 담은 ZIP 파일입니다. 사용자는 XPI 파일을 웹사이트나 로컬 파일에서 파일을 열거나 확장기능 관리창에 끌어 옮김으로서 내려 받거나 설치할 수 있습니다.</p>
+<p>파이어폭스 XPI 파일에 대한 MIME 형은 <i>application/x-xpinstall</i>로 인식이 됩니다. 대부분의 HTTP 서버가 .xpi 확장기능에 대한 MIME 타입을 반환하는 설정을 기본으로 하지 않기 때문에 어쩌면 HTTP 서버를 재설정해야 할 수도 있습니다. 아파치 HTTP 서버에서는 아래의 문장을 설정 파일이나 .htaccess 파일에 삽입해야 합니다.</p>
+<pre class="eval">AddType application/x-xpinstall .xpi
+</pre>
+<h3 id=".ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_.ED.8C.8C.EC.9D.BC_.EC.A7.81.EC.A0.91_.EC.84.A4.EC.B9.98.ED.95.98.EA.B8.B0" name=".ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_.ED.8C.8C.EC.9D.BC_.EC.A7.81.EC.A0.91_.EC.84.A4.EC.B9.98.ED.95.98.EA.B8.B0">확장기능 파일 직접 설치하기</h3>
+<p>만약 응용 프로그램의 위치를 알고 있다면 (예를 들어 응용 프로그램의 설치과정에 확장기능을 설치하게 할려면) 직접 &lt;appdir&gt;/extensions/&lt;extensionID&gt;에 확장 기능 파일을 직접 설치할 수 있습니다. 확장기능은 다음번 응용 프로그램이 실행될 때 확장기능 관리자에 의해 자동으로 인식됩니다.</p>
+<p>이 방법을 사용할 때 디렉토리와 확장기능 파일에 대한 파일 시스템의 권한이 적절하게 설정되어 있는지 확인해야 합니다. 확장기능 관리자는 확장기능의 권한이 적합한지 아닌지 판단하는 기능이 없습니다.</p>
+<h3 id=".ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_.EC.9C.84.EC.B9.98.EB.A5.BC_.EC.9C.88.EB.8F.84.EC.9A.B0_.EB.A0.88.EC.A7.80.EC.8A.A4.ED.8A.B8.EB.A6.AC.EC.97.90_.EB.93.B1.EB.A1.9D.ED.95.98.EA.B8.B0" name=".ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_.EC.9C.84.EC.B9.98.EB.A5.BC_.EC.9C.88.EB.8F.84.EC.9A.B0_.EB.A0.88.EC.A7.80.EC.8A.A4.ED.8A.B8.EB.A6.AC.EC.97.90_.EB.93.B1.EB.A1.9D.ED.95.98.EA.B8.B0">확장기능 위치를 윈도우 레지스트리에 등록하기</h3>
+<p>(자바 런타임 따위의) 외부 설치자가 응용프로그램은 아직 설치되지 않은 상황에 통합적인 위치에 확장기능을 설치하고자 할 수 있습니다. 윈도우즈 <a href="ko/Adding_Extensions_using_the_Windows_Registry">레지스트리 사용</a>을 통해 처리할 수 있습니다.</p>
+<h3 id=".EC.97.AC.EB.9F.AC_.ED.95.AD.EB.AA.A9.EC.9D.84_.ED.8F.AC.ED.95.A8.ED.95.9C_.ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_XPI" name=".EC.97.AC.EB.9F.AC_.ED.95.AD.EB.AA.A9.EC.9D.84_.ED.8F.AC.ED.95.A8.ED.95.9C_.ED.99.95.EC.9E.A5.EA.B8.B0.EB.8A.A5_XPI">여러 항목을 포함한 확장기능 XPI</h3>
+<p>하나의 XPI 파일로 여러개의 확장과 테마를 설치하길 원할 때도 있습니다. 특별한 종류의 <a href="ko/Multiple_Item_Packaging">여러 항목을 포함한 XPI 포장</a>라고 불리우는 특별한 형태의 XPI는 이런 패키지를 만들 수 있습니다. (Firefox 1.5/XULRunner 1.8 이상이 필요합니다.)</p>
+<h3 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official References for <a href="ko/Toolkit_API">Toolkit API</a></h3>
+<p>
+  </p><ul>
+    <li><a href="/ko/Bundles" title="ko/Bundles">설치 가능한 번들</a>: 설치 가능한 번들(확장 기능, 테마, XULRunner 어플리케이션 등)에 대하여 기술하고 있습니다.</li>
+    <li><a href="/ko/Extension_Packaging" title="ko/Extension_Packaging">확장기능 포장</a>: 확장 기능을 포장하는 방법에 대한 정보를 제공합니다.</li>
+    <li><a href="/ko/Theme_Packaging" title="ko/Theme_Packaging">테마 포장</a>: 테마 기능을 포장하는 방법에 대한 정보를 제공합니다.</li>
+    <li><a href="/Ko/Multiple_Item_Packaging" title="Ko/Multiple_Item_Packaging">여러 항목을 포함한 XPI 포장</a>: 여러 항목들이 포함되는 XPI 를 포장하는 방법에 대한 정보를 제공합니다.</li>
+    <li><a href="/ko/XUL_Application_Packaging" title="ko/XUL_Application_Packaging">XUL 응용프로그램 포장</a>: XULRunner 응용프로그램을 포장하는 방법에 대한 정보를 제공합니다.</li>
+    <li><a href="/ko/Chrome_Registration" title="ko/Chrome_Registration">Chrome 등록</a>: Chrome의 등록하는 방법에 대한 정보를 제공합니다.</li>
+  </ul>

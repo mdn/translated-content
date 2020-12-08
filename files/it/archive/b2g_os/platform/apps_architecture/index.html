@@ -1,0 +1,38 @@
+---
+title: Architettura delle apps di Firefox OS
+slug: Archive/B2G_OS/Platform/Apps_architecture
+tags:
+  - Apps
+  - Architettura
+  - Firefox OS
+  - Guida
+translation_of: Archive/B2G_OS/Platform/Apps_architecture
+---
+<div class="summary">
+<p>Questo articolo spiega i dettagli su come le applicazioni sono eseguite e gestite in Firefox OS. Queste informazioni saranno utili per la piattaforma degli sviluppatori di Firefox OS oltre che ai singoli team al lavoro per portare il sistema operativo verso nuovo hardware. Se sei uno sviluppatore di app queste informazioni potrebbero non esserti necessarie ma potresti comunque esserne interessato.</p>
+</div>
+
+<h2 id="Il_processo_di_avvio_delle_app">Il processo di avvio delle app</h2>
+
+<p>Quando l'utente seleziona l'app che desidera avviare, o quando un'app deve essere lanciata dal sistema, nella home screen viene inserito un collegamento dalla {{domxref("App")}} API, successivamente viene fatta una chiamata al metodo {{domxref("App.launch()")}} per avviare l'applicazione.</p>
+
+<p>Gecko riceve la richiesta e invia il {{domxref("mozChromeEvent")}} all' app di sistema con i dettagli. L' app di sistema gestisce l'evento inserendo un nuovo {{HTMLElement("iframe")}} all'interno del suo DOM tree e caricando l' app all'interno del nuovo {{HTMLElement("iframe")}}. Quel frame sarà l'home della app fino al momento in cui terminerà.</p>
+
+<p>Ogni app richiede un manifest che la descrive ed ha una particolare gerarchia all'interno del suo contenitore. Per dettagli è disponibile l'articolo <a href="/en-US/docs/Web/Apps/App_Manifest">App manifest</a>.</p>
+
+<h2 id="Comunicare_con_Gecko">Comunicare con Gecko</h2>
+
+<p>La comunicazione tra Gecko e l'app di sistema Gaia è effettuata tramite {{domxref("mozChromeEvent")}} e {{domxref("mozContentEvent")}}. <code>mozChromeEvent</code>s sono trasmessi da chrome al contenuto e <code>mozContentEvent</code>s sono trasmessi dal contenuto a chrome. La comunicazione è utilizzata per controllare la creazione e la chiusura sicura della UI per inserire le funzioni richieste per le notifiche e per gli altri compiti, incluso l'avviso all' app di sistema di avviare un' app.</p>
+
+<div class="note">
+<p><strong>Nota: </strong>Puoi trovare ulteriori informazioni sul funzionamento di questi eventi leggendo la nostra documentazione<strong> </strong><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app documentation</a>. Puoi anche imparare molto sulle implementazioni dando un'occhiata al codice {{source("b2g/chrome/content/shell.js")}}.</p>
+</div>
+
+<h2 id="Guarda_anche">Guarda anche</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Apps">Apps</a></li>
+ <li>{{domxref("App")}}</li>
+ <li><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app</a></li>
+ <li><a href="/en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture</a></li>
+</ul>

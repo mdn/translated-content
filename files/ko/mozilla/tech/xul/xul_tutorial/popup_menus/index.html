@@ -1,0 +1,190 @@
+---
+title: Popup Menus
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Popup_Menus
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Popup_Menus
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:More_Menu_Features" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Scrolling_Menus">다음  »</a></p>
+</div><p></p>
+<p>이전 단원에서는 메뉴바에 들어가는 메뉴를 만드는 방법에 대해 알아보았습니다. XUL은 팝업 메뉴를 만들 수 있는 능력도 가지고 있습니다. 팝업 메뉴는 대개 오른쪽 마우스 버튼을 누를 때 표시됩니다.</p>
+<h3 id=".ED.8C.9D.EC.97.85_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0" name=".ED.8C.9D.EC.97.85_.EB.A9.94.EB.89.B4_.EB.A7.8C.EB.93.A4.EA.B8.B0">팝업 메뉴 만들기</h3>
+<p>XUL은 아래에서 설명하는 3가지 다른 형태의 팝업이 있습니다. 주된 차이는 표시되는 방식에 있습니다.</p>
+<dl>
+ <dt>
+  일반 팝업(Plain Popups)</dt>
+ <dd>
+  일반 팝업은 대상 요소에 마우스 왼쪽 버튼을 클릭하였을 때 나타나는 팝업창입니다. 일반 팝업은 어디에나 위치할 수 있으며, 어떤 내용이든 담을 수 있다는 점을 제외하고 메뉴바에 있는 메뉴와 아주 비슷합니다. 브라우저 창에서 뒤로와 앞으로 가기 버튼 옆에 있는 조그만 아래방향 화살표를 눌렀을 때 나타나는 드롭 다운 메뉴가 이의 좋은 예입니다.</dd>
+</dl>
+<dl>
+ <dt>
+  문맥 팝업(Context Popups)</dt>
+ <dd>
+  문맥 팝업은 사용자가 문맥 메뉴 버튼(대개 마우스 오른쪽 버튼)을 누를 때 나타나는 팝업창입니다. 일부 플랫폼에서는 다른 버튼일 수도 있지만, 이것은 항상 문맥전용 메뉴를 호출하는 버튼 또는 키와 마우스의 조합입니다. 예를 들어 맥킨토시에서는 사용자가 제어키(Ctrl)를 누르고 마우스 버튼을 클릭하거나, 잠깐 동안 마우스 버튼을 누르고 있어야 합니다.</dd>
+</dl>
+<dl>
+ <dt>
+  툴팁(Tooltips)</dt>
+ <dd>
+  툴팁 팝업창은 사용자가 어떤 요소위에 마우스를 올렸을 때 나타납니다. 이런 유형의 팝업은 보통 버튼 자체에서 제공되는 것보다 좀더 구체적인 버튼에 대한 설명을 제공하는 데 사용됩니다.</dd>
+</dl>
+<p>이들 세 가지 유형의 팝업은 사용자가 이것들을 호출하는 방식이 서로 다릅니다. 그래서 팝업 유형은 팝업을 호출하는 요소에 의해 결정됩니다.</p>
+<h4 id=".ED.8C.9D.EC.97.85_.EB.82.B4.EC.9A.A9_.EC.84.A0.EC.96.B8.ED.95.98.EA.B8.B0" name=".ED.8C.9D.EC.97.85_.EB.82.B4.EC.9A.A9_.EC.84.A0.EC.96.B8.ED.95.98.EA.B8.B0">팝업 내용 선언하기</h4>
+<p>팝업은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소를 사용하여 선언됩니다. 이는 특별한 속성이 없는 상자의 한 유형입니다. 팝업이 호출되면, 여러분이 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>에 넣은 모든 요소를 포함하는 창이 화면에 출력될 것입니다. 여러분은 <code>menupopup</code>에 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성을 항상 넣어주어야 합니다. 이것은 이 속성이 팝업과 특정 요소를 연결하는데 사용되기 때문인데, 이 의미에 대해서는 곧 알게될 것입니다. 먼저, 예제를 보겠습니다.</p>
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Cut"/&gt;
+    &lt;menuitem label="Copy"/&gt;
+    &lt;menuitem label="Paste"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+</pre>
+<p>여기서 볼 수 있듯이, 3개의 메뉴가 있는 단순 팝업메뉴가 만들어졌습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소는 3개 메뉴 항목을 둘러싸고 있습니다. 여러분은 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성이 <code>menupopup</code> 요소 자체에 설정된 것을 볼 수 있습니다.</p>
+<p><code><code><a href="/ko/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> 요소는 전체 팝업메뉴 선언부를 둘러싸고 있습니다. 이 요소는 팝업의 일반적인 컨테이너로 선택사항입니다. 이 요소는 화면에 나타나지는 않지만 사용할 모든 팝업들을 선언할 위치 역할로 사용됩니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code>이라는 이름이 의미하듯, 내부에 여러개의 팝업을 선언할 수 있습니다. 첫 번째 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code></code> 요소 다음에 그냥 추가하기만 하면 됩니다. 하나의 파일에 여러개의 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code>을 둘 수도 있지만, 대개는 하나만 존재할 것입니다.</p>
+<h4 id=".EC.9A.94.EC.86.8C.EC.99.80_.ED.8C.9D.EC.97.85.EC.9D.84_.EC.97.B0.EA.B2.B0.ED.95.98.EA.B8.B0" name=".EC.9A.94.EC.86.8C.EC.99.80_.ED.8C.9D.EC.97.85.EC.9D.84_.EC.97.B0.EA.B2.B0.ED.95.98.EA.B8.B0">요소와 팝업을 연결하기</h4>
+<p>이제 팝업을 만들었으니 팝업이 나타나도록 해야할 시간입니다. 이를 위해 팝업과 팝업이 나타날 요소를 연결시켜야 합니다. 이렇게 하는 것은 사용자가 창의 어떤 영역을 클릭했을 때만 팝업이 나타나야 하기 때문입니다. 대개, 이 요소는 특정 버튼이거나 상자가 됩니다.</p>
+<p>팝업을 요소와 연결시키려면 3가지 속성 중 하나를 해당 요소에 추가하면 됩니다. 추가할 요소는 만들고자 하는 팝업의 종류에 따라 달라집니다. 일반 팝업의 경우에는 해당 요소에 <code><code id="a-popup"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/popup">popup</a></code></code> 속성을 사용하고, 문맥 팝업은 <code><code id="a-context"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code></code> 속성을 사용합니다. 마지막으로 툴팁 팝업은 <code><code id="a-tooltip"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/tooltip">tooltip</a></code></code> 속성을 사용합니다.</p>
+<p>위의 속성에는 출력하고자 하는 <code>menupopup</code>의 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성값을 지정해야 합니다. 보통 하나의 파일이 여러개의 팝업을 포함하는 이유가 이 때문입니다.</p>
+<p>위의 예제를 이용해 문맥 팝업을 만들고자 합니다. 이것은 <code><code id="a-context"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code></code> 속성을 사용해야 하며, 연결하고자 하는 팝업의 <code>id</code> 속성값을 이 속성값으로 지정해야 한다는 것을 의미합니다. 아래 예제는 이러한 사항을 어떻게 처리할 수 있는 지를 보여주고 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:popups-ex1.png"></div>
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Cut"/&gt;
+    &lt;menuitem label="Copy"/&gt;
+    &lt;menuitem label="Paste"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;box context="clipmenu"&gt;
+  &lt;label value="Context click for menu"/&gt;
+&lt;/box&gt;
+</pre>
+<p>여기서 팝업은 상자와 연결되었습니다. 상자 어디서든 문맥 클릭(context-click, 오른쪽 클릭)을 하면 팝업메뉴가 나타날 것입니다. 또한 상자의 자식 요소를 클릭할 때도 팝업이 나타나기 때문에 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 요소를 클릭해도 동일하게 동작할 것입니다. <code><code id="a-context"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code></code> 속성은 상자와 해당 id를 가진 팝업을 연결하기 위해 사용되었습니다. 이 경우, <code>id</code>가 <code>clipmenu</code>인 팝업이 나타날 것입니다. 이런 식으로 수많은 팝업을 가질 수 있으며, 이들을 다른 요소와 연결할 수 있습니다.</p>
+<p>여러분은 하나의 요소에 다른 종류의 팝업 속성을 설정하여 여러개의 팝업과 연결할 수 있습니다. 또 하나의 팝업을 여러개의 요소에도 연결할 수 있는데 이는 XUL의 팝업 구문이 가진 장점 중 하나입니다. 팝업은 XUL 요소에만 연결할 수 있으며, HTML 요소와는 연결할 수 없습니다.</p>
+<h3 id=".ED.88.B4.ED.8C.81" name=".ED.88.B4.ED.8C.81">툴팁</h3>
+<p>여기서는 툴팁을 만드는 단순한 방법을 살펴보겠습니다. 툴팁을 만드는데는 두 가지 방법이 있습니다. 일반적으로 사용되는 가장 단순한 방법은 툴팁을 적용하고자 하는 요소에 <code><code id="a-tooltiptext"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/tooltiptext">tooltiptext</a></code></code> 속성을 추가하는 것입니다.</p>
+<p>두 번째 방법은 툴팁의 내용을 담고 있는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code> 요소를 사용하는 것입니다. 이 방법은 각각의 툴팁 내용을 포함하는 별도의 블록 또는 내용을 설정하는 스크립트의 작성을 필요로 합니다. 그러나 이러한 방법을 이용하면 툴팁에 텍스트 외에도 어떠한 내용도 사용할 수 있는 장점이 있습니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_2"><a id="%EC%98%88%EC%A0%9C_2"></a><strong>예제 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul">View</a></p>
+<pre>&lt;button label="Save" tooltiptext="Click here to save your stuff"/&gt;
+
+&lt;popupset&gt;
+  &lt;tooltip id="moretip" orient="vertical" style="background-color: #33DD00;"&gt;
+    &lt;description value="Click here to see more information"/&gt;
+    &lt;description value="Really!" style="color: red;"/&gt;
+  &lt;/tooltip&gt;
+&lt;/popupset&gt;
+
+&lt;button label="More" tooltip="moretip"/&gt;
+</pre>
+<p>이 2개의 버튼은 각각 툴팁을 가지고 있습니다. 첫 번째는 기본 툴팁 방식을, 두 번째는 다른 배경색과 서식이 적용된 텍스트로 구성된 커스텀 툴팁을 사용하고 있습니다. 툴팁은 More 버튼과 연결되어 있으며, 이를 위해 버튼의 <code><code id="a-tooltip"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/tooltip">tooltip</a></code></code> 속성에 해당 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code> 요소의 <code><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 속성값이 설정되어 있습니다. 여기서 <code>tooltip</code> 요소는 다른 팝업 유형처럼 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> 내부에 위치하고 있다는 점에 유의하세요.</p>
+<h3 id=".ED.8C.9D.EC.97.85_.EC.A0.95.EB.A0.AC" name=".ED.8C.9D.EC.97.85_.EC.A0.95.EB.A0.AC">팝업 정렬</h3>
+<p>기본적으로, 팝업과 문맥 창은 마우스 포인터가 위치한 곳에 나타납니다. 툴팁은 해당 요소의 약간 아래 위치하는데, 이는 마우스 포인터가 이를 가리지 않게 하기 위해서 입니다. 그렇다 하더라, 팝업이 나타날 위치를 좀 더 상세히 지정하고 싶은 경우가 있을 것입니다. 예를 들어, 브라우저의 뒤로 가기 버튼을 클릭했을 때 나타나는 팝업 메뉴는 마우스 포인터가 있는 곳이 아닌, 뒤로 가기 버튼 바로 아래 나타나도록 하는 것이 좋을 것입니다.</p>
+<p>팝업 위치를 변경하기 위해서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code></code> 요소에 <code><code id="a-position"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/position">position</a></code></code>이라는 또 다른 속성을 사용할 수 있습니다. 또한 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 요소에도 이를 추가할 수 있습니다. 이 속성은 팝업을 발생시키는 요소에 상대적인 팝업 위치를 지시하는 데 사용됩니다. 여러가지 값을 설정할 수 있으며, 각각을 간단히 설명하면 아래와 같습니다.</p>
+<dl>
+ <dt>
+  after_start</dt>
+ <dd>
+  팝업은 요소의 아래에 왼쪽으로 정렬되어 나타납니다(팝업의 왼쪽 = 요소의 왼쪽, 팝업의 위 = 요소의 아래). 해당 팝업창이 요소보다 큰 경우, 오른쪽으로 확장됩니다. 이것은 브라우저의 뒤로와 앞으로 가기 버튼과 연결된 드롭다운 메뉴에 사용되는 값입니다.</dd>
+</dl>
+<dl>
+ <dt>
+  after_end</dt>
+ <dd>
+  팝업창은 요소의 아래에 오른쪽으로 정렬되어 나타납니다(팝업의 오른쪽 = 요소의 오른쪽, 팝업의 위 = 요소의 아래).</dd>
+</dl>
+<dl>
+ <dt>
+  before_start</dt>
+ <dd>
+  팝업창은 요소의 위쪽에 왼쪽으로 정렬되어 나타납니다(팝업의 왼쪽 = 요소의 왼쪽, 팝업의 아래 = 요소의 위).</dd>
+</dl>
+<dl>
+ <dt>
+  before_end</dt>
+ <dd>
+  팝업창은 요소의 위쪽에 오른쪽으로 정렬되어 나타납니다(팝업의 오른쪽 = 요소의 오른쪽, 팝업의 아래 = 요소의 위).</dd>
+</dl>
+<dl>
+ <dt>
+  end_after</dt>
+ <dd>
+  팝업은 요소의 오른쪽에 아래쪽으로 정렬되어 나타납니다(팝업의 왼쪽 = 요소의 오른쪽, 팝업의 아래 = 요소의 아래).</dd>
+</dl>
+<dl>
+ <dt>
+  end_before</dt>
+ <dd>
+  팝업은 요소의 오른쪽에 위쪽으로 정렬되어 나타납니다(팝업의 왼쪽 = 요소의 오른쪽, 팝업의 위 = 요소의 위).</dd>
+</dl>
+<dl>
+ <dt>
+  start_after</dt>
+ <dd>
+  팝업은 요소의 왼쪽에 아래쪽으로 정렬되어 나타납니다(팝업의 오른쪽 = 요소의 왼쪽, 팝업의 아래 = 요소의 아래).</dd>
+</dl>
+<dl>
+ <dt>
+  start_before</dt>
+ <dd>
+  팝업은 요소의 왼쪽에 위쪽으로 정렬되어 나타납니다(팝업의 오른쪽 = 요소의 왼쪽, 팝업의 위 = 요소의 위).</dd>
+</dl>
+<dl>
+ <dt>
+  overlap</dt>
+ <dd>
+  팝업은 요소의 위에 나타납니다(요소의 왼쪽 위 = 팝업의 왼쪽 위).</dd>
+</dl>
+<dl>
+ <dt>
+  at_pointer</dt>
+ <dd>
+  팝업은 마우스 포인터 위치에 나타납니다.</dd>
+</dl>
+<dl>
+ <dt>
+  after_pointer</dt>
+ <dd>
+  팝업은 마우스 포인터와 가로 위치는 같으면서 세로 위치는 마우스 포인터 아래 부분에 나타납니다. 이것은 툴팁이 나타나는 방식입니다.</dd>
+</dl>
+<p>팝업 요소에 <code>position</code> 속성을 추가함으로써 팝업이 나타날 위치를 정확하게 지정할 수 있습니다. 그러나 정확한 픽셀 위치를 지정할 수는 없습니다. 아마도 툴팁 요소에 대한 이 속성값은 변경하려고 하지 않겠지만, <code>position</code> 속성은 세 가지 팝업 유형 모두에 사용될 수 있습니다. 아래 예제는 팝업 메뉴를 가진 뒤로가기 버튼을 만드는 것을 보여주는 것입니다.</p>
+<p><span id="%EC%98%88%EC%A0%9C_3"><a id="%EC%98%88%EC%A0%9C_3"></a><strong>예제 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul">View</a></p>
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="backpopup" position="after_start"&gt;
+    &lt;menuitem label="Page 1"/&gt;
+    &lt;menuitem label="Page 2"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Pop Me Up" popup="backpopup"/&gt;
+</pre>
+<div class="highlight">
+ <h3 id="Our_find_files_example" name="Our_find_files_example">Our find files example</h3>
+ <p>파일 찾기 대화창에 간단한 팝업 메뉴를 추가해 보겠습니다. 단순하게 하기 위해, Edit 메뉴의 내용을 그냥 복사했습니다. 첫 번째 탭 패널위에서 클릭했을 때 팝업이 나타나도록 해 봅시다.</p>
+ <pre class="eval"><span class="highlightred">&lt;popupset&gt;
+  &lt;menupopup id="editpopup"&gt;
+    &lt;menuitem label="Cut" accesskey="t"/&gt;
+    &lt;menuitem label="Copy" accesskey="c"/&gt;
+    &lt;menuitem label="Paste" accesskey="p" disabled="true"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+.
+.
+.
+
+<span class="highlightred">&lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;</span>
+</pre>
+ <p>여기에 있는 eidt 메뉴와 유사한 단순 팝업이 첫 번째 탭패널에 추가되었습니다. 첫 번째 패널 어디서든 마우스 오른쪽 버튼을 클릭하면(맥킨토시에서는 Ctrl-클릭), 팝업이 나타날 것입니다. 그러나 해당 팝업은 그 이외 장소에서 클릭하면 나타나지 않을 것입니다. 주의할 사항은 글상자의 경우 자체 내장 팝업메뉴가 있어서 우리가 지정한 팝업 메뉴가 나타나지 않을 것입니다.</p>
+ <p><span id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>지금까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul">View</a></p>
+</div>
+<p>다음 단원에서는 <a href="ko/XUL_Tutorial/Scrolling_Menus">스크롤 메뉴</a>를 작성하는 방법에 대해 알아보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:More_Menu_Features" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Scrolling_Menus">다음  »</a></p>
+</div><p></p>
+<p></p>

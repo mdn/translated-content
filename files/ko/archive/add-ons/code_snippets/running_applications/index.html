@@ -1,0 +1,51 @@
+---
+title: Running applications
+slug: Archive/Add-ons/Code_snippets/Running_applications
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Add-ons/Code_snippets/Running_applications
+---
+<p>
+</p><p>본 페이지에서는 Mozilla XPCOM 인터페이스를 이용해서 chrome JavaScript 코드로 다른 프로그램을 실행하는 방법에 대해 설명하겠습니다. 프로그램을 실행하는데는 두 가지 방법이 있습니다. 첫번째 방법은 <code><a href="ko/NsILocalFile/launch">nsILocalFile:launch</a></code> 메소드를 사용하는 것이고, 두번째 방법은 <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIProcess.html">nsIProcess</a></code> 인터페이스를 사용하는 것입니다.
+</p>
+<h3 id="nsILocalFile.launch.28.29_.EC.9D.B4.EC.9A.A9.ED.95.98.EA.B8.B0" name="nsILocalFile.launch.28.29_.EC.9D.B4.EC.9A.A9.ED.95.98.EA.B8.B0"> <code>nsILocalFile.launch()</code> 이용하기 </h3>
+<p>이 방법은 실행 파일을 더블 클릭하는 것과 동일한 효과가 나타나며 파라미터 없이 실행됩니다. 또 구현되지 않은 플랫폼도 있으므로 여러분이 대상으로 하는 플랫폼에서 이 메소드가 구현되어 있는지 확인해야 합니다.
+</p><p><code><a href="ko/NsIFile">nsIFile</a></code>/<code><a href="ko/NsILocalFile">nsILocalFile</a></code>에 대한 보다 자세한 정보는 <a href="ko/Code_snippets/File_I%2f%2fO">File I/O</a>를 참조하세요.
+</p><p>For more information on <code><a href="ko/NsIFile">nsIFile</a></code>/<code><a href="ko/NsILocalFile">nsILocalFile</a></code>, see <a href="ko/Code_snippets/File_I%2f%2fO">File I/O</a>.
+</p>
+<pre class="eval">var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath("c:\\myapp.exe");
+file.launch();
+</pre>
+<h3 id="nsIProcess_.EC.9D.B4.EC.9A.A9.ED.95.98.EA.B8.B0" name="nsIProcess_.EC.9D.B4.EC.9A.A9.ED.95.98.EA.B8.B0"> <code>nsIProcess</code> 이용하기 </h3>
+<p><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIProcess.html">nsIProcess</a> 인터페이를 사용하는 것이 권장되는 방법 입니다.
+</p>
+<pre class="eval">// create an nsILocalFile for the executable
+var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath("c:\\myapp.exe");
+
+// create an nsIProcess
+var process = Components.classes["@mozilla.org/process/util;1"]
+                        .createInstance(Components.interfaces.nsIProcess);
+process.init(file);
+
+// Run the process.
+// If first param is true, calling thread will be blocked until
+// called process terminates.
+// Second and third params are used to pass command-line arguments
+// to the process.
+var args = ["argument1", "argument2"];
+process.run(false, args, args.length);
+</pre>
+<h3 id=".EC.B0.B8.EA.B3.A0" name=".EC.B0.B8.EA.B3.A0"> 참고 </h3>
+<ul><li><a href="ko/NsILocalFile"> nsILocalFile 인터페이스</a>
+</li><li><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIProcess.html">nsIProcess 인터페이스</a>
+</li><li> XPI에 포함된 실행 파일을 실행해야 한다면 <a href="ko/Code_snippets/File_I%2f%2fO#Getting_your_extension.27s_folder">Code snippets:File I/O#Getting your extension's folder</a>를 참조하세요.
+</li><li><a class="external" href="http://groups.google.com/group/mozilla.dev.extensions/browse_frm/thread/947e63c95c14b5a5">웹 페이지에서 프로세스 실행하기</a>
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Code_snippets/Running_applications", "fr": "fr/Extraits_de_code/Ex\u00e9cuter_des_applications", "ja": "ja/Code_snippets/Running_applications", "pl": "pl/Fragmenty_kodu/Uruchamianie_aplikacji" } ) }}

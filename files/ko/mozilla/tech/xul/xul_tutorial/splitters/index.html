@@ -1,0 +1,139 @@
+---
+title: Splitters
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Splitters
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Splitters
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Content_Panels" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Scroll_Bars">다음  »</a></p>
+</div><p></p>
+
+<p>이번 단원에서는 splitter를 창에 추가하는 방법에 대해 알아보겠습니다.</p>
+
+<h2 id=".EC.83.81.EC.9E.90_.EB.82.98.EB.88.84.EA.B8.B0" name=".EC.83.81.EC.9E.90_.EB.82.98.EB.88.84.EA.B8.B0">상자 나누기</h2>
+
+<p>하나의 창 안에 사용자가 크기를 변경할 수 있는 2개 영역이 있었으면 할 때가 있습니다. Mozilla 브라우저 창이 이러한 예로, 브라우저 창에서는 메인 영역과 사이드바 패널 프레임 사이에 있는 막대를 드래그 해서 사이드바 패널의 크기를 조정할 수 있습니다. 또한 빗살대(notch)를 클릭해서 사이드바를 숨길 수도 있습니다.</p>
+
+<h3 id="Splitter_.EC.9A.94.EC.86.8C" name="Splitter_.EC.9A.94.EC.86.8C">Splitter 요소</h3>
+
+<p>이러한 기능은 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code></code>라는 요소를 사용하여 구현할 수 있습니다. 이 요소는 2개 영역 사이에 좁은 막대를 만들어서 영역의 크기를 변경할 수 있게 해 줍니다. Splitter 요소는 넣고 싶은 곳 아무데서나 사용할 수 있으며, 동일한 상자 내에서 splitter 앞에 오는 요소와 다음에 오는 요소의 크기를 변경할 수 있습니다.</p>
+
+<p>Splitter가 가로상자 내부에 사용되면 가로 방향으로, 세로상자 내부에 사용되면 세로 방향으로 크기를 변경할 수 있게 해 줍니다.</p>
+
+<p>Splitter 구문은 다음과 같습니다:</p>
+
+<pre>&lt;splitter
+    id="identifier"
+    state="open"
+    collapse="before"
+    resizebefore="closest"
+    resizeafter="closest"&gt;
+</pre>
+
+<p>속성은 다음과 같습니다.</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>splitter 유일 식별자.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-state"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/state">state</a></code></dt>
+ <dd>splitter의 상태를 나타냅니다. 기본값은 <code>open</code>으로 이값을 설정하면 기본적으로 열린 상태가 되며, <code>collapsed</code>로 설정하면 패널 중 하나는 닫힌 상태가 되어 다른 쪽이 나머지 공간을 차지하는 상태로 출력됩니다.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-collapse"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></dt>
+ <dd>이 속성은 splitter의 빗살대(또는 그리피(grippy))를 클릭하거나 닫힘 상태로 설정하였을 경우, 패널의 어느 면이 닫히게 될지를 지정합니다. 이 속성값을 <code>before</code>로 설정하면 splitter 앞에 오는 요소가 닫히게 되며, <code>after</code>로 설정하면 splitter 다음에 오는 요소가 닫히게 됩니다. 만일 기본값인 <code>none</code>으로 설정하면, 그리피를 클릭하더라도 패널은 닫히지 않습니다.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-resizebefore"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/resizebefore">resizebefore</a></code></dt>
+ <dd>Splitter를 드래그하면, splitter의 왼쪽(혹은 위쪽)에 있는 요소들은 크기가 변하게 됩니다. 이 속성은 왼쪽(혹은 위쪽)에 있는 요소들 중 어떤 요소의 크기가 변하게 될지를 지정합니다. 이 속성값을 <code>closest</code>로 설정하면 splitter의 바로 왼쪽에 있는 요소의 크기가 변경됩니다. 반면, <code>farthest</code>로 설정하면 splitter의 왼쪽에 있는 요소들 중 가장 멀리있는 요소의 크기를 변경하게 됩니다(상자 내 첫번째 요소). 기본값은 <code>closest</code> 입니다.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-resizeafter"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/resizeafter">resizeafter</a></code></dt>
+ <dd>Splitter를 드래그하면, splitter의 오른쪽(혹은 아래쪽)에 있는 요소들은 크기가 변하게 됩니다. 이 속성은 오른쪽(혹은 아래쪽)에 있는 요소들 중 어떤 요소의 크기가 변하게 될지를 지정합니다. 이 속성값을 <code>closest</code>로 설정하면 splitter의 바로 오른쪽에 있는 요소의 크기가 변경됩니다. 반면, <code>farthest</code>로 설정하면 splitter의 오른쪽에 있는 요소들 중 가장 멀리있는 요소의 크기를 변경하게 됩니다(상자 내 마지막 요소). 이 속성은 <code>grow</code>값을 가질 수도 있는데, 이것은 splitter를 드래그하더라도 오른쪽에 있는 요소들의 크기가 변경되지 않도록 하며, 대신 이들을 포함하는 전체 상자의 크기가 변경됩니다. 기본값은 <code>closest</code>입니다.</dd>
+</dl>
+
+<p>Splitter에 <code><code id="a-collapse"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></code> 속성을 설정하였다면 사용자가 해당 요소를 닫을 수 있도록 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grippy" title="grippy">grippy</a></code></code> 요소도 추가해 주는 것이 좋습니다. Firefox 브라우저에서는 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/grippy" title="grippy">grippy</a></code></code> 요소를 지원하지 않습니다. 따라서 해당 요소를 splitter 요소에 넣더라도 출력되지 않으며, splitter를 클릭하더라도 한번에 닫히지 않습니다.</p>
+
+<h3 id="Splitter_.EC.98.88.EC.A0.9C" name="Splitter_.EC.98.88.EC.A0.9C">Splitter 예제</h3>
+
+<p>다음 예제를 보면 도움이 될 것입니다.</p>
+
+<p><span id="%EC%98%88%EC%A0%9C_1"><a id="%EC%98%88%EC%A0%9C_1"></a><strong>예제 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul">View</a></p>
+
+<pre>&lt;hbox flex="1"&gt;
+  &lt;iframe id="content-1" width="60" height="20" src="w1.html"/&gt;
+  &lt;splitter collapse="before" resizeafter="farthest"&gt;
+    &lt;grippy/&gt;
+  &lt;/splitter&gt;
+  &lt;iframe id="content-2" width="60" height="20" src="w2.html"/&gt;
+  &lt;iframe id="content-3" width="60" height="20" src="w3.html"/&gt;
+  &lt;iframe id="content-4" width="60" height="20" src="w4.html"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:splitter-ex1.jpg"></div>
+
+<p>예제에서는 4개의 iframe이 생성되어 있으며 splitter는 첫 번째와 두 번째 사이에 위치하고 있습니다. <code><code id="a-collapse"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></code> 속성에는 <code>before</code>값이 설정되어 있으며, 이것은 그리피를 클릭하면 첫 번째 프레임이 사라지고 나머지 프레임들이 왼쪽으로 이동하게 된다는 것을 의미합니다. 그리피는 splitter 내 중앙에 그려집니다.</p>
+
+<p>splitter의 <code><code id="a-resizeafter"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/resizeafter">resizeafter</a></code></code> 속성 값은 <code>farthest</code>로 설정되어 있습니다. 이것은 splitter를 드래그하면 splitter 다음에 위치한(그림에서는 오른쪽) 요소들 중 가장 멀리있는 요소의 크기가 변경된다는 것을 의미합니다. 이 경우 4번 프레임의 크기가 변경됩니다.</p>
+
+<p><code><code id="a-resizebefore"><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL/Attribute/resizebefore">resizebefore</a></code></code> 속성의 값은 지정하지 않았기 때문에 기본값인 <code>closest</code>로 지정됩니다. 위의 예제에서는, splitter 앞에 하나의 프레임밖에 없기 때문에, 1번 프레임의 크기가 변하게 됩니다.</p>
+
+<p>2번과 3번 프레임은 4번 프레임이 최소크기가 될 때까지 드래그 한 이후에 크기가 변경됩니다.</p>
+
+<div class="float-right"><img alt="Image:splitter-ex2.jpg"></div>
+
+<p>그림은 splitter가 닫힌 상태인 4개 패널 모습입니다.</p>
+
+<div class="float-right"><img alt="Image:splitter-ex3.jpg"></div>
+
+<p>그림은 splitter가 오른쪽으로 크기를 변경한 상태의 패널 모습입니다. 주목해야할 점은 중간의 2개 패널은 크기가 변하지 않았다는 것입니다. 1번과 4번 패널만 크기가 바뀌었습니다. 4번째 패널을 보면 알 수 있습니다. splitter를 오른쪽으로 계속해서 드래그하면, 다른 2개의 패널이 오그라들게 됩니다.</p>
+
+<p>상자에서의 최소 또는 최대 너비를 지정하기 위해 iframe에 <code>min-width</code>, <code>max-height</code> 같은 스타일 속성을 사용할 수 있습니다. 그럴 경우, splitter가 이를 감지하여 최소와 최대크기를 넘어서 끌기할 수 없게 해 줍니다.</p>
+
+<p>예를 들어, 4번 패널에 최소 넓이를 30픽셀로 지정했다면, 그 이하 크기로 줄지않게 됩니다. 그 외 다른 2개 패널은 줄어들게 될 것입니다. 만약 1번 패널의 최소넓이를 50픽셀로 설정했다면, splitter를 오른쪽으로 10픽셀 드래그 할 수 있을 것입니다(왜냐하면 60픽셀 넓이로 시작했기 때문입니다). 그렇다 하더라도 여전히 splitter를 닫을 수는 있습니다.</p>
+
+<p>원할 경우 상자에 하나 이상의 splitter를 사용할 수도 있는데, 이 경우 splitter의 다른 부분을 닫을 수있습니다. 마찬가지로 iframe 뿐만 아니라 어떠한 요소든 닫을 수 있습니다.</p>
+
+<h2 id=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C" name=".EC.9A.B0.EB.A6.AC.EC.9D.98_.ED.8C.8C.EC.9D.BC_.EC.B0.BE.EA.B8.B0_.EC.98.88.EC.A0.9C">우리의 파일 찾기 예제</h2>
+
+<div class="highlight">
+<p>파일 찾기 대화창에 splitter를 사용하였을 경우 어떠한 모양이 될지 알아 봅시다. 한 가지는 대화창에 검색결과를 추가하려는 것입니다. 우리는 검색 조건과 아래의 버튼들 사이에 공간을 추가할 것입니다. 여러분은 splitter를 이용해 검색결과를 닫거나 감출 수 있을 것입니다.</p>
+
+<pre class="eval">&lt;/tabbox&gt;
+
+ <span class="highlightred">&lt;iframe src="results.html"/&gt;
+ &lt;splitter resizeafter="grow"/&gt;</span>
+
+ &lt;hbox&gt;
+</pre>
+
+<p>여기에 보면, splitter와 iframe이 대화창에 추가되었습니다. <code><code><a href="/ko/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> 뒤에 있던 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>는 더 이상 필요없기 때문에 이를 삭제할 수 있습니다. 프레임의 내용은 '&lt;tt&gt;results.html&lt;/tt&gt;'이라는 파일에 포함되어 있습니다. 지금은 이 파일을 만들어서 아무거나 입력을 하시면 됩니다. iframe은 결과 목록을 만드는 방법에 대해 알게되는 <a href="ko/XUL_Tutorial/Trees">시점에</a> 결과 목록으로 대체될 것입니다. 지금은 splitter를 설명하기 위한 목적으로만 사용하는 것입니다.</p>
+
+<p>splitter의 <code>collapse</code> 속성에는 splitter 앞에 오는 요소를 닫는다는 의미의 <code>before</code>값이 설정되어 있으며, 여기서는 iframe이 이에 해당됩니다. 아래 보이는 그림에서처럼 그리피를 클릭하면 iframe이 닫히고 버튼이 위로 움직이게 됩니다.</p>
+
+<p><code>resizeafter</code> 속성에는 <code>grow</code>값이 설정되어 있어 splitter 아래의 요소들은 splitter를 아래로 드래그 하면 아래로 밀려가게 됩니다. 결과적으로 프레임의 내용은 어떠한 방향으로든 커질 수 있는 것입니다. 주의할 점은 창의 크기가 자동으로 변경되지는 않는다는 것입니다. 그리고, 세로상자 안에 splitter가 포함되어 있어, 예제에서는 가로 방향 splitter가 된다는 것을 유념해 보기 바랍니다.</p>
+
+<p>일반 상태:</p>
+
+<p><img alt="Image:splitter1.png"></p>
+
+<p>닫힌 상태:</p>
+
+<p><img alt="Image:splitter2.png"></p>
+
+<p><span id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"><a id="%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80%EC%9D%98_%ED%8C%8C%EC%9D%BC_%EC%B0%BE%EA%B8%B0_%EC%98%88%EC%A0%9C"></a><strong>지금까지의 파일 찾기 예제</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul">View</a></p>
+</div>
+
+<p>다음에는 <a href="ko/XUL_Tutorial/Scroll_Bars">스크롤바</a>를 만드는 방법에 대해 알아보겠습니다.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Content_Panels" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Scroll_Bars">다음  »</a></p>
+</div><p></p>

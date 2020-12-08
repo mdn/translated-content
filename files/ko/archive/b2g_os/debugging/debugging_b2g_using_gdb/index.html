@@ -1,0 +1,153 @@
+---
+title: GDB 및 관련 Tool을 이용한 B2G 디버깅
+slug: Archive/B2G_OS/Debugging/Debugging_B2G_using_gdb
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_gdb
+---
+<div class="summary">
+<p><strong><code>gdb</code></strong>는 Firefox OS의 애플리케이션 디버깅을 위한 많은 유용한 옵션을 제공하는 command line debugger입니다. B2G상에서 실행 중인 각 프로세스의 app 이름을 보여주는 표준 ps의 wrapper인 <strong><code>b2g-ps</code></strong>와 같은 다른 tool들도 있습니다. 이 문서는 이런 tool들로 Firefox OS 디버깅을 어떻게 수행하는지 보여드립니다.</p>
+</div>
+
+<h2 id="단일_프로세스_모드에서_디버거_시작하기">단일 프로세스 모드에서 디버거 시작하기</h2>
+
+<p>(역자 주: b2g 프로세스에 대한 디버깅을 뜻하는 듯)</p>
+
+<div class="note">
+<p><strong>Note:</strong> 디버거를 실행하기 전에 자신만의 설정을 위해 <code>.userconfig</code> 파일을 셋업할 수 있습니다. 이에 대한 더 자세한 내용은 <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a>을 참고하시기 바랍니다.</p>
+</div>
+
+<p>Firefox OS를 재시작한 후 gdb 상에서 실행하기 위해서는 간단히 <code>run-gdb.sh를 사용하시면 됩니다</code> :</p>
+
+<pre>./run-gdb.sh
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> 만약 에뮬레이터 상에서 디버깅 하길 원한다면, 혹시 연결되어 있는 폰은 없는지 확인해 보시기 바랍니다; 에뮬레이터를 연결하려는 gdb와 충돌이 발생할 수 있습니다.</p>
+</div>
+
+<p>Firefox OS가 이미 동작 중이고, 재시작없이 Firefox OS를 붙이길 원한다면 아래처럼 할 수 있습니다:</p>
+
+<pre>./run-gdb.sh attach
+</pre>
+
+<h2 id="Out-of-process_tasks_디버깅">Out-of-process tasks 디버깅</h2>
+
+<p>(역자 주: b2g 외 다른 프로세스에 대한 디버깅을 뜻하는 듯)</p>
+
+<p>Firefox OS의 쓰레드 기반 특성(threaded nature) 때문에 종종 B2G task외에 다른 task들을 디버깅 해야할 필요가 있을 수 있습니다. 이를 위해 디버깅 하길 원하는 프로세스의 PID를 확인하는 가장 간단한 방법은 <code>b2g-ps</code> 명령을 사용하는 것입니다:</p>
+
+<pre>$ adb shell b2g-ps
+b2g              root      106   1     189828 56956 ffffffff 40101330 S /system/b2g/b2g
+Browser          app_0     4308  106   52688  16188 ffffffff 400db330 S /system/b2g/plugin-container
+</pre>
+
+<p>위에서 Browser는 browser 애플리케이션을 위한 "content process"로 사용되는 (b2g의) 자식 프로세스입니다. 이 예에서 content process를 디버깅하고 싶다면 아래처럼 하시기 바랍니다:</p>
+
+<pre>$ ./run-gdb.sh attach 4308</pre>
+
+<p>종종 자식 프로세스 생성에 대해 즉시 통보받는게 유용할 때가 있습니다. 이렇게 하기 위해선 <code>MOZ_DEBUG_CHILD_PROCESS</code> 환경변수와 함께 <code>run-gdb.sh를 </code>실행하면 됩니다:</p>
+
+<pre>MOZ_DEBUG_CHILD_PROCESS=1 ./run-gdb.sh</pre>
+
+<p>이렇게 하면 Firefox OS에서 out-of-process 애플리케이션이 실행될 때 새로운 task용 plugin-container의 PID를 출력할 것입니다. 그리고 위에서 봤던 attach 명령을 사용하기에 충분한 시간인 30초 동안 sleep 할 것 입니다:</p>
+
+<pre>$ ./run-gdb.sh attach 4308</pre>
+
+<p>만일 부팅 중 발생하는 어떤 부분을 디버깅하려고 한다면, 새로운 애플리케이션에 대한 디버거 인스턴스(debugger instance)를 적절하게 빨리 실행해야 합니다. 일단 새로운 디버거가 실행되면 새로운 task의 동작을 지속하기 위해 즉시 "c"를 눌러야 합니다.</p>
+
+<h2 id="Core_파일_디버깅">Core 파일 디버깅</h2>
+
+<div class="warning">
+<p><strong>Warning: </strong>Core 파일은 프로세스의 전체 메모리 내용을 포함하고 있습니다. 이 파일은 여러분이 Firefox OS에 입력한 개인 정보를 포함하고 있을 수 있습니다. 그러므로 core 파일은 주의깊게 공유되어야 합니다.</p>
+</div>
+
+<p>기본적으로 Firefox OS는 프로세스가 crash 되었을 때 core 파일을 dump 하지 않습니다. Debug 빌드 버전에서 다음 명령으로 enable 해주어야 합니다:</p>
+
+<pre>$ adb shell setprop persist.debug.coredump all
+$ adb reboot
+</pre>
+
+<p>변경사항을 적용하기 위해서는 리부팅이 필요하며, B2G가 일단 초기화를 시작했으면 crash 발생 시 모든 프로세스가 core dump를 하게 됩니다. 이전 커널(&lt;3.0, hamachi 등)을 사용하는 플랫폼이거나, Gonk 외 B2G의 특정 프로세스(즉 b2g, plugin-container)로부터의 core dump를 원한다면, 다음 명령으로 enable 할 수도 있습니다:</p>
+
+<pre>$ adb shell setprop persist.debug.coredump b2g
+$ adb reboot
+</pre>
+
+<p>Core 파일은 /data/core에 저장됩니다. b2g에 의해 생성된 core 파일은 다음과 같이 열 수 있습니다:</p>
+
+<pre>$ adb pull /data/core .
+$ ./run-gdb.sh core b2g.1286.1412337385.core
+</pre>
+
+<p>Content process의 core 파일은 다음과 같이 열 수 있습니다:</p>
+
+<pre>$ adb pull /data/core .
+$ ./run-gdb.sh core plugin-container Camera.1329.1412617644.core
+</pre>
+
+<h2 id="지원">지원</h2>
+
+<h3 id="기능의_기대_수준">기능의 기대 수준</h3>
+
+<p>다음 디버깅 기능들은 적어도 확실히 동작합니다. 만약 동작하지 않는다면 간단한 설정 변경으로 동작할 것입니다:</p>
+
+<ul>
+ <li>모든 라이브러리의 심볼 (특정 안드로이드 폰의 몇몇 드라이버 제외)</li>
+ <li>완벽한 디버깅 정보를 가진 backtrace (최적화된 인자의 값은 제외)</li>
+ <li>브레이크 포인트(Breakpoints): 심볼, 파일:줄번호 또는 주소에 break를 설정할 수 있어야 합니다. 모두 동작해야 합니다.</li>
+ <li>한 단계씩 진행 ('s'와 'n' 둘 다 동작합니다)</li>
+</ul>
+
+<p>다음 디버깅 기능은 지원하지 않습니다. 사용하지 마시기 바랍니다.</p>
+
+<ul>
+ <li>Watchpoints.</li>
+</ul>
+
+<h3 id="문제_해결">문제 해결</h3>
+
+<p>위에 언급된 것처럼 GDB가 동작하지 않을 때 해볼 수 있는 몇 가지가 있습니다.</p>
+
+<h4 id="B2G_clone이_최신인지_확인">B2G clone이 최신인지 확인</h4>
+
+<p>B2G clone을 업데이트 하려면 아래 두 개의 명령을 실행해야 한다는 것을 항상 명심하시기 바랍니다:</p>
+
+<pre>git pull
+./repo sync</pre>
+
+<p><code>위에서 git pull</code>을 잊는 경우가 이전 <code>run-gdb.sh로 남아있거나 최신 개선사항의 잇점을 얻지 못하는 전형적인 요인입니다.</code></p>
+
+<h4 id="올바른_프로세스를_attach_하고_있는지_확인">올바른 프로세스를 attach 하고 있는지 확인</h4>
+
+<p>잘못된 프로세스를 attach 하는 것(예를 들면 B2G 프로세스 대 Browser 프로세스)은 여러분의 breakpoint가 왜 동작하지 않고 있는지를 설명해 줄겁니다.</p>
+
+<h4 id="Symbol이_올바르게_로드_되었는지_확인">Symbol이 올바르게 로드 되었는지 확인</h4>
+
+<ol>
+ <li>Symbol이 올바르게 로드 되었는지 확인하려면 <code>gdb</code>에서 <code>info shared</code>를 사용해 보세요:
+
+  <pre>(gdb) info shared
+From        To          Syms Read   Shared Object Library
+0xb0001000  0xb0006928  Yes         out/target/product/otoro/symbols/system/bin/linker
+0x40051100  0x4007ed74  Yes         /hack/b2g/B2G/out/target/product/otoro/symbols/system/lib/libc.so
+0x401ab934  0x401aba2c  Yes         /hack/b2g/B2G/out/target/product/otoro/symbols/system/lib/libstdc++.so
+...</pre>
+ </li>
+ <li><code>Syms Read</code> 컬럼이 모두 <code>Yes</code>이어야 합니다. 어떤 안드로이드 폰에서는 몇몇 시스템 라이브러리와 드라이버가 <code>Yes (*)</code>로 나타날 수 있습니다; 그건 괜찮습니다. <code>No가 보이면 안됩니다.</code></li>
+ <li>만약 <code>No가 보인다면</code>, 그게 첫 번째 문제이고 다른 걸 보기전에 그 문제부터 해결해야 합니다.</li>
+ <li><code>run-gdb.sh</code> 명령을 친 후 바로 나타나는 터미널의 출력에 에러 메시지가 있는지 찾아보시기 바랍니다.</li>
+ <li>또한 GDB 명령이 올바른지 터미널 출력을 확인해 보시기 바랍니다. 특히 명령줄의 마지막 인자는 b2g 실행파일의 경로가 되어야 합니다. 아래 올바른 예제가 있습니다:
+  <pre>prebuilt/linux-x86/toolchain/arm-linux-androideabi-4.4.x/bin/arm-linux-androideabi-gdb -x /tmp/b2g.gdbinit.bjacob /hack/b2g/B2G/objdir-gecko/dist/bin/b2g</pre>
+ </li>
+ <li>다음 GDB 변수들을 확인해 보시기 바랍니다: <code>solib-search-path</code> 와 <code>solib-absolute-prefix:</code>
+  <pre>(gdb) show solib-search-path
+The search path for loading non-absolute shared library symbol files is /hack/b2g/B2G/objdir-gecko/dist/bin:out/target/product/otoro/symbols/system/lib:out/target/product/otoro/symbols/system/lib/hw:out/target/product/otoro/symbols/system/lib/egl:out/target/product/otoro/symbols/system/bin:out/target/product/otoro/system/lib:out/target/product/otoro/system/lib/egl:out/target/product/otoro/system/lib/hw:out/target/product/otoro/system/vendor/lib:out/target/product/otoro/system/vendor/lib/hw:out/target/product/otoro/system/vendor/lib/egl.
+(gdb) show solib-absolute-prefix
+The current system root is "out/target/product/otoro/symbols".</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: 만일 도움이 더 필요하시면 #b2g IRC 채널로 오시기 바랍니다. 버그를 찾은 것 같다면 <a href="https://github.com/mozilla-b2g/B2G/issues" title="https://github.com/mozilla-b2g/B2G/issues">B2G issue tracker</a>로 알려주시기 바랍니다.</p>
+</div>
+
+<p> </p>

@@ -1,0 +1,279 @@
+---
+title: Localization
+slug: Mozilla/Tech/XUL/XUL_Tutorial/Localization
+tags:
+  - Localization
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Localization
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Creating_a_Skin" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Property_Files">다음  »</a></p>
+</div><p></p>
+<p>XUL과 XML은 지역화를 허락하는 편리한 방법인 엔티티(entity)를 제공합니다.</p>
+<h3 id=".EC.97.94.ED.8B.B0.ED.8B.B0" name=".EC.97.94.ED.8B.B0.ED.8B.B0">엔티티</h3>
+<p>많은 응용프로그램은 될 수 있는 대로 인터페이스를 다른 언어로 옮기기 간단하게 만듭니다. 보통은, 각 언어를 위해 문자열 표를 만듭니다. 응용프로그램에 직접 하드코딩한 텍스트 대신, 각 언어별 텍스트는 오직 문자열 표로 만든 참조입니다. <a href="ko/XML">XML</a>은 비슷한 목적으로 쓸 수 있는 엔티티를 제공합니다.</p>
+<p>여러분이 <a href="ko/HTML">HTML</a>를 써 봤다면 엔티티와는 벌써 친숙할 겁니다. 코드 <code>&amp;lt;</code>와 <code>&amp;gt;</code>는 텍스트에 less than(~보다 적은)과 greater than(~보다 큰) 기호로 놓고 쓸 수 있는 엔티티 예입니다. XML에는 사용자 정의 엔티티를 선언하게 하는 문법이 있습니다. 여러분은 엔티티가 그 값(하나로 이어진 텍스트일 수 있는)으로 치환되도록 사용자 정의 엔티티를 쓸 수 있습니다. 엔티티가 속성값을 포함하는 텍스트마다 쓰일 지도 모릅니다. 아래 예는 버튼에 쓰이는 엔티티를 실제로 보입니다.</p>
+<pre>&lt;button label="&amp;findLabel;"/&gt;
+</pre>
+<p>label에 나타날 텍스트는 엔티티 <code>&amp;findLabel;</code>의 값입니다. 파일은 지원하는 각 언어를 위한 엔티티 선언을 포함하여 만듭니다. 영어에서, <code>&amp;findLabel;</code> 엔티티는 아마도 "Find" 텍스트 값으로 선언될 겁니다.</p>
+<h3 id="DTD_.ED.8C.8C.EC.9D.BC" name="DTD_.ED.8C.8C.EC.9D.BC">DTD 파일</h3>
+<p>엔티티는 DTD (
+ <i>
+  문서 형 선언</i>
+ ) 파일에 선언합니다. 이 형의 파일은 보통 특정 XML 파일의 문법과 의미를 선언하는데 쓰지만 또한 엔티티 선언에 씁니다. Mozilla chrome 시스템에서, &lt;tt&gt;locales&lt;/tt&gt; 하위디렉토리에 있는 DTD 파일을 발견할 겁니다. 보통 XUL 파일당 DTD 파일(확장자가 &lt;tt&gt;.dtd&lt;/tt&gt;) 하나입니다.</p>
+<p>chome 디렉토리를 들여다보면, 당신 언어를 위한 압축(archive) 파일이 보입니다. (&lt;tt&gt;en-US.jar&lt;/tt&gt;는 영어 기본값입니다.) 여러 언어 locale 파일이 있을 지도 모릅니다. 예를 들어, 미국 영어(en-US)와 프랑스어(fr). 이 압축 파일 안에서, 각 창을 위한 지역화 텍스트를 담은 파일을 발견할 겁니다. 압축 파일의 구조는 <a href="ko/XUL_Tutorial/Creating_a_Skin">스킨</a>에 쓰는 디렉토리 구조와 매우 비슷합니다.</p>
+<p>압축 파일 안에, 엔티티를 선언한 DTD 파일을 둡니다. 대체로, 각 XUL 파일에 DTD 파일 하나이고 보통은 &lt;tt&gt;.dtd&lt;/tt&gt; 확장자를 빼면 같은 파일명입니다. 그래서 파일 찾기(find files) 대화상자는 findfile.dtd로 이름 붙인 파일이 필요합니다.</p>
+<p>설치하지 않은 chrome 파일을 위해서는, 그냥 XUL 파일과 같은 디렉토리에 DTD 파일을 둘 수 있습니다.</p>
+<div class="note">
+ <b>주의:</b> 아스키가 아닌 문자를 위해 DTD 파일을 UTF-8N으로 인코드해야 합니다.</div>
+<p>한 번 XUL에 DTD 파일을 만들면, XUL 파일에 쓰고 싶은 DTD 파일을 나타내는 줄이 XUL 파일에 필요합니다. 그렇지 않으면, 엔티티를 찾을 수 없을 거라는 에러가 발생합니다. 이를 위해, XUL 파일 위쪽쯤에 다음 꼴로 한 줄을 추가하세요.</p>
+<pre>&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;
+</pre>
+<p>이 줄은 나타낸 URL이 파일을 위한 DTD로 쓰임을 지정합니다. 이 경우에, 우리는 &lt;tt&gt;findfile.dtd&lt;/tt&gt; 파일을 쓰기 원한다고 선언했습니다. 이 줄은 보통 <code><code><a href="/ko/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 요소 바로 앞에 둡니다.</p>
+<h3 id=".EC.97.94.ED.8B.B0.ED.8B.B0_.EC.84.A0.EC.96.B8.ED.95.98.EA.B8.B0" name=".EC.97.94.ED.8B.B0.ED.8B.B0_.EC.84.A0.EC.96.B8.ED.95.98.EA.B8.B0">엔티티 선언하기</h3>
+<p>엔티티는 아래 보는 대로 간단한 문법을 써서 선언합니다.</p>
+<pre>&lt;!ENTITY findLabel "Find"&gt;
+</pre>
+<p>이 예는 이름이 <code>findLabel</code>이고 값이 "Find"인 엔티티를 만듭니다. 이는 텍스트 "&amp;findLabel;"가 XUL 파일에 나타날 때마다, 텍스트 "Find"로 바꿈을 뜻합니다. 엔티티 선언은 선언 끝에 끌리는(trailing) 빗금(/)이 없음을 유념하세요. 다른 언어를 위한 DTD 파일에서는, 그 언어를 위한 텍스트가 대신 쓰입니다.</p>
+<pre class="eval"><b>for Korean:</b>
+&lt;!ENTITY findLabel "찾기"&gt;
+</pre>
+<p>예를 들면, 다음 텍스트는</p>
+<pre>&lt;description value="&amp;findLabel;"/&gt;
+</pre>
+<p>아래처럼 옮깁니다.</p>
+<pre class="eval"><b>English version:</b>
+&lt;description value="Find"/&gt;
+
+<b>Korean version:</b>
+&lt;description value="찾기"/&gt;
+</pre>
+<p>여러분은 인터페이스에 쓸 라벨이나 텍스트 문자열을 위한 엔티티를 선언합니다. XUL 파일에 직접 표시할 텍스트가 전혀 없어도 좋습니다.</p>
+<p>텍스트 라벨를 위한 엔티티 사용 외에도, 엔티티를 다른 언어에서는 서로 다른 아무 값에 써도 좋습니다. 예를 들면, <a href="ko/XUL_Tutorial/Keyboard_Shortcuts">키보드 단축키</a></p>
+<pre class="eval"> <b>XUL</b>
+ &lt;menuitem label="&amp;undo.label;" accesskey="&amp;undo.key;"/&gt;
+ <b>DTD</b>
+ &lt;!ENTITY undo.label "Undo"&gt;
+ &lt;!ENTITY undo.key "u"&gt;
+</pre>
+<p>위 예는 엔티티 둘을 씁니다. 실행 취소 메뉴 항목 라벨에 하나 그리고 단축키를 위해 하나.</p>
+<p> </p>
+<div class="highlight">
+ <h3 id="Find_Files_.EC.98.88.EC.A0.9C_.EB.B0.94.EA.BE.B8.EA.B8.B0" name="Find_Files_.EC.98.88.EC.A0.9C_.EB.B0.94.EA.BE.B8.EA.B8.B0">Find Files 예제 바꾸기</h3>
+ <p>모든 텍스트 문자열을 위해 DTD 파일을 쓰도록 find files 대화상자를 수정하여 어떻게 이 모두를 함께 놓는지 살펴봅시다. 전체 XUL 파일은 빨간색으로 쓴 바뀐 부분과 함께 아래에 보입니다.</p>
+ <pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+
+<span class="highlightred">&lt;!DOCTYPE window SYSTEM "<a class="external" rel="freelink">chrome://findfile/locale/findfile.dtd</a>"&gt;</span>
+
+&lt;window
+  id="findfile-window"
+  title="<span class="highlightred">&amp;findWindow.title;</span>"
+  persist="screenX screenY width height"
+  orient="horizontal"
+  onload="initSearchList()"
+  xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;script src="findfile.js"/&gt;
+
+&lt;popupset&gt;
+   &lt;popup id="editpopup"&gt;
+     &lt;menuitem label="Cut" accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="Copy" accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="Paste" accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" disabled="true"/&gt;
+   &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;keyset&gt;
+   &lt;key id="cut_cmd" modifiers="accel" key="<span class="highlightred">&amp;cutCmd.commandkey;</span>"/&gt;
+   &lt;key id="copy_cmd" modifiers="accel" key="<span class="highlightred">&amp;copyCmd.commandkey;</span>"/&gt;
+   &lt;key id="paste_cmd" modifiers="accel" key="<span class="highlightred">&amp;pasteCmd.commandkey;</span>"/&gt;
+   &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;
+
+&lt;vbox flex="1"&gt;
+
+ &lt;toolbox&gt;
+
+  &lt;menubar id="findfiles-menubar"&gt;
+    &lt;menu id="file-menu" label="<span class="highlightred">&amp;fileMenu.label;</span>"
+        accesskey="<span class="highlightred">&amp;fileMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;openCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;openCmd.accesskey;</span>"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;saveCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;saveCmd.accesskey;</span>"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;closeCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;closeCmd.accesskey;" key="close_cmd" oncommand="window.close();</span>"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="<span class="highlightred">&amp;editMenu.label;</span>"
+          accesskey="<span class="highlightred">&amp;editMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;cutCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>" key="cut_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;copyCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>" key="copy_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;pasteCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" key="paste_cmd" disabled="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+
+  &lt;toolbar id="findfiles-toolbar"&gt;
+    &lt;toolbarbutton id="opensearch" label="<span class="highlightred">&amp;openCmdToolbar.label;</span>"/&gt;
+    &lt;toolbarbutton id="savesearch" label="<span class="highlightred">&amp;saveCmdToolbar.label;</span>"/&gt;
+  &lt;/toolbar&gt;
+ &lt;/toolbox&gt;
+
+ &lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="<span class="highlightred">&amp;searchTab;</span>" selected="true"/&gt;
+    &lt;tab label="<span class="highlightred">&amp;optionsTab;</span>"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+
+   &lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;
+
+   &lt;description&gt;
+     <span class="highlightred">&amp;findDescription;</span>
+   &lt;/description&gt;
+
+   &lt;spacer class="titlespace"/&gt;
+
+   &lt;groupbox orient="horizontal"&gt;
+     &lt;caption label="<span class="highlightred">&amp;findCriteria;</span>"/&gt;
+
+     &lt;menulist id="searchtype"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.name;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.size;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.date;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+     &lt;menulist id="searchmode"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.is;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.isnot;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+
+   &lt;menulist id="find-text" flex="1"
+             editable="true"
+             datasources="<a class="external" rel="freelink">file:///mozilla/recents.rdf</a>"
+             ref="<span class="nowiki">http://www.xulplanet.com/rdf/recent/all</span>"&gt;
+     &lt;template&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="nowiki">rdf:http://www.xulplanet.com/rdf/recent#Label</span>" uri="rdf:*"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/template&gt;
+   &lt;/menulist&gt;
+
+   &lt;/groupbox&gt;
+
+  &lt;/tabpanel&gt;
+
+  &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+     &lt;checkbox id="casecheck" label="<span class="highlightred">&amp;casesensitive;</span>"/&gt;
+     &lt;checkbox id="wordscheck" label="<span class="highlightred">&amp;matchfilename;</span>"/&gt;
+    &lt;/tabpanel&gt;
+
+  &lt;/tabpanels&gt;
+ &lt;/tabbox&gt;
+
+ &lt;tree id="results" style="display: none;" flex="1"&gt;
+   &lt;treecols&gt;
+     &lt;treecol id="name" label="<span class="highlightred">&amp;results.filename;</span>" flex="1"/&gt;
+     &lt;treecol id="location" label="<span class="highlightred">&amp;results.location;</span>" flex="2"/&gt;
+     &lt;treecol id="size" label="<span class="highlightred">&amp;results.size;</span>" flex="1"/&gt;
+   &lt;/treecols&gt;
+
+   &lt;treechildren&gt;
+     &lt;treeitem&gt;
+       &lt;treerow&gt;
+         &lt;treecell label="mozilla"/&gt;
+         &lt;treecell label="/usr/local"/&gt;
+         &lt;treecell label="<span class="highlightred">&amp;bytes.before;</span>2520<span class="highlightred">&amp;bytes.after;</span>"/&gt;
+       &lt;/treerow&gt;
+     &lt;/treeitem&gt;
+   &lt;/treechildren&gt;
+ &lt;/tree&gt;
+
+ &lt;splitter id="splitbar" resizeafter="grow" style="display: none;"/&gt;
+
+ &lt;spacer class="titlespace"/&gt;
+
+ &lt;hbox&gt;
+   &lt;progressmeter id="progmeter" value="50%" style="display: none;"/&gt;
+   &lt;spacer flex="1"/&gt;
+   &lt;button id="find-button" label="<span class="highlightred">&amp;button.find;</span>"
+           oncommand="doFind()"/&gt;
+   &lt;button id="cancel-button" label="<span class="highlightred">&amp;button.cancel;</span>"
+           oncommand="window.close();"/&gt;
+ &lt;/hbox&gt;
+&lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+ <p>각 텍스트 문자열은 엔티티 참조로 바뀝니다. DTD 파일은 XUL 파일의 시작 부분쯤에 포함됩니다. 추가될 각 엔티티는 DTD 파일에 선언하면 좋습니다. 창은 XUL 파일에서 찾은 엔티티가 선언되지 않았으면 표시되지 않습니다.</p>
+ <p>엔티티 이름은 중요하지 않음을 유념하세요. 위 예제에서, 엔티티에 쓰인 단어는 마침표로 구분됐습니다. 여러분은 이렇게 하지 않아도 됩니다. 여기 엔티티 이름은 Mozilla 코드 나머지와 비슷한 관례(convention)를 따릅니다.</p>
+ <p>여러분이 텍스트 '2520 bytes'는 두 엔티티로 바뀌었음에 알아챌지도 모릅니다. 이는 구(phrase) 구조가 딴 locale에서 다를 지도 모르기 때문입니다. 예를 들면, 숫자는 대응하는 'bytes' 뒤 말고 앞에 나올 필요가 있을지도 모릅니다. 물론, 이는 필요에 따라 KB나 MB 표시를 위해 더 복잡할 지도 모릅니다.</p>
+ <p>단축키(access key와 keyboard shortcut)도 아마 딴 locale에서 다를 지도 모르기 때문에 또한 엔티티로 번역됩니다.</p>
+ <p>다음은, DTD 파일(findfile.dtd)입니다.</p>
+ <pre>&lt;!ENTITY findWindow.title "Find Files"&gt;
+&lt;!ENTITY fileMenu.label "File"&gt;
+&lt;!ENTITY editMenu.label "Edit"&gt;
+&lt;!ENTITY fileMenu.accesskey "f"&gt;
+&lt;!ENTITY editMenu.accesskey "e"&gt;
+&lt;!ENTITY openCmd.label "Open Search..."&gt;
+&lt;!ENTITY saveCmd.label "Save Search..."&gt;
+&lt;!ENTITY closeCmd.label "Close"&gt;
+&lt;!ENTITY openCmd.accesskey "o"&gt;
+&lt;!ENTITY saveCmd.accesskey "s"&gt;
+&lt;!ENTITY closeCmd.accesskey "c"&gt;
+&lt;!ENTITY cutCmd.label "Cut"&gt;
+&lt;!ENTITY copyCmd.label "Copy"&gt;
+&lt;!ENTITY pasteCmd.label "Paste"&gt;
+&lt;!ENTITY cutCmd.accesskey "t"&gt;
+&lt;!ENTITY copyCmd.accesskey "c"&gt;
+&lt;!ENTITY pasteCmd.accesskey "p"&gt;
+&lt;!ENTITY cutCmd.commandkey "X"&gt;
+&lt;!ENTITY copyCmd.commandkey "C"&gt;
+&lt;!ENTITY pasteCmd.commandkey "V"&gt;
+&lt;!ENTITY openCmdToolbar.label "Open"&gt;
+&lt;!ENTITY saveCmdToolbar.label "Save"&gt;
+&lt;!ENTITY searchTab "Search"&gt;
+&lt;!ENTITY optionsTab "Options"&gt;
+&lt;!ENTITY findDescription "Enter your search criteria below and select the Find button to begin the search."&gt;
+&lt;!ENTITY findCriteria "Search Criteria"&gt;
+&lt;!ENTITY type.name "Name"&gt;
+&lt;!ENTITY type.size "Size"&gt;
+&lt;!ENTITY type.date "Date Modified"&gt;
+&lt;!ENTITY mode.is "Is"&gt;
+&lt;!ENTITY mode.isnot "Is Not"&gt;
+&lt;!ENTITY casesensitive "Case Sensitive Search"&gt;
+&lt;!ENTITY matchfilename "Match Entire Filename"&gt;
+&lt;!ENTITY results.filename "Filename"&gt;
+&lt;!ENTITY results.location "Location"&gt;
+&lt;!ENTITY results.size "Size"&gt;
+&lt;!ENTITY bytes.before ""&gt;
+&lt;!ENTITY bytes.after "bytes"&gt;
+&lt;!ENTITY button.find "Find"&gt;
+&lt;!ENTITY button.cancel "Cancel"&gt;
+</pre>
+ <p>이제, 새 언어를 위한 텍스트를 추가하기 위해 필요한 모든 것은 다른 DTD 파일을 만드는 겁니다. 딴 locale에 DTD 파일을 추가하기 위해 chrome 시스템을 써서, 같은 XUL 파일을 다른 언어에 쓸 수 있습니다.</p>
+ <p>지금까지 Find files 예제: <a href="https://developer.mozilla.org/samples/xultu/examples//findfile/findfile-locale.xul.txt">Source</a></p>
+</div>
+<p><br>
+ 다음은, <a href="ko/XUL_Tutorial/Property_Files">프로퍼티 파일</a>을 보겠습니다.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ko/docs/XUL_Tutorial:Creating_a_Skin" style="float: left;">« 이전</a><a href="/ko/docs/XUL_Tutorial:Property_Files">다음  »</a></p>
+</div><p></p>
+<p></p>

@@ -1,0 +1,167 @@
+---
+title: Setting up an extension development environment
+slug: Mozilla/Add-ons/Setting_up_extension_development_environment
+translation_of: Archive/Add-ons/Setting_up_extension_development_environment
+---
+<p>This article gives suggestions on how to set up your Mozilla application for extension development. Unless otherwise specified, these suggestions apply to both Firefox and Thunderbird as well as SeaMonkey version 2.0 and above.</p>
+
+<h3 id="Overview">Overview</h3>
+
+<ul>
+ <li>Create a development <a href="#Development_profile">user profile</a> to run your development firefox session; with special <a href="#Development_preferences">development preferences</a> in <code>about:config</code>.</li>
+ <li>Install some Firefox <a href="#Development_extensions">development extensions</a> to your dev profile.</li>
+ <li>Edit files in the extensions folder of your profile and restart the application with the dev profile.</li>
+</ul>
+
+<h3 id="Development_profile">Development profile</h3>
+
+<p>To avoid performance degradation from development-related prefs and extensions, and to avoid losing your personal data, you can use a separate profile for development work.</p>
+
+<p>You can run two instances of Thunderbird or Firefox at the same time by using separate profiles and starting the application with parameters <code>-no-remote</code> and <code>-P ProfileName</code>. For example, the following command will start Firefox with a profile called "dev" whether an instance of Firefox is already running or not. (If there is no "dev" user yet, you'll get the profile selection screen instead, where you can create one.)</p>
+
+<p>On Ubuntu (and many other Linux distributions):</p>
+
+<pre>/usr/bin/firefox -no-remote -P dev</pre>
+
+<p>On some other distributions of Linux/Unix:</p>
+
+<pre>/usr/local/bin/firefox -no-remote -P dev
+</pre>
+
+<p>On Mac OS Snow Leopard (10.6) and newer:</p>
+
+<pre class="eval">/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev &amp;
+</pre>
+
+<p>On Mac OS Leopard (10.5) and older, you must request the 32-bit portion of the Universal Binary (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=622970" title="https://bugzilla.mozilla.org/show_bug.cgi?id=622970">https://bugzilla.mozilla.org/show_bug.cgi?id=622970</a>):</p>
+
+<pre class="eval">arch -arch i386 /Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev &amp;
+</pre>
+
+<p>On Windows:</p>
+
+<pre class="eval">Start -&gt; Run "%ProgramFiles%\Mozilla Firefox\firefox.exe" -no-remote -P dev
+</pre>
+
+<p>On Windows 64 bit:</p>
+
+<pre class="eval">Start -&gt; Run "%ProgramFiles(x86)%\Mozilla Firefox\firefox.exe" -no-remote -P dev</pre>
+
+<p>To start Thunderbird or SeaMonkey instead of Firefox, substitute "thunderbird" or "seamonkey" for "firefox" in the examples above.</p>
+
+<p>Note that you can run Firefox using your regular profile while developing.</p>
+
+<p>Parameter <code>-P ProfileName</code> doesn't imply <code>-no-remote</code>, therefore use them together. Otherwise, if you already run a Firefox instance without <code>-no-remote</code>, and you attempt to start another instance with <code>-P ProfileName</code> but again without <code>-no-remote</code>, that second invocation would ignore its <code>-P ProfileName</code> parameter, but instead it would open a new blank window for the already running instance (sharing its profile, sessions etc.).</p>
+
+<p><span style="line-height: 1.5;">(There is a thread in the </span><a class="external" href="http://forums.mozillazine.org/" style="line-height: 1.5;" title="http://forums.mozillazine.org/">Mozillazine forums</a><span style="line-height: 1.5;"> that explains how to use both stable and development versions of Firefox to check extension compatibility. See </span><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=613873" style="line-height: 1.5;">Installing Firefox 3 or Minefield while keeping Firefox 2</a><span style="line-height: 1.5;">.)</span></p>
+
+<h3 id="Development_command_flags">Development command flags</h3>
+
+<p>As of Gecko 2 (Firefox 4), JavaScript files are cached ("fastload"). The <code>-purgecaches</code> command-line flag disables this behavior. Alternatively, you can set the MOZ_PURGE_CACHES environment variable. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=531886" title="https://bugzilla.mozilla.org/show_bug.cgi?id=531886">this bug</a> for more information.</p>
+
+<h3 id="Development_preferences">Development preferences</h3>
+
+<p><span style="line-height: 1.5;">There is a set of development preferences that, when enabled, allows you to view more information about application activity, thus making debugging easier. However,  these preferences can degrade performance, so you may want to use a separate development profile when you enable these preferences.</span></p>
+
+<h4 id="Accessing_Firefox_development_preferences">Accessing Firefox development preferences</h4>
+
+<p>To change preference settings in Firefox or SeaMonkey, type <code style="font-size: 14px;">about:config </code>in the Location Bar. You can also use the <a class="external" href="http://addons.mozilla.org/en-US/firefox/addon/7434/" title="http://addons.mozilla.org/en-US/firefox/addon/7434/">Extension Developer's Extension</a>, which provides a menu interface for Firefox settings. Alternatively, install <span style="line-height: 1.5;">the</span><span style="line-height: 1.5;"> </span><a href="https://addons.mozilla.org/en-US/firefox/addon/developer-profile/" style="line-height: 1.5;" title="https://addons.mozilla.org/en-US/firefox/addon/developer-profile/">Developer Profile</a><span style="line-height: 1.5;"> to set the preferences listed below and skip the rest of this section.</span></p>
+
+<h4 id="Accessing_Thunderbird_development_preferences">Accessing Thunderbird development preferences</h4>
+
+<p>To change preference settings in Thunderbird, open the "Preferences" (Unix) or "Options" (Windows) interface. On the "Advanced" page, select the "General" tab then click the "Config Editor" button.</p>
+
+<h4 id="Recommended_development_preferences">Recommended development preferences</h4>
+
+<p><span style="line-height: 1.5;">Not all preferences are defined by default, and are therefore not listed</span><span style="line-height: 1.5;"> by default. You will have to create new (boolean) entries for them. </span><span style="line-height: 1.5;">For more information about Mozilla preferences, refer to the mozillaZine article on "</span><a class="external" href="http://kb.mozillazine.org/About:config" style="line-height: 1.5;" title="http://kb.mozillazine.org/About:config">about:config</a><span style="line-height: 1.5;">". (Tip: Download addon <a href="https://addons.mozilla.org/en-US/firefox/addon/devprefs/">DevPrefs</a>, it will automatically handle this)</span></p>
+
+<ul>
+ <li><strong>javascript.options.showInConsole</strong> = <strong>true</strong>. Logs errors in chrome files to the <a href="/en/Error_Console" title="en/Error_Console">Error Console</a>.</li>
+ <li><strong>nglayout.debug.disable_xul_cache</strong> = <strong>true</strong>. Disables the XUL cache so that changes to windows and dialogs do not require a restart. This assumes you're <a href="#Using_directories_rather_than_JARs">using directories rather than JARs</a>. Changes to XUL overlays will still require reloading of the document overlaid.</li>
+ <li><strong>browser.dom.window.dump.enabled</strong> = <strong>true</strong>. Enables the use of the <span style="font-family: Courier New;">dump()</span> statement to print to the standard console. See <span style="font-family: Courier New;">{{ Domxref("window.dump") }}</span> for more info. You can use <span style="font-family: Courier New;">{{ Interface("nsIConsoleService") }}</span> instead of <code>dump()</code> from a privileged script.</li>
+ <li><strong>javascript.options.strict</strong> = <strong>true</strong>. Enables strict JavaScript warnings in the Error Console. Note that since many people have this setting turned off when developing, you will see lots of warnings for problems with their code in addition to warnings for your own extension. You can filter those with <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1815">Console<sup>2</sup></a>.</li>
+ <li><strong>devtools.chrome.enabled = true.</strong> This enables to run JavaScript code snippets in the chrome context of the Scratchpad from the Tools menu. Don't forget to switch from content to browser as context.</li>
+ <li><strong>devtools.debugger.remote-enabled = true.</strong> This adds a "Browser Debugger" entry to the "Web Developer" submenu of the "Tools" menu.  The <a href="/en/Tools/Debugger" title="/en/Tools/Debugger">Browser Debugger</a> can be used to debug the JavaScript code of extensions. The {{pref("devtools.chrome.enabled")}} preference must also be set to true for the Browser Debugger to be enabled.</li>
+ <li><strong>extensions.logging.enabled</strong> = <strong>true</strong>. This will send more detailed information about installation and update problems to the <a href="/en/Error_Console" title="en/Error Console">Error Console</a>. (Note that the extension manager automatically restarts the application at startup sometimes, which may mean you won't have time to see the messages logged before the automatic restart happens. To see them, prevent the automatic restart by setting the environment NO_EM_RESTART to 1 before starting the application.)</li>
+ <li><strong>nglayout.debug.disable_xul_fastload = true</strong>. For Gecko 2.0+ (Firefox 4.0+). See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=531886" title="https://bugzilla.mozilla.org/show_bug.cgi?id=531886">this bug</a> for more information. Although the bug has been closed, it is believed that this pref is still relevant.</li>
+ <li>You might also want to set <strong>dom.report_all_js_exceptions = true</strong>. See <a class="internal" href="/en/Exception_logging_in_JavaScript" title="en/Exception logging in JavaScript">Exception logging in JavaScript</a> for details.</li>
+ <li><strong>devtools.errorconsole.deprecation_warnings = true</strong>. Detect deprecated code use.</li>
+</ul>
+
+<p></p><div class="warning"><strong>Never</strong> set {{pref("nglayout.debug.disable_xul_fastload")}} to true in a production environment; it exists solely to aid in debugging. In particular, add-ons should never change this preference.</div>.<p></p>
+
+<div class="note">
+<p><strong>Note:</strong>The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the <code>devtools.errorconsole.enabled</code> preference to <code>true</code> and restarting the browser. With this, <code>javascript.options.showInConsole</code> is also set to <code>true</code> by default.</p>
+</div>
+
+<div class="note">
+<p><strong>Tip:</strong> Download the addon <a href="https://addons.mozilla.org/en-US/firefox/addon/devprefs/">DevPrefs </a>from AMO to automatically configure the preferences.</p>
+</div>
+
+<h4 id="Development_extensions"><span style="font-size: 1.428em; letter-spacing: -0.5px; line-height: 20px;">Development extensions</span></h4>
+
+<p>These extensions may help you with your development.</p>
+
+<ul>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6622">DOM Inspector</a>, used to inspect and edit the live DOM of any web document or XUL application (Firefox and Thunderbird)</li>
+ <li><a class="external" href="http://www.hacksrus.com/%7Eginda/venkman/">Venkman</a>, a JavaScript Debugger (<a class="external" href="http://addons.mozilla.org/en-US/firefox/addon/216" title="http://addons.mozilla.org/en-US/firefox/addon/216">Firefox version</a>, <a class="external" href="http://addons.mozilla.org/en-US/thunderbird/addon/216" title="http://addons.mozilla.org/en-US/thunderbird/addon/216">Thunderbird version</a>)</li>
+ <li><a href="http://kewisch.wordpress.com/2013/09/22/thunderbird-developer-tools-wrapup/">Thunderbird Developer Tools</a>, enables debugging Thunderbird remotely using using Firefox developer tools</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/7434/">Extension Developer's Extension</a> a suite of tools for extension development (Firefox)</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/extension-test/">Extension Test</a> an add-on which makes it easier to detect problems which will lead to rejection by addons.mozilla.org</li>
+ <li><a class="external" href="http://console2.mozdev.org/">Console²</a> enhanced JavaScript console (<a class="external" href="http://addons.mozilla.org/en-US/firefox/addon/1815" title="http://addons.mozilla.org/en-US/firefox/addon/1815">Firefox version</a>, <a class="external" href="http://addons.mozilla.org/en-US/thunderbird/addon/1815" title="http://addons.mozilla.org/en-US/thunderbird/addon/1815">Thunderbird version</a>)</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/firefox/addon/5058">Javascript Command</a> for writing/testing javascript on Firefox windows</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/firefox/addon/5058">Inspect Context</a> Open <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6622">DOM Inspector</a> at this node from Inspect on context menu.</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/4453/">Chrome List</a> navigate and view files in chrome:// (<a class="external" href="http://addons.mozilla.org/en-US/firefox/addon/4453" title="http://addons.mozilla.org/en-US/firefox/addon/4453">Firefox version</a>, <a class="external" href="http://addons.mozilla.org/en-US/thunderbird/addon/4453" title="http://addons.mozilla.org/en-US/thunderbird/addon/4453">Thunderbird version</a>)</li>
+ <li><a class="external" href="http://webdesigns.ms11.net/chromeditp.html">Chrome Edit Plus</a> a user file editor (Firefox and Thunderbird)</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/developers/tools/builder">Add-on Builder</a> a web-based application that generates an extension skeleton (Firefox, Thunderbird, and others)</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/firefox/addon/1843">Firebug</a> a variety of development tools (Firefox)</li>
+ <li><a class="external" href="http://dactyl.sf.net/pentadactyl/">Pentadactyl</a>, a general purpose extension with builtin tools for extension development, including a command line with chrome JavaScript evaluation (including property and function argument completion) and the ability to demand-load external JavaScript and CSS files into window chrome.</li>
+ <li><a class="external" href="http://getfirebug.com/releases/chromebug/">Chromebug</a> combines elements of a JavaScript debugger and DOM (Firefox, "kinda works for Thunderbird")</li>
+ <li><a class="link-https" href="https://github.com/bard/mozrepl/wiki">MozRepl</a> explore and modify Firefox and other Mozilla apps while they run (Firefox, Thunderbird version is <a href="https://github.com/bard/mozrepl/issues/47">not working</a>)</li>
+ <li><a class="external" href="http://www.mouseless.de/index.php?/content/view/18/31/">ExecuteJS</a> an enhanced JavaScript console (<a class="link-https" href="https://addons.mozilla.org/firefox/addon/1729">Firefox version</a>, <a class="external" href="http://xsidebar.mozdev.org/modifiedmisc.html#executejs">Thunderbird version</a> is <a href="https://code.google.com/p/executejs/issues/detail?id=6">not working</a>)</li>
+ <li><a class="external" href="http://xpcomviewer.mozdev.org">XPCOMViewer</a> an XPCOM inspector (Firefox and Thunderbird)</li>
+ <li><a class="internal" href="/en/JavaScript/Shells" title="En/JavaScript shells">JavaScript shells</a> to test snippets of JavaScript (Firefox and Thunderbird)</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5817">SQLite Manager</a> to manage the SQLite database (Firefox and Thunderbird)</li>
+ <li><a class="external" href="http://www.rumblingedge.com/viewabout/">ViewAbout</a> enables access to various about: dialogs from the View menu (<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/9695">Firefox version</a>, <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/9695">Thunderbird version</a> )</li>
+ <li><a class="external" href="http://code.google.com/p/crashme/">Crash Me Now!</a> useful for testing debug symbols and the crash reporting system (Firefox and Thunderbird)</li>
+ <li><a href="https://addons.mozilla.org/en-US/firefox/addon/javascript-object-examiner/" title="https://addons.mozilla.org/en-US/firefox/addon/javascript-object-examiner/">Javascript Object Examiner</a> displays JavaScript object methods and properties for any available scope</li>
+ <li><a href="https://addons.mozilla.org/en-US/firefox/addon/developer-profile/" title="https://addons.mozilla.org/en-US/firefox/addon/developer-profile/">Developer Profile</a> sets up the development environment described above when installed (Firefox and Fennec)</li>
+</ul>
+
+<h3 id="Firefox_extension_proxy_file">Firefox extension proxy file</h3>
+
+<p>Extension files are normally installed in the user profile. However, it is usually easier to place extension files in a temporary location, which also protects source files from accidental deletion. This section explains how to create a proxy file that points to an extension that is installed in a location other than the user profile.</p>
+
+<ol>
+ <li>Get the extension ID from the extension's install.rdf file.</li>
+ <li>Create a file in the "<code>extensions</code>" directory under your profile directory with the extension's ID as the file name (for example "<code>your_profile_directory/extensions/{46D1B3C0-DB7A-4b1a-863A-6EE6F77ECB58}</code>"). (<a class="external" href="http://kb.mozillazine.org/Profile_folder">How to find your profile directory</a>) Alternatively, rather than using a GUID, create a unique ID using the format "name@yourdomain" (for example <span class="nowiki"><code>chromebug@mydomain.com</code></span>) - then the proxy filename will be same as that ID, with no curly brackets {}.</li>
+ <li>
+  <p>The contents of this file should be the path to the directory that contains your install.rdf file, for example <code><span class="nowiki">/full/path/to/yourExtension/</span></code> on Mac and Linux, and <code><span class="nowiki">C:\full\path\to\yourExtension\</span></code> on Windows. Remember to include the closing slash and remove any trailing whitespace.</p>
+
+  <ul>
+   <li>Note: If you already installed the extension via XPI, you should uninstall it first before creating the pointer file.</li>
+   <li>Also note that the use of proxy files requires that the extension's chrome.manifest defines its chrome urls using traditional directories, rather than a JARed structure. See below.</li>
+  </ul>
+ </li>
+ <li>Place the file in the extensions folder of your profile and restart the application.</li>
+</ol>
+
+<h3 id="Using_directories_rather_than_JARs">Using directories rather than JARs</h3>
+
+<p>Regardless of whether you choose to eventually package your extension's chrome in a JAR or in directories, developing in directories is simpler. If you choose a JARed structure for releasing, you can still develop with a directory structure by editing your chrome.manifest. For example, rather than having</p>
+
+<pre class="eval">content	myExtension	jar:chrome/myExtension.jar!/content/
+</pre>
+
+<p>use</p>
+
+<pre class="eval">content	myExtension	chrome/content/
+</pre>
+
+<p>{{ h1_gecko_minversion("Preventing the first launch extension selector", "8.0") }}</p>
+
+<p>Starting in Firefox 8, on the first launch of a new version of Firefox, it presents user interface letting users select which third party add-ons to keep. This lets them weed out add-ons that were installed without their knowledge, or that are no longer needed.</p>
+
+<p>However, this interface can be disruptive when debugging add-ons. You can avoid this by setting the preference <code>extensions.autoDisableScopes</code> to 14.</p>
+
+<p>{{ languages( { "de": "de/Einrichten_einer_Entwicklungsumgebung_für_Erweiterungen", "fr": "fr/Configuration_d'un_environnement_de_développement_d'extensions", "ja": "ja/Setting_up_extension_development_environment", "zh-cn": "cn/Setting_up_extension_development_environment", "pl": "pl/Przygotowanie_środowiska_programowania_rozszerzenia", "ru": "ru/Настройка_среды_разработки_расширений" } ) }}</p>

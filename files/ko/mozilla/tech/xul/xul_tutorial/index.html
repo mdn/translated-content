@@ -1,0 +1,132 @@
+---
+title: XUL Tutorial
+slug: Mozilla/Tech/XUL/XUL_Tutorial
+tags:
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial
+---
+<p>이 튜토리얼은 XML 유저 인터페이스 언어(XML User-Interface Language)인 XUL 을 설명합니다. 이 언어는 모질라 응용프로그램(Application)을 만드는데 사용되며 특히 유저 인터페이스를 기술하는데 사용됩니다.
+</p>
+<div class="note">
+<p>본 XUL 튜토리얼 한국어 번역본은 <a class="external" href="http://softwant.com/cgi-bin/kimsboard/bbs.php3?table=xul">김재용, 김고명</a>님에 의해 최초로 작성되었으며 그는 고맙게도 본 튜토리얼을 <a>MDC 한국 프로젝트</a>의 일부로 사용할 수 있도록 허락해 주었습니다. 두 분의 최초 한국 번역본은 XULPlanet의 Neil Deakin 허락하에 번역되었습니다.
+</p>
+</div>
+<h5 id=".EA.B0.9C.EC.9A.94" name=".EA.B0.9C.EC.9A.94"> 개요 </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Introduction">개요</a>
+</li><li> <a href="ko/XUL_Tutorial/XUL_Structure">XUL의 구조</a>
+</li><li> <a href="ko/XUL_Tutorial/The_Chrome_URL">The Chrome URL</a>
+</li><li> <a href="ko/XUL_Tutorial/Manifest_Files">Manifest Files</a>
+</li></ul>
+<h5 id=".EB.8B.A8.EC.88.9C_.EC.9A.94.EC.86.8C.EB.93.A4.28Simple_Elements.29" name=".EB.8B.A8.EC.88.9C_.EC.9A.94.EC.86.8C.EB.93.A4.28Simple_Elements.29"> 단순 요소들(Simple Elements) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Creating_a_Window">윈도우 만들기</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_Buttons">버튼 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_Labels_and_Images">레이블과 이미지 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Input_Controls">입력 컨트롤</a>
+</li><li> <a href="ko/XUL_Tutorial/List_Controls">리스트 컨트롤</a>
+</li><li> <a href="ko/XUL_Tutorial/Progress_Meters">진행 지시자(Progress Meters)</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_HTML_Elements">HTML 요소 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Using_Spacers">여백(Spacer) 사용하기</a>
+</li><li> <a href="ko/XUL_Tutorial/More_Button_Features">그외의 버튼 기능들</a>
+</li></ul>
+<h5 id=".EB.B0.95.EC.8A.A4_.EB.AA.A8.EB.8D.B8.28The_Box_Model.29" name=".EB.B0.95.EC.8A.A4_.EB.AA.A8.EB.8D.B8.28The_Box_Model.29"> 박스 모델(The Box Model) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/The_Box_Model">박스 모델</a>
+</li><li> <a href="ko/XUL_Tutorial/Element_Positioning">Element Positioning</a>
+</li><li> <a href="ko/XUL_Tutorial/Box_Model_Details">박스 모델의 세부항목</a>
+</li><li> <a href="ko/XUL_Tutorial/Groupboxes">그룹 박스(Groupboxes)</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_More_Elements">그외의 요소들 추가하기</a>
+</li></ul>
+<h5 id=".EB.8D.94.EC.9A.B1_.EB.8B.A4.EC.96.91.ED.95.9C_.EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83_.EC.9A.94.EC.86.8C.EB.93.A4.28More_Layout_Elements.29" name=".EB.8D.94.EC.9A.B1_.EB.8B.A4.EC.96.91.ED.95.9C_.EB.A0.88.EC.9D.B4.EC.95.84.EC.9B.83_.EC.9A.94.EC.86.8C.EB.93.A4.28More_Layout_Elements.29"> 더욱 다양한 레이아웃 요소들(More Layout Elements) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Stacks_and_Decks">스택과 덱(Stacks and Decks)</a>
+</li><li> <a href="ko/XUL_Tutorial/Stack_Positioning">스택 포지셔닝(Stack Positioning)</a>
+</li><li> <a href="ko/XUL_Tutorial/Tabboxes">탭박스(Tabboxes)</a>
+</li><li> <a href="ko/XUL_Tutorial/Grids">그리드(Grids)</a>
+</li><li> <a href="ko/XUL_Tutorial/Content_Panels">컨텐츠 패널(Content Panels)</a>
+</li><li> <a href="ko/XUL_Tutorial/Splitters">스플릿터(Splitters)</a>
+</li><li> <a href="ko/XUL_Tutorial/Scroll_Bars">스크롤바(Scroll Bars)</a>
+</li></ul>
+<h5 id=".ED.88.B4.EB.B0.94.EC.99.80_.EB.A9.94.EB.89.B4.28Toolbars_and_Menus.29" name=".ED.88.B4.EB.B0.94.EC.99.80_.EB.A9.94.EB.89.B4.28Toolbars_and_Menus.29"> 툴바와 메뉴(Toolbars and Menus) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Toolbars">툴바(Toolbars)</a>
+</li><li> <a href="ko/XUL_Tutorial/Simple_Menu_Bars">단순 메뉴바(Simple Menu Bars)</a>
+</li><li> <a href="ko/XUL_Tutorial/More_Menu_Features">다양한 메뉴 기능들</a>
+</li><li> <a href="ko/XUL_Tutorial/Popup_Menus">팝업 메뉴(Popup Menus)</a>
+</li><li> <a href="ko/XUL_Tutorial/Scrolling_Menus">스크롤링 메뉴(Scrolling Menus)</a>
+</li></ul>
+<h5 id=".EC.9D.B4.EB.B2.A4.ED.8A.B8.EC.99.80_.EC.8A.A4.ED.81.AC.EB.A6.BD.ED.8A.B8.28Events_and_Scripts.29" name=".EC.9D.B4.EB.B2.A4.ED.8A.B8.EC.99.80_.EC.8A.A4.ED.81.AC.EB.A6.BD.ED.8A.B8.28Events_and_Scripts.29"> 이벤트와 스크립트(Events and Scripts) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Adding_Event_Handlers">이벤트 핸들러 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/More_Event_Handlers">더욱 다양한 이벤트 핸들러</a>
+</li><li> <a href="ko/XUL_Tutorial/Keyboard_Shortcuts">단축키(Keyboard Shortcuts)</a>
+</li><li> <a href="ko/XUL_Tutorial/Focus_and_Selection">포커스(Forcus)와 선택(Selection)</a>
+</li><li> <a href="ko/XUL_Tutorial/Commands">Commands</a>
+</li><li> <a href="ko/XUL_Tutorial/Updating_Commands">Updating Commands</a>
+</li><li> <a href="ko/XUL_Tutorial/Broadcasters_and_Observers">Broadcasters and Observers</a>
+</li></ul>
+<h5 id=".EB.AC.B8.EC.84.9C_.EA.B0.9D.EC.B2.B4_.EB.AA.A8.EB.8D.B8.28Document_Object_Model.29" name=".EB.AC.B8.EC.84.9C_.EA.B0.9D.EC.B2.B4_.EB.AA.A8.EB.8D.B8.28Document_Object_Model.29"> 문서 객체 모델(Document Object Model) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Document_Object_Model">문서 객체 모델(Document Object Model)</a>
+</li><li> <a href="ko/XUL_Tutorial/Modifying_a_XUL_Interface">XUL 인터페이스 수정하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Manipulating_Lists">리스트 다루기</a>
+</li><li> <a href="ko/XUL_Tutorial/Box_Objects">박스 객체(Box Objects)</a>
+</li><li> <a href="ko/XUL_Tutorial/XPCOM_Interfaces">XPCOM 인터페이스</a>
+</li><li> <a href="ko/XUL_Tutorial/XPCOM_Examples">XPCOM 예제</a>
+</li></ul>
+<h5 id=".ED.8A.B8.EB.A6.AC.28Trees.29" name=".ED.8A.B8.EB.A6.AC.28Trees.29"> 트리(Trees) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Trees">트리(Trees)</a>
+</li><li> <a href="ko/XUL_Tutorial/More_Tree_Features">더욱 많은 트리기능들</a>
+</li><li> <a href="ko/XUL_Tutorial/Tree_Selection">Tree Selection</a>
+</li><li> <a href="ko/XUL_Tutorial/Custom_Tree_Views">사용자 트리뷰(Custom Tree Views)</a>
+</li><li> <a href="ko/XUL_Tutorial/Tree_View_Details">트리뷰의 세부사항</a>
+</li><li> <a href="ko/XUL_Tutorial/Tree_Box_Objects">트리 박스 객체(Tree Box Objects)</a>
+</li></ul>
+<h5 id="RDF_.EC.99.80_.ED.85.9C.ED.94.8C.EB.A6.BF.28Templates.29" name="RDF_.EC.99.80_.ED.85.9C.ED.94.8C.EB.A6.BF.28Templates.29"> RDF 와 템플릿(Templates) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Introduction_to_RDF">RFD의 개요</a>
+</li><li> <a href="ko/XUL_Tutorial/Templates">템플릿(Templates)</a>
+</li><li> <a href="ko/XUL_Tutorial/Trees_and_Templates">트리와 템플릿(Trees and Templates)</a>
+</li><li> <a href="ko/XUL_Tutorial/RDF_Datasources">RDF 데이터소스(RDF Datasources)</a>
+</li><li> <a href="ko/XUL_Tutorial/Advanced_Rules">고급 규칙(Advanced Rules)</a>
+</li><li> <a href="ko/XUL_Tutorial/Persistent_Data">영속 데이터(Persistent Data)</a>
+</li></ul>
+<h5 id=".EC.8A.A4.ED.82.A8.EA.B3.BC_.EC.A7.80.EC.97.AD.ED.99.94.28Skins_and_Locales.29" name=".EC.8A.A4.ED.82.A8.EA.B3.BC_.EC.A7.80.EC.97.AD.ED.99.94.28Skins_and_Locales.29"> 스킨과 지역화(Skins and Locales) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Adding_Style_Sheets">스타일 시트 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Styling_a_Tree">트리 꾸미기</a>
+</li><li> <a href="ko/XUL_Tutorial/Modifying_the_Default_Skin">기본 스킨 고치기</a>
+</li><li> <a href="ko/XUL_Tutorial/Creating_a_Skin">스킨 만들기</a>
+</li><li> <a href="ko/XUL_Tutorial/Localization">지역화</a>
+</li><li> <a href="ko/XUL_Tutorial/Property_Files">설정 파일</a>
+</li></ul>
+<h5 id="Bindings" name="Bindings"> Bindings </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Introduction_to_XBL">XBL의 개요</a>
+</li><li> <a href="ko/XUL_Tutorial/Anonymous_Content">익명 컨텐츠(Anonymous Content)</a>
+</li><li> <a href="ko/XUL_Tutorial/XBL_Attribute_Inheritance">XBL 속성 상속</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_Properties_to_XBL-defined_Elements">속성 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_Methods_to_XBL-defined_Elements">메소드 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements">이벤트 핸들러 추가하기</a>
+</li><li> <a href="ko/XUL_Tutorial/XBL_Inheritance">XBL 상속</a>
+</li><li> <a href="ko/XUL_Tutorial/XBL_Example">XBL 예제</a>
+</li></ul>
+<h5 id="Specialized_Window_Types" name="Specialized_Window_Types"> Specialized Window Types </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Features_of_a_Window">Features of a Window</a>
+</li><li> <a href="ko/XUL_Tutorial/Creating_Dialogs">다이얼로그 만들기</a>
+</li><li> <a href="ko/XUL_Tutorial/Open_and_Save_Dialogs">Open and Save Dialogs</a>
+</li><li> <a href="ko/XUL_Tutorial/Creating_a_Wizard">Creating a Wizard</a>
+</li><li> <a href="ko/XUL_Tutorial/More_Wizards">More Wizards</a>
+</li><li> <a href="ko/XUL_Tutorial/Overlays">Overlays</a>
+</li><li> <a href="ko/XUL_Tutorial/Cross_Package_Overlays">Cross Package Overlays</a>
+</li></ul>
+<h5 id=".EC.84.A4.EC.B9.98.28Installation.29" name=".EC.84.A4.EC.B9.98.28Installation.29"> 설치(Installation) </h5>
+<ul><li> <a href="ko/XUL_Tutorial/Creating_an_Installer">인스톨러 생성하기</a>
+</li><li> <a href="ko/XUL_Tutorial/Install_Scripts">설치 스크립트</a>
+</li><li> <a href="ko/XUL_Tutorial/Additional_Install_Features">추가적인 설치 기능들</a>
+</li></ul>
+<div class="note">
+<p>본 XUL 튜토리얼은 본래 <a class="external" href="http://www.xulplanet.com/ndeakin/">Neil Deakin</a>에 의해 작성되었으며 그는 고맙게도 본 튜토리얼을 <a>MDC</a>의 일부로 사용할 수 있도록 허락해 주었습니다.
+</p>
+</div>
+<div class="originaldocinfo">
+<h5 id=".EC.9B.90.EB.B3.B8_.EB.AC.B8.EC.84.9C_.EC.A0.95.EB.B3.B4" name=".EC.9B.90.EB.B3.B8_.EB.AC.B8.EC.84.9C_.EC.A0.95.EB.B3.B4"> 원본 문서 정보 </h5>
+<ul><li> 저자: <a class="external" href="http://www.xulplanet.com/ndeakin/">Neil Deakin</a>
+</li><li> 최종 업데이트: 2005년 6월 3일
+</li><li> 저작권 정보 : © 1999-2005 XULPlanet.com
+</li></ul>
+</div>
+<p><span class="comment">Interwiki Language Links</span>
+</p>

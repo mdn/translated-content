@@ -1,0 +1,177 @@
+---
+title: 버그 작성 지침
+slug: Mozilla/QA/Bug_writing_guidelines
+tags:
+  - Bugzilla
+  - QA
+  - 버그
+translation_of: Mozilla/QA/Bug_writing_guidelines
+---
+<div class="note">
+<p>이 페이지는 2014년 4분기에 모질라 QA팀의  테크니컬 리뷰를 받아야합니다.(<span style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;">Ioana </span><span style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;">Chiorean님이 담당합니다) QMO의 </span><a class="link-https" href="https://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug/" style="font-size: 14px; line-height: 1.5;">How to write a proper bug</a>페이지 글이 이 글로 병합되었습니다.</p>
+
+<p><strong style="font-size: 14px; line-height: 1.5;">모질라 소프트웨어를 사용하는데 도움이 필요하다면  </strong><strong style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;"><a href="http://www.mozilla.org/support/">지원 페이지</a></strong><strong style="font-size: 14px; line-height: 1.5;">에서 해당 소프트웨어를 선택하시기 바랍니다. 이 페이지는 수정하면 안됩니다. 모질라의 버그 추적 시스템인 </strong><strong style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;"><a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a>를 사용하는 방법을 배우는데에 사용해주시기 바랍니다.</strong></p>
+
+<p><span style="font-size: 14px; line-height: 1.5;">버그 리포팅이 처음이라면 유경험자에게 도움을 받아야할 수도 있습니다. </span><a href="/en-US/docs/QA" style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;">QA</a><span style="font-size: 14px; line-height: 1.5;">페이지의 커뮤니티 섹션을 참고하시기 바랍니다. 파이어폭스의 버그를 리포팅하려면 </span><a href="http://irc.mozilla.org/" style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;">irc.mozilla.org</a><span style="font-size: 14px; line-height: 1.5;"> 의 </span><span style="font-family: monospace; font-size: 14.3999996185303px; line-height: 16.7999992370605px;">#firefox</span><span style="font-size: 14.3999996185303px; line-height: 16.7999992370605px;"> 채널에서 도움을 받을 수도 있습니다.</span></p>
+</div>
+
+<p>효과적인 버그 리프트는 수정될 수 있을것 같이 작성한 것입니다. 이 가이드 라인은 그런 보고서를 작성하기 위한 방법을 설명합니다.</p>
+
+<h2 id="선행준비">선행준비</h2>
+
+<ol>
+ <li>당신의 소프트웨어가 최신버전인지 확인하십시오.
+  <ul>
+   <li>이상적으로는 개발중인 버전을 테스트하여 버그가 이미 수정되었는지 확인하십시오. (예 : <a href="http://www.mozilla.com/en-US/firefox/channel/">Firefox Beta, Aurora</a>, or bleeding-edge <a class="link-https" href="https://nightly.mozilla.org/">Nightly</a>).</li>
+  </ul>
+ </li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a> 에서 해당 버그가 발견되었는지 확인하십시오. (<a href="http://www.mozilla.org/quality/help/screening-duplicates.html">예제</a>).</li>
+ <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided">새로운 버그리포트</a>를 작성할때에는 대부분 버그 리포팅 방법을 안내합니다.
+  <ul>
+   <li>여러 가지 이슈사항을 가지고 있다면, 버그리포트를 각각 분리해서 제출하십시오.</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="재현가능한_정확한_단계_작성">재현가능한 정확한 단계 작성</h2>
+
+<p>어떻게 개발자는 자신의 컴퓨터에서 버그를 재현할 수 있을까요?</p>
+
+<p>재현 단계는 버그 보고서 전체에서 <strong>가장 중요한 부분</strong>입니다.  개발자가 버그를 재현 가능한 경우에 고쳐질 가능성이 매우 높습니다. 만약 이 과정이 명확하지 않은 경우에는, 버그가 수정되었는지조차 모를 수도 있습니다.</p>
+
+<p>각 단계의 의도와 더불어 Firefox와의 상호작용을 개연성있게 설명하십시오.</p>
+
+<ul>
+ <li>잘못된 예 : "다른 창에서 Gmail 열기"</li>
+ <li>올바른 예 : "Cmd + N을 눌러 새 브라우저 창을 열고, 검색 주소창에 https://mail.google.com/을 입력하고 Enter 키를 누르십시오. "</li>
+</ul>
+
+<p>당신이 지시한 단계를 진행한 후, 예상했던 결과와 관찰력롸를 명확하게 설명하십시오. 추측에서 명확하게 관찰결과를 분리하십시오.</p>
+
+<ul>
+ <li>잘못된 예 : "동작하지 않습니다."</li>
+ <li>
+  <p>올바른 예 : "내 편지함이 보이지 않고, 다음과 같은 메시지가 출력됩니다. '당신의 브라우저는 쿠키를 지원하지 않습니다. (error -91)' "</p>
+ </li>
+</ul>
+
+<p>버그가 심각해보이는 경우, 버그를 재현하는 중요 단계중에 당신이 설정한 일반적이지 않은 설정이 있을 수 있습니다. 만약 당신이 작성한 버그가 <a href="http://support.mozilla.com/en-US/kb/Managing-profiles">새 Firefox 프로필</a>에서 재현되는지 확인하십시오. 만약 당신의 기존 프로필에서만 버그가 발생한다면, 어떤 설정이나 확장도구, 혹은 <a href="http://support.mozilla.com/en-US/kb/Profiles">당신의 프로필 파일</a>이 버그를 재현하는데 필요합니다.</p>
+
+<ul>
+ <li><a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html#intermittent">만약 해당 버그 발생 원인을 알 수 없거나 가끔씩 나타나면 어떻게 해야할까요?</a></li>
+</ul>
+
+<h2 id="명확한_요약문_작성"><strong>명확한 요약문 작성</strong></h2>
+
+<p>어떻게하면 간략하게 버그를 설명할 수 있을까요? 이것은 버그 관리자(Triager)나 개발자가 볼 문서의 첫 부분입니다.</p>
+
+<p>좋은 요약문은 짧고 명확하게 구분가능하게 작성되어야 합니다. 그리고 해결책이 아닌 문제에 집중하여 설명해야합니다.</p>
+
+<ul>
+ <li>좋은 예 : "파일 복사 메시지에서 취소를 누르면, 파일관리자에서 오류가 발생함."</li>
+ <li>나쁜 예 : "소프트웨어 오류"</li>
+</ul>
+
+<ul>
+ <li>좋은 예 : "overflow : hidden으로 스타일이 지정된 &lt;textarea&gt;에서 아래쪽 화살표 스크롤이 작동하지 않습니다."</li>
+ <li>나쁜 예 : "내 웹사이트에서 브라우저가 동작해야합니다."</li>
+</ul>
+
+<h2 id="Finding_the_correct_product_and_component" name="Finding_the_correct_product_and_component"><strong style="font-weight: bold;">Finding the correct product and component</strong></h2>
+
+<p>You will be asked to categorize your bug into a "product" and a "component" within that product, in order to direct your report to the correct developers.</p>
+
+<p>If you're using Firefox, the bug is most likely in "Firefox", "Toolkit", or "Core".</p>
+
+<ul>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox">List of components in the "Firefox" product</a> - Most parts of Firefox that you interact with directly</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Toolkit">List of components in the "Toolkit" product</a> - Interface widgets and some frontend features</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Core">List of components in the "Core" product</a> - Web page rendering, networking, etc.</li>
+</ul>
+
+<p>When in doubt, search for similar bugs and see what component they are in.</p>
+
+<p>If none of the components seem appropriate, look for a "General" component in the most appropriate product.</p>
+
+<h2 id="Specific_types_of_bugs">Specific types of bugs</h2>
+
+<p>If you are reporting a <strong>crash bug</strong>, please <a href="/en-US/docs/How_to_get_a_stacktrace_for_a_bug_report">include a Breakpad ID or attach stack trace</a>, and include the crash signature in the bug summary.</p>
+
+<p>If you are reporting a <strong>memory use or leak bug</strong>, please attach the output of about:memory (Firefox 6+). Ideally, find steps to reproduce an increase in what is shown in about:memory (even after clicking the "Minimize memory usage" button at the bottom). If you have trouble finding steps to reproduce, try the Firefox Support page titled <a href="http://support.mozilla.com/en-US/kb/High%20memory%20usage">High Memory Usage</a>. If you are a C++ developer, <a class="link-https" href="https://wiki.mozilla.org/Performance:Leak_Tools">more precise tools are available</a>.</p>
+
+<p>If you are reporting a <strong>bug involving a specific web page</strong>, please try to make a <a href="/en-US/docs/Reducing_testcases">reduced testcase</a> and attach it to the bug report.</p>
+
+<p>If the bug was <strong>recently introduced</strong>, finding a <a href="http://quality.mozilla.org/docs/bugzilla/guide-to-triaging-bugs-for-firefox/finding-a-regression-window/">regression window</a> can help identify the cause of the bug.</p>
+
+<div class="originaldocinfo">
+<h2 id="Original_document_information">Original document information</h2>
+
+<ul>
+ <li>Author(s): Jesse Ruderman, Gervase Markham</li>
+ <li>Other Contributors: Eli Goldberg, Claudius Gayle, Jan Leger, Felix Miata, Peter Mock, Chris Pratt, Chris Yeh, and others.</li>
+</ul>
+</div>
+
+<hr>
+<div class="note">
+<p>The following article has been merged into this page from QMO: <a class="link-https" href="https://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug/">How to write a proper bug</a></p>
+</div>
+
+<h2 id="Bug_Validity_Checklist">Bug Validity Checklist</h2>
+
+<h3 id="Verify_the_problem_you_found_is_a_New_Bug">Verify the problem you found is a New Bug</h3>
+
+<p>To verify if what you've found is indeed a new software bug in one of Mozilla's products, go through the following checklist to make sure it's something worth creating a new bug report for.</p>
+
+<ul>
+ <li>Make sure it's a <a href="http://support.mozilla.com/tiki-wiki_rankings.php?limit=500&amp;categId=1" title="Support @ Mozilla">software bug</a>. It should be either an error, flaw, mistake failure of fault in the browser that produces an incorrect and/or unexpected result.</li>
+ <li>See if it's an already known bug by looking at your particular version's <a href="http://www.mozilla.com/en-US/firefox/releases/">release notes</a></li>
+ <li>Make sure that no one has already fixed the problem by re-verifying the bug against the latest trunk nightly located <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">here</a></li>
+ <li>Make sure there isn't a duplicate bug already created by using this handy <a href="https://developer.mozilla.org/En/Screening_duplicate_bugs#Searching guide">guide</a> to search through Bugzilla for your problem</li>
+</ul>
+
+<p>If you're lost and not sure what to do always check out the IRC channel, #qa, at irc.mozilla.org and ask there. If no one answers, try posting to our Bugzilla <a href="/forums/quality-assurance-discussion/bugs">forums</a>. Otherwise if you haven't found your software bug, its time to write a bug report!</p>
+
+<h2 id="The_Bug_Report">The Bug Report</h2>
+
+<h3 id="Where_do_I_go_to_create_a_bug">Where do I go to create a bug?</h3>
+
+<ul>
+ <li>Mozilla's main tracking tool for reporting, investigating and fixing bugs is located <a href="http://bugzilla.mozilla.org/Bugzilla">here</a>. The first step in order to log a bug, is to register an account. To do that, go to Bugzilla's home page and click on the "New Account" hyperlink at the top of the page.</li>
+ <li>After registering and then logging into your new account, go back to the Bugzilla home page and click on the "New" hyperlink at the top of the page. Click the product that the bug is found in and fill out the resulting form. If you have any issues with finding the product you want to file the bug for, go to the #qa channel at irc.mozilla.org and ask for help from our very friendly MozQA community.</li>
+</ul>
+
+<h3 id="What_does_the_community_want_to_see_in_a_bug_report">What does the community want to see in a bug report?</h3>
+
+<p>There are a couple of generally-held principles that should be taken into account when creating a bug. They would be the following:</p>
+
+<ul>
+ <li>Keep the Description and Summary <u>clear</u> and <u>concise</u></li>
+ <li>Only report one issue in a bug report</li>
+ <li>Report only facts in your bugs and remove any assumptions you might have</li>
+</ul>
+
+<h3 id="General_Outline_of_a_Bug_Report">General Outline of a Bug Report</h3>
+
+<ul>
+ <li><strong>Summary</strong>: How would you describe the bug in less than 60 characters? It should quickly and uniquely identify a bug report as well as explain the problem, not your suggested solution.Good: "Cancelling a File Copy dialog crashes File Manager" Bad: "Software crashes" Bad: "Browser should work with my web site"</li>
+ <li><strong>Component</strong>: In which sub-part of the software does it exist?This field is a requirement to submit any bug report. Click the word "Component" to see a description of each component. If none seems appropriate, highlight the "General" component.</li>
+ <li><strong>OS</strong>: On which operating system (OS) did you find it? (e.g. Linux, Windows XP, Mac OS X.)Example: "<em>If you know the bug happens on more than one type of operating system, choose "All". If your OS isn't listed, choose Other".</em></li>
+ <li><strong>Description</strong>: The details of your problem report, including:-<u>Overview</u>: This is a larger detailed restatement of the summary. An example would be: <em>"Drag-selecting any page crashes Mac builds in the NSGetFactory function"</em>. -<u>Build Id</u>: To find this either go to the "about:" page via the location bar or, if you have MozQA's <a href="https://addons.mozilla.org/en-US/firefox/addon/nightly-tester-tools/">Nightly Tester Tools</a> extension, then go to Tools | Nightly Tester Tools and select the option that contains the output of the build Id. It should look something like this: <em>"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3) Gecko/20090305 Firefox/3.1b3"</em>. -<u>Additional Builds and Platforms</u>: Whether or not the bug takes place on other platforms (or browsers, if applicable). It should look something like this: <em>"Doesn't Occur On Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3) Gecko/20081107 Firefox/3.1b2"</em>.</li>
+ <li><strong>Steps to Reproduce</strong>: Minimized, easy-to-follow steps that will trigger the bug. If they're necessary, make sure to include any special setup steps.A good example of this would look like the following: 1) View any web page. (I used the default sample page, http://www.google.com/). 2) Drag-select the page. Specifically, while holding down the mouse button, drag the mouse pointer downwards from any point in the browser's content region to the bottom of the browser's content region.</li>
+ <li><strong>Actual Results</strong>: What the application did after performing the above steps.An example would be: <em>The application crashed.</em></li>
+ <li><strong>Expected Results</strong>: What the application should have done, were the bug not present.An example would be: <em>The window should scroll downwards. Scrolled content should be selected. Or, at least, the application should not crash.</em></li>
+</ul>
+
+<p>Continue reading <a href="http://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug-part-2/">How to Write a Proper Bug Report Part 2</a></p>
+
+<div class="originaldocinfo">
+<h2 id="Original_document_information_2">Original document information</h2>
+
+<ul>
+ <li>Author(s): Aakash Desai</li>
+ <li>Date last modified: June 3, 2013 at 2:41 am PST</li>
+</ul>
+</div>
+
+<p>Triager 라는 직업군을 처음봤으나 구글 검색결과 가장 의미에 부합하는 단어로 번역해봤습니다.</p>

@@ -1,0 +1,171 @@
+---
+title: Creare un installer per Windows di SeaMonkey
+slug: Creare_un_installer_per_Windows_di_SeaMonkey
+tags:
+  - Localizzazione
+translation_of: Mozilla/Creating_a_localized_Windows_installer_of_SeaMonkey
+---
+<h3 id="Gli_attrezzi_del_mestiere" name="Gli_attrezzi_del_mestiere">Gli attrezzi del mestiere</h3>
+
+<p>Premessa: non tutti i programmi elencati sotto sono strettamente necessari. Alcuni semplicemente sono quelli che io uso perché mi ci trovo bene, mentre altri sono script che ho creato per velocizzare il lavoro. Potete in ogni caso scegliere il programma che vi piace di più per svolgere certe operazioni, come potete non sfruttare gli script e scrivere ogni volta i comandi a mano. La scelta è vostra!</p>
+
+<ul>
+ <li><a class="external" href="http://www.mozillaitalia.org/archive/index.php#p3">Installer di SeaMonkey</a> in italiano (la versione più recente disponibile)</li>
+ <li><a class="external" href="http://www.mozilla.org/projects/seamonkey/">Installer di SeaMonkey</a> in inglese (la versione di cui si vuole creare l'installer nuovo)</li>
+ <li><a class="external" href="http://www.mozillaitalia.org/archive/index.php#p3">Langpack italiano</a> applicabile all'installer inglese (deve essere la stessa versione, o almeno una compatibile)</li>
+ <li><a class="external" href="http://winmerge.sourceforge.net/">WinMerge</a> (per il confronto dei file vecchi e nuovi)</li>
+ <li><a class="external" href="http://www.7-zip.org/">7-zip</a> (gestisce tutti gli archivi e serve per la costruzione finale dell'installer)</li>
+ <li><a class="external" href="http://www.mozillaitalia.org/files/scripts.zip">Pacchetto</a> per la costruzione dell'installer (contiene dei file necessari per creare l'installer e gli script per l'automazione del processo)</li>
+ <li><a class="external" href="http://www.iacchi.org/extra/tools.zip">Script</a> per l'automazione completa della creazione dell'installer (contiene dei file necessari per creare l'installer)</li>
+</ul>
+
+<p>Per comodità, posizionate il file mozip.exe presente nel "Pacchetto" nella cartella di Windows, in modo da poterlo usare attraverso il prompt dei comandi senza dover inserire ogni volta il suo percorso.</p>
+
+<p>Prima di iniziare, un piccolo elenco di convenzioni usate nella guida:</p>
+
+<ul>
+ <li>{{ mediawiki.external('nv') }} - numero di versione di SeaMonkey</li>
+ <li>{{ mediawiki.external('path') }} - sostituisce l'indicazione di un percorso qualsiasi</li>
+ <li>Scriverò i nomi dei file in minuscolo per comodità, tuttavia i file che sono in maiuscolo dovrebbero rimanere tali</li>
+ <li>Per console intendo il prompt di DOS. In Windows 98/Me è accessibile dal menu Start; per le versioni successive basta digitare "cmd" nella finestra di Esegui</li>
+</ul>
+
+<h3 id="Primi_passi" name="Primi_passi">Primi passi</h3>
+
+<p>Per iniziare, bisogna creare le cartelle che dovranno ospitare i file. Personalmente (e questa scelta si ripercuote sui file batch) creo la cartella C:\sm che dovrà contenere tre cartelle: \{{ mediawiki.external('nv') }}eng che conterrà i file in inglese della versione da tradurre; \{{ mediawiki.external('nv') }}ita che conterrà i file in italiano dell'ultima versione disponibile e \{{ mediawiki.external('nv') }} che conterrà i file in italiano della versione di cui vogliamo creare l'installer. Per creare quest'ultima cartella, inizialmente, bisognerà copiare la cartella con i file in inglese e rinominarla.</p>
+
+<p>Per riempire la cartella in inglese con i file necessari, bisogna mettere l'installer in inglese nella cartella {{ mediawiki.external('nv') }}eng, aprire una console e digitare:</p>
+
+<pre>mozip -x [nv]eng\seamonkey-[nv].en-US.win32.installer.exe</pre>
+
+<p>Una volta estratti i file, è possibile cancellare l'installer.<br>
+ Per scompattare l'installer italiano, è sufficiente mettere il file nella relativa cartella, fare clic col tasto destro e dalle opzioni di 7-zip selezionare Estrai qui.</p>
+
+<h3 id="Tradurre_i_file_di_testo" name="Tradurre_i_file_di_testo">Tradurre i file di testo</h3>
+
+<p>Iniziamo col tradurre i due file di testo presenti tra i file estratti: install.ini e config.ini</p>
+
+<p>Il primo è la traduzione dell'interfaccia dell'installer e quindi, dato che per ora questo resta uguale nel tempo, al 99.99% non dovrete fare altro che copiare il vecchio file in italiano. Ad ogni modo, per andare sul sicuro, controllate che almeno il numero di righe corrisponda.</p>
+
+<p>Il secondo file invece contiene la configurazione dell'installer per quella particolare versione di SeaMonkey, ed è un po' più delicato da tradurre. Aprite WinMerge e mettete a confronto il vecchio file in italiano e il nuovo file in inglese: il programma evidenzierà automaticamente tutte le righe diverse.<br>
+ Non tutte le stringhe però andranno tradotte: dovrete concentrarvi solamente su quelle che riportano nella riga precedente la scritta "localize me". Noterete che alcune stringhe non sono state tradotte, nonostante sopra venga riportata la dicitura per localizzarle: non è una dimenticanza, ma se si traducono quelle stringhe l'installer non funzionerà. Oltre a queste, dovrete cambiare tutti i riferimenti di en-US e US rispettivamente in it-IT e IT; sicuramente saprete riconoscerli quando li vedrete. WinMerge vi viene in aiuto in questo compito: basta selezionare il testo in italiano in una delle semi-finestre ed incollarlo nell'altra, al posto del testo inglese.</p>
+
+<p><strong>ATTENZIONE:</strong> alla riga 191, che fa parte di quelle da tradurre, c'è l'indicazione del numero di versione esatto della build che state costruendo. Fate attenzione, nel copia-incolla, a non sovrascrivere il numero.</p>
+
+<p>Dopo aver modificato correttamente i file di testo, possiamo passare ai vari componenti del programma, rappresentati dai vari file xpi. Per il lavoro che dobbiamo fare, questi file possono essere uniti in piccoli gruppi e per ogni gruppo andrà effettuata una serie di operazioni uguali per tutti. Perciò, invece di trattare ogni pacchetto singolarmente, descriverò le azioni da compiere per ogni gruppo.</p>
+
+<h3 id="Il_file_langenus.xpi" name="Il_file_langenus.xpi">Il file langenus.xpi</h3>
+
+<p>Prima di tutto bisogna scompattare il file: nel menu contestuale tra le opzioni di 7-zip selezionate Estrai in "{{ mediawiki.external('path') }}", che creerà una cartella di nome langenus.</p>
+
+<p>Modificate l'install.js nella sezione indicata "Localize me" ed inserite i codici italiani it-IT dove richiesto. Potete utilizzare il file della vecchia versione italiana e WinMerge per vedere rapidamente cosa modificare.</p>
+
+<p>Scorrere il file fino in fondo, dove vengono registrati i locale chrome del langpack: tipicamente nelle versioni in inglese i locale chrome di Inspector, della guida e di quant'altro l'installer contenga di opzionale, sono contenuti nei relativi pacchetti. Le traduzioni italiane invece sono contenute tutte nel jar principale, quindi dovremo aggiungere le registrazioni necessarie qui. Anche in questo caso, quasi sicuramente sarà sufficiente copiare le stringhe in più dal vecchio file italiano in quello nuovo ancora in inglese con WinMerge.<br>
+ Completate quindi con la sostituzione dei file jar contenuti nella cartella bin/chrome (in questo caso i file en-*.jar vanno sostituiti con i gli equivalenti it-*.jar).</p>
+
+<p>Al termine di tutto riportatevi nella cartella contenente l'install.js e selezionate detto file assieme alla cartella bin, quindi dal menu contestuale selezionate "Aggiungi all'archivio..." e nella finestra che vi appare selezionate Zip come formato dell'archivio e Nessuna come livello di compressione. Se volete velocizzare il lavoro, nel campo archivio inserite "../langitit.xpi" che provvederà a creare il file xpi in italiano direttamente nella cartella principale, altrimenti dovrete spostare il nuovo file a mano in \{{ mediawiki.external('nv') }}.</p>
+
+<div style="margin-left: 40px;">
+<p><strong>ATTENZIONE:</strong> quando si creano gli xpi e i jar contenuti nell'installer, il livello di compressione va assolutamente impostato su Nessuna, per due motivi:</p>
+
+<ol>
+ <li>per non rallentare l'esecuzione dell'installer prima, e l'avvio dell'applicazione installata dopo.</li>
+ <li>perché le dimensioni dell'installer saranno molto più ridotte se non sono stati compressi.</li>
+</ol>
+</div>
+
+<p>Una volta fatto tutto, cancellate il file langenus.xpi e la relativa cartella dalla cartella principale.</p>
+
+<h3 id="Il_file_regus.xpi" name="Il_file_regus.xpi">Il file regus.xpi</h3>
+
+<p>Anche in questo caso, come in tutti quelli successivi, create la cartella relativa. Successivamente, modificate il file install.js nelle stringhe che si trovano sotto LOCALIZATION NOTE; anche in questo caso WinMerge vi sarà d'aiuto. Nella cartella bin/chrome sostituite US.jar con IT.jar preso dal langpack italiano. Aggiungete i searchplugins del langpack italiano in bin/searchplugins e sostituite i file in bin/defaults con gli equivalenti presi sempre dal langpack, rinominando la cartella US in IT. Tornate nella cartella che contiene bin ed install.js e create il file xpi chiamandolo regit.xpi. Ricordatevi poi di cancellare il file regus.xpi e la sua cartella.</p>
+
+<h3 id="Il_file_deflenus.xpi" name="Il_file_deflenus.xpi">Il file deflenus.xpi</h3>
+
+<p>Modificate il file install.js nelle stringhe che si trovano sotto LOCALIZATION NOTE e sostituite i file in bin/defaults con gli equivalenti presi dal langpack italiano. Tornate nella cartella padre che contiene bin ed install.js e create l'archivio xpi chiamandolo deflitit.xpi. Ancora, ricordatevi di cancellare il file deflenus e la cartella relativa.</p>
+
+<h3 id="Il_primo_gruppo_di_file" name="Il_primo_gruppo_di_file">Il primo gruppo di file</h3>
+
+<p>La procedura che spiegherò ora si applica ai file <em>venkman</em>, <em>chatzilla</em>, <em>inspector</em>, <em>sroaming</em>, <em>reporter</em>.</p>
+
+<p>Come già detto in precedenza, mentre nel langpack inglese la traduzione dei componenti opzionali si trova nei pacchetti dei programmi stessi, nel caso della lingua italiana tutte le traduzioni si trovano nel jar principale. L'operazione da compiere ora è quindi quella di eliminare le traduzioni dai singoli pacchetti.</p>
+
+<p>Nel file install.js dovete eliminare la registrazione del locale. Per fare questo basta commentare la riga relativa (aggiungendo // all'inizio) oppure cancellarla. Per esempio, nel pacchetto venkman:</p>
+
+<pre>// registerChrome(LOCALE | DELAYED_CHROME, getFolder("Chrome","venkman.jar"), "locale/en-US/venkman/");</pre>
+
+<p>Nella cartella bin/chrome invece bisogna aprire il file jar con 7-zip ed eliminare la cartella locale. Una volta fatto questo dovrete ricreare lo xpi.</p>
+
+<p><strong>ATTENZIONE:</strong> mentre prima si cambiavano i nomi ai file, ora il nome del file xpi prima e dopo le operazioni resta lo stesso. Quando perciò avete creato lo xpi e tornate nella cartella principale, ricordatevi di cancellare solamente la cartella relativa al file e non anche il file xpi stesso, altrimenti cancellerete il vostro lavoro. Questo ovviamente vale solamente se in 7-zip avete sfruttato il trucchetto di digitare "../pacchetto.xpi" come nome del file, e resta valido di qui fino alla fine.</p>
+
+<h3 id="Il_secondo_gruppo_di_file" name="Il_secondo_gruppo_di_file">Il secondo gruppo di file</h3>
+
+<p>La procedura che spiegherò ora si applica ai file <em>browser</em>, <em>mail</em>, <em>xpcom</em>, <em>spellcheck</em>, <em>talkback</em> e al file zip <em>seamonkeyuninstall</em>.</p>
+
+<p>Questi file non vengono toccati dalla traduzione, perciò non c'è da modificare niente. Tuttavia, per diminuire le dimensioni finali dell'installer, andranno scompattati e poi risalvati, questa volta però senza compressione. Vi dovrete perciò limitare a scompattare il pacchetto in una cartella, selezionare tutti i file presenti, e ricreare il file xpi (o zip a seconda dei casi) senza compressione.</p>
+
+<h3 id="Il_file_gre-win32-installer.zip" name="Il_file_gre-win32-installer.zip">Il file gre-win32-installer.zip</h3>
+
+<p>Questo pacchetto contiene l'installer di GRE (Gecko Runtime Environment) e si comporta proprio come un installer a sé stante. Dopo aver creato la cartella di questo pacchetto, quindi, dovrete di nuovo lanciare il comando "mozip -x" per estrarne i file contenuti, dopodiché potete anche cancellare l'installer. A partire da SeaMonkey 1.0.2 l'installer italiano viene creato con la procedura descritta sotto, perciò per scompattare quello italiano per il confronto tra i file basterà usare il menu contestuale e selezionare l'opzione di estrazione di 7-zip.</p>
+
+<p>Come per l'installer di SeaMonkey, dovete tradurre i due file install.ini e config.ini, per i quali valgono le stesse considerazioni dette all'inizio di questa guida. Allo stesso modo, dovrete scompattare tutti i file zip e xpi e ricompattarli senza compressione.</p>
+
+<p>A questo punto, dobbiamo creare l'installer di GRE. Se volete fare in fretta e non darvi troppa pena vi basterà usare lo script grebuild.bat che ho creato, una volta modificati i percorsi delle cartelle per adattarli al vostro caso (i file bat si aprono con un semplice editor di testi). Ci sono solo pochi passaggi da fare a mano: copiare nella cartella i file app.tag e 7zSD.sfx, poi aprire il primo con un editor di testi e nel campo "Title" inserire "GRE".</p>
+
+<p>Se invece siete masochisti e volete fare tutto a mano, qui di seguito spiego i passaggi da effettuare: per creare l'installer dovete prima di tutto riunire tutti i suoi file in un unico archivio. Aprite quindi una console, spostatevi nella cartella che contiene i file dell'installer di GRE e digitate:</p>
+
+<pre>[path]\7z a app.7z -t7z *.* -mx0</pre>
+
+<p>In questo modo si creerà il file app.7z che contiene tutti i file che erano presenti nella cartella, e che ora potete eliminare. A questo punto copiate nella cartella anche i file app.tag e 7zSD.sfx; editate il file app.tag come già descritto sopra, poi lanciate questo comando:</p>
+
+<pre>copy /b 7zSD.sfx+app.tag+app.7z gre-win32-installer.exe</pre>
+
+<p>Ora che avete creato nuovamente l'installer, cancellate tutti gli altri file presenti.</p>
+
+<p>Qualunque strada abbiate scelto, a questo punto dovreste avere nella cartella solamente il file che contiene l'installer. Ora non vi resta che rimetterlo nel suo file zip come per tutti gli altri pacchetti e poi proseguire.</p>
+
+<h3 id="E_ora.2C_creiamo_l.27installer.21" name="E_ora.2C_creiamo_l.27installer.21">E ora, creiamo l'installer!</h3>
+
+<p>Una volta finito di impacchettare l'installer di GRE, abbiamo finito i file da modificare, e possiamo passare alla creazione dell'installer di SeaMonkey.<br>
+ Anche in questo caso, potete decidere se usare il mio script o se eseguire tutto a mano. In entrambi i casi, la prima (e ultima per chi usa lo script) cosa da fare è mettere nella cartella C:\sm i file app.tag e 7zSD.sfx e modificare il primo inserendo nel campo Title la stringa "SeaMonkey {{ mediawiki.external('nv') }}".<br>
+ A questo punto potete lanciare lo script smbuild e aspettare che venga creato l'installer (sempre dopo aver modificato i nomi delle cartelle), oppure aprire una console e digitare, dopo esservi spostati nella cartella \{{ mediawiki.external('nv') }}, il seguente comando:</p>
+
+<pre>[path]\7z a -t7z ..\app.7z *.* -mx -m0=BCJ2 -m1=LZMA:d24 -m2=LZMA:d19 -m3=LZMA:d19 -mb0:1 -mb0s1:2 -mb0s2:3</pre>
+
+<p>Una volta terminata la compressione, risalire nella cartella superiore e digitare:</p>
+
+<pre>copy /b 7zSD.sfx+app.tag+app.7z mozilla-[nv].it-IT.win32.installer.exe</pre>
+
+<p>et voilà, il vostro installer è pronto!</p>
+
+<h3 id="Tips.2C_tricks_&amp;_script" name="Tips.2C_tricks_&amp;_script">Tips, tricks &amp; script</h3>
+
+<p>In questo paragrafo spiegherò le funzioni di tutti gli script che non ho citato finora, e tenterò di dare qualche consiglio dettato dall'esperienza.</p>
+
+<ul>
+ <li>gremozip.bat: questo script serve per effettuare il comando mozip per estrarre i file dall'installer di GRE in inglese. Non so voi, ma per me è una palla dover tutte le volte inserire i nomi delle cartelle e dei file per eseguire i comandi, anche perché di solito i nomi sono lunghissimi. Con questo script invece l'unica cosa che dovrete fare è quella di mettere il giusto percorso al file, che corrisponde ad un semplice copia-incolla su Windows, cosa che invece non è possibile fare in DOS.</li>
+ <li>smmozip.bat: lo stesso del precedente, però serve per estrarre i file dell'installer in inglese all'inizio.</li>
+ <li>Quando potete, usate sempre programmi come WinMerge per modificare i file: vi aiuteranno a non sbagliare, e inoltre potrete fare un copia-incolla tra il file italiano e quello inglese direttamente dalla stessa finestra, in più il programma ha la cortesia di lasciare spazi bianchi quando un file contiene righe in più rispetto ad un altro, perciò sarà facile anche trovare il punto dove incollare il testo.</li>
+ <li>Tenete sempre aperte sia la cartella del vecchio installer in italiano, sia quella del nuovo a cui state lavorando. Spacchettate sempre i file di entrambe le cartelle, in alcuni casi vi basterà fare un copia-incolla dei file da una cartella all'altra e il gioco è fatto. Inoltre, quando avete finito di lavorare ad un pacchetto, eliminate il corrispettivo del vecchio installer italiano: quando non ci saranno più file da cancellare, avrete finito. Inoltre aiuta a ricordarsi quali file sono già stati fatti.</li>
+</ul>
+
+<h3 id="Automatizzare_le_operazioni" name="Automatizzare_le_operazioni">Automatizzare le operazioni</h3>
+
+<p>La guida spiega tutti i passaggi da eseguire per creare un installer in italiano di SeaMonkey. Sebbene l'esecuzione di questi passaggi renda consapevoli di ciò che si sta facendo, lo svolgimento delle operazioni richede molto tempo.</p>
+
+<p>Una volta capiti i passaggi necessari, è possibile utilizzare degli script per velocizzare il processo di creazione dell'installer. Gli script necessari possono essere scaricati dalla lista del materiale all'inizio di questa pagina. Per farli funzionare, basta configurare correttamente il file config.bat (maggiori informazioni sono contenute all'interno del pacchetto).<br>
+ Gli script si basano su questa guida, e assumono che la cartella dove si lavora sia C:\sm e che la sotto-cartella degli script sia \tools.</p>
+
+<p>Una volta lanciato, lo script si fermerà solamente per permettere all'utente di tradurre i file .ini e .js necessari, aprendoli con WinMerge. Per questi file, valgono le stesse considerazioni fatte sopra: alcuni vanno semplicemente copiati, per altri bisogna fare attenzione.</p>
+
+<h3 id="Ringraziamenti" name="Ringraziamenti">Ringraziamenti</h3>
+
+<p>Michele Dal Corso: per aver scritto la prima versione testuale della guida.</p>
+
+<p>Giacomo Magnini: per aver scritto la prima guida per Mozilla Suite e per avermi aiutato a risolvere tutti i problemi che ho incontrato inizialmente durante la costruzione degli installer. Ah! Ovviamente anche per aver spulciato questa seconda guida alla ricerca di errori.</p>
+
+<p>Francesco Lodolo: per aver controllato la prima guida di Giacomo, e di conseguenza indirettamente anche questa.</p>
+
+<p>Fabio Baroni: per aver effettuato il controllo finale della guida di Francesco Lodolo.</p>
+
+<p>Domenico Zanella: per aver creato gli script per l'automazione del processo di creazione dell'installer.</p>

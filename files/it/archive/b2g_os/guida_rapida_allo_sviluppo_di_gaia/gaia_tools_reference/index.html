@@ -1,0 +1,128 @@
+---
+title: Strumenti di Gaia
+slug: Archive/B2G_OS/Guida_rapida_allo_sviluppo_di_Gaia/Gaia_tools_reference
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guida
+  - Strumenti
+translation_of: Archive/B2G_OS/Developing_Gaia/Gaia_tools_reference
+---
+<div class="summary">
+<p><span class="seoSummary">Questo articolo descrive alcuni strumenti di grande aiuto per lavorare con Gaia</span></p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: Puoi trovare alcuni suggerimenti e trucchi molto utili per il debug di Firefox OS alla pagina <a href="https://wiki.mozilla.org/B2G/QA/Tips_And_Tricks">B2G QA Tips and tricks</a>.</p>
+</div>
+
+<h2 id="Strumenti_di_backuprestoreflash">Strumenti di backup/restore/flash</h2>
+
+<p>Strumenti di backup per il tuo profilo, ecc.</p>
+
+<h3 id="b2g_util">b2g_util</h3>
+
+<p>Il pacchetto <a href="https://pypi.python.org/pypi/b2g_util">b2g_util tools</a> fornisce alcuni strumenti utili nel debugging di Firefox OS. Può:</p>
+
+<ul>
+ <li>Controllare la versione di b2g installata</li>
+ <li>Fornire il link al crash report</li>
+ <li>Resettare il dispositivo</li>
+ <li>Abilitare/disabilitare i certificati delle App per WebIDE</li>
+ <li>Backup/restore del tuo profilo (non ancora completo, per ora è disponibile un  workaround)</li>
+</ul>
+
+<p>Per installarlo hai bisogno di Python 2.7, <a href="https://pypi.python.org/pypi/pip/">pip</a>, e <a href="https://pypi.python.org/pypi/setuptools">setuptools</a>. Quindi puoi eseguire:</p>
+
+<pre><code>sudo pip install -U b2g_util</code></pre>
+
+<p>Dopo aver completato l'installazione, puoi connetterti al tuo dispositivo e testarlo utilizzando, ad esempio, il seguente comando per ottenere la versione di b2g:</p>
+
+<pre><code>b2g_check_versions</code></pre>
+
+<h3 id="pc-sync-tool">pc-sync-tool</h3>
+
+<p><a href="https://marketplace.firefox.com/app/pcsync">pc-sync-tool</a> è una app disponibile nel Marketplace di Firefox che permette di fare il backup dei tuoi dati/profilo. Deve essere utilizzato congiuntamente all'add-on per desktop <a href="http://download.firefox.com.cn/ffosassistant.xpi">Firefox OS assistant</a>.</p>
+
+<h3 id="Backup_e_restore_del_profilo">Backup e restore del profilo</h3>
+
+<p>Per gestire backup e restore dei dati puoi utilizzare lo script <code>backup_restore_profile.py</code>, disponibile all'interno del repository GIT <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">B2G-flash-tool.</a></p>
+
+<ol>
+ <li>Clona il repository (<code>git clone https://github.com/Mozilla-TWQA/B2G-flash-tool</code>.)</li>
+ <li>Assicurati che il telefono sia connesso via USB al computer, e che ADB (vedi {{anch("Important steps to follow first")}}) e l'opzione di Debugging via USB (presente nei settaggi del tuo dispositivo <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a>) siano abilitati.</li>
+ <li>Spostati all'interno della cartella clonata</li>
+</ol>
+
+<p>Per fare backup dei dati:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">python backup_restore_profile.py -b</code></pre>
+
+<p>Questo comando dovrebbe salvare il profilo del dispositivo all'interno di una cartella chiamata  <code>mozilla-profile</code>, nella medisima cartella in cui è posizionato lo script. Per fare restore del tuo backup:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">python backup_restore_profile.py -r</code></pre>
+
+<div class="note">
+<p><strong>Nota</strong>: Per vedere la lista completa delle opzioni esegui lo script con il flag <code>-h</code> o <code>--help</code>.</p>
+</div>
+
+<h3 id="B2G-flash-tool">B2G-flash-tool</h3>
+
+<p>Il repository <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">B2G-flash-tool</a> contiene molti altri strumenti che ti consentono di fare rapidamente il flash delle nuove build sui dispositivi — strumenti ideali per il lavoro di QA. Per esempio:</p>
+
+<ul>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/flash_pvt.py">flash_pvt.py</a> — Lo strumento principale per fare il flash di nuovi build.</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/change_channel.sh">change_channel.sh</a> — Ti consente di cambiare velocemente il canale di aggiornamento del telefono.</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/check_versions.py">check_versions.py</a> — Restituisce la versione di B2G installata su un dispositivo.</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh">shallow_flash.sh</a> — Ti consente di fare il flash di Gaia e/o Gecko su un dispositivo (per Windows è disponibile <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.bat">shallow_flash.bat</a>).</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/update_system_fonts.sh">update_system_fonts.sh</a> — Aggiorna i font di sistema per B2G v2.1 ({{Bug("1032874")}}).</li>
+</ul>
+
+<h2 id="Strumenti_per_il_debug">Strumenti per il debug</h2>
+
+<p>Strumenti con funzionalità di debug.</p>
+
+<h3 id="WebIDE">WebIDE</h3>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">WebIDE</a> di Firefox merita una menzione speciale — oltre alle funzionalità di test e debug, offre funzionalità di monitoraggio delle performance, dell'utilizzo della memoria, ecc (vedi <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Monitoring_performance">Monitoring performance</a>.)</p>
+
+<h3 id="get_crashreports.sh">get_crashreports.sh</h3>
+
+<p>All'interno del repository <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">B2G-flash-tool</a>, <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/get_crashreports.sh">get_crashreports.sh</a> restituisce i report di crash (<code>/data/b2g/mozilla/Crash Reports/</code>.)</p>
+
+<h3 id="Strumenti_contenuti_all'interno_della_cartella_di_root_di_B2G">Strumenti contenuti all'interno della cartella di root di B2G</h3>
+
+<p>Nella cartella di<a href="https://github.com/mozilla-b2g/B2G"> root di B2G </a>sono presenti numerosi script che eseguono funzionalità di debug utili, quali:</p>
+
+<ul>
+ <li><a href="https://github.com/mozilla-b2g/B2G/blob/master/run-gdb.sh">run-gdb.sh</a>: Esegue il programma di debug a linea di comando gdb (vedi <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Debugging_B2G_using_gdb">Debugging B2G using gdb and related tools</a> per maggiori dettagli)</li>
+ <li><a href="https://github.com/mozilla-b2g/B2G/blob/master/run-valgrind.sh">run-valgrind.sh</a>: Esegue il programma di debug Valgrind (vedi <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Debugging_B2G_using_valgrind">Debugging B2G using Valgrind</a> per maggiori informazioni)</li>
+ <li><a href="https://github.com/mozilla-b2g/B2G/blob/master/watch-procrank.sh">watch-procrank.sh</a>: Restituisce le informazioni sul consumo di memoria attraverso  procrank.</li>
+</ul>
+
+<h2 id="Ulteriori_strumenti">Ulteriori strumenti</h2>
+
+<p>Sono disponibili ulteriori e utili strumenti nella cartella <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a> e in altre.</p>
+
+<h3 id="png_recompress.sh">png_recompress.sh</h3>
+
+<p>Script per comprimere immagini in formato png. Puoi utilizzarlo analogamente al seguente esempio:</p>
+
+<pre class="brush: bash">$ ./tools/png_recompress.sh -v bg.png</pre>
+
+<p>Rimuove metadati non necessari e comprime ulteriormente l'immagine; può produrre un risparmio fino al 99.5% sulla dimensione del file, si traduce in un impatto misurabile sulla dimensione della app e sull'utilizzo di memoria.</p>
+
+<h3 id="svg_recompress.sh">svg_recompress.sh</h3>
+
+<p>Presente nella cartella <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a>, <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/svg_recompress.sh">svg_recompress.sh</a> comprime immagini SVG.</p>
+
+<h3 id="cache_sync.py">cache_sync.py</h3>
+
+<p>Presente nella cartella <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a>, <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/cache_sync.py">cache_sync.py</a> sincronizza la cache offline di una app in una cartella locale. Il comando deve essere eseguito dalla cartella base di una app in gaia/external-apps. Costruisce una cartella per ciascuna origine nella cache offline.</p>
+
+<h3 id="edit_prefs.sh">edit_prefs.sh</h3>
+
+<p>Presente nella <a href="https://github.com/mozilla-b2g/B2G">cartella di root di B2G</a>, <a href="https://github.com/mozilla-b2g/B2G/blob/master/edit-prefs.sh">edit_prefs.sh</a> restituisce le preferenze di un dispositivo.</p>
+
+<p> </p>
