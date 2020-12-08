@@ -1,0 +1,54 @@
+---
+title: nsIConsoleService
+slug: nsIConsoleService
+tags:
+  - Dokumentacja_API_XPCOM
+  - Interfejsy
+  - 'Interfejsy:Scriptable'
+  - Wszystkie_kategorie
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleService
+---
+<p>
+</p>
+<h3 id="Podsumowanie" name="Podsumowanie"> Podsumowanie </h3>
+<p>Usługa konsoli to back-end dla narzędzia <a href="pl/Konsola_b%c5%82%c4%99d%c3%b3w">Konsola błędów</a>, dostępnym w każdej aplikacji Mozilli. Wykorzystywany jest do wypisywania różnych wiadomości, ostrzeżen i błędów oraz do ich pobierania.
+</p><p>Definicja interfejsu: {{ Source("xpcom/base/nsIConsoleService.idl") }}
+Identyfikator kontraktu: <code>@mozilla.org/consoleservice;1</code>
+</p><p>Interfejs ten nie został zamrożony i może ulec zmianie w przyszłości ({{ Bug(228205) }}).
+</p>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<h4 id="Zapisywanie_prostej_wiadomo.C5.9Bci_w_dzienniku" name="Zapisywanie_prostej_wiadomo.C5.9Bci_w_dzienniku"> Zapisywanie prostej wiadomości w dzienniku </h4>
+<p>Typowe zastosowanie to zapisywanie wiadomości do konsoli:
+</p>
+<pre class="eval">function LOG(msg) {
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  consoleService.logStringMessage(msg);
+}
+</pre>
+<p>Alternatywne metody to m. in. <a href="pl/Components.utils.reportError">Components.utils.reportError</a> i <a href="pl/DOM/window.dump">dump()</a>.
+</p>
+<h4 id="Zapisywanie_do_dziennika_wiadomo.C5.9Bci_z_dodatkowymi_informacjami" name="Zapisywanie_do_dziennika_wiadomo.C5.9Bci_z_dodatkowymi_informacjami"> Zapisywanie do dziennika wiadomości z dodatkowymi informacjami </h4>
+<p>Aby dołączyć inne informacje, takie jak plik żródłowy i numer linii, konieczne jest skorzystanie z bardziej skomplikowanego kodu:
+</p>
+<pre class="eval">function myLogToConsole(aMessage, aSourceName, aSourceLine, aLineNumber,
+                        aColumnNumber, aFlags, aCategory)
+{
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  var scriptError = Components.classes["@mozilla.org/scripterror;1"]
+                              .createInstance(Components.interfaces.nsIScriptError);
+  scriptError.init(aMessage, aSourceName, aSourceLine, aLineNumber,
+                   aColumnNumber, aFlags, aCategory);
+  consoleService.logMessage(scriptError);
+}
+</pre>
+<ul><li><code>aMessage</code> — tekst do zapisania w dzienniku. Parametr wymagany.
+</li><li><code>aSourceName</code> — adres URL pliku z błędem. W konsoli będzie to odnośnik, więc powinien to być prawdziwy adres URL. Można także przekazać wartość <code>null</code>, jeśli wskazanie pliku żródła nie jest potrzebne/możliwe.
+</li><li><code>aSourceLine</code> — linia #<code>aLineNumber</code> z pliku <code>aSourceName</code>. Za dostarczenie tej linii odpowiada programista. Można także przekazać <code>null</code>, wówczas linia żródła nie zostanie wyświetlona w konsoli błędów.
+</li><li><code>aLineNumber</code> i <code>aColumnNumber</code> — określa dokładne położenie błędu. <code>aColumnNumber</code> wykorzystywany jest do wskazania strzałką problematycznego znaku.
+</li><li><code>aFlags</code> — jedna z flag określonych w <code>nsIScriptError</code>. W momencie tworzenia tego artykułu dostępnymi wartościami były: <code>nsIScriptError.errorFlag = 0</code>, <code>nsIScriptError.warningFlag = 1</code>, <code>nsIScriptError.exceptionFlag = 2</code> i <code>nsIScriptError.strictFlag = 4</code>.
+</li><li><code>aCategory</code> — tekst określający rodzaj kodu, który spowodował dany błąd. Istnieje kilka kategorii, ale nie ma jednego miejsca, w którym można by znależć je wszystkie. Mamy nadzieję, że kiedyś znajdą się w &lt;tt&gt;nsIScriptError.idl&lt;/tt&gt;.<span class="comment">tlumaczyc to?</span>
+</li></ul>
+{{ languages( { "fr": "fr/NsIConsoleService", "ja": "ja/NsIConsoleService", "en": "en/NsIConsoleService" } ) }}

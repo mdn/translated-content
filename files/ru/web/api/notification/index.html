@@ -1,0 +1,378 @@
+---
+title: Уведомление
+slug: Web/API/notification
+translation_of: Web/API/Notification
+---
+<p> </p>
+
+<p>{{APIRef("Web Notifications")}}</p>
+
+<p>Интерфейс <code>Notification</code> из <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> используется для настройки и отображения уведомлений на рабочий стол пользователя.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Конструктор">Конструктор</h2>
+
+<dl>
+ <dt>{{domxref("Notification.Notification", "Notification()")}}</dt>
+ <dd>Создает новый экземпляр объекта <code>Notification</code>.</dd>
+</dl>
+
+<h2 id="Свойства">Свойства</h2>
+
+<h3 id="Собственные_свойства">Собственные свойства</h3>
+
+<p>Следующие свойства доступны только для самого объекта <code>Notification</code>.</p>
+
+<dl>
+ <dt>{{domxref("Notification.permission")}} {{readonlyinline}}</dt>
+ <dd>Строка, показывающая текущие права доступа для отображения уведомлений. Возможные значения:</dd>
+</dl>
+
+<ul>
+ <li><code>denied</code> - Пользователь отказался от отображения уведомлений.</li>
+ <li><code>granted</code> - Пользователь дал согласие на отображение уведомлений.</li>
+ <li><code>default</code> - Выбор пользователя неизвестен, и поэтому браузер будет действовать так, как если бы значение было <code>denied</code></li>
+</ul>
+
+<h3 id="Свойства_экземпляра">Свойства экземпляра</h3>
+
+<p>Следующие свойства доступны только для экземпляров объекта <code>Notification</code>.</p>
+
+<dl>
+ <dt>{{domxref("Notification.actions")}} {{readonlyinline}}</dt>
+ <dd>Массив действий уведомления, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.badge")}} {{readonlyinline}}</dt>
+ <dd>URL изображения, используемого для отображения уведомления в случае, если недостаточно места для самого уведомления.</dd>
+ <dt>{{domxref("Notification.body")}} {{readonlyinline}}</dt>
+ <dd>Основное тело (текст) уведомления, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
+ <dd>Возвращает структурированную копию содержания уведомления.</dd>
+ <dt>{{domxref("Notification.dir")}} {{readonlyinline}}</dt>
+ <dd>Направление текста уведомления, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.lang")}} {{readonlyinline}}</dt>
+ <dd>Код языка уведомления, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.tag")}} {{readonlyinline}}</dt>
+ <dd>Инденцификатор (ID) уведомления, если есть, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
+ <dd>URL изображения, используемого в качестве иконки уведомления, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.image")}} {{readonlyinline}}</dt>
+ <dd>URL изображения, которое должно быть изображено в уведомлении, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
+ <dd>Определяет, должен ли пользователь снова быть уведомлен, если новое уведомление заменяет предыдущее.</dd>
+</dl>
+
+<p> </p>
+
+<dl>
+ <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
+ <dd><a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Boolean">Булево значение</a>, отражающее, останется ли уведомление активным до тех пор, пока пользователь вручную не кликнет или не закроет его, в противоположность автоматическому закрытию со временем. </dd>
+ <dt>{{domxref("Notification.silent")}} {{readonlyinline}}</dt>
+ <dd>Указывает, должно ли уведомление не сопровождаться звуковым или вибро сигналом, независимо от настроек устройства.</dd>
+</dl>
+
+<p> </p>
+
+<dl>
+ <dt>{{domxref("Notification.timestamp")}} {{readonlyinline}}</dt>
+ <dd>Указывает время, в которое уведомление создано, либо применимо (в прошлом, настоящем или будущем).</dd>
+ <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
+ <dd>Заголовок уведомления, указывается в опциях как параметр конструктора.</dd>
+ <dt>{{domxref("Notification.vibrate")}} {{readonlyinline}}</dt>
+ <dd>Задает шаблон вибрации для устройств с вибро.</dd>
+</dl>
+
+<h4 id="Не_поддерживаемые_свойства">Не поддерживаемые свойства</h4>
+
+<p>Следующие свойства указаны в наиболее актуальной спецификации, но пока что не поддерживаются браузерами. Рекомендуем регулярно проверять актуальность этой информации, и если их статус изменится, пожалуйста, просим оповестить нас.</p>
+
+<dl>
+ <dt>
+ <p>{{domxref("Notification.noscreen")}} {{readonlyinline}}</p>
+ </dt>
+ <dd>Определяет, должно ли срабатывание уведомления включать дисплей устройства или нет.</dd>
+ <dt>{{domxref("Notification.sticky")}} {{readonlyinline}}</dt>
+ <dd>Определяет, должно ли уведомление быть "липким", то есть не легко закрываемым.</dd>
+</dl>
+
+<h4 id="Обработчики_событий">Обработчики событий</h4>
+
+<dl>
+ <dt>{{domxref("Notification.onclick")}}</dt>
+ <dd>Обработчик события {{event("click")}}. Срабатывает каждый раз, когда пользователь кликает по уведомлению.</dd>
+ <dt>{{domxref("Notification.onerror")}}</dt>
+ <dd>Обработчик события {{event("error")}}. Срабатывает каждый раз, когда уведомление сталкивается с ошибкой. </dd>
+</dl>
+
+<h4 id="Устаревшие_обработчики_событий">Устаревшие обработчики событий</h4>
+
+<p>Следующие обработчики событий все еще поддерживаются, как указано в разделе {{anch("browser compatibility")}} ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.</p>
+
+<dl>
+ <dt>{{domxref("Notification.onclose")}}</dt>
+ <dd>Обработчик события {{event("close")}}. Срабатывает при закрытии уведомления пользователем.</dd>
+ <dt>{{domxref("Notification.onshow")}}</dt>
+ <dd>Обработчик события {{event("show")}}. Срабатывает при отображении уведомления.</dd>
+ <dt>{{domxref("Notification.sound")}} {{readonlyinline}}</dt>
+ <dd>Определяет звуковой файл для воспроизведения при уведомлении, по умолчанию установлен системный звук.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<h3 id="Собственные_методы">Собственные методы</h3>
+
+<p>Следующие методы доступны только для самого объекта <code>Notification</code>.</p>
+
+<dl>
+ <dt>{{domxref("Notification.requestPermission()")}}</dt>
+ <dd>Запрашивает разрешение у пользователя показывать уведомления.</dd>
+</dl>
+
+<h3 id="Методы_экземпляра">Методы экземпляра</h3>
+
+<p>Следующие методы доступны только для экземпляров объекта <code>Notification</code>, либо через его <code><a href="/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">прототип</a></code>. Объект <code>Notification</code> также наследует методы интерфейса {{domxref("EventTarget")}}.</p>
+
+<dl>
+ <dt>{{domxref("Notification.close()")}}</dt>
+ <dd>Программно закрывает уведомление.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Базовый HTML:</p>
+
+<pre class="brush: html">&lt;button onclick="notifyMe()"&gt;Notify me!&lt;/button&gt;</pre>
+
+<p>Отправить уведомление можно следующим образом — ниже представлен довольно подробный и полный набор кода, который вы могли бы использовать для того, чтобы сначала проверить поддержку уведомлений, затем проверить, позволено ли данному источнику отправлять уведомления, и наконец, запросив разрешение, если требуется, отправить уведомление.</p>
+
+<pre class="brush: js">function notifyMe() {
+  // Проверка поддержки браузером уведомлений
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+
+  // Проверка разрешения на отправку уведомлений
+  else if (Notification.permission === "granted") {
+    // Если разрешено, то создаем уведомление
+    var notification = new Notification("Hi there!");
+  }
+
+  // В противном случае, запрашиваем разрешение
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      // Если пользователь разрешил, то создаем уведомление
+      if (permission === "granted") {
+        var notification = new Notification("Hi there!");
+      }
+    });
+  }
+
+  // В конечном счете, если пользователь отказался от получения
+  // уведомлений, то стоит уважать его выбор и не беспокоить его
+  // по этому поводу.
+}</pre>
+
+<p>{{EmbedLiveSample('%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80', '100%', 30)}}</p>
+
+<p>В большинстве случаев вам не надо быть столь многословными. Например в нашем <a href="http://mdn.github.io/emogotchi/">демо Emogotchi</a> (<a href="https://github.com/mdn/emogotchi">исходный код</a>), мы просто запускаем {{domxref("Notification.requestPermission")}} несмотря ни на что, чтобы быть уверенными, что мы сможем получить разрешение на отправку уведомлений (тут используется синтаксис новейшего promise-based метода):</p>
+
+<pre class="brush: js"><code>Notification.requestPermission().then(function(result) {
+  console.log(result);
+});</code></pre>
+
+<p>Затем мы запускаем простую функцию <code>spawnNotification()</code>, когда мы хотим вывести уведомление, передающую аргументы для указания тела, иконки и заголовка, которые нам нужны, а затем она создает необходимый объект параметров <code>options</code> и запускает уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}.</p>
+
+<pre class="brush: js"><code>function spawnNotification(body, icon, title) {
+  var options = {
+      body: body,
+      icon: icon
+  };
+  var n = new Notification(title, options);
+}</code></pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table>
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Notifications')}}</td>
+   <td>{{Spec2('Web Notifications')}}</td>
+   <td>Уровень жизни </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
+    22</td>
+   <td>4.0 {{property_prefix("moz")}}<sup>[2]</sup><br>
+    22</td>
+   <td>{{CompatNo}}</td>
+   <td>25</td>
+   <td>6<sup>[3]</sup></td>
+  </tr>
+  <tr>
+   <td><code>icon</code></td>
+   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
+    22</td>
+   <td>4.0 {{property_prefix("moz")}}<sup>[2]</sup><br>
+    22</td>
+   <td>{{CompatNo}}</td>
+   <td>25</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("41.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>silent</code></td>
+   <td>{{CompatChrome(43.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>noscreen</code>, <code>renotify</code>, <code>sound</code>, <code>sticky</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>{{CompatVersionUnknown}}</p>
+   </td>
+   <td>4.0{{property_prefix("moz")}}<sup>[2]</sup><br>
+    22</td>
+   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
+    1.2</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>
+    <p>{{CompatVersionUnknown}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>icon</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>4.0{{property_prefix("moz")}}<sup>[2]</sup><br>
+    22</td>
+   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
+    1.2</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("41.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>silent</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(43.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(43.0)}}</td>
+  </tr>
+  <tr>
+   <td><code>noscreen</code>, <code>renotify</code>, <code>sound</code>, <code>sticky</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>[1] Before Chrome 22, the support for notification followed an <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">old prefixed version of the specification</a> and used the {{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} object to instantiate a new notification.</p>
+
+<p>До Chrome 32, {{domxref("Notification.permission")}} не поддерживается.</p>
+
+<p>До Chrome 42, дополнения service worker не поддерживаются.</p>
+
+<p>[2] Prior to Firefox 22 (Firefox OS &lt;1.2), the instantiation of a new notification must be done with the {{domxref("window.navigator.mozNotification", "navigator.mozNotification")}} object through its <code>createNotification</code> method.</p>
+
+<p>Prior to Firefox 22 (Firefox OS &lt;1.2), the Notification was displayed when calling the <code>show</code> method and supported only the <code>click</code> and <code>close</code> events.</p>
+
+<p>Nick Desaulniers написал <a href="https://github.com/nickdesaulniers/fxos-irc/blob/master/js/notification.js">Notification shim</a>, чтобы покрыть как новые так и старые реализации.</p>
+
+<p>One particular Firefox OS issue is that you can <a href="https://github.com/nickdesaulniers/fxos-irc/blob/0160cf6c3a2b5c9fe33822aaf6bcba3b7e846da9/my.js#L171">pass a path to an icon</a> to use in the notification, but if the app is packaged you cannot use a relative path like <code>/my_icon.png</code>. You also can't use <code>window.location.origin + "/my_icon.png"</code> because <code>window.location.origin</code> is null in packaged apps. The <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#origin">manifest origin field</a> fixes this, but it is only available in Firefox OS 1.1+. A potential solution for supporting Firefox OS &lt;1.1 is to <a href="https://github.com/nickdesaulniers/fxos-irc/blob/0160cf6c3a2b5c9fe33822aaf6bcba3b7e846da9/my.js#L168">pass an absolute URL to an externally hosted version of the icon</a>. This is less than ideal as the notification is displayed immediately without the icon, then the icon is fetched, but it works on all versions of Firefox OS.</p>
+
+<p>When using notifications  in a Firefox OS app, be sure to add the <code>desktop-notification</code> permission in your manifest file. Notifications can be used at any permission level, hosted or above: <code>"permissions": { "desktop-notification": {} }</code></p>
+
+<p>[3] Safari начали поддержку уведомлений с Safari 6, но только на Mac OSX 10.8+ (Mountain Lion).</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
+</ul>
+
+<p> </p>
+
+<ul>
+ <li> </li>
+</ul>

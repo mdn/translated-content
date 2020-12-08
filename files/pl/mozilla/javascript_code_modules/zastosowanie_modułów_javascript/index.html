@@ -1,0 +1,86 @@
+---
+title: Zastosowanie modułów JavaScript
+slug: Mozilla/JavaScript_code_modules/Zastosowanie_modułów_JavaScript
+translation_of: Mozilla/JavaScript_code_modules/Using
+---
+<p>
+{{ Fx_minversion_header(3) }}
+</p><p>Moduły JavaScript zostały wprowadzone w Firefoksie 3 (Gecko 1.9) i służą do udostępniania kodu pomiędzy różnymi zakresami kodu uprzywilejowanego. Za pomocą modułów można także utworzyć globalne obiekty typu singleton, co dotychczas wymagało korzystania z obiektów JavaScript XPCOM. Moduł JavaScript to po prostu kod w języku JavaScript, umieszczony w zarejestrowanej lokalizacji. Moduł jest ładowany w ramach określonego zakresu JavaScript, takiego jak skrypt XUL lub skrypt JavaScript XPCOM, za pomocą metody <a href="pl/Components.utils.import">Components.utils.import</a>.
+</p><p>Poniżej przedstawiono przykład prostego modułu JavaScript:
+</p>
+<pre>EXPORTED_SYMBOLS = ["foo", "bar"]
+
+function foo() {
+  return "foo";
+}
+
+var bar = {
+  name : "bar",
+  size : "3"
+};
+
+var dummy = "dummy";
+</pre>
+<p>Do tworzenia funkcji, obiektów, stałych oraz dowolnych innych typów obiektów JavaScript stosowana jest zwykła składnia języka JavaScript. W module zdefiniowany jest także specjalny obiekt typu <code>Array</code> o nazwie <code>EXPORTED_SYMBOLS</code>. Każdy element kodu JavaScript umieszczony w tablicy <code>EXPORTED_SYMBOLS</code> zostanie wyeksportowany z modułu i dołączony do zakresu, do którego importowany jest moduł — na przykład:
+</p>
+<pre>Components.utils.import("resource://aplikacja/moduly/moj_modul.jsm");
+
+alert(foo());         // wyświetla "foo"
+alert(bar.size + 3);  // wyświetla "6"
+alert(dummy);         // wyświetla "dummy is not defined", ponieważ zmienna 'dummy' nie została wyeksportowana z modułu
+</pre>
+<p>Szczególnie istotną cechą działania metody <a href="pl/Components.utils.import">Components.utils.import</a> jest umieszczanie ładowanych modułów w pamięci podręcznej; przy kolejnych operacjach importu zamiast ładowania nowej wersji modułu używana jest wersja pobrana z pamięci podręcznej. W przypadku wielokrotnego importowania danego modułu jest on współużytkowany. Jakiekolwiek modyfikacje danych, obiektów lub funkcji są dostępne w każdym zakresie, do którego moduł został zaimportowany. Jeżeli na przykład do dwóch różnych zakresów JavaScript zostanie zaimportowany prosty moduł, zmiany dokonane w jednym zakresie będą widoczne w pozostałych zakresach.
+</p><p>Zakres 1:
+</p>
+<pre>Components.utils.import("resource://app/modules/moj_modul.jsm");
+
+alert(bar.size + 3);  // wyświetla "6"
+
+bar.size = 10;
+</pre>
+<p>Zakres 2:
+</p>
+<pre>Components.utils.import("resource://app/modules/moj_modul.jsm");
+
+alert(foo());         // wyświetla "foo"
+alert(bar.size + 3);  // wyświetla "13"
+</pre>
+<p>Możliwe jest tworzenie obiektów typu singleton, które mogą udostępniać dane do innych okien, skryptów XUL i komponentów XPCOM.
+</p>
+<h4 id="Protok.C3.B3.C5.82_resource:" name="Protok.C3.B3.C5.82_resource:"> Protokół resource: </h4>
+<p>W przykładach zastosowania metody <a href="pl/Components.utils.import">Components.utils.import</a> użyto protokołu "<a class=" external" rel="freelink">resource://</a>". Podstawową składnię adresu URL protokołu <code>resource</code> przedstawiono poniżej:
+</p>
+<pre class="eval"><a class=" external" rel="freelink">resource://</a>&lt;alias&gt;/&lt;ścieżka-względna&gt;/&lt;plik.js|jsm&gt;
+</pre>
+<p><code>&lt;alias&gt;</code> jest aliasem lokalizacji; zazwyczaj jest to fizyczna lokalizacją względna wobec aplikacji lub środowiska uruchomieniowego XUL. W środowisku uruchomieniowym XUL istnieją dwa wstępnie zdefiniowane aliasy: </p>
+<ul><li> <code>app</code> — alias lokalizacji aplikacji XUL.
+</li><li> <code>gre</code> — alias lokalizacji środowiska uruchomieniowego XUL.
+</li></ul>
+<p><code>&lt;ścieżka-względna&gt;</code> może zawierać wiele zagłębień i jest zawsze względna wobec lokalizacji określonej przez <code>&lt;alias&gt;</code>. Typowa ścieżka względna to "modules" — taka nazwa jest używana w środowisku XUL Runner i w programie Firefox. Moduły kodu to pliki JavaScript z rozszerzeniem .js lub .jsm. </p><p>Najprostszym sposobem dodania własnych aliasów w rozszerzeniach i aplikacjach XUL jest zarejestrowanie tych aliasów w <a href="pl/Rejestracja_Chrome">manifeście chrome</a> za pomocą poniższego kodu:
+</p>
+<pre class="eval">resource <i>nazwa_aliasu</i> <i>adres/url/plików/</i>
+</pre>
+<p>Własne aliasy można także w sposób programowy dodać do protokołu <code>resource</code>, na przykład:
+</p>
+<pre>var ioService = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.nsIIOService);
+var resProt = ioService.getProtocolHandler("resource")
+                       .QueryInterface(Components.interfaces.nsIResProtocolHandler);
+
+var aliasFile = Components.classes["@mozilla.org/file/local;1"]
+                          .createInstance(Components.interfaces.nsILocalFile);
+aliasFile.initWithPath("/bezwzględna/ścieżka");
+
+var aliasURI = ioService.newFileURI(aliasFile);
+resProt.setSubstitution("mojalias", aliasURI);
+
+// przyjęto założenie, że moduły kodu znajdują się w folderze określonym przez alias, a nie w podfolderach
+Components.utils.import("resource://mojalias/plik.jsm");
+
+// ...
+</pre>
+<p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Using_JavaScript_code_modules", "es": "es/Usando_m\u00f3dulos_de_c\u00f3digo_JavaScript", "fr": "fr/Utilisation_de_modules_de_code_JavaScript", "ja": "ja/Using_JavaScript_code_modules" } ) }}

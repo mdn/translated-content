@@ -1,0 +1,119 @@
+---
+title: TypedArray.BYTES_PER_ELEMENT
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
+tags:
+  - JavaScript
+  - TypedArray
+translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
+---
+<div>{{JSRef}}</div>
+
+<p>Свойство <code><strong>TypedArray.BYTES_PER_ELEMENT</strong></code> содержит размер в байтах каждого элемента типизированного массива.</p>
+
+<div>{{js_property_attributes(0,0,0)}}</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">TypedArray.BYTES_PER_ELEMENT;</pre>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Объекты TypedArray отличаются друг от друга числом байтов на каждый элемент и способом интерпретации байтов. Константа <code>BYTES_PER_ELEMENT</code> содержит число байтов, который имеет каждый из элементов в данном массиве.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush:js">Int8Array.BYTES_PER_ELEMENT;         // 1
+Uint8Array.BYTES_PER_ELEMENT;        // 1
+Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
+Int16Array.BYTES_PER_ELEMENT;        // 2
+Uint16Array.BYTES_PER_ELEMENT;       // 2
+Int32Array.BYTES_PER_ELEMENT;        // 4
+Uint32Array.BYTES_PER_ELEMENT;       // 4
+Float32Array.BYTES_PER_ELEMENT;      // 4
+Float64Array.BYTES_PER_ELEMENT;      // 8</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Описание</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Typed Array')}}</td>
+   <td>{{Spec2('Typed Array')}}</td>
+   <td>Заменено в ECMAScript 6.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение дано в ECMA-стандарте.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>7.0</td>
+   <td>{{ CompatGeckoDesktop("2") }}</td>
+   <td>10</td>
+   <td>11.6</td>
+   <td>5.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>4.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatGeckoMobile("2") }}</td>
+   <td>10</td>
+   <td>11.6</td>
+   <td>4.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
+ <li>{{jsxref("TypedArray")}}</li>
+</ul>

@@ -1,0 +1,116 @@
+---
+title: 'RegExp.prototype[@@search]()'
+slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
+tags:
+  - JavaScript
+  - Prototype
+  - Reference
+  - RegExp
+  - метод
+  - регулярные выражения
+translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
+---
+<div>{{JSRef}}</div>
+
+<p>Метод <strong><code>[@@search]()</code></strong> выполняет поиск совпадения между регулярным выражением <code>this</code> и строкой.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>regexp</var>[Symbol.search](str)</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>str</code></dt>
+ <dd>{{jsxref("String")}}, являющийся объектом поиска.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<dl>
+ <dt>integer</dt>
+ <dd>В случае успеха, <code>[@@search]()</code> вернёт индекс первого совпадения регулярного выражения внутри строки. В противном случае, он вернёт -1.</dd>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Этот метод вызывается внутрнее в {{jsxref("String.prototype.search()")}}. Например, два следующих примера вернут один и тот же результат.</p>
+
+<pre class="brush: js">'abc'.search(/a/);
+
+/a/[Symbol.search]('abc');</pre>
+
+<p>Этот метод существует для настройки поведения поиска в подклассах <code>RegExp</code>.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Прямой_вызов">Прямой вызов</h3>
+
+<p>Этот метод можно использовать почти так же, как {{jsxref("String.prototype.search()")}}, за исключением другого <code>this</code> и другого порядка аргументов.</p>
+
+<pre class="brush: js">var re = /-/g;
+var str = '2016-01-02';
+var result = re[Symbol.search](str);
+console.log(result);  // 4
+</pre>
+
+<h3 id="Используя_search_в_подклассах">Используя <code>@@search</code> в подклассах</h3>
+
+<p>Подкласс {{jsxref("RegExp")}} может быть перезаписан с помощью метода <code>[@@search]()</code> для изменения поведения.</p>
+
+<pre class="brush: js">class MyRegExp extends RegExp {
+  constructor(str) {
+    super(str)
+    this.pattern = str;
+  }
+  [Symbol.search](str) {
+    return str.indexOf(this.pattern);
+  }
+}
+
+var re = new MyRegExp('a+b');
+var str = 'ab a+b';
+var result = str.search(re); // String.prototype.search calls re[@@search].
+console.log(result); // 3
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>
+<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если Вы хотите дополнить эти данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам пулл-реквест.</div>
+
+<p>{{Compat("javascript.builtins.RegExp.@@search")}}</p>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("String.prototype.search()")}}</li>
+ <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
+ <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
+ <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
+ <li>{{jsxref("RegExp.prototype.exec()")}}</li>
+ <li>{{jsxref("RegExp.prototype.test()")}}</li>
+</ul>

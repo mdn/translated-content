@@ -1,0 +1,156 @@
+---
+title: Nadawanie stylu drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Nadawanie_stylu_drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Styling_a_Tree
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_arkuszy_stylów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Modyfikacja_domyślnego_motywu">Następny  »</a></p>
+</div> Opis jak stosujemy style w drzewach.<p></p>
+
+<h2 id="Nadawanie_stylu_drzewa" name="Nadawanie_stylu_drzewa">Nadawanie stylu drzewa</h2>
+
+<p>Możesz nadać style obramowaniu drzewa i nagłówkom kolumn, robiąc to w identyczny sposób jako osobne elementy. Dodanie stylu do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> będzie zastosowany w encji drzewa. Dodanie stylu do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> nie spowoduje, że styl znajdzie zastosowanie do kolumny, a tylko do nagłówka.</p>
+
+<p>Ciało drzewa musi być stylowane trochę w inny sposób, jak inne elementy. Zewnętrzny <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> jest tylko prawdziwym elementem w ciele drzewa. Wewnętrzny elementy są tylko do rezerwacji miejsca.</p>
+
+<h3 id="Ustawianie_w.C5.82asno.C5.9Bci" name="Ustawianie_w.C5.82asno.C5.9Bci">Ustawianie własności</h3>
+
+<p>Zamiast tego, musisz użyć <code><code id="a-properties"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/properties">properties</a></code></code> atrybutu wierszy i komórek, aby ustawić jedną lub więcej nazw właściwości. Możemy tego używać z drzewami z wartościami statycznymi, RDF buduje zawartość w podany sposób wraz z widokiem. Powiedzmy, że chcemy uzyskać szczególny pasek(wiersz(?)) o niebieskim kolorze tła. Zostało to zaimplementowane we właściwościach etykiety Mozilla Mail's. Będziemy używać własności nazwanej 'makeItBlue'. Możesz jej użyć zawsze, gdy potrzebujesz nazwy. Możesz ustawić wielokrotne własności oddzielając je za pomocą spacji.</p>
+
+<p>Ustaw własność wiersza lub komórki tabeli, jak jest to pokazane w poniższym przykładzie:</p>
+
+<pre>&lt;treerow properties="makeItBlue"&gt;
+</pre>
+
+<h3 id="Selektory_CSS_dla_drzewa" name="Selektory_CSS_dla_drzewa">Selektory CSS dla drzewa</h3>
+
+<p>Arkusze stylów potrafią pobierać tą własność i używać do zmiany wyglądu wiersza dla nieczytelnej wiadomości e-mail lub etykiety. Wymyśl właściwości jako funkcjonujące bardziej, niż klasa stylu, chociaż odpowiada ona czemuś więcej, kompleksowa składnia do użycia w pliku arkusza stylów. Jest tak ponieważ możesz wyszczególnić style dla pewnych części lub indywidualnych komórek. Nie możesz używać stylów dla tekstu, jeśli są one komórkami, ale złożone z wcięciem. Następujący przykład jest składnia, która musi być użyta:</p>
+
+<pre>treechildren::-moz-tree-row(makeItBlue)
+{
+  background-color: blue;
+}
+</pre>
+
+<p>Ten dodatkowy pseudostyl jest użyty do stylowania kolorem tła dla wiersza, który ma własność 'makeItBlue'. Ta specjalna składnia jest potrzebna ponieważ komórki nie potrafią rozdzielić elementów. Cała zawartość wewnątrz ciała drzewa, jest interpretowane przez element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> (uwaga <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> się staje sformatowany stylami w zasadzie poniżej.) Pseudostyl ustawia zasady stylów dla określonych części, co ma zostać wyświetlone. Ta zasada stylów znaczy, że wewnątrz element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>, ustawia kolor tła na niebieski dla wszystkich wierszy drzewa mających własność 'makeItBlue'.</p>
+
+<p>Tekst '<code>::-moz-tree-row</code>' określa zawartość obszaru jaki jest potrzebny, który w tym przypadku jest wierszem. Możesz także użyć następujących wartości:</p>
+
+<ul>
+ <li><code>::-moz-tree-cell:</code> Komórka. Użyj do określenia obramowania i koloru tła.</li>
+ <li><code>::-moz-tree-cell-text:</code> Tekst w komórce. Użyj do ustawienia czcionki i koloru tekstu.</li>
+ <li><code>::-moz-tree-twisty:</code> Pojawienie się zwoju uzyskamy rozszerzenie lub upadek potomka wiersza.</li>
+ <li><code>::-moz-tree-image:</code> Obrazek w komórce. Możesz ustawić obrazek z własnościami <code><a href="pl/CSS/list-style-image">list-style-image</a></code>.</li>
+ <li><code>::-moz-tree-row:</code> Wiersz. Użyj go aby ustawić kolor tła wiersza.</li>
+ <li><code>::-moz-tree-indentation<b>:</b></code> Wcięcie do lewej strony wierszy są potomkami reszty wierszy.</li>
+ <li><code>::-moz-tree-column<b>:</b></code> Kolumna.</li>
+ <li><code>::-moz-tree-line:</code> Linie są rysowane z połączenie potomka-dziecka wiersza do wiersza potomka-rodzica.</li>
+ <li><code>::-moz-tree-separator:</code> Separator w drzewie.</li>
+ <li><code>::-moz-tree-progressmeter:</code> Wartość metra postępu komórek. Możesz utworzyć metr postępu poprzez ustawienia atrybutu <code>type</code> w kolumnie <code>progressmeter</code>.</li>
+ <li><code>::-moz-tree-drop-feedback:</code> Sprzężenie zwrotne 'chwyć i upuść'.</li>
+</ul>
+
+<p>Sprawdź użycie kilku własności oddzielając je przecinkiem. Przykład poniżej ustawia kolor tła na szary dla wierszy, które posiadają określoną właściwość 'readonly' i 'unread'. Dla własności, które są 'readonly' (tylko do odczytu), zostanie dodana czerwona linia obramowania wokoło wiersza. Ważna jest, kolejność określania zasad i ich zapisanie jako jakiś wiersz, który posiada atrybut 'readonly' ustawiony bez względu na to czy są inne własności takie jak 'unread'.</p>
+
+<pre>treechildren::-moz-tree-row(readonly)
+{
+  border: 1px solid red;
+}
+
+treechildren::-moz-tree-row(readonly, unread)
+{
+  background-color: rgb(80%, 80%, 80%);
+}
+</pre>
+
+<h3 id="Domy.C5.9Blne_w.C5.82asno.C5.9Bci" name="Domy.C5.9Blne_w.C5.82asno.C5.9Bci">Domyślne własności</h3>
+
+<p>Lista właściwości dla elementów stanowiących drzewo jest domyślnie bardzo mała dla domyślnych ustawień, które można także użyć jako arkusze stylów. Możemy używać tych dodatkowych właściwości do ustawienia appearance of containers or selected rows. The following properties are automatically set as needed:</p>
+
+<dl>
+ <dt>focus</dt>
+ <dd>ta własność jest ustawiona jeśli the tree currently has the focus.</dd>
+ <dt>selected</dt>
+ <dd>ta własność jest ustawiona dla wierszy i komórek, które są aktualnie zaznaczone.</dd>
+ <dt>current</dt>
+ <dd>ta własność jest ustawiona jeśli tkursor jest w wierszu. Tylko jeden wiersz będzie miał ustawioną własność na czas.</dd>
+ <dt>container</dt>
+ <dd>ta własność jest ustawiona dla wierszy i komórek posiadających, który element dziedziczył z wiersza tabeli.</dd>
+ <dt>leaf</dt>
+ <dd>ta własność jest ustawiona dla wierszy i komórek których nie ma potomek wiersza.</dd>
+ <dt>open</dt>
+ <dd>ta własność jest ustawiona dla wierszy i komórek które są expanded.</dd>
+ <dt>closed</dt>
+ <dd>ta własność jest ustawiona dla wierszy i komórek które są zawinięte.</dd>
+ <dt>primary</dt>
+ <dd>ta własność jest ustawiona dla komórek w primary column.</dd>
+ <dt>sorted</dt>
+ <dd>ta własność jest ustawiona dla komórek w the current sorted column.</dd>
+ <dt>even</dt>
+ <dd>ta własność jest ustawiona dla even numbered rows.</dd>
+ <dt>odd</dt>
+ <dd>ta własność jest ustawiona dla odd numbered rows. This property, along with the even property allow you to set, dla przykładu, alternating colors for each row.</dd>
+ <dt>dragSession</dt>
+ <dd>ta własność jest ustawiona jeśli coś something is currently being dragged.</dd>
+ <dt>dropOn</dt>
+ <dd>if a drag is occuring over the tree, ta własność jest ustawiona dla the row currently being dragged over, as long as the mouse pointer is hovering over the row.</dd>
+ <dt>dropBefore</dt>
+ <dd>ta własność jest ustawiona jeśli kursor myszki ...</dd>
+ <dt>dropAfter</dt>
+ <dd>ta własność jest ustawiona jeśli kursor myszki jest nad lub pod jest kursor myszki jest przed obecną męką.</dd>
+ <dt>progressNormal</dt>
+ <dd>ta własność jest ustawiona dla progress meter cells.</dd>
+ <dt>progressUndetermined</dt>
+ <dd>ta własność jest ustawiona dla undeterminate progress meter cells.</dd>
+ <dt>progressNone</dt>
+ <dd>ta własność jest ustawiona dla non-progress meter cells.</dd>
+</dl>
+
+<p>The properties are set for rows or cells in rows with the necessary state. For columns and cells, one additional property, the id of the column or column the cell is in will be set.</p>
+
+<h3 id="Ustawienie_w.C5.82asno.C5.9Bci_dla_kompilacji_drzew_RDF" name="Ustawienie_w.C5.82asno.C5.9Bci_dla_kompilacji_drzew_RDF">Ustawienie własności dla kompilacji drzew RDF</h3>
+
+<p>Dla zbudowania drzewa RDF, możemy użyć tej samej składni. Jednakże, często będziesz musiał ustawiać właściwości opartych na wartościach znajdujących się w kodzie źródłowym.</p>
+
+<h3 id="Ustawienie_w.C5.82asno.C5.9Bci_dla_W.C5.82asnego_widoku_drzewa" name="Ustawienie_w.C5.82asno.C5.9Bci_dla_W.C5.82asnego_widoku_drzewa">Ustawienie własności dla Własnego widoku drzewa</h3>
+
+<p>For trees with a custom view script, you can set properties by supplying the functions 'getRowProperties', <code>getColumnProperties()</code> and <code>getCellProperties()</code> in the view. These return information about an individual row, column and cell. Arguments to these functions indicate which row and/or column. The last argument to each of these functions is a properties list which the view is expected to fill with a list of properties. The function <code>getColumnProperties()</code> also supplies the corresponding <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> element for the column.</p>
+
+<pre>getRowProperties : function(row,prop){}
+getColumnProperties : function(column,columnElement,prop){}
+getCellProperties : function(row,column,prop){}
+</pre>
+
+<p>Let's look at an example of changing a specific cell. Let's make every fourth row have blue text, using the example from a previous section. We'll need to add code to the <code>getCellProperties()</code> function, to add a property 'makeItBlue' for cells in every fourth row. (We don't use getRowProperties as the text color will not be inherited into each cell.)</p>
+
+<p>The properties object that is passed as the last argument to the getCellProperties is an <a href="pl/XPCOM">XPCOM</a> object that implements nsISupportsArray. It is really just an XPCOM version of an array. It contains a function AppendElement which can be used to add an element to the array. We can use the interface nsIAtomService to constuct string atoms for the properties.</p>
+
+<pre>getCellProperties: function(row,col,props){
+  if ((row %4) == 0){
+    var aserv=Components.classes["@mozilla.org/atom-service;1"].
+              getService(Components.interfaces.nsIAtomService);
+    props.AppendElement(aserv.getAtom("makeItBlue"));
+  }
+}
+</pre>
+
+<p>This function would be defined as part of a view object. It first checks to see which row is being requested and sets a property for cells in every fourth row. The properties list requires an array of atom objects, which can be thought of as constant strings. We create them using the XPCOM interface nsIAtomService and add them to the array using the AppendElement function. Here, we create an atom 'makeItBlue'. You can call AppendElement again to add additional properties.</p>
+
+<h3 id="Przyk.C5.82ad_arkusza_styl.C3.B3w" name="Przyk.C5.82ad_arkusza_styl.C3.B3w">Przykład arkusza stylów</h3>
+
+<pre>treechildren::-moz-tree-row(selected)            { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd)                 { background-color: #EEEEEE; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(selected)      { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+</pre>
+
+<p>Na następnej stronie zobaczymy w jaki <a href="pl/Kurs_XUL/Modyfikacja_domy%c5%9blnego_motywu">sposób zmodyfikować domyślny motyw</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_arkuszy_stylów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Modyfikacja_domyślnego_motywu">Następny  »</a></p>
+</div><p></p>

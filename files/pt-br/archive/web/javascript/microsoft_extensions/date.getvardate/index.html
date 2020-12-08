@@ -1,0 +1,40 @@
+---
+title: Date.getVarDate()
+slug: Archive/Web/JavaScript/Microsoft_Extensions/Date.getVarDate
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Date.getVarDate
+---
+<div>{{JSRef("Global_Objects","Date")}}{{Non-standard_Header}}{{Obsolete_Header}}
+<div class="warning"><strong>Warning: </strong><span style="font-size: 1.125rem;">This method is supported in Internet Explorer only.</span></div>
+</div>
+
+<p>The <strong><code>getVarDate</code> method</strong> returns a <code>VT_DATE</code> value from a {{JSxRef("Date")}} object.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="notranslate"><code>dateObj.getVarDate()
+</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>The required <code>dateObj</code> reference is a <code>Date</code> object.</p>
+
+<h3 id="Return_Value">Return Value</h3>
+
+<p>Returns a VT_DATE value.</p>
+
+<h3 id="Remarks">Remarks</h3>
+
+<p>The <code>getVarDate()</code> method is used when JavaScript code interacts with COM objects, ActiveX objects, or other objects that accept and return date values in VT_DATE format. These include objects in Visual Basic and Visual Basic Scripting Edition (VBScript). The actual format of the returned value depends on regional settings.</p>
+
+<h2 id="Requirements">Requirements</h2>
+
+<p>Supported in the following document modes: Quirks, Internet Explorer 6 standards, Internet Explorer 7 standards, Internet Explorer 8 standards, Internet Explorer 9 standards, and Internet Explorer 10 standards. Not supported in Windows 8.x Store apps.</p>
+
+<p><strong>Applies To</strong>: <a href="https://docs.microsoft.com/en-us/scripting/javascript/reference/date-object-javascript">Date Object</a></p>
+
+<h2 id="See_Also">See Also</h2>
+
+<ul>
+ <li>{{JSxRef("Date.getDate()")}}</li>
+ <li>{{JSxRef("Date.parse()")}}</li>
+</ul>

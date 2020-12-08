@@ -1,0 +1,56 @@
+---
+title: criar plugin de busca para mozilla firefox
+slug: criar_plugin_de_busca_para_firefox
+tags:
+  - criar pesquisa firefox
+  - pesquisa firefox
+  - plugin de pesquisa
+  - xml pesquisa
+translation_of: Mozilla/Creating_MozSearch_plugins
+---
+<p>Firefox 2 usos uma forma simplificada do <a class="external" href="http://opensearch.org/">OpenSearch</a> formate por armazenar plugins de procura. Um MozSearch procura plugin é um arquivo de XML que descreve a máquina de procura, sua URL, e os parâmetros que precisam ser passada àquela URL.</p>
+<div class="warning">
+  <b>Atenção:</b> MozSearch é sem padrão e é planejado para uso interno dentro de Mozilla só projeta. Só deveria ser usado se sua intenção for distribuir o plugin de procura empacotado dentro um <a href="en/Bundles#Application-specific_Extension_Files">Extensão de Firefox</a>, ou se você está criando que plugins significaram ser transportados através de falta em uma construção de Firefox. Por criar plugins de procura para instalação da teia, veja <a href="en/Creating_OpenSearch_plugins_for_Firefox">Criando OpenSearch plugins para Firefox</a></div>
+<h2 id="The_plugin_file" name="The_plugin_file">O plugin arquivam</h2>
+<p>O formato de MozSearch é semelhante para o <a href="en/Creating_OpenSearch_plugins_for_Firefox">OpenSearch</a> formato. A única diferença é o elemento de raiz e namespace de XML.</p>
+<h2 id="Example:_searching_Yahoo.21" name="Example:_searching_Yahoo.21">Exemplo: procurando o Yahoo!</h2>
+<p>O XML seguinte é o Firefox empacotado 2 plugin de procura por usar procurar o Yahoo!:</p>
+<pre>&lt;SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/"&gt;
+&lt;ShortName&gt;Yahoo&lt;/ShortName&gt;
+&lt;Description&gt;Yahoo Search&lt;/Description&gt;
+&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,R0lGODlhEAAQAJECAP8AAAAAAP///wAAACH5BAEAAAIALAAAAAAQABAAAAIplI+py+0NogQuyBDEnEd2kHkfFWUamEzmpZSfmaIHPHrRguUm/fT+UwAAOw==&lt;/Image&gt;
+&lt;Url type="application/x-suggestions+json" method="GET"
+     template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;amp;command={searchTerms}" /&gt;
+&lt;Url type="text/html" method="GET" template="http://search.yahoo.com/search"&gt;
+  &lt;Param name="p" value="{searchTerms}"/&gt;
+  &lt;Param name="ei" value="UTF-8"/&gt;
+
+  &lt;MozParam name="fr" condition="pref" pref="yahoo-fr" /&gt;
+&lt;/Url&gt;
+&lt;SearchForm&gt;http://search.yahoo.com/&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+<p>Digamos o usuário escolhe usar o Yahoo! procure plugin de máquina e entra " em mozilla " na caixa de procura e imprensas o entre em chave. Firefox usará a anterior descrição de máquina de procura para construir a URL de procura seguinte:</p>
+<pre class="eval"><span class="nowiki">http://search.yahoo.com/search?p=mozilla&amp;ei=UTF-8&amp;fr=moz2</span>
+</pre>
+<p>Se o usuário clica o ícone de lupa na barra de procura, ou escolhe a Web Procura opção no cardápio de Ferramentas quando a barra de procura não for visível, o browser os levará &lt;tt&gt;<span class="nowiki">http://search.yahoo.com/</span>&lt;/tt&gt;, o valor do <code>&lt;SearchForm&gt;</code> elemento.</p>
+<h2 id="Example:_searching_MDC" name="Example:_searching_MDC">Exemplo: Buscando o MDC</h2>
+<p>Este plugin o deixa procurar facilmente o Mozilla Fomentador Centro teia local.</p>
+<pre>&lt;SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/"&gt;
+&lt;ShortName&gt;MDC&lt;/ShortName&gt;
+&lt;Description&gt;Mozilla Developer Center search&lt;/Description&gt;
+&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAABGdBTUEAAK%2FINwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHWSURBVHjaYvz%2F%2Fz8DJQAggJiQOe%2Ffv2fv7Oz8rays%2FN%2BVkfG%2FiYnJfyD%2F1%2BrVq7ffu3dPFpsBAAHEAHIBCJ85c8bN2Nj4vwsDw%2F8zQLwKiO8CcRoQu0DxqlWrdsHUwzBAAIGJmTNnPgYa9j8UqhFElwPxf2MIDeIrKSn9FwSJoRkAEEAM0DD4DzMAyPi%2FG%2BQKY4hh5WAXGf8PDQ0FGwJ22d27CjADAAIIrLmjo%2BMXA9R2kAHvGBA2wwx6B8W7od6CeQcggKCmCEL8bgwxYCbUIGTDVkHDBia%2BCuotgACCueD3TDQN75D4xmAvCoK9ARMHBzAw0AECiBHkAlC0Mdy7x9ABNA3obAZXIAa6iKEcGlMVQHwWyjYuL2d4v2cPg8vZswx7gHyAAAK7AOif7SAbOqCmn4Ha3AHFsIDtgPq%2FvLz8P4MSkJ2W9h8ggBjevXvHDo4FQUQg%2FkdypqCg4H8lUIACnQ%2FSOBMYI8bAsAJFPcj1AAEEjwVQqLpAbXmH5BJjqI0gi9DTAAgDBBCcAVLkgmQ7yKCZxpCQxqUZhAECCJ4XgMl493ug21ZD%2BaDAXH0WLM4A9MZPXJkJIIAwTAR5pQMalaCABQUULttBGCCAGCnNzgABBgAMJ5THwGvJLAAAAABJRU5ErkJggg%3D%3D&lt;/Image&gt;
+&lt;Url type="text/html" method="GET" template="http://developer.mozilla.org/en/docs/Special:Search?search={searchTerms}"/&gt;
+&lt;SearchForm&gt;http://developer.mozilla.org/en/docs/Special:Search&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+<p>Note neste caso que em vez de usar <code>&lt;Param&gt;</code> para definir parâmetros à máquina de procura, eles são embutidos simplesmente dentro da URL de modelo. Este é de fato o modo preferido para fazer coisas ao usar <code>GET</code> como o método. <code>&lt;Param&gt;</code> deveria ser usada para <code>POST</code>.</p>
+<h2 id="See_also" name="See_also">Também veja</h2>
+<ul>
+  <li><a href="en/Creating_OpenSearch_plugins_for_Firefox#Troubleshooting_Tips">Search plugin troubleshooting tips</a></li>
+</ul>
+<div class="noinclude">
+   </div>
+<p>{{ languages( { "ca": "ca/Creaci\u00f3_de_connectors_MozSearch", "es": "es/Creaci\u00f3n_de_plugins_MozSearch", "fr": "fr/Cr\u00e9ation_de_plugins_MozSearch", "it": "it/Creare_Plugin_MozSearch", "ja": "ja/Creating_MozSearch_plugins", "pl": "pl/Tworzenie_wtyczek_MozSearch", "zh-tw": "zh_tw/\u88fd\u4f5c_MozSearch_\u641c\u5c0b\u6a21\u7d44" } ) }}</p>

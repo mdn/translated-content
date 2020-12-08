@@ -1,0 +1,95 @@
+---
+title: Okna otwierania i zapisywania plików
+slug: Mozilla/Tech/XUL/Kurs_XUL/Okna_otwierania_i_zapisywania_plików
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Open_and_Save_Dialogs
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_okien_dialogowych" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_kreatora">Następny  »</a></p>
+</div><p></p>
+
+<p>Często spotykanym typem okien są takie, z których użytkownik ma możliwość otwierania lub zapisywana plików.</p>
+
+<h2 id="Wyb.C3.B3r_pliku" name="Wyb.C3.B3r_pliku">Wybór pliku</h2>
+
+<p>Okno wyboru pliku jest najczęściej używane przy komendach z menu 'Otwórz' i 'Zapisz', ale można też go użyć w innym miejscu, kiedykolwiek użytkownik potrzebuje wybrać plik. Interfejs <a href="pl/XPCOM">XPCOM</a> <a href="pl/NslFilePicker">nslFilePicker</a> jest używany w celu zaimplementowania okna wyboru pliku.</p>
+
+<div class="note">Note that the file picker only works from chrome URLs.</div>
+
+<p>Można użyć tego okna w trzech trybach:</p>
+
+<ul>
+ <li><strong>Otwórz</strong> - użytkownik jest proszony o wybór pliku do otwarcia</li>
+ <li><strong>Pobierz folder</strong> - użytkownik jest proszony o wybór katalogu (folderu)</li>
+ <li><strong>Zapisz</strong> - użytkownik jest proszony o wybór nazwy w celu zachowania pliku</li>
+</ul>
+
+<p>Wygląd okna jest inny dla każdego z powyższych typów i dodatkowo różni się w zależności od platformy. Kiedy użytkownik wybierze plik lub folder, wtedy można z niego czytać lub do niego zapisywać.</p>
+
+<p>Interfejs okna wyboru pliku <a href="pl/NslFilePicker">nslFilePicker</a> jest odpowiedzialny za wyświetlanie okna w jednym z trzech modów. Można ustawić kilka cech tego okna za pomocą wspomnianego interfejsu. Kiedy okno zostanie zamknięte, można użyć funkcji interfejsu, aby pobrać wybrany plik.</p>
+
+<h3 id="Tworzenie_okna_do_wyboru_pliku" name="Tworzenie_okna_do_wyboru_pliku">Tworzenie okna do wyboru pliku</h3>
+
+<p>Na początek należy stworzyć komponent okna do wyboru pliku i zainicjować go.</p>
+
+<pre>var nsIFilePicker = Components.interfaces.nsIFilePicker;
+var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+fp.init(window, "Select a File", nsIFilePicker.modeOpen);
+</pre>
+
+<p>Najpierw, tworzymy nowy obiekt "wybieracza pliku", który jest przechowywany w zmiennej "fp". Funkcja "init" jest używana w celu inicjalizacji "wybieracza". Funkcja ta ma 3 argumenty: okno macierzyste, które otwiera okno wyboru, tytuł okna wyboru i jego mod. W przykładzie powyżej mod to "modeOpen", którego używamy dla okna wyboru otwieranego pliku. Można też użyć modu <code>modeGetFolder</code> i <code>modeSave</code>. Te tryby to stałe interfejsu <code>nsIFilePicker</code>.</p>
+
+<h3 id="Default_directory_and_filters" name="Default_directory_and_filters">Default directory and filters</h3>
+
+<p>Istnieją dwie cechy okna wyboru, które można ustawić przed jego wyświetleniem.</p>
+
+<ul>
+ <li>Pierwsza to domyślny folder, który otwiera się w momencie otwarcia okna wyboru.</li>
+ <li>Druga to filtr, który określa listę typów plików wyświetlanych w oknie. Można użyć tego np. żeby ukryć wszystkie pliki poza .html.</li>
+</ul>
+
+<p>Domyślny folder można zmienić przez ustawianie własności <code>displayDirectory</code> obiektu na wybrany folder. Folder ten powinien być obiektem <code><a href="pl/NsILocalFile">nsILocalFile</a></code>. Jeśli nie ustalisz domyślnego katalogu, będzie on wybrany automatycznie. Aby dodać filtry, wywołaj funkcję <code>appendFilters()</code>, aby ustalić typy plików do wyświetlania.</p>
+
+<pre>fp.appendFilters(nsIFilePicker.filterHTML | nsIFilePicker.filterImages);
+fp.appendFilters(nsIFilePicker.filterText | nsIFilePicker.filterAll);
+</pre>
+
+<ul>
+ <li>Pierwsza linijka z przykładu dodaje filtry dla plików HTML i obrazów, więc użytkownik będzie mógł wybrać tylko takie typy plików. Sposób, w jaki jest to robione zależy od platformy. Na niektórych każdy filtr trzeba oddzielić od pozostałych.</li>
+ <li>Druga linijka w przykładzie dodaje filtry dla plików tekstowych oraz dla wszystkich rodzajów. Tak więc użytkownik będzie miał możliwość wyświetlenia albo tylko plików tekstowych albo wszystkich typów.</li>
+</ul>
+
+<p>Można również użyć <code>filterXML</code> lub <code>filterXUL</code>, odpowiednio dla plików XML i XUL. Jeśli chcesz filtrować inne typy plików, możesz użyć funkcji <code>appendFilter()</code>:</p>
+
+<pre>fp.appendFilter("Audio Files","*.wav; *.mp3");
+</pre>
+
+<p>W przykładzie powyżej dodano filtr dla plików wave i mp3. Pierwszy argument to tytuł typu pliku, a drugi do lista masek plików rozdzielona średnikami. Można dodać tyle masek ile się chce. Można wywoływać <code>appendFilter()</code> tak często, jak tylko jest potrzebne dodawanie filtrów. Kolejność, w jakiej je podajesz, determinuje ich ważność. Typowo pierwszy w kolejności typ wybierany jest jako domyślny.</p>
+
+<h3 id="Wybranie_i_pobranie_pliku" name="Wybranie_i_pobranie_pliku">Wybranie i pobranie pliku</h3>
+
+<p>Wreszcie można otworzyć okno wywołując funkcję <code>show()</code>. Nie potrzebuje ona argumentów, ale zwraca kod statusu, który oznacza co wybrał użytkownik. Zauważmy, że funkcja nie zwróci nic dopóki użytkownik nie wybierze pliku. Zwraca ona jedną z następujących trzech stałych:</p>
+
+<ul>
+ <li><strong>returnOK</strong> - użytkownik wybrał plik i nacisnął 'OK'. Plik wybrany przez użytkownika będzie przechowywany we własności <code>file</code> w oknie wyboru.</li>
+ <li><strong>returnCancel</strong> - użytkownik nacisnął 'Anuluj'.</li>
+ <li><strong>returnReplace</strong> - w trybie zapisu, ta wartość identyfikuje plik, który użytkownik wybrał do zastąpienia (returnOK zostanie zwrócone, kiedy użytkownik wpisze nazwę nowego pliku).</li>
+</ul>
+
+<p>Powinieneś sprawdzić zwracaną wartość i następnie pobrać obiekt pliku z okna wyboru pliku stosując własność <code>file</code>.</p>
+
+<pre>var res = fp.show();
+if (res == nsIFilePicker.returnOK){
+  var thefile = fp.file;
+  // --- do something with the file here ---
+}
+</pre>
+
+<p>Następnie, zobaczymy <a href="pl/Kurs_XUL/Tworzenie_kreatora">jak utworzyć kreator</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_okien_dialogowych" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_kreatora">Następny  »</a></p>
+</div><p></p>

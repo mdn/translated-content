@@ -1,0 +1,147 @@
+---
+title: NavigatorOnLine.onLine
+slug: Web/API/NavigatorOnLine/onLine
+translation_of: Web/API/NavigatorOnLine/onLine
+---
+<p>{{ApiRef("HTML DOM")}}</p>
+
+<p><span class="short_text" id="result_box" lang="ru"><span class="hps">Возвращает</span> <span class="hps">сетевой статус</span> <span class="hps">браузера</span><span>.</span></span> Свойство возвращает логическое (boolean) значение, <code>true</code> означает online и <code>false</code> означает offline.<span id="result_box" lang="ru"><span>Свойство</span> <span class="hps">обновляется</span> <span class="hps">всякий раз, когда</span> <span class="hps">способность</span> <span class="hps">браузера</span> <span class="hps">к подключению к</span> <span class="hps">сети</span> <span class="hps">изменится</span><span>.</span></span> <span id="result_box" lang="ru"><span>Обновление происходит тогда</span><span>, когда</span> <span class="hps">пользователь следует по</span> <span class="hps">ссылке или</span> <span class="hps">когда</span> <span class="hps">скрипт</span> <span class="hps">запрашивает</span> <span class="hps">удаленную страницу</span></span>. <span id="result_box" lang="ru"><span class="hps">Например,</span> свойство<span class="hps"> должно</span> <span class="hps">вернуть <code>false</code></span><span>, когда</span> <span class="hps">пользователь кликает по</span> <span class="hps">ссылке,</span> <span class="hps">вскоре после</span> <span class="hps">потери</span> <span class="hps">подключения к интернету</span><span>.</span></span></p>
+
+<p>Браузеры реализуют это свойство по-разному.</p>
+
+<p>В Chrome и Safari, если браузер не может соединиться с локальной сетью (LAN) или роутером, это будет означать offline; во всех остальных случаях вернется <code>true</code>.Таким образом, мы можем предположить что браузер не в сети, когда возвращаемое значение <code>false</code>, но вы не можете предположить  что значение true обязательно обозначает что браузер может получить доступ к интернету. <span id="result_box" lang="ru"><span class="hps">Вы можете</span> <span class="hps">получать</span> <span class="hps">ложные срабатывания</span><span>, например,</span> <span class="hps">в случаях, когда</span> <span class="hps">компьютер</span> <span class="hps">под управлением</span> <span class="hps">программного обеспечения</span> <span class="hps">для виртуализации</span><span>, которое имеет</span> <span class="hps">виртуальные</span> <span class="hps">сетевые адаптеры</span><span>, которые всегда</span> <span class="atn hps">"</span><span>Подключено".</span></span> <span id="result_box" lang="ru"><span class="hps">Поэтому</span><span>,</span> <span class="hps">если вы действительно хотите</span><span>, чтобы</span> <span class="hps">определять состояние</span> <span class="hps">браузера</span><span>,</span> <span class="hps">вы должны разработать</span> <span class="hps">дополнительные средства</span> <span class="hps">проверки</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Чтобы узнать больше</span><span>, см</span>отрите <span class="hps">статью</span> <span class="hps">HTML5</span></span> <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html"> Working Off the Grid</a>.</p>
+
+<p><span id="result_box" lang="ru"><span class="hps">В Firefox</span> <span class="hps">и</span> <span class="hps">Internet Explorer</span><span>, переключение</span> <span class="hps">браузер</span>а <span class="hps">в автономный режим</span> <span class="hps">посылает</span> </span><code>false</code> значение. Во всех остальных случаях возвращается значение<code> true</code>.</p>
+
+<p><span id="result_box" lang="ru"><span class="hps">Вы можете</span> <span class="hps">увидеть изменения</span> <span class="hps">в</span> <span class="hps">состоянии сети</span> <span class="hps">путем прослушивания</span> <span class="hps">событий </span></span><a href="/en-US/docs/Web/API/document.ononline"><code>window.ononline</code></a> и <a href="/en-US/docs/Web/API/document.onoffline"><code>window.onoffline</code></a>.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>online</em> = <em>window</em>.navigator.onLine;
+</pre>
+
+<h3 id="Описание">Описание</h3>
+
+<p><code>online </code>это логическое <code>true</code> или <code>false</code>.</p>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<p>Посмотрите на <a class="external" href="http://html5-demos.appspot.com/static/navigator.onLine.html">действующий пример</a>.</p>
+
+<p>Для проверки находитесь ли вы в сети, вызовите<code> window.navigator.onLine</code>, как показано в примере:</p>
+
+<pre class="brush: js">if (navigator.onLine) {
+  alert('online');
+} else {
+  alert('offline');
+}</pre>
+
+<p>Если браузер не поддерживает<code> navigator.onLine</code> в примере выше, то всегда будет<code> false</code>/<code>undefined</code>.</p>
+
+<p>Чтобы увидеть изменения в состоянии сети, используйте <code><a href="/en-US/docs/DOM/element.addEventListener" title="DOM/element.addEventListener">addEventListener</a></code> для прослушивания событий <code>window.ononline</code> и <code>window.onoffline</code>, как показано в примере:</p>
+
+<pre class="brush: js">window.addEventListener("offline", function(e) {alert("offline");})
+
+window.addEventListener("online", function(e) {alert("online");})
+</pre>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость в браузерах</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>
+    <p>Windows: 11 [2]<br>
+     Mac: 14<br>
+     Chrome OS: 13<br>
+     Linux: всегда возвращает <code>true</code></p>
+
+    <p>Просмотр истории <a class="external" href="http://crbug.com/7469" title="http://crbug.com/7469">crbug.com/7469</a></p>
+   </td>
+   <td>{{CompatGeckoDesktop(1.9.1)}}  [1]</td>
+   <td>8 [3]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>5.0.4</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(29)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>BlackBerry</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>Android 2.2 (<span class="short_text" id="result_box" lang="ru"><span class="hps">Неисправность</span> <span class="hps">в компоненте</span> <span class="hps">WebView</span><span>, см</span> <span class="hps">описание</span></span><a class="external" href="http://code.google.com/p/android/issues/detail?id=16760">16760</a>)</td>
+   <td>{{CompatGeckoMobile(1.9.1)}}  [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>BlackBerry OS 7<br>
+     <span style="line-height: 1.5;">BlackBerry OS 10</span></p>
+   </td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile(29)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td> {{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] <span id="result_box" lang="ru"><span class="hps">Начиная с</span> <span class="hps">Firefox</span> <span class="hps">4</span><span>,</span> <span class="hps">и</span> <span class="hps">Opera</span> <span class="hps">11.10</span><span>,</span> <span class="hps">браузер возвращает</span> <span class="hps"><code>true</code>, когда</span> <span class="hps">режим</span> <span class="atn hps">"</span><span>Работать автономно</span><span>"</span> <span class="hps">отключен, и</span> <code><span class="hps">false</span></code><span>, когда</span> <span class="hps">он включен</span><span>,</span> <span class="hps">независимо от фактического</span> <span class="hps">подключения</span><span>.</span></span></p>
+
+<p>[2]<span id="result_box" lang="ru"><span class="hps"> Более ранние версии</span> <span class="hps">Chrome</span> <span class="hps">возвращали</span> <span class="hps"><code>true</code> неверно, когда</span> <span class="hps">вкладка</span> <span class="hps">открывается впервые,</span> <span class="hps">то он</span> вначале сообщает правильный статус <span class="hps">подключения</span> <span class="hps">после</span> <span class="hps">первого события</span> <span class="hps">сети.</span></span></p>
+
+<p>[3] В IE 8 "online" и "offline" события находятся в <code>document.body</code>; Под IE 9 они оба находятся <code>в document.body</code> и <code>window</code>.</p>
+
+<h2 id="Notes" name="Notes">Примечание</h2>
+
+<p><span id="result_box" lang="ru"><span class="hps">См</span> </span><a href="/en-US/docs/Online_and_offline_events" title="Online_and_offline_events">Online/Offline</a><span lang="ru"><span class="hps"> события</span> <span class="hps">для более детального</span> <span class="hps">описания</span> <span class="hps">этого</span> <span class="hps">свойства, а также</span> <span class="hps">новых возможностей</span> <span class="hps">в автономном режиме</span><span>,  </span><span class="hps">введенных</span> <span class="hps">в</span></span> Firefox 3.</p>
+
+<h2 id="Specification" name="Specification">Спецификация</h2>
+
+<p><span class="short_text" id="result_box" lang="ru"><span class="hps">Описана в</span> <a href="http://www.whatwg.org/specs/web-apps/current-work/#navigator.online">рабочем проекте HTML 5</a></span></p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li><a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html">HTML5 Rocks: Working Off the Grid With HTML5 Offline</a></li>
+ <li><a class="external" href="http://www.html5rocks.com/en/tutorials/offline/whats-offline/">HTML5 Rocks: "Offline": What does it mean and why should I care?</a></li>
+ <li><a class="external" href="http://hacks.mozilla.org/2010/01/offline-web-applications/">Mozilla Blog: Offline Web Applications</a></li>
+</ul>

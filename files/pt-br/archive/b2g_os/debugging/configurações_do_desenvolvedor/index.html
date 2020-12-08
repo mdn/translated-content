@@ -1,0 +1,164 @@
+---
+title: Configurações do Desenvolvedor para Firefox OS
+slug: Archive/B2G_OS/Debugging/Configurações_do_Desenvolvedor
+translation_of: Archive/B2G_OS/Debugging/Developer_settings
+---
+<div class="summary">
+ <p><span class="seoSummary">O painel do desenvolvedor fica dentro do aplicativo de configurações do Firefox OS. Este painel oferece uma série de opções que podem tornar <span id="result_box" lang="pt"><span class="hps gt-trans-draggable">a depuração de sua</span> <span class="hps gt-trans-draggable">aplicação web</span> <span class="hps gt-trans-draggable">no</span> <span class="hps gt-trans-draggable">Firefox</span> <span class="hps gt-trans-draggable">OS</span> <span class="hps gt-trans-draggable">mais fácil</span></span>.</span> <span id="result_box" lang="pt"><span class="hps">Este artigo aborda</span> <span class="hps">as opções disponíveis</span> <span class="hps">e</span> <span class="hps">como fazer</span> <span class="hps">uso deles.</span></span></p>
+</div>
+<p><span id="result_box" lang="pt"><span class="hps">O</span> <span class="hps">painel de configurações</span> <span class="hps">para as opções de</span> <span class="hps">desenvolvedor</span> <span class="hps">é intencionalmente</span> <span class="hps">"trancando a sete chaves"</span> <span class="hps">para evitar que</span> <span class="hps">os usuários finais</span> <span class="hps">que não têm necessidade</span> <span class="hps">de fazer uso dessas opções</span><span>, inadvertidamente,</span> <span class="hps">realizem a ativação de opções</span> <span class="hps">que farão o </span><span class="hps">dispositivo</span> <span class="hps">funcionar mais</span> <span class="hps">lentamente</span> <span class="hps">ou adicionar</span> <span class="hps">efeitos visuais</span> <span class="hps">estranhos</span> <span class="hps">as suas telas</span><span class="hps">.</span> <span class="hps">O painel</span> <span class="hps">é algo como</span> <span class="hps atn">isto (</span><span>o</span> <span class="hps">que se segue é</span> uma captura de tela retirada de um Geeksphone Keon com Firefox OS 2.0 em abril de 2014, a sua versão pode apresentar algumas diferenças<span class="hps">):</span></span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7801/developermenu-short.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<p><span id="result_box" lang="pt"><span class="hps">O painel de</span> <span class="hps">desenvolvedor</span> <span class="hps">é acessado</span> <span class="hps">da seguinte forma:</span></span></p>
+<ul>
+ <li>Em versões inferiores ao Firefox OS 1.4, você pode abrir o painel do desenvolvedor via <em>Configurações &gt; Informações do Dispositivo &gt; Mais Informações &gt; Desenvolvedor</em>.</li>
+ <li>Em versões superiores ao Firefox 1.4, você pode abrir o painel do desenvolvedor via <em>Configurações &gt; Informações do Dispositivo &gt; Mais Informações &gt; <span class="short_text" id="result_box" lang="pt"><span class="hps">Marque a caixa</span> <span class="hps">de menu</span> <span class="hps">desenvolvedor</span></span></em>. Feito isso, você pode acessar o painel do desenvolvedor via <em>Configurações &gt; Desenvolvedor</em>.</li>
+</ul>
+<p><span id="result_box" lang="pt"><span class="hps">As</span> <span class="hps">seções a seguir abordam</span> <span class="hps">cada uma das</span> <span class="hps">opções presentes no painel do desenvolvedor</span><span class="hps">.</span> <span class="hps">Explicando</span> <span class="hps">o que elas fazem</span> <span class="hps">e descrevendo suas utilidade</span><span>s.</span></span></p>
+<div class="note">
+ <p><strong>Nota do tradutor</strong>: Nem todas as opções de configuração estão traduzidas na versão em Português-BR dos dispositivos. Os títulos das opções a seguir estão de acordo com os títulos encontrados no dispostivo.</p>
+</div>
+<h2 id="Configurações_das_ferramentas_de_desenvolvimento">Configurações das ferramentas de desenvolvimento</h2>
+<h3 id="Depurando_via_USB"><a name="Debugging_via_USB"></a>Depurando via USB</h3>
+<p><a name="Remote_debugging"></a>A opção "Depuração Remota" habilita o suporte para <a href="https://developer.mozilla.org/pt-BR/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">depurar remotamente </a>seu dispositivo Firefox OS. Isso também habilitar os comandos <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Debugging/Installing_ADB">ADB</a><strong>.</strong> Nas versões anteriores à 1.4 existe somente um checkbox, no Firefox 1.4 existem três opções disponíves em uma select box:</p>
+<ul>
+ <li>Desabilitado: Depuração remota desligada (padrão)</li>
+ <li>Somente ADB: Possibilita acesso ao dispositivo pelo ADB.</li>
+ <li>ADB e Devtools: Possibilita acesso ao dispositivo pelo ADB e pelas ferramentas de desenvolvimento do Firefox como o <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_App_Manager">App Manager</a>.</li>
+</ul>
+<h3 id="HUD_(Head_Up_Display)_do_desenvolvedor">HUD (<a href="http://pt.wikipedia.org/wiki/Head_up_display">Head Up Display</a>) do desenvolvedor</h3>
+<p>Disponível nas versões Firefox OS 1.4 e posteriores.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7803/developerhud-new.png" style="width: 320px; height: 480px; margin: 0px auto; display: block;"></p>
+<p>Existe um checkbox que você pode usar para habilitar ou desabilitar o HUD do Desenvolvedor (uma seção no tipo da Interface do Usuário do Firefox OS para mostrar informações para o desenvolvedor). São cinco checkboxes a serem habilitados ou desabilitados:</p>
+<ul>
+ <li><strong>L<strong>og changes in adb</strong></strong>: Habilita o log de alterações do dispositivo no adb logcat.</li>
+ <li><strong>Warnings</strong>: Mostra avisos do console.</li>
+ <li><strong>Errors</strong>: Mostra erros do console.</li>
+ <li><strong>Security issues</strong>: Mostra potenciais falhas de segurança.</li>
+ <li><strong>Reflows</strong>: Mostra refluxos quando ocorrem.</li>
+ <li><strong><a href="/pt-BR/Firefox_OS/Platform/Architecture#Jank">Jank</a>/Jank threshold</strong>: Notifica o usuário sobre ocorrências de alto <em>jank</em> (demora visível na renderização) o valor indica o limiar para o qual pode ser customizado.</li>
+ <li><strong>Frames per second</strong>: Mostra frames por segundo como explicado na seção {{ anch("Frames_per_second") }}.</li>
+ <li><strong>Time to load</strong>: Mostra o tempo para carregar a informação como explicado na seção {{ anch("Time_to_load") }}.</li>
+ <li><strong>App memory</strong>: Mostra o quanto de memória o aplicativo está utilizando, e possibilita habilitar ou desabilitar os diferentes fatores de uso da memória. Veja a seção {{ anch("App_memory") }} para maiores detalhes.</li>
+</ul>
+<h4 id="Frames_per_second">Frames per second</h4>
+<p>Ao habilitar essa opção serão apresentados três números no canto superior esquerdo da tela do Firefox OX, os valores são a média dos últimos resultados dentro de uma janela de tempo, podem ser considerados valores instantâneos com uma boa margem de erro. </p>
+<ul>
+ <li>O número da esquerda é a <strong>taxa de composição (<em>composition rate</em>)</strong>: número estimado de vezes por segundo que o Firefox OS desenha frames no <em>framebuffer</em> do hardware. É uma estimativa da percepção do usuário do <em>framerate</em>, e somente uma estimativa. Por exemplo, o contador pode reportar 60 composições por segundo mesmo sem a tela ter sido alterada. Nesse caso a percepção do usuário poderia ser 0. Porem, quando utilizado com esta ressalva e corroborado com outras medidas, o monitor pode ser uma ferramenta útil e simples.</li>
+ <li>O número do meio é a <strong>taxa de transação da camada (<em>layer transaction rate</em></strong>): número estimado de vezes por segundo que o processo monta a tela e notifica o compositor. Esse número é mais útil para os engenheiros da plataforma Gecko, e deve ser menor ou igual à taxa de composição apresentado à esquerda.</li>
+ <li>O número à direita é uma medida do número de pixels desenhados como um percentual do tamanho da tela. Por exemplo, o número 273 indica que a tela é escrita 2,73 vezes. Idealmente esse número deve estar o mais próximo de 100.</li>
+</ul>
+<p><img alt="A screenshot of Firefox OS, showing three numbers in the top left hand corner that are measurements of app framerate." src="https://mdn.mozillademos.org/files/6889/framerate-fxos.jpg" style="width: 357px; height: 640px; display: block; margin: 0px auto;"></p>
+<h4 id="Time_to_load">Time to load</h4>
+<p>Firefox OS também tem uma ferramenta que ajuda a medir o tempo de inicialização, especificamente o tempo do "<em>first paint</em>". O valor apresentado pela ferramenta — no canto superior direito da tela do Firefox OS — é o tempo decorrido (em milisegundos) entre o lançamento da aplicação mais recente e o momento estimado de quando a aplicação foi desenhada na Interface do Usuário. Esse número é aproximado ao real tempo de "<em>first paint</em>", e é particularmente subestimada. Porem, ao baixar este número quase sempre indica no tempo de inicialização real, por isso pode ser útil para medir melhorias na otimização.</p>
+<p><img alt="A screenshot of Firefox OS, showing a number in the top right hand corner that is a measurement of the current app startup time, in milliseconds." src="https://mdn.mozillademos.org/files/6891/startup-time-fxos.jpg" style="width: 378px; height: 640px; display: block; margin: 0px auto;"></p>
+<h4 id="App_memory">App memory</h4>
+<p>Mostra o quanto de memória o aplicativo está usando e possibilita habilitar ou desabilitar os diferentes itens que usam memória para mostrar o quanto de memória cada item desses usa no aplicativo corrente. Por exemplo, de acordo com a configuração apresentada na tela abaixo só será mostrado o uso de memória por objetos JS. O número no canto inferior direito indica que o aplicativo de configuração está usando 414.778KB para objetos JS.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7731/memory-usage.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<h3 id="Piscar_área_desenhada">Piscar área desenhada</h3>
+<p>Nesse modo, toda vez que uma região da tela é desenhada pelo Gecko, acontece uma piscada de uma cor randômica translúcida sobre a região desenhada. Idealmente, somente as partes da tela que mudaram visualmente piscarão com a nova cor. Mas algumas vezes uma área maior é necessária ser redesenhada, causando uma piscada em áreas maiores. Esse sintoma pode indicar que o código da aplicação está forçando uma atualização da tela maior que o necessário. Isso também pode indicar um bug no próprio Gecko.</p>
+<p><img alt="A screenshot of Firefox OS with a number of transparent overlays, showing the parts of the screen repainted with each new animation frame." src="https://mdn.mozillademos.org/files/6893/paint-update-fxos.jpg" style="width: 378px; height: 640px; display: block; margin: 0px auto;"></p>
+<h2 id="Configurações_gráficas">Configurações gráficas</h2>
+<h3 id="Habilitar_APZ_para_todo_conteúdo_(era_Async_PanZoom)">Habilitar APZ para todo conteúdo (era Async Pan/Zoom)</h3>
+<p>Quando habilitado, o módulo Async Pan/Zoom permite pan e zoom assíncrono, em outra thread, com algumas diferenças perceptíveis no comportamento de renderização. Para saber mais, leia o artigo <a href="https://wiki.mozilla.org/Platform/GFX/APZ">MozillaWiki APZ</a>.</p>
+<h3 id="Tiling_(era_Layers_Enable_tiles)">Tiling (era Layers: Enable tiles)</h3>
+<p>Introduzido no Firefox OS 1.4, esse recurso possibilita o desenho do conteúdo na tela em pedaços pequenos ("<em>tiles</em>") ao invés de desenhar a tela inteira de uma vez. Isso é útil para a área de QA (Quality Assurance) da plataforma envolvendo a redução de checkerboarding e encontrando janalas de regressão.</p>
+<h3 id="Simple_tiling_(era_Layers_Simple_tiles)">Simple tiling (era Layers: Simple tiles)</h3>
+<p>Inverte entre as duas implementações diferentes do desenho de conteúdo descritos na seção acima.</p>
+<h3 id="Hardware_composer_(era_Enable_hardware_compositing)">Hardware composer (era Enable hardware compositing)</h3>
+<p>Quando habilitado, faz o dispositivo usar o <a href="https://source.android.com/devices/graphics.html#hwc">Hardware Composer</a> para compor elementos visuais (superfícies) na tela.</p>
+<h3 id="Draw_tile_borders_(era_Layers_Draw_tile_borders)">Draw tile borders (era Layers: Draw tile borders)</h3>
+<p>Muito similar à opção {{ anch("Draw layer borders") }}, a diferença é que nessa opção são desenhadas bordas para os "tiles" individuais bem como as bordas ao redor das camadas.</p>
+<h3 id="Mostrar_layers">Mostrar layers</h3>
+<p>Desenha uma borda brilhande e colorida ao redor das diferentes camadas desenhadas na tela — bom para diagnosticar problemas de layout.</p>
+<p><img alt="A screenshot from Firefox OS showing an opened select form with the draw layers borders option enabled, resulting in colored borders being drawn on all the different rendered layers." src="https://mdn.mozillademos.org/files/6897/paint-layers-borders.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<h3 id="Dump_layers_tree">Dump layers tree</h3>
+<p>Essa opção faz uma cópia da árvore de camadas do compositor a ser enviado para o logcat a cada camada (layer) composto na tela. Isso é útil para verificar a performance gráfica da plataforma.</p>
+<h3 id="Cards_View_Cópia_de_tela">Cards View: Cópia de tela</h3>
+<p>Quando habilitado, cópias de tela serão feitas quando o usuário entrar na visão de cartões para visualizar os aplicativos abertos. Se desabilitado, ícones das aplicações serão mostrados no centro de cartões em branco durante a visão de cartões.</p>
+<h2 id="Configurações_do_gerenciamento_de_janelas">Configurações do gerenciamento de janelas</h2>
+<h3 id="Botão_Home_por_Software"><a name="Enable_software_home_button"></a>Botão Home por Software</h3>
+<p>Essa opção cria um botão Home por software que possui a mesma funcionalidade que o seu equivalente externo. A intenção é o uso em dispositivo que provavelmente não venham com botões externos, como em tablets.</p>
+<h3 id="Gesto_para_tela_de_início_ativado">Gesto para tela de início ativado</h3>
+<p>Ao habilitar essa opção o usuário pode arrastar o dedo do centro para fora da tela para abrir a tela de início. Isso fornece a mesma funcionalidade que o botão externo caso ele não esteja disponível.</p>
+<h3 id="Gesto_de_canto">Gesto de canto</h3>
+<p>Ao habilitar essa opção o usuário pode arrastar o dedo para esquerda ou direita a partir dos cantos para o centro para navegar entre as páginas (como acontece nas páginas do seu navegador, ou visões dentro de um aplicativo). Basicamente funciona como a barra de navegacão do Firefox.</p>
+<h3 id="Continuous_transition">Continuous transition</h3>
+<p>Possibilita você decidir se o teclado abra imediatamente ou continuamente (com uma transição). Desabilitar os efeitos da transição é útil para equipamentos low-end uma vez que pode degradar a performance.</p>
+<h3 id="App_transition">App transition</h3>
+<p>Habilita ou desabilita transições ao iniciar ou encerrar um aplicativo. Sem a transição os aplicativos serão apresentados imediatamente sem uma animação suave bem como o teclado. Assim como o item anterior, ao desabilitar os dispositivos low-end terão uma performance melhor.</p>
+<h3 id="App_suspending">App suspending</h3>
+<p>Se habilitado, quando um aplicativo for encerrado em segundo plano, ele permanecerá no histórico e será reaberto quando você abrí-lo na tela inicial ou visão de cartões. Se desabilitado os aplicativos não serão mantidos no histórico ou na visão de cartões.</p>
+<h2 id="Configuração_de_depuração">Configuração de depuração</h2>
+<h3 id="Reg._animaçõe_lentas">Reg. animaçõe lentas</h3>
+<p>Essa ferramenta tenta ajudar aos desenvolvedores entenderem porque as animações não são transferidas ao compositos para serem executadas o mais eficientemente possível. Registra "bugs" como tentar animar elementos que são muito grandes, ou tentar animar propriedades CSS que ão podem ser transferidas. As mensagens que você receberá no dispositivo são semelhantes a essas:</p>
+<pre class="language-html">I/Gecko   ( 5644): Performance warning: Async animation disabled because frame size (1280, 410) is bigger than the viewport (360, 518) [div with id 'views']
+</pre>
+<h3 id="Saída_Wi-Fi_para_adb">Saída Wi-Fi para adb</h3>
+<p>Ao habilitar essa opção informações sobre Wi-Fi são incluídas nos logs do adb (logs de erro podem ser acessados pelo console usando <code>adb logcat | grep "Error"</code>)</p>
+<h3 id="Bluetooth_output_in_adb">Bluetooth output in adb</h3>
+<p>Ao habilitar essa opção informações sobre Bluetooth são incluídas nos logs do adb (logs de erro podem ser acessados pelo console usando <code>adb logcat | grep "Error"</code>)</p>
+<h3 id="Console_ativado">Console ativado</h3>
+<p>Quando habilitado, essa opção permite usar o <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console">Web Console</a> no Firefox para acessa remotamente o console do dispositivo, sem essa opção habilitada, a função {{domxref("console.log()")}} não faz nada.</p>
+<h3 id="Gaia_debug_traces">Gaia debug traces</h3>
+<p>Isso habilita diretamente DEBUG traces no Gaia; veja {{ bug("881672") }} para mais detalhes.</p>
+<div class="note">
+ <p><strong>Note</strong>: Infelizmente, nem todo aplicativo suporta esse mecanismo para gravar seu log de depuração. Ao invés disso, eles controlam a opção "DEBUG" diretamente no código, assm, ao habilitar essa opção não há como garantir que serão gerados todos os logs de depuração.</p>
+</div>
+<h3 id="Show_accessibility_settings">Show accessibility settings</h3>
+<p>Habilitar o menu de configurações de acessibilidade, que poderá ser acessado em <em>Configurações &gt; Accessibilidade</em>. As opções são as seguintes:</p>
+<h4 id="Leitor_de_Tela">Leitor de Tela</h4>
+<p>Essa opção transforma o Firefox OS em um leitor de tela. Atualmente em um estágio inicial ele altera o modo que os eventos de toque funcionam. Quando o leitor de tela está habilitado você pode interagir com a tela das seguintes maneiras:</p>
+<ul>
+ <li>Toque em qualquer lugar para transferir o foco para o aplicativo e seja avisado do que ele é. A notificação é feita tanto sonramente como por um retângulo ao redor do item selecionado. Um duplo toque em qualquer lugar da tela (dois toques numa rápida sucessão) ativa o ítem rodeado pelo retângulo.</li>
+ <li>Arraste o dedo da esquerda para a direita sequencialmente através dos itens na tela faz com que sejam movidos da esquerda para a direita, se for de cima para baixo, inclui um scroll vertical is houver mais itens a serem mostrados, e você será alertado do nome de cada item sonoramente e pelo retângulo. Da direita para a esquerda move os itens na ordem reversa. Novamente um toque duplo executa o item selecionado.</li>
+ <li>Arraste com dois dedos — esquerda, direita, para cima ou para baixo — para rolar a tela na direção desejada. Isso é equivalente a arrastar um dedo através da tela quando o leitor de tela não está ativo. Por exemplo, um arrasto com dois dedos para esquerda na tela inicial leva para a segunda tela, o mesmo movimento para cima rolará a tela para mostrar mais conteúdo.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Se o leitor de tela estiver funcionando e você deseja desabilitá-lo, você deve navegar até as configurações através desses novos gestos e dar um toque duplo no checkbox uma vez para desligá-lo. O que vai restaurar o comportamento da tela sensível ao toque ao seu comportamento padrão.</p>
+</div>
+<p><strong>Nota</strong>: No Firefox 1.4 e superior, existe uma maneira rápida para ligar e desligar o leitor de tela. Ele o instruirá para que seja executada a mesma ação novamente (botões volume: cima, baixo, cima, baixo, cima, baixo) para ligar ou desligar.Assim, você pode testar sua aplicação web para acessibilidade sem ter que navegar no menu de preferências a cada vez que quiser alterá-la.</p>
+<h4 id="Speech_volume">Speech volume</h4>
+<p>Controle deslizante do volume da voz.</p>
+<h4 id="Speech_rate">Speech rate</h4>
+<p>Controle deslizante da velocidade da voz.</p>
+<h3 id="Abrir_a_primeira_utilização">Abrir a primeira utilização</h3>
+<p>Executa o programa de primeira configuração, que nada mais é que conduz o usuário à configurar as opções básicas e um tutorial. É útil quando você quer testar esse processo, ou se você quer reconfigurar seu dispositivo.</p>
+<h2 id="Configurações_obsoletas">Configurações obsoletas</h2>
+<p>Essa seção apresenta as configurações que não estão mais disponíveis, ou são apresentadas de uma forma diferente, mas pode ser interessante se estiver executando uma versão antiga do Firefox OS.</p>
+<h3 id="Accessibilidade">Accessibilidade</h3>
+<p>Nas versões anteriores à 1.4, essa opção apresentava as configurações explicadas na seção {{ anch("Show_accessibility_settings") }}.</p>
+<h3 id="Grid">Grid</h3>
+<p>Quando habilitada, a tela do Firefox era sobreposta por um grid padrão que ajudava o posicionamento e alinhamento dos itens. Abaixo um exemplo da tela com o grid ativado.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5071/Grid.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<p>As linhas mais largas são separadas por 32 pixels, tanto horizontal quanto verticalmente.</p>
+<h3 id="Show_frames_per_second">Show frames per second</h3>
+<p>Nas versões anteriores à 1.4 ao  habilitar essa opção mostrava os frames por segundo como explicado na seção {{ anch("Frames_per_second") }}.</p>
+<h3 id="Show_time_to_load">Show time to load</h3>
+<p>Nas versões anteriores à 1.4 ao  habilitar essa opção mostrava o tempo para carregar a informação como explicado na seção {{ anch("Time_to_load") }} .</p>
+<h3 id="Rocketbar_enabled">Rocketbar enabled</h3>
+<p>Nas versões anteriores à 1.4, essa opção habilita o novo <a href="https://groups.google.com/forum/#%21topic/mozilla.dev.gaia/Nlfbrq1KMP0">Firefox Rocketbar</a> no seu dispositivo, que fornece uma nova forma de trocar entre aplicativos, procurar e mais. Você pode encontrar um ícono no canto superior esquerdo do dispositivo e o RocketBar pode executá-lo arrastando do canto superior esquerdo para o canto inferior esquerdo.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Nas novas versões do Firefox OS, Rocketbar é habilitado automaticamente e não pode ser desabilitado.</p>
+</div>
+<h3 id="Contacts_debugging_output_in_adb">Contacts debugging output in adb</h3>
+<p>Ao habilitar essa opção informações sobre contatos são adicionadas ao log do adb (logs de erro podem ser acessados digitando <code>adb logcat | grep "Error"</code> no terminal.)</p>
+<h3 id="Progressive_paint_(era_Layers_Progressive_paint)">Progressive paint (era Layers: Progressive paint)</h3>
+<p>Essa opção foi introduzida para ajudar a depuração do <a href="https://wiki.mozilla.org/Platform/GFX/APZ">módulo Async Panning/Zoom module</a> (APZ) durante sua implementação. Agora que a implementação está pronta, essa opção está obsoleta e será removida das próximas versões (veja {{ Bug("1003228") }}).</p>
+<h3 id="Displayport_Heuristics">Displayport Heuristics</h3>
+<ul>
+ <li>Default</li>
+ <li>Center displayport</li>
+ <li>Assume perfect paints</li>
+ <li>Taller displayport</li>
+ <li>Faster paints</li>
+ <li>No checkerboarding</li>
+</ul>
+<p>Essas opções foram introduzidas para ajudar a depuração do <a href="https://wiki.mozilla.org/Platform/GFX/APZ">Async Panning/Zoom module</a> (APZ) durante sua implementação especificamente para possibilitar a equipe de QA testar diferentes heurísticas para verificar qual resultado era o melhor. gora que a implementação está pronta, essa opção está obsoleta e será removida das próximas versões (veja {{ Bug("1003228") }}).</p>
+<h2 id="Keyboard_layouts">Keyboard layouts</h2>
+<p>Adicionalmente às opções específicas para desenvolvedores as versões anteriores à 1.4 apresentava opções de teclado. Isso permitia a realização de testes dos métodos de entrada do idioma chinês:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5079/InputMethods.png"></p>
+<p>No Firefox 1.4, essas opções foram removidas. Isso é porque a implementação de layout de teclados chineses (zhuyin and pinyin) não terminaram.</p>
+<div class="note">
+ <p><strong>Note</strong>: Para outros layoutes de teclado que ainda estão em desenvolvimento, como o japonês por exemplo, existe uma opção em tempo de compilação para incluí-los na imagem.</p>
+</div>
+<p> </p>

@@ -1,0 +1,361 @@
+---
+title: Modificando o Gaia
+slug: Archive/B2G_OS/Platform/Gaia/Hacking
+translation_of: Firefox_OS/Developing_Gaia
+---
+<div class="warning">
+ <p>Esta página é destinada para os desenvolvedores do Gaia, se você está procurando como compilar e rodar o Firefox Os, você deveria consultar a página <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Building_and_installing_Firefox_OS">Compilando e Instalando o Firefox OS</a>.</p>
+</div>
+<p>Gaia é uma coleção de <a href="https://developer.mozilla.org/apps" rel="nofollow">web apps</a> que compõem a interface do <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>. Tudo que você vê na tela do Firefox OS é construido sobre tecnologias web abertas. Isto inclui a tela inicial e todas as aplicações padrões.</p>
+<h2 id="Pegando_o_código_fonte">Pegando o código fonte</h2>
+<p>Para pegar o código fonte do Gaia, faça o <a href="https://github.com/mozilla-b2g/gaia" title="https://github.com/mozilla-b2g/gaia">fork no GitHub</a> e depois clone seu fork utilizando o <a href="http://git-scm.com/" title="http://git-scm.com/">git</a>.</p>
+<pre>$ git clone https://github.com/mozilla-b2g/gaia.git</pre>
+<h2 id="Rodando_o_Gaia">Rodando o Gaia</h2>
+<p>Você pode rodar o Gaia no B2G Desktop, no Firefox ou em um aparelho compatível.</p>
+<h3 id="B2G_desktop">B2G desktop</h3>
+<p>B2G desktop é uma compilação do aplicativo <em>runtime</em> usado nos dispositivos Firefox OS o qual você pode executar o Gaia no seu computador desktop.</p>
+<p>Você pode baixar a imagem nightly do B2G desktop <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">aqui</a>. Dependendo de qual versão você deseje, você pode querer uma versão específica do latest-mozilla-b2g18. Existems imagens para Linux (32 bit and 64 bit), Mac OS X e Windows.</p>
+<p>Imagens Nightly vem empacotadas com a versão mais recente do Gaia. Uma vez que você baixou o arquivo, tudo que você precisa é extrair para um diretório e executar o binário <code>b2g</code>,</p>
+<div class="note">
+ <p><strong>Nota:</strong> Imagens para Linux 64-bit não funciona em algumas distros, veja o bug {{bug(812484)}}. Se você tiver esse tipo de problema tente a versão 32-bit.</p>
+</div>
+<pre>$ cd b2g
+$ ./b2g</pre>
+<p>Para executar o B2G com sua própria versão do Gaia para propósitos de desenvolvimento, primeiramente você precisa construir um perfil do seu clone:</p>
+<pre class="language-html">$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+<p>Isso irá gerar um subdiretório no seu diretório <code>gaia</code> chamado <code>profile</code>. A parte <code>DEBUG</code> executa Gaia como aplicação hospedada no servidor web interno, ao invés do pacote padrão de aplicativos que você tem que reempacotar a cada mudança. Você pode encontrar o caminho para o diretório <code>profile</code> observando a última linha da saída do comando acima. Algo parecido como:</p>
+<pre class="language-html">Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+<p>Então você pode executar o B2G Desktop com o perfil gerado dessa forma:</p>
+<pre class="language-html">$ ./b2g /path/to/gaia/profile</pre>
+<p>Se você quiser você pode compilar seu próprio B2G desktop a partir do fonte.</p>
+<div class="note">
+ <p><strong>Nota :</strong> No Mac OS X, o bintário <code>b2g</code> estará dentro de B2G.app. Você precisa rodar dessa forma:</p>
+ <p><code>./B2G.app/Contents/MacOS/b2g /path/to/gaia/profile</code></p>
+</div>
+<h3 id="Usando_o_Gaia_no_Firefox">Usando o Gaia no Firefox</h3>
+<p>Também é possível executar o Gaia dentro do Firefox. Isso dá a vantagem de ter um ciclo de desenvolvimento rápido, bem como a utilização de ferramentas padrões de desenvolvimento web e depuração. Veja <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Hacking_Firefox_OS/Quickstart_guide_to_Gaia_development">Guia rápido para desenvolvimento Gaia</a> para maiores detalhes.</p>
+<h3 id="Usando_um_dispositivo_Gaia">Usando um dispositivo Gaia</h3>
+<p>Se você possui um dispositivo compatível você também pode executar o Gaia fazendo um <em>flash</em> do Firefox OS. Você pode fazer um flash de uma versão compatível do Gaia com sua versão atual do Firefox OS, veja a seção <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Hacking$edit#Push_to_device">Carregar no dispositivo</a>, ou você pode <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">compilar sua própria versão do Firefox OS</a>. Nós também temos documentação de <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Platform/Testing" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing">como testar o Firefox OS</a>.</p>
+<h2 id="Teste_unitários">Teste unitários</h2>
+<p>Veja o artigo <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Testes unitários do Gaia</a> para saber como criar e executar testes para o Gaia.</p>
+<h2 id="Registrando_bugs">Registrando bugs</h2>
+<p>Bugs são registrado no Bugzilla em <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Firefox%20OS&amp;component=Gaia&amp;resolution=---" rel="nofollow">Firefox OS &gt; Gaia</a>. Registre um novo bug<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox OS"> no componente Gaia</a> (ou em algum do seus subcomponentes).</p>
+<h2 id="Contribuindo_com_o_Gaia">Contribuindo com o Gaia</h2>
+<p>Mozilla depende de contribuições da comunidade open source para ajuda no desenvolvimento de aplicativos Gaia e adoraríamos que você se envolvesse.</p>
+<p>Alguns dos locais para encontrar alguns bugs para se trabalhar:</p>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component:gaia%20sw:polish%20@nobody;list_id=4566236" rel="nofollow">Bugs sem donos no Bugzilla</a></li>
+ <li><a href="http://www.joshmatthews.net/bugsahoy/?b2g=1" rel="nofollow">Bugs com ajuda de um mentor</a></li>
+</ul>
+<h3 id="Estilo_de_codificação_básica">Estilo de codificação básica</h3>
+<ul>
+ <li>Background:
+  <ul>
+   <li><a href="https://developer.mozilla.org/pt-BR/docs/Developer_Guide/Coding_Style#General_practices" title="Developer_Guide/Coding_Style#General_practices">Estilo de codificação: Práticas gerais</a></li>
+   <li><a href="https://developer.mozilla.org/pt-BR/docs/Developer_Guide/Coding_Style#JavaScript_practices" title="Developer_Guide/Coding_Style#JavaScript_practices">Estilo de codificação: JavaScript</a></li>
+   <li><a href="https://developer.mozilla.org/pt-BR/docs/Developer_Guide/Coding_Style#Naming_and_formatting_guide" title="Developer_Guide/Coding_Style#Naming_and_formatting_guide">Estilo de codificação: Guia para nomes e formatos</a></li>
+  </ul>
+ </li>
+ <li>Certifique-se que os arquitos HTML possuem <code>&lt;!DOCTYPE html&gt;</code> (ou seja, são documentos HTML5). Se não fizer isso, o Internet Explorer 9 e anteriores vão carregá-lo em modo de compatibilidade.</li>
+ <li>Inclua o comando<code>"use strict";</code> (exatamente assim, com aspas) no início do seus arquivos JavaScript para colocá-lo em modo <em>strict</em>.</li>
+ <li>Sempre use dois espaços para identação ao invés de tabs.</li>
+ <li>Por favor utilize quebras de linhas para separar blocos lógicos do código!</li>
+ <li>Utilize <em>underscore</em> "_" para separar as palavras em nomes de arquivos e diretórios, por exemplo: <code>like_this.js</code>.</li>
+ <li>Utilize apóstrofo no lugar de aspas para strings.</li>
+</ul>
+<h4 id="Regras_adicionais">Regras adicionais</h4>
+<p>Ruim:</p>
+<pre class="language-html">if (expression) doSomething();
+</pre>
+<p>Correto:</p>
+<pre class="language-html">if (expression) {
+  doSomething();
+}
+</pre>
+<p>Se você está trabalhando um aplicativo de sistema, verifique o guia listado <a href="https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ" title="See_here_for_some_rules._https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">aqui</a>.</p>
+<p>Antes de submeter uma correção nós recomendamos você executar <a href="https://developers.google.com/closure/utilities/docs/linter_howto" title="http://closure-linter.googlecode.com/svn/trunk/closure_linter/gjslint.py">gjslint</a> para verificar algum erro no estilo:</p>
+<pre class="language-html">gjslint --nojsdoc my_file.js</pre>
+<h3 id="Submetendo_uma_correção_(patch)">Submetendo uma correção (patch)</h3>
+<p>Primeiramente assinale o bug para você no <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Firefox%20OS&amp;component=Gaia&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?product=Firefox OS&amp;component=Gaia&amp;resolution=---">Bugzilla</a>, você precisará de uma conta no Bugzilla.</p>
+<p>Então crie um <em>branch</em> no seu <em>fork</em> do Gaia:</p>
+<pre class="language-html">$ git branch branchname
+$ git checkout branchname</pre>
+<p>Faça um <em>commit</em> das suas alterações:</p>
+<pre class="language-html">$ git add /file/to/add
+$ git commit -m "Bug XXXXX - Fix the broken Gaia and save the world"</pre>
+<p>Carregue seu <em>branch</em>:</p>
+<pre class="language-html">$ git push origin branchname</pre>
+<p>Envie um <em>pull request</em> navegando no <em>branch</em> do seu <em>fork</em> no GitHub e encontre o botão "Pull Request".</p>
+<div class="note">
+ <p><strong>Nota</strong>: Exceto em circunstâncias não usuais, correções devem ser carregadas primeiro no master branch, não em um release branch como v1-train, v1.3, etc. Se você precisa carregar em um release branch, deve-se seguir um processo de aprovacão descrito em <a href="https://wiki.mozilla.org/Release_Management/B2G_Landing">B2G Landing wiki page</a>.</p>
+</div>
+<p>Para requerer uma revisão de sua correção, inclua <a href="http://globau.wordpress.com/2013/10/21/github-pull-requests-and-bugzilla/">o <em>pull request</em></a><em> </em>ao bug no Bugzilla, referenciando a URL do <em>pull request  </em>e configurar a flag review ("r") para "?" e informar o ID Bugzilla de um dos <a href="https://wiki.mozilla.org/Modules/FirefoxOS" title="https://wiki.mozilla.org/Modules/FirefoxOS">donos dos modulos ou um de seus pares</a> (isso é muito importante - caso contrário, seu erro provavelmente não será visto por ninguém). O <a href="https://addons.mozilla.org/pt-BR/firefox/addon/github-tweaks-for-bugzilla/" title="https://addons.mozilla.org/en-US/firefox/addon/github-tweaks-for-bugzilla/">Github pode ser configurar para extensão do bugzilla</a> o que pode ajudar a automtizar o processo automaticamente criando um anexo e adicionando-o ao bug, mas você ainda precisará configurar o flag de revisão no Bugzilla.</p>
+<p>O revisor pode pedir a você para fazer algumas alterações, você pode necessitar corrigir o <em>commit</em> original e forçar uma carga para o <em>branch</em>/<em>pull request</em> original. Uma vez que eles estiverem satisfeitos com sua correção, eles podem fazer um <em>merge</em> ao master branch para você. Antes de fazer isso eles podem preferir registrar todas as suas alterações em um único <em>commit</em> e assim sua contribuição fica facilmente rastreável.</p>
+<p>Quem for fazer o merge do <em>commit</em> (normalmente um revisor) adicionará um flag  <code>r=</code> nos comentários do <em>commit</em>.</p>
+<h2 id="Opções_do_Make"><a name="Make_options"></a>Opções do Make</h2>
+<p>Você usa o comando <code>make</code> dentro do repositório Gaia para criar o perfil Gaia que pode ser carregado no seu dispositivo ou na imagem de um <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>. Essa seção mostra em detalhes as diferentes opções disponíveis do <code>make</code>.</p>
+<p>Existem muitas variáveis de ambiente presentes no <code>Makefile</code>. Independente delas poderem ser removidas no futuro.</p>
+<p>Os perfis criados são armazenados em <code>/gaia/profile</code>, e contém os seguintes itens:</p>
+<ul>
+ <li>defaults: Diretório que contem configurações padrão para ser recarregado depois que você fizer um reset no telefone.</li>
+ <li>extensions: Diretório contendo as extensões.extensions.</li>
+ <li>settings.json: Arquivo de configurações.</li>
+ <li>user.js: Outro arquivo contendo mais configurações e preferências.</li>
+ <li>webapps: Diretório contendo todos os aplicativos web que serão instalados no seu telefone.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Quando você já criou um perfil e gostaria de fazer um novo, você deve apagar o diretório de perfil existente antes de tentar gerar um novo.</p>
+</div>
+<h3 id="Padrão">Padrão</h3>
+<pre class="brush: bash  language-html"><code class="language-html">make</code></pre>
+<p>Isso simplesmente gera uma imagem sem rótulo e sem possibilidade de depuração. Para uma imagem com ródulo você precisa usar {{ anch("make com o rótulo oficial Mozilla") }}; para uma imagem com depuração use {{ anch("make com depuração") }}.</p>
+<h3 id="Carregar_no_dispositivo"><a name="Push_to_device"></a>Carregar no dispositivo</h3>
+<pre class="brush: bash  language-html"><code class="language-html">make install-gaia
+
+make reset-gaia
+
+make profile</code></pre>
+<p>Com a configuração do <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android Debug Bridge), esses makes copiarão o Gaia para o dispositivo.<code> install-gaia</code> irá copiar as atualizações do Gaia do seu diretório de trabalho para o dispositivo. <code>reset-gaia</code> limpará toda configuração existente, perfis, aplicativos e banco de dados (um novo conjunto de banco de dados será inicializado) antes de copiar o Gaia.</p>
+<h3 id="Compilando_aplicativos_específicos">Compilando aplicativos específicos</h3>
+<pre class="brush: bash  language-html"><code class="language-html">APP=system make
+
+APP=system make install-gaia</code></pre>
+<p>Quando um perfil existe, <code>APP</code> permite você especificar quais aplicativos serão empacatodas ao invés de empacotar todos os aplicativos Gaia.</p>
+<h3 id="Diretório_de_perfil_personalizado">Diretório de perfil personalizado</h3>
+<p>Você pode especificar um diretório personalizado para compilar seu perfil, usando <code>PROFILE_FOLDER</code>, por exemplo:</p>
+<pre class="brush: bash  language-html"><code class="language-html">PROFILE_FOLDER=profile-b2g-desktop make</code></pre>
+<h3 id="Compilações_para_diferentes_dispositivos">Compilações para diferentes dispositivos</h3>
+<p>Há algumas opções do make para criar compilações para diferentes dispositivos com diversos propósitos.</p>
+<h4 id="Criando_uma_compilação_Gaia_para_Telefone">Criando uma compilação Gaia para Telefone</h4>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_DEVICE_TYPE=phone make</code></pre>
+<p>Essa compilação pega os aplicativos do diretório <code>/gaia/build/config/phone/apps-engineering.list</code>.</p>
+<h4 id="Criando_uma_compilação_Gaia_para_Tablet">Criando uma compilação Gaia para Tablet</h4>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_DEVICE_TYPE=tablet make</code></pre>
+<p>Essa compilação pega os aplicativos do diretório <code>/gaia/build/config/phone/apps-engineering.list</code>.</p>
+<h3 id="Tipos_diferentes_de_compilação">Tipos diferentes de compilação</h3>
+<p>Há algumas opções de make que criam diferentes tipos de compilação, com finalidades diferentes.</p>
+<h4 id="make_production">make production</h4>
+<pre class="brush: bash  language-html"><code class="language-html">PRODUCTION=1 make</code></pre>
+<p>Isso cria uma imagem de produção do Gaia:</p>
+<ul>
+ <li>Gaia é executado como um pacote de aplicativos, que são difíceis de depurar, mas é o melhor estado disponível para as aplicações em termos de permissões disponíveis para API, etc.</li>
+ <li>Teste de aplicativos não estão incluídos na imagem</li>
+ <li>Depuração remota é desabilitada por padrão</li>
+ <li>Tela de bloqueio foi ativada (que por sua vez vai cortar ligações USB)</li>
+ <li>Marionette é desligado</li>
+ <li>Experiência de primeiro uso é ligada</li>
+ <li>Cache offline é usado</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Você também pode usar o alias <code>make production</code>.</p>
+</div>
+<h4 id="make_com_depuração">make com depuração</h4>
+<pre class="brush: bash  language-html"><code class="language-html">DEBUG=1 make</code></pre>
+<p>A variável <code>DEBUG</code> executa o Gaia como um aplicativo hospedado no servidor interno numa <code>GAIA_PORT</code> específica, ao invés de aplicativos empacotados, como é no padrão, que é necessário reempacotar depois de cada alteração. Isso torna as coisas mais fáceis para testar. Lançamento do perfil com o mais recente Firefox Nightly também lhe dará bons painéis específicos B2G sobre as Ferramentas de Desenvolvedor Firefox.</p>
+<p>E mais:</p>
+<ul>
+ <li>Teste de aplicativos incluído na imagem.</li>
+ <li>Depuração remota habilitada por padrão.</li>
+ <li>Bloqueio de tela desabilitada (Conexões USB não são interrompidas).</li>
+ <li><a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/QA/Marionette">Marionette</a> habilitado, o que é necessário para executar <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">testes unitários</a> do Gaia.</li>
+ <li>Experiência de primeiro uso é desabilitadada.</li>
+ <li>Cache Offline não é usado, nem memsmo é gerado.</li>
+</ul>
+<h4 id="make_com_depuração_do_dispositivo">make<a name="Debug_desktop_make"></a> com depuração do dispositivo</h4>
+<pre class="brush: bash  language-html"><code class="language-html">DEVICE_DEBUG=1 make</code></pre>
+<p>Isso desabilita a tela de bloqueio no dispositivo, e habilita a depuração com a ferramenta ADB, isso é muito útil para a depuração do dispositivo.</p>
+<p>No Firefox OS versão 1.2 e superiores, utilize esse parâmertro quando você quer depurar aplicativos web com o <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_App_Manager">App Manager</a>.</p>
+<h4 id="make_com_depuração_desktop">make com depuração desktop</h4>
+<pre class="brush: bash  language-html"><code class="language-html">DEBUG=1 DESKTOP=0 make</code></pre>
+<p>Essa opção cria a versão de depuração do desktop para rodar no <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a>.</p>
+<h4 id="make_com_o_rótulo_oficial_Mozilla">make com o rótulo oficial Mozilla</h4>
+<pre class="brush: bash  language-html"><code class="language-html">MOZILLA_OFFICIAL=1 make</code></pre>
+<p>Use para criar uma imagem com o rótulo oficial Mozilla.</p>
+<h4 id="make_Dogfood">make Dogfood</h4>
+<pre class="brush: bash  language-html"><code class="language-html">DOGFOOD=1 make</code></pre>
+<p>Opções Dogfooding e utilitários são habilitados, por exemplo, aplicativo Feedback, que for example the Feedback app, que permite "Dog fooders" facilmente enviar feedbacks do sistema operacional.</p>
+<h4 id="make_System_apps">make System apps</h4>
+<pre class="brush: bash  language-html"><code class="language-html">B2G_SYSTEM_APPS=1 make</code></pre>
+<p>Essa variável de ambiente permite você enviar um aplicativo para <code>/system/b2g</code> ao invés de <code>/data/local</code>. Você deve usar isso  quando trabalha com uma imagem do usuário. Essa variável é automaticamente selecionada quando executar <code>make production</code>. Isso pode ser usado para <code>install-gaia</code> ou <code>reset-gaia</code>.</p>
+<h4 id="Compilação_para_Distribuição_e_personalização_de_mercado">Compilação para Distribuição e personalização de mercado</h4>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_DISTRIBUTION_DIR=./dir</code></pre>
+<div class="note">
+ <p><strong>Note</strong>: Read <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Personalização de Mercado</a> para maiores detalhes.</p>
+</div>
+<h3 id="Opções_para_desenvolvimentodepuração">Opções para desenvolvimento/depuração</h3>
+<p>Também existem opções para adicionar ou remover recursos ou modificar configurações para facilitar a depuração.</p>
+<h4 id="Habilitar_depuração_remota">Habilitar depuração remota</h4>
+<pre class="brush: bash  language-html"><code class="language-html">REMOTE_DEBUGGER=1</code></pre>
+<p>Isso habilita a depuração remota no dispositivo, o mesma opção usada emThis enables remote debugging on the device, the same as using the option in the <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Debugging/Configura%C3%A7%C3%B5es_do_Desenvolvedor#Depura.C3.A7.C3.A3o_Remota">Configurações do Desenvolvedor</a>.</p>
+<h4 id="make_otimizção_do_JavaScript">make otimizção do JavaScript</h4>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_OPTIMIZE=1 make</code></pre>
+<p>Isso dispara a otimização no JavaScript do Gaia, concatenando/comprimindo os arquivos. Isso é automaticamente configurado quando é executado <code>make production</code>. Também pode ser usado para <code>install-gaia</code> ou <code>reset-gaia</code>.</p>
+<h4 id="Ativos_de_imagem_de_alta_resolução">Ativos de imagem de alta resolução</h4>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_DEV_PIXELS_PER_PX=1.5 make</code></pre>
+<p>Quando empacota o aplicativo, essa opção substitui as imagens com seus arquivos equivalentes <code>*@1.5x.(gif|jpg|png)</code> se existirem. Você precisar usar a opção acima como parte do comando <code>make</code> padrão, por exemplo:</p>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</code></pre>
+<p>Atualmente o Gaia é gerado com as seguintes resoluções de tela:</p>
+<ul>
+ <li>qHD: ~540×960; device pixel ratio = 1.6875</li>
+ <li>WVGA: ~480×800; device pixel ratio = 1.5</li>
+ <li>HBGA (320x240); device pixel ratio = 1</li>
+</ul>
+<p>Use <code>GAIA_DEV_PIXELS_PER_PX</code> para certificar-se que as imagens fiquem visíveis em dispositivos qHD and WVGA. Veja o artigo <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">Um pixel não é um pixel</a> para mais informações sobre pixels de dispositivos por pixels de css.</p>
+<h4 id="Compilação_de_perfil_com_pouca_memória">Compilação de perfil com pouca memória</h4>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_MEMORY_PROFILE=low make</code></pre>
+<p>Essa variável gera um perfil do Gaia com pouca memória, destinado a dispositivos com pouca memória como o Tarako.</p>
+<h4 id="Recursos_Haida">Recursos Haida</h4>
+<pre class="brush: bash  language-html"><code class="language-html">HAIDA=1 make reset-gaia</code></pre>
+<p>Essa compilação habilita o conjunto de recursos Haida, que atualmente é limitado aos gestos <a href="https://wiki.mozilla.org/FirefoxOS/systemsfe/epm#Rocketbar_Results"><em>rocketbar</em></a> e <a href="https://wiki.mozilla.org/FirefoxOS/Haida#Edge_Gestures_Between_Open_Content"><em>edge</em></a>, mas provavelmente incluirão outros recursos num futuro próximo.</p>
+<h4 id="Desabilitar_Experiência_do_primeiro_uso_(FTU_-_First_Time_Use)">Desabilitar Experiência do primeiro uso (FTU - First Time Use)</h4>
+<pre class="brush: bash  language-html"><code class="language-html">NOFTU=1</code></pre>
+<p>Desabilte o FTU com essa variável de ambiente.</p>
+<h4 id="Desabilitar_a_tela_de_bloqueio">Desabilitar a tela de bloqueio</h4>
+<p>Você pode desabilitar a tela de bloqueio usando a opção NO_LOCK_SCREEN, por exemplo:</p>
+<pre class="brush: bash  language-html"><code class="language-html">NO_LOCK_SCREEN=1 make</code></pre>
+<h4 id="Carga_de_trabalho_de_referência"><a name="Reference_Workloads"></a>Carga de trabalho de referência</h4>
+<p>Possibilita desenvolvedores e testadores instalar uma grande quantidade de dados em diversos aplicativos, tipicamente em um telefone recém formatado.</p>
+<p>Os comandos são (a patir do diretório gaia):</p>
+<pre class="brush: bash  language-html"><code class="language-html">make reference-workload-light</code></pre>
+<ul>
+ <li>200 contatos</li>
+ <li>200 mensagens SMS</li>
+ <li>50 ligações</li>
+ <li>20 images na galeria</li>
+ <li>20 músicas</li>
+ <li>5 vídeos</li>
+</ul>
+<pre class="brush: bash  language-html"><code class="language-html">make reference-workload-medium</code></pre>
+<ul>
+ <li>500 contatos</li>
+ <li>500 mensagens SMS</li>
+ <li>100 ligações</li>
+ <li>50 images na galeria</li>
+ <li>50 músicas</li>
+ <li>10 vídeos</li>
+</ul>
+<pre class="brush: bash  language-html"><code class="language-html">make reference-workload-heavy</code></pre>
+<ul>
+ <li>1000 contatos</li>
+ <li>1000 mensagens SMS</li>
+ <li>200 ligações</li>
+ <li>100 images na galeria</li>
+ <li>100 músicas</li>
+ <li>20 vídeos</li>
+</ul>
+<pre class="brush: bash  language-html"><code class="language-html">make reference-workload-x-heavy</code></pre>
+<ul>
+ <li>2000 contatos</li>
+ <li>2000 mensagens SMS</li>
+ <li>500 ligações</li>
+ <li>250 images na galeria</li>
+ <li>250 músicas</li>
+ <li>50 vídeos</li>
+</ul>
+<p>Essas metas aceitam a variável de ambiente <code>APP</code>, ou a variável <code>APPS</code> que deve conter os nomes das aplicações separados por espaço, ou seja:</p>
+<pre class="brush: bash  language-html"><code class="language-html">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy</code></pre>
+<p>Os aplicativos disponíveis são:</p>
+<pre class="brush: bash  language-html"><code class="language-html">APPS="gallery music video communications/contacts sms communications/dialer"</code></pre>
+<p>Com o objetivo de insatalar músicas com cargas de trabalho de referência o utilitário <code>mid3v2</code> deve ser instalado. Esse utilitário pode ser instalado com:</p>
+<pre class="brush: bash  language-html"><code class="language-html">sudo apt-get install python-mutagen</code></pre>
+<p>Se você estiver executando Fedora ou RHEL, use:</p>
+<pre class="brush: bash  language-html"><code class="language-html">sudo yum install python-mutagen</code></pre>
+<h4 id="make_documentação">make documentação</h4>
+<p>A documentaão do Gaia pode ser gerada via jsdoc3. Para gerar isso, utilize o seguinte comando:</p>
+<pre class="brush: bash  language-html"><code class="language-html">make docs</code></pre>
+<h4 id="Habilitando_layout_IME_e_dicionários">Habilitando layout IME e dicionários</h4>
+<p>Para habilitar o layout de teclado IME e os dicionários, use a seguinte estrutura de comando:</p>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_KEYBOARD_LAYOUTS=en,zh-Hant-Zhuyin,el,de,fr,zh-Hans-Pinyin make</code></pre>
+<h2 id="Padronizando_os_aplicativos_em_tempo_de_compilação">Padronizando os aplicativos em tempo de compilação</h2>
+<p>Os aplicativos que são executados no Firefox OS ficam todos na árvore de fontes do Gaia, nas seguintes posições:</p>
+<ul>
+ <li><code>gaia/apps</code>: Aqui é onde os aplicativos padrão do sistem são encontrados, como: <code>calendar</code>, <code>email</code>, <code>settings</code>, etc.</li>
+ <li><code>gaia/external-apps</code>: Nesse diretório fica o aplicativo Firefox Marketplace (<code>marketplace.firefox.com</code>), e onde são armazenados os aplicativos instalados pelo usuário.</li>
+ <li><code>gaia/showcase-apps</code>: Ficam os aplicativos showcase, por exemplo: 3D Crystal Skull para mostrar a performance WebGL do dispositivo.</li>
+ <li><code>gaia/test-apps</code>: Esse diretório é um repositório para testes simples, desenhado para testar recursos simples do B2G.</li>
+ <li><code>gaia/external-apps</code>: Esse This diretório contém mais testes.</li>
+ <li>Existem outros também, dependendo da versão do Gaia que você clonou.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Se você está compilando o B2G ao invés do Gaia, os diretórios são precedidos pelo <code>B2G/</code>, por exemplo: <code>B2G/gaia/apps</code> e <code>B2G/gaia/external-apps</code>.</p>
+</div>
+<p>Se você quiser omitir alguns desse aplicativos de sua imagem do Gaia/B2G, você pode fazer isso de diferentes maneiras:</p>
+<ol>
+ <li>
+  <p>O método "força bruta" no qual você simplesmente apaga os aplicativos que você não quer que estejam presentes antes de iniciar a compilação.</p>
+ </li>
+ <li>
+  <p>O método mais refinado de fazer isso é editar os arquivos <code>gaia/build/config/device-type/apps-*.list</code> onde <code>device-type</code> pode ser <code>phone</code>, <code>tablet</code> ou <code>tv</code>, para incluir os aplicativos que você quer incluir em tempo de compilação. Por exemplo, <code>gaia/build/config/apps-production.list</code> vai parecer mais ou menos como isso:</p>
+  <pre class="brush: bash  language-html"><code class="language-html">apps/*
+external-apps/*
+outoftree_apps/*</code></pre>
+  <p>Mas você pode também incluir aplicativos específicos ao invés de apenas pegar todos, por exemplo:</p>
+  <pre class="brush: bash  language-html"><code class="language-html">apps/clock</code></pre>
+  <p>O mecanismo para escolher qual arquivo<code> apps-*.list</code> é usado durante a compilação está contido em <code>gaia/Makefile</code>:</p>
+  <pre class="brush: cpp  language-cpp"><code class="language-cpp">GAIA_APP_TARGET<span class="token operator">?</span><span class="token operator">=</span>engineering
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ifeq <span class="token punctuation">(</span>$<span class="token punctuation">(</span>MAKECMDGOALS<span class="token punctuation">)</span><span class="token punctuation">,</span> demo<span class="token punctuation">)</span>
+GAIA_DOMAIN<span class="token operator">=</span>thisdomaindoesnotexist<span class="token punctuation">.</span>org
+GAIA_APP_TARGET<span class="token operator">=</span>demo
+<span class="token keyword">else</span> ifeq <span class="token punctuation">(</span>$<span class="token punctuation">(</span>MAKECMDGOALS<span class="token punctuation">)</span><span class="token punctuation">,</span> dogfood<span class="token punctuation">)</span>
+DOGFOOD<span class="token operator">=</span><span class="token number">1</span>
+<span class="token keyword">else</span> ifeq <span class="token punctuation">(</span>$<span class="token punctuation">(</span>MAKECMDGOALS<span class="token punctuation">)</span><span class="token punctuation">,</span> production<span class="token punctuation">)</span>
+PRODUCTION<span class="token operator">=</span><span class="token number">1</span>
+endif
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ifeq <span class="token punctuation">(</span>$<span class="token punctuation">(</span>PRODUCTION<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+GAIA_OPTIMIZE<span class="token operator">=</span><span class="token number">1</span>
+GAIA_APP_TARGET<span class="token operator">=</span>production
+endif
+
+ifeq <span class="token punctuation">(</span>$<span class="token punctuation">(</span>DOGFOOD<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+GAIA_APP_TARGET<span class="token operator">=</span>dogfood
+endif
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<code class="language-cpp">ifndef GAIA_APP_CONFIG
+GAIA_APP_CONFIG<span class="token operator">=</span>$<span class="token punctuation">(</span>GAIA_DIR<span class="token punctuation">)</span>$<span class="token punctuation">(</span>SEP<span class="token punctuation">)</span>build$<span class="token punctuation">(</span>SEP<span class="token punctuation">)</span>config$<span class="token punctuation">(</span>SEP<span class="token punctuation">)</span>$<span class="token punctuation">(</span>GAIA_DEVICE_TYPE<span class="token punctuation">)</span>$<span class="token punctuation">(</span>SEP<span class="token punctuation">)</span>apps<span class="token operator">-</span>$<span class="token punctuation">(</span>GAIA_APP_TARGET<span class="token punctuation">)</span><span class="token punctuation">.</span>list
+endif</code></code></pre>
+  <p>Inicialmente, a variável <code>GAIA_APP_TARGET</code> é configurada como <code>engineering</code>, assim por padrão o gaia usará <code>app-engineering.list</code> (que inclui todos os testes, demos, etc.):</p>
+  <pre class="brush: bash  language-html"><code class="language-html">make</code></pre>
+  <p>Para especificar o uso de uma diferente lista de aplicativos você deve especificar diferentes opções quando executar o comando make. Por exemplo, para compilar com <code>apps-production.list</code></p>
+ </li>
+ <li>
+  <pre class="brush: bash  language-html"><code class="language-html">PRODUCTION=1 make</code></pre>
+  <ul>
+   <li>Se você compilar com <code>DEMO=1</code>, então será usado <code>apps-demo.list</code>.</li>
+   <li>Se você compilar com <code>DOGFOOD=1</code>, então será usado <code>apps-dogfood.list</code>.</li>
+   <li>Você pode suplantar a decisão usando<code> GAIA_APP_CONFIG</code> e prover seu próprio arquivo <code>apps-*.list</code>.</li>
+  </ul>
+  <p><code>gaia/Android.mk</code> contém essas linhas:</p>
+  <pre class="brush: cpp  language-cpp"><code class="language-cpp">ifneq <span class="token punctuation">(</span>$<span class="token punctuation">(</span>filter user userdebug<span class="token punctuation">,</span> $<span class="token punctuation">(</span>TARGET_BUILD_VARIANT<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+GAIA_MAKE_FLAGS <span class="token operator">+</span><span class="token operator">=</span> PRODUCTION<span class="token operator">=</span><span class="token number">1</span>
+B2G_SYSTEM_APPS <span class="token punctuation">:</span><span class="token operator">=</span> <span class="token number">1</span>
+endif</code></pre>
+  <p>Quando você compilar, se <code>VARIANT=user</code> ou <code>VARIANT=userdebug</code> forem configuradas (vão ser refletidas na variável <code>TARGET_BUILD_VARIANT</code>), <code>PRODUCTION=1</code> será automaticamente configurada quando compilar o Gaia.</p>
+ </li>
+ <li>
+  <p>O terceiro, e mais refinado método (porém mais complexo) é usar customizações. Isso permite que você especifique instruções de customização em tempo de compilação em diretórios serpardos, sem modificar o repositório Gaia principal. Você pode incluir suas próprias customizações em diretórios distintos ou usar diretórios pré-existentes que vêm no fonte.</p>
+ </li>
+ <li>
+  <p>Por exemplo, a lista customizada de aplicativos básicos para Firefox OS tablet é definida em <code>apps.list</code> no diretório <a href="https://github.com/mozilla-b2g/gaia/tree/master/distribution_tablet"><code>distribution_tablet</code></a> (<code>gaia/distribution_tablet</code>). Essas customizações podem ser aplicadas durante a compilação usando opções como essa:</p>
+  <pre class="brush: bash  language-html"><code class="language-html">GAIA_DISTRIBUTION_DIR=distribution_tablet make</code></pre>
+  <div class="note">
+   <p><strong>Nota</strong>: Customizações / personalizações possuem um tópico próprio. Para saber mais a respeito leia <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Customizações de Mercado</a>.</p>
+  </div>
+  <div class="note">
+   <p><strong>Nota</strong>: Se você quiser incluir aplicações externas customizadas como parte da sua imagem Gaia, você precisa compilá-las de uma forma específica, e colocá-las no diretório <code>gaia/external-apps/</code>. Leia o <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide#Building_Prebundled_web_apps">artigo</a> para saber como.</p>
+  </div>
+ </li>
+</ol>
+<div class="warning">
+ <p><strong>Important</strong>e: Se você é um fornecedor de disposito e quer criar sua própria imagem B2G/Gaia para distribuição, você precisa satisfazer um certo critério antes de incluir o aplicativo FIrefox Marketplace nos seus telefones/tablets/etc. Contacte a Mozilla para maiores detalhes.</p>
+</div>
+<h2 id="Contacte_o_time">Contacte o time</h2>
+<ul>
+ <li><a href="https://lists.mozilla.org/listinfo/dev-gaia" rel="nofollow">Gaia Mailing List</a></li>
+ <li>Canal do IRC em irc.mozilla.org: #gaia IRC</li>
+</ul>

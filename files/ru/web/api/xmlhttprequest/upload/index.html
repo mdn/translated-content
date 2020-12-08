@@ -1,0 +1,116 @@
+---
+title: XMLHttpRequest.upload
+slug: Web/API/XMLHttpRequest/upload
+translation_of: Web/API/XMLHttpRequest/upload
+---
+<p>{{APIRef('XMLHttpRequest')}}</p>
+
+<p>Свойство <strong>XMLHttpRequest.upload</strong> возвращает объект {{domxref("XMLHttpRequestUpload")}}, представляющий процесс загрузки. Это непрозрачный объект, но так как он является {{domxref("XMLHttpRequestEventTarget")}}, к нему можно добавить обработчики событий.</p>
+
+<p>Обработчики событий, которые можно добавить к объекту загрузки:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Обработчик</td>
+   <td class="header">Событие</td>
+  </tr>
+  <tr>
+   <td><code>onloadstart</code></td>
+   <td>Начало запроса</td>
+  </tr>
+  <tr>
+   <td><code>onprogress</code></td>
+   <td>Происходит передача данных</td>
+  </tr>
+  <tr>
+   <td><code>onabort</code></td>
+   <td>Запрос был отменён</td>
+  </tr>
+  <tr>
+   <td><code>onerror</code></td>
+   <td>При запросе произошла ошибка</td>
+  </tr>
+  <tr>
+   <td><code>onload</code></td>
+   <td>Запрос завершился</td>
+  </tr>
+  <tr>
+   <td><code>ontimeout</code></td>
+   <td>Запрос не завершился ко времени, указанному автором</td>
+  </tr>
+  <tr>
+   <td><code>onloadend</code></td>
+   <td>Запрос завершился (успешно или с ошибкой)</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-upload-attribute')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>Живой стандарт WHATWG</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Начальная поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Начальная поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

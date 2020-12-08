@@ -1,0 +1,74 @@
+---
+title: Reflect.enumerate()
+slug: Archive/Web/JavaScript/Reflect.enumerate
+translation_of: Archive/Web/JavaScript/Reflect.enumerate
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>Функция <code><strong>Reflect</strong></code><strong><code>.enumerate()</code></strong> возвращает итератор который может использоваться для перечисления собственных и наследованных свойств объекта, но был удален в ECMAScript 2016 и отмечен как устаревший.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Reflect.enumerate(target)
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>target</code></dt>
+ <dd>The target object on which to get the property.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>An iterator with the enumerable own and inherited properties of the target object.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<p>A {{jsxref("TypeError")}}, if <code>target</code> is not an {{jsxref("Object")}}.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>The <code>Reflect.enumerate</code> method returns an iterator with the enumerable own and inherited properties of the target object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_Reflect.enumerate">Using <code>Reflect.enumerate()</code></h3>
+
+<pre class="brush: js">var obj = { x: 1, y: 2 };
+
+for (var name of Reflect.enumerate(obj)) {
+  console.log(name);
+}
+// logs "x" and "y"
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-reflect.enumerate', 'Reflect.enumerate')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition. Removed in ECMAScript 2016.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("javascript.builtins.Reflect.enumerate")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Reflect")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></li>
+</ul>

@@ -1,0 +1,119 @@
+---
+title: MediaElementAudioSourceNode
+slug: Web/API/MediaElementAudioSourceNode
+translation_of: Web/API/MediaElementAudioSourceNode
+---
+<p>{{APIRef("Web Audio API")}}</p>
+
+<div>
+<p>Интерфейс <code>MediaElementAudioSourceNode</code> представляет собой аудио узел {{domxref("AudioNode")}}, созданный из HTML5 {{ htmlelement("audio") }} или {{ htmlelement("video") }} элемента. Он является источником звука.</p>
+</div>
+
+<p><code>MediaElementSourceNode</code> не имеет входов, а только один выход, и может быть создан методом {{domxref("AudioContext.createMediaElementSource")}}. Количество каналов в выходном сигнале равно числу каналов аудио, на которое ссылается {{domxref("HTMLMediaElement")}} используемый для создания узла, или 1, если {{domxref("HTMLMediaElement")}} не имеет аудио.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Количество входов</th>
+   <td><code>0</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Количество выходов</th>
+   <td><code>1</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Количество каналов</th>
+   <td>зависит от содержимого медиа элемента {{domxref("HTMLMediaElement")}}, переданному методу {{domxref("AudioContext.createMediaElementSource")}} при создании узла.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Свойства">Свойства</h2>
+
+<p><em>Наследует свойства родителя, </em><em>{{domxref("AudioNode")}}</em>.</p>
+
+<h2 id="Методы">Методы</h2>
+
+<p><em>Наследует методы родителя, </em><em>{{domxref("AudioNode")}}</em>.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>{{page("/ru/docs/Web/API/AudioContext.createMediaElementSource","Example")}}</p>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#the-mediaelementaudiosourcenode-interface', 'MediaElementAudioSourceNode')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>14 {{property_prefix("webkit")}}</td>
+   <td>{{CompatGeckoDesktop(25)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>15 {{property_prefix("webkit")}}<br>
+    22 (unprefixed)</td>
+   <td>6 {{property_prefix("webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>28 {{property_prefix("webkit")}}</td>
+   <td>{{CompatGeckoMobile(25)}}</td>
+   <td>1.2</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>6 {{property_prefix("webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

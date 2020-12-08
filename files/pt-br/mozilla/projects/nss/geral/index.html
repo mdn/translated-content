@@ -1,0 +1,73 @@
+---
+title: Visão geral do NSS
+slug: Mozilla/Projects/NSS/Geral
+tags:
+  - NSS
+translation_of: Mozilla/Projects/NSS/Overview
+---
+<h1 id="Bibliotecas_de_Criptografia_de_Código_Aberto"><span class="tlid-translation translation" lang="pt"><span title="">Bibliotecas de Criptografia de Código Aberto</span></span></h1>
+
+<h3 id="Proven_Application_Security_Architecture" name="Proven_Application_Security_Architecture"><span class="tlid-translation translation" lang="pt"><span title="">Arquitetura de Segurança de Aplicativos Comprovada</span></span></h3>
+
+<p>Se você quer adicionar suporte para SSL, S/MIME, ou outros padrões de segurança de Internet na sua aplicação, você pode usar Network Security Services (NSS) para implementar todos os seus recursos de segurança. NSS provê uma implementação completa de código aberto das bibliotecas de criptogragia usadas pela AOL, Red Hat, Google e outras empresas em uma variedade de produtos, incluindo os seguintes:</p>
+
+<ul>
+ <li><a class="external" href="https://www.mozilla.org/products/">Produtos Mozilla</a>, incluindo <a class="external" href="https://www.mozilla.com/firefox/">Firefox</a>, <a class="external" href="https://www.mozilla.com/thunderbird/">Thunderbird</a>, <a href="https://seamonkey-project.org/">SeaMonkey</a>, e <a href="https://www.mozilla.org/en-US/firefox/os/">Firefox OS</a>.</li>
+ <li><a class="external" href="https://www.aim.com/">AOL Instant Messenger</a> (AIM)</li>
+ <li>Aplicativos clientes de código aberto como <a class="external" href="https://wiki.gnome.org/Apps/Evolution">Evolution</a>, <a href="https://pidgin.im/">Pidgin</a>, <a href="https://www.openoffice.org/">Apache OpenOffice</a>, e <a href="https://www.libreoffice.org">LibreOffice</a>.</li>
+ <li>Produtos para servidores da <a class="external" href="https://www.redhat.com/en/technologies">Red Hat</a>: <a class="external" href="https://www.redhat.com/en/technologies/cloud-computing/directory-server">Red Hat Directory Server</a>, <a class="external" href="https://www.redhat.com/en/technologies/cloud-computing/certificate-system">Red Hat Certificate System</a>, e o módulo SSL <a class="external" href="https://directory.fedoraproject.org/wiki/Mod_nss">mod_nss</a> para o servidor web Apache.</li>
+ <li>Produtos para servidores da Oracle (antiga Sun Java Enterprise System), incluindo <a href="https://www.oracle.com/industries/communications/enterprise/products/messaging-server/index.html">Oracle Communications Messaging Server</a> e <a href="http://www.oracle.com/technetwork/middleware/id-mgmt/overview/index-085178.html">Oracle Directory Server Enterprise Edition</a>.</li>
+ <li><a href="https://www.suse.com/products/server/">SUSE Linux Enterprise Server</a> suporta NSS e o módulo SSL <a class="external" href="https://directory.fedoraproject.org/wiki/Mod_nss">mod_nss</a> para o servidor web Apache.</li>
+</ul>
+
+<p>NSS inclui um framework no qual desenvolvedores e <span class="ILfuVd">OEMs (Fabricante Original do Equipamento) podem contribuir com correções, </span><span class="tlid-translation translation" lang="pt"><span title="">como código assembler, para otimizar o desempenho em suas plataformas. NSS 3.x foi certificado em 18 plataformas.</span></span></p>
+
+<p>Para informações mais detalhadas sobre NSS, veja <a class="external" href="https://wiki.mozilla.org/NSS">wiki.mozilla.org</a> e <a href="NSS_FAQ">NSS FAQ</a>.</p>
+
+<p>Código-fonte de uma interface Java para NSS está disponível na árvore CVS da Mozilla. Para detalhes, veja <a class="external" href="JSS">Network Security Services for Java</a>.</p>
+
+<p>NSS faz uso do Netscape Portable Runtime (<a href="/en-US/docs/Mozilla/Projects/NSPR">NSPR</a>), <span class="tlid-translation translation" lang="pt"><span title="">uma API de código aberto de plataforma neutra para funções do sistema projetada para facilitar o desenvolvimento entre plataformas</span></span>. Assim como NSS, NSPR foi testado em vários produtos. Para maiores informações, veja a <a class="external" href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR">Página do Projeto NSPR</a>.</p>
+
+<h3 id="Interoperability_and_Open_Standards" name="Interoperability_and_Open_Standards"><span class="tlid-translation translation" lang="pt"><span title="">Interoperabilidade e Padrões Abertos</span></span></h3>
+
+<p>Você pode usar NSS para suportar uma variedade de padrões de segurança na sua aplicação, incluindo os seguintes:</p>
+
+<ul>
+ <li><a href="en/Glossary#SSL">SSL v3</a>. O protocolo Secure Sockets Layer (SSL) permite uma autenticação mútua entre cliente e servidor e o estabelecimento de uma conexão autenticada e criptografada.</li>
+ <li>TLS v1.3 (<a href="https://tools.ietf.org/html/rfc8446">RFC 8446</a>), <a href="https://tools.ietf.org/html/rfc5246">TLS v1.2 (RFC 5246</a>), <a href="https://tools.ietf.org/html/rfc4346">TLS v1.1 (RFC 4346</a>), <a class="external" href="https://www.ietf.org/rfc/rfc2246.txt">TLS v1 (</a><a class="external" href="https://tools.ietf.org/html/rfc2246" title="https://tools.ietf.org/html/rfc2246">RFC 2246</a>). O protocolo Transport Layer Security (TLS) do IETF que substitui SSL.</li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-1/index.html">PKCS #1</a>. Padrão RSA <span class="tlid-translation translation" lang="pt"><span title="">que rege a implementação de criptografia de chave pública com base no algoritmo RSA.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-3/index.html">PKCS #3</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que rege a implementação do acordo de chave Diffie-Hellman.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-5/index.html">PKCS #5</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que rege a criptografia baseada em senha, por exemplo, para criptografar chaves privadas para armazenamento.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-7/index.html">PKCS #7</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que rege a aplicação de criptografia a dados, por exemplo, assinaturas digitais e envelopes digitais.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-8/index.html">PKCS #8</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que rege o armazenamento e a criptografia de chaves privadas.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-9/index.html">PKCS #9</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que rege os tipos de atributos selecionados, incluindo aqueles usados com </span></span>PKCS #7, PKCS #8, e PKCS #10.</li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-10/index.html">PKCS #10</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que rege a sintaxe para solicitações de certificado.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-11/index.html">PKCS #11</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão RSA que controla a comunicação com tokens criptográficos (como aceleradores de hardware e cartões inteligentes) e permite a independência do aplicativo de algoritmos e implementações específicas.</span></span></li>
+ <li><a class="external" href="https://www.rsasecurity.com/rsalabs/pkcs/pkcs-12/index.html">PKCS #12</a>.<span class="tlid-translation translation" lang="pt"><span title=""> Padrão RSA que rege o formato usado para armazenar ou transportar chaves privadas, certificados e outros materiais secretos.</span></span></li>
+ <li><a href="en/Glossary#S.2FMIME">S/MIME (RFC 2311 and RFC 2633)</a>. <span class="tlid-translation translation" lang="pt"><span title="">Especificação de mensagem IETF (baseada no popular padrão Internet MIME) que fornece uma maneira consistente de enviar e receber dados MIME assinados e criptografados.</span></span></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Security/x509_Certificates">X.509 v3</a>. <span class="tlid-translation translation" lang="pt"><span title="">Padrão ITU que rege o formato de certificados usados para autenticação em criptografia de chave pública.</span></span></li>
+ <li><a href="en/Glossary#OCSP">OCSP (RFC 2560)</a>. O Online Certificate Status Protocol (OCSP) rege<span class="tlid-translation translation" lang="pt"><span title=""> a confirmação em tempo real da validade do certificado.</span></span></li>
+ <li><a class="external" href="https://www.ietf.org/rfc/rfc3280.txt">PKIX Certificate and CRL Profile (</a><a class="external" href="https://tools.ietf.org/html/rfc3280" title="https://tools.ietf.org/html/rfc3280">RFC 3280</a>). <span class="tlid-translation translation" lang="pt"><span title="">A primeira parte do padrão de quatro partes em desenvolvimento pelo grupo de trabalho Public-Key Infrastructure (X.509) da IETF (conhecido no PKIX) para uma infraestrutura de chave pública para a Internet.</span></span></li>
+ <li>RSA, DSA, ECDSA, Diffie-Hellman, EC Diffie-Hellman, <a class="external" href="https://csrc.nist.gov/encryption/aes/">AES</a>, Triple DES, DES, RC2, RC4, SHA-1, SHA-256, SHA-384, SHA-512, MD2, MD5, HMAC: <span class="tlid-translation translation" lang="pt"><span title="">Algoritmos criptográficos comuns usados em criptografia de chave pública e de chave simétrica.</span></span></li>
+ <li>FIPS 186-2 <span class="tlid-translation translation" lang="pt"><span title="">gerador de números pseudo-aleatórios.</span></span></li>
+</ul>
+
+<p>Para detalhes completos, veja <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Tecnologias de Criptografia</a>.</p>
+
+<h3 id="FIPS_140_Validation_and_NISCC_Testing" name="FIPS_140_Validation_and_NISCC_Testing">Validação FIPS 140 e Teste NISCC</h3>
+
+<p><span class="tlid-translation translation" lang="pt"><span title="">O módulo de criptografia do software NSS foi validado três vezes para conformidade com o FIPS 140 nos Níveis de Segurança 1 e</span></span> 2. Para mais informações, veja a página <a href="FIPS_Mode_-_an_explanation">NSS FIPS</a> (<a class="external" href="https://wiki.mozilla.org/FIPS_Validation">Ou essa página</a>).</p>
+
+<p>As bibliotecas NSS passaram nas suites de testes NISCC <a class="external" href="https://www.niscc.gov.uk/niscc/docs/re-20030930-00749.pdf?lang=en">TLS/SSL</a> e <a class="external" href="https://www.uniras.gov.uk/niscc/docs/re-20031104-00752.pdf?lang=en">S/MIME</a> (<span class="tlid-translation translation" lang="pt"><span title="">1,6 milhão de casos de teste com dados de entrada inválidos</span></span>).</p>
+
+<h3 id="Complete_Software_Development_Kit" name="Complete_Software_Development_Kit"><span class="tlid-translation translation" lang="pt"><span title="">Kit Completo de Desenvolvimento de Software</span></span></h3>
+
+<p><span class="tlid-translation translation" lang="pt"><span title="">Além de bibliotecas e APIs, o NSS fornece</span></span> <a class="external" href="https://developer.mozilla.org/en-US/docs/NSS/Tools">ferramentas de segurança</a> <span class="tlid-translation translation" lang="pt"><span title="">necessárias para depuração, diagnósticos, gerenciamento de certificados e chaves, gerenciamento de módulos de criptografia e outras tarefas de desenvolvimento.</span></span></p>
+
+<p><span class="tlid-translation translation" lang="pt"><span title="">NSS vem com um extenso e crescente conjunto de</span></span><a href="/docs/Mozilla/Projects/NSS#Documentation"> documentação</a>, incluindo material introdutório, referências de API, páginas man para ferramentas CLI, e <a class="external" href="https://developer.mozilla.org/en-US/docs/NSS/NSS_Sample_Code">códigos de exemplo</a>.</p>
+
+<p>NSS está disponível como código e bibliotecas (dinâmicas) compartilhadas. <span class="tlid-translation translation" lang="pt"><span title="">Cada versão do NSS é compatível com versões anteriores, permitindo que os usuários do NSS atualizem para as novas bibliotecas compartilhadas do NSS sem recompilar ou reconectar seus aplicativos.</span></span></p>
+
+<h3 id="Open-Source_Licensing_and_Distribution" name="Open-Source_Licensing_and_Distribution"><span class="tlid-translation translation" lang="pt"><span title="">Licenciamento e Distribuição de Código Aberto</span></span></h3>
+
+<p>NSS está disponível sob a <a href="https://www.mozilla.org/MPL/">Licença Pública Mozilla</a>, versão 2. <span class="tlid-translation translation" lang="pt"><span title="">O código-fonte mais recente está disponível gratuitamente em todo o mundo a partir de</span></span> <a class="external" href="https://www.mozilla.org" rel="freelink">https://www.mozilla.org</a> <span class="tlid-translation translation" lang="pt"><span title="">e seus sites espelhados (mirrors).</span></span></p>

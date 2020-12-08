@@ -1,0 +1,85 @@
+---
+title: '0.90'
+slug: Archive/RSS/Wersje/0.90
+tags:
+  - RSS
+  - Wszystkie_kategorie
+translation_of: Archive/RSS/Version/0.90
+---
+<p>
+</p><p>{{ Deprecated_header() }}
+</p>
+<h2 id="RSS_0.90" name="RSS_0.90"> RSS 0.90 </h2>
+<p>RSS 0.90 jest najwcześniejszą znaną wersją RSS, opublikowaną jako pełną wersje i została zastąpiona przez wersje <a href="pl/RSS/Wersje/0.91/Netscape/Wersja_1">Netscape'a RSS 0.91 (Wersja 1)</a>. Stworzony został przez firmę Netscape, aby być formatem metadanych, które dostarczają podsumowanie ze stron internetowych (i nie tylko był formatem syndykacji, tak jak to jest na dzień dzisiejszy). </p><p>RSS 0.90 jest oparty na formacie <a href="pl/RDF">RDF</a>.
+</p><p>Podczas tworzenia RSS 0.90, inicjalizacja RSS rozumie go jako <b>Rich Site Summary</b>, a nie jako <b>Really Simple Syndication</b>. (Zobacz <a href="pl/RSS/What_is_in_a_Name">RSS - What is in a Name</a> aby dowiedzieć się więcej nt. historii i stosowanych nazwach poszczególnych wersji.)
+</p>
+<div class="note">
+<p><b>NOTATKA</b>: RSS 0.90 został wycofany (<b>deprected</b>). Osoby tworzące kanał RSS <i>NIE POWINY</i> tworzyć kanału RSS w wersji 0.90 i <i>POWINNI</i> zamiast tego używać nigdy nie wycofanej wersji formatu RSS. (Zobacz <a href="pl/RSS/Wersje">listę wersji RSS</a>, aby zobaczyć, który format nie jest formatem wycofanym). Użytkownicy RSS <i>POWINNi</i> wciąż być chociaż zdolni zaakceptować kanał RSS 0.90.
+</p>
+</div>
+<p><br>
+</p>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<p>RSS 0.90 wygląda podobnie do poniżeszego kodu:
+</p>
+<pre class="eval">   <span class="nowiki">
+    &lt;?xml version="1.0"?&gt;
+
+    &lt;rdf:RDF
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns="http://my.netscape.com/rdf/simple/0.9/"
+    &gt;
+
+        &lt;channel&gt;
+            &lt;title&gt;Mozilla Dot Org&lt;/title&gt;
+            &lt;link&gt;http://www.mozilla.org&lt;/link&gt;
+            &lt;description&gt;the Mozilla Organization web site&lt;/description&gt;
+        &lt;/channel&gt;
+
+        &lt;image&gt;
+            &lt;title&gt;Mozilla&lt;/title&gt;
+            &lt;url&gt;http://www.mozilla.org/images/moz.gif&lt;/url&gt;
+            &lt;link&gt;http://www.mozilla.org&lt;/link&gt;
+        &lt;/image&gt;
+
+        &lt;item&gt;
+            &lt;title&gt;New Status Updates&lt;/title&gt;
+            &lt;link&gt;http://www.mozilla.org/status/&lt;/link&gt;
+        &lt;/item&gt;
+
+        &lt;item&gt;
+            &lt;title&gt;Bugzilla Reorganized&lt;/title&gt;
+            &lt;link&gt;http://www.mozilla.org/bugs/&lt;/link&gt;
+        &lt;/item&gt;
+
+        &lt;item&gt;
+            &lt;title&gt;Mozilla Party, 2.0!&lt;/title&gt;
+            &lt;link&gt;http://www.mozilla.org/party/1999/&lt;/link&gt;
+        &lt;/item&gt;
+
+        &lt;item&gt;
+            &lt;title&gt;Unix Platform Parity&lt;/title&gt;
+            &lt;link&gt;http://www.mozilla.org/build/unix.html&lt;/link&gt;
+        &lt;/item&gt;
+
+        &lt;item&gt;
+            &lt;title&gt;NPL 1.0M published&lt;/title&gt;
+            &lt;link&gt;http://www.mozilla.org/NPL/NPL-1.0M.html&lt;/link&gt;
+        &lt;/item&gt;
+
+    &lt;/rdf:RDF&gt;
+    </span>
+</pre>
+<p>Note that here, RSS is being used to list sections of the web site. Rather than for syndication.
+</p><p><br>
+</p>
+<h3 id="Specyfikacje" name="Specyfikacje"> Specyfikacje </h3>
+<p>Oryginalna specyfikacja RSS 0.90 znikneła z oryginalnego adresu strony
+</p>
+<dl><dd> <span class="nowiki">http://my.netscape.com/publish/help/quickstart.html</span>
+</dd></dl>
+<p>Kopie zostały zapisane i można je zobaczyć: </p>
+<ul><li> <a href="http://www.purplepages.ie/RSS/netscape/rss0.90.html" class=" external" rel="freelink">http://www.purplepages.ie/RSS/netscape/rss0.90.html</a>
+</li><li> <a href="http://web.archive.org/web/*/http://my.netscape.com/publish/help/quickstart.html" class=" external" rel="freelink">http://web.archive.org/web/*/http://...uickstart.html</a>
+</li></ul>
+{{ languages( { "en": "en/RSS/Version/0.90", "ja": "ja/RSS/Version/0.90" } ) }}

@@ -1,0 +1,195 @@
+---
+title: Guia de referência para opções make
+slug: Archive/B2G_OS/Desenvolvendo_Gaia/referencia_opcoes_make
+tags:
+  - B2G
+  - Debug make
+  - Depuração
+  - Dogfooding
+  - Firefox OS
+  - Gaia
+  - Make
+  - opções
+translation_of: Archive/B2G_OS/Developing_Gaia/make_options_reference
+---
+<div class="summary">
+ <p><span class="seoSummary">O comando <code>make</code> é usado no repo Gaia para criar perfis Gaia que podem ser carregados no seu dispositivo ou ser executado no <a href="/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>. Esse artigo detalha as diversas opções disponíveis.</span></p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: Existem muitas variáveis de ambiente no Makefile. Não fique dependente delas, pois podem ser removidas no futuro.</p>
+</div>
+<p>Os perfis criados normalmente são criadas no diretório raiz do gaia, por exemplo <code>/gaia/profile</code>, e contém os seguintes itens:</p>
+<ul>
+ <li><code>defaults/</code>: Diretório que contém as configurações padrão a serem recarregadas após um reset do telefone.</li>
+ <li><code>extensions/</code>: Diretório que contém extensões.</li>
+ <li><code>settings.json</code>: Arquivo de configuração.</li>
+ <li><code>user.js</code>: Outro arquivo que contém mais configurações e preferências.</li>
+ <li><code>webapps/</code>: Diretório que contém aplicativos web que serão instalados no telefone.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Quando você já fez um perfil e quer compilar um novo, você deve apagar o diretório existente do perfil antes de tentar gerar um novo.</p>
+</div>
+<h2 id="Default">Default</h2>
+<pre class="brush: bash">make</pre>
+<p>Simplemente gera um binário sem a marca oficial da Mozilla e sem a opção de depuração. Para compilar um binário com a marca da Mozilla você precisa usar essa <a href="#official_mozilla_branding">opção</a>. Para um binário de compilação, você precisa da opção de <a href="#debug_make">depuração</a>.</p>
+<h2 id="Copia_para_o_dispositivo">Copia para o dispositivo</h2>
+<pre class="brush: bash">make install-gaia
+
+make reset-gaia
+</pre>
+<p>Com a configuração do <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android Debug Bridge) <code>install-gaia</code> simplesmente copia as atualizações do Gaia do seu diretório de trabalho para o dispositivo. <code>reset-gaia</code> apagará toda a configuração existente, os perfis, aplicativos e os dados (um novo conjunto de banco de dados será inicializado) antes de copiar o Gaia.</p>
+<h2 id="Compilando_aplicativos_específicos">Compilando aplicativos específicos</h2>
+<pre class="brush: bash">APP=system make
+
+APP=system make install-gaia</pre>
+<p>Quando um perfil já existe, <code>APP</code> permite que você esepcifique qual aplicativo será reempacotado, ao invés de copiar novamente todos os aplicativos Gaia.</p>
+<h2 id="Especificando_um_diretório_de_perfil_customaizado">Especificando um diretório de perfil customaizado</h2>
+<p>Você pode especificar um diretório para compilar o seu perfil, usando <code>PROFILE_FOLDER</code>, por exemplo:</p>
+<pre class="brush: bash">PROFILE_FOLDER=profile-b2g-desktop make</pre>
+<h2 id="Compilando_para_dispositivos_diferentes">Compilando para dispositivos diferentes</h2>
+<p>Existem algumas opções que criam binários para diferentes dispositivos, com diferentes propósitos.</p>
+<h3 id="Criar_um_binário_do_Gaia_para_telefone">Criar um binário do Gaia para telefone</h3>
+<pre class="brush: bash">GAIA_DEVICE_TYPE=phone make</pre>
+<p>Esse binário pega os aplicativos listados em <code>/gaia/build/config/phone/apps-engineering.list</code>.</p>
+<h3 id="Criar_um_binário_do_Gaia_para_tablet">Criar um binário do Gaia para tablet</h3>
+<pre class="brush: bash">GAIA_DEVICE_TYPE=tablet make</pre>
+<p>Esse binário pega os aplicativos listados em <code>/gaia/build/config/tablet/apps-engineering.list</code>.</p>
+<h2 id="Tipos_diferentes_de_compilação">Tipos diferentes de compilação</h2>
+<p>Opções que criam binários com diversos propósitos.</p>
+<h3 id="Produção">Produção</h3>
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+<p>Cria um binário produtivo do Gaia:</p>
+<ul>
+ <li>Gaia é executado com os aplicativos empacotados, que é difícil de depurar, mas é a melhor forma para os aplicativos em termos de permissões de API, etc.</li>
+ <li>Aplicativos de testes não são incluídos no binário.</li>
+ <li>Depuração remota é desligada por padrão.</li>
+ <li>Bloqueio de tela é habilitado por default (a conexão USB é derrubada quando a tela é bloqueada).</li>
+ <li>Marionette está desligado.</li>
+ <li>A experiência de primeiro uso está habilitada.</li>
+ <li>É utilizado cache offline.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Você tamém pode usar o alias <code>make production</code>.</p>
+</div>
+<h3 id="Depuração"><a name="debug_make"></a>Depuração</h3>
+<pre class="brush: bash">DEBUG=1 make</pre>
+<p>A variável <code>DEBUG</code> executa o Gaia um um aplicativo hospedado num servidor interno numa porta específica (<code>GAIA_PORT</code>), ao invés do aplicativo empacotado que deve ser reempacotado depois de cada alteração. Isso fica fácil para realizar os testes. Lançando esse perfil com a última versão do Firefox Nightly vai lhe proporcionar bons painéis do B2G nas ferramentas de desenvolvimento do Firefox.</p>
+<p>Adicionalmente:</p>
+<ul>
+ <li>Aplicativos de testes são incluídos no binário.</li>
+ <li>Depuração remota é habilitada por padrão.</li>
+ <li>A tela de bloqueio está desabilitada (conexões USB não serão interrompidas).</li>
+ <li><a href="/pt-BR/docs/Mozilla/QA/Marionette">Marionette</a> é habiltado, pois é utilizado para executar os <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">testes unitários</a>.</li>
+ <li>A experiência de primeiro uso é desligada.</li>
+ <li>O cache offline não é utlizado, mesmo se for gerado.</li>
+</ul>
+<h3 id="Depuração_do_dispositivo">Depuração do dispositivo</h3>
+<pre class="brush: bash">DEVICE_DEBUG=1 make</pre>
+<p>Desabilita a tela de bloqueio no dispositivo e habilita a depuração com a ferramenta ADB, que é útil para a depuração do dispositivo.</p>
+<p>Nas versões do Firefox OS 1.2 e superiores, especifique esse parâmetro quando você quiser depurar os aplicativos Firefox OS com o <a href="/pt-BR/Firefox_OS/Using_the_App_Manager">App Manager</a>.</p>
+<h3 id="Depuração_do_B2G_Desktop">Depuração do B2G Desktop</h3>
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+<p>Cria uma versão de depuração para ser executada no <a href="/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a>.</p>
+<h3 id="Imagem_da_marca_oficial_da_Mozilla"><a name="official_mozilla_branding"></a>Imagem da marca oficial da Mozilla</h3>
+<pre class="brush: bash">MOZILLA_OFFICIAL=1 make</pre>
+<h3 id="Imagem_de_Dogfood">Imagem de Dogfood</h3>
+<pre class="brush: bash">DOGFOOD=1 make</pre>
+<div class="note">
+ <p><strong>Nota</strong>: <em>Dogfooding</em> é um termo em inglês muito usado em empresas de tecnologia, que significa fazer os usuários usarem produtos e serviços da empresa.</p>
+</div>
+<p>Nessa imagem são disponibilizadas opções e utilitários para o Dogfooding. Como exemplo, temos o aplicativo Feedback que permite aos <em>dog fooders</em> submeter feedbacks sobre o sistema operacional.</p>
+<h3 id="Aplicativos_do_sistema">Aplicativos do sistema</h3>
+<pre class="brush: bash">B2G_SYSTEM_APPS=1 make</pre>
+<p>A variável de ambiente permite você copiar um aplicativo para o diretório <code>/system/b2g</code> ao invés de <code>/data/local</code>. Você deve usar isso quando você trabalhar com um binário do usuário. Essa variável é automaticamente definida quando executar <code>make production</code>. Isso pode ser utilizado para <code>install-gaia</code> ou <code>reset-gaia</code>.</p>
+<h3 id="Compilação_para_distribuição_customizada_ou_comercial">Compilação para distribuição customizada ou comercial</h3>
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=./dir</pre>
+<div class="note">
+ <p><strong>Nota</strong>: Leia <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Desenvolvendo_no_Firefox_OS/Guia_customizacao_imagem_Firefox_OS">Customizações Comerciais</a> para maiores detalhes.</p>
+</div>
+<h2 id="Opções_para_desenvolvimentodepuração">Opções para desenvolvimento/depuração</h2>
+<p>Existem também opções para adicionar ou remover recursos com propósitos de depuração e suporte à programação.</p>
+<h3 id="Habilitar_depuração_remota">Habilitar depuração remota</h3>
+<pre class="brush: bash">REMOTE_DEBUGGER=1</pre>
+<p>Habilita a depuração remota no dispositivo. Verificar o artigo <a href="/pt-BR/Firefox_OS/Debugging/Developer_settings#Remote_debugging">Configurações para desenvolvedor</a>.</p>
+<h3 id="Otimização_do_JavaScript">Otimização do JavaScript</h3>
+<pre class="brush: bash">GAIA_OPTIMIZE=1 make</pre>
+<p>Habilita uma etapa no Gaia que concatena e comprime os arquivos JavaScript. Essa opção é automaticamente definida quando é executado <code>make production</code>. Isso pode ser utilizado para <code>install-gaia</code> ou <code>reset-gaia</code>.</p>
+<h3 id="Imagens_de_alta_resolução">Imagens de alta resolução</h3>
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+<p>Ou com o alias:</p>
+<pre class="brush: bash  language-html"><code class="language-html">GAIA_DPPX=1.5 make</code></pre>
+<p>Ao empacotar o aplicativo, essa opção substitui as imagens com os arquivos equivalentes em <code>*@1.5x.(gif|jpg|png)</code> se existirem. Você precisa usar as opções abaixo como parte do comando <code>make</code> padrão:</p>
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</pre>
+<p>Atualmente o Gaia possui as seguintes resoluções de tela:</p>
+<ul>
+ <li>qHD: ~540×960; device pixel ratio = 1.6875</li>
+ <li>WVGA: ~480×800; device pixel ratio = 1.5</li>
+ <li>HBGA (320x240); device pixel ratio = 1</li>
+</ul>
+<p>utilize <code>GAIA_DEV_PIXELS_PER_PX</code> para certificar-se que as imagens não apareçam deformadas nos dispostivos com telas qHD e WVGA. Veja o artigo <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">Um pixel não é um pixel</a> para maiores informações sobre pixels do dispositivo e pixels do CSS.</p>
+<h3 id="Compilação_para_dispositivos_com_pouca_memória">Compilação para dispositivos com pouca memória</h3>
+<pre class="brush: bash">GAIA_MEMORY_PROFILE=low make</pre>
+<p>Essa variável gera um perfil adequado para dispositivos com pouca memória, adequados para aparelhos como, por exemplo, o Tarako.</p>
+<h3 id="Desabilitar_a_Experiência_de_Primeiro_Uso_-_First_time_use_experience_(FTU)">Desabilitar a Experiência de Primeiro Uso - First time use experience (FTU)</h3>
+<pre class="brush: bash">NOFTU=1
+</pre>
+<h3 id="Desabilitar_tela_de_bloqueio">Desabilitar tela de bloqueio</h3>
+<p>Você pode desabilitar a tela de bloqueio usando a opçãoNO_LOCK_SCREEN:</p>
+<pre class="brush: bash">NO_LOCK_SCREEN=1 make</pre>
+<h3 id="Workloads">Workloads</h3>
+<p>As opções "<code>reference-workload"</code> possibilitam aos desenvolvedores e testadores instalar rapidamente uma grande quanitdade de dados em diversos aplicativos em um aparelho que tenha recebido uma imagem recentemente.</p>
+<p>Os comandos são (executador a partir do diretório gaia):</p>
+<pre class="brush: bash">make reference-workload-light</pre>
+<ul>
+ <li>200 contatos</li>
+ <li>200 menssagens SMS</li>
+ <li>Histórico de 50 ligações</li>
+ <li>20 imagens na galeria</li>
+ <li>20 músicas</li>
+ <li>5 vídeos</li>
+</ul>
+<pre class="brush: bash">make reference-workload-medium</pre>
+<ul>
+ <li>500 contatos</li>
+ <li>500 menssagens SMS</li>
+ <li>Histórico de 100 ligações</li>
+ <li>50 imagens na galeria</li>
+ <li>50 músicas</li>
+ <li>10 vídeos</li>
+</ul>
+<pre class="brush: bash">make reference-workload-heavy</pre>
+<ul>
+ <li>1000 contatos</li>
+ <li>1000 menssagens SMS</li>
+ <li>Histórico de 200 ligações</li>
+ <li>100 imagens na galeria</li>
+ <li>100 músicas</li>
+ <li>20 vídeos</li>
+</ul>
+<pre class="brush: bash">make reference-workload-x-heavy</pre>
+<ul>
+ <li>2000 contatos</li>
+ <li>2000 menssagens SMS</li>
+ <li>Histórico de 500 ligações</li>
+ <li>250 imagens na galeria</li>
+ <li>250 músicas</li>
+ <li>50 vídeos</li>
+</ul>
+<p>Essas opções podem ser usadas com a variável <code>APP</code>, ou com a variável<code> APPS</code> que deve conter os nomes dos aplicativos separados por espaço:</p>
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+<p>Exemplo da variável <code>APPS</code>:</p>
+<pre class="brush: bash">APPS="gallery music video communications/contacts sms communications/dialer"</pre>
+<p>Para instalar as músicas, o utiliário mid3v2 deve ser instalado. Esse utilitário deve ser instalado com o seguinte comando:</p>
+<pre class="brush: bash">sudo apt-get install python-mutagen</pre>
+<p>Se sua distro for o Fedora ou RHEL utilize:</p>
+<pre class="brush: bash">sudo yum install python-mutagen</pre>
+<h3 id="Documentação">Documentação</h3>
+<p>Documentos do Gaia podem ser compilados via jsdoc3. Para gerá-los, use o seguintes comando:</p>
+<pre class="brush: bash">make docs</pre>
+<h3 id="Habilitando_layout_IME_e_dicionários">Habilitando layout IME e dicionários</h3>
+<p>Para habilitar layout de teclado layout e os dicionários, use o seguinte comando:</p>
+<pre class="brush: bash">GAIA_KEYBOARD_LAYOUTS=en,zh-Hant-Zhuyin,el,de,fr,zh-Hans-Pinyin make</pre>

@@ -1,0 +1,196 @@
+---
+title: Wyskakujące menu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Wyskakujące_menu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Popup_Menus
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Przewijane_menu">Następny  »</a></p>
+</div><p></p>
+
+<p>W poprzednim artykule zobaczyliśmy jak utworzyć menu na pasku menu. Język <a href="pl/XUL">XUL</a> także posiada możliwości utworzenia wyskakujących menu (<em>popup menus</em> ), które są zazwyczaj wyświetlane w momencie kiedy użytkownik naciśnie prawy przycisk myszy.</p>
+
+<h3 id="Tworzenie_wyskakuj.C4.85cego_menu" name="Tworzenie_wyskakuj.C4.85cego_menu">Tworzenie wyskakującego menu</h3>
+
+<p><a href="pl/XUL">XUL</a> posiada trzy różne rodzaje wyskakujących okienek (popups), które zostały opisane poniżej. Główną różnicą pomiędzy nimi jest sposób ich wyświetlania:</p>
+
+<dl>
+ <dt>Zwykły popup (<em>plain popup</em> ) </dt>
+ <dd>Wyskakujące menu pojawiające się po naciśnięciu lewego przycisku myszy na elemencie. Jest podobne do menu na pasku menu, tyle tylko że może zostać umieszczone w dowolnym miejscu oraz zawierać dowolne elementy. Przykładem jest menu pojawiające po naciśnięciu przycisku Wstecz w przeglądarce.</dd>
+</dl>
+
+<dl>
+ <dt>Menu kontekstowe (<em>context popup</em> ) </dt>
+ <dd>Pojawia się po naciśnięciu kontekstowego przycisku myszy. Najczęściej jest to prawy przycisk, czasami inny lub z kombinacją innych klawiszy. Na przykład na Macintoshu należy użyć klawisza Ctrl oraz przycisku myszy lub przytrzymać przycisk przez chwilę. Możliwe jest także otworzenie menu kontekstowego bez użycia myszy, na przykład poprzez naciśnięcie klawisza menu na klawiaturze.</dd>
+</dl>
+
+<dl>
+ <dt>Podpowiedzi (<em>tooltips</em> ) </dt>
+ <dd>Wyskakujące okienko pojawiające się kiedy użytkownik najedzie myszką na element. Stosuje się je zazwyczaj w celu dostarczenia dodatkowych informacji o danym elemencie.</dd>
+</dl>
+
+<p>Wszystkie one różnią się sposobem wywołania. Mimo że mogą zawierać dowolną zawartość, dwa pierwsze zazwyczaj mają w sobie menu, a trzeci to najczęściej po prostu tekst. Rodzaj popupa określa się poprzez element go wywołujący.</p>
+
+<h4 id="Deklarowanie_zawarto.C5.9Bci_wyskakuj.C4.85cego_okienka" name="Deklarowanie_zawarto.C5.9Bci_wyskakuj.C4.85cego_okienka">Deklarowanie zawartości wyskakującego okienka</h4>
+
+<p>Wyskakujące okienko opisuje zastosowanie elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>. Nie posiada określonych atrybutów i jest typem pudełka. Podczas wywołania wyświetli okienko zawierające to co umieścimy we wnętrzu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>. Jednakże, powinniśmy zawsze umieszczać atrybut <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> w menupopup jako powiązanie z elementem wyskakującego okienka (popup). Zobaczmy, co to oznacza wkrótce. Najpierw, przykład:</p>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Wytnij"/&gt;
+    &lt;menuitem label="Kopiuj"/&gt;
+    &lt;menuitem label="Wklej"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+</pre>
+
+<p>Jak widać, zostało stworzone proste menu wyskakujące z trzema komendami. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> otacza trzy pozycje menu. Należy zwrócić uwagę, że <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> został ustawiony na element <code>menupopup</code>.</p>
+
+<p>Deklaracja menu wyskakującego okienka została cała otoczona przez element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code>. Jest to opcjonalnym kontenerem na wyskakujących okienek. Nie jest on rysowany na ekranie, lecz jest używany jako miejsce deklaracji wszystkich wyskakujących okienek. Może on zawierać wiele menu wyskakujących, jeden pod drugim. Zazwyczaj w pliku <code><code><a href="/pl/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> jest zadeklarowany tylko raz, chociaż nic nie stoi na przeszkodzie aby zrobić to wiele razy.</p>
+
+<p><span class="comment">As the name &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code>&lt;/code&gt; implies, you can put multiple popup declarations inside it. Just add additional ones after the first &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>&lt;/code&gt; element. You can have more than one &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code>&lt;/code&gt; in a file, but usually you will have only one.</span></p>
+
+<h4 id="Powi.C4.85zanie_wyskakuj.C4.85cego_okienka_z_elementem" name="Powi.C4.85zanie_wyskakuj.C4.85cego_okienka_z_elementem">Powiązanie wyskakującego okienka z elementem</h4>
+
+<p>Teraz po utworzeniu wyskakującego okna należałoby je pokazać. W tym celu musimy powiązać wyskakujące okno z elementem, gdzie powinno się ukazać. Dokonujemy tego w celu pokazania okna tylko wtedy, gdy użytkownik kliknie w danym obszarze okna. Przeważnie będzie to dany przycisk lub pudełko.</p>
+
+<p>Popup po utworzeniu może zostać wyświetlony. Aby pojawił się w określonym położeniu, należy go połączyć z odpowiednim elementem (najczęściej z przyciskiem lub pudełkiem elementu ). W tym celu należy do danego elementu dodać jeden z trzech atrybutów, każdy odpowiadający odpowiedniemu rodzajowi popupa. Są to: <code><code id="a-popup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/popup">popup</a></code></code> - zwykły popup <code><code id="a-context"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/context">context</a></code></code> - kontekstowy <code><code id="a-tooltip"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tooltip">tooltip</a></code></code> - podpowiedź</p>
+
+<p>Wartość atrybutu musi być ustawiona na <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> <code>menupopup</code>, które chcemy, aby się pojawiło. Dlatego właśnie każde z wyskakujących okienek musi posiadać <code>id</code>. W ten bardzo prosty sposób, możemy mieć wiele wyskakujących menu w jednym pliku.</p>
+
+<p>W powyższym przykładzie zostaje utworzone menu kontekstowe. Następnie jest ono dołączone do pudełka elementu.</p>
+
+<p><span class="comment">In the example above, we want to make the popup a context menu. That means that we need to use the &lt;code&gt;<code id="a-context"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/context">context</a></code>&lt;/code&gt; attribute and add it to the element which we want to have the popup associated with. The sample below shows how we might do this:</span></p>
+
+<p><br>
+ <span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul">Podgląd</a></p>
+
+<div class="float-right"><img alt="grafika:popups-ex1.png"></div>
+
+<pre>&lt;popupset&gt;
+  &lt;popup id="clipmenu"&gt;
+    &lt;menuitem label="Wytnij"/&gt;
+    &lt;menuitem label="Kopiuj"/&gt;
+    &lt;menuitem label="Wklej"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;box context="clipmenu"&gt;
+  &lt;description value="Kliknięcie kontekstowe dla menu"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Jak widać, menu kontekstowe zostało powiązane z pudełkiem. Jeśli zostanie on kliknięty kontekstowym przyciskiem myszy (najczęściej prawym), pojawi się popup. Stanie się tak również po kliknięciu w jego dziecko (element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> w naszym przykładzie). Dzięki temu, że menu dołącza się za pomocą atrybutu <code><code id="a-context"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/context">context</a></code></code> do danego elementu poprzez jego<em>id</em> , może być on użyty z wieloma obiektami. W tym wypadku pojawi się popup <code>clipmenu</code>.</p>
+
+<p><span class="comment">Here, the popup has been associated with a box. Whenever you context-click (right-click) anywhere inside the box, the popup menu will appear. The popup will also appear even if you click on the children of the box, so it will work if you click on the &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code>&lt;/code&gt; element also. The &lt;code&gt;<code id="a-context"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/context">context</a></code>&lt;/code&gt; attribute has been used to associate the box with a popup with the same id. In this case, the popup &lt;code&gt;clipmenu&lt;/code&gt; will appear. This way, you can have a number of popups and associate them with different elements. You could associate multiple popups with the same element by putting more attributes of different types on an element. You could also associate the same popup with multiple elements, which is one advantage of using the popup syntax. Popups can only be associated with XUL elements; they cannot be associated with HTML elements.</span></p>
+
+<h3 id="Podpowiedzi" name="Podpowiedzi">Podpowiedzi</h3>
+
+<p>Dowiemy się w jaki sposób prosto stworzyć podpowiedź. Są dwa sposoby na utworzenie podpowiedzi. Prostsza i zarazem pierwsza możliwość to dodanie atrybutu <code><code id="a-tooltiptext"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tooltiptext">tooltiptext</a></code></code> do elementu, do którego chcemy załączyć podpowiedź.</p>
+
+<p>Druga możliwość to użycie elementu typu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code> zawierającego treść podpowiedzi. Wymaga to oddzielnego bloku kodu dla każdej podpowiedzi lub skryptu generującego zawartość podpowiedzi. Zaletą takiego rozwiązania jest to, że można zawrzeć w niej dowolną treść.</p>
+
+<p><span class="comment">The second method is to use a &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code>&lt;/code&gt; element containing the content of a tooltip. This requires you to have a separate block of content for each tooltip or to have a script which sets the content. However, it does allow you to use any content besides text in a tooltip.</span></p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul">Podgląd</a></p>
+
+<pre>&lt;button label="Zapisz" tooltiptext="Kliknij tutaj, aby zapisać swoją zawartość"/&gt;
+
+&lt;popupset&gt;
+  &lt;tooltip id="moretip" orient="vertical" style="background-color: #33DD00;"&gt;
+    &lt;description value="Kliknij tutaj, aby dowiedzieć się więcej"/&gt;
+    &lt;description value="Naprawdę!" style="color: red;"/&gt;
+  &lt;/tooltip&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Więcej" tooltip="moretip"/&gt;
+</pre>
+
+<p>Każdy z tych dwóch przycisków posiada podpowiedź. Pierwszy stosuje domyślny styl podpowiedzi, natomiast drugi posiada styl nadany przez użytkownika, mający inny kolor tła oraz styl czcionki. Podpowiedź przyporządkowana została wraz przyciskiem <code>Więcej</code> za pomocą atrybutu <code>tooltip</code>, który jest ustawiony do przesłania na wartość <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code>. Zauważ, że element <code>tooltip</code> jest wciąż umieszczony wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code>, podobnie jak inne typy wyskakujących okienek (popup).</p>
+
+<p><span class="comment">powyżej fragment - zrobiony</span></p>
+
+<h3 id="Wyr.C3.B3wnywanie_okienek" name="Wyr.C3.B3wnywanie_okienek">Wyrównywanie okienek</h3>
+
+<p>Domyślnie okienko wyskakujące (<em>popup</em> ) oraz kontekstowe (<em>context window</em> ) zostaną wyświetlone tam gdzie znajduje się wzkaźnik myszy. Podpowiedź (<em>tooltip</em> ) pojawi się trochę poniżej elementu aby nie był zasłonięty przez wzkaźnik myszy. Czasami jednak zdarza się potrzeba większej kontroli nad miejscem wyświetlania okienka wyskakującego, na przykład menu które pojawia się po naciśnięciu przycisku Wstecz powinno pojawić się pod nim, a nie w miejscu gdzie znajduje się wzkaźnik myszy.</p>
+
+<p>W tym celu można użyć dodatkowego atrybutu elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code></code> - <code><code id="a-position"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/position">position</a></code></code>. Można go również dodać do elementu typu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>. Jest on używany w celu ustawienia miejsca wyświetlania okienka względem elementu go wywołującego. Posiada kilka zdefiniowanych wartości, krótko opisanych poniżej:</p>
+
+<dl>
+ <dt>after_start </dt>
+ <dd>popup pojawi się poniżej elementu, wyrównanie wzdłuż lewych krawędzi. Popup zostanie rozszerzony po prawej stronie jeśli jest większy niż element. W ten sposób wyświetlane jest menu, które pojawia się po naciśnięciu przycisku Wstecz w przeglądarce.</dd>
+ <dt>after_end </dt>
+ <dd>popup pojawi się poniżej elementu, wyrównanie wzdłuż prawych krawędzi.</dd>
+ <dt>before_start </dt>
+ <dd>popup pojawi się powyżej elementu, wyrównanie wzdłuż lewych krawędzi.</dd>
+ <dt>before_end </dt>
+ <dd>popup pojawi się powyżej elementu, wyrównanie wzdłuż prawych krawędzi.</dd>
+ <dt>end_after </dt>
+ <dd>popup pojawi się po prawej stronie elementu, wyrównanie wzdłuż dolnych krawędzi.</dd>
+ <dt>end_before </dt>
+ <dd>popup pojawi się po prawej stronie elementu, wyrównanie wzdłuż górnych krawędzi.</dd>
+ <dt>start_after </dt>
+ <dd>popup pojawi się po lewej stronie elementu, wyrównanie wzdłuż dolnych krawędzi.</dd>
+ <dt>start_before </dt>
+ <dd>popup pojawi się po lewej stronie elementu, wyrównanie wzdłuż górnych krawędzi.</dd>
+ <dt>overlap </dt>
+ <dd>popup pojawi się na elemencie.</dd>
+ <dt>at_pointer </dt>
+ <dd>popup pojawi się w tym samym miejscu, co wzkaźnik myszy.</dd>
+ <dt>after_pointer </dt>
+ <dd>popup pojawi się na takim samym poziomie co wzkaźnik myszy, ale poniżej elementu. W ten sposób zostaje wyświetlona podpowiedź.</dd>
+</dl>
+
+<p>Dodając do elementu jeden lub dwa takie atrybuty, można dokładnie określić, gdzie popup powinien się pojawić (nie można określić położenia w pikselach). Atrybutu<em>position</em> można użyć z wszystkimi typami okienek wyskakujących, ale zazwyczaj nie zmienia się jego wartości dla podpowiedzi.</p>
+
+<p>Poniższy przykład pokazuje sposób tworzenia przycisku Wstecz wraz z menu wyskakującym:</p>
+
+<h4 id="Przycisk_z_menu_wyskakuj.C4.85cym" name="Przycisk_z_menu_wyskakuj.C4.85cym">Przycisk z menu wyskakującym</h4>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul">Podgląd</a></p>
+
+<pre>&lt;popupset&gt;
+  &lt;popup id="backpopup" position="after_start"&gt;
+    &lt;menuitem label="Page 1"/&gt;
+    &lt;menuitem label="Page 2"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Pop Me Up" popup="backpopup"/&gt;
+</pre>
+
+<div class="highlight">
+<h3 id="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki">Nasz przykład: <code>Znajdź pliki</code></h3>
+
+<p>Dodajmy proste menu wyskakujące do okienka dialogowego <code>Znajdź pliki</code>. Dla przejrzystości zawartość będzie taka sama jak w menu <code>Edycja</code><code>Znajdź pliki</code>. Popup pojawi się po kliknięciu pierwszej zakładki:</p>
+
+<pre class="eval"><span class="highlightred">&lt;popupset&gt;
+  &lt;popup id="editpopup"&gt;
+    &lt;menuitem label="Wytnij" accesskey="t"/&gt;
+    &lt;menuitem label="Kopiuj" accesskey="k"/&gt;
+    &lt;menuitem label="Wklej" accesskey="w" disabled="true"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+.
+.
+.
+
+<span class="highlightred">&lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;</span>
+</pre>
+
+<p>Proste menu zostało dodane do pierwszej zakładki. Pojawi się ono po naciśnięciu prawego przycisku myszy (lub z klawiszem Ctrl na Macintoshu) gdziekolwiek na pierwszym panelu, natomiast kliknięcie w innym miejscu nie spowoduje żadnego efektu. Warto zauważyć że 'textbox' posiada swoje własne wbudowane menu, które zastąpi nasze.</p>
+
+<p>Nasz przykład, okienko dialogowe <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul">Podgląd</a></p>
+</div>
+
+<p>W następnym artykule zostaną <a href="pl/Kurs_XUL/Przewijane_menu">omówione menu przewijane</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Przewijane_menu">Następny  »</a></p>
+</div><p></p>

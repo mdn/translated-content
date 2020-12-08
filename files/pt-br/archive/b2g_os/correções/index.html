@@ -1,0 +1,35 @@
+---
+title: Resolução de problemas no Firefox OS
+slug: Archive/B2G_OS/Correções
+tags:
+  - Firefox OS
+  - Reiniciar
+  - SMS iPhone
+  - Travamento
+translation_of: Archive/B2G_OS/Troubleshooting
+---
+<p>Este artigo contém dicas para resolver problemas comuns que talvez você encontre ao utilizar o Sistema Operacional Firefox OS. Sinta-se à vontade para adcionar ainda mais conteúdo a esta página!</p>
+<div class="note">
+ <p><strong>Nota:</strong> Estas instruções assumem que você configurou <a href="/en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device" title="en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device">conforme as orientações de udev</a> em seu dispositivo.</p>
+</div>
+<h2 id="Problemas_de_Rede">Problemas de Rede</h2>
+<p>Se você está tendo dificuldades com a rede Wi-Fi, pode ser que resolva apagando o arquivo de configuração de Wi-Fi do aparelho. Para tanto, faça o seguinte:</p>
+<pre>adb shell rm /data/misc/wifi/wpa_supplicant.conf
+adb reboot
+</pre>
+<h2 id="Telefone_Bloqueado">Telefone Bloqueado</h2>
+<p>Se acontecer de o telefone bloquear, ou travar quando, por exemplo, tentando copiar uma ROM mal-compilada, reinicie com bootloader (fastboot ou heimdal, dependendo do seu dispositivo). A sequência exata varia dependendo do dispositivo.</p>
+<ul>
+ <li>Remova o cabo USB.</li>
+ <li>Remova a bateria.</li>
+ <li>Reinstale a bateria.</li>
+ <li>Para unagi e otoro, segure os botões aumentar volume e liga/desliga por alguns segundos até você ver a tela de splash.</li>
+ <li>Certifique-se que você colocou o aparelho no modo bootloader usando <code>fastboot devices</code> (ou <code>heimdall devices</code> para alguns aparelhos Samsung).</li>
+ <li>Uma vez que você visualize o celular em <code>fastboot devices</code>, você pode usar <code>./flash.sh </code>para copiar uma imagem.for Unagi.</li>
+</ul>
+<h2 id="Led_vermelho_piscando_(otorounagi)">Led vermelho piscando (otoro/unagi)</h2>
+<p>Isto significa que a bateria está com tão pouca carga que não consegue reiniciar. Você deve recarregar durante um certo tempo (até a luz vermelha parar de piscar rápido), ou você desliga o cabo USB, remove a bateria, reinstala o cabo USB, e coloca novamente a bateria.</p>
+<h2 id="Falha_ao_receber_SMS_após_instalar_um_cartão_SIM_originário_de_um_iPhone">Falha ao receber SMS após instalar um cartão SIM originário de um iPhone</h2>
+<p>Se você instalou no Firefox OS um cartão SIM que estava instalado em um iPhone (ou qualquer outra plataforma diferente), você pode perceber esse tipo de problema ao receber mensagens de texto originadas de usuários do iPhone.</p>
+<p>Isso é devido ao fato do iPhone envia as mensagens de texto usando <a href="https://www.apple.com/ios/messages/">iMessage</a>, que funciona roteando mensagens iPhone-iPhone através de servidores Apple ao invés do método tradicional a fim de evitar custos de SMS dos usuários de iPhone. Infelizmente quando você deixa de utilizar o iPhone, o iMessage não tem como saber que você não está mais utilizando o iPhone e as mensagens enviadas de outro iPhone continuarão usando o iMessage e você não as receberá.</p>
+<p>Para corrigir isso, desabilite o iMessage para o seu cartão SIM. Existe um guia de como fazer isso no imore.com — veja <a href="http://www.imore.com/text-issues-switching-iphone-android-heres-fix">o artigo</a>.</p>

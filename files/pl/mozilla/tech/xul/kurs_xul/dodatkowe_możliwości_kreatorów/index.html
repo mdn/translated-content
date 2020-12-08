@@ -1,0 +1,85 @@
+---
+title: Dodatkowe możliwości kreatorów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodatkowe_możliwości_kreatorów
+tags:
+  - Kurs_XUL
+  - Projekt_MDC
+  - Przewodniki
+  - Strony_do_aktualizacji
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Wizards
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_kreatora" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Nakładki">Następny  »</a></p>
+</div><p></p>
+
+<p>Artykuł opisuje dodatkowe możliwości kreatorów.</p>
+
+<h2 id="Bardziej_z.C5.82o.C5.BCona_nawigacja_w_kreatorze" name="Bardziej_z.C5.82o.C5.BCona_nawigacja_w_kreatorze">Bardziej złożona nawigacja w kreatorze</h2>
+
+<p>Normalnie, kreator wyświetla każdy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> w takiej kolejności w jakiej umieściłeś je w pliku XUL. Jednak w pewnych przypadkach możesz chcieć mieć różne strony kreatorów pojawiające się w zależności od tego co użytkownik wybrał na wcześniejszych stronach.</p>
+
+<p>W tym przypadku umieść atrybut <code>pageid</code> na każdej z tych stron powinno być to ustawione jako identyfikator dla każdej strony. Potem, aby nawigować po stronie użyj jednej z dwóch metod:</p>
+
+<ol>
+ <li>Ustaw atrybut <code>next</code> na każdej stronie na ID kolejnej strony. Możesz zmienić te atrybuty jako potrzebne do nawigacji po różnych stronach.</li>
+ <li>Wywołaj metodę <code>goTo()</code>. Pobiera ona jeden argument, ID strony do której chcesz przejść. Możesz wywołać tą metodę w funkcji obsługi <code>onpageadvanced</code> lub <code>onwizardnext</code>. Pamiętaj o zwróceniu fałszu w tym przypadku, ponieważ już sam zmieniłeś stronę. Odnotuj metodę <code>goTo()</code>, ponieważ powoduje zmianę strony, ponownie uruchamiając zdarzenia, więc musisz się upewnić, że obsługujesz ten przypadek.</li>
+</ol>
+
+<p>Na przykład tu mamy zbiór stron kreatora (wewnętrzna zawartość została pominięta):</p>
+
+<pre>&lt;wizardpage pageid="type" next="font"&gt;
+&lt;wizardpage pageid="font" next="done"&gt;
+&lt;wizardpage pageid="color" next="done"&gt;
+&lt;wizardpage pageid="done"&gt;
+</pre>
+
+<p>Kreator zawsze zaczyna się od pierwszej strony, którą w tym przypadku ma ID strony <code>type</code>. Następna strona jest stroną z ID strony <code>font</code>, więc kreator będzie nawigował do kolejnej strony. Na stronie z ID strony <code>font</code>, widzimy, że kolejna strona to <code>done</code>, więc ta strona będzie wyświetlona później Strona z ID strony <code>done</code> nie ma atrybutu <code>next</code>, więc będzie to ostatnia strona. Skrypt będzie modyfikował atrybut <code>next</code>, jeśli to konieczne do pójścia do strony z ID strony <code>color</code> kiedy to potrzebne.</p>
+
+<h2 id="Funkcje_kreatora" name="Funkcje_kreatora">Funkcje kreatora</h2>
+
+<p>Kreator pracuje podobnie <a href="pl/Kurs_XUL/Pude%c5%82ko_kart">jak panel kart</a>, z wyjątkiem tego, że karty nie są wyświetlane, a użytkownik przechodzi pomiędzy stronami używając przycisków ułożonych na dole. Ponieważ wszystkie strony są częścią tego samego pliku, wszystkie wartości tych pól na wszystkich stronach będą zapamiętane. Zatem, nie musisz wczytywać i zapisywać informacji pomiędzy stronami.</p>
+
+<p>Jednakże, możesz chcieć wykonać sprawdzanie każde pole na każdej stronie. Do tego użyj funkcji obsługi opisanych w poprzednim rozdziale. Jeśli pole jest niepoprawne, możesz wyświetlić alarm. W pewnych przypadkach byłoby bardziej dogodne zablokować przycisk Next dopóki ie zostanie wprowadzona poprawna wartość.</p>
+
+<p>Kreator ma własność <code>canAdvance</code>, która może być ustawiona na prawdę do wskazania, że przycisk Next powinien być włączony. Jeśli ustawimy ją na fałsz, przycisk Next będzie zablokowany. Możesz zmienić tą własność kiedy niepoprawna lub poprawna dana zostanie wprowadzona.</p>
+
+<p>W poniższym przykładzie, użytkownik musi wprowadzić tajny kod do pola tekstowego na pierwszej stronie kreatora. Funkcja checkCode() jest wywoływana kiedy pierwsza strona jest pokazywana jako wskazywana przez atrybut <code>onpageshow</code>. Jest również wywoływane, kiedy jest naciśnięty klawisz w polu tekstowym, określającym czy przycisk Next powinien ponownie być włączony.</p>
+
+<h3 id="Przyk.C5.82ad_kreatora" name="Przyk.C5.82ad_kreatora">Przykład kreatora</h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_advwiz_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="theWizard" title="Secret Code Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function checkCode(){
+  document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
+}
+&lt;/script&gt;
+
+  &lt;wizardpage onpageshow="checkCode(); return true;"&gt;
+       &lt;label value="Enter the secret code:"/&gt;
+       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage&gt;
+       &lt;label value="That is the correct secret code."/&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+
+<p>Jest również odpowiednia własność <code>canRewind</code>, której możesz użyć do włączenia lub wyłączenia przycisku Back. Obie własności są modyfikowane automatycznie kiedy przełączasz strony. Zatem, przycisk Back będzie wyłączony na pierwszej stronie, więc nie musisz ustawiać go sam.</p>
+
+<p>Inna użyteczną własnością kreatora jest <code>currentPage</code>, która przechowuje odniesienie do aktualnie wyświetlanego <code>wizardpage</code>. Możesz również modyfikować bieżąca stronę przez zmianę tej własności. Jeśli zmienisz ją, będzie uruchomione kilka zdarzeń zmian strony.</p>
+
+<p>W kolejnym artykule dowiemy się jak stosować <a href="pl/Kurs_XUL/Nak%c5%82adki">nakładki do obsługi wspólnej zawartości</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_kreatora" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Nakładki">Następny  »</a></p>
+</div><p></p>

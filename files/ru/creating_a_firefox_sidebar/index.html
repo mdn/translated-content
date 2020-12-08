@@ -1,0 +1,175 @@
+---
+title: Создание боковой панели в Firefox
+slug: Creating_a_Firefox_sidebar
+tags:
+  - firefox sidebar extension
+translation_of: Mozilla/Creating_a_Firefox_sidebar
+---
+<p> </p>
+<p>В этой статье описывается, как создать зарегистрированную боковую панель в Firefox 2 или выше. Информацию о создании расширения в более ранних браузерах смотрите в справочном разделе.</p>
+<h2 id="Introduction" name="Introduction">Введение</h2>
+<p><font>Эта статья представляет собой быстрый старт для создания новой боковой панели Firefox.<span class="Apple-converted-space"> Всё, что</span></font><font> мы сделаем - это создим боковую панель и зарегистририруем её, чтобы она была доступен в меню.<span class="Apple-converted-space"> </span></font><font>Целью является создание пустой боковой панели, которую можно использовать в качестве заготовки для создания новых приложений в боковой панели.</font></p>
+<p>Создание боковой панели требует создания и регистрации в целевом приложении элементов графического интерфейса (GUI). Во-первых, будет создана простая XUL страница. Затем сделаем регистрационные файлы и, наконец, упакуем боковую панель упаковываются в инсталляционный XPI файл.</p>
+<h2 id="Pre-requisites" name="Pre-requisites">Предпосылки</h2>
+<p>Эта статья представляет собой бастрый старт и не объяснит все элементы <a href="/en/XUL" title="en/XUL">XUL</a>, упаковки и XPI. Желательно, чтобы у вас уже были базовые знания о том, как работает XUL и как Firefox обрабатывает расширения. См. <a href="/ru/docs/Создание_расширения" title="en/Building_an_Extension">Создание расширения</a> (или <a href="/en/Building_an_Extension" title="/en/Building_an_Extension">Building an Extension</a>) для получения более подробной информации о структурировании, упаковке и развертывания расширений.</p>
+<h2 id="Packages" name="Packages">Пакеты</h2>
+<p><span style="display: none;"> </span>Расширения Firefox устанавливаются вместе с пакетами ("<a href="/en/Bundles" title="en/Bundles">Bundles</a>"). Пакет расширения обычно включает в себя «содержимое» поставщика, который содержит XUL код и логику приложения. Опционально в пакет входят языковые локализации и обложки (скины). Большинство дополнений поставляются с древовидной структурой по умолчанию, хотя это не требуется, но рекомендуется её использовать. Пример пакета для создаваемой боковой панели и включаемых файлов приведены ниже.</p>
+<div class="example" id="package_structure">
+  <p><strong>Пример 1. Структура пакета</strong></p>
+  <pre>emptysidebar
+\- chrome
+   |- content
+   |- locale
+   | \- en-US
+   \- skin
+</pre>
+</div>
+<p>Создайте все папки, за исключением <code>skin</code>. Она не используется в этом уроке.</p>
+<p>Папка <code>locale</code> содержит информацию по локализации, в данном случае создана папкатолько для <code>en-US</code> локализации. Это приведено в <a href="#Example2">Примере 2</a>. Локализация включает в себя имя и сочетания клавиш для боковой панели.</p>
+<div class="example" id="en-us_emptysidebar.dtd">
+  <p><strong><a name="Example2">Пример 2</a>. chrome/locale/en-US/emptysidebar.dtd</strong></p>
+  <pre class="eval">&lt;!ENTITY emptysidebar.title "EmptySidebar"&gt;
+&lt;!ENTITY openEmptySidebar.commandkey "E"&gt;
+&lt;!ENTITY openEmptySidebar.modifierskey "shift accel"&gt;
+</pre>
+  <p>Папка content включает в себя нашу боковую панель, содержание файла <code>emptysidebar.xul</code> показано в <a href="#Example3">Примере 3</a>. Он создаёт <a class="external" href="http://books.mozdev.org/html/appc-77238.html">страницу (page)</a> с одной надписью (label). Можно, также, включить сюда другие элементы. О том, как это делается можно узнать, прочитав учебные материалы по XUL.</p>
+  <div class="example" id="emptysidebar_xul">
+    <p><strong><a name="Example3">Пример 3</a>. chrome/content/emptysidebar.xul</strong></p>
+    <pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css" ?&gt;
+&lt;?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?&gt;
+&lt;!DOCTYPE page SYSTEM "chrome://emptysidebar/locale/emptysidebar.dtd"&gt;
+
+&lt;page id="sbEmptySidebar" title="&amp;emptysidebar.title;"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" &gt;
+  &lt;vbox flex="1"&gt;
+    &lt;label id="atest" value="&amp;emptysidebar.title;" /&gt;
+  &lt;/vbox&gt;
+&lt;/page&gt;
+</pre>
+  </div>
+  <p>Новоые расширения могут быть зарегистрированы о основном и всплывающих меню, для расширения меню Firefox использует оверлеи (overlays). Это отдельный XUL файл, который указывет расположение пунктов меню. В данном уроке панель добаяляется в меню View | Sidebar. Файл оверлея приведен в листинге <a href="#overlay_xul">Пример 4</a>.</p>
+  <div class="example" id="overlay_xul">
+    <p><strong>Пример 4. chrome/content/firefoxOverlay.xul</strong></p>
+    <pre>&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE overlay SYSTEM "chrome://emptysidebar/locale/emptysidebar.dtd"&gt;
+&lt;overlay id="emptySidebarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;menupopup id="viewSidebarMenu"&gt;
+    &lt;menuitem key="key_openEmptySidebar" observes="viewEmptySidebar"  /&gt;
+  &lt;/menupopup&gt;
+
+  &lt;keyset id="mainKeyset"&gt;
+    &lt;key id="key_openEmptySidebar" command="viewEmptySidebar"
+         key="&amp;openEmptySidebar.commandkey;"
+         modifiers="&amp;openEmptySidebar.modifierskey;" /&gt;
+  &lt;/keyset&gt;
+
+  &lt;broadcasterset id="mainBroadcasterSet"&gt;
+    &lt;broadcaster id="viewEmptySidebar"
+                 label="&amp;emptysidebar.title;"
+                 autoCheck="false"
+                 type="checkbox"
+                 group="sidebar"
+                 sidebarurl="chrome://emptysidebar/content/emptysidebar.xul"
+                 sidebartitle="&amp;emptysidebar.title;"
+                 oncommand="toggleSidebar('viewEmptySidebar');" /&gt;
+  &lt;/broadcasterset&gt;
+&lt;/overlay&gt;
+</pre>
+  </div>
+  <p>Файл описания оверлея состоит из трёх основных блоков: определение меню, сочетаний клавиш и транслятор (broadcaster).</p>
+  <p>Broadcaster служит двум целям. Первая - косвенное предоставление аргументов функции toggleSidebar. Вторая - обеспечивает (предоставляет) атрибуты пунктам меню, некоторые из которых изменяются автоматически при вызове toggleSidebar. См. <a href="/En/Code_snippets/Sidebar" title="En/Code snippets/Sidebar">Code_snippets/Sidebar</a> для дополнительной информации.</p>
+  <p>Если боковая панель не будет работать с клавиатурными командами, можно удалить ключи<code> openEmptySidebar.commandkey</code> и <code>openEmptySidebar.modifierskey</code> из dtd-схемы, удалив тэг <code>&lt;keyset&gt;</code> из файла <code>firefoxOverlay.xul</code>. Затем нужно установить ключевой атрибут пункта меню в значение "".</p>
+  <p>Для расширения необходимо подготовить несколько специальных файлов манифеста, которые управляют тем, как расширение устанавливается и где хранятся chrome-ресурсы. Первый файл <code>install.rdf</code>, отвечает за инсталляцию расширения. См. <a href="/en/Install_Manifests" title="en/Install_Manifests">Install Manifests</a> для получения полного перечня обязательных и опциональных свойств. Инсталлционный манифест приведен в <a href="#install_manifest">Примере 5</a>.</p>
+  <div class="example" id="install_manifest">
+    <p><strong>Пример 5. install.rdf</strong></p>
+    <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;emptysidebar@yourdomain.com&lt;/em:id&gt;
+    &lt;em:name&gt;EmptySidebar Extension&lt;/em:name&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:creator&gt;Your Name&lt;/em:creator&gt;
+    &lt;em:description&gt;Example extension for creation and registration of a sidebar.&lt;/em:description&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt; &lt;!-- firefox --&gt;
+        &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+  </div>
+  <p>Следующий манифест-файл это <code>chrome.manifest</code>. Chrome-манифест содержит перечень для всех типов ресурсов, которые используются расширением. Также манифест говорит Firefox-у, что расширение имеет оверлей, который нужно объединить в браузере. Для получения дополнительной информации о chrome-манифесте и поддерживаемых им свойствах см. <a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Manifest</a>. Манифест, использованный в нашем расширении приведен в <a href="#chrome_manifest">Примере 6</a>.</p>
+  <div class="example" id="chrome_manifest">
+    <p><strong>Пример 6. chrome.manifest</strong></p>
+    <pre>content	emptysidebar	chrome/content/
+locale	emptysidebar	en-US	chrome/locale/en-US/
+skin	emptysidebar	classic/1.0	chrome/skin/
+overlay	chrome://browser/content/browser.xul	chrome://emptysidebar/content/firefoxOverlay.xul
+</pre>
+  </div>
+  <h2 id="Test" name="Test">Проверка</h2>
+  <p>Во время разработки боковой панели вам часто нужно проверить как это выглядит в Firefox. Существует простой способ сделать это. Во-первых, мы должны сказать Firefox-у о вашем расширение</p>
+  <ol>
+    <li>Откройте вашу <a class="external" href="http://support.mozilla.com/en-US/kb/Profiles" title="http://support.mozilla.com/en-US/kb/Profiles">Папку профиля</a></li>
+    <li>Откройте папку расширений (создайте её, если она не существует)</li>
+    <li>Create a new text file, and put the path to your extension folder inside, e.g. <code>C:\extensions\myExtension</code> or <code>~/extensions/myExtension</code>. Save the file with the id of your extension as its name, e.g. <code><a class="link-mailto" href="mailto:emptysidebar@yourdomain.com" rel="freelink">emptysidebar@yourdomain.com</a></code></li>
+  </ol>
+  <p>Теперь вы готовы к проверке вашего расширения! Перезапустите Firefox и боковая панель будет включена в меню.</p>
+  <p><img alt="Image:sidebar-test.png" class="internal" src="/@api/deki/files/850/=Sidebar-test.png"></p>
+  <p>Теперь вы можете вернуться, внести изменения в XUL-файл, закрыть и перезапустить Firefox, и внесенные изменения должны появиться в панели.</p>
+  <h2 id="Deployment" name="Deployment">Развёртывание</h2>
+  <p>У нас есть боковая панель, настало время, чтобы сделать её доступной для всего мира. Для установки необходимо создать XPI-файл, который будет идентифицирован как Firefox-расширение. XPI это ZIP-архив, включающий в себя содержимое расширения, файлы локализации и файлы манифеста.</p>
+  <p>Папки содержимого расширения, локализации и скиновупаковываются в файл <code>emptysidebar.jar</code>, который должен быть создан в папке <code>chrome</code>. В UNIX-системах:</p>
+  <pre class="eval">~/src/emptysidebar$ <strong>cd chrome</strong>
+~/src/emptysidebar/chrome$ <strong>zip -r emptysidebar.jar content/ locale/</strong>
+</pre>
+  <p>В Windows, используйте архиватор ZIP для создания архива <code>emptysidebar.zip</code>, который, затем, переименуйте в  <code>emptysidebar.jar</code>.</p>
+  <p>Поскольку мы упаковали наше расширение в JAR-файл, нам нужно обновить chrome.manifest, чтобы  JAR-архив был принят во внимание при работе расширения:</p>
+  <div class="example" id="chrome_manifest_jar">
+    <p><strong>Пример 7. chrome.manifest</strong></p>
+    <pre>content emptysidebar	jar:chrome/emptysidebar.jar!/content/
+locale  emptysidebar	en-US	jar:chrome/emptysidebar.jar!/locale/en-US/
+skin    emptysidebar	classic/1.0	jar:chrome/emptysidebar.jar!/skin/
+overlay chrome://browser/content/browser.xul	chrome://emptysidebar/content/firefoxOverlay.xul
+</pre>
+  </div>
+  <p>Наконец, создайте XPI-файл. Это, также ZIP-архив, содержащий JAR-файл в папке chrome и файлы манифеста. В UNIX-системах:</p>
+  <pre class="eval">~/src/emptysidebar/chrome$ <strong>cd ..</strong>
+~/src/emptysidebar$ <strong>zip emptysidebar.xpi install.rdf chrome.manifest chrome/emptysidebar.jar</strong>
+</pre>
+  <p>Откройте Firefox и перейдите в папку, содержащую <code>emptysidebar.xpi</code>. Щёлкните по файлу и октроется окно установщика расширений. После перезапуска Firefox, боковая панель будет установлена.</p>
+  <p>Вы можете загрузить проект <a class="external" href="http://developer.mozilla.org/samples/extension-samples/emptysidebar.zip">empty sidebar</a> для использования его как основы для ваших собственных панелей.</p>
+  <div class="figure" id="emptysidebar_extension">
+    <p><img alt="Image:sidebar-installed.png" class="internal" src="/@api/deki/files/849/=Sidebar-installed.png"><br>
+      <strong>Расширение EmptySidebar</strong></p>
+  </div>
+  <h2 id="Resources" name="Resources">Ресурсы</h2>
+  <ul>
+    <li><a href="/en/Code_snippets/Sidebar" title="en/Code_snippets/Sidebar">Code snippets:Sidebar</a></li>
+    <li><a href="/ru/docs/Создание_расширения" title="en/Building_an_Extension">Создание расширения</a> (<a href="/en/Building_an_Extension" title="/en/Building_an_Extension">Building an Extension</a>)</li>
+    <li><a class="external" href="http://books.mozdev.org/html/index.html">Creating Applications with Mozilla</a></li>
+    <li><a class="external" href="http://www.bengoodger.com/software/mb/extensions/packaging/extensions.html">Packaging Firefox/Thunderbird Extensions</a></li>
+    <li><a class="external" href="http://occidopagus.nl/firefox/emptysidebar/">Creating a Firefox 1 Sidebar</a></li>
+  </ul>
+  <div class="originaldocinfo">
+    <h2 id="Original_Document_Information" name="Original_Document_Information">Оригинальная информация документа</h2>
+    <ul>
+      <li>Author: J.C. Wesdorp &lt;jcwesdorp . at . occidopagus.nl&gt; - May 30, 2005.</li>
+      <li>Updated for Firefox 2 - Dec 12, 2006.</li>
+      <li>Permission granted to migrate in Jan 2006, including permission to relicense under the CC:By-SA.</li>
+      <li>Original Source: <a class="external" href="http://occidopagus.nl/firefox/emptysidebar/" rel="freelink">http://occidopagus.nl/firefox/emptysidebar/</a></li>
+    </ul>
+  </div>
+</div>
+<p>{{ languages( { "es": "es/Crear_un_panel_lateral_en_Firefox" } ) }}</p>
+<div id="cke_pastebin" style="position: absolute; top: 673.5px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+   </div>

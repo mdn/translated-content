@@ -1,0 +1,117 @@
+---
+title: action
+slug: Mozilla/Tech/XUL/action
+tags:
+  - XUL Elements
+  - XUL ссылки
+translation_of: Archive/Mozilla/XUL/action
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ru/docs/XUL/Справочник">Справочник по XUL</a>    [
+ <a href="#Examples">Примеры</a> |
+ <a href="#Атрибуты">Атрибуты</a> |
+ <a href="#Property">Свойства</a> |
+ <a href="#Методы">Методы</a> |
+ <a href="#Related">См. также</a> ]
+</span></div>
+
+<div class="noinclude">Действие должно содержаться в <code><a href="/ru/docs/Mozilla/Tech/XUL/query" title="query">query</a></code> или <code><a href="/ru/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> элементе. Используется для указания содержимого,  генерируемого для каждого совпадающего узла. Внутри <code>action</code>, атрибуты анализируются и выявляются <code id="a-uri"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/uri">uri</a></code>, <a class="external" href="http://xul.com/tutorials/xultu/templateex.html">ссылки на ресурсы и переменные</a>.</div>
+
+<p>Дополнительная информация доступна в
+<a href="/ru/XUL_Tutorial/Advanced_Rules">руководстве по XUL</a>.<br>
+ Зарубежный источник: <a href="/en-US/docs/XUL/Template_Guide/Actions">Actions</a>.</p>
+
+<h3 id="Examples" name="Examples">Примеры</h3>
+
+<pre> пример использования
+</pre>
+<pre><code>&lt;vbox datasources="http://www.xulplanet.com/ds/sample.rdf"
+         ref="http://www.xulplanet.com/rdf/A"&gt;
+  &lt;template&gt;
+    &lt;query&gt;
+      &lt;content uri="?start"/&gt;
+      &lt;triple subject="?start"
+              predicate="http://www.xulplanet.com/rdf/relatedItem"
+              object="?relateditem"/&gt;
+    &lt;/query&gt;
+    &lt;action&gt;
+      &lt;button uri="?relateditem" label="?relateditem"/&gt;
+    &lt;/action&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;</code></pre>
+
+<h3 id="Attributes" name="Attributes">Атрибуты</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238);">
+<tbody>
+<tr>
+<td><p><strong>Наследуется с XUL элемента</strong><br> <small>
+<code id="a-align"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/align">align</a></code>,
+<code id="a-allowevents"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/allowevents">allowevents</a></code>,
+<code id="a-allownegativeassertions"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/allownegativeassertions">allownegativeassertions</a></code>,
+<code id="a-class"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/class">class</a></code>,
+<code id="a-coalesceduplicatearcs"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/coalesceduplicatearcs">coalesceduplicatearcs</a></code>,
+<code id="a-collapsed"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/collapsed">collapsed</a></code>,
+<code id="a-container"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/container">container</a></code>,
+<code id="a-containment"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/containment">containment</a></code>,
+<code id="a-context"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/context">context</a></code>,
+<code id="a-contextmenu"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/contextmenu">contextmenu</a></code>,
+<code id="a-datasources"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/datasources">datasources</a></code>,
+<code id="a-dir"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/dir">dir</a></code>,
+<code id="a-empty"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/empty">empty</a></code>,
+<code id="a-equalsize"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/equalsize">equalsize</a></code>,
+<code id="a-flags"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/flags">flags</a></code>,
+<code id="a-flex"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/flex">flex</a></code>,
+<code id="a-height"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/height">height</a></code>,
+<code id="a-hidden"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/hidden">hidden</a></code>,
+<code id="a-id"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/id">id</a></code>,
+<code id="a-insertafter"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/insertafter">insertafter</a></code>,
+<code id="a-insertbefore"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/insertbefore">insertbefore</a></code>,
+<code id="a-left"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/left">left</a></code>,
+<code id="a-maxheight"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/maxheight">maxheight</a></code>,
+<code id="a-maxwidth"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/maxwidth">maxwidth</a></code>,
+<code id="a-menu"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/menu">menu</a></code>,
+<code id="a-minheight"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/minheight">minheight</a></code>,
+<code id="a-minwidth"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/minwidth">minwidth</a></code>,
+<code id="a-mousethrough"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/mousethrough">mousethrough</a></code>,
+<code id="a-observes"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/observes">observes</a></code>,
+<code id="a-ordinal"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/ordinal">ordinal</a></code>,
+<code id="a-orient"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/orient">orient</a></code>,
+<code id="a-pack"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/pack">pack</a></code>,
+<code id="a-persist"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/persist">persist</a></code>,
+<code id="a-popup"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/popup">popup</a></code>,
+<code id="a-position"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/position">position</a></code>,
+<code id="a-preference-editable"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/preference-editable">preference-editable</a></code>,
+<code id="a-querytype"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/querytype">querytype</a></code>,
+<code id="a-ref"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/ref">ref</a></code>,
+<code id="a-removeelement"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/removeelement">removeelement</a></code>,
+<code id="a-sortDirection"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/sortDirection">sortDirection</a></code>,
+<code id="a-sortResource"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/sortResource">sortResource</a></code>,
+<code id="a-sortResource2"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/sortResource2">sortResource2</a></code>,
+<code id="a-statustext"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/statustext">statustext</a></code>,
+<code id="a-style"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/style">style</a></code>,
+<code id="a-template"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/template">template</a></code>,
+<code id="a-tooltip"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/tooltip">tooltip</a></code>,
+<code id="a-tooltiptext"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/tooltiptext">tooltiptext</a></code>,
+<code id="a-top"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/top">top</a></code>,
+<code id="a-uri"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/uri">uri</a></code>,
+<code id="a-wait-cursor"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/wait-cursor">wait-cursor</a></code>,
+<code id="a-width"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/width">width</a></code> </small></p>
+</td>
+</tr>
+</tbody>
+</table><p></p>
+
+<h3 id=".D0.A1.D0.B2.D0.BE.D0.B9.D1.81.D1.82.D0.B2.D0.B0" name=".D0.A1.D0.B2.D0.BE.D0.B9.D1.81.D1.82.D0.B2.D0.B0">Свойства</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Наследуемые свойства</strong><br> <small> <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/align">align</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/allowEvents">allowEvents</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/boxObject">boxObject</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/builder">builder</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/className">className</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/collapsed">collapsed</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/contextMenu">contextMenu</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/controllers">controllers</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/database">database</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/datasources">datasources</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/dir">dir</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/flex">flex</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/height">height</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/hidden">hidden</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/id">id</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/left">left</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/maxHeight">maxHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/maxWidth">maxWidth</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/menu">menu</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/minHeight">minHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/minWidth">minWidth</a></span></code>, , , , , , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/observes">observes</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/ordinal">ordinal</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/orient">orient</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/pack">pack</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/persist">persist</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/ref">ref</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/resource">resource</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/statusText">statusText</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/style">style</a></span></code>, ,, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/tooltip">tooltip</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/tooltipText">tooltipText</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/top">top</a></span></code>, <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/width">width</a></span></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+
+<h3 id=".D0.9C.D0.B5.D1.82.D0.BE.D0.B4.D1.8B" name=".D0.9C.D0.B5.D1.82.D0.BE.D0.B4.D1.8B">Методы</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited Methods</strong><br> <small><code><a href="https://developer.mozilla.org/ru/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a class="internal" href="/ru/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a class="internal" href="/ru/DOM/Node.getFeature" title="En/DOM/Node.getFeature">getFeature</a>, <a class="internal" href="/ru/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a class="internal" href="/ru/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a class="internal" href="/ru/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.isSupported">isSupported()</a></code>, <a class="internal" href="/ru/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a class="internal" href="/ru/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a class="internal" href="/ru/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p> </td> </tr> </tbody>
+</table><p></p>
+
+<h3 id=".D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5" name=".D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5">См. также</h3>
+
+<p></p>

@@ -1,0 +1,215 @@
+---
+title: XBL bindings
+slug: Archive/Mozilla/XUL/Tutorial/XBL_bindings
+tags:
+  - 'CSS:Como_começar'
+translation_of: Archive/Beginner_tutorials/Using_XBL_from_stylesheets
+---
+<p>{{ PreviousNext("CSS:Como começar:JavaScript", "CSS:Como começar:Interfaces de usuário XUL") }}</p>
+
+<p>Esta página ilustra como o você pode usar as CSS no Mozilla para melhorar a estrutura de aplicações complexas, fazendo o código e recursos mais facilmente reutilizáveis.</p>
+
+<p>Você aplica esta técnica em uma simples demonstração.</p>
+
+<h2 id="Informa.C3.A7.C3.A3o_XBL_bindings" name="Informa.C3.A7.C3.A3o:_XBL_bindings">Informação: XBL bindings</h2>
+
+<p>A estrutura proporcionada pela linguagem de marcação e as CSS não é ideal para aplicações complexas onde partes precisam ser autônomas e reutilizáveis. Você pode colocar folhas de estilo em arquivos separados, e pode também colocar os scripts em arquivos separados. Mas você precisa ligar estes arquivos no documento como um todo.</p>
+
+<p>Outra limitação estrutural concerne ao conteúdo. Você pode usar as CSS para proporcionar conteúdo para elementos selecionados, mas o conteúdo é limitado a textos e imagens, e seu posicionamento é limitado em antes ou depois do elemento selecionado.</p>
+
+<p>Mozilla proporciona um mecanismo que supera estas limitações: <em>XBL</em> (XML Bindings Language). Você pode usar o XBL para ligar elementos selecionados ao próprio:</p>
+
+<ul>
+ <li>Folha de estilo</li>
+ <li>Conteúdo</li>
+ <li>Propriedades e métodos</li>
+ <li>Manipuladores de eventos</li>
+</ul>
+
+<p>Evitando ligar tudo no nível do documento, você pode fazer as partes autônomas que são fáceis de manter e reutilizar.</p>
+
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em; width: 100%;">
+ <caption>Mais detalhes</caption>
+ <tbody>
+  <tr>
+   <td>Para mais informação sobre XBL bindings, veja a página <a href="/pt/XBL" title="pt/XBL">XBL</a> neste wiki.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="A.C3.A7.C3.A3o_Uma_demonstra.C3.A7.C3.A3o_XBL" name="A.C3.A7.C3.A3o:_Uma_demonstra.C3.A7.C3.A3o_XBL">Ação: Uma demonstração XBL</h2>
+
+<p>Crie um novo documento HTML, <code>doc6.html</code>. Copie e cole o conteúdo daqui:</p>
+
+<div style="width: 48em;">
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;HTML&gt;
+
+&lt;HEAD&gt;
+&lt;TITLE&gt;Como Começar Mozilla CSS - Demonstração XBL &lt;/TITLE&gt;
+&lt;LINK rel="stylesheet" type="text/css" href="style6.css"&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY&gt;
+&lt;H1&gt;Demonstração XBL&lt;/H1&gt;
+&lt;DIV id="square"&gt;Clique Aqui&lt;/DIV&gt;
+&lt;/BODY&gt;
+
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<p>Crie um novo arquivo CSS, <code>style6.css</code>. Esta folha de estilo contém o documento de estilo. Copie e cole o conteúdo daqui:</p>
+
+<div style="width: 48em;">
+<pre>/*** Demonstração XBL ***/
+#square {
+  -moz-binding: url("square.xbl#square");
+  }
+</pre>
+</div>
+
+<p>Crie um novo arquivo de texto, <code>square.xbl</code>. Este arquivo contém o XBL binding. Copie e cole o conteúdo daqui, tendo certeza de ter rolado a tela para pegar tudo isto:</p>
+
+<div style="width: 48em; height: 12em; overflow: auto;">
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE bindings&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"
+             xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;binding id="square"&gt;
+
+  &lt;resources&gt;
+    &lt;stylesheet src="bind6.css"/&gt;
+    &lt;/resources&gt;
+
+  &lt;content&gt;
+    &lt;html:div anonid="square"/&gt;
+    &lt;html:button anonid="button" type="button"&gt;
+      &lt;children/&gt;
+      &lt;/html:button&gt;
+    &lt;/content&gt;
+
+  &lt;implementation&gt;
+
+    &lt;field name="square"&gt;&lt;![CDATA[
+      document.getAnonymousElementByAttribute(this, "anonid", "square")
+      ]]&gt;&lt;/field&gt;
+
+    &lt;field name="button"&gt;&lt;![CDATA[
+      document.getAnonymousElementByAttribute(this, "anonid", "button")
+      ]]&gt;&lt;/field&gt;
+
+    &lt;method name="doDemo"&gt;
+      &lt;body&gt;&lt;![CDATA[
+        this.square.style.backgroundColor = "#cf4"
+        this.square.style.marginLeft = "20em"
+        this.button.setAttribute("disabled", "true")
+        setTimeout(this.clearDemo, 2000, this)
+        ]]&gt;&lt;/body&gt;
+      &lt;/method&gt;
+
+    &lt;method name="clearDemo"&gt;
+      &lt;parameter name="me"/&gt;
+      &lt;body&gt;&lt;![CDATA[
+        me.square.style.backgroundColor = "transparent"
+        me.square.style.marginLeft = "0"
+        me.button.removeAttribute("disabled")
+        ]]&gt;&lt;/body&gt;
+      &lt;/method&gt;
+
+    &lt;/implementation&gt;
+
+  &lt;handlers&gt;
+    &lt;handler event="click" button="0"&gt;&lt;![CDATA[
+     if (event.originalTarget == this.button) this.doDemo()
+     ]]&gt;&lt;/handler&gt;
+    &lt;/handlers&gt;
+
+  &lt;/binding&gt;
+
+&lt;/bindings&gt;
+</pre>
+</div>
+
+<p>Crie um novo arquivo CSS, <code>bind6.css</code>. Esta folha de estilo separada contém o estilo para o binding. Copie e cole o conteúdo daqui:</p>
+
+<div style="width: 48em;">
+<pre>/*** Demonstração XBL ***/
+[anonid="square"] {
+  width: 20em;
+  height: 20em;
+  border: 2px inset gray;
+  }
+
+[anonid="button"] {
+  margin-top: 1em;
+  padding: .5em 2em;
+  }
+</pre>
+</div>
+
+<p>Abra o documento no seu navegador e pressione o botão.</p>
+
+<p>O wiki não suporta JavaScript nas páginas, então não é possível demonstrar aqui. Deve parecer como isto, antes e depois de você pressionar o botão:</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="padding-right: 2em;">
+    <table style="border: 2px outset #36b; padding: 0 4em .5em .5em;">
+     <tbody>
+      <tr>
+       <td>
+        <p><strong>Demonstração XBL</strong></p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td>
+    <table style="border: 2px outset #36b; padding: 0 4em .5em .5em;">
+     <tbody>
+      <tr>
+       <td>
+        <p><strong>Demonstração XBL</strong></p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Notas sobre esta demonstração:</p>
+
+<ul>
+ <li>O documento HTML é ligado à folha de estilo normalmente mas isto não liga nenhum código JavaScript.</li>
+ <li>O documento não contém nenhum botão. Ele contém somente o texto do botão. O botão é adicionado por binding.</li>
+ <li>O documento folha de estilo liga o binding.</li>
+ <li>O binding liga isto à sua folha de estilo, e isto suporta seu conteúdo e o código JavaScript. Então o binding é autônomo.</li>
+</ul>
+
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: .5em;">
+ <caption>Desafios</caption>
+ <tbody>
+  <tr>
+   <td>Mude o arquivo XBL de modo que o quadrado dobre a largura ao mudar de cor, em vez de saltar para a direita.
+    <p>Use a ferramenta DOM Inspector para inspecionar o documento, reavaliando o conteúdo adicionado.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="O_que_vem_depois.3F" name="O_que_vem_depois.3F">O que vem depois?</h3>
+
+<p>Se você teve dificuldade para entender esta página, ou se você tem algum comentário sobre ela, por favor contribua nesta página de <a href="/Talk:pt/CSS/Como_come%C3%A7ar/XBL_bindings" title="Talk:pt/CSS/Como_começar/XBL_bindings">Discussão</a>.</p>
+
+<p>Nesta demonstração, o quadrado e o botão foram <em>widgets</em> independentes que funcionam com um documento HTML. Mozilla tem uma linguagem de marcação especializada para criação de interfaces de usuários. A próxima página demostra isto: <strong><a href="/pt/CSS/Como_come%C3%A7ar/Interfaces_de_usu%C3%A1rio_XUL" title="pt/CSS/Como_começar/Interfaces_de_usuário_XUL">Interfaces de usuário XUL</a></strong></p>
+
+<p>{{ PreviousNext("CSS:Como começar:JavaScript", "CSS:Como começar:Interfaces de usuário XUL") }}</p>
+
+<p><span class="comment">Categorias</span></p>
+
+<p><span class="comment">Interwiki Language Links</span></p>

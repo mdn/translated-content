@@ -1,0 +1,104 @@
+---
+title: ':nth-of-type'
+slug: 'Web/CSS/:nth-of-type'
+tags:
+  - CSS
+  - Layout
+  - Reference
+  - Web
+  - Псевдоклассы
+translation_of: 'Web/CSS/:nth-of-type'
+---
+<div>{{CSSRef}}</div>
+
+<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a> <strong><code>:nth-of-type()</code></strong> находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов.</p>
+
+<pre class="brush: css no-line-numbers  language-css">/* Выбирает каждый четвёртый элемент &lt;p&gt;
+   среди любой группы соседних элементов. */
+p:nth-of-type(4n) {
+  color: lime;
+}</pre>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<p>Псевдокласс <code>nth-of-type</code> указывается с единственным аргументом, описывающим паттерн для выбора элементов.</p>
+
+<p>Более детальное описание синтаксиса может быть найдено на странице псевдокласса {{Cssxref(":nth-child")}}.</p>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Базовый_пример">Базовый пример</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;div&gt;Этот элемент не учитывается.&lt;/div&gt;
+  &lt;p&gt;Первый параграф.&lt;/p&gt;
+  &lt;p&gt;Второй параграф.&lt;/p&gt;
+  &lt;div&gt;Этот элемент не учитывается.&lt;/div&gt;
+  &lt;p&gt;Третий параграф.&lt;/p&gt;
+  &lt;p&gt;Четвёртый параграф.&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">/* Нечётные параграфы */
+p:nth-of-type(2n+1) {
+  color: red;
+}
+
+/* Чётные параграфы */
+p:nth-of-type(2n) {
+  color: blue;
+}
+
+/* Первый параграф */
+p:nth-of-type(1) {
+  font-weight: bold;
+}
+</pre>
+
+<h4 id="Результат">Результат</h4>
+
+<p>{{EmbedLiveSample('Базовый_пример', 250, 200)}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Теперь выбранные элементы не обязательно должны иметь родителя.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>
+<p>{{Compat("css.selectors.nth-of-type")}}</p>
+</div>
+
+<h2 id="См._также">См. также</h2>
+
+<ul>
+ <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
+</ul>

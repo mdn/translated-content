@@ -1,0 +1,99 @@
+---
+title: Instalando e Usando o ADB
+slug: Archive/B2G_OS/Debugging/Instalando_ADB
+translation_of: Archive/B2G_OS/Debugging/Installing_ADB
+---
+<div class="summary">
+<p><span class="seoSummary">Em muitos aspectos do desenvolvimento do Firefox OS será necessário a utilização do aplicativo ADB (Android Debug Bridge). Esse artigo explica como fazer a sua instalação e apresenta algun dos seus comandos mais úteis.</span></p>
+</div>
+
+<h2 id="Instalando_o_ADB">Instalando o ADB</h2>
+
+<p>Você pode baixar e instalar o <code>adb</code> como parte do pacote do Android SDK package, para Mac, Linux ou Windows - visite a página <a href="http://developer.android.com/sdk/index.html">Get the Android SDK</a>.</p>
+
+<p>Distribuições mais recentes do Linux já possuem o <code>adb</code> em seus repositórios. Para Ubuntu 12.10 e posteriores execute o seguinte comando:</p>
+
+<pre>sudo apt-get install android-tools-adb</pre>
+
+<p>Ou para Fedora 18/19:</p>
+
+<pre>sudo yum install android-tools</pre>
+
+<p>Ou no OSX usando <a href="http://brew.sh/">Homebrew</a>:</p>
+
+<pre class="language-html">brew install android-platform-tools</pre>
+
+<p>Se sua distribuição não possui pacotes disponíveis para <code>adb</code> (por exemplo, Ubuntu 12.04 ou Fedora 17), você precisará instalar o <a class="external" href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">Android SDK starter package</a> para sua plataforma (Selecione a opção <em>ADT Bundle</em>, e não <em>SDK Tools Only</em>). Então execute o gerenciador de pacote <code>$SDK_HOME/tools/android</code>, e use o GUI para instalar "Android SDK Platform-tools".</p>
+
+<p>Verifique onde o <code>adb</code> foi instalado (normalmente em <code>usr/bin</code>, possivelmente dentro de <code>adt/platform-tools</code>, depdendo de como você o instalou). Certifique-se de adicionar esse diretório em seu <code>PATH</code>. Isso pode ser feito adicionando a linha</p>
+
+<pre>PATH=$SDK_HOME:$PATH</pre>
+
+<p>ao seu <code>~/.bashrc</code> ou equivalente, onde <code>$SDK_HOME</code> é o caminho de onde foi instalado o Android SDK.</p>
+
+<h2 id="Resolvendo_problemas">Resolvendo problemas</h2>
+
+<p>Se você está usando uma instalação 64-bit, e receber um erro "File not found" quando executar 'adb' mesmo ele estando presente, você precisa instalar as bibliotecas de compatibilidade para 32-bit. Para fazer isso execute:</p>
+
+<pre>sudo apt-get install ia32-libs</pre>
+
+<p>Para novas versões do ubuntu:</p>
+
+<pre>sudo apt-get install lib32z1 lib32ncurses5 <code>gcc-multilib</code></pre>
+
+<h2 id="Comandos_comuns_do_ADB">Comandos comuns do ADB</h2>
+
+<p>As próximas seções explicam alguns dos mais comuns e úteis comandos do <code>adb</code>.</p>
+
+<h2 id="Reiniciando_o_processo_b2g">Reiniciando o processo b2g</h2>
+
+<p>b2g é equivalente à aplicação <a href="/pt-BR/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> que é executada no telefone no topo do kernel Android-based. Em algumas vezes você precisa reiniciá-la. Essa é a melhor maneira de reiniciar o ambiente de aplicações sem a necessidade de reiniciar todo o dispositivo. Você pode fazer isso executando o seguinte comando quando seu dispositivo estiver conectado ao seu computador (ou enquanto estiver executando o depurador):</p>
+
+<pre>adb shell killall b2g</pre>
+
+<h2 id="Habilitando_o_encaminhamento_de_porta_para_depuração">Habilitando o encaminhamento de porta para depuração</h2>
+
+<p>Para habilltar isso (por exemplo se você estiver executando o App Manager para depurar aplicativos em um dispositivo Firefox OS), entre o seguinte comando no seu terminal:</p>
+
+<pre class="language-html">adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+
+<p>Você necessitará fazer isso toda vez que o telefone for reiniciado ou for desconectado e reconectado ao computador. Você pode trocar o número do socket se necessário.</p>
+
+<h2 id="Encaminhando_portas_para_uma_máquina_local">Encaminhando portas para uma máquina local</h2>
+
+<p>Para isso, você precisará baixar os binários <a href="http://people.mozilla.org/~jmuizelaar/forward/">netcat and ssh</a>, e executar os seguintes comandos:</p>
+
+<pre class="brush: bash"># this is an awful hack but does in fact work...
+host$ adb forward tcp:7979 tcp:6969
+
+# make some named pipes so that we can make a bidirectional netcat
+phone$ mknod readback p
+host$ mknod readback p
+
+# this sets up a one time use connection to back to the host
+# listen on ports 6969 and 5959 and forward all the information between them
+phone$ ./netcat -l -p 6969 &lt; readback | ./netcat -l -p 5959 &gt; readback
+# connect to port 7979 (port 6969 on the device) and the local ssh server and forward all information between them
+host$ ./netcat localhost 7979 &lt; readback | ./netcat localhost 22 &gt; readback
+
+# now when we connect to port 5959 on the phone it will be like connecting to ssh server on the host
+
+# use the netcat reversal to set up an ssh connection back to the host and forward port 9999 on the device to 'localhost:8000' (this could be anything like 'google.com:80')
+phone$ ./ssh localhost -p 5959 -L 9999:localhost:8000</pre>
+
+<p>No exemplo acima é direcionada a porta 9999 do dispositivo para a porta 8000 do hospedeiro.</p>
+
+<p>Alternativamente você pode usar um servidor ssh (<a href="http://people.mozilla.org/~jmuizelaar/forward/dropbear">dropbear</a> e <a href="http://people.mozilla.org/~jmuizelaar/forward/host_key">host_key</a>) diretamente no dispositivo, usando os seguintes comandos:</p>
+
+<pre class="brush: bash">phone$ DROPBEAR_PASSWORD=root ./dropbear -p 9000 -F -v -a -r host_key ./dropbear
+host$ adb forward tcp:8888 tcp:9000
+# public key authentication has been hard coded to succeed (make sure you have a public key for ssh to use)
+host$ ssh -vvv root@localhost -p 8888 -R 9999:people.mozilla.org:80
+</pre>
+
+<p>Outros recursos:</p>
+
+<ul>
+ <li><a href="http://k.japko.eu/android-dropbear.html">Instruções para compilar dropbear</a></li>
+ <li><a href="http://people.mozilla.org/~jmuizelaar/forward/dropbear-b2g.patch">dropbear patch</a> que desabilita a falha no esquecimento de configurar variáveis de ambiente e o "hard code" no sucesso da autenticação.</li>
+</ul>

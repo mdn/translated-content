@@ -1,0 +1,90 @@
+---
+title: Aplicativos Gaia
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+tags:
+  - Apps
+  - Architecture
+  - B2G
+  - Firefox OS
+  - Gaia
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+---
+<div class="boxed translate-display">
+ <div class="summary">
+  <p><span class="seoSummary">Gaia é o front-end do Firefox OS, que contem a funcionalidade de administração do sistema e uma suíte interna de aplicativos distribuídos com os dispositivos Firefox OS. Todo o código fonte do Gaia, mesmo o sistema e os IMEs de teclado - é totalmente desenvolvido em HTML5 (HTML + CSS + JavaScript) e WebAPIs abertas. Esse conjunto de documentos contém informações de como cada um dos aplicativos padrões disponíveis na família Gaia funciona</span></p>
+ </div>
+ <h2 id="Categoria_de_funcionalidades_Gaia">Categoria de funcionalidades Gaia</h2>
+ <p>Os diferentes aplicativos Gaia podem ser agrupados na lista abaixo.</p>
+ <div class="note">
+  <p><strong>Nota</strong>: Muitas as páginas indicadas nesse documento são na verdade páginas README dentro do <a href="https://github.com/mozilla-b2g/gaia/">repo Gaia no Github</a>. Isso é porque muitos dos aplicativos são produzidos em ciclos de desenvolvimento rápido, o que significa ser muito comum haver atualizações diárias, não fazendo muito sentido manter atualizada a documentação no MDN. Os arquivos README atualizados pela equipe de engenharia é uma fonte mais precisa de informação.</p>
+ </div>
+ <h3 id="Plataforma">Plataforma</h3>
+ <p>Incluindo o Sistema, Configurações, Bloqueio de tela, scripts de compilação e aplicativos Bluetooth.</p>
+ <p><img alt="" src="https://mdn.mozillademos.org/files/7503/platform_team.png" style="width: 355px; height: 269px; margin: 0px auto; display: block;"></p>
+ <h4 id="Aplicativos_da_plataforma_apps_maiores_explicações">Aplicativos da plataforma apps: maiores explicações</h4>
+ <dl>
+  <dt>
+   <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Gaia_apps/System">Aplicativo System</a></dt>
+  <dd>
+   O aplicativo System é o primeiro aplicativo carregado pelo Gecko durante <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Architecture#Firefox_OS_bootup_procedure">o procedimento de boot do Firefox OS</a>, e ele lida com inúmeras responsabilidades que são necessárias para o funcionamento geral do sistema não sendo escopo de cada um dos demais aplicativos</dd>
+  <dt>
+   <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Gaia_apps/Browser">Aplicativo Browser</a></dt>
+  <dd>
+   O aplicativo Browser (que não é parte do aplicativo System) fornece as funcionalidades de um navegador onde for necessário — incluindo a navegação em uma página, busca e gerenciamento de favoritos.</dd>
+  <dt>
+   <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Gaia_apps/Window_Management">Gerenciamento das janelas</a></dt>
+  <dd>
+   A funcionalidade do gerenciamento de janelas do Firefox OS — incluindo o ciclo de vida do aplicativo e suas interações, animações e muito mais — é negociado por uma parte específica do aplicativo System. Esse artigo detalha o gerenciamento das janelas.</dd>
+  <dt>
+   <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Gaia_apps/Settings">Preferências</a></dt>
+  <dd>
+   O Aplicativo de preferências possibilita os usuários do Firefox OS configurar o dispositivo e responder as atividades de entrada (<a href="https://developer.mozilla.org/pt-BR/docs/WebAPI/Web_Activities">API Web activities</a> com um nome de <code>configure</code>), que possibilita outros aplicativos pular para paineis diferentes dentro do aplicativo Preferências para manipular as configurações requisitadas (por exemplo mostrando o painel de configuração do WiFi quando não houver conexão disponível).</dd>
+ </dl>
+ <h3 id="Comunicação">Comunicação</h3>
+ <p>Incluindo os aplicativos Discador, contatos, aplicativos de SMS e de FTU.</p>
+ <p><img alt="" src="https://mdn.mozillademos.org/files/7499/comms_team.png" style="width: 317px; height: 246px; margin: 0px auto; display: block;"></p>
+ <h4 id="Aplicativos_de_comunicação_maiores_explicações">Aplicativos de comunicação: maiores explicações</h4>
+ <p>A ser definido</p>
+ <h3 id="Produtividade">Produtividade</h3>
+ <p>Incluindo os aplicativos Email, calendário e relógio.</p>
+ <p><img alt="" src="https://mdn.mozillademos.org/files/7505/productivity_team.png" style="width: 303px; height: 178px; margin: 0px auto; display: block;"></p>
+ <h4 id="Aplicativos_de_produtividade_maiores_explicações">Aplicativos de produtividade: maiores explicações</h4>
+ <dl>
+  <dt>
+   <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/calendar/README.md">Calendário</a></dt>
+  <dd>
+   O aplicativo de calendário interno do Firefox OS.</dd>
+  <dt>
+   <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/clock/README.md">Relógio</a></dt>
+  <dd>
+   Aplicativo padrão do Firefox OS que inclui as funcionalidades de alarme, temporizador e cronômetro.</dd>
+  <dt>
+   <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/email/README.md">Email</a></dt>
+  <dd>
+   O aplicativo de email do Gaia.</dd>
+ </dl>
+ <h3 id="Mídia">Mídia</h3>
+ <p>Incluindo os aplicativos Camera, Galeria, Música e Vídeo e algumas funções relacionadas com mídias como bloqueio a DRM e papeis de parede.</p>
+ <p><img alt="" src="https://mdn.mozillademos.org/files/7501/media_team.png" style="width: 386px; height: 250px; margin: 0px auto; display: block;"></p>
+ <h4 id="Aplicativos_de_mídia_maiores_explicações">Aplicativos de mídia: maiores explicações</h4>
+ <dl>
+  <dt>
+   <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Platform/Gaia/Gaia_apps/Video">Video</a></dt>
+  <dd>
+   Video é um aplicativo simples que executa arquivos de vídeo armazenados no seu dispositivo.</dd>
+  <dt>
+   <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/camera/README.md">Camera</a></dt>
+  <dd>
+   Camera possibilita ao usuário do Firefox OS capturar e gerenciar vídeos e fotos da câmera do dispositivo e respondendo <a href="https://developer.mozilla.org/pt-BR/docs/WebAPI/Web_Activities">Web activities</a> do tipo <code>pick</code> originado de outros aplicativos que querem capturar mídias usando as funcionalidades da câmera.</dd>
+ </dl>
+ <h3 id="Outros_recursos_Gaia">Outros recursos Gaia</h3>
+ <p>Além dessas funções, há várias outras características importantes, como navegador, tela de início, market place, framework de teste, visualizador de PDF, e gerenciador de aplicativo, que são desenvolvidas em estreita colaboração com o Gaia.</p>
+ <a href="https://github.com/mozilla/pdf.js/blob/master/README.md">pdf.js</a>
+ <dl>
+  <dd>
+   pdf.js um aplicativo de visualização de arquivos PDF baseado em HTML5. Observer que o código é mantido em um repo separado do repo do Gaia.</dd>
+ </dl>
+</div>
+<p> </p>

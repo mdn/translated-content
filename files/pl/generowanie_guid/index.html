@@ -1,0 +1,78 @@
+---
+title: Generowanie GUID
+slug: Generowanie_GUID
+tags:
+  - Dodatki
+  - 'Programowanie_Mozilli:Narzędzia'
+  - Rozszerzenia
+  - Wszystkie_kategorie
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Generating_GUIDs
+---
+<p>
+</p><p><b>GUID</b>y są używane w programowaniu Mozilli do identyfikacji rożnych rzeczy włączając w to <a href="pl/Interfejsy">interfejsy XPCOM</a> (ten typ GUID nazywany jest IID), komponenty (CID) oraz dodatki jak <a href="pl/Rozszerzenia">rozszerzenia</a> oraz <a href="pl/Motywy">motywy</a>. Dodatki <a href="pl/Manifesty_Instalacji#id">mogą (i powinny) być identyfikowane</a> za pomocą ID typu &lt;tt&gt;<a class=" link-mailto" href="mailto:extensionname@organization.tld" rel="freelink">extensionname@organization.tld</a>&lt;/tt&gt; począwszy od <a href="pl/Firefox_1.5">Firefoksa 1.5</a>.
+</p>
+<h3 id="Forma_kanoniczna" name="Forma_kanoniczna"> Forma kanoniczna </h3>
+<p>Typową formą GUID jest &lt;tt&gt;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&lt;/tt&gt;, gdzie każdy &lt;tt&gt;x&lt;/tt&gt; reprezentuje cyfrę szestnastkową. Istnieje wiele narzędzi do generacji GUID w formie kanonicznej.
+</p>
+<h4 id="Narz.C4.99dzia_online" name="Narz.C4.99dzia_online">Narzędzia online</h4>
+<ul><li> <a class="external" href="http://www.somacon.com/p113.php">Generowanie GUID online</a>
+</li><li> <a class="external" href="http://www.famkruithof.net/uuid/uuidgen">Generator sieciowy UUID (GUID)</a>
+</li><li> <a class="external" href="http://mozilla.pettay.fi/cgi-bin/mozuuid.pl">UUID Generator for Mozilla Code</a> (both IDL and C++.h forms)
+</li><li> Ostatecznie, można uzyskać GUID od jednego z botów (tj. botbot, firebot) na kanale IRC <a class="link-irc" href="irc://irc.mozilla.org/mozilla">#mozilla</a> za pomocą &lt;tt&gt;/msg&lt;/tt&gt; "uuid".
+</li></ul>
+<h4 id="Windows" name="Windows">Windows</h4>
+<p>Użytkownicy Windows mogą użyć narzędzia Microsoftu <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=94551F58-484F-4A8C-BB39-ADB270833AFC&amp;displaylang=en">GuidGen</a>. (Jest ono również częścią MS Visual C++)
+</p>
+<h4 id="Linux" name="Linux">Linux</h4>
+<p>Użyj <code>/usr/bin/uuidgen</code>. Można go znaleźć w paczce <code>libuuid1</code> (Debian).
+</p>
+<h4 id="Perl" name="Perl">Perl</h4>
+<p><a class="external" href="http://www.johnkeiser.com/mozilla/mozilla_tools.html">Narzędzie Mozilli jkeiser's</a> zawiera generator UUID tworzący zarówno format C++ jak i styl IDL.
+</p>
+<h4 id="nsIUUIDGenerator" name="nsIUUIDGenerator">nsIUUIDGenerator</h4>
+<p>UUID może zostać wygenerowany za pomocą wolnego kodu Mozilli <code><a href="pl/NsIUUIDGenerator">nsIUUIDGenerator</a></code>. Patrz odnośniki do strony.
+</p>
+<h3 id="Format_COM.2FXPCOM" name="Format_COM.2FXPCOM"> Format COM/XPCOM </h3>
+<p>Podczas definiowania IID i CID za pomocą <code>#define</code> w kodzie C++ Mozilli możesz używać poniższego formatu:
+</p>
+<pre class="eval">// xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+#define NS_...ID \
+{ 0xXXXXXXXX, 0xXXXX, 0xXXXX, \
+  { 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX } }
+</pre>
+<p>Możesz wygenerować kod w powyższym formacie używając poniższych narzędzi.
+</p>
+<h4 id="Narz.C4.99dzia_online_2" name="Narz.C4.99dzia_online_2"> Narzędzia online </h4>
+<ul><li> <a class=" external" href="http://mozilla.pettay.fi/cgi-bin/mozuuid.pl" rel="freelink">http://mozilla.pettay.fi/cgi-bin/mozuuid.pl</a>
+</li></ul>
+<h4 id="guidgen" name="guidgen"> guidgen </h4>
+<p><code>guidgen.exe</code> jest częścią Microsoft Visual Studio i może generować UUID w tym formacie.
+</p>
+<h4 id="bash" name="bash"> bash </h4>
+<p>Możesz wpisać poniższy tekst do swojego pliku &lt;tt&gt;.bashrc&lt;/tt&gt;:
+</p>
+<pre>uuidgen-c++()
+{
+       local UUID=$(uuidgen)
+       echo "// $UUID"
+       echo "#define NS__IID \\"
+       echo "{ 0x${UUID:0:8}, 0x${UUID:9:4}, 0x${UUID:14:4}, \\"
+       echo -n "  { 0x${UUID:19:2}, 0x${UUID:21:2}, 0x${UUID:24:2}, "
+       echo -n "0x${UUID:26:2}, 0x${UUID:28:2}, 0x${UUID:30:2}, "
+       echo "0x${UUID:32:2}, 0x${UUID:34:2} } }"
+}
+</pre>
+<h4 id="Perl_2" name="Perl_2"> Perl </h4>
+<pre>#!/usr/bin/perl
+$uuid = `uuidgen`;
+chomp $uuid;
+print $uuid, "\n";
+@parts = ($uuid =~ /^(.{8})-(.{4})-(.{4})-(..)(..)-(..)(..)(..)(..)(..)(..)$/);
+print "{ 0x$parts[0], 0x$parts[1], 0x$parts[2], \\", "\n", " { ";
+for (3 .. 9) {
+    print "0x$parts[$_], ";
+}
+print "0x$parts[10] } }", "\n";
+</pre>
+{{ languages( { "en": "en/Generating_GUIDs", "fr": "fr/G\u00e9n\u00e9ration_de_GUID", "ja": "ja/Generating_GUIDs" } ) }}

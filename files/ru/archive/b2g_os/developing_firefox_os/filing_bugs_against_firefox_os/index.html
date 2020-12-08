@@ -1,0 +1,181 @@
+---
+title: Отправка найденных ошибок в Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+<p>Эта статья содержит руководство по оформлению ошибок в Firefox OS, включая Gaia и B2G.</p>
+</div>
+
+<h2 id="Bugzilla">Bugzilla</h2>
+
+<p>Как и в большинстве проектов Mozilla, мы используем <a href="/en-US/docs/Mozilla/Bugzilla">Bugzilla</a> для отслеживанию ошибок и проблем. Вы можете опубликовать ошибку в <a href="https://bugzilla.mozilla.org/">bugzilla</a>, при её обнаружении можете использовать <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">отдельный продукт для Firefox OS</a>, который содержит компоненты, включающие <a href="/en-US/Firefox_OS/Platform/Gaia">Gaia</a>, <a href="/en-US/Firefox_OS/Platform/Gonk">Gonk</a> и <a href="/en-US/docs/Mozilla/Gecko">Gecko</a>. Вы должны использовать его, чтобы подать ошибку в Firefox OS, Gaia, и др.</p>
+
+<h3 id="Отправка_ошибок">Отправка ошибок</h3>
+
+<p>Чтобы подать правильно обнаруженную ошибку используйте <a href="http://mzl.la/1KL4ktp">Bugzilla шаблон</a> и следуйте инструкциям ниже, чтобы заполнить шабло</p>
+
+<h3 id="Обязательные_и_не_обязательные_поля">Обязательные и не обязательные поля</h3>
+
+<p>При подаче новой ошибки эти поля являются обязательными для заполнения:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Field</strong></th>
+   <th scope="col"><strong>Описание</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Component</td>
+   <td>Выберите категорию ошибки к которой он принадлежит. Если Вы не понимаете, в какую категорию его нужно занести, Вы можете выбрать "Общие".</td>
+  </tr>
+  <tr>
+   <td>Summary</td>
+   <td>Кратко опишите найденную ошибку.</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td>Опишите ситуацию ясно. Ошибка должна содержать действия по воспроизведению (STR), ожидаемые результаты и фактические результаты. Просим также указать частоту воспроизведения (то есть, сколько раз ошибка появляется, если вы повторите шаги снова и снова).</td>
+  </tr>
+  <tr>
+   <td>Build Information</td>
+   <td>Перейдите в раздел "Настройки"&gt; "Информация об устройстве"&gt; "Дополнительная информация" и выберите следующее: OS Version, Build Number, Platform Version, Build Identifier, Update Channel and Git Commit Info. (Если у вас есть компьютер Mac / Linux с установленными АБР и Git, вы можете запустить этот скрипт и вставить отчет в ошибку.)</td>
+  </tr>
+  <tr>
+   <td>Screenshots</td>
+   <td>Пожалуйста, приложите скриншот, который может помочь нам понять ошибку. (На Flame устройстве, нажмите и удерживайте кнопку питания и нижнюю качельку громкости в течение 2 секунд пока на телефоне не появится уведомление о скриншоте. Затем перенесите скриншот в компьютер через USB.)</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>Если Вашу ошибку  трудно отобразить с помощью скриншота,то пожалуйста снимите её на видео. Вы можете загрузить видео как файл в качестве приложения к ошибке. Вы также можете загрузить видео на YouTube и вставить ссылку на него.</td>
+  </tr>
+  <tr>
+   <td>ADB logs</td>
+   <td>Если у Вас на компьютере установлен ADB, то подключите к компьютеру телефон и выполните команду | ADB LogCat |. Пожалуйста, вставте отчет этой команды в текстовый файл и приложите его к ошибке.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Следующие поля являются необязательными:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Field</strong></th>
+   <th scope="col"><strong>Описание</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Depends/Block</td>
+   <td>Описать зависимость между ошибками.</td>
+  </tr>
+  <tr>
+   <td>Keywords</td>
+   <td>Ключевые слова для Bugzilla. Они будут использованы для отслеживания.</td>
+  </tr>
+  <tr>
+   <td>Whiteboard</td>
+   <td>Ключевые теги. Добавьте любой тег к ошибке для отслеживания. Вы не должны удалять другие теги без разрешения.</td>
+  </tr>
+  <tr>
+   <td>See Also</td>
+   <td>Иногда, две ошибки связаны между собой и вы можете указать это здесь.</td>
+  </tr>
+  <tr>
+   <td>Flags</td>
+   <td>Флаги для отслеживания статуса ошибки; наиболее часто используемый флаг в Firefox OS "blocking-b2g". Если ошибка устанавливается с флагом "blocking-b2g" это означает, что мы должны обращать больше внимания на эту ошибку, так как она угрожает заблокировать выпуск обновления.</td>
+  </tr>
+  <tr>
+   <td>Security</td>
+   <td>Если ошибка связана с безопасностью персональных данных, денежными средствами и другими подобными вопросами, вы должны указать это, и ошибка будет видна только специальной категории сотрудников.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Чтобы найти более подробную информацию о bugzilla fields, Вы можете открыть <a href="https://bugzilla.mozilla.org/page.cgi?id=fields.html">Bugzilla Fields</a> страницу на Bugzilla.</p>
+
+<h3 id="Отправка_ошибок_локализации">Отправка ошибок локализации</h3>
+
+<p>Когда Вы видите не переведенную строку, это может означать две вещи:</p>
+
+<ul>
+ <li>Переводчик не перевел эту строку. Не сообщайте об ошибке в этом случае!</li>
+ <li>Переводчик не мог перевести строку из-за локальной (l12y) ошибки. Пожалуйста, сообщите об ошибке в этом случае.</li>
+</ul>
+
+<h4 id="Как_подать_локальные_(l12y)_ошибки">Как подать локальные (l12y) ошибки</h4>
+
+<ol>
+ <li>In Firefox OS, go to Settings &gt; Device Information &gt; More Information and toggle on the Developer Menu.</li>
+ <li>Go to Settings &gt; Developer and turn on Pseudo-localization.</li>
+ <li>Go to Settings &gt; Language and scroll to the bottom to select accented English.</li>
+ <li>Go back and look at the untranslated string. If it appears in normal English and not accented English, it is most probably because of a localizability (l12y) issue.</li>
+ <li>In Bugzilla, file a bug under the product 'Firefox OS'. Select the component under which the untranslated string appears. Add 'l12y' in the Keyword field.</li>
+ <li>Please fill out all the other mandatory fields.</li>
+</ol>
+
+<h3 id="Common_keywords">Common keywords</h3>
+
+<p>The following table provide information on common keywords you'll see used in Firefox OS bugs.</p>
+
+<p><br>
+ You should always indicate the build/OS/platform(s) used to verify the bug in the bug comments, before you change the <em>Status</em> to <em>Verified</em>. If the bug is reported on all three platforms and you only have one platform to verify the fix on, go ahead and do so and note it in the bug, but do not mark the bug as <em>Verified</em>. All platforms must be checked before moving <em>Status</em> to <em>Verified</em>.<br>
+ <br>
+ Finally, if other bugs have been marked as a duplicate of the bug you're verifying, be sure to check and mention those as well. Often developers mark related — but not identical — bugs as duplicates, and these can be overlooked if not checked.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Keyword</strong></th>
+   <th scope="col"><strong>Description</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td>Indicates that the bug is a status tracking bug. Mozilla uses this tag to tracking multiple bug or user story implementation statuses. Once marked like this, developers should not land patches on top of such bugs. Please be reminded that project managers and QA staff will use meta bugs for tracking.</td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td>Use this keyword for bugs that are blocking testing (manual or automated testing of a feature) and need to be fixed by the next Beta or RC milestone.</td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td>Use this keyword for bugs that need more info, require reproducing or testcasing, or are duplicates (but you can't find the original bug being duplicated). Required QA work progress is recorded in the whiteboard; you should remove this keyword when the required QA work has been completed.</td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>This keyword means that the problem was fixed, but then it came back (regressed) and the bug in question is a new bug, filed to track the regression. It can also refer to problems outside those identified in pre-check in and smoke tests, which were found in current builds and that were known to be working in previous builds. Tracking these bugs helps us to identify areas that are fragile, prone to breakage and are good candidates for adding to smoke and pre-check in tests.</td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>Indicates that the bug is a regression, and would strongly benefit from someone identifying the time period in which it happened, ideally to a specific check in.</td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td>Highlights a bug that would greatly benefit from someone identifying the steps to reproduce it.</td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td>Means that this bug is ok to verify with the latest FX OS build by someone other than the QA Contact indicated. The bug has specific machine configuration details indicated for verifying the fix. You should try to reproduce the failure, and, if you agree that the resolution of <em>Fixed</em> is correct, mark the <em>Status</em> as <em>Verified</em>.<br>
+     </td>
+  </tr>
+  <tr>
+   <td>crash</td>
+   <td>Add this keyword if you encounter a crash in FX OS.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note</strong>: You can additionally refer to <a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines">Bug writing guidelines</a>. The Mozilla <a href="https://wiki.mozilla.org/B2G/QA">B2G QA Wiki</a> page also has some useful resources on handling Firefox OS bugs; the most useful pages are <a href="https://wiki.mozilla.org/B2G/QA/Bugzilla">Bugzilla Usage</a> and <a href="https://wiki.mozilla.org/Bugmasters/Projects/FirefoxOS">Incoming bug triage for Firefox OS</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: For more information on handling bugs during Gaia development, read <a href="/en-US/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a>.</p>
+</div>
+
+<p> </p>

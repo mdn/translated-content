@@ -1,0 +1,55 @@
+---
+title: Logging
+slug: Mozilla/Add-ons/SDK/Tutorials/Logging
+tags:
+  - Add-on SDK
+  - console
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Logging
+---
+<div class="note">Para seguir este tutorial você precisa do <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation">SDK instalado</a> e <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">conhecimento básico de cfx</a>.</div>
+
+<p>O objeto DOM <a href="https://developer.mozilla.org/en/DOM/console"><code>console</code></a> é útil para depuração do JavaScript. Porque os objetos DOM não estão disponíveis para o código principal do add-on, o SDK fornece seu próprio objeto global <code>console</code> com a maiorira dos mesmos métodos do do <code>console </code>DOM, incluindo métodos para registrar erros, avisos, ou mensagens informativas. Você não tem que usar <code>require()</code> qualquer coisa para conseguir acesso ao console. Ele está disponível para você.</p>
+
+<p>O método <code>console.log()</code> imprime mensagens informativas:</p>
+
+<pre class="brush: js">console.log("Hello World");
+</pre>
+
+<p>Tente:</p>
+
+<ul>
+ <li>crie um novo diretório, e navegue até ele</li>
+ <li>execute <code>cfx init</code></li>
+ <li>abra "lib/main.js" e adicione a linha acima</li>
+ <li>execute <code>cfx run</code>, então <code>cfx run</code> novamente</li>
+</ul>
+
+<p>O Firefox iniciará, e a linha a seguir aparecerá na janela de comando que você usou para executar <code>cfx run</code>:</p>
+
+<pre>info: Hello World!
+</pre>
+
+<h2 id="console_em_Scripts_de_Conteúdo"><code>console</code> em Scripts de Conteúdo</h2>
+
+<p>Você pode usar console em <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">scripts de conteúdo</a> assim como no código principal do seu add-on. O add-on a seguir registra o conteúdo do HTML de toda a tab que o usuário carregar, chamando <code>console.log()</code> dentro do script de conteúdo:</p>
+
+<pre class="brush: js">require("sdk/tabs").on("ready", function(tab) {
+  tab.attach({
+    contentScript: "console.log(document.body.innerHTML);"
+  });
+});
+</pre>
+
+<h2 id="Saída_do_console">Saída do <code>console</code></h2>
+
+<p>Se você estiver executando seu add-on da linha de comando (por exemplo, executando<code> cfx run</code> ou <code>cfx test</code>) então as mensagens do console aparece no shell de comando usado.</p>
+
+<p>Se você instalou o add-on no Firefox então as mensagens aparecerão no <a href="/en-US/docs/Tools/Browser_Console">Console do Navegador</a> do Firefox.</p>
+
+<p>Mas note que <strong>por padrão, chamadas à <code>console.log()</code> não resultarão em qualquer saída no Console de Erro por qualquer add-on instalado</strong>: isso inclui add-ons instalados usando o Add-on Builder ou usando ferramentas como <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/">Extension Auto-installer</a>.</p>
+
+<p>Veja <a href="/en-US/Add-ons/SDK/Tools/console#Logging_Levels">"Logging Levels"</a> na documentação de referência para mais informações.</p>
+
+<h2 id="Aprendendo_Mais">Aprendendo Mais</h2>
+
+<p>Para a API completa do <code>console</code>, veja sua <a href="/en-US/Add-ons/SDK/Tools/console">referência da API</a>.</p>

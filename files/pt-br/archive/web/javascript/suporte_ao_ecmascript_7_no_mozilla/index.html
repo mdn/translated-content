@@ -1,0 +1,70 @@
+---
+title: Suporte ao ECMAScript 7 no Mozilla
+slug: Archive/Web/JavaScript/Suporte_ao_ECMAScript_7_no_Mozilla
+tags:
+  - Firefox
+  - JavaScript
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<div>ECMAScript 7 é a nova evolução do padrão ECMA-262 (normalmente referenciado como <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">JavaScript</a>). Antes mesmo que o ECMAScript 6 fosse finalizado em 17 de Junho de 2015, novas funcionalidades já haviam sido propostas. Você pode conferir essas propostas no repositório <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> do GitHub.</div>
+
+<div><br>
+Os problemas atuais com o processo das especificações foram solucionados ao adicionar <em>estágios </em>e <em>campeões</em> para os conjuntos de funcionalidades. Também, um ciclo de dois anos para as padronizações foi proposto. Para maiores informações sobre o processo de especificação do post-ES2015, veja essa <a href="http://slides.com/rafaelweinstein/tc39-process">apresentação feita pelo Rafael Weinstein</a>.</div>
+
+<p>Um canal para feedback sobre os padrões ECMAScript pode ser encontrado <a href="https://mail.mozilla.org/listinfo/es-discuss">aqui</a>.</p>
+
+<h2 id="Funcionalidades_Experimentais">Funcionalidades Experimentais</h2>
+
+<p>As funcionalidades a seguir já foram implementadas, mas só estão disponíveis no canal <a href="https://nightly.mozilla.org/">Firefox Nightly</a>:</p>
+
+<h3 id="Adições_ao_Array_object">Adições ao <code>Array</code> object</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (<a href="https://github.com/domenic/Array.prototype.includes/blob/master/spec.md">spec</a>)</li>
+</ul>
+
+<h3 id="Adições_ao_ArrayBuffer_object">Adições ao <code>ArrayBuffer</code> object</h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spec</a>)</li>
+</ul>
+
+<h3 id="Novo_TypedObject_objects">Novo TypedObject objects</h3>
+
+<ul>
+ <li><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects draft</a></li>
+</ul>
+
+<h3 id="Novo_SIMD_objects">Novo SIMD objects</h3>
+
+<ul>
+ <li><a href="https://github.com/johnmccutchan/ecmascript_simd">Especificação preliminar doSIMD e polyfill</a></li>
+</ul>
+
+<h2 id="Características_com_estabilização">Características com estabilização</h2>
+
+<p>Os seguintes recursos são suportados além do Nightly channel, mas a especificação e implementação estão em andamento. Recursos que estavam originalmente no ECMAScript 6 e foi adiada para ECMAScript 7 podem aparecer aqui também.</p>
+
+<h3 id="Expressões">Expressões</h3>
+
+<ul>
+ <li>{{jsxref("Operators/Arithmetic_Operators", "Exponentiation operator", "#Exponentiation", 1)}} (<a href="/en-US/Firefox/Releases/42">Firefox 42</a>)</li>
+</ul>
+
+<h2 id="Features_ainda_não_suportadas">Features ainda não suportadas</h2>
+
+<p>Os seguintes recursos ainda não foram implementados, mas estará no ECMAScript 7.</p>
+
+<ul>
+ <li><code>Object.observe()</code> ({{bug(800355)}})</li>
+</ul>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">ECMAScript web site</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Mozilla ES2016 tracking bug</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/" title="http://kangax.github.io/es5-compat-table">ECMAScript 2015 support across browsers</a></li>
+</ul>

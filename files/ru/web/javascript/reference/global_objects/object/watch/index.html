@@ -1,0 +1,168 @@
+---
+title: Object.prototype.watch()
+slug: Web/JavaScript/Reference/Global_Objects/Object/watch
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Object
+  - Prototype
+translation_of: Archive/Web/JavaScript/Object.watch
+---
+<div>
+ {{JSRef("Global_Objects", "Object")}}</div>
+<div class="warning">
+ <p><strong>Предупреждение:</strong> обычно, при возможности, вам следует избегать использования <code>watch()</code> и {{jsxref("Object.prototype.unwatch", "unwatch()")}}. Эти два метода реализованы только в Gecko, и они, в основном, предназначены только для отладочных целей. Кроме того, использование точек наблюдения серьёзно бъёт по производительности, что особенно заметно при использовании их на глобальных объектах, например <code>window</code>. Обычно вместо них вы можете использовать <a href="/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">сеттеры и геттеры</a> или прокси. Для более подробной информации смотрите раздел {{anch("Browser_compatibility", "Совместимость с браузерами")}}. Также, не путайте {{jsxref("Object.prototype.watch", "Object.watch")}} с {{jsxref("Object.prototype.observe", "Object.observe")}}.</p>
+</div>
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Метод <code><strong>watch()</strong></code> следит за присваиванием свойству значений и запускает указанную функцию, когда это происходит.</p>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code><var>obj</var>.watch(<var>prop</var>, <var>handler</var>)</code></pre>
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+<dl>
+ <dt>
+  <code>prop</code></dt>
+ <dd>
+  Имя свойства объекта, чьи изменения вы хотите отслеживать.</dd>
+ <dt>
+  <code>handler</code></dt>
+ <dd>
+  Функция, вызывающаяся при изменении значения указанного свойства.</dd>
+</dl>
+<h2 id="Description" name="Description">Описание</h2>
+<p>Следит за присваиваниями свойству <code>prop</code> в этом объекте, вызывая функцию <code>handler(prop, oldval, newval)</code> всякий раз, когда свойство <code>prop</code> устанавливается и сохраняет возвращённое значение в этом свойстве. Точка наблюдения может отфильтровывать (или отменять) присваивание значения, возвращая изменённое новое значение <code>newval</code> (или старое значение <code>oldval</code>).</p>
+<p>Если вы удалите свойство, для которого была установлена точка наблюдения, эта точка наблюдения не будет отключена. Если вы позже вновь создадите это свойство, точка наблюдения продолжит работать.</p>
+<p>Для удаления точки наблюдения используйте метод {{jsxref("Object.unwatch", "unwatch()")}}. По умолчанию, метод <code>watch</code> наследуется каждым объектом, произошедшим от {{jsxref("Global_Objects/Object", "Object")}}.</p>
+<p>Отладчик JavaScript имеет функциональность, аналогичную предоставляемой этим методом, а также и другие возможности отладки. Информацию по отладчику можно получить в статье про <a href="/ru/docs/Venkman">Venkman</a>.</p>
+<p>В Firefox, функция <code>handler</code> вызывает только при присваивании из скрипта, не из встроенного кода. Например, <code>window.watch('location', myHandler)</code> не вызовет <code>myHandler</code>, если пользователь щёлкнет по ссылке с якорем в текущем документе. Однако, выражение <code>window.location += '#myAnchor'</code> вызовет <code>myHandler</code>.</p>
+<div class="note">
+ <p><strong>Примечание:</strong> вызов <code>watch()</code> на объекте для определённого свойства перезапишет любые ранее назначенные на него обработчики.</p>
+</div>
+<h2 id="Examples" name="Examples">Примеры</h2>
+<h3 id="Example:_Using_watch_and_unwatch" name="Example:_Using_watch_and_unwatch">Пример: использование <code>watch</code> и <code>unwatch</code></h3>
+<pre class="brush: js">var o = { p: 1 };
+
+o.watch('p', function (id, oldval, newval) {
+  console.log('o.' + id + ' изменено с ' + oldval + ' на ' + newval);
+  return newval;
+});
+
+o.p = 2;
+o.p = 3;
+delete o.p;
+o.p = 4;
+
+o.unwatch('p');
+o.p = 5;
+</pre>
+<p>Этот скрипт выведет следующее:</p>
+<pre>o.p изменено с 1 на 2
+o.p изменено с 2 на 3
+o.p изменено с undefined на 4
+</pre>
+<h3 id="Example:_Using_watch_to_validate_an_object.27s_properties" name="Example:_Using_watch_to_validate_an_object.27s_properties">Пример: использование <code>watch</code> для проверки свойств объекта</h3>
+<p>Вы можете использовать <code>watch</code> для проверки присваивания к любым свойствам объекта. Этот пример гарантирует, что каждый человек имеет допустимое имя и возраст между 0 и 200.</p>
+<pre class="brush: js">Person = function(name, age) {
+  this.watch('age', Person.prototype._isValidAssignment);
+  this.watch('name', Person.prototype._isValidAssignment);
+  this.name = name;
+  this.age = age;
+};
+
+Person.prototype.toString = function() {
+  return this.name + ', ' + this.age;
+};
+
+Person.prototype._isValidAssignment = function(id, oldval, newval) {
+  if (id === 'name' &amp;&amp; (!newval || newval.length &gt; 30)) {
+    throw new RangeError('недопустимое имя для ' + this);
+  }
+  if (id === 'age'  &amp;&amp; (newval &lt; 0 || newval &gt; 200)) {
+    throw new RangeError('недопустимый возраст для ' + this);
+  }
+  return newval;
+}
+
+will = new Person('Уилл', 29);
+print(will);   // Уилл, 29
+
+try {
+  will.name = '';
+} catch (e) {
+  print(e);
+}
+
+try {
+  will.age = -4;
+} catch (e) {
+  print(e);
+}
+</pre>
+<p>Этот скрипт выведет следующее:</p>
+<pre>Уилл, 29
+RangeError: недопустимое имя для Уилл, 29
+RangeError: недопустимый возраст для Уилл, 29
+</pre>
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<p>Не является частью какой-либо спецификации. Реализована в JavaScript 1.2.</p>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<ul>
+ <li>Этот <a class="external link-https" href="https://gist.github.com/384583">полифилл</a> предлагает <code>watch</code> для всех совместимых с ES5 браузеров</li>
+ <li>Использование объекта {{jsxref("Global_Objects/Proxy", "Proxy")}} позволяет вам сделать ещё более глубокие изменения при присваивании свойств</li>
+</ul>
+<div>
+ {{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div class="note">
+ <p><strong>Примечание:</strong> вызов <code>watch()</code> на объекте {{domxref("Document")}}, начиная с Firefox 23, выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} ({{bug(903332)}}). Эта регрессия была поправлена в Firefox 27.</p>
+</div>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+<ul>
+ <li>{{jsxref("Object.unwatch()")}}</li>
+ <li>{{jsxref("Object.observe()")}}</li>
+</ul>

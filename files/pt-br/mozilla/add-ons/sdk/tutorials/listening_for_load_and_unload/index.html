@@ -1,0 +1,60 @@
+---
+title: Capturando Load e Unload
+slug: Mozilla/Add-ons/SDK/Tutorials/Listening_for_load_and_unload
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Listening_for_load_and_unload
+---
+<div class="note">
+<p><span>Para seguir este tutorial você precisará ter conhecimento <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29">básico de <code>jpm</code></a>. </span></p>
+</div>
+
+<p>Se seu add-on exporta uma função chamada <code>main()</code>, então aquela função será chamada sempre que o add-on for carregado, e será passada uma string descrevendo a razão de ele ter sido carregado bem como qualquer argumento passado para ele. Se seu add-on exporta uma função chamada <code>onUnload()</code>, então esta função será chamada quando o add-on for descarregado, e será passada uma string descrevendo a razão da descarga.</p>
+
+<p>Você não tem que usar <code>exports.main()</code> ou <code>exports.onUnload()</code>. Você pode colocar o código do seu add-on no nível superior ao invés de envolver ele em uma atribuição de função para <code>exports.main()</code>. Ele será carregado nas mesmas circunstâncias, mas você não conseguirá acesso às razões da carga ou descarga dele bem como de seus argumentos.</p>
+
+<h2 id="exports.main()">exports.main()</h2>
+
+<p>O código <code>main.js</code> do seu add-on é executado assim que ele é carregado. Ele é carregado quando ele é instalado, habilitado ou quando inicia o Firefox.</p>
+
+<p>Se seu add-on exporta uma função chamada <code>main()</code>, aquela função será chamada imediatamente depois que o <code>main.js </code>esteja completamente avaliado, e depois de todas as declarações <code>require()</code> de nível superior serem executadas (então geralmente depois de todas módulos dependentes serem carregados).</p>
+
+<div>
+<div>
+<pre><span class="brush: js">exports.main = function (options, callbacks) {};</span></pre>
+</div>
+</div>
+
+<p><code>options</code> é um objeto descrevendo os parâmetros com os quais seu add-on foi carregado</p>
+
+<h3 id="options.loadReason">options.loadReason</h3>
+
+<p><code>options.loadReason</code> é uma das seguintes strings descrevendo a razão de seu add-on ter sido carregado:</p>
+
+<pre>install
+enable
+startup
+upgrade
+downgrade
+</pre>
+
+<h2 id="exports.onUnload()">exports.onUnload()</h2>
+
+<p>Se seu add-on exporta uma função chamada <code>onUnload()</code>, aquela função será chamando quando o add-on for descarregado.</p>
+
+<div>
+<div>
+<pre><span class="brush: js">exports.onUnload = function (reason) {};</span></pre>
+</div>
+</div>
+
+<h3 id="reason">reason</h3>
+
+<p><code>reason</code> é uma das seguintes strings descrevendo a razão do add-on ter sido descarregado:</p>
+
+<pre>uninstall
+disable
+shutdown
+upgrade
+downgrade
+</pre>
+
+<p>Devido ao <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=627432">bug 627432</a>, sua captura de descarga (<code style="font-size: 14px;">onUnload</code>) nunca será chamada com <code style="font-size: 14px;">uninstall</code>: ela somente é chamada com <code style="font-size: 14px;">disable</code>. Veja no comentário particular sobre este <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=627432#c12">bug</a>.</p>

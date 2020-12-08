@@ -1,0 +1,936 @@
+---
+title: textbox (Mozilla - automatyczne uzupełnianie)
+slug: Mozilla/Tech/XUL/textbox_(Mozilla_-_automatyczne_uzupełnianie)
+tags:
+  - Dokumentacja_XUL
+  - Elementy_XUL
+translation_of: Archive/Mozilla/XUL/Textbox_(XPFE_autocomplete)
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/pl/docs/Dokumentacja_XUL">Dokumentacja XUL</a>    [
+ <a href="#Przyk.C5.82ady">Przykłady</a> |
+ <a href="#Atrybuty">Atrybuty</a> |
+ <a href="#W.C5.82asno.C5.9Bci">Własności</a> |
+ <a href="#Metody">Metody</a> |
+ <a href="#Podobne">Podobne</a> ]
+</span></div> <p>Ten element jest tworzony poprzez ustawienie atrybutu <a href="pl/XUL/Atrybut/textbox.type">type</a> elementu textbox na <code>autocomplete</code>. Jest używany do utworzenia elementu textbox z wyskakującym okienkiem zawierającym listę możliwych uzupełnień tego, co użytkownik zaczął wpisywać.
+</p><p>Funkcjonalność automatycznego uzupełniania jest podtrzymana poprzez jeden lub więcej obiektów sesji, każdy z tych obiektów może zwracać zbiór wyników dla podanej wartości elementu textbox. Sesje mogą być ustawiane za pomocą atrybutu <code id="a-searchSessions"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/searchSessions">searchSessions</a></code> lub poprzez wywołanie metody <span id="m-addSession"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/addSession">addSession</a></code></span>.
+</p>
+<dl><dt> Atrybuty
+</dt><dd> <a href="#a-alwaysopenpopup">alwaysopenpopup</a>, <a href="#a-autoFill">autoFill</a>, <a href="#a-autoFillAfterMatch">autoFillAfterMatch</a>, <a href="#a-crop">crop</a>, <a href="#a-disableAutocomplete">disableAutocomplete</a>, <a href="#a-disabled">disabled</a>, <a href="#a-disablehistory">disablehistory</a>, <a href="#a-focused">focused</a>, <a href="#a-forceComplete">forceComplete</a>, <a href="#a-ignoreBlurWhileSearching">ignoreBlurWhileSearching</a>, <a href="#a-inputtooltiptext">inputtooltiptext</a>, <a href="#a-label">label</a>, <a href="#a-maxlength">maxlength</a>, <a href="#a-maxrows">maxrows</a>, <a href="#a-minResultsForPopup">minResultsForPopup</a>, <a href="#a-nomatch">nomatch</a>, <a href="#a-onerrorcommand">onerrorcommand</a>, <a href="#a-ontextcommand">ontextcommand</a>, <a href="#a-ontextrevert">ontextrevert</a>, <a href="#a-open">open</a>, <a href="#a-searchSessions">searchSessions</a>, <a href="#a-showCommentColumn">showCommentColumn</a>, <a href="#a-showpopup">showpopup</a>, <a href="#a-size">size</a>, <a href="#a-tabScrolling">tabScrolling</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-timeout">timeout</a>, <a href="#a-textbox.type">type</a>, <a href="#a-userAction">userAction</a>, <a href="#a-value">value</a>
+</dd></dl>
+<dl><dt> Własności
+</dt><dd> <a href="#p-accessible">accessible</a>, <a href="#p-alwaysOpenPopup">alwaysOpenPopup</a>, <a href="#p-autoFill">autoFill</a>, <a href="#p-autoFillAfterMatch">autoFillAfterMatch</a>, <a href="#p-crop">crop</a>, <a href="#p-disableAutocomplete">disableAutocomplete</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editable">editable</a>, <a href="#p-focused">focused</a>, <a href="#p-forceComplete">forceComplete</a>, <a href="#p-ignoreBlurWhileSearching">ignoreBlurWhileSearching</a>, <a href="#p-inputField">inputField</a>, <a href="#p-isSearching">isSearching</a>, <a href="#p-isWaiting">isWaiting</a>, <a href="#p-label">label</a>, <a href="#p-maxLength">maxLength</a>, <a href="#p-maxRows">maxRows</a>, <a href="#p-minResultsForPopup">minResultsForPopup</a>, <a href="#p-noMatch">noMatch</a>, <a href="#p-open">open</a>, <a href="#p-resultsPopup">resultsPopup</a>, <a href="#p-searchSessions">searchSessions</a>, <a href="#p-selectionEnd">selectionEnd</a>, <a href="#p-selectionStart">selectionStart</a>, <a href="#p-sessionCount">sessionCount</a>, <a href="#p-showCommentColumn">showCommentColumn</a>, <a href="#p-showPopup">showPopup</a>, <a href="#p-size">size</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-tabScrolling">tabScrolling</a>, <a href="#p-textLength">textLength</a>, <a href="#p-timeout">timeout</a>, <a href="#p-type">type</a>, <a href="#p-userAction">userAction</a>, <a href="#p-value">value</a>
+</dd></dl>
+<dl><dt> Metody
+</dt><dd> <a href="#m-addSession">addSession</a>, <a href="#m-clearResults">clearResults</a>, <a href="#m-getDefaultSession">getDefaultSession</a>, <a href="#m-getResultAt">getResultAt</a>, <a href="#m-getResultCount">getResultCount</a>, <a href="#m-getResultValueAt">getResultValueAt</a>, <a href="#m-getSession">getSession</a>, <a href="#m-getSessionByName">getSessionByName</a>, <a href="#m-getSessionResultAt">getSessionResultAt</a>, <a href="#m-getSessionStatusAt">getSessionStatusAt</a>, <a href="#m-getSessionValueAt">getSessionValueAt</a>, <a href="#m-removeSession">removeSession</a>, <a href="#m-select">select</a>, <a href="#m-setSelectionRange">setSelectionRange</a>, <a href="#m-syncSessions">syncSessions</a>
+</dd></dl>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<p>(potrzebny przykład)
+</p>
+<h3 id="Atrybuty" name="Atrybuty"> Atrybuty </h3>
+<p>
+</p><div id="a-alwaysopenpopup">
+
+<dl><dt> <code id="a-alwaysopenpopup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/alwaysopenpopup">alwaysopenpopup</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli <code>true</code>, auto kompletowanie wyskakującego okienka zostanie wyświetlone zdarzenie, kiedy tam nie będzie dopasowany. Jeśli <code>false</code>, domyślna wartością będzie ukrycie okienka wyskakujące.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-autoFill">
+
+<dl>
+  <dt>
+    <code id="a-autofill"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/autofill">autofill</a></code> <span class="inlineIndicator standardNote">Nowość w <a href="https://developer.mozilla.org/pl/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span> <span class="inlineIndicator standardNote standardNoteInline">Requires SeaMonkey 2.0</span></dt>
+  <dd>
+    Typ: <i>boolean</i></dd>
+  <dd>
+    Jeśli ustawiony jest na <code>true</code>, najlepsze dopasowanie będzie wybierane w polu tekstowym jako typ użytkownika. Jeśli <code>false</code>, domyślna wartość nie będzie wybrana do momentu aż użytkownik nie zaznaczy pozycji.</dd>
+</dl>
+</div>
+<div id="a-autoFillAfterMatch">
+
+<dl><dt> <code id="a-autoFillAfterMatch"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/autoFillAfterMatch">autoFillAfterMatch</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli zwracana jest wartość <code>true</code> cały tekst najlepszego trafienia zostanie wyświetlony na końcu wejścia. Jeśli wartość <code>false</code> tylko wartość, która nie została wyświetlona zostanie wpisana. Atrybut <code id="a-autoFill"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/autoFill">autoFill</a></code> musi zostać ustawiony na wartość <code>true</code>, by móc korzystać z powyższej własności.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-crop">
+
+<dl><dt> <code id="a-crop"><a href="http://api/pl/docs/Mozilla/Tech/XUL/Atrybut/crop">crop</a></code>
+</dt><dd> Typ: <i>jedna z poniższych wartości</i>
+</dd><dd> Jeśli etykieta elementu jest zbyt duża by zmieścić się w danym miejscu, to jej tekst zostanie skrócony po stronie określonej przy pomocy atrybutu <code>crop</code>. Wycięty fragment tekstu zostanie zastąpiony wielokropkiem. Jeśli kierunek pudełka jest określony w lewą stronę, to skrócenie tekstu nastąpi w tym samym kierunku (czyli z lewej strony):
+</dd></dl>
+<ul><li> <code>start</code>: Tekst będzie skrócony z lewej strony.
+</li><li> <code>end</code>: Tekst będzie skrócony z prawej strony.
+</li><li> <code>left</code>: <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> Tekst będzie skrócony z lewej strony.
+</li><li> <code>right</code>: <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> Tekst będzie skrócony z prawej strony.
+</li><li> <code>center</code>: Tekst będzie skrócony w środku, pokazując oba końce: początek i koniec normalnego tekstu. </li><li> <code>none</code>: Tekst nie będzie skrócony przy zastosowaniu wielokropka. Jednakże, tekst skrócony zostanie po prostu obcięty, jeśli będzie za duży. Strona skrócenia owego tekstu zależy od rozmieszczenia tekstu określonego w arkuszu stylów CSS.
+</li></ul>
+<pre class="eval"> menupopup &gt; menuitem, menupopup &gt; menu { max-width: none; }
+</pre>
+<p><br>
+</p><p><br>
+</p>
+
+
+</div>
+<div id="a-disableAutocomplete">
+
+<dl><dt> <code id="a-disableAutocomplete"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disableAutocomplete">disableAutocomplete</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli <code>true</code>, zachowanie automatyczne zostanie wyłączone. Możesz użyć skryptu do zmiany do zmiany tego atrybutu. Jeśli <code>false</code>, domyślnie, autouzupełnianie jest włączone.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-disabled">
+
+<dl><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Określa, czy element jest wyłączony. Jeśli atrybut ten ma wartość <code>true</code>, to element będzie wyłączony. Wyłączone elementy zazwyczaj są wyszarzone. Jeśli element jest wyłączony, nie odpowiada na czynności użytkownika, nie może zostać na niego ustawiony focus, a zdarzenie <i>command</i> nie zostanie wywołane. </dd></dl>
+<div class="float-right"><img alt="grafika:XUL_ref_attr_disabled.png"></div>
+<pre>&lt;!-- Pole wyboru włącza/wyłącza przycisk --&gt;
+&lt;checkbox label="Enable button"
+    onclick="document.getElementById('buttRemove').disabled = this.checked"/&gt;
+&lt;button id="buttRemove" label="Remove All" disabled="true"/&gt;
+</pre>
+</div>
+<div id="a-disablehistory">
+
+<dl><dt> <code id="a-disablehistory"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disablehistory">disablehistory</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli atrybut ma wartość <code>false</code>, przycisk ze strzałką wyświetli się na końcu pola tekstowego, które otworzy menu rozwijane wszystkich dostępnych wyników. Domyślna wartością jest <code>true</code>, ukrywające przycisk rozwijania.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-focused">
+
+<dl><dt> <code id="a-focused"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/focused">focused</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Ten atrybut jest ustawiony na <code>true</code>, jeśli element jest aktywny (focused).
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-forceComplete">
+
+</div>
+<div id="a-ignoreBlurWhileSearching">
+
+<dl><dt> <code id="a-ignoreblurwhilesearching"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ignoreblurwhilesearching">ignoreblurwhilesearching</a></code> </dt><dd> Typ: <em>boolean</em> </dd><dd> Jeśli <code>true</code>, zdarzenia blur są ignorowane podczas szukania, co znaczy, że automatyczne wyskakujące okienka nie znikną. </dd> </dl>
+
+<p></p>
+</div>
+<div id="a-inputtooltiptext">
+
+<dl><dt> <code id="a-inputtooltiptext"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/inputtooltiptext">inputtooltiptext</a></code>
+</dt><dd> Typ: <i>string</i>
+</dd><dd> Tekst podpowiedzi dla pudełka tekstu.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-label">
+
+<dl><dt> <code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code>
+</dt><dd> Typ: <i>string</i>
+</dd><dd> Etykieta, która zostanie wyświetlona na elemencie. Jeśli zostanie on usunięty, to żaden tekst nie zostanie wyświetlony. </dd></dl>
+
+
+</div>
+<div id="a-maxlength">
+
+<dl>
+ <dt>
+  <code id="a-maxlength"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxlength">maxlength</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Maksymalna liczba znaków, które można wpisać w pole tekstowe.</dd>
+</dl>
+</div>
+<div id="a-maxrows">
+
+<dl>
+ <dt>
+  <code id="a-maxrows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxrows">maxrows</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Liczba wierszy do pokazania na liście rezultatów w czasie. Pasek przewijania będzie wyświetlony więc użytkownik może przewijać poprzez <b>remaining items.</b></dd>
+</dl>
+</div>
+<div id="a-minResultsForPopup">
+
+<dl>
+ <dt>
+  <code id="a-minresultsforpopup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minresultsforpopup">minresultsforpopup</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Minimalna liczba wyniku, która musi być zwrócona dla wyświetlonego okienka pop-up.</dd>
+</dl>
+</div>
+<div id="a-nomatch">
+
+<dl>
+ <dt>
+  <code id="a-nomatch"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/nomatch">nomatch</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Ten atrybut będzie ustawiony na <code>true</code>, jeśli ostatni rezultat szukania nie jest dopasowany.</dd>
+</dl>
+</div>
+<div id="a-onerrorcommand">
+
+<dl>
+ <dt>
+  <code id="a-onerrorcommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onerrorcommand">onerrorcommand</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   kod skryptu</i>
+ </dd>
+ <dd>
+  Ten uchwyt zdarzenia jest wywołany kiedy ma miejsce błąd, kiedy zaznaczymy wynik z okienka dialogowego.</dd>
+</dl>
+</div>
+<div id="a-ontextcommand">
+
+<dl>
+ <dt>
+  <code id="a-ontextcommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ontextcommand">ontextcommand</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   Kod skryptu</i>
+ </dd>
+ <dd>
+  Ten uchwyt zdarzeń jest wywołany kiedy wynik jest zaznaczony w polu tekstowym.</dd>
+</dl>
+</div>
+<div id="a-ontextrevert">
+
+</div>
+<div id="a-open">
+
+<dl><dt> <code id="a-open"><a href="http://api/pl/docs/Mozilla/Tech/XUL/Atrybut/open">open</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Dla przycisków o <code id="a-type"><a href="http://api/pl/docs/Mozilla/Tech/XUL/Atrybut/type">type</a></code> ustawionym na <code>menu</code>, atrybut <code>open</code> jest ustawiany na <code>true</code>, kiedy menu jest otwarte. Atrybut <code>open</code> nie jest obecny, jeśli menu jest zamknięte.
+</dd></dl>
+<p><br>
+</p><p><br>
+</p>
+
+
+</div>
+<div id="a-searchSessions">
+
+<dl>
+ <dt>
+  <code id="a-searchSessions"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/searchSessions">searchSessions</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   lista nazw sesji rozdzielona spacją</i>
+ </dd>
+ <dd>
+  Ustawia słowo kluczowe sygnalizując jakiego typu dane są szukane dla autouzupełnienia. Możemy ustawić wiele typów poprzez rozdzielenie ich nazw spacją. Następujące wartości są możliwe, mimo że komponenty użytkownika mogą być zainstalowane, które dodają inne.</dd>
+</dl>
+<ul>
+ <li><code>history</code>: Przeszukana jest historia adresów URL użytkownika.</li>
+ <li><code>addrbook</code>: Przeszukana jest książka adresowa użytkownika.</li>
+ <li><code>ldap</code>: Przeszukany jest katalog LDAP użytkownika.</li>
+</ul>
+</div>
+<div id="a-showCommentColumn">
+
+<dl>
+ <dt>
+  <code id="a-showCommentColumn"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/showCommentColumn">showCommentColumn</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Jeśli <code>true</code>, kolumna komentarza pojawi się w okienku wyskakującym. Dla historii adresów URL, kolumnę komentarzy będzie stanowić tytuł strony połączony z każdym adresem URL. Jeśli ten atrybut nie jest określony, kolumna komentarza nie pojawi się.</dd>
+</dl>
+</div>
+<div id="a-showpopup">
+
+</div>
+<div id="a-size">
+
+<dl>
+ <dt>
+  <code id="a-size"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/size">size</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Liczba znaków, które mogą zostać wyświetlone w polu tekstowym.</dd>
+</dl>
+</div>
+<div id="a-tabScrolling">
+
+</div>
+<div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tabindex">tabindex</a></code>
+</dt><dd> Typ: <i>integer</i>
+</dd><dd> Porządek dla przełączania elementów klawiszem Tab. Elementy o wyższym tabindex umieszczane są w dalszej części sekwencji przełączania.
+</dd></dl>
+
+
+</div>
+<div id="a-timeout">
+
+</div>
+<div id="a-textbox.type">
+
+
+<dl>
+ <dt><a href="pl/XUL/Atrybut/textbox.type">type</a></dt>
+ <dd>Typ:<em>jedna z wartości poniżej</em></dd>
+ <dd>Możemy ustawić typ tego atrybutu na jedną z poniższych wartości dla bardziej specjalistycznych typów pola tekstowego. Nie ustawiaj tego typu, jeśli chcesz zastosować regularne pole tekstowe.</dd>
+</dl>
+
+<ul>
+ <li><code>autocomplete</code>: Pole tekstowe, które obsługuje auto uzupełnianie. Aby zdobyć więcej informacji na temat autouzupełniania pól tekstowych, przejdź do dokumentacji o autouzupełnianiu (<a href="pl/XUL/textbox_(Mozilla_-_automatyczne_uzupe%c5%82nianie)">Mozilla</a>) (<a href="pl/XUL/textbox_(Firefox_-_automatyczne_uzupe%c5%82nianie)">Firefox</a>)</li>
+ <li><code>number</code>: A textbox that only allows the user to enter numbers. In addition, arrow buttons appear next to the textbox to let the user step through values. There are several attributes that allow the number textbox to be configured, including <code id="a-min"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/min">min</a></code>, <code id="a-max"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/max">max</a></code>, <code id="a-increment"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/increment">increment</a></code>, <code id="a-wraparound"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/wraparound">wraparound</a></code>, and <code id="a-hidespinbuttons"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/hidespinbuttons">hidespinbuttons</a></code>. </li>
+ <li><code>password</code>: Pole tekstowe, które ukrywa wpisywaną treść, stosowane dla wpisywania haseł w pole tekstowe.</li>
+ <li><code>timed</code>: This textbox will fire a command event after the user types characters and a certain time has passed. The delay is set with the <code id="a-timeout"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/timeout">timeout</a></code> attribute. You might use this type, for instance, to update information elsewhere in the window as the user types, without the need for continuous updates since the timer will not fire if the user types more keys in the meantime. The command event will also fire if the user presses the Enter key.</li>
+</ul>
+
+
+</div>
+<div id="a-userAction">
+
+<dl>
+ <dt>
+  <code id="a-userAction"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/userAction">userAction</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   jedna z wartości poniżej</i>
+ </dd>
+ <dd>
+  Ten atrybut ustawia akcje wykonywane aktualnie przez użytkownika. Możliwe wartości:</dd>
+</dl>
+<ul>
+ <li><code>none</code>: Użytkownik nie wchodzi w interakcje z polem tekstowym.</li>
+ <li><code>typing</code>: Użytkownik wypełnia pole tekstowe.</li>
+ <li><code>scrolling</code>: Użytkownik przewija pasek przez pole tekstowe.</li>
+</ul>
+</div>
+<div id="a-value">
+
+<dl>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Atrybut łańcucha znaków pozwalający na współpracę wartości danych z elementem. Nie jest stosowany dla określenia jakiegoś konkretnego celu, lecz można go wykorzystać w skrypcie do własnego użytku.</dd>
+</dl>
+
+<p></p>
+</div>
+<p></p>
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci"> Własności </h3>
+<p>
+</p><div id="p-accessible">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/accessible">accessible</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   <a href="pl/NsIAccessible">nsIAccessible</a></i>
+ </dd>
+ <dd>
+  Zwraca obiekt dostępności dla elementu.</dd>
+</dl></div>
+<div id="p-alwaysOpenPopup">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/alwaysOpenPopup">alwaysOpenPopup</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-alwaysopenpopup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/alwaysopenpopup">alwaysopenpopup</a></code>.</dd>
+</dl></div>
+<div id="p-autoFill">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/autoFill">autoFill</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-autoFill"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/autoFill">autoFill</a></code>.</dd>
+</dl></div>
+<div id="p-autoFillAfterMatch">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/autoFillAfterMatch">autoFillAfterMatch</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-autoFillAfterMatch"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/autoFillAfterMatch">autoFillAfterMatch</a></code>.</dd>
+</dl></div>
+<div id="p-crop">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/crop">crop</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-crop"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/crop">crop</a></code>.</dd>
+</dl></div>
+<div id="p-disableAutocomplete">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/disableAutoComplete">disableAutoComplete</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-disableautocomplete"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disableautocomplete">disableautocomplete</a></code>.</dd>
+</dl></div>
+<div id="p-disabled">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/disabled">disabled</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code>.</dd>
+</dl></div>
+<div id="p-editable">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/editable">editable</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pola automatycznie uzupełniane są edytowalne, więc ta własność zwróci <code>true</code>.</dd>
+</dl></div>
+<div id="p-focused">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/focused">focused</a></span></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Pobiera i ustawia wartość atrybutu <code id="a-focused"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/focused">focused</a></code>.
+</dd></dl>
+<p><br>
+</p>
+
+</div>
+<div id="p-forceComplete">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/forceComplete">forceComplete</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-forcecomplete"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/forcecomplete">forcecomplete</a></code>.</dd>
+</dl></div>
+<div id="p-ignoreBlurWhileSearching">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/ignoreBlurWhileSearching">ignoreBlurWhileSearching</a></span></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Pobiera i ustawia wartość atrybutu <code id="a-ignoreblurwhilesearching"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ignoreblurwhilesearching">ignoreblurwhilesearching</a></code>.
+</dd></dl>
+
+</div>
+<div id="p-inputField">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/inputField">inputField</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   element textbox</i>
+ </dd>
+ <dd>
+  W Mozilli, pole tekstowe w języku XUL jest zaimplementowane jako otoczenie wokół elementów kontrolek formularza (input) języka HTML. Ta własność tylko do odczytu podtrzymuje odniesienie do wewnętrznego elementu input.</dd>
+</dl></div>
+<div id="p-isSearching">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/isSearching">isSearching</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Ta własność jest ustawiona na <code>true</code> podczas, gdy szukanie jest wykonywane.</dd>
+</dl></div>
+<div id="p-isWaiting"></div>
+<div id="p-label">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/label">label</a></span></code>
+</dt><dd> Typ: <i>string</i>
+</dd><dd> Pobiera i ustawia wartość atrybutu <code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code>.
+</dd></dl>
+<p><br>
+</p>
+
+</div>
+<div id="p-maxLength">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/maxLength">maxLength</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Maksymalna liczba znaków w polu tekstowym, jaką można wpisać.</dd>
+</dl></div>
+<div id="p-maxRows">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/maxRows">maxRows</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-maxrows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxrows">maxrows</a></code>.</dd>
+</dl></div>
+<div id="p-minResultsForPopup">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/minResultsForPopup">minResultsForPopup</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-minresultsforpopup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minresultsforpopup">minresultsforpopup</a></code>.</dd>
+</dl></div>
+<div id="p-noMatch">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/noMatch">noMatch</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Ta własność będzie ustawiona na <code>true</code>, jeśli ostatni rezultat szukania nie zawierał żadnych pozycji.</dd>
+</dl></div>
+<div id="p-open">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/open">open</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-open"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/open">open</a></code>.</dd>
+</dl></div>
+<div id="p-resultsPopup">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/resultsPopup">resultsPopup</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   element wyskakujący</i>
+ </dd>
+ <dd>
+  Ta własność jest ustawiona jako element wyskakujący, który wyświetla wyniki (rezultaty).</dd>
+</dl></div>
+<div id="p-searchSessions">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/searchSessions">searchSessions</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   lista nazw sesji rozdzielona spacją</i>
+ </dd>
+ <dd>
+  Ustawia słowo kluczowe sygnalizując jakiego typu dane są szukane dla autouzupełnienia. Możemy ustawić wiele typów poprzez rozdzielenie ich nazw spacją. Następujące wartości są możliwe, mimo że komponenty użytkownika mogą być zainstalowane, które dodają inne.</dd>
+</dl>
+<ul>
+ <li><code>history</code>: Przeszukana jest historia adresów URL użytkownika.</li>
+ <li><code>addrbook</code>: Przeszukana jest książka adresowa użytkownika.</li>
+ <li><code>ldap</code>: Przeszukany jest katalog LDAP użytkownika.</li>
+</ul></div>
+<div id="p-selectionEnd">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectionEnd">selectionEnd</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia koniec zaznaczonej części pola tekstu. Stosujemy ze sprzężeniem z własnością <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectionStart">selectionStart</a></span></code>. Wartość określa indeks znaku za zaznaczeniem. Jeśli ta wartość jest równa sumie wartości własności <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectionStart">selectionStart</a></span></code>, to żaden tekst nie jest zaznaczony, lecz wartość sygnalizuje pozycję wstawki (kursora) wewnątrz pola tekstowego.</dd>
+</dl></div>
+<div id="p-selectionStart">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectionStart">selectionStart</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera lub ustawia początek zaznaczonej części pola tekstu. Stosujemy w sprzężeniu z własnością <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectionEnd">selectionEnd</a></span></code>. Wartość określa indeks pierwszego zaznaczonego znaku.</dd>
+</dl></div>
+<div id="p-sessionCount">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/sessionCount">sessionCount</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Podtrzymuje liczbę sesji.</dd>
+</dl></div>
+<div id="p-showCommentColumn">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/showCommentColumn">showCommentColumn</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-showcommentcolumn"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/showcommentcolumn">showcommentcolumn</a></code>.</dd>
+</dl></div>
+<div id="p-showPopup">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/showPopup">showPopup</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-showpopup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/showpopup">showpopup</a></code>.</dd>
+</dl></div>
+<div id="p-size">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/size">size</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-size"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/size">size</a></code>.</dd>
+</dl></div>
+<div id="p-tabIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/tabIndex">tabIndex</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-tabindex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tabindex">tabindex</a></code>.</dd>
+</dl></div>
+<div id="p-tabScrolling">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/tabScrolling">tabScrolling</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-tabscrolling"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tabscrolling">tabscrolling</a></code>.</dd>
+</dl></div>
+<div id="p-textLength">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/textLength">textLength</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Podtrzymuje długość wprowadzanego tekstu w polu tekstowym. Ta własność jest tylko do odczytu.</dd>
+</dl></div>
+<div id="p-timeout">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/timeout">timeout</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-timeout"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/timeout">timeout</a></code>.</dd>
+</dl></div>
+<div id="p-type">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/type">type</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-type"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/type">type</a></code>.</dd>
+</dl>
+
+<p> </p></div>
+<div id="p-userAction">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/userAction">userAction</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-userAction"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/userAction">userAction</a></code>.</dd>
+</dl></div>
+<div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/value">value</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code>.</dd>
+</dl></div>
+<p></p>
+<h3 id="Metody" name="Metody"> Metody </h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Dziedziczy z elementu XUL</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>Dziedziczy z elementu DOM</strong><br>
+<small> <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p>
+
+</td>
+</tr>
+</tbody>
+</table>
+<dl><dt> <span id="m-addSession"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/addSession">addSession( session )</a></code></span>
+</dt><dd> Zwraca typ: <i>nsIAutoCompleteSession</i>
+</dd><dd> Dodaje obiekt nowej sesji do widgetu autouzupełnienia. Ten możemy zastosować do utworzenia autouzupełnienia listy rezultatów dostosowanej do naszych wymagań. Argument powinien być obiektem, który implementuje interfejs <a href="pl/NsIAutoCompleteSession">nsIAutoCompleteSession</a>. Ta metoda zwraca pasujący obiekt.
+</dd></dl>
+<p><br>
+</p>
+<dl><dt> <span id="m-clearResults"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/clearResults">clearResults()</a></code></span>
+</dt><dd> Zwraca typ: <i>???</i>
+</dd><dd> Czyści listę z wynikiem.
+</dd></dl>
+<p><br>
+</p>
+<dl><dt> <span id="m-getDefaultSession"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getDefaultSession">getDefaultSession</a></code></span>
+</dt><dd> Zwraca typ: <i>nazwa sesji</i>
+</dd><dd> Zwraca nazwę pierwszej sesji z dostępnych rezultatów.
+</dd></dl>
+<p><br>
+</p>
+<dl><dt> <span id="m-getResultAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getResultAt">getResultAt( index )</a></code></span>
+</dt><dd> Zwraca typ: <i><a href="pl/NsIAutoCompleteItem">nsIAutoCompleteItem</a></i>
+</dd><dd> Zwraca wynik pozycji w określonym indeksie. Pozycja będzie wartością typu <a href="pl/NsIAutoCompleteItem">nsIAutoCompleteItem</a>.
+</dd></dl>
+<p><br>
+</p>
+<dl><dt> <span id="m-getResultCount"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getResultCount">getResultCount( session )</a></code></span>
+</dt><dd> Zwraca typ:: <i>???</i>
+</dd><dd> Zwraca liczbę rezultatów (Argument <var>session</var> jest is obecnie ignorowany).
+</dd></dl>
+<p><br>
+</p>
+<dl>
+ <dt>
+  <span id="m-getResultValueAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getResultValueAt">getResultValueAt( index )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   wartość wyniku</i>
+ </dd>
+ <dd>
+  Zwraca wartość wyniku w określonym indeksie. Pozycja będzie przesłana do tekstu tej pozycji, która pojawi się w okienku wyskakującym (popup).</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-getSession"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getSession">getSession( session )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   <a href="pl/NsIAutoCompleteSession">nsIAutoCompleteSession</a></i>
+ </dd>
+ <dd>
+  Zwraca obiekt sesji z danym indeksem. Będzie zwrócony obiekt typu <a href="pl/NsIAutoCompleteSession">nsIAutoCompleteSession</a>.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-getSessionByName"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getSessionByName">getSessionByName( name )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   <a href="pl/NsIAutoCompleteSession">nsIAutoCompleteSession</a></i>
+ </dd>
+ <dd>
+  Zwraca obiekt sesji wraz z daną nazwą. Będzie zwracał obiekt typu <a href="pl/NsIAutoCompleteSession">nsIAutoCompleteSession</a>.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-getSessionResultAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getSessionResultAt">getSessionResultAt( session, index )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   pozycja wyniku</i>
+ </dd>
+ <dd>
+  Zwraca pozycję wyniku w określonym <var>index</var> dla określonej <var>session</var>.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-getSessionStatusAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getSessionStatusAt">getSessionStatusAt( index )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   ???</i>
+ </dd>
+ <dd>
+  Zwraca status dla obiektu sesji z danego indeksu.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-getSessionValueAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getSessionValueAt">getSessionValueAt( session, index )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   wartość wyniku/rezultatu</i>
+ </dd>
+ <dd>
+  Zwraca wartość rezultatu w określonym <var>index</var> dla określonej <var>session</var>.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-removeSession"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/removeSession">removeSession( session )</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   ???</i>
+ </dd>
+ <dd>
+  Usuwa obiekt sesji z widgetu autouzupełniania. Argument powinien być obiektem, który implementuje interfejs <a href="pl/NsIAutoCompleteSession">nsIAutoCompleteSession</a>.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-select"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/select">select()</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   nie zwraca wartości</i>
+ </dd>
+ <dd>
+  Zaznacza cały tekst w polu tekstowym.</dd>
+</dl>
+<dl><dt> <span id="m-setSelectionRange"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/setSelectionRange">setSelectionRange( start, end )</a></code></span>
+</dt><dd> Zwraca typ: <i>nie zwraca wartości</i>
+</dd><dd> Ustawia zaznaczoną porcję pola tekstowego, gdzie argumentem początkowym <var>start</var> jest pierwszy zaznaczony znak i argument końcowym <var>end</var> jest indeks znaku po zaznaczeniu. Ustawiając oba argumenty na tę samą wartość, pozwoli nam na przesunięcie kursora do przesłanej pozycji bez zaznaczenia tekstu.
+</dd></dl>
+<p><br>
+</p><p><br>
+</p>
+<dl><dt> <span id="m-syncSessions"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/syncSessions">syncSessions( autoCompleteElement )</a></code></span>
+</dt><dd> Zwraca typ: <i>???</i>
+</dd><dd> Kopiuje sesje z kolejnego elementu autouzupełnienia.
+</dd></dl>
+<p><br>
+</p><p><br>
+</p>
+<p></p>
+<h3 id="Podobne" name="Podobne"> Podobne </h3>
+<dl><dt> Interfejsy
+</dt><dd> <a href="pl/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="pl/NsIDOMXULMenuListElement">nsIDOMXULMenuListElement</a>
+</dd></dl>
+<div class="noinclude">
+</div>

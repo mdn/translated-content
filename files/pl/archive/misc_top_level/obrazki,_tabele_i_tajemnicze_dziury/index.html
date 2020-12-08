@@ -1,0 +1,114 @@
+---
+title: 'Obrazki, tabele i tajemnicze dziury'
+slug: 'Archive/Misc_top_level/Obrazki,_tabele_i_tajemnicze_dziury'
+tags:
+  - CSS
+  - Wszystkie_kategorie
+translation_of: 'Archive/Misc_top_level/Images,_Tables,_and_Mysterious_Gaps'
+---
+<p>
+</p><p>Niezależnie, kiedy zacząłeś(aś) tworzyć strony WWW, jest prawie pewne, że masz jedną lub dwie strony bazujące na klasycznym paradygmacie "poskręcanych tabel i mnóstwa obrazków". Za każdym razem, gdy chciałeś(aś) ułożyć logo, tak aby pasowało do wyglądu strony, lub kiedy używałeś(aś) ton jednopikselowych rozpychających GIF-ów, założenia (i zagrożenia) pozostawały te same. Wtedy, dawno temu, te założenia działały, ponieważ przeglądarki zazwyczaj ustawiały rozmiary komórek tabeli na szerokość i wysokość obrazka, który znajdował się wewnątrz.
+</p><p>Przenieśmy się teraz do roku 2001, kiedy to zaczęły powstawać przeglądarki internetowe zgodne ze standardami, które układały strony WWW używając do tego HTML-a i CSS, zamiast swoich własnych, ukrytych algorytmów. Dzięki mrocznym zakątkom specyfikacji CSS, każdy układ bazujący na malutkich obrazkach i komórkach tabeli stawał się potencjalną katastrofą wizualną. Jedyne, czego trzeba było, to nowoczesna przeglądarka i poprawny DOCTYPE... buuum!
+</p>
+<h3 id="Sk.C5.82adniki" name="Sk.C5.82adniki"> Składniki </h3>
+<p>Przyjrzyjmy się powodom tych problemów. Zacznijmy od prostego przykładu, pokazanego na Przykładzie 1: jednokomórkowa tabela z obrazkiem w środku.
+</p><p><img align="none" alt="Przykład 1">
+</p><p>Oczywiście większość stron jest trochę bardziej skomplikowana, ale w tym wypadku nie potrzebujemy nic więcej. Jeden obrazek, jedna komórka-- to wszystko. Nie ma nic złego w powyższym przykładzie. Nie miało być, ponieważ to przykład, jak przeglądarki zachowują się tradycyjnie.
+</p><p>Teraz zobaczmy, jak wygląda taka prosta tabela w nowoczesnej przeglądarce, kiedy strona posiada DOCTYPE trybu standardów.
+</p><p><img align="none" alt="Przykład 2">
+</p><p>Zwróć uwagę na przestrzeń dodaną pod obrazkiem w Przykładzie 2. Składnia tabeli i komórki pozostała niezmieniona-- zmienił się tylko sposób wyświetlania. Zamiast "SkurczSięIOpakuj" ten obrazek, przeglądarka opakowuje komórkę wokół linii, w której znajduje się obrazek.
+Obrazek znajduje się w jakiejś linii, ponieważ obrazki należą, domyślnie, do zawartości liniowej (inline). Stąd różnica.
+</p>
+<h3 id="Jak_tworzona_jest_zawarto.C5.9B.C4.87_liniowa" name="Jak_tworzona_jest_zawarto.C5.9B.C4.87_liniowa"> Jak tworzona jest zawartość liniowa </h3>
+<p>Aby zrozumieć, co się właśnie stało, musisz spojrzeć na konstrukcję bloku liniowego, rozmieszczenie obrazków w bloku liniowym i położenie bloku liniowego w komórce tabeli. Najpierw spójrzmy na blok liniowy zawierający tekst, pokazany na Przykładzie 3.
+</p><p><img align="none" alt="Przykład 3">
+</p><p>Najważniejszym elementem Przykładu 3 jest bazowa linia pisma (pokazana jako niebieska linia) i jej położenie w bloku liniowym. Dokładne położenie bazowej linii pisma zależy od domyślnego fontu dla danego bloku liniowego (pokazanego jako czerwony prostokąt), która jest określona przez wartość font-family dla elementu zawierającego blok liniowy. Autor nie ma możliwości bezpośredniej zmiany położenia bazowej linii pisma. Przestrzeń pod bazową linią pisma jest określana jako "descender space", ponieważ tutaj właśnie są rysowane dolne fragmenty liter takich jak "j", "y" i "q". Przykład 4 pokazuje, co się stanie, kiedy dodamy do tego obrazek.
+</p><p><img align="none" alt="Przykład 4">
+</p><p>Zwróć uwagę, gdzie domyślnie znalazł się obrazek: jego dolna krawędź jest wyrównana z linią bazową bloku liniowego. To położenie może być zmienione poprzez własność vertical-align-- powiemy o tym trochę więcej-- ale prawie nikt nigdy nie zmienia domyślnej wartości. Usuńmy tekst i zostawmy tylko obrazek, jak w Przykładzie 5.
+</p><p><img align="none" alt="Przykład 5">
+</p><p>Mamy zatem obrazek ułożony na linii bazowej bloku liniowego, zawierającego tylko obrazek. Teraz rozważmy, co się stanie, kiedy umieścimy tę linię w komórce tabeli (Przykład 6).
+</p><p><img align="none" alt="Przykład 6">
+</p><p>No i stało się - tworzą się spacje tam, gdzie nikt by się ich nie spodziewał! Jeszcze gorzej wygląda to przy mniejszych rysunkach - tak jak te, które są wielkości piksela (Przykład 7).
+</p><p><img align="none" alt="Przykład 7">
+</p><p>Nagle okazuje się, że jest mnóstwo pustych przestrzeni w naszej tabeli. To wystarczy, żeby doprowadzić designera stron do szału.
+</p>
+<h3 id="Mo.C5.BCe_poprawk.C4.99.3F" name="Mo.C5.BCe_poprawk.C4.99.3F"> Może poprawkę? </h3>
+<p>Istnieje tylko jedno oczywiste rozwiązanie: zaprzestać tworzenia stron, które opierają się na tabelach i jednopikselowych obrazkach. Jednak dla wielu autorów nie jest to praktyczne, a na pewno nie pomaga w naprawie starszych projektów, które nagle rozpadają się w nowoczesnych przeglądarkach. Jest jeszcze inny sposób naprawy: upewnić się, że dokument nie zostanie rozpoznany jako wyświetlany w trybie standardów.
+</p><p>Możesz to zrobić używając deklaracji DOCTYPE, która włączy jeden z dwóch trybów: <a class="external" href="http://www.mozilla.org/docs/web-developer/quirks/">"wstecznej zgodności"</a> lub <a href="pl/Gecko's_Almost_Standards_Mode">"almost standards"</a>, lub nie umieszczając wcale deklaracji DOCTYPE w twoim dokumencie. Brak deklaracji DOCTYPE uniemożliwi walidację, i dlatego nie jest zalecany. Dla autorów, którzy pracują z odziedziczonymi dokumentami, tryb "wstecznej zgodności" deklaracji DOCTYPE jest najlepszym wyborem. W przypadku, kiedy autor tworzy nowy dokument lub próbuje przekształcić projekt tak, aby bazował na standardach na tyle, na ile jest to tylko możliwe, wtedy wybór trybu "almost standards" będzie prawdopodobnie lepszym rozwiązaniem.
+</p><p>Oczywiście, dokumenty zadeklarowane jako XHTML Strict lub HTML Strict wywołają wyświetlanie w trybie "standardów", zatem zamierzamy przedstawić dwa podstawowe sposoby zajęcia się tym problemem w dokumentach w trybie zgodności i kilka sposobów wywoływania tych "poprawek".
+</p>
+<h4 id="Ustawianie_obrazk.C3.B3w_jako_blok.C3.B3w" name="Ustawianie_obrazk.C3.B3w_jako_blok.C3.B3w"> Ustawianie obrazków jako bloków </h4>
+<p>Pierwszym wyborem, i jedynym, który będzie działał w większości projektów wykorzystujących intensywnie grafikę, jest przekształcenie obrazka z elementu liniowego na element blokowy. Zrobienie tego sprawia, że nie jest generowany dłużej blok liniowy i tym samym problem znika, gwarantując, że obrazek jest jedyną rzeczą, która zajmuje tę komórkę tabeli. W najprostszym przypadku możemy dodać styl taki jak ten:
+</p>
+<pre> td img {display: block;}</pre>
+<p>Rozważmy tę regułę zastosowaną do następujących znaczników:
+</p>
+<pre>&lt;table cellspacing="0" cellpadding="0" border="0" width="500"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img src="nav1.gif"&gt;&lt;img src="nav2.gif"&gt;&lt;img src="nav3.gif"&gt;&lt;img
+src="nav4.gif"&gt;&lt;img src="nav5.gif"&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="background: red;"&gt;
+&lt;img src="smallred.gif" height="1" width="1"&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p style="margin: 0.5em;"&gt;Ten tekst jest jeszcze jedną komórką tabeli. W tekście jest ikona
+  &lt;img src="icon2.gif"&gt;
+ wskazująca link do innej strony. Jest to bardzo życiowe.  Lorem
+ipsum, dolor sit amet...&lt;/p&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+<p>Jak widzimy w Przykładzie 8 działa to dobrze w niektórych przypadkach, ale nie najlepiej w innych.
+</p><p><img align="none" alt="Przykład 8">
+</p><p>Cienka czerwona linia pokazuje, że jednopikselowy rozpychający GIF sprawia teraz, iż komórka ma wysokość jednego piksela, tak jak projektant zamierzył. Niestety, teraz wszystkie przyciski w górnej komórce są elementami blokowymi i ostatecznie układają się w stos jeden nad drugim zamiast obok siebie.
+</p><p>Jednym z możliwych rozwiązań jest dodanie klasy do każdego obrazka, który powinien być elementem blokowym, i napisanie reguły dopasowującej.
+</p>
+<pre>td img.decoration {display: block;}
+
+&lt;td&gt;&lt;img src="reddot.gif" class="decoration"&gt;&lt;/td&gt;</pre>
+<p>Zależnie od projektu może to wprowadzić wiele klas dodanych dla jednego prostego efektu. Jest to szczególnie widoczne, jeśli mamy wiele jednopikselowych komórek przeznaczonych do tworzenia ładnych linii układających się w stos lub czegoś podobnego. Jeśli samodzielnie dodajesz znaczniki możesz nadać klasy wierszom tabeli zamiast obrazkom. Zatem możesz mieć:
+</p>
+<pre>tr.decoration img {display: block;}</pre>
+<p>...razem z następującą zmianą w znacznikach:
+</p>
+<pre>&lt;tr class="decoration"&gt;&lt;td style="background: red;"&gt;
+&lt;img src="smallred.gif" height="1" width="1"&gt;
+&lt;/td&gt;&lt;/tr&gt;</pre>
+<p>Rezultatem tego jest przekształcenie w element blokowy jedynie GIF-a tworzącego odstępy, zatem pozostałe obrazki zostają w spokoju. Prowadzi to do rezultatu pokazanego w Przykładzie 9.
+</p><p><img align="none" alt="Przykład 9">
+</p><p>Ewentualnie możesz nadać klasę komórkom tabeli zamiast wierszom, jeśli to jest dla ciebie lepszym rozwiązaniem. W każdym z tych przypadków przekształcenie obrazków na elementy blokowe może przynieść niezamierzony efekt, jeśli komórki twojej tabeli zawierają więcej niż jeden pojedynczy obrazek w każdej, jak w Przykładzie 8.
+</p><p>Oczywiście, dopóki mamy jednopikselową komórkę tworzącą odstęp w Przykładzie 9, jest tam jeszcze niechciana przestrzeń pod spodem górnych przycisków nawigacyjnych. Uwolnienie się od tego odstępu może być tak proste jak umieszczenie każdego obrazka we własnej komórce i uczynienie go elementem blokowym, pozostawmy jednak je wszystkie razem w jednej komórce, by pokazać jeszcze inne podejście.
+</p>
+<h4 id="U.C5.BCywanie_wyr.C3.B3wnania_pionowego" name="U.C5.BCywanie_wyr.C3.B3wnania_pionowego"> Używanie wyrównania pionowego </h4>
+<p>Innym głównym rozwiązaniem jest pozostawienie obrazków jako elementów liniowych i zmiana pionowego wyrównania obrazka w stosunku do linii bloku. Dla przykładu możesz wypróbować następujące rozwiązanie:
+</p>
+<pre>td img {vertical-align: bottom;}</pre>
+<p>Spowoduje to, że dolna krawędź obrazka będzie wyrównana względem dolnej linii bloku zamiast linii bazowej. Jak możemy zobaczyć na Przykładzie 10, przynosi to zamierzony efekt: przestrzeń pod naszymi obrazkami w pasku nawigacyjnym znika. Jednak dekoracyjna komórka jest nadal zbyt wysoka i inne obrazki nie są wyrównane względem tekstu wokół nich.
+</p><p><img align="none" alt="Przykład 10">
+</p><p>Jeszcze raz możemy nadać klasę obrazkom, komórkom lub wierszom w celu precyzyjnego ustawienia efektu. Jednak style pokazane powyżej nie przezwyciężą problemu jednopikselowego obrazka, ponieważ linia bloku otaczająca go będzie miała wysokość czcionki w komórce tabeli i dlatego nie skurczy się. Obrazek przeniesie się na dół komórki, ale komórka nie skurczy się do rozmiarów obrazka. Dodatkowo, każdy inny obrazek, który jest krótszy niż wysokość linii bloku będzie nadal miał pustą przestrzeń wokół siebie -- jak to się działo z czerwoną komórką tworzącą odstęp. Jednopikselowy obrazek w komórce jest teraz wyrównany względem dołu komórki, ale linia bloku powraca i ma rozmiar normalnego tekstu.
+</p><p>Zobacz Przykład 11, gdzie rozmiar czcionki dokumentu został podniesiony do większej wartości. Obrazki paska nawigacyjnego mają teraz pustą przestrzeń pojawiającą się nad nimi, a czerwona przestrzeń stała się większa.
+</p><p><img align="none" alt="Przykład 11">
+</p><p>Trudno tego uniknąć, ponieważ obrazki (w tym podejściu) są ciągle elementami liniowymi i dlatego nadal biorą udział w tworzeniu linii bloku. Jeśli ta linia bloku otrzyma wystarczającą wysokość, przestrzeń zacznie pojawiać się wokół obrazków
+</p>
+<h3 id="Oczekuj.C4.85c_na_rozwi.C4.85zanie" name="Oczekuj.C4.85c_na_rozwi.C4.85zanie"> Oczekując na rozwiązanie </h3>
+<p>Dzięki gruntowej implementacji CSS2 w Mozilli problem obrazków liniowych w komórkach tabeli, wymuszających niechcianą przestrzeń, został wzięty pod uwagę przez CSS Working Group. Powstało wiele propozycji rozwiązania tego problemu, lecz jedną z najbardziej obiecujących jest właściwość <a class="external" href="http://www.w3.org/TR/css3-box/#line-box-contain">line-box-contain</a>, którą zaproponowano do włączenia w CSS3. Gdy ta właściwość się przyjmie, wtedy każda przeglądarka wspierająca ją będzie mogła naśladować tradycyjne zachowanie "shrinkwrap" bez ryzyka nieoczekiwanego wyglądu z następującą regułą:
+</p>
+<pre>td {line-box-contain: font replaced;}  /* propozycja do CSS3 */</pre>
+<p>Możliwe są inne rozwiązania zawierające się w aktualnym CSS3 Working Drafts, jak <a class="external" href="http://www.w3.org/TR/css3-box/#line-height">line-height-policy</a>. Oczywiście, im szybciej rozwiązanie będzie można znaleźć i zaimplementować, autorzy będą szczęśliwsi.
+</p>
+<h3 id="Rekomendacje" name="Rekomendacje"> Rekomendacje </h3>
+<p>Z powodu braku wsparcia dla CSS3, trudno dostarczyć jasny zestaw kroków dla rozwiązania każdego przykładu tego problemu, ponieważ najlepsze rozwiązanie dla danego dokumentu zależy mocno od jego struktury. Jeśli twój dokument używa tradycyjnych znaczników, upewnij się, że deklaracja DOCTYPE odzwierciedla ten fakt i nie wywołuj trybu standardów. Zabezpieczy to przeglądarki przed użyciem wyświetlania opartego na standardach i w ten sposób wszystkie problemy z układem graficznym zostaną ominięte. Jeśli używasz znaczników w trybie strict lub potrzebujesz z innych powodów wyświetlania w trybie standardów, pamiętaj wtedy o poniższych wskazówkach:
+</p>
+<ul><li> Każdy pojedynczy obrazek w komórce tabeli (np. jednopikselowy obrazek tworzący przestrzeń) powinien być elementem blokowym
+</li><li> Każdy obrazek w komórce tabeli z innym obrazkiem powinien być wyrównany w pionie do dolnej linii bloku
+</li><li> Każdy obrazek w komórce tabeli z innym obrazkiem i tekstem powinien mieć odpowiednie wyrównanie w pionie zgodnie z potrzebą.
+</li></ul>
+<p>Z rozsądnym połączeniem podejść i redukcją trików z jednopikselowymi obrazkami-- które w przeglądarkach obsługujących CSS nie są w żaden sposób niezbędne-- jest całkiem możliwe ominięcie dziwnych efektów w trybie standardów. Najlepszym rozwiązaniem może być zagwarantowanie, że obrazki są zawsze w komórkach same, zatem pozwalają twórcom uczynić je elementami blokowymi, ale, jak zwykle, zależy to od autorskiego projektu.
+</p>
+<h3 id="Podobne_linki" name="Podobne_linki"> Podobne linki </h3>
+<ul><li> <a href="pl/Gecko's_Almost_Standards_Mode">Gecko's Almost Standards Mode</a>
+</li><li> <a class="external" href="http://www.mozilla.org/docs/web-developer/quirks/">Mozilla's Quirks Mode</a>
+</li></ul>
+<div class="originaldocinfo">
+<h3 id="Informacje_o_dokumencie" name="Informacje_o_dokumencie"> Informacje o dokumencie </h3>
+<ul><li> Autor(zy): Eric A. Meyer
+</li><li> Ostatnia modyfikacja: March 21st, 2003
+</li><li> Copyright © 2001-2003 Netscape.
+</li></ul>
+</div>
+{{ languages( { "en": "en/Images,_Tables,_and_Mysterious_Gaps", "es": "es/Im\u00e1genes,_tablas_y_huecos_misteriosos", "fr": "fr/Images,_tableaux_et_d\u00e9calages_myst\u00e9rieux" } ) }}

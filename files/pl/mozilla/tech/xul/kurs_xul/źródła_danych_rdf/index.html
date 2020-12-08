@@ -1,0 +1,299 @@
+---
+title: Źródła danych RDF
+slug: Mozilla/Tech/XUL/Kurs_XUL/Źródła_danych_RDF
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/RDF_Datasources
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Drzewa_i_szablony" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Zaawansowane_reguły">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule znajdziemy dodatkowe źródła danych i dowiemy się jak ich użyć w naszym pliku RDF jako źródła.</p>
+
+<h2 id="Inne_kody_.C5.BAr.C3.B3d.C5.82owe_Mozilli" name="Inne_kody_.C5.BAr.C3.B3d.C5.82owe_Mozilli">Inne kody źródłowe Mozilli</h2>
+
+<p>Mozilla dostarcza kilka różnych kodów źródłowych służących do budowy. Niektóre z nich są tutaj wymienione wraz z kilkoma przykładami. Pracują one bardzo podobnie jako zakładki, mimo że platformy bywają różne.</p>
+
+<h2 id="Lista_historii" name="Lista_historii">Lista historii</h2>
+
+<p>Dane źródła historii są dostarczone poprzez dostęp to listy historii użytkowników, których linki z listy adresów URL użytkownika zostały ostatnio odwiedzone. Zasoby mają być kierowane do użycia <code>rdf:history</code> jako źródło danych. Tabela poniżej ukazuje zasoby (lub pola), które możesz uzyskać źródła danych jakim jest historia. Połóż własności adresu URL poniżej gdzie chcesz użyć właściwości źródła danych.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Date</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Date</span></td>
+   <td>Data ostatniej wizyty</td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Tytuł strony</td>
+  </tr>
+  <tr>
+   <td>Page</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Page</span></td>
+   <td>Nazwa strony</td>
+  </tr>
+  <tr>
+   <td>Referrer</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Referrer</span></td>
+   <td>Strona przekierowująca</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>Strona URL</td>
+  </tr>
+  <tr>
+   <td>Visit Count</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#VisitCount</span></td>
+   <td>Liczba odwiedzonych stron</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Typowa lista historii jest wyświetlona na drzewie z wyborem tych plików. Aby go użyć, wystarczy tylko położyć właściwości URL powyżej w atrybucie przycisków lub szablonu <code>label</code>. Możesz użyć właściwości <code>NC:HistoryRoot</code> atrybutu <code>ref</code>. Możesz także użyć <code>NC:HistoryByDate</code>, aby pobrać historię z kilku ostatnich dni.</p>
+
+<h3 id="Using_The_History_List_Example" name="Using_The_History_List_Example">Using The History List Example</h3>
+
+<p>Zobaczysz szablony wyświetlające się jako lista historii. Wyświetlimy historię drzewa z trzema kolumnami, <b>Name</b>, <b>Page</b> oraz <b>Date</b>.</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;tree flex="1" datasources="rdf:history" ref="NC:HistoryRoot"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Name" flex="1"/&gt;
+    &lt;treecol id="url" label="URL" flex="1"/&gt;
+    &lt;treecol id="date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+
+    &lt;rule&gt;
+      &lt;treechildren&gt;
+       &lt;treeitem uri="rdf:*"&gt;
+         &lt;treerow&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Date"/&gt;
+         &lt;/treerow&gt;
+       &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<h2 id="Inne_.C5.BAr.C3.B3d.C5.82a_danych" name="Inne_.C5.BAr.C3.B3d.C5.82a_danych">Inne źródła danych</h2>
+
+<p>Tablice z listy poniżej są innymi źródłami osiągalnych z Mozilla. Chcesz możesz użyć któregokolwiek z zasobów.</p>
+
+<dl>
+ <dt>Zakładki (<span class="nowiki">rdf:bookmarks</span>)</dt>
+ <dd>Zakładki są generowane na podstawie listy z zawartością .</dd>
+</dl>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="3">Źródła</th>
+  </tr>
+  <tr>
+   <td>Added Date</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#BookmarkAddDate</span></td>
+   <td>Data dodania zakładki</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Description</span></td>
+   <td>Opis zakładki</td>
+  </tr>
+  <tr>
+   <td>Last Modified</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate</span></td>
+   <td>Data ostatniej modyfikacji</td>
+  </tr>
+  <tr>
+   <td>Last Visited</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/WEB-rdf#LastVisitDate</span></td>
+   <td>Data ostatniej wizyty</td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Nazwa zakładki</td>
+  </tr>
+  <tr>
+   <td>Shortcut URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#ShortcutURL</span></td>
+   <td>Skróty klawiszowe</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>Link URL do</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="2">Prawdopodobne źródła zakładek</th>
+  </tr>
+  <tr>
+   <td>NC:BookmarksRoot</td>
+   <td>Najwyższy poziom w hierarchi zakładek</td>
+  </tr>
+  <tr>
+   <td>NC:IEFavoritesRoot</td>
+   <td>Folder zakładek odpowiadający folderowi Ulubione z IE.</td>
+  </tr>
+  <tr>
+   <td>NC:PersonalToolbarFolder</td>
+   <td>Folder zakładek odpowiadający własnemu paskowi narzędzi.</td>
+  </tr>
+ </tbody>
+</table>
+
+<dl>
+ <dt>Pliki (<span class="nowiki">rdf:files</span>)</dt>
+ <dd>Podgląd plików użytkownika.</dd>
+</dl>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="3">Źródła</th>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Nazwa pliku</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL do pliku</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="2">Prawdopodobne źródła plików</th>
+  </tr>
+  <tr>
+   <td>NC:FilesRoot</td>
+   <td>Najwyższy poziom systemu plików (często lista napędów)</td>
+  </tr>
+  <tr>
+   <td>A file URL</td>
+   <td>Używając URL pliku dla atrybutu <b>ref</b>, możesz zaznaczyć specyficzny folder bedący przekierowaniem. Na przykład, możesz użyć <a class="external" rel="freelink">file:///windows</a> or <a class="external" rel="freelink">file:///usr/local</a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Przykład kodu źródłowego w pliku kodu ze źródłem, określa swoją konieczną zawartość. Nie chcemy każdego pliku z plików systemowych decydowały o wyświetleniu danych. Natomiast, tylko pliki i foldery elementów drzewa (lub innych elementów) były potrzebne do wyświetlenia w momencie kiedy tak zadecydujemy.</p>
+
+<h2 id="Composite_Datasources" name="Composite_Datasources">Composite Datasources</h2>
+
+<p>Specjalny wielokrotny kod źródła w atrybutach źródła danych jest oddzielnie poprzez białe pola, przykład poniżej. Jest to efekt czytania źródła danych wspomniany we wszystkich źródłach.</p>
+
+<pre>&lt;tree datasources="rdf:bookmarks rdf:history animals.rdf" ref="NC:BookmarksRoot"&gt;
+</pre>
+
+<p>Przykład ten czyta zawartość źródła z zakładek, historię i plik animals.rdf. Są one połączone z jednym składem kodu źródłowego i potrafią wtedy być użyte jako pojedyncze pliki.</p>
+
+<p>Specjalny kod źródłowy <code>rdf:null</code> odzwierciedla pustkę, nicość. Możesz używać tego kodu źródłowego jeśli chcesz umieścić dynamiczny kod źródłowy w skrypcie, nie potrzebujesz jego na początku i nie poznasz swojego dokładnego URL-a.</p>
+
+<h2 id="Kod_.C5.BAr.C3.B3d.C5.82owy_RDF_u.C5.BCytkownika" name="Kod_.C5.BAr.C3.B3d.C5.82owy_RDF_u.C5.BCytkownika">Kod źródłowy RDF użytkownika</h2>
+
+<p>Możemy używać jakiegokolwiek wewnętrznego kodu źródłowego, jeśli będziemy mieli taką potrzebę. Jest tu kilka innych kodów dla poczty, książki adresowej i służących do przeszukiwania ich. Kiedykolwiek, będziesz chciał możesz użyć twojego własnego kodu źródłowego RDF przechowanego w pliku RDF. Plik może być dwojaki, lokalny lub zdalny. Wystarczy umieścić URL pliku RDF w atrybucie <code><code id="a-datasources"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/datasources">datasources</a></code></code>.</p>
+
+<p>Używanie kodu źródłowego RDF prowadzi do większej funkcjonalności kodu wewnętrznego. Możesz używać reguł odpowiadającym specjalnym typom zawartości. Atrybuty w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code></code> odpowiadają, jeżeli one odpowiadają atrybutom RDF <code>Description</code> elementu. Także możesz tworzyć pliki RDF, które są hierarchiczne.</p>
+
+<h3 id="Using_RDF_file_Example" name="Using_RDF_file_Example">Using RDF file Example</h3>
+
+<p>Następny przykład, to jak plik RDF potrafi być użyty w bazie danych. Plik RDF jest czarodziejski i potrafi wyświetlić osobno: <a href="https://developer.mozilla.org/samples/xultu/examples/animals.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/animals.rdf">RDF</a></p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_2.xul">Podgląd</a></p>
+
+<pre>&lt;tree flex="1" width="200" height="200"
+      datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/all-animals"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Name" primary="true" flex="1"/&gt;
+    &lt;treecol id="species" label="Species" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;treechildren&gt;
+       &lt;treeitem uri="rdf:*"&gt;
+         &lt;treerow&gt;
+           &lt;treecell label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/&gt;
+           &lt;treecell label="rdf:http://www.some-fictitious-zoo.com/rdf#species"/&gt;
+         &lt;/treerow&gt;
+       &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<p><img alt="grafika:datasrc1.jpg"></p>
+
+<p>Tutaj, dane zostały wygenerowane z pliku. Atrybut <code><code id="a-ref"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ref">ref</a></code></code> został zarejestrowany jako element korzenia w pliku RDF, który jest najwyższym poziomem <code>Seq</code>. Otrzymamy kompletną listę
+
+ <i>animals</i>
+ . Jeżeli potrzebowalibyśmy,to moglibyśmy umieszczać atrybut <code><code id="a-ref"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ref">ref</a></code></code> do wszelkiej innej zawartości <code>about</code> cechach atrybutu ograniczającego ustawienia danych, które są zwracane. Na przykład, do wyświetlania tylko reptails, użyj wartości <code><span class="nowiki">http://www.some-fictitious-zoo.com/reptiles</span></code>.</p>
+
+<h3 id="Setting_the_ref_Attribute_Example" name="Setting_the_ref_Attribute_Example">Setting the <code>ref</code> Attribute Example</h3>
+
+<p>Przykład poniżej pokazuje jak wyświetlić szczególną część kodu źródłowego RDF ustawiając atrybut <code><code id="a-ref"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ref">ref</a></code></code>.</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_3.xul">Podgląd</a></p>
+
+<pre>&lt;window
+  id="example-window"
+  title="History List"
+  xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;button label="Click here to see the mammals the zoo has" type="menu"
+        datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/mammals"&gt;
+  &lt;template&gt;
+    &lt;rule ANIMALS:specimens="0"&gt;&lt;/rule&gt;
+    &lt;rule&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem uri="rdf:*" label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/rule&gt;
+  &lt;/template&gt;
+&lt;/button&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>W tym przypadku tylko mammals są żądane, więc zaznaczamy mammals URI na liście. Zauważymy tą wartość atrybutu <code><code id="a-ref"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ref">ref</a></code></code> w przykładzie <code><span class="nowiki">http://www.some-fictitious-zoo.com/mammals</span></code>, który odzwierciedla jeden element <code>Seq</code> w <a class="external" href="http://xulplanet.com/tutorials/xultu/animals.txt">pliku RDF</a>. To zdarzenie tylko powraca w liście w przypadku potomków.</p>
+
+<p>Zostały użyte tutaj dwie zasady. Pierwsza reguła trzyma całą zawartość jaką posiada <code>ANIMALS:specimens</code>, atrybut ustawiony jest na <code>0</code>. Możesz zobaczyć te cechy w każdym <code>Description</code> elementu w pliku RDF. Niektóre z nich mają wartość równą 0. Więc w tym wypadku, użyjemy zasady pierwszej. Ponieważ, zasada pierwsza nie ma wartości, nic nie będzie ci wyświetlane. Jest to efektowna droga do ukrycia daty, której nie chcemy wyświetlić.</p>
+
+<p>Druga zasada stosuje się do całej reszty kodu i tworzy wiersze wyskakującego menu. Końcowy efekt jest taki, że dostaniemy wyskakujące menu zawierające wszystkie
+ <i>mammals</i>
+ które nie mają podanej wartości równej 0.</p>
+
+<p>Następnie, zobaczymy pełne zasady składni.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Drzewa_i_szablony" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Zaawansowane_reguły">Następny  »</a></p>
+</div><p></p>

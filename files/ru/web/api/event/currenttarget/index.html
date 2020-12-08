@@ -1,0 +1,107 @@
+---
+title: Event.currentTarget
+slug: Web/API/Event/currentTarget
+translation_of: Web/API/Event/currentTarget
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p>Определяет элемент, в котором в данный момент обрабатывается событие, при движении события внутри DOM. Всегда совпадает элементом, на котором обработчик события был назначен, в отличие от свойства <code>event.target</code>, идентифицирующего элемент, на котором событие возникло.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p><code>event.currentTarget</code> используется, когда один и тот же обработчик события присваивается нескольким элементам.</p>
+
+<pre class="brush: js notranslate">function hide(e){
+  e.currentTarget.style.visibility = "hidden";
+  // Когда данная функция используется в качестве обработчика события: this === e.currentTarget
+}
+
+var ps = document.getElementsByTagName('p');
+
+for(var i = 0; i &lt; ps.length; i++){
+  ps[i].addEventListener('click', hide, false);
+}
+
+// click around and make paragraphs disappear
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Спецификация</th>
+   <th>Статус</th>
+   <th>Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}}</td>
+   <td>{{Spec2("DOM2 Events")}}</td>
+   <td>
+    <table>
+     <tbody>
+      <tr>
+       <td>Изначальное определение. </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] В Internet Explorer с 6 по 8, событийная модель иная. Слушатели событий привяззываются к нестандартному методу <code>element.attachEvent</code>. В данной модели не существует эквивалента <code>event.currentTarget</code> и <code>this</code> - это глобальный объект. Единственный способ имитировать свойство <code>event.currentTarget</code> - обернуть ваш обработчик в функцию, вызывающую обработчик с использованием <code>Function.prototype.call</code> с элементом в качестве первого аргумента. Данным способом <code>this</code> примет ожидаемое значение.</p>
+
+<h2 id="См.также">См.также</h2>
+
+<p><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></p>

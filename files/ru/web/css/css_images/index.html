@@ -1,0 +1,148 @@
+---
+title: CSS Images
+slug: Web/CSS/CSS_Images
+tags:
+  - CSS Images
+  - CSS руководство
+translation_of: Web/CSS/CSS_Images
+---
+<div>{{CSSRef}}</div>
+
+<p><strong>CSS Images</strong> - модуль в CSS, который определяет, какие типы изображений можно использовать (тип {{cssxref("&lt;image&gt;")}}, содержащий URL, градиенты и другие типы изображений), как изменять их размер и как они, и другие замещённые элементы, взаимодействуют с другими моделями макетов.</p>
+
+<h2 id="Справка">Справка</h2>
+
+<h3 id="Свойства">Свойства</h3>
+
+<div class="index">
+<ul>
+ <li>{{cssxref("image-orientation")}}</li>
+ <li>{{cssxref("image-rendering")}}</li>
+ <li>{{cssxref("object-fit")}}</li>
+ <li>{{cssxref("object-position")}}</li>
+</ul>
+</div>
+
+<h3 id="Функции">Функции</h3>
+
+<div class="index">
+<ul>
+ <li>{{cssxref("linear-gradient", "linear-gradient()")}}</li>
+ <li>{{cssxref("radial-gradient", "radial-gradient()")}}</li>
+ <li>{{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}</li>
+ <li>{{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}</li>
+ <li>{{cssxref("element", "element()")}}</li>
+</ul>
+</div>
+
+<h3 id="Типы_данных">Типы данных</h3>
+
+<div class="index">
+<ul>
+ <li>{{cssxref("&lt;image&gt;")}}</li>
+ <li>{{cssxref("&lt;uri&gt;")}}</li>
+</ul>
+</div>
+
+<h2 id="Руководства">Руководства</h2>
+
+<dl>
+ <dt><a href="/ru/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Использование CSS градиентов</a></dt>
+ <dd>Представляют собой особый тип CSS изображений, <em>градиенты</em>, как создавать и использовать их.</dd>
+ <dt><a href="/ru/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS">Создание спрайтов в CSS</a></dt>
+ <dd>Описывает общую технику группировки нескольких изображений в один документ, чтобы сократить количество запросов и скорость загрузки страницы.</dd>
+</dl>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Images')}}</td>
+   <td>{{Spec2('CSS4 Images')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Images')}}</td>
+   <td>{{Spec2('CSS3 Images')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Compat', '#css-%3Cimage%3E-type', 'CSS Gradients')}}</td>
+   <td>{{Spec2('Compat')}}</td>
+   <td>Стандартизирует префиксную форму <code>-webkit</code> значений функции</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Values', '#urls', '&lt;url&gt;')}}</td>
+   <td>{{Spec2('CSS3 Values')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{Specname('CSS2.1', 'syndata.html#uri', '&lt;uri&gt;')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#url', '&lt;url&gt;')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoMobile("1")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

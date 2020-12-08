@@ -1,0 +1,140 @@
+---
+title: break
+slug: Web/JavaScript/Reference/Statements/break
+tags:
+  - JavaScript
+  - Statement
+translation_of: Web/JavaScript/Reference/Statements/break
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<p><strong>Оператор break</strong> прерывает выполнение текущего цикла, переключателя {{jsxref("Statements/switch", "switch")}}, или метки ({{jsxref("Statements/label", "label")}}) блочного выражения и переносит выполнение программы к оператору, следующему за прерванным.</p>
+
+<p> </p>
+
+<p>{{EmbedInteractiveExample("pages/js/statement-break.html")}}</p>
+
+<div class="hidden">
+<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><code>break [<em>label</em>];</code></pre>
+
+<dl>
+ <dt><code>label</code></dt>
+ <dd>Опционально. Идентификатор связанной метки. Если прерываемое выражение не цикл или {{jsxref("Statements/switch", "switch")}}, метка является обязательной.</dd>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Инструкция <code>break</code> включает необязательную метку для возможности выхода из блочного выражения. При таком использовании <code>break</code> должен находиться внутри отмеченного блока, который соответствует метке. Отмеченная инструкция может быть любой {{jsxref("Statements/block", "блочной")}} инструкцией; она не обязательно должна являться циклом.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Следующая функция использует инструкцию <code>break</code> для выхода из цикла {{jsxref("Statements/while", "while")}}, когда <code>i</code> станет равно 3, и возвращает значение 3 * <code>x</code>.</p>
+
+<pre class="brush:js;highlight:[6];">function testBreak(x) {
+   var i = 0;
+
+   while (i &lt; 6) {
+      if (i == 3) {
+         break;
+      }
+      i += 1;
+   }
+   return i * x;
+}</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1-е Издание.</td>
+   <td>Стандарт</td>
+   <td>Изначальное определение. Версия без метки.</td>
+  </tr>
+  <tr>
+   <td>ECMAScript 3-е Издание.</td>
+   <td>Стандарт</td>
+   <td>Добавлена поддержка метки.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-break-statement', 'Break statement')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Statements/continue", "continue")}}</li>
+ <li>{{jsxref("Statements/label", "label")}}</li>
+ <li>{{jsxref("Statements/switch", "switch")}}</li>
+</ul>

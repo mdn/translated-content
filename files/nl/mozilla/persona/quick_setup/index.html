@@ -1,0 +1,199 @@
+---
+title: Quick Setup
+slug: Mozilla/Persona/Quick_Setup
+translation_of: Archive/Mozilla/Persona/Quick_Setup
+---
+<p>Adding the Persona login system to your site takes just five steps:</p>
+<ol>
+ <li>Include the Persona JavaScript library on your pages.</li>
+ <li>Add “login” and “logout” buttons.</li>
+ <li>Watch for login and logout actions.</li>
+ <li>Verify the user’s credentials.</li>
+ <li>Review best practices.</li>
+</ol>
+<p>You should be able to get up and running in a single afternoon, but first things first: If you’re going to use Persona on your site, <em>please</em> take a moment and subscribe to the <a href="https://mail.mozilla.org/listinfo/persona-notices">Persona notices</a> mailing list. It’s extremely low traffic, only being used to announce changes or security issues which may adversely impact your site.</p>
+<h2 id="Step_1_Include_the_Persona_library">Step 1: Include the Persona library</h2>
+<p>Persona is designed to be browser-neutral and works well on <a href="https://developer.mozilla.org/docs/persona/Browser_compatibility">all major desktop and mobile browsers</a>.</p>
+<p>In the future we expect browsers to provide native support for Persona, but in the meantime we provide a JavaScript library that fully implements the user interface and client-side part of the protocol. By including this library, your users will be able to sign in with Persona whether or not their browser has native support.</p>
+<p>Once this library is loaded in your page, the Persona functions you need ({{ domxref("navigator.id.watch()", "watch()") }}, {{ domxref("navigator.id.request()", "request()") }}, and {{ domxref("navigator.id.logout()", "logout()") }}) will be available in the global <code>navigator.id</code> object.</p>
+<p>To include the Persona JavaScript library, you can place this <code>script</code> tag at the bottom of the page body:</p>
+<pre class="brush: html;">&lt;script src="https://login.persona.org/include.js"&gt;&lt;/script&gt;
+</pre>
+<p>You <strong>must</strong> include this on every page which uses {{ domxref("navigator.id") }} functions. Because Persona is still in development, you should not self-host the <code>include.js</code> file.</p>
+<h3 id="Suppressing_Compatibility_Mode">Suppressing Compatibility Mode</h3>
+<p>You should also make sure users of Internet Explorer can't use Compatibility Mode, as this will break Persona. To do this:</p>
+<ul>
+ <li>either include <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;</code> on your page, before any script elements</li>
+ <li>or set the following HTTP header on your page: <code>X-UA-Compatible: IE=Edge</code>.</li>
+</ul>
+<p>For more information, see the notes in <a href="/en-US/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22" title="/en-US/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22">IE Compatibility Mode</a> and <a href="http://hsivonen.iki.fi/doctype/index.html#ie8" title="http://hsivonen.iki.fi/doctype/index.html#ie8">"IE8 and IE9 Complications"</a>.</p>
+<h2 id="Step_2_Add_login_and_logout_buttons">Step 2: Add login and logout buttons</h2>
+<p>Because Persona is designed as a DOM API, you must call functions when a user clicks a login or logout button on your site. To open the Persona dialog and prompt the user to log in, you should invoke {{ domxref("navigator.id.request()") }}. For logout, invoke {{ domxref("navigator.id.logout()") }}. Note, the call to {{ domxref("navigator.id.logout()", "logout()") }} <em>must</em> be made in the click handler of the logout button.</p>
+<p>For example:</p>
+<pre class="brush: js;">var signinLink = document.getElementById('signin');
+if (signinLink) {
+  signinLink.onclick = function() { navigator.id.request(); };
+}
+
+var signoutLink = document.getElementById('signout');
+if (signoutLink) {
+  signoutLink.onclick = function() { navigator.id.logout(); };
+}
+</pre>
+<p>What should those buttons look like? Check out our <a href="https://developer.mozilla.org/docs/persona/branding">Branding Resources</a> page for premade images and CSS-based buttons!</p>
+<h2 id="Step_3_Watch_for_login_and_logout_actions">Step 3: Watch for login and logout actions</h2>
+<p>For Persona to function, you need to tell it what to do when a user logs in or out. This is done by calling the {{ domxref("navigator.id.watch()") }} function and supplying three parameters:</p>
+<ol>
+ <li>
+  <p>The email address of the user currently logged into your site from this computer, or <code>null</code> if no one is logged in. For example, you might examine the browser's cookies to determine who is signed in.</p>
+ </li>
+ <li>
+  <p>A function to invoke when an <code>onlogin</code> action is triggered. This function is passed a single parameter, an “identity assertion,” which must be verified.</p>
+ </li>
+ <li>
+  <p>A function to invoke when an <code>onlogout</code> action is triggered. This function is not passed any parameters.</p>
+ </li>
+</ol>
+<div class="note style-wrap">
+ <p><strong>Note:</strong> You must always include both <code>onlogin</code> and <code>onlogout</code> when you call {{ domxref("navigator.id.watch()") }}.</p>
+</div>
+<p>For example, if you currently think Bob is logged into your site, you might do this:</p>
+<pre class="brush: js;">var currentUser = 'bob@example.com';
+
+navigator.id.watch({
+  loggedInUser: currentUser,
+  onlogin: function(assertion) {
+    // A user has logged in! Here you need to:
+    // 1. Send the assertion to your backend for verification and to create a session.
+    // 2. Update your UI.
+    $.ajax({ /* &lt;-- This example uses jQuery, but you can use whatever you'd like */
+      type: 'POST',
+      url: '/auth/login', // This is a URL on your website.
+      data: {assertion: assertion},
+      success: function(res, status, xhr) { window.location.reload(); },
+      error: function(xhr, status, err) {
+        navigator.id.logout();
+        alert("Login failure: " + err);
+      }
+    });
+  },
+  onlogout: function() {
+    // A user has logged out! Here you need to:
+    // Tear down the user's session by redirecting the user or making a call to your backend.
+    // Also, make sure loggedInUser will get set to null on the next page load.
+    // (That's a literal JavaScript null. Not false, 0, or undefined. null.)
+    $.ajax({
+      type: 'POST',
+      url: '/auth/logout', // This is a URL on your website.
+      success: function(res, status, xhr) { window.location.reload(); },
+      error: function(xhr, status, err) { alert("Logout failure: " + err); }
+    });
+  }
+});
+</pre>
+<p>In this example, both <code>onlogin</code> and <code>onlogout</code> are implemented by making an asynchronous <code>POST</code> request to your site’s backend. The backend then logs the user in or out, usually by setting or deleting information in a session cookie. Then, if everything checks out, the page reloads to take into account the new login state.</p>
+<p>Note that if the identity assertion can't be verified, you should call {{ domxref("navigator.id.logout()") }}: this has the effect of telling Persona that none is currently logged in. If you don't do this, then Persona may immediately call onlogin again with the same assertion, and this can lead to an <a href="/en-US/docs/Persona/The_implementor_s_guide/Call_logout()_after_a_failed_login" title="/en-US/docs/Persona/The_implementor_s_guide/Call_logout()_after_a_failed_login">endless loop of failed logins</a>.</p>
+<p>You can, of course, use AJAX to implement this without reloading or redirecting, but that’s beyond the scope of this tutorial.</p>
+<p>Here is another example, this time not using jQuery.</p>
+<pre class="brush: js;">function simpleXhrSentinel(xhr) {
+    return function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200){
+                // reload page to reflect new login state
+                window.location.reload();
+              }
+            else {
+                navigator.id.logout();
+                alert("XMLHttpRequest error: " + xhr.status);
+              }
+            }
+          }
+        }
+
+function verifyAssertion(assertion) {
+    // Your backend must return HTTP status code 200 to indicate successful
+    // verification of user's email address and it must arrange for the binding
+    // of currentUser to said address when the page is reloaded
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/xhr/sign-in", true);
+    // see http://www.openjs.com/articles/ajax_xmlhttp_using_post.php
+    var param = "assertion="+assertion;
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("Content-length", param.length);
+    xhr.setRequestHeader("Connection", "close");
+    xhr.send(param); // for verification by your backend
+
+    xhr.onreadystatechange = simpleXhrSentinel(xhr); }
+
+function signoutUser() {
+    // Your backend must return HTTP status code 200 to indicate successful
+    // sign out (usually the resetting of one or more session variables) and
+    // it must arrange for the binding of currentUser to 'null' when the page
+    // is reloaded
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/xhr/sign-out", true);
+    xhr.send(null);
+    xhr.onreadystatechange = simpleXhrSentinel(xhr); }
+
+// Go!
+navigator.id.watch( {
+    loggedInUser: currentUser,
+         onlogin: verifyAssertion,
+        onlogout: signoutUser } );
+</pre>
+<p>You <strong>must</strong> call <code>navigator.id.watch()</code> on every page with a login or logout button. To support Persona enhancements like automatic login and global logout for your users, you <strong>should</strong> call this function on every page of your site.</p>
+<p>Persona will compare the email address you've passed into <code>loggedInUser</code> with its own knowledge of whether a user is currently logged in, and who they are. If these don't match, it may automatically invoke <code>onlogin</code> or <code>onlogout</code> on page load.</p>
+<p> </p>
+<h2 id="Step_4_Verify_the_user’s_credentials">Step 4: Verify the user’s credentials</h2>
+<p>Instead of passwords, Persona uses “identity assertions,” which are kind of like single-use, single-site passwords combined with the user’s email address. When a user wants to log in, your <code>onlogin</code> callback will be invoked with an assertion from that user. Before you can log them in, you must verify that the assertion is valid.</p>
+<p>It’s <em>extremely important</em> that you verify the assertion on your server, and not in JavaScript running on the user’s browser, since that would be easy to forge. The example above handed off the assertion to the site’s backend by using jQuery’s <code>$.ajax()</code> helper to <code>POST</code> it to <code>/auth/login</code>.</p>
+<p>Once your server has an assertion, how do you verify it? The easiest way is to use a helper service provided by Mozilla. Simply <code>POST</code> the assertion to <code>https://verifier.login.persona.org/verify</code> with two parameters:</p>
+<ol>
+ <li><code>assertion</code>: The identity assertion provided by the user.</li>
+ <li><code>audience</code>: The hostname and port of your website. You must hardcode this value in your backend; do not derive it from any data supplied by the user.</li>
+</ol>
+<p>For example, if you’re <code>example.com</code>, you can use the command line to test an assertion with:</p>
+<pre class="brush: bash;">$ curl -d "assertion=&lt;ASSERTION&gt;&amp;audience=https://example.com:443" "https://verifier.login.persona.org/verify"
+</pre>
+<p>If it’s valid, you’ll get a JSON response like this:</p>
+<pre class="brush: js;">{
+  "status": "okay",
+  "email": "bob@eyedee.me",
+  "audience": "https://example.com:443",
+  "expires": 1308859352261,
+  "issuer": "eyedee.me"
+}
+</pre>
+<p>You can learn more about the verification service by reading <a href="https://developer.mozilla.org/en-US/docs/BrowserID/Remote_Verification_API">The Verification Service API</a>. An example <code>/auth/login</code> implementation, using <a href="http://python.org/">Python</a>, the <a href="http://flask.pocoo.org/">Flask</a> web framework, and the <a href="http://python-requests.org">Requests</a> HTTP library might look like this:</p>
+<pre class="brush: python;">@app.route('/auth/login', methods=['POST'])
+def login():
+    # The request has to have an assertion for us to verify
+    if 'assertion' not in request.form:
+        abort(400)
+
+    # Send the assertion to Mozilla's verifier service.
+    data = {'assertion': request.form['assertion'], 'audience': 'https://example.com:443'}
+    resp = requests.post('https://verifier.login.persona.org/verify', data=data, verify=True)
+
+    # Did the verifier respond?
+    if resp.ok:
+        # Parse the response
+        verification_data = json.loads(resp.content)
+
+        # Check if the assertion was valid
+        if verification_data['status'] == 'okay':
+            # Log the user in by setting a secure session cookie
+            session.update({'email': verification_data['email']})
+            return 'You are logged in'
+
+    # Oops, something failed. Abort.
+    abort(500)
+</pre>
+<p>For examples of how to use Persona in other languages, have a look at the <a href="https://github.com/mozilla/browserid-cookbook" title="https://github.com/mozilla/browserid-cookbook">cookbook</a>.</p>
+<p>The session management is probably very similar to your existing login system. The first big change is in verifying the user’s identity by checking an assertion instead of checking a password. The other big change is ensuring that the user’s email address is available for use as the <code>loggedInUser</code> parameter to {{ domxref("navigator.id.watch()") }}.</p>
+<p>Logout is simple: you just need to remove the user’s session cookie.</p>
+<h2 id="Step_5_Review_best_practices">Step 5: Review best practices</h2>
+<p>Once everything works and you’ve successfully logged into and out of your site, you should take a moment to review <a href="https://developer.mozilla.org/docs/BrowserID/Security_Considerations">best practices</a> for using Persona safely and securely.</p>
+<p>If you're making a production site, have a look at the <a href="/en-US/docs/Persona/The_implementor_s_guide" title="/en-US/docs/Persona/The_implementor_s_guide">implementor's guide</a>, where we've collected tips for adding the kind of features often needed in real-world login systems.</p>
+<p>Lastly, don’t forget to sign up for the <a href="https://mail.mozilla.org/listinfo/persona-notices">Persona notices</a> mailing list so you’re notified of any security issues or backwards incompatible changes to the Persona API. The list is extremely low traffic: it’s only used to announce changes which may adversely impact your site.</p>
+<p> </p>

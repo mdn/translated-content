@@ -1,0 +1,163 @@
+---
+title: Proste paski menu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Proste_paski_menu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Paski_narzędzi" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_menu">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule zobaczymy, jak utworzyć prosty pasek menu.</p>
+
+<h3 id="Tworzenie_menu" name="Tworzenie_menu">Tworzenie menu</h3>
+
+<p>W XUL menu można stworzyć na różne sposoby. Najprostszym z nich jest dodanie paska menu wraz z wierszem menu na pasku, w taki sam sposób, jak mają inne programy. Możemy także utworzyć menu wyskakujące. Możliwości wykorzystania menu są zależne od liczby różnych elementów, pozwalających Ci utworzyć prosty pasek menu lub menu wyskakujące. Pozycje w menu możemy dostosować bardzo prosto. Widzieliśmy je w części kursu, pokazującego, <a href="pl/Kurs_XUL/Kontrolki_list#Listy_rozwijane">jak dodać listy rozwijane</a> stosując element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>. W artykule tym opierać będziemy się na zdobytej do tej pory wiedzy.</p>
+
+<p>Paski menu są często tworzone podobnie jak <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code>. Pasek menu może być umieszczony wewnątrz <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> i po jego lewej stronie pojawi się strzałka, która pozwoli na jego rozwinięcie lub zwinięcie. Takie menu będzie działało, tak jak każdy inny pasek narzędzi. XUL posiada kilka specjalnych elementów menu, które dostarczają typowej funkcjonalności menu.</p>
+
+<p>Poniżej znajduje się pięć elementów połączonych z paskiem menu i jego menu, które są wykorzystane poniżej, a w dalszej kursu części omówione są ich szczegóły:</p>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code> </dt>
+ <dd>Pojemnik na wiersze menu.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> </dt>
+ <dd>Wbrew nazwie jest to tylko tytuł menu na pasku menu. Ten element możemy umieścić na pasku menu lub możemy go umieścić osobno.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> </dt>
+ <dd>Wyskakujące menu, które pojawia się po naciśnięciu elementu<em>menu</em>. Zawiera w sobie listę z poleceniami menu.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> </dt>
+ <dd>Pojedyncze polecenie menu. Powinno być umieszczone w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code> </dt>
+ <dd>Pozioma linia oddzielająca elementy paska menu. Powinna być umieszczona w <code>menupopup</code>.</dd>
+</dl>
+
+<div class="note">
+<p>Menu można dostosować do swoich potrzeb, umieszczając w nich dowolne elementy. Odnosi się to do wszystkich platform, oprócz Macintosh, który posiada swoje własne specjalne menu na górze ekranu kontrolowane przez system. Podczas tworzenia własnego menu miej na uwadze, że specjalne reguły stylów lub elementów niebędących elementami menu, które są umieszczone w menu, mogą nie zostać zaimplementowane.</p>
+</div>
+
+<h5 id="Przyk.C5.82ad_prostego_paska_menu" name="Przyk.C5.82ad_prostego_paska_menu">Przykład prostego paska menu</h5>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul">Podgląd</a></p>
+
+<div class="float-right"><img alt="grafika:menubar-ex1.png"></div>
+
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="Plik"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="Nowy"/&gt;
+        &lt;menuitem label="Otwórz"/&gt;
+        &lt;menuitem label="Zapisz"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Zakończ"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edycja"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Cofnij"/&gt;
+        &lt;menuitem label="Przywróć"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p><br>
+ Jak widzimy, został tu stworzony prosty pasek menu z elementem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>. Znajdują się w nim dwa elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> (<code>Plik</code> i <code>Edycja</code>), ułożone poziomo. Tworzą one dwa tytuły, po naciśnięciu, których pojawi się odpowiednie menu wyskakujące <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>. Ich rozmiary dostosowują się tak, aby zmieściły się zawarte w nich polecenia. Polecenia te są z kolei tworzone poprzez <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>.</p>
+
+<p>W celu oddzielenia grup kilku pozycji w menu stosujemy element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code>, będący separatorem.</p>
+
+<h4 id="Element_menubar" name="Element_menubar">Element <code>menubar</code></h4>
+
+<p><code><code><a href="/pl/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> jest polem zawierającym menu. Zwróć uwagę, że został on umieszczony wewnątrz <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>. Pasek menu nie posiada specjalnych atrybutów, ale jest on typu pudełkowego. Znaczy to, że powinniśmy utworzyć pionowy pasek menu ustawiając atrybut <code><code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code></code> na wartość <code>vertical</code>.</p>
+
+<div class="float-right"><img alt="grafika:menubar-ex2.png"></div>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> zazwyczaj jest umieszczany w pasku menu, ale niekoniecznie musi tak być. Jednak jego wygląd będzie się wtedy jeszcze różnił. Obrazek ukazujący aktualny przykład sprawia wrażenie, jakby nie był w pełni paskiem menu (jest jeszcze wczesne stadium projektowania tegoż paska).</p>
+
+<h4 id="Element_menu" name="Element_menu">Element <code>menu</code></h4>
+
+<p>Elementy <code>menu</code> zachowują się podobnie, jak elementy przycisków <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>. Część atrybutów jest taka sama, a oprócz tego istnieje kilka dodatkowych:</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code> </dt>
+ <dd>Unikatowy identyfikator.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code> </dt>
+ <dd>Etykieta, która powinna pojawić się jako napis na menu, np. <code>Plik</code> lub <code>Edytuj</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code> </dt>
+ <dd>Atrybut typu logicznego (boolean), określający element menu jako wyłączony, gdy posiada przypisany <code>true</code>. Może przyjmować wartości typu boolean - <code>true</code> i domyślnie ustawioną <code>false</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/accesskey">accesskey</a></code> </dt>
+ <dd>Jest to klawisz, który użytkownik może nacisnąć, aby aktywować pozycję menu. Litera, która zazwyczaj pokazuje znak podkreślenia w tytule menu. Menu w Mozilli wygląda jak atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> i następnie dodajemy podkreślenie znaku do używanego w etykiecie znaku. Z tego powodu powinno się używać określanego i istniejącego znaku w jakiejś treści.</dd>
+</dl>
+
+<h4 id="Element_menupopup" name="Element_menupopup">Element <code>menupopup</code></h4>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> tworzy wyskakujące menu zawierające komendy. Jest ono typu pudełkowego, domyślnie ustawione pionowo. Można zmienić je na poziome, wtedy <code>menuitem</code> będą wyświetlone w rzędzie. Zazwyczaj <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> zawiera elementy typu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code>, ale możesz także wstawić elementy jakiegoś typu (nie będą one jednak wtedy wyświetlane pod Macintoshem).</p>
+
+<h4 id="Element_menuitem" name="Element_menuitem">Element <code>menuitem</code></h4>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> jest podobny do elementu <code>menu</code> i część jego atrybutów jest identyczna:</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code> </dt>
+ <dd>Unikatowy identyfikator.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code> </dt>
+ <dd>Etykieta, która powinna pojawić się na menu jako napis, np. <code>Otwórz</code> lub <code>Zapisz</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code> </dt>
+ <dd>Atrybut typu logicznego (boolean), określający element menu jako wyłączony, gdy posiada przypisany <code>true</code>. Może przyjmować wartości typu boolean - <code>true</code> i domyślną <code>false</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/accesskey">accesskey</a></code> </dt>
+ <dd>Jest to klawisz, który użytkownik może nacisnąć, aby aktywować pozycję menu. Litera, która zazwyczaj pokazuje znak podkreślenia w tytule menu. Menu w Mozilli wygląda jak atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> i następnie dodajemy podkreślenie znaku do używanego w etykiecie znaku. Z tego powodu powinno się używać określanego i istniejącego znaku w jakiejś treści.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-acceltext"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/acceltext">acceltext</a></code> </dt>
+ <dd>Określa klawisz skrótu, który widoczny jest obok tekstu komendy menu. Nic nie łączy tych skrótów ze skrótami w <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>. Zobacz artykuł <a href="pl/Kurs_XUL/Skr%c3%b3ty_klawiaturowe">o skrótach klawiaturowych</a>.</dd>
+</dl>
+
+<h4 id="Element_menuseparator" name="Element_menuseparator">Element <code>menuseparator</code></h4>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code> nie posiada specjalnych atrybutów. Tworzy po prostu poziomą linię pomiędzy poprzednim, a następnym elementem.</p>
+
+<p>W następnym artykule poznamy <a href="pl/Kurs_XUL/Dodatkowe_mo%c5%bcliwo%c5%9bci_menu">dodatkowe możliwości menu</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Paski_narzędzi" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_menu">Następny  »</a></p>
+</div><p></p>
+
+<div class="noinclude"> </div>
+
+<p></p>

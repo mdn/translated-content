@@ -1,0 +1,126 @@
+---
+title: animation-delay
+slug: Web/CSS/animation-delay
+tags:
+  - CSS
+  - CSS анимации
+  - CSS свойства
+translation_of: Web/CSS/animation-delay
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p><a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <strong><code>animation-delay</code></strong> определяет время задежки перед стартом анимации.</p>
+
+<p>{{EmbedInteractiveExample("pages/css/animation-delay.html")}}</p>
+
+<p>Значение 0s, которое является значением по умолчанию, указывает на то, что анимация должна начаться непременно. В противном случае, старт анимации будет отложен на указанное время.</p>
+
+<p>При указании отрицательного значения, анимация также начнется непременно, но ее воспроизведение начнется не с первого ключевого кадра, а так, будто часть анимации уже была показана. Например, если вы укажете значение -1s, анимация будет начата с ключевого кадра, когда 1 секунда анимации уже была воспроизведена.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: css">animation-delay: 3s;
+animation-delay: 2s, 4ms;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>&lt;time&gt;</code></dt>
+ <dd>Время задержки перед стартом анимации. Может быть определено в секундах (s), либо в милисекундах (ms). Если вы не укажите единицу измерения, свойство будет недействительным.</dd>
+</dl>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Посмотрите <a href="/en-US/docs/CSS/CSS_animations" title="CSS/CSS_animations">CSS анимации</a> для примера.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#animation-delay', 'animation-delay')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
+    {{CompatChrome(43.0)}}</td>
+   <td>{{CompatGeckoDesktop("5.0")}}{{property_prefix("-moz")}}<br>
+    {{CompatGeckoDesktop("16.0")}}</td>
+   <td>10</td>
+   <td>12{{property_prefix("-o")}}<br>
+    12.10</td>
+   <td>4.0{{property_prefix("-webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}</td>
+   <td>{{CompatGeckoMobile("5.0")}}{{property_prefix("-moz")}}<br>
+    {{CompatGeckoMobile("16.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>12{{property_prefix("-o")}}</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS анимаций</a></li>
+ <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
+</ul>

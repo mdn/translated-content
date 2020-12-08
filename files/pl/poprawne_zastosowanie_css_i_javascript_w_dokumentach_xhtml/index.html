@@ -1,0 +1,137 @@
+---
+title: Poprawne zastosowanie CSS i JavaScript w dokumentach XHTML
+slug: Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML
+tags:
+  - CSS
+  - JavaScript
+  - Programowanie_WWW
+  - Wszystkie_kategorie
+  - XHTML
+translation_of: Archive/Web/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents_
+---
+<p>
+</p><p><a class="external" href="http://www.w3.org/TR/xhtml1">XHTML™ 1.0 The Extensible HyperText Markup Language (Edycja Druga)</a> definiuje XHTML jako przeformułowanie standardu HTML 4 jako aplikacji XML 1.0.
+</p><p>XHTML szybko zastępuje HTML 4 w wielu przypadkach; jednakże, brak poprawnego wsparcia XHTML, połączone z brakiem zrozumienia podstawowych różnic pomiędzy HTML 4 i XHTML przez twórców stron internetowych, tworzy dziś coraz większy problem w Sieci.
+</p>
+<h3 id="XHTML_to_XML.2C_nie_HTML" name="XHTML_to_XML.2C_nie_HTML"> XHTML to XML, nie HTML </h3>
+<p>Jednym z głównych błędów jest uznanie języka XHTML kolejną wersją HTML-a. Na dodatek, błąd ten wyolbrzymiany jest przez fakt, iż Microsoft® Internet Explorer wspiera obsługę XHTML, ale tylko, jeśli dokument ma typ MIME &lt;tt&gt;text/html&lt;/tt&gt;, natomiast nie potrafi obsłużyć rekomendowanego typu &lt;tt&gt;application/xhtml+xml&lt;/tt&gt;.
+</p><p>Kiedy strona XHTML posiada typ MIME &lt;tt&gt;text/html&lt;/tt&gt;, uznawana jest przez wszystkie przeglądarki jakby była niczym więcej niż stroną HTML. Jednakże, jeśli strona XHTML posiada MIME &lt;tt&gt;text/xml&lt;/tt&gt; lub &lt;tt&gt;application/xhtml+xml&lt;/tt&gt;, musi ona być traktowana jako dokument XML który musi być zgodny ze ścisłymi standardami tworzenia i wyświetlania XML-a.
+</p><p>Poprawny dokument XHTML jest aplikacją XML i jako taki wymusza od autora do bycia zgodnym ze ścisłymi zasadami tworzenia XHTML-a, między innymi:
+</p>
+<ol><li> Surowe znaki &lt;tt&gt;&lt;&lt;/tt&gt; i &lt;tt&gt;&amp;&lt;/tt&gt; nie są dozwolone chyba, że są wewnątrz sekcji CDATA (&lt;tt&gt;<span class="nowiki">&lt;!CDATA[[ ... ]]&gt;</span>&lt;/tt&gt;).
+</li><li> Komentarze (&lt;tt&gt;&lt;!—— ... ——&gt;&lt;/tt&gt;) nie mogą zawierać podwójnych myślników (&lt;tt&gt;——&lt;/tt&gt;).
+</li><li> Zawartość wewnątrz komentarzy (&lt;tt&gt;&lt;!—— ... ——&gt;&lt;/tt&gt;) może być zignorowana.
+</li></ol>
+<h3 id="Problemy_z_tagami_style_i_script" name="Problemy_z_tagami_style_i_script"> Problemy z tagami &lt;tt&gt;style&lt;/tt&gt; i &lt;tt&gt;script&lt;/tt&gt; </h3>
+<p>Wewnętrzne tagi &lt;tt&gt;style&lt;/tt&gt; i &lt;tt&gt;script&lt;/tt&gt; mogą spowodować kilka różnych problemów w XHTML-u, jeśli jest on traktowany jako XML a nie HTML.
+</p>
+<h4 id="JavaScript_zawiera_znaki.2C_kt.C3.B3re_nie_mog.C4.85_istnie.C4.87_w_XHTML" name="JavaScript_zawiera_znaki.2C_kt.C3.B3re_nie_mog.C4.85_istnie.C4.87_w_XHTML"> JavaScript zawiera znaki, które nie mogą istnieć w XHTML </h4>
+<p>JavaScript zwykle zawiera znaki, które nie mogą istnieć w dokumencie XHTML poza sekcjami CDATA.
+</p>
+<pre class="eval">&lt;script type="text/javascript"&gt;
+  var i = 0;
+
+  while (++i &lt; 10)
+  {
+    // ...
+  }
+&lt;/script&gt;
+</pre>
+<p>Zauważ, iż ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Problem_1">przykład</a> jest <b>źle sformułowanym XHTML</b>, jako że zastosowanie surowego &lt; jest dozwolone tylko jako część znacznika XHTML lub XML.
+</p>
+<h4 id="Zastosowanie_komentarzy_wewn.C4.85trz_style_i_script" name="Zastosowanie_komentarzy_wewn.C4.85trz_style_i_script"> Zastosowanie komentarzy wewnątrz &lt;tt&gt;style&lt;/tt&gt; i &lt;tt&gt;script&lt;/tt&gt; </h4>
+<p>Autorzy zaznajomieni z HTML często zamykają zawartość tagów &lt;tt&gt;style&lt;/tt&gt;i &lt;tt&gt;script&lt;/tt&gt; w komentarzach po to, aby schować ich zawartość przed przeglądarkami, które ich nie rozumieją.
+</p>
+<pre class="eval">&lt;style type="text/css"&gt;
+ &lt;!--
+  body {background-color: blue; color: yellow;}
+ --&gt;
+&lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+ &lt;!--
+  var i = 0;
+  var sum = 0;
+
+  for (i = 0; i &lt; 10; ++i)
+  {
+    sum += i;
+  }
+  alert('sum = ' + sum);
+ // --&gt;
+&lt;/script&gt;
+</pre>
+<p>Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Problem_2">przykład</a> pokazuje, że przeglądarka wspierająca CSS i JavaScript może ignorować zawartość wewnątrz komentarzy. W dodatku, przykład ten pokazuje, jak różnice w obsłudze zawartości w &lt;tt&gt;text/xml&lt;/tt&gt; lub &lt;tt&gt;application/xhtml+xml&lt;/tt&gt; mogą powodować problemy.
+</p>
+<dl><dt> Mozilla 1.1+/Opera 7
+</dt><dd> Nie zastosuje CSS lub nie uruchomi JavaScript. </dd><dt> Netscape 7.0x/Mozilla 1.0.x
+</dt><dd> Nie zastosuje CSS, ale uruchomi JavaScript. </dd><dt> Internet Explorer 5.5+
+</dt><dd> Nie wyświetli dokumentu.
+</dd></dl>
+<h4 id="style_i_script_zawieraj.C4.85ce_podw.C3.B3jne_my.C5.9Blniki" name="style_i_script_zawieraj.C4.85ce_podw.C3.B3jne_my.C5.9Blniki"> &lt;tt&gt;style&lt;/tt&gt; i &lt;tt&gt;script&lt;/tt&gt; zawierające podwójne myślniki </h4>
+<p>Kolejny <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Problem_3">problem</a> z użyciem komentarzy dookoła JavaScriptu w XHTML związany jest z problemami, które mogą wystąpić, jeśli komentarze zawierają podwójne myślniki (&lt;tt&gt;——&lt;/tt&gt;).
+</p>
+<pre class="eval">&lt;script type="text/javascript"&gt;
+&lt;!--
+  var i;
+  var sum = 0;
+
+  for (i = 10; i &gt; 0; --i)
+  {
+    sum += i;
+  }
+// --&gt;
+&lt;/script&gt;
+</pre>
+<h4 id="Zastosowanie_CDATA_zamiast_komentarzy" name="Zastosowanie_CDATA_zamiast_komentarzy"> Zastosowanie CDATA zamiast komentarzy </h4>
+<p>Poprawne zamknięcie zawartości skryptu wewnątrz sekcji CDATA może powodować problemy w starszych przeglądarkach, które nie obsługują XML. Jednakże, jest możliwe połączenie komentarzy JavaScriptu z sekcjami CDATA w celu kompatybilności wstecznej.
+</p>
+<pre class="eval">&lt;script type="text/javascript"&gt;
+ //&lt;![CDATA[
+  var i = 0;
+
+  while  (++i &lt; 10)
+  {
+    // ...
+  }
+ //]]&gt;
+&lt;/script&gt;
+</pre>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<h4 id="Zastosowanie_CSS_w_wewn.C4.99trznym_style_w_komentarzach" name="Zastosowanie_CSS_w_wewn.C4.99trznym_style_w_komentarzach"> Zastosowanie CSS w wewnętrznym &lt;tt&gt;style&lt;/tt&gt; w komentarzach </h4>
+<dl><dt> <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_1">Przykład 1</a> - XHTML 1.0 Strict jako &lt;tt&gt;text/html&lt;/tt&gt;
+</dt><dd> Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_1">przykład</a> obrazuje zachowanie XHTML podanego jako &lt;tt&gt;text/html&lt;/tt&gt; kiedy CSS zawarty jest wewnątrz dokumentu i otoczony jest komentarzami. Przykład ten jest wspomagany przez Netscape 7.x, Mozillę, Operę 7 i Internet Explorera 5.5+, wszystkie podane przeglądarki zastosują CSS tak jak się tego spodziewano.
+</dd></dl>
+<dl><dt> <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_2">Przykład 2</a> - XHTML 1.0 Strict jako &lt;tt&gt;text/xml&lt;/tt&gt;
+</dt><dd> Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_2">przykład</a> obrazuje zachowanie XHTML podanego jako &lt;tt&gt;text/xml&lt;/tt&gt;, kiedy CSS zawarty jest wewnątrz dokumentu i otoczony jest komentarzami. Przykład ten jest wspomagany przez Netscape 7.x, Mozillę i Operę 7 ale <b>nie Internet Explorera 5.5+</b>. Zauważ iż, Netscape 7.x, Mozilla i Opera stwierdzają, że CSS wewnątrz komentarzy ma być ignorowany.
+</dd></dl>
+<dl><dt> <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_3">Przykład 3</a> - XHTML 1.0 Strict jako &lt;tt&gt;application/xhtml+xml&lt;/tt&gt;
+</dt><dd> Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_3">przykład</a> obrazuje zachowanie XHTML podanego jako &lt;tt&gt;application/xhtml+xml&lt;/tt&gt; kiedy CSS zawarty jest wewnątrz dokumentu i otoczony jest komentarzami. Przykład ten jest wspomagany przez Netscape 7.x, Mozillę i Operę 7 ale <b>nie Internet Explorera 5.5+</b>. Zauważ, iż Netscape 7.x, Mozilla i Opera stwierdzają że CSS wewnątrz komentarzy ma być ignorowany.
+</dd></dl>
+<h4 id="Zastosowanie_CSS_w_zewn.C4.99trznym_pliku" name="Zastosowanie_CSS_w_zewn.C4.99trznym_pliku"> Zastosowanie CSS w zewnętrznym pliku </h4>
+<dl><dt> <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_4">Przykład 4</a> - XHTML 1.0 Strict jako &lt;tt&gt;text/html&lt;/tt&gt;
+</dt><dd> Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_4">przykład</a> obrazuje zachowanie XHTML podanego jako &lt;tt&gt;text/html&lt;/tt&gt; kiedy CSS zawarty jest w zewnętrznym pliku. Przykład ten jest wspomagany przez Netscape 7.x, Mozillę, Operę 7 i Internet Explorera 5.5+.
+</dd></dl>
+<dl><dt> <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_5">Przykład 5</a> - XHTML 1.0 Strict jako &lt;tt&gt;text/xml&lt;/tt&gt;
+</dt><dd> Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_5">przykład</a> obrazuje zachowanie XHTML podanego jako &lt;tt&gt;text/xml&lt;/tt&gt;, kiedy CSS zawarty jest w zewnętrznym pliku. Przykład ten jest wspomagany przez Netscape 7.x, Mozillę i Operę 7, ale <b>nie Internet Explorera 5.5+</b>.
+</dd></dl>
+<dl><dt> <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_6">Przykład 6</a> - XHTML 1.0 Strict as &lt;tt&gt;application/xhtml+xml&lt;/tt&gt;
+</dt><dd> Ten <a href="pl/Poprawne_zastosowanie_CSS_i_JavaScript_w_dokumentach_XHTML/Przyk%c5%82ady#Przyk.C5.82ad_6">przykład</a> obrazuje zachowanie XHTML podanego jako &lt;tt&gt;application/xhtml+xml&lt;/tt&gt;, kiedy CSS zawarty jest w zewnętrznym pliku. Przykład ten jest wspomagany przez Netscape 7.x, Mozillę i Operę 7, ale <b>nie Internet Explorera 5.5+</b>.
+</dd></dl>
+<h3 id="Rekomendacje" name="Rekomendacje"> Rekomendacje </h3>
+<h4 id="Nie_u.C5.BCywa.C4.87_style_lub_script_wewn.C4.85trz_dokumentu_XHTML" name="Nie_u.C5.BCywa.C4.87_style_lub_script_wewn.C4.85trz_dokumentu_XHTML"> Nie używać &lt;tt&gt;style&lt;/tt&gt; lub &lt;tt&gt;script&lt;/tt&gt; wewnątrz dokumentu XHTML </h4>
+<p>Zastępowanie wewnętrznych &lt;tt&gt;style&lt;/tt&gt; i &lt;tt&gt;script&lt;/tt&gt; plikami zewnętrznymi zawierającymi CSS i JavaScript jest najlepszym sposobem tworzenia dokumentów XHTML w sposób wstecznie kompatybilny i nie zepsuje się, jeśli typ MIME dokumentu zostanie zmieniony z &lt;tt&gt;text/html&lt;/tt&gt; na &lt;tt&gt;application/xhtml+xml&lt;/tt&gt;.
+</p><p>Rekomendacja ta może wyglądać na zbyt zdecydowaną, jednakże jest ona stworzona z myślą zmniejszenia przyszłych problemów z zawartością XHTML kiedy zmiana z podawania XHTML jako &lt;tt&gt;text/html&lt;/tt&gt; na &lt;tt&gt;application/xhtml+xml&lt;/tt&gt; wydarzy się w przyszłych kilku latach.
+</p><p>Jeśli chcesz tylko sprawdzić Twój dokument XHTML jako &lt;tt&gt;text/html&lt;/tt&gt;, <i>możesz</i> wprowadzać problemy, takie jak opisane w tym artykule, bez uświadomiania tego sobie. Przenoszenie styli CSS i kodu JavaScript do oddzielnych plików jest <i>bezpiecznym</i> sposobem, z uwzględnieniem zmian w sposobie podania Twojego XHTML-a.
+</p>
+<h4 id="Pod.C4.85.C5.BCaj_za_Wskaz.C3.B3wkami_kompatybilno.C5.9Bci_XHTML_1.0_z_HTML" name="Pod.C4.85.C5.BCaj_za_Wskaz.C3.B3wkami_kompatybilno.C5.9Bci_XHTML_1.0_z_HTML"> Podążaj za Wskazówkami kompatybilności XHTML 1.0 z HTML </h4>
+<p>XHTML 1.0 <a class="external" href="http://www.w3.org/TR/xhtml1/#guidelines">Wskazówki kompatybilności</a> XHTML 1.0 z HTML pomagają tworzyć dokumenty XHTML wstecznie zgodne ze starszymi przeglądarkami nie rozumiejącymi XML.
+</p><p>Proszę zauważyć, iż dla "czystych" dokumentów XHTML, nie musisz używać instrukcji &lt;tt&gt;xml-stylesheet&lt;/tt&gt;, ale zamiast tego powinieneś użyć &lt;tt&gt;link&lt;/tt&gt;, aby wskazać zewnętrzne pliki zawierające CSS.
+</p>
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information"> Original Document Information </h3>
+<ul><li> Autor(zy): Bob Clary
+</li><li> Ostatnia data aktualizacji: 14 Marca 2003 (tłumaczenie: 13 sierpnia 2006)
+</li><li> Copyright © 2001-2003 Netscape.
+</li></ul>
+</div>
+{{ languages( { "en": "en/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents" } ) }}

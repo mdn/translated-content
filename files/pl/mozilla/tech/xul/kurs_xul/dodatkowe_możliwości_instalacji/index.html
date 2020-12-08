@@ -1,0 +1,58 @@
+---
+title: Dodatkowe możliwości instalacji
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodatkowe_możliwości_instalacji
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Additional_Install_Features
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Skrypty_instalacyjne" style="float: left;">« Poprzedni</a><br></p>
+</div><p></p>
+
+<p>W tym artykule poznamy dodatkowe możliwości instalacji.</p>
+
+<h2 id="Dodatkowe_mo.C5.BCliwo.C5.9Bci_instalacji" name="Dodatkowe_mo.C5.BCliwo.C5.9Bci_instalacji">Dodatkowe możliwości instalacji</h2>
+
+<p><a href="pl/Kurs_XUL/Skrypty_instalacyjne">Poprzedni artykuł</a> podstawowego instalatora. Jednak możliwe, że zajdzie potrzeba bardziej zaawansowanego przetwarzania danych podczas instalacji. Na przykład, możesz zechcieć instalować paczkę tylko, gdy jakieś warunki zostaną spełnione, np., gdy dana biblioteka jest zainstalowana.</p>
+
+<p>Dodatkowo w obiekcie instalacyjnym, plik obiektu jest dostępny podczas instalacji. To dostarcza funkcji mogących zostać użytymi do badania i modyfikowania plików na dysku. Możesz ich użyć do przemieszczenia, skopiowania, lub usunięcia plików, przed lub po instalacji. Na przykład mógłbyś wcześniej stworzyć kopie bezpieczeństwa plików.</p>
+
+<p>Następujący kod wykona kopię pliku "/bin/grep/" i umieści go w katalogu "/main".</p>
+
+<pre>var binFolder=getFolder("file:///","bin");
+var grep=getFolder(binFolder,"grep");
+
+var mainFolder=getFolder("file:///","main");
+
+File.copy(grep,mainFolder);
+</pre>
+
+<p>Pierwsza linia służy do pozyskania położenia katalogu "/bin. Tekst "file//" jest specjalnym ciągiem oznaczającym katalog główny systemu plików. Stamtąd uzyskujemy plik ‘grep’, który zawarty jest w katalogu ‘bin’. Jeżeli plik nie istnieje nastąpi błąd instalacji. Następnie, otrzymujemy katalog ‘main’, znowu z katalogu głównego systemu. W końcu wywołujemy funkcję File.copy, która kopiuje plik źródłowy do miejsca przeznaczenia.</p>
+
+<p><a class="external" href="http://www.xulplanet.com/references/elemref/ref_File.html">Funkcje</a> także przemieszczają, zmieniają nazwę i uruchamiają pliki. Tak można przemieścić plik gdyby kolidował z twoją paczka.</p>
+
+<h2 id="Obs.C5.82uga_b.C5.82.C4.99d.C3.B3w" name="Obs.C5.82uga_b.C5.82.C4.99d.C3.B3w">Obsługa błędów</h2>
+
+<p>Będziesz musiał sprawnie posługiwać się błędami. Zdarzy się ze plik lub katalog nie może zostać odnaleziony, lub brakuje miejsca na dysku, lub są jakiekolwiek inne problemy.</p>
+
+<p>Możesz stosować funkcję <code>getLastError()</code>, aby sprawdzić czy wystąpił błąd. Jeżeli zwróci SUCCESS, nie było błędów. W przeciwnym wypadku, pojawi się liczba z kodem błędu. Funkcji tej możesz użyć w dowolnym momencie, aby sprawdzić czy nie pojawia się błąd.</p>
+
+<p>Jeżeli nastąpi błąd, prawdopodobnie będziesz musiał przerwać instalację. Możesz także wyświetlić komunikat o błędzie. Na przykład mógłbyś umieścić następujący kod na końcu twojego skryptu instalacji.</p>
+
+<pre>if (getLastError() == SUCCESS){
+  performInstall();
+}
+else {
+  cancelInstall();
+}
+</pre>
+
+<p>Kody błędu, który mogłyby zostać zwrócone przez <code>getLastError()</code> umieszczone są w pliku źródłowym Mozilla: <code><a class="external" href="http://lxr.mozilla.org/mozilla/source/xpinstall/src/nsInstall.h">nsInstall.h</a></code>. Podczas instalacji, jest tworzony plik dziennika, który zawiera spis wykonanych operacji. Tam zostaną umieszczone błędy, które nastąpiły. Plik dziennika znajduje się w pliku ‘install.log’ w katalogu instalacyjnym Mozilli. Każda instalacja pozostawi po sobie w nim fragment teksu dokumentujący przebieg instalacji.</p>
+
+<p>Funkcja <code>logComment()</code> jest używana do umieszczania komentarzy instalacji w dzienniku, pobiera ona jeden argument.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Skrypty_instalacyjne" style="float: left;">« Poprzedni</a><br></p>
+</div><p></p>

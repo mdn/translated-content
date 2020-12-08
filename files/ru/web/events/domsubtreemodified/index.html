@@ -1,0 +1,21 @@
+---
+title: DOMSubtreeModified
+slug: Web/Events/DOMSubtreeModified
+tags:
+  - DOMSubtreeModified
+translation_of: Archive/Events/DOMSubtreeModified
+---
+<h2 id="Example" name="Example">Пример</h2>
+
+<p>Следующий код отображает время последнего изменения DOM в строке заголовка страницы.</p>
+
+<div class="warning">
+<p>Это событие устарело в пользу  <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observer API</a></p>
+</div>
+
+<div class="warning">Будьте очень осторожны с этим событием, легко вызвать бесконечный цикл, если вы решите изменить DOM внутри обработчика событий.</div>
+
+<pre class="brush: js">document.body.addEventListener('DOMSubtreeModified', function () {
+  document.title = 'DOM Изменен в ' + new Date();
+}, false);
+</pre>

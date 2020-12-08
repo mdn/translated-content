@@ -1,0 +1,87 @@
+---
+title: Instalando o Firefox OS em dispositivo móvel
+slug: Archive/B2G_OS/Instalando_FirefoxOS_dispositivo_movel
+tags:
+  - ADB
+  - Galaxy S2
+  - Hamachi
+  - Helix
+  - Leo
+  - fastboot
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<p>Uma vez que você compilou o Boot to Gecko para um <a href="/pt-BR/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites">dispositivo móvel suportado</a>, você pode instalá-lo. Esse artigo vai guiá-lo ao longo do processo.</p>
+<div class="note">
+ <strong>Nota:</strong> A primeira vez que você copia o Sistema Operacional para o telefone (flash), ele <strong>deve</strong> ter o Android 4 (Ice Cream Sandwich) instalado. O processo não funcionará corretamente em outro cenário. Uma vez que você já tenha instalado o B2G, basta atualizá-lo.</div>
+<h2 id="Instalando_ADB">Instalando ADB</h2>
+<p><strong>No OSX</strong></p>
+<p>Se você tem o homebrew no OSX:</p>
+<pre>brew install android-platform-tools</pre>
+<p>Caso contrário, baixe-o no <em>Android Developer Tools</em> e inclua os caminhos dos exectuáveis no seu PATH.</p>
+<p><strong>No Ubuntu</strong></p>
+<pre>sudo apt-get install android-tools-adb</pre>
+<h2 id="Copiando_o_sistema_para_seu_telefone">Copiando o sistema para seu telefone</h2>
+<p>Para copiar tudo para seu telefone, basta executar o script:</p>
+<pre>./flash.sh
+</pre>
+<p>Feito isso, o B2G que você acabou de compilar será copiado no seu dispositivo.</p>
+<p>Observe que se você estiver atualizando com alterações significantes do Gaia, você também precisará fazer:</p>
+<pre class="brush: bash  language-html"><code class="language-html">cd gaia
+make reset-gaia</code></pre>
+<p>Isso vai apagar todos os dados armazenados no Gaia, mas também apagará configurações e preferências do Gaia obsoletas e em teoria você vai reiniciar um Gaia "limpo". Em teoria porque <code>./flash.sh</code> também faz isso, mas em alguns dispositivos como hamachi <code>./flash.sh</code> fará o <em>flashing</em> de um subconjunto de módulos (<code>./flash.sh -f</code> forçará o <em>flashing</em> de tudo).</p>
+<h3 id="Configurando_a_regra_do_udev_para_seu_dispositivo">Configurando a regra do <code>udev</code> para seu dispositivo</h3>
+<p>No Linux, se você receber a mensagem:</p>
+<pre>&lt; waiting for device &gt;</pre>
+<p>isso provavelmente significa que você não incluiu a regra do udev para o dispositivo fastboot, que não é o mesmo que o do adb (embora isso também pode significar que você deve executar <code>./flash.sh</code> com o <code>sudo</code>). Você pode conseguir o ID USB do fabricante executando <code>lsusb</code> agora, mas para o Google, por exemplo, o código é: 18d1, dessa forma, adicionando essa linha no arquivo <code>/etc/udev/rules.d/51-android.rules</code> deve funcionar:</p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+<div class="note">
+ <strong>Nota:</strong> Se você receber a "esclarecedora" mensagem <code>libusb error "-3"</code> no Linux, isso significa que você precisa acesso de root para ter o acesso necessário ao dispositivo USB. Execute o script novamente usando <code>sudo</code>.</div>
+<div class="note">
+ <strong>Nota 2</strong>: Se você tem um telefone Unagi ou Geeksphone Keon, você vai precisar de duas linhas como essa, uma para o ID do fabricante original e outra linha para o ID do Google.</div>
+<h3 id="Observações_especiais_para_dispositivos_Hamachi_Helix_e_Leo">Observações especiais para dispositivos Hamachi, Helix, e Leo</h3>
+<p>Se seu telefone é um hamachi, helix ou leo, o script <code>./flash.sh</code> por padrão somente copiará o Gecko e o Gaia. É recomendado que você copie (flash) com o OEM como uma compliação de base para obter o firmware e as camadas Gonk e depois copiar o Gecko e o Gaia no topo. Se você quiser fazer o flash usando as imgens,  existe um flash de substituição que você pode fazer executando <code>./flash.sh -f</code> e usar os arquivos de imagens na cópia para seu dispositivo.</p>
+<h3 id="Observações_especiais_para_Samsung_Galaxy_S2">Observações especiais para Samsung Galaxy S2</h3>
+<p>Se o seu telefone é o Galaxy S2 e você usa heimdall 1.3.2 (a última versão, use <code>heimdall version</code> para verificar), você pode ver um erro como: "<code>FACTORYFS upload failed!</code>" seguido por "<code>Heimdall flashing failed</code>" e algumas informações adicionais. Na verdade, isso é uma condição de sucesso, então você pode ignorar esse aviso.</p>
+<p>Para se livrar desse comportamento estranho, baixe o <a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">código fonte</a> do heimdall, voltando para a verão 1.3.1 ("<code>git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06</code>"), então compile-a de acordo com as instruções do arquivo <code>README</code>, ao instalar a versão o erro irá desaparecer. Portanto, isso não é estritamente necessário.</p>
+<p>Todas as versões do heimdall não conseguem copiar (flash) um arquivo system.img maior quem 100MB. Execute:</p>
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+<p>para verificar o tamanho do arquivo. Se for maior que 100MB use o canal do IRB para pedir ajuda, existe maneiras de se fazer isso em duas etapas.</p>
+<h2 id="Etapa_adicional_para_Samsung_Galaxy_S2">Etapa adicional para Samsung Galaxy S2</h2>
+<p>Se você está copiando no Galaxy S2, existe uma etapa adicional a ser seguida. Gaia não é copiado automaticamente pelo <code>flash.sh</code> script, então será necessário executar:</p>
+<pre>./flash.sh gaia
+</pre>
+<h2 id="Copiando_partições_específicas_para_os_telefones_fastboot">Copiando partições específicas para os telefones <em>fastboot</em></h2>
+<p>Você pode copiar partições específicas para telefones fastboot (You can flash specific partitions to <em>fastboot</em> phones (ou seja, qualquer outro telefone que não o Samsung Galaxy S2). Por exemplo:</p>
+<pre class="language-html">./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+<p><strong>Aviso</strong>: o comando <code>./flash.sh user</code> pode apagar dados específicos do usuário (contatos, etc).</p>
+<h2 id="Alterando_módulos_específicos">Alterando módulos específicos</h2>
+<p>Você pode alterar componentes específicos do B2G indicando seus nomes quando executar o script <code>./flash.sh</code>. Por exemplo:</p>
+<pre>./flash.sh gaia
+./flash.sh gecko
+</pre>
+<p>Para alterar somente uma aplicação você pode utilizar a variável de ambiente <code>BUILD_APP_NAME</code>:</p>
+<pre>BUILD_APP_NAME=calendar ./flash.sh gaia</pre>
+<p>Se o seu telefone não for usado para desenvolvimento (você não estiver interessado em testar aplicativos e/ou otimizações), você pode alterar o Gaia usando:</p>
+<pre>VARIANT=user ./flash.sh gaia</pre>
+<h2 id="Próximos_passos">Próximos passos</h2>
+<p>Nesse ponto, seu telefone deve rodar Boot to Gecko! É hora de experimentar, <a href="/pt-BR/docs/Mozilla/Boot_to_Gecko/Application_development" title="en-US/docs/Mozilla/Firefox_OS/Application_development">escreva algum código</a>, <a href="/pt-BR/docs/Mozilla/Firefox_OS/Platform/Automated_testing" title="en-US/docs/Mozilla/Firefox_OS/Platform/Testing">teste</a>, or <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging" title="en-US/docs/Mozilla/Firefox_OS/Debugging">faça alguma depuração</a>!</p>
+<div class="note">
+ <strong>Nota:</strong> Uma dica útil: se a sua compilação B2G inicar uma tela de bloqueio requisitando um código para desbloquear o telefone, o código padrão é 0000.</div>
+<h2 class="note" id="Resolução_de_problemas">Resolução de problemas</h2>
+<p>Algumas dicas se seu dispositivo não funcionar extamente após instalar o B2G ou alterar para uma nova versão.</p>
+<h3 class="note" id="Se_a_IU_Interface_do_Usuário_não_inicia">Se a IU (Interface do Usuário não inicia)</h3>
+<p>Se você atualizou seu telefone e a interface do usuário não inciou, você pode <em>resetá-lo</em> para limpar as configurações desatualizadas. Isso pode trazê-lo de volta à vida, mas pode apagar dados específicos do usuário (contatos, etc). Aqui está:</p>
+<pre>cd gaia
+make reset-gaia
+</pre>
+<h3 class="note" id="Se_você_deseje_alterar_do_modo_desenvolvedor_para_modo_produção">Se você deseje alterar do modo desenvolvedor para modo produção</h3>
+<pre>cd gaia
+make reset-gaia PRODUCTION=1</pre>
+<pre class="language-html">1</pre>
+<p><strong>Aviso</strong>: <code>reset-gaia</code> pode apagar dados específicos do usuário (contatos, etc).</p>
+<h3 class="note" id="Mensagem_de_erro_image_is_too_large_na_execução_do_script_.flash.sh">Mensagem de erro "image is too large" na execução do script <code>./flash.sh</code></h3>
+<p>Isso pode significar que você precisa ter acesso de <em>root</em> antes de copiar o sistema operacional (flash). Como o b2g precisa escrever na partição root, seu telefone precisa estar com acesso de root para instalá-lo.</p>

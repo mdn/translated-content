@@ -1,0 +1,38 @@
+---
+title: disabled
+slug: Mozilla/Tech/XUL/Attribute/disabled
+tags:
+  - XUL Attributes
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Attribute/disabled
+---
+<div class="noinclude">
+  <span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ru/docs/XUL/Справочник">Справочник по XUL</a></span></div>
+<dl>
+  <dt>
+    <code id="a-disabled"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/disabled">disabled</a></code></dt>
+  <dd>
+    Тип: <em>булево</em></dd>
+  <dd>
+     Указывает, отключен ли элемент или нет. В случае, если элемент имеет значение <code>true</code>, он отключается. Отключенные элементы имеют, как правило, так называемый "затенённый" цветовой эффект. Если элемент отключен, он не будет отвечать на какие-либо действия пользователя, он не может быть выбран, и событие <code>command</code> в этом случае не вызывается.
+    <div class="noinclude">
+      <br>
+      Тем не менее, элемент всё ещё будет отвечать событиям, связанным с мышью (т.е. реагировать на <code>mouse events</code>). Для активации элемента, присвойте атрибуту значение <code>false</code>.</div>
+  </dd>
+  <dd>
+    Графические элементы управления имеют свойство <code><span><a href="https://developer.mozilla.org/ru/docs/XUL/Property/disabled">disabled</a></span></code>, которое (кроме меню и их элементов) принято использовать в качестве атрибута на случай, если понадобится расширить функционал: добавить/изменить режим работы элемента, задействовать/отключить элемент и так далее.</dd>
+</dl>
+<div class="noinclude">
+  <img alt="Image:XUL_ref_attr_disabled.png" class="internal" src="/@api/deki/files/1807/=XUL_ref_attr_disabled.png">
+  <pre class="brush: js">// Отключение элемента
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Задействование элемента путём снятия атрибута "disabled"
+document.getElementById('buttonRemove').removeAttribute("disabled");
+</pre>
+  <p></p><div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ru/docs/Mozilla/Firefox/Releases/3.5">Замечание по Firefox 3.5</a></p>
+    <p style="font-weight: 400;">Поддержка данного атрибута была добавлена в Firefox 3.5 для элементов <a class="internal" href="/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a>.</p>
+</div><p></p>
+</div>
+<p> </p>

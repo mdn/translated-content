@@ -1,0 +1,138 @@
+---
+title: Segurança de Aplicativos
+slug: Archive/B2G_OS/Security/Seguranca_de_aplicacao
+tags:
+  - Aplicativo
+  - Apps
+  - Firefox OS
+  - Guía
+  - Movel
+  - Segurança
+translation_of: Archive/B2G_OS/Security/Application_security
+---
+<div class="summary">
+ <p>Este artigo aborda detalhadamente o modelo de segurança de aplicativos no Firefox OS.</p>
+</div>
+<p>Os principais controles de segurança apresentados pelo Firefox OS são:</p>
+<ul>
+ <li>Aplicativos Web são instalados e executados explicitamente, ao invés de serem simplesmente abertos em um navegador. Os aplicativos precisam ser instalados antes de serem utilizados, a atualização e remoção de aplicativos são reguladas por controles de segurança para proteger o usuário.</li>
+ <li>Acesso a novas APIs Web são controladas por um sistema de permissões. O aplicativo precisa declarar as permissões que pretende usar antes da instalação. Para receber acesso a APIs mais poderosas, o aplicativo precisa atender certos requisitos, ser revisado, aprovado e assinado por um <em>Marketplace</em>.</li>
+ <li>Aplicativos Web são isolados (<em>sandboxed</em>) de maneira que somente tem acesso aos seus próprios recursos (<em>cookies</em>, <em>offline storage</em>, bases de dados IndexedDB, e etc.). Mesmo se dois aplicativos vierem a carregar a mesma URL, essas duas páginas não são consideradas sendo de mesma origem pois estão executando dentro de aplicativos separados.</li>
+</ul>
+<h3 id="Tipos_de_aplicativos">Tipos de aplicativos</h3>
+<p>O FirefoxOS suporta três tipos de aplicativos: "<em><strong>web</strong></em>", "<strong>privilegiado</strong>" e <strong>interno</strong> ("<strong><em>Certificado</em></strong>"). O tipo de um aplicativo é declarado no seu arquivo de <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">manifesto</a> e determina a lista de permissões que o aplicativo pode solicitar.</p>
+<ul>
+ <li><strong>Aplicativos Web:</strong> A maioria dos aplicativos de terceiros serão "<em>web</em>", que é o tipo padrão, não concedendo o aplicativo nenhuma permissão extra além daquelas já expostas para Web. Aplicativos Web podem ser instalados de qualquer site, sem nenhuma verificação adicional. Eles também podem ser <a href="/en-US/docs/Web/Apps/Packaged_apps" title="/en-US/docs/Web/Apps/Packaged_apps">empacotados</a> (<em>packaged</em>) , empacotar não concede nenhuma permissão adicional.</li>
+ <li><strong>Aplicativos Privilegiados</strong>: Estes aplicativos podem solicitar permissões mais elevadas, por esse motivo eles precisam ser verificados e assinados por um <em>Marketplace</em>.</li>
+ <li><strong>Aplicativos Internos/Certificados:</strong> No momento este tipo de aplicativo somente pode vir pré-instalado no dispositivo, a escolha do fabricante.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Para informações adicionais sobre os três tipos veja a documentação do <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">Manifesto do Aplicativo</a>.</p>
+</div>
+<h3 id="Distribuição_dos_aplicativos">Distribuição dos aplicativos</h3>
+<p>No Firefox OS os aplicativos podem ser distribuídos de duas formas diferentes: Sendo Hospedados ou Empacotados. Aplicativos "<em>web</em>" podem ser distribuídos por qualquer dos meios, sendo que os privilegiados e certificados precisam necessariamente ser empacotados.</p>
+<h4 id="Aplicativos_hospedados"><span class="mw-headline" id="Hosted_apps">Aplicativos hospedados </span></h4>
+<p>Um aplicativo <strong>hospedado</strong> consiste basicamente de um arquivo <a class="external text" href="/en-US/docs/Apps/Manifest" rel="nofollow">manifesto do aplicativo</a> no servidor web do desenvolvedor, este contém um <a href="/en-US/Apps/Build/Manifest#launch_path">caminho de execução</a> indicando que pagina deve ser aberta quando o aplicativo é inicializado. De uma perspectiva de segurança aplicativos hospedados funcionam de forma muito parecida com paginas<em> </em>web normais. Quando um aplicativo hospedado é carregado as URLs das paginas carregadas são as URLs normais onde aquelas paginas são acessadas no servidor onde estão hospedadas, mas se elas já estiverem no <em>appcache</em> elas serão carregadas do dispositivo.</p>
+<h4 id="Aplicativos_empacotados"><span class="mw-headline" id="Packaged_apps">Aplicativos empacotados</span></h4>
+<p>Um aplicativo <strong>empacotado</strong> é simplesmente uma aplicação web aberta que tem todo o seu conteudo como arquivos HTML, CSS, JavaScript, manifesto, e etc; contidos em um arquivo zip ao invés de ter seus arquivos hospedados em um servidor web. Para mais detalhes desse formato, veja <a href="/en-US/docs/Apps/Packaged_apps" title="Apps/Packaged_apps">Aplicativos empacotados</a>. </p>
+<h3 id="Origem_dos_aplicativos">Origem dos aplicativos</h3>
+<p>Para aplicativos hospedados, a origem do aplicativo é a origem onde se localiza o <a class="external text" href="/en-US/docs/Apps/Manifest" rel="nofollow">manifesto do aplicativo</a>.</p>
+<p>Para aplicativos empacotados, a origem é o identificador único do aplicativo que é designado ao mesmo durante a instalação. <a href="/en-US/Apps/Publishing/Packaged_Apps#Types_of_packaged_apps">Aplicativos Privilegiados e Internos </a>também podem solicitar uma origem especifica ao informar o parâmetro <a href="/en-US/Apps/Build/Manifest#origin">origem</a> no manifesto da aplicação.</p>
+<h3 id="Instalação_de_aplicativos"><strong>Instalação de aplicativos</strong></h3>
+<p>Aplicações são instaladas através da <a href="/en-US/docs/JavaScript_API" title="/en-US/docs/JavaScript_API">API JavaScript de Aplicativos</a>:</p>
+<ul>
+ <li>Aplicativos hospedados são instalados chamando:<br>
+  <code>navigator.mozApps.<a href="/en-US/docs/Web/API/Apps.install" title="/en-US/docs/Web/API/Apps.install">install</a>(manifestURL)</code>, onde manifestURL é a URL que informa a localização do aplicativo. Para mais detalhes, veja <a href="/en-US/docs/DOM/Apps.install">Instalando Aplicativos</a>.</li>
+ <li>Aplicativos empacotados são instalados chamando:<br>
+  <code>navigator.mozApps.<a href="/en-US/docs/Web/API/Apps.installPackage" title="/en-US/docs/Web/API/Apps.installPackage">installPackage</a>(packageURL)</code>. Para aplicativos empacotados o manifesto principal é armazenado dentro do próprio pacote para que ele seja assinado. Existe um segundo "mini-manifesto" que é usado somente para iniciar o processo de instalação. Para mais informações veja <a href="/en-US/docs/DOM/Apps.installPackage">Instalando aplicativos empacotados</a> e<a href="/en-US/docs/Apps/Packaged_apps" title="Apps/Packaged_apps"> Aplicativos empacotados</a>.</li>
+</ul>
+<p>De modo a garantir que um aplicativo realmente solicitou ser instalado como uma aplicação web, nós temos que certificar não ser possível enganar um servidor a hospedar um manifesto de aplicação. Isto é feito obrigando o servidor a disponibilizar o arquivo manifesto com o seguinte <em>mime-type</em>, <code>application/x-web-app-manifest+json</code>. Essa validação não é feita quando o aplicativo e o arquivo manifesto tem a mesma origem da página que solicitou a instalação da aplicação.</p>
+<h3 id="Atualizações"><span class="mw-headline" id="Updates">Atualizações</span></h3>
+<p>O processo de atualização de aplicativos é descrito em <a href="/en-US/docs/Apps/Updating_apps" title="Apps/Updating_apps">Atualizando aplicativos</a>.</p>
+<h2 id="Permissões">Permissões</h2>
+<p>Privilégios adicionais podem ser concedidos para aplicativos além daqueles concedidos para websites normais. Por padrão um aplicativo tem as mesmas permissões que paginas web normais. Para conseguir permissões adicionais o primeiro passo é o aplicativo enumerar as permissões extras e solicitar as mesmas no manifesto do aplicativo.</p>
+<h3 id="Declaração_no_manifesto">Declaração no manifesto</h3>
+<p>Para cada permissão adicional que um aplicativo deseja utilizar, o aplicativo precisa enumerar a permissão no manifesto complementada com uma descrição significativa de porque o aplicativo precisa daquela permissão adicional. Por exemplo, se um aplicativo quer usar a API <a href="/en-US/docs/Web/API/window.navigator.geolocation" title="/en-US/docs/Web/API/window.navigator.geolocation">navigator.geolocation</a>, ele precisa incluir o texto abaixo no seu manifesto:</p>
+<pre class="brush: json">"permissions": {
+  "geolocation":{
+<code class="language-js"><span class="token string">    "description"</span><span class="token punctuation">:</span> <span class="token string">"Necessária para autocompletar o local na tela compartilhar"</span><span class="token punctuation">,</span></code>
+  }
+},
+</pre>
+<p>Isso irá permitir o aplicativo solicitar a permissão do usuário para utilizar a API de geolocalização da mesma forma que uma pagina web solicitaria. Para mais detalhes, veja <a href="/en-US/docs/Apps/Manifest" title="Apps/Manifest">Manifesto do aplicativo</a>.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Existe um bug que causa a não apresentação ao usuário das permissões que o aplicativo pretende utilizar — veja o <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=823385" title="https://bugzilla.mozilla.org/show_bug.cgi?id=823385">bug 823385</a>.</p>
+</div>
+<h3 id="Concedendo_permissões">Concedendo permissões</h3>
+<p>Quando as permissões são solicitadas no manifesto, a permissão é configurada como <em>Permitidas </em>(<em>allow)</em> ou <em>Solicitadas (prompt)</em>, dependendo da permissão solicitada. Permissões <em>Permitidas </em>são concedidas ao se declarar a mesma no manifesto sem aprovação direta do usuário a cada uso. Para permissões <em>Solicitadas </em>o usuário é consultado no primeiro uso da API relacionada, e tem a escolha de permitir ou não antes da API ser concedida para uso pelo aplicativo, O Firefox OS somente pergunta ao usuário sobre a concessão de permissões que tem um impacto em sua privacidade, e além disso seja razoável para o usuário entender o que está sendo perguntado. Por exemplo, acesso aos contatos é <em>Solicitada</em>, mas acesso para realizar uma conexão TCP é concedido implicitamente, porque não é razoavel que um usuário commum entenda as implicações de segurança de conceder essa permissão. Uso de permissões <em>Permitidas </em>são revistas no processo de segurança do Marketplace para garantir que os aplicativos disponiveis sejam seguros para os usuários.</p>
+<h3 id="Revogando_Permissões">Revogando Permissões</h3>
+<p>Os usuários tem o direito de mudar de ideia sobre permissões <em>Solicitadas </em>a qualquer momento, e podem revogar essas permissões através do aplicativo de configurações do Firefox OS. Entretanto, permissões <em>Permitidas </em>não podem ser alteradas pelo usuário.</p>
+<h2 id="Isolamento_dos_aplicativos_web">Isolamento dos aplicativos web</h2>
+<h3 id="Dados_armazenados_por_aplicativo"><span class="mw-headline" id="Data_stored_per_app">Dados armazenados por aplicativo </span></h3>
+<p>Cada aplicativo é executado pelo Firefox OS em uma area isolada, isso significa que todos os dados armazenados por um aplicativo está separado de todos os dados armazenados por outros aplicativos. Incluindo dados de <em>cookies</em>, dados em <em>localStorage</em>,dados no <em>indexedDB</em>, e permissões locais.</p>
+<p><img alt="A diagram showing three Firefox OS apps all open is separate sandboxes, so none of them can affect each other." src="https://mdn.mozillademos.org/files/7091/sandbox.png" style="width: 1040px; height: 437px; display: block; margin: 0px auto;"></p>
+<p>Isso significa que se o usuário tem dois aplicativos instalados, aplicativos A e B, esses aplicativos terão um conjunto completamente diferente de <em>cookies</em>, dados locais e permissões diferentes. Isto se aplica mesmo se ambos os aplicativos abrirem um {{ htmlelement("iframe") }} que aponta para a mesma origem, ambos A e B abrirem um <code>&lt;iframe&gt;</code> apontando para "<a class="external free" href="http://www.mozilla.org" rel="nofollow">http://www.mozilla.org</a>", Ambos irão abrir o site porém, o mesmo será baixado e exibido utilizando <em>cookies </em>diferentes nos dois aplicativos.</p>
+<p>O resultado prático é que se o usuario acessar o Facebook enquanto utiliza o aplicativo A, isso não afeta como o aplicativo B manipula a pagina do Facebook. Se o <em>cookie </em>de acesso que o Facebook configurou quando o usuário acessou usando o aplicativo A só está disponivel para o aplicativo A. Se o aplicativo B abrir um <code>&lt;iframe&gt;</code> para o Facebook, o <em>cookie </em>não estará disponível e o Facebook irá exibir novamente a tela de acesso no aplicativo B ao invés da pagina que está aberta no aplicativo A.</p>
+<h3 id="Aplicativos_não_podem_abrir_uns_aos_outros"><span class="mw-headline" id="Apps_can.27t_open_each_other">Aplicativos não podem abrir uns aos outros </span></h3>
+<p>Aplicativos utilizando iframes não podem abrir outros aplicativos.  Se o aplicativo A cria um <code>&lt;iframe&gt;</code> com o <code>src</code> apontando para a URL do aplicativo B, este não irá abrir o aplicativo B no <code>&lt;iframe&gt;</code> e simplesmente abrirá a pagina web que se encontra naquela URL. Também não pode utilizar cookies do aplicativo B, portanto se comportando como se o aplicativo B não estivesse instalado no dispositivo do usuário.</p>
+<p>Isso se aplica mesmo para aplicativos empacotados (mais detalhes abaixo). Se o aplicativo A tenta, utilizando um <code>&lt;iframe&gt;</code>, abrir o aplicativo empacotado B apontando para <code>app://</code>URLdoAplicativoB, simplesmente ocorrerá um erro ao abrir a URL. Se será um erro 404 ou outro tipo de erro isso será determinado no futuro, mas definitivamente irá ocorrer um erro ao abrir a página. Da mesma forma também ocorrerá erro independente do aplicativo B estar instalado no dispositivo do usuário ou não, de maneira que o aplicativo A não possa determinar através do erro se o aplicativo B está instalado ou não no dispositivo.</p>
+<p>A mesma coisa acontece se o <em>frame </em>principal do aplicativo A, navegar para uma URL do aplicativo B. O sistema sempre sabe que aplicativo está aberto em que frame. Portanto existindo uma tentativa de abrir a URL do aplicativo B no frame do aplicativo A, irá ocorrer o mesmo erro citado acima. Isso também garante que os recursos do aplicativo B como <em>cookies </em>ou dados locais não poderão ser usados de forma alguma pelo aplicativo A.</p>
+<h3 id="Motivos"><span class="mw-headline" id="Motivation">Motivos</span></h3>
+<p>Existem vantagens e desvantagens da segurança ser implementada desta forma. A desvantagem é que se o usuário interage com um mesmo site a partir de aplicativos diferentes ele terá que conectar em cada um dos aplicativos separadamente. Da mesma forma, se um site quer guardar dados localmente e o usuário interage com esse site em aplicativos diferentes os dados serão duplicados em cada aplicativo, que pode ser um problema se for o volume de dados for grande.</p>
+<p>A principal vantagem dessa implementação é que esse modelo é mais estável. Não permitimos que os aplicativos interajam entre si através de um site de terceiros e por exemplo um aplicativo parar de funcionar ao se instalar outro. Quando um aplicativo é deinstalado não é possivel que haja perda de dados de outro aplicativo, ou que um aplicativo pare de funcionar porque dependia do aplicativo desinstalado.</p>
+<p>É um modelo mais seguro. Um usuário pode usar o seu "AppSocialSuperManeiro" para conectar no Facebook sem se preocupar que o seu "AppSuperSuspeito" possa realizar qualquer ataque para obter os dados do usuário no Facebook através de bugs ou falhas no site do Facebook.</p>
+<p>Também existem beneficios a privacidade. O usuário pode tranquilamente instalar o "AppProcurandoEmprego" sem se preocupar porque o "AppDoFuncionarioDaMegaCorporação" não pode detectar que aplicativos estão instalados ou que dados ele criou no dispositivo.</p>
+<h3 id="Sandboxed_Permissions_2"><span class="mw-headline" id="Sandboxed_Permissions">Sandboxed Permissions</span></h3>
+<p>In the same way that web site data is sandboxed per app, so is permission data. If App A loads a page from <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> and that page requests to use geolocation and the user says "yes, and remember this decision for all times", this only means that <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> has access to geolocation within App A. If App B then opens <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, that page won't have access to geolocation unless the user grants that permission again.</p>
+<p>And just like in the normal browser, permissions are separated by origin. If App A is granted permission to use Geolocation, this does not mean that all origins running in App A have the permission to use Geolocation. If App A opens an <code>&lt;iframe&gt;</code> to <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, then <a href="http://docs.google.com"><span class="external free">http://docs.google.com</span></a> still has to ask the user for permission before geolocation access is granted.</p>
+<h3 id="Browser_API_Sandbox">Browser API Sandbox</h3>
+<p>To additionally secure applications that open a large set of URLs, such as browsers, we have added a <em>browserContent flag</em>. The browserContent flag allows each app to have not one, but two sandboxes: one for the app itself, and one for any "web content" that it opens. For example:</p>
+<p>Say that the MyBrowser app is loaded from the <a class="external free" href="https://mybrowser.com" rel="nofollow">https://mybrowser.com</a> domain. This is the domain the scripts and resources are loaded within. The scripts and resources
+ <i>
+  belong</i>
+ to this domain.</p>
+<p>Now, if a page in this app creates an <code>&lt;iframe mozbrowser&gt;</code>, a different sandbox is created and used for this <code>&lt;iframe&gt;</code>, which is different from the sandbox used by the app. So for example if this <code>&lt;iframe&gt;</code> is navigated to <a class="external free" href="https://mybrowser.com" rel="nofollow">https://mybrowser.com</a>, it will result in different cookies being used inside the <code>&lt;iframe mozbrowser&gt;</code>. Likewise, the contents inside the <code>&lt;iframe mozbrowser&gt;</code> will see different IndexedDB and localStorage databases from the ones opened by the app.</p>
+<p>This also applies if the MyBrowser app wants to create integration with, for example, Google Maps to implement location-based browsing. If the app opens an <code>&lt;iframe&gt;</code> to <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, it will receive a set of cookies for the <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> website. If the user then navigates inside the <code>&lt;iframe mozbrowser&gt;</code> containing <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, this will use different cookies and different permissions to the top level app.</p>
+<p>Another example where this is useful is in a Yelp-like app. Yelp has the ability to visit a restaurant's website directly in the app. By using <code>&lt;iframe mozbrowser&gt;</code> to open the restaurant website, the Yelp app ensures that the restaurant website can't contain an <code>&lt;iframe&gt;</code> pointing back to Yelp's app (which points to <a class="external free" href="http://yelp.com" rel="nofollow">http://yelp.com</a>). If it does, the website will only receive the Yelp website, rather than the Yelp app. So there is no way that the restaurant website can mount an attack against the app since the contained Yelp website won't share any permissions or data with the Yelp app.</p>
+<h2 id="Resumo_da_segurança_de_aplicativos">Resumo da segurança de aplicativos</h2>
+<p>A tabela abaixo resume os diferentes tipos de aplicativos no Firefox OS, seus formatos,  e os processos de instalação e atualização para aplicativos web abertos rodando no Firefox OS.</p>
+<table>
+ <caption>
+  Tipos de aplicativos web</caption>
+ <thead>
+  <tr>
+   <th scope="col">Tipo</th>
+   <th scope="col">Distribuição</th>
+   <th scope="col">Modelo de permissões</th>
+   <th scope="col">Instalação</th>
+   <th scope="col">Atualização</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Web</td>
+   <td>Hospedados ou empacotados</td>
+   <td>Permissões mais leves que não tenham perigo de exposição a conteúdo web não validado.</td>
+   <td>Instalados de qualquer local</td>
+   <td>Podem ser atualizadas de forma transparente ao usuário ou explicitamente através de um <em>marketplace</em>, dependendo de onde o aplicativo foi instalado e o metodo de distribuição.</td>
+  </tr>
+  <tr>
+   <td>Privilegiado</td>
+   <td>Empacotados e obrigatoriamente assinados</td>
+   <td>APIs privilegiadas requerem a validação e autenticação do aplicativo.</td>
+   <td>Instalados somente de um <em>marketplace</em> confiável</td>
+   <td>Atualizados através de um <em>marketplace</em> confiável, o usuário é solicitado a aprovar o download e instalação de atualizações manualmente.</td>
+  </tr>
+  <tr>
+   <td>Interno (Certificado)</td>
+   <td>Empacotados</td>
+   <td>APIs potencialmente perigosas e poderosas não disponíveis para aplicativos de terceiros.</td>
+   <td>Pre-Instalados no dispositivo</td>
+   <td>Atualizadas somente através de atualizações do sistema como um todo.</td>
+  </tr>
+ </tbody>
+</table>
+<div class="note">
+ <p><strong>Nota</strong>: Apezar de aplicativos web poderem ser instalados de qualquer site ou marketplace, Na versão 1.0 do Firefox OS os aplicativos privilegiados somente podem ser instalados do marketplace da Mozilla, isso se deve ao fato que o suporte para multiplos marketplaces confiáveis ainda não está terminado.</p>
+</div>
+<p> </p>

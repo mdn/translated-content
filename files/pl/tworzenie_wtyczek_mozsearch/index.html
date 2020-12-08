@@ -1,0 +1,52 @@
+---
+title: Tworzenie wtyczek MozSearch
+slug: Tworzenie_wtyczek_MozSearch
+tags:
+  - Dodatki
+  - Wszystkie_kategorie
+  - Wtyczki_wyszukiwarek
+translation_of: Mozilla/Creating_MozSearch_plugins
+---
+<p> </p>
+<p>Firefox 2 używa uproszczonej formy formatu <a class="external" href="http://opensearch.org/">OpenSearch</a> do przechowywania wtyczek wyszukiwania. Wtyczka MozSearch jest plikiem XML, który opisuje silnik wyszukiwarki, jej adres URL i parametry, które mają być przekazane do tego adresu URL.</p>
+<div class="warning"><strong>Ostrzeżenie:</strong> MozSearch nie jest standardem i jest przeznaczony tylko na wewnętrzne potrzeby projektu Mozilla. Wtyczka ta powinna być użyta tylko wtedy, gdy zamierzasz rozpowszechniać wtyczkę wyszukiwarki spakowaną w <a href="/pl/Paczki#Pliki_rozszerze.C5.84_zale.C5.BCne_od_aplikacji" title="pl/Paczki#Pliki_rozszerze.C5.84_zale.C5.BCne_od_aplikacji">rozszerzenie Firefoksa</a> lub jeśli tworzysz wtyczkę, która ma być dostarczana jako domyślna w Firefoksie. Zobacz <a href="/pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa" title="pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa">Tworzenie wtyczek OpenSearch dla Firefoksa</a>, aby dowiedzieć się o tworzeniu wtyczek instalowanych z Internetu.</div>
+<h2 id="Plik_wtyczki">Plik wtyczki</h2>
+<p>Format MozSearch jest podobny do formatu <a href="/pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa" title="pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa">OpenSearch</a>. Jedyną różnicą jest element root i przestrzeń nazw XML.</p>
+<h2 id="Przyk.C5.82ad:_wyszukiwarka_Yahoo.21">Przykład: wyszukiwarka Yahoo!</h2>
+<p>Poniższy kod XML jest wbudowaną wtyczką Firefox 2 odpowiadającą za wyszukiwarkę Yahoo!:</p>
+<pre>&lt;SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/"&gt;
+&lt;ShortName&gt;Yahoo&lt;/ShortName&gt;
+&lt;Description&gt;Yahoo Search&lt;/Description&gt;
+&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,R0lGODlhEAAQAJECAP8AAAAAAP///wAAACH5BAEAAAIALAAAAAAQABAAAAIplI+py+0NogQuyBDEnEd2kHkfFWUamEzmpZSfmaIHPHrRguUm/fT+UwAAOw==&lt;/Image&gt;
+&lt;Url type="application/x-suggestions+json" method="GET"
+     template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;amp;command={searchTerms}" /&gt;
+&lt;Url type="text/html" method="GET" template="http://search.yahoo.com/search"&gt;
+  &lt;Param name="p" value="{searchTerms}"/&gt;
+  &lt;Param name="ei" value="UTF-8"/&gt;
+  &lt;MozParam name="fr" condition="pref" pref="yahoo-fr" /&gt;
+&lt;/Url&gt;
+&lt;SearchForm&gt;http://search.yahoo.com/&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+<p>Przypuśćmy, że użytkownik wybierze silnik wyszukiwania Yahoo! i wprowadzi "mozilla" w polu wyszukiwania, po czym naciśnie klawisz enter. Firefox użyje powyższego opisu wyszukiwarki, aby stworzyć taki adres URL:</p>
+<pre class="eval"><span>http://search.yahoo.com/search?p=mozilla&amp;ei=UTF-8&amp;fr=moz2</span>
+</pre>
+<p>Jeśli użytkownik kliknie ikonę lupy w panelu wyszukiwania lub wybierze opcję Znajdź w Internecie w menu Narzędzia, gdy panel wyszukiwania nie jest widoczny, przeglądarka przeniesie go do strony <code><span>http://search.yahoo.com/</span></code>, która została wpisana jako wartość elementu <code>&lt;SearchForm&gt;</code>.</p>
+<h2 id="Przyk.C5.82ad:_wyszukiwarka_MDC">Przykład: wyszukiwarka MDC</h2>
+<p>Ta wtyczka pozwoli Ci w prosty sposób przeszukiwać stronę Mozilla Developer Center.</p>
+<pre>&lt;SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/"&gt;
+&lt;ShortName&gt;MDC&lt;/ShortName&gt;
+&lt;Description&gt;Mozilla Developer Center search&lt;/Description&gt;
+&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAABGdBTUEAAK%2FINwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHWSURBVHjaYvz%2F%2Fz8DJQAggJiQOe%2Ffv2fv7Oz8rays%2FN%2BVkfG%2FiYnJfyD%2F1%2BrVq7ffu3dPFpsBAAHEAHIBCJ85c8bN2Nj4vwsDw%2F8zQLwKiO8CcRoQu0DxqlWrdsHUwzBAAIGJmTNnPgYa9j8UqhFElwPxf2MIDeIrKSn9FwSJoRkAEEAM0DD4DzMAyPi%2FG%2BQKY4hh5WAXGf8PDQ0FGwJ22d27CjADAAIIrLmjo%2BMXA9R2kAHvGBA2wwx6B8W7od6CeQcggKCmCEL8bgwxYCbUIGTDVkHDBia%2BCuotgACCueD3TDQN75D4xmAvCoK9ARMHBzAw0AECiBHkAlC0Mdy7x9ABNA3obAZXIAa6iKEcGlMVQHwWyjYuL2d4v2cPg8vZswx7gHyAAAK7AOif7SAbOqCmn4Ha3AHFsIDtgPq%2FvLz8P4MSkJ2W9h8ggBjevXvHDo4FQUQg%2FkdypqCg4H8lUIACnQ%2FSOBMYI8bAsAJFPcj1AAEEjwVQqLpAbXmH5BJjqI0gi9DTAAgDBBCcAVLkgmQ7yKCZxpCQxqUZhAECCJ4XgMl493ug21ZD%2BaDAXH0WLM4A9MZPXJkJIIAwTAR5pQMalaCABQUULttBGCCAGCnNzgABBgAMJ5THwGvJLAAAAABJRU5ErkJggg%3D%3D&lt;/Image&gt;
+&lt;Url type="text/html" method="GET" template="http://developer.mozilla.org/en/docs/Special:Search?search={searchTerms}"/&gt;
+&lt;SearchForm&gt;http://developer.mozilla.org/en/docs/Special:Search&lt;/SearchForm&gt;
+&lt;/SearchPlugin&gt;
+</pre>
+<p>Zauważ, że w tym przypadku zamiast używania <code>&lt;Param&gt;</code> do zdefiniowania parametrów silnika wyszukiwarki, są one po prostu osadzone wewnątrz szablonowego URL. Jest to właściwie preferowany sposób, gdy używamy <code>GET</code> jako metody. <code>&lt;Param&gt;</code> powinien być użyty dla <code>POST</code>.</p>
+<h2 id="Zobacz_tak.C5.BCe">Zobacz także</h2>
+<ul> <li><a href="/pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa#Rozwi.C4.85zywanie_problem.C3.B3w_.E2.80.93_wskaz.C3.B3wki" title="pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa#Rozwi.C4.85zywanie_problem.C3.B3w_.E2.80.93_wskaz.C3.B3wki">Porady dotyczące problemów z wtyczkami wyszukiwarek</a></li> <li><a class="external" href="http://nmstudio.pl/mozsearch/">Generator wtyczek MozSearch</a></li>
+</ul>
+
+<p>{{ languages( { "ca": "ca/Creaci\u00f3_de_connectors_MozSearch", "en": "en/Creating_MozSearch_plugins", "es": "es/Creaci\u00f3n_de_plugins_MozSearch", "fr": "fr/Cr\u00e9ation_de_plugins_MozSearch", "it": "it/Creare_Plugin_MozSearch", "ja": "ja/Creating_MozSearch_plugins", "zh-tw": "zh_tw/\u88fd\u4f5c_MozSearch_\u641c\u5c0b\u6a21\u7d44" } ) }}</p>

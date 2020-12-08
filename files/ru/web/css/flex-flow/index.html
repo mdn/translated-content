@@ -1,0 +1,136 @@
+---
+title: flex-flow
+slug: Web/CSS/flex-flow
+translation_of: Web/CSS/flex-flow
+---
+<div>{{ CSSRef}}</div>
+
+<p><strong><code>flex-flow</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство, которое является сокращением для отдельных свойств <code>flex-direction</code> и <code>flex-wrap</code>.</p>
+
+<pre class="brush:css no-line-numbers">/* flex-flow: &lt;'flex-direction'&gt; */
+flex-flow: row;
+flex-flow: row-reverse;
+flex-flow: column;
+flex-flow: column-reverse;
+
+/* flex-flow: &lt;'flex-wrap'&gt; */
+flex-flow: nowrap;
+flex-flow: wrap;
+flex-flow: wrap-reverse;
+
+/* flex-flow: &lt;'flex-direction'&gt; and &lt;'flex-wrap'&gt; */
+flex-flow: row nowrap;
+flex-flow: column wrap;
+flex-flow: column-reverse wrap-reverse;
+
+/* Global values */
+flex-flow: inherit;
+flex-flow: initial;
+flex-flow: unset;
+</pre>
+
+<p>{{cssinfo}}</p>
+
+<p>Больше информации и свойств описано в <a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<h3 id="Значения">Значения</h3>
+
+<p>Смотрите <a href="/en-US/docs/CSS/flex-direction" title="en-US/docs/CSS/flex-direction"><code>flex-direction</code></a> и <a href="/en-US/docs/CSS/flex-wrap" title="flex-wrap"><code>flex-wrap</code></a>.</p>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush:css;highlight:3">element {
+  /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
+  flex-flow: column-reverse wrap;
+}
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Flexbox','#flex-flow','flex-flow') }}</td>
+   <td>{{ Spec2('CSS3 Flexbox') }}</td>
+   <td>Начальное значение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Firefox (Gecko)</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>28.0<sup>[1]</sup></td>
+   <td>21.0{{property_prefix("-webkit")}}<br>
+    29.0</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
+    {{CompatVersionUnknown}}</td>
+   <td>11</td>
+   <td>12.10</td>
+   <td>6.1{{ property_prefix("-webkit") }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>28.0<sup>[1]</sup></td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
+    {{CompatVersionUnknown}}</td>
+   <td>11</td>
+   <td>12.10</td>
+   <td>7.1{{ property_prefix("-webkit") }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] В дополенение к безпрефиксной поддержке, Gecko 48.0 {{geckoRelease("48.0")}} добавило поддержку для <code>-webkit</code> префиксной версии свойства для веб для веб совместимости, для тех кто не изменял значение своих настроек <code>layout.css.prefixes.webkit</code>,  по-умолчанию <code>false</code>. Поскольку Gecko 49.0 {{geckoRelease("49.0")}} предпочтительное значение по-умолчанию <code>true</code>.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
+</ul>

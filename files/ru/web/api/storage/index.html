@@ -1,0 +1,164 @@
+---
+title: Storage
+slug: Web/API/Storage
+tags:
+  - API
+  - Interface
+  - NeedsTranslation
+  - Reference
+  - Storage
+  - Web Storage
+  - data
+translation_of: Web/API/Storage
+---
+<p>{{APIRef("Web Storage API")}}</p>
+
+<p><code>Интерфейс Storage</code> из Web Storage API предоставляет доступ для session storage или local storage для конкретного домена, позволяя вам к примеру добавлять, изменять или удалять сохранённые элементы данных.</p>
+
+<p>Если вы хотите управлять session storage для домена, вы вызываете {{domxref("Window.sessionStorage")}} метод; Если вы хотите управлять local storage домена, вы вызываете {{domxref("Window.localStorage")}}.</p>
+
+<h2 id="Свойства">Свойства</h2>
+
+<dl>
+ <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
+ <dd>Возвращает число, представляющее количество элементов в объекте <code>Storage</code>.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<dl>
+ <dt>{{domxref("Storage.key()")}}</dt>
+ <dd>Приняв число n, метод вернёт имя n-ного ключа в Storage</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Storage.getItem()")}}</dt>
+ <dd>Приняв имя ключа, метод вернёт для него значение.</dd>
+ <dt>{{domxref("Storage.setItem()")}}</dt>
+ <dd>Приняв имя ключа и значение, метод добавит этот ключ в Storage или обновит его значение, если ключ уже существовал.</dd>
+ <dt>{{domxref("Storage.removeItem()")}}</dt>
+ <dd>Приняв имя ключа, метод удалит этот ключ из Storage</dd>
+ <dt>{{domxref("Storage.clear()")}}</dt>
+ <dd>При вызове метод удалит все ключи из Storage.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>В данном примере мы получаем доступ к объекту Storage вызывая localStorage. Для начала мы проверяем содержит ли local storage элементы данных используя <code>!localStorage.getItem('bgcolor')</code>. Если да, мы вызываем функцию <code>setStyles()</code> которая получает элементы данных используя {{domxref("localStorage.getItem()")}} и использует их значения для обновления стилей на странице. Если нет, мы вызывает другую функцию, <code>populateStorage()</code>, которая использует {{domxref("localStorage.setItem()")}} что бы установить значения для элементов,  потом вызываем <code>setStyles()</code>.</p>
+
+<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+  populateStorage();
+} else {
+  setStyles();
+}
+
+function populateStorage() {
+  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
+  localStorage.setItem('font', document.getElementById('font').value);
+  localStorage.setItem('image', document.getElementById('image').value);
+
+  setStyles();
+}
+
+function setStyles() {
+  var currentColor = localStorage.getItem('bgcolor');
+  var currentFont = localStorage.getItem('font');
+  var currentImage = localStorage.getItem('image');
+
+  document.getElementById('bgcolor').value = currentColor;
+  document.getElementById('font').value = currentFont;
+  document.getElementById('image').value = currentImage;
+
+  htmlElem.style.backgroundColor = '#' + currentColor;
+  pElem.style.fontFamily = currentFont;
+  imgElem.setAttribute('src', currentImage);
+}</pre>
+
+<div class="note">
+<p><strong>Важно</strong>: Если хотите увидеть данный пример в работе, посмотрите наше <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
+</div>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификации</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>localStorage</td>
+   <td>4</td>
+   <td>3.5</td>
+   <td>8</td>
+   <td>10.50</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td>sessionStorage</td>
+   <td>5</td>
+   <td>2</td>
+   <td>8</td>
+   <td>10.50</td>
+   <td>4</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.1</td>
+   <td>{{ CompatUnknown }}</td>
+   <td>8</td>
+   <td>11</td>
+   <td>iOS 3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>Все браузеры имеют различную вместимость для localStorage и sessionStorage. Вот <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/" title="http://dev-test.nemikor.com/web-storage/support-test/">подробное сравнение всех storage для различных браузеров</a>.</p>
+
+<div class="note">
+<p><strong>Важно: </strong>Начиная с iOS 5.1, Safari Mobile хранит данные localStorage в папке кэша, которая является объектом для периодических чисток по желанию OS, в основном из-за нехватки памяти.</p>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Используя Web Storage API</a></p>

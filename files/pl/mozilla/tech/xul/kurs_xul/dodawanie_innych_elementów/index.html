@@ -1,0 +1,87 @@
+---
+title: Dodawanie innych elementów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_innych_elementów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pola_grup" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Stosy_i_pokłady">Następny  »</a></p>
+</div><p></p>
+<p>Podsumowaniem dyskusji o pudełkach będzie dodanie kilku pudełek do okna dialogowego służącego do szukania plików.</p>
+<div class="highlight">
+ <h3 id="Dodawanie_element.C3.B3w_do_przyk.C5.82adu:_Znajd.C5.BA_pliki" name="Dodawanie_element.C3.B3w_do_przyk.C5.82adu:_Znajd.C5.BA_pliki">Dodawanie elementów do przykładu: &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h3>
+ <p>Dodamy więcej elementów do okna dialogowego szukania plików. Po pierwsze, dodamy możliwość szukania według innych kryteriów, takich jak rozmiar pliku lub według daty.</p>
+ <pre class="eval">&lt;hbox&gt;
+  <span class="highlightred">&lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Nazwa"/&gt;
+      &lt;menuitem label="Rozmiar"/&gt;
+      &lt;menuitem label="Data modyfikacji"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Jest"/&gt;
+      &lt;menuitem label="Nie ma"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;</span>
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+</pre>
+ <div class="float-right">
+  <img alt="grafika:boxfinal1.png"></div>
+ <p>Powyżej zostały dodane dwa rozwijane pola do okienka dialogowego. Element <code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> zostanie dodany pomiędzy różne elementy, aby stworzyć przerwę między nimi. Każde z tych pól jest o szerokości 10 pikseli. Widoczne jest to, jeśli rozszerzysz okno, to następnie pole tekstowe także się rozszerzy, ale pozostałe komponenty już nie. Zwróć uwagę także, że etykieta została usunięta.</p>
+ <p>Jeżeli rozszerzymy okno w pionie, elementy nie zmienią rozmiaru. To dlatego, że są one wewnątrz poziomych pól. Jeżeli przyciski &lt;tt&gt;Znajdź&lt;/tt&gt; i &lt;tt&gt;Anuluj&lt;/tt&gt; będą znajdowały się z daleka od dolnej krawędzi okna, będą wtedy odpowiednio ustawione. W prosty sposób możemy dodać puste pola pomiędzy dwa poziome pola.</p>
+ <pre class="eval"><span class="highlightred">&lt;spacer style="height: 10px"/&gt;</span>
+&lt;hbox&gt;
+  &lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Nazwa"/&gt;
+      &lt;menuitem label="Rozmiar"/&gt;
+      &lt;menuitem label="Data modyfikacji"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Jest"/&gt;
+      &lt;menuitem label="Nie ma"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+
+<span class="highlightred">&lt;spacer style="height: 10px" flex="1"/&gt;</span>
+
+&lt;hbox&gt;
+</pre>
+ <p>Teraz, gdy okno jest rozszerzone, dwa przyciski będą przesunięte, lecz, tak jak zawsze, będą one wzdłuż dolnej krawędzi okna. Pierwszy element <code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> dodaje dodatkową wolną przestrzeń pomiędzy etykietą tytułu a elementem 'Kryteria szukania'.</p>
+ <p>Ładnie by wyglądało, gdyby tekst 'Kryteria szukania' był otoczony ramką. Możemy ją wykonać dwoma sposobami. Pierwszym sposobem jest użycie własności <code>border</code> z pliku CSS lub drugim będzie zastosowanie gotowego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code>. Pierwsza metoda wymagałaby od nas ustawienia stylu dla elementu. W kursie będziemy stosowali drugą metodę. Pola grup mają tę przewagę, że mają tą zaletę, że przyciągają pole po skosie, w odpowiedni sposób dla aktualnie zastosowanego motywu.</p>
+ <p>Wykonajmy zmiany w <code>groupbox</code>:</p>
+ <pre class="eval"><span class="highlightred">&lt;groupbox orient="horizontal"&gt;</span>
+  <span class="highlightred"><span class="nowiki">&lt;caption label="Kryteria szukania"/&gt;</span></span>
+  &lt;menulist id="searchtype"&gt;
+  .
+  .
+  .
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+<span class="highlightred">&lt;/groupbox&gt;</span>
+</pre>
+ <div class="float-right">
+  <img alt="Grafika:boxfinal2.png"></div>
+ <p>Zostały już poprawione wszystkie kosmetyczne błędy. Możemy także ustawić element <code>groupbox</code> tak, aby rozszerzyć/zwężać pionowo okna do krawędzi dolnego pola. Możemy także modyfikować marginesy w celu lepszego ustawienia elementów.</p>
+ <p>Więcej przykładów modelu pudełkowego i jego własności zobaczymy podczas dalszej nauki dodawania elementów, opisanych w tym kursie.</p>
+ <p>Przykład: <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">Podgląd</a></p>
+</div>
+<p>Następnie dowiemy się <a href="pl/Kurs_XUL/Stosy_i_pok%c5%82ady">jak wygląda utworzenie stosu</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pola_grup" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Stosy_i_pokłady">Następny  »</a></p>
+</div><p></p>

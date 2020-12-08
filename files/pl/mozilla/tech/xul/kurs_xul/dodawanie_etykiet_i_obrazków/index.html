@@ -1,0 +1,70 @@
+---
+title: Dodawanie etykiet i obrazków
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_etykiet_i_obrazków
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_przycisków" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrolki_wejścia">Następny  »</a></p>
+</div>
+<p></p><p>Artykuł przedstawia sposoby dodawania etykiet i obrazków do okna. Dodatkowo zobaczymy, jak się łączy elementy w grupy.
+</p>
+<h3 id="Elementy_tekstowe" name="Elementy_tekstowe">Elementy tekstowe</h3>
+<p>Nie można umieścić tekstu bezpośrednio w pliku XUL bez wcześniejszego otoczenia go znacznikami, gdyż nie zostanie on wyświetlony.
+</p>
+<h4 id="Element_label" name="Element_label"> Element <code>label</code> </h4>
+<p>Najprostszym sposobem umieszczenia tekstu w oknie jest użycie elementu <code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>, w sposób przedstawiony poniżej: </p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul">Podgląd</a>
+</p>
+<pre>&lt;label value="To jest jakiś tekst"/&gt;
+</pre>
+<p>Atrybut <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code> służy do określania tekstu, który miałby zostać wyświetlony w oknie. Tekst ten nie jest zawijany, więc zostanie wyświetlony w tylko jednej linii. Przedstawiony element jest przydatny w przypadku krótkich fragmentów tekstu.
+</p>
+<h4 id="Element_description" name="Element_description"> Element <code>description</code> </h4>
+<p>Dłuższy tekst można umieścić pomiędzy otwierającym a zamykającym znacznikiem <code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code>. W przeciwieństwie do tekstu zadeklarowanego za pomocą elementu <code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> i atrybutu <code>value</code>, potomek tekstu będzie łamany na wiele linii w momencie, gdy zajdzie taka potrzeba. Zmień rozmiar okna, aby zobaczyć, jak tekst zostanie zawinięty. Podobnie jak w języku HTML, nowe linie i dodatkowe białe znaki są zamieniane w pojedynczy znak odstępu. W kolejnych artykułach zobaczymy, <a href="pl/Kurs_XUL/Pozycjonowanie_element%c3%b3w">w jaki sposób można ograniczyć długość elementu</a>, więc zawijanie wierszy stanie się lepiej widoczne.
+</p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul">Podgląd</a>
+</p>
+<pre class="eval">&lt;description&gt;
+  Dłuższa sekcja tekstu jest wyświetlona.
+&lt;/description&gt;
+</pre>
+<p>Wewnątrz oba elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> oraz <code><code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> są tym samym, co znaczy, że tekst w etykietach może być zawijany, jeśli umieścisz go wewnątrz znacznika tak, że w elemencie opisu możesz korzystać z atrybutu <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code>. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> jest przeznaczony dla etykiety kontrolek, takich jak pola tekstowe. Element <code>description</code> przeznaczony jest dla pozostałych tekstów opisujących, takich jak tekst informacyjny u góry okna dialogowego (<code><code><a href="/pl/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code>). W zasadzie powinniśmy się trzymać takiego przeznaczenia.
+</p>
+<h4 id="Atrybut_control" name="Atrybut_control"> Atrybut <code>control</code> </h4>
+<p>Możemy stosować atrybut <code><code id="a-control"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/control">control</a></code></code> do ustawienia, z którą kontrolką jest powiązana etykieta. Kiedy użytkownik kliknie w etykietę, ta kontrolka zostanie wywołana. Ustaw wartość atrybutu <code>control</code> na wartość <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> elementu przycisku, który ma być wywołany. </p><p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul">Podgląd</a>
+</p>
+<pre>&lt;label value="Kliknij tu:" control="open-button"/&gt;
+&lt;button id="open-button" label="Otwórz"/&gt;
+</pre>
+<p>W powyższym przykładzie kliknięcie na etykietę spowoduje wywołanie przycisku.
+</p>
+<h3 id="Obrazki" name="Obrazki">Obrazki</h3>
+<p>Podobnie jak HTML XUL posiada element do wyświetlania obrazków wewnątrz okna, który odpowiednio nazwano <code><a href="/pl/docs/Mozilla/Tech/XUL/image" title="image">image</a></code>. Zwróć uwagę, że nazwa znacznika jest inna niż w języku HTML (<i>image</i> zamiast <i>img</i>). Atrybut <code><code id="a-src"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/src">src</a></code></code> określa adresu URL do pliku z obrazkiem. Przykład poniżej ilustruje jego użycie:
+</p>
+<pre>&lt;image src="images/banner.jpg"/&gt;
+</pre>
+<p>Mimo że możesz skorzystać z podanej składni, lepszym rozwiązaniem jest używanie arkuszy stylów do określania adresu URL obrazka. W dalszej części kursu znajdziesz, jak <a href="pl/Kurs_XUL/Dodawanie_arkuszy_styl%c3%b3w">stosować arkusze stylów</a> lub często będzie pokazany przykład dla pełności opisu. Do ustawienia adresu URL obrazka możemy zastosować własności CSS <code><a href="pl/CSS/list-style-image">list-style-image</a></code>. Przykłady: </p>
+<pre class="eval"><b>XUL:</b>
+ &lt;image id="image1"/&gt;
+ &lt;image id="search"/&gt;
+</pre>
+<pre class="eval"><b>Arkusz stylu:</b>
+ #image1 {
+   list-style-image: url("<a class=" external" rel="freelink">chrome://findfile/skin/banner.jpg</a>");
+ }
+
+ #search {
+   list-style-image: url("<span class="nowiki">http://example.com/images/search.png</span>");
+ }
+</pre>
+<p>Obrazki pochodzą z katalogu chrome i należą do motywu z pakietu findfile. Ponieważ obrazki różnią się w zależności od używanego motywu, dlatego powinieneś je umieszczać w katalogu używanego motywu.
+</p><p>W następnym artykule nauczymy się, jak <a href="pl/Kurs_XUL/Kontrolki_wej%c5%9bcia">dodać kilka kontrolek wejścia do naszego okna</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_przycisków" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrolki_wejścia">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

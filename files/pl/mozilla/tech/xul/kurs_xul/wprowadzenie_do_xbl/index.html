@@ -1,0 +1,100 @@
+---
+title: Wprowadzenie do XBL
+slug: Mozilla/Tech/XUL/Kurs_XUL/Wprowadzenie_do_XBL
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_XBL
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Plik_własności" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Treść_anonimowa">Następny  »</a></p>
+</div><p></p>
+
+<p>Język <a href="pl/XUL">XUL</a> posiada siostrzany język, <a href="pl/XBL">XBL</a> (eXtensible Bindings Language). Ten język jest stosowany do określania zachowań kontrolek XUL.</p>
+
+<h3 id="Wi.C4.85zania" name="Wi.C4.85zania">Wiązania</h3>
+
+<p>Języka XUL można używać do definiowania układu (wyglądu) interfejsu przeznaczonego dla użytkownika. Oprawę graficzną elementów można zmieniać za <a href="pl/Kurs_XUL/Dodawanie_arkuszy_styl%c3%b3w">pomocą stylów</a>. Możesz również <a href="pl/Kurs_XUL/Tworzenie_motyw%c3%b3w">tworzyć nowe motywy</a> poprzez zmianę stylów. Podstawowy wygląd wszystkich elementów, jak na przykład <a href="pl/Kurs_XUL/Paski_przewijania">pasek przewijania</a> i <a href="pl/Kurs_XUL/Kontrolki_wej%c5%9bcia#_Pola_wyboru_i_przyciski_opcji">pole wyboru</a> może być modyfikowane przez styl lub przez ustawienie atrybutów elementu.</p>
+
+<p>Niemniej jednak, XUL nie dostarcza możliwości, dzięki której mógłbyś zmienić sposób pracy wszystkich elementów. Na przykład, chcesz koniecznie zmienić działanie poszczególnych części funkcji scroll bar (paska przewijania). Do tego potrzebujesz języka <a href="pl/XBL">XBL</a>.</p>
+
+<p>XUL, XBL jest podobny do języka XML, więc ma podobną składnię. Następujący przykład pokazuje podstawowy szkielet pliku XBL:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="binding1"&gt;
+    &lt;!-- Zawartość, właściwość, metoda i zdarzenia opisujące są tutaj  --&gt;
+  &lt;/binding&gt;
+  &lt;binding id="binding2"&gt;
+    &lt;!-- Zawartość, właściwość, metoda i zdarzenia opisujące są tutaj  --&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+
+<p>The <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#bindings">bindings</a></code></code> element is the root element of an XBL file and contains one or more <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#binding">binding</a></code></code> elements. Each <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#binding">binding</a></code></code> element declares a single binding. The <code>id</code> attribute can be used to identify the binding, as in the example above. The template has two bindings, one called <code>binding1</code> and the other called <code>binding2</code>. One might be attached to a scroll bar and the other to a menu. A binding can be attached to any XUL element. If you use CSS classes, you can use as many different bindings as you need. Note the namespace on the <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#bindings">bindings</a></code></code> element in the template above. This declares that we are using XBL syntax.</p>
+
+<p>You assign a binding to an element by setting the CSS property <code><a href="pl/CSS/-moz-binding">-moz-binding</a></code> to the URL of the bindings file. For example:</p>
+
+<pre>scrollbar {
+    -moz-binding: url('chrome://findfile/content/findfile.xml#binding1');
+}
+</pre>
+
+<p>The URL points to the binding with the id 'binding1' in the file '<a class="external" rel="freelink">chrome://findfile/content/findfile.xml</a>'. The '#binding1' syntax is used to point to a specific binding, much like how you would point to an anchor in an HTML file. You will usually put all of your bindings in a single file. The result in this example, is that all scrollbar elements will have their behavior described by the binding 'binding1'.</p>
+
+<p>Wiązanie posiada pięć typów, które możemy zadeklarować:</p>
+
+<ol>
+ <li>Content: child elements that are added to the element that the binding is bound to.</li>
+ <li>Properties: properties added to the element. They can be accessed through a script.</li>
+ <li>Methods: methods added to the element. They can be called from a script.</li>
+ <li>Events: events, such as mouse clicks and keypresses that the element will respond to. The binding can add scripts to provide default handling. In addition new events can be defined.</li>
+ <li>Style: custom style properties that the XBL defined element has.</li>
+</ol>
+
+<h3 id="Przyk.C5.82ad_wi.C4.85zania" name="Przyk.C5.82ad_wi.C4.85zania">Przykład wiązania</h3>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> jest generowany wystarczająco tak jak możesz użyć do utworzenia elementu graficznego (poprzez to możesz użyć jakikolwiek element, nawet jeden zrobiony dla siebie). Przydzielając do <code>class</code> tagu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>, możesz łączyć oprawy tylko do tych do których należą te klasy. Następujący przykład demonstruje to.</p>
+
+<pre class="eval"><strong>XUL (example.xul):</strong>
+
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://example/skin/example.css</a>" type="text/css"?&gt;
+
+&lt;window
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;box class="okcancelbuttons"/&gt;
+&lt;/window&gt;
+
+<strong>CSS (example.css):</strong>
+
+box.okcancelbuttons {
+    -moz-binding: url('<a class="external" rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<strong>XBL (example.xml):</strong>
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="<span class="nowiki">http://www.mozilla.org/xbl</span>"
+         xmlns:xul="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;binding id="okcancel"&gt;
+    &lt;content&gt;
+      &lt;xul:button label="OK"/&gt;
+      &lt;xul:button label="Cancel"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+
+<p>Ten przykład tworzy okno z pojedynczym pudełkiem. Pudełko zostało zadeklarowane dla <code>class</code> z <code>okcancelbuttons</code>. Arkusz stylów łączy nazwę pliku, którego pola z klasą <code>okcancelbuttons</code> ma specjalne łączenie, definiując w pliku XBL. Możesz użyć inne elementy w dodatku <code><code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>, będący Twoim własnym znacznikiem:</p>
+
+<p>We'll look more at the details of the XBL part in the next section. However, to summarize, it causes two buttons to be added automatically inside the box, one an OK button and the other a Cancel button. W następnym artykule, zobaczymy jak utworzyć <a href="pl/Kurs_XUL/Tre%c5%9b%c4%87_anonimowa">treść korzystając się z XBL</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Plik_własności" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Treść_anonimowa">Następny  »</a></p>
+</div><p></p>

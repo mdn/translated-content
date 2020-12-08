@@ -1,0 +1,183 @@
+---
+title: <canvas>
+slug: Web/HTML/Element/canvas
+translation_of: Web/HTML/Element/canvas
+---
+<p><strong>HTML <code>&lt;canvas&gt;</code> Элемент </strong>может быть использован для отрисовки графики через скрипты (обычно используется <a href="/en-US/docs/Web/JavaScript">JavaScript</a>). Например, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внутри блока <code>&lt;canvas&gt;</code>. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript.</p>
+
+<p>Больше статей о canvas <a href="/en-US/docs/Web/API/Canvas_API">canvas topic page</a>.</p>
+
+<table class="properties" style="height: 537px; width: 437px;">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Embedded_content">embedded content</a>, palpable content.</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted content</th>
+   <td>Transparent но без <a href="/en-US/docs/HTML/Content_categories#Interactive_content">interactive content</a> descendants except(соглашаться?) для {{HTMLElement("a")}} елементы, {{HTMLElement("button")}} елементы, {{HTMLElement("input")}} елементы как {{htmlattrxref("type", "input")}} атрибут is <code>checkbox</code>, <code>radio</code>, или <code>button</code>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Tag omission</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted parent elements</th>
+   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing_content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLCanvasElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Атрибуты">Атрибуты</h2>
+
+<p>Этот элемент включает <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+
+<dl>
+ <dt>{{htmlattrdef("height")}}</dt>
+ <dd>Высота в координантном пространстве в CSS пикселях. По умолчанию 150.</dd>
+ <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}}</dt>
+ <dd>Дай холсту знать будет ли фактором или нет полупрозрачность. Если холст знает что нет полупрозрачности, производительность рисования может быть оптимизирована.</dd>
+ <dt>{{htmlattrdef("width")}}</dt>
+ <dd>Ширина в координантном пространстве в CSS пикселях. По умолчанию 300.</dd>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<h3 id="Обязательно_&lt;canvas>_тег">Обязательно <code>&lt;/canvas&gt;</code> тег</h3>
+
+<p>В отличии от {{HTMLElement("img")}} элемента, {{HTMLElement("canvas")}} элемент <strong>требует </strong>закрытия тега (<code>&lt;/canvas&gt;</code>).</p>
+
+<h3 id="Определение_размеров_холста">Определение размеров холста</h3>
+
+<p>Отображаемый размер холста может быть изменён используя stylesheet. Изображение масштабируется при рендеринге, чтобы соответствовать стилю размер. Если ваш рендеринг кажется искажённым, попытайтесь указать ваши атрибуты ширины и высоты точно в атрибутах <code>&lt;canvas&gt;</code>, и не используя CSS.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: html notranslate">&lt;canvas id="canvas" width="300" height="300"&gt;
+  Извините, ваш браузер нет поддерживает&amp;lt;canvas&amp;gt; элемент.
+&lt;/canvas&gt;
+</pre>
+
+<p>Если ваш холст не использует transparency, установите <code>moz-opaque</code> атрибут на canvas теге. Это информация может быть использована для оптимизации рендеринга. Однако, этот атрибут не был стандартизирован и работает только в браузерах основанных на движках рендеринга Mozilla .</p>
+
+<pre class="brush: html notranslate">&lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'the-canvas-element.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'the-canvas-element.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.8")}}<sup>[1]</sup><br>
+    {{CompatGeckoDesktop("6.0")}}<sup>[2]</sup><br>
+    {{CompatGeckoDesktop("12.0")}}<sup>[3]</sup></td>
+   <td>9.0</td>
+   <td>9.0<sup>[4]</sup></td>
+   <td>2.0<sup>[5]</sup></td>
+  </tr>
+  <tr>
+   <td><code>moz-opaque</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Android</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatGeckoDesktop("1.8")}}<sup>[1]</sup><br>
+    {{CompatGeckoDesktop("6.0")}}<sup>[2]</sup><br>
+    {{CompatGeckoDesktop("12.0")}}<sup>[3]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td><code>moz-opaque</code></td>
+   <td>{{CompatGeckoMobile("1.9.1")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Before Gecko 5.0 {{geckoRelease("5.0")}}, the canvas ширина и высота were signed integers instead of unsigned integers.</p>
+
+<p>[2] Prior to Gecko 6.0 {{geckoRelease("6.0")}}, a {{HTMLElement("canvas")}} element with a zero width or height would be rendered as if it had default dimensions.</p>
+
+<p>[3] Before Gecko 12.0 {{geckoRelease("12.0")}}, если JavaScript is disabled, the <code>&lt;canvas&gt;</code> element was being rendered instead of showing the fallback content as per the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">specification</a>. Сейчас the fallback контент is rendered instead.</p>
+
+<p>[4] See the <a href="http://www.opera.com/docs/changelogs/windows/900/">changelog for Opera 9.0</a>.</p>
+
+<p>[5] Although early versions of Apple's Safari browser don't require the closing tag, the specification indicates that it is required, so you should be sure to include it for broadest compatibility. Those versions of Safari (prior to version 2.0) will render the content of the fallback in addition to the canvas itself unless you use CSS tricks to mask it. Fortunately, users of these versions of Safari are rare nowadays.</p>
+
+<h2 id="См.также">См.также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Canvas_API">MDN canvas portal</a></li>
+ <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a></li>
+ <li><a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">Canvas cheat sheet</a></li>
+ <li><a href="/en-US/demos/tag/tech:canvas">Canvas-related demos</a></li>
+ <li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html">Canvas introduction by Apple</a></li>
+</ul>
+
+<div>{{HTMLRef}}</div>

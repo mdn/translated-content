@@ -1,0 +1,105 @@
+---
+title: History.length
+slug: Web/API/History/length
+tags:
+  - API
+  - HTML
+  - History API
+  - Read-only
+  - WebAPI
+  - Свойство
+  - Справка
+translation_of: Web/API/History/length
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p><code><strong>History</strong></code><strong><code>.length —</code></strong><code> это свойство объекта History, доступное только для чтения, которое возвращает число (Integer), обозначающее количество элементов в истории сессии, в том числе для загруженной страницы. Например, если открыть страницу в новой вкладке это свойство вернёт 1.</code></p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>length</em> = <em>history</em>.length;
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">var result = window.history.length; // Вернёт размер истории текущей сессии</pre>
+
+<p> </p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "history.html#dom-history-length", "History.length")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Нет изменений в {{SpecName("HTML5 W3C")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-history-length", "History.length")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("History")}}</li>
+</ul>

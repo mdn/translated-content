@@ -1,0 +1,34 @@
+---
+title: Building Firefox with Rust code
+slug: Mozilla/Firefox/Building_Firefox_with_Rust_code
+translation_of: Archive/Mozilla/Firefox/Building_Firefox_with_Rust_code
+---
+<div>{{FirefoxSidebar}}</div><p>Em maio de 2015, foi lançada a primeira versão 1.0 estável da <a href="http://www.rust-lang.org/">linguagem de programação Rust</a>, e vários experimentos para escrever partes do Gecko em Rust iniciaram. Esta página é um simples guia para pessoas trabalhando nesta área.</p>
+
+<h2 id="Adicionando_código_Rust">Adicionando código Rust</h2>
+
+<p>O suporte básico para buildar códigos em Rust foi lançado no <a class="bz_bug_link
+          bz_status_RESOLVED  bz_closed" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1161339" title="RESOLVED FIXED - Support rust files in moz.build SOURCES">bug 1161339</a>. Se você possui <em>rustc</em> no seu path, você pode adicionar arquivos .rs ao SOURCES em moz.build. Então adicione</p>
+
+<pre>ac_add_options --enable-rust</pre>
+
+<p>ao seu <a href="/en-US/docs/Configuring_Build_Options">mozconfig</a> e provavelmente funcionará.</p>
+
+<p>A biblioteca padrão do Rust utiliza armazenamento thread-local, que não é suportado no MacOS X 2.6, então se você está buildando em um Mac, você também precisará disso:</p>
+
+<pre>ac_add_options --enable-macos-target=10.7</pre>
+
+<p>Alternativamente, você pode compilar com um conjunto de ferramentas costumizadas com -<code>-disable-elf-tls</code>. Veja <a class="bz_bug_link
+          bz_status_NEW " href="https://bugzilla.mozilla.org/show_bug.cgi?id=1164109" title="NEW - rust code fails to link on macosx because of thread-local storage">bug 1164109</a> para detalhes.</p>
+
+<p>Graças as limitações do <em>cargo</em> e do sistema de build do Firefox, atualmente nós buildamos uma biblioteca estática stand-alone para cada arquivo rust listado em SOURCES. Você precisa portanto listar apenas os arquivos rust de alto nível. Tudo precisa ser um único <em>crate</em>, como uma compilação manual unificada. O compilador rust irá pesquisar por módulos interiores pelo nome do arquivo-fonte, mas referências <em>crate</em> externas não serão resolvidas.</p>
+
+<p>Veja o <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1135640">bug 1135640</a> ('oxidation') para monitoramento global.</p>
+
+<h2 id="Testando_código_Rust">Testando código Rust</h2>
+
+<p>There's a simple linkage teste unitários in the tree. Você pode utilizá-lo para verificar se Rust está habilitado e funcionando com your build setup.</p>
+
+<pre>./mach gtest rust.*</pre>
+
+<p>Look for the <strong>rust.CallFromCpp</strong> test to pass, along with any others.</p>

@@ -1,0 +1,76 @@
+---
+title: Группирующие элементы
+slug: Mozilla/Tech/XUL/Руководство_по_XUL/Группирующие_элементы
+tags:
+  - Руководство_по_XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Groupboxes
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/Руководство_по_XUL:Box_Model_Details" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/Руководство_по_XUL:Adding_More_Elements">Следующая статья  »</a></p>
+</div>
+<p></p><p>В этом разделе рассказывается, как объединять элементы с помощью группирующей рамки.
+</p>
+<h3 id=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D1.83.D1.8E.D1.89.D0.B0.D1.8F_.D1.80.D0.B0.D0.BC.D0.BA.D0.B0" name=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D1.83.D1.8E.D1.89.D0.B0.D1.8F_.D1.80.D0.B0.D0.BC.D0.BA.D0.B0"> Группирующая рамка </h3>
+<p>Язык HTML предоставляет элемент <code>fieldset</code>, с помощью которого можно объединять элементы в группы. Обычно, вокруг группы рисуется рамка, отражающая связь между элементами. Примером может служить группа из нескольких флажков. В языке XUL для тех же целей предлагается использовать элемент <code><code><a href="/ru/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code>.
+</p><p>Как видно из названия, <code><code><a href="/ru/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> — ни что иное как разновидность бокса. Это значит, что элементы внутри него будут выравниваться по правилам боксов. Есть два различия между группирующей рамкой и обычными боксами:
+</p>
+<ul><li> По умолчанию вокруг нее рисуется рамка со скошенными углами. Это поведение всегда можно изменить используя CSS.
+</li><li> Группирующая рамка может содержать заголовок, который располагается над верхней границей рамки.
+</li></ul>
+<p>Так как группирующие рамки являются видом боксов, для них можно использовать атрибуты присущие обычным боксам, например <code><code id="a-orient"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/orient">orient</a></code></code> и <code><code id="a-flex"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/flex">flex</a></code></code>. Вы можете помещать внутрь группирующей рамки любые элементы, хотя обычно они должны быть чем-то связаны.
+</p><p>Поместить метку на верх группирующей рамки можно с помощью элемента <code><code><a href="/ru/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code>. Этот элемент во многом похож на <code>legend</code> из HTML. Достаточно поместить один элемент <code><code><a href="/ru/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> в качестве первого дочернего элемента.
+</p><p>Ниже приведен простой пример группирующей рамки:
+</p>
+<h5 id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80:_.D0.9F.D1.80.D0.BE.D1.81.D1.82.D0.B0.D1.8F_.D0.B3.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D1.83.D1.8E.D1.89.D0.B0.D1.8F_.D1.80.D0.B0.D0.BC.D0.BA.D0.B0" name=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80:_.D0.9F.D1.80.D0.BE.D1.81.D1.82.D0.B0.D1.8F_.D0.B3.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D1.83.D1.8E.D1.89.D0.B0.D1.8F_.D1.80.D0.B0.D0.BC.D0.BA.D0.B0"> Пример: Простая группирующая рамка </h5>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt">Исходный код</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul">Просмотреть</a>
+</p>
+<div class="float-right"><img alt="Image:titledbox1.png"></div>
+<pre>&lt;groupbox&gt;
+  &lt;caption label="Answer"/&gt;
+  &lt;description value="Banana"/&gt;
+  &lt;description value="Tangerine"/&gt;
+  &lt;description value="Phone Booth"/&gt;
+  &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>В результате будут выведены четыре обведенные рамкой строки с меткой <i>Answer</i>. Обратите внимание, что по умолчанию группирующая рамка выстраивает элементы вертикально, это нужно для того, чтобы получился столбец из текстовых элементов.
+</p><p>Вы так же можете добавлять в элемент <code><code><a href="/ru/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> вложенные элементы, чтобы сделать его более разнообразным. Например, панель выбора шрифта в Мозиле использует в качестве заголовка выпадающее меню. Любые другие элементы так же могут быть включены в заголовок, скорее всего вам пригодятся флажки и выпадающие списки.
+</p>
+<h5 id=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D1.83.D1.8E.D1.89.D0.B0.D1.8F_.D1.80.D0.B0.D0.BC.D0.BA.D0.B0_.D1.81_.D1.84.D0.BB.D0.B0.D0.B6.D0.BA.D0.BE.D0.BC_.D0.B2_.D0.B7.D0.B0.D0.B3.D0.BE.D0.BB.D0.BE.D0.B2.D0.BA.D0.B5" name=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D1.83.D1.8E.D1.89.D0.B0.D1.8F_.D1.80.D0.B0.D0.BC.D0.BA.D0.B0_.D1.81_.D1.84.D0.BB.D0.B0.D0.B6.D0.BA.D0.BE.D0.BC_.D0.B2_.D0.B7.D0.B0.D0.B3.D0.BE.D0.BB.D0.BE.D0.B2.D0.BA.D0.B5"> Группирующая рамка с флажком в заголовке </h5>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt">Исходный код</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul">Просмотреть</a>
+</p>
+<div class="float-right"><img alt="Image:groupbox2.png"></div>
+<pre>&lt;groupbox flex="1"&gt;
+  &lt;caption&gt;
+    &lt;checkbox label="Enable Backups"/&gt;
+  &lt;/caption&gt;
+  &lt;hbox&gt;
+    &lt;label control="dir" value="Directory:"/&gt;
+    &lt;textbox id="dir" flex="1"/&gt;
+  &lt;/hbox&gt;
+  &lt;checkbox label="Compress archived files"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>В этом примере в качестве заголовка используется <a href="ru/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">checkbox</a>. Можно написать скрипт, помечающий содержимое группирующей рамки активным или неактивным в зависимости от состояния флажка. На примере группирующая рамка содержит горизонтальный элемент <code><a href="/ru/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> с элементами <code><a href="/ru/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> и <code><a href="/ru/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> внутри. Оба элемента <code><a href="/ru/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> и <code><a href="/ru/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> были сделаны эластичными, и текстовое поле в результате может менять ширину вместе с окном. Дополнительный флажок появился снизу текстового поля потому, что у группирующей рамки вертикальная ориентация элементов. В следующем разделе мы добавим группирующую рамку в наше диалоговое окно поиска файлов.
+</p>
+<h3 id=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D1.8B_.D1.80.D0.B0.D0.B4.D0.B8.D0.BE.D0.BA.D0.BD.D0.BE.D0.BF.D0.BE.D0.BA" name=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D1.8B_.D1.80.D0.B0.D0.B4.D0.B8.D0.BE.D0.BA.D0.BD.D0.BE.D0.BF.D0.BE.D0.BA"> Группы радиокнопок </h3>
+<p>Чтобы сгруппировать несколько радиокнопок, воспользуйтесь элементом <code><code><a href="/ru/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code>. Элемент <code><code><a href="/ru/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> является типом бокса. Вы можете помещать в него любые элементы, и все они, кроме элементов <code><code><a href="/ru/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code>, будут вести себя так же, как и внутри обычных боксов.
+</p><p>Любые радиокнопки, содержащиеся в элементе группы, будут объединены друг с другом, даже если они находятся внутри еще каких-либо элементов. Это полезно при добавлении разных элементов, придающих группе кнопок дополнительную структуру. Этот прием отражен в следующем примере:
+</p><p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt">Исходный код</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul">Просмотреть</a>
+</p>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="no" value="no" label="No Number"/&gt;
+  &lt;radio id="random" value="random" label="Random Number"/&gt;
+  &lt;hbox&gt;
+    &lt;radio id="specify" value="specify" label="Specify Number:"/&gt;
+    &lt;textbox id="specificnumber"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>Заметьте, что вокруг элемента <code><code><a href="/ru/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> по умолчанию рамка не рисуется. Можно поместить группу радиокнопок внутрь элемента <code><code><a href="/ru/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code>, чтобы появилась рамка, и можно было добавить заголовок.
+</p><p>Далее, используя только что полученные знания, мы добавим <a href="ru/XUL_Tutorial/Adding_More_Elements">еще немного элементов в наш пример поискового диалога</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Box_Model_Details" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Adding_More_Elements">Следующая статья  »</a></p>
+</div>
+<p></p>

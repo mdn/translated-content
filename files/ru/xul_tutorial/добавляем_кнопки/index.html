@@ -1,0 +1,61 @@
+---
+title: Добавляем кнопки
+slug: XUL_Tutorial/Добавляем_кнопки
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Adding_Labels_and_Images">Следующая статья  »</a></p>
+</div><p></p>
+<p>В этой статье мы посмотрим как добавлять некоторые простые кнопки к окну.</p>
+<h3 id="Добавление_кнопок_к_окну">Добавление кнопок к окну</h3>
+<p>В окне, которое мы создали, не было ничего и оно было неинтересным. В этой статье мы добавим 2 кнопки: кнопку поиска и кнопку отмены. Мы также изучим простой способ позиционирования их в окне.</p>
+<p>Подобно HTML, XUL имеет определённое количество тегов, которые могут быть использованы для создания элементов пользовательского интерфейса. Самый базовый из них - тег <code><code><a href="/ru/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>. Этот элемент используется для создания простых кнопок.</p>
+<p>Кнопка имеет ассоциированные с ней свойства: <code>label</code> и <code>image</code>. Вам нужна одна или обе из них. Таким образом, кнопка может иметь только label, только image, или label и image одновременно. Кнопки используются например в качестве Ок и Отмена в диалогах.</p>
+<h4 id="Синтаксис_кнопок">Синтаксис кнопок</h4>
+<p>Тег <code><code><a href="/ru/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> имеет следующий синтаксис:</p>
+<pre>&lt;button
+    id="identifier"
+    class="dialog"
+    label="OK"
+    image="images/image.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+<p>Атрибуты описаны ниже, все они не являются обязательными:</p>
+<dl> <dt><code id="a-id"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/id">id</a></code> </dt> <dd>Уникальный идентификатор, с помощью которого можно идентифицировать кнопки. Вы будете видеть этот атрибут на всех кнопках. Вы будете использовать его, когда Вам нужно будет ссылаться на кнопку в таблице стилей, или в скрипте. Вам следует добавлять этот атрибут к большинству элементов. Для простоты, идентификаторы в этом документе прописаны не везде.</dd> <dt><code id="a-class"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/class">class</a></code> </dt> <dd>Класс стиля кнопки. Это работает так же, как и в HTML. Атрибут используется для указания стиля, в соответствии с которым будет выглядеть кнопка. В данном случает используется значение <code>dialog</code>. В большинстве случаев вы не будете использовать для кнопки этот атрибут.</dd> <dt><code id="a-label"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/label">label</a></code> </dt> <dd>Текстовая метка, которая будет выведена на кнопке. Например, <em>OK</em> или <em>Отмена</em>. Если не указывать этот атрибут, на кнопке текста не будет.</dd> <dt><code id="a-image"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/image">image</a></code> </dt> <dd>URL изображения, которое появится на кнопке. Если не указать данный атрибут, на кнопке не будет изображения. Вы также можете задать изображение в листе стилей (stylesheet) используя значение <code><a href="/en/CSS/list-style-image" title="en/CSS/list-style-image">list-style-image</a></code>.</dd> <dt><code id="a-disabled"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/disabled">disabled</a></code> </dt> <dd>Если данный атрибут установлен в <code>true</code>, кнопка отключена. Как правило это обозначается серым цветом надписи на ней. Если кнопка отключена, то функции, вызываемые ею, не могут быть выполнены. Если данный атрибут отсутствует вообще, кнопка включена. Менять состояние кнопки на отключенное вы можете с помощью <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>.</dd> <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/accesskey">accesskey</a></code> </dt> <dd>Этот атрибут устанавливает букву, которая может использоваться для быстрого вызова функции кнопки. Эта буква должна быть в строке текстовой метки и, как правило, отображается подчеркнутой. Когда пользователь нажимает ALT (или клавишу с такой же функцией, которая может называться иначе на другой платформе) и данную букву доступа (accesskey), кнопка получает фокус ввода из любого положения в окне.</dd>
+</dl>
+<p>Заметьте, что кнопки поддерживают больше атрибутов, чем те, которые перечислены выше. Другие атрибуты будут <a href="/en/XUL_Tutorial/More_Button_Features" title="en/XUL_Tutorial/More_Button_Features">описаны позже</a>.</p>
+<h4 id="Несколько_примеров_кнопок">Несколько примеров кнопок</h4>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">Исходный код</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">Просмотреть</a></p>
+<div class="float-right"><img alt="Image:buttons1.png" class="internal" src="/@api/deki/files/593/=Buttons1.png"></div>
+<pre>&lt;button label="Normal"/&gt;
+&lt;button label="Disabled" disabled="true"/&gt;
+</pre>
+<p>Примеры выше будут генерировать кнопки, показанные на рисунке. Первая кнопка - это обычная кнопка. Вторая кнопка отключена, поэтому текст на ней выводится серого цвета.</p>
+<p>Начнем с создания простой кнопки поиска для утилиты поиска файлов. Пример кода ниже показывает, как это можно сделать.</p>
+<pre>&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<div class="note">Заметьте, что Firefox не позволяет вам открывать chrome окна с веб-страниц, поэтому ссылки Просмотра в руководстве откроются в обычном окнах браузера. Из-за этого кнопки появятся растянутыми на всю ширину окна. Вы можете добавить align="start" в тег окна, чтобы предотвратить такое растягивание.</div>
+<div class="highlight">
+<h5 id="Пример_findfile.xul">Пример findfile.xul</h5>
+<p>Давайте добавим этот код в файл findfile.xul, который мы создали в предыдущей главе. Код необходимо вставить между тегами <code><code><a href="/ru/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>. В листинге ниже добавляемый код выделен красным цветом:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window id="findfile-window"
+        title="Find Files"
+        orient="horizontal"
+        xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+  <span style="color: rgb(255, 0, 0);"><span class="highlightred">&lt;button id="find-button" label="Find"/&gt;</span><br>  <span class="highlightred">&lt;button id="cancel-button" label="Cancel"/&gt;</span><br><br></span>&lt;/window&gt;
+</pre>
+<div class="float-right"><img alt="Image:buttons2.png" class="internal" src="/@api/deki/files/599/=Buttons2.png"></div>
+<p>Вы увидите, что также добавилась кнопка "Cancel". Окно имеет горизонтальное расположение, поэтому кнопки выводятся рядом друг с другом. Если вы откроете этот файл в Mozilla, вы увидите что-то подобное тому, что приведено на рисунке выше.</p>
+</div>
+<p> </p>
+<div class="note">Заметьте, что мы не должны помещать текстовые метки непосредственно в XUL файл. Вместо этого мы будем использовать <a href="/en/XUL_Tutorial/Localization" title="en/XUL_Tutorial/Localization">объекты, поэтому текст можно будет легко перевести на другой язык</a>.</div>
+<p>В следующей главе мы узнаем как <a href="/en/XUL_Tutorial/Adding_Labels_and_Images" title="en/XUL_Tutorial/Adding_Labels_and_Images">добавлять метки и изображения в окно XUL</a>.</p>
+<p><small>См.также <a href="/en/XUL_Tutorial/More_Button_Features" title="en/XUL_Tutorial/More_Button_Features">дополнительные возможности кнопок</a></small></p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Adding_Labels_and_Images">Следующая статья  »</a></p>
+</div><p></p>
+<p></p>

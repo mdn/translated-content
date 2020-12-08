@@ -1,0 +1,35 @@
+---
+title: Components.utils
+slug: Components.utils
+tags:
+  - Wszystkie_kategorie
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils
+---
+<p>
+</p><p><code>Components.utils</code> to kolekcja różnych przydatnych, ale nie niezbędnych funkcji XPConnect. Interfejs tego obiektu został zdefiniowany w {{ Source("js/src/xpconnect/idl/xpccomponents.idl") }}. Obecnie obiekt ten ma następujące pola i metody:
+</p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Własność</th>
+<th>Opis</th>
+</tr>
+<tr>
+<td><a href="pl/Components.utils.lookupMethod">lookupMethod</a></td>
+<td>Odszukuje natywną (tj. zdefiniowaną w interfejsie) metodę lub własność obiektu XPCOM. Spełnia tę samą funkcję co <a href="pl/XPCNativeWrapper">XPCNativeWrapper</a>.</td>
+</tr>
+<tr>
+<td><a href="pl/Components.utils.reportError">reportError</a></td>
+<td>Zgłasza obiekt Error JavaScriptu do konsoli błędów.</td>
+</tr><tr>
+<td><a href="pl/Components.utils.Sandbox">Sandbox</a></td>
+<td>Tworzy obiekty piaskownicy (sandbox) do wykorzystania w <code>evalInSandbox</code>.</td>
+</tr>
+<tr>
+<td><a href="pl/Components.utils.evalInSandbox">evalInSandbox</a></td>
+<td>Wykonuje kod JavaScriptu w piaskownicy, zwykle wykorzystywana do wykonywania kodu z ograniczonymi uprawnieniami.</td>
+</tr>
+</tbody></table>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Components.utils", "fr": "fr/Components.utils", "ja": "ja/Components.utils" } ) }}

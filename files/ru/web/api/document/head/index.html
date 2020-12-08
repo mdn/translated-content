@@ -1,0 +1,87 @@
+---
+title: Document.head
+slug: Web/API/Document/head
+tags:
+  - API
+  - Document
+  - Property
+translation_of: Web/API/Document/head
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p>Возвращает элемент {{HTMLElement("head")}} текущего документа. Если имеется более одного элемента <code>&lt;head&gt;</code>, будет возвращен первый из них.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate"><em>var objRef</em> = document.head;
+</pre>
+
+
+
+<h3 id="Значение">Значение</h3>
+
+<p>{{domxref("HTMLHeadElement")}}.</p>
+
+
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="notranslate"><code>&lt;!doctype html&gt;
+&lt;head id="my-document-head"&gt;
+  &lt;title&gt;Example: using document.head&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;script&gt;
+  var theHead = document.head;
+
+  console.log(theHead.id); // "my-document-head";
+
+  console.log( theHead === document.querySelector("head") ); // true
+&lt;/script&gt;</code></pre>
+
+<h2 id="Примечание">Примечание</h2>
+
+<p><code>document.head</code> доступно только для чтения. Присвоить значение этому свойству нельзя. При попытке это сделать ошибка вызвана не будет, только если вы не используете <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a>. В данном случае будет вызвано {{jsxref("TypeError")}} .</p>
+
+
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','dom.html#dom-document-head','Document.head')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Начальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1','dom.html#dom-document-head','Document.head')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C','dom.html#dom-document-head','Document.head')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+
+<div class="hidden">
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
+</div>
+
+<p>{{Compat("api.Document.head")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("document.body")}}</li>
+</ul>

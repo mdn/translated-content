@@ -1,0 +1,421 @@
+---
+title: Web Activities
+slug: WebAPI/Web_Activities
+translation_of: Archive/B2G_OS/API/Web_Activities
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{B2GOnlyHeader2('installed')}}</p>
+<h2 id="Sumário">Sumário</h2>
+<p>Atividades Web define um modo para as aplicações delegarem uma atividade para a outra (geralmente escolhida pelo usuário) aplicação.</p>
+<p>Atividades Web estão atualmente habilitadas no Firefox OS apenas, e toda a especificação está <a href="https://wiki.mozilla.org/WebAPI/WebActivities" title="https://wiki.mozilla.org/WebAPI/WebActivities">disponível no WikiMo</a>.</p>
+<h2 id="Atividades">Atividades</h2>
+<p>An activity is something a user wants to do: pick an image, send an e-mail, etc. App authors may want to define an app that can handle an activity or that can delegate to an activity.</p>
+<h2 id="Registering_an_App_as_an_activity_handler">Registering an App as an activity handler</h2>
+<p>App authors can build an app that will handle one or more activities. That means that the app will be callable by another app to perform some specific actions defined by the activity. For example, let's pretend we want to build a photo manager. It could be used by another application to pick a photo. As an activity handler our app will become part of the other application's workflow.</p>
+<h3 id="Registrar_uma_atividade">Registrar uma atividade</h3>
+<p>There is currently only one way to register an app as an activity handler: declaring it in the app manifest.</p>
+<div class="note">
+ <p><strong>Note:</strong> Any application can register itself as an activity handler for any existing activity or create its own activity. In both cases it's done the same way within the app manifest. However, when creating a new activity, it is considered best practice to avoid activities' name collisions by prefixing the name of the new activity with a URL (e.g.,
+  <i>
+   example.org/myActivity</i>
+  or
+  <i>
+   org.example.myActivity</i>
+  ).</p>
+</div>
+<h4 id="App_manifest_(a.k.a._declaration_registration)">App manifest (a.k.a. declaration registration)</h4>
+<p>We have to use the <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">app manifest</a> to express that our app is expected to handle an activity as in this example:</p>
+<pre class="brush: js">{
+  // Other App Manifest related stuff
+
+  // Activity registration
+  "activities": {
+
+    // The name of the activity to handle (here "pick")
+    "pick": {
+      "href": "./pick.html",
+      "disposition": "inline",
+      "filters": {
+        "type": ["image/*","image/jpeg","image/png"]
+      },
+      "returnValue": true
+    }
+  }
+}
+</pre>
+<h4 id="Dynamic_registration">Dynamic registration</h4>
+<p>There are plans to let an app register itself dynamically by using the {{domxref("window.navigator","navigator")}} object. However, this API is not available yet. See {{bug("775181")}} to follow the work about that specific API.</p>
+<h4 id="Activity_handler_description">Activity handler description</h4>
+<dl>
+ <dt>
+  <code>href</code></dt>
+ <dd>
+  When another app or Web page initiates an activity that is supported by this app, if this app is chosen to perform the activity, this specifies the page that will be opened. It will be opened in the manner specified by the <code>disposition</code> property.
+  <div class="note">
+   <strong>Note:</strong> The URL of this page is restricted by the rules of the <a href="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript" title="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript">same origin policy</a>.</div>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  <code>disposition</code> {{optional_inline()}}</dt>
+</dl>
+<dl>
+ <dd>
+  Specifies how the page specified in <code>href</code> is presented when an activity is invoked. The value, if specified, must be one of the following (if omitted, defaults to <code>window</code>):
+  <ul>
+   <li><strong><code>window</code></strong> - The page handling the activity is opened in a new "window" (on a mobile device this view will replace the original app that requested the activity). The page must call {{domxref("window.navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}} for each activity it supports and subsequently execute the activity for which it receives a message.</li>
+   <li><strong><code>inline</code></strong> - The page that handles the activity will open in an overlay (on a mobile device this will be rendered in a popup over the original app that requested the activity). Subsequent behavior is exactly the same as if <code>disposition</code> were <code>window</code>.</li>
+  </ul>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  <code>returnValue</code> {{optional_inline()}}</dt>
+ <dd>
+  States if the activity will return a value or not. If an application doesn't plan to return a value, the UA may send a
+  <i>
+   success</i>
+  event as soon as an application has been picked. If a value is expected, the activity handler must call {{domxref("MozActivityRequestHandler.postResult()")}} if the activity is successful or {{domxref("MozActivityRequestHandler.postError()")}} if the activity fails (where {{domxref("MozActivityRequestHandler")}} is the type of the first argument provided to the function specified within {{domxref("window.navigator.mozSetMessageHandler()","mozSetMessageHandler")}} by the activity handler). The <em>success</em> or <em>error</em> event will be respectively fired after {{domxref("MozActivityRequestHandler.postResult()","postResult")}} or {{domxref("MozActivityRequestHandler.postError()","postError")}} has been called by the activity handler.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>filters</code> {{optional_inline()}}</dt>
+ <dd>
+  A dictionary where each property of which specifies a filter. These filters will be applied while determining apps suitable for handling a given activity. Filter names are free-form text and should mirror {{domxref("MozActivityOptions.data","data")}} properties' names from {{domxref("MozActivityOptions")}}. Filters' values are either a basic value (string or number), an array of basic values, or a filter definition object. An activity will be considered as able to handle an activity only if the filters are all satisfied.</dd>
+</dl>
+<p>The way filters are handled depend on each filter value:</p>
+<ul>
+ <li>If the filter value is a basic value, the corresponding {{domxref("MozActivityOptions.data")}} property is optional but if the property exist it must have the same value as the one provided by the filter.</li>
+ <li>If the filter value is an array of basic values, the corresponding {{domxref("MozActivityOptions.data")}} property is optional but if the property exists its value must be equal to one of the values available in the array provided by the filter.</li>
+ <li>If the filter value is a filter definition object, the filter will be satisfied if the corresponding {{domxref("MozActivityOptions.data")}} property follows the rules defined by the object. A filter definition object can have the following properties:
+  <ul>
+   <li><code>required</code>: A boolean that indicates if the corresponding {{domxref("MozActivityOptions.data")}} property must exist (<code>true</code>) or not (<code>false</code>).</li>
+   <li><code>value</code>: A basic value or an array of basic value. The corresponding {{domxref("MozActivityOptions.data")}} property value must be equal to one of the values defined in the filter.</li>
+   <li><code>min</code>: If the expected value is a number, the corresponding {{domxref("MozActivityOptions.data")}} property value must be greater than or equal to that value.</li>
+   <li><code>max</code>: If the expected value is a number, the corresponding {{domxref("MozActivityOptions.data")}} property value must be lesser than or equal to that value.</li>
+   <li><code>pattern</code>: A string pattern following the <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">JavaScript regular expression</a> syntax. The corresponding {{domxref("MozActivityOptions.data")}} property value must match that pattern. <strong>This is supported in Firefox OS from v1.2.</strong></li>
+   <li><code>patternFlags</code>: If the <code>pattern</code> property is used, this property can be used to provide some extra regular expression flag such as <code>i</code> or <code>g</code>. <strong>This is supported in Firefox OS from v1.2.</strong></li>
+   <li><code>regexp</code>: A string containing a regexp litteral following the <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">JavaScript regular expression</a> syntax. The corresponding {{domxref("MozActivityOptions.data")}} property value must match that pattern. In contrary to the pattern flag, this can match only part of the value, therefore you must use the metacharacters ^ and $ to respectively match the start and the end of the string. <strong>This is supported in Firefox OS v1.0 and v1.1 only.</strong> Therefore you're advised to use both <code>pattern</code> and <code>regexp</code>.</li>
+  </ul>
+ </li>
+</ul>
+<h2 id="Handle_an_activity">Handle an activity</h2>
+<p>Once our application is declared as an activity handler, we have to make it concrete by performing some actions when receiving an activity request from another app.</p>
+<p>To handle the activity, we have to register a function that will perform all the necessary actions. To do so, we need to set a message handler with {{domxref("window.navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}}, specifically assigned to the <code>'activity'</code> message (and not the name of the activity). A {{domxref("MozActivityRequestHandler")}} object is passed as an argument of the activity handler function.</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  // Do something to handle the activity
+});</pre>
+<p>As the activity handler function is performing an action, it will use the activity request to retrieve information about the activity and to send back an answer if necessary.</p>
+<p>The app that calls the activity has to provide some data (see below). This data can be reached through the request's {{domxref("MozActivityRequestHandler.source","source")}} properties which is a {{domxref("MozActivityOptions")}} object. This object provides the {{domxref("MozActivityOptions.name","name")}} of the activity call and the associated {{domxref("MozActivityOptions.data","data")}}.</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // Do something to handle the activity
+  }
+});</pre>
+<p>Once we have performed all the actions to handle the activity, we can call the request's {{domxref("MozActivityRequestHandler.postResult()","postResult()")}} method to send the result back to the app that delegated the activity.</p>
+<p>If something goes wrong we can call the request's {{domxref("MozActivityRequestHandler.postError()","postError()")}} method to send back an error message about the activity.</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // Do something to handle the activity
+    ...
+
+    // Send back the result
+    if (picture) {
+      activityRequest.postResult(picture);
+    } else {
+      activityRequest.postError("Unable to provide a picture");
+    }
+  }
+});</pre>
+<div class="note">
+ <p><strong>Note:</strong> UA is expected to send an error anyway at some point if neither {{domxref("MozActivityRequestHandler.postError()","postError")}} nor {{domxref("MozActivityRequestHandler.postResult()","postResult()")}} are called--for example, if the user leaves the application (closes the tab on desktop or goes back to the home screen on a mobile device).</p>
+</div>
+<h2 id="Starting_an_activity">Starting an activity</h2>
+<p>On the other side of <em>Web Activities</em>, there are apps that want to delegate an activity to our app. To perform such delegation, the apps have to call an activity by instantiating a {{domxref("MozActivity")}} object. Such objects are nothing less than {{domxref("DOMRequest")}} objects that allow to wait for any response from the activity handler. As soon as the object is constructed, the activity is started, and the UI is shown to the user as soon as possible.</p>
+<pre class="brush: js" id=".C2.A0">var activity = new MozActivity({
+  // Ask for the "pick" activity
+  name: "pick",
+
+  // Provide the data required by the filters of the activity
+  data: {
+    type: "image/jpeg"
+  }
+});
+
+activity.onsuccess = function() {
+  var picture = this.result;
+  console.log("A picture has been retrieved");
+};
+
+activity.onerror = function() {
+  console.log(this.error);
+};
+</pre>
+<h3 id="Firefox_OS_activities">Firefox OS activities</h3>
+<p><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia">Gaia</a>, the native interface for Firefox OS, provides many built-in applications that define basic activities. Those activities are the following:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Application</th>
+   <th scope="col">Expected Data (filters)</th>
+   <th scope="col">Comments</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>browse</code></td>
+   <td>Gallery</td>
+   <td>
+    <pre class="brush: js">
+type: "photos"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>configure</code></td>
+   <td>Settings</td>
+   <td>
+    <pre class="brush: js">
+target: "device"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/balance</code></td>
+   <td>Costcontrol</td>
+   <td>None</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/data_usage</code></td>
+   <td>Costcontrol</td>
+   <td>None</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/telephony</code></td>
+   <td>Costcontrol</td>
+   <td>None</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>dial</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webtelephony/number",
+number: {
+  regexp:/^[\\d\\s+#*().-]{0,50}$/
+}</pre>
+   </td>
+   <td>Used when an app wants to pass a phone call.</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="3"><code>new</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td>Used when an app wants to create a new contact entry.</td>
+  </tr>
+  <tr>
+   <td>Email</td>
+   <td>
+    <pre class="brush: js">
+type: "mail"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>SMS</td>
+   <td>
+    <pre class="brush: js" id="LC48">
+type: "websms/sms",
+number: {
+  regexp:/^[\\w\\s+#*().-]{0,50}$/
+}</pre>
+   </td>
+   <td>Used when an app wants to send an SMS.</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4"><code>open</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Gallery</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/bmp"
+]</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Music</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "audio/mpeg",
+  "audio/ogg",
+  "audio/mp4"
+]</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "video/webm",
+  "video/mp4",
+  "video/3gpp",
+  "video/youtube"
+]</pre>
+    <p>Also expect a <code>blob</code> property which is a {{domxref("Blob")}} object.</p>
+   </td>
+   <td>Used when an app wants to display a video (the <code>view</code> activity allows to do the same).</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="2"><code>pick</code></td>
+   <td>Camera, Gallery, Wallpaper</td>
+   <td>
+    <pre class="brush: js">
+type: ["image/*", "image/jpeg"]</pre>
+   </td>
+   <td>Used when an app wants to get a picture.</td>
+  </tr>
+  <tr>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "webcontacts/contact",
+  "webcontacts/email"
+]</pre>
+   </td>
+   <td>Used when an app wants to retrieve some contact information or an e-mail.</td>
+  </tr>
+  <tr>
+   <td><code>record</code></td>
+   <td>Camera</td>
+   <td>
+    <pre class="brush: js">
+type: ["photos", "videos"]</pre>
+   </td>
+   <td>Used when an app wants to record some video.</td>
+  </tr>
+  <tr>
+   <td><code>save-bookmark</code></td>
+   <td>Homescreen</td>
+   <td>
+    <pre class="brush: js" id="LC46">
+type: "url",
+url: {
+  required:true,
+  regexp:/^https?:/
+}</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="2"><code>share</code></td>
+   <td>Bluetooth</td>
+   <td>
+    <pre class="brush: js">
+number: 1
+</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Email, Wallpaper</td>
+   <td>
+    <pre class="brush: js">
+type: "image/*"</pre>
+   </td>
+   <td>Used when an app wants to share an image.</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4"><code>view</code></td>
+   <td>Browser</td>
+   <td>
+    <pre class="brush: js">
+type: "url"
+url: {
+  required: true,
+  regexp: /^https?:.{1,16384}$/
+}</pre>
+   </td>
+   <td>Used when an app wants to open a URL.</td>
+  </tr>
+  <tr>
+   <td>Email</td>
+   <td>
+    <pre class="brush: js" id="LC64">
+type: "url",
+url: {
+  required:true,
+  regexp:/^mailto:/
+}</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>PDFs</td>
+   <td>
+    <pre class="brush: js">
+type: "application/pdf"</pre>
+   </td>
+   <td>Used when an app wants to display the content of a PDF document.</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "video/webm",
+  "video/mp4",
+  "video/3gpp",
+  "video/youtube"
+]</pre>
+    <p>Also expect a <code>url</code> property which is a string.</p>
+   </td>
+   <td>Used when an app wants to display a video (the <code>open</code> activity allows to do the same).</td>
+  </tr>
+  <tr>
+   <td><code>update</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td>Used when an app wants to update a contact.</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Specification">Specification</h2>
+<p><em>Web Activities</em> is not part of any specification. However, it has some overlap with the proposed <a href="https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview-respec.html" title="http://www.w3.org/TR/web-intents/">Web Intents</a> specification. Mozilla actually proposed <em>Web Activities</em> as <a href="https://wiki.mozilla.org/WebAPI/WebActivities" title="https://wiki.mozilla.org/WebAPI/WebActivities">a counter proposal</a> to <em>Web Intents</em>. For more information about this, see discussion on the <a href="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html" title="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html">Web Intents Task Force ML</a>.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li>{{domxref("MozActivity")}}</li>
+ <li>{{domxref("MozActivityRequestHandler")}}</li>
+ <li>{{domxref("MozActivityOptions")}}</li>
+ <li>{{domxref("window.navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}}</li>
+ <li><a href="https://hacks.mozilla.org/2013/01/introducing-web-activities/" title="https://hacks.mozilla.org/2013/01/introducing-web-activities/">Introducing Web Activities</a></li>
+</ul>

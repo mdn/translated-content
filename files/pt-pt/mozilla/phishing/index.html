@@ -1,0 +1,50 @@
+---
+title: 'Phishing: uma breve definição'
+slug: Mozilla/Phishing
+tags:
+  - Segurança
+translation_of: Mozilla/Phishing
+---
+<p>Em 2014, a MSCI <a href="https://news.microsoft.com/en-sg/2014/02/11/microsoft-consumer-safety-index-reveals-impact-of-poor-online-safety-behaviours-in-singapore/">estimatou</a> um impacto global anual do phishing e várias formas de roubo de identidade, chegando a US $5 bilhões. O impacto não melhorou desde então.</p>
+
+<p>Phishing is an attempt to collect sensitive information, such as usernames, passwords, and financial details by disguising as a trustworthy entity online.</p>
+
+<p>A relatively simple, yet effective, phishing scheme is sending an email with a fake invoice of a person’s favorite shopping site. This email will usually contain a link pretending to lead to the original service, but in reality, taking the victim to an attacker-controlled website. The login portal might resemble the trusted website's login page very closely, and convince users to enter their credentials, letting others hijack their account.</p>
+
+<h1 id="Contramedidas_passadas_e_atuais">Contramedidas passadas e atuais</h1>
+
+<p>Various technical, and social approaches, exist to combat phishing attacks. None of these are sufficient by themselves, so we see a mix of these deployed by various services. The following is a non-exhaustive list of the most common approaches.</p>
+
+<h2 id="Deitando_a_culpa_aos_utilizadores">Deitando a culpa aos utilizadores</h2>
+
+<p>Some quick-to-implement, and cost-effective solutions, hold users accountable for their actions instead of restricting what’s technically possible. Earlier responses by affected banks, and payment providers, was to attempt educating users to not click links in emails, along with requesting to verify email legitimacy through checking for relevant personal information.</p>
+
+<p>Another solution is to strengthen logins with pictures, or colored words, often chosen when signing up for a service. Users look for these when logging in, and only enter their credentials when they recognize the user defined pictures or words.</p>
+
+<p>A study on the efficacy of security indicators, presented at the 2007 IEEE Symposium on Security and Privacy, <a href="http://www.usablesecurity.org/emperor/emperor.pdf">suggests</a> that the above countermeasures fail to protect the majority of users. This too, includes missing HTTPS or EV certificate indicators in a browser’s navigation bar.</p>
+
+<h2 id="Serviços_assumindo_responsabilidade">Serviços assumindo responsabilidade</h2>
+
+<p>Technical solutions can be more efficient if implemented to protect millions of users automatically. As most phishing attacks start with unsolicited email messages, a clear starting point is improving spam filters, thus reducing the number of fraudulent messages reaching users.</p>
+
+<p>Web browser vendors too, are interested in protecting their users from phishing. After all, the browser plays an essential role in the scheme: a fake website is loaded in a browser and here is the maker’s last chance to preventing fraud. Since version 2.0, Firefox has used Google’s <a href="https://safebrowsing.google.com/">SafeBrowsing</a> service, to detect known web forgeries, and display an alert instead of the fraudulent website.</p>
+
+<h1 id="Autenticação_de_Dois_Fatores">Autenticação de Dois Fatores</h1>
+
+<p>None of the above anti-phishing measures address the basic problem: username/password combinations are often enough to impersonate users.</p>
+
+<p>Enter the world of second factors. A second factor is something a user possesses to further authenticate with a service. For example, a USB token, Bluetooth device, mobile phone, or simply a key stored on a separate device. The first factor is usually the password and username. If both factors don’t match, the service will reject authentication requests.</p>
+
+<h2 id="Criptografia_de_Chave_Pública">Criptografia de Chave Pública</h2>
+
+<p>Many services will soon support <a href="https://w3c.github.io/webauthn/">W3C Web Authentication</a>, a powerful technology to evade phishing, based on public key cryptography. Web Authentication supports millions of readily avilable FIDO U2F USB security keys, and will support the more advanced FIDO 2.0 keys, once made available.</p>
+
+<h2 id="Verificação_via_Mensagem_de_Texto">Verificação via Mensagem de Texto</h2>
+
+<p>If a service supports verification, via SMS, it sends a text message with a one-time PIN to the user’s phone number. The user then enter this PIN after the Web service verifies the username and password. This was chosen as an  early second factor 'protocol' as text messages are widely supported, however, even NIST <a href="https://techcrunch.com/2016/07/25/nist-declares-the-age-of-sms-based-2-factor-authentication-over/">no longer recommends SMS verification</a>. The SS7 telephony system is vulnerable, making eavesdropping, or rerouting text messages quite trivial.</p>
+
+<h2 id="Algoritmos_de_Palavra-passe_Única">Algoritmos de Palavra-passe Única</h2>
+
+<p>A better way to use phones as second factor, are One-Time Password (OTP) protocols, like <a href="https://tools.ietf.org/html/rfc6238">TOTP</a> and <a href="https://tools.ietf.org/html/rfc4226">HOTP</a>. At service registration, the provider will often generate a QR code to be read by an OTP app. This QR code is nothing more than a random, secret key, that is stored on the user’s phone. After verifying username and password, the user is prompted to open the OTP app and enter the corresponding 6-digit code, representing a hashed version of the secret key and a <a href="https://en.wikipedia.org/wiki/Cryptographic_nonce">nonce</a> - potentially time-based.</p>
+
+<p>OTP is the most widely supported second factor schemes and can be used to secure your most important accounts. Unfortunately, some users still feel it's too tedious unlocking a phone, opening the OTP app, and manually typing a few digits each time a provider requests a new token. This can be phished by an attacker, though with TOTP apps the attacker has limited time to make their unauthorized login.</p>

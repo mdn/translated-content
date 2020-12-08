@@ -1,0 +1,154 @@
+---
+title: border-image-repeat
+slug: Web/CSS/border-image-repeat
+translation_of: Web/CSS/border-image-repeat
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание" style="">Описание</h2>
+
+<p>The <strong><code>border-image-repeat</code></strong> CSS property defines how the middle part of a border image is handled so that it can match the size of the border. It has a one-value syntax that describes the behavior of all the sides, and a two-value syntax that sets a different value for the horizontal and vertical behavior.</p>
+
+<div>{{cssinfo}}</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush:css">/* border-image-repeat: <em>type</em> */
+border-image-value: stretch;
+
+/* border-image-repeat: <em>horizontal</em> <em>vertical</em> */
+border-image-width: round stretch;
+
+/* Глобальные значения */
+border-image-repeat: inherit;
+border-image-repeat: initial;
+border-image-repeat: unset;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><em>type</em></dt>
+ <dd>One of the <code>stretch</code>, <code>repeat</code>, or <code>round</code> keywords denoting how the image is treated both horizontally and vertically.</dd>
+ <dt><em>horizontal</em></dt>
+ <dd>One of the <code>stretch</code>, <code>repeat</code>, or <code>round</code> keywords denoting how the image is treated horizontally.</dd>
+ <dt><em>vertical</em></dt>
+ <dd>One of the <code>stretch</code>, <code>repeat</code>, or <code>round</code> keywords denoting how the image is treated vertically.</dd>
+ <dt><code>stretch</code></dt>
+ <dd>Keyword indicating that the image must be stretched to fill the gap between the two borders.</dd>
+ <dt><code>repeat</code></dt>
+ <dd>Keyword indicating that the image must be repeated until it fills the gap between the two borders.</dd>
+ <dt><code>round</code></dt>
+ <dd>Keyword indicating that the image must be repeated until it fills the gap between the two borders. If the image doesn't fit after being repeated for an integral number of times, the image is rescaled to fit.</dd>
+ <dt><code>space</code></dt>
+ <dd>The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles.</dd>
+</dl>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<p>See {{cssxref("border-image")}} for examples of what repeat values will do.</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#border-image-repeat', 'border-image-repeat')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Первоначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>15.0</td>
+   <td>{{CompatGeckoDesktop("15.0")}}</td>
+   <td>11</td>
+   <td>15</td>
+   <td>6<sup>[1]</sup></td>
+  </tr>
+  <tr>
+   <td><code>space</code></td>
+   <td>{{CompatNo}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}<sup>[3]</sup></td>
+   <td>11</td>
+   <td>{{CompatNo}}</td>
+   <td>9.1<sup>[5]</sup></td>
+  </tr>
+  <tr>
+   <td><code>round</code></td>
+   <td>30<sup>[4]</sup></td>
+   <td>{{CompatGeckoDesktop("15.0")}}</td>
+   <td>11</td>
+   <td>{{CompatUnknown}}</td>
+   <td>9.1<sup>[5]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("15.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>9.3<sup>[5]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Support the <code>space</code> value, but the actual effect is the same as the <code>repeat</code> value.</p>
+
+<p>[2] Support the <code>round</code> value, but the actual effect is the same as the repeat value.</p>
+
+<p>[3] См. {{bug(720531)}}.</p>
+
+<p>[4] См. <a href="https://code.google.com/p/chromium/issues/detail?id=169254#c12">Chrome bug</a>.</p>
+
+<p>[5] См. <a href="https://bugs.webkit.org/show_bug.cgi?id=14185">WebKit bug</a>.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="https://css-tricks.com/almanac/properties/b/border-image/">css-tricks border-image</a></li>
+</ul>

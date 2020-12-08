@@ -1,0 +1,110 @@
+---
+title: Node.isSameNode()
+slug: Web/API/Node/isSameNode
+translation_of: Web/API/Node/isSameNode
+---
+<div>{{APIRef("DOM")}} {{ Obsolete_header }}</div>
+
+<p>The <code><strong>Node.isSameNode()</strong></code> проверяет ссылаются ли два узла на один и тот же объект.</p>
+
+<div class="note">
+<p><strong>Предупреждение:</strong> Данный метод больше не реализуется в последних браузерах.</p>
+
+<pre class="brush:js">// Instead of using
+node1.isSameNode(node2)
+
+// use
+node1 === node2 // or
+node1 == node2</pre>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>isSameNode</em> = <em>node</em>.isSameNode(<em>other</em>);
+</pre>
+
+<ul>
+ <li><code>other</code> узел для проверки.</li>
+</ul>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Коментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Удалено из спецификации.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Изначальное описание.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>Поддерживается от {{CompatGeckoDesktop("1.0")}} до {{CompatGeckoDesktop("9.0")}}.<br>
+    Удалено в {{CompatGeckoDesktop("10.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>Поддерживается от {{CompatGeckoMobile("1.0")}} до {{CompatGeckoMobile("9.0")}}.<br>
+    Удалено в {{CompatGeckoMobile("10.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("Node.isEqualNode()")}}</li>
+</ul>

@@ -1,0 +1,120 @@
+---
+title: Adicione um Item ao Menu de Contexto
+slug: Mozilla/Add-ons/SDK/Tutorials/Adicione_um_Item_ao_Menu_de_Contexto
+tags:
+  - Add-on SDK
+  - Firefox
+  - Guide
+  - context-menu
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Add_a_Context_Menu_Item
+---
+<div class="note">
+<p>Para seguir este tutorial você precisará ter <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Installation">instalado o SDK</a> e ter conhecimento <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Getting_Started_With_cfx">básico sobre cfx</a>.</p>
+</div>
+
+<p>Para adicionar itens e submenus ao menu de contexto do Firetox, use o módulo  <a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu"><code>context-menu</code></a>.</p>
+
+<p>Aqui está um add-on que adiciona um novo item ao menu de contexto. O item é mostrado sempre que alguma coisa na página é selecionada. Quando é clicado, a seleção é enviada para o código principal do add-on, que apenas registra ele:</p>
+
+<pre class="brush: js">var contextMenu = require("sdk/context-menu");
+ var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});</pre>
+
+<p>Teste: execute o add-on, carregue uma página web, selecione algum texto e clique com o botão direito. Você verá o novo item aparecer:</p>
+
+<p><img src="https://mdn.mozillademos.org/files/6513/context-menu-selection.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>Clique nele, e a seleção é <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Logging">registrada no console</a> (ou na shell, se você estiver executando uma instância do Firefox na linha de comando):</p>
+
+<pre>info: elephantine lizard
+</pre>
+
+<h2 id="Detalhes">Detalhes</h2>
+
+<p>Tudo que este add-on faz é criar um item no menu de contexto. Você não precisa adicioná-lo: uma vez que você criou o item, ele é automaticamente adicionado no contexto correto. O construtor nesse caso possui quatro opções: <code>label</code>, <code>context</code>, <code>contentScript</code>, e <code>onMessage</code>.</p>
+
+<h3 id="label">label</h3>
+
+<p>O <code>label</code> é tão somente a string que será mostrada.</p>
+
+<h3 id="context">context</h3>
+
+<p>O <code>context</code> descreve a circunstância em que o item será mostrado. O módulo <code>context-menu</code> oferece uma série de contextos embutidos, incluindo este <code>SelectionContext()</code>, que significa: mostrar o item quando alguma coisa na página for selecionada.</p>
+
+<p>Se estes simples contextos não forem suficiente, você pode definir contextos mais sofisticados usando scripts.</p>
+
+<h3 id="contentScript">contentScript</h3>
+
+<p>Este anexa um script ao item. Nesse caso o script espera pelo clique do usuário no item, então envia uma mensagem para o add-on contendo do texto selecionado.</p>
+
+<h3 id="onMessage">onMessage</h3>
+
+<p>A propriedade <code>onMessage</code> oferece um modo para o código do add-on responder mensagens do script anexado ao item do menu de contexto. Nesse caso é apenas registrado o texto selecionado.</p>
+
+<p>Então:</p>
+
+<ol>
+ <li>O usuário clica no item</li>
+ <li>o conteúdo do script do evento <code>click</code> dispara, e o conteúdo do script recupera o texto selecionado e envia a mensagem para o add-on</li>
+ <li>o evento <code>message</code> do add-on dispara, e ao código manipulador da função é passado o texto selecionado, que é registrado</li>
+</ol>
+
+<h2 id="Mais_opções">Mais opções</h2>
+
+<h3 id="Adicionando_uma_imagem">Adicionando uma imagem</h3>
+
+<p>Você pode adicionar uma imagem ao menu de contexto por meio da opção <code>image</code>. Isto é uma URL apontando para um ícone 16x16 que é mostrado do lado esquerdo do item do menu de contexto. Geralmente você armazenaria sua imagem no diretório "data" do seu add-on, e construiria a URL usando <code>self.data.url()</code>:</p>
+
+<pre class="brush: js">var self = require("sdk/self");
+
+var contextMenu = require("sdk/context-menu");
+var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  image: self.data.url("icon-16.png"),
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});</pre>
+
+<h3 id="Adicione_uma_tecla_de_atalho">Adicione uma tecla de atalho</h3>
+
+<div class="geckoVersionNote">
+<p>Novo no Firefox 35.</p>
+</div>
+
+<p>A partir do Firefox 35 você pode especificar uma tecla de atalho usando a opção  <code>accessKey</code>. Deve ser somente um caracter. Pressione a tecla selecionada na opção quando o menu de contexto estiver aberto:</p>
+
+<pre class="brush: js">var contextMenu = require("sdk/context-menu");
+var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  accessKey: "l",
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});
+</pre>
+
+<p> </p>
+
+<h2 id="Aprendendo_mais">Aprendendo mais</h2>
+
+<p>Aprendendo mais sobre o módulo <code>context-menu</code>, veja a referência da API <a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu"><code>context-menu</code></a>.</p>

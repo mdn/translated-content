@@ -1,0 +1,21 @@
+---
+title: NS_RELEASE
+slug: NS_RELEASE
+tags:
+  - Macros_XPCOM
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference/NS_RELEASE
+---
+<p> </p>
+<h3 id="Sum.C3.A1rio" name="Sum.C3.A1rio">Sumário</h3>
+<p><b>Macro</b></p>
+<p>Decrementa o contador de referência de um apontador por um. Esta macro também define o apontador para NULL. Não usar quando o apontador possa ser NULL; use <a href="pt/NS_IF_RELEASE">NS_IF_RELEASE</a> nos outros casos.</p>
+<p><code>NS_RELEASE(foo)</code> equivale a</p>
+<pre class="eval">foo-&gt;Release();
+foo = 0;
+</pre>
+<h3 id="Sintaxe" name="Sintaxe">Sintaxe</h3>
+<pre class="eval">NS_RELEASE(foo);
+</pre>
+<h3 id="Ver_Tamb.C3.A9m" name="Ver_Tamb.C3.A9m">Ver Também</h3>
+<p><a href="pt/NS_ADDREF">NS_ADDREF</a>, <a href="pt/NS_IF_RELEASE">NS_IF_RELEASE</a></p>

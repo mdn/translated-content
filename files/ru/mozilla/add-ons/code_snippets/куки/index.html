@@ -1,0 +1,36 @@
+---
+title: Cookies
+slug: Mozilla/Add-ons/Code_snippets/куки
+translation_of: Archive/Add-ons/Code_snippets/Cookies
+---
+<h3 id="Reading_existing_cookies" name="Reading_existing_cookies">Чтение существующих cookie</h3>
+
+<p>Cookie для данного хоста, как объекты <code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/Code_snippets/%D0%BA%D1%83%D0%BA%D0%B8" title="">nsICookie2</a></code>, могут быть пронумерированны так:</p>
+
+<pre class="brush: js">let enum = Services.cookies.getCookiesFromHost("example.com");
+while (enum.hasMoreElements()) {
+  var cookie = e.getNext().QueryInterface(Ci.nsICookie2);
+  dump(cookie.host + ";" + cookie.name + "=" + cookie.value + "\n");
+}
+</pre>
+
+<p>Все cookie, вне зависимости от хоста, могут быть пронумерированны с помощью <code>Services.cookies.enumerator</code>, а не <code>getCookiesFromHost()</code>.</p>
+
+<h3 id="Setting_a_cookie" name="Setting_a_cookie">Настраивание cookie</h3>
+
+<p>Следующий код показывает как настроить cookie в Firefox.</p>
+
+<pre class="brush: js">Services.cookies.add(".host.example.com", "/cookie-path", "cookie_name", "cookie_value", is_secure, is_http_only, is_session, expiry_date);
+</pre>
+
+<h3 id="See_also" name="See_also">Смотрите также</h3>
+
+<ul>
+ <li>{{ Domxref("document.cookie") }}</li>
+ <li>{{ Interface("nsICookie") }}</li>
+ <li>{{ Interface("nsICookie2") }}</li>
+ <li>{{ Interface("nsICookieService") }}</li>
+ <li>{{ Interface("nsICookieManager") }}</li>
+ <li>{{ Interface("nsICookieManager2") }}</li>
+ <li><a href="/en/Web_Development/HTTP_cookies" title="HTTP cookies">HTTP cookies</a></li>
+</ul>

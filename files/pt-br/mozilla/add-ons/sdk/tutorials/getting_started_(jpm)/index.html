@@ -1,0 +1,155 @@
+---
+title: Começando (jpm)
+slug: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_(jpm)
+tags:
+  - Add-on SDK
+  - JPM
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Getting_Started_(jpm)
+---
+<div class="note">
+<p>O Add-on SDK inclui uma ferramenta de linha de comando que você usa para inicializar, executar, testar, e empacotar add-ons. A ferramenta de linha de comando atual é chamada de jpm, e é baseada no <a href="http://nodejs.org/">Node.js</a>. Ela substitui a ferramenta antiga cfx.</p>
+
+<p>Você pode usar o jpm do Firefox 38 em diante.</p>
+
+<p>Este artigo descreve como desenvolver usando jpm.</p>
+</div>
+
+<p>Este tutorial ensina a criação de uma add-on simples usando o SDK.</p>
+
+<h2 id="Pré-requisitos"><span class="short_text" id="result_box" lang="pt"><span class="hps">Pré-requisitos</span></span></h2>
+
+<p>Para criar add-ons para Firefox usando o SDK, você precisará:</p>
+
+<ul>
+ <li>Firefox versão 38 ou anteriores. Se você precisar trabalhar com versões anteriores do Firefox, você precisará usar a ferramenta cfx. Veja as instruções em <a href="/en-US/Add-ons/SDK/Tutorials/Getting_started">getting started with cfx</a>.</li>
+ <li>a ferramenta de linha de comando jpm. Veja instruções para <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Installation">instalação do jpm</a>. Uma vez que você fez isso, <span class="short_text" id="result_box" lang="pt"><span class="hps">você vai</span> <span class="hps">estar a olhar para</span> <span class="hps">um prompt de comando</span><span>.</span></span></li>
+</ul>
+
+<h2 id="Inicializando_um_add-on_vazio">Inicializando um add-on vazio</h2>
+
+<p>No promp de comando, crie um novo diretório. Navegue até ele, digite <code>jpm init</code>, e tecle enter:</p>
+
+<pre>mkdir my-addon
+cd my-addon
+jpm init
+</pre>
+
+<p>Você será instado à fornecer algumas informações para seu add-on: isso será usado para criar o arquivo <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> do seu add-on. Por enquanto, apenas pressione enter para aceitar o padrão para cada propriedade. Para mais informação sobre <code>jpm init</code>, veja o <a href="/en-US/Add-ons/SDK/Tools/jpm#Command_reference">jpm command reference</a>.</p>
+
+<p>Uma vez que você forneceu um valor ou aceitou o padrão para estas propriedades, será apresentado a você o conteúdo completo do "package.json" e instado a aceitá-lo.</p>
+
+<h2 id="Implementando_o_add-on">Implementando o add-on</h2>
+
+<p>Agora você pode escrever o código do add-on. A menos que você mudou o valor de entrada ("main" no package.json), ele vai no arquivo "index.js" na raiz de seu add-on. Este arquivo foi criado para você no passo anterior. Abra-o e adicione o seguinte código:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("http://www.mozilla.org/");
+}
+</pre>
+
+<div class="note">
+<p>Note que os "pontos de entrada" padrões para "index.js" no jpm, signifca que seu arquivo principal é "index.js", e é encontrado diretamente na raiz do seu add-on.</p>
+
+<p>No cfx, o ponto de entrada padrão para "main.js", e é localizado no diretório "lib" na raiz no add-on.</p>
+</div>
+
+<p>Salve o arquivo.</p>
+
+<p>Próximo, crie um diretório chamado "data" na raiz do add-on, e salve estes três ícones no diretório "data":</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="height: 16px; width: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="height: 32px; width: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="height: 64px; width: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Volte ao promp de comando, digite:</p>
+
+<pre>jpm run</pre>
+
+<p>Este é o comando jpm para executar uma nova instância do Firefox com seu add-on instalado.</p>
+
+<p>Quando o Firefox lança, no canto superior direito do navegador você verá um ícone com o logotipo do Firefox. Clique no ícone, e uma nova tab abrirá com o site <a href="http://www.mozilla.org/" rel="noreferrer">http://www.mozilla.org/</a> carregado.</p>
+
+<p>Isso é tudo que este add-on faz. Ele usa dois módulos SDK: o módulo <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a>, que lhe permite adicionar botões ao navegador, e o módulo tab, que lhe permite executar operações básicas com o módulo <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a>. Neste caso, nós criamos um botão cujo ícone é o ícone do Firefox, e adicionamos um manipulado de click que carrega a página do Mozilla na nova tab.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="display: block; height: 221px; margin-left: auto; margin-right: auto; width: 382px;">Tente editar este arquivo. Por exemplo, nós poderíamos mudar a página que está sendo carregada:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+
+<p>No promp de comando, execute <code>jpm run</code> novamente. Desta vez clicando lhe levará para <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+
+<h2 id="Empacotando_o_add-on">Empacotando o add-on</h2>
+
+<p>Quando você terminou o add-on e estiver preparado para distribui-lo, você precisará empacotá-lo como um arquivo XPI. Esta é a forma instalável dos add-ons do Firefox. Você pode distribuir os arquivos XPI por si mesmo ou publicá-los em <a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a> então outros usuários podem baixar eles.</p>
+
+<p>Para construir um XPI, apenas execute o comando <code>jpm xpi</code> do diretório do add-on:</p>
+
+<pre>jpm xpi
+</pre>
+
+<p>Você deveria ver uma mensagem como:</p>
+
+<pre>JPM info Successfully created xpi at /path/to/getting-started/@getting-started.xpi
+</pre>
+
+<p>Para testar que isso funciona, tente instalar o arquivo XPI em sua própria instalação do Firefox. Você pode fazer isso pressionando a combinação de teclas Ctrl+O (Cmd+O no Mac) de dentro do Firefox, ou selecionando o menu "Open" do menu "Arquivo" do Firefox. Isso trará uma caixa de diálogo de seleção de arquivo: navegue para o arquivo "@getting-started.xpi", abra-o e siga o prompt para instalar o add-on.</p>
+
+<h2 id="Resumo">Resumo</h2>
+
+<p>Neste tutorial nós construímos e empacotamos um add-on usando três comandos:</p>
+
+<ul>
+ <li><code>jpm init</code> para inicializar um modelo de add-on vazio</li>
+ <li><code>jpm run</code> para executar uma nova instância do Firefox com o add-on instalado, então nós testamos ele</li>
+ <li><code>jpm xpi</code> para empacotar o add-on em um arquivo XPI para distribuição</li>
+</ul>
+
+<p>Há três comandos principais que você usará quando desenvolvendo add-ons com SDK. Há documentação abrangente no <a href="/en-US/Add-ons/SDK/Tools/jpm" rel="noreferrer">reference documentation</a> cobrindo todos os comandos  que você pode usar e todas as opções que eles levam.</p>
+
+<p>O código do add-on por si usa dois módulos SDK, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> e <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a>. Há documentação de referência para todas as APIS do SDK tanto as de <a href="/en-US/Add-ons/SDK/High-Level_APIs" rel="noreferrer">alto nível</a> quanto as de <a href="/en-US/Add-ons/SDK/Low-Level_APIs" rel="noreferrer">baixo nível</a>.</p>
+
+<h2 id="O_que_vem_agora">O que vem agora?</h2>
+
+<p>Para ter uma ideia das coisas que você pode fazer com as APIs do SDK, tente trabalhar com alguns dos <a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">tutoriais</a>.</p>

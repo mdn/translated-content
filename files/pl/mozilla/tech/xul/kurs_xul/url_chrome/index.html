@@ -1,0 +1,74 @@
+---
+title: URL Chrome
+slug: Mozilla/Tech/XUL/Kurs_XUL/URL_Chrome
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Chrome_URL
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Struktura_XUL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pliki_manifestu">Następny  »</a></p>
+</div><p></p>
+
+<p>Następujący artykuł opisuje jak odnosić się do dokumentów XUL i innych plików chrome.</p>
+
+<h3 id="URL_Chrome" name="URL_Chrome">URL Chrome</h3>
+
+<p>Pliki XUL mogą być połączone z normalnymi adresami URL HTTP (lub innymi typami adresów URL) tak jak pliki HTML. Jednakże paczki, które są zainstalowanej wewnątrz systemu chrome Mozilli mogą się łączyć ze sobą za pomocą specjalnych adresów URL. Paczki zawarte z przeglądarką Mozilli są już zainstalowane, ale możemy zarejestrować swoje własne.</p>
+
+<p>Paczki zainstalowane nie mają żadnych ograniczeń ochronnych, co jest wymagane przez wiele aplikacji. Inną zaletą nad innymi typami URL jest automatyczne radzenie sobie z tematami i lokalizacjami. Dla przykładu, chrome URL pozwala dostać się do pliku grafiki w temacie wyglądu bez potrzeby znania tematu używanego przez użytkownika. Jest to możliwe dzięki temu, że każdy temat posiada takie same nazwy plików. Mozilla sama określi gdzie znajduję się plik i zwróci właściwe dane. Nie ma też znaczenia dla tego żeby się do niej dostać, gdzie paczka jest zainstalowana. Chrome URL są nie zależne od fizycznego miejsca plików. To czyni pisanie aplikacji odnoszącej się do wielu plików znacznie łatwiejsza gdyż nie musisz się martwić gdzie one dokładnie się znajdują.</p>
+
+<p>Prosta składnia URL chrome jest następująca:</p>
+
+<pre class="eval"><a class="external" rel="freelink">chrome://</a><em>&lt;nazwa paczki&gt;</em>/<em>&lt;część&gt;</em>/<em>&lt;plik.xul&gt;</em>
+</pre>
+
+<p><span class="comment">Another advantage over other URL types is that they automatically handle multiple themes and locales. For example, a chrome URL lets you refer to a file in the theme such as an image without needing to know which theme the user is using. As long as the filenames are the same in each theme, you can refer to the file using a chrome URL. Mozilla will take care of determining where the file is located and return the right data. This also means that it doesn't matter where the package is installed to be able to access it. The chrome URLs are independent of where the files might physically be located. This makes it much easier to write applications that have lots of files since you don't have to worry about the details of locating files.</span>  &lt;nazwa paczki&gt; - to nazwa paczki jak np. edytor czy komunikator. &lt;część&gt; - to np. 'content', 'skin' lub 'locale' zależnie do czego się odnosisz. &lt;plik.xul&gt; - to nazwa pliku.</p>
+
+<p><strong>Przykład:</strong> <a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a></p>
+
+<p>Przykład odnosi się do okna Kuriera (messenger'a). Możesz dostać się do pliku tematu zmieniając 'content' na 'skin' i zmieniając nazwę pliku. Tak samo możesz dostać się do katalogu 'locale'.</p>
+
+<p>Kiedy otwierasz chrome URL, Mozilla sprawdza swoją listę zainstalowanych paczek i próbuje zlokalizować plik JAR który odpowiada nazwie paczki i jej części. Po odnalezieniu zagląda do tego pliku w poszukiwaniu pliku.xul. Mozilla zawsze zacznie poszukiwania w tym samym katalogu w pliku JAR gdzie znajduję się powiązany plik contents.rdf, który opisano w poprzedniej sekcji. To oznacza, że jeżeli kilka paczek lub części znajduje się w tym samym pliku JAR, pliki znajda się we właściwym miejscu. Dla przykładu plik contents.rdf dla przykładu powyższego adresu chrome URL znajduje się w pliku messenger.jar we wnętrzu tego archiwum, katalog 'content/messenger'. To oznacza, że 'messenger.xul' zostanie wczytany z tej lokacji a jeśli otworzysz messenger.jar znajdziesz ten plik właśnie w tym katalogu. Jeżeli używasz rozszerzonej formy plików zamiast JAR, stanie się to samo z wyjątkiem tego, że Mozilla może przejść bezpośrednio do katalogu bez szukania go w pliku JAR.</p>
+
+<p>Jeżeli przeniesiesz plik messenger.jar gdzieś indziej i uaktualnisz miejsce w liście Mozilla zarejestrowanych paczek chrome, Poczta nadal będzie działać, ponieważ nie polega na określonym miejscu instalacji. Używając chrome URL możemy zostawić szczegóły takie jak te w Mozilli. Podobnie, jeżeli użytkownik zmieni temat, część 'skin' chrome URL przetłumaczy do innego zestawu plików, jeszcze XUL i skrypty nie potrzebują nic zmieniać.</p>
+
+<p>Mozilla jest w stanie zrozumieć, która skóra i język są aktualnie używane i sporządza mapę odpowiednich katalogów dla chrome URL. Pliki chrome.rdf w chrome i katalogu profilu i contents.rdf są tam, by powiedzieć Mozilla jak to zrobić. Użytkownik może użyć każdej skóry albo języka, ale URL-e, które prowadzą do plików chrome nie muszą być zmienione. Na przykład, domyślny navigator.css jest dostępny:</p>
+
+<pre>chrome://navigator/skin/navigator.css
+</pre>
+
+<p>Jeżeli zmieniasz skórę przeglądarki, chrome URL nie zmieni się, nawet jeśli zmieni się prawdziwe miejsce plików użytych przez skórę.</p>
+
+<p>System chrome bierze sekcje nawigatora zawartości, aktualnej skóry i aktualnej lokalizacji i grupuje je razem, by utworzyć interfejs użytkownika. Teraz więcej przykładów, ten raz dla kuriera. Zauważ, że żaden z URL-i nie wskazuje, który temat albo lokalizacja jest użyta i żaden nie wskazuje określonego katalogu.</p>
+
+<pre>chrome://messenger/content/messenger.xul
+chrome://messenger/content/attach.js
+chrome://messenger/skin/icons/folder-inbox.gif
+chrome://messenger/locale/messenger.dtd
+</pre>
+
+<p>Dla pod paczek, można użyć tej samej struktury. Następne adresy odniosą się do okna zakładek, sporządzone zarówno dla Mozilli i Firefoksa, odkąd nazwy paczki są różne w obu:</p>
+
+<pre>chrome://communicator/content/bookmarks/bookmarksManager.xul (Mozilla) chrome://browser/content/bookmarks/bookmarksManager.xul (Firefox)
+</pre>
+
+<p>Możesz wejść poprzez chrome URL wszędzie tam, gdzie może zostać użyty normalny URL. Możesz nawet używać ich bezpośrednio w pasku adresu w oknie Mozilli. Jeżeli wejdziesz na któryś z adresów wymienionych powyżej, powinieneś zobaczyć, okno jak strona sieci i przeważnie działałaby jak gdyby to było oddzielne okno. Niektóre okienka dialogowe mogą nie działać dobrze, mogą wymagać argumentów dostarczonych od okna, które je otworzyło.</p>
+
+<p>Zobaczysz też chrome URL bez wyszczególnionych nazw, takie jak:</p>
+
+<pre>chrome://navigator/content/
+</pre>
+
+<p>W tym przypadku, tylko nazwa paczki i część są określone. Ten typ odniesięnia automatycznie wybierze odpowiedni plik z właściwego katalogu. Dla content, plik z tą samą nazwą paczki i rozszerzeniem xul są wybrane. W powyższym przykładzie w pliku navigator.xul jest wybrane. Dla kuriera, messenger.xul byłby wybrany. Kiedy tworzysz swoje własne aplikacje, będziesz chciał utworzyć plik dla twojego głównego okna z tą samą nazwą jak paczka, więc to może zostać odnalezione do używają tej krótszej formy. To jest wygodne odkąd wszystkim co musi wiedzieć użytkownik jest nazwa paczki, by móc otwierać aplikacje. Oczywiście, dla rozszerzeń, które modyfikują interfejs przeglądarki, użytkownik nie będzie potrzebował znać URL, ponieważ rozszerzenie przedstawi siebie w interfejsie użytkownika.</p>
+
+<p>Dla tematów, jest wybrany plik &lt;nazwa paczki&gt;.css. Dla lokalizacji jest wybrany plik &lt;nazwa paczki&gt;.dtd.</p>
+
+<p>Zapamiętaj, że chrome URL nie jest powiązany z tym gdzie na dysku się znajduje. Pierwsze dwa kawałki są nazwą paczki i częścią (content, skin albo locale). Zazwyczaj pliki content umieszczane są w katalogu zwanym 'content', jest to czysto umowne więc te pliki mogą zostać umieszczone w całkowicie innej strukturze. Jedyną regułą jest, że część nazwy chrome URL odnosi się do plików umieszczonych w tym samym katalogu, gdzie znajduje się powiązany plik 'contents.rdf'.</p>
+
+<p>W następnym artykule dowiemy się jak tworzyć pliki contents.rdf i paczki.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Struktura_XUL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pliki_manifestu">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,202 @@
+---
+title: Tworzenie rozszerzenia paska stanu
+slug: Tworzenie_rozszerzenia_paska_stanu
+tags:
+  - Dodatki
+  - Rozszerzenia
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+translation_of: Archive/Creating_a_status_bar_extention
+---
+<p>{{ Next("Tworzenie rozszerzenia dynamicznego paska stanu") }} Jest to pierwszy z całej serii artykułów mających na celu zademonstrować tworzenie coraz bardziej skomplikowanych rozszerzeń do przeglądarki Firefox. Niektóre z przykładów mogą być podobne do innych spotkanych w różnych miejscach, ale celem tejże serii jest pomoc nowym programistom rozszerzeń i zebranie wszystkich potrzebnych informacji w jednym miejscu, z którego łatwo jest rozpocząć.</p>
+
+<p>Wiele z wprowadzonych tutaj pojęć odnosi się do wszystkich aplikacji opartych na XUL; jednak aby nie zostać całkowicie przytłoczonym, skupimy się w szczególności na Firefox.</p>
+
+<p>Ten przykład doda statyczny ciąg tektu do paska statusu u dołu okna przeglądarki Firefox. Jeśli brzmi to jak istniejący artykuł <a href="pl/Tworzymy_rozszerzenie">Tworzymy rozszerzenie</a>, masz rację. Jednak, ten przykład będzie rozbudowywany w kolejnych artykułach tej serii.</p>
+
+<h2 id="Pobieranie_przyk.C5.82adu" name="Pobieranie_przyk.C5.82adu">Pobieranie przykładu</h2>
+
+<p>Możesz pobrać przykład z poniższej strony:</p>
+
+<p><a class="external" href="http://developer.mozilla.org/samples/extension-samples/status-bar-sample-1.zip">Pobierz przykład</a></p>
+
+<h2 id="Manifest_instalacji" name="Manifest_instalacji">Manifest instalacji</h2>
+
+<p>Manifest instalacji <a href="pl/Manifesty_Instalacji">install.rdf</a> jest plikiem tekstowym zawierającym ważne informacje o rozszerzeniu.</p>
+
+<pre class="eval"> &lt;?xml version="1.0"?&gt;
+
+ &lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+    xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+   &lt;Description about="<span class="nowiki">urn:mozilla:install-manifest</span>"&gt;
+
+   &lt;em:id&gt;<span class="nowiki">status-bar-sample-1@example.com</span>&lt;/em:id&gt;
+   &lt;em:version&gt;1.0&lt;/em:version&gt;
+   &lt;em:type&gt;2&lt;/em:type&gt;
+
+   &lt;!-- Front End Metadata --&gt;
+
+   &lt;em:name&gt;Status Bar Sample 1&lt;/em:name&gt;
+   &lt;em:description&gt;Sample static status bar panel&lt;/em:name&gt;
+   &lt;em:creator&gt;My Name&lt;/em:creator&gt;"
+   &lt;em:homepageURL&gt;<span class="nowiki">http://developer.mozilla.org/en/docs/Creating_a_status_bar_extension</span>&lt;/em:homepageURL&gt;
+
+   &lt;!-- Opis jaka wersja Firefoksa jest obsługiwana --&gt;
+
+   &lt;em:targetApplication&gt;
+     &lt;Description&gt;
+     &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+     &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+     &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+     &lt;/Description&gt;
+   &lt;/em:targetApplication&gt;
+
+   &lt;/Description&gt;
+
+ &lt;/RDF&gt;
+</pre>
+
+<p>Przyjrzyjmy się najważniejszym częściom manifestu.</p>
+
+<h3 id="Informacje_identyfikuj.C4.85ce_rozszerzenie" name="Informacje_identyfikuj.C4.85ce_rozszerzenie">Informacje identyfikujące rozszerzenie</h3>
+
+<p>Pewne informacje są wymagane, by Firefox mógł jednoznacznie zidentyfikować rozszerzenie. W poniższym przykładzie są to pola:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Nazwa własności</td>
+   <td class="header">Opis</td>
+  </tr>
+  <tr>
+   <td>id</td>
+   <td>Unikalny strumień identyfikujący. W wersjach Firefoksa wcześniejszych niż 1.5 było to <a href="pl/Generowanie_GUID">GUID</a>. Począwszy jednakże od Firefoksa 1.5 powinieneś używać strumienia w postaci<em>nazwa-rozszerzenia</em>@<em>kreator-domeny</em>.</td>
+  </tr>
+  <tr>
+   <td>version</td>
+   <td>Numer wersji rozszerzenia.</td>
+  </tr>
+  <tr>
+   <td>type</td>
+   <td>Typ dodatku. Dla rozszerzenia równa się 2.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Informacje_dla_u.C5.BCytkownika" name="Informacje_dla_u.C5.BCytkownika">Informacje dla użytkownika</h3>
+
+<p>W tym przykładzie mamy 4 informacje dla użytkownika tj. dane wyświetlane w interfejsie użytkownika Firefoksa. Są to:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Nazwa własności</td>
+   <td class="header">Opis</td>
+  </tr>
+  <tr>
+   <td>em:name</td>
+   <td>Nazwa rozszerzenia. Nazwa wyświetlana w oknie Rozszerzenia.</td>
+  </tr>
+  <tr>
+   <td>em:description</td>
+   <td>Krótki jedno liniowy opis rozszerzenia. Tekst jest wyświetlany w oknie Rozszerzenia.</td>
+  </tr>
+  <tr>
+   <td>em:creator</td>
+   <td>Nazwisko autora.</td>
+  </tr>
+  <tr>
+   <td>homepageURL</td>
+   <td>Adres URL strony, na której użytkownik może uzyskać więcej informacji o rozszerzeniu, lub poszukać uaktualnień. Pole nie jest wymagane.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Informacje_o_aplikacji_docelowej" name="Informacje_o_aplikacji_docelowej">Informacje o aplikacji docelowej</h3>
+
+<p>Ważnym jest, by zawrzeć informacje identyfikujące aplikacje w jakich rozszerzenie może zostać użyte. Opisywane rozszerzenie przeznaczone jest wyłącznie dla Firefoksa. Jednakże możliwym jest stworzenie rozszerzeń przeznaczonych na wiele aplikacji bazujących na XUL-u.</p>
+
+<p>Ważnym jest również zaznaczenie, które wersje aplikacji docelowych są wspierane przez rozszerzenie. Jeśli nie będzie ono działało w starszych wersjach, lub też nie zostało przetestowane na wersjach nowszych możesz ograniczyć rozszerzenie tak, aby tylko wspierane wersje próbowały go użyć.</p>
+
+<p>Informacje o aplikacji docelowej zawarte są wewnątrz bloku <code>em:targetApplication</code> <code>Description</code>.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Nazwa własności</td>
+   <td class="header">Opis</td>
+  </tr>
+  <tr>
+   <td>id</td>
+   <td>ID określające aplikację docelową. "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}" jest ciągiem GUID identyfikującym jednoznacznie Firefoksa jako aplikację docelową.</td>
+  </tr>
+  <tr>
+   <td>minVersion</td>
+   <td>Najstarsza wersja aplikacji docelowej wspieranej przez rozszerzenie.</td>
+  </tr>
+  <tr>
+   <td>maxVersion</td>
+   <td>Najnowsza wersja aplikacji docelowej, na której rozszerzenie będzie działało.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>W celu dowiedzenia się więcej odnośnie formatu manifestu instalacji przeczytaj artykuł <a href="pl/Manifesty_Instalacji">Manifesty Instalacji</a>.</p>
+
+<h2 id="Rejestracja_chrome" name="Rejestracja_chrome">Rejestracja chrome</h2>
+
+<p>The chrome manifest is a file that tells the target application where to look for the chrome package for your extension. The <a href="pl/Chrome">Chrome</a> is the set of user interface elements outside the content area of the application's window, such as toolbars, status bars, menu bars, and the like.</p>
+
+<p>Dla przykładu plik manifestu chrome chrome.manifest.</p>
+
+<pre class="eval"> content status-bar-sample-1 chrome/content/
+
+ # Firefox
+ overlay	<span class="nowiki">chrome://browser/content/browser.xul</span> <span class="nowiki">chrome://status-bar-sample-1/content/status-bar-sample-1.xul</span>
+</pre>
+
+<p>The first line registers the location on disk of the contents of the extension whose ID is "status-bar-sample-1". This path is relative to the extension's root folder in this case, but can be absolute if you want it to be.</p>
+
+<p>The second line registers an overlay. An overlay lets you add new content to an existing document. In this case, we want to augment the UI of the Firefox browser, so we specify the URI of the Firefox main window's XUL file, "<a class="external" rel="freelink">chrome://browser/content/browser.xul</a>", as the interface to overlay onto, and the URI of our own XUL file, "<a class="external" rel="freelink">chrome://status-bar-sample-1/content...r-sample-1.xul</a>", as the interface to overlay onto the browser.</p>
+
+<p>See <a href="pl/Nak%c5%82adki_XUL">Nakładki XUL</a> for details on how overlays work. You can also find more details about format of chrome manifests in the <a href="pl/Rejestracja_Chrome">Rejestracja Chrome</a> section.</p>
+
+<h2 id="Nak.C5.82adki_XUL" name="Nak.C5.82adki_XUL">Nakładki XUL</h2>
+
+<p>The XUL overlay file contains the XUL description of the user interface we want to add to Firefox. Our overlay file, status-bar-sample-1.xul, looks like this:</p>
+
+<pre class="eval"> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+ &lt;!DOCTYPE overlay &gt;
+ &lt;overlay id="status-bar-sample-1-overlay"
+          xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+ &lt;!-- Firefox --&gt;
+ &lt;statusbar id="status-bar"&gt;
+   &lt;statusbarpanel id="status-bar-sample-1"
+     label="Hello World"
+     tooltiptext="Sample status bar item"
+   /&gt;
+ &lt;/statusbar&gt;
+
+ &lt;/overlay&gt;
+</pre>
+
+<p>The first order of business in the status-bar-sample-1.xul file is to establish that this is in fact a XUL file, and to set up a unique ID for the overlay. This is accomplished by the following line of XML:</p>
+
+<pre class="eval">&lt;overlay id="status-bar-sample-1-overlay"
+  xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+
+<p>Once that's accomplished, we can describe our user interface. In this case, we're simply inserting a new panel into the status bar at the bottom of Firefox browser windows. We do this by embedding inside the <code>statusbar</code> named "status-bar" -- which is the Firefox browser window's status bar -- a new <code>statusbarpanel</code> object we call "status-bar-sample-1".</p>
+
+<p>We include properties to configure our new status bar panel the way we want, setting its text label to "Hello World" and establishing a tool tip with the message "Sample status bar item" in it.</p>
+
+<h2 id="Zobacz_jak_to_dzia.C5.82a" name="Zobacz_jak_to_dzia.C5.82a">Zobacz jak to działa</h2>
+
+<p>Aby przetestować swoje rozszerzenie, przeciągnij folder do folderu rozszerzenia w swoim <a class="external" href="http://kb.mozillazine.org/Profile_folder">folderze profilu</a>. Następnie uruchom ponownie Firefoksa i powinieneś zobaczyć rozszerzenie na pasku stanu.</p>
+
+<p><img alt="Grafika:status bar sample 1.png"></p>
+
+<p>{{ Next("Tworzenie rozszerzenia dynamicznego paska stanu") }}</p>

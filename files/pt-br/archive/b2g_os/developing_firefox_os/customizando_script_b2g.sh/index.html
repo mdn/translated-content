@@ -1,0 +1,45 @@
+---
+title: Customizando o script b2g.sh
+slug: Archive/B2G_OS/Developing_Firefox_OS/Customizando_script_b2g.sh
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<div class="summary">
+ <p>No telefone o aplicativo <code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">b2g</a></code> (que fornece as APIs do Firefox OS entre outras coisas) é iniciado através do script<code> /system/bin/b2g.sh</code>. Você pode customizar o script alterando o comportamento do Firefox OS, e esse artigo explica como.</p>
+</div>
+<h2 id="Configurar_variáveis_de_ambiente">Configurar variáveis de ambiente</h2>
+<p>Se você quiser configurar uma variável de ambiente para uma simples execução do B2G, você pode fazer o seguinte:</p>
+<pre class="brush: bash">adb shell stop b2g
+adb shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>If you want to use the same environment variables all of the time, then you can edit <code>b2g.sh</code>, as described in the next section.</p>
+<h2 id="Editando_o_b2g.sh">Editando o b2g.sh</h2>
+<p>Para depuração, você pode querer configurar variáveis de ambiente para conseguir informações através de log ou outras formas de alterar como o programa <code>b2g</code> é executado. Você pode fazer isso editando o script <code>b2g.sh</code>. Não há nenhuma ferramenta no telefone para editar o arquivo, assim você precisa copiá-lo para o seu computador para editá-lo.</p>
+<ol>
+ <li>Conecte o telefone no seu computador, abra um terminal e execute o seguinte comando para editar o script:
+  <pre>adb pull /system/bin/b2g.sh</pre>
+ </li>
+ <li>Edite o script alterando o que deseja. Por exemplo, suponha que você queira verificar alguns logs (que requer uma imagem preparada para depuração), então você pode adicionar algo como isso:
+  <pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+ </li>
+ <li>Execute os seguinte comandos para salvar o seu script editado <code>b2g.sh</code> o telefone e reiniciar o <code>b2g</code>:
+  <pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+ </li>
+</ol>
+<div class="note">
+ <p><strong>Nota:</strong> <code>/data/local/tmp</code> é o único local no sistema de arquivos que que pode ser gravado por um processo de conteúdo.</p>
+</div>
+<h2 id="Veja_também">Veja também</h2>
+<ul>
+ <li><a href="/pt-BR/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Compilando e Instalando o Firefox OS</a></li>
+ <li><a href="/pt-BR/docs/Mozilla/Firefox_OS/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">Visão geral da arquitetura do Firefox OS</a></li>
+ <li><a href="/pt-BR/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Depurando o Firefox OS</a></li>
+</ul>
+<p><br>
+  </p>

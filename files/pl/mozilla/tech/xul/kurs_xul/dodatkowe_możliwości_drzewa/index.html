@@ -1,0 +1,117 @@
+---
+title: Dodatkowe możliwości drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodatkowe_możliwości_drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Tree_Features
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Zaznaczenie_drzewa">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule poznamy więcej możliwości drzewa.
+</p>
+<h3 id="Hierarchia_drzew" name="Hierarchia_drzew"> Hierarchia drzew </h3>
+<p>Elementy drzewa są także zastosowane do tworzenia list hierarchicznych, takich, jakie możemy znaleźć w menedżerach plików lub na liście ulubionych zakładek w przeglądarce. Widok drzewa posiada funkcję, która określa hierarchię poszczególnych pozycji w drzewie. Każda pozycja w drzewie posiada swoją pozycję, która zaczyna się od poziomu 0. Najwyżej wysunięte elementy w drzewie będą posiadały poziom 0, dziecko tej pozycji będzie posiadało poziom 1, dziecko poniżej będzie posiadało poziom 2 i tak dalej. Drzewo będzie pytało o poziom każdej pozycji według ustalonych zasad jak wyrysować wiersze.
+</p><p>Drzewo wyrysuje ikony otwierania i zamykania pozycji rodzica, służące do rozwijania wierszy, jak również linie łączące wiersz rodzica z wierszami dzieci. Widok musi się upewniać, czy ścieżka wierszy jest taka, jak było wymagane. To może czasem się okazać zawodne, jednak, na szczęście, wbudowany widok treści drzewa wykona za nas najcięższą pracę. </p><p>W celu utworzenia zestawu zagnieżdżonych wierszy, dodajemy drugi element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> wewnątrz rodzica <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code>. Możemy wtedy dodać pozycję wewnątrz tamtego, żeby określić wiersze potomne kolejnych pozycji. Nie umieszczaj wewnętrznego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> wewnątrz <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code>, ponieważ to nie będzie działało.
+</p><p>Możemy powtarzać ten proces do utworzenia głęboko zagnieżdżonych drzew. Zasadniczo jednak element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> może zawierać którykolwiek z pojedynczych wierszy, które są zadeklarowane z elementem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code> lub całym kompletem wierszy, zadeklarowanych z elementem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>.
+</p><p>Są dwie inne rzeczy, które trzeba zrobić żeby upewnić się, że hierarchia zadziała poprawnie. Po pierwsze, trzeba zaznaczyć element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code>, który posiada 'dzieci' jako kontener. Robimy to poprzez dodanie atrybutu <code><code id="a-container"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/container">container</a></code></code> w następujący sposób:
+</p>
+<pre>&lt;treeitem container="true"/&gt;
+</pre>
+<p>Pozwala to użytkownikowi na kliknięcie w wiersz przesłany do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> w celu rozwinięcia i zwinięcia wewnętrznych wierszy. Można mieć rozwinięte wiersze już na samym początku, dodając atrybut <code><code id="a-open"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/open">open</a></code></code>. Kiedy użytkownik rozwija i zwija główny wiersz, wywoływana jest funkcja toggleOpenState, która to właśnie przełącza te widoki. Dla widoku treści drzewa umieści atrybut <code><code id="a-open"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/open">open</a></code></code>, żeby ustawić aktualny stan.
+</p><p>Drugą zmianą jest to, że musisz umieścić atrybut <code><code id="a-primary"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/primary">primary</a></code></code> w pierwszej kolumnie. To spowoduje ukazanie się małego symbolu trójkąta przed komórkami, który będzie wskazywał na to, że wiersz można rozwinąć. Dodatkowo wiersze potomne są wcięte (akapit). Zauważ, że użytkownik nie ma możliwości ukrycia pierwszej kolumny, używając przeciągania do prawych kolumn.
+</p>
+<h4 id="Przyk.C5.82ad_drzewa_hierarchicznego" name="Przyk.C5.82ad_drzewa_hierarchicznego"> Przykład drzewa hierarchicznego </h4>
+<p>Następujący prosty przykład:
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:advtrees1.png"></div>
+<pre>&lt;tree rows="6"&gt;
+  &lt;treecols&gt;
+      &lt;treecol id="firstname" label="Imię" primary="true" flex="3"/&gt;
+      &lt;treecol id="lastname" label="Nazwisko" flex="7"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Znajomi"/&gt;
+      &lt;/treerow&gt;
+
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Bob"/&gt;
+            &lt;treecell label="Carpenter"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Jerry"/&gt;
+            &lt;treecell label="Hodge"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<p>Utworzone zostało hierarchiczne drzewo. Jak widać na obrazku obok pierwszego wiersza ukazał się mały znak plusa lub minusa, wskazując, że wiersz zawiera wiersze potomne. Klikając na ten wiersz użytkownik może rozwinąć i zwinąć listę. Wiersz &lt;tt&gt;Znajomi&lt;/tt&gt; potrzebuje jednej kolumny do umieszczenia jego pozycji dla elementów dzieci.
+</p><p>Zewnętrzny <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> zawiera pojedynczy element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>. Ten pierwszy tworzy dane dla źródłowego wiersza, a ten drugi dla późniejszych pozycji potomnych. </p><p>Można również zagnieżdżać głębsze wiersze. Pamiętaj, że musimy użyć atrybutu <code><code id="a-container"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/container">container</a></code></code> na wierszach, które zawierają wiersze potomne. Zwykła obecność pochodnych wierszy nie jest wystarczająca do wskazania, czy masz kontener, który jest pusty, ale nadal będzie traktowany jako kontener. Na przykład pusty folder powinien być cały czas traktowany jako kontener, ale plik już nie.
+</p>
+<h3 id="Wi.C4.99cej_o_kolumnach_drzewa" name="Wi.C4.99cej_o_kolumnach_drzewa"> Więcej o kolumnach drzewa </h3>
+<p>Jednym z dodatkowych atrybutów, które mogą być dodane do drzewa, jest <code><code id="a-enableColumnDrag"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/enableColumnDrag">enableColumnDrag</a></code></code>. Jeżeli ma wartość <code>true</code>, użytkownik może złapać za nagłówek i dowolnie przemieszczać kolumny wg uznania.
+</p><p>Prawdopodobnie użytkownik będzie chciał też zmienić szerokość kolumn. Można to zrobić umieszczając rozdzielacz (<code><code><a href="/pl/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code></code>) pomiędzy każdym z elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code>. Pojawi się małe nacięcie pomiędzy kolumnami, które użytkownik może złapać i przeciągać, zmieniając szerokość kolumn. Można zastosować klasę stylu <code>tree-splitter</code> w celu ukrycia przerwy, ale mimo to nadal będzie możliwa zmiana szerokości kolumn.
+</p><p>Można narzucić maksymalną i minimalną szerokość kolumn przy pomocy atrybutów <code><code id="a-minwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minwidth">minwidth</a></code></code> i <code><code id="a-maxwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxwidth">maxwidth</a></code></code>.
+</p><p>Jest możliwość umieszczenia atrybutu <code><code id="a-hidden"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/hidden">hidden</a></code></code> w kolumnie, z wartością <code>true</code>, żeby domyślnie uzyskać ukrytą kolumnę. Użytkownik może wybierać, która kolumna ma być ukryta, wybierając ją z rozwijanej listy na końcu wiersza nagłówka. </p>
+<h4 id="Zapami.C4.99tywanie_stanu_kolumn" name="Zapami.C4.99tywanie_stanu_kolumn"> Zapamiętywanie stanu kolumn </h4>
+<div class="float-right"><img alt="Grafika:XUL_rememberingStatofColumnsPL.png"></div>
+<p>Atrybut <code><code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code></code> może być używany do zachowywania stanu kolumn pomiędzy sesjami (więcej informacji znajduje się <a href="pl/Kurs_XUL/Trwa%c5%82e_dane">w jednym z kolejnych artykułów</a>). Tak, że w przypadku, gdy użytkownik zmieni układ wg własnego uznania, ustawienia zostaną zapamiętanie na następny raz. Będzie trzeba zachować pewna liczbę atrybutów jak w przykładzie:
+</p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul">Podgląd</a>
+</p>
+<pre>&lt;tree enableColumnDrag="true" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="runner" label="Biegacz" flex="2" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="city" label="Miasto rodzinne" flex="2" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="starttime" label="Czas startu" flex="1" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="endtime" label="Czas ukończenia" flex="1" persist="width ordinal hidden"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Joshua Granville"/&gt;
+        &lt;treecell label="Vancouver"/&gt;
+        &lt;treecell label="7:06:00"/&gt;
+        &lt;treecell label="9:10:26"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Robert Valhalla"/&gt;
+        &lt;treecell label="Seattle"/&gt;
+        &lt;treecell label="7:08:00"/&gt;
+        &lt;treecell label="9:15:51"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<p>Trzy atrybuty kolumn są trwałe:
+</p>
+<ul><li> atrybut <code><code id="a-width"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/width">width</a></code></code>, aby zachować szerokość,
+</li><li> atrybut <code><code id="a-ordinal"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ordinal">ordinal</a></code></code>, który podtrzymuje pozycję kolumny, </li><li> atrybut <code><code id="a-hidden"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/hidden">hidden</a></code></code>, który zapamiętuje, gdzie kolumna jest widoczna, a gdzie ukryta. </li></ul>
+<p>Następnie dowiemy się, jak pobrać i ustawić <a href="pl/Kurs_XUL/Zaznaczenie_drzewa">zaznaczenie drzew</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Zaznaczenie_drzewa">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

@@ -1,0 +1,81 @@
+---
+title: WebGLRenderingContext.compileShader()
+slug: Web/API/WebGLRenderingContext/compileShader
+translation_of: Web/API/WebGLRenderingContext/compileShader
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p><strong>WebGLRenderingContext.compileShader() </strong>метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> компилирующий исходный код GLSL шейдера в бинарные данные для использования программой  {{domxref("WebGLProgram")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">void <var><em>gl</em>.compileShader</var><var>(shader);</var>
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>shader</code></dt>
+ <dd>Вершинный или фрагментный шейдер {{domxref("WebGLShader")}}.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(shader, shaderSource);
+gl.compileShader(shader);
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.9", "compileShader")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glCompileShader.xml", "glCompileShader")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>OpenGL man page.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с https://github.com/mdn/browser-compat-data и отправить нам запрос на слияние.</p>
+
+<p>{{Compat("api.WebGLRenderingContext.compileShader")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("WebGLProgram")}}</li>
+ <li>{{domxref("WebGLShader")}}</li>
+ <li>{{domxref("WebGLRenderingContext.attachShader()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.detachShader()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.shaderSource()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
+</ul>

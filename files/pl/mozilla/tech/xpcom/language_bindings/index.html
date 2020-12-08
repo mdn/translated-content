@@ -1,0 +1,25 @@
+---
+title: Language bindings
+slug: Mozilla/Tech/XPCOM/Language_Bindings
+tags:
+  - Embedding
+  - Landing
+  - Mozilla
+  - NeedsTranslation
+  - TopicStub
+  - XPCOM
+  - 'XPCOM:Language Bindings'
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings
+---
+<p>An <strong>XPCOM Language Binding</strong> is a bridge between a particular language and <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> to provide access to XPCOM objects from that language, and to let modules written in that language be used as XPCOM objects by all other languages for which there are XPCOM bindings.</p>
+<p>More specifically, an XPCOM language binding:</p>
+<ul>
+ <li>Enables <em>access to XPCOM objects from that language</em> (where access means reading/writing/creating XPCOM objects as well as calling methods on them).</li>
+ <li>Exposes <em>modules written in the bound language as XPCOM objects</em>, thereby enabling all other languages for which XPCOM bindings exist to access these modules.</li>
+</ul>
+<p>Since the XPCOM layer itself is written in C/C++, its API can be accessed out-of-the-box using C or C++. In order to allow any other language to use the XPCOM API, a bridging layer is required.</p>
+<p>The following bridging layers are currently available:</p>
+<p></p><div class="row topicpage-table">
+    <div class="section"><dl><dl><dt class="landingPageList"><a href="/pl/docs/Components.utils">Components.utils</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/pl/docs/Components.utils.reportError">Components.utils.reportError</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/pl/docs/Components.utils.Sandbox">Components.utils.Sandbox</a></dt><dd class="landingPageList"></dd></dl></dl></div>
+    <div class="section"><dl><dt class="landingPageList"><a href="/pl/docs/JavaXPCOM">JavaXPCOM</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/pl/docs/PyXPCOM">PyXPCOM</a></dt><dd class="landingPageList"></dd></dl></div>
+    </div><p></p>

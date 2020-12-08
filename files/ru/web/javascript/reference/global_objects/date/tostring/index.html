@@ -1,0 +1,118 @@
+---
+title: Date.prototype.toString()
+slug: Web/JavaScript/Reference/Global_Objects/Date/toString
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
+---
+<div>{{JSRef("Global_Objects", "Date")}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Метод <strong><code>toString()</code></strong> возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Date", "Date")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code><var>dateObj</var>.toString()</code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+<p>Нет.</p>
+
+<h2 id="Description" name="Description">Описание</h2>
+<p>Объект {{jsxref("Global_Objects/Date", "Date")}} переопределяет метод <code>toString()</code>, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Date", "Date")}} метод <code>toString()</code> возвращает строковое представление объекта.</p>
+<p>Метод <code>toString()</code> всегда возвращает строковое представление даты на американском английском.</p>
+<p>JavaScript вызывает метод <code>toString()</code> автоматически, когда дата представляется как текст, или когда дата участвует в конкатенации строк.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example:_Using_toString" name="Example:_Using_toString">Пример: использование метода <code>toString()</code></h3>
+<p>В следующем примере переменной <code>myVar</code> присваевается значение, возвращённое методом <code>toString()</code> объекта {{jsxref("Global_Objects/Date", "Date")}}:</p>
+<pre class="brush: js">var x = new Date();
+myVar = x.toString(); // присваивает переменной myVar значение вроде:
+// Mon Sep 28 1998 14:36:22 GMT-0700 (Pacific Daylight Time)
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1-е издание.</td>
+   <td>Стандарт</td>
+   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.2', 'Date.prototype.toLocaleTimeString')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.tostring', 'Date.prototype.toString')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<div>{{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+<ul>
+ <li>{{jsxref("Object.prototype.toString()")}}</li>
+ <li>{{jsxref("Date.prototype.toDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
+</ul>

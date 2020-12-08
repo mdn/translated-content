@@ -1,0 +1,123 @@
+---
+title: WeakSet.prototype.delete()
+slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+tags:
+  - ECMAScript6
+  - JavaScript
+  - Method
+  - Prototype
+  - WeakSet
+translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+---
+<div>{{JSRef("Global_Objects", "WeakSet")}}</div>
+
+<p>Метод <code><strong>delete()</strong></code> удаляет указанный элемент из объекта <code>WeakSet</code>.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><em>ws</em>.delete(value);</code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+
+<dl>
+ <dt>value</dt>
+ <dd>Обязателен. Объект, удаляемый из  WeakSet.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Если объект был успешно удалён, возвращается true, иначе false.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example:Testing_size_of_all_array_elements" name="Example:Testing_size_of_all_array_elements">Использование метода <code>delete</code> </h3>
+
+<pre class="brush: js">var ws = new WeakSet();
+var obj = {};
+
+ws.add(window);
+
+ws.delete(obj);    // Вернёт false. Удаляемый объект не найден в WeakSet.
+ws.delete(window); // Вернёт true.  Объект успешно удалён.
+
+ws.has(window);    // Вернёт false. Объект window был удалён из WeakSet.
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>36</td>
+   <td>{{CompatGeckoDesktop(34)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>23</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoMobile(34) }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("WeakSet")}}</li>
+ <li>{{jsxref("WeakSet.prototype.clear()")}}</li>
+</ul>

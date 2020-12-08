@@ -1,0 +1,47 @@
+---
+title: Symulator Firefox OS
+slug: Archive/B2G_OS/Simulator
+translation_of: Archive/B2G_OS/Simulator
+---
+<div class="note">
+ <p>Dodatek Symulator Firefox OS składa się z dwóch części:</p>
+ <p> </p>
+ <ul>
+  <li><strong>Symulator</strong>: zawiera <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">desktopową wersję klienta Firefox OS</a>, który jest wyższą warstwą <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> działającym na twoim pulpicie. Symulator zawiera dodatkowo kilka <a href="#Simulator-toolbar" title="#Simulator-toolbar">dodatkowych funkcji</a> które nie są w standardzie desktopowych wydań Firefox OS</li>
+  <li><strong>Dashboard</strong>: narzędzie przeglądarki Firefox umożliwiające uruchomienie i zatrzymanie symulatora oraz instalację, deinstalację i debugowanie aplikacji działających symulatora. Dashboard ponadto umożliwi Ci instalację aplikacji na prawdziwym urządzeniu i sprawdzenie manifestów w poszukiwaniu problemów.</li>
+ </ul>
+ <p>Teraz te dwie części zostały połączone: funkcje Dashboard są zaimplementowane przez  <a href="/en-US/Firefox_OS/Using_the_App_Manager">Menedżer Aplikacji (App Manager)</a> Firefox OS, wbudowanego w Firefoxie. The Simulator add-on now only includes the Simulator part.</p>
+</div>
+<p>Dodatek Symulator Firefox OS umożliwia Ci testowanie i debugowanie <a href="/en-US/docs/Apps" title="/en-US/docs/Apps">aplikacji Firefox OS</a> na komputerze. Cykl kodowanie-testowanie-debugowanie jest znaczenie szybsze na symulatorze w porównaniu z rzeczywistym urządzeniem, oczywiście nie potrzemujesz urządzenia aby go używać. Symulator jest <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">desktopową wersją klienta Firefox OS</a>, który jest wyższą warstwą <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> działającym na twoim pulpicie.</p>
+<p>Włączasz i wyłączasz symulator i dołączasz narzędzia deweloperskie używając  <a href="/en-US/Firefox_OS/Using_the_App_Manager">Menedżera Aplikacji (App Manager)</a>, wbudowanego w Firefox.</p>
+<h2 id="Limity_symulatora">Limity symulatora</h2>
+<p>Pamiętaj, że symulacja Firefox OS nie jest idealna.</p>
+<h3 id="Limity_sprzętowe">Limity sprzętowe</h3>
+<p>Symulator nie symuluje limitów sprzętowych takich jak dostępna pamięć RAM lub prędkość procesora.</p>
+<h3 id="Kodeki_audiowideo">Kodeki audio/wideo</h3>
+<p>Poniższe kodeki wymagają sprzętowego dekodowania i nie są wspierane:</p>
+<ul>
+ <li>MP3</li>
+ <li>AAC</li>
+ <li>H.264 (MP4)</li>
+ <li>WebM</li>
+</ul>
+<p>To znaczy, że symulator nie potrafi przetestować odtwarzania dźwięku i wideo między innymi na witrynach internetowych.</p>
+<h3 id="Niewspierane_API"><a name="Unsupported-APIs">Niewspierane API</a></h3>
+<p>Pewne API które normalnie działają na urządzeniu nie zadziałają w symulatorze ze względu na wspierany sprzęt niedostępny na komputerze. Zaimplementowaliśmy symulacje dla kilku API takie jak geolokacja (oczekujemy, że dodamy więcej w przyszłych wydaniach symulatora).</p>
+<p>W obecnym momencie poniższe API nie są wspierane. Używanie ich może spowodować otrzymanie błędów lub niewłaściwych wyników:</p>
+<ul>
+ <li><a href="/en-US/WebAPI/WebTelephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+</ul>
+<h2 id="Getting_help"><a name="Simulator-help"></a>Getting help</h2>
+<p>The Firefox OS Simulator is still at an early stage of development, and isn't yet as reliable and complete as we'd like it to be.</p>
+<p>If you find any bugs, please <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">file them on GitHub</a>. If you have a question, try asking us on the <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">dev-developer-tools mailing list</a> or on <a href="irc://irc.mozilla.org/#devtools">#devtools on irc.mozilla.org</a>.</p>
+<h3 id="How_to_enable_verbose_logging"><a name="Simulator-verbose-logging"></a>How to enable verbose logging</h3>
+<p>Use about:config to create the preference <a href="mailto:extensions.r2d2b2g@mozilla.org.sdk.console.logLevel">extensions.r2d2b2g@mozilla.org.sdk.console.logLevel</a>, set it to the integer value 0, and disable/reenable the addon. Additional messages about the Simulator's operation will appear in the Error Console (or Browser Console in newer versions of Firefox).</p>

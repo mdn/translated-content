@@ -1,0 +1,115 @@
+---
+title: Creating a dynamic status bar extension
+slug: Creating_a_dynamic_status_bar_extension
+translation_of: Archive/Creating_a_dynamic_status_bar_extension
+---
+<p>{{ PreviousNext("Creating a status bar extension", "Adding preferences to an extension") }} This article builds upon the article <a href="/en-US/Creating_a_status_bar_extension" title="/en-US/Creating_a_status_bar_extension">Creating a status bar extension</a>, which creates a static status bar panel in the Firefox status bar, by dynamically updating its content with information fetched from the web every few minutes. Specifically, this sample displays a stock quote in the status bar, and, when you mouse over it, displays a tooltip containing more detailed information about the stock.</p>
+<p>Concepts covered in the previous sample won't be reiterated here; instead, refer to the downloadable sample code or to the previous sample for further details.</p>
+<h2 id="Download_the_sample" name="Download_the_sample">Download the sample</h2>
+<p>You can download a copy of this sample to look over, or to use as the basis for your own extension. Or, if you've already got the code from the <a href="/en-US/Creating_a_status_bar_extension" title="/en-US/Creating_a_status_bar_extension">Creating a status bar extension</a> sample, you can follow this tutorial to update that existing code with new features.</p>
+<p><a class="external" href="/samples/extension-samples/stockwatcher.zip">Download the sample</a></p>
+<h2 id="Update_the_install_manifest" name="Update_the_install_manifest">Update the install manifest</h2>
+<p>Replace all occurrences of the first sample's ID, "status-bar-sample-1", with the new sample's ID, "stockwatcher", and update the front end metadata to describe our new extension.</p>
+<p>See <a href="/en-US/Install_Manifests" title="/en-US/Install_Manifests">Install Manifests</a> for details.</p>
+<h2 id="Update_the_chrome_manifest" name="Update_the_chrome_manifest">Update the chrome manifest</h2>
+<p>The <a href="/en-US/Chrome" title="/en-US/Chrome">chrome</a> manifest needs only a minor update from the previous sample; simply replace the ID of the first sample, "status-bar-sample-1", with the name of the new sample, "stockwatcher".</p>
+<p>If you need to brush up, visit the <a href="/en-US/Chrome_Registration" title="/en-US/Chrome_Registration">Chrome Manifest</a> section.</p>
+<h2 id="Write_the_XUL_file" name="Write_the_XUL_file">Write the XUL file</h2>
+<p>We need a slightly more complicated XUL file this time, in order to add a reference to the JavaScript code that will do the real work:</p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;!DOCTYPE overlay&gt;
+&lt;overlay id="stockwatcher-overlay"
+  xmlns="<span class="plain">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;script type="application/javascript"
+  src="<span class="plain">chrome://stockwatcher/content/stockwatcher.js</span>"/&gt;
+
+&lt;!-- Firefox --&gt;
+&lt;statusbar id="status-bar"&gt;
+  &lt;statusbarpanel id="stockwatcher"
+    label="Loading..."
+    tooltiptext="Current value"
+    onclick="StockWatcher.refreshInformation()" /&gt;
+&lt;/statusbar&gt;
+
+&lt;/overlay&gt;
+</pre>
+<p>Also, notice that the definition of the status bar panel now includes a new property, <code>onclick</code>, which references the JavaScript function that will be executed whenever the user clicks on the status bar panel. Our extension will refresh the stock information display when the user clicks the panel.</p>
+<h2 id="Write_the_JavaScript_code" name="Write_the_JavaScript_code">Write the JavaScript code</h2>
+<p>The work of fetching the stock quote and updating the status bar panel's display is handled by the JavaScript code in the file <code>stockwatcher.js</code>.</p>
+<p>Unlike our previous sample, this one is implemented as an object. We do this because in future samples in this series, we're going to be doing things that are easier to do if our extension is implemented that way.</p>
+<p>We use the <code>window.addEventListener()</code> DOM function to tell Firefox to call the <code>StockWatcher.startup()</code> function when a new browser window is opened:</p>
+<pre class="brush: js">window.addEventListener("load", function(e) { StockWatcher.startup(); }, false);
+</pre>
+<p>Our new extension has two primary functions: <code>startup()</code> and <code>refreshInformation()</code>. The <code>refreshInformation()</code> function contains another function, called <code>infoReceived()</code>. The following sections will examine these one by one.</p>
+<h3 id="startup.28.29" name="startup.28.29">startup()</h3>
+<p>The <code>startup()</code> function is called when a new browser window is opened. <span class="comment">We end up reloading data from each of the windows once in 10 minutes - fixing this by creating a JS component responsible for communication with the server is a good idea for one of the future articles</span></p>
+<pre class="brush: js">startup: function()
+{
+  this.refreshInformation();
+  window.setInterval(this.refreshInformation, 10*60*1000);
+},
+</pre>
+<p>This starts by calling our <code>refreshInformation()</code> function, which is responsible for fetching and displaying stock ticker information in the status bar panel. We do this so that upon loading, the stock information is displayed as soon as possible.</p>
+<p>After doing that, we install an interval routine on the browser window by calling <code><a href="/en-US/DOM/window.setInterval" title="/en-US/DOM/window.setInterval">window.setInterval()</a></code>. This configures our <code>refreshInformation()</code> routine to be called every 10 minutes (the time interval is specified in milliseconds).</p>
+<h3 id="refreshInformation.28.29" name="refreshInformation.28.29">refreshInformation()</h3>
+<p>The <code>refreshInformation()</code> function is called whenever we want to update the stock information. It's called whenever the user clicks on the status bar panel, when our extension is first added to a browser window, and by the interval handler to periodically update the display.</p>
+<pre class="brush: js">refreshInformation: function()
+{
+  var httpRequest = null;
+  var fullUrl = 'http://quote.yahoo.com/d/quotes.csv?f=sl1d1t1c1ohgv&amp;e=.csv&amp;s=GOOG';
+
+  // ...
+
+  httpRequest = new XMLHttpRequest();
+
+  httpRequest.open('GET', fullUrl, true);
+  httpRequest.onload = infoReceived;
+  httpRequest.send(null);
+}
+</pre>
+<p>The <code>httpRequest</code> variable will contain an <code><a href="/en-US/nsIXMLHttpRequest" title="/en-US/XMLHttpRequest">XMLHttpRequest</a></code> object. This object is used to configure and run an HTTP request on a web server, which we'll use to fetch the stock quote data.</p>
+<p>The <code>fullUrl</code> variable is the complete URL to use when requesting a stock quote. In this case, we're using Yahoo's comma-separated values return to fetch easily-parsed stock quote data for Google (ticker symbol GOOG).</p>
+<p><code>refreshInformation()</code> embeds another function, <code>infoReceived()</code>, which we'll look at separately shortly.</p>
+<p>The first thing we do is create a new <code>XMLHttpRequest</code> object to use for processing our request. We open the request, specifying that we wish to perform an HTTP "GET" command with the URL <code>fullUrl</code>. The <code>true</code> Boolean value in the third parameter indicates that we want to process the request asynchronously.</p>
+<p>Setting the <code>httpRequest.onload</code> property to our <code>infoReceived()</code> function configures the request to call <code>infoReceived()</code> when the response is received from the server. Finally, we send the request to the server and return.</p>
+<h3 id="infoReceived.28.29" name="infoReceived.28.29">infoReceived()</h3>
+<p>When the server responds to our request, our the <code>infoReceived()</code> function, which is embedded inside <code>refreshInformation()</code>, gets called automatically.</p>
+<p>We embed this function inside <code>refreshInformation()</code> so that its variable scope includes the variables used by that function. Due to the way JavaScript works, if <code>infoReceived()</code> were outside <code>refreshInformation()</code>, it would not have access to the same variable scope. In fact, even the <code>this</code> value would not match, so we couldn't get at the same variables and functions that way.</p>
+<pre class="brush: js">function infoReceived()
+{
+  var samplePanel = document.getElementById('stockwatcher');
+  var output = httpRequest.responseText;
+
+  if (output.length)
+  {
+    // Remove whitespace from the end of the string;
+    // this gets rid of the end-of-line characters
+
+    output = output.replace(/\W*$/, '');
+
+    // Build the tooltip string
+
+    var fieldArray = output.split(','); // Assert that fieldArray[0] == 'GOOG'
+    samplePanel.label = 'GOOG: ' + fieldArray[1];
+    samplePanel.tooltipText = 'Chg: ' + fieldArray[4] + ' | ' +
+         'Open: ' + fieldArray[5] + ' | ' +
+         'Low: ' + fieldArray[6] + ' | ' +
+         'High: ' + fieldArray[7] + ' | ' +
+         'Vol: ' + fieldArray[8];
+  }
+}
+</pre>
+<p>The first thing we do here is get the status bar panel into the variable <code>samplePanel</code> by calling the <code><a href="/en-US/DOM/document.getElementById" title="/en-US/DOM/document.getElementById">document.getElementById()</a></code> DOM function. We need this so that we can make changes to the status bar panel itself.</p>
+<p>We then fetch the result returned by the web server into the variable <code>output</code> from the <code>XMLHttpRequest.responseText</code> property.</p>
+<p>The text we receive back from the server looks something like this:</p>
+<pre class="brush: js"> "GOOG",414.20,"5/1/2006","1:36pm",-3.74,417.85,419.44,412.19,4760215
+</pre>
+<p>We then parse the text. We use the <code>split()</code> string function to split the comma-separated value string into its individual parts, with each field in a separate element in the array <code>fieldArray</code>. At index 0 is the ticker symbol itself, which we don't need since we know which stock we're looking at.</p>
+<p>The status bar panel's label is set to indicate the current value of the stock, which is stored in <code>fieldArray</code>, by setting the <code>samplePanel.label</code> property.</p>
+<p>We then set the tooltip for the status bar panel by assigning an appropriate string to the <code>samplePanel.tooltipText</code> property. The string is built from a combination of static strings and various elements from the <code>fieldArray</code> array.</p>
+<h2 id="See_it_in_action" name="See_it_in_action">See it in action</h2>
+<p>Now you can install it and try it out. You should see something that looks like this:</p>
+<p><img alt="Image:stockwatcher.png" class="internal" src="/@api/deki/files/866/=Stockwatcher.png"></p>
+<p>In this screenshot, we also have the previous sample running, displaying the text "Hello World." {{ PreviousNext("Creating a status bar extension", "Adding preferences to an extension") }}</p>

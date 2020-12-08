@@ -1,0 +1,244 @@
+---
+title: Vários perfis no Firefox
+slug: Mozilla/Firefox/Multiple_profiles
+tags:
+  - Firefox
+  - Guía
+  - Iniciante
+  - Intro
+  - Perfis
+  - QA
+translation_of: Mozilla/Firefox/Multiple_profiles
+---
+<div>{{FirefoxSidebar}}</div>
+
+<p class="summary">Um perfil no Firefox é a coleção de configurações, personalizações, complementos e outras personalizações que um usuário fez ou instalou em sua cópia do Firefox. Você pode encontrar <a href="https://support.mozilla.org/kb/Profiles">detalhes sobre perfis</a> no site de suporte ao usuário final da Mozilla.</p>
+
+<h2 id="Motivos_para_ter_vários_perfis">Motivos para ter vários perfis</h2>
+
+<p>O usuário casual pode querer ter perfis diferentes para trabalho e uso pessoal ou para membros da família diferentes. Ter perfis diferentes ajudaria a separar a vida profissional e pessoal ou permitir que cada membro da família tenha seu próprio conjunto de favoritos, configurações e complementos.</p>
+
+<p>Os desenvolvedores web podem querer um perfil secundário para testar sites, aplicativos ou outros projetos em diferentes canais do Firefox. Por exemplo, você pode querer ter algumas extensões instaladas para desenvolvimento Web, mas não para navegação na Web de propósito geral. Ao usar o canal Nightly, você pode encontrar alguns complementos que se tornaram temporariamente incompatíveis com novas alterações da API, até que o desenvolvedor do complemento tenha a chance de atualizá-los. Você pode remover esses complementos do seu perfil para uso noturno, mantendo-os para uso com outros perfis.</p>
+
+<p>Para colaboradores de QA, teste e triagem de bugs, você pode querer ter várias versões de desenvolvimento do Firefox instaladas, cada uma com seu próprio perfil. Criar novos perfis para testes pode impedir que você perca suas preferências, favoritos e histórico. Demora pouco tempo para configurar um novo perfil e, uma vez concluído, todas as suas versões do Firefox serão atualizadas separadamente e poderão ser executadas simultaneamente.</p>
+
+<h2 id="Canais_disponíveis_de_desenvolvimento_do_navegador">Canais disponíveis de desenvolvimento do navegador</h2>
+
+<p>Há quatro canais do navegador disponíveis, cada um em um nível diferente de estabilidade e desenvolvimento. Os quatro canais são <a href="https://www.mozilla.org/firefox/new//en-US/docs/">Release</a>, <a href="https://www.mozilla.org/firefox/beta//en-US/docs/">Beta</a>, <a href="https://www.mozilla.org/firefox/aurora/">Developer Edition</a> e <a href="https://nightly.mozilla.org/">Nightly</a>. O canal Release é recomendado para a maioria dos usuários, já que é o canal de "lançamento oficial". No entanto, para os mais aventureiros, você pode experimentar um dos outros três canais para ver o que está por vir no Firefox e brincar com recursos emergentes. O canal Beta contém os recursos que devem estar na próxima versão do Firefox e estão em fase final de testes. Aurora contém recursos experimentais, que ainda não são de qualidade beta. Nightly contém o código mais recente dos desenvolvedores do Firefox e é o canal menos estável.</p>
+
+<h2 id="Ferramentas_de_terceiros">Ferramentas de terceiros</h2>
+
+<p>Além do Gerenciador de Perfis integrado e do Gerenciador de Perfis externo, existem algumas ferramentas de terceiros que facilitam o trabalho com vários perfis.</p>
+
+<div class="note">
+<p>Essa lista não é exaustiva. Por favor, adicione a esta lista quaisquer ferramentas úteis que você descobrir!</p>
+</div>
+
+<h3 id="Mac_OS_X">Mac OS X</h3>
+
+<ul>
+ <li><a href="http://davemartorana.com/multifirefox/">Multifirefox</a> por Dave Martorana</li>
+</ul>
+
+<h2 id="Gerenciamento_de_perfis">Gerenciamento de perfis</h2>
+
+<h3 id="Determinando_o_perfil_enquanto_o_Firefox_está_em_execução">Determinando o perfil enquanto o Firefox está em execução</h3>
+
+<p>Para determinar o perfil de uma instância do Firefox em execução no Windows, macOS ou Linux,</p>
+
+<ol>
+ <li>Digite about:profiles ma barra de pesquisa de URL do navegador.</li>
+ <li>A página apresenta uma lista de todos os seus perfis, cada um começando com "Perfil: " seguido por seu nome.</li>
+ <li>O que está sendo usado por esta instância do Firefox incluirá o texto em negrito "<strong>Este é o perfil em uso</strong>". Por exemplo, se você encontrar este texto sob a entrada de "Perfil: Suzie", então você está usando um perfile chamado <em>Suzie</em>.</li>
+</ol>
+
+<h3 id="Iniciando_o_Firefox_no_perfil_desejado">Iniciando o Firefox no perfil desejado</h3>
+
+<p id="You_cannot_change_the_profile_while_Firefox_is_running._Although_it_is_possible_in_some_cases_to_have_multiple_instances_of_Firefox_running_in_different_profiles_to_avoid_confusion_you_should_first_exitquitterminate_all_running_instances_of_Firefox_FirefoxDeveloperEdition_or_Nightly._Then_follow_the_instructions_below_applicable_to_your_operating_system."><strong>Você não pode mudar o perfile enquanto o Firefox está em execução.</strong>  Apesar de ser possível em alguns casos ter várias instâncias do Firefox em execução em diferentes perfis, para evitar confusão, você deve primeiro sair/terminar todas as instâncias em execução de <em>Firefox</em>, <em>FirefoxDeveloperEdition</em> ou <em>Nightly</em>. Então, siga as instruções abaixo, aplicáveis ao seu sistema operacional.</p>
+
+<h4 id="Windows">Windows</h4>
+
+<h5 id="Windows_XP">Windows XP</h5>
+
+<ol>
+ <li>Clique no botão de Iniciar.</li>
+ <li>Clique "Executar".</li>
+ <li>
+  <p>Digite <code>firefox --ProfileManager</code>.</p>
+ </li>
+</ol>
+
+<h5 id="Windows_Vista7">Windows Vista/7</h5>
+
+<ol>
+ <li>Clique no botão de Iniciar.</li>
+ <li>Clique na barra de pesquisa na parte inferior.</li>
+ <li>
+  <p>Digite <code>firefox --ProfileManager</code>.</p>
+ </li>
+</ol>
+
+<h5 id="Windows_88.1">Windows 8/8.1</h5>
+
+<ol>
+ <li>Pressione "Windows + R" em seu teclado.</li>
+ <li>Digite <code>firefox --ProfileManager</code>.</li>
+</ol>
+
+<p>Se a janela do Gerenciador de Perfis não abrir, o Firefox pode estar sendo executado em segundo plano, mesmo que não esteja visível. Feche todas as instâncias do Firefox ou reinicie o computador e tente novamente.</p>
+
+<h4 id="Linux">Linux</h4>
+
+<p>Se o Firefox já estiver incluído na sua distribuição Linux, ou se você tiver instalado o Firefox com o gerenciador de pacotes da sua distribuição Linux:</p>
+
+<ol>
+ <li>No topo da janela do Firefox, clique no menu Arquivo e selecione Sair.</li>
+ <li>No Terminal, execute <code>firefox --ProfileManager</code></li>
+</ol>
+
+<p>Se a janela do Gerenciador de Perfis não abrir, o Firefox pode estar sendo executado em segundo plano, mesmo que não esteja visível. Feche todas as instâncias do Firefox ou reinicie o computador e tente novamente.</p>
+
+<h4 id="macOS">macOS</h4>
+
+<ol>
+ <li>Execute o aplicativo <em>Terminal</em>, que é encontrado em Aplicativos/Utilitários.</li>
+ <li>Digite ou cole no caminho para o Firefox, seguido por <code>.app/Contents/MacOS/firefox</code>.  Por exemplo, se o Firefox está instalado no local recomendado, você digitaria <code>/Applications/Firefox.app/Contents/MacOS/firefox</code>.</li>
+ <li>Se você tiver o caminho para o seu perfil desejado à mão, insira um caractere de espaço, seguido por <code>-profile</code> seguido por outro caractere de espaço, seguido pelo caminho completo para a pasta de perfil na qual você deseja iniciar. Isto irá iniciar o Firefox imediatamente. Caso contrário, insira um caractere de espaço seguido de <code>--profilemanager</code>. Isso apresentará a janela do Gerenciador de Perfis na qual você pode fazer sua seleção.</li>
+ <li>Pressione <em>enter.</em></li>
+</ol>
+
+<p>Aqui está um exemplo completo do comando Terminal a partir dos passos 2-3:</p>
+
+<pre>/Applications/Firefox.app/Contents/macOS/firefox -profile /Users/Suzie/Library/Application\ Support/Firefox/Profiles/r99d1z7c.default</pre>
+
+<p>Se você quiser fazer isso com frequência e de forma mais fácil, você pode querer criar um aplicativo <em>Automatizador</em>, como explicado <a href="http://sonnygill.net/mac/mac-multiple-firefox-profiles/">neste tutorial</a>.</p>
+
+<h3 id="Criando_um_perfil">Criando um perfil</h3>
+
+<h4 id="Criando_um_perfil_através_do_Gerenciador_de_Perfis">Criando um perfil através do Gerenciador de Perfis</h4>
+
+<p>Essas instruções devem ser as mesmas para todos os sistemas operacionais.</p>
+
+<ol>
+ <li>Para iniciar o Assistente de novo perfil, clique em "Novo perfil..." no Gerenciador de Perfis.</li>
+ <li>Clique em Próximo e insira o nome do perfil. Use um nome de perfil que seja descritivo, como seu nome pessoal. Este nome não é exposto à Internet.</li>
+ <li>Você também pode escolher onde armazenar o perfil no seu computador. Para selecionar o local de armazenamento, clique em Pasta....</li>
+ <li>Se você escolher o local da pasta para o perfil, selecione uma pasta nova ou vazia. Se você escolher uma pasta que não esteja vazia e depois remover o perfil e escolher a opção \"Excluir arquivos\", tudo dentro dessa pasta será excluído.</li>
+ <li>Para criar o novo perfil, clique Concluir.</li>
+</ol>
+
+<h4 id="Criando_um_perfil_através_do_navegador_Firefox">Criando um perfil através do navegador Firefox</h4>
+
+<p>Você pode criar um novo perfil do Firefox diretamente no navegador.</p>
+
+<ol>
+ <li>Digite about:profiles na barra de pesquisa de URL do navegador</li>
+ <li>Na página, clique no botão Criar um novo perfil</li>
+ <li>Leia a introdução e clique em Próximo</li>
+ <li>Digite um nome de perfil para seu novo Perfil. Use um nome de perfil que é descritivo, tal como seu nome pessoal. Esse nome não é exposto para a Internet.</li>
+ <li>Opcionalmente, para alterar onde o perfil armazenará seu computador, clique em Pasta...</li>
+ <li>Para criar um novo perfil, clique Concluir.</li>
+</ol>
+
+<h3 id="Excluindo_um_perfil">Excluindo um perfil</h3>
+
+<ol>
+ <li>No Gerenciador de perfil, selecione o perfil para remover e clique Excluir perfil....</li>
+ <li>Confirme que você deseja excluir o perfil:
+  <ul>
+   <li>"Não excluir arquivos" remove o perfil do Gerenciador de perfil, mas retém os arquivos de dados do perfil no seu computador na pasta de armazenamento, para que suas informações não sejam perdidas. "Não excluir arquivos" é a opção preferida, porque salva a pasta do perfil antigo, permitindo recuperar os arquivos para um novo perfil.</li>
+   <li>"Excluir arquivos" remove o perfil e seus arquivos, incluindo os favoritos, configurações, senhas, etc.<br>
+    <br>
+    {{ warning("Se você usar a opção \"Excluir arquivos\", a pasta de perfil e os arquivos serão excluídos. Essa ação não podem ser desfeitas.") }}</li>
+   <li>"Cancelar" interrompe a exclusão de perfil.</li>
+  </ul>
+ </li>
+</ol>
+
+<h3 id="Renomeando_um_perfil">Renomeando um perfil</h3>
+
+<ol>
+ <li>No Gerenciador de perfil, selecione o perfil que você deseja renomear e clique em "Renomear perfil".</li>
+ <li>Insira um novo nome para o perfile e clique em OK.</li>
+</ol>
+
+<div class="note">
+<p>Nota: A pasta contendo os arquivos para o perfil não é renomeada.</p>
+</div>
+
+<h2 id="Opções">Opções</h2>
+
+<h3 id="Trabalhar_desconectado">Trabalhar desconectado</h3>
+
+<p>A escolha desta opção carrega o perfil selecionado e inicia o Firefox desconectado. Você pode visualizar páginas web visualizadas anteriormente e experimentar seu perfil.</p>
+
+<h3 id="Não_perguntar_na_inicialização">Não perguntar na inicialização</h3>
+
+<p>Se você tiver vários perfis, o Firefox solicitará que o perfil seja usado toda vez que você iniciar o Firefox. Selecione essa opção para permitir que o Firefox carregue o perfil selecionado, sem solicitar a inicialização.</p>
+
+<div class="note">
+<p>Nota: Para acessar outros perfis após selecionar esta opção, você deve iniciar o Gerenciador de perfis primeiro.</p>
+</div>
+
+<h2 id="Usando_os_perfis">Usando os perfis</h2>
+
+<h3 id="Windows_2">Windows</h3>
+
+<p>Se você deseja que o gerenciador de perfil seja exibido toda vez que iniciar o Firefox, para poder escolher um perfil, será necessário editar o "Destino" do ícone de inicialização. Para fazer isso:</p>
+
+<ol>
+ <li>Clique com o botão direito o ícone e escolha "Propriedades".</li>
+ <li>Quando a caixa de diálogo de propriedades for exibida, você verá um campo de texto "Destino" que poderá editar e deverá mostrar o caminho atual do arquivo.</li>
+ <li>Após fechar as aspas, adicione <code>-ProfileManager</code>.</li>
+ <li>Clique Ok.</li>
+</ol>
+
+<p>Agora, sempre que você clicar duas vezes nesse ícone, o Gerenciador de perfis deverá aparecer, permitindo que você escolha o perfil que deseja usar.</p>
+
+<p>Se você quiser que ícones individuais iniciem perfis específicos, será necessário editar o "Destino" de cada ícone. Para fazer isso:</p>
+
+<ol>
+ <li>Clique com botão direito no ícone e escolha "Propriedades".</li>
+ <li>Quando a caixa de diálogo de propriedades for exibida, você verá um campo de texto "Destino" que poderá editar e deverá mostrar o caminho atual do arquivo.</li>
+ <li>Para definir permanentemente um perfil específico, adicione <code>-p NOME_DO_PERFIL</code> ao caminho de destino, mas fora das aspas, substituindo "NOME_DO_PERFIL" com o nome de perfil que você escolher.</li>
+ <li>Se você também quiser permitir que várias instâncias do Firefox sejam executadas ao mesmo tempo, adicione <code>-no-remote</code> após o nome do perfil.</li>
+ <li>Quando terminar, clique em Ok. Faça isso para cada ícone para o qual você gostaria de ter um perfil específico. Uma vez feito, cada um deve iniciar automaticamente com o perfil especificado.</li>
+</ol>
+
+<h3 id="Linux_2">Linux</h3>
+
+<p>Não existe uma maneira extremamente direta de criar lançadores de aplicativos personalizados no Gnome 3 como havia no Gnome 2. O tutorial a seguir ajudará você a progredir no geral: <a href="https://blog.randell.ph/how-to-create-custom-application-launchers-in-gnome-3/">Gnome 3 Iniciador de aplicativos personalizado</a>. Depois de chegar ao ponto de adicionar um novo item, você pode ter a caixa de diálogo de perfil sempre exibida ou definir o inicializador para iniciar um perfil específico.</p>
+
+<p>Se você deseja que o gerenciador de perfil seja exibido toda vez que iniciar o Firefox, para poder escolher um perfil, será necessário definir a linha de comando para o seu novo iniciador.</p>
+
+<ol>
+ <li>Defina o campo de texto "command" para direcionar o arquivo executável, provavelmente "/usr/bin/firefox", e adicione o parâmetro <code>-p</code>.</li>
+</ol>
+
+<p>Se você quiser que ícones individuais iniciem perfis específicos, você precisará definir a linha de comando para o seu novo lançador. Para fazer isso:</p>
+
+<ol>
+ <li>Defina o campo de texto "command" para direcionar o arquivo executável, provavelmente "/usr/bin/firefox", e adicione o parâmetro <code>-p NOME_DO_PERFIL</code>, substituindo "NOME_DO_PERFIL" com o perfil específico.</li>
+ <li>Repita conforme necessário, para cada perfil adicional que você deseja definir.</li>
+ <li>Se você também quiser permitir que várias instâncias do Firefox sejam executadas ao mesmo tempo, adicione "-no-remote" após o nome do perfil.</li>
+</ol>
+
+<h3 id="Mac_OS_X_2">Mac OS X</h3>
+
+<p>Você pode encontrar um tutorial útil para configurar lançadores personalizados aqui: <a href="https://spf13.com/post/managing-multiple-firefox-profiles-in-os-x/">Gerenciando vários perfis do Firefox no OSX</a>. Observe que é melhor seguir todas as etapas na seção "Criando os scripts", incluindo a etapa "editar Info.plist". Deixe de fora o nome do perfil se quiser que o seletor de perfis seja exibido toda vez que você iniciar.</p>
+
+<h2 id="Configurando_vários_perfis_para_diferentes_canais_do_Firefox">Configurando vários perfis para diferentes canais do Firefox</h2>
+
+<p>Esta seção será especialmente útil se você for um desenvolvedor, quiser trabalhar com vários canais e cada um tiver seu iniciador separado.</p>
+
+<h3 id="Windows_3">Windows</h3>
+
+<p>No Windows, as compilações Developer e Nightly têm seu próprio diretório na pasta "Programas", para que você não precise se preocupar com onde armazenar os arquivos baixados. No entanto, todos os três tentarão usar o mesmo perfil por padrão. Você não vai querer manter esse comportamento, porque os diferentes canais têm diferentes níveis de recursos. Para definir cada ativador, siga as instruções do Windows no <a href="#Windows">Windows Launcher</a>.</p>
+
+<h3 id="Linux_3">Linux</h3>
+
+<p>No Linux, as coisas não são configuradas automaticamente. Você provavelmente obterá uma solicitação para fazer o download de um arquivo tar.bz2 para extrair. Extraia os arquivos para um novo diretório e use as instruções do novo lançador aqui. A única mudança que você precisará fazer é o caminho do comando. Você desejará configurá-lo para o diretório em que extraiu o arquivo tar.bz2 do canal Firefox e o arquivo executável "firefox" localizado nesse diretório. Os demais métodos de atribuição de perfil permanecerão os mesmos. Você desejará, com certeza, adicionar a parte <code>-no-remote</code> ao final do campo de comando, para poder executar várias instâncias ao mesmo tempo.</p>
+
+<h3 id="Mac_OS_X_3">Mac OS X</h3>
+
+<p>Você pode encontrar um tutorial útil para configurar lançadores personalizados aqui: <a href="https://spf13.com/post/managing-multiple-firefox-profiles-in-os-x/">Gerenciando vários perfis do Firefox no OSX</a>. Observe que é melhor seguir todas as etapas na seção "Criando os scripts", incluindo a etapa "editar Info.plist". Além disso, você desejará alterar o caminho no script do shell para apontar para o arquivo .app correto para o canal do Firefox que você deseja segmentar.</p>

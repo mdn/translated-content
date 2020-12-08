@@ -1,0 +1,169 @@
+---
+title: Siatki
+slug: Mozilla/Tech/XUL/Kurs_XUL/Siatki
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Grids
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pudełko_kart" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Panele_treści">Następny  »</a></p>
+</div>
+<p></p><p>XUL posiada zbiór elementów do tworzenia siatki tabeli.
+</p>
+<h3 id="Tabelaryczny_uk.C5.82ad_graficzny_XUL" name="Tabelaryczny_uk.C5.82ad_graficzny_XUL"> Tabelaryczny układ graficzny XUL </h3>
+<p>XUL posiada zbiór elementów do wykonania układu graficznego elementów w formie siatki przy zastosowaniu elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>. Posiada on kilka podobieństw w stosunku do znacznika <code>table</code> z języka HTML. Siatka nie wyświetla niczego sama; jest stosowana tylko do pozycjonowania elementów w formie tabeli z wierszami oraz kolumnami.
+</p><p>Siatka zawiera elementy, które są wyrównywane w wierszach podobnie jak tabele. Wewnątrz <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> deklarujemy dwie rzeczy; kolumny i wiersze, które są zastosowane. Podobnie jak tabele HTML, wstawiamy zawartość do wnętrza wiersza, taką jak etykiety i przyciski. Jednakże siatka, czy to oparta o wiersze czy kolumny, pozwala na zawarcie treści w wiersze i kolumny. Najpowszechniej stosuje się wiersze, tak jak z tabelami. Jednakże nadal możemy użyć kolumn do określenia rozmiaru i wyglądu kolumn w siatce. Alternatywnie możemy umieścić zawartość wewnątrz kolumn i zastosować wiersze do określenia wyglądu. Zobaczymy przypadek organizacji elementów za pomocą wiersza.
+</p>
+<h4 id="Deklaracja_siatki" name="Deklaracja_siatki"> Deklaracja siatki </h4>
+<p>Aby zadeklarować ustawienie wierszy, stosujemy znacznik <code><code><a href="/pl/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code></code>, który powinien być elementem potomnym <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>. Wewnątrz powinniśmy dodać elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code>, które są stosowane dla każdego wiersza. Wewnątrz elementu wiersza powinniśmy umieścić zawartość, jaką chcemy mieć wewnątrz tego wiersza.
+</p><p>Podobnie kolumny są deklarowane poprzez element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code></code>, który powinien być umieszczony jako element potomny <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>, wewnątrz którego przechodzimy do pojedynczego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code>, jednego dla każdej kolumny, jaką chcesz w siatce.
+</p><p>Stanie się to o wiele łatwiejsze do zrozumienia dzięki przykładowi:
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:grids1.png"></div>
+<pre>&lt;grid flex="1"&gt;
+
+  &lt;columns&gt;
+    &lt;column flex="2"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;button label="Królik"/&gt;
+      &lt;button label="Słoń"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;button label="Koala"/&gt;
+      &lt;button label="Goryl"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+
+&lt;/grid&gt;
+</pre>
+<p><br>
+Do siatki zostały dodane dwa wiersze i dwie kolumny. Każda kolumna jest zadeklarowana znacznikiem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code>. Każda kolumna posiada dodany atrybut <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code>. Każdy wiersz zawiera dwa elementy, oba są przyciskami. Pierwszy element w każdym elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code> jest umieszczony w pierwszej kolumnie siatki, a drugi element każdego wiersza jest umieszczony w drugiej kolumnie. Zauważ, że nie potrzebujemy żadnego elementu do deklaracji komórki -- nie ma odpowiednika elementu <code>td</code> z języka HTML. Zamiast tego wstawiamy zawartość komórki bezpośrednio do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code>.
+</p>
+<h4 id="Siatka_z_wi.C4.99ksz.C4.85_ilo.C5.9Bci.C4.85_element.C3.B3w" name="Siatka_z_wi.C4.99ksz.C4.85_ilo.C5.9Bci.C4.85_element.C3.B3w"> Siatka z większą ilością elementów </h4>
+<p>Możemy zastosować dowolny element w miejsce elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>. Jeśli chcemy część jednej komórki wypełnić wieloma elementami, to stosujemy poprzez zagnieżdżenie element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> lub inny element pudełkowy. Element <code>hbox</code> jest pojedynczym elementem, ale możemy wstawić w nim wiele, jakie chcielibyśmy w nim umieścić. Na przykład:
+</p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:grids2.png"></div>
+<pre>&lt;grid flex="1"&gt;
+
+  &lt;columns&gt;
+    &lt;column/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label control="doctitle" value="Tytuł dokumentu:"/&gt;
+      &lt;textbox id="doctitle" flex="1"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;label control="docpath" value="Ścieżka:"/&gt;
+      &lt;hbox flex="1"&gt;
+        &lt;textbox id="docpath" flex="1"/&gt;
+        &lt;button label="Przeglądaj..."/&gt;
+      &lt;/hbox&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>Zauważ, tak jak na obrazku, w jaki sposób pierwsza kolumna elementów zawiera tylko etykietę posiadając pojedynczy element w każdym wierszu. Druga kolumna zawiera pudełko w drugim wierszu, w którym zawartość dwóch elementów, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> oraz <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>. Możemy dodatkowo dodać
+zagnieżdżone pudełka lub użyć kolejnej siatki wewnątrz pojedynczej komórki. </p><p>Jeśli zmieniliśmy rozmiar okna z ostatniego przykładu zobaczymy, że zmienił się rozmiar pól tekstowych, ale nie innych elementów. Jest tak, ponieważ atrybuty <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> zostały dodane do pól tekstowych i drugiej kolumny. Pierwsza kolumna nie musi być elastyczna jako etykieta i nie potrzebuje zmiany swojego rozmiaru.
+</p><p>Początkowa szerokość kolumny jest określana przez największy element w kolumnie. Podobnie wysokość wiersza jest określana przez rozmiar elementów w wierszu. Możesz użyć atrybutów <code><code id="a-minwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minwidth">minwidth</a></code></code> i <code><code id="a-maxwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxwidth">maxwidth</a></code></code> oraz powiązanych atrybutów dla dalszego zdefiniowania rozmiaru.
+</p>
+<h4 id="Przyk.C5.82ad_siatki_z_wi.C4.99ksz.C4.85_ilo.C5.9Bci.C4.85_kolumn" name="Przyk.C5.82ad_siatki_z_wi.C4.99ksz.C4.85_ilo.C5.9Bci.C4.85_kolumn"> Przykład siatki z większą ilością kolumn </h4>
+<p>Możemy również umieścić elementy wewnątrz elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code> zamiast wierszy. Jeśli to zrobimy, wiersze będą zadeklarowane tylko do określenia, jak wiele wierszy tam jest.
+</p><p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul">Podgląd</a>
+</p>
+<pre>&lt;grid&gt;
+  &lt;rows&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+  &lt;/rows&gt;
+
+  &lt;columns&gt;
+    &lt;column&gt;
+      &lt;label control="first" value="Pierwsze imię:"/&gt;
+      &lt;label control="middle" value="Drugie imię:"/&gt;
+      &lt;label control="last" value="Nazwisko:"/&gt;
+    &lt;/column&gt;
+    &lt;column&gt;
+      &lt;textbox id="first"/&gt;
+      &lt;textbox id="middle"/&gt;
+      &lt;textbox id="last"/&gt;
+    &lt;/column&gt;
+  &lt;/columns&gt;
+
+&lt;/grid&gt;
+</pre>
+<p>Ta siatka posiada trzy wiersze i dwie kolumny. Elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/row" title="row">row</a></code></code> są rozmieszczone do określenia, jak wiele ich tam jest. Możemy dodać atrybut <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> do wiersza, aby uczynić go elastycznym. Zawartość jest umieszczona wewnątrz każdej kolumny. Pierwszy element wewnątrz każdego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/column" title="column">column</a></code></code> jest umieszczony w pierwszym wierszu, drugi element w drugim wierszu, a trzeci element jest umieszczony w trzecim wierszu.
+</p><p>Jeśli wstawisz zawartość w obu kolumnach i wierszach, zawartość będzie nachodziła każda inaczej, poprzez wyrównanie ich we własnościach siatki. Tworzy to efekt podobny do siatki elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>.
+</p><p>Porządek elementów w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> określa, co jest wyświetlane na górze, a które są umieszczone poniżej. Jeśli element <code>rows</code> jest umieszczony po elemencie kolumny, zawartość wewnątrz wierszy jest wyświetlana na górze. Jeśli element <code>columns</code> jest umieszczony po elemencie <code>rows</code>, zawartość wewnątrz kolumn jest wyświetlona na górze. Podobnie zdarzenia, takie jak przyciski myszy i naciskanie klawiszy, są wysyłane tylko do zbioru u góry. Jest tak dlatego, że kolumny zadeklarowano po wierszach w powyższym przykładzie. Jeśli kolumny umieszczono jako pierwsze, wiersze wychwycą zdarzenia i nie będziemy mogli nic dopisać do tych pól.
+</p>
+<h4 id="Elastyczno.C5.9B.C4.87_siatki" name="Elastyczno.C5.9B.C4.87_siatki"> Elastyczność siatki </h4>
+<p>Jedną z zalet, które posiadają siatki nad zagnieżdżonymi pudełkami, jest to, że możemy tworzyć komórki, które są elastyczne zarówno w poziomie, jak w pionie. Możemy to zrobić poprzez wstawienie atrybutu <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> zarówno w wierszu, jak i kolumnie. Pokazuje nam to poniższy przykład:
+</p><p><br>
+<span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul">Podgląd</a>
+</p>
+<pre>&lt;grid flex="1"&gt;
+ &lt;columns&gt;
+  &lt;column flex="5"/&gt;
+  &lt;column/&gt;
+  &lt;column/&gt;
+ &lt;/columns&gt;
+ &lt;rows&gt;
+  &lt;row flex="10"&gt;
+    &lt;button label="Wiśnia"/&gt;
+    &lt;button label="Cytryna"/&gt;
+    &lt;button label="Grejfrut"/&gt;
+  &lt;/row&gt;
+  &lt;row flex="1"&gt;
+    &lt;button label="Truskawka"/&gt;
+    &lt;button label="Malina"/&gt;
+    &lt;button label="Brzoskwinia"/&gt;
+  &lt;/row&gt;
+ &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>Pierwsza kolumna i oba wiersze zrobiono elastycznymi. W wyniku tego każda komórka w pierwszej kolumnie będzie elastyczna poziomo. Dodatkowo, każda komórka będzie elastyczna pionowo, ponieważ oba wiersze są elastyczne, chociaż pierwszy wiersz jest bardziej elastyczny. Komórka w pierwszej kolumnie i pierwszym wierszu (przycisk Wiśnia) będą elastyczne o współczynniku 5 poziomo i elastyczne o współczynniku 10 pionowo. Kolejna komórka (Cytryna) będzie tylko elastyczna pionowo.
+</p><p>Atrybut <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> może również być dodany do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>, aby cała siatka była elastyczna, w przeciwnym razie będzie ona tylko rosła w jednym kierunku.
+</p>
+<h3 id=".C5.81.C4.85czenie_kolumn" name=".C5.81.C4.85czenie_kolumn"> Łączenie kolumn </h3>
+<p>Nie ma sposobu na połączenie komórki, szczególnie wielu kolumn lub wierszy. Jednak możliwe jest stworzenie wiersza lub kolumny, które obejmują całą szerokość lub wysokość siatki. Robi się to poprzez dodanie elementu do wewnątrz elementu <code>rows</code>, który nie jest wewnątrz elementu <code>row</code>. Możemy zastosować typ pudełka i wstawić inne elementy wewnątrz niego, jeśli chcemy użyć kilku elementów. Tu mamy prosty przykład:
+</p><p><span id="Przyk%C5%82ad_5"><a id="Przyk%C5%82ad_5"></a><strong>Przykład 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul">Podgląd</a>
+</p>
+<pre>&lt;grid&gt;
+  &lt;columns&gt;
+    &lt;column flex="1"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label value="północno-zachodni"/&gt;
+      &lt;label value="północno-wschodni"/&gt;
+    &lt;/row&gt;
+    &lt;button label="równik"/&gt;
+    &lt;row&gt;
+      &lt;label value="południowo-zachodni"/&gt;
+      &lt;label value="południowo-wschodni"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>Przycisk będzie wystarczający, aby wypełnić całą szerokość siatki, ponieważ nie jest wewnątrz wiersza siatki. Możesz używać podobnej metody, aby dodać element pomiędzy dwoma kolumnami. Będzie to wystarczające, aby wypełnić wysokość siatki. Możemy również zrobić te dwie rzeczy razem, jeśli jest to pożądane.
+</p><p>Następnie przyjrzymy się dodawaniu <a href="pl/Kurs_XUL/Panele_tre%c5%9bci">paneli zawartości</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pudełko_kart" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Panele_treści">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

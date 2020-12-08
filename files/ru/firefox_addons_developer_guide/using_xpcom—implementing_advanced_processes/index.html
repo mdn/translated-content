@@ -1,0 +1,369 @@
+---
+title: 'Глава 4: Использование XPCOM- реализация более сложных процессов'
+slug: Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes
+---
+<p>{{ Fx_minversion_header(3.5) }} {{ Draft() }}</p>
+<p>{{ PreviousNext("Firefox addons developer guide/Introduction to XUL—How to build a more intuitive UI", "Firefox addons developer guide/Let%27s build a Firefox extension") }}</p>
+<p> {{ TODO("We should include a link to the MDC list of snippets") }}</p>
+<p> {{ TODO("We need to add a part about 'why and how to create your own component' C++/JS") }}</p>
+<p><em>This document was authored by <a class="external" href="http://piro.sakura.ne.jp/" title="http://piro.sakura.ne.jp/">Hiroshi Shimoda</a> of </em><a class="external" href="http://www.clear-code.com/" title="http://www.clear-code.com/"><em>Clear Code Inc.</em></a><em> and was originally published in Japanese for the </em><a class="link-https" href="https://wiki.mozilla.org/Japan/FxDevCon/Summer2007/English" title="https://wiki.mozilla.org/Japan/FxDevCon/Summer2007/English"><em>Firefox Developers Conference Summer 2007</em></a><em>. Mr. </em><em>Shimoda </em><em>is a co-author of <a class="external" href="http://www.oreilly.co.jp/books/9784873113753/index.html" title="http://www.oreilly.co.jp/books/9784873113753/index.html">Firefox 3 Hacks</a> (O'Reilly Japan, 2008).</em></p>
+<p>This chapter explains how to use <a class="internal" href="/en/XPCOM" title="en/XPCOM">XPCOM</a> to implement advanced processes using only JavaScript.</p>
+<h2 id="Introduction">Introduction</h2>
+<p>JavaScript lacks functions for opening files and character-code conversion, among other things. A different mechanism is needed to perform these functions. Internet Explorer handles this using ActiveX; in Firefox, we use the <a class="internal" href="/en/XPCOM" title="en/XPCOM">Cross-Platform Component Object Model</a>, or XPCOM.</p>
+<p>Due to <a href="https://developer.mozilla.org/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code" title="https://developer.mozilla.org/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code">deprecation of enablePrivilege</a> this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.</p>
+<h3 id="About_XPCOM">About XPCOM</h3>
+<p>XPCOM is a framework for developing platform-independent components. Components developed in line with that framework are referred to as XPCOM components, and sometimes the components are simply referred to as XPCOMs.</p>
+<p>Firefox itself includes a great number of XPCOM components, and they can be used in extensions as well. Sometimes an extension will be packaged with a special XPCOM component developed specifically for it.</p>
+<div class="note">
+  <strong>Note:</strong> If you're developing components in C++ or other compiled languages, be sure to include binaries for every platform.</div>
+<h3 id="Reference_materials">Reference materials</h3>
+<p>To get an idea of what kinds of functions embedded XPCOM can handle, take a look at the  <a class="internal" href="/en/XPCOM_API_Reference" title="En/XPCOM API Reference">API reference</a> and the interface definitions from XPIDL in the actual source code.</p>
+<div class="note">
+  <strong>Note:</strong> Interface Definition Language (IDL) is a language for giving standard definitions of objects, methods, and so forth.  The <a class="internal" href="/en/XPIDL" title="En/XPIDL">XPIDL</a> (Cross-Platform IDL) used by Mozilla is a partial extension to the CORBA IDL.</div>
+<p>You can perform a full-text search of the Firefox source code in <a class="external" href="http://mxr.mozilla.org/" title="http://mxr.mozilla.org/">Mozilla Cross-Reference</a> using character strings, filenames, etc as search keys. If you’re having trouble with any of the details of the interface, it is helpful to search on the source code for usage examples within Firefox.</p>
+<div class="note">
+  <strong>Note:</strong> To look at the Firefox 3 source code, choose "Firefox 3" in the Starting Points list.  For Firefox 3.5 choose "Mozilla 1.9.1."  For the current development trunk of Firefox, choose "Mozilla Central" and for Thunderbird, choose "Comm. Central".</div>
+<h2 id="Calling_XPCOM_from_XPConnect">Calling XPCOM from XPConnect</h2>
+<p>Use the <a class="internal" href="/en/XPConnect" title="En/XPConnect">XPConnect</a> technology to use <a class="internal" href="/en/XPCOM" title="En/XPCOM">XPCOM</a> in JavaScript. Listing 1 shows how you can use XPConnect to acquire references to XPCOM services and create new XPCOM objects.</p>
+<p>Each component is identified with a contract ID in the form <code>@domain_name/module_name/component_name;version_number</code>, and implements one or more interfaces that determine what functions can be called on these components. Interfaces names usually have the forms <code>nsIxxx</code>. In order to have access to the corresponding functions, it is necessary to use the component with the interface you want to use. Some XPCOM components are services, that means only one instance in memory. For instance, this is the case for the bookmarks component, which is actually a service. It lets you access and manipulate the user's bookmarks. Those should be accessed with <code>getService()</code>. For other components, you can create as many instances as you need. For instance, this is the case for files (<a class="internal" href="/en/nsILocalFile" title="En/NsILocalFile"><code>nsILocalFile</code></a>). Those are created with <code>createInstance()</code>. It's important to know whether a component should be created with <code>getService()</code> or <code>createInstance</code>(), because using one instead of the other can cause problems.</p>
+<p><strong>Listing 1: Calling XPCOM functions using XPConnect</strong></p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;script type="application/javascript"&gt;&lt;![CDATA[
+   var ioService = Components.classes['@mozilla.org/network/io-service;1']
+                   .getService(Components.interfaces.nsIIOService);
+   alert(ioService);
+  ]]&gt;&lt;/script&gt;
+&lt;/page&gt;
+</pre>
+<h2 id="deprecated_inline()_Calling_XPConnect_using_local_files">{{ deprecated_inline() }} Calling XPConnect using local files</h2>
+<p>Try saving the contents of Listing 1 as the file <code>test.xul</code>, somewhere on your desktop, and drag and drop it into Firefox to open it. You'll note that even though the file includes an alert method, nothing happens. This is a by-product of the fact that <code>test.xul</code> currently doesn’t have privileges.</p>
+<p>In order to use XPConnect, the file needs special UniversalXPConnect privileges. Because ordinary web pages and local files don't have privileges, it's impossible to actually try out the sample code in this chapter.</p>
+<p>In order to set UniversalXPConnect privileges, you need to run the code in Listing 2.</p>
+<p><strong>Listing 2: Setting privileges</strong></p>
+<pre class="brush: js">netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+</pre>
+<div class="note">
+  <strong>Note</strong>: This is unneeded when the code is part of an extension, and will result in rejection if submitted to addons.mozilla.org.</div>
+<h3 id="Permit_by_dialog">Permit by dialog</h3>
+<p>Try adding the contents of Listing 2 to <code>test.xul</code>, before the line <code>var ioService = …</code>, and re-open it in Firefox. You should now see the confirmation dialog shown in Figure 1. Pressing the "Permit" button grants UniversalXPConnect permission in this execution context, making it possible to run XPConnect temporarily. An XPConnect-wrapped <a class="internal" href="/en/XPCOM_Interface_Reference/nsIIOService" title="En/NsIIOService"><code>nsIIOService</code></a> message should appear.</p>
+<p>If you check “<em>apply these privileges in the future</em>”, all local files will be able to run XPConnect without confirmation in the future. This is extremely dangerous, and you should never check this option.</p>
+<h3 id="Editing_prefs.js">Editing prefs.js</h3>
+<p>Opening <code>test.xul</code> will produce the dialog shown in Figure 1. This can get annoying. To run the file's scripts without manual confirmation, add the contents of Listing 3 to the <code>prefs.js</code> file in the user profile folder. Opening <code>test.xul</code> will show the local file URL in the location bar. Copy and paste this into the appropriate spot in Listing 3.</p>
+<div class="note">
+  <strong>Note:</strong> The location of the user profile will vary depending on your system. On Windows Vista, it will be located at C:\Users\<var>username</var>\AppData\Roaming\Mozilla\Firefox\Profiles\<var>random number</var>.default\ ; On Windows XP or 2000, it will be C:\Documents and Settings\<var>username</var>\Application Data\Mozilla\Firefox\Profiles\<var>random number</var>.default\ ; On Linux, it will be ~/.mozilla/firefox/<var>random number</var>.default/ ; On Mac OS X, it will be ~/Library/Application Support/Firefox/Profiles/<var>random number</var>.default/</div>
+<p>In the interests of security, delete these lines from <code>prefs.js</code> after finishing these tests.</p>
+<p>Note that Firefox itself and its extensions have privileges set by default after installation and registration. Extensions don't need special code like that in Listing 2 in order to get privileges.</p>
+<p>{{ TODO("We should advise against using such method") }}</p>
+<p>{{ TODO("Figure 1: Dialog requesting privileges") }}</p>
+<p><strong>Listing 3: Grant privileges without manual confirmation for a specific file</strong></p>
+<pre class="brush: js">user_pref("capability.principal.codebase.test.granted", "UniversalXPConnect");
+user_pref("capability.principal.codebase.test.id", "File URL");
+</pre>
+<h2 id="Frequently_used_XPCOM_functions">Frequently used XPCOM functions</h2>
+<p>Let’s take a look at those XPCOM functions that are used especially frequently. You should be able to get the gist of how XPCOM is used by looking at the sample code. You can paste almost all the sample code in this chapter into your existing <code>test.xul</code> file to try it out. Feel free to fill in blank spots as you see fit. Make sure to change file paths to match your own environment.</p>
+<p>You can <a class="internal" href="/@api/deki/files/3313/=xpcom-samples.zip" title="/@api/deki/files/3313/=xpcom-samples.zip">download the source code</a> used in this chapter.</p>
+<h3 id="Get_window">Get window</h3>
+<p>While you can use JavaScript to get child windows opened from the parent window, you cannot get dialogs or windows that have no relation to that window. To overcome this limitation, <a class="internal" href="/en/XPCOM_Interface_Reference/nsIWindowMediator" title="En/NsIWindowMediator"><code>nsIWindowMediator</code></a> makes it possible to access all of Firefox's windows.</p>
+<h4 id="Get_active_window">Get active window</h4>
+<p>One thing that <code>nsIWindowMediator</code> is often used for is to get the active window. Listing 4 shows how to get the active browser window and the number of open tabs.</p>
+<p>Passing the name of the window type as the parameter of the {{ ifmethod("nsIWindowMediator", "getMostRecentWindow") }} method returns the most recently active window from among the root element's windows with that type set for the <code>windowtype</code> attribute value. Setting the parameter to <code>null</code> returns the active window from among all windows, including dialogs, etc.</p>
+<p><strong>Listing 4: Get active browser window</strong></p>
+<pre class="brush: js">netscape.security.PrivilegeManager
+	  .enablePrivilege('UniversalXPConnect');
+
+var WindowMediator = Components
+			.classes['@mozilla.org/appshell/window-mediator;1']
+			.getService(Components.interfaces.nsIWindowMediator);
+var browser = WindowMediator.getMostRecentWindow('navigator:browser');
+alert(browser.gBrowser.mTabs.length);</pre>
+<h4 id="Get_overview_of_all_windows_with_a_certain_type">Get overview of all windows with a certain type</h4>
+<p>Use the {{ ifmethod("nsIWindowMediator", "getEnumerator") }} method to get an overview of all windows that have a certain type. Listing 5 shows how to get a summary of all browser windows in Firefox and then close them.</p>
+<p><strong>Listing 5: Closing all browser windows</strong></p>
+<pre class="brush: js">var browsers = WindowMediator.getEnumerator('navigator:browser');
+var browser;
+while (browsers.hasMoreElements()) {
+  browser = browsers.getNext().QueryInterface(Components.interfaces.nsIDOMWindowInternal);
+  browser.BrowserTryToCloseWindow();
+}</pre>
+<p>This method returns an overview of the specified window type in the form of an Iterator pattern object called <a class="internal" href="/en/XPCOM_Interface_Reference/nsISimpleEnumerator" title="En/NsISimpleEnumerator"><code>nsISimpleEnumerator</code></a>. After getting an element with the {{ ifmethod("nsISimpleEnumerator", "getNext") }} method, use the <code>QueryInterface</code> method to get the interface, which allows you to handle each element as a window object.</p>
+<p>Like the <code>getMostRecentWindow()</code> method, passing <code>null</code> as the parameter for the <code>getEnumerator</code>() method enables you to get all windows in Firefox, including dialogs, etc.</p>
+<h2 id="Manipulating_files_using_XPCOM">Manipulating files using XPCOM</h2>
+<p>XPCOM provides a number of interfaces allowing you to perform file manipulations without concern for whether you are running on Windows, Mac OS X, or Linux.</p>
+<p>In order to work with local files, first you need to create a <a class="internal" href="/en/nsILocalFile" title="En/NsILocalFile"><code>nsILocalFile</code></a> object representing the local file, as shown in Listing 6. When you initialize this by passing the full path to the file with the {{ ifmethod("nsILocalFile", "initWithPath") }} method, it becomes available to all functions. It doesn't matter whether a file at the specified path already exists.</p>
+<div class="note">
+  <strong>Note:</strong> Use the path format suited to your platform: the Windows “\” path delimiter is interpreted as an escape code, and so should always be written “\\”; characters like “./” on Linux require no special handling.</div>
+<p><strong>Listing 6: Creating an XPCOM object representing a file</strong></p>
+<pre class="brush: js">var file = Components.classes['@mozilla.org/file/local;1']
+           .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath('C:\\temp\\temp.txt');
+</pre>
+<h3 id="Creating_and_deleting_files">Creating and deleting files</h3>
+<p>Listing 7 shows how to delete a file if it exists, and create a new file with the same name.</p>
+<p>Passing <code>true</code> as a parameter for the {{ ifmethod("nsILocalFile", "remove") }} method will recursively delete folders and files. Let's see what happens when we pass <code>true</code> to delete all the contents of a folder.</p>
+<p><strong>Listing 7: Check that file exists, delete it, and create it</strong></p>
+<pre class="brush: js">file.initWithPath('C:\\temp\\temp.txt');
+if (file.exists())
+  file.remove(false);
+file.create(file.NORMAL_FILE_TYPE, 0666);
+</pre>
+<p>The first parameter of the {{ ifmethod("nsILocalFile", "create") }} method gives the type of file to create. This is defined using constant properties—to create a normal file, use <code>NORMAL_FILE_TYPE</code>, to create a folder use <code>DIRECTORY_TYPE</code>. The second parameter gives the access privileges to that file using Unix-style octal values.</p>
+<div class="note">
+  <strong>Note:</strong> Windows ignores the privileges parameter; other platforms may do so as well.</div>
+<p>The <code>nsILocalFile</code> object includes methods that return virtual state values for the current file, as shown in Table 1.</p>
+<p><strong>Table 1: Methods for checking file states</strong></p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Method name</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "exists") }}</td>
+      <td>Determines whether or not the file exists.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isWriteable") }}</td>
+      <td>Determines whether or not the file can be written to.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isReadable") }}</td>
+      <td>Determines whether or not the file can be read.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isExecutable") }}</td>
+      <td>Determines whether or not the file can be executed.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isHidden") }}</td>
+      <td>Determines whether or not the file is hidden.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isDirectory") }}</td>
+      <td>Determines whether or not the reference is to a directory.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isFile") }}</td>
+      <td>Determines whether or not the reference is to a file.</td>
+    </tr>
+    <tr>
+      <td>{{ ifmethod("nsILocalFile", "isSymlink") }}</td>
+      <td>Determines whether or not the reference is to a symlink.</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Traversing_directories">Traversing directories</h3>
+<h4 id="Moving_into_a_directory">Moving into a directory</h4>
+<p>Use the {{ ifmethod("nsILocalFile", "append") }} method to drill down into a directory (or file). See Listing 8.</p>
+<p><strong>Listing 8: Traversing directories</strong></p>
+<pre class="brush: js">file.initWithPath('C:\\');
+file.append('Documents and Settings');
+file.append('All Users');
+file.append('Documents');</pre>
+<h4 id="List_files_in_specified_directory">List files in specified directory</h4>
+<p>Use the <code>directoryEntries</code> property to perform operations on all the files or folders in a given folder. This property returns a <a class="internal" href="/en/XPCOM_Interface_Reference/nsISimpleEnumerator" title="En/NsISimpleEnumerator"><code>nsISimpleEnumerator</code></a>-type object similar to the window overview, so you can get each element using similar techniques. Listing 9 shows how to list the contents of a folder.</p>
+<p><strong>Listing 9: Listing the contents of a specific directory</strong></p>
+<pre class="brush: js">file.initWithPath('C:\\');
+var children = file.directoryEntries;
+var child;
+var list = [];
+while (children.hasMoreElements()) {
+  child = children.getNext().QueryInterface(Components.interfaces.nsILocalFile);
+  list.push(child.leafName + (child.isDirectory() ? ' [DIR]' : ''));
+}
+alert(list.join('\n'));</pre>
+<h4 id="Get_parent_directory">Get parent directory</h4>
+<p>Although the <code>nsILocalFile</code> object does not contain a function for moving to higher directories, Listing 10 does show how you can use the <code>parent</code> property to get the parent directory of the current file.</p>
+<p><strong>Listing 10: Creating a backup of a specific file in a separate folder</strong></p>
+<pre class="brush: js">file.initWithPath('C:\\temp\\temp.txt');
+backupFolder = file.parent.parent; // C:\
+backupFolder.append('backup'); // C:\backup
+backupFolder.create(Components.interfaces.nsIFile.DIRECTORY_TYPE, 0666);
+file.copyTo(backupFolder, file.leafName+'.bak');
+</pre>
+<h3 id="Converting_between_file_paths_and_file_URLs">Converting between file paths and file URLs</h3>
+<p>XPCOM functions can use both remote resources and local files, and these functions almost always specify their targets using URIs. Local file paths can be converted to file URLs, such as <code><a class="external" rel="freelink">file:///C/temp/temp.txt</a></code>, as shown in Listing 11. Listing 12 shows the opposite conversion.</p>
+<p><strong>Listing 11: Converting a local file path to a URL</strong></p>
+<pre class="brush: js">var path = 'C:\\temp\\temp.txt';
+var file = Components.classes['@mozilla.org/file/local;1']
+           .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath(path);
+var ioService = Components.classes['@mozilla.org/network/io-service;1']
+                .getService(Components.interfaces.nsIIOService);
+var url = ioService.newFileURI(file);
+var fileURL = url.spec;
+alert(fileURL); // "file:///C:/temp/temp.txt"</pre>
+<p><strong>Listing 12: Converting a URL to a local file path</strong></p>
+<pre class="brush: js">var url = 'file:///C:/temp/test.txt';
+var ioService = Components.classes['@mozilla.org/network/io-service;1']
+                .getService(Components.interfaces.nsIIOService);
+var fileHandler = ioService.getProtocolHandler('file')
+                  .QueryInterface(Components.interfaces.nsIFileProtocolHandler);
+var file = fileHandler.getFileFromURLSpec(url);
+var path = file.path;
+alert(path); // "C:\temp\temp.txt"</pre>
+<h3 id="Binary_file_IO">Binary file I/O</h3>
+<p>Use streams, as in Java, for file I/O in XPCOM.</p>
+<h4 id="Opening_binary_files">Opening binary files</h4>
+<p>Listing 13 shows how to get a files contents as a bytestring (where 1 byte = an array of 8 bits). Save a text file containing only the ASCII characters "XUL" and put in the path to that file. Running this code should produce the output "58 55 4C" so you can check your results.</p>
+<div class="note">
+  <strong>Note</strong>: Here, we assume that the file is named <code>temp.txt</code> and is saved in the temp folder on the C: drive.</div>
+<p><strong>Listing 13: Reading the contents of a binary file</strong></p>
+<pre class="brush: js">file.initWithPath('C:\\temp\\temp.txt');
+var fileStream = Components.classes['@mozilla.org/network/file-input-stream;1']
+                 .createInstance(Components.interfaces.nsIFileInputStream);
+fileStream.init(file, 1, 0, false);
+var binaryStream = Components.classes['@mozilla.org/binaryinputstream;1']
+                   .createInstance(Components.interfaces.nsIBinaryInputStream);
+binaryStream.setInputStream(fileStream);
+var array = binaryStream.readByteArray(fileStream.available());
+binaryStream.close();
+fileStream.close();
+alert(array.map(
+        function(aItem) {return aItem.toString(16); }
+      ).join(' ').toUpperCase(
+));</pre>
+<p>When we initialized <a class="internal" href="/en/XPCOM_Interface_Reference/nsIFileInputStream" title="En/NsIFileInputStream"><code>nsIFileInputStream</code></a>, we set the second and third parameters to initialize it in read-only mode. Once the process is complete, you should close all streams.</p>
+<h4 id="Outputting_binary_files">Outputting binary files</h4>
+<p>Listing 14 shows the opposite operation, taking a string of bytes and outputting them as a binary file. Here, we're outputting a text file consisting of the ASCII characters "XUL."</p>
+<p>When we initialized <a class="internal" href="/en/XPCOM_Interface_Reference/nsIFileInputStream" title="En/NsIFileInputStream"><code>nsIFileInputStream</code></a>, we set the second and third parameters to initialize it in write-only mode. Here again, once the process is complete, you should close all streams.</p>
+<p><strong>Listing 14: Writing a binary file</strong></p>
+<pre class="brush: js">var array = [88, 85, 76];
+file.initWithPath('C:\\temp\\temp.txt');
+if (file.exists())
+  file.remove(true);
+file.create(file.NORMAL_FILE_TYPE, 0666);
+var fileStream = Components.classes['@mozilla.org/network/file-output-stream;1']
+                 .createInstance(Components.interfaces.nsIFileOutputStream);
+fileStream.init(file, 2, 0x200, false);
+var binaryStream = Components.classes['@mozilla.org/binaryoutputstream;1']
+                   .createInstance(Components.interfaces.nsIBinaryOutputStream);
+binaryStream.setOutputStream(fileStream);
+binaryStream.writeByteArray(array , array.length);
+binaryStream.close();
+fileStream.close();
+</pre>
+<h3 id="Text_file_IO">Text file I/O</h3>
+<p>Text files are read the same way streams are. If the text includes multi-byte characters, as is used in Japanese, you'll need to convert the character codes.</p>
+<h4 id="Text_file_input">Text file input</h4>
+<p>Listing 15 shows an example of opening a text file encoded as Shift-JIS (a double-byte character encoding for Japanese). Copy some Japanese text into a text file, save it as Shift-JIS, and put in the path to that file. The text will be displayed as-is. The text that you've read in is actually being represented internally as Unicode (UTF-16).</p>
+<p><strong>Listing 15: Reading a Shift-JIS text file</strong></p>
+<pre class="brush: js">file.initWithPath('C:\\temp\\temp.txt');
+var charset = 'Shift_JIS';
+var fileStream = Components.classes['@mozilla.org/network/file-input-stream;1']
+                 .createInstance(Components.interfaces.nsIFileInputStream);
+fileStream.init(file, 1, 0, false);
+var converterStream = Components.classes['@mozilla.org/intl/converter-input-stream;1']
+                      .createInstance(Components.interfaces.nsIConverterInputStream);
+                      converterStream.init(fileStream, charset, fileStream.available(),
+                      converterStream.DEFAULT_REPLACEMENT_CHARACTER);
+var out = {};
+converterStream.readString(fileStream.available(), out);
+var fileContents = out.value;
+converterStream.close();
+fileStream.close();
+alert(fileContents);</pre>
+<h4 id="Outputting_text_files">Outputting text files</h4>
+<p>{{ TODO("Not sure this example is relevant in an English context, maybe something from the snippets") }}</p>
+<p>Listing 16 shows how to take text internally represented as Unicode and output it to a file encoded using EUC-JP (a Japanese text encoding). Here, the character string to be written, 変換テスト, is hard-coded directly into the JavaScript source using escaped Unicode entities. Open the output file to check your results.</p>
+<p>Note that if you set the character encoding to <code>null</code> it will default to UTF-8 for both input and output.</p>
+<p><strong>Listing 16: Writing text to a file encoded as EUC-JP</strong></p>
+<pre class="brush: js">var string = '\u5909\u63db\u30c6\u30b9\u30c8';
+file.initWithPath('C:\\temp\\temp.txt');
+file.create(file.NORMAL_FILE_TYPE, 0666);
+var charset = 'EUC-JP';
+var fileStream = Components
+.classes['@mozilla.org/network/file-output-stream;1']
+.createInstance(Components.interfaces.nsIFileOutputStream);
+fileStream.init(file, 2, 0x200, false);
+var converterStream = Components
+.classes['@mozilla.org/intl/converter-output-stream;1']
+.createInstance(Components.interfaces.nsIConverterOutputStream);
+converterStream.init(fileStream, charset, string.length,
+Components.interfaces.nsIConverterInputStream.DEFAULT_REPLACEMENT_CHARACTER);
+converterStream.writeString(string);
+converterStream.close();
+fileStream.close();
+</pre>
+<h3 id="Character_encoding_conversion">Character encoding conversion</h3>
+<p>Firefox's internal representation of all text is in Unicode. However, in some cases, you may want to be able to process text using another encoding. In these cases, you can easily convert between encodings using the <a class="internal" href="/en/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter" title="En/NsIScriptableUnicodeConverter"><code>nsIScriptableUnicodeConverter</code></a>.</p>
+<h4 id="Converting_from_Unicode_to_other_encodings">Converting from Unicode to other encodings</h4>
+<p>Listing 17 shows how to convert from text saved as Unicode to EUC-JP encoding.</p>
+<p><strong>Listing 17: Converting text from Unicode to EUC-JP</strong></p>
+<pre class="brush: js">var converter = Components.classes['@mozilla.org/intl/scriptableunicodeconverter']
+                .getService(Components.interfaces.nsIScriptableUnicodeConverter);
+converter.charset = 'EUC-JP';
+var unicode_str = '\u5909\u63db\u30c6\u30b9\u30c8';
+var eucjp_str = converter.ConvertFromUnicode(unicode_str);</pre>
+<h4 id="Converting_from_other_encodings_to_Unicode">Converting from other encodings to Unicode</h4>
+<p>Listing 18 shows how to do the reverse, converting from text saved as ISO-2022-JP to Unicode.</p>
+<p><strong>Listing 18: Converting text from ISO-2022-JP to Unicode</strong></p>
+<pre class="brush: js">converter.charset = 'ISO-2022-JP';
+var unicode_str = converter.ConvertToUnicode(iso2022jp_str);</pre>
+<h3 id="Reading_and_writing_preferences">Reading and writing preferences</h3>
+<p>You can use the <a class="internal" href="/en/XPCOM_Interface_Reference/nsIPrefBranch" title="En/NsIPrefBranch"><code>nsIPrefBranch</code></a> function to access Firefox's preferences system. This function can get and set preferences with three types of values: Boolean, integer, and text; there are specific methods for each, as shown in Table 2.</p>
+<h4 id="Reading_preferences">Reading preferences</h4>
+<p>Listing 19 shows how to get a text string stored in the preferences. Type <em>about:config</em> into the location bar to confirm that the value has been stored correctly.</p>
+<div class="note">
+  <strong>Note:</strong> The value returned by {{ ifmethod("nsIPrefBranch", "getCharPref") }} is a UTF-8 bytestring; here, we are converting it to UTF-16 using <code><a class="internal" href="/en/JavaScript/Guide/Obsolete_Pages/Predefined_Functions/escape_and_unescape_Functions" title="En/Core JavaScript 1.5 Guide/Predefined Functions/Escape and unescape Functions">escape()</a></code> and <code><a class="internal" href="/en/JavaScript/Reference/Global_Objects/decodeURIComponent" title="En/Core JavaScript 1.5 Reference/Global Functions/DecodeURIComponent">decodeURIComponent()</a></code>.</div>
+<p><strong>Listing 19: Reading a text-string setting</strong></p>
+<pre class="brush: js">var pref = Components.classes['@mozilla.org/preferences-service;1']
+           .getService(Components.interfaces.nsIPrefBranch);
+var dir = pref.getCharPref('browser.download.lastDir');
+alert(decodeURIComponent(escape(dir)));</pre>
+<h4 id="Writing_preferences">Writing preferences</h4>
+<p>Listing 20 shows the opposite operation, writing a text string to a unique preference. Again, you can use <em>about:config</em> to check that the value has been stored correctly.</p>
+<div class="note">
+  <strong>Note:</strong> The value for the second parameter of {{ ifmethod("nsIPrefBranch", "setCharPref") }} is a UTF-8 bytestring; here, we are converting a UTF-16 to UTF-8 using <code><a class="internal" href="/en/JavaScript/Guide/Obsolete_Pages/Predefined_Functions/escape_and_unescape_Functions" title="En/Core JavaScript 1.5 Guide/Predefined Functions/Escape and unescape Functions">unescape()</a></code> and <code><a class="internal" href="/en/JavaScript/Reference/Global_Objects/encodeURIComponent" title="En/Core JavaScript 1.5 Reference/Global Functions/EncodeURIComponent">encodeURIComponent()</a></code>.</div>
+<p><strong>Listing 20: Writing a text-string setting</strong></p>
+<pre class="brush: js">var string = 'This is test.';
+pref.setCharPref('extensions.myextension.testPref', unescape(encodeURIComponent(string)));
+</pre>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Data type</td>
+      <td class="header">Get</td>
+      <td class="header">Set</td>
+    </tr>
+    <tr>
+      <td>Boolean</td>
+      <td><code>getBoolPref(<em>prefname</em>)</code></td>
+      <td><code>setBoolPref(<em>prefname</em>)</code></td>
+    </tr>
+    <tr>
+      <td>Integer</td>
+      <td><code>getIntPref(<em>prefname</em>)</code></td>
+      <td><code>setIntPref(<em>prefname</em>)</code></td>
+    </tr>
+    <tr>
+      <td>Text string</td>
+      <td><code>getCharPref(<em>prefname</em>)</code></td>
+      <td><code>setCharPref(<em>prefname</em>)</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Using_methods_from_XUL_elements">Using methods from XUL elements</h2>
+<p>XPCOM gives you access to sophisticated functions in XUL elements. For example, using the <code>loadURI()</code> method on the <a class="internal" href="/en/XUL/browser" title="En/XUL/Browser"><code>browser</code></a> element introduced in <a class="internal" href="/En/Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI" title="En/Firefox addons developer guide/Introduction to XUL—How to build a more intuitive UI">Chapter 3</a> can open a page specified using <code>HTTP_REFERER</code>, as shown in Listing 21; Listing 22 shows how to open a page using the <code>loadURIWithFlags()</code> method, with data transmitted via the POST method.</p>
+<p><strong>Listing 21: Loading a page by setting a referrer</strong></p>
+<pre class="brush: js">var browser = document.getElementById('browser');
+var ioService = Components.classes['@mozilla.org/network/io-service;1']
+                .getService(Components.interfaces.nsIIOService);
+var referrer = ioService.newURI('http://www.gihyo.co.jp/', null, null);
+browser.loadURI('http://www.gihyo.co.jp/magazines/SD', referrer);
+</pre>
+<p><strong>Listing 22: Loading a page with data transmitted via the POST method</strong></p>
+<pre class="brush: js">var content = encodeURIComponent('password=foobar');
+var referrer = null;
+var postData = Components.classes['@mozilla.org/io/string-input-stream;1']
+               .createInstance(Components.interfaces.nsIStringInputStream);
+content = 'Content-Type: application/x-www-form-urlencoded\n'+
+          'Content-Length: '+content.length+'\n\n'+
+          content;
+postData.setData(content, content.length);
+var flags = Components.interfaces.nsIWebNavigation.LOAD_FLAGS_NONE;
+browser.loadURIWithFlags('http://piro.sakura.ne.jp/', flags, referrer, null, postData);
+</pre>
+<p> {{ PreviousNext("Firefox addons developer guide/Introduction to XUL—How to build a more intuitive UI", "Firefox addons developer guide/Let%27s build a Firefox extension") }}</p>

@@ -1,0 +1,346 @@
+---
+title: Szczegóły widoku drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Szczegóły_widoku_drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_View_Details
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Własne_widoki_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Obiekty_pudełkowe_drzewa">Następny  »</a></p>
+</div><p></p>
+
+<p>W tej części będzie opisane więcej cech wyglądu drzewa.</p>
+
+<h2 id="Tworzenie_w.C5.82asnego_hierarchicznego_widoku" name="Tworzenie_w.C5.82asnego_hierarchicznego_widoku">Tworzenie własnego hierarchicznego widoku</h2>
+
+<p>W ostatnim artykule tworzyliśmy prosty widok drzewa, który implementował tylko minimum funkcjonalności. Teraz przyjrzyjmy się innym, dodatkowym funkcjom, których możemy zaimplementować. Sprawdzimy tutaj, jak stworzyć hierarchicznie ustawione pozycje, używające widoku. Jest to dość podstępny proces pociągający za sobą utrzymywanie ścieżek pozycji potomnych i także, które wiersze są otwarte, a które zostały zamknięte.</p>
+
+<h3 id="Zagnie.C5.BCd.C5.BCanie_poziomu" name="Zagnie.C5.BCd.C5.BCanie_poziomu">Zagnieżdżanie poziomu</h3>
+
+<p>Każdy wiersz w drzewie ma zagnieżdżony poziom. Najwyższy wiersz jest na poziomie 0, dzieci tego wiersza są na poziomie 1, a z kolei kolejne dzieci mamy na poziomie 2 itd. Drzewo wypyta widok o każdy wiersz, wywołując metodę <code>getLevel</code> w celu znalezienia poziomu danego wiersza. Widok zwróci 0 dla najwyższych, zewnętrznych wierszy, wyższe wartości dla wierszy wewnętrznych. Drzewo użyje tych informacji w celu ustalenia hierarchicznej struktury wierszy.</p>
+
+<p>Dodatkowo do metody <code>getLevel</code>, jest jeszcze funkcja <code>hasNextSibling</code>, która daje wiersz zwracająca wartość <code>true</code>, jeżeli znajduje się kolejny wiersz na tym samym poziomie. Funkcja ta jest używana w szczególności podczas rysowania zagnieżdżonych linii w głąb drzewa.</p>
+
+<p>Metoda <code>getParentIndex</code> jest zwraca źródłowy wiersz dla rzędu, jeżeli znajduje się kolejny rząd na tym samym poziomie. Wszystkie z tych metod muszą być zastosowane przez widok dla dzieci do podtrzymania własności.</p>
+
+<h3 id="Kontenery" name="Kontenery">Kontenery</h3>
+
+<p>Są tam też trzy funkcje <code>isContainer</code>, <code>isContainerEmpty</code> i <code>isContainerOpen</code> do posługiwania się źródłowymi pozycjami drzewa.</p>
+
+<ul>
+ <li>Naturalnie, <code>isContainer</code> powinna zwrócić wartość true, jeżeli wiersz jest pojemnikiem i może zawierać kolejne wiersze.</li>
+ <li>Metoda <code>isContainerEmpty</code> powinna zwrócić wartość true, jeżeli wiersz jest pustym pojemnikiem, jak np. pusty folder.</li>
+ <li>Metoda <code>isContainerOpen</code> służy do ustalenia, które z pozycji są otwarte, a które zamknięte.</li>
+</ul>
+
+<p>Zwróć uwagę ze metody te nie zostaną użyte, jeżeli isContainer nie wskaże tego, że dany element jest pojemnikiem.</p>
+
+<p>Pojemnik może zostać przedstawiony inaczej, jako nie kontener. Na przykład może mieć ikonę folderu obok siebie. Schemat może zostać użyty do stylizacji elementów opierając się na różnych własnościach, takich jak to czy wiersz jest otwarty czy nie. Opisane jest to w <a href="pl/Kurs_XUL/Nadawanie_stylu_drzewa">dalszej części</a>. Niepusty pojemnik będzie wyświetlony obok, tak, że użytkownik będzie mógł go otwierać i zamykać by zobaczyć zawartość wiersza.</p>
+
+<p>Kiedy użytkownik kliknie by otworzyć wiersz drzewo wywoła funkcję toggleOpenState. Następnie widok powinien wykonać wszelkie konieczne operacje, by uzyskać zawartość wiersza i wypełnić drzewo nowymi wierszami.</p>
+
+<h3 id="Przegl.C4.85d_metod" name="Przegl.C4.85d_metod">Przegląd metod</h3>
+
+<p>Przegląd metod potrzebnych do użycia hierarchicznego widoku:</p>
+
+<pre>getLevel(row)
+hasNextSibling(row, afterIndex)
+getParentIndex(row)
+isContainer(row)
+isContainerEmpty(row)
+isContainerOpen(row)
+toggleOpenClose(row)
+</pre>
+
+<p>Argument <code>afterIndex</code> wykona funkcję <code>hasNextSibling</code> w celu optymalizacji, żeby znaleźć następny element. Na przykład, klient mógłby już wiedzieć gdzie dany element prawdopodobnie mógłby się znajdować. Wyobraź sobie sytuację gdzie wiersz ma pod wiersze, a te pod wiersze maja pochodne wiersze i niektóre z nich są otwarte.</p>
+
+<h2 id="Przyk.C5.82ad_w.C5.82asnego_hierarchicznego_widoku" name="Przyk.C5.82ad_w.C5.82asnego_hierarchicznego_widoku">Przykład własnego hierarchicznego widoku</h2>
+
+<p>Zobaczmy na prostym przykładzie, z pobranej tablicy budowane jest drzewo. Przeanalizujmy to kawałek, po kawałku.</p>
+
+<pre>&lt;window onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;tree id="elementList" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="element" label="Element" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Używamy prostego drzewa bez danych w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>. Funkcja 'init' jest wywoływana, gdy okno jest ładowane w celu uruchomienia drzewa. To w prosty sposób umieszcza własny widok odzyskując drzewo i umieszczeniu własności widoku.</p>
+
+<pre>function init() {
+  document.getElementById("elementList").view = treeView;
+}
+</pre>
+
+<p>Własny widok drzewa będzie musiał wprowadzić pewna liczbę metod, z których najważniejsze będą sprawdzane indywidualnie. Drzewo to wesprze tylko pojedynczy główny poziom z wewnętrznym pochodnym poziomem, ale może to być dodatkowo rozszerzone bez większych problemów. Najpierw zdefiniujemy dwie struktury do przetrzymywania danych dla drzewa, pierwsza będzie przetrzymywała mapę zawartą między głównym, a pochodną pozycją, a druga tablicę widocznych elementów. Pamiętaj, że własny widok musi posiadać informacje o tym, które są widoczne.</p>
+
+<pre>var treeView = {
+  childData : {
+    Solids: ["Silver", "Gold", "Lead"],
+    Liquids: ["Mercury"],
+    Gases: ["Helium", "Nitrogen"]
+  },
+
+  visibleData : [
+    ["Solids", true, false],
+    ["Liquids", true, false],
+    ["Gases", true, false]
+  ],
+</pre>
+
+<p>Struktura childData zawiera tablicę pochodnych pozycji trzech głównych węzłów. Tablica visibleData zaczyna się tylko trzema widocznymi pozycjami, trzy szczytowe poziomy. Elementy będą dodawane i usuwane z tej tablicy, gdy pozycje będą otwierane i zamykane. Zasadniczo, gdy główny wiersz będzie otwarty, pochodne pozycje zostaną pobrane z childData i wstawione do tablicy <code>visibleData</code>. Na przykład, jeżeli wiersz płynów będzie otwarty, korespondująca tablica chilldData, która zawiera tylko pojedynczy pochodny element &lt;tt&gt;Merkury&lt;/tt&gt;, będzie umieszczony w tablicy <code>visibleData</code> za płynami, ale przed gazami. To zwiększy rozmiar tablicy o jeden. Dwie wartości boolean w każdym wierszu w strukturze <code>visibleData</code> wskazują na to czy wiersz jest pojemnikiem i czy jest otwarty. Oczywiście nowo wstawione pochodne pozycje będą miały obie wartości ustawione na false.</p>
+
+<h3 id="Implementowanie_interfejsu_widoku_drzewa" name="Implementowanie_interfejsu_widoku_drzewa">Implementowanie interfejsu widoku drzewa</h3>
+
+<p>Następnie potrzeba wprowadzić interfejs widoku drzewa. Najpierw proste funkcje:</p>
+
+<pre>  treeBox: null,
+  selection: null,
+
+  get rowCount()                     { return this.visibleData.length; },
+  setTree: function(treeBox)         { this.treeBox = treeBox; },
+  getCellText: function(idx, column) { return this.visibleData[idx][0]; },
+  isContainer: function(idx)         { return this.visibleData[idx][1]; },
+  isContainerOpen: function(idx)     { return this.visibleData[idx][2]; },
+  isContainerEmpty: function(idx)    { return false; },
+  isSeparator: function(idx)         { return false; },
+  isSorted: function()               { return false; },
+  isEditable: function(idx, column)  { return false; },
+</pre>
+
+<p>Funkcja rowCount zwróci długość tablicy <code>visibleData</code>. Zauważ to, że powinno zwrócić liczbę aktualnie widocznych wierszy, a nie ich całkowitą ilość. Więc na początku trzy pozycje są widoczne i w rowCount powinny być trzy, nawet, jeżeli sześć rzędów jest ukrytych.</p>
+
+<p>Funkcje <code>getCellText</code>, <code>isContainer</code> i <code>isContainerOpen</code>, zawracają tylko odpowiedni element z tablicy <code>visibleData</code>. W końcu pozostałe funkcje mogą zwrócić wartość <code>false</code> ponieważ nie potrzeba tych cech. Gdybyśmy mieli wiersz, który by nie miał żadnych pochodnych pozycji, chcielibyśmy wprowadzić funkcję <code>isContainerEmpty</code> to zwróciłaby ona wartość <code>true</code> dla tych elementów.</p>
+
+<pre>  getParentIndex: function(idx) {
+    if (this.isContainer(idx)) return -1;
+    for (var t = idx - 1; t &gt;= 0 ; t--) {
+      if (this.isContainer(t)) return t;
+    }
+  },
+</pre>
+
+<p>Funkcją <code>getParentIndex</code> będzie musiała odnaleźć główny przedmiot zadanego indeksu. W naszym prostym przykładzie, mamy tylko dwa poziomy, więc wiemy, że pojemniki nie posiadają głównych elementów, więc otrzymujemy -1. W takim wypadku cofamy się wstecz szukając wiersz będącego pojemnikiem. Następna funkcja jest <code>getLevel</code>:</p>
+
+<pre>  getLevel: function(idx) {
+    if (this.isContainer(idx)) return 0;
+    return 1;
+  },
+</pre>
+
+<p>Funkcja getLevel jest prosta. Zwraca wartość 0 dla pojemnika, 1 dla nie-pojemnika. Gdybyśmy chcieli dołożyć dodatkowy poziom elementów pochodnych, wiersz te miałyby poziom 2.</p>
+
+<pre>  hasNextSibling: function(idx, after) {
+    var thisLevel = this.getLevel(idx);
+    for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+      var nextLevel = this.getLevel(t)
+      if (nextLevel == thisLevel) return true;
+      else if (nextLevel &lt; thisLevel) return false;
+    }
+  },
+</pre>
+
+<p>Funkcja theNextSibling zwraca true, jeżeli wiersz jest tego samego poziomu, co podany wiersz. Powyższy kod używa metody "brute force", która po prostu powtarzana jest, poszukując jednego wiersza, zwraca wartość true jeżeli wiersz jest tego samego poziomu, false jeżeli niższego poziomu. W tym prostym przykładzie ta metoda działa świetnie, lecz bardziej rozbudowane drzewo lepiej użyć innego, bardziej efektywnego sposobu.</p>
+
+<h3 id="Otwieranie_i_zamykanie_wiersza" name="Otwieranie_i_zamykanie_wiersza">Otwieranie i zamykanie wiersza</h3>
+
+<p>Ostatnia funkcja to <code>toggleOpenState</code>, jest najbardziej złożona. Wymaga to modyfikacji tablicy, <code>visibleData</code>, gdy wiersz jest otwarty lub zamknięty.</p>
+
+<pre>  toggleOpenState: function(idx) {
+    var item = this.visibleData[idx];
+    if (!item[1]) return;
+
+    if (item[2]) {
+      item[2] = false;
+
+      var thisLevel = this.getLevel(idx);
+      var deletecount = 0;
+      for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+        if (this.getLevel(t) &gt; thisLevel) deletecount++;
+        else break;
+      }
+      if (deletecount) {
+        this.visibleData.splice(idx + 1, deletecount);
+        this.treeBox.rowCountChanged(idx + 1, -deletecount);
+      }
+    }
+    else {
+      item[2] = true;
+
+      var label = this.visibleData[idx][0];
+      var toinsert = this.childData[label];
+      for (var i = 0; i &lt; toinsert.length; i++) {
+        this.visibleData.splice(idx + i + 1, 0, [toinsert[i], false]);
+      }
+      this.treeBox.rowCountChanged(idx + 1, toinsert.length);
+    }
+  },
+</pre>
+
+<p>Najpierw musimy sprawdzić czy wiersz jest pojemnikiem. Jeżeli nie, funkcja po prostu powróci, ponieważ nie pojemniki nie mogą być otwarte ani zamknięte. Od trzeciej pozycji tablicy (indeks 2) przetrzymywane są informacje czy wiersz jest otwarty czy nie, używamy dwóch ścieżek kodu, pierwszej do zamykania wiersza, a druga do otwierania wiersza. Zbadajmy każdy blok kodu, lecz zerknijmy najpierw na drugi blok służący do otwierania wiersza.</p>
+
+<pre>      item[2] = true;
+
+      var label = this.visibleData[idx][0];
+      var toinsert = this.childData[label];
+      for (var i = 0; i &lt; toinsert.length; i++) {
+        this.visibleData.splice(idx + i + 1, 0, [toinsert[i], false]);
+      }
+      this.treeBox.rowCountChanged(idx + 1, toinsert.length);
+</pre>
+
+<p>Pierwsza linia czyni w tablicy, wiersz otwartym, więc z stąd funkcja <code>toggleOpenState</code> będzie wiedziała, który wiersz ma być zamknięty. Następnie szukamy danych w <code>childData</code> dla danego wiersza. Wynikiem jest to, że 'toinsert' będzie wypełnione jednym z elementów tablicy, na przykład ["Silver", "Gold", "Lead"], jeżeli wiersz zostanie otwarty. Następnie używamy funkcji, splice tablicy, by wstawić nowy rząd do każdej pozycji. Dla stałych elementów, zostaną wstawione trzy pozycje.</p>
+
+<p>Używamy funkcji rowCountChanged do poinformowania drzew, że dodaliśmy kilka wierszy do podstawowych danych. Drzewo zostanie przerysowane według potrzeby, a w wyniku pochodne wiersze ukażą się wewnątrz pojemnika. Inne implementowane funkcje powyżej, jak getLevel i isContainer są używane przez drzewo do określenia tego jak wyrysować drzewo.</p>
+
+<p>Funkcja <code>rowCountChanged</code> pobiera dwa argumenty, indeks gdzie pierwszy wiersz był wstawiony i numer wierszy do wstawienia. W powyższym kodzie, zauważ, że początkowy wiersz określony jest jako ‘idx’ plus jeden, którym będzie pierwsza pochodna pozycja pod główną. Drzewo użyje tej informacji i doda przestrzeń dla odpowiedniej liczy wierszy i umieści je w niej. Upewnij się czy liczba jest prawidłowa, w przeciwnym wypadku drzewo zostanie narysowane niepoprawnie lub spróbuje narysować więcej wierszy niż jest to konieczne.</p>
+
+<p>Poniższy kod jest używany do usuwania wierszy, gdy wiersz jest zamknięty.</p>
+
+<pre>      item[2] = false;
+
+      var thisLevel = this.getLevel(idx);
+      var deletecount = 0;
+      for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+        if (this.getLevel(t) &gt; thisLevel) deletecount++;
+        else break;
+      }
+      if (deletecount) {
+        this.visibleData.splice(idx + 1, deletecount);
+        this.treeBox.rowCountChanged(idx + 1, -deletecount);
+      }
+</pre>
+
+<p>Najpierw, element jest zamknięty w tablicy. Następnie będziemy przeszukiwać wiersze, aż natkniemy się na któryś tego samego poziomu. Wszystkie o wyższym poziomie będą musiały być usunięte, lecz wiersz na tym samym poziomie, będzie kolejnym pojemnikiem, który nie powinien być usuniety.</p>
+
+<p>W końcu używamy funkcji splotu (splice) w celu usunięcia wierszy z tablicy visibleData a wywołania funkcji rowCountChanged żeby przerysować drzewo ponownie. Podczas usuwania wierszy, będziesz musiał dostarczyć odwrotny licznik wierszy do usunięcia.</p>
+
+<h3 id="Pe.C5.82en_przyk.C5.82ad" name="Pe.C5.82en_przyk.C5.82ad">Pełen przykład</h3>
+
+<p>Jest tam kilka innych funkcji widoku, które możemy implementować, jednak nie będą one miały nić do wykonania w tym przykładzie. Będą one dodane pod koniec następującego przykładu:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;tree id="elementList" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="element" label="Element" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+
+&lt;script&gt;
+&lt;![CDATA[
+
+var treeView = {
+  childData : {
+    Solids: ["Silver", "Gold", "Lead"],
+    Liquids: ["Mercury"],
+    Gases: ["Helium", "Nitrogen"]
+  },
+
+  visibleData : [
+    ["Solids", true, false],
+    ["Liquids", true, false],
+    ["Gases", true, false]
+  ],
+
+  treeBox: null,
+  selection: null,
+
+  get rowCount()                     { return this.visibleData.length; },
+  setTree: function(treeBox)         { this.treeBox = treeBox; },
+  getCellText: function(idx, column) { return this.visibleData[idx][0]; },
+  isContainer: function(idx)         { return this.visibleData[idx][1]; },
+  isContainerOpen: function(idx)     { return this.visibleData[idx][2]; },
+  isContainerEmpty: function(idx)    { return false; },
+  isSeparator: function(idx)         { return false; },
+  isSorted: function()               { return false; },
+  isEditable: function(idx, column)  { return false; },
+
+  getParentIndex: function(idx) {
+    if (this.isContainer(idx)) return -1;
+    for (var t = idx - 1; t &gt;= 0 ; t--) {
+      if (this.isContainer(t)) return t;
+    }
+  },
+  getLevel: function(idx) {
+    if (this.isContainer(idx)) return 0;
+    return 1;
+  },
+  hasNextSibling: function(idx, after) {
+    var thisLevel = this.getLevel(idx);
+    for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+      var nextLevel = this.getLevel(t)
+      if (nextLevel == thisLevel) return true;
+      else if (nextLevel &lt; thisLevel) return false;
+    }
+  },
+  toggleOpenState: function(idx) {
+    var item = this.visibleData[idx];
+    if (!item[1]) return;
+
+    if (item[2]) {
+      item[2] = false;
+
+      var thisLevel = this.getLevel(idx);
+      var deletecount = 0;
+      for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+        if (this.getLevel(t) &gt; thisLevel) deletecount++;
+        else break;
+      }
+      if (deletecount) {
+        this.visibleData.splice(idx + 1, deletecount);
+        this.treeBox.rowCountChanged(idx + 1, -deletecount);
+      }
+    }
+    else {
+      item[2] = true;
+
+      var label = this.visibleData[idx][0];
+      var toinsert = this.childData[label];
+      for (var i = 0; i &lt; toinsert.length; i++) {
+        this.visibleData.splice(idx + i + 1, 0, [toinsert[i], false]);
+      }
+      this.treeBox.rowCountChanged(idx + 1, toinsert.length);
+    }
+  },
+
+  getImageSrc: function(idx, column) {},
+  getProgressMode : function(idx,column) {},
+  getCellValue: function(idx, column) {},
+  cycleHeader: function(col, elem) {},
+  selectionChanged: function() {},
+  cycleCell: function(idx, column) {},
+  performAction: function(action) {},
+  performActionOnCell: function(action, index, column) {},
+  getRowProperties: function(idx, column, prop) {},
+  getCellProperties: function(idx, column, prop) {},
+  getColumnProperties: function(column, element, prop) {},
+};
+
+function init() {
+  document.getElementById("elementList").view = treeView;
+}
+
+]]&gt;&lt;/script&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Następnie, zobaczymy <a href="pl/Kurs_XUL/Obiekty_pude%c5%82kowe_drzewa">więcej szczegółów o obiekcie pola drzewa</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Własne_widoki_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Obiekty_pudełkowe_drzewa">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,85 @@
+---
+title: API przechowywania sesji
+slug: Archive/Add-ons/API_przechowywania_sesji
+tags:
+  - Dodatki
+  - Rozszerzenia
+  - Wszystkie_kategorie
+translation_of: Archive/Add-ons/Session_store_API
+---
+<p>
+</p><p><a href="pl/Firefox_2">Firefox 2</a> wprowadza mechanizm przechowywania sesji który umożliwia <a href="pl/Rozszerzenia">rozszerzeniom</a> łatwo zapisywać i przywracać dane pomiędzy sesjami Firefoksa. Istnieje też proste API, które umożliwia rozszerzeniom łatwy dostęp do zapisanych sesji.
+</p><p>Przykładem sytuacji, w której wsparcie dla tej funkcji może być kluczowe: Firefox 2 pozwala użytkownikom przywrócić uprzednio zamknięte karty. W celu prawidłowego przechowania stanu Twojego rozszerzenia kiedy karta zostaje przywrócona, musi ono skorzystać z metody API przechowywania sesji <code>setTabValue()</code>, aby zachować wszelkie dane, które potem będzie należało przywrócić, a następnie, podczas przywracania karty, wywołać <code>getTabValue()</code>, aby odzyskać uprzednio zachowane ustawienia.
+</p><p>API przechowywania sesji jest zaimplementowane przy użyciu interfejsu <code><a href="pl/NsISessionStore">nsISessionStore</a></code>.
+</p>
+<h2 id="Sk.C4.85d_wiedzie.C4.87_kiedy_przywraca.C4.87.3F">Skąd wiedzieć kiedy przywracać?</h2>
+<p>Za każdym razem kiedy Firefox ma przywrócić uprzednio zamkniętą kartę, zostaje wysłane zdarzenie <code>SSTabRestoring</code>. Jeżeli chcesz, aby Twoje rozszerzenie mogło przywracać dane podczas przywracania karty, wystarczy, że ustawisz nasłuch (listener) na to zdarzenie:
+</p>
+<pre>function myExtensionHandleRestore(aEvent) {
+  Components.classes["@mozilla.org/consoleservice;1"].
+             getService(Components.interfaces.nsIConsoleService).
+             logStringMessage("przywracanie kart");
+};
+
+document.addEventListener("SSTabRestoring", myExtensionHandleRestore, false);
+</pre>
+<p>Po prostu zastąp treść funkcji <code>myExtensionHandleRestore()</code> swoim własnym kodem. W powyższym przykładzie został użyty serwis (service) <code><a href="pl/NsIConsoleService">nsIConsoleService</a></code>, do wyświetlenia wiadomość w <a href="pl/Konsola_b%c5%82%c4%99d%c3%b3w">konsoli</a>.
+</p><p>Zdarzenie jest wysyłane tuż przed przywróceniem karty. Zdarzenie typu <code>SSTabRestored</code> jest wysyłane po przywróceniu ostatniej karty.
+</p>
+<h2 id="Proces_przywracania_sesji">Proces przywracania sesji</h2>
+<p>Dokładna sekwencja zdarzeń, która jest wykonywana podczas przywracania sesji wygląda tak:
+</p>
+<ol><li> Stan sesji ma zostać przywrócony. Może się to zdarzyć podczas startu przeglądarki, albo w wyniku akcji Przywróć Zamkniętą Kartę, ponieważ zamknięte karty są przywracane jako sesje pojedyńczych kart.
+</li><li> Nowe okna są otwierane zgodnie z kolejnością (jedno na każde okno, które zostało zachowane), następnie przywracane są ciastka oraz ostatnio zamknięte karty.
+</li></ol>
+<p>Po tym, dla każdej przywracanej karty, zostają podjęte następujące kroki:
+</p>
+<ol><li> Albo wykorzystywana jest istniejąca karta, albo tworzona nowa. W drugim przypadku, wysyłane jest zdarzenie <code>TabOpen</code>.
+</li><li> Przywracane są przechowywane stałe atrybuty XUL (ang. persistent attributes) (te zapisane poprzez odwołania do <code><a href="pl/NsISessionStore#persistTabAttribute.28.29">persistTabAttribute()</a></code>) oraz uprawnienia.
+</li><li> Wysyłane jest zdarzenie <code>SSTabRestoring</code>.
+</li><li> Karta zaczyna pobierać URL, który ma wyświetlić.
+</li><li> Po zakończeniu ładowania strony, przywracane są stany pól tekstowych i przewijania.
+</li><li> Na końcu, wysyłane jest zdarzenie <code>SSTabRestored</code>.
+</li></ol>
+<p>Jeżeli chcesz ustawić uprawnienia lub w inny sposób zmieniać przywracaną kartę przed załadowaniem strony, powinieneś obserwować <code>SSTabRestoring</code>. Jeżeli chcesz zrobić coś po załadowaniu strony, należy obserwować <code>SSTabRestored</code>.
+</p><p>Oba zdarzenia są zawsze wysyłane dla każdej, przywracanej, karty. Możesz określić, która karta jest przywracana przez sprawdzenie pola <code>originalTarget</code> z obiektu zdarzenia.
+</p><p>Właściwie nie istnieje metoda na określenie kiedy ostatnia karta została przywrócona, chyba, że określisz ile kart ma zostać przywróconych, a następnie policzysz zdarzenia <code>SSTabRestored</code>.
+</p>
+<h2 id="Wykorzystanie_API_przechowywania_sesji">Wykorzystanie API przechowywania sesji</h2>
+<p>Tutaj opisujemy kilka prostych przykładów wykorzystania API przechowywania sesji.
+</p>
+<h3 id="Zachowywanie_warto.C5.9Bci_dla_karty">Zachowywanie wartości dla karty</h3>
+<p>Poniższy kod dołączy do karty parę klucz/wartość. Po przywróceniu karty, ta para będzie z nią powiązana.
+</p>
+<pre class="eval"> var ss = Components.classes["@mozilla.org/browser/sessionstore;1"].
+                             getService(Components.interfaces.nsISessionStore);
+ var currentTab = getBrowser().selectedTab;
+ var dataToAttach = "Chcę to przyłączyć";
+ ss.setTabValue(currentTab, "key-name-here", dataToAttach);
+</pre>
+<p>Ten kod ustawia wartość klucza "key-name-here" na &lt;var&gt;dataToAttach&lt;/var&gt;. Możesz tu użyć dowolnego obiektu JavaScript jako danych.
+</p>
+<h3 id="Pobieranie_zachowanej_warto.C5.9Bci">Pobieranie zachowanej wartości</h3>
+<p>W dowolnym momencie możesz pobrać wartość powiązaną z kartą (niezależnie czy karta jest w takcie przywracania czy nie), używając takiego kodu:
+</p>
+<pre class="eval"> var ss = Components.classes["@mozilla.org/browser/sessionstore;1"].
+                             getService(Components.interfaces.nsISessionStore);
+ var currentTab = getBrowser().selectedTab;
+ var retrievedData = ss.getTabValue(currentTab, "key-name-here");
+</pre>
+<p>Po wykonaniu tego kodu, zmienna &lt;var&gt;retrivedData&lt;/var&gt; zawiera zachowaną wartość dla klucza "key-name-here". &lt;var&gt;retrievedData&lt;/var&gt; pozostanie jako undefined jeśli nie została zachowana żadna wartość dla tego klucza.
+</p>
+<h3 id="Usuwanie_warto.C5.9Bci_powi.C4.85zanej_z_kart.C4.85">Usuwanie wartości powiązanej z kartą</h3>
+<p>Aby usunąć wartość z karty, możesz skorzystać z poniższego kodu:
+</p>
+<pre class="eval"> var ss = Components.classes["@mozilla.org/browser/sessionstore;1"].
+                             getService(Components.interfaces.nsISessionStore);
+ var currentTab = getBrowser().selectedTab;
+ ss.deleteTabValue(currentTab, "key-name-here");
+</pre>
+<h3 id="Uwagi">Uwagi</h3>
+<p>Funkcje zachowywania i przywracania dla okien działają tak samo jak te dla kart (z uwzględnieniem zmian w nazwach).
+</p>
+<h2 id="Zobacz_te.C5.BC">Zobacz też</h2>
+<p><a href="pl/NsISessionStore">nsISessionStore</a>
+</p>{{ languages( { "es": "es/API_de_restauraci\u00f3n_de_sesi\u00f3n", "fr": "fr/API_de_restauration_de_session", "ja": "ja/Session_store_API", "en": "en/Session_store_API" } ) }}

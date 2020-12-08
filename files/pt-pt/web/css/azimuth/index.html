@@ -1,0 +1,72 @@
+---
+title: azimuth
+slug: Web/CSS/azimuth
+tags:
+  - Referencia_CSS
+translation_of: Archive/Web/CSS/azimuth
+---
+<p>{{ CSSRef() }}</p>
+<h3 id="Resumo" name="Resumo">Resumo</h3>
+<p>Em combinação com <code><a href="/pt/CSS/elevation" title="pt/CSS/elevation">elevation</a></code>, <code>azimuth</code> habilita diferentes fontes de áudio para serem posicionadas espacialmente para apresentações aurais. Isto é importante porque proporciona uma maneira natural de contar várias vozes a parte, como cada uma pode ser posicionada para originar em uma localização diferente no estágio de som. Saída estéreo produz um estágio de som lateral, enquanto instalações de fones de ouvido e microfones permitem um estágio tridimencional completo.</p>
+<ul>
+ <li>Valor inicial: center</li>
+ <li>Aplica-se a: todos os elementos</li>
+ <li>Herdado: sim</li>
+ <li>Porcentagens: N/A</li>
+ <li>Mídia: <a href="/pt/CSS/Media/Aural" title="pt/CSS/Media/Aural">aural</a></li>
+ <li>Valor computado: ângulo normalizado</li>
+</ul>
+<h3 id="Sintaxe" name="Sintaxe">Sintaxe</h3>
+<pre class="eval">azimuth: <em>angle</em> | [[ left-side | far-left | left |
+    center-left | center | center-right | right |
+    far-right | right-side ] || behind ] | leftwards |
+    rightwards | inherit
+</pre>
+<h3 id="Valores" name="Valores">Valores</h3>
+<dl>
+ <dt>
+  angle </dt>
+ <dd>
+  Posição de fonte audível é descrita como um ângulo dentro da faixa de <code>-360deg</code> até <code>360deg</code>. O valor <code>0deg</code> significa diretamente adiante do centro do estágio de som (este é o valor padrão). <code>90deg</code> é para a direita, <code>180deg</code> é atrás e <code>270deg</code> ou <code>-90deg</code> é para a esquerda.</dd>
+</dl>
+<p><img alt="Image:Azimuth.png"></p>
+<h4 id="Palavras-chave_relativas_a_posi.C3.A7.C3.A3o" name="Palavras-chave_relativas_a_posi.C3.A7.C3.A3o">Palavras-chave relativas a posição</h4>
+<ul>
+ <li><strong>left-side</strong>: O mesmo que <code>270deg</code>.</li>
+ <li><strong>left-side behind</strong>: O mesmo que <code>270deg</code>.</li>
+ <li><strong>far-left</strong>: O mesmo que <code>300deg</code>.</li>
+ <li><strong>far-left behind</strong>: O mesmo que <code>240deg</code>.</li>
+ <li><strong>left</strong>: O mesmo que <code>320deg</code>.</li>
+ <li><strong>left behind</strong>: O mesmo que <code>220deg</code>.</li>
+ <li><strong>center-left</strong>: O mesmo que <code>340deg</code>.</li>
+ <li><strong>center-left behind</strong>: O mesmo que <code>200deg</code>.</li>
+ <li><strong>center</strong>: O mesmo que <code>0deg</code>.</li>
+ <li><strong>center behind</strong>: O mesmo que <code>180deg</code>.</li>
+ <li><strong>center-right</strong>: O mesmo que <code>20deg</code>.</li>
+ <li><strong>center-right behind</strong>: O mesmo que <code>160deg</code>.</li>
+ <li><strong>right</strong>: O mesmo que <code>40deg</code>.</li>
+ <li><strong>right behind</strong>: O mesmo que <code>140deg</code>.</li>
+ <li><strong>far-right</strong>: O mesmo que <code>60deg</code>.</li>
+ <li><strong>far-right behind</strong>: O mesmo que <code>120deg</code>.</li>
+ <li><strong>right-side</strong>: O mesmo que <code>90deg</code>.</li>
+ <li><strong>right-side behind</strong>: O mesmo que <code>90deg</code>.</li>
+ <li><strong>behind</strong>: O mesmo que <code>180deg</code>. Também é usado como um modificador para outros valores de palavras-chave posicionais, como acima.</li>
+ <li><strong>leftwards</strong>: Move o som no sentido anti-horário em 20 graus, relativo ao ângulo corrente.</li>
+ <li><strong>rightwards</strong>: Move o som no sentido horário em 20 graus, relatico ao ângulo corrente.</li>
+</ul>
+<h3 id="Exemplos" name="Exemplos">Exemplos</h3>
+<pre>h1   { azimuth: 30deg }
+td.a { azimuth: far-right }          /*  60deg */
+#12  { azimuth: behind far-right }   /* 120deg */
+p.comment { azimuth: behind }        /* 180deg */
+</pre>
+<h3 id="Especifica.C3.A7.C3.B5es" name="Especifica.C3.A7.C3.B5es">Especificações</h3>
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS21/aural.html#spatial-props">CSS 2.1</a></li>
+</ul>
+<p><span class="comment">== Compatibilidade com navegadores == TBD (this might be abandoned in favour of a centralized compatibility chart)</span></p>
+<h3 id="Veja_tamb.C3.A9m" name="Veja_tamb.C3.A9m">Veja também</h3>
+<p>{{ Cssxref("elevation") }}</p>
+<p><span class="comment">Categorias</span></p>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/CSS/azimuth", "fr": "fr/CSS/azimuth", "pl": "pl/CSS/azimuth" } ) }}</p>

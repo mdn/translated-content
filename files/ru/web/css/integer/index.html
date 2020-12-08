@@ -1,0 +1,127 @@
+---
+title: <integer>
+slug: Web/CSS/integer
+translation_of: Web/CSS/integer
+---
+<div>{{CSSRef}}</div>
+
+<p><strong><code>&lt;integer&gt;</code></strong> - <a href="/ru/docs/Web/CSS/CSS_Types">тип хранения данных</a> в <a href="/ru/docs/Web/CSS">CSS</a> - является частным случаем типа {{cssxref("number")}}, который представляет целые числа: как положительное, так и отрицательное. Целые числа могу быть использованы в свойствах CSS , таких как {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, и {{cssxref("z-index")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<p>Тип данных <code>&lt;integer&gt;</code> состоит из одного или нескольких дробных цифр, от 0 до 9 включительно, символы <code>+</code> и <code>-</code> необязательны. Не существует единицы измерения, связанной с целочисленным типом данных.</p>
+
+<div class="note"><strong>Запомните:</strong> Не существует оффициального диапазона значений типа <code>&lt;integer&gt;</code>. Opera 12.1 поддерживает значения до 2<sup>15</sup>-1, IE - до 2<sup>20</sup>-1, а остальные браузеры даже выше. На протяжении существования значений CSS3 было проведено не большое количество обсуждений об установлении минимального ренжа: последнее решение, <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html">в апреле 2012 напротяжении фазы LC</a>, было [-2<sup>27</sup>-1; 2<sup>27</sup>-1], но остальные значения, такие как 2<sup>24</sup>-1 и 2<sup>30</sup>-1, <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html">также были предложены</a>. Однако, самая свежая на данный момент спецификация более не указывает на область определения этого типа данных.</div>
+
+<h2 id="Интерполяция">Интерполяция</h2>
+
+<p>Во время анимации значения типа <code>&lt;integer&gt;</code> интерполированы используя особые меры. Вычисление будет завершено, если они были целочисленными или с плавающей точкой; отдельное значение получается, используя <a href="https://ru.wikipedia.org/wiki/Целая_часть">Целую часть</a>. Скорость интерполяции определена <a href="/en-US/docs/Web/CSS/single-transition-timing-function" title="timing-function">timing function</a>, связанной с анимацией.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Корректные_значения_целочисленного_типа_данных">Корректные значения целочисленного типа данных</h3>
+
+<pre>12          Положительное целое число (без предшествующего знака +)
++123        Положительное целое число (С предшествующим знаком +)
+-456        Отрицательное целое число
+0           Нуль
++0          Нуль, с предшествующим +
+-0          Нуль, с предшествующим -
+</pre>
+
+<h3 id="Некорректные_значения_целочисленного_типа_данных">Некорректные значения целочисленного типа данных</h3>
+
+<pre class="example-bad">12.0        Это &lt;number&gt;, а не &lt;integer&gt;, хоть и представляется как целое число.
+12.         "Дробные" точки запрещены.
++---12      Разрешен только один предшествующий символ +/-.
+десять      Буквы запрещены.
+_5          Специальные знаки запрещены.
+\35         Экранированные символы Юникода запрещены, даже если они являются целым числом (здесь: 5).
+\4E94       Разрешены только арабские цифры, даже в случае, если они экранированны (здесь: японское число 5, 五).
+3e4         Научные обозначения запрещены.
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Спецификация</th>
+   <th>Статус</th>
+   <th>Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Values', '#integers', '&lt;integer&gt;')}}</td>
+   <td>{{Spec2('CSS3 Values')}}</td>
+   <td>Нет значительных изменений.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;integer&gt;')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Явное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '', '&lt;integer&gt;')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Неявное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>3.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>1.0 (85)</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Обобенность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{cssxref("&lt;number&gt;")}}</li>
+</ul>

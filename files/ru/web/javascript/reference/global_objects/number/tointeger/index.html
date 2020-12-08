@@ -1,0 +1,94 @@
+---
+title: Number.toInteger()
+slug: Web/JavaScript/Reference/Global_Objects/Number/toInteger
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Number
+  - Obsolete
+translation_of: Archive/Web/JavaScript/Number.toInteger
+---
+<div>{{JSRef("Global_Objects", "Number")}} {{obsolete_header("33")}} {{non-standard_header}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Метод <strong><code>Number.toInteger()</code></strong> использовался для вычисления переданного значения и преобразования его в целое число, но его реализация была удалена.</p>
+<p>Если целевым значением является {{jsxref("Global_Objects/NaN", "NaN")}}, {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, возвращается 0. Если целевым значением является <code>false</code>, возвращается 0, а если <code>true</code>, то 1.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code>Number.toInteger(<var>number</var>)</code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+<dl>
+ <dt><code>number</code></dt>
+ <dd>Значение, преобразуемое в целое число.</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example:_Using_toInteger" name="Example:_Using_toInteger">Пример: использование <code>toInteger</code></h3>
+<p>Вывод на некоторых тестовых значениях:</p>
+<pre class="brush:js">Number.toInteger(0.1);     // 0
+Number.toInteger(1);       // 1
+Number.toInteger(Math.PI); // 3
+Number.toInteger(null);    // 0
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<ul>
+ <li><code>Number.toInteger()</code> был частью черновика спецификации ECMAScript 6, но он был удалён 23 августа 2013 г. в 17 ревизии черновика.</li>
+</ul>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<div>{{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>Firefox с версии 16 по версию 32</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>Firefox с версии 16 по версию 32</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+<ul>
+ <li>Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.</li>
+</ul>

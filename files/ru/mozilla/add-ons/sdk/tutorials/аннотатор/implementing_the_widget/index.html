@@ -1,0 +1,68 @@
+---
+title: Реализация Виджета
+slug: Mozilla/Add-ons/SDK/Tutorials/Аннотатор/Implementing_the_widget
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Annotator/Implementing_the_widget
+---
+<p>Мы хотим, чтобы виджет выполнял две вещи:</p>
+<ul>
+ <li>При клике левой кнопкой мыши, Виджет должен активировать или деактивировать Аннотатор;</li>
+ <li>При клике правой кнопкой, Виджет должен отобразить список всех заметок, созданных пользователем.</li>
+</ul>
+<p>Так как событие <code>click</code> не различает левую и правую кнопки мыши, мы будем использовать контент-скрипт для захвата событий клика мышью и отправлять соответствующее сообщение назад, нашему расширению.</p>
+<p>Виджет должен иметь две иконки: одна для активного состояния, вторая для неактивного.</p>
+<p>В итоге нам понадобится создать три файла: контент-скрипт для Виджета и две иконки.</p>
+<p>Внутри папки <code>data</code> создайте папку с именем <code>widget</code>. В этой папке мы будем хранить файлы Виджета. (Вам не обязательно создавать отдельную папку, можете просто хранить файлы Виджета в папке <code>data</code>. Но в нашем случае, расширение будет хорошо структурировано.)</p>
+<h2 id="Контент-скрипт_Виджета">Контент-скрипт Виджета</h2>
+<p>Контент-скрипт Виджета просто следит за нажатиями левой и правой кнопок мыши и отправляет соответствующее сообщение коду расширения:</p>
+<pre class="brush: js">this.addEventListener('click', function(event) {
+  if(event.button == 0 &amp;&amp; event.shiftKey == false)
+    self.port.emit('left-click');
+
+  if(event.button == 2 || (event.button == 0 &amp;&amp; event.shiftKey == true))
+    self.port.emit('right-click');
+    event.preventDefault();
+}, true);</pre>
+<p>Сохраните этот файл в папку <code>data/widget</code> под названием <code>widget.js</code>.</p>
+<h2 id="Иконки_Виджета">Иконки Виджета</h2>
+<p>Вы можете скопировать эти иконки:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6673/pencil-off.png"><img alt="" src="https://mdn.mozillademos.org/files/6675/pencil-on.png" style="width: 32px; height: 32px;"></p>
+<p>(Вы также можете создать свои собственные иконки, если чуствуете, что вас поситила муза.) Сохраните их в папку <code>data/widget</code>.</p>
+<h2 id="main.js">main.js</h2>
+<p>Теперь, в папке <code>lib</code> откройте <code>main.js</code> и добавьте следующий код:</p>
+<pre class="brush: js">var widgets = require('sdk/widget');
+var data = require('sdk/self').data;
+
+var annotatorIsOn = false;
+
+function toggleActivation() {
+  annotatorIsOn = !annotatorIsOn;
+  return annotatorIsOn;
+}
+
+exports.main = function() {
+
+  var widget = widgets.Widget({
+    id: 'toggle-switch',
+    label: 'Annotator',
+    contentURL: data.url('widget/pencil-off.png'),
+    contentScriptWhen: 'ready',
+    contentScriptFile: data.url('widget/widget.js')
+  });
+
+  widget.port.on('left-click', function() {
+    console.log('activate/deactivate');
+    widget.contentURL = toggleActivation() ?
+              data.url('widget/pencil-on.png') :
+              data.url('widget/pencil-off.png');
+  });
+
+  widget.port.on('right-click', function() {
+      console.log('show annotation list');
+  });
+}</pre>
+<p>Аннотатор по-умолчанию отключен. Этот скрипт создает Виджет и реагирует на сообщения контент-скрипта, путем переключения состояния Виджета. Внимание: согласно багу<span class="aside"> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=626326">bug 626326</a>, контекстное меню панели дополнений будет отображаться вне зависимости от вызова <code>event.preventDefault()</code> в контент-скрипте Виджета.</span> Так как мы пока не имеем кода для отображения заметок, мы просто выведем в консоль событие нажатия правой кнопки.</p>
+<p>Теперь, перейдя в папку <code>annotator</code> выполните команду <code>cfx run</code>. Вы должны увидеть Виджет в панели дополнений:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6679/widget-icon.png" style="width: 405px; height: 166px; display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Левый и правый клики должы выводить соответсвующие сообщения в консоль, и левый клик также должен менять иконку для отображения состояния активности Виджета.</p>
+<p> </p>
+<p>Далее мы добавим реализацию функции <a href="/en-US/Add-ons/SDK/Tutorials/Annotator/Creating_annotations">создания аннотаций</a>.</p>

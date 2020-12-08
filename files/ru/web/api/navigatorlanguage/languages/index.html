@@ -1,0 +1,118 @@
+---
+title: NavigatorLanguage.languages
+slug: Web/API/NavigatorLanguage/languages
+translation_of: Web/API/NavigatorLanguage/languages
+---
+<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+
+<p>Свойство <code><strong>NavigatorLanguage.languages</strong></code> только для чтения, возвращающее массив {{domxref("DOMString")}} показывающее предпочитаемые пользователем языки. language описывает использование языковых тегов <a href="http://tools.ietf.org/html/bcp47">BCP 47</a>.<span id="result_box" lang="ru"><span class="hps"> В</span> <span class="hps">возвращаемом</span> <span class="hps">массиве</span> <span class="hps">они</span> <span class="hps">отсортированы по</span> <span class="hps">предпочтению с</span> <span class="hps">наиболее предпочтитаемым</span> <span class="hps">языком</span> <span class="hps">в первую очередь.</span></span></p>
+
+<p>Значение {{domxref("NavigatorLanguage.language","navigator.language")}} это первый элемент в полученном массиве.</p>
+
+<p>Когда значение изменится, так как изменится предпочитаемый язык пользователя {{event("languagechange")}} событие уведомит объект {{domxref("Window")}}.</p>
+
+<p>HTTP Заголовок <code>Accept-Language</code> в каждом HTTP запросе от браузера пользователя, использует такое же значение как и в свойстве <code>navigator.languages</code> кроме дополнительного<code> qvalues</code> (quality values) поля (например: <code>en-US;q=0.8</code>).</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>preferredLanguages</em> = <em>globalObj</em>.navigator.languages
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">navigator.language   //"en-US"
+navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Коментарий</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5.1', '#dom-navigator-languages', 'NavigatorLanguage.languages') }}</td>
+   <td>{{ Spec2('HTML5.1') }}</td>
+   <td>Начальное описание</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>32</td>
+   <td>{{ CompatGeckoDesktop("32") }} [1]</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+  <tr>
+   <td>on Web workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("35")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatGeckoMobile("32") }}[1]</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+  <tr>
+   <td>on Web workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("35")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1]В Firefox, the <code>navigator.languages</code> значение свойства берется из <code>intl.accept_languages</code> предписаний.</p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("NavigatorLanguage.language","navigator.language")}}</li>
+ <li>{{domxref("Navigator")}}</li>
+ <li>{{domxref("Window.onlanguagechange")}}</li>
+</ul>

@@ -1,0 +1,135 @@
+---
+title: Preparing for your first B2G build
+slug: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<div class="summary">
+ <p>Before you can build B2G, you need to clone the repository and configure your build tree. This article explains how to do that. </p>
+</div>
+<p>Depending on your internet connection, the configuration step takes a number of hours to download the files necessary to build FirefoxOS (with a mediocre 150 kBps connection, downloading gigabytes of Android repositories can take tens of hours).  Waiting is not as fun as doing, so after you have read through this page and have kicked off the configure script, consider using the time to set up and try out the <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator" title="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator">Firefox OS simulator</a>, begin familiarizing yourself with <a class="vt-p" href="/en-US/docs/Apps" title="/en-US/docs/Apps">Documentation for app developers</a> including Designing and Building an App, or familiarize yourself with the information on upcoming steps.</p>
+<div class="note">
+ <p>You might want to have a side task prepared, or a friend available to go for a coffee with, while you are running the B2G config and build steps. They can take a bit of time.</p>
+</div>
+<h2 id="Clone_B2G_repository">Clone B2G repository</h2>
+<p>The first step, before you can start your first build, is to clone the B2G repository. This will not fetch everything! Instead, it will fetch the B2G build system and setup utilities. Most of the actual B2G code is in the main Mozilla <a class="vt-p" href="/en-US/docs/Mercurial" title="Mercurial">Mercurial</a> repository.</p>
+<p>To clone the repository, use git:</p>
+<pre>git clone git://github.com/mozilla-b2g/B2G.git</pre>
+<p>After cloning (which should only take a minute with a fast connection), <code>cd</code> into the B2G directory:</p>
+<pre>cd B2G
+</pre>
+<h2 id="Configuring_B2G_for_your_device">Configuring B2G for your device</h2>
+<div class="warning">
+ <strong>Important</strong>: Remember that only devices running <strong>Android 4.0.4</strong> (<strong>Ice Cream Sandwich</strong>)<strong>, 4.3 (Jelly Bean) and 4.4 (KitKat)</strong> and platforms based around it are supported (current Firefox OS devices are). Please check that your phone is actually running one of those supported versions, otherwise this step will most likely fail since some drivers are pulled from non-Nexus devices. Also, if you have to flash your device with the matching stock release. Keep in mind that some USB hubs don't work well with flashing tools, so you may have to connect your device to a built-in USB port.</div>
+<div class="warning">
+ <strong>Important</strong>: if you are doing the build on Ubuntu 12.10+ or Fedora, you will need to specify GCC 4.6 as the default host compiler after having retrieved the B2G sources, for the process to work (these distros use GCC 4.7 by default). Read <a class="vt-p" href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_default_host_compiler">Changing the default host compiler</a> to find out how to do it.</div>
+<div class="note">
+ <strong>Note:</strong> <strong>please read all the instructions below</strong> before running any of the build process commands, to make sure you are doing the right thing for you!</div>
+<p>Once you've retrieved the core B2G build system, you need to configure it for the device on which you plan to install it. To get a list of supported devices, you can use the <code>config.sh</code> utility — run the following command from within the B2G directory:</p>
+<pre>./config.sh
+</pre>
+<p>This will display a list of the supported devices, like so:</p>
+<pre>Usage: ./config.sh [-cdflnq] (device name)
+Flags are passed through to |./repo sync|.
+
+Valid devices to configure are:
+- galaxy-s2
+- galaxy-nexus
+- nexus-4
+- nexus-s
+- nexus-s-4g
+- flo "(Nexus 7 2013)"
+- nexus-5
+- flame
+- otoro
+- unagi
+- inari
+- keon
+- peak
+- leo
+- hamachi
+- helix
+- wasabi
+- fugu
+- tara
+- pandaboard
+- emulator
+- emulator-jb
+- emulator-kk
+- emulator-x86
+- emulator-x86-jb
+- emulator-x86-kk
+</pre>
+<p>If your device isn't listed, you should stop right now and either help port B2G to your device or wait until someone else does it. We'd prefer it if you help out!</p>
+<div class="note">
+ <strong>Note:</strong> You can find the device name of your phone on the <a href="/en-US/Firefox_OS/Phones">Firefox OS Phones</a> page.</div>
+<div class="note">
+ <strong>Note: Configuring and building B2G for Keon on a Mac DOESN'T WORK</strong>. You'll need to use Linux when building for this device.</div>
+<div class="note">
+ <strong>Note</strong>: If for any reason you want to build against a specific version of Gecko, see <a href="#Building_against_a_custom_Gecko">Building against a custom Gecko</a> before you proceed. If you want to build a branch other than the the default for your device (for example, to build a specific version of B2G), see <a href="#Building_a_branch">Building a branch</a>. Note: the default branch varies by device and is <strong>not necessarily trunk</strong>.</div>
+<p>This would be a good time for a coffee break, since at this point, you'll be doing your first pull of all the code needed to build Boot to Gecko. Running the device config step as indicated below can take a long time; you may stop it with Ctrl-C and restart it at a later time. If you think some part of the process may have been terminated without completing, run './repo sync' to repair any possible problems.</p>
+<h3 id="Configuring_the_B2G_build_for_a_mobile_device">Configuring the B2G build for a mobile device</h3>
+<p>At this point, connect your device if it is not already connected; the configure process will need to access it.</p>
+<p>If your device was listed in the results shown above, you can start the configure process by running <code>config.sh</code> again, this time specifying your device's name. For example, to build for the Samsung Google Nexus S, you would type:</p>
+<pre>./config.sh nexus-s
+</pre>
+<div class="note">
+ <strong>Note:</strong> If you get an error message like <code>fatal: manifest 'nexus-s.xml' not available</code>, chances are that you simply have to specify the branch you want to use. See <a href="#Building_a_branch">Building a branch</a> for details.</div>
+<div class="note">
+ <strong>Note</strong>: If the config step fails with an error message like <code>error: manifest required for this command -- please run init</code>, then changes are that the manifest file for the repo (located at <code>B2G/.repo/manifest.xml</code>) wasn't created successfully. You should try running <code>config.sh</code> again. If you are doing this for a new device you could add it to <code>config.sh</code> and then hand it your local manifest file like so:<br>
+ <code>./config.sh &lt;device&gt; -m path/to/manifest.</code></div>
+<p>Near the start of the configuration you might need to set the option for color usage, then after this the process continues. You can just select 'y' here, as you probably want a color build.</p>
+<h3 id="Configuring_a_build_using_a_system_backup">Configuring a build using a system backup</h3>
+<p>If your phone no longer has Android on it, and your B2G tree doesn't have the binary blobs in it, but you wisely <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition">made a backup of the <code>/system</code> partition</a>, you can perform the build on the system backup like this:</p>
+<pre>ANDROIDFS_DIR=&lt;absolute path to parent dir of system dir&gt; ./config.sh &lt;target&gt;
+</pre>
+<p>The build system will default to looking in someplace like <code>backup-inari/system</code> (depending on the device configuration); if you place the files in the expected place you won't need to specify the directory.</p>
+<p>Note that if your phone always had Firefox OS on it to begin with and never ran Android, it's still fine to pull the <code>/system</code> partition per the above directions — this will give you the right files.</p>
+<h3 id="Configuring_the_B2G_build_for_an_emulator">Configuring the B2G build for an emulator</h3>
+<p>If you want to build an emulator rather than on a real phone, you can specify <code>emulator</code>* to get an ARM device emulator, or <code>emulator-x86*</code> to build an x86 emulator. The latter is faster but not as accurate a representation of an actual mobile device and not as well supported; using it is not advised.</p>
+<p>So, to build the ARM Jellybean emulator, for example, you would use the following command:</p>
+<pre>./config.sh emulator-jb
+</pre>
+<p>Near the start of the configuration you might need to set the option for color usage, then after this the process continues. You can just select 'y' here, as you probabaly want a color build.</p>
+<p>By this point you should be ready to <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Building" title="Mozilla/Firefox_OS/Building">start the build</a>, unless you need any of the more advanced information detailed below.</p>
+<p>Beware that building for the emulator may fail on 64-bit Linux.</p>
+<div class="note">
+ <strong>Note:</strong> Developers on Mac OS X 10.9 or above have to switch to emulator-jb or emulator-kk instead, because AOSP ICS based emulator can't be built on Mac OS X 10.9. See <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Requirements_for_Mac_OS_X" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Requirements_for_Mac_OS_X">Requirements for Mac OS X</a> for further information.</div>
+<h2 id="Building_against_a_custom_Gecko">Building against a custom Gecko</h2>
+<p>There may be times that you want or need to build Boot to Gecko based on a different version of Gecko than the one that's used by default (as specified in the manifest). You can do so by editing the file <code>.userconfig</code>. For example, if you want to build against mozilla-central:</p>
+<pre>export GECKO_PATH=/path/to/mozilla-central
+export GECKO_OBJDIR=/path/to/mozilla-central/objdir-gonk
+</pre>
+<div class="note">
+ <p><strong>Note</strong>: if building against a custom Gecko in Mac OS X, the mozilla-central directory must be in a case sensitive file system.<br>
+   </p>
+</div>
+<p id="Building_a_branch">Note that you can do this either before you pull the repository (i.e. before the <code>config.sh</code> step above) or at any later point.  You can also keep multiple builds (with debugging on or not, etc) by having multiple userconfig files (with different settings--each needs a different OBJDIR, of course) and making .userconfig a symlink that points to whichever config you want to build at the moment.</p>
+<p>For more information, read <a class="vt-p" href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_Gecko_source_tree" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_Gecko_source_tree">Changing the Gecko source tree</a>.</p>
+<h2 id="Building_a_branch_2">Building a branch</h2>
+<p>If you want to build for a branch other than the default branch (<strong>note: the default branch may not be "master"!</strong>), you will need to prefix your call to config.sh with a branch name, like this:</p>
+<pre>BRANCH=branch-name ./config.sh &lt;device&gt;</pre>
+<p>The branch names are pretty logical, and largely follow the names of the products/versions, so <code>v1-train</code>, <code>v1.0.0</code>, <code>v1.0.1</code>, <code>v1.1</code>, <code>v1.1.0hd</code>, <code>v1.2, v1.3, v1.4, v2.0</code>  and so on into the future. As an example, to build B2G Firefox 1.2, for the Arm emulator, you'd enter</p>
+<pre>BRANCH=v1.2 ./config.sh emulator</pre>
+<p>If you have run config.sh already, you can see the names of the branches, by going to <code>B2G/.repo/manifests</code> and doing "<code>git branch -a</code>" (this isn't populated unti then.) <strong>The branch name is given as the final token on the line, e.g. "<code>v1-train</code>" or "<code>master</code>"</strong>:</p>
+<pre>  remotes/origin/master
+  remotes/origin/v1-train
+  remotes/origin/v1.0.0
+  remotes/origin/v1.0.1</pre>
+<p>See <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a> for additional customizations you can do.</p>
+<h2 id="Copying_your_B2G_tree_to_a_new_machine">Copying your B2G tree to a new machine</h2>
+<p>If you've previously set up the B2G tree and then gotten a new computer (lucky you!), you'll find your life will be much easier if you simply migrate your entire B2G tree from your old computer to your new one, rather than setting the whole thing up again. To do that, mount your old computer's drive onto your new computer, then do this:</p>
+<pre>rsync -a <em>source</em>/ <em>dest</em>/
+</pre>
+<p>Where <code>source</code> is the full path (including the trailing slash) of the source tree, and <code>dest</code> is where you want to put it (the trailing slash is also important!).</p>
+<div class="note">
+ <strong>Note:</strong> If you copy the files from a computer with another platform ensure to run '<em>./build.sh clean'</em> before you start the build process. If you don't do this you might encounter compilation issues.</div>
+<p>If you do this, you can skip all of the rest of this article and move right on to <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Building" title="Mozilla/Firefox_OS/Building">building</a>.</p>
+<h2 id="Updating_your_B2G_tree">Updating your B2G tree</h2>
+<p>When the repository is updated to a newer version of B2G, you'll want to update your B2G tree. To do this, you can run the following commands:</p>
+<pre>git fetch origin
+git checkout origin/master</pre>
+<p>You can check that these worked correctly by running:</p>
+<pre>git show HEAD</pre>
+<p>and checking that the commit shown matches the latest commit shown at: <a class="vt-p" href="https://github.com/mozilla-b2g/B2G/commits/master" title="https://github.com/mozilla-b2g/B2G/commits/master">https://github.com/mozilla-b2g/B2G/commits/master</a></p>
+<h2 id="On_to_the_next_step">On to the next step</h2>
+<p>At this point, you should be ready for <a href="/en-US/Firefox_OS/Building">Building Firefox OS [en-US]</a>.</p>

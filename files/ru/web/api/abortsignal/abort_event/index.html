@@ -1,0 +1,134 @@
+---
+title: abort
+slug: Web/API/AbortSignal/abort_event
+translation_of: Web/API/AbortSignal/abort_event
+---
+<div>{{SeeCompatTable}}</div>
+
+<p>Событие <code><strong>abort</strong></code> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> вызывается когда fetch запрос прерывается, т.е. с помощью {{domxref("AbortController.abort()")}}.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <td>Bubbles</td>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <td>Cancelable</td>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <td>Target objects</td>
+   <td>{{domxref("AbortSignal")}}</td>
+  </tr>
+  <tr>
+   <td>Interface</td>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p> </p>
+
+<p>В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве <code>signal</code>). Позже мы проверяем, был ли прерван сигнал, используя свойство <code>aborted</code>, и выводим соответствующее сообщение в консоль.</p>
+
+<p> </p>
+
+<pre class="brush: js">var controller = new AbortController();
+var signal = controller.signal;
+
+signal.onabort = function() {
+  console.log('Request aborted');
+};
+</pre>
+
+<h2 id="Наследование">Наследование</h2>
+
+<p>Событие <code>abort</code> реализует {{domxref("Event")}} интерфейс — он имеет свойства и методы, определённые в нём.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-abortsignal-onabort', 'abort')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(57)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile(57)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
+</ul>

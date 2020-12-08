@@ -1,0 +1,76 @@
+---
+title: 'Array.prototype[@@unscopables]'
+slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Property
+  - Prototype
+  - Массив
+translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+---
+<div>{{JSRef}}</div>
+
+<p>Свойства символа <code><strong>@@unscopable</strong></code> содержат свойства имён, которые не были включены в ECMAScript до версии ES2015. Эти свойства исключены из привязок оператора <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>arr</var>[Symbol.unscopables]</pre>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Стандартные свойства массива, которые исключены из привязок  <code>with</code>: copyWithin, entries, fill, find, findIndex, includes, keys, и values.</p>
+
+<p>См. {{jsxref("Symbol.unscopables")}} о том, как установить <code>unscopables</code> для Ваших собственных объектов.</p>
+
+<p>{{js_property_attributes(0,0,1)}}</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод  {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения <code>with</code>, "ключи" будут методом, а не пременной. Вот где теперь встроенные свойства символа {{jsxref("Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор <code>with</code>.</p>
+
+<pre class="brush: js">var keys = [];
+
+with (Array.prototype) {
+  keys.push('что-то');
+}
+
+Object.keys(Array.prototype[Symbol.unscopables]);
+// ["copyWithin", "entries", "fill", "find", "findIndex",
+//  "includes", "keys", "values"]</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>
+<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если Вы хотите дополнить эти данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам пулл-реквест.</div>
+
+<p>{{Compat("javascript.builtins.Array.@@unscopables")}}</p>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Symbol.unscopables")}}</li>
+</ul>

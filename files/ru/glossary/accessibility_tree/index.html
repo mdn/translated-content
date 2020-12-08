@@ -1,0 +1,39 @@
+---
+title: Accessibility tree (AOM)
+slug: Glossary/Accessibility_tree
+tags:
+  - Словарь
+  - Специальные Возможности
+  - доступность
+translation_of: Glossary/Accessibility_tree
+---
+<p><span class="seoSummary"><strong>Accessibility Tree</strong> <em>(AOM, Accessibility Object Model) </em>или <strong>Дерево специальных возможностей </strong><em>(Объектная Модель Доступа)</em> содержит информацию для большинства HTML-элементов, связанную с {{Glossary("Accessibility")}}.</span></p>
+
+<p>Браузеры преобразуют разметку во внутреннее представление, называемого<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree"> <em>DOM tree </em></a>(<strong>Объектная Модель Документа</strong>). DOM-дерево содержит объекты для всех эдементов разметки, атрибутов, текстовых узлов. После этого браузеры создают дерево специальных возможностей, на основе DOM-дерева, которое используется платформозависимыми Accessibility API для вспомогательных технологий, как считыватели экранов.</p>
+
+<p>Всего 4 пункта в объекте дерева специальных возможностей:</p>
+
+<dl>
+ <dt><strong>name</strong></dt>
+ <dd>Как можно обратиться к нему? Например, ссылка с текстом "Подробнее" будет иметь <strong>name </strong>"Подробнее" (больше о том, как присваиваются имена в <a href="https://www.w3.org/TR/accname-1.1/">Cпецификации Вычисления Доступных Имен и Описаний</a>).</dd>
+ <dt><strong>description</strong></dt>
+ <dd>Как мы описываем  элемент, если хотим добавить что-нибудь к <strong>name</strong>? Описание таблицы может объяснить, какого рода информация, хранящаяся в ней.</dd>
+ <dt><strong>role</strong></dt>
+ <dd>Что это? Например, это кнопка, меню-навигация или список предметов?</dd>
+ <dt><strong>state</strong></dt>
+ <dd>Имеет ли это структуру? Обдумайте "отмеченные/неотмеченные" для флажков, или "свернутое/развернутое" для элемента <a href="/en-US/docs/https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">&lt;summary&gt;</a>.</dd>
+</dl>
+
+<p>Кроме этого, дерево специальных возможностей часто содержит информацию о том, что можно сделать с элементом: ссылку можно  <em>посетить, </em>текстовый ввод - <em>заполнить</em> и т.д.<em> </em></p>
+
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><a href="/en-US/docs/Glossary">Словарь</a>
+
+  <ol>
+   <li>{{Glossary("Accessibility")}}</li>
+   <li>{{Glossary("ARIA")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

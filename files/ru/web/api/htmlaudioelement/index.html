@@ -1,0 +1,171 @@
+---
+title: HTMLAudioElement
+slug: Web/API/HTMLAudioElement
+translation_of: Web/API/HTMLAudioElement
+---
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
+
+<div> </div>
+
+<p><strong><code>HTMLAudioElement</code></strong> позволяет получить доступ к элементу  {{HTMLElement("audio")}} и имеет DOM элемент {{domxref("HTMLMediaElement")}}.</p>
+
+<h2 id="Properties" name="Properties">Свойства</h2>
+
+<p><em>Не имеет своих свойств; наследует свойства от родителя {{domxref("HTMLMediaElement")}} и от {{domxref("HTMLElement")}}.</em></p>
+
+<h2 id="Methods" name="Methods">Методы</h2>
+
+<p><em>Наследует методы от родителя {{domxref("HTMLMediaElement")}} и от {{domxref("HTMLElement")}}.</em></p>
+
+<h3 id="Конструктор">Конструктор</h3>
+
+<h4 id="Синтаксис">Синтаксис</h4>
+
+<pre class="syntaxbox">mySound = new Audio([<em>URLString</em>]);
+</pre>
+
+<h4 id="Описание">Описание</h4>
+
+<p>Конструктор audio элемента. Свойство <code>preload</code> по умолчанию задано как <code>auto</code>, а <code>src</code> равно значению аргумента <em>URLString.</em> Перед воспроизведением, браузер асинхронно загружает объект в кэш и впоследствии берет данные оттуда.</p>
+
+<p>Параметры</p>
+
+<dl>
+ <dt><code>URLString</code> (expected type: {{domxref("DOMString")}}; optional)</dt>
+ <dd>'src' для 'audio' тега. (URL , с которого должен получать mp3 файл)</dd>
+</dl>
+
+<h3 id="Регулярные_методы">Регулярные методы</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Name &amp; Arguments</th>
+   <th scope="col">Return</th>
+   <th scope="col">Description</th>
+  </tr>
+  <tr>
+   <td><code>mozCurrentSampleOffset()</code> {{non-standard_inline}}</td>
+   <td><code>unsigned long long</code></td>
+   <td><code>Отображает текущую нагрузку аудиострима, который был создан методом mozWriteAudio()</code>. Эта цифра отражает количество сэмплов с момента начала стрима</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>mozSetup(in PRUint32 channels, in PRUint32 rate)</code> {{non-standard_inline}}</p>
+   </td>
+   <td><code>void</code></td>
+   <td>Создает аудиострима для записи. Вы можете указать такие параметры, как количество каналов  (<code>1</code> for mono or <code>2</code> for stereo), так и частота сэмпла (<code>44100</code> for 44.1kHz, for example).</td>
+  </tr>
+  <tr>
+   <td><code>mozWriteAudio(in jsval data) </code>{{non-standard_inline}}</td>
+   <td><code>unsigned long</code></td>
+   <td>Запускает аудио стрим на текущую частоту. Возращает количество байтов, которые записаны в стрим</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "the-video-element.html#the-audio-element", "HTMLAudioElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Нет изменений {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-audio-element", "HTMLAudioElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>
+    <p> </p>
+
+    <table>
+     <tbody>
+      <tr>
+       <th>Особенность</th>
+      </tr>
+     </tbody>
+    </table>
+   </th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(1.9.1)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>С поддержкой фич mozSetup()</code>, <code>mozCurrentSampleOffset()</code>, <code>mozWriteAudio()</code> {{non-standard_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop(2.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Фича</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(1.9.1)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>С поддержкой фич mozSetup()</code>, <code>mozCurrentSampleOffset()</code>, <code>mozWriteAudio()</code> {{non-standard_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(2.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>HTML element implementing this interface: {{HTMLElement("audio")}}.</li>
+</ul>

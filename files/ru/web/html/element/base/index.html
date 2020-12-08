@@ -1,0 +1,152 @@
+---
+title: <base>
+slug: Web/HTML/Element/base
+tags:
+  - <base>
+  - HTML
+  - атрибуты <base>
+  - метаданные
+translation_of: Web/HTML/Element/base
+---
+<p id="Summary">{{HTMLRef}}</p>
+
+<p><strong>HTML элемент</strong> <strong><code>&lt;base&gt;</code> </strong>определяет основной адрес (URL), используемый для всех относительных адресов (URLs) в документе. Может быть только один <strong><code>&lt;base&gt;</code></strong> элемент в одном документе. <br>
+ Основной адрес (URL) документа можно запросить скриптом используя {{domxref('document.baseURI')}}.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th><a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories" title="HTML/Content_categories">Категории элемента</a></th>
+   <td>Метаданные (Metadata)</td>
+  </tr>
+  <tr>
+   <th>Отображение на странице</th>
+   <td>Не отображается, это {{Glossary("empty element")}}.</td>
+  </tr>
+  <tr>
+   <th>Открывающий, закрывающий теги</th>
+   <td>Без закрывающего тега.</td>
+  </tr>
+  <tr>
+   <th>Содержится в</th>
+   <td>{{HTMLElement("head")}}, {{HTMLElement("body")}}.</td>
+  </tr>
+  <tr>
+   <th>Использование в ARIA roles</th>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <th>Интерфейс DOM</th>
+   <td>{{domxref("HTMLBaseElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Атрибуты_&lt;base>">Атрибуты <strong><code>&lt;base&gt;</code></strong></h2>
+
+<p><span style="line-height: 21px;">К элементу </span><strong><code>&lt;base&gt; </code></strong><code>можно применять</code><span style="line-height: 21px;"> </span><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">глобальные атрибуты.</a></p>
+
+<dl>
+ <dt>{{htmlattrdef("href")}}</dt>
+ <dd>Базовый адрес (URL) для указания полного пути (основной, главный адрес). Если указан данный атрибут, значит этот элемент должен находиться до других элементов с атрибутами URLs. Разрешены абсолютные (внешние) и относительные (внутренние) адреса (URLs).</dd>
+ <dt>{{htmlattrdef("target")}}</dt>
+ <dd>Значение атрибута определяет имя контекста, которое применяется для ссылок (<span class="tag">&lt;a&gt;</span>) и форм (<span class="tag">&lt;form&gt;</span>). Они нужны <em>для отображения контекста</em> (пример: вкладка, окно или встроенный фрейм). Следующие ключевые слова имеют специальные значения:
+ <ul>
+  <li><strong><code>_self</code></strong>: загружает результат в текущем окне или вкладке. <em>Если атрибут не указан, является значением по умолчанию.</em></li>
+  <li><code>_<strong>blank</strong></code>: загружает результат в новом окне или бланке.</li>
+  <li><strong><code>_parent</code></strong>: загружает данные в родительском окне. Если значение <strong>_ parent </strong>не указано, используется значение <strong><code>_self</code></strong>.</li>
+  <li><strong><code>_top</code></strong>: загружает данные в контексте верхнего уровня (то есть, отображает полученный контекст без обратного перехода, если не имеет родительского значения). Если нет родительских данных используется как <strong><code>_self</code></strong>.</li>
+ </ul>
+ </dd>
+</dl>
+
+<div class="note"><strong>Примечание:</strong> <code>если указано несколько элементов &lt;base&gt;</code> , будут использованы только первые <strong>href</strong> и <strong>target</strong>; все последующие значения проигнорируются.</div>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: html notranslate">&lt;base href="http://www.example.com/page.html"&gt;
+&lt;base target="_blank" href="http://www.example.com/page.html"&gt;
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Нет изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Указано для <code>target</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Добавлен <code>target</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Браузер</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.0")}} [1]</td>
+   <td>{{CompatVersionUnknown}} [2]</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Браузер</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддердка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("1.0")}} [1]</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Поддержка относительных адресов (URIs <code>href)</code> была добавлена в Gecko 2.0 (Firefox 4.0)</p>
+
+<p>[2] До Internet Explorer 7, <code>нахождение </code><strong><code>&lt;base&gt; </code></strong><code>могло быть</code> в любом месте документа. Поддержка относительных адресов (URLs) была удалена в Internet Explorer 8.</p>

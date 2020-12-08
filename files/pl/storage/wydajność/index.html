@@ -1,0 +1,111 @@
+---
+title: Wydajność
+slug: Storage/Wydajność
+tags:
+  - Strony_wymagające_dopracowania
+  - Toolkit API
+  - Wszystkie_kategorie
+translation_of: Mozilla/Tech/XPCOM/Storage/Performance
+---
+<p><a href="/pl/Storage" title="pl/Storage">mozStorage</a> wykorzystuje {{ interwiki('wikipedia', 'SQLite', 'SQLite') }} jako backend dla bazy danych. Zwykle posiada dobrą wydajność dla niewielkiej, osadzonej bazy danych. Jednakże, wiele rzeczy może spowodować, iż różne operacje na bazie danych będą trwały długo.</p>
+
+<h3 id="Transakcje" name="Transakcje">Transakcje</h3>
+
+<p>Istnieje narzut związany z każdą transakcją. Kiedy uruchamiasz w izolacji wyrażenie SQL, tworzona jest ukryta transakcja dookoła tego wyrażenia. Kiedy transakcje są wykonywane, sqlite wykonuje księgowanie (journaling) które wymaga synchronizacji danych na dysk. Operacja ta jest bardzo powolna. W związku z tym, kiedy zamierzasz tworzyć kilka transakcji pod rząd, uzyskasz znaczny wzrost wydajności jeśli umieścisz je w pojedynczej transakcji.</p>
+
+<p>Jeśli nie korzystasz z zaawansowanej pamięci podręcznej opisanej poniżej, pamięć podręczna bazy danych jest czyszczona na końcu każdej transakcji. Jest to kolejny powód dla którego powinno się stosować transakcje, nawet jeśli uruchamia się operacje odczytu.</p>
+
+<p>Zapisy asynchroniczne, opisane poniżej, usuwają większość narzutu związanego z popełnieniem zmian, więc nie odczujesz tak bardzo tego problemu. Jednakże, pewien narzut wciąż istnieje, a stosowanie transakcji będzie nadal szybsze. Jednym z głównych problemów jest to, że lista operacji na plikach stanie się bardzo długa w przypadku stosowania wielu transakcji. Niektóre operacje wymagają przechodzenia przez tą kolejkę, aby stwierdzić, jakie operacje są wciąż w oczekiwaniu, przez co staną się powolne. Jeśli użytkownik wyłączy przeglądarkę zaraz po rozpoczęciu takiej operacji, może to spowodować opóźnienie wyłączania (być może nawet na kilkadziesiąt sekund dla dużych transakcji i powolnych dysków), przez co może to wyglądać dla użytkownika, jakby przeglądarka była zawieszona.</p>
+
+<h3 id="Kwerendy" name="Kwerendy">Kwerendy</h3>
+
+<p>Ostrożna zmiana kolejności poleceń w wyrażeniu sql, lub tworzenie poprawnych indeksów, może zwykle poprawić wydajność. Zobacz <a class="external" href="http://www.sqlite.org/optoverview.html">sqlite optimizer overview</a> na stronie sieci Web sqlite, aby zobaczyć informacje o tym, jak sqlite używa indeksów do uruchamiania wyrażeń.</p>
+
+<p>Możesz również sprobować wykorzystać polecenie "explain" w Twoich wyrażeniach, aby zobaczyć czy używają one indeksów, których oczekujesz. Napisz "explain" przed wyrażeniem, aby zobaczyć plan. Dla przykładu, <code>explain select * from moz_history;</code>. Wyniki mogą być trudne do zrozumienia, lecz powinieneś zobaczyć czy używają one indeksów. Polecenie które da Ci wyższy poziom wytłumaczenia to "explain query plan". Na przykład:</p>
+
+<pre>sqlite&gt; explain query plan select * from moz_historyvisit v join moz_history h
+        on v.page_id = h.id where v.visit_date &gt; 1000000000;
+
+0|0|TABLE moz_historyvisit AS v WITH INDEX moz_historyvisit_dateindex
+1|1|TABLE moz_history AS h USING PRIMARY KEY</pre>
+
+<p>Mówi to, że najpierw rozpocznie się szukanie w moz_historyvisit używając indeksu, a dopiero potem stosując klucza głównego. Obydwa sposoby są "dobre" ponieważ stosują one indeksy i klucze główne, co jest szybkie.</p>
+
+<pre>sqlite&gt; explain query plan select * from moz_historyvisit where session = 12;
+
+0|0|TABLE moz_historyvisit</pre>
+
+<p>W tym przypadku, możesz zobaczyć, że indeksy <em>nie</em> są wykorzystywane, więc ta kwerenda będzie powolna.</p>
+
+<p>Możesz pobrać narzędzie linii poleceń z <a class="external" href="http://www.sqlite.org/download.html">sqlite download page</a>. Upewnij się, że posiadasz wersję co najmniej tak nową, jaką używa Mozilla. Od 10 kwietnia 2006 Mozilla używa sqlite 3.3.4, jednakże najnowsza prekompilowana wersja narzędzia może nie być dostępna dla niektórych platform. Może to spowodować błędy typu "database is encrypted" ("baza danych jest zaszyfrowana"), ponieważ narzędzie nie będzie potrafiło rozpoznać formatu pliku. Możesz sprawdzić definicję SQLITE_VERSION w {{ Source("db/sqlite3/src/sqlite3.h") }} danej wersji, jeśli napotkasz problemy.</p>
+
+<h3 id="Caching" name="Caching">Caching</h3>
+
+<p>Sqlite utrzymuje strony bazy danych w pamięci podręcznej. Przechowuje strony związane z aktualna transakcją, tak, by móc je przywrócić, oraz te ostatnio użyte, aby szybciej pracować.</p>
+
+<p>Domyślnie, sqlite przechowuje strony w pamięci tylko podczas transakcji (jeśli nie otworzysz transakcji samodzielnie, zostanie taka stworzona dookoła każdego pojedynczego wyrażenia). Pod koniec transakcji, pamięć podręczna jest czyszczona. Jeśli od razu rozpoczniesz kolejna transakcję, strony które potrzebujesz zostaną ponownie odczytane z dysku (lub, miejmy nadzieję, pamięci podręcznej systemu operacyjnego). Powoduje to, iż nawet proste operacje blokują się na czytaniu z dysku, które mogą prowadzić do problemów na niektórych systemach ze słabym zarządzaniem pamięcią podręczną dysku lub dyskach sieciowych.</p>
+
+<p>Możesz kontrolować wielkość pamięci podręcznej poprzez zastosowanie <a class="external" href="http://www.sqlite.org/pragma.html"><em>pragmy</em></a> <code>cache_size</code>. Wartość ta kontroluje ilość stron pliku jaka może być przechowywana na raz w pamięci. Wielkość pojedynczej strony może być ustawiona za pomocą <em>pragmy</em> <code>page_size</code> zanim jakiekolwiek operacje na pliku zostały wykonane. Możesz zobaczyć przykład ustawiania maksymalnej wielkości pamięci podręcznej na pewien procent pamięci w nsNavHistory::InitDB in {{ Source("browser/components/places/src/nsNavHistory.cpp") }}.</p>
+
+<h4 id="Zachowywanie_pami.C4.99ci_podr.C4.99cznej_pomi.C4.99dzy_transakcjami" name="Zachowywanie_pami.C4.99ci_podr.C4.99cznej_pomi.C4.99dzy_transakcjami">Zachowywanie pamięci podręcznej pomiędzy transakcjami</h4>
+
+<p>mozStorage pozwala na <a class="external" href="http://www.sqlite.org/sharedcache.html">tryb shared-cache sqlite</a>, który pozwala wielu połączeniom do bazy danych używać tej samej pamięci podręcznej. Ponieważ pamięć podręczna nie jest <strong>threadsafe</strong>, znaczy to, iż nie możesz tworzyć połączeń z różnych wątków które będą korzystać z tej samej bazy danych. Jednakże, współdzielona pamięć podręczna pozwala nam zachować pamięć podręczną pomiędzy transakcjami, zamiast czyścić ją po każdej transakcji, tak, jak sqlite robi to domyślnie.</p>
+
+<p>W przypadku gdy Twoja aplikacja stosuje wiele małych transakcji, możesz uzyskać widoczny wzrost wydajności poprzez zachowywaniem pamięci podręcznej pomiędzy nimi. Możesz to zrobić tworząc dodatkowe połączenie-atrapę do tej samej bazy danych (jest to ważne by użyć tej samej nazwy pliku podczas otwierania tych połączeń tak jak w <code>strcmp</code>). Połączenie-atrapa otwiera permanentne połączenie które blokuje pamięć podręczną w pamięci. Jako ze pamięć podręczna jest dzielona z połączeniem głównym, nie wygasa ona nigdy.</p>
+
+<p>Transakcja-atrapa musi być tą, która blokuje stronę w pamięci. Proste wyrażenie <code>BEGIN TRANSACTION</code> nie zrobi tego ponieważ sqlite blokuje leniwie. Dlatego, musisz mieś mieć wyrażenie które modyfikuje dane. Może wydawać się kuszącym uruchomienie wyrażenia na <code>sqlite_master</code> które zawiera informacje na temat tabeli i indeksów w bazie danych. Jednakże, jeśli Twoja aplikacja inicjalizuje bazę po raz pierwszy, tabela będzie pusta i pamięć podręczna nie będzie blokowana. nsNavHistory::StartDummyStatement tworzy w tym celu tymczasową tabele z jednym elementem.</p>
+
+<p>Należy zauważyć, że jeśli wyrażenie jest otwarte, schemat bazy danych nie może zostać zmieniony. Oznacza to, że kiedy transakcja-atrapa jest uruchomiona, nie możesz tworzyć lub modyfikować tabeli ani indeksów, ani <em>odkurzać</em> (<em>vacuum</em>) bazy. Będziesz musiał zatrzymać transakcję-atrapę, wykonać operację modyfikującą schemat bazy i ponownie uruchomić atrapę.</p>
+
+<h4 id="Przygotowywanie_pami.C4.99ci_podr.C4.99cznej" name="Przygotowywanie_pami.C4.99ci_podr.C4.99cznej">Przygotowywanie pamięci podręcznej</h4>
+
+<p>Podczas uruchamiania, pamięć podręczna jest pusta i strony są wczytywane w razie potrzeby. Powoduje to wiele wywołań dysku, jako że strony czytane są w praktycznie dowolnym porządku. Wraz z domyślnym rozmiarem strony ustawionym na 1K, powoduje to wiele wywołań dysku co ostatecznie spowoduje, iż wiele operacji będzie powolne podczas uruchamiania.</p>
+
+<p>Mozilla dodała funkcję <code>Preload()</code> do <code>mozIStorageConnection</code> służącą do wczytywania danych w większych porcjach. Ponieważ dane czytane są z dysku w jednym kawałku, nie ma tyle wywołań dysku i wydajność może się poprawić, nawet jeśli znacznie więcej danych jest wczytywanych na raz do pamięci.</p>
+
+<p>Funkcja ta musi być wywołana po otwarciu pagera. Oznacza to, iż musisz zrobić co najmniej jedną operację odczytu lub zapisu, oraz mieć wciąż otwartą transakcję (może być to transakcja - atrapa opisana powyżej). Wczytuje to dane z dysku do momentu, gdy pamięć podręczną zostanie wypełniona do limitu, który skonfigurowałeś, lub gdy cały plik zostanie wczytany, w zależności od tego, która wielkość jest mniejsza.</p>
+
+<p>Wczytuje to dane rozpoczynając od początku pliku i czyta strony w kolejności. Jeśli Twoja baza danych jest znacznie większa od pamięci podręcznej, może to nie działać dobrze, jako ze żadna ze stron na końcu pliku jest wczytywana do pamięci. Jest to możliwe, aby dodać jakąś funkcjonalność, aby wczytywać strony poprzednio w pamięci podręcznej podczas ostatniego uruchomienia.</p>
+
+<h3 id="Zapisy_na_dysk" name="Zapisy_na_dysk">Zapisy na dysk</h3>
+
+<p>Sqlite wspiera podstawowe zasady teorii baz danych ACID:</p>
+
+<ul>
+ <li>Atomowość (<em><strong>a</strong>tomicity</em>): każda transakcja jest atomowa i nie może być wykonana "częściowo"</li>
+ <li>Spójność (<em><strong>c</strong>onsistency</em>): baza danych nie zostanie uszkodzona.</li>
+ <li>Izolacja (<em><strong>i</strong>solation</em>): transakcje wykonywane w tym samym czasie nie wpływają na siebie.</li>
+ <li>Trwałość (<em><strong>d</strong>urability</em>): kiedy zmiana została zastosowana, dane są zagwarantowane by były zastosowane.</li>
+</ul>
+
+<p>Problemem z tymi wymaganiami jest to, iż wymagania te powodują, że część operacji, przede wszystkim zapisy są bardzo powolne. Dla każdego zapisu, sqlite m.in. dwukrotnie synchronizuje dane na dysk, jak również wiele innych operacji (zobacz sekcję "Atomic Commit" na , aby uzyskać więcej informacji na temat ich działania). Te synchronizacje są bardzo powolne i ograniczają szybkość zapisu do prędkości rotacyjnej mechanicznego dysku.</p>
+
+<p>Dla historii przeglądarki, narzut ten jest nieakceptowalnie wysoki. Na wielu systemach, czas zapisu nowej strony do bazy danych historii był tak długi, jak pobranie całej strony (z niedalekiego, szybkiego serwera testowego) i renderowanie jest na ekranie. W związku z tym, Mozilla zaimplementowała system leniwej synchronizacji (<em>lazy sync</em>).</p>
+
+<h4 id="Leniwy_zapis" name="Leniwy_zapis">Leniwy zapis</h4>
+
+<p>Mozilla rozluźniła wymagania ACID, aby przyspieszyć zapisy. W szczególności, wyrzuciliśmy trwałość (durability). Oznacza to, że kiedy zapis zostanie zwrócony, nie ma gwarancji że on został zastosowany. Jednakże, wciąż wspieramy resztę (ACI) wymagań. Oznacza to, że baza danych nie zostanie uszkodzona. Jeśli wysiądzie prąd zaraz po zapisie, będzie tak, jakby transakcja została cofnięta: baza danych nadal będzie spójna.</p>
+
+<p>Zwiększona wydajność zapisów uzyskiwana jest poprzez stosowanie oddzielnego wątku do zapisywania danych (zobacz plik {{ Source("storage/src/mozStorageAsyncIO.cpp") }} który związany jest z serwisem storage w {{ Source("storage/src/mozStorageService.cpp") }}). Główny wątek bazy danych robi wszystko tak jak poprzednio. Jednakże, zmodyfikowaliśmy operacje na plikach i teraz wszystko przechodzi przez moduł AsyncIO. Plik ten jest oparty na <a class="external" href="http://www.sqlite.org/cvstrac/rlog?f=sqlite/src/test_async.c">test_async.c</a> z dystrybucji sqlite.</p>
+
+<p>Pakiety modułu AsyncIO tworzy wiadomości i ustawia je w kolejce wiadomości wątku zapisu. Wątek zapisu oczekuje na wiadomości i przetwarza je najszybciej jak może. Oznacza to, że zapisy, blokady i, co najważniejsze, synchronizacje na dysk, blokują tylko wątek AsyncIO. Odczyty robione są synchronicznie, biorąc pod uwagę niezapisane dane wciąż w buforze.</p>
+
+<h5 id="Shutdown" name="Shutdown">Shutdown</h5>
+
+<p>Jeśli robisz wiele zapisów, wątek AsyncIO "zostanie w tyle". Na szczęście, aplikacja da wątkowi wystarczająco czasu aby flush before exiting. If there are still items in the write queue on shutdown, the storage service will block until all data has been written. It then goes into single-threaded mode where all operations are synchronous. This enables other services to still use the database after the storage service has gotten the shutdown message.</p>
+
+<h5 id="Durable_transactions" name="Durable_transactions">Durable transactions</h5>
+
+<p>There is currently no way to ensure durability for particularly important transactions where speed is less of an issue. A flush command to guarantee data has been written to disk may be added in the future.</p>
+
+<h2 id="Vacuuming_and_zero-fill" name="Vacuuming_and_zero-fill">Vacuuming and zero-fill</h2>
+
+<p>WSqlite has a VACUUM command to compress unused space from the database. Sqlite works like a memory manager or a file system. When data is deleted, the associated bytes are marked as free but are not removed from the file. This means that the file will not shrink, and some data may still be visible in the file. The way to work around this is to run the VACUUM command to remove this space.</p>
+
+<p>Vacuuming is very slow. The vacuum command is essentially the same as the command line <code>sqlite3 olddb .dump | sqlite3 newdb; mv newdb olddb</code>. Na niektórych dyskach sieciowych, vacuuming 10MB bazy danych trwało ponad minutę. Therefore, you should avoid vacuuming whenever possible.</p>
+
+<p>Some items in databases are privacy sensitive, such as deleted history items. Users have the expectation that deleting items in their history will remove the traces of that from the database. As a result, Mozilla enables the <code>SQLITE_SECURE_DELETE</code> preprocessor flag in {{ Source("db/sqlite3/src/Makefile.in") }}. This flag causes deleted items to be filled with 0s on disk. This eliminates the need to vacuum except to reclaim disk space, and makes many operations much faster.</p>
+
+<p>Zero-filling can have significant performance overhead in some situations. For example, the history service used to delete many database items at shutdown when expiring old history items. This operation is not necessarily slow, but writing 0s to disk in an "ACI" database is still slow. This made shutdown very slow because the AsyncIO thread would block shutdown ({{ Bug(328598) }}). Shutdown times of more than 30 seconds were seen. As a result, this bug introduced incremental history expiration eliminating the need to write many 0s to disk on shutdown.</p>
+
+<p>Unfortunately, this operation cannot be controlled on a per-transaction or per-connection basis. Some operations will benefit, while others will be hurt.</p>

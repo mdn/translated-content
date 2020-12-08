@@ -1,0 +1,73 @@
+---
+title: Date.prototype.toLocaleFormat()
+slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Date.toLocaleFormat
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Нестандартный метод <strong><code>toLocaleFormat()</code></strong> преобразует дату в строку, используя указанное форматирование. Объект {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} является совместимой со стандартами альтернативой при форматировании дат. Так же смотрите новую версию метода {{jsxref("Date.prototype.toLocaleDateString()")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><var>dateObj</var>.toLocaleFormat(<var>formatString</var>)</code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+
+<dl>
+ <dt><code>formatString</code></dt>
+ <dd>Строка формата в той же форме, что ожидается функцией C <a class="external" href="http://www.opengroup.org/onlinepubs/007908799/xsh/strftime.html"><code>strftime()</code></a>.</dd>
+</dl>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p>Метод <code>toLocaleFormat()</code> обеспечивает больший контроль программного обеспечения над форматированием генерируемых даты и/или времени. Названия месяцев и дней недели локализуются с помощью локали операционной системы. Однако, порядок дней и месяцев и другие задачи локализации автоматически не обрабатываются, так как эти аспекты контролируете вы. Вы должны позаботиться о том, что строка формата была правильно локализована в соответствии с настройками системы пользователя. Знайте, что используемая локаль не обязательно совпадает с локалью браузера.</p>
+
+<p>Разработчики расширений и XULRunner должны знать, что загрузку строки формата их файлов <code>.dtd</code> или <code>.properties</code> через URI <code>chrome://<em>somedomain</em>/locale/<em>somefile.ext</em></code> нужно <strong>избегать</strong>, поскольку файлы <code>.dtd</code>/<code>.properties</code> и метод <code>toLocaleFormat()</code> не обязательно используют одну и ту же локаль, из-за чего результат может выглядеть странно, неоднозначно или даже нечитаемо.</p>
+
+<p>Также обратите внимание, что поведение локали зависит от платформы и пользователь может настроить эту локаль, так что использование системной локали для выбора строки формата в некоторых случаях может быть даже неадекватным. Вы можете рассмотреть возможность использования более общих методов <code>toLocale*</code> объекта {{jsxref("Global_Objects/Date", "Date")}}, либо написать свою собственную локализацию даты, используя для её отображения методы <code>get*</code> объекта {{jsxref("Global_Objects/Date", "Date")}}.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example_Using_toLocaleFormat" name="Example:_Using_toLocaleFormat">Пример: использование метода <code>toLocaleFormat()</code></h3>
+
+<pre class="brush: js">var today = new Date();
+var date = today.toLocaleFormat('%A, %B %e, %Y'); // плохой пример
+</pre>
+
+<p>В примере выше метод <code>toLocaleFormat()</code> возвращает строку вида "Wednesday, October 3, 2007". обратите внимание, что строка формата в данном примере не локализуется должным образом, что приводит к проблемам, описанным выше.</p>
+
+<h2 id="Specifications" name="Specifications">Библиотеки</h2>
+
+<p>Вы можете использовать библиотеку <a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a>, если {{jsxref("Date.prototype.toLocaleDateString","Date.prototype.toLocaleDateString()")}} недоступен:</p>
+
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span><span class="class-name token">Date</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>toLocaleFormat<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+        <span class="class-name token">Date</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span><span class="function function-variable token">toLocaleFormat</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">formatString</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">.</span><span class="function token">format</span><span class="punctuation token">(</span>formatString<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<p>Не является частью какой-либо спецификации. Реализована в JavaScript 1.6.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{Compat("javascript.builtins.Date.toLocaleFormat")}}</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+</ul>

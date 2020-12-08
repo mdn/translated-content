@@ -1,0 +1,33 @@
+---
+title: Кросс-платформенный модуль установщика (XPI)
+slug: Mozilla/XPI
+tags:
+  - Toolkit API
+  - XPInstall
+  - xpi
+  - Кросс-платформенный модуль установщика
+  - Модули XPI
+  - Установка пакетов
+translation_of: Mozilla/XPI
+---
+<p><strong>Кросс-платформенный модуль установщика (XPI)</strong> - это ZIP-файл, используемый для установки пакетов, с использованием технологии <a href="/en/XPInstall" title="en/XPInstall">XPInstall</a>. <span id="result_box" lang="ru"><span>Модули XPI</span></span> ( <span id="result_box" lang="ru"><span>так называемые</span></span> "<a href="/en/Bundles" title="en/Bundles">Bundles</a>") <span id="result_box" lang="ru"><span>используются для установки широкого спектра программного обеспечения</span></span> , включая <a href="/en/Plugins" title="en/Plugins">Plugins</a>, <a href="/en/Extensions" title="en/Extensions">Extensions</a>, <a href="/en/Themes" title="en/Themes">Themes</a>, и <a class="external" href="http://www.mozilla.com/thunderbird/dictionaries.html">Thunderbird dictionaries</a>.</p>
+
+<p><span id="result_box" lang="ru"><span>XPI содержит инструкции по установке</span></span> (install.js или <a href="/en/Install_Manifests" title="en/Install_Manifests">install.rdf</a>), <span id="result_box" lang="ru"><span>а также фактическое программное обеспечение для установки</span></span>, <span id="result_box" lang="ru"><span>которое часто само упаковано как файл JAR</span></span>. <span id="result_box" lang="ru"><span>При загрузке или добавлении в диспетчер расширений XPInstall автоматически взаимодействует с инструкциями по установке, содержащимися в XPI, и устанавливает содержащееся в нем программное обеспечение.</span></span></p>
+
+<p><span id="result_box" lang="ru"><span>Архивы XPI поддерживают только файлы, хранящиеся несжатыми или сжатыми с помощью метода "deflate".</span></span></p>
+
+<div class="note">
+<p><strong>Примечание:</strong> <span id="result_box" lang="ru"><span>Начиная с {{Gecko ("2.0")}}, XPI-файлы больше не распаковываются при установке расширений.</span> <span>Вместо этого сам XPI помещается в каталог расширений, и файлы загружаются непосредственно из пакета</span></span>. <span id="result_box" lang="ru"><span>Дополнительную информацию см. в разделе</span></span> <a href="/en/Extensions/Updating_extensions_for_Firefox_4" title="en/Extensions/Updating extensions for Firefox 4">Updating extensions for Firefox 4</a>.</p>
+</div>
+
+<p><span id="result_box" lang="ru"><span>Когда файлы XPI передаются через HTTP, тип MIME application / x-xpinstall должен соответствовать расширению файла xpi.</span></span></p>
+
+<h2 id="See_Also" name="See_Also"><span class="short_text" id="result_box" lang="ru"><span>Смотрите также</span></span></h2>
+
+<ul>
+ <li><a href="/en/Bundles" title="en/Bundles">Bundles</a></li>
+ <li><a href="/en/XPInstall" title="en/XPInstall">XPInstall</a></li>
+ <li><a href="/en/Creating_XPI_Installer_Modules" title="en/Creating_XPI_Installer_Modules">Creating XPI Installer Modules</a></li>
+</ul>
+
+<p>{{ languages( { "de": "de/XPI", "fr": "fr/XPI", "ja": "ja/XPI", "pl": "pl/XPI" } ) }}</p>

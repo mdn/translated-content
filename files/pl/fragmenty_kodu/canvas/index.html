@@ -1,0 +1,50 @@
+---
+title: Canvas
+slug: Fragmenty_kodu/Canvas
+tags:
+  - HTML
+  - 'HTML:Canvas'
+  - Wszystkie_kategorie
+translation_of: Archive/Add-ons/Code_snippets/Canvas
+---
+<p>
+</p><p>Ogólne informacje o używaniu <code>&lt;canvas&gt;</code> znajdują się w <a href="pl/Przewodnik_po_canvas">przewodniku</a>.
+</p>
+<h3 id="Zapisywanie_obrazu_canvas_do_pliku">Zapisywanie obrazu canvas do pliku</h3>
+<p>Poniższa funkcja akceptuje obiekt canvas i ścieżkę pliku docelowego. Canvas jest konwertowany do pliku PNG i jest zapisywany do określonej lokalizacji. Funkcja wyświetla okno procesu pobierania plików, lecz okno może być usunięte.
+</p>
+<pre>function saveCanvas(canvas, destFile) {
+  // konwertuje łańcuch znaków ścieżki pliku string do nsIFile
+  var file = Components.classes["@mozilla.org/file/local;1"]
+                       .createInstance(Components.interfaces.nsILocalFile);
+  file.initWithPath(destFile);
+
+  // stwórz adres url danych z canvas, a następnie stwórz URI źródła i celu
+  var io = Components.classes["@mozilla.org/network/io-service;1"]
+                     .getService(Components.interfaces.nsIIOService);
+  var source = io.newURI(canvas.toDataURL("image/png", ""), "UTF8", null);
+  var target = io.newFileURI(file)
+
+  // przygotuj do zapisu dane
+  var persist = Components.classes["@mozilla.org/embedding/browser/nsWebBrowserPersist;1"]
+                          .createInstance(Components.interfaces.nsIWebBrowserPersist);
+
+  persist.persistFlags = Components.interfaces.nsIWebBrowserPersist.PERSIST_FLAGS_REPLACE_EXISTING_FILES;
+  persist.persistFlags |= Components.interfaces.nsIWebBrowserPersist.PERSIST_FLAGS_AUTODETECT_APPLY_CONVERSION;
+
+  // wyświetl dialog pobierania pliku (usuń poniższe 3 linie, by go pominać)
+  var xfer = Components.classes["@mozilla.org/transfer;1"]
+                       .createInstance(Components.interfaces.nsITransfer);
+  xfer.init(source, target, "", null, null, null, persist);
+  persist.progressListener = xfer;
+
+  // zapisz dane canvas do pliku
+  persist.saveURI(source, null, null, null, null, file);
+}
+</pre>
+<p><br>
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Code_snippets/Canvas", "fr": "fr/Extraits_de_code/Canvas", "ja": "ja/Code_snippets/Canvas" } ) }}

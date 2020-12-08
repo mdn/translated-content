@@ -1,0 +1,135 @@
+---
+title: Traduzindo com o Pontoon
+slug: Mozilla/Localization/Localizing_with_Pontoon
+tags:
+  - Tradução
+translation_of: Mozilla/Localization/Localizing_with_Pontoon
+---
+<p>O <a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon</a> é uma ferramenta de tradução (l10n) baseado na web do tipo O-Que-Você-Ver-É-O-Que-Você-Tem (WYSIWYG), usada para traduzir conteúdo web. Na Mozilla, usamos o Pontoon para traduzir os sites da Mozilla e a interface de aplicativo do Firefox OS, conhecida como Gaia. O Pontoon é uma ferramenta muito simples e intuitiva que requer pouca ou nenhuma habilidade técnica para usar no trabalho de tradução. Aqui discutiremos como usar o Pontoon para traduzir projetos, do primeiro acesso até a finalização de suas contribuições. Ao longo do caminho, apontaremos alguns belos recursos que o tornarão mais eficiente e farão suas contribuições de tradução mais fáceis.</p>
+
+<div class="note">
+<p><strong>Você é um desenvolvedor?</strong> Leia sobre <a href="/en-US/docs/Implementing_Pontoon_Mozilla">implementando Pontoon no seu site</a> ou aprenda como se envolver no <a href="https://github.com/mozilla/pontoon">GitHub</a>.</p>
+</div>
+
+<h2 id="Primeiros_passos">Primeiros passos</h2>
+
+<p>A <a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">página inicial do Pontoon</a> é muito fácil de usar. Para começar a traduzir o projeto, clique no ícone Persona e entre. Em seguida, simplesmente selecione o projeto que você quer trabalhar e seu idioma nos menus suspensos. O Pontoon abrirá automaticamente esse idioma do projeto para você iniciar. Note que para nossos propósitos aqui, usaremos o site do<a href="https://affiliates.mozilla.org/"> Firefox Afiliados</a> para demonstrar a funcionalidade e fluxo de trabalho do Pontoon. E aí está, aberto dentro do Pontoon:</p>
+
+<p><em><img alt="Navegador do aplicativo e espaço de trabalho" src="https://mdn.mozillademos.org/files/8323/affiliates.png" style="height: 558px;"></em></p>
+
+<h3 id="Barra_de_ferramentas_principal">Barra de ferramentas principal</h3>
+
+<p>Como você pode ver, a maior parte da interface é composta pelo site que está sendo traduzido. Somente a barra de ferramentas no topo pertence ao Pontoon, contendo os seguintes itens (da esquerda para a direita):</p>
+
+<p><img alt="Barra de ferramentas principal" src="https://mdn.mozillademos.org/files/8325/toolbar.png"></p>
+
+<h4 id="Lista_de_strings">Lista de strings</h4>
+
+<p>Abre uma barra lateral com uma lista da todas as strings para traduzir.</p>
+
+<h4 id="Seletor_de_projeto_(Affiliates)">Seletor de projeto (Affiliates)</h4>
+
+<p>Alterna entre os projetos para traduzir.</p>
+
+<h4 id="Seletor_de_recursos_(Homepage)">Seletor de recursos (Homepage)</h4>
+
+<p>Alterna entre os recursos do projeto para traduzir, como sub-páginas ou arquivos de tradução. Oculta se não há recursos disponíveis para o projeto.</p>
+
+<dl>
+</dl>
+
+<h4 id="Seletor_de_idioma_(Slovenian)">Seletor de idioma (Slovenian)</h4>
+
+<p>Alterna entre os idiomas para traduzir.</p>
+
+<h4 id="Go">Go</h4>
+
+<p>Abre a seleção de projeto-recurso-idioma.</p>
+
+<h4 id="Indicador_de_progresso">Indicador de progresso</h4>
+
+<p>Exibe seu progresso no recurso sendo traduzido. Mais detalhes estão disponíveis na janela de contexto.</p>
+
+<dl>
+</dl>
+
+<h4 id="Menu_do_usuário">Menu do usuário</h4>
+
+<p>Permite tarefas específicas do usuário, como enviar para o repositório, baixar arquivos e sair.</p>
+
+<h4 id="Menu_de_informações">Menu de informações</h4>
+
+<p>Cede informações importantes, como a linha do tempo antecipada do projeto e uma lista de atalhos do teclado.</p>
+
+<dl>
+</dl>
+
+<p>Tudo bem, que tal traduzirmos algo agora?<span id="cke_bm_608E" style="display: none;"> </span></p>
+
+<dl>
+</dl>
+
+<h2 id="Traduzir_strings">Traduzir strings</h2>
+
+<p>Quando usando o Pontoon para tradução, você tem algumas opções para traduzir suas strings. Você pode traduzir em contexto, fora do contexto, ou uma combinação dos dois. Começaremos olhando na tradução em contexto.</p>
+
+<h3 id="Em_contexto">Em contexto</h3>
+
+<p>O modo de tradução em contexto do Pontoon é o que se coloca acima dos outros. Ele abre uma nova página (ou aplicativo) e ativa a edição em tempo real daquela página. Aqui está como você traduz sua primeira string:</p>
+
+<p><img alt="Tradução em contexto" src="https://mdn.mozillademos.org/files/8331/in-context.png"></p>
+
+<ol>
+ <li>Passe com o seu mouse sobre o texto que você quer.</li>
+ <li>Um botão de edição aparece sobre aquele texto. Clique nele para ativar o modo de tradução.</li>
+ <li>Substitua o texto original com sua tradução dentro do seu idioma.</li>
+ <li>Clique no botão de salvar para guardar sua tradução.</li>
+</ol>
+
+<div>
+<h3 id="Fora_de_contexto">Fora de contexto</h3>
+
+<p>Algumas strings são impossíveis de traduzir em contexto, por exemplo, os conteúdos da etiqueta &lt;title&gt; nos sites e strings com regionalismos ou formas plurais diferentes. Clicando no ícone de hambúrguer na barra de ferramentas principal, uma lista de todas as strings e traduções disponíveis abrirá na barra lateral. Você também pode usar a barra lateral para tradução fora de contexto:</p>
+</div>
+
+<p><img alt="Tradução fora de contexto: list" src="https://mdn.mozillademos.org/files/8337/out-of-context-1.png"> <img alt="Tradução fora de contexto: traduzir" src="https://mdn.mozillademos.org/files/8335/out-of-context-2.png"></p>
+
+<ol>
+ <li>Clique na string que gostaria de traduzir.</li>
+ <li>O painel de tradução com a string original e seus detalhes (por exemplo, comentários) será aberto.</li>
+ <li>Traduza a string na área de tradução abaixo.</li>
+ <li>Clique no botão de salvar para guardar sua tradução.</li>
+</ol>
+
+<p>Conforme você traduz strings fora de contexto, as traduções também aparecerão no site, se elas também puderem ser traduzidas em contexto.</p>
+
+<h3 id="Ajudantes_de_tradução">Ajudantes de tradução</h3>
+
+<p>Como você pode ver, sugestões do histórico, traduções memorizadas, máquina de tradução e outros idiomas também estão disponíveis no painel de tradução fora de contexto. Chamamos tudo isso de ajudantes de tradução e aqui está como cada um deles lhe ajudarão conforme você traduz strings:</p>
+
+<p><img alt="Ajudantes de tradução: Histórico" src="https://mdn.mozillademos.org/files/8339/helpers-history.png"> <img alt="Ajudantes de tradução: Maquinário" src="https://mdn.mozillademos.org/files/8341/helpers-machinery.png"> <img alt="Ajudantes de tradução: Outros idiomas" src="https://mdn.mozillademos.org/files/8343/helpers-locales.png"> <img alt="Ajudantes de tradução: Pesquisar" src="https://mdn.mozillademos.org/files/8345/helpers-menu.png"></p>
+
+<h4 id="Histórico">Histórico</h4>
+
+<p>Exibe traduções sugeridas anteriormente, incluindo de outros usuários.</p>
+
+<h4 id="Maquinário">Maquinário</h4>
+
+<p>Exibe combinações de vários serviços: memória de tradução interna, <a href="http://transvision.mozfr.org/">Mozilla Transvision</a>, <a href="https://amagama-live.translatehouse.org/">open source translation memory</a>, <a href="https://www.microsoft.com/Language/pt-BR/Default.aspx">Portal de idiomas da Microsoft</a> e a <a href="http://www.bing.com/translator">máquina de tradução</a>.</p>
+
+<h4 id="Outros_idiomas">Outros idiomas</h4>
+
+<p>Exibe traduções compatíveis de outros idiomas.</p>
+
+<h4 id="Pesquisar">Pesquisar</h4>
+
+<p>Quase igual ao maquinário, mas Almost like machinery, mas pega a palavra-chave fornecida como parâmetro de entrada em vez da string original.</p>
+
+<p>Clicando em uma sugestão, ela é copiada para dentro da área de tradução.</p>
+
+<dl>
+</dl>
+
+<h2 id="Publicando_sua_tradução">Publicando sua tradução</h2>
+
+<p>Suponhamos que agora você quer publicar seu trabalho de tradução para enviar a um repositório. O Pontoon lhe permite fazer isso também! Na verdade, ele faz isso para você sincronizando automaticamente com os repositórios em bases horárias. Você pode agora dar tapinhas nas suas costas, fazer uma dancinha, ir dormir ou outra coisa para comemorar seu trabalho!</p>

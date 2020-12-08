@@ -1,0 +1,110 @@
+---
+title: XMLHttpRequest.setRequestHeader()
+slug: Web/API/XMLHttpRequest/setRequestHeader
+translation_of: Web/API/XMLHttpRequest/setRequestHeader
+---
+<p>{{APIRef('XMLHttpRequest')}}</p>
+
+<p>Метод <strong>XMLHttpRequest.setRequestHeader()</strong> устанавливает значения HTTP заголовков. Метод <code>setRequestHeader()</code>  следует вызывать только после  <code>open()</code>, но до <code>send()</code>. Если метод вызывается несколько раз подряд, значения присоединяется к одному и тому же заголовку.</p>
+
+<p>Если заголовок {{HTTPHeader("Accept")}} не был установлен, то он будет передан в запросе со значением <code>*/*</code> когда будет вызван метод {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+
+<p>В целях безопасности, некоторые заголовки не могут быть установлены программно. Для более подробной информации, смотрите {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  и {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+
+<div class="note">
+<p>Для ваших собственных полей, вы можете увидеть исключение "<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>", когда вы делаете кросс-доменный запрос. В этом случае, вам нужно установить заголовок "Access-Control-Allow-Headers" в ответе на стороне сервера.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">XMLHttpRequest.setRequestHeader(<var>header</var>, <var>value</var>)
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>header</code></dt>
+ <dd>Имя устанавливаемого заголовка</dd>
+ <dt><code>value</code></dt>
+ <dd>Значение, которое будет установлено как тело заголовка</dd>
+</dl>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-setRequestHeader()-method', 'setRequestHeader()')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(1)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatIe('5')}}<sup>[1]</sup><br>
+    {{CompatIe('7')}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatSafari('1.2')}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>1.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Эта особенность была реализована через ActiveXObject(). Internet Explorer реализует стандарт XMLHttpRequest начиная с версии 7.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<p><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></p>

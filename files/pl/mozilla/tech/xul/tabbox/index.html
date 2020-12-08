@@ -1,0 +1,168 @@
+---
+title: tabbox
+slug: Mozilla/Tech/XUL/tabbox
+tags:
+  - Dokumentacja_XUL
+  - Elementy_XUL
+translation_of: Archive/Mozilla/XUL/tabbox
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/pl/docs/Dokumentacja_XUL">Dokumentacja XUL</a>    [
+ <a href="#Przyk.C5.82ady">Przykłady</a> |
+ <a href="#Atrybuty">Atrybuty</a> |
+ <a href="#W.C5.82asno.C5.9Bci">Własności</a> |
+ <a href="#Metody">Metody</a> |
+ <a href="#Podobne">Podobne</a> ]
+</span></div> <p>Kontener stosuje się do wyświetlania elementów strony w karcie. Na <code>tabbox</code> powinny się składać dwa jego elementy potomne, pierwszy element <code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code>, który stanowi <code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> i drugi element <code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code>, który stanowi zawartość stron. Jest to typ pudełka, które domyślnie posiada orientację poziomą. </p><p>Dodatkowe informacje są dostępne w <a href="pl/Kurs_XUL/Pude%c5%82ko_kart">kursie XUL</a>.
+</p>
+<dl><dt> Atrybuty
+</dt><dd> <a href="#a-eventnode">eventnode</a>, <a href="#a-handleCtrlPageUpDown">handleCtrlPageUpDown</a>, <a href="#a-handleCtrlTab">handleCtrlTab</a>
+</dd></dl>
+<dl><dt> Własności
+</dt><dd> <a href="#p-accessible">accessible</a>, <a href="#p-eventNode">eventNode</a>, <a href="#p-handleCtrlPageUpDown">handleCtrlPageUpDown</a>, <a href="#p-handleCtrlTab">handleCtrlTab</a>, <a href="#p-selectedIndex">selectedIndex</a>, <a href="#p-selectedPanel">selectedPanel</a>, <a href="#p-selectedTab">selectedTab</a>
+</dd></dl>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<pre>&lt;tabbox id="myTabList" selectedIndex="2"&gt;
+  &lt;tabs&gt;
+    &lt;tab label="A First tab"/&gt;
+    &lt;tab label="Second tab"/&gt;
+    &lt;tab label="Another tab"/&gt;
+    &lt;tab label="Last tab"/&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel&gt;&lt;!-- tabpanel First elements go here --&gt;&lt;/tabpanel&gt;
+    &lt;tabpanel&gt;&lt;!-- tabpanel Second elements go here --&gt;&lt;/tabpanel&gt;
+    &lt;tabpanel&gt;&lt;button label="Click me"/&gt;&lt;/tabpanel&gt;
+    &lt;tabpanel&gt;&lt;!-- tabpanel Fourth elements go here --&gt;&lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<p><img alt="grafika:XUL_REF_tabboxes.gif">
+</p>
+<h3 id="Atrybuty" name="Atrybuty"> Atrybuty </h3>
+<p>
+</p><div id="a-eventnode">
+
+<dl><dt> <code id="a-eventnode"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/eventnode">eventnode</a></code>
+</dt><dd> Typ: <i>jedna z wartości poniżej</i>
+</dd><dd> Sygnalizuje gdzie zdarzenia nawigacji klawiaturą są nasłuchiwane. Jeśli ten atrybut jest nieokreślony, zdarzenia są nasłuchiwane z <code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>. Tak więc, jeśli ten atrybut nie jest stosowany, <code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> lub element wewnątrz niego musi posiadać aktywną nawigację klawiatury do zastosowania.
+</dd></dl>
+<ul><li> <code>parent</code>: Nawigacja klawiatury jest opanowana w rodzicu <code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>.
+</li><li> <code>window</code>: Nawigacja klawiatury jest opanowana na poziomie okna. Nawigacja kartą przydarzyć się może pod warunkiem, jeśli jakikolwiek element w oknie jest aktywny. </li><li> <code>document</code>: Nawigacja klawiatury jest opanowana na poziomie dokumentu. Nawigacja kartą przydarzyć się może pod warunkiem, jeśli jakikolwiek element w dokumencie jest aktywny.
+</li></ul>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-handleCtrlPageUpDown">
+
+<dl><dt> <code id="a-handleCtrlPageUpDown"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/handleCtrlPageUpDown">handleCtrlPageUpDown</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli jest ustawione na <code>true</code> lub opuszczone, to klawisze &lt;tt&gt;Control&lt;/tt&gt; i &lt;tt&gt;Page Up&lt;/tt&gt; lub &lt;tt&gt;Page Down&lt;/tt&gt; mogą służyć do przełączania do następnej lub wcześniejszej karty. Jeśli ten atrybut jest ustawiony na <code>false</code>, te klawisze nie będą służyły do nawigacji pomiędzy kartami.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-handleCtrlTab">
+
+<dl><dt> <code id="a-handleCtrlTab"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/handleCtrlTab">handleCtrlTab</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli ustawiony na <code>true</code> lub zostanie opuszczony, <code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> będzie przełączany do następnej karty gdy naciśniemy klawisze &lt;tt&gt;Control&lt;/tt&gt; i &lt;tt&gt;Tab&lt;/tt&gt;. Jeśli klawisz &lt;tt&gt;Shift&lt;/tt&gt; jest przytrzymany wciśnięty to zostanie wyświetlona wcześniejsza karta. Jeśli ten atrybut jest ustawiony na <code>false</code>, to te klawisze nie będą przenosiły pomiędzy kartami.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<p></p>
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci"> Własności </h3>
+<p>
+</p><div id="p-accessible">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/accessible">accessible</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   <a href="pl/NsIAccessible">nsIAccessible</a></i>
+ </dd>
+ <dd>
+  Zwraca obiekt dostępności dla elementu.</dd>
+</dl></div>
+<div id="p-eventNode"></div>
+<div id="p-handleCtrlPageUpDown">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/handleCtrlPageUpDown">handleCtrlPageUpDown</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-handleCtrlPageUpDown"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/handleCtrlPageUpDown">handleCtrlPageUpDown</a></code>.</dd>
+</dl></div>
+<div id="p-handleCtrlTab">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/handleCtrlTab">handleCtrlTab</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-handleCtrlTab"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/handleCtrlTab">handleCtrlTab</a></code>.</dd>
+</dl></div>
+<div id="p-selectedIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectedIndex">selectedIndex</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Zwraca indeks aktualnie zaznaczonej pozycji. Można zaznaczyć pozycję przypisując jej numer indeksu do własności. Przydzielając <code>-1</code> do tej własności, wszystkie pozycje zostaną odznaczone.</dd>
+</dl></div>
+<div id="p-selectedPanel">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectedPanel">selectedPanel</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   element</i>
+ </dd>
+ <dd>
+  Trzyma odniesienie do aktualnie zaznaczonego panelu bez elementu <code>&lt;tabbox&gt;</code>. Przydziela wartość do tej własności, aby zmodyfikować zaznaczony panel. Zaznaczone zdarzenie będzie przesłane, kiedy zaznaczony panel jest zmieniany.</dd>
+</dl></div>
+<div id="p-selectedTab">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectedTab">selectedTab</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   element tab</i>
+ </dd>
+ <dd>
+  Referencja do aktualnie zaznaczonej karty, która będzie zawsze jednym z elementów <code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> w elemencie <code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code>. Przydziela wartość do tej własności, aby modyfikować aktualnie zaznaczoną kartę.</dd>
+</dl></div>
+<p></p>
+<h3 id="Metody" name="Metody"> Metody </h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Dziedziczy z elementu XUL</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Dziedziczy z elementu DOM</strong><br> <small> <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table>
+<p></p>
+<h3 id="Podobne" name="Podobne"> Podobne </h3>
+<dl><dt>Elementy
+</dt><dd><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code>, <code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code>, <code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code>, <code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code>.
+</dd></dl>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

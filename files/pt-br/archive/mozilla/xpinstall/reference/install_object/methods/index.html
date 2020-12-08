@@ -1,0 +1,58 @@
+---
+title: Methods
+slug: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods
+---
+<p></p><div class="warning"><p>Parts of this page show the use of the <a class="new" href="https://developer.mozilla.org/pt-BR/docs/XPInstall_API_Reference" rel="nofollow">XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a class="new" href="https://developer.mozilla.org/pt-BR/docs/Extensions" rel="nofollow">Extension</a>, <a class="new" href="https://developer.mozilla.org/pt-BR/docs/Themes" rel="nofollow">Theme</a>, and <a class="new" href="https://developer.mozilla.org/pt-BR/docs/Plugins" rel="nofollow">plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a class="new" href="https://developer.mozilla.org/pt-BR/docs/Bundles" rel="nofollow">packaging scheme</a> with an <code><a class="new" href="https://developer.mozilla.org/pt-BR/docs/Install_Manifests" rel="nofollow">install.rdf</a></code> manifest. In particular plugin developers should see <a class="new" href="https://developer.mozilla.org/pt-BR/docs/Shipping_a_plugin_as_a_Toolkit_bundle" rel="nofollow">how to package a plugin as an extension</a>.</p></div><p></p>
+
+<h3 id="Methods" name="Methods">Methods</h3>
+
+<dl>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/addDirectory" title="en/XPInstall_API_Reference/Install_Object/Methods/addDirectory">addDirectory</a></dt>
+ <dd>Unpacks an entire subdirectory.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/addFile" title="en/XPInstall_API_Reference/Install_Object/Methods/addFile">addFile</a></dt>
+ <dd>Unpacks a single file.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/alert" title="en/XPInstall_API_Reference/Install_Object/Methods/alert">alert</a></dt>
+ <dd>Displays an Alert dialog box with a message and an OK button.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/cancelInstall" title="en/XPInstall_API_Reference/Install_Object/Methods/cancelInstall">cancelInstall</a></dt>
+ <dd>Aborts the installation of the software.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/confirm" title="en/XPInstall_API_Reference/Install_Object/Methods/confirm">confirm</a></dt>
+ <dd>Displays a Confirm dialog box with the specified message and OK and Cancel buttons. Also allows custom button labels and a checkbox.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/deleteRegisteredFile" title="en/XPInstall_API_Reference/Install_Object/Methods/deleteRegisteredFile">deleteRegisteredFile</a></dt>
+ <dd>Deletes the specified file and its entry in the Client Version Registry.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/execute" title="en/XPInstall_API_Reference/Install_Object/Methods/execute">execute</a></dt>
+ <dd>Extracts a file from the XPI file to a temporary location and schedules it for later execution.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/gestalt" title="en/XPInstall_API_Reference/Install_Object/Methods/gestalt">gestalt</a></dt>
+ <dd>Retrieves information about the operating environment. (Mac OS only)</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/getComponentFolder" title="en/XPInstall_API_Reference/Install_Object/Methods/getComponentFolder">getComponentFolder</a></dt>
+ <dd>Returns an object representing the directory in which a component is installed.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/getFolder" title="en/XPInstall_API_Reference/Install_Object/Methods/getFolder">getFolder</a></dt>
+ <dd>Returns an object representing a directory, for use with the <code>addFile</code> method.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/getLastError" title="en/XPInstall_API_Reference/Install_Object/Methods/getLastError">getLastError</a></dt>
+ <dd>Returns the most recent non-zero error code.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/getWinProfile" title="en/XPInstall_API_Reference/Install_Object/Methods/getWinProfile">getWinProfile</a></dt>
+ <dd>Constructs an object for working with a Windows .ini file.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/getWinRegistry" title="en/XPInstall_API_Reference/Install_Object/Methods/getWinRegistry">getWinRegistry</a></dt>
+ <dd>Constructs an object for working with the Windows Registry.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/initInstall" title="en/XPInstall_API_Reference/Install_Object/Methods/initInstall">initInstall</a></dt>
+ <dd>Initializes installation for the given software and version.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/loadResources" title="en/XPInstall_API_Reference/Install_Object/Methods/loadResources">loadResources</a></dt>
+ <dd>Returns an object whose properties are localized strings loaded from the specified property file.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/logComment" title="en/XPInstall_API_Reference/Install_Object/Methods/logComment">logComment</a></dt>
+ <dd>Add a comment line to the install log.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/patch" title="en/XPInstall_API_Reference/Install_Object/Methods/patch">patch</a></dt>
+ <dd>Applies a set of differences between two versions.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/performInstall" title="en/XPInstall_API_Reference/Install_Object/Methods/performInstall">performInstall</a></dt>
+ <dd>Finalizes the installation of the software.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/refreshPlugins" title="en/XPInstall_API_Reference/Install_Object/Methods/refreshPlugins">refreshPlugins</a></dt>
+ <dd>Refreshes the list of plug-ins registered for the browser.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/registerChrome" title="en/XPInstall_API_Reference/Install_Object/Methods/registerChrome">registerChrome</a></dt>
+ <dd>Registers chrome with the chrome registry.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/resetError" title="en/XPInstall_API_Reference/Install_Object/Methods/resetError">resetError</a></dt>
+ <dd>Resets a saved error code to zero.</dd>
+ <dt><a href="/en-US/docs/XPInstall_API_Reference/Install_Object/Methods/setPackageFolder" title="en/XPInstall_API_Reference/Install_Object/Methods/setPackageFolder">setPackageFolder</a></dt>
+ <dd>Sets the default package folder that is saved with the root node.</dd>
+</dl>

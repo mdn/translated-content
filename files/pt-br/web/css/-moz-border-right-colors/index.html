@@ -1,0 +1,85 @@
+---
+title: '-moz-border-right-colors'
+slug: Web/CSS/-moz-border-right-colors
+translation_of: Archive/Web/CSS/-moz-border-right-colors
+---
+<div>{{CSSRef}}{{Non-standard_Header}}{{Obsolete_Header(59)}}</div>
+
+<p>Em aplicações Mozilla como o Firefox, a propriedade CSS <strong><code>-moz-border-right-colors</code></strong> define uma lista de cores para a borda direita.</p>
+
+<pre class="brush:css no-line-numbers">/* Valor unico &lt;color&gt; */
+-moz-border-right-colors: #f0f0f0;
+
+/* Multiplos valores &lt;color&gt; */
+-moz-border-right-colors: #f0f0f0 #a0a0a0 #505050 #000000;
+
+/* Valores globais */
+-moz-border-right-colors: inherit;
+-moz-border-right-colors: initial;
+-moz-border-right-colors: unset;
+</pre>
+
+<p>Quando um elemento tem a borda mais larga que um único pixel CSS, cada linha do pixel usa a próxima cor especificada em sua propriedade, de fora para dentro. Isso elimina a necessidade de caixas aninhadas. Se a borda é mais larga que o número espeficado de cores, a parte restante da borda é a cor especificada mais próxima.</p>
+
+<p>{{cssinfo}}</p>
+
+<p>Não se aplica</p>
+
+<ol>
+ <li>se {{Cssxref("border-style")}} é <code>dashed</code> ou <code>dotted</code>.</li>
+ <li>a tabelas com <code>border-collapse: collapse</code>.</li>
+</ol>
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<h3 id="Valores">Valores</h3>
+
+<p>Aceita uma lista de valores de cores separados por espaços em branco.</p>
+
+<dl>
+ <dt>&lt;color&gt;</dt>
+ <dd>Especifica a cor de uma linha de pixel da borda direita. <code>transparent</code> é válido. Veja os valores de {{cssxref("&lt;color&gt;")}} para possíveis unidades.</dd>
+ <dt>none</dt>
+ <dd>Padrão, nenhuma cor é desenhada ou {{cssxref("border-color")}} é usada, se especificada.</dd>
+</dl>
+
+<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Exemplo">Exemplo</h2>
+
+<pre class="brush:html">&lt;div id="exemplo"&gt;Exemplo&lt;/div&gt;
+</pre>
+
+<pre class="brush:css">#exemplo {
+  padding: 20px;
+  background-color: gray;
+  border: 10px solid black;
+  -moz-border-top-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+  -moz-border-right-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-bottom-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-left-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Exemplo", 120, 90)}}</p>
+
+<h2 id="Especificações">Especificações</h2>
+
+<p>Essa propriedade não é parte de nenhuma especificação.</p>
+
+<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+
+<div class="hidden">A tabela de compatibilidade nesta página é gerada a partir de dados estruturados.Se você deseja contribuir com dados, por favor acesse <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> e envie-nos um pull request.</div>
+
+<p>{{Compat("css.properties.-moz-border-right-colors")}}</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li>{{cssxref("border-color")}}</li>
+ <li>{{Cssxref("-moz-border-top-colors")}}</li>
+ <li>{{Cssxref("-moz-border-bottom-colors")}}</li>
+ <li>{{Cssxref("-moz-border-left-colors")}}</li>
+</ul>

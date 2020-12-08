@@ -1,0 +1,65 @@
+---
+title: Generator function legada
+slug: Archive/Web/JavaScript/Generator_function_legada_statement
+tags:
+  - Iterator Legado
+  - JavaScript
+  - Legacy Iterator
+  - Reference
+  - Referencia
+translation_of: Archive/Web/JavaScript/Legacy_generator_function_statement
+---
+<div class="warning">A expressão de função generator legada é um recurso específico SpiderMonkey, e será removida em algum ponto. Para usos voltados para o futuro, considere usar a {{jsxref("Statements/function*", "function*")}}.</div>
+
+<div>{{jsSidebar("Statements")}}</div>
+
+<p>O <strong>declação de generator function legada</strong> declara uma generator function legada com os parâmetros específicos.</p>
+
+<p>Você também pode definir funções usando o construtor {{jsxref("Function")}} com <code>functionBody</code> e pelo menos uma expressão {{jsxref("Operators/yield", "yield")}}, e uma {{jsxref("Operators/Legacy_generator_function", "expressão generator function legada", "", 1)}}.</p>
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<pre class="syntaxbox">function <em>nome</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
+   [<em>declarações</em>]
+}
+</pre>
+
+<dl>
+ <dt><code>nome</code></dt>
+ <dd>O nome da função.</dd>
+</dl>
+
+<dl>
+ <dt><code>param</code></dt>
+ <dd>O nome de um argumento que vai ser passado para a função, uma função pode ter até 255 argumentos.</dd>
+</dl>
+
+<dl>
+ <dt><code>declarações</code></dt>
+ <dd>As declarações que compõem o corpo da função. Isso pode conter pelo menos uma expressão {{jsxref("Operators/yield", "yield")}}.</dd>
+</dl>
+
+<h2 id="Descrição">Descrição</h2>
+
+<p>Uma visão geral do uso está disponível na página <a href="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">Iterators e Generators</a>.</p>
+
+<h2 id="Compatibilidade_de_navegadores">Compatibilidade de navegadores</h2>
+
+<p>Supported nowhere.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li>{{jsxref("Generator")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Legacy_generator_function">A expressão de generator function legada</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol">O protocolo Iterator legado</a></li>
+ <li>{{jsxref("Operators/yield", "yield")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope">Funções e escopo de função</a></li>
+ <li>{{jsxref("Statements/function", "function")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Statements/function*", "function*")}}</li>
+ <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+ <li>{{jsxref("GeneratorFunction")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">O protocolo Iterator</a></li>
+</ul>

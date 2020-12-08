@@ -1,0 +1,149 @@
+---
+title: Własne widoki drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Własne_widoki_drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Custom_Tree_Views
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Zaznaczenie_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Szczegóły_widoku_drzewa">Następny  »</a></p>
+</div><p></p>
+
+<p>Widok drzewa przetrzymuje dane, które mają być wyświetlone w drzewie.</p>
+
+<h2 id="Tworzenie_w.C5.82asnych_widok.C3.B3w" name="Tworzenie_w.C5.82asnych_widok.C3.B3w">Tworzenie własnych widoków</h2>
+
+<p>Dotychczas używaliśmy wbudowanych wyglądów drzewa. W tej sekcji przyjrzymy się tworzeniu własnego wyglądu. Jest to konieczne w sytuacji, gdy ilość danych jest bardzo duża, lub są one kompleksowo zaaranżowane. Na przykład, wydajność była by niezbyt duża w sytuacji gdybyśmy mieli użyć treeitems kilka tysięcy razy. Możesz też tworzyć własny widok w sytuacji, gdy chcesz wykonać obliczenia na danych, które maja być wyświetlone. Ponieważ widok może magazynować i odzyskiwać dane w sposób najbardziej odpowiedni dla użytych danych, drzewo może być użyte nawet setki tysięcy razy.</p>
+
+<div class="note">Uwaga: The tree-related interfaces changed in <a href="/pl/Gecko" title="pl/Gecko">Gecko</a> 1.8. Zobacz <a href="/pl/Tree_Widget_Changes" title="pl/Tree_Widget_Changes">Tree Widget Changes</a>, aby uzyskać więcej informacji.</div>
+
+<p>Żeby implementować własny wygląd, będziesz musiał stworzyć obiekt wprowadzający interfejs <a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>. Możesz tworzyć te obiekty w <a href="/pl/JavaScript" title="pl/JavaScript">JavaScript</a>, ale będziesz potrzebować oddzielnego obiektu dla każdego drzewa. Naturalnie, ponieważ własny widok będzie używany, wbudowany widok nie będzie już używany, więc <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code>, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> będą bezużyteczne, ponieważ własny widok będzie otrzymywać dane z innego źródła. Tak więc <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> może zostać pusty. Przykład:</p>
+
+<pre>&lt;tree id="my-tree" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="namecol" label="Name" flex="1"/&gt;
+    &lt;treecol id="datecol" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+</pre>
+
+<p>By wyznaczyć dane do pokazania w drzewie, musi być stworzony obiekt widoku, który jest użyty dla każdej komórki, całkowita liczba wierszy plus inne opcjonalne informacje. Drzewo wywoła metody widoku w celu otrzymania informacji potrzebnych do wyświetlenia.</p>
+
+<p>Generalnie, chociaż widok drzewa ma około trzydziestu funkcji mogących zostać zaimplementowanymi, musimy je uruchomić tylko jednokrotnie, gdy drzewo ją wywołuje.</p>
+
+<dl>
+ <dt>rowCount</dt>
+ <dd>Własność powinna być ustawiona, do ustalenia dla całkowitej liczby wierszy w drzewie.</dd>
+</dl>
+
+<dl>
+ <dt>getCellText( row , column )</dt>
+ <dd>Metoda ta, zwraca tekst zawarty w podanej kolumnie i wierszu. Będzie używana do wyświetlania danych dla każdej komórki. Wiersze podaje się numerycznie, zaczynając od 0. Kolumny, to atrybut id przypisany kolumnom. W Mozilla 1.8 i późniejszych, zamiast tego będzie używany obiekt treeColumn.</dd>
+</dl>
+
+<dl>
+ <dt>setTree( tree )</dt>
+ <dd>Metoda ta, jest wywoływana jednokrotnie, w celu umieszczenia elementu drzewa w widoku.</dd>
+</dl>
+
+<p>Tutaj jest przykład definicji takiego obiektu, który może być wywołany, kiedy tylko chcesz:</p>
+
+<pre>//Moz 1.8
+var treeView = {
+    rowCount : 10000,
+    getCellText : function(row,column){
+      if (column.id == "namecol") return "Wiersz "+row;
+      else return "18 luty";
+    },
+    setTree: function(treebox){ this.treebox = treebox; },
+    isContainer: function(row){ return false; },
+    isSeparator: function(row){ return false; },
+    isSorted: function(){ return false; },
+    getLevel: function(row){ return 0; },
+    getImageSrc: function(row,col){ return null; },
+    getRowProperties: function(row,props){},
+    getCellProperties: function(row,col,props){},
+    getColumnProperties: function(colid,col,props){}
+};
+</pre>
+
+<p>Funkcje nieopisane powyżej nie pełnią żadnego zadania, lecz muszą być użyte, gdy drzewo będzie je wywoływać w celu zebrania dodatkowych informacji.</p>
+
+<p>Ten przykład może zostać użyty dla drzewa z 10000 wierszy. Zawartość komórek pierwszej kolumny będzie wypełniona tekstem <code>Row X</code>, gdzie X jest numerem wiersza. Zawartość komórek drugiej kolumny będzie ustawiona na ‘18 luty’. Warunek <code>if</code> funkcji <code>getCellText()</code> porównuje kolumnę z tekstem ‘namecol’. Tekst ‘namecol’ odpowiada <code>id</code> pierwszego <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> w powyższym przykładzie. Przykład jest oczywiście bardzo prosty, w rzeczywistości miał być bardziej skomplikowane dane w każdej komórce.</p>
+
+<p>Ostatnim krokiem będzie skojarzenie obiektu widoku z drzewem. Drzewo ma własność <code>view</code>, która może być przyporządkowana do obiektu widoku deklarowanego powyżej. Możemy wyznaczyć wartość tej własności, by w dowolnym czasie, ustawić lub zmienić widok.</p>
+
+<p><span class="comment">&lt;div class="note"&gt;Note: The tree-related interfaces changed in <a href="/pl/Gecko">Gecko</a> 1.8. See <a href="/pl/Tree_Widget_Changes">Tree Widget Changes</a> for details.&lt;/div&gt; To implement a custom view, you will need to create an object which implements the <a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a> interface. You can create these objects in <a href="/pl/JavaScript">'JavaScript</a>, but you will need a separate object for each tree. Naturally, since a custom tree view is being used, the content tree view will not be used, so the &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>&lt;/code&gt;, &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code>&lt;/code&gt;, and &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code>&lt;/code&gt; elements will have no purpose since the custom view will get its data from elsewhere. Thus, you can just leave the &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code>&lt;/code&gt; element empty. The following example shows this:</span></p>
+
+<pre>function setView()
+{
+    document.getElementById('my-tree').view = treeView;
+}
+</pre>
+
+<p>W celu uproszczenia przykładu, użyto wbudowanego skryptu. Normalnie byłby on umieszczony w zewnętrznym pliku.</p>
+
+<h3 id="Przyk.C5.82ad_drzewa_u.C5.BCytkownika" name="Przyk.C5.82ad_drzewa_u.C5.BCytkownika">Przykład drzewa użytkownika</h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeview_1.xul.txt">Źródła</a></p>
+
+<div class="float-right"><img alt="grafika:treeview1.png" class="internal" src="/@api/deki/files/2515/=Treeview1.png"></div>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window title="Przykład okna" id="tree-window"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   onload="setView();"&gt;
+
+&lt;script&gt;
+//Moz 1.8
+var treeView = {
+    rowCount : 10000,
+    getCellText : function(row,column){
+      if (column.id == "namecol") return "Row "+row;
+      else return "February 18";
+    },
+    setTree: function(treebox){ this.treebox = treebox; },
+    isContainer: function(row){ return false; },
+    isSeparator: function(row){ return false; },
+    isSorted: function(){ return false; },
+    getLevel: function(row){ return 0; },
+    getImageSrc: function(row,col){ return null; },
+    getRowProperties: function(row,props){},
+    getCellProperties: function(row,col,props){},
+    getColumnProperties: function(colid,col,props){}
+};
+
+function setView(){
+    document.getElementById('my-tree').view = treeView;
+}
+&lt;/script&gt;
+
+&lt;tree id="my-tree" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="namecol" label="Nazwa" flex="1"/&gt;
+    &lt;treecol id="datecol" label="Data" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Na obrazku widoczne są 2 kolumny każda z danymi, pobranymi z funkcji <code>getCellText()</code>. Funkcja <code>setView()</code> była wywołana w operatorze okna <code>onload()</code>, jednak mógłbyś ustawić widok jeżeli tak sobie zażyczysz. Widok możesz zmieniać w dowolnym momencie.</p>
+
+<p>Rzeczą, którą należy zapamiętać to, to że funkcja <code>getCellText()</code> jest wywoływana tylko kiedy jest potrzeba pokazania zawartości. Z pośród 10000 wierszy powyżej, <code>getCellText()</code> jest uruchamiana tylko dla aktualnie widocznych komórek. Na obrazku jest pokazanych tylko 7 wierszy, ostatni tylko częściowo, więc <code>getCellText</code> będzie wywołana tylko 14 razy, po razie dla każdego wiersza i kolumny. Dla innych wierszy jest uruchamiana w momencie przewijania przez użytkownika. Dzięki temu drzewo działa bardziej efektywnie.</p>
+
+<p>Zauważ to, że obiekt widoku jest dostępny też dla drzew używających wbudowanego wyglądu. Możesz używać tego by zdobyć etykiety i inne informacje nt. komórki.</p>
+
+<p><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">Interfejs nsITreeView</a> listuje wszystkie metody i własności, które możemy zastosować dla widoku drzewa.</p>
+
+<p>Następnie, zobaczymy więcej <a href="/pl/Kurs_XUL/Szczegóły_widoku_drzewa" title="pl/Kurs_XUL/Szczegóły_widoku_drzewa">szczegółów widoku drzewa</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Zaznaczenie_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Szczegóły_widoku_drzewa">Następny  »</a></p>
+</div><p></p>

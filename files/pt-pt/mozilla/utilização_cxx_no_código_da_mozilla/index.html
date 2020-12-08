@@ -1,0 +1,552 @@
+---
+title: Utilização de C++ no código da Mozilla
+slug: Mozilla/Utilização_CXX_no_código_da_Mozilla
+translation_of: Mozilla/Using_CXX_in_Mozilla_code
+---
+<h2 id="Caraterísticas_da_linguagem_C">Caraterísticas da linguagem C++</h2>
+
+<p>Mozilla code only uses a subset of C++. Runtime type information (RTTI) is disabled, as it tends to cause a very large increase in codesize. This means that <code>dynamic_cast</code>, <code>typeid()</code> and <code>&lt;typeinfo&gt;</code> cannot be used in Mozilla code. Also disabled are exceptions; do not use <code>try</code>/<code>catch</code> or throw any exceptions. Libraries that throw exceptions may be used if you are willing to have the throw instead be treated as an abort.</p>
+
+<p>As of Mozilla 25, C++11 mode is required to build Mozilla. As of Mozilla 37, MSVC 2013 Update 3 is required on Windows; as of Mozilla 38, gcc 4.7 is required on all platforms. As of Mozilla 48, gcc 4.8 is required on all platforms. This means that C++11 can be used where supported on all platforms. The list of acceptable features is given below:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"> </th>
+   <th scope="col">MSVC</th>
+   <th scope="col">GCC</th>
+   <th scope="col">Clang</th>
+   <th scope="col"> </th>
+  </tr>
+  <tr>
+   <td>Requisito mínimo atual</td>
+   <td>2013</td>
+   <td>4.8</td>
+   <td>3.4</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <th scope="col">Funcionalidade</th>
+   <th scope="col">MSVC</th>
+   <th scope="col">GCC</th>
+   <th scope="col">Clang</th>
+   <th scope="col">Pode ser utilizada no código</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>type_t &amp;&amp;</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.3</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim (consultar notas)</td>
+  </tr>
+  <tr>
+   <td>ref qualifiers on methods</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.8.1</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>member initializers</td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.7</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>variadic templates</td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.3</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>Initializer lists</td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>static_assert</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.3</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>auto</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>lambdas</td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.5</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>decltype</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.3</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>Foo&lt;Bar&lt;T&gt;&gt;</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.3</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>auto func() -&gt; int</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>Templated aliasing</td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.7</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: middle;"><code>nullptr</code></td>
+   <td style="vertical-align: middle; background-color: rgb(204, 255, 153);">2010</td>
+   <td style="vertical-align: middle; background-color: rgb(204, 255, 153);">4.6</td>
+   <td style="vertical-align: middle; background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Yes, but use <code>decltype(nullptr)</code> instead of <code>std::nullptr_t</code>.</td>
+  </tr>
+  <tr>
+   <td><code>enum foo : int16_t</code> {};</td>
+   <td style="background-color: rgb(204, 255, 153);">2008</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>enum class foo {}</code>;</td>
+   <td style="background-color: rgb(204, 255, 153);">2012</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>enum foo;</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2012</td>
+   <td style="background-color: rgb(204, 255, 153);">4.6</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>[[attributes]]</code></td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.8</td>
+   <td style="background-color: rgb(204, 255, 153);">3.3</td>
+   <td style="background-color: rgb(255, 204, 204);">Não (consultar notas)</td>
+  </tr>
+  <tr>
+   <td><code>constexpr</code></td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.6</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(255, 255, 153);">Use <code>MOZ_CONSTEXPR </code>from <a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/Attributes.h" title="http://dxr.mozilla.org/mozilla-central/source/mfbt/Attributes.h">mozilla/Attributes.h</a></td>
+  </tr>
+  <tr>
+   <td><code>alignof</code>/<code>alignas</code></td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.8</td>
+   <td style="background-color: rgb(255, 204, 204);">3.3</td>
+   <td style="background-color: rgb(255, 204, 204);">No (see notes) ; only clang 3.6 claims __has_feature(cxx_alignof)</td>
+  </tr>
+  <tr>
+   <td>Delegated constructors</td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.7</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>Inherited constructors</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.8</td>
+   <td style="background-color: rgb(204, 255, 153);">3.3</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td><code>explicit operator bool()</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.5</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: middle;"><code>char16_t/u"string"</code></td>
+   <td style="background-color: rgb(255, 204, 204); vertical-align: middle;">2015</td>
+   <td style="background-color: rgb(204, 255, 153); vertical-align: middle;">4.4</td>
+   <td style="background-color: rgb(204, 255, 153); vertical-align: middle;">3.0</td>
+   <td style="background-color: rgb(255, 255, 153);">Use <code>MOZ_UTF16("string")</code> instead of u"string".</td>
+  </tr>
+  <tr>
+   <td><code>R"(string)"</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.5</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>operator""()</code></td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.7</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td><code>=delete</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>=default</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.4</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>unrestricted unions</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.6</td>
+   <td style="background-color: rgb(204, 255, 153);">3.1</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td><code>for (auto x : vec)</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2012</td>
+   <td style="background-color: rgb(204, 255, 153);">4.6</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Yes (<a href="http://stackoverflow.com/questions/15176104/c11-range-based-loop-get-item-by-value-or-reference-to-const">be careful about the type of the iterator</a>)</td>
+  </tr>
+  <tr>
+   <td><code>override</code>/<code>final</code></td>
+   <td style="background-color: rgb(204, 255, 153);">2012</td>
+   <td style="background-color: rgb(204, 255, 153);">4.7</td>
+   <td style="background-color: rgb(204, 255, 153);">3.0</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>thread_local</code></td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(204, 255, 153);">4.8</td>
+   <td style="background-color: rgb(204, 255, 153);">3.3</td>
+   <td style="background-color: rgb(255, 204, 204);">Não (consultar notas)</td>
+  </tr>
+  <tr>
+   <td>function template default arguments</td>
+   <td style="background-color: rgb(204, 255, 153);">2013</td>
+   <td style="background-color: rgb(204, 255, 153);">4.3</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>local structs as template parameters</td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.5</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td>extended friend declarations</td>
+   <td style="background-color: rgb(204, 255, 153);">2010</td>
+   <td style="background-color: rgb(204, 255, 153);">4.7</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(204, 255, 153);">Sim</td>
+  </tr>
+  <tr>
+   <td><code>0b100</code> (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(255, 204, 204);">4.9</td>
+   <td style="background-color: rgb(204, 255, 153);">2.9</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Return type deduction (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(255, 204, 204);">4.9</td>
+   <td style="background-color: rgb(204, 255, 153);">3.4</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Generic lambdas (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(255, 204, 204);">4.9</td>
+   <td style="background-color: rgb(204, 255, 153);">3.4</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Initialized lambda captures (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(255, 204, 204);">4.9</td>
+   <td style="background-color: rgb(204, 255, 153);">3.4</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Digit separator (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">2015</td>
+   <td style="background-color: rgb(255, 204, 204);">4.9</td>
+   <td style="background-color: rgb(204, 255, 153);">3.4</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Variable templates (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">5.0</td>
+   <td style="background-color: rgb(204, 255, 153);">3.4</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Relaxed constexpr (C++14)</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">5.0</td>
+   <td style="background-color: rgb(204, 255, 153);">3.4</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Concepts (Concepts TS)</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">6.0</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>Inline variables (C++17)</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>constexpr_if (C++17)</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+  <tr>
+   <td>constexpr lambdas (C++17)</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">—</td>
+   <td style="background-color: rgb(255, 204, 204);">Não</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Notas">Notas</h3>
+
+<p>rvalue references: Implicit move method generation cannot be used.</p>
+
+<p>Attributes: Several common attributes are defined in <a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/Attributes.h">mozilla/Attributes.h</a> or nscore.h.</p>
+
+<p>Alignment: Some alignment utilities are defined in <a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/Alignment.h">mozilla/Alignment.h</a>.</p>
+
+<p>Thread locals: There is a thread-local variable helper in <a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/ThreadLocal.h">mozilla/ThreadLocal.h</a>. In addition, the native thread_local of MSVC2015 may break Windows XP support. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1204752#c7">bug 1204752</a>. The native thread_local of clang may break OSX 10.6, too, but support for OSX 10.6 has been retired.</p>
+
+<p>C++14: C++14 is not enabled on compilers that support it.</p>
+
+<h2 id="Blibliotecas_padrão_de_C_e_Mozilla">Blibliotecas padrão de C++ e Mozilla</h2>
+
+<p>The Mozilla codebase contains within it several subprojects which follow different rules for which libraries can and can't be used it. The rules listed here apply to normal platform code, and assume unrestricted usability of MFBT or XPCOM APIs.</p>
+
+<div class="warning">
+<p>The rest of this section is a draft for expository and exploratory purposes. Do not trust the information listed here.</p>
+</div>
+
+<p>What follows is a list of standard library components provided by Mozilla or the C++ standard. If an API is not listed here, then it is not permissible to use it in Mozilla code. Deprecated APIs are not listed here. In general, prefer Mozilla variants of data structures to standard C++ ones, even when permitted to use the latter, since Mozilla variants tend to have features not found in the standard library (e.g., memory size tracking) or have more controllable performance characteristics.</p>
+
+<h3 id="Estruturas_de_dados">Estruturas de dados</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Nome</th>
+   <th scope="col">Cabeçalho</th>
+   <th scope="col">STL equivalente</th>
+   <th scope="col">Notes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>nsAutoTArray</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsTArray.h">nsTArray.h</a></code></td>
+   <td> </td>
+   <td>Like <code>nsTArray</code>, but will store a small amount as stack storage</td>
+  </tr>
+  <tr>
+   <td><code>nsAutoTObserverArray</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsTObserverArray.h">nsTObserverArray.h</a></code></td>
+   <td> </td>
+   <td>Like <code>nsTObserverArray</code>, but will store a small amount as stack storage</td>
+  </tr>
+  <tr>
+   <td><code>mozilla::BloomFilter</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/BloomFilter.h">mozilla/BloomFilter.h</a></code></td>
+   <td> </td>
+   <td>Probabilistic set membership (see <a href="http://en.wikipedia.org/wiki/Bloom_filter#Counting_filters">Wikipedia</a>)</td>
+  </tr>
+  <tr>
+   <td><code>nsClassHashtable</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsClassHashtable.h">nsClassHashtable.h</a></code></td>
+   <td> </td>
+   <td>Adaptation of nsTHashtable, see <a href="/en-US/docs/XPCOM_hashtable_guide">XPCOM hashtable guide</a></td>
+  </tr>
+  <tr>
+   <td><code>nsCOMArray</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsCOMArray.h">nsCOMArray.h</a></code></td>
+   <td> </td>
+   <td>Like <code>nsTArray&lt;nsCOMPtr&lt;T&gt;&gt;</code></td>
+  </tr>
+  <tr>
+   <td><code>nsDataHashtable</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsDataHashtable.h">nsClassHashtable.h</a></code></td>
+   <td><code>std::unordered_map</code></td>
+   <td>Adaptation of <code>nsTHashtable</code>, see <a href="/en-US/docs/XPCOM_hashtable_guide">XPCOM hashtable guide</a></td>
+  </tr>
+  <tr>
+   <td><code>nsDeque</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsDeque.h">nsDeque.h</a></code></td>
+   <td><code>std::deque</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>mozilla::EnumSet</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/EnumSet.h">mozilla/EnumSet.h</a></code></td>
+   <td> </td>
+   <td>Like <code>std::set</code>, but for enum classes.</td>
+  </tr>
+  <tr>
+   <td><code>nsInterfaceHashtable</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsInterfaceHashtable.h">nsInterfaceHashtable.h</a></code></td>
+   <td><code>std::unordered_map</code></td>
+   <td>Adaptation of <code>nsTHashtable</code>, see <a href="/en-US/docs/XPCOM_hashtable_guide">XPCOM hashtable guide</a></td>
+  </tr>
+  <tr>
+   <td><code>nsJSThingHashtable</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsJSThingHashtable.h">nsJSThingHashtable.h</a></code></td>
+   <td> </td>
+   <td>Adaptation of <code>nsTHashtable</code>, see <a href="/en-US/docs/XPCOM_hashtable_guide">XPCOM hashtable guide</a></td>
+  </tr>
+  <tr>
+   <td><code>mozilla::LinkedList</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/LinkedList.h">mozilla/LinkedList.h</a></code></td>
+   <td><code>std::list</code></td>
+   <td>Doubly-linked list</td>
+  </tr>
+  <tr>
+   <td><code>nsRefPtrHashtable</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsRefPtrHashtable.h">nsRefPtrHashtable.h</a></code></td>
+   <td><code>std::unordered_map</code></td>
+   <td>Adaptation of <code>nsTHashtable</code>, see <a href="/en-US/docs/XPCOM_hashtable_guide">XPCOM hashtable guide</a></td>
+  </tr>
+  <tr>
+   <td><code>mozilla::SegmentedVector</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/SegmentedVector.h">mozilla/SegmentedVector.h</a></code></td>
+   <td><code>std::deque</code></td>
+   <td>Doubly-linked list of vector elements</td>
+  </tr>
+  <tr>
+   <td><code>mozilla::SplayTree</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/SplayTree.h">mozilla/SplayTree.h</a></code></td>
+   <td> </td>
+   <td>Quick access to recently-accessed elements (see <a href="http://en.wikipedia.org/wiki/Splay_tree">Wikipedia</a>)</td>
+  </tr>
+  <tr>
+   <td><code>nsTArray</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsTArray.h">nsTArray.h</a></code></td>
+   <td><code>std::vector</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>nsTHashtable</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsTHashtable.h">nsTHashtable.h</a></code></td>
+   <td><code>std::unordered_map</code></td>
+   <td>See <a href="/en-US/docs/XPCOM_hashtable_guide">XPCOM hashtable guide</a>, you probably want a subclass</td>
+  </tr>
+  <tr>
+   <td><code>nsTObserverArray</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsTObserverArray.h">nsTObserverArray.h</a></code></td>
+   <td> </td>
+   <td>Like <code>nsTArray</code>, but iteration is stable even through mutation</td>
+  </tr>
+  <tr>
+   <td><code>nsTPriorityQueue</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsTPriorityQueue.h">nsTPriorityQueue.h</a></code></td>
+   <td><code>std::priority_queue</code></td>
+   <td>Unlike the STL class, not a container adapter</td>
+  </tr>
+  <tr>
+   <td><code>mozilla::Vector</code></td>
+   <td><code><a href="http://dxr.mozilla.org/mozilla-central/source/mfbt/Vector.h">mozilla/Vector.h</a></code></td>
+   <td><code>std::vector</code></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Untranslated notes:</p>
+
+<p>ns*String - too complicated to explain</p>
+
+<p>Safety utilities:<br>
+ mozilla::Array mfbt/Array.h (safe array index)<br>
+ mozilla::AssertedCast mfbt/Casting.h (casts)<br>
+ mozilla::CheckedInt mfbt/CheckedInt.h (avoids overflow)<br>
+ nsCOMPtr xpcom/glue/nsCOMPtr.h (~= std::shared_ptr)<br>
+ mozilla::EnumeratedArray mfbt/EnumeratedArray.h (mozilla::Array, for enum types)<br>
+ mozilla::RangedPtr mfbt/RangedPtr.h (prevents out-of-bounds)<br>
+ mozilla::RefPtr mfbt/RefPtr.h (~= std::shared_ptr)<br>
+ nsRefPtr xpcom/base/nsRefPtr.h (~= std::shared_ptr)<br>
+ StaticRefPtr xpcom/base/StaticPtr.h (nsRefPtr w/o static constructor)<br>
+ mozilla::UniquePtr mfbt/UniquePtr.h (~= std::unique_ptr)<br>
+ mozilla::WeakPtr mfbt/WeakPtr.h (~= std::weak_ptr)<br>
+ nsWeakPtr xpcom/base/nsWeakPtr.h (~= std::weak_ptr)</p>
+
+<p>Algos:<br>
+ mozilla::BinarySearch mfbt/BinarySearch.h<br>
+ mozilla::BitwiseCast mfbt/Casting.h (strict aliasing-safe cast)<br>
+ mozilla/MathAlgorithms.h (rotate, ctlz, popcount, gcd, abs, lcm)<br>
+ mozilla::RollingMean mfbt/RollingMean.h ()</p>
+
+<p>Misc:<br>
+ mozilla::AlignedStorage mfbt/Alignment.h (replacement for std::aligned_storage)<br>
+ mozilla::Atomic mfbt/Atomic.h (replacement for std::atomic)<br>
+ mozilla::CondVar xpcom/glue/CondVar.h<br>
+ mozilla::Maybe mfbt/Maybe.h (std::optional)<br>
+ mozilla::MaybeOneOf mfbt/MaybeOneOf.h (~mozilla::Maybe&lt;union {T1, T2}&gt;)<br>
+ mozilla::Monitor xpcom/glue/Monitor.h<br>
+ mozilla::Mutex xpcom/glue/Mutex.h<br>
+ mozilla::Pair mfbt/Pair.h (~= std::tuple&lt;T1, T2&gt; -- minimal space!)<br>
+ mozilla::ReentrantMonitor xpcom/glue/ReentrantMonitor.h<br>
+ mozilla::StaticMutex xpcom/base/StaticMutex.h<br>
+ mozilla::TimeStamp xpcom/ds/TimeStamp.h (~= std::chrono::time_point)</p>
+
+<p>mozilla/ArrayUtils.h<br>
+ mozilla/Compression.h<br>
+ mozilla/Endian.h<br>
+ mozilla/FloatingPoint.h<br>
+ mozilla/HashFunctions.h (~= std::hash)<br>
+ mozilla/Move.h (std::move, std::swp, std::Forward)<br>
+ mozilla/PodOperations.h (C++ versions of memset, memcpy, etc.)<br>
+ mozilla/TypeTraits.h (replacement for &lt;type_traits&gt;)</p>
+
+<p>(TODO: make list of STL usability here)</p>

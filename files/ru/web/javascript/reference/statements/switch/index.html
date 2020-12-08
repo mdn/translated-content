@@ -1,0 +1,184 @@
+---
+title: switch
+slug: Web/JavaScript/Reference/Statements/switch
+tags:
+  - JavaScript
+  - Statement
+translation_of: Web/JavaScript/Reference/Statements/switch
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<h2 id="Сводка">Сводка</h2>
+
+<p><strong>Инструкция switch</strong> сравнивает выражение со случаями, перечисленными <font face="Courier New, Andale Mono, monospace">внутри неё</font>, а затем выполняет соответствующие инструкции.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox">switch (expression) {
+  case value1:
+    //Здесь выполняются инструкции, если результат выражения равен value1
+    [break;]
+  case value2:
+    //Инструкции, соответствующие value2
+    [break;]
+  ...
+  case valueN:
+    //Инструкции, соответствующие значению valueN
+    //statementsN
+    [break;]
+  default:
+    //Здесь находятся инструкции, которые выполняются при отсутствии соответствующего значения
+    //statements_def
+    [break;]
+}</pre>
+
+<dl>
+ <dt><code>expression</code></dt>
+ <dd>Выражение, значение которого сравнивается со всеми случаями.</dd>
+ <dt><code>case valueN</code></dt>
+ <dd>Случай, который проверяется на соответствие выражению (<code>expression</code>).</dd>
+ <dt><code>statementsN</code></dt>
+ <dd>Инструкции, которые выполняются, если <code>expression</code> соответствуют случаю.</dd>
+ <dt><code>statements_def</code></dt>
+ <dd>Инструкции, выполняемые если <code>expression</code> не соответствует ни одному случаю.</dd>
+</dl>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p>Если выражение соответствует какому-то случаю, то выполняются инструкции этого случая. Если несколько случаев соответствуют значению, только первый случай будет использован.</p>
+
+<p>Сначала программа пытается найти подходящий случай, значение которого равно значению искомого выражения (используется <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">строгое сравнение</a>, <code>===)</code> и затем выполняет инструкции, соответствующие случаю. Если подходящего случая нет, ищется случай по умолчанию (<code>default</code>), который не является обязательным. Если случая по умолчанию нет, выполнение продолжается на инструкции, следующей сразу после <code>switch</code>. По соглашению, случай <code>default</code> описывается последним, но это не является строгим правилом.</p>
+
+<p>Опциональная инструкция <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> выполняет выход из блока <code>switch</code>. Она может располагаться в каждом из случаев, но не является обязательной. Если её нет, то выполняется следующая инструкция из блока <code>switch</code>.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example_Using_switch" name="Example:_Using_switch">Пример: Использование <code>switch</code></h3>
+
+<p>В этом примере, если <code>expr</code> равно "Bananas", программа находит случай "Bananas" и выполняет соответствующие инструкции. При выполнении инструкции <code>break</code>, выполнение продолжится за пределами <code>switch</code>. Если бы <code>break</code> не было, то выполнились бы инструкции случая "Cherries".</p>
+
+<pre class="brush: js">switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
+    break;
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
+    break;
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    break;
+  default:
+    console.log("Sorry, we are out of " + expr + ".");
+}
+
+console.log("Is there anything else you'd like?");
+</pre>
+
+<h3 id="What_happens_if_I_forgot_a_break" name="What_happens_if_I_forgot_a_break">Пример: Что случится, если не использовать break?</h3>
+
+<p>Если вы не использовали инструкцию <code>break</code>, то будут выполнены инструкции следующего случая. И проверка на соответствие выражению не будет выполняться.</p>
+
+<pre class="brush: js">var foo = 0;
+switch (foo) {
+    case -1:
+        console.log('negative 1');
+        break;
+    case 0: // foo равно 0, случай соответствует выражению и эти инструкции будут выполнены
+        console.log(0)
+        // ПРИМЕЧАНИЕ: здесь могла находиться забытая инструкция break
+    case 1: // В случае 'case 0:' не было break, инструкции данного случая также будут выполнены
+        console.log(1);
+        break; // В конце расположен break, поэтому выполнение не перейдёт к случаю 'case 2:'
+    case 2:
+        console.log(2);
+        break;
+    default:
+        console.log('default');
+}</pre>
+
+<h3 id="Methods_for_Multi-criteria_Case" name="Methods_for_Multi-criteria_Case">Пример: Использование нескольких значений для одного случая</h3>
+
+<p>Если вы хотите использовать один набор инструкций для соответствия нескольким случаям, можно использовать два способа. Первый способ является рекомендуемым, а второй - скорее трюком. Оба способа вызовут предупреждение с текстом "yes", если значение <code>foo</code> равно 0, 1, 2 или 3.</p>
+
+<p>Исходники этих способов здесь:</p>
+
+<ol>
+ <li><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">Switch statement multiple cases in JavaScript (Stack Overflow)</a></li>
+ <li><a href="http://stackoverflow.com/questions/21808543/multple-cripteria-single-case-switch-statement">Multiple Criteria Single Case Switch Statement (Stack Overflow)</a></li>
+</ol>
+
+<h4 id="Первый_способ">Первый способ</h4>
+
+<p>В первом способе используется то, что выполнение инструкции <code>switch</code> продолжится, если не использовать инструкцию <code>break</code>. Подробнее в примере "Что случится, если не использовать break?"</p>
+
+<pre class="brush: js">var foo = 1;
+switch (foo) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+        alert('yes');
+        break;
+    default:
+        alert('not');
+}</pre>
+
+<h4 id="Второй_способ">Второй способ</h4>
+
+<p>Другой способ, менее стандартный; во второй строке, где вы ожидали увидеть <code>switch(foo)</code>, расположено постоянное значение <code>true</code>, и в случаях используются выражения вместо констант:</p>
+
+<pre class="brush: js">var foo = 1;
+switch (true) { // Постоянное значение true вместо foo
+    case foo &gt;= 0 &amp;&amp; foo &lt;= 3:
+        alert('yes');
+        break;
+    default:
+        alert('not');
+}</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 3-е Издание.</td>
+   <td>Стандарт</td>
+   <td>Изначальное определение.<br>
+    Реализован в JavaScript 1.2</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-12.11', 'Инструкция switch')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-switch-statement', 'Инструкция switch')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+
+
+<p>{{Compat("javascript.statements.switch")}}</p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/if...else" lang="ru"><code>if...else</code></a></li>
+</ul>

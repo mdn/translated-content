@@ -1,0 +1,110 @@
+---
+title: Gecko SDK
+slug: Gecko_SDK
+translation_of: Mozilla/Gecko/Gecko_SDK
+---
+<h2 id="Overview" name="Overview">Overview</h2>
+<p>Gecko SDK, также известный как XULRunner SDK, представляет собой набор <a href="/en/XPIDL" title="en/XPIDL">XPIDL</a> файлов, заголовочных файлов и инструментов для разработки <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> компонентов, которые могут в свою очередь, например, быть доступны из <a href="/en/XUL" title="en/XUL">XUL</a> с использованием <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>.</p>
+<p>Note that in order to develop such components, you do not need the full sources of e.g. Firefox, since you do not access parts of the front end from within a component. Furthermore, since a component contains basic functionality, it is intended to run with every product of the Mozilla platform. Therefore it makes no sense to use a particular product to build general functionality. That's the reason why the Gecko SDK was devised.</p>
+<p>Do not confuse the Gecko/XULRunner SDK with <a href="/en/XULRunner" title="en/XULRunner">XULRunner</a> itself. The Gecko SDK is a collection of header files and tools used to develop general XPCOM components which add functionality to the existing platform, whereas XULRunner is a framework which can be used to run standalone or embedded applications based on the Mozilla framework.</p>
+<p>The Gecko SDK contains all of the necessary tools and headers for making scriptable NPAPI plugins including the xpidl compiler/linker and the latest <code>npapi.h</code>.</p>
+<h2 id="Get_the_SDK" name="Get_the_SDK">Get the SDK</h2>
+<h3 id="Updates" name="Updates">Updates</h3>
+<p>There is no need to download or rebuild the Gecko SDK corresponding to security updates of Mozilla (e.g., Mozilla 1.7.3) since the headers and glue libs in the Gecko SDK are usually not changed as a result of security updates. You <strong>do have to</strong> get and distribute the newest Gecko components (gklayout.dll etc.), though.</p>
+<h3 id="Downloading" name="Downloading">Downloading</h3>
+<p>For Gecko versions before 2.0, you should choose the Gecko SDK version for the earliest version of Mozilla you wish to target.  For Gecko versions 2.0 and higher, you must recompile your component for each release as cross-version compatibility is no longer supported.</p>
+<p>In addition to the below versions, you can find other versions (including Beta) here: <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/">Xulrunner Releases</a> (files include "sdk" in the name).  The SDK follows the same <a class="link-https" href="https://wiki.mozilla.org/Releases" title="https://wiki.mozilla.org/Releases">release schedule</a> as Firefox/Thunderbird.  Once the SDK enters Beta, it is suitable for building extensions; your component should work with release builds of the SDK without any modifications.  Due to the <a class="link-https" href="https://wiki.mozilla.org/RapidRelease#Overview" title="https://wiki.mozilla.org/RapidRelease#Overview">Rapid Release</a> process, it may be a good idea to target the SDK in Beta.</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th>Download Link</th>
+      <th>Gecko 18.0.1 (Firefox 18.0.1)</th>
+      <th>Gecko 1.9.2 (Firefox 3.6)</th>
+      <th>Gecko 1.9.1 (Firefox 3.5)</th>
+      <th>Gecko 1.9 (Firefox 3.0)</th>
+      <th>Gecko 1.8 (Firefox 1.5 and 2.0)</th>
+    </tr>
+    <tr>
+      <th>Windows</th>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.win32.sdk.zip" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.win32.sdk.zip">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.win32.sdk.zip" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.win32.sdk.zip">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.win32.sdk.zip" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.win32.sdk.zip">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.win32.sdk.zip" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.win32.sdk.zip">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/sdk/gecko-sdk-win32-msvc-1.8.0.4.zip" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/sdk/gecko-sdk-win32-msvc-1.8.0.4.zip">Download</a></td>
+    </tr>
+    <tr>
+      <th>Mac x86_64</th>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.mac-x86_64.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.mac-x86_64.sdk.tar.bz2">Download</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Mac i386</th>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.mac-i386.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.mac-i386.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.mac-i386.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.mac-i386.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.mac-i386.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.mac-i386.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.mac-i386.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.mac-i386.sdk.tar.bz2">Download</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Mac ppc</th>
+      <td>N/A</td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.mac-powerpc.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.mac-powerpc.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.mac-powerpc.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.mac-powerpc.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.mac-powerpc.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.mac-powerpc.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/sdk/gecko-sdk-mac-1.8.0.4.zip" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/sdk/gecko-sdk-mac-1.8.0.4.zip">Download</a></td>
+    </tr>
+    <tr>
+      <th>Linux x86_64</th>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.linux-x86_64.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.linux-x86_64.sdk.tar.bz2">Download</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Linux i686</th>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.linux-i686.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.1/sdk/xulrunner-18.0.1.en-US.linux-i686.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.linux-i686.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/3.6.28/sdk/xulrunner-3.6.28.en-US.linux-i686.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.linux-i686.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1.19/sdk/xulrunner-1.9.1.19.en-US.linux-i686.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.linux-i686.sdk.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.0.17/sdk/xulrunner-1.9.0.17.en-US.linux-i686.sdk.tar.bz2">Download</a></td>
+      <td><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/sdk/gecko-sdk-i686-pc-linux-gnu-1.8.0.4.tar.bz2" title="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/sdk/gecko-sdk-i686-pc-linux-gnu-1.8.0.4.tar.bz2">Download</a></td>
+    </tr>
+  </tbody>
+</table>
+<p>The SDK is not officially released for other platforms; if you need it, you will probably need to build it yourself.</p>
+<p>Unpack the SDK tarball to some suitable location.</p>
+<h4 id="Issues_with_the_OS_X_SDK" name="Issues_with_the_OS_X_SDK">Issues with the OS X SDK</h4>
+<p>If you need to use the <code>xpidl</code> utility to compile IDL files on OS X, it's likely that you will receive a strange error when running the tool that looks something along the lines of this:</p>
+<pre>dyld: Library not loaded: /opt/local/lib/libintl.3.dylib
+  Referenced from: /Users/varmaa/xulrunner-sdk/bin/./xpidl
+  Reason: image not found
+Trace/BPT trap
+</pre>
+<p>Unfortunately, this is caused by a problem with the SDK build process which cannot currently be resolved (see Bugzilla bug #<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=430274">430274</a>). To get around it, you'll need to first install MacPorts as outlined in the <a href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites" title="en/Mac_OS_X_Build_Prerequisites">Mac OS X Build Prerequisites</a> and install <code>libidl</code> with it. On 64-bit versions of Mac OS X, you'll need to install <code>libidl</code> with the <code>+universal</code> flag.</p>
+<p>Once that's done, you should perform the following command:</p>
+<pre>ln -s /opt/local/lib/libintl.8.dylib /opt/local/lib/libintl.3.dylib</pre>
+<p>This should fix the problem.</p>
+<h3 id="Building_the_SDK" name="Building_the_SDK">Building the SDK</h3>
+<p>To build the SDK, you should build <a href="/en/XULRunner" title="en/XULRunner">XULRunner</a> (the Gecko SDK is built as part of the XULRunner build process, which is why it's sometimes called the XULRunner SDK). See the <a href="/En/Developer_Guide/Build_Instructions" title="en/Build_Documentation">Build Documentation</a> for complete details. After the XULRunner build is complete running <code>make sdk</code> from your object directory will create a package of the sdk in <code>dist</code>.</p>
+<h2 id="Contents_of_the_SDK" name="Contents_of_the_SDK">Contents of the SDK</h2>
+<p>The SDK contains the following:</p>
+<ul>
+  <li>1.9.2</li>
+  <li>IDL files for frozen interfaces (under <code>idl/</code>)</li>
+  <li>Header files for frozen interfaces, XPCOM functions, and NSPR functions (under <code>include/</code>)</li>
+  <li>Import libraries or shared libraries (under <code>lib/</code>)</li>
+  <li>Static utility libraries (under <code>lib/</code>)</li>
+  <li>Various tools (under <code>bin/</code>)</li>
+</ul>
+<p>For more information about safely linking XPCOM components using the XPCOM "glue" library, see <a href="/en/XPCOM_Glue" title="en/XPCOM_Glue">XPCOM Glue</a>.</p>
+<h2 id="Resources" name="Resources">Using the Mozilla Build System with the SDK</h2>
+<p>It's possible to use the <a class="internal" href="/Talk:en/Creating_Custom_Firefox_Extensions_with_the_Mozilla_Build_System" title="Talk:En/Creating Custom Firefox Extensions with the Mozilla Build System">Mozilla Build System</a> with the SDK. This can be done by downloading the source code for Firefox and using the <code>--with-libxul-sdk</code> option to <code>configure</code>.</p>
+<h2 id="Resources" name="Resources">Resources</h2>
+<ul>
+  <li><a href="/User:Andywang/xpidl" title="User:Andywang/xpidl">static xpidl.exe</a> (non-official) If you are looking for a static linked xpidl.exe, you can download here.</li>
+  <li><a class="external" href="http://www.oxymoronical.com/view/1114">Mac Intel Gecko 1.8 SDK</a> The official Mac 1.8 SDK is a ppc version. This is an unofficial intel build.</li>
+</ul>
+<p>{{ languages( { "zh-cn": "cn/Gecko_SDK", "fr": "fr/SDK_Gecko", "ja": "ja/Gecko_SDK" } ) }}</p>

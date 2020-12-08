@@ -1,0 +1,99 @@
+---
+title: Sindicar
+slug: Archive/RSS/Como_começar/Sindicar
+tags:
+  - PrecisaDeRevisãoEditorial
+  - 'RSS:Como_começar'
+translation_of: Archive/RSS/Getting_Started/Syndicating
+---
+<p>Esta página explica a Web Syndication, ou Publicação Web, com o RSS. Você aprenderá como fazer isso para que ambas — pessoas e máquinas — possam encontrar seu RSS feed, ou alimentador de RSS.</p>
+
+<h2 id="What_is_Syndication" name="What_is_Syndication">O que é Syndication (Publicação)</h2>
+
+<p><strong>Syndication</strong> (ou <strong>Web Syndication</strong>) é o ato de tornar um conteúdo disponível para outros lerem, ouvirem ou assistirem. Quando você cria um blog, um rádio de Internet ou um programa televisivo para Internet, você está publicando (syndicating).</p>
+
+<p>O RSS ajuda você a publicar. Ele organiza sua publicação em um formato fácil para as máquinas entenderem.</p>
+
+<p>Publicar com RSS pode significar 3 coisas:</p>
+
+<ol>
+ <li>Criar um RSS feed (também conhecido por alimentador de RSS).</li>
+ <li>Adicionar um elemento especial <code><a href="/pt/HTML/Element/link" title="pt/HTML/Element/link">&lt;link&gt;</a></code> à(s) página(s) HTML.</li>
+ <li>Adicionar um elemento especial <code><a href="/pt/HTML/Element/a" title="pt/HTML/Element/a">&lt;a&gt;</a></code> à(s) página(s) HTML.</li>
+</ol>
+
+<p>Nós já falamos sobre o item 1 — Criar um RSS feed — então nos focaremos nos itens 2 e 3 aqui.</p>
+
+<h2 id="Adding_the_.3Clink.3E" name="Adding_the_.3Clink.3E">Adicionando o &lt;link&gt;</h2>
+
+<p>Freqüentemente o dado em um RSS feed é também disponibilizado em uma página web HTML. Quando este é o caso, a página web HTML pode avisar pessoas e máquinas sobre o feed com um código como o seguinte:</p>
+
+<pre>&lt;link rel="alternate" type="application/rss+xml" href="http://exemplo.com/feed" /&gt;
+</pre>
+
+<p>Muitas vezes as pessoas querem anunciar o RSS feed em outros lugares também. Por exemplo, em um artigo de blog. Você pode fazer isso com um código como o seguinte:</p>
+
+<pre>&lt;link rel="home" type="application/rss+xml" href="http://exemplo.com/feed" /&gt;
+</pre>
+
+<p>Note que este parece quase exatamente a mesma coisa do código anterior. A única coisa modificada foi o valor do atributo <code>rel</code>. (O código anterior teve um <code>rel</code> de valor <code>alternate</code>. E este código teve um <code>rel</code> de valor <code>home</code>.)</p>
+
+<div class="note">
+<p><strong>NOTA</strong>: Tem havido muito abuso no uso do elemento <code>&lt;link&gt;</code> para publicação com RSS. Alguns bloggers o têm usado para que outros se <em>inscrevam</em> em seus blogs de qualquer página do blog (e não apenas da <em>home page</em>). O que resultou na adição de vários <code>&lt;link&gt;</code> com <code>rel="alternate"</code> por todos os lugares. (Nas entradas de blogs também e não apenas nas <em>home page</em>.) Isso é errado! Usar <code>rel="alternate"</code> neste caso é errado. Deve ser usado o <code>rel="home"</code>. (Veja <a href="/pt/Understanding_rel_and_rev" title="pt/Understanding_rel_and_rev">Understanding rel and rev</a> para mais informações.) A parte importante quando se usa o <code>&lt;link&gt;</code> para publicar seu RSS feed é pôr o <code>type="application/rss+xml"</code>.</p>
+</div>
+
+<h2 id="Adding_the_.3Ca.3E" name="Adding_the_.3Ca.3E">Adicionando o &lt;a&gt;</h2>
+
+<p>Embora o uso do elemento HTML <code>&lt;link&gt;</code> seja poderoso; ele é na maioria das vezes <em>escondido</em>. Para anunciar o RSS feed de um modo mais direto, o elemento HTML <code>&lt;a&gt;</code> pode ser utilizado. Fazendo isso pode-se conseguir o mesmo resultado do elemento <code>&lt;link&gt;</code> discutido acima.</p>
+
+<p>Quando puser um link de uma página web HTML onde os dados em um RSS feed também são disponibilizados use:</p>
+
+<pre>&lt;a rel="alternate" type="application/rss+xml" href="http://exemplo.com/feed"&gt;...&lt;/a&gt;
+</pre>
+
+<p>Quando puser um link de alguma coisa como um artigo de post de um blog, use o seguinte código:</p>
+
+<pre>&lt;a rel="home" type="application/rss+xml" href="http://example.com/feed"&gt;...&lt;/a&gt;
+</pre>
+
+<p>Mais uma vez, note que esses dois trechos de código parecem quase exatamente os mesmos. A única coisa modificada foi o valor do atributo <code>rel</code>. (O primeiro trecho de código tem um <code>rel</code> de valor <code>alternate</code> e o segundo trecho tem um <code>rel</code> de valor <code>home</code>.)</p>
+
+<h2 id="Feed_Icons" name="Feed_Icons">Ícones de Feed</h2>
+
+<p>RSS (e outros) feeds utilizam um ícone especial. É recomendado que use este ícone quando criar um link especial <code>&lt;a&gt;</code> para seu alimentador. O ícone parece como este:</p>
+
+<dl>
+ <dd><img alt="Feed-icon-32x32.png" class="internal default" src="/@api/deki/files/3250/=Feed-icon-32x32.png" style="width: 32px; height: 32px;"></dd>
+</dl>
+
+<p>Você pode conseguir mais ícones como este do <a class="external" href="http://feedicons.com/">Feed Icons</a>. (Outros tamanhos e cores também estão disponíveis. Arquivos fontes também estão disponíveis.)</p>
+
+<h2 id="Advanced_Syndication_Techniques" name="Advanced_Syndication_Techniques">Técnicas Avançadas de Publicação (Syndication)</h2>
+
+<p>Embora esta técnica de publicação não seja necessária, é recomendado seu suporte; especialmente para web sites e aplicações que necessitam de alta performance.</p>
+
+<p>O protocolo <a href="/pt/HTTP" title="pt/HTTP">HTTP</a> — uma das tecnologias núcleo por trás da web — provê uma forma de priorizar o tipo de conteúdo que um cliente HTTP prefere para receber. Esta técnica toma vantagem disso fazendo com que os clientes <em>prefer</em> o RSS (acima do HTML ou outros formatos). Aqui está um exemplo simples de como é feito:</p>
+
+<pre>Accept: application/rss+xml, text/html
+</pre>
+
+<p>Apesar de na realidade, na produção de software, se pareça mais com isso.</p>
+
+<pre>Accept: application/rss+xml, application/xhtml+xml, text/html
+</pre>
+
+<p>Eis um exemplo mais completo:</p>
+
+<pre>GET / HTTP/1.1
+Host: example.com
+Accept: application/rss+xml, application/xhtml+xml, text/html
+</pre>
+
+<p>Quando um servidor HTTP (ou scripts de servidores) pega isso, ele deve redirecionar para o cliente HTTP do feed. Ele deve fazer isso com um <code>HTTP 302 Found</code>. Algo como:</p>
+
+<pre>HTTP/1.1 302 Found
+Location: http://exemplo.com/feed
+</pre>
+
+<p><br>
+ {{ PreviousNext("RSS:Como começar:Como o RSS trabalha", "RSS:Como começar:Blogs") }}</p>

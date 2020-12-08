@@ -1,0 +1,63 @@
+---
+title: Window.document
+slug: Web/API/Window/document
+translation_of: Web/API/Window/document
+---
+<div>{{APIRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p><span class="seoSummary"><code>window.document</code> возвращает ссылку на документ, содержащийся в окне.</span></p>
+
+<div class="note"><strong>Note:</strong> {{Fx_minversion_inline(3)}} Firefox 3 вносит изменения в правила безопасности для windows' документов, чтобы только домен, на котором они расположены, имел доступ к документам. И хотя это может сломать некоторые существующие сайты, Firefox 3 и Internet Explorer 7 сделали этот шаг, что приводит к улучшению безопасности.</div>
+
+<h2 id="Синтaксис">Синтaксис</h2>
+
+<pre class="syntaxbox"><var>doc</var> = window.document
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<ul>
+ <li><code>doc</code> является ссылкой на объект <a href="/en-US/docs/DOM/document" title="DOM/document">document</a>.</li>
+</ul>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script type="text/javascript"&gt;
+   var doc = window.document;
+   console.log(doc.title); // Hello, World!
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-document-2', 'Window.document')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-document-0', 'Window.document')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>

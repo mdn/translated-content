@@ -1,0 +1,50 @@
+---
+title: Przewijane menu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Przewijane_menu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Scrolling_Menus
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Wyskakujące_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_funkcji_obsługi_zdarzeń">Następny  »</a></p>
+</div>
+<p></p><p>Artykuł ten opisuje przewijane menu oraz jak stosować mechanizm przewijania wraz z innymi elementami.
+</p>
+<h3 id="Tworzenie_du.C5.BCego_menu" name="Tworzenie_du.C5.BCego_menu"> Tworzenie dużego menu </h3>
+<p>Zastanawialiście się, co by się stało, jeśli utworzylibyśmy menu wraz ze zbyt dużą ilością pozycji, które nie chcą się pomieścić w oknie? Mozilla dostarczyła mechanizm przewijania, który pozwala na przewijanie poprzez swoje pozycje w oknie.
+</p>
+<div class="float-right"><img alt="grafika:menuscroll1.png"></div>
+<p>Jeśli w menu zabraknie dostępnej wolnej przestrzeni w oknie menu, to automatycznie pojawią się na obu jego końcach strzałeczki. Jeśli najedziesz kursorem myszki na którąkolwiek strzałkę, to menu zostanie przewinięte w dół albo w górę. Jeśli natomiast jest więcej dostępnego miejsca, a menu się mieści w oknie, to strzałki nie zostaną wyświetlone. Zwróć uwagę, że pojawienie się strzałek zależy od aktualnie zastosowanego motywu. </p><p>Powyższe zachowanie jest wywoływane automatycznie. Nie musimy nic więcej robić, aby pojawił się on w przewijanym menu. Znajdzie on zastosowanie do menu w pasku narzędzi, w wyskakujących okienkach lub listach menu. Zaimplementowany zostanie poprzez element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code>. Ten element może być zastosowany do utworzenia przewijanego pudełka, posiadającego strzałki.
+</p><p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> możemy zastosować gdziekolwiek w regularnym pudełku. Nie musisz go stosować do menu. Jest on zawsze pionowym pudełkiem i może być wewnątrz niego umieszczony dowolny element. Możemy go zastosować do implementacji listy, kiedy nie chcemy tworzyć listy za pomocą listy rozwijanej.
+</p><p>Poniższy przykład pokazuje, jak stworzyć przewijaną listę przycisków (aby zobaczyć strzałki przewijania, należy zminimalizować okno z poniższym przykładem):
+</p>
+<h4 id="Przyk.C5.82ad_-_przewijana_lista_przycisk.C3.B3w" name="Przyk.C5.82ad_-_przewijana_lista_przycisk.C3.B3w"> Przykład - przewijana lista przycisków </h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul">Podgląd</a>
+</p>
+<pre>&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Czerwony"/&gt;
+  &lt;button label="Niebieski"/&gt;
+  &lt;button label="Zielony"/&gt;
+  &lt;button label="Żółty"/&gt;
+  &lt;button label="Pomarańczowy"/&gt;
+  &lt;button label="Srebrny"/&gt;
+  &lt;button label="Lawendowy"/&gt;
+  &lt;button label="Złoty"/&gt;
+  &lt;button label="Turkusowy"/&gt;
+  &lt;button label="Brzoskwiniowy"/&gt;
+  &lt;button label="Bordowy"/&gt;
+  &lt;button label="Czarny"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+<p>Chcąc zobaczyć działanie przykładu, najpierw otwórz zmaksymalizowanie okno wraz z powyższym przykładem. Następnie zmniejsz rozmiar okna, co spowoduje pojawienie się strzałek umożliwiających przewijanie listy przycisków. Ponowne zmaksymalizowanie tego samego okna spowoduje, iż strzałki znikną. </p><p>Możemy ustawić własność CSS <code>max-height</code> dla elementu <code>arrowscrollbox</code>, aby ograniczyć rozmiar pola przewijania, co spowoduje wyświetlenie się strzałek, które będą dostępne przez cały czas. </p><p>Element <code>arrowscrollbox</code> jest użyteczny głównie w menu i czasem w okienkach wyskakujących.
+</p><p>W następnym artykule pokażemy, <a href="pl/Kurs_XUL/Dodawanie_funkcji_obs%c5%82ugi_zdarze%c5%84">jak dodać obsługę zdarzeń do elementów XUL</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Wyskakujące_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_funkcji_obsługi_zdarzeń">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

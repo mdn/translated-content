@@ -1,0 +1,291 @@
+---
+title: XMLHttpRequest.send()
+slug: Web/API/XMLHttpRequest/send
+tags:
+  - AJAX
+  - API
+  - HTTP запрос
+  - XHR
+  - XHR запрос
+  - XMLHttpRequest
+  - send
+  - запрос
+translation_of: Web/API/XMLHttpRequest/send
+---
+<p>{{APIRef('XMLHttpRequest')}}</p>
+
+<p>Метод <code><strong>XMLHttpRequest.send()</strong></code> отправляет запрос. Если запрос асинхронный (каким он является по-умолчанию), то возврат из данного метода происходит сразу после отправления запроса. Если запрос синхронный, то метод возвращает управление только после получения ответа. Метод <code>send()</code> принимает необязательные аргументы в тело запросов. Если метод запроса <code>GET</code> или <code>HEAD</code>, то аргументы игнорируются и тело запроса устанавливается в null.</p>
+
+<p>Если заголовок {{HTTPHeader("Accept")}} не был задан с помощью {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, будет отправлено значение <code>Accept</code> по-умолчанию <code>*/*</code>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">XMLHttpRequest.send(<em>body</em>)
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>
+ <p><em>body</em> {{optional_inline}}</p>
+ </dt>
+ <dd>
+ <p>Данные из параметра body оправляются в запросе через XHR. Это могут быть:</p>
+
+ <ul>
+  <li>{{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.</li>
+  <li><code>BodyInit</code>, которые, согласно спецификации <a href="https://fetch.spec.whatwg.org/#bodyinit">Fetch </a>могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.</li>
+ </ul>
+ </dd>
+</dl>
+
+<p>Лучший способ передать двоичные данные (например при загрузке файлов) - это использование <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> или <a href="/en-US/docs/Web/API/Blob">Blobs</a> в сочетании с методом<code>send()</code>.</p>
+
+<p>Если никакого значения не определено в качестве <em>body</em>, то будет использовано значение по-умолчанию: <code>null</code>.</p>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+
+
+<p><code>undefined</code>.</p>
+
+<h3 id="Исключения">Исключения</h3>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Исключение</th>
+   <th scope="col">Описание</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>InvalidStateError</code></td>
+   <td><code>send()</code> уже был вызван для запроса, и/или запрос завершен.</td>
+  </tr>
+  <tr>
+   <td><code>NetworkError</code></td>
+   <td>Тип запрошенного ресурса - Blob, но метод запроса не <code>GET</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<h2 id="Пример_GET">Пример: GET</h2>
+
+<pre><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', '/server', true);
+
+xhr.onload = function () {
+  // Запрос завершен. Здесь можно обрабатывать результат.
+};
+
+xhr.send(null);
+// xhr.send('string');
+</code>// <code>xhr.send(new Blob());
+// xhr.send(new Int8Array());
+// xhr.send({ form: 'data' });
+// xhr.send(document);</code>
+</pre>
+
+<h2 id="Пример_POST">Пример: POST</h2>
+
+<pre><code>var xhr = new XMLHttpRequest();
+xhr.open("POST", '/server', true);
+
+//Передает правильный заголовок в запросе
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+    if(xhr.readyState == XMLHttpRequest.DONE &amp;&amp; xhr.status == 200) {
+        // Запрос завершен. Здесь можно обрабатывать результат.
+    }
+}
+xhr.send("foo=bar&amp;lorem=ipsum");
+// xhr.send('string');
+</code>// <code>xhr.send(new Blob());
+// xhr.send(new Int8Array());
+// xhr.send({ form: 'data' });
+// xhr.send(document);</code>
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(1)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>{{CompatIe('5')}}<sup>[1]</sup><br>
+    {{CompatIe('7')}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatSafari('1.2')}}</td>
+  </tr>
+  <tr>
+   <td><code>send(ArrayBuffer)</code></td>
+   <td>{{CompatChrome(9)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("9.0")}}</td>
+   <td>{{CompatIe('10')}}</td>
+   <td>{{CompatOpera('11.60')}}</td>
+   <td>{{compatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(ArrayBufferView)</code></td>
+   <td>{{CompatChrome(22)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("20.0")}}</td>
+   <td>{{compatUnknown}}</td>
+   <td>{{compatUnknown}}</td>
+   <td>{{compatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(Blob)</code></td>
+   <td>{{CompatChrome(7)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
+   <td>{{CompatIe('10')}}</td>
+   <td>{{CompatOpera('12')}}</td>
+   <td>{{compatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(FormData)</code></td>
+   <td>{{CompatChrome(6)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>{{CompatIe('10')}}</td>
+   <td>{{CompatOpera('12')}}</td>
+   <td>{{compatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(URLSearchParams)</code></td>
+   <td>{{CompatChrome(59)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("44.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(1)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(ArrayBuffer)</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{compatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(ArrayBufferView)</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{compatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(Blob)</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{compatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(FormData)</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{compatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>send(URLSearchParams)</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(59)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("44.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Возможность реализуется с помощью <code>ActiveXObject()</code>. Начиная с версии 7 Internet Explorer реализует стандарт <code>XMLHttpRequest</code>.</p>
+
+
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
+</ul>

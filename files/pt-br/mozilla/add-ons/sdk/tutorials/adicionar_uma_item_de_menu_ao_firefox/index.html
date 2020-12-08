@@ -1,0 +1,115 @@
+---
+title: Adicionar um item de menu ao Firefox
+slug: Mozilla/Add-ons/SDK/Tutorials/Adicionar_uma_item_de_menu_ao_Firefox
+tags:
+  - Add-on SDK
+  - Menu Item
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Add_a_Menu_Item_to_Firefox
+---
+<div class="note">
+<p>Para seguir este tutorial você precisará ter <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Installation">instalado o SDK</a> e aprendido o <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Getting_Started_With_cfx">básico do cfx</a>.</p>
+</div>
+
+<div class="note">
+<p>Se vocé estiver usando <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm">jpm</a> ao invés de cfx, o método para usar módulos de terceiros é diferente, e você deve ler a <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Using_third-party_modules_%28jpm%29">versão jpm</a> ao invés deste guia.</p>
+</div>
+
+<p>O SDK não tem ainda uma API para adicionar novos itens de menu ao Firefox. Mas é extensível por design, então qualquer um pode construir e publicar módulos para desenvolvedores de add-on usar. Felizmente, Erik Vold escreveu um módulo <a href="https://github.com/mykmelez/menuitems-jplib"><code>menuitems</code></a> que nos permite adicionar itens de menu.</p>
+
+<p>Este tutorial tem dupla função. Ele descreve o método geral para usar um externo, módulo de terceiro em seu add-on, e ele descreve como adicionar um item de menu usando o módulo <code>menuitems</code> em especial.</p>
+
+<p>Primeiro, crie um novo add-on. Crie um diretório chamado "clickme" onde você quiser, navegue para ele e execute <code>cfx init</code>.</p>
+
+<pre>mkdir clickme
+cd clickme
+cfx init
+</pre>
+
+<p>A estrutura de diretório de costume será criada:</p>
+
+<ul>
+ <li>clickme
+  <ul>
+   <li>data</li>
+   <li>lib
+    <ul>
+     <li>main.js</li>
+    </ul>
+   </li>
+   <li>package.json</li>
+   <li>tests
+    <ul>
+     <li>test-main.js</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<div> </div>
+
+<h2 id="Inslatando_menuitems">Inslatando menuitems</h2>
+
+<p>Crie um diretório em "clickme" chamado "packages". Baixe o pacote <code>menuitems</code> de <a href="https://github.com/mykmelez/menuitems-jplib/zipball/4d6ae5b410d79cc16c9c76920fbaa8a367e44ca7">https://github.com/mykmelez/menuitems-jplib</a> e extrai ele dentro do diretório "packages" que você criou:</p>
+
+<pre>mkdir packages
+cd packages
+tar -xf ../erikvold-menuitems-jplib-d80630c.zip
+</pre>
+
+<h2 id="Dependências_de_Módulo">Dependências de Módulo</h2>
+
+<p>Se os módulos de terceiros dependem de módulos SDK, você pode usá-los imediatamente, mas se eles dependem de módulos de terceiros, você terá de instalar essas dependências também.</p>
+
+<p>No diretório principal do pacote (menuitems) você encontrará um arquivo chamado "package.json". Abra ele e procure por uma entrada chamada "dependencies". A entrada para o pacote <code>menuitems</code> é:</p>
+
+<pre>"dependencies": ["api-utils", "vold-utils"]
+</pre>
+
+<p>Isso nos diz que nós precisamos instalar o pacote <code>vold-utils</code>, que nós podemos fazer baixando ele de <a href="https://github.com/mykmelez/vold-utils-jplib/zipball/a321447dc5d613df33023165854957c181dc3174">https://github.com/mykmelez/vold-utils-jplib </a>e adicionando ele ao diretório packages com <code>menuitems</code>. Veja também <a href="/en-US/docs/Mozilla/QA/Mozmill_tests/Shared_Modules/UtilsAPI">api-utils Docs</a>(UtilsAPI).</p>
+
+<h2 id="Usando_menuitems">Usando <code>menuitems</code></h2>
+
+<p>A documentação para o módulo <a href="https://github.com/mykmelez/menuitems-jplib/blob/master/docs/menuitems.md"><code>menuitems</code></a> nos diz para criar um item de menu usando <code>MenuItem()</code>. Das opções aceitas pelo <code>MenuItem()</code>, nós usaremos este conjunto mínimo:</p>
+
+<ul>
+ <li><code>id</code>: identificado para este item de menu</li>
+ <li><code>label</code>: texto para mostrar no item</li>
+ <li><code>command</code>: função chamada quando o usuário seleciona o item</li>
+ <li><code>menuid</code>: identificador para o elemento pai do item</li>
+ <li><code>insertbefore</code>: identificador para o item anterior àquele que nós queremos que o item apareça</li>
+</ul>
+
+<div>
+<div>
+<pre class="brush: js">var menuitem = require("menuitems").Menuitem({
+  id: "clickme",
+  menuid: "menu_ToolsPopup",
+  label: "Click Me!",
+  onCommand: function() {
+    console.log("clicked");
+  },
+  insertbefore: "menu_pageInfo"
+});</pre>
+
+<div> </div>
+</div>
+</div>
+
+<p>Próximo, nós temos que declarar nossa dependência do pacote <code>menuitems</code>. No <code>package.json</code> de nosso add-on adicionamos a linha:</p>
+
+<pre>"dependencies": "menuitems"
+</pre>
+
+<p>Observe que devido ao <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663480">bug 663480</a>, se você adicionar uma linha <code>dependencies </code>ao <code>package.json</code>, e você usar qualquer módulo do SDK, então você deve também declarar sua dependência naquele pacote embutido, como isto:</p>
+
+<pre>"dependencies": ["menuitems", "addon-sdk"]
+</pre>
+
+<p>Agora terminamos. Execute o add-on e você verá o novo item aparecer no menu de Ferramentas: selecione ele e você verá a <code>info: clicked </code>aparecer no console.</p>
+
+<h2 id="Cuidados">Cuidados</h2>
+
+<p>Módulos de terceiros são uma ótima forma de usar características não suportadas diretamente pelo SDK, mas porque módulos de terceiros usam APIs de nível baixo, eles podem quebrar quando forem lançadas novas versões do Firefox.</p>
+
+<p> </p>

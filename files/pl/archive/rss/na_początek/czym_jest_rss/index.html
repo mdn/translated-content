@@ -1,0 +1,227 @@
+---
+title: Czym jest RSS
+slug: Archive/RSS/Na_początek/Czym_jest_RSS
+tags:
+  - 'RSS:Na_początek'
+translation_of: Archive/RSS/Getting_Started/What_is_RSS
+---
+<p>
+</p><p>Strona ta wyjaśnia, czym jest RSS. Jeszcze nie teraz będziesz mógł utworzyć swój własny plik RSS, lecz na razie spójrz jak się go zazwyczaj wykorzystuje i obejrzyj przykłady plików najczęściej używanych. Przeczytaj także krótką historię rozwoju plików RSS.
+</p>
+<h3 id="Czym_jest_RSS.3F" name="Czym_jest_RSS.3F"> Czym jest RSS? </h3>
+<p>Najbardziej popularną <a href="pl/RSS/Wersje">wersją RSS</a> są znaczniki <a href="pl/XML">XML</a> -języka używanego do syndykacji. (Chociaż istnieje format RSS opaty o <a href="pl/RDF">RDF</a>, to jest on wycofany <a href="pl/RSS/Wersje/0.90">RSS 0.90</a> i <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>.) Zwykle używamy syndykacji RSS dla pobrania nagłówków nowości ze stron internetowych, blogów, IPradio, i z IPTV.
+</p><p>Przewodnik ten uczy <a href="pl/RSS/Wersje/2.0">RSS 2.0</a>. Podejmuje on wysiłek nauki innych numerów <a href="pl/RSS/Wersje">wersji RSS</a>.
+</p><p>RSS prawie nigdy nie był tworzony ręcznie, lecz zawsze za pomocą oprogramowania znajdującego się po stronie serwera (server side - często napisanego w językach takich jak PHP, Java, C# lub Python) umieszczonych na serwerze strony. Jednakże, podczas nauki RSS-a, będziemy tworzyć skrypty RSS ręcznie.
+</p>
+<h3 id="Kr.C3.B3tka_historia_RSS" name="Kr.C3.B3tka_historia_RSS"> Krótka historia RSS </h3>
+<p>W marcu 1999 roku firma Netscape opublikowała <a href="pl/RSS/Wersje/0.90">RSS 0.90</a>. Był to o wiele, wiele inny RSS, niż ten dzisiejszy. Nie był on prawdziwym formatem syndykacji, ale był formatem, który dostarczał podsumowanie o stronie internetowej. Faktycznie nazwa RSS nie oznaczała <b>Really Simple Syndication</b> lecz w tym momencie miała znaczenie <b>Rich Site Summary</b>.
+</p><p>W czerwcu 1999 opublikowano <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a>. Podobnie jak <a href="pl/RSS/Wersje/0.90">RSS 0.90</a>, RSS 0.91 firmy Netscape było formatem dostarczającym podsumowanie strony, i nie było ono w pełni formatem syndykacji (jak jest to dziś). Netscape utworzył RSS 0.91 uprościć jeszcze poprzedni kanał. RSS 0.90 był oparty <a href="pl/RDF">RDF</a> (wiele założeń miało budowę zbyt skomplikowaną.) Firma Netscape oparła RSS 0.91 tylko na <a href="pl/XML">XML</a> i dodaniu <a href="pl/DTD">DTD</a> dopuszczając kilka encji (średnio znanych w <a href="pl/HTML">HTML</a>).
+</p><p>W tym momencie Netscape wycofało oparty o <a href="pl/RDF">RDF</a>-a <a href="pl/RSS/Wersje/0.90">RSS 0.90</a> i narzuciło wszystkim używanie wersji <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a>, która jest oparta na <a href="pl/XML">XML</a>.
+</p><p>W czerwcu 2000 została opublikowana wersja <a href="pl/RSS/Wersje/0.91/Userland">Userland RSS 0.91</a>. (To znaczy, że istniały dwie różne wersje <a href="pl/RSS/Wersje/0.91">RSS 0.91</a>.) Różnica pomiędzy nimi, dwoma różnymi wersjami <a href="pl/RSS/Wersje/0.91">RSS 0.91</a> -- Firmy <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a> i firmy <a href="pl/RSS/Wersje/0.91/Userland">Userland RSS 0.91</a> -- jest taka, że Userland RSS 0.91 nie posiada <a href="pl/DTD">DTD</a>, które posiada Netscape RSS 0.91; i nie zawiera w sobie dodatkowych encji, które ma Netscape RSS 0.91 (średnio znanych w <a href="pl/HTML">HTML</a>). Oprócz wspomianej różnicy, to są one identyczne. Technicznie mówiąc wersja firmy Userland RSS 0.91 jest podzbiorem wersji Netscape RSS 0.91.
+</p><p>W grudniu 2000 grupa robocza RSS-DEV opublikowała <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>. Ta wersja RSS była niedługo całkowicie oparta na <a href="pl/XML">XML</a>, ale oparto ją też na <a href="pl/RDF">RDF</a> (jak oryginalna, lecz już wycofana <a href="pl/RSS/Wersje/0.90">RSS 0.90</a>).Grupa robocza RSS-DEV zmieniła to, że to, co obsługiwało RSS, pozostało i stało się <b>RDF Site Summary</b>. (Ostatecznie to jest to, co zostało umieszczone w tej wersji RSS.)
+</p><p>W jednym momencie mieliśmy <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a>, <a href="pl/RSS/Wersje/0.91/Userland">Userland RSS 0.91</a>, i wersję opracowaną przez grupę roboczą RSS-DEV <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>.
+</p><p>Jeszcze tego samego miesiąca Userland opublikował <a href="pl/RSS/Wersje/0.92">RSS 0.92</a>. RSS 0.92 was meant to replace <a href="pl/RSS/Wersje/0.91/Userland">Userland RSS 0.91</a>. (<b>If you notice though, the RSS versioning number got all messed up at this point. RSS 0.92 jest newer than</b> <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>.)
+</p><p>W tym momecie mieliśmy wersje RSS-a; <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a>, wersje grupy roboczej RSS-DEV, czyli <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>, i Userland <a href="pl/RSS/Wersje/0.92">RSS 0.92</a>.
+</p><p>W kwietniu 2001 Userland opublikował draft wersji <a href="pl/RSS/Wersje/0.93">RSS 0.93</a>. Ta wersja RSS nigdy nie została ukończona i została wydana jedynie jako draft i nigdy nie stała się się wersją, która zastąpiłaby wersję firmy Userland <a href="pl/RSS/Wersje/0.92">RSS 0.92</a>.
+</p><p>W sierpniu 2002 Userland opublikował <b>draft?</b> wersji <a href="pl/RSS/Wersje/0.94">RSS 0.94</a>. Wersja <a href="pl/RSS/Wersje/0.93">RSS 0.93</a>, nigdy nie została ukończona i została wydana jedynie jako draft i nigdy nie stała się wersją, która zastąpiłaby wersję firmy Userland <a href="pl/RSS/Wersje/0.92">RSS 0.92</a>.
+</p><p>W tym momencie <em>wciąż</em> mieliśmy <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a>, wersję grupy roboczej RSS-DEV <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>, i wersje Userland <a href="pl/RSS/Wersje/0.92">RSS 0.92</a>. (Pomimo, że niektórzy używali <a href="pl/RSS/Wersje/0.93">RSS 0.93</a> i <a href="pl/RSS/Wersje/0.94">RSS 0.94</a> pomimo tego, że nie były one wspierane).
+</p><p>We wrześniu 2002 Userland opublikował <a href="pl/RSS/Wersje/2.0">RSS 2.0</a>. RSS 2.0 miało być wersją która zastąpi <a href="pl/RSS/Wersje/0.92">RSS 0.92</a> (drafty <a href="pl/RSS/Wersje/0.93">RSS 0.93</a> i <a href="pl/RSS/Wersje/0.94">RSS 0.94</a> nie były wspierane). Userland postanowiło użyć takiego numeru wersji <b>2.0</b>, ponieważ grupa robocza RSS-DEV w tym czasie wydała wersje <b>1.0</b> opartą na <a href="pl/RDF">RDF</a> <a href="pl/RSS/Wersje/1.0">RSS 1.0</a>.
+</p><p>W tym momencie mieliśmy dostępne wersje: <a href="pl/RSS/Wersje/0.91/Netscape">Netscape RSS 0.91</a>, wersje grupy roboczej RSS-DEV <a href="pl/RSS/Wersje/1.0">RSS 1.0</a> i firmy Userland <a href="pl/RSS/Wersje/2.0">RSS 2.0</a>.
+</p><p>Historia ta nie ma krótkiego końca. Raz w listopadzie 2002 i jeszcze raz w styczniu 2003 roku, specyfikacja <a href="pl/RSS/Wersja/2.0">RSS 2.0</a> została zmieniona przez firmę Userland. Poprzez wprowadzenie wszystkich zmian w porównaniu do poprzednich wersji, została wprowadzona nazwa RSS 2.0 dla elementów <a href="pl/RSS/Elementy/rss">&lt;rss&gt;</a>.
+</p><p>Aktualnie, na dzisiejszy dzień, wciąż mamy wersję <a href="pl/RSS/Wersje/0.91/Netscape">Netscape's RSS 0.91</a> (Netscape nigdy jej nie wycofał), lecz jest on znikomo używany. Bardziej popularną wersją opartą także na <a href="pl/RDF">RDF</a> <a href="pl/RSS/Wersja/1.0">RSS 1.0</a> lub opartą o <a href="pl/XML">XML</a> <a href="pl/RSS/Wersja/2.0">RSS 2.0</a>. Opartą o XML jest RSS 2.0, która jest najbardziej popularną wersją. (Ten kurs pokazuje zastosowanie <a href="pl/RSS/Wersje/2.0">RSS 2.0</a>).
+</p>
+<h3 id="Jak_u.C5.BCywamy_RSS_dzisiaj" name="Jak_u.C5.BCywamy_RSS_dzisiaj"> Jak używamy RSS dzisiaj </h3>
+<p>Dziś, RSS jest najczęściej wykorzystywany do syndykacji. Syndykacja jest to proces mówiący innym, że zostało umieszczona nowa zawartość np. tekstu do przeczytania. Innymi słowami: kiedy używasz syndykacji, mówisz wszystkim mniej więcej coś takiego: "Cześć wszystkim. Mam napisany artykuł, który chce abyście przeczytali po wejściu na moją stronę. Wystarczy tylko zasubskrybować mój kanał RSS i mieli zawsze możliwość pobrania najnowszych nagłówków moich artykułów".
+</p>
+<div class="note">
+<p><b>Uwaga</b>: Jeśli dostarczasz kanał RSS nie zabezpieczony hasłem, to bez żadnych zastrzeżeń dajesz wszystkim dostęp do zawartości kanału RSS w prawie każdej postaci jak użytkownicy chcą go przeglądać. Użytkownik może go czytać. Może utworzyć jego lokalną kopię. Może dzielić localną kopię z innym użytkownikiem. Może także używać go na innej stronie internetowej. Może on nawet <b>re-syndicated it</b>, i wiele więcej.
+</p><p>Jeśli nie chcesz, aby którykolwiek z powyższych przypadków był wykonany, to nie twórz kanału RSS niezabezpieczonego hasłem (Oczywiście nie twórz publicznego hasła.)
+</p>
+</div>
+<p>Nowości ze stron internetowych używają kanału RSS do dostarczenia każdemu, kto się wpisał na listę najnowszych artykułów. Na przykład:
+</p>
+<pre class="eval">   <span class="nowiki">
+    &lt;?xml version="1.0"?&gt;
+
+    &lt;rss version="2.0"&gt;
+
+        &lt;channel&gt;
+            &lt;title&gt;Example News Site&lt;/title&gt;
+            &lt;description&gt;This is an Example News Site.&lt;/description&gt;
+            &lt;lastBuildDate&gt;Wed, 27 Jul 2005 00:30:30 -0700&lt;/lastBuildDate&gt;
+            &lt;link&gt;http://news.example.com/&lt;/link&gt;
+
+            &lt;item&gt;
+                &lt;title&gt;News Flash: I Like Bread&lt;/title&gt;
+                &lt;guid&gt;4d4a0a12-f188-4c97-908b-eea27213c2fe&lt;/guid&gt;
+                &lt;pubDate&gt;Wed, 27 Jul 2005 00:30:30 -0700&lt;/pubDate&gt;
+                &lt;link&gt;http://news.example.com/artcle/554&lt;/link&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Big News Today: Birds Fly&lt;/title&gt;
+                &lt;guid&gt;c4a63f09-b45b-466b-8773-6ff264001ab7&lt;/guid&gt;
+                &lt;pubDate&gt;Tue, 19 Jul 2005 04:32:51 -0700&lt;/pubDate&gt;
+                &lt;link&gt;http://news.example.com/artcle/553&lt;/link&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Fire is Hot&lt;/title&gt;
+                &lt;guid&gt;c1795324-d5ea-44fa-95b1-b5ce2090d4f1&lt;/guid&gt;
+                &lt;pubDate&gt;Sun, 15 May 2005 13:02:08 -0700&lt;/pubDate&gt;
+                &lt;link&gt;http://news.example.com/artcle/552&lt;/link&gt;
+            &lt;/item&gt;
+        &lt;/channel&gt;
+
+    &lt;/rss&gt;
+    </span>
+</pre>
+<p>Osoby prowadzące własnego bloga używają RSS, aby dostarczać każdemu, kto znajduje się na ich liście służącej do powiadomienia o najnowszym zamieszczonym poście. Na przykład: </p>
+<pre class="eval">   <span class="nowiki">
+    &lt;?xml version="1.0"?&gt;
+
+    &lt;rss version="2.0"&gt;
+
+        &lt;channel&gt;
+            &lt;title&gt;Joe Blow's Blog&lt;/title&gt;
+            &lt;description&gt;This is the Weblog of Joe Blow&lt;/description&gt;
+            &lt;lastBuildDate&gt;Sun, 15 May 2005 13:02:08 -0500&lt;/lastBuildDate&gt;
+            &lt;link&gt;http://joe-blow.example.net/&lt;/link&gt;
+
+            &lt;item&gt;
+                &lt;title&gt;I Be Blogging...&lt;/title&gt;
+                &lt;guid&gt;http://joe-blow.example.net/log/21&lt;/guid&gt;
+                &lt;pubDate&gt;Sun, 15 May 2005 13:02:08 -0500&lt;/pubDate&gt;
+                &lt;link&gt;http://joe-blow.example.net/log/21&lt;/link&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;I am so SMRT&lt;/title&gt;
+                &lt;guid&gt;http://joe-blow.example.net/log/20&lt;/guid&gt;
+                &lt;pubDate&gt;Sat, 14 May 2005 22:19:18 -0500&lt;/pubDate&gt;
+                &lt;link&gt;http://joe-blow.example.net/log/20&lt;/link&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Huh?&lt;/title&gt;
+                &lt;guid&gt;http://joe-blow.example.net/log/19&lt;/guid&gt;
+                &lt;pubDate&gt;Sat, 14 May 2005 09:55:59 -0500&lt;/pubDate&gt;
+                &lt;link&gt;http://joe-blow.example.net/log/19&lt;/link&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Black Cat Spotted&lt;/title&gt;
+                &lt;guid&gt;http://joe-blow.example.net/log/18&lt;/guid&gt;
+                &lt;pubDate&gt;Fri, 13 May 2005 13:13:13 -0500&lt;/pubDate&gt;
+                &lt;link&gt;http://joe-blow.example.net/log/18&lt;/link&gt;
+            &lt;/item&gt;
+        &lt;/channel&gt;
+
+    &lt;/rss&gt;
+    </span>
+</pre>
+<p>Ci, co tworzą IPradio pozwalając używać RSS do transmisji ich przedstawienia. Na przykład: </p>
+<pre class="eval">   <span class="nowiki">
+    &lt;?xml version="1.0"?&gt;
+
+    &lt;rss version="2.0"&gt;
+
+        &lt;channel&gt;
+            &lt;title&gt;Joe's IPradio Show&lt;/title&gt;
+            &lt;description&gt;The best IPradio Show on the Internet, staring Joe!&lt;/description&gt;
+            &lt;lastBuildDate&gt;Mon, 15 Aug 2005 16:12:37 -0400&lt;/lastBuildDate&gt;
+            &lt;link&gt;http://joe.ipradio.example.net/&lt;/link&gt;
+
+            &lt;item&gt;
+                &lt;title&gt;I C UR Tan Line&lt;/title&gt;
+                &lt;guid&gt;http://joe.ipradio.example.net/show/55&lt;/guid&gt;
+                &lt;pubDate&gt;Mon, 15 Aug 2005 16:11:57 -0400&lt;/pubDate&gt;
+                &lt;enclosure url="http://joe.ipradio.example.net/show/55"
+                           length="4487216"
+                           type="application/ogg"
+                /&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Car Care for Car Fanatics&lt;/title&gt;
+                &lt;guid&gt;http://joe.ipradio.example.net/show/54&lt;/guid&gt;
+                &lt;pubDate&gt;Mon, 8 Aug 2005 13:12:12 -0400&lt;/pubDate&gt;
+                &lt;enclosure url="http://joe.ipradio.example.net/show/54"
+                           length="4892178"
+                           type="audio/x-mp3"
+                /&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Best Beaches in BC&lt;/title&gt;
+                &lt;guid&gt;http://joe.ipradio.example.net/show/53&lt;/guid&gt;
+                &lt;pubDate&gt;Mon, 1 Aug 2005 18:22:14 -0400&lt;/pubDate&gt;
+                &lt;enclosure url="http://joe.ipradio.example.net/show/53"
+                           length="3984215"
+                           type="application/ogg"
+                /&gt;
+            &lt;/item&gt;
+        &lt;/channel&gt;
+
+    &lt;/rss&gt;
+    </span>
+</pre>
+<div class="note">
+<p><b>Uwaga</b>: Transmisja radia Internetowego jest czasami nazywana <em>Podcasting</em>, <em>IPradio</em>, i <em>Audio Blogging</em>.
+</p>
+</div>
+<p>Ten, kto tworzy Internetową telewizję stosuje RSS pozwalając pokazywać użytkownikom co jest transmitowane. Na przykład:
+</p>
+<pre class="eval">   <span class="nowiki">
+    &lt;?xml version="1.0"?&gt;
+
+    &lt;rss version="2.0"&gt;
+
+        &lt;channel&gt;
+            &lt;title&gt;Kate's IPTV Show&lt;/title&gt;
+            &lt;description&gt;Watch it or else!  You know you want to.&lt;/description&gt;
+            &lt;lastBuildDate&gt;Tue, 23 Aug 2005 21:02:05 -0800&lt;/lastBuildDate&gt;
+            &lt;link&gt;http://katetv.example.com/&lt;/link&gt;
+
+            &lt;item&gt;
+                &lt;title&gt;This is Fun&lt;/title&gt;
+                &lt;guid&gt;http://katetv.example.com/show/4&lt;/guid&gt;
+                &lt;pubDate&gt;Tue, 23 Aug 2005 21:02:05 -0800&lt;/pubDate&gt;
+                &lt;enclosure url="http://katetv.example.com/show/4"
+                           length="1911146"
+                           type="application/ogg"
+                /&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Watch This&lt;/title&gt;
+                &lt;guid&gt;http://katetv.example.com/show/3&lt;/guid&gt;
+                &lt;pubDate&gt;Tue, 16 Aug 2005 16:11:57 -0400&lt;/pubDate&gt;
+                &lt;enclosure url="http://katetv.example.com/show/3"
+                           length="1387442"
+                           type="application/ogg"
+                /&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;It is me again&lt;/title&gt;
+                &lt;guid&gt;http://katetv.example.com/show/2&lt;/guid&gt;
+                &lt;pubDate&gt;Tue, 9 Aug 2005 13:12:12 -0400&lt;/pubDate&gt;
+                &lt;enclosure url="http://katetv.example.com/show/2"
+                           length="1894877"
+                           type="video/mpeg"
+                /&gt;
+            &lt;/item&gt;
+            &lt;item&gt;
+                &lt;title&gt;Hello&lt;/title&gt;
+                &lt;guid&gt;http://katetv.example.com/show/1&lt;/guid&gt;
+                &lt;pubDate&gt;Tue, 2 Aug 2005 18:22:14 -0400&lt;/pubDate&gt;
+                &lt;enclosure url="http://katetv.example.com/show/1"
+                           length="17442215"
+                           type="application/ogg"
+                /&gt;
+            &lt;/item&gt;
+        &lt;/channel&gt;
+
+    &lt;/rss&gt;
+    </span>
+</pre>
+<p>Przezorny czytnik może powiadomić, że przykłady <i>strona internetowa z nowościami</i> i <i>blogger</i> są tego samego typu RSS i także przykłady <i>radio internetowe</i> i <i>telewizja internetowa</i> są tego samego typu RSS. Faktycznie, prawdziwą różnicą pomiędzy newsami/blogami zawierającymi kanały RSS i tymi zawierającymi RSS kanałami radio/telewizja internetowa,jest taka, że kanały RSS nowości/blogi używają elementu <a href="pl/RSS/Elementy/link">&lt;link&gt;</a> i internetowe radio/telewizja używają elementu RSS <a href="pl/RSS/Elementy/enclosure">&lt;enclosure&gt;</a>.
+</p>
+<div class="note">
+<p><b>Uwaga</b>: Te przykłady RSS są bardzo, bardzo proste, i zostały zaprojektowane tylko dla pokazania przykładów RSS, jak one wyglądają. Wszystkie przykłady RSS są minimimalne. Kiedy będziesz tworzył swój własny kanał RSS, będziesz chciał zrobić bardziej złożony i zawierający dodatkowe <a href="pl/RSS/Elementy">elementy RSS</a> oraz zawierający rozmaite <a href="pl/RSS/Modu%c5%82y">moduły RSS</a>.
+</p>
+</div>
+<p>{{ Next("RSS:Na początek:Dlaczego używamy RSS") }}
+</p>{{ languages( { "en": "en/RSS/Getting_Started/What_is_RSS", "fr": "fr/RSS/Premiers_pas/Pr\u00e9sentation_de_RSS" } ) }}

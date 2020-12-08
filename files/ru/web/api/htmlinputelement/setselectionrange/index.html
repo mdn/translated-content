@@ -1,0 +1,174 @@
+---
+title: HTMLInputElement.setSelectionRange()
+slug: Web/API/HTMLInputElement/setSelectionRange
+tags:
+  - API
+  - HTML DOM
+  - HTMLInputElement
+  - Method
+  - Reference
+  - Text Field Selection API
+translation_of: Web/API/HTMLInputElement/setSelectionRange
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>Метод <strong><code>HTMLInputElement.setSelectionRange()</code></strong> устанавливает начальное и конечное положение выделения текста в элементе {{HTMLElement("input")}}.</p>
+
+<p>В более новых версиях браузеров, можно дополнительно установить направление выделения текста, что позволит, например, определить, что выделение сделано нажатием и перетаскиванием курсора мыши от конца выделенного текста до начала.</p>
+
+<p>Этот метод позволяет одним вызовом обновить свойства <code>HTMLInputElement.selectionStart</code>, <code>selectionEnd</code>, и <code>selectionDirection</code>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">inputElement.setSelectionRange(<var>selectionStart</var>, <var>selectionEnd</var>, [optional] <var>selectionDirection</var>);
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><em>selectionStart</em></dt>
+ <dd>Индекс первого выделенного символа.</dd>
+ <dt><em>selectionEnd</em></dt>
+ <dd>Индекс символа <em>после</em> последнего выделенного символа.</dd>
+ <dt><em>selectionDirection</em> {{optional_inline}}</dt>
+ <dd>Строка, определяющая направления произведенного выделения. Принимаются значения "forward", "backward" или "none", если направление выделение неизвество или неважно.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Следующий код:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=utf-8&gt;
+&lt;title&gt;JS Bin&lt;/title&gt;
+&lt;script&gt;
+function SelectText () {
+        var input = document.getElementById("mytextbox");
+            input.focus();
+            input.setSelectionRange(2,5);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;&lt;input type="text" id="mytextbox" size="20" value="Mozilla"/&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button onclick="SelectText()"&gt;Select text&lt;/button&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>приведет к следующему результату:</p>
+
+<p><img alt="example.png" class="default internal" src="/@api/deki/files/6104/=example.png"></p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5.1", "forms.html#dom-textarea/input-setselectionrange" , "HTMLInputElement.setSelectionRange" )}}</td>
+   <td>{{Spec2("HTML5.1")}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "forms.html#dom-textarea/input-setselectionrange" , "HTMLInputElement.setSelectionRange" )}}</td>
+   <td>{{Spec2("HTML5 W3C")}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>9</td>
+   <td>8.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>selectionDirection</code></td>
+   <td>15<sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop("8.0")}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>selectionDirection</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("8.0")}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Поддержка <code>selectionDirection</code> была добавлена Blink в {{WebkitBug("60403")}}.</p>
+
+<p>Требуется отметить, что согласно спецификации <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms</a> свойства <code>selectionStart</code>, <code>selectionEnd</code> и метод <code>setSelectionRange</code> применяются только к элементам <em>input</em> c типами <em>text</em>, <em>search</em>, <em>URL</em>, <em>tel</em> и <em>password</em>. Начиная с версии 33, Chrome, выдает исключение во время попытки доступа к этим свойствам и методу на других типах элемента <em>input</em>. Например, для элемента <em>input</em> типа <em>number</em> появится исключение с сообщением: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection." Ссылки по теме: <a href="http://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome">вопрос на StackOverflow</a>, <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24796">whatwg баг</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=324360">Chromium баг</a>.</p>
+
+<p>[2] Поддержка <code>selectionDirection</code> была добавлена в Gecko в {{bug("674558")}}.</p>
+
+<p>[3] Поддержка <code>selectionDirection</code> была добавлена в Webkit в {{WebKitBug("60403")}}.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{HTMLElement("input")}}</li>
+ <li>{{domxref("HTMLInputElement")}}</li>
+ <li>{{domxref("Selection")}}</li>
+</ul>

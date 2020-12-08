@@ -1,0 +1,176 @@
+---
+title: Pliki manifestu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Pliki_manifestu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Manifest_Files
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:URL_Chrome" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_okna">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule zobaczymy jak umieścić chrome i pliki XUL w paczce oraz stworzyć dla niej pliki manifestu.</p>
+
+<h3 id="Paczki" name="Paczki">Paczki</h3>
+
+<p>Paczka to zbiór plików XUL oraz skryptów, które definiują funkcjonalność interfejsu użytkownika. Paczki mogą być zainstalowane w przeglądarce Mozilla i odnosić się poprzez adres URL chrome. Paczka zawiera różnego rodzaju pliki i może być podzielona na podkatalogi dla różnych części paczki. Paczka jest przechowywana jako katalog lub jako archiwum JAR.</p>
+
+<h3 id="Pliki_manifestu" name="Pliki_manifestu">Pliki manifestu</h3>
+
+<p>Plik manifestu opisuje paczkę i mapę lokalizacji na dysku do adresu URL chrome. Pliki manifestu w katalogu chrome będą wykonywane, kiedy aplikacja Mozilli zostanie uruchomiona, aby zobaczyć jakie paczki zostały zainstalowane. To znaczy, że wszystko potrzebne do wykonania instalacji nowej paczki jest dodany nowy plik manifestu albo do katalogu aplikacji chrome albo użytkownik wskaże określony katalog chrome. Z dwóch katalogów chrome jest normalnie używany jeden od katalogu aplikacji mogącego nie mieć dostatecznych uprawnień do zapisanego w nim.</p>
+
+<p>Jeśli tylko chcesz wypróbować uprzywilejowany kod XUL w przeglądarce Firefox, możesz to zrobić w prosty sposób poprzez użycie manifestu z zawartą w sobie jedną linią:</p>
+
+<ol>
+ <li>Gdziekolwiek utwórz nowy katalog. Na przykład, używając Windows możesz skorzystać C:\testfiles</li>
+ <li>Utwórz nowy plik <strong>ASCII</strong><sup>1</sup> i nazwij go test.manifest w katalogu chrome. W tym momencie nie jest w ogóle ważne jak się on nazywa, ważne żeby miał rozszerzenie .manifest. <sub>( 1. nie działa z UTF-8 z BOM) </sub></li>
+ <li>Dodaj następującą linie do niego:</li>
+</ol>
+
+<pre class="eval"> content tests <a class="external" rel="freelink">file:///C:/testfiles/</a>
+</pre>
+
+<p>Ścieżka pliku w tej linii powinna wskazywać na katalog utworzony powyżej. Jeśli nie jesteś pewien(a), co jest ścieżką pliku, otwórz ten katalog i skopiuj adres URL z paska adresu.</p>
+
+<p>To jest to! Teraz, wszystko co jeszcze musisz zrobić to jest dodanie jakiegoś pliku XUL do tego nowego folderu i będziesz mógł go wczytać wpisując adres URL w formie <a class="external" rel="freelink">chrome://tests/content/</a>&lt;filename&gt;. Oczywiście musisz uruchomić ponownie przeglądarkę, żeby zmiany dały efekt. Jeśli plik się nie wczytał, sprawdź czy wpisałeś poprawną ścieżkę.</p>
+
+<p>Prosta składnia linii kodu w pliku manifestu dla zawartości paczki jest:</p>
+
+<p>'content &lt;packagename&gt; &lt;filepath&gt;'</p>
+
+<p>Pierwsze pole 'content' sygnalizuje zawartość paczki. Dla motywów, 'skin' is used while 'locale' is used for locales. The packagename is the example above is 'tests', which means that the first field in the chrome URL is 'tests' as in <a class="external" rel="freelink">chrome://tests/content/sample.xul</a>. If the package name was 'browser', the chrome URL would be <a class="external" rel="freelink">chrome://browser/content/</a>. The final field is the path where the files are located. This can be either a local file path using a file URL or a JAR archive using a jar URL, which will be described in a moment. You can specify multiple packages by including another line in the manifest file.</p>
+
+<p>Plik browser.manifest użyty przez Firefoksa wygląda tak jak ten:</p>
+
+<pre>content branding jar:browser.jar!/content/branding/ xpcnativewrappers=yes
+content browser jar:browser.jar!/content/browser/ xpcnativewrappers=yes
+overlay chrome://global/content/viewSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://global/content/viewPartialSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://browser/content/pageInfo.xul chrome://pippki/content/PageInfoOverlay.xul
+</pre>
+
+<p>Two packages are listed here, 'branding' and 'browser'. Three overlays are also specified, which allow content from different packages to combine together. Extensions will make the most use of overlays, since they merge their UI with the browser UI.</p>
+
+<p>The file paths for the branding and browser packages use jar URLs as the content is packaged up into an archive. A JAR archive can be created with a ZIP utility. For a JAR file located in the chrome directory, the syntax is fairly simple:</p>
+
+<p>jar:&lt;filename.jar&gt;!/&lt;path_in_archive&gt;</p>
+
+<p>For the browser package, the archive is browser.jar, located alongside the manifest file in the chrome directory. The path 'content/browser' specifies the path inside the archive where the XUL files are located. You won't need to specify a path if you don't have any directories in the archive. In this case, there is, since the files for the branding package are stored in a different path in the same archive.</p>
+
+<p>For the 'tests' package created above, the files are not packaged into an archive, so a direct file path is used instead. This is good for development since you don't have to package up all the files every time you change them. However, when distributing an application or extension, you will want to package them into an archive to avoid having to install lots of smaller files.</p>
+
+<p>The xpcnativewrappers=yes part at the end of the manifest line is a flag that may optionally be used. In JavaScript, it is possible for a web page to override built-in functions with their own code. If the xpcnativewrappers flag is specified, it indicates that scripts running in a privileged context don't call these overriden versions, but the original built-in versions instead. Otherwise, if an extension attempted to call the modified versions, it would likely not work properly, or worse, create a security hole. This flag was added to prevent this problem and should always be used for newer extensions, but is left out for older extensions that might not be compatible with the change.</p>
+
+<h3 id="Motywy_i_pliki_lokalizacji" name="Motywy_i_pliki_lokalizacji">Motywy i pliki lokalizacji</h3>
+
+<p>The themes and locales, the syntax is similar as for content packages, but you also need to specify the content package you are providing a theme or locale for. For example:</p>
+
+<pre>skin browser classic/1.0 jar:classic.jar!/skin/classic/browser/
+locale browser en-US jar:en-US.jar!/locale/browser/
+</pre>
+
+<p>For these, the extra field has been added to indicate that the skin and locale applies to the browser. The skin name is 'classic/1.0'. In this case, a version number is being used as part of the theme name, but that is optional if you are making your own theme. Mozilla doesn't handle the version number in a special way; the version number is just part of the theme name. The locale is 'en-US'. The chrome URLs that these would map to would be <a class="external" rel="freelink">chrome://browser/skin</a> and <a class="external" rel="freelink">chrome://browser/locale</a>. If you were creating your own theme or locale for the browser, all you need to do is create a manifest file with one of these two lines in it, modified to suit your theme or locale.</p>
+
+<p>Aby dowiedzieć się więcej nt. motywów, zobacz <a href="/pl/Motywy" title="pl/Motywy">Motywy</a>. Aby dowiedzieć się więcej nt. lokalizacji, zobacz <a href="/pl/Lokalizacja" title="pl/Lokalizacja">Lokalizacja</a>.</p>
+
+<div class="highlight">
+<h3 id="Przyk.C5.82ad_okienka_dialogowego_Znajd.C5.BA_pliki" name="Przyk.C5.82ad_okienka_dialogowego_Znajd.C5.BA_pliki">Przykład okienka dialogowego <code>Znajdź pliki</code></h3>
+
+<p>Utwórzmy plik manifestu dla okienka dialogowego <code>Znajdź pliki</code>. You can combine all of the three types into a single file if you wish. This may be done when creating an extension such that all of the parts are in one file. We will do this for the find files dialog. Create a file findfile.manifest in the chrome directory. Add the following to the file:</p>
+
+<pre>content findfile file:///findfile/content/
+skin findfile classic/1.0 file:///findfile/skin/
+locale findfile en-US file:///findfile/locale/
+</pre>
+
+<p>Create the new directories listed above. It doesn't matter where the directories are created, but the file paths in the manifest file should point to the directories. Naturally, you will want to use directory paths suitable for your system. If we were distributing the package, we would want to package them up into a JAR file, and modify the paths. In this case, we are just creating to demonstrate a manifest file and to prepare directories for examples which will see in the later sections.</p>
+
+<p>Note how the second field of the skin and locale lines specifies 'findfile'. This means that the skin and locale modify the findfile package, which was specified on the first line.The three paths above specify subdirectories for each part. You will want to create these subdirectories to keep each part's files separate.</p>
+
+<p> </p>
+</div>
+
+<p><span class="comment">== Pliki &lt;code&gt;Contents.rdf&lt;/code&gt; == Plik contents.rdf opisuje zawartość paczki. Może być także użyty do opisania skina lub locale-u. Pliki te mogą być naprawdę prosto tworzone jeśli raz dowiesz się jak. Poniższy schemat może być wykorzystany jako punkt startu. &lt;pre&gt; &lt;?xml version="1.0"?&gt; &lt;RDF:RDF xmlns:RDF="<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>" xmlns:chrome="<a class="external" href="http://www.mozilla.org/rdf/chrome#" rel="freelink">http://www.mozilla.org/rdf/chrome#</a>"&gt; &lt;RDF:Seq about="urn:mozilla:package:root"&gt; &lt;RDF:li resource="urn:mozilla:package:myapplication"/&gt; &lt;/RDF:Seq&gt; &lt;RDF:Description about="urn:mozilla:package:myapplication" chrome:displayName="My Application" chrome:author="name" chrome:name="myapplication"&gt; &lt;/RDF:Description&gt; &lt;/RDF:RDF&gt; &lt;/pre&gt; Możesz użyć tego szablonu oraz wprowadzić kilka drobnych zmian do twojej paczki. Podzielmy go na części aby zrozumieć za co dana część jest odpowiedzialna. &lt;pre&gt; &lt;?xml version="1.0"?&gt; &lt;RDF:RDF xmlns:RDF="<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>" xmlns:chrome="<a class="external" href="http://www.mozilla.org/rdf/chrome#" rel="freelink">http://www.mozilla.org/rdf/chrome#</a>"&gt; &lt;/pre&gt; Te trzy linie powinny być umieszczone na samej górze pliku contents.rdf. Ponieważ RDF jest formatem XML-a, standardowo zawiera linię którą pliki XML zazwyczaj mają. Następnie deklarujemy przestrzenie nazw (namespaces) które będą użyte, jeden dla RDF-a i drugi dla systemu chrome. Jeśli nie rozumiesz co to znaczy, nie przejmuj się. Po prostu dodaj te trzy linijki na początku pliku. &lt;pre&gt; &lt;RDF:Seq about="urn:mozilla:package:root"&gt; &lt;RDF:li resource="urn:mozilla:package:myapplication"/&gt; &lt;/RDF:Seq&gt; &lt;/pre&gt; Te linijki są używane aby zadeklarować jakie paczki, skóry oraz locale są opisane w pliku. W tym przypadku opisywana jest zawartość paczki (jako wskazanej przez słowo 'package' w tekście). Jeśli tworzysz skórkę, powinieneś użyć słowa 'skin' zamiast 'package', natomiast jeśli tworzysz locale-a, użyjesz 'locale'. Nazwą paczki będzie 'myapplication' ('mojaaplikacja'). Oczywiście możesz ją zamienić na nazwę paczki którą tworzysz. Na przykład, aplikacja mailowa Mozilli ma nazwę 'messenger'. Nazwa powinna być krótka i wyrazista. Będzie ona używana w URLu chrome dla tej paczki. Tag &lt;font color="#FF0000"&gt;RDF:li&lt;/font&gt; wykorzystany powyżej jest raczej jak tag &lt;font color="#FF0000"&gt;li&lt;/font&gt; w HTML, czyli deklaruje element listy. A zatem możesz zadeklarować wieloskładnikowe paczki używając tagów &lt;font color="#FF0000"&gt;RDF:li&lt;/font&gt;. Dla motywów, zamień oba występujące w kodzie słowa 'package' na 'skin'; dla plików językowych (locale), zamień słowa 'package' na 'locale'. Poniższy przykład definiuje motyw: &lt;pre&gt; &lt;RDF:Seq about="urn:mozilla:skin:root"&gt; &lt;RDF:li resource="urn:mozilla:skin:blueswayedshoes"/&gt; &lt;/RDF:Seq&gt; &lt;/pre&gt; Następnie część opisowa, która określa nazwę oraz autora aplikacji: &lt;pre&gt; &lt;RDF:Description about="urn:mozilla:package:myapplication" chrome:displayName="My Application" chrome:author="name" chrome:name="myapplication"&gt; &lt;/RDF:Description&gt; &lt;/pre&gt; Ten blok jest używany, aby wprowadzić więcej detali opisujących paczkę, motyw czy plik językowy (locale). Będziesz potrzebował opisu dla każdego &lt;font color="#FF0000"&gt;li&lt;/font&gt;, którego masz. Wartość atrybutu &lt;font color="#00FF00"&gt;about&lt;/font&gt; powinna być taka sama jak atrybutu &lt;font color="#00FF00"&gt;resource&lt;/font&gt; w tagu &lt;font color="#ff0000"&gt;li&lt;/font&gt;. Trzy dodatkowe atrybuty przedstawiają dodatkowe informacje o paczce: * &lt;code&gt;displayName&lt;/code&gt;&lt;br&gt;Tytuł paczki jaki będzie wyświetlany użytkownikowi. Na przykład 'Messenger'. * &lt;code&gt;author&lt;/code&gt;&lt;br&gt;Imię autora paczki. * &lt;code&gt;name&lt;/code&gt;&lt;br&gt;Nazwa paczki, skina lub locale-a. Powinna być taka sama jak ta na końcu 'urn:mozilla:package:' które zostało określone wcześniej. Ta nazwa jest wykorzystywana jaki pierwsza część URLa chrome. Równie dobrze możesz używać wielu innych wartości. Gdy Mozilla zarejestruje twoją paczkę, te wartości będą dodane do rejestru chrome. &lt;div class="highlight"&gt; Stwórzmy plik contents.rdf dla opcji wyszukiwania plików, którą stworzymy. Trzeba będzie opisać paczkę. Ponieważ wewnątrz nie będzie żadnych dodatkowych paczek, skór ani locali, opis będzie bardzo podobny do przykładu powyżej. &lt;pre&gt; &lt;?xml version="1.0"?&gt; &lt;RDF:RDF xmlns:RDF="<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>" xmlns:chrome="<a class="external" href="http://www.mozilla.org/rdf/chrome#" rel="freelink">http://www.mozilla.org/rdf/chrome#</a>"&gt; &lt;RDF:Seq about="urn:mozilla:package:root"&gt; &lt;RDF:li resource="urn:mozilla:package:findfile"/&gt; &lt;/RDF:Seq&gt; &lt;RDF:Description about="urn:mozilla:package:findfile" chrome:displayName="Find Files" chrome:author="Whoever" chrome:name="findfile"&gt; &lt;/RDF:Description&gt; &lt;/RDF:RDF&gt; &lt;/pre&gt; Tutaj nazwą komponentu jest 'findfile', która oznacza, że będziemy mogli się odwołać do tego komponentu korzystając z następującego URLa chrome: &lt;pre&gt; <a class="external" rel="freelink">chrome://findfile/content/findfile.xul</a> &lt;/pre&gt; &lt;/div&gt;</span></p>
+
+<h3 id="Instalowanie_paczki" name="Instalowanie_paczki">Instalowanie paczki</h3>
+
+<p>For an application to be installed, you will need to create an installer for it, or include it as part of another application. The method used depends on what kind of application you are creating. For extensions, you will need to create an install file install.rdf which describes what will be installed, the author of the extension and which versions of the browser or other applications it is compatible with. <a href="/pl/Paczki" title="pl/Paczki">A specific directory structure</a> is needed as well since extensions are limited in where the files may be installed to. An extension is packaged up into an <a href="/pl/XPI" title="pl/XPI">XPI</a> file. XPI is short for <a href="/pl/XPInstall" title="pl/XPInstall">XPInstall</a> and is used by Mozilla to install components. Like a JAR file, an XPI file is just a ZIP file with a different extension, so you can create and view XPI files with a ZIP utility.</p>
+
+<p>Firefox's extension manager handles installing extensions packaged into XPI files automatically. It is recommended to upload extensions to the <a class="link-https" href="https://addons.mozilla.org/">Mozilla Add-ons site</a>, where users can locate them for installation. While they may be installed from any site, other sites are not configured to allow installations by default.</p>
+
+<p>It is also possible to use a install script written in JavaScript to install files. This allows you to copy files to any location and perform other file management tasks. However, applications installed with a script will not be listed in the extension manager and there is no automated method to uninstall them. For this reason, the install scripts are not used often.</p>
+
+<p>For standalone applications, they can be packaged up using XULRunner. This allows a separate executable file, and the application may be distributed independently of a browser.</p>
+
+<p>For more information about creating extensions, see <a href="/pl/Rozszerzenia" title="pl/Rozszerzenia">rozszerzenia</a>. For more information about XULRunner, see <a href="/pl/XULRunner" title="pl/XULRunner">XULRunner</a>.</p>
+
+<p><span class="comment">Lista zainstalowanych paczek przechowywana jest w katalogu chrome, w pliku chrome.rdf. Nie powiniejeś edytować go bezpośrednio. Plik ten zostanie automatycznie zmieniony, gdy zainstalujesz nową paczkę. Plik ten, tak samo jak contents.rdf jest formatu RDF. Na pierwszy rzut oka wygląda całkiem inaczej niż pliki &lt;code&gt;contents.rdf&lt;/code&gt;, ale jeśli jesteś zaznajomiony z <a href="/pl/RDF">RDF</a>-em, powinieneś szybko zauważyć podobieństwa. Gdy Mozilla uruchamia się, sprawdza najpierw katalog chrome i szuka pliku nazwanego 'installed-chrome.txt'. Plik ten zawiera listę, w bardzo prostym formacie, na której są wszystkie zainstalowane paczki, skórki i locale. Gdy plik ten jest modyfikowany, Mozilla skanuje wszystkie wpisy z listy i rejestruje lub aktualizuje te, które trzeba, by mogły być używane. Aby zarejestrować nową paczkę, wszystko co musisz zrobić, to dodać wpis do 'installed-chrome.txt' i zrestartować Mozillę. Nowa paczka zostanie zarejestrowana, a plik chrome.rdf zostanie zmodyfikowany jeśli trzeba, aby zawierał informacje o nowo zainstalowanych paczkach. Mozilla posiada także system instalacyjny nazwany XPInstall, który pozwala instalować skrypty za pomocą JavaScript, bez modyfikowania pliku ręcznie. XPInstall zostanie opisany na końcu tego tutoriala. Niemniej jednak podczas tworzenia aplikacji możemy modyfikować installed-chrome.txt bezpośrednio. Plik 'installed-chrome.txt' jest w katalogu chrome. Plik ten zawiera listę wpisów do instalacji, jeden element w jednej linijce. Na przykład: &lt;pre&gt; content,install,url,resource:/chrome/findfile/content/ skin,install,url,resource:/chrome/findfile/skin/ &lt;/pre&gt; Powyższe wpisy będą wykorzystane aby zainstalować paczkę findfiles oraz skórkę dla niej. Format każdej linijki jest niezwykle prosty. Zawiera cztery wartości oddzielone przecinkami:  ; Type (typ) : Ustawiony na 'content' dla zawartości paczki, 'skin' dla skórek oraz 'locale' dla locale-ów. ; Install (instalacja) : Wpisz tekst 'install' aby zainstalowac element. Dla skórki i locale-ów możesz także ustawić go jako 'profile' aby zainstalować te elementy w katalogu z profilem użytkownika. Oznacza to że element będzie zainstalowany tylko dla pojedynczego użytkownika. ; URL Type (typ adresu URL) : Wpisz tekst 'url' aby określić adres URL, gdzie nowe paczki, skórki lub locale mają być przechowywane. Jeśli wpiszesz 'path', możesz jako miejsce podać katalog (który powinien być zgodny z zapisem katalogów w twoim systemie operacyjnym). ;URL (adres URL) :Ustaw adres URL lub katalog paczki. Powinno być to miejsce w którym znajduje się bezpośrednio plik contents.rdf lub ścieżka i nazwa pliku JAR. Ponieważ wpis ten odnosi się do katalogu, upewnij się, że kończy się on slashem. W innym wypadku paczka nie zostanie odnaleziona. Zauważmy, że użyte URLe są w typie "resource:/". Możesz użyć również typu pliku. Resource URL jest podobny do file URL z wyjątkiem tego, że zaczyna się od "resource:" a nie "file:" oraz jego głównym katalogiem jest katalog, gdzie zainstalowana jest Mozilla, a nie główny katalog systemu. Oznacza to, że można tego używać, aby odnosić się do plików w katalogu Mozilli albo jej podkatalogów, niezależnie od tego gdzie została ona zainstalowana. Resource URL powinien mieć jeden slash po dwukropku, ponieważ jest to zawsze ścieżka względna. Dodana linia powinna wskazywać na katalog, zawierający contents.rdf. Jeśli posiadasz wiele pakietów, dodaj po jednej linii dla każdego. Pomimo, że Mozilla przestrzega reguł nazywania katalogów, możesz umieścić pliki, gdzie tylko chcesz. Na przykład następujące linijki zainstalują nowy pakiet, który jest usytuowany w katalogu &lt;code&gt;/main/calculator/&lt;/code&gt;. &lt;pre&gt; <a class="external" href="content,install,url,file:///main/calculator/" rel="freelink">content,install,url,file:///main/calculator/</a> &lt;/pre&gt; Powinieneś zauważyć, że istniejące linie w installed-chrome.txt mają jeszcze jeden typ URL, typ "jar:". Jeśli pakujesz swoje pliki do pliku JAR, możesz użyć JAR URL do odniesienia się do niego. Ma on dwie części oddzielone wykrzyknikiem (!). Część przed wykrzyknikiem to URL pliku JAR, a część po wykrzykniku to katalog albo plik wewnątrz archiwum. Poniższy przykład może odnosić się do znajdywania plików dialogu: &lt;pre&gt; jar:resource:/chrome/findfile.jar!/content/findfile/ &lt;/pre&gt; Jednak przeważnie nie musisz się martwić JAR URL-ami, gdy tworzysz swoje własne archiwa. Zamiast tego powinieneś trzymać pakiety rozpakowane i odnosić się do nich używając typu URL file albo resource.</span></p>
+
+<h3 id="Starsze_aplikacje" name="Starsze_aplikacje">Starsze aplikacje</h3>
+
+<p>If you are creating applications for older versions of Mozilla software, that is, before Firefox 1.5 or Mozilla 1.8, the process is a bit more involved. The following describes how to set up a package for earlier versions. This section may be skipped if you are writing new extensions or XUL applications.</p>
+
+<div class="note"><strong>Note</strong>: This older process does also apply to the new SeaMonkey 1.0 though. The codebase there has not yet adopted the <em>"Manifest"</em> format.</div>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+         xmlns:chrome="<span class="nowiki">http://www.mozilla.org/rdf/chrome#</span>"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:<span class="highlightred">myapplication</span>"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:<span class="highlightred">myapplication</span>"
+          chrome:displayName="<span class="highlightblue">Application Title</span>"
+          chrome:author="<span class="highlightblue">Author Name</span>"
+          chrome:name="<span class="highlightred">myapplication</span>"
+          chrome:extension="true"/&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+
+<pre class="eval">content,install,url,<span class="highlightred"><a class="external" rel="freelink">file:///main/app/</a></span>
+</pre>
+
+<ol>
+ <li>Create a directory somewhere on your disk. Many people put this as a subdirectory inside Mozilla's chrome directory, but this isn't necessary. The directory could be anywhere and on any disk. Put your XUL files in this directory.</li>
+ <li>Create a file called contents.rdf and place it in this directory. Copy the text in the box below into the new contents.rdf file. This file is used to identify the application id, its name, author, version and so on.</li>
+ <li>Change the highlighted parts of the file above to your own information. The red text 'myapplication' should be the ID of your application. You make this up, but typically, the ID is similar to your application's name. Replace the blue highlighted text above with your application's title and author.</li>
+ <li>If the 'chrome:extension' field is true, the application is a Mozilla Firefox Extension and it will show up in the Extensions window of the browser. If false, it will not appear.</li>
+ <li>Save the contents.rdf and make sure it is in the directory you created in step 1.</li>
+ <li>Open the file &lt;mozilla-directory&gt;/chrome/installed-chrome.txt, where &lt;mozilla-directory&gt; is the directory where Mozilla is installed. Exit Mozilla before you do this.</li>
+ <li>Next, you are going to register the new application with Mozilla so it will know where to find it. Add a line at the end of installed-chrome.txt pointing to the new directory you created in step 1. Change the highlighted text to the file URL below of the directory. Make sure that it URL ends with a slash and that you press enter at the end of the line. If you aren't sure what the URL is, open the directory created in step 1 into a Mozilla browser and copy the URL from the location field. Note that the reference should always be a directory, not a file.</li>
+ <li>Delete the file &lt;mozilla-directory&gt;/chrome/chrome.rdf.</li>
+ <li>Start Mozilla. You should be able to view any XUL files you put into the directory using a URL of the form: <strong>chrome://<span class="highlightred">applicationid</span>/content/file.xul</strong> where file.xul is the filename. Your main XUL file should be applicationid.xul which you can load using the shortcut URL <strong>chrome://<span class="highlightred">applicationid</span>/content/</strong>.</li>
+</ol>
+
+<p>If you are creating skin and/or locale portions, repeat the steps above, except that the format of the contents.rdf file is slightly different. Look at the contents.rdf files in other applications for details.</p>
+
+<p><span class="comment">== Na skróty == Powyższa informacja może być trochę myląca. Oto szybki przewodnik tworzenia prostych pakietów. Możesz po prostu robić krok po kroku to co jest tu napisane i spróbować zrozumieć detale przebiegu instalacji pakietów, gdy już będziesz bardziej rozumiał XUL. &lt;ol&gt; &lt;li&gt;Stwórz katalog gdzieś na swoim dysku. Wielu ludzi umieszcza go jako podkatalog w katalogu Mozilla chrome, ale nie jest to konieczne. Katalog może być gdziekolwiek na jakimkolwiek dysku. Umieść tam pliki XUL.&lt;/li&gt; &lt;li&gt;Stwórz plik o nazwie contents.rdf i umieść go w tym katalogu. Skopiuj tekst z poniższej ramki do nowo utworzonego pliku. Będzie on używany do zidentyfikowania aplikacji, jej nazwy, autora, wersji itp.&lt;/li&gt; &lt;?xml version="1.0"?&gt; &lt;RDF:RDF xmlns:RDF="&lt;nowiki&gt;<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>&lt;/nowiki&gt;" xmlns:chrome="&lt;nowiki&gt;<a class="external" href="http://www.mozilla.org/rdf/chrome#" rel="freelink">http://www.mozilla.org/rdf/chrome#</a>&lt;/nowiki&gt;"&gt; &lt;RDF:Seq about="urn:mozilla:package:root"&gt; &lt;RDF:li resource="urn:mozilla:package:&lt;span class="highlightred"&gt;myapplication&lt;/span&gt;"/&gt; &lt;/RDF:Seq&gt; &lt;RDF:Description about="urn:mozilla:package:&lt;span class="highlightred"&gt;myapplication&lt;/span&gt;" chrome:displayName="&lt;span class="highlightblue"&gt;Application Title&lt;/span&gt;" chrome:author="&lt;span class="highlightblue"&gt;Author Name&lt;/span&gt;" chrome:name="&lt;span class="highlightred"&gt;myapplication&lt;/span&gt;" chrome:extension="true"/&gt; &lt;/RDF:RDF&gt; &lt;li&gt;Zmień podświetlone fragmenty pliku na swoje własne informacje. Czerwony tekst "myapplication" powinien zawierać ID aplikacji. Możesz go zmyślić, ale typowo ID jest bardzo podobne do nazwy aplikacji. Zamień tekst podświetlony na niebiesko z tytułem i autorem aplikacji.&lt;/li&gt; &lt;li&gt;Jeśli pole "chrome:extension" zawiera "true", aplikacja to jedna z Rozszrzeń Mozilli Firefox (''Mozilla Firefox Extension'') i będzie wyświetlana w oknie Rozszerzeń (''Extension'') przeglądarki. Jeśli pole to zawiera "false", aplikacja nie pojawi się w tym oknie.&lt;/li&gt; &lt;li&gt;Zachowaj plik contents.rdf i upewnij się, że jest on w katalogu, który stworzyłeś w kroku pierwszym.&lt;/li&gt; &lt;li&gt;Otwórz plik &lt;mozilla-directory&gt;/chrome/installed-chrome.txt, gdzie &lt;mozilla-directory&gt; to katalog zainstalowania Mozilli. Przedtem zamknij Mozillę.&lt;/li&gt; &lt;li&gt;Następnie będziesz rejestrował nową aplikację w Mozilli, żeby program ten wiedział gdzie go może znaleźć. Dodaj linię na końcu pliku installed-chrome.txt, wskazując na nowy katalog, stworzony w kroku 1. Zmień poniższy podświetlony tekst na file URL (link do pliku). Upewnij się, że URL kończy się slash'em i że nacisnąłeś enter na końcu tej linii. Jeśli nie wiesz jaki jest URL, otwórz katalog, stworzony w kroku 1 w przeglądarce Mozilli i skopiuj URL z paska adresu. Zauważ, że odnośnik powinien być zawsze katalogiem, nie plikiem.&lt;/li&gt; content,install,url,&lt;span class="highlightred"&gt;<a class="external" rel="freelink">file:///main/app/</a>&lt;/span&gt; &lt;li&gt;Skasuj plik &lt;mozilla-directory&gt;/chrome/chrome.rdf.&lt;/li&gt; &lt;li&gt;Odpal Mozillę. Powinieneś być w stanie wyświetlić każdy z plików XUL, umieszczonych w katalogu przy użyciu URLa w formie: '''chrome://&lt;span class="highlightred"&gt;applicationid&lt;/span&gt;/content/file.xul''', gdzie file.xul to nazwa pliku. Głównym plikiem XUL powinien być applicationid.xul, możesz go załadować używając skrótu URL '''chrome://&lt;span class="highlightred"&gt;applicationid&lt;/span&gt;/content/'''.&lt;/li&gt; &lt;/ol&gt; Jeśli tworzysz skórki i/lub różnych użytkowników, powtórz wszystkie kroki, z tym że format pliku contents.rdf będzie trochę inny. Spójrz na pliki contents.rdf w innych aplikacjach, aby zobaczyć szczegóły.</span></p>
+
+<h3 id="Usuwanie_nieprawid.C5.82owo.C5.9Bci" name="Usuwanie_nieprawid.C5.82owo.C5.9Bci">Usuwanie nieprawidłowości</h3>
+
+<p>Tworzenie pakietu chrome może być często skomplikowane i jest trudne do zdiagnozowania w przypadku jakichkolwiek problemów. Znajduje się tu kilka porad w przypadku, gdybyśmy nie mogli sobie poradzić.</p>
+
+<ul>
+ <li>Otwórz plik &lt;mozilla-directory&gt;/chrome/chrome.rdf. Powinniśmy tam znaleźć odniesienie do ID swojej aplikacji. Jeśli nie, coś poszło źle podczas rejestracji. Jeśli jednak tam są, to jest prawdopodobne, że używasz złego adresu URL chrome, kiedy wczytujesz plik.</li>
+ <li>Spróbuj usunąć plik &lt;mozilla-directory&gt;/chrome/chrome.rdf. Zostanie on odnowiony. Usuń także cały katalog &lt;mozilla-directory&gt;/chrome/overlayinfo/, jeśli stosujemy nakładki.</li>
+ <li>Upewnij się, że adres URL w linii dodanej do installed-chrome.txt kończy się znakiem slash i sam plik kończy się pustą linią.</li>
+ <li>W Windows adresy URL pliku są często w formie <a class="external" rel="freelink">file:///C</a>|/files/app/, gdzie C to litera partycji dysku.</li>
+ <li>Upewnij się, że plik contents.rdf jest w odpowiednim katalogu i jest w odpowiednim typie. Otwórz ten plik w Mozilli, żeby zobaczyć czy jest rozpoznawany jako typ XML. Jeśli nie, ujrzysz błąd na żółtym tle.</li>
+ <li>Jeśli używasz debugera Mozilli, niektóre informacje będą wpisane do terminala podczas startowania, pokazując które aplikacje chrome są sprawdzane. Sprawdź czy twoja aplikacja jest na liście.</li>
+</ul>
+
+<p><span class="comment">* Make sure the contents.rdf file is in the right directory and is well-formed. Open the contents.rdf file in Mozilla to see if it parses as well-formed XML. If not, you will see an error on a yellow background. * If you are using a debug build of Mozilla, some info will be printed to the terminal when starting up indicating what chrome applications are being checked. Check if your application is listed.</span></p>
+
+<p>Aby dowiedzieć się więcej, przeczytaj artykuł o <a href="/pl/Rejestracja_Chrome" title="pl/Rejestracja_Chrome">rejestracji Chrome</a>.</p>
+
+<p>W następnym artykule rozpoczniemy już <a href="/pl/Kurs_XUL/Tworzenie_okna" title="pl/Kurs_XUL/Tworzenie_okna">naukę języka XUL</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:URL_Chrome" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_okna">Następny  »</a></p>
+</div><p></p>

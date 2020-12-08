@@ -1,0 +1,75 @@
+---
+title: Генерация GUID'ов
+slug: Generating_GUIDs
+translation_of: Mozilla/Tech/XPCOM/Generating_GUIDs
+---
+<p><strong>GUID</strong>s are used in Mozilla programming for identifying several types of entities, including XPCOM <a href="/en-US/docs/Interfaces">Interfaces</a> (this type of GUIDs is callled IID), components (CID), and legacy add-ons—like <a href="/en-US/docs/Extensions">extensions</a> and <a href="/en-US/docs/Themes">themes</a>—that were created prior to Firefox 1.5. <a href="/en-US/docs/Install_Manifests#id">Add-ons can (and should) be identified with IDs of the form <code><var>extensionname</var>@<var>organization</var>.<var>tld</var></code></a> since <a href="/en-US/docs/Firefox_1.5_for_developers">Firefox 1.5</a>.</p>
+<p></p><div class="blockIndicator warning">
+    <p><strong>Предупреждение:</strong> If you just want an ID for your add-on, generating a GUID is almost definitely not what you want to do. Using the <code><var>extensionname</var>@<var>organization</var>.<var>tld</var></code> form is approximately one thousand times easier for everyone involved. Don't have a domain name? Do you have a blog on a subdomain? Use that. If all else fails, using <code><var>extensionname</var>@<var>yourusername</var>.addons.mozilla.org</code> should be fine; no one will care. Remember, these are identifiers, not e-mail addresses, and they're never resolved.</p>
+</div><p></p>
+<h2 id="Canonical_form" name="Canonical_form">Canonical form</h2>
+<p>The common form of a GUID is <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx</code>, where each <code>x</code> stands for a hexadecimal digit. There are a number of tools that can be used to generate a GUID in the canonical form.</p>
+<div class="note">
+ <p><strong>Note:</strong> If you do choose to use an email-style ID for your add-on, you probably don't want it to be a real email address, since it might attract spam.</p>
+</div>
+<h3 id="Online_tools" name="Online_tools">Online tools</h3>
+<ul>
+ <li><a href="http://www.somacon.com/p113.php">Генерация GUID онлайн</a></li>
+ <li><a href="http://www.famkruithof.net/uuid/uuidgen">UUID (GUID) Generator on the WEB</a></li>
+ <li><a href="http://mozilla.pettay.fi/cgi-bin/mozuuid.pl">Генератор UUID для Mozilla Code</a> (две формы IDL и C++.h)</li>
+ <li>Вы можете получить GUID с помощью одного из ботов (например: botbot, firebot) в IRC на канале <a class="link-irc" href="irc://irc.mozilla.org/firefox">#firefox</a> с помощью команды <code>/msg ник_бота </code>"uuid".</li>
+</ul>
+<h3 id="Windows" name="Windows">Windows</h3>
+<p>Пользвоатели Windows могут использовать утилиту <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=94551F58-484F-4A8C-BB39-ADB270833AFC&amp;displaylang=en">GuidGen</a> от Microsoft для получения GUID. (Эта утилита является частью MS Visual C++)</p>
+<h3 id="Linux" name="Linux">Linux</h3>
+<p>Используйте <code>/usr/bin/uuidgen</code>. Является частью пакета <code>libuuid1</code> (Debian).</p>
+<h3 id="Mac_OS_X">Mac OS X</h3>
+<p><code>Используйте<code> </code>/usr/bin/uuidgen</code>.</p>
+<h3 id="Perl" name="Perl">Perl</h3>
+<ul>
+ <li><a href="http://www.johnkeiser.com/mozilla/mozilla_tools.html">jkeiser's Mozilla tools</a> include a UUID generator with output format of both C++ and IDL style.</li>
+ <li>sfink's <a href="http://people.mozilla.org/~sfink/uploads/update-uuids">update-uuids</a> will change the uuid for a given interface and all of its descendants, updating all *.idl files within a directory tree.</li>
+</ul>
+<h3 id="nsIUUIDGenerator" name="nsIUUIDGenerator">nsIUUIDGenerator</h3>
+<p>A UUID can be generated from privileged Mozilla code using <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIUUIDGenerator">nsIUUIDGenerator</a></code>. See the linked page for details.</p>
+<h2 id="COM.2FXPCOM_format" name="COM.2FXPCOM_format">Формат COM/XPCOM</h2>
+<p>Используя <code>#define</code> для IID и CID в коде Mozilla C++, вы должны использовать следующий формат:</p>
+<pre>// xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+#define NS_...ID \
+{ 0xXXXXXXXX, 0xXXXX, 0xXXXX, \
+  { 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX } }
+</pre>
+<p>You can generate code in this format using one of the following tools.</p>
+<h3 id="Online_tools_2" name="Online_tools_2">Онлайн утилита</h3>
+<ul>
+ <li><a href="http://mozilla.pettay.fi/cgi-bin/mozuuid.pl" rel="freelink">http://mozilla.pettay.fi/cgi-bin/mozuuid.pl</a></li>
+</ul>
+<h3 id="guidgen" name="guidgen">guidgen</h3>
+<p><code>guidgen.exe</code>, часть Microsoft Visual Studio, может генерировать UUID в нужном формате.</p>
+<h3 id="bash" name="bash">bash</h3>
+<p>Можете добавить в файл <code>.bashrc</code> следующий код:</p>
+<pre>uuidgen-c++()
+{
+    local UUID=$(uuidgen)
+    echo "// $UUID"
+    echo "#define NS__IID \\"
+    echo "{ 0x${UUID:0:8}, 0x${UUID:9:4}, 0x${UUID:14:4}, \\"
+    echo -n "  { 0x${UUID:19:2}, 0x${UUID:21:2}, 0x${UUID:24:2}, "
+    echo -n "0x${UUID:26:2}, 0x${UUID:28:2}, 0x${UUID:30:2}, "
+    echo "0x${UUID:32:2}, 0x${UUID:34:2} } }"
+}
+</pre>
+<h3 id="Perl_2" name="Perl_2">Perl</h3>
+<pre>#!/usr/bin/perl
+$uuid = `uuidgen`;
+chomp $uuid;
+print $uuid, "\n";
+@parts = ($uuid =~ /^(.{8})-(.{4})-(.{4})-(..)(..)-(..)(..)(..)(..)(..)(..)$/);
+print "{ 0x$parts[0], 0x$parts[1], 0x$parts[2], \\", "\n", " { ";
+for (3 .. 9) {
+  print "0x$parts[$_], ";
+}
+print "0x$parts[10] } }", "\n";
+</pre>
+<div id="cke_pastebin" style="position: absolute; top: 762.5px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+  </div>

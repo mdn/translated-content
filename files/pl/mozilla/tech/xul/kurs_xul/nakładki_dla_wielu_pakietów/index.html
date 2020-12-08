@@ -1,0 +1,89 @@
+---
+title: Nakładki dla wielu pakietów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Nakładki_dla_wielu_pakietów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Cross_Package_Overlays
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Nakładki" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_instalatora">Następny  »</a></p>
+</div> Ten artykuł opisuje, jak zastosować nakładki do plików, które ich nie importują.<p></p>
+
+<h2 id="Zastosowanie_nak.C5.82adek_do_innych_pakiet.C3.B3w" name="Zastosowanie_nak.C5.82adek_do_innych_pakiet.C3.B3w">Zastosowanie nakładek do innych pakietów</h2>
+
+<div class="note">Note: This section talks about contents.rdf which has been replaced in <a href="pl/Gecko">Gecko</a> 1.8 by <a href="pl/Kurs_XUL/Pliki_manifestu">pliki manifestu</a>.</div>
+
+<p>Nakładki mają inną użyteczna cechę. W przykładach z <a href="pl/Kurs_XUL/Nak%c5%82adki">poprzedniej sekcji</a>, nakładki były importowane przez okno. Możesz również podejść do tego z innej strony i posiadać wyszczególnione nakładki które stosują okna. Wyszczególnisz je przez zmodyfikowanie pliku content.rdf twojego pakietu. Jest to użyteczne ponieważ nakładka może modyfikować interfejs użytkownika lub inny pakiet bez zmiany innego pakietu. Na przykład możesz dodać pozycję <a href="pl/Kurs_XUL/Proste_paski_menu">menu</a> lub <a href="pl/Kurs_XUL/Paski_narz%c4%99dzi">pasek narzędziowy</a> do okna przeglądarki Mozilla.</p>
+
+<p>Użyjemy tej cechy do dodania paska zadań do okna przeglądarki Mozilli Aplikacja Mozilla Mail używa nakładek dla dodawania zawartości do okna przeglądarki. Na przykład, jeśli Mail nie jest zainstalowany, nie będzie polecenia Nowa Wiadomość. Jednak jeśli Mail jest zainstalowany, nakładka będzie zastosowana w menu dla dodania polecenia Nowa Wiadomość. Poniżej dodamy pasek narzędziowy znajdowania plików do przeglądarki. Ta cecha nie będzie prawdopodobnie zbyt użyteczna, ale zróbmy to.</p>
+
+<p>Mozilla pozwala ci dodać listę nakładek do pliku content.rdf, którego używasz do listy chromowych (pokazowe funkcje, które przyciągają uwagę użytkowników, ale niewiele wnoszą do możliwości systemu)pakietów, skórek i narodowości. Kiedyś tworząc nakładkę musiałeś dodać ją do pliku content.rdf. Potem dodać pozycję, jedną dla każdego okna w jakim chciałeś zastosować nakładkę.</p>
+
+<div class="highlight">
+<h3 id="Our_find_files_example" name="Our_find_files_example">Our find files example</h3>
+
+<p>Najpierw stwórzmy prostą nakładkę. Będzie ona miała kilka pól dla wprowadzenia nazwy pliku i katalogu dla wyszukania. Wywołaj plik foverlay.xul i dodać go katalogu findfile wraz z findfile.xul</p>
+
+<h3 id="Our_foverlay.xul_example" name="Our_foverlay.xul_example">Our foverlay.xul example</h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_crosspov_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;overlay
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;toolbox id="navigator-toolbox"&gt;
+  &lt;toolbar id="findfile_toolbar"&gt;
+    &lt;label control="findfile_filename" value="Search for files named:"/&gt;
+    &lt;textbox id="findfile_filename"/&gt;
+    &lt;label control="findfile_dir" value="Directory:"/&gt;
+    &lt;textbox id="findfile_dir"/&gt;
+    &lt;button label="Browse..."/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+
+&lt;/overlay&gt;
+</pre>
+
+<p>Możesz zobaczyć to przez zmianę nakładki na okno. Jedyną rzeczą, jaka jest tu specjalna jest zastosowanie <code>id</code> used on the <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>. Wartość ta (<code>navigator-toolbox</code>) jest taka sama jak identyfikator okna narzędziowego w oknie przeglądarki (navigator.xul) Oznacza to ,że nakładka będzie zastosowana do okna narzędziowego w oknie przeglądarki a zawartość będzie dodana jako dodatkowy pasek narzędzi.</p>
+
+<p>Aby dodać tą nakładkę do pliku - wykazu, musisz dodać dwa zasoby. Najpierw dodajemy jedną dla każdego okna, w którym stosujemy nakładkę. Poniższy kod powinien być dodany do pliku content.rdf zanim zamkniemy znacznik RDF.</p>
+
+<pre>&lt;RDF:Seq about="urn:mozilla:overlays"&gt;
+  &lt;RDF:li resource="chrome://navigator/content/navigator.xul"/&gt;
+&lt;/RDF:Seq&gt;
+</pre>
+
+<p>Deklaruje on, że dodajemy nakładkę okna, potomka źródłowego węzła nakładki (urn:mozilla:overlays) Możesz dodać dodatkowe węzły dla dowolnego okna, w którym chcesz zastosować nakładki poprzez dodanie dodatkowych węzłów <code>li</code>.</p>
+
+<p>Następnie dodajemy węzeł dla każdej nakładki stosowanej w oknie. W tym przypadku, mamy tylko jedną, ale możemy zastosować również pozostałe. Dodaj te linie po poprzednich liniach</p>
+
+<pre>&lt;RDF:Seq about="chrome://navigator/content/navigator.xul"&gt;
+  &lt;RDF:li&gt;chrome://findfile/content/foverlay.xul&lt;/RDF:li&gt;
+&lt;/RDF:Seq&gt;
+</pre>
+</div>
+
+<div class="float-right"><img alt="Image:crosspov1.jpg"></div>
+
+<p>Mozilla odczytuje te informacje i buduje listę nakładek, które są stosowane z innymi oknami. Przechowuje tą informację w katalogu chrome/overlayinfo. Nie musisz ręcznie modyfikować tych plików w tym katalogu. Jest automatycznie generowany i modyfikowany, kiedy Mozilla jest pierwszy raz uruchamiana lub kiedy nowe pakiety są zainstalowane. Jednakże możesz wymusić daną będącą przebudowana przez usunięcie tego katalogu i pliku chrome.rdf.</p>
+
+<p>Możemy stosować podobne techniki do zastosowania dodatkowych arkuszy stylów. Pokazuje to poniższy przykład:</p>
+
+<pre>&lt;RDF:Seq about="urn:mozilla:stylesheets"&gt;
+  &lt;RDF:li resource="chrome://messenger/content/messenger.xul"/&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;RDF:Seq about="chrome://messenger/content/messenger.xul"&gt;
+  &lt;RDF:li&gt;chrome://blueswayedshoes/skin/myskinfile.css&lt;/RDF:li&gt;
+&lt;/RDF:Seq&gt;
+</pre>
+
+<p>Następnie zobaczymy <a href="pl/Kurs_XUL/Tworzenie_instalatora">jak stworzyć instalator</a> dla aplikacji XUL.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Nakładki" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_instalatora">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,328 @@
+---
+title: Midas
+slug: Midas
+tags:
+  - DOM
+  - Midas
+  - NeedsContent
+  - NeedsHelp
+  - NeedsTechnicalReview
+  - NeedsTranslation
+  - TopicStub
+  - needsattention
+translation_of: Mozilla/Projects/Midas
+---
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+
+<p>Midas is the code name for Gecko's built-in rich text editor. Midas can be enabled via JavaScript on an HTML document. When Midas is enabled, the document becomes editable by the user. Scripting for Midas is based on the <a href="http://msdn.microsoft.com/en-us/library/ms533049.aspx">DHTML commands</a> supported by Internet Explorer. Internet Explorer supports the ability to make an entire document editable by setting the <code>designMode</code> property of the {{domxref("document")}} object; this is how Midas is invoked in Gecko. Internet Explorer also supports the ability to edit specific elements using the <code>contentEditable</code> attribute; Starting with Firefox 3, Gecko also supports <code>contentEditable</code>. Once Midas is invoked, a few more methods of the <code>document</code> object become available.</p>
+
+<h2 id="Properties" name="Properties">Properties</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Midas/designMode">document.designMode</a></dt>
+ <dd>By setting this property to "on", the document becomes editable.</dd>
+</dl>
+
+<h2 id="Notes" name="Notes">Notes</h2>
+
+<p>Since an entire document becomes editable, authors often load the editable document into an <code>IFRAME</code> and do the bulk of the scripting in the parent document. According to <a href="http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html#ID-50708718">standards</a>, The <code>IFRAME</code> element has the <code>contentDocument</code> property that refers to the document in the inline frame. It also has a property called <code>contentWindow</code> that refers to the window object inside the inline frame. This also avoids problems with {{bug(198155)}}.</p>
+
+<p>In addition to the built-in commands, advanced editing can be done by manipulating the {{domxref("Selection")}} and {{domxref("range")}} objects. It is beneficial to be familiar with these objects when working with an editable document.</p>
+
+<h2 id="Examples" name="Examples">Examples</h2>
+
+<p>This example shows the basic structure described in the Notes section :</p>
+
+<pre>&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Simple Edit Box&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;iframe
+			id="MidasForm"
+			src="about:blank"
+			onload="this.contentDocument.designMode='on';"
+		&gt;&lt;/iframe&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<dl>
+ <dt>{{domxref("Document.execCommand")}}</dt>
+ <dd>Executes the given command.</dd>
+ <dt>{{domxref("Document.queryCommandEnabled")}}</dt>
+ <dd>Determines whether the given command can be executed on the document in its current state.</dd>
+ <dt>{{domxref("Document.queryCommandIndeterm")}}</dt>
+ <dd>Determines whether the current selection is in an indetermined state.</dd>
+ <dt>{{domxref("Document.queryCommandState")}}</dt>
+ <dd>Determines whether the given command has been executed on the current selection.</dd>
+ <dt>{{domxref("Document.queryCommandValue")}}</dt>
+ <dd>Determines the current value of the document, range, or current selection for the given command.</dd>
+</dl>
+
+<h2 id="Supported_Commands" name="Supported_Commands">Supported Commands</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Command</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>backcolor</td>
+   <td>A color code.</td>
+   <td>This command will set the background color of the document.</td>
+  </tr>
+  <tr>
+   <td>bold</td>
+   <td> </td>
+   <td>If there is no selection, the insertion point will set bold for subsequently typed characters.
+    <p>If there is a selection and all of the characters are already bold, the bold will be removed. Otherwise, all selected characters will become bold.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentReadOnly</td>
+   <td> </td>
+   <td>This command will make the editor readonly(true)or editable(false). Anticipated usage is for temporarily disabling input while something else is occurring elsewhere in the web page.</td>
+  </tr>
+  <tr>
+   <td>copy</td>
+   <td> </td>
+   <td>If there is a selection, this command will copy the selection to the clipboard. If there isn't a selection, nothing will happen.
+    <p>note: this command won't work without setting a pref or using signed JS. See: <a href="http://www.mozilla.org/editor/midasdemo/securityprefs.html">more about security preferences</a></p>
+
+    <p>note: the shortcut key will automatically trigger this command (typically accel-C) with or without the signed JS or any code on the page to handle it.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>createlink</td>
+   <td>A URI.</td>
+   <td>This command will not do anything if no selection is made. If there is a selection, a link will be inserted around the selection with the url parameter as the href of the link.</td>
+  </tr>
+  <tr>
+   <td>cut</td>
+   <td> </td>
+   <td>If there is a selection, this command will copy the selection to the clipboard and remove the selection from the edit control. If there isn't a selection, nothing will happen.
+    <p>note: this command won't work without setting a pref or using signed JS. See: <a href="http://www.mozilla.org/editor/midasdemo/securityprefs.html">more about security preferences</a></p>
+
+    <p>note: the shortcut key will automatically trigger this command (typically accel-X) with or without the signed JS or any code on the page to handle it.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>decreasefontsize</td>
+   <td> </td>
+   <td>This command will add a &lt;small&gt; tag around selection or at insertion point.</td>
+  </tr>
+  <tr>
+   <td>delete</td>
+   <td> </td>
+   <td>This command will delete all text and objects that are selected. If no text is selected it deletes one character to the right. This is similar to the <em>Delete</em> button on the keyboard.</td>
+  </tr>
+  <tr>
+   <td>fontname</td>
+   <td>A font name</td>
+   <td>This command will set the font face for a selection or at the insertion point if there is no selection.
+    <p>The given string is such as would be used in the "face" attribute of the font tag, i.e., a comma-separated list of font names.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>fontsize</td>
+   <td>A number</td>
+   <td>This command will set the fontsize for a selection or at the insertion point if there is no selection.
+    <p>The given number is such as would be used in the "size" attribute of the font tag.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>forecolor</td>
+   <td>A color code</td>
+   <td>This command will set the text color of the selection or at the insertion point.</td>
+  </tr>
+  <tr>
+   <td>formatblock</td>
+   <td>H1, H2, H3, H4, H5, H6, P, DIV, ADDRESS, BLOCKQUOTE (more?)</td>
+   <td>The selection surrounded by the given block element.</td>
+  </tr>
+  <tr>
+   <td>heading</td>
+   <td>H1, H2, H3, H4, H5, H6</td>
+   <td>Selected block will be formatted as the given type of heading.</td>
+  </tr>
+  <tr>
+   <td>hilitecolor</td>
+   <td>A color code</td>
+   <td>This command will set the hilite color of the selection or at the insertion point. It only works with styleWithCSS enabled.</td>
+  </tr>
+  <tr>
+   <td>increasefontsize</td>
+   <td> </td>
+   <td>This command will add a &lt;big&gt; tag around selection or at insertion point.</td>
+  </tr>
+  <tr>
+   <td>indent</td>
+   <td> </td>
+   <td>Indent the block where the caret is located. If the caret is inside a list, that item becomes a sub-item one level deeper.</td>
+  </tr>
+  <tr>
+   <td>insertbronreturn</td>
+   <td>true/false</td>
+   <td>Selects whether pressing return inside a paragraph creates another paragraph or just inserts a &lt;br&gt; tag.</td>
+  </tr>
+  <tr>
+   <td>inserthorizontalrule</td>
+   <td>null/string (when string is the Line's id)</td>
+   <td>This command will insert a horizontal rule (line) at the insertion point.
+    <p>Does it delete the selection? Yes!</p>
+   </td>
+  </tr>
+  <tr>
+   <td>inserthtml</td>
+   <td>A string.</td>
+   <td>This command will insert the given html into the &lt;body&gt; in place of the current selection or at the caret location.
+    <p>The given string is the HTML to insert.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>insertimage</td>
+   <td>A URI.</td>
+   <td>This command will insert an image (referenced by the given url) at the insertion point.</td>
+  </tr>
+  <tr>
+   <td>insertorderedlist</td>
+   <td> </td>
+   <td>Depends on the selection. If the caret is not inside a non-LI block, that block becomes the first LI and an OL. If the caret is inside a bulleted item, the bulleted item becomes a numbered item.</td>
+  </tr>
+  <tr>
+   <td>insertunorderedlist</td>
+   <td> </td>
+   <td>Depends on the selection. If the caret is not inside a non-LI block, that block becomes the first LI and UL. If the caret is inside a numbered item, the numbered item becomes a bulleted item.</td>
+  </tr>
+  <tr>
+   <td>insertparagraph</td>
+   <td> </td>
+   <td>Inserts a new paragraph.</td>
+  </tr>
+  <tr>
+   <td>italic</td>
+   <td> </td>
+   <td>If there is no selection, the insertion point will set italic for subsequently typed characters.
+    <p>If there is a selection and all of the characters are already italic, the italic will be removed. Otherwise, all selected characters will become italic.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>justifycenter</td>
+   <td> </td>
+   <td>Center-aligns the current block.</td>
+  </tr>
+  <tr>
+   <td>justifyfull</td>
+   <td> </td>
+   <td>Fully-justifies the current block.</td>
+  </tr>
+  <tr>
+   <td>justifyleft</td>
+   <td> </td>
+   <td>Left-aligns the current block.</td>
+  </tr>
+  <tr>
+   <td>justifyright</td>
+   <td> </td>
+   <td>Right aligns the current block.</td>
+  </tr>
+  <tr>
+   <td>outdent</td>
+   <td> </td>
+   <td>Outdent the block where the caret is located. If the block is not indented prior to calling outdent, nothing will happen.
+    <p>If the caret is in a list item, the item will bump up a level in the list or break out of the list entirely.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>paste</td>
+   <td> </td>
+   <td>This command will paste the contents of the clipboard at the location of the caret. If there is a selection, it will be deleted prior to the insertion of the clipboard's contents.
+    <p>note: this command won't work without setting a pref or using signed JS. user_pref("capability.policy.policynames", "allowclipboard"); user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess"); See: <a href="http://www.mozilla.org/editor/midasdemo/securityprefs.html">more about security preferences</a></p>
+
+    <p>note: the shortcut key will automatically trigger this command (typically accel-V) with or without the signed JS or any code on the page to handle it.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>redo</td>
+   <td> </td>
+   <td>This command will redo the previous undo action. If undo was not the most recent action, this command will have no effect.
+    <p>note: the shortcut key will automatically trigger this command (typically accel-shift-Z)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>removeformat</td>
+   <td> </td>
+   <td>Removes inline formatting from the current selection.</td>
+  </tr>
+  <tr>
+   <td>selectall</td>
+   <td> </td>
+   <td>This command will select all of the contents within the editable area.
+    <p>note: the shortcut key will automatically trigger this command (typically accel-A)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>strikethrough</td>
+   <td> </td>
+   <td>If there is no selection, the insertion point will set strikethrough for subsequently typed characters.
+    <p>If there is a selection and all of the characters are already striked, the strikethrough will be removed. Otherwise, all selected characters will have a line drawn through them.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>styleWithCSS</td>
+   <td> </td>
+   <td>This command is used for toggling the format of generated content. By default (at least today), this is true. An example of the differences is that the "bold" command will generate &lt;b&gt; if the styleWithCSS command is false and generate css style attribute if the styleWithCSS command is true.</td>
+  </tr>
+  <tr>
+   <td>subscript</td>
+   <td> </td>
+   <td>If there is no selection, the insertion point will set subscript for subsequently typed characters.
+    <p>If there is a selection and all of the characters are already subscripted, the subscript will be removed. Otherwise, all selected characters will be drawn slightly lower than normal text.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>superscript</td>
+   <td> </td>
+   <td>If there is no selection, the insertion point will set superscript for subsequently typed characters.
+    <p>If there is a selection and all of the characters are already superscripted, the superscript will be removed. Otherwise, all selected characters will be drawn slightly higher than normal text.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>underline</td>
+   <td> </td>
+   <td>If there is no selection, the insertion point will set underline for subsequently typed characters.
+    <p>If there is a selection and all of the characters are already underlined, the underline will be removed. Otherwise, all selected characters will become underlined.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>undo</td>
+   <td> </td>
+   <td>This command will undo the previous action. If no action has occurred in the document, then this command will have no effect.
+    <p>note: the shortcut key will automatically trigger this command (typically accel-Z)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>unlink</td>
+   <td> </td>
+   <td>If the insertion point is within a link or if the current selection contains a link, the link will be removed and the text will remain.</td>
+  </tr>
+  <tr>
+   <td colspan="3">{{Deprecated_header}}</td>
+  </tr>
+  <tr>
+   <td>readonly</td>
+   <td> </td>
+   <td>This command has been replaced with contentReadOnly. It takes the same values as contentReadOnly, but the meaning of true and false are inversed.</td>
+  </tr>
+  <tr>
+   <td>useCSS</td>
+   <td> </td>
+   <td>This command has been replaced with styleWithCSS. It takes the same values as styleWithCSS, but the meaning of true and false are inversed.</td>
+  </tr>
+ </tbody>
+</table>

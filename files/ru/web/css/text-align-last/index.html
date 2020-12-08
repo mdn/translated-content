@@ -1,0 +1,139 @@
+---
+title: text-align-last
+slug: Web/CSS/text-align-last
+translation_of: Web/CSS/text-align-last
+---
+<div>{{CSSRef}}</div>
+
+<div>{{SeeCompatTable}}</div>
+
+<h2 id="Кратко">Кратко</h2>
+
+<p><code>text-align-last</code> CSS свойство описывает как выравнивается последняя строка в блоке или строка, идущая сразу перед принудительным разрывом строки.</p>
+
+<div>{{cssinfo}}</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("text-align-last")}}</pre>
+
+<pre>text-align-last: auto
+text-align-last: start
+text-align-last: end
+text-align-last: left
+text-align-last: right
+text-align-last: center
+text-align-last: justify
+
+text-align-last: inherit
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>Затронутая строка выравнивается в зависимости от значения  {{cssxref("text-align")}}, за исключением {{cssxref("text-align")}} со значением <code>justify</code>, в этом случае эффект такой же как установить <code>text-align-last</code> равным <code>left</code>.</dd>
+ <dt><code>start</code></dt>
+ <dd>Подобно <code>left</code> если направление слева направо, и <code>right</code> если направление справа налево.</dd>
+ <dt><code>end</code></dt>
+ <dd>Подобно <code>right</code> если направление слева направо, и <code>left</code> если направление справа налево.</dd>
+ <dt><code>left</code></dt>
+ <dd>Линейное содержимое выравнивается по левому краю линейного блока.</dd>
+ <dt><code>right</code></dt>
+ <dd>Линейное содержимое выравнивается по правому краю линейного блока.</dd>
+ <dt><code>center</code></dt>
+ <dd>Линейное содержимое центрируется внутри линейного блока.</dd>
+ <dt><code>justify</code></dt>
+ <dd>Текст выравнивается по ширине. Тексту следует выстраивать свои левые и правые границы по левым и правым границам содержимого параграфа.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush:css">div {
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Text', '#text-align-last', 'text-align-last')}}</td>
+   <td>{{Spec2('CSS3 Text')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>35<br>
+    {{WebkitBug("76173")}}</td>
+   <td>{{CompatGeckoDesktop("12.0")}}{{property_prefix('-moz')}}</td>
+   <td>5.5</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}<br>
+    {{WebkitBug("76173")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая<br>
+    поддержка</td>
+   <td>{{CompatNo}}<br>
+    {{WebkitBug("76173")}}</td>
+   <td>{{CompatGeckoMobile("12.0")}}{{property_prefix('-moz')}}</td>
+   <td>6.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}<br>
+    {{WebkitBug("76173")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>В Internet Explorer значения <code>start</code> и <code>end</code> <a href="http://msdn.microsoft.com/en-us/library/ie/ms531163%28v=vs.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ie/ms531163%28v=vs.85%29.aspx">не поддерживаются</a>.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{cssxref("text-align")}}</li>
+</ul>

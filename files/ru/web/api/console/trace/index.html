@@ -1,0 +1,66 @@
+---
+title: Console.trace()
+slug: Web/API/Console/trace
+translation_of: Web/API/Console/trace
+---
+<div>{{APIRef("Console API")}}</div>
+
+<p>Выводит стэк трэйс в  <a href="/en-US/docs/Tools/Web_Console">Веб Консоль</a>.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<p>Посмотрите <a href="/en-US/docs/Web/API/console#Stack_traces">Стэк трэйсы</a> в документации {{domxref("console")}} с деталями и примерами.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">console.trace();
+</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">function foo() {
+  function bar() {
+    console.trace();
+  }
+  bar();
+}
+
+foo();
+</pre>
+
+<p>В консоли следующий трэйс будет отображен так:</p>
+
+<pre>bar
+foo
+&lt;anonymous&gt;</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#trace", "console.trace()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td>Стандартное значение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+
+
+
+<p>{{Compat("api.Console.trace")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Документация Opera Dragonfly: Консоль</a></li>
+</ul>

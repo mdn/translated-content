@@ -1,0 +1,72 @@
+---
+title: Host
+slug: Web/HTTP/Заголовки/Host
+translation_of: Web/HTTP/Headers/Host
+---
+<div>{{HTTPSidebar}}</div>
+
+
+
+<p>Заголовок <strong>Host</strong> содержит имя домена, для которого предназначен запрос и, опционально, номер порта.</p>
+
+<p>Если порт не указан, то используется умолчательный порт протокола/сервиса (например «80» для HTTP, "443" для HTTPS и т.д.).</p>
+
+<p>Каждый HTTP/1.1 запрос должен содержать один и только один заголовок <strong>Host</strong>, в ином случае ответ будет с кодом статуса {{HTTPStatus("400")}}  (Bad Request).</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Тип заголовка</th>
+   <td>{{Glossary("Request header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}} Неизменяемый</th>
+   <td>да</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Синтакс">Синтакс</h2>
+
+<pre class="syntaxbox">Host: &lt;host&gt;:&lt;port&gt;
+</pre>
+
+<h2 id="Обозначения">Обозначения</h2>
+
+<dl>
+ <dt>&lt;host&gt;</dt>
+ <dd>доменное имя сервера</dd>
+ <dt>&lt;port&gt; {{optional_inline}}</dt>
+ <dd>номер порта</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<pre>Host: developer.cdn.mozilla.net</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Стандарт/спецификация</th>
+   <th scope="col">Название</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7230", "Host", "5.4")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<p class="hidden">Таблица совместимости на этой странице была сгенерирована из автоматически собранных данных. Если вы хотите дополнить или исправить эти данные, то оформите пожалуйста pull-request в проекте <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> </p>
+
+<p>{{Compat("http.headers.Host")}}</p>
+
+<h2 id="См._ещё">См. ещё</h2>
+
+<ul>
+ <li>{{HTTPStatus("400")}}</li>
+</ul>

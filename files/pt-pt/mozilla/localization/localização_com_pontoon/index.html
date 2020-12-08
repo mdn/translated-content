@@ -1,0 +1,138 @@
+---
+title: Traduzir com Pontoon
+slug: Mozilla/Localization/Localização_com_Pontoon
+tags:
+  - Localização
+  - Tradução
+translation_of: Mozilla/Localization/Localizing_with_Pontoon
+---
+<p><a href="https://pontoon.mozilla.org/pt-PT/" title="https://pontoon.mozilla.org">Pontoon</a> é uma ferramenta de localização (l10n), O-Que-Vê-É-O-Que-Obtém (WYSIWYG) baseada na Web. Na Mozilla, nós utilizamos o Pontoon para localizar todos os produtos e sites da Web da Mozilla, desde o Firefox até Mozilla.org. Pontoon é uma ferramenta muito simples e intuitiva que requer poucos conhecimentos técnicos para utilizar no ritmo de trabalho de l10n. Aqui, nós iremos discutir como utilizar o Pontoon para localizar projetos, desde o primeiro início de sessão até concluir as suas contribuições. Ao longo do caminho, nós iremos sugerir algumas funcionalidades que irão tornar mais eficiente e facilitar as suas contribuições no seu l10n.</p>
+
+<div class="note">
+<p><strong>É um programador?</strong> Leia sobre a <a href="/pt-PT/docs/Mozilla/Implementacao_do_Pontoon_num_projeto_da_Mozilla">implementação do Pontoon no seu projet</a>o ou saiba como participar no <a href="https://github.com/mozilla/pontoon">GitHub</a>.</p>
+</div>
+
+<h2 id="Primeiros_passos">Primeiros passos</h2>
+
+<p><a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon's home page</a> is very easy to use. To begin localizing the project, click on the Persona icon and sign in. Next, simply select the project you want to work on and your locale from the dropdown menus. Pontoon will automatically open that locale's project for you to get started. Note that for our purposes here, we'll be using <a href="https://affiliates.mozilla.org/">Firefox Affiliates</a> website to demo Pontoon's functionality and workflow. And there it is, opened inside Pontoon:</p>
+
+<p><em><img alt="Browser app and workspace" src="https://mdn.mozillademos.org/files/8323/affiliates.png" style="height: 558px;"></em></p>
+
+<h3 id="Barra_de_ferramentas_principal">Barra de ferramentas principal</h3>
+
+<p>As you can see, most of the interface is taken by the website being translated. Only the toolbar on top belongs to Pontoon, containing the following items (from left to right):</p>
+
+<p><img alt="Main toolbar" src="https://mdn.mozillademos.org/files/8325/toolbar.png"></p>
+
+<h4 id="Lista_de_textos">Lista de textos</h4>
+
+<p>Opens a sidebar with a list of all strings to localize.</p>
+
+<h4 id="Seletor_de_projeto_(Afiliados)"><span id="cke_bm_939S" style="display: none;"> </span>Seletor de projeto (Afiliados)</h4>
+
+<p>Switches between projects to localize.</p>
+
+<h4 id="Seletor_de_recursos_(Página_Inicial)"><span id="cke_bm_940S" style="display: none;"> </span>Seletor de recursos (Página Inicial)</h4>
+
+<p>Switches between project resources to localize, like subpages or localization files. Hidden if no resources available for project.</p>
+
+<h4 id="sect1"><span id="cke_bm_941S" style="display: none;"> </span></h4>
+
+<dl>
+</dl>
+
+<h4 id="Seletor_de_idioma_(Esloveno)">Seletor de idioma (Esloveno)</h4>
+
+<p>Switches between languages to localize.</p>
+
+<h4 id="Ir">Ir</h4>
+
+<p>Opens project-resource-locale selection.</p>
+
+<h4 id="Indicado_do_progresso">Indicado do progresso</h4>
+
+<p>Displays your progress on the resource being localized. More details are available in the popup.</p>
+
+<dl>
+</dl>
+
+<h4 id="Menu_do_utilizador"><span id="cke_bm_943S" style="display: none;"> </span>Menu do utilizador</h4>
+
+<p>Allows for user-specific tasks, like commiting to repository, downloading files and signing out.</p>
+
+<h4 id="Menu_da_informação">Menu da informação</h4>
+
+<p>Gives important information, like the anticipated project timeline and a list of keyboard shortcuts.</p>
+
+<dl>
+</dl>
+
+<p>Alright, how about we do some translating now?<span id="cke_bm_608E" style="display: none;"> </span></p>
+
+<dl>
+</dl>
+
+<h2 id="Traduzir_texto">Traduzir texto</h2>
+
+<p>When using Pontoon for localization, you have a couple of options to translate your strings. You can translate in-context, out-of-context, or a combination of the two. We'll start with looking at in-context translation.</p>
+
+<h3 id="In-context">In-context</h3>
+
+<p>Pontoon's in-context translation mode is what puts it above others. It opens a web page (or web app) and enables real-time editing of that page. Here's how you translate your first string:</p>
+
+<p><img alt="In-context localization" src="https://mdn.mozillademos.org/files/8331/in-context.png"></p>
+
+<ol>
+ <li>Hover over the text you want to translate with your mouse.</li>
+ <li>An edit button appears over that text. Click on it to enable the translate mode.</li>
+ <li>Replace the original text with its translation into your language.</li>
+ <li>Click the save button to save your translation.</li>
+</ol>
+
+<div>
+<h3 id="Out-of-context">Out-of-context</h3>
+
+<p>Some strings are impossible to translate in-context, e.g. the contents of the &lt;title&gt; tag in websites and strings with placeables or different plural forms. By clicking on the hamburger icon in the main toolbar, a list of all strings and available translations will open in the sidebar. You can also use the sidebar for out-of-context localization:</p>
+
+<p><img alt="Out-of-context localization: list" src="https://mdn.mozillademos.org/files/8337/out-of-context-1.png"> <img alt="Out-of-context localization: translate" src="https://mdn.mozillademos.org/files/8335/out-of-context-2.png"></p>
+
+<ol>
+ <li>Click on the string you'd like to translate.</li>
+ <li>Translation panel with original string and its details (e.g. comments) opens.</li>
+ <li>Translate the string in the translation area below.</li>
+ <li>Click the save button to save your translation.</li>
+</ol>
+
+<p>As you translate strings out-of-context, translations will also appear in website, if they could also be translated in-context.</p>
+
+<h3 id="Ajudas_de_tradução">Ajudas de tradução</h3>
+</div>
+
+<p>As you can see, suggestions from history, translation memory, machine translation and other locales are also available in the out-of-context translation panel. We call all of these translation helpers and here's how each of them will help you as you translate strings:</p>
+
+<p><img alt="Translation helpers: History" src="https://mdn.mozillademos.org/files/8339/helpers-history.png"> <img alt="Translation helpers: Machinery" src="https://mdn.mozillademos.org/files/8341/helpers-machinery.png"> <img alt="Translation helpers: Other locales" src="https://mdn.mozillademos.org/files/8343/helpers-locales.png"> <img alt="Translation helpers: Search" src="https://mdn.mozillademos.org/files/8345/helpers-menu.png"></p>
+
+<h4 id="Histórico">Histórico</h4>
+
+<p>Displays previously suggested translations, including from other users.</p>
+
+<h4 id="Máquina">Máquina</h4>
+
+<p>Displays matches from various services: internal translation memory, <a href="http://transvision.mozfr.org/">Mozilla Transvision</a>, <a href="https://amagama-live.translatehouse.org/">open source translation memory</a>, <a href="http://www.microsoft.com/Language/">Microsoft terminology</a> and <a href="http://www.bing.com/translator">machine translation</a>.</p>
+
+<h4 id="Outros_idiomas">Outros idiomas</h4>
+
+<p>Displays matching translations from other locales.</p>
+
+<h4 id="Pesquisar">Pesquisar</h4>
+
+<p>Almost like machinery, but takes provided keyword as input parameter instead of the original string.</p>
+
+<p>By clicking a suggestion, it gets copied into translation area.</p>
+
+<dl>
+</dl>
+
+<h2 id="Publicar_a_sua_localização">Publicar a sua localização</h2>
+
+<p>Suppose you now want to publish your l10n work by committing it to a repo. Pontoon lets you do that too! Actually, it does that for you by automatically syncing with repositories on hourly basis. You can now pat yourself on the back, do a little dance, go to sleep or do something else to celebrate your work!</p>

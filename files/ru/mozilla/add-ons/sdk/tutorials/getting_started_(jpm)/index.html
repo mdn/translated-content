@@ -1,0 +1,157 @@
+---
+title: Создание простого Add-on (jpm)
+slug: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_(jpm)
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Getting_Started_(jpm)
+---
+<div class="note">
+<p>The Add-on SDK includes a command-line tool that you use to initialize, run, test, and package add-ons. The current tool is called jpm, and is based on <a href="http://nodejs.org/">Node.js</a>. It replaces the old cfx tool.</p>
+
+<p>You can use jpm from Firefox 38 onwards.</p>
+
+<p>This article describes how to develop using jpm.</p>
+</div>
+
+<p>This tutorial walks through creating a simple add-on using the SDK.</p>
+
+<h2 id="Prerequisites">Prerequisites</h2>
+
+<p>To create add-ons for Firefox using the SDK, you'll need:</p>
+
+<ul>
+ <li>Firefox version 38 or later. If you need to work with earlier versions of Firefox, you'll need to use the old cfx tool. See instructions for <a href="/en-US/Add-ons/SDK/Tutorials/Getting_started">getting started with cfx</a>.</li>
+ <li>the command-line jpm tool. See the instructions for <a href="/en-US/Add-ons/SDK/Tools/jpm#Installation">installing jpm</a>. Once you've done that, you'll be looking at a command prompt.</li>
+</ul>
+
+<h2 id="Initializing_an_empty_add-on">Initializing an empty add-on</h2>
+
+<p>In the command prompt, create a new directory. Navigate to it, type <code>jpm init</code>, and hit enter:</p>
+
+<pre>mkdir my-addon
+cd my-addon
+jpm init
+</pre>
+
+<p>You'll then be asked to supply some information about your add-on: this will be used to create your add-on's <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> file. For now, just press Enter to accept the default for each property. For more information on <code>jpm init</code>, see the <a href="/en-US/Add-ons/SDK/Tools/jpm#Command_reference">jpm command reference</a>.</p>
+
+<p>Once you've supplied a value or accepted the default for these properties, you'll be shown the complete contents of "package.json" and asked to accept it.</p>
+
+<h2 id="Implementing_the_add-on">Implementing the add-on</h2>
+
+<p>Now you can write the add-on's code. Unless you've changed the value of "entry point" ("<a href="/en-US/Add-ons/SDK/Tools/package_json#main">main</a>" in package.json), this goes in "index.js" file in the root of your add-on. This file was created for you in the previous step. Open it and add the following code:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("http://www.mozilla.org/");
+}
+</pre>
+
+<div class="note">
+<p>Note that "entry point" defaults to "index.js" in jpm, meaning that your main file is "index.js", and it is found directly in your add-on's root.</p>
+
+<p>In cfx, the entry point defaults to "main.js", and is located in the "lib" directory under the add-on's root.</p>
+</div>
+
+<p>Save the file.</p>
+
+<p>Next, create a directory called "data" in your add-on's root, and save these three icon files to the "data" directory:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="height: 16px; width: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="height: 32px; width: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="height: 64px; width: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Back at the command prompt, type:</p>
+
+<pre>jpm run</pre>
+
+<p>This is the jpm command to run a new instance of Firefox with your add-on installed.</p>
+
+<p>If Firefox can not be located, you may need to provide the path to it (example in Ubuntu):</p>
+
+
+<pre>jpm run -b /usr/bin/firefox</pre>
+
+<p>When Firefox launches, in the top-right corner of the browser you'll see an icon with the Firefox logo. Click the icon, and a new tab will open with <a href="http://www.mozilla.org/" rel="noreferrer">http://www.mozilla.org/</a> loaded into it.</p>
+
+<p>That's all this add-on does. It uses two SDK modules: the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> module, which enables you to add buttons to the browser, and the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> module, which enables you to perform basic operations with tabs. In this case, we've created a button whose icon is the Firefox icon, and added a click handler that loads the Mozilla home page in a new tab.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="display: block; height: 221px; margin-left: auto; margin-right: auto; width: 382px;">Try editing this file. For example, we could change the page that gets loaded:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+
+<p>At the command prompt, execute <code>jpm run</code> again. This time clicking it takes you to <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+
+<h2 id="Packaging_the_add-on">Packaging the add-on</h2>
+
+<p>When you've finished the add-on and are ready to distribute it, you'll need to package it as an XPI file. This is the installable file format for Firefox add-ons. You can distribute XPI files yourself or publish them to <a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a> so other users can download and install them.</p>
+
+<p>To build an XPI, just execute the command <code>jpm xpi</code> from the add-on's directory:</p>
+
+<pre>jpm xpi
+</pre>
+
+<p>You should see a message like:</p>
+
+<pre>JPM info Successfully created xpi at /path/to/getting-started/@getting-started.xpi
+</pre>
+
+<p>To test that this worked, try installing the XPI file in your own Firefox installation. You can do this by pressing the Ctrl+O key combination (Cmd+O on Mac) from within Firefox, or selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection dialog: navigate to the "@getting-started.xpi" file, open it and follow the prompts to install the add-on.</p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>In this tutorial we've built and packaged an add-on using three commands:</p>
+
+<ul>
+ <li><code>jpm init</code> to initialize an empty add-on template</li>
+ <li><code>jpm run</code> to run a new instance of Firefox with the add-on installed, so we can try it out</li>
+ <li><code>jpm xpi</code> to package the add-on into an XPI file for distribution</li>
+</ul>
+
+<p>These are the three main commands you'll use when developing SDK add-ons. There's comprehensive <a href="/en-US/Add-ons/SDK/Tools/jpm" rel="noreferrer">reference documentation</a> covering all the commands you can use and all the options they take.</p>
+
+<p>The add-on code itself uses two SDK modules, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> and <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a>. There's reference documentation for all the <a href="/en-US/Add-ons/SDK/High-Level_APIs" rel="noreferrer">high-level</a> and <a href="/en-US/Add-ons/SDK/Low-Level_APIs" rel="noreferrer">low-level</a> APIs in the SDK.</p>
+
+<h2 id="What's_next">What's next?</h2>
+
+<p>To get a feel for some of the things you can do with the SDK APIs, try working through some of the <a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">tutorials</a>.</p>

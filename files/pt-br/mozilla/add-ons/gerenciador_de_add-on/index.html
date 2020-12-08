@@ -1,0 +1,61 @@
+---
+title: Gerenciador de Complementos
+slug: Mozilla/Add-ons/Gerenciador_de_Add-on
+translation_of: Mozilla/JavaScript_code_modules/Add-on_Manager
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p>O Gerenciador de Add-on (Add-on Manager) é responsável por gerenciar todos os add-ons instalados no aplicativo. Através de suas APIs, informação sobre todos os add-ons instalados pode ser recuperada e novos add-ons podem ser instalados. As APIs foram projetadas para serem genéricas e suportar muitos tipos diferentes de add-ons.</p>
+
+<p>Muitas funções na interface do Gerenciador de Add-on operam de modo assíncrono, retornando os resultados através de callbacks (funções de retrochamadas) passadas para as funções. As callbacks podem ser chamadas imediatamente enquanto as funções iniciais ainda estão em execução ou pouco tempo após, dependendo de quando os dados da requisição se tornem disponíveis.</p>
+
+<h2 id="Acessando_os_add-ons_instalados">Acessando os add-ons instalados</h2>
+
+<p>Informação sobre os add-ons instalados podem ser recuperadas através da  API principal <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager" title="AddonManager">AddonManager</a></code>. Todas as suas funções são assíncronas, isso significa que uma função de callback deve ser passada para receber as instâncias de <code><a href="/pt-BR/Add-ons/Add-on_Manager/Addon" title="Addon">Addon</a></code>. A função de callback pode muito bem ser chamada somente após a função da API retornar. Por exemplo:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
+AddonManager.getAllAddons(function(aAddons) {
+  // Aqui aAddons é um array de objetos <code><a href="/pt-BR/Add-ons/Add-on_Manager/Addon" title="Addon">Addon</a></code>
+});
+// Esse código será executado antes do código dentro da callback
+</pre>
+
+<p>Notificações sobre mudanças nos add-ons instalados são dispachadas para quaisquer <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonListener" title="AddonListener">AddonListener</a></code>s. registrado Eles devem ser registrados através do método <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager#addAddonListener()" title="AddonManager.addAddonListener()">addAddonListener()</a></code>.</p>
+
+<h2 id="Instalando_novos_add-ons">Instalando novos add-ons</h2>
+
+<p>Novos add-ons podem ser instalados usando os métodos <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager#getInstallForFile()" title="AddonManager.getInstallForFile()">getInstallForFile()</a></code> ou <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager#getInstallForURL()" title="AddonManager.getInstallForURL()">getInstallForURL()</a></code> do objeto <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager" title="AddonManager">AddonManager</a></code>. Essas passsarão uma instância de <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> para a função de callback, que pode, então, ser usada para instalar o add-on:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
+AddonManager.getInstallForURL("http://www.foo.com/test.xpi", function(aInstall) {
+  // aInstall é uma instância de <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code>
+  aInstall.install();
+}, "application/x-xpinstall");
+</pre>
+
+<p>O progresso de <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> pode ser monitorado usando um <code><a href="/pt-BR/Add-ons/Add-on_Manager/InstallListener" title="InstallListener">InstallListener</a></code>. Um listener pode ser registgrado quer para uma instalação em particular usando o método <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonInstall#addListener()" title="AddonInstall.addListener()">addListener()</a></code> ou para todas as instalações usando o método <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager#addInstallListener()" title="AddonManager.addInstallListener()">addInstallListener()</a></code>.</p>
+
+<h2 id="Encontrando_atualizações">Encontrando atualizações</h2>
+
+<p>Pode-se verificar a existência de atualizações para Add-ons usando o método <code><a href="/pt-BR/Add-ons/Add-on_Manager/Addon#findUpdates()" title="Addon.findUpdates()">findUpdates()</a></code>. Deve-se lhe passar um <code><a href="/pt-BR/Add-ons/Add-on_Manager/UpdateListener" title="UpdateListener">UpdateListener</a></code> para receber informações sobre compatibilidade e informação de nova atualização. Qualquer atualização disponível é retornada  como um <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code>, pronto para ser baixado e instalado.</p>
+
+<p>{{ h1_gecko_minversion("Detectando mudanças nos add-ons", "7.0") }}</p>
+
+<p>Você também pode conseguir listas de add-ons que, na inicialização, foram modificados de diversos modos. O método  <code><a href="/pt-BR/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()" title="AddonManager.getStartupChanges()">getStartupChanges()</a></code> lhe permite descobir quais add-ons foram instalados, removidos, atualizados, habilitados ou desabilitados durante a inicialização do aplicativo.</p>
+
+<p>Por exemplo, para dar uma olhada nos add-ons que foram desabilitados durante a inicialização:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
+let addonIDs = AddonManager.getStartupChanges(AddonManager.STARTUP_CHANGE_DISABLED);
+if (addonIDs.length &gt; 0) {
+  // addonIDs agora é um array das IDs dos  add-on que foram desabilitados
+alert("Nota: " + addonIDs.length + " add-ons foram desabilitados.");
+}
+</pre>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<p>{{ ListSubpages() }}</p>

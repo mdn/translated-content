@@ -1,0 +1,131 @@
+---
+title: animation-duration
+slug: Web/CSS/animation-duration
+translation_of: Web/CSS/animation-duration
+---
+<div>{{CSSRef}} {{ SeeCompatTable() }}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Свойство <strong><code>animation-duration</code></strong> устанавливает длительность анимации во времени за один цикл.</p>
+
+<p> </p>
+
+<p>Значение по умолчанию <strong><code>0s</code> </strong>определяет, что анимация не должна выполняться.</p>
+
+<p>Удобно использовать сокращенное свойство {{ cssxref("animation") }} чтобы установить сразу все свойства анимации.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush:css">animation-duration: 6s;
+animation-duration: 120ms;
+animation-duration: 1s, 15s;
+animation-duration: 10s, 30s, 230ms;
+</pre>
+
+<h3 id="Примеры">Примеры</h3>
+
+<dl>
+ <dt><code>&lt;time&gt;</code></dt>
+ <dd> </dd>
+</dl>
+
+<dl>
+ <dd>Длительность анимации определяется в секундах <code>s</code> или в миллисекундах <code>ms</code>. По умолчанию стоит значение <code>0s</code>. Отрицательные значения являются недействительными.</dd>
+</dl>
+
+<div class="note"><strong>Предупреждение:</strong> Отрицательные значения являются недействительными и отменяют объявление. Некоторые старые реализации считают отрицательные значения равнозначными <code>0s</code>.</div>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Примеры_2">Примеры</h2>
+
+<p>Смотрите для примеров <a href="/en/CSS/CSS_animations" title="en/CSS/CSS_animations">CSS анимации</a>.</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Animations', '#animation-duration', 'animation-duration') }}</td>
+   <td>{{ Spec2('CSS3 Animations') }}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>3.0{{ property_prefix("-webkit") }}<br>
+    {{CompatChrome(43.0)}}</td>
+   <td>{{ CompatGeckoDesktop("5.0") }}{{ property_prefix("-moz") }}<br>
+    {{ CompatGeckoDesktop("16.0") }}</td>
+   <td>10</td>
+   <td>12{{ property_prefix("-o") }}<br>
+    12.10</td>
+   <td>4.0{{ property_prefix("-webkit") }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.0{{ property_prefix("-webkit") }}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatGeckoMobile("5.0") }}{{ property_prefix("-moz") }}<br>
+    {{ CompatGeckoMobile("16.0") }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>4.2{{ property_prefix("-webkit") }}</td>
+   <td>{{CompatChrome(43.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS анимации</a></li>
+ <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
+</ul>

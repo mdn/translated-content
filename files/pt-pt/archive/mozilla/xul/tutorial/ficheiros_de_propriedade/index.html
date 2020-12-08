@@ -1,0 +1,115 @@
+---
+title: Ficheiros de Propriedade
+slug: Archive/Mozilla/XUL/Tutorial/Ficheiros_de_propriedade
+tags:
+  - Internacionalização
+  - Localização
+  - Tutoriais
+  - Tutorial de XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Property_Files
+---
+<p> </p>
+
+<p>{{ PreviousNext("XUL Tutorial:Localization", "XUL Tutorial:Introduction to XBL") }}</p>
+
+<p>Num <em>script</em>, não pode ser utilizadas as <em>entities</em>. Em vez disso, são utilizados 'ficheiros de Propriedade'.</p>
+
+<h3 id="Properties" name="Properties">Properties</h3>
+
+<p>DTD files are suitable when you have text in a XUL file. However, a script does not get parsed for entities. In addition, you may wish to display a message which is generated from a script, if, for example, you do not know the exact text to be displayed. For this purpose, property files can be used.</p>
+
+<p>A property file contains a set of strings. You will find property files alongside the DTD files with a .properties extension. Properties in the file are declared with the syntax <code>name=value</code>. An example is shown below:</p>
+
+<pre>notFoundAlert=No files were found matching the criteria.
+deleteAlert=Click OK to have all your files deleted.
+resultMessage=%2$S files found in the %1$S directory.
+</pre>
+
+<p>Here, the property file contains three properties. These would be read by a script and displayed to the user.</p>
+
+<p>A property file can also include comments. A line that begins with a hash sign ('#') is treated as a comment:</p>
+
+<pre># This is a comment
+welcomeMessage=Hello, world!
+# This is another comment
+goodbyeMessage=Come back soon!
+</pre>
+
+<h3 id="Stringbundles" name="Stringbundles">Stringbundles</h3>
+
+<p>You could write the code to read properties yourself, however XUL provides the <code>{{ XULElem("stringbundle") }}</code> element which does this for you. The element has a number of functions which can be used to get strings from the property file and get other locale information. This element reads in the contents of a property file and builds a list of properties for you. You can then look up a particular property by name.</p>
+
+<pre>&lt;stringbundleset id="<code>stringbundleset</code>"&gt;
+&lt;stringbundle id="strings" src="strings.properties"/&gt;
+&lt;/stringbundleset&gt;
+</pre>
+
+<p>Including this element will read the properties from the file 'strings.properties' in the same directory as the XUL file. Use a chrome URL to read a file from the locale:</p>
+
+<pre>&lt;stringbundleset id="<code>stringbundleset</code>"&gt;
+&lt;stringbundle id="strings" src="chrome://myplugin/locale/strings.properties"/&gt;
+&lt;/stringbundleset&gt;
+</pre>
+
+<p>Like other non-displayed elements, you should declare all your stringbundles inside a <code>{{ XULElem("stringbundleset") }}</code> element so that they are all kept together.</p>
+
+<h4 id="Getting_a_String_from_the_Bundle" name="Getting_a_String_from_the_Bundle">Getting a String from the Bundle</h4>
+
+<p>This <code>{{ XULElem("stringbundle") }}</code> element has a number of properties. The first is <code>getString</code> which can be used in a script to read a string from the bundle.</p>
+
+<pre>var strbundle = document.getElementById("strings");
+var nofilesfound=strbundle.getString("notFoundAlert");
+
+alert(nofilesfound);
+</pre>
+
+<ul>
+ <li>This example first gets a reference to the bundle using its <code>id</code></li>
+ <li>Then, it looks up the string 'notFoundAlert' in the property file. The function <code>getString()</code> returns the value of the string or null if the string does not exist.</li>
+ <li>Finally, the string is displayed in an alert box.</li>
+</ul>
+
+<h4 id="Text_Formatting" name="Text_Formatting">Text Formatting</h4>
+
+<p>The next method is <code>getFormattedString()</code>. This method also gets a string with the given key name from the bundle. In addition, each occurrence of formatting code (e.g. <code>%S</code>) is replaced by each successive element in the supplied array.</p>
+
+<pre class="brush: js">var dir = "/usr/local/document";
+var count = 10;
+
+var strbundle = document.getElementById("strings");
+var result = strbundle.getFormattedString("resultMessage", [ dir, count ]);
+
+alert(result);
+</pre>
+
+<p>This example will display following message in an alert box.</p>
+
+<pre>10 files found in the /usr/local/document directory.
+</pre>
+
+<p>You will notice the formatting codes <code>%1$S</code> and <code>%2$S</code> is used, and replaced different order in the array. Formatting code %<em>n</em>$S is specify the position of corresponding parameter directly. Although the word order is not the same in all the languages, by using <code>getFormattedString()</code> the specification of the order can be put out the property files.</p>
+
+<p>In case you need to format a string that already contains the percentage character in it (to get something like "50% Off" returned), escape the percentage character with another percentage character, like this:</p>
+
+<pre>my.percentage.string = %S%% Off
+</pre>
+
+<p>Not escaping the percentage character will generate an incorrect string that strips the space character between the percentage character and the next word of the string ("50%Off").</p>
+
+<h3 id="Escape_non-ASCII_Characters" name="Escape_non-ASCII_Characters">Non-ASCII Characters, UTF-8 and escaping</h3>
+
+<p>Gecko 1.8.x (or later) supports property files encoded in UTF-8. You can and should write non-ASCII characters directly without escape sequences, and save the file as UTF-8 without BOM. Double-check the save options of your text editor, because many don't do this by default. See <a href="/en/Localizing_extension_descriptions" title="en/Localizing_extension_descriptions">Localizing extension descriptions</a> for more details.</p>
+
+<p>In some cases, it may be useful or needed to use escape sequences to express some characters. Property files support escape sequences of the form: <code>\uXXXX</code> , where XXXX is a Unicode character code. For example, to put a space at the beginning or end of a string (which would normally be stripped by the properties file parser), use \u0020 .</p>
+
+<p><br>
+ In the next section, we will look at XBL, which can be used to define the <a href="/en/XUL_Tutorial/Introduction_to_XBL" title="en/XUL_Tutorial/Introduction_to_XBL">behavior of an element</a>.</p>
+
+<p>{{ PreviousNext("XUL Tutorial:Localization", "XUL Tutorial:Introduction to XBL") }}</p>
+
+<h2 id="Consulte_Também">Consulte Também</h2>
+
+<ul>
+ <li>How to localize html pages, xul files, and js/jsm files from bootstrapped add-ons: <a href="/en-US/Add-ons/Bootstrapped_extensions#Localization_%28L10n%29">Bootstrapped Extensions :: Localization (L10n)</a></li>
+</ul>

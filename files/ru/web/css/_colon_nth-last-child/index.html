@@ -1,0 +1,151 @@
+---
+title: ':nth-last-child'
+slug: 'Web/CSS/:nth-last-child'
+tags:
+  - Псевдоклассы
+translation_of: 'Web/CSS/:nth-last-child'
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:nth-last-child(an+b)</code> находит элемент, имеющий <code><em>a</em>n+<em>b</em>-1</code> потомков после данной позиции в дереве документа, значение для <code>n </code>может быть положительным или нулевым, а также имеющий родительский элемент.</p>
+
+<p>В результате, он функционирует так же, как и {{Cssxref(":nth-child")}}, кроме того, что выбирает элементы, считая в обратном порядке, с <strong>конца</strong> списка потомков, не с начала.</p>
+
+<p>Смотрите {{Cssxref(":nth-child")}} для более тщательного описания синтаксиса его аргументов.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">element:nth-last-child(<em>a</em>n + <em>b</em>) {<em>стили</em> }
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Пример_селекторов">Пример селекторов</h3>
+
+<dl>
+ <dt><code>tr:nth-last-child(-n+4)</code></dt>
+ <dd>Находит последние 4 строки HTML таблицы.</dd>
+ <dt><code>span:nth-last-child(even)</code></dt>
+ <dd>Ищет чётные элементы в родительском элементе, начиная с последнего элемента и работая задом наперёд.</dd>
+</dl>
+
+<h3 id="Использование">Использование</h3>
+
+<p>Этот CSS ...</p>
+
+<pre class="brush: css">table {
+  border: 1px solid blue;
+}
+tr:nth-last-child(-n+3) { /* последние 3 потомка */
+  background-color: lime;
+}
+</pre>
+
+<p>... с этим HTML ...</p>
+
+<pre class="brush: html">&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Первая&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;Вторая строка&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;Третья&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;Четвёртая&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;Пятая строчка&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+<p>... будет выглядеть, как :</p>
+
+<p>{{EmbedLiveSample('Примеры', '100%', 150)}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>4.0</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
+   <td>9.0</td>
+   <td>9.5</td>
+   <td>3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1.9.1")}}</td>
+   <td>9.0</td>
+   <td>10.0</td>
+   <td>3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{Cssxref(":nth-child")}}</li>
+</ul>

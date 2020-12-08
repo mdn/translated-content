@@ -1,0 +1,190 @@
+---
+title: Animation
+slug: Web/API/Animation
+translation_of: Web/API/Animation
+---
+<div>{{ APIRef("Web Animations") }}{{SeeCompatTable}}</div>
+
+<p><code><strong>Animation</strong></code> это интерфейс <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>, представляет из себя одиночный проигрыватель анимации и обеспечивает управление воспроизведением и временную шкалу для узла анимации или источника.</p>
+
+<h2 id="Конструктор">Конструктор</h2>
+
+<dl>
+ <dt>{{domxref("Animation.Animation()", "Animation()")}}</dt>
+ <dd>Создает новый экземпляр объекта <code>Animation.</code></dd>
+</dl>
+
+<h2 id="Свойства">Свойства</h2>
+
+<dl>
+ <dt>{{domxref("Animation.currentTime")}}</dt>
+ <dd>Текущее значение времени анимации в миллисекундах, независимо от того работает анимация или приостановлена. Если анимация не имеет {{domxref("AnimationTimeline", "timeline")}}, неактивна или еще не воспроизведена, то это значение равно нулю.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.effect")}}</dt>
+ <dd>Возвращает и задает {{domxref ("AnimationEffectReadOnly")}} связанный с этой анимацией. Обычно это объект {{domxref ("KeyframeEffect")}}.</dd>
+ <dt>{{domxref("Animation.finished")}} {{readOnlyInline}}</dt>
+ <dd>Возвращает текущее завершенное Promise(обещание) для этой анимации.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.id")}}</dt>
+ <dd>Возвращает и задает String(строку), используемую для идентификации анимации.</dd>
+ <dt>{{domxref("Animation.playState")}} {{readOnlyInline}}</dt>
+ <dd>Возвращает перечисляемое значение, описывающее состояние воспроизведения анимации.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.playbackRate")}}</dt>
+ <dd>Возвращает или задает скорость воспроизведения анимации.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.ready")}} {{readOnlyInline}}</dt>
+ <dd>Возвращает текущее готовое Promise(обещание) для этой анимации.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.startTime")}}</dt>
+ <dd>Возвращает или задает начало выполнения анимации.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.timeline")}}</dt>
+ <dd>Возвращает или задает {{domxref("AnimationTimeline", "timeline")}}, связанную с этой анимации.</dd>
+</dl>
+
+<h3 id="Обработчики_событий">Обработчики событий</h3>
+
+<dl>
+ <dt>{{domxref("Animation.oncancel")}}</dt>
+ <dd>Возвращает и задает обработчик событий для отмены события.</dd>
+ <dt>{{domxref("Animation.onfinish")}}</dt>
+ <dd>Возвращает и задает обработчик событий для завершения события.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<dl>
+ <dt>{{domxref("Animation.cancel()")}}</dt>
+ <dd>Очищает все {{domxref("KeyframeEffect", "keyframeEffects")}} вызванные этой анимацией и прекращает его выполнение.</dd>
+ <dt>{{domxref("animation.commitStyles()")}}</dt>
+ <dd>Фиксирует конечное состояние стиля анимации к анимируемому элементу, даже после того, как эта анимация была удалена. Это приведет к тому, что конечное состояние стиля будет записано в анимируемый элемент в виде свойств внутри атрибута стиля.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.finish()")}}</dt>
+ <dd>Ищет конец анимации, в зависимости от того, играет ли анимация или инвертирует.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.pause()")}}</dt>
+ <dd>Приостанавливает запущенную анимацию.</dd>
+ <dt>{{domxref("animation.persist()")}}</dt>
+ <dd>Анимация сохраняется в явном виде, когда в противном случае она была бы удалена из-за поведения браузера, которое предполагает автоматическое удаление анимаций заполнения.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.play()")}}</dt>
+ <dd>Запускает или продолжает выполнение анимации или начинает анимацию снова, если она ранее завершилась.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Animation.reverse()")}}</dt>
+ <dd>Меняет направление воспроизведения, останавливаясь в начале анимации. Если анимация закончена или не запущена, то будет проигрываться с конца к началу.</dd>
+ <dt>{{domxref("Animation.updatePlaybackRate()")}}</dt>
+ <dd>Задает скорость анимации после синхронизации ее положения воспроизведения.</dd>
+</dl>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Web Animations", "#the-animation-interface", "Animation")}}</td>
+   <td>{{Spec2("Web Animations")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Microsoft Edge</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(39.0)}} [1]</td>
+   <td>{{CompatGeckoDesktop(48)}}<sup>[2][3]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Конструктор</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop(48)}}<sup>[2][3]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}} [1]</td>
+   <td>{{CompatGeckoMobile(48)}}<sup>[2][3]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Конструктор</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(48)}}<sup>[2][3]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] До Chrome 44, реализован как <code>AnimationPlayer</code> (название интерфейса в ранней версии спецификации).</p>
+
+<p>[2] API Веб Анимации включён по умолчанию только в Firefox Developer Edition и в Nightly builds. Вы можете включить его в сборках beta и release переключив свойство <code>dom.animations-api.core.enabled</code> на <code>true</code>, и можете выключить его в любой версии Firefox переключив его на <code>false</code>.</p>
+
+<p>[3] До Firefox 51, свойство {{domxref("Animation.effect")}} было только для чтения.</p>

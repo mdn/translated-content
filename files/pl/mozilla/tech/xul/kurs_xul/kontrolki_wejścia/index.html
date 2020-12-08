@@ -1,0 +1,131 @@
+---
+title: Kontrolki wejścia
+slug: Mozilla/Tech/XUL/Kurs_XUL/Kontrolki_wejścia
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Input_Controls
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_etykiet_i_obrazków" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrolki_numeryczne">Następny  »</a></p>
+</div><p></p>
+
+<p>XUL posiada elementy, które są podobne do kontrolek <a href="pl/DOM/form">formularza</a> HTML.</p>
+
+<h3 id="Pola_tekstowe" name="Pola_tekstowe">Pola tekstowe</h3>
+
+<p>HTML zawiera element <code>input</code>, który może zostać użyty do wprowadzania tekstu. XUL posiada podobny element, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>, używany do pól tekstowych. Bez żadnych argumentów textbox tworzy pole, w którym użytkownik może wprowadzać tekst. Pola tekstowe akceptują wiele parametrów takich samych, jakie w języku HTML posiadają kontrolki wejścia. Niektóre z nich:</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></dt>
+ <dd>Unikatowy identyfikator, przez który możesz się odwoływać do pola tekstowego.</dd>
+ <dt><code id="a-class"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/class">class</a></code> </dt>
+ <dd>Klasa stylu pola tekstowego.</dd>
+ <dt><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code> </dt>
+ <dd>Jeśli chcesz, aby pole tekstowe posiadało domyślny tekst, podaj go jako wartość tego atrybutu.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code> </dt>
+ <dd>Ustaw na <code>true</code>, aby wyłączyć możliwość wprowadzania tekstu.</dd>
+ <dt><code id="a-type"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/type">type</a></code> </dt>
+ <dd>Możesz ustawić wartość tego atrybutu na specjalną wartość <code>password</code>, tak aby pole tekstowe nie pokazywało wpisywanego tekstu. Często używa się tej wartości w przypadku pól do podawania hasła.</dd>
+ <dt><code id="a-maxlength"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxlength">maxlength</a></code> </dt>
+ <dd>Maksymalna liczba znaków, jaka może zostać wprowadzona do pola.</dd>
+</dl>
+
+<p>Podczas, gdy w HTML-u z elementu inpu mogą być tworzone różne rodzaje pól (nie tylko tekstowych), w XUL-u dla każdego typu są oddzielne elementy. Następujący przykład ilustruje użycie pól tekstowych:</p>
+
+<h4 id="Element_textbox" name="Element_textbox">Element <code>textbox</code></h4>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul">Podgląd</a></p>
+
+<pre>&lt;label control="some-text" value="Wpisz jakiś tekst"/&gt;
+&lt;textbox id="some-text"/&gt;
+&lt;label control="some-password" value="Wpisz hasło"/&gt;
+&lt;textbox id="some-password" type="password" maxlength="8"/&gt;
+</pre>
+
+<p>W przykładzie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> tworzone są pola, do których można wprowadzić tylko jeden wiersz tekstu. HTML posiada również element <code>textarea</code>, który jest używany do tworzenia większych obszarów do wprowadzania tekstu. W XUL-u w tym celu możesz z powodzeniem użyć elementu textbox -- osobny element nie jest potrzebny. Jeśli ustawisz atrybut <code><code id="a-multiline"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/multiline">multiline</a></code></code> na <code>true</code>, wówczas pole tekstowe wyświetlone zostanie z wieloma wierszami. Dla przykładu:</p>
+
+<h5 id="Wieloliniowy_textbox" name="Wieloliniowy_textbox">Wieloliniowy <code>textbox</code></h5>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul">Podgląd</a></p>
+
+<pre>&lt;textbox multiline="true"
+           value="To jest tekst, który powinien zostać zawinięty do kilku linii."/&gt;
+</pre>
+
+<p>Tak jak w języku HTML dla <code>textarea</code>, możesz użyć atrybutów <code>rows</code> i <code>cols</code> do ustawienia rozmiaru pola. Powinna być ustawiona liczba wierszy i kolumn znaków potrzebnych do wyświetlenia.</p>
+
+<div class="highlight">
+<h4 id="Przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Przyk.C5.82ad:_Znajd.C5.BA_pliki">Przykład: <code>Znajdź pliki</code></h4>
+
+<p>Dodajemy teraz pole szukania do okna dialogowego <code>Znajdź pliki</code>. W tym celu użyjemy elementu <code>textbox</code>.</p>
+
+<pre class="eval"><span class="highlightred">&lt;label value="Szukaj dla:" control="find-text"/&gt;</span>
+<span class="highlightred">&lt;textbox id="find-text"/&gt;</span>
+
+&lt;button id="find-button" label="Znajdź"/&gt;
+</pre>
+
+<div class="float-right"><img alt="grafika:inputs1.png"></div>
+
+<p>Wstaw powyższy kod przed miejscem, w którym utworzyliśmy przyciski w poprzednim rozdziale. Jeśli otworzysz to okno, powinieneś zobaczyć okno podobne do obrazka znajdującego się obok.</p>
+
+<p>Etykieta i pole wejściowe pojawiły się w oknie. Pole tekstowe jest w pełni funkcjonalne i możesz w nim pisać i zaznaczać tekst. Ponadto został użyty atrybut <code><code id="a-control"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/control">control</a></code></code>, więc po kliknięciu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> aktywne staje się pole tekstowe.</p>
+</div>
+
+<h3 id="Pola_wyboru_i_przyciski_opcji" name="Pola_wyboru_i_przyciski_opcji">Pola wyboru i przyciski opcji</h3>
+
+<p>Dwa dodatkowe elementy stosowane są do tworzenia pól wyboru i przycisków opcji. Są one po prostu wariantami przycisków. Pola wyboru stosuje się do opcji, które mogą być włączone lub wyłączone. Przyciski opcji mogą być wykorzystane w podobnym celu, gdzie ze zbioru opcji może być zaznaczona tylko jedna pozycja.</p>
+
+<p>Więcej podobnych atrybutów przycisków możemy stosować razem z polami wyboru i przyciskami opcji. Przykład poniżej pokazuje proste pole wyboru oraz przyciski opcji.</p>
+
+<pre>&lt;checkbox id="case-sensitive" checked="true" label="Rozróżniaj wielkość liter"/&gt;
+&lt;radio id="orange" label="Pomarańczowy"/&gt;
+&lt;radio id="violet" selected="true" label="Fioletowy"/&gt;
+&lt;radio id="yellow" label="Żółty"/&gt;
+</pre>
+
+<p>Pierwsza instrukcja tworzy proste pole wyboru (<code><code><a href="/pl/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code></code>). Kiedy użytkownik kliknie w pole wyboru, to pole będzie przełączone pomiędzy polem zaznaczonym i niezaznaczonym. Atrybut <code><code id="a-checked"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/checked">checked</a></code></code> można zastosować do wskazania stanu domyślnego. Powinieneś ustawić wspomniany atrybut na <code>true</code> lub <code>false</code>. Do dołączenia etykiety obok pola wyboru zastosuj atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code>. W przypadku przycisków <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> powinieneś stosować atrybut <code><code id="a-selected"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/selected">selected</a></code></code> zamiast atrybutu <code><code id="a-checked"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/checked">checked</a></code></code>. Ustaw jego wartość na <code>true</code>, tak aby przycisk opcji był domyślnie zaznaczony lub pozostaw go bez zmian dla pozostałych przycisków opcji.</p>
+
+<h4 id="Element_radiogroup" name="Element_radiogroup">Element radiogroup</h4>
+
+<p>Aby połączyć kilka przycisków opcji w grupę, będziesz potrzebował użyć elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code>. Tylko jedna opcja z grupy może być w danej chwili zaznaczona. Zaznaczenie jednej pozycji będzie wyłączało wszystkie pozostałe opcje w tej samej grupie. Poniższy przykład demonstruje poruszane zagadnienie.</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul">Podgląd</a></p>
+
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Pomarańczowy"/&gt;
+  &lt;radio id="violet" selected="true" label="Fioletowy"/&gt;
+  &lt;radio id="yellow" label="Żółty"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<h4 id="Atrybuty" name="Atrybuty">Atrybuty</h4>
+
+<p>Podobnie jak przyciski, pola wyboru i przyciski opcji są zrobione z etykiety i obrazka, gdzie obrazek przełącza się pomiędzy zaznaczonym i niezaznaczonym, w momencie jego naciśnięcia. Pola wyboru posiadają wiele atrybutów takich samych jak przyciski:</p>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></dt>
+ <dd>Etykieta pola wyboru lub przycisku opcji.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code></dt>
+ <dd>Wyłącza lub włącza składnik, przy ustawieniu odpowiednio na <code>true</code> lub <code>false</code>.</dd>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/accesskey">accesskey</a></code> </dt>
+ <dd>Klawisz skrótu, który może być stosowany do zaznaczenia elementu. Użyta litera w etykiecie jest zwykle wyświetlona z podkreśleniem.</dd>
+</dl>
+
+<div class="highlight">
+<p>Przykład <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul">Podgląd</a></p>
+</div>
+
+<p>W następnym artykule poznamy elementy do <a href="pl/Kurs_XUL/Kontrolki_numeryczne">tworzenia kontrolek numerycznych</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_etykiet_i_obrazków" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrolki_numeryczne">Następny  »</a></p>
+</div><p></p>
+
+<div class="noinclude"> </div>
+
+<p></p>

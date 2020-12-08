@@ -1,0 +1,235 @@
+---
+title: tabbrowser
+slug: Mozilla/Tech/XUL/tabbrowser
+translation_of: Archive/Mozilla/XUL/tabbrowser
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ru/docs/XUL/Справочник">Справочник по XUL</a>    [
+ <a href="#Examples">Примеры</a> |
+ <a href="#Атрибуты">Атрибуты</a> |
+ <a href="#Property">Свойства</a> |
+ <a href="#Методы">Методы</a> |
+ <a href="#Related">См. также</a> ]
+</span></div>
+<p>This element is used for holding a set of read-only views of Web documents. It is similar to the <code><a href="/ru/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> element, except that multiple documents can be displayed, each in a separate tab.</p>
+<p></p><div class="blockIndicator note"><strong>Примечание:</strong> Starting in Firefox 3 (XULRunner/Gecko 1.9), this is only used in the main Firefox window and cannot be used in other XUL windows by third-party applications or extensions.</div><p></p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-autocompleteenabled">autocompleteenabled</a>, <a href="#a-autocompletepopup">autocompletepopup</a>, <a href="#a-autoscroll">autoscroll</a>, <a href="#a-contentcontextmenu">contentcontextmenu</a>, <a href="#a-contenttooltip">contenttooltip</a>, <a href="#a-handleCtrlPageUpDown">handleCtrlPageUpDown</a>, <a href="#a-onbookmarkgroup">onbookmarkgroup</a>, <a href="#a-onnewtab">onnewtab</a>, <a href="#a-tabmodalPromptShowing">tabmodalPromptShowing</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-browsers">browsers</a>, <a href="#p-canGoBack">canGoBack</a>, <a href="#p-canGoForward">canGoForward</a>, <a href="#p-contentDocument">contentDocument</a>, <a href="#p-contentTitle">contentTitle</a>, <a href="#p-contentViewerEdit">contentViewerEdit</a>, <a href="#p-contentViewerFile">contentViewerFile</a>, <a href="#p-contentWindow">contentWindow</a>, <a href="#p-currentURI">currentURI</a>, <a href="#p-docShell">docShell</a>, <a href="#p-documentCharsetInfo">documentCharsetInfo</a>, <a href="#p-homePage">homePage</a>, <a href="#p-markupDocumentViewer">markupDocumentViewer</a>, <a href="#p-securityUI">securityUI</a>, <a href="#p-selectedBrowser">selectedBrowser</a>, <a href="#p-selectedTab">selectedTab</a>, <a href="#p-sessionHistory">sessionHistory</a>, <a href="#p-tabContainer">tabContainer</a>, <a href="#p-tabbrowser.tabs">tabs</a>, <a href="#p-visibleTabs">visibleTabs</a>, <a href="#p-webBrowserFind">webBrowserFind</a>, <a href="#p-webNavigation">webNavigation</a>, <a href="#p-webProgress">webProgress</a></dd>
+</dl>
+<dl>
+ <dt>
+  Methods</dt>
+ <dd>
+  <a href="#m-addProgressListener">addProgressListener</a>, <a href="#m-addTab">addTab</a>, <a href="#m-addTabsProgressListener">addTabsProgressListener</a>,<a href="#m-appendGroup">appendGroup</a>, <a href="#m-getBrowserAtIndex">getBrowserAtIndex</a>, <a href="#m-getBrowserIndexForDocument">getBrowserIndexForDocument</a>, <a href="#m-getBrowserForDocument">getBrowserForDocument</a>, <a href="#m-getBrowserForTab">getBrowserForTab</a>, <a href="#m-getIcon">getIcon</a>, <a href="#m-getNotificationBox">getNotificationBox</a>, <a href="#m-getTabForBrowser">getTabForBrowser</a>, <a href="#m-getTabModalPromptBox">getTabModalPromptBox</a>, <a href="#m-goBack">goBack</a>, <a href="#m-goBackGroup">goBackGroup</a>, <a href="#m-goForward">goForward</a>, <a href="#m-goForwardGroup">goForwardGroup</a>, <a href="#m-goHome">goHome</a>, <a href="#m-gotoIndex">gotoIndex</a>, <a href="#m-loadGroup">loadGroup</a>, <a href="#m-loadOneTab">loadOneTab</a>, <a href="#m-loadTabs">loadTabs</a>, <a href="#m-loadURI">loadURI</a>, <a href="#m-loadURIWithFlags">loadURIWithFlags</a>, <a href="#m-moveTabTo">moveTabTo</a>, <a href="#m-pinTab">pinTab</a>, <a href="#m-reload">reload</a>, <a href="#m-reloadAllTabs">reloadAllTabs</a>, <a href="#m-reloadTab">reloadTab</a>, <a href="#m-reloadWithFlags">reloadWithFlags</a>, <a href="#m-removeAllTabsBut">removeAllTabsBut</a>, <a href="#m-removeCurrentTab">removeCurrentTab</a>, <a href="#m-removeProgressListener">removeProgressListener</a>, <a href="#m-removeTab">removeTab</a>, <a href="#m-removeTabsProgressListener">removeTabsProgressListener</a>,<a href="#m-replaceGroup">replaceGroup</a>, <a href="#m-selectTabAtIndex">selectTabAtIndex</a>, <a href="#m-setIcon">setIcon</a>, <a href="#m-showOnlyTheseTabs">showOnlyTheseTabs</a>, <a href="#m-stop">stop</a>, <a href="#m-unpinTab">unpinTab</a></dd>
+</dl>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-autocompleteenabled">
+
+</div> <div id="a-autocompletepopup">
+
+</div> <div id="a-autoscroll">
+
+
+<dl>
+ <dt><code id="a-autoscroll"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/%D0%90%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B/autoscroll">autoscroll</a></code></dt>
+ <dd>Тип: <em>boolean</em></dd>
+ <dd>Установите значение атрибута на <code>false</code>, чтобы отключить автопрокрутку для браузера. Если значение этого атрибута <code>true</code> или отсутствует, автопрокрутка будет включена или в зависимости от пользовательских настроек <code>general.autoScroll</code>.</dd>
+</dl>
+</div> <div id="a-contentcontextmenu">
+
+</div> <div id="a-contenttooltip">
+
+</div> <div id="a-handleCtrlPageUpDown">
+
+</div> <div id="a-onbookmarkgroup">
+
+</div> <div id="a-onnewtab">
+
+</div> <div id="a-tabmodalPromptShowing">
+
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p> </p><div id="p-browsers">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/browsers">browsers</a></span></code></dt>
+ <dd>Type: <em>nodelist of <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> elements</em></dd>
+ <dd>Holds a list of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> elements inside the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>.</dd>
+</dl></div> <div id="p-canGoBack">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/canGoBack">canGoBack</a></span></code></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    This read-only property is <code>true</code> if there is a page to go back to in the session history and the Back button should be enabled.</dd>
+</dl></div> <div id="p-canGoForward">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/canGoForward">canGoForward</a></span></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>This read-only property is <code>true</code> if there is a page to go forward to in the session history and the Forward button should be enabled.</dd>
+</dl></div> <div id="p-contentDocument">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentDocument">contentDocument</a></span></code></dt>
+  <dd>
+    Type: <em>document</em></dd>
+  <dd>
+    This read-only property contains the document object in the element.</dd>
+</dl></div> <div id="p-contentTitle">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentTitle">contentTitle</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    This read-only property contains the title of the document object in the browser.</dd>
+</dl></div> <div id="p-contentViewerEdit">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentViewerEdit">contentViewerEdit</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerEdit" title="">nsIContentViewerEdit</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerEdit" title="">nsIContentViewerEdit</a></code> which handles clipboard operations on the document.</dd>
+</dl></div> <div id="p-contentViewerFile">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentViewerFile">contentViewerFile</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerFile" title="">nsIContentViewerFile</a></code></em></dd>
+  <dd>
+    Reference to the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerFile" title="">nsIContentViewerFile</a></code> interface for the document.</dd>
+</dl></div> <div id="p-contentWindow">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentWindow">contentWindow</a></span></code></dt> <dd>Type: <em>TODO</em></dd> <dd>Use the contentWindow.wrappedJSObject to obtain a DOM(html) window object</dd>
+</dl></div> <div id="p-currentURI">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/currentURI">currentURI</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></em></dd>
+  <dd>
+    This read-only property contains the currently loaded URL. To change the URL, use the <span id="m-loadURI"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURI">loadURI</a></code></span> method.</dd>
+</dl></div> <div id="p-docShell">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/docShell">docShell</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell" title="">nsIDocShell</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell" title="">nsIDocShell</a></code> object for the document.</dd>
+</dl></div> <div id="p-documentCharsetInfo">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/documentCharsetInfo">documentCharsetInfo</a></span></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9)">Obsolete since Gecko 12.0</span></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentCharsetInfo" title="">nsIDocumentCharsetInfo</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentCharsetInfo" title="">nsIDocumentCharsetInfo</a></code> object for the document which is used to handle which character set should be used to display the document. The properties of the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentCharsetInfo" title="">nsIDocumentCharsetInfo</a></code> object were merged into the docshell in Gecko 12.0 (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9).</dd>
+</dl></div> <div id="p-homePage">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/homePage">homePage</a></span></code></dt>
+  <dd>
+    Type: <em>string home page URL</em></dd>
+  <dd>
+    This property holds the value of the user's home page setting.</dd>
+</dl></div> <div id="p-markupDocumentViewer">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/markupDocumentViewer">markupDocumentViewer</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMarkupDocumentViewer" title="">nsIMarkupDocumentViewer</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMarkupDocumentViewer" title="">nsIMarkupDocumentViewer</a></code> which is responsible for drawing the document.</dd>
+</dl></div> <div id="p-securityUI">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/securityUI">securityUI</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISecureBrowserUI" title="">nsISecureBrowserUI</a></code></em></dd>
+  <dd>
+    The read-only property holds an object which may be used to determine the security level of the loaded document.</dd>
+</dl></div> <div id="p-selectedBrowser">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selectedBrowser">selectedBrowser</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> element</em></dd>
+ <dd>This read-only property returns the currently displayed <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> element.</dd>
+</dl></div> <div id="p-selectedTab">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selectedTab">selectedTab</a></span></code></dt>
+ <dd>Type: <em>tab element</em></dd>
+ <dd>A reference to the currently selected tab, which will always be one of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> elements in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> element. Assign a value to this property to modify the currently selected tab.</dd>
+</dl></div> <div id="p-sessionHistory">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/sessionHistory">sessionHistory</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISHistory" title="">nsISHistory</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISHistory" title="">nsISHistory</a></code> object which holds the session history.</dd>
+</dl></div> <div id="p-tabContainer">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabContainer">tabContainer</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> element</em></dd>
+ <dt> </dt>
+ <dd>Returns the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> element that contains the tabs. This is useful for add-ons that need to use events related to tabs in the browser window.</dd>
+</dl></div> <div id="p-tabbrowser.tabs">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabbrowser.tabs">tabs</a></span></code> </dt> <dd>Type: <em>array</em></dd> <dd>A <a href="/En/DOM/NodeList" title="En/DOM/NodeList">NodeList</a> containing the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> objects for each tab in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>. This is a shortcut for looking at the tabs in the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabContainer">tabContainer</a></span></code>.</dd>
+</dl></div> <div id="p-visibleTabs">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/visibleTabs">visibleTabs</a></span></code> </dt> <dd>Type: <em>array</em></dd> <dd>An array containing <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> objects for each visible tab in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>. This lets you determine which tabs are visible in the current tab set.</dd>
+</dl></div> <div id="p-webBrowserFind">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webBrowserFind">webBrowserFind</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowserFind" title="">nsIWebBrowserFind</a></code></em></dd>
+  <dd>
+    This read-only property contains an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowserFind" title="">nsIWebBrowserFind</a></code> object which can be used to search for text in the document.</dd>
+</dl></div> <div id="p-webNavigation">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webNavigation">webNavigation</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebNavigation" title="">nsIWebNavigation</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebNavigation" title="">nsIWebNavigation</a></code> object for the document. Most of its methods are callable directly on the element itself, such as <span id="m-goBack"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goBack">goBack</a></code></span> and <span id="m-goForward"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goForward">goForward</a></code></span>. It also contains the load constants used by <span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags</a></code></span> and <span id="m-loadURIWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURIWithFlags">loadURIWithFlags</a></code></span>.</dd>
+</dl></div> <div id="p-webProgress">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webProgress">webProgress</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code></em></dd>
+  <dd>
+    This read-only property contains an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> object which is used to monitor the progress of a document loading.</dd>
+</dl></div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Наследуемые методы</strong><br>
+<small><code><a href="https://developer.mozilla.org/ru/docs/DOM/element.addEvrutListruer">addEvrutListruer()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.apprudChild">apprudChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.clonruode">clonruode()</a></code>, <a href="/ru/DOM/Node.compareDocumrutPosition" title="ru/DOM/Node.compareDocumrutPosition">compareDocumrutPosition</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.dispatchEvrut">dispatchEvrut()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttributruode">getAttributruode()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttributruodruS">getAttributruodruS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getAttributruS">getAttributruS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getBoundingClirutRect">getBoundingClirutRect()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getClirutRects">getClirutRects()</a></code>, <span id="m-getElemrutsByAttribute"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/getElemrutsByAttribute">getElemrutsByAttribute</a></code></span>, <span id="m-getElemrutsByAttributruS"><code><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Методы/getElemrutsByAttributruS">getElemrutsByAttributruS</a></code></span>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getElemrutsByClassName">getElemrutsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getElemrutsByTagName">getElemrutsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getElemrutsByTagNamruS">getElemrutsByTagNamruS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/ru/DOM/Node.getUserData" title="ru/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasAttributruS">hasAttributruS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/ru/DOM/Node.isEqualNode" title="ru/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/ru/DOM/Node.isSamruode" title="ru/DOM/Node.isSamruode">isSamruode</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/ru/DOM/Node.lookupNamespaceURI" title="ru/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/ru/DOM/Node.lookupPrefix" title="ru/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeAttributruode">removeAttributruode()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeAttributruS">removeAttributruS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.removeEvrutListruer">removeEvrutListruer()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttributruode">setAttributruode()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttributruodruS">setAttributruodruS()</a></code>, <code><a href="https://developer.mozilla.org/ru/docs/DOM/element.setAttributruS">setAttributruS()</a></code>, <a href="/ru/DOM/Node.setUserData" title="ru/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table>                                        <p></p>
+<h3 id="Related" name="Related">Related</h3>
+<ul>
+ <li><a href="/en/Code_snippets/Tabbed_browser" title="en/Code_snippets/Tabbed_browser">Code snippets:Tabbed browser</a></li>
+</ul>

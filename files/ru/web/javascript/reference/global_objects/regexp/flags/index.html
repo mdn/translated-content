@@ -1,0 +1,120 @@
+---
+title: RegExp.prototype.flags
+slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
+tags:
+  - ECMAScript6
+  - Experimental
+  - Expérimental(2)
+  - JavaScript
+  - Property
+  - Prototype
+  - Reference
+  - RegExp
+  - Référence(2)
+  - регулярные выражения
+translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
+---
+<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+
+<p>Свойство <strong><code>flags</code></strong> возвращает строку, состоящую из флагов текущего регулярного выражения.</p>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p>Флаги в свойстве <code>flags</code> упорядочены по алфавиту (слева направо, то есть <code>"gimuy"</code>).</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example:_Using_flags" name="Example:_Using_flags">Пример: использование свойства <code>flags</code></h3>
+
+<pre class="brush: js">/foo/ig.flags;   // "gi"
+/bar/myu.flags;  // "muy"
+</pre>
+
+<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+
+<pre class="brush: js">if (RegExp.prototype.flags === undefined) {
+  Object.defineProperty(RegExp.prototype, 'flags', {
+    configurable: true,
+    get: function() {
+      return this.toString().match(/[gimuy]*$/)[0];
+    }
+  });
+}
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("37")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome для Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("37")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("RegExp.prototype.source")}}</li>
+</ul>

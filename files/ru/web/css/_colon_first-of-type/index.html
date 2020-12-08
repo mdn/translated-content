@@ -1,0 +1,118 @@
+---
+title: ':first-of-type'
+slug: 'Web/CSS/:first-of-type'
+tags:
+  - Псевдоклассы
+translation_of: 'Web/CSS/:first-of-type'
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:first-of-type</code> находит первого потомка своего типа среди детей родителя.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">element:first-of-type { <em>/* стили</em> */ }
+</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Этот пример показывает, как применится универсальный селектор, если простой селектор не написан.</p>
+
+<pre class="brush: css">div :first-of-type {
+  background-color: lime;
+}</pre>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;span&gt;Это span первый!&lt;/span&gt;
+  &lt;span&gt;Это span нет. :(&lt;/span&gt;
+  &lt;span&gt;что насчёт этого &lt;em&gt;вложенного элемента&lt;/em&gt;?&lt;/span&gt;
+  &lt;strike&gt;Это другой тег&lt;/strike&gt;
+  &lt;span&gt;Грустно, это тоже нет...&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+<p>...сработает так:</p>
+
+<div>{{EmbedLiveSample('Пример','100%', '120')}}</div>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификации</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
+   <td>9.0</td>
+   <td>9.5</td>
+   <td>3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1.9.1")}}</td>
+   <td>9.0</td>
+   <td>10.0</td>
+   <td>3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{Cssxref(":nth-of-type")}}, {{Cssxref(":last-of-type")}}</li>
+</ul>

@@ -1,0 +1,226 @@
+---
+title: Aplicativo System
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Sistema
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/System
+---
+<div class="summary">
+ <p><span class="seoSummary">O aplicativo System e o primeiro aplicativo carregado pelo Gecko durante o <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Architecture#Firefox_OS_bootup_procedure">procedimento de bootup do Firefox OS</a>, e lida com um número grande de responsabilidades que são requeridas para executar o sistema e geralmente não é o escopo dos demais aplicativos. Esse artigo explica em detalhes como o aplicativo System funciona.</span></p>
+</div>
+<blockquote>
+ <p>Qualquer aplicativo que pode ser escrito em JavaScript acabará sendo escrito em JavaScript. -- Lei de Atwood</p>
+</blockquote>
+<div class="note">
+ <p><strong>Nota</strong>: Você pode encontrar o <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/system">código fonte do aplicativo System</a> no repo do Gaia no Github.</p>
+</div>
+<h2 id="Como_o_aplicativo_system_faz_o_boot">Como o aplicativo system faz o boot</h2>
+<p>Quando o Gecko tenta iniciar o aplicativo System, ele referencia o manifesto manifest.webapp e carrega o arquivo index.html referenciado pelo parâmetro <code>launch_path</code> (o <code>launch_path</code> sempre é o arquivo /index.html para aplicativos Gaia). <code>index.html</code> conecta a todos os estilos do sistema e JavaScripe. Para gerenciar um sistema móvel completo, o aplicativo System deve carregar um grande número de recursos.</p>
+<p>O processo de boot é iniciado pelo programa <code>bootstrap.js</code>, com o seguinte código:</p>
+<pre class="brush: js">window.addEventListener('load', function startup() {
+// define safelyLaunchFTU
+function safelyLaunchFTU() {
+  ...
+}
+
+if (Applications.ready) {
+  safelyLaunchFTU();
+} else {
+  ...
+}
+
+window.addEventListener('ftudone', function doneWithFTU() {
+  window.removeEventListener('ftudone', doneWithFTU);
+
+  var lock = window.navigator.mozSettings.createLock();
+  lock.set({
+    'gaia.system.checkForUpdates': true
+  });
+}
+
+  ...
+
+// With all important event handlers in place, we can now notify
+// Gecko that we're ready for certain system services to send us
+// messages (e.g. the radio).
+var evt = new CustomEvent('mozContentEvent',
+{ bubbles: true, cancelable: false,
+  detail: { type: 'system-message-listener-ready' } });
+  window.dispatchEvent(evt);
+}</pre>
+<p>O código funciona da seguinte maneira:</p>
+<ol>
+ <li>O aplicativo System é um aplicativo web real executando num navegador e precisa que todos os recursos dependentes estejam carregados — incluindo as imagens e estilos. Assim, tudo é iniciado de uma só vez pelo {{ domxref("window.onload") }}.</li>
+ <li>Primeiro, preparamos para executar o FTU (First Time Experience, ou Primeiro uso) e a tela de início com a função <code>safelyLaunchFTU()</code>. Como o nome sugerir, FTU somente é executado quando o usuário inicia o Firefox OS pela primeira vez.</li>
+ <li>Quando o usuário pressiona DONE dentro do FTU o evento <code>ftudone</code> é disparado e o programa <code>bootstrap.js</code> recebe e trabalha esse evento.</li>
+ <li>No próximo passo, é utilizado a API {{domxref("Settings") }}  (<code>navigator.mozSettings</code>) para configurar o parâmetro <code>gaia.system.checkForUpdates</code> para <code>true</code>, indicando que o sistema irá verificar se há atualizações.</li>
+ <li>Finalmente, é executado <code>window.dispatchEvent</code>,  via <code>CustomEvent</code>. Isso é um padrão muito importante utilizado pelo Gaia para notificações do sistema e comunicação com o Gecko. Nesse caso, o aplicativo System é notificado pelo Gecko que está pronto para receber e lidar com os eventos.</li>
+</ol>
+<h2 id="Modularização_instanciável">Modularização instanciável</h2>
+<p>O próprio sistema está constantemente evoluindo para alcançar a melhor modularização e flexibilidade. A partir da versão 1.4 há uma iniciativa em andamento para <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=912952">refazer o módulo do sistema como um objeto instanciável</a>.</p>
+<p>Depois do código abaixo ter sido executado, as referências a cada componente do sistema em <code>bootstrap.js</code> será da seguinte forma:</p>
+<pre class="brush: js">window.telephonySettings = new TelephonySettings();
+window.telephonySettings.start();</pre>
+<p>O esqueleto do código fonte para <code>TelephonySettings()</code>será:</p>
+<pre class="brush: js">(function(exports) {
+  'use strict';
+  function TelephonySettings() {
+    this.init_param = false;
+  }
+
+  TelephonySettings.prototype = {
+    // Initialzes all settings.
+    start: function() {
+      ...
+    },
+
+    // Clean all settings.
+    stop: function() {
+      ...
+    },
+
+    1st_method: function ts_1st_method() {
+      ...
+    },
+
+    2nd_method: function ts_2nd_method() {
+      ...
+    }
+  };
+
+  exports.TelephonySettings = TelephonySettings;
+
+}(window));</pre>
+<p>Esse padrão ajuda a modularizar cada componente do sistema e facilita o processo de teste.</p>
+<h2 id="Animações_do_boot_e_shut_down">Animações do boot e shut down</h2>
+<p>Essa seção explica como o aplicativo System controla as animações durante o boot e shut down. Os programas <code>init_logo_handler.js</code> e <code>sleep_menu.js</code> são os responsáveis por manipular as animações.</p>
+<h3 id="Animações_de_Boot_up">Animações de Boot up</h3>
+<p>A animação do boot up na verdade não está no procedimento principal de bootup, mas pelo  <code>EventListeners</code>.</p>
+<p>O código da animação de boot up <code>init_logo_handler.js</code> parece com isso:</p>
+<p>Para desenhar o logo ou a animação uma vez que o Gecko esteja pronto para desenhar algo na tela, nós executamos o manipulador do sistema uma vez que o DOM é carregado, então escondemos o log uma vez que o evento <code>ftudone</code> ou <code>ftuskip</code> é disparado. O método <code>_appendCarrierPowerOn</code>, presente em <code>init_logo_handler.js</code>, mostra como o Gaia prepara para executar a animação ou mostrar o logo respondendo o evento<code> DOMContentLoaded</code> event. O <code>logoLoader</code> é definido em <code>logo_loader.js</code>.</p>
+<pre class="brush: js">var self = this;
+document.addEventListener('DOMContentLoaded', function() {
+  self.carrierLogo.appendChild(self.logoLoader.element);
+  self._setReady();
+});</pre>
+<p>Uma vez que o logo é preparado, o sistema chama o método <code>_setReady()</code>, que configura um listener para responder a um evento especial <code>mozChromeEvent</code> com um tipo de <code>system-first-paint</code> para denotar que o sistema está pronto para desenhar na tela.</p>
+<pre class="brush: js">var elem = this.logoLoader.element;
+  ...
+window.addEventListener('mozChromeEvent', function startVideo(e) {
+  if (e.detail.type == 'system-first-paint') {
+    window.removeEventListener('mozChromeEvent', startVideo);
+    if (elem &amp;amp;&amp;amp; elem.ended === false) {
+      elem.play();
+    }
+  }
+});</pre>
+<p>Nesse ponto o elemento gráfico entra em ação. Uma vez que o evento <code>ftuopen</code> ou <code>ftuskip</code> é disparado, <code>init_logo_handler.js</code> chama o método <code>handleEvent()</code> que dispara o método <code>animate()</code>para terminar a animação com um efeito de transição em fadeout.</p>
+<pre class="brush: js">init: function ilh_init(logoLoader) {
+  window.addEventListener('ftuopen', this);
+  window.addEventListener('ftuskip', this);
+    ...
+},
+
+handleEvent: function ilh_handleEvent() {
+  this.animate();
+},</pre>
+<h3 id="Animações_de_Shut_down">Animações de Shut down</h3>
+<p>Uma vez que o sistema está pronto, uma pressão longa no botão power dispara o evento <code>holdsleep</code>, como definido no programa <code>hardware_button.js</code>. Esse script manipula todos os eventos vindos do pressionamento de botões físicos, incluindo o botão power, home, volume para cima e para baixo.</p>
+<pre class="brush: js">HardwareButtonsSleepState.prototype.enter = function() {
+  this.timer = setTimeout(function() {
+    / * When the user holds Sleep button more than HOLD_INTERVAL. */
+    this.hardwareButtons.publish('holdsleep');
+    this.hardwareButtons.setState('base');
+  }.bind(this), this.hardwareButtons.HOLD_INTERVAL);
+};</pre>
+<p>A animação de shut down é manipulada pelo script <code>sleep_menu.js</code>. Ele responde ao evento <code>holdsleep</code> e mostra o menu quando é disparado.</p>
+<pre class="brush: js">init: function sm_init() {
+    ...
+  window.addEventListener('holdsleep', this.show.bind(this));
+    ...
+}</pre>
+<p>Se o usuário escolher desligar ou reiniciar o dispositivo a função <code>startPowerOff()</code> é chamada que dispara a função <code>LogoLoader()</code>para manipular a animação de shutdown.</p>
+<pre class="brush: js">handleEvent: function sm_handleEvent(evt) {
+  switch (evt.type) {
+    case 'click':
+      ...
+    this.handler(action);
+    break;
+    ...
+  }
+}
+
+handler: function sm_handler(action) {
+  switch (action) {
+    ...
+    case 'restart':
+      this.startPowerOff(true);
+      break;
+
+    case 'power':
+      this.startPowerOff(false);
+      break;
+    ...
+  }
+}</pre>
+<h2 id="Funções_do_sistema">Funções do sistema</h2>
+<p>Existe um grande número de funções e responsabilidades gerenciadas pelo aplicativo System, algumas dos quais podem supreender você. O aplicativo System manipula a barra de status e bandeja de utilitários, o travamento do SIM, gerenciador de atualizações, a chamada à tela de início, gerenciador dos aplicativos web e mais. Essa seção explora uma das mais importantes funções providas pelo aplicativo System.</p>
+<h3 id="Barra_de_status_e_a_bandeja_de_utiliários">Barra de status e a bandeja de utiliários</h3>
+<p>A barra de status do sistema e o menu dropdown (Gaia chama isso de <em>utility tray</em>, já no Android é utilizado o termo barra de notificação) são manipulados pelos programas <code>statusbar.js</code> e <code>utility_tray.js</code>. Dentro do aplicativo <code>index.html</code>, a barra de status é definida em <code>&lt;div id="statusbar" data-z-index-level="statusbar"&gt;</code> enquanto que a bandeja de utilitários ficam na seguinte estrutura:</p>
+<pre class="brush: html">&lt;div id="utility-tray" data-z-index-level="utility-tray"&gt;
+  &lt;div id="notifications-container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>Existem alguns paineis especiais dentro da bandeja de utilitários como o gerenciador de atualização, gerenciador de chamadas de emergência, notificação de armazenamento, controles e notificações do tocador de mídias, status de transferência via bluetooth, troca do IME, ou método de entrada no teclado. Os estilos e gerenciadores relacionados estão nos diretórios <code>js</code>/ e <code>style/</code>.</p>
+<h3 id="Lançadores_especiais_de_aplicativos">Lançadores especiais de aplicativos</h3>
+<p>O aplicativo System tem três lançadores especiais, que chamam aplicativos web quando necessário:</p>
+<ul>
+ <li>O lançador da tela inicial: Executa o aplicativo Homescreen, que mostra a tela inicial quando o usuário pressiona o botão Home ou se um aplicativo web é encerrado, seja de forma normal ou devido a um erro.</li>
+ <li>O lançador da tela bloqueada: Executa o aplicativo Lockscreen, que mostra a tela bloqueada toda vez que o usuário liga a tela.</li>
+ <li>O lançador do FTU (Firts time user): Executa o aplicativo FTU experience. Isso é único porque todo usuário verá o resultado desse aplicativo na primeira vez que liga um dispositivo Firefox OS (ou reinicia o dispositivo com as configurações de fábrica). O aplicativo FTU não permite o usuário utilizar o botão Home ou sair do aplicativo.</li>
+</ul>
+<h3 id="Tela_de_bloqueio">Tela de bloqueio</h3>
+<p>O ponto de entrada principal para o aplicativo Lockscreen app é <code>system/js/lockscreen.js</code>. Dessa tela o usuário pode desbloquear o telefone, chamar a câmera ou controlar o tocador de mídia.</p>
+<h3 id="Discagem_de_emergência">Discagem de emergência</h3>
+<p>O código para a discagem de emergência está no diretório <code>gaia/apps/system/emergency-call/</code>. É uma versão simplificada do aplicativo Dialer que possibilita que o usuário acesse do {{ anch("SIM PIN unlock dialog") }} para chamar os serviços de emergência como por exemplo a polícia.</p>
+<h2 id="IU_(Interface_do_Usuário_de_todo_o_sistema)">IU (Interface do Usuário de todo o sistema)</h2>
+<p>O aplicativo System manipula a grande maioria da interface com o usuário que basicamente consiste-se de diálogos como os avisos de volume, desbloqueio da senha do SIM e elementos de IU que afetam o comportamento da janela como o botão home por software.</p>
+<h3 id="z-index_level">z-index level</h3>
+<p>com o arquivo <code>index.html</code> do aplicativo do sistema, muitos componentes são reuinidos com o atributo<code> data-z-index-level</code> attribute, por examplo:</p>
+<pre class="brush: html">&lt;div id="sleep-menu" data-z-index-level="sleep-menu"&gt;
+  ...
+&lt;/div&gt;</pre>
+<p>Os <code>z-index-levels</code> correspondentes são definidos dentro de <code>system/style/zindex.css</code>, por exemplo:</p>
+<pre class="brush: css">#screen &gt; [data-z-index-level="sleep-menu"] {
+  z-index: 65536;
+}
+
+...
+
+#screen &gt; [data-z-index-level="app"] &gt; .appWindow {
+  z-index: 3;
+}</pre>
+<p>As configurações z-index são arranjadas de acordo com a ordem que os elementos são mostrados na tela — elementos que necessitam aparecer num nível maior da hierarquia recebem um número maior. Essa é a maneira que o aplicativo System lida com o gerenciamento das janelas num nível básico.</p>
+<h3 id="O_botão_home_por_software">O botão home por software</h3>
+<p>O botão home por software é uma alternativa ao botão físico. É habilitado automaticamente em dispositivos que não possuem o botão físico, por exemplo o Nexus 4. Para controlar sua aparência o Gecko provê um recurso de mídia proprietário chamado<code>-moz-physical-home-button</code>, que pode ser usado dentro de um "media query" para aplicar estilos baseados na presença de um botão home físico. O gerenciador de janelas reserva algum espaço na tela para o botão home se for solicitado.</p>
+<p>No arquivo <code>system/style/window.css</code> (e muitos outros arquivos de estilo do sistema), você pode ver isso:</p>
+<pre class="brush: css">@media not all and (-moz-physical-home-button) {
+  #screen:not(.software-button-disabled) &gt; #windows &gt; .appWindow {
+    bottom: 5rem;
+  }
+ }</pre>
+<h3 id="Gesto_do_botão_Home_(deslizar_para_cima_a_partir_da_parte_de_baixo_da_tela)">Gesto do botão Home (deslizar para cima a partir da parte de baixo da tela)</h3>
+<p>O gesto do botão home é outra alternativa ao botão home físico, pode ser habilitado em <a href="/pt-BR/Firefox_OS/Debugging/Developer_settings">configurações do desenvolvedor</a> e o código que o controla pode ser encontrado em <code>system/js/home_gesture.js</code>. O gesto consiste-se em deslizar o dedo de baixo para cima na tela e pode ser usado, por exemplo, para fechar os aplicativos:</p>
+<p>O gesto será automaticamente habilitado nos tablets Firefox OS. The gesture will be automatically enabled on Firefox OS tablet devices. Os limites da tela definidos em <code>gaia/shared/js/screen_layout.js</code> é usado para detectar se o dispositivo é um tablet ou não.</p>
+<h3 id="Diálogo_de_aviso_do_Volume">Diálogo de aviso do Volume</h3>
+<p>O código que controla o diálogo de aviso de volume pode ser encontrado em <code>system/js/sound_manager.js</code>. Ele aparece quando ocorre algumas das situações:</p>
+<ul>
+ <li>O fone de ouvido é conectado.</li>
+ <li>O volume de 85dB é atingido.</li>
+ <li>É executado um conteúdo no canal de audio.</li>
+</ul>
+<h3 id="Diálogo_de_desbloqueio_de_senha_(PIN)_do_SIM"><a name="SIM PIN unlock dialog"></a>Diálogo de desbloqueio de senha (PIN) do SIM</h3>
+<p>O código que controla esse diálogo está em <code>system/js/simcard_dialog.js</code> — esse diálogo é apresentado quando a opção de bloqueio por senha está habilitada. É necessário ter permissões de telefonia descritas no arquivo <code>manifest.webapp</code> (que o aplicativo System faz).</p>
+<div class="note">
+ <p><strong>Nota</strong>: O diálogo de desbloqueio não aparece quando o telefone está em modo avião.</p>
+</div>
+<p> </p>

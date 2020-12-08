@@ -1,0 +1,174 @@
+---
+title: Więcej funkcji obsługi zdarzeń
+slug: Mozilla/Tech/XUL/Kurs_XUL/Więcej_funkcji_obsługi_zdarzeń
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Event_Handlers
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL/Dodawanie_funkcji_obsługi_zdarzeń" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL/Skróty_klawiaturowe">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule, badana jest postać obiektu zdarzenia oraz opisane są dodatkowe zdarzenia.</p>
+
+<h2 id="Obiekt_zdarzenia" name="Obiekt_zdarzenia">Obiekt zdarzenia</h2>
+
+<p>Każda obsługa zdarzeń posiada pojedynczy argument, który przetrzymuje obiekt <a href="/pl/DOM/event" title="pl/DOM/event">zdarzenia</a>. W postaci atrybutu nasłuchu, zdarzenie jest argumentem kodu skryptu, do którego można się odnosić poprzez używanie nazwy 'event'. Natomiast w funkcji <code><a href="/pl/DOM/element.addEventListener" title="pl/DOM/element.addEventListener">addEventListener</a></code>, pierwszy argument będzie obiektem zdarzenia. Ten obiekt zdarzenia, posiada pewną liczbę własności, które mogą być badane w trakcie trwania zdarzenia. Pełną listę własności można znaleźć w dokumentacji obiektu na <a class="external" href="http://xulplanet.com/references/objref/Event.html">XULPlanet</a>].</p>
+
+<p>Mieliśmy już okazję oglądać własność <code><a href="/pl/DOM/event.target" title="pl/DOM/event.target">target</a></code> zdarzenia w poprzedniej sekcji. Zawiera ona odnośnik do elementu, w którym pojawiło się zdarzenie. Podobną własnością jest <code><a href="/pl/DOM/event.currentTarget" title="pl/DOM/event.currentTarget">currentTarget</a></code>, która zawiera element, którego nasłuch jest aktualnie obsługiwany. W poniższym przykładzie, <code><a href="/pl/DOM/event.currentTarget" title="pl/DOM/event.currentTarget">currentTarget</a></code> zawsze wskazuje na vbox, natomiast własność <code><a href="/pl/DOM/event.target" title="pl/DOM/event.target">target</a></code> będzie przechowywała specyficzny element: przycisk lub pole wyboru, które zostały aktywowane.</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul">Podgląd</a></p>
+
+<pre>&lt;vbox oncommand="alert(event.currentTarget.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Pokaż obrazki"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h3 id="Zatrzymanie_propagowania_zdarzenia" name="Zatrzymanie_propagowania_zdarzenia">Zatrzymanie propagowania zdarzenia</h3>
+
+<p>Przypomnijmy, że faza przejęcia ma miejsce przed fazą wrzenia, więc jakikolwiek "listener" należący do tej pierwszej będzie wyzwalany przed nasłuchem drugiej. Jeśli zdarzenie odnoszące się do fazy przejęcia, zatrzyma swoją propagację, żaden z późniejszych "listenerów", tak tych należących do fazy przejęcia, jak i wrzenia nie otrzyma powiadomienia o zdarzeniu. W celu zatrzymania propagacji zdarzenia, wystarczy wywołać metodę <code><a href="/pl/DOM/event.stopPropagation" title="pl/DOM/event.stopPropagation">stopPropagation</a></code> należącą do obiektu zdarzenia. Przykład tego wywołania poniżej:</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul">Podgląd</a></p>
+
+<pre>&lt;hbox id="outerbox"&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/hbox&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Przycisk został naciśnięty!');
+}
+
+function boxPressed(event){
+  alert('Pudełko zostało naciśnięte!');
+  event.stopPropagation();
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command',buttonPressed,true);
+
+var outerbox = document.getElementById("outerbox");
+outerbox.addEventListener('command',boxPressed,true);
+&lt;/script&gt;
+</pre>
+
+<p>W tym przypadku, nasłuch zdarzenia został dodany do przycisku, a inny nasłuch został dodany do ramki. Metoda <code><a href="/pl/DOM/event.stopPropagation" title="pl/DOM/event.stopPropagation">stopPropagation</a></code> została wywołana w "listenerze" ramki, więc "listener" przycisku nigdy nie zostanie wywołany. Jeśli to wywołanie zostało usunięte, oba "listenery" będą wywoływane, co spowoduje pojawienie się obu alertów.</p>
+
+<h3 id="Zapobieganie_domy.C5.9Blnym_akcj.C4.85" name="Zapobieganie_domy.C5.9Blnym_akcj.C4.85">Zapobieganie domyślnym akcją</h3>
+
+<p>Jeśli żadna obsługa wydarzenia nie została zarejestrowani dla wydarzenia, to po zakończeniu fazy przejęcia i wrzenia, element obsłuży zdarzenie w sposób domyślny. Co się stanie zależy od zdarzenia i typu samego elementu. Przykładowo, zdarzenie "popupshowing" jest wysyłane do "popupa" chwilę przed jego wyświetleniem. Domyślną akcją jest wyświetlenie "popupa". Jeśli coś zapobiegnie akcji domyślnej, "popup" nie zostanie wyświetlony. Domyślnej akcji możemy zapobiec dzięki znajdującej się w obiekcie zdarzenia metodzie <code><a href="/pl/DOM/event.preventDefault" title="pl/DOM/event.preventDefault">preventDefault</a></code>. Przykład jej zastosowania poniżej.</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul">Podgląd</a></p>
+
+<pre>&lt;button label="Types" type="menu"&gt;
+  &lt;menupopup onpopupshowing="event.preventDefault();"&gt;
+    &lt;menuitem label="Glass"/&gt;
+    &lt;menuitem label="Plastic"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+<p>Zauważmy, że zapobieganie domyślnym akcjom, to nie to samo co zatrzymywanie propagacji zdarzenia przy użyciu metody <code><a href="/pl/DOM/event.stopPropagation" title="pl/DOM/event.stopPropagation">stopPropagation</a></code>. Nawet w przypadku kiedy zapobiegnięto domyślnej akcji, zdarzenie będzie nadal kontynuowało swoją propagację. Podobnie, wywoływanie metody <code><a href="/pl/DOM/event.stopPropagation" title="pl/DOM/event.stopPropagation">stopPropagation</a></code>, nie zapobiegnie domyślnej akcji. W celu zatrzymania przed zajściem obu tych akcji, należy wywołać obie powyższe metody.</p>
+
+<p>Warto zaznaczyć, że kiedy zapobiegniemy propagacji lub akcji domyślnej, żadna z nich nie będzie w już stanie być uruchomiona ponownie dla danego wydarzenia.</p>
+
+<p>The following sections list some of the events that may be used. A full list is provided in the <a class="external" href="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html">XULPlanet event reference</a>.</p>
+
+<h2 id="Zdarzenia_myszy" name="Zdarzenia_myszy">Zdarzenia myszy</h2>
+
+<p>Jest tu kilka zdarzeń, które mogą być użyte do obsługi myszki i jej określonych akcji, które są opisane pokrótce poniżej:</p>
+
+<dl>
+ <dt>click </dt>
+ <dd>Wywoływany, kiedy przycisk myszy zostanie naciśnięty i zwolniony nad elementem.</dd>
+</dl>
+
+<dl>
+ <dt>dblclick </dt>
+ <dd>Wywoływana, kiedy przycisk myszy zostanie naciśnięty dwukrotnie.</dd>
+</dl>
+
+<dl>
+ <dt>mousedown </dt>
+ <dd>Wywoływana, kiedy przycisk myszy jest naciśnięty nad elementem. Obsługa zdarzenia będzie wywoływana jak tylko przycisk zostanie naciśniety, nawet jeśli nie został jeszcze zwolniony.</dd>
+</dl>
+
+<dl>
+ <dt>mouseup </dt>
+ <dd>Wywoływana, kiedy przycisk myszy zostanie zwolniony na elemencie.</dd>
+</dl>
+
+<dl>
+ <dt>mouseover </dt>
+ <dd>Wywoływana kiedy wskaźnik myszy zostanie przeniesiony nad element. Można ją wykorzystywać w celu podświetlania elementu, jednakże CSS umożliwia to automatycznie, więc lepiej nie wykonywać tego z pomocą zdarzeń. Można jednak, wykorzystywać to do wyświetlania tekstu pomocy w pasku statusu.</dd>
+</dl>
+
+<dl>
+ <dt>mousemove </dt>
+ <dd>Wywoływana, kiedy wskaźnik myszy zostanie poruszony nad elementem. Zdarzenie to może być wywoływane wiele razy, w chwili w której użytkownik porusza myszą, więc należy</dd>
+</dl>
+
+<p>unikać obsługi nią długotrwałych zadań.</p>
+
+<dl>
+ <dt>mouseout </dt>
+ <dd>Wywoływana, kiedy wskaźnik myszy rozstanie przesunięty poza element. Można to wykorzystać do usunięcia podświetlenia elementu lub usunięcia tekstu pomocy paska statusu.</dd>
+</dl>
+
+<p><span class="comment">There are also a set of drag related events, which occur when the user holds down a mouse button and drags the mouse around. Those events are described in <a href="/pl/Przeciągnij_i_upuść" title="pl/Przeciągnij_i_upuść">Przeciągnij i upuść</a>.</span></p>
+
+<p>Istnieje także zestaw zdarzeń związanych z funkcja drag, które mają miejsce w chwili kiedy, użytkownik przytrzymując wciśnięty przycisk myszy ciągnie (drag) mysz. Zostaną one opisane w późniejszej sekcji związanej z funkcjami <a href="/pl/Przeciągnij_i_upuść" title="pl/Przeciągnij_i_upuść">drag i drop</a>.</p>
+
+<h3 id="W.C5.82asno.C5.9Bci_zdarzenia_przycisku_myszy" name="W.C5.82asno.C5.9Bci_zdarzenia_przycisku_myszy">Własności zdarzenia przycisku myszy</h3>
+
+<p>Kiedy zachodzą zdarzenia związane z przyciskiem myszy, mamy dostęp do różnego typu dodatkowych własności, które są w stanie określić który przycisk myszy został wciśnięty lub dokładną lokalizację miejsca w którym znajduje się wskaźnik myszy. Własności zdarzenia związanego z <code><a href="/pl/DOM/event.button" title="pl/DOM/event.button">przyciskiem</a></code>, mogą zostać użyte w celu określenia, który przycisk został wciśnięty, gdzie dostępne wartości to 0 dla lewego przycisku, 1 dla prawego i 2 dla środkowego. Jeśli mysz jest skonfigurowana inaczej, wartości mogą się zmienić.</p>
+
+<p>Szczegółowe własności (<code><a href="/pl/DOM/event.detail" title="pl/DOM/event.detail">detail</a></code>) przechowują wartość mówiącą, ile razy przycisk został szybko wciśnięty w pewnej sekwencji. Pozwala to sprawdzić czy przycisk został raz, dwa lub trzy razy wciśnięty. Oczywiście, jeśli chcesz tylko sprawdzić podwójne kliknięcia można użyć w zastępstwie zdarzenia dblclick. Zdarzenie wciśnięcia będzie uruchamiane w chwili pierwszego wciśnięcia przycisku, jak również drugiego oraz trzeciego. Zdarzenie dblclick natomiast, będzie uruchamiane jednorazowo dla podwójnego wciśnięcia przycisku myszy.</p>
+
+<p>Własności <code><a href="/pl/DOM/event.button" title="pl/DOM/event.button">przycisku</a></code> oraz własności <code><a href="/pl/DOM/event.detail" title="pl/DOM/event.detail">detail</a></code> stosują się tylko do obsługi zdarzeń powiązanych z przyciskami myszy, a nie jej ruchem. Dla zdarzeń związanych z ruchem myszy, obie własności będą miały wartość 0.</p>
+
+<h3 id="W.C5.82asno.C5.9Bci_zdarzenia_pozycji_myszy" name="W.C5.82asno.C5.9Bci_zdarzenia_pozycji_myszy">Własności zdarzenia pozycji myszy</h3>
+
+<p>Jednak, wszystkie zdarzenia związane z obsługą myszy, będą posiadały dołączone własności przetrzymujące położenie myszy, w chwili zajścia zdarzenia. Istnieją dwa zestawy kordynatów położenia. Pierwszy to własności <code><a href="/pl/DOM/event.screenX" title="pl/DOM/event.screenX">screenX</a></code> i <code><a href="/pl/DOM/event.screenY" title="pl/DOM/event.screenY">screenY</a></code> i są w odniesieniu do lewego, górnego rogu ekranu. Drugi zestaw, <code><a href="/pl/DOM/event.clientX" title="pl/DOM/event.clientX">clientX</a></code> i <code><a href="/pl/DOM/event.clientY" title="pl/DOM/event.clientY">clientY</a></code>, istnieją w odniesieniu do lewego, górnego rogu dokumentu. Poniżej pokazany jest przykład wyświetlający aktualne położenie myszy:</p>
+
+<p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul">Podgląd</a></p>
+
+<pre>&lt;script&gt;
+
+function updateMouseCoordinates(event){
+  var text = "X:" + event.clientX + " Y:" + event.clientY;
+  document.getElementById("xy").value = text;
+}
+&lt;/script&gt;
+
+&lt;label id="xy"/&gt;
+&lt;hbox width="400" height="400" onmousemove="updateMouseCoordinates(event);"/&gt;
+</pre>
+
+<p>W tym przykładzie, rozmiar ramki został wyspecyfikowany, w celu podkreślenia efektu. Obsługa zdarzenia pobiera własności <code><a href="/pl/DOM/event.clientX" title="pl/DOM/event.clientX">clientX</a></code> i <code><a href="/pl/DOM/event.clientY" title="pl/DOM/event.clientY">clientY</a></code>, a następnie tworzy dla nich string. Ten string jest przypisany do własności value danej etykiety. Warto zaznaczyć, że argument zdarzenia musi być przekazany do funkcji <code>updateMouseCoordinates</code>. Jeśli poruszysz szybko myszą, nad granicą ramki możesz zauważyć, że wartości położenia nie zatrzymują się idealnie na wartości 400. Jest to spowodowane zdarzeniem <code>mousemove</code>, które pojawia się w pewnym odstępie czasu po przekroczeniu granicy. Im szybciej poruszała się mysz tym większa będzie różnica między teoretycznie poprawną wartością, a tym co zwrócą nam wartości <code>clientX</code> i <code>clientY</code>.</p>
+
+<h3 id="Element_Relative_Coordinates" name="Element_Relative_Coordinates">Element Relative Coordinates</h3>
+
+<p>W większości przypadków będziemy woleli pobrać koordynaty zdarzenia w odniesieniu do elementu, nie zaś całego okna. Wartości te można otrzymać poprzez, odjęcie pozycji elementu od pozycji zdarzenia. Przykład poniżej.</p>
+
+<pre>var element = event.target;
+var elementX = event.clientX - element.boxObject.x;
+var elementY = event.clientY - element.boxObject.y;
+</pre>
+
+<p>Elementy XUL posiadają obiekty ramek, które mogą być odzyskiwane za pomocą własności boxObject. Więcej informacji na ten temat znajdziemy w kolejnej sekcji, jednak co warto powiedzieć już teraz to, że wspomniana własność przechowuje informacje określającą jak wyświetlany jest element, włączając jego koordynaty x i y. W poniższym przykładzie, wspomniane koordynaty zostaję odjęte od koordynatów zdarzenia. Operacja ta daje nam pozycję zdarzenia w odniesieniu do elementu.</p>
+
+<h2 id="Zdarzenia_wczytywania" name="Zdarzenia_wczytywania">Zdarzenia wczytywania</h2>
+
+<p>Zdarzenie wczytywania jest wysyłane do dokumentu (znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>), kiedy tylko plik XUL zakończy wczytywanie i zaraz przed wyświetleniem zawartości. To zdarzenie jest bardzo często używane do inicjacji pól i wykonywania innych zadań które wymagają być zrobione przed tym jak użytkownik będzie używał okna. Należy używać zdarzenia wczytywania, aby wykonywać tego typu rzeczy dodając skrypt na górnym poziomie na zewnątrz funkcji. Wymagane to jest ze względu na to że elementy XUL mogą być jeszcze niewczytane lub nie w pełni zainicjowane, ze względu na co niektóre rzeczy mogą nie działać tak jak powinny. W celu użycia zdarzenia wczytywania, umieść atrybut <code><code id="a-onload"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onload">onload</a></code></code> w znaczniku <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>. Wywołaj kod wewnątrz obsługi zdarzenia wczytywania, który zainicjuje potrzebny interfejs.</p>
+
+<p>Istnieją także zdarzenia przeciwne do wczytywania (unload), które są wywoływane w trakcie zamykania okna lub w kontekście przeglądarki, kiedy strona jest przełączana na kolejny adres URL. Możemy wykorzystywać to zdarzenie do zapisania jakichkolwiek informacji.</p>
+
+<p>W następnym artykule dowiemy się <a href="/pl/Kurs_XUL/Skróty_klawiaturowe" title="pl/Kurs_XUL/Skróty_klawiaturowe">jak dodać dodawać skróty klawiaturowe</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL/Dodawanie_funkcji_obsługi_zdarzeń" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL/Skróty_klawiaturowe">Następny  »</a></p>
+</div><p></p>

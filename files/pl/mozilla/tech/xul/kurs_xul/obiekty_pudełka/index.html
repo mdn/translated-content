@@ -1,0 +1,164 @@
+---
+title: Obiekty pudełka
+slug: Mozilla/Tech/XUL/Kurs_XUL/Obiekty_pudełka
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Box_Objects
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Manipulowanie_listami" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Interfejsy_XPCOM">Następny  »</a></p>
+</div><p></p>
+
+<p>Artykuł ten opisuje obiekty pola, które mieszczą w sobie powiązane informacje o wyświetlaniu i rozmieszczaniu pola XUL jak również pewne szczegóły o rozmieszczeniu XUL.</p>
+
+<h2 id="O_uk.C5.82adzie_graficznym_Mozilli" name="O_uk.C5.82adzie_graficznym_Mozilli">O układzie graficznym Mozilli</h2>
+
+<p>Mozilla dzieli rzeczy na dwa zbiory drzew, drzewo content (zawartości) i drzewo layout (rozmieszczenia). Drzewo content (zawartości) przechowuje węzły jakie znajdują się w kodzie źródłowym. Drzewo layout (rozmieszczenia) przechowuje inne drzewo content (węzłów) dla każdego pojedynczego komponentu jaki może być wyświetlony. Drzewo layout (rozmieszczenia) mieści w sobie strukturę taką jak nodes (węzły) oczekiwane przy wyświetlaniu. Nie jest konieczny związek jeden do jednego pomiędzy nodes (węzłami) content (zawartości) a layout (rozmieszczenia).Pewne nodes (węzły) content (zawartości) mogą mieć klika obiektów layout (rozmieszczenia), na przykład każda linia paragrafu ma oddzielny obiekt layout (rozmieszczenia). Odwrotnie, pewne nodes content (węzły zawartości) nie mają wcale obiektów layout (rozmieszczenia). Na przykład element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> nie ma żadnego obiektu layout (rozmieszczenia) ponieważ nie jest wyświetlany w żaden sposób. Podobnie, dowolny element, który był wykrywany również nie będzie miał obiektu layout (rozmieszczenia).</p>
+
+<p><span class="comment">Mozilla divides things into two sets of trees, the content tree and the layout tree. The content tree stores the nodes as they are found in the source code. The layout tree holds a different tree of nodes for each individual component that can be displayed. The layout tree holds the structure as the nodes are expected to be displayed There is not necessarily a one to one relationship between content and layout nodes. Some content nodes may have several layout objects, for example, each line of a paragraph has a separate layout object. Conversely, some content nodes have no layout objects at all. For instance, the &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code>&lt;/code&gt; element doesn't have any layout objects since it isn't displayed in any way. Similarly, any element that has been hidden will not have a layout object either.</span></p>
+
+<p>DOM jest generalnie używany tylko do pobrania i modyfikacji informacji odnoszącej się do zawartości lub struktury dokumentu. Jest względnie proste do określenia jaki rodzaj węzła drzewa zawartości będzie stworzony dla danego elementu. Element XUL, na przykład, będzie miał typ XUL Element węzła zawartości.</p>
+
+<p><span class="comment">The <a href="/pl/DOM">DOM</a> is generally used only to get and modify information pertaining to the content or structure of the document. It's relatively simple to determine what kind of content tree node will be created for a given element. A XUL element, for example, will have a XULElement type of content node.</span></p>
+
+<p>Obiekty layout (rozmieszczenia) które będą stworzone są określane w bardziej złożone. Są używane różne fragmenty informacji takie jak nazwa znacznika, atrybuty elementu, różne właściwości CSS, elementy obiektów LAYOUT (rozmieszczenia) i XBL powiązany z elementem (<a href="/pl/Kurs_XUL/Wprowadzenie_do_XBL" title="pl/Kurs_XUL/Wprowadzenie_do_XBL">XBL został opisany w dalszej części kursu</a>). O ile nie zmienisz stylu dla elementu, większość elementów XUL zazwyczaj będą jako obiekty pola layout (rozmieszczenia) lub jednego z jego podtypów. Przypomnij sobie, że elementy XUL są typu pola, to znaczy, pole jest podstawą dla wyświetlania wszystkich elementów XUL. Jednakże jest kilka podtypów, około 25 lub więcej, dla określonych elementów XUL.</p>
+
+<p><span class="comment">The layout objects that will be created are determined in a more complex manner. Various pieces of information are used such as the tag name, the attributes on an element, various <a href="/pl/CSS">CSS</a> properties, the elements and layout objects around the element, and the XBL associated with an element (<a href="/pl/XUL_Tutorial/Introduction_to_XBL">XBL is described in a later section</a>). Unless you change the style for an element, most XUL elements will usually use the box layout object or one of its subtypes. Recall that all XUL elements are types of boxes, that is the box is the base of all displayed XUL elements. However, there are a number of subtypes, about 25 or so, for specific XUL elements. Some of these subtypes, such as the <code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> or <code><a href="/pl/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> are needed for more complex layouts than the basic box, while others such as the button are used only to add extra mouse and key event handling.</span></p>
+
+<p>Niektóre z tych podtypów, takie jak <code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> or <code><a href="/pl/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> są bardziej potrzebne dla złożonych layouts niż podstawowe pole, podczas gdy pozostałe takie jak przycisk są używane tylko do dodania dodatkowego programu obsługi zdarzeń myszy i klawisza.</p>
+
+<p>Obiekt layout (rozmieszczenia) powiązany z elementem może zostać usunięty a całkowicie inny typ obiektu stworzony przez zmianę właściwości <code>display</code> CSS, pośród innych. Na przykład zmiana właściwości wyświetlania elementu przycisku na <code>block</code> spowoduje, że obiekt layout (rozmieszczenia) przycisku będzie usunięty a zamiast tego stworzony zostanie obiekt <code>block</code>. Naturalnie, zmieni to wygląd i funkcję elementu</p>
+
+<p>Nie jest koniecznym znać szczegóły tego jak obiekty layout (rozmieszczenia) są skonstruowane ale jest całkiem użytecznym posiadać przynajmniej trochę wiedzy na temat tego co jest napisane o XUL dla projektantów XUL bardziej zaawansowanych.</p>
+
+<p><span class="comment">The layout object associated with an element can be removed and a completely different type of object created just by changing the CSS &lt;code&gt;display&lt;/code&gt; property, among others. For example changing the display property of a button element to &lt;code&gt;block&lt;/code&gt; will cause the button layout object to be deleted and a block object to be created instead. Naturally, this will change the appearance and function of the element. It isn't necessary to know the details of how the layout objects are constructed but it is quite useful to at least have at least the knowledge of what is described above of XUL layout for more advanced XUL development.</span></p>
+
+<h2 id="Obiekty_pude.C5.82ka" name="Obiekty_pude.C5.82ka">Obiekty pudełka</h2>
+
+<p>Obiekty layout nie są dostępne do manipulowania przez projektantów. Są one wewnętrznymi komponentami layout XUL. Jednakże, XUL dostarcza pewnych pomocnych obiektów, nazywanych obiektami pola, które mogą dostarczać pewnych powiązanych informacji layout. jak implikuje nazwa, są one dostępne dla wszystkich elementów opartych o pola.</p>
+
+<p>Jest kilka podtypów obiektu pola, chociaż generalnie jest używanych tylko parę z nich. Pozostałe mają funkcje które są łatwiej dostępne poprzez metody odwzorowane bezpośrednio do elementu, ponieważ te typy są generalnie używane tylko z określonym elementem. Podstawowy obiekt pola, lub interfejs <a class="external" href="http://www.xulplanet.com/references/objref/BoxObject.html">BoxObject</a>, ma jednak kilka właściwości które są użyteczne dla projektantów XUL.</p>
+
+<p>Podstawowy obiekt pola ma dwie pożyteczne cechy. Po pierwsze możesz wyszukać pozycję i rozmiar elementu XUL jaki wyświetlasz a po drugie możesz określić porządek elementów w polu jakie wyświetlasz, zamiast porządku w jakim są przechowywane w DOM.</p>
+
+<h3 id="Retrieving_Position_and_Size" name="Retrieving_Position_and_Size">Retrieving Position and Size</h3>
+
+<p>Obiekt pola dostarcza czterech właściwości, x, y, width, height, dla określenia pozycji i rozmiaru elementu. Współrzędne x i y są związane z lewym górnym rogiem dokumentu w oknie (wyłączając brzeg okna i pasek tytułowy) i są mierzone w pikselach. Własność width i height również są mierzone w pikselach a zawracają one szerokość i wysokość elementu obejmując wypełnianie i brzeg.</p>
+
+<p>Te wartości są zawsze pozycją i rozmiarem aktualnego wyświetlania, więc te wartości będą się różniły jeśli element jest przesuwany lun zmieniany jest jego rozmiar. Na przykład, elastyczny element będzie zmieniał swój rozmiar, a obiekt pola będzie aktualizował odpowiednio swoje wymiary. Pokazuje to poniższy przykład</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_1.xul">Podgląd</a></p>
+
+<pre>&lt;button label="Click Me"
+        oncommand="alert('The width is ' + this.boxObject.width);"/&gt;
+</pre>
+
+<p>Możesz użyć atrybutów <code>width</code> i <code>height</code> do określenia, odpowiednio, szerokości i wysokości elementu. Normalnie, atrybuty te nie będą używane więc ten element określałby odpowiedni rozmiar do odpowiedniej jego zawartości. A zatem, atrybuty te zastępują domyślny rozmiar i stosują określony rozmiar. Odpowiednie własności <code>width</code> i <code>height</code>, mogą być używane do modyfikacji wymiarów elementu w dowolnym czasie, jeśli życzysz sobie wyświetlać element o określonym rozmiarze. Pobranie wartości tych właściwości zwróci rozmiar jeśli został wyraźnie określony. Zauważ że te właściwości będą zwracać pusty łańcuch jeśli atrybuty szerokości i wysokości lub właściwości nie zostały już ustawione. To znaczy, nie możesz pobrać aktualnego rozmiaru z tych właściwości; zamiast tego musisz użyć właściwości obiektu pola.</p>
+
+<p>Może to być trochę mylące, ale KEY pamięta, że własności <code>width</code> i <code>height</code> elementu zwracają rozmiar, jaki został ustawiony w XUL podczas gdy własności <code>width</code> i <code>height</code> obiektu pola zawracają bieżący rozmiar.</p>
+
+<h3 id="Hidden_or_Collapsed_Element" name="Hidden_or_Collapsed_Element">Hidden or Collapsed Element</h3>
+
+<p>Atrybut <code>hidden</code> ukryje element tak ,że nie będzie wyświetlany. Ponieważ nie jest wyświetlany, wszystkie cztery właściwości pozycji i rozmiaru obiektu pola będą miały wartość 0. Kiedy element jest ukryty, jest usuwany z ekranu a obiekty layout (rozmieszczania) są również z niego usuwane. A zatem, ponieważ nie jest nigdzie wyświetlany, nie będzie miał ani pozycji ani rozmiaru.</p>
+
+<p>Atrybut <code>collapsed</code> będzie miał taki sam wpływ na wizualizację elementu użytkownika, z wyjątkiem tego, że pozostawi element na ekranie i pozostawia obiekty layout (rozmieszczenia) nietknięte, ale zmienia rozmiar elementu na 0. Oznacza to ,że zarówno elementy hidden i collapsed mają zerową szerokość i wysokość, elementy ukryte mają pozycję x i y również 0, podczas gdy elementy zwinięte zachowają swoją pozycję w oknie.</p>
+
+<p>Dla wyszukania lub modyfikacji stanu ukrycia lub zwinięcia użyj odpowiednich własności jak w poniższym przykładzie.</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_2.xul">Podgląd</a></p>
+
+<pre>&lt;script&gt;
+function showPositionAndSize()
+{
+  var labelbox = document.getElementById('thelabel').boxObject;
+
+  alert("Position is (" + labelbox.x + "," + labelbox.y +
+        ") and size is (" + labelbox.width + "," +
+        labelbox.height + ")");
+}
+&lt;/script&gt;
+
+&lt;button label="Hide"
+        oncommand="document.getElementById('thelabel').hidden = true;"/&gt;
+&lt;button label="Show"
+        oncommand="document.getElementById('thelabel').hidden = false;"/&gt;
+&lt;button label="Collapse"
+        oncommand="document.getElementById('thelabel').collapsed = true;"/&gt;
+&lt;button label="Uncollapse"
+        oncommand="document.getElementById('thelabel').collapsed = false;"/&gt;
+&lt;button label="Show Position/Size"
+        oncommand="showPositionAndSize();"/&gt;
+&lt;label id="thelabel" value="I am a label"/&gt;
+</pre>
+
+<p>Zauważ, że jeśli ukryjesz lub zwiniesz etykietę, będzie ona traktowana jako ukryta. Będziesz musiał potem odkryć i rozwinąć etykietę aby mogła pojawić się ponownie.</p>
+
+<h2 id="Porz.C4.85dkowane_element.C3.B3w_XUL" name="Porz.C4.85dkowane_element.C3.B3w_XUL">Porządkowane elementów XUL</h2>
+
+<p>Obiekt pola może być również użyty dla określania wyświetlania porządku elementów, który może nie być taki sam jak w źródle. Przypomnij sobie ,że właściwości DOM takie, jak <code><a href="/pl/DOM/element.childNodes" title="pl/DOM/element.childNodes">childNodes</a></code>, <code><a href="/pl/DOM/element.firstChild" title="pl/DOM/element.firstChild">firstChild</a></code>, and <code><a href="/pl/DOM/element.nextSibling" title="pl/DOM/element.nextSibling">nextSibling</a></code> mogą być użyte do nawigowania po drzewie dokumentu. Obiekt pola pozwala również nawigować w podobny sposób ale wyszukuje elementy w kolejności wyświetlania.</p>
+
+<p>Obiekt pola dostarcza kilku własności <code>firstChild</code>, <code>lastChild</code>, <code>nextSibling</code>, <code>previousSibling</code> i <code>parentBox</code>. Funkcje te powinny być samo wyjaśniające przez swoje nazwy. Właściwości te zwracają elementy, na przykład, własność firstChild zwraca pierwszy wyświetlany element potomny. Nie ma odpowiedniej właściwości childNodes dla pola nawigacyjnego; zamiast tego musisz nawigować przez siostrzane właściwości <code>nextSibling</code> lub <code>previousSibling</code>.</p>
+
+<p>W odróżnieniu od nawigowania przez drzewo DOM, elementy ukryte nie są obejmowane kiedy nawigujemy przez obiekty pola. Oznacza to, że dla pola z sześcioma elementami potomnymi gdzie pierwsze dwa są ukryte, właściwość <code>firstChild</code> zwróci trzeci element. Jednak elementy zwinięte są objęte ponieważ są jeszcze wyświetlane ale nie maja rozmiaru. Na przykład kolejnym siostrzanym polem przycisku 1, w kolejnym przykładzie, będzie przycisk 3 ponieważ przycisk 2 jest ukryty. Ale kolejnym siostrzanym polem dla przycisku 3 będzie przycisk 4 ponieważ jest on tylko zwinięty.</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_3.xul">Podgląd</a></p>
+
+<pre>&lt;hbox&gt;
+  &lt;button label="Button 1"
+          oncommand="alert('Next is: ' + this.boxObject.nextSibling.label);"/&gt;
+  &lt;button label="Button 2" hidden="true"/&gt;
+  &lt;button label="Button 3"
+          oncommand="alert('Next is: ' + this.boxObject.nextSibling.label);"/&gt;
+  &lt;button label="Button 4" collapsed="true"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<h3 id="Box_Ordering_Attributes" name="Box_Ordering_Attributes">Box Ordering Attributes</h3>
+
+<p>Kiedy pole XUL jest wystawione w oknie, elementy są uporządkowane według kilku własności, na przykład orientacji, ich grupy porządkowej i ich kierunku.</p>
+
+<h5 id="Atrybut_orient" name="Atrybut_orient">Atrybut <code>orient</code></h5>
+
+<p>Orientacja jest zwykle modyfikowana przez atrybuty <code>orient</code>. jest również odpowiednia właściwość CSS <code><a href="/pl/CSS/-moz-box-orient" title="pl/CSS/-moz-box-orient">-moz-box-orient</a></code>, która może być używa w zastępstwie, w zależności od sytuacji. Atrybut ten był wyjaśniany wcześniej w tym rozdziale o polach.</p>
+
+<h5 id="Atrybut_ordinal" name="Atrybut_ordinal">Atrybut <code>ordinal</code></h5>
+
+<p>Atrybut <code>ordinal</code> elementu może być zastosowany do określenia grupy porządkowej tego elementu, lub możesz użyć właściwości CSS <code><a href="/pl/CSS/-moz-box-ordinal-group" title="pl/CSS/-moz-box-ordinal-group">-moz-box-ordinal-group</a></code>.</p>
+
+<p>Elementy z niższymi wartościami porządkowymi są umieszczone w polu przed elementami z wyższymi wartościami porządkowymi. Na przykład jeśli jedne element ma liczbę porządkową 2, będzie umieszczony przed elementem z liczbą porządkową 3 lub wyższą ale po elemencie z liczbą porządkową 1. Wartością domyślną, jeśli nie został określony porządek, jest 1. Oznacza to ze jeśli chcesz zmienić porządek wyświetlania elementów, często będziesz potrzebował modyfikacji liczb porządkowych kilku elementów.</p>
+
+<p>Modyfikacja liczby porządkowej nie jest wykonywana powszechnie ponieważ zazwyczaj elementy są umieszczone w różnym porządku w źródle. Może być użyta do przestawienia później pozycji bez modyfikowania DOM. Demonstruje to poniższy przykład.</p>
+
+<p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_4.xul">Podgląd</a></p>
+
+<pre>&lt;hbox&gt;
+  &lt;button label="One" oncommand="this.ordinal++;"/&gt;
+  &lt;button label="Two" oncommand="this.ordinal++;"/&gt;
+  &lt;button label="Three" oncommand="this.ordinal++;"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>Jeśli naciśniesz pierwszy przycisk, jego liczb porządkowa zwiększy się o jeden, z 1 do 2. Pojawi się na końcu wiersza ponieważ inne przyciski maja liczbę porządkową 1. Jeśli naciśniesz drugi przycisk, jego liczba porządkowa zwiększy się o jeden i będzie przeniesiony na koniec wiersza. Pozycje z tą samą wartością porządkową pojawią się w tym samym porządku jak w źródle. Jeśli potem naciśniesz ponowie przycisk oznaczony One, jego liczba porządkową zwiększy się do 3 i zostanie przeniesiony na koniec. W końcu, naciśnięcie przycisku oznaczonego Three zwiększy jego liczbę porządkową na 2 i pojawi się pomiędzy pozostałymi dwoma przyciskami.</p>
+
+<h5 id="Atrybut_dir" name="Atrybut_dir">Atrybut <code>dir</code></h5>
+
+<p>Końcowym atrybutem porządkowym pola jest atrybut <code>dir</code>, lub właściwość <code><a href="/pl/CSS/-moz-box-direction" title="pl/CSS/-moz-box-direction">-moz-box-direction</a></code> CSS. Jeśli jest ustawiony na <code>reverse</code>, wszystkie elementy potomne w polu lub wyświetlane, są w odwróconym porządku. W polu poziomym, elementy będą wyświetlane od prawej do lewej a w polu pionowym, elementy będą wyświetlane od dołu do góry. Tu mamy przykład:</p>
+
+<p><span id="Przyk%C5%82ad_5"><a id="Przyk%C5%82ad_5"></a><strong>Przykład 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_5.xul">Podgląd</a></p>
+
+<pre>&lt;hbox dir="reverse"&gt;
+  &lt;button label="Left"/&gt;
+  &lt;button label="Center"/&gt;
+  &lt;button label="Right"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>Nawigowanie przez nodes (węzły) używając porządkowania obiektu pola zwróci elementy w kolejności w jakiej są wyświetlane stanowiąc o porządku tworzenia regulacji. Zatem, jeśli zmienisz liczbę porządkową elementu, będzie on miał inną pozycję w porządku pola. Odwrócenie kierunku jednak nie zmienia porządku pola.</p>
+
+<p>Następnie dowiemy się <a href="/pl/Kurs_XUL/Interfejsy_XPCOM" title="pl/Kurs_XUL/Interfejsy_XPCOM">jak stosujemy obiekty XPCOM</a> z XUL i skryptami.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Manipulowanie_listami" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Interfejsy_XPCOM">Następny  »</a></p>
+</div><p></p>

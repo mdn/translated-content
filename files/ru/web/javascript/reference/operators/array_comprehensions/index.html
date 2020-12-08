@@ -1,0 +1,241 @@
+---
+title: Упрощенный синтаксис создания массивов
+slug: Web/JavaScript/Reference/Operators/Array_comprehensions
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<div class="warning"><strong>Non-standard. Do not use!</strong><br>
+Сокращенный синтаксис создания массивов не стандартен. В будущем используйте {{jsxref("Array.prototype.map")}}, {{jsxref("Array.prototype.filter")}}, {{jsxref("Functions/Arrow_functions", "Стрелочные функции", "", 1)}} и {{jsxref("Operators/Spread_operator", "spread syntax", "", 1)}}.</div>
+
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>Синтаксис <strong>array comprehension</strong> - это JavaScript-выражение, которое позволяет быстро создавать новый массив из существующего. Аналогичные сокращения существуют во многих других языках программирования.</p>
+
+<p><a href="##Differences_to_the_older_JS1.7.2FJS1.8_comprehensions">Ниже</a> показаны различия со старым синтаксисом Array Comprehension в SpiderMonkey, основанном на черновиках для ECMAScript 4.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">[for (x of итерируемый_объект) x]
+[for (x of итерируемый_объект) if (условие) x]
+[for (x of итерируемый_объект) for (y of итерируемый_объект) x + y]
+</pre>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Внутри сокращения допустимо использование двух видов компонентов:</p>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}} и</li>
+ <li>{{jsxref("Statements/if...else", "if")}}</li>
+</ul>
+
+<p>Итерация for-of всегда является первым компонентом. Допустимо использование нескольких for-of итераций или условных операторов if.</p>
+
+<p>Сокращённый синтаксис создания массивов был предложен к стандартизации в ECMAScript 2016, он предоставлял удобный сокращения для создания новых массивов из других массивов. Сокращения могут быть использованы вместо вызовов {{jsxref("Array.prototype.map", "map()")}} и {{jsxref("Array.prototype.filter", "filter()")}} или их комбинаций.</p>
+
+<p>Следующий пример показывает, как из массива чисел создаётся новый массив чисел с с удвоенным значением.</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> numbers <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">,</span> <span class="number token">4</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> doubled <span class="operator token">=</span> <span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="keyword token">of</span> numbers<span class="punctuation token">)</span> i <span class="operator token">*</span> <span class="number token">2</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>doubled<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// logs 2,4,6,8</span></code></pre>
+
+<p>Это эквивалентно следующей операции с {{jsxref("Array.prototype.map", "map()")}}:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> doubled <span class="operator token">=</span> numbers<span class="punctuation token">.</span><span class="function token">map</span><span class="punctuation token">(</span>i <span class="operator token">=</span><span class="operator token">&gt;</span> i <span class="operator token">*</span> <span class="number token">2</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>Сокращённый синтаксис может быть использован также для выбора элементов по определённому условию. Вывод четных чисел:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> numbers <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">,</span> <span class="number token">21</span><span class="punctuation token">,</span> <span class="number token">22</span><span class="punctuation token">,</span> <span class="number token">30</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> evens <span class="operator token">=</span> <span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="keyword token">of</span> numbers<span class="punctuation token">)</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>i <span class="operator token">%</span> <span class="number token">2</span> <span class="operator token">===</span> <span class="number token">0</span><span class="punctuation token">)</span> i<span class="punctuation token">]</span><span class="punctuation token">;</span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>evens<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// logs 2,22,30</span></code></pre>
+
+<p>{{jsxref("Array.prototype.filter", "filter()")}} может использоваться для той же цели:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> evens <span class="operator token">=</span> numbers<span class="punctuation token">.</span><span class="function token">filter</span><span class="punctuation token">(</span>i <span class="operator token">=</span><span class="operator token">&gt;</span> i <span class="operator token">%</span> <span class="number token">2</span> <span class="operator token">===</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>Стили операторов {{jsxref("Array.prototype.map", "map()")}} и {{jsxref("Array.prototype.filter", "filter()")}} можно одновременно использовать в одном сокращённом выражении. Далее фильтруются только четные числа, а затем создаётся массив с их удвоенным значением:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> numbers <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">,</span> <span class="number token">21</span><span class="punctuation token">,</span> <span class="number token">22</span><span class="punctuation token">,</span> <span class="number token">30</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> doubledEvens <span class="operator token">=</span> <span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="keyword token">of</span> numbers<span class="punctuation token">)</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>i <span class="operator token">%</span> <span class="number token">2</span> <span class="operator token">===</span> <span class="number token">0</span><span class="punctuation token">)</span> i <span class="operator token">*</span> <span class="number token">2</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>doubledEvens<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// logs 4,44,60</span></code></pre>
+
+<p>Квадратные скобки обозначают неявный блок. Новый переменные (такие как  "<strong>i"</strong> в примере выше) трактуются, как если бы они объявлялись с использованием {{jsxref("Statements/let","let")}}. Это значит, что эти переменные недоступны извне.</p>
+
+<p>Входными данными необязательно может быть массив; также можно использовать <a href="/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators" title="en-US/docs/JavaScript/Guide/Iterators and Generators">итераторы и генераторы</a>.</p>
+
+<p>Даже строки могут подаваться на вход; можно делать то же, что с <code>filter</code> и <code>map</code> (но с массивоподобными объектами):</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> str <span class="operator token">=</span> <span class="string token">'abcdef'</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> consonantsOnlyStr <span class="operator token">=</span> <span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>c <span class="keyword token">of</span> str<span class="punctuation token">)</span> <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span><span class="punctuation token">(</span><span class="regex token">/[aeiouAEIOU]/</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">test</span><span class="punctuation token">(</span>c<span class="punctuation token">)</span><span class="punctuation token">)</span> c<span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 'bcdf'</span>
+<span class="keyword token">var</span> interpolatedZeros <span class="operator token">=</span> <span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>c <span class="keyword token">of</span> str<span class="punctuation token">)</span> c <span class="operator token">+</span> <span class="string token">'0'</span> <span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 'a0b0c0d0e0f0'</span></code></pre>
+
+<p>Для предупреждения конвертации в число (в данном конкретном примере) использвалась функция {{jsxref("Array.prototype.join", "join()")}}.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Простые_сокращения">Простые сокращения</h3>
+
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
+
+var abc = [ "A", "B", "C" ];
+[for (letters of abc) letters.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
+
+<h3 id="Сокращения_с_условным_оператором_if">Сокращения с условным оператором "if"</h3>
+
+<pre class="brush: js">var years = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+[for (year of years) if (year &gt; 2000) year];
+// [ 2006, 2010, 2014 ]
+[for (year of years) if (year &gt; 2000) if(year &lt; 2010) year];
+// [ 2006], the same as below:
+[for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year];
+// [ 2006]
+</pre>
+
+<h3 id="Сокращения_в_сравнении_с_map_и_filter">Сокращения в сравнении с <code>map</code> и <code>filter</code></h3>
+
+<p>Простой способ понять синтаксис Array Comprehension - это сравнить его с методами Array {{jsxref("Array.map", "map")}} и {{jsxref("Array.filter", "filter")}}:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+numbers.map(function (i) { return i * i });
+numbers.map(i =&gt; i*i);
+[for (i of numbers) i*i ];
+// all are [ 1, 4, 9 ]
+
+numbers.filter(function (i) { return i &lt; 3 });
+numbers.filter(i =&gt; i &lt; 3);
+[for (i of numbers) if (i &lt; 3) i];
+// all are [ 1, 2 ]
+</pre>
+
+<h3 id="Сокращения_с_двумя_массивами">Сокращения с двумя массивами</h3>
+
+<p>Использование двух итераторов for-of для работы с двумя массивами:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+var letters = [ "a", "b", "c" ];
+
+var cross = [for (i of numbers) for (j of letters) i+j];
+// [ "1a", "1b", "1c", "2a", "2b", "2c", "3a", "3b", "3c" ]
+
+var grid = [for (i of numbers) [for (j of letters) i+j]];
+// [
+//  ["1a", "1b", "1c"],
+//  ["2a", "2b", "2c"],
+//  ["3a", "3b", "3c"]
+// ]
+
+[for (i of numbers) if (i &gt; 1) for (j of letters) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"], the same as below:
+
+[for (i of numbers) for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]
+
+[for (i of numbers) if (i &gt; 1) [for (j of letters) if(j &gt; "a") i+j]]
+// [["2b", "2c"], ["3b", "3c"]], not the same as below:
+
+[for (i of numbers) [for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]]
+// [[], ["2b", "2c"], ["3b", "3c"]]
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<p>Изначально было в черновике ECMAScript 2015, но исключено в ревизии 27 (Август 2014). Смотрите старые ревизии ES2015 для уточнения семантики.</p>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoDesktop("30") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoMobile("30") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Специфика_работы_SpiderMonkey">Специфика работы SpiderMonkey</h2>
+
+<ul>
+ <li>{{jsxref("Statements/let", "let")}} не поддерживается как идентификатор, так как он доступен только в  JS версии 1.7 и XUL-скриптах.</li>
+ <li>Деструктуризация сокращений не поддерживается ({{bug(980828)}}).</li>
+</ul>
+
+<h2 id="Отличия_от_старой_версии_JS1.7JS1.8"><a id="#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions" name="#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions"></a>Отличия от старой версии JS1.7/JS1.8</h2>
+
+<div class="warning">Сокращения из JS1.7/JS1.8 были исключены из движка Gecko, начиная с версии 46 ({{bug(1220564)}}).</div>
+
+<p><strong>Старый синтаксис (не используйте его больше!):</strong></p>
+
+<pre class="brush: js example-bad line-numbers  language-js"><code class="language-js"><span class="punctuation token">[</span>X <span class="keyword token">for</span> <span class="punctuation token">(</span>Y <span class="keyword token">in</span> Z<span class="punctuation token">)</span><span class="punctuation token">]</span>
+<span class="punctuation token">[</span>X <span class="keyword token">for</span> each <span class="punctuation token">(</span>Y <span class="keyword token">in</span> Z<span class="punctuation token">)</span><span class="punctuation token">]</span>
+<span class="punctuation token">[</span>X <span class="keyword token">for</span> <span class="punctuation token">(</span>Y <span class="keyword token">of</span> Z<span class="punctuation token">)</span><span class="punctuation token">]</span></code></pre>
+
+<p>Различия:</p>
+
+<ul>
+ <li>Сокращения в ESNext создают одну область для элемента "for" вместо области для всех элементов for в целом.
+  <ul>
+   <li>Old: <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>New: <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, каждая итерация создаёт свежую связку с x. </code></li>
+  </ul>
+ </li>
+ <li>Сокращения в ESNext начинаются с "for" вместо присваиваемой переменной.
+  <ul>
+   <li>Old: <code>[i * 2 for (i of numbers)]</code></li>
+   <li>New: <code>[for (i of numbers) i * 2]</code></li>
+  </ul>
+ </li>
+ <li>Сокращения в ESNext могут иметь несколько компонентов <code>if</code> и <code>for</code>.</li>
+ <li>Сокращения в ESNext работают только с итерациями вида <code>{{jsxref("Statements/for...of", "for...of")}}</code> и не работают с <code>{{jsxref("Statements/for...in", "for...in")}}</code>.</li>
+</ul>
+
+<p>Смотрите <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1220564#c42">Bug 1220564, comment 42</a> для внесения предложений по коду.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Operators/Generator_comprehensions", "Сокращённые описания генераторов", "" ,1)}}</li>
+</ul>

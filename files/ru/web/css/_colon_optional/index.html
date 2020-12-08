@@ -1,0 +1,110 @@
+---
+title: ':optional'
+slug: 'Web/CSS/:optional'
+tags:
+  - Псевдо-классы
+translation_of: 'Web/CSS/:optional'
+---
+<p>{{ CSSRef() }}</p>
+
+<h2 id="Описание">Описание</h2>
+
+<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдо-класс</a> <code>:optional</code> находит любые {{ HTMLElement("input") }} элементы, у которых не установлен атрибут {{ htmlattrxref("required","input") }}. Он позволяет формам легко отмечать необязательные поля, и давать им соответствующие стили.</p>
+
+<p>Чтобы задать особый внешний вид обязательным полям формы можно использовать псевдо-класс {{ cssxref(":required") }}.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Смотрите {{ cssxref(":invalid") }}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('HTML WHATWG', '#selector-optional', ':optional') }}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+   <td>Без изменений.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5 W3C', '#selector-optional', ':optional') }}</td>
+   <td>{{ Spec2('HTML5 W3C') }}</td>
+   <td>Определяет семантику в HTML и ограничения проверки.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS4 Selectors', '#opt-pseudos', ':optional') }}</td>
+   <td>{{ Spec2('CSS4 Selectors') }}</td>
+   <td>Без изменений.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional') }}</td>
+   <td>{{ Spec2('CSS3 Basic UI') }}</td>
+   <td>Определяет псевдо-класс, но не семантику.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>10.0</td>
+   <td>{{ CompatGeckoDesktop("2") }}</td>
+   <td>10</td>
+   <td>10.0</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("2") }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>10.0</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{ cssxref(":required") }}</li>
+ <li>{{ cssxref(":invalid") }}</li>
+ <li>{{ cssxref(":valid") }}</li>
+</ul>

@@ -1,0 +1,97 @@
+---
+title: azimuth
+slug: Web/CSS/azimuth
+tags:
+  - CSS
+  - 'CSS:Dokumentacje'
+  - Dokumentacje
+  - Wszystkie_kategorie
+translation_of: Archive/Web/CSS/azimuth
+---
+<p>{{ CSSRef() }}</p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>W połączeniu z <code><a href="pl/CSS/elevation">elevation</a></code>, <code>azimuth</code> umożliwia ustawianie różnych źródeł audio w przestrzeni i wykorzystywanie ich do prezentacji słuchowych. Jest to ważne w związku z tym, że dostarcza to naturalnego sposobu do odtwarzania kilku głosów w oddali, przy czym każdy z nich może pojawić się w innym miejscu strefy dźwięku. Wyjście stereofoniczne wytwarza boczną strefę dźwięku, podczas gdy obuuszne słuchawki i wielogłośnikowe zestawy pozwalają na pełną trójwymiarową strefę.</p>
+
+<ul>
+ <li>{{ Xref_cssinitial() }}: center</li>
+ <li>Stosowany do: wszystkich elementów</li>
+ <li>{{ Xref_cssinherited() }}: tak</li>
+ <li>Procenty: N/A</li>
+ <li>Media: {{cssxref("aural")}}</li>
+ <li>{{ Xref_csscomputed() }}: normalizowany kąt</li>
+</ul>
+
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+
+<pre class="eval">azimuth:<em>angle</em> | [[ left-side | far-left | left |
+    center-left | center | center-right | right |
+    far-right | right-side ] || behind ] | leftwards |
+    rightwards | inherit
+</pre>
+
+<h3 id="Warto.C5.9Bci" name="Warto.C5.9Bci">Wartości</h3>
+
+<dl>
+ <dt>angle </dt>
+ <dd>Słyszalna pozycja źródła jest opisywana jako kąt z zakresu <code>-360 stopni</code> do <code>360 stopni</code>. Wartość <code>0stopni</code> znaczy dokładnie z przodu w centrum strefy dźwięku (to jest wartość domyślna). <code>90 stopni</code> jest na prawo, <code>180 stopni</code> z tyłu, i <code>270 stopni</code> lub <code>-90 stopni</code> jest na lewo.</dd>
+</dl>
+
+<p><img alt="grafika:Azimuth.png"></p>
+
+<p> </p>
+
+<h4 id="S.C5.82owa_kluczowe_do_ustawiania_pozycji" name="S.C5.82owa_kluczowe_do_ustawiania_pozycji">Słowa kluczowe do ustawiania pozycji</h4>
+
+<ul>
+ <li><strong>left-side</strong>: Tak samo jak <code>270 stopni</code>.</li>
+ <li><strong>left-side behind</strong>: Tak samo jak <code>270 stopni</code>.</li>
+ <li><strong>far-left</strong>: Tak samo jak <code>300 stopni</code>.</li>
+ <li><strong>far-left behind</strong>: Tak samo jak <code>240 stopni</code>.</li>
+ <li><strong>left</strong>: Tak samo jak <code>320 stopni</code>.</li>
+ <li><strong>left behind</strong>: Tak samo jak <code>220 stopni</code>.</li>
+ <li><strong>center-left</strong>: Tak samo jak <code>340 stopni</code>.</li>
+ <li><strong>center-left behind</strong>: Tak samo jak <code>200 stopni</code>.</li>
+ <li><strong>center</strong>: Tak samo jak <code>0 stopni</code>.</li>
+ <li><strong>center behind</strong>: Tak samo jak <code>180 stopni</code>.</li>
+ <li><strong>center-right</strong>: Tak samo jak <code>20 stopni</code>.</li>
+ <li><strong>center-right behind</strong>: Tak samo jak <code>160 stopni</code>.</li>
+ <li><strong>right</strong>: Tak samo jak <code>40 stopni</code>.</li>
+ <li><strong>right behind</strong>: Tak samo jak <code>140 stopni</code>.</li>
+ <li><strong>far-right</strong>: Tak samo jak <code>60 stopni</code>.</li>
+ <li><strong>far-right behind</strong>: Tak samo jak <code>120 stopni</code>.</li>
+ <li><strong>right-side</strong>: Tak samo jak <code>90 stopni</code>.</li>
+ <li><strong>right-side behind</strong>: Tak samo jak <code>90 stopni</code>.</li>
+ <li><strong>behind</strong>: Tak samo jak <code>180 stopni</code>. Także używane jako modyfikator dla innych słów kluczowych do ustawiania pozycji, takich jak powyżej.</li>
+ <li><strong>leftwards</strong>: Przesuwa dźwięk przeciwnie do kierunku ruchu wskazówek zegara o 20 stopni, w stosunku do obecnego kąta.</li>
+ <li><strong>rightwards</strong>: Przesuwa dźwięk zgodnie z kierunkiem ruchu wskazówek zegara o 20 stopni, w stosunku do obecnego kąta.</li>
+</ul>
+
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady">Przykłady</h3>
+
+<pre>h1   { azimuth: 30deg }
+td.a { azimuth: far-right }          /*  60 stopni */
+#12  { azimuth: behind far-right }   /* 120 stopni */
+p.comment { azimuth: behind }        /* 180 stopni */
+</pre>
+
+<h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS21/aural.html#spatial-props">CSS 2.1</a></li>
+</ul>
+
+<h3 id="Zgodno.C5.9B.C4.87_z_przegl.C4.85dark.C4.85" name="Zgodno.C5.9B.C4.87_z_przegl.C4.85dark.C4.85">Zgodność z przeglądarką</h3>
+
+<p>TBD (może być porzucone ze względu na listę centralnej zgodności)</p>
+
+<h3 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h3>
+
+<p>{{ Cssxref("elevation") }}</p>
+
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/CSS/azimuth", "es": "es/CSS/azimuth", "fr": "fr/CSS/azimuth", "zh-cn": "cn/CSS/azimuth" } ) }}</p>

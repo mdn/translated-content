@@ -1,0 +1,65 @@
+---
+title: Autoridade Chrome
+slug: Mozilla/Add-ons/SDK/Tutorials/Chrome_Authority
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Chrome_Authority
+---
+<div class="warning">
+<p>A API usada para ganhar acesso ao Chrome atualmente é uma característica experimental do SDK, e deve mudar em lançamentos futuros.</p>
+</div>
+
+<h2 id="Usando_Autoridade_Chrome">Usando Autoridade Chrome</h2>
+
+<p>Os módulos de baixo-nível mais poderosos são executados com "chrome privileges", que nos dão acesso ao infame <a href="/en-US/docs/Components_object"><code>Objeto Components</code></a>, que concede acesso irrestrito ao host. A partir daí, <span id="result_box" lang="pt"><span class="hps">o módulo</span> <span class="hps">pode fazer praticamente</span> <span class="hps">qualquer coisa que o</span> <span class="hps">navegador</span> <span class="hps">é capaz.</span> <span class="hps">Para obter estes</span> <span class="hps">privilégios</span><span>, o módulo</span> <span class="hps">deve declarar</span> <span class="hps">sua intenção</span> <span class="hps">com</span> <span class="hps">uma declaração como</span> <span class="hps">a seguinte</span></span>:</p>
+
+<pre class="brush: js">var {Cc, Ci} = require("chrome");</pre>
+
+<p>O objeto retornado pelo <code>require("chrome")</code>, quando desempacotado com a característica <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7#Destructuring_assignment_(Merge_into_own_page.2Fsection)">destructuring assignment</a> disponível no ambiente JS do Mozilla, fornecerá os redutores comuns dos <code>Components.*</code>:</p>
+
+<p><code><strong>Cc</strong></code></p>
+
+<p>Um redutor para <code>Components.classes</code>.</p>
+
+<p><code><strong>Ci</strong></code></p>
+
+<p>Um redutor para <code>Components.interfaces</code>.</p>
+
+<p><code><strong>Cu</strong></code></p>
+
+<p>Um redutor para <code>Components.utils</code>.</p>
+
+<p><code><strong>Cr</strong></code></p>
+
+<p>Um redutor para <code>Components.results</code>.</p>
+
+<p><code><strong>Cm</strong></code></p>
+
+<p>Um redutor para <code>Components.manager</code>.</p>
+
+<p><code><strong>components</strong></code></p>
+
+<p>Uma outra forma de chamar <code>Components</code> por si mesmo (note as letras minúsculas). A partir daí você pode acessar propriedade de uso menos frequente como <code>Components.stack</code> e <code>Components.isSuccessCode</code>.</p>
+
+<p>Nota: a declaração <code>require("chrome")</code> é o <strong>único</strong> modo para acessar as funcionalidades do chrome e da API <code>Components</code>. O objeto <code>Components</code> <strong>não</strong> deve ser acessado de módulos. A ferramenta SDK emitira um aviso se ela vir código em móduo que referencie o <code>Components</code> diretamente.</p>
+
+<p>Seu módulo deve evitar usar privilégios do chrome a menos que seja absolutamente necessário. Uso da Autoridade do Chrome deve receber revisão extra de segurança, e a maioria dos bugs nestes módulos são críticos a segurança.</p>
+
+<h2 id="Geração_do_Manifesto">Geração do Manifesto</h2>
+
+<p>O <strong>manifesto</strong> é uma lista, incluída no XPI gerado, que especifica quais módulos requisitação accesso <code>require()</code> para quais outros módulos. Ele também grava quais módulos requisitam acesso chrome. Esta lista é gerada pelo mapeamento de todos os módulos incluído pela declaração <code>require(XYZ)</code> e grava a string "XYZ" que eles referênciam.</p>
+
+<p>Quando a implementação do manifesto estiver completa o carregador do programa  vai impedir os módulos de usar <code>require()  </code>para solicitar módulos que não estão listados no manifesto. Também, evitará que os módulos consiga autoridade chrome a menos que o manifesto indique que eles pediram para ele.<span id="result_box" lang="pt"><span class="hps"> Isto irá assegurar que</span> <span class="hps">os revisores enxerguem</span> <span class="hps">as mesmas restrições</span> <span class="hps">de autoridade</span> <span class="hps">que são aplicadas</span> <span class="hps">sobre o</span> <span class="hps">código em execução, aumentando efetivamente o tempo gasto revendo o add-on. (até que</span> <span class="hps">este trabalho</span> <span class="hps">seja concluído,</span> <span class="hps">os módulos</span> <span class="hps">podem ser capazes de</span> <span class="hps">burlar</span> <span class="hps">essas restrições).</span></span></p>
+
+<p>O manifesto é construído com um mapeador baseado em expressão regular, não um análisador Javascript. Os desenvolvedores devem manter as declarações <code>require</code> simples, com uma única string estática, uma por linha de código. Se o mapeador falhar para enxergar a entrada <code>require</code>, o manifesto não incluirá aquela entrada, e (uma vez que a implementação esteja completa) o código em execução lança uma exceção.</p>
+
+<p>Por exemplo, nenhum dos códigos a seguir serão encontrados pelo mapeamento do manifesto, levando a uma exceção em tempo de execução, quando a chamada <code>require()</code> é proibida de importar os módulos chamados:</p>
+
+<pre class="brush: js">// todos estes falharão
+var xhr = require("x"+"hr");
+var modname = "xpcom";
+var xpcom = require(modname);
+var one = require("one"); var two = require("two");
+</pre>
+
+<p>A intenção é que os desenvolvedores usem a declaração <code>require() </code>para dois propósitos: declarar (ao revisores de segurança) qual a classificação dos poderes que os modulos querem usar, e controlar como estes poderes serão mapeados dentro do namespace do módulo local. Suas declarações devem então ser claras e fáceis de analisar. Um formato de manifesto futuro deve mover a porção de declaração para um arquivo separado, para permitir expressões mais granuladas de autorização.</p>
+
+<p>Comandos que constroem um manifesto, como "<code>jpm xpi</code>" ou "<code>jpm run</code>", mapearão todos os módulos incluídos pelo uso dos atalhos <code>Cc</code>/<code>Ci</code> (ou a forma expandida <code>Components.classes</code>). Emitirá um aviso se ele visualizar a forma expandida ou ver o uso e.g. "<code>Cc</code>" sem a entrada correspondente na declaração <code>require("chrome")</code>. Estes avisos servem para guiar os desenvolvedores para o usar o padrão correto. Todos os desenvolvedores de módulos devem reparar os avisos e corrigir seus códigos até que os avisos tenham desaparecido.</p>

@@ -1,0 +1,38 @@
+---
+title: New in JavaScript 1.8
+slug: Web/JavaScript/New_in_JavaScript/1.8
+tags:
+  - Версии
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>Следующее описание относится к  JavaScript 1.8. Эта версия была включена в <a href="/ru/docs/Firefox_3_for_developers">Firefox 3</a> является частью Gecko 1.9. {{ Bug("380236") }} – здесь вы можете просмотреть исправленные в процессе разработки JavaScript 1.8 баги.</p>
+
+<h2 id="Использование_JavaScript_1.8">Использование JavaScript 1.8</h2>
+
+<p>Чтобы воспользоваться преимуществами JavaScript 1.8, используйте следующий синтаксис подключения:</p>
+
+<pre class="brush: html"> &lt;script type="application/javascript;version=1.8"&gt; ... your code ... &lt;/script&gt;
+</pre>
+
+<p>Альтернативным методом является использование устаревшего аттрибута <code>language</code> тэга <code>script</code>. Для этого необходимо установить ему значение <code>JavaScript1.8</code>. Этот способ не рекомендуется к применению.</p>
+
+<p>При использовании <a href="/ru/docs/Web/JavaScript/JavaScript_шеллы" title="Introduction_to_the_JavaScript_shell">JavaScript шеллов</a>, JavaScript XPCOM компонент, или XUL <code>&lt;script&gt;</code> элементов, последняя версия JavaScript (JS1.8 в Mozilla 1.9) будет использована автоматически ({{ Bug(381031) }}, {{ Bug(385159) }}).</p>
+
+<p>Нововведения, которые используют ключевые слова <code>yield</code> и <code>let</code> требуют использования Javascript версии 1.7 или выше, потому как существующий код может использовать эти ключевые слова как названия переменных или функций. Остальные нововведения (например, генераторы) могут быть использованы без указания версии JavaScript.</p>
+
+<h2 id="Новое_в_JavaScript_1.8">Новое в JavaScript 1.8</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Expression_Closures">Короткий синтаксис определения функций</a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators">Генераторы</a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"><code>Array.prototype.reduce()</code></a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight"><code>Array.prototype.reduceRight()</code></a></li>
+</ul>
+
+<h2 id="Изменения_в_JavaScript_1.8">Изменения в JavaScript 1.8</h2>
+
+<h3 id="Изменения_в_деструктивном_присваивании">Изменения в деструктивном присваивании</h3>
+
+<p>Багфикс, который был добавлен в  JavaScript 1.8, решает проблему связанную с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="New in JavaScript 1.7">деструктивным присваиванием</a>, которое было введено в JavaScript 1.7.  Изменен механизм  деструктуризации массивов при использовании <code>for (var [a,b] in array)</code>. Ранее был доступен вызов в форме, описанной выше, однако это вызывало некорректное поведение цикла при работе с итераторами. Проблема решена ({{ Bug("366941") }}). Теперь следует использовать следующий синтаксис: <code>for ( var [key, value] in Iterator(array))</code>.</p>

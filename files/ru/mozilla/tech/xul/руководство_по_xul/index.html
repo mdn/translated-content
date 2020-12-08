@@ -1,0 +1,142 @@
+---
+title: Руководство по XUL
+slug: Mozilla/Tech/XUL/Руководство_по_XUL
+tags:
+  - XUL
+  - Руководство_по_XUL
+translation_of: Archive/Mozilla/XUL/Tutorial
+---
+<p> </p>
+<p><br>
+ Это руководство расскажет нам о <a href="/ru/XUL" title="ru/XUL">XUL</a> (читается как <em>зул</em>). <a href="/ru/XUL" title="ru/XUL">XUL</a> — это основанный на XML язык описания интерфейса пользователя (<a href="/ru/XML" title="ru/XML">XML</a> User-interface Language). Язык создавался для описания интерфейсов в приложениях Mozilla.</p>
+<h2 id=".D0.92.D0.B2.D0.B5.D0.B4.D0.B5.D0.BD.D0.B8.D0.B5" name=".D0.92.D0.B2.D0.B5.D0.B4.D0.B5.D0.BD.D0.B8.D0.B5">Введение</h2>
+<ul>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" title="ru/Руководство_по_XUL/Введение">Введение</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_XUL" title="ru/Руководство_по_XUL/Структура_XUL">Структура XUL</a> (<a href="/ru/docs/Mozilla/Tech/XUL/Tutorial/XUL_Structure">оригинальная статья</a>)</li>
+ <li><a href="/Ru/XUL_Tutorial/The_Chrome_URL" title="Ru/XUL_Tutorial/The_Chrome_URL">О Chrome URL</a></li>
+ <li><a href="/Ru/XUL_Tutorial/Manifest_Files" title="ru/XUL_Tutorial/Manifest_Files">Файлы Манифеста</a></li>
+</ul>
+<h2 id=".D0.9F.D1.80.D0.BE.D1.81.D1.82.D1.8B.D0.B5_.D1.8D.D0.BB.D0.B5.D0.BC.D0.B5.D0.BD.D1.82.D1.8B" name=".D0.9F.D1.80.D0.BE.D1.81.D1.82.D1.8B.D0.B5_.D1.8D.D0.BB.D0.B5.D0.BC.D0.B5.D0.BD.D1.82.D1.8B">Простые элементы</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Creating_a_Window" title="ru/XUL_Tutorial/Creating_a_Window">Создаем окно</a></li>
+ <li><a href="/ru/XUL_Tutorial/Добавляем_кнопки" title="ru/XUL Tutorial/Добавляем кнопки">Добавляем кнопки</a></li>
+ <li><a href="/ru/XUL_Tutorial/Adding_Labels_and_Images" title="ru/XUL_Tutorial/Adding_Labels_and_Images">Добавляем текстовые метки и картинки</a></li>
+ <li><a href="/ru/XUL_Tutorial/Input_Controls" title="ru/XUL_Tutorial/Input_Controls">Элементы ввода</a></li>
+ <li><a href="/ru/XUL_Tutorial/List_Controls" title="ru/XUL_Tutorial/List_Controls">Списки</a></li>
+ <li><a href="/ru/XUL_Tutorial/Progress_Meters" title="ru/XUL_Tutorial/Progress_Meters">Полосы прогресса</a></li>
+ <li><a href="/ru/XUL_Tutorial/Adding_HTML_Elements" title="ru/XUL_Tutorial/Adding_HTML_Elements">Добавляем HTML-элементы</a></li>
+ <li><a href="/ru/XUL_Tutorial/Using_Spacers" title="ru/XUL_Tutorial/Using_Spacers">Используем заполнители</a></li>
+ <li><a href="/ru/XUL_Tutorial/More_Button_Features" title="ru/XUL_Tutorial/More_Button_Features">Дополнительные возможности кнопок</a></li>
+</ul>
+<h2 id=".D0.91.D0.BE.D0.BA.D1.81.D1.8B_.28BOX_Model.29" name=".D0.91.D0.BE.D0.BA.D1.81.D1.8B_.28BOX_Model.29">Боксы (BOX Model)</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/The_Box_Model" title="ru/XUL_Tutorial/The_Box_Model">Модель боксов</a></li>
+ <li><a href="/ru/XUL_Tutorial/Element_Positioning" title="ru/XUL_Tutorial/Element_Positioning">Позиционирование элементов</a></li>
+ <li><a href="/ru/XUL_Tutorial/Box_Model_Details" title="ru/XUL_Tutorial/Box_Model_Details">Модель в деталях</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B8%D1%80%D1%83%D1%8E%D1%89%D0%B8%D0%B5_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B" title="ru/Руководство_по_XUL/Группирующие_элементы">Группирующие элементы</a></li>
+ <li><a href="/ru/XUL_Tutorial/Adding_More_Elements" title="ru/XUL_Tutorial/Adding_More_Elements">Добавляем элементы</a></li>
+</ul>
+<h2 id=".D0.AD.D0.BB.D0.B5.D0.BC.D0.B5.D0.BD.D1.82.D1.8B_.D0.BF.D1.80.D0.B5.D0.B4.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F" name=".D0.AD.D0.BB.D0.B5.D0.BC.D0.B5.D0.BD.D1.82.D1.8B_.D0.BF.D1.80.D0.B5.D0.B4.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F">Элементы представления</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Stacks_and_Decks" title="ru/XUL_Tutorial/Stacks_and_Decks">Стеки и колоды</a></li>
+ <li><a href="/ru/XUL_Tutorial/Stack_Positioning" title="ru/XUL_Tutorial/Stack_Positioning">Позиционирование в стеке</a></li>
+ <li><a href="/ru/XUL_Tutorial/Tabboxes" title="ru/XUL_Tutorial/Tabboxes">Табы</a></li>
+ <li><a href="/ru/XUL_Tutorial/Grids" title="ru/XUL_Tutorial/Grids">Решетки</a></li>
+ <li><a href="/ru/XUL_Tutorial/Content_Panels" title="ru/XUL_Tutorial/Content_Panels">Панели содержимого (фреймы)</a></li>
+ <li><a href="/ru/XUL_Tutorial/Splitters" title="ru/XUL_Tutorial/Splitters">Разделители</a></li>
+ <li><a href="/ru/XUL_Tutorial/Scroll_Bars" title="ru/XUL_Tutorial/Scroll_Bars">Полосы прокрутки</a></li>
+</ul>
+<h2 id=".D0.9C.D0.B5.D0.BD.D1.8E_.D0.B8_.D0.BF.D0.B0.D0.BD.D0.B5.D0.BB.D0.B8_.D0.B8.D0.BD.D1.81.D1.82.D1.80.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.BE.D0.B2" name=".D0.9C.D0.B5.D0.BD.D1.8E_.D0.B8_.D0.BF.D0.B0.D0.BD.D0.B5.D0.BB.D0.B8_.D0.B8.D0.BD.D1.81.D1.82.D1.80.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.BE.D0.B2">Меню и панели инструментов</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Toolbars" title="ru/XUL_Tutorial/Toolbars">Панели инструментов</a></li>
+ <li><a href="/ru/XUL_Tutorial/Simple_Menu_Bars" title="ru/XUL_Tutorial/Simple_Menu_Bars">Простые панели меню</a></li>
+ <li><a href="/ru/XUL_Tutorial/More_Menu_Features" title="ru/XUL_Tutorial/More_Menu_Features">Подробнее о меню</a></li>
+ <li><a href="/ru/XUL_Tutorial/Popup_Menus" title="ru/XUL_Tutorial/Popup_Menus">Всплывающие меню</a></li>
+ <li><a href="/ru/XUL_Tutorial/Scrolling_Menus" title="ru/XUL_Tutorial/Scrolling_Menus">Прокручиваемые панели меню</a></li>
+</ul>
+<h2 id=".D0.A1.D0.BA.D1.80.D0.B8.D0.BF.D1.82.D1.8B_.D0.B8_.D1.81.D0.BE.D0.B1.D1.8B.D1.82.D0.B8.D1.8F" name=".D0.A1.D0.BA.D1.80.D0.B8.D0.BF.D1.82.D1.8B_.D0.B8_.D1.81.D0.BE.D0.B1.D1.8B.D1.82.D0.B8.D1.8F">Скрипты и события</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Adding_Event_Handlers" title="ru/XUL_Tutorial/Adding_Event_Handlers">Добавляем обработчик события</a></li>
+ <li><a href="/ru/XUL_Tutorial/More_Event_Handlers" title="ru/XUL_Tutorial/More_Event_Handlers">Разные обработчики событий</a></li>
+ <li><a href="/ru/XUL_Tutorial/Keyboard_Shortcuts" title="ru/XUL_Tutorial/Keyboard_Shortcuts">«Горячие» клавиши</a></li>
+ <li><a href="/ru/XUL_Tutorial/Focus_and_Selection" title="ru/XUL_Tutorial/Focus_and_Selection">Фокус и выделение</a></li>
+ <li><a href="/ru/XUL_Tutorial/Commands" title="ru/XUL_Tutorial/Commands">Команды</a></li>
+ <li><a href="/ru/XUL_Tutorial/Updating_Commands" title="ru/XUL_Tutorial/Updating_Commands">Управление командами</a></li>
+ <li><a href="/ru/XUL_Tutorial/Broadcasters_and_Observers" title="ru/XUL_Tutorial/Broadcasters_and_Observers">Элементы дикторы и слушатели</a></li>
+</ul>
+<h2 id=".D0.9E.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.BD.D0.B0.D1.8F_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D1.8C_.D0.B4.D0.BE.D0.BA.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.B0_.28DOM.29" name=".D0.9E.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.BD.D0.B0.D1.8F_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D1.8C_.D0.B4.D0.BE.D0.BA.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.B0_.28DOM.29">Объектная модель документа (DOM)</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Document_Object_Model" title="ru/XUL_Tutorial/Document_Object_Model">О модели</a></li>
+ <li><a href="/ru/XUL_Tutorial/Modifying_a_XUL_Interface" title="ru/XUL_Tutorial/Modifying_a_XUL_Interface">Программно изменяем интерфейс</a></li>
+ <li><a href="/ru/XUL_Tutorial/Manipulating_Lists" title="ru/XUL_Tutorial/Manipulating_Lists">Управляем списками</a></li>
+ <li><a href="/ru/XUL_Tutorial/Box_Objects" title="ru/XUL_Tutorial/Box_Objects">Контейнеры</a></li>
+ <li><a href="/ru/XUL_Tutorial/XPCOM_Interfaces" title="ru/XUL_Tutorial/XPCOM_Interfaces">Интерфейсы XPCOM</a></li>
+ <li><a href="/ru/XUL_Tutorial/XPCOM_Examples" title="ru/XUL_Tutorial/XPCOM_Examples">Примеры использования XPCOM</a></li>
+</ul>
+<h2 id=".D0.94.D0.B5.D1.80.D0.B5.D0.B2.D1.8C.D1.8F" name=".D0.94.D0.B5.D1.80.D0.B5.D0.B2.D1.8C.D1.8F">Деревья</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Trees" title="ru/XUL_Tutorial/Trees">Введение</a></li>
+ <li><a href="/ru/XUL_Tutorial/More_Tree_Features" title="ru/XUL_Tutorial/More_Tree_Features">Подробнее о деревьях</a></li>
+ <li><a href="/ru/XUL_Tutorial/Tree_Selection" title="ru/XUL_Tutorial/Tree_Selection">Выделение</a></li>
+ <li><a href="/ru/XUL_Tutorial/Custom_Tree_Views" title="ru/XUL_Tutorial/Custom_Tree_Views">Собственный вывод дерева</a></li>
+ <li><a href="/ru/XUL_Tutorial/Tree_View_Details" title="ru/XUL_Tutorial/Tree_View_Details">Детальная настройка дерева </a></li>
+ <li><a href="/ru/XUL_Tutorial/Tree_Box_Objects" title="ru/XUL_Tutorial/Tree_Box_Objects">Контейнеры деревьев</a></li>
+</ul>
+<h2 id="RDF_.D0.B8_.D1.88.D0.B0.D0.B1.D0.BB.D0.BE.D0.BD.D1.8B" name="RDF_.D0.B8_.D1.88.D0.B0.D0.B1.D0.BB.D0.BE.D0.BD.D1.8B">RDF и шаблоны</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Introduction_to_RDF" title="ru/XUL_Tutorial/Introduction_to_RDF">Введение в RDF</a></li>
+ <li><a href="/ru/XUL_Tutorial/Templates" title="ru/XUL_Tutorial/Templates">Шаблоны</a></li>
+ <li><a href="/ru/XUL_Tutorial/Trees_and_Templates" title="ru/XUL_Tutorial/Trees_and_Templates">Шаблоны для деревьев</a></li>
+ <li><a href="/ru/XUL_Tutorial/RDF_Datasources" title="ru/XUL_Tutorial/RDF_Datasources">Источники данных RDF</a></li>
+ <li><a href="/ru/XUL_Tutorial/Advanced_Rules" title="ru/XUL_Tutorial/Advanced_Rules">Правила посложнее</a></li>
+ <li><a href="/ru/XUL_Tutorial/Persistent_Data" title="ru/XUL_Tutorial/Persistent_Data">Сохраняем состояние элементов</a></li>
+</ul>
+<h2 id=".D0.A2.D0.B5.D0.BC.D1.8B_.D0.BE.D1.84.D0.BE.D1.80.D0.BC.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F_.D0.B8_.D0.BB.D0.BE.D0.BA.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D1.8F" name=".D0.A2.D0.B5.D0.BC.D1.8B_.D0.BE.D1.84.D0.BE.D1.80.D0.BC.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F_.D0.B8_.D0.BB.D0.BE.D0.BA.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D1.8F">Темы оформления и локализация</h2>
+<ul>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B_%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9" title="ru/Руководство_по_XUL/Добавление_таблицы_стилей">Добавление таблицы стилей</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A1%D1%82%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" title="ru/Руководство_по_XUL/Стилизация_дерева">Стилизация дерева</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9C%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BF%D0%BE_%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E" title="ru/Руководство_по_XUL/Модификация_оформления_по_умолчанию">Модификация оформления по умолчанию</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D1%82%D0%B5%D0%BC%D1%8B_%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="ru/Руководство_по_XUL/Создание_темы_оформления">Создание темы оформления</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9B%D0%BE%D0%BA%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="ru/Руководство_по_XUL/Локализация">Локализация</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A4%D0%B0%D0%B9%D0%BB%D1%8B_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BA" title="ru/Руководство_по_XUL/Файлы_настроек">Файлы настроек</a></li>
+</ul>
+<h2 id=".D0.9F.D1.80.D0.B8.D0.B2.D1.8F.D0.B7.D0.BA.D0.B8_.28.D0.B1.D0.B8.D0.BD.D0.B4.D0.B8.D0.BD.D0.B3.D0.B8.29" name=".D0.9F.D1.80.D0.B8.D0.B2.D1.8F.D0.B7.D0.BA.D0.B8_.28.D0.B1.D0.B8.D0.BD.D0.B4.D0.B8.D0.BD.D0.B3.D0.B8.29">Привязки (Bindings)</h2>
+<ul>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_XBL" title="ru/Руководство_по_XUL/Введение_в_XBL">Введение в XBL</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%90%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BD%D0%BE%D0%B5_%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5_%D0%B2_XBL" title="ru/Руководство_по_XUL/Анонимное_содержимое_в_XBL">Анонимное содержимое</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9D%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2_%D0%B2_XBL" title="ru/Руководство_по_XUL/Наследование_свойств_в_XBL">Наследование свойств в XBL</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A1%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_XBL" title="ru/Руководство_по_XUL/Свойства_в_XBL">Добавление свойств</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B_%D0%B2_XBL" title="ru/Руководство_по_XUL/Методы_в_XBL">Добавление методов</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9_%D0%B2_XBL" title="ru/Руководство_по_XUL/Обработчики_событий_в_XBL">Добавление обработчиков событий</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9D%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2_XBL" title="ru/Руководство_по_XUL/Наследование_в_XBL">Наследование в XBL</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80_XBL" title="ru/Руководство_по_XUL/Пример_XBL">Пример</a></li>
+</ul>
+<h2 id=".D0.A1.D0.BF.D0.B5.D1.86.D0.B8.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.B2.D0.B8.D0.B4.D1.8B_.D0.BE.D0.BA.D0.BE.D0.BD" name=".D0.A1.D0.BF.D0.B5.D1.86.D0.B8.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.B2.D0.B8.D0.B4.D1.8B_.D0.BE.D0.BA.D0.BE.D0.BD">Специальные виды окон</h2>
+<ul>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D1%8B%D0%B5_%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0_%D0%BE%D0%BA%D0%BE%D0%BD" title="ru/Руководство_по_XUL/Интересные_свойства_окон">Интересные свойства окон</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2" title="ru/Руководство_по_XUL/Создание_диалогов">Создание диалогов</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%94%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%B8_%C2%AB%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8C%C2%BB_%D0%B8_%C2%AB%D0%A1%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D1%8C%C2%BB" title="ru/Руководство_по_XUL/Диалоги_«Открыть»_и_«Сохранить»">Диалоги «Открыть» и «Сохранить»</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0" title="ru/Руководство_по_XUL/Создание_мастера">Создание мастера</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5_%D0%BE_%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B8_%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%B2" title="ru/Руководство_по_XUL/Подробнее_о_создании_мастеров">Подробнее о создании мастеров</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9E%D0%B2%D0%B5%D1%80%D0%BB%D0%B5%D0%B8" title="ru/Руководство_по_XUL/Оверлеи">Оверлеи</a></li>
+ <li><a href="/ru/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_XUL/%D0%9C%D0%B5%D0%B6%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B2%D0%B5%D1%80%D0%BB%D0%B5%D0%B8" title="ru/Руководство_по_XUL/Межпакетные_оверлеи">Межпакетные оверлеи</a></li>
+</ul>
+<h2 id=".D0.A3.D1.81.D1.82.D0.B0.D0.BD.D0.BE.D0.B2.D0.BA.D0.B0" name=".D0.A3.D1.81.D1.82.D0.B0.D0.BD.D0.BE.D0.B2.D0.BA.D0.B0">Установка</h2>
+<ul>
+ <li><a href="/ru/XUL_Tutorial/Creating_an_Installer" title="ru/XUL_Tutorial/Creating_an_Installer">Создание инсталятора</a></li>
+ <li><a href="/ru/XUL_Tutorial/Install_Scripts" title="ru/XUL_Tutorial/Install_Scripts">Установка скриптов</a></li>
+ <li><a href="/ru/XUL_Tutorial/Additional_Install_Features" title="ru/XUL_Tutorial/Additional_Install_Features">Дополнительные возможности</a></li>
+</ul>
+<div class="note">
+ <p>Это руководство первоначально написано Нилом Дикиным(<a class="external" href="http://www.xulplanet.com/ndeakin/">Neil Deakin</a>). И он любезно разрешил нам разместить текст на <a href="/Project:ru/About" title="Project:ru/About">MDC</a>.</p>
+</div>
+<div class="originaldocinfo">
+ <h5 id=".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F_.D0.BE_.D0.BF.D1.80.D0.BE.D0.B8.D1.81.D1.85.D0.BE.D0.B6.D0.B4.D0.B5.D0.BD.D0.B8.D0.B8_.D0.B4.D0.BE.D0.BA.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.B0" name=".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F_.D0.BE_.D0.BF.D1.80.D0.BE.D0.B8.D1.81.D1.85.D0.BE.D0.B6.D0.B4.D0.B5.D0.BD.D0.B8.D0.B8_.D0.B4.D0.BE.D0.BA.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.B0">Информация о происхождении документа</h5>
+ <ul>
+  <li>Автор: <a class="external" href="http://www.xulplanet.com/ndeakin/">Neil Deakin</a></li>
+  <li>Последнее обновление: 3 июля 2005</li>
+  <li>О правах копирования: © 1999-2005 XULPlanet.com</li>
+ </ul>
+</div>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p></p>

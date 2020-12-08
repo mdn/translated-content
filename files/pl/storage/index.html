@@ -1,0 +1,397 @@
+---
+title: Storage
+slug: Storage
+tags:
+  - Dokumentacja_API_XPCOM
+  - Interfejsy
+  - Storage
+  - Strony_wymagające_dopracowania
+  - Toolkit API
+  - Wszystkie_kategorie
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Storage
+---
+<p></p>
+
+<p><strong>Storage</strong> to API bazy danych <a class="external" href="http://www.sqlite.org/">SQLite</a>. Jest ono dostępne na zaufanych wywoływaczy, tzn. rozszerzeń i komponentów Firefoksa. Pełna dokumentacja wszystkich metod i własności interfejsu połączeń bazy danych, zobacz <a href="pl/MozIStorageConnection">mozIStorageConnection</a>.</p>
+
+<p>API jest obecnie "odmrożone", co oznacza, że może być ono zmienione w każdej chwili. Prawdopodobnie API zmieni się między Firefoksem 2 a Firefoksem 3.</p>
+
+<p> </p>
+
+<div class="note"><strong>Uwaga:</strong> Storage nie jest tym samym, co funkcja <a href="pl/DOM/Storage">DOM:Storage</a>, która może być użyta przez serwisy internetowe do przechowywania stałych danych lub <a href="pl/API_przechowywania_sesji">API przechowywania sesji</a> (funkcja <a href="pl/XPCOM">XPCOM</a> służącą do przechowywania oraz przeznaczona do użytku przez rozszerzenia).</div>
+
+<p> </p>
+
+<h2 id="Na_pocz.C4.85tek" name="Na_pocz.C4.85tek">Na początek</h2>
+
+<p>Dokument ten opisuje API mozStorage oraz niektóre dziwactwa sqlite.<em>Nie</em> znajdziesz tu informacji o SQL ani "normalnym" sqlite. Możesz jednak znaleźć trochę przydatnych odnośników na ten temat w <a href="#Zobacz_tak.C5.BCe">części Zobacz także</a>. W razie pytań związanych z API mozStorage, możesz wysłać zapytanie na grupie mozilla.dev.apps.firefox na serwerze news.mozilla.org. Aby zgłosić błędy, użyj <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit&amp;component=Storage">Bugzilli</a> (produkt "Toolkit", komponent "Storage").</p>
+
+<p>Zacznijmy więc. mozStorage został zaprojektowany jak wiele innych baz danych. Ogólna procedura postępowania wygląda następująco:</p>
+
+<ul>
+ <li>Otwarcie połączenia z wybraną bazą danych.</li>
+ <li>Utworzenie instrukcji, które mają być wykonane przy połączeniu.</li>
+ <li>Dowiązanie parametrów do instrukcji w zależności od potrzeby.</li>
+ <li>Wykonanie instrukcji.</li>
+ <li>Sprawdzenie błędów.</li>
+ <li>Zresetowanie instrukcji.</li>
+</ul>
+
+<h2 id="Otwarcie_po.C5.82.C4.85czenia" name="Otwarcie_po.C5.82.C4.85czenia">Otwarcie połączenia</h2>
+
+<p>Użytkownicy C++: pierwsza inicjalizacja usługi przechowywania musi nastąpić z głównej wątku. Gdy zostanie one zainicjalizowana po raz pierwszy z innego wątku, zostanie wyświetlony błąd. Dlatego jeśli chcesz użyć usługi z wątku pamiętaj, aby wywołać getService z głównego wątku i upewnić się, że usługa została utworzona.</p>
+
+<p>Przykład w C++ nawiązania połączenia z "asdf.sqlite" w katalogu profilu użytkownika:</p>
+
+<pre>nsCOMPtr&lt;nsIFile&gt; dbFile;
+rv = NS_GetSpecialDirectory(NS_APP_USER_PROFILE_50_DIR,
+                            getter_AddRefs(dbFile));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = dbFile-&gt;Append(NS_LITERAL_STRING("asdf.sqlite"));
+NS_ENSURE_SUCCESS(rv, rv);
+
+mDBService = do_GetService(MOZ_STORAGE_SERVICE_CONTRACTID, &amp;rv);
+NS_ENSURE_SUCCESS(rv, rv);
+rv = mDBService-&gt;OpenDatabase(dbFile, getter_AddRefs(mDBConn));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<p><code>MOZ_STORAGE_SERVICE_CONTRACTID</code> jest zdefiniowany w <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/build/mozStorageCID.h" rel="custom">storage/build/mozStorageCID.h</a></code>. Jego wartością jest <code>"@mozilla.org/storage/service;1"</code></p>
+
+<p>Przykład w JavaScript:</p>
+
+<pre>var file = Components.classes["@mozilla.org/file/directory_service;1"]
+                     .getService(Components.interfaces.nsIProperties)
+                     .get("ProfD", Components.interfaces.nsIFile);
+file.append("my_db_file_name.sqlite");
+
+var storageService = Components.classes["@mozilla.org/storage/service;1"]
+                        .getService(Components.interfaces.mozIStorageService);
+var mDBConn = storageService.openDatabase(file);
+</pre>
+
+<dl>
+ <dd>
+ <div class="note">Uwaga: Funkcja OpenDatabase może zostać zmieniona. Prawdopodobnie zostanie ona rozbudowana/uproszczona, aby popełnienie ewentualnego błędu było trudniejsze.</div>
+ </dd>
+</dl>
+
+<p>Kuszące może być nadanie rozszerzenia ".sdb" znaczącego <strong>s</strong>qlite <strong>d</strong>ata<strong>b</strong>ase, jednak<em>nie jest to zalecane</em>. Pliki z tym rozszerzeniem są w szczególny sposób traktowane przez Windows jako "Baza danych o zgodności aplikacji" i zmiany w nich są automatycznie zapisywane w ramach funkcjonalności przywracania systemu. Może to powodować znaczny spadek wydajności operacji na takich plikach.</p>
+
+<h2 id="Instrukcje" name="Instrukcje">Instrukcje</h2>
+
+<p>Wykonaj poniższe kroki, aby utworzyć i wykonać instrukcje na Twojej bazie danych SQLite. Aby uzyskać pełną dokumentację, zobacz <a href="pl/MozIStorageStatement">mozIStorageStatement</a>.</p>
+
+<h3 id="Tworzenie_instrukcji" name="Tworzenie_instrukcji">Tworzenie instrukcji</h3>
+
+<p>Są dwa sposoby na stworzenie instrukcji. Gdy nie masz żadnych parametrów i instrukcja nie zwraca danych, użyj <code>mozIStorageConnection.executeSimpleSQL</code>.</p>
+
+<pre>C++:
+rv = mDBConn-&gt;ExecuteSimpleSQL(NS_LITERAL_CSTRING("CREATE TABLE foo (a INTEGER)"));
+
+JS:
+mDBConn.executeSimpleSQL("CREATE TABLE foo (a INTEGER)");
+</pre>
+
+<p>W przeciwnym wypadku powinieneś przygotować instrukcję za pomocą <code>mozIStorageConnection.createStatement</code>:</p>
+
+<pre>C++:
+nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM foo WHERE a = ?1"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+
+JS:
+var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1");
+</pre>
+
+<p>W przykładzie tym zostało użyte wyrażenie "?1" - w to miejsce dowiązany zostanie parametr (zobacz następny rozdział).</p>
+
+<p>Po przygotowaniu instrukcji, można dowiązać do niego parametry, wykonać je, zresetować i znowu dowiązać, wykonać itd. Przy wielokrotnym wykonaniu jednej instrukcji jej prekompilacja przyniesie znaczny wzrost wydajności, ponieważ zapytanie SQL nie musi być przetwarzane za każdym razem.</p>
+
+<p>Osoby dobrze znające sqlite wiedzą, że prekompilowane instrukcje nie są sprawdzane po zmianie struktury bazy. Na szczęście mozIStorageStatement wykrywa błąd i w razie potrzeby kompiluje ponownie instrukcję. Dzięki temu po przygotowaniu instrukcji nie musisz się martwić, gdyż nawet po zmianie struktury bazy wszystko będzie nadal działać.</p>
+
+<h3 id="Parametry_wi.C4.85zania" name="Parametry_wi.C4.85zania">Parametry wiązania</h3>
+
+<p>Najlepszym rozwiązaniem jest zazwyczaj wiązanie wszystkich parametrów z osobna, zamiast próby konstruowania w locie ciągów SQL zawierających te parametry. Utrudnia to między innymi ataki typu "SQL injection", ponieważ wiązane parametry nigdy nie są wykonywane jako SQL.</p>
+
+<p>Parametry są wiązane do instrukcji posiadającej specjalne pola do wstawienia ich (ang. placeholders). Pola są adresowane po indeksach, zaczynając od "?1", potem "?2"... Używając funkcji instrukcji BindXXXParameter(0) BindXXXParameter(1)... możesz powiązać parametry z tymi polami.</p>
+
+<dl>
+ <dd>
+ <div class="note">Uwaga: Indeksy pól wiązania zaczynają się od 1. Liczby całkowite przekazywane do funkcji wiążących zaczynają się od 0. To oznacza, że "?1" odpowiada parametrowi 0, "?2" odpowiada parametrowi 1 itd.</div>
+ </dd>
+</dl>
+
+<p>Możesz również użyć parametru posiadającego nazwę, np. ":przyklad" zamiast "?xx".</p>
+
+<p>Pole wiązania może wystąpić wielokrotnie w ciągu SQL i wszystkie instancje zostaną zastąpione wiązanymi wartościami. Odwiązane parametry będą interpretowane jako NULL.</p>
+
+<p>Poniższy przykład stosuje jedynie <code>bindUTF8StringParameter()</code> i <code>bindInt32Parameter()</code>. Aby uzyskać pełną listę funkcji wiązania, zobacz <a href="/pl/MozIStorageStatement#Funkcje_wi.C4.85zania" title="pl/MozIStorageStatement#Funkcje_wi.C4.85zania">mozIStorageStatement (wersja polska, w tym momencie <strong>pusta!</strong>)</a> lub <a class="internal" href="/en/mozIStorageStatement#Binding_Functions" title="en/mozIStorageStatement#Binding Functions">mozIStorageStatement (wersja angielska)</a>.</p>
+
+<p>Przykład C++:</p>
+
+<pre>nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM foo WHERE a = ?1 AND b &gt; ?2"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = statement-&gt;BindUTF8StringParameter(0, "hello"); // "hello" będzie zamienione przez "?1"
+NS_ENSURE_SUCCESS(rv, rv);
+rv = statement-&gt;BindInt32Parameter(1, 1234); // 1234 będzie zamienione przez "?2"
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<p>Przykład Javascript:</p>
+
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1 AND b &gt; ?2");
+statement.bindUTF8StringParameter(0, "hello");
+statement.bindInt32Parameter(1, 1234);
+</pre>
+
+<p>If you use named parameters, you should use the <code>getParameterIndex</code> method to get the index of the named parameter. Here is a JavaScript example:</p>
+
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = :myfirstparam AND b &gt; :mysecondparam");
+
+var firstidx = statement.getParameterIndex(":myfirstparam");
+statement.bindUTF8StringParameter(firstidx, "hello");
+
+var secondidx = statement.getParameterIndex(":mysecondparam");
+statement.bindInt32Parameter(secondidx, 1234);
+</pre>
+
+<p>You can of course mix named parameters and indexed parameters in a same query:</p>
+
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1 AND b &gt; :mysecondparam");
+
+statement.bindUTF8StringParameter(0, "hello");
+// you can also use
+// var firstidx = statement.getParameterIndex("?1");
+// statement.bindUTF8StringParameter(firstidx, "hello");
+
+var secondidx = statement.getParameterIndex(":mysecondparam");
+statement.bindInt32Parameter(secondidx, 1234);
+</pre>
+
+<p>If you want to use a <code>WHERE</code> clause with an <code>IN ( value-list )</code> expression, Bindings won't work. Construct a string instead. If you're not handling user input it's no safety concern:</p>
+
+<pre>var ids = "3,21,72,89";
+var sql = "DELETE FROM table WHERE id IN ( "+ ids +" )";
+</pre>
+
+<h3 id="Wykonywanie_instrukcji" name="Wykonywanie_instrukcji">Wykonywanie instrukcji</h3>
+
+<h3 id="Executing_a_statement" name="Executing_a_statement">Executing a statement</h3>
+
+<p>The main way to execute a statement is with <code>mozIStorageStatement.executeStep</code>. This function allows you to enumerate all the result rows your statement produces, and will notify you when there are no more results.</p>
+
+<p>After a call to <code>executeStep</code>, you <strong>use the appropriate getter function</strong> in <a href="pl/MozIStorageValueArray">mozIStorageValueArray</a> to get the values in a result row (mozIStorageStatement implements mozIStorageValueArray). The example below only uses <code>getInt32()</code>.</p>
+
+<p>You can get the type of a value from <code>mozIStorageValueArray.getTypeOfIndex</code>, which returns the type of the specified column. Be careful: sqlite is not a typed database. Any type can be put into any cell, regardless of the type declared for the column. If you request a different type, sqlite will do its best to convert them, and will do some default value if it is impossible. Therefore, it is impossible to get type errors, but you may get weird data out.</p>
+
+<p>C++ code can also use <code>AsInt32</code>, <code>AsDouble</code>, etc. functions which return the value as a more convenient C++ return value. Watch out, though, because you won't get any errors if your index is invalid. Other errors are impossible, because sqlite will always convert types, even if they don't make sense.</p>
+
+<p>Przykład C++:</p>
+
+<pre>PRBool hasMoreData;
+while (NS_SUCCEEDED(statement-&gt;ExecuteStep(&amp;hasMoreData)) &amp;&amp; hasMoreData) {
+  PRInt32 value = statement-&gt;AsInt32(0);
+  // use the value...
+}
+</pre>
+
+<p>Przykład Javascript:</p>
+
+<pre>while (statement.executeStep()) {
+  var value = statement.getInt32(0); // use the correct function!
+  // use the value...
+}
+</pre>
+
+<p><code>mozIStorageStatement.execute()</code> is a convenience function for when you are getting no data out of the statement. It steps the statement once and resets it. This can be useful for insert statements because it really cleans up the code:</p>
+
+<pre>var statement = mDBConn.createStatement("INSERT INTO my_table VALUES (?1)");
+statement.bindInt32Parameter(52);
+statement.execute();
+</pre>
+
+<p>This <img alt="Image:TTRW2.zip"> is a simple, but complete, JavaScript and XUL example of how you run an SQL SELECT against a database.</p>
+
+<h3 id="Resetting_a_statement" name="Resetting_a_statement">Resetting a statement</h3>
+
+<p>It is important to reset statements that are no longer being used. Un-reset write statements will keep a lock on the tables and will prevent other statements from accessing it. Un-reset read statements will prevent writes.</p>
+
+<p>When the statement object is freed, its corresponding database statement is closed. If you are using C++ and you know that all references will be destroyed, you don't have to explicitly reset the statement. Also, if you use <code>mozIStorageStatement.execute()</code>, you don't need to explicitly reset the statement; this function will reset it for you. Otherwise, call <code>mozIStorageStatement.reset()</code>.</p>
+
+<p>JavaScript callers should ensure that statements are reset. Be particularly careful about exceptions. You will want to make sure to reset your statements even if an exception is fired, or subsequent access to the database may not be possible. Resetting a statement is relatively lightweight, and nothing bad happens if it's already reset, so don't worry about unnecessary resets.</p>
+
+<pre>var statement = connection.createStatement(...);
+try {
+  // use the statement...
+} finally {
+  statement.reset();
+}
+</pre>
+
+<p>C++ callers must do the same. There is a scoped object in <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code> called mozStorageStatementScoper which will ensure that a given statement is reset when the enclosing scope is exited. It is hightly recommended that you use this object if possible.</p>
+
+<pre>void someClass::someFunction()
+{
+  mozStorageStatementScoper scoper(mStatement)
+  // use the statement
+}
+</pre>
+
+<h2 id="Last_insert_id" name="Last_insert_id">Last insert id</h2>
+
+<p>Use the <code>lastInsertRowID</code> property on the connection to get the id (rowid) from the last <code>INSERT</code> operation on the db.<br>
+ This is useful if you have a column in your table set to <code>INTEGER PRIMARY KEY</code> or <code>INTEGER PRIMARY KEY AUTOINCREMENT</code> in which case SQLite automatically assigns a value for each row inserted if you don't provide one.<a class="external" href="http://www.sqlite.org/faq.html#q1"> The returned value is of type <code>number</code> in JS and <code>long long</code> in C++. </a></p>
+
+<p><a class="external" href="http://www.sqlite.org/faq.html#q1"><code>lastInsertRowID</code> JS example: </a></p>
+
+<pre><a class="external" href="http://www.sqlite.org/faq.html#q1">var sql = "INSERT INTO contacts_table (number_col, name_col) VALUES (?1, ?2)"
+var statement = mDBConn.createStatement(sql);
+    statement.bindUTF8StringParameter(0, number);
+    statement.bindUTF8StringParameter(1, name);
+    statement.execute();
+    statement.reset();
+
+var rowid = mDBConn.lastInsertRowID;
+</a></pre>
+
+<h2 id="Transactions" name="Transactions"><a class="external" href="http://www.sqlite.org/faq.html#q1">Transactions </a></h2>
+
+<p><a class="external" href="http://www.sqlite.org/faq.html#q1">mozIStorageConnection has functions for beginning and ending transactions. If you do not explicitly use transactions, an implicit transaction will be created for you for each statement. This has major performance implications. There is overhead for each transaction, especially for commits. You will therefore see a large performance win when you are doing multiple statements in a row if you put them in a transaction. See </a><a href="pl/Storage/Performance">Storage:Performance</a> for more performance information.</p>
+
+<p>The major difference between other database systems is that sqlite does not support nested transactions. This means that once a transaction is open, you can not open another transaction. You can check <code>mozIStorageConnection.transactionInProgress</code> to see if a transaction is currently in progress.</p>
+
+<p>You can also just execute "BEGIN TRANSACTION" and "END TRANSACTION" directly as SQL statements (this is what the connection does when you call the functions). However, use of <code>mozIStorageConnection.beginTransaction</code> and related functions are<em>strongly</em> recommended because it stores transaction state in the connection. Otherwise, the attribute <code>transactionInProgress</code> will have the wrong value.</p>
+
+<p>sqlite has several types of transactions:</p>
+
+<ul>
+ <li>mozIStorageConnection.TRANSACTION_DEFERRED: The default. The database lock is acquired when needed (usually the first time you execute a statement in the transaction).</li>
+</ul>
+
+<ul>
+ <li>mozIStorageConnection.TRANSACTION_IMMEDIATE: Get a read lock on the database immediately.</li>
+</ul>
+
+<ul>
+ <li>mozIStorageConnection.TRANSACTION_EXCLUSIVE: Get a write lock on the database immediately.</li>
+</ul>
+
+<p>You can pass this type of transaction to <code>mozIStorageConnection.beginTransactionAs</code> to determine what kind of transaction you need. Keep in mind that if another transaction has already started, this operation will not succeed. Generally, the default TRANSACTION_DEFERRED type is sufficient and you shouldn't use the other types unless you really know why you need them. For more information, see the sqlite documentation about <a class="external" href="http://www.sqlite.org/lang_transaction.html">BEGIN TRANSACTION</a> and <a class="external" href="http://www.sqlite.org/lockingv3.html">locking</a>.</p>
+
+<pre>var ourTransaction = false;
+if (!mDBConn.transactionInProgress) {
+  ourTransaction = true;
+  mDBConn.beginTransactionAs(mDBConn.TRANSACTION_DEFERRED);
+}
+
+// ... use the connection ...
+
+if (ourTransaction)
+  mDBConn.commitTransaction();
+</pre>
+
+<p>From C++ code, you can use the mozStorageTransaction helper class defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code>. This class will begin a transaction of the specified type on the specified connection when it comes into scope, and will either commit or rollback the transaction when it goes out of scope. If a transaction is already in progress, the transaction helper class will not do anything.</p>
+
+<p>It also has functions for explicitly committing. The typical use is that you create the class defaulting to rollback, and then explicitly commit the transaction when processing has succeeded:</p>
+
+<pre>nsresult someFunction()
+{
+  // deferred transaction (the default) with rollback on failure
+  mozStorageTransaction transaction(mDBConn, PR_FALSE);
+
+  // ... use the connection ...
+
+  // everything succeeded, now explicitly commit
+  return transaction.Commit();
+}
+</pre>
+
+<h2 id="How_to_corrupt_your_database" name="How_to_corrupt_your_database">How to corrupt your database</h2>
+
+<ul>
+ <li>Read this document: <a class="external" href="http://www.sqlite.org/lockingv3.html">File locking and concurrency in sqlite version 3</a>, especially the section on corruption.</li>
+</ul>
+
+<ul>
+ <li>Open more than one connection to the same file with names that aren't exactly the same as determined by <code>strcmp</code>. This includes "my.db" and "../dir/my.db" or, on Windows (case-insensitive) "my.db" and "My.db". Sqlite tries to handle many of these cases, but you shouldn't count on it.</li>
+</ul>
+
+<ul>
+ <li>Access a database from a symbolic or hard link.</li>
+</ul>
+
+<ul>
+ <li>Open connections to the same database from more than one thread (see "Thread safety" below).</li>
+</ul>
+
+<ul>
+ <li>Access a connection or statement from more than one thread (see "Thread safety" below).</li>
+</ul>
+
+<ul>
+ <li>Open the database from an external program while it is open in Mozilla. Our caching breaks the normal file-locking in sqlite that allows this to be done safely.</li>
+</ul>
+
+<h2 id="SQLite_Locking" name="SQLite_Locking">SQLite Locking</h2>
+
+<p>SQLite locks the entire database; that is, any active readers will cause an attempt to write to return SQLITE_BUSY, and an active writer will cause any attempt to read to return SQLITE_BUSY. A statement is considered active from the first step() until reset() is called. execute() calls step() and reset() in one go. A common problem is forgetting to reset() a statement after you've finished step()'ing through.</p>
+
+<p>While a given SQLite connection is capable of having multiple statements open, its locking model limits what these statements can do concurrently (reading or writing). It is in fact possible for multiple statements to be actively reading at one time. It is not possible, however, for multiple statements to be reading and writing at one time<em>on the same table</em> -- even if they are derived from the same connection.</p>
+
+<p>SQLite has a two-tiered locking model: connection level and table level. Most people are familiar with the connection (database) level locking: multiple readers but only one writer. The table-level (B-Tree) locks are what can sometimes be confusing. (Internally, each table in the database has its own B-Tree, so "table" and "B-Tree" are technically synonymous).</p>
+
+<h3 id="Table-level_locks" name="Table-level_locks">Table-level locks</h3>
+
+<p>You would think that if you have only one connection, and it locks the database for writing, you could use multiple statements to do whatever you want. Not entirely. You must be aware of table-level (B-Tree) locks, which are maintined by statement handles traversing the database (i.e. open SELECT statements).</p>
+
+<p>The general rule is this: a statement handle may <strong>not</strong> modify a table (B-Tree) which other statement handles are reading (have open cursors on) -- even if that statement handle shares the same connection (transaction context, database lock, etc.) with the other statement handles.<em>Attempts to do so will still block (or return SQLITE_BUSY)</em>.</p>
+
+<p>This problem often crops up when you attempt to iterate over a table with one statement and modify records within it using another statement. This will not work (or carries a high probability of not working, depending on the optimizer's involvement (see below)). The modifying statement will block because the reading statement has an open cursor on the table.</p>
+
+<h3 id="Working_around_locking_problems" name="Working_around_locking_problems">Working around locking problems</h3>
+
+<p>The solution is to follow (1) as described above. Theoretically, (2) actually shouldn't work with SQLite 3.x. In this scenario, database locks come into play (with multiple connections) in addition to table locks. Connection 2 (modifying connection) will not be able to modify (write to) the database while the Connection 1 (reading connection) is reading it. Connection 2 will require an exclusive lock to execute a modifying SQL command, which it cannot get as long as Connection 1 has active statements reading the database (Connection 1 has a shared read lock during this time which prohibits any other connections from getting an exclusive lock).</p>
+
+<p>Another option is to use a temporary table. Create a temporary table containing the results of the table of interest, iterate over it (putting the reading statement's table lock on the temp table) and then the modifing statement can make changes to the real table without any problem. This can be done with statements derived from a single connection (transaction context). This scenario sometimes happens behind the scenes anyway as ORDER BY can produce temporary tables internally. However, it is not safe to assume that the optimizer will do this in all cases. Explicitly creating a temporary table is only safe way to do perform this latter option.</p>
+
+<h2 id="Thread_safety" name="Thread_safety">Thread safety</h2>
+
+<p>The mozStorage service and sqlite are threadsafe. However, no other mozStorage or sqlite objects or operations are threadsafe.</p>
+
+<ul>
+ <li>The storage service must be created on the main thread. If you want to access the service from another thread, you should be sure that you call getService from the main thread ahead of time.</li>
+</ul>
+
+<ul>
+ <li>You can not access a connection or statement from multiple threads. These storage objects are not threadsafe, and the sqlite representations of them are not thread safe either. Even if you do locking and ensure that only one thread is doing something at once, there may be problems. This case hasn't been tested, and there may be some internal per-thread state in sqlite. It is strongly advised that you don't do this.</li>
+</ul>
+
+<ul>
+ <li>You can not access a single database from multiple connections from different threads. Normally, sqlite allows this. However, we do <code>sqlite3_enable_shared_cache(1);</code> (see <a class="external" href="http://www.sqlite.org/sharedcache.html">sqlite shared-cache mode</a>) which makes multiple connections share the same cache. This is important for performance. However, there is no lock for cache access, meaning it will break if you use if from more than one thread.</li>
+</ul>
+
+<p>It's worth noting, however, that authors of JavaScript browser extensions are less impacted by these restrictions than it might first appear. If a database is created and used exclusively from within JavaScript, thread safety usually will not be an issue. SpiderMonkey (the JavaScript engine run within Firefox) executes JavaScript from a single persistent thread, except when the JavaScript runs in a different thread or is executed from a callback made on a different thread (e.g. via some networking or stream interfaces). Barring incorrect use of multi-threaded JavaScript, problems should occur only if a database already in use by a non-JavaScript, system-level thread is accessed through mozStorage.</p>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<ul>
+ <li><a href="pl/MozIStorageConnection">mozIStorageConnection</a> Database connection to a specific file or in-memory data storage</li>
+ <li><a href="pl/MozIStorageStatement">mozIStorageStatement</a> Create and execute SQL statements on a SQLite database.</li>
+ <li><a href="pl/MozIStorageValueArray">mozIStorageValueArray</a> Wraps an array of SQL values, such as a result row.</li>
+ <li><a href="pl/MozIStorageFunction">mozIStorageFunction</a> Create a new SQLite function.</li>
+ <li><a href="pl/MozIStorageAggregateFunction">mozIStorageAggregateFunction</a> Create a new SQLite aggregate function.</li>
+ <li><a href="pl/MozIStorageProgressHandler">mozIStorageProgressHandler</a> Monitor progress during the execution of a statement.</li>
+ <li><a href="pl/MozIStorageStatementWrapper">mozIStorageStatementWrapper</a> Storage statement wrapper</li>
+</ul>
+
+<ul>
+ <li><a href="pl/Storage/Performance">Storage:Performance</a> How to get your database connection performing well.</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/3072">Storage Inspector Extension</a> Makes it easy to view any sqlite database files in the current profile.</li>
+ <li><a class="external" href="http://www.sqlite.org/lang.html">SQLite Syntax</a> Query language understood by SQLite</li>
+ <li><a class="external" href="http://sqlitebrowser.sourceforge.net/">SQLite Database Browser</a> is a capable free tool available for many platforms. It can be handy for examining existing databases and testing SQL statements.</li>
+</ul>

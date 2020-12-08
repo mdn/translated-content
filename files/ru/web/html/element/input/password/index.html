@@ -1,0 +1,614 @@
+---
+title: <input type="password">
+slug: Web/HTML/Element/Input/password
+tags:
+  - Element
+  - HTML
+  - Веб
+  - Пароль
+  - Формы
+translation_of: Web/HTML/Element/input/password
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary">{{HTMLElement("input")}} элементы типа <strong><code>"password"</code></strong> предоставляют пользователю возможность безопасного ввода пароль. Элемент представлен как однострочный текстовый редактор, в котором текст затенен, чтобы его нельзя было прочитать, как правило, путем замены каждого символа другим символом, таким как звездочка ("*") или точка ("•"). Этот символ будет меняться в зависимости от {{Glossary("user agent")}} и {{Glossary("OS")}}.</span></p>
+
+<p>Особенности работы процесса ввода могут отличаться от браузера к браузеру; мобильные устройства, например, часто отображают вводимый символ на мгновение, прежде чем закрывать его, чтобы позволить пользователю быть уверенным, что они нажали клавишу, которую они хотели нажать; это полезно, учитывая небольшой размер клавиш и легкость, с которой может быть нажата неправильная, особенно на виртуальных клавиатурах.</p>
+
+<div class="note">
+<p>Любые формы, содержащие конфиденциальную информацию, такую ​​как пароли (например, формы входа), должны обслуживаться через HTTPS; В Firefox теперь реализованы несколько механизмов для предупреждения от небезопасных форм входа в систему - см. <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Insecure_passwords">Небезопасные пароли</a>. Другие браузеры также реализуют аналогичные механизмы.</p>
+</div>
+
+<div id="Basic_example">
+<pre class="brush: html">&lt;input id="userPassword" type="password"&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample("Basic_example", 600, 40)}}</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <td><strong>{{anch("Value")}}</strong></td>
+   <td>{{domxref("DOMString")}} представляет пароль или пустую строку</td>
+  </tr>
+  <tr>
+   <td><strong>События</strong></td>
+   <td>{{event("change")}} и {{event("input")}}</td>
+  </tr>
+  <tr>
+   <td><strong>Общие поддерживаемые атрибуты</strong></td>
+   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("inputmode", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}, and {{htmlattrxref("size", "input")}}</td>
+  </tr>
+  <tr>
+   <td><strong>IDL атрибуты</strong></td>
+   <td><code>selectionStart</code>, <code>selectionEnd</code>, <code>selectionDirection</code>, и <code>value</code></td>
+  </tr>
+  <tr>
+   <td><strong>Методы</strong></td>
+   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, и {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Значения">Значения</h2>
+
+<p>Атрибут {{htmlattrxref("value", "input")}} содержит {{domxref("DOMString")}} , значение которого является текущим содержимым элемента редактирования текста, используемого для ввода пароля. Если пользователь еще ничего не указал, это значение представляет собой пустую строку (<code>""</code>). Если указано свойство {{htmlattrxref("required")}}, то поле ввода пароля должно содержать значение, отличное от пустой строки, которое должно быть действительным.</p>
+
+<p>Если указан атрибут {{htmlattrxref("pattern", "input")}}, содержимое элемента управления <code>"password"</code> считается действительным только в том случае, если значение проходит проверку; см. {{anch("Validation")}} для получения дополнительной информации.</p>
+
+<div class="note">
+<p>Символы строки (U+000A) и возврата каретки(U+000D) недопустимы в значении поля <code>"password"</code>. При вставке пароля, возвращаемые символы удаляются из значения.</p>
+</div>
+
+<h2 id="Использование_полей_ввода_пароля">Использование полей ввода пароля</h2>
+
+<p>Поля ввода пароля обычно работают так же, как и другие текстовые поля ввода; основное отличие состоит в том, чтобы скрывать введенный контент, чтобы люди, не знакомые с пользователем, не могли прочитать его пароль.</p>
+
+<h3 id="Простое_поле_ввода_пароля">Простое поле ввода пароля</h3>
+
+<p>Здесь мы видим самый простое поле ввода пароля, с меткой, установленной с помощью элемента {{HTMLElement("label")}}.</p>
+
+<pre class="brush: html">&lt;label for="userPassword"&gt;Пароль:&lt;/label&gt;
+&lt;input id="userPassword" type="password"&gt;</pre>
+
+<p>{{EmbedLiveSample("A_simple_password_input", 600, 40)}}</p>
+
+<h3 id="Поддержка_автозаполнения">Поддержка автозаполнения</h3>
+
+<p>Чтобы менеджер паролей пользователя автоматически вводил пароль, укажите атрибут {{htmlattrxref("autocomplete", "input")}}. Для паролей должно быть одно из следующих значений:</p>
+
+<dl>
+ <dt><code>"on"</code></dt>
+ <dd>Разрешить браузеру или менеджеру паролей автоматически заполнять поле пароля. Это не так информативно, как использование <code>"current-password"</code> или <code>"new-password"</code>.</dd>
+ <dt><code>"off"</code></dt>
+ <dd>Запрещает браузеру или менеджеру паролей автоматически заполнять поле пароля.</dd>
+ <dt><code>"current-password"</code></dt>
+ <dd>Разрешить браузеру или менеджеру паролей вводить текущий пароль для сайта. Это дает больше информации, чем <code>"on"</code>, так как позволяет браузеру или менеджеру паролей знать, что в настоящее время известен пароль для сайта в поле, а не используется новый.</dd>
+ <dt><code>"new-password"</code></dt>
+ <dd>Разрешить браузеру или менеджеру паролей автоматически вводить новый пароль для сайта. Он может быть автоматически сгенерирован на основе других атрибутов элемента управления или может просто указать браузеру представить виджет «предлагаемого нового пароля».</dd>
+</dl>
+
+<div id="Autocomplete_sample1">
+<pre class="brush: html">&lt;label for="userPassword"&gt;Пароль:&lt;/label&gt;
+&lt;input id="userPassword" type="password" autocomplete="current-password"&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}</p>
+
+<h3 id="Обязательное_заполнение_пароля">Обязательное заполнение пароля</h3>
+
+<p>Чтобы сообщить браузеру пользователя, что поле пароля должно иметь действительное значение перед отправкой формы, просто укажите Boolean атрибут {{htmlattrxref("required", "input")}}.</p>
+
+<pre class="brush: html">&lt;label for="userPassword"&gt;Пароль:&lt;/label&gt;
+&lt;input id="userPassword" type="password" required&gt;</pre>
+
+<p>{{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}</p>
+
+<h3 id="Указание_режима_ввода">Указание режима ввода</h3>
+
+<p>Если ваше приложение лучше обслуживается с использованием другого режима ввода, чем по умолчанию, вы можете использовать атрибут {{htmlattrxref("inputmode", "input")}} для определенного запроса. Наиболее очевидным вариантом использования является то, что ваше приложение использует в качестве пароля числовое значение (например, ПИН). Например, мобильные устройства с виртуальными клавиатурами могут переключаться на макет цифровой клавиатуры вместо полной клавиатуры, чтобы облегчить ввод пароля.</p>
+
+<pre class="brush: html">&lt;label for="pin"&gt;ПИН:&lt;/label&gt;
+&lt;input id="pin" type="password" inputmode="numeric"&gt;</pre>
+
+<p>{{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}</p>
+
+<h3 id="Настройка_длины_пароля">Настройка длины пароля</h3>
+
+<p>Как обычно, вы можете использовать атрибуты {{htmlattrxref("minlength", "input")}} и {{htmlattrxref("maxlength", "input")}}, чтобы установить минимальную и максимальную допустимую длину пароля , Этот пример дополняет предыдущий, указав, что PIN-код пользователя должен быть не менее четырех и не более восьми цифр. Атрибут {{htmlattrxref("size", "input")}} используется для обеспечения того, чтобы элемент управления ввода пароля имел ширину в восемь символов.</p>
+
+<pre class="brush: html">&lt;label for="pin"&gt;ПИН:&lt;/label&gt;
+&lt;input id="pin" type="password" inputmode="numeric" minlength="4"
+       maxlength="8" size="8"&gt;</pre>
+
+<p>{{EmbedLiveSample("Setting_length_requirements", 600, 40)}}</p>
+
+<h3 id="Выделение_текста">Выделение текста</h3>
+
+<p>Как и другие элементы управления текстовой записью, вы можете использовать метод {{domxref("HTMLInputElement.select", "select()")}} для выбора всего текста в поле пароля.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;label for="userPassword"&gt;Пароль&lt;/label&gt;
+&lt;input id="userPassword" type="password" size="12"&gt;
+&lt;button id="selectAll"&gt;Выделить все&lt;/button&gt;
+</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush: js">document.getElementById("selectAll").onclick = function(event) {
+  document.getElementById("userPassword").select();
+}</pre>
+
+<h4 id="Результат">Результат</h4>
+
+<p>{{EmbedLiveSample("Selecting_text", 600, 40)}}</p>
+
+<p>Вы также можете использовать {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} и {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}, чтобы получить (или установить), какой диапазон символов в элементе управления, и {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}, чтобы узнать, какой выбор направления произошел (или будет расширен в зависимости от вашей платформы, см. его документацию для объяснения) , Однако, учитывая, что текст затенен, их полезность несколько ограничена.</p>
+
+<h2 id="Валидация">Валидация</h2>
+
+<p>Если ваше приложение имеет ограничения по набору символов или любые другие требования для фактического содержимого введенного пароля, вы можете использовать атрибут {{htmlattrxref("pattern", "input")}}, чтобы установить регулярное выражение, чтобы автоматически гарантировать, что ваши пароли соответствуют этим требованиям.</p>
+
+<p>В этом примере допустимы только значения, состоящие как минимум из четырех и не более восьми шестнадцатеричных цифр.</p>
+
+<div id="Validation_sample1">
+<pre class="brush: html">&lt;label for="hexId"&gt;Hex ID:&lt;/label&gt;
+&lt;input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
+       title="Enter an ID consisting of 4-8 hexadecimal digits"&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample("Validation_sample1", 600, 40)}}</p>
+
+<dl>
+ <dt>{{htmlattrdef("disabled")}}</dt>
+ <dd>
+ <p>Этот Boolean атрибут указывает, что поле пароля недоступно для взаимодействия. Кроме того, отключенные значения полей не отправляются с формой.</p>
+ </dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Запрос_номера_социального_страхования">Запрос номера социального страхования</h3>
+
+<p>В этом примере принимается только ввод, который соответствует формату <a href="https://en.wikipedia.org/wiki/Social_Security_number#Structure">действительного номера социального страхования Соединенных Штатов</a>. Эти цифры, используемые для целей налогообложения и идентификации в США, представлены в форме «123-45-6789». Также существуют различные правила, для которых допустимы значения в каждой группе.</p>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;label for="ssn"&gt;SSN:&lt;/label&gt;
+&lt;input type="password" id="ssn" inputmode="number" minlength="9" maxlength="12"
+    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+    required autocomplete="off"&gt;
+&lt;br&gt;
+&lt;label for="ssn"&gt;Value:&lt;/label&gt;
+&lt;span id="current"&gt;&lt;/span&gt;</pre>
+
+<p>Здесь используется {{htmlattrxref("pattern", "input")}} , который ограничивает введенное значение строками, представляющими номера юридической информации Социальной защиты. Очевидно, что это регулярное выражение не гарантирует действительный SSN, но гарантирует, что число может быть единым; он обычно избегает недопустимых значений. Кроме того, он позволяет разделять три группы цифр пробелом, тире ("-") или ничем.</p>
+
+<p>В {{htmlattrxref("inputmode", "input")}} установлено значение <code>"number"</code>, чтобы побудить устройства с виртуальными клавиатурами переключаться на макет цифровой клавиатуры для облегчения ввода. Для атрибутов {{htmlattrxref("minlength", "input")}} и {{htmlattrxref("maxlength", "input")}} установлено значение 9 и 12 соответственно, чтобы требовалось, чтобы значение было не менее девяти и не более 12 символов (первый не разделяет символы между группами цифр и последними с ними). Атрибут {{htmlattrxref("required", "input")}} используется для указания того, что этот элемент управления должен иметь значение. Наконец, {{htmlattrxref("autocomplete", "input")}} установлен <code>"off"</code>, чтобы избежать попыток установить пароли менеджеров паролей.</p>
+
+<h4 id="JavaScript_2">JavaScript</h4>
+
+<pre class="brush: js">var ssn = document.getElementById("ssn");
+var current = document.getElementById("current");
+
+ssn.oninput = function(event) {
+  current.innerHTML = ssn.value;
+}</pre>
+
+<h4 id="Результат_2">Результат</h4>
+
+<p>{{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}</p>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>2</td>
+   <td>1.0</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>accesskey</td>
+   <td>1.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>6</td>
+   <td>1.0</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>autocomplete</td>
+   <td>17.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>5</td>
+   <td>9.6</td>
+   <td>5.2</td>
+  </tr>
+  <tr>
+   <td>autofocus</td>
+   <td>5.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>9.6</td>
+   <td>5.0</td>
+  </tr>
+  <tr>
+   <td>disabled</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.7")}}<sup>[4]</sup></td>
+   <td>6</td>
+   <td>1.0</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>form</td>
+   <td>9.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.62</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>formaction</td>
+   <td>9.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>10.62</td>
+   <td>5.2</td>
+  </tr>
+  <tr>
+   <td>formenctype</td>
+   <td>9.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>10.62</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>formmethod</td>
+   <td>9.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>10.62</td>
+   <td>5.2</td>
+  </tr>
+  <tr>
+   <td>formnovalidate</td>
+   <td>5.0<sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>10.62</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>formtarget</td>
+   <td>9.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>10.62</td>
+   <td>5.2</td>
+  </tr>
+  <tr>
+   <td>inputmode</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>maxlength</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>2</td>
+   <td>1.0</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>minlength</td>
+   <td>40.0</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>name</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>2</td>
+   <td>1.0</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>pattern</td>
+   <td>5.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>9.6</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>placeholder</td>
+   <td>10.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>11.00</td>
+   <td>5.0</td>
+  </tr>
+  <tr>
+   <td>readonly</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>6<sup>[2] </sup></td>
+   <td>1.0</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>required</td>
+   <td>5.0<br>
+    10<sup>[3]</sup></td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10</td>
+   <td>9.6</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>size</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>2</td>
+   <td>1.0</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>Crossed out lock in address bar to indicate insecure login page</td>
+   <td>Implementing something similar</td>
+   <td>{{CompatGeckoDesktop("51")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Message displayed next to password field to indicate insecure login page, plus autofill disabled</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("52")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome mobile</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>accesskey</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>autocomplete</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>autofocus</td>
+   <td>3.2</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>disabled</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>form</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>formaction</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.62</td>
+   <td>5.0</td>
+  </tr>
+  <tr>
+   <td>formenctype</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>formmethod</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.62</td>
+   <td>5.0</td>
+  </tr>
+  <tr>
+   <td>formnovalidate</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.62</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>formtarget</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.62</td>
+   <td>5.0</td>
+  </tr>
+  <tr>
+   <td>inputmode</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>maxlength</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>minlength</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>27.0</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>name</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>pattern</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>placeholder</td>
+   <td>2.3</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>11.10</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td>required</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>size</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Crossed out lock in address bar to indicate insecure login page</td>
+   <td>Implementing something similar</td>
+   <td>{{CompatGeckoMobile("51")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Message displayed next to password field to indicate insecure login page, plus autofill disabled</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("52")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>
+
+<p>[1] В версии 6.0 он работал только с типом документа HTML5, поддержка проверки в 7.0 была отключена и повторно включена в 10.0.</p>
+
+<p>[2] Отсутствует для <code>type="checkbox"</code> и <code>type="radio"</code>.</p>
+
+<p>[3] Поддерживается для элемента {{HTMLElement("select")}}.</p>
+
+<p>[4] Firefox, в отличие от других браузеров, по умолчанию <a href="http://stackoverflow.com/q/5985839/432681">pсохраняет состояние динамического отключения и (если применимо) динамическую проверку</a> из <code>&lt;input&gt;</code> для загрузки страницы. Установка значения атрибута {{htmlattrxref("autocomplete","input")}} в <code>off</code> отключает эту функцию; это работает, даже если атрибут {{htmlattrxref("autocomplete","input")}} обычно не применяется к <code>&lt;input&gt;</code> в силу его {{htmlattrxref("type","input")}}. Смотри {{bug(654072)}}.</p>

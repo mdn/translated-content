@@ -1,0 +1,122 @@
+---
+title: MouseEvent.offsetX
+slug: Web/API/MouseEvent/offsetX
+tags:
+  - API
+  - MouseEvent
+  - Property
+  - Read-only
+translation_of: Web/API/MouseEvent/offsetX
+---
+<p>{{APIRef("DOM Events")}}{{SeeCompatTable}}</p>
+
+<p><code><font face="Open Sans, Arial, sans-serif">Свойство </font><strong>MouseEvent.offsetX</strong></code>, доступное только для чтения,<code> показывает отступ курсора мыши по оси X от края целевого DOM узла.</code></p>
+
+<p> </p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var xOffset = <em>instanceOfMouseEvent</em>.offsetX;
+</pre>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Значение с плавающей запятой - double. Ранние версии спецификации определяли возвращаемое значение как целое число. Подробнее смотрите в разделе про совместимость с браузерами.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Характеристка</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-mouseevent-offsetx', 'MouseEvent')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("39.0")}}</td>
+   <td>6</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>Переопределено с <code>long</code> на <code>double</code></td>
+   <td>{{CompatChrome(56)}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("43.0")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>Переопределено с <code>long</code> на <code>double</code></td>
+   <td>{{CompatChrome(56)}}</td>
+   <td>{{CompatChrome(56)}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{ domxref("MouseEvent") }}</li>
+</ul>

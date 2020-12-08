@@ -1,0 +1,138 @@
+---
+title: Drzewa i szablony
+slug: Mozilla/Tech/XUL/Kurs_XUL/Drzewa_i_szablony
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees_and_Templates
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Szablony" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Źródła_danych_RDF">Następny  »</a></p>
+</div> <p></p>
+
+<p>Zawartość artykułu opisuje jak używać szablonów wraz z drzewami.</p>
+
+<h2 id="Dodajemy_.C5.BAr.C3.B3d.C5.82o_danych_do_drzewa" name="Dodajemy_.C5.BAr.C3.B3d.C5.82o_danych_do_drzewa">Dodajemy źródło danych do drzewa</h2>
+
+<p>Kiedy używamy drzewa, często korzystamy z szablonu, aby zbudować jego zawartość, kierując dużą ilością hierarchicznych danych. Używając szablonu z drzewem stosujemy bardzo często podobną składnię z innymi elementami. Aby dodać <code><code id="a-datasources"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/datasources">datasources</a></code></code> i atrybut <code><code id="a-ref"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ref">ref</a></code></code> do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code>, który określa źródło danych i węzeł podstawy wyświetla.</p>
+
+<p>Następujący przykład odwołuje się do historii kodu źródłowego:</p>
+
+<pre>&lt;tree datasources="rdf:history" ref="NC:HistoryByDate"
+          flags="dont-build-content"&gt;
+</pre>
+
+<p>Jak opisano w poprzednim temacie, drzewa mogą używać programów do budowy drzew dla generatora szablonów zamiast normalnej zawartości programów do budowy. Oznacza to, że elementy te nie będą utworzone dla każdego wiersza w drzewie, robiąc go bardziej efektywnym. Atrybuty <code><code id="a-flags"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flags">flags</a></code></code> ustawią wartość <code>dont-build-content</code>,jak w przykładzie powyżej, sygnalizując użycie generatora drzew. Jeśli opuszczasz ten atrybut, generator zawartości zostanie użyty. Możesz zobaczyć różnice używając Inspektora Mozilla DOM w drzewie z lub bez flagi.</p>
+
+<p>Jeśli używasz do budowy zamiast budowniczego zawartości, notatki że ta zawartość nie będzie generalnie pobierana do budowy aż do momentu kiedy nie będziesz tego potrzebował. W hierarchicznych drzewach, potomek-dziecko nie będzie brał generowanego tekstu aż węzeł rodzic nie zostanie otwarty przez użytkownika.</p>
+
+<p>W szablonie, jest po jednej <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> dla każdej kolumny w drzewie. Komórki powinny mieć atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> do ustawiania etykiety komórek. Jest to normalne ustawienie własności w RDF, tak więc etykieta jest pobierana z kodu źródłowego.</p>
+
+<h3 id="Template-built_Tree_Example" name="Template-built_Tree_Example">Template-built Tree Example</h3>
+
+<p>Następujący przykład demonstruje zbudowany szablon drzewa, w tym przypadku dla pliku systemowego:</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treetempl_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;tree id="my-tree" flex="1"
+       datasources="rdf:files" ref="file:///" flags="dont-build-content"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="Name" label="Name" primary="true" flex="1"/&gt;
+    &lt;splitter/&gt;
+    &lt;treecol id="Date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+    &lt;template&gt;
+      &lt;rule&gt;
+        &lt;treechildren&gt;
+          &lt;treeitem uri="rdf:*"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/rule&gt;
+    &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<p>W ty miejscu, drzewo zostało utworzone z dwoma kolumnami, dla nazwy i daty pliku. Drzewo powinno zostać wyświetlone jako lista plików w katalogu głównym. Użyto tylko jednej zasady, ale ty możesz dodać inne, jeśli tego potrzebujesz. Tak samo z innymi szablonami, atrybut uri na elemencie wskazuje gdzie ma zacząć generować zawartość. Dwie komórki dostają nazwę i datę z kodu źródłowego i umieszcza ich wartość w etykiecie komórki.</p>
+
+<p>Przykład pokazuje dlaczego atrybut <code>uri</code> staje się użyteczny. Zauważ jak to było na pozycji drzewa w przykładzie, nawet chociaż to nie jest prosty potomek elementu reguły. Potrzebujemy położyć ten atrybut na tych elementach, na których potrzebujemy uzyskać powtórzony kod. Ponieważ nie chcemy wielokrotnego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>, nie chcemy to tam położyć. Skutecznie, elementy zewnętrzne (lub powyższe) elementu z atrybutem <code>uri</code> nie są duplikowane podczas gdy elementy z atrybutem <code>uri</code> i elementy wewnątrz są duplikowane dla każdego źródła.</p>
+
+<p>Zaznaczony w obrazku element to potomek - dziecko, który jest umieszczony poniżej elementu z poziomu górnego, który został dodany automatycznie. XUL wie jak dodać element dziecka kiedy szablon lub zasady stanowią wartość elementu drzewa lub elementu menu. Generując elementy drzewa jako zagnieżdżone i konieczne oparte na dostępnych danych RDF.</p>
+
+<div class="float-right"><img alt="Image:rdfoutl1.jpg"></div>
+
+<p>Interesującą partię danych z kodem źródłowym RDF jest w wartości tych zasobów, i edytujesz tylko zasoby decydując kiedy dane są potrzebne. Wyznacza to wartość na jaką głębokość w zasobach hierarchii są nie możliwe do utworzenia aż do nawigacji zasobami poprzez węzeł w drzewie. Stało się to użytecznym dla pewnego kodu źródłowego gdzie dane są dynamicznie możliwie.</p>
+
+<h2 id="Sortowanie_kolumn" name="Sortowanie_kolumn">Sortowanie kolumn</h2>
+
+<p>Jeśli wypróbujesz poprzedzający przykład, moglibyśmy zaznaczyć to w co lista nie jest posortowana. Drzewa które generują dane z kodu źródłowego posiada nieobowiązkową zdolność posortować ich dane. Możemy posortować każdy podnoszący się i obniżający na jakiejkolwiek kolumnie. Użytkownik może zmienić posortowane kolumny i kierunek poprzez kliknięcie nagłówka kolumny. Właściwości sortowania nie są dostępne dla wartości drzew statycznych, chociaż możemy pisać skrypty zawierające dane.</p>
+
+<p>Sortując angażuje trzy atrybuty, które powinny być umieszczone w kolumnach. Pierwszy atrybut, <b>sort</b> powinien być ustawiony na własności klucza sortowania używanego w RDF. Często, może to być użyta taka sama nazwa etykiety w komórce kolumny. Jeśli ustawisz sortowanie na kolumnę, to wtedy będą sortowane w niej dane. Użytkownik może zmienić kierunek sortowania klikając w nagłówek kolumny. Jeśli nie ustawisz atrybutu <b>sort</b> w kolumnie, dane nie mogą być sortowane w tej kolumnie.</p>
+
+<p>Atrybut <code>sortDirection</code> jest używany do ustawienia kierunku w którym kolumny będą sortować domyślnie. Poszczególne możliwe cechy:</p>
+
+<ul>
+ <li>ascending: dane są wyświetlane rosnąco</li>
+ <li>descending: dane są wyświetlane malejąco</li>
+ <li>natural: dane są wyświetlone w rozkazie naturalnym , które znaczy polecenie danych jest przechowywane w kodzie źródłowym RDF.</li>
+</ul>
+
+<p>Atrybut finalny, <code>sortActive</code> powinien być ustawiony na <code>true</code> dla jednej kolumny, jeden którego wybraliśmy będzie sortowany domyślnie.</p>
+
+<p>Chociaż sortowanie działa bez zarzutów i prawidłowo tylko z tamtymi narzędziami, możesz także użyć klasę stylu <code>sortDirectionIndicator</code> w kolumnie, w której będzie ona sortowana. Będzie powodować mały trójkąt pojawiający się nagłówek, który wskazuje kierunek sortowania. Jeśli nie chcesz tego robić, możesz dalej sobie sortować kolumny ale nie uzyska wskazówek dotyczących kierunku aktualnego sortowania.</p>
+
+<p>Poniższy przykład pokazuje zmiany kolumn we wcześniejszym przykładzie poprzez dołączenie extra własności:</p>
+
+<pre>&lt;treecols&gt;
+  &lt;treecol id="Name" label="Name" flex="1" primary="true"
+            class="sortDirectionIndicator" sortActive="true"
+            sortDirection="ascending"
+            sort="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;splitter/&gt;
+  &lt;treecol id="Date" label="Date" flex="1" class="sortDirectionIndicator"
+           sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+&lt;/treecols&gt;
+</pre>
+
+<h2 id="Sta.C5.82y_rozmiar_kolumn" name="Sta.C5.82y_rozmiar_kolumn">Stały rozmiar kolumn</h2>
+
+<p>Jedna dodatkowa rzeczą możesz chcieć zrobić wytrzymałe kolumny, które są aktualnie sortowane, więc to jest zapamiętywane pomiędzy sesjami. Aby zrobić to, użyjmy atrybutu <code><code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code></code> na każdym <code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> elemencie. Znajduje się tam pięć atrybutów kolumn, które będą upierały się, aby zapisać <b>width (długość)</b> kolumn, kolumna rozkazu, czy kolumna jest jawna, która kolumna jest aktualnie posortowana i sortuje instrukcje. Poniższy przykład pokazuje przykładowe kolumny:</p>
+
+<pre>&lt;treecol id="Date" label="Date" flex="1"
+             class="sortDirectionIndicator"
+             persist="width ordinal hidden sortActive sortDirection"
+             sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+</pre>
+
+<p>More details about the <code><code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code></code> attribute will be described in <a href="pl/Kurs_XUL/Trwa%c5%82e_dane">the later section</a>.</p>
+
+<h2 id="Additional_Rule_Attributes" name="Additional_Rule_Attributes">Additional Rule Attributes</h2>
+
+<h3 id="Dodawanie_atrybut.C3.B3w_zasad" name="Dodawanie_atrybut.C3.B3w_zasad">Dodawanie atrybutów zasad</h3>
+
+<p>Tutaj mamy dwa dodatkowe atrybuty, które mogą zostać dodane jako elementy zasad, które pozwolą na określenie pewnych specjalnych okoliczności. Oba atrybuty są typu boolean.</p>
+
+<dl>
+ <dt>iscontainer</dt>
+ <dd>jeśli ten atrybut jest ustawiony na wartość <code>true</code>, następnie zasady dopasują kod źródłowy, który posiada potomka-dziecko. Na przykład, możemy używać zasad aby dopasować foldery zakładek. Jest to wygodny jako kod źródłowy RDF nie potrzebującego wszelkich specjalnych atrybutów wskazujących na to.</dd>
+</dl>
+
+<dl>
+ <dt>isempty</dt>
+ <dd>jeśli ten atrybut jest ustawiony na wartość <code>true</code>, następnie zasady dopasują kod źródłowy tak aby nie posiadać potomka - dziecka.</dd>
+</dl>
+
+<p>Dwa powyższe atrybuty są naprawdę swoimi przeciwieństwami. Zasoby mogą być w zbiornikach i będą puste jako dobre(?). Kiedykolwiek, różnice pochodzą z kodu, to nie będzie zbiornikiem. Na przykład, folder zakładek jest pojemnikiem ale to siła nie może mieć potomka. Kiedykolwiek, pojedyncza zakładka lub separator nie są żadnym pojemnikiem.</p>
+
+<p>Możesz połączyć te dwa elementy z innymi aplikacjami, atrybutami dla określonych zasad.</p>
+
+<p>Następnie, zobaczymy trochę kodu źródłowego dostarczonego przez Mozillę.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Szablony" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Źródła_danych_RDF">Następny  »</a></p>
+</div><p></p>

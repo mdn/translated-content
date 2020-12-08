@@ -1,0 +1,177 @@
+---
+title: Отладка B2G с помощью Valgrind
+slug: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ru/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">Инструмент Memcheck Valgrind обнаруживает ошибки C ++ управления памятью, которые могут привести к стабильности и безопасности проблем: использование освобожденной памяти, кучи перерасход массива, использует неинициализированной значений и утечек памяти. Он включен в дереве Firefox OS, и может работать на некоторых телефонах, которые имеют достаточные ресурсы. В этой статье объясняется, как использовать его.<br>
+ Требования<br>
+ Перед запуском Valgrind против Firefox OS, рекомендуется, чтобы разработчики ознакомиться с Debugging Mozilla со статьей Valgrind. Большая часть содержащейся в нем информации имеет отношение к работает против Firefox OS, хотя многие из сборки и командных этапов линии заботятся операционной системой сборки и выполнения сценариев Firefox.</p>
+
+<p>Чтобы запустить Valgrind против Firefox OS на телефоне, требуется телефон с выше чем нормальные спецификации. Valgrind требует значительных ресурсов, и, как правило, вызывают из-за ошибок памяти на телефонах с чем-то меньшим, чем 1 Гб оперативной памяти. На момент написания (2015-06-10), Valgrind, как известно, работать с Firefox OS работает на Flame телефонов с 1 Гб или RAM и Nexus 5 телефонов с 2 Гб оперативной памяти. Она также должна работать на Geeksphone Keons и аналогичные спецификации телефонов. Посмотрите на телефон и устройство передачи данных для более подробной информации о доступных телефонов.</p>
+
+<p>Проблема номер один бежит из памяти. Если ядро ​​вашего телефона поддерживает пространство подкачки, ваша ситуация улучшается. Вы можете сказать, поддерживает ли ваш телефон пространство подкачки с помощью поиска файла / Proc / свопы - если он присутствует, вам повезло. Если да, то подготовить файл подкачки на хосте, переместите его в телефон, и включить его:</p>
+
+<p>дд, если = / DEV / нуль = swapfile800M бс = 1024 Количество = 781250<br>
+ mkswap swapfile800M<br>
+ GZIP --fast swapfile800M<br>
+ ADB толчок swapfile800M.gz / данные<br>
+ ADB оболочка GZIP -d /data/swapfile800M.gz<br>
+ ADB оболочки swapon / данные / swapfile800M</p>
+
+<p>ADB оболочки кота / Proc / свопы<br>
+ # Должен производить такую ​​строку:<br>
+ # / Данные / swapfile800M файл 781244 0 -2<br>
+ Если ваш телефон не имеет своп, могут возникнуть Nuwa-процессы, созданные будучи ООМ убитыми, и, следовательно, неполной или запутанным функциональность. Попробуйте использовать телефон по меньшей мере, 2 Гб оперативной памяти в этом случае. Пламя, по крайней мере, делает поддержку своп. Вы должны быть осторожны, какой раздел файл подкачки размещен на. Если вы ненароком положил ее на раздел Btrfs, вы будете получать жалобы по поводу дыр в файлы подкачки при попытке запустить swapon.</p>
+
+<p>Запуск Valgrind на FxOS телефоны<br>
+ Давайте посмотрим на процесс запуска Valgrind.</p>
+
+<p>составление</p>
+
+<p>Для создания Firefox OS с включенным Valgrind, добавьте следующую строку в файл в .userconfig.</p>
+
+<p>экспорт B2G_VALGRIND = 1<br>
+ экспорт DISABLE_JEMALLOC = 1<br>
+ Строительство отладки (B2G_DEBUG) также рекомендуется. Строительство без каких-либо оптимизаций (B2G_NOOPT) делает вещи работать почти unusably медленно, и не рекомендуется, за исключением тех случаев, когда считается, что оптимизация может быть запутывания ошибки.</p>
+
+<p>И добавьте следующие строки в конец Gonk-разностороннего / Default-геккона-конфигурации:</p>
+
+<p>ac_add_options --enable-оптимизируют = "- г -O2"<br>
+ ac_add_options --enable-Valgrind<br>
+ ac_add_options --disable-jemalloc<br>
+ ac_add_options --disable-песочницу<br>
+ Отключение песочницу, к сожалению, требуется, так как не делать это вызывает процессы, valgrind быть убитым механизмом песочнице.</p>
+
+<p>Бег</p>
+
+<p>Примечание: Запуск Valgrind на телефон Firefox OS будет сделано в контексте телефона, а не в операционной системе хоста. Это означает, что разработчики могут использовать любую платформу, которая ADB доступна и будет выполнять run-valgrind.sh скрипт для запуска Valgrind по телефону.<br>
+ Чтобы запустить Firefox OS под Valgrind, используйте run-valgrind.sh скрипт из каталога B2G. Этот скрипт выполняет следующие действия:</p>
+
+<p>Перемонтирует файловую систему телефона в виде R / W.<br>
+ Копии текущей отладки libxul.so с полными символов в телефон. Поскольку этот файл много сотен мегабайт, то этот шаг может занять около двух минут, чтобы закончить. Она должна быть переделана каждый раз, когда новая сборка производится. Чтобы запустить Valgrind без libxul этапе копирования, выполните следующую команду:<br>
+ run-valgrind.sh NOCOPY<br>
+ Перезагрузка телефона.<br>
+ Убивает процесс b2g, который запускается при включении телефона.<br>
+ Запускает свой собственный процесс b2g под Valgrind.<br>
+ Все выходные Valgrind будут записаны на стандартный вывод терминала исполняющего run-valgrind.sh сценарий. Это может быть либо прочитать в терминале или по трубопроводу в файл.</p>
+
+<p>run-valgrind.sh начинает Valgrind с соответствующим набором параметров командной строки. Если вы хотите передать в дополнительные параметры, которые переопределяют набор параметров по умолчанию, задайте их с помощью переменной среды extra_args:</p>
+
+<p>Extra_args = "- v" run-valgrind.sh NOCOPY<br>
+ Примечание: Так как run-valgrind.sh сценарий владеет ADB процесс, запущенный процесс b2g, убивая сценарий будет также убить B2G и Valgrind по телефону. Рекомендуется, чтобы телефон будет перезагружен после запуска VALGRIND сеанса, так как она может оставить вещи в странном состоянии.<br>
+ Debug информация для системных библиотек</p>
+
+<p>Чтобы получить хорошее качество трассировки стека для системных библиотек, вам нужно поместить их по телефону:</p>
+
+<p>(CD выход / целевого / продукта / пламя &amp;&amp; ADB нажимные символы / SDCard / символы-для-Valgrind)<br>
+ run-valgrind.sh будет автоматически вызывать Valgrind для чтения объектов отладки в / SDCARD / символов-для-Valgrind. Если вы хотите, чтобы убедиться, что Valgrind читает их, начинают run-valgrind.sh с extra_args = "- V".</p>
+
+<p>Запуск Valgrind на Firefox OS Desktop<br>
+ Запуск Valgrind против Firefox OS Desktop работает точно так же, как работает это против настольного Firefox. Обратитесь к Debugging Mozilla с Valgrind страницы для получения дополнительной информации. Все соответствующие флаги сборки должны быть добавлены к mozconfig, и будут применяться все вопросы, специфичные для платформы на странице.</p>
+
+<p>Обратите внимание, что запуск Valgrind на рабочем столе в режиме ООП / процесс-за-вкладке потребует добавления следующий параметр, чтобы убедиться, что дочерние процессы также прослеживаются:</p>
+
+<p>--trace-дети = да<br>
+ Поддержание и обновление Firefox OS Valgrind<br>
+ В то время как патчи upstreamed, когда это применимо, Valgrind для Firefox OS поддерживается в раздвоенным хранилище, чтобы держать вещи в курсе, насколько это возможно в то же время имеем дело с расцентрировок OS сборки дерева и версии Firefox.</p>
+
+<p>Обновление VALGRIND Repos</p>
+
+<p>ПРЕДУПРЕЖДЕНИЕ: ОПЫТ GIT ТРЕБУЕТСЯ. Не пытайтесь обновить VALGRIND сделок РЕПО, если вы не знакомы с обработкой сложных операций Git. Любые обновления к GitHub репо будет отражать в git.mozilla.org, который затем будет запряженных разработчиков, использующих ГОЛОВУ РЭПО манифестов. В то время как поломка Valgrind не будет ломать строит на что-либо, что не включено Valgrind (например, автоматизация Buildbot), это будет очень раздражают разработчиков, которые пытаются использовать его.<br>
+ Основные Firefox OS, valgrind и VEX операции РЕПО находятся на</p>
+
+<p>http://github.com/mozilla-b2g/valgrind<br>
+ http://github.com/mozilla-b2g/vex<br>
+ Главный филиал является нетронутым версия ствола SVN каждого из этих репозиториях, а ветвь Firefox OS содержит Firefox OS специфичные патчи перебазировались на верхней части туловища.</p>
+
+<p>Примечание: ВСЕГДА ОБНОВЛЕНИЕ ОБА REPOS ОДНОВРЕМЕННО. В то время как они являются два отдельных операций РЕПО, VEX обычно подмодуль Valgrind, и глава Valgrind обычно указывает на голову VEX.<br>
+ Они копируются на git.mozilla.org домен для использования в B2G проявляется:</p>
+
+<p>http://git.mozilla.org/?p=b2g/valgrind.git;a=summary<br>
+ http://git.mozilla.org/?p=b2g/vex.git;a=summary<br>
+ Основные операции РЕПО сохраняются в синхронизации с VALGRIND СВН с ГИТ СВН. Для того, чтобы тянуть обновления к сделкам РЕПО, клонировать Valgrind и досадить сделок РЕПО с GitHub, а затем выполните следующую команду:<br>
+ мерзавец СВН -s Init [URL репо подрывная]<br>
+ Натяжение данные SVN будет занять несколько часов, но когда это будет сделано, ваше дерево должно быть синхронно с основным Valgrind SVN.<br>
+ Чтобы вытащить дальнейшие обновления, следующий набор команд используется:<br>
+ мерзавец мастер-выписка<br>
+ мерзавец СВН выборки<br>
+ мерзавец СВН перебазироваться<br>
+ мерзавец толчок [GitHub-дистанционное имя] мастер<br>
+ Git fxos Кассовые<br>
+ мерзавец мастер перебазироваться<br>
+ Существует хороший шанс, что будет конфликты патч во время этапа ветви Rebase Firefox OS. Если вы не можете работать вопрос вне, по электронной почте автор конфликтующих фиксации.<br>
+ После перебазирования, запустить полную Firefox OS построить с флагом B2G_VALGRIND, чтобы убедиться, что она по-прежнему строит. Наиболее распространенные необходимые исправления перечислены в сценарии раздела ниже.<br>
+ После того как вы перебазировались и испытанные сборку против дерева Firefox OS, вам придется заставить толкать ветку Firefox OS из-за изменения головы.<br>
+ мерзавец кнопка -f [-дистанционного имя GitHub] fxos<br>
+ Сборка, установка и запуск скриптов</p>
+
+<p>Есть несколько сценариев, которые являются либо частью ветви Valgrind Firefox OS или B2G репо, которые могут нуждаться в обновлении после извлечения репо.</p>
+
+<p>внешняя / Valgrind / android.mk</p>
+
+<p>Это сценарий Android система сборки. Чаще всего, это где изменения должны быть сделаны, из-файлы добавляются / удаляются из дерева Valgrind в. Использование ключей -j1 сборки, чтобы увидеть, какие цели не удается построить, и если он отсутствует файл или ссылки на несуществующий файл, обновить список файлов этого проекта.</p>
+
+<p>внешняя / Valgrind / valgrind.mk</p>
+
+<p>Этот документ содержит список пакетов, которые должны быть построены и добавлены к системе изображения FxOS, на который ссылается Gonk-разностороннего / b2g.mk. Это, как правило, не нуждается в обновления, как это редкий для Valgrind, чтобы добавить новые пакеты, но если они нужны, их здесь.</p>
+
+<p>run-valgrind.sh</p>
+
+<div class="warning">
+<p>Сценарий для запуска Valgrind по телефону. Если есть новые аргументы командной строки, которые необходимы для запуска Valgrind по телефону, их здесь. Это также, где мы копируем библиотеку с отладочной к телефону, поэтому любая корректировка / изменение этого процесса должно произойти здесь.</p>
+</div>

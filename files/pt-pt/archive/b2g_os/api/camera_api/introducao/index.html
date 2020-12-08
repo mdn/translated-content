@@ -1,0 +1,178 @@
+---
+title: Introdução à API de Câmara
+slug: Archive/B2G_OS/API/Camera_API/Introducao
+tags:
+  - API da Web
+  - API de Câmara
+  - Intermediário
+  - Multimedia
+  - Precisa de Atualização
+  - Referencia DOM Gecko
+  - cámara
+translation_of: Archive/B2G_OS/API/Camera_API/Introduction
+---
+<p> </p>
+
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Web/API/Camera_API">API de Câmara</a></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/CameraCapabilities"><code>CameraCapabilities</code></a></li>
+   <li><a href="/en-US/docs/Web/API/CameraControl"><code>CameraControl</code></a></li>
+   <li><a href="/en-US/docs/Web/API/CameraManager"><code>CameraManager</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Métodos</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/Navigator/mozCameras"><code>Navigator.mozCameras</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+<p> </p>
+
+<p><span class="seoSummary">Through the <a href="/en-US/docs/Web/API/Camera_API">Camera API</a>, it is possible to take pictures with your device's camera and upload them into the current web page.</span> This is achieved through an <code>input</code> element with <code>type="file"</code> and an <code>accept</code> attribute to declare that it accepts images. The HTML looks like this:</p>
+
+<pre class="brush: html">&lt;input type="file" id="take-picture" accept="image/*"&gt;
+</pre>
+
+<p>When users choose to activate this HTML element, they are presented with an option to choose a file, where the device's camera is one of the options. If they select the camera, it goes into picture taking mode. After the picture has been taken, the user is presented with a choice to accept or discard it. If accepted, it gets sent to the <code>&lt;input type="file"&gt;</code> element and its <code>onchange</code> event is triggered.</p>
+
+<h2 id="Get_a_reference_to_the_taken_picture">Get a reference to the taken picture</h2>
+
+<p>With the help of the <a href="/en-US/docs/Using_files_from_web_applications">File API</a> you can then access the taken picture or chosen file:</p>
+
+<pre class="brush: js">var takePicture = document.querySelector("#take-picture");
+takePicture.onchange = function (event) {
+    // Get a reference to the taken picture or chosen file
+    var files = event.target.files,
+        file;
+    if (files &amp;&amp; files.length &gt; 0) {
+        file = files[0];
+    }
+};
+</pre>
+
+<h2 id="Presenting_the_picture_in_the_web_page">Presenting the picture in the web page</h2>
+
+<p>Once you have a reference to the taken picture (i.e., file), you can then use <a href="/en-US/docs/Web/API/Window/URL/createObjectURL" title="The URL.createObjectURL() static method creates a DOMString containing an URL representing the object given in parameter. The URL lifetime is tied to the document in the window on which it was created. The new object URL represents the specified File object or Blob object."><code>window.URL.createObjectURL()</code></a> to create a URL referencing the picture and setting it as the <code>src</code> of an image:</p>
+
+<pre class="brush: js">// Image reference
+var showPicture = document.querySelector("#show-picture");
+
+// Create ObjectURL
+var imgURL = window.URL.createObjectURL(file);
+
+// Set img src to ObjectURL
+showPicture.src = imgURL;
+
+// For performance reasons, revoke used ObjectURLs
+URL.revokeObjectURL(imgURL);
+</pre>
+
+<p>If <code>createObjectURL()</code> isn't supported, an alternative is to fallback to <a href="/en-US/docs/Web/API/FileReader" title="The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read."><code>FileReader</code></a>:</p>
+
+<pre class="brush: js">// Fallback if createObjectURL is not supported
+var fileReader = new FileReader();
+fileReader.onload = function (event) {
+    showPicture.src = event.target.result;
+};
+fileReader.readAsDataURL(file);
+</pre>
+
+<h2 id="Complete_example">Complete example</h2>
+
+<p>If you want to see it in action, take a look at the <a class="external" href="http://robnyman.github.com/camera-api/">complete working Camera API example</a>.</p>
+
+<p>Here is the code used for that demo:</p>
+
+<h3 id="HTML_page">HTML page</h3>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Camera API&lt;/title&gt;
+        &lt;link rel="stylesheet" href="css/base.css" type="text/css" media="screen"&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;div class="container"&gt;
+            &lt;h1&gt;Camera API&lt;/h1&gt;
+
+            &lt;section class="main-content"&gt;
+                &lt;p&gt;A demo of the Camera API, currently implemented in Firefox and Google Chrome on Android. Choose to take a picture with your device's camera and a preview will be shown through createObjectURL or a FileReader object (choosing local files supported too).&lt;/p&gt;
+
+                &lt;p&gt;
+                    &lt;input type="file" id="take-picture" accept="image/*"&gt;
+                &lt;/p&gt;
+
+                &lt;h2&gt;Preview:&lt;/h2&gt;
+                &lt;p&gt;
+                    &lt;img src="about:blank" alt="" id="show-picture"&gt;
+                &lt;/p&gt;
+
+                &lt;p id="error"&gt;&lt;/p&gt;
+
+            &lt;/section&gt;
+
+            &lt;p class="footer"&gt;All the code is available in the &lt;a href="https://github.com/robnyman/robnyman.github.com/tree/master/camera-api"&gt;Camera API repository on GitHub&lt;/a&gt;.&lt;/p&gt;
+        &lt;/div&gt;
+
+
+        &lt;script src="js/base.js"&gt;&lt;/script&gt;
+
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="JavaScript_file">JavaScript file</h3>
+
+<pre class="brush: js">(function () {
+    var takePicture = document.querySelector("#take-picture"),
+        showPicture = document.querySelector("#show-picture");
+
+    if (takePicture &amp;&amp; showPicture) {
+        // Set events
+        takePicture.onchange = function (event) {
+            // Get a reference to the taken picture or chosen file
+            var files = event.target.files,
+                file;
+            if (files &amp;&amp; files.length &gt; 0) {
+                file = files[0];
+                try {
+                    // Create ObjectURL
+                    var imgURL = window.URL.createObjectURL(file);
+
+                    // Set img src to ObjectURL
+                    showPicture.src = imgURL;
+
+                    // Revoke ObjectURL
+                    URL.revokeObjectURL(imgURL);
+                }
+                catch (e) {
+                    try {
+                        // Fallback if createObjectURL is not supported
+                        var fileReader = new FileReader();
+                        fileReader.onload = function (event) {
+                            showPicture.src = event.target.result;
+                        };
+                        fileReader.readAsDataURL(file);
+                    }
+                    catch (e) {
+                        //
+                        var error = document.querySelector("#error");
+                        if (error) {
+                            error.innerHTML = "Neither createObjectURL or FileReader are supported";
+                        }
+                    }
+                }
+            }
+        };
+    }
+})();
+</pre>

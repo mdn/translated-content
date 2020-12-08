@@ -1,0 +1,83 @@
+---
+title: Тестирование медиа-запросов программно
+slug: Web/CSS/Media_Queries/Тестирование_медиа_запросы
+tags:
+  - Запросы
+  - медиа-запросы
+translation_of: Web/CSS/Media_Queries/Testing_media_queries
+---
+<div>{{cssref}}</div>
+
+<p> {{Glossary("DOM")}} предоставляет возможности, позволяющие тестировать результат  <a href="/en-US/docs/Web/CSS/Media_Queries">медиа-запросов</a> программно, с помощью интерфейса {{domxref("MediaQueryList") }}, его методов и свойств. Однажды, создав объект {{domxref("MediaQueryList") }} вы можете проверить результат запроса или получать уведомление, при изменении результата.</p>
+
+<h2 id="Создание_списка_медиа-запросов">Создание списка медиа-запросов</h2>
+
+<p>Прежде, чем вы сможете оценить результаты медиа-запросов, вам необходимо создать объект {{domxref("MediaQueryList") }} , отражающий запрос. Для этого используйется метод {{domxref("window.matchMedia") }}.</p>
+
+<p>Например, настройка списка запросов, который определяет, находится ли устройство в альбомной или книжной ориентации:</p>
+
+<pre class="brush: js">var mediaQueryList = window.matchMedia("(orientation: portrait)");
+</pre>
+
+<h2 id="Проверка_результата_запроса">Проверка результата запроса</h2>
+
+<p>После того, как вы создали свой список медиа-запросов, вы можете проверить результат запроса, посмотрев на значение его свойства <code>matches</code>:</p>
+
+<pre class="brush: js">if (mediaQueryList.matches) {
+  /* Окно просмотра в настоящее время находится в книжной ориентации */
+} else {
+  /* Окно просмотра в настоящее время находится в альбомной ориентации */
+}
+</pre>
+
+<h2 id="Получение_уведомлений_о_запросах">Получение уведомлений о запросах</h2>
+
+<p>Если вам необходимо постоянно следить за изменениями в результате запроса, эффективнее зарегистрировать <a href="/en-US/docs/Web/API/EventTarget/addEventListener">слушатель</a>, чем вытаскивать результат запросов.  Для этого вызовите метод <code>addListener()</code> объекта {{domxref("MediaQueryList") }} с функцией обратного вызова, которая вызывается при изменении статуса медиа-запроса (например, тест медиа-запроса переходит от <code>true</code> к <code>false</code>):</p>
+
+<pre class="brush: js">var mediaQueryList = window.matchMedia("(orientation: portrait)"); // Создание списка запросов.
+function handleOrientationChange(mql) { ... } // Определение функции обратного вызова для слушателя событий.
+mediaQueryList.addListener(handleOrientationChange); // Добавление функции обратного вызова в качестве слушателя к списку запросов.
+
+handleOrientationChange(mediaQueryList); // Запуск обработчика изменений, один раз.
+</pre>
+
+<p>Этот код создает список медиа-запросов для тестирование ориентации, а затем добавляет к нему слушатель событий. После добавления слушателя, мы, также, непосредственно вызываем слушателя. Это заставляет нашего слушателя выполнять настройки, основываясь на текущей ориентации устройства; в противном случае, наш код может предполагать, что устройство находится в книжной ориентации при запуске, даже если оно фактически находится в альбомном положении.</p>
+
+<p>Функция <code>handleOrientationChange()</code> будет следить за результатом запроса и обрабатывать все, что нам нужно сделать при изменении ориентации:</p>
+
+<pre class="brush: js">function handleOrientationChange(evt) {
+  if (evt.matches) {
+    /* Окно просмотра в настоящее время находится в книжной ориентации */
+  } else {
+    /* Окно просмотра в настоящее время находится в альбомной ориентации */
+  }
+}
+</pre>
+
+<p>Выше, мы определяем параметры как <code>evt</code> — event объект. Это имеет значение, поскольку <a href="/en-US/docs/Web/API/MediaQueryList#Browser_compatibility">новые реализации <code>MediaQueryList</code></a> обрабатывают слушатели событий стандартным способом. Они больше не используют нестандартный механизм  {{domxref("MediaQueryListListener")}} , а используют стандартную настройку слушателя событий, передавая <a href="/en-US/docs/Web/API/Event">объект event</a>  {{domxref("MediaQueryListEvent")}} как аргумент функции обратного вызова.</p>
+
+<p>Этот event объект также включает свойства {{domxref("MediaQueryListEvent.media","media")}} и {{domxref("MediaQueryListEvent.matches","matches")}}, поэтому вы можете запросить эти свойства <code>MediaQueryList</code> путем прямого доступа к нему или доступа к event объекту.</p>
+
+<h2 id="Уведомление_о_завершении_запроса">Уведомление о завершении запроса</h2>
+
+<p>Для прекращения уведомлений об изменении значения вашего медиа-запроса вызовите метод <code>removeListener()</code> для {{domxref("MediaQueryList") }}, передав ему имя, ранее определенной функции:</p>
+
+<pre class="brush: js">mediaQueryList.removeListener(handleOrientationChange);
+</pre>
+
+<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+
+<h3 id="MediaQueryList_interface"><code>MediaQueryList</code> interface</h3>
+
+
+
+<p>{{Compat("api.MediaQueryList")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+ <li>{{domxref("window.matchMedia()") }}</li>
+ <li>{{domxref("MediaQueryList") }}</li>
+ <li>{{domxref("MediaQueryListEvent") }}</li>
+</ul>

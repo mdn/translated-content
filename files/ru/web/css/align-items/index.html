@@ -1,0 +1,149 @@
+---
+title: align-items
+slug: Web/CSS/align-items
+translation_of: Web/CSS/align-items
+---
+<p>{{CSSRef}}</p>
+
+<h2 id="Описание">Описание</h2>
+
+<p><a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <strong><code>align-items</code></strong> выравнивает flex-элементы текущей flex-линии таким же образом, как и <code><a href="/en/CSS/justify-content" title="en/CSS/justify-content">justify-content</a></code>, но в перпендикулярном направлении.</p>
+
+<p>{{cssinfo}}</p>
+
+<p>Подробнее и больше информации читайте в <a href="https://developer.mozilla.org/en/CSS/Using_CSS_flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Использование гибких блоков CSS</a>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush:css">/* Align to cross-start */
+align-items: flex-start;
+
+/* Align to cross-end */
+align-items: flex-end;
+
+/* Центрировать элементы в поперечной оси */
+align-items: center;
+
+/* Выровняйте базовые линии предметов */
+align-items: baseline;
+
+/* Растянуть предметы, чтобы соответствовать */
+align-items: stretch;
+
+/* Глобальные значения */
+align-items: inherit;
+align-items: initial;
+align-items: unset;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>normal</code></dt>
+ <dd>Эффект этого ключевого слова зависит от режима макета, в котором мы находимся::
+ <ul>
+  <li>В абсолютно позиционированных макетах ключевое слово ведет себя как <code>start</code> в <em>замененных</em> абсолютно позиционированных блоках, и как <code>stretch</code> во <em>всех других</em> абсолютно позиционированных блоках.</li>
+  <li>В статическом положении абсолютно позиционированных макетов ключевое слово ведет себя как <code>stretch</code>.</li>
+  <li>Для гибких элементов ключевое слово ведет себя как <code>stretch</code>.</li>
+  <li>Для элементов сетки это ключевое слово ведет к поведению, аналогичному <code>stretch</code>, за исключением полей с соотношением сторон или внутренних размеров, где оно ведет себя как <code>start</code>.</li>
+  <li>Это свойство не применяется к блокам уровня блока и к ячейкам таблицы.</li>
+ </ul>
+ </dd>
+ <dt><code>flex-start</code></dt>
+ <dd>Край поперечного начала края гибкого элемента выровнен с краем поперечного начала линии.</dd>
+ <dt><code>flex-end</code></dt>
+ <dd>The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.</dd>
+ <dt><code>center</code></dt>
+ <dd>Внешний отступ полей гибкого элемента центрируется в пределах линии на поперечной оси. Если поперечный размер элемента больше, чем у гибкого контейнера, он будет одинаково переполнен в обоих направлениях.</dd>
+ <dt><code>baseline</code></dt>
+ <dd>All flex items are aligned such that their baselines align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.</dd>
+ <dt><code>stretch</code></dt>
+ <dd>Элементы Flex растягиваются, например, поперечный размер поля элемента совпадает с линией при соблюдении ограничений ширины и высоты.</dd>
+ <dt>
+ <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+ </dt>
+</dl>
+
+<pre class="syntaxbox">{{csssyntax}}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Flexbox', '#align-items', 'align-items') }}</td>
+   <td>{{ Spec2('CSS3 Flexbox') }}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>21.0{{ property_prefix("-webkit") }}</td>
+   <td>{{ CompatGeckoDesktop("20.0") }}[1]</td>
+   <td>11.0 [2]</td>
+   <td>12.10</td>
+   <td>7.0{{ property_prefix("-webkit") }} </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>4.4</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatGeckoMobile("20.0") }}[1]</td>
+   <td>{{CompatNo}}</td>
+   <td>12.10</td>
+   <td>7.0{{ property_prefix("-webkit") }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Чтобы активировать поддержку flexbox в Firefox 18 и 19, пользователь должен посетить about:config  и изменить значение предпочтения<code> layout.css.flexbox.enabled</code> на <code>true</code>. Многострочный flexbox поддерживается с Firefox 28.</p>
+
+<p>[2] В Internet Explorer 10-11 (но не 12+), если в элементах flex столбца есть <code>align-items: center;</code> установите на них, и если их содержание слишком велико, они будут выходить за границы своего контейнера. Смотрите <a href="https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container">Flexbug #2</a> для получения дополнительной информации..</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Использование гибких блоков CSS</a></li>
+</ul>

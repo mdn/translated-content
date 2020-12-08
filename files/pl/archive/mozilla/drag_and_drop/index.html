@@ -1,0 +1,142 @@
+---
+title: Drag and Drop
+slug: Archive/Mozilla/Drag_and_drop
+tags:
+  - NeedsTranslation
+  - TopicStub
+  - XUL
+translation_of: Archive/Mozilla/Drag_and_drop
+---
+<p>{{ Next("Drag and Drop JavaScript Wrapper") }}</p>
+<p>{{ deprecated_header("gecko1.9.1") }}</p>
+<div class="warning">
+ As of Gecko 1.9.1 (Firefox 3.5), these APIs are officially deprecated <a href="/En/DragDrop/Drag_and_Drop" title="en/DragDrop/Drag and Drop">the newer, simpler, portable API</a> should be used in their place.</div>
+<p>This section describes how to implement objects that can be dragged around and dropped onto other objects.</p>
+<h3 id="The_Drag_and_Drop_Interface" name="The_Drag_and_Drop_Interface">The Drag and Drop Interface</h3>
+<p>Many user interfaces allow one to drag particular objects around within the interface. For example, dragging files to other directories, or dragging an icon to another window to open the document it refers to. Mozilla and <a href="/en/XUL" title="en/XUL">XUL</a> provide a number of events that can handle when the user attempts to drag objects around.</p>
+<p>A user can start dragging by holding down the mouse button and moving the mouse. The drag stops when the user releases the mouse. Event handlers are called when the user starts and ends dragging, and at various points in-between.</p>
+<p>Mozilla implements dragging by using a drag session. When a user requests to drag something that can be dragged, a drag session should be started. The drag session handles updating the mouse cursor and where the object should be dropped. If something cannot be dragged, it should not start a drag session. Because the user generally has only one mouse, only one drag session is in use at a time.</p>
+<p>Note that drag sessions can be created from within Mozilla itself or from other applications. Mozilla will translate the data being dragged as needed.</p>
+<p>The list below describes the event handlers that can be called, which may be placed on any element. You only need to put values for the handlers where you need to do something when the event occurs.</p>
+<dl>
+ <dt>
+  ondrag {{ Fx_minversion_inline(3) }}</dt>
+ <dd>
+  Called periodically throughout the drag and drop operation.</dd>
+ <dt>
+  ondraggesture </dt>
+ <dd>
+  Called when the user starts dragging the element, which normally happens when the user holds down the mouse button and moves the mouse. The script in this handler should set up a drag session.</dd>
+ <dt>
+  ondragstart {{ Fx_minversion_inline(3) }} </dt>
+ <dd>
+  An alias for <code>ondraggesture</code>; this is the HTML 5 spec name for the event and may be used in HTML or XUL; however, for backward compatibility with older versions of Firefox, you may wish to continue using <code>ondraggesture</code> in XUL.</dd>
+ <dt>
+  ondragover </dt>
+ <dd>
+  This event handler is called for an element when something is being dragged over top of it. If the object can be dropped on the element, the drag session should be notified.</dd>
+ <dt>
+  ondragenter </dt>
+ <dd>
+  Called for an element when the mouse pointer first moves over the element while something is being dragged. This might be used to change the appearance of the element to indicate to the user that the object can be dropped on it.</dd>
+ <dt>
+  ondragexit </dt>
+ <dd>
+  Called for an element when the mouse pointer moves out of an element while something is being dragged. The is also called after a drop is complete so that an element has a chance to remove any highlighting or other indication.</dd>
+ <dt>
+  ondragdrop </dt>
+ <dd>
+  This event handler is called for an element when something is dropped on the element. At this point, the user has already released the mouse button. The element can simply ignore the event or can handle it some way, such as pasting the dragged object into itself.</dd>
+ <dt>
+  ondragend {{ Fx_minversion_inline(3) }} </dt>
+ <dd>
+  Called when the drag operation is finished.</dd>
+</dl>
+<p>There are two ways that drag and drop events can be handled. This first involves using the drag and drop <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> interfaces directly. The second is to use a <a href="/en/Drag_and_Drop_JavaScript_Wrapper" title="en/Drag_and_Drop_JavaScript_Wrapper">JavaScript wrapper</a> object that handles some of this for you. The code for this wrapper can be found in a file named {{ Source("toolkit/content/nsDragAndDrop.js nsDragAndDrop.js") }} which is contained in the widget-toolkit (or global) package.</p>
+<h3 id="XPCOM_Drag_and_Drop_interfaces" name="XPCOM_Drag_and_Drop_interfaces">XPCOM Drag and Drop interfaces</h3>
+<p>Two interfaces are used to support drag and drop. The first is a drag service, <a href="/en/XPCOM_Interface_Reference/nsIDragService" title="en/nsIDragService">nsIDragService</a> and the second is the drag session, <a href="/en/XPCOM_Interface_Reference/nsIDragSession" title="en/nsIDragSession">nsIDragSession</a>.</p>
+<p>The <a href="/en/XPCOM_Interface_Reference/nsIDragService" title="en/nsIDragService">nsIDragService</a> is responsible for creating drag sessions when a drag starts, and removing the drag session when the drag is complete. The function <code>invokeDragSession</code> should be called to start a drag inside an <code>ondraggesture</code> event handler. Once this function is called, a drag has started.</p>
+<p>The function invokeDragSession takes four parameters, as described below:</p>
+<pre class="eval">invokeDragSession(element,transferableArray,region,actions)
+</pre>
+<dl>
+ <dt>
+  element </dt>
+ <dd>
+  A reference to the element that is being dragged. This can be retrieved by getting the property <code>event.target</code> during the event handler.</dd>
+ <dt>
+  transferableArray </dt>
+ <dd>
+  An array of <a href="/en/NsITransferable" title="en/NsITransferable">nsITransferable</a> objects, one for each item being dragged. An array is used because you might want to drag several objects at once, such as a set of files.</dd>
+ <dt>
+  region </dt>
+ <dd>
+  A region used for feedback indication. This should usually be set to null.</dd>
+ <dt>
+  actions </dt>
+ <dd>
+  The actions that the drag uses. This should be set to one of the following constants, or several added together. The action can be changed during the drag depending on what is being dragged over.</dd>
+</dl>
+<dl>
+ <dt>
+  nsIDragService.DRAGDROP_ACTION_NONE </dt>
+ <dd>
+  <dl>
+   <dt>
+    Used to indicate that no drag is valid.</dt>
+   <dt>
+    nsIDragService.DRAGDROP_ACTION_COPY </dt>
+   <dd>
+    The item being dragged should be copied to its dropped location.</dd>
+   <dt>
+    nsIDragService.DRAGDROP_ACTION_MOVE </dt>
+   <dd>
+    The item being dragged should be moved to its dropped location.</dd>
+   <dt>
+    nsIDragService.DRAGDROP_ACTION_LINK </dt>
+   <dd>
+    A link (or shortcut or alias) to the item being dragged should be created in the dropped location.</dd>
+  </dl>
+ </dd>
+</dl>
+<p>The interface {{ interface("nsIDragService") }} also provides the function <code>getCurrentSession</code> which can be called from within the drag event handlers to get and modify the state of the drag. The function returns an object that implements {{ interface("nsIDragSession") }}.</p>
+<p>The interface <a href="/en/XPCOM_Interface_Reference/nsIDragSession" title="en/nsIDragSession">nsIDragSession</a> is used to get and set properties of the drag that is currently occuring. The following properties and methods are available:</p>
+<dl>
+ <dt>
+  canDrop </dt>
+ <dd>
+  Set this property to <code>true</code> if the element the mouse is currently over can accept the object currently being dragged to be dropped on it. Set the value to <code>false</code> if it doesn't make sense to drop the object on it. This should be changed in the <code>ondragover</code> and <code>ondragenter</code> event handlers.</dd>
+ <dt>
+  dragAction </dt>
+ <dd>
+  Set to the current action to be performed, which should be one or more of the constants described earlier. This can be used to provide extra feedback to the user.</dd>
+ <dt>
+  numDropItems </dt>
+ <dd>
+  The number of items being dragged. For example, this will be set to 5 if five bookmarks are being dragged.</dd>
+ <dt>
+  getData(transfer,index) </dt>
+ <dd>
+  Get the data being dragged. The first argument should be an <a href="/en/NsITransferable" title="en/NsITransferable">nsITransferable</a> object to hold the data. The second argument, <code>index</code>, should be the index of the item to return.</dd>
+ <dt>
+  sourceDocument </dt>
+ <dd>
+  The document where the drag started.</dd>
+ <dt>
+  sourceNode </dt>
+ <dd>
+  The <a href="/en/DOM" title="en/DOM">DOM</a> node where the drag started.</dd>
+ <dt>
+  isDataFlavorSupported(flavor) </dt>
+ <dd>
+  Returns <code>true</code> if the data being dragged contains data of the specified flavor.</dd>
+</dl>
+<p>{{ Next("Drag and Drop JavaScript Wrapper") }}</p>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+ <ul>
+  <li>Author(s): <a class="link-mailto" href="mailto:enndeakin@sympatico.ca">Neil Deakin</a></li>
+  <li>Original Document:</li>
+  <li>Copyright Information: Copyright (C) <a class="link-mailto" href="mailto:enndeakin@sympatico.ca">Neil Deakin</a></li>
+ </ul>
+</div>

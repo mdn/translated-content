@@ -1,0 +1,113 @@
+---
+title: Pakowanie motywów
+slug: Pakowanie_motywów
+tags:
+  - Dodatki
+  - Motywy
+  - Toolkit API
+  - Wszystkie_kategorie
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+---
+<p> </p>
+<p>Poniższy artykuł opisuje operację pakowania <a href="pl/Motywy">motywów</a> dla Firefoksa oraz Thunderbirda.</p>
+<h3 id="Za.C5.82o.C5.BCenia" name="Za.C5.82o.C5.BCenia">Założenia</h3>
+<p>Tworzenie motywów dla Firefoksa lub Thunderbirda wymaga znajomości Cascading Stylesheets (<a href="pl/CSS">CSS</a>), prawdopodobnie <a href="pl/XBL">XBL</a> oraz projektowania grafiki i wyczucia estetyki (...lub też nie). Poniższy artykuł opisuje jedynie jak pakowane są motywy, aby pokazać je w oknie Motywów Firefoksa.</p>
+<h3 id="Struktura_plik.C3.B3w_motywu" name="Struktura_plik.C3.B3w_motywu">Struktura plików motywu</h3>
+<p>Motywy Firefoksa/Thunderbirda pakowane są do plików JAR o następującej strukturze:</p>
+<pre class="eval">motyw.jar:
+  install.rdf
+  contents.rdf
+  preview.png
+  icon.png
+  browser/<i>files</i>
+  global/<i>files</i>
+  mozapps/<i>files</i>
+  communicator/<i>files</i>
+  ...
+
+</pre>
+<ul>
+ <li>Na najwyższym poziomie musi się znajdować plik <a href="pl/Rejestracja_Chrome">chrome.manifest</a> (Firefoks/Thunderbird 1.5) lub contents.rdf rejestrujący chrom dla motywu (jak poprzednio) oraz manifest <a href="pl/Install.rdf">install.rdf</a> określający informacje wyświetlane w oknie Motywy.</li>
+ <li>preview.png jest obrazkiem podglądu pokazywanym podczas przeglądania okna Motywy. Może posiadać dowolny rozmiar.</li>
+ <li>icon.png jest ikoną o rozmiarze 32x32 w formacie PNG (może posiadać przeźroczystość alpha) pokazywaną w liście motywów w oknie Motywy.</li>
+</ul>
+<h3 id="install.rdf" name="install.rdf">install.rdf</h3>
+<p>Twój manifest <a href="pl/Install.rdf">install.rdf</a> będzie wyglądał podobnie do poniższego:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;<i>more properties</i>
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<h4 id="Wymagane_w.C5.82asno.C5.9Bci_install.rdf" name="Wymagane_w.C5.82asno.C5.9Bci_install.rdf">Wymagane własności install.rdf</h4>
+<p>Plik install.rdf musi posiadać następujące własności. By dowiedzieć się więcej zobacz <a href="pl/Install.rdf">install.rdf</a>:</p>
+<ul>
+ <li>em:id</li>
+ <li>em:version</li>
+ <li>em:type</li>
+ <li>em:targetApplication</li>
+ <li>em:name</li>
+ <li>em:internalName</li>
+</ul>
+<h4 id="Opcjonalne_w.C5.82asno.C5.9Bci_install.rdf" name="Opcjonalne_w.C5.82asno.C5.9Bci_install.rdf">Opcjonalne własności install.rdf</h4>
+<ul>
+ <li>em:description</li>
+ <li>em:creator</li>
+ <li>em:contributor</li>
+ <li>em:homepageURL</li>
+ <li>em:updateURL</li>
+</ul>
+<p><b>Uwaga</b>: jeśli twój motyw będzie dostępny na stronie <a class="external" href="http://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a> nie powinien on zawierać własności updateURL.</p>
+<h4 id="Przyk.C5.82adowy_plik_install.rdf" name="Przyk.C5.82adowy_plik_install.rdf">Przykładowy plik install.rdf</h4>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{18b64b56-d42f-428d-a88c-baa413bc413f}&lt;/em:id&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;
+
+    &lt;!-- Target Application this extension can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;0.8&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;0.9&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;New Theme 1&lt;/em:name&gt;
+    &lt;em:description&gt;A test theme for Firefox&lt;/em:description&gt;
+    &lt;em:creator&gt;Ben Goodger&lt;/em:creator&gt;
+    &lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+    &lt;em:homepageURL&gt;<span class="nowiki">http://www.bengoodger.com/</span>&lt;/em:homepageURL&gt;
+
+    &lt;!-- Front End Integration Hooks (used by Theme Manager)--&gt;
+    &lt;em:internalName&gt;newtheme1&lt;/em:internalName&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>Poniższe GUID przykładowych aplikacji docelowych można użyć w swoich własnościach targetApplication:</p>
+<pre class="eval">Firefox      {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+Thunderbird  {3550f703-e582-4d05-9a08-453d09bdfdc6}
+Sunbird      {718e30fb-e89b-41dd-9da7-e25a45638b28}
+</pre>
+<h3 id="Oficjalne_dokumentacje_dla_Toolkit_API" name="Oficjalne_dokumentacje_dla_Toolkit_API">Oficjalne dokumentacje dla <a href="pl/Toolkit_API">Toolkit API</a></h3>
+<p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>

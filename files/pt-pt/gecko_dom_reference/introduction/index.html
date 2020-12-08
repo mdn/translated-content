@@ -1,0 +1,319 @@
+---
+title: Introdução ao DOM
+slug: Gecko_DOM_Reference/Introduction
+tags:
+  - DOM
+  - Guía
+  - Referencia
+  - Referência (2)
+  - Referência 2
+translation_of: Web/API/Document_Object_Model/Introduction
+---
+<p>{{ ApiRef() }}</p>
+
+<p>Esta secção proporciona uma breve introdução conceitual ao <a href="/pt-PT/docs/DOM/DOM_Reference">DOM</a>: o que é, como é que este fornece a estrutura para documentos <a href="pt/HTML">HTML</a> e <a href="pt/XML">XML</a>, como o pode aceder, e como esta API apresenta a informação de referência e exemplos.</p>
+
+<h2 id="O_que_.C3.A9_o_DOM.3F" name="O_que_.C3.A9_o_DOM.3F">O que é o DOM?</h2>
+
+<p>O 'Modelo de Objeto de Documento (DOM) 'é uma interface de programação para documentos HTML e XML. Ele provê uma representação estruturada do documento e define um meio pelo qual a estrutura pode ser acessada por programas permitindo-os alterar a estrutura do documento, estilo e conteúdo. O DOM provê uma representação do documento como um conjunto estruturado de nós e objetos que têm propriedades e métodos. Essencialmente ele conecta páginas de internet a scripts ou linguagens de programação.</p>
+
+<p>Uma página de internet é um documento. Este documento pode ser exibido numa janela de navegador, ou como código-fonte HTML. Mas é o mesmo documento em ambos os casos. O Document Object Model (DOM) provê uma outra forma de representar, armazenar e manipular o mesmo documento. O DOM é uma representação orientada a objeto completa da página, e pode ser modificada com uma linguagem de script como o JavaScript.</p>
+
+<p>Os padrões <a class="external" href="http://www.w3.org/DOM/">W3C DOM</a> e <a href="https://dom.spec.whatwg.org/">WHATWG DOM</a> são implementados nos navegadores mais modernos. Muitos navegadores estendem o padrão, por isso deve-se ter cuidado ao utilizá-los na <em>Web</em> onde os documentos podem ser acedidos pelos vários navegadores com diferentes DOMs.</p>
+
+<p>Por exemplo, o DOM padrão especifica que o método <code>getElementsByTagName</code> no código abaixo deve devolver uma lista de todos os elementos <code>&lt;P&gt;</code> no documento:</p>
+
+<pre>paragraphs = document.getElementsByTagName("P");
+// paragraphs[0] é o primeiro elemento &lt;p&gt;
+// paragraphs[1] é o segundo elemento &lt;p&gt;, etc.
+alert(paragraphs[0].nodeName);
+</pre>
+
+<p>Todas as propriedades, métodos, e eventos disponíveis para manipular e criar páginas estão organizados em objetos (por exemplo, o objeto <code>document</code> representa o próprio documento, o objeto <code>table</code> implementa a interface DOM <code>HTMLTableElement</code> para acessar tabelas HTML, e assim por diante). Esta documentação dispõe uma referência objeto a objeto para o DOM implementado nos navegadores baseados no Gecko.</p>
+
+<h2 id="DOM_e_JavaScript" name="DOM_e_JavaScript">DOM e JavaScript</h2>
+
+<p>O rápido exemplo acima, parecido com a maioria dos exemplos desta referência, é <a href="pt/JavaScript">JavaScript</a>. Ou seja, ele foi<em>escrito</em> em JavaScript, mas ele<em>usa</em> o DOM para acessar o documento e seus elementos. O DOM não é uma linguagem de programação, mas sem ele, a linguagem JavaScript não teria nenhum modelo ou noção de páginas web, páginas XML e elementos com os quais ela geralmente lida. Todo elemento num documento—o documento como um todo, o cabeçalho, tabelas dentro do documento, cabeçalhos de tabelas, o texto dentro das células— faz parte do document object model para aquele documento, portanto eles podem ser acessados e manipulados fazendo-se uso do DOM e de uma linguagem de scripting como o JavaScript.</p>
+
+<p>No início, JavaScript e o DOM eram fortemente ligados, mas eventualmente evoluíram em entidades separadas. O conteúdo da página é armazenado no DOM e pode ser acessado e manipulado via JavaScript, portanto nós podemos escrever esta equação aproximada:</p>
+
+<p>API(web ou página XML) = DOM + JS(linguagem de scripting)</p>
+
+<p>O DOM foi desenvolvido para ser independente de qualquer linguagem de programação em particular, tornando a representação estrutural do documento para uma única API consistente. Embora nos concentramos exclusivamente em JavaScript nesta documentação de referência, implementações do DOM por ser construídas para qualquer linguagem, como este exemplo em Python demonstra:</p>
+
+<pre class="brush: python"># Python DOM example
+import xml.dom.minidom as m
+doc = m.parse("C:\\Projects\\Py\\chap1.xml");
+doc.nodeName # DOM property of document object;
+p_list = doc.getElementsByTagName("para");
+</pre>
+
+<p>For more information on what technologies are involved in writing JavaScript on the web, see <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
+
+<h2 id="Como_eu_acesso_o_DOM.3F" name="Como_eu_acesso_o_DOM.3F">Como é que eu acedo ao DOM?</h2>
+
+<p>Você não tem que fazer nada de especial para começar a usar o DOM. Navegadores diferentes tem implementações diferentes do DOM, e estas implementações exibem graus de conformidade variantes em relação ao verdadeiro padrão DOM (um tema que tentamos evitar nesta documentação), mas cada navegador usa algum document object model para tornar as páginas acessíveis para script.</p>
+
+<p>Quando você cria um script–quer seja um elemento in-line <code>&lt;script&gt;</code> or através de uma instrução de carregamento externo–você pode imediatamente começar a fazer uso da API para os elementos <code><a href="pt/DOM/document">document</a></code> ou <code><a href="pt/DOM/window">window</a></code> para manipular o próprio documento ou para acessar os filhos do documento, que são os vários elementos na página. Sua programação em DOM pode ser algo simples como o seguinte código, que mostra uma mensagem atráves da função <code><a href="pt/DOM/window.alert">alert()</a></code> do objeto <code><a href="pt/DOM/window">window</a></code>, ou pode usar métodos do DOM mais sofisticados para realmente criar novos conteúdos como no exemplo maior mais abaixo.</p>
+
+<p>O código JavaScript a seguir exibe um alerta quando o documento é carregado (e quando todo o DOM está disponível para uso).</p>
+
+<pre class="brush: html">&lt;body onload="window.alert('Welcome to my home page!');"&gt;
+
+</pre>
+
+<p>A função abaixo, cria um novo elemento <code>H1</code>, adiciona texto nesse elemento e então adiciona o <code>H1</code> ná árvore de elementos deste documento.</p>
+
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+       // executa essa função quando o documento é carregado
+       window.onload = function() {
+
+         // cria dois elementos em uma página HTML que estava vazia
+         var heading = document.createElement("h1");
+         var heading_text = document.createTextNode("Big Head!");
+         heading.appendChild(heading_text);
+         document.body.appendChild(heading);
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="Tipos_de_dados_importantes" name="Tipos_de_dados_importantes">Tipos de Dados Importantes</h2>
+
+<p>Esta referência tenta descrever os vários objetos e tipos da maneira mais simples quanto possível. Mas há uma série de diferentes de tipos de dados sendo passados pela API dos quais você deve estar ciente. Por uma questão de simplicidade, exemplos de sintaxe nesta referência da API tipicamente se referem aos nós como <code>element</code>s, a arrays de nós como <code>nodeList</code>s (ou simplesmente <code>element</code>s), e a <code>atributos</code> dos nós como <code>attribute</code>s.</p>
+
+<p>A seguinte tabela descreve brevemente estes tipos de dados.</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>document</code></td>
+   <td>Quando um membro retorna um objeto do tipo <code>document</code> (por exemplo, a propriedade <strong>ownerDocument</strong> de um elemento retorna o <code>document</code> ao qual pertence), este objeto é o próprio objeto <code>document</code> raiz. O capítulo <a href="pt/Gecko_DOM_Reference/document">Referência <code>document</code> do DOM</a> descreve o objeto <code>document</code>.</td>
+  </tr>
+  <tr>
+   <td><code>element</code></td>
+   <td><code>element</code> se refere a um elemento ou a um nó do tipo <code>element</code> retornado por um membro da API do DOM. Ai invés de dizer, por exemplo, que o método <code>document.createElement()</code> retorna uma referência de objeto para um <code>node</code>, nós apenas dizemos que o método retorna o <code>element</code> que acabou de ser criado no DOM. Objetos <code>element</code> implementam a interface DOM <code>Element</code> e também a interface mais básica <code>Node</code>, ambas que estão incluídas juntas nesta referência.</td>
+  </tr>
+  <tr>
+   <td><code>nodeList</code></td>
+   <td>Um <code>nodeList</code> é um array de elementos, como o tipo que é retornado pelo método <code>document.getElementsByTagName()</code>. Itens em uma <code>nodeList</code> são acessados pelo índice em qualquer uma das duas formas:
+    <ul>
+     <li>list.item(1)</li>
+     <li>list{{ mediawiki.external(1) }}</li>
+    </ul>
+
+    <p>Estas duas formas são equivalentes. Na primeira, <strong>item()</strong> é um único método do objeto <code>nodeList</code>. A última usa uma típica sintaxe de array para buscar o segundo item na lista.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>attribute</code></td>
+   <td>Quando um <code>attribute</code> é retornado por um membro (por exemplo, pelo método <strong>createAttribute()</strong>), ele é uma referência de objeto que expõe uma interface especial (embora pequena) para atributos. Atributos são nós no DOM assim como os elementos o são, embora você raramente pode usá-los como tal.</td>
+  </tr>
+  <tr>
+   <td><code>namedNodeMap</code></td>
+   <td>Um <code>namedNodeMap</code> é como um array, mas os itens são acessados por nome ou índice, embora este último caso é meramente uma conveniência de enumeração, uma vez que estão em nenhuma ordem especial na lista. Um <code>namedNodeMap</code> tem um método item() para este propósito, e você também pode adicionar e remover itens de um <code>namedNodeMap</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Interfaces_DOM" name="Interfaces_DOM">Interfaces DOM</h2>
+
+<p>Este guia é sobre os objetos e as verdadeiras<em>coisas</em> que você pode usar para manipular a hierarquia do DOM. É muitas vezes uma questão de indiferença que o objeto representando o elemento HTML <code>form</code> pegue sua propriedade <strong>name</strong> da interface <code>HTMLFormElement</code> mas sua propriedade <strong>className</strong> da própria interface <code>HTMLElement</code>. Em ambos os casos, a propriedade que você quer está simplesmente no objeto form.</p>
+
+<p>Mas a relação entre objetos e interfaces que eles implementam no DOM podem ser confusos, e portanto esta seção tenta dizer um pouco mais sobre as interfaces reais da especificação do DOM e como elas se tornam disponíveis.</p>
+
+<h3 id="Interfaces_e_Objetos" name="Interfaces_e_Objetos">Interfaces e Objetos</h3>
+
+<p>Muitos objetos se valem de muitas interfaces diferentes. O objeto table, por exemplo, implementa uma <a href="pt/DOM/table">Interface do elemento HTML Table</a> especializada, que inclui métodos como <code>createCaption</code> e <code>insertRow</code>. Mas desde que ele também é um elemento HTML, <code>table</code> implementa a interface <code>Element</code> descrita no capítulo <a href="pt/Gecko_DOM_Reference/element">Referência de <code>element</code> do DOM</a>. E finalmente, com um elemento HTML também é, assim como o DOM lhe considera, um nó em uma árvore de nós que criam um modelo de objeto para uma página web ou uma página XML, o elemento table também implementa a mais básica interface <code>Node</code>, a partir da qual o <code>Element</code> deriva.</p>
+
+<p>Quando você tem uma referência para um objeto <code>table</code>, como no exemplo a seguir, você rotineiramente usa todas as três interfaces indiferentemente no objeto, talvez sem saber.</p>
+
+<pre>var table = document.getElementById("table");
+var tableAttrs = table.attributes; // Node/Element interface
+for(var i = 0; i &lt; tableAttrs.length; i++){
+  // HTMLTableElement interface: border attribute
+  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+    table.border = "1";
+}
+// HTMLTableElement interface: summary attribute
+table.summary = "note: increased border";
+</pre>
+
+<h3 id="Interfaces_do_n.C3.BAcleo_do_DOM" name="Interfaces_do_n.C3.BAcleo_do_DOM">Interfaces do núcleo no DOM</h3>
+
+<p>Esta seção lista algumas das interfaces mais comumente usadas no DOM. A idéia não é descrever aqui o que estas APIs fazem, mas sim te dar uma idéia dos tipos de métodos e propriedades que você verá muitas vezes enquanto você usa o DOM. Estas APIs comuns são usadas nos exemplos mais extensos no capítulo <a href="pt/Gecko_DOM_Reference/Examples">Exemplos de DOM</a> no final deste livro.</p>
+
+<p>Os objetos <code>document</code> e <code>window</code> são os objetos cuja interface você geralmente vai usar na maioria das vezes na programação com DOM. Em termos simples, o objeto <code>window</code> representa algo como o navegador, e o objeto <code>document</code> é a raiz do próprio documento. <code>Element</code> descende da interface genérica <code>Node</code>, e estas duas juntas fornecem muitos dos métodos e propriedades que você usa em elementos individuais. Estes elementos também podem ter interfaces específicas para lidar com os tipos de dados que eles contém, como no exemplo do objeto <code>table</code> na seção anterior.</p>
+
+<p>A seguir está uma breve lista das APIs comuns para scripting usando o DOM em web e páginas XML.</p>
+
+<ul>
+ <li><code><a href="pt/DOM/document.getElementById">document.getElementById</a>(id)</code></li>
+ <li><code>element.<a href="pt/DOM/element.getElementsByTagName">getElementsByTagName</a>(name)</code></li>
+ <li><code><a href="pt/DOM/document.createElement">document.createElement</a>(name)</code></li>
+ <li><code>parentNode.<a href="pt/DOM/element.appendChild">appendChild</a>(node)</code></li>
+ <li><code>element.<a href="pt/DOM/element.innerHTML">innerHTML</a></code></li>
+ <li><code>element.<a href="pt/DOM/element.style">style</a>.left</code></li>
+ <li><code>element.<a href="pt/DOM/element.setAttribute">setAttribute</a></code></li>
+ <li><code>element.<a href="pt/DOM/element.getAttribute">element.getAttribute</a></code></li>
+ <li><code>element.<a href="pt/DOM/element.addEventListener">addEventListener</a></code></li>
+ <li><code><a href="pt/DOM/window.content">window.content</a></code></li>
+ <li><code><a href="pt/DOM/window.onload">window.onload</a></code></li>
+ <li><code><a href="pt/DOM/window.dump">window.dump</a></code></li>
+ <li><code><a href="pt/DOM/window.scrollTo">window.scrollTo</a></code></li>
+</ul>
+
+<h2 id="Testando_a_API_do_DOM" name="Testando_a_API_do_DOM">Testar a API de DOM</h2>
+
+<p>Este documento fornece amostras para cada interface que você pode usar em seu próprio desenvolvimento web. Em alguns casos, as amostras são páginas HTML completas, com o acesso ao DOM em um elemento &lt;script&gt;, a interface (por exemplo, botões) necessária para disparar o script em um form, e os elementos HTML sobre os quais o DOM opera listados. Quando for este o caso, você pode copiar a colar o conteúdo do exemplo dentro de um novo arquivo HTML, salvá-lo, e executar o exemplo em um navegador.</p>
+
+<p>Há casos, no entanto, que os exemplos são mais concisos. Para executar exemplos que apenas demonstram a relação básica da interface para com os elementos HTML, você pode criar uma página de teste na qual as interfaces podem facilmente ser acessadas por scripts. A seguinte página web, bem simples, fornece um elemento &lt;script&gt; no seu cabeçalho onde você pode colocar funções que testam a interface, alguns poucos elementos HTML com atributos que você pode remover, criar, ou alterar, e a interface web necessária para chamar aquelas funções pelo navegador.</p>
+
+<p>Você pode usar esta página de teste ou criar uma similar a fim de testar as interfaces do DOM nas quais você está interessado e ver como elas funcionam na plataforma do navegador. Você pode atualizar o conteúdo da função <code>test()</code> como necessário, criar mais botões, ou adicionar elementos conforme a necessidade.</p>
+
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;DOM Tests&lt;/title&gt;
+    &lt;script type="application/javascript"&gt;
+    function setBodyAttr(attr, value){
+      if (document.body) eval('document.body.'+attr+'="'+value+'"');
+      else notSupported();
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div style="margin: .5in; height: 400;"&gt;
+      &lt;p&gt;&lt;b&gt;&lt;tt&gt;text&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+      &lt;form&gt;
+        &lt;select onChange="setBodyAttr('text',
+        this.options[this.selectedIndex].value);"&gt;
+          &lt;option value="black"&gt;black
+          &lt;option value="darkblue"&gt;darkblue
+        &lt;/select&gt;
+        &lt;p&gt;&lt;b&gt;&lt;tt&gt;bgColor&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+        &lt;select onChange="setBodyAttr('bgColor',
+        this.options[this.selectedIndex].value);"&gt;
+          &lt;option value="white"&gt;white
+          &lt;option value="lightgrey"&gt;gray
+        &lt;/select&gt;
+        &lt;p&gt;&lt;b&gt;&lt;tt&gt;link&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+        &lt;select onChange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);"&gt;
+          &lt;option value="blue"&gt;blue
+          &lt;option value="green"&gt;green
+        &lt;/select&gt;  &lt;small&gt;
+        &lt;a href="http://www.brownhen.com/dom_api_top.html" id="sample"&gt;
+        (sample link)&lt;/a&gt;&lt;/small&gt;&lt;br&gt;
+      &lt;/form&gt;
+      &lt;form&gt;
+        &lt;input type="button" value="version" onclick="ver()" /&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Para testar muitas interfaces em uma única página–por exemplo, uma "suite" de propriedades que afetam as cores de sua página web–você pode criar uma página de testes similar com um completo console de botões, campos de texto e outros elementos HTML. A seguinte captura de tela pode te dar alguma idéia de como as interfaces podem estar agrupadas para teste.</p>
+
+<figure>
+<figcaption>Figura 0.1 Página de Teste de Amostra de DOM</figcaption>
+<img alt="Image:DOM_Ref_Introduction_to_the_DOM.gif" class="internal" src="/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif"></figure>
+
+<p>Neste exemplo, os menus suspensos atualizam dinamicamente, tais como aspetos de acessibilidade DOM da página da <em>Web</em> como a cor de fundo (<code>bgColor</code>), a cor das hiperligações (<code>aLink</code>), e a cor do texto (<code>text</code>). Contudo, você cria as suas próprias páginas de teste, e testa as interfaces à medida que as lê, é uma parte importante de aprendizagem em como utilizar o DOM efetivamente.</p>
+
+<h2 id="Subnav">Subnav</h2>
+
+<ul>
+ <li><a href="/pt-PT/docs/DOM/DOM_Reference">Referência de DOM</a></li>
+ <li><a href="/pt-PT/docs/Gecko_DOM_Reference/Introduction">Introdução ao DOM</a></li>
+ <li><a href="/pt-PT/docs/DOM/DOM_Reference/Events">Eventos e o DOM</a></li>
+ <li><a href="/pt-PT/docs/DOM/DOM_Reference/Exemplos">Exemplos</a></li>
+</ul>
+
+<div id="SL_balloon_obj" style="display: block;">
+<div class="SL_ImTranslatorLogo" id="SL_button" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%; opacity: 0; display: block; left: -8px; top: -25px; transition: visibility 2s ease 0s, opacity 2s linear 0s;"> </div>
+
+<div id="SL_shadow_translation_result2" style="display: none;"> </div>
+
+<div id="SL_shadow_translator" style="display: none;">
+<div id="SL_planshet">
+<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_Bproviders">
+<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
+</div>
+
+<div id="SL_alert_bbl" style="display: none;">
+<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_alert_cont"> </div>
+</div>
+
+<div id="SL_TB">
+<table id="SL_tables">
+ <tbody>
+  <tr>
+   <td class="SL_td"><input></td>
+   <td class="SL_td"><select><option value="auto">Detectar idioma</option><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+   <td class="SL_td">
+    <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Alternar Idiomas"> </div>
+   </td>
+   <td class="SL_td"><select><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option selected value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+   <td class="SL_td">
+    <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ouça"> </div>
+   </td>
+   <td class="SL_td">
+    <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Copiar"> </div>
+   </td>
+   <td class="SL_td">
+    <div id="SL_bbl_font_patch"> </div>
+
+    <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Tamanho da fonte"> </div>
+   </td>
+   <td class="SL_td">
+    <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ajuda"> </div>
+   </td>
+   <td class="SL_td">
+    <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Fixar a janela de pop-up"> </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+
+<div id="SL_shadow_translation_result" style=""> </div>
+
+<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_player2"> </div>
+
+<div id="SL_alert100">A função de fala é limitada a 200 caracteres</div>
+
+<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
+<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<table id="SL_tbl_opt" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><input></td>
+   <td>
+    <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Mostrar o botão do ImTranslator 3 segundos"> </div>
+   </td>
+   <td><a class="SL_options" title="Mostrar opções">Opções</a> : <a class="SL_options" title="Histórico de tradução">Histórico</a> : <a class="SL_options" title="Comentários">Comentários</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Faça sua contribuição">Donate</a></td>
+   <td><span id="SL_Balloon_Close" title="Encerrar">Encerrar</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+</div>

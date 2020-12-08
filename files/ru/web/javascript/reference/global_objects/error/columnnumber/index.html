@@ -1,0 +1,78 @@
+---
+title: Error.prototype.columnNumber
+slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+tags:
+  - Error
+  - JavaScript
+  - Non-standard
+  - Property
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+---
+<div>
+ {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}</div>
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Свойство <code><strong>columnNumber</strong></code> содержит номер колонки в строке файла, в котором возникла эта ошибка.</p>
+<h2 id="Examples" name="Examples">Примеры</h2>
+<h3 id="Example:_Throwing_a_custom_error" name="Example:_Throwing_a_custom_error">Пример: использование <code>columnNumber</code></h3>
+<pre class="brush: js">var e = new Error('Невозможно разобрать входные данные');
+throw e;
+console.log(e.columnNumber) // 0
+</pre>
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<p>Не является чаcтью какой-либо спецификации. Не стандартно.</p>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<div>
+ {{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+<ul>
+ <li>{{jsxref("Error.prototype.stack")}} {{non-standard_inline}}</li>
+ <li>{{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}</li>
+ <li>{{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}</li>
+</ul>

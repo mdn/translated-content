@@ -1,0 +1,141 @@
+---
+title: Автоконфигурация в Thunderbird
+slug: Mozilla/Thunderbird/Автоконфигурация
+translation_of: Mozilla/Thunderbird/Autoconfiguration
+---
+<p>Автор: Ben Bucksch<br>
+ Пожалуйста, не изменяйте этот документ без согласования c автором</p>
+
+<p>Thunderbird начиная с версии 3.1 (и 3.0 в некоторых редакциях) включает в себя функционал автоконфигурации почтового аккаунта. Цель автоконфигурации состоит в том, чтобы упростить настройку подключения клиента Thunderbird к своим почтовым серверам. В большинстве случаев, пользователь лишь должен загрузить и установить Thunderbird, ввести свое настоящее имя, почтовый адрес и пароль в настройках аккаунта, и почтовый клиент полностью готов к работе для получения и отправки писем. Настолько безопасно, насколько это возможно.</p>
+
+<p>См. также:</p>
+
+<ul>
+ <li><span class="link-https">для инструкций пользователя см. </span><a class="external external-icon" href="http://support.mozillamessaging.com/en-US/kb/Automatic-Account-Configuration" title="http://support.mozillamessaging.com/en-US/kb/Automatic+Account+Configuration">Automatic Account Configuration</a> в базе знаний Thunderbird</li>
+ <li><a href="/en/Thunderbird/Autoconfiguration/FileFormat/HowTo" title="en/Thunderbird/Autoconfiguration/FileFormat/HowTo">описание</a> и <a href="https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat" title="en/Thunderbird/Autoconfiguration/FileFormat/Definition">формат</a> файла конфигурации</li>
+ <li>оригинальную <a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Autoconfiguration" title="https://wiki.mozilla.org/Thunderbird:Autoconfiguration">страницу проекта на Mozilla wiki</a> <span class="tlid-translation translation" lang="ru"><span title="">для получения знаний, дизайна, реализации и деталей проекта</span></span></li>
+</ul>
+
+<p>Этот документ описывает как работает Автоконфигурация в Thunderbird и что необходимо выполнить, чтобы почтовый сервер был сконфигурирован автоматически.</p>
+
+<h1 id="Механизмы">Механизмы</h1>
+
+<p>Thunderbird получает настройки сервера различными способами, каждый из которых предназначен для различных случаев:</p>
+
+<ul>
+ <li>ISPDB<br>
+  ISPDB - это центральная база данных, которая в настоящий момент принадлежит коммерческой организации Mozilla Messaging, но может быть использована любым клиентом. Она содержит настройки для крупнейших почтовых провайдеров. Мы надеемся что эта база в ближайшем времени будет содержать достаточное количество информации для автоконфигурации не менее половины почтовых аккаунтов пользователей.<br>
+  Эта база была добавлена из-за нашей уверенности в том, что не все почтовые провайдеры (в том числе Microsoft) сразу же добавят файлы конфигурации для Thunderbird на своих сервера.</li>
+ <li>Конфигурация сервера почтового провайдера<br>
+  Почтовые провайдеры имеют возможность предоставить информацию о своих настройках для пользователей, настроив автоконфигурацию на своем веб-сервере как autoconfig. &lt;домен&gt;, который просто возвращает статический XML с настройками, как описано ниже. Для более сложных настроек, когда, например, логин не отображается в почтовом адресе, XML-файл может быть также сгенерирован провайдером. В таких случаях это единственный способ получить автоматическую настройку.</li>
+ <li>Файл конфигурации на жестком диске<br>
+  Администраторы могут поместить файл конфигурации в установочную папку Thunderbird. Этот способ предназначен для компаний, которые устанавливают Thunderbird на компютеры своих сотрудников и хотят облегчить настройку учетной записи без необходимости настраивать конфигурацию почтового сервера. Этот метод не стоит применять в других случаях, потому что обновлять файл конфигурации весьма трудно.</li>
+ <li>Подборка наугад<br>
+  В тех случаях, когда определить настройки автоматически не удалось, Thunderbird пытается угадать конфигурацию, пробуя распространенные имена почтовых серверов вроде imap.&lt;domain&gt;, smtp.&lt;domain&gt;, mail.&lt;domain&gt; и так далее, и, когда сервер отвечет поддерживается ли SSL, STARTTLS и шифрование паролей (CRAM-MD5).</li>
+ <li>Ручная настройка<br>
+  Если все же подобрать настройки не удалось, пользователь должен ввести настройки вручную. Пользователь также имеет возможность вручную изменять настройки, даже если они были получены способами описанными выше.</li>
+</ul>
+
+<p>Все механизмы поиска используют домен почтового адреса в качестве основы для поиска. Например, для почтового адреса <a class="moz-txt-link-abbreviated link-mailto" href="mailto:fred@example.com">fred@example.com</a>, поиск выполняется в следующем порядке:</p>
+
+<ol>
+ <li>проверка<em> tb-install-dir</em>/isp/example.com.xml на жестком диске</li>
+ <li>проверка autoconfig.example.com</li>
+ <li>поиск "example.com" в базе ISPDB</li>
+ <li>поиск "MX example.com" в базе DNS, и для mx1.mail.hoster.com производится поиск "hoster.com" в базе ISPDB</li>
+ <li>подборка (imap.example.com, smtp.example.com и т.д.)</li>
+</ol>
+
+<p><span class="tlid-translation translation" lang="ru"><span title="">Мы можем добавить записи DNS SRV в качестве поддерживаемого механизма в будущем, но в настоящее время этот функционал не внедряется.</span></span></p>
+
+<h1 id="Как_добавить_поддержку_для_вашего_домена">Как добавить поддержку для вашего домена</h1>
+
+<h2 id="Классификация">Классификация</h2>
+
+<p>Если вы большой почтовый провайдер (&gt; 100,000 пользователей) предоставляющий почтовые адреса только под несколько доменов типа "example.com" и "example.de", вы можете подтвердить конфигурацию в базе ISPDB или добавить конфигурационный файл на сервере.<br>
+ <br>
+ Если вы поддерживаете псевдонимы  почтовых адресов и имя пользователя для входа не является частью почтового адреса (например, почтовым адресом пользователя является <a class="moz-txt-link-rfc2396E link-mailto" href="mailto:hero@example.com">"hero@example.com"</a>, и IMAP/POP/SMTP логином является не "hero" и не <a class="moz-txt-link-rfc2396E link-mailto" href="mailto:hero@example.com">"hero@example.com"</a>, а "u67578"), вам необходимо настроить конфигурацию сервера, которая выполняет поиск логина по почтовому адресу.<br>
+ <br>
+ Если вы поддерживаете пользовательские домены, то есть вы "hoster.com", а ваши клиенты пользуются почтовыми адресами <a class="moz-txt-link-rfc2396E link-mailto" href="mailto:fred@flintstone.com">"fred@flintstone.com"</a> и <a class="moz-txt-link-rfc2396E link-mailto" href="mailto:louis@kent.com">"louis@kent.com"</a> как доменными, только с несколькими пользователями на домен, вам необходимо настроить конфигурафию сервера (или полагаться на MX записи в DNS).<br>
+ <br>
+ Если же вы небольшая компания устанавливающая Thunderbird на компьютеры своих работников, вы можете положить конфигурационный файл в установочную папку Thunderbird.</p>
+
+<h2 id="ISPDB">ISPDB</h2>
+
+<p>Database URL is <a class="moz-txt-link-rfc2396E link-https" href="https://live.mozillamessaging.com/autoconfig/v1.1/" title="https://live.mozillamessaging.com/autoconfig/v1.1/">&lt;https://live.mozillamessaging.com/autoconfig/v1.1/&gt;</a>, append domain name, e.g. <a class="moz-txt-link-rfc2396E link-https" href="https://live.mozillamessaging.com/autoconfig/v1.1/freenet.de" title="https://live.mozillamessaging.com/autoconfig/v1.1/freenet.de">&lt;https://live.mozillamessaging.com/autoconfig/v1.1/freenet.de&gt;</a>.<br>
+ <br>
+ Current process: File a bug in <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webtools&amp;component=ISPDB%20Database%20Entries&amp;op_sys=All&amp;rep_platform=All">Bugzilla</a>, Product "Webtools", Component "ISPDB Database Entries", with a configuration file that matches the requirements described below. Request review from bwinton, gozer or ben.bucksch.<br>
+ <br>
+ Future: add the configuration to the <a class="link-https" href="https://ispdb.mozillamessaging.com">ISPDB server app</a>.</p>
+
+<h2 id="Конфигурация_сервера_почтового_провайдера">Конфигурация сервера почтового провайдера</h2>
+
+<p>Given the email address <a class="moz-txt-link-rfc2396E link-mailto" href="mailto:fred@example.com">"fred@example.com"</a>, Thunderbird first checks &lt;<span class="external free"><a class="moz-txt-link-freetext external" href="http://autoconfig.example.com/mail/config-v1.xml?emailaddress=fred@example.com">http://autoconfig.example.com/mail/config-v1.1.xml?emailaddress=fred@example.com</a></span>&gt; and then <a class="moz-txt-link-rfc2396E external" href="http://example.com/.well-known/autoconfig/mail/config-v1.1.xml" title="http://example.com/.well-known/autoconfig/mail/config-v1.1.xml">&lt;http://example.com/.well-known/autoconfig/mail/config-v1.1.xml&gt;</a>.</p>
+
+<h3 id="Small_company">Small company</h3>
+
+<p>If you are a small company, you can put the XML configuration file on your web server, at URL <a class="moz-txt-link-rfc2396E external" href="http://example.com/.well-known/autoconfig/mail/config-v1.1.xml">&lt;http://example.com/.well-known/autoconfig/mail/config-v1.1.xml&gt;</a>. (This is not yet finalized and subject to change.)</p>
+
+<h3 id="Domain_hoster">Domain hoster</h3>
+
+<p>If you are an ISP that hosts domains for your customers - for example, you are hoster.com and your customer registers fancy.com or example.com, and your servers accept and serve the mail for example.com -, you should set up an autoconfig server.</p>
+
+<h4 id="DNS">DNS</h4>
+
+<p>For each customer domain, you add a DNS record (in addition to the existing MX, A www etc. DNS records):<br>
+ <code>autoconfig IN A 10.2.3.4</code><br>
+ or<br>
+ <code>autoconfig IN CNAME autoconfig.hoster.com</code>.<br>
+ ... where 10.2.3.4 and autoconfig.hoster.com are IP addresses / hostnames you own.<br>
+ This allows Thunderbird to find you as hoster.</p>
+
+<p>To make the Version without an autoconfig DNS Entry work you have to make sure that example.com points to the Webserver you will place the config-v1.1.xml on.</p>
+
+<p>Example: <span style="font-family: courier new,andale mono,monospace; line-height: normal;">example.com A 10.2.3.4</span></p>
+
+<h4 id="Web_server">Web server</h4>
+
+<p>You set up a web server bound to a physical IP address. This may be on the same machine as other web servers, but the web server must be configured to the content to any requested domain.<br>
+ <br>
+ You must use an virtual host that match all autoconfig.* domains of your customers. In Apache terms, you can use a "ip-based virtual host". In the Apache configuration files, that means something like: Listen 10.2.3.4:80 (of course, you use a public IP address that you own)</p>
+
+<pre class="notranslate">&lt;VirtualHost 10.2.3.4:80&gt; #Must be the first and only virtual host with this ip!
+    DocumentRoot /var/www/autoconfig/
+    ServerName autoconfig.hoster.com
+    &lt;Directory /var/www/autoconfig&gt;
+	Order allow,deny
+	allow from all
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;</pre>
+
+<p>Place the configuration file at the URL /mail/config-v1.1.xml on that host.</p>
+
+<p>All config files must be served as <code>Content-Type: text/xml</code> (or <code>application/xml</code>), otherwise the file will be ignored. Also, they must use charset UTF-8 (esp. if there are any non-ASCII-characters).</p>
+
+<p>If you like to use name-based virtual hosts. You probably don't want to setup the autoconfig subdomain for every domain of your customers.<br>
+ You can add a Rewriterule in the default virtual host (on debian /etc/apache2/sites-enabled/000-default)  to match all autoconfig.* subdomains:</p>
+
+<pre class="notranslate">&lt;VirtualHost *:80&gt; #Must be the first Virtual host
+	ServerAdmin webmaster@hoster.com
+	ServerName www
+	DocumentRoot /var/www
+	RewriteEngine On
+	RewriteCond %{HTTP_HOST} ^autoconfig\. [NC]
+	RewriteRule ^/(.*)	http://autoconfig.hoster.com/$1 [L,R=301,NE]
+        #...
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+    DocumentRoot /var/www/autoconfig/
+    ServerName autoconfig.hoster.com
+    &lt;Directory /var/www/autoconfig&gt;
+ 	Order allow,deny
+	allow from all
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</pre>
+
+<h2 id="Файл_конфигурации">Файл конфигурации</h2>
+
+<p>This is described at <a href="/en/Thunderbird/Autoconfiguration/FileFormat/HowTo" title="en/Thunderbird/Autoconfiguration/FileFormat/HowTo">How to create a configuration file</a> and <a href="/en/Thunderbird/Autoconfiguration/FileFormat/Definition" title="en/Thunderbird/Autoconfiguration/FileFormat/Definition">defined</a> on the sub-pages.</p>
+
+<p>{{ languages( { "ja": "ja/Thunderbird/Autoconfiguration" } ) }}</p>

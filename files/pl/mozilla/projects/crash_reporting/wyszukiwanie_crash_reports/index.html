@@ -1,0 +1,250 @@
+---
+title: Przewodnik po wyszukiwaniu raportów o awariach
+slug: Mozilla/Projects/Crash_reporting/Wyszukiwanie_crash_reports
+translation_of: Mozilla/Projects/Crash_reporting/Searching_crash_reports
+---
+<p>Przed przeczytaniem tej strony przeczytaj dokumentację poszczególnych raportów o awariach.</p>
+
+<p>Strona z statystyką awarii Mozilli zapewnia narzędzia do badania dużej liczby raportów o awariach Firefoksa. Ten przewodnik po przeszukiwaniu raportów o awariach może pomóc w zlokalizowaniu raportów o awariach, które pomogą Ci znaleźć i naprawić błąd przeglądarki Firefox, nad którym pracujesz.</p>
+
+<p>W szczególności statystyki awarii oferuje dwie podstawowe funkcje:</p>
+
+<p>Badawczy<br>
+     Możesz przeszukiwać bazę danych raportów o awariach według ponad 100 kryteriów: podpis awarii, data, platforma, produkt, wersja itp.<br>
+ Grupowanie<br>
+     Możesz grupować wyniki każdego wyszukiwania w grupy przy użyciu tych samych kryteriów.</p>
+
+<p>Uzyskanie pełnej mocy i elastyczności wymaga dobrego zrozumienia obu tych funkcji. Wyszukiwanie jest łatwe do zrozumienia, ale funkcje grupowania są łatwe do przeoczenia.</p>
+
+<p>Badawczy<br>
+ Formularz wyszukiwania</p>
+
+<p>Możesz przejść do strony wyszukiwania, klikając link "Super wyszukiwanie" w pobliżu paska narzędzi w prawym górnym rogu dowolnej strony ze statystykami awarii. Pojawi się formularz wyszukiwania, taki jak na poniższym zrzucie ekranu.</p>
+
+<p> </p>
+
+<p><img alt="Results of a default search in crash-stats" src="https://mdn.mozillademos.org/files/13911/super-search-form.png" style="height: 315px; width: 1140px;"></p>
+
+<p> </p>
+
+<p>Pola są udostępniane dla czterech powszechnych kryteriów wyszukiwania: produktu, wersji, platformy i typu procesu. Pole produktu jest wstępnie wypełnione "Firefox", ponieważ jest to częsty przypadek. Jak pokazuje drobny druk, domyślny zakres dat to ostatni tydzień.</p>
+
+<p>Domyślne wyszukiwanie: facet podpisu</p>
+
+<p>Jeśli klikniesz przycisk "Szukaj", otrzymasz wyniki, takie jak na poniższym zrzucie ekranu.</p>
+
+<p> </p>
+
+<p><img alt="Results of a default search in crash-stats" src="https://mdn.mozillademos.org/files/13913/default-search-results.png" style="height: 869px; width: 1168px;"></p>
+
+<div class="g-unit" id="gt-res-c">
+<div id="gt-res-p">
+<div id="gt-res-data">
+<div id="gt-res-wrap">
+<div id="gt-res-content">
+<div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="pl"><span title='By default, the "Signature facet" tab is selected.'>Domyślnie wybrana jest karta "Podpis wzorca". </span><span title='("Facet" is a term that means "group".) In these results, the found crash reports are grouped according to crash signature and ranked by group size.'>("Facet" to termin oznaczający "grupę".) W tych wynikach znalezione raporty o awariach są pogrupowane według sygnatury awarii i uszeregowane według wielkości grupy. </span><span title="The columns show each group's rank, signature, size (both a count and a proportion of matching crash reports), and finally a list of bugs that have been marked as relating to this signature.
+
+">Kolumny pokazują rangę, podpis, rozmiar (zarówno liczbę, jak i proporcję pasujących raportów o awariach), a wreszcie listę błędów, które zostały oznaczone jako odnoszące się do tego podpisu.</span><br>
+<br>
+<span title="The numbers are large because this search matched all Firefox crash reports from the past seven days.">Liczby są duże, ponieważ to wyszukiwanie pasowało do wszystkich raportów awarii Firefoksa z ostatnich siedmiu dni. </span><span title="The first group has over 100,000 crash reports, which accounts for 7.77% of all matching crashes.">Pierwsza grupa ma ponad 100 000 raportów o awariach, co stanowi 7,77% wszystkich pasujących awarii. </span><span title="This indicates there are over 1.3 million crash reports matching this search.
+
+">Oznacza to, że istnieje ponad 1,3 miliona raportów o awariach pasujących do tego wyszukiwania.</span><br>
+<br>
+<span title="You can reorder the groups in various ways by clicking on the column headers.">Możesz uporządkować grupy na różne sposoby, klikając nagłówki kolumn. </span><span title="The links within the results do the following things.
+
+    ">Łącza w wynikach robią następujące rzeczy.<br>
+<br>
+    </span><span title='The first link in each "Signature" column cell links to a signature report, which contains additional details about crash reports with that signature.
+    '>Pierwsze łącze w każdej komórce kolumny "Podpis" łączy się z raportem podpisu, który zawiera dodatkowe szczegóły dotyczące raportów o awariach z tym podpisem.<br>
+    </span><span title='The "Add term" link in each "Signature" column cell lets you perform a narrower subsequent search among crash reports with that signature.
+    '>Łącze "Dodaj termin" w każdej komórce kolumny "Podpis" pozwala na węższe późniejsze wyszukiwanie wśród raportów o awariach z tym podpisem.<br>
+    </span><span title='The links in each "Bugs" column cell link to bug reports in Bugzilla.
+
+'>Linki w każdym linku do komórki w kolumnie "Błędy" do raportów o błędach w Bugzilli.</span><br>
+<br>
+<span title="The default search: Crash reports
+
+">Domyślne wyszukiwanie: raporty o awariach</span><br>
+<br>
+<span title='If you switch to the "Crash Reports" tab you will see results like the ones in the following screenshot.
+
+'>Jeśli przejdziesz do zakładki "Crash Reports", zobaczysz wyniki podobne do tych na poniższym zrzucie ekranu.</span></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><img alt="Results of a default search in crash-stats (crash reports tab)" src="https://mdn.mozillademos.org/files/13915/default-search-results2.png"></p>
+
+<p><span id="result_box" lang="pl"><span title="Results of a default search in crash-stats (crash reports tab)
+
+">Wyniki domyślnego wyszukiwania w statystykach awarii (karta raportów awarii)</span><br>
+ <br>
+ <span title="This is a list of all the individual crash reports that match the search criteria.">Jest to lista wszystkich pojedynczych raportów o awariach pasujących do kryteriów wyszukiwania. </span><span title='If the number of matches is large -- in this case it exceeds 1.3 million, just as we saw in the "Signature facet" tab -- the results will be spread across multiple pages, which you can visit by clicking the links at the top'>Jeśli liczba dopasowań jest duża - w tym przypadku przekracza ona 1,3 miliona, tak jak widzieliśmy w zakładce "Podpis wzorca" - wyniki będą rozłożone na wiele stron, które możesz odwiedzić, klikając linki na górze </span><span title="right of the tab.
+
+">po prawej stronie karty.</span><br>
+ <br>
+ <span title="The links within the results do the following things.
+
+    ">Łącza w wynikach robią następujące rzeczy.<br>
+ <br>
+     </span><span title='The link in each "Crash ID" column cell links to an individual crash report.
+    '>Łącze w każdej komórce kolumny "Identyfikator awarii" łączy się z indywidualnym raportem o awarii.<br>
+     </span><span title='The links in each "Signature" column cell have the same effect that they did in the "Signature facet" tab.
+    '>Łącza w każdej komórce kolumny "Podpis" mają ten sam efekt, co w zakładce "Podpis wzorca".<br>
+     </span><span title="The links in the remaining column cells also let you perform a narrower subsequent search with that link's value added to the search criteria.
+
+">Łącza w pozostałych komórkach kolumn pozwalają również na węższe późniejsze wyszukiwanie z wartością tego linku dodaną do kryteriów wyszukiwania.</span><br>
+ <br>
+ <span title="A narrower search
+
+">Węższe wyszukiwanie</span><br>
+ <br>
+ <span title="You can add criteria to perform a narrower search.">Możesz dodać kryteria, aby wykonać węższe wyszukiwanie. </span><span title="For example, to perform a search for all Mac crash reports that occurred while JavaScript garbage collection was running, do the following.
+
+    ">Na przykład, aby wykonać wyszukiwanie wszystkich raportów awarii systemu Mac, które wystąpiły podczas działania modułu czyszczenia pamięci JavaScript, wykonaj następujące czynności.<br>
+ <br>
+     </span><span title='Add "Mac OS X" to the "Platform" field.
+    '>Dodaj "Mac OS X" do pola "Platforma".<br>
+     </span><span title='Select "New line", and then choose a field ("is garbage collecting") and an operator ("is true").'>Wybierz "Nowa linia", a następnie wybierz pole ("jest zbieranie śmieci") i operator ("jest prawdą"). </span><span title="The operators available for each field depends on its type.
+
+">Operatory dostępne dla każdego pola zależą od jego rodzaju.</span><br>
+ <br>
+ <span title="With these criteria added the search form looks like the following screenshot.
+
+">Po dodaniu tych kryteriów formularz wyszukiwania wygląda jak na poniższym zrzucie ekranu.</span></span></p>
+
+<p><img alt="crash-stats Super Search form with additional criteria" src="https://mdn.mozillademos.org/files/13917/super-search-form2.png"></p>
+
+<p><span id="result_box" lang="pl"><span title="crash-stats Super Search form with additional criteria
+
+">crash-stats Super Search z dodatkowymi kryteriami</span><br>
+ <br>
+ <span title='After clicking on "Search" we get results like those in the following screenshot.
+
+'>Po kliknięciu "Szukaj" otrzymamy wyniki takie jak na poniższym zrzucie ekranu.</span></span><br>
+  </p>
+
+<p><img alt="Results of a narrower search in crash-stats" src="https://mdn.mozillademos.org/files/13929/narrower-search-results.png"></p>
+
+<p><span id="result_box" lang="pl"><span title="Results of a narrower search in crash-stats
+
+">Wyniki węższego wyszukiwania w statystykach awarii</span><br>
+ <br>
+ <span title="The number of crash reports matching this search is in the thousands, i.e. much smaller than the previous search.
+">Liczba raportów o awariach odpowiadających temu wyszukiwaniu znajduje się w tysiącach, czyli znacznie mniej niż w poprzednim wyszukiwaniu.</span><br>
+ <span title="Proto signature
+
+">Podpis Proto</span><br>
+ <br>
+ <span title='The "proto signature" field is just the raw unprocessed crash stack concatenated together.
+
+'>Pole "podpis proto" jest tylko nieprzetworzonym nieprzetworzonym stosem awarii połączonym razem.</span><br>
+ <br>
+ <span title="You can do things like:
+
+    ">Możesz zrobić takie rzeczy jak:<br>
+ <br>
+     </span><span title="Search for crashes where the signature is Foo, and the proto signature contains Bar.">Wyszukaj awarie, w których podpis jest Foo, a podpis proto zawiera Bar. </span><span title="This is helpful if you have a fairly generic signature and you want to see how many of them are a particular case of it that you've come across.">Jest to przydatne, jeśli masz dość ogólny podpis i chcesz zobaczyć, ile z nich jest szczególnym przypadkiem, z którym się zetknąłeś. </span><span title="Or instead of a signature Foo, a moz crash reason or something else.
+    ">Lub zamiast podpisu Foo, powodu awarii lub czegoś innego.<br>
+     </span><span title="Use it as a facet.">Użyj go jako aspekt. </span><span title="This lets you skim the full signatures of crashes at a glance, bucketed together a bit.">Pozwala to rzucić okiem na pełne podpisy wypadków na jeden rzut oka, trochę razem. </span><span title="Note that because the proto signature includes the entire signature, things aren't grouped all that well.
+
+">Zauważ, że ponieważ podpis proto zawiera cały podpis, rzeczy nie są pogrupowane aż tak dobrze.</span><br>
+ <br>
+ <span title="Grouping
+
+">Grupowanie</span><br>
+ <br>
+ <span title='In the previous section we saw one example of grouping, in the "Signature facet" tab that is shown by default.'>W poprzedniej sekcji widzieliśmy jeden przykład grupowania w zakładce "Podpis faceta", która jest domyślnie wyświetlana. </span><span title="But there are many other interesting ways to group searches.
+">Ale istnieje wiele innych interesujących sposobów na grupowanie wyszukiwań.</span><br>
+ <span title="Facets in the search form
+
+">Aspekty w formularzu wyszukiwania</span><br>
+ <br>
+ <span title='To do a search with non-signature grouping first click on the "More options..." text, which reveals the additional fields shown in the following screenshot.
+
+'>Aby wykonać wyszukiwanie z grupowaniem bez podpisów, najpierw kliknij tekst "Więcej opcji ...", który pokazuje dodatkowe pola pokazane na poniższym zrzucie ekranu.</span><br>
+ <br>
+ <span title="crash-stats Super Search form with different facets
+
+">crash-stats Super Search z różnymi aspektami</span></span></p>
+
+<p><img alt="crash-stats Super Search form with different facets" src="https://mdn.mozillademos.org/files/13921/super-search-form3.png" style="height: 516px; width: 1036px;"></p>
+
+<p><span id="result_box" lang="pl"><span title='(The "Show columns" and "Sort by" fields are straightforward. They apply to the "Crash reports" tab of any search results, and are not related to grouping.)
+
+'>(Pola "Pokaż kolumny" i "Sortuj według" są proste: mają zastosowanie do karty "Raporty o awariach" wszelkich wyników wyszukiwania i nie są związane z grupowaniem).</span><br>
+ <br>
+ <span title='The "Facet on" field is the one that controls grouping.'>Pole "Facet on" jest tym, które kontroluje grupowanie. </span><span title='By default, it contains the value "signature", which explains why we saw a "Signature facet" tab in the earlier search results.'>Domyślnie zawiera ona wartość "podpis", co wyjaśnia, dlaczego we wcześniejszych wynikach wyszukiwania widzieliśmy kartę "Podpis wzorca". </span><span title="But we can change the values in this field and get different facet tabs in the search results.
+
+">Ale możemy zmienić wartości w tym polu i uzyskać różne karty aspektów w wynikach wyszukiwania.</span><br>
+ <br>
+ <span title="Grouping by platform
+
+">Grupowanie według platformy</span><br>
+ <br>
+ <span title='For example, if we start with a default search for all Firefox crashes in the past week, but then replace the "signature" facet with "platform" and "moz crash reason", we get search results with two facet tabs.'>Na przykład, jeśli zaczniemy od domyślnego wyszukiwania wszystkich awarii Firefoksa w zeszłym tygodniu, ale zastąpimy aspekt "podpisu" słowem "platforma" i "przyczyna krachu moz", otrzymamy wyniki wyszukiwania z dwiema kartami aspektów. </span><span title='The first of these is a "Platform facet" tab, with results like those shown in the following screenshot.
+
+'>Pierwszym z nich jest zakładka "Facility platformy", z wynikami podobnymi do pokazanych na poniższym zrzucie ekranu.</span><br>
+ <br>
+ <span title="Results of a faceted search in crash-stats
+
+">Wyniki fasetowanego wyszukiwania w statystykach awarii</span></span></p>
+
+<p><img alt="Results of a faceted search in crash-stats" src="https://mdn.mozillademos.org/files/13923/facet-search-results.png" style="height: 360px; width: 1094px;"></p>
+
+<p><span id="result_box" lang="pl"><span title='This has the same columns as the "Signature facet" tab we saw earlier, except for the "Bugs" column, because that is a special column that only applies to the signature facet.'>Ma tę samą kolumnę co karta "Podpis wzorca", którą widzieliśmy wcześniej, z wyjątkiem kolumny "Błędy", ponieważ jest to specjalna kolumna, która dotyczy tylko aspektu podpisu. </span><span title="This tab shows the distribution of crash reports across the various platforms.">Ta karta pokazuje rozkład raportów o awariach na różnych platformach. </span><span title="Crash reports always include a platform field (though it may be empty if something has gone wrong) and so the percentages add up to 100.
+">Raporty o awariach zawsze zawierają pole platformy (chociaż może być puste, jeśli coś poszło nie tak), a więc wartości procentowe wynoszą do 100.</span><br>
+ <span title='Grouping by "moz crash reason"
+
+'>Grupowanie według "przyczyny awarii moz"</span><br>
+ <br>
+ <span title='The second facet tab is a "Moz crash reason facet" tab, with results like those shown in the following screenshot.
+
+'>Druga karta aspektów to zakładka "Przyczyna przyczyny awarii", z wynikami podobnymi do pokazanych na poniższym zrzucie ekranu.</span><br>
+ <br>
+ <span title="Results of a faceted search in crash-stats (moz crash reason tab)
+
+">Wyniki wyszukiwania fasetowego w statystykach awarii (karta przyczyny awarii Momo)</span></span></p>
+
+<p><img alt="Results of a faceted search in crash-stats (moz crash reason tab)" src="https://mdn.mozillademos.org/files/13925/facet-search-results2.png" style="height: 589px; width: 1090px;"></p>
+
+<p><br>
+ <span id="result_box" lang="pl"><span title="This immediately shows which MOZ_CRASH calls are being hit frequently by users.">To natychmiast pokazuje, które połączenia MOZ_CRASH są często trafiane przez użytkowników. </span><span title='Only a subset of crash reports have the "moz crash reason" field -- those that crashed due to hitting a MOZ_CRASH call -- so all crashes that lack that field are omitted from this tab.'>Tylko podzbiór raportów o awariach zawiera pole "przyczyna awarii moz" - te, które uległy awarii w wyniku trafienia wywołania MOZ_CRASH - więc wszystkie awarie, których brakuje w tym polu, są pomijane na tej karcie. </span><span title="For that reason, the percentages do not add up to 100.
+">Z tego powodu wartości procentowe nie sumują się do 100.</span><br>
+ <span title="An example of less useful grouping
+
+">Przykład mniej przydatnego grupowania</span><br>
+ <br>
+ <span title="The usefulness of grouping varies from field to field.">Przydatność grupowania zależy od pola. </span><span title="In particular, fields that can have many possible values (such as numeric fields) often don't group well.">W szczególności pola, które mogą mieć wiele możliwych wartości (takich jak pola numeryczne) często nie grupują się dobrze. </span><span title="For example, if we do a default search grouped by uptime we get results like those in the following screenshot.">Na przykład, jeśli wykonamy domyślne wyszukiwanie pogrupowane według czasu działania, otrzymamy wyniki takie jak na poniższym zrzucie ekranu.</span></span></p>
+
+<p><img alt="Results of a faceted search in crash-stats (uptime)" src="https://mdn.mozillademos.org/files/13927/facet-search-results3.png" style="height: 545px; width: 1091px;"></p>
+
+<p><span id="result_box" lang="pl"><span title="In this example the top 10 groups account for less than 12% of all crashes, and there is an extremely long tail.">W tym przykładzie 10 najczęstszych grup stanowi mniej niż 12% wszystkich awarii, a ponadto występuje bardzo długi ogon. </span><span title="These results would be improved by using numeric ranges instead of individual values, but unfortunately that isn't supported.
+">Wyniki te zostałyby poprawione przy użyciu zakresów numerycznych zamiast poszczególnych wartości, ale niestety nie jest to obsługiwane.</span><br>
+ <span title="Advanced Usage
+
+">Zaawansowane użycie</span><br>
+ <br>
+ <span title="The combination of searching and grouping is powerful.">Połączenie wyszukiwania i grupowania jest potężne. </span><span title="Searches find crash reports that match particular criteria, and grouping organizes those crash reports into interesting groups.
+
+">Wyszukiwania znajdują raporty o awariach pasujące do określonych kryteriów, a grupowanie porządkuje te raporty o awariach w interesujące grupy.</span><br>
+ <br>
+ <span title="When a search is performed, the page's URL is updated to include the search parameters.">Po przeprowadzeniu wyszukiwania adres URL strony jest aktualizowany w celu uwzględnienia parametrów wyszukiwania. </span><span title="This means that the results of any search can be easily shared by copying and pasting the page's URL.
+
+">Oznacza to, że wyniki każdego wyszukiwania można łatwo udostępnić, kopiując i wklejając adres URL strony.</span><br>
+ <br>
+ <span title="To become an expert at searching and grouping requires understanding the full range of the 100+ fields available for searching and grouping.">Aby stać się ekspertem w wyszukiwaniu i grupowaniu, musisz poznać pełny zakres ponad 100 dostępnych pól do wyszukiwania i grupowania. </span><span title="One way to learn about them is to read lots of individual crash reports;">Jednym ze sposobów na poznanie ich jest przeczytanie wielu pojedynczych raportów o wypadkach; </span><span title="note that all fields shown in the Details tab of an individual crash report have a tool-tip that indicates its key for search.">Zwróć uwagę, że wszystkie pola widoczne na karcie Szczegóły w pojedynczym raporcie o awarii zawierają wskazówkę, która wskazuje klucz do wyszukiwania. </span><span title="Alternatively, you can browse the complete list.
+
+">Możesz także przejrzeć kompletną listę.</span><br>
+ <br>
+ <span title="There is also an API through which searches can be performed programmatically.">Istnieje również interfejs API, za pomocą którego można programowo przeprowadzać wyszukiwanie. </span><span title="See the API documentation for full details;">Zobacz pełną dokumentację dokumentacji API; </span><span title='note that it uses the term "aggregation" for grouping/faceting.
+'>zauważ, że używa terminu "agregacja" do grupowania / faceting.</span><br>
+ <span title="Polski translation:
+">Tłumaczenie polskie:</span><br>
+ <span title="Need Help?">Potrzebuję pomocy? </span><span title="• Editor Guide • Style Guide
+">• Przewodnik redaktora • Przewodnik po stylach</span><br>
+ <span title="You have a draft from: 27.12.2017 03:18:03.
+">Masz wersję roboczą: 27.12.2017 03:18:03.</span><br>
+ <span title="Draft autosaved: 27.12.2017 06:00:25">Automatycznie zapisano wersję roboczą: 27.12.2017 06:00:25</span></span></p>

@@ -1,0 +1,86 @@
+---
+title: Node.parentElement
+slug: Web/API/Node/parentElement
+translation_of: Web/API/Node/parentElement
+---
+<div>
+<div>{{APIRef("DOM")}}</div>
+</div>
+
+<p>Свойство <code><strong>Node.parentElement</strong></code> только для чтения, возвращает родителя узла DOM {{domxref("Element")}}, или <code>null</code> если узел не имеет родителя, или его родитель не DOM {{domxref("Element")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>parentElement</em> = <em>node</em>.parentElement</pre>
+
+<p><code>parentElement</code> это родительский элемент текущего узла. Это всегда объект DOM {{domxref("Element")}}, или <code>null</code>.</p>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="brush:js">if (node.parentElement) {
+    node.parentElement.style.color = "red";
+}</pre>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>В некоторых браузерах, свойство <code>parentElement</code> определено только для узлов, которые сами {{domxref("Element")}}. В частности, не определено для текстовых узлов.</p>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая подержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("9.0")}}</td>
+   <td>{{CompatVersionUnknown}} (only on {{domxref("Element")}})</td>
+   <td>{{CompatVersionUnknown}} (only on {{domxref("Element")}})</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("9.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Specification" name="Specification">Спецификация</h2>
+
+<ul>
+ <li>{{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}</li>
+</ul>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("Node.parentNode")}}</li>
+</ul>

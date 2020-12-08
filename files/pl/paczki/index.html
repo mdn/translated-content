@@ -1,0 +1,72 @@
+---
+title: Struktura paczki instalacyjnej
+slug: Paczki
+tags:
+  - Toolkit API
+  - Wszystkie_kategorie
+translation_of: Archive/Mozilla/Bundles
+---
+<p> </p>
+<p><a href="pl/Pakowanie_aplikacji_XUL">Aplikacje XULRunner</a>, <a href="pl/Rozszerzenia">rozszerzenia</a> oraz <a href="pl/Motywy">motywy</a> dzielą wspólna strukturę katalogów, a w niektórych przypadkach ta sama paczka może być używana zarówno w samodzielnej aplikacji XULRunner jak i w rozszerzeniu aplikacji, które można instalować.</p>
+<p> </p>
+<h3 id="Podstawowa_struktura_paczki" name="Podstawowa_struktura_paczki">Podstawowa struktura paczki</h3>
+<p>Paczka może zawierać jakikolwiek z poniższych plików:</p>
+<pre class="eval">/<a href="pl/Manifesty_Instalacji">install.rdf</a><i>Manifest instalacyjny rozszerzenia/motywu</i>
+/<a href="pl/Pakowanie_aplikacji_XUL">application.ini</a><i>Manifest inicjalizacji aplikacji</i>
+/components/*<i>Komponenty oraz pliki XPT</i>      <a href="pl/Gecko#Wersje_Gecko">(&gt;=1.7)</a>
+<a href="pl/Tworzymy_rozszerzenie#Pliki_domy.C5.9Blne">/defaults/preferences/*.js</a><i>Ustawienia domyślne</i>            <a href="pl/Gecko#Wersje_Gecko">(&gt;=1.7)</a>
+/plugins/*<i>Wtyczki NPAPI</i>                  <a href="pl/Gecko#Wersje_Gecko">(&gt;=1.8)</a>
+/<a href="pl/Rejestracja_Chrome">chrome.manifest</a><i>Manifest rejestracji Chrome</i>    <a href="pl/Gecko#Wersje_Gecko">(&gt;=1.8)</a>
+/<a href="pl/Ikony_okna">chrome/icons/default/*</a><i>Ikony okna</i>                     <a href="pl/Gecko#Wersje_Gecko">(&gt;=1.8)</a>
+</pre>
+<p>Oczywiście rozszerzenie nie musi (i normalnie nie będzie) zawierać wszystkich powyższych katalogów. Motywy podlegają ograniczeniom ze względów bezpieczeństwa i standardowo zawierają tylko <a href="pl/Rejestracja_Chrome">chrome.manifest</a> rejestrujący dany motyw oraz plik JAR.</p>
+<h3 id="Podkatalogi_zale.C5.BCne_od_platformy" name="Podkatalogi_zale.C5.BCne_od_platformy">Podkatalogi zależne od platformy</h3>
+<p>W niektórych przypadkach rozszerzenia, lub aplikacje będą chciały dołączyć składniki binarne lub wtyczki dla wielu platform, lub tez autorzy motywów będą chcieli załączyć pliki JAR dla wielu platform. W celu rozwiązania pierwszego przypadku rozszerzenie / loader aplikacji zawiera specjalne podkatalogi przeznaczone dla plików zależnych od platformy (rozpoczynając od <b>Toolkitu</b>/Gecko 1.8, Firefox/Thunderbird 1.5). Ciąg określający platformę jest definiowany podczas budowania <b>toolkitu</b> i składa się z unikalnej kombinacji systemu operacyjnego, architektury procesora oraz kompilatora. Format tegoż ciągu wygląda następująco:</p>
+<pre class="eval"><i>{OS_TARGET}</i>_<i>{<a href="pl/XPCOM_ABI">TARGET_XPCOM_ABI</a>}</i>
+</pre>
+<p>Wszystkie pliki ładowane z głównego katalogu rozszerzenia są ładowane z podkatalogu</p>
+<pre class="eval">/platform/<i>{platform string}</i>
+</pre>
+<p>Jeśli istnieje. Dla przykładu, jeśli producent wtyczki chce ja udostępnić dla użytkownika systemów: Linux, Macintosh i Windows to powinien dostarczyć poniższe pliki:</p>
+<pre class="eval">/platform/Linux_x86-gcc3/plugins/libMyPlugin.so
+/platform/WINNT_x86-msvc/plugins/MyPlugin.dll
+/platform/Darwin_ppc-gcc3/plugins/libMyPlugin.dylib
+</pre>
+<p>Ponieważ pliki XPT są niezależne od platformy, to wszystkie pliki z nimi związane powinny być za ogólnym katalogu komponentów:</p>
+<pre class="eval">/components/MyPlugin.xpt
+</pre>
+<p>Jeśli rozszerzenie nie posada żadnego kodu binarnego zależnego od platformy (tj. kod skryptu używający rejestrów Windows), to może ono również wykorzystywać identyfikator systemu operacyjnego jako podkatalog platformy:</p>
+<pre class="eval">/platform/WINNT/components/registerDoctype.js
+</pre>
+<p>W przypadku użycia plików JAR zależnych od platformy każdy katalog platformy powinien posiadać własny plik <a href="pl/Rejestracja_Chrome">chrome.manifest</a>:</p>
+<pre class="eval">chrome.manifest
+chrome/mytheme-base.jar
+platform/Darwin/chrome.manifest
+platform/Darwin/chrome/mytheme-mac.jar
+platform/WINNT/chrome.manifest
+platform/WINNT/chrome/mytheme-win.jar
+</pre>
+<p>Załadunek rozszerzenia / aplikacji rozpoczyna się od katalogów bazowych, a następnie katalogów platformy aplikacji (wpierw /{OS_TARGET}/, potem /{OS_TARGET}_{<a href="pl/XPCOM_ABI">TARGET_XPCOM_ABI</a>}/). Jeśli zdefiniowano domyślne własności w poszczególnych katalogach, te ładowane później nadpisują załadowane wcześniej.</p>
+<h3 id="Pliki_rozszerze.C5.84_zale.C5.BCne_od_aplikacji" name="Pliki_rozszerze.C5.84_zale.C5.BCne_od_aplikacji">Pliki rozszerzeń zależne od aplikacji</h3>
+<p>Dodatkowo do plików rozszerzeń opisanych powyżej aplikacje mogą poszukiwać dodatkowych plików. Na przykład <a href="pl/Firefox_1.5">Firefox 1.5</a> lub nowszy poszuka wtyczek Sherlock w plikach:</p>
+<pre class="eval">/searchplugins/*.src
+</pre>
+<p><a href="pl/Firefox_2">Firefox 2</a> oraz nowsze wersje automatycznie poszukają również <a href="pl/Tworzenie_wtyczek_MozSearch">Tworzenie wtyczek MozSearch oraz OpenSearch</a> w plikach:</p>
+<pre class="eval">/searchplugins/*.xml
+</pre>
+<p>oraz słowniki Myspell w plikach:</p>
+<pre class="eval">/dictionaries/*.{aff|dic}
+</pre>
+<h3 id="Oficjalne_dokumentacje_Toolkit_API" name="Oficjalne_dokumentacje_Toolkit_API">Oficjalne dokumentacje <a href="pl/Toolkit_API">Toolkit API</a></h3>
+<p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>
+
+<p> </p>

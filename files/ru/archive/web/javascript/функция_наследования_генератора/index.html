@@ -1,0 +1,58 @@
+---
+title: Функция наследования генератора
+slug: Archive/Web/JavaScript/Функция_наследования_генератора
+tags:
+  - JavaScript
+  - Legacy Generator
+  - Reference
+  - Наследование
+  - генератор
+translation_of: Archive/Web/JavaScript/Legacy_generator_function
+---
+<div class="warning">Функция наследования генератора была особенностью в SpiderMonkey, которая была удалена в Firefox 58+. Для использования в будущем, принимайте во внимание {{jsxref("Operators/function*", "function* expression")}}.</div>
+
+<div>{{jsSidebar("Operators")}}</div>
+
+<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Ключевое слово </span></font><strong>function</strong></code> может быть использовано для определения функции наследования генератора. Чтобы сделать функцию наследования генератора, текст функции должен содержать хотя бы одно выражение {{jsxref("Operators/yield", "yield")}} .</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
+   <em>statements</em>
+}</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Имя функции. Может быть пропущено, в таком случае функция будет безымянной. Имя является локальным для функции.</dd>
+ <dt><code>paramN</code></dt>
+ <dd>Имя аргумента для входа в функцию. Функция может иметь до 255 аргументов.</dd>
+ <dt><code>statements</code></dt>
+ <dd>Операторы, которые составляют тело функции. Здесь должен быть хотя бы один оператор {{jsxref("Operators/yield", "yield")}}.</dd>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Описание использования функции доступно на странице <a href="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">Итераторы и Генераторы</a>.</p>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>Supported nowhere.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Generator")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">The legacy generator function</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol">The legacy Iterator protocol</a></li>
+ <li>{{jsxref("Operators/yield", "yield")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope">Functions and function scope</a></li>
+ <li>{{jsxref("Statements/function", "function")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Statements/function*", "function*")}}</li>
+ <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+ <li>{{jsxref("GeneratorFunction")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
+</ul>

@@ -1,0 +1,62 @@
+---
+title: Nowości w JavaScript 1.6
+slug: Web/JavaScript/New_in_JavaScript/Nowości_w_JavaScript_1.6
+tags:
+  - E4X
+  - JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.6
+---
+<p>
+</p><p>JavaScript 1.6 wprowadza nowe funkcje i technologie: E4X, kilka nowych metod <code>Array</code> oraz rodzajów Array i String.
+</p><p>JavaScript 1.6 jest obsługiwany w <a href="pl/Firefox_1.5">Firefoksie 1.5</a> i późniejszych.
+</p>
+<h3 id="E4X" name="E4X"> E4X </h3>
+<p>ECMAScript dla XML-a (<a href="pl/E4X">E4X</a>) jest potężną technologią dla tworzenia i przetwarzania treści <a href="pl/XML">XML</a> przez <a href="pl/JavaScript">JavaScript</a>. Będziemy dalej usprawniać naszą obsługę E4X, włączając dodanie przezroczystej integracji z istniejącym <a href="pl/DOM">DOM-em</a>, jednak programiści tworzący internetowe aplikacje XML mogą korzystać z obsługi E4X w Firefoksie 1.5 już teraz.
+</p><p>Możesz nadal używać standardowego typu MIME używając E4X:
+</p>
+<pre>&lt;script type="text/javascript"&gt;
+</pre>
+<p>Jednakże składnia E4X może powodować konflikty z popularnymi praktykami umieszczania skryptów w komentarzach HTML (<code><span class="nowiki">&lt;!--...--&gt;</span></code>) w celu ukrycia ich przed starymi przeglądarkami. E4X może również powodować konflikty z nowocześniejszą praktyką umieszczania skryptów w XML-owych sekcjach CDATA (<code>&lt;![CDATA{{ mediawiki.external('...') }}]&gt;</code>), aby umożliwić użycie symboli "&lt;" oraz "&gt;" w skryptach (zwróć uwagę, że nie dotyczy to HTML-a). Jeżeli napotkasz dziwne błędy składni, dodaj "; e4x=1" do wartości typu MIME:
+</p>
+<pre>&lt;script type="text/javascript; e4x=1"&gt;
+</pre>
+<p>Zwróć uwagę, że skrypty w rozszerzeniach zawsze traktują komentarze HTML jako literały E4X. To znaczy, że "e4x=1" jest domniemany.
+</p><p>E4X jest opisany w <a href="pl/Przewodnik_po_j%c4%99zyku_JavaScript_1.5/Przetwarzanie_XML_za_pomoc%c4%85_E4X">Przetwarzanie XML za pomocą E4X</a>
+</p>
+<h3 id="Dodatkowe_funkcje_obiektu_Array" name="Dodatkowe_funkcje_obiektu_Array"> Dodatkowe funkcje obiektu Array </h3>
+<p>Do obiektu <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array">Array</a></code> zostało dodanych 7 nowych metod, które można podzielić na dwie kategorie: metody położenia elementów oraz metody iteratywne. Metody położenia elementów to:
+</p>
+<ul><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/indexOf">indexOf()</a></code> - zwraca indeks pierwszego wystąpienia danego elementu.
+</li><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/lastIndexOf">lastIndexOf()</a></code> - zwraca indeks ostatniego wystąpienia danego elementu.
+</li></ul>
+<p>Metody iteratywne to:
+</p>
+<ul><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/every">every()</a></code> - wywołuje funkcję na elementach tablicy, dopóki funkcja zwraca wartość true. Zwraca wartość true, jeśli funkcja zwraca true dla każdego odwiedzonego elementu. </li><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/filter">filter()</a></code> - wywołuje funkcję na każdym elemencie tablicy i zwraca tablicę wszystkich elementów, dla których funkcja zwraca wartość true.
+</li><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/forEach">forEach()</a></code> - wywołuje funkcje na każdym elemencie tablicy.
+</li><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/map">map()</a></code> - wywołuje funkcję na każdym elemencie tablicy i zwraca wyniki w postaci tablicy.
+</li><li> <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/some">some()</a></code> - wywołuje funkcję na elementach tablicy, dopóki funkcja zwraca wartość false. Zwraca wartość true, jeśli funkcja zwraca true dla każdego odwiedzonego elementu. </li></ul>
+<p>Więcej infomacji można znaleźć na stronie <a href="pl/Przewodnik_po_j%c4%99zyku_JavaScript_1.5/Praca_z_tablicami#Wprowadzone_w_JavaScripcie_1.6">Praca z tablicami</a> lub w artykule Nicholasa C. Zakasa, <a class="external" href="http://www.webreference.com/programming/javascript/ncz/column4/index.html">Nowe metody Array Mozilli</a>.
+</p>
+<h3 id="Rodzaje_Array_i_String" name="Rodzaje_Array_i_String">Rodzaje Array i String</h3>
+<p>Czasami chcesz zastosować metody tablicy na łańcuchu znaków. Robiąc to traktujesz łańcuch znaków jako tablicę złożoną ze znaków. Przykładowo w celu sprawdzenia, czy wszystkie znaki w zmiennej <var>str</var> są literami, możesz użyć:</p>
+<pre>function isLetter(character) {
+  return (character &gt;= "a" &amp;&amp; character &lt;= "z");
+}
+
+if (Array.prototype.every.call(str, isLetter))
+  alert("Ciąg '" + str + "' składa się z samych liter!");
+</pre>
+<p>Taki zapis zajmuje stosunkowo dużo miejsca. JavaScript 1.6 wprowadza wygodne uproszczenie:</p>
+<pre>if (Array.every(str, isLetter))
+  alert("Ciąg '" + str + "' składa się z samych liter!");
+</pre>
+<p>W podobny sposób możesz łatwo zastosować metody obiektu String do dowolnego obiektu:</p>
+<pre>var num = 15;
+alert(String.prototype.replace(num, /5/, '2'));
+</pre>
+<p>Zobacz także <a href="/pl/Przewodnik_po_języku_JavaScript_1.5/Praca_z_tablicami#Praca_z_obiektami_tablicopodobnymi" title="pl/Przewodnik_po_języku_JavaScript_1.5/Praca_z_tablicami#Praca_z_obiektami_tablicopodobnymi">Praca z obiektami tablicopodobnymi</a>.</p>
+<p> </p>
+<p> </p>
+
+<p>{{ languages( { "en": "en/New_in_JavaScript_1.6", "es": "es/Novedades_en_JavaScript_1.6", "fr": "fr/Nouveaut\u00e9s_dans_JavaScript_1.6", "ja": "ja/New_in_JavaScript_1.6", "ru": "ru/\u041d\u043e\u0432\u043e\u0435_\u0432_JavaScript_1.6", "zh-cn": "cn/New_in_JavaScript_1.6", "zh-tw": "zh_tw/JavaScript_1.6_\u65b0\u9bae\u4e8b" } ) }}</p>

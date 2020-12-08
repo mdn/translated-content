@@ -1,0 +1,149 @@
+---
+title: function* expression
+slug: Web/JavaScript/Reference/Operators/function*
+tags:
+  - ECMAScript6
+  - JavaScript
+  - Итератор
+  - Оператор
+  - Функция
+translation_of: Web/JavaScript/Reference/Operators/function*
+---
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>Ключевое слово <strong><code>function*</code></strong> может использоваться для объявления функции-генератора внутри выражения.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">function* [<em>имя</em>]([параметр<em>1</em>[, <em>параметр2[</em>, ..., <em>параметрN</em>]]]) {
+   <em>инструкции</em>
+}</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>имя</code></dt>
+ <dd>Имя функции. Может быть опущено, в этом случае функция будет <em>анонимной</em>. Имя локально для тела функции.</dd>
+ <dt><code>параметрN</code></dt>
+ <dd>Имя аргумента, передаваемого в функцию. Фунция может иметь до 255 аргументов.</dd>
+ <dt><code>инструкции</code></dt>
+ <dd>Инструкции, составляющие тело функции.</dd>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Выражение<code> function*</code>  очень похоже на обявление {{jsxref('Statements/function*', 'function*')}}, и имеет почти такой же синтаксис. Основная разница между выражением <code>function*</code> и объявлением <code>function*</code> – в <em>имени функции,</em> которое может быть опущено в выражениях <code>function*</code> для создания <em>анонимных</em> функций. Смотрите главу о <a href="/ru/docs/Web/JavaScript/Reference/Functions">функциях</a> для получения более подробной информации.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>В следующем примере определяется безымянная функция-генератор и присваивается переменной <code>x</code>. Функция возвращает квадрат своего аргумента:</p>
+
+<pre class="brush: js">var x = function*(y) {
+   yield y * y;
+};
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#', 'function*')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#', 'function*')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Характеристика</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("26.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>yield*</code></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("27.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Характеристика</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("26.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>yield*</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("27.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Statements/function*", "function* statement")}}</li>
+ <li>Объект {{jsxref("GeneratorFunction")}}</li>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols#Протокол_Итератор">Протоколы перебора: Итератор</a></li>
+ <li>{{jsxref("Operators/yield", "yield")}}</li>
+ <li>{{jsxref("Operators/yield*", "yield*")}}</li>
+ <li>Объект {{jsxref("Function")}}</li>
+ <li>{{jsxref("Statements/function", "function statement")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Functions", "Функции")}}</li>
+</ul>

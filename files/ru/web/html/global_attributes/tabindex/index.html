@@ -1,0 +1,112 @@
+---
+title: tabindex
+slug: Web/HTML/Global_attributes/tabindex
+translation_of: Web/HTML/Global_attributes/tabindex
+---
+<p>{{HTMLSidebar("Global_attributes")}}</p>
+
+<p class="note">Максимальное значение для tabindex не должно превышать 32767 (W3C 17.11.1)</p>
+
+<p><a href="https://developer.mozilla.org/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B">Глобальный атрибут</a> <strong>tabindex </strong>-<strong> </strong>целое число, определяющее должен ли данный элемент участвовать в последовательной навигации по всей странице с помощью клавиатуры, в каком порядке. Содержит одно из нескольких видов значений:</p>
+
+<ul>
+ <li>если представлено <em>отрицательное значение</em> – элемент может быть выделен, однако не участвует в последовательной навигации;</li>
+ <li>если представлен <strong>0</strong> – элемент может быть выделен и достигнут с помощью последовательной навигации, однако порядок навигации определён платформой;</li>
+ <li>если представлено <em>положительное целое значение</em> – элемент будет достигнут (и выделен) с помощью последовательной навигации, а порядок навигации определён этим самым значением. В случае, если несколько элементов содержат одно и то же значение <strong>tabindex</strong>, их порядок навигации определён относительным расположением в документе (DOM).</li>
+</ul>
+
+<p>Элементы со значением 0, некорректным значением, или элементы с отсутствующим значением <strong>tabindex </strong>должны быть расположены после элементов с положительным целым числом.</p>
+
+<p>Для более полного объяснения навигации смотри <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Focus_management_in_HTML">данную статью</a>.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Нет изменений с предыдущей спецификации {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>{{SpecName('HTML WHATWG')}}, нет изменений с  {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>{{SpecName('HTML WHATWG')}}. От {{SpecName("HTML4.01")}}, атрибут теперь поддерживается всеми элементами.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Поддерживается только {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li>Все <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</li>
+ <li>{{domxref("HTMLElement.tabindex")}} отражает этот атрибут.</li>
+ <li>Проблемы доступности (юзабилити): смотри <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html" id="id-22" style="font-size: inherit; line-height: inherit;" title="Don’t Use Tabindex Greater than 0 | Adrian Roselli">Don’t Use Tabindex Greater than 0 | Adrian Roselli</a>.</li>
+</ul>

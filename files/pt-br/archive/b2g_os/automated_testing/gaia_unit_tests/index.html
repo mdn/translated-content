@@ -1,0 +1,206 @@
+---
+title: Testes de unidade Gaia
+slug: Archive/B2G_OS/Automated_testing/Gaia_unit_tests
+tags:
+  - Automação
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Mobile
+  - NeedsContent
+  - Testes
+  - construindo documentação
+  - testes de unidade
+translation_of: Archive/B2G_OS/Automated_testing/Gaia_unit_tests
+---
+<div class="summary">
+<p>Como parte do código-fonte Gaia / B2G, fizemos vários testes de unidade disponíveis para execução, para testar diferentes aspectos de Gaia e B2G. Este artigo explica como acessá-los.</p>
+</div>
+
+<div class="note">
+<p>Nota: Este documento assume que você entenda completamente como trabalhar com Gaia e B2G. Consulte <a href="/pt-BR/Firefox_OS/Developing_Gaia">Desenvolvendo Gaia</a> para se familiarizar.</p>
+</div>
+
+<h2 id="Rodando_testes_de_unidade">Rodando testes de unidade</h2>
+
+<p>Você pode rodar testes de  unidade no <a href="/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a>, <a href="http://nightly.mozilla.org/">Firefox Nightly</a> ou <a href="/pt-BR/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_in_Firefox_Mulet">Mulet</a>. Você também precisará da última versão <a href="https://github.com/mozilla-b2g/gaia/">Gaia repo</a>. Para a maioria das funcionalidades, você também precisa ter o <a class="external" href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a> e o <a class="external" href="http://npmjs.org/" title="http://npmjs.org/">NPM</a> instalados.</p>
+
+<div class="warning">
+<p>Aviso: Nós provavelmente vamos descontinuar a execução de testes no Firefox em breve. Utilize <a href="/pt-BR/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_in_Firefox_Mulet">Mulet</a> a partir de agora.</p>
+</div>
+
+<div class="note">
+<p>Nota: Se os seguintes comandos falharem com erros criptográficos ao instalar dependências do tipo test-agente, pode ser que a suas versões Node.js / NPM sejam muito antigas. Leia <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">Instalando Node.js via gerenciador de pactoes</a> Node.js via gerenciador de pacotes para instalar as versões mais recentes e exclua a pasta <code>node_modules/test-agent</code>.)</p>
+</div>
+
+<div class="note">
+<p>Nota: No Ubuntu (e possivelmente alguns outros Linux distros também), Node.js é chamado nodejs e node é chamado de programa Amateur Packet Radio "Node". Se você está recebendo um problema com a execução de testes unitários nesses sistemas (mensagens de erro podem significar que "Esta falha pode ser devido ao uso de legado binário 'node'"), então você deve instalar o pacote node nodejs-legacy. Isso impede que um conflito com o Programa Amateur Packet Radio "Node", removendo <code>/usr/sbin/node</code> e transformando-o em um link simbólico para <code>/usr/bin/nodejs</code>, que deve tornar as coisas funcionarem conforme o esperado.</p>
+</div>
+
+<p>A repo Gaia contém um script bin / gaia-teste bastante acessível, que ajuda executar os testes de uma maneira mais fácil.</p>
+
+<div class="warning">
+<p>Aviso: este script irá gerar um perfil adequado para testes de unidade no perfil-debug. Se você já tem outro perfil neste diretório ele será substituído. O <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980496"> Bug 980496</a> visa torná-lo configurável.</p>
+</div>
+
+<h3 id="Lançando_o_executor_de_testes_de_Mulet_ou_Firefox">Lançando o executor de testes de Mulet ou Firefox</h3>
+
+<p>Isto irá rodar o servidor de teste e lançar o seu Firefox padrão como encontrado no caminho:</p>
+
+<pre class="brush: bash">bin/gaia-test</pre>
+
+<h4 id="Escolhendo_Firefox_binário">Escolhendo Firefox binário</h4>
+
+<p>Você pode exportar a variável de ambiente do Firefox para o seu binário firefox. Por exemplo, no OS X:</p>
+
+<pre class="brush: bash">export FIREFOX=/Applications/FirefoxNightly.app/Contents/MacOS/firefox</pre>
+
+<p>Alternativamente, você pode passá-la como argumento para bin/gaia-teste:</p>
+
+<pre class="brush: bash">bin/gaia-test &lt;gaia directory&gt; &lt;firefox path&gt;</pre>
+
+<h3 id="Lançando_o_executor_de_testes_no_B2G_desktop">Lançando o executor de testes no B2G desktop</h3>
+
+<p>Isto irá baixar e lançar o B2G área de trabalho:</p>
+
+<pre class="brush: bash">bin/gaia-test -d</pre>
+
+<h3 id="Execute_os_testes_a_partir_da_interface_Web">Execute os testes a partir da interface Web</h3>
+
+<p>Você pode simplesmente clicar em testes específicos e, em seguida, no botão Executar.</p>
+
+<h3 id="Execute_os_testes_a_partir_da_linha_de_comando">Execute os testes a partir da linha de comando</h3>
+
+<p>Com o servidor WebSocket running, e o app Test Agent em execução no B2G Desktop / Firefox Nightly, execute o seguinte comando:</p>
+
+<pre>make test-agent-test
+</pre>
+
+<p>Se você só deseja executar testes de um aplicativ,o você pode especificar quais via variável env APP:</p>
+
+<pre>make test-agent-test APP=calendar
+</pre>
+
+<p>Você pode também fornecer, opcionalmente, um repórter para formatar a saída do teste: <a class="external" href="http://visionmedia.github.com/mocha/#reporters" title="http://visionmedia.github.com/mocha/#reporters">reporter</a> to format the test output:</p>
+
+<pre>make REPORTER=List test-agent-test
+</pre>
+
+<div class="note">Nota: Nem todos os repórteres trabalham, uma vez que atualmente não suportam Doc.</div>
+
+<h3 id="Execute_os_testes_enquanto_você_salva">Execute os testes enquanto você salva</h3>
+
+<blockquote>
+<p>Quando o servidor está em execução, os testes para um arquivo são executados automaticamente quando um arquivo é salvo ou mesmo quando ele é tocado:</p>
+</blockquote>
+
+<ul>
+ <li>Quando você salvar um arquivo de teste, o próprio arquivo de teste é executado.</li>
+ <li><span style="line-height: 19.0909080505371px;">Quando você salvar um outro arquivo, ele encontra um arquivo correspondente no diretório test / unit, usando como sufixo o nome do arquivo com <code>_test.js</code>.</span></li>
+</ul>
+
+<div class="note">
+<p>Nota: ele observa somente arquivos existentes, então se você criar um novo arquivo, você tem que reiniciar o agente.</p>
+</div>
+
+<h3 id="A_execução_de_testes_como_Buildbot_faz">A execução de testes como Buildbot faz</h3>
+
+<p>Testes de unidade no Gaia Buildbot são executados usando um executor separado; isto explica como usá-lo. Por favor, consulte os documentos <a href="/pt-BR/docs/Python/Virtualenv" style="line-height: 19.0909080505371px;" title="/en-US/docs/Python/Virtualenv">virtualenv</a> se você não estiver familiarizado com o uso de um virtualenv Python.</p>
+
+<pre class="brush: bash">virtualenv venv
+source venv/bin/activate
+cd $GAIA/tests/python/gaia-unit-tests
+python setup.py develop
+cd gaia_unit_test
+python main.py --binary /path/to/b2g/desktop/build --profile /path/to/gaia/profile
+</pre>
+
+<div class="note">
+<p>Nota: Ao especificar o caminho para a construção de desktop B2G, você deve especificar o caminho para B2G-bin, se ele existir, caso contrário use B2G.</p>
+</div>
+
+<p>O perfil de Gaia deve ser feito usando o seguinte:</p>
+
+<pre class="brush: bash">NO_LOCK_SCREEN=1 DEBUG=1 DESKTOP=0 make</pre>
+
+<p>Por padrão, este perfil será gerado no <code>$ GAIA/profile-debug</code>. O <code>bin/ gaia-teste</code> gera o mesmo perfil, de modo que você não precisa regenerá-lo se você já tiver executado o gaia-teste.</p>
+
+<h3 id="Desativando_um_teste_de_unidade_gaia_em_automação">Desativando um teste de unidade gaia em automação</h3>
+
+<p>Automação usa uma lista negra para excluir certos testes de unidade gaia de serem executadas. Para evitar que um teste de correr em automação, adicione seu caminho para <a href="https://github.com/mozilla-b2g/gaia/blob/master/tests/python/gaia-unit-tests/gaia_unit_test/disabled.json">https://github.com/mozilla-b2g/gaia/blob/master/tests/python/gaia-unit-tests/gaia_unit_test/disabled.json</a>.</p>
+
+<h2 id="Configurando_o_seu_app_Gaia">Configurando o seu app Gaia</h2>
+
+<p>Embora este guia possa ajudar a tornar as coisas mais fáceis, a melhor maneira de aprender a escrever, criar e executar testes ainda está em olhar para o código-fonte; em particular, nos <a class="link-https" href="https://github.com/lightsofapollo/gaia/tree/master/apps/gallery/test" title="https://github.com/lightsofapollo/gaia/tree/master/apps/gallery/test">testes de galeria</a>.</p>
+
+<h3 id="Carregando_seus_próprios_arquivos_de_teste" style="line-height: 24px; font-size: 1.71428571428571rem;">Carregando seus próprios arquivos de teste</h3>
+
+<div class="note">
+<p>Nota: Esta é uma técnica avançada e totalmente opcional. Se o carregador de testes nativo do test-agent estiver funcionando em sua aplicação, assim como o seu teste de estilo, e você não quiser usar seus próprios arquivos de teste, esta seção não é para você!</p>
+</div>
+
+<p>O test-agent carrega seus arquivos de teste em um ambiente onde eles têm acesso a mocha (assim como outros bits de estado global). Um test-agent global importante é o require, que permite que o seu arquivo de teste carregue uma dependência (código da aplicação, por exemplo). Às vezes, principalmente se os seus arquivos de aplicativos estiverem esperando para serem carregados de uma maneira diferente da exigência do test-agent, ele pode ser útil para substituir o carregador de arquivo de teste do test-agente. Você também pode fazê-lo da seguinte maneira:</p>
+
+<pre class="brush: js" style="font-size: 14px;">// setup.js
+
+testAgentRuntime.testLoader = function(path) {
+  // We're going to return a promise to represent
+  // the loading state of the test file at this path.
+  return new Promise((accept, reject) =&gt; {
+    // Load the parameter test file and resolve (or reject) appropriately
+    // ...
+  });
+};</pre>
+
+<h2 id="Usando_simulações">Usando simulações</h2>
+
+<p>TBD</p>
+
+<h2 id="Avançado_o_que_é_que_o_script_faz">Avançado: o que é que o script faz?</h2>
+
+<h3 id="Gerando_um_perfil">Gerando um perfil</h3>
+
+<p>Você precisa de um perfil que é gerado por este comando:</p>
+
+<pre class="brush: bash">NO_LOCK_SCREEN=1 DEBUG=1 DESKTOP=0 make
+</pre>
+
+<p>Isso gera um perfil de depuração no gaia/profile-debug, substituindo um perfil anterior, se você já tiver um.</p>
+
+<ul>
+ <li><code>DEBUG=1</code> permite a extensão <code>httpd.js</code> que torna possível usar diretamente os arquivos do diretório <code>apps/</code>.</li>
+ <li><code>NO_LOCK_SCREEN=1</code> desativa a tela de bloqueio, que é necessária na área de trabalho B2G , porque não é possível desbloqueá-la usando o mouse.</li>
+ <li><code>DESKTOP=0</code> desativa os outros addons que normalmente usamos no modo de depuração para executar o Gaia no Firefox.</li>
+</ul>
+
+<h3 id="Inicie_o_servidor_WebSocket">Inicie o servidor WebSocket</h3>
+
+<p>O agente de teste (o corredor de teste) vem com um servidor WebSocket construído que permite que você envie uma mensagem remotamente ao navegador ou dispositivo para fila de teste. Muitas vezes você poderá querer desenvolver utilizando recursos de economia de tempo como um observador de arquivo que irá executar os testes quando um arquivo de teste ou implementação mudar. Para aproveitar destas características você precisa iniciar o servidor:</p>
+
+<pre class="brush: bash">make test-agent-server
+</pre>
+
+<p>O servidor WebSocket fornece outras ferramentas durante o uso, como por exemplo, um repórter de linha de comando para os resultados do teste (assista ao terminal no qual você executou o comando), um repórter Growl, as notificações de erro de sintaxe, e muito mais.</p>
+
+<p>O agente também assiste alterações nos arquivos, automaticamente executa os testes associados. Ele é executado quando você salva o teste ou se você salva o arquivo testado (nós usamos a convenção na qual o nome do arquivo de teste é o nome do arquivo testado com <code>_test </code>anexado, veja abaixo para mais exemplos). Ela vê apenas os arquivos existentes, então se você criar um novo arquivo, você terá que reiniciar o agente.</p>
+
+<h3 id="Executando_testes_unitários_com_o_Firefox_Nightly">Executando testes unitários com o Firefox Nightly</h3>
+
+<p>Você pode lançar Gaia no Firefox Nightly com os seguintes comandos:</p>
+
+<pre class="brush: bash">cd &lt;path to gaia&gt;
+&lt;path to nightly&gt;/firefox --no-remote -profile &lt;path to gaia&gt;/profile-debug/ http://test-agent.gaiamobile.org:8080/</pre>
+
+<div class="note">
+<p>Nota: No OS X, o caminho do perfil deve ser um caminho absoluto</p>
+</div>
+
+<p>Você pode usar o Firebug ou o depurador integrado para depurar os testes; use a palavra-chave depurador para quebrar no depurador.</p>
+
+<h3 id="Executando_testes_unitários_com_B2G_desktop">Executando testes unitários com B2G desktop</h3>
+
+<p>Inicie o Gaia e o app "Test Agent". A partir do app gent Teste você pode selecionar os testes para executar a partir da interface do usuário.</p>
+
+<h2 id="Avançado_como_é_que_o_agente_de_teste_funciona">Avançado: como é que o agente de teste funciona?</h2>
+
+<p><span style="line-height: 19.0909080505371px;">O agente de teste vive em </span><a href="https://github.com/mozilla-b2g/js-test-agent">seu próprio repositório Github</a>. <span style="line-height: 19.0909080505371px;"> Você pode dar uma olhada lá para entender como ele funciona sob o capô.</span></p>

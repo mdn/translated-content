@@ -1,0 +1,66 @@
+---
+title: Упакованные приложения
+slug: Mozilla/Marketplace/Options/Packaged_apps
+translation_of: Archive/Mozilla/Marketplace/Options/Packaged_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">A <strong>packaged app</strong> is an Open Web App that has all of its resources (HTML, CSS, JavaScript, app manifest, and so on) contained in a zip file, instead of having its resources on a Web server. This article provides an introduction to packaged apps and links to everything you need to know about packaged apps from a developer standpoint.</span></p>
+</div>
+<p>A packaged app is zip file that contains all the resources that enable an Open Web App to function, along with an <a href="/en-US/docs/Web/Apps/Manifest">app manifest</a> in the zip's root directory. The app manifest provides details about the app such as its description, icons used to identify the installed app and such. The package is then used to install the app to Firefox OS devices, <a href="/en-US/Marketplace/Options/Open_web_apps_for_android">Android devices</a> and <a href="/en-US/Marketplace/Options/Open_web_apps_for_desktop">desktops</a>. Once installed the app runs on the device, but is still able to access resources on the Web, such as a database on a Web server.</p>
+<p>There are three <a href="#types_of_packaged_apps">types of packaged apps</a>: web app, privileged app and certified app. While packaged apps can be used to deliver any type of Open Web App, privileged and certified apps are digitally signed to enable the use of <a href="/en-US/Apps/Build/App_permissions">privileged and certified APIs</a>. Privileged apps are signed as part of the Marketplace review process, while certified apps are signed by device manufacturers or operators.</p>
+<p>In addition to their ability to use privileged and certified APIs, packaged apps offer users a faster first start response as all the of the app's resources are available on the device after installation. These feature makes packaged apps the recommended approach for delivering Open Web Apps to Firefox OS devices, <a href="/en-US/Marketplace/Options/Open_web_apps_for_android">Android devices</a> and <a href="/en-US/Marketplace/Options/Open_web_apps_for_desktop">desktops</a>.</p>
+<div class="note">
+ <p><strong>Примечание:</strong> Currently the Firefox Marketplace supports web and privileged packaged apps. In addition, Firefox Marketplace supports paid packaged apps for Firefox OS only and free packaged apps for Firefox OS, Firefox for Android and Firefox for Desktop. Support for paid apps on all platforms is under development.</p>
+</div>
+<h2 id="Виды_упакованных_приложений"><a name="types_of_packaged_apps">Виды упакованных приложений</a></h2>
+<p>There are three types of packaged apps: web apps, privileged apps and certified app. Each type of packaged app corresponds to a level of the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model#App_Security">App Security</a> model implemented in Firefox OS. This section provides more information on each.</p>
+<h3 id="Веб-приложение">Веб-приложение</h3>
+<p>A web app is one that doesn't make use of privileged or internal (certified) APIs. When submitted to Marketplace the app's package is signed, but the special authentication process used for privileged or internal apps isn't performed. Web apps therefore cannot use privileged or internal APIs. These apps are not subject to the <a href="/en-US/Apps/CSP">Content Security Policies</a> (CSPs) required for privileged and internal apps.</p>
+<p>This type of packaged app doesn't require the <code>type</code> field in its <code>manifest.webapp</code> file, because the default value for <code>type</code> (<code>web</code>) is correct.</p>
+<div class="note">
+ <p><strong>Примечание</strong>: Web apps may be <a href="/en-US/Marketplace/Options/Self_publishing">self-published</a> or distributed through the Firefox Marketplace.</p>
+</div>
+<div class="note">
+ <p><strong>Примечание</strong>: Web apps can also be delivered using the <a href="/en-US/Marketplace/Options/Hosted_apps">Hosted app</a> mechanism.</p>
+</div>
+<h3 id="Приложение_с_привелегиями">Приложение с привелегиями</h3>
+<p>A privileged app is one that makes use of privileged APIs and can be considered as the equivalent of a native app on platforms such as iOS and Android. When submitted to the Firefox Marketplace, privileged apps are approved using a special process. This process gives users of the app a level of assurance that the app has been carefully reviewed for potential security, privacy, and capability issues.</p>
+<p>To specify that an app is a privileged app, add the <a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> field to its <code>manifest.webapp</code> file and set its value to <code>privileged</code>. Every privileged API your app needs to access  must be added to the <code>permissions</code> field in the <a href="/en-US/docs/Web/Apps/Manifest">app's manifest</a>.</p>
+<p>Firefox OS and the Web runtimes for Android and desktops enforces the following <a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">CSP</a> for privileged apps:</p>
+<pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+<div class="note">
+ <p><strong>Примечание</strong>: Privileged apps may be distributed through the Firefox Marketplace only.</p>
+</div>
+<h3 id="Internal_(Certified)_apps">Internal (Certified) apps</h3>
+<div class="geckoVersionNote">
+ <p>Internal apps are not generally available for being created by third-party developers and aren't distributed through the Firefox Marketplace. The long term goal for internal APIs is to harden them so they can be made available as privileged APIs. If you've an interest in seeing a particular API made available, please provide feedback on the <a href="https://lists.mozilla.org/listinfo/dev-webapps">dev-webapps</a> mailing list.</p>
+</div>
+<p>An internal app is one that makes used of internal (certified) APIs, which offer access to critical system function such as the default dialer or the system settings app on a device. Compared to to a privileged app, all API permissions in an internal app are implicit, meaning they are enabled without explicit user approval. An internal app must be approved for a device by the OEM or carrier.</p>
+<p>To specify that an app is an internal app, add the <a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> field to its <code>manifest.webapp</code> file and set it to <code>certified</code>. Every privileged and internal API your app needs to access must be added to the <code>permissions</code> field in the <a href="/en-US/docs/Web/Apps/Manifest">app's manifest</a>.</p>
+<p>Firefox OS implements the following CSP for internal apps:</p>
+<pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+<p>This has the effect of implementing stricter rules for inline CSP for internal compared to privileged apps. If you want to understand the reasoning behind this, see <a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">Default CSP policy</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">Bug 768029</a>.</p>
+<div class="note">
+ <p><strong>Примечание</strong>: Internal apps are preloaded onto devices by OEMs and operators; they are not distributed in any other way.</p>
+</div>
+<div class="note">
+ <p><strong>Примечание</strong>: The internal codename for internal apps is certified apps.</p>
+</div>
+<h2 id="Тестирование_упакованных_приложений">Тестирование упакованных приложений</h2>
+<p>To install a packaged app into a Firefox OS Simulator or onto a device for testing purposes, see <a href="/en-US/Firefox_OS/Using_the_App_Manager">Using the App Manager</a>. Alternatively, you can install it on to a device from a Web server by following the steps described in <a href="/en-US/Marketplace/Options/Self_publishing">Publishing apps yourself</a>. Remember that when you publish apps yourself, packaged web apps only can be installed .</p>
+<h2 id="Публикация_упакованных_приложений">Публикация упакованных приложений</h2>
+<p>You have two options for publishing packaged apps: on Firefox Marketplace or self-publishing.</p>
+<h3 id="Публикация_на_Firefox_Marketplace">Публикация на Firefox Marketplace</h3>
+<p>The process for submitting a packaged app to Firefox Marketplace is described in the <a href="/en-US/Marketplace/Publishing">App Publishing</a> section.</p>
+<p>When you submit your packaged app, its zip file is stored on the Marketplace servers, and the Marketplace generates a new manifest called the <strong>mini-manifest</strong> that is based on the app manifest in your packaged app's zip file. When a user installs your app, the mini-manifest is passed to the <a href="/en-US/docs/Web/API/Apps.installPackage"><code>Apps.installPackage()</code></a> function to install the app. The mini-manifest exists for installation and update purposes and isn't used when your app runs.</p>
+<h3 id="Publishing_yourself">Publishing yourself</h3>
+<p>It's possible to publish packaged web apps outside Firefox Marketplace, on your own web server. Details are provided in <a href="/en-US/Marketplace/Options/Self_publishing">Publishing apps yourself</a>.</p>
+<h2 id="Обновление_упакованных_приложений">Обновление упакованных приложений</h2>
+<p>См. <a href="/ru/docs/Mozilla/Marketplace/Publishing/Updating_apps">Обновление приложений</a>.</p>
+<h2 id="Больше_информации">Больше информации</h2>
+<ul>
+ <li><a href="/en-US/Firefox_OS/Security/Security_model">Firefox OS security Overview</a></li>
+ <li><a href="/en-US/Firefox_OS/Security/Application_security">Application Security</a></li>
+ <li><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS Boilerplate App</a></li>
+</ul>
+<p> </p>

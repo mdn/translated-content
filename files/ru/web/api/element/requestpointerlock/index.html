@@ -1,0 +1,90 @@
+---
+title: Element.requestPointerLock()
+slug: Web/API/Element/requestPointerLock
+translation_of: Web/API/Element/requestPointerLock
+---
+<p>{{ APIRef("DOM") }}{{ seeCompatTable }}</p>
+
+<p>Метод <strong><code>Element.requestPointerLock()</code></strong> позволяет асинхронно запросить блокировку курсора для заданного элемента.</p>
+
+<p>Чтобы отследить успех или ошибку запроса, необходимо слушать события {{event("pointerlockchange")}} и {{event("pointerlockerror")}} на уровне {{domxref("Document")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="eval"><em>instanceOfElement</em>.requestPointerLock();
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Lock','#element-interface','Element')}}</td>
+   <td>{{Spec2('Pointer Lock')}}</td>
+   <td>Extend the <code>Element</code> interface</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }} {{property_prefix("webkit")}}</td>
+   <td>{{ CompatVersionUnknown() }} {{property_prefix("moz")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{ domxref("Document.pointerLockElement") }}</li>
+ <li>{{ domxref("Document.exitPointerLock()") }}</li>
+ <li><a href="/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
+</ul>

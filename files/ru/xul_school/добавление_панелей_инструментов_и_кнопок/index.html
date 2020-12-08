@@ -1,0 +1,214 @@
+---
+title: Добавление панелей инструментов и кнопок
+slug: XUL_School/Добавление_панелей_инструментов_и_кнопок
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_Toolbars_and_Toolbar_Buttons
+---
+<p>{{ PreviousNext("XUL_School/Adding_Menus_and_Submenus", "XUL_School/Adding_events_and_commands") }}</p>
+<h2 id="Панели_инструментов">Панели инструментов</h2>
+<p>Adding new toolbars to Firefox is easy, but adding them the wrong way is very easy as well.</p>
+<p>Toolbars in Firefox are very customizable. Some users don't like extra toolbars, or they want to rearrange toolbar buttons to their liking, possibly merging multiple toolbars in the process. Firefox allows all of this by default, and if you don't pay attention to the details we describe here, your toolbar may not be as easy to customize as the rest.</p>
+<p>The first thing you need to do is add your buttons to the toolbar palette. The <a href="/en/XUL/toolbarpalette" title="en/XUL/toolbarpalette">toolbarpalette</a> is a collection of all toolbar buttons and toolbar items in Firefox, including those added by extensions. To add your buttons, all you need to do is overlay the palette in your main browser overlay.</p>
+<pre>&lt;overlay id="xulschoolhello-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;toolbarpalette id="BrowserToolbarPalette"&gt;
+    &lt;toolbarbutton id="xulschoolhello-hello-world-button"
+      class="toolbarbutton-1 chromeclass-toolbar-additional"
+      label="&amp;xulschoolhello.helloWorld.label;"
+      tooltiptext="&amp;xulschoolhello.helloWorld.tooltip;"
+      oncommand="XULSchoolChrome.BrowserOverlay.doSomething(event);" /&gt;
+    &lt;!-- More buttons here. --&gt;
+  &lt;/toolbarpalette&gt;
+  &lt;!-- More overlay stuff. --&gt;
+&lt;/overlay&gt;
+</pre>
+<p>One detail that is easy to overlook is the fact that the <em>toolbarpalette</em> element is outside of the <em>window</em> element. If you put the <em>toolbarpalette</em> element inside the <em>window</em> element in your overlay, some weird errors will begin to happen.</p>
+<div class="note">
+ <p>Always set the <em>label</em> and <em>tooltiptext</em> attributes of a <a href="/en/XUL/toolbarbutton" title="en/XUL/toolbarbutton">toolbarbutton</a>. In the case of a <a href="/en/XUL/toolbaritem" title="en/XUL/toolbaritem">toolbaritem</a> element (discussed later), use the <em>title</em> attribute instead of <em>label</em>. Tooltips are very important for users that want to know what a button does before clicking it.</p>
+</div>
+<p>Setting the image for a toolbar button is done with CSS:</p>
+<pre>#xulschoolhello-hello-world-button {
+  list-style-image: url("chrome://xulschoolhello/skin/hello-world.png");
+}
+</pre>
+<p>It's not really that simple to set the image for a toolbar button, because we need to consider the appearance of the button on different systems, and also consider the different button states, but we'll get into that further ahead.</p>
+<p>The CSS file with your toolbar styles needs to be included in the overlay file, as you would expect, but also in the chrome.manifest file. This is very important because the toolbar customization dialog won't work correctly without this. The way to include the file in the manifest is to add this line:</p>
+<pre>style chrome://global/content/customizeToolbar.xul chrome://xulschoolhello/skin/toolbar.css
+</pre>
+<p>If you are using XBL bindings (explained way ahead) for your toolbar items, you'll have to include the CSS files for those as well, each in a new line like the one above.</p>
+<p>We now have code that adds one or more buttons to the toolbar palette. The user can now use the Customize Dialog to add the buttons to the current Firefox toolbars. In most cases this is not what you want as default behavior, because it would be very hard for the user to discover your buttons. Keep in mind most users don't know how to customize toolbars in Firefox.</p>
+<p>Теперь давайте создадим свою панель инструментов - <a href="/en/XUL/toolbar" title="en/XUL/toolbar">toolbar</a>. Это также делается в в оверлее.</p>
+<pre class="brush: xml">&lt;overlay ...&gt;
+  ...
+  &lt;window id="main-window"&gt;
+    &lt;toolbox id="navigator-toolbox"&gt;
+      &lt;toolbar id="xulschoolhello-toolbar"
+        &lt;!-- toolbarname="&amp;xulschoolhello.toolbarName.label;"
+        accesskey="&amp;xulschoolhello.toolbar.accesskey;"
+        customizable="true" mode="icons"
+        context="toolbar-context-menu"
+        defaultset="xulschoolhello-hello-world-button"
+        insertbefore="PersonalToolbar" --&gt; /&gt;
+    &lt;/toolbox&gt;
+  &lt;/window&gt;
+  ...
+&lt;/overlay&gt;</pre>
+<p>Our toolbar is added as a child of the <a href="/en/XUL/toolbox" title="en/XUL/toolbox">toolbox</a> element in the main browser window. The toolbox is the collection of toolbars in Firefox, including the main menu bar. Let's look at the attributes we used:</p>
+<ul>
+ <li>The <em>toolbarname</em> is the name that will appear on the View &gt; Toolbars menulist. This menu allows hiding and showing any toolbar.</li>
+ <li>The <em>customizable</em> attribute determines if the user can customize the toolbar. You should normally set this to <em>true</em>, unless you have strong reasons not to want users changing your toolbar.</li>
+ <li>The <em>mode</em> attribute is set to <em>icons</em>, which is the usual value. This can be changed in the Customize dialog by the user.</li>
+ <li>The <em>context</em> attribute should also be set if you want a customizable toolbar. It points to the id of a popup element that holds the customization options that are displayed when the user right-clicks on the toolbar. This popup is already part of the main window, so it doesn't need to be implemented again.</li>
+ <li>The <em>defaultset</em> attribute lists the ids of the icons you want to include on your toolbar by default. It's a comma-separated list of ids, and it can also include other special values: <em>spacer</em>, <em>separator</em> and <em>spring</em>. <em>spacer</em> represents an empty button space, <em>separator</em> a vertical separation line and <em>spring</em> a flexible empty area that stretches.</li>
+ <li>Finally, the <em>insertbefore</em> attribute places our toolbar above the Bookmarks Toolbar. This is a matter of personal preference, but the Mac OS theme seems to be designed so that the Bookmarks Toolbar is always the last one (it has a lighter color than the rest). It also makes sense from a usability perspective, since bookmarks should be very easy to access for the user.</li>
+</ul>
+<p>That's it for the basics. With this knowledge you should be able to create simple toolbars and toolbar buttons you can add to Firefox. Now we'll look deeper into the details of toolbars so that you can make <strong>great</strong> toolbars.</p>
+<h2 id="Кнопки_на_панели_инструментов">Кнопки на панели инструментов</h2>
+<p>There are several types of buttons and elements you can add to a toolbar depending on your needs. The <a href="/en/XUL/toolbarbutton" title="en/XUL/toolbarbutton">toolbarbutton</a> element has the <em>type</em> attribute that allows you to change the behavior of the button in many ways. The <em>menu</em> and <em>menu-button</em> types allow you to create buttons that open popup menus beneath them. See the Back/Forward buttons in the main Firefox toolbar for an example. Menu toolbar buttons are handy when you want to include many options in your toolbar and you don't want it to be too cluttered. The other types, <em>checkbox</em> and <em>radio</em> are useful when you have buttons that change state when the user clicks on them. Read more about this in the <a href="/en/XUL/Attribute/toolbarbutton.type" title="en/XUL/Attribute/toolbarbutton.type">type attribute</a> specification.</p>
+<div class="note">
+ <p>Keep in mind some users have small screens with low resolution. If you shrink the Firefox window, you'll notice that the content resizes until it reaches its minimum size and begin to be cropped (cut), making UI elements disappear. You should test that your toolbar resizes gracefully and doesn't force Firefox to crop content before it's strictly necessary.</p>
+</div>
+<p>Добавим кнопку на нашу панель инструментов.</p>
+<pre class="brush: xml">&lt;overlay ...&gt;
+  ...
+  &lt;window id="main-window"&gt;
+    &lt;toolbox id="navigator-toolbox"&gt;
+      &lt;toolbar id="xulschoolhello-toolbar"&gt;
+        &lt;toolbarbutton id="xulschoolhello-btn" label="Hello" /&gt;
+      &lt;/toolbar&gt;
+    &lt;/toolbox&gt;
+  &lt;/window&gt;
+  ...
+&lt;/overlay&gt;</pre>
+<div>
+  </div>
+<p>When you need something more elaborate than a button in your toolbar, you can use the <a href="/en/XUL/toolbaritem" title="en/XUL/toolbaritem">toolbaritem</a> element instead. This element is nothing more than a wrapper, so you can have whatever XUL content you want in it. However, you should keep in mind that odd-looking toolbars are likely to confuse and annoy users. Use custom toolbar items sparingly.</p>
+<h3 id="Иконки_кнопок_на_панели_инструментов">Иконки кнопок на панели инструментов</h3>
+<p>Создание иконок для панели инструментов является одной из наиболее трудных задач при разработке расширения. Придумать рисунки для кнопок не трудно, сложнее заставить их гармонировать с Firefox в разных операционных системах. Внимание к иконкам значительно изменилось после Firefox 4, поэтому о старых версиях здесь не будет упоминаться однако, можете проверить более ранние ревизии этого документа).</p>
+<p>Наборы иконок для Firefox:</p>
+<p><strong>Windows</strong></p>
+<p><img alt="Toolbar-win.png" class="internal default" src="/@api/deki/files/5960/=Toolbar-win.png"></p>
+<p><strong>Mac OS X (Lion и старше)</strong></p>
+<p><img alt="Toolbar-mac-lion.png" class="internal default" src="/@api/deki/files/5958/=Toolbar-mac-lion.png"></p>
+<p><strong>Mac OS X</strong></p>
+<p><img alt="Toolbar-mac.png" class="internal default" src="/@api/deki/files/5959/=Toolbar-mac.png"></p>
+<p><strong>Linux (Gnome)</strong></p>
+<p><img alt="Toolbar-gnome.png" class="internal default" src="/@api/deki/files/5957/=Toolbar-gnome.png"></p>
+<p><img alt="Toolbar-gnome-small.png" class="internal default" src="/@api/deki/files/5956/=Toolbar-gnome-small.png"></p>
+<div class="note">
+ <p>Примечание: изображения выше, вероятно, не распространяются по той же лицензии CC в отличие от данного материала</p>
+</div>
+<p><span class="short_text" id="result_box" lang="ru"><span class="hps">Вот ключевые</span> <span class="hps">сходства и различия между</span></span> этими тремя темами:</p>
+<ul>
+ <li>Все ОС используют иконки 16x16 пикселей. Только у окружения Gnome есть набор с большими иконками 24x24 пикселей.</li>
+ <li>Всего несколько иконок имеют различные состояния. Для состояния 'недоступно' большинство иконок обрабатываются средствами CSS.</li>
+ <li>У каждого набора иконок различные поля (padding). Для Windows они образуют рамку в 19x19 пикселей, в то время как для Mac OS в 20x20 пикселей. Но это не так важно, так как сама иконка останется 16x16 и будет размещена в центре рамки.</li>
+ <li>Иконки для Mac OS X Lion светлее.</li>
+ <li>В Linux, иконки по умолчанию 24x24 пикселй. С тех пор как Firefox является <a class="external" href="http://www.gtk.org/" title="http://www.gtk.org/">GTK</a> приложением, используются <a class="external" href="http://library.gnome.org/devel/gtk/stable/gtk-Stock-Items.html" title="http://library.gnome.org/devel/gtk/stable/gtk-Stock-Items.html">GTK иконки</a> насколько это возможно. Значки в изображениях выше те, которых нет в GTK. GTK иконки доступны по специальным URL, например: <a class="external" rel="freelink">moz-icon://stock/gtk-go-back?size=menu</a>. Вы можете перейти по этому URL в Firefox для Linux и убедиться, что иконка отображается. Поэтому в наборе для Linux все еще остаются цветные значки.</li>
+</ul>
+<p>Now let's look at the CSS work involved in a toolbar that works on the aforementioned systems. If you want your toolbar to look right on all systems, you should consider having different icon sets for each. You should also consider using a graphic designer for this work, as it takes a lot of attention to detail to make good icons.</p>
+<p>You can have a different skin directory for each operating system using Manifest Flags in the chrome.manifest file:</p>
+<pre>skin xulschoolhello classic/1.0 skin/unix/
+skin xulschoolhello classic/1.0 skin/win/    os=WINNT
+skin xulschoolhello classic/1.0 skin/mac/    os=Darwin
+</pre>
+<p>The <a href="/en/Chrome_Registration#Manifest_flags" title="https://developer.mozilla.org/en/Chrome_Registration#Manifest_flags">osversion flag</a> can be used in case we wanted to have different icons for Mac OS X Lion and above, and others for older systems. In this example we won't bother.</p>
+<p>There is a separate skin directory for each system, with the Unix theme as the default (as most other systems are Unix-based). This makes it easy to keep the themes separate and to make changes to one of them without having to worry about the rest. On the other hand, it is often the case that there are multiple images and CSS sheets that are the same for all systems. For example, your extension logo icon will probably be the same. Having multiple copies of these files can be wasteful, so you may want to have a "common" directory.</p>
+<div class="note">
+ <p>Image files use the most space in an extension package, by far. Most extensions are a few hundred kilobytes in size or smaller. If your file is getting too big, you should look into optimizing your images.</p>
+</div>
+<p>Given the way manifest files work, we have found that the best solution is to have a separate package name for OS-specific skin files.</p>
+<pre>skin xulschoolhello    classic/1.0 skin/all/
+skin xulschoolhello-os classic/1.0 skin/unix/
+skin xulschoolhello-os classic/1.0 skin/win/    os=WINNT
+skin xulschoolhello-os classic/1.0 skin/mac/    os=Darwin
+</pre>
+<p>All we did here is add a new entry for "common" styles that points to the <em>all</em> directory. The OS-specific entries now use a different package name: <em>xulschoolhello-os</em>. Now you just need to be careful about when to use <em><a class="external" rel="freelink">chrome://xulschoolhello/skin/</a></em> and when to use <em><a class="external" rel="freelink">chrome://xulschoolhello-os/skin/</a></em>. It's a bit hacky, but it works well.</p>
+<p>As for the image files themselves, you may be wondering why it is that all icons are included in a single file instead of having one file for every icon. One reason is that it would be complicated to manage that many files, and it becomes more likely that changes made to some of the files lead to an inconsistent appearance that is not obvious by looking at the individual files. It is easier to be able to edit all icons in one go. There is also a performance gain from using a single file. To get the region that corresponds to a specific state of an icon, the <a href="/en/CSS/-moz-image-region" title="en/CSS/-moz-image-region">-moz-image-region</a> CSS property is used.</p>
+<p>Here are some examples of how the CSS for a <em>toolbarbutton</em> would look like on the 3 major platforms. This assumes that you've set the class<em> xs-hw-toolbarbutton</em> to all of your buttons.</p>
+<p>Windows:</p>
+<pre>/* The second and third selectors at the bottom are necessary to prevent
+   conflicts with installed themes. */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton,
+toolbar[iconsize="small"] toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+</pre>
+<p>Mac OS X:</p>
+<pre>/* The second and third selectors at the bottom are necessary to prevent
+   conflicts with installed themes. */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton,
+toolbar[iconsize="small"] toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+</pre>
+<p>Linux:</p>
+<pre>/* The second and third selectors at the bottom are necessary to prevent
+   conflicts with installed themes. */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar-large.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+}
+
+toolbar[iconsize="small"] #xulschoolhello-hello-world-button {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+</pre>
+<p>Several CSS rules apply by default to all toolbar buttons. These add the button-like look you want. If for some reason you want to override these styles (not recommended), you'll need the following rule:</p>
+<pre>-moz-appearance: none;
+</pre>
+<p><a href="/en/CSS/-moz-appearance" title="en/CSS/-moz-appearance">-moz-appearance</a> can be used in many cases where you want to strip the native look out of an element. This will save you a lot of time trying to remove all the CSS rules that give the buttons a native look. You'll probably still need to override a couple other CSS rules to get a completely plain look.</p>
+<h2 id="The_Customize_Toolbars_Dialog">The Customize Toolbars Dialog</h2>
+<p>Firefox has the option to customize its toolbars. We've already mentioned this before, and if you follow our recommendations, then you shouldn't have many problems making your toolbar compatible with the Customize Toolbars dialog. The dialog can be opened from View &gt; Toolbars &gt; Customize..., or by right-clicking on the main toolbar (or any toolbar with the correct <em>context</em> attribute value) and clicking on the Customize option.</p>
+<p>Other than what we have stated before, you should take into account the controls at the bottom of the Customize Toolbars dialog. You should test your toolbar buttons and items under all combinations of Icons / Icons and text / Text, Use Small Icons, and hiving your icons in different toolbars. You should also test that the Reset to Defaults button works correctly. Adding elements to your toolbar that are not <em>toolbarbutton</em> or <em>toolbaritem</em> will cause it to fail. Make sure your icons look OK while the Customize Dialog is open, and after clicking on the OK button. If you use XBL bindings, make sure everything works normally after customizing toolbars. All of this is very important to test because, when the dialog is opened, Firefox changes the DOM of the toolbar, adding wrapper elements that allow the customization. This tends to break very specific CSS, and XBL bindings lose their internal state when moved around the DOM.</p>
+<h2 id="Добавление_кнопок_на_уже_существующие_панели_инструментов">Добавление кнопок на уже существующие панели инструментов</h2>
+<p>Finally, there is the very common case where you just want to add one button to the main toolbar. In this case you still need to add the button to the palette using an overlay. In order to add your button to the main toolbar on first run, you'll have to use Javascript code. Keep in mind that you shouldn't assume anything about the location (or presence!) of any specific buttons; remember users could have moved them or removed them altogether. The <a href="/en/Code_snippets/Toolbar#Adding_button_by_default" title="en/Code snippets/Toolbar#Adding button by default">Toolbar Code Snippets</a> page has a code sample you can use to do this.</p>
+<p>Remember to validate if your button is already present, to prevent duplicates. It's also a good idea to set a preference that indicates that you added your button already, so that it can be removed permanently if the user chooses to. Another option is to use <a href="/en/Toolkit_API/extIExtension" title="en/FUEL:Extension">FUEL's firstRun</a> property, which also relies on a preference.</p>
+<p><strong>Firefox 3</strong></p>
+<pre class="brush: js">let extension = Application.extensions.get(YOUR_EXTENSION_ID);
+
+if (extension.firstRun) {
+  // add button here.
+}
+</pre>
+<p><strong>Firefox 4</strong></p>
+<pre class="brush: js">Application.getExtensions(function (extensions) {
+    let extension = extensions.get(YOUR_EXTENSION_ID);
+
+    if (extension.firstRun) {
+      // add button here.
+    }
+})</pre>
+<p><strong>Both</strong></p>
+<pre class="brush: js">function firstRun(extensions) {
+    let extension = extensions.get(YOUR_EXTENSION_ID);
+
+    if (extension.firstRun) {
+      // add button here.
+    }
+}
+
+if (Application.extensions)
+    firstRun(Application.extensions);
+else
+    Application.getExtensions(firstRun);
+</pre>
+<p>The FUEL library currently only works on Firefox 3 and above.</p>
+<p>{{ PreviousNext("XUL_School/Adding_Menus_and_Submenus", "XUL_School/Adding_events_and_commands") }}</p>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

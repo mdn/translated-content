@@ -1,0 +1,59 @@
+---
+title: Paski postępu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Paski_postępu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Progress_Meters
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrolki_list" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_elementów_HTML">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule przyjrzymy się bliżej sposobom tworzenia pasków postępu.
+</p>
+<h3 id="Dodanie_paska_post.C4.99pu" name="Dodanie_paska_post.C4.99pu"> Dodanie paska postępu </h3>
+<p>Pasek postępu jest paskiem, który wyświetla, jaka cześć zadania jest już wykonana. Najczęściej spotykamy się z paskiem postępu podczas pobierania plików lub podczas trwania długotrwałych operacji. XUL posiada zdefiniowany element <code><a href="/pl/docs/Mozilla/Tech/XUL/progressmeter" title="progressmeter">progressmeter</a></code>, który stosuje się do tworzenia nowego paska. Rozróżniamy dwa typy pasków postępu: <i>określony</i> i <i>nieokreślony</i>.
+</p><p>Określone paski postępu są stosowane, gdy znamy długość czasu, jaki będzie potrzebny do wykonania danej operacji. Pasek postępu będzie się wypełniał, gdy będzie już pełny, operacja powinna zostać zakończona. Najczęściej wykorzystywanymi okienkami, które stosują ten typ paska, to okienka dialogowe pobierania pliku, oczywiście, jeśli znany jest rozmiar pliku.
+</p><p>Nieokreślone paski postępu stosujemy, gdy nie znamy długości czasu, jaki będzie potrzebny do wykonania danej operacji. Pasek postępu będzie posiadał animację wypełniających się słupków lub wypełniającego się paska, zależy to od wykorzystywanej platformy systemowej oraz ustawionego motywu przeglądarki.
+</p><p>Określony pasek postępu:
+<img alt="Grafika:prog-det.png">
+</p><p>Nieokreślony pasek postępu:
+<img alt="Grafika:prog-udet.png">
+</p><p>Pasek postępu posiada następującą składnię: </p>
+<pre>&lt;progressmeter
+    id="identifier"
+    mode="determined"
+    value="50%"/&gt;
+</pre>
+<p>Atrybutami są: </p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code> </dt><dd> Unikalny identyfikator paska postępu,
+</dd><dt> <a href="pl/XUL/Atrybut/progressmeter.mode">mode</a> </dt><dd> Typ paska postępu. Jeśli jest ustawiony na wartość <code>determined</code>, pasek postępu jest określonym paskiem postępu, wypełniającym się do momentu ukończenia wykonywanego zadania. Jeśli jest ustawiony na wartość <code>undetermined</code>, pasek postępu jest nieokreślony, przy którym nieznany jest czas trwania operacji. Jeśli typ paska nie zostanie ustawiony, to przyjęta zostanie wartość domyślna - <code>determined</code>.
+</dd><dt> <code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code> </dt><dd> Bieżąca wartość paska postępu. Stosujemy dla określonych pasków postępu. Wartość wyrażona w procentach powinna zawierać się w przedziale od 0% do 100%. Wartość byłaby zmieniana przez skrypt, kiedy zadanie zakończy się.
+</dd></dl>
+<div class="highlight">
+<h5 id="Przyk.C5.82ad_okna:_Znajd.C5.BA_pliki" name="Przyk.C5.82ad_okna:_Znajd.C5.BA_pliki"> Przykład okna: <code>Znajdź pliki</code> </h5>
+<p>Dodajmy pasek postępu do naszego okna dialogowego <code>Znajdź pliki</code>. Normalnie powinno się stosować nieokreślony pasek postępu, ponieważ nie wiemy jak wiele plików będziemy szukać lub jak długo będzie trwało szukanie. Jednakże, możemy dodać jeden normalny pasek jako animowany pasek postępu, który może być nieokreślony podczas programowania. Pasek postępu będzie wyświetlany normalnie tylko podczas szukania. W kolejnych artykułach dodamy skrypty do uruchomienia paska postępu.
+</p>
+<pre class="eval">&lt;hbox&gt;
+
+  <span class="highlightred">&lt;progressmeter value="50%" style="margin: 4px;"/&gt;</span>
+
+  &lt;spacer flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><br>
+Wartość ustawiona jest na 50%, aby widoczny był pasek postępu w oknie. Margines został ustawiony na 4 piksele tak, aby pasek był o tyle oddalony od brzegu okna. Jak wcześniej wspomniano, chcemy, aby pasek postępu był wyświetlany jedynie podczas szukania plików. Skrypt będzie go wyświetlał oraz ukrywał, zależnie od konieczności.
+</p><p><br>
+Przykład: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul">Podgląd</a>
+</p><p><img alt="Grafika:progress1.png">
+</p>
+</div>
+<p>W kolejnym artykule dowiemy się, w jaki sposób <a href="pl/Kurs_XUL/Dodawanie_element%c3%b3w_HTML">dodać elementy do okna, stosując język HTML</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrolki_list" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_elementów_HTML">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

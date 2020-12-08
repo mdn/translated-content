@@ -1,0 +1,36 @@
+---
+title: Pozycjonowanie stosu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Pozycjonowanie_stosu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Stack_Positioning
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Stosy_i_pokłady" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pudełko_kart">Następny  »</a></p>
+</div>
+<p></p><p>Artykuł ten opisuje, w jaki sposób pozycjonować elementy w stosie.
+</p>
+<h3 id="Umieszczenie_potomka_stosu" name="Umieszczenie_potomka_stosu"> Umieszczenie potomka stosu </h3>
+<p>Normalnie elementy potomne stosu rozciągają i dopasowują się rozmiarem do <code><code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> (stosu). Jednakże mamy także możliwość umieszczenia dziecka na określonych współrzędnych. Na przykład, jeśli stos posiada dwa przyciski jako dzieci, jeden może być umieszczony 20 pikseli od lewego brzegu i 50 pikseli od górnego brzegu. Drugi przycisk może zostać umieszczony 100 pikseli od lewego brzegu i 5 pikseli od górnego brzegu.
+</p><p>Pozycja elementu potomnego może być określona poprzez dodanie dwóch atrybutów do tego elementu. Dla pozycjonowania poziomego zastosuj atrybut <code>left</code>, a dla pozycjonowania pionowego zastosuj atrybut <code>top</code>. Jeśli nie dodasz tych atrybutów do elementów będących dziećmi elementu <code>stack</code>, to potomek dopasuje się sam do rozmiaru stosu.
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:bulletins1.png"></div>
+<pre>&lt;stack&gt;
+  &lt;button label="Gobeliny" left="5" top="5"/&gt;
+  &lt;button label="Trole" left="60" top="20"/&gt;
+  &lt;button label="Wampiry" left="10" top="60"/&gt;
+&lt;/stack&gt;
+</pre>
+<p>Stos (<code>stack</code>) zawiera trzy elementy, każdy z nich jest pozycjonowany, dzięki rozmieszczeniu atrybutów <code>left</code> oraz <code>top</code>. Tutaj wszystkie dzieci stosu są przyciskami, lecz elementy nie są tego samego typu. Może to być dowolny element zawierający pudełko i inne stosy. </p><p>Rozmiar <code>stack</code> jest określony na podstawie pozycji elementów potomnych. Zawsze jest o takich rozmiarach, aby elementy potomne były widoczne. Więc jaki ustawisz atrybut <code>left</code> na 400, stos będzie miał długość 400 pikseli wokół siebie plus długość elementu. Możemy przesłonić ten rozmiar różnymi własnościami stylu, takimi jak <code>width</code> czy <code>max-width</code>.
+</p><p>Możemy zastosować skrypt do uporządkowania wartości atrybutów <code>left</code> i <code>top</code> i w ten sposób elementy będą poruszały się wokoło. Zaletą stosów jest to, że w momencie, gdy jeden absolutnie pozycjonowany element zmienia swoją pozycję, pozycja innych elementów nie jest zmieniana. Jeśli próbujemy przenieść elementy w prawidłowym pudełku, inne elementy mogą zmieniać swoje pozycje. </p><p>Jest także możliwe umieszczenie elementów potomnych, więc są one nakładkami. Kiedy rysujemy elementy potomne, elementy są pokazywane w kolejności, w której pojawiły się w stosie (<code>stack</code>). To jest tak, że pierwszy element potomny jest wyświetlony w <code>stack</code> jako tło (na samym spodzie), następny element potomny wyświetlony zostanie zaraz nad nim i tak dalej. Ostatni element potomny zostanie wyświetlony na samej górze. Możemy zastosować funkcje DOM do przesunięcia kolejności elementów wokoło.
+</p><p>Odpowiadający jako pierwszy zdarzeniom myszy, będzie to pierwszy element z góry. Znaczenie ma to przy dwóch przyciskach nałożonych na siebie, gdyż przycisk znajdujący się na górze zostanie przydzielony kliknięciu myszy i oddzielony od innych.
+</p><p>Następny artykuł <a href="pl/Kurs_XUL/Pude%c5%82ko_kart">opisuje element tabbox</a>, który będzie jak pokład, ale dostarcza własną nawigację. </p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Stosy_i_pokłady" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pudełko_kart">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

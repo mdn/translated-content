@@ -1,0 +1,91 @@
+---
+title: ZTE OPEN C
+slug: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+tags:
+  - B2G
+  - Dispositivo
+  - Firefox OS
+  - Gaia
+  - Open C
+  - Smartphone
+  - zte
+translation_of: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+---
+<div class="summary">
+ <p><span class="seoSummary">O telefone ZTE Open C Firefox OS é uma versão aprimorada do ZTE com um hardware high-end, incluindo uma câmera de 3MP e tela WVGA de 4 polegadas. Vem instalado com o Firefox OS 1.3. Esse artigo fornece informações sobre o telefone incluindo detalhes de atualizações e solução de problemas. </span></p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: As instruções <strong>não são válidas</strong> para o ZTE Open. Se você possui um ZTE Open consulte a página do <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Developer_phone_guide/ZTE_OPEN">ZTE Open</a>.</p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: A ferramenta de atualização que você precisa para desbloquear seu telefone (veja abaixo) por enquanto está disponível apenas para Windows. Não compre esse telefone se você não tem Windows e deseja instalar suas próprias compilações do Firefox OS manualmente.</p>
+</div>
+<p>O ZTE Open C é o primeiro telefone com a <a href="http://blog.mozilla.org/futurereleases/2014/05/08/firefox-os-update-adds-new-features-including-dual-sim-support-and-enhancements-for-music-lovers-and-gamers">última versão do Firefox OS</a>, oferencendo muitos novos recuros incluindo acesso direto ao tocador de música pela tela bloqueada ou barra de notificacão e compartilhamento avançado do Bluetooth, permitindo a transferência simultânea de vários arquivos. Usuários agora podem navegar mais rapidamente com as "<em>smart folders</em>" que organiza automaticamente os aplicativos em categorias, aprimorando a performance do rolamento de tela e aplicativos do sistema (calendário, agenda, câmera) mais rápidos.</p>
+<h2 id="Adquirindo_um_dispositivo">Adquirindo um dispositivo</h2>
+<p>O telefone foi lançado por US$ 99,99, e está disponível no eBay:</p>
+<ul>
+ <li><a href="http://item.ebay.com/291125433026">ZTE eBay US store</a></li>
+ <li><a href="http://item.ebay.co.uk/171301269724">ZTE eBay UK store</a> (clientes da França e outros países europeus são aconselhados a usar essa loja).</li>
+ <li><a href="http://cgi.ebay.de/ws/eBayISAPI.dll?ViewItem&amp;item=131151681046&amp;ssPageName=STRK:MESE:IT">ZTE eBay DE store</a></li>
+ <li><a href="http://www.ebay.com/itm/111326263156">ZTE eBay RU and EU stores</a></li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Os telefones não virão com aplicativos ou serviços específicos de companhias telefônicas pré-instalados. Também vêm totalmente desbloqueados para serem utilizados por desenvolvedores.</p>
+</div>
+<h2 id="Recursos_do_telefone">Recursos do telefone</h2>
+<p>Veja <a href="/pt-BR/Firefox_OS/Developer_phone_guide/Phone_specs">Especificações de telefones e dispositivos</a>.</p>
+<h2 id="Atualizando_o_Firefox_OS">Atualizando o Firefox OS</h2>
+<p>Para atualizar o software do seu Open C, o modo mais fácil é usar as imagens disponíveis no <a href="http://www.ztedevices.com/support/selectproduct.html?type=software">website da ZTE.</a> Selecione sua região na coluna da esquerda, <em>Smart Phones</em> na coluna do centro e Open C (European Standard) ou Open C (American Standard), dependendo de onde você comprou o telefone. Então clique o botão <em>Selected</em> para ir à página de download.</p>
+<p>Uma vez que você baixou a imagem, você vai encontrar um arquivo PDF dentro do ZIP explicando como fazer a instalação.</p>
+<h2 id="Atualizações_Manuais">Atualizações "Manuais"</h2>
+<p>Caso você próprio queira atualizar o Gecko ou o Gaia, o processo é um pouco mais complicado, uma vez que o telefone vem travado por padrão (sem privilégios de root). Para desbloquear o telefone você pode usar <a href="http://en.comebuy.com/developer-firefox-os-open-c.html">Open_C_upgrade_Tool found at comebuy.com</a>. Ao instalar essa ferramenta o firmware é atualizado e possibilitando o acesso de root e o fastbood. Com esses privilégios você consegue fazer um flash no seu telefone com os novos softwares e componentes.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Essa ferramenta de atualização por enquanto só está disponível para Windows.</p>
+</div>
+<h3 id="Atualizando_o_Gecko_e_o_Gaia">Atualizando o Gecko e o Gaia</h3>
+<p>Uma vez que seu telefone tenha o fastboot habilitado, você está apto a <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">compilar e instalar o novo Firefox OS/B2G</a>, Gecko e Gaia nele.</p>
+<ol>
+ <li>Começe verificando <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">os pré-requisitos para a compilação</a> e na configuração trate o Open C como um dispositivo Flame: isso deve-se ao fato do Flame e Open C são baseados na versão Jellybean do Android.</li>
+ <li>Durante a etapa de configuração, você precisa fazer referência a um arquivo de manifesto customizado para o Open C. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016867">Baixe o anexo desse bug</a> e salve em algum lugar facilmente referenciável no seu disco local com o nome openc.xml.</li>
+ <li>Limpe o diretório B2G, removendo os diretórios desnecessários:<br>
+  <pre class="brush: bash  language-html" id="comment_text_2"><code class="language-html">rm -rf objdir-gecko/ out/ backup-flame/</code></pre>
+ </li>
+ <li>Agora, configure o Firefox OS com o seguinte comando:
+  <pre class="brush: bash  language-html"><code class="language-html">./config.sh flame /PATH/TO/openc.xml</code></pre>
+ </li>
+ <li>Você pode compilar o componente Gecko e copiar no seu telefone usando os seguintes comandos:
+  <pre class="brush: bash  language-html"><code class="language-html">./build.sh gecko
+./flash.sh gecko</code></pre>
+ </li>
+ <li>Você também pode atualizar o Gaia, assim a versão atualizada do Gecko funciona com a versão Gaia no seu dispositivo:
+  <pre class="brush: bash  language-html"><code class="language-html">cd gaia
+make reset-gaia</code></pre>
+ </li>
+</ol>
+<div class="warning">
+ <p><strong>Aviso</strong>: Se você tentar fazer o flash completo da imagem do Flame no dispositivo pode travar (<em>brick</em>) o telefone, então isso não é recomendado.</p>
+</div>
+<h3 id="Atualizando_o_Gaia">Atualizando o Gaia</h3>
+<p>Para atualizar o Gaia, sem mexer no Gecko, basta fazer um fork e clonar o Gaia a partir do Github, para então copiar para seu dispositivo.</p>
+<ol dir="ltr">
+ <li><a href="http://git-scm.com/downloads">Instale o git</a>.</li>
+ <li>Certifique-se de ter o <a href="/pt-BR/Firefox_OS/Debugging/Installing_ADB">ADB</a> instalado.</li>
+ <li>Em <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a>, clique no botão "fork" no canto superior direito para fazer um fork para o seu repositório.</li>
+ <li>Clone o código do seu repositório onde você fez o fork executando o seguinte comando:
+  <pre class="brush: bash">git clone https://github.com/your-github-username/gaia.git</pre>
+ </li>
+ <li>Vá para o diretório.</li>
+ <li>No seu telefone, <a href="/pt-BR/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">habilite depuração remota</a> (escolha a opção ADB e Devtools).</li>
+ <li>Agora conecte seu telefone ao seu computador via USB; verifique se o telefone foi reconhecido digitando <code>adb devices</code> no terminal.</li>
+ <li>Execute o seguinte comando para reiniciar seu telefone e atualizar com o novo código Gaia:
+  <pre class="brush: bash">make reset-gaia</pre>
+ </li>
+</ol>
+<h2 id="Travei_meu_telefone_e_agora">Travei meu telefone, e agora?</h2>
+<p>Se o seu telefone não responder nenhum comando, você pode tentar destravá-lo com as instruções de como fazer o flashing via SD Card no site da ZTE:</p>
+<ul>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/65229ec9-3165-424e-a7dd-3759356325fd.html?type=software">ZTE Open C (Ebay) - Espanha</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/92f36c98-9cc0-42d6-8f23-8834b4a6849c.html?type=software">ZTE Open C (Ebay) - UK Padrão americano</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/46d40c52-bed4-4cdc-9df9-01719cdf0a70.html?type=software">ZTE Open C (Ebay) - UK Padrão europeu</a></li>
+</ul>
+<p>Verifique também <a href="https://support.mozilla.org/pt-BR/questions/1003136">essa questão registrada no Suporte da Mozilla</a> para maiores informações.</p>

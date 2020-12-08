@@ -1,0 +1,102 @@
+---
+title: Adicionar Etiquetas e Imagens
+slug: Archive/Mozilla/XUL/Tutorial/Adicionar_Etiquetas_e_Imagens
+tags:
+  - Tutoriais
+  - Tutorial de XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/pt-PT/docs/XUL_Tutorial/Adding_Buttons" style="float: left;">« Anterior</a><a href="/pt-PT/docs/XUL_Tutorial/Input_Controls">Próxima  »</a></p>
+</div>
+
+<p>Esta secção descreve uma maneira para adicionar etiquetas e imagens a uma janela. Além disso, nós consideramos em como incluir os elementos em grupos.</p>
+
+<h3 id="Text_Elements" name="Text_Elements">Elementos de Texto</h3>
+
+<p>You cannot embed text directly into a XUL file without tags around it and expect it to be displayed. You can use two XUL elements for this purpose.</p>
+
+<h4 id="Label_Element" name="Label_Element">Elemento Etiqueta</h4>
+
+<p>The most basic way to include text in a window is to use the <code><a href="/pt-PT/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> element. It should be used when you want to place a descriptive label beside a control, such as a button. An example is shown below:</p>
+
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul">View</a></p>
+
+<pre>&lt;label value="This is some text"/&gt;
+</pre>
+
+<p>The <code><code id="a-value"><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> attribute can be used to specify the text that you wish to have displayed. The text will not wrap, so the text will all be displayed on a single line. This syntax is the most common of labels.</p>
+
+<p>If the text needs to wrap, you can place the text content inside opening and closing tags as in the following example:</p>
+
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> :</p>
+
+<pre>&lt;label&gt;This is some longer text that will wrap onto several lines.&lt;/label&gt;
+</pre>
+
+<p>As with HTML, line breaks and extra whitespace are collapsed into a single space. Later, we'll find out <a href="/en-US/docs/XUL_Tutorial/Element_Positioning" title="en/XUL_Tutorial/Element_Positioning">how to constrain the width of elements</a> so that we can see the wrapping more easily.</p>
+
+<h5 id="Control_Attribute" name="Control_Attribute">Atributo de Controle</h5>
+
+<p>You can use the <code><code id="a-control"><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> attribute to set which control the label is associated with. When the user clicks on an associated label, that control will be focused. This association is also important for <a href="/en-US/docs/Accessibility" title="en/Accessibility">accessibility</a>, so that screen readers read aloud the label for the control as the user tabs to it. Set the value of the <code>control</code> attribute to the <code><code id="a-id"><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> of the element to be focused.</p>
+
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul">View</a></p>
+
+<pre>&lt;label value="Click here:" control="open-button"/&gt;
+&lt;button id="open-button" label="Open"/&gt;
+</pre>
+
+<p>In the example above, clicking the label will cause the button to be focused.</p>
+
+<h4 id="Description_Element" name="Description_Element">Elemento Descrição</h4>
+
+<p>For descriptive text not associated with any particular control, you can use the <code><a href="/pt-PT/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> tag. This element is useful for informative text at the top of a dialog or a group of controls for example. As with the <code><a href="/pt-PT/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> element, you can either use the <code>value</code> attribute for a single line of text or place text or XHTML content inside opening and closing description tags for longer blocks of text. It is more common to use the attribute syntax for labels, and the text content syntax for descriptions.</p>
+
+<p><span id="Example_4"><a id="Example_4"></a><strong>Example 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul">View</a></p>
+
+<pre>&lt;description&gt;
+  This longer section of text is displayed.
+&lt;/description&gt;
+</pre>
+
+<p>You can set the text via script using the <a href="/en-US/docs/DOM/Node.textContent" title="En/DOM/Node.textContent">textContent</a> property, as in the following example:</p>
+
+<pre>&lt;description id="text" width="200"/&gt;
+
+document.getElementById('text').textContent = "Some lengthy word wrapped text goes here.";
+</pre>
+
+<p>Internally, both the <code><code><a href="/pt-PT/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> element and the <code><code><a href="/pt-PT/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> elements are the same. The <code><code><a href="/pt-PT/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> element is intended for labels of controls, such as text fields. The <code>control</code> attribute is only supported for labels. The <code><code><a href="/pt-PT/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> element is intended for other descriptive text such as informative text at the top of a <code><code><a href="/pt-PT/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code> box.</p>
+
+<h3 id="Images" name="Images">Imagens</h3>
+
+<p>XUL has an element to display images within a window. This element is appropriately named <code><a href="/pt-PT/docs/Mozilla/Tech/XUL/image" title="image">image</a></code>. Note that the tag name is different than HTML (<em>image</em> instead of <em>img</em>). You can use the <code><code id="a-src"><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> attribute to specify the URL of the image file. The example below shows this:</p>
+
+<pre class="brush: xml">&lt;image src="images/banner.jpg"/&gt;
+</pre>
+
+<p>Although you can use this syntax, it would be better in order to support different themes to use a style sheet to set the image URL. A later section will describe how to <a href="/en-US/docs/XUL_Tutorial/Adding_Style_Sheets" title="en/XUL_Tutorial/Adding_Style_Sheets">use style sheets</a>, but an example will be shown here for completeness. You can use the <code><a href="/en-US/docs/CSS/list-style-image" title="en/CSS/list-style-image">list-style-image</a></code> CSS property to set the URL for the image. Here are some examples:</p>
+
+<pre class="brush: xml"><strong>XUL:</strong>
+ &lt;image id="image1"/&gt;
+ &lt;image id="search"/&gt;
+</pre>
+
+<pre class="brush: css"><strong>Style Sheet:</strong>
+ #image1 {
+   list-style-image: url("<a class="external" rel="freelink">chrome://findfile/skin/banner.jpg</a>");
+ }
+
+ #search {
+   list-style-image: url("<span class="nowiki">http://example.com/images/search.png</span>");
+ }
+</pre>
+
+<p>These images come from within the chrome directory, in the skin for the findfile package. Because images vary by theme, you would usually place images in the skin directory.</p>
+
+<p>In the next section, we will learn how to <a href="/en-US/docs/XUL_Tutorial/Input_Controls" title="en/XUL_Tutorial/Input_Controls">add some input controls to a window</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/pt-PT/docs/XUL_Tutorial/Adding_Buttons" style="float: left;">« Anterior</a><a href="/pt-PT/docs/XUL_Tutorial/Input_Controls">Próxima  »</a></p>
+</div>

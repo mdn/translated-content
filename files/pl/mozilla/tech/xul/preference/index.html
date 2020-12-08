@@ -1,0 +1,268 @@
+---
+title: preference
+slug: Mozilla/Tech/XUL/preference
+tags:
+  - Dokumentacja_XUL
+  - Elementy_XUL
+translation_of: Archive/Mozilla/XUL/preference
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/pl/docs/Dokumentacja_XUL">Dokumentacja XUL</a>    [
+ <a href="#Przyk.C5.82ady">Przykłady</a> |
+ <a href="#Atrybuty">Atrybuty</a> |
+ <a href="#W.C5.82asno.C5.9Bci">Własności</a> |
+ <a href="#Metody">Metody</a> |
+ <a href="#Podobne">Podobne</a> ]
+</span></div> <p>Deklaruje ustawienie, które może zostać zmienione w <code><a href="/pl/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code>. Element ten musi być umieszczony wewnątrz elementu <code><a href="/pl/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code>. Każdy element <code>preference</code> odpowiada ustawieniu, które przechowywane jest w pliku preferencji użytkownika. Możesz połączyć element interfejsu użytkownika, taki jak pole wyboru z elementem <code>preference</code> używając atrybutu <code id="a-preference"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/preference">preference</a></code> elementu interfejsu użytkownika.
+</p><p>Dodatkowe informacje są dostępne w artykule <a href="pl/System_preferencji">System preferencji</a>.
+</p>
+<dl><dt> Atrybuty
+</dt><dd> <a href="#a-disabled">disabled</a>, <a href="#a-instantApply">instantApply</a>, <a href="#a-inverted">inverted</a>, <a href="#a-preference.name">name</a>, <a href="#a-onchange">onchange</a>, <a href="#a-readonly">readonly</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-preference.type">type</a>
+</dd></dl>
+<dl><dt> Własności </dt><dd> <a href="#p-disabled">disabled</a>, <a href="#p-inverted">inverted</a>, <a href="#p-locked">locked</a>, <a href="#p-name">name</a>, <a href="#p-preference.preferences">preferences</a>, <a href="#p-readonly">readonly</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-type">type</a>, <a href="#p-value">value</a>
+</dd></dl>
+<dl><dt> Metody
+</dt><dd> <a href="#m-hasUserValue">hasUserValue</a>, <a href="#m-reset">reset</a>
+</dd></dl>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<p>(potrzebny przykład)
+</p>
+<h3 id="Atrybuty" name="Atrybuty"> Atrybuty </h3>
+<p>
+</p><div id="a-disabled">
+
+<dl><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Określa, czy element jest wyłączony. Jeśli atrybut ten ma wartość <code>true</code>, to element będzie wyłączony. Wyłączone elementy zazwyczaj są wyszarzone. Jeśli element jest wyłączony, nie odpowiada na czynności użytkownika, nie może zostać na niego ustawiony focus, a zdarzenie <i>command</i> nie zostanie wywołane. </dd></dl>
+<div class="float-right"><img alt="grafika:XUL_ref_attr_disabled.png"></div>
+<pre>&lt;!-- Pole wyboru włącza/wyłącza przycisk --&gt;
+&lt;checkbox label="Enable button"
+    onclick="document.getElementById('buttRemove').disabled = this.checked"/&gt;
+&lt;button id="buttRemove" label="Remove All" disabled="true"/&gt;
+</pre>
+</div>
+<div id="a-instantApply">
+
+<dl><dt> <code id="a-instantApply"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/instantApply">instantApply</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli <code>true</code>, preferencje zostaną zmienione albo niebawem lub gdy interfejs użytkownika jest modyfikowany.
+</dd></dl>
+<p><br>
+</p><p><br>
+</p>
+
+
+</div>
+<div id="a-inverted">
+
+
+<dl>
+ <dt><code id="a-inverted"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/inverted">inverted</a></code></dt>
+ <dd>Typ:<em>boolean</em></dd>
+ <dd>Preferencje logiczne, jeśli ten atrybut jest ustawiony na <code>true</code>, to sygnalizuje, która wartość preferencji jest <strong>reverse of the user interface element attached to it. For instance, checking the checkbox disables the preference instead of enabling it.</strong></dd>
+</dl>
+</div>
+<div id="a-preference.name">
+
+<dl><dt> <a href="pl/XUL/Atrybut/preference.name">name</a>
+</dt><dd> Typ: <i>string</i>
+</dd><dd> Nazwa preferencji do zmiany. Na przykład strona startowa przeglądarki jest ustawiona z preferencją <code>browser.startup.homepage</code>.
+</dd></dl>
+
+
+</div>
+<div id="a-onchange">
+
+<dl><dt> <code id="a-onchange"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onchange">onchange</a></code>
+</dt><dd> Typ: <i>kod skryptu</i>
+</dd><dd> Kod w atrybucie <code>onchange</code> jest wywołany, kiedy wartość elementu jest zmieniana.
+</dd></dl>
+<p><br>
+</p><p><br>
+</p>
+
+
+</div>
+<div id="a-readonly">
+
+<dl><dt> <code id="a-readonly"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/readonly">readonly</a></code>
+</dt><dd> Typ: <i>boolean</i>
+</dd><dd> Jeśli ustawiony jest na <code>true</code>, to użytkownik nie będzie mógł zmienić wartości elementu. Jednakże wartość wciąż może zostać zmodyfikowana poprzez skrypt.
+</dd></dl>
+
+
+</div>
+<div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tabindex">tabindex</a></code>
+</dt><dd> Typ: <i>integer</i>
+</dd><dd> Porządek dla przełączania elementów klawiszem Tab. Elementy o wyższym tabindex umieszczane są w dalszej części sekwencji przełączania.
+</dd></dl>
+
+
+</div>
+<div id="a-preference.type">
+
+<dl><dt> <a href="pl/XUL/Atrybut/preference.type">type</a>
+</dt><dd> Typ: <i>jedna z poniższych wartości</i>
+</dd><dd> Typ preferencji, która powinna posiadać jedną z poniższych wartości:
+</dd></dl>
+<ul><li> <code>bool</code>: Ustawienie logicznej wartości, jednej z dwóch; <code>true</code> lub <code>false</code>. Zazwyczaj <code><a href="/pl/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code> będzie połączony z tą preferencją. </li><li> <code>int</code>: Liczba całkowita.
+</li><li> <code>string</code>: Łańcuch znakowy. </li><li> <code>unichar</code>: Łańcuch znaków Unicode.
+</li><li> <code>wstring</code>: Zlokalizowany łańcuch znaków. W tej sytuacji będzie zapisana ścieżka do pliku preferencji, która stanowi aktualną wartość preferencji.
+</li><li> <code>file</code>: Plik. Ścieżka pliku będzie przechowywana we preferencjach.
+</li></ul>
+<p><br>
+</p><p><br>
+</p>
+
+
+</div>
+<p></p>
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci"> Własności </h3>
+<p>
+</p><div id="p-disabled">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/disabled">disabled</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code>.</dd>
+</dl></div>
+<div id="p-inverted">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/inverted">inverted</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-inverted"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/inverted">inverted</a></code>.</dd>
+</dl></div>
+<div id="p-locked">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/locked">locked</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Jeśli <code>true</code>, to preferencje zostaną zabezpieczone i wyłączone z konfiguracji systemu, zabezpieczając zawartość przed zmianami. Własność jest tylko do odczytu.</dd>
+</dl></div>
+<div id="p-name">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/name">name</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Nazwa <code><a href="/pl/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> do zmiany. Na przykład, strona startowa przeglądarki jest ustawiona z preferencją <code>browser.startup.homepage</code>.</dd>
+</dl></div>
+<div id="p-preference.preferences">
+<dl>
+ <dt>
+  <a href="pl/XUL/W%c5%82asno%c5%9b%c4%87/preference.preferences">preferences</a></dt>
+ <dd>
+  Typ:
+  <i>
+   element</i>
+ </dd>
+ <dd>
+  Odwołanie się do elementu zawierającego <code><a href="/pl/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code>.</dd>
+</dl></div>
+<div id="p-readonly">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/readonly">readonly</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Jeśli jest ustawiony na <code>true</code>, to użytkownik nie może zmieniać wartości elementu. Jest to odpowiednia własności do użytku <code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> zamiast własności <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/readonly">readonly</a></span></code>.</dd>
+</dl></div>
+<div id="p-tabIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/tabIndex">tabIndex</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-tabindex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tabindex">tabindex</a></code>.</dd>
+</dl></div>
+<div id="p-type">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/type">type</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-type"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/type">type</a></code>.</dd>
+</dl>
+
+<p> </p></div>
+<div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/value">value</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code>.</dd>
+</dl></div>
+<p></p>
+<h3 id="Metody" name="Metody"> Metody </h3>
+<p></p><dl>
+ <dt>
+  <span id="m-hasUserValue"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/hasUserValue">hasUserValue()</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Zwraca <code>true</code>, jeśli preferencje zostały zmienione z domyślnej wartości.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-reset"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/reset">reset()</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   nie zwraca wartości</i>
+ </dd>
+ <dd>
+  Przywraca preferencje do domyślnej wartości.</dd>
+ <dd>
+  Dla elementu <code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> jest także wykorzystane do czyszczenia list transakcji (Gecko1.9).</dd>
+</dl>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Dziedziczy z elementu XUL</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Dziedziczy z elementu DOM</strong><br> <small> <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table>
+<p></p>
+<h3 id="Podobne" name="Podobne"> Podobne </h3>
+<p>TBD
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>

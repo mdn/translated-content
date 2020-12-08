@@ -1,0 +1,906 @@
+---
+title: Проверка данных формы (проверка валидности формы на стороне клиента)
+slug: Learn/HTML/Forms/Валидация_формы
+translation_of: Learn/Forms/Form_validation
+---
+<p>
+ <audio class="audio-for-speech"></audio>
+</p>
+
+<div class="translate-tooltip-mtz" style="left: 0px; top: 3716px;">
+<div class="header">
+<div class="header-controls"></div>
+
+<div class="translate-icons"><img class="from"> <img class="arrow"> <img class="to"></div>
+</div>
+
+<div class="translated-text">
+<div class="words"></div>
+
+<div class="sentences">
+<div class="translated-sentence-wrapper sound-anchor">
+<div class="translated-sentence word-text">&lt;</div>
+
+<div class="buttons"></div>
+</div>
+
+<div class="translit">&lt;</div>
+</div>
+</div>
+</div>
+
+<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}</div>
+
+<p class="summary">Проверка данных формы позволяет нам удостовериться в том, что пользователи заполняют форму в  правильном формате, убедиться, что отправленные данные будут успешно работать с нашими приложениями. Эта статья расскажет, что вам нужно знать о проверке формы.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Предпосылки:</th>
+   <td>Компьютерная грамотность, разумное понимание <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Задача:</th>
+   <td>Понимать что такое проверка формы (валидация) формы, почему это важно и как это реализовать.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Что_такое_валидация_формы">Что такое валидация формы?</h2>
+
+<p>Откройте любой популярный сайт с формой регистрации и вы заметите, что они дают вам обратную связь, когда вы вводите ваши данные не в том формате, который они ожидают от вас. Вы получите подобные сообщения:</p>
+
+<ul>
+ <li>"Это поле обязательно для заполнения" (вы не можете оставить это поле пустым)</li>
+ <li>"Пожалуйста введите ваш телефонный номер в формате xxx-xxxx" (вводит три цифры разделенные тире, за ними слеуют четыре цифры)</li>
+ <li>"Пожалуйста введите настоящий адрес электронной почты" (если ваша запись не в формате"somebody@example.com")</li>
+ <li>"Ваш пароль должен быть от 8 до 30 символов длиной, и содержать одну заглавную букву, один символ, и число"</li>
+</ul>
+
+<p>Это называется валидация формы — когда вы вводите данные,  веб-прилолжение проверяет, что данные корректны. Если данные верны, приложение позволяет данным быть отправленными на сервер и (как правило) быть сохраненными в базе данных; если нет -  оно выдает вам сообщение об ошибке, обьясняющее какие исправления необходимо внести. Проверка формы может быть реализована несколькими различными способами.</p>
+
+<p>Мы хотим сделать заполнение веб-форм максимально простым. Итак, почему мы настаиваем на подтверждении наших форм? Существуют три основные причины:</p>
+
+<ul>
+ <li><strong>Мы хотим получить нужные данные в нужном формате</strong> — наши приложения не будут работать должным образом, если данные нашего пользователя хранятся в неправильном формате, если они вводят неправильную информацию или вообще не передают информацию.</li>
+ <li><strong>Мы хотим защитить учетные записи наших пользователей</strong> — заставляя наших пользователей вводить защищенные пароли, это упрощает защиту информации об их учетной записи.</li>
+ <li><strong>Мы хотим обезопасить себя</strong> — существует множество способов, которыми злоумышленники могут злоупотреблять незащищенными формами, чтобы повредить приложение, в которое они входят (см. <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Безопасность веб-сайта</a>).</li>
+</ul>
+
+<h3 id="Различные_типы_валидации_формы">Различные типы валидации формы</h3>
+
+<p>Существует два разных типа проверки формы, с которыми вы столкнетесь в Интернете:</p>
+
+<ul>
+ <li><strong>Проверка на стороне клиента - </strong>это проверка, которая происходит в браузере, прежде чем данные будут отправлены на сервер. Это удобнее, чем проверка на стороне сервера, так как дает мгновенный ответ. Ее можно далее подразделить на:
+
+  <ul>
+   <li><strong>JavaScript</strong> проверка выполняется с использованием JavaScript. Полностью настраиваемая.</li>
+   <li><strong>Встроенная проверка формы, </strong>используя функции проверки формы HTML5. Для этого обычно не требуется JavaScript. Встроенная проверка формы имеет лучшую производительность, но она не такая настраиваемая, как с использованием JavaScript.</li>
+  </ul>
+ </li>
+ <li><strong>Проверка на стороне сервера</strong> - это проверка, которая возникает на сервере после отправки данных. Серверный код используется для проверки данных перед их сохранением в базе данных. Если данные не проходят проверку валидности, ответ отправляется обратно клиенту, чтобы сообщить пользователю, какие исправления должны быть сделаны. Проверка на стороне сервера не такая удобная, как проверка на стороне клиента, поскольку она не выдает ошибок до тех пор, пока не будет отправлена вся форма. Тем не менее, проверка на стороне сервера - это последняя линия защиты вашего приложения от неправильных или даже вредоносных данных. Все популярные <a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">серверные фреймворки</a> имеют функции для проверки и очистки данных (что делает их безопасными).</li>
+</ul>
+
+<p>В реальном мире разработчики склонны использовать комбинацию проверки на стороне клиента и сервера.</p>
+
+<h2 id="Использование_встроенной_проверки_формы">Использование встроенной проверки формы</h2>
+
+<p>Одной из особенностей HTML5 является возможность проверки большинства пользовательских данных без использования скриптов. Это делается с помощью <a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5/Constraint_validation">атрибутов проверки элементов формы</a>, которые позволяют вам указывать правила ввода формы, например, нужно ли заполнять значение, минимальная и максимальная длина данных, должно ли это быть число, адрес электронной почты, адрес или что-то еще, и шаблон, которому это должно соответствовать. Если введенные данные соответствуют всем этим правилам, данные считаются валидными; если нет -  невалидными.</p>
+
+<p>Когда элемент валидный, следующие утверждения верны:</p>
+
+<ul>
+ <li>Элемент соответствует CSS псевдо-классу {{cssxref(":valid")}} ; это позволяет вам применить конкретный стиль к валидным элементам.</li>
+ <li>Если пользователь пытается отправить данные, браузер отправит форму, если нет ничего, остановит отправку (например, JavaScript).</li>
+</ul>
+
+<p>Когда элемент невалидный, следующие утверждения верны:</p>
+
+<ul>
+ <li>Элемент соответствует CSS псевдо-классу {{cssxref(":invalid")}}, и иногда другим UI псевдо-классам (например, {{cssxref(":out-of-range")}}), в зависимости от ошибки; это позволяет вам применить конкретный стиль к невалидным элементам.</li>
+ <li>Если пользователь пытается отправить данные, браузер заблокирует форму и выдаст сообщение об ошибке.</li>
+</ul>
+
+<div class="blockIndicator note">
+<p>Note: Вот несколько ошибок, которые не позволяют форме быть подтверждённой: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} or {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} or {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}}, or a {{domxref('validityState.customError','customError')}}.</p>
+</div>
+
+<h2 id="Примеры_встроенных_форм_валидации">Примеры встроенных форм валидации</h2>
+
+<h3 id="Ограничения_проверки_элементов_input_-_простое_начало">Ограничения проверки элементов input - простое начало</h3>
+
+<p>В этом разделе мы рассмотрим некоторые функции HTML5, которые можно использовать для проверки {{HTMLElement("input")}} элементов.</p>
+
+<p>Начнем с простого примера - input, который позволяет вам выбирать ваш любимый плод между бананом и вишней. Он включает простой текст {{HTMLElement("input")}} соответствующий ярлык (label) и отправку (submit) {{htmlelement("button")}}. Вы можете найти исходный код на GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>,и живой пример ниже:</p>
+
+<pre class="notranslate">&lt;form&gt;
+  &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
+  &lt;input id="choose" name="i_like"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<pre class="notranslate">input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Simple_start_file", "100%", 80)}}</p>
+
+<p>Для начала сделаем копию <code>fruit-start.html</code>в новом каталоге на жестком диске.</p>
+
+<h3 id="Требуемый_атрибут_required">Требуемый атрибут (required)</h3>
+
+<p>Простейшей функцией проверки HTML5 для использования является  {{htmlattrxref("required", "input")}} атрибут. Если вы хотите сделать ввод обязательным, вы можете пометить элемент, используя этот атрибут. Если этот атрибут установлен, форма не будет отправляться (и будет отображаться сообщение об ошибке), когда поле пустое (поле input также будет считаться невалидным).</p>
+
+<p>Добавьте атрибут <code>required</code> в ваш input, как показано ниже:</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
+  &lt;input id="choose" name="i_like" required&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<p>Также обратите внимание на CSS, включенный в файл примера:</p>
+
+<pre class="notranslate">input:invalid {
+  border: 2px dashed red;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input:valid {
+  border: 2px solid black;
+}</pre>
+
+<p>В этом случае к input будет применяться ярко-красный пунктирный border, когда он невалидный, и более тонкая черная граница, когда он валидный. Попробуйте новое поведение в приведенном ниже примере:</p>
+
+<p>{{EmbedLiveSample("The_required_attribute", "100%", 80)}}</p>
+
+<div class="blockIndicator note">
+<p>Note: Вы можете найти этот пример на GitHub как <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html">fruit-validation.html</a> (также смотрите <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html">source code</a>.)</p>
+</div>
+
+<p>Попробуйте эту форму без значения. Обратите внимание как невалидный ввод получает фокус, сообщение об ошибке ("Пожалуйста заполните поле") появляется, и форма не отправляется.</p>
+
+<h3 id="Проверка_с_регулярными_выражениями">Проверка с регулярными выражениями</h3>
+
+<p>Другая полезная функция проверки - это <kbd><a href="/ru/docs/Web/SVG/%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82/pattern">pattern</a> </kbd>атрибут , который ожидает <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> в качестве значения. Регулярное выражение (regex) - это шаблон который используется для проверки соответствия символов в текстовых строках, поэтому он идеально подходит для проверки формы, а также для многих других целей в JavaScript.</p>
+
+<p>Регулярные выражения довольно сложны, и мы не будем подробно разбирать их в этой статье. Ниже приведены некоторые примеры, чтобы вы представляли себе, как они работают:</p>
+
+<ul>
+ <li><code>a</code> — соответствует одному символу <code>a</code> (не <code>b</code>, не <code>aa</code>, итд.)</li>
+ <li><code>abc</code> — соответствует <code>a</code>, далее <code>b</code>, далее  <code>c</code>.</li>
+ <li><code>a*</code> — соответствует символу <code>a</code>, 0 или более раз (<code>+</code> соответствует символу один или несколько раз).</li>
+ <li><code>[^a]</code> — соответствует одному символу, <strong>не </strong>a.</li>
+ <li><code>a|b</code> — соответствует одному символу a или b.</li>
+ <li><code>[abc]</code> — соответствует одному символу a, b, или c.</li>
+ <li><code>[^abc]</code> — соответствует одному символу кроме a, b, или c.</li>
+ <li><code>[a-z]</code> — соответствует одному символу в диапазоне a–z, только в нижнем регистре (вы можете использовать <code>[A-Za-z]</code> для заглавных и прописных букв, и<code>[A-Z]</code> только для заглавных букв).</li>
+ <li><code>a.c</code> — соответсвует <code>a</code>, за ним следует любой элемент, за ним следует <code>c</code>.</li>
+ <li><code>a{5}</code> — соответствует <code>a</code>, 5 раз.</li>
+ <li><code>a{5,7}</code> — соответствует <code>a</code>, от 5 до 7 раз, но не больше и не меньше.</li>
+</ul>
+
+<p>Вы также можете использовать числа и другие символы в этих выражениях, например:</p>
+
+<ul>
+ <li><code>[ -]</code> — соответствует пробелу или тире.</li>
+ <li><code>[0-9]</code> — соответствует любой цифре в диапазоне от 0 до 9.</li>
+</ul>
+
+<p>Вы можете комбинировать их практически, как хотите, указывая разные части, одну за другой:</p>
+
+<ul>
+ <li><code>[Ll].*k</code> — Один символ  L, в верхнем или нижнем регистре, за ним следует ни одного или несколько символов любого типа за которыми следует <code>k</code> в нижнем регистре.</li>
+ <li><code>[A-Z][A-Za-z' -]+</code> — Один символ верхнего регистра, за которым следует один или несколько символов, которые представляют собой букву верхнего или нижнего регистра, тире, апостроф или пробел. Это можно использовать для проверки названия городов / городов англоязычных стран, которые должны начинаться с заглавной буквы, но не содержать других символов. Примеры из UK включая Manchester, Ashton-under-lyne, и Bishop's Stortford.</li>
+ <li><code>[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}</code> — Внутренний телефонный номер США — три цифры, затем пробел или тире, затем три цифры,затем пробел или тире, затем четыре цифры. Возможно, вам придется сделать это более сложным, поскольку некоторые люди пишут свой код области в круглых скобках, но это работает для простой демонстрации.</li>
+</ul>
+
+<p>В любом случае, давайте реализуем пример - обновим ваш HTML, чтобы добавить атрибут шаблона, например:</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
+  &lt;input id="choose" name="i_like" required pattern="banana|cherry"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<div class="hidden">
+<pre class="brush: css notranslate">input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}</pre>
+</div>
+
+<p>{{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 50)}}</p>
+
+<p>В этом примере {{HTMLElement("input")}} элемент принимает одно из двух возможных значений: строку "banana" или строку "cherry".</p>
+
+<p>На этом этапе попробуйте изменить значение внутри атрибута <code>pattern</code> чтобы сопоставить некоторые из примеров, которые вы видели ранее, и посмотрите, как это влияет на значения, которые вы можете ввести, чтобы сделать входное значение валидным. Попробуйте написать свои собственные, и посмотрите, как это работает! Попробуйте сделать их связанными с фруктами, где это возможно, поэтому ваши примеры имеют смысл!</p>
+
+<div class="note">
+<p><strong>Примечание:</strong> Некоторые {{HTMLElement("input")}} типы элементов не нуждаются в атрибуте {{htmlattrxref("pattern","input")}} чтобы быть валидными. Указание типа <code>email</code> например, проверяет введенное значение через регулярное выражение, соответствующее хорошо сформированному адресу электронной почты (или списку email адресов, разделенных запятыми, если в нем присутствует атрибут {{htmlattrxref("multiple","input")}} attribute). В качестве еще одного примера, поле с типом <code>url</code> автоматически требует правильно сформированного URL.</p>
+</div>
+
+<div class="note">
+<p><strong>Примечание</strong>: Элемент {{HTMLElement("textarea")}} не поддерживает атрибут {{htmlattrxref("pattern","input")}}.</p>
+</div>
+
+<h3 id="Ограничение_длины_ваших_записей">Ограничение длины ваших записей</h3>
+
+<p>Все текстовые поля, созданные с помощью элементов ({{HTMLElement("input")}} или  {{HTMLElement("textarea")}}) могут быть ограничены по размеру, используя атрибуты {{htmlattrxref("minlength","input")}} и{{htmlattrxref("maxlength","input")}}. Поле невалидно если его значение короче чем {{htmlattrxref("minlength","input")}} или значение длиннее значения {{htmlattrxref("maxlength","input")}}. Браузеры часто не позволяют пользователю вводить более длинное значение, чем ожидалось, в текстовые поля в любом случае, но полезно иметь этот мелкозернистый элемент управления.</p>
+
+<p>Для числовых полей (например <code>&lt;input type="number"&gt;</code>), атрибуты {{htmlattrxref("min","input")}} и {{htmlattrxref("max","input")}} также обеспечивают ограничение валидации. Если значение поля меньше атрибута {{htmlattrxref("min","input")}} или больше атрибута {{htmlattrxref("max","input")}}, поле будет невалидным.</p>
+
+<p>Давайте посмотрим на другой пример. Создайте новую копию файла <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>.</p>
+
+<p>Теперь удалите содержимое элемента <code>&lt;body&gt;</code>, и замените его следующим:</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
+    &lt;input id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="number"&gt;How many would you like?&lt;/label&gt;
+    &lt;input type="number" id="number" name="amount" value="1" min="1" max="10"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+<ul>
+ <li>Здесь вы увидите, что мы задали полю <code>text</code> <code>minlength</code> <code>maxlength</code> равную 6 — такая же длина, как banana и cherry. Ввод меньшего количества символов будет отображаться как невалидный, а вводить больше в большинстве браузеров невозможно.</li>
+ <li>Мы также дали полю <code>number</code> <code>min</code> 1 и <code>max</code> 10 - числа введенные вне этого диапазона будут отображаться как невалидные, и вы не сможете использовать стрелки приращения / уменьшения, чтобы переместить значение за пределами этого диапазона.</li>
+</ul>
+
+<div class="hidden">
+<pre class="notranslate">input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+div {
+  margin-bottom: 10px;
+}</pre>
+</div>
+
+<p>Вот живой пример:</p>
+
+<p>{{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 70)}}</p>
+
+<div class="note">
+<p><strong>Примечание</strong>: <code>&lt;input type="number"&gt;</code> (и другие типы, например <code>range</code>) могут также содержать атрибут {{htmlattrxref("step", "input")}} который указывает, какой инкремент будет увеличиваться или уменьшаться, когда используются элементы управления входом (например, номерные кнопки вверх и вниз)</p>
+</div>
+
+<h3 id="Полный_пример">Полный пример</h3>
+
+<p>Вот полный пример, чтобы показать использование встроенных функций проверки HTML:</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;p&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Title&lt;abbr title="This field is mandatory"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
+      &lt;input type="radio" required name="title" id="r1" value="Mr"&gt;&lt;label for="r1"&gt;Mr.&lt;/label&gt;
+      &lt;input type="radio" required name="title" id="r2" value="Ms"&gt;&lt;label for="r2"&gt;Ms.&lt;/label&gt;
+    &lt;/fieldset&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="n1"&gt;How old are you?&lt;/label&gt;
+    &lt;!-- The pattern attribute can act as a fallback for browsers which
+         don't implement the number input type but support the pattern attribute.
+         Please note that browsers that support the pattern attribute will make it
+         fail silently when used with a number field.
+         Its usage here acts only as a fallback --&gt;
+    &lt;input type="number" min="12" max="120" step="1" id="n1" name="age"
+           pattern="\d+"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t1"&gt;What's your favorite fruit?&lt;abbr title="This field is mandatory"&gt;*&lt;/abbr&gt;&lt;/label&gt;
+    &lt;input type="text" id="t1" name="fruit" list="l1" required
+           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range"&gt;
+    &lt;datalist id="l1"&gt;
+      &lt;option&gt;Banana&lt;/option&gt;
+      &lt;option&gt;Cherry&lt;/option&gt;
+      &lt;option&gt;Apple&lt;/option&gt;
+      &lt;option&gt;Strawberry&lt;/option&gt;
+      &lt;option&gt;Lemon&lt;/option&gt;
+      &lt;option&gt;Orange&lt;/option&gt;
+    &lt;/datalist&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t2"&gt;What's your e-mail?&lt;/label&gt;
+    &lt;input type="email" id="t2" name="email"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t3"&gt;Leave a short message&lt;/label&gt;
+    &lt;textarea id="t3" name="msg" maxlength="140" rows="5"&gt;&lt;/textarea&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</pre>
+
+<pre class="brush: css notranslate">body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin : 0;
+}
+
+form {
+  max-width: 200px;
+  margin: 0;
+  padding: 0 5px;
+}
+
+p &gt; label {
+  display: block;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+textarea,
+fieldset {
+/* требуется для правильной формы формы
+    элементов в браузерах на основе WebKit*/
+  -webkit-appearance: none;
+
+  width : 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  outline: none;
+}</pre>
+
+<p>{{EmbedLiveSample("Full_example", "100%", 420)}}</p>
+
+<h3 id="Индивидуальные_сообщения_об_ошибках">Индивидуальные сообщения об ошибках</h3>
+
+<p>Как видно из приведенных выше примеров, каждый раз, когда пользователь пытается отправить невалидную форму, браузер отображает сообщение об ошибке. Способ отображения этого сообщения зависит от браузера.</p>
+
+<p>Эти автоматизированные сообщения имеют два недостатка:</p>
+
+<ul>
+ <li>Нет стандартного способа изменить внешний вид используя CSS.</li>
+ <li>Они зависят от языка браузера, что означает, что у вас может быть страница на одном языке, но сообщение об ошибке отображаться на другом языке.</li>
+</ul>
+
+<table>
+ <caption>Французская версия сообщений обратной связи на странице на английском языке</caption>
+ <thead>
+  <tr>
+   <th scope="col">Браузер</th>
+   <th scope="col">Отображение</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Firefox 17 (Windows 7)</td>
+   <td><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></td>
+  </tr>
+  <tr>
+   <td>Chrome 22 (Windows 7)</td>
+   <td><img alt="Example of an error message with Chrome in French on an English page" src="/files/4327/error-chrome-win7.png" style="height: 96px; width: 261px;"></td>
+  </tr>
+  <tr>
+   <td>Opera 12.10 (Mac OSX)</td>
+   <td><img alt="Example of an error message with Opera in French on an English page" src="/files/4331/error-opera-macos.png" style="height: 83px; width: 218px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Чтобы настроить внешний вид и текст этих сообщений, вы должны использовать JavaScript; нет способа сделать это, используя только HTML и CSS.</p>
+
+<p>HTML5 предоставляет <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">API проверки ограничений </a>(API - Application Programing interface, программный интерфейс приложения, англ.) для проверки и настройки состояния элемента формы. Помимо прочего, можно заменить текст сообщения об ошибке. Давайте посмотрим на небольшой пример:</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;label for="mail"&gt;I would like you to provide me an e-mail&lt;/label&gt;
+  &lt;input type="email" id="mail" name="mail"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<p>В JavaScript вы вызываете метод <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a>:</p>
+
+<pre class="brush: js notranslate">var email = document.getElementById("mail");
+
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("I expect an e-mail, darling!");
+  } else {
+    email.setCustomValidity("");
+  }
+});</pre>
+
+<p>{{EmbedLiveSample("Customized_error_messages", "100%", 50)}}</p>
+
+<h2 id="Проверка_форм_с_использованием_JavaScript">Проверка форм с использованием JavaScript</h2>
+
+<p>Если вы хотите контролировать внешний вид собственных сообщений об ошибках или работать с браузерами, которые не поддерживают встроенную проверку формы HTML, вы должны использовать JavaScript.</p>
+
+<h3 id="API_проверки_валидности_HTML5">API проверки валидности HTML5</h3>
+
+<p>Все больше браузеров теперь поддерживают API проверки ограничений, и он становится надежным. Этот API состоит из набора методов и свойств, доступных для каждого элемента формы.</p>
+
+<h4 id="Свойства_API_проверки_валидности">Свойства API проверки валидности</h4>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Свойство</th>
+   <th scope="col">Описание</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>validationMessage</code></td>
+   <td>Локализованное сообщение, описывающее ограничения валидности, которым элемент управления не соответствует (если есть), или пустая строка, если элемент управления не является кандидатом для проверки ограничений (<code>willValidate</code> is <code>false</code>), или значение элемента удовлетворяет его ограничениям.</td>
+  </tr>
+  <tr>
+   <td><code>validity</code></td>
+   <td>объект {{domxref("ValidityState")}} , описывающий состояние действительности элемента.</td>
+  </tr>
+  <tr>
+   <td><code>validity.customError</code></td>
+   <td>Возвращает <code>true</code> если элемент содержит пользовательскую ошибку; <code>false</code> в противном случае.</td>
+  </tr>
+  <tr>
+   <td><code>validity.patternMismatch</code></td>
+   <td>Возвращает <code>true</code> если значение элемента не соответствует предоставленному шаблону; <code>false</code> в противном случае.<br>
+    <br>
+    если возвращает <code>true</code>, элемент будет соответствовать CSS псевдо-классу {{cssxref(":invalid")}}.</td>
+  </tr>
+  <tr>
+   <td><code>validity.rangeOverflow</code></td>
+   <td>Возвращает <code>true</code> если значение элемента выше заданного максимума; <code>false</code> в противном случае.<br>
+    <br>
+    Если возвращает <code>true</code>, элемент будет соответствовать {{cssxref(":invalid")}} и CSS псевдо-классу. {{cssxref(":out-of-range")}}.</td>
+  </tr>
+  <tr>
+   <td><code>validity.rangeUnderflow</code></td>
+   <td>Возвращает<code>true</code> если значение элемента меньше заданного минимума; <code>false</code> в противном случае.<br>
+    <br>
+    Если возвращает <code>true</code>, элемент будет соответствовать {{cssxref(":invalid")}} и CSS псевдо-классу {{cssxref(":out-of-range")}}.</td>
+  </tr>
+  <tr>
+   <td><code>validity.stepMismatch</code></td>
+   <td>Возвращает<code>true,</code> если значение элемента не соответствует правилам, предоставляемым атрибутом step; в противном случае <code>false</code> .<br>
+    <br>
+    <code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Если возвращает </span></font>true</code>, элемент будет соответствовать {{cssxref(":invalid")}} и CSS псевдоклассу {{cssxref(":out-of-range")}}.</td>
+  </tr>
+  <tr>
+   <td><code>validity.tooLong</code></td>
+   <td>Возвращает <code>true</code> если значение элемента больше заданной максимальной длины; иначе будет false<br>
+    <br>
+    Если возвращает <code>true</code>, элемент будет соответствовать {{cssxref(":invalid")}} и CSS псевдоклассу {{cssxref(":out-of-range")}}.</td>
+  </tr>
+  <tr>
+   <td><code>validity.typeMismatch</code></td>
+   <td>Возвращает true если значение элемента не соответствует правильному синтаксису; в противном случае - false.<br>
+    Если возвращает <code>true</code>, элемент будет соответствовать CSS псевдоклассу {{cssxref(":invalid")}}.</td>
+  </tr>
+  <tr>
+   <td><code>validity.valid</code></td>
+   <td>Возвращае <code>true</code> если значение элемента не имеет проблем с валидностью; в противном случае <code>false</code>.<br>
+    <br>
+    Если возвращает <code>true</code>, элемент будет соответствовать CSS псевдоклассу {{cssxref(":valid")}} ; CSS псевдоклассу {{cssxref(":invalid")}} в противном случае.</td>
+  </tr>
+  <tr>
+   <td><code>validity.valueMissing</code></td>
+   <td>Возвращает true если элемент не имеет значения, но является обязательным полем; в противном случае false.<br>
+    <br>
+    Если возвращает <code>true</code>, элемент будет соответствовать CSS псевдоклассу {{cssxref(":invalid")}}.</td>
+  </tr>
+  <tr>
+   <td><code>willValidate</code></td>
+   <td>Возвращает <code>true</code> если элемент будет проверен при отправке формы; в противном случае <code>false</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Методы_API_проверки_ограничений">Методы API проверки ограничений</h4>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Метод</th>
+   <th scope="col">Описание</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>checkValidity()</code></td>
+   <td>Возвращает <code>true</code> если значение элемента не имеет проблем с валидностью; иначе <code>false</code>. Если элемент невалидный, этот метод также вызывает событие {{event("invalid")}} в элементе .</td>
+  </tr>
+  <tr>
+   <td><code>setCustomValidity(<em>message</em>)</code></td>
+   <td>Добавляет настраиваемое сообщение об ошибке в элемент; если вы установили собственное сообщение об ошибке, элемент считается невалидным, и отображается указанная ошибка. Это позволяет использовать код JavaScript для установления ошибки валидации, отличного от тех, которые предлагаются стандартным API ограничений валидности. Сообщение показывается пользователю при возникновении проблемы.<br>
+    <br>
+    Если аргументом является пустая строка, пользовательская ошибка очищается.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Для устаревших браузеров можно использовать полифилл как <a href="https://hyperform.js.org/" rel="external">Hyperform </a> чтобы компенсировать отсутствие поддержки API ограничений валидности. Поскольку вы уже используете JavaScript, использование полифилла не является дополнительным бременем для вашего веб-сайта или дизайна или реализации веб-приложения.</p>
+
+<h4 id="Пример_использования_API_проверки_ограничений">Пример использования API проверки ограничений</h4>
+
+<p>Давайте посмотрим, как использовать этот API для создания настраиваемых сообщений об ошибках. Сначала HTML:</p>
+
+<pre class="brush: html notranslate">&lt;form novalidate&gt;
+  &lt;p&gt;
+    &lt;label for="mail"&gt;
+      &lt;span&gt;Please enter an email address:&lt;/span&gt;
+      &lt;input type="email" id="mail" name="mail"&gt;
+      &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<p>Эта простая форма использует атрибут {{htmlattrxref("novalidate","form")}} для отключения автоматической валидации браузера, что позволяет нашему скрипту контролировать валидацию. Однако это не отключает поддержку API ограничений валидации или применения псевдоклассов CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} и {{cssxref(":out-of-range")}}. Это означает, что, хотя браузер не проверяет правильность формы перед отправкой своих данных, вы все равно можете сделать это самостоятельно и соответствующим образом сформировать форму.</p>
+
+<p>Атрибут <a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> гарантирует, что наше индивидуальное сообщение об ошибке будет доступно всем, включая тех, кто использует вспомогательные технологии, такие как скрин-ридеры.</p>
+
+<h5 id="CSS">CSS</h5>
+
+<p>Этот CSS задает стили нашей форме и выводу ошибки, чтобы сделать их визуально более привлекательными.</p>
+
+<pre class="brush: css notranslate">/* Это просто, чтобы сделать пример более приятным */
+body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin : 0;
+}
+
+form {
+  max-width: 200px;
+}
+
+p * {
+  display: block;
+}
+
+input[type=email]{
+  -webkit-appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Наш стиль для невалидных полей */
+input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* Это стиль для сообщений об ошибке */
+.error {
+  width  : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}</pre>
+
+<h5 id="JavaScript">JavaScript</h5>
+
+<p>Следующий код JavaScript обрабатывает выборочную проверку ошибок.</p>
+
+<pre class="brush: js notranslate">//Существует много способов выбрать DOM узел; здесь мы получаем форму и электронную почту
+//поле ввода, а также элемент span, в который мы поместим сообщение об ошибке.
+var form  = document.getElementsByTagName('form')[0];
+var email = document.getElementById('mail');
+var error = document.querySelector('.error');
+
+email.addEventListener("input", function (event) {
+ // Каждый раз, когда пользователь вводит что-либо, мы проверяем,
+  // является ли корректным поле электронной почты.
+  if (email.validity.valid) {
+    // В случае появления сообщения об ошибке, если поле
+    // является корректным, мы удаляем сообщение об ошибке.
+    error.innerHTML = ""; // Сбросить содержимое сообщения
+    error.className = "error"; // Сбросить визуальное состояние сообщения
+  }
+}, false);
+form.addEventListener("submit", function (event) {
+  // Каждый раз, когда пользователь пытается отправить данные, мы проверяем
+   // валидность поля электронной почты.
+  if (!email.validity.valid) {
+
+    // Если поле невалидно, отображается пользовательское
+    // сообщение об ошибке.
+    error.innerHTML = "I expect an e-mail, darling!";
+    error.className = "error active";
+    // И мы предотвращаем отправку формы путем отмены события
+    event.preventDefault();
+  }
+}, false);</pre>
+
+<p>Вот живой результат:</p>
+
+<p>{{EmbedLiveSample("Example_using_the_constraint_validation_API", "100%", 130)}}</p>
+
+<p>API ограничений валидации дает вам мощный инструмент для проверки формы, позволяя вам получить контроль над пользовательским интерфейсом больше и лучше того, что вы можете делать только при помощи HTML и CSS.</p>
+
+<h3 id="Проверка_форм_без_встроенного_API">Проверка форм без встроенного API</h3>
+
+<p>Иногда, например, с устаревшими браузерами или <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">пользовательскими виджетами</a>, вы не сможете (или не захотите) использовать API проверки ограничений. В этом случае вы все еще можете использовать JavaScript для проверки вашей формы. Проверка формы - это скорее вопрос пользовательского интерфейса, чем проверка валидности данных.</p>
+
+<p>Чтобы проверить форму, вы должны задать себе несколько вопросов:</p>
+
+<dl>
+ <dt>Какую проверку я должен выполнить?</dt>
+ <dd>Вам нужно определить, как проверить ваши данные: операции со строками, преобразование типов, регулярные выражения и т. д. Это зависит от вас. Просто помните, что данные формы всегда являются текстовыми и всегда предоставляются вашему скрипту как строки.</dd>
+ <dt>Что делать, если форма не проверяется?</dt>
+ <dd>Это явно вопрос интерфейса. Вы должны решить, как будет выглядеть форма: формально ли отправляет данные? Должны ли вы выделять поля, которые содержат ошибки? Должны отображаться сообщения об ошибках?</dd>
+ <dt>Как я могу помочь пользователю исправить невалидные данные?</dt>
+ <dd>Чтобы уменьшить разочарование пользователя, очень важно предоставить как можно больше полезной информации, чтобы помочь им в исправлении их исходных данных. Вы должны предлагать предварительные предложения, чтобы они знали, что ожидается, а также ясные сообщения об ошибках. Если вы хотите вникнуть в требования к пользовательскому интерфейсу проверки формы, есть некоторые полезные статьи, которые вы должны прочитать:
+ <ul>
+  <li>SmashingMagazine: <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Подтверждение формы поля: подход, основанный на ошибках</a></li>
+  <li>SmashingMagazine: <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Проверка веб-формы: лучшие практики и учебные пособия</a></li>
+  <li>Six Revision: <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" rel="external">Рекомендации по подсказкам и валидации в веб-формах</a></li>
+  <li>A List Apart: <a href="http://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Встроенная проверка в веб-формах</a></li>
+ </ul>
+ </dd>
+</dl>
+
+<h4 id="Пример_который_не_использует_API_валидации_ограничений">Пример, который не использует API валидации ограничений</h4>
+
+<p>Чтобы проиллюстрировать это, давайте перестроим предыдущий пример, чтобы он работал с устаревшими браузерами:</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;p&gt;
+    &lt;label for="mail"&gt;
+        &lt;span&gt;Please enter an email address:&lt;/span&gt;
+        &lt;input type="text" class="mail" id="mail" name="mail"&gt;
+        &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;p&gt;
+  &lt;!-- Some legacy browsers need to have the `type` attribute
+       explicitly set to `submit` on the `button`element --&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<p>Как вы можете видеть, HTML почти такой же; мы просто удалили функции проверки HTML. Обратите внимание, что <a href="/en-US/docs/Accessibility/ARIA">ARIA</a> является независимой спецификацией, которая специально не связана с HTML5.</p>
+
+<h5 id="CSS_2">CSS</h5>
+
+<p>Аналогично, CSS не нужно сильно менять; мы просто переводим CSS-псевдокласс {{cssxref(":invalid")}} в настоящий класс и избегаем использования селектора атрибутов, который не работает в Internet Explorer 6.</p>
+
+<pre class="brush: css notranslate">/* This is just to make the example nicer */
+body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin : 0;
+}
+
+form {
+  max-width: 200px;
+}
+
+p * {
+  display: block;
+}
+
+input.mail {
+  -webkit-appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input.invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus.invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}</pre>
+
+<h5 id="JavaScript_2">JavaScript</h5>
+
+<p>Большие изменения в коде JavaScript, которые должны сделать намного больше тяжелой работы.</p>
+
+<pre class="brush: js notranslate">// Существует меньше способов выбрать узел DOM с устаревшими браузерами
+var form  = document.getElementsByTagName('form')[0];
+var email = document.getElementById('mail');
+
+// Ниже приведен трюк для достижения следующего узла Element Element в DOM
+// Это опасно, потому что вы можете легко построить бесконечный цикл.
+// В современных браузерах вам следует использовать элемент element.nextElementSibling
+var error = email;
+while ((error = error.nextSibling).nodeType != 1);
+
+// As per the HTML5 Specification
+var emailRegExp = /^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+// Многие устаревшие браузеры не поддерживают метод addEventListener.
+// Вот простой способ справиться с этим; это далеко не единственный.
+function addEvent(element, event, callback) {
+  var previousEventCallBack = element["on"+event];
+  element["on"+event] = function (e) {
+    var output = callback(e);
+
+    // Обратный вызов, который возвращает `false`, останавливает цепочку обратного вызова
+     // и прерывает выполнение обратного вызова события.
+    if (output === false) return false;
+
+    if (typeof previousEventCallBack === 'function') {
+      output = previousEventCallBack(e);
+      if(output === false) return false;
+    }
+  }
+};
+
+// Теперь мы можем перестроить наше ограничение валидации
+// Поскольку мы не полагаемся на псевдо-класс CSS, мы должны
+// явно установить допустимый / недопустимый класс в поле электронной почты
+addEvent(window, "load", function () {
+// Здесь мы проверяем, пусто ли поле (помните, что поле не требуется)
+   // Если это не так, мы проверяем, является ли его контент корректным адресом электронной почты.
+  var test = email.value.length === 0 || emailRegExp.test(email.value);
+
+  email.className = test ? "valid" : "invalid";
+});
+
+// Это определяет, что происходит, когда пользователь вводит в поле
+addEvent(email, "input", function () {
+  var test = email.value.length === 0 || emailRegExp.test(email.value);
+  if (test) {
+    email.className = "valid";
+    error.innerHTML = "";
+    error.className = "error";
+  } else {
+    email.className = "invalid";
+  }
+});
+
+// Это определяет, что происходит, когда пользователь пытается отправить данные
+addEvent(form, "submit", function () {
+  var test = email.value.length === 0 || emailRegExp.test(email.value);
+
+  if (!test) {
+    email.className = "invalid";
+    error.innerHTML = "I expect an e-mail, darling!";
+    error.className = "error active";
+
+    // Некоторые устаревшие браузеры не поддерживают метод event.preventDefault ()
+    return false;
+  } else {
+    email.className = "valid";
+    error.innerHTML = "";
+    error.className = "error";
+  }
+});</pre>
+
+<p>Результат выглядит следующим образом:</p>
+
+<p>{{EmbedLiveSample("Example_that_doesn't_use_the_constraint_validation_API", "100%", 130)}}</p>
+
+<p>Как вы можете видеть, создать собственную систему проверки не сложно. Трудная часть состоит в том, чтобы сделать его достаточно общим, чтобы использовать его как в кросс-платформенной, так и в любой форме, которую вы могли бы создать. Существует множество библиотек для проверки формы; вы не должны колебаться, чтобы использовать их. Вот несколько примеров:</p>
+
+<ul>
+ <li>Автономная библиотека
+  <ul>
+   <li><a href="http://rickharrison.github.com/validate.js/" rel="external">Validate.js</a></li>
+  </ul>
+ </li>
+ <li>jQuery plug-in:
+  <ul>
+   <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" rel="external">Validation</a></li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="Удаленная_проверка">Удаленная проверка</h4>
+
+<p>В некоторых случаях может быть полезно выполнить некоторую удаленную проверку. Такая проверка необходима, когда данные, введенные пользователем, привязаны к дополнительным данным, хранящимся на стороне сервера вашего приложения. Одним из вариантов использования является регистрационные формы, в которых вы запрашиваете имя пользователя. Чтобы избежать дублирования, разумнее выполнить AJAX запрос для проверки доступности имени пользователя, а не попросить пользователя отправить данные, а затем отправить форму с ошибкой.</p>
+
+<p>Выполнение такой проверки требует принятия нескольких мер предосторожности:</p>
+
+<ul>
+ <li>Для этого требуется публиковать API и некоторые данные; убедитесь, что это не конфиденциальные данные.</li>
+ <li>Сетевое отставание требует выполнения асинхронной проверки. Это требует некоторой работы пользовательского интерфейса, чтобы быть уверенным, что пользователь не будет заблокирован, если проверка не будет выполнена должным образом.</li>
+</ul>
+
+<h2 id="Заключение">Заключение</h2>
+
+<p>Проверка формы не требует сложного JavaScript, но она требует тщательного изучения пользователя. Всегда помните, чтобы помочь вашему пользователю исправить данные, которые они предоставляют. Для этого обязательно выполните следующие действия:</p>
+
+<ul>
+ <li>Отображать явные сообщения об ошибках.</li>
+ <li>Будьте правдоподобны в отношении формата ввода.</li>
+ <li>Укажите, где именно происходит ошибка (особенно на больших формах).</li>
+</ul>
+
+<p>{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}</p>
+
+<h2 id="В_этом_модуле">В этом модуле</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Ваша первая HTML-форма</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">Как структурировать форму HTML</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">Нативная форма виджетов</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Отправка данных формы</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Проверка данных формы</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">Как создать пользовательские виджеты формы</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Отправка форм через JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML-формы в старых браузерах</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Стилизация HTML-форм</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Расширенный стиль для HTML-форм</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Таблица совместимости свойств виджета формы</a></li>
+</ul>

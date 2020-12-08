@@ -1,0 +1,91 @@
+---
+title: WeakMap.prototype.clear()
+slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
+translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>Метод <code><strong>clear()</strong></code> удаляет все элементы из объекта WeakMap, но он больше не является частью ECMAScript и его реализаций.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><em>wm</em>.clear();</code></pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_метода_clear">Использование метода <code>clear</code></h3>
+
+<pre class="brush: js;highlight:[10]">var wm = new WeakMap();
+var obj = {};
+
+wm.set(obj, "foo");
+wm.set(window, "bar");
+
+wm.has(obj); // true
+wm.has(window); // true
+
+wm.clear();
+
+wm.has(obj)  // false
+wm.has(window)  // false
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<p>Не входит ни в одну текущую спецификацию или черновик. Этот метод был частью черновика ECMAScript 6, до 28 ревизии (версия от 14 октября, 2014), но был удален в последующих версиях черновика. В финальном стандарте его не будет.</p>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>36</td>
+   <td>20-45</td>
+   <td>11</td>
+   <td>23</td>
+   <td>7.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>20-45</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>8</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("WeakMap")}}</li>
+</ul>

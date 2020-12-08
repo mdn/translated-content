@@ -1,0 +1,236 @@
+---
+title: DocumentFragment
+slug: Web/API/DocumentFragment
+translation_of: Web/API/DocumentFragment
+---
+<p>{{ APIRef("DOM") }}</p>
+
+<p>Интерфейс DocumentFragment представляет собой минимальный объект документа, который не имеет родителя. Он используется как легкая версия  {{domxref ("Document")}}, чтобы хранить хорошо сформированные или потенциально не хорошо формированные фрагменты XML.</p>
+
+<p>Различные другие методы могут взять document fragment в качестве аргумента (например, любые методы интерфейса Node, такие как Node.appendChild и Node.insertBefore), в этом случае прикрепляются или вставляются  дети фрагмента, а не сам фрагмент.</p>
+
+<p>Этот интерфейс также хорошо используется с веб-компонентами: {{HTMLElement ( "template")}}  элементы содержат <code>DocumentFragment</code> в их {{domxref ("HTML Template Element.content")}} свойствах.</p>
+
+<p>Пустой <code>DocumentFragment</code> может быть создан с помощью метода {{domxref("document.createDocumentFragment")}}  или конструктора.</p>
+
+<h2 id="Specification" name="Specification">Свойства</h2>
+
+<p><em>Этот интерфейс не имеет определенных свойств помимо наследуемых от его родителя, {{domxref("Node")}}, и реализует их из интерфейса {{domxref("ParentNode")}}.</em></p>
+
+<dl>
+ <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Возвращает динамическую {{domxref("HTMLCollection")}} содержащую все объекты типа {{domxref("Element")}}, которые являются потомками объекта <code>DocumentFragment</code>.</dd>
+ <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Возвращает {{domxref("Element")}}, который является первым потомком объекта <code>DocumentFragment</code>, или <code>null</code>, если такого нет.</dd>
+ <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Возвращает {{domxref("Element")}}, который является последним потомком объекта <code>DocumentFragment</code>, или <code>null</code>, если такого нет.</dd>
+ <dt>{{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Возвращает <code>unsigned long</code> - число потомков объекта <code>DocumentFragment</code>.</dd>
+</dl>
+
+<h2 id="Конструктор">Конструктор</h2>
+
+<dl>
+ <dt>{{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}</dt>
+ <dd>Возвращает пустой объект <code>DocumentFragment</code>.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<p><em>Этот интерфейс наследует методы его родителя, {{domxref("Node")}}<em>, и реализует их из интерфейса {{domxref("ParentNode")}}</em></em><em>.</em></p>
+
+<dl>
+ <dt>{{domxref("DocumentFragment.find()")}} {{experimental_inline}}</dt>
+ <dd>Возвращает первое совпадение {{domxref("Element")}} в дереве <code>DocumentFragment</code>.</dd>
+ <dt>{{domxref("DocumentFragment.findAll()")}} {{experimental_inline}}</dt>
+ <dd>Возвращает список {{domxref("NodeList")}} найденных {{domxref("Element")}} в дереве <code>DocumentFragment</code>.</dd>
+ <dt>{{domxref("DocumentFragment.querySelector()")}}</dt>
+ <dd>Возвращает первый узел {{domxref("Element")}} в <code>DocumentFragment</code>, в порядке документа, который совпадает с заданным селектором.</dd>
+ <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
+ <dd>Возвращает список {{domxref("NodeList")}} всех узлов {{domxref("Element")}} в <code>DocumentFragment</code> которые совпадают с заданным селектором.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
+ <dd>Возвращает первый узел {{domxref("Element")}} в <code style="font-size: 14px;">DocumentFragment</code>, в порядке документа, который совпадает с заданным ID.</dd>
+</dl>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Добавлены конструктор и реализация {{domxref("ParentNode")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Selectors API Level 2', '#the-apis', 'DocumentFragment')}}</td>
+   <td>{{Spec2('Selectors API Level 2')}}</td>
+   <td>Добавлены методы <code>find()</code> и <code>findAll()</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}</td>
+   <td>{{Spec2('Selectors API Level 1')}}</td>
+   <td>Добавлены методы <code>querySelector()</code> и <code>querySelectorAll()</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Нет изменений с {{SpecName('DOM2 Core')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Нет изменений с {{SpecName('DOM1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Первоначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Характеристика</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>querySelector()</code> и <code>querySelectorAll()</code></td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
+   <td>8.0</td>
+   <td>10.0</td>
+   <td>3.2 (525.3)</td>
+  </tr>
+  <tr>
+   <td><code>findAll()</code> и <code>find() </code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>DocumentFragment() </code>конструктор {{experimental_inline}}</p>
+   </td>
+   <td>28.0</td>
+   <td>{{CompatGeckoDesktop("24.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>15.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Свойства<code> ParentNode </code>{{experimental_inline}}</td>
+   <td>28.0</td>
+   <td>{{CompatGeckoDesktop("25.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>15.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Методы <code>ParentNode</code> {{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Характеристика</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("1.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>querySelector()</code> и <code>querySelectorAll()</code></td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1.0")}}</td>
+   <td>8.0</td>
+   <td>10.0</td>
+   <td>3.2 (525.3)</td>
+  </tr>
+  <tr>
+   <td><code>findAll()</code> и <code>find() </code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>DocumentFragment()</code> конструктор {{experimental_inline}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("24.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Свойства <code>ParentNode</code> {{experimental_inline}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("25.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>5.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Методы <code>ParentNode</code> {{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">Интерфейсы DOM.</a></li>
+</ul>

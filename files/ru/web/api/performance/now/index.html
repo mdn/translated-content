@@ -1,0 +1,138 @@
+---
+title: performance.now()
+slug: Web/API/Performance/now
+tags:
+  - API
+  - Performance
+  - Web Performance API
+translation_of: Web/API/Performance/now
+---
+<p>{{APIRef("Navigation Timing")}}</p>
+
+<h2 id="Краткое_описание">Краткое описание</h2>
+
+<p>Метод <code><strong>performance.now()</strong></code> возращает временную метку {{domxref("DOMHighResTimeStamp")}}, измеряемую в миллисекундах, с точностью до одной тысячной миллисекунды.</p>
+
+<p>Значение, представленное типом {{domxref("DOMHighResTimeStamp")}}, изменяется в зависимости от контекста. Стоит иметь ввиду следующее:</p>
+
+<ul>
+ <li>в разделяемых или выделенных потоках выполнения, началом эпохи считается момент начала работы потока.</li>
+ <li>вне потоков выполнения, или в выделенных потоках, созданных в контексте {{domxref("Window")}}, началом эпохи считается значение свойства {{domxref("PerformanceTiming.navigationStart")}}.</li>
+ <li>в выделенных потоках выполнения, созданных из другого потока, началом эпохи устанавливается начало эпохи этого самого потока.</li>
+</ul>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>t</em> = <em>performance</em>.now();</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">var t0 = performance.now();
+doSomething();
+var t1 = performance.now();
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+</pre>
+
+<p>В отличие от других временны́х типов данных, доступных в JavaScript (таких как <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), метки времени, возвращенные из <code>performance.now(),</code> не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.</p>
+
+<p>Также, в противоположность <code>Date.now</code>, значение, возвращаемое из <code>performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени </code>(которое может быть установленно вручную или изменено программами наподобие NTP).</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Highres Time Level 2', '#dom-performance-now', 'Performance.now()')}}</td>
+   <td>{{Spec2('Highres Time Level 2')}}</td>
+   <td>Более строгие определения типов и интерфейсов.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Highres Time', '#dom-performance-now', 'Performance.now()')}}</td>
+   <td>{{Spec2('Highres Time')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatChrome("20.0") }} {{ property_prefix("webkit") }}<br>
+    {{ CompatChrome("24.0") }} [1]</td>
+   <td>{{ CompatGeckoDesktop("15.0") }}</td>
+   <td>10.0</td>
+   <td>{{ CompatOpera("15.0") }}</td>
+   <td>{{ CompatSafari("8.0") }}</td>
+  </tr>
+  <tr>
+   <td>on Web workers</td>
+   <td>{{CompatChrome("33")}}</td>
+   <td>{{ CompatGeckoDesktop("34.0") }}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatAndroid("4.0") }}</td>
+   <td>{{ CompatChrome("25.0") }}</td>
+   <td>{{ CompatGeckoMobile("15.0") }}</td>
+   <td>10.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>on Web workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatGeckoMobile("34.0") }}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Версии Chrome от 20 до 33 под Windows, на момент написания этого документа, возвращает <code>performance.now()</code> с точностью только до миллисекунд.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now" title="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>от HTML5 Rocks.</li>
+</ul>

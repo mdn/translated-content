@@ -1,0 +1,250 @@
+---
+title: richlistbox
+slug: Mozilla/Tech/XUL/richlistbox
+tags:
+  - Dokumentacja_XUL
+  - Elementy_XUL
+  - Strony_wymagające_dopracowania
+translation_of: Archive/Mozilla/XUL/richlistbox
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/pl/docs/Dokumentacja_XUL">Dokumentacja XUL</a>    [
+ <a href="#Przyk.C5.82ady">Przykłady</a> |
+ <a href="#Atrybuty">Atrybuty</a> |
+ <a href="#W.C5.82asno.C5.9Bci">Własności</a> |
+ <a href="#Metody">Metody</a> |
+ <a href="#Podobne">Podobne</a> ]
+</span></div>
+
+<p>Ten element jest stosowany do tworzenia listy pozycji, podobnie do element <code><a href="/pl/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code>, lecz jest projektowany do zastosowania wtedy, kiedy pozycje nie zawierają zawartości prostego tekstu. <code>richlistbox</code> obsługuje zaznaczenie pojedynczej pozycji w odpowiednim czasie.</p>
+
+<p></p><div class="blockIndicator note"><strong>Uwaga:</strong> In versions of Firefox prior to Firefox 3, rich list boxes support only single selection. Firefox 3 introduced multiple selection to rich list boxes.</div><p></p>
+
+<dl>
+ <dt>Atrybuty</dt>
+ <dd><a href="#a-seltype">seltype</a>, <a href="#a-suppressonselect">suppressonselect</a></dd>
+</dl>
+
+<dl>
+ <dt>Własności</dt>
+ <dd><a href="#p-accessible">accessible</a>, <a href="#p-children">children</a>, <a href="#p-scrollBoxObject">scrollBoxObject</a>, <a href="#p-selectedIndex">selectedIndex</a>, <a href="#p-selectedItem">selectedItem</a>, <a href="#p-selType">selType</a>, <a href="#p-suppressOnSelect">suppressOnSelect</a></dd>
+</dl>
+
+<dl>
+ <dt>Metody</dt>
+ <dd><a href="#m-clearSelection">clearSelection</a>, <a href="#m-ensureElementIsVisible">ensureElementIsVisible</a>, <a href="#m-ensureSelectedElementIsVisible">ensureSelectedElementIsVisible</a>, <a href="#m-getItemAtIndex">getItemAtIndex</a>, <a href="#m-getRowCount">getRowCount</a>, <a href="#m-goDown">goDown</a>, <a href="#m-goUp">goUp</a></dd>
+</dl>
+
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady">Przykłady</h3>
+
+<p>(potrzebny przykład)</p>
+
+<h3 id="Atrybuty" name="Atrybuty">Atrybuty</h3>
+
+<p></p><div id="a-seltype">
+
+</div> <div id="a-suppressonselect">
+
+</div> <table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238);">
+<tbody>
+<tr>
+<td><p><strong>Dziedziczy z elementu XUL</strong><br> <small>
+<code id="a-align"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/align">align</a></code>,
+<code id="a-allowevents"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/allowevents">allowevents</a></code>,
+<code id="a-allownegativeassertions"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/allownegativeassertions">allownegativeassertions</a></code>,
+<code id="a-class"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/class">class</a></code>,
+<code id="a-coalesceduplicatearcs"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/coalesceduplicatearcs">coalesceduplicatearcs</a></code>,
+<code id="a-collapsed"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/collapsed">collapsed</a></code>,
+<code id="a-container"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/container">container</a></code>,
+<code id="a-containment"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/containment">containment</a></code>,
+<code id="a-context"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/context">context</a></code>,
+<code id="a-contextmenu"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/contextmenu">contextmenu</a></code>,
+<code id="a-datasources"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/datasources">datasources</a></code>,
+<code id="a-dir"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/dir">dir</a></code>,
+<code id="a-empty"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/empty">empty</a></code>,
+<code id="a-equalsize"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/equalsize">equalsize</a></code>,
+<code id="a-flags"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flags">flags</a></code>,
+<code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code>,
+<code id="a-height"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/height">height</a></code>,
+<code id="a-hidden"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/hidden">hidden</a></code>,
+<code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code>,
+<code id="a-insertafter"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/insertafter">insertafter</a></code>,
+<code id="a-insertbefore"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/insertbefore">insertbefore</a></code>,
+<code id="a-left"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/left">left</a></code>,
+<code id="a-maxheight"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxheight">maxheight</a></code>,
+<code id="a-maxwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxwidth">maxwidth</a></code>,
+<code id="a-menu"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/menu">menu</a></code>,
+<code id="a-minheight"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minheight">minheight</a></code>,
+<code id="a-minwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minwidth">minwidth</a></code>,
+<code id="a-mousethrough"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/mousethrough">mousethrough</a></code>,
+<code id="a-observes"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/observes">observes</a></code>,
+<code id="a-ordinal"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ordinal">ordinal</a></code>,
+<code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code>,
+<code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code>,
+<code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code>,
+<code id="a-popup"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/popup">popup</a></code>,
+<code id="a-position"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/position">position</a></code>,
+<code id="a-preference-editable"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/preference-editable">preference-editable</a></code>,
+<code id="a-querytype"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/querytype">querytype</a></code>,
+<code id="a-ref"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ref">ref</a></code>,
+<code id="a-removeelement"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/removeelement">removeelement</a></code>,
+<code id="a-sortDirection"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/sortDirection">sortDirection</a></code>,
+<code id="a-sortResource"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/sortResource">sortResource</a></code>,
+<code id="a-sortResource2"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/sortResource2">sortResource2</a></code>,
+<code id="a-statustext"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/statustext">statustext</a></code>,
+<code id="a-style"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/style">style</a></code>,
+<code id="a-template"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/template">template</a></code>,
+<code id="a-tooltip"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tooltip">tooltip</a></code>,
+<code id="a-tooltiptext"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/tooltiptext">tooltiptext</a></code>,
+<code id="a-top"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/top">top</a></code>,
+<code id="a-uri"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/uri">uri</a></code>,
+<code id="a-wait-cursor"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/wait-cursor">wait-cursor</a></code>,
+<code id="a-width"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/width">width</a></code> </small></p>
+</td>
+</tr>
+</tbody>
+</table><p></p>
+
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci">Własności</h3>
+
+<p> </p><div id="p-accessible">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/accessible">accessible</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   <a href="pl/NsIAccessible">nsIAccessible</a></i>
+ </dd>
+ <dd>
+  Zwraca obiekt dostępności dla elementu.</dd>
+</dl></div> <div id="p-children">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/children">children</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   tablica elementów</i>
+ </dd>
+ <dd>
+  Zwraca listę pozycji w <code><a href="/pl/docs/Mozilla/Tech/XUL/richlistbox" title="richlistbox">richlistbox</a></code>.</dd>
+</dl></div> <div id="p-scrollBoxObject"></div> <div id="p-selectedIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectedIndex">selectedIndex</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Zwraca indeks aktualnie zaznaczonej pozycji. Można zaznaczyć pozycję przypisując jej numer indeksu do własności. Przydzielając <code>-1</code> do tej własności, wszystkie pozycje zostaną odznaczone.</dd>
+</dl></div> <div id="p-selectedItem">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectedItem">selectedItem</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   element</i>
+ </dd>
+ <dd>
+  Podtrzymuje aktualnie zaznaczoną pozycję. Jeśli nie ma zaznaczonych aktualnie pozycji, to jej wartość równa będzie <code>null</code>. Możemy zaznaczyć pozycję poprzez ustawienie tej wartości. Zmiana zdarzenia będzie przesyłana do zaznaczonej pozycji, kiedy zmieniona zostanie jedna z tych własności, własność <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selectedIndex">selectedIndex</a></span></code> lub zmieniona będzie przez użytkownika.</dd>
+</dl></div> <div id="p-selType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/selType">selType</a></span></code> &lt;magic name="\"PAGENAME\"/"&gt;&lt;/magic&gt;</dt>
+ <dt>
+   </dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  Typ:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-seltype"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/seltype">seltype</a></code>.</dd>
+</dl>
+<p> </p>
+<p> </p>
+
+<p></p></div> <div id="p-suppressOnSelect">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/W%C5%82asno%C5%9B%C4%87/suppressOnSelect">suppressOnSelect</a></span></code></dt>
+ <dd>
+  Typ:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Pobiera i ustawia wartość atrybutu <code id="a-suppressonselect"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/suppressonselect">suppressonselect</a></code>.</dd>
+</dl></div><p></p>
+
+<h3 id="Metody" name="Metody">Metody</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Dziedziczy z elementu XUL</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>Dziedziczy z elementu DOM</strong><br>
+<small> <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pl/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl><dt> <span id="m-clearSelection"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/clearSelection">clearSelection()</a></code></span>
+</dt><dd> Zwraca typ: <i>nie zwraca wartości</i> </dd><dd> Odznacza wszystkie pozycje.
+</dd></dl>
+<p><br>
+</p> <dl><dt> <span id="m-ensureElementIsVisible"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/ensureElementIsVisible">ensureElementIsVisible( element )</a></code></span>
+</dt><dd> Zwraca typ: <i>nie zwraca wartości</i>
+</dd><dd> Jeśli określony element nie jest aktualnie widziany przez użytkownika, to wyświetlane pozycje są przewijane, do momentu, aż będzie on widoczny. Jeśli pozycja jest już widoczna, przewijanie nie będzie miało miejsca.
+</dd></dl>
+<p><br>
+</p> <dl><dt> <span id="m-ensureSelectedElementIsVisible"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/ensureSelectedElementIsVisible">ensureSelectedElementIsVisible()</a></code></span>
+</dt><dd> Zwraca typ: <i>nie zwraca wartości</i>
+</dd><dd> Jeśli aktualnie zaznaczony element w pudełku listy jest aktualnie nie widoczny dla użytkownika, to widok pudełka jest przewijany, aż się on pojawi. Jeśli pozycja jest widoczna, to nie pojawią się paski przewijania. </dd></dl>
+<p><br>
+</p> <dl><dt> <span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getItemAtIndex">getItemAtIndex( index )</a></code></span>
+</dt><dd> Zwraca typ: <i>element</i>
+</dd><dd> Zwraca element, który jest o określonym indeksie.
+</dd></dl>
+<p><br>
+</p> <dl><dt> <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getRowCount">getRowCount()</a></code></span>
+</dt><dd> Zwraca typ: <i>integer</i>
+</dd><dd> Zwraca ogólną liczbę wierszy w elemencie, nieważne ile wierszy jest wyświetlanych.
+</dd></dl>
+<p><br>
+</p><p><br>
+</p> <dl>
+ <dt>
+  <span id="m-goDown"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/goDown">goDown()</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   nie zwraca wartości</i>
+ </dd>
+ <dd>
+  Przenosi zaznaczenie w dół o jedną pozycje.</dd>
+</dl> <dl>
+ <dt>
+  <span id="m-goUp"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/goUp">goUp()</a></code></span></dt>
+ <dd>
+  Zwraca typ:
+  <i>
+   nie zwraca wartości</i>
+ </dd>
+ <dd>
+  Przenosi zaznaczenie do góry o jedną pozycję.</dd>
+</dl><p></p>
+
+<h3 id="Podobne" name="Podobne">Podobne</h3>
+
+<dl>
+ <dt>Interfejsy</dt>
+ <dd><a href="pl/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="pl/NsIDOMXULSelectControlElement">nsIDOMXULSelectControlElement</a></dd>
+</dl>

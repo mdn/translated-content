@@ -1,0 +1,138 @@
+---
+title: Персона
+slug: Archive/Mozilla/Persona
+tags:
+  - Obsolete
+  - Persona
+translation_of: Archive/Mozilla/Persona
+---
+<div class="callout-box">
+<p><strong>Оставайтесь на связи или получите помощь!</strong></p>
+
+<p>Подпишитесь на <a href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">наш блог</a>, присоединяйтесь к <a href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">нашей рассылке</a>, или найдите нас в <a class="link-irc" href="irc://irc.mozilla.org/identity" title="IRC: //irc.mozilla.org/identity">#identity</a> в системе <a class="link-https" href="https://wiki.mozilla.org/IRC" title="https://wiki.mozilla.org/IRC">IRC</a>.</p>
+</div>
+
+<p></p><div class="warning">  <p>On November 30th, 2016, Mozilla shut down the persona.org services. Persona.org and related domains will soon be taken offline.</p>  <p>For more information, see this guide to migrating your site away from Persona:</p>  <p><a href="https://wiki.mozilla.org/Identity/Persona_Shutdown_Guidelines_for_Reliers">https://wiki.mozilla.org/Identity/Persona_Shutdown_Guidelines_for_Reliers</a></p></div><p></p>
+
+<p><a href="https://login.persona.org/">Mozilla Persona</a> - это полностью децентрализированная и безопасная система авторизации на сайтах, основанная на открытом протоколе BrowserID. Чтобы быть уверенным, что Persona работает везде и у всех, Mozilla в настоящее время работает над небольшим набором <a href="https://developer.mozilla.org/en-US/docs/Persona/Bootstrapping_Persona" title="https://developer.mozilla.org/en-US/docs/Persona/Bootstrapping_Persona">дополнительных централизованных сервисов</a>, относящихся к системе Persona.</p>
+
+<p>Почему вам стоит использовать Persona на вашем сайте?</p>
+
+<ol>
+ <li><strong>Persona полностью избавляет от необходимости локального пароля на сайте</strong>, освобождая пользователей и сайты от работ по созданию, управлению и безопасному хранению паролей. Пользователю требуется зарегистрироваться один раз на Persona и он сможет заходить на <strong>любые совместимые сайты </strong>не затрачивая время на регистрацию.</li>
+ <li><strong>Persona проста в использовании.</strong> Всего двумя кликами пользователь службы Persona может осуществить вход на сайт, вроде <a href="http://voo.st/">Voost</a>, минуя проблемы создания учётной записи.</li>
+ <li><strong>Persona проста в установке</strong><strong>. </strong>Разработчики могут добавить поддержку Persona к сайту за вечер.</li>
+ <li>Самое же лучшее в этом то, что <strong>нет жёсткой привязки</strong>. Разработчики получают проверенный адрес почты для каждого из пользователей, а пользователи могут использовать любой адрес почты с Persona. </li>
+</ol>
+
+<p>И еще, Persona только в начале своего пути, чтобы стать еще лучше: она построена на <strong>открытом, децентрализованом протоколе</strong> BrowserID<strong>. </strong>И когда разработчики популярных браузеров реализуют BrowserID, <strong>не надо будет полагаться на Mozilla для входа.</strong></p>
+
+<p>Читайте дальше, чтобы приступить к изучению!</p>
+
+<div class="note"><strong>Замечание:</strong> Persona находится в активной разработке. Посетите <a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">наш блог</a>, чтобы узнать о новых возожностях, или же подпишитесь на <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">нашу рассылку</a> для организации обратной связи! </div>
+
+<h2 id="Использование_Persona_на_вашем_сайте">Использование Persona на вашем сайте</h2>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h3 id="Приступая_к_работе">Приступая к работе</h3>
+
+    <dl>
+     <dt><a href="/ru/docs/Persona/Why_Persona" title="EN / BrowserID / Why_BrowserID">Почему Persona?</a></dt>
+     <dd>Узнайте о причинах поддержать Persona на Вашем сайте, и сравниваете её с другими системами аутентификации.</dd>
+     <dt><a href="/ru/Persona/Quick_Setup" title="BrowserID / Быстрая настройка">Быстрая установка</a></dt>
+     <dd>Быстрый обзор, показывающий как добавить Persona на Ваш сайт.</dd>
+    </dl>
+   </td>
+   <td>
+    <h3 id="Справка_по_Persona_API">Справка по Persona API</h3>
+
+    <dl>
+     <dt><a href="/en/DOM/navigator.id" title="navigator.id"><font><font>Справка по navigator.id API</font></font></a></dt>
+     <dd>Ссылка для объекта navigator.id, который веб-разработчики могут использовать, для интеграции Persona с сайтами.</dd>
+     <dt><a href="/en/Persona/Remote_Verification_API" title="EN / BrowserID / Remote_Verification_API"><font><font>Ссылка API Проверка</font></font></a></dt>
+     <dd><font><font>Ссылка для дистанционного контроля API размещенную на </font></font><code><font><font>https://verifier.login.persona.org/verify</font></font></code><font><font> .</font></font></dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <h3 id="Гиды"><font><font>Гиды</font></font></h3>
+
+    <dl>
+     <dt><a href="/en/Persona/Security_Considerations" title="Соображения BrowserID / Безопасность"><font><font>Соображения безопасности</font></font></a></dt>
+     <dd><font><font>Практика и методы, чтобы убедиться, развертывание Персона является безопасным.</font></font></dd>
+     <dt>Браузерная совместимость</dt>
+     <dd>Узанйте какие именно браузеры поддерживает Persona </dd>
+     <dt><font><font>Интернационализация</font></font></dt>
+     <dd>Узнайте Persona работает с различными языками</dd>
+    </dl>
+   </td>
+   <td>
+    <h3 id="Reswrısı"><font><font>Reswrısı</font></font></h3>
+
+    <dl>
+     <dt>Библиотеки и плагины</dt>
+     <dd>Найдите встраимывые библиотеки для ваших любимы языков и web-фрейморков, блогов или CMS</dd>
+     <dt><a class="link-https" href="https://github.com/mozilla/browserid-cookbook" title="https://github.com/mozilla/browserid-cookbook"><font><font>Персона поваренной</font></font></a></dt>
+     <dd>Примеры исходных кодов для сайтов Persona. Включая сниппеты в PHP, node.JS и других...</dd>
+     <dt><a href="/en-US/docs/persona/branding" title="/ EN-US / документы / персона / брендинг"><font><font>Брендинг ресурсы</font></font></a></dt>
+     <dd><font><font>Вход в кнопках и других графикой, чтобы помочь настоящий Persona для пользователей.</font></font></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="Информация_для_поставщиков_удостоверяющих_личность"><font><font>Информация для поставщиков, удостоверяющих личность</font></font></h2>
+
+    <p><font><font>Если вы провайдер электронной почты или другой службы, удостоверяющий личность, обеспечивая, проверить ссылку ниже, чтобы узнать о становлении Поставщик Персона идентичности.</font></font></p>
+
+    <dl>
+     <dt><em><a href="/en-US/docs/Persona/Identity_Provider_Overview" title="IdP"><font><font>IdP Обзор</font></font></a></em></dt>
+     <dd><font><font>Посмотреть высокий уровень Провайдеры Персона идентичности.</font></font></dd>
+     <dt><em><a href="/en/Persona/Implementing_a_Persona_IdP" title="Руководство по внедрению персоной IdP"><font><font>Реализация IdP</font></font></a></em></dt>
+     <dd><font><font>Подробное руководство по техническим деталям становится поставщика удостоверения.</font></font></dd>
+     <dt><em><a href="/en-US/Persona/IdP_Development_tips" title="Советы для разработчиков"><font><font>Советы по развитию</font></font></a></em></dt>
+     <dd><font><font>Набор советов и трюков полезных при разработке нового поставщика удостоверений.</font></font></dd>
+     <dt><em><a href="/en-US/docs/Persona/.well-known-browserid" title="https://developer.mozilla.org/en-US/docs/Persona/.well-known-browserid"><font><font>.well известный / BrowserID</font></font></a></em></dt>
+     <dd><font><font>Обзор структуры и цели </font></font><code><font><font>.well известный / BrowserID</font></font></code><font><font> файл, который удостоверений использовать для рекламы своей поддержке протокола.</font></font></dd>
+    </dl>
+   </td>
+   <td>
+    <h2 id="Персона_проекта"><font><font>Персона проекта</font></font></h2>
+
+    <dl>
+     <dt><em><a href="/en/Persona/Glossary" title="navigator.id"><font><font>Глоссарий</font></font></a></em></dt>
+     <dd><font><font>BrowserID и Персона - терминология и определения.</font></font></dd>
+     <dt><em><a href="/en/Persona/FAQ" title="EN / BrowserID / FAQ"><font><font>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</font></font></a></em></dt>
+     <dd><font><font>Ответы на часто задаваемые вопросы.</font></font></dd>
+     <dt><em><a href="/en/Persona/Protocol_Overview" title="Обзор BrowserID / протокол"><font><font>Обзор протокола</font></font></a></em></dt>
+     <dd>Т<font><font>ехнический обзор основ протокола BrowserID.</font></font></dd>
+     <dt><em><a href="/en/persona/Crypto" title="MDN"><font><font>Крипто-</font></font></a></em></dt>
+     <dd><font><font>Взгляд на криптографические концепций Persona и BrowserID.</font></font></dd>
+     <dt><em><a class="link-https" href="https://github.com/mozilla/id-specs/blob/master/browserid/index.md" title="https://github.com/mozilla/id-specs/blob/master/browserid/index.md"><font><font>Spec</font></font></a></em></dt>
+     <dd><font><font>Глубокие технические детали можно найти <a href="https://github.com/mozilla/id-specs/blob/master/browserid/index.md">здесь</a>.</font></font></dd>
+     <dt><em><a href="/Persona/Bootstrapping_Persona" title="EN / BrowserID / Bootstrapping_BrowserID"><font><font>Персона Сайт</font></font></a></em></dt>
+     <dd><font><font>Чтобы Персона собирается, мы хостинг три услуги на </font></font><a class="link-https" href="https://login.persona.org" rel="freelink"><font><font>https://login.persona.org</font></font></a><font><font> : запасной провайдер идентификации, портативный осуществления <a href="/ru/docs/Web/API/Navigator/id" title="The BrowserID protocol defines a new id property on the window.navigator object, through which it exposes the BrowserID API, that is the IdentityManager intreface. This API has gone through several significant revisions. Each generation is listed separately below."><code>navigator.id</code></a> API, и удостоверение утверждение проверка сервис.</font></font></dd>
+     <dt><em><font><font><a href="https://github.com/mozilla/browserid">Исходный код Persona</a></font></font></em></dt>
+     <dd><font><font>Код  Persona находится в репозитории на GitHub. Патчи приветствуются!</font></font></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="toppageup" id="js-toppageup" style="display: none;">
+<div class="toppageup-link"><span>наверх</span></div>
+
+<div class="toppageup-add" id="js-toppageup-add"><span>в закладки</span></div>
+</div>

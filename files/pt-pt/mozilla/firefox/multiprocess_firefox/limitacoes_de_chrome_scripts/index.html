@@ -1,0 +1,215 @@
+---
+title: Limitações de "chrome scripts"
+slug: Mozilla/Firefox/Multiprocess_Firefox/Limitacoes_de_chrome_scripts
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts
+---
+<div>{{FirefoxSidebar}}</div><p>This page describes patterns that used to work in the chrome process that will no longer work in multiprocess Firefox. These are the sorts of things that will break an old add-on in multiprocess Firefox. The fix is generally some variant of "do that in a frame script loaded into the content process".</p>
+
+<p>This is one of a pair of articles: the other one lists <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">limitations of frame scripts</a>.</p>
+
+<h2 id="Compatibilidade_de_shims">Compatibilidade de <em>shims</em></h2>
+
+<p>For many of the patterns described here we've implemented compatibility shims so the patterns still work. For example: whenever extensions try to access web content from the chrome process, the browser will return a <a href="https://developer.mozilla.org/en-US/docs/Cross_Process_Object_Wrappers">Cross Process Object Wrapper</a> that gives the chrome code synchronous access to the content.</p>
+
+<p>You'll get the shims for your add-on by default, unless you set the <a href="/en-US/Add-ons/Install_Manifests#multiprocessCompatible"><code>multiprocessCompatible</code> flag in your add-on's install manifest</a>.</p>
+
+<p>However, these shims are not a substitute for migrating extensions:</p>
+
+<ul>
+ <li>they are only a temporary measure, and will be removed eventually</li>
+ <li>they can have a bad effect on responsiveness</li>
+ <li>there are likely to be edge cases in which they don't work properly</li>
+</ul>
+
+<p>You can see all the places where your add-on uses compatibility shims by setting the <span><code>dom.ipc.shims.enabledWarnings</code> preference and watching the browser console as you use the add-on.</span></p>
+
+<p>The rest of this page documents patterns that don't work in multiprocess Firefox as well as how are shims try to paper over the problem. For each pattern we've noted:</p>
+
+<ul>
+ <li>whether a shim exists and what kind of behavior it provides</li>
+ <li>how to update your add-on so you don't need the shim</li>
+</ul>
+
+<h2 id="gBrowser.contentWindow_window.content...">gBrowser.contentWindow, window.content...</h2>
+
+<h3 id="Sem_shim">Sem <em>shim</em></h3>
+
+<p>All APIs in the chrome process that provide direct access to content objects will no longer work. For example:</p>
+
+<pre class="brush: js">// chrome code
+
+gBrowser.contentWindow;                    // null
+
+gBrowser.contentDocument;                  // null
+
+gBrowser.selectedBrowser.contentWindow;    // null
+
+window.content;                            // null
+
+content;                                   // null
+</pre>
+
+<p>As a special note, docshells live in the content process, so they are also inaccessible:</p>
+
+<pre>gBrowser.docShell;                         // null
+
+gBrowser.selectedBrowser.docShell;         // null</pre>
+
+<h3 id="Com_shim">Com <em>shim</em></h3>
+
+<p>The shim will give you a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a> for the content object in these situations.</p>
+
+<p>In some situations, the content process may not be initialized when an add-on asks for access to its content. In this case, the shim will return a JavaScript object that looks somewhat like a window or a document for about:blank. However, this "dummy" object is completely static and only exposes a few of the normal properties that windows and documents have. For this reason, add-ons that try to access content objects in fresh &lt;browser&gt; elements may run into trouble.</p>
+
+<p>To make the shim unnecessary: factor the code that needs to access content into a separate script, load that script into the content process as a frame script, and communicate between the chrome script and the frame script using the message-passing APIs. See the article on <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">using the message manager</a>.</p>
+
+<h2 id="Limitações_de_CPOWs">Limitações de CPOWs</h2>
+
+<p><a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">Cross process object wrappers</a> (CPOWs) are a migration aid giving chrome code synchronous access to content objects. However, there are various <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers#Limitations_of_CPOWs">limitations on the kinds of things you can do with a CPOW</a>.</p>
+
+<div class="warning">
+<p>Note that from Firefox 47 onwards, <a href="https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers#Safe_and_unsafe_CPOWs">unsafe CPOW usage</a> is no longer permitted in browser code. If browser code tries an unsafe CPOW operation, the browser will throw an exception and you'll see an "unsafe CPOW usage forbidden” error in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">Browser Console</a>.</p>
+
+<p>Add-on code is still allowed to use CPOWs "unsafely". However, if an add-on passes a CPOW into a platform API, and that platform API then attempts an unsafe operation on it, this will throw an exception. So as a general rule, add-ons should avoid passing CPOWs into non-addon code.</p>
+</div>
+
+<h2 id="nsIContentPolicy">nsIContentPolicy</h2>
+
+<h3 id="Sem_shim_2">Sem <em>shim</em></h3>
+
+<p>In multiprocess Firefox, if you register the <code><a href="http://dxr.mozilla.org/mozilla-central/source/dom/base/nsIContentPolicy.idl">nsIContentPolicy</a></code> in the chrome process then it will never see any attempts to load web content, because they happen in the content process.</p>
+
+<h3 id="Com_shim_2">Com <em>shim</em></h3>
+
+<p>The shim enables you to add content policies in the chrome process. It transparently registers an <code>nsIContentPolicy</code> in the content process, whose <code>shouldLoad</code> just forwards to the chrome process. The content to check is forwarded as a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a>. The chrome process then checks the content against the policy supplied by the add-on, and forwards the response back to the child to be enforced.</p>
+
+<p>To make the shim unnecessary: define and register <code>nsIContentPolicy</code> in the content process. If you need to ensure that the policy is only registered once, use a <a href="/en-US/docs/User:wbamberg/Multiprocess_Firefox-2/Message_manager/Process_scripts">process script </a>to register the policy.</p>
+
+<h2 id="nsIWebProgressListener">nsIWebProgressListener</h2>
+
+<p>This API will work in the chrome process. There is a shim that gives you access to the <code>DOMWindow</code> property of the <a href="http://dxr.mozilla.org/mozilla-central/source/uriloader/base/nsIWebProgress.idl"><code>nsIWebProgress</code></a> object passed into <code>onStateChange</code>. However, the <code>DOMWindow</code> is passed asynchronously, so by the time the chrome process receives it, the DOM might have changed (for example, because code running in the content process modified it or we navigated to a different page). We're working on fixing this issue in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1118880">bug 1118880</a>.</p>
+
+<p>Also note that unlike other shims, this shim is always active.</p>
+
+<p>Alternatively, you can use <code>nsIWebProgressListener</code> in the content process.</p>
+
+<h2 id="Observadores_no_processo_de_chrome">Observadores no processo de <em>chrome</em></h2>
+
+<p>Depending on the topic, you need to register observers in either the chrome process or in a frame script.</p>
+
+<p>For most topics you need to register observers in the chrome process.</p>
+
+<p>However, you must listen to <a href="/en/docs/Observer_Notifications#Documents"><code>content-document-global-created</code> and <code>document-element-inserted</code></a> in a frame script. <a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/ds/nsIObserver.idl">Observers</a> for these topics get content objects as the <code>aSubject</code> argument to <code>observe()</code>, so notifications are not sent to the chrome process.</p>
+
+<p>There is a shim that will forward these two topics to the chrome process, sending <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOWs</a> as the <code>aSubject</code> argument.</p>
+
+<h3 id="Pedidos_de_HTTP">Pedidos de HTTP</h3>
+
+<p>You can't observe <a href="https://developer.mozilla.org/en/docs/Observer_Notifications#HTTP_requests">HTTP requests</a> in the content process. If you do, you'll get an error.<br>
+ <br>
+ If you do so in the chrome process, it will mostly work. The subject for the observer notification will be an <code><a href="http://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/http/nsIHttpChannel.idl">nsIHttpChannel</a></code> as you would expect.</p>
+
+<p>A common pattern here is to use the <code>notificationCallbacks</code> property of the <code>nsIHttpChannel</code> to get the DOM window that initiated the load, like this:</p>
+
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+    var domWindow = httpChannel.notificationCallbacks.getInterface(Ci.nsIDOMWindow);
+  }
+}</pre>
+
+<p>Or this:</p>
+
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+    var domWindow = httpChannel.notificationCallbacks.getInterface(Ci.nsILoadContext).associatedWindow;
+  }
+}</pre>
+
+<p>In multiprocess Firefox these patterns will no longer work: the <code>getInterface</code> call will fail.</p>
+
+<p>In multiprocess Firefox, <code>notificationCallbacks</code> is a special object that tries to emulate the single-process <code>notificationsCallbacks</code> object as best it can. It will return a dummy <code>nsILoadContext</code> when asked, but any attempt to get a window out of it will fail.<br>
+ <br>
+ There is an outstanding bug (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1108827">bug 1108827</a>) to implement a shim here that will make <code>notificationCallbacks</code> a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a> for the objects in the content process.</p>
+
+<p>The correct way to access the DOM window is through a message manager. In an HTTP observer, you can get the browser message manager for the window using code like this:</p>
+
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+    var loadContext = httpChannel.notificationCallbacks.getInterface(Ci.nsILoadContext);
+    // topFrameElement is the &lt;browser&gt; element
+    var topFrameElement = loadContext.topFrameElement;
+    var browserMM = topFrameElement.messageManager;
+    console.log("browserMM: " + browserMM);
+  }
+}</pre>
+
+<p>However, before Firefox 38, this technique will not work if multiprocess Firefox is disabled: specifically, <code>topFrameElement</code> will be null. This means that if you need to write code that works before Firefox 38 and on both multiprocess and non-multiprocess variants, you need to implement both paths:</p>
+
+<ul>
+ <li>test whether <code>topFrameElement</code> is null</li>
+ <li>if it is, you're running in single-process Firefox, and should use the old way</li>
+ <li>if it isn't, you're running in multiprocess Firefox and should use the new way</li>
+</ul>
+
+<p>From Firefox 38 onwards, the topFrameElement approach always works.</p>
+
+<h2 id="Eventos_DOM">Eventos DOM</h2>
+
+<h3 id="Sem_shim_3">Sem <em>shim</em></h3>
+
+<p>In multiprocess Firefox, if you want to register an event listener on some content DOM node, that needs to happen in the content process.</p>
+
+<p>It used to be that if you registered a listener on the <a href="/en-US/docs/XUL/browser">XUL <code>&lt;browser&gt;</code></a>  or <a href="/en-US/docs/XUL/tab"><code>&lt;tab&gt;</code></a> element that hosted some DOM content, then events in the content would bubble up to the XUL and you could handle them there. This no longer happens in multiprocess Firefox.</p>
+
+<h3 id="Com_shim_3">Com <em>shim</em></h3>
+
+<p>The shim intercepts chrome process code that adds listeners to XUL elements and sets up listeners in the content process, relaying the result back to the chrome process. The <a href="/en-US/docs/Web/API/Event"><code>Event</code></a> object itself is relayed to the chrome process as a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a>.</p>
+
+<p>To make the shim unnecessary: register event listeners on the global object inside a <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">frame script</a>. For example:</p>
+
+<pre class="brush: js">addEventListener("load", handler, true) // for example</pre>
+
+<div>If you need to contact the chrome process when that happens, send it a message.</div>
+
+<div> </div>
+
+<h2 id="Sandboxes"><em>Sandboxes</em></h2>
+
+<div>You can create sandboxes in the chrome or the content process. Sandboxes are often used as a safe way to manipulate web content, and if that's your goal, create the sandbox in the content process.</div>
+
+<div> </div>
+
+<div>There is a shim for sandboxes: if you make a sandbox in the chrome process and give it content principals (by passing a CPOW as the first argument to <a href="/en-US/docs/Components.utils.Sandbox">Components.utils.Sandbox</a>) then we'll actually make it in the content process.</div>
+
+<div> </div>
+
+<div>
+<h2 id="nsIAboutModule">nsIAboutModule</h2>
+
+<p>By default, custom about: pages registered using <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIAboutModule">nsIAboutModule</a></code> are loaded in the chrome process. This means that you can't access their content from the content process (via XHR, for example).</p>
+
+<p>You can change this default in the code you use to register the about: URI. See <a href="/en-US/Firefox/Multiprocess_Firefox/about:_and_chrome:_URIs">about: and chrome: URIs</a>.</p>
+</div>
+
+<h2 id="Módulos_de_código_de_JavaScript_(JSMs)">Módulos de código de <em>JavaScript </em>(JSMs)</h2>
+
+<div>In single-process Firefox, you can use <a href="/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript code modules (JSMs)</a> to maintain global state. In multiprocess Firefox, a JSM loaded into one process does not share any state with the same JSM loaded into a different process: so you can't use a JSM to share state between the chrome and content processes.</div>
+
+<div> </div>
+
+<div>If an add-on wants to use a JSM to share state in this way, it's best to load the JSM in the chrome process, and have frame scripts store and access the JSM's state by sending messages to the chrome process using the message manager.</div>
+
+<div> </div>
+
+<h2 id="nsIProtocolHandler">nsIProtocolHandler</h2>
+
+<div>In multiprocess Firefox, code which registers a custom protocol using <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProtocolHandler">nsIProtocolHandler</a></code> must register the custom protocol in the child content process.</div>
+
+<div>If the custom protocol is registered only in the chrome process, no iframes or tabs will be able to load any resource from the custom procotol.</div>
+
+<div> </div>
+
+<div>The solution is to register the custom protocol in the content process. You can do this by loading a frame script or, with the Add-on SDK, you can use <a href="/en-US/Add-ons/SDK/Low-Level_APIs/remote_parent#Loading_modules_into_the_child_process"><code>remoteRequire()</code> in the "remote/parent" module</a>.</div>

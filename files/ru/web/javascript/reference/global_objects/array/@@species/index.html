@@ -1,0 +1,78 @@
+---
+title: 'get Array[@@species]'
+slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
+tags:
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
+---
+<div>{{JSRef}}</div>
+
+<p>Метод<strong> </strong><code><strong>Array[@@species]</strong></code>возвращает конструктор <code>Array</code> .</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">Array[Symbol.species]
+</pre>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Конструктор {{jsxref("Array")}}.</p>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Метод <code>species</code>  возвращает стандартный конструктор обьектов <code>Array</code> . Дочерние элементы могут переопределить метод для смены назначения конструктора.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Метод <code>species</code> возвращает стандартное значение функции конструктора, то есть<br>
+  <code>Array</code> конструктор для <code>Array</code> обьектов:</p>
+
+<pre class="brush: js">Array[Symbol.species]; // функция Array()</pre>
+
+<p>В полученном обьекте (на примере обычного массива <code>MyArray</code>),  <code>MyArray</code> является конструктором <code>MyArray</code>. В случае, если вы захотите вернуть родительские обьекты <code>Array</code> в полученных классовых методах, вы можете переопределить метод:</p>
+
+<pre class="brush: js">class MyArray extends Array {
+  //  <span id="result_box" lang="ru"><span>Переписывает тип MyArray в родительский конструктор Array</span></span>
+  static get [Symbol.species]() { return Array; }
+}</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное<br>
+    определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Array.@@species")}}</p>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также:</h2>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+ <li>{{jsxref("Symbol.species")}}</li>
+</ul>

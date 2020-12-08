@@ -1,0 +1,73 @@
+---
+title: Wprowadzenie
+slug: Mozilla/Tech/XUL/Kurs_XUL/Wprowadzenie
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Struktura_XUL">Następny  »</a></p>
+</div><p></p>
+
+<p>Ten kurs pomoże Ci nauczyć się XUL (XML User Interface Language) (język opisu interfejsu użytkownika XML), wieloplatformowego języka opisującego interfejs użytkownika.</p>
+
+<p>Kurs pokazuje, jak stworzyć prosty interfejs w postaci okna <code>Znajdź pliki</code>, wyglądającego podobnie jak okno w programie Sherlock na Macintoshu lub okienko dialogowe w Windows. Utworzony zostanie tylko interfejs użytkownika o nieco ograniczonej funkcjonalności. Faktyczne wyszukiwanie plików nie zostanie w nim zaimplementowane. Czytając po kolei poszczególne artykuły kursu, dowiemy się, jak utworzyć okienko dialogowe <code>Znajdź pliki</code>.</p>
+
+<h3 id="Czym_jest_XUL_i_po_co_zosta.C5.82_stworzony" name="Czym_jest_XUL_i_po_co_zosta.C5.82_stworzony">Czym jest XUL i po co został stworzony</h3>
+
+<p>XUL (wym. "zool" i rymuje się z "cool") stworzony został w celu uproszczenia i przyspieszenia rozwoju przeglądarki Mozilla. Jest językiem opartym na języku XML (Extensible Markup Language), w związku z czym wszystkie dostępne własności języka XML są także dostępne w języku XUL.</p>
+
+<p>Większość aplikacji musi być rozwijana na bazie własności konkretnych platform, co niesie za sobą duże nakłady czasu i kosztów. Mimo że dla części użytkowników nie jest to istotne, inni mogą chcieć używać aplikacji na innych urządzeniach, takich jak urządzenia przenośne lub urządzenia typu set-top box.</p>
+
+<p>W przeszłości stworzono wiele rozwiązań wieloplatformowych. Java, na przykład, szczyci się swoją możliwością przenoszenia pomiędzy różnymi systemami. XUL jest jednym z takich języków, zaprojektowanych do tworzenia przenośnych interfejsów użytkownika.</p>
+
+<p>Budowa aplikacji zajmuje dużo czasu, nawet dla jednej tylko platformy. Wiele czasu wymaga też kompilacja i debugowanie. Dzięki XUL interfejs można implementować i modyfikować szybko i w prosty sposób.</p>
+
+<p>XUL posiada wszystkie zalety języka XML, więc XHTML lub inny język oparty na XML, jak MathML (Math Markup Language) czy  SVG ("Scalable Vector Graphics), może być do niego bezpośrednio włączony. Ponieważ tekst wyświetlany z XUL jest wpisany wprost, oznacza to, że łatwo i przy małym nakładzie pracy może zostać przetłumaczony na inny język.</p>
+
+<p>Do modyfikacji wyglądu interfejsu użytkownika można wykorzystać arkusze stylów CSS (w podobny sposób, jak w odtwarzaczu WinAmp, na menedżery okien nakłada się<em>skórki</em>).</p>
+
+<h3 id="Jakie_rodzaje_interfejsu_u.C5.BCytkownika_mog.C4.85_by.C4.87_stworzone_w_XUL" name="Jakie_rodzaje_interfejsu_u.C5.BCytkownika_mog.C4.85_by.C4.87_stworzone_w_XUL">Jakie rodzaje interfejsu użytkownika mogą być stworzone w XUL</h3>
+
+<p>XUL pozwala na tworzenia większości elementów znanych ze współczesnych interfejsów graficznych. Jest wystarczająco ogólny, aby mógł być dostosowany do specjalnych potrzeb na niektórych urządzeniach, a jednocześnie wystarczająco potężny, by programiści mogli dzięki niemu tworzyć rozbudowane interfejsy.</p>
+
+<p>W XUL można utworzyć m.in.:</p>
+
+<ul>
+ <li>Kontrolki wejścia w formie pól tekstowych i pól wyboru</li>
+ <li>Paski narzędzi z przyciskami lub innymi elementami</li>
+ <li>Menu na pasku menu lub menu podręczne</li>
+ <li>Karty z oknami dialogowymi</li>
+ <li>Hierarchiczne drzewa lub tabele</li>
+ <li>Skróty klawiaturowe</li>
+</ul>
+
+<p><span class="comment">przy liście, jeżeli stosujemy dużą literę na początku musimy dać na koniec kropkę, ew. nie stawiać nic. przecinki i kropke na końcu listy można stosować, jeśli kolejne wypunktowania zaczynamy małą literą</span></p>
+
+<p>Wyświetlaną zawartość można utworzyć z treści pliku XUL lub z danych z tzw. źródła danych. W Mozilli takimi źródłami danych mogą być: skrzynka pocztowa użytkownika, jego zakładki i wyniki wyszukiwania. Zawartość menu, drzew i innych elementów może być wypełniana tymi danymi lub danymi dostarczonymi w pliku RDF (Resource Description Framework).</p>
+
+<p>Zawartość XUL jest zwykle ładowana z pakietu zainstalowanego w Mozilli. Pakiet taki pozwala aplikacji na dodatkowe uprawnienia, takie jak odczyt plików lokalnych i modyfikację preferencji użytkownika. Pliki XUL i powiązane z nimi skrypty oraz obrazki danej aplikacji są pakowane do jednego pliku, który użytkownik może pobrać i zainstalować. Mozilla dostarcza środki do instalowania i rejestrowania takich pakietów bez potrzeby pisania dużej ilości złożonego kodu. Ponadto pakiety te mogą się nakładać na przeglądarkę lub inną aplikację, rozszerzając ich możliwości. W ten sposób działają rozszerzenia Firefoksa.</p>
+
+<p>Możliwe jest także otwarcie plików XUL bezpośrednio z systemu plików lub ze zdalnej witryny internetowej. Wówczas jednak niektóre ich możliwości zostaną ograniczone, przez co niektóre elementy XUL nie będą działać. Jeśli mimo to będziesz chciał załadować zawartość XUL ze zdalnej strony internetowej, serwer WWW musi być odpowiednio skonfigurowany, tj. wysyłać pliki XUL z typem MIME <code>application/vnd.mozilla.xul+xml</code>. XUL jest zwykle przechowywany w plikach z rozszerzeniem <code>.xul</code>. Możesz otworzyć plik XUL w Mozilli tak samo, jak każdy inny plik, używając menu <code>Plik</code> i wybierając polecenie <code>Otwórz plik...</code> lub wpisując adres URL do paska adresu.</p>
+
+<h3 id="Co_powiniene.C5.9B_wiedzie.C4.87.2C_by_pos.C5.82ugiwa.C4.87_si.C4.99_tym_kursem" name="Co_powiniene.C5.9B_wiedzie.C4.87.2C_by_pos.C5.82ugiwa.C4.87_si.C4.99_tym_kursem">Co powinieneś wiedzieć, by posługiwać się tym kursem</h3>
+
+<p>Powinieneś dobrze znać język HTML (HyperText Markup Language) i orientować się w podstawach języków XML oraz CSS (Cascading Style Sheets). Oto kilka wskazówek, które należy wziąć pod uwagę:</p>
+
+<ul>
+ <li>Wszystkie elementy języka XUL i ich atrybuty muszą być zapisane małymi literami, ponieważ XML rozróżnia wielkość liter (w przeciwieństwie do języka HTML).</li>
+ <li>Wartości atrybutów w języku XUL muszą być podawane w cudzysłowach, nawet jeśli są liczbami.</li>
+ <li>Pliki XUL składają się zwykle z czterech plików: jednego definiującego wygląd i poszczególne elementy, drugiego dla deklaracji stylów, trzeciego dla deklaracji jednostek (przydatnego przy lokalizacjach) i czwartego dla skryptów.</li>
+</ul>
+
+<p>Można także dołączać dodatkowe pliki, jak np. obrazki lub dane wykorzystywane w zależności od platformy systemowej.</p>
+
+<p>XUL jest obsługiwany przez Mozillę i inne przeglądarki oparte na silniku Gecko, np. przez Netscape 6 (i nowsze) oraz Mozillę Firefox. Z powodu ciągłych zmian w składni języka XUL, niezbędna będzie jego najnowsza wersja, by przykłady z tego przewodnika działały poprawnie. Większość z podanych tutaj przykładów powinna działać w Mozilli 1.0 i nowszych. W Firefoksie i innych przeglądarkach XUL jest prawie identyczny, choć istnieje kilka dość specyficznych różnic, takich jak obsługa dostosowywanych pasków narzędzi.</p>
+
+<p>W kursie tym próbujemy zaprezentować większość możliwości języka XUL, nie wszystkie jednak mogły zostać w tym miejscu omówione. Gdy już zaznajomisz się z językiem XUL, zapraszamy do skorzystania z <a href="pl/Dokumentacja_XUL">dokumentacji XUL</a>, aby poznać pozostałe własności poszczególnych elementów.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Struktura_XUL">Następny  »</a></p>
+</div><p></p>

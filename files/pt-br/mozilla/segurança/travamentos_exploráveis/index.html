@@ -1,0 +1,51 @@
+---
+title: Travamentos exploráveis
+slug: Mozilla/Segurança/Travamentos_exploráveis
+translation_of: Mozilla/Security/Exploitable_crashes
+---
+<p><span class="seoSummary">Este artigo ajudará você a determinar se um travamento é exploravel, encontrar falhas que são exploráveis para corrigir falhas exploráveis.</span></p>
+
+<h2 id="O_que_é_um_travamento_explorável">O que é um travamento explorável?</h2>
+
+<p>Um relatório de falha do seu depurador, seu SO, ou  <a href="https://crash-stats.mozilla.com/" title="https://crash-stats.mozilla.com/">Status de travamento Mozilla</a> pode dizer muito sobre a existência ou nao se um travamento é potencialmente explorável. Você precisa olhar principalmente para três coisas , nessa ordem :</p>
+
+<ol>
+ <li>Analise  <strong>a estrutura superior do rastreamento de pilha</strong>. Se você ver  um endereço hexadecimal como 0x292c2830 em vez de um nome de função como nsListBoxBodyFrame::GetRowCount no topo da pilha, o bug motivou o programa para transferir o controle para um "Aleatória" parte da memoória que nao faz parte do programa. Essas interrupções  são quase sempre possiveis de serem exploradas para executar um código arbitrário.</li>
+ <li>Olhe o motivo do travamento, será normalmente algo como "KERN_PROTECTION_FAILURE (0x0002) em 0x00000000". Este é normalmente localizado à direita acima do rastreamento de pilha. O último numero, neste caso 0x00000000, é <strong> o endereço de memória que o Firefox foi impedido de acessar</strong>. Se o  endereço é sempre zero (ou próximo de zero, como 0x0000001c), provavelmente é um bug de referência nula.Estes erros fazem com que o navegador trave, mas fazem isso de forma previsível, de modo que nao são exploráveis. A maioria dos travamentos se enquadram nessa categoria.</li>
+ <li>Verifique o  <strong>comprimento do rastreamento de pilha</strong>. Se for mais de 300 funçoes no tempo, é provavel que seja um acidente de recursão demais. Como de referência nula, essas falhas não são exploráveis.</li>
+</ol>
+
+<p>Qualquer outro travamento onde o Firefox  tenta usar a memória que nao têm acesso indica algum tipo de erro de segurança de memória. Essas interrupções podem muitas vezes serem exploradas para executar código arbitrário, mas você nao pode ser tão certo como no caso de ver um endereço falso no topo da pilha na etapa 1.</p>
+
+<h2 id="Procurando_travamentos_exploráveis">Procurando travamentos exploráveis</h2>
+
+<p>Travamentos exploráveis são frequentemente descobertos através de testes normais e uso, quando os desenvolvedores reconhecem uma pilha de travamento em gdb ou submetidos a um erro que pode ser explorado.</p>
+
+<p>Além disso, os desenvolvedores Mozilla fazem uso pesado de duas ferramentas  em particular para encontrar situaçoes exploráveis antes que eles apareçam em relatórios de falhas exploráveis.</p>
+
+<p>A primeira ferramenta é o <a href="http://www.chromium.org/developers/testing/addresssanitizer" title="http://www.chromium.org/developers/testing/addresssanitizer">AddressSanitizer (ASAN)</a>. Há <a href="https://developer.mozilla.org/en-US/docs/Building_Firefox_with_Address_Sanitizer" title="ASAN with Mozilla Projects">um  artigo MDN </a> documentando seu uso com  projetos Mozilla.</p>
+
+<p>A outra ferramenta é o <a href="http://valgrind.org/" title="http://valgrind.org/">Valgrind</a>. Há <a href="https://developer.mozilla.org/en-US/docs/Debugging_Mozilla_with_Valgrind" title="Valgrind with Mozilla Projects">um artigo no MDN</a> documentando seu uso com projetos Mozilla.</p>
+
+<h2 id="Próximos_passos">Próximos passos</h2>
+
+<p>Uma vez que você tenha  determinado que a falha  é potencialmente explorável , tome  as seguintes medidas. Se você precisar de ajuda com qualquer um das etapas  (Por exempl talvez necessite previlégios bugzilla) Envie um email <a href="mailto:security@mozilla.org" title="mailto:security@mozilla.org">security@mozilla.org</a><strong>.</strong></p>
+
+<ol>
+ <li>Certifique-se que o erro é no arquivo.</li>
+ <li>Marque o erro como segurança sensivel colocando o erro no grupo de "Segurança Sensivel". Faça isso antes de realizar comentários ou tomar ações que exponha publicamente a exploração.</li>
+ <li>Coloque uma <a href="https://wiki.mozilla.org/Security_Severity_Ratings" title="Security Severity Rating">classificação de segurança grave </a>nas palavras chaves do erro.Se você nao tiver certeza de qual classificação dar, coloque na mais alta de modo que o erro obtenha mais atençao.</li>
+ <li>Explique em um comentário por qual razão a questão parecer ser explorável.</li>
+</ol>
+
+<h2 id="Outras_ferramentas">Outras ferramentas</h2>
+
+<p>A Apple tem uma ferramenta chamada "crashwrangler" que ainda é mantida desde 2012. Há pouca informação pública sobre ela, e é dificil encontrar mesmo no site de desenvolvedor Apple. Para obtê-lo vá em Seçao de Downloads Do Centro de Desenvolvimento Apple  -&gt; Outros Downloads -&gt; procure por "crashwrangler".</p>
+
+<p>A Microsoft lançou uma ferramenta  de extensão de depurador em 2009 chamado "!exploitable". Ele não foi atualizado desde 2009.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a class="external" href="http://www.squarefree.com/2006/11/02/determining-whether-a-crash-looks-exploitable/" title="http://www.squarefree.com/2006/11/02/determining-whether-a-crash-looks-exploitable/">Post no blog de Jesse Runderman's sobre a possibilidade de exploração em 2006.</a></li>
+</ul>

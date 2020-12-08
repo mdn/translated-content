@@ -1,0 +1,68 @@
+---
+title: JavaArray
+slug: Web/JavaScript/Referencje/Obiekty/JavaArray
+tags:
+  - Dokumentacja_JavaScript
+  - Dokumentacje
+  - JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/LiveConnect_Reference/JavaArray
+---
+<p>
+</p>
+<h3 id="Podsumowanie" name="Podsumowanie"> Podsumowanie </h3>
+<p><b>Obiekt główny</b> </p><p>Zapakowana tablica Javy, do której dostęp uzyskuje się poprzez kod JavaScript jest członkiem typu <code>JavaArray</code>. </p>
+<h3 id="Tworzone_przez" name="Tworzone_przez"> Tworzone przez </h3>
+<p>Jakąkolwiek metodę Javy, która zwraca tablicę. W dodatku, możesz stworzyć obiekt <code>JavaArray</code> z dowolnym typem danych używając metody <code>newInstance</code> klasy <code>Array</code>:
+</p>
+<pre class="eval">public static Object newInstance(Class componentType,
+   int length)
+   throws NegativeArraySizeException
+</pre>
+<h3 id="Opis" name="Opis"> Opis </h3>
+<p>Obiekt <code>JavaArray</code> jest wystąpieniem tablicy Javy, która jest stworzona wewnątrz kody JavaScript lub do niego przekazana. <code>JavaArray</code> jest opakowaniem (ang. <i>wrapper</i>) dla tej instancji; wszystkie referencje do niej są robione przez <code>JavaArray</code>.
+</p><p>W JavaScript 1.4 i późniejszym, parametr <code>componentType</code> jest albo obiektem typu <code>JavaClass</code> reprezentującym typ tablicy albo obiektem klasowym, jak na przykład obiekt zwracany przez <code>java.lang.Class.forName</code>. W JavaScript 1.3 i wcześniejszych, <code>componentType</code> musi być obiektem klasowym.
+</p><p>Użyj indeksy oparte na zerze, aby uzyskać dostęp do obiektu <code>JavaArray</code>, tak samo jak robisz to w Javie. Na przykład:
+</p>
+<pre>var javaString = new java.lang.String("Hello world!");
+var byteArray = javaString.getBytes();
+byteArray[0] // zwraca 72
+byteArray[1] // zwraca 101
+</pre>
+<p>Jakiekolwiek dane Javy przeniesione do JavaScriptu są konwertowane do typów danych JavaScriptu. Kiedy obiekt <code>JavaArray</code> jest przekazany z powrotem do Javy, obiekt jest rozpakowywany i może być użyty przez kod Javy. Zobacz <a href="pl/Przewodnik_po_j%c4%99zyku_JavaScript_1.5">Przewodnik po języku JavaScript 1.5</a>, aby uzyskać więcej informacji na temat konwersji typów danych. </p><p>W JavaScripcie 1.4 i późniejszym, metody <code>java.lang.Object</code> są dziedziczone przez <code>JavaArray</code>.
+</p>
+<h3 id="Zgodno.C5.9B.C4.87_wsteczna" name="Zgodno.C5.9B.C4.87_wsteczna"> Zgodność wsteczna </h3>
+<h4 id="JavaScript_1.3_i_wersje_wcze.C5.9Bniejsze" name="JavaScript_1.3_i_wersje_wcze.C5.9Bniejsze"> JavaScript 1.3 i wersje wcześniejsze </h4>
+<p>Metody <code>java.lang.Object</code> nie są dziedziczone przez <code>JavaArray</code>. W dodatku, metoda <code>toString</code> jest dziedziczona z obiektu <code>Object</code> i zwraca następującą wartość:
+</p>
+<pre class="eval">[object JavaArray]
+</pre>
+<p>Musisz określić klasę obiektu, tak jak jeden zwracany przez <code>java.lang.Object.forName</code>, dla parametru <code>componentType</code>, <code>newInstance</code> kiedy użyjesz tej metody do utworzenia tablicy. Nie możesz użyć obiektu <code>JavaClass</code> dla parametru <code>componentType</code>.
+</p>
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci"> Własności </h3>
+<p><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/JavaArray/length">length</a>: Numer elementu w Java array reprezentowana przez <code>JavaArray</code>.
+</p>
+<h3 id="Metody" name="Metody"> Metody </h3>
+<p><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/JavaArray/toString">toString</a>: W JavaScript 1.4, ta metoda ta nie jest uwzględniana przez odziedziczona metodę <code>java.lang.Object.toString</code>. W JavaScript 1.3 lub lub wcześniejszym, metoda ta zwraca ciąg znaków (stringa) identyfikującego obiekt jako <code>JavaArray</code>.
+</p><p>W JavaScript 1.4 lub późniejszym, <code>JavaArray</code> dziedziczy również metody z superklasy tablicy Javy, <code>java.lang.Object</code>.
+</p>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<h4 id="Przyk.C5.82ad:_Tworzenie_JavaArray_w_JavaScript" name="Przyk.C5.82ad:_Tworzenie_JavaArray_w_JavaScript"> Przykład: Tworzenie <code>JavaArray</code> w JavaScript </h4>
+<p>W tym przykładzie, <code>JavaArray</code> <code>tablicaBitowa</code> jest stworzona przez metodę <code>java.lang.String.getBytes</code>, która zwraca tablicę.
+</p>
+<pre class="eval">var stringJavy = new java.lang.String("Witaj świecie!");
+var tablicaBitowa = stringJavy.getBytes();
+</pre>
+<h4 id="Przyk.C5.82ad:_Tworzenie_JavaArray_w_JavaScript_z_metod.C4.85_newInstance" name="Przyk.C5.82ad:_Tworzenie_JavaArray_w_JavaScript_z_metod.C4.85_newInstance"> Przykład: Tworzenie <code>JavaArray</code> w JavaScript z metodą <code>newInstance</code> </h4>
+<p>W JavaScript 1.4, możesz użyć obiekt <code>JavaClass</code> jako argument dla metody <code>newInstance</code>, która tworzy tablicę, jak jest to pokazane w następującym kodzie:
+</p>
+<pre class="eval">var dogs = java.lang.reflect.Array.newInstance(java.lang.String, 5);
+</pre>
+<p>W JavaScript 1.1, użyj obiektu klasy, zwracanego <code>java.lang.Class.forName</code> jako argument dla metody newInstance, jak pokazuje następujący kod:
+</p>
+<pre class="eval">var dataType = java.lang.Class.forName("java.lang.String");
+var dogs = java.lang.reflect.Array.newInstance(dataType, 5);
+</pre>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Core_JavaScript_1.5_Reference/Global_Objects/JavaArray", "es": "es/Referencia_de_JavaScript_1.5/Objetos_globales/JavaArray" } ) }}

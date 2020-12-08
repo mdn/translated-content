@@ -1,0 +1,76 @@
+---
+title: Promise.reject()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
+---
+<div>{{JSRef}}</div>
+
+<p>Метод <code><strong>Promise.reject(reason)</strong></code> возвращает объект <code>Promise, который был отклонен по указанной причине</code>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>Promise.reject(reason)</var>;</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>reason</dt>
+ <dd>Причина по которой <code>Promise</code> был отклонен.</dd>
+ <dt>
+ <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+ <p>Отклоненный с указаной причиной {{jsxref("Promise")}}.</p>
+ </dt>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<p><code>Promise.reject</code> возвращает <code>Promise</code> который был отклонен. В целях отладки и выборочного отлова ошибок, удобно использовать в качестве причины объекты {{jsxref("Error")}}.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_статического_метода_Promise.reject()">Использование статического метода Promise.reject()</h3>
+
+<pre class="brush: js">Promise.reject(new Error("провал")).then(function(success) {
+  // не вызывается
+}, function(error) {
+  console.log(error); // печатает "провал" + Stacktrace
+  throw error; // повторно выбрасываем ошибку, вызывая новый reject
+});</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-promise.reject', 'Promise.reject')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Исходное определение в стандарте ECMA.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
+
+<p> </p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+ <li><a href="http://bluebirdjs.com/docs/api/error.html">Выборочный отлов ошибок с использованием библиотеки BlueBird Promise</a></li>
+</ul>

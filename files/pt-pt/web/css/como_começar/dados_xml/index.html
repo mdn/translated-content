@@ -1,0 +1,239 @@
+---
+title: Dados XML
+slug: Web/CSS/Como_começar/Dados_XML
+tags:
+  - 'CSS:Como_começar'
+translation_of: Archive/Beginner_tutorials/XML_data
+---
+<p>{{ Previous("Web/CSS/Como_começar/Gráficos_SVG") }}</p>
+
+<p> </p>
+
+<p>Esta página contém um exemplo de como você pode usar o CSS com dados XML.</p>
+
+<p>Você cria um documento XML de amostra e uma folha de estilo que você pode usar para exibí-lo em seu navegador.</p>
+
+<h3 id="Informa.C3.A7.C3.A3o:_Dados_XML" name="Informa.C3.A7.C3.A3o:_Dados_XML">Informação: Dados XML</h3>
+
+<p><em><a href="/pt/XML" title="pt/XML">XML</a></em> (eXtensible Markup Language) é uma linguagem de propósito geral para qualquer tipo de dados estruturados.</p>
+
+<p>Por padrão, seu navegador Mozilla mostra o XML em um formato muito similar aos dados originais no arquivo XML. Você vê as tags reais que definem a estrutura dos dados.</p>
+
+<p>Ligando a folha de estilo CSS com o documento XML, você pode definir outras maneiras para mostrá-lo. Para fazer isto, sua folha de estilo usa regras que mapeiam os tags no documento XML para mostrar tipos usados pelo HTML.</p>
+
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+ <caption>Exemplo</caption>
+ <tbody>
+  <tr>
+   <td>Dados em um documento XML usando tags <code>&lt;INFO&gt;</code>. Você quer que os elementos <small>INFO</small> do documento sejam mostrados como parágrafos no HTML.
+    <p>Na folha de estilo do documento, você especifica como os elementos <small>INFO</small> serão exibidos:</p>
+
+    <div style="width: 30em;">
+    <pre class="eval">
+INFO {
+  display: block;
+  margin: 1em 0;
+  }
+</pre>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Os valores mais comuns para a propriedade <code>display</code> são:</p>
+
+<table style="margin-left: 2em;">
+ <tbody>
+  <tr>
+   <td style="padding-right: 2em;"><code>block</code></td>
+   <td>Monstrado como <small>DIV</small> do HTML (para cabeçalhos, parágrafos)</td>
+  </tr>
+  <tr>
+   <td><code>inline</code></td>
+   <td>Mostrado como <small>SPAN</small> do HTML (para ênfases no texto)</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Adicione seu próprio estilo de regras para especificar a fonte, espaçamento e outros detalhes da mesma maneira que no HTML.</p>
+
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+ <caption>Mais detalhes</caption>
+ <tbody>
+  <tr>
+   <td>Outros valores de <code>display</code> mostram o elemento como o item de uma lista, ou como o componente de uma tabela.
+    <p>Para a lista completa de tipos de exibição, veja <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-display">The display property</a> em CSS Specification.</p>
+
+    <p>Usando CSS sozinho, a estrutura de exibição precisa ser a mesma da estrutura do documento. Outras tecnologias pode modificar a estrutura da exibição — por exemplo, o XBL pode adicionar conteúdo, e o JavaScript pode modificar o DOM.</p>
+
+    <p>Para mais informações sobre o XML no Mozilla, veja a página <a href="/pt/XML" title="pt/XML">XML</a> neste wiki.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="A.C3.A7.C3.A3o:_Uma_demonstra.C3.A7.C3.A3o_XML" name="A.C3.A7.C3.A3o:_Uma_demonstra.C3.A7.C3.A3o_XML">Ação: Uma demonstração XML</h3>
+
+<p>Crie um novo arquivo XML, <code>doc9.xml</code>. Copie e cole o conteúdo daqui, tendo certeza de ter rolado a tela e pego tudo isto:</p>
+
+<div style="width: 48em; height: 12em; overflow: auto;">
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;!-- XML demonstration --&gt;
+
+&lt;?xml-stylesheet type="text/css" href="style9.css"?&gt;
+
+&lt;!DOCTYPE planet&gt;
+&lt;planet&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Arctic&lt;/name&gt;
+&lt;area&gt;13,000&lt;/area&gt;
+&lt;depth&gt;1,200&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Atlantic&lt;/name&gt;
+&lt;area&gt;87,000&lt;/area&gt;
+&lt;depth&gt;3,900&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Pacific&lt;/name&gt;
+&lt;area&gt;180,000&lt;/area&gt;
+&lt;depth&gt;4,000&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Indian&lt;/name&gt;
+&lt;area&gt;75,000&lt;/area&gt;
+&lt;depth&gt;3,900&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Southern&lt;/name&gt;
+&lt;area&gt;20,000&lt;/area&gt;
+&lt;depth&gt;4,500&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;/planet&gt;
+</pre>
+</div>
+
+<p>Crie um novo arquivo CSS, <code>style9.css</code>. Copie e cole o conteúdo daqui, tendo certeza de ter rolado a tela e pego tudo isto:</p>
+
+<div style="width: 48em; height: 12em; overflow: auto;">
+<pre>/*** XML demonstration ***/
+
+planet:before {
+  display: block;
+  width: 8em;
+  font-weight: bold;
+  font-size: 200%;
+  content: "Oceans";
+  margin: -.75em 0px .25em -.25em;
+  padding: .1em .25em;
+  background-color: #cdf;
+  }
+
+planet {
+  display: block;
+  margin: 2em 1em;
+  border: 4px solid #cdf;
+  padding: 0px 1em;
+  background-color: white;
+  }
+
+ocean {
+  display: block;
+  margin-bottom: 1em;
+  }
+
+name {
+  display: block;
+  font-weight: bold;
+  font-size: 150%;
+  }
+
+area {
+  display: block;
+  }
+
+area:before {
+  content: "Area: ";
+  }
+
+area:after {
+  content: " million km\B2";
+  }
+
+depth {
+  display: block;
+  }
+
+depth:before {
+  content: "Mean depth: ";
+  }
+
+depth:after {
+  content: " m";
+  }
+</pre>
+</div>
+
+<p>Abra o documento em seu navegador:</p>
+
+<table style="border: 2px outset #36b; padding: 1em;">
+ <tbody>
+  <tr>
+   <td>
+    <div style="border: 2px solid #cdf; border-bottom: none; padding: .5em 8em 1em .5em;">
+    <p style="font-size: 150%; font-weight: bold; margin: -1em 0px 0px 0px; padding: .1em .25em; background-color: #cdf; width: 8em;">Oceans</p>
+
+    <p style="font-size: 75%; margin: .25em 0px 0px 0px; line-height: 110%;"><strong>Arctic</strong><br>
+     Area: 13,000 million km²<br>
+     Mean depth: 1,200 m</p>
+
+    <p style="font-size: 75%; margin: .5em 0px 0px 0px; line-height: 110%;"><strong>Atlantic</strong><br>
+     Area: 87,000 million km²<br>
+     Mean depth: 3,900 m</p>
+
+    <p style="font-size: 75%; margin: .5em 0px 0px 0px; line-height: 110%;"><strong>. . .</strong></p>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><br>
+ Notas sobre esta demonstração:</p>
+
+<ul>
+ <li>O 2 sobre-escrito (em "million km²") um caractér Unicode, é codificado com <code>\B2</code> no arquivo CSS.</li>
+ <li>O cabeçalho, "Oceans", tem uma margem negativa no topo, movendo-o para cima quando exibido no topo da borda.</li>
+</ul>
+
+<p> </p>
+
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+ <caption>Desafio</caption>
+ <tbody>
+  <tr>
+   <td>Mude a folha de estilo de modo que ela mostre o documento como uma tabela.
+    <p>(Veja o capítulo <a class="external" href="http://www.w3.org/TR/CSS21/tables.html">Tables</a> em CSS Specification para exemplos que você pode adaptar.)</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="O_que_vem_depois.3F" name="O_que_vem_depois.3F">O que vem depois?</h4>
+
+<p>Se você teve dificuldade para entender esta página, ou se você tem algum comentário sobre ela, por favor contribua nesta página de <a href="/Talk:pt/CSS/Como_come%C3%A7ar/Dados_XML" title="Talk:pt/CSS/Como_começar/Dados_XML">Discussão</a>.</p>
+
+<p>Esta é a última página do tutorial. Para mais informações sobre CSS no Mozilla, veja a página principal <a href="/pt/CSS" title="pt/CSS">CSS</a> neste wiki.</p>
+
+<p>{{ Previous("Web/CSS/Como_começar/Gráficos_SVG") }}</p>
+
+<p><span class="comment">Categorias</span></p>
+
+<p><span class="comment">Interwiki Language Links</span></p>

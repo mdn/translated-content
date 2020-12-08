@@ -1,0 +1,160 @@
+---
+title: Políticas de Extras
+slug: Mozilla/Add-ons/AMO/Policy/Revisões
+tags:
+  - Extras
+  - Política de Revisão
+translation_of: Mozilla/Add-ons/AMO/Policy/Reviews
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Os extras estendem os recursos principais do Firefox, permitindo que os utilizadores modifiquem e personalizem a sua experiência na Web. Um ecossistema de extras saudável, baseado na confiança, é vital para que os programadores sejam bem-sucedidos e os utilizadores se sintam seguros, tornando o Firefox deles próprio. Por estes motivos, a Mozilla requer que todos os extras estejam em conformidade com o seguinte conjunto de políticas sobre as práticas aceitáveis. O abaixo, não se destina para servir como aconselhamento jurídico, nem pretende servir como uma lista abrangente de termos para incluir na política de privacidade do seu extra.</p>
+
+<p>Todos os extras estão sujeitos a estas políticas, independentemente de como eles são distribuídos. Os extras que não estejam em conformidade com estas políticas podem estar sujeitos à rejeição ou desativação pela Mozilla.</p>
+
+<h2 id="Sem_Surpresas">Sem Surpresas</h2>
+
+<p>As surpresas podem ser apropriadas em muitas situações, mas não são bem-vindas quando a segurança, a privacidade e o controlo do utilizador estão em jogo. É extremamente importante ser o mais transparente possível quando submeter um extra. Os utilizadores deverão ser capazes de discernir facilmente qual é a funcionalidade do seu extra e não receber experiências inesperadas do utilizador depois de o instalal.</p>
+
+<h3 id="Funcionalidades_Inesperadas">Funcionalidades Inesperadas</h3>
+
+<p>“Funcionalidades" inesperadas são aquelas que não estão relacionadas com a função principal do extra e provavelmente não são do nome do extra ou da descrição esperada por um utilizador que está a instalar esse extra.</p>
+
+<p>Um extra deveria incluir qualquer funcionalidade inesperada que se enquadre numa das seguintes categorias:</p>
+
+<ul>
+ <li>Potencialmente compromete a privacidade ou a segurança do utilizador (tal como enviar dados para terceiros)</li>
+ <li>Altera as definições predefinidas, tal como o novo separador, a página inicial ou o motor de pesquisa</li>
+ <li>Faz alterações inesperadas no navegador ou no conteúdo da Web</li>
+ <li>Inclui recursos ou funcionalidades não relacionadas com as funções principais do extra</li>
+</ul>
+
+<p>Então, a(s) funcionalidade(s) "inesperada(s)" devem seguir todos os seguintes requisitos:</p>
+
+<ul>
+ <li>A descrição do extra deve indicar claramente quais as alterações que o extra efetua.</li>
+ <li>Todas as alterações devem ser "opcionais", o que significa que o utilziador deve executar uma ação não predefinida para aprovar a alteração. As alterações que solicitam aos utilizadores por meio do sistema de permissões não requerem uma opção adicional.</li>
+ <li>A interface de opções deve declarar claramente o nome do extra que está a solicitar a alteração.</li>
+</ul>
+
+<h2 id="Conteúdo">Conteúdo</h2>
+
+<p>Os extras que utilizarem as marcas registadas da Mozilla devem obedecer à <a href="https://www.mozilla.org/en-US/foundation/trademarks/policy/">Política de Marcas Registadas da Mozilla</a>. Se o extra utiliza “Firefox” no seu nome, o padrão de nomeação que o extra deve seguir é “&lt;nome do Extra&gt; por Firefox”.</p>
+
+<p>Além disso, os extras listados em <a href="https://addons.mozilla.org/pt-PT/firefox/">Extras para o Firefox</a> (AMO) devem seguir as seguintes políticas:</p>
+
+<ul>
+ <li>All add-ons submitted for listing on AMO are subject to Mozilla’s <a href="https://www.mozilla.org/en-US/about/legal/acceptable-use/">Conditions of Use</a>.</li>
+ <li>Add-ons must disclose when payment is required to enable any functionality.</li>
+ <li>Any add-ons, or add-on content, hosted on Mozilla site(s) must conform to the laws of the United States.</li>
+ <li>The add-on listing should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for <a href="https://developer.mozilla.org/en-US/Add-ons/Listing">creating an appealing listing</a>.</li>
+ <li>Add-ons that are intended for internal or private use, or for distribution testing may not be listed on AMO. Such add-ons may be <a href="https://developer.mozilla.org/en-US/Add-ons/Distribution#Self-distributed_(unlisted)_versions">uploaded for self-distribution</a> instead.</li>
+ <li>If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.</li>
+</ul>
+
+<h2 id="Linhas_Diretrizes_de_Submissão">Linhas Diretrizes de Submissão</h2>
+
+<p>Os extras devem funcionar apenas conforme o descrito e devem fornecer uma experiência de utilizador atraente. Com base na descrição do extra, um utilizador deve ser capaz de entender e utilizar os recursos do extra sem exigir conhecimento especializado. Dicas sobre como criar uma boa experiência do utilziador para o seu extra podem ser encontradas <a href="/pt-PT/Add-ons/WebExtensions/As_melhores_praticas_de_experiencia_do_utilizador">aqui</a>.</p>
+
+<p>During review, the add-on undergoes basic testing in addition to code review. To facilitate the functional testing, the add-on author must provide testing information and, if applicable, testing credentials required to use the add-on if an account is needed for any part of the add-on’s functionality.</p>
+
+<p>Issues brought up during review must be addressed using best efforts. If corrections have been requested, the new version should not contain unrelated changes, as this complicates the review process and can lead to further rejections.</p>
+
+<h3 id="Submissão_de_Código_Fonte">Submissão de Código Fonte</h3>
+
+<p>Add-ons may contain transpiled, obfuscated, minified or otherwise machine-generated code, but Mozilla needs to review a copy of the human-readable source code. The author must provide this information to Mozilla during submission as well as instructions on how to reproduce the build.</p>
+
+<p>The provided source code will be reviewed by an administrator and will not be redistributed in any way. The code will only be used for the purpose of reviewing the add-on. Failure to provide this information will result in rejection.</p>
+
+<p>Please read our <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Source_Code_Submission">Source Code Submission guidelines</a> to avoid unexpected rejections.</p>
+
+<h2 id="Práticas_de_Desenvolvimento">Práticas de Desenvolvimento</h2>
+
+<p>In general, developers are free to maintain their add-ons in the manner they choose. However, in order to maintain appropriate data security and effectively review code, we do have certain technical requirements that all add-ons must meet. In particular, potentially dangerous APIs may only be used in ways that are demonstrably safe, and code within add-ons that cannot be verified as behaving safely and correctly may need to be refactored.</p>
+
+<p>While any code, method or practice in a submitted add-on is subject to review and rejection, the following requirements are of particular importance:</p>
+
+<ul>
+ <li>Add-ons must only request those permissions that are necessary for function</li>
+ <li>Add-ons must be self-contained and not load remote code for execution</li>
+ <li>Add-ons must use encrypted channels for sending sensitive user data</li>
+ <li>Add-ons should avoid including duplicate or unnecessary files</li>
+ <li>Add-on code must be written in a way that is reviewable and understandable. Reviewers may ask you to refactor parts of the code if it is not reviewable.</li>
+ <li>Add-ons must not negatively impact the performance or stability of Firefox.</li>
+ <li>Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted.</li>
+</ul>
+
+<h2 id="Gestão_Recolha_e_Divulgação_de_Dados">Gestão, Recolha e Divulgação de Dados</h2>
+
+<p>You must disclose how the add-on collects, uses, stores and shares user data in the privacy policy field on AMO. Mozilla expects that the add-on limits data collection whenever possible, in keeping with Mozilla’s <a href="https://www.mozilla.org/en-US/about/policy/lean-data/">Lean Data Practices</a> and Mozilla’s <a href="https://www.mozilla.org/en-US/privacy/principles/">Data Privacy Principles</a>, and uses the data only for the purpose for which it was originally collected.</p>
+
+<p>User data includes all information the add-on collects, regardless of the manner. It can be personal data actively provided by the user (such as a name or email address), technical data (such as operating system, build ID, version numbers, crash reports, activation, updates), and interaction or activity data (add-on activity data, visited URLs, console logs), including interactions with Firefox.</p>
+
+<p>The add-on’s privacy policy must be the full policy text; it cannot be a link to an externally hosted privacy policy. In addition, the privacy policy must:</p>
+
+<ul>
+ <li>be specific and exclusive to the add-on,</li>
+ <li>clearly describe the purpose of the data collection,</li>
+ <li>set forth the exact data to be collected,</li>
+ <li>address the add-on’s particular privacy properties.</li>
+</ul>
+
+<p>A summary of this information must be included in the add-on’s listing description. Finally, you and your add-on must also comply with all applicable data privacy laws as well as any other laws that may apply to your specific add-on.</p>
+
+<h3 id="Interações_do_Utilizador_e_Dados_Técnicos">Interações do Utilizador e Dados Técnicos</h3>
+
+<ul>
+ <li>Users must be provided a clear way to control this data collection. The control mechanism must be shown during the installation process of the add-on.</li>
+ <li>Add-ons must only collect information about add-on performance and/or use.</li>
+ <li>Collecting ancillary information (e.g. any data not explicitly required for the add-on’s basic functionality) is prohibited.</li>
+</ul>
+
+<h3 id="Cookies">Cookies</h3>
+
+<ul>
+ <li>If your add-on installs cookies, this must also be disclosed in the add-on’s privacy policy.</li>
+ <li>The add-on privacy policy must clearly express the placing and purposes of the cookie(s). It is highly recommended that you disclose the types of cookies being used.</li>
+ <li>Users must be provided an opportunity to refuse the storage of or access to cookies, and must be informed of the consequences of doing so (e.g., without a functional cookie, the add-on may not work).</li>
+ <li>Installing cookies that are not explicitly required for the add-on’s functionality is prohibited.</li>
+</ul>
+
+<h3 id="Dados_Pessoais">Dados Pessoais</h3>
+
+<ul>
+ <li>If you are collecting any personal information, the users must provide affirmative consent (i.e., explicit opt-in from the user). It must be clear to the user that they give consent to the collection of personal data.</li>
+ <li>Collecting ancillary personal information (e.g., any data not explicitly required for the add-on’s basic functionality) is prohibited.</li>
+ <li>Any transmission of this type of data must use secure, encrypted connections.</li>
+</ul>
+
+<h3 id="Protocolos_de_Privacidade_Adicionais">Protocolos de Privacidade Adicionais</h3>
+
+<ul>
+ <li>Leaking local or user-sensitive information to websites or other processes (e.g., using native messaging) is prohibited.</li>
+ <li>If the add-on uses native messaging, the privacy policy must clearly disclose which information is being exchanged with the native application. Data exchanged with the native application must be in accordance with our No Surprises policy.</li>
+ <li>HTTPS must be used for security and privacy-sensitive operations such as transmitting passwords or tokens.</li>
+ <li>Browsing data from private browsing sessions must not be stored.</li>
+ <li>Identity information must not be leaked to web content in private browsing sessions.</li>
+</ul>
+
+<h2 id="Vulnerabilidades_de_Segurança">Vulnerabilidades de Segurança</h2>
+
+<p>Because add-ons run in an environment with elevated privileges relative to ordinary web pages, they present a very serious set of security considerations. They have the potential to open security holes not only in the add-ons themselves, but also in the browser, in web pages, and, in particularly distressing cases, the entire system the browser is running on.</p>
+
+<p>As a result, we take our security policies very seriously and apply them to all add-ons, whether hosted on AMO or not. We expect all add-ons to be secure and well-maintained in handling both their own data and their user’s data. They must also securely manage all of their interactions with the web, the browser and the operating system.</p>
+
+<h2 id="Monetização">Monetização</h2>
+
+<ul>
+ <li>Os mecanismos de monetização devem cumprir com as políticas na secção <em>Divulgação, Recolha e Gestão de Dados</em>. Em particular, um extra deve ser acompanhado de um mecanismo de controle de utilizador claro (e opção para dados pessoais) apresentado durante o processo de instalação ou atualização do extra. A recolha de informação auxiliar para monetização é proibida.</li>
+ <li>Um extra que injetar publicidade no conteúdo da página da Web deve identificar claramente o conteúdo injetado como originário do extra.</li>
+ <li>A inclusão de mineiros de criptomoedas ou funcionalidades similares num extra é proibida.</li>
+ <li>A modificação do conteúdo da Web ou a facilitação de redirecionamentos para incluir etiquetas de promoção de afiliados não é permitida. Por outro lado, a utilização da promoção de afiliação nos elementos da interface do utilizador claramente identificada como pertencentes ao extra é aceitável.</li>
+</ul>
+
+<h2 id="Conformidade_e_Lista_de_Bloqueio">Conformidade e Lista de Bloqueio</h2>
+
+<p>Para os extras que não correspondem com estas políticas, a Mozilla pode rejeitar ou bloquear as versões afetadas ou extras completos, dependendo da extensão da sua não conformidade.</p>
+
+<p>Geralmente, a Mozilla tentará entrar em contacto com o(s) programador(es) do extra e fornecer um prazo razoável para que os problemas sejam corrigidos antes que um bloqueio seja implementado. Se um extra for considerado malicioso ou se os seus programadores tiverem se mostrado inalcançáveis ou não responderem, ou no caso de violações recorrentes, a inclusão na listagem de bloqueio ser imediata.</p>
+
+<p>A Mozilla reserva o direito de bloquear ou eliminar a conta do programador em addons.mozilla.org, evitando assim a utilização adicional do serviço.</p>

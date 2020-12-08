@@ -1,0 +1,110 @@
+---
+title: FileReader.readAsArrayBuffer()
+slug: Web/API/FileReader/readAsArrayBuffer
+tags:
+  - API
+  - DOM
+  - File API
+  - Reference
+  - readAsArrayBuffer
+  - Файлы
+  - метод
+translation_of: Web/API/FileReader/readAsArrayBuffer
+---
+<p>{{APIRef("File API")}}</p>
+
+<p>Метод <strong><code>readAsArrayBuffer</code></strong> используется для чтения содержимого файла, представленного как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершается, {{domxref("FileReader.readyState","readyState")}} принимает значение <code>DONE</code>, и наступает событие {{event("loadend")}}. В то же время в {{domxref("FileReader.result","result")}} помещается информация о файле в виде {{domxref("ArrayBuffer")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsArrayBuffer(<em>blob</em>);</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>blob</code></dt>
+ <dd>{{domxref("Blob")}} или {{domxref("File")}}, информацию из которого необходимо прочитать.</dd>
+</dl>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}}</td>
+   <td>{{Spec2("File API")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Firefox (Gecko)</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[1]</sup></td>
+   <td>7</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>10<sup>[2]</sup></td>
+   <td>12.02<sup>[3]</sup></td>
+   <td>6.0.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>32</td>
+   <td>3</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>10</td>
+   <td>11.5</td>
+   <td>6.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] До Gecko 2.0 beta 7 (Firefox 4.0 beta 7), все {{domxref("Blob")}} параметры были {{domxref("File")}} параметрами; были произведены изменения<span id="result_box" lang="ru"><span class="alt-edited"> для</span> <span class="alt-edited">удовлетворения условий</span> <span class="alt-edited">спецификации</span></span>. До Gecko 13.0 {{geckoRelease("13.0")}}<code> свойство FileReader.error</code> возвращало объект {{domxref("FileError")}}. Этот интерфейс был удален и теперь <code>FileReader.error</code> возвращает объект {{domxref("DOMError")}} как это определено в последнем драфте FileAPI.</p>
+
+<p>[2] IE9 имеет <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</p>
+
+<p>[3] Opera <a href="http://www.opera.com/docs/specs/presto28/file/">частично поддерживает</a> в версии 11.1.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("FileReader")}}</li>
+</ul>

@@ -1,0 +1,228 @@
+---
+title: Modificando Página Web Baseado na URL
+slug: Mozilla/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL
+tags:
+  - Add-on SDK
+  - content scripts
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Modifying_Web_Pages_Based_on_URL
+---
+<div class="note">Para seguir este tutorial, você precisará <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation">instalar o SDK</a> e ter conhecimento <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Getting_Started_(jpm)">básico de jpm</a> (Firefox 38 em diante) ou <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">básico de cfx</a>.</div>
+
+<p>Para modificar qualquer página que combine com um padrão particular (por exemplo, "http://example.org/") a medida que elas são carregadas, use o módulo <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod"><code>page-mod</code></a>.</p>
+
+<p>Para criar um page-mod, você precisa de duas coisas:</p>
+
+<ul>
+ <li>Um ou mais <em>content scripts</em>(script de conteúdo) para executar cuja tarefa é interagir com o conteúdo web.</li>
+ <li>Um ou mais <em>patterns(padrões)</em> para combinar com URLs que você quer modificar.</li>
+</ul>
+
+<p>Um trecho simples de códingo onde o script de conteúdo é fornecido com a opção <code>contentScript</code> e o padrão de busca da URL é dado pela opção <code>include</code> como a seguir:</p>
+
+<pre class="brush: js">// Importe a API page-mod
+var pageMod = require("sdk/page-mod");
+
+// Crie um page-mod
+// Ele executará um script toda vez que uma URL ".org" é carregada
+// O script substitui o conteúdo da página por uma mensagem
+pageMod.PageMod({
+  include: "*.org",
+  contentScript: 'document.body.innerHTML = ' +
+                 ' "&lt;h1&gt;Page matches ruleset&lt;/h1&gt;";'
+});
+</pre>
+
+<p>Faça o seguinte:</p>
+
+<ul>
+ <li>Crie um novo diretório navegue para ele.</li>
+ <li>Execute <code>jpm init </code>ou <code>cfx init</code></li>
+ <li><code>Abra o arquivo index.js</code> e adicione o código acima (<code>lib/main.js se estiver usando</code> <code>cfx</code>)</li>
+ <li>Execute <code>jpm run </code>ou<code> cfx run</code>.</li>
+ <li>Abra no navegador o site <a href="http://www.ietf.org">ietf.org</a>.</li>
+</ul>
+
+<p>Abaixo é o que você deve ver.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6537/pagemod-ietf.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="Especificando_o_Padão_a_Combinar">Especificando o Padão a Combinar</h2>
+
+<p>O padrão de combinação usa a síntaxe <a href="/en-US/Add-ons/SDK/Low-Level_APIs/util_match-pattern"><code>match-pattern</code></a>. Você pode passar uma única string como padrão a combinar ou um array.</p>
+
+<h2 id="Mantendo_o_Conteúdo_do_Script_em_um_Arquivo_Separado">Mantendo o Conteúdo do Script em um Arquivo Separado</h2>
+
+<p>No exemplo acima, nós fornecemos o script de conteúdo como uma string.</p>
+
+<p>A menos que o script seja extremamente simples, é melhor manter o script em um arquivo separado. Isso torna o código mais fácil para manter, depurar, e revisar. Para fazer isso, você precisa:</p>
+
+<ul>
+ <li>Salvar o script no diretório "<code>data</code>" do add-on.</li>
+ <li>Use a opção <code>contentScriptFile</code> ao invés de <code>contentScript</code> e passe para ela a URL do script que pode ser obtida usando <code>self.data.url("my-script.js")</code>. A partir do Firefox 34, você pode usar <code>"./my-script.js"</code>.</li>
+</ul>
+
+<p>Por exemplo, se você salvar o script acima no diretório data do add-on em um arquivo chamado <code>my-script.js</code>:</p>
+
+<pre class="brush: js">// Importe a API page-mod
+var pageMod = require("sdk/page-mod");
+// Importe a API self
+var self = require("sdk/self");
+
+// Crie um page-mod
+// Ele executará um script toda vez que uma URL ".org" é carregada
+// O script substitui o conteúdo da página por uma mensagem
+pageMod.PageMod({
+  include: "*.org",
+  contentScriptFile: self.data.url("my-script.js")
+});</pre>
+
+<p>Ou a partir do Firefox 34:</p>
+
+<pre class="brush: js">// Importe a API page-mod
+var pageMod = require("sdk/page-mod");
+
+// Crie um page-mod
+// Ele executará um script toda vez que uma URL ".org" é carregada
+// O script substitui o conteúdo da página por uma mensagem
+pageMod.PageMod({
+  include: "*.org",
+  contentScriptFile: "./my-script.js"
+});</pre>
+
+<h2 id="Carregando_Múltiplos_Scripts_de_Conteúdo">Carregando Múltiplos Scripts de Conteúdo</h2>
+
+<p>Você pode carregar mais do que um script, e eles podem interagir um com o outro.</p>
+
+<p>Por exmeplo, você poderia reescrever o <code>my-script.js</code> para usar o jQuery.</p>
+
+<pre class="brush: js">$("body").html("&lt;h1&gt;Page matches ruleset&lt;/h1&gt;");
+</pre>
+
+<p>Então baixe o jQuery para o diretório <code>data</code> do add-on, e carregue o script e o jQuery juntos (tenha certeza de carregar o jQuery primeiro).</p>
+
+<pre class="brush: js">// Importe a API page-mod
+var pageMod = require("sdk/page-mod");
+// Importe a API self
+var self = require("sdk/self");
+
+// Crie um page-mod
+// Ele executará um script toda vez que uma URL ".org" é carregada
+// O script substitui o conteúdo da página por uma mensagem
+pageMod.PageMod({
+  include: "*.org",
+  contentScriptFile: [self.data.url("jquery-1.7.min.js"), self.data.url("my-script.js")]
+});
+</pre>
+
+<p>Você pode usar ambos <code>contentScript</code> e <code>contentScriptFile</code> no mesmo page-mod. Se você fizer isto, o script carregado usando <code>contentScriptFile</code> são carregados primeiro.</p>
+
+<pre class="brush: js">// Importe a API page-mod
+var pageMod = require("sdk/page-mod");
+// Importe a API self
+var self = require("sdk/self");
+
+// Crie um page-mod
+// Ele executará um script toda vez que uma URL ".org" é carregada
+// O script substitui o conteúdo da página por uma mensagem
+pageMod.PageMod({
+  include: "*.org",
+  contentScriptFile: self.data.url("jquery-1.7.min.js"),
+  contentScript: '$("body").html("&lt;h1&gt;Page matches ruleset&lt;/h1&gt;");'
+});
+</pre>
+
+<p>Note, porém, que você não pode carregar um script de um site web. O script deve ser carregado do <code>data</code>.</p>
+
+<h2 id="Comunicando_com_o_Script_de_Conteúdo">Comunicando com o Script de Conteúdo</h2>
+
+<p>Seu script do add-on e o script de conteúdo não podem acessar diretamente a variável de um ou outro ou chamar função dos outros, mas eles podem enviar mensagens um para o outro.</p>
+
+<p>Para enviar mensagens de um lado para o outro, use o emitente de chamadas <code>port.emit()</code> e receba respostas usando <code>port.on()</code>.</p>
+
+<ul>
+ <li>No script de conteúdo, <code>port</code> é uma propriedade do objeto global <code>self</code>.</li>
+ <li>No script do add-on, você precisa capturar evento no <code>onAttach</code> event passando um objeto <a href="/en-US/Add-ons/SDK/Low-Level_APIs/content_worker">worker</a> que contém a <code>port</code>.</li>
+</ul>
+
+<p>Vamos reescrever o exemplo acima para passar uma mensagem do add-on para o script de conteúdo. A mensagem conterá o novo conteúdo para inserir dentro do documento</p>
+
+<p>O script de conteúdo agora precisa parecer com isto:</p>
+
+<pre class="brush: js">// "self" é um objeto global no script de conteúdo
+// Espera pelas mensagens, e substitui o conteúdo do
+// documento com a mensagem recebida
+self.port.on("replacePage", function(message) {
+  document.body.innerHTML = "&lt;h1&gt;" + message + "&lt;/h1&gt;";
+});
+</pre>
+
+<p>No script do add-on, nós enviaremos ao script de conteúdo uma mensagem dentro do <code>onAttach</code>.</p>
+
+<pre class="brush: js">// Importe a API page-mod
+var pageMod = require("sdk/page-mod");
+// Importe a API self
+var self = require("sdk/self");
+
+// Crie um page-mod
+// Ele executará um script toda vez que uma URL ".org" é carregada
+// O script substitui o conteúdo da página por uma mensagem
+pageMod.PageMod({
+  include: "*.org",
+  contentScriptFile: self.data.url("my-script.js"),
+  // Envia ao script de conteúdo uma mensagem dentro de onAttach
+  onAttach: function(worker) {
+    worker.port.emit("replacePage", "Page matches ruleset");
+  }
+});
+</pre>
+
+<p>A mensagem <code>replacePage</code> não é uma mensagem embutida: é uma mensagem definida pelo add-on na chamada do <code>port.emit()</code>.</p>
+
+<div>
+<h2 id="Injetando_CSS">Injetando CSS</h2>
+
+<p><strong>Note que a característica descrita nesta seção é experimental no momento. Nós devemos provavelmente continuar suportando essa característica, mas os detalhes da API devem mudar.</strong></p>
+
+<p>Em vez de injetar JavaScript na página, você pode injetar CSS definindo a opção do <code>contentStyle</code> do mod-page.</p>
+
+<pre class="brush: js">var pageMod = require("sdk/page-mod").PageMod({
+  include: "*",
+  contentStyle: "body {" +
+                "  border: 5px solid green;" +
+                "}"
+});
+</pre>
+
+<p>Como com o <code>contentScript</code>, há uma opção correspondente para <code>contentStyleFile</code> que leva uma URL de um arquivo CSS situado no diretório "data"; é uma boa prática usar essa opção ao invés de <code>contentStyle</code> se o CSS é muito complexo.</p>
+
+<pre class="brush: js">var pageMod = require("sdk/page-mod").PageMod({
+  include: "*",
+  contentStyleFile: require("sdk/self").data.url("my-style.css")
+});
+</pre>
+
+<p>Ou, a partir do Firefox 34, você pode usar a versão mais simples:</p>
+
+<pre class="brush: js">var pageMod = require("sdk/page-mod").PageMod({
+  include: "*",
+  contentStyleFile: "./my-style.css"
+});</pre>
+</div>
+
+<h2 id="Aprendendo_mais">Aprendendo mais</h2>
+
+<p>Para aprender mais sobre o <code>page-mod</code>, veja a referência da API<a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod"> page</a>. Em particular, o construtor <code>PageMod</code> leva várias opções adicionais para controlar seu comportamento:</p>
+
+<ul>
+ <li>
+  <p>Por padrão, script de conteúdo não são anexados a qualuqer tab que já esteja aberta quando o page-mod é criado, e são anexados à iframes bem como documentos superiores. Para controlar esse comportamento use a opção <code>attachTo</code>.</p>
+ </li>
+ <li>
+  <p>Defina valores somente leitura acessíveis ao script de conteúdo usando a opção<code> contentScriptOptions</code>.</p>
+ </li>
+ <li>
+  <p>Por padrão, o script de conteúdo são anexados depois de todo o (DOM, JS, CSS, imagens) para a página ter sido carregado, no momento o evento <a href="/en-US/docs/Web/API/GlobalEventHandlers.onload">window.onload</a> dispara. Para controlar esse comportamento, use a opção <code>contentScriptWhen</code>.</p>
+ </li>
+</ul>
+
+<p>Para aprender mais sobre o script de conteúdo,, veja o guia <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">content scripts</a>.</p>

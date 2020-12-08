@@ -1,0 +1,195 @@
+---
+title: Object.prototype.__noSuchMethod__
+slug: Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod
+tags:
+  - JavaScript
+  - Non-standard
+  - Object
+  - Property
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.noSuchMethod
+---
+<div>{{JSRef("Global_Objects", "Object")}} {{non-standard_header}}</div>
+
+<div>Хотя свойство <strong><code>__noSuchMethod__</code></strong> и нестандартно, спецификация ECMAScript Harmony (ES6) содержит объект <strong>{{jsxref("Proxy")}}</strong>, с помощью которого вы можете сделать всё тоже самое, что и при использовании этого свойством (и даже больше).</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Свойство <strong><code>__noSuchMethod__</code></strong> ссылается на функцию, выполняющуюся каждый раз при вызове на объекте несуществующего метода.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code><var>obj</var>.__noSuchMethod__ = <var>fun</var></code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+<dl>
+ <dt><code>fun</code></dt>
+ <dd>Функция, имеющая вид</dd>
+ <dd>
+  <pre><code>function(<var>id</var>, <var>args</var>) { . . . }</code></pre>
+  <dl>
+   <dt><code>id</code></dt>
+   <dd>Имя вызванного несуществующего метода</dd>
+   <dt><code>args</code></dt>
+   <dd>Массив аргументов, переданный в метод</dd>
+  </dl>
+ </dd>
+</dl>
+
+<h2 id="Description" name="Description">Описание</h2>
+<p>По умолчанию, при попытке вызвать не существующий в объекте метод, будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. Это поведение можно обойти, определив функцию <code>__noSuchMethod__</code> в качестве члена объекта. Функция принимает два аргумента, первый является именем метода, который попытались вызвать, а второй — массивом аргументов, которые были переданы в метод при его вызове. Второй аргумент является настойщим массивом (то есть, он наследуется через цепочку прототипов от {{jsxref("Array.prototype")}}), а не массивоподобным <a href="/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">объектом arguments</a>.</p>
+<p>Если данный метод не может быть вызван, либо по причине того, что он установлен в {{jsxref("Global_Objects/undefined", "undefined")}} по умолчанию, либо удалён, либо вручную установлен в не-функцию, движок JavaScript вернётся к выбрасыванию исключения {{jsxref("Global_Objects/TypeError", "TypeError")}}.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example:_Simple_test_of___noSuchMethod__" name="Example:_Simple_test_of___noSuchMethod__">Пример: простая проверка свойства <code>__noSuchMethod__</code></h3>
+<pre class="brush: js">var o = {
+    __noSuchMethod__: function(id, args) { console.log(id, '(' + args.join(', ') + ')'); }
+};
+
+o.foo(1, 2, 3);
+o.bar(4, 5);
+o.baz();
+
+// Вывод
+// foo (1, 2, 3)
+// bar (4, 5)
+// baz ()
+</pre>
+
+<h3 id="Example:_Using___noSuchMethod___to_simulate_multiple_inheritance" name="Example:_Using___noSuchMethod___to_simulate_multiple_inheritance">Пример: использование свойства <code>__noSuchMethod__</code> для симуляции множественного наследования</h3>
+<p>Ниже показан пример кода, реализующего примитивную форму множественного наследования.</p>
+<pre class="brush: js">// Не работает с множественным наследованием объектов в качестве родителей
+function noMethod(name, args) {
+    var parents = this.__parents_;
+
+    // Пройдёмся по всем родителям
+    for (var i = 0; i &lt; parents.length; i++) {
+        // Если нашли функцию в родителе, вызовем её
+        if (typeof parents[i][name] == 'function') {
+            return parents[i][name].apply(this, args);
+        }
+    }
+
+    // Если мы здесь, метод не был найден
+    throw new TypeError;
+}
+
+// Используется для добавления родителя при множественном наследовании
+function addParent(obj, parent) {
+    // Если объект ещё не инициализирован, инициализируем его
+    if (!obj.__parents_) {
+        obj.__parents_ = [];
+        obj.__noSuchMethod__ = noMethod;
+    }
+
+    // Добавляем родителя
+    obj.__parents_.push(parent);
+}
+</pre>
+<p>Ниже показан пример использования этой идеи.</p>
+<pre class="brush: js">// Пример первого базового класса
+
+function NamedThing(name) {
+    this.name = name;
+}
+
+NamedThing.prototype = {
+    getName: function() { return this.name; },
+    setName: function(newName) { this.name = newName; }
+}
+
+// Пример второго базового класса
+
+function AgedThing(age){
+    this.age = age;
+}
+
+AgedThing.prototype = {
+    getAge: function() { return this.age; },
+    setAge: function(age) { this.age = age; }
+}
+
+// Дочерний класс. Наследуется от NamedThing и AgedThing, а также определяет свойство address
+
+function Person(name, age, address) {
+    addParent(this, NamedThing.prototype);
+    NamedThing.call(this, name);
+    addParent(this, AgedThing.prototype);
+    AgedThing.call(this, age);
+    this.address = address;
+}
+
+Person.prototype = {
+    getAddr: function() { return this.address; },
+    setAddr: function(addr) { this.address = addr; }
+}
+
+var bob = new Person('Боб', 25, 'Нью-Йорк');
+
+console.log('getAge лежит ' + (('getAge' in bob) ? 'в' : 'не в') + ' объекте bob');
+console.log('возраст Боба: ' + bob.getAge());
+console.log('getName лежит ' + (('getName' in bob) ? 'в' : 'не в') + ' объекте bob');
+console.log('имя Боба: ' + bob.getName());
+console.log('getAddr лежит ' + (('getAddr' in bob) ? 'в' : 'не в') + ' объекте bob');
+console.log('адрес Боба: ' + bob.getAddr());
+</pre>
+<p>Вывод примера будет следующим:</p>
+<pre>getAge лежит не в объекте bob
+возраст Боба: 25
+getName лежит не в объекте bob
+имя Боба: Боб
+getAddr лежит в объекте bob
+адрес Боба: Нью-Йорк
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<p>Не является частью какой-либо спецификации.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<div>{{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatGeckoDesktop("1.0")}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatGeckoMobile("1.0")}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>

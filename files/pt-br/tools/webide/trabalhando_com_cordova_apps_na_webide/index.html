@@ -1,0 +1,53 @@
+---
+title: Trabalhando com Cordova apps na WebIDE
+slug: Tools/WebIDE/Trabalhando_com_Cordova_apps_na_WebIDE
+tags:
+  - App
+  - Cordova
+  - FirefoxOS
+translation_of: Archive/WebIDE/Working_with_Cordova_apps_in_WebIDE
+---
+<div>{{ToolsSidebar}}</div><div class="geckoVersionNote">
+<p>Novo no Firefox 39.</p>
+</div>
+
+<p><a href="http://cordova.apache.org/">Apache Cordova</a> permite escrever um aplicativo utilizando HTML, JavaScript, and CSS, e gerar versões nativas para plataformas como iOS e Android. Com Cordova <a href="/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS">você também pode gerar versões do aplicativo para o Firefox OS</a>.</p>
+
+<p>A partir do Firefox 39, a WebIDE tem suporte direto para Apps desenvolvidos com Cordova, o que quer dizer que vocÊ pode utilizá-la para editar os aplicativos e gerar a versão para o Firefox OS diretamente a partir dela.</p>
+
+<p>Primeiro, crie um app Cordova:</p>
+
+<ul>
+ <li>Caso não tenha o Cordova instalado, execute o comando abaixo no terminal para instalar:
+  <pre class="brush: bash"><code>npm install -g cordova</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>O comando abaixo cria um app com o nome de <code>my-app</code>:
+
+  <pre class="brush: bash"><code>cordova create my-app</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Execute o comando a seguir para adicionar a plataforma Firefox OS pra o app:
+  <pre class="brush: bash">cd my-app
+cordova platform add firefoxos</pre>
+ </li>
+</ul>
+
+<p>Em seguida:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Tools/WebIDE/Opening_WebIDE">Abra a WebIDE</a></li>
+ <li>selecione <a href="/en-US/docs/Tools/WebIDE/Creating_and_editing_apps#Open_a_packaged_app">"Open Packaged App"</a>,  e selecione o diretório da aplicação onde está localizado o arquivo <code>config.xml</code>.</li>
+</ul>
+
+<p>Agora você pode editar o aplicativo como uma aplicação Cordova, e sempre que <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Running_apps">executar</a>, a própria WebIDE irá gerar a versão para  o Firefox OS.Now you can edit the app as a Cordova app, and whenever you <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Running_apps">run the app</a>, WebIDE takes care of generating the Firefox OS version behind the scenes. Sempre que você fizer uma alteração no <a href="/pt-BR/Apps/Manifest">manifesto</a> do aplicativo, a WebIDE vai gerar uma nova versão do app e executar a <a href="/en-US/docs/Tools/WebIDE/Creating_and_editing_apps#Manifest_validation">validação do manifesto</a>.</p>
+
+<p><a href="https://github.com/tortoyoyo/ExemplosCordovaAPP">Clicando aqui </a>você pode ver exemplos de Cordova App.</p>
+
+<p>Mais detalhes sobre desenvolvimento para Firefox OS podem ser encontrados também no livro <a href="https://leanpub.com/guiarapidofirefoxos">Desenvolvimento para firefox os - guia rápido</a>, do André Garzia.</p>
+
+<p> </p>

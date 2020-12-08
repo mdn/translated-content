@@ -1,0 +1,125 @@
+---
+title: MouseEvent.buttons
+slug: Web/API/MouseEvent/buttons
+translation_of: Web/API/MouseEvent/buttons
+---
+<div>{{APIRef("DOM Events")}}</div>
+
+<div>Свойство<span class="seoSummary"><strong><code>MouseEvent.buttons</code></strong></span>доступно только для чтения. Оно показывает, какие клавиши мыши (или другого устройства ввода) были нажаты при срабатывании события.</div>
+
+<div> </div>
+
+<div>Для каждой нажатой кнопки есть своё уникальное битовое значение (см. ниже раздел "<a href="#Return">Возвращаемые значения</a>"). Если нажаты несколько кнопок одновременно, значения суммируются, создавая новое значение. Например, если нажата вторая кнопка (2 или 000010 в двоичном коде) вместе со средней (4 или 000100 в двоичном коде), значение будет равно 6 (2 + 4) или 000110 в двоичном коде.</div>
+
+<div> </div>
+
+<div class="note">
+<p><strong>Note:</strong> Не путайте это свойство со свойством {{domxref("MouseEvent.button")}}. Текущее свойство {{domxref("MouseEvent.buttons")}} показывает состояние нажатых кнопок при любом событии мыши, а свойство {{domxref("MouseEvent.button")}} указывает на события, произошедшие в результате нажатия/отпускания кнопок мыши.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.buttons
+</pre>
+
+<h2 id="Возвращаемые_значения"><a id="Return" name="Return">Возвращаемые значения</a></h2>
+
+<p>Целое число, представляющее одну или несколько кнопок. При одновременном нажатии нескольких кнопок значения объединяются (например, 3 = первая (1) + вторая (2) кнопки мыши):</p>
+
+<ul>
+ <li><code>0 </code> : кнопки не нажаты или не инициализированы;</li>
+ <li><code>1 </code> : первая кнопка (обычно левая);</li>
+ <li><code>2 </code> : вторая кнопка (обычно правая);</li>
+ <li><code>4 </code> : дополнительная кнопка (обычно средняя или колёсико мыши);</li>
+ <li><code>8 </code> : четвёртая кнопка (как правило, кнопка "Назад" браузера);</li>
+ <li><code>16</code> : пятая кнопка (как правило, кнопка "Вперёд" браузера).</li>
+</ul>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-buttons','MouseEvent.buttons')}}</td>
+   <td>{{Spec2('DOM3 Events')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(43)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>9</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Gecko supports the <code>buttons</code> attribute on Windows, Linux (GTK), and Mac OS with the following restrictions:</p>
+
+<ul>
+ <li>Utilities allow customization of button actions so that primary may not the the left button on the device, secondary may not be the right button, and so on. The middle (wheel) button, 4th button and 5th button might not be assigned a value, even when they are pressed.</li>
+ <li>Single button devices may emulate additional buttons with combinations of button and keyboard presses</li>
+ <li>Touch devices may emulate buttons with configurable gestures (e.g. single touch for primary, two-finger touch for secondary, etc.)</li>
+ <li>On Linux (GTK), the 4th button and the 5th button are not supported. In addition, a mouseup event always has the releasing button information in this attribute value.</li>
+ <li>On Mac OS X 10.5, the buttons attribute always returns 0 because there is no platform API for implementing this feature.</li>
+</ul>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li>{{domxref("MouseEvent")}}</li>
+</ul>

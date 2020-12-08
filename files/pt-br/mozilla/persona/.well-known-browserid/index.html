@@ -1,0 +1,61 @@
+---
+title: .well-known-browserid
+slug: Mozilla/Persona/.well-known-browserid
+translation_of: Archive/Mozilla/Persona/.well-known-browserid
+---
+<p><span id="result_box" lang="pt"><span class="hps">Domínios</span> <span class="hps">anunciam sua</span> <span class="hps">capacidade de atuar como</span> <span class="hps">Provedores</span> <span class="hps atn">de Identidade </span><span class="hps">Persona </span></span><span lang="pt"><span class="hps atn">(</span><span>IDPs)</span> <span class="hps">através da publicação de</span> <span class="hps">um documento de</span> <span class="hps">apoio em</span> <code><span class="hps">/.well-known/browserid</span></code><span>.</span> <span class="hps">Este documento</span> <span class="hps">formatado em</span> <span class="hps">JSON</span> <span class="hps">deve</span> <span class="hps">ser servido</span> <span class="hps">por HTTPS</span> <span class="hps">com</span> <span class="hps">o tipo de conteúdo</span> </span><code>application/json</code><span lang="pt"><span>.</span></span></p>
+
+<p><span id="result_box" lang="pt"><span class="hps">Este documento pode</span> <span class="hps">especificar</span> <span class="hps">a forma de</span> <span class="hps">prestação</span> <span class="hps">e</span> <span class="hps">autenticar usuários</span><span>,</span> <span class="hps">ou</span> <span class="hps">pode delegar</span> <span class="hps">sua autoridade</span> <span class="hps">para outro</span> <span class="hps">provedor de identidade</span><span>.</span></span></p>
+
+<p><span id="result_box" lang="pt"><span class="hps"><strong>Nota</strong>:</span> <span class="hps">você também deve</span> <span class="hps">consultar o </span></span><span lang="pt"><span class="hps">EspecificaçProtocolo</span> <span class="hps">BrowserID</span><span class="hps"> </span> <span class="hps">como</span> <span class="hps">a referência técnica</span> <span class="hps">autorizada.</span></span></p>
+
+<h2 id="Supórte_Basico">Supórte Basico</h2>
+
+<p><span id="result_box" lang="pt"><span class="hps">Um domínio</span> <span class="hps">que atua diretamente</span> <span class="hps">um</span> <span class="hps">um IDP</span> <span class="hps">deve fornecer</span> <span class="hps">três valores</span> <span class="hps">em</span> <span class="hps">seu documento de</span> <span class="hps">apoio</span><span>:</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><code><span class="hps">chave pública</span></code><span>:</span> <span class="hps">A</span> <span class="hps">parte pública da</span> <span class="hps">chave criptográfica</span> <span class="hps">do domínio.</span></span></li>
+ <li><span id="result_box" lang="pt"><code><span class="hps">autenticação</span></code><span>:</span> A <span class="hps">página</span> <span class="hps">do</span> <span class="hps">domínio para</span> <span class="hps">pedir aos usuários</span> <span class="hps">fazer login.</span></span></li>
+ <li><span id="result_box" lang="pt"><code><span class="hps">provisionamento</span></code><span>:</span> A <span class="hps">página</span> <span class="hps">do</span> <span class="hps">domínio</span> <span class="hps alt-edited">para certificar</span> <span class="hps alt-edited">as identidades</span> <span class="hps">de seus usuários</span><span>.</span></span></li>
+</ul>
+
+<p id="Example_.2F.well-known.2Fbrowserid_file.3A"><strong><span class="short_text" id="result_box" lang="pt"><span class="hps">Arquivo</span><span class="hps"> exemplo</span> <span class="hps">/.well-known/browserid</span><span>:</span></span></strong></p>
+
+<pre class="brush:js;">{
+    "public-key": {
+        "algorithm": "RS",
+        "n": "82818905405105134410187227495885391609221288015566078542117409373192106382993306537273677557482085204736975067567111831005921322991127165013340443563713385983456311886801211241492470711576322130577278575529202840052753612576061450560588102139907846854501252327551303482213505265853706269864950437458242988327",
+        "e": "65537"
+    },
+    "authentication": "/browserid/sign_in.html",
+    "provisioning": "/browserid/provision.html"
+}</pre>
+
+<h2 id="Delegated_Support">Delegated Support</h2>
+
+<p>HTTP redirects and other means of "moving" a /.well-known/browserid file are not permitted. If an IdP would like to delegate to another domain for authentication and provisioning, it may publish a support document which only contains an <code>authority</code> entry.</p>
+
+<p id="Example_.2F.well-known.2Fbrowserid.3A"><strong>Example /.well-known/browserid:</strong></p>
+
+<pre class="brush:js;">{
+  "authority": "subdomain.example.com"
+}
+</pre>
+
+<p>Then <code>subdomain.example.com</code> would host its own support document, as per the example above.</p>
+
+<p>The <code>authority</code> field is specified as a hostname plus, optionally, a port. It may not contain a path. So <code>"example.com</code>", "<code>subdomain.example.com"</code>, and "<code>subdomain.example.com:8080</code>" are all valid, but "<code>subdomain.example.com/login</code>" is not.</p>
+
+<p>A domain may delegate to any other domain, so long as the other domain publishes a <code>/.well-known/browserid</code> document.</p>
+
+<h2 id="Checklist">Checklist</h2>
+
+<ul>
+ <li>The document is formatted as valid JSON</li>
+ <li>The document is served over SSL</li>
+ <li>The document is served with a content type of "<code>application/json</code>"</li>
+ <li>The document is hosted on the domain exactly matching that in the email addresses assigned to users. For example: <code>example.com</code>, not <code>www.example.com</code>.</li>
+ <li>If delegating to another Identity Provider, the <code>authority</code> value is specified only as a hostname and, optionally, a port.</li>
+</ul>
+
+<p>Many of these can be tested automatically with the <a class="link-https" href="https://github.com/mozilla/browserid/blob/dev/scripts/check_primary_support" title="https://github.com/mozilla/browserid/blob/dev/scripts/check_primary_support">check_primary_support script from the Persona</a> codebase<strong>.</strong></p>

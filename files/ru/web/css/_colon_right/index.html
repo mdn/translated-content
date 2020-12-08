@@ -1,0 +1,112 @@
+---
+title: ':right'
+slug: 'Web/CSS/:right'
+translation_of: 'Web/CSS/:right'
+---
+<div>{{ CSSRef() }}</div>
+
+<p>The <strong><code>:right</code></strong> CSS <a href="/en/CSS/@page" title="@page">page</a> <a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a> matches any right page when printing a page. It allows you to describe the styling of right-side pages.</p>
+
+<pre class="brush: css no-line-numbers">/* Selects the content on the right-hand pages while printing */
+@page :right {
+  margin: 2in 3in;
+}</pre>
+
+<p>Whether the page is left or right is decided by the major writing direction of the document. For example, if the first page has a major writing direction of left-to-right then it will be a <code>:right</code> page and if it has a major writing direction of right-to-left then it will be a <code>{{ Cssxref(":left") }}</code> page.</p>
+
+<div class="note"><strong>Note:</strong> Вы можете не менять все CSS свойства, а поменять только margin, padding, border, и background для страницы. Все остальные CSS свойства будут проигнорированы и изменения будут применены только для страницы, но не для её содержимого.</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: css">@page :right {
+  margin: 2in 3in;
+}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Paged Media', '#left-right-first', ':right') }}</td>
+   <td>{{ Spec2('CSS3 Paged Media') }}</td>
+   <td>No change.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'page.html#page-selectors', ':right') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>8.0</td>
+   <td>9.2</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{ Cssxref("@page") }}, {{ Cssxref(":first") }}, {{ Cssxref(":left") }}</li>
+</ul>

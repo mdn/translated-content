@@ -1,0 +1,146 @@
+---
+title: Веб хранилище (API)
+slug: Web/API/Web_Storage_API
+translation_of: Web/API/Web_Storage_API
+---
+<p>Web Storage API предоставляет механизмы, при помощи которых браузеры могут безопасно хранить пары ключ/значение в более интуитивно понятной манере, чем куки (cookies).</p>
+
+<h2 id="Основы_Веб_хранилища_и_его_использование">Основы Веб хранилища и его использование</h2>
+
+<p>В основе Веб хранилища лежат два механизма: </p>
+
+<ul>
+ <li><code>хранилище сессии (sessionStorage)</code> обслуживает область хранения данных для каждого домена, доступное на протяжении сессии. (пока браузер открыт, даже в случае перезагрузки страницы) </li>
+ <li><code>локальное хранилище (localStorage)</code> делает то же самое, но сохраняет данные даже в случае, если переоткрыть браузер. </li>
+</ul>
+
+<p>Обе функции доступны через  {{domxref("Window.sessionStorage")}} и {{domxref("Window.localStorage")}} свойства (если быть более точным, в браузерах, поддерживающих хранилища объект <code>Window</code>  выполняет объекты <code>WindowLocalStorage</code> и <code>WindowSessionStorage</code>, которые содержат свойства <code>localStorage</code> и <code>sessionStorage</code>) — вызов одного из них создает представление объекта {{domxref("Storage")}}, через который можно устанавливать, редактировать и удалять данные. Для каждого из типа хранилищ и по каждому домену используется отдельное представление Storage объекта  - они функционируют и управляются отдельно друг от друга. </p>
+
+<div class="note">
+<p><strong>Замечание: </strong>Начиная с версии 45 Firefox, когда браузер крашится/перезагружается, объем данных, сохраненных для каждого источника, ограничивается 10 МБ. Это было сделано, чтобы избежать проблем с памятью, вызванных чрезмерным использованием веб-хранилища.</p>
+</div>
+
+<div class="note">
+<p><strong>Замечание: </strong>Доступ к веб хранилищу из iFrame третьей стороны запрещен, если пользователь <a href="https://support.mozilla.org/ru/kb/disable-third-party-cookies">отключил cookies третьих сторон</a> (Firefox ведёт себя так с <a href="https://developer.mozilla.org/ru/docs/Mozilla/Firefox/Releases/43">версии 43</a>).</p>
+</div>
+
+<div class="note">
+<p><strong>Замечание:</strong> Web Storage это не тоже самое, что <a href="/ru/docs/Storage" title="Storage">mozStorage</a> (Mozilla's XPCOM интерфейсы для SQLite) или <a href="/ru/docs/Session_store_API" title="Session_store_API">Session store API</a> (<a href="/ru/docs/XPCOM" title="XPCOM">XPCOM</a> утилита хранения для расширений).</p>
+</div>
+
+<h2 id="Интерфейсы_Веб_хранилища">Интерфейсы Веб хранилища</h2>
+
+<dl>
+ <dt>{{domxref("Storage")}}</dt>
+ <dd>Позволяет присваивать, извлекать (читать) и удалять данные для специфического домена и типа хранилща (сессии или локального).</dd>
+ <dt>{{domxref("Window")}}</dt>
+ <dd>Web Storage API расширяет {{domxref("Window")}} объект, добавляя к нему два новых свойства  — {{domxref("Window.sessionStorage")}} и {{domxref("Window.localStorage")}} — которые предоставляют доступ к сессии текущего домена и к соответствующим локальным {{domxref("Storage")}} объектам, и {{domxref("Window.onstorage")}} обработчик событий, который срабатывает при изменении объекта хранилища (например, при сохранении нового элемента)</dd>
+ <dt>{{domxref("StorageEvent")}}</dt>
+ <dd>Событие <code title="event-storage">storage</code> срабатывает на объекте документа <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Window</span></font> при изменении объекта хранилища.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Чтобы проиллюстрировать типичное использование веб хранилища, мы создали простейший пример и назвали его <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">Web Storage Demo</a>. На <a href="https://mdn.github.io/dom-examples/web-storage/">лендинге</a> нашего примера вы найдете элементы управления для изменения фонового цвета, шрифта и изображения. Когда вы выбираете разные опции, страница мнгновенно меняется. В дополнение, ваш выбор сохраняется в локальном хранилище, чтобы, если вы покинете страницу и потом загрузите ее снова, ваши настройки восстановились. </p>
+
+<p>Также, мы сделали <a href="http://mdn.github.io/dom-examples/web-storage/event.html">страницу вывода событий</a>, которая выводит информацию о хранилище, каждый раз когда срабатывает событие {{domxref("StorageEvent")}}. Загрузите эту страницу в другой вкладке браузера, затем вернитесь на лендинг и поменяйте значения цвета, шрифта или изображения и понаблюдайте, как меняется выводимая иформация.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Функция</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>localStorage</td>
+   <td>4</td>
+   <td>3.5</td>
+   <td>8</td>
+   <td>10.50</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td>sessionStorage</td>
+   <td>5</td>
+   <td>2</td>
+   <td>8</td>
+   <td>10.50</td>
+   <td>4</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Функция</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.1</td>
+   <td>{{ CompatUnknown }}</td>
+   <td>8</td>
+   <td>11</td>
+   <td>iOS 3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>У каждого браузера свои объемы localStorage и sessionStorage. Здесь об <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/" title="http://dev-test.nemikor.com/web-storage/support-test/">ограничениях размеров хранилищ для разных браузеров</a>.</p>
+
+<div class="note">
+<p><strong>Замечание: </strong> Начиная с версии iOS 5.1, Safari Mobile хранит данные localStorage в cache директории, которая время от времени подчищается системой, в основном когда кончается место.</p>
+</div>
+
+<h2 id="Приватный_режимИнкогнито">Приватный режим/Инкогнито</h2>
+
+<p>Многие браузеры в наши дни поддерживают опции приватности, названные "Инкогнито" или "Приватный просмотр" и т.п., что позволяет быть уверенными, что следов приватной сессии не остается после закрытия браузера. Это фундаментальная несовместимость с Веб хранилищем по очевидным причинам. Таким образом, производители браузеров экспериментируют с различными сценариями, как справиться с этой несовместимостью.</p>
+
+<p>Многие браузеры выбрали стратегию, когда API хранилища доступно и кажется полностью функциональным, с одним большим отличием - все данные хранилища стираются после закрытия браузера. Для этих браузеров есть ещё другие интерпретации того, что следует делать с хранимыми данными (от обычного режима браузера). Следует ли им быть доступными в приватном режиме? Затем, есть несколько браузеров, особенно Safari, которые выбрали решение, в котором хранилище доступно, но пустое и имеет квоту 0 байт, фактически, делая невозможной запись туда данных.</p>
+
+<p>Разработчики должны быть осведомлены об этих различных реализациях и принимать их во внимание при разработке веб-сайтов, зависящих от API Веб хранилища. Для получения более подробной информации, пожалуйста, посмотрите на <a href="https://blog.whatwg.org/tag/localstorage">этот пост блога WHATWG</a>, специонально посвященный этой теме.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Использование Web Storage API</a></li>
+ <li><a href="https://medium.com/@ramsunvtech/onfocus-html5-storage-apis-b45d92aa424b">HTML5 Storage API By Venkatraman</a></li>
+</ul>
+
+<p> </p>
+
+<p> </p>

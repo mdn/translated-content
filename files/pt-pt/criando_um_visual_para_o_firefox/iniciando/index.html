@@ -1,0 +1,83 @@
+---
+title: Iniciando
+slug: Criando_um_visual_para_o_Firefox/Iniciando
+translation_of: Archive/Mozilla/Creating_a_sking_for_Firefox_Getting_Started
+---
+<p> </p>
+<h3 id="Instala.C3.A7.C3.A3o" name="Instala.C3.A7.C3.A3o">Instalação</h3>
+<p>Baixe a mais recente versão do Firefox e instale. Certifique-se de instalar a extensão DOM Inspector incluída.</p>
+<h4 id="Extrair_tema" name="Extrair_tema">Extrair tema</h4>
+<p>Você pode iniciar com qualquer tema projetado para o Firefox, porém, para uma melhor compreensão estaremos editando o Winstripe (tema padrão do Firefox). Ele está situado no arquivo <code>classic.jar</code> e é encontrado no diretório da instalação do Firefox. Um arquivo .jar é na realidade um zip renomeado, abra-o em um programa zip do mesmo modo que abriria um arquivo comum. Entretanto, se a aplicação zip não interpretar com um formato válido, renomeie o arquivo para <code>classic.zip</code> e continue a extração.</p>
+<h5 id="Localiza.C3.A7.C3.B5es_do_classic.jar" name="Localiza.C3.A7.C3.B5es_do_classic.jar">Localizações do classic.jar</h5>
+<p><strong>Linux:</strong> /usr/lib/MozillaFirefox/chrome/classic.jar</p>
+<p><strong>Windows:</strong> \Arquivos de Programas\Mozilla Firefox\chrome\classic.jar</p>
+<p><strong>Para Mac OS X:</strong></p>
+<ul> <li>Vá até sua pasta aplicativos</li> <li>Dê um clique pressionando o botão Control no ícone do aplicativo (íncone do Firefox), escolha Exibir Conteúdo da Biblioteca.</li> <li>Siga até contents/MacOS/Chrome/classic.jar</li>
+</ul>
+<p>Copie <code>classic.jar</code> para outra pasta mais facilmente acessível -- é recomendado usar <code>Classico</code> -- extraia o conteúdo nesta pasta, garantindo a permanência da mesma estrutura de diretório.</p>
+<p>Nota: Você pode alterar o arquivo <code>.jar</code> para <code>.jar.zip</code> então extrair ela para colocar dentro de uma pasta!</p>
+<h4 id="Diret.C3.B3rios" name="Diret.C3.B3rios">Diretórios</h4>
+<p>Dentro do <code>classic.jar</code> há um diretório <code>skin</code>, e inclui mais dois arquivos <code>preview.png</code> e <code>icon.png</code>.</p>
+<dl> <dt><code>skin</code> </dt> <dd><code>skin</code> um simples recipiente para o diretório <code>classic</code> que mantem todo o material importante. </dd> <dt><code>classic</code> </dt> <dd><code>classic</code> contem os seguintes diretórios. </dd> <dt><code>browser</code> </dt> <dd><code>browser</code> contem todos os ícones da barra de ferramentas, como também os ícones para a barra de navegação, sistema de feeds, segurança de navegação. organizador de favoritos, janela de opções e pesquisa. </dd> <dt><code>communicator</code> </dt> <dd>Não é obrigatório e normalmente é esquecido. </dd> <dt><code>global</code> </dt> <dd><code>global</code> contem quase todos os mais importante arquivos CSS que definem a aparência do navegador. Este é o diretório o mais crítico em um tema. </dd> <dt><code>help</code> </dt> <dd><code>help</code> contem todos os arquivos para aplicar o tema no diálogo da janela de ajuda. </dd> <dt><code>mozapps</code> </dt> <dd><code>mozapps</code> contem todos os estilos e ícones para certos mecanismos do navegador, como o gerenciador de complementos e o assistente de atualização. </dd>
+</dl>
+<h4 id="Instalar_seu_novo_tema" name="Instalar_seu_novo_tema">Instalar seu novo tema</h4>
+<p>Antes que você possa ver as alterações feitas no tema do Firefox (desde que a última edição seja de difícil ajuste) você deve primeiramente aprender como re-compactar o tema clássico para fazê-lo instalável. Para este exemplo chamaremos seu tema de "Meu_Tema", embora possa ser substituído por qualquer outro nome.</p>
+<h5 id="Copiando_os_arquivos_necess.C3.A1rios" name="Copiando_os_arquivos_necess.C3.A1rios">Copiando os arquivos necessários</h5>
+<p>O primeiro passo é mover todos os arquivos na correta estrutura do diretório. Então crie um novo diretório chamado <code>Meu_Tema</code>. Dentro deste diretório ponha como diretórios principais: <code>browser</code>, <code>communicator</code>, <code>global</code>, <code>help</code>, <code>mozapps</code> e também os arquivos <code>icon.png</code>, <code>preview.png</code> (sim, isto significa que a estrutura deste diretório e o novo <code>classico.jar</code> será ligeiramente diferente do classic).</p>
+<h5 id="Criando_os_arquivos_de_instala.C3.A7.C3.A3o" name="Criando_os_arquivos_de_instala.C3.A7.C3.A3o">Criando os arquivos de instalação</h5>
+<h6 id="contents.rdf" name="contents.rdf">contents.rdf</h6>
+<p>Faça uma cópia do <a href="/pt/Criando_um_visual_para_o_Firefox/contents.rdf" title="pt/Criando_um_visual_para_o_Firefox/contents.rdf">contents.rdf</a> ponha em <code>\Meu_Tema</code> e abra em seu editor de texto. Este arquivo é um pequeno Banco de dados XML Database que é utilizado para descrever o visual.</p>
+<p>No código pesquise por todos resultados de "Meu_Tema" e substitua com o nome escolhido para o seu tema.</p>
+<p>A seção packages lista que componentes você está alterando. Se nós possuirmos visuais para o Chatzilla, necessitamos adicionar outra linha semelhante e alterar a parte final para Chatzilla. Porém, esta lista inclui tudo que alteramos, por isto substitua apenas a parte do texto em azul para manter o nome/versão que você usou nas seções antes desta.</p>
+<pre class="eval">&lt;RDF:li resource="urn:mozilla:skin:<span style="color: #00D; font-weight: bold;">Meu_Tema</span>:communicator"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<span style="color: #00D; font-weight: bold;">Meu_Tema</span>:editor"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<span style="color: #00D; font-weight: bold;">Meu_Tema</span>:global"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<span style="color: #00D; font-weight: bold;">Meu_Tema</span>:messenger"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<span style="color: #00D; font-weight: bold;">Meu_Tema</span>:navigator"/&gt;
+</pre>
+<p>Salve o arquivo e saia do editor de texto.</p>
+<h6 id="install.rdf" name="install.rdf">install.rdf</h6>
+<p>Faça uma cópia <a href="/pt/Criando_um_visual_para_o_Firefox/install.rdf" title="pt/Criando_um_visual_para_o_Firefox/install.rdf">install.rdf</a> e ponha em seu diretório <code>Meu_Tema</code>, depois abra em seu editor de texto. Este arquivo é um pequeno banco de dados XML que descreve a instalação do visual.</p>
+<pre>  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{UUID_do_Tema}&lt;/em:id&gt;
+    &lt;em:version&gt;Versao_do_Tema&lt;/em:version&gt;
+</pre>
+<p>A primeira seção requer que você estabeleça um <a href="/pt/Criando_um_visual_para_o_Firefox/UUID" title="pt/Criando_um_visual_para_o_Firefox/UUID">UUID</a> para o seu tema e que você dê ao seu tema um número da versão. Uma vez feito isto, insira a informação como indicado acima, e continue abaixo.</p>
+<p>Você deverá ter também as atualizações entre máxima e mínima compatíveis para a aplicação (Firefox) na seguinte seção:</p>
+<pre>    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;!-- UUID do Firefox --&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;Versao_Minima_do_Firefox&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;Versao_Maxima_do_Firefox&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+</pre>
+<p>Estabelecer versões compatíveis no limite entre mínima e máxima previne conflitos em alguma versão do Firefox para qual seu tema não foi desenvolvido ou não testado.</p>
+<h4 id="Arquivos_CSS" name="Arquivos_CSS">Arquivos CSS</h4>
+<p>Os arquivos CSS nesses diretórios dizem ao browser como deverá mostrar os botões e outros controles, onde posicionar as imagens, bordas e espaçamentos, e assim por diante.</p>
+<p>Nesse exemplo, vamos mudar os botões de padrão do browser.</p>
+<p>Vá para a pasta <code>global</code> e abra o arquivo <code>button.css</code> em seu editor de texto favorito. Desça até <code>button {</code>. Esta seção define o botão normal em sua posição estática (não está com o ponteiro sobre ele, e não é selecionado).</p>
+<p>Mude o <code>background-color:</code> para <code>DarkBlue</code> e o <code>color:</code> para <code>White</code>, e salve o arquivo.</p>
+<p><em>more after I get done with some tests</em></p>
+<h4 id="Recompactar_o_JAR" name="Recompactar_o_JAR">Recompactar o JAR</h4>
+<p>Agora tudo que você precisa fazer é compactar novamente os arquivos com a seguinte estrutura de diretório, usando seu programa favorito de compactação de arquivos:</p>
+<p>/browser/*<br>
+/communicator/*<br>
+/global/*<br>
+/help/*<br>
+/mozapps/*<br>
+/contents.rdf<br>
+/install.rdf<br>
+/icon.png<br>
+/preview.png<br>
+ </p>
+<p>Certifique-se de apenas compactar os arquivos de dentro do diretório que você criou <code>Meu_Tema</code>. Caso o contrário seu tema não será instalado corretamente.</p>
+<h4 id="Triggering_the_install_from_the_web" name="Triggering_the_install_from_the_web">Triggering the install from the web</h4>
+<p>To install the theme's JAR file directly from the web, you need to run some JavaScript.</p>
+<p>&lt;a href='javascript:InstallTrigger.installChrome(InstallTrigger.SKIN, <br>
+"<span style="color: #00D; font-weight: bold;">myskin.jar</span>", "<span style="color: #00D; font-weight: bold;">My Skin Theme</span>")'&gt;install My Skin&lt;/a&gt;</p>
+<p>If you have JAR files on your hard drive and would like to install them, then download/use <a class="external" href="http://www.eightlines.com/neil/mozskin/installjar.html">this form</a>.</p>
+<p>You can also just open the themes window in Mozilla and drag and drop your .jar file onto it.</p>
+<p>Now to change your folder(s) back into a .jar Well it's easy! What you do is put your folder(s) into a .zip file and then when it's compressed make the .zip into a .jar</p>
+<p>{{ languages( { "en": "en/Creating_a_Skin_for_Firefox/Getting_Started", "es": "es/Creando_un_skin_para_Firefox/Como_empezar", "fr": "fr/Cr\u00e9er_un_th\u00e8me_pour_Firefox/Premiers_pas" } ) }}</p>

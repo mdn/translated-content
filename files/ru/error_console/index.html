@@ -1,0 +1,60 @@
+---
+title: Консоль ошибок
+slug: Error_Console
+translation_of: Archive/Mozilla/Error_console
+---
+<div class="warning">
+<p>Консоль ошибок является устаревшей в Firefox, и на данный момент доступна только при установке значения настройки <code>devtools.errorconsole.enabled</code> в <code>true</code>. Используйте вместо неё <a href="/ru/docs/Tools/Web_Console" title="Веб-консоль">веб-консоль</a> для веб-страниц или <a href="/ru/docs/Tools/Консоль_браузера" title="Консоль браузера">консоль браузера</a> для содержимого вкладки браузера.</p>
+</div>
+
+<p>Консоль ошибок — инструмент, доступный в большинстве приложений на базе Mozilla, который используется для информирования об ошибках в слое приложения и на веб-страницах, открытых пользователем. Сообщает об ошибках и предупреждениях <a href="/ru/docs/JavaScript" title="JavaScript">JavaScript</a>, <a href="/ru/docs/CSS" title="Cascading Style Sheets">CSS</a> и сообщениях из кода приложения. В Firefox консоль ошибок может быть открыта из меню «Инструменты» или сочетанием клавиш <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd>.</p>
+
+<p>Для получения информации о том, какие исключения JavaScript выводятся в консоль ошибок, и как сделать все исключения регистрируемыми, прочтите статью <a href="/ru/docs/Exception_logging_in_JavaScript" title="Регистрация исключений в JavaScript">Регистрация исключений в JavaScript</a>. См. статью <a href="/ru/docs/Setting_up_extension_development_environment#Development_preferences" title="Настройка среды для разработки расширений">Настройка среды для разработки расширений</a>, чтобы узнать, какие настройки вы должны установить, если хотите видеть ошибки из Firefox и расширений в консоли ошибок.</p>
+
+<p>До версии <a href="/en-US/docs/Gecko" title="Gecko">Gecko</a> 1.8.1 (<a href="/en-US/docs/Firefox_2_for_developers" title="Firefox_2_for_developers">Firefox 2</a>) она называлась «консоль JavaScript» (см. {{Bug(265871)}}).</p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 class="Documentation" id="Types_of_errors" name="Types_of_errors">Типы ошибок</h2>
+
+    <dl>
+     <dt>Ошибка</dt>
+     <dd><small>Обычно это синтаксическая ошибка, препятствующая компиляции программы.</small></dd>
+     <dt>Предупреждение</dt>
+     <dd><small>Обычно позволяет программе скомпилироваться, но предупреждает о плохом коде и указывает на недостатки проектирования.</small></dd>
+     <dt>Сообщение</dt>
+     <dd><small>Очень похоже на предупреждение, используется гораздо реже.</small></dd>
+    </dl>
+
+    <h2 class="Documentation" id="Manipulating_data_displayed_in_Error_Console" name="Manipulating_data_displayed_in_Error_Console"><span id="result_box" lang="ru"><span class="hps">Манипулирование</span> <span class="hps">данными, отображаемыми</span> <span class="hps">в</span> <span class="hps">консоли</span> <span class="hps">ошибок</span></span></h2>
+
+    <p>Information displayed in Error Console can be accessed and manipulated through the <a href="/en-US/docs/Console_service" title="Console_service">Console service</a>.</p>
+
+    <p>Extensions can write to the Error Console from JavaScript using <code><a href="/en-US/docs/Components.utils.reportError" title="Components.utils.reportError">Components.utils.reportError</a></code>, or if you're fine with logging to the OS-provided console, <code><a href="/en-US/docs/DOM/window.dump" title="DOM/window.dump">dump()</a></code>.</p>
+
+    <p>To bring up Error Console from within a browser or mail window, use the function <code>toJavaScriptConsole()</code>.</p>
+   </td>
+   <td>
+    <h2 class="Tools" id="Alternatives" name="Alternatives">Альтернативы</h2>
+
+    <dl>
+     <dt><a class="link-https" href="https://addons.mozilla.org/firefox/addon/1815">Console<sup>2</sup></a></dt>
+     <dd><small>Это расширение предлагает замену консоли ошибок, исправляя множество ошибок и предлагая давно ожидаемые улучшения.</small></dd>
+     <dt><a class="link-https" href="https://addons.mozilla.org/firefox/addon/1843">Firebug</a></dt>
+     <dd><small>Это расширение Firefox также интегрирует в консоль ошибок <a href="http://www.getfirebug.com/errors.html">различные усовершенствования</a>.</small></dd>
+    </dl>
+
+    <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">Связанные темы</h2>
+
+    <ul>
+     <li><a href="/ru/docs/JavaScript" title="JavaScript">JavaScript</a>, <a href="/ru/docs/CSS" title="CSS">CSS</a></li>
+     <li><a href="/ru/docs/Web/Guide" title="Web_Development">Web Development</a></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

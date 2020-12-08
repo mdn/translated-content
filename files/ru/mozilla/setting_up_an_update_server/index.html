@@ -1,0 +1,91 @@
+---
+title: Setting up an update server
+slug: Mozilla/Setting_up_an_update_server
+tags:
+  - корпорация
+  - сервер обновлений
+translation_of: Mozilla/Setting_up_an_update_server
+---
+<h3 id="Creating_a_simple_Firefox.2FThunderbird_update_server_with_Apache_and_PHP" name="Creating_a_simple_Firefox.2FThunderbird_update_server_with_Apache_and_PHP">Создание простейшего сервера обновления Firefox/Thunderbird при помощи Apache и PHP</h3>
+
+<p>Цель этого документа заключается в предоставлении основных инструкций по настройке собственного сервера обновлений.</p>
+
+<p>Firefox обеспечивает службы обновления с помощью веб-службы REST - которая содержится в URL при условии наличия XML-файла в этом URL, описывающего доступное обновление.</p>
+
+<p>Во-первых, давайте поговорим о формате URL. Вот URL используемый для обновления Firefox с версии 3.5.2 до Firefox версии 3.5.3:</p>
+
+<dl>
+ <dt>Windows</dt>
+ <dd><code><a class="link-https" href="https://aus2.mozilla.org/update/3/Firefox/3.5.2/20090729225027/WINNT_x86-msvc/en-US/release/Windows_NT%206.0/default/default/update.xml" rel="freelink">https://aus2.mozilla.org/update/3/Fi...ult/update.xml</a></code></dd>
+ <dt>Mac OS X</dt>
+ <dd><code><a class="link-https" href="https://aus2.mozilla.org/update/3/Firefox/3.5.2/20090729211433/Darwin_Universal-gcc3/en-US/release/Darwin%208.11.1/default/default/update.xml" rel="freelink">https://aus2.mozilla.org/update/3/Fi...ult/update.xml</a></code></dd>
+</dl>
+
+<p>Формат URL выглядит так:</p>
+
+<pre>https://aus2.mozilla.org/update/3/%PRODUCT%/%VERSION%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml
+</pre>
+
+<p>Этот URL-адрес может отображаться в браузере через <code>about:config</code> как <code>app.update.url</code>, но чтобы изменить его, вы должны создать новую строку под названием <code>app.update.url.override</code> которая содержит ваше новое значение.</p>
+
+<p>В нашем примере, мы должны поместить <code>update.xml</code> на сервере в полном пути, указанном в URL обновлений. Таким образом, в корне вашего веб-сервера, нужно создать путь:</p>
+
+<pre>mkdir -p update.dir/3/Firefox/3.5.2/20090729225027/WINNT_x86-msvc/en-US/release/Windows_NT\ 6.0/default/default
+</pre>
+
+<p>Взять файл <code>update.xml</code> из <a class="link-https" href="https://aus2.mozilla.org/update/3/Firefox/3.5.2/20090729225027/WINNT_x86-msvc/en-US/release/Windows_NT%206.0/default/default/update.xml">aus2.mozilla.org</a> и поместить его в самой последней папке <code>default</code>:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;updates&gt;
+    &lt;update type="minor" version="3.5.3" extensionVersion="3.5.3" buildID="20090824101458" detailsURL="http://www.mozilla.com/en-US/firefox/3.5.3/releasenotes/"&gt;
+        &lt;patch type="complete" URL="http://download.mozilla.org/?product=firefox-3.5.3-complete&amp;os=win&amp;lang=en-US" hashFunction="SHA512" hashValue="f8abbaea98bd453b651c24025dbb8cea5908e532ca64ad7150e88778ccb77c0325341c0fecbec37f31f31cdf7e13955c28140725282d2ce7c4a37c89a25319a1" size="10728423"/&gt;
+        &lt;patch type="partial" URL="http://download.mozilla.org/?product=firefox-3.5.3-partial-3.5.2&amp;os=win&amp;lang=en-US" hashFunction="SHA512" hashValue="20b133f1bd2025360bda8ef0c53132a5806dbd0606e0fe7c6d1291d1392532cc960262f87b0c7d4fbe8f9bc9fba64ed28ecd89b664c17f51f98acdd76b26ea6a" size="2531877"/&gt;
+    &lt;/update&gt;
+&lt;/updates&gt;
+</pre>
+
+<p>Если вы хотите, чтобы эти сборки были загружены с вашего сервера вместо download.mozilla.org, скопируйте их на сервер и отредактируйте файл  <code>update.xml</code> чтобы изменить ссылки URL.</p>
+
+<p>Далее, мы должны настроить сервер Apache, так чтобы можно было создать файл PHP для обработки веб-службы.</p>
+
+<p>Сначала в  <code>httpd.conf</code>, убедитесь что параметр <code>AllowOverride</code> установлен в значение <code>FileInfo</code> для корневого каталога. Затем добавьте следующие строки в ваш файл <code>.htaccess</code> (вам, возможно, придется создать его) в корневом каталоге:</p>
+
+<pre>&lt;FILES update&gt;
+ForceType application/x-httpd-php
+&lt;/FILES&gt;
+</pre>
+
+<p>Это укажет веб-серверу обработать <code>update</code> в виде файла PHP. Теперь создайте файл PHP с именем <code>update</code> в корневом каталоге:</p>
+
+<pre>&lt;?php
+header("Content-type: text/xml");
+$path = preg_replace('/^\/update/', 'update.dir', urldecode($_SERVER["REQUEST_URI"]));
+echo (file_exists($path)) ? file_get_contents($path) : '&lt;?xml version="1.0"?&gt;&lt;updates&gt;&lt;/updates&gt;';
+?&gt;
+</pre>
+
+<p>Теперь, если вы идете по следующему адресу, вы должны увидеть содержимое XML.</p>
+
+<pre>http://localhost/update/3/Firefox/3.5.2/20090729225027/WINNT_x86-msvc/en-US/release/Windows_NT%206.0/default/default/update.xml
+</pre>
+
+<p>Наконец, установите параметр <code>app.update.url.override</code> в следующее значение URL через <code>about:config</code> (или <a href="/en/MCD/Getting_Started">MCD</a>), а затем выберите Проверка обновлений в меню Справка. Вы должны получить обновление, если оно имеется.</p>
+
+<pre>http://localhost/update/3/%PRODUCT%/%VERSION%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml
+</pre>
+
+<h3 id="Security_Considerations" name="Security_Considerations">Соображения безопасности</h3>
+
+<p>Вы можете заметить, что  URL обновления Firefox по умолчанию использует HTTPS выше и обслуживается поверх SSL. SSL действительно помещает дополнительную нагрузку на сервер, и вы можете захотеть использовать обычный HTTP - нет!</p>
+
+<p>Каждый пользователь будет пинговать сервер обновлений регулярно, есть ли обновление или нет (один раз в день по умолчанию). Любой пользователь, который подключается снаружи защищенной сети - в частности, из общественной точки доступа WiFi - потенциально может подключиться и подложить вредоносное обновление. SSL защищает от этой атаки. Файл <code>update.xml</code> маленькие, не увеличивают нагрузку SSL.</p>
+
+<p>Большие обновления могут быть безопасно обслужены с незащищенного сервера, потому что файлы обновления содержат хэш, который клиент проверять. Хэшу можно доверять, только если update.xml доставляется надежно.</p>
+
+<h3 id="See_Also" name="See_Also">Смотрите также</h3>
+
+<ul>
+ <li><a href="/en/XULRunner/Application_Update" title="en/XULRunner/Application_Update">XULRunner:Application Update</a></li>
+</ul>
+
+<p>{{ languages( { "ja": "ja/Setting_up_an_update_server" } ) }}</p>

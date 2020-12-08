@@ -1,0 +1,135 @@
+---
+title: WebBluetooth
+slug: Archive/B2G_OS/Bluetooth_API
+translation_of: Archive/B2G_OS/Bluetooth_API
+---
+<p>{{ non-standard_header }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="Sumário">Sumário</h2>
+<p>A API de Bluetooth Web permite descobrir, parear e conectar com dispositivos Bluetooth. Como é uma API completamente experimental e não padronizada, por enquanto está disponível apenas para aplicativos certificados. Porém, pela importância de ter uma API como essa disponível para conteúdos Web comuns, isso será discutido como parte do <a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a>.</p>
+<div class="note">
+ <p><strong>Nota:</strong> Desenvolvedores de apps que querem enviar dados para um dispositivo Bluetooth pode utilizar <a href="/en-US/docs/WebAPI/Web_Activities#Firefox_OS_activities">the share activity</a>. Essa atividade permite imagens, audio, vídeo e conteúdos vCard apenas.</p>
+</div>
+<h2 id="API_Overview">API Overview</h2>
+<p>O ponto de entrada principal para API é a propriedade {{domxref("window.navigator.mozBluetooth","navigator.mozBluetooth")}}, que retorna um objeto {{domxref("BluetoothManager")}}.</p>
+<h3 id="Interfaces">Interfaces</h3>
+<ul>
+ <li>{{domxref("BluetoothManager")}}</li>
+ <li>{{domxref("BluetoothAdapter")}}</li>
+ <li>{{domxref("BluetoothDevice")}}</li>
+ <li>{{domxref("BluetoothDeviceEvent")}}</li>
+ <li>{{domxref("BluetoothStatusChangedEvent")}}</li>
+</ul>
+<h3 id="Mensagens_do_Sistema">Mensagens do Sistema</h3>
+<p>Porque algumas ações de dispositivos remotos pode precisar acordar um aplicativo para lidar com eles, tem várias mensagens do sistema relacionadas ao Bluetooth:</p>
+<ul>
+ <li><code>bluetooth-dialer-command</code></li>
+ <li><code>bluetooth-cancel</code></li>
+ <li><code>bluetooth-hid-status-changed</code></li>
+ <li><code>bluetooth-pairing-request</code></li>
+ <li><code>bluetooth-opp-transfer-complete</code></li>
+ <li><code>bluetooth-opp-update-progress</code></li>
+ <li><code>bluetooth-opp-receiving-file-confirmation</code></li>
+ <li><code>bluetooth-opp-transfer-start</code></li>
+</ul>
+<div class="note">
+ <p><strong>Nota: </strong> Um aplicativo pode reagir a essas mensagens requerendo eles no arquivo manifesto do aplicativo e utilizando {{domxref("window.navigator.mozSetMessageHandler","navigator.mozSetMessageHandler()")}} para definir o manuseio da mensagem.</p>
+</div>
+<h3 id="Permissões">Permissões</h3>
+<p>Aplicativos certificados que querem utilizar API Web Bluetooth devem requerer uma permissão relevante dentro do manifesto do aplicativo.</p>
+<pre class="brush: json">"permission": {
+  "bluetooth":{}
+}</pre>
+<p>Também é recomendado perguntar para permissão <code>settings</code> porque agora habilitando e desabilitando Bluetooth tem que estar pronto mudando o valor do tópico mozSettings "bluetooth.enabled".</p>
+<h2 id="Pareando_dispositivos_Bluetooth">Pareando dispositivos Bluetooth</h2>
+<p>O passo mais importante quando lidar com um ambiente Bluetooth é parear dispositivos em ordem de construir micro-rede Bluetooth para dispositivos funcionando com todos de uma maneira segura. Parear é um procedimento que faz com que dois dispositivos Bluetooth tenham a mesma "chave", que é chamada "Conexão de Chave". Depois que ambos dispositivos estiverem pareados um com o outro, se torna possível a fazer conexões mais avançadas nas ações dos perfis em ordem e acessar recursos específicos dos dispositivos.</p>
+<p>O procedimento de pareamento depende nas capacidades IO de cada dispositivo.</p>
+<p>Cada vez que um dispositivo remoto quer parear com um dispositivo Firefox OS, uma mensagem do sistema nomeada <code>bluetooth-pairing-request</code> é enviada. Para interceptar essa mensagem do sistema, o aplicativo responsável a lidar com o pareamento deve registrar a mensagem dentro do manifesto do aplicativo:</p>
+<pre class="brush: json">"messages": [
+  { "bluetooth-pairing-request": "/pairing.html" }
+]</pre>
+<p>Também é necessário registrar um manipulador de mensagem:</p>
+<pre class="brush: js">navigator.mozSetMessageHandler("bluetooth-pairing-request", function (message) {
+  // Get the information about the pairing request
+  var request = message.detail;
+
+  // Log the name of the remote device that wants to be paired with your device
+  console.log(request.name);
+});</pre>
+<p>A mensagem da propriedade <code>detail</code> contém toda as informações necessárias para iniciar o pareamento os dois dispositivos:</p>
+<ul>
+ <li><code>address</code>: o endereço do dispositivo remoto na micro-rede Bluetooth (veja: {{domxref("BluetoothDevice.address")}})</li>
+ <li><code>name   </code>: o nome do dispositivo remoto pareado (veja: {{domxref("BluetoothDevice.name")}})</li>
+ <li><code>icon   </code>: Um nome icônico para utilizar (veja: {{domxref("BluetoothDevice.icon")}})</li>
+ <li><code>passkey</code>: Uma chave de acesso que o usuário tem que digitar se o dispositivo remoto é um dispositivo de entrada</li>
+ <li><code>method </code>: O método de pareamento para usar, um desses <code>confirmation</code>, <code>pincode</code> ou <code>passkey</code>.</li>
+</ul>
+<p>Finalizando a requisição de pareamento depende no método fornecido.</p>
+<dl>
+ <dt>
+  <code>confirmation</code></dt>
+ <dd>
+  Ambos dispositivos devem mostrar um número de 6 dígitos em suas telas. Os usuários devem confirmar que o número mostrado em ambos os dispositivos é o mesmo.</dd>
+ <dt>
+  <code>pincode</code></dt>
+ <dd>
+  Os dispositivos remotos não tem uma tela (ex: fones de ouvido), então o usuário será requisitado a entrar o código PIN no outro dispositivo.</dd>
+ <dt>
+  <code>passkey</code></dt>
+ <dd>
+  Se o dispositivo remoto é um dispositivo de entrada (ex: teclado), um número de 6 dígitos será mostrado e os usuários serão requisitados a entrar a chave utilizando o dispositivo remoto.</dd>
+</dl>
+<p>Então uma aplicação gerenciando pareamento deve manusear três diferentes métodos de pareamento. Para enviar a resposta para o usuário para o dispositivo remoto, a API Bluetooth fornece os seguintes métodos: {{domxref("BluetoothAdapter.setPairingConfirmation()")}}, {{domxref("BluetoothAdapter.setPinCode()")}}, and {{domxref("BluetoothAdapter.setPasskey()")}}</p>
+<pre class="brush: js">var adapter;
+
+// Retreving the local device adapter is asynchronous, handle this carefully.
+navigator.mozBluetooth.getDefaultAdapter().success = function(evt) {
+  adapter = evt.target.result;
+}
+
+function onPairing(message) {
+  var reponse,
+      request = message.detail,
+      passkey = request.passkey;
+
+  switch (request.method) {
+    case 'confirmation':
+      // Make sure the passkey is a string
+      passkey = String(passkey);
+      // Make sure the string is 6 characters long (pad with 0 if necessary)
+      passkey = (new Array((6 - passkey.length) + 1)).join('0') + passkey;
+      // Let's prompt the user
+      response = confirm('Is that same number visible on the remote device screen: ' + passkey)
+      // Let's send the confirmation
+      adapter.setPairingConfirmation(request.address, response);
+      break;
+
+    case 'pincode':
+      // Let's prompt the user
+      response = prompt('Thanks to provide the remote device PIN code');
+      // Let's send the pin code
+      adapter.setPinCode(request.address, response);
+      break;
+
+    case 'passkey':
+      // Let's prompt the user
+      response = alert('Thanks to type the following code on the remote device');
+      // Let's send back the passkey
+      adapter.setPasskey(request.address, response);
+      break;
+  }
+}
+
+navigator.mozSetMessageHandler("bluetooth-pairing-request", onPairing);
+</pre>
+<p>Uma vez a operação de pareamento está feita por ambos os lados, a aplicação é notificada do sucesso ou falha da operação através do evento {{event("pairedstatuschanged")}} onde o callback handler recebe um {{domxref("BluetoothStatusChangedEvent")}}.</p>
+<pre class="brush: js">adapter.onpairedstatuschanged = function (evt) {
+  if (evt.status) {
+    alert("The pairing operation has been successfully completed");
+  } else {
+    alert("The pairing operation has failed. Please, try again");
+  }
+}</pre>
+<h2 id="Especificações">Especificações</h2>
+<p>Sem ser parte de qualquer especificação ainda. Deve ser discutido como parte do <a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a>.</p>
+<p> </p>

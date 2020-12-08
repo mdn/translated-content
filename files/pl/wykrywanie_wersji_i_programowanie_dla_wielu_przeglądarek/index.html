@@ -1,0 +1,583 @@
+---
+title: Wykrywanie wersji i programowanie dla wielu przeglądarek
+slug: Wykrywanie_wersji_i_programowanie_dla_wielu_przeglądarek
+tags:
+  - Programowanie_WWW
+  - Programowanie_dla_wielu_przeglądarek
+  - Wszystkie_kategorie
+translation_of: Archive/Web/Browser_Detection_and_Cross_Browser_Support
+---
+<p>
+Niewłaściwie stosowanie wykrywania wersji może uczynić konserwację serwisu prawdziwym koszmarem. Przemyślenie strategii w którym momencie i w jaki sposób wykrywać wersję i rodzaj przeglądarki użytkownika jest kluczowym czynnikiem podczas składania łatwych w zarządzaniu i przenośnych serwisów internetowych. Niniejszy artykuł jest przeglądem różnych sposobów wykrywania wersji i ich użyteczności w określonych przypadkach.
+</p>
+<h3 id="Szybka_wskaz.C3.B3wka" name="Szybka_wskaz.C3.B3wka"> Szybka wskazówka </h3>
+<p>Do sprawdzenia, czy odwiedzający używa przeglądarki opartej na silniku Gecko wystarczy zwykły test:
+</p><p><code>navigator.product == 'Gecko'</code>
+</p><p>Można również poszukać napisu <code>'Gecko/'</code> w zmiennej <code>navigator.userAgent</code>. Miej jednak na uwadze fakt, że proste testy jak te mogą nie zadziałać prawidłowo w przypadku niektórych przeglądarek, jak np. Safari, która umieszcza ciąg <code>(like Gecko)</code> w zmiennej User-Agent.
+</p>
+<h3 id="Wst.C4.99p" name="Wst.C4.99p"> Wstęp </h3>
+<p>W <i>idealnym</i> świecie moglibyśmy swobodnie używać HTML, XML, CSS i JavaScript i martwić się tylko o zgodność ze standardami z W3C i ECMA. Niestety nie żyjemy jeszcze w takim świecie. Z powodu błędów, częściowych implementacji standardów i przestarzałych przeglądarek, by odpowiednio dostosować zawartość i skrypty stron, twórcy serwisów muszą wiedzieć jakiej przeglądarki używa odwiedzający.
+</p><p>Chociaż wykrywanie wersji jest prawdopodobnie najpopularniejszym problemem skryptowym z jakim zmierzają się twórcy serwisów, różnorodność sposobów na jego rozwiązanie wydaje się być niezliczona. Jako członek ruchu "Netscape Evangelism" spędziłem prawie rok na analizowaniu istniejącej zawartości WWW i muszę bez wahania przyznać, że większość problemów z kompatybilnością jakich doświadczamy obecnie w sieci związanych jest z niezrozumieniem standardów i złym podejściem do wykrywania wersji.
+</p><p>Niniejszy artykuł stanowi przegląd znanych metod wykrywania wersji przeglądarek i ich zastosowania. Po szczegóły dotyczące silnika Gecko, przejrzyj <a href="pl/Poradnik_zgodno%c5%9bci_z_Gecko">Poradnik zgodności z Gecko</a>.
+</p>
+<h3 id="Gecko" name="Gecko"> Gecko </h3>
+<p>Chociaż wielu twórców stron zna przeglądarki Firefox, Mozilla czy Netscape 6/7, niewielu jest świadoma faktu, że wszystkie one należą do jednej rodziny przeglądarek opartych na <b>Silniku Gecko</b>. Inne przeglądarki korzystające z Gecko to m.in. komercyjny CompuServe 7 i wiele darmowych: <a class="external" href="http://www.gnome.org/projects/epiphany/">Epiphany</a>, <a class="external" href="http://galeon.sourceforge.net/">Galeon</a>, <a class="external" href="http://caminobrowser.org/">Camino</a> i <a class="external" href="http://kmeleon.sourceforge.net/">Kmeleon</a>.
+</p><p>Gecko z założenia miała być zgodna z następującymi standardami: W3C HTML, W3C CSS, W3C XML, W3C DOM i ECMAScript (JavaScript). Silnik posiada również możliwość interpretacji stron zaprojektowanych z myślą o przeglądarkach poprzedniej generacji, takich jak Netscape Navigator 4. Gdzie to możliwe, zachowuje również kompatybilność z Internet Explorerem 5 i 6. W przeciwności do innych przeglądarek, Gecko jest prawdziwie przenośnym narzędziem i generuje identyczne wyniki na wszystkich wspieranych platformach.
+</p><p>By pozostać zgodnym z Gecko wystarczy trzymać się standardów. Niestety żadna z innych przeglądarek nie jest tak zgodna ze standardami jak Gecko, co oznacza że twórcy serwisów sieciowych nadal zmuszeni są zapewniać ich użytkownikom odpowiednie wsparcie. Na szczęście inne przeglądarki, jak Opera 7/8 i w mniejszym stopniu Internet Explorer 5/6 pod Windows i Internet Explorer 5 pod Macintosha, również częściowo wspierają sieciowe standardy. Widoczny jest ruch producentów przeglądarek w stronę pełnego i ścisłego wspierania standardów i jest nadzieja na to, że w przyszłości twórcy stron będą mogli zrezygnować z technik wykrywania wersji, przynajmniej w odniesieniu do funkcji obejmowanych przez standard.
+</p><p>Cały czas zmierzamy się z pytaniem w jaki sposób tworzyć zgodną ze standardami zawartość, nie rezygnując jednocześnie ze wsparcia dla innych implementacji zarówno nowszych, jak i starszych przeglądarek. Wykrywanie wersji jest odpowiedzią na to pytanie.
+</p>
+<h3 id="Szczypta_historii" name="Szczypta_historii"> Szczypta historii </h3>
+<p>By zrozumieć dlaczego wiele popularnych sposobów wykrywania wersji przeglądarki jest nieprawidłowa, musimy przyjrzeć się ich genezie.
+</p><p>W początkowych czasach sieci WWW <a class="external" href="http://www.w3.org/MarkUp/">język HTML</a> był bardzo prosty, nie ustandaryzowany i nie posiadał wsparcia dla skryptów po stronie użytkownika. HTML nie był obejmowany żadnym standardem aż do przedstawienia języka HTML 2.0 pod koniec roku 1995. Wersja ta jednak nie umożliwiała nawet umieszczania w treści strony tabel. Producenci przeglądarek, tacy jak Netscape, czy Microsoft, prześcigali się więc w dodawaniu nowych <i>funkcjonalności</i> do języka HTML interpretowanego przez ich produkty. Celem ich było zwiększenie atrakcyjności przeglądanych stron i zachęcenie twórców stron do korzystania z rozszerzonych funkcji. Jakość wyświetlania najnowszych stron przez przeglądarki zwiększała się praktycznie z dnia na dzień.
+</p><p>Twórcy stron od samego początku musieli zmierzyć się z różnorodnością dostępnych przeglądarek. Niektóre z nich wspierały najnowsze i najważniejsze wersje HTML-a, a niektóre nie. Problem ten rozwiązać można na dwa sposoby. Można tworzyć strony wykorzystując wspólny dla wszystkich przeglądarek zakres implementowanych funkcji, albo skorzystać z metod wykrywania wersji przeglądarki od strony serwera i wysyłać do klientów wersje stron przygotowane specjalnie dla specyficznych możliwości przeglądarki użytkownika. Tak narodziła się technika wykrywania przeglądarki na podstawie ciągu User-Agent.
+</p><p>Ciągi User-Agent przesyłane są przez protokół HTTP dzięki czemu stają się dostępne dla serwerów sieciowych (zobacz dokumenty <a class="external" href="http://tools.ietf.org/html/rfc1945" title="http://tools.ietf.org/html/rfc1945">RFC 1945</a> - Hypertext Transfer Protocol 1.0 i <a class="external" href="http://tools.ietf.org/html/rfc2068" title="http://tools.ietf.org/html/rfc2068">RFC 2068</a> - Hypertext Transfer Protocol 1.1).
+</p><p>Najpopularniejszym w tamtym czasie podejściem było rozróżnienie przeglądarek na podstawie <i>dystrybutora</i> i <i>wersji</i> przeglądarki (które to dane wyciągano z ciągu User-Agent). Chociaż metoda ta uznawana była wówczas za całkiem skuteczną, sprawiała problemy producentom przeglądarek już od samego początku. Oryginalne przeglądarki Netscape używały ciągu User-Agent składającego się z nazwy kodowej i numeru wersji, np. <code>Mozilla/wersja</code>, po których następował komentarz zawierający dodatkowe informacje, np. o używanym systemie operacyjnym. Poczynając od najwcześniejszych technik wykrywania wersji opierały się one na rozpoznawaniu przeglądarek opartych na Netscape posiadających identyfikator o postaci <code>Mozilla/wersja</code>. Pozostali producenci dostosowali się więc do tej konwencji kodowania ciągu User-Agent, określając z jaką wersją przeglądarki Netscape ich produkt jest kompatybilny. To <i>podszywanie się</i> innych przeglądarek pod określone wersje Netscape i brak standardu zapisu dodatkowych informacji w polu komentarza ciągu User-Agent spowodowało, że wykrywanie wersji przeglądarki stało się zadaniem o wiele bardziej skomplikowanym niż powinno być.
+</p><p>Druga wersja Netscape Navigatora wprowadziła możliwość uruchamiania po stronie klienta JavaScriptu. W miarę rozwoju pojawiły się różnice w obsłudze skryptów i obiektów udostępnianych przez przeglądarki. Tym samym webmasterzy przestali być ograniczeni wykrywaniem wersji przeglądarki od strony serwera i mogli zacząć wykorzystywać skrypty uruchamiane w samej przeglądarce. Jedną najwcześniejszych metod wykrywania wersji przeglądarki po stronie klienta było sprawdzanie istnienia określonych <i>obiektów</i>. Przykładem takiego podejścia jest test istnienia obiektu <code>document.images</code>.
+</p><p>Chociaż <i>wykrywanie funkcjonalności za pomocą obiektów</i> było używane w niektórych przypadkach, wielu webmasterów pozostało przy metodzie rozpoznawania za pomocą znacznika <i>dystrybutor/wersja</i> w ciągu User-Agent. Ponieważ ciąg User-Agent dostępny był po stronie klienta jako właściwość obiektu <code>navigator</code> (np. <code>navigator.userAgent</code>), wielu twórców stron użyło tego samego podejścia co przy wykrywaniu wersji przeglądarki po stronie serwera. Dodatkowo dostępne były inne zmienne obiektu <code>navigator</code>, jak <code>appName</code>, czy <code>appVersion</code>, które mogły zostać wykorzystane w podobny sposób jak ciąg <i>dystrybutor/wersja</i>.
+</p><p>Klasyczny przykład wykorzystania techniki wykrywania za pomocą ciągu <i>dystrybutor/wersja</i> można znaleźć w dokumencie <a class="external" href="http://www.mozilla.org/docs/web-developer/sniffer/browser_type.html">Ultimate Browser Sniffer</a>. Skrypt ten, jak i jego warianty można znaleźć dzisiaj na wielu stronach internetowych, gdzie stał się typowym źródłem problemów w wykrywaniu wersji przeglądarki.
+</p><p>W przeglądarkach Netscape Navigator 4 i Internet Explorer 4 wprowadzono możliwość manipulowania treścią strony bezpośrednio po stronie klienta (Dynamiczny HTML/<a href="pl/DHTML">DHTML</a>) i rozpoczęto implementację arkuszy stylów <a href="pl/CSS">CSS</a>. Ta generacja przeglądarek, oprócz wielu wspólnych cech, które nie były dostępne w poprzednich wersjach, zaimplementowały niekompatybilne ze sobą metody manipulowania treścią strony.
+</p><p>Jako że każdy z producentów przeglądarek w inny sposób zaimplementował DHTML, twórcy stron zaczęli używać wykrywania obiektów Javascriptu, by określić dystrybutora i wersję przeglądarki. Obecność obiektu <code>document.layers</code> była wystarczającą informacją, by określić, że używaną przeglądarką jest Netscape Navigator 4, podczas gdy istnienie <code>document.all</code> było charakterystyczne dla przeglądarki Microsoft Internet Explorer 4. Metoda ta opierała się na (błędnym zresztą) założeniu, że istnieją tylko dwie przeglądarki: Netscape Navigator i Microsoft Internet Explorer.
+</p><p>Strategie klasyfikowania przeglądarki na podstawie ciągu <i>dystrybutor/wersja</i>, zakładające że jedynymi istniejącymi przeglądarkami są Netscape Navigator 4 i Internet Explorer 4 okazały się całkowicie nieskuteczne, gdy na rynku pojawiły się alternatywne rozwiązania, jak np. przeglądarki oparte na silniku Gecko. Wiele odnotowywanych w prasie "problemów" z wyświetlaniem treści jakie posiadał silnik Gecko wynikały z błędnych metod wykrywania używanych na serwerach.
+</p><p>Ostatnie już słowo o technice opartej na ciągu <i>dystrybutor/wersja</i>. Zastosowanie na stronach technik opisanych w dokumencie <a class="external" href="http://www.mozilla.org/docs/web-developer/sniffer/browser_type.html">Ultimate Browser Sniffer</a> spowoduje konieczność uwzględnienia różnic dla wielu wersji przeglądarek. Wyobraź sobie zarządzanie stroną, która korzysta z wielu zmiennych udostępnianych przez skrypt <i>Ultimate Browser Sniffer</i>.
+</p>
+<table> <tbody><tr> <td>dystrybutor przeglądarki</td> <td>is_nav, is_ie, is_opera, is_hotjava, is_webtv, is_TVNavigator, is_AOLTV</td> </tr> <tr> <td>numer wersji przeglądarki</td> <td>is_major (liczba całkowita określająca główny numer wersji: 2, 3, 4 ...), is_minor (liczba rzeczywista określająca pełny numer wersji: 2.02, 3.01, 4.04 ...)</td> </tr> <tr> <td>dystrybutor przeglądarki <b>i</b> główny numer wersji</td> <td>is_nav2, is_nav3, is_nav4, is_nav4up, is_nav6, is_nav6up, is_gecko, is_ie3, is_ie4, is_ie4up, is_ie5, is_ie5up, is_ie5_5, is_ie5_5up, is_ie6, is_ie6up, is_hotjava3, is_hotjava3up, is_opera2, is_opera3, is_opera4, is_opera5, is_opera5up</td> </tr> <tr> <td>numer wersji JavaScriptu</td> <td>is_js (liczba rzeczywista określająca pełny numer wersji JavaScriptu: 1, 1.1, 1.2 ...)</td> </tr> <tr> <td>system operacyjny i wersja</td> <td>is_win, is_win16, is_win32, is_win31, is_win95, is_winnt, is_win98, is_winme, is_win2k, is_os2, is_mac, is_mac68k, is_macppc, is_unix, is_sun, is_sun4, is_sun5, is_suni86, is_irix, is_irix5, is_irix6, is_hpux, is_hpux9, is_hpux10, is_aix, is_aix1, is_aix2, is_aix3, is_aix4, is_linux, is_sco, is_unixware, is_mpras, is_reliant, is_dec, is_sinix, is_freebsd, is_bsd, is_vms</td> </tr>
+</tbody></table>
+<p><b>Wykrywanie wersji przeglądarki na podstawie tego poziomu detali jest bardzo trudne do zaimplementowania i utrzymywania. Narusza również podstawowe zasady publikacji w sieci!</b> Gorąco zachęcam wszystkich do unikania tych metod.
+</p>
+<h3 id="Problemy_wynikaj.C4.85ce_z_nieprawid.C5.82owego_wykrycia_wersji" name="Problemy_wynikaj.C4.85ce_z_nieprawid.C5.82owego_wykrycia_wersji"> Problemy wynikające z nieprawidłowego wykrycia wersji </h3>
+<h4 id="Wykluczanie_nieznanych_przegl.C4.85darek" name="Wykluczanie_nieznanych_przegl.C4.85darek"> Wykluczanie nieznanych przeglądarek </h4>
+<p>Jeżeli Twój kod będzie próbował wykrywać tylko określone przeglądarki, Twoja strona będzie bezużyteczna jeżeli odwiedzający skorzysta z innej. Rozważmy następujący przykład:
+</p><p><code>
+</code></p>
+<pre>// Z�?E PODEJŚCIE - nie używać!
+if (document.all)
+{
+// Internet Explorer 4+
+document.write('&lt;link rel="stylesheet" type="text/css" src="style-ie.css"&gt;');
+}
+else if (document.layers)
+{
+// Navigator 4
+document.write('&lt;link rel="stylesheet" type="text/css" src="style-nn.css"&gt;');
+}
+</pre>
+<p>
+Powyższy przykład dostarcza arkusz stylów tylko dla Internet Explorera i Navigatora 4 i to tylko w przypadkach, gdy włączona została obsługa JavaScript. Netscape 6, Netscape 7, CompuServe 7, Mozilla, czy Opera nie będą w stanie prawidłowo wyświetlić strony.
+</p>
+<h4 id="B.C5.82.C4.99dna_identyfikacja_przegl.C4.85darki" name="B.C5.82.C4.99dna_identyfikacja_przegl.C4.85darki"> Błędna identyfikacja przeglądarki </h4>
+<p>Częstym błędem jaki popełniają autorzy stron jest założenie, że gdy przeglądarka nie jest Netscape Navigatorem 4 to musi być Internet Explorerem i na odwrót. Na przykład:
+</p>
+<pre>// Z�?E PODEJŚCIE - nie używać!
+if (document.all)
+{
+  // Internet Explorer 4+
+  elm = document.all['menu'];
+}
+else
+{
+  // Załóż, że to Navigator 4
+  elm = document.layers['menu'];
+}
+</pre>
+<p>Zauważ w jaki sposób w powyższym przykładzie założono, że każda przeglądarka nie będąca Internet Explorerem jest Navigatorem 4, co oznacza że musi używać warstw (<i>layers</i>). Stanowi to typowe źródło problemów dla Opery i przeglądarek opartych na Gecko. Podobny błąd widać w kolejnym przykładzie:
+</p>
+<pre>// Z�?E PODEJŚCIE - nie używać!
+if (document.layers)
+{
+  // Navigator 4
+  elm = document.layers['menu'];
+}
+else
+{
+  // Załóż, że to Internet Explorer 4+
+  elm = document.all['menu'];
+}
+</pre>
+<p>Netscape 6 był pierwszą komercyjną przeglądarką opartą na Gecko. Z braku porozumienia i zrozumienia, wiele stron wypracowało sobie nieprawidłowe metody wykrywania wersji opierając się na identyfikatorze przeglądarki zwracanemu przez Netscape'a 6. Identyfikator <i>user-agent</i> używany przez Netscape'a 6 jest zgodny z zaleceniami standardu HTTP (zobacz <a class="external" href="http://www.mozilla.org/build/revised-user-agent-strings.html">Identyfikator przeglądarki w Mozilli</a> i <a href="pl/Identyfikatory_przegl%c4%85darek_Gecko">Identyfikatory przeglądarek Gecko</a>).
+</p>
+<pre class="eval">Mozilla/5.0 (...) Gecko/20001108 Netscape6/6.0
+</pre>
+<p>Pierwszy ciąg dystrybutor/wersja (Mozilla/5.0) oznacza, że Netscape 6 jest przeglądarką <i>piątej</i> generacji i nie jest identyczna z wcześniejszymi. W tej chwili wszystkie przeglądarki na silniku Gecko (i tylko one) zgłaszają Mozilla/5.0 jako swoją główną wersję. Mamy nadzieję, że gdy producenci innych przeglądarek osiągną ten sam poziom zgodności ze standardem co Gecko i przestaną wspierać przestarzałe technologie, zaczną również oznaczać się wersją 5. Założenie, że tylko Gecko będzie używać oznaczenia Mozilla/5.0 zacznie powodować błędy w Twoich skryptach, gdy tylko któryś z producentów innych przeglądarek zacznie identyfikować swoje produkty jako Mozilla/5.0.
+</p><p>Drugi ciąg dystrybutor/wersja (Gecko/20001108) identyfikuje Netscape 6 jako używające wersji Gecko opublikowanej 8 listopada 2000. Jeżeli musisz wykryć Gecko używając identyfikatora <i>user-agent</i>, ciąg o postaci Gecko/CCYYMMDD jest najbardziej odpowiednim do wyszukania.
+</p><p>Trzeci ciąg dystrybutor/wersja (Netscape6/6.0) identyfikuje ten określony model przeglądarki opartej na Gecko jako Netscape 6. Wiele stron zaczęło wykorzystywać ciąg <i>Netscape6</i> do określania typu przeglądarki, używając warunku podobnego do:
+</p>
+<pre>if (navigator.userAgent.indexOf('Netscape6') != -1)
+{
+  // kod dla Netscape 6
+}
+</pre>
+<p>Ten typ identyfikacji pomija jednak każdą inną przeglądarkę opartą na Gecko. Niestety, identyfikator <i>user-agent</i> używany przez Netscape 6 nie był wystarczająco ogólny przez użycie <i>Netscape6</i> jako etykiety dystrybutora. Netscape 7 naprawił ten błąd, stwarzając jednocześnie kolejną okazję do popsucia istniejących metod wykrywania wersji.
+</p>
+<pre class="eval">Mozilla/5.0 (...) Gecko/200207XX Netscape/7.0
+</pre>
+<p>�?atwo zauważyć, że Netscape 7 nie używa już etykiety <i>Netscape6</i> do określenia dystrybutora. Metody używające ciągu <i>Netscape6</i> do wykrywania wersji nie zadziałają więc w przypadku siódmej wersji Netscape.
+</p>
+<h4 id="U.C5.BCywanie_obiekt.C3.B3w_JavaScript_do_okre.C5.9Blania_producenta_i_wersji" name="U.C5.BCywanie_obiekt.C3.B3w_JavaScript_do_okre.C5.9Blania_producenta_i_wersji"> Używanie obiektów JavaScript do określania producenta i wersji </h4>
+<p>Jak już wspomniano, typowym podejściem do wykrywania wersji było używanie obiektów do identyfikacji producenta i wersji przeglądarki. Często spotykany sposób rozpoznawania, wspierający tylko Netscape Navigatora 4 i Internet Explorera 4 wyglądał następująco:
+</p>
+<pre>// Z�?E PODEJŚCIE - nie używać!
+if (document.all)
+{
+  // IE4
+  height = document.body.offsetHeight;
+}
+else if (document.layers)
+{
+  // NN4
+  height = window.innerHeight;
+}
+else
+{
+  // pozostałe
+  height = 0;
+}
+</pre>
+<p>Wraz ze wprowadzeniem modelu obiektowego dokumentu przez W3C, standardowa metoda <code>document.getElementById</code> stała się dostępna w Internet Explorerze 5, a później również w Netscape 6 (Gecko). Wielu programistów zdecydowało się, że najłatwiejszym sposobem obsłużenia Netscape'a z silnikiem Gecko było dodanie kolejnego warunku, takiego jak ten:
+</p>
+<pre>// Z�?E PODEJŚCIE - nie używać!
+if (document.all)
+{
+  // IE4
+  height = document.body.offsetHeight;
+}
+else if (document.layers)
+{
+  // NN4
+  height = window.innerHeight;
+}
+else if (document.getElementById)
+{
+  // Wydaje im się, że to Gecko,
+  // ale mogą się mylić!
+  height = window.innerHeight;
+}
+else
+{
+  // pozostałe
+  height = 0;
+}
+</pre>
+<p>To podejście jest nieprawidłowe, bo zakłada, że jedyną przeglądarką poza Internet Explorerem w wersji 5 i wyższej, która implementuje <code>document.getElementById</code> jest Gecko. Już w tej chwili nie jest to prawdą i będzie jeszcze bardziej błędne w przyszłości, gdy więcej przeglądarek zacznie trzymać się standardu W3C dotyczącego modelu obiektowego dokumentu.
+</p>
+<h3 id="Zalecenia" name="Zalecenia"> Zalecenia </h3>
+<h4 id="Kieruj_si.C4.99_standardami.2C_nie_mo.C5.BCliwo.C5.9Bciami_przegl.C4.85darek" name="Kieruj_si.C4.99_standardami.2C_nie_mo.C5.BCliwo.C5.9Bciami_przegl.C4.85darek"> Kieruj się standardami, nie możliwościami przeglądarek </h4>
+<p>Podczas gdy lata 1994-2000 były okresem panowania niekompatybilnych ze sobą przeglądarek Netscape'a i Microsoftu, w obecnych czasach decydującym czynnikiem w rozwoju sieci WWW stały się standardy zaproponowane przez World Wide Web Consortium <a class="external" href="http://www.w3.org/">(W3C)</a>. Standardy są ważne dla twórców serwisów z wielu powodów, m.in. czynią rozwiązania bardziej elastycznymi, mają większe możliwości prezentacji treści, a zgodne z nimi strony są bardziej przyjazne dla niepełnosprawnych.
+</p><p>Projektując strony pod dyktando określonych producentów zapomina się o możliwości powstania w przyszłości innych przeglądarek opartych na standardach. Typowym problemem dzisiejszej sieci jest przekonanie, że Netscape Navigator i Microsoft Internet Explorer to jedyne przeglądarki będące w użyciu. Pomija ono istnienie <a class="external" href="http://www.opera.com">Opery</a>, jak i urządzeń przenośnych, z których coraz częściej korzysta się przy przeglądaniu zasobów WWW.
+</p><p><i>Przełączanie DOCTYPE</i> jest techniką używaną w <a class="external" href="http://www.mozilla.org/docs/web-developer/quirks/">Netscape'ie wersji 6 i wyższych</a>, <a class="external" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnie60/html/cssenhancements.asp">Internet Explorerze 6</a> pod Windows i Internet Explorerze 5 pod Macintosha. Dzięki niej przeglądarki te potrafią przełączyć się z trybu zgodności wstecznej (ang. <i>quirks mode</i>), który symuluje błędne implementacje przeglądarek poprzedniej generacji, w tryb standardów (ang. <i>standards mode</i>). Nowe strony polecamy oznaczać za pomocą DOCTYPE, co spowoduje uruchomienie trybu standardów w przeglądarkach Gecko i Internet Explorerze 6. W ten sposób możesz być pewny, że Twój projekt będzie wyglądał podobnie zarówno w tych przeglądarkach, jak i w każdej innej trzymającej się standardów.
+</p>
+<h4 id="Zapewniaj_wsparcie_nieznanym_przegl.C4.85darkom" name="Zapewniaj_wsparcie_nieznanym_przegl.C4.85darkom"> Zapewniaj wsparcie nieznanym przeglądarkom </h4>
+<p>Zawsze przygotowuj wersję zawartości i skryptów serwisu przeznaczoną dla nieznanych przeglądarek. Spokojnie można założyć, że nieznana przeglądarka zachowuje podstawowe standardy dotyczące HTML i CSS, a do pewnego stopnia również JavaScript i model obiektowy dokumentu W3C. Zapewni to używalność tak przygotowanej treści zarówno dzisiaj, jak i w przyszłości na <b>każdej</b> przeglądarce zgodnej ze standardami.
+</p>
+<h4 id="Ogranicz_u.C5.BCycie_funkcji_specyficznych_dla_okre.C5.9Blonych_typ.C3.B3w.2Fwersji_przegl.C4.85darek" name="Ogranicz_u.C5.BCycie_funkcji_specyficznych_dla_okre.C5.9Blonych_typ.C3.B3w.2Fwersji_przegl.C4.85darek"> Ogranicz użycie funkcji specyficznych dla określonych typów/wersji przeglądarek </h4>
+<p>Publikacja treści zgodnej ze standardami jest najłatwiejszym sposobem na obsłużenie szerokiej gamy dostępnych przeglądarek przy jednoczesnym zmniejszeniu kosztów utrzymania. Chociaż nie zawsze jest możliwe uniknięcie problemów wynikających z różnic w funkcjonowaniu przeglądarek, korzystanie ze specyficznych własności przeglądarek i ich identyfikacja na podstawie producenta lub wersji powinno być ograniczone do minimum.
+</p>
+<h4 id="Ogranicz_wykrywanie_wersji_oparte_na_ci.C4.85gu_User-Agent" name="Ogranicz_wykrywanie_wersji_oparte_na_ci.C4.85gu_User-Agent"> Ogranicz wykrywanie wersji oparte na ciągu <i>User-Agent</i> </h4>
+<p>Wykrycie przeglądarki od strony serwera wymaga sprawdzenia ciągu <i>User-Agent</i>. Zalecamy, by korzystanie z tej metody było ograniczone wyłącznie do wykrywania wersji po stronie serwera i przy rozwiązywaniu specyficznych problemów, jak rozróżnianie dokładnych wersji użytego silnika Gecko.
+</p><p>Jednakże istnieją uzasadnione powody użycia ciągu <i>User-Agent</i> (lub obiektu <i>navigator</i>) do wykrywania dokładnej wersji, producenta i systemu operacyjnego używanej przeglądarki. Wiele serwisów finansowych (banki, firmy maklerskie, itp.) ustala bardzo ścisłe ograniczenia dotyczące obsługiwanych przeglądarek. Powodem są starsze przeglądarki, które mają długą historię błędów w zabezpieczeniach. Jeżeli więc musisz ograniczyć listę dozwolonych przeglądarek, za pomocą których można bezpiecznie korzystać z Twojego serwisu, użycie ciągu <i>User-Agent</i> i podobnych informacji z obiektu <i>navigator</i> jest jak najbardziej na miejscu.
+</p><p>Dzięki dokładnym danym o wersji przeglądarki można również poradzić sobie z niektórymi błędami w implementacji. To jednak bardzo szybko może stać się koszmarem dla nieuważnego webmaster. Radzimy więc stosowanie tej metody tylko w doraźnych przypadkach. Gdy błąd zostanie naprawiony w nowej wersji, najlepsze co można zrobić, to zachęcać odwiedzających do aktualizacji.
+</p>
+<h4 id="Stw.C3.B3rz_skromniejsze_wersje_stron_dla_starszych_przegl.C4.85darek" name="Stw.C3.B3rz_skromniejsze_wersje_stron_dla_starszych_przegl.C4.85darek"> Stwórz skromniejsze wersje stron dla starszych przeglądarek </h4>
+<p>Obecnie żaden z komercyjnych serwisów nie czuje konieczności obsługiwania Netscape Navigatora w wersji 1, 2 i 3 lub Internet Explorera 3. Powodem są małe, w porównaniu do współczesnych rozwiązań, możliwości tych przeglądarek. Pieniądze przeznaczone na zapewnienie wsparcia dla starych przeglądarek nie miałyby szansy się zwrócić - ich wykorzystanie jest znikome, a koszt rozwoju i kontroli jakości jest zbyt wysoki.
+</p><p>Jedną z ważniejszych decyzji jakie możesz podjąć w celu poprawienia jakości Twojego serwisu i zmniejszenia kosztów rozwoju, utrzymania i testów jest zerwanie z pełnym wsparciem dla przeglądarek takich jak Netscape Navigator 4 i Internet Explorer 4. Duże serwisy często decydują się na stworzenie uboższej wersji dla starszych przeglądarek obok wersji znacznie bogatszej, korzystającej z zaawansowanych technologii CSS i JavaScript. Można to osiągnąć poprzez wykrywanie wersji od strony serwera jako integracyjną część skryptów strony, albo jako wewnętrzną funkcjonalność serwera http, który potrafi rozdzielać zawartość pomiędzy użytkowników różnych przeglądarek. To podejście niekoniecznie zmusza Cię do wcześniejszego przygotowania dwóch wersji stron, dla nowszych i starszych przeglądarek. Typowym podejściem jest zawarcie treści w neutralnym formacie, np. w XMLu, a do generowania kodu HTML użycie XSLT.
+</p><p>Decyzja, czy przygotowywać dla danej przeglądarki skromniejszą wersję serwisu, zależy od stopnia skomplikowania używanych na stronach CSS i JavaScript. Netscape Navigator 4 i Internet Explorer 4 są przeglądarkami, którym w większości przypadków powinna być podawana uboższa wersja stron, ponieważ ich implementacja CSS i nowszych wersji standardu DOM pozostawia wiele do życzenia. Jeżeli korzystasz z zaawansowanego JavaScriptu, który manipuluje lub tworzy nową zawartość opierając się na modelu obiektowym dokumentu W3C, wtedy również Opera 5 i 6 powinny zostać dołączone do grupy przeglądarek, którym serwuje się skromniejszą wersję serwisu.
+</p><p>Przyszłość należy do tych projektantów i przeglądarek, które wspierają standardy. Jeżeli przegapisz okazję, by skorzystać ze zmiany jakiej dokonuje się na polu przeglądarek, konkurencja dopadnie Cię bardzo szybko. A gdy to już się stanie, jedynym właściwym miejscem dla Twojej strony będzie <a class="external" href="http://web.archive.org">sieciowe archiwum</a>.
+</p>
+<h4 id="Tam.2C_gdzie_to_mo.C5.BCliwe.2C_korzystaj_z_nie-skryptowych_metod_wykrywania" name="Tam.2C_gdzie_to_mo.C5.BCliwe.2C_korzystaj_z_nie-skryptowych_metod_wykrywania"> Tam, gdzie to możliwe, korzystaj z nie-skryptowych metod wykrywania </h4>
+<p>Starsze przeglądarki mają wiele ograniczeń, przez które ignorują one bardziej zaawansowaną treść. Rozsądnie wykorzystując te ograniczenia możliwe jest korzystanie z nowych technologii jednocześnie zachowując kompatybilność ze starszymi przeglądarkami.
+</p><p>HTML posiada kilka metod przydatnych w wykrywaniu określonych możliwości przeglądarki, jak interpretacja skryptów, czy ramek. Warto użyć tych naturalnych możliwości HTMLa, by poszerzyć zakres obsługiwanych przeglądarek.
+</p>
+<h4 id="U.C5.BCywanie_NOFRAMES_dla_przegl.C4.85darek_nie_rozumiej.C4.85cych_ramek" name="U.C5.BCywanie_NOFRAMES_dla_przegl.C4.85darek_nie_rozumiej.C4.85cych_ramek"> Używanie NOFRAMES dla przeglądarek nie rozumiejących ramek </h4>
+<pre>&lt;HTML&gt;
+  &lt;HEAD&gt;
+    &lt;TITLE&gt;RAMKI&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+  &lt;FRAMESET ROWS="30,*"&gt;
+    &lt;FRAME SRC="to.html"&gt;
+    &lt;FRAME SRC="tamto.html"&gt;
+    &lt;NOFRAMES&gt;
+      &lt;BODY&gt;
+        &lt;P&gt;
+          Ta strona wymaga ramek. Obejrzyj &lt;a href="bezramek.html"&gt;mapę serwisu&lt;/a&gt;.
+        &lt;/P&gt;
+      &lt;/BODY&gt;
+    &lt;/NOFRAMES&gt;
+  &lt;/FRAMESET&gt;
+&lt;/HTML&gt;
+</pre>
+<h4 id="U.C5.BCywanie_NOSCRIPT_dla_przegl.C4.85darek_nie_posiadaj.C4.85cych_wsparcia_dla_skrypt.C3.B3w" name="U.C5.BCywanie_NOSCRIPT_dla_przegl.C4.85darek_nie_posiadaj.C4.85cych_wsparcia_dla_skrypt.C3.B3w"> Używanie NOSCRIPT dla przeglądarek nie posiadających wsparcia dla skryptów </h4>
+<p>Niektóre przeglądarki nie potrafią obsługiwać skryptów, niektórzy zaś użytkownicy celowo wyłączają ich obsługę w swoich przeglądarkach. Użycie znacznika NOSCRIPT pozwala udostępnić im nieoskryptowane wersje stron lub przynajmniej poinformować, że obsługa skryptów jest niezbędna w poprawnym przeglądaniu treści serwisu.
+</p><p>Ponieważ przeglądarki takie jak Navigator 4 i Internet Explorer 4 nie obsługują jednych z najnowszych dodatków do standardu JavaScript (ECMAScript), często trzeba zrezygnować z użycia zaawansowanych funkcji JavaScript, jak np. obsługa wyjątków. Jednym z możliwych sposobów radzenia sobie z tym problemem jest wymaganie od użytkowników przeglądarek, które nie implementują JavaScriptów w wystarczającym dla Ciebie stopniu, by całkowicie <b>wyłączyli</b> JavaScript, a dopiero wtedy będą mogli przeglądać treść strony. Możesz tego dokonać przygotowując stosowną informację dla użytkowników starych przeglądarek wraz z alternatywną treścią zamkniętą w znacznikach NOSCRIPT.
+</p>
+<pre>&lt;HTML&gt;
+  &lt;HEAD&gt;
+    &lt;TITLE&gt;NOSCRIPT&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+  &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE="JavaScript"&gt;
+      window.onerror = function ()
+      {
+        // Przekieruj użytkownika na stronę wyjaśniającą
+        // ograniczenia jego przeglądarki i zalecającą
+        // wyłączenie JavaScript w celu obejrzenia serwisu.
+      }
+
+      // Netscape Navigator 4 wywoła błąd napotykając
+      // na dowolny kod, który używa obsługi wyjątków
+      // poprzez bloki try ... catch
+      try
+      {
+        // Kod implementujący oszałamiające menu
+      }
+      catch (errors)
+      {
+        // obsłuż wyjątki
+      }
+    &lt;/SCRIPT&gt;
+    &lt;NOSCRIPT&gt;
+      &lt;!--
+      Jeżeli JavaScript nie jest włączony, wtedy
+      przeglądarka wyświetli zawartości zamkniętą w
+      znacznikach NOSCRIPT, która w tym przypadku jest
+      prostym menu zaimplementowanym jako lista
+      nieuporządkowana.
+      --&gt;
+      &lt;UL&gt;
+        &lt;LI&gt;&lt;A HREF="wybor1.html"&gt;Wybór1&lt;/A&gt;&lt;/LI&gt;
+        &lt;LI&gt;&lt;A HREF="wybor2.html"&gt;Wybór2&lt;/A&gt;&lt;/LI&gt;
+      &lt;/UL&gt;
+    &lt;/NOSCRIPT&gt;
+  &lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<h4 id="U.C5.BCywanie_atrybutu_LANGUAGE_do_okre.C5.9Blenia_miejsca_uruchomienia_skryptu" name="U.C5.BCywanie_atrybutu_LANGUAGE_do_okre.C5.9Blenia_miejsca_uruchomienia_skryptu"> Używanie atrybutu LANGUAGE do określenia miejsca uruchomienia skryptu </h4>
+<p>Wybór języka skryptowego określa się za pomocą atrybutu LANGUAGE znacznika SCRIPT. Internet Explorer w wersji 4 i wyższych obsługuje kilka różnych języków skryptowych. Najbardziej popularnymi są <i>VBSCRIPT</i> i <i>JavaScript</i>. Internet Explorer używa również <i>JSCRIPT</i> jako synonimu JavaScriptu. Jako, że inne przeglądarki nie rozpoznają języków <i>VBSCRIPT</i> i <i>JSCRIPT</i> możesz ich użyć do uruchomienia kodu przeznaczonego dla Internet Explorera w wersji 4 i wyższych.
+</p>
+<pre>&lt;HTML&gt;
+  &lt;HEAD&gt;
+    &lt;TITLE&gt;Atrybut języka w SCRIPT&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+  &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE="JavaScript"&gt;
+      // Kod JavaScriptu implementujący oszałamiające
+      // menu widoczny dla wszystkich przeglądarek
+      // obsługujących JavaScript.
+    &lt;/SCRIPT&gt;
+    &lt;SCRIPT LANGUAGE="JScript"&gt;
+      // Kod JavaScriptu używający funkcji specyficznych
+      // dla Internet Explorera, niedostępnych w innych
+      // przeglądarkach.
+    &lt;/SCRIPT&gt;
+    &lt;SCRIPT LANGUAGE="VBScript"&gt;
+      // Kod VBScriptu używający funkcji specyficznych
+      // dla Internet Explorera, niedostępnych w innych
+      // przeglądarkach.
+    &lt;/SCRIPT&gt;
+  &lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<h4 id="Korzystanie_z_ogranicze.C5.84_implementacji_CSS_w_Netscape_Navigatorze_4" name="Korzystanie_z_ogranicze.C5.84_implementacji_CSS_w_Netscape_Navigatorze_4"> Korzystanie z ograniczeń implementacji CSS w Netscape Navigatorze 4 </h4>
+<p>Jest możliwe wykorzystanie ograniczeń implementacji CSS w Netscape Navigatorze 4 do automatycznego wykluczenia z interpretacji określonych regułek CSS.
+</p><p>Dla przykładu, Navigator 4 nie rozumie dyrektywy CSS @import i nie wczyta żadnych zewnętrznych arkuszy stylów załączonych za pomocą @import. Za pomocą tej techniki można udostępnić podstawową wersję prostych regułek CSS wszystkim przeglądarkom (łącznie z Navigatorem 4) bardziej zaawansowane regułki zamieszczając w zewnętrznym pliku CSS, z których skorzystają przeglądarki z lepszą implementacją CSS.
+</p>
+<pre>&lt;STYLE type="text/css"&gt;
+/* Regułki CSS dla Navigatora 4 */
+&lt;/STYLE&gt;
+
+&lt;STYLE type="text/css"&gt;
+/* Zaawansowane regułki CSS ignorowane przez Navigatora 4 */
+@import "zaawansowane.css";
+&lt;/STYLE&gt;
+</pre>
+<p>Istnieje podobna technika służąca do ukrywania regułek CSS przed Navigatorem 4 korzystająca z faktu, że Navigator 4 ignoruje dyrektywy CSS występujące po ciągu /*/*/.
+</p>
+<pre>&lt;STYLE type="text/css"&gt;
+/* Regułki CSS dla Navigatora 4 */
+
+/*/*/
+/* Zaawansowane regułki CSS ignorowane przez Navigatora 4 */
+&lt;/STYLE&gt;
+</pre>
+<p>Tej właśnie techniki używa DevEdge do ukrycia zaawansowanej treści przed Navigatorem 4.
+</p>
+<h4 id="U.C5.BCywaj_wykrywania_obiekt.C3.B3w_pod_k.C4.85tem_funkcjonalno.C5.9Bci" name="U.C5.BCywaj_wykrywania_obiekt.C3.B3w_pod_k.C4.85tem_funkcjonalno.C5.9Bci"> Używaj wykrywania obiektów pod kątem funkcjonalności </h4>
+<p>Wykrywanie obiektów jest skuteczną metodą zapewniania wsparcia dla różnych przeglądarek. Chociaż można ją wykorzystać jako kolejną metodę rozróżniania dystrybutora i wersji przeglądarki, to prawdziwą siłę pokazuje dopiero, gdy użyje się jej do wykrycia określonej funkcjonalności, a nie przeglądarki.
+</p><p>Technika wykrywania obiektów pod kątem funkcjonalności polega na sprawdzaniu istnienia określonych obiektów przed próbą ich użycia w skrypcie. Klasycznym przykładem jest:
+</p>
+<pre>if (document.images)
+{
+  // kod, który działa na obrazkach
+}
+</pre>
+<p>Zaletą tej metody jest to, że działa ona niezależnie od producenta i wersji przeglądarki. Możemy teraz przepisać jeden z poprzednich przykładów, który ukazywał problemy w użyciu obiektów do wykrycia producenta i wersji przeglądarki. Tym razem skorzystamy z metody wykrywania obiektów pod kątem funkcjonalności.
+</p>
+<pre>if (document.body &amp;&amp; typeof(document.body.offsetHeight) == 'number')
+{
+  height = document.body.offsetHeight;
+}
+else if (typeof(window.innerHeight) == 'number')
+{
+  height = window.innerHeight;
+}
+else
+{
+  height = 0;
+}
+</pre>
+<p>Zauważ, że w tym przykładzie nie zakładamy niczego o rodzaju użytej przeglądarki. Interesują nas tylko obiekty, których chcemy skorzystać. Jako, że wartości liczbowe mogą przyjmować wartość zero, skrypt testuje zamiast tego typ obiektów, by upewnić się, że rzeczywiście są one liczbami.
+</p>
+<h3 id="Gecko_a_Navigator_4" name="Gecko_a_Navigator_4"> Gecko a Navigator 4 </h3>
+<p>Gecko jest następcą silnika wyświetlania Navigatora 4, przez co dziedziczy wiele funkcji tej przeglądarki. Podstawowe różnice pomiędzy Navigatorem 4 a Gecko mogą być łatwo podsumowane w dwóch punktach:
+</p>
+<ul><li> <b>Gecko jest zgodne ze standardami</b>. Gecko wspiera o wiele więcej standardów niż Navigator 4 i robi to prawidłowo, w przeciwieństwie do Navigatora 4.
+</li><li> <b>Gecko nie posiada warstw</b>. Navigator 4 wprowadził API warstw o nazwie 'layer', które służyło do manipulowania treścią strony, będąc podstawą DHTML-a w Navigatorze 4. Warstwy nie zostały jednak zaakceptowane przez W3C ani w standardzie HTML, ani DOM. Jako, że celem Gecko była jak najdokładniejsza zgodność ze standardami, z warstw trzeba było zrezygnować. Brak tej zgodności wstecznej był źródłem wielu problemów dla webmasterów, ale może być łatwo pokonany poprzez odpowiednie metody wykrywania przeglądarek. Wraz ze zmniejszającym się użyciem Navigatora 4 i coraz powszechniejszym wykorzystaniem standardów przez twórców stron, problem warstw zanika.
+</li></ul>
+<h3 id="Gecko_a_Internet_Explorer" name="Gecko_a_Internet_Explorer"> Gecko a Internet Explorer </h3>
+<p>Gecko implementuje kilka funkcji specyficznych dla Internet Explorera, szczególnie tych dotyczących jego <a class="external" href="http://msdn.microsoft.com/library/">Modelu obiektowego DHTML</a>. Liczba wspieranych funkcji Internet Explorera znacznie zwiększyła się od wydania w listopadzie 2000r. szóstej wersji przeglądarki Netscape. Najlepszym sposobem na korzystanie z tych dodatkowych funkcji Gecko jest używanie metody wykrywania obiektów pod kątem funkcjonalności. Dzięki niej wszelkie dostępne w danej wersji Gecko funkcje zostaną automatycznie użyte. Sprawdź <a href="pl/Dokumentacja_obiekt%c3%b3w_klienta_DOM">Dokumentację obiektów klienta DOM</a> by uzyskać informacje przez jakie wersje Gecko są wspierane jakie obiekty i właściwości Internet Explorera.
+</p><p>Wciąż jednak wiele funkcji Internet Explorera <b>nie jest wspierane przez Gecko</b>. Należą do nich m.in. obiekt <code>window.event</code>, technologie <i>behaviors</i> i <i>transitions</i>, filtry i ActiveX.
+</p>
+<h3 id="Jak_.28i_kiedy.29_u.C5.BCy.C4.87_obiektu_navigator_przy_wykrywaniu_Gecko" name="Jak_.28i_kiedy.29_u.C5.BCy.C4.87_obiektu_navigator_przy_wykrywaniu_Gecko"> Jak (i kiedy) użyć obiektu <i>navigator</i> przy wykrywaniu Gecko </h3>
+<p>Dopóki nie masz konkretnej potrzeby wykrycia silnika Gecko, nie używaj poniższych metod. Korzystanie z nich jest uzasadnione jedynie w przypadkach, gdy nie da się zastosować wykrywania obiektów pod kątem funkcjonalności, np. do rozróżniania ze względów bezpieczeństwa konkretnych wersji Gecko.
+</p><p><b>Uwaga:</b> Do wykrywania po stronie klienta zalecamy użycie obiektu <code>navigator</code> i jego właściwości. Wszystkie informacje zawarte w tym obiekcie są również dostępne w ciągu User-Agent, co otwiera możliwość wykrycia przeglądarki od strony serwera.
+</p>
+<h4 id="product" name="product"> <i>product</i> </h4>
+<p>Obiekt <code>navigator.product</code> jest charakterystyczny dla przeglądarek Gecko i zawsze zwraca wartość 'Gecko'. Wykorzystanie go jest najszybszą i najprostszą metodą rozpoznania przeglądarek opartych na tym silniku.
+</p>
+<h4 id="Znacznik_ga.C5.82.C4.99zi_CVS" name="Znacznik_ga.C5.82.C4.99zi_CVS"> Znacznik gałęzi CVS </h4>
+<p>Od wersji Gecko 0.9.0 (a w Netscape 6.1 od wersji 0.9.2), ciąg <code>navigator.userAgent</code> zawiera znacznik gałęzi CVS źródeł, które zostały użyte do budowy silnika Gecko użytego w przeglądarce. Znacznik gałęzi znaleźć można w komentarzu ciągu User-Agent, zaraz po znakach 'rv:'. W poniższym przykładzie znacznikiem gałęzi jest a.b.c.
+</p>
+<pre class="eval">Mozilla/5.0 (...; rv:a.b.c) Gecko/CCYYMMDD Dystrybutor/wersja
+</pre>
+<p>Przeglądarki Gecko zbudowane ze źródeł z tej samej gałęzi CVS charakteryzują się taką samą obsługą HTML-a, CSS-a, JavaScriptu itp. Na przykład Netscape w wersjach 6.2, 6.2.1, 6.2.2, 6.2.3 i CompuServe 7 zostały zbudowane ze źródeł z gałęzi 0.9.4, co oznacza, że interpretacja stron jest w nich bardzo zbliżona.
+</p> <table> <caption>Gecko Branch Tags</caption> <tbody><tr><th>Browser</th><th>Branch Tag</th></tr> <tr><td>Netscape 6.0</td><td>zawierało M18 zamiast wartości <i>rv</i></td></tr> <tr><td>Netscape 6.1</td><td>0.9.2</td></tr> <tr><td>Netscape 6.2</td><td>0.9.4</td></tr> <tr><td>Netscape 6.2.1</td><td>0.9.4</td></tr> <tr><td>Netscape 6.2.2</td><td>0.9.4.1</td></tr> <tr><td>Netscape 6.2.3</td><td>0.9.4.1</td></tr> <tr><td>CompuServe 7</td><td>0.9.4.2</td></tr> <tr><td>Netscape 7.0</td><td>1.0.1</td></tr> <tr><td>Netscape 7.01</td><td>1.0.2</td></tr> </tbody></table>
+<p>Z powyższej tabeli widać, że wszystkie wersje Netscape'a 6.2 i CompuServe 7 zbudowane zostały z gałęzi 0.9.4. Różnica pomiędzy 0.9.4, 0.9.4.1 i 0.9.4.2 jest znikoma.
+</p><p><b>Uwaga:</b> Znacznik gałęzi CVS jest ciągiem znaków i może zawierać więcej niż pojedyncze cyfry w każdej z części numeru wersji. Można wyobrazić sobie sytuację w której będziemy mieli znaczniki takie jak 2.2.0 i 2.12.36. Jako, że wartości te są ciągami znaków, nie można użyć do określenia nowszej wersji zwykłego porównania ciągów. W naszym przykładzie gałąź 2.2.0 stworzona została wcześniej niż 2.12.36, jednak porównanie tych wartości jako ciągów znaków da w wyniku '2.2.0' &gt; '2.12.36'. Jednym z rozwiązań tego problemu jest użycie funkcji JavaScriptu geckoGetRv(), która konwertuje znacznik gałęzi na ułamek dziesiętny interpretując każdą część wersji jako liczbę z przedziału 0-99.
+</p> <table> <caption>Przykłady użycia geckoGetRv()</caption> <tbody><tr><th>Znacznik gałęzi</th><th>geckoGetRv()</th></tr> <tr><td>0.9.2</td><td>0.0902</td></tr> <tr><td>0.9.4</td><td>0.0904</td></tr> <tr><td>0.9.4.1</td><td>0.090401</td></tr> <tr><td>0.9.4.2</td><td>0.090402</td></tr> <tr><td>1.0.1</td><td>1.0001</td></tr> <tr><td>1.0.2</td><td>1.0002</td></tr> <tr><td>2.2.0</td><td>2.02</td></tr> <tr><td>2.12.36</td><td>2.1236</td></tr> </tbody></table>
+<p>Funckja geckoGetRv() zwraca wartości, które można porównać za pomocą operatorów większości i mniejszości. geckoGetRv() nie jest oficjalną częścią Gecko, ale podany został jako przykład podejścia do rozwiązania problemu porównania znaczników gałęzi obecnych i przyszłych wersji Gecko.
+</p>
+<h4 id="Data_kompilacji" name="Data_kompilacji"> Data kompilacji </h4>
+<p><code>navigator.productSub</code> jest obiektem charakterystycznym dla przeglądarek Gecko. Jego wartość to ciąg znaków określający czas, w którym przeglądarka została skompilowana. Format daty to CCYYMMDD, np. '20020801' dla 1 sierpnia 2002. Jeżeli przejmujesz się określonym błędem bezpieczeństwa i wiesz, że wszystkie przeglądarki Gecko zbudowane po określonym dniu zawierają odpowiednią poprawkę, możesz sprawdzić czy wartość <code>navigator.productSub</code> określa datę późniejszą.
+</p><p>Możesz również dokładnie rozróżnić wersję przeglądarki korzystając jednocześnie ze znacznika gałęzi CVS i daty kompilacji. Na przykład Netscape 6.2.2 i 6.2.3 mają ten sam znacznik gałęzi CVS (0.9.4.1), ale wersja 6.2.2 ma <code>navigator.productSub == '20020314'</code>, podczas gdy wersja 6.2.3 ma <code>navigator.productSub == '20020508'</code>.
+</p>
+<h4 id="dystrybutor.2Fwersja" name="dystrybutor.2Fwersja"> dystrybutor/wersja </h4>
+<p>Wszystkie przeglądarki Gecko posiadają informacje o dystrybutorze i wersji zarówno w obiekcie <code>navigator</code>, jak i ciągu User-Agent. Informacje te nie są jednak tak użyteczne jak znacznik gałęzi CVS i data kompilacji. Nie zalecamy korzystania z nich, chociaż jeżeli chcesz, możesz użyć ich do rozróżnienia różnych typów przeglądarek Gecko. Jak wspomnieliśmy wcześniej, dystrybutor i numer wersji pojawiają się w ciągu User-Agent zaraz po wersji Gecko.
+</p>
+<pre class="eval">Mozilla/5.0 (...; rv:a.b.c) Gecko/CCYYMMDD Dystrybutor/wersja
+</pre>
+<p>Nazwa dystrybutora dostępna jest w obiekcie <code>navigator</code> jako <code>navigator.vendor</code>, podczas gdy wersję można sprawdzić poprzez <code>navigator.vendorSub</code>.
+</p> <table> <caption>Dystrybutorzy i wersje przeglądarek Gecko</caption> <tbody><tr><th>Przeglądarka</th><th>Dystrybutor</th><th>wersja</th></tr> <tr><td>Netscape 6.0</td><td>Netscape6</td><td>6.0</td></tr> <tr><td>Netscape 6.01</td><td>Netscape6</td><td>6.01</td></tr> <tr><td>Netscape 6.1</td><td>Netscape6</td><td>6.1</td></tr> <tr><td>Netscape 6.2</td><td>Netscape6</td><td>6.2</td></tr> <tr><td>Netscape 6.2.1</td><td>Netscape6</td><td>6.2.1</td></tr> <tr><td>Netscape 6.2.2</td><td>Netscape6</td><td>6.2.2</td></tr> <tr><td>Netscape 6.2.3</td><td>Netscape6</td><td>6.2.3</td></tr> <tr><td>CompuServe 7.0</td><td>CS 2000 7.0</td><td>7.0</td></tr> <tr><td>Netscape 7 Preview Release 1</td><td>Netscape</td><td>7.0b1</td></tr> <tr><td>Netscape 7.0</td><td>Netscape</td><td>7.0</td></tr> <tr><td>Netscape 7.01</td><td>Netscape</td><td>7.01</td></tr> </tbody></table>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<p>Wielu ludzi najlepiej uczy się za pomocą przykładów. Poznawanie w jaki sposób inni webmasterzy wykorzystują techniki wykrywania wersji i programowania dla wielu przeglądarek jest <b>najlepszą</b> metodą nauki.
+</p>
+<h4 id="Przyk.C5.82ad_1_-_Wykrywanie_funkcjonalno.C5.9Bci_za_pomoc.C4.85_obiekt.C3.B3w" name="Przyk.C5.82ad_1_-_Wykrywanie_funkcjonalno.C5.9Bci_za_pomoc.C4.85_obiekt.C3.B3w"> Przykład 1 - Wykrywanie funkcjonalności za pomocą obiektów </h4>
+<p>Ten przykład prezentuje wykorzystanie metody <i>wykrywania funkcjonalności</i>. Przeglądarki Gecko 1.0 (w tym Netscape 7) i późniejsze implementują specyficzną dla Internet Explorera właściwość clientWidth. Zmienna ta nie występuje w Netscape 6. W poniższym przykładzie, Netscape 7 i Internet Explorer 5 (i wyższe wersje) automatycznie skorzystają z clientWidth, podczas gdy Netscape Navigator 4, Netscape 6, CompuServe 7 <i>i Opera</i> użyją innerWidth.
+</p><p>Zastanów się ile musiałbyś napisać kodu, by osiągnąć pożądany efekt za pomocą ciągu <i>dystrybutor/wersja</i>.
+</p>
+<pre>if (windowRef.document.body &amp;&amp; typeof(windowRef.document.body.clientWidth) == 'number')
+{
+  // Gecko 1.0 (Netscape 7) and Internet Explorer 5+
+  width = windowRef.document.body.clientWidth;
+}
+else if (typeof(windowRef.innerWidth) == 'number')
+{
+  // Navigator 4.x, Netscape 6.x, CompuServe 7 and Opera
+  width = windowRef.innerWidth;
+}
+</pre>
+<h4 id="Przyk.C5.82ad_2_-_Wykrywanie_funkcjonalno.C5.9Bci_za_pomoc.C4.85_obiekt.C3.B3w" name="Przyk.C5.82ad_2_-_Wykrywanie_funkcjonalno.C5.9Bci_za_pomoc.C4.85_obiekt.C3.B3w"> Przykład 2 - Wykrywanie funkcjonalności za pomocą obiektów </h4>
+<h5 id="Wsparcie_dla_r.C3.B3.C5.BCnych_przegl.C4.85darek" name="Wsparcie_dla_r.C3.B3.C5.BCnych_przegl.C4.85darek"> Wsparcie dla różnych przeglądarek </h5>
+<p>Ten przykład również przedstawia użycie <i>wykrywania funkcjonalności</i>, ale dodatkowo ukazuje problemy jakie wynikają z różnic w implementacji.
+</p>
+<pre>function moveElement(id, x, y)
+{
+  // przesuń element o identyfikatorze id
+  // do punktu x,y (gdzie x,y oznacza
+  // poziomą i pionową pozycję w pikselach)
+
+  var elm = null;
+  if (document.getElementById)
+  {
+    // przeglądarka implementuje część modelu
+    // obiektowego dokumentu W3C dotyczącą HTML-a
+    // Gecko, Internet Explorer 5+, Opera 5+
+    elm = document.getElementById(id);
+  }
+  else if (document.all)
+  {
+    // Internet Explorer 4 lub Opera
+    // z ciągiem User-Agent IE
+    elm = document.all[id];
+  }
+  else if (document.layers)
+  {
+    // Navigator 4
+    elm = document.layers[id];
+  }
+
+  if (!elm)
+  {
+    // przeglądarka nie wspierana lub brak elementu
+  }
+  else if (elm.style)
+  {
+    // przeglądarka implementuje część modelu
+    // obiektowego dokumentu W3C dotyczącą styli
+    // Gecko, Internet Explorer 4+, Opera 5+
+
+    if (typeof(elm.style.left) == 'number')
+    {
+      // Opera 5/6 nie implementuje standardu we właściwy
+      // sposób i zakłada, że obiekty takie jak elm.style.left
+      // są liczbami.
+      elm.style.left = x;
+      elm.style.top  = y;
+    }
+    else
+    {
+      // Gecko/Internet Explorer 4+
+      // Model obiektowy dokumentu W3C mówi o tym, że
+      // elm.style.left jest ciągiem znaków zawierającym długość
+      // wraz z jednostką, np. 10px
+      // Gecko zezwala na ominięcie jednostki jedynie w trybie
+      // zgodności wstecznej.
+      // Gecko WYMAGA jednostki podczas przetwarzania dokumentu
+      // w trybie standardów.
+      elm.style.left = x + 'px';
+      elm.style.top  = y + 'px';
+    }
+  }
+  else if (typeof(elm.left) == 'number')
+  {
+    // Navigator 4
+    elm.left = x;
+    elm.top  = y;
+  }
+}
+</pre>
+<h5 id="Wsparcie_dla_standard.C3.B3w" name="Wsparcie_dla_standard.C3.B3w"> Wsparcie dla standardów </h5>
+<p>Zauważ jak prosta staje się ta funkcja, gdy napiszesz ją zgodnie ze standardem W3C.
+</p>
+<pre>function moveElement(id, x, y)
+{
+  // przesuń element o identyfikatorze id
+  // do punktu x,y (gdzie x,y oznacza
+  // poziomą i pionową pozycję w pikselach)
+
+  var elm = document.getElementById(id);
+
+  if (elm)
+  {
+    elm.style.left = x + 'px';
+    elm.style.top  = y + 'px';
+  }
+}
+</pre>
+<p>Musisz zadać sobie pytanie, czy wspieranie niezgodnych ze standardami przeglądarek jest warte kosztów rozwoju i utrzymania.
+</p>
+<h4 id="Przyk.C5.82ad_3_-_Wykrywanie_okre.C5.9Blonych_wersji_Gecko" name="Przyk.C5.82ad_3_-_Wykrywanie_okre.C5.9Blonych_wersji_Gecko"> Przykład 3 - Wykrywanie określonych wersji Gecko </h4>
+<pre>// zwraca znacznik gałęzi przeglądarki Gecko
+// jako liczbę zmiennoprzecinkową.
+// zwraca   -1 dla przeglądarek o innym silniku niż Gecko
+//          0 dla wersji wcześniejszych od Netscape 6.1/Gecko 0.9.1
+//          liczbę &gt; 0, gdzie każda część znacznika
+//          oddzielona kropką będzie traktowana
+//          jak setna część ułamka
+//          np. dla znacznika 3.12.42,
+//          funkcja getGeckoRv() zwróci 3.1242
+//
+function geckoGetRv()
+{
+  if (navigator.product != 'Gecko')
+  {
+    return -1;
+  }
+  var rvValue = 0;
+  var ua      = navigator.userAgent.toLowerCase();
+  var rvStart = ua.indexOf('rv:');
+  var rvEnd   = ua.indexOf(')', rvStart);
+  var rv      = ua.substring(rvStart+3, rvEnd);
+  var rvParts = rv.split('.');
+  var exp     = 1;
+
+  for (var i = 0; i &lt; rvParts.length; i++)
+  {
+    var val = parseInt(rvParts[i]);
+    rvValue += val / exp;
+    exp *= 100;
+  }
+
+  return rvValue;
+}
+
+
+// określ czy przeglądarka jest oparta
+// na Gecko w wersji &gt;= 1.0.1 lub
+// Netscape 6.2.x/CompuServe 7 zbudowanym
+// po 1 sierpnia 2002
+
+var rv    = geckoGetRv();
+var found = false;
+
+if (rv &gt;= 0)
+{
+  // przeglądarki Gecko
+  if (navigator.productSub &gt; '20020801')
+  {
+    if (rv &gt;= 1.0001)
+    {
+      found = true;
+    }
+    else if (rv &gt;= 0.0904 &amp;&amp; rv &lt; 0.0905)
+    {
+      if (navigator.vendor == 'Netscape6' || navigator.vendor == 'CS 2000 7.0')
+      {
+        found = true;
+      }
+    }
+  }
+}
+</pre>
+<h4 id="Przyk.C5.82ad_4_-_The_International_Herald-Tribune" name="Przyk.C5.82ad_4_-_The_International_Herald-Tribune"> Przykład 4 - <a class="external" href="http://www.iht.com">The International Herald-Tribune</a> </h4>
+<p>Ta <a class="external" href="http://www.iht.com">strona</a> wykorzystuje wiele metod opisanych w tym artykule. Używają oni <i>uboższych wersji stron</i> dla gorszych przeglądarek, jednocześnie korzystając z <i>wykrywania obiektów pod kątem funkcjonalności</i>, by uczynić swoją stronę jak najbardziej interesującą.
+</p>
+<h4 id="Przyk.C5.82ady_z_DevEdge" name="Przyk.C5.82ady_z_DevEdge"> Przykłady z DevEdge </h4>
+<pre class="eval">   * xbDOM
+   * xbMarquee
+   * xbPositionableElement
+   * xbAnimatedElement
+</pre>
+<h3 id="Wnioski" name="Wnioski"> Wnioski </h3>
+<p>Jak widać z lektury niniejszego artykułu, wykrywanie wersji przeglądarki jest dość skomplikowane, głównie z powodu różnic pomiędzy nowoczesnymi przeglądarkami, jak Gecko i Internet Explorer 6, a starszymi lub nie wspierającymi standardów, jak Netscape Navigator 4. Można by rzec: "Gdyby wszystkie przeglądarki były tak dobre jak Gecko i Internet Explorer 6, życie webmastera było by o wiele łatwiejsze!"
+</p><p>Warto przy tej myśli na chwilę się zatrzymać. Niegdyś użytkownicy nie mieli możliwości wyboru przeglądarki wspierającej standardy. Czasy jednak się zmieniły i nie ma żadnych istotnych powodów, dla których warto by zostać przy starej przeglądarce. Jeżeli jednak twórcy stron wciąż będą dbać o zgodność ze starymi technologiami, to użytkownicy nie będą mieli motywacji do zmian. Rezygnując z obsługi starych przeglądarek, zachęca się użytkowników do korzystania z nowszych i doskonalszych rozwiązań. A to oznacza korzyść nie tylko dla nich, ale również dla webmasterów. Wspieranie wyłącznie <b>przeglądarek zgodnych ze standardami</b> może zmniejszyć koszty tworzenia i utrzymywania serwisu, jak i zwiększyć <b>dynamikę i wyjątkowość treści</b>, która przyciąga odwiedzających, a w efekcie zwiększa przychody. Wybór należy do Ciebie... <b>Wybierz standardy już dzisiaj!</b>
+</p>
+<h3 id="Odno.C5.9Bniki" name="Odno.C5.9Bniki"> Odnośniki </h3>
+<ul><li> <a href="pl/Poradnik_zgodno%c5%9bci_z_Gecko">Poradnik zgodności z Gecko</a>
+</li><li> <a class="external" href="http://www.mozilla.org/build/revised-user-agent-strings.html">Ciągi User-Agent Mozilli</a>
+</li><li> <a href="pl/DOM_Client_Object_Cross-Reference/navigator">Dokumentacja obiektów klienta DOM - navigator</a>
+</li><li> <a href="pl/Ci%c4%85gi_User-Agent_Gecko">Ciągi User-Agent Gecko</a>
+</li><li> <a class="external" href="http://tools.ietf.org/html/rfc1945" title="http://tools.ietf.org/html/rfc1945">RFC 1945</a> - Hypertext Transfer Protocol -- HTTP 1.0
+</li><li> <a class="external" href="http://tools.ietf.org/html/rfc2068" title="http://tools.ietf.org/html/rfc2068">RFC 2068</a> - Hypertext Transfer Protocol -- HTTP 1.1
+</li><li> <a class="external" href="http://www.mozilla.org/docs/web-developer/quirks/">Tryb zgodności wstecznej w Mozilli</a>
+</li><li> <a class="external" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnie60/html/cssenhancements.asp">Ulepszenia CSS w Internet Explorerze 6</a>
+</li><li> <a class="external" href="http://www.w3.org/">W3C</a>
+<ul><li> <a class="external" href="http://www.w3.org/MarkUp/">W3C: Znaczniki</a>
+</li><li> <a class="external" href="http://www.w3.org/TR/">W3C: Zalecenia Techniczne</a>
+<ul><li> <a class="external" href="http://www.w3.org/TR/html401/">W3C HTML 4.01</a>
+</li><li> <a class="external" href="http://www.w3.org/TR/REC-CSS1/">W3C CSS 1</a>
+</li><li> <a class="external" href="http://www.w3.org/TR/REC-CSS2/">W3C CSS 2</a>
+</li><li> <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/">W3C DOM Core 2</a>
+</li><li> <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/">W3C DOM HTML 2</a>
+</li><li> <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/">W3C DOM Style 2</a>
+</li></ul>
+</li></ul>
+</li></ul>
+<div class="originaldocinfo">
+<h3 id="Informacje_o_oryginale" name="Informacje_o_oryginale"> Informacje o oryginale </h3>
+<ul><li> Autor: Bob Clary
+</li><li> Data ostatniej modyfikacji: 10 Lip 2003
+</li></ul>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Browser_Detection_and_Cross_Browser_Support", "es": "es/Detecci\u00f3n_del_navegador_y_cobertura_a_m\u00faltiples_navegadores" } ) }}

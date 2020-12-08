@@ -1,0 +1,695 @@
+---
+title: 'Глава 3: Знакомство с XUL - Как построить интуитивный интерфейс'
+slug: >-
+  Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI
+---
+<p>{{ Fx_minversion_header(3.5) }} {{ Draft() }}</p>
+<div class="note">
+ <strong>Note: </strong>If you want to contribute to this document please follow the guidelines on the <a class="internal" href="/En/Firefox_addons_developer_guide/Contribute" title="En/Firefox_addons_developer_guide/Contribute">Contribute</a> page.</div>
+<p>{{ PreviousNext("Firefox addons developer guide/Technologies used in developing extensions", "Firefox addons developer guide/Using XPCOM—Implementing advanced processes") }}</p>
+<p> </p>
+<p><em>This document was authored by <a class="external" href="http://piro.sakura.ne.jp/" title="http://piro.sakura.ne.jp/">Hiroshi Shimoda</a> of </em><a class="external" href="http://www.clear-code.com/" title="http://www.clear-code.com/"><em>Clear Code Inc.</em></a><em> and was originally published in Japanese for the </em><a class="link-https" href="https://wiki.mozilla.org/Japan/FxDevCon/Summer2007/English" title="https://wiki.mozilla.org/Japan/FxDevCon/Summer2007/English"><em>Firefox Developers Conference Summer 2007</em></a><em>. </em><em>Shimoda-san </em><em>is a co-author of <a class="external" href="http://www.oreilly.co.jp/books/9784873113753/index.html" title="http://www.oreilly.co.jp/books/9784873113753/index.html">Firefox 3 Hacks</a> (O'Reilly Japan, 2008).</em></p>
+<p>Перед тем, как изучать как разрабатывать дополнения, давайте рассмотрим XUL - основанный на XML язык пользовательского интерфейса (UI), <span class="short_text" id="result_box" lang="ru"><span class="hps">который является одним из</span></span> строительных элементов для дополнений.</p>
+<h2 id="Introduction">Introduction</h2>
+<h3 id="An_overview_of_XUL">An overview of XUL</h3>
+<p>XUL is an XML-based language, and was developed to be the GUI markup language for the Mozilla browser. There are earlier experiments going back a long way in developing user interfaces using a combination of HTML and scripting languages, and XUL could be considered an evolutionary step from that. Similar approaches are found in XAML, which is used in Windows Vista, and Flex, which is used in Adobe Flash. Like web pages, which display the same regardless of platform, applications marked up in XUL will work the same in any environment where Firefox runs.</p>
+<p>Because HTML was originally conceived as a language for marking up documents, specifically web pages, it is inevitably lacking in functionality for marking up applications. XUL, on the other hand, was conceived from the ground up as a markup language for user interfaces, and makes it possible to insert UI components with sophisticated features just by writing tags, without any particular scripting.</p>
+<p>Unlike languages with formal specifications that have been standardized by bodies like the W3C, XUL currently does not have an explicit specification.</p>
+<div class="note">
+ <strong>Note: </strong>Although there is a specification document, its markup is based on implementations and markup as of 2001, and current XUL differs from it in many aspects. For the latest XUL specifications, please see the <a class="internal" href="/en/XUL_Reference" title="en/XUL Reference">XUL Reference on MDC</a> and the <a class="external" href="http://wiki.mozilla.org/XUL" title="http://wiki.mozilla.org/XUL">XUL page</a> in the Mozilla wiki.</div>
+<p>For each element that I explain in this chapter, I will illustrate it with a source code example. You can type these examples up and open them in Firefox to see how they behave and appear. You can download a file with all the source code examples from: {{ TODO("Attache the translated tarball - Paul Task !") }}.</p>
+<h4 id="XUL_display_methods">XUL display methods</h4>
+<p>XUL is used almost exclusively in Mozilla applications like Firefox and Thunderbird, and extensions for them, but other web browsers based on Firefox or the Gecko engine, and even web-based content also used XUL. For example, there is the <a class="external" href="http://www.faser.net/mab/chrome/content/mab.xul" title="http://www.faser.net/mab/chrome/content/mab.xul">Mozilla Amazon Browser</a>, which helps with shopping at Amazon, and the <a class="external" href="http://piro.sakura.ne.jp/xul/applications/takahashi-r/" title="http://piro.sakura.ne.jp/xul/applications/takahashi-r/">Presentation Method in XUL</a>, a tool for writing and displaying presentations</p>
+<p>To try out the code samples in this chapter, save them as text files with <code>.xul</code> extensions and drag and drop them into the Firefox browser window.</p>
+<p>{{ TODO("Explain how setting this option and use next listings") }}</p>
+<p>If we want to run Firefox displaying none of its GUI and only the contents of a certain XUL file, we can launch Firefox and set the option: <code>-chrome file_URL.xul</code></p>
+<p>Another way, as shown in Listing 1, is to use the <a class="internal" href="/en/DOM/window.openDialog" title="En/DOM/Window.openDialog"><code>window.openDialog()</code></a> method, which can be used only within a XUL window. This is used by extensions to open a separate window.</p>
+<pre>window.openDialog('another.xul', '_blank','chrome,all,dialog=no'); </pre>
+<p><strong>Listing 1: Opening a window without the Firefox GUI</strong></p>
+<h4 id="XUL_as_an_XML_application">XUL as an XML application</h4>
+<p style="text-align: left;">Listing 2 shows an example of a GUI definition file marked up in XUL (a "XUL document"). The root element in XUL is generally the "window" element. The namespace URI is :</p>
+<pre><code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code>
+</pre>
+<p style="text-align: left;">If the character encoding is UTF-8, both the encoding specifier and the XML declaration can be omitted. But for the samples in this chapter, please include them. </p>
+<p>Because a XUL document is also an XML document, it can contain XHTML, SVG, MathML, and other elements; if you use external entity references, the XML document's contents are modularized; combined with other XML-related technologies, such as DOM, XLink, or XSLT, you can use it for a number of different applications.</p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/"?&gt;
+&lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;!-- Contents go here. --&gt;
+&lt;/window&gt;
+</pre>
+<p><strong>Listing 2: General structure of a XUL document</strong></p>
+<p>Even with the internationalization of Firefox and extensions, this kind of XML function is being used.</p>
+<h4 id="Reading_in_style_sheets">Reading in style sheets</h4>
+<p>XUL uses CSS to specify the appearance of its elements. Again, since XUL is a type of XML, stylesheets are read in using the <code>xml-stylesheet</code> processing instruction.</p>
+<p>On line 2 of Listing 2, we’re reading in the theme’s standard style sheet. By referring to a special style sheet within <code><a class="external" rel="freelink">chrome://global/skin/</a></code>, we can make label and button sizes, window background color, etc, match the currently selected theme in Firefox. We can also read in a stylesheet that we had set up ourselves.</p>
+<h4 id="The_XUL_box_model">The XUL box model</h4>
+<p>In principle, XUL lays out all UI components using combinations of two kinds of boxes: horizontal and vertical. As shown in Listing 3, elements can be laid out horizontally using the <a class="internal" href="/en/XUL/hbox" title="En/XUL/Hbox"><code>hbox</code></a> (horizontal box) element or vertically using the <a class="internal" href="/en/XUL/vbox" title="En/XUL/Vbox"><code>vbox</code></a> (vertical box) element. When this file is opened in Firefox, it is displayed as shown in Figure 1.</p>
+<pre class="brush: xml">&lt;label value="Horizontal layout"/&gt;
+&lt;hbox&gt;
+  &lt;button label="horizontal1"/&gt;
+  &lt;button label="horizontal2"/&gt;
+&lt;/hbox&gt;
+&lt;label value="Vertical layout"/&gt;
+&lt;vbox&gt;
+  &lt;button label="vertical1"/&gt;
+  &lt;button label="vertical2"/&gt;
+&lt;/vbox&gt;
+&lt;label value="mixed"/&gt;
+&lt;hbox&gt;
+  &lt;button label="mixed1"/&gt;
+  &lt;vbox&gt;
+    &lt;button label="mixed2"/&gt;
+    &lt;button label="mixed3"/&gt;
+  &lt;/vbox&gt;
+  &lt;button label="mixed4"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><strong>Listing 3: Horizontal and vertical boxes</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3819/=figure-1.png" style="width: 492px; height: 222px;"></p>
+<p><strong>Figure 1: Output of Listing 3</strong></p>
+<p>There is also a <a class="internal" href="/en/XUL/grid" title="En/XUL/Grid"><code>grid</code></a> element, which can be used for layouts similar to those achieved using the HTML <code>table</code> element, a <a class="internal" href="/en/XUL/stack" title="En/XUL/Stack"><code>stack</code></a> element for layering other elements, and so on. All on-screen widgets are laid out using these boxes, making complex interface designs possible.</p>
+<h4 id="Common_attributes">Common attributes</h4>
+<p>Before we look at the various interface objects, let's look at some of their common attributes, especially the frequently used ones.</p>
+<h5 id="id_and_class">id and class</h5>
+<p>The attributes <a class="internal" href="/en/XUL/Attribute/id" title="En/XUL/Attribute/Id"><code>id</code></a> and <a class="internal" href="/en/XUL/Attribute/class" title="En/XUL/Attribute/Class"><code>class</code></a> fill the same role that the XHTML attributes of the same names fill. <code>id</code> is used to define a unique name for an element, and <code>class</code> is used to classify elements; both of these provide convenient ways to refer to elements in CSS and JavaScript. There are also special kinds of element that only come into play after being referenced by another element.</p>
+<h5 id="orient">orient</h5>
+<p>Whether a box's contents will be vertically or horizontally arrayed depends on the elements in their initial state. You can explicitly set or change this layout using the <a class="internal" href="/en/XUL/Property/orient" title="En/XUL/Property/Orient"><code>orient</code></a> attribute, with options for horizontal and vertical.</p>
+<h5 id="align_and_pack">align and pack</h5>
+<p>The <a class="internal" href="/en/XUL/Attribute/align" title="En/XUL/Attribute/Align"><code>align</code></a> and <a class="internal" href="/en/XUL/Attribute/pack" title="En/XUL/Attribute/Pack"><code>pack</code></a> attributes both specify the layout of elements within a box. They can both take the values <code>start</code> (top or left), <code>center</code>, <code>end</code> (bottom or right), or <code>stretch</code> (extend this element to match the element with the greatest height or width).</p>
+<p>The <code>align</code> attribute is defined as operating in the axis perpendicular to the <code>orient</code> attribute, while the pack attribute operates along the same axis as the orient attribute. Figure 2 shows how setting <code>align="center" pack="start"</code> on two elements will result in completely different output with the only difference being the value for orient.</p>
+<pre class="brush: xml">&lt;box flex="1" align="end" pack="end"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;</pre>
+<p><strong>Listing 2: How align and pack respond to orient</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3839/=figure-2.png" style="width: 331px; height: 83px;"></p>
+<p> </p>
+<p><strong>Figure 2: Output from listing 2</strong></p>
+<h5 id="flex">flex</h5>
+<p>Elements ordinarily have fixed height and width. The <a class="internal" href="/en/XUL/Attribute/flex" title="En/XUL/Attribute/Flex"><code>flex</code></a> attribute indicates that an element should be expanded to take up all of a window's height or width.</p>
+<p><code>flex</code> takes a positive integer as a value, which is a growth multiple on the axis of the parent element's <code>orient</code> attribute. For example, <code>flex="1"</code> indicates that the element should extend to fill that axis; if there are two elements with <code>flex="1"</code> in a row, they are adjusted to be of equal size. You can assign <code>flex="2"</code> (or higher values) as a size multiplier for elements. In Listing 4, the second label will be displayed twice as big as the first (Figure 3).</p>
+<pre class="brush: xml">&lt;hbox&gt;
+  &lt;label value="label1" flex="1" style="border: 1px solid;"/&gt;
+  &lt;label value="label2" flex="2" style="border: 1px solid;"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><strong>Listing 4: Growing with flex</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3820/=figure-3.png" style="width: 485px; height: 23px;"></p>
+<p><strong>Figure 3: Output of Listing 4</strong></p>
+<h5 id="ordinal">ordinal</h5>
+<p>Within a XUL box, elements will ordinarily be laid out following their order of appearance in the source code (laid out left to right or top to bottom). Use the <a class="internal" href="/en/XUL/Attribute/ordinal" title="En/XUL/Attribute/Ordinal"><code>ordinal</code></a> attribute to alter their order. The <code>ordinal</code> attribute takes positive integer values, which are used to order the box’s layout—in the example in Listing 5, the buttons would be laid out in the order button3, button2, button1 (Figure 4).</p>
+<p>If multiple elements have the same ordinal value, they will be laid out in the same relative order they appear in the source code. The default value for ordinal is 1.</p>
+<pre class="brush: xml">&lt;vbox&gt;
+  &lt;button label="button1" ordinal="3"/&gt;
+  &lt;button label="button2" ordinal="2"/&gt;
+  &lt;button label="button3" ordinal="1"/&gt;
+&lt;/vbox&gt;
+</pre>
+<p><strong>Listing 5: Changing order with ordinal</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3821/=figure-4.png" style="width: 489px; height: 98px;"></p>
+<p><strong>Figure 4: Output of Listing 5</strong></p>
+<h5 id="box_size">box size</h5>
+<p>You can set the size of XUL elements explicitly using the <a class="internal" href="/en/XUL/Attribute/width" title="En/XUL/Attribute/Width"><code>width</code></a> and <a class="internal" href="/en/XUL/Attribute/height" title="En/XUL/Attribute/Height"><code>height</code></a> attributes, as shown in Listing 6. If you are creating elements that can grow using the <code>flex</code> attribute, you can also set minimums and maximums using <a class="internal" href="/en/XUL/Attribute/minwidth" title="En/XUL/Attribute/Minwidth"><code>minwidth</code></a>, <a class="internal" href="/en/XUL/Attribute/minheight" title="En/XUL/Attribute/Minheight"><code>minheight</code></a>, <a class="internal" href="/en/XUL/Attribute/maxwidth" title="En/XUL/Attribute/Maxwidth"><code>maxwidth</code></a>, and <a class="internal" href="/en/XUL/Attribute/maxheight" title="En/XUL/Attribute/Maxheight"><code>maxheight</code></a>. These all use pixels as the unit of size.</p>
+<pre class="brush: xml">&lt;button label="Button" width="200" height="100"/&gt;
+</pre>
+<p><strong>Listing 6: Setting the size of a button</strong></p>
+<p>Also, as shown in Listing 7, you can embed CSS inline into elements via the <a class="internal" href="/en/XUL/Attribute/style" title="En/XUL/Attribute/Style"><code>style</code></a> attribute, which allows you to set sizes using units other than pixels.</p>
+<pre class="brush: xml">&lt;button label="Button" style="min-width: 10em;"/&gt;
+</pre>
+<p><strong>Listing 7: Setting the size of a button using CSS markup</strong></p>
+<h5 id="hidden_and_collapsed">hidden and collapsed</h5>
+<p>The <a class="internal" href="/en/XUL/Attribute/hidden" title="En/XUL/Attribute/Hidden"><code>hidden</code></a> and <a class="internal" href="/en/XUL/Attribute/collapsed" title="En/XUL/Attribute/Collapsed"><code>collapsed</code></a> attributes act as switches to turn off the display of elements.</p>
+<p>Setting <code>hidden="true"</code> disables display of that element. This has the same effect as setting <code>display: none</code> in CSS. You would use this to set a hidden or absent state, for example items that aren't displayed in contextual menus.</p>
+<p>Setting <code>collapsed="true"</code> sets an element's height and width to 0, but the element is treated as being present. This is equivalent to setting <code>visibility: collapse</code> in CSS. Use this to "roll up" sidebars that aren't currently in use.</p>
+<h5 id="disabled">disabled</h5>
+<p>While not appropriate for all elements, you can use the <a class="internal" href="/en/XUL/Attribute/disabled" title="En/XUL/Attribute/Disabled"><code>disabled</code></a> attribute to temporarily disable input to an element that is normally operable by the user. Typically, elements with the <code>disabled="true"</code> attribute will appear as either transparent or pale gray.</p>
+<div class="note">
+ <strong>Note: </strong>With attributes like <code>hidden</code>, <code>collapsed</code>, and <code>disabled</code>, which take Boolean values, setting <code>disabled="false"</code> in XUL can have unintended consequences. This is because there may be cases where a script or CSS rule will be written in such a way that they treat the value as true unconditionally if any value has been set. So when changing the attribute’s value using a DOM function for example, do not use <code>setAttribute('disabled', false)</code> — instead, use <code>removeAttribute('disabled')</code>.</div>
+<h5 id="tooltiptext">tooltiptext</h5>
+<p>Use the <a class="internal" href="/en/XUL/Attribute/tooltiptext" title="En/XUL/Attribute/Tooltiptext"><code>tooltiptext</code></a> attribute to display a brief explanatory tooltip above the element. The text entered as the value for this attribute is what gets displayed as the tooltip.</p>
+<h5 id="persist">persist</h5>
+<p>The <a class="internal" href="/en/XUL/Attribute/persist" title="En/XUL/Attribute/Persist"><code>persist</code></a> attribute is an easy way to record and store a XUL element’s state after it has been changed by a user operation. Enter the names of the other attributes whose values you want to store as a space-delimited ASCII string into the value for persist; the next time that XUL document is opened, the saved values will automatically be restored<sup><a href="#footnote4" id="from_footnote4">4</a></sup>. The settings system, which we will explore in <a class="internal" href="/En/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes" title="En/Firefox addons developer guide/Using XPCOM—Implementing advanced processes">Chapter 4</a>, makes it possible to save simple states without any complex scripts.</p>
+<div class="note">
+ <strong>Note: </strong>These values are stored in <code>localstore.rdf</code>, inside the user profile.</div>
+<p>In order for the <code>persist</code> attribute to record the states of other elements, each of those elements must have its <code>id</code> set. </p>
+<h2 id="Widgets_that_can_be_used_in_XUL">Widgets that can be used in XUL</h2>
+<h3 id="Root_elements">Root elements</h3>
+<p>XUL documents use different root elements for different purposes. In this section, we’ll look at three typical types of root element: the <a class="internal" href="/en/DOM/window" title="En/DOM/Window"><code>window</code></a>, <a class="internal" href="/en/XUL/page" title="En/XUL/Page"><code>page</code></a>, and <a class="internal" href="/en/XUL/dialog" title="En/XUL/Dialog"><code>dialog</code></a> elements.</p>
+<p>Root elements use the <a class="internal" href="/en/XUL/Attribute/windowtype" title="En/XUL/Attribute/Windowtype"><code>windowtype</code></a> attribute as an arbitrary identifier for the type of window. For example, Firefox uses the windowtype <code>navigator:browser</code> for its browser window and <code>Browser:Preferences</code> for its options dialog. Using methods we will cover in <a class="internal" href="/En/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes" title="En/Firefox addons developer guide/Using XPCOM—Implementing advanced processes">Chapter 4</a>, we will see how windows can be acquired using these values as keys.</p>
+<p>A window's dimensions and location on screen can be specified using the attributes <code>width</code>, <code>height</code>, <code>screenX</code>, and <code>screenY</code> (all using pixels as units). With the previously discussed <code>persist</code> attribute, you can easily store a window's size and location. Firefox uses this method to store its own window sizes and locations as well.</p>
+<h4 id="General_root_elements">General root elements</h4>
+<h5 id="window">window</h5>
+<p>The <code>window</code> element that has appeared in examples so far is a root element used to define an ordinary window. This displays the same kind of window used for the Firefox browser window, the bookmark manager window, and many other windows. You can generally use the window element as your root element.</p>
+<h5 id="page">page</h5>
+<p>For sidebar panels and other XUL documents that are opened within inline frames, use the <code>page</code> element as the root element. Apart from having a different intended purpose than the window element, it is functionally no different.</p>
+<h4 id="Root_elements_for_dialog_windows">Root elements for dialog windows</h4>
+<h5 id="dialog">dialog</h5>
+<p>Use the <code>dialog</code> element when creating options dialogs, confirmation dialogs, etc. This element takes a number of attributes, and can easily be made to display controls (buttons, etc) using widgets and layouts native to whatever platform it is running on.</p>
+<p>For example, Windows places the OK button on the left and the Cancel button on the right, while Mac OS X has the opposite layout. This is what Firefox itself uses for bookmark properties and other dialogs.</p>
+<h5 id="Buttons_used_in_dialog_windows">Buttons used in dialog windows</h5>
+<p>A <code>dialog</code> element will display some number of buttons at its bottom. As shown in Table 1, there are four types of buttons that can be displayed, and you can set the names of the buttons you want to display as a comma-delimited list in the value of the <a class="internal" href="/en/XUL/Attribute/buttons" title="En/XUL/Attribute/buttons"><code>buttons</code></a> attribute.</p>
+<p>{{ TODO("Make the table cleaner") }}</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Button name</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>accept</code></td>
+   <td>The OK button.</td>
+  </tr>
+  <tr>
+   <td><code>cancel</code></td>
+   <td>The cancel button.</td>
+  </tr>
+  <tr>
+   <td><code>help</code></td>
+   <td>The help button.</td>
+  </tr>
+  <tr>
+   <td><code>disclosure</code></td>
+   <td>Either a disclosure triangle or a button.  This is used to allow the user to toggle the display of additional information.</td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Table 1: Types of buttons that can be displayed in the dialog element</strong></p>
+<p>Additionally, there are two special button names, <code>extra1</code> and <code>extra2</code>. The labels for these buttons are set using the <a class="internal" href="/en/XUL/Attribute/buttonlabelextra1" title="En/XUL/Attribute/Buttonlabelextra1"><code>buttonlabelextra1</code></a> and <a class="internal" href="/en/XUL/Attribute/buttonlabelextra2" title="En/XUL/Attribute/Buttonlabelextra2"><code>buttonlabelextra2</code></a> attributes on the root element, which take arbitrary strings as their values.</p>
+<p>The action taken when pressing one of these buttons is defined by an event handler with the name <code>ondialog&lt;button name&gt;</code>. If these event handlers are not defined, pressing either the accept button or cancel button will simply close that dialog. Listing 8 shows a simple dialog example, and Figure 5 shows its output.</p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/"?&gt;
+&lt;dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    title="My Dialog" buttons="accept,cancel"
+    ondialogaccept="saveValues(); window.close();"
+    ondialogcancel="window.close();"&gt;
+  &lt;checkbox label="My Option"/&gt;
+&lt;/dialog&gt;
+</pre>
+<p><strong>Listing 8: A dialog</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3822/=figure-5.png" style="width: 330px; height: 121px;"></p>
+<p><strong>Figure 5: Output from Listing 8</strong></p>
+<div class="note">
+ <strong>Note: </strong>The functions behind the dialog elements discussed here require "XPConnect privileges," which are discussed in Chapter 4, so this example will only run correctly if it can run as Firefox code itself or installed extension code. Please be aware that if you attempt to open this sample directly in Firefox, it will not run correctly.</div>
+<h3 id="Menus">Menus</h3>
+<p>Hierarchically structured dropdown menus are the part of the user interface used for frequently accessed functions in an application or web service. In the past, a combination of HTML and JavaScript was used to produce this sort of complex UI structure, but in XUL, it can be handled easily just by writing tags.</p>
+<h4 id="Creating_the_menu">Creating the menu</h4>
+<p>Listing 9 shows how the <a class="internal" href="/en/XUL/menu" title="En/XUL/Menu"><code>menu</code></a> element and its related elements are combined. This produces the output seen in Figure 6.</p>
+<pre class="brush: xml">&lt;menubar&gt;
+  &lt;menu label="Menu 1"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Item 1"/&gt;
+      &lt;menuitem label="Item 2"/&gt;
+      &lt;menuseparator/&gt;
+      &lt;menuitem label="Item 3"/&gt;
+      &lt;menu label="Submenu"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Item 4"/&gt;
+          &lt;menuitem label="Item 5"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menu&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+<p><strong>Listing 9: A menu definition</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3834/=figure-6.png" style="width: 203px; height: 35px;"></p>
+<p><strong>Figure 6: Output from Listing 9</strong></p>
+<p>Each item in a menu is marked up with the <a class="internal" href="/en/XUL/menuitem" title="En/XUL/Menuitem"><code>menuitem</code></a> tag. Use the <a class="internal" href="/en/XUL/menuseparator" title="En/XUL/Menuseparator"><code>menuseparator</code></a> element to insert a separator bar that groups items together. Both <code>menu</code> and <code>menuitem</code> elements take the <a class="internal" href="/en/XUL/Attribute/label" title="En/XUL/Attribute/Label"><code>label</code></a> attribute to set their labels.</p>
+<p>Insert <code>menu</code> elements into a <a class="internal" href="/en/XUL/menubar" title="En/XUL/Menubar"><code>menubar</code></a> element to create multiple menus. You can easily create hierarchical menus by inserting <a class="internal" href="/en/XUL/menupopup" title="En/XUL/Menupopup"><code>menupopup</code></a> and <code>menu</code> elements.</p>
+<p>You can even display icons in menus by adding <code>class="menuitem-iconic"</code> to a <code>menuitem</code> element, along with a <code>src</code> attribute that gives an image URI. Figure 7 shows an example of how this is displayed.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/3838/=figure-7.png" style="width: 155px; height: 134px;"></p>
+<p><strong>Figure 7: Menu items with icons</strong></p>
+<h4 id="Executing_commands_when_selecting_menu_items">Executing commands when selecting menu items</h4>
+<p>Much like dynamic HTML, event handlers are used to execute a command when a menu item is selected. To respond to mouse and keyboard inputs in HTML, the <a class="internal" href="/en/DOM/element.onclick" title="En/DOM/Element.onclick"><code>onclick</code></a> event handler is typically used to respond to mouse clicks, and the <a class="internal" href="/en/DOM/element.onkeypress" title="En/DOM/Element.onkeypress"><code>onkeypress</code></a> event handler for keyboard input.</p>
+<p>XUL can also use these event handlers, but XUL also offers the <a class="internal" href="/en/XUL/Attribute/oncommand" title="En/XUL/Attribute/Oncommand"><code>oncommand</code></a> special event handler to deal with actions that often have specific meanings, such as selection by a left-click (or right-click on systems set up as left-handed) on the mouse or selection by the Enter key. Listing 10 shows an example of the <code>oncommand</code> event handler in use. Apart from <code>menuitem</code> elements, it can be used with buttons and other input controls.</p>
+<pre class="brush: xml">&lt;menuitem label="Open project page" oncommand="loadURI(this.value)"
+      value="http://mozilla.org/"/&gt; </pre>
+<p class="western" style="margin-bottom: 0.17in; text-align: justify;"><strong>Listing 10: The oncommand event handler</strong></p>
+<p class="western" style="margin-bottom: 0.17in; text-align: justify;">Because the Gecko engine implements DOM Level 2 event handlers, you can define dynamic event listeners such as the one in Listing 11.</p>
+<pre class="brush: js">var item = document.getElementById('menu-item-custom');
+function handleCommandEvent(aEvent) {
+  alert('OK');
+  item.removeEventListener('command', handleCommandEvent, false);
+  item.parentNode.removeChild(item);
+}
+
+item.addEventListener('command', handleCommandEvent, false);
+</pre>
+<p><strong>Listing 11: Additions and deletions using a dynamic event listener</strong></p>
+<h5 id="Special_menu_items">Special menu items</h5>
+<p>Much like input elements in HTML, <code>menuitem</code> elements can operate like checkboxes and radio buttons by setting their <a class="internal" href="/en/XUL/Attribute/menuitem.type" title="En/XUL/Attribute/Menuitem.type"><code>type</code></a> attributes.</p>
+<h6 id="checkbox">checkbox</h6>
+<p>Adding <code>type="checkbox"</code> to a <code>menuitem</code> element will check that when it is selected, and uncheck it if it is selected again. For an example of menu items with checkboxes, see the <em>View</em> menu in Firefox, with items to show or hide the toolbar and sidebar. When one has been checked, then the <code>checked="true"</code> attribute is set.</p>
+<h6 id="radio_button">radio button</h6>
+<p>Assigning <code>type="radio"</code> to multiple <code>menuitem</code> elements and setting them to have the same name attribute groups them so that selecting one deselects all the others, much like radio buttons in HTML. For an example of this kind of menu item, see the <em>Character Encoding</em> submenu of the View menu in Firefox. The selected radio button has the <code>selected="true"</code> attribute set.</p>
+<h6 id="Contextual_menus">Contextual menus</h6>
+<p>The <a class="internal" href="/en/XUL/Attribute/context" title="En/XUL/Attribute/Context"><code>context</code></a> attribute is used to display a contextual menu or shortcut menu, that is, a custom menu that will appear when right-clicking on an element.</p>
+<p>Earlier we placed the <a class="internal" href="/en/XUL/menupopup" title="En/XUL/Menupopup"><code>menupopup</code></a> child element inside a menu element; here, we use it outside the menu element. Instead, the <code>menupopup</code> element is a direct child of the root element and we invoke it using its <code>id</code> attribute, which we set as the value for the <code>context</code> attribute on any other XUL element. When we right-click on that XUL element, we reference that <code>menupopup</code> element by its <code>id</code>, and display its contents as a contextual menu. Listing 12 shows an example.</p>
+<pre class="brush: xml">&lt;button label="Send" oncommand="send();" context="button-context"/&gt;
+&lt;menupopup id="button-context"&gt;
+  &lt;menuitem label="Send with new tab" oncommand="sendInNewTab();"/&gt;
+&lt;/menupopup&gt; </pre>
+<h6 id="Buttons">Buttons</h6>
+<p>Buttons that users can click on are defined using the <a class="internal" href="/en/XUL/button" title="En/XUL/Button"><code>button</code></a> element. To show one with an icon as shown in Figure 8, define an image's URI as the value for the image attribute.</p>
+<div class="note">
+ <strong>Note:</strong> To see this sample in operation, use any image as the one to display and place it in the same folder as the XUL document.</div>
+<p>Using the <a class="internal" href="/en/XUL/Attribute/icon" title="En/XUL/Attribute/Icon"><code>icon</code></a> attribute instead of the image attribute allows you to display buttons with icons that are standard for the platform.</p>
+<p>Possible values for the icon attribute are given in Table 2.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/3837/=figure-8.png" style="width: 384px; height: 40px;"></p>
+<p><strong>Figure 8: A button with an image</strong></p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header"><code>icon</code> attribute value</td>
+   <td class="header"><code>icon</code> attribute value</td>
+  </tr>
+  <tr>
+   <td><code>accept</code></td>
+   <td><code>close</code></td>
+  </tr>
+  <tr>
+   <td><code>cancel</code></td>
+   <td><code>print</code></td>
+  </tr>
+  <tr>
+   <td><code>help</code></td>
+   <td><code>add</code></td>
+  </tr>
+  <tr>
+   <td><code>open</code></td>
+   <td><code>remove</code></td>
+  </tr>
+  <tr>
+   <td><code>save</code></td>
+   <td><code>refresh</code></td>
+  </tr>
+  <tr>
+   <td><code>find</code></td>
+   <td><code>go-forward</code></td>
+  </tr>
+  <tr>
+   <td><code>clear</code></td>
+   <td><code>go-back</code></td>
+  </tr>
+  <tr>
+   <td><code>yes</code></td>
+   <td><code>properties</code></td>
+  </tr>
+  <tr>
+   <td><code>no</code></td>
+   <td><code>select-font</code></td>
+  </tr>
+  <tr>
+   <td><code>apply</code></td>
+   <td><code>select-color</code></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Table 2: Values for the icon attribute</strong></p>
+<h6 id="Toolbar_buttons">Toolbar buttons</h6>
+<p>The <a class="internal" href="/en/XUL/toolbarbutton" title="En/XUL/Toolbarbutton"><code>toolbarbutton</code></a> element is the element used to define toolbar buttons. This is typically placed inside a <a class="internal" href="/en/XUL/toolbar" title="En/XUL/Toolbar"><code>toolbar</code></a> element, which defines a toolbar, but it can be used in other locations.</p>
+<p>These mostly act the same as <code>button</code> elements, but as shown in Listing 13, you can change the behavior of <code>toolbarbutton</code> elements using the <code>type</code> attribute. This is illustrated in the output in Figure 9.</p>
+<pre class="brush: xml">&lt;toolbar&gt;
+  &lt;toolbarbutton label="Checkbox Type" type="checkbox" image="firefox.png"/&gt;
+  &lt;toolbarbutton label="Menu Type" type="menu" popup="button-popup" image="firefox.png"/&gt;
+  &lt;toolbarbutton label="Menu Button Type" type="menu-button" popup="button-popup" image="firefox.png"/&gt;
+  &lt;menupopup id="button-popup"&gt;
+    &lt;menuitem label="Item 1"/&gt;
+    &lt;menuitem label="Item 2"/&gt;
+    &lt;menuitem label="Item 3"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbar&gt;
+</pre>
+<p><strong>Listing 13: Various toolbar buttons</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3835/=figure-9.png" style="width: 359px; height: 38px;"></p>
+<p><strong>Figure 9: Output of Listing 13</strong></p>
+<h6 id="-_Checkbox-type_toolbar_buttons">- Checkbox-type toolbar buttons</h6>
+<p>Specifying<code> type="checkbox"</code> results in a button that stays depressed when clicked, and pops up when clicked again. The button in its depressed state has <code>checked="true"</code> set. This is the kind of button used for the History and Bookmark buttons that can be used to customize the toolbar.</p>
+<h6 id="-_Menu-type_toolbar_buttons">- Menu-type toolbar buttons</h6>
+<p>Specifying <code>type="menu"</code> and adding a <code>menupop</code> child element (In Firefox 3, you can also use the <a class="internal" href="/en/XUL/panel" title="En/XUL/Panel"><code>panel</code></a> element), or setting the <a class="internal" href="/en/XUL/Attribute/popup" title="En/XUL/Attribute/Popup"><code>popup</code></a> attribute to reference a popup menu located elsewhere by its <code>id</code>, will display a popup menu when the button is pressed. Here, the button-click itself is not taken as the input; instead, a command event is issued only when a popup menu item is selected. This is the type of button used for the List All Tabs button at the right edge of the tab bar.</p>
+<h6 id="-_Menu-button-type_toolbar_buttons">- Menu-button-type toolbar buttons</h6>
+<p>Specifying <code>type="menu-button"</code> results in a special button that combines features of both a normal toolbar button and one with <code>type="menu"</code>, so that clicking the button itself does issue a command event. This is the type of button used for the Back and Forward buttons.</p>
+<h3 id="Input_Controls">Input Controls</h3>
+<p>XUL includes a number of input control elements that are very similar to HTML's form-related elements.</p>
+<h4 id="Labels">Labels</h4>
+<p>Use the <a class="internal" href="/en/XUL/label" title="En/XUL/Label"><code>label</code></a> element for individual text labels, such as descriptive text. The value of the <code>value</code> attribute is the text that will be displayed. The <code>control</code> attribute takes as its value an <code>id</code> reference to another XUL element with that <code>id</code>; clicking that label or giving it focus can be used to pass the focus to the referenced XUL element.</p>
+<p>This can also be used to display longer chunks of text. If you want to insert long strings that automatically wrap to the window’s width, you can use the <code>flex</code> attribute as shown in Listing 14, which will automatically expand it; in this case you don't set the value using the <code>value</code> attribute, instead you should place it in the contents of the element. Figure 10 shows the output from this listing.</p>
+<pre class="brush: xml">&lt;hbox&gt;
+  &lt;label flex="1"&gt;
+  Proceeding with this action will send your personal information to a server. Are you sure you want to proceed?
+  &lt;/label&gt;
+&lt;/hbox&gt;
+</pre>
+<p><strong>Listing 14: Handling long text in a label</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3830/=figure-10.png" style="width: 309px; height: 57px;"></p>
+<p><strong>Figure 10: Output from Listing 14</strong></p>
+<h5 id="Shortening_labels">Shortening labels</h5>
+<p>Between the <code>label</code> element and the <code>label</code> attribute on other XUL elements, there can be a lot of labeled elements in XUL. A common attribute that can be set on all of them is the <a class="internal" href="/en/XUL/Property/crop" title="En/XUL/Property/Crop"><code>crop</code></a> attribute.</p>
+<p>By applying the <code>crop</code> attribute to elements with the <code>label</code> attribute set or to the <code>label</code> element, part of the label will be replaced by an ellipsis (…) if it overflows the width of the parent element. The part of the label that gets cropped can be controlled by setting its value to <code>start</code>, <code>center</code>, or <code>end</code>.</p>
+<p>You can set the maximum width of the box using the CSS <a class="internal" href="/en/CSS/max-width" title="En/CSS/Max-width"><code>max-width</code></a> property.</p>
+<h4 id="Checkboxes">Checkboxes</h4>
+<p>The checkbox shown in Figure 11 was marked up using the <a class="internal" href="/en/XUL/checkbox" title="En/XUL/Checkbox"><code>checkbox</code></a> element. When it is in its checked state, its checked attribute is set to true.</p>
+<pre class="brush: xml">&lt;checkbox label="Checkbox checked" checked="true"/&gt;
+&lt;checkbox label="Checkbox unchecked" checked="false"/&gt;
+</pre>
+<p><strong>Listing 11: Checkboxes in different state</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3836/=figure-11.png" style="width: 189px; height: 52px;"></p>
+<p><strong>Figure 11: Output from listing 11</strong></p>
+<h4 id="Radio_Buttons">Radio Buttons</h4>
+<p>Radio buttons in HTML are multiple input elements grouped by assigning them all the same <code>name</code> attribute. In XUL, this is expressed using a combination of two elements: <a class="internal" href="/en/XUL/radiogroup" title="En/XUL/Radiogroup"><code>radiogroup</code></a> and <a class="internal" href="/en/XUL/radio" title="En/XUL/Radio"><code>radio</code></a>. You set exclusive options by inserting multiple radio elements into the content of one <code>radiogroup</code> element; the currently selected <code>radio</code> element will have <code>selected="true"</code> set.</p>
+<p>The <code>radio</code> element can be uniquely identified by setting its <code>value</code> attribute. When that <code>radio</code> element is selected, the value of its <code>value</code> attribute is copied to the <code>radiogroup</code>, so that you can check for the selected radio button simply by fetching the <code>radiogroup</code> element’s <code>value</code> attribute.</p>
+<p>There may be situations where you want to locate a <code>radio</code> element outside of a <code>radiogroup</code> element. By combining it with <code>hbox</code> and <code>vbox</code>, you can write code similar to that shown in Listing 15, which will produce output as shown in Figure 12.</p>
+<pre class="brush: xml">&lt;radiogroup orient="vertical"&gt;
+  &lt;hbox&gt;
+    &lt;radio label="Top Left"/&gt;
+    &lt;radio label="Top Right"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox&gt;
+    &lt;radio label="Bottom Left"/&gt;
+    &lt;radio label="Bottom Right"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p><strong>Listing 15: A complex layout of radio buttons</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3831/=figure-12.png" style="width: 226px; height: 55px;"></p>
+<p><strong>Figure 12: Output from Listing 15</strong></p>
+<h4 id="Text_boxes">Text boxes</h4>
+<p>Use the <a class="internal" href="/en/XUL/textbox" title="En/XUL/Textbox"><code>textbox</code></a> element to accept text input. In HTML, there are two separate elements—<code>input</code> for one line of text, and <code>textarea</code> for multiple lines. But both these functions are handled by <code>textbox</code> as shown in Listing 16, which produces output as shown in Figure 13.</p>
+<p>The <code>textbox</code> element uses the <code>value</code> attribute to set its default content; content entered by the user also can be captured using the <code>value</code> attribute. To set a maximum length in characters, declare the <a class="internal" href="/en/XUL/Attribute/maxlength" title="En/XUL/Attribute/Maxlength"><code>maxlength</code></a> attribute with a positive integer value. Setting <code>type="password"</code> will turn the <code>textbox</code> into a special password-entry field, in which characters are hidden as they're typed.</p>
+<p>Every character entered into a <code>textbox</code> generates an <code>input</code> event. If you use the <a class="internal" href="/en/XUL/Attribute/oninput" title="En/XUL/Attribute/Oninput"><code>oninput</code></a> event handler, you can implement commands that reflect user input in real time.</p>
+<pre class="brush: xml">&lt;vbox align="start"&gt;
+  &lt;textbox/&gt;
+  &lt;textbox multiline="true" rows="5" cols="15"/&gt;
+&lt;/vbox&gt;
+</pre>
+<p><strong>Listing 16: <code>textbox</code> examples</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3832/=figure-13.png" style="width: 197px; height: 148px;"></p>
+<p><strong>Figure 13: Output from Listing 16</strong></p>
+<h5 id="Autocomplete">Autocomplete</h5>
+<p>Adding <code>type="autocomplete"</code> to a <code>textbox</code> element enables an automatic completion function for it.</p>
+<p>Note that to actually use this function, you must also specify a search target for the autocomplete text using the <a class="internal" href="/en/XUL/Attribute/autocompletesearch" title="En/XUL/Attribute/Autocompletesearch"><code>autocompletesearch</code></a> attribute. If you want to use the <em>Location Bar</em> history, set the value for this to <code>history</code>; if you want it to be the <em>Search Bar</em> history, use <code>search-history</code>; and if you want it to be another form’s input history, use<code> form-history</code>; this attribute can take one value or multiple space-delimited values.</p>
+<p>Also, in order to actually read in a history for autocomplete, you will need XPConnect privileges, which we will cover in <a class="internal" href="/En/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes" title="En/Firefox addons developer guide/Using XPCOM—Implementing advanced processes">Chapter 4</a>.</p>
+<h4 id="Menu_List">Menu List</h4>
+<p>Use the <a class="internal" href="/en/XUL/menulist" title="En/XUL/Menulist"><code>menulist</code></a> element to create a control for making selections from a drop-down list. As shown in Listing 17, this is implemented in combination with the <a class="internal" href="/en/XUL/menupopup" title="En/XUL/Menupopup"><code>menupopup</code></a> element; it produces output as shown in Figure 14.</p>
+<p>A click reveals the drop-down list; when an item is selected, the values of that item’s <code>label</code> and <code>value</code> attributes are copied to the <code>label</code> and <code>value</code> attributes of the <code>menulist</code> element itself. By default, the first menu item is selected, but any menu can be preselected by adding <code>selected="true"</code> to it.</p>
+<pre class="brush: xml">&lt;menulist&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Item 1" value="1"/&gt;
+    &lt;menuitem label="Item 2" value="2"/&gt;
+    &lt;menuitem label="Item 3" value="3"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p><strong>Listing 17: A menulist example</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3833/=figure-14.png" style="width: 279px; height: 35px;"></p>
+<p><strong>Figure 14: Output from Listing 17</strong></p>
+<p>By adding <code>editable="true"</code> to the <code>menulist</code> element, you can accept arbitrary text input in addition to a list selection, as is often used on font selection menus in word processors.</p>
+<h3 id="Special_elements">Special elements</h3>
+<h4 id="Embedding_images">Embedding images</h4>
+<p>In addition to writing direct JavaScript code in event handlers, XUL also allows you to embed scripts using a <a class="internal" href="/en/XUL/script" title="En/XUL/Script"><code>script</code></a> element, just like in HTML; this can be used to read in an external script or to place the code in the <code>script</code> element's content.</p>
+<p>If you are embedding a script in a page, you should bracket your code inside a <code>CDATA</code> section as shown in Listing 18; this will avoid errors caused by mistakenly reading "&amp;" and other characters as the beginnings of entity references.</p>
+<pre class="brush: xml">&lt;script type="application/javascript"&gt;&lt;![CDATA[
+  var nodes = gBrowser.mTabContainer.childNodes;
+  for (var i = 0; i &lt; nodes.length; i++)
+  alert(nodes[i].label);
+]]&gt;&lt;/script&gt;
+</pre>
+<p><strong>Listing 18: Embedding a script in XUL</strong></p>
+<p><strong>Note:</strong> Although embedding JavaScript is permitted, it's generally encouraged that you instead place your JavaScript code in an external file.</p>
+<h4 id="Browser_and_tabbrowser">Browser and tabbrowser</h4>
+<p>XUL allows you to use inline frames. You can set the <a class="internal" href="/en/XUL/Attribute/src" title="En/XUL/Attribute/Src"><code>src</code></a> attribute of an <a class="internal" href="/en/XUL/iframe" title="En/XUL/Iframe"><code>iframe</code></a> element to the URI of another XUL document or web page, and it will be displayed there. But <code>iframes</code> are rarely used in XUL—in practice, the <a class="internal" href="/en/XUL/browser" title="En/XUL/Browser"><code>browser</code></a> element is used more often.</p>
+<p>The <code>browser</code> element is essentially a more powerful version of an inline frame, equipped with all the basic functions of a web browser. Unlike an <code>iframe</code>, a <code>browser</code> element has the ability to navigate backward and forward through pages and includes the ability to prevent scripts in embedded frames from accessing outside the frame. For building applications linked to external web pages, this is a more secure and more convenient approach.</p>
+<p>The <a class="internal" href="/en/XUL/tabbrowser" title="En/XUL/Tabbrowser"><code>tabbrowser</code></a> element is even more capable than the browser element because it includes the basic tab-handling features from Firefox. To use this requires XPConnect privileges, the same as autocomplete does; this will be covered in <a class="internal" href="/En/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes" title="En/Firefox addons developer guide/Using XPCOM—Implementing advanced processes">Chapter 4</a>.</p>
+<h5 id="Opening_a_page">Opening a page</h5>
+<p>If you specify a URI value for the <code>src</code> attribute in the browser element, that URI will be opened by default. If the <code>src</code> attribute's value changes, you can dynamically open a different web page or XUL document.</p>
+<p>Functions like Back, Forward, Reload can all be called using the <a class="internal" href="/en/XUL/Method/goBack" title="En/XUL/Method/GoBack"><code>goBack()</code></a>, <a class="internal" href="/en/XUL/Method/goForward" title="En/XUL/Method/GoForward"><code>goForward</code><code>()</code></a>, and <a class="internal" href="/en/XUL/Method/reload" title="En/XUL/Method/Reload"><code>reload()</code></a> methods. Using the <a class="internal" href="/en/XUL/Method/stop" title="En/XUL/Method/Stop"><code>stop()</code></a> method stops loading the page currently in the process of being opened.</p>
+<h5 id="Access_restrictions">Access restrictions</h5>
+<p>With frames defined using HTML's <a class="internal" href="/En/HTML/Element/Frame" title="En/HTML/Element/Frame"><code>frame</code></a> and <code>iframe</code> elements, it is possible for a child frame to access its parent and ancestor frames by getting the <a class="internal" href="/en/DOM/window.parent" title="En/DOM/Window.parent"><code>parent</code></a> and <a class="internal" href="/en/DOM/window.top" title="En/DOM/Window.top"><code>top</code></a> properties of window objects. For an application that can open any web page, this could give a script on a web page access to an XUL document's frame, creating a dangerous opening for personal information to leak out.</p>
+<p>In the interests of security, you can enforce access restrictions by declaring <code>type="content"</code> on a <code>browser</code> element. When you do this, any web page that gets opened will see itself as the topmost frame. If you are developing an application with an interface that can open web pages, I recommend that you always use this declaration to limit access to the parent frame.</p>
+<p>In certain circumstances, you may want to declare <code>type="content-primary"</code>. A browser element with this declaration is treated as a special browser among other XUL documents, such that the window object displaying its web page can be accessed using the <a class="internal" href="/en/DOM/window.content" title="En/DOM/Window.content"><code>window.content</code></a> property. In Firefox itself, the content region of the active tab is declared as a browser element with <code>type="content-primary"</code>.</p>
+<h4 id="Keyboard_shortcuts">Keyboard shortcuts</h4>
+<p>To implement keyboard shortcuts (pressing a key while holding down modifier keys like Control or Shift.) in a <a class="internal" href="/en/DHTML" title="En/DHTML">DHTML</a>-based interface, you need a script that will intercept keyboard inputs.</p>
+<p>In XUL, you can define keyboard shortcuts simply by using the <a class="internal" href="/en/XUL/key" title="En/XUL/Key"><code>key</code></a> element, as shown in Listing 19.</p>
+<pre class="brush: xml">&lt;key id="key-save" key="s" modifiers="accel,shift" oncommand="save();"/&gt;
+&lt;key id="key-scroll-up" keycode="VK_PAGE_UP" oncommand="advanceFocus(-1);"/&gt;
+</pre>
+<p><strong>Listing 19: Defining keyboard shortcuts</strong></p>
+<p>To make letters, numbers, symbols, or the space bar act as triggers, declare that character as the key attribute’s value. You can use either uppercase and lowercase letters and they will be handled the same.</p>
+<p>For triggers on other special keys, use the <a class="internal" href="/en/XUL/Attribute/keycode" title="En/XUL/Attribute/Keycode"><code>keycode</code></a> attribute with the appropriate keycode name value. In general you can use the keycode name for any key; the most commonly used ones are shown in Table 3.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Key</td>
+   <td class="header">Keycode name</td>
+  </tr>
+  <tr>
+   <td>Return</td>
+   <td><code>VK_RETURN</code></td>
+  </tr>
+  <tr>
+   <td>Enter</td>
+   <td><code>VK_ENTER</code></td>
+  </tr>
+  <tr>
+   <td>Backspace</td>
+   <td><code>VK_BACK_SPACE</code></td>
+  </tr>
+  <tr>
+   <td>Delete</td>
+   <td><code>VK_DELETE</code></td>
+  </tr>
+  <tr>
+   <td>Escape</td>
+   <td><code>VK_ESCAPE</code></td>
+  </tr>
+  <tr>
+   <td>↑</td>
+   <td><code>VK_UP</code></td>
+  </tr>
+  <tr>
+   <td>↓</td>
+   <td><code>VK_DOWN</code></td>
+  </tr>
+  <tr>
+   <td>←</td>
+   <td><code>VK_LEFT</code></td>
+  </tr>
+  <tr>
+   <td>→</td>
+   <td><code>VK_RIGHT</code></td>
+  </tr>
+ </tbody>
+</table>
+<h5 id="Table_3_Typical_keycode_names"><strong>Table 3: Typical keycode names</strong></h5>
+<p> </p>
+<h5 id="Using_modifier_keys">Using modifier keys</h5>
+<p>Use the <a class="internal" href="/en/XUL/Attribute/modifiers" title="En/XUL/Attribute/Modifiers"><code>modifiers</code></a> attribute with one or more of the following comma-delimited values: "control", "alt", "shift", and "meta" in order to limit the use of keyboard shortcuts to only operate when those modifier keys are pressed together with another key. The standard modifier key on Windows and Linux is Control; on Mac OS it is Command. An easy way to automatically use the modifier key appropriate for the current platform is to set the modifier key to "accel", which maps to Control on Windows and Linux, Command on Mac OS.</p>
+<div class="note">
+ <strong>Note:</strong> The "meta" key is the Command key on Mac OS X (the one with the cloverleaf design on it).</div>
+<p>The <code>key</code> element itself is never displayed on screen. In order to display defined keyboard shortcuts as shown in Figure 15, reference the <code>key</code> element's <code>id</code> from the <code>menu</code> or <code>menuitem</code> element’s <a class="internal" href="/en/XUL/Attribute/key" title="En/XUL/Attribute/Key"><code>key</code></a> attribute.</p>
+<p>{{ TODO("Figure 15: Displaying keyboard shortcuts in menu items:Menu 1/Save/Scroll") }}</p>
+<h3 id="Elements_related_to_box_layout">Elements related to box layout</h3>
+<p>XUL includes a number of elements used strictly to organize the layout of screen widgets.</p>
+<h4 id="spacer">spacer</h4>
+<p>Use the <a class="internal" href="/en/XUL/spacer" title="En/XUL/Spacer"><code>spacer</code></a> element if you want to open up the space between buttons. You can use the <a class="internal" href="/en/XUL/Attribute/flex" title="En/XUL/Attribute/Flex"><code>flex</code></a> attribute or <a class="internal" href="/en/XUL/Attribute/style" title="En/XUL/Attribute/Style"><code>style</code></a> attribute to make whitespace stretch or set it to a certain size.</p>
+<h4 id="grid">grid</h4>
+<p>In the same way that the <code>table</code> element is used to lay out content in HTML, you can use the <a class="internal" href="/en/XUL/grid" title="En/XUL/Grid"><code>grid</code></a> element in XUL. As shown in Listing 20, you first declare the number of columns, and then define the content of each row. The output of this sample is shown in Figure 16. You can also code it so that the rows come first, declaring the number of rows and then defining content by column.</p>
+<p>The <code>rowspan</code> and <code>colspan</code> attributes available in HTML tables are not available in XUL grids.</p>
+<pre class="brush: xml">&lt;grid&gt;
+  &lt;columns&gt;
+    &lt;column/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+  &lt;rows&gt;
+    &lt;row align="center"&gt;
+      &lt;label value="User ID"/&gt;
+      &lt;textbox/&gt;
+    &lt;/row&gt;
+    &lt;row align="center"&gt;
+      &lt;label value="Name"/&gt;
+      &lt;textbox/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p><strong>Listing 20: Layout using the grid</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3827/=figure-16.png" style="width: 326px; height: 65px;"></p>
+<p><strong>Figure 16: Output from Listing 20</strong></p>
+<h4 id="stack">stack</h4>
+<p>Use the <a class="internal" href="/en/XUL/stack" title="En/XUL/Stack"><code>stack</code></a> element to overlap multiple widgets. The <code>stack</code> element differs from a normal box in that all the elements in it are layered over each other, working from the bottom up. Listing 21 shows an example of a thermometer-style progress bar, with its output shown in Figure 17.</p>
+<pre class="brush: xml">&lt;stack&gt;
+  &lt;progressmeter mode="normal" value="50"/&gt;
+  &lt;hbox align="center"&gt;
+    &lt;label value="In progress…"/&gt;
+  &lt;/hbox&gt;
+&lt;/stack&gt;
+</pre>
+<p><strong>Listing 21: Overlapping with stack</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3828/=figure-17.png" style="width: 329px; height: 22px;"></p>
+<p><strong>Figure 17: Progress Bar</strong></p>
+<h4 id="tab">tab</h4>
+<p>Use the <a class="internal" href="/en/XUL/tab" title="En/XUL/Tab"><code>tab</code></a> element to divide multiple pages, as used in the <em>Properties</em> dialog; use the <a class="internal" href="/en/XUL/tabbox" title="En/XUL/Tabbox"><code>tabbox</code></a> element to group related elements. This is demonstrated in Listing 22, with its output shown in Figure 18.</p>
+<pre class="brush: xml">&lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="tab1"/&gt;
+    &lt;tab label="tab2" selected="true"/&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel&gt;
+      &lt;checkbox label="check1"/&gt;
+    &lt;/tabpanel&gt;
+    &lt;tabpanel orient="vertical"&gt;
+      &lt;checkbox label="check2"/&gt;
+      &lt;checkbox label="check3"/&gt;
+    &lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<p><strong>Listing 22: Tabs in use</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3829/=figure-18.png" style="width: 332px; height: 95px;"></p>
+<p><strong>Figure 18: Output from listing 22</strong></p>
+<h2 id="Other_XUL_functions">Other XUL functions</h2>
+<h3 id="Overlays">Overlays</h3>
+<p>One of XUL’s distinctive features is overlays. These give you the ability to combine multiple XUL documents and process them as a single XUL document. In Firefox, this is used to modularize functions and implement extensions.</p>
+<p>By inserting an <code>xul-overlay</code> processing instruction between the XML declaration and the opening tag of the root element, the XUL document specified by the <code>xul-overlay</code> will be read in at the same time as the current XUL document. The XUL document that actually gets displayed will be a combination of the original XUL document and the one specified in <code>xul-overlay</code>.</p>
+<p>Try typing up Listing 23 and saving it as <code>base.xul</code>. Take a look at the overlay example used by this XUL document.</p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/"?&gt;
+&lt;?xul-overlay href="overlayDocument.xul"?&gt;
+&lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;hbox id="box1"&gt;
+    &lt;label id="label1" value="Text label"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox id="box2"&gt;
+    &lt;label id="label2" value="Text label"/&gt;
+  &lt;/hbox&gt;
+&lt;/window&gt;
+</pre>
+<p><strong>Listing 23: </strong><code><strong>base.xul</strong></code></p>
+<h4 id="Appending_elements">Appending elements</h4>
+<p>When defining an XUL document to open as an overlay, use an <a class="internal" href="/en/XUL/overlay" title="En/XUL/Overlay"><code>overlay</code></a> element as the root element. Save the text of Listing 24 as <code>overlayDocument.xul</code> in the same directory as <code>base.xul</code>.</p>
+<p>Here, we’ll open <code>base.xul</code> in the Firefox window. <code>overlayDocument.xul</code> gets read in at the same time as <code>base.xul</code>, resulting in what we see in Figure 19, where <code>overlayDocument.xul</code> gets appended to the end of <code>base.xul</code>.</p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;button label="Button 1"/&gt;
+  &lt;button label="Button 2"/&gt;
+  &lt;button label="Button 3"/&gt;
+&lt;/overlay&gt;
+</pre>
+<p><strong>Listing 24: </strong><code><strong>overlayDocument.xul</strong></code></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3825/=figure-19.png" style="width: 404px; height: 138px;"></p>
+<p><strong>Figure 19: Output from listings 23 and 24</strong></p>
+<h4 id="Merging_and_inserting_elements">Merging and inserting elements</h4>
+<p>By inserting <code>id</code> attributes into the elements being appended in the XUL overlay document, elements in the base document with the same <code>id</code> values will have their attributes and values merged with the overlay document.</p>
+<p>Try overwriting the contents of <code>overlayDocument.xul</code> with Listing 25 and re-saving.</p>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;hbox id="box1" align="center" style="border: 1px solid; margin: 1em;"&gt;
+    &lt;button label="Button 1"/&gt;
+    &lt;button label="Button 2" insertbefore="label1"/&gt;
+  &lt;/hbox&gt;
+  &lt;button label="Button 3"/&gt;
+&lt;/overlay&gt;
+</pre>
+<p><strong>Listing 25: Substitute code for </strong><code><strong>overlayDocument.xul</strong></code></p>
+<p>Let's open <code>base.xul</code> in a Firefox window again. As shown in Figure 20, the <code>style</code> attribute from the element with the <code>id</code> "box1" in the overlay document has been merged with the markup for the button with that <code>id</code> in the base document, and inserted into the box.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/3826/=figure-20.png" style="width: 406px; height: 116px;"></p>
+<p> <strong>Figure 20: Output from listing 23 and 25</strong></p>
+<p>Furthermore, following the declaration <code>insertbefore="label1"</code>, the "button2" button now has been inserted before the element with the <code>id</code> "label1". Conversely, if we wanted to insert it directly after, we could have used the attribute <code>insertafter</code>. We can also use the <a class="internal" href="/en/XUL/Attribute/position" title="en/XUL/Attribute/Position"><code>position</code></a> attribute as a way to locate an element numerically at any position; for example, using <code>position="4"</code> would insert it as the fourth element.</p>
+<h3 id="External_entities">External entities</h3>
+<p>Being a form of XML, XUL can also use entity references based on DTDs (document type definitions) as shown in Listing 26. Note that external DTD files are limited to what is given in the chrome URL, which will be discussed in Chapter 5. Please be aware that ordinary DTD files on the web or in a local directory will not be opened.</p>
+<div class="note">
+ <strong>Note:</strong> You may use a relative path to access a chrome URL from an XUL document.</div>
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/"?&gt;
+&lt;!DOCTYPE window SYSTEM "chrome://testapp/locale/testapp.dtd"&gt;
+&lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;button label="&amp;button.1.label;"/&gt;
+  &lt;button label="&amp;button.2.label;"/&gt;
+&lt;/window&gt;</pre>
+<p><strong>Listing 26: Reading in external entities</strong></p>
+<pre class="brush: xml">&lt;!ENTITY button.1.label "Firefox"&gt;
+&lt;!ENTITY button.2.label "Thunderbird"&gt;
+</pre>
+<p><strong>Listing 27: testapp.dtd</strong></p>
+<h3 id="Substituting_CSS_for_attribute_declarations">Substituting CSS for attribute declarations</h3>
+<p>The Gecko rendering engine includes a number of CSS properties with <code>-moz-</code> prepended to them; these are <a class="internal" href="/en/CSS_Reference/Mozilla_Extensions" title="en/CSS Reference/Mozilla Extensions">custom properties for XUL</a> that have been implemented prior to being a W3C recommendation. The ones shown in Table A below correspond to the common attributes in XUL. In fact, those XUL attributes operate through these CSS properties.</p>
+<p>The values declared for these CSS properties are the same integers or keywords used by the XUL attributes. While we don't recommend that you use these properties in ordinary XUL development, they can be useful for customizing the Firefox UI without scripting by using <code>userChrome.css</code>. For example, if you save the contents of Listing 28 as <code>userChrome.css</code> and save that in the <code>chrome</code> directory under the user profile directory, the tab bar will appear at the bottom of the content area.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">XUL attribute</td>
+   <td class="header">CSS property</td>
+   <td class="header">Example</td>
+  </tr>
+  <tr>
+   <td><a class="internal" href="/en/XUL/Attribute/orient" title="En/XUL/Attribute/Orient"><code>orient</code></a></td>
+   <td><code>-moz-box-orient</code></td>
+   <td>
+    <p><code>-moz-box-orient: vertical;</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td><a class="internal" href="/en/XUL/Attribute/align" title="En/XUL/Attribute/Align"><code>align</code></a></td>
+   <td>
+    <p><code>-moz-box-align</code></p>
+   </td>
+   <td>
+    <p><code>-moz-box-align: start;</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td><a class="internal" href="/en/XUL/Attribute/pack" title="En/XUL/Attribute/Pack"><code>pack</code></a></td>
+   <td>
+    <p><code>-moz-box-pack</code></p>
+   </td>
+   <td>
+    <p><code>-moz-box-pack: stretch;</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code><a class="internal" href="/en/XUL/Attribute/flex" title="En/XUL/Attribute/Flex">flex</a></code></td>
+   <td><code>-moz-box-flex</code></td>
+   <td><code>-moz-box-flex: 1;</code></td>
+  </tr>
+  <tr>
+   <td><code><a class="internal" href="/en/XUL/Attribute/ordinal" title="En/XUL/Attribute/Ordinal">ordinal</a></code></td>
+   <td><code>-moz-box-ordinal-group</code></td>
+   <td><code>-moz-box-ordinal-group: 2</code></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Table 4: CSS properties corresponding to XUL attributes</strong></p>
+<pre class="brush: css">tabbrowser .tabbrowser-strip {
+  -moz-box-ordinal-group: 2;
+}
+tabbrowser tabpanels {
+  -moz-box-ordinal-group: 1;
+}
+</pre>
+<p><strong>Listing 28: A user stylesheet that locates the tab bar at the bottom</strong></p>
+<h3 id="Icons_corresponding_to_filetypes">Icons corresponding to filetypes</h3>
+<p>Firefox allows you to use a special URI scheme, <code>moz-icon</code>, that produces filetype icons that are standard for whatever platform it is running on. For example, to display a 16x16 icon for a file with a .pdf dot-extension (a PDF file), you would write <code><a class="external" rel="freelink">moz-icon://.PDF?size=16</a></code>.</p>
+<p>You can reference icons using content type as a key rather than dot-extension; for example, you could display a plain-text icon using <code><a class="external" rel="freelink">moz-icon://goat?size=16&amp;contentType=text/plain</a></code>.</p>
+<p>You can also display specific icons using the markup moz-icon:file URL?size=size.</p>
+<p>The button icons mentioned in Table 2 also can be called using <code>moz-icon</code> URIs, using the markup <code><a class="external" rel="freelink">moz-icon://stock/gtk-button</a> name?size=button</code>. Note, however, that this does not work in Linux environments.</p>
+<h3 id="Spin_buttons">Spin buttons</h3>
+<p>You can add a <code>type="number"</code> declaration to a <a class="internal" href="/en/XUL/textbox" title="En/XUL/Textbox"><code>textbox</code></a> element, making it a <code>textbox</code> specifically for entering numeric values. This will cause the spin buttons seen in Figure 21 to appear. Additional attributes that accompany this are <a class="internal" href="/en/XUL/Attribute/min" title="En/XUL/Attribute/Min"><code>min</code></a> and <a class="internal" href="/en/XUL/Attribute/max" title="En/XUL/Attribute/Max"><code>max</code></a> to set minimum and maximum values, and <code><a class="internal" href="/en/XUL/Attribute/increment" title="En/XUL/Attribute/Increment">increment</a></code>, which sets the amount by which one click on the spin buttons will change the displayed value.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/3824/=figure-21.png" style="width: 214px; height: 40px;"></p>
+<p><strong>Figure 21: A textbox for numeric input</strong></p>
+<h3 id="Sliders">Sliders</h3>
+<p>The <a class="internal" href="/en/XUL/scale" title="En/XUL/Scale"><code>scale</code></a> element is used similarly to the volume slider in Windows, allowing the user to vary a value by moving a slider up/down or left/right (see Listing 28 and Figure 22).</p>
+<div class="note">
+ <strong>Note:</strong> Although this control is also known as a slider, the slider element already exists in XUL as a part of a scrollbar, so this element has been named "scale".</div>
+<pre class="brush: xml">&lt;hbox&gt;
+  &lt;scale orient="horizontal" min="-100" max="100" value="0"/&gt;
+  &lt;scale orient="vertical" min="0" max="100" value="50"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><strong>Listing 29: The scale element</strong></p>
+<p><img alt="" class="internal" src="/@api/deki/files/3823/=figure-22.png" style="width: 130px; height: 106px;"></p>
+<p><strong>Figure 22: Output from Listing 29</strong></p>
+<p>{{ PreviousNext("Firefox addons developer guide/Technologies used in developing extensions", "Firefox addons developer guide/Using XPCOM—Implementing advanced processes") }}</p>

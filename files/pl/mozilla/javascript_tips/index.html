@@ -1,0 +1,110 @@
+---
+title: JavaScript Tips
+slug: Mozilla/JavaScript_Tips
+translation_of: Mozilla/JavaScript_Tips
+---
+<h2 id="Function_and_variable_naming" name="Function_and_variable_naming">XUL Tips</h2>
+
+<ul>
+ <li>Kiedy wpisywany jest kod w formacie XUL, opatrz funkcje i zmienne w srodku obiektu unikalna nazwa, aby uniknac konfliktu z istniejaca nazwa funcji lub zmiennej</li>
+</ul>
+
+<pre class="brush: js">var UniqueName = {
+  _privateMember: 3,
+  publicMember: "A string",
+
+  init: function() {
+    this.doSomething(this.anotherMember);
+  },
+
+  doSomething: function(aParam) {
+    alert(aParam);
+  }
+};
+</pre>
+
+<h2 id="XPConnect" name="XPConnect">XPConnect</h2>
+
+<ul>
+ <li>Nie uzywaj metod i wlasciwosci wiecej niz tego potrzbujesz. Bardzo czesto szybciej jest przechowywac wynik w tymczasowej zmiennej.</li>
+ <li>Nie nazywaj metod ktorych nie musisz nazywac. Na przyklad, <code>windowManager.getEnumerator(aType).hasMoreElements() </code>moze byc zastapiony <code>windowManager.getMostRecentWindow(aType) != null for a single window</code>.</li>
+ <li>Nie wchodz w interfejsy chyba ze potrzebujesz dostepu do metod i wlasciwosci tego interfejsu. Nie musisz wchodzic w interfejsy, aby porownywac objekty, ani podawac objektow jako parametry (Dziala to inaczej niz w C++, w ktorym interfejsy o ktorych mowa sa niezbedne.</li>
+ <li>Nie nazywaj <code>QueryInterface </code>chyba ze wiesz co robisz. Zamiast tego uzywaj <code>instanceof</code>, przyklad:</li>
+</ul>
+
+<pre class="brush: js">if (target instanceof Components.interfaces.nsIRDFResource)
+  return target.Value;
+if (target instanceof Components.interfaces.nsIRDFLiteral)
+  return target.Value;
+return null;
+</pre>
+
+<ul>
+ <li>Nie testuj wartosci zwrotnej <code>QueryInterface, </code>zwraca zawsze orginalna zmienna jesli sie powiedzie.</li>
+ <li>When passing an object to an XPCOM method it is helpful if the object you pass is an XPCOM object, so that the C++ method access a C++ object. However, this is not always necessary or desirable. For instance the offline observer declared above is a JavaScript object that is registered with an XPCOM object, so that the call back from XPCOM executes the JavaScript method. Some XPCOM methods expect an object that implements several interfaces thus requiring you to write a <code>QueryInterface</code> method. However, in JavaScript this is quite simple even in the case of a weak reference which in C++ requires a helper class:</li>
+</ul>
+
+<pre class="brush: js">var weakObserver = {
+  QueryInterface: function QueryInterface(aIID) {
+    if (aIID.equals(Components.interfaces.nsIObserver) ||
+        aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
+        aIID.equals(Components.interfaces.nsISupports))
+       return this;
+    throw Components.results.NS_NOINTERFACE;
+  },
+  observe: function observe(aSubject, aTopic, aState) {
+  }
+}
+</pre>
+
+<ul>
+ <li>When declaring XPCOM methods, try to use the same names for method parameters as are used in the interface definition.</li>
+</ul>
+
+<h2 id="DOM_elements" name="DOM_elements">DOM elements</h2>
+
+<ul>
+ <li>DOM elements are just XPCOM objects with some of the interfaces precached.</li>
+ <li>Don't call <a href="/en/DOM/element.getAttribute" title="en/DOM/element.getAttribute">getAttribute</a> to see if an attribute exists, call <a href="/en/DOM/element.hasAttribute" title="en/DOM/element.hasAttribute">hasAttribute</a> instead.</li>
+ <li>Prefer to loop through childNodes rather than using first/lastChild with next/previousSibling. But prefer hasChildNodes() to <code>childNodes.length &gt; 0</code>. Similarly prefer <code>document.getElementsByTagName(aTag).item(0) != null</code> to <code>document.getElementsByTagName(aTag).length &gt; 0</code>.</li>
+ <li>Prefer to use localName rather than tagName.</li>
+ <li>XUL elements have many of the attributes mapped to properties. This was done for a reason, so use them! The properties are:
+  <ul>
+   <li>align</li>
+   <li>allowEvents</li>
+   <li>contextMenu</li>
+   <li>datasources</li>
+   <li>dir</li>
+   <li>flex</li>
+   <li>height</li>
+   <li>id<span style="display: none;"> </span><span style="display: none;"> </span></li>
+   <li>left</li>
+   <li>maxHeight</li>
+   <li>maxWidth</li>
+   <li>minHeight</li>
+   <li>minWidth</li>
+   <li>observes</li>
+   <li>orient</li>
+   <li>pack</li>
+   <li>persist</li>
+   <li>ref</li>
+   <li>statusText</li>
+   <li>top</li>
+   <li>tooltip</li>
+   <li>tooltipText</li>
+   <li>width</li>
+  </ul>
+ </li>
+ <li>XUL also maps the <code>ordinal</code> attribute but this defaults to "1" if it is not present.</li>
+ <li>XUL also maps the <code>class</code> attribute, but unfortunately <code>class</code> is a reserved identifier, so the property is named <code>className</code>. (The property could have been implemented as <code>["class"']</code> but that just looks silly.)</li>
+ <li>XUL also maps the <code>hidden</code> and <code>collapsed</code> attributes to properties, but note that these are boolean properties whereas the above list are all string properties.</li>
+ <li>XUL also maps other useful properties and methods using XBL bindings; these vary from element to element.</li>
+ <li>For best performance give ids to all important elements. However in addition to locating elements by tag name XUL also allows you to locate an element by attribute, starting at any element in the document.</li>
+</ul>
+
+<h2 id="References" name="References">References</h2>
+
+<ul>
+ <li>This was started as a reprint of <a class="external" href="http://neil.rashbrook.org/JS.htm" title="http://neil.rashbrook.org/JS.htm">Neil's guide</a></li>
+ <li>Some more current info on this <a class="external" href="http://autonome.wordpress.com/2006/03/24/">blog post</a></li>
+</ul>

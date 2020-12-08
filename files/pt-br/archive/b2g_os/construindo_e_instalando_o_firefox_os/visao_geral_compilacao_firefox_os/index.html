@@ -1,0 +1,163 @@
+---
+title: Visão Geral da compilação do Firefox OS
+slug: >-
+  Archive/B2G_OS/Construindo_e_instalando_o_Firefox_OS/visao_geral_compilacao_firefox_os
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary
+---
+<div class="summary">
+<p>A compilação e instalação do Firefox OS exige muito tempo, banda de internet e poder computacional. Infelizmente, ao longo do caminho, coisas podem dar errado. Essa página descreve os objetivos do processo de compilação e o passo-a-passo do processo a fim de ajudar os usuários. Detalhes de cada etapa são detalhadas ao clicar nos links ao longo do texto.</p>
+</div>
+
+<div class="note">
+<p><strong style="font-weight: bold;">Nota:</strong> O processo de compilação do Firefox OS possui diversas referências a 'B2G' ou 'Boot2Gecko'. 'Boot2Gecko' era o nome original do projeto Firefox OS.</p>
+</div>
+
+<h2 id="O_objetivo_da_compilação_quatro_arquivos_de_imagem_('image_files')">O objetivo da compilação: quatro arquivos de imagem ('<em>image files</em>')</h2>
+
+<p>O objetivo principal do processo de compilação são os quatro arquivos que serão copiados num dispositivo Firefox OS.</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>boot.img</strong></td>
+   <td>
+    <p>O kernel Linux e uma imagem de sistema de arquivos raiz. Esse último oferecendo um conjunto de ferramentas básicas do Unix.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>system.img</strong></td>
+   <td>
+    <p>A parte central do Firefox OS, incluindo partes do Gonk,</p>
+
+    <p>O core do Firefox OS incluindo partes do Gonk, a conexão com o Gecko e o executável b2g.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>userdata.img</strong></td>
+   <td>
+    <p>O perfil Gecko do usuário e as aplicações web do Gaia para o dispositivo.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>recovery.img</strong></td>
+   <td>
+    <p>Um kernel Linux e uma imagem de sistema de arquivos raiz com uma ferramenta simples que possibilite aos usuários recuperar o sistema após uma instalação com erros.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<p>Uma vez que essas quatro imagens tenham sido criadas, elas podem ser transferidas ao dispositivo.</p>
+
+<p>O Firefox OS é compilado sobre o AOSP (Android Open Source Project). As ferramentas AOSP <code>adb</code> e <code>fastboot</code> são formas poderosas de acessar e manipular o dispositivo. O comando <code>adb reboot-bootloader</code> pode reiniciar um dispositivo conectado, permitindo ao usuário interromper o processo na fase inicial do processo onde o comando <code>fastboot flash $partition $image</code> pode ser usado para copiar uma imagem para o dispositivo.</p>
+
+<h3 id="A_imagem_de_inicialização">A imagem de inicialização</h3>
+
+<p>A imagem de inicialização <code>(boot.img)</code> é uma combinação do kernel Linux e uma partição inicial que provê softwares utilitários e scripts de inicialização. Esses scripts são copiados na memória do dispositivo para um uso mais eficiente, e são chamados de "<em>ramdisk</em>". O arquivo boot.img será copiado na partição 'boot' do dispositivo e o conteúdo da <em>ramdisk</em> será acessível a partir diretório raiz em tempo de execuçã, bem como usando <code>adb shell</code>.</p>
+
+<p>A imagem de inicialização também estabelece as permissões do usuário root no arquivo <code>default.prop</code> localizado no diretório raiz.</p>
+
+<p>Também é possível modificar as imagens de inicialização existentes verificando o arquivo,  dividindo o arquivo entre o kernel e a imagem da <em>ramdisk</em>, modificando seu conteúdo, remontando a imagem da ramdisk e finalmente recompilando o arquivo <code>boot.img</code>. Veja, por exemplo a página <a href="http://k.japko.eu/alcatel-otf-hackers-guide-1.html">Alcatel One Touch Fire Hacking (Mini) Guide</a>.</p>
+
+<p>Imagens de inicialização podem ser testadas antes de serem definitivamente instaladas. O dispositivo pode ser inicializado e ser interrompido durante a carga. Para inicializar o dispositivo com a Imagem a ser testada sem instalá-la utilize o comando <code>fastboot</code> <code>boot /some/path/to/boot.img</code>.</p>
+
+<h3 id="A_imagem_do_Sistema">A imagem do Sistema</h3>
+
+<p>A imagem do sistema (<code>system.img</code>) possui o núcleo principal do Firefox OS:</p>
+
+<ul>
+ <li><strong>Gonk</strong>: componentes de baixo nível do sistema operacional</li>
+ <li><strong>Gecko</strong>: adaptação dos motores de layout HTML e JavaScript do Firefox</li>
+ <li><strong>B2G</strong>: o núcelo dos processos de runtime do sistema operacional</li>
+</ul>
+
+<div class="note">
+<p>Veja o guia <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Platform">a plataforma Firefox OS</a> para mais informações sobre a arquitetura do Firefox OS.</p>
+</div>
+
+<p>A imagem do sistema será copiada para a partição <code>system</code> do dispositivo e acessadas no diretório <code>/system/</code> quando o sistema de arquivos é acessado em tempo de execução.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: A imagem do sistema também fornece blobs (Binary Large OBject) que pode ser usado pelo dispositivo, como por exemplo o blob RIL (Radio Interface Layer) que controla o rádio do dispositivo.</p>
+</div>
+
+<h3 id="A_Imagem_de_Dados_do_Usuário">A Imagem de Dados do Usuário</h3>
+
+<p>A imagem de dados do usuário (<code>userdata.img</code>) fornece as aplicações Gaia carregadas em tempo de execução.</p>
+
+<p>A imagem de dados do usuário será copiada para a partição <code>userdata</code> no dispositivo e seu conteúdo pode ser acessado no diretório <code>/data/</code> quando o sistema de arquivos do dispositivo é acessado em tempo de execução. O diretório <code>/data/b2g/</code> contem o perfil Mozila Gecko do usuário do dispositivo enquanto que o diretório <code>/data/local/webapps/</code> contém os arquivos executáveis das aplicações web disponíveis para o usuário.</p>
+
+<p>The User Data Image will be copied to the <code>userdata</code> partition on the device and the contents will be visible in the <code>/data/</code> directory when the device filesystem is accessed at runtime. Notably the <code>/data/b2g/</code> directory contains the Mozilla Gecko <em>profile</em> of the device user while the <code>/data/local/webapps/</code> directory contains the actual web applications available to the user.</p>
+
+<h3 id="A_imagem_de_recuperação">A imagem de recuperação</h3>
+
+<p>A imagem de recuperacão (<code>recovery.img</code>) contém o mesmo kernel e um <em>ramdisk</em> similar ao existente na partição da Imagem de inicializção (<em>Boot Image</em>). Porém, a imagem de recuperação utiliza um script de inicialização diferente, que apresenta ao usuário um conjunto de comandos de recuperação acessíveis pelos botões externos do dispositivo.</p>
+
+<p>A imagem de recuperação é copiada na partição <code>recovery</code> do dispositivo, que por sua vez não é montada no sistema de arquivos durante sua execução normal.</p>
+
+<h2 id="O_processo_de_compilação_preparacão_configuração_compilação_e_instalação">O processo de compilação: preparacão, configuração, compilação e instalação</h2>
+
+<p>O processo completo de compilação e instalação do Firefox OS é composto de quatro passos:</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>Preparação</strong></td>
+   <td>Obter todos os programas a serem utilizados no processo de compilação, bem como seus compiladores e bibliotecas.</td>
+  </tr>
+  <tr>
+   <td><strong>Configuração</strong></td>
+   <td>Baixar o código fonte que será compilado e criar o arquivo <code>.configure</code> que define as variáveis de ambiente como os caminhos e outros valores a serem utilizados na compilação.</td>
+  </tr>
+  <tr>
+   <td><strong>Compilação</strong></td>
+   <td>Compilar o perfil do usuário do Gecko e as aplicações web do Gaia para o dispositivo.</td>
+  </tr>
+  <tr>
+   <td><strong>Instalação</strong></td>
+   <td>Instalar os arquivos no dispositivo.</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<p> </p>
+
+<h3 id="Preparação">Preparação</h3>
+
+<p>A preparação inicial deve ser realizada para garantir que o computador a ser utilizado no processo de compilação tenha todo o software necessário como o compilador e as demais ferramentas de compilação.</p>
+
+<p>Essa etapa pode ser feita manualmente ou utilizando um <em>script</em>. Maiores detalhes na página <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites" title="Firefox OS build prerequisites">Pré requisitos para compilar o Firefox OS</a>.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Em máquinas UNIX e UNIX-like, para checar a existência do software pode ser utilizado o comando <code>which</code> com o nome do programa como parâmetro.</p>
+</div>
+
+<h3 id="Configuração">Configuração</h3>
+
+<p>Na realidade, o processo de compilação inicia-se com a obtenção de uma cópia do software Firefox OS (ou B2G), usualmente com a criação de um clone com a ferramenta Git a partir do projeto <code>B2G</code>. A configuração da compilação compreende tanto baixar as cópias de todo o código fonte que será compilado como criar o arquivo de configuração <code>.config</code>, que especifica as variáveis ​de ambiente a serem utilizadas no processo de compilação.</p>
+
+<p>A configuração é executada com o script <code>config.sh</code>. A página <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Preparando_sua_primeira_compilacao_do_B2G" title="Preparing for your first B2G build">Preparando sua primeira compilação do B2G</a> possuí detalhes desse proceso.</p>
+
+<p>O script de configuracão necessita de um parâmetro que especifica o tipo de dispositivo para o qual o B2G será compilado. A codificação desse parâmetro é vinculada à arquitetura da CPU utilizada e não ao nome específico do dispositivo. Atualmente não há como estabelecer qual compilação funciona para cada dispositivo. Uma lista de códigos disponíveis pode se encontrada <a href="/en-US/Firefox_OS/Phones">nessa página</a>.</p>
+
+<p>A etapa de configuração também utiliza a ferramenta <code>repo</code> do AOSP (Androis Open Source Project) para baixar (ou atualizar) a cópia de todo o código utilizado na compilação. Essas cópias são armazenadas no diretório <code>.repo/projects</code>. Devido a essa atividade a etapa de configuração consome muito tempo e muitos dados são trafegados para baixar todo o código necessário.</p>
+
+<h3 id="Compilação">Compilação</h3>
+
+<p>A etapa da compilação é a qual todo o código fonte realmente é compilado e os arquivos imagens são gerados.</p>
+
+<p>Deve ser executado o script <code>build.sh</code>. Detalhes são discutidos na página <a href="/pt-BR/docs/Mozilla/Firefox_OS/Compilando_O_Firefox_OS" title="Building">Compilando o Firefox OS</a>.</p>
+
+<p>Como padrão, a etapa de compilação é monolítica, ou seja, tudo é compilada de uma só vez a partir das ferramentas AOSP gerando o kernel do Linux e as aplicações web do Gaia. No caso de ocorrência de erros na compilação, pode não ficar claro em qual etapa ocorreu o erro.</p>
+
+<p>Na compilação do Firefox é possível compilar somente algumas partes do conjunto completo que compõe o Firefox OS. Por exemplo, o sistema Gecko somente pode ser compilado através do script com o parâmetro <code>gecko</code>. Da mesma forma, o Gaia é compilado com o parâmetro <code>gaia</code>. Essas partes podem ser instaladas separadamente no dispositivo como será explicado a seguir.</p>
+
+<p>Também é possivel construir as imagens apresentadas no início desse artigo. Por exemplo, a imagem de sistema pode ser compilada através do comando <code>./build.sh out/platform/$target/system.img</code>, no qual o parâmetro <code>$target</code> é o mesmo que o apresentado na etapa de configuração.</p>
+
+<h3 id="Instalação">Instalação</h3>
+
+<p>A etapa de instalação consiste em colocar o novo código compilado no dispositivo. É executada pelo script <code>flash.sh</code>.</p>
+
+<p>A instalação pode ser realizada por etapas através de parâmetro no script <code>flash.sh</code>. Por exemplo, é possível instalar somente as aplicações web do Gaia com o comando <code>./flash.sh gaia</code>.</p>

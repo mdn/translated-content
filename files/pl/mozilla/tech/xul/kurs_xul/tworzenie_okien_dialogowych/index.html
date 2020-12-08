@@ -1,0 +1,151 @@
+---
+title: Tworzenie okien dialogowych
+slug: Mozilla/Tech/XUL/Kurs_XUL/Tworzenie_okien_dialogowych
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_Dialogs
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Możliwości_okna" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Okna_otwierania_i_zapisywania_plików">Następny  »</a></p>
+</div><p></p>
+
+<p>Aplikacja XUL często wymaga wyświetlania okien dialogowych. Ten artykuł opisuje jak takie okna skonstruować.</p>
+
+<h2 id="Tworzenie_okien_dialogowych" name="Tworzenie_okien_dialogowych">Tworzenie okien dialogowych</h2>
+
+<p>Funkcja <code><a href="pl/DOM/window.openDialog">openDialog()</a></code> stosowana jest do otwarcia okna dialogowego. Podobną funkcją jest <code><a href="pl/DOM/window.open">open()</a></code>. Różni się jednak pod kilkoma względami. Wyświetli okno, a nie okno dialogowe, z czego wynika, że oczekujemy jakiejś akcji użytkownika. Okno to może mieć subtelne różnice w sposobie pracy i w postrzeganiu je przez użytkownika. Te różnice wynikają z platformy, na której pracujemy.</p>
+
+<p>W dodatku funkcja <code>openDialog()</code> może wymagać dodatkowych argumentów, poza trzema opisanymi wcześniej. Te argumenty są przesyłane do okienka dialogowego i umieszczane w obszarze przechowywanym we właściwościach argumentów nowego okna. Można przesłać tyle argumentów, ile jest potrzebne. Jest to bardzo wygodny sposób dostarczania wartości domyślnych do pól w oknie dialogowym.</p>
+
+<pre>var somefile=document.getElementById('enterfile').value;
+
+window.openDialog("chrome://findfile/content/showdetails.xul","showmore",
+                  "chrome",somefile);
+</pre>
+
+<p>W tym przykładzie zostanie wyświetlone okno dialogowe showdetails.xul. Przesłany mu będzie jeden argument <code>somefile</code> wzięty z wartości elementu o id <code>enterfile</code>. W skrypcie używanym przez to okienko dialogowe, możemy się odwołać do tego argumentu używając własności <code>arguments</code> okna. Na przykład:</p>
+
+<pre>var fl = window.arguments[0];
+
+document.getElementById('thefile').value = fl;
+</pre>
+
+<p>Jest to bardzo efektywny sposób przekazywania wartości nowemu oknu. Można przesłać wartości z otwartego okna do oryginalnego na dwa sposoby. Po pierwsze można użyć własności <code><a href="pl/DOM/window.opener">window.opener</a></code>, która pozostawia okno, z którego otwarto dialog. Po drugie można przesłać funkcję lub obiekt jako jeden z argumentów, a potem odwołać się do tej funkcji lub zmodyfikować obiekt w otwartym dialogu.</p>
+
+<div class="note">
+<p><strong>Uwaga</strong>: <code>openDialog()</code> żąda przywileju UniversalBrowserWrite. To znaczy, że to nie będzie działało na zdalnej stronie; dlatego stosuj w zamian <code>window.open()</code>.</p>
+</div>
+
+<h2 id="Element_okna_dialogowego" name="Element_okna_dialogowego">Element okna dialogowego</h2>
+
+<p>Element okna dialogowego powinien być używany zamiast elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>, podczas tworzenia <code><code><a href="/pl/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code>. Zapewnia to użyteczną możliwość stworzenia nawet do czterech przycisków w dole okienka dialogowego na polecenia takie jak 'OK', 'Anuluj' itd. Nie musisz zamieszczać XUL-a dla każdego <code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>, ale musisz pamiętać o kodzie, który wygeneruje odpowiednią akcję, gdy użytkownik naciśnie dany przycisk. Ta procedura jest niezbędna, ponieważ różne platformy mają odpowiednią dla siebie kolejność, w której pojawiają się te przyciski.</p>
+
+<h3 id="Przyk.C5.82ad_okienka_dialogowego" name="Przyk.C5.82ad_okienka_dialogowego">Przykład okienka dialogowego</h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_dialogs_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dialogs_1.xul">Podgląd</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+
+&lt;dialog id="donothing" title="Przykład okienka dialogowego"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+        ondialogaccept="return doOK();"
+        ondialogcancel="return doCancel();"&gt;
+
+&lt;script&gt;
+function doOK(){
+  alert("Nacisnąłeś OK!");
+  return true;
+}
+
+function doCancel(){
+  alert("Nacisnąłeś  Cancel!");
+  return true;
+}
+&lt;/script&gt;
+
+&lt;description value="Zaznacz przycisk"/&gt;
+
+&lt;/dialog&gt;
+</pre>
+
+<p>W oknie dialogowym możesz umieszczać elementy jakie tylko chcesz. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code> ma kilka dodatkowych możliwości, których nie posiadają elementy okien. Atrybut <code><code id="a-buttons"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/buttons">buttons</a></code></code> jest używany w celu zdefiniowania, które przyciski mają się pojawić w oknie dialogowym. Następujące wartości mogą być użyte, gdy zostaną oddzielone przecinkami:</p>
+
+<ul>
+ <li><code>accept</code> - przycisk OK</li>
+ <li><code>cancel</code> - przycisk Anuluj</li>
+ <li><code>help</code> - przycisk Pomoc</li>
+ <li><code>disclosure</code> - przycisk szczegółów, służący do wyświetlania dodatkowych informacji</li>
+</ul>
+
+<p>Możemy ustawić kod do wykonania po naciśnięciu jakiegoś przycisku, za pomocą atrybutów <code><code id="a-ondialogaccept"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ondialogaccept">ondialogaccept</a></code></code>, <code><code id="a-ondialogcancel"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ondialogcancel">ondialogcancel</a></code></code>, <code><code id="a-ondialoghelp"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ondialoghelp">ondialoghelp</a></code></code> i <code><code id="a-ondialogdisclosure"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/ondialogdisclosure">ondialogdisclosure</a></code></code>. Jeśli wypróbujesz powyższy przykład, odkryjesz, że funkcja do <code>doOK()</code> jest wywoływana, gdy przycisk 'OK' został wciśnięty, a funkcja <code>doCancel()</code>, gdy wciśnięty został przycisk 'Anuluj'.</p>
+
+<p>Te dwie funkcje <code>doOK()</code> i <code>doCancel()</code> - zwracają <code>true</code>, co oznacza, że okno dialogowe musi zostać zamknięte. Jeśli zwrócone byłoby <code>false</code>, to okno dialogowe pozostałoby otwarte. Jest to używane w przypadku wpisania błędnej wartości w pole w oknie dialogowym.</p>
+
+<p>Użytecznymi atrybutami między innymi są:</p>
+
+<ul>
+ <li><code><code id="a-buttonlabelaccept"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/buttonlabelaccept">buttonlabelaccept</a></code></code> - etykieta pokazująca się na przycisku akceptacji np.<em>Zapisz</em></li>
+ <li><code><code id="a-buttonaccesskeyaccept"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/buttonaccesskeyaccept">buttonaccesskeyaccept</a></code></code> - skrót klawiaturowy do zastosowania dla przycisku akceptującego np.<em>Z</em></li>
+ <li><code><code id="a-defaultButton"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/defaultButton">defaultButton</a></code></code> - przycisk jest aktywny, kiedy naciśnięty zostanie klawisz Enter</li>
+</ul>
+
+<div class="note">
+<p><strong>Uwaga:</strong> Atrybuty etykiety są żądane przez zdalne strony i prawdopodobnie zapomniano o tym w powyższych przykładach due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=224996" title="&lt;dialog> buttons have no label in remote XUL">błąd 224996</a>.</p>
+</div>
+
+<h3 id="Przyk.C5.82adowe_okno_dialogowe_wraz_z_dodatkowymi_mo.C5.BCliwo.C5.9Bciami" name="Przyk.C5.82adowe_okno_dialogowe_wraz_z_dodatkowymi_mo.C5.BCliwo.C5.9Bciami">Przykładowe okno dialogowe wraz z dodatkowymi możliwościami</h3>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+
+&lt;dialog id="myDialog" title="Moje okienko"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        onload="window.sizeToContent();"
+        buttons="accept,cancel"
+        buttonlabelaccept="Ustaw ulubione"
+        buttonaccesskeyaccept="U"
+        ondialogaccept="return doSave();"
+        buttonlabelcancel="Anuluj"
+        buttonaccesskeycancel="n"
+        ondialogcancel="return doCancel();"&gt;
+
+&lt;script&gt;
+function doSave(){
+ //doSomething()
+ return true;
+}
+function doCancel(){
+  return true;
+}
+&lt;/script&gt;
+
+&lt;dialogheader title="Moje okienko dialogowe" description="Przykładowe okno"/&gt;
+&lt;groupbox flex="1"&gt;
+  &lt;caption label="Wybierz ulubiony owoc"/&gt;
+  &lt;radio id="orange" label="Oranges because they are fruity"/&gt;
+  &lt;radio id="violet" selected="true" label="Strawberries because of colour"/&gt;
+  &lt;radio id="yellow" label="Bananna because it pre packaged"/&gt;
+&lt;/groupbox&gt;
+
+&lt;/dialog&gt;
+</pre>
+
+<p>Elementy przycisków mogą być dostępne z następującym kodem JavaScript</p>
+
+<pre>// przycisk accept
+var acceptButt = document.documentElement.getButton("accept")
+</pre>
+
+<h3 id="Wi.C4.99cej_przyk.C5.82ad.C3.B3w" name="Wi.C4.99cej_przyk.C5.82ad.C3.B3w">Więcej przykładów</h3>
+
+<p>Więcej przykładów znajdziemy w <a href="pl/Fragmenty_kodu/Okienka_dialogowe">Dialogs and prompts</a> (fragment kodu).</p>
+
+<p>Następnie, zobaczymy jak otworzyć <a href="pl/Kurs_XUL/Okna_otwierania_i_zapisywania_plik%c3%b3w">okienko dialogowe pliku</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Możliwości_okna" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Okna_otwierania_i_zapisywania_plików">Następny  »</a></p>
+</div><p></p>

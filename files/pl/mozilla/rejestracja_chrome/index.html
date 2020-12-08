@@ -1,0 +1,129 @@
+---
+title: Rejestracja Chrome
+slug: Mozilla/Rejestracja_Chrome
+tags:
+  - Toolkit API
+  - Wszystkie_kategorie
+translation_of: Mozilla/Chrome_Registration
+---
+<p> </p>
+<h3 id="Czym_jest_chrome.3F" name="Czym_jest_chrome.3F">Czym jest chrome?</h3>
+<p><a href="pl/Chrome">Chrome</a> to zestaw elementów interfejsu użytkownika, które znajdują się poza obszarem treści okna. Paski narzędzi, paski menu, paski postępu i pola tytułu okna to przykłady elementów, które są zazwyczaj elementami chrome.</p>
+<h3 id="Dostawcy_chrome" name="Dostawcy_chrome">Dostawcy chrome</h3>
+<p>Jednostka dostarczająca chrome dla danego okna (np. dla okna przeglądarki) nazywana jest dostawcą chrome (ang. chrome provider). Dostawcy pracują wspólnie, aby dostarczyć pełny zestaw chrome dla danego typu okna, od obrazków na paskach narzędziowych po pliki zawierające ciągi znakowe, treść oraz opis prezentacji samego okna.</p>
+<p>Są trzy podstawowe typy dostawców chrome:</p>
+<h4 id="Zawarto.C5.9B.C4.87_.28ang._Content.29" name="Zawarto.C5.9B.C4.87_.28ang._Content.29">Zawartość (ang. Content)</h4>
+<p>Główne źródła plików do opisu okna pochodzą z dostawcy zawartości i może to być dowolny plik, który może zostać wyświetlony w Mozilli. Będzie to zazwyczaj plik XUL, ponieważ język XUL jest stworzony do opisywania zawartości okien i okienek dialogowych. Pliki JavaScript opisujące interfejs użytkownika oraz pliki wiążące XBL również są trzymane w pakietach zawartości.</p>
+<h4 id="Pliki_lokalizacyjne_.28ang._Locale.29" name="Pliki_lokalizacyjne_.28ang._Locale.29">Pliki lokalizacyjne (ang. Locale)</h4>
+<p>Aplikacje, które można zlokalizować trzymają wszystkie lokalizowane informacje w dostawcy tekstów. To pozwala tłumaczom dołączać zewnętrzną paczkę chrome z tłumaczeniem aplikacji, bez potrzeby dotykania reszty kodu. Dwoma podstawowymi rodzajami plików tłumaczeń są pliki DTD oraz pliki własności znane z Javy.</p>
+<h4 id="Sk.C3.B3rki_.28ang._Skin.29" name="Sk.C3.B3rki_.28ang._Skin.29">Skórki (ang. Skin)</h4>
+<p>Dostawca skórek jest odpowiedzialny za dostarczanie pełnego zestawu plików opisujących wygląd chrome. Zazwyczaj dostawca skórek dostarcza pliki CSS i obrazki.</p>
+<h3 id="Rejestr_chrome" name="Rejestr_chrome">Rejestr chrome</h3>
+<p>Środowisko Gecko zarządza serwisem znanym jako rejestr chrome, który dostarcza mapowanie nazw z przestrzeni chrome na fizyczne lokalizacje pakietów chrome na dysku.</p>
+<p>Rejestr chrome jest konfigurowalny i trwały, dzięki czemu użytkownik może instalować różnych dostawców chrome i używać preferowanej skórki lub języka. Ten proces jest dokonywany poprzez XPInstall oraz menedżer rozszerzeń.</p>
+<p>W celu informowania rejestru chrome o dostępności chrome używany jest tekst manifestu (ang. text manifest): ten plik nosi nazwę "chrome.manifest" i jest trzymany w korzeniu rozszerzenia lub motywu, oraz chrome/*.manifest w aplikacji XULRunnera.</p>
+<p>Manifest chrome w postaci czystego tekstu ma prostą postać liniową. Każda linia jest przetwarzana niezależnie; jeżeli linia nadaje się do przetworzenia, rejestry chrome wykonują akcję określoną przez tę linię; w przeciwnym wypadku, rejestry chrome ignorują ją (oraz wypisują ostrzeżenie w konsoli błędów).</p>
+<pre class="eval">locale nazwapakietu nazwajezyka sciezka/do/pliku
+skin nazwapakietu nazwaskorki sciezka/do/pliku
+</pre>
+<h3 id="Instrukcje_manifestu" name="Instrukcje_manifestu">Instrukcje manifestu</h3>
+<h4 id="Komentarze" name="Komentarze">Komentarze</h4>
+<p>Możemy wprowadzić linię komentarza zaczynając komentarz znakiem '#'. Jakiekolwiek inne znaki w tej linii zostaną zignorowane.</p>
+<pre class="eval"># to jest linia komentarza - możemy ją umieścić w każdym miejscu
+</pre>
+<h4 id="zawarto.C5.9B.C4.87_.28content.29" name="zawarto.C5.9B.C4.87_.28content.29">zawartość (content)</h4>
+<p>Zawartość pakietu jest rejestrowana poprzez linię</p>
+<pre class="eval">content<i>nazwapakietu</i><i>uri/do/plików/</i><i>[flagi]</i>
+</pre>
+<p>Taka linia zarejestruje położenie podczas odtwarzania ścieżki <a class="external" rel="freelink">chrome://</a>
+ <i>
+  nazwapakietu</i>
+ /content/... . URI może być względną lub bezwzględną ścieżką do pliku manifestu.</p>
+<h4 id="pliki_j.C4.99zykowe_.28locale.29" name="pliki_j.C4.99zykowe_.28locale.29">pliki językowe (locale)</h4>
+<p>Pakiet językowy jest rejestrowany poprzez linię</p>
+<pre class="eval">locale<i>nazwapakietu</i><i>nazwajęzyka</i><i>uri/do/plików/</i><i>[flagi]</i>
+</pre>
+<p>Taka linia zarejestruje pakiet językowy przy odtwarzaniu ścieżki <a class="external" rel="freelink">chrome://</a>
+ <i>
+  nazwapakietu</i>
+ /locale/... .
+ <i>
+  nazwajęzyka</i>
+ jest zazwyczaj identyfikatorem języka jak "pl" lub identyfikatorem typu język-kraj jak "pt-BR". Jeżeli dla danego pakietu zarejestrowany jest więcej niż jeden pakiet językowy, rejestr chrome wybierze najbardziej pasujący do preferencji użytkownika.</p>
+<h4 id="sk.C3.B3rki_.28skin.29" name="sk.C3.B3rki_.28skin.29">skórki (skin)</h4>
+<p>Pakiet skórek jest rejestrowany poprzez linię</p>
+<pre class="eval">skin<i>nazwapakietu</i><i>nazwaskorki</i><i>uri/do/plików/</i><i>[flagi]</i>
+</pre>
+<p>Taka linia zarejestruje pakiet skórek przy odtwarzaniu ścieżki <a class="external" rel="freelink">chrome://</a>
+ <i>
+  nazwapakietu</i>
+ /skin/... .
+ <i>
+  nazwaskorki</i>
+ jest zazwyczaj identyfikatorem określającym instalowaną skórkę. Jeżeli dla danego pakietu zarejestrowany jest więcej niż jeden pakiet skórek, rejestr chrome wybierze najbardziej pasujący do preferencji użytkownika.</p>
+<h4 id="Nak.C5.82adki_.28overlays.29" name="Nak.C5.82adki_.28overlays.29">Nakładki (overlays)</h4>
+<p>Nakładki XUL są rejestrowane przy użyciu poniższej składni:</p>
+<pre class="eval">overlay <a class="external" rel="freelink">chrome://</a><i>URI-do-pliku-nakładki</i> <a class="external" rel="freelink">chrome://</a><i>URI-nakładki</i><i>[flagi]</i>
+</pre>
+<h4 id="style" name="style">style</h4>
+<p>Nakładki stylów (własne pliki CSS, które będą nakładane na strony chrome) są rejestrowane przy użyciu poniższej składni:</p>
+<pre class="eval">style <a class="external" rel="freelink">chrome://</a><i>URI-do-pliku</i> <a class="external" rel="freelink">chrome://</a><i>URI-arkusza-stylów</i>
+</pre>
+<h4 id="nadpisywanie_.28override.29" name="nadpisywanie_.28override.29">nadpisywanie (override)</h4>
+<p>W pewnych przypadkach rozszerzenia mogą chcieć nadpisać pliki chrome dołączone do aplikacji lub XulRunnera. Aby to zrobić, należy skorzystać z instrukcji "override" w pliku manifestu:</p>
+<pre class="eval">override <a class="external" rel="freelink">chrome://</a><i>pakiet</i>/<i>typ</i>/<i>original-uri.whatever</i><i>new-resolved-URI</i>
+</pre>
+<h3 id="Flagi_manifestu" name="Flagi_manifestu">Flagi manifestu</h3>
+<p>Linie manifestu mogą mieć flagi dodane na końcu linii rejestracji. Te flagi oznaczają specjalne atrybuty, lub ograniczają warunki w których dana linia zostanie użyta.</p>
+<h4 id="aplikacja_.28application.29" name="aplikacja_.28application.29">aplikacja (application)</h4>
+<p>Rozszerzenia mogą być instalowane jako wiele aplikacji. Mogą istnieć linie rejestracyjne chrome, które dotyczą tylko wybranych aplikacji. Flaga</p>
+<pre class="eval">application=<i>app-ID</i>
+</pre>
+<p>określa, że ta instrukcja ma dotyczyć wyłącznie rozszerzeń instalowanych w aplikacji określonej przez
+ <i>
+  app-ID</i>
+ . Można określić wiele flag aplikacji w jednej linii, i w tym wypadku linia zostanie wykonana, jeśli którakolwiek z nich będzie pasować.</p>
+<h4 id="appversion" name="appversion">appversion</h4>
+<p>Rozszerzenia mogą być instalowane w wielu wersjach aplikacji. Można stworzyć linie rejestracji chrome, które będą dotyczyły tylko wybranych wersji aplikacji. Flaga</p>
+<pre class="eval">appversion=<i>version</i>
+appversion&lt;<i>version</i>
+appversion&lt;=<i>version</i>
+appversion&gt;<i>version</i>
+appversion&gt;=<i>version</i>
+</pre>
+<p>określa, że instrukcja ma dotyczyć wyłącznie, jeżeli rozszerzenie jest instalowane w aplikacji o pasującej wersji. Można określić wiele flag appversion w jednej linii, i w tym wypadku linia zostanie wykonana, jeśli którakolwiek z nich będzie pasować.</p>
+<h4 id="platform_.28Pakiety_dotycz.C4.85ce_platformy.29" name="platform_.28Pakiety_dotycz.C4.85ce_platformy.29">platform (Pakiety dotyczące platformy)</h4>
+<p>Niektóre pakiety posiadają specjalną flagę oznaczającą, że dany pakiet jest dla konkretnej platformy. Niektóre elementy zawartości, skórki, tekstów mogą być różne zależnie od platformy, na której aplikacja została uruchomiona. Te pakiety posiadają trzy różne zestawy plików, dla windows/os2, macintosha oraz platform uniksowych. Na przykład kolejność przycisków "OK" i "anuluj" w okienkach dialogowych jest różna, tak samo jak nazwy niektórych elementów. Modyfikator "platformy" jest przetwarzany tylko dla rejestracji zawartości, nie jest używany przy rejestracji pakietów językowych lub skórek.</p>
+<p>Aby oznaczyć, że dany pakiet zawartości jest przeznaczony dla konkretnej platformy, należy dodać flagę "platform" za ścieżką; np.</p>
+<pre class="eval">content global-platform jar:toolkit.jar!/toolkit/content/global-platform/ platform
+</pre>
+<p>Mając to zdefiniowane w pliku manifestu, należy się upewnić, że w w katalogu global-platform znajdują się podkatalogi <code>win</code> (Windows/OS2), <code>mac</code> (OS9/OSX), lub <code>unix</code> (Wszystko inne). Wszystko, co znajduje się poza tymi podkatalogami, zostanie zignorowane.</p>
+<h4 id="xpcnativewrappers" name="xpcnativewrappers">xpcnativewrappers</h4>
+<p>Pakiety chrome mogą decydować, czy chcą użyć mechanizmu bezpieczeństwa xpcnativewrappers, aby chronić swój kod przed nieuprawnionym dostępem do treści. Zajrzyj do <a href="pl/Bezpieczny_dost%c4%99p_do_zawarto%c5%9bci_DOM_z_chrome">Bezpieczny dostęp do zawartości DOM z chrome</a> po więcej szczegółów.</p>
+<p>W wydaniu Firefox 1.5 alpha (Deer Park alpha), ta flaga jest *wyłączona* domyślnie i musi zostać ręcznie włączona poprzez ustawienie xpcnativewrappers=yes.</p>
+<p>Od pierwszego wydania Firefox 1.5 beta, ta flaga będzie domyślnie włączona i rozszerzenia potrzebujące niebezpiecznego dostępu do zawartości obiektów będą musiały ustawić xpcnativewrappers=no.</p>
+<p>Flaga xpcnativewrappers dotyczy tylko pakietu content: nie jest rozpoznawana w rejestrach locali ani skórek.</p>
+<h3 id="Przyk.C5.82adowy_Manifest_Chrome" name="Przyk.C5.82adowy_Manifest_Chrome">Przykładowy Manifest Chrome</h3>
+<pre class="eval">content       necko                   jar:comm.jar!/content/necko/ xpcnativewrappers=yes
+locale	       necko       en-US       jar:en-US.jar!/locale/en-US/necko/
+content       xbl-marquee             jar:comm.jar!/content/xbl-marquee/
+content       pipnss                  jar:pipnss.jar!/content/pipnss/
+locale        pipnss      en-US       jar:en-US.jar!/locale/en-US/pipnss/
+# Firefox-only
+overlay <a class="external" rel="freelink">chrome://browser/content/pageInfo.xul</a>           <a class="external" rel="freelink">chrome://pippki/content/PageInfoOverlay.xul</a> application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+overlay <a class="external" rel="freelink">chrome://communicator/content/pref/preftree.xul</a> <a class="external" rel="freelink">chrome://pippki/content/PrefOverlay.xul</a>
+overlay <a class="external" rel="freelink">chrome://navigator/content/pageInfo.xul</a>         <a class="external" rel="freelink">chrome://pippki/content/PageInfoOverlay.xul</a> <a class="link-mailto" href="mailto:application=seamonkey@applications.mozilla.org" rel="freelink">application=seamonkey@applications.mozilla.org</a>
+content       pippki                  jar:pippki.jar!/content/pippki/ xpcnativewrappers=yes
+locale        pippki      en-US       jar:en-US.jar!/locale/en-US/pippki/
+content       global-platform         jar:toolkit.jar!/content/global-platform/ platform
+skin          global      classic/1.0 jar:classic.jar!/skin/classic/global/
+override <a class="external" rel="freelink">chrome://global/content/netError.xhtml</a> jar:embedder.jar!/global/content/netError.xhtml
+content       inspector               jar:inspector.jar!/content/inspector/ xpcnativewrappers=no
+</pre>
+<h3 id="Manifesty_starego_typu_contents.rdf" name="Manifesty_starego_typu_contents.rdf">Manifesty starego typu contents.rdf</h3>
+<p>Zanim manifesty czysto tekstowe zostały wprowadzone (nastąpiło to w Firefoksie 1.5, Toolkit 1.8), używane były manifesty RDF nazywane "contents.rdf". Ten format jest teraz wycofywany; jednakże, Mozilla suite (Seamonkey) nie obsługuje jeszcze manifestów czysto tekstowych, więc manifesty contents.rdf są wymagane dla rozszerzeń, które chcą zachować wsteczną zgodność z Firefoksem 1.0 oraz suite.</p>
+<h3 id="Oficjalne_dokumentacje_dla_Toolkit_API" name="Oficjalne_dokumentacje_dla_Toolkit_API">Oficjalne dokumentacje dla <a href="pl/Toolkit_API">Toolkit API</a></h3>
+<p>{{ page("pl/docs/Toolkit_API/Official_References") }}</p>
+<div class="noinclude">
+  </div>
+<p> </p>

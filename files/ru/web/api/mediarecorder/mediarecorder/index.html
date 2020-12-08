@@ -1,0 +1,157 @@
+---
+title: MediaRecorder.MediaRecorder()
+slug: Web/API/MediaRecorder/MediaRecorder
+translation_of: Web/API/MediaRecorder/MediaRecorder
+---
+<div>{{APIRef("MediaStream Recording")}}</div>
+
+<p><strong><code>MediaRecorder()</code></strong> конструктор {{domxref("MediaRecorder")}} объекта который будет делать запись переданного {{domxref("MediaStream")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>mediaRecorder</em> = new MediaRecorder(<em>stream</em>[, <em>options</em>]);</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code><strong>stream</strong></code></dt>
+ <dd>Объект потока {{domxref("MediaStream")}} источника из которого будет производиться запись. Может быть потоком, созданным {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} или {{HTMLElement("audio")}}, {{HTMLElement("video")}} или {{HTMLElement("canvas")}} элементами.</dd>
+ <dt>
+ <p><strong><code>options</code> </strong>{{optional_inline}}</p>
+ </dt>
+ <dd>
+ <p>Объект, содержащий следующие свойства:</p>
+
+ <ul>
+  <li><code>mimeType</code>:  <code>mime</code> тип, определяет формат результата записи, который нужно использовать в качестве контейнера для создаваемого объекта <code>MediaRecorder</code>. Можно просто указать формат контейнера, а браузер сам выберет нужный кодек для записи аудио/видео, или испоьзуйте <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">параметр codecs</a> или параметр<code> profiles</code> для расширения информации об использовании и тонкой конфигурации кодеков. Приложения, предварительно, могут проверять поддержку браузерами определенного типа из свойства <code>mimeType</code> , вызывая метод {{domxref("MediaRecorder.isTypeSupported()")}}.</li>
+  <li><code>audioBitsPerSecond</code>: Скорость записи медиа данных аудио.</li>
+  <li><code>videoBitsPerSecond</code>: Скорость записи медиа данных видео.</li>
+  <li><code>bitsPerSecond</code>: Скорость записи медиаданных аудио и видео. Может определяться вместо верхних двух. Если определяется вместе с одним из свойств выше, имеет меньший приоритет, и используется  вместо отсутствующей настройки выше..</li>
+ </ul>
+
+ <div class="note">
+ <p> Если значения битов в секунду не указаны для видео и / или аудио, для видео по умолчанию принимается значение 2,5 Мбит / с, а для аудио по умолчанию используется адаптивный режим, в зависимости от частоты дискретизации и количества каналов.</p>
+ </div>
+ </dd>
+</dl>
+
+<h3 id="Исключения">Исключения</h3>
+
+<dl>
+ <dt><code>NotSupportedError</code></dt>
+ <dd>Определяет MIME тип, не поддерживающийся браузером.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<p>В этом примере показано, как создать медиа рекордер для указанного потока, чья скорость передачи звука составляет 128 Кбит / с, а скорость передачи видео - 2,5 Мбит / с. Записанные мультимедийные данные будут храниться в контейнере MP4 (поэтому, если вы соберете порции мультимедийных данных и сохраните их на диск, они будут в файле с разрешением MP4).</p>
+
+<pre class="brush: js">...
+<code class="language-html">
+
+if (navigator.mediaDevices.getUserMedia) {
+  var constraints = { audio: true, video: true };
+  var chunks = [];
+
+  </code>var onSuccess = function(stream) {
+    var options = {
+      audioBitsPerSecond : 128000,
+      videoBitsPerSecond : 2500000,
+      mimeType : 'video/mp4'
+    }
+    var mediaRecorder = new MediaRecorder(stream,options);
+    m = mediaRecorder;
+
+...</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("MediaStream Recording")}}</td>
+   <td>{{Spec2("MediaStream Recording")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(47)}}</td>
+   <td>{{CompatGeckoDesktop("25.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>options object</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("43.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(47)}}</td>
+   <td>{{CompatGeckoDesktop("25.0")}}</td>
+   <td>1.3<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(47)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] The initial Firefox OS implementation only supported audio recording.</p>
+
+<h2 id="Смотри_так_же">Смотри так же</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Использование MediaRecorder API</a></li>
+ <li><a href="http://mdn.github.io/web-dictaphone/">Веб диктофон </a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
+ <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
+ <li>{{domxref("Navigator.mediaDevices.getUserMedia()")}}</li>
+</ul>

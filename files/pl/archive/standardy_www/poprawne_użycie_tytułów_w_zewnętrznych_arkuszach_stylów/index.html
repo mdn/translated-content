@@ -1,0 +1,40 @@
+---
+title: Poprawne użycie tytułów w zewnętrznych arkuszach stylów
+slug: Archive/Standardy_WWW/Poprawne_użycie_tytułów_w_zewnętrznych_arkuszach_stylów
+tags:
+  - CSS
+  - Wszystkie_kategorie
+translation_of: Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets
+---
+<p>
+</p><p>Zewnętrzne arkusze stylów są zwykle łączone z dokumentami HTML przy użyciu elementu <code>link</code>, ale niezwykle ważnym jest właściwe użycie atrybutów tego elementu. Ponieważ istnieją trzy rodzaje arkuszy stylów, atrybut <code>title</code> jest niezbędny do określenia dwóch z nich. Obecność atrybutu <code>title</code> w elemencie <code>link</code> odwołującym się do zewnętrznego arkusza stylów może sprawić, że stanie się on <i>preferowanym arkuszem stylów</i>. W większości przypadków spowoduje to zignorowanie zewnętrznego arkusza stylów, co zwykle nie jest tym, czego życzył sobie autor.
+</p>
+<h3 id="Dlaczego_tytu.C5.82_si.C4.99_liczy.3F"> Dlaczego tytuł się liczy? </h3>
+<p>Atrybut <code>title</code> wpływa na sposób w jaki zewnętrzny arkusz stylów będzie zastosowany w dokumencie. Użycie atrybutu <code>title</code> jest tak charakterystyczne, że specyfikacja HTML 4.01 dzieli arkusze stylów ze względu na jego obecność lub jej brak. Poprzez użycie atrybutu <code>title</code> można kontrolować, kiedy dany arkusz stylów zawsze stosuje się do dokumentu, czy też jest używany tylko w niektórych, specyficznych przypadkach.
+</p><p>Istnieją trzy rodzaje arkuszy stylów: <i>stałe</i>, <i>preferowane</i> oraz <i>alternatywne</i>. Najbardziej znanymi autorom będą stałe arkusze stylów, których dowolna ilość może być jednocześnie użyta w dokumencie. Stałym arkuszem stylów jest taki, który nie ma atrybutu <code>title</code>, a wartością atrybutu <code>rel</code> jest <code>stylesheet</code>. Dokument może się odwoływać do jednego lub więcej stałych arkuszy stylów, z których wszystkie są używane podczas prezentacji dokumentu.
+</p><p>Preferowanym arkuszem stylów jest natomiast taki, który ma do atrybutu <code>rel</code> przypisaną wartość <code>stylesheet</code> i posiada dowolną wartość atrybutu <code>title</code>. Poniżej dwa przykłady:
+</p>
+<pre>&lt;link type="text/css" rel="stylesheet" title="Style podstawowe" href="basic.css" /&gt;
+&lt;link type="text/css" rel="stylesheet" title="Ryby i łódki" href="ocean.css" /&gt;</pre>
+<p>W specyfikacji HTML 4.01 określone jest, iż tylko <b>jeden</b> z preferowanych arkuszy stylów może być użyty w danym momencie. W związku z tym, patrząc na powyższy przykład, tylko jeden z podanych dwóch preferowanych arkuszy stylów będzie zastosowany w dokumencie. W specyfikacji brak procedury decydującej o tym, który z podanych arkuszy stylów powinien być użyty, wobec czego przeglądarki mają wolny wybór, który arkusz stylów zastosują.
+</p><p>Zatem dowolny <code>link</code> do arkusza stylów, w którym określony został atrybut <code>title</code> <b>nie może</b> być stały, i może być zignorowany przez przeglądarkę. Każdy z elementów <code>link</code> odwołujący się do arkusza stylów i zawierający atrybut <code>title</code> musi być preferowanym albo alternatywnym arkuszem stylów, zależnie od wartości atrybutu <code>rel</code>.
+</p><p>W dokumencie odwołującym się do alternatywnych arkuszy stylów, preferowany arkusz stylów będzie używany tak długo, póki użytkownik nie wybierze żadnego z arkuszy alternatywnych. Zatem, kiedy dokument jest ładowany przeglądarka użyje wszystkich stałych arkuszy stylów, oraz jednego preferowanego (należy pamiętać, iż tylko jeden z arkuszy powinien być określony jako preferowany). Gdy użytkownik wybierze jeden z arkuszy alternatywnych, arkusz preferowany przestanie być używany, lecz będzie mógł być wybrany ponownie przez użytkownika.
+</p><p>Podstawowym użyciem preferowanego arkusza stylów jest określenie jednego z arkuszy stylów jako "domyślnego" dla prezentacji. Jeśli zostanie wybrany którykolwiek z alternatywnych arkuszy stylów, arkusz preferowany przestaje być używany na korzyść wybranego przez użytkownika alternatywnego arkusza stylów.
+</p>
+<h3 id="Zalecenia"> Zalecenia </h3>
+<p>Twórcy stron powinni upewniać się, że każdy z arkuszy stylów, które powinny być używane zawsze są zadeklarowane jako stałe, a nie preferowane. Cytując, <a class="external" href="http://www.w3.org/TR/HTML401/present/styles.html#h-14.3.1">Specyfikacja HTML 4.01, sekcja 14.3.1</a> określa:
+</p>
+<ul><li> Aby uczynić arkusz stylów stałym, ustaw atrybut <a class="external" href="http://www.w3.org/TR/HTML401/struct/links.html#adef-rel"><code>rel</code></a> równy "stylesheet" i nie ustawiaj atrybutu <a class="external" href="http://www.w3.org/TR/HTML401/struct/global.html#adef-title"><code>title</code></a>.
+</li><li> Aby uczynić arkusz stylów preferowanym, ustaw atrybut <a class="external" href="http://www.w3.org/TR/HTML401/struct/links.html#adef-rel"><code>rel</code></a> równy "stylesheet" i nadaj nazwę temu arkuszowi używając atrybutu <a class="external" href="http://www.w3.org/TR/HTML401/struct/global.html#adef-title"><code>title</code></a>.
+</li></ul>
+<h3 id="Odno.C5.9Bniki"> Odnośniki </h3>
+<ul><li> <a class="external" href="http://www.w3.org/TR/html401/present/styles.html#h-14.3">Specyfikacja HTML 4.01, sekcja 14.3: Zewnętrzne arkusze stylów</a>
+</li></ul>
+<div class="originaldocinfo">
+<h3 id="Informacje_o_dokumencie"> Informacje o dokumencie </h3>
+<ul><li> Autor: Eric A. Meyer
+</li><li> Data ostatniej aktualizacji: December 30th, 2002
+</li><li> Informacje o prawach autorskich: Copyright © 2001-2003 Netscape.
+</li></ul>
+</div>
+{{ languages( { "fr": "fr/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes", "en": "en/Correctly_Using_Titles_With_External_Stylesheets" } ) }}

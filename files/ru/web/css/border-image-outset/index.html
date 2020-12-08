@@ -1,0 +1,129 @@
+---
+title: border-image-outset
+slug: Web/CSS/border-image-outset
+translation_of: Web/CSS/border-image-outset
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>The <strong><code>border-image-outset</code></strong> property describes by what amount the <dfn>border image area</dfn> extends beyond the border box.</p>
+
+<p>Portions of the border image that are rendered outside the border box as a result of this property do not cause scrolling to be triggered. These areas also don't capture or cause mouse events to occur on behalf of the bordered element.</p>
+
+<div>{{cssinfo}}</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush:css">/* border-image-outset: <em>sides</em> */
+border-image-outset: 1.5;
+
+/* border-image-outset: <em>vertical</em> <em>horizontal</em> */
+border-image-outset: 1 1.2;
+
+/* border-image-outset: <em>top</em> <em>horizontal</em> <em>bottom */</em>
+border-image-outset: 30px 2 45px;
+
+/* border-image-outset: <em>top</em> <em>right</em> <em>bottom</em> <em>left */</em>
+border-image-outset: 7px 12px 14px 5px;
+
+border-image-repeat: inherit;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<div class="note">
+<p>When a value is specified as a unitless {{cssxref("&lt;number&gt;")}}, that value is multiplied by the corresponding computed {{cssxref("border-width")}} to determine the <code>border-image-outset</code>. Negative values are invalid.</p>
+</div>
+
+<dl>
+ <dt><em>sides</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box in all four directions.</dd>
+ <dt><em>horizontal</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box in both horizontal directions (left and right).</dd>
+ <dt><em>vertical</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box in both vertical directions (top and bottom).</dd>
+ <dt><em>top</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box past its top edge.</dd>
+ <dt><em>bottom</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box past its bottom edge.</dd>
+ <dt><em>right</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box past its right edge.</dd>
+ <dt><em>left</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box past its left edge.</dd>
+ <dt><code>inherit</code></dt>
+ <dd>Is a keyword indicating that all four values are inherited from each parent elements' calculated value.</dd>
+</dl>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#border-image-outset', 'border-image-outset')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Первоначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>15.0</td>
+   <td>{{CompatGeckoDesktop("15.0")}}</td>
+   <td>11</td>
+   <td>15</td>
+   <td>6</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("15.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

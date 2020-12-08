@@ -1,0 +1,120 @@
+---
+title: Critérios de Revisão Marketplace
+slug: Mozilla/Marketplace/Publishing/criterio-de-revisao-loja-de-aplicativos
+tags:
+  - App Revisor
+  - Apps
+  - Marketplace
+  - Mobile
+  - Revisão
+  - Segurança
+  - l1on
+translation_of: Archive/Mozilla/Marketplace/Publishing/Marketplace_review_criteria
+---
+<div class="summary">
+<p><span id="result_box" lang="pt"><span class="alt-edited">Este artigo descreve o conjunto de requisitos que um aplicativo deve cumprir para ser distribuído através do Firefox Marketplace. Estes requisitos são projetados para equilibrar as necessidades de ambos os usuários e desenvolvedores de aplicativos a partir do Firefox Marketplace. Os desenvolvedores querem requisitos justos, consistentes e não-draconianas que eles podem confiar para construir um negócio online. Por outro lado, os usuários querem garantia de que os aplicativos são seguros, irá trabalhar em seu dispositivo, e que a aplicação irá fazer o que diz que vai fazer. Os requisitos de aplicativos abaixo apontar para o delicado equilíbrio entre essas necessidades.</span></span></p>
+</div>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Aqui estão expectativas dos revisores do que é ou não é app da Mozilla :</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Critérios serão aplicados de maneira justa, compassiva e consistente. O processo de revisão do app não se destina a ser um gatekeeper, mas sim um ponto de contato confiável que fornece feedback para ajudar os desenvolvedores a serem mais bem sucedido.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Os revisores não são uma equipe de QA! Durante o processo de revisão, alguém vai olhar sobre o manifesto do aplicativo e passar alguns minutos exercitando o aplicativo como um usuário normal faria.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Se um aplicativo falhar na avaliação, será dado ao desenvolvedor uma explicação clara dos problemas encontrados, os passos para reproduzir e, quando possível, o revisor deve apontar o desenvolvedor na direção certa, fornecendo links para documentação de apoio relevante ou fazer recomendações sobre a mudança que precisa ser feita.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Os revisores não fazem nenhum julgamento sobre a forma como um aplicativo parece, apenas em como o aplicativo funciona. Por exemplo, um aplicativo com um parágrafo do texto em vermelho sobre um fundo laranja não seria rejeitado porque é feio, mas pode ser rejeitado se não for legível.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Nós sempre damos aos desenvolvedores o benefício da dúvida. Se não tiver certeza se um aplicativo deve ser rejeitado, os revisores vão fazer perguntas antes de emitir uma rejeição. Aplicativos não será (conscientemente) rejeitado devido a questões de plataforma que estão fora do controle do colaborador; no entanto, pode recusar a aprovação se não podemos obter o aplicativo para trabalhar.</span></span></li>
+</ul>
+
+<h2 id="Segurança">Segurança</h2>
+
+<p><span id="result_box" lang="pt"><span>Todos os detalhes da</span> <span>arquitetura de segurança</span> <span>app</span> <span>estão disponíveis</span> <span>aqui:</span></span> <a href="https://wiki.mozilla.org/Apps/Security">https://wiki.mozilla.org/Apps/Security</a></p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span>O</span> <span>manifesto do aplicativo</span> <span>deve</span> <span>ser servido</span> <span>a partir da</span> <span>mesma origem que</span> <span>o aplicativo</span><span>.</span></span></li>
+ <li>The app manifest must be served a <code>Content-Type</code> header of <code>application/x-web-app-manifest+json</code>.</li>
+ <li><span id="result_box" lang="pt"><span>Aplicativos</span> <span>não devem usar</span> <span>redirecionamentos</span> <span>ou</span> <span>iframe</span> <span>para carregar o conteúdo</span> <span>que o desenvolvedor</span> <span>não está autorizado a</span> <span>usar.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Permissões solicitadas deve ser especificado no manifesto do aplicativo com a descrição do motivo pelo qual a permissão é necessária.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Aplicativos do <a href="/en-US/Apps/Build/Manifest#type">tipo</a> privilegiado passará por outras verificações, incluindo a revisão do código, devido ao potencial para atividade maliciosa e perda de dados do usuário com APIs privilegiados.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">A Política de Segurança de Conteúdo <a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">(CSP)</a> definido no manifesto do aplicativo determina o código que aplicativo pode fazer. O padrão, se não especificado, para aplicações não-privilegiados é o mesmo que qualquer site; aplicativos do <a href="/en-US/Apps/Build/Manifest#type">tipo </a>privilegiado tem um <a href="/en-US/Marketplace/Options/Packaged_apps#Privileged_app">padrão mais restritivo</a>. O relatório de validação criado em submissão ao Firefox Marketplace vai indicar violações CSP potenciais em seu app - embora tenha cuidado falso-positivos e uso em partes das bibliotecas 3rd partido que você não usa.</span></span></li>
+</ul>
+
+<h2 id="Privacidade">Privacidade</h2>
+
+<p> </p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span>O desenvolvedor deve</span> <span>conectar-se a</span> <span>uma política de privacidade</span> <span>durante o envio</span><span>,</span> <span>mas não existem</span> <span>requisitos para</span> <span>o formato e conteúdo</span> <span>desta política de privacidade</span><span>.</span> <span>Sinta-se livre</span> <span>para usar nosso</span> <span>modelo de <a href="https://github.com/flamsmark/privacy-policy-template">política de privacidade</a></span><a href="https://github.com/flamsmark/privacy-policy-template"> </a><span><a href="https://github.com/flamsmark/privacy-policy-template">privacidade</a>.</span> <span>Também dê uma</span> <span>olhada em nossas</span> <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies">diretrizes de política de privacidade.</a></span></li>
+</ul>
+
+<h2 id="Conteúdo">Conteúdo</h2>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Quaisquer aplicativos que violam nossas Diretrizes de conteúdo a seguir não são permitidos. Se você acha que tem um caso extremo, por favor, pergunte a equipe de revisão de esclarecimento, mesmo se o aplicativo ainda não esteja pronto para ser submetido. Queremos ajudá-lo a ficar no caminho certo, em vez de investir tempo de desenvolvimento em conteúdo que será rejeitada.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>A partir de janeiro</span> <span>de 2014,</span> <span>todos os aplicativos</span> <span>devem</span> <span>receber uma classificação</span> <span>da</span> <span>Coalizão Internacional de Classificação</span> <span>(IARC</span><span>)</span><span>.</span> <span>Para obter esta</span> <span>classificação</span><span>, vamos</span> <span>encaminhá-lo para</span> <span>um breve questionário</span> <span>durante o</span> <span>processo de submissão,</span> <span>e você vai</span> <span>receber a</span> <span>classificação</span> <span>imediatamente.</span> <span>Mais informações sobre</span> <span>o processo de</span> <span>classificação</span> <span>está disponível <a href="https://developer.mozilla.org/en-US/Marketplace/Submission/Rating_Your_Content">aqui</a>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Imagens e descrições apresentadas ao Firefox Marketplace deve representar com precisão o aplicativo. Você pode incluir 1-2 imagens "marketing" que mostram a compatibilidade, comparar características, ou outra forma, gerar interesse, mas deve haver pelo menos uma captura de tela do aplicativo em ação, de modo que os usuários podem visualizar o que eles estão realmente recebendo. Se uma das suas imagens é uma tela inicial ou lançamento, você também deve incluir uma imagem da parte funcional de sua aplicação.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>No manifesto do aplicativo</span><span>, as<a href="/en-US/docs/Web/Apps/Manifest#locales"> chaves de localidade</a></span> <span>deve coincidir com as</span> <span>localizações</span> <span>que</span> <span>seu aplicativo</span> <span>suporta.</span> <span>Ao fornecer</span> <span>uma chave</span> <span>de localidade</span> <span>em polaco</span><span>, os usuários vão</span> <span>esperar que o seu</span> <span>app</span> <span>para estar disponível</span> <span>nesse idioma.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>O</span> <span>ícone do aplicativo</span> <span>deve seguir o</span> <span>guia de estilo</span> <a href="https://www.mozilla.org/en-US/styleguide/products/firefox-os/icons/">ícones de aplicativos Firefox OS</a><span>.</span> <span>Apenas</span> <span>um ícone de</span> <span>128 x 128</span> <span>é obrigatório, mas</span> <span>recomendamos também</span> <span>um ícone de</span> <span>512</span> <span>x 512</span> <span>também (</span><span>para mais</span> <span>detalhes, consulte</span> <span>a <a href="/en-US/Apps/Build/Icon_implementation_for_apps#Firefox_OS">implementação Ícone para apps.</a></span><span>) Note que</span> <span>os ícones podem</span> <span>ser redondo</span><span>,</span> <span>quadrado arredondado</span> <span>canto</span><span>,</span> <span>ou quadrado</span><span>,</span> <span>de acordo com o</span> <span>guia de estilo</span> <span>.</span></span></li>
+</ul>
+
+<h3 id="Diretrizes_do_Conteúdo"><strong>Diretrizes do Conteúdo</strong></h3>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Esta lista descreve os tipos de conteúdo que são inadequados para o Firefox Marketplace. Esta lista é ilustrativa, não é definitivo, e pode ser atualizado. Se um pedido for encontrado para ser uma violação dessas diretrizes de conteúdo, Mozilla tem o direito de remover imediatamente o aplicativo do Firefox Marketplace.</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span>Nenhum</span> <span>material pornográfico</span> <span>obsceno ou</span> <span>representações gráficas de</span> <span>sexualidade e violência</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Nenhum conteúdo</span> <span>que infrinja</span> <span>os direitos de ninguém</span><span>, incluindo a propriedade</span> <span>intelectual ou outros</span> <span>direitos de propriedade ou</span> <span>direitos</span> <span>de privacidade ou publicidade</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Nenhum conteúdo</span> <span>que é projetado para</span> <span>prejudicar</span> <span>Mozilla</span> <span>ou</span> <span>usuários</span> <span>(tais como</span> <span>códigos maliciosos</span><span>, vírus</span><span>, spyware</span> <span>ou malware</span><span>)</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Nenhum conteúdo</span> <span>que seja ilegal ou</span> <span>promova atividades ilegais</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="alt-edited">Nenhum conteúdo que é deprecivo, enganosa, fraudulenta ou é projetado para phish ou realizar outro roubo de identidade.</span></span></li>
+ <li><span class="short_text" id="result_box" lang="pt"><span class="alt-edited">Nenhum conteúdo que promova jogos de azar.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Nenhum</span> <span>conteúdo que</span> <span>engaja na</span> <span>propaganda de produtos</span> <span>ou serviços</span> <span>ilegais ou</span> <span>controladas.</span></span></li>
+ <li>Nenhum <span class="short_text" id="result_box" lang="pt"><span>conteúdos que exploram crianças</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Nenhum conteúdo</span> <span>que degrada</span><span>,</span> <span>intimida</span><span>,</span> <span>incite à violência</span> <span>contra</span> <span>ou</span> <span>incentiva</span> <span>ação</span> <span>prejudicial</span> <span>contra alguém</span> <span>ou um grupo</span> <span>com base na idade</span><span>, sexo, raça</span><span>,</span> <span>etnia, nacionalidade</span><span>, religião, orientação</span> <span>sexual,</span> <span>deficiência, religião</span><span>, localização geográfica</span> <span>ou</span> <span>outra categoria protegida</span> <span>ou constitua</span> <span>discurso de ódio</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Nenhum</span> <span>conteúdo que</span> <span>engana</span> <span>um usuário</span> <span>a tomar uma decisão</span> <span>de compra.</span></span></li>
+</ul>
+
+<h2 id="Funcionalidade">Funcionalidade</h2>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">O revisor deve ser capaz de realizar primários recursos anunciados pelo aplicativo. Falhas de cosméticos e inconvenientes menores serão relatados para o desenvolvedor, mas não vai impedir que um aplicativo seja aprovado.</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span>O aplicativo</span> <span>não deve comprometer</span> <span>o desempenho e</span> <span>estabilidade do sistema.</span></span></li>
+</ul>
+
+<h2 id="Usuabilidade">Usuabilidade</h2>
+
+<p><span id="result_box" lang="pt"><span>elementos de navegação</span><span>, tais como botões</span> <span>e links,</span> <span>deve ser fácil de</span> <span>clique</span> <span>ou toque</span><span>.</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="pt"><span>O desenvolvedor</span> <span>deve fazer uma</span> <span>tentativa razoável</span> <span>para otimizar o</span> <span>layout do</span> <span>aplicativo para</span> <span>a plataforma de destino</span><span>.</span> <span>O</span> <span>intuito desta exigência</span> <span>é pegar</span> <span>falhas</span> <span>óbvias</span><span>, tais como</span><span>:</span></span>
+
+  <ul>
+   <li><span id="result_box" lang="pt"><span>Um aplicativo</span> <span>apresentado</span> <span>para celular</span> <span>que é</span><span>, obviamente,</span> <span>um site</span> <span>desktop.</span></span></li>
+   <li><span id="result_box" lang="pt"><span class="alt-edited">Um aplicativo que muito obviamente não se ajusta para preencher o espaço disponível na tela (imagine um aplicativo de 320x480, que ocupa apenas no canto superior em um tablet, com o resto da tela em branco. Isso certamente não se destina!)</span></span></li>
+  </ul>
+ </li>
+ <li><span id="result_box" lang="pt"><span>O aplicativo</span> <span>deve implementar</span> <span>seu próprio método de</span> <span>navegação</span> <span>e não depender do navegador Chrome</span><span> ou</span> <span>um botão de hardware</span> <span>de volta</span><span>, que</span> <span>não estará presente</span> <span>em todos os dispositivos</span></span> .</li>
+ <li><span id="result_box" lang="pt"><span>Por exemplo,</span> <span>um aplicativo</span> <span>será rejeitado</span> <span>se o revisor</span> <span>navega</span> <span>em algum lugar</span> <span>dentro do aplicativo</span> <span>e não</span> <span>é capaz de</span> <span>navegar de volta</span><span>.</span> <span>Apps não</span> <span>são necessários para implementar</span> <span>uma barra de botões</span> <span>comum</span> <span>para</span> <span>aplicativos nativos</span><span>.</span></span></li>
+ <li><span lang="pt"><span>Em</span> <span>v1.1</span> <span>Firefox</span> <span>OS</span> <span>e maior</span><span>, você pode</span> <span>adicionar a propriedade</span> <span>manifesto</span> <span>chrome</span> <span>para adicionar</span> <span>controles de navegação</span> <span>mínimas.</span></span>  </li>
+</ul>
+
+<h2 id="Política_de_Bloqueamentos">Política de Bloqueamentos</h2>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Nós esperamos que nós nunca tem que usá-lo, mas nós nos reservamos o direito de remover ("lista de bloqueio") qualquer aplicativo publicado que é encontrado mais tarde para violar quaisquer requisitos de segurança, de privacidade ou conteúdo, ou aplicativos que degradam seriamente sistema ou o desempenho da rede. Os desenvolvedores serão informados sobre a situação antes que um aplicativo é enviado a lista de bloqueios, vai ser assumido como sendo um bom cidadão a menos que tenhamos provas específicas em contrário, e receberão assistência integral da equipe de revisão app para comunicar o que está acontecendo e obter o problema resolvido. Os exemplos específicos de situações em que se justifica bloqueamento incluem:</span></span></p>
+
+<ul>
+ <li>Phishing</li>
+ <li>Spamming</li>
+ <li><span id="result_box" lang="pt"><span>Alterar</span> <span>o conteúdo de</span> <span>filhotes de cachorro</span> <span>v1.0</span> <span>para</span> <span>Brutal</span> <span>Violência</span> <span>v1.0</span> <span>(</span><span>sem atualizar</span> <span>a classificação de</span> <span>conteúdo)</span></span></li>
+ <li><span id="result_box" lang="pt"><span>mau comportamento</span> <span>grave de</span> <span>aplicativo</span> <span>para uma</span> <span>grande porcentagem de usuários</span> <span>-</span> <span>desempenho do telefone</span> <span>degradante</span><span>,</span> <span>causando</span> <span>reinicializações</span><span>, causando</span> <span>perda de dados</span> <span>do usuário</span><span>, etc.</span><span>, onde</span> <span>os usuários não podem</span> <span>dizer que é</span> <span>por causa do</span> <span>app</span> <span>e onde não</span> <span>é resolvido</span> <span>com a reinicialização do</span> <span>dispositivo.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Um aplicativo</span> <span>que está sendo</span> <span>usado para</span> <span>ataques na rede</span><span>, como</span> <span>uma negação</span> <span>de serviço distribuída</span> <span>(DDoS</span><span>)</span><span>.</span></span></li>
+</ul>
+
+<h2 id="Mais_Informações">Mais Informações</h2>
+
+<p><span id="result_box" lang="pt"><span>Os seguintes recursos fornecem</span> <span>mais informações sobre</span> <span>o processo de revisão</span> <span>e de aplicativos</span> <span>revisores:</span></span></p>
+
+<ul>
+ <li><a href="https://wiki.mozilla.org/Marketplace/Reviewers/Apps/Testing">Critérios da Revisão de App</a> — <span id="result_box" lang="pt"><span>Esta página descreve</span> <span>os testes</span> <span>que os revisores</span> <span>de aplicativos</span> <span>irá realizar</span> <span>em</span> <span>seus aplicativos</span></span></li>
+ <li><a href="https://wiki.mozilla.org/Marketplace/Reviewers/Apps">App reviewers</a> — <span id="result_box" lang="pt"><span>como contactar</span> <span>a equipa de revisão</span> <span>app</span> <span>e envolver-se</span> <span>a avaliar</span> <span>aplicativos</span></span></li>
+</ul>

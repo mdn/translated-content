@@ -1,0 +1,97 @@
+---
+title: Window.screenX
+slug: Web/API/Window/screenX
+tags:
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - Window
+  - screenX
+translation_of: Web/API/Window/screenX
+---
+<div>{{APIRef}}</div>
+
+<p>Свойство <code><strong>Window.screenX</strong></code> только для чтения возвращает горизонтальное расстояние в пикселях CSS левой границы окна просмотра браузера пользователя до левой части экрана.</p>
+
+<div class="blockIndicator note">
+<p><strong>Заметка</strong>: Псевдоним <code>screenX</code> был реализован во всех современных браузерах - {{domxref ("Window.screenLeft")}}. Первоначально это поддерживалось только в IE, но было введено повсеместно из-за популярности.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>leftWindowPos</em> = window.screenX
+</pre>
+
+<h3 id="Возвращает">Возвращает</h3>
+
+<p>Число, равное количеству пикселей CSS от левого края окна просмотра браузера до левого края экрана.</p>
+
+<h2 id="Specifications" name="Specifications">Пример</h2>
+
+<p>В нашем примере <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> вы увидите холст, на котором нарисован круг. В этом примере мы используем {{domxref ("Window.screenLeft")}}/{{domxref ("Window.screenTop")}} плюс {{domxref("Window.requestAnimationFrame ()")}}, чтобы постоянно перерисовывать круг в том же физическом положении на экране, даже если позиция окна перемещается.</p>
+
+<pre class="brush: js">initialLeft = window.screenLeft + canvasElem.offsetLeft;
+initialTop = window.screenTop + canvasElem.offsetTop;
+
+function positionElem() {
+  let newLeft = window.screenLeft + canvasElem.offsetLeft;
+  let newTop = window.screenTop + canvasElem.offsetTop;
+
+  let leftUpdate = initialLeft - newLeft;
+  let topUpdate = initialTop - newTop;
+
+  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.beginPath();
+  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.fill();
+
+  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+
+  window.requestAnimationFrame(positionElem);
+}
+
+window.requestAnimationFrame(positionElem);</pre>
+
+<p>Они работают точно так же, как <code>screenX</code> / <code>screenY</code>.</p>
+
+<p>Также в код мы включили фрагмент, который определяет, поддерживается ли <code>screenLeft</code>, и, если нет, заполняет поли в <code>screenLeft</code> / <code>screenTop</code>, используя <code>screenX</code> / <code>screenY</code>.</p>
+
+<pre class="brush: js">if(!window.screenLeft) {
+  window.screenLeft = window.screenX;
+  window.screenTop = window.screenY;
+}</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификация</h2>
+
+<table class="standard-table" style="height: 49px; width: 1000px;">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM View', '#dom-window-screenx', 'Window.screenX') }}</td>
+   <td>{{ Spec2('CSSOM View') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+
+<div class="hidden">Таблица совместимости на этой странице генерируется из структурированных данных. Если вы хотите внести свой вклад в эти данные, просмотрите https://github.com/mdn/browser-compat-data и отправить нам pull request.</div>
+
+<p>{{Compat("api.Window.screenX")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("window.screenLeft")}}</li>
+ <li>{{domxref("Window.screenY")}}</li>
+</ul>

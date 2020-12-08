@@ -1,0 +1,133 @@
+---
+title: animation-name
+slug: Web/CSS/animation-name
+translation_of: Web/CSS/animation-name
+---
+<div>{{CSSRef}} {{SeeCompatTable}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p><a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <strong><code>animation-name</code></strong> задаёт список анимаций, чтобы примененить к элементу. Каждое имя является правилом {{cssxref("@keyframes")}}, которое задаёт значения свойств для последовательности анимации.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/animation-name.html")}}</div>
+
+
+
+<p>Часто удобно использовать сокращенное свойство {{cssxref("animation")}} для одновременной установки всех свойств анимации.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush:css"><code class="language-css"><span class="comment token">/* Single animation */</span></code>
+animation-name: none;
+animation-name: test_05;
+animation-name: -specific;
+animation-name: sliding-vertically;
+
+<code class="language-css"><span class="comment token">/* Multiple animations */</span></code>
+animation-name: test1;
+animation-name: test1, animation4;
+animation-name: none, -moz-specific, sliding;
+
+<code class="language-css"><span class="comment token">/* Global values */</span></code>
+animation-name: <a href="/en-US/docs/Web/CSS/initial">initial</a>
+animation-name: <a href="/en-US/docs/Web/CSS/inherit">inherit</a>
+animation-name: <a href="/en-US/docs/Web/CSS/unset">unset</a>
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>none</code></dt>
+ <dd>Это специальное ключевое слово, обозначающее отсутствие ключевых кадров. Оно может быть использовано для отключения анимации без изменения порядка других идентификаторов, или для отключения анимации, поступающей из каскада.</dd>
+ <dt>{{cssxref("custom-ident","&lt;custom-ident&gt;")}}</dt>
+ <dd>Строка, идентифицирующая анимацию. Этот индентификатор состоит из комбинации букв без учета регистра от <code>a</code> до <code>z</code>, цифр от <code>0</code> до <code>9</code>, подчеркивания (<code>_</code>), и/или черты (<code>-</code>). Первый символ без черты должен быть буквой (то есть, без цифры в начале, даже если перед ним стоит черта.) Кроме того, две черты запрещены в начале идентификатора. Оно не может быть <code>none</code>, <code>unset</code>, <code>initial</code>, или <code>inherit</code> в любой комбинации случаев.</dd>
+</dl>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>См. <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS_animations">CSS animations</a>.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
+    {{CompatChrome(43.0)}}</td>
+   <td>{{CompatGeckoDesktop("5.0")}}{{property_prefix("-moz")}}<br>
+    {{CompatGeckoDesktop("16.0")}}</td>
+   <td>10 </td>
+   <td>12 {{property_prefix("-o")}}<br>
+    12.10</td>
+   <td>4.0{{property_prefix("-webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS анимации</a></li>
+ <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
+</ul>

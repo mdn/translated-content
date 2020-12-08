@@ -1,0 +1,124 @@
+---
+title: Node.isSupported()
+slug: Web/API/Node/isSupported
+translation_of: Web/API/Node/isSupported
+---
+<p>{{APIRef("DOM")}}{{obsolete_header}}</p>
+
+<p><code><strong>Node.isSupported()</strong></code> возвращает {{domxref("Boolean")}} флаг содержащий результат проверки реализует ли реализация DOM определенное свойство и поддерживается ли это свойство конкретным узлом.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>boolValue</em> = <em>element</em>.isSupported(<em>feature</em>, <em>version</em>)</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><em>feature</em></dt>
+ <dd>Это {{domxref("DOMString")}} содержащая имя свойства для проверки. Это тоже имя, которое может быть передано в метод <code>hasFeature</code> в <a href="/en/DOM/document.implementation" title="en/DOM/document.implementation">DOMImplementation</a>. Возможные значения определенные в спецификации ядра DOM перечислены в DOM Level 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">соответствующий раздел</a>.</dd>
+ <dt><em>version</em></dt>
+ <dd>Это {{domxref("DOMString")}} содержащая номер версии свойства для ис проверки.В DOM уровень 2, version 1, это строка <code>2.0</code>. если версия не указана, поддерживает любую версию свойства, вызывает метод и возвращает true.</dd>
+</dl>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="brush: html">&lt;div id="doc"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+ // Получить элемент и проверить поддерживает ли он модуль DOM2 HTML.
+ var main = document.getElementById('doc');
+ var output = main.isSupported('HTML', '2.0');
+&lt;/script&gt;
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Коментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Удалено из спецификации.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', '/core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Никаких изменений с {{SpecName('DOM2 Core')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', '/core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Изначальное описание.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>Поддерживается от {{CompatGeckoDesktop("1.0")}} до {{CompatGeckoDesktop("21.0")}}.<br>
+    Удалено в {{CompatGeckoDesktop("22.0")}} [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>Поддерживается от {{CompatGeckoMobile("1.0")}} до {{CompatGeckoMobile("21.0")}}.<br>
+    Удалено в {{CompatGeckoMobile("22.0")}} [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Gecko-специфичные_замечания">Gecko-специфичные замечания</h3>
+
+<p>[1] Начиная с Gecko 19.0 {{geckoRelease("19.0")}} этот метод всегда будет возвращать true ({{bug("801425")}}) и начиная с Gecko 22.0 {{geckoRelease("22.0")}} этот метод был удален.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Принадлежит интерфейсу {{domxref("Node")}}.</li>
+</ul>

@@ -1,0 +1,578 @@
+---
+title: context-menu
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/context-menu
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/context-menu
+---
+<div class="note">
+ <p>Stable</p>
+</div>
+<p><span class="seoSummary">Как добавить элемент меню, подменю и разделитель в контекстное меню страницы.</span></p>
+<h2 id="Использование">Использование</h2>
+<p>Instead of manually adding items when particular contexts occur and then removing them when those contexts go away, you <em>bind</em> items to contexts, and the adding and removing is automatically handled for you. Items are bound to contexts in much the same way that event listeners are bound to events. When the user invokes the context menu, all of the items bound to the current context are automatically added to the menu. If no items are bound, none are added. Likewise, any items that were previously in the menu but are not bound to the current context are automatically removed from the menu. You never need to manually remove your items from the menu unless you want them to never appear again.</p>
+<p>For example, if your add-on needs to add a context menu item whenever the user visits a certain page, don't create the item when that page loads, and don't remove it when the page unloads. Rather, create your item only once and supply a context that matches the target URL.</p>
+<p>Context menu items are displayed in the order created or in the case of sub menus the order added to the sub menu. Menu items for each add-on will be grouped together automatically. If the total number of menu items in the main context menu from all add-ons exceeds a certain number (normally 10 but configurable with the <code>extensions.addon-sdk.context-menu.overflowThreshold</code> preference) all of the menu items will instead appear in an overflow menu to avoid making the context menu too large.</p>
+<h3 id="Specifying_Contexts">Specifying Contexts</h3>
+<p>As its name implies, the context menu should be reserved for the occurrence of specific contexts. Contexts can be related to page content or the page itself, but they should never be external to the page.</p>
+<p>For example, a good use of the menu would be to show an "Edit Image" item when the user right-clicks an image in the page. A bad use would be to show a submenu that listed all the user's tabs, since tabs aren't related to the page or the node the user clicked to open the menu.</p>
+<h4 id="The_Page_Context">The Page Context</h4>
+<p>First of all, you may not need to specify a context at all. When a top-level item does not specify a context, the page context applies. An item that is in a submenu is visible unless you specify a context.</p>
+<p>The <em>page context</em> occurs when the user invokes the context menu on a non-interactive portion of the page. Try right-clicking a blank spot in this page, or on text. Make sure that no text is selected. The menu that appears should contain the items "Back", "Forward", "Reload", "Stop", and so on. This is the page context.</p>
+<p>The page context is appropriate when your item acts on the page as a whole. It does not occur when the user invokes the context menu on a link, image, or other non-text node, or while a selection exists.</p>
+<h4 id="Declarative_Contexts">Declarative Contexts</h4>
+<p>You can specify some simple, declarative contexts when you create a menu item by setting the <code>context</code> property of the options object passed to its constructor, like this:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "My Menu Item",
+  context: cm.URLContext("*.mozilla.org")
+});</pre>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Constructor</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>PageContext() </code></td>
+   <td>The page context.</td>
+  </tr>
+  <tr>
+   <td><code>SelectionContext() </code></td>
+   <td>This context occurs when the menu is invoked on a page in which the user has made a selection.</td>
+  </tr>
+  <tr>
+   <td><code>SelectorContext(selector) </code></td>
+   <td>This context occurs when the menu is invoked on a node that either matches <code>selector</code>, a CSS selector, or has an ancestor that matches. <code>selector</code> may include multiple selectors separated by commas, e.g., <code>"a[href], img"</code>.</td>
+  </tr>
+  <tr>
+   <td><code>URLContext(matchPattern) </code></td>
+   <td>This context occurs when the menu is invoked on pages with particular URLs. <code>matchPattern</code> is a match pattern string or an array of match pattern strings. When <code>matchPattern</code> is an array, the context occurs when the menu is invoked on a page whose URL matches any of the patterns. These are the same match pattern strings that you use with the <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod"><code>page-mod</code></a> <code>include</code> property. <a href="/en-US/Add-ons/SDK/Low-Level_APIs/util_match-pattern">Read more about patterns</a>.</td>
+  </tr>
+  <tr>
+   <td><code>PredicateContext(predicateFunction)</code></td>
+   <td><code>predicateFunction</code> is called when the menu is invoked, and the context occurs when the function returns a true value. The function is passed an object with properties describing the menu invocaton context.</td>
+  </tr>
+  <tr>
+   <td>array</td>
+   <td>An array of any of the other types. This context occurs when all contexts in the array occur.</td>
+  </tr>
+ </tbody>
+</table>
+<p>Menu items also have a <code>context</code> property that can be used to add and remove declarative contexts after construction. For example:</p>
+<pre class="brush: js">var context = require("sdk/context-menu").SelectorContext("img");
+myMenuItem.context.add(context);
+myMenuItem.context.remove(context);</pre>
+<p>When a menu item is bound to more than one context, it appears in the menu when all of those contexts occur.</p>
+<h3 id="In_Content_Scripts">In Content Scripts</h3>
+<p>The declarative contexts are handy but not very powerful. For instance, you might want your menu item to appear for any page that has at least one image, but declarative contexts won't help you there.</p>
+<p>When you need more control over the context in which your menu items are shown, you can use content scripts. Like other APIs in the SDK, the <code>context-menu</code> API uses <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">content scripts</a> to let your add-on interact with pages in the browser. Each menu item you create in the top-level context menu can have a content script.</p>
+<p>A special event named <code>"context"</code> is emitted in your content scripts whenever the context menu is about to be shown. If you register a listener function for this event and it returns true, the menu item associated with the listener's content script is shown in the menu.</p>
+<p>For example, this item appears whenever the context menu is invoked on a page that contains at least one image:</p>
+<pre class="brush: js">require("sdk/context-menu").Item({
+  label: "This Page Has Images",
+  contentScript: 'self.on("context", function (node) {' +
+                 '  return !!document.querySelector("img");' +
+                 '});'
+});</pre>
+<p>Note that the listener function has a parameter called <code>node</code>. This is the node in the page that the user context-clicked to invoke the menu. You can use it to determine whether your item should be shown.</p>
+<p>You can both specify declarative contexts and listen for contexts in a content script. In that case, the declarative contexts are evaluated first, and your item is shown only when all declarative contexts are current and your context listener returns true.</p>
+<p>If any declarative contexts are not current, then your context listener is never called. This example takes advantage of that fact. The listener can be assured that <code>node</code> will always be an image:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "A Mozilla Image",
+  context: cm.SelectorContext("img"),
+  contentScript: 'self.on("context", function (node) {' +
+                 '  return /mozilla/.test(node.src);' +
+                 '});'
+});</pre>
+<p>However, if you do combine <code>SelectorContext</code> and the <code>"context"</code> event, be aware that the <code>node</code> argument passed to the <code>"context"</code> event will not always match the type specified in <code>SelectorContext</code>.</p>
+<p><code>SelectorContext</code> will match if the menu is invoked on the node specified <em>or any descendant of that node</em>, but the <code>"context"</code> event handler is passed <em>the actual node</em> on which the menu was invoked. The example above works because <code>&lt;IMG&gt;</code> elements can't contain other elements, but in the example below, <code>node.nodeName</code> is not guaranteed to be "P" - for example, it won't be "P" if the user context-clicked a link inside a paragraph:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "A Paragraph",
+  context: cm.SelectorContext("p"),
+  contentScript: 'self.on("context", function (node) {' +
+                 '  console.log(node.nodeName);' +
+                 '  return true;' +
+                 '});'
+});</pre>
+<p>The content script is executed for every page that a context menu is shown for. It will be executed the first time it is needed (i.e. when the context menu is first shown and all of the declarative contexts for your item are current) and then remains active until you destroy your context menu item or the page is unloaded.</p>
+<h3 id="Handling_Menu_Item_Clicks">Handling Menu Item Clicks</h3>
+<p>In addition to using content scripts to listen for the <code>"context"</code> event as described above, you can use content scripts to handle item clicks. When the user clicks your menu item, an event named <code>"click"</code> is emitted in the item's content script.</p>
+<p>Therefore, to handle an item click, listen for the <code>"click"</code> event in that item's content script like so:</p>
+<pre class="brush: js">require("sdk/context-menu").Item({
+  label: "My Item",
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  console.log("Item clicked!");' +
+                 '});'
+});</pre>
+<p>Note that the listener function has parameters called <code>node</code> and <code>data</code>.</p>
+<h4 id="The_node_Argument">The "node" Argument</h4>
+<p><code>node</code> is the node that the user context-clicked to invoke the menu.</p>
+<ul>
+ <li>If you did not use <code>SelectorContext</code> to decide whether to show the menu item, then this is the actual node clicked.</li>
+ <li>If you did use <code>SelectorContext</code>, then this is the node that matched your selector.</li>
+</ul>
+<p>For example, suppose your add-on looks like this:</p>
+<pre class="brush: js">var script = "self.on('click', function (node, data) {" +
+             "  console.log('clicked: ' + node.nodeName);" +
+             "});";
+
+var cm = require("sdk/context-menu");
+
+cm.Item({
+  label: "body context",
+  context: cm.SelectorContext("body"),
+  contentScript: script
+});</pre>
+<p>This add-on creates a context-menu item that uses <code>SelectorContext</code> to display the item whenever the context menu is activated on any descendant of the <code>&lt;BODY&gt;</code> element. When clicked, the item just logs the <a href="https://developer.mozilla.org/en-US/docs/DOM/Node.nodeName"><code>nodeName</code></a> property for the node passed to the click handler.</p>
+<p>If you run this add-on you'll see that it always logs "BODY", even if you click on a paragraph element inside the page:</p>
+<pre>info: contextmenu-example: clicked: BODY</pre>
+<p>By contrast, this add-on uses the <code>PageContext</code>:</p>
+<pre class="brush: js">var script = "self.on('click', function (node, data) {" +
+             "  console.log('clicked: ' + node.nodeName);" +
+             "});";
+
+var cm = require("sdk/context-menu");
+
+cm.Item({
+  label: "body context",
+  context: cm.PageContext(),
+  contentScript: script
+});</pre>
+<p>It will log the name of the actual node clicked:</p>
+<pre>info: contextmenu-example: clicked: P</pre>
+<h4 id="The_data_Argument">The "data" Argument</h4>
+<p><code>data</code> is the <code>data</code> property of the menu item that was clicked. Note that when you have a hierarchy of menu items the click event will be sent to the content script of the item clicked and all ancestors so be sure to verify that the <code>data</code> value passed matches the item you expect. You can use this to simplify click handling by providing just a single click listener on a <code>Menu</code> that reacts to clicks for any child items.:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Menu({
+  label: "My Menu",
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  console.log("You clicked " + data);' +
+                 '});',
+  items: [
+    cm.Item({ label: "Item 1", data: "item1" }),
+    cm.Item({ label: "Item 2", data: "item2" }),
+    cm.Item({ label: "Item 3", data: "item3" })
+  ]
+});
+</pre>
+<h4 id="Communicating_With_the_Add-on">Communicating With the Add-on</h4>
+<p>Often you will need to collect some kind of information in the click listener and perform an action unrelated to content. To communicate to the menu item associated with the content script, the content script can call the <code>postMessage</code> function attached to the global <code>self</code> object, passing it some JSON-able data. The menu item's <code>"message"</code> event listener will be called with that data.</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "Edit Image",
+  context: cm.SelectorContext("img"),
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  self.postMessage(node.src);' +
+                 '});',
+  onMessage: function (imgSrc) {
+    openImageEditor(imgSrc);
+  }
+});</pre>
+<h3 id="Updating_a_Menu_Item's_Label">Updating a Menu Item's Label</h3>
+<p>Each menu item must be created with a label, but you can change its label later using a couple of methods.</p>
+<p>The simplest method is to set the menu item's <code>label</code> property. This example updates the item's label based on the number of times it's been clicked:</p>
+<pre class="brush: js">var numClicks = 0;
+var myItem = require("sdk/context-menu").Item({
+  label: "Click Me: " + numClicks,
+  contentScript: 'self.on("click", self.postMessage);',
+  onMessage: function () {
+    numClicks++;
+    this.label = "Click Me: " + numClicks;
+    // Setting myItem.label is equivalent.
+  }
+});</pre>
+<p>Sometimes you might want to update the label based on the context. For instance, if your item performs a search with the user's selected text, it would be nice to display the text in the item to provide feedback to the user. In these cases you can use the second method. Recall that your content scripts can listen for the <code>"context"</code> event and if your listeners return true, the items associated with the content scripts are shown in the menu. In addition to returning true, your <code>"context"</code> listeners can also return strings. When a <code>"context"</code> listener returns a string, it becomes the item's new label.</p>
+<p>This item implements the aforementioned search example:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "Search Google",
+  context: cm.SelectionContext(),
+  contentScript: 'self.on("context", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  if (text.length &gt; 20)' +
+                 '    text = text.substr(0, 20) + "...";' +
+                 '  return "Search Google for " + text;' +
+                 '});'
+});</pre>
+<p>The <code>"context"</code> listener gets the window's current selection, truncating it if it's too long, and includes it in the returned string. When the item is shown, its label will be "Search Google for <code>text</code>", where <code>text</code> is the truncated selection.</p>
+<h3 id="Private_Windows">Private Windows</h3>
+<p>If your add-on has not opted into private browsing, then any menus or menu items that you add will not appear in context menus belonging to private browser windows.</p>
+<p>To learn more about private windows, how to opt into private browsing, and how to support private browsing, refer to the <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">documentation for the <code>private-browsing</code> module</a>.</p>
+<h3 id="More_Examples">More Examples</h3>
+<p>For conciseness, these examples create their content scripts as strings and use the <code>contentScript</code> property. In your own add-on, you will probably want to create your content scripts in separate files and pass their URLs using the <code>contentScriptFile</code> property. See <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Working with Content Scripts</a> for more information.</p>
+<div class="warning">
+ <p>Unless your content script is extremely simple and consists only of a static string, don't use <code>contentScript</code>: if you do, you may have problems getting your add-on approved on AMO.</p>
+ <p>Instead, keep the script in a separate file and load it using <code>contentScriptFile</code>. This makes your code easier to maintain, secure, debug and review.</p>
+</div>
+<p>Show an "Edit Page Source" item when the user right-clicks a non-interactive part of the page:</p>
+<pre class="brush: js">require("sdk/context-menu").Item({
+  label: "Edit Page Source",
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  self.postMessage(document.URL);' +
+                 '});',
+  onMessage: function (pageURL) {
+    editSource(pageURL);
+  }
+});</pre>
+<p>Show an "Edit Image" item when the menu is invoked on an image:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "Edit Image",
+  context: cm.SelectorContext("img"),
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  self.postMessage(node.src);' +
+                 '});',
+  onMessage: function (imgSrc) {
+    openImageEditor(imgSrc);
+  }
+});</pre>
+<p>Show an "Edit Mozilla Image" item when the menu is invoked on an image in a mozilla.org or mozilla.com page:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "Edit Mozilla Image",
+  context: [
+    cm.URLContext(["*.mozilla.org", "*.mozilla.com"]),
+    cm.SelectorContext("img")
+  ],
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  self.postMessage(node.src);' +
+                 '});',
+  onMessage: function (imgSrc) {
+    openImageEditor(imgSrc);
+  }
+});</pre>
+<p>Show an "Edit Page Images" item when the page contains at least one image:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+cm.Item({
+  label: "Edit Page Images",
+  // This ensures the item only appears during the page context.
+  context: cm.PageContext(),
+  contentScript: 'self.on("context", function (node) {' +
+                 '  var pageHasImgs = !!document.querySelector("img");' +
+                 '  return pageHasImgs;' +
+                 '});' +
+                 'self.on("click", function (node, data) {' +
+                 '  var imgs = document.querySelectorAll("img");' +
+                 '  var imgSrcs = [];' +
+                 '  for (var i = 0 ; i &lt; imgs.length; i++)' +
+                 '    imgSrcs.push(imgs[i].src);' +
+                 '  self.postMessage(imgSrcs);' +
+                 '});',
+  onMessage: function (imgSrcs) {
+    openImageEditor(imgSrcs);
+  }
+});</pre>
+<p>Show a "Search With" menu when the user right-clicks an anchor that searches Google or Wikipedia with the text contained in the anchor:</p>
+<pre class="brush: js">var cm = require("sdk/context-menu");
+var googleItem = cm.Item({
+  label: "Google",
+  data: "http://www.google.com/search?q="
+});
+var wikipediaItem = cm.Item({
+  label: "Wikipedia",
+  data: "http://en.wikipedia.org/wiki/Special:Search?search="
+});
+var searchMenu = cm.Menu({
+  label: "Search With",
+  context: cm.SelectorContext("a[href]"),
+  contentScript: 'self.on("click", function (node, data) {' +
+                 '  var searchURL = data + node.textContent;' +
+                 '  window.location.href = searchURL;' +
+                 '});',
+  items: [googleItem, wikipediaItem]
+});</pre>
+<h2 id="Globals">Globals</h2>
+<h3 id="Constructors">Constructors</h3>
+<h4 class="addon-sdk-api-name" id="Item(options)"><code>Item(options)</code></h4>
+<p>Creates a labeled menu item that can perform an action when clicked.</p>
+<h5 id="Parameters">Parameters</h5>
+<p><strong>options : object</strong><br>
+ Required options:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>label</td>
+   <td>string</td>
+   <td>
+    <p>The item's label. It must either be a string or an object that implements <code>toString()</code>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Optional options:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>image</td>
+   <td>string</td>
+   <td>
+    <p>The item's icon, a string URL. The URL can be remote, a reference to an image in the add-on's <code>data</code> directory, or a data URI.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>data</td>
+   <td>string</td>
+   <td>
+    <p>An optional arbitrary value to associate with the item. It must be either a string or an object that implements <code>toString()</code>. It will be passed to click listeners.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>context</td>
+   <td>value</td>
+   <td>
+    <p>If the item is contained in the top-level context menu, this declaratively specifies the context under which the item will appear; see Specifying Contexts above.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScript</td>
+   <td>string,array</td>
+   <td>
+    <p>If the item is contained in the top-level context menu, this is the content script or an array of content scripts that the item can use to interact with the page.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScriptFile</td>
+   <td>string,array</td>
+   <td>
+    <p>If the item is contained in the top-level context menu, this is the local file URL of the content script or an array of such URLs that the item can use to interact with the page.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onMessage</td>
+   <td>function</td>
+   <td>
+    <p>If the item is contained in the top-level context menu, this function will be called when the content script calls <code>self.postMessage</code>. It will be passed the data that was passed to <code>postMessage</code>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h4 class="addon-sdk-api-name" id="Menu(options)"><code>Menu(options)</code></h4>
+<p>Creates a labeled menu item that expands into a submenu.</p>
+<h5 id="Parameters_2">Parameters</h5>
+<p><strong>options : object</strong><br>
+ Required options:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>label</td>
+   <td>string</td>
+   <td>
+    <p>The item's label. It must either be a string or an object that implements <code>toString()</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>items</td>
+   <td>array</td>
+   <td>
+    <p>An array of menu items that the menu will contain. Each must be an <code>Item</code>, <code>Menu</code>, or <code>Separator</code>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Optional options:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>image</td>
+   <td>string</td>
+   <td>
+    <p>The menu's icon, a string URL. The URL can be remote, a reference to an image in the add-on's <code>data</code> directory, or a data URI.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>context</td>
+   <td>value</td>
+   <td>
+    <p>If the menu is contained in the top-level context menu, this declaratively specifies the context under which the menu will appear; see Specifying Contexts above.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScript</td>
+   <td>string,array</td>
+   <td>
+    <p>If the menu is contained in the top-level context menu, this is the content script or an array of content scripts that the menu can use to interact with the page.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScriptFile</td>
+   <td>string,array</td>
+   <td>
+    <p>If the menu is contained in the top-level context menu, this is the local file URL of the content script or an array of such URLs that the menu can use to interact with the page.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onMessage</td>
+   <td>function</td>
+   <td>
+    <p>If the menu is contained in the top-level context menu, this function will be called when the content script calls <code>self.postMessage</code>. It will be passed the data that was passed to <code>postMessage</code>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h4 class="addon-sdk-api-name" id="Separator()"><code>Separator()</code></h4>
+<p>Creates a menu separator.</p>
+<h4 class="addon-sdk-api-name" id="PageContext()"><code>PageContext()</code></h4>
+<p>Creates a page context. See Specifying Contexts above.</p>
+<h4 class="addon-sdk-api-name" id="SelectionContext()"><code>SelectionContext()</code></h4>
+<p>Creates a context that occurs when a page contains a selection. See Specifying Contexts above.</p>
+<h4 class="addon-sdk-api-name" id="SelectorContext(selector)"><code>SelectorContext(selector)</code></h4>
+<p>Creates a context that matches a given CSS selector. See Specifying Contexts above.</p>
+<h5 id="Parameters_3">Parameters</h5>
+<p><strong>selector : string</strong><br>
+ A CSS selector.</p>
+<h4 class="addon-sdk-api-name" id="URLContext(matchPattern)"><code>URLContext(matchPattern)</code></h4>
+<p>Creates a context that matches pages with particular URLs. See Specifying Contexts above.</p>
+<h5 id="Parameters_4">Parameters</h5>
+<p><strong>matchPattern : string,array</strong><br>
+ A <a href="/en-US/Add-ons/SDK/Low-Level_APIs/util_match-pattern">match pattern</a> string, regexp or an array of match pattern strings or regexps.</p>
+<h4 class="addon-sdk-api-name" id="PredicateContext(predicateFunction)"><code>PredicateContext(predicateFunction)</code></h4>
+<div class="geckoVersionNote">
+ <p>New in Firefox 29</p>
+</div>
+<p>Creates a context that occurs when predicateFunction returns a true value. See Specifying Contexts above.</p>
+<h5 id="Parameters_5">Parameters</h5>
+<p><strong>predicateFunction : function(context)</strong><br>
+ A function which will be called with an object argument that provide information about the invocation context. <code>context</code> object properties:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Property</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>documentType</code></td>
+   <td>The MIME type of the document the menu was invoked in. E.g. <code>text/html</code> for HTML pages, <code>application/xhtml+xml</code> for XHTML, or <code>image/jpeg</code> if viewing an image directly.</td>
+  </tr>
+  <tr>
+   <td><code>documentURL</code></td>
+   <td>The URL of the document the menu was invoked in.</td>
+  </tr>
+  <tr>
+   <td><code>targetName</code></td>
+   <td>The name of the DOM element that the menu was invoked on, in lower-case.</td>
+  </tr>
+  <tr>
+   <td><code>targetID</code></td>
+   <td>The <code>id</code> attribute of the element that the menu was invoked on, or <code>null</code> if not set.</td>
+  </tr>
+  <tr>
+   <td><code>isEditable</code></td>
+   <td><code>true</code> if the menu was invoked in an editable element, and that element isn't disabled or read-only.  This includes non-input elements with the <code>contenteditable</code> attribute set to <code>true</code>.</td>
+  </tr>
+  <tr>
+   <td><code>selectionText</code></td>
+   <td>The current selection as a text string, or <code>null</code>. If the menu was invoked in an input text box or area, this is the selection of that element, otherwise the selection in the contents of the window.</td>
+  </tr>
+  <tr>
+   <td><code>srcURL</code></td>
+   <td>The <code>src</code> URL of the element that the menu was invoked on, or <code>null</code> if it doesn't have one.</td>
+  </tr>
+  <tr>
+   <td><code>linkURL</code></td>
+   <td>The <code>href</code> URL of the element that the menu was invoked on, or <code>null</code> if it doesn't have one.</td>
+  </tr>
+  <tr>
+   <td><code>value</code></td>
+   <td>The current contents of a input text box or area if the menu was invoked in one, <code>null</code> otherwise.</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Item">Item</h2>
+<p>A labeled menu item that can perform an action when clicked.</p>
+<h3 id="Methods">Methods</h3>
+<h4 class="addon-sdk-api-name" id="destroy()"><code>destroy()</code></h4>
+<p>Permanently removes the item from its parent menu and frees its resources. The item must not be used afterward. If you need to remove the item from its parent menu but use it afterward, call <code>removeItem()</code> on the parent menu instead.</p>
+<h3 id="Properties">Properties</h3>
+<h4 class="addon-sdk-api-name" id="label"><code>label</code></h4>
+<p>The menu item's label. You can set this after creating the item to update its label later.</p>
+<h4 class="addon-sdk-api-name" id="image"><code>image</code></h4>
+<p>The item's icon, a string URL. The URL can be remote, a reference to an image in the add-on's <code>data</code> directory, or a data URI. You can set this after creating the item to update its image later. To remove the item's image, set it to <code>null</code>.</p>
+<h4 class="addon-sdk-api-name" id="data"><code>data</code></h4>
+<p>An optional arbitrary value to associate with the item. It must be either a string or an object that implements <code>toString()</code>. It will be passed to click listeners. You can set this after creating the item to update its data later.</p>
+<h4 class="addon-sdk-api-name" id="context"><code>context</code></h4>
+<p>A list of declarative contexts for which the menu item will appear in the context menu. Contexts can be added by calling <code>context.add()</code> and removed by called <code>context.remove()</code>.</p>
+<h4 class="addon-sdk-api-name" id="parentMenu"><code>parentMenu</code></h4>
+<p>The item's parent <code>Menu</code>, or <code>null</code> if the item is contained in the top-level context menu. This property is read-only. To add the item to a new menu, call that menu's <code>addItem()</code> method.</p>
+<h4 class="addon-sdk-api-name" id="contentScript"><code>contentScript</code></h4>
+<p>The content script or the array of content scripts associated with the menu item during creation.</p>
+<h4 class="addon-sdk-api-name" id="contentScriptFile"><code>contentScriptFile</code></h4>
+<p>The URL of a content script or the array of such URLs associated with the menu item during creation.</p>
+<h3 id="Events">Events</h3>
+<h4 class="addon-sdk-api-name" id="message"><code>message</code></h4>
+<p>If you listen to this event you can receive message events from content scripts associated with this menu item. When a content script posts a message using <code>self.postMessage()</code>, the message is delivered to the add-on code in the menu item's <code>message</code> event.</p>
+<h5 id="Arguments">Arguments</h5>
+<p><strong>value</strong> : Listeners are passed a single argument which is the message posted from the content script. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+<h2 id="Menu">Menu</h2>
+<p>A labeled menu item that expands into a submenu.</p>
+<h3 id="Methods_2">Methods</h3>
+<h4 class="addon-sdk-api-name" id="addItem(item)"><code>addItem(item)</code></h4>
+<p>Appends a menu item to the end of the menu. If the item is already contained in another menu or in the top-level context menu, it's automatically removed first. If the item is already contained in this menu it will just be moved to the end of the menu.</p>
+<h5 id="Parameters_6">Parameters</h5>
+<p><strong>item : Item,Menu,Separator</strong><br>
+ The <code>Item</code>, <code>Menu</code>, or <code>Separator</code> to add to the menu.</p>
+<h4 class="addon-sdk-api-name" id="removeItem(item)"><code>removeItem(item)</code></h4>
+<p>Removes the given menu item from the menu. If the menu does not contain the item, this method does nothing.</p>
+<h5 id="Parameters_7">Parameters</h5>
+<p><strong>item : Item,Menu,Separator</strong><br>
+ The menu item to remove from the menu.</p>
+<h4 class="addon-sdk-api-name" id="destroy()_2"><code>destroy()</code></h4>
+<p>Permanently removes the menu from its parent menu and frees its resources. The menu must not be used afterward. If you need to remove the menu from its parent menu but use it afterward, call <code>removeItem()</code> on the parent menu instead.</p>
+<h3 id="Properties_2">Properties</h3>
+<h4 class="addon-sdk-api-name" id="label_2"><code>label</code></h4>
+<p>The menu's label. You can set this after creating the menu to update its label later.</p>
+<h4 class="addon-sdk-api-name" id="items"><code>items</code></h4>
+<p>An array containing the items in the menu. The array is read-only, meaning that modifications to it will not affect the menu. However, setting this property to a new array will replace all the items currently in the menu with the items in the new array.</p>
+<h4 class="addon-sdk-api-name" id="image_2"><code>image</code></h4>
+<p>The menu's icon, a string URL. The URL can be remote, a reference to an image in the add-on's <code>data</code> directory, or a data URI. You can set this after creating the menu to update its image later. To remove the menu's image, set it to <code>null</code>.</p>
+<h4 class="addon-sdk-api-name" id="context_2"><code>context</code></h4>
+<p>A list of declarative contexts for which the menu will appear in the context menu. Contexts can be added by calling <code>context.add()</code> and removed by called <code>context.remove()</code>.</p>
+<h4 class="addon-sdk-api-name" id="parentMenu_2"><code>parentMenu</code></h4>
+<p>The menu's parent <code>Menu</code>, or <code>null</code> if the menu is contained in the top-level context menu. This property is read-only. To add the menu to a new menu, call that menu's <code>addItem()</code> method.</p>
+<h4 class="addon-sdk-api-name" id="contentScript_2"><code>contentScript</code></h4>
+<p>The content script or the array of content scripts associated with the menu during creation.</p>
+<h4 class="addon-sdk-api-name" id="contentScriptFile_2"><code>contentScriptFile</code></h4>
+<p>The URL of a content script or the array of such URLs associated with the menu during creation.</p>
+<h3 id="Events_2">Events</h3>
+<h4 class="addon-sdk-api-name" id="message_2"><code>message</code></h4>
+<p>If you listen to this event you can receive message events from content scripts associated with this menu item. When a content script posts a message using <code>self.postMessage()</code>, the message is delivered to the add-on code in the menu item's <code>message</code> event.</p>
+<h5 id="Arguments_2">Arguments</h5>
+<p><strong>value</strong> : Listeners are passed a single argument which is the message posted from the content script. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+<h2 id="Separator">Separator</h2>
+<p>A menu separator. Separators can be contained only in <code>Menu</code>s, not in the top-level context menu.</p>
+<h3 id="Methods_3">Methods</h3>
+<h4 class="addon-sdk-api-name" id="destroy()_3"><code>destroy()</code></h4>
+<p>Permanently removes the separator from its parent menu and frees its resources. The separator must not be used afterward. If you need to remove the separator from its parent menu but use it afterward, call <code>removeItem()</code> on the parent menu instead.</p>
+<h3 id="Properties_3">Properties</h3>
+<h4 class="addon-sdk-api-name" id="parentMenu_3"><code>parentMenu</code></h4>
+<p>The separator's parent <code>Menu</code>. This property is read-only. To add the separator to a new menu, call that menu's <code>addItem()</code> method.</p>

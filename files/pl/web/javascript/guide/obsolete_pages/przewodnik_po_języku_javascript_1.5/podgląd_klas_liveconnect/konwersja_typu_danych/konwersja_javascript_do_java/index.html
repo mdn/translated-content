@@ -1,0 +1,320 @@
+---
+title: Konwersja JavaScript do Java
+slug: >-
+  Web/JavaScript/Guide/Obsolete_Pages/Przewodnik_po_języku_JavaScript_1.5/Podgląd_klas_LiveConnect/Konwersja_typu_danych/Konwersja_JavaScript_do_Java
+tags:
+  - JavaScript
+  - Przewodnik_JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/LiveConnect/LiveConnect_Overview
+---
+<p>
+</p>
+<h3 id="Konwersja_JavaScript_do_Java" name="Konwersja_JavaScript_do_Java"> Konwersja JavaScript do Java </h3>
+<p>Kiedy wywołujesz metody Java i zmieniasz parametry z JavaScript, typ danych tych parametrów zmienione zostaną konwertowane stosownie do opisanych reguł w następujących tematach: </p>
+<ul><li> {{ Anch("Wartości liczbowe") }}
+</li><li> {{ Anch("Wartości Boolean") }}
+</li><li> {{ Anch("Wartości String") }}
+</li><li> {{ Anch("Wartości niezidentyfikowane") }}
+</li><li> {{ Anch("Wartości Null") }}
+</li><li> {{ Anch("Obiekty JavaArray i JavaObject") }}
+</li><li> {{ Anch("Obiekty JavaClass") }}
+</li><li> {{ Anch("Inne obiekty JavaScript") }}
+</li></ul>
+<p>Zwraca wartości metod <code>netscape.javascript.JSObject</code>, które są zawsze konwertowane do przykładu <code><b>java.lang.Object</b></code>. Reguły konwersji, które zwracają wartość są także opisane w tym temacie. </p><p>Na przykład, jeśli zwraca numer JavaScript <code>JSObject.eval</code>, możesz znaleźć reguły konwersji tegoż numeru do numeru <code>java.lang.Object</code> w {{ Anch("wartości liczbowe") }}.
+</p>
+<h4 id="Warto.C5.9Bci_liczbowe" name="Warto.C5.9Bci_liczbowe"> Wartości liczbowe </h4>
+<p>Kiedy w JavaScript typ Number zmienisz na jako parametry metod Java, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p><p><br>
+</p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td>double</td>
+<td>* Dokładne wartości są transferowane do Javy bez zaokrąglonych i bez straconych wielkości lub znaku . <ul><li> NaN jest konwertowane do NaN.</li></ul></td> </tr>
+<tr>
+<td>java.lang.Double<br>
+java.lang.Object</td>
+<td>Nowy przykład <code>java.lang.Double</code> jest tworzony i dokładna wartość jest transferowana do Java bez zaokrągleń i bez straconej wielkości lub znaku.</td>
+</tr>
+<tr>
+<td><b>float</b></td>
+<td>* Wartości <b>float</b> są dokładnie zaokrąglane.
+<ul><li> Wartości, które są zbyt za duże lub za małe, aby być prezentowanym są zaokrąglane do +nieskończoności lub -nieskończoności.
+</li><li> NaN jest konwertowany do NaN.</li></ul></td> </tr>
+<tr>
+<td><b>byte</b><br>
+<p><b>char</b><br>
+<b>int</b><br>
+<b>long</b><br>
+</p>
+<b>short</b></td>
+<td>* Wartości są okrążane przy użyciu trybu round-to-negative-infinity.
+<ul><li> Wartości które są też duże lub małe reprezentuje rezultat w błędzie run-time.
+</li><li> NaN nie może być konwertowany, czego rezultatem jest błąd run-time.</li></ul></td> </tr>
+<tr>
+<td>java.lang.String</td>
+<td>Wartości są konwertowane do łańcucha znaków. Na przykład:
+<ul><li> 237 staje się "237"</li></ul></td> </tr>
+<tr>
+<td>boolean</td>
+<td>* Wartości 0 i NaN są konwertowanie do false.
+<ul><li> Inne wartości są konwertowane do true.</li></ul></td> </tr>
+</tbody></table>
+<p>Kiedy liczba JavaScript przechodzi jako parametr metody Java, która oczekuje przykładu z <code>java.lang.String</code>, numer jest konwertowany do łańcucha znaków. Użyj metody <code>equals()</code> do porównania rezultatów tej konwersji z innymi wartościami łańcuchów znaków.
+</p>
+<h4 id="Warto.C5.9Bci_logiczne" name="Warto.C5.9Bci_logiczne"> Wartości logiczne </h4>
+<p>Kiedy w JavaScript typ Boolean zmienisz na parametry metod Javy, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Wszystkie wartości są konwertowane w kierunku wyposażenia Javy.</td>
+</tr>
+<tr>
+<td>lava.lang.Boolean<br>
+java.lang.Object</td>
+<td>Nowy przykład <code>java.lang.Boolean</code> jest utworzony. Każdy parametr tworzy nowy przykład, nie jeden przykład z tymi samymi prymitywnymi wartościami.</td>
+</tr>
+<tr>
+<td>java.lang.String</td>
+<td>Wartości są konwertowane do łańcuchów znaków. Na przykład:
+<ul><li> true staje się "true"
+</li><li> false staje się "false"</li></ul></td> </tr>
+<tr>
+<td>byte<br>
+<p>char<br>
+double<br>
+float<br>
+int<br>
+long<br>
+</p>
+short</td>
+<td>* true staje się 1
+<ul><li> false staje się 0</li></ul></td> </tr>
+</tbody></table>
+<p>Kiedy zmienimy JavaScript wartość boolean, który jest jako parametr do metod Javy, oczekuje przykładu <code>java.lang.String</code>, wartość boolean jest konwertowana do wartości string. Użyj operatora <code>==</code> do porównania rezultatów tej konwersji z innymi wartościami string.
+</p>
+<h4 id="Warto.C5.9B.C4.87_String" name="Warto.C5.9B.C4.87_String"> Wartość String </h4>
+<p>Kiedy w JavaScript typ string zmienisz na parametry metod Javy, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td><b>java.lang.String</b><br>
+<b>java.lang.Object</b></td>
+<td>JavaScript 1.4:
+<ul><li> Łańcuch JavaScript jest konwertowany przykładem java.lang.String z wartościami Unicode.<br>
+</li></ul>
+<p>JavaScript 1.3 i wcześniejsze:
+</p>
+<ul><li> Łańcuch JavaScript jest konwertowany przykładem java.lang.String z wartościami ASCII.</li></ul></td> </tr>
+<tr>
+<td><b>byte</b>
+<p><b>double</b><br>
+<b>float</b><br>
+<b>int</b><br>
+<b>long</b><br>
+</p>
+<b>short</b></td>
+<td>Wszystkie wartości są konwertowane do liczb opisanych w ECMA-262.
+Wartości string JavaScript jest konwertowana do liczby stosownie do opisu ECMA-262.</td>
+</tr>
+<tr>
+<td><b>char</b></td>
+<td>JavaScript 1.4:
+<ul><li> jeden znak łańcucha jest konwertowany do znaków Unicode.
+</li><li> wszystkie inne wartości są konwertowane na liczby.<br>
+</li></ul>
+<p>JavaScript 1.3 i wcześniejsze:
+</p>
+<ul><li> Wszystkie wartości są konwertowane na liczby.</li></ul></td> </tr>
+<tr>
+<td><b>boolean</b></td>
+<td>* Pusty łańcuch staje się false.
+<ul><li> Wszystkie inne klucze staną się true.</li></ul></td> </tr>
+</tbody></table>
+<h4 id="Warto.C5.9Bci_niezidentyfikowane" name="Warto.C5.9Bci_niezidentyfikowane"> Wartości niezidentyfikowane </h4>
+<p>Kiedy w JavaScript wartości niezidentyfikowane zmienisz na parametry metod Javy, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td><b>lava.lang.String</b><br>
+<b>java.lang.Object</b></td>
+<td>Wartość jest konwertowana do przykładu java.lang.String, którego wartość jest łańcuch "niezdefiniowany".</td>
+</tr>
+<tr>
+<td><b>boolean</b></td>
+<td>Wartość staje się false.</td>
+</tr>
+<tr>
+<td><b>double</b><br>
+<b>float</b></td>
+<td>Wartość staje się NaN.</td>
+</tr>
+<tr>
+<td><b>byte</b><br>
+<p><b>char</b><br>
+<b>int</b><br>
+<b>long</b><br>
+</p>
+<b>short</b></td>
+<td>Wartość staje się 0.</td>
+</tr>
+</tbody></table>
+<p>Konwersja niezdefiniowanej wartości wartość prawdopodobnie w JavaScript 1.3 i późniejszych wersjach. wcześniejsze wersje JavaScript nie dostarczają wartości niezdefiniowanych. </p><p>Kiedy wartość niezdefiniowana JavaScript jest zmieniona na parametr metody Java, która oczekuje na przykład <b>java.lang.String</b>, wartość niezdefiniowana jest konwertowana do wartości string. Użyj operator == do porównania tych konwersji z inną wartością string.
+</p>
+<h4 id="Warto.C5.9B.C4.87_Null" name="Warto.C5.9B.C4.87_Null"> Wartość Null </h4>
+<p>Kiedy w JavaScript wartości null zmienisz na parametry metod Javy, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td><b>Jakaś class</b><br>
+<b>Jakiś typ interfejsu</b></td>
+<td>Wartość stanie się null.</td>
+</tr>
+<tr>
+<td><b>byte</b><br>
+<p><b>char</b><br>
+<b>double</b><br>
+<b>float</b><br>
+<b>int</b><br>
+<b>long</b><br>
+</p>
+<b>short</b></td>
+<td>Wartość stanie się 0.</td>
+</tr>
+<tr>
+<td><b>boolean</b></td>
+<td>Wartość stanie się false.</td>
+</tr>
+</tbody></table>
+<h4 id="Obiekty_JavaArray_i_JavaObject" name="Obiekty_JavaArray_i_JavaObject"> Obiekty JavaArray i JavaObject </h4>
+<p>W wielu sytuacjach, kiedy zmieniałeś JavaScript JavaArray lub JavaObject jako parametry metod w Javie, Java prosto rozpakowuje obiekt; w kilku sytuacjach, obiekt jest poprawiany do innego typu danych stosowanych do opisu zasad w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td><b>Jakiś interfejs lub klasa, która przypisuje kompatybilność z rozpakowanym obiekt.</b></td>
+<td>Obiekt jest rozpakowany.</td>
+</tr>
+<tr>
+<td><b>java.lang.String</b></td>
+<td>Obiekt jest rozpakowywany, metoda toString rozpakowanego obiektu Java jest nazywana, i w rezultacie zwrócona jako nowy przykład java.lang.String.</td>
+</tr>
+<tr>
+<td><b>byte</b><br>
+<p><b>char</b><br>
+<b>double</b><br>
+<b>float</b><br>
+<b>int</b><br>
+<b>long</b><br>
+</p>
+<b>short</b></td>
+<td>Obiekt jest rozpakowany, i w następujących dwóch sytuacjach się może to zdarzyć:
+<ul><li> Jeśli rozpakowany obiekt Java posiada metodę doubleValue, to JavaArray lub JavaObject jest konwertowany do wartości powrotu tej metody.
+</li><li> Jeśli rozpakowany obiekt Java nie posiada metody doubleValue, błąd zdarzenia.</li></ul></td> </tr>
+<tr>
+<td><b>boolean</b></td>
+<td>W JavaScript 1.3 i późniejszych wersjach, obiekt jest rozpakowywany i przytrafia się w obu następujących sytuacjach:
+<ul><li> Jeśli obiekt jest null, to jest konwertowany jako false.
+</li><li> Jeśli obiekt ma jakąkolwiek wartość, to jest konwertowany do true.
+</li></ul>
+<p>W JavaScript 1.2 i wcześniejszych wersjach, obiekt jest rozpakowany i zdarza się w obu następujących sytuacjach:
+</p>
+<ul><li> Jeśli rozpakowany obiekt posiada metodę booleanValue, źródło obiektu jest konwertowane do zwracanej wartości.
+</li><li> Jeśli obiekt nie posiada metody booleanValue, konwersja zostanie nie wykonana.</li></ul></td> </tr>
+</tbody></table>
+<p>interfejs lub klasa jest kompatybilnym przypisaniem z rozpakowanego obiektu jeśli obiekt ten jest przykładem typu parametru Javy. To jest, że następująca instrukcja musi zwrócić true: </p>
+<pre>unwrappedObject instanceof parameterType
+</pre>
+<h4 id="Obiekty_JavaClass" name="Obiekty_JavaClass"> Obiekty JavaClass </h4>
+<p>Kiedy w JavaScript obiekt JavaClass zmienisz na parametry metod Javy, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td><b>java.lang.Class</b></td>
+<td>Obiekt jest rozpakowany.</td>
+</tr>
+<tr>
+<td><b>java.lang.JSObject</b><br>
+<b>java.lang.Object</b></td>
+<td>Obiekt JavaClass jest pakowany w nowym przykładzie java.lang.JSObject.</td>
+</tr>
+<tr>
+<td><b>java.lang.String</b></td>
+<td>Obiekt jest rozpakowywany, metoda toString rozpakowanego obiektu Java jest nazywana, i w rezultacie zwrócona jako nowy przykład java.lang.String.</td>
+</tr>
+<tr>
+<td><b>boolean</b></td>
+<td>W JavaScript 1.3 i późniejszych wersjach, obiekt jest rozpakowywany i przytrafia się w obu następujących sytuacjach:
+<ul><li> Jeśli obiekt jest null, to jest konwertowany jako false.
+</li><li> Jeśli obiekt ma jakąkolwiek wartość, to jest konwertowany do true.
+</li></ul>
+<p>W JavaScript 1.2 i wcześniejszych wersjach, obiekt jest rozpakowany i zdarza się w obu następujących sytuacjach: </p>
+<ul><li> Jeśli rozpakowany obiekt posiada metodę booleanValue, źródło obiektu jest konwertowane do zwracanej wartości.
+</li><li> Jeśli obiekt nie posiada metody booleanValue, konwersja zostanie nie wykonana.</li></ul></td> </tr>
+</tbody></table>
+<h4 id="Inne_obiekty_JavaScript" name="Inne_obiekty_JavaScript"> Inne obiekty JavaScript </h4>
+<p>Kiedy w JavaScript jakikolwiek obiekt zmienisz na parametry metod Javy, Java konwertuje wartości stosownie do zasad opisanych w następującej tabeli: </p>
+<table class="fullwidth-table">
+<tbody><tr>
+<th>Java typ parametru</th>
+<th>Zasady konwersji</th>
+</tr>
+<tr>
+<td><b>java.lang.JSObject</b><br>
+<b>java.lang.Object</b></td>
+<td>Obiekt JavaClass jest pakowany w nowym przykładzie java.lang.JSObject.</td>
+</tr>
+<tr>
+<td><b>java.lang.String</b></td>
+<td>Obiekt jest rozpakowywany, metoda toString rozpakowanego obiektu Java jest nazywana, i w rezultacie zwrócona jako nowy przykład java.lang.String.</td>
+</tr>
+<tr>
+<td><b>byte</b><br>
+<p><b>char</b><br>
+<b>double</b><br>
+<b>float</b><br>
+<b>int</b><br>
+<b>long</b><br>
+</p>
+<b>short</b></td>
+<td>Obiekty są generowane używając wartości logicznej operatora ToPrimitive opisanego w ECMA-262. Użyj ukryty PreferredType z operatorem Number.</td>
+</tr>
+<tr>
+<td><b>boolean</b></td>
+<td>W JavaScript 1.3 i późniejszych wersjach, obiekt jest rozpakowywany i przytrafia się w obu następujących sytuacjach:
+<ul><li> Jeśli obiekt jest null, to jest konwertowany jako false.
+</li><li> Jeśli obiekt ma jakąkolwiek wartość, to jest konwertowany do true.
+</li></ul>
+<p>W JavaScript 1.2 i wcześniejszych wersjach, obiekt jest rozpakowany i zdarza się w obu następujących sytuacjach:
+</p>
+<ul><li> Jeśli rozpakowany obiekt posiada metodę booleanValue, źródło obiektu jest konwertowane do zwracanej wartości.
+</li><li> Jeśli obiekt nie posiada metody booleanValue, konwersja zostanie nie wykonana.</li></ul></td> </tr>
+</tbody></table>
+<p><br>
+</p><p><br>
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Data_Type_Conversions/JavaScript_to_Java_Conversions", "es": "es/Gu\u00eda_JavaScript_1.5/Concepto_general_de_LiveConnect/Conversiones_de_tipos_de_datos/Conversiones_de_JavaScript_a_Java", "ja": "ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Data_Type_Conversions/JavaScript_to_Java_Conversions" } ) }}

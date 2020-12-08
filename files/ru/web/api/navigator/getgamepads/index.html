@@ -1,0 +1,102 @@
+---
+title: Navigator.getGamepads()
+slug: Web/API/Navigator/getGamepads
+translation_of: Web/API/Navigator/getGamepads
+---
+<p>{{APIRef("Gamepad API")}}{{SeeCompatTable}}</p>
+
+<p><strong><code>Navigator.getGamepads()</code></strong> метод, возвращающий массив {{ domxref("Gamepad") }} объектов, по одному для каждого геймпада, подключенному к устройству.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"> var arrayGP = navigator.getGamepads();</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+  var gp = navigator.getGamepads()[0];
+  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
+  gp.index, gp.id,
+  gp.buttons.length, gp.axes.length);
+});</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Gamepad', '', 'The Gamepad API specification')}}</td>
+   <td>{{Spec2('Gamepad')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость браузеров</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>General support</td>
+   <td>
+    <p>21.0 {{ property_prefix("webkit") }}<br>
+     35.0</p>
+   </td>
+   <td>{{ CompatGeckoDesktop("29.0") }} [1]</td>
+   <td>{{ CompatNo() }}</td>
+   <td>
+    <p>15.0 {{ property_prefix("webkit") }}<br>
+     22.0</p>
+   </td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>General support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Was available behind a preference since Firefox 24.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></li>
+</ul>

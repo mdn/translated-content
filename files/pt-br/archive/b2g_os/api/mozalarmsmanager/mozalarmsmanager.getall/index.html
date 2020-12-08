@@ -1,0 +1,140 @@
+---
+title: MozAlarmsManager.getAll
+slug: Archive/B2G_OS/API/MozAlarmsManager/MozAlarmsManager.getAll
+tags:
+  - API
+  - Firefox OS
+  - Reference
+  - WebAPI
+  - alarm
+translation_of: Archive/B2G_OS/API/MozAlarmsManager/getAll
+---
+<p>{{APIRef("Firefox OS")}}{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('installed') }}</p>
+
+<h2 id="Resumo">Resumo</h2>
+
+<p>O método <code>getAll</code> é utilizado para retornar uma lista dos alarmes pendentes.</p>
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<pre>var request = navigator.mozAlarms.getAll();</pre>
+
+<h3 id="Retorno">Retorno</h3>
+
+<p>Um objeto {{domxref("DOMRequest")}} para manipular o sucesso ou erro da chamada.</p>
+
+<p>Se o método chamado é executado com sucesso, o resultado será um array de objetos {{Anch("mozAlarm")}}.</p>
+
+<h3 id="mozAlarm">mozAlarm</h3>
+
+<p>São objetos javascript anônimos com as seguintes propriedades:</p>
+
+<dl>
+ <dt><code>id</code></dt>
+ <dd>um número represetando o id do alarme</dd>
+ <dt><code>date</code></dt>
+ <dd>um objeto <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date">Date</a> representando a hora agendada para o alarme.</dd>
+ <dt><code>respectTimezone</code></dt>
+ <dd>String que indica se o alarme irá respeitar ou ignorar o fuso-horário do objeto <code>date</code>. o valor da string pode ser <code>ignoreTimezone</code> ou <code>honorTimezone </code></dd>
+ <dt><code>data</code></dt>
+ <dd>um objeto JavaScript contendo uma data que será armazenada com o alarme</dd>
+</dl>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">var request = navigator.mozAlarms.getAll();
+
+request.onsuccess = function () {
+  console.log('Sucesso:' + this.result.length + 'alarms pending');
+
+  this.result.forEach(function (alarm) {
+    console.log(alarm.id + ' : ' + alarm.date.toString() + ' : ' + alarm.respectTimezone);
+  });
+}
+
+request.onerror = function () {
+  console.log('Erro: ' + this.error);
+}
+</pre>
+
+<h2 id="Especificação">Especificação</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificação</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comentário</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('Alarm API', '#interface-alarmmanager') }}</td>
+   <td>{{ Spec2('Alarm API') }}</td>
+   <td>Define a interface do <code>AlarmManager</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidade_dos_browsers">Compatibilidade dos browsers</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Suporte básico</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox OS</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Suporte básico</td>
+   <td>{{CompatNo()}}</td>
+   <td>1.0</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Nota_de_implementação_Gecko">Nota de implementação Gecko</h3>
+
+<p>Essa API está atualmente em avaliação no Firefox OS, estando disponível apenas para aplicativos instalados. A especifficação atual para essa API não considera estável o seu uso sem o prefixo.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li>{{domxref("MozAlarmsManager")}}</li>
+ <li>{{domxref("DOMRequest")}}</li>
+</ul>

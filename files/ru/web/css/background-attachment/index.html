@@ -1,0 +1,223 @@
+---
+title: background-attachment
+slug: Web/CSS/background-attachment
+tags:
+  - CSS
+  - CSS Background
+  - CSS Property
+  - Reference
+translation_of: Web/CSS/background-attachment
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Summary" name="Summary">Краткое описание</h2>
+
+<p>Если указано {{Cssxref("background-image")}}, <a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <code>background-attachment</code> определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="brush: css notranslate">/* Ключевые значения */
+background-attachment: scroll;
+background-attachment: fixed;
+background-attachment: local;
+
+/* Глобальные значения */
+background-attachment: inherit;
+background-attachment: initial;
+background-attachment: unset;</pre>
+
+<p>Значение свойства <code>background-attachment</code> задается одним из ключевых значений из списка ниже.</p>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>fixed</code></dt>
+ <dd>Фон фиксируется относительно области просмотра. Даже если элемент имеет механизм прокрутки, фон не перемещается вместе с элементом. (Это значение несовместимо с {{cssxref("background-clip", "background-clip: text", "#text")}}.)</dd>
+ <dt><code>local</code></dt>
+ <dd>Фон фиксируется относительно содержимого элемента. Если элемент имеет механизм прокрутки, фон прокручивается с содержимым элемента, и область рисования фона и область позиционирования фона относятся к прокручиваемой области элемента, а не к границе, обрамляющей их.</dd>
+ <dt><code>scroll</code></dt>
+ <dd>Фон фиксируется относительно самого элемента и не прокручивается с его содержимым. (Он фактически прикреплен к границе элемента.)</dd>
+</dl>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox notranslate">{{csssyntax}}
+</pre>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Простой_пример">Простой пример</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;p&gt;
+  There were doors all round the hall, but they were all locked; and when
+  Alice had been all the way down one side and up the other, trying every
+  door, she walked sadly down the middle, wondering how she was ever to
+  get out again.
+&lt;/p&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush:css; highlight:[3]; notranslate">p {
+  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-attachment: fixed;
+}
+</pre>
+
+<h4 id="Результат">Результат</h4>
+
+<p>{{EmbedLiveSample("Простой_пример")}}</p>
+
+<h3 id="Поддержка_нескольких_фоновых_изображений">Поддержка нескольких фоновых изображений</h3>
+
+<p>Это свойство поддерживает несколько фоновых изображений. Вы можете указать разные <code>&lt;attachment&gt;</code> для каждого фона, разделенных запятыми. Каждое изображение сопоставляется с соответствующим типом вложения, от первого указанного до последнего.</p>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;p&gt;
+  There were doors all round the hall, but they were all locked; and when
+  Alice had been all the way down one side and up the other, trying every
+  door, she walked sadly down the middle, wondering how she was ever to
+  get out again.
+
+  Suddenly she came upon a little three-legged table, all made of solid
+  glass; there was nothing on it except a tiny golden key, and Alice's
+  first thought was that it might belong to one of the doors of the hall;
+  but, alas! either the locks were too large, or the key was too small,
+  but at any rate it would not open any of them. However, on the second
+  time round, she came upon a low curtain she had not noticed before, and
+  behind it was a little door about fifteen inches high: she tried the
+  little golden key in the lock, and to her great delight it fitted!
+&lt;/p&gt;</pre>
+
+<h4 id="CSS_2">CSS</h4>
+
+<pre class="brush:css; highlight:[3]; notranslate">p {
+  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-attachment: fixed, scroll;
+  background-repeat: no-repeat, repeat-y;
+}</pre>
+
+<h4 id="Результат_2">Результат</h4>
+
+<p>{{EmbedLiveSample("Поддержка_нескольких_фоновых_изображений")}}</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Сокращенное свойство было расширено для поддержки нескольких фонов и значения <code>local</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Никаких существенных изменений.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#background-attachment', 'background-attachment')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость браузеров</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>4.0</td>
+   <td>3.5</td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td>Multiple backgrounds</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
+   <td>9.0</td>
+   <td>10.5</td>
+   <td>1.3</td>
+  </tr>
+  <tr>
+   <td><code>local</code></td>
+   <td>4.0</td>
+   <td>{{CompatNo}}</td>
+   <td>9.0</td>
+   <td>10.5</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1.9.2")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.0</td>
+   <td>3.2</td>
+  </tr>
+  <tr>
+   <td>Multiple backgrounds</td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1.9.2")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.0</td>
+   <td>3.2</td>
+  </tr>
+  <tr>
+   <td><code>local</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Несколько фонов</a></li>
+</ul>

@@ -1,0 +1,113 @@
+---
+title: <datalist>
+slug: Web/HTML/Element/datalist
+tags:
+  - Element
+  - HTML
+  - HTML формы
+  - HTML5
+  - Reference
+  - Web
+  - Веб
+  - Элемент
+translation_of: Web/HTML/Element/datalist
+---
+<p><strong>HTML-элемент<code> &lt;datalist&gt;</code></strong> содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}</div>
+
+<p class="hidden">Источник для этого интерактивного пример хранится в GitHub репозитории. Если вы хотите внести свой вклад, ознакомьтесь с <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам pull request.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категория контента</a></th>
+   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешённое содержимое</th>
+   <td>Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.</td>
+  </tr>
+  <tr>
+   <th scope="row">Пропуск тегов</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешённые родители</th>
+   <td>Любой элемент, который может содержать <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешённые ARIA-роли</th>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM-интерфейс</th>
+   <td>{{domxref("HTMLDataListElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Атрибуты">Атрибуты</h2>
+
+<p>С данным элементом можно использовать все <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: html">&lt;label for="myBrowser"&gt;Choose a browser from this list:&lt;/label&gt;
+&lt;input list="browsers" id="myBrowser" name="myBrowser" /&gt;
+&lt;datalist id="browsers"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Internet Explorer"&gt;
+  &lt;option value="Opera"&gt;
+  &lt;option value="Safari"&gt;
+  &lt;option value="Microsoft Edge"&gt;
+&lt;/datalist&gt;
+</pre>
+
+<h3 id="Результат">Результат</h3>
+
+<p>{{EmbedLiveSample("Примеры")}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам pull request.</div>
+
+<p>{{Compat("html.elements.datalist")}}</p>
+
+<h2 id="Полифил">Полифил</h2>
+
+<p>Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифилл: <a href="https://github.com/mfranzke/datalist-polyfill">datalist-polyfill</a>.</p>
+
+<h2 id="Смотрите_так_же">Смотрите так же</h2>
+
+<ul>
+ <li class="last">Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};</li>
+ <li class="last">Элемент {{HTMLElement("option")}}.</li>
+</ul>
+
+<p class="last">{{HTMLRef}}</p>

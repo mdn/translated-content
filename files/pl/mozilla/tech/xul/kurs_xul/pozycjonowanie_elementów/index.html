@@ -1,0 +1,266 @@
+---
+title: Pozycjonowanie elementów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Pozycjonowanie_elementów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Pomocnik_XUL:Model_pola" style="float: left;">« Poprzedni</a><a href="/pl/docs/Pomocnik_XUL:Szczegóły_modelu_pola">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule dowiemy się jak sterować pozycją i rozmiarem elementu.</p>
+
+<h2 id="Pozycjonowanie_elementu_pola" name="Pozycjonowanie_elementu_pola">Pozycjonowanie elementu pola</h2>
+
+<p>Dowiedzieliśmy się już jak pozycjonować elementy - albo poziomo, albo pionowo - wewnątrz pola. Często jednak będziemy musieli sterować pozycją i rozmiarem elementu wewnątrz pola. Dlatego najpierw musimy przyjrzeć się, jak działa pole.</p>
+
+<p>Pozycja elementu jest określona przez styl rozmieszczenia jego kontenera. Na przykład, przycisk w polu poziomym będzie umieszczony na prawo od poprzedniego przycisku. Rozmiar elementu jest określony przez dwa czynniki: zawartość elementu i rozmiar, jaki określisz. Rozmiar, jaki posiada element jest określony przez to, co dany element zawiera. Na przykład, szerokość przycisku jest określona przez ilość tekstu wewnątrz przycisku.</p>
+
+<p>Generalnie element będzie tak duży, jak to konieczne do przechowania jego zawartości i nie większy. Pewne elementy, takie jak pola tekstowe mają rozmiar domyślny, jakiego będziemy używać. Pole będzie wystarczająco duże dla przechowania elementów wewnątrz pola. Pole poziome zawierające trzy przyciski będzie tak szerokie, jak trzy przyciski plus niewielka ilość wypełnienia.</p>
+
+<div class="float-right"><img alt="grafika:boxstyle1n.png"></div>
+
+<p>Na poniższym rysunku pierwsze dwa przyciski mają zadany odpowiedni rozmiar dla przechowania swojego tekstu. Trzeci przycisk jest większy, ponieważ ma więcej zawartości. Szerokość pola zawierającego przyciski jest to całkowita szerokość przycisków plus wypełnienie między nimi. Wysokość przycisków ma odpowiedni rozmiar do przechowywanego tekstu.</p>
+
+<h3 id="Atrybuty_width_i_height" name="Atrybuty_width_i_height">Atrybuty <code>width</code> i <code>height</code></h3>
+
+<p>Niekiedy konieczna jest większa kontrola nad rozmiarem elementu w oknie. Jest kilka cech, które pozwolą ci sterować rozmiarem elementu. Szybkim sposobem na to jest po prostu nadanie elementowi atrybutów <code>width</code> i <code>height</code>, podobnych do tych, jakie można dodać do znacznika <code>img</code> w HTML-u. Poniżej mamy pokazany przykład:</p>
+
+<p><br>
+ <span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">Podgląd</a></p>
+
+<pre>&lt;button label="OK" width="100" height="40"/&gt;
+</pre>
+
+<p>Jednakże takie rozwiązanie nie jest zalecane. Nie jest to zbyt przenośne i może nie mieścić się w pewnych motywach. Lepszym sposobem jest zastosowanie właściwości stylu, który działa podobnie do arkuszy stylu w HTML. Można zastosować poniższe własności CSS.</p>
+
+<dl>
+ <dt><a href="/pl/docs/Web/CSS/width" title="Właściwość widthCSS ustawia szerokość elementu. Domyślnie ustawia szerokość obszaru zawartości , ale jeśli box-sizing jest ustawione na border-box, ustawia szerokość obszaru border ."><code>width</code></a> </dt>
+ <dd>Określa szerokość elementu.</dd>
+ <dt><a href="/pl/docs/Web/CSS/height" title="Własność height definiuje w elemencie wysokość obszaru zawartości. Obszar zawartości znajduje sięwewnątrz dopełnienia, obramowania i marginesów elementu."><code>height</code></a> </dt>
+ <dd>Określa wysokość elementu.</dd>
+</dl>
+
+<p>Poprzez ustawienie jednej z tych dwóch własności, element będzie stworzony z taką szerokością lub wysokością. Jeśli określisz tylko jedną właściwość rozmiaru, druga jest wyliczana, jeśli to jest konieczne. Rozmiar tych właściwości stylu powinien być określony jak liczba następująca po module.</p>
+
+<h3 id="Elastyczne_elementy" name="Elastyczne_elementy">Elastyczne elementy</h3>
+
+<p>Rozmiary są dosyć łatwe do obliczenia dla elementów nieelastycznych. Korzystają one po prostu ze swoich określonych szerokości i wysokości, a jeśli rozmiar nie został określony, domyślny rozmiar elementu jest wystarczająco duży, aby dopasować zawartość. Dla elementów elastycznych obliczenie jest odrobinę oszukańcze.</p>
+
+<p>Elementy elastyczne są tymi które mają atrybut <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> ustawioną na wartość większą niż 0. Przypomnij sobie, że elementy elastyczne rosną i kurczą się wypełniając dostępną przestrzeń. Ich domyślny rozmiar jest jeszcze obliczany tak samo jak elementów nieelastycznych. Demonstruje to poniższy przykład:</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">Podgląd</a></p>
+
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;hbox&gt;
+  &lt;button label="Tak" flex="1"/&gt;
+  &lt;button label="Nie"/&gt;
+  &lt;button label="Nie znam jednego rozwiązania lub jakiegokolwiek innego"/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Początkowo okno pojawi się takie jak to na wcześniejszym obrazku. Pierwsze dwa przyciski będą ułatwione na odpowiedni domyślny rozmiar szerokości a przycisk trzeci będzie większy ponieważ ma dłuższą etykietę. Pierwszy przycisk jest elastyczny a wszystkie trzy elementy umieszczono wewnątrz pola. Szerokość pola będzie ustawiona na początkową całkowitą szerokość wszystkich trzech przycisków (około 430 pikseli na rysunku).</p>
+
+<p>Jeśli zwiększysz szerokość okna, elementy są sprawdzane pod kątem elastyczności aby wypełnić pustą przestrzeń jaka się pojawi. Przycisk jest jedynym elastycznym elementem, ale nie urośnie szerszy. jest tak ponieważ pole wewnątrz którego mieści się przycisk nie jest elastyczne. Element nieelastyczny nigdy nie zmienia rozmiaru nawet jeśli jest dostępna przestrzeń, więc również i przycisk nie może się zwiększyć. A zatem przycisk się nie poszerzy.</p>
+
+<p>Rozwiązaniem jest uczynienie również pola elastycznym. Zatem kiedy poszerzasz okno, będzie dostępna dodatkowa przestrzeń, więc pole będzie wzrastało wypełniając tą dodatkową przestrzeń. Ponieważ pole jest duże, będzie stworzone wewnątrz niego więcej dodatkowej przestrzeni, a elastyczny przycisk wewnątrz niego wzrośnie wypełniając dostępną przestrzeń. Ten proces powtarza się, jeśli to konieczne, dla wielu zagnieżdżonych pól.</p>
+
+<h2 id="Ustawienie_minimalnego_i_maksymalnego_rozmiaru" name="Ustawienie_minimalnego_i_maksymalnego_rozmiaru">Ustawienie minimalnego i maksymalnego rozmiaru</h2>
+
+<p>Możemy pozwolić elementowi, aby był elastyczny ale ograniczyć rozmiar, aby nie mógł być większy niż pewien rozmiar lub możemy ustawić minimalny rozmiar. Możemy to zrobić poprzez zastosowanie czterech atrybutów:</p>
+
+<dl>
+ <dt><code id="a-minwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minwidth">minwidth</a></code> </dt>
+ <dd>Określa minimalną długość jaką może posiadać element.</dd>
+ <dt><code id="a-minheight"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/minheight">minheight</a></code> </dt>
+ <dd>Określa minimalną wysokość jaką może posiadać element.</dd>
+ <dt><code id="a-maxwidth"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxwidth">maxwidth</a></code> </dt>
+ <dd>Określa maksymalną długość jaką może posiadać element.</dd>
+ <dt><code id="a-maxheight"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxheight">maxheight</a></code> </dt>
+ <dd>Określa maksymalną wysokość jaką może posiadać element.</dd>
+</dl>
+
+<p><br>
+ Wartości te są zawsze mierzone w pikselach. Możemy również zastosować odpowiednią własność CSS, <code>min-width</code>, <code>min-height</code>, <code>max-width</code> i <code>max-height</code>.</p>
+
+<p>Własności te są tylko użyteczne w przypadku elementów elastycznych. Poprzez ustawienie maksymalnej wysokości, na przykład: obszar przycisku będzie rósł tylko do pewnej maksymalnej wysokości. Będziemy mogli jeszcze zmienić rozmiar okna poza ten punkt, ale przycisk przestanie zwiększać swój rozmiar. Pudełko, w którego wnętrzu jest przycisk, również będzie rosło, chyba, że ustawimy mu również wysokość pudełka.</p>
+
+<p>Jeśli dwa przyciski są również elastyczne, normalnie oba będą dzieliły ilość dodatkowej przestrzeni. Jeśli jeden przycisk ma maksymalną szerokość, drugi będzie jeszcze kontynuował wzrost i zabierał całą pozostałą przestrzeń.</p>
+
+<p>Jeśli pudełko ma maksymalną szerokość lub wysokość, dzieci nie będą mogły wzrastać bardziej, niż do maksymalnego rozmiaru. Tu mamy kilka przykładów ustawienia szerokości i wysokości:</p>
+
+<h3 id="Przyk.C5.82ady_ustawienia_szeroko.C5.9Bci_i_wysoko.C5.9Bci" name="Przyk.C5.82ady_ustawienia_szeroko.C5.9Bci_i_wysoko.C5.9Bci">Przykłady ustawienia szerokości i wysokości</h3>
+
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-width: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;To jest nudny, lecz w prosty sposób
+zawinięty do nowej linii tekst.&lt;/description&gt;
+</pre>
+
+<dl>
+ <dt>Przykład 1 </dt>
+ <dd>Pierwszy przycisk będzie wyświetlony z szerokością 100 pikseli (px oznacza piksele). Musisz dodać moduł lub szerokość będzie ignorowana.</dd>
+ <dt>Przykład 2 </dt>
+ <dd>Drugi przycisk będzie wyświetlony z wysokością 10 pikseli i szerokości 100em (em jest to rozmiar znaku bieżącej czcionki).</dd>
+ <dt>Przykład 3 </dt>
+ <dd>Trzeci przycisk jest elastyczny więc będzie rósł w oparciu o rozmiar pola w którym jest przycisk. Jednakże, przycisk nigdy nie będzie dzielony na mniej niż 50 pikseli. Często elastyczne komponenty takie jak ochraniacz zaabsorbują pozostałą przestrzeń, przełamując współczynnik flex.</dd>
+ <dt>Przykład 4 </dt>
+ <dd>Czwarty przycisk jest elastyczny i nigdy nie będzie miał wysokości mniejszej niż 2ex (x jest zazwyczaj wysokością litery x w bieżącej czcionce) lub nie będzie szerszy niż 100 pikseli.</dd>
+ <dt>Przykład 5 </dt>
+ <dd>Tekst wejściowy jest elastyczny, ale nigdy nie wzrośnie aby być większym niż 100em. Często będziesz chciał stosować em kiedy określasz rozmiary tekstu. Ten moduł jest użyteczny dla pól tekstowych, aby byłyby one zawsze odpowiedniego rozmiaru, nawet jeśli czcionka jest bardzo duża.</dd>
+ <dt>Przykład 6 </dt>
+ <dd>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> jest wymuszony po to aby mieć maksymalną szerokość 50 pikseli. Tekst wewnątrz będzie zawijany do kolejnej linii po pięćdziesiątym pikselu.</dd>
+</dl>
+
+<div class="highlight">
+<h4 id="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki">Nasz przykład: &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h4>
+
+<p>Dodajmy, więc niektóre style do naszego okienka dialogowego &lt;tt&gt;Znajdź pliki&lt;/tt&gt;. Tworzymy pole tekstowe o zmiennych wymiarach, tak, aby pasowało do całego okna.</p>
+
+<pre>&lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Grafika:boxstyle1.png"></div>
+
+<p>W tym przykładzie tekst wejściowy jest elastyczny. W ten sposób, będzie się zwiększał, jeśli użytkownik zmieni rozmiar okienka dialogowego. Jest to użyteczne, jeśli użytkownik chce wpisać długi ciąg znaków tekst. Także, minimalna szerokość, jaką możemy ustawić to 15 em, więc pole tekstowe będzie musiała zawsze posiadać, co najmniej 15 znaków. Jeśli użytkownik zmieni rozmiar okna dialogowego do bardzo małego, to wprowadzany tekst nie będzie się kurczył poza obszar 15 em. Zostanie narysowany wtedy, gdy rozszerzymy nasz obszar poza brzeg okna. Zwróć uwagę, że na obrazku z boku, wprowadzony tekst zwiększył swój rozmiar, gdy rozszerzymy okno do pełnego rozmiaru.</p>
+</div>
+
+<h2 id="Pola_upakowane" name="Pola_upakowane">Pola upakowane</h2>
+
+<p>Powiedzmy, że mamy pole z dwoma elementami potomnymi, żaden nie jest elastyczny, ale pole jest elastyczne. Na przykład:</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">Podgląd</a></p>
+
+<pre>&lt;box flex="1"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Jeśli zmienisz rozmiar okna, pole wystarczy do dopasowania rozmiaru okna. Przyciski nie są elastyczne więc nie będą zmieniać swojej szerokości. Wynikiem jest dodatkowa przestrzeń, która pojawi się po prawej stronie okna, wewnątrz pola. Możesz sobie jednak życzyć aby dodatkowa przestrzeń pojawiła się po lewej stronie, aby przyciski pozostały poprawnie ustawione w oknie.</p>
+
+<p>Możesz dokonać tego przez umieszczenie separatora wewnątrz pola, ale może wyglądać to niechlujnie, kiedy musisz to robić wiele razy. Lepszym sposobem jest zastawanie dodatkowego atrybutu <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code> w polu. Atrybut ten wskazuje jak <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code> (spakować... ale zobacz czcionkę) elementy potomne wewnątrz pola. Dla orientacji poziomej pól steruje poziomym pozycjonowaniem potomków, zaś dla orientacji pionowej pól steruje pionowym pozycjonowaniem potomków. Możesz zastosować następujące wartości:</p>
+
+<p><b>You could accomplish this by placing a <code><code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> inside the box, but that gets messy when you have to do it numerous times. A better way is to use an additional attribute <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code> on the <code><code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>. This attribute indicates how to <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code> the child elements inside the box. For horizontally oriented boxes, it controls the horizonal positioning of the children. For vertically oriented boxes, it controls the vertical positioning of the children. You can use the following values:</b></p>
+
+<dl>
+ <dt>start </dt>
+ <dd>Pozycjonuje elementy od lewego brzegu dla pól poziomych i od górnego brzegu dla pól pionowych. Jest to wartość domyślna.</dd>
+ <dt>center </dt>
+ <dd>Centruje elementy potomne w polu.</dd>
+ <dt>end </dt>
+ <dd>Pozycjonuje elementy od prawego brzegu dla pól poziomych i od dolnego brzegu dla pól pionowych.</dd>
+</dl>
+
+<p>Atrybut <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code> jest stosowany dla pola zawierającego elementy będące pakowanymi, a nie same elementy.</p>
+
+<p>Możemy zmienić wcześniejszy przykład do centrowania elementów jak pokazano:</p>
+
+<p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">Podgląd</a></p>
+
+<pre>&lt;box flex="1" pack="center"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Teraz, kiedy okno zmieniło rozmiar, przyciski są umieszczone centralnie. Porównaj to zachowanie z tym z poprzedniego przykładu.</p>
+
+<h2 id="Pole_regulowane" name="Pole_regulowane">Pole regulowane</h2>
+
+<p>Jeśli zmienisz rozmiar okna poziomo w powyższym przykładzie Happy-Sad, pole zwiększy szerokość. Jeśli zmienisz rozmiar okna pionowo, zauważysz, że przyciski zwiększyły wysokość. Jest tak ponieważ elastyczność jest zakładana domyślnie w tym drugim kierunku.</p>
+
+<p>Możesz sterować tym zachowaniem atrybutem <code><code id="a-align"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/align">align</a></code></code>. Dla pól poziomych steruje pozycjonowaniem potomków pionowo. Dla pól pionowych steruje pozycjonowaniem poziomym potomków. Możliwie wartości są podobne do tych dla <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code>.</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>Ustawia elementy wzdłuż górnego brzegu dla pól poziomych i wzdłuż lewego brzegu dla pól pionowych.</dd>
+ <dt>center </dt>
+ <dd>Centruje elementy potomne w polu.</dd>
+ <dt>end </dt>
+ <dd>Ustawia elementy wzdłuż dolnego brzegu dla pól poziomych i wzdłuż prawego brzegu pól pionowych.</dd>
+ <dt>baseline </dt>
+ <dd>Ustawia elementy tak, aby tekst był ustawiony w rzędzie. Jest to użyteczne dla pól poziomych.</dd>
+ <dt>stretch </dt>
+ <dd>Ta wartość, domyślna, powoduje, że elementy rosną do odpowiedniego rozmiaru pola, podobnie do elementów elastycznych, ale w przeciwnym kierunku.</dd>
+</dl>
+
+<p>Jak przy atrybucie <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code>, atrybut <code><code id="a-align"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/align">align</a></code></code> stosuje się dla zawartości pola dla elementów będących ustawianymi, a nie dla samych elementów.</p>
+
+<p>Na przykład, pierwsze pole poniżej, będzie miało swój obszar potomny, ponieważ jest domyślny. Drugie pole ma atrybut <code><code id="a-align"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/align">align</a></code></code>, więc jego potomkowie będą umieszczeni centralnie.</p>
+
+<p><span id="Przyk%C5%82ad_5"><a id="Przyk%C5%82ad_5"></a><strong>Przykład 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">Podgląd</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="yesno" title="Pytanie" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Tak"/&gt;
+    &lt;button label="Nie"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Może"/&gt;
+    &lt;button label="Być może"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="grafika:boxstyle2-b.png"></div>
+
+<p>Możemy także użyć własności stylów <code><a href="pl/CSS/-moz-box-pack">-moz-box-pack</a></code> i <code><a href="pl/CSS/-moz-box-align">-moz-box-align</a></code> zamiast określonych atrybutów.</p>
+
+<div class="note">Możesz odkryć, że Przykład Pola Regulowanego jest użyteczny dla wypróbowania różnicy właściwości pola.</div>
+
+<div class="note"><b>You may find the <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/aligner.xul">Box Alignment Example</a> useful for trying out the various box properties.</b></div>
+
+<h2 id="Przycinanie.2FSkracanie_tekstu_i_przycisk.C3.B3w" name="Przycinanie.2FSkracanie_tekstu_i_przycisk.C3.B3w">Przycinanie/Skracanie tekstu i przycisków</h2>
+
+<p>Możemy potencjalnie stworzyć element przycisku, który zawiera etykietę, która jest większa niż maksymalna szerokość przycisku. Oczywiście, rozwiązaniem byłoby zwiększenie rozmiaru przycisku. Jednak, przyciski (i inne elementy z etykietami) mają specjalny atrybut nazwany <code>crop</code>, który pozwala ci określić jak tekst może być przycięty jeśli jest zbyt długi</p>
+
+<p>Jeśli tekst jest przycięty pojawi się wielokropek (...) na przycisku, gdzie tekst został skrócony. Poprawne są cztery możliwie wartości:</p>
+
+<dl>
+ <dt>left </dt>
+ <dd>Tekst przycięty z lewej strony.</dd>
+ <dt>right </dt>
+ <dd>Tekst przycięty z prawej strony.</dd>
+ <dt>center </dt>
+ <dd>Tekst jest przycięty w środku.</dd>
+ <dt>none </dt>
+ <dd>Tekst nie został przycięty. Jest to wartość domyślna.</dd>
+</dl>
+
+<p>Ten atrybut jest rzeczywiście użyteczny tylko kiedy okienko dialogowe zostało stworzone aby być użytecznym w danym rozmiarze. Atrybut <code>crop</code> może również być użyty z innymi elementami, które stosują atrybut <code>label</code> dla etykiet. Poniżej pokazano ten atrybut w działaniu.</p>
+
+<p><span id="Przyk%C5%82ad_6"><a id="Przyk%C5%82ad_6"></a><strong>Przykład 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">Podgląd</a></p>
+
+<div class="float-right"><img alt="grafika:boxstyle2.png"></div>
+
+<pre>&lt;button label="Proszę, Naciśnij mnie!" crop="right" flex="1"/&gt;
+</pre>
+
+<p>Odnotuj jak tekst na przycisku został przycięty z prawej strony po uczynieniu okienka mniejszym.</p>
+
+<div class="highlight">
+<p>Przykład <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">Podgląd</a></p>
+</div>
+
+<p>W następnym artykule podsumujemy i <a href="pl/Kurs_XUL/Szczeg%c3%b3%c5%82y_modelu_pude%c5%82kowego">opiszemy szczegóły modelu pudełkowego</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Model_pudełkowy" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Szczegóły_modelu_pudełkowego">Następny  »</a></p>
+</div><p></p>

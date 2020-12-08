@@ -1,0 +1,92 @@
+---
+title: Kontrolki numeryczne
+slug: Mozilla/Tech/XUL/Kurs_XUL/Kontrolki_numeryczne
+tags:
+  - Firefox 3
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Numeric_Controls
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrolki_wejścia" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrolki_list">Następny  »</a></p>
+</div>  XUL posiada dwa elementy stosowane do wprowadzenia wartości lub zakresów numerycznych oraz jako dwa elementy dla wprowadzenia dat i czasu. Te elementy są dostępne tylko w Firefoksie 3 lub wersjach późniejszych.<p></p>
+
+<h3 id="Pola_numeryczne" name="Pola_numeryczne">Pola numeryczne</h3>
+
+<p>Pola tekstowe mogą być stosowane do wprowadzenia liczb poprzez ustawienie wartości atrybutu <code id="a-type"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/type">type</a></code> na wartość <code>number</code>. Ten typ pola tekstowego może być stosowany tylko do wprowadzenia liczb. Inne znaki nie są dozwolone i są ignorowane podczas ich wpisywania. Dodatkowo, przyciski strzałek pojawiają się obok pola tekstowego, co pozwala użytkownikowi przechodzić pomiędzy wartościami.</p>
+
+<div class="float-right"><img alt="Image:Controlguide-textbox-number.gif"></div>
+
+<p>Tak jak z innymi polami tekstowymi, domyślna wartość może być określona atrybutem <code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code>. Naturalnie, wartość ta powinna być liczbą. Jednakże wartość minimalną i maksymalną można także określić przy zastosowaniu atrybutów <code id="a-min"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/min">min</a></code> i <code id="a-max"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/max">max</a></code>. Jeśli są one ustawione, można kontrolować zakres wartości, na które może być ustawione pole tekstowe. Jeśli użytkownik wprowadzi wartość mniejszą lub większą niż ta wartość, zostanie ona ponownie nastawiona na minimalną lub maksymalną wartości, o ile to konieczne. Dla przykładu, następujące numeryczne pole tekstowe posiada zakres pomiędzy 1 a 20.</p>
+
+<pre>&lt;textbox type="number" min="1" max="20"/&gt;
+</pre>
+
+<p>Jako że domyślna wartość nie jest określona, to domyślną wartością będzie minimalna wartość czyli 1. Atrybut <code id="a-min"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/min">min</a></code> jest ustawiony na <code>1</code>, aby wskazać minimalną możliwą wartość, jaką jest 1 i atrybut <code id="a-max"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/max">max</a></code> jest ustawiony na <code>20</code>, aby wskazać maksymalną możliwą wartość, jaką jest 20. Jeśli minimalna wartość nie jest określona, to domyślną wartością jest 0. Maksymalną domyślną wartością jest specjalna wartość <code>Infinity</code>, która oznacza brak limitu.</p>
+
+<h4 id="Inne_numeryczne_atrybuty_pola_tekstowego" name="Inne_numeryczne_atrybuty_pola_tekstowego">Inne numeryczne atrybuty pola tekstowego</h4>
+
+<p>Atrybut <code id="a-increment"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/increment">increment</a></code> może zostać użyty do określenia, o jaką wartość ma się zmienić wartość pola, kiedy strzałki obok pola zostaną naciśnięte. Domyślną wartością jest 1, lecz określenie innej wartości pozwala dokonać zmiany o większą liczbę. Dla przykładu następujący przykład wielokrotnie wzrasta o 10.</p>
+
+<pre>&lt;textbox type="number" increment="10" max="100"/&gt;
+</pre>
+
+<p>To pole tekstowe przechodzi poprzez wielokrotności liczby 10 od 0 do 100. Do czasu, kiedy to atrybut <code id="a-min"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/min">min</a></code> nie został określony, to domyślnie wynosi on 0. <strong>Note that the user can still enter other values if they are typed in.</strong> Atrybut <code id="a-increment"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/increment">increment</a></code> oddziałuje tylko na przyciski strzałek. Użytkownik może także zwiększyć lub zmniejszyć wartość stosując ten 'przyrost' poprzez użycie klawiszy kursora 'do góry' i 'w dół', podczas gdy pole tekstowe jest zaznaczone i aktywne.</p>
+
+<p>Atrybut <code id="a-decimalplaces"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/decimalplaces">decimalplaces</a></code> wskazuje, ile miejsc po przecinku wyświetlić. Domyślną wartością jest 0, które oznacza, że mają zostać wyświetlone tylko liczby całkowite. Jednakże różne wartości mogą być zastosowane do wyświetlenia wartości dziesiętnych.</p>
+
+<pre>&lt;textbox type="number" decimalplaces="2"/&gt;
+</pre>
+
+<p>W tym przykładzie liczba zostanie pokazana do dwóch cyfr po prawej stronie przecinka. Wartości z dodatkowymi liczbami ułamkowymi są zaokrąglane do dwóch miejsc po przecinku.</p>
+
+<h3 id="Skale" name="Skale">Skale</h3>
+
+<p>Element <code><a href="/pl/docs/Mozilla/Tech/XUL/scale" title="scale">scale</a></code> może być także stosowany do wyboru wartości z zakresu. Zamiast pola tekstowego stosujemy przesuwaną skalę. Użytkownik może przeciągnąć uchwyt na skali, aby dostosować jej wartość.</p>
+
+<div class="float-right"><img alt="Image:Controlguide-scale.gif"></div>
+
+<p>Wiele takich samych atrybutów może być używanych wraz ze skalą jako pole numeryczne: atrybuty <code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code>, <code id="a-min"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/min">min</a></code>, <code id="a-max"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/max">max</a></code> i <code id="a-increment"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/increment">increment</a></code> mogą być stosowane w podobnym stylu. Aktualnie skala nie wyświetla wartości liczbowych, lecz może być stosowane w skrypcie. <strong>A scale will fire a <code>change</code> event whenever the scales's value is modified.</strong> <span class="comment">Skala uruchomi zdarzenie &lt;code&gt;change&lt;/code&gt;, zawsze gdy jej wartość zostanie zmodyfikowana</span></p>
+
+<pre>&lt;scale value="40" min="1" max="50"/&gt;
+</pre>
+
+<p>Ta skala domyślnie ustawiona jest na wartość 40 i posiada swój zakres pomiędzy 1 a 50.</p>
+
+<p>Numeryczne pole tekstowe normalnie jest stosowane, kiedy dla użytkownika jest ważna wartość tego pola, na przykład; pole do wprowadzania numerów dni lub gdy podajemy maksymalny rozmiar pliku. Skala będzie używana wówczas, gdy bieżąca wartość nie jest ważna, lecz która przesuwa po skali zmniejszając lub zwiększając swój stan. Dla przykładu, suwak do regulacji dźwięku lub do zmiany poziomów powiększenia.</p>
+
+<p>Domyślne ułożenie skali jest poziome wraz z mniejszymi wartościami z lewej strony i większymi wartościami po prawej stronie. Jednakże istnieje możliwość zmiany orientacji za pomocą atrybutów <code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code> i <code id="a-dir"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/dir">dir</a></code>.</p>
+
+<pre>&lt;scale orient="vertical" dir="reverse"/&gt;
+</pre>
+
+<p>Ta skala będzie wyświetlona pionowo z mniejszymi wartościami u dołu i większymi wartościami u góry.</p>
+
+<h3 id="Pola_do_wprowadzania_daty_i_czasu" name="Pola_do_wprowadzania_daty_i_czasu">Pola do wprowadzania daty i czasu</h3>
+
+<p>Elementy <code><a href="/pl/docs/Mozilla/Tech/XUL/datepicker" title="datepicker">datepicker</a></code> i <code><a href="/pl/docs/Mozilla/Tech/XUL/timepicker" title="timepicker">timepicker</a></code> mogą być stosowane do wprowadzania dat i czasu przez użytkownika. Kiedy używamy ich, wyświetlone zostaną ustawione numeryczne pola tekstowe do wprowadzenia każdego ze składników daty i czasu.</p>
+
+<pre>&lt;datepicker value="2004/3/24"/&gt;
+&lt;timepicker value="15:30:00"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Grafika:Controlguide-timepicker.gif"></div>
+
+<p>Atrybut <code>value</code> jest stosowany do ustawienia domyślnej wartości; jeśli atrybut ten zostanie pominięty, pole początkowo będzie ustawione na bieżącą datę i czas. Format atrybutu jest dokładnie jak w przykładzie powyżej, dla daty przybiera formę YYYY/MM/DD i dla czasu formę HH:MM:SS (pomimo że sekundy i towarzyszący im dwukropek mogą być pominięte).</p>
+
+<p>These two elements ensure that the user enters a value date or time. This way, you do not have to check for valid dates, ensure that the day isn't greater than the number of days in the month, handle leap years, and so forth.</p>
+
+<p>While the <code><a href="/pl/docs/Mozilla/Tech/XUL/timepicker" title="timepicker">timepicker</a></code> only comes is one style, the <code><a href="/pl/docs/Mozilla/Tech/XUL/datepicker" title="datepicker">datepicker</a></code> has three different variations. The default style shows three fields for entering the year, month and date. The <code id="a-type"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/type">type</a></code> attribute may be used to select the other two. Using a value of <code>grid</code> uses a calendar grid, as shown in the image below.</p>
+
+<p><img alt="Grafika:Controlsguide-datepicker-grid.png"></p>
+
+<p>Można również wykorzystać wartość <code>popup</code>, która tworzy kombinację dwóch typów. Ten typ posiada trzy pola do wprowadzenia roku, miesiąca i daty, as well as a dropdown button for displaying a popup calendar grid for selecting a day.</p>
+
+<pre>&lt;datepicker type="popup"/&gt;
+</pre>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrolki_wejścia" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrolki_list">Następny  »</a></p>
+</div><p></p>

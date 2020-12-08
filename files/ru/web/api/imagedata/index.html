@@ -1,0 +1,142 @@
+---
+title: ImageData
+slug: Web/API/ImageData
+translation_of: Web/API/ImageData
+---
+<div>{{APIRef("Canvas API")}}</div>
+
+<p><font face="Open Sans, Arial, sans-serif">Интерфейс </font><code><strong>ImageData</strong></code> представляет лежащие в основе пиксельные данные области элемента {{HTMLElement("canvas")}}. Он создан используя конструктор {{domxref("ImageData.ImageData", "ImageData()")}} или метод создания объекта {{domxref("CanvasRenderingContext2D")}} ассоциированного с canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} и {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Он также может быть использован для установки части canvas используя метод {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.</p>
+
+<h2 id="Конструкторы">Конструкторы</h2>
+
+<dl>
+ <dt>{{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}</dt>
+ <dd>Создаёт ImageData из указанного {{jsxref("Uint8ClampedArray")}} и из размера изображения которого он содержит. Если массив не указан, то он создаёт изображение чёрного прямоугольника. Обратите внимание, что такой довольно распространённый путь создания подобного объекта в worker'ах как {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} там не доступен.</dd>
+</dl>
+
+<h2 id="Свойства">Свойства</h2>
+
+<dl>
+ <dt>{{domxref("ImageData.data")}} {{readonlyInline}}</dt>
+ <dd>Возвращает {{jsxref("Uint8ClampedArray")}} представляющий собой одномерный массив, содержащий данные цветовой модели RGBA, с целыми значениями от 0 до 255 (включительно).</dd>
+ <dt>{{domxref("ImageData.height")}} {{readonlyInline}}</dt>
+ <dd>Фактическая высота в пикселях объекта <code>ImageData</code>.</dd>
+ <dt>{{domxref("ImageData.width")}} {{readonlyInline}}</dt>
+ <dd>Фактическая ширина в пикселях объекта <code>ImageData</code>.</dd>
+</dl>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "the-canvas-element.html#imagedata", "ImageData")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>4.0</td>
+   <td>{{CompatGeckoDesktop("14")}}</td>
+   <td>9.0</td>
+   <td>9.0</td>
+   <td>3.1</td>
+  </tr>
+  <tr>
+   <td>Support in workers</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("25")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>ImageData()</code> constructor</td>
+   <td>{{CompatChrome("43")}}</td>
+   <td>{{CompatGeckoDesktop("29")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("30")}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.1</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("14")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.0</td>
+   <td>3.2</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Support in workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("25")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>ImageData()</code> constructor</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("29")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="См._также">См. также</h2>
+
+<ul>
+ <li>{{domxref("CanvasRenderingContext2D")}}</li>
+ <li>The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}.</li>
+</ul>

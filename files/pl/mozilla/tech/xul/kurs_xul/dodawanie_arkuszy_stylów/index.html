@@ -1,0 +1,165 @@
+---
+title: Dodawanie arkuszy stylów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_arkuszy_stylów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Style_Sheets
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Trwałe_dane" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Nadawanie_stylu_drzewa">Następny  »</a></p>
+</div><p></p>
+
+<p>Posiadamy zmodyfikowany widok elementów, stworzonych wcześniej. XUL używa CSS (Kaskadowe arkusze stylów) do dostosowania swoich elementów.</p>
+
+<h2 id="Arkusze_styl.C3.B3w" name="Arkusze_styl.C3.B3w">Arkusze stylów</h2>
+
+<p>Arkusz stylów jest plikiem zawierającym informację na temat stylu danego elementu. Jest to oryginalnie zaprojektowany element HTML lub potrafiący być dodanym tylko do elementów XUL, oraz posiada odwołanie do XML-a. Arkusz stylów zawiera informacje dotyczące; czcionki, kolorów, obramowania i rozmiarów elementów.</p>
+
+<p>Mozilla stosuje domyślne arkusze stylów, dla każdego okna XUL. W wielu przypadkach to będzie wystarczający powód wyłączenia tego ustawienia jako domyślnego. W przyszłości, użytkownik będzie miał możliwość dodania arkusz stylów. Generalnie, będziemy łączyć jeden plik arkusza stylów z każdym plikiem XUL.</p>
+
+<p>Możesz wstawiać arkusze stylów, gdziekolwiek sobie życzysz. Jeśli Wasz plik XUL jest przechowywany i posiadasz dojście do HTTP URL, możesz przechować działający arkusz stylów. Jeśli tworzysz paczkę XUL, to zostanie ona zainstalowana jako część systemu chrome, masz dwie możliwości. Pierwsza, możesz magazynować arkusz stylów w tym samym katalogu co plik XUL. Ta metoda jest wadliwa, ponieważ znaczy to, że twoja nie będzie zdolna być motywem. Druga metoda angażuje położenie twoich plików jako część tematu.</p>
+
+<div class="highlight">
+<p>Podsumujmy, co zbudowaliśmy i jakie zdolności zostały zawarte w oknie dialogowym "Znajdź pliki", ponieważ okno dialogowe Znajdź pliki kieruje do adresu URL <code><a class="external" rel="freelink">chrome://findfile/content/findfile.xul</a></code>, więc plik arkusza stylów będzie magazynowany w <code><a class="external" rel="freelink">chrome://findfile/skin/findfile.css</a></code>.</p>
+</div>
+
+<p>Wszystkie przykłady umieszczono dalej, aktualnie zostały one użyte już jako arkusz stylów:</p>
+
+<pre>&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+</pre>
+
+<p>Linia ta sygnalizuje użycie stylu pobranego z <a class="external" rel="freelink">chrome://global/skin/</a>. W Mozilli, może zostać przetłumaczone jako plik global.css, który stanowi domyślny styl informacji dla elementu XUL. Możesz tą linię usunąć i elementy wciąż będą pracowały, jednakże będą wyglądały raczej dobrze. Arkusz stylów nakłada rozmaite czcionki, kolory i obramowania do tworzenia elementów wyglądających bardziej odpowiednio.</p>
+
+<h2 id="Zmieniamy_style" name="Zmieniamy_style">Zmieniamy style</h2>
+
+<p>Jednakże, zdążają się sytuacje kiedy domyślny wygląd elementów nie da pożądanych przez nas efektów. W takiej sytuacji, będziemy musieli dodać własny arkusz stylów. Tak więc, dodamy style używając do tego atrybut <code><code id="a-style"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/style">style</a></code></code> elementu. Wykonanie tego, nie jest najlepszym sposobem na dodanie stylu. Lepszym sposobem, od poprzedniego będzie utworzenie osobnego pliku arkusza stylów. Powodem jest inny wygląd, lub skóra, może zostać wczytana w prosty sposób.</p>
+
+<p>W pewnych sytuacjach, gdzie klasa atrybutu <code><code id="a-style"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/style">style</a></code></code> jest dopuszczalna. Przykładem mógł być moment kiedy skrypt zmienia style lub gdzie różnice w layoucie mogą znaczyć zmienić zachowanie lub przeznaczenie elementu. Jednakże powinieneś unikać tego bardzo jako of the element.</p>
+
+<p>Dla zainstalowanych plików, utwórz lub zmodyfikuj listę plików i zainstaluj motyw.</p>
+
+<h3 id="Przyk.C5.82ad_okna_dialogowego:_Znajd.C5.BA_pliki" name="Przyk.C5.82ad_okna_dialogowego:_Znajd.C5.BA_pliki">Przykład okna dialogowego: &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h3>
+
+<div class="highlight">
+<p>Zmodyfikujmy okno dialogowe &lt;tt&gt;Znajdź pliki&lt;/tt&gt;, tak więc style pochodzą z oddzielonego pliku stylów. Po pierwsze, zmodyfikowane linie w pliku findfile.xul:</p>
+
+<pre class="eval"><span class="highlightred">&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</span>
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+  ...
+<span class="highlightred">&lt;spacer class="titlespace"/&gt;</span>
+  &lt;groupbox orient="horizontal"&gt;
+    <span class="nowiki">&lt;caption label="Search Criteria"/&gt;</span>
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Name"/&gt;
+          &lt;menuitem label="Size"/&gt;
+          &lt;menuitem label="Date Modified"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      <span class="highlightred">&lt;spacer class="springspace"/&gt;</span>
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Is"/&gt;
+          &lt;menuitem label="Is Not"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      <span class="highlightred">&lt;spacer class="springspace"/&gt;
+      &lt;menulist id="find-text" flex="1"</span>
+          editable="true"
+          datasources="<a class="external" rel="freelink">file:///mozilla/recents.rdf</a>"
+          ref="<span class="nowiki">http://www.xulplanet.com/rdf/recent/all</span>"/&gt;
+  ...
+<span class="highlightred">&lt;spacer class="titlespace"/&gt;
+&lt;hbox&gt;
+
+  &lt;progressmeter id="progmeter" value="50%" style="display:none;"/&gt;</span>
+</pre>
+
+<p>Nowa linia kodu <code>xml-stylesheet</code> jest użyta do importu arkusza stylów. Zawiera on style, które umieszczamy w pliku arkusza stylów, zamiast umieszczania ich w pliku XUL. Możemy użyć dowolną liczbę arkuszy stylów w podobny sposób jak przedstawione było wcześniej. Arkusz stylów umieszczamy w tym samym katalogu co plik findfile.xul.</p>
+
+<p>Niektóre style znajdujące sie w kodzie powyżej zostały usunięte. Jeden nie wyświetlił (<code>display</code>) własności przez <code>progressmeter</code>. Zostanie zmieniony skrypt znajdującego się po lewej stronie, dlatego że nie miałoby to większego sensu wyświetlanie paska początkowego postępu. Wciąż umieszczamy style w osobnym pliku arkuszy stylów, jeśli Ci jest to potrzebne. Klasę (<code>class</code>) dodajemy do zawartości tagów, przy których możemy zdefiniować style.</p>
+
+<p>Arkusz stylów także musi zostać utworzony. Stwórz plik findfile.css, w tym samym katalogu co plik XUL (to jest normalne, gdy położymy je do innych motywów). W pliku zadeklarujemy style, tak jak jest to pokazane poniżej.</p>
+
+<pre>#find-text {
+  min-width: 15em;
+}
+
+#progmeter {
+  margin: 4px;
+}
+
+.springspace {
+  width: 10px;
+}
+
+.titlespace {
+  height: 10px;
+}
+</pre>
+
+<p>Zauważ, że znajdujące się tutaj pliki stylów są równoważne do plików jakie mieliśmy wcześniej. Jednakże, jest to bardzo proste dla każdej osoby zmieniającej widok okienka dialogowego &lt;tt&gt;Zajdź pliki&lt;/tt&gt;, ponieważ one nie dodają oraz modyfikują deklarację stylów, wcześniej modyfikowany plik oraz zmiana motywów. Jeśli użytkownik nie zmienia pliku lub zmienionych motywów, a zmieni się on w pliku motywy. Jeśli zmienimy, interfejs zawierający motywy, pliki w innych katalogach zawierających motywy.</p>
+</div>
+
+<h2 id="Importowanie_arkuszy_styl.C3.B3w" name="Importowanie_arkuszy_styl.C3.B3w">Importowanie arkuszy stylów</h2>
+
+<p>Tymczasem zobacz, jak importować arkusze stylów. Przykład poniżej przestawia:</p>
+
+<pre>&lt;?xml-stylesheet href="chrome://bookmarks/skin/" type="text/css"?&gt;
+</pre>
+
+<p>To mogłaby być pierwsza linia zakładki okna. To importuje zakładki arkuszy stylów, które są w bookmarks.css. System motywów Mozilli jest wystarczająco eleganckiej sylwetki, która jest użyta w arkuszu stylów, ponieważ specyficzna nazwa pliku nie jest tutaj zasygnalizowana. Mamy zrobione coś podobnego jak globalny plik arkusza stylów (<a class="external" rel="freelink">chrome://global/skin</a>).</p>
+
+<p>Arkusz stylów może importować style z innego arkusza używając dyrektywy import. Zazwyczaj importujemy jeden arkusz stylów z każdego pliku XUL. Arkusz stylu globalnego potrafi być importowany wraz z arkuszem stylów łączącym się z plikiem XUL. Wykonanie tego wymaga zrobienia kodu jak poniżej, uznającego Tobie usunięty kod, importowany z pliku XUL:</p>
+
+<pre class="eval"><b>Style import from XUL:</b>
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>"  type="text/css"?&gt;
+
+<b>Style import from CSS:</b>
+@import url(<a class="external" rel="freelink">chrome://global/skin/</a>);
+</pre>
+
+<p>Druga składnia jest preferowana, ponieważ redukuje to liczbę uzależnień samemu sobie wobec pliku XUL.</p>
+
+<div class="highlight">
+<p>Usuń z pliku findfile.xul import globalnego arkusza stylów i dodaj import findfile.css</p>
+</div>
+
+<p>Wszystkie elementy mogą być formatowane stylami używając <a href="pl/CSS">CSS</a>. Możesz użyć selektorów do zaznaczenia elementów, które sobie życzysz formatować za pomocą stylów (selektory to część przed kędzierzawą klamrą w zasadach stylów). Idąc na przód w tabeli podsumowanie dostępnych selektorów:</p>
+
+<dl>
+ <dt>button </dt>
+ <dd>Dopasuje wszystkie znaczniki przycisku.</dd>
+ <dt>#special-button </dt>
+ <dd>Dopasuje elementy z identyfikatorem (<code>id</code>) <code>special-button</code>.</dd>
+ <dt>.bigbuttons </dt>
+ <dd>Dopasuje wszystkie elementy z klasą (<code>class</code>) <code>bigbuttons</code>.</dd>
+ <dt>button.bigbuttons </dt>
+ <dd>Dopasuje wszystkie elementy przycisku z klasą (<code>class</code>) <code>bigbuttons</code>.</dd>
+ <dt>toolbar &gt; button </dt>
+ <dd>Dopasuje wszystkie przyciski, które są bezpośrednio wewnątrz elementów paska narzędzi.</dd>
+ <dt>toolbar &gt; button.bigbuttons </dt>
+ <dd>Dopasuje wszystkie elementy przycisku z klasą (<code>class</code>) <code>bigbuttons</code>, które są bezpośrednio wewnątrz elementów paska narzędzi.</dd>
+ <dt>button.bigbuttons:hover </dt>
+ <dd>Dopasuje wszystkie elementy przycisku z klasą (<code>class</code>) <code>bigbuttons</code>, lecz tylko wtedy, gdy kursor myszki znajduje się nad nim.</dd>
+ <dt>button#special-button:active </dt>
+ <dd>Dopasuje wszystkie elementy przycisku z identyfikatorem (<code>id</code>) <code>special-button</code>, lecz tylko wtedy, gdy są one aktywne (zostały kliknięte).</dd>
+ <dt>box[orient="horizontal"] </dt>
+ <dd>Dopasuje wszystkie elementy pudełka, które posiadają atrybut <code>orient</code>, który jest ustawiony na wartość <code>horizontal</code>.</dd>
+</dl>
+
+<p>Jak kombinujesz coś z zasadami arkusza stylów, w różnych przypadkach według naszego uznania. Zawsze dobry pomysł jest precyzyjny jako prawdopodobnie wtedy kiedy specyficzny gest jest formatowana stylami. Jest to więcej efektywne i także redukcja prawdopodobieństwa taka, że twój arkusz stylów będzie źle się wyświetlał.</p>
+
+<div class="highlight">
+<p><span id="Przyk%C5%82ad_&amp;lt;tt&amp;gt;Znajd%C5%BA_pliki&amp;lt;/tt&amp;gt;"><a id="Przyk%C5%82ad_&amp;lt;tt&amp;gt;Znajd%C5%BA_pliki&amp;lt;/tt&amp;gt;"></a><strong>Przykład &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-style.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-style.xul">Podgląd</a></p>
+</div>
+
+<p>W następnym artykule, zobaczymy <a href="pl/Kurs_XUL/Nadawanie_stylu_drzewa">jak zastosować style do drzew</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Trwałe_dane" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Nadawanie_stylu_drzewa">Następny  »</a></p>
+</div><p></p>

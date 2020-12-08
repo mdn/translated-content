@@ -1,0 +1,405 @@
+---
+title: Gerenciamento de Janelas
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Window_Management
+tags:
+  - Apps
+  - Firofox OS
+  - Gerenciamento de Janelas
+  - Sistema
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Window_Management
+---
+<div class="summary">
+<p><span id="result_box" lang="pt"><span class="hps">Em geral,</span> <span class="hps">um gerenciador de janelas (ou window management)</span> <span class="hps">é a parte</span> <span class="hps">de um aplicativo que</span> <span class="hps">controla o posicionamento</span> <span class="hps">e</span> <span class="hps">aparência das janelas</span> <span class="hps">em uma interface</span> <span class="hps">gráfica de usuário.</span> <span class="hps">Este artigo</span> <span class="hps">analisa a forma como</span> <span class="hps">o Firefox</span> <span class="hps">OS</span> <span class="hps">lida com o</span> <span class="hps">Gerenciamento de Janela</span><span>s.</span></span></p>
+</div>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">No Firefox OS, o Gerenciamento de Janelas é parte do </span></span><a href="/pt-BR/Firefox_OS/Platform/Gaia/Gaia_apps/System">app do sistema</a><span lang="pt"><span class="alt-edited">, que é responsável por:</span></span></p>
+
+<ul>
+ <li><span class="short_text" id="result_box" lang="pt"><span class="hps">Ciclo de vida do app e</span> <span class="hps">interação entre</span> <span class="hps">aplicativos</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="hps">Layout,</span> <span class="hps">redimensionamento</span><span>, orientação,</span> <span class="hps">visibilidade e</span> <span class="hps">animação /</span> <span class="hps">transições</span> <span class="hps">de elementos</span> <span class="hps">de interface do usuário</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="hps">Lógica</span> <span class="hps">UI</span> <span class="hps">de todo o sistema</span><span>, tais</span> <span class="hps">como</span> <span class="hps">atividades na web</span><span>, notificações</span> <span class="hps">de aplicativos,</span> <span class="hps">e</span><span class="hps"> gerenciador de tarefas</span><span>.</span></span></li>
+ <li><span id="result_box" lang="pt"><span class="hps">UI características</span> <span class="hps">específicas de cada aplicação</span><span>, tais como</span> <span class="hps">pop-ups,</span> <span class="hps">menus de contexto,</span> <span class="hps">e páginas de erro</span><span>.</span></span></li>
+</ul>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Antes de mergulharmos em detalhes de tais itens, vamos ver como os aplicativos são lançados em Gaia.</span></span></p>
+
+<h2 id="Como_os_aplicativos_são_lançados_em_Gaia"><span class="short_text" id="result_box" lang="pt"><span class="hps">Como</span> <span class="hps">os aplicativos são</span> <span class="hps">lançados em</span> <span class="hps">Gaia</span></span></h2>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Um aplicativo pode ser lançado em Firefox OS em diversas maneiras, por exemplo, através de uma mensagem do sistema criada por outro aplicativo, ou através de um clique no ícone na tela inicial.</span></span></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7709/app-launch-flow.png" style="display: block; height: 414px; margin: 0px auto; width: 728px;"></p>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Os eventos que controlam a abertura das aplicações são tratadas pelo motor gecko e Sistema APP, que será explicado em mais detalhes abaixo.</span></span></p>
+
+<h3 id="Estrutura_do_App">Estrutura do App</h3>
+
+<p><span id="result_box" lang="pt"><span class="alt-edited">Todos os aplicativos webapps Gaia são <a href="/pt-BR/Marketplace/Publishing/Packaged_apps">apps empacotados</a>, eles são essencialmente arquivos zip contendo todos os ativos do aplicativo: HTML, CSS, JavaScript, imagens, manifesto etc. Cada webapp em Gaia é organizado seguindo a seguinte estrutura básica:</span></span></p>
+
+<div class="code-block">
+<div class="highlight">
+<pre><code class="brush: bash">apps</code><code class="o">/</code><code class="p">[</code><code class="n">app</code> <code class="n">name</code><code class="p">]</code><code class="o">/</code>
+ <code class="o">-</code> <code class="n">js</code>
+ <code class="o">-</code> <code class="n">styles</code>
+ <code class="o">-</code> <code class="n">locales</code>
+ <code class="o">-</code> <code class="n">test</code>
+ <code class="o">-</code> <code class="n">index</code><code class="p">.</code><code class="n">html</code>
+ <code class="o">-</code> <code class="n">manifest</code><code class="p">.</code><code class="n">webapp</code>
+</pre>
+</div>
+</div>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7497/app_load_process.png" style="display: block; height: 1979px; margin: 0px auto; width: 2262px;"></p>
+
+<p><span id="result_box" lang="pt"><span class="hps">Quando</span> <span class="hps">um dos </span><span class="hps">aplicativos</span> <span class="hps">Gaia built</span><span>-in</span></span><span lang="pt"> <span class="hps">for iniciado a partir</span> <span class="hps">da tela inicial</span><span>,</span> <span class="hps">Gecko</span> <span class="hps">tentará abrir</span> <span class="hps">um</span> <span class="hps">URL</span> <span class="hps">de</span></span> <code>manifest://[app name].gaiamobile.org:8080</code>, analisando <code>manifest.webapp</code> at that location, e então rodando o arquivo index definido no manifesto <code>launch_path</code> — which is <code>index.html</code> para todos os webapps built-in. O arquivo <code>index.html</code> <span id="result_box" lang="pt"><span class="hps">vai puxar</span> <span class="hps">todos os estilos e</span> <span class="hps">JavaScript</span> <span class="hps">necessários.</span></span></p>
+
+<div class="note">
+<p><strong>Nota</strong>: <span id="result_box" lang="pt"><span class="hps">Como</span> <span class="hps">uma convenção</span> <span class="hps">informal</span><span>, o principal</span> <span class="hps">ponto de entrada</span> <span class="hps">JavaScript</span> <span class="hps">para aplicativos</span> <span class="hps">Gaia</span> <span class="hps">é geralmente</span> </span><code>[app name].js</code><span lang="pt"> <span class="hps">ou</span> <span class="hps">main.js.</span></span></p>
+</div>
+
+<h3 id="Seqüência_de_lançamento_do_App"><span class="short_text" id="result_box" lang="pt"><span class="hps">Seqüência de lançamento </span></span><span class="short_text" lang="pt"><span class="hps">do App</span> </span></h3>
+
+<p>Os eventos são enviados para o Gecko. Uma vez que o Gecko está pronto, a <code>AppwindowFactory</code> do <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/app_window_factory.js">system/js/app_window_factory.js</a> irá receber um evento de lançamento <code>webapps-launch</code> para um app, ou um evento <code>open-app </code>para lidar com uma mensagem do sistema pendente.</p>
+
+<pre class="brush: js">window.addEventListener('applicationready', function appReady(e) {
+  window.removeEventListener('applicationready', appReady);
+  window.addEventListener('webapps-launch', self);
+  window.addEventListener('webapps-close', self);
+  window.addEventListener('open-app', self);
+});</pre>
+
+<p><span style="background-color: #ffff00;">Para detalhes sobre a sessão handleEvent, o </span><code><span style="background-color: #ffff00;">this.launch(config)</span></code><span style="background-color: #ffff00;"> irá lançar uma janela app ou uma atividade. Uma vez que o app é fechado, a </span><code><span style="background-color: #ffff00;">Appwindow</span></code><span style="background-color: #ffff00;"> receberá o evento </span><code><span style="background-color: #ffff00;">webapps-close</span></code><span style="background-color: #ffff00;">.</span></p>
+
+<p>O processo principal no método <code>launch()</code> é:</p>
+
+<pre class="brush: js">var app = AppWindowManager.getApp(config.origin);
+if (app) {
+  app.reviveBrowser();
+} else if (config.origin !== homescreenLauncher.origin) {
+  new AppWindow(config);
+} else if (config.origin == homescreenLauncher.origin) {
+  homescreenLauncher.getHomescreen().ensure();
+}</pre>
+
+<p><span id="result_box" lang="pt"><span class="hps">Primeiro o</span> <span class="hps">código verifica</span> <span class="hps">se a variável</span> <span class="hps">app</span> <span class="hps">existe e</span> <span class="hps">tenta</span> <span class="hps">reanimá-lo</span> <span class="hps">no</span> <span class="hps">Gecko</span><span>. </span><span class="hps">Por outro lado</span><span>,</span> <span class="hps">se é um</span> <span class="hps">app</span> <span class="hps">normal,</span> <span class="hps">criamos uma instância</span> </span><code>AppWindow</code><span lang="pt"> <span class="hps">para o</span> <span class="hps">app</span><span>.</span> <span class="hps">O outro caso</span> <span class="hps">especial é o</span> </span><code>homescreenLauncher</code><span lang="pt"> <span class="hps">- neste caso,</span> <span class="hps">fazemos</span> <span class="hps">as operações necessárias</span><span>.</span></span></p>
+
+<h3 id="AppWindow">AppWindow</h3>
+
+<p>O Firefox OS utiliza uma <a href="https://developer.mozilla.org/pt-BR/docs/WebAPI/Browser">API mozBrowser</a> especial para fazer com que uma web page se comporte como um app. A raíz <span id="result_box" lang="pt"><span class="hps">do Gerenciamento de Janelas é</span> <span class="hps">apenas um invólucro</span> <span class="hps">API</span> <span class="hps">mozBrowser</span> <span class="hps">para lidar com</span> <span class="hps">iFrames</span> <span class="atn hps">interiores (</span><span>da janela).</span> <span class="hps">Um</span> <span class="hps">iFrame</span> <span class="hps">especial do tipo</span> <span class="hps">moz</span><span>-browser</span> <span class="hps">é criado</span> <span class="hps">para tornar o</span> <span class="hps">ato</span> <span class="hps">iFrame</span> <span class="hps">como</span> <span class="hps">uma janela do navegador</span> <span class="hps">real.</span></span></p>
+
+<p><code>A AppWindow</code> cria, contém e gerencia um <code>mozBrowser</code> iFrame. <code>A AppWindow</code> <span id="result_box" lang="pt"><span class="hps">vai</span> <span class="hps">manipular</span> <span class="hps">todos os eventos</span></span> <code>mozBrowser</code> <span id="result_box" lang="pt"><span class="hps">disparados</span> <span class="hps">a partir do próprio </span></span>iFrame <code>mozBrowser</code> <span id="result_box" lang="pt"><span class="hps">e mostrar</span> <span class="hps">as características</span> <span class="hps">de interface do usuário</span> <span class="hps">relevantes.</span></span></p>
+
+<h2 id="Ciclo_de_gerenciamento_de_vida_do_App">Ciclo de gerenciamento de vida do App</h2>
+
+<p><span class="short_text" id="result_box" lang="pt"><span class="hps">O ciclo de vida</span> <span class="hps">completo de um</span> <span class="hps">app</span> <span class="hps">é o seguinte:</span></span></p>
+
+<ul>
+ <li>Lançamento do App</li>
+ <li>Anexa o iframe para o System DOM tree</li>
+ <li><span class="short_text" id="result_box" lang="pt"><span class="hps">Inicia o</span> <span class="hps">App</span> com <span class="hps">animação de abertura</span></span></li>
+ <li>O App é aberto</li>
+ <li>O App fecha a animação</li>
+ <li>O App é fechado</li>
+ <li>Remove o iframe do DOM tree</li>
+ <li>O App é encerrado</li>
+</ul>
+
+<h3 id="Lançando_apps">Lançando apps</h3>
+
+<p>Quando um usuário toca nos ícones na tela inicial, a tela inicial usa a <a href="/pt-BR/docs/Web/API/Navigator.mozApps">mozApps API</a> para notificar o motor Gecko para abrir o aplicativo correspondente. Quando Gecko está pronto, ele irá enviar o evento apropriado para aplicação do sistema</p>
+
+<h3 id="Eliminando_apps">Eliminando apps</h3>
+
+<p>Aplicativos serão eliminados nas seguintes circunstâncias:</p>
+
+<ul>
+ <li>Um app falha</li>
+ <li>O <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Debugging/Debugging_OOMs#Process_priorities">OOM killer</a> o elimina</li>
+ <li>O app é fechado via Gerenciador de Tarefas</li>
+ <li><code>O window.close()</code> é chamado</li>
+</ul>
+
+<p>Para aplicativos ativos, após a animação de encerramento, o iFrame do app eliminado é retirado do DOM tree. Para aplicativos inativos, o iframe é removido imediatamente após ser eliminado.</p>
+
+<p>Os apps serão interrompidos nas seguintes circunstâncias:</p>
+
+<ul>
+ <li>Para as atividades web: quando o chamador de atividade é aberto</li>
+ <li>Popups: quando o chamador window.open é aberto</li>
+ <li>App: nada a ver</li>
+</ul>
+
+<h3 id="Relançando_apps">Relançando apps</h3>
+
+<p>Os Apps serão relançados nas seguintes circunstâncias:</p>
+
+<ul>
+ <li>homescreen app: Quando o botão home é pressionado</li>
+ <li>Os aplicativos zombie são ressucitados com o mesmo URL, se aberto a partir do Gerenciador de Tarefas ou fraudado em um gesto de borda. (Recurso Experimental)</li>
+</ul>
+
+<h2 id="Como_o_app_é_renderizado">Como o app é renderizado</h2>
+
+<p>Quando nós lançamos um app, a tela será renderizada com os seguintes blocos:</p>
+
+<ul>
+ <li>Header do sistema</li>
+ <li>iframe do App</li>
+ <li>Barra de invólucro inferior (se estiver no browser chrome)</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7711/app-window-layout.png" style="display: block; height: 348px; margin: 0px auto; width: 393px;"></p>
+
+<h3 id="Layout_do_App">Layout do App</h3>
+
+<p>O principal recipiente do iframe do aplicativo é o seguinte:</p>
+
+<pre class="brush: html">&lt;iframe id="browser2" mozallowfullscreen="true" mozbrowser="true" remote="true"...
+... src="", data-url="" data-frame-type="window" data-frame-origin="..."&gt;
+&lt;/iframe&gt;</pre>
+
+<p>O iframe contém:</p>
+
+<ul>
+ <li>Caminho de inicialização (<code>data-url</code>, <code>data-frame-origin</code>)</li>
+ <li>Atributos iframe mozbrowser (<code>mozallowfullscreen="true"</code>, <code>mozbrowser="true"</code>)</li>
+ <li>Recipiente, sobreposição, UI específica do app</li>
+</ul>
+
+<h3 id="Redimensionando_o_AppWindow">Redimensionando o AppWindow</h3>
+
+<p>O AppWindow será redimensionado em várias situações:</p>
+
+<ul>
+ <li>O sistema app não será redimensionado até que as mudanças de orientação sejam feitas</li>
+ <li>Para aplicações gerais, o redimensionamento ocorre quando:
+  <ul>
+   <li>O app do sistema é redimensionado</li>
+   <li>O teclado de animação abertura/fechamento termina</li>
+   <li>A barra de status muda</li>
+   <li><code>window.resizedBy()</code> ou <code>window.resizeTo()</code> é chamado</li>
+   <li>O botão home do software é alternado</li>
+  </ul>
+ </li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7713/app-area.png" style="display: block; height: 305px; margin: 0px auto; width: 715px;"></p>
+
+<p>Em resumo, o tamanho da janela é afetado pelo:</p>
+
+<ul>
+ <li>Estado da orientação </li>
+ <li>Estado do teclado</li>
+ <li>Estado do AttentionScreen (possui ligação, possui mensagem etc.) </li>
+ <li>Estado de navegação do Chrome</li>
+ <li>Estado de tela cheia <code>manifest.fullscreen</code> / <code>parentWindow</code></li>
+ <li>Estado do homebutton do software</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7715/app-area2.png" style="display: block; height: 330px; margin: 0px auto; width: 687px;"></p>
+
+<h3 id="Orientação_da_AppWindow">Orientação da AppWindow</h3>
+
+<p>A orientação de aplicativos pode ser controlada a partir de cada aplicativo individual ou globalmente pelo sistema. Você pode definir a orientação no arquivo <code>manifest.webapp</code> do aplicativo com a propriedade de orientação, por exemplo:</p>
+
+<pre class="brush: json">"orientation": "default",</pre>
+
+<p>Você também é capaz de usar a API de orientação para bloquear ou desbloquear a orientação:</p>
+
+<pre class="brush: js">screen.mozLockOrientation([‘portrait-primary’]);
+
+screen.mozUnlockOrientation();</pre>
+
+<p>Existem vários valores de parâmetros que podem ser utilizados para forçar a orientação:</p>
+
+<ul>
+ <li><code>default</code>: orientação padrão do sistema</li>
+ <li><code>portrait</code>: força a tela a ser renderizada em retrato </li>
+ <li><code>landscape</code>: força a tela a ser renderizada em paisagem </li>
+</ul>
+
+<p>Mais detalhes estão disponíveis na referência <a href="/pt-BR/docs/Web/API/Screen.lockOrientation">Screen.lockOrientation</a>, e você pode ver um exemplo em <a href="https://github.com/mozilla-b2g/gaia/blob/master/dev_apps/uitest/js/API/orientation.js">gaia/dev_apps/uitest/js/API/orientation.js</a>.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7717/app-orientation.png" style="display: block; height: 530px; margin: 0px auto; width: 745px;"></p>
+
+<h3 id="Visibilidade_do_App">Visibilidade do App</h3>
+
+<p>O app do sistema vai para o segundo plano apenas quando a tela está desligada, enquanto aplicativos normais vão para o segundo plano dependendo de alguns fatores:</p>
+
+<ul>
+ <li>Competição de audio</li>
+ <li>Política de processo</li>
+ <li>Renderização</li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: A visibilidade da página é herdada enquanto o iframe pai está inativo.</p>
+</div>
+
+<p>Os apps estão sempre em primeiro plano quando: </p>
+
+<ul>
+ <li>Animações de abertura começam</li>
+ <li>Animações swipe-in animation terminam</li>
+ <li>A tela é desbloqueada</li>
+</ul>
+
+<p>Os app estão sempre no segundo plano quando:</p>
+
+<ul>
+ <li>A animação de fechamento termina </li>
+ <li>3 segundos após uma tela de chamado torna-se visível </li>
+ <li>A tela é desligada</li>
+</ul>
+
+<p>Existem algumas exeções para as regras acima:</p>
+
+<ul>
+ <li>App ativo com reprodução de áudio no canal normal</li>
+ <li>Apps chamando atividades web em linha </li>
+ <li>Apps abrindo <code>window.open('', '', 'dialog')</code></li>
+</ul>
+
+<h3 id="Animação_e_transição_da_AppWindow">Animação e transição da AppWindow</h3>
+
+<p>O Gerenciador de Janelas Gaia também proporciona uma animação app e transições para uma experiência do usuário mais suave.</p>
+
+<p>A animação e as transições AppWindow são gerenciadas pelas seguintes estatísticas:</p>
+
+<ul>
+ <li><code>displayedApp</code> — o app atual</li>
+ <li><code>runningApps</code> / <code>numRunningApps</code> — o conjunto de apps em execução</li>
+ <li><code>openFrame</code> / <code>closeFrame</code> — o quadro de transição para abertura/fechamento de animações</li>
+</ul>
+
+<p>Ao chamar o método <code>setDisplayedApp()</code>, o aplicativo será lançado via estatísticas ilustradas pelo diagrama a seguir.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7719/app-animations-state-manchine.png" style="display: block; height: 358px; margin: 0px auto; width: 704px;"></p>
+
+<p>Existem vários truques envolvidos no controle do fluxo de animação do app do Firefox OS:</p>
+
+<ul>
+ <li>Antes de um aplicativo ser aberto, nós precisamos de assegurar que ele esteja recuperado de seu plano de fundo. Costumamos ter uma imagem de tela 1x1 para forçar o redesenho. </li>
+ <li>Depois que o app está pronto para ser aberto, rodamos a animação de abertura do próximo app e a animação de fechamento do app atual ao mesmo tempo.</li>
+ <li>Rodamos o código para bloquear/desbloquear as orientações da tela, ambos durante a abertura e o fechamento do app. </li>
+ <li>Realizamos um redimensionamento na abertura somente se o app é redimensionado uma vez. Caso contrário, ignoramos esta etapa de redimensionamento. </li>
+ <li>Nós mudamos a visibilidade da página, tirando novamente um screenshot 1x1 (veja acima).</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7721/app-switching-flow.png" style="display: block; height: 258px; margin: 0px auto; width: 530px;"></p>
+
+<h2 id="UI_específica_da_AppWindow">UI específica da AppWindow</h2>
+
+<p>Existem vários elementos de interface do usuário que são relevantes apenas para determinadas aplicações, tais como o browser Chrome, diálogos modais, menus de contexto e páginas de erro.</p>
+
+<p>Vamos discutir alguns deles.</p>
+
+<h3 id="Diálogos_modais">Diálogos modais</h3>
+
+<p>No desktop Firefox, se você abrir o console de desenvolvedor em seu navegador e digitar comandos como <code>alert()</code>, <code>confirm()</code>, e <code>prompt()</code>, você irá visualizar um diálogo centrado na tela que bloqueia o conteúdo subjacente. O equivalente no Firefox OS são os diálogos modais.<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7723/modal-dialogs.png" style="display: block; height: 357px; margin: 0px auto; width: 715px;"></p>
+
+<h3 id="Diálogos_de_menu_contextuais">Diálogos de menu contextuais</h3>
+
+<p>Os menus de contexto (ou long press menus) são conceitos familiares para os desenvolvedores mobile. Em geral, no design de apps, as ações utilizadas com mais freqüência devem estar visíveis para os usuários de modo que eles possam controlar o aplicativo facilmente. Menus contextuais fornecem um lugar para conter ações que não cabem na interface imediata do usuário, mas ainda deve estar facilmente disponível.<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7725/context-menu-dialogs.png" style="display: block; height: 360px; margin: 0px auto; width: 722px;"></p>
+
+<h3 id="Diálogo_de_autenticação_(https)">Diálogo de autenticação (https)</h3>
+
+<p>Definido em <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/app_authentication_dialog.js">system/js/app_authentication_dialog.js</a>.</p>
+
+<h3 id="Seletor_de_valor_tempo_diálogos_de_data">Seletor de valor, tempo, diálogos de data</h3>
+
+<p>Definido em  <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/system/js/value_selector">system/js/value_selector/</a>.</p>
+
+<h3 id="Diálogos_de_permissões">Diálogos de permissões</h3>
+
+<p>Definido em <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/permission_manager.js">system/js/permission_manager.js</a> e <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/media_recording.js">system/js/media_recording.js</a> (para o painel de bandeja utilitário).</p>
+
+<h2 id="Apps_especiais">Apps especiais</h2>
+
+<p>Alguns aplicativos necessitam de um objeto especial <code>appWindow</code> para lidar com funcionalidades especiais que eles contenham. Exemplos incluem:</p>
+
+<ul>
+ <li>Tela inicial</li>
+ <li>FTU</li>
+ <li>Teclado</li>
+ <li>Controle de custo</li>
+ <li>Câmera de segurança</li>
+ <li>Bloqueio de tela</li>
+</ul>
+
+<h2 id="Gerenciamento_de_janela_filha">Gerenciamento de janela filha</h2>
+
+<p>Janelas de aplicativos filha são abertas diretamente ou indiretamente por outros aplicativos/páginas. Alguns exemplos são:</p>
+
+<ul>
+ <li>Janela de atenção</li>
+ <li>Janela PopUp</li>
+ <li>Janela de atividade</li>
+ <li>UI Confiável / janela confiável</li>
+</ul>
+
+<p>Quando uma janela filha termina normalmente, sua janela pai deverá ser reaberta. Algum tipo de janela filha também pode ter outra janela filha. A gestão do processo de gestão entre janelas pai e filho é um problema.</p>
+
+<h2 id="Janela_de_atenção">Janela de atenção</h2>
+
+<p>Janelas de atenção são utilizadas para obter sua atenção:</p>
+
+<ul>
+ <li>Tela de chamada - dialer</li>
+ <li>Tela de alarme - relógio</li>
+ <li>Confirmações de permissão </li>
+</ul>
+
+<p>Atualmente as janela de atenção são forçadas para uma orientação padrão (retrato primário).</p>
+
+<h2 id="UI_confiável">UI confiável</h2>
+
+<p>Persona e a API mozPay são UI confiáveis. Elas utilizam um dimensionamento específico: 80%. A tela inicial é parcialmente visível durante o tempo em que a UI confiável está em execução.<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7727/trusted-ui.png" style="display: block; height: 516px; margin: 0px auto; width: 737px;"></p>
+
+<h2 id="Gerenciamento_de_histórico">Gerenciamento de histórico</h2>
+
+<p>Nesta seção, vamos olhar para alguns dos componentes que lidam com a gestão do histórico no Firefox OS.</p>
+
+<h3 id="Gerenciador_de_tarefas">Gerenciador de tarefas</h3>
+
+<p>O Gerenciador de Tarefas (vista do cartão) pode ser acionado por um toque longo do botão home. Ele mostra a história do app no dispositivo, e é capaz de eliminar ativamente um aplicativo.</p>
+
+<p>No Firefox OS versão 2.0, há um recurso experimental disponível para manter aplicativos zumbis presentes e fingir que eles ainda estão vivos.</p>
+
+<h3 id="Disposições_de_atividades_Web">Disposições de atividades Web</h3>
+
+<p>Atividades inline criam uma nova página de referência para fornecer os dados para a atividade.<br>
+ Atividades de janela irão reutilizar a janela de aplicativo existente para consumir os dados da atividade.</p>
+
+<h3 id="Gestos_de_Borda_(experimental)">Gestos de Borda (experimental)</h3>
+
+<p>O recurso de gesto de Borda experimental está disponível no modo de desenvolvedor no Firefox OS 2.0+, e permite que você utilize um simples arraste de dedo da direita para a esquerda a partir da borda do dispositivo para navegar entre aplicativos e páginas da web.</p>
+
+<h4 id="Como_é_escolhido_o_próximo_aplicativo_para_exibição">Como é escolhido o próximo aplicativo para exibição? </h4>
+
+<ul>
+ <li>Janela filha do aplicativo ativo</li>
+ <li>O tempo de lançamento é mais recente</li>
+ <li>Encontrar a janela guia do próximo app stack </li>
+</ul>
+
+<h4 id="Como_o_app_anterior_é_escolhido">Como o app anterior é escolhido?</h4>
+
+<ul>
+ <li>Parent window of the active app</li>
+ <li>Launch time is older</li>
+ <li>Find the rear window of the previous app stack</li>
+</ul>
+
+<h3 id="Gestão_de_captura_de_tela">Gestão de captura de tela</h3>
+
+<p>A ferramenta de captura de tela é usada pelo gerenciador de tarefas (exibição do cartão) para mostrar como os apps aparecem no histórico. Uma captura de tela do app é tirada quando a animação de fechamento termina.  </p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<p><a href="http://alivedise.github.io/blog/2013/02/23/from-browser-to-browser/"> De navegador para navegador</a></p>

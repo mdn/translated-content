@@ -1,0 +1,183 @@
+---
+title: Using the B2G emulators
+slug: Archive/B2G_OS/Using_the_B2G_emulators
+translation_of: Archive/B2G_OS/Using_the_B2G_emulators
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ru/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">This article provides a brief guide to some key things you should know when using the boot to Gecko emulators. This doesn't appear to be a complete user manual; instead, it simply tells you a few useful things that you might not learn on your own.</span></p>
+</div>
+
+<p>This guide assumes you've already built one of the emulators; if you haven't, rewind to <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="en/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Building and installing Firefox OS</a>!</p>
+
+<h2 id="About_the_B2G_emulatorsIConsole_1968b7d3-e3bf-4ceb-99e0-cb7c913317bb">About the B2G emulatorsIConsole {1968b7d3-e3bf-4ceb-99e0-cb7c913317bb}</h2>
+
+<p>There are two B2G emulators. The first, built by configuring for "emulator" when running <code>config.sh</code>, is an ARM device emulator. While this is slower than running directly on an x86 processor, it's more stable and a more accurate representation of what an actual device will work like. Configuring for "emulator-x86" when running <code>config.sh</code> gets you the x86 device emulator instead.</p>
+
+<div class="note"><strong>Note:</strong> In recent months the Automation Team has stopped using the x86 emulator due to stability issues. As such, there's a fair chance that things might just not work at all on emulator-x86. Use the ARM emulator unless you have a good reason to do otherwise.</div>
+
+<p>Once you've selected, configured, and built an emulator, the rest works the same way from a user standpoint, so the rest of this guide is common to both.</p>
+
+<div class="note"><strong>Note:</strong> On Mac OS X, the B2G emulator requires a Core 2 Duo processor or later; that is, a system that is compatible with Mac OS X 10.7 "Lion." You do not actually have to be running Lion, you just have to be compatible with it.</div>
+
+<h2 id="Starting_the_emulator">Starting the emulator</h2>
+
+<p>To start the B2G emulator, type the following command:</p>
+
+<pre>./run-emulator.sh
+</pre>
+
+<p>This will handle all the emulator startup tasks for you. Now wait patiently while the emulator starts up and Boot to Gecko boots up on it. It can take a couple of minutes, so be patient.</p>
+
+<h2 id="When_the_emulator_doesn't_work">When the emulator doesn't work</h2>
+
+<p>Sometimes the emulator fails to start up. Welcome to the bleeding edge of technology! Here are some tips for resolving problems.</p>
+
+<h3 id="Are_you_trying_to_work_in_a_VM">Are you trying to work in a VM?</h3>
+
+<p>VirtualBox and Parallels have problematic accelerated graphics support which causes a boot failure in the emulator, something about an OpenGL device. The device will start booting, fail, and restart in a loop, or start up, but then display nothing in the screen of the emulator. There is no solution unfortunately (there is a <a href="http://www.digitalmihailo.com/setting-up-ubuntu-12-04-virtual-machine-for-firefox-os-build/">workaround</a> for VirtualBox) - you need to use VMWare Player (Freeware), Workstation or Fusion. For VirtualBox - either do not install Guest Addons, or disable vboxvideo module.</p>
+
+<h3 id="Make_sure_the_adb_server_is_running">Make sure the adb server is running</h3>
+
+<p>This usually happens because the adb server that handles interacting with the emulated device is either not running or has malfunctioned. In this case you can usually see the following error message in the terminal where you launched the emulator:</p>
+
+<pre>emulator: control console listening on port 5554, ADB on port 5555
+emulator: can't connect to ADB server: Connection refused
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> If you're using the <code>adb</code> built by the B2G build system (which you probably are), it's located in the <code>$B2G/out/host/&lt;platform&gt;/bin</code> directory. On Mac, this is <code>$B2G/out/host/darwin-x86/bin</code>, for example.</p>
+</div>
+
+<p>Look to see if <code>adb</code> is even running by doing:</p>
+
+<pre>ps aux | grep adb
+</pre>
+
+<p>If it's there, do this to kill it, because it's probably not working correctly.</p>
+
+<pre>adb kill-server
+</pre>
+
+<p>If it's not there, do this:</p>
+
+<pre>adb start-server
+</pre>
+
+<p>Then try running the emulator again. If it's still not working, time to drop in on <a class="link-irc" href="irc://irc.mozilla.org/b2g" title="irc://irc.mozilla.org/b2g">#b2g</a> on irc.mozilla.org for help.</p>
+
+<h3 id="Erase_configuration_settings">Erase configuration settings</h3>
+
+<p>Sometimes, out of date configuration settings on your emulated device can cause it to misbehave. You can delete the IndexedDB database fix this, as follows:</p>
+
+<ol>
+ <li>Make sure adb is running, as described in <a href="#Make_sure_the_adb_server_is_running">Make sure the adb server is running</a>.</li>
+ <li>Start up the emulator.</li>
+ <li>in the terminal on the host computer, go into the root code build directory for your emulator, then type: <code>out/host/&lt;platform&gt;/bin/adb -e shell</code>; on Mac, this would be <code>out/host/darwin-x86/bin/adb -e shell</code>.</li>
+ <li>Now you're in the adb shell, and can execute shell commands on your emulated device. Let's stop B2G on the device: <code>stop b2g</code>.</li>
+ <li>Delete the IndexedDB database: <code>rm -rf /data/local/indexedDB</code>.</li>
+ <li>Restart B2G on the emulated device: <code>start b2g</code>.</li>
+</ol>
+
+<p>Hopefully at this point you will wind up in the Gaia interface and all will be well.</p>
+
+<h2 id="If_the_emulator_starts_but_the_screen_is_black_before_or_after_the_mozilla_technology_splash_screen">If the emulator starts but the screen is black before or after the "mozilla technology" splash screen</h2>
+
+<p>If this happens it could be a driver bug of the machine that is running the emulator. It has been observed on the Linux open source nouveau drivers. The easiest solution is to change the drivers on the machine. In the case of the nouveau driver it could be to install proprietary ("additional" in Ubuntu) drivers instead. In the case of on-board intel graphics chipsets, the default Linux open source driver may cause an emulator error 'eglMakeCurrent failed' which appears to be as it supports an OpenGL version less than the 2.0 needed for GPU emulation. The solution is to deactivate the GPU by editing <code>run-emulator.sh</code> script (this will be slower).</p>
+
+<h2 id="Configuring_the_emulator">Configuring the emulator</h2>
+
+<p>There are several options you can change to adjust the emulator to be more similar to the device you want to emulate. This section provides some basic information on how to do that. You can adjust the emulator's configuration by editing the <code>run-emulator.sh</code> script (or, ideally, a copy of it). Only a few of the most useful parameters are discussed here; you'll want to <a class="external" href="http://www.qemu.org/" title="http://www.qemu.org/">look at the qemu site</a> for details on the others.</p>
+
+<div class="note"><strong>Tip:</strong> Create one copy of <code>run-emulator.sh</code> for each device you want to simulate; this makes it easy to start up with different configurations.</div>
+
+<h3 id="Changing_skins">Changing skins</h3>
+
+<p>By default, the emulator starts up in HVGA mode; that's half-VGA, or 320x480 pixels. This is specified by the <code>-skin</code> parameter given to the emulator when started up. You can switch to a different display mode by editing the <code>run-emulator.sh</code> script (or, ideally, a copy of it). The provided skins are:</p>
+
+<ul>
+ <li>HVGA (320x480)</li>
+ <li>QVGA (240x320)</li>
+ <li>WQVGA (240x400)</li>
+ <li>WQVGA432 (240x432)</li>
+ <li>WSVGA (1024x600)</li>
+ <li>WVGA800 (480x800)</li>
+ <li>WVGA854 (480x854)</li>
+ <li>WXGA720 (1280x720)</li>
+ <li>WXGA800 (1280x800)</li>
+</ul>
+
+<p>The skins are located in the <code>B2G/development/tools/emulator/skins</code> directory. It's worth noting that the format for skins is quite simple; if you look at them, they're simply folders filled with PNG files for the various user interface objects and a text file called <code>layout</code> which describes the layout of the interface and screen area. It's fairly simple to create custom skins if needed.</p>
+
+<h3 id="Changing_memory_size">Changing memory size</h3>
+
+<p>Another option you may wish or need to configure is the device memory size. The default is 512 MB; however, if the device you're emulating has more or less memory, it is likely important that you adjust this setting to match, to ensure your app will run on the baseline device you want to work on. To do this, change the value of the <code>-memory</code> parameter to the size you need in megabytes. Other than the 512 MB default, 256 MB and 1024 MB are likely ones you'll want to test with.</p>
+
+<p>To change the amount of emulated storage capacity for the device (that is, the storage space for local data, like the flash storage on a mobile phone or the hard drive on a computer), change the value of the <code>-partition-size</code> parameter. The default is 512 MB, but you can specify any size in MB you need in order to simulate the kind of device you need to test for.</p>
+
+<h3 id="Network_Connectivity">Network Connectivity</h3>
+
+<p>If for some reason you cannot connect your emulator to the internet you can run the following command from your commandline:</p>
+
+<pre>adb shell setprop net.dns1 10.0.2.3</pre>
+
+<p>If you run emulator-jb or emulator-kk, the command to set up the DNS server is different.<br>
+ Please run the following commands:</p>
+
+<pre>adb shell ndc resolver setdefaultif eth0
+adb shell ndc resolver setifdns eth0 10.0.0.0 10.0.2.3
+</pre>

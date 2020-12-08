@@ -1,0 +1,83 @@
+---
+title: Введение в XBL
+slug: Mozilla/Tech/XUL/Руководство_по_XUL/Введение_в_XBL
+tags:
+  - XBL
+  - XUL_Tutorial
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Property_Files" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Anonymous_Content">Следующая статья  »</a></p>
+</div>
+<p></p><p>У <a href="ru/XUL">XUL</a> есть родственный язык <a href="ru/XBL">XBL</a> (eXtensible Bindings Language, расширяемый язык привязок). Его используют для описания внешнего вида и поведения элементов XUL.
+</p>
+<h3 id=".D0.9F.D1.80.D0.B8.D0.B2.D1.8F.D0.B7.D0.BA.D0.B8" name=".D0.9F.D1.80.D0.B8.D0.B2.D1.8F.D0.B7.D0.BA.D0.B8"> Привязки </h3>
+<p>Вы можете использовать XUL для создания пользовательского интерфейса. <a href="ru/XUL_Tutorial/Adding_Style_Sheets">Применив стили</a>, можно настроить внешний вид элементов или <a href="ru/XUL_Tutorial/Creating_a_Skin">создать новый скин</a>. Основной вид всех элементов, таких как <a href="ru/XUL_Tutorial/Scroll_Bars">полоса прокрутки</a> и <a href="ru/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">чекбоксы</a> можно изменить, добавив стили или атрибуты. Однако, в XUL нет средств для изменения сути работы элемента. Например, вы захотите поменять поведение полосы прокрутки. Как раз для этого нужен <a href="ru/XBL">XBL</a>.
+</p><p>Файл XBL содержит привязки. Привязка описывает поведение элементов. К примеру, привязку можно связать с полосой прокрутки. Поведение описывается свойствами и методами полосы прокрутки дополнительно к существующему описанию на XUL.
+</p><p>XUL, так же как и XBL, основан на семействе языков XML. В примере приводится основа файла XBL:
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="binding1"&gt;
+    &lt;!-- Здесь находится содержимое, свойства, методы и описание событий --&gt;
+  &lt;/binding&gt;
+  &lt;binding id="binding2"&gt;
+    &lt;!-- Здесь находится содержимое, свойства, методы и описание событий --&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>Тэг <code>bindings</code> — главный элемент файла XBL содержит один или более элементов <code>binding</code>. Каждый тэг <code>binding</code> задает одну привязку. Атрибут <code>id</code> используется для обозначения привязки, как в примере выше. Этот шаблон содежит две привязки: <code>binding1</code> и <code>binding2</code>. Первая может определять полосу прокрутки, а вторая меню. Привязку можно связывать с любым элементом XUL. Если вы используете CSS классы, можно сколько угодно применять к ним различные привязки. Note the namespace on the <code><code><a href="/ru/docs/XBL/Документация_XBL_1.0/Элементы#bindings">bindings</a></code></code> element in the template above. This declares that we are using XBL syntax.
+</p><p>You assign a binding to an element by setting the CSS property <code><a href="ru/CSS/-moz-binding">-moz-binding</a></code> to the URL of the bindings file. For example:
+</p>
+<pre>scrollbar {
+    -moz-binding: url('chrome://findfile/content/findfile.xml#binding1');
+}
+</pre>
+<p>The URL points to the binding with the id 'binding1' in the file '<a class=" external" rel="freelink">chrome://findfile/content/findfile.xml</a>'. The '#binding1' syntax is used to point to a specific binding, much like how you would point to an anchor in an HTML file. You will usually put all of your bindings in a single file. The result in this example, is that all scrollbar elements will have their behavior described by the binding 'binding1'.
+</p><p>A binding has five types of things that it declares:
+</p>
+<ol><li> Content: child elements that are added to the element that the binding is bound to.
+</li><li> Properties: properties added to the element. They can be accessed through a script.
+</li><li> Methods: methods added to the element. They can be called from a script.
+</li><li> Events: events, such as mouse clicks and keypresses that the element will respond to. The binding can add scripts to provide default handling. In addition new events can be defined.
+</li><li> Style: custom style properties that the XBL defined element has.
+</li></ol>
+<h3 id="Binding_Example" name="Binding_Example"> Binding Example </h3>
+<p>The <code><code><a href="/ru/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> is generic enough that you can use it to create custom widgets (although you can use any element, even one you make up yourself). By assigning a <code>class</code> to a <code><code><a href="/ru/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> tag, you can associate a binding to only those boxes that belong to that class. The following example demonstrates this.
+</p>
+<pre class="eval"><b>XUL (example.xul):</b>
+
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://example/skin/example.css</a>" type="text/css"?&gt;
+
+&lt;window
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only..xul</span>"&gt;
+  &lt;box class="okcancelbuttons"/&gt;
+&lt;/window&gt;
+
+<b>CSS (example.css):</b>
+
+box.okcancelbuttons {
+    -moz-binding: url('<a class=" external" rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<b>XBL (example.xml):</b>
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="<span class="nowiki">http://www.mozilla.org/xbl</span>"
+         xmlns:xul="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;binding id="okcancel"&gt;
+    &lt;content&gt;
+      &lt;xul:button label="OK"/&gt;
+      &lt;xul:button label="Cancel"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>This example creates a window with a single box. The box has been declared to have a <code>class</code> of <code>okcancelbuttons</code>. The style sheet associated with the file says that boxes with the class <code>okcancelbuttons</code> have a specialized binding, defined in the XBL file. You may use other elements besides the <code><code><a href="/ru/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>, even your own custom tags.
+</p><p>We'll look more at the details of the XBL part in the next section. However, to summarize, it causes two buttons to be added automatically inside the box, one an OK button and the other a Cancel button.
+</p><p>In the next section, we will look at <a href="ru/XUL_Tutorial/Anonymous_Content">creating content with XBL</a>. </p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Property_Files" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Anonymous_Content">Следующая статья  »</a></p>
+</div>
+<p></p>

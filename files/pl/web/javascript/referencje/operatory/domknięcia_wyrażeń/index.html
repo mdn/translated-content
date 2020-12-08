@@ -1,0 +1,78 @@
+---
+title: Domknięcia wyrażeń
+slug: Web/JavaScript/Referencje/Operatory/Domknięcia_wyrażeń
+tags:
+  - JavaScript
+  - Operator
+  - funkcja
+  - niestandardowe
+  - przestarzały
+translation_of: Archive/Web/JavaScript/Expression_closures
+---
+<div>{{JSSidebar("Operators")}}{{Non-standard_Header}}{{Obsolete_Header("gecko60")}}
+<div class="warning"><strong>Niestandardowe. Nie używać!</strong><br>
+Składnia domknięcia wyrażeń jest przestarzałą funkcją specyficzną dla Firefoxa i została usunięta od Firefoxa 60. Dla obecnie tworzonych rozwiązań rozważ użycie <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">funkcji strzałkowych</a>.</div>
+</div>
+
+<p>Domknięcia wyrażeń są skróconą składnią dla zapisu prostych funkcji.</p>
+
+<h2 id="Składnia">Składnia</h2>
+
+<pre class="syntaxbox">function [nazwa]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]])
+   <em>wyrażenie</em>
+</pre>
+
+<h3 id="Parametry">Parametry</h3>
+
+<dl>
+ <dt><code>nazwa</code></dt>
+ <dd>Nazwa funkcji. Może być pominięta w przypadku, gdy funkcja jest <em>anonimowa</em>. Nazwa jest lokalna i ograniczona jedynie do ciała funkcji.</dd>
+ <dt><code>paramN</code></dt>
+ <dd>Nazwa argumentu, który ma być przekazany do funkcji. Funkcja może mieć do 255 argumentów.</dd>
+ <dt><code>wyrażenie</code></dt>
+ <dd>Wyrażenie, które zawiera ciało funkcji.</dd>
+</dl>
+
+<h2 id="Opis">Opis</h2>
+
+<p>Ten dodatek nie jest niczym więcej niż skróconą notacją dla prostych funkcji, która daje językowi coś podobnego do typowej <a class="external" href="http://en.wikipedia.org/wiki/Lambda_calculus#Lambda_calculus_and_programming_languages">notacji lambda</a>.</p>
+
+<p>JavaScript 1.7 i starsze:</p>
+
+<pre class="brush: js">function(x) { return x * x; }</pre>
+
+<p>JavaScript 1.8:</p>
+
+<pre class="brush: js">function(x) x * x</pre>
+
+<p>Taka składnia pozwala na pominięcie nawiasów klamrowych i wyrażenia <code>return</code>, czyniąc je niejawnymi. Poza skróceniem zapisu, nie ma innych korzyści z pisania kodu w ten sposób.</p>
+
+<h2 id="Przykłady">Przykłady</h2>
+
+<p>Skrócony zapis dla dowiązywania obserwatorów zdarzeń (ang. <em>event listeners</em>):</p>
+
+<pre class="brush: js"> document.addEventListener('click', function() false, true);
+</pre>
+
+<p>Użycie tej notacji z niektórymi z funkcji strzałkowych z JavaScript 1.6:</p>
+
+<pre class="brush: js">elems.some(function(elem) elem.type == 'text');
+</pre>
+
+<h2 id="Wsparcie_przeglądarek">Wsparcie przeglądarek</h2>
+
+
+
+<p>{{Compat("javascript.operators.expression_closures")}}</p>
+
+<h2 id="Zobacz_też">Zobacz też</h2>
+
+<ul>
+ <li>{{JSxRef("Functions_and_function_scope", "Functions and function scope")}}</li>
+ <li>{{JSxRef("Function")}}</li>
+ <li>{{JSxRef("Statements/function", "function statement")}}</li>
+ <li>{{JSxRef("Operators/function", "function expression")}}</li>
+ <li>{{JSxRef("Statements/function*", "function* statement")}}</li>
+ <li>{{JSxRef("Operators/function*", "function* expression")}}</li>
+ <li>{{JSxRef("GeneratorFunction")}}</li>
+</ul>

@@ -1,0 +1,156 @@
+---
+title: <template>
+slug: Web/HTML/Element/template
+tags:
+  - Элемент
+translation_of: Web/HTML/Element/template
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary"><strong>HTML элемент контент шаблона  <code>&lt;template&gt;</code></strong> - это механизм для отложенного создания клиентского контента, который не отображается во время загрузки, но может быть инициализирован при помощи JavaScript.</span></p>
+
+<p>Шаблон можно представить себе как фрагмент контента, сохранённый для последующего использования в документе. Хотя парсер и обрабатывает содержимое элемента <code>&lt;template&gt;</code> во время загрузки страницы, он делает это только чтобы убедиться в валидности содержимого; само содержимое при этом не отображается.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категории контента</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Script-supporting_elements">script-supporting element</a></td>
+  </tr>
+  <tr>
+   <th scope="row">Допустимый контент</th>
+   <td>Нет ограничений</td>
+  </tr>
+  <tr>
+   <th scope="row">Закрывающий тег</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешенные родители</th>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Script-supporting_elements">script-supporting elements</a>. Also allowed as a child of a {{HTMLElement("colgroup")}} element that does <em>not</em> have a {{htmlattrxref("span", "colgroup")}} attribute.</td>
+  </tr>
+  <tr>
+   <th scope="row">Неявные роли ARIA</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a></td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешенные роли ARIA</th>
+   <td>Отсутствует</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM интерфейс</th>
+   <td>{{domxref("HTMLTemplateElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Атрибуты">Атрибуты</h2>
+
+<p>Элемент может иметь <a href="/en-US/docs/Web/HTML/Global_attributes">общие атрибуты</a>.</p>
+
+<p>Также есть доступный только для чтения атрибут <code>content</code>, который предоставляет доступ к содержимому шаблона. Проверка на наличие этого атрибута является распространённым способом определить, поддерживает ли браузер элемент <code>&lt;template&gt;</code>.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Начнём с HTML.</p>
+
+<pre class="brush: html">&lt;table id="producttable"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;UPC_Code&lt;/td&gt;
+      &lt;td&gt;Product_Name&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;!-- existing data could optionally be included here --&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;template id="productrow"&gt;
+  &lt;tr&gt;
+    &lt;td class="record"&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/template&gt;
+</pre>
+
+<p>Для начала у нас есть таблица, в которую мы собираемся вставить содержимое с помощью Javascript кода. Затем следует шаблон, который описывает структуру HTML фрагмента представляющего одну строку таблицы</p>
+
+<p>Теперь, когда таблица была создана и шаблон определён, мы используем JavaScript чтобы вставить строки в таблицу. Каждая строка строится с использованием шаблона.</p>
+
+<pre class="brush:js;">// Проверяем поддерживает ли браузер тег &lt;template&gt;
+// проверив наличие аттрибута content у элемента template
+if ('content' in document.createElement('template')) {
+
+  // Instantiate the table with the existing HTML tbody and the row with the template
+  var t = document.querySelector('#productrow'),
+  td = t.content.querySelectorAll("td");
+  td[0].textContent = "1235646565";
+  td[1].textContent = "Stuff";
+
+  // клонируем новую строку и вставляем её в таблицу
+  var tb = document.getElementsByTagName("tbody");
+  var clone = document.importNode(t.content, true);
+  tb[0].appendChild(clone);
+
+  // создаём новую строку
+  td[0].textContent = "0384928528";
+  td[1].textContent = "Acme Kidney Beans";
+
+ // клонируем новую строку и вставляем её в таблицу
+  var clone2 = document.importNode(t.content, true);
+  tb[0].appendChild(clone2);
+
+} else {
+  // необходимо найти другой способ добавить строку в таблицу т.к.
+  // тег &lt;template&gt; не поддерживатся браузером
+}
+</pre>
+
+<p>Как результат имеем HTML таблицу с двумя новыми строками добавленными с помощью JavaScript:</p>
+
+<div class="hidden">
+<pre class="brush: css">table {
+  background: #000;
+}
+table td {
+  background: #fff;
+}</pre>
+</div>
+
+<p>{{EmbedLiveSample("Example", 500, 120)}}</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','/scripting-1.html#the-template-element','template element')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+
+
+
+<p>{{Compat("html.elements.template")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Веб компоненты: {{HTMLElement("slot")}} (и устаревший: {{HTMLElement("shadow")}})</li>
+ <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Использование шаблонов и слотов</a></li>
+</ul>

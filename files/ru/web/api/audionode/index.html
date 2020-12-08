@@ -1,0 +1,198 @@
+---
+title: AudioNode
+slug: Web/API/AudioNode
+translation_of: Web/API/AudioNode
+---
+<p>{{ APIRef("Web Audio API") }}<br>
+ <strong>AudioNode </strong>это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приемники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}). </p>
+
+<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
+
+<p><code>AudioNode</code> имеет входы и выходы, каждый с заданным количеством <em>каналов</em>.<em> </em><code>AudioNode</code> без входов в с одним или несколькими выходами называются <em>источниками</em> (<em>source node)</em>. Результаты обработки передаются от одного AudioNode к другому, при этом каждый узел считывает только свой вход, производит обработку и представляет результат на свой выход, или просто пропускает аудио через себя (например {{domxref("AnalyserNode")}} где результат представляется отдельно).</p>
+
+<p>Разные узлы могут быть связаны в <em>граф обработки</em>. Граф помещается в {{domxref("AudioContext")}}. Один <code>AudioNode</code> может принадлежать только одному {{domxref("AudioContext")}}. В общем, узлы наследуют свойства и методы AudioNode, но они могут также и определять собственный функционал.Смотрите описания конкретных узлов на страницах этих узлов перечисленных на главной странице <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>.</p>
+
+<div class="note">
+<p><strong>Note</strong>: An <code>AudioNode</code> can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.</p>
+</div>
+
+<h2 id="Свойства" style="">Свойства</h2>
+
+<dl>
+ <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
+ <dd>Возвращает связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
+ <dd>Возвращает количество входов узла. Узлы определенные как источники имеют <code>numberOfInputs</code> равное 0.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
+ <dd>Возвращает количество выходов узла. Узны назначения — такие как {{ domxref("AudioDestinationNode") }} — имеют количество выходов равное 0.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("AudioNode.channelCount")}}</dt>
+ <dd>Это целое число, используемое для определения того, сколько каналов используются для <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> с любыми входами узла. Его использование точнее определяется значением {{domxref("AudioNode.channelCountMode")}}.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
+ <dd>Это перечисление описывающее путь согласования каналов между входом и выходом.</dd>
+ <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
+ <dd>Это перечисление описывающее каналы.Эта интерпретация описывает как будет происходить <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a>.<br>
+ ВОзможные значения <code>"speakers"</code> or <code>"discrete"</code>.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<p><em>Так же реализует методы из интерфейса </em>{{domxref("EventTarget")}}.</p>
+
+<dl>
+ <dt>{{domxref("AudioNode.connect(AudioNode)")}}</dt>
+ <dd>Позволяет нам подключить один выход данного узла на один вход другого узла.</dd>
+ <dt>{{domxref("AudioNode.connect(AudioParam)")}}</dt>
+ <dd>Позволяет нам подключить один выход данного узла на параметрический вход другого.</dd>
+ <dt>{{domxref("AudioNode.disconnect()")}}</dt>
+ <dd>Позволяет нам отключить текущий узел от другого, уже подключенного узла.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Этот простой фрагмент кода показывает создание некоторых аудио узлов, и как можно использовать свойства и методы AudioNode. Вы можете найти примеры такого использования на любом из примеров, на странице <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>  (например <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
+
+<pre class="brush: js;highlight[8,9,11,12,13,14]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+
+var audioCtx = new AudioContext();
+
+var oscillator = audioCtx.createOscillator();
+var gainNode = audioCtx.createGain();
+
+oscillator.connect(gainNode);
+gainNode.connect(audioCtx.destination);
+
+oscillator.context;
+oscillator.numberOfInputs;
+oscillator.numberOfOutputs;
+oscillator.channelCount;</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(25.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>15.0{{property_prefix("webkit")}}<br>
+    22 (unprefixed)</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>channelCount</code> <code>channelCountMode</code></td>
+   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>connect</code><code>(AudioParam)</code></td>
+   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>25.0</td>
+   <td>1.2</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>channelCount</code><br>
+    <code>channelCountMode</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>connect</code><code>(AudioParam)</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

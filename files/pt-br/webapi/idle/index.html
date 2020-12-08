@@ -1,0 +1,70 @@
+---
+title: Idle API
+slug: WebAPI/Idle
+tags:
+  - API
+  - inatividade
+  - observadores
+translation_of: Archive/B2G_OS/API/Idle_API
+---
+<div>
+ {{non-standard_header}} {{B2GOnlyHeader2('certified')}}</div>
+<h2 id="Resumo">Resumo</h2>
+<p>A Idle API é utilizada para enviar notificações ao usuário mesmo quando um aplicativo está em segundo plano (inativo). Ela possibilita que o usuário continue recebendo notificaçòes do aplicativo mesmo quando não estiver com ele em primeiro plano (ativo). O caso de uso mais comum é para economizar bateria; nesse caso é utilizado em conjunto com a <a href="/en-US/docs/WebAPI/Power_Management">Power Management API</a>, api de gerenciamento de energia.</p>
+<h2 id="Monitorando_uma_aplicação_inativa">Monitorando uma aplicação inativa</h2>
+<p>Para que uma aplicação em segundo plano envie notificações ao usuário, é necessário registrar um observador (idle observer).O observador é um objeto que possui três propriedades:</p>
+<ul>
+ <li>A propriedade <code>time</code> define o tempo que será aguardado para a execução da propriedade <code>onidle</code>, após o aplicativo entrar em segundo plano. É definida em segundos.</li>
+ <li>A propriedade <code>onidle</code> é chamada quando o apicativo entra em segundo plano.</li>
+ <li>A propriedade <code>onactive</code> é chamada quando o aplicativo volta para o primeiro plano.</li>
+</ul>
+<h3 id="Exemplo_escurecendo_a_tela_to_celular_quando_o_app_estiver_inativo">Exemplo: escurecendo a tela to celular quando o app estiver inativo</h3>
+<p>In this example, an idle observer is set up that dims the screen's brightness to 50% when the user is idle for 10 seconds, and restores it back to 100% when the user is active again. A second observer is set up that turns off the screen when the user is idle for at least 15 seconds.</p>
+<p>Nesse exemplo, o observador está configurado para reduzir o brilho da tela em 50%, 10 segundos após o aplicativo entrar em segundo plano, e restaura o brilho para 100% quando ele voltar a ficar em primeiro plano. Um segundo observador é configurado, e 15 segundos após o aplicativo entrar em segundo plano, ele apaga a tela do usuário.</p>
+<pre class="brush: js">// NOTE: mozPower is part of the Power Management API
+
+var fadeLight = {
+  time: 10, // Ten seconds
+
+  onidle: function () {
+    // The user does not seem active, let's dim the screen down
+    navigator.mozPower.screenBrightness = 0.5;
+  },
+
+  onactive: function () {
+    // Ok, the user is back, let's brighten the screen up
+    navigator.mozPower.screenBrightness = 1;
+  }
+}
+
+var screenOff = {
+  time: 15, // fifteen seconds
+
+  onidle: function () {
+    // Ok, the user had his chance but he's really idle, let's turn the screen off
+    navigator.mozPower.screenEnabled = false;
+  },
+
+  onactive: function () {
+    // Ok, the user is back, let's turn the screen on
+    navigator.mozPower.screenEnabled = true;
+  }
+}
+
+// Register the idle observers
+
+navigator.addIdleObserver(fadeLight);
+navigator.addIdleObserver(screenOff);
+</pre>
+<p>O código acima define 2 observadores: <code>fadeLight</code> e <code>screenOff</code>, que chamam {{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver()")}} uma vez para cada um deles, de modo que eles sejam registrados. Podem ser registrados quantos observadores forem necessários para uma aplicação.</p>
+<p>Se não for necessário observar o momento em que o aplicativo entra em segundo plano, os observadores ociosos podem ser removidos chamando o método {{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver()")}} , como mostrado a seguir:</p>
+<pre class="brush:js">navigator.removeIdleObserver(fadeLight);
+navigator.removeIdleObserver(screenOff);
+</pre>
+<h2 id="Especificação">Especificação</h2>
+<p>Essa API não faz parte das especificações do W3C, mas será discutida como parte do <a href="http://www.w3.org/2012/sysapps/" rel="external">System Applications Working Group</a>.</p>
+<h2 id="Veja_também">Veja também</h2>
+<ul>
+ <li>{{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver()")}}</li>
+ <li>{{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver()")}}</li>
+</ul>

@@ -1,0 +1,133 @@
+---
+title: Dodawanie funkcji obsługi zdarzeń
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_funkcji_obsługi_zdarzeń
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Przewijane_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Więcej_funkcji_obsługi_zdarzeń">Następny  »</a></p>
+</div><p></p>
+
+<p>Jak dotąd, okno dialogowe <code>Znajdź pliki</code> wygląda całkiem dobrze. Nie oczyściliśmy go za bardzo, ale za to łatwo stworzony został prosty interfejs użytkownika. Następnie, pokażemy jak dodawać skrypty do naszego okna.</p>
+
+<h2 id="Zastosowanie_skrypt.C3.B3w" name="Zastosowanie_skrypt.C3.B3w">Zastosowanie skryptów</h2>
+
+<p>Aby utworzone okno dialogowe <code>Znajdź pliki</code> było funkcjonalne, potrzebujemy dodać pewne skrypty, które będą wykonane w trakcie interakcji użytkownika z oknem dialogowym. Chcielibyśmy dodać skrypt funkcji, która będzie obsługiwała przycisk <code>Znajdź</code>, przycisk <code>Anuluj</code> oraz wszystkich funkcji obsługi zdarzeń - każdego polecenia w menu. Należy wspomnieć, że korzystanie z funkcji języka <a href="pl/JavaScript">JavaScript</a>, jest podobne do tego z jakim się możemy spotkać w <a href="pl/HTML">HTML</a>.</p>
+
+<p>Możemy wykorzystać element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code>, aby dołączyć skrypty do plików XUL. Możemy zagnieżdżać kod skryptu bezpośrednio w pliku XUL poprzez umieszczenie go pomiędzy otartym i zamkniętym znacznikiem <code>script</code>, ale znacznie lepiej korzystać z plików zewnętrznych, które będą wczytywane znacznie szybciej. Atrybut <code><code id="a-src"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/src">src</a></code></code> jest stosowany do odniesienia się do zewnętrznego pliku ze skryptem.</p>
+
+<div class="highlight">
+<h3 id="Nasz_przyk.C5.82ad:_Okno_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Okno_Znajd.C5.BA_pliki">Nasz przykład: Okno <code>Znajdź pliki</code></h3>
+
+<p>Dodajmy, skrypt do okna dialogowego <code>Znajdź pliki</code>. Chociaż, że nie ma znaczenia jaką nazwę mu nadamy, plik przechowujący skrypt to zazwyczaj jest o tej samej nazwie, co pliku XUL, z tą tylko różnicą, że z rozszerzeniem <code>.js</code>. W tym przypadku użyjemy <code>findfile.js</code>. Dodamy linię poniżej zaraz za otwierającym znacznikiem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> i PRZED jakimkolwiek innym elementem.</p>
+
+<pre class="eval"><span class="highlightred">&lt;script src="findfile.js"/&gt;</span>
+</pre>
+
+<p>Plik ze skryptem stworzymy później, kiedy będziemy już wiedzieli, co chcemy umieścić wewnątrz naszego skryptu. Zdefiniujemy kilka funkcji w pliku i będziemy mogli później wywołać za pomocą funkcji obsługi zdarzeń.</p>
+</div>
+
+<p>Możemy dołączać wiele skryptów w pliku XUL, poprzez wielokrotne zastosowanie znacznika <code>script</code>, przy czym każdy wskazywałby na inny skrypt. Adresy URL możemy stosować względne lub bezwzględne. Na przykład możemy stosować adresy URL w następujących formach:</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+&lt;script src="<a class="external" rel="freelink">chrome://findfiles/content/help.js</a>"/&gt;
+&lt;script src="<span class="nowiki">http://www.example.com/js/items.js</span>"/&gt;
+</pre>
+
+<p>Ten kurs nie jest jednak próbą nauki posługiwania się językiem JavaScript, ze względu na ogromny rozmiar tego tematu, jak i łatwą dostępność odpowiednich do tego materiałów.</p>
+
+<div class="note">Domyślnie konsola JavaScript pokazuje tylko błędy znajdujące się w treści strony, aby wyświetlić błędy chrome JavaScriptu. Do wprowadzenia tych ustawień jest konieczna zmiana ustawień <code>javascript.options.showInConsole</code> na wartość <code>true</code>. Możemy również zmienić ustawienie <code>javascript.options.strict</code> dla debugowania. Poprzez ustawienie wartości na true, <strong>non-standard, poorly written lub syntax prone to cause logic errors are logged to the JavaScript console</strong>.</div>
+
+<h2 id="Odpowiadanie_na_zdarzenia" name="Odpowiadanie_na_zdarzenia">Odpowiadanie na zdarzenia</h2>
+
+<p>Skrypt będzie zawierał kod odpowiadający na różne zdarzenia wywoływane przez użytkownika lub inne sytuacje. Istnieje około trzydziestu różnych zdarzeń, które mogą być obsługiwane kilkoma różnymi sposobami. Typowym zdarzeniem jest to, że użytkownik naciska klawisz myszy lub klawiatury. Każdy element języka XUL posiada zdolność do wywoływania pewnych zdarzeń w różnych sytuacjach. Pewne zdarzenia są wywoływane tylko poprzez niektóre elementy.</p>
+
+<p>Każde zdarzenie posiada nazwę, dla przykładu; 'mousemove' jest nazwą zdarzenia, które jest wywoływane, kiedy użytkownik przeniesie kursor myszy nad element UI. XUL stosuje ten sam mechanizm zdarzeń, który jest zdefiniowany przez <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/">zdarzenia DOM</a>. Kiedy pojawia się akcja powodująca zdarzenie, taka jak; użytkownik poruszający myszką, tworzony jest obiekt zdarzenia odnoszący się do typu tego zdarzenia. Wiele rozmaitych własności jest ustawionych na obiekt zdarzenia, takich jak pozycja myszki, klawisz, który został naciśnięty i inne.</p>
+
+<p>Zdarzenie jest wysyłane do XUL-a fazowo:</p>
+
+<ul>
+ <li>Pierwsza faza to faza przejęcia, w której zdarzenie jest po raz pierwszy wysyłane do okna, następnie do dokumentu, kierując się za każdym przodkiem elementu XUL, gdzie wystąpiło wcześniej zdarzenie, dopóki osiągnie ten element.</li>
+ <li>Zdarzenie jest wysyłane do tego elementu XUL.</li>
+ <li>W ostatecznej fazie zdarzenie zostaje wysłane do każdego elementu z powrotem w górę, dopóki nie osiągnie po raz kolejny okna.</li>
+</ul>
+
+<p>Możemy zareagować na zdarzenia podczas obu wspomnianych wyżej faz. Kiedy zdarzenie zakończy swoją propagacje, następuje dowolna domyślna akcja, która jest wbudowana w zachowanie elementu.</p>
+
+<p>Na przykład, kiedy poruszymy myszą ponad przyciskiem znajdującym się w pudełku, generowane jest zdarzenie 'mousemove' i jest ono pierwszym, które zostaje wysłane do okna, następnie do dokumentu, i w końcu do pudełka. To zakańcza fazę przejęcia. Następnie, zdarzenie 'mousemove' zostaje wysłane do przycisku. Ostateczna faza powoduje, że zdarzenie zostaje wysłane do pudełka, dokumentu oraz okna. Ostatnia faza jest odwrotnością fazy przejęcia. Warto też zaznaczyć, że niektóre zdarzenia nie wykorzystują ostatniej fazy.</p>
+
+<p>Możemy również dołączyć nasłuch do każdego z elementów, aby każdy z nich był w stanie nasłuchiwać zdarzenia, w trakcie każdego etapu propagacji zdarzenia. Z względu na sposób, w jaki pojedyncze zdarzenie jest przekazywane do wszystkich przodków, można dodać nasłuch do określonego elementu lub do elementu, który znajduje się wyżej w hierarchii. Naturalnie, zdarzenie dodane do elementu wyższego otrzyma powiadomienie o wszystkich elementach wewnątrz jego, natomiast zdarzenie dodane do przycisku będzie w stanie tylko odbierać zdarzenia odnoszące się do tego przycisku. Jest to użyteczne, w przypadku istnienia kilku różnych elementów, które chcielibyśmy obsłużyć poprzez zastosowanie tego samego lub podobnego kodu. <span class="comment">ok</span> Kiedy już obsłużysz zdarzenie, bez względu na to gdzie następuje propagacja zdarzenia, prawdopodobnie zechcesz powstrzymać wydarzenie od wysłania go do kolejnych elementów, zatrzymując fazę przejęcia lub wrzenia. W zależności od tego jak dodasz nasłuch zdarzenia do elementu, istnieje kilka możliwości realizacji tego zagadnienia.</p>
+
+<p>Najczęściej używanym zdarzeniem jest zdarzenie 'command'. Zdarzenie command jest 'odpalane' w momencie aktywacji elementu przez użytkownika, na przykład poprzez naciśnięcie przycisku, zmianę pola wyboru lub zaznaczenie jednej pozycji z menu. Zdarzenie command jest użytecznym zdarzeniem ze względu na jego zdolność do automatycznej obsługi różnych sposobów aktywacji elementów. Na przykład: zdarzenie command wystąpi bez względu na to, czy użytkownik użyje przycisku myszy, bądź też naciśnie klawisz Enter.</p>
+
+<p>Istnieją dwa sposoby na dodanie nasłuchu do elementu. Pierwszy, następuje poprzez użycie atrybutu, którego wartość reprezentuje skrypt. Drugi, następuje natomiast dzięki odwołaniu się do metody addEventListener dotyczącej poszczególnego elementu. Pierwsza metoda, mimo prostoty swojej implementacji jest w stanie obsługiwać jedynie zdarzenia fazy wrzenia. Druga natomiast, jest w stanie obsługiwać zdarzenia będące w dowolnej fazie i może być także używana do dodawania wielu nasłuchów zdarzenia obsługującego dany element. Wykorzystywanie atrybutów jest najczęściej stosowaną metodą dla większości zdarzeń.</p>
+
+<h2 id="Nas.C5.82uch_atrybutu_zdarzenia" name="Nas.C5.82uch_atrybutu_zdarzenia">Nasłuch atrybutu zdarzenia</h2>
+
+<p>W celu wykorzystania atrybutów, należy umieścić atrybut w elemencie, do którego chcielibyśmy dodać nasłuch jego zdarzenia. Jego nazwa powinna być nazwą samego zdarzenia poprzedzoną przedrostkiem 'on'. Przykładowo, atrybut przesyłający zdarzenie 'command' to 'oncommand'. Wartość atrybutu powinna być skryptem, który zostanie wykonany w przypadku zajścia zdarzenia. W większości przypadków kod ten jest wyjątkowo prosty i odnosi się do funkcji zdefiniowanej w oddzielnym skrypcie. Poniżej przykład odpowiedzi na wciśnięcie przycisku:</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul">Podgląd</a></p>
+
+<pre class="eval">&lt;button label="OK" oncommand="alert('Przycisk został naciśnięty!');"/&gt;
+</pre>
+
+<p>Ponieważ zdarzenie 'command' będzie w fazie wrzenia, jest także możliwe, aby umieścić nasłuch zdarzenia w otaczającym je elemencie. W poniższym przykładzie, nasłuch został umieszczony w pudełku i będzie otrzymywał zdarzenia dla obu tych elementów.</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul">Podgląd</a></p>
+
+<pre class="eval">&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Pokaż obrazki"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>W tym przykładzie, zdarzenie 'command' będzie w fazie wrzenia, począwszy od przycisku lub checkbox, aż do <code>vbox</code>, który je obsłuży. W przypadku drugiego nasłuchu (atrybut <code>oncommand</code>), który został umieszczony w przycisku, jego kod będzie wywołany w pierwszej kolejności, a dopiero po nim wywołana będzie obsługa vbox. Obsługa zdarzeń jest przekazywana, dzięki obiektom zdarzeń, jako dołączony argument nazwany 'event'. Jest to używane w celu otrzymania specyficznych informacji na temat wydarzenia. Jedną z najczęściej używanych własności jest własność 'target', która zawiera element, odnośnie którego zaszło dane wydarzenie. W poniższym przykładzie wyświetlamy alert zawierający nazwy znaczników celu (target). Cel jest zazwyczaj użyteczny, w przypadku użycia zdarzeń w fazie wrzenia, tak aby otrzymać zestaw przycisków, które wszystkie będą obsługiwane przez pojedynczy skrypt.</p>
+
+<p>Można zauważyć, że składnia atrybutów jest podobna do tej użytej przy obsłudze zdarzeń w dokumentach HTML. W zasadzie, obydwa HTML i XUL dzielą ten sam mechanizm zdarzeń. Jedną z ważniejszych różnic jest użycie zdarzenia 'click' (lub atrybutu <code>onclick</code>), które to często używane w HTML-u w celu obsługi funkcji zdarzeń przycisków, w XUL-u jest zastąpione zdarzeniem 'command'. XUL również posiada zdarzenie "click", jednak odnosi się ono jedynie do obsługi przycisków myszy, nie klawiatury. Powinno się unikać zdarzenia "click" korzystając z XUL-a, chyba że istnieje przypadek, w którym dany element może być obsłużony tylko za pomocą myszy.</p>
+
+<div class="highlight">
+<h3 id="Nasz_przyk.C5.82ad:_Okno_Znajd.C5.BA_pliki_2" name="Nasz_przyk.C5.82ad:_Okno_Znajd.C5.BA_pliki_2">Nasz przykład: Okno <code>Znajdź pliki</code></h3>
+
+<p>Obsługa poleceń, może zostać dodana tak do przycisku <code>Znajdź</code> i <code>Anuluj</code> występujących w naszym oknie dialogowym. Wciśnięcie przycisku <code>Znajdź</code>, powinno uruchomić proces wyszukiwania. Ponieważ nie mamy zamiaru implementować jeszcze tej części, zostawimy to na razie. Jednakże, wciśnięcie przycisku <code>Anuluj</code>, powinno zamknąć okno. Poniższy kod obrazuje sposób wykonania tego zadania. Dodajmy także podobne zdarzenie do pozycji <code>Zamknij</code> znajdującej się w menu.</p>
+
+<pre class="eval">&lt;menuitem label="Zamknij" accesskey="z" <span class="highlightred">oncommand="window.close();"</span>/&gt;
+...
+
+&lt;button id="cancel-button" label="Anuluj"
+     <span class="highlightred">oncommand="window.close();</span>"/&gt;
+</pre>
+
+<p>Obsługa zdarzeń została dodana do obu elementów. Atrybut oncommand został dodany do pozycji <code>Zamknij</code> znajdującej się w menu. Poprzez użycie tej specyficznej obsługi zdarzeń, użytkownik będzie w stanie zamknąć okno poprzez kliknięcie na pozycji <code>Zamknij</code> myszką lub przez jej wybór za pomocą klawiatury. Obsługa zdarzenia oncommand została także dodana do przycisku <code>Anuluj</code>.</p>
+</div>
+
+<h2 id="Nas.C5.82uchiwanie_zdarze.C5.84_DOM" name="Nas.C5.82uchiwanie_zdarze.C5.84_DOM">Nasłuchiwanie zdarzeń DOM</h2>
+
+<p>Drugim sposobem dodania obsługi zdarzeń jest wywoływanie metody <code>addEventListener</code> związanej z danym elementem. Pozwala nam to na dołączenie nasłuchu zdarzenia dynamicznie i słuchanie zdarzeń podczas fazy przejęcia. Składnia jest następująca:</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul">Podgląd</a></p>
+
+<pre>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event)
+{
+  alert('Przycisk został wciśnięty!');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</pre>
+
+<p>Funkcja <code><a href="pl/DOM/document.getElementById">getElementById()</a></code> zwraca element o danym id, w tym przypadku będzie to identyfikator przycisku. Funkcja <code><a href="pl/DOM/element.addEventListener">addEventListener()</a></code> jest wywoływana w celu dodania nowego nasłuchu zdarzenia znajdującego się w fazie przejęcia. Pierwszym argumentem jest nazwa zdarzenia, do której jest przypisany nasłuch. Drugi argument to funkcja nasłuchu zdarzenia, która będzie wywoływana, kiedy zajdzie zdarzenie. Wreszcie ostatni argument powinien mieć wartość <code>true</code> dla wszystkich nasłuchiwanych zdarzeń odnoszących się do fazy przejęcia. Można także obsługiwać zdarzenia w trakcie fazy wrzenia, poprzez ustawianie wartości ostatniego argumentu na <code>false</code>. Funkcja nasłuchu zdarzenia przekazywana jako drugi argument, sama powinna pobierać jeden argument, obiekt zdarzenia, tak jak jest pokazane to w powyższej deklaracji funkcji <code>buttonPressed</code>.</p>
+
+<div class="highlight"><span id="Przyk%C5%82ad:_Znajd%C5%BA_pliki"><a id="Przyk%C5%82ad:_Znajd%C5%BA_pliki"></a><strong>Przykład: Znajdź pliki</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul">Podgląd</a></div>
+
+<p>Następnie, dowiemy się trochę więcej szczegółów na temat <a href="pl/Kurs_XUL/Wi%c4%99cej_funkcji_obs%c5%82ugi_zdarze%c5%84">zdarzeń obiektów</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Przewijane_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Więcej_funkcji_obsługi_zdarzeń">Następny  »</a></p>
+</div><p></p>

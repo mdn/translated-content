@@ -1,0 +1,57 @@
+---
+title: Paski przewijania
+slug: Mozilla/Tech/XUL/Kurs_XUL/Paski_przewijania
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Scroll_Bars
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Rozdzielacze" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Paski_narzędzi">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule dowiemy się, jak dodać paski przewijania do okna.
+</p>
+<h3 id="Dodawanie_pask.C3.B3w_przewijania_do_okna" name="Dodawanie_pask.C3.B3w_przewijania_do_okna"> Dodawanie pasków przewijania do okna </h3>
+<p>Pasek przewijania jest zazwyczaj stosowany do poruszania się po większych dokumentach. Możemy go także stosować, aby wskazywać wartości, które zmieniają się w określonym zakresie. Paski przewijania można tworzyć na wiele sposobów. W języku XUL można go uzyskać za pomocą znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/scrollbar" title="scrollbar">scrollbar</a></code></code>. Niektóre elementy jak pola tekstowe, również będą zawierać paski przewijania, kiedy ich zawartość wewnątrz pudełka będzie za duża.
+</p><p>W tym artykule omówimy stworzenie pojedynczego paska przewijania. Użytkownik będzie mógł ustawić wartości paska przewijania, aby go dostosować. Prawdopodobnie nie będziesz musiał stosować tego zbyt często. Pasek przewijania jest stworzony z kilku części: suwaka, który jest jego główną częścią wraz z dopasowanym pudełkiem jego ruchu, i dwóch przycisków wraz ze strzałkami na jego końcach. Pasek przewijania tworzy wszystkie te elementy automatycznie.
+</p><p><img alt="grafika:scroll1.png">
+</p><p>Składnia polecenia tworzącego pasek przewijania jest następująca: </p>
+<pre>&lt;scrollbar
+    id="identyfikator"
+    orient="horizontal"
+    curpos="20"
+    maxpos="100"
+    increment="1"
+    pageincrement="10"/&gt;
+</pre>
+<p>Atrybuty są następujące: </p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code>
+</dt><dd> Unikalny identyfikator paska przewijania.
+</dd></dl>
+<dl><dt> <code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code>
+</dt><dd> Określa kierunek paska przewijania. Domyślna wartością jest <code>horizontal</code>, która tworzy pasek przewijania, który możemy przesuwać od lewej do prawej. Możemy także określić <code>vertical</code>, który tworzy pasek przewijania, który przesuwamy od góry do dołu. </dd></dl>
+<dl><dt> <code id="a-curpos"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/curpos">curpos</a></code>
+</dt><dd> Sygnalizuje aktualną pozycję bieżącą paska przewijania. Przyjmuje wartości z zakresu od 0 do wartości <code>maxpos</code>. Nie potrzebuje wartości jednostek. Domyślnie jest ustawiony na 0.
+</dd></dl>
+<dl><dt> <code id="a-maxpos"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/maxpos">maxpos</a></code>
+</dt><dd> Sygnalizuje maksymalną pozycje paska przewijania. Przyjmuje tylko wartości liczbowe i nie posiada jednostek. Domyślną wartością jest 100.
+</dd></dl>
+<dl><dt> <code id="a-increment"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/increment">increment</a></code>
+</dt><dd> Wynosi tyle, co wartość atrybutu <code>curpos</code> zmienionego, gdy strzałka na pasku przewijania jest naciśnięta. Domyślnie posiada wartość równą 1.
+</dd></dl>
+<dl><dt> <code id="a-pageincrement"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pageincrement">pageincrement</a></code>
+</dt><dd> Wynosi tyle, co wartość atrybutu <code>curpos</code> zmienionego, gdy powierzchnia paska przewijania jest kliknięta. Powierzchnia jest obszarem, w którym przytrzymany kursorem pasek przewijania jest przesuwany. Domyślną wartością jest 10.
+</dd></dl>
+<p>Przykład kodu przedstawiony powyżej stworzy nam pasek przewijania, który może przesuwać się w zakresie od 0 do 100. Wartość 100 może być liczbą linii listy, ale może być także czymkolwiek sobie życzymy. W przykładzie wartość początkowa wynosi 20. Kiedy klikniemy w strzałkę na pasku przewijania, wartość będzie się zmieniała o 1 w dół lub w górę. Poprzez stronicowanie pasek przewijania będzie zmieniał wartość o 10.
+</p><p>Kiedy użytkownik kliknie na strzałki, suwak przesunie się równoważnie do określonej wartości <code>increment</code>. Zwiększająca się wartość tego atrybutu będzie przypadkiem paska przewijania przesuwanego dalej wraz z każdym kliknięciem. Znajdujący się bliżej lewej lub górnej pozycji pasek przewijania posiada wartość 0, a mający pozycję znajdującą się bliżej prawej lub dolnej pozycji paska przewijania określi nam atrybut <code>maxpos</code>.
+</p><p>Możesz dopasować wszystkie wartości, tak żeby suwak znajdował się i przesuwał, jak tylko chcesz.
+</p><p>Następnie dowiemy się, jak utworzyć <a href="pl/Kurs_XUL/Paski_narz%c4%99dzi">paski narzędzi</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Rozdzielacze" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Paski_narzędzi">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

@@ -1,0 +1,100 @@
+---
+title: Empacotando Temas
+slug: Empacotando_Temas
+tags:
+  - Temas
+  - Todas_as_Categorias
+  - Toolkit API
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+---
+<p> </p>
+<p>Este documento descreve como empacotar <a href="pt/Temas">temas</a> para o Firefox e o Thunderbird.</p>
+<h3 id="Pr.C3.A9_Requisitos" name="Pr.C3.A9_Requisitos">Pré Requisitos</h3>
+<p>Fazer um tema para o Firefox ou Thunderbird requer conhecimentos em Cascading Style Sheets (<a href="pt/CSS">CSS</a>), provavelmente <a href="pt/XBL">XBL</a>, e um pouco de design gráfico e habilidade estética (...ou talvez não). Este documento descreve somente como Temas são empacotados em ordem para serem mostrados na janela de Temas do Firefox.</p>
+<h3 id="Disposi.C3.A7.C3.A3o_do_Arquivo_de_Tema" name="Disposi.C3.A7.C3.A3o_do_Arquivo_de_Tema">Disposição do Arquivo de Tema</h3>
+<p>Os temas do Firefox/Thunderbird são empacotados em um arquivo JAR com a seguinte estrutura:</p>
+<pre class="eval">theme.jar:
+  install.rdf
+  contents.rdf
+  preview.png
+  icon.png
+  browser/<i>files</i>
+  global/<i>files</i>
+  mozapps/<i>files</i>
+  communicator/<i>files</i>
+  ...
+
+</pre>
+<ul>
+ <li>Você deve ter um nível máximo <a href="pt/Chrome.manifest">chrome.manifest</a> (Firefox/Thunderbird 1.5) ou o arquivo contents.rdf que registre o chrome para o tema (como antes) e também um manifesto <a href="pt/Install.rdf">install.rdf</a> que especifica metadados que são exibidos na janela de Temas.</li>
+ <li>preview.png é uma imagem de previsão que será mostrada na área de previsão da janela de Temas. Ela pode ter qualquer tamanho.</li>
+ <li>icon.png é um PNG 32x32 (pode conter transparência alfa) que irá aparecer na lista de Temas na janela de Temas.</li>
+</ul>
+<h3 id="install.rdf" name="install.rdf">install.rdf</h3>
+<p>Seu manifesto <a href="pt/Install.rdf">install.rdf</a> parecerá com isto:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;<i>more properties</i>
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<h4 id="Propriedades_Requeridas_de_install.rdf" name="Propriedades_Requeridas_de_install.rdf">Propriedades Requeridas de install.rdf</h4>
+<p>Seu arquivo install.rdf deve ter as seguintes propriedades. Veja a <a href="pt/Install.rdf">Referência install.rdf</a> para mais informações:</p>
+<ul>
+ <li>em:id</li>
+ <li>em:version</li>
+ <li>em:type</li>
+ <li>em:targetApplication</li>
+ <li>em:name</li>
+ <li>em:internalName</li>
+</ul>
+<h4 id="Propriedades_Opcionais_de_install.rdf" name="Propriedades_Opcionais_de_install.rdf">Propriedades Opcionais de install.rdf</h4>
+<ul>
+ <li>em:description</li>
+ <li>em:creator</li>
+ <li>em:contributor</li>
+ <li>em:homepageURL</li>
+ <li>em:updateURL</li>
+</ul>
+<p>Note que se o seu tema estiver disponível no website <a class="external" href="http://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a>, ele não deve incluir uma URL de atualização.</p>
+<h4 id="Arquivo_de_Amostra_install.rdf" name="Arquivo_de_Amostra_install.rdf">Arquivo de Amostra install.rdf</h4>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{18b64b56-d42f-428d-a88c-baa413bc413f}&lt;/em:id&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;
+
+    &lt;!-- Target Application this extension can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;0.8&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;0.9&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;New Theme 1&lt;/em:name&gt;
+    &lt;em:description&gt;A test theme for Firefox&lt;/em:description&gt;
+    &lt;em:creator&gt;Ben Goodger&lt;/em:creator&gt;
+    &lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+    &lt;em:homepageURL&gt;<span class="nowiki">http://www.bengoodger.com/</span>&lt;/em:homepageURL&gt;
+
+    &lt;!-- Front End Integration Hooks (used by Theme Manager)--&gt;
+    &lt;em:internalName&gt;newtheme1&lt;/em:internalName&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>Os seguir estão algumas aplicações comuns de alvos GUIDs que você pode usar na sua propriedade targetApplication:</p>
+<pre class="eval">Firefox      {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+Thunderbird  {3550f703-e582-4d05-9a08-453d09bdfdc6}
+Sunbird      {718e30fb-e89b-41dd-9da7-e25a45638b28}</pre>

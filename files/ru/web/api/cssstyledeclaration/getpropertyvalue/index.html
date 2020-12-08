@@ -1,0 +1,114 @@
+---
+title: CSSStyleDeclaration.getPropertyValue()
+slug: Web/API/CSSStyleDeclaration/getPropertyValue
+translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
+---
+<p>{{ APIRef("CSSOM") }}</p>
+
+<p><strong>CSSStyleDeclaration.getPropertyValue()</strong> интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS свойства.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>value</em> = <em>style</em>.getPropertyValue(<em>property</em>);</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<ul>
+ <li><em><code>property</code></em> - это {{domxref('DOMString')}} представляющий имя свойства, которое должно быть обработано.</li>
+</ul>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<ul>
+ <li><code><em>value</em></code> - это {{domxref('DOMString')}} содержащий значение свойства. Если не задано, возвращается пустая строка.</li>
+</ul>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Следующий JavaScript код проверяет отмечен ли margin как important в CSS правиле селектора:</p>
+
+<pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
+var value = declaration.getPropertyValue('margin'); // "1px 2px"
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM', '#dom-cssstyledeclaration-getpropertyvalue', 'CSSStyleDeclaration.getPropertyValue()')}}</td>
+   <td>{{Spec2('CSSOM')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
+   <td>{{Spec2('DOM2 Style')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>Браузерная совместимость</strong></p>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <thead>
+  <tr>
+   <th scope="col">Feature</th>
+   <th scope="col">Chrome</th>
+   <th scope="col">Edge</th>
+   <th scope="col">Firefox (Gecko)</th>
+   <th scope="col">Internet Explorer</th>
+   <th scope="col">Opera</th>
+   <th scope="col">Safari (WebKit)</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

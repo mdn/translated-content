@@ -1,0 +1,173 @@
+---
+title: Snippets de código
+slug: Mozilla/Add-ons/Code_snippets
+tags:
+  - Add-ons
+  - Code snippets
+  - Extensions
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/Add-ons/Code_snippets
+---
+<div class="warning">
+  <p>
+    O suporte para extensões que usam XUL/XPCOM ou <span lang="en">Add-on SDK</span> foi removido no Firefox 57, lançado em novembro de 2017. Como não há versão suportada do Firefox ativando essas tecnologias, essa página será removida em dezembro de 2020.
+  </p>
+
+  <p>
+    Os complementos que usam as técnicas descritas neste documento são considerados código legado no Firefox. Não use essas técnicas para desenvolver novos complementos.
+    Use <a href="/pt-BR/docs/Mozilla/Add-ons/WebExtensions"><span lang="en">WebExtensions</span></a>. Se você mantém um complemento que usa as técnicas descritas aqui, considere migrar para usar <span lang="en">WebExtensions</span>.
+  </p>
+
+  <p>
+    <strong>
+      A partir do <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 53</a>, nenhum código legado será aceito no <span lang="en">addons.mozilla.org (AMO)</span> para Firefox e Firefox para Android.
+    </strong>
+  </p>
+
+  <p>
+    <strong>
+      A partir do <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 57</a>, apenas as extensões desenvolvidas usando as APIs <span lang="en">WebExtensions</span> serão suportadas no Firefox e Firefox para Android.
+    </strong>
+  </p>
+
+  <p>
+    Mesmo antes do Firefox 57, as mudanças na plataforma Firefox quebraram muitas extensões legado. Essas alterações incluem o multiprocessamento do Firefox (e10s),
+    <span lang="en">sandboxing</span> e múltiplos processos de conteúdo. As extensões legado afetadas por essas alterações devem migrar para usar as APIs <span lang="en">WebExtensions</span>, se possível.
+    Consute o <a href="https://blog.mozilla.org/addons/2017/02/16/the-road-to-firefox-57-compatibility-milestones/">documento de "Marcos de compatibilidade"</a> para mais informações.
+  </p>
+
+  <p>
+    Uma página wiki contendo <a href="https://wiki.mozilla.org/Add-ons/developer/communication">recursos, caminhos de migração, expediente e mais</a>, está disponível para ajudar os desenvolvedores a fazer a transição para as novas tecnologias.
+  </p>
+</div>
+
+
+
+<p>
+  Esta é uma lista rápida de snippets de código (pequenos exemplos úteis de código) disponíveis para desenvolvedores de extensões para os vários aplicativos Mozilla. Muitos desses exemplos também podem ser usados ​​em aplicativos XULRunner, bem como no próprio código Mozilla.
+</p>
+
+<p>
+  Esses exemplos demonstram como realizar tarefas básicas que podem não ser imediatamente óbvias.
+</p>
+
+<h2 id="General" name="General">General</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/From_articles" title="/en-US/docs/Code_snippets/From_articles">Examples and demos from MDN articles</a></dt>
+ <dd>A collection of examples and demos from articles.</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Windows" title="/en-US/docs/Code_snippets/Windows">Window code</a></dt>
+ <dd>Opening and manipulating windows</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Toolbar" title="/en-US/docs/Code_snippets/Toolbar">Toolbar</a></dt>
+ <dd>Toolbar related code</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Sidebar" title="/en-US/docs/Code_snippets/Sidebar">Sidebar</a></dt>
+ <dd>Sidebar related code</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Forms">Forms</a></dt>
+ <dd>Forms related code</dd>
+ <dt><a href="/en-US/docs/Code_snippets/XML" title="/en-US/docs/Code_snippets/XML">XML</a></dt>
+ <dd>Code used to parse, write, manipulate, etc. XML</dd>
+ <dt><a href="/en-US/docs/Code_snippets/File_I_O" title="/en-US/docs/Code_snippets/File_I/O">File I/O</a></dt>
+ <dd>Code used to read, write and process files</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Drag_&amp;_Drop" title="/en-US/docs/Code_snippets/Drag_&amp;_Drop">Drag &amp; Drop</a></dt>
+ <dd>Code used to setup and handle drag and drop events</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Dialogs_and_Prompts" title="/en-US/docs/Code_snippets/Dialogs_and_Prompts">Dialogs</a></dt>
+ <dd>Code used to display and process dialog boxes</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Alerts_and_Notifications" title="/en-US/docs/Code snippets/Alerts and Notifications">Alerts and Notifications </a></dt>
+ <dd>Modal and non-modal ways to notify users</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Preferences" title="/en-US/docs/Code_snippets/Preferences">Preferences</a></dt>
+ <dd>Code used to read, write, and modify preferences</dd>
+ <dt><a href="/en-US/docs/Code_snippets/JS_XPCOM" title="/en-US/docs/Code_snippets/JS_XPCOM">JS XPCOM</a></dt>
+ <dd>Code used to define and call XPCOM components in JavaScript</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Running_applications" title="/en-US/docs/Code_snippets/Running_applications">Running applications</a></dt>
+ <dd>Code used to run other applications</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Canvas" title="/en-US/docs/Code_snippets/Canvas"><code>&lt;canvas&gt;</code> related</a></dt>
+ <dd><a href="/en-US/docs/HTML/Canvas" title="/en-US/docs/HTML/Canvas">WHAT WG Canvas</a>-related code</dd>
+ <dt><a href="/en-US/docs/Signing_a_XPI" title="/en-US/docs/Signing_a_XPI">Signing a XPI</a></dt>
+ <dd>How to sign an XPI with PKI</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Threads">Delayed Execution</a></dt>
+ <dd>Performing background operations.</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Miscellaneous" title="/en-US/docs/Code_snippets/Miscellaneous">Miscellaneous</a></dt>
+ <dd>Miscellaneous useful code fragments</dd>
+ <dt><a href="/en-US/docs/Code_snippets/HTML_to_DOM" title="/en-US/docs/Code_snippets/HTML_to_DOM">HTML to DOM</a></dt>
+ <dd>Using a hidden browser element to parse HTML to a window's DOM</dd>
+</dl>
+
+<h2 id="javascript-libraries" name="javascript-libraries">JavaScript libraries</h2>
+
+<p>Here are some JavaScript libraries that may come in handy.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/StringView" title="/en-US/docs/Code_snippets/StringView">StringView</a></dt>
+ <dd>A library that implements a <code>StringView</code> view for <a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a>. This lets you access data in typed arrays using C-like string functions.</dd>
+ <dt><a href="/en-US/Add-ons/Code_snippets/Rosetta" title="/en-US/docs/Code_snippets/Rosetta">Rosetta</a></dt>
+ <dd>By default, the only possible standardized scripting language for HTML is <strong>ECMAScript</strong>. Hence, if you are going to use another scripting language you might expect that most of the browsers will not recognize it. Nevertheless, the increasing computational power of modern browsers together with the introduction of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> in ECMAScript allow us, in theory, to build full <a class="external external-icon" href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machines</a> in pure ECMAScript. Therefore, it is also possible, in theory, to use ECMAScript for a smaller task: parsing exotic programming languages (i.e., creating compilers). This snippets shows a possible way to start from.</dd>
+</dl>
+
+<h2 id="Browser-oriented_code" name="Browser-oriented_code">Browser-oriented code</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/Tabbed_browser" title="/en-US/docs/Code_snippets/Tabbed_browser">Tabbed browser code</a> (Firefox/SeaMonkey)</dt>
+ <dd>Basic operations, such as page loading, with the tabbed browser, which is the heart of Mozilla's browser applications</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Cookies" title="/en-US/docs/Code_snippets/Cookies">Cookies</a></dt>
+ <dd>Reading, writing, modifying, and removing cookies</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Page_Loading" title="/en-US/docs/Code_snippets/Page_Loading">Page Loading</a></dt>
+ <dd>Code used to load pages, reload pages, and listen for page loads</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction between privileged and non-privileged code</a></dt>
+ <dd>How to communicate from extensions to websites and vice-versa.</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Downloading_Files" title="/en-US/docs/Code_snippets/Downloading_Files">Downloading Files</a></dt>
+ <dd>Code to download files, images, and to monitor download progress</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Password_Manager" title="/en-US/docs/Code_snippets/Password_Manager">Password Manager</a></dt>
+ <dd>Code used to read and write passwords to/from the integrated password manager</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Bookmarks" title="/en-US/docs/Code_snippets/Bookmarks">Bookmarks</a></dt>
+ <dd>Code used to read and write bookmarks</dd>
+ <dt><a href="/en-US/docs/Code_snippets/JavaScript_Debugger_Service" title="/en-US/docs/Code_snippets/JavaScript_Debugger_Service">JavaScript Debugger Service</a></dt>
+ <dd>Code used to interact with the JavaScript Debugger Service</dd>
+</dl>
+
+<h2 id="SVG" name="SVG">SVG</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/SVG_General" title="/en-US/docs/Code_snippets/SVG_General">General</a></dt>
+ <dd>General information and utilities</dd>
+ <dt><a href="/en-US/docs/Code_snippets/SVG_Animation" title="/en-US/docs/Code_snippets/SVG_Animation">SVG Animation</a></dt>
+ <dd>Animate SVG using JavaScript and SMIL</dd>
+ <dt><a href="/en-US/docs/Code_snippets/SVG_Interacting_with_script" title="/en-US/docs/Code_snippets/SVG_Interacting_with_script">SVG Interacting with Script</a></dt>
+ <dd>Using JavaScript and DOM events to create interactive SVG</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Embedding_SVG" title="/en-US/docs/Code_snippets/Embedding_SVG">Embedding SVG in HTML and XUL</a></dt>
+ <dd>Using SVG to enhance HTML or XUL based markup</dd>
+</dl>
+
+<h2 id="XUL_Widgets" name="XUL_Widgets">XUL Widgets</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/HTML_in_XUL_for_rich_tooltips" title="/en-US/docs/Code_snippets/HTML_in_XUL_for_rich_tooltips">HTML in XUL for Rich Tooltips</a></dt>
+ <dd>Dynamically embed HTML into a XUL element to attain markup in a tooltip</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Label_and_description" title="/en-US/docs/Code_snippets/Label_and_description">Label and description</a></dt>
+ <dd>Special uses and line breaking examples</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Tree" title="/en-US/docs/Code_snippets/Tree">Tree</a></dt>
+ <dd>Setup and manipulation of trees using XUL and JS</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Scrollbar" title="/en-US/docs/Code_snippets/Scrollbar">Scrollbar</a></dt>
+ <dd>Changing style of scrollbars. Applies to scrollbars in browser and iframe as well.</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Autocomplete" title="/en-US/docs/Code_snippets/Autocomplete">Autocomplete</a></dt>
+ <dd>Code used to enable form autocomplete in a browser</dd>
+ <dt><a href="/en-US/docs/Code_snippets/Boxes" title="/en-US/docs/Code_snippets/Boxes">Boxes</a></dt>
+ <dd>Tips and tricks when using boxes as containers</dd>
+ <dt><a class="internal" href="/en-US/docs/Code_snippets/Tabbox" title="/en-US/docs/Code snippets/Tabbox">Tabbox</a></dt>
+ <dd>Removing and manipulating tabs in a tabbox</dd>
+</dl>
+
+<h2 id="Windows-specific" name="Windows-specific">Windows-specific</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/Finding_Window_Handles" title="/en-US/docs/Code_snippets/Finding_Window_Handles">Finding Window Handles (HWND)</a> (Firefox)</dt>
+ <dd>How to use Windows API calls to find various kinds of Mozilla window handles. Window handles can be used for IPC and Accessibility purposes.</dd>
+ <dt><a href="/en-US/docs/Accessing_the_Windows_Registry_Using_XPCOM" title="/en-US/docs/Accessing_the_Windows_Registry_Using_XPCOM">Using the Windows Registry with XPCOM</a></dt>
+ <dd>How to read, write, modify, delete, enumerate, and watch registry keys and values.</dd>
+</dl>
+
+<h2 id="External_links" name="External_links">Links externos</h2>
+
+<p>
+  O conteúdo do <a class="external" href="https://kb.mozillazine.org/Category:Example_code"><span lang="en">MozillaZine Example Code</span></a> está sendo movido lentamente para cá, mas você ainda pode encontrar exemplos úteis.
+</p>

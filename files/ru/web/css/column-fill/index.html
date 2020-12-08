@@ -1,0 +1,117 @@
+---
+title: column-fill
+slug: Web/CSS/column-fill
+translation_of: Web/CSS/column-fill
+---
+<div>{{CSSRef("CSS Multi-columns")}}</div>
+
+<p>Свойство <code>column-fill </code>применяется к родительскому элементу, разбитому на столбцы и указывает как содержимое располагается внутри столбца (column). Если значение свойства <code>column-fill</code> установлено как balanced, то содержимое во всех столбцах будет иметь одинаковую высоту. В случае использования значения <code>auto</code>, содержимое занимает столько прострванства сколько ему потребуется.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: css">column-fill: auto;
+column-fill: balance;
+
+/* Значения по умолчанию */
+column-fill: inherit;
+column-fill: initial;
+column-fill: unset;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>Высота столбцов не контролируется.</dd>
+ <dt><code>balance</code></dt>
+ <dd>Разделяет содержимое на равные по высоте столбцы.</dd>
+</dl>
+
+<h3 id="Возможные_значения">Возможные значения</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush:css; highlight=[4]">.content-box {
+  column-count: 4;
+  column-rule: 1px solid black;
+  column-fill: balance;
+  height: 200px;
+}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Multicol', '#column-fill', 'column-fill')}}</td>
+   <td>{{Spec2('CSS3 Multicol')}}</td>
+   <td>Значение по умолчанию</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("13.0")}}{{property_prefix('-moz')}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("13.0")}}{{property_prefix('-moz')}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

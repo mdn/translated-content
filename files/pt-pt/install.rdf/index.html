@@ -1,0 +1,255 @@
+---
+title: install.rdf
+slug: install.rdf
+tags:
+  - Extensões
+  - Toolkit API
+translation_of: Archive/Mozilla/Creating_a_Skin_for_SeaMonkey_2.x/install.rdf
+---
+<h3 id="Introdu.C3.A7.C3.A3o" name="Introdu.C3.A7.C3.A3o">Introdução</h3>
+<p>Um Manifesto de Instalação é o arquivo que o Gerenciador de Complementos ativa os usos do aplicativo XUL para determinar informações sobre um complemento enquanto está sendo instalado. Ele contém metadados identificando o complemento, proporcionando informações sobre quem o criou, onde podem ser encontradas mais informações sobre ele, quais versões do aplicativo são compatíveis com esta, como esta pode ser atualizada, e assim por diante.</p>
+<p>O formato do Manifesto de Instalação é RDF/XML.</p>
+<p>O arquivo deve ter o nome de <code>install.rdf</code> e estar no nível mais elevado de um arquivo XPI de complemento.</p>
+<h3 id="Disposi.C3.A7.C3.A3o" name="Disposi.C3.A7.C3.A3o">Disposição</h3>
+<p>A disposição básica de um Manifesto de Instalação é assim:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- properties --&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>Algumas propriedades são necessárias, algumas são opcionais. Algumas tem strings com valores simples, algumas são complexos recursos.</p>
+<h3 id="Refer.C3.AAncia_necess.C3.A1ria_da_propriedade" name="Refer.C3.AAncia_necess.C3.A1ria_da_propriedade">Referência necessária da propriedade</h3>
+<p>Seu Manifesto de Instalação deve especificar estas propriedades corretamente, caso contrário seu complemento poderá não instalar.</p>
+<h4 id="id_.28identifica.C3.A7.C3.A3o.29" name="id_.28identifica.C3.A7.C3.A3o.29">id (identificação)</h4>
+<p>O id da extensão, o qual é um:</p>
+<ul>
+ <li>GUID (gerado usando "guidgen" no sistema Windows ou "uuidgen" no sistema Unix) (Firefox 1.0)</li>
+ <li><strong>Fifefox 1.5 e mais recentes:</strong> Uma string formatada como:</li>
+</ul>
+<p><code><a class="link-mailto" href="mailto:extensionname@organization.tld" rel="freelink">extensionname@organization.tld</a></code></p>
+<p>O último formato é significantemente mais fácil de gerar e manipular. O Firefox 1.5 checará para assegurar que seu id caia em um formato ou outro e irá recusar-se a instalar complementos que tenham ids malformados.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:id&gt;<a class="link-mailto" href="mailto:myextension@mysite.com" rel="freelink">myextension@mysite.com</a>&lt;/em:id&gt;
+
+&lt;em:id&gt;{daf44bf7-a45e-4450-979c-91cf07434c3d}&lt;/em:id&gt;
+</pre>
+<h4 id="version_.28vers.C3.A3o.29" name="version_.28vers.C3.A3o.29">version (versão)</h4>
+<p>Uma string de versão identifica a versão do complemento fornecido.</p>
+<p>Para o Firefox/Thunderbird 1.0, o formado deve ser conforme as regras especificadas em <a href="/en/Extension_Versioning,_Update_and_Compatibility">en:Extension Versioning, Update and Compatibility</a>. Para Firefox/Thunderbird 1.5, veja <a href="/en/Toolkit_version_format">en:Toolkit version format</a>.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:version&gt;2.0&lt;/em:version&gt;
+
+&lt;em:version&gt;1.0.2&lt;/em:version&gt;
+
+&lt;em:version&gt;0.4.1.2005090112&lt;/em:version&gt;
+
+</pre>
+<p><strong>Firefox 1.5 / XULRunner 1.8</strong> - complementos que não utilizam um formato de versão válida não serão instalados. O formato da versão é diferente, embora seja compatível com 1.0 mais antigas.</p>
+<p><strong>Para complementos hospedados em addons.mozilla.org</strong> — o site de atualizações Mozilla pode re-empacotar seu complemento e corrigir ou rejeitar strings de versão malformadas.</p>
+<h4 id="type_.28tipo.29" name="type_.28tipo.29">type (tipo)</h4>
+<p>Um valor inteiro representando o tipo do complemento.</p>
+<table>
+ <tbody>
+  <tr>
+   <td>2</td>
+   <td>Extensões</td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td>Temas</td>
+  </tr>
+  <tr>
+   <td>8</td>
+   <td>Locais</td>
+  </tr>
+  <tr>
+   <td>16</td>
+   <td>Plugins</td>
+  </tr>
+  <tr>
+   <td>32</td>
+   <td><a href="/en/Multiple_Item_Packaging">Multiple Item Package</a></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:type&gt;2&lt;/em:type&gt;
+</pre>
+<p><strong>Firefox 1.5</strong> Esta propriedade foi adicionada ao Firefox 1.5, e é somente necessário para complementos que não sejam Extensões e Temas.</p>
+<h4 id="targetApplication_.28alvo_do_aplicativo.29" name="targetApplication_.28alvo_do_aplicativo.29">targetApplication (alvo do aplicativo)</h4>
+<p>Um objeto especificando um aplicativo marcado por este complemento. Este meio que o complemento irá trabalhar com o aplicativo identificado pela propriedade id (<code>&lt;em:id&gt;</code>) especificado (para uma lista compreensível de IDs de aplicativos veja "Valid App Versions for Addon Developers" em <a class="link-https" href="https://addons.mozilla.org/faq.php">Mozilla Addons FAQ</a>), da versão mínima (<code>&lt;em:minVersion&gt;</code>) subindo e incluindo a versão máxima (<code>&lt;em:maxVersion&gt;</code>). Estas strings da versão são formatadas do mesmo modo como <a href="#version_.28vers.C3.A3o.29"><code>version</code> property</a> e serão comparados à versão do aplicativo; isto permite ao autor da extensão especificar quais as versões do Firefox e extensões foram testadas com.</p>
+<p>Nota: O Firefox 1.0-1.0.6 todo tem uma versão de aplicativo de <code>1.0</code>. Atualizações de segurança e estabilidade do Firefox 1.5 têm versão do aplicativo 1.5.0.1, 1.5.0.2, etc. Extensões compatíveis com o Firefox ou Thunderbird 1.5 devem especificar uma maxVersion de 1.5.0.*, de modo que são automaticamente compatíveis com atualizações de segurança e estabilidade.</p>
+<p>Extensões compatíveis com o Firefox 2 devem especificar uma <code>maxVersion</code> de <code>2.0.0.*</code></p>
+<p>O Manifesto de Instalação deve especificar ao menos um destes objetos, e pode especificar mais se os alvos múltiplos da aplicação do complemento suportarem o Gerenciador de Complementos (e.g. Firefox e Thunderbird)</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:targetApplication&gt;
+ &lt;Description&gt;
+  &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt; <span class="comment">Firefox</span>
+  &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+  &lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
+ &lt;/Description&gt;
+&lt;/em:targetApplication&gt;
+</pre>
+<h4 id="name_.28nome.29" name="name_.28nome.29">name (nome)</h4>
+<p>O nome do complemento — entendido por exibir o UI.</p>
+<p><strong>Exemplos </strong></p>
+<pre class="eval">&lt;em:name&gt;My Extension&lt;/em:name&gt;
+</pre>
+<h3 id="Refer.C3.AAncia_de_propriedade_opcional" name="Refer.C3.AAncia_de_propriedade_opcional">Referência de propriedade opcional</h3>
+<p>Você pode necessitar fornecer estas propriedades, dependendo das capaciadades do seu complemento.</p>
+<p> </p>
+<h4 id="description_.28descri.C3.A7.C3.A3o.29" name="description_.28descri.C3.A7.C3.A3o.29">description (descrição)</h4>
+<p>Uma pequena descrição do complemento &amp;mdash para exibição na interface de usuário. Esta descrição deve caber em uma curta linha de texto.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:description&gt;Ferramentas avançadas de rodapé.&lt;/em:description&gt;
+</pre>
+<h4 id="creator_.28criador.29" name="creator_.28criador.29">creator (criador)</h4>
+<p>O nome do criador/principal desenvolvedor &amp;mdash para exibição na interface de usuário.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:creator&gt;John Doe&lt;/em:creator&gt;
+</pre>
+<p>or</p>
+<pre class="eval">&lt;em:creator&gt;CoolExtension Team&lt;/em:creator&gt;
+</pre>
+<h4 id="developer_.28desenvolvedor.29" name="developer_.28desenvolvedor.29">developer (desenvolvedor)</h4>
+<p>Os nomes dos co-desenvolvedores. Você pode especificar mais de um valor para especificar múltiplos desenvolvedores. <strong>Novo no Firefox 2.0</strong></p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:developer&gt;Jane Doe&lt;/em:developer&gt;
+&lt;em:developer&gt;Koos van der Merwe&lt;/em:developer&gt;
+</pre>
+<h4 id="translator_.28tradutor.29" name="translator_.28tradutor.29">translator (tradutor)</h4>
+<p>Os nomes dos tradutores. Você pode especificar mais de um valor para especificar múltiplos tradutores. <strong>Novo no Firefox 2.0</strong></p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:translator&gt;Janez Novak&lt;/em:translator&gt;
+&lt;em:translator&gt;Kari Nordmann&lt;/em:translator&gt;
+</pre>
+<h4 id="contributor_.28contribuidor.29" name="contributor_.28contribuidor.29">contributor (contribuidor)</h4>
+<p>Os nomes de contribuidores adicionais. Você pode especificar mais de um valor para especificar múltiplos contribuidores.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+
+&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Jane Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Elvis Presley&lt;/em:contributor&gt;
+</pre>
+<h4 id="homepageURL_.28p.C3.A1gina_principal_da_URL.29" name="homepageURL_.28p.C3.A1gina_principal_da_URL.29">homepageURL (página principal da URL)</h4>
+<p>Um link para a página principal do complemento &amp;mdash para exibir na inteface de usuário.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:homepageURL&gt;<span class="nowiki">http://www.foo.com/</span>&lt;/em:homepageURL&gt;
+</pre>
+<h4 id="updateURL_.28URL_de_atualiza.C3.A7.C3.A3o.29" name="updateURL_.28URL_de_atualiza.C3.A7.C3.A3o.29">updateURL (URL de atualização)</h4>
+<p>Um link para um arquivo customizado de Manifesto de Atualização que especifique atualizações disponíveis para o complemento. O formato é descrito abaixo. Se habilitado, o Gerenciador de Complementos periodicamente checará com o arquivo de Manifesto para determinar se novas versões estão disponíveis.</p>
+<p>Seu servidor deve enviar este arquivo como <code>text/rdf</code> ou o checador de atualizações não irá trabalhar. <code>text/xml</code> também parece trabalhar (projetos em mozdev.org)</p>
+<p>O Gerenciador de Complementos irá substituir os seguintes valores neste URL em casos de você querer gerar a resposta RDF dinamicamente, tal como usar PHP ou CGI:</p>
+<table>
+ <tbody>
+  <tr>
+   <td><code>%REQ_VERSION%</code></td>
+   <td>A versão requisitada. Atualmente 1</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_ID%</code></td>
+   <td>O <code>id</code> do complemento que terá de atualizar</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_VERSION%</code></td>
+   <td>A <code>version</code> (versão) do complemento que terá de atualizar</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_MAXAPPVERSION%</code></td>
+   <td>A <code>maxVersion</code> (versão máxima) do objeto <code>targetApplication</code> (alvo de aplicação) correspondente à aplicação atual para o complemento ser atualizado.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_ID%</code></td>
+   <td>O <code>id</code> atual da aplicação</td>
+  </tr>
+  <tr>
+   <td><code>%APP_VERSION%</code></td>
+   <td>A <code>version</code> (versão) atual aplicação</td>
+  </tr>
+  <tr>
+   <td><code>%APP_OS%</code></td>
+   <td>O valor de <code>OS_TARGET</code> do sistema de construção do Firefox, identificando o sistema operacional a ser usado. <strong>Novo no Firefox 1.5</strong></td>
+  </tr>
+  <tr>
+   <td><code>%APP_ABI%</code></td>
+   <td>O valor de <code>TARGET_XPCOM_ABI</code> do sistema de construção do Firefox, identificando o compilador/combinação de arquitetura usada para compilar a atual aplicação. <strong>Novo no Firefox 1.5</strong></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/update.cgi?id=%ITEM_ID%&amp;amp;version=%ITEM_VERSION%</span>&lt;/em:updateURL&gt;
+&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/extension/windows.rdf</span>&lt;/em:updateURL&gt;
+</pre>
+<p><strong>Para complementos hospedados em addons.mozilla.org:</strong> Você não pode especificar a propriedade de URL de atualização. Por padrão, aplicativos Mozilla usando o Gerenciador de Complementos (tal como o Firefox e o Thunderbird) enviaram requerimentos de atualização para <code>addons.mozilla.org</code> usando o serviço web padrão. Toda a vez que você atualiza para uma nova versão do seu complemento ou muda seus parâmetros de compatibilidade através da interface do autor, seu Manifesto de Atualização será gerado automaticamente.</p>
+<p><strong>Formato do Manifesto de Atualização:</strong> O Manifesto de Atualização é uma fonte de dados RDF/XML. Para exemplos de um Manifesto de Atualização, veja <a href="/en/Extension_Versioning,_Update_and_Compatibility#Custom Update RDF Format">Extension Versioning, Update and Compatibility</a> e <a href="/en/Enabling_Extension_Updates_(external)">en:Enabling Extension Updates (external)</a>.</p>
+<h4 id="optionsURL_.28URL_de_op.C3.A7.C3.B5es.29" name="optionsURL_.28URL_de_op.C3.A7.C3.B5es.29">optionsURL (URL de opções)</h4>
+<p>A URL <code>chrome://</code> da caixa de diálogo das opções da extensão. Isto é utilizável somente para extensões. Se esta propriedade é especificada, quando a extensão é selecionada na lista de Extensões, o botão de Opções é habilitado e mostrará isto.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:optionsURL&gt;<a class="external" rel="freelink">chrome://myext/content/options.xul</a>&lt;/em:optionsURL&gt;
+</pre>
+<h4 id="aboutURL_.28URL_sobre.29" name="aboutURL_.28URL_sobre.29">aboutURL (URL sobre)</h4>
+<p>A URL <code>chrome://</code> da caixa de diálogo de opções da extensão. Isto é utilizável somente para extensões. Se esta propriedade é especificada, quando a extensão é selecionada na lista de Extensões, o link Sobre... no menu de contexto da extensão exibirá este diálogo, antes que o padrão.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:aboutURL&gt;<a class="external" rel="freelink">chrome://myext/content/about.xul</a>&lt;/em:aboutURL&gt;
+</pre>
+<h4 id="iconURL_.28URL_de_.C3.ADcones.29" name="iconURL_.28URL_de_.C3.ADcones.29">iconURL (URL de ícones)</h4>
+<p>Um URL <code>chrome://</code> para um ícone 32x32 para exibir na lista de complementos. Se esta propriedade não é especificada um ícone padrão é utilizado.</p>
+<pre class="eval">&lt;em:iconURL&gt;<a class="external" rel="freelink">chrome://myext/skin/icon.png</a>&lt;/em:iconURL&gt;
+</pre>
+<p>Nota: <em>Para o exemplo acima trabalhar você também terá que adicionar uma linha <code>skin package</code> ao seu arquivo <code>chrome.manifest</code>. Veja <a href="/pt/chrome.manifest#skin_.28pele.29" title="pt/chrome.manifest#skin_.28pele.29">Registro Chrome</a>.</em> Alternativamente você pode colocar seu ícone no diretório especificado na linha do seu <code>content package</code>.</p>
+<h4 id="hidden_.28oculto.29" name="hidden_.28oculto.29">hidden (oculto)</h4>
+<p>Um valor booleano que pode ser <code>true</code> (verdadeiro) faz que o complemento não apareça na lista de complementos, proporcionando um complemento que é instalado em uma <a href="/pt/install.rdf#.C3.81rea_de_acesso_restrito" title="pt/install.rdf#.C3.81rea_de_acesso_restrito">área de acesso restrito</a> (então ela não trabalhará para complementos instalados no perfil). Isto é para empacotar ganchos de integração às aplicações maiores onde ter uma entrada na lista de Extensões não faz sentido.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:hidden&gt;true&lt;/em:hidden&gt;
+</pre>
+<h4 id="targetPlatform_.28plataforma_alvo.29" name="targetPlatform_.28plataforma_alvo.29">targetPlatform (plataforma alvo)</h4>
+<p>Uma string especificando uma plataforma que o complemento suporte. Isto contém qualquer valor de OS_TARGET sozinho ou combinado com <a href="/en/XPCOM_ABI">:en:TARGET_XPCOM_ABI</a>, separado por sublinhado (_).</p>
+<p>OS_TARGET é típicamente a saída do comando 'uname -s' na plataforma alvo, e.g.:</p>
+<ul>
+ <li><code>WINNT</code> para Windows NT, 2000, XP e mais recentes</li>
+ <li><code>Linux</code> para todas as versões do Linux</li>
+ <li><code>Darwin</code> para todas as versões do MacOS X</li>
+</ul>
+<p>Você pode especificar múltiplas propriedades targetPlatform por manifesto. Se algum valor inicia os parâmetros de construção do aplicativo, ele estará instalado; se não, o usuário receberá uma mensagem de erro apropriada.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:targetPlatform&gt;WINNT_x86-msvc&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Linux&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Darwin_ppc-gcc3&lt;/em:targetPlatform&gt;
+</pre>
+<p>Normalmente, você usaria somente a parte do sistema operacional para temas ou para extensões que não são interamente "cross-plataform". Para extensões incluindo componentes binários (compilados), você nunca deve usar o sistema operacional sozinho, mas inclua o <a href="/en/XPCOM_ABI">:en:ABI (s)</a> que compilou os componentes com. Se você quer incluir múltiplas versões de componentes, você devia usar também <a href="/en/Bundles#Platform-specific Subdirectories">:en:Platform-specific Subdirectories</a>.</p>
+<p><strong>Notas</strong></p>
+<ul>
+ <li>No mesmo arquivo de manifesto, você mesmo pode misturar valores com ou sem ABI. Se um valor para o aplicativo do sistema operacional é encontrado e requisite algum ABI específico, o ABI é considerado importante para este sistema operacional e o aplicativo recusará a instalação do complemento se ele não encontrar uma combinação de partida sistema operacional/ABI. Este meio que todos os exemplos anteriores ocorreram em um manifesto, o complemento instalará em qualquer construção Linux do aplicativo, indiferente de seu ABI, mas não em uma construção Windows Cygwin.</li>
+</ul>
+<ul>
+ <li>Talvez possa construir do Firefox e do Thunderbird os quais não "sabem" suas ABI (portas preferidas para plataformas raras, ou construções não-oficiais). Estas construções recusarão a instalação de qualquer complemento que requisite um ABI especifico para sua plataforma.</li>
+</ul>
+<p><strong>Firefox 1.5</strong> Esta propriedade foi adicionada para o Firefox/Thunderbird 1.5. Versões anteriores destes aplicativos irão ignorar as restrições e instalaram o complemento sem levar em conta a plataforma.</p>
+<h3 id="Refer.C3.AAncia_de_propriedade_obsoleta" name="Refer.C3.AAncia_de_propriedade_obsoleta">Referência de propriedade obsoleta</h3>
+<p>Estas propriedades são requisitadas em versões antigas do Gerenciador de Complementos, mas tem que ser recolocadas com mecanismos novos e melhores.</p>
+<h4 id="file_.28arquivo.29" name="file_.28arquivo.29">file (arquivo)</h4>
+<p><strong>Firefox 1.0</strong> Esta propriedade aponta para um arquivo chrome <code>.jar</code> que contém pacotes chrome que requisitam registro com o Registro Chrome.</p>
+<p>A propriedade <code>&lt;em:file&gt;</code> tem um objeto de valor complexo. O URL deste valor é <code>urn:mozilla:extension:file:jarFile.jar</code> onde <code>jarFile.jar</code> é o nome do arquivo jar que contém o pacote de arquivos chrome, un-jarred (e.g. <code>urn:mozilla:extension:file:directory</code>).</p>
+<p>Este objeto tem uma propriedade de <code>package</code> (pacote) (com um caminho demtro do arquivo jar ou diretório que leva à localização de onde o arquivo <code>contents.rdf</code> está responsável pelo registro de onde o pacote está localizado), uma propriedade <code>locale</code> (idem, mas para registrar o local) e a propriedade <code>skin</code> (idem, mas para registrar o material do tema).</p>
+<p>Em extensões para o Firefox 1.5, esta propriedade não é necessária: o <code><a href="/pt/chrome.manifest" title="pt/chrome.manifest">chrome.manifest</a></code> no nível máximo do XPI é usado para localizar o chrome para registrar. Se não há chrome.manifest, esta propriedade ainda é lida pelo Gerenciador de Complementos e o chrome.manifest é gerado de um antigo estilo contents.rdf.</p>
+<p><strong>Exemplos</strong></p>
+<pre class="eval">&lt;em:file&gt;
+ &lt;Description about="urn:mozilla:extension:file:myext.jar"&gt;
+  &lt;em:package&gt;content/myext/&lt;/em:package&gt;
+  &lt;em:locale&gt;locale/en-US/myext/&lt;/em:locale&gt;
+  &lt;em:skin&gt;skin/classic/myext/&lt;em:skin&gt;
+ &lt;/Description&gt;
+&lt;/em:file&gt;
+</pre>
+<p>Um Manifesto de Instalação pode especificar múltiplas propriedades <code>file</code>, um por um arquivo jar ou subdiretório que contenha o chrome para registrar.</p>
+<h3 id="Gloss.C3.A1rio" name="Gloss.C3.A1rio">Glossário</h3>
+<h3 id=".C3.81rea_de_acesso_restrito" name=".C3.81rea_de_acesso_restrito">Área de acesso restrito</h3>
+<p>Uma <em>área de acesso restrito</em> é um local de instalação que pode ser restrito com uma conta de acesso restrito, sem ter em conta se a situação é restringida com privilégios do usuário atual (veja <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl#80" rel="custom">nsIInstallLocation::restricted</a>). Normalmente, a pasta <code>($APPDIR)/extensions</code> e a localização do registro de instalação embaixo de <code>HKEY_LOCAL_MACHINE</code> (veja <a href="/en/Adding_Extensions_using_the_Windows_Registry">en:Adding Extensions using the Windows Registry</a> para detalhes) são restritas.</p>
+<p>Os <code>($PROFILE)/extensions</code> e <code>HKEY_CURRENT_USER</code> locais de instalação, na outra mão, não são restritos.</p>

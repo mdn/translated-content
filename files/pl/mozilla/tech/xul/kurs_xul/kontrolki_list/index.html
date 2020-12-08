@@ -1,0 +1,140 @@
+---
+title: Kontrolki list
+slug: Mozilla/Tech/XUL/Kurs_XUL/Kontrolki_list
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/List_Controls
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrolki_numeryczne" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Paski_postępu">Następny  »</a></p>
+</div>
+<p></p><p>XUL posiada kilka typów elementów do tworzenia pól list.
+</p>
+<h3 id="Pola_listy" name="Pola_listy">Pola listy </h3>
+<p>Pola listy stosuje się do wyświetlania kilku pozycji w liście. Użytkownik ma możliwość wybierania dowolnych pozycji z takiej listy.
+</p><p>XUL udostępnia dwa typy elementów do tworzenia list, element <code><a href="pl/XUL/listbox">listbox</a></code> do tworzenia list wielowierszowych oraz element <code><a href="pl/XUL/menulist">menulist</a></code> do list rozwijanych. Działają w podobny sposób do elementu <code>select</code> znanego z HTML-a, który wykonuje obie funkcje, ale elementy XUL posiadają więcej dodatkowych cech. </p><p>Najprostsze pole listy stosuje element <code><a href="pl/XUL/listbox">listbox</a></code> dla określenia swojego pola oraz element <code><a href="pl/XUL/listitem">listitem</a></code> dla każdej pozycji. Na przykład: pole listy będzie zawierało cztery wiersze, jeden dla każdej pozycji.
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:lists1.png"></div>
+<pre>&lt;listbox&gt;
+  &lt;listitem label="Butter Pecan"/&gt;
+  &lt;listitem label="Chocolate Chip"/&gt;
+  &lt;listitem label="Raspberry Ripple"/&gt;
+  &lt;listitem label="Squash Swirl"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>Podobnie jak w przypadku elementu <code>option</code> z HTML-a możliwe jest powiązanie wartości każdej pozycji poprzez użycie atrybutu <code>value</code>. Następnie możemy stosować wartości w skryptach. Pole listy domyślnie przyjmuje odpowiedni rozmiar, ale możemy go kontrolować atrybutem <code><code id="a-rows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/rows">rows</a></code></code>. Ustaw go na odpowiednią liczbę wierszy (<code>rows</code>), aby wyświetlić je w polu listy. Pasek przewijania użytkownik zastosuje, jeśli będą do wyświetlenia dodatkowe wiersze. </p><p>Poniższy przykład prezentuje te dodatkowe cechy: </p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:lists2-ex.png"></div>
+<pre>&lt;listbox rows="3"&gt;
+  &lt;listitem label="Butter Pecan" value="bpecan"/&gt;
+  &lt;listitem label="Chocolate Chip" value="chocchip"/&gt;
+  &lt;listitem label="Raspberry Ripple" value="raspripple"/&gt;
+  &lt;listitem label="Squash Swirl" value="squash"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>Przykład został przystosowany do wyświetlania tylko trzech wierszy na raz. Do każdej pozycji listy zostały też dodane wartości. Pola list posiadają kilka dodatkowych cech, które opiszemy później.
+</p>
+<h3 id="Wielokolumnowe_pola_listy" name="Wielokolumnowe_pola_listy"> Wielokolumnowe pola listy </h3>
+<p>Pole listy obsługuje również wiele kolumn. Każda komórka może posiadać dowolną zawartość, chociaż najczęściej jest stosowany tekst. Kiedy użytkownik wybiera pozycję na liście, zaznaczany zostaje cały wiersz. Nie ma możliwości wybrania pojedynczej komórki.
+</p><p>Dwa znaczniki służą do określania kolumn w polu listy. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code></code> przechowuje informację o kolumnach, z których każda określona jest przy pomocy elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code></code>. Dla każdej kolumny należy stosować jeden element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code></code>.
+</p><p>Dla każdej komórki w wierszu możemy stosować element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code>. Jeśli chcesz mieć trzy kolumny, będziesz musiał dodać trzy elementy <code>listcell</code> wewnątrz każdego <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>. Do określenia tekstu zawartego w komórce umieść atrybut <code>label</code> w <code>listcell</code>. W prostym przypadku, gdy jest tylko jedna kolumna, atrybut <code>label</code> możemy kierować bezpośrednio do elementu <code>listitem</code> i w ogóle nie korzystać z elementu <code>listcell</code>, jak to widzieliśmy we wcześniejszym przykładzie.
+</p><p>Następujący przykład jest polem listy z dwoma kolumnami i trzema wierszami:
+</p><p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:morelists0.png"></div>
+<pre>&lt;listbox&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Grzegorz"/&gt;
+    &lt;listcell label="Malarz"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Maria"/&gt;
+    &lt;listcell label="Producent świeczek"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Robert"/&gt;
+    &lt;listcell label="Spawacz"/&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+<h3 id="Wiersz_nag.C5.82.C3.B3wka" name="Wiersz_nag.C5.82.C3.B3wka"> Wiersz nagłówka </h3>
+<p>Pola listy pozwalają również na zastosowanie specjalnego wiersza nagłówka. Pod wieloma względami jest zwyczajnym wierszem z tym wyjątkiem, że wyświetla się go w odmienny sposób. Zastosujemy go do utworzenia nagłówka kolumn. Zastosujemy dwa nowe składniki. </p><p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code></code> stosuje się w wierszach nagłówka, tak samo jak element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code> w tradycyjnych wierszach. Jednakże nagłówek wiersza nie jest kiedykolwiek normalnym wierszem, więc stosujemy skrypt, aby pobrać pierwszy wiersz w polu listy, będzie pomijał wiersz nagłówka. </p><p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code></code> stosujemy dla każdej komórki wiersza nagłówka. Stosując atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> do ustawienia etykiety dla wszystkich komórek nagłówka.
+</p><p>Oto wcześniejszy przykład z wierszem nagłówka:
+</p><p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:Morelists1.png"></div>
+<pre>&lt;listbox&gt;
+
+  &lt;listhead&gt;
+    &lt;listheader label="Imię"/&gt;
+    &lt;listheader label="Zawód"/&gt;
+  &lt;/listhead&gt;
+
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol flex="1"/&gt;
+  &lt;/listcols&gt;
+
+  &lt;listitem&gt;
+    &lt;listcell label="Grzegorz"/&gt;
+    &lt;listcell label="Malarz"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Maria"/&gt;
+    &lt;listcell label="Producent świeczek"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Robert"/&gt;
+    &lt;listcell label="Spawacz"/&gt;
+  &lt;/listitem&gt;
+
+&lt;/listbox&gt;
+</pre>
+<p>W tym przykładzie atrybut <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> zastosowano do utworzenia elastycznej kolumny. Atrybut ten będzie opisany w dalszych artykułach, lecz w tym artykule pozwala kolumnie zająć całą dostępną wolną przestrzeń w poziomie. Możemy zmieniać rozmiar okna, aby zobaczyć, że obszary kolumny rozciągają się razem z oknem. Jeśli zmniejszymy okno w poziomie, etykieta znajdująca się w komórce zostanie automatycznie skrócona i zakończona wielokropkiem. Możemy także zastosować atrybut <code><code id="a-crop"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/crop">crop</a></code></code> do komórek lub pozycji ustawiając je na wartość <code>none</code>, aby wyłączyć użycie wielokropka.
+</p>
+<h3 id="Listy_rozwijane" name="Listy_rozwijane">Listy rozwijane </h3>
+<p>W HTML-u listy rozwijane tworzymy za pomocą elementu <code>select</code>. Użytkownik widzi pojedyncze pole tekstowe wyboru i może kliknąć strzałkę lub podobny przycisk obok tego pola tekstowego, aby zaznaczyć inną pozycję. Pozostałe możliwości będą dostępne w wyskakującym oknie. XUL posiada element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>, który ma tą własność. Utworzony jest on z pola tekstowego z przyciskiem obok. Taka nazwa została wybrana, ponieważ okienka wyskakują z menu listy rozwijanej, dającej możliwość wyboru.
+</p><p>Do zdefiniowania listy rozwijanej potrzebne są trzy elementy. Pierwszym jest element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>, który tworzy pole tekstowe z przyciskiem przy nim. Drugi element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> tworzy okienko pojawiające się po kliknięciu przycisku. Trzecim jest element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> tworzący poszczególne pozycje. </p><p>Składna poniżej najlepiej przedstawia przykład listy rozwijanej: </p><p><span id="Przyk%C5%82ad_5"><a id="Przyk%C5%82ad_5"></a><strong>Przykład 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:inputs2.png"></div>
+<pre>&lt;menulist label="Autobus"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Auto"/&gt;
+    &lt;menuitem label="Taxi"/&gt;
+    &lt;menuitem label="Autobus" selected="true"/&gt;
+    &lt;menuitem label="Pociąg"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>W tym przypadku lista rozwijana składa się z czterech pozycji do wyboru, jeden dla każdego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>. Aby wyświetlić pozycje listy, kliknij w przycisk strzałki na liście. Kiedy jedna pozycja jest zaznaczona, to pojawiająca się pozycja jest wybrana z listy. Atrybut <code>selected</code> stosuje się do wskazania wartości, która jest zaznaczona domyślnie.
+</p>
+<h4 id="Lista_menu_do_edycji" name="Lista_menu_do_edycji"> Lista menu do edycji </h4>
+<p>Domyślnie możemy tylko zaznaczyć pozycję do wybrania z listy. Nie możemy wprowadzić własnego tekstu. Wariant pozwalający na edycję tekstu w polach listy rozwijanej. Na przykład, pole adresu URL w przeglądarce posiada rozwijaną listę do wybierania wcześniej wpisywanych adresów URL, ale pozwala także na wpisywanie własnych.
+</p><p>Aby utworzyć edytowaną listę rozwijaną, dodaj atrybut <code><code id="a-editable"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/editable">editable</a></code></code> w sposób pokazany poniżej:
+</p><p><span id="Przyk%C5%82ad_6"><a id="Przyk%C5%82ad_6"></a><strong>Przykład 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul">Podgląd</a>
+</p>
+<pre>&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="www.mozilla.org"/&gt;
+    &lt;menuitem label="www.xulplanet.com"/&gt;
+    &lt;menuitem label="www.dmoz.org"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>Utworzone pole adresu URL w powyższym przykładzie posiada trzy predefiniowane pola wyboru, które użytkownik może zaznaczyć lub może wpisać w jedną pozycję własną zawartość pola. Tekst wpisywany przez użytkownika nie zostanie dodany jako nowe pole wyboru listy. Ponieważ atrybut <code>label</code> nie został zastosowany w przykładzie, jego domyślna wartość pozostanie pusta.
+</p><p>W następnym artykule dowiemy się <a href="pl/Kurs_XUL/Paski_post%c4%99pu">jak tworzyć paski postępu</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrolki_numeryczne" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Paski_postępu">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

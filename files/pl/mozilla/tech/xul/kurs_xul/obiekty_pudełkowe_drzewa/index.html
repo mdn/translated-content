@@ -1,0 +1,189 @@
+---
+title: Obiekty pudełkowe drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Obiekty_pudełkowe_drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Box_Objects
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Szczegóły_widoku_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Wprowadzenie_do_RDF">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule opisane będą elementy okna drzewa, odpowiedzialne za to jak drzewo wygląda.</p>
+
+<h2 id="O_obiektach" name="O_obiektach">O obiektach</h2>
+
+<p>Obiekty okna były opisane we <a href="pl/Kurs_XUL/Szczeg%c3%b3%c5%82y_widoku_drzewa">wcześniejszym artykule</a>. Obiekty okna drzewa, specjalnym rodzajem przeznaczony dla drzew. Okno drzewa wdrąża interfejs <a class="external" href="http://www.xulplanet.com/references/objref/TreeBoxObject.html">TreeBoxObject</a>.</p>
+
+<h3 id="Przerysowywanie_drzewa" name="Przerysowywanie_drzewa">Przerysowywanie drzewa</h3>
+
+<p>Poznaliśmy już <code>rowCountChanged()</code>, funkcję okna drzewa. Jest używana, żeby wykazać, że jeden lub więcej wierszy było dodanych lub usuniętych. Drzewo przerysuje dany obszar. Nie musisz wywoływać tej funkcji, gdy wiersz został nieznacznie zmieniony, tzn. zmieniona została etykieta komórki. A takim przypadku lepiej wywołać prostszą funkcję <code>invalidateRow()</code> w celu przerysowania pojedynczego wiersza. Drzewo wywoła widok, by dodać uaktualnienie a następnie zaktualizuje zawartość ekranu.</p>
+
+<p>Inne przerysowujące funkcje to:</p>
+
+<ul>
+ <li><code>invalidateCell()</code> do przerysowywania pojedynczych komórek,</li>
+ <li><code>invalidateColumn()</code> przerysowuje kolumny,</li>
+ <li><code>invalidateRange()</code> przerysowuje obszar wierszy,</li>
+ <li><code>invalidate()</code> przerysowuje the entire tree.</li>
+</ul>
+
+<p>Zauważ, że przerysowanie nie nastąpi do momentu, aż Mozilla nie przerysuje tego w tle.</p>
+
+<h3 id="Przewijanie_drzewa" name="Przewijanie_drzewa">Przewijanie drzewa</h3>
+
+<p>Możesz przewijać drzewo używając różnych metod, podobnych do tych z pól listy. Funkcja scrollToRow może być użyta do przewinięcia konkretnego rzędu. Oto prosty przykład:</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul">Podgląd</a></p>
+
+<pre>&lt;script&gt;
+function doScroll(){
+  var value = document.getElementById("tbox").value;
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.scrollToRow(value);
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" rows="4"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="row" label="Row" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem label="Row 0"/&gt;
+    &lt;treeitem label="Row 1"/&gt;
+    &lt;treeitem label="Row 2"/&gt;
+    &lt;treeitem label="Row 3"/&gt;
+    &lt;treeitem label="Row 4"/&gt;
+    &lt;treeitem label="Row 5"/&gt;
+    &lt;treeitem label="Row 6"/&gt;
+    &lt;treeitem label="Row 7"/&gt;
+    &lt;treeitem label="Row 8"/&gt;
+    &lt;treeitem label="Row 9"/&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Scroll to row:"/&gt;
+  &lt;textbox id="tbox"/&gt;
+  &lt;button label="Scroll" oncommand="doScroll();"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>Zauważ, że używamy atrybutów wierszy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> żeby wyszczególnić, że tylko cztery wiersze są pokazane jednocześnie. To czyni przykład prostszym, w dostrzeżeniu jak pracuje. Zauważ też, że pierwszym wierszem jest 0.</p>
+
+<p>Funkcja <code>doScroll()</code> pobiera obiekt okna i wywołuje funkcję <code>scrollToRow()</code> z argumentem ustawionym na wartość textbox. Zauważ, że obiekt okna drzewa może być odzyskany tą samą drogą jak obiekty okna używające własności <a class="external" href="http://www.xulplanet.com/references/objref/BoxObject.html">boxObject</a>, jednak musimy wywołać <code>QueryInterface()</code>, by przenieść obiekt okna do bardziej wyspecjalizowanego obiektu okna drzewa. Ogólne funkcje obiektów okien są także dostępne dla drzew.</p>
+
+<p>Dodatkowe metody przewijania dają funkcje <code>scrollByLines()</code>, <code>scrollByPages()</code> i <code>ensureRowIsVisible()</code>. <code>scrollByLines()</code> przewija w dół lub w górę o pewna liczbę wierszy. Użyj dodatnich liczb by przewinąć w dół, a ujemnych w górę. Funkcja <code>scrollByPages()</code> przewija o pewna liczbę stron i jest automatycznie wywoływana, gdy użytkownik wciska klawisze PAGE UP i PAGE DOWN, gdy drzewo jest wybrane. Strona jest równoważna liczbie widzianych wierszy. Liczbę wierszy nie jest trudno obliczyć, funkcja <code>getPageLength()</code> zwraca liczbę wierszy na stronie. W przykładzie zwróciła być cztery.</p>
+
+<div class="note">
+<p>Zauważ, ze w Firefox 1.0 i Mozilla 1.7 i wcześniejszych, funkcja <code>getPageLength()</code> jest wywoływana zamiast <code>getPageCount()</code>. Nazwa została zmieniona, ponieważ była mylnie interpretowana, że zwraca liczbę stron, a nie rozmiar. Można określić także liczbę stron, dzieląc liczbę wierszy, przez liczbę wierszy na stronę.</p>
+</div>
+
+<p>Funkcja <code>ensureRowIsVisible()</code> przewinie do rzędu tak, jak <code>scrollToRow()</code>, ale nie w przypadku, gdy wiersz jest już widoczny.</p>
+
+<h2 id="Wsp.C3.B3.C5.82rz.C4.99dne_kom.C3.B3rki" name="Wsp.C3.B3.C5.82rz.C4.99dne_kom.C3.B3rki">Współrzędne komórki</h2>
+
+<p>Kilka z najbardziej interesujących funkcji obiektów okna drzewa, mogą być użyte w celu otrzymania niektórych elementów drzewa.</p>
+
+<ul>
+ <li>Funkcja <code>getCellAt()</code>może być użyta do otrzymania komórki przy określonej lokalizacji piksela, podczas gdy getRowAt służy do uzyskania wiersz przy danej lokalizacji.</li>
+ <li>Funkcja <code>getRowAt()</code> może służyć do pobierania wiersza w określonej lokalizacji. Funkcja <code>getRowAt()</code> pobiera dwa argumenty, współrzędną x i y.</li>
+</ul>
+
+<pre>tree.boxObject.getRowAt( 50, 100 );
+</pre>
+
+<p>Ten przykład zwróci indeks wiersza, z poziomą pozycją 50, a pionową 100. Jedną ważna rzeczą jest to, że współrzędne mierzone jest od górnego, lewego rogu dokumentu, a nie krawędzi drzewa.</p>
+
+<div class="note">One important thing to note is that the coordinates are measured from the upper left corner of the containing document, not the edge of the tree itself.</div>
+
+<p>To czyni łatwiejszym przekazanie współrzędnych do funkcji, jak jest przedstawione na przykładzie funkcji <code>getCellAt()</code>.</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul">Podgląd</a></p>
+
+<pre>&lt;script&gt;
+function updateFields(event){
+  var row = {}, column = {}, part = {};
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.getCellAt(event.clientX, event.clientY, row, column, part);
+
+  if (column.value &amp;&amp; typeof column.value != "string")
+    column.value = column.value.id;
+
+  document.getElementById("row").value = row.value;
+  document.getElementById("column").value = column.value;
+  document.getElementById("part").value = part.value;
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" flex="1" onmousemove="updateFields(event);"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="utensil" label="Utensil" primary="true" flex="1"/&gt;
+    &lt;treecol id="count" label="Count" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Fork"/&gt;
+        &lt;treecell label="5"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Knife"/&gt;
+        &lt;treecell label="2"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Spoon"/&gt;
+        &lt;treecell label="8"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;label value="Row:"/&gt;
+&lt;label id="row"/&gt;
+&lt;label value="Column:"/&gt;
+&lt;label id="column"/&gt;
+&lt;label value="Child Type:"/&gt;
+&lt;label id="part"/&gt;
+</pre>
+
+<p>Funkcja <code>getCellAt()</code> pobiera pięć argumentów, współrzędne i trzy inne argumenty. Pozostałe parametry są użyte dla funkcji żeby zwrócić więcej niż jedna wartość. Zobaczysz pewną liczbę interfejsów, które używają pozostałych parametrów w odniesieniu do <a class="external" href="http://www.xulplanet.com/references/objref/">obiektu XUL-a</a>. Są one wskazane przez słowo ‘out’ przed argumentem. Dla nich, będziesz potrzebować dostarczyć pusty obiekt i funkcja zapełni własność ‘value’ konieczną wartością.</p>
+
+<p>Trzy parametry będą zapełnione wierszem, kolumną i typem pochodnej pozycji. Wiersz jest indeksem wiersza pod kursorem myszy, ponieważ nazywamy ją współrzędnymi znaczenia <code>mousemove</code>. Jeżeli współrzędna nie jest ponad wierszem, wartość wiersza będzie ustawiona na -1. Kolumna jest obiektem kolumny Mozilla 1.8 i późniejszej. We wcześniejszych wersjach kolumny są identyfikowane przez id kolumny. W późniejszych wersjach istnieje oddzielny obiekt kolumny, który może być zapytany o dane kolumny.</p>
+
+<p>Następująca linia jest użyta tak, że przykład zadziała na wszystkich wersjach.</p>
+
+<pre>if (column.value &amp;&amp; typeof column.value != "string")
+  column.value = column.value.id;
+</pre>
+
+<p>Jeżeli kolumna jest ciągiem znaków, używamy Mozilla 1.7 lub wcześniejszej, ale dla wersji późniejszych uzyskujemy id kolumny z obiektu kolumny. Jeżeli tworzysz kod dla wielorakich wersji, powinieneś sprawdzić ten powyżej.</p>
+
+<p>Ostatni argument dla <code>getCellAt()</code> pochodna pozycji wypisze, które pole jest zapełnione ciągiem znaków zależnym od tego, przy której części komórki jest współrzędna. Jeżeli poruszasz myszą dookoła powyższego przykładu, możesz zauważyć, że etykieta zmienia się pomiędzy ‘text’ i ‘cell’. Wartość ‘text’ wskazuje miejsce gdzie tekst mógłby być umieszczony, a cell wskazuje obszar dookoła tekstu. Ostateczną wartością może być ‘image’, jeżeli obraz znajduje się w komórce drzewa, a współrzędna jest odpowiednia dla miejsca gdzie znajduje się obraz.</p>
+
+<p>W celu odwrócenia tego, czyli uzyskania komórki dla danej współrzędnej, użyj funkcji <code>getCoordsForCellItem()</code>. Pobiera ona siedem argumentów jak opisane poniżej.</p>
+
+<pre>var x = {}, y = {}, width = {}, height = {};
+if (typeof tree.columns != "undefined") column = tree.columns[column];
+tree.boxObject.getCoordsForCellItem( row, column, part, x, y, width, height );
+</pre>
+
+<p>Wiersz, kolumna, I cześć argumentów, podobnych do tych zwróconych z funkcji <code>getCellAt()</code>. Znowu kolumna powinna być ciągiem znaków lub obiektem kolumny, zależnie od tego, której wersji używasz. Typ części komórki może być użyty do otrzymania współrzędnych tekstu, całej komórki, krętki lub obrazu w komórce. Te same wartości jak używa funkcja <code>getCellAt()</code>. Funkcja <code>getCoordsForCellItem()</code> zwraca współrzędne x i y, jako parametry wyjściowe.</p>
+
+<p>Następnie, zobaczymy RDF, który może zostać użyty do automatycznego rozmieszczenia drzew i innych elementów.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Szczegóły_widoku_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Wprowadzenie_do_RDF">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,177 @@
+---
+title: Interceptando tráfego de Firefox OS usando um proxy
+slug: Archive/B2G_OS/Debugging/Intercepting_traffic_using_a_proxy
+tags:
+  - Debugando
+  - Depuração
+  - Segurança
+  - Testes
+translation_of: Archive/B2G_OS/Debugging/Intercepting_traffic_using_a_proxy
+---
+<p>{{PreviousNext("Mozilla/Firefox_OS/Debugging/Debugging_and_security_testing", "Mozilla/Firefox_OS/Apps/Testing_in_a_privileged_context")}}</p>
+
+<div class="summary">
+<p>Nesta parte do artigo de depuração e testes de segurança olhamos para interceptar tráfego de Firefox OS usando uma ferramenta de proxy, incluindo listas brancas certificado SSL do proxy para Firefox OS não se importa com alguém interceptar e re-criptografar a comunicação HTTPS. Se você usar o B2G Área de Trabalho, na primeira parte do tutorial sobre como instalá-lo e anexar o shell de depuração Marionette JavaScript é explicado em <a href="/pt-BR/docs/Mozilla/Firefox_OS/Security/Debugging_and_security_testing" style="text-decoration: underline; font-weight: bold; background-color: rgb(244, 247, 248);" title="/en-US/docs/Mozilla/Firefox_OS/Security/Debugging_and_security_testing">Debugging e segurança de testes com o Firefox OS</a>.</p>
+</div>
+
+<p>Trabalhando com aplicativos que não são nada mais do que HTML e JavaScript, você vai descobrir que uma grande parte do trabalho realmente interessante envolve o uso de APIs que transferem dados através da Web. Isso significa que muitas vezes é útil olhar para as solicitações HTTP que esses aplicativos executam. Ferramentas de proxy como <a href="http://portswigger.net/burp/">Burp</a> e <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project" style="text-decoration: underline;">ZAP</a> tem características úteis para o monitoramento desse tráfego. Elas fornecem os manifestos que contenham informações sobre como os clientes devem configurar, incluindo os certificados de raiz para instalar para a terminação TLS etc.</p>
+
+<p>Combinado com o recurso do 'processo principal de debug Firefox OS' do <a href="/pt-BR/Firefox_OS/Using_the_App_Manager">app manager</a>, eles permitem que você instale a cert raiz do seu proxy para o seu dispositivo executando <a href="https://github.com/mozfreddyb/b2g-misc/blob/master/PnH-FxOS.js" style="text-decoration: underline;">algum código</a> a partir de um rascunho.</p>
+
+<h2 id="Depurando_o_processo_principal_do_Firefox_OS">Depurando o processo principal do Firefox OS</h2>
+
+<p>Então como você depura o processo principal no Firefox? Se você estiver usando o Firefox Simulator ou um dispositivo real, é possível depurar aplicativos certificados através da App Manager, <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps" style="text-decoration: underline;">definindo algumas prefs em seu perfil</a>. Siga estes passos em primeiro lugar, em seguida, defina o devtools.chrome.enabled pref para true no about:config, antes de reiniciar o browser.</p>
+
+<p>Em seguida, conecte o seu dispositivo / simulador usando o Gerenciador de App, em seguida, na tela do dispositivo, você verá um botão "PROCESSO PRINCIPAL DE DEBUG"; clique nele e você poderá depurar JSMS e executar JavaScript privilegiado no rascunho.</p>
+
+<div class="note">
+<p>Nota: Cuidado com o que você executa contra o processo principal: você pode acidentalmente destruir o seu dispositivo!</p>
+</div>
+
+<h2 id="Introduzindo_ZAP">Introduzindo ZAP</h2>
+
+<p>Primeiro, vamos continuar o processo usando ZAP. ZAP é um proxy interceptor que intercepta e criptografa novamente o tráfego HTTPS para facilitar a depuração. Clique no botão azul grande na <a href="https://www.owasp.org/index.php/ZAP" title="https://www.owasp.org/index.php/ZAP">ZAP homepage</a> para baixá-lo. Se você optar por usar outro proxy sinta-se a vontade para fazê-lo, nossa abordagem deve funcionar com ambos.</p>
+
+<h3 id="Certificado_ZAP">Certificado ZAP</h3>
+
+<p>Agora, em qualquer proxy que você usar, deixe-o exportar seu certificado para um arquivo, como <code>owasp_zap_root_ca.cer</code> (vá em <em><code>Ferramentas &gt; Opções &gt; Certificados SSL dinâmicos &gt; Salvar</code></em>). Quando ZAP inicia, ele gera um certificado válido durante um ano. Você também pode gerar um novo a partir da seção Certificados SSL dinâmico.</p>
+
+<h3 id="Proxy_local">Proxy local</h3>
+
+<p>If you're using B2G desktop, you have to make sure that ZAP does not listen on <code style="font-style: normal;">localhost</code>, but instead on your attributed IP address (ethernet or Wi-Fi). This is because B2G Desktop's <code style="font-style: normal;">localhost</code> does not point to your desktop computer, but something within the <code style="font-style: normal;">b2g</code> binary itself. For our example, we will use my IP address: <code style="font-style: normal;">10.264.1.5</code>.</p>
+
+<p>Se você está trabalhando com um dispositivo real, você precisa ter certeza de que o seu telefone e o seu computador estão conectados à mesma rede / VLAN e podem se comunicar entre si (se você tiver uma dúvida, tente fazer o ping do IP de um dispositivo de o outro).</p>
+
+<h2 id="Conectando_seu_dispositivo_ao_proxy">Conectando seu dispositivo ao proxy</h2>
+
+<p>Você pode extrair as prefs do seu dispositivo, mudá-los para adicionar as preferências de proxy relevantes, colocá-los de volta.</p>
+
+<p>You can pull the default prefs from your device, change them to add the relevant proxy prefs, put them back.</p>
+
+<p>Ou, você pode configurar a sua ferramenta para <a href="https://www.computerist.org/blog/2014/07/23/Transparent-HTTPS-proxying-with-ZAP/">proxy HTTP and HTTPS transparente</a> em seguida, configurar iptables no seu dispositivo para apontar para o proxy. Por exemplo, para fazer tráfego de HTTPS passar por sua ferramenta de proxy:</p>
+
+<div class="codehilite">
+<pre><span class="n">adb</span> <span class="n">shell</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">A</span> <span class="n">OUTPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">443</span> <span class="o">-</span><span class="n">j</span> <span class="n">DNAT</span> <span class="o">--</span><span class="n">to</span><span class="o">-</span><span class="n">destination</span> <span class="mf">192.168.0.14</span><span class="o">:</span><span class="mi">8443</span>
+</pre>
+</div>
+
+<p>E, para redefini-la quando estiver pronto:</p>
+
+<div class="codehilite">
+<pre><span class="n">adb</span> <span class="n">shell</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">F</span>
+</pre>
+</div>
+
+<h3 id="Configurando_um_proxy_LAN">Configurando um proxy LAN</h3>
+
+<p>Se você está perceber que está fazendo muito esse tipo de atividade, há um caminho que é ainda mais conveniente; configurar um teste LAN onde todo o tráfego é aproximado por padrão. Dessa forma, você poderá transformar o proxy e desligar apenas mudando o que wireless LAN que você está conectado.</p>
+
+<p>Nós construímos um usando um raspberry pi e <a href="http://raspberry-at-home.com/hotspot-wifi-access-point/">passos semelhantes a estes</a>. Mudamos as regras do <code>iptables</code> para ficar assim:</p>
+
+<div class="codehilite">
+<pre class="brush: bash">*filter
+:INPUT ACCEPT [49:3128]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [37:3924]
+-A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -i wlan0 -o eth0 -j ACCEPT
+COMMIT
+*nat
+:PREROUTING ACCEPT [1:72]
+:INPUT ACCEPT [1:72]
+:OUTPUT ACCEPT [1:148]
+-A PREROUTING -i wlan0 -p tcp -m tcp --dport 80 -j DNAT --to-destination &lt;proxy_host&gt;:&lt;http_port&gt;
+-A PREROUTING -i wlan0 -p tcp -m tcp --dport 443 -j DNAT --to-destination &lt;proxy_host&gt;:&lt;https_port&gt;
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -o eth0 -j MASQUERADE
+COMMIT
+</pre>
+</div>
+
+<h2 id="Criando_um_banco_de_dados_certificado">Criando um banco de dados certificado</h2>
+
+<p>O ato de aceitar certificados acontece em configurações, que são armazenadas nos perfis. Aqui está uma pequena cartilha sobre perfis do Firefox:</p>
+
+<ol start="1" style="list-style-type: decimal; margin-left: 40px;">
+ <li>Inicie o gerenciador de perfil do Firefox usando a opção -P na linha de comando, e certifique-se de que o Firefox não esteja usando todas as sessões do Firefox existentes (-no-remote):
+  <ul style="margin-left: 40px;">
+   <li>No Linux, você precisa dar o seguinte comando:
+    <pre class="brush: bash">firefox -P -no-remote</pre>
+   </li>
+   <li>No Mac OS X:
+    <pre class="brush: bash">/Applications/Firefox.app/Contents/MacOS/firefox -P -no-remote</pre>
+   </li>
+  </ul>
+ </li>
+ <li>Agora crie um novo perfil chamado "zapped". Vá para as configurações de certificado - <em>Editar &gt; Preferências &gt; Avançado &gt; Criptografia &gt; Exibir Certificados &gt; Importar</em>. Agora selecione o arquivo <code>owasp_zap_root_ca.cer</code> criado por seu proxy e diga ao Firefox que ele deve confiar neste CA para identificar sites (isto é realmente válido apenas para este perfil).</li>
+ <li>Após utilizar o Firefox para criar um banco de dados certificado para nós, agora podemos usar esse banco de dados para o nosso perfil B2G. O nome do diretório do perfil do Firefox é uma seqüência aleatória que termina com zapped. A localização depende do seu sistema operacional; veja  <a href="/pt-BR/docs/Runtime_Directories" title="/en-US/docs/Runtime_Directories">Diretórios Runtime</a> para obter detalhes sobre onde ele pode ser encontrado.</li>
+ <li><strong>Para B2G desktop</strong>, precisamos apenas do arquivo <code>cert8.db</code>, que é a base de dados certificados do perfil. Copie-o para o seu perfil B2G diretório <code>b2g/gaia/profile/</code>.</li>
+ <li><strong>Em um dispositivo</strong>, copie o cert9.db em seu diretório de perfil do dispositivo:
+  <pre>$ adb shell stop b2g
+$ adb push cert9.db /data/b2g/mozilla/*.default</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p>Nota: Isto irá substituir o arquivo existente.</p>
+</div>
+
+<h2 id="Configurando_B2G">Configurando B2G</h2>
+
+<p>O próximo passo é definir ZAP como o proxy padrão para toda a comunicação de rede. As configurações de proxy, como as definições do certificado, não estão atualmente disponíveis a partir da interface do usuário Firefox OS.</p>
+
+<h3 id="Em_B2G_desktop">Em B2G desktop</h3>
+
+<p>Você precisa anexar essas configurações personalizadas para o arquivo de preferências, <code>b2g/gaia/profile/prefs.js</code>:</p>
+
+<pre><code class="brush: bash">user_pref("network.proxy.backup.ftp", "10.264.1.5");
+user_pref("network.proxy.backup.ftp_port", 8080);
+user_pref("network.proxy.backup.socks", "10.264.1.5");
+user_pref("network.proxy.backup.socks_port", 8080);
+user_pref("network.proxy.backup.ssl", "10.264.1.5");
+user_pref("network.proxy.backup.ssl_port", 8080);
+user_pref("network.proxy.ftp", "10.264.1.5");
+user_pref("network.proxy.ftp_port", 8080);
+user_pref("network.proxy.http", "10.264.1.5");
+user_pref("network.proxy.http_port", 8080);
+user_pref("network.proxy.no_proxies_on", "");
+user_pref("network.proxy.share_proxy_settings", true);
+user_pref("network.proxy.socks", "10.264.1.5");
+user_pref("network.proxy.socks_port", 8080);
+user_pref("network.proxy.ssl", "10.264.1.5");
+user_pref("network.proxy.ssl_port", 8080);
+user_pref("network.proxy.type", 1);</code>
+</pre>
+
+<div class="note">
+<p>Nota: Lembre-se de substituir o meu endereço IP 10.264.1.5 pelo seu, e se o seu proxy não escuta na porta 8080, certifique-se de alterá-lo neste arquivo também.</p>
+</div>
+
+<p>Neste momento, você já deverá estar pronto! Inicie o B2G Desktop novamente, e tente alguma navegação. O tráfego de rede deverá aparecer na ZAP.</p>
+
+<h3 id="Em_um_dispositivo">Em um dispositivo</h3>
+
+<p>Para habilitar essa funcionalidade em um dispositivo, você precisará modificar o arquivo  <code>prefs.js</code> file localizado no seu perfil do seu dispositivo. Conecte o dispositivo ao computador que tenha sido previamente configurado com as ferramentas EDA.</p>
+
+<p>Primeiro, você precisa saber qual é o nome do seu diretório de perfil. Você pode encontrá-lo assim:</p>
+
+<pre>adb shell ls /data/b2g/mozilla</pre>
+
+<p>Entre a saída, você verá um diretório chamado com uma série de letras e números aleatórios que terminam em ".default". Este é o seu diretório de perfil. Use este nome, onde você vê "xxxxxxxx" daqui em diante.</p>
+
+<p>Em seguida, pegue o arquivo <code>prefs.js</code> para que você possa editá-lo:</p>
+
+<pre>adb pull /data/b2g/mozilla/xxxxxxx.default/prefs.js</pre>
+
+<p>Abra o arquivo resultante em seu editor de texto favorito; no final do arquivo, adicione as configurações personalizadas indicadas na seção acima e salve as alterações. Agora tudo que você precisa fazer é empurrar o arquivo alterado de volta para o dispositivo e reiniciar o processo de B2G para pegar as alterações, como segue (o processo B2G já deve ser interrompido se você seguiu as instruções anteriores para empurrar cert9.db):</p>
+
+<pre>adb push pref.js /data/b2g/mozilla/xxxxxxxx.default
+adb shell start b2g</pre>
+
+<p>{{PreviousNext("Mozilla/Firefox_OS/Debugging/Debugging_and_security_testing", "Mozilla/Firefox_OS/Apps/Testing_in_a_privileged_context")}}</p>
+
+<h3 id="Charles_Proxy">Charles Proxy</h3>
+
+<p>Usuários que desejam usar Charles Proxy deverão ver este post: <a href="https://muffinresearch.co.uk/proxying-connections-from-ffos/">https://muffinresearch.co.uk/proxying-connections-from-ffos/</a></p>
+
+<p> </p>

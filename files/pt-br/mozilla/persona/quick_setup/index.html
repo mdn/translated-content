@@ -1,0 +1,148 @@
+---
+title: Quick Setup
+slug: Mozilla/Persona/Quick_Setup
+translation_of: Archive/Mozilla/Persona/Quick_Setup
+---
+<p>Adicionando o sistema de login Persona para seu site leva apenas cinco passos:</p>
+<ol>
+ <li>Incluir a Persona biblioteca JavaScript em suas páginas.</li>
+ <li>Adicionar "login" e "logout" botões.</li>
+ <li>Preste atenção para ações login e logout.</li>
+ <li>Verificar as credenciais do usuário.</li>
+ <li>Reveja as melhores práticas.</li>
+</ol>
+<p>Você deve ser capaz de se levantar e correr em uma única tarde, mas as primeiras coisas primeiro: Se você estiver indo para usar Persona em seu site, por favor, tome um momento e se inscrever na lista de discussão Persona avisos. É o tráfego extremamente baixo, sendo usado apenas para anunciar mudanças ou problemas de segurança que podem afetar negativamente o seu site.<br>
+ Passo 1: Incluir a biblioteca Persona<br>
+ <br>
+ Persona é projetado para ser navegador neutro e funciona bem em todos os desktops principal e navegadores móveis. Isto é possível graças à plataforma cruzada biblioteca JavaScript Persona. Uma vez que esta biblioteca é carregada na sua página, as funções que você precisa Persona ({{domxref ("navigator.id.watch ()", "assistir ()");}}, {{domxref ("navigator.id.request () "," request () ")}}, e {{domxref (" navigator.id.logout () "," logout () ");}}) estará disponível no objeto global navigator.id.<br>
+ <br>
+ Para incluir o Persona biblioteca JavaScript, você pode colocar essa tag script na cabeça da sua página:<br>
+ <br>
+ &lt;script src="https://login.persona.org/include.js"&gt; &lt;/ script&gt;<br>
+ <br>
+ Você deve incluir isso em cada página que usa {{domxref ("navigator.id")}} funções. Porque Persona ainda está em desenvolvimento, não se deve auto-hospedar o arquivo include.js.<br>
+ Passo 2: Adicione login e logout botões<br>
+ <br>
+ Porque Persona é concebido como uma API DOM, você deve chamar funções quando um usuário clica em um botão de entrar e sair em seu site. Para abrir o diálogo Persona e solicitar ao usuário fazer o login, você deve invocar {{domxref ("navigator.id.request ()")}}. Para sair, chamar {{domxref ("navigator.id.logout ()")}}.<br>
+ <br>
+ Por exemplo:<br>
+ <br>
+ var signinLink = document.getElementById ('signin');<br>
+ if (signinLink) {<br>
+   signinLink.onclick = function () {navigator.id.request ();};<br>
+ };<br>
+ <br>
+ var signoutLink = document.getElementById ('signout');<br>
+ if (signoutLink) {<br>
+   signoutLink.onclick = function () {navigator.id.logout ();};<br>
+ };<br>
+ <br>
+ O que deve aqueles botões parecem? Vá para a página de Recursos de Branding para imagens premade e baseados em CSS botões!<br>
+ Passo 3: Preste atenção para ações login e logout<br>
+ <br>
+ Para Persona para funcionar, você precisa dizer a ele o que fazer quando um usuário faz dentro ou fora. <span title='This is done by calling the {{ domxref("navigator.id.watch()") }} function and supplying three parameters:'>Isso é feito chamando a função {{domxref ("navigator.id.watch ()")}} e fornecer três parâmetros:<br>
+ <br>
+     </span>O loggedInEmail do usuário atual do seu site, ou nulo se nenhum. <span title="You should generate this dynamically when you render a page.">Você deve gerar este dinamicamente quando você renderizar uma página.<br>
+ <br>
+     </span>A função para chamar quando uma ação OnLogin é acionado. <span title="This function is passed a single parameter, an “identity assertion,” which must be verified.">Esta função é passado um único parâmetro, uma "declaração de identidade", a qual deve ser verificada.<br>
+ <br>
+     </span>A função para chamar quando uma ação OnLogout é acionado. Esta função não é passado nenhum parâmetro.<br>
+ <br>
+ Nota: Você deve sempre incluir tanto OnLogin e OnLogout quando você chamar {{domxref ("navigator.id.watch ()")}}.<br>
+ <br>
+ Por exemplo, se você atualmente acho que Bob é registrada em seu site, você pode fazer isso:<br>
+ <br>
+ var currentUser = 'bob@example.com';<br>
+ <br>
+ navigator.id.watch ({<br>
+   loggedInEmail: currentUser,<br>
+   OnLogin: function (afirmação) {<br>
+     // Um usuário conectado!<br>
+     // 1. Enviar a afirmação de sua infra-estrutura para verificação e para criar uma sessão.<br>
+     // 2. Atualize seu UI.<br>
+     $.ajax({<br>
+       Tipo: 'POST',<br>
+       url: '/ auth / login', // ​​Esta é uma URL em seu site.<br>
+       data: {'status': true},<br>
+       success: function (res, status, xhr) {window.location.reload ();},<br>
+       error: function(res, status, xhr) {alert ("falha de login" + res);}<br>
+     });<br>
+   }<br>
+   OnLogout: function () {<br>
+     // Um usuário logado para fora! Aqui você precisa:<br>
+     // Derrubem a sessão do usuário, redirecionando o usuário ou fazer uma chamada para o backend.<br>
+     $.ajax({<br>
+       type: 'POST',<br>
+       url: 'auth / / logout', / / ​​Esta é uma URL em seu site.<br>
+       success: function(res, status, xhr) {window.location.reload ();},<br>
+       erro: function(res, status, xhr) {alert ("logout fracasso" + res);}<br>
+     });<br>
+   }<br>
+ });<br>
+ <br>
+ Neste exemplo, tanto OnLogin e OnLogout são implementadas, fazendo uma solicitação POST assíncrona para backend do seu site. O back-end em seguida, registra o usuário dentro ou fora, geralmente através da criação ou exclusão de informações em um cookie de sessão. Então, se tudo controlos fora, recarrega a página para ter em conta o estado novo login.<br>
+ <br>
+ Você pode, é claro, usar AJAX para implementar esta sem recarregar ou redirecionar, mas isso está além do escopo deste tutorial.<br>
+ <br>
+ Você deve chamar esta função em cada página com um botão de entrar e sair. Para apoiar melhorias Persona como login automático e sair mundial para seus usuários, você deve chamar esta função em cada página do seu site.<br>
+ Passo 4: Verifique as credenciais do usuário<br>
+ <br>
+ Em vez de senhas, Persona usa "asserções de identidade", que são tipo como de uso único de um único site senhas combinado com o endereço de e-mail do usuário. Quando um usuário deseja fazer o login, o retorno de chamada OnLogin será invocado com uma afirmação do que o usuário. Antes que você possa acessá-los, você deve verificar se a afirmação é válida.<br>
+ <br>
+ É extremamente importante que você verifique a afirmação em seu servidor, e não em JavaScript executado no navegador do usuário, uma vez que seria fácil de falsificar. O exemplo acima entregue a afirmação de backend do site usando jQuery $. Ajax () auxiliar para postá-lo para api / / login.<br>
+ <br>
+ Uma vez que o servidor tem uma afirmação, como você verificar isso? A maneira mais fácil é usar um serviço de ajuda fornecida pela Mozilla. <span title="Simply POST the assertion to https://verifier.login.persona.org/verify with two parameters:">Simplesmente postar a afirmação de https://verifier.login.persona.org/verify com dois parâmetros:<br>
+ <br>
+     </span><span title="assertion: The identity assertion provided by the user.">afirmação: A afirmação de identidade fornecida pelo usuário.<br>
+     </span>platéia: O nome do host ea porta do seu site. Você deve codificar este valor em seu backend, não derivá-lo de todos os dados fornecidos pelo usuário.<br>
+ <br>
+ Por exemplo, se você é example.com, você pode utilizar a linha de comando para testar uma afirmação com:<br>
+ <br>
+ $ Curl-d "afirmação = &lt;ASSERTION&gt; público = &amp; https://example.com:443" "https://verifier.login.persona.org/verify"<br>
+ <br>
+ Se for válido, você vai ter uma resposta JSON assim:<br>
+ <br>
+ {<br>
+   "status": "okay",<br>
+   "email": "bob@eyedee.me",<br>
+   "audience": "https://example.com:443",<br>
+   "expires": 1308859352261,<br>
+   "issuer": "eyedee.me"<br>
+ }<br>
+ <br>
+ Você pode saber mais sobre o serviço de verificação lendo a API do serviço de verificação. Um exemplo de implementação api / / login, usando o Python, o framework web Flask, e os pedidos HTTP biblioteca pode ter este aspecto:<br>
+ <br>
+ @ App.route ('/ api / login ", métodos = [' Post '])<br>
+ <span title="def login():">def login ():<br>
+     </span><span title="# The request has to have an assertion for us to verify"># O pedido tem que ter uma afirmação para nós verificar<br>
+     </span><span title="if 'assertion' not in request.form:">se "afirmação" não request.form:<br>
+         </span><span title="abort(400)">abort (400)<br>
+ <br>
+     </span><span title="# Send the assertion to Mozilla's verifier service."># Enviar a afirmação ao serviço da Mozilla verificador.<br>
+     </span><span title="data = {'assertion': request.form['assertion'], 'audience': 'https://example.com:443'}">dados = {'afirmação': request.form ['afirmação'], 'audiência': 'https://example.com:443'}<br>
+     </span><span title="resp = requests.post('https://verifier.login.persona.org/verify', data=data)">resp = requests.post ('https://verifier.login.persona.org/verify', data = dados)<br>
+ <br>
+     </span><span title="# Did the verifier respond?"># Será que o verificador responder?<br>
+     </span><span title="if resp.ok:">se resp.ok:<br>
+         </span><span title="# Parse the response"># Analise a resposta<br>
+         </span><span title="verification_data = json.loads(resp.content)">verification_data = json.loads (resp.content)<br>
+ <br>
+         </span><span title="# Check if the assertion was valid"># Verifique se a afirmação era válida<br>
+         </span><span title="if verification_data['status'] == 'okay':">se verification_data ['status'] == 'ok':<br>
+             </span><span title="# Log the user in by setting a secure session cookie"># Registra o usuário em definindo um cookie de sessão seguro<br>
+             </span><span title="session.update({'email': verification_data['email']})">Session.update ({'email': verification_data ['email']})<br>
+             </span><span title="return resp.content">voltar resp.content<br>
+ <br>
+     </span># Ops, algo falhou. <span title="Abort.">Abortar.<br>
+     </span>abort (500)<br>
+ <br>
+ O gerenciamento de sessão é provavelmente muito semelhante ao seu sistema de login existente. A primeira grande mudança é em verificar a identidade do usuário, verificando uma afirmação em vez de verificar uma senha. A outra grande mudança é garantir que o endereço de e-mail do usuário está disponível para uso como parâmetro loggedInEmail para {{domxref ("navigator.id.watch ()")}}.<br>
+ <br>
+ Sair é simples: você só precisa remover cookies de sessão do usuário.<br>
+ Passo 5: Examinar as melhores práticas<br>
+ <br>
+ Uma vez que tudo funciona e você conseguiu logado para dentro e fora do seu site, você deve tomar um momento para rever as melhores práticas para a utilização de Persona de forma segura.<br>
+ <br>
+ Se você está fazendo um site pronto para produção, você pode querer escrever testes de integração que simulam registro de um usuário dentro e fora do seu site usando BrowserID. Para facilitar esta ação em selênio, considere usar a biblioteca bidpom. Os sites mockmyid.com e personatestuser.org também pode ser útil.<br>
+ <br>
+ Por último, não se esqueça de se inscrever para a lista de discussão Persona avisos assim que você está notificado de quaisquer questões de segurança ou mudanças para trás incompatíveis para o API Persona. A lista é de tráfego extremamente baixo: é só usado para anunciar mudanças que podem afetar negativamente o seu site.</p>

@@ -1,0 +1,165 @@
+---
+title: Dodawanie własności
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_własności
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Properties_to_XBL-defined_Elements
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dziedziczenie_atrybutu_XBL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_metod">Następny  »</a></p>
+</div> W tym artykule dowiemy się jak dodać ustawienia właściwości użytkownika do elementów XBL.<p></p>
+
+<h3 id="Interfejs_XBL" name="Interfejs_XBL">Interfejs XBL</h3>
+
+<p><a href="pl/JavaScript">JavaScript</a> i <a href="pl/DOM">DOM</a> dają nam dostęp do pobrania i ustawienia własności elementów. Z XBL, możemy zdefiniować własne właściwości, dla elementów przez nas tworzonych. Mamy możliwość dodania własnych nazw meteod. To jest wszystko czego byś potrzebował aby dostać referencję do elementu, (używając <code><a href="pl/DOM/document.getElementById">getElementById</a></code> lub podobnych funkcji) i następnie pobranie lub ustawienie dodatkowych właściwości i nazwaniu jego metod.</p>
+
+<p>Tutaj są trzy typy pozycji, które dodaj.</p>
+
+<ul>
+ <li>Pola są użyte do podtrzymania prostych wartości.</li>
+ <li>Właściwości can also be used to hold a value but may have code execute when an attempt is made to retrieve or modify the value.</li>
+ <li>Methods are functions which may be executed.</li>
+</ul>
+
+<p>Wszystkie trzy są zdefiniowane wewnątrz <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#implementation">implementation</a></code></code> elementu, który powinien być dzieckiem <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#binding">binding</a></code></code> elementem. Wewnątrz implementacji, definiujesz swoje własne <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code>, <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#property">property</a></code></code> i <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#method">method</a></code></code> elementów, dla każdej jednej, którą wybierzesz. Składnia główna wygląda następująco:</p>
+
+<pre>&lt;binding id="element-name"&gt;
+  &lt;content&gt;
+    -- content goes here --
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;field name="field-name-1"/&gt;
+    &lt;field name="field-name-2"/&gt;
+    &lt;field name="field-name-3"/&gt;
+
+    &lt;property name="property-name-1"/&gt;
+    &lt;property name="property-name-2"/&gt;
+    &lt;property name="property-name-3"/&gt;
+    .
+    .
+    .
+    &lt;method name="method-name-1"&gt;
+      -- method content goes here --
+    &lt;/method&gt;
+    .
+    .
+    .
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<h3 id="Pola" name="Pola">Pola</h3>
+
+<p>Każde pole jest definiowane używając elementów <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code>. Często, pola będą odpowiadać atrybutom położonym wewnątrz elementu, są to <code>label</code> lub <code>disabled</code>, ale on do not have to.</p>
+
+<p>Atrybut <code>name</code> w <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code> (polu) elementu jest użyty do wskazania nazwy pola. Możesz użyć nazwę ze skryptu aby pobrać i ustawić wartość. Przykład poniżej tworzy przycisk, który generuje i ukrywa losową liczbę. You can retrieve this same number multiple times by getting the <code>number</code> property from the button. Most of the work here is done in the <code>oncommand</code> handlers. Later, we'll find out how to move this to XBL.</p>
+
+<pre class="eval"><strong>XUL:</strong>
+
+&lt;box id="random-box" class="randomizer"/&gt;
+
+&lt;button label="Generate"
+           oncommand="document.getElementById('random-box').number=Math.random();"/&gt;
+&lt;button label="Show"
+           oncommand="alert(document.getElementById('random-box').number)"/&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="randomizer"&gt;
+  &lt;implementation&gt;
+    &lt;field name="number"/&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Pola <code>number</code> zostały zdefiniowane w wiązaniach, które przechowują random number. Dwa dodatkowe przyciski ustawiamy i pobieramy wartości tych pól. Składnia jest bardzo podobna do pobieranej i wysyłanej do własności języka HTML. W tym przykładzie, no content has been placed inside either the XUL box or its definition in XBL, which is perfectly valid.</p>
+
+<p>Ten przykład nie jest do końca poprawny, ponieważ polu nie jest przypisana wartość domyślna. Aby to zrobić, dodaj domyślną wartość jako zawartość zakładki <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code>. Na przykład:</p>
+
+<pre>&lt;field name="number"&gt;
+  25
+&lt;/field&gt;
+</pre>
+
+<p>To przypisze wartość 25 jako wartość domyślną pola liczbowego. W rzeczywistości zamiast tego możesz wpisać skrypt wewnątrz zakładki <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code>, który oszacuje domyślną wartość. Może się to okazać konieczne, jeśli wartość musi być obliczona. Na przykład, następującemu polu przypisana jest wartość domyślna równa aktualnemu czasowi:</p>
+
+<pre>&lt;field name="currentTime"&gt;
+  new Date().getTime();
+&lt;/field&gt;
+</pre>
+
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci">Własności</h3>
+
+<p>Czasem będziesz chciał odświeżyć dane, dołączone do własności, albo chciałbyś, żeby wartość była obliczana dynamicznie, gdy o to poprosi użytkownik. Na przykład, jeśli masz własność, która przechowuje aktualny czas, będziesz pewnie chciał, żeby jej wartość była generowana w czasie rzeczywistym. W takim przypadku musisz użyć zakładki <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#property">property</a></code></code> zamiast zakładki <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code>. Jego składnia jest podobna, ale ma inne dodatkowe cechy.</p>
+
+<h4 id="Onget_Attribute_and_Onset_Attribute" name="Onget_Attribute_and_Onset_Attribute">Onget Attribute and Onset Attribute</h4>
+
+<p>Możesz użyć atrybutu <code>onget</code> and <code>onset</code> aby wywołać kod, gdy własność jest odzyskiwana lub modyfikowana. Dodaj każdy atrybut do elementu <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#property">property</a></code></code> i ustaw jej wartość na skrypt, który albo pobiera albo ustawia wartość danej własności.</p>
+
+<p>Na przykład, możesz przypisać skrypt do wartości <code>onget</code> aby obliczyć aktualny czas. Gdy tylko skrypt będzie chciał uzyskać dostęp do wartości tej własności, wywołany zostanie skrypt <code>onget</code>, aby odzyskać wartość. Powinien on zwrócić wartość, która będzie uważana za wartość tej własności.</p>
+
+<p>Trener <code>onset</code> jest podobny, ale jest wywoływany wtedy, gdy skrypt próbuje przypisać nową wartość danej własności. Ten skrypt powinien przechowywać gdzieś wartość albo uaktualniać ją. Na przykład niektóre własności mogą przechowywać tylko liczby. Próba przypisania tekstu do takiej własności powinna być przerwana.</p>
+
+<pre>&lt;property name="size"
+          onget="return 77;"
+          onset="alert('Changed to:'+val); return val;"/&gt;
+</pre>
+
+<p>Ta własność będzie zawsze zwracała 77, przy próbie pobrania. Przy próbie ustawienia wartości, wyświetli się komunikat ostrzegawczy, który pokaże jaką wartość przypisano własności. Specjalna zmienna <code>val</code> przechowuje wartość, która powinna być przypisana własności. Użyj tego do uaktualnienia jej lub przechowywania. Kod <code>onset</code> powinien także zwrócić nową wartość.</p>
+
+<p>Następujący fragment opisuje typową sytuację:</p>
+
+<p>Są dwa elementy: jeden nazywa się "banana", a drugi "orange". Każdy ma odpowiednią własność nazwaną "size" (rozmiar). Napiszmy następujący skrypt:</p>
+
+<pre>banana.size = orange.size;
+</pre>
+
+<ol>
+ <li>Skrypt <code>onget</code> jest wywoływany dla własności rozmiaru dla "orange". Skrypt oblicza wartość i ją zwraca.</li>
+ <li>Uchwyt <code>onset</code> własności "size" obiektu "banana" jest wywoływany. Skrypt użyje wartości znajdującej się w zmiennej <code>val</code> i przypisze ją własności "size" obiektu "banana".</li>
+</ol>
+
+<p>Zauważmy, że w odróżnieniu od pola, własność nie przechowuje wartości. Próba ustawienia własności, która nie posiada trenera <code>onset</code> spowoduje wyświetlenie błędu. Często będziesz korzystał z oddzielnego pola, aby przechowywać wartość własności. Równie często sprawia się, że własność odpowiada atrybutowi elementu zdefiniowanego przez XBL. Następujący przykład mapuje własność na atrybut pewnego elementu:</p>
+
+<pre>&lt;property name="size"
+          onget="return this.getAttribute('size');"
+          onset="return this.setAttribute('size',val);"
+/&gt;
+</pre>
+
+<p>Gdy tylko skrypt próbuje pobrać wartość własności, pobiera ją z atrybutu elementu o tej samej nazwie. Natomiast gdy próbuje ustawić jej wartość, jest ona przypisywana do atrybutu tego elementu. Jest to bardzo wygodne, ponieważ wtedy możesz modyfikować własność lub atrybut i obydwoje będą miały taką samą wartość.</p>
+
+<h4 id="Getter_Element_and_Setter_Element" name="Getter_Element_and_Setter_Element">Getter Element and Setter Element</h4>
+
+<p>Możesz użyć alternatywnej składni dla atrybutów <code>onget</code> i <code>onset</code>, która jest przydatna, jeśli skrypt jest dłuższy. Możesz wymienić atrybut <code>onget</code> na element potomny nazywany <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#getter">getter</a></code></code>. Podobnie, możesz wymienić atrybut <code>onset</code> na element <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#setter">setter</a></code></code>. Poniższy przykład ilustruje tą zamianę:</p>
+
+<pre>&lt;property name="number"&gt;
+  &lt;getter&gt;
+    return this.getAttribute('number');
+  &lt;/getter&gt;
+  &lt;setter&gt;
+    var v = parseInt(val,10);
+    if (!isNaN(v)) return this.setAttribute('number',''+v);
+    else return this.getAttribute('number');"
+  &lt;/setter&gt;
+&lt;/property&gt;
+</pre>
+
+<p>Własność w tym przykładzie będzie mogła przechowywać wyłącznie liczby całkowite. Jeśli inne cyfry lub litery będą wpisane, zostaną usunięte. Jeśli nie będzie żadnych cyfr, wartość pozostanie niezmieniona. Jest to wykonywane przez część kodu wewnątrz elementu <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#setter">setter</a></code></code>. Prawdziwa wartość własności jest przechowywana w atrybucie <code>number</code>.</p>
+
+<p>Możesz używać obu składni do tworzenia uchwytów pobrania i ustawienia.</p>
+
+<h4 id="Atrybut_tylko_do_odczytu" name="Atrybut_tylko_do_odczytu">Atrybut tylko do odczytu</h4>
+
+<p>Utwórz pole z własnościami 'Tylko do odczytu', dodając atrybut <code>readonly</code> do znacznika pola (<code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#field">field</a></code></code>) lub własności znacznika (<code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#property">property</a></code></code>) i ustawienie go na <code>true</code>. Próbując ustawić wartość własności 'Tylko do odczytu' zakończone nie powodzeniem.</p>
+
+<p>W następnym artykule zobaczymy <a href="pl/Kurs_XUL/Dodawanie_metod">jak dodać metody do definicji elementu XBL</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dziedziczenie_atrybutu_XBL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_metod">Następny  »</a></p>
+</div><p></p>

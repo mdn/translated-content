@@ -1,0 +1,69 @@
+---
+title: Modyfikacja domyślnego motywu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Modyfikacja_domyślnego_motywu
+tags:
+  - Kurs_XUL
+  - Projekt_MDC
+  - Przewodniki
+  - Strony_do_aktualizacji
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_the_Default_Skin
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Nadawanie_stylu_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_motywów">Następny  »</a></p>
+</div><p></p>
+
+<p>Artykuł ten opisuje w jaki sposób zmodyfikować motyw okna.</p>
+
+<h2 id="Motyw_podstawowy" name="Motyw_podstawowy">Motyw podstawowy</h2>
+
+<p><a href="pl/Motywy">Motyw</a> jest ustawiona jako styl kaskadowy, obrazek i zachowanie, który jest stosowany w pliku XUL. Stosujemy różne motywy, jeśli chcemy zmienić widok okna bez zmiany funkcjonalności Mozilla dostarcza dwa podstawowe motywy, Klasyczny i Nowoczesny, inne motywy należy pobrać. XUL dla obu motywów jest taki sam, tak jak jednakże, używamy arkuszy stylów i obrazków to dla każdego z osobna.</p>
+
+<p>Dla prostej personalizacji okna wyglądu Mozilla, wykonaj prostą zmianę arkusza stylów łącząc je. Większa zmiana potrafi wykonać w całości nowy motyw. Okno właściwości Mozilli posiada panel do zmiany motywu.</p>
+
+<p>Motyw opisujemy używając <a href="pl/CSS">CSS</a>, pozwalając na definiowanie kolorów, obramowania i obrazków użytych do stworzenia elementów. Plik classic.jar i modern.jar stanowią i definiują motywy. Katalog globalny zawierający wewnątrz archiwa głównego stylu definiującego jak wyświetlić urozmaicony element XUL. Zmieniając te pliki, możesz zmienić wygląd aplikacji XUL.</p>
+
+<h2 id="Dostosujmy_userChrome.css" name="Dostosujmy_userChrome.css">Dostosujmy userChrome.css</h2>
+
+<p>Jeśli położysz plik nazywający się 'userChrome.css' w katalogu o nazwie 'chrome' będący wewnątrz katalogu profilu użytkownika, możesz nadużywać ustawień bez zmieniany własnych archiwum. Katalog powinien zostać utworzony w momencie tworzenia przez Ciebie profilu i umieszczeniu w nim przykładu. Plik 'userContent.css' został dostosowany do stron internetowych, podczas gdy 'userChrome.css' zostanie dostosowany do pliku chrome.</p>
+
+<p>Na przykład, dodawanie pozwolenia na końcu pliku, możesz zmienić wszystkie elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> posiadające czerwone tło.</p>
+
+<pre>menubar {
+  background-color: red;
+}
+</pre>
+
+<p>Jeśli otworzysz jakieś okno Mozilli po modyfikacji, to menu bars będzie czerwone. Ponieważ te zmiany zrobione zostały dla użytkownika arkusza stylów, to afekty dla wszystkich okien. Znaczy to tyle, że pasek narzędzi przeglądarki, pasek narzędzi zakładek i nawet pasek menu Znajdź pliki będzie czerwony.</p>
+
+<p>Mając zmienione afekty tylko jednego okna, zmień arkusz stylów łacząc z plikiem XUL. Na przykład, dodanie czerwonego obramowania box wokół komend oknie adresu, dodając następny plik addressbook.css do archiwów modern.jar lub classic.jar.</p>
+
+<pre>menuitem {
+  border: 1px solid red;
+}
+</pre>
+
+<p>Jeśli spojrzymy w jeden motyw w archiwum, zwróć uwagę, że każda posiada numer arkusza stylu i numer obrazka. Arkusze stylów odnoszą się do obrazków. Powinieneś unikać położenia odnośników do obrazków bezpośrednio w plikach XUL, jeśli chcesz aby twoja zawartość miała zdolności motywu. Jest tak, ponieważ szczególne projekty motywów mogą nie używać obrazków i będą potrzebowały więcej na kompleksowy projekt. Kierując do obrazków z pliku CSS, są one w prosty sposób usuwane. Także usuwane są uzależnienia ze specyficznych nazw plików obrazka.</p>
+
+<p><span class="comment">If you look in one of the skin archives, you will notice that each contain a number of style sheets and a number of images. The style sheets refer to the images. You should avoid putting references to images directly in XUL files if you want your content to be skinnable. This is because a particular skin's design might not use images and it may need some more complex design. By referring to the images with CSS, they are easy to remove. It also removes the reliance on specific image filenames.</span></p>
+
+<p>Możesz przydzielać obrazki do przycisków, pól wyboru i innych elementów używając własności <code>list-style-image</code> jak następujące:</p>
+
+<pre>checkbox {
+  list-style-image: url("chrome://findfile/skin/images/check-off.jpg");
+}
+
+checkbox[checked="true"] {
+  list-style-image: url("chrome://findfile/skin/images/check-on.jpg");
+}
+</pre>
+
+<p>Kod ten zmienia obrazki łącząc je z polami wyboru. Pierwszy styl ustawia obrazki dla normalnych pól wyboru, a drugi arkusz stylów ustawia obrazek na zaznaczone pole wyboru. Modyfikator 'checked=true' tworzy styl mający zastosowanie tylko do elementów, które mają ustawiony swój atrybut checked na <code>true</code>.</p>
+
+<p><small><span id="Zobacz_tak%C5%BCe"><a id="Zobacz_tak%C5%BCe"></a><strong>Zobacz także</strong></span> : <a href="pl/Tworzenie_sk%c3%b3rek_dla_Firefoksa">Tworzenie skórek dla Firefoksa</a> i <a href="pl/CSS/Na_pocz%c4%85tek">CSS getting started</a> </small></p>
+
+<p>W następnym artykule, zobaczymy <a href="pl/Kurs_XUL/Tworzenie_motyw%c3%b3w">jak stworzyć nowy motywy</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Nadawanie_stylu_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_motywów">Następny  »</a></p>
+</div><p></p>

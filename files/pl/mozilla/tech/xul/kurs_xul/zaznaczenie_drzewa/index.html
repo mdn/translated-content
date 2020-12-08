@@ -1,0 +1,73 @@
+---
+title: Zaznaczenie drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Zaznaczenie_drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Selection
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Własne_widoki_drzewa">Następny  »</a></p>
+</div>
+<p></p><p>Artykuł opisuje, jak pobrać i ustawić zaznaczone pozycje w drzewie.
+</p>
+<h3 id="Pobieranie_zaznaczonych_element.C3.B3w_drzewa" name="Pobieranie_zaznaczonych_element.C3.B3w_drzewa"> Pobieranie zaznaczonych elementów drzewa </h3>
+<p>Każdy element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> w drzewie może być zaznaczony indywidualnie. Dodając atrybut <code><code id="a-seltype"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/seltype">seltype</a></code></code> do drzewa, ustawiamy wartość <code>single</code>, to zezwoli na zaznaczenia tylko jednego wiersza na raz. W przeciwnym wypadku użytkownik mógłby zaznaczać wiele wierszy na raz i to niekoniecznie sąsiednich. Drzewo zawiera kilka funkcji służących do określania, czy pozycja została zaznaczona.
+</p>
+<h4 id="Podtrzymanie_zdarzenia_zaznaczenia" name="Podtrzymanie_zdarzenia_zaznaczenia"> Podtrzymanie zdarzenia zaznaczenia </h4>
+<p>Najpierw zobaczmy, jak możemy decydować o tym, czy element jest zaznaczony. Uchwyt zdarzenia <code><a href="pl/XUL/Atrybut/tree.onselect">onselect()</a></code> może być dodany do drzewa. Kiedy użytkownik zaznaczy jakiś element drzewa (<code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code>), uchwyt ten jest wywoływany. Użytkownik ma także możliwość zmiany zaznaczenia poprzez używanie klawiszy strzałek na klawiaturze. Jeśli użytkownik przytrzyma naciśnięty klawisz kursora do szybkiego przewinięcia pozycji, to uchwyt zdarzenia nie zostanie wywołany do momentu, aż użytkownik się zatrzyma. Wynikiem będzie wykonanie postępu. Znaczy to także, że podświetlenie będzie się pojawiać na kilku pozycjach nawet przez zaznaczone zdarzenia nie będące nigdy aktywne dla tych pozycji. </p><p>Składnia uchwytu zdarzenia <code>onselect()</code> przedstawiona jest poniżej:
+</p>
+<pre>&lt;tree id="treeset" onselect="alert('Zaznaczyłeś cokolwiek!');"&gt;
+</pre>
+<h4 id="Zaznaczenie_drzewa" name="Zaznaczenie_drzewa"> Zaznaczenie drzewa </h4>
+<p>Drzewo ma własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/currentIndex">currentIndex</a></span></code></code>, która może być użyta, by uzyskać aktualnie zaznaczenie pozycji, gdzie pierwszym wierszem jest 0.
+</p><p>Pozycje pochodnych wiersza są zawarte w sumie zaraz po głównych. To znaczy, że jeżeli są tam 3 pozycje najwyższego poziomu i każda ma po dwie pochodne, będzie to w sumie 9 pozycji. Pierwsza pozycja (przy indeksie 0) będzie pierwszą pozycją najwyższego poziomu. Następna pozycja przy indeksie 0 będzie od niego pierwszą pochodną. Druga pochodna pozycja będzie się znajdowała pod indeksem 2, a druga główna pozycja będzie miała indeks 3 itd.
+</p>
+<div class="float-right"><img alt="grafika:seltree1.png"></div>
+<p>Na obrazku z prawej strony pokazanych jest osiem wierszy, z których to dwa są zaznaczone. Pierwszy zaznaczony wiersz jest o indeksie 4, a drugi ma indeks 7. Rzędy, które są ukryte, nie zaliczają się do sumy indeksu.
+</p>
+<h4 id="Wielokrotne_zaznaczenie" name="Wielokrotne_zaznaczenie"> Wielokrotne zaznaczenie </h4>
+<p>Dla drzew umożliwiających wielokrotne zaznaczenie, otrzymanie listy zaznaczonych wierszy jest bardziej skomplikowane. Widok drzewa ma własność zaznaczenia, która przetrzymuje informacje o zaznaczonych wierszach. Bieżące zaznaczenie będzie obiektem <a class="external" href="http://xulplanet.com/references/objref/TreeSelection.html">TreeSelection</a>. Widok nie musi wdrażać tego obiektu samodzielnie, drzewo określi obiekt zaznaczenia dla własności widoku zaznaczenia, kiedy widok będzie dołączony do drzewa. Informacje o zaznaczeniu możemy uzyskać od drzewa, używając własności widoku drzewa (<code>view</code>). Możemy użyć metod obiektu zaznaczenia (<code>selection</code>) w celu uzyskania informacji o zaznaczonych pozycjach lub w celu modyfikacji zaznaczenia.
+</p><p>Ponieważ zaznaczone pozycje w drzewie wielokrotnego zaznaczenia niekoniecznie mogą być kolejnymi, możemy uzyskać każdy blok przylegający używając funkcji <code>getRangeCount()</code> i <code>getRangeAt()</code>. Pierwsza funkcja zwraca liczbę znajdujących się tam obszarów. W przypadku, gdy zaznaczona jest tylko jedna, wartość będzie wynosiła 1. Wtedy możesz napisać pętlę dla obszarów, wywołując <code>getRangeAt()</code>, żeby pobrać aktualne indeksy początku i końca obszaru.
+</p><p>Funkcja <code>getRangeAt()</code> pobiera trzy argumenty: </p>
+<ul><li> Pierwszym jest indeks obszaru. </li><li> Drugim będzie obiekt wypełniony przez funkcję z indeksem pierwszego zaznaczonego elementu. </li><li> Trzecim argumentem jest obiektem wypełnionym indeksem ostatnio zaznaczonej pozycji.
+</li></ul>
+<h5 id="Przyk.C5.82ad_getRangeAt" name="Przyk.C5.82ad_getRangeAt"> Przykład <code>getRangeAt</code> </h5>
+<pre>var start = new Object();
+var end = new Object();
+var numRanges = tree.view.selection.getRangeCount();
+
+for (var t = 0; t &lt; numRanges; t++){
+  tree.view.selection.getRangeAt(t,start,end);
+  for (var v = start.value; v &lt;= end.value; v++){
+    alert("Pozycja " + v + " jest zaznaczona.");
+  }
+}
+</pre>
+<p>Tworzymy dwa obiekty, nazwane 'start' i 'end'. Następnie powtarzamy w obszarach liczbę, która jest zwrócona przez funkcję <code>getRangeCount()</code>. Funkcja <code>getRangeAt()</code> jest wywołana przyjmując obszar indeksu obiektu na początku i na końcu. Funkcja przyporządkuje 'start' i 'end' dodając do własności 'value'. Jeżeli więc pierwszy obszar jest od trzeciej do siódmej pozycji, 'start.value' będzie 2 (pamiętaj, że indeksy zaczynają się od 0, więc odejmujemy jeden), a 'end.value' będzie równe 6. Ostrzeżenie jest pokazywane dla każdego indeksu.
+</p><p>Jeżeli chcesz wiedzieć, który wiersz jest zaznaczony, możesz użyć funkcji <code>isSelected()</code>. Pobiera indeks wiersza jako argument i zwraca <code>true</code>, jeżeli wiersz jest zaznaczony.
+</p>
+<pre>alert(tree.view.selection.isSelected(3));
+</pre>
+<h3 id="Modyfikowanie_zaznaczenia_drzewa" name="Modyfikowanie_zaznaczenia_drzewa"> Modyfikowanie zaznaczenia drzewa </h3>
+<p>Przedmiot zaznaczenia ma pewną liczbę funkcji, które mogą zostać użyte w celu zmiany zaznaczenia. Najprostszą funkcją jest funkcja <code><a href="pl/XUL/Metoda/select">select()</a></code>, która znosi zaznaczenie dowolnego, aktualnie zaznaczonego wiersza i zaznacza dowolny inny. Na przykład następujący kod zaznaczy wiersz o indeksie 5:
+</p>
+<pre>tree.view.selection.select(5);
+</pre>
+<p>Zauważ, że nie powinniśmy zmienić tylko wartości <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/currentIndex">currentIndex</a></span></code></code> w celu zmiany zaznaczenia. Zamiast tego powinniśmy użyć funkcji zaznaczenia jak w powyższym przykładzie. Możliwe jest zaznaczenie wszystkich wierszy za pomocą funkcji <code><a href="pl/XUL/Metoda/selectAll">selectAll()</a></code>. Zauważ, że wiersze zagnieżdżały się wewnątrz kontenerów, te które nie są otwarte, nie zostaną zaznaczone. Oczywiście to będzie miało efekt tylko w przypadku drzew z wielokrotnym zaznaczeniem. Jest też funkcja <code><a href="pl/XUL/Metoda/clearSelection">clearSelection()</a></code> do wyczyszczenia zaznaczenia oraz funkcja <code><a href="pl/XUL/Metoda/invertSelection">invertSelection</a></code> do odwracania zaznaczenia, która odznacza zaznaczenie, a zaznacza te, które nie były zaznaczone.
+</p><p>W celu zaznaczenia określonych wierszy zastosuj funkcję <code>rangedSelect()</code>, która zaznaczy wiersze z obszaru pomiędzy dwoma indeksami. Jak w przykładzie pomiędzy indeksem 2 a 7. Zwróć uwagę na to, że indeksy 2 i 7 też zostaną zaznaczone:
+</p>
+<pre>tree.view.selection.rangedSelect(2,7,true);
+</pre>
+<p>Ostatni argument określa to, czy dodać te indeksy, czy nie. Jeżeli ma wartość <code>true</code>, indeksy te zostaną zaliczone do zaznaczonego obszaru. Jeżeli <code>false</code>, zaznaczone wcześniej wiersze będą najpierw odznaczone. W końcu funkcja <code>clearRange()</code> może zostać użyta do odznaczania obszaru wierszy, pozostawiając resztę niezaznaczonego obszaru nietkniętą. </p>
+<pre>tree.view.selection.clearRange(2,7);
+</pre>
+<p>Następnie dowiemy się, jak utworzyć <a href="pl/Kurs_XUL/W%c5%82asne_widoki_drzewa">własny widok dla drzewa</a>. </p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_drzewa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Własne_widoki_drzewa">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

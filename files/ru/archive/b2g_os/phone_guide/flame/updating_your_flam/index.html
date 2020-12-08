@@ -1,0 +1,506 @@
+---
+title: Updating your Flame
+slug: Archive/B2G_OS/Phone_guide/Flame/Updating_your_Flam
+translation_of: Archive/B2G_OS/Phone_guide/Flame/Updating_your_Flame
+---
+<p> </p>
+
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ru/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ru/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>This article covers how to update the software on your Flame — including updating Firefox OS and pushing new apps to your phone — along with backing up your data, and other useful troubleshooting and testing information. Before starting to do any of this, you should make sure you have run through the <a href="/en-US/Firefox_OS/Developer_phone_guide/Flame/Initial_setup">Initial setup</a> information.</p>
+</div>
+
+<h2 id="Quick_guide_to_updating_your_device">Quick guide to updating your device</h2>
+
+<p>There is a lot of information in this article, so here we've included a quick start guide that takes you through the steps you need quickly to get your device updated. You can refer to the below sections for more detail if it is needed.</p>
+
+<h3 id="Full_flash_to_the_latest_base_image">Full flash to the latest base image</h3>
+
+<p>This set of steps needs to be done before you do anything else to your phone (see <a href="#Base_image">Base image</a> and <a href="#Base_image_installation">Base image installation</a> if you require more details.)</p>
+
+<div id="magicdomid12"><span class="author-p-18262"><strong>Prerequisites</strong>: Make sure you have adb and fastboot installed and available in your system's <code>PATH</code> (see <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Installing_ADB">Installing ADB and Fastboot</a>.)</span><br>
+ </div>
+
+<ol>
+ <li id="magicdomid14"><span class="author-p-18262">Download the latest base image —</span><a href="http://cds.w5v8t3u9.hwcdn.net/v18D_nightly_v5/v18D_nightly_v5.zip">Base image v18D_nightly_v5</a> — <span class="author-p-18262">to your computer.</span></li>
+ <li id="magicdomid18"><span class="author-p-18262">On your Flame device, enable remote debugging by navigating to <em>Settings &gt; Developer</em> and enabling the </span><a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">Debugging via USB</a><span class="author-p-18262"> option.</span></li>
+ <li id="magicdomid20"><span class="author-p-18262">Connect your Flame to your computer via a USB cable.</span></li>
+ <li id="magicdomid22"><span class="author-p-18262">Verify that the computer is connected to the device by typing this command:</span>
+  <pre class="brush: bash"><span class="author-p-18262 i">adb devices</span><span class="author-p-18262"> </span><span class="author-p-18262"> </span>
+</pre>
+  You should see something like the following:
+
+  <pre class="brush: bash">List of devices attached
+94f7ce4c    device</pre>
+  If you don't see your device attached (no second line), then try unplugging and replugging the USB cable and trying again; also check that <em>Debugging via USB</em> is enabled on the phone as mentioned in step 2. If you get a message saying that adb could not be found, you probably haven't set your path correctly (see prerequisites.)</li>
+ <li id="magicdomid28"><span class="author-p-18262">Extract the base image zip file and navigate to the new directory, using for example:</span>
+  <pre class="brush: bash" id="magicdomid31"><span class="author-p-18262 i"><em>cd </em></span><span class="author-p-18262 i url">v18D_nightly_v5</span></pre>
+ </li>
+ <li id="magicdomid33"><span class="author-p-18262">Run the flashing script by running the correct below command for your system</span>
+  <pre class="brush: bash"><span class="author-p-18262"># Windows</span>
+<span class="author-p-18262 i"><em>flash.bat</em></span>
+
+<span class="author-p-18262"># Linux / OSX</span>
+<span class="author-p-18262 i"><em>./flash.sh</em></span></pre>
+ </li>
+</ol>
+
+<div class="note">
+<p><span class="author-p-18262"><strong>Note</strong>: if you don't see the right filename for your system, you can rename flash.bat or flash.sh back and forth as needed. The contents are the same.</span></p>
+</div>
+
+<div class="note">
+<p>Note: Verify the contents of the base image using the checksum below:</p>
+
+<pre>Checksum: <strong>SHA512(v18D_nightly_v5.zip)= f92123446f71289dd0ea23b0c602f8a192267fbfcf2f25682cbc072f8bbe3e8b795aea3305ba6ea6cc504d252f1d895b07704b5b65700fcf3760e1386b89c431</strong><strong>
+</strong>Build id<strong>: 20151221215202</strong>
+</pre>
+</div>
+
+<p>At this point you should be on the latest 2.6 base image, and be able to receive FOTA updates.</p>
+
+<div class="note">
+<p><span class="author-p-18262"><strong>Note</strong>: if you want to be on the very latest builds of flame (that have not been smoke tested), go to settings -&gt; developer, scroll down to the bottom, and change the channel to nightly-latest.  Reboot the device, then go back to settings -&gt; device info and check for updates.  You can update to the latest version without having to shallow flash.  For shallow flashing see the next section.</span></p>
+</div>
+
+<h4 id="Update_channel_reset_bug">Update channel reset bug</h4>
+
+<p>As mentioned in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1217490" title="FIXED: [Aries] The dogfood/dogfood-latest channel are reset to nightly after latest OTA">баг 1217490</a>, some Firefox OS testers testing Firefox OS 2.5 or the latest FOTA updates (on Flame, but also on other dogfooding devices) may find that when they install a FOTA update, their update channel is reset to <code>nightly</code>, meaning that they won’t receive subsequent FOTA updates coming through other channels. To avoid this, it is recommended that you set your update channel to <code>nightly-latest</code> in the Firefox OS settings via WebIDE. To do this:</p>
+
+<ol>
+ <li>Plug your phone into your computer via USB (make sure <em>Debugging via USB</em> is set to <em>ADB and DevTools</em> in the Phone's <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Developer Settings</a>.)</li>
+ <li>Go to Firefox Desktop and open <a href="/en-US/docs/Tools/WebIDE">WebIDE</a>.</li>
+ <li>Connect WebIDE to your phone by selecting it under <em>USB Devices</em>. Accept the connection prompt that appears on your phone.</li>
+ <li>Under <em>Other</em> on the right hand side of the WebIDE UI, select <em>Device Settings</em>.</li>
+ <li>Find <code>app.update.channel</code> in the list, and change the setting value in the corresponding textbox to <code>nightly-latest</code>.</li>
+ <li>Find <code>app.update.channel.backup</code> and change the setting value to <code>nightly-latest</code> if you want it to persist after further updates.</li>
+</ol>
+
+<h3 id="Shallow_Flash_to_the_latest_Firefox_OS_nightly_(Gaia_and_Gecko)">Shallow Flash to the latest Firefox OS nightly (Gaia and Gecko)</h3>
+
+<p>This set of steps only needs to be done if you want to update to the VERY latest builds (see <a href="#Updating_your_Flame_to_a_nightly_build">Updating your Flame to a nightly build</a> if you require more details.)</p>
+
+<div id="magicdomid50"><span class="author-p-18262"><strong>Prerequisites</strong>: Windows users will need to install <a href="https://cygwin.com/">Cygwin</a>, which provides a Linux-like environment on Windows.</span><span class="author-p-18262"> The instructions below include steps for how to automatically install the appropriate packages if you don't already have it installed.</span></div>
+
+<div id="magicdomid51"> </div>
+
+<ol>
+ <li id="magicdomid52"><span class="author-p-18262">Download the latest build from </span><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central-flame-kk/">Mozilla Central</a><span class="author-p-18262">.  Download both the b2g-XX.XX.en-US.android-arm.tar.gz and gaia.zip files.</span></li>
+ <li id="magicdomid54"><span class="author-p-18262 b"><strong>All platforms:</strong></span><span class="author-p-18262"> Download the <a href="https://raw.githubusercontent.com/Mozilla-TWQA/B2G-flash-tool/master/shallow_flash.sh">shallow flash script</a> in the same directory as the build files.</span></li>
+ <li id="magicdomid58"><span class="author-p-18262 b"><strong>Windows users:</strong></span><span class="author-p-18262"> Also download the <a href="https://raw.githubusercontent.com/Mozilla-TWQA/B2G-flash-tool/master/shallow_flash.bat">shallow_flash.bat Windows</a> script in the same directory.</span><span class="author-p-18262"> If you don't already have Cygwin installed, also <a href="https://cygwin.com/setup-x86.exe">download the installation file</a> (you don't have to run it, the <code>shallow_flash.bat</code> script will use the installer to automatically configure the necessary packages).</span></li>
+ <li id="magicdomid60"><span class="author-p-18262">In your terminal, <code>cd</code> into the directory you saved the files in and flash the builds to your phone using the following:</span>
+  <pre class="brush: bash"><span class="author-p-18262 b"># Linux</span>
+<span class="author-p-18262">./shallow_flash.sh --gaia=gaia.zip --gecko=b2g-XX.XX.en-US.android-arm.tar.gz</span>
+
+<span class="author-p-18262 b"># Mac</span>
+<span class="author-p-18262">./shallow_flash.sh --gaia gaia.zip --gecko b2g-XX.XX.en-US.android-arm.tar.gz</span>
+
+<span class="author-p-18262 b"># Windows</span>
+<span class="author-p-18262"># You could also double click the shallow_flash.bat icon (with the cogs) from Windows Explorer.
+shallow_flash.bat</span></pre>
+ </li>
+</ol>
+
+<p>This process will flash gaia.zip and a single b2g-XX.XX.en-US.android-arm.tar.gz file onto your phone. T<span class="author-p-18262">he files will be sent to the device and it will reboot after the process completes.</span></p>
+
+<div class="note">
+<p><span class="author-p-18262"><strong>Note</strong> : On Linux, if the script fails during </span>flashing Gaia, you can try replacing full options by their shortened version to see if that helps. Replace <span class="author-p-18262"><code>--gaia=gaia.zip</code> by <code>-g gaia.zip</code></span> and <span class="author-p-18262"><code>--gecko=b2g-XX.XX.en-US.android-arm.tar.gz</code> by <code>-G b2g-XX.XX.en-US.android-arm.tar.gz</code></span>.</p>
+</div>
+
+<h2 id="Updating_upgrading_the_Flame's_software">Updating &amp; upgrading the Flame's software</h2>
+
+<p>We have two main "channels" of Firefox OS software version releases for the Flame phone:</p>
+
+<ul>
+ <li>The first channel is our release channel. Flames ship with this channel and will receive over-the-air updates for future major versions, that is, Flames will update from 1.3 to 2.0 to 2.1, etc.</li>
+ <li>The second channel is our nightly channel. Flames can be flashed to this channel, and after the initial flashing will get over the air updates on a daily or nearly daily basis. </li>
+</ul>
+
+<h3 id="Base_Image"><a name="Base Image">Base Image</a></h3>
+
+<p>You can get recovery files and tools at the following storage locations:</p>
+
+<h4 id="Up-to-date_(use_these_unless_you_have_a_good_reason_not_to)">Up-to-date (use these unless you have a good reason not to)</h4>
+
+<ul>
+ <li>Production:
+  <ul>
+   <li>Stable: <a href="http://cds.w5v8t3u9.hwcdn.net/v18D.zip">Base image v18D.zip</a>: The very latest stable archive, containing a Flame base production image of Firefox OS 2.0.</li>
+   <li>Nightly: <a href="http://cds.w5v8t3u9.hwcdn.net/v18D_nightly_v5/v18D_nightly_v5.zip">Base image v18D_nightly_v5</a>: The very latest version of the Flame base production image of Firefox OS 2.6.
+    <pre>Checksum: <strong>SHA512(v18D_nightly_v5.zip)= f92123446f71289dd0ea23b0c602f8a192267fbfcf2f25682cbc072f8bbe3e8b795aea3305ba6ea6cc504d252f1d895b07704b5b65700fcf3760e1386b89c431</strong><strong>
+</strong>Build id<strong>: 20151221215202</strong>
+</pre>
+   </li>
+   <li>Sideload: image <a href="http://cds.w5v8t3u9.hwcdn.net/v18D_nightly_v5/update.zip">v18D_nightly_v5 update.zip</a>: The sideload file for updating your phone manually.  See the <a href="#sideload">sideload</a> section for instructions on how to update your phone to this build without losing data.
+    <pre>Checksum: <strong>SHA512(update.zip)= 4c174f901a242a96729aa45d8551200ef4566913473f88f935c264689031a483e46d21856f0919c4dff467277d2f9c90cf0879107a6671d7b84c5d05405f4b6d</strong><strong>
+</strong>Build id<strong>: 20151221215202</strong>
+</pre>
+   </li>
+   <li>Nightly: <a href="http://cds.w5v8t3u9.hwcdn.net/v18D_nightly_v4.zip">Base image v18D_nightly_v4</a>:  contains a Flame base production image of Firefox OS 2.5. This is the same as the previous one but with the updated system partition size (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184980" title="FIXED: System partition size should be updated">баг 1184980</a>.)  Before updating your phone to a Nightly build you should flash the latest base image to make sure the underlying systems are up to date.
+    <pre>Checksum: <strong>SHA512(v18D_nightly_v4.zip)= 9105e29fd39da1ae487b01da4431a803d619d31482147b4383002b8a10268905fd444b108a438395a78d289cfe4e8fba10c3fb6b0d187f3535f027bf90c2391a
+</strong>Build id<strong>: 20150527010201</strong>
+</pre>
+   </li>
+   <li>Nightly: <a href="http://cds.w5v8t3u9.hwcdn.net/v18D_nightly_v3.zip">Base image v18D_nightly_v3</a>: Contains a Flame base production image of Firefox OS 2.5 that includes security, font, NFC, camera, and other fixes (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1154072" title="FIXED: respin of contributor facing build : 18D_nightly ( v3)">баг 1154072</a> for more details.)
+    <pre>Checksum: <strong>SHA512(v18D_nightly_v3.zip)= 98ec1d24604eaed4a22e7d1439501544622788b30f8f2993409bfc2244a4886863d33238aa78ccb7cd5f9f71464058b81920cc0ba85806a1dbf0220d08a8444b</strong></pre>
+   </li>
+  </ul>
+ </li>
+ <li>Engineering: There is no engineering Base image. Use a production base image and <a href="#Updating_to_nightly_build">flash it to an engineering nightly build</a>.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: You can find out what base image your device is running using the command <code>adb shell getprop ro.bootloader</code>. The version is the last four characters, with the last one then removed, prefixed by 'v' (e.g. L1TC000118D0 &gt; v18D).</p>
+</div>
+
+<div class="warning">
+<p><strong>Important</strong>: When running a shallow or full flash, your phone data will be overwritten: you should therefore back up your data before updating! See the <a href="#Backing_up_and_restoring_your_Flame_data">Backing up and restoring your Flame data</a> section for more details.</p>
+</div>
+
+<h4 id="Outdated">Outdated</h4>
+
+<p>These base images are stable &amp; production only.</p>
+
+<ul>
+ <li><a href="http://cds.w5v8t3u9.hwcdn.net/v188.zip">Base image v188.zip</a>: An updated archive containing a Flame base image of Firefox OS 2.0 with bug fixes from the previous image.</li>
+ <li><a href="http://cds.w5v8t3u9.hwcdn.net/Flame_2.0_v180_1.zip">Base image v180.zip</a>: An older archive containing a Flame base image of Firefox OS 2.0.</li>
+ <li><a href="http://cds.w5v8t3u9.hwcdn.net/v123.zip">Base image v123.zip</a>: A discontinued image of Firefox OS 1.3 based on Android Jellybean; you shouldn't use this anymore.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: Using a locale with base image v188 produces a mixed UI with locale and English languages.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Firefox OS images v180 and above are based on Android KK (Kitkat, 4.4); JB (Jellybean, 4.1–4.3) builds have now been discontinued and are no longer supported, so don't use anything older than v180.</p>
+</div>
+
+<h3 id="Base_Image_installation">Base Image installation</h3>
+
+<p>To install the base image on your device:</p>
+
+<ol>
+ <li>Make sure remote debugging is enabled on your Flame, using the <em>Remote debugging/Debugging via USB</em> option in the device's <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">Developer settings</a> (the option is different, depending on whether you have Firefox 1.3 and under, or Firefox 1.4+ installed).</li>
+ <li>Connect your Flame to your computer via a USB cable if it isn't already. Verify that the computer is connected to the device by running the <code>adb devices</code> command in a terminal.</li>
+ <li>Download the base image <code>.zip</code> file referenced above. Unzip it onto your Desktop.</li>
+ <li>Go into the directory you extracted the software into and run it:
+  <ul>
+   <li>On Windows, enter the directory in your command prompt, then run the <code>flash.bat</code> script using <code>flash.bat</code> (or double click the file in explorer).<br>
+    <strong>Note</strong>: If <code>flash.bat </code>is missing, simply rename the <code>flash.sh</code> file to <code>flash.bat</code>, then run that. Make sure you have <code>adb</code> and <code>fastboot</code> installed and available on <code>PATH</code>.</li>
+   <li>On Linux / OSX, enter the directory in your terminal, then run the <code>flash.sh</code> script using <code>./flash.sh</code> (previous instructions encouraged you to use sudo. Don't. It is <strong>really dangerous</strong> to use sudo with things you download from the Internet. If the flash script fails to see your device, please double-check that your <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">udev rules</a> are correct). If you do not see a <code>flash.sh</code> file, simply rename <code>flash.bat</code> to <code>flash.sh</code> first and then use the above command.</li>
+  </ul>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: If you get a "permission denied" error when running the above commands, your shell script probably doesn't have the right permissions. Running <code>chmod +x flash.sh</code> on it should solve this problem.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If the flash script gets stuck at "&lt; waiting for device &gt;" while the display shows "ThunderSoft(R)", the script doesn't have permission to access the device while in fastboot mode. You need to setup the <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">udev rules</a> to give it access. Also USB 3 ports may not work well with fastboot and can be the cause of this problem.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: You are also welcome to build your own builds to install on the Flame: see <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS">Building and installing Firefox OS</a>.</p>
+</div>
+
+<h4 id="Font_fix">Font fix</h4>
+
+<div class="warning">
+<p><strong>Important</strong>: This step is only needed for base image v180.</p>
+</div>
+
+<p>After updating Gecko and Gaia to nightly with the v180 base image, there will be a mismatch between the fonts that Gecko and Gaia expects and what the base image provides (this has been fixed as of v188). To fix this, you have two choices:</p>
+
+<ul>
+ <li>download our <a href="https://people.mozilla.org/~mwu/fira-font-update.zip">font update package</a>, extract it, navigate into the directory created by extracting, and run the supplied <code>flash.sh</code> script.</li>
+ <li>use the <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/update_system_fonts.sh"><code>update_system_fonts.sh</code></a> script, which will download and flash the system fonts automatically.</li>
+</ul>
+
+<h3 id="Updating_your_Flame_to_a_nightly_build"><a id="Updating_to_nightly_build" name="Updating_to_nightly_build">Updating your Flame to a nightly build</a></h3>
+
+<div class="note">
+<p><strong>Note</strong>: For the current build, Nightly development builds of Firefox OS do not support A-GPS, which may lead to slow performance of GPS functionality. We plan to resolve this in an updated future Nightly channel.</p>
+</div>
+
+<div class="warning">
+<p><strong>Important</strong>: When running a shallow or full flash, your phone data will be overwritten: you should therefore back up your data before updating! See the <a href="#Backing_up_and_restoring_your_Flame_data">Backing up and restoring your Flame data</a> section for more details.</p>
+</div>
+
+<ol>
+ <li>Before updating your phone to a Nightly build you should flash the latest base image to make sure the underlying systems are up to date. Download a <a href="#Base Image">base image</a> <u>with the same or a higher version of Firefox OS than the version you intend to use in step 3 below</u> and use it to update your device's software, as explained above.</li>
+ <li>Because the above step installs a fresh operating system on your device, you'll need to enable remote debugging on your Flame again, using the <em>Remote debugging </em>option in the device's <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a>.</li>
+ <li>Next, choose a build to install (found on <a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/</a>). You'll want one of the following:
+  <ul style="margin-left: 40px;">
+   <li>Production builds (including locales)
+    <ul>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central-flame-kk/">Latest master builds</a> (currently 2.6)</li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g44_v2_5-flame-kk/">Latest v2.5 builds</a></li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g37_v2_2-flame-kk/">2.2 build</a></li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/2015/07/2015-07-24-00-12-07-mozilla-b2g34_v2_1-flame-kk/">2.1 build</a></li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/2015/07/2015-07-23-00-02-07-mozilla-b2g32_v2_0-flame-kk/">2.0 build</a></li>
+    </ul>
+   </li>
+   <li>Engineering builds (with test apps and only pseudo-locales)
+    <ul>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central-flame-kk-eng/">Latest master builds</a> (currently 2.6)</li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g44_v2_5-flame-kk-eng/">Latest v2.5 builds</a></li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g37_v2_2-flame-kk-eng/">2.2 build</a></li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/2015/07/2015-07-24-00-12-07-mozilla-b2g34_v2_1-flame-kk-eng/">2.1 build</a></li>
+     <li><a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/2015/07/2015-07-22-16-02-01-mozilla-b2g32_v2_0-flame-kk-eng/">2.0 build</a></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Pick a version and download both the <code>b2g-XX.XX.en-US.android-arm.tar.gz</code> and <code>gaia.zip</code> files. Save them inside a directory on your Desktop called something like <code>fxos</code>.</li>
+ <li>Download the <a href="https://raw.githubusercontent.com/Mozilla-TWQA/B2G-flash-tool/master/shallow_flash.sh">shallow flash script</a> and save it in the same directory as the above two files.</li>
+ <li><strong>For Windows users:</strong> Also download the <a href="https://raw.githubusercontent.com/Mozilla-TWQA/B2G-flash-tool/master/shallow_flash.bat">shallow_flash.bat</a> windows script and install <a href="https://cygwin.com">Cygwin</a>, which provides a Linux-like command environment on Windows. You will need to install the default Cygwin <em>base</em> category plus the <em>unzip</em> package but shallow_flash.bat will do this for you if you download and copy the Cygwin setup*.exe to the same folder as the script.</li>
+ <li>
+  <p>In your Terminal, <code>cd</code> into the directory you saved the files in and Flash the builds to your phone using the following:</p>
+
+  <p><strong>Linux</strong>:</p>
+
+  <pre class="brush: bash">./shallow_flash.sh --gaia=gaia.zip --gecko=b2g-XX.XX.en-US.android-arm.tar.gz
+</pre>
+
+  <p><strong>Mac</strong>:</p>
+
+  <pre class="brush: bash">./shallow_flash.sh --gaia gaia.zip --gecko b2g-XX.XX.en-US.android-arm.tar.gz</pre>
+
+  <p><strong>Windows</strong>:</p>
+
+  <p>Double click <code>shallow_flash.bat</code> (with the cogs icon) or run it from a command shell. It will flash <code>gaia.zip</code> and a single <code>b2g-XX.XX.en-US.android-arm.tar.gz</code> file.</p>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: If your update fails with an error "Flashing out/target/product/flame/system.img failed because the image was too large.", you will need to update to the newest <a href="#Base_Image">base image</a>, then try applying the nightly build again. This is because the system partition size has been updated (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184980" title="FIXED: System partition size should be updated">баг 1184980</a>.)</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If you get a "permission denied" error when running the above commands, your shell script probably doesn't have the right permissions. Running <code>chmod +x shallow_flash.sh</code> on it should solve this problem.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: A "shallow flash" updates <a href="/en-US/docs/Mozilla/Gecko">Gecko</a> and <a href="/en-US/Firefox_OS/Platform/Gaia">Gaia</a> plus data directories, as opposed to a full flash, which updates Gecko/Gaia, but also the underlying <a href="/en-US/Firefox_OS/Platform/Gonk">Gonk</a> layer and associated binaries particular to that device type. This is why it is a good idea to update to the official <a href="#Base Image">base image</a> first, as suggested above, then shallow flash over the top of that, once you've got the Gonk/binary layer right.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: You can check the update status of each build on <a href="https://wiki.mozilla.org/B2G/QA/Flame_OTA">the Flame OTA status page</a>.</p>
+</div>
+
+<p>Once the install procedure finishes the phone should reboot into the updated build and display the first time user workflow.</p>
+
+<h4 id="Switch_to_nightly_update_channel">Switch to nightly update channel</h4>
+
+<p>In v2.2 you can change the <strong>Update channel</strong> from <code>default</code> to <code>nightly</code> under <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Update_channel">Developer settings</a>.</p>
+
+<p>Below is the older method, if you don't find that setting in your device.</p>
+
+<ol>
+ <li>Make sure remote debugging is enabled on your Flame, using the <em>Remote debugging/Debugging via USB</em> option in the device's <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a>.</li>
+ <li>Download the <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/change_channel.sh">change channel</a> script: follow the link, press the <em>Raw</em> button, then use your browser's save functionality to save the page directly as <code>change_channel.sh</code>.</li>
+ <li>In your Terminal, <code>cd</code> into the directory you saved the script in and change the update channel on your phone using the following command:<br>
+
+  <pre class="brush: bash">./change_channel.sh -v nightly</pre>
+ </li>
+ <li>Once the phone reboots, check for updates by going into <em>Settings &gt; Device information &gt; Check now.</em></li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: This step isn't needed in newer versions of the Firefox OS software — you should just get OTA updates automatically.</p>
+</div>
+
+<div class="note">
+<p><strong>Note:</strong> You can choose between several different update channels. Run "<code>./change_channel.sh -h</code>" to see the other channel options.</p>
+</div>
+
+<h3 id="Fastboot_mode">Fastboot mode</h3>
+
+<p>If flashing a new build to your phone fails to work, your phone may become unresponsive, leading to the phone rebooting in recovery mode. The recovery mode provides few options (<em>Reboot</em>, <em>Update from adb</em>, <em>Wipe data</em>, <em>Wipe cache</em>, and <em>Update from sdcard</em>). Unfortunately, selecting <em>Update from adb</em> triggers a sideload mode in which you cannot use the other adb commands. The <code>adb sideload</code> command would work but the various flash scripts rely on other adb commands.</p>
+
+<p>You can force fastboot mode as follows:</p>
+
+<ol>
+ <li>Power off the phone (which may involve removing the battery in extreme cases...).</li>
+ <li>Power the phone up again by pressing the Volume Down and Power buttons together.</li>
+</ol>
+
+<p>The phone should now display the text "FASTBOOT": it is in fastboot mode and is waiting for a USB connection. At this point, a USB-connected, computer with adb installed should see the phone listed when the <code>fastboot devices</code> command is run. Note that regular adb would not see the device — only fastboot sees it. In this mode, you can use the flash script to install the last <a href="#Base Image">base image</a> as explained above. As the script does use both adb and fastboot commands, you may see some initial error and warnings from adb, but the device should be flashed properly at the end of the procedure.</p>
+
+<h3 id="Emergency_download_mode">Emergency download mode</h3>
+
+<p>If flashing a new build to your phone fails to work, your phone becomes unresponsive, and the phone cannot enter fastboot mode, you can use emergency mode for recovery. You'll need the provided emergency USB cable with the “Recovery Cable” red label on it and the <a href="http://cds.w5v8t3u9.hwcdn.net/Flame_Rescure_Tool_(updated_with_tutorial).zip">Emergency Download Tool</a> to enter this mode. For full instructions, see the Flame emergency rescue tool tutorial included in the download tool's files. Contact the device maker (flameservice [at] thundersoft.com) if you need any more technical support.</p>
+
+<p><img alt="Emergency download tool dialog box as it is when it start." src="https://mdn.mozillademos.org/files/9787/EmergencyDownloadTool.jpg" style="height: 363px; width: 497px;"></p>
+
+<div class="note">
+<p><strong>Note</strong>: The tool provided is Windows-only.</p>
+</div>
+
+<h3 id="Recovery_mode">Recovery mode</h3>
+
+<p>You can enter recovery mode to clear your phone data or manually update the firmware. There are two ways to enter this mode:</p>
+
+<ul>
+ <li>If <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> tools are available, make sure Remote debugging is turned on in the phone's <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Remote_debugging">Developer settings</a>, connect your phone to your computer via USB and enter <code>adb reboot recovery</code> on the command line.</li>
+ <li>If your phone is powered off, press the Volume Up + Power buttons together.</li>
+</ul>
+
+<p>When in recovery mode, press the Volume up/down keys to move the selection highlight, and the Power key to select. Make sure you have your phone data (Contacts, SMS, etc.) backed up before clearing data, and your upgrade packages downloaded before updating.</p>
+
+<h2 id="Updating_your_phone_via_an_adb_sideload"><a id="sideload" name="sideload"></a>Updating your phone via an adb sideload</h2>
+
+<div>
+<div>
+<div>
+<div>
+<div>If you have adb installed on your computer, you can perform an adb sideload to update your phone, given the current sideload <a href="http://cds.w5v8t3u9.hwcdn.net/v18D_nightly_v5/update.zip">update.zip</a> build.  To do this:</div>
+
+<ol>
+ <li>Connect the device to the computer via USB.</li>
+ <li>Type the following :
+  <pre class="brush: bash">adb reboot recovery</pre>
+ </li>
+ <li>Press volume down once on the device to get to the option "apply update from ADB".  If you went too far you can press volume up to move up the menu selection.</li>
+ <li>Press the power button to select the option.</li>
+ <li>On the computer, in the directory that you have stored the update.zip, type:
+  <pre class="brush: bash">adb sideload update.zip
+</pre>
+ </li>
+ <li>Wait until the sideload finishes; on the device it should issue the message "Install from ADB complete".</li>
+ <li>navigate to the "reboot system now" option on the phone by pressing the volume up button on the device, then hit the power button to select that option.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<h2 id="Backing_up_and_restoring_your_Flame_data">Backing up and restoring your Flame data</h2>
+
+<p>When using a Flame, you won't want to lose your phone's contacts and other data while upgrading to a new build (as explained earlier in this article). To backup and restore data you can use our Backup and restore profile tool, which is contained in the <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">B2G-flash-tool Git repo</a>.</p>
+
+<ol>
+ <li>To use this, first open up your terminal/command line.</li>
+ <li>Clone the above repo (you'll need <a href="http://www.git-scm.com/downloads">Git installed</a>) using
+  <pre class="brush: bash">git clone https://github.com/Mozilla-TWQA/B2G-flash-tool</pre>
+ </li>
+ <li>The tool is a Python file: <code>backup_restore_profile.py</code>. Make sure you have <a href="https://www.python.org/downloads/">Python installed</a> (2.7.x is probably best.) Linux and Mac systems should have this out of the box.</li>
+ <li>Enter the directory you just cloned using <code>cd B2G-flash-tool</code>.</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: When using this tool, you'll also need to make sure that your phone is connected via USB to your computer, and that ADB (see <a href="#Important_steps_to_follow_first">Important steps to follow first</a> above) and Debugging via USB (in your device's <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a>) are enabled.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If you get a message complaining about lack of permissions to execute this file, <code>cd</code> into the directory where you saved the file, and run the following command:</p>
+
+<pre class="brush: bash">chmod +x backup_restore_profile.py</pre>
+</div>
+
+<h3 id="Backing_up_data_from_your_phone">Backing up data from your phone</h3>
+
+<p>Before backing up you should make sure your device is updated with the most recent OTA update. To do this, on your phone go to <em>Settings app &gt; Device Information &gt; Check for updates &gt; click Check Now</em>. If there is an update available, you should shortly get a notification of an available update. Choose to install the update.</p>
+
+<p>Now, in the directory where you saved the <code>backup_restore_profile.py</code> file, run the following:</p>
+
+<pre class="brush: bash">python backup_restore_profile.py -b</pre>
+
+<p>This should save your device profile to a directory called <code>mozilla-profile</code>, in the same directory as the script is located.</p>
+
+<div class="warning">
+<p>Warning: by default, it does not save the internal sd card content. So files like photos or videos from the gallery app will not be saved. If you want to backup the sd card content, add the --sdcard option</p>
+
+<pre class="brush: bash">python backup_restore_profile.py -b --sdcard</pre>
+</div>
+
+<h3 id="Restoring_data_to_your_phone">Restoring data to your phone</h3>
+
+<p>Before restoring you should again make sure your device is updated with the most recent OTA update. Go to <em>Settings app &gt; Device Information &gt; Check for updates &gt; click Check Now</em>. If there is an update available, you should shortly get a notification of an available update. Choose to install the update.</p>
+
+<p>In the directory where your <code>mozilla-profile</code> directory is located (see above section), run the following:</p>
+
+<pre class="brush: bash">python backup_restore_profile.py -r</pre>
+
+<div class="note">
+<p><strong>Note</strong>: You can get a list of all the options the tool supports by running <code>python backup_restore_profile.py -h</code>.</p>
+</div>
+
+<h2 id="Pushing_apps_to_your_Flame">Pushing apps to your Flame</h2>
+
+<p>The <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a> and <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> tools make it easy to push apps to your phone, for testing, etc.</p>
+
+<h2 id="RAM_adjustment">RAM adjustment</h2>
+
+<p>You can adjust the available RAM capacity to see how apps perform on Firefox OS phones with lower memory footprints.</p>
+
+<p>This is accomplished by entering fastboot mode (install fastboot first, which is available on the same SDK page as <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a>) and typing:</p>
+
+<pre class="brush: bash">adb reboot bootloader
+fastboot oem mem [0|256-1024]</pre>
+
+<p>“0” is the memory automatically detected and “256-1024” is the number of megabytes. For example, if you want to adjust device RAM capacity to 512M, enter <code>fastboot oem mem 512</code>.</p>
+
+<p>You'll need to then reboot your device for the settings to take effect. This can be done using:</p>
+
+<pre class="brush: bash">fastboot reboot</pre>
+
+<p>The current memory size can be returned by entering fastboot mode and typing:</p>
+
+<pre class="brush: bash">fastboot getvar mem
+</pre>

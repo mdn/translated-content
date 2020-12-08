@@ -1,0 +1,95 @@
+---
+title: Rozdzielacze
+slug: Mozilla/Tech/XUL/Kurs_XUL/Rozdzielacze
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Splitters
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Panele_treści" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Paski_przewijania">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule dowiemy się, jak dodać rozdzielacze do okna.
+</p>
+<h3 id="Rozdzielanie_pude.C5.82ka" name="Rozdzielanie_pude.C5.82ka"> Rozdzielanie pudełka </h3>
+<p>Może wystąpić sytuacja, że będziemy chcieli wyświetlić okno podzielone na dwie sekcje, w którym użytkownik będzie mógł zmienić rozmiar. Przykładem jest okno przeglądarki Mozilli, gdzie możemy zmienić rozmiar paska strony, poprzez przeciągnięcie lub zawinięcie wspomnianego paska, który rozdziela dwie ramki. Możemy także ukryć pasek strony klikając go w miejscu "wcięcia". </p><p>Rozdzielacz tworzymy poprzez użycie elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code></code>. Ten element tworzy wąski pasek pomiędzy sekcjami, który pozwala na zmianę rozmiarów tych sekcji. Możemy umieścić rozdzielacz gdziekolwiek tylko będzie nam on pasował, a będzie on nam pozwalał nadal na zmianę rozmiaru elementów, które będą <b>przed</b> oraz <b>za</b> w tym samym pudełku.
+</p><p>Kiedy umieścimy rozdzielacz wewnątrz poziomego pudełka, rozdzielacz będzie pozwalał na zmianę rozmiaru w poziomie. Natomiast, kiedy rozdzielacz będzie umieszczony w pionowym pudełku, to będzie pozwalał na zmianę rozmiaru w pionie.
+</p><p>Składnia rozdzielacza jest następująca: </p>
+<pre>&lt;splitter
+    id="identifier"
+    state="open"
+    collapse="before"
+    resizebefore="closest"
+    resizeafter="closest"&gt;
+</pre>
+<p>Atrybuty są następujące: </p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code>
+</dt><dd> Unikalny identyfikator rozdzielacza.
+</dd></dl>
+<dl><dt> <code id="a-state"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/state">state</a></code>
+</dt><dd> Sygnalizuje stan rozdzielacza. Domyślnie ustawiony jest na <code>open</code>, panel jest wtedy widoczny od początku. Może też przyjąć wartość <code>collapsed</code>, panel będzie wtedy schowany, a druga część pola będzie zajmować całą powierzchnię.
+</dd></dl>
+<dl><dt> <code id="a-collapse"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/collapse">collapse</a></code>
+</dt><dd> Sygnalizuje, która strona panelu powinna się zwinąć, kiedy rozdzielacz (grippy) zostanie kliknięty lub jego stan jest ustawiony na stan 'collapsed'. Ustaw <code>before</code> dla elementów przed rozdzielaczem lub <code>after</code> dla elementów po rozdzielaczu. Jeśli ustawisz <code>none</code>, które jest także domyślnie ustawiane, grippy rozdzielacza nie zwinie się, gdy je naciśniemy.
+</dd></dl>
+<dl><dt> <code id="a-resizebefore"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/resizebefore">resizebefore</a></code>
+</dt><dd> Kiedy przesuwamy rozdzielaczem, to zmieniają swój rozmiar elementy po lewej lub powyżej. Ten atrybut sygnalizuje, który element powinien zmienić swój rozmiar. Ustaw go na <code>closest</code>, aby element zmienił swój rozmiar natychmiast do lewej strony przed rozdzielaczem. Ustaw go na <code>farthest</code>, aby posiadać element, który jest najdalej położony od rozdzielacza po lewej stronie (jest to pierwszy element w pudełku). Domyślną wartością jest <code>closest</code>.
+</dd></dl>
+<dl><dt> <code id="a-resizeafter"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/resizeafter">resizeafter</a></code>
+</dt><dd> Kiedy przesuwamy rozdzielaczem, to zmieniają swój rozmiar elementy po prawej lub poniżej. Ten atrybut sygnalizuje, który element powinien zmienić swój rozmiar. Ustaw go na <code>closest</code>, aby element zmienił swój rozmiar natychmiast do prawej strony za rozdzielaczem. Ustaw go na <code>farthest</code>, aby posiadać element, który jest najdalej położony od rozdzielacza po prawej stronie (jest to ostatni element w pudełku). Ten atrybut także może być ustawiony na <code>grow</code>, w którym elementy po prawej stronie rozdzielacza nie zmieniają rozmiaru, kiedy jest przesuwany, lecz zamiast tego zmieni się rozmiar całego pudełka. Domyślną wartością jest <code>closest</code>.
+</dd></dl>
+<p>Jeśli ustawimy atrybut <code><code id="a-collapse"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/collapse">collapse</a></code></code>, to powinniśmy także dodać element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grippy" title="grippy">grippy</a></code></code> do wewnątrz <code>splitter</code>, dzięki któremu będzie możliwe zastosowanie zawijania elementu.
+</p><p>Przykład będzie w tym momencie niezwykle pomocny:
+</p>
+<h4 id="Przyk.C5.82ad_splitter" name="Przyk.C5.82ad_splitter"> Przykład <code>splitter</code> </h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul">Podgląd</a>
+</p>
+<pre>&lt;vbox flex="1"&gt;
+  &lt;iframe id="content-1" width="60" height="20" src="w1.html"/&gt;
+  &lt;splitter collapse="before" resizeafter="farthest"&gt;
+    &lt;grippy/&gt;
+  &lt;/splitter&gt;
+  &lt;iframe id="content-2" width="60" height="20" src="w2.html"/&gt;
+  &lt;iframe id="content-3" width="60" height="20" src="w3.html"/&gt;
+  &lt;iframe id="content-4" width="60" height="20" src="w4.html"/&gt;
+&lt;/vbox&gt;
+</pre>
+<div class="float-right"><img alt="grafika:splitter-ex1.jpg"></div>
+<p>W przykładzie stworzyliśmy cztery ramki i rozdzielacz, który został umieszczony pomiędzy pierwszą oraz druga ramką. Atrybut <code><code id="a-collapse"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/collapse">collapse</a></code></code> został ustawiony na wartość <code>before</code>, co oznacza, że jeśli ustawimy grippy rozdzielaczowi i klikniemy go, to pierwsza ramka nie będzie wyświetlona i rozdzielacz zostanie przeniesiony na lewo. Grippy rozdzielacza jest rysowany na środku wewnątrz rozdzielacza.
+</p><p>Rozdzielacz posiada atrybut <code><code id="a-resizeafter"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/resizeafter">resizeafter</a></code></code> o wartości <code>farthest</code>. To znaczy, że kiedy rozdzielacz jest przesuwany, najdalszy element poza rozdzielaczem będzie miał zmieniony rozmiar. W tym przypadku ramka 4 będzie miała zmieniony rozmiar. </p><p>Wartości nie określono dla <code><code id="a-resizebefore"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/resizebefore">resizebefore</a></code></code>, więc przyjmie on wartość domyślną <code>closest</code>. W tym przypadku jest tylko jedna ramka przed rozdzielaczem, więc ramka 1 będzie miała zmieniony rozmiar. </p><p>Ramka 2 i 3 będą tylko zmieniały rozmiar, jeśli przesuniesz rozdzielacz tak daleko w prawo, że ramka 4 nie będzie się już mogła zmniejszyć.
+</p><p>Poniżej są cztery panele wraz z rozdzielaczem w stanie, gdy jest on zawinięty:
+</p><p><img alt="grafika:splitter-ex2.jpg">
+</p><p>Na obrazku poniżej widać 4 panele i rozdzielacz przesunięty w prawo. Dwa środkowe panele 2 i 3 nie zmieniły rozmiaru natomiast 1 i 4 zmieniły. Na obrazku widać już tylko część czwartego, gdy przesuniemy rozdzielacz jeszcze dalej w prawo, środkowe panele też zaczną się zmniejszać.
+</p><p><img alt="grafika:splitter-ex3.jpg">
+</p><p>Możemy stosować własności stylów takie jak <code>min-width</code>, <code>max-height</code> w ramkach do określenia minimalnej lub maksymalnej szerokości lub wysokości w pudełku. Stosując to, rozdzielacz wykryje rozmiary i nie pozwoli użytkownikowi na przesunięcie rozdzielacza poza minimalne lub maksymalne rozmiary pudełka.
+</p><p>Przykładowo, jeśli określimy minimalną szerokość panelu 4 na 30 pikseli, nie zmniejszy się on poniżej tej wartości, ale zrobi to reszta paneli. Dwa pozostałe panele będą się zmniejszyć. Jeśli ustawisz minimalną szerokość panelu 1 na 50 px, będzie można przesunąć rozdzielacz tylko o 10 px w lewo (szerokość początkowa wynosi 60 pikseli). Mimo to można będzie je zawinąć. </p><p>Możesz umieścić więcej niż jeden rozdzielacz w pudełku, jeśli tylko będziesz chciał, to można zawijać różne jego części. Podobnie do zawijania nie trzeba stosować do ramek, gdyż każdy element może być zawinięty.
+</p>
+<h3 id="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki"> Nasz przykład: <code>Znajdź pliki</code> </h3>
+<div class="highlight">
+<p>Zobaczmy, jak wygląda okienko dialogowe znajdywania plików z rozdzielaczem wewnątrz. Jedną z możliwości jest dodanie wyniku szukania w okienku dialogowym. Dodamy obszar pomiędzy kryteriami wyszukiwania, a przyciskami wzdłuż dołu. Rozdzielacz pozwoli na rozwinięcie lub zwinięcie okna wyników szukania. </p>
+<pre class="eval">&lt;/tabbox&gt;
+
+ <span class="highlightred">&lt;iframe src="results.html"/&gt;
+ &lt;splitter resizeafter="grow"/&gt;</span>
+
+ &lt;hbox&gt;
+</pre>
+<p>Powyżej dodaliśmy rozdzielacz i ramkę do okienka dialogowego. Nie potrzebujemy już <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_spacer.html">separatora</a></code> za <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_tabbox.html">tabbox</a></code>, dlatego go usuwamy. Zawartość ramki jest zawarta w pliku o nazwie 'results.html'. Utwórz taki plik i umieść w nim, co chcesz. Ramka zostanie później zastąpiona przez listę rezultatów, kiedy będziesz już wiedział, jak ją stworzyć. Na razie posłuży do zademonstrowania rozdzielacza.
+</p><p>Rozdzielacz został ustawiony na <code>collapse</code> o wartości <code>before</code>, znaczy to, że element tylko przed rozdzielaczem zostanie zawinięty. Tutaj jest to ramka. Jak pokazuje obrazek poniżej, dzieje się to w momencie kliknięcia grippy, a ramka zostanie zawinięta i przyciski zostaną przesunięte wyżej. </p><p>Atrybut <code>resizeafter</code> ustawiony na wartość <code>grow</code>, dlatego elementy za rozdzielaczem przesuwają się w dół po tym, jak rozdzielacz jest przeciągnięty w dół. To rzutuje na zawartość ramki, która rośnie do jakiegoś rozmiaru. Zaznaczmy, że okno nie zmienia rozmiaru automatycznie sama. Nasz rozdzielacz jest rozdzielaczem poziomym, ponieważ jest umieszczony w pionowym pudełku.
+</p><p>Stan normalny:
+</p><p><img alt="grafika:splitter1.png">
+</p><p>Stan schowany:
+</p><p><img alt="grafika:splitter2.png">
+</p><p>Przykład <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul">Podgląd</a>
+</p>
+</div>
+<p>Następnie zobaczymy, jak utworzyć <a href="pl/Kurs_XUL/Paski_przewijania">pasek przewijania</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Panele_treści" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Paski_przewijania">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

@@ -1,0 +1,51 @@
+---
+title: Abra uma Página Web
+slug: Mozilla/Add-ons/SDK/Tutorials/Abra_uma_Página_Web
+tags:
+  - Add-on SDK
+  - Tab
+  - runScript
+  - tab.attach
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Open_a_Web_Page
+---
+<div class="note">Para seguir este tutorial você precisará ter <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation">instalado o SDK</a> e ter conhecimento básico <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">sobre cfx</a>.</div>
+
+<p>Para abrir uma página web, você pode usar o módulo <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a>:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open("http://www.example.com");
+</pre>
+
+<p>Esta função é <span class="short_text" id="result_box" lang="pt"><span class="hps">assíncrona</span></span>, então você não recebe imediatamente um objeto <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Tab"><code>tab</code></a> que você possa examinar. Faça isto, passe uma função de retorno para <code>open()</code>. A função de retorno é atribuída a propriedade <code>onReady</code>, e será passada a tab como argumento:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+  url: "http://www.example.com",
+  onReady: function onReady(tab) {
+    console.log(tab.title);
+  }
+});
+</pre>
+
+<p>Mesmo assim, você não consegue acesso direto a qualquer conteúdo hospedado na tab.</p>
+
+<p>Para acessar conteúdo da tab você precisa anexar um script à tab usando o <code>tab.attach()</code>. Este add-on carrega uma página, então anexa um script à página que adiciona uma borda vermelha nela:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+  url: "http://www.example.com",
+  onReady: runScript
+});
+
+function runScript(tab) {
+  tab.attach({
+    contentScript: "document.body.style.border = '5px solid red';"
+  });
+}
+</pre>
+
+<h2 id="Aprendendo_Mais">Aprendendo Mais</h2>
+
+<p>Para aprender mais sobre uso de tabs no SDK, veja a referência da API <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a>.</p>
+
+<p>Para aprender mais sobre execução de scripts em tabs, veja o tutorial sobre uso de <a href="/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab"><code>tab.attach()</code></a>.</p>

@@ -1,0 +1,140 @@
+---
+title: Guia rápido para desenvolvimento Gaia
+slug: Archive/B2G_OS/Developing_Firefox_OS/Guia_rapido_desenvolvimento_Gaia
+tags:
+  - B2G
+  - Desenvolvimento Firefox OS
+  - Firefox OS
+  - Gaia
+translation_of: Firefox_OS/Developing_Gaia
+---
+<div class="summary">
+ <p><span class="seoSummary">Este guia fornece um rápido tutorial para desenvolver e depurar aplicativos Gaia, incluindo rodar o Gaia dentro do Firefox e do gerenciador de aplicativos do Firefox OS. Este guia assume que você conhece a tecnologia HTML5, tem conhecimentos sobre padrões MVC e um grande interesse no Firefox OS. Ao final, você terá um entendimento básico sobre a estrutura de um aplicativo Gaia e como testar seu trabalho.</span></p>
+</div>
+<h2 id="O_que_você_precisa">O que você precisa?</h2>
+<p>Há duas opções para criar um ambiente de desenvolvimento Gaia/B2G. Você pode construi o seu próprio, ou pode usar o ambiente de construção virtual FoxBox.</p>
+<h3 id="Criando_seu_próprio_ambiente">Criando seu próprio ambiente</h3>
+<ol>
+ <li>Primeiramente você precisa ter  <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">o Git instalado</a>. Se você prefere trabalhar em um ambiente visual, você deve considerar instalar o cliente Github (<a href="http://mac.github.com/">Github para Mac</a> / <a href="http://windows.github.com/">Github para Windows</a>). O Git é essencial para atualizar o código, promover suas alterações, e ver no que os outros desenvolvedores estão trabalhando.</li>
+ <li>Na sequenicia, você precisa clonar o repositório do Mozilla Gaia em seu computador:<br>
+  <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a>. A melhor maneira é criar um fork e clonar este no seu computador local utilizando <code>git clone https://github.com/&lt;Seu nome de usuário no Github&gt;/gaia.git</code>. Isso pode levar um tempo, pois o repositório é grande: Aproximadamente 700MB.</li>
+ <li>Depois de ter feito isto, você pode usar o terminal para chegar ao repositório (<code>cd gaia</code>) e então rodar o comando <code>DEBUG=1 make</code> para construir (compilar) e configurar o Gaia corretamente em modo de depuração. Este download <a href="/en-US/docs/Mozilla/Projects/XULRunner">XULRunner</a> - pacote em tempo de execução para instalar, atualizar e desinstalar - e usar para executar o procedimento de construção.<br>
+  <div class="note">
+   <strong>Nota</strong>: Leia mais detalhes das  <a href="/en-US/Firefox_OS/Platform/Gaia/Hacking#Make_options">opções do Make para o Gaia </a>se você quiser saber mais sobre.</div>
+ </li>
+ <li>Depois que você terminar de configurar seu espaço de trabalho, você precisa instalar <a href="http://nightly.mozilla.org/">Versão Nightly do Firefox</a>.</li>
+ <li>Nesta versão de testes, você poderá também escolher a Extensão do Simulador Firefox e a Extensão do Gerenciador de Aplicativos, dependendo do seu ambiente preferido (os dois serão abordados a seguir). a Extensão do Gerenciador de Aplicativos (App Manager) poderá vir pré-instalada na versão diária, mas você terá que instalar o <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">Simulador do Firefox OS</a>, caso não tenha um aparelho real para fazer os testes.</li>
+ <li>Você precisara instalar o <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">ADB helper</a> para depurar em um aparelho remoto, AKA, seu smartphone.</li>
+ <li>Você deve querer ter um smartphone com o Firefox OS. Ele irá mostrar informações interessantes relacionadas ao tempo de início dos aplicativos, frame rates, etc. Também, uma vez que você tem um OS atual rodando em um aparelho, você será capaz de testar facilmente todas as APIs suportadas pelo aparelho.</li>
+</ol>
+<h3 id="Configurando_o_ambiente_virtual_FoxBox">Configurando o ambiente virtual FoxBox</h3>
+<p>FoxBox é um ambiente do Firefox em uma máquina virtual (VM), composto por Vagrant e o Virtualbox. Isto tem muitas vantagens, mas a principal é que faz muitas configurações para você, deixando-o ir direto ao trabalho de desenvolvimento. Para instruções completas, leia o <a href="https://github.com/gasolin/foxbox">README do FoxBox no repositório do Github</a>.</p>
+<p>Agora que você tem o ambiente de trabalho básico configurado, vamos aos aplicativos!</p>
+<h2 id="Os_aplicativos_instalados_por_padrão_no_Firefox_OS">Os aplicativos instalados por padrão no Firefox OS</h2>
+<p>Os aplicativos HTML5 instalados por padrão fornecidos no código fonte do Gaia são:</p>
+<ul>
+ <li>Bluetooth</li>
+ <li>Navegador</li>
+ <li>Calendário</li>
+ <li>Câmera</li>
+ <li>Relógio</li>
+ <li>Contatos</li>
+ <li>Controle de Custos</li>
+ <li>Discador</li>
+ <li>FL</li>
+ <li>FM</li>
+ <li>Galeria</li>
+ <li>Homescreen</li>
+ <li>Teclado</li>
+ <li>Music</li>
+ <li>PDF.js</li>
+ <li>Ringtones</li>
+ <li>Busca</li>
+ <li>Setringtone</li>
+ <li>Configurações</li>
+ <li>SMS</li>
+ <li>Sistema</li>
+ <li>Video</li>
+ <li>Papel de Parede</li>
+ <li>WAPPush</li>
+</ul>
+<p>O primeiro aplicativo executado quando o aparelho inicia é o aplicativo Sistema (System). Este aplicativo é responsável por abrir e gerenciar a tela inicial (Homescreen). A partir da tela inicial (Homescreen) você pode executar outros aplicativos para realizar várias funções. Por exemplo, o Discador (Dialer) é executado pela Tela Inicial quando o usuário clica no ícone do telefone. Este discador pode executar o aplicativo Contatos quando o usuário queira ver a lista de contatos para discar.</p>
+<h2 id="Vamos_explorar_alguns_aplicativos">Vamos explorar alguns aplicativos</h2>
+<p>Os aplicativos instalados por padrão estão em uma pasta dentro de <code>gaia/apps/</code>. Cada pasta de aplicativos Gaia contem os seguintes componentes:</p>
+<ul>
+ <li>Arquivo <code>manifest.webapp:</code> Para armazenar metadados sobre o aplicativo.</li>
+ <li>Diretório <code>style</code>: Que armazena os arquivos CSS.</li>
+ <li>Diretório <code>js</code>:  Para armazenar os arquivos JavaScript.</li>
+ <li>Diretório <code>locales</code>:   Este armazena o texto (em linhas) traduzidos para diferentes linguas.</li>
+ <li>Um arquivo HTML: Geralmente (mas não se limitando a) <code>index.html</code>.</li>
+</ul>
+<p>Alguns aplicativos também podem ter:</p>
+<ul>
+ <li>Diretório <code>elements</code>: Para armazenar outras pontos de vista em arquivos HTML.</li>
+ <li>Diretório <code>test</code>: Para executar testes relacionados ao aplicativo.</li>
+ <li>Diretório <code>resources</code>:Contém otros recursos como vídeos, áudios, etc.</li>
+ <li>Diretório <code>build</code>.</li>
+</ul>
+<div class="warning">
+ <p><strong>Importante</strong>: Também pode haver alguns arquivos adicionais como LazyLoaders e Motores de Modelagem Customizados e outros utilitários para a execução de um aplicativo no Firefox OS. Você pode notar padrões JavaScript em aplicativos divergentes ou arquivos <code>.js</code>. Lembre-se, estes Aplicativos, incluindo o Sistema Operacional, são <em>open source</em>, o que indica que foram codificados por muitas pessoas. Portanto, os aplicativos são muitas vezes criados de acordo com diferentes padrões de codificação e estilos.</p>
+ <p><strong>Observação</strong>: Este é o layout geral dos aplicativos Gaia. Para que seu aplicativo funciona, é necessário apenas o arquivo <code>manifest.webapp</code>; os demais são opcionais.</p>
+</div>
+<p>Se você tem experiência em desenvolvimento web, você já tem o que precisa para fazer algumas modificações nestes aplicativos. Vamos melhorá-los?</p>
+<h2 id="Vamos_executar_alguns_aplicativos">Vamos executar alguns aplicativos</h2>
+<p>Depois de você ter feito as modificações nestes aplicativos, você pode querer ver as alterações em ação. Você pode executá-los dentro da versão Nightly do Firefox, transferindo diretamente para seu aparelho físico, ou executá-lo através do Gerenciador de Aplicativos do Firefox OS (em um simulador ou um aparelho não real).</p>
+<h3 id="Rodando_a_versão_Nightly_do_Firefox">Rodando a versão Nightly do Firefox</h3>
+<p>Para rodar o Gaia e ver os aplicativos no na versão de testes (Nightly), você precisa executar um comando com a seguinte estrutura:</p>
+<pre class="brush: bash">/path/to/firefoxnightly -profile /path/to/B2G/gaia/profile-debug -no-remote</pre>
+<p>Por exemplo, no Mac OS X, nós executamos o seguinte comando:</p>
+<pre class="brush: bash">/Applications/FirefoxNightly.app/Contents/MacOS/firefox -profile /Users/bob/git/gaia/profile-debug -no-remote</pre>
+<div class="note">
+ <p><strong>Observação:</strong> <code><em>-no-remote</em></code> é necessário para impedir a reutilização de uma instancia do Firefox já executando em vez de criar uma nova e rodar o perfil Gaia customizado. <code>profile-debug</code> significa que nós estamos rodando o perfil de depuração do Gaia que configuramos anteriormente com a opção <code>DEBUG=1</code> no comando <code>make</code>, configurando o ambiente para depuração.</p>
+ <p>Leva um tempo para iniciar, mas eventualmente você irá terminar com uma instância Gaia, além de diversos controles rodando em uma nova janela do navegador.</p>
+</div>
+<p><img alt="A UI screen showing the Gaia user interface running in Firefox nightly: a phone screen and number of tool bar controls." src="https://mdn.mozillademos.org/files/7161/Screen%20Shot%202014-02-13%20at%2012.48.png" style="width: 800px; height: 467px; display: block; margin: 0px auto;"></p>
+<p>Alternativamente, se você quiser rodar um único aplicativo no navegador, uma técnica muito mais rápida e simples seria abrir o arquivo HTML raiz no navegador via file://URL (i.e. abrindo o index.hml no navegador). Você pode então usar a ferramenta <a href="/en-US/docs/Tools/Responsive_Design_View">Modo responsivo de design </a><a href="/en-US/docs/Tools/Responsive_Design_View">(Responsive Design View)</a> para ver como ficará a aparência em telas pequenas e com pouca resolução. É um método útil se você quer fazer algum desenvolvimento/depuração de IU e ter a maioria das vantagens da recarga instantânea. As ferramentas de desenvolvimento do Firefox podem ser útil neste aspecto, como por exemplo para testar otimização de CSS.</p>
+<div class="note">
+ <p><strong>Observação</strong>: Esta abordagem não irá acessar o hardware do equipamento, então várias funcionalidades não irão funcionar, além de você não conseguir ver o aplicativo iniciando, ver seu ícone na tela inicial e etc. Executar em um aparelho físico é a melhor abordagem de todas, veja abaixo:</p>
+</div>
+<h3 id="Rodando_em_um_aparelho_físico">Rodando em um aparelho físico</h3>
+<p>Para enviar seu Gaia modificado para um aparelho físico com o Firefox OS:</p>
+<ol>
+ <li>Tenha certeza que você tem o <a href="/en-US/Firefox_OS/Debugging/Installing_ADB"><code>adb</code></a> instalado, ou instale o <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">ADB helper</a> como descrito anteriormente.</li>
+ <li>Verifique se o seu aparelho está conectado ao seu computador sobre <code>adb</code>  executando o comando <code>adb devices</code> no terminal.</li>
+ <li>Execute o comando <code>make reset-gaia</code> a partir do seu diretório Gaia para enviar ao seu aparelho via  <code>adb.</code></li>
+</ol>
+<p>Isto pode levar um tempo,  mas existe um meio mais rápido e fácil - Usando o Gerenciador de Aplicativos.</p>
+<h3 id="Executando_através_do_Gerenciador_de_Aplicativos_(App_Manager)">Executando através do Gerenciador de Aplicativos (App Manager)</h3>
+<p>Enquanto seu aparelho estiver executando o Firefox 1.2+, você pode rodar aplicativos modificados a partir do Gerenciador de Aplicativos, como descrito na próxima sessão.</p>
+<h2 id="Depurando_com_o_Gerenciador_de_Aplicativos_(App_Manager)">Depurando com o Gerenciador de Aplicativos (App Manager)</h2>
+<p>Depois que você terminar de modificar os aplicativos (ou <a href="/en-US/docs/Web/API/Apps">criar um próprio</a>), você pode querer depurá-lo.</p>
+<p>Para fazer isso, primeiramente precisa fazer o Gerenciador de Aplicativos e seu aparelho físico se comunicarem, ou usar o simulador do Firefox OS, se você não tem um aparelho físico. Isso tudo é explicado em <a href="/en-US/Firefox_OS/Using_the_App_Manager">Usando o App Manager</a>.</p>
+<p>Agora selecione o aplicativo que você quer depurar - use o aplicativo de controle <em>Add Packaged</em> dentro do Gerenciador de Aplicativos e selecione o diretório do seu aplicativo para depurar. Quando o aplicativo aparecer você terá que pressionar o botão "Início" para instalar no aparelho/simulador e então iniciá-lo. A partir de então, você pode pressionar "Atualizar" para enviar mais atualizacões ao aparelho/simulador, e deprurá-lo utilizando as <a href="/pt-BR/docs/Tools">ferramentas do desenvolvimento</a> da Mozilla diretamente em um aparelho.</p>
+<p>Por exemplo, abaixo você pode ver o aplicativo Contacs rodando no Gerenciador de Aplicativos.</p>
+<p><img alt="A card showing details of the Gaia contacts app: a simple contacts application." src="https://mdn.mozillademos.org/files/7135/contacts-app-screenshot.png" style="width: 868px; height: 358px; display: block; margin: 0px auto;"></p>
+<p>Teste outros recursos de depuração, rodando por exemplo alguns comandos no console, ou modificando propriedades CSS.</p>
+<p><img alt="A screenshot of the Mozilla App Manager" src="https://mdn.mozillademos.org/files/7137/debugger.png" style="width: 700px; height: 357px; display: block; margin: 0px auto;"></p>
+<h2 id="Contribuindo_com_o_projeto">Contribuindo com o projeto</h2>
+<p>Uma vez que você está satisfeito com as alterações que você fez no repositório do Gaia, você pode enviar <em>pull requests</em> para o repo no Github. Se você não sabe como fazer isso, leia <a href="https://help.github.com/articles/using-pull-requests">Using Pull Requests</a> na página de ajuda do Github.</p>
+<p>Na prática, seu <em>pull request</em> não tem muita chance de ser aceito pelo time de desenvolvimento do Gaia sem uma prévia discussão e acordo. O primeiro passo seria discutir as ações que você quer fazer com o time de desenvolvimento. Eles podem ser encontrados na lista dev-gaia@lists.mozilla.org mailing list, ou no canal #gaia do IRC em <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>.</p>
+<p>Outra ação possível é registrar bugs no sistema <a href="https://bugzilla.mozilla.org/">Mozilla Bugzilla</a>, usando o <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">formulário Firefox OS project</a> (escolha Gaia — ou um subset apropriado — como componente). Mas antes de tudo, faça uma busca no Bugzilla para verificar se o problema já não foi reportado por alguém. Se não foi, considere os pontos a seguir:</p>
+<ul>
+ <li>Se trata-se de um erro óbvio — um bug no real sentido da palavra — então você deve registrá-lo.</li>
+ <li>Se o bug for na realidade um pedido de melhoria, então o melhor é discutir na lista de emails ou no IRC.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Se você não está certo no que trabalhar e apenas gostaria de encontrar bugs relevantes para contribuir, o aplicativo do Josh Matthews <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">Bugs Ahoy</a> é bastante útil.</p>
+</div>
+<h2 id="Perguntas_frequentes">Perguntas frequentes</h2>
+<p>As seguintes seções responde algumas das pergutnas mais comuns sobre como depurar aplicativos usando o Gaia no seu desktop.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Veja o artigo <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Platform/Gaia/Hacking#make_options" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Hacking#High_resolution_image_assets">Modificando o Gaia</a> para mais opções do make que podem ser úteis para a depuração do Gaia.</p>
+ <p>Posso emular dispositivos de alta resolução dentro do navegador Firefox Desktop?</p>
+ Sim.</div>
+<ol>
+ <li>Primeiro, use o comando
+  <pre class="language-html">GAIA_DEV_PIXELS_PER_PX=1.5 DEBUG=1 make</pre>
+  para certificar-se que as imagens aparecerão corretametne em dispositivos qHD e WVGA.</li>
+ <li>Depois, você pode trocar a densidade do navegador abrindo a página <a href="https://developer.mozilla.org/about:config" title="/about:config">about:config</a> no Firefox e configurar a opção <code>layout.css.devPixelsPerPx</code> para <code>1.5</code> .</li>
+ <li>Por último, você pode usar <a href="/pt-BR/docs/Tools/Responsive_Design_View">Visão de design responsivo</a> para 320 x 533 px (que é o equivalente em pixels CSS para dispositivos 480 x 800)</li>
+</ol>

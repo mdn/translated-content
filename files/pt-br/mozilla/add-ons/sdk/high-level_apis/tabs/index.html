@@ -1,0 +1,671 @@
+---
+title: tabs
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/tabs
+tags:
+  - Guías
+  - Tab
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/tabs
+---
+<div class="note">
+<p>Stable</p>
+</div>
+
+<p><span class="seoSummary">Abre, manipula, e acessa tabs, e recebe eventos de tabs</span></p>
+
+<h2 id="Uso">Uso</h2>
+
+<h3 id="Abrir_uma_tab">Abrir uma tab</h3>
+
+<p>Você pode abrir uma nova tab, especificando várias propriedades incluindo localização:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open("http://www.Exemplo.com");</pre>
+
+<h3 id="Rastrear_tabs">Rastrear tabs</h3>
+
+<p>Você pode registrar eventos de escuta para ser notificado quando a tabs abre, fecha, termina o carregamento de conteúdo DOM, ou tornam-se ativa ou inativa:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+// Listen for tab openings.
+tabs.on('open', function onOpen(tab) {
+  myOpenTabs.push(tab);
+});
+
+// Listen for tab content loads.
+tabs.on('ready', function(tab) {
+  console.log('tab is loaded', tab.title, tab.url);
+});</pre>
+
+<h3 id="Accessar_tabs">Accessar tabs</h3>
+
+<p>O módulo por ele mesmo pode ser usado como uma lista de todas as tabs abertas em todos os navegadores. Em particular, você pode enumerá-las:</p>
+
+<pre class="brush: js">var tabs = require('sdk/tabs');
+for (let tab of tabs)
+  console.log(tab.title);</pre>
+
+<p>Você também pode acessar tabs individual pelo índice:</p>
+
+<pre class="brush: js">var tabs = require('sdk/tabs');
+
+tabs.on('ready', function () {
+  console.log('first: ' + tabs[0].title);
+  console.log('last: ' + tabs[tabs.length-1].title);
+});</pre>
+
+<p>Você pode acessar a tab ativa atualmente:</p>
+
+<pre class="brush: js">var tabs = require('sdk/tabs');
+
+tabs.on('activate', function () {
+  console.log('active: ' + tabs.activeTab.url);
+});</pre>
+
+<h3 id="Rastrear_uma_única_tab">Rastrear uma única tab</h3>
+
+<p>Dada uma tab, você pode registrar escutas para eventos serem notificados quando a tab é fechada, ativada ou desativada, ou quando a página hospedad pela tab é carregada ou recuperada do <a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache">"back-forward cache"</a>:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+function onOpen(tab) {
+  console.log(tab.url + " is open");
+  tab.on("pageshow", logShow);
+  tab.on("activate", logActivate);
+  tab.on("deactivate", logDeactivate);
+  tab.on("close", logClose);
+}
+
+function logShow(tab) {
+  console.log(tab.url + " is loaded");
+}
+
+function logActivate(tab) {
+  console.log(tab.url + " is activated");
+}
+
+function logDeactivate(tab) {
+  console.log(tab.url + " is deactivated");
+}
+
+function logClose(tab) {
+  console.log(tab.url + " is closed");
+}
+
+tabs.on('open', onOpen);</pre>
+
+<h3 id="Manipular_uma_tab">Manipular uma tab</h3>
+
+<p>Você pode conseguir e configurar várias propriedades de tabs (mas note que propriedades relacionadas ao conteúdo da tab, tal como URL, não conterão valores válidos até depois do evento <code>ready</code> disparar). Pela configuração da propriedade <code>url</code> você pode carregar uma nova página na tab:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.on('activate', function(tab) {
+  tab.url = "http://www.Exemplo.com";
+});</pre>
+
+<h3 id="Execute_scripts_em_um_tab">Execute scripts em um tab</h3>
+
+<p>Você pode anexar um script de <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Guides/Content_Scripts">conteúdo a página</a> hospedad na tab, e usar aquele para acessar e manipular o conteúdo da página (veja o tutorial <a href="/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab">Modifying the Page Hosted by a Tab</a>):</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+tabs.on('activate', function(tab) {
+  var worker = tab.attach({
+    contentScript: 'self.port.emit("html", document.body.innerHTML);'
+  });
+  worker.port.on("html", function(message) {
+    console.log(message)
+  })
+});</pre>
+
+<p>Observe que <code>tab.attach</code> é centrado na tab: se o usuário navegar para uma nova página na mesma tab, então o trabalho e scripts de conteúdo serão reanexados á nova página.</p>
+
+<h3 id="Anexação_de_stylesheets">Anexação de stylesheets</h3>
+
+<div class="geckoVersionNote">
+<p>Novo no Firefox 34.</p>
+</div>
+
+<p>Você não pode anexar folhas de estilo para uma tab usando <code>tab.attach()</code>, mas do Firefox 34 em diante você pode anexar e desanexa-los usando APIs de baixo nível  <a href="/en-US/Add-ons/SDK/Low-Level_APIs/stylesheet_style">stylesheet/style</a> e <a href="/en-US/Add-ons/SDK/Low-Level_APIs/content_mod">content/mod</a>. Aqui está um add-on que usa botões alternados para anexar uma folha de estilo a tab ativa, e desanexar novamente. A folha de estilo é chamada "style.css" e está localizada no diretório "data":</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+var { attach, detach } = require('sdk/content/mod');
+var { Style } = require('sdk/stylesheet/style');
+var { ToggleButton } = require("sdk/ui/button/toggle");
+
+var style = Style({
+  uri: './style.css'
+});
+
+var button = ToggleButton({
+  id: "stylist",
+  label: "stylist",
+  icon: "./icon-16.png",
+  onChange: function(state) {
+    if (state.checked) {
+      attach(style, tabs.activeTab);
+    }
+    else {
+      detach(style, tabs.activeTab);
+    }
+  }
+});</pre>
+
+<h3 id="Janelas_Privadas">Janelas Privadas</h3>
+
+<p>Se o seu add-on não optou por entrar em navegação privada, então você não verá quaisquer tabs pela janela de navegação privada.</p>
+
+<p>Tabs hospedadas por janelas em navegação privada não serão vista se você enumerar o módulo <code>tab</code> por si mesmo, e você não receberá quaisquer eventos deles.</p>
+
+<p>Para aprender mais sobre janelas privadas, como optar por entrar em navegação privada, e como suportar navegação privada, dirija-se à <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">documentação do módulo para <code>private-browsing</code></a>.</p>
+
+<h3 id="Converção_para_XUL_tabs">Converção para XUL tabs</h3>
+
+<p>Para converter de um objeto <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Tab"><code>Tab</code></a> de alto nível usando esta API para um objeto <a href="/en-US/docs/Mozilla/Tech/XUL/tab">XUL <code>tab</code></a> de baixo nível usado na API <a href="/en-US/Add-ons/SDK/Low-Level_APIs/tabs_utils"><code>tabs/utils</code></a> e por add-ons tradicionais, use a função <code>viewFor()</code> exportada pelo móduloa <code>viewFor</code>.</p>
+
+<p>Para converter de volta, de uma <code>tab</code> XUL para um objeto <code>Tab</code> de alto nível, use a função <code>modelFor(),</code> exportada pelo módulo <code>modelFor</code>.</p>
+
+<p>Aqui está um exemplo covertendo de uma <code>Tab </code>de alto nível para uma <code>tab XUL</code> e então converte de volta:</p>
+
+<pre class="brush: js">var { modelFor } = require("sdk/model/core");
+var { viewFor } = require("sdk/view/core");
+
+var tabs = require("sdk/tabs");
+var tab_utils = require("sdk/tabs/utils");
+
+function mapHighLevelToLowLevel(tab) {
+  // get the XUL tab that corresponds to this high-level tab
+  var lowLevelTab = viewFor(tab);
+  // now we can, for Exemplo, access the tab's content directly
+  var browser = tab_utils.getBrowserForTab(lowLevelTab);
+  console.log(browser.contentDocument.body.innerHTML);
+  // get the high-level tab back from the XUL tab
+  var highLevelTab = modelFor(lowLevelTab);
+  console.log(highLevelTab.url);
+}
+
+tabs.on("ready", mapHighLevelToLowLevel);
+</pre>
+
+<p>Observe que acessar objetos XUL diretamente e conteúdo web como este significa que você não está protegido pelas garantias de compatibilidades feitas pelas APIs de alto nível do SDK. Em particular, seu código não deve trabalhar com <a href="http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/">multiprocess Firefox</a>.</p>
+
+<h2 id="Globais">Globais</h2>
+
+<h3 id="Funções">Funções</h3>
+
+<h4 class="addon-sdk-api-name" id="open(opções)"><code>open(opções)</code></h4>
+
+<p>Abre uma nova tab. A nova tab abrirá na janela ativa ou na nova janela, dependendo da opção <code>inNewWindow</code>.</p>
+
+<p><strong>Examplo</strong></p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+// Open a new tab on active window and make tab active.
+tabs.open("http://www.mysite.com");
+
+// Open a new tab in a new window and make it active.
+tabs.open({
+  url: "http://www.mysite.com",
+  inNewWindow: true
+});
+
+// Open a new tab on active window in the background.
+tabs.open({
+  url: "http://www.mysite.com",
+  inBackground: true
+});
+
+// Open a new tab as an app tab and do something once it's open.
+tabs.open({
+  url: "http://www.mysite.com",
+  isPinned: true,
+  onOpen: function onOpen(tab) {
+    // do stuff like listen for content
+    // loading.
+  }
+});</pre>
+
+<h5 id="Parâmetros">Parâmetros</h5>
+
+<p><strong>opção: object</strong><br>
+ Opções necessárias:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>url</td>
+   <td>string</td>
+   <td>
+    <p>URL a ser aberta na nova tab. Esta é uma propriedade necessária.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Opções opcionais:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>isPrivate</td>
+   <td>boolean</td>
+   <td>
+    <p>Boolean que determinará se a nova tab deve ser privada ou não. Se seu add-on não suporta navegação privada isto não terá efeito. Veja a documentação de <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">navegação privada</a> para mais informação. O padrão é <code>false</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>inNewWindow</td>
+   <td>boolean</td>
+   <td>
+    <p>Se presente e true, uma nova janela de navegação será aberta e na primeira tab naquela janela. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>inBackground</td>
+   <td>boolean</td>
+   <td>
+    <p>Se presente e true, a nova tab será aberta à direita da tab ativa e não estará ativa. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>isPinned</td>
+   <td>boolean</td>
+   <td>
+    <p>Se presente e true, a nova tab será anexada como um <a href="http://support.mozilla.com/en-US/kb/what-are-app-tabs">app tab</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onOpen</td>
+   <td>function</td>
+   <td>
+    <p>Uma função que será registrada para o evento 'open'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onClose</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de callback que será registrada para o evento 'close'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onReady</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de callback que será registrada para o evento 'ready'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onLoad</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de callback que será registrada para o evento 'load'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onPageShow</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de callback que será registrada para o evento 'pageshow'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onActivate</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de callback que será registrada para o evento 'activate'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onDeactivate</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de callback que será registrada para o evento 'deactivate'. Esta é uma propriedade opcional.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Propriedades">Propriedades</h3>
+
+<h4 class="addon-sdk-api-name" id="activeTab"><code>activeTab</code></h4>
+
+<p>A tab ativa na janela ativa. Esta propriedade é somente leitura. Para ativar um objeto<code> Tab</code>, chame seu método <code>activate</code>.</p>
+
+<p><strong>Exemplo</strong></p>
+
+<pre class="brush: js">// Get the active tab's title.
+var tabs = require("sdk/tabs");
+console.log("title of active tab is " + tabs.activeTab.title);</pre>
+
+<h4 class="addon-sdk-api-name" id="length"><code>length</code></h4>
+
+<p>O número de tabs abertas em todas as janelas.</p>
+
+<h3 id="Eventos">Eventos</h3>
+
+<h4 class="addon-sdk-api-name" id="open"><code>open</code></h4>
+
+<p>Este evento é emitido quando uma nova tab é aberta. Isto não significa que o conteúdo carregou, somente que o navegador está inteiramente visível para o usuário.</p>
+
+<p>Propriedades relacionadas à conteúdo da tab (por exemplo: <code>title</code>, <code>favicon</code>, e <code>url</code>) não serão corrigidas neste ponto. Se você precisar acessar estas propriedades, escute o evento <code>ready</code>:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.on('open', function(tab){
+  tab.on('ready', function(tab){
+    console.log(tab.url);
+  });
+});</pre>
+
+<h5 id="Argumentos">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab que acaba de abrir.</p>
+
+<h4 class="addon-sdk-api-name" id="close"><code>close</code></h4>
+
+<p>Este evento é emitido quando a tab é fechada. Quando a janela é fechada este evento será emitido para cada uma das tabs abertas naquela janela.</p>
+
+<h5 id="Argumentos_2">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab que fechou.</p>
+
+<h4 class="addon-sdk-api-name" id="ready"><code>ready</code></h4>
+
+<p>Este evento é emitido quando o DOM para o conteúdo da página estiver preparado. É equivalmente ao evento <code>DOMContentLoaded</code> para conteúdo da página dada.</p>
+
+<p>Um única tab emitirá este evento toda vez todas às vezes que o DOM for carregado: então será emitido novamente se o endereço da página mudar ou o conteúdo for recarregado.</p>
+
+<p>Depois que este evento for emitido, todas as propriedades relacionadas ao conteúdo da página poderão ser usadas.</p>
+
+<h5 id="Argumentos_3">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab que carregou.</p>
+
+<h4 class="addon-sdk-api-name" id="activate"><code>activate</code></h4>
+
+<p>Este evento é emitido quando uma tab inativa torna-se ativa.</p>
+
+<h5 id="Argumentos_4">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas para o objeto tab que torna-se ativa.</p>
+
+<h4 class="addon-sdk-api-name" id="deactivate"><code>deactivate</code></h4>
+
+<p>Este evento é emitido quando a tab ativa torna-se inativa.</p>
+
+<h5 id="Argumentos_5">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas para o objeto tab que tornou-se inativo.</p>
+
+<h2 id="Tab">Tab</h2>
+
+<p>Uma instância Tab representa um única tab aberta. Ele contém várias propriedades, vários métodos para manipulação, assim como registração de evento por tab.</p>
+
+<p>Tabs emitem todos os eventos descritos na seção de Eventos. Escutas são passadas ao objeto <code>Tab</code> que lança eventos.</p>
+
+<h3 id="Métodos">Métodos</h3>
+
+<h4 class="addon-sdk-api-name" id="pin()"><code>pin()</code></h4>
+
+<p>Anexa a tab como uma <a href="http://support.mozilla.com/en-US/kb/what-are-app-tabs">app tab</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="unpin()"><code>unpin()</code></h4>
+
+<p>Desanexa esta tab.</p>
+
+<h4 class="addon-sdk-api-name" id="close(callback)"><code>close(callback)</code></h4>
+
+<p>Fecha esta tab.</p>
+
+<h5 id="Parâmetros_2">Parâmetros</h5>
+
+<p><strong>callback : function</strong><br>
+ Uma função será chamada quanto a tab termine seu processo de fechamento. Este é uma argumento opcional.</p>
+
+<h4 class="addon-sdk-api-name" id="reload()"><code>reload()</code></h4>
+
+<p>Recarrega esta tab.</p>
+
+<h4 class="addon-sdk-api-name" id="activate()"><code>activate()</code></h4>
+
+<p>Torna esta tab ativa, que trará esta tab para o primeiro plano.</p>
+
+<h4 class="addon-sdk-api-name" id="getThumbnail()"><code>getThumbnail()</code></h4>
+
+<p>Retorna o dado thumbnail da URI da página atualmente carregada nesta tab.</p>
+
+<h4 class="addon-sdk-api-name" id="attach(options)"><code>attach(options)</code></h4>
+
+<p>Anexa um ou mais scripts ao documento carregado na tab. Observe que este é centrado na tab: se o usuário navega para uma nova página na mesma tab, então o script de conteúdo será reanexado à nova página.</p>
+
+<p><strong>Exemplo</strong></p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+tabs.on('ready', function(tab) {
+  var worker = tab.attach({
+      contentScript:
+        'document.body.style.border = "5px solid red";'
+  });
+});</pre>
+
+<h5 id="Parâmetros_3">Parâmetros</h5>
+
+<p><strong>options : objeto</strong><br>
+ Opções opcionais:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>contentScriptFile</td>
+   <td>string,array</td>
+   <td>
+    <p>As URLs dos arquivos locais dos scripts de conteúdo carregados. Scripts de conteúdo especificados por esta opção são carregados <em>antes </em>daqueles especificados pela opção <code>contentScript</code>. Opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScript</td>
+   <td>string,array</td>
+   <td>
+    <p>Uma string ou uma array de strings do código para ser avaliado no contexto. Scripts de conteúdo especificados por esta opção são carregados <em>depois</em> daqueles especificados pela opção <code>contentScriptFile</code>. Opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScriptOptions</td>
+   <td>object</td>
+   <td>
+    <p>Você pode usar esta opção para definir valores somente leitura para seus scripts de conteúdo.</p>
+
+    <p>A opção consiste de uma listagem de objetos literais no formato pares <code>name:value</code> para os valores que você quer fornecer para o script de conteúdo. Por exemplo:</p>
+
+    <pre class="brush: js">
+// main.js
+
+const tabs = require("sdk/tabs");
+
+tabs.open({
+  url: "./page.html",
+  onReady: function(tab) {
+    tab.attach({
+      contentScriptFile: "./content-script.js",
+      contentScriptOptions: {
+        a: "blah"
+      }
+    });
+  }
+});</pre>
+
+    <p>Os valores são acessíveis ao script de conteúdo via propriedade <code>self.options</code>:</p>
+
+    <pre class="brush: js">
+// content-script.js
+
+alert(self.options.a);</pre>
+   </td>
+  </tr>
+  <tr>
+   <td>onMessage</td>
+   <td>function</td>
+   <td>
+    <p>Uma função chamada quando o conteúdo de trabalho recebe uma mensagem dos scripts de conteúdo. Escutas são passadas como um único argumento, a mensagem postada do script de conteúdo.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onError</td>
+   <td>function</td>
+   <td>
+    <p>Uma função chamada quando o trabalhador de conteúdo recebe um erro dos scripts de conteúdo. Escutas são passar como um único argumento, <code>error</code>, que é erro postado do script de conteúdo e um objeto do tipo <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>. Opcional.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="Retorno">Retorno</h5>
+
+<p><strong>Worker</strong> : O objeto <a href="/en-US/Add-ons/SDK/Low-Level_APIs/content_worker">Worker</a> pode ser usado para comunicar com o script de conteúdo. Veja o <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">guia de scripts de conteúdo</a> para aprender os detalhes.</p>
+
+<h3 id="Propriedades_2">Propriedades</h3>
+
+<h4 class="addon-sdk-api-name" id="id"><code>id</code></h4>
+
+<p>O único id para a tab. Esta propriedade é somente leitura.</p>
+
+<h4 class="addon-sdk-api-name" id="title"><code>title</code></h4>
+
+<p>O título da tab (normalmente o título da página atualmente carregada na tab). Esta propriedade pode ser configurada para mudar o título da tab.</p>
+
+<h4 class="addon-sdk-api-name" id="url"><code>url</code></h4>
+
+<p>A URL da página atualmente carregada na tab. Esta propriedade pode ser configurada para carregar uma URL diferente na tab.</p>
+
+<h4 class="addon-sdk-api-name" id="favicon"><code>favicon</code></h4>
+
+<p>A URL do favicon para a página atualmente carregada na tab. Esta propriedade é somente para leitura.</p>
+
+<div class="warning">Esta propriedade está desatualizada. Da versão 1.15, use a função <a href="/en-US/Add-ons/SDK/Low-Level_APIs/places_favicon">getFavicon() do módulo favicon</a> ao invés.</div>
+
+<h4 class="addon-sdk-api-name" id="contentType"><code>contentType</code></h4>
+
+<div class="experimental"><strong>Esta é uma API experimental atualmente, então nós devemos mudar ele em lançamentos futuros. </strong>
+
+<p>Retorna o tipo MIME que o documento atualmente tem carregado na tab sendo desenhada. Ele deve vir do cabeçalho do HTTP ou outra fonte de informação MIME, e deve ser afetado pela conversão de tipo automática executada pelo navegador ou extensão. Esta propriedade é somente leitura.</p>
+</div>
+
+<h4 class="addon-sdk-api-name" id="index"><code>index</code></h4>
+
+<p>O índice da tab relativa a outras tabs na janela da aplicação. Esta propriedade pode ser configurada para mudar sua posição relativa.</p>
+
+<h4 class="addon-sdk-api-name" id="isPinned"><code>isPinned</code></h4>
+
+<p>Se ou não esta tab é anexável como uma <a href="http://support.mozilla.com/en-US/kb/what-are-app-tabs">app tab</a>. Esta propriedade é somente leitura.</p>
+
+<h4 class="addon-sdk-api-name" id="window"><code>window</code></h4>
+
+<p>O objeto <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow"><code>window</code></a> para esta tab.</p>
+
+<h4 class="addon-sdk-api-name" id="readyState"><code>readyState</code></h4>
+
+<div class="geckoVersionNote">
+<p>Novo no Firefox 33.</p>
+</div>
+
+<p>Uma string dizendo a você qual o estado de carga do documento hospedado por esta tab. Isto corresponde diretamente ao <a href="/en-US/docs/Web/API/document.readyState"><code>Document.readyState</code></a>. Ele tem um de quatro valores possíveis:</p>
+
+<ul>
+ <li>"uninitialized": o documento da tab não está ainda carregado</li>
+ <li>"loading": o documento da tab está ainda em processo de carga</li>
+ <li>"interactive": o documento da tab carregou e está analisado, mas os recursos tais como imagens e folhas de escilo devem ainda ser carregados</li>
+ <li>"complete": o documento da tab e todos os recursos estão inteiramente carregados</li>
+</ul>
+
+<p>Uma vez que o <code>readyState</code> da tab entrou no "interactive", você pode pegar as propriedades tais como a URL do documento.</p>
+
+<h3 id="Eventos_2">Eventos</h3>
+
+<h4 class="addon-sdk-api-name" id="close_2"><code>close</code></h4>
+
+<p>Este evento é emitido quando a tab é fechada. Ele também é emitido quando a janela da tab é fechada.</p>
+
+<h5 id="Argumentos_6">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab.</p>
+
+<h4 class="addon-sdk-api-name" id="ready_2"><code>ready</code></h4>
+
+<p>Este evento é emitido quando o DOM para o conteúdo da tab estiver preparado.  Ele é equivalente ao evento <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/DOMContentLoaded"><code>DOMContentLoaded</code></a> para o dado conteúdo da página. Neste ponto o documento por si só está inteiramente carreado e analisado, mas recursos tais como folhas de estilo e imagens devem estar ainda carregando.</p>
+
+<p>Uma única tab emitirá este evento todas às vezes que o DOM estiver carregado: então ela será emitida novamente se o endereço da tab mudar ou o conteúdo for recarregado. Depois deste evento ser emitido, todas as propriedades relacionadas ao conteúdo da tab podem ser usadas.</p>
+
+<h5 id="Argumentos_7">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab.</p>
+
+<h4 class="addon-sdk-api-name" id="load"><code>load</code></h4>
+
+<p>Este evento é emitido quando a página do conteúdo da tab estiver carregada. É equivalente ao evento <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/load"><code>load</code></a> para o dado conteúdo da página. Neste ponto o documento e seus recursos, tais como imagens e folhas de estilo, terminaram o carregamento.</p>
+
+<p>Este evento pode ser usado por páginas que não tem um evento <code>DOMContentLoaded</code>, como imagens. Para páginas que tem um evento<code> DOMContentLoaded</code>, <code>load</code> é disparado depois do <code>ready</code>.</p>
+
+<p>Uma única tab emitirá este evento toda vez que a página for carregada: então ele será emitido novamente se o endereço da tab mudar ou o conteúdo for recarregado. Depois deste evento ser emitido, todas as propriedades relacionadas ao conteúdo da tab podem ser usados</p>
+
+<h5 id="Argumentos_8">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas para o objeto tab.</p>
+
+<h4 class="addon-sdk-api-name" id="pageshow"><code>pageshow</code></h4>
+
+<p>O evento <code>pageshow</code> é emitido quando a página para o conteúdo da tab for carregado. É equivalente ao evento <a href="https://developer.mozilla.org/en-US/docs/DOM/Mozilla_event_reference/pageshow"><code>pageshow</code></a> para um dado conteúdo da página.</p>
+
+<p>Este evento é similar aos eventos <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#load"><code>load</code></a> e <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#ready"><code>ready</code></a>, exceto que diferente de <code>load</code> e <code>ready</code>, <code>pageshow</code> é lançado se a página for recuperada do <a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache">bfcache.</a> Isto significa que se o usuário carrega a página, carrega uma nova página, então se move para a página anterior usando o botão "Back", o evento <code>pageshow</code> é emitido quando o usuário volta a página, enquanto os eventos <code>load</code> e <code>ready</code> não são.</p>
+
+<p>Este evento <em>não</em> é emitido quando a tab fica ativa: para conseguir ser notificado sobre isso, você precisa escutar o evento <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#activate"><code>activate</code></a>.</p>
+
+<p>Depois que este evento foi emitido, todas as propriedades relacionadas ao conteúdo da tab podem ser usadas. Ele é emitido depois do <code>load</code> e <code>ready</code>.</p>
+
+<h5 id="Argumentos_9">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab.</p>
+
+<p><strong>persisted</strong> : Escutas são passadas um valor booleano indicando se ou não a página foi carregada do <a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache">bfcache</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="activate_2"><code>activate</code></h4>
+
+<p>Este evento é emitido quando a tab torna-se ativa.</p>
+
+<p>Observe que você não pode garantir que o conteúdo da tab, ou mesmo sua <code>url</code>, estão inicializados na hora que o <code>activate</code> foi emitido. Isto porque quando uma nova tab é aberta, seu evento activate pode ser emitido antes do conteúdo ser carregado.</p>
+
+<p>Você pode usar a propriedade <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#readyState"><code>readyState</code></a> da tab para determinar se o conteúdo da tab e <code>url</code> estão disponíveis: se o <code>readyState</code> está <code>uninitialized</code> ou <code>loading</code>, então você não pode acessar as propriedades da tab e deve esperar pelo evento <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#ready_2"><code>ready</code></a> da tab.</p>
+
+<h5 id="Argumentos_10">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto.</p>
+
+<h4 class="addon-sdk-api-name" id="deactivate_2"><code>deactivate</code></h4>
+
+<p>Este evento é emitido quando a tab torna-se inativa.</p>
+
+<h5 id="Argumentos_11">Argumentos</h5>
+
+<p><strong>Tab</strong> : Escutas são passadas ao objeto tab.</p>

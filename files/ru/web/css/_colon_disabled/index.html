@@ -1,0 +1,162 @@
+---
+title: ':disabled'
+slug: 'Web/CSS/:disabled'
+tags:
+  - Псевдо-класс
+translation_of: 'Web/CSS/:disabled'
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдо-класс</a> <code>:disabled</code> находит любой отключенный элемент. Элемент отключен, если не может быть активирован (например, его нельзя выбрать, нажать на него или ввести текст) или получить фокус. У элемента также есть включенное состояние, когда его можно активировать или сфокусировать.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Пример_селекторов">Пример селекторов</h3>
+
+<dl>
+ <dt>input:disabled</dt>
+ <dd>Выберет все отключенные поля ввода</dd>
+ <dt>select.country:disabled</dt>
+ <dd>Найдёт все отключенные <code>select</code> элементы с классом <code>country</code></dd>
+</dl>
+
+<h3 id="Пример_использования">Пример использования</h3>
+
+<p>Следующий CSS:</p>
+
+<pre class="brush: css">input[type="text"]:disabled { background: #ccc; }
+</pre>
+
+<p>Применим к этому HTML5 фрагменту:</p>
+
+<pre class="brush: html">&lt;form action="#"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Адрес доставки&lt;/legend&gt;
+    &lt;input type="text" placeholder="Имя"&gt;
+    &lt;input type="text" placeholder="Адрес"&gt;
+    &lt;input type="text" placeholder="Почтовый индекс"&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset id="billing"&gt;
+    &lt;legend&gt;Адрес оплаты&lt;/legend&gt;
+    &lt;label for="billing_is_shipping"&gt;Такой же как адрес доставки:&lt;/label&gt;
+    &lt;input type="checkbox" onchange="javascript:toggleBilling()" checked&gt;
+    &lt;br /&gt;
+    &lt;input type="text" placeholder="Имя" disabled&gt;
+    &lt;input type="text" placeholder="Адрес" disabled&gt;
+    &lt;input type="text" placeholder="Почтовый индекс" disabled&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+
+<p>Добавим немного javascript:</p>
+
+<pre class="brush: js">function toggleBilling() {
+  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+  for (var i = 0; i &lt; billingItems.length; i++) {
+    billingItems[i].disabled = !billingItems[i].disabled;
+  }
+}
+</pre>
+
+<p>Результатом будет отключение всех полей в группе адреса оплаты и окраска их в серый цвет.</p>
+
+<p>{{EmbedLiveSample('Пример_использования', '300px', '250px', '', 'Web/CSS/:disabled')}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Определяет семантику HTML и форм.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}</td>
+   <td>{{Spec2('CSS3 Basic UI')}}</td>
+   <td>Отсылка к Селекторам Уровня 3</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Определяет псевдо-класс, но не семантику.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{CompatGeckoDesktop("1")}}</td>
+   <td>9.0</td>
+   <td>9.0</td>
+   <td>3.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1")}}</td>
+   <td>9.0</td>
+   <td>9.5</td>
+   <td>3.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>
+  <p>{{Cssxref(":enabled")}}</p>
+ </li>
+</ul>

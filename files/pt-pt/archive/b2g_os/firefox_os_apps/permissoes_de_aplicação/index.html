@@ -1,0 +1,690 @@
+---
+title: Permissões de Aplicação
+slug: Archive/B2G_OS/Firefox_OS_apps/Permissoes_de_aplicação
+tags:
+  - Aplicações
+  - Firefox OS
+  - Intermediário
+  - Permissões
+  - Referencia
+  - Referência(2)
+  - WebAPI
+translation_of: Archive/B2G_OS/Firefox_OS_apps/App_permissions
+---
+<div class="summary">
+<p>O campo de <code>permissões</code> no <a href="/pt-PT/docs/Archive/B2G_OS/Firefox_OS_apps/Building_apps_for_Firefox_OS/Manifesto">manisfesto da aplicação</a> controla o acesso a várias APIs sensíveis no dispositivo (algumas vezes chamada de <a href="/pt-PT/docs/Web/WebAPI">WebAPIs</a>). As permissões são descritas nas tabelas seguintes.</p>
+</div>
+
+<p>Os três níveis de permissão, em resumo, são:</p>
+
+<ul>
+ <li><strong>Web apps</strong>: These only have a basic level of permissions, and don't have access to privileged or internal APIs.</li>
+ <li><strong>Privileged apps</strong>: These have all the permissions of web apps plus more. <a href="/en-US/Marketplace/Options/Hosted_apps">Hosted apps</a> can't be privileged — they must be <a href="/en-US/Marketplace/Options/Packaged_apps">packaged apps</a>.</li>
+ <li><strong>Internal (certified) apps</strong>: These have all the permissions of privileged and web apps plus more. Certified/internal apps can only be installed on a device by Mozilla or a device vendor; not 3rd party developers.</li>
+</ul>
+
+<p>For more information on app types, see <a href="/en-US/Marketplace/Options/Packaged_apps#Types_of_packaged_apps">Types of packaged apps</a>.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: If you use the <a href="/Firefox_OS/Using_the_App_Manager">App Manager</a>/<a href="/en-US/docs/Tools/WebIDE">WebIDE</a> to test your app, it will display an easy to read <a href="/Firefox_OS/Using_the_App_Manager#permissions">table</a> of which permissions are allowed, denied, or require a prompt on the current device or simulator you are connected to.</p>
+</div>
+
+<h2 id="Hosted_app_and_privileged_app_permissions">Hosted app and privileged app permissions</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Manifest permission</th>
+   <th scope="col">API name</th>
+   <th scope="col">Description</th>
+   <th scope="col">Minimum app type required</th>
+   <th scope="col"><code>access</code> property</th>
+   <th scope="col">Default granted</th>
+   <th scope="col">Platform/version supported</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a name="alarms"><code>alarms</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Alarm">Alarm</a></td>
+   <td>Schedule a notification, or schedule an application to be started.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-capture"><code>audio-capture</code></a></td>
+   <td>
+    <p><a href="/en-US/docs/Web/API/Navigator.getUserMedia">getUserMedia</a>, <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></p>
+   </td>
+   <td>Obtain <code>MediaStream</code> from audio input devices, e.g. microphone. This is needed to allow audio capture in Firefox OS 1.2+.</td>
+   <td>hosted for getUserMedia, privileged for Web Speech API</td>
+   <td>none</td>
+   <td><code>Prompt</code> for all installed App types for getUserMedia, <code>Allow</code> for Web Speech API.</td>
+   <td>FxOS 1.2 and<br>
+    Desktop Firefox 20+ for getUserMedia, FxOS 2.5 and Desktop Firefox 44 for Web Speech API.</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-alarm"><code>audio-channel-alarm</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>Alarm clock, calendar alarms.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-content"><code>audio-channel-content</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>Music, video.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-normal"><code>audio-channel-normal</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>UI sounds, Web content, music, radio.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-notification"><code>audio-channel-notification</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>New email, incoming SMS.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="browser"><code>browser</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Browser">Browser</a></td>
+   <td>Enables the app to implement a browser in an <code>iframe</code>.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="camera"><code>camera</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Navigator.mozCamera">Camera</a></td>
+   <td>
+    <p>Take photos, shoot video, record audio, and control the camera.</p>
+
+    <div class="note">
+    <p><strong>Note:</strong> <code>camera</code> was limited to certified apps initially because the app sandbox was preventing access to the camera hardware. Fixed from Firefox OS 2.0 onwards.</p>
+    </div>
+   </td>
+   <td>
+    <p>privileged in Firefox OS 2.0+ internal/certified up to Firefox OS 1.4</p>
+   </td>
+   <td>none</td>
+   <td><code>Prompt</code> for all installed App types.</td>
+   <td>FxOS 1.0.1-1.4 certified<br>
+    FxOS 2.0+ privileged</td>
+  </tr>
+  <tr>
+   <td><a name="contacts"><code>contacts</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Contacts">Contacts</a></td>
+   <td>Add, read, or modify contacts from the address book on the device and read contacts from the SIM.</td>
+   <td>privileged</td>
+   <td><code>readonly</code>, <code>readwrite</code>, <code>readcreate</code>, or <code>createonly</code></td>
+   <td><code>Prompt </code>for all installed App types.</td>
+   <td>FxOS 1.1<br>
+    Firefox Android 18</td>
+  </tr>
+  <tr>
+   <td><a name="desktop-notification"><code>desktop-notification</code></a></td>
+   <td><a href="/en-US/docs/Web/API/window.navigator.mozNotification">mozNotification</a> for Gecko &lt;22, <a href="/en-US/docs/Web/API/notification">Notification</a> for Gecko 22+</td>
+   <td>Display a notification on the user's desktop. Note that this has changed, so for Gecko &lt;22 (Firefox OS &lt;1.2) you need to use <code>mozNotification</code>, while for Gecko 22+ (Firefox 1.2+) you need to use <code>Notification</code>.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Prompt</code> for Web content. <code>Allow</code> for all installed App types.</td>
+   <td>FxOS 1.0.1, Android 4.0, Desktop 4.0 for prefixed version<br>
+    FxOS 1.2, Android 22, Desktop 22 for non-prefixed version</td>
+  </tr>
+  <tr>
+   <td><a name="device-storage:music"><code>device-storage:music</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Device_Storage">Device Storage</a></td>
+   <td>Add, read, or modify music files stored on the device.</td>
+   <td>privileged</td>
+   <td><code>readonly</code>, <code>readwrite</code>, <code>readcreate</code>, or <code>createonly</code></td>
+   <td><code>Prompt</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="device-storage:pictures"><code>device-storage:pictures</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Device_Storage">Device Storage</a></td>
+   <td>Add, read, or modify picture files stored on the device.</td>
+   <td>privileged</td>
+   <td><code>readonly</code>, <code>readwrite</code>, <code>readcreate</code>, or <code>createonly</code></td>
+   <td><code>Prompt</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="device-storage:sdcard"><code>device-storage:sdcard</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Device_Storage">Device Storage</a></td>
+   <td>Add, read, or modify files stored on the device's SD card.</td>
+   <td>privileged</td>
+   <td><code>readonly</code>, <code>readwrite</code>, <code>readcreate</code>, or <code>createonly</code></td>
+   <td><code>Prompt</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="device-storage:videos"><code>device-storage:videos</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Device_Storage">Device Storage</a></td>
+   <td>Add, read, or modify video files stored on the device.</td>
+   <td>privileged</td>
+   <td><code>readonly</code>, <code>readwrite</code>, <code>readcreate</code>, or <code>createonly</code></td>
+   <td><code>Prompt</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="fmradio"><code>fmradio</code></a></td>
+   <td><a href="/en-US/docs/Web/API/WebFM">FM Radio</a></td>
+   <td>Control the FM radio.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="geolocation"><code>geolocation</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Using_geolocation">Geolocation</a></td>
+   <td>Obtain the current location of the user.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Prompt</code> (even for certified Apps)</td>
+   <td>FxOS 1.0.1, Desktop Firefox 3.5, Android 4.0</td>
+  </tr>
+  <tr>
+   <td><a name="input"><code>input</code></a></td>
+   <td><a href="https://wiki.mozilla.org/WebAPI/KeboardIME">Keyboard</a></td>
+   <td>Allows the app to act as a virtual keyboard by listening to focus change events in other apps. All IME apps need this permission for sending input keys and updating the value of a input field.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.2</td>
+  </tr>
+  <tr>
+   <td><code><a id="mobileid" name="mobileid">mobileid</a></code></td>
+   <td><a href="https://wiki.mozilla.org/WebAPI/MobileIdentity">Mobile identity</a></td>
+   <td>Allows an app to obtain a verified phone number (<a class="external text" href="http://en.wikipedia.org/wiki/MSISDN" rel="nofollow">MSISDN</a>) after the user selects the number to be shared and gives explicit permission for the app to obtain it.</td>
+   <td>privileged/</td>
+   <td>none</td>
+   <td><code>Prompt</code></td>
+   <td>FxOS 2.0</td>
+  </tr>
+  <tr>
+   <td><a name="mobilenetwork"><code>mobilenetwork</code></a></td>
+   <td><a href="/en-US/docs/Web/API/MozMobileNetworkInfo" title="/en-US/docs/Web/API/MozMobileNetworkInfo">Mobile Network</a></td>
+   <td>Obtain mobile network information (MCC, MNC, etc.).</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="moz-firefox-accounts"><code>moz-firefox-accounts</code></a></td>
+   <td><a href="/en-US/docs/Firefox-Accounts-on-FirefoxOS" title="/en-US/docs/Web/API/MozMobileNetworkInfo">Firefox Accounts</a></td>
+   <td>Allows the use of Firefox Accounts when using the navigator.mozId API.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Prompt</code> for all installed App types.</td>
+   <td>FxOS 2.0</td>
+  </tr>
+  <tr>
+   <td><a id="nfc" name="nfc"><code>nfc</code></a></td>
+   <td><a href="/en-US/docs/Web/API/NFC_API">NFC API</a></td>
+   <td>NFC enables an app to transmit data to other devices via near field communication. This permission is required for reading and writing data.</td>
+   <td>Privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 2.2</td>
+  </tr>
+  <tr>
+   <td><code>nfc-share</code></td>
+   <td><a href="/en-US/docs/Web/API/NFC_API">NFC API</a></td>
+   <td>This permission is just required for sharing tags via NFC.</td>
+   <td>Privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 2.2</td>
+  </tr>
+  <tr>
+   <td><code>nfc-read</code>, <code>nfc-write</code></td>
+   <td><a href="/en-US/docs/Web/API/NFC_API">NFC API</a></td>
+   <td>These permissions were used to request reading and writing privileges in Firefox OS 2.0/2.1</td>
+   <td>Was certified/internal at this stage in development.</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 2.0</td>
+  </tr>
+  <tr>
+   <td><a name="push"><code>push</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Simple_Push" title="/en-US/docs/WebAPI/Simple_Push">Simple Push</a></td>
+   <td>Enable an app to wake up to receive notification.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.1</td>
+  </tr>
+  <tr>
+   <td><code>speech-recognition</code></td>
+   <td><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></td>
+   <td>Allows an app to use speech recognition.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 2.5 and Desktop Firefox 44.</td>
+  </tr>
+  <tr>
+   <td><a name="systemXHR"><code>systemXHR</code></a></td>
+   <td><a href="/en-US/docs/Web/API/XMLHttpRequest#mozSystem">SystemXHR</a></td>
+   <td>Allows anonymous (no cookies) cross-origin XHR without the target site having CORS enabled. Similar to the TCP Socket API but restricted to XHR, not just raw sockets, so it is slightly less risky. See <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="tcp-socket"><code>tcp-socket</code></a></td>
+   <td><a href="/en-US/docs/Web/API/TCPSocket">TCP Socket</a></td>
+   <td>Create TCP sockets and communicate over them.</td>
+   <td>privileged</td>
+   <td>none</td>
+   <td><code>Allow</code></td>
+   <td>FxOS 1.0.1,<br>
+    Desktop (early versions)</td>
+  </tr>
+  <tr>
+   <td><a name="video-capture"><code>video-capture</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Navigator.getUserMedia">GetUserMedia</a></td>
+   <td>Obtain MediaStream from video input devices, e.g. camera. This is needed to allow video capture in Firefox OS 1.4+.</td>
+   <td>hosted</td>
+   <td>none</td>
+   <td><code>Prompt</code> for all installed App types.</td>
+   <td>FxOS 1.4</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note</strong>: To declare an app as privileged, you need to put <code>"type" : "privileged"</code> into your <a href="/en-US/Apps/Build/Manifest#type">app manifest</a>. You don't need to include the <code>type</code> field in your manifest for web apps, as <code>web</code> is the default value.</p>
+</div>
+
+<h2 id="Internal_(Certified)_app_permissions">Internal (Certified) app permissions</h2>
+
+<p>The following permissions require a internal app and are granted implicitly without prompting the user. Most app developers will not be able to use internal APIs, because they are intended for system-level apps and default apps created by Mozilla/operators/OEMs.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Manifest permission</th>
+   <th scope="col">API name</th>
+   <th scope="col">Description</th>
+   <th scope="col">Minimum app type required</th>
+   <th scope="col"><code>access</code> property</th>
+   <th scope="col">Platform</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a name="attention"><code>attention</code></a></td>
+   <td>Attention Screen</td>
+   <td>
+    <p>Allow content to open a window in front of all other content. Used by telephone and SMS.</p>
+
+    <div class="note">
+    <p><strong>Note:</strong> Attention screens use the Firefox OS-specific <code>attention</code> feature name when calling {{domxref("window.open()")}}.</p>
+    </div>
+   </td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-ringer"><code>audio-channel-ringer</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>Incoming phone calls.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-telephony"><code>audio-channel-telephony</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>Phone calls, VoIP calls.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="audio-channel-publicnotification"><code>audio-channel-publicnotification</code></a></td>
+   <td><a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannels</a></td>
+   <td>Forced camera shutter sounds.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.2</td>
+  </tr>
+  <tr>
+   <td><a name="background-sensors"><code>background-sensors</code></a></td>
+   <td>Background Sensor</td>
+   <td>Ability to listen to proximity sensor events in the background. (All apps recieve these events in the foreground.)</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="backgroundservice"><code>backgroundservice (Deprecated)</code></a></td>
+   <td>Background Services</td>
+   <td>
+    <p>Enable an app to run in the background and perform tasks like syncing or responding to incoming messages.</p>
+
+    <div class="note">
+    <p>Note: this functionality has been removed.</p>
+    </div>
+   </td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="bluetooth"><code>bluetooth</code></a></td>
+   <td> </td>
+   <td>Low level access to <a href="https://wiki.mozilla.org/WebAPI/WebBluetooth">Bluetooth</a> hardware.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a id="browser:embedded-system-app" name="browser:embedded-system-app"><code>browser:embedded-system-app</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Browser_API">Browser</a></td>
+   <td>Enables an app opened in a browser {{htmlelement("iframe")}} to call methods of the API on — and listen and respond to related events fired by — itself (usually the parent window of the <code>iframe</code> calls the Browser API.) See {{bug("1196654")}} for further information.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 2.5</td>
+  </tr>
+  <tr>
+   <td><a name="camera"><code>camera</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Navigator.mozCamera">Camera</a></td>
+   <td>
+    <p>Take photos, shoot video, record audio, and control the camera.</p>
+
+    <div class="note">
+    <p><strong>Note:</strong> <code>camera</code> was limited to certified apps initially because the sandbox that apps run in was preventing access to the camera hardware. This has been fixed from Firefox OS 2.0 onwards.</p>
+    </div>
+   </td>
+   <td>internal (certified) up to Firefox OS 1.4, privileged in Firefox OS 2.0+</td>
+   <td>none</td>
+   <td>FxOS 1.0.1-1.4 certified<br>
+    FxOS 2.0+ privileged</td>
+  </tr>
+  <tr>
+   <td><a name="cellbroadcast"><code>cellbroadcast</code></a></td>
+   <td> </td>
+   <td>Fires an event when a specific type of cell network message is received (an emergency network notification).</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a id="datastore" name="datastore">No permission needed</a>, but <code>datastores-access</code>/<code>datastores-owned</code> needs to be set in the manifest (see <a href="/en-US/docs/Web/API/Data_Store_API#Manifest_fields">Data Store API Manifest fields</a>.)</td>
+   <td><a href="/en-US/docs/Web/API/Data_Store_API">Data Store</a></td>
+   <td>A powerful, flexible storage mechanism for Firefox OS applications to use to store and share data.</td>
+   <td>internal (certified)</td>
+   <td><code>datastores-access</code>/<br>
+    <code>datastores-owned</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="device-storage:apps"><code>device-storage:apps</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Device_Storage">Device Storage</a></td>
+   <td>Add, read, or modify files stored in the apps location on the device.<br>
+    <br>
+    When this is used, the <code>webapps-manage</code> permission is also required alongside it (see below.)</td>
+   <td>internal (certified)</td>
+   <td><code>read</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="embed-apps"><code>embed-apps</code></a></td>
+   <td>Embed Apps</td>
+   <td>Ability to embed apps in <code>mozApp</code> frames.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="idle"><code>idle</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Idle">Idle</a></td>
+   <td>Notify the app if the user is idle.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="mobileconnection"><code>mobileconnection</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Mobile_Connection">Mobile Connection</a></td>
+   <td>Obtain information about the current mobile voice and data connection.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="network-events"><code>network-events</code></a></td>
+   <td>Network Events</td>
+   <td>Monitor network uploads and downloads.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="networkstats-manage"><code>networkstats-manage</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Network_Stats_API">Network Stats</a></td>
+   <td>Obtain statistics of data usage per interface.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="open-remote-window"><code>open-remote-window</code></a></td>
+   <td>Open out-of-process windows</td>
+   <td>Allows normal <code>window.open</code> calls, but the resulting window is opened in a new process.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="permissions"><code>permissions</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Permissions_API_(Firefox_OS)">Permissions (Firefox OS)</a></td>
+   <td>Allow an app to manage other permissions of other apps.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="phonenumberservice">phonenumberservice</a></td>
+   <td>??</td>
+   <td>??</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>??</td>
+  </tr>
+  <tr>
+   <td><a name="power"><code>power</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Power_Management">Power Management</a></td>
+   <td>Turn the screen on or off, control CPU, device power, and so on. Listen for and inspect resource lock events.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a id="presentation-device-manage" name="presentation-device-manage"><code>presentation-device-manage</code></a></td>
+   <td>Presentation</td>
+   <td>Obtain the list of available devices that can be used as external display and trigger device discovery.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 3.0</td>
+  </tr>
+  <tr>
+   <td><a name="settings"><code>settings</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Settings">Settings</a></td>
+   <td>Configure or read device settings.</td>
+   <td>internal (certified)</td>
+   <td><code>readonly</code> or <code>readwrite</code></td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="sms"><code>sms</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/WebSMS">WebSMS</a></td>
+   <td>Send and receive SMS messages.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1,<br>
+    1.1 for MMS</td>
+  </tr>
+  <tr>
+   <td><a name="telephony"><code>telephony</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Web_Telephony_API">Web Telephony</a></td>
+   <td>Access all telephony-related APIs to make and recieve phone calls.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="time"><code>time</code></a></td>
+   <td><a href="/en-US/docs/WebAPI/Time_and_Clock">TimeManager</a></td>
+   <td>Set current time. Time zone information is controlled by the Settings API. Formerly called <code>systemclock</code>.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="voicemail"><code>voicemail</code></a></td>
+   <td>Voicemail</td>
+   <td>Access voicemail.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="webapps-manage"><code>webapps-manage</code></a></td>
+   <td>Open Webapps</td>
+   <td>Obtain access to the <a href="/en-US/Apps/JavaScript_API#Management_API"><code>navigator.mozApps.mgmt</code></a> API to manage installed Open Web Apps.<br>
+    <br>
+    Required alongside the <code>device-storage:apps</code> permission (see above.)</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1, Desktop, Android</td>
+  </tr>
+  <tr>
+   <td><a name="wifi-manage"><code>wifi-manage</code></a></td>
+   <td>WiFi Management</td>
+   <td>Enumerate available WiFi networks, get signal strength, connect to a network.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+  <tr>
+   <td><a name="wappush"><code>wappush</code></a></td>
+   <td>WAP Push</td>
+   <td>Receive WAP Push messages.</td>
+   <td>internal (certified)</td>
+   <td>none</td>
+   <td>FxOS 1.0.1</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Nota</strong>: The internal codename for internal apps is certified apps. To declare an app as internal, you need to put <code>"type" : "certified"</code> into your <a href="/en-US/Apps/Build/Manifest#type">app manifest</a>.</p>
+</div>
+
+<h2 id="Consulte_também">Consulte também</h2>
+
+<p>A <a href="https://mxr.mozilla.org/mozilla-b2g32_v2_0/source/dom/apps/src/PermissionsTable.jsm">tabela de permissões</a> (descontinuada e substituida por <strong><u><a href="https://dxr.mozilla.org/mozilla-central/source/">DXR</a></u></strong>) é onde são definidas as permissões da API do Firefox OSno código fonte do Firefox.</p>
+
+<div id="SL_balloon_obj" style="display: block;">
+<div class="SL_ImTranslatorLogo" id="SL_button" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%; opacity: 0; display: block; left: -8px; top: -25px; transition: visibility 2s ease 0s, opacity 2s linear 0s;"> </div>
+
+<div id="SL_shadow_translation_result2" style="display: none;"> </div>
+
+<div id="SL_shadow_translator" style="display: none;">
+<div id="SL_planshet">
+<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_Bproviders">
+<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
+</div>
+
+<div id="SL_alert_bbl" style="display: none;">
+<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_alert_cont"> </div>
+</div>
+
+<div id="SL_TB">
+<table id="SL_tables">
+ <tbody><tr>
+  <td class="SL_td"><input></td>
+  <td class="SL_td"><select><option value="auto">Detectar idioma</option><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+  <td class="SL_td">
+   <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Alternar Idiomas"> </div>
+  </td>
+  <td class="SL_td"><select><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option selected value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+  <td class="SL_td">
+   <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ouça"> </div>
+  </td>
+  <td class="SL_td">
+   <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Copiar"> </div>
+  </td>
+  <td class="SL_td">
+   <div id="SL_bbl_font_patch"> </div>
+
+   <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Tamanho da fonte"> </div>
+  </td>
+  <td class="SL_td">
+   <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ajuda"> </div>
+  </td>
+  <td class="SL_td">
+   <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Fixar a janela de pop-up"> </div>
+  </td>
+ </tr>
+</tbody></table>
+</div>
+</div>
+
+<div id="SL_shadow_translation_result" style=""> </div>
+
+<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_player2"> </div>
+
+<div id="SL_alert100">A função de fala é limitada a 200 caracteres</div>
+
+<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
+<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<table id="SL_tbl_opt" style="width: 100%;">
+ <tbody><tr>
+  <td><input></td>
+  <td>
+   <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Mostrar o botão do ImTranslator 3 segundos"> </div>
+  </td>
+  <td><a class="SL_options" title="Mostrar opções">Opções</a> : <a class="SL_options" title="Histórico de tradução">Histórico</a> : <a class="SL_options" title="Comentários">Comentários</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Faça sua contribuição">Donate</a></td>
+  <td><span id="SL_Balloon_Close" title="Encerrar">Encerrar</span></td>
+ </tr>
+</tbody></table>
+</div>
+</div>
+</div>

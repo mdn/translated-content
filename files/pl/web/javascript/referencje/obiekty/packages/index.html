@@ -1,0 +1,50 @@
+---
+title: Packages
+slug: Web/JavaScript/Referencje/Obiekty/Packages
+tags:
+  - Dokumentacja_JavaScript
+  - Dokumentacje
+  - JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/LiveConnect_Reference/Packages
+---
+<p>
+</p>
+<h3 id="Podsumowanie" name="Podsumowanie"> Podsumowanie </h3>
+<p><b>Obiekt główny</b>
+</p><p>Obiekt najwyższego rzędu umożliwiający dostęp do klas języka Java z poziomu kodu JavaScriptu.
+</p>
+<h3 id="Tworzony_przez" name="Tworzony_przez"> Tworzony przez </h3>
+<p>Obiekt <code>Packages</code> jest predefiniowanym obiektem najwyższego rzędu. Dostęp do niego nie wymaga stosowania konstruktora ani wywoływania żadnych metod.
+</p>
+<h3 id="Opis" name="Opis"> Opis </h3>
+<p>Obiekt <code>Packages</code> pozwala na dostęp do publicznych metod i pól klas języka Java z poziomu kodu w JavaScripcie. Własności <code>java</code>, <code>netscape</code> i <code>sun</code> odpowiadają pakietom <code>java.*</code>, <code>netscape.*</code> i <code>sun.*</code>. Aby uzyskać dostęp do klas, metod i pól w tych pakietach można stosować standardową notację Javy. Na przykład, aby wywołać konstruktor klasy <code>Frame</code> można wykonać poniższy kod:
+</p>
+<pre>var ramka = new Packages.java.awt.Frame();
+</pre>
+<p>Dla wygody programisty JavaScript dostarcza trzech obiektów najwyższego poziomu: <code>netscape</code>, <code>sun</code> i <code>java</code>, które stanowią synonimy dla odpowiednich własności obiektu Packages. Dlatego też z tych pakietów można korzystać bez użycia słowa Packages:
+</p>
+<pre>var ramka = new java.awt.Frame();
+</pre>
+<p>Własność <code><i>nazwaKlasy</i></code> reprezentuje pełną kwalifikowaną nazwę dowolnej innej klasy dostępnej dla JavaScriptu. Aby mieć dostęp do klas poza pakietami <code>netscape</code>, <code>sun</code> i <code>java</code>, należy stosować obiekt <code>Packages</code>
+</p>
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci"> Własności </h3>
+<p><i><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Packages/nazwaKlasy">nazwaKlasy</a></i>: pełna kwalifikowana nazwa klasy Javy w pakiecie innym niż netscape, java i sun, która jest dostępna dla JavaScriptu. </p><p><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Packages/java">java</a>: Dowolna klasa w pakiecie Javy java.*. </p><p><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Packages/netscape">netscape</a>: Dowolna klasa w pakiecie Javy netscape.*. </p><p><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Packages/sun">sun</a>: Dowolna klasa w pakiecie Javy sun.*.
+</p>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<h4 id="Przyk.C5.82ad:_Funkcja_JavaScriptu_tworz.C4.85ca_okno_dialogowe_Javy" name="Przyk.C5.82ad:_Funkcja_JavaScriptu_tworz.C4.85ca_okno_dialogowe_Javy"> Przykład: Funkcja JavaScriptu tworząca okno dialogowe Javy </h4>
+<p>Poniższa funkcja JavaScriptu tworzy okno dialogowe Javy:
+</p>
+<pre>function utworzOkno() {
+   var ramka = new Packages.java.awt.Frame();
+   var okno = new Packages.java.awt.Dialog(ramka);
+   okno.setSize(350,200);
+   okno.setTitle("Witaj, świecie!");
+   okno.setVisible(true);
+}
+</pre>
+<p>W powyższym przykładzie funkcja tworzy <code>okno</code> z użyciem obiektu <code>Packages</code>. Metody <code>setSize</code>, <code>setTitle</code> i <code>setVisible</code> są dostępne dla JavaScriptu jako publiczne metody klasy <code>java.awt.Dialog</code>.
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Core_JavaScript_1.5_Reference/Global_Objects/Packages", "es": "es/Referencia_de_JavaScript_1.5/Objetos_globales/Packages" } ) }}

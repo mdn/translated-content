@@ -1,0 +1,153 @@
+---
+title: Espaços de nomes
+slug: Archive/Mozilla/XUL/Namespaces
+tags:
+  - Extensões
+  - Extras
+translation_of: Archive/Mozilla/XUL/Namespaces
+---
+<p> </p>
+
+<p>Em adição a este documento, consulte <em><a href="/pt-PT/docs/Web/SVG/Namespaces_Crash_Course" title="en/SVG/Namespaces_Crash_Course">Namespaces Crash Course</a></em>.</p>
+
+<p><strong>Espaços de nomes XML </strong>fornecem uma maneira para distinguir nomes duplicados de elementos e atributos. Os nomes de elementos e atributos duplicados podem ocorrer quando um documento XML contém elementos e atributos de dois ou mais esquemas XML diferentes (ou DTDs). para citar <a class="external" href="https://pt.wikipedia.org/wiki/Espa%C3%A7o_de_nomes">Wikipédia</a>: "Em geral, um espaço de nome é um recipiente abstrato que fornece contexto para os itens... este contém e permite a desambiguação de itens com o mesmo nome."</p>
+
+<p>If you are familiar with C++ namespaces, Java packages, perl packages, or Python module importing, you are already familiar with the namespace concept.</p>
+
+<p>An XML namespace is identified by an unique name (called a URI, not a URL, even though it can look like a URL). An URI is any string, although most people choose a URL-based URI because URLs are an easy way to <em>hope</em> for uniqueness. Although there's nothing preventing someone else from using the namespace <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code>, it's fairly unlikely anyone would choose that accidentally. Even if they did accidentally choose it, they may not define the same elements as XUL anyway (e.g., <code>&lt;textbox/&gt;</code>) in their schema/DTD.</p>
+
+<p>Any element type or attribute name in an XML namespace can be uniquely identified by its XML namespace and its "local name". Together, these two items define a <em>qualified name</em>, or <a class="external" href="http://www.w3.org/TR/REC-xml-names/#dt-qualname">QName</a>.</p>
+
+<p>For example, <code>&lt;xul:textbox/&gt;</code> uses a namespace named "xul" and a local name "textbox". This distinguishes it from, for example, <code>&lt;foobar:textbox/&gt;</code> which might occur in the same document. The <strong>xul</strong> and <strong>foobar</strong> namespaces must be defined at the top of the XML document in which they are used, like so:</p>
+
+<pre> &lt;foobar:some-element
+     xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+     xmlns:foobar="the-foobar-namespace"&gt;
+   &lt;xul:textbox id="foo" value="bar"/&gt;
+   &lt;foobar:textbox favorite-food="pancakes"/&gt;
+ &lt;/foobar:some-element&gt;
+</pre>
+
+<p>Notice I've mixed two <code>&lt;textboxes/&gt;</code> in the same document. The only way to distinguish that they have different meanings is with namespaces.</p>
+
+<p>There's only one other thing to know: "default namespace". Every XML element has a "default namespace", and this is used with XUL elements all the time. In XUL documents, you'll usually see this:</p>
+
+<pre> &lt;window
+     id="foo"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+   ...
+   ...
+ &lt;/window&gt;
+</pre>
+
+<p>and in XHTML documents, you'll see this:</p>
+
+<pre> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+   ...
+   ...
+ &lt;/html&gt;
+</pre>
+
+<p>There is a very subtle difference here than before. Before I wrote <code>xmlns<strong>:xul</strong>="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"</code> but here the <strong>:xul</strong> piece is omitted. This signifies to the XML parser that <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code> is the <strong>default namespace</strong> for the element and its descendant elements (unless further overridden by a default namespace on a descendant element), and that any element without a namespace (i.e., no prefix and colon) belongs to the default namespace. That's why we can write the shorthand <code>&lt;textbox/&gt;</code> instead of <code>&lt;xul:textbox/&gt;</code> in XUL (although the latter is just as correct when not using <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code> as the default namespace) -- the XUL namespace is defined as the default on the topmost element. In other words, a default namespace permits a kind of short-hand to be used for all descendants of an element.</p>
+
+<p>Here's a question: what namespace contains the element <code>foo</code> in the XML document below?</p>
+
+<pre>  &lt;foo/&gt;
+</pre>
+
+<p>The answer is that it's in <strong>no</strong> namespace, or alternately, it's in the namespace denoted by the empty string:</p>
+
+<pre>  &lt;foo xmlns=""/&gt;
+</pre>
+
+<p>This second example is semantically equivalent to the first.</p>
+
+<p>Now, a second question: what namespaces are the <code>bar</code>, <code>baz</code>, and <code>quux</code> attributes in?</p>
+
+<pre>  &lt;foo bar="value"&gt;
+    &lt;element xmlns="namespace!" baz="value"&gt;
+      &lt;element quux="value"/&gt;
+    &lt;/element&gt;
+  &lt;/foo&gt;
+</pre>
+
+<p><code>bar</code> is obviously not in a namespace. What about <code>baz</code> and <code>quux</code>? The answer is that they aren't in a namespace either. In fact no unprefixed attribute is ever in a namespace, primarily because XML originally didn't have namespaces, and all XML from that time had to stay in no namespace. This is a source of perennial confusion for XML namespaces.</p>
+
+<div id="SL_balloon_obj" style="display: block;">
+<div class="SL_ImTranslatorLogo" id="SL_button" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%; opacity: 0; display: block; left: -8px; top: -25px; transition: visibility 2s ease 0s, opacity 2s linear 0s;"> </div>
+
+<div id="SL_shadow_translation_result2" style="display: none;"> </div>
+
+<div id="SL_shadow_translator" style="display: none;">
+<div id="SL_planshet">
+<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_Bproviders">
+<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
+</div>
+
+<div id="SL_alert_bbl" style="display: none;">
+<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_alert_cont"> </div>
+</div>
+
+<div id="SL_TB">
+<table id="SL_tables">
+ <tbody><tr>
+  <td class="SL_td"><input></td>
+  <td class="SL_td"><select><option value="auto">Detectar idioma</option><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+  <td class="SL_td">
+   <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Alternar Idiomas"> </div>
+  </td>
+  <td class="SL_td"><select><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option selected value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+  <td class="SL_td">
+   <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ouça"> </div>
+  </td>
+  <td class="SL_td">
+   <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Copiar"> </div>
+  </td>
+  <td class="SL_td">
+   <div id="SL_bbl_font_patch"> </div>
+
+   <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Tamanho da fonte"> </div>
+  </td>
+  <td class="SL_td">
+   <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ajuda"> </div>
+  </td>
+  <td class="SL_td">
+   <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Fixar a janela de pop-up"> </div>
+  </td>
+ </tr>
+</tbody></table>
+</div>
+</div>
+
+<div id="SL_shadow_translation_result" style=""> </div>
+
+<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_player2"> </div>
+
+<div id="SL_alert100">A função de fala é limitada a 200 caracteres</div>
+
+<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
+<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<table id="SL_tbl_opt" style="width: 100%;">
+ <tbody><tr>
+  <td><input></td>
+  <td>
+   <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Mostrar o botão do ImTranslator 3 segundos"> </div>
+  </td>
+  <td><a class="SL_options" title="Mostrar opções">Opções</a> : <a class="SL_options" title="Histórico de tradução">Histórico</a> : <a class="SL_options" title="Comentários">Comentários</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Faça sua contribuição">Donate</a></td>
+  <td><span id="SL_Balloon_Close" title="Encerrar">Encerrar</span></td>
+ </tr>
+</tbody></table>
+</div>
+</div>
+</div>

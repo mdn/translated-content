@@ -1,0 +1,110 @@
+---
+title: GlobalEventHandlers.onloadend
+slug: Web/API/GlobalEventHandlers/onloadend
+translation_of: Web/API/GlobalEventHandlers/onloadend
+---
+<div>{{ApiRef}}</div>
+
+<p><span id="result_box" lang="ru"><span>Свойство</span></span> <strong><code>onloadend</code></strong>  <span id="result_box" lang="ru"><span>от </span></span>{{domxref("GlobalEventHandlers")}} примесь {{domxref("EventHandler")}} <span id="result_box" lang="ru"><span>передает код для вызова в момент возникновения события</span></span> {{event("loadend")}}  (когда процесс загрузки ресурса окончился и остановился)</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>img</var>.onloadend = <var>funcRef</var>;
+</pre>
+
+<p>При возникновении события  <code>loadend</code>  будет вызванна функция обработчик <code>funcRef</code>.</p>
+
+<h2 id="Example" name="Example">Примеры</h2>
+
+<pre class="brush: html">&lt;img src="myImage.jpg"&gt;</pre>
+
+<pre class="brush: js">// 'loadstart' fires first, then 'load', then 'loadend'
+
+image.addEventListener('load', function(e) {
+  console.log('Image loaded');
+});
+
+image.addEventListener('loadstart', function(e) {
+  console.log('Image load started');
+});
+
+image.addEventListener('loadend', function(e) {
+  console.log('Image load finished');
+});</pre>
+
+<h2 id="Specification" name="Specification">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("52")}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("52")}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] As of Firefox 52, The <code>loadend</code> event is now fired on {{htmlelement("img")}} elements.</p>

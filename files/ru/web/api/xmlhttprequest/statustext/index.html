@@ -1,0 +1,78 @@
+---
+title: XMLHttpRequest.statusText
+slug: Web/API/XMLHttpRequest/statusText
+tags:
+  - AJAX
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - XMLHttpRequest
+  - XMLHttpRequest Status
+translation_of: Web/API/XMLHttpRequest/statusText
+---
+<div>{{APIRef('XMLHttpRequest')}}</div>
+
+<div>
+<p>Свойство <code><strong>XMLHttpRequest.statusText</strong></code>, доступное только для чтения, возвращает строку <code>DOMString</code>, содержащую сообщение о состоянии ответа, возвращаемое HTTP-сервером. В отличие от <code>XMLHTTPRequest.status</code>, который указывает числовой код состояния, это свойство содержит текст состояния ответа, например «OK» или «Not Found». Если запрос <code>readyState </code>находится в состоянии <code>UNSENT </code>или <code>OPENED</code>, значением <code>statusText </code>будет пустая строка.</p>
+
+<p>Если в ответе сервера явно не указан текст состояния, для <code>statusText </code>будет принято значение по умолчанию «ОК».</p>
+</div>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">var xhr = new XMLHttpRequest();
+console.log('0 UNSENT', xhr.statusText);
+
+xhr.open('GET', '/server', true);
+console.log('1 OPENED', xhr.statusText);
+
+xhr.onprogress = function () {
+  console.log('3 LOADING', xhr.statusText);
+};
+
+xhr.onload = function () {
+  console.log('4 DONE', xhr.statusText);
+};
+
+xhr.send(null);
+
+/**
+ * Outputs the following:
+ *
+ * 0 UNSENT
+ * 1 OPENED
+ * 3 LOADING OK
+ * 4 DONE OK
+ */
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-statustext-attribute')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG живой стандарт</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+
+<div class="hidden">Таблица совместимости на этой странице генерируется из структурированных данных. Если вы хотите внести свой вклад в эти данные, просмотрите <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос на извлечение.</div>
+
+<p>{{Compat("api.XMLHttpRequest.statusText")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Список <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
+ <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>

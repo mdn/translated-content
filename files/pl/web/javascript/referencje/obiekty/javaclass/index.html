@@ -1,0 +1,60 @@
+---
+title: JavaClass
+slug: Web/JavaScript/Referencje/Obiekty/JavaClass
+tags:
+  - Dokumentacja_JavaScript
+  - Dokumentacje
+  - JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/LiveConnect_Reference/JavaClass
+---
+<p>
+</p>
+<h3 id="Podsumowanie" name="Podsumowanie"> Podsumowanie </h3>
+<p><b>Obiekt główny</b>
+</p><p>Referencja JavaScriptu do klasy Javy.
+</p>
+<h3 id="Tworzony_przez" name="Tworzony_przez"> Tworzony przez </h3>
+<p>Referencja do nazwy klasy użyta wraz z obiektem <code>Packages</code>:
+</p>
+<pre class="eval">Packages.<i>KlasaJavy</i>
+</pre>
+<p><i>KlasaJavy</i> jest w pełni podaną nazwą klasy Javy obiektu. LiveConnect obiektów <code>java</code>, <code>sun</code> i <code>netscape</code> zawierają skróty do często używanych w pakietach Javy jak również tworzą obiekty <code>JavaClass</code>.
+</p>
+<h3 id="Opis" name="Opis"> Opis </h3>
+<p>Obiekt <code>JavaClass</code> jest referencją do jednej z klas pakietu Javy, jak na przykład <code>netscape.javascript.JSObject</code>. Obiekt <code>JavaPackage</code> jest referencją do pakietu Javy, jak na przykład <code>netscape.javascript</code>. W JavaScript, hierarchia <code>JavaPackage</code> i <code>JavaClass</code> jest odbiciem pakietów Javy i hierarchii klas.
+</p><p>Przechodząc obiekt <code>JavaClass</code> do metody, która żąda argument typu <code>java.lang.Class</code>.
+</p>
+<h3 id="Zgodno.C5.9B.C4.87_wsteczna" name="Zgodno.C5.9B.C4.87_wsteczna"> Zgodność wsteczna </h3>
+<h4 id="JavaScript_1.3_i_wersje_wcze.C5.9Bniejsze" name="JavaScript_1.3_i_wersje_wcze.C5.9Bniejsze"> JavaScript 1.3 i wersje wcześniejsze </h4>
+<p>Musisz utworzyć opakowanie dla instancji <code>java.lang.Class</code>, zanim przekażesz ją jako parametr dla metody Javy - obiektu <code>JavaClass</code> nie są automatycznie konwertowane do instancji <code>java.lang.Class</code>.
+</p>
+<h3 id="W.C5.82asno.C5.9Bci" name="W.C5.82asno.C5.9Bci"> Własności </h3>
+<p>Własności obiektu <code>JavaClass</code> są statycznymi polami tej klasy Javy.
+</p>
+<h3 id="Metody" name="Metody"> Metody </h3>
+<p>Metody obiektu <code>JavaClass</code> są statycznymi metodami tej klasy Javy.
+</p>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady"> Przykłady </h3>
+<h4 id="Przyk.C5.82ad:_Zastosowanie_JavaClass" name="Przyk.C5.82ad:_Zastosowanie_JavaClass"> Przykład: Zastosowanie <code>JavaClass</code> </h4>
+<p>W poniższym przykładzie, <code>x</code> jest obiektem typu JavaClass odpowiadającym <code>java.awt.Font</code>. Ponieważ <code>BOLD</code> jest statycznym polem klasy Font, jest również własnością obiektu JavaClass.
+</p>
+<pre class="eval">x = java.awt.Font;
+mojFont = x("helv", x.BOLD, 10); // tworzy obiekt Font
+</pre>
+<p>Powyższy przykład pomija słowo kluczowe <code>Packages</code> i używa synonimu <code>java</code>, ponieważ klasa <code>Font</code> należy do pakietu <code>java</code>.
+</p>
+<h4 id="Przyk.C5.82ad" name="Przyk.C5.82ad"> Przykład </h4>
+<p>W poniższym przykładzie, obiekt typu <code>JavaClass</code>, <code>java.lang.String</code> jest przekazany jako argument do metody <code>newInstance</code>, która tworzy tablicę:
+</p>
+<pre class="eval">var samochody = java.lang.reflect.Array.newInstance(java.lang.String, 15);
+</pre>
+<h3 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe"> Zobacz także </h3>
+<p><code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/JavaArray">JavaArray</a>,
+<a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/JavaObject">JavaObject</a>,
+<a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/JavaPackage">JavaPackage</a>,
+<a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Packages">Packages</a></code>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Core_JavaScript_1.5_Reference/Global_Objects/JavaClass", "es": "es/Referencia_de_JavaScript_1.5/Objetos_globales/JavaClass" } ) }}

@@ -1,0 +1,80 @@
+---
+title: Usando emuladores B2G
+slug: Archive/B2G_OS/Using_the_B2G_emulators
+translation_of: Archive/B2G_OS/Using_the_B2G_emulators
+---
+<p>Este artigo fornece um breve guia para algumas coisas importantes que você deveria saber quando usar o emulador Boot to Gecko.</p>
+<p>Este guia assume que você já contruiu um dos emuladores; Caso contrário, veja <a href="/pt-BR/docs/Mozilla/Firefox_OS/Construindo_e_instalando_o_Firefox_OS" title="en/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Instalando e compilando o Boot to Gecko</a>!</p>
+<h2 id="Sobre_os_emuladores_B2G">Sobre os emuladores B2G</h2>
+<p>Existem dois emuladores B2G. O primeiro construido por meio da configuração de "emulator-x86" quando roda o <code>config.sh</code>, é um emulador para dispositivos ARM. Apesar de ser mais lento que o executado em um processador x86, é mais estável e tem uma representação mais precisa de como o dispositivo real irá funcionar. Configurando como "emulator-x86" quando executar <code>config.sh</code> você terá o emulador x86.</p>
+<div class="note">
+ <strong>Nota:</strong> Nos últimos meses, a equipe de Automação resolveu parar a utilização do emulador x88 devido a problemas de estabilização. Por isso, há uma grande chance das coisas não funcionarem no emulador x86. Utilize o emulador ARM a não ser que você tenha uma boa razão para não fazê-lo.</div>
+<p>Uma vez selecionado, configurado e compilado um emulador, o restante funciona da mesma forma segundo o ponto de vista do usuário. Então o restante desse artigo é comum para ambos os emuladores.</p>
+<div class="note">
+ <strong>Nota:</strong>  No Mac OS X, o emulador B2G exige um processador Core 2 Duo ou superior, ou seja, um sistema compatível com Mac OS X 10.7 "Lion." Na verdade, não é necessário exectura no "Lion", mas ser compatível com ele.</div>
+<h2 class="note" id="Iniciando_o_Emulador">Iniciando o Emulador</h2>
+<p>Para inicializar o emulador do B2G, digite o seguinte comando:</p>
+<pre>./run-emulator.sh
+</pre>
+<p>Esse comando realiza todas as tarefas de incialização do emulador para você. Você tem que ser paciente enquanto o emulador inicializa e depois a inicialização do Boot to Gecko. Isso pode levar alguns minutos.</p>
+<h2 id="Quando_o_emuladora_nao_funciona">Quando o emuladora nao funciona</h2>
+<p>Algumas vezes o emulador falha na incialização. Bem-vindo ao time! A seguir algumas dicas para resolver os problemas.</p>
+<h3 id="Você_está_tentando_executar_em_uma_máquina_virutal">Você está tentando executar em uma máquina virutal?</h3>
+<p>VirtualBox e Parallels possui alguns problemas no suporte ao acelerador gráfico que causa uma falha na inicialização do emulador, algo relacionado com o dispositivo OpenGL. O dispositivo inicia o <em>boot</em>, falah e reinicia em um loop, ou inicia sem mostrar nada no emulador. Infelizmente ainda não há solução disponível (existe uma <a href="http://www.digitalmihailo.com/setting-up-ubuntu-12-04-virtual-machine-for-firefox-os-build/">solução de contorno</a> para VirtualBox) - você precisa usar o VMWare Player (Freeware), Workstation ou Fusion. Para o VirtualBox - não instale <em>Guest Addons</em>, ou desabilite o módulo <em>vboxvideo</em>.</p>
+<h3 id="Certifique-se_que_o_servidor_adb_está_executando">Certifique-se que o servidor adb está executando</h3>
+<p>Isso geralmente acontece porque o servidor adb que interage com o dispositivo emulado pode não estar rodando com um mal funcionamento.</p>
+<div class="note">
+ <p><strong>Nota:</strong> Se você está usando o <code>adb</code> compilado pelo sistema de compilação B2G (o que provavelmente é o usado), ele está localizado no diretório <code>$B2G/out/host/&lt;platform&gt;/bin</code>. No Mac, o diretório é <code>$B2G/out/host/darwin-x86/bin</code>, por exemplo.</p>
+</div>
+<p>Para verificar se o <code>adb</code> está rodando execute:</p>
+<pre class="language-html">ps aux | grep adb
+</pre>
+<p>Se está rodando, interrompa a execução porque provavelmente ele não está funcionando corretamente.</p>
+<pre class="language-html">adb kill-server
+</pre>
+<p>Se o serviço não está rodando execute:</p>
+<pre class="language-html">adb start-server
+</pre>
+<p>Então, tente executar o emulador novamente. Se ainda não funcionar, é hora de ir para o canal IRC <a class="link-irc" href="irc://irc.mozilla.org/b2g" title="irc://irc.mozilla.org/b2g">#b2g</a> em irc.mozilla.org para conseguir ajuda.</p>
+<h2 id="Configurando_o_emulador">Configurando o emulador</h2>
+<p>There are several options you can change to adjust the emulator to be more similar to the device you want to emulate. This section provides some basic information on how to do that. You can adjust the emulator's configuration by editing the <code>run-emulator.sh</code> script (or, ideally, a copy of it). Only a few of the most useful parameters are discussed here; you'll want to <a class="external" href="http://www.qemu.org/" title="http://www.qemu.org/">look at the qemu site</a> for details on the others.</p>
+<div class="note">
+ <strong>Tip:</strong> Create one copy of <code>run-emulator.sh</code> for each device you want to simulate; this makes it easy to start up with different configurations.</div>
+<h3 id="Apagar_as_definições_da_configuração">Apagar as definições da configuração</h3>
+<p>Algumas vezes, configurações desatualizadas no seu dispositivo emulado pode causar um comportamento estranho. Você pode apagar o banco de dados IndexDB seguindo as instruções:</p>
+<ol>
+ <li>Certifique-se de que o adb está rodando, como descrito em  <a href="#Certifique-se_que_o_servidor_adb_está_executando">Certifique-se que o servidor adb está executando</a>.</li>
+ <li>Inicie o emulador.</li>
+ <li>Abra o terminal no computador que executa o emulador, vá para o diretório raiz da compilação do seu emulador e digite: <code>out/host/&lt;platform&gt;/bin/adb -e shell</code>; no Mac, o diretório pode ser <code>out/host/darwin-x86/bin/adb -e shell</code>.</li>
+ <li>Agora que você está no <code>shell</code> do <code>adb</code> você pode executar comandos shell no seu dispositivo emulado. Pare o serviço B2G no dispositivo: <code>stop b2g</code>.</li>
+ <li>Apague o banco de dados IndexDB: <code>rm -rf /data/local/indexedDB</code>.</li>
+ <li>Reinicie o B2G no dispositivo emulado: <code>start b2g</code>.</li>
+</ol>
+<p>É esperado que nesse ponto você chegue na interface do Gaia e tudo corra bem.</p>
+<h2 id="Se_o_emulador_começa_mas_a_tela_fica_preta_após_a_tela_inicial_mozilla_technology">Se o emulador começa mas a tela fica preta após a tela inicial "mozilla technology"</h2>
+<p>Caso isso aconteca, pode ser um bug do drive da máquina que está executando o emulador. Pode acontecer no drive <a href="http://nouveau.freedesktop.org/wiki/">Nouveau</a> Open Source do Linux. A solução mais simples é substituir os drives da máquina. Nesse caso deve-se instalar o drive Nouveau proprietário ("adicional no Ubuntu). No caso do <em>chipset</em> gráfico da Intel, o drive open source pode causar um erro no emulador: '<code>eglMakeCurrent failed</code>' que parece suportar uma versão OpenGL inferior ao necessária para a emulação (2.0 GPU). A solução é desativar o GPU através da edição do script <code>run-emulator.sh</code> (neste caso será mais lento).</p>
+<h3 id="Alterando_skins">Alterando <em>skins</em></h3>
+<p>Por padrão, o emulador incia no modo HVGE, que é metade do modo VGA, ou 320x480 pixels. Isso é especificado no parâmetro <code>-skin</code> que é passado ao emulador ao iniciar. Você pode alterar para um modo diferente alterando o script <code>run-emulator.sh</code> (ou, de preferência, uma cópia dela). Os <em>skins</em><em> </em>disponíveis são:</p>
+<ul>
+ <li>HVGA (320x480)</li>
+ <li>QVGA (240x320)</li>
+ <li>WQVGA (240x400)</li>
+ <li>WQVGA432 (240x432)</li>
+ <li>WSVGA (1024x600)</li>
+ <li>WVGA800 (480x800)</li>
+ <li>WVGA854 (480x854)</li>
+ <li>WXGA720 (1280x720)</li>
+ <li>WXGA800 (1280x800)</li>
+</ul>
+<p>Os skins ficam armazenados no diretório <code>B2G/development/tools/emulator/skins</code>. É importante notar que o formato dos <em>skins</em> são muito simples, se você observar vai perceber que são pastas simples com arquivos PNG para os diversos objetos de interface de usuário e um arquivo texto chamado <code>layout</code> que descreve o layout da interface e a área da tela. É muito simples criar <em>skins</em> personalizados se desejar.</p>
+<h3 id="Alterando_tamanho_de_memoria">Alterando tamanho de memoria</h3>
+<p>Outra opção que você pode ou necessita configurar é a memória do dispositivo. O valor padrão é 512 MB, portanto se o dispositivo que você está emulando possui mais ou menos memória, seria importante ajustar o valor para garantir que os aplicativos serão executados em condições similares ao dispositivo. Para fazer isso altere o valor do parâmetro <code>-memory</code> para o tamanho desejado em megabytes. Além do valor padrão de 512 MB, 256 MB e 1024 são prováveis valores que você queira testar.</p>
+<p>Para alterar a capacidade de armazenamento do dispositivo emulado (ou seja, o espaço disponível para dados locais, como cartão de memória num telefone móvel ou disco rígido num computador), altere o valor do parâemtro <code>-partition-size</code>. O valor padrão é 512 MB, mas você pode especificar qualquer outro valor em MB para simular o dispositivo a ser testado.</p>
+<h3 id="Conectividade_de_Rede">Conectividade de Rede</h3>
+<p>Se por alguma razão você não conseguir conectar seu emulador à internet você pode executar o seguinte comando a partir do terminal:</p>
+<pre class="language-html">adb shell setprop net.dns1 10.0.2.3</pre>
+<p>Se você executar o <code>emulator-jb</code> ou <code>emulator-kk</code>, o comando para configurar o servidor NDS é diferente.<br>
+ Então execute os seguintes comandos:</p>
+<pre class="language-html">adb shell ndc resolver setdefaultif eth0
+adb shell ndc resolver setifdns eth0 10.0.0.0 10.0.2.3
+</pre>

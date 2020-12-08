@@ -1,0 +1,64 @@
+---
+title: Worker.terminate()
+slug: Web/API/Worker/terminate
+tags:
+  - API
+  - Reference
+  - Web Workers
+  - Worker
+  - terminate
+  - Ссылка
+  - метод
+translation_of: Web/API/Worker/terminate
+---
+<p>{{APIRef("Web Workers API")}}</p>
+
+<p>Метод <code><strong>terminate()</strong></code> интерфейса {{domxref("Worker")}} немедленно завершает работу <code>worker</code>. Работнику не дается возможность завершить свою работу, он останавливается сразу.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: js">myWorker.terminate();</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<p>Нет.</p>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Void.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>В следующем фрагменте кода показано создание потока {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, который немедленно завершается.</p>
+
+<pre class="brush: js">var myWorker = new Worker('worker.js');
+
+myWorker.terminate();
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.terminate()")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста, проверьте <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос.</div>
+
+<p>{{Compat("api.Worker.terminate")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<p>Интерфейс {{domxref("Worker")}}.</p>

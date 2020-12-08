@@ -1,0 +1,61 @@
+---
+title: Добавление кнопок
+slug: XUL_Tutorial/Добавление_кнопок
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Adding_Labels_and_Images">Следующая статья  »</a></p>
+</div><p></p>
+<p>В этом разделе мы увидимa, как можно добавить к окну несколько простых кнопок.</p>
+<h3 id="Добавление_кнопок_к_окну">Добавление кнопок к окну</h3>
+<p>В окне, которое мы создали в предыдущем разделе, ничего нет. Ну и зачем нам такое окно? В этом разделе, мы добавим де кнопки, "Find" и "Cancel". Кроме того, мы узнаем, как позиционировать кнопки в окне.</p>
+<p>Подобно HTML, XUL имеет тэги, предназначенные для создания элементов пользовательского интерфейса. Тэг <code><code><a href="/ru/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> -- один из простейших подобных тегов. Он используется для создания простых кнопок.</p>
+<p>Тэг button имеет два основных свойства , <code>label</code> и <code>image</code>. Вам нужно определить хотя бы одно. То есть вы можете определить для кнопки имя, или картинку, или и то и другое (или ни того ни другого, всё равно заработает).</p>
+<h4 id="Синтаксис_тэга_button">Синтаксис тэга button</h4>
+<p>Тэг<code> <code><a href="/ru/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> имеет следующий синтаксис:</p>
+<pre>&lt;button
+    id="identifier"
+    class="dialog"
+    label="OK"
+    image="images/image.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+<p>Атрибуты перечислены ниже. Все они являются необязательными.</p>
+<dl> <dt><code id="a-id"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/id">id</a></code> </dt> <dd>A unique identifier so that you can identify the button with. You'll see this attribute on all elements. You'll want to use this if you want to refer to the button in a style sheet or script. However, you should add this attribute to almost all elements. It isn't always placed on elements in this tutorial for simplicity.</dd> <dt><code id="a-class"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/class">class</a></code> </dt> <dd>The style class of the button. This works the same as in HTML. It is used to indicate the style that the button appears in. In this case the value <code>dialog</code> is used. In most cases, you will not use a class for a button.</dd> <dt><code id="a-label"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/label">label</a></code> </dt> <dd>The label that will appear on the button. For example, <em>OK</em> or <em>Cancel</em>. If this is left out, no text appears.</dd> <dt><code id="a-image"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/image">image</a></code> </dt> <dd>The URL of the image to appear on the button. If this is attribute is left out, no image appears. You can also specify the image in a stylesheet using the <code><a href="/en/CSS/list-style-image" title="en/CSS/list-style-image">list-style-image</a></code> property.</dd> <dt><code id="a-disabled"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/disabled">disabled</a></code> </dt> <dd>If this attribute is set to <code>true</code>, the button is disabled. This is usually drawn with the text in grey. If the button is disabled, the function of the button cannot be performed. If this attribute is left out entirely, the button is enabled. You can switch the disabled state of the button using <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>.</dd> <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Tech/XUL/Атрибуты/accesskey">accesskey</a></code> </dt> <dd>This should be set to a letter that is used as a shortcut key. This letter should appear in the label text and will typically be drawn underlined. When the user presses ALT (or a similar key that varies on each platform) and the access key, the button will be focused from anywhere in the window.</dd>
+</dl>
+<p>Note that a button supports more attributes than those listed above. Others will be <a href="/en/XUL_Tutorial/More_Button_Features" title="en/XUL_Tutorial/More_Button_Features">discussed later</a>.</p>
+<h4 id="Some_examples_of_buttons">Some examples of buttons</h4>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">Исходный код</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">Просмотреть</a></p>
+<div class="float-right"><img alt="Image:buttons1.png" class="internal" src="/@api/deki/files/593/=Buttons1.png"></div>
+<pre>&lt;button label="Normal"/&gt;
+&lt;button label="Disabled" disabled="true"/&gt;
+</pre>
+<p>The examples above will generate the buttons in the image. The first button is a normal button. The second button is disabled so it appears greyed out.</p>
+<p>We'll start by creating a simple Find button for the find files utility. The example code below shows how to do this.</p>
+<pre>&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<div class="note">Note that Firefox doesn't allow you to open chrome windows from web pages, so the View links in the tutorial will open in normal browser windows. Due to this, the buttons will appear to stretch across the window. You can add align="start" to the window tag to prevent the stretching.</div>
+<div class="highlight">
+<h5 id="The_findfile.xul_example">The findfile.xul example</h5>
+<p>Let's add this code to the file findfile.xul that we created in the previous section. The code needs to be inserted in-between the <code><code><a href="/ru/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> tags. The code to add is shown in red below:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window id="findfile-window"
+        title="Find Files"
+        orient="horizontal"
+        xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+  <span style="color: rgb(255, 0, 0);"><span class="highlightred">&lt;button id="find-button" label="Find"/&gt;</span><br>  <span class="highlightred">&lt;button id="cancel-button" label="Cancel"/&gt;</span><br><br></span>&lt;/window&gt;
+</pre>
+<div class="float-right"><img alt="Image:buttons2.png" class="internal" src="/@api/deki/files/599/=Buttons2.png"></div>
+<p>You'll notice that the Cancel button was added also. The window has been given a horizontal orientation so that the two buttons appear beside each other. If you open the file in Mozilla, you should get something like the image shown here.</p>
+</div>
+<p> </p>
+<div class="note">Note that we shouldn't put text labels directly in the XUL file. We should use <a href="/en/XUL_Tutorial/Localization" title="en/XUL_Tutorial/Localization">entities instead so that text can be easily translated</a>.</div>
+<p>In the next section, we will find out how to <a href="/en/XUL_Tutorial/Adding_Labels_and_Images" title="en/XUL_Tutorial/Adding_Labels_and_Images"> add labels and images to a XUL window</a>.</p>
+<p><small>See also <a href="/en/XUL_Tutorial/More_Button_Features" title="en/XUL_Tutorial/More_Button_Features">more button features</a></small></p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ru/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« Предыдущая статья</a><a href="/ru/docs/XUL_Tutorial:Adding_Labels_and_Images">Следующая статья  »</a></p>
+</div><p></p>
+<p></p>

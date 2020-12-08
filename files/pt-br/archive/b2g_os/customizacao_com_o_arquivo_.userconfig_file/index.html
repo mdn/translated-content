@@ -1,0 +1,107 @@
+---
+title: Customização com o arquivo .userconfig
+slug: Archive/B2G_OS/Customizacao_com_o_arquivo_.userconfig_file
+tags:
+  - .userconfig
+  - B2G
+  - Depuração
+  - valgrind
+translation_of: Archive/B2G_OS/Customization_with_the_.userconfig_file
+---
+<div class="summary">
+ <p>Você pode customizar alguns aspectos do processo de compilação colocando códigos bash no arquivo <code>.userconfig</code> presente no fonte do B2G. Esse artigo mostra como você pode fazer alterações nesse arquivo.</p>
+</div>
+<p>O arquivo <code>.userconfig</code> não é marcado no controle do código fonte, assim suas alterações não irão ser sobrescritas quando você atualizar sua árvore dos fontes. Deve ser criado na <a href="https://github.com/mozilla-b2g/B2G">raiz da sua árvore B2G</a>, ou seja, no mesmo diretório que se encontram os arquivos <code>flash.sh</code>, <code>build.sh</code>, etc. Você deve adicioná-lo antes de executar a configuração e as demais etapas de compilação.</p>
+<p>Se o arquivo <code>.userconfig</code> existir, foi originado pelo script <code>load-config.sh</code>, que por sua vez foi originado pelos scripts: <code>flash.sh</code>, <code>build.sh</code> (através do <code>setup.sh</code>), <code>run-gdb.sh</code>, e <code>run-emulator.sh</code> e <code>tools/mach_b2g_bootstrap.ph</code>. O script <code>run-<em>*</em>.sh</code> usa-o para determinar onde está o Gecko para sua compilação. O script <code>mach_b2g_boostrap.py</code> é usado por todos os comandos <a href="https://developer.mozilla.org/pt-BR/docs/Developer_Guide/mach">mach</a> relacionados com o B2G.</p>
+<div class="warning">
+ <p><strong>Importante</strong>: Seu arquivo .userconfig deve estar no diretório raiz do fonte do B2G e não no seu diretório home!</p>
+</div>
+<h2 id="Alterando_a_árvore_fonte_do_Gecko">Alterando a árvore fonte do Gecko</h2>
+<p>Por padrão, o processo de compilação usa a árvore do Gecko, que é clonada de uma árvore no Github. Algumas pessoas gostam de usar <a href="https://developer.mozilla.org/pt-BR/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29">mozilla-inbound</a>, ou <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29">mozilla-central</a>. Para fazer isso, crie seu clone onde quer que você queira e adicione uma linha ao seu <code>.userconfig</code> indicando o <code>GECKO_PATH</code>, por exemplo:</p>
+<pre>export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+</pre>
+<div class="note">
+ <p><strong>Nota</strong>: Caso você esteja compilando em um Mac OS X, o diretório <code>mozilla-central</code> deve estar em um sistema case sensitive file system ou o conteúdo de <code>GECKO_PATH</code> será ignorado. Você pode verificar se o sistema de arquivos é case sensitive rodando o seguinte comando no seu terminal\:</p>
+ <pre>echo -n This file system is case-&gt;tmp; echo -n in&gt;&gt;TMP; echo sensitive&gt;&gt;tmp; cat tmp</pre>
+ <p>Obtendo o <code>B2G_DIR</code> da forma descrita acima permite o seu <code>.userconfig</code> trabalhar sem a necessidade de descrever caminhos de diretório diretamente no arquivo (hard-coded).</p>
+</div>
+<h2 id="Alterando_as_configurações_Gaia">Alterando as configurações Gaia</h2>
+<p>Algumas vezes é interessante alterar as configurações Gaia. Por exemplo, habilitar o <code>adb</code> em uma imagem do usuário. O Gaia <code>Makefile</code> passa em <code>--override build/custom-settings.json</code> quando chamar <code>build/settings.py</code>, assim nós podemos escrever algum bash que escreve <code>{"devtools.debugger.remote-enabled": true}</code> no arquivo <code>custom-settings.json</code>. Nós tentamos evitar alterar <code>custom-settings.json</code> se não for preciso, então nós realmente geramos o arquivo <code>custom-settings.json.new</code> e se os conteúdos forem diferentes de <code>custom-settings.json</code> então nós o substituímos.</p>
+<pre>export GAIA_PATH=${GAIA_PATH:-$(cd gaia; pwd)}
+export CUSTOM_SETTINGS="${GAIA_PATH}/build/config/custom-settings.json"
+cat &gt; "${CUSTOM_SETTINGS}.new" &lt;&lt;EOF
+{"devtools.debugger.remote-enabled": true}
+EOF
+if [[ -f ${CUSTOM_SETTINGS} ]] &amp;&amp; cmp "${CUSTOM_SETTINGS}" "${CUSTOM_SETTINGS}.new" &gt;&amp; /dev/null; then
+  rm "${CUSTOM_SETTINGS}.new"
+else
+  mv "${CUSTOM_SETTINGS}.new" "${CUSTOM_SETTINGS}"
+fi
+</pre>
+<p>Uma outra forma mais fácil é configurar o arquivo <code>build/config/custom-prefs.js</code> no diretório de trabalho Gaia, ou seja, <code>gaia/build/config/custom-prefs.js</code> se você estiver no diretório B2G. Veja o artigo <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Sistema_compilacao_primario#Customizando_as_prefer.C3.AAncias" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences">Sistema de Compilação Primária</a>.</p>
+<div class="note">
+ <p><strong>Nota:</strong> Atualmente o processo de compilação não é automatizado o suficiente para procurar em um diretório diferente baseado em <code>GAIA_PATH</code>. Isso é diferente de como <code>GECKO_PATH</code> se comporta. Se você deseja usar um clone separado do Gaia você pode <a href="/pt-BR/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer">executar o make manualmente</a> daquele diretório.</p>
+</div>
+<h2 id="Criar_uma_imagem_de_depuração">Criar uma imagem de depuração</h2>
+<p>Para fazer isso, coloque a seguinte linha no seu arquivo <code>.userconfig</code>:</p>
+<pre>export B2G_DEBUG=1</pre>
+<h2 id="Construção_de_perfis">Construção de perfis</h2>
+<p>Para habilitar os perfis (para melhores resultados com a plataforma de perfis SPS), inclua o seguinte trecho no arquivo <code>.userconfig</code> e depois recompile:</p>
+<pre>export MOZ_PROFILING=1</pre>
+<div class="warning">
+ <p>NÃO emparelhe com B2G_NOOPT. Os resultados não farão sentido!</p>
+</div>
+<h2 id="Desabilitar_o_otimizador">Desabilitar o otimizador</h2>
+<p>Para desabilitar o otimizador (que pode criar imagens mais fáceis para depurar), inclua o seguinte trecho no arquivo <code>.userconfig</code> e depois recompile:</p>
+<pre>export B2G_NOOPT=1</pre>
+<h2 id="Desabiltar_a_Experência_de_Primeiro_Uso">Desabiltar a Experência de Primeiro Uso</h2>
+<p>Se você compila e copiar para o dispositivo muitas vezes, passar várias vezes pela rotina de primeiro uso pode ser irritante. Você pode desabilitar isso incluindo o seguinte trecho no arquvio <code>.userconfig</code>:</p>
+<pre>export NOFTU=1</pre>
+<h2 id="Habilitar_o_modo_desenvolvedor_do_Gaia">Habilitar o modo desenvolvedor do Gaia</h2>
+<p>Se você planeja desenvolver aplicativos ou modificar o Gaia, você pode configurar automaticamente várias opções úteis para trabalhar mais facilmente com o seu dispositivo. Por exemplo, habilitar a depuração remota e desabilitar o prompt automaticamente quando uma conexão com o computador for iniciada.</p>
+<p>Inclua isso no seu arquivo <code>.userconfig</code>:</p>
+<pre>export DEVICE_DEBUG=1</pre>
+<h2 id="Habilitar_o_valgrind">Habilitar o valgrind</h2>
+<p>Valgrind é útil para depurar memória ou problemas relacionados com <em>threads</em> na sua aplicação. Para mais informação de como executar o valgrind, veja o artigo <a href="/pt-BR/Firefox_OS/Debugging/Debugging_B2G_using_valgrind">Depurando o B2G usando valgrind</a>.</p>
+<p>Para usar o valgrind com B2G, inclua o trecho no seu arquivo <code>.userconfig</code>:</p>
+<pre>export B2G_VALGRIND=1</pre>
+<h2 id="Alterando_o_compilador_padrão"><a name="Changing_the_default_host_compiler"></a>Alterando o compilador padrão</h2>
+<p>Em algumas distribuições recentes que usam o GCC 4.7 como compilador padrão você necessitará especificar uma versão anterior para poder compilar corretamente, para fazer isso inclua duas linhas ao arquivo<code>.userconfig</code> para configurar as variáveis <code>CC</code> e <code>CXX</code> alterando os compiladores C e C++ respectivamente. Por exemplo, para configurar o compilador GCC 4.6 no Ubuntu 12.10 use:</p>
+<pre>export CC=gcc-4.6
+export CXX=g++-4.6
+</pre>
+<p>Ou se você esetiver usando uma versão compilada a partir dos fontes forneça o caminho completo para os executáveis:</p>
+<pre>export CC=/opt/gcc-4.6.4/bin/gcc
+export CXX=/opt/gcc-4.6.4/bin/g++
+</pre>
+<h2 id="Especificar_um_local_específico_para_a_árvore_de_objetos_do_Gecko">Especificar um local específico para a árvore de objetos do Gecko</h2>
+<p>Uma vez que você altere a árvore dos fontes do Gecko e outras opções de compilação, você pode querer alterar o local onde esses objetos são armazendos (assim seus objetos para depuração ficarão em uma árvore diferente dos objetos da imagem sem depuração, por exemplo). Isso deve ser feito dessa forma:</p>
+<pre>export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk-debug
+</pre>
+<p>Usando <code>${GECKO_PATH}</code> torna mais fácil alternar entre as diferentes árvores do Gecko (por exemplo: central, beta, aurora, etc).</p>
+<h2 id="Mantendo_os_objetos_com_e_sem_depuração">Mantendo os objetos com e sem depuração</h2>
+<p>Você pode usar o arquivo <code>.userconfig</code> para alternar entre imagens com e sem depuracão sem a necessidade de recompilar tudo a cada vez que quiser trocar.</p>
+<dl>
+</dl>
+<pre class="brush:bash;">export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+
+export B2G_DEBUG=1
+echo "B2G_DEBUG = ${B2G_DEBUG}"
+
+export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk
+if [[ "${B2G_DEBUG}" != "0" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-debug
+fi
+if [[ "${GECKO_PATH/*mozilla-inbound*/mozilla-inbound}" == "mozilla-inbound" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-m-i
+fi
+echo "GECKO_OBJDIR = ${GECKO_OBJDIR}"</pre>
+<p>O comando <code>echo</code> ajuda a lembrá-lo de suas configurações atuais. Para alterar entre imagens de depuração e release, basta alterar no valor de <code>B2G_DEBUG</code> na linha 7.</p>

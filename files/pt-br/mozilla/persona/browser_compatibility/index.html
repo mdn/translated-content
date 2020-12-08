@@ -1,0 +1,73 @@
+---
+title: Browser compatibility
+slug: Mozilla/Persona/Browser_compatibility
+translation_of: Archive/Mozilla/Persona/Browser_compatibility
+---
+<h2 id="Supported_Browsers">Supported Browsers</h2>
+<p>Persona is developed, tested, and supported with the following browsers. Thanks to Persona's cross-platform JavaScript library, users do not need add-ons in order to use Persona.</p>
+<table>
+  <tbody>
+    <tr>
+      <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><strong>Desktop Browsers</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Internet Explorer</strong></th>
+      <td colspan="2" rowspan="1" style="background-color: #8ae234;">8.0<sup>*</sup>, 9.0<sup>†</sup></td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Firefox</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Current Stable, Beta, Aurora, Nightly, and Extended Support Releases<br>
+        Previous Stable Release</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Chrome</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Latest Stable Release</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Safari</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Latest Stable Release</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Opera</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Latest Stable Release<sup>‡</sup></td>
+    </tr>
+    <tr>
+      <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><strong>iOS Browsers</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Mobile Safari</strong></th>
+      <td colspan="2" rowspan="1" style="background-color: #8ae234;">iOS 5.x</td>
+    </tr>
+    <tr>
+      <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><strong>Android Browsers</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Default Browser</strong></th>
+      <td colspan="2" rowspan="1" style="background-color: #8ae234;">2.x — 4.x</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Firefox</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Current Stable, Beta, Aurora, and Nightly Releases<br>
+        Previous Stable Release</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Chrome</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Latest Stable Release</td>
+    </tr>
+  </tbody>
+</table>
+<p><sup>*</sup>: For Windows XP. <sup>†</sup>: For Windows Vista and Windows 7. <sup>‡</sup>: As time allows.</p>
+<h2 id="Unsupported_Browsers">Unsupported Browsers</h2>
+<ul>
+  <li>Internet Explorer versions 6.0 and 7.0 are not supported. Users will be prompted to upgrade their browser.</li>
+  <li>Google Chrome Frame is not supported and will not function. Support may be added later (<a href="https://github.com/mozilla/browserid/issues/796" title="https://github.com/mozilla/browserid/issues/796">Issue #796</a>).</li>
+  <li>Third party browsers on iOS are not supported and will not function. Support may be added later (<a href="https://github.com/mozilla/browserid/issues/1870" title="https://github.com/mozilla/browserid/issues/1870">Issue #1870</a>, <a href="https://github.com/mozilla/browserid/issues/2034" title="https://github.com/mozilla/browserid/issues/2034">Issue #2034</a>).</li>
+</ul>
+<h2 id="Other_Browsers">Other Browsers</h2>
+<p>Despite not being explicitly supported, any browser that includes both {{ domxref("window.postMessage()") }} and {{ domxref("Storage", "localStorage") }} should work. These APIs have been available in all major browsers since March 2010.</p>
+<h2 id="Known_Issues">Known Issues</h2>
+<ul>
+  <li>Browsers must accept third party cookies for full functionality (<a href="https://github.com/mozilla/browserid/issues/1352" title="https://github.com/mozilla/browserid/issues/1352">Issue #1352</a>).</li>
+  <li>Android 2.x users without a default browser selected may be unable to log in (<a href="https://github.com/mozilla/browserid/issues/1854" title="https://github.com/mozilla/browserid/issues/1854">Issue #1854</a>).</li>
+  <li>When forced to emulate IE8, Internet Explorer 9 may fail to log in to sites.</li>
+</ul>

@@ -1,0 +1,135 @@
+---
+title: Skrypty instalacyjne
+slug: Mozilla/Tech/XUL/Kurs_XUL/Skrypty_instalacyjne
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Install_Scripts
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_instalatora" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_instalacji">Następny  »</a></p>
+</div> W tym artykule zostaną opisane skrypty instalacyjne.<p></p>
+
+<h2 id="Tworzenie_skryptu_instalacji" name="Tworzenie_skryptu_instalacji">Tworzenie skryptu instalacji</h2>
+
+<div class="note"><b>UWAGA</b>: For Firefox Extensions, &lt;tt&gt;install.js&lt;/tt&gt; are no longer used. You should create a &lt;tt&gt;<a href="pl/Manifesty_Instalacji">install.rdf</a>&lt;/tt&gt; instead.</div>
+
+<p>Zwykle będziesz chciał mieć kontrole nad procesem instalacji. Na przykład, będziesz chciał sprawdzić wersje plików, a następne instalować tylko nowsze. Skrypt instalacyjny jest wystarczająco elastyczny by umożliwić deinstalację plików. Z tego powodu, instalator zawierają skrypty instalacyjne do sterowania procesem instalacji.</p>
+
+<p>Skrypt instalatora musi być nazwany install.js i umieszczony na głównym poziomie archiwum instalatora. Skrypt zawiera kod JavaScript, który wywoła odpowiednią liczbę instrukcji.</p>
+
+<p>W dokumencie HTML lub XUL, obiekt okna jest głównym obiektem. To znaczy, możesz wywołać metody obiektu okna z kwalifikatorem z przodu, co znaczy <code>window.open()</code> może być prosto napisane <code>open()</code>. W skrypcie instalacyjnym nie ma żadnego przyporządkowanego okna, jednak obiekt globalny zostanie obiektem instalacyjnym, który zawiera pewną liczbę funkcji to przystosowywania procesu instalacji. Kilka funkcji obiektu instalacyjnego jest opisanych poniżej.</p>
+
+<p>Skrypt instalacyjny powinien podjąć następujące kroki:</p>
+
+<ol>
+ <li>Inicjacja instalacji z wyszczególnieniem, które paczki i wersje są instalowane.</li>
+ <li>Użycie funkcji instalacyjnej do określenia pliki i katalogi są konieczne do instalacji. Możesz także wybrać pliki do przeniesienia lub usunięcia.</li>
+ <li>Rozpoczęcie procesu instalowania koniecznych plików.</li>
+</ol>
+
+<p>Ważne jest to, że podczas drugiego kroku, wskazujesz, które pliki powinny być zainstalowane i jakie inne działania powinny być podjęte. Żaden plik nie będzie skopiowany aż do trzeciego kroku. Dzięki temu możemy wyszczególnić pliki, które mają zostać zainstalowane, rozpoznać różne błędy, czy przerwać proces bez modyfikacji systemu użytkownika.</p>
+
+<h2 id="Rejestr_sk.C5.82adnik.C3.B3w" name="Rejestr_sk.C5.82adnik.C3.B3w">Rejestr składników</h2>
+
+<p>Mozilla utrzymuje plik, który jest rejestrem wszystkich komponentów, które są aktualnie zainstalowane. Komponenty zawierają nowe paczki chrome, skóry i wtyczki. Gdy nowy składnik jest instalowany, rejestr jest aktualizowany. Przechowywane są tam także informacje o wersjach zainstalowanych plików. W ten sposób łatwiej jest sprawdzić, którą wersję masz zainstalowaną, a co za tym idzie, które pliki aktualizować.</p>
+
+<p>Rejestr składników pracuje podobnie do rejestru Windows. Składa się z układu kluczy i ich wartości. Jednak nie musisz tego umieć by tworzyć aplikacje XUL, jeżeli nie tworzysz własnych komponentów XPCOM.</p>
+
+<p>To, co potrzebujesz wiedzieć dla instalacji, to, że rejestr magazynuje zestaw informacji o twojej aplikacji, jak lista plików i wersji. Wszystko jest przechowywane w kluczu, który dostarczasz w skrypcie instalacyjnym.</p>
+
+<p>Klucz jest skonstruowany w następujący sposób:</p>
+
+<pre>/Author/Package Name
+</pre>
+
+<p>Zamień słowo Author swoim imieniem I Package Name nazwą paczki, którą instalujesz. Na przykład:</p>
+
+<pre>/Xulplanet/Find Files
+
+/Netscape/Personal Security Manager
+</pre>
+
+<p>Pierwsze, co użyjemy to domyślny katalog, którego użyjemy w dialogu wyszukiwania plików. Drugą rzeczą jest klucz użyty, dla Personal Security Manager.</p>
+
+<h2 id="Inicjacja_instalacji" name="Inicjacja_instalacji">Inicjacja instalacji</h2>
+
+<p>Obiekt instalacyjny masz funkcję initInstall, która może zostać użyta do rozpoczęcia instalacji. To powinno być wywołane na początku skryptu instalacyjnego. Składnia tej funkcji wygląda następująco:</p>
+
+<pre class="eval">initInstall(<i>packageName</i> ,
+<i>regPackage</i> ,
+<i>version</i> );
+
+<b>Example:</b>
+
+initInstall("Find Files","/Xulplanet/Find Files","0.5.0.0");
+</pre>
+
+<p>Pierwszym argumentem jest nazwa paczki w formie czytelnej dla użytkownika. Drugi argument jest kluczem rejestru do przechowywania informacji o paczce, jak opisano wcześniej. Trzeci argument jest wersją instalowanej paczki. Następnie, musimy ustalić katalog, w którym pliki mają zostać zainstalowane. Są na to dwa sposoby. Prostą metodą jest wyznaczenie katalogu, w którym wszystkie pliki zostaną umieszczone, Drugim sposobem możemy ustalić położenie w wcześniej umieszczonym pliku. Pierwsza metoda opisana jest poniżej.</p>
+
+<p>Funkcja setPackageFolder przyporządkowuje katalog dla instalacji. W dialogu wyszukiwania pliku, będziemy instalować pliki w katalogu chrome. Dla maksymalnej mobilności, nie możesz ustalić nazwy katalogu. Zamiast tego, wyszczególnisz identyfikator znanego katalogu i otrzymujesz jego podkatalogi. Tak, że jeżeli twoja aplikacja musi zainstalować kilka bibliotek systemowych, nie musisz znać nazw tych katalogów.</p>
+
+<p>Identyfikatory katalogów, są wypisane w <a class="external" href="http://www.xulplanet.com/references/elemref/ref_Install.html#prop_getFolder">dokumentacji XULPlanet</a>. Dla katalogu chrome, identyfikatorem jest ‘Chrome’. Funkcja getFolder może zostać użyta do uzyskania któregoś z tych specjalnych katalogów. Funkcja ta pobiera dwa argumenty, pierwszy jest identyfikatorem, a drugi podkatalogiem. Na przykład:</p>
+
+<pre>findDir = getFolder("Chrome","findfile");
+setPackageFolder(findDir);
+</pre>
+
+<p>Otrzymujemy folder findfile w folderze Chrome i przenosimy go bezpośrednio do funkcji setPackageFolder. Drugi argument jest podkatalogiem, w którym mamy instalować, nie musi on istnieć. Możesz opuścić en argument, jeżeli nie potrzebujesz go.</p>
+
+<h2 id="Ustawianie_plik.C3.B3w_instalacyjnych" name="Ustawianie_plik.C3.B3w_instalacyjnych">Ustawianie plików instalacyjnych</h2>
+
+<p>Następnie musisz wyszczególnić to, które pliki powinny zostać zainstalowane. To wymusza użycie dwóch funkcji <code>addDirectory()</code> i <code>addFile()</code>. Funkcja <code>addDirectory()</code>mówi instalatorowi, który katalog z archiwum XPI powinien być zainstalowany, w jakiejś szczególnej lokalizacji. Druga funkcja działa tak samo, tyle, że dotyczy pliku.</p>
+
+<p>Obie funkcje <code>addDirectory()</code> and <code>addFile()</code> mogą przyjmować różne formy. W najprostszej, pobiera tylko jeden argument, katalog od instalatora by zainstalować w wyznaczonym katalogu.</p>
+
+<pre class="eval">addDirectory (<i>dir</i> );
+addFile (
+<i>dir</i> );
+
+<b>Przykład:</b>
+
+addDirectory("findfile");
+</pre>
+
+<p>Powyższy przykład wyszczególnia to, że katalog findfile powinien być zainstalowany. Możemy wywoływać te funkcje wiele razy do instalacji innych plików.</p>
+
+<p>Następnie będziemy chcieli zarejestrować pliki findfiles w systemie chrome, tak, że mogą być stosowane przez adres URL chrome. To może być wykonane przy pomocy funkcji <code>registerChrome()</code>. Potrzebuje dwóch argumentów, pierwszy to typ rejestru chrome. Drugi, katalog zawierający plik contents.rdf. Ponieważ zawarte są trzy pliki, dodatkowo plik skóry i lokalizacji, funkcja będzie wywołana trzy razy.</p>
+
+<pre>registerChrome(Install.CONTENT | Install.DELAYED_CHROME, getFolder(findDir, "content"));
+registerChrome(Install.SKIN | Install.DELAYED_CHROME, getFolder(findDir, "skin"));
+registerChrome(Install.LOCALE | Install.DELAYED_CHROME, getFolder(findDir, "locale"));
+</pre>
+
+<p>Flaga DELAYED_CHROME jest stosowana do sygnalizacji, że chrome powinien być zainstalowany następnym razem po uruchomieniu Mozilli.</p>
+
+<h2 id="Kompletowanie_instalacji" name="Kompletowanie_instalacji">Kompletowanie instalacji</h2>
+
+<p>Funkcje <code>addDirectory()</code> i <code>addFile()</code> nie kopiują żadnych plików. One tylko podają, które pliki powinny zostać zainstalowane. Podobnie <code>registerChrome()</code>. Aby zakończyć proces instalacji i zacząć kopiowanie plików wywołaj funkcję <code>performInstall()</code>. To nie potrzebuje żadnych argumentów.</p>
+
+<p>Końcowy skrypt do instalacji komponentów <code>Znajdź pliki</code> są pokazane poniżej:</p>
+
+<div class="highlight">
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_xpiscript_1.js.txt">Źródła</a></p>
+
+<pre>initInstall("Find Files","/Xulplanet/Find Files","0.5.0.0");
+
+findDir = getFolder("Chrome","findfile");
+setPackageFolder(findDir);
+
+addDirectory("findfile");
+
+registerChrome(Install.CONTENT | Install.DELAYED_CHROME, getFolder(findDir, "content"));
+registerChrome(Install.SKIN | Install.DELAYED_CHROME, getFolder(findDir, "skin"));
+registerChrome(Install.LOCALE | Install.DELAYED_CHROME, getFolder(findDir, "locale"));
+
+performInstall();
+</pre>
+</div>
+
+<p>Następnie, zobaczymy <a href="pl/Kurs_XUL/Dodatkowe_mo%c5%bcliwo%c5%9bci_instalacji">dodatkowe funkcje instalacji</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_instalatora" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_instalacji">Następny  »</a></p>
+</div><p></p>

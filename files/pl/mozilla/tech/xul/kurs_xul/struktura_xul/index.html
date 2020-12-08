@@ -1,0 +1,194 @@
+---
+title: Struktura XUL
+slug: Mozilla/Tech/XUL/Kurs_XUL/Struktura_XUL
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XUL_Structure
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Wprowadzenie" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:URL_Chrome">Następny  »</a></p>
+</div><p></p>
+
+<p>Rozpoczynamy naukę w jaki sposób XUL jest obsługiwany przez Mozillę.</p>
+
+<h2 id="Jak_jest_obs.C5.82ugiwany_XUL" name="Jak_jest_obs.C5.82ugiwany_XUL">Jak jest obsługiwany XUL</h2>
+
+<p>XUL w Mozilli jest obsługiwany na takiej samej zasadzie, jak język HTML lub jakikolwiek inny zawarty w niej język. Kiedy wpisujesz adres URL strony HTML w polu adresu przeglądarki, przeglądarka odnajduje witrynę i pobiera jej zawartość. Silnik interpretacji (renderingu) Mozilli pobiera zawartość strony w formie źródła HTML i przekształca to w drzewo dokumentu <em>à la</em> <a href="/pl/DOM" title="pl/DOM">DOM</a>. Drzewo to jest później przekształcane w zestaw obiektów, które mogą zostać wyświetlone na ekranie. <a href="/pl/CSS" title="pl/CSS">CSS</a>, pliki graficzne i inne technologie są używane, by kontrolować tę prezentację. Funkcje XUL są obsługiwane na takiej samej zasadzie.</p>
+
+<p>Tak naprawdę, to w Mozilli wszystkie typy dokumentów, czy są to HTML lub XUL, czy nawet <a href="/pl/SVG" title="pl/SVG">SVG</a>, są obsługiwane przez ten sam podstawowy kod programu. Oznacza to, że tymi samymi własnościami CSS można manipulować zarówno w HTML, jak i w XUL. Również dużo innych cech może być podzielone między oba te języki. Jednakże, są pewne cechy, które właściwe są tylko dla HTML, jak formularze i takie, które dotyczą tylko XUL, jak <a href="/pl/Kurs_XUL/Nakładki" title="pl/Kurs_XUL/Nakładki">nakładki</a>.</p>
+
+<p><span class="comment">However, there are some features that are specific to HTML such as forms, and others which are specific to XUL such as <a href="/pl/XUL_Tutorial/Overlays">overlays</a>. Since XUL and HTML are handled in the same way, you can load both from either your local file system, from a web page, or from an extension or standalone <a href="/pl/XULRunner">XULRunner</a> application.</span></p>
+
+<p>Tak więc XUL i HTML są obsługiwane w ten sam sposób, możesz również oba załadować zarówno z lokalnych zasobów swojego komputera, jak i ze stron w sieci. Mozilla posiada specjalny sposób instalowania i rejestrowania plików (XUL, JS ...) jako części jej systemu chrome. Obejmuje to również tworzenie archiwum plików - paczek, które użytkownik może pobrać i zainstalować. Te zainstalowane paczki maja podwyższone przywileje działania, takie jak: możliwość czytania plików, analizowania ustawień użytkownika i zakładek oraz uzyskiwanie dostępu do innych właściwości systemu. Oczywiście, strony z sieci nie posiadają takich przywilejów, chyba że są podpisane cyfrowym certyfikatem i użytkownik przyzna im na to pozwolenie.</p>
+
+<p><span class="comment">Content from remote sources &lt;code&gt;&lt;nowiki&gt;eg <a class="external" href="http://localhost/~username/" rel="freelink">http://localhost/~username/</a>&lt;/nowiki&gt;&lt;/code&gt;, regardless or whether they are HTML or XUL or another document type, are limited in the type of operations they can perform, for security reasons. For this reason, Mozilla provides a method of installing content locally and registering the installed files as part of its '''<a href="/pl/chrome">chrome</a>''' system. This allows a special URL form to be used called a &lt;code&gt;chrome://&lt;/code&gt; URL. By accessing a file using a chrome URL, the files receive elevated privileges to access local files, access preferences and bookmarks and perform other privileged operations. Obviously, web pages do not get these privileges, unless they are signed with a digital certificate and the user has granted permission to perform these operations.</span></p>
+
+<p>Rejestracja paczki jest sposobem, w jaki rozszerzenia Firefoksa mogą dodawać funkcje do przeglądarki. Rozszerzenia są małymi paczkami plików XUL, JavaScript, stylów CSS i obrazów spakowanych razem do pojedynczego pliku. Paczka może zostać utworzona przy pomocy programu do kompresji ZIP. Kiedy użytkownik pobierze rozszerzenie, zostanie ono zainstalowane na jego komputerze. Rozszerzenie to zagnieździ się w przeglądarce używając specjalnych właściwości XUL nazywanych nakładaniem (overlay), które pozwala kodowi XUL z rozszerzenia i z przeglądarki połączyć się razem w całość. Użytkownikowi może się wydawać, że rozszerzenie zmodyfikowało przeglądarkę, ale w rzeczywistości, kod jest oddzielony i rozszerzenie może zostać łatwo odinstalowane.</p>
+
+<p>Rejestracja paczki nie jest wymagana, żeby używać nakładek, jednak, jeśli nie jest zarejestrowana, nie będziesz mógł dostać się do niej za pomocą głównego interfejsu przeglądarki. Dostęp do tej paczki jest możliwy poprzez specjalny rodzaj adresu URL, stworzonego specjalnie, by uzyskać dostęp do zainstalowanych paczek. Ten rodzaj URL nazywamy chrome i zaczyna się zawsze od 'chrome://'. Tak jak 'http://' zawsze prowadzi do stron internetowych, a 'file://' do folderów lokalnych, tak 'chrome://' odnosi się do zainstalowanych paczek i rozszerzeń. W składnię URL chrome zagłębimy się w dalszych rozdziałach.</p>
+
+<p>Należy zaznaczyć, że, gdy wczytujemy zawartość za pomocą URL chrome, uzyskujemy zwiększone przywileje opisane powyżej, których inne rodzaje adresów nie uzyskują. Dla przykładu, adres HTTP nie posiada żadnych specjalnych przywilejów, a kiedy spróbuje takowe uzyskać, spowoduje błąd (np. przy próbie uzyskania dostępu do plików lokalnych), zaś URL chrome będzie mógł czytać pliki bez ograniczeń.</p>
+
+<p>Ta różnica jest bardzo ważna. Oznacza, że są pewne rzeczy, których zawartość stron www nie może zrobić, takie jak czytanie zakładek użytkownika. Ta różnica nie opiera się na rodzaju wyświetlanej zawartości, tylko na typie użytego adresu. Zarówno HTML, jak i XUL umieszczone na witrynie nie mają żadnych dodatkowych przywilejów. Natomiast HTML i XUL załadowany przez chrome URL posiadają rozszerzone przywileje.</p>
+
+<p>To, że przeglądarka Mozilla sama w sobie jest tylko zbiorem paczek plików XUL, JavaScript i stylów CSS, jest nic nie warte. Te pliki są dostępne poprzez URL chrome, posiadają podwyższone przywileje i działają tak jak inne paczki. Oczywiście, przeglądarka jest znacznie większa i bardziej zaawansowana niż większość rozszerzeń. Klient poczty Mozilla, kompozytor stron, Firefox i Thunderbird, jak również wiele innych komponentów, są napisane w XUL i są one dostępne poprzez URL chrome.</p>
+
+<p>Jeśli zamierzasz używać XUL na stronach WWW, wystarczy, że umieścisz plik XUL na stronie tak jak byś umieszczał plik HTML, a następnie wejdziesz na tą stronę za pomocą przeglądarki. Upewnij się, że twój serwer WWW jest skonfigurowany żeby wysłać pliki XUL z typem zawartości <strong><code>application/vnd.mozilla.xul+xml</code></strong>. Za pomocą typu zawartości Mozilla rozróżnia HTML i XUL. Mozilla nie sugeruje się rozszerzeniem plików, chyba, że odczytuje pliki z lokalnego systemu plików, w każdym razie powinieneś używać rozszerzenia <code>.xul</code> dla wszystkich plików w języku XUL. Możesz otwierać pliki XUL ze swojego komputera otwierając je w przeglądarce lub klikając podwójnie w menadżerze plików.</p>
+
+<div class="note">Pamiętaj, że pliki XUL spoza twojego komputera mają poważne restrykcje odnośnie tego, co mogą zrobić.</div>
+
+<h3 id="Typy_dokument.C3.B3w:_HTML_XML_XUL_CSS" name="Typy_dokument.C3.B3w:_HTML_XML_XUL_CSS">Typy dokumentów: HTML XML XUL CSS</h3>
+
+<p>Trwają prace nad umożliwieniem aplikacjom XUL, żeby funkcjonowały jako samodzielne programy z własnymi instalatorami i plikami wykonywalnymi (XulRunner). Będą one dzielić biblioteki z Mozillą i nie będzie potrzeby mieć zainstalowanej przeglądarki, żeby móc używać XUL. Aktualnie jest to też możliwe, jednak proces ten jest skomplikowany i rzadko używany. Celem jest właśnie usprawnienie tego procesu.</p>
+
+<p>W Mozilli wiele funkcji jest dzielone pomiędzy HTML i XUL, używa ona jednak różnego rodzaju obiektów dokumentu dla każdego. Są trzy główne typy dokumentu w Mozilli: HTML, XML i XUL. Naturalnie, dokumenty HTML są używane do dokumentów HTML, dokumenty XUL są używane do dokumentów XUL i dokumenty XML, które są używane dla innych typów dokumentów XML. Odkąd XUL jest również XML-em, jest podtypem bardziej ogólnego dokumentu XML. Są subtelne różnice w funkcjonalności tych dokumentów. Na przykład, kontrola formularzy na stronie HTML jest dostępna przez właściwość <code>document.forms</code>, ta właściwość nie jest dostępna dla dokumentów XUL, gdyż XUL nie ma formularzy w takim samym sensie, jak HTML. Z drugiej strony określone cechy XUL, takie jak overlays i szablony, są dostępne tylko w dokumentach XUL.</p>
+
+<p>Te różnice pomiędzy dokumentami są bardzo ważne. Istnieje możliwość używania wielu cech <a href="/pl/XUL" title="pl/XUL">XUL</a> w <a href="/pl/HTML" title="pl/HTML">HTML</a> albo w dokumentach XML, kiedy nie ma specyfikacji typu dokumentu, jednakże inne cechy wymagają właściwego rodzaju dokumentu. Na przykład, możesz używać typów układu (layout) XUL w innych dokumentach, gdyż, by działać, nie potrzebują one typu XUL dokumentu.</p>
+
+<p>Podsumujmy wiadomości zdobyte powyżej:</p>
+
+<ul>
+ <li>Mozilla interpretuje (renderuje) <a href="/pl/HTML" title="pl/HTML">HTML</a> i <a href="/pl/XUL" title="pl/XUL">XUL</a> używając tego samego podstawowego silnika i używa CSS do określania ich prezentacji.</li>
+ <li>XUL może zostać załadowany ze zdalnego miejsca (strony WWW), lokalnego systemu pliku albo jako zainstalowana paczka, która dostępna jest poprzez URL chrome. To właśnie robią rozszerzenia przeglądarki.</li>
+ <li>URL chrome można użyć, by uzyskać dostęp do zainstalowanych paczek i otworzyć je z podwyższonymi przywilejami.</li>
+ <li>HTML, XML i XUL posiadają różny typ dokumentów. Pewne cechy mogą zostać użyte w każdym typie dokumentu, podczas gdy inne są przydzielone tylko do jednego rodzaju dokumentu.</li>
+</ul>
+
+<p>Następne kilka artykułów opisuje podstawy struktury paczek chrome, które mogą zostać zainstalowane w Mozilli. Jeśli już chcesz zacząć tworzyć proste aplikacje XUL, możesz przejść od razu do drugiej sekcji i zostawić sobie tą sekcję na później.</p>
+
+<h2 id="Organizacja_paczki" name="Organizacja_paczki">Organizacja paczki</h2>
+
+<p>Mozilla jest zorganizowana w taki sposób, że możesz zainstalować tyle komponentów ile tylko chcesz. Typowa instalacja zawiera komponenty: nawigator, kuriera poczty i kompozytora stron. Posiada też po jednym komponencie dla każdej zainstalowanej skórki i lokalizacji. Każdy z tych komponentów albo paczek, jest złożony z kompletu plików, które opisują interfejs użytkownika dla nich. Na przykład, komponent kuriera poczty będzie miał opis okna z listą wiadomości, okna kompozycji e-maila i książki adresowej.</p>
+
+<p>Paczki, które są dostarczone z Mozillą znajdują się w katalogu chrome, który znajduje się w katalogu instalacyjnym Mozilli. W katalogu chrome znajdziesz wszystkie pliki, które opisują interfejs użytkownika użyty przez przeglądarkę Mozilla, kuriera poczty i inne aplikacje. Może być mylące, że katalog nazywa się "chrome" a jest tylko nieznacznie powiązany z URL chrome. Samo kopiowanie pliku do katalogu "chrome" nie daje plikowi żadnych dodatkowych przywilejów, ani nie umożliwia dostępu poprzez URL chrome. Jedyną droga by stworzyć zawartość, która może być dostępna poprzez URL chrome, jest stworzenie paczki jak opisano w następnych kilku sekcjach. Katalog ten został nazywany "chrome" ponieważ ta nazwa wydawała się odpowiednia dla katalogu, gdzie znajdują się paczki chrome, zawarte w Mozilli.</p>
+
+<p>Istnieją jeszcze dwa inne miejsca, gdzie słowo chrome może się pojawić. Pierwszym jest argument wiersza poleceń '-chrome' a drugim modyfikator chrome w funkcji <code><a href="/pl/DOM/window.open" title="pl/DOM/window.open">window.open()</a></code>. Żadna z tych funkcji nie przyznaje dodatkowych przywilejów; zamiast tego otwierają nowe okno, na wierzchu, bez elementów interfejsu użytkownik (UI) przeglądarki takie jak menu i pasek narzędzi. W bardziej złożonych aplikacjach XUL, będziesz powszechnie używał tych cech, gdy nie będziesz chciał by te elementy UI znajdowały się w twoich okienkach dialogowych.</p>
+
+<p>Pliki w paczce zwykle są połączone w jeden plik JAR. Plik JAR można utworzyć i przeglądać za pomocą programu do kompresji ZIP. Otwórz teraz kilka plików JAR w katalogu chrome, Mozilli i zobacz jak wygląda struktura takiej paczki. Pomimo, że normą jest łączenie plików w jeden plik JAR, dostęp do paczek można uzyskać w rozwiniętej formie, jako zestaw katalogów. Normalnie nie rozprowadza się paczek w ten sposób, ale jest to wygodne podczas tworzenia rozszerzenia, ponieważ możesz edytować katalog z plikami i po prostu przeładować pliki XUL bez przepakowania i ponownej instalacji.</p>
+
+<pre class="eval">pref("nglayout.debug.disable_xul_cache", true);
+</pre>
+
+<p>Zazwyczaj w paczce chrome są trzy różne części, mimo, że wszystkie są opcjonalne. Każda część jest przetrzymywana w innych katalogach. Te trzy zestawy to content (zawartość), skin (skóry) i locale (lokalizacja), opisano je poniżej. Niektóre paczki mogą zawierać jedną albo więcej skór i lokalizacji, użytkownik może też zastąpić je własnymi. W dodatku paczka może zawierać kilka różnych aplikacji, każdą dostępną przez różne URL chrome. System pakowania jest wystarczająco elastyczny, żebyś mógł umieścić w paczce jakąkolwiek część, którą potrzebujesz i pozwolić innym, takim jak tekst dla różnych języków, żeby zostały pobrane oddzielnie.</p>
+
+<p>Katalogi:</p>
+
+<ul>
+ <li><strong>Content</strong> (zawartość) - okna i skrypty.</li>
+</ul>
+
+<p>Zawarte są w nim deklaracje okien i elementów interfejsu użytkownika. Są one zapisane w plikach XUL, które mają rozszerzenie xul. Paczka może posiadać wiele plików XUL, ale główne okno powinno mieć taką samą nazwę jak nazwa paczki. Na przykład, paczka edytora (kompozera) będzie miała plik o nazwie editor.xul. Skrypty znajdują się w osobnych plikach o rozszerzeniu js, obok plików XUL.</p>
+
+<ul>
+ <li><strong>Skin</strong> (skóra) - style CSS, obrazy i inne pliki motywów wyglądu.</li>
+</ul>
+
+<p>Style CSS opisują szczegóły wyglądu okna. Są one oddzielone od plików XUL, by ułatwić modyfikowanie skóry aplikacji. Znajdują się tu też użyte obrazki.</p>
+
+<ul>
+ <li><strong>Locale</strong> (lokalizacja) - lokalizacja określonych plików.</li>
+</ul>
+
+<p>Wszystkie teksty, które są wyświetlane w oknie są zgromadzone oddzielnie. Dzięki czemu użytkownik może mieć własny zestaw tekstów we własnym języku.</p>
+
+<p>Spójrz na katalog chrome w Mozilli, powinieneś widzieć kilka plików JAR, po jednym dla każdej zainstalowanej paczki. Na przykład messenger.jar opisuje interfejs użytkownika dla komponentu kuriera poczty. Plik modern.jar opisuje skórę Modern.</p>
+
+<h2 id="Zawarto.C5.9B.C4.87_paczek" name="Zawarto.C5.9B.C4.87_paczek">Zawartość paczek</h2>
+
+<p>Nazwa pliku JAR może opisywać co zawiera ten plik, ale nie możesz być tego pewny dopóki sam nie sprawdzisz. Użyjemy paczki kuriera poczty jako przykładu. Jeśli rozpakujesz plik <code>browser.jar</code> zobaczysz, że struktura jego plików wygląda następująco:</p>
+
+<pre>content
+   browser
+      browser.xul
+      browser.js
+      -- other browser XUL and JS files goes here --
+      bookmarks
+         -- bookmarks files go here --
+      preferences
+         -- preferences files go here --
+.
+.
+.
+</pre>
+
+<p>Łatwo zgadnąć, że paczka zawartości (ang. content) znajduje się w folderze 'content', skóry w 'skin' a lokalizacje w 'locale'. Ten schemat nazywania nie jest wymagany, ale jest powszechnie uznawany, gdyż dzięki niemu paczka jest bardziej uporządkowana. Niektóre paczki zawierają wszystkie 3 części: content, skin i locale. Dla przykładu, Chatzilla ma taką strukturę.</p>
+
+<p>Katalogi content i messenger zawiera pliki o rozszerzeniem xul i js. Jak łatwo się domyślić pliki XUL mają rozszerzenie xul a skrypty JavaScript, js. w tym przypadku skrypty obsługują funkcje okna kuriera. Wiele plików XUL posiada powiązany ze sobą skrypt a niektóre nawet więcej niż jeden.</p>
+
+<p>W strukturze przedstawionej powyżej, znajdują się dwa pliki. Oczywiście jest ich więcej ale dla ułatwienia pokazane są tylko dwa. Plik messenger.xul opisuje główne okno kuriera które wyświetla listę wiadomości. Okno to jest dość złożone dlatego składa się z kilku plików powiązanych ze sobą za pomocą overlays. Główne okno powinno mieć taką samą nazwę jak paczka i rozszerzenie xul. W tym przypadku paczka nazywa się 'messenger' dlatego powinniśmy szukać pliku 'messenger.xul'. Niektóre z reszty plików opisują oddzielne okna. Przykładowo plik 'subscribe.xul' opisuje dialog subskrybowania grup newsowych.</p>
+
+<p>Plik contents.rdf znajduje się w każdej paczce. Jest to bardzo ważny plik ponieważ określa nazwę paczki, jej autora i wersje. Mozilla używa tych informacji do rejestracji paczki i przydzielenia jej adresu URL chrome, żeby plik był dostępny przez ten adres bo bez tego pliku nie można go przydzielić. Plik ten zostanie dokładniej opisany w dalszych częściach.</p>
+
+<p>Dwa podkatalogi - addressbook i messengercompose, opisują dodatkowe sekcje komponentu obsługi poczty. Są umieszczone w oddzielnych katalogach, żeby je odseparować. Nie potrzebują pliku 'contents.rdf' ponieważ są dostępne przez ten sam adres chrome.</p>
+
+<h2 id="Motywy_i_sk.C3.B3rki" name="Motywy_i_sk.C3.B3rki">Motywy i skórki</h2>
+
+<p>Podstawowy kod Mozilli nazywa je motywami a interfejs użytkownika motywami (themes), jednak oba określenia odnoszą się do tej samej rzeczy. Pliki modern.jar i classic.jar znajdują się w katalogu chrome Mozilli i opisują motywy wyglądu Mozilli. Ich struktura jest podobna do paczki content. Przykład z pliku modern.jar:</p>
+
+<pre class="eval">skin
+  modern
+     navigator
+        contents.rdf
+        -- pliki skór nawigatora --
+     messenger
+        contents.rdf
+        -- pliki kuriera --
+     editor
+        contents.rdf
+        -- pliki kompozytora stron --
+     communicator
+        contents.rdf
+        -- pliki komunikatora --
+     global
+        contents.rdf
+        -- pliki skór globalnych --
+.
+.
+.
+</pre>
+
+<p>Struktura jest tu bardziej skomplikowana, chodź jest podobna do części content. Zamiast słowa 'content' w folderze na najwyższym poziomie użyto słowa 'skin'. Zapamiętaj, że ta struktura jest czysto umowna, równie dobrze możesz umieści wszystkie pliki w jednym głównym katalogu i nie używać podkatalogów. Jednakże w większych aplikacjach, jak w samej Mozilli, podkatalogi oddzielają różne komponenty. W przykładzie powyżej znajduje się 5 katalogów, po jednym dla każdej paczki dla której przeznaczono skórę. Katalog global zawiera skóry ogólne dla wszystkich paczek. Pliki te odnoszą się do wszystkich komponentów, zazwyczaj będziesz sam ich używał. Katalog global definiuje wygląd wszystkich elementów UI w XUL, podczas gdy inne katalogi definiują wygląd aplikacji którym odpowiadają. Przykładowo katalog editor opisuje skórę dla komponentu kompozytora stron i zwiera między innymi pliki graficzne z ikonami dla przycisków paska narzędzi.</p>
+
+<p>Zauważyłeś zapewne, że jest 5 plików contents.rdf. Właśnie dzięki nim skóry są stosowane oddzielnie dla każdego komponentu. Teoretycznie możesz mieć skórę inną dla nawigatora, niż dla kuriera, jednak większość wyglądu jest determinowana przez część global, tak więc nie zobaczysz dużej różnicy pomiędzy aplikacjami. Poza tym Mozilla nie umożliwia wyboru oddzielnego motywu dla każdej aplikacji. Skóry również są oddzielnymi plikami, łatwo więc można dodać nowe komponenty a istniejące usunąć. Na przykład możesz stworzyć nową skórę dla kuriera a użytkownicy mogą ściągnąć ją oddzielnie. Dzięki pakowaniu plików oddzielne, użytkownik może wybrać których części chce używać.</p>
+
+<p>Skóra składa się z plików CSS i plików graficznych, które razem tworzą interfejs. Plik messenger.css jest używany przez messenger.xul i zawiera style które definiują wiele części interfejsu poczty. Zauważ, że znowu plik messenger.css ma taką samą nazwę jak cała paczka. Zmieniając zawartość plików CSS możesz zmieniać wygląd okna, nie zmieniając jego funkcji. Właśnie tak możesz stworzyć swój własny motyw bo skóry zmieniają się niezależnie od części XUL.</p>
+
+<h2 id="Lokalizacje" name="Lokalizacje">Lokalizacje</h2>
+
+<p>Plik en-US.jar opisuje informacje o języku, w tym przypadku angielskim, dla każdego komponentu. Tak jak skóry, każdy język zawiera pliki które określają tekst używany przez konkretną paczkę. Tak jak poprzednio, w paczce znajdują się pliki contents.rdf które opisują dla których paczek przeznaczono teksty. Podkatalogi zawierają tekst dla każdej paczki. Struktura tej paczki jest bardzo podobna do skin:</p>
+
+<pre class="eval">locale
+   navigator
+      contents.rdf
+      -- pliki tekstów w nawigatorze --
+   global
+      contents.rdf
+      -- pliki tekstów globalnych --
+.
+.
+.
+</pre>
+
+<p>Teksty lokalizacji znajdują się w dwóch typach plików: DTD i plików właściwości (properties). Pliki DTD mają rozszerzenie dtd i zawierają opis pojedynczych ciągów tekstu po jednym dla każdego tekstu użytego w oknie. Dla przykładu, plik messenger.dtd zawiera takie opisy dla każdej komendy menu. Dodatkowo, zdefiniowane są skróty klawiaturowe dla każdej komendy, gdyż mogą się różnić w innych językach. Pliki DTD są używane przez pliki XUL, na ogół będzie to po jednym dla każdego pliku XUL. Jak już wspomniałem, znajdują się tu również pliki właściwości, które są podobne ale używają ich skrypty. Plik messenger.properties zawiera kilka ciągów tekstów.</p>
+
+<p>Taka struktura umożliwia przetłumaczenie Mozilli albo tylko wybranego komponentu na inny język, wystarczy dodać tylko nowy plik locale dla tego języka. Nie ma potrzeby zmieniania części XUL. Dodatkowo, inna osoba może stworzyć oddzielną paczkę która będzie zawierać skórę lub lokalizacje dla stworzonej przez ciebie zawartości (content), nie ma potrzeby zmieniać oryginalnej paczki.</p>
+
+<h2 id="Inne_paczki" name="Inne_paczki">Inne paczki</h2>
+
+<p>Wiele paczek w Mozilli jest podpaczkami, paczki komunikatora. Dla przykładu okna zakładek, historii i opcji znajdują się poza paczką komunikatora. Znajdują się oddzielnie ponieważ dotyczą większej ilości paczek.</p>
+
+<p>Istnieje specjalny rodzaj paczki zwany toolkit lub global. Wcześniej widzieliśmy katalog global w paczce skór i lokalizacji. Plik toolkit.jar zawiera odpowiadającą im część content. Zawiera niektóre globalne dialogi i definicje. Określa również domyślny wygląd i funkcje dla elementów interfejsu, jak pola tekstowe i przyciski. Pliki znajdujące się w katalogu global paczki skór, zawierają definicje wyglądu wszystkich elementów XUL interfejsu użytkownika. Większość zmian motywów wyglądu, powoduje użycie różnych wariantów tych plików.</p>
+
+<h2 id="Dodawanie_paczki" name="Dodawanie_paczki">Dodawanie paczki</h2>
+
+<p>Mozilla umieszcza paczki zawarte w instalacji w katalogu chrome, mimo, że nie ma wymogu żeby znajdowały się one właśnie tam. Paczki mogą być zainstalowane w dowolnym miejscu na dysku. Plik chrome.rdf zawiera listę zainstalowanych paczek, motywów i lokalizacji wraz z ich położeniem. Powszechnie instaluje się nowe paczki w katalogu chrome, ponieważ jest to wygodne ale będą one równie dobrze działać z innego katalogu albo nawet z sieci lokalnej. Nie możesz przetrzymywać ich w zdalnych katalogach, chyba, że są one zamontowane w lokalnym systemie plików.</p>
+
+<p>Użytkownik może mieć zainstalowane wiele skór i lokalizacji które dotyczą tej samej paczki. Jednocześnie może być aktywna tylko jedna skóra i lokalizacja dla paczki. Plik chrome/chrome.rdf określa które z nich są aktywne, również określa paczkę content. Plik w chrome.rdf w katalogu profilu działa podobnie do tego z głównego katalogu Mozilli ale zawiera informacje dotyczące tylko danego użytkownika podczas gdy jego odpowiednik w katalogu instalacyjnym dotyczy wszystkich użytkowników.</p>
+
+<p>W następnym artykule skupimy się na tym, jak odwołać się do paczki chrome za pomocą <a href="/pl/Kurs_XUL/URL_Chrome" title="pl/Kurs_XUL/URL_Chrome">URL chrome</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Wprowadzenie" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:URL_Chrome">Następny  »</a></p>
+</div><p></p>

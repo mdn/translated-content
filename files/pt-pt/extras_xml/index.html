@@ -1,0 +1,116 @@
+---
+title: XML Extras
+slug: Extras_XML
+tags:
+  - Todas_as_Categorias
+  - XML
+translation_of: Mozilla/Tech/XML_Extras
+---
+<p> </p>
+<p>O módulo XML Extras contém inúmeras <em>características</em> que permitem que os desenvolvedores tratem XML como dados e não somente como um outro formato de documento. O módulo é estruturado como um componente <em>drop-in </em>e expõe suas <em>características</em> XML-as-data tanto para usuários de <a href="/pt/JavaScript" title="pt/JavaScript">JavaScript</a> como para usuários de C++/<a href="/pt/XPCOM" title="pt/XPCOM">XPCOM</a>. O módulo XML Extras é construído por padrão em todas as plataformas e é incluído no <em>instalador </em>do browser, de modo que, ele está disponível no nightly builds.</p>
+<h3 id="Feature_Status" name="Feature_Status">Status das Features</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Feature</td>
+   <td class="header">Status</td>
+  </tr>
+  <tr>
+   <td><a href="/pt/XMLSerializer" title="pt/XMLSerializer">XMLSerializer</a></td>
+   <td>Disponível</td>
+  </tr>
+  <tr>
+   <td><a href="/pt/XMLHttpRequest" title="pt/XMLHttpRequest">XMLHttpRequest</a></td>
+   <td>Disponível</td>
+  </tr>
+  <tr>
+   <td><a href="/pt/DOMParser" title="pt/DOMParser">DOMParser</a> (string and stream input source)</td>
+   <td>Disponível</td>
+  </tr>
+  <tr>
+   <td>Serviços Web com <a href="/pt/SOAP_in_Gecko-based_Browsers" title="pt/SOAP_in_Gecko-based_Browsers">SOAP</a> e <a href="/pt/Accessing_Web_Services_in_Mozilla_Using_WSDL_Proxying" title="pt/Accessing_Web_Services_in_Mozilla_Using_WSDL_Proxying">WSDL</a></td>
+   <td>Disponível desde a versão 1.4alpha. Movida para o módulo Serviços Web durante a versão 1.4beta.</td>
+  </tr>
+  <tr>
+   <td>Persistência XML</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>FIXptr e XPointer</td>
+   <td>Disponível desde a versão 1.4alpha no núcleo Mozilla. Movida para os Extras XML durante a versão 1.4beta.</td>
+  </tr>
+ </tbody>
+</table>
+<p>Veja também:</p>
+<ul>
+ <li><a href="/pt/XML_no_Mozilla" title="pt/XML_no_Mozilla">XML no Mozilla</a></li>
+ <li><a href="/pt/XML_no_Mozilla#M.C3.A9todos_de_carregamento_e_salvamento_do_DOM" title="pt/XML_no_Mozilla#M.C3.A9todos_de_carregamento_e_salvamento_do_DOM">document.load()</a></li>
+ <li><a class="external" href="http://kb.mozillazine.org/Category:XML_in_JavaScript">Alguns exemplos de como lidar com XML</a> da Base de Conhecimento MozillaZine Knowledge Base.</li>
+</ul>
+<h3 id="QA_and_Testing" name="QA_and_Testing">Perguntas Respostas e Testes</h3>
+<p>Existem alguns <a class="external" href="http://www.mozilla.org/xmlextras/tests.html">testes online</a> principalmente para o exercício do método HTTP GET através do <a href="/pt/XMLHttpRequest" title="pt/XMLHttpRequest">XMLHttpRequest</a>.</p>
+<p><span id="result_box" lang="pt"><span class="hps">Outros casos de teste</span> <span class="hps">para cada um dos</span> <span class="hps">componentes</span> <span class="hps">implementadas</span> <span class="hps">listados acima</span> <span class="hps">existem em</span></span> <code><a href="https://dxr.mozilla.org/mozilla-central/source/extensions/xmlextras/tests/" rel="custom">extensions/xmlextras/tests/</a></code>. <span id="result_box" lang="pt"><span class="hps">Conjuntos de testes</span> <span class="hps">mais</span> <span class="hps">exaustivos</span> <span class="hps">precisam ser criadas</span><span>, no entanto.</span> <span class="hps">Se você</span> <span class="hps">quiser ajudar</span> <span class="hps">com</span> <span class="hps">QA,</span> <span class="hps">você pode fazer</span> <span class="hps">o seguinte</span></span>:</p>
+<ul>
+ <li><span id="result_box" lang="pt"><span class="hps">Registe-se</span> <span class="hps alt-edited">como proprietário</span> <span class="hps alt-edited">controle de qualidade para</span> <span class="hps">qualquer um dos componentes</span> <span class="hps alt-edited">implementados.</span> <span class="hps">O proprietário</span> <span class="hps">QA</span> <span class="hps">irá gerir</span> <span class="hps">os testes</span> <span class="hps">relacionados com o seu</span> <span class="hps">componente,</span> <span class="hps">atuar como</span> <span class="hps">contato</span> <span class="hps">QA</span> <span class="hps">para bugs</span> <span class="hps">relacionados e</span> <span class="hps">ajudar com os testes</span> <span class="hps">de regressão</span></span>.</li>
+ <li><span id="result_box" lang="pt"><span class="hps alt-edited">Contribuir para uma</span> <span class="hps">suíte de testes</span> <span class="hps">ou</span> <span class="hps">testes individuais</span> <span class="hps">que usam os componentes</span> <span class="hps">implementados.</span> <span class="hps">Erros</span> <span class="hps">de arquivos para</span> <span class="hps">novos testes</span> <span class="hps">que você tem,</span> <span class="hps">e/ou</span> <span class="hps">vê-los</span> <span class="hps">em </span></span><code><a href="https://dxr.mozilla.org/mozilla-central/source/extensions/xmlextras/tests/" rel="custom">extensions/xmlextras/tests/</a></code>.</li>
+ <li><span id="result_box" lang="pt"><span class="hps">Erros</span> <span class="hps">de arquivo</span> <span class="hps">contra os componentes</span> <span class="hps">implementados.</span> <span class="hps">Os erros deverão</span> <span class="hps">ser apresentadas contra</span> <span class="hps">o componente</span> <span class="hps">XML</span> <span class="hps">no produto</span> <span class="hps">Navegador</span></span>.</li>
+</ul>
+<h3 id="Documentation" name="Documentation">Documentação</h3>
+<p>Provavelmente a melhor maneira de aprender a usar estas tecnologias é através de exemplos. Existem vários em <code><a href="https://dxr.mozilla.org/mozilla-central/source/extensions/xmlextras/tests/" rel="custom">extensions/xmlextras/tests/</a></code>. <span id="result_box" lang="pt"><span class="hps">Se você</span> <span class="hps alt-edited">siguir o link para</span> <span class="hps alt-edited">ver</span> <span class="hps">os exemplos que você</span> <span class="hps">vai precisar</span> <span class="hps alt-edited">olhar no</span> <span class="hps">código fonte da página</span> <span class="hps">para</span> <span class="hps">os documentos HTML</span></span>.</p>
+<p>Para objetos <a href="/pt/XMLHttpRequest" title="pt/XMLHttpRequest">XMLHttpRequest</a> você pode confiar na  <a class="external" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/63409298-0516-437d-b5af-68368157eae3.asp">documentação Microsoft XMLHttpRequest</a>, <span id="result_box" lang="pt"><span class="hps">com algumas ressalvas</span><span>:</span> <span class="hps">todas as funções e</span> <span class="hps">nomes de propriedades</span> <span class="hps">começam com uma</span> <span class="hps">letra minúscula</span> <span class="hps">e</span> <span class="hps">a criação do objeto</span> <span class="hps">é diferente.</span> <span class="hps">Algumas propriedades não</span> <span class="hps">são implementadas</span></span>.</p>
+<p><span id="result_box" lang="pt"><span class="hps">Thad</span> <span class="hps">Hoffman</span> <span class="hps">escreveu um</span> <span class="hps">documento que</span> <span class="hps">mostra como</span> <span class="hps">você pode imitar a</span></span> <a href="/pt/Using_XML_Data_Islands_in_Mozilla" title="pt/Using_XML_Data_Islands_in_Mozilla">Separação de Dados XML na Mozilla</a>. <span id="result_box" lang="pt"><span class="hps">Edmond</span> <span class="hps">Woychowsky</span> <span class="hps">também tem escrito</span> <span class="hps">artigos sobre</span> <span class="hps">a Separação de Dados XML</span> <span class="hps">na</span><span class="hps"> Mozilla</span></span>: "<a class="external" href="http://builder.com.com/article.jhtml?id=u00220030515woy01.htm"><span class="short_text" id="result_box" lang="pt"><span class="hps">Faça</span> os <span class="hps">dados da separação XML</span> <span class="hps">trabalhar</span> <span class="hps">na Mozilla</span></span></a>", "<a class="external" href="http://builder.com.com/5100-6371-5085227.html"><span class="short_text" id="result_box" lang="pt"><span class="hps">Construir</span> código de paginação XML <span class="hps">cross-browser</span></span></a>" e "<a class="external" href="http://builder.com.com/article.jhtml?id=u00320030718woy01.htm"><span id="result_box" lang="pt"><span class="hps">Implementar</span> <span class="hps">um carrinho de compras</span> <span class="hps">flexível com</span> <span class="hps">XML</span> <span class="hps">e</span> <span class="hps">ASP</span></span></a>". <span class="short_text" id="result_box" lang="pt"><span class="hps">O</span> <span class="hps">Mozilla Developer Center</span> <span class="hps">tem várias páginas</span> <span class="hps">para</span></span> <a href="/pt/XMLHttpRequest" title="pt/XMLHttpRequest">XMLHttpRequest</a>.</p>
+<p><span id="result_box" lang="pt"><span class="hps">Abaixo estão alguns</span> <span class="hps">diferencias</span> <span class="hps">importantes</span> <span class="hps">em</span> <span class="hps">"Extras XML</span><span class="hps">"</span> <span class="hps">entre</span> <span class="hps">Mozilla</span> <span class="hps">e</span> <span class="hps">Microsoft</span> <span class="hps">software</span></span>:</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Diferença</td>
+   <td class="header">Microsoft</td>
+   <td class="header">Mozilla</td>
+  </tr>
+  <tr>
+   <td>Nomes dos membros</td>
+   <td><span class="short_text" id="result_box" lang="pt"><span class="hps">Diferencia maiúsculas de minúsculas</span></span>?</td>
+   <td><span class="short_text" id="result_box" lang="pt"><span class="hps">Começa com</span> <span class="hps">letra minúscula</span></span></td>
+  </tr>
+  <tr>
+   <td>Criação de <a href="/pt/XMLHttpRequest" title="pt/XMLHttpRequest">XMLHttpRequest</a></td>
+   <td><code>new ActiveXObject("Msxml2.XMLHTTP")</code></td>
+   <td><code>new XMLHttpRequest()</code></td>
+  </tr>
+  <tr>
+   <td><code>XMLHttpRequest.send("some string")</code></td>
+   <td>ok</td>
+   <td>ok começando com marco 0.9.7 (atualmente nightly 2001-11-28). <span class="short_text" id="result_box" lang="pt"><span class="hps">Com</span> <span class="hps">versões</span> <span class="hps">mais antigas</span><span>, passando</span> <span class="hps">para</span> <span class="hps">strings</span></span> <code>send()</code> só funciona no cromo, ver <a href="https://dxr.mozilla.org/mozilla-central/source/extensions/xmlextras/tests/post.html" rel="custom">post.html</a><span class="short_text" id="result_box" lang="pt"><span class="hps">.</span> <span class="hps">A</span> <span class="hps atn">"</span><span>solução</span><span>"</span> <span class="hps">é usar o objeto</span> <span class="hps">DOMParser</span></span> <code>parseFromString()</code> <span id="result_box" lang="pt"><span class="hps">para criar</span> <span class="hps">um documento de</span> <span class="hps">string,</span> <span class="hps">e passar o</span> <span class="hps">documento temporário</span> <span class="hps">em</span></span> <code>send()</code>.</td>
+  </tr>
+  <tr>
+   <td><code>XMLHttpRequest.open("aHost")</code></td>
+   <td>ok</td>
+   <td><code>file://</code> <span class="short_text" id="result_box" lang="pt"><span class="hps">documentos</span> <span class="hps">podem acessar</span></span> <code>http://</code> <span class="short_text" id="result_box" lang="pt"><span class="hps">documentos, mas</span> <span class="hps">você precisa habilitar os privilégios </span></span><code>UniversalBrowserRead</code> nos seus scripts - ver o documento <a class="external" href="http://www.mozilla.org/projects/security/components/signed-scripts.html#privs">Segurança JavaScript: Scripts assinados</a> para mais detalhes. <span id="result_box" lang="pt"><span class="hps">Normalmente,</span> <span class="hps">os arquivos devem</span> <span class="hps">residir em um</span> <span class="hps">servidor web</span> <span class="hps">para que isso não</span> <span class="hps">represente um problema</span> <span class="hps">(não</span> <span class="hps">que você não precisa</span> <span class="hps">que a linha</span> <span class="hps">seja</span><span>)</span></span>. Adicionalmente, "foo.com:80" e "foo.com:313" <span id="result_box" lang="pt"><span class="hps">são</span> <span class="hps">considerados hospedeiros</span> <span class="hps">diferentes</span> <span class="hps">para fins de segurança</span><span>.</span> <span class="hps">Você não pode</span> <span class="hps">abrir uma conexão com</span> <span class="hps">um host diferente</span></span>.</td>
+  </tr>
+  <tr>
+   <td><a href="/pt/DOMParser" title="pt/DOMParser">DOMParser</a> Creation</td>
+   <td><span class="short_text" id="result_box" lang="pt"><span class="hps">não disponível</span></span></td>
+   <td><code>new DOMParser()</code></td>
+  </tr>
+  <tr>
+   <td><a href="/pt/XMLSerializer" title="pt/XMLSerializer">XMLSerializer</a> Creation</td>
+   <td><span class="short_text" id="result_box" lang="pt"><span class="hps">não disponível</span></span></td>
+   <td><code>new XMLSerializer()</code></td>
+  </tr>
+ </tbody>
+</table>
+<p><span id="result_box" lang="pt"><span class="hps">Documentação mínima</span> <span class="hps">para os componentes</span> <span class="hps">listados acima</span> <span class="hps">podem ser encontrados usando a documentação</span> <span class="hps">Mozilla</span> <span class="hps">gerada pelo </span></span><a class="external" href="http://www.doxygen.org/">Doxygen</a>. <span id="result_box" lang="pt"><span class="hps">Arquivo</span>s de erros <span class="hps">novos</span> <span class="hps">para</span> <span class="hps">contribuições</span> <span class="hps">adicionais de documentação</span><span>, serão</span> <span class="hps">especificamente</span> <span class="hps">destinados a</span> <span class="hps">desenvolvedores de JavaScript</span> <span class="hps">ou para completar</span> <span class="hps">e</span> <span class="hps">esclarecer os comentários no estilo</span> <span class="hps">JavaDoc</span> <span class="hps">nos arquivos</span> <span class="hps">IDL</span></span>.</p>
+<ul>
+ <li>nsIDOMSerializer (Currently, the JavaScript constructor is <code>XMLSerializer()</code>)</li>
+ <li>nsIDOMParser (Currently, the JavaScript constructor is <code>DOMParser()</code>)</li>
+ <li>nsIXMLHttpRequest</li>
+</ul>
+<p><span class="short_text" id="result_box" lang="pt"><span class="hps">Por favor, consulte</span> <span class="hps">a seção</span></span> <a href="/pt/XML_in_Mozilla#XML_Linking_and_Pointing" title="pt/XML_in_Mozilla#XML_Linking_and_Pointing">ligando e apontando XML</a> no documento <a href="/pt/XML_in_Mozilla" title="pt/XML_in_Mozilla">XML na Mozilla</a> para documentação FIXptr e XPointer.</p>
+<h3 id="How_can_I_help.3F" name="How_can_I_help.3F">Como eu posso ajudar?</h3>
+<ul>
+ <li>Ajude com o <a href="/pt/XML_in_Mozilla#Testing_and_QA" title="pt/XML_in_Mozilla#Testing_and_QA">teste</a><span class="short_text" id="result_box" lang="pt"><span class="hps"> dos componentes</span> <span class="hps">contidos</span> <span class="hps">dentro do módulo.</span></span></li>
+ <li>Contribua <a href="#Documentação">Documentação</a> com o módulo.</li>
+ <li><span id="result_box" lang="pt"><span class="hps">Ajuda</span> <span class="hps">o nível do código</span><span>,</span> <span class="hps">contribuindo com pedaços</span> <span class="hps">de código para</span> <span class="hps">correções de erros</span> <span class="hps">ou conclusão de</span> <span class="hps">características</span></span>.</li>
+</ul>
+<p><span class="comment">Categorias</span></p>
+<p><span class="comment">Interwiki Language Links</span></p>

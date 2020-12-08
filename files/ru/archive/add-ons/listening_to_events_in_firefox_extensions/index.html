@@ -1,0 +1,105 @@
+---
+title: Обработка событий в расширениях Firefox
+slug: Archive/Add-ons/Listening_to_events_in_Firefox_extensions
+translation_of: Archive/Add-ons/Listening_to_events_in_Firefox_extensions
+---
+<p>Gecko использует события (<a class="internal" href="/en/DOM/event" title="En/DOM/Event">events<span style="color: #000000;">)</span></a> для передачи информации о происходящем во время работы браузера тем модулям, которые желают знать об этом.  События подразделяются на несколько различных категорий. Данная статья поможет Вам узнать основную информацию об этом и даст ссылки на более подробную документацию, описывающую каждую из категорий. Также в этой статье описаны несколько случаев, предоставляющих особый интерес.</p>
+<h2 id="Типы_событий">Типы событий</h2>
+<p>Существует множесто типов событий, которые могут использовать авторы приложений и расширений для получения оповещений от элементов браузера (<a class="internal" href="/en/XUL/browser" title="En/XUL/Browser"><code>browser</code></a>) и закладок (<code><a class="internal" href="/en/XUL/tabbrowser" title="En/XUL/Tabbrowser">tabbrowser</a></code>) об изменениях, связанных с загруженным в них содержимым.</p>
+<h3 id="Простые_DOM-события">Простые DOM-события</h3>
+<p>Для обработки простого DOM-события используйте такой код:</p>
+<pre>function callback(evt) {
+  // Здесь Ваш код. Проверяйте значение evt.target чтобы обрабатывать только нужные события.
+}
+
+b.addEventListener("event", callback, false)
+</pre>
+<p>В приведенном примере <strong><code>b</code></strong> - это браузер (<a class="internal" href="/en/XUL/browser" title="En/XUL/Browser"><code>browser</code></a>) или закладка (<code><a class="internal" href="/en/XUL/tabbrowser" title="En/XUL/Tabbrowser">tabbrowser</a></code>), от которой Вы хотите получать события. Имейте в виду, что события могут приходить от любого фрейма внутри браузера или в случае закладки - от нескольких браузеров с такой закладкой.</p>
+<p>Ниже пречислены наиболее интересные DOM-события:</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Событие</td>
+   <td class="header">Описание</td>
+  </tr>
+  <tr>
+   <td><code>DOMLinkAdded</code></td>
+   <td>Генерируется, когда в документе обнаружена новая ссылка (HTML элемент <a class="internal" href="/en/HTML/Element/link" title="En/HTML/Element/Link"><code>&lt;link&gt;</code></a>).</td>
+  </tr>
+  <tr>
+   <td><code>DOMTitleChanged</code></td>
+   <td>Генерируется, когда изменен заголовок страницы.</td>
+  </tr>
+  <tr>
+   <td><code>DOMContentLoaded</code></td>
+   <td>Генерируется, когда инициализация DOM полностью завершена.</td>
+  </tr>
+  <tr>
+   <td><code>load</code></td>
+   <td><span style="display: none;"> </span>Генерируется, когда страница, включая картинки, была полностью загружена.</td>
+  </tr>
+  <tr>
+   <td><code>unload</code></td>
+   <td>Генерируется, когда пользователь закрыл страницу.</td>
+  </tr>
+  <tr>
+   <td><code>pageshow</code></td>
+   <td>Генерируется, когда страница показана вновь.</td>
+  </tr>
+  <tr>
+   <td><code>pagehide</code></td>
+   <td>Генерируется, когда страница скрыта.</td>
+  </tr>
+ </tbody>
+</table>
+<p>Более детально о событиях <strong><code>load</code></strong>, <strong><code>unload</code></strong>, <strong><code>pageshow</code> </strong>and <strong><code>pagehide</code>, </strong>а также о других событиях читайте в статье <a class="internal" href="/En/Using_Firefox_1.5_caching" title="En/Using Firefox 1.5 caching">Firefox's caching behaviour</a>.</p>
+<h3 id="Обработчики_процесса_загрузки">Обработчики процесса загрузки</h3>
+<p>Для отображения дополнительной информации о ходе загрузки данных из веба можно использовать обработчики процесса загрузки. Они предоставляют детальную информацию о ходе загрузки данных из веба. И браузер (<a class="internal" href="/en/XUL/browser" title="En/XUL/Browser"><code>browser</code></a>) и закладка (<code><a class="internal" href="/en/XUL/tabbrowser" title="En/XUL/Tabbrowser">tabbrowser</a></code>) поддерживают следующие конструкции:</p>
+<pre>var progressListener = {
+  // add nsIWebProgressImplementation here
+}
+
+b.addProgressListener(progressListener);
+</pre>
+<p>Where <code>b</code> is the <code>browser</code> or <code>tabbrowser</code> you want to listen to events for. There are code snippets available that give more detail on <a class="internal" href="/en/Code_snippets/Progress_Listeners" title="en/Code snippets/Progress Listeners">using web progress listeners</a>.</p>
+<p>For a <code>tabbrowser,</code> the above code will only get events from the browser that is currently displayed at the time the event occurs. In order to listen to events from all browsers, including those not currently being displayed, the following example can be used:</p>
+<pre>var tabsProgressListener = {
+  // add tabs progress listener implementation here
+}
+
+gBrowser.addTabsProgressListener(tabsProgressListener);
+</pre>
+<p>This lets you receive events related to all tabs. More information about <a class="internal" href="/En/Listening_to_events_on_all_tabs" title="En/Listening to events on all tabs"><span class="external">listening to events from all tabs</span></a> is available.</p>
+<p>{{ fx_minversion_note("3") }}</p>
+<h2 id="How_events_are_used_by_Firefox">How events are used by Firefox</h2>
+<p>The Firefox frontend already listens for a number of these progress events from web pages. Most of this goes on in <code>browser.js</code>.</p>
+<h3 id="DOMLinkHandler">DOMLinkHandler</h3>
+<p>The <code>DOMLinkHandler</code> object is called by the <code>DOMLinkAdded</code> event in order to detect any RSS feeds, site icons, or OpenSearch plugins for the web site.</p>
+<h3 id="pageShowEventHandlers">pageShowEventHandlers</h3>
+<p>The <code>pageShowEventHandlers()</code> function is called by the <code>pageshow</code> event and is used to populate the character set menu and update the UI elements associated with any detected feeds or OpenSearch plugins for the website.</p>
+<h3 id="XULBrowserWindow">XULBrowserWindow</h3>
+<p><a href="/en/XULBrowserWindow" title="en/XULBrowserWindow"><code>XULBrowserWindow</code></a> is an {{ interface("nsIWebProgressListener") }} used to get progress events for the currently visible browser. It is used to update the UI for many different reasons:</p>
+<ul>
+ <li>Update the progress bar and status messages as pages load</li>
+ <li>Turn on and off the throbber as pages load</li>
+ <li>Set the site icon when available</li>
+ <li>Update the address bar as the user navigates</li>
+ <li>Hide notification bars when appropriate as the user navigates</li>
+ <li>Apply the site zoom preferences to newly loading pages</li>
+ <li>Update the bookmarking star button UI</li>
+ <li>Update the identity display as the site's security changes</li>
+</ul>
+<h3 id="TabsProgressListener">TabsProgressListener</h3>
+<p>This object is a tabs progress listener and receives events for all browsers in the window. It is used to detect when a webpage attempts to refresh itself and allow the user to block the attempt.</p>
+<h2 id="How_events_are_used_by_the_tabbrowser">How events are used by the tabbrowser</h2>
+<p><code>tabbrowser</code> maintains a set of objects relating to progress listening for each browser. First it creates a <code>browser-status-filter</code> and adds it as a web progress listener for the browser. Next it creates an internal object to receive all web progress events from the browser. This is created by the method <code>mTabProgressListener()</code>. This receives events from the <code>browser-status-filter</code>. The filter acts to reduce the number of status and progress events to improve performance. The filters are held in the array <code>mFilters</code>, the internal listeners in the array <code>mTabListeners</code>.</p>
+<p>The internal listeners are used to send out progress events to listeners registered with <a class="internal" href="/en/XUL/Method/addProgressListener" title="En/XUL/Method/AddProgressListener"><code>addProgressListener()</code></a> (which receives events from the browser that is currently visible) and <a class="internal" href="/En/XUL/Method/AddTabsProgressListener" title="En/XUL/Method/AddTabsProgressListener"><code>addTabsProgressListener()</code></a> (which receives events from all browsers).</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a class="internal" href="/en/DOM/event" title="En/DOM/Event"><code>event</code></a></li>
+ <li><a class="internal" href="/En/Listening_to_events_on_all_tabs" title="En/Listening to events on all tabs">Listening to events on all tabs</a></li>
+ <li><a class="internal" href="/En/DOM/Mouse_gesture_events" title="en/Mouse gesture events">Mouse gesture events</a></li>
+ <li><a class="internal" href="/en/Code_snippets/Progress_Listeners" title="en/Code snippets/Progress Listeners">Code snippets: Progress listeners</a></li>
+</ul>
+<div id="cke_pastebin" style="position: absolute; top: 772.5px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+  </div>

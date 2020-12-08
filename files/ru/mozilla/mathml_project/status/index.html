@@ -1,0 +1,341 @@
+---
+title: Статус поддержки MathML в контексте проекта Mozilla
+slug: Mozilla/MathML_Project/Status
+tags:
+  - MathML
+  - MathML Project
+translation_of: Mozilla/MathML_Project/Status
+---
+<p>Обзор элементов/атрибутов <a class="external" href="http://www.w3.org/TR/MathML3/" title="http://www.w3.org/TR/MathML3/">MathML 3</a> - исключая устаревшие - и текущее состояние встроенной поддержки. Приведены ссылки на MathML 3. Разделы отмечены их текущим статусом: <span style="background-color: lightgreen;">поддерживается</span>, <span style="background-color: gold;">в разработке</span>, и <span style="background-color: salmon;">не поддерживается в настоящее время</span>. Разделы, относящиеся к семантике/содержанию MathML или к чему-то нерелевантному, оставлены пустыми или не перечислены вообще. Если реализованы только основные атрибуты элемента, то он помечается как поддерживаемый, но подробности о неподдерживаемых его атрибутах указаны ниже.</p>
+
+<h2 id="Элемент_верхнего_уровня_math">Элемент верхнего уровня math</h2>
+
+<p>Смотрите <a class="external" href="http://www.w3.org/TR/MathML3/chapter2.html#interf.toplevel">§ 2.2</a>.</p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Атрибут</th>
+   <th>Примечания</th>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td>display</td>
+   <td>Реализован.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>maxwidth, overflow</td>
+   <td>Не реализован. Смотрите {{ Bug("534962") }}.</td>
+  </tr>
+  <tr>
+   <td>altimg, altimg-width, altimg-height, altimg-valign, alttext</td>
+   <td>Использование допускается, но не оказывает никакого влияния на рендеринг. MathML всегда доступен, так как имеет место {{ Bug("660762") }}.</td>
+  </tr>
+  <tr>
+   <td>cdgroup</td>
+   <td>Использование допускается, но не оказывает никакого влияния на рендеринг.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Атрибуты_общие_для_всех_элементов_MathML">Атрибуты, общие для всех элементов MathML</h2>
+
+<p>Смотрите <a class="external" href="http://www.w3.org/TR/MathML3/chapter2.html#fund.globatt">§ 2.1.6</a> и <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.presatt">§ 3.1.10</a>.</p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Атрибут</th>
+   <th>Примечания</th>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td>id, class, style</td>
+   <td>Реализованы.</td>
+  </tr>
+  <tr>
+   <td>xref</td>
+   <td>Использование допускается, но не оказывает никакого влияния на рендеринг.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td>href</td>
+   <td>Реализован.  Пользовательский интерфейс работает корректно в Seamonkey, но не в Firefox. Смотрите {{ Bug("958957") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td>mathcolor</td>
+   <td>Реализован.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td>mathbackground</td>
+   <td>Реализован.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Token_Elements">Token Elements</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Element [- attribute]</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mi">mi</a></td>
+   <td>Implemented. The mathvariant attribute is fully supported starting with {{geckoRelease("28.0")}}. See {{ Bug("114365") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mn">mn</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mo">mo</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>mo - linebreaking attributes, indentation attributes</td>
+   <td>Not implemented. See {{ Bug("534962") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mtext">mtext</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mspace">mspace</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>mspace - linebreak</td>
+   <td>Not implemented. See {{ Bug("380266") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.ms">ms</a></td>
+   <td>Implemented.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="General_Layout_Schemata">General Layout Schemata</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Element</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mrow">mrow</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mfrac">mfrac</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.msqrt">msqrt</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mroot">mroot</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mstyle">mstyle</a></td>
+   <td>Implemented. We are only interested in supporting <a href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.1">attributes "inherited from the surrounding context"</a>, which are those effectively used in practice.  See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=838509">bug 838509</a>.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.merror">merror</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mpadded">mpadded</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mphantom">mphantom</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mfenced">mfenced</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.menclose">menclose</a></td>
+   <td>Implemented.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Script_and_Limit_Schemata">Script and Limit Schemata</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Element [- attribute]</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.msub">msub</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.msup">msup</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.subsup">msubsup</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.munder">munder</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mover">mover</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.munderover">munderover</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mmultiscripts">mmultiscripts</a></td>
+   <td>Implemented.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Tabular_Math">Tabular Math</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Element [- attribute]</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mtable">mtable</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>mtable - alignmentscope</td>
+   <td>Not implemented. See {{ Bug("122253") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td>mtable - columnspacing, rowspacing, framespacing</td>
+   <td>Implemented. See {{ Bug("330964") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>mtable - columnwidth</td>
+   <td>Not implemented. See {{ Bug("958953") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>mtable - equalrows, equalcolumns</td>
+   <td>Not implemented. See {{ Bug("958954") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>mtable - side, minlabelspacing</td>
+   <td>Not implemented. See {{ Bug("356870") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mtr">mtr</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mlabeledtr">mlabeledtr</a></td>
+   <td>Not Implemented. See {{ Bug("689641") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mtd">mtd</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>* - groupalign.</td>
+   <td>Not implemented. See {{ Bug("122253") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.maligngroup">maligngroup</a></td>
+   <td>Not implemented. See {{ Bug("122253") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.malignmark">malignmark</a></td>
+   <td>Not implemented. See {{ Bug("122253") }}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Elementary_Math">Elementary Math</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Element [- attribute]</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mstack">mstack</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mlongdiv">mlongdiv</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.msgroup">msgroup</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.msrow">msrow</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mscarries">mscarries</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mscarry">mscarry</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.msline">msline</a></td>
+   <td>Not implemented. See {{ Bug("534967") }}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Other_elements">Other elements</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Element [- attribute]</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.mglyph">mglyph</a></td>
+   <td>Not implemented. See {{ Bug("297465") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.maction">maction</a></td>
+   <td>Implemented.</td>
+  </tr>
+  <tr style="background-color: #fa8072;">
+   <td>maction - tooltip</td>
+   <td>Not implemented. See {{ Bug("544001") }}.</td>
+  </tr>
+  <tr style="background-color: #90ee90;">
+   <td><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.semantics">semantics</a></td>
+   <td>Implemented.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): Frédéric Wang</li>
+ <li>Other Contributors:</li>
+ <li>Copyright Information: Portions of this content are © 2010 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>
+
+<p> </p>

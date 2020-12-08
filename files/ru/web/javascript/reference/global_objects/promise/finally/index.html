@@ -1,0 +1,98 @@
+---
+title: Promise.prototype.finally()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
+---
+<div>{{JSRef}}</div>
+
+<p>Метод <code><strong>finally()</strong></code> возвращает {{jsxref("Promise")}}. Когда <code>Promise</code> (обещание) был выполнен, в не зависимости успешно или с ошибкой, указанная функция будет выполнена. Это дает возможность запустить один раз определенный участок кода, который должен выполниться вне зависимости от того, с каким результатом выполнился <code>Promise</code>.</p>
+
+<p>Это позволяет вам избавиться от дубликации кода в обработчиках {{jsxref("Promise.then", "then()")}} и {{jsxref("Promise.catch", "catch()")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>p.finally(onFinally)</var>;
+
+p.finally(function() {
+   // завершен (успешно или с ошибкой)
+});
+
+p.finally(() =&gt; {
+// завершен (успешно или с ошибкой)
+});</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>onFinally</code></dt>
+ <dd>Функция {{jsxref("Function")}} вызываемая когда <code>Promise</code> (обещание) завершено.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Возвращает {{jsxref("Promise")}} для которого в качестве обработчика <code>finally </code>задана функция <code>onFinally</code>.</p>
+
+<h2 id="Описание">Описание</h2>
+
+<p><code>finally()</code> может быть полезен, если необходимо приоизвести какие-либо вычисления или очистку, как только <code>Promise</code> (обещание) завершено, вне зависимости от результата.</p>
+
+<p><code>finally()</code> очень схож с вызовом <code>.then(onFinally, onFinally)</code>, однако существует несколько различий:</p>
+
+<ul>
+ <li>Использование <code>finally()</code> позволяет избежать двойного объявления одной и той же функции или создания переменной. </li>
+ <li><code>finally</code> не получает аргументов, так как не существует способа определить, будет ли обещание выполнено успешно или с ошибкой. Данный метод необходимо использовать, если не важна причина ошибки или результат успешного выполнения и, следовательно, нет необходимости ее/его передавать.</li>
+ <li>В отличие от <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (результатом которого будет resolved-промис, со значением <code>undefined</code>), результатом <code>Promise.resolve(2).finally(() =&gt; {})</code> будет resolved-промис со значением <code>2</code>.</li>
+ <li>Аналогично, в отличии от <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (результатом которого будет resolved-промис, со значением <code>undefined</code>), результатом <code>Promise.reject(3).finally(() =&gt; {})</code> будет rejected-промис со значением <code>3</code>.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note:</strong> A <code>throw</code> (or returning a rejected promise) in the <code>finally</code> callback will reject the new promise with the rejection reason specified when calling <code>throw()</code>.</p>
+</div>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">let isLoading = true;
+
+fetch(myRequest).then(function(response) {
+    var contentType = response.headers.get("content-type");
+    if(contentType &amp;&amp; contentType.includes("application/json")) {
+      return response.json();
+    }
+    throw new TypeError("Oops, we haven't got JSON!");
+  })
+  .then(function(json) { /* process your JSON further */ })
+  .catch(function(error) { console.log(error); })
+  .finally(function() { isLoading = false; });
+
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a href="https://github.com/tc39/proposal-promise-finally">TC39 proposal</a></td>
+   <td>Stage 4</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+
+<p class="hidden">Чтобы внести свой вклад в эти данные о совместимости, пожалуйста, напишите запрос извлечения для этого репозитория: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</p>
+
+<p>{{Compat("javascript.builtins.Promise.finally")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+ <li>{{jsxref("Promise.prototype.then()")}}</li>
+ <li>{{jsxref("Promise.prototype.catch()")}}</li>
+</ul>

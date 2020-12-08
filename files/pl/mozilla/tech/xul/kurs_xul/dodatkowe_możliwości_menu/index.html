@@ -1,0 +1,121 @@
+---
+title: Dodatkowe możliwości menu
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodatkowe_możliwości_menu
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Menu_Features
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Proste_paski_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Wyskakuj%C4%85ce_menu">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule zobaczymy, jak utworzyć podmenu i zaznaczyć jego elementy.
+</p>
+<h3 id="Tworzenie_podmenu" name="Tworzenie_podmenu"> Tworzenie podmenu </h3>
+<p>Możemy tworzyć podmenu wewnątrz innych menu (zagnieżdżając się w menu) stosując istniejące elementy. Pamiętaj, że możemy umieszczać elementy do wewnątrz elementu <code>menupopup</code>. Widzieliśmy już wcześniej, jak umieścić pozycje menu (<code>menuitem</code>) i separatory (<code>menuseparator</code>) w wyskakującym menu (<code>menupopup</code>). Jednakże możemy tworzyć podmenu poprzez proste umieszczenie elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>. Będzie ono nam działało, ponieważ element menu można tworzyć nawet wtedy, gdy nie jest ono bezpośrednio umieszczone wewnątrz paska menu. Przykład poniżej tworzy proste podmenu wewnątrz menu &lt;tt&gt;Plik&lt;/tt&gt;:
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:menubar-ex3.png"></div>
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="Plik"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menu id="new-menu" label="Nowy"&gt;
+          &lt;menupopup id="new-popup"&gt;
+            &lt;menuitem label="Okno"/&gt;
+            &lt;menuitem label="Wiadomość"/&gt;
+          &lt;/menupopup&gt;
+        &lt;/menu&gt;
+        &lt;menuitem label="Otwórz"/&gt;
+        &lt;menuitem label="Zapisz"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Zakończ"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<div class="highlight">
+<h3 id="Dodawanie_menu_do_przyk.C5.82adu_Znajd.C5.BA_pliki" name="Dodawanie_menu_do_przyk.C5.82adu_Znajd.C5.BA_pliki"> Dodawanie menu do przykładu <code>Znajdź pliki</code> </h3>
+<p>Dodajmy menu do okienka dialogowego &lt;tt&gt;Znajdź pliki&lt;/tt&gt; poprzez wstawienie kilku prostych komend do menu &lt;tt&gt;Plik&lt;/tt&gt; i &lt;tt&gt;Edycja&lt;/tt&gt;. Podobnie jak w przykładzie powyżej.
+</p>
+<pre class="eval">&lt;toolbox&gt;
+
+ <span class="highlightred">&lt;menubar id="findfiles-menubar"&gt;
+  &lt;menu id="file-menu" label="Plik" accesskey="P"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem label="Otwórz szukanie..." accesskey="O"/&gt;
+      &lt;menuitem label="Zapisz szukanie..." accesskey="s"/&gt;
+      &lt;menuseparator/&gt;
+      &lt;menuitem label="Zakończ" accesskey="k"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+  &lt;menu id="edit-menu" label="Edycja" accesskey="E"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem label="Wytnij" accesskey="W"/&gt;
+      &lt;menuitem label="Kopiuj" accesskey="K"/&gt;
+      &lt;menuitem label="Wklej" accesskey="l" disabled="true"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;</span>
+
+&lt;toolbar id="findfiles-toolbar&gt;
+</pre>
+<div class="float-right"><img alt="grafika:menubar1.png"></div>
+<p>Dodaliśmy dwa menu z różnymi poleceniami. Jak można zauważyć, pasek menu został dodany do paska zadań. W naszym przykładzie po &lt;tt&gt;Otwórz szukanie...&lt;/tt&gt; i &lt;tt&gt;Zapisz szukanie...&lt;/tt&gt; znajdują się trzy kropki, co według ogólnie przyjętej konwencji wskazuje, że po kliknięciu tych poleceń, otworzy się kolejne okienko dialogowe. Do każdego menu oraz elementu menu został dodany skrót klawiszowy, co spowodowało podkreślenie danej litery skrótu klawiaturowego w etykiecie polecenia, litera ta wywołuje dane polecenie i jest równoważna z kliknięciem w pozycję menu za pomocą kursora. Polecenie &lt;tt&gt;Wklej&lt;/tt&gt; zostało wyłączone (<i>disabled</i>), ponieważ zakładamy, że nie mamy jeszcze czego wklejać.
+</p><p>Nasz przykład: Okno dialogowe &lt;tt&gt;Znajdź pliki&lt;/tt&gt;: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul">Podgląd</a>
+</p>
+</div>
+<h3 id="Dodawanie_zaznaczania_w_menu" name="Dodawanie_zaznaczania_w_menu"> Dodawanie zaznaczania w menu </h3>
+<p>Wiele aplikacji posiada pozycje menu, które są zaznaczone. Na przykład, właściwość, która jest włączona, posiada obok polecenia zaznaczenie, natomiast właściwość, która jest wyłączona nie posiada tego zaznaczenia. Kiedy użytkownik zaznaczy menu, pole zaznaczenia jest włączone. Możemy także utworzyć przyciski opcji i pozycje menu. </p><p>Zaznaczenia są tworzone w podobny sposób jak elementy <code><a href="/pl/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code> i <code><a href="/pl/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code>. Wymagają one zaangażowania do zastosowania dwóch atrybutów: <code><a href="pl/XUL/Atrybut/button.type">type</a></code>, aby zdefiniować typ zaznaczenia oraz <code><a href="pl/XUL/Atrybut/menuitem.name">name</a></code>, aby możliwe było pogrupowanie razem poleceń.
+</p>
+<h5 id="Przyk.C5.82adowe_menu_z_zaznaczonymi_pozycjami" name="Przyk.C5.82adowe_menu_z_zaznaczonymi_pozycjami"> Przykładowe menu z zaznaczonymi pozycjami </h5>
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul">Podgląd</a>
+</p>
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="options-menubar"&gt;
+    &lt;menu id="options_menu" label="Opcje"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="backups" label="Zrób kopię zapasową" type="checkbox"/&gt;
+        &lt;menuitem id="backups" label="E-mail administratora" type="checkbox" checked="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p><br>
+</p>
+<div class="float-right"><img alt="grafika:menubar-ex00.png"></div>
+<p>Dzięki dodaniu atrybutu <code><a href="pl/XUL/Atrybut/button.type">type</a></code> z wartością ustawioną na <code>checkbox</code> element menu może zostać zaznaczony lub odznaczony, po kliknięciu pozycji w menu przez użytkownika. </p><p>Oprócz zwyczajnego zaznaczenia możemy również ustawić wartość atrybutu <code><a href="pl/XUL/Atrybut/button.type">type</a></code> na <code>radio</code>. Stosuje się go po to, aby spośród kilku elementów była możliwość wybrania tylko jednej pozycji na raz. Przykładem może być menu z różnymi czcionkami, gdzie może być zastosowany tylko jeden krój czcionki. Jeśli zostanie wybrana inna czcionka, to poprzednia stanie się automatycznie nieaktywna.
+</p><p>W celu pogrupowania elementów menu należy do każdej z pozycji menu dodać atrybut <code><a href="pl/XUL/Atrybut/menuitem.name">name</a></code>, o takiej samej wartości string. Poniżej przykład nam to zademonstruje:
+</p>
+<h5 id="Przyk.C5.82adowe_menu_z_opcjami" name="Przyk.C5.82adowe_menu_z_opcjami"> Przykładowe menu z opcjami </h5>
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:menubar-ex000.png"></div>
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="planets-menubar"&gt;
+    &lt;menu id="planet-menu" label="Planety"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="jupiter" label="Jowisz" type="radio" name="ringed"/&gt;
+        &lt;menuitem id="saturn" label="Saturn" type="radio" name="ringed" checked="true"/&gt;
+        &lt;menuitem id="uranus" label="Uran" type="radio" name="ringed"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem id="earth" label="Ziemia" type="radio" name="inhabited" checked="true"/&gt;
+        &lt;menuitem id="moon" label="Księżyc" type="radio" name="inhabited"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>W powyższym przykładzie znajdują się trzy pierwsze pozycje menu, z których tylko jedna może być zaznaczona. Są one zgrupowane wszystkie razem, ponieważ mają tę samą nazwę. Ostatni element &lt;tt&gt;Ziemia&lt;/tt&gt;, podobnie jak przycisk opcji, nie jest częścią tej grupy, ponieważ posiada inną nazwę niż elementy z wcześniejszej grupy.
+</p><p>Oczywiście wszystkie elementy są zgrupowane w tym samym menu. Nie muszą one być umieszczone obok siebie, lecz, jeśli tak nie jest, to nie ma to większego sensu. </p><p>W następnym artykule zostanie pokazane, jak <a href="pl/Kurs_XUL/Wyskakuj%c4%85ce_menu">utworzyć menu wyskakujące</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Proste_paski_menu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Wyskakuj%C4%85ce_menu">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

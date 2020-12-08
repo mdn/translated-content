@@ -1,0 +1,39 @@
+---
+title: E4X
+slug: E4X
+tags:
+  - E4X
+  - JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/E4X
+---
+<p>
+<b>ECMAScript dla XML-a</b> (<b>E4X</b>) jest rozszerzeniem języka programowania, które dodaje natywną obsługę <a href="pl/XML">XML</a>-a do <a href="pl/JavaScript">JavaScript</a>-u poprzez dodanie dostępu do dokumentu XML w formie wygodnej dla programistów ECMAScript. Celem jest dostarczenie alternatywnej składni, prostszej do operowania na dokumentach XML niż przez interfejsy <a href="pl/DOM">DOM</a>.
+</p><p>E4X jest standaryzowane przez Ecma International w <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">standardzie ECMA-357</a> (aktualnie jego drugiej edycji z grudnia 2005).
+</p><p>E4X jest zaimplementowane (przynajmniej częściowo) w <a href="pl/SpiderMonkey">SpiderMonkey</a> (silnik JavaScriptu w <a href="pl/Gecko">Gecko</a>) oraz w <a href="pl/Rhino">Rhino</a> (silnik JavaScriptu napisany w Javie).
+</p>
+<div class="note"><b>Uwaga:</b> W przeglądarkach opartych o Gecko 1.8, jak np. Firefoksie 1.5, E4X jest częściowo włączony dla autorów stron internetowych. Aby w pełni korzystać z E4X, element <code>&lt;script&gt;</code> musi posiadać typ MIME "text/javascript;e4x=1" (tzn. posiadać atrybut <code>type="text/javascript;e4x=1"</code>). Różnicą pomiędzy tymi dwoma trybami jest to, że bez typu MIME "e4x=1" dowolny, będący na poziomie instrukcji literał komentarza XML/HTML (<code><span class="nowiki">&lt;!--...--&gt;</span></code>) jest ignorowany dla kompatybilności wstecznej za pomocą sztuczki z ukrywaniem komentarza, a sekcje (<code>&lt;![CDATA{{ mediawiki.external('...') }}]&gt;</code>) nie są parsowane jako literały CDATA (co prowadziło do błędu składni JS w kodzie HTML, ponieważ element <code>&lt;script&gt;</code> tworzy ukrytą sekcję CDATA i w związku z tym nie może w sposób bezpośredni zawierać sekcji CDATA).
+<p><span class="comment">someone verify the above</span>
+</p>
+</div>
+<h3 id="Znane_b.C5.82.C4.99dy_i_ograniczenia" name="Znane_b.C5.82.C4.99dy_i_ograniczenia"> Znane błędy i ograniczenia </h3>
+<ul><li> Nie jest obecnie możliwe uzyskanie dostępu do obiektu DOM przez E4X ({{ Bug(270553) }})
+</li><li> E4X nie obsługuje parsowania deklaracji XML (<code>&lt;?xml version=...?&gt;</code>) (zobacz {{ Bug(336551) }}). Możesz otrzymać błąd składni "xml is a reserved identifier" (mimo że XML jest wewnątrz łańcucha znaków).
+</li></ul>
+<p>Sposoby obejścia:
+</p>
+<pre class="eval">var response = xmlhttprequest.responseText; // błąd 270553
+response = response.replace('&lt;?xml version="1.0"?&gt;', ""); // błąd 336551
+var e4x = new XML(response);
+</pre>
+<h3 id="Zasoby" name="Zasoby"> Zasoby </h3>
+<ul><li> <a href="pl/Przewodnik_po_E4X">Przewodnik po E4X</a>
+</li><li> Zobacz listę stron związanych z <a>E4X</a> na MDC.
+</li><li> <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">Standard ECMA-357</a>
+</li><li> <a class="external" href="http://developer.mozilla.org/presentations/xtech2005/e4x/">Prezentacja Brendana</a>
+</li><li> <a class="external" href="http://www.faqts.com/knowledge_base/index.phtml/fid/1762">E4X na faqts.com</a>
+</li><li> <a class="external" href="http://rephrase.net/days/07/06/e4x">krótka dokumentacja E4X na rephrase.net</a>
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/E4X", "es": "es/E4X", "fr": "fr/E4X", "it": "it/E4X", "ja": "ja/E4X", "ko": "ko/E4X" } ) }}

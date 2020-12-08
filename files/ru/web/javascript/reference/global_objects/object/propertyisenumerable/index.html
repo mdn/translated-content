@@ -1,0 +1,173 @@
+---
+title: Object.prototype.propertyIsEnumerable()
+slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+tags:
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+  - Reference
+translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+---
+<div>{{JSRef("Global_Objects", "Object")}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Метод <code><strong>propertyIsEnumerable()</strong></code> возвращает логическое значение, указывающее, является ли указанное свойство перечисляемым.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+<dl>
+ <dt><code>prop</code></dt>
+ <dd>Имя проверяемого свойства.</dd>
+</dl>
+
+<h2 id="Description" name="Description">Описание</h2>
+<p>Каждый объект имеет метод <code>propertyIsEnumerable</code>. Этот метод может определять, является ли указанное свойство в объекте перечисляемым в цикле {{jsxref("Statements/for...in", "for...in")}}, за исключением свойств, унаследованных из цепочки прототипов. Если объект не имеет указанного свойства, метод вернёт <code>false</code>.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example:_A_basic_use_of_propertyIsEnumerable" name="Example:_A_basic_use_of_propertyIsEnumerable">Пример: базовое использование <code>propertyIsEnumerable</code></h3>
+<p>Следующий пример показывает использование метода <code>propertyIsEnumerable</code> на объектах и массивах:</p>
+<pre class="brush: js">var o = {};
+var a = [];
+o.prop = 'перечисляемое';
+a[0] = 'перечисляемое';
+
+o.propertyIsEnumerable('prop');   // вернёт true
+a.propertyIsEnumerable(0);        // вернёт true
+</pre>
+
+<h3 id="Example:_User-defined_versus_built-in_objects" name="Example:_User-defined_versus_built-in_objects">Пример: определённые пользователем и встроенные объекты</h3>
+<p>Следующий пример демонстрирует перечисляемость свойств, определённых пользователем и встроенных свойств:</p>
+<pre class="brush: js">var a = ['перечисляемое'];
+
+a.propertyIsEnumerable(0);          // вернёт true
+a.propertyIsEnumerable('length');   // вернёт false
+
+Math.propertyIsEnumerable('random');   // вернёт false
+this.propertyIsEnumerable('Math');     // вернёт false
+</pre>
+
+<h3 id="Example:_Direct_versus_inherited_properties" name="Example:_Direct_versus_inherited_properties">Пример: собственные и унаследованные свойства</h3>
+<pre class="brush: js">var a = [];
+a.propertyIsEnumerable('constructor');         // вернёт false
+
+function firstConstructor() {
+  this.property = 'не перечисляемое';
+}
+
+firstConstructor.prototype.firstMethod = function() {};
+
+function secondConstructor() {
+  this.method = function method() { return 'перечисляемый'; };
+}
+
+secondConstructor.prototype = new firstConstructor;
+secondConstructor.prototype.constructor = secondConstructor;
+
+var o = new secondConstructor();
+o.arbitraryProperty = 'перечисляемое';
+
+o.propertyIsEnumerable('arbitraryProperty');   // вернёт true
+o.propertyIsEnumerable('method');              // вернёт true
+o.propertyIsEnumerable('property');            // вернёт false
+
+o.property = 'перечисляемое';
+
+o.propertyIsEnumerable('property');            // вернёт true
+
+// Эти вызовы вернут false, поскольку все свойства находятся в прототипе,
+// который метод propertyIsEnumerable не просматривает (даже несмотря на то,
+// что последние два свойства перечисляются через цикл for...in)
+o.propertyIsEnumerable('prototype');   // вернёт false (в JS 1.8.1/FF3.6)
+o.propertyIsEnumerable('constructor'); // вернёт false
+o.propertyIsEnumerable('firstMethod'); // вернёт false
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 3-е издание.</td>
+   <td>Стандарт</td>
+   <td>Изначальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<div>{{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+
+<h3 id="Gecko-specific_notes" name="Gecko-specific_notes">Особый случай с Gecko</h3>
+<p>Начиная с JavaScript 1.8.1 (в Firefox 3.6), метод <code>propertyIsEnumerable('prototype')</code> возвращает <code>false</code> вместо <code>true</code>; это делает результат совместимым с ECMAScript 5.</p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+<ul>
+ <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>
+ <li>{{jsxref("Statements/for...in", "for...in")}}</li>
+ <li>{{jsxref("Object.keys()")}}</li>
+ <li>{{jsxref("Object.defineProperty()")}}</li>
+</ul>

@@ -1,0 +1,129 @@
+---
+title: nsIDeviceMotion
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotion
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotion
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/system/nsIDeviceMotion.idl" rel="custom">xpcom/system/nsIDeviceMotion.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+Essa interface é usada para implementar o suporte acelerômetro.
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 10.476190285714287%;"></div>
+
+<div style="height: 8px; top: 16px; left: 10.476190285714287%; background: #00dd00; position: absolute; width: 89.52380971428572%;" title="Introduced in Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 10.476190285714287%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 10.476190285714287%;">Gecko 1.9.2</div>
+
+    <div style="height: 8px; top: 16px; left: 13.785714285714285%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)</span></div>
+</div><p></p>
+
+<div class="note"><strong>Note:</strong> This interface was named <code>nsIDeviceMotion</code> prior to Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3).</div>
+
+<h2 id="Method_overview" name="Method_overview">Visão Geral</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addListener()">addListener</a>(in nsIDeviceMotionListener aListener);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addWindowListener()">addWindowListener</a>(in nsIDOMWindow aWindow);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeListener()">removeListener</a>(in nsIDeviceMotionListener aListener);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeWindowListener()">removeWindowListener</a>(in nsIDOMWindow aWindow);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Métodos</h2>
+
+<h3 id="addListener()" name="addListener()">addListener()</h3>
+
+<p>Quando chamado, a implementação do suporte acelerômetro deve começar a notificar o que foi especificado <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotionListener" title="">nsIDeviceMotionListener</a></code> chamando seu <code><a href="https://developer.mozilla.org/pt-BR/docs/XPCOM_Interface_Reference/nsIDeviceMotionListener#onAccelerationChange()">nsIDeviceMotionListener.onAccelerationChange()</a></code> método apropriado para compartilhar dados de aceleração atualizados.</p>
+
+<pre class="eval">void addListener(
+  in nsIDeviceMotionListener aListener
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parâmetro</h6>
+
+<dl>
+ <dt><code>aListener</code></dt>
+ <dd>O <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotionListener" title="">nsIDeviceMotionListener</a></code> objeto cujo <code><a href="https://developer.mozilla.org/pt-BR/docs/XPCOM_Interface_Reference/nsIDeviceMotionListener#onAccelerationChange()">nsIDeviceMotionListener.onAccelerationChange()</a></code> método deve ser chamado com dados de aceleração atualizados.</dd>
+</dl>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="addWindowListener">addWindowListener</h3></div><p></p>
+
+<p>Definir o <code>nsIAccelerometer</code> da raiz para <code>MozOrientation</code> eventos sobre um específico DOM <a href="/pt-BR/docs/Web/API/Window" title="O objeto window representa uma janela que contém um elemento DOM; a propriedade document aponta para o documento DOM document carregado naquela janela."><code>window</code></a>.</p>
+
+<pre class="eval">void addWindowListener(
+  in nsIDOMWindow aWindow
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parâmetro</h6>
+
+<dl>
+ <dt><code>aWindow</code></dt>
+ <dd><span id="result_box" lang="pt"><span>A janela de</span> <span>DOM</span> <span>que o</span> <span>acelerômetro</span> <span>deverá</span> <span>começar a enviar</span></span> para o evento <code>MozOrientation</code>.</dd>
+</dl>
+
+<h3 id="removeListener()" name="removeListener()">removeListener()</h3>
+
+<p><span id="result_box" lang="pt"><span>Diz</span> a<span>o acelerômetro para</span> <span>parar de enviar</span> <span>atualizações para o</span> quem foi <span>especificado</span></span> <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotionListener" title="">nsIDeviceMotionListener</a></code>.</p>
+
+<pre class="eval">void removeListener(
+  in nsIDeviceMotionListener aListener
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parâmetro</h6>
+
+<dl>
+ <dt><code>aListener</code></dt>
+ <dd>O <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotionListener" title="">nsIDeviceMotionListener</a></code> <span id="result_box" lang="pt"><span>objeto para o qual</span> <span>não há</span> <span>mais atualizações</span> para <span>serem enviadas.</span></span></dd>
+</dl>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="removeWindowListener">removeWindowListener</h3></div><p></p>
+
+<p>Remover o <code>nsIAccelerometer</code> como fonte para o evento <code>MozOrientation</code> de um DOM especificado <a href="/pt-BR/docs/Web/API/Window" title="O objeto window representa uma janela que contém um elemento DOM; a propriedade document aponta para o documento DOM document carregado naquela janela."><code>window</code></a>.</p>
+
+<pre class="eval">void removeWindowListener(
+  in nsIDOMWindow aWindow
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parâmetro</h6>
+
+<dl>
+ <dt><code>aWindow</code></dt>
+ <dd><span id="result_box" lang="pt"><span>A janela de</span> <span>DOM</span> <span>que o</span> <span>acelerômetro</span> <span>deve</span> <span>parar de enviar</span></span> <code>para o evento MozOrientation</code>.</dd>
+</dl>
+
+<h2 id="See_also" name="See_also">Veja também</h2>
+
+<ul>
+ <li><a href="/en/DOM/MozOrientation" title="en/DOM/MozOrientation"><code>MozOrientation</code></a></li>
+ <li><code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMOrientationEvent" title="">nsIDOMOrientationEvent</a></code></li>
+ <li><code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotionData" title="">nsIDeviceMotionData</a></code></li>
+ <li><code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceMotionListener" title="">nsIDeviceMotionListener</a></code></li>
+</ul>

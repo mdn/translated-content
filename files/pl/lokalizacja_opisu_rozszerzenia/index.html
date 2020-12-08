@@ -1,0 +1,91 @@
+---
+title: Lokalizacja opisu rozszerzenia
+slug: Lokalizacja_opisu_rozszerzenia
+tags:
+  - Dodatki
+  - Lokalizacja
+  - Rozszerzenia
+  - Wszystkie_kategorie
+translation_of: Mozilla/Localization/Localizing_extension_descriptions
+---
+<p>{{ Gecko_minversion_header(1.9) }} {{ Fx_minversion_header(3) }}</p>
+<h3 id="Lokalizowanie_w_Gecko_1.9" name="Lokalizowanie_w_Gecko_1.9">Lokalizowanie w Gecko 1.9</h3>
+<p>Gecko 1.9 wprowadza nowe, bardziej rozbudowane metody lokalizacji opisów dodatków oraz innych meta danych. Teraz wszystkie opisy występują w pliku <a href="pl/Manifesty_Instalacji">install.rdf</a> we własności <code>em:localized</code>. Każdy z nich ma co najmniej jedną własność <code>em:locale</code> określającą lokalizację, dla której należy ją użyć oraz strumienie dla danej lokalizacji. Poniższy przykład demonstruje opisaną budowę (dla większej przejrzystości większość własności manifestu zostało usuniętych):</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;TabSidebar@blueprintit.co.uk&lt;/em:id&gt;
+    &lt;em:localized&gt;
+      &lt;Description&gt;
+        &lt;em:locale&gt;de&lt;/em:locale&gt;
+        &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+        &lt;em:description&gt;Zeigt in einer Sidebar Vorschaubilder der Inhalte aller offenen Tabs an.&lt;/em:description&gt;
+      &lt;/Description&gt;
+    &lt;/em:localized&gt;
+    &lt;em:localized&gt;
+      &lt;Description&gt;
+        &lt;em:locale&gt;es&lt;/em:locale&gt;
+        &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+        &lt;em:description&gt;Muestra una vista previa de sus pestañas en su panel lateral.&lt;/em:description&gt;
+      &lt;/Description&gt;
+    &lt;/em:localized&gt;
+    &lt;em:localized&gt;
+      &lt;Description&gt;
+        &lt;em:locale&gt;nl&lt;/em:locale&gt;
+        &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+        &lt;em:description&gt;Laat voorbeeldweergaven van uw tabbladen in de zijbalk zien.&lt;/em:description&gt;
+      &lt;/Description&gt;
+    &lt;/em:localized&gt;
+    &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+    &lt;em:description&gt;Displays previews of your tabs in your sidebar.&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>W ten sposób można lokalizować wszystkie meta dane wymienione w dalszej części artykułu w sekcji <b>Lokalizowane łańcuchy znaków</b>. Informacje lokalizacyjne, dostarczane przez własność <code>em:localized</code>, można zastąpić zestawem własności lokalizacyjnych omówionych w sekcji <b>Lokalizowanie opisu przed Gecko 1.9</b>.</p>
+<p>Proces doboru kodu lokalizacji dla własności <code>em:localized</code> przebiega następująco:</p>
+<ol>
+ <li>Jeśli we własności <code>em:locale</code> istnieje kod odpowiadający żądanej lokalizacji, należy go użyć.</li>
+ <li>Jeśli występuje kod nie w pełni odpowiadający lokalizacji, należy użyć część najbardziej odpowiadającą. Części powinny być oddzielone myślnikiem (np. kod <b>pl</b> będzie pasował do <b>pl-PL</b> i odwrotnie).</li>
+ <li>Jeśli występuje więcej niż jedna lokalizacja z tą samą ilością pasujących części, należy użyć najbardziej ogólną (np. <b>en</b> dla kodu <b>en-GB</b> i <b>en-US</b>).</li>
+</ol>
+<p>W trakcie instalacji będzie wyszukiwana lokalizacja właściwa dla obecnie używanych ustawień językowych aplikacji. Jeśli nie zostanie znaleziona, będzie użyta lokalizacja domyślna - en-US.</p>
+<p>Jeśli kod jest określony i nie ma pasującej własności <code>em:localized </code> dla obecnie używanych ustawień językowych lub lokalizacji en-US, zostanie użyta, tak jak to było przed wprowadzeniem Gecko 1.9, lokalizacja określona w manifeście instalacyjnym.</p>
+<h3 id="Lokalizowanie_opisu_przed_Gecko_1.9" name="Lokalizowanie_opisu_przed_Gecko_1.9">Lokalizowanie opisu przed Gecko 1.9</h3>
+<p>W starszych wersjach Gecko, aby zlokalizować opis dodatku przeznaczonego dla aplikacji opartych na toolkicie (Firefox, Thunderbird, Sunbird), twórcy dodatków muszą zrobić to, stosując specjalną metodę definiowania tego opisu.</p>
+<p> </p>
+<ul>
+ <li>Jeśli w rozszerzeniu nie występuje, należy stworzyć <a href="pl/Lokalizacja_rozszerzenia#Lokalizacja_string.C3.B3w_w_kodzie_JavaScript">lokalizacyjny plik własności</a> dla każdej lokalizacji. Aby zapewnić prawidłowe wyświetlanie znaków w różnych językach, plik ten musi mieć kodowanie UTF-8 i być zapisany bez BOM (ang. Byte Order Mark - znacznik kolejności bajtów).</li>
+ <li>Do każdego lokalizacyjnego pliku własności dodać poniższy wiersz, gdzie <var>ID_ROZSZERZENIA</var>, to identyfikator rozszerzenia <code>&lt;em:id&gt;</code> określony w pliku <a href="pl/Install.rdf">install.rdf</a>, a <var>ZLOKALIZOWANY_OPIS</var>, to opis rozszerzenia, jaki chce mu się nadać w danym języku.
+  <pre>extensions.ID_ROZSZERZENIA.description=ZLOKALIZOWANY_OPIS</pre>
+ </li>
+ <li>Jeśli w rozszerzeniu nie występuje, należy stworzyć <a href="pl/Tworzymy_rozszerzenie#Pliki_domy.C5.9Blne">domyślny plik własności</a>.</li>
+ <li>Dodać do niego poniższy wiersz (gdzie <var>ID_ROZSZERZENIA</var> to identyfikator rozszerzenia <code>&lt;em:id&gt;</code> pochodzący z pliku <a href="pl/Manifesty_Instalacji">install.rdf</a>, a <var>ŚCIEŻKA_DO_PLIKU_LOKALIZACYJNEGO</var> jest ścieżką dostępu do pliku lokalizacyjnego utworzonego w pierwszym kroku):
+  <pre>pref("extensions.ID_ROZSZERZENIA.description", "ŚCIEŻKA_DO_PLIKU_LOKALIZACYJNEGO");</pre>
+ </li>
+</ul>
+<h4 id="Lokalizowane_.C5.82a.C5.84cuchy_znak.C3.B3w" name="Lokalizowane_.C5.82a.C5.84cuchy_znak.C3.B3w">Lokalizowane łańcuchy znaków</h4>
+<p>Stosując powyższą metodę można lokalizować następujące meta dane dodatku:</p>
+<ul>
+ <li>name (nazwa)</li>
+ <li>description (opis)</li>
+ <li>creator (autor)</li>
+ <li>homepageURL (nazwa - adres URL strony domowej)</li>
+</ul>
+<h4 id="Lokalizowane_listy" name="Lokalizowane_listy">Lokalizowane listy</h4>
+<p>W przypadku, gdy istnieje kilka takich samych wartości, indeks numeryczny przypisany do końcowej nazwy preferencji stanowi o kolejności ich wyświetlania:</p>
+<pre>extensions.ID_ROZSZERZENIA.contributor.1=PIERWSZA_ZLOKALIZOWANA_NAZWA
+extensions.ID_ROZSZERZENIA.contributor.2=DRUGA_ZLOKALIZOWANA_NAZWA
+extensions.ID_ROZSZERZENIA.contributor.3=TRZECIA_ZLOKALIZOWANA_NAZWA
+
+pref("extensions.ID_ROZSZERZENIA.contributor.1", "ŚCIEŻKA_DO_PLIKU_LOKALIZACYJNEGO");
+pref("extensions.ID_ROZSZERZENIA.contributor.2", "ŚCIEŻKA_DO_PLIKU_LOKALIZACYJNEGO");
+pref("extensions.ID_ROZSZERZENIA.contributor.3", "ŚCIEŻKA_DO_PLIKU_LOKALIZACYJNEGO");
+</pre>
+<p>Tym sposobem można zlokalizować następujące elementy:</p>
+<ul>
+ <li>developer (nazwisko programisty)</li>
+ <li>translator (nazwisko tłumacza)</li>
+ <li>contributor (nazwisko współtwórcy)</li>
+</ul>

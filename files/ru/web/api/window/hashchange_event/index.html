@@ -1,0 +1,159 @@
+---
+title: hashchange
+slug: Web/API/Window/hashchange_event
+translation_of: Web/API/Window/hashchange_event
+---
+<p>Событие <code>hashchange</code> генерируется когда изменяется идентификатор фрагмента URL (т.е. часть URL следующая за символом #, включая сам символ #).</p>
+
+<h2 id="Общая_информация">Общая информация</h2>
+
+<dl>
+ <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
+ <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-hashchange">HTML5</a></dd>
+ <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
+ <dd style="margin: 0 0 0 120px;">HashChangeEvent</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
+ <dd style="margin: 0 0 0 120px;">Yes</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
+ <dd style="margin: 0 0 0 120px;">No</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Target</dt>
+ <dd style="margin: 0 0 0 120px;">defaultView</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
+ <dd style="margin: 0 0 0 120px;">None</dd>
+</dl>
+
+<h2 id="Свойства">Свойства</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Property</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>target</code> {{readonlyInline}}</td>
+   <td>{{domxref("EventTarget")}}</td>
+   <td>The browsing context (<code>window</code>).</td>
+  </tr>
+  <tr>
+   <td><code>type</code> {{readonlyInline}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>The type of event.</td>
+  </tr>
+  <tr>
+   <td><code>bubbles</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event normally bubbles or not.</td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event is cancellable or not.</td>
+  </tr>
+  <tr>
+   <td><code>oldURL</code> {{readonlyInline}}</td>
+   <td>{{jsxref("String")}}</td>
+   <td>The previous URL from which the window was navigated.</td>
+  </tr>
+  <tr>
+   <td>newURL {{readonlyInline}}</td>
+   <td>{{jsxref("String")}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>5.0</td>
+   <td>{{ CompatGeckoDesktop("1.9.2") }}<br>
+    <small>Support for the <code>oldURL</code>/<code>newURL</code> attributes added in Firefox 6.</small></td>
+   <td>8.0<br>
+    <code>oldURL</code>/<code>newURL</code> attributes are not supported.</td>
+   <td>10.6</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.2</td>
+   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
+   <td>9.0</td>
+   <td>11.0</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p><br>
+ There are several fallback scripts listed on <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" title="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">this page</a>. Basically those scripts check the location.hash at a regular interval. Here is a version that allows only one handler to be bound to the <code>window.onhashchange</code> property:</p>
+
+<pre class="brush:js;">(function(window) {
+
+  // exit if the browser implements that event
+  if ( "onhashchange" in window.document.body ) { return; }
+
+  var location = window.location,
+    oldURL = location.href,
+    oldHash = location.hash;
+
+  // check the location hash on a 100ms interval
+  setInterval(function() {
+    var newURL = location.href,
+      newHash = location.hash;
+
+    // if the hash has changed and a handler has been bound...
+    if ( newHash != oldHash &amp;&amp; typeof window.onhashchange === "function" ) {
+      // execute the handler
+      window.onhashchange({
+        type: "hashchange",
+        oldURL: oldURL,
+        newURL: newURL
+      });
+
+      oldURL = newURL;
+      oldHash = newHash;
+    }
+  }, 100);
+
+})(window);
+</pre>
+
+<h2 id="Похожие_события">Похожие события</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla_event_reference/popstate"><code>popstate</code></a></li>
+</ul>

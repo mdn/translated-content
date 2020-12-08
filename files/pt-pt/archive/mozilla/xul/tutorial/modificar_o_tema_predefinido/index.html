@@ -1,0 +1,70 @@
+---
+title: Modificar o Tema Predefinido
+slug: Archive/Mozilla/XUL/Tutorial/Modificar_o_tema_predefinido
+tags:
+  - Firefox
+  - Intermediário
+  - Personalização
+  - Tutoriais
+  - Tutorial XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_the_Default_Skin
+---
+<p>{{ PreviousNext("XUL Tutorial:Styling a Tree", "XUL Tutorial:Creating a Skin") }}</p>
+
+<div class="warning">
+<p>Esta documentação não foi atualizada para o Firefox Quantum. Support for the <code>userChrome.css</code> file and any of its elements described below are not guaranteed in future versions of Firefox. Using it may lead to hard-to-diagnose bugs or crashes. Use at your own risk!</p>
+</div>
+
+<p>Esta secção descreve como modificar o tema de uma janela.</p>
+
+<h3 id="Skin_Basics" name="Skin_Basics">O Essencial do Tema</h3>
+
+<p>A <a href="/en-US/docs/XUL/Tutorial/Creating_a_Skin">skin</a> is a set of style sheets, images and behaviors that are applied to a XUL file. By applying a different skin, you can change the look of a window without changing its functionality. Firefox provides a skin by default, and you may download others. The XUL for any skins is the same, however the style sheets and images used are different.</p>
+
+<p>For a simple personalized look to a Firefox window, you can easily change the style sheets associated with it. Larger changes can be done by creating an entirely new skin. Firefox has a Theme Manager for changing the default skin. (Although the underlying code for Mozilla calls them skins and the user interface calls them themes, they're both referring to the same thing).</p>
+
+<p>A skin is described using <a href="en/CSS">CSS</a>, allowing you to define the <a href="en/CSS/Getting_Started/Color">colors</a>, <a href="en/CSS/Getting_Started/Boxes">borders</a> and images used to draw elements. The file classic.jar contains the skin definitions. The global directory within this archive contains the main style definitions for how to display the various XUL elements. By changing these files, you can change the look of the XUL applications.</p>
+
+<h3 id="Customize_with_userChrome.css" name="Customize_with_userChrome.css">Personalizar com userChrome.css</h3>
+
+<p>If you place a file called 'userChrome.css' in a directory called 'chrome' inside your user profile directory, you can override settings without changing the archives themselves. This directory should be created when you create a profile and some examples placed there. The file 'userContent.css' customizes Web pages, whereas 'userChrome.css' customizes chrome files.</p>
+
+<p>For example, by adding the following to the end of the file, you can change all <code>{{ XULElem("menubar") }}</code> elements to have a red background.</p>
+
+<pre class="brush: css">menubar {
+  background-color: red;
+}
+</pre>
+
+<p>If you open any Firefox window after making this change, the menu bars will be red. Because this change was made to the user style sheet, it affects all windows. This means that the browser menu bar, the bookmarks menu bar and even the find files menu bar will be red.</p>
+
+<h3 id="Skin_Packages" name="Skin_Packages">Pacotes de Temas</h3>
+
+<p>To have the change affect only one window, change the style sheet associated with that XUL file. For example, to add a red border around the menu commands in the bookmarks manager window, add the following to bookmarksManager.css in the classic.jar or your favorite skin archive.</p>
+
+<pre class="brush: css">menuitem {
+  border: 1px solid red;
+}
+</pre>
+
+<p>If you look in one of the skin archives, you will notice that each contain a number of style sheets and a number of images. The style sheets refer to the images. You should avoid putting references to images directly in XUL files if you want your content to be skinnable. This is because a particular skin's design might not use images and it may need some more complex design. By referring to the images with CSS, they are easy to remove. It also removes the reliance on specific image filenames.</p>
+
+<p>You can assign images to a button, checkbox and other elements by using the <code>list-style-image</code> property as in the following:</p>
+
+<pre class="brush: css">checkbox {
+  list-style-image: url("chrome://findfile/skin/images/check-off.jpg");
+}
+
+checkbox[checked="true"] {
+  list-style-image: url("chrome://findfile/skin/images/check-on.jpg");
+}
+</pre>
+
+<p>This code changes the image associated with a checkbox. The first style sets the image for a normal checkbox and the second style sets the image for a checked checkbox. The modifier 'checked=true' makes the style only apply to elements which have their checked attributes set to true.</p>
+
+<p><small>See also : <a href="/en-US/Add-ons/Themes/Obsolete/Creating_a_Skin_for_Firefox">creating a skin for Firefox</a> and <a href="en/CSS/Getting_Started">CSS getting started</a> </small></p>
+
+<p>Na secção seguinte, nós iremos abordar a <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Creating_a_Skin">criação de um novo tema</a></p>
+
+<p>{{ PreviousNext("XUL Tutorial:Styling a Tree", "XUL Tutorial:Creating a Skin") }}</p>

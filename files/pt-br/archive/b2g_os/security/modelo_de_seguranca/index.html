@@ -1,0 +1,275 @@
+---
+title: Visão geral sobre segurança
+slug: Archive/B2G_OS/Security/modelo_de_seguranca
+translation_of: Archive/B2G_OS/Security/Security_model
+---
+<h1 id="Introdução">Introdução</h1>
+<p><span class="seoSummary">Este documento apresenta uma visão geral sobre o framework de segurança do Mozilla Firefox OS, desenhado para proteger dispositivos móveis das ameaças para a plataforma, aplicativos e dados pessoais. No Firefox OS a fundação Mozilla implementou uma arquitetura de segurança abrangente, integrada, de várias camadas que traz maior segurança aos usuários dos dispositivos móveis.</span></p>
+<h1 id="Segurança_da_plataforma">Segurança da plataforma</h1>
+<p>A plataforma de segurança do Firefox OS é baseada num modelo multi-camada, desenhada para mitigar os riscos de exploração de falhas em todos os níveis. As medidas de combate da linha de frente é combinada com uma forte estratégia que provê uma proteção abrangente para qualquer ameaça.</p>
+<h2 id="Arquitetura_segura">Arquitetura segura</h2>
+<p>O Firefox OS conecta as aplicações web através ao hardware subjacente. É um conjunto de tecnologias integradas que consiste nos seguintes níveis:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5023/platform.png" style="width: 678px; height: 478px;"></p>
+<ul>
+ <li>Gaia: A suite de aplicações web que melhora a Experiência do Usuário (aplicações consiste-se de HTML5, CSS, JavaScript, imagens, mídias e etc.).</li>
+ <li>Gecko: A camada de aplicação que fornece o framework para a execução dos aplicativos e implementa as Web APIs utilizadas para acessar os recursos do dispositivo móvel.</li>
+ <li>Gonk: O camada do kernel do Linux, bibliotecas do sistema, firmware e drivers do dispositivo sobre o qual todo o resto é executado.</li>
+ <li>O dispositivo móvel: O celular executando o Firefox OS.</li>
+</ul>
+<p>Gecko é o guardião da plataforma que aplica políticas de segurança destinadas a proteger o dispositivo móvel do uso indevido. A camada do Gecko atua como um intermediário entre os aplicativos web (na camada Gaia) e o telefone.  Gonk oferece recursos de hardware do telefone celular diretamente para a camada Gecko. Os aplicativos Web acessam as funcionalidades do celular apenas através das Web APIs e somente se o Gecko permitir a requisição de acesso — não há acesso direto, nem “back door” no telefone. Gecko exige permissões e impede o acesso a solicitações não autorizadas.</p>
+<h3 id="Implantação_de_um_sistema_seguro">Implantação de um sistema seguro</h3>
+<p>Firefox OS vem instalado no smartphone. A imagem original do sistema é criada por uma fonte conhecida e confiável — normalmente um fabricante por OEM — que é responsável pela montagem, compilação, teste e assinar digitalmente o pacote de distribuição.</p>
+<p>As medidas de segurança são usadas através de um <em>stack</em> tecnológico. Privilégios de acesso ao sistema de arquivo são aplicadas por listas de controle de acesso do Linux (ACLs). Aplicativos do sistema são instalados em um volume com privilégio apenas de leitura (exceto durante as atualizações quando temporariamente é permitido a gravação), geralmente somente áreas com conteúdo do usuário podem ter privilégio de escrita. Vários componentes no hardware do dispositivo possui proteções internas que são implementadas com práticas padrão da indústria — fabricantes de chipset manufacturers, por exemplo, empregam técnicas de <em>hardening</em> para reduzir vulnerabilidades. e fortalecer a defesa contra ameaças potenciais na plataforma central (Gecko e Gonk) e recursos de hardening do compilador são usados quando aplicável. Para maiores detalhes veja <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Security/System_security" title="/en-US/docs/Mozilla/Firefox_OS/Security/Runtime_security">Segurança do sistema</a>.</p>
+<h3 id="Atualização_segura_do_sistema">Atualização segura do sistema</h3>
+<p>Atualizações e patches subsequentes da plataforma Firefox OS são instaladas usando um processo seguro da Mozilla que garante a integridade da imagem do sistema. A atualização é criada por uma fonte conhecida e confiável — normalmente o fabricante do dispositivo — que é responsável por montar, compilar, testar e assinar digitalmente o pacote de atualização.</p>
+<p>As atualizações do sistema envolve toda ou uma parte do <em>stack</em> do Firefox OS. Se alterações no Gonk são incluídas na atualização, é utilizado o processo de instalação FOTA (Firmware Over the Air). Atualizações FOTA também incluem qualquer outra parte do stack do Firefox OS, incluindo o gerenciamento do dispositivo (FOTA, firmware e drivers), gerencialmento das configurações (configuração Firefox OS), atualizações de segurança, Gaia, Gecko e outros <em>patches</em>.</p>
+<p>Atualizações que não envolvem o Gonk podem ser feitas utilizando o Utilitário de atualização do sistema da Mozilla. Firefox OS usa o mesmo framework de atualização, processos e o formato MAR (Mozilla ARchive) que o produto Firefox Desktop.</p>
+<p>Um serviço de atualização instalado no próprio dispositivo — que pode ser fornecido pelo OEM — verifica se há atualizações do sistema disponíveis. Uma vez disponível é solicitada uma confirmação do usuário para instalá-la. Antes, é verificado se há espaço suficiente além de alguns detalhes da distribuição:</p>
+<ul>
+ <li>Origem da atualização (verifica o protocolo de localização da origem:domínio:porta da atualização do sistema e manifesto)</li>
+ <li>Integridade do arquivo (SHA-256 hash check)</li>
+ <li>Assinatura do código (verificação do certificado contra uma raiz confiável)</li>
+</ul>
+<p>As seguintes medidas de segurança são usadas durante o processo de atualização:</p>
+<ul>
+ <li>A Mozilla recomenda e espera que as atualizações sejam baixadas através de uma conexão SSL.</li>
+ <li>Uma verificação criptográfica forte é necessária antes de instalar um pacote de firmware.</li>
+ <li>A atualização completa deve ser baixada de um site específico e seguro ante do processo ser iniciado.</li>
+ <li>O sistema deve estar em um estado seguro quando a atualização iniciar, sem nenum aplicativo sendo executado.</li>
+ <li>As chaves devem ser armazenadas em um local seguro do dispositivo.</li>
+</ul>
+<p>Controles rigorosos, estão presentes para garantir que a atualização seja aplicada corretamente no dispositivo.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Para maiores informações sobre como as atualizações funcionam e como criar e distribuir as atualizações, leia <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Construindo_e_instalando_o_Firefox_OS/Criando_e_aplicando_pacotes_de_atualizacao_Firefox_OS">Criando e aplicando pacotes de atualização do Firefox OS.</a></p>
+</div>
+<h2 id="Segurança_do_Aplicativo">Segurança do Aplicativo</h2>
+<p>Firefox OS usa uma estratégia de defesa chamada <em>defense-in-depth</em> para proteger o dispositivo de aplicações intrusivas ou maliciosas. Essa estratégia emprega uma variedade de mecanismos, incluindo níveis de permissionamento implícito baseado em modelo de aplicativo do confiança, execução em sandbox em tempo de execução, acesso ao hardware apenas através de APIs, modelo robusto de permissionamento e um processo seguro de instalação e atualização. Para detalhes técnicos veja <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Security/Application_security" title="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security">Segurança da aplicação.</a></p>
+<p>No Firefox OS, todos os aplicativos são aplicativos web — programas escritos usando HTML5, JavaScript, CSS, mídias e outras tecnologias abertas (páginas que funcionam dentro do navegador não são referidos como aplicativos web neste contexto). Devido ao fato de não haver arquivos binários (nativos) instalados pelo usuário, todo o acesso ao sistema é mediado estritamente através de Web APIs. Mesmo o acesso ao sistema de arquivos é feito através das Web APIs e um banco de dados SQLite no back-end — não há acesso direto dos aplicativos aos arquivos armazenados no cartão de memória externo.</p>
+<p>O Firefox OS limita e reforça o escopo dos recursos que podem ser acessados e utilizados por um aplicativo, enquanto também suporta um grande número de aplicativos com diferentes níveis de permissões. A Mozilla implementou um rígido controle sobre quais aplicativos podem acessar quais APIs. Por exemplo, somente aplicativos certificados (fornecidos com o telefone) pode acessar a API de telefonia. O aplicativo discador tem privilégios para poder acessar a API de telefonia, mas nem todos os outros aplicativos certificados podem acessar essa API.</p>
+<p>Isso evita uma situação, por exemplo, no qual um aplicativo de terceiros possa acessar o discador e chamar indiscriminadamente um telefone qualquer.</p>
+<p>Outro aplicativo OEM pode ser selecionado para ter acesso à API de telefoina. Por exemplo, um operador pode fornecer uma aplicação de gerenciamento que permite ao usuário verificar sua conta, incluindo a possibilidade de realizar uma chamada telefônica diretamente.</p>
+<h3 id="Aplicativos_confiáveis_e_não_confiáveis">Aplicativos confiáveis e não confiáveis</h3>
+<p>Firefox OS categoriza os aplicativos de acordo com os seguintes tipos:</p>
+<table>
+ <thead>
+  <tr>
+   <th style="width: 82px;">
+    <p>Tipo</p>
+   </th>
+   <th style="width: 102px;">
+    <p>Nível de confiança</p>
+   </th>
+   <th style="width: 447px;">
+    <p>Descrição</p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="width: 82px;">
+    <p>Certificado</p>
+   </td>
+   <td style="width: 102px;">
+    <p>Altamente confiável</p>
+   </td>
+   <td style="width: 447px;">
+    <p>Aplicativos do sistema que devem ser aprovados pela Operadora ou OEM (devido ao risco de corromper o dispositivo ou causar um dano crítico de alguma funcionalidade). Somente para aplicativos ou serviços do sistema, não destinado a aplicações de terceiros.<br>
+     Essa classificação é reservada apenas para um pequeno número de aplicações críticas. Por exemplo: SMS, Bluetooth, câmera, relógio do sistema, telefonia e o discador padrão (para garantir que os serviços de emergência estejam sempre acessíveis).</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 82px;">
+    <p>Privilegiado</p>
+   </td>
+   <td style="width: 102px;">
+    <p>Confiável</p>
+   </td>
+   <td style="width: 447px;">
+    <p>Aplicativos de terceiros devem ser revisados, aprovados e digitalmente assinados para serem autorizados dentro do Marketplace.</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 82px;">
+    <p>Web (todo o resto)</p>
+   </td>
+   <td style="width: 102px;">
+    <p>Não confiável</p>
+   </td>
+   <td style="width: 447px;">
+    <p>Conteúdo normal da web. Inclui os aplicativos instalados (armazenados no telefone) e aplicativos hospedados (armazendos remotamente, com somente um manifesto armazenado no telefone). O manifesto para aplicativos hospedados pode ser obtido no Marketplace.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>O nível de confiança de um aplicativo determina, em parte, a sua habilidade de acessar as funcionalidades do telefone.</p>
+<ul>
+ <li>Aplicativos certificados tem permissões para a maioria das operações das Web APIs.</li>
+ <li>Aplicativos privilegiados tem permissões para um subconjunto de Web APIs acessíveis pelos aplicativos Certificados.</li>
+ <li>Aplicativos não confiáveis tem permissão para um subconjunto de Web APIs acessíveis pelos aplicativos privilegiados — apenas as Web APIs que contem medidas de mitigação de segurança podem ser acessíveis por um aplicativo não confiável.</li>
+</ul>
+<p>Algumas operações, como acesso à rede, possuem permissões implícitas para todos os aplicativos. Em geral, quanto mais sensível a operação (por exemplo, chamar um número de telefone ou acessar a lsta de contaos),  maior o nível de confiança exigido para executá-lo.</p>
+<div class="note">
+ <p><strong>Nota</strong>: para maiores informações sobre as APIs disponíveis e seus níveis de permissão, consulte <a href="https://developer.mozilla.org/pt-BR/docs/Web/Apps/Developing/permisoes_app">Permissões de aplicativos</a>.</p>
+</div>
+<h4 id="Princípio_do_privilégio_mínimo">Princípio do privilégio mínimo</h4>
+<p>Para aplicações web, o framework de segurança do Fireofox OS segue o <em>princípio do privilégio mínimo</em>: começa com o mínimo absoluto de permissões e seletivamente concede privilégios adicionais somente quando for requisitado e for razoável. Por padrão um aplicativo começa com um nível de permissão muito baixo, que é comparável a um conteúdo web não confiável. Se o aplicativo faz uma chamada a uma Web API que requisita permissões adicionais, ele deve enumerar essas permissões adicionais no manifesto (a ser descrito mais tarde nesse documento). O Gecko vai considerar a concessão do acesso somente se estiverem explicitamente requisitados no seu manifesto e se o tipo do aplicativo (certificado, privilegiado ou web) é suficientemente qualificado para o acesso solicitado.</p>
+<h4 id="Processo_de_revisão_para_aplicativos_privilegiados_no_Marketplace">Processo de revisão para aplicativos privilegiados no Marketplace</h4>
+<p>Para que um aplicativo torne-se privilegiado, o desenvolvedor do aplicativo deve submetê-lo a aprovação no Marketplace que sumete o aplicativo a um rigoroso processo de revisão de código: verificando sua autenticidade e integridade, garantindo que as permissões requisitadas são usadas para os propósitos declarados (no racional da permissão), verificando que o uso implícito da permissão é apropriado e validando que qualquer interface entre o conteúdo privilegiado e não privilegiado do aplicativo possui as mitigações apropriadas contra possíveis ataques. O Marketplate tem a responsabilidade de garantir que o aplicativo não possui um comportamento malicioso com as permissões que lhe são concedidas.</p>
+<p>Depois que o aplicativo passa nessa revisão, é aprovado para uso, o manifesto é assinado digitalmente pelo Marketplace e é disponibilizado para download para os usuários. A assinatura garante que caso a web store for atacada por hackers não há a possibilidade de instalar códigos maliciosos nos telefones dos usuários. Devido a esse processo, o Firefox OS fornece um elevado grau de confiança aos aplicativos baixados do Maketplace.</p>
+<div class="note">
+ <p><strong>Nota</strong>: para saber mais sobre os Marketplaces incluindo o <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>, veja a <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Marketplace">seção do Marketplace</a>.</p>
+</div>
+<h3 id="Aplicativos_hospedados_e_empacotados">Aplicativos hospedados e empacotados</h3>
+<p>Os aplicativos no Firefox OS podem ser empacotados (armazenado no dispositivo) ou hospedado (armazenado em um servidor web remoto, apenas com o manifesto armazenado no dispositivo). Existem algumas diferenças na forma de lidar com a segurança em cada uma das formas. No entanto, os aplicativos empacotados e hospedados estão sujeitos a aplicação do sandboxing, que é descrita mais adiante neste documento.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Você pode saber mais sobre aplicativos hospedados e empacotados no artigo <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Marketplace/Publishing/Opcoes_de_publicacao">opções de publicação de aplicativos</a>.</p>
+</div>
+<h4 id="Aplicativos_empacotados">Aplicativos empacotados</h4>
+<p>Um aplicativo empcotado consiste-se de um arquivo ZIP com os recursos (HTML5, CSS, JavaScript, imagens, mídias), bem como um manifesto que fornece uma lista explícita de ativos e seus hashes correspondentes. Aplicativos certificados e privilegiados devem ser empacotados porque o manifesto deve ser digitalmente assinado. Quando um usuário obtem um aplicativo empacotado, o arquivo ZIP é baixado no dispositivo e o manifesto é lido de um local conhecido dentro do arquivo ZIP. Durante o processo de instalação, os ativos do aplicativo são verificados e permanecem armazenados dentro do pacote. Todas as permissões explícitas são requisitadas em tempo de execução, mostrando ao usuário as intenções do aplicativo e persistido por padrão.</p>
+<p>Ao referir-se aos recursos de um aplicativo empacotado, a URL deve começar por app: usando o seguinte formato:</p>
+<p><code>app://<em>identifier</em>/<em>path_within_zipfile</em>/file.html</code></p>
+<p>onde <code>app://</code> representa o ponto de montagem do arquivo ZIP e <code>identifier</code> é uma UUID gerada quando o aplicativo é instalado no dispositivo. Esse mecanismo garante que os recursos são referenciados como aplicativo: URL estão contidos no arquivo ZIP. O caminha dentro de um aplicativo: é relativo, então links relativos para os recursos dentro do arquivo ZIP são permitidos.</p>
+<p>Aplicativos empacotados destinam-se principalmente a serm utilzados por aplicativos certificados ou privilegiados, mas aplicativos comuns também podem ser empacotados. Porém, não há nehum ganho ou aumento na confiança ou permissões de acesso simplesmente devido ao fato de ser empacotado.</p>
+<h4 id="Aplicativos_hospedados">Aplicativos hospedados</h4>
+<p>São armazenados em um servidor web e carregados via HTTP. Apenas o manifesto do aplicativo fica armazenado no dispositivo. Todo o restante é armazenado remotamente. Algumas APIs estão disponíveis somente para aplicativos certificados, que exigem que sejam empacotados devido a requisitos de assinatura digital. Assim, um aplicativo hospedado não possuirá acesso a nenhuma operação de API que exige que o aplicativo seja certificado ou privilegiado.</p>
+<p>Pelo ponto de vista da segurança, aplicativos hospedados funciona de forma similar a websites. Um aplicativo hospedado é carregado invocando uma URL descrita diretamente no código que aponta para uma página de início no diretório raiz do aplicativo armazenado em um servidor web. Uma vez que um aplicativo hospedado é carregado, o dispositivo conecta às páginas usando as mesmas URLs que são usadas ao navegar o website.</p>
+<h3 id="Manifesto_do_aplicativo">Manifesto do aplicativo</h3>
+<p>Um manifeseto de um aplicativo Open Web contém informações que um navegador Web necessita para interagir com um aplicativo. É um arquivo JSON que deve possuir pelo menos o nome e a descrição do aplicativo. Para maiores detalhes consulte <a href="https://developer.mozilla.org/pt-BR/docs/Apps/FAQs/About_app_manifests" title="/en-US/docs/Apps/FAQs/About_app_manifests">Perguntas frequentes sobre manifestos</a>.</p>
+<h4 id="Examplo_de_Manifesto">Examplo de Manifesto</h4>
+<p>O código a seguir mostra um exemplo de manifesto com apenas algumas configurações:</p>
+<pre class="brush:text  language-html"><code class="language-html">{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}</code></pre>
+<h3 id="Configurações_de_segurança_no_manifesto">Configurações de segurança no manifesto</h3>
+<p>O manifesto pode conter outras configurações, incluindo as de segurança:</p>
+<table>
+ <thead>
+  <tr>
+   <th style="width: 152px;">
+    <p>Campo</p>
+   </th>
+   <th style="width: 479px;">
+    <p>Descrição</p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="width: 152px;">
+    <p>permissions</p>
+   </td>
+   <td style="width: 479px;">
+    <p>Permissões solicitadas pelo aplicativo. Devem ser listadas todas as Web APIs que pretende usar e que necessitam permissão do usuário. A maioria das permissões fazem sentido para aplicativos certificados ou privilegiados, mas não para aplicativos hospedados. Propriedades por API:</p>
+    <ul>
+     <li><strong>description</strong>: Uma string especificando a intenção do uso da API. Campo obrigatório.</li>
+     <li><strong>access</strong>: Especifica o tipo de acesso para a permissão. Permissões implícitas são concedidas no momento da instalação. Exigidas apenas por algumas APIs. Valores aceitos: <strong>read</strong>, <strong>readwrite</strong>, <strong>readcreate</strong>, and <strong>createonly</strong>.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 152px;">
+    <p>installs_allowed_from</p>
+   </td>
+   <td style="width: 479px;">
+    <p>A origem do aplicativo, pode ser simples ou um conjunto de origens (esquema+hostname único) que podem disparar a instalação do aplicativo. Permite que fornecedores dos aplicativos permitam instalações somente de Marketplaces autorizados (como por exemplo <a href="https://marketplace.firefox.com/">https://marketplace.firefox.com/</a>).</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 152px;">
+    <p>csp</p>
+   </td>
+   <td style="width: 479px;">
+    <p>Content Security Policy (CSP). Aplicado a todas as páginas carregadas no aplicativo. Utlizado para fazer um <em>hardening</em> no aplicativo protegendo contra bugs que possam permitir um ataque que injete código no aplicativo. Se não for especificado, aplicativos certificaso e privilegiaods possuem padrões definidos pelo sistema. Sintaxe:<br>
+     <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#csp">https://developer.mozilla.org/en-US/docs/Apps/Manifest#csp</a></p>
+    <p><em>Observe que essa diretiva somente pode acrescentar o CSP aplicado. Você não pode usar, por exemplo, para reduzir o nível de segurança de um aplicativo privilegiado.</em></p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 152px;">
+    <p>type</p>
+   </td>
+   <td style="width: 479px;">
+    <p>Tipo do aplicativo (web, privilegiado ou certificado).</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Firefox OS exige que o manifesto seja hospedado com um <code>mime-type</code> específico (<code>application/x-web-app-manifest+json</code>) e do mesmo nome de servidor (origem) no qual o aplicativo está hospedado. Essa restrição é reduzida quando o manifesto está na mesma origem da página que requisitou o aplicativo a ser instalado. Esse mecanismo é utilizado para garantir que não é possivel burlar um website através de um manifesto.</p>
+<h3 id="Execução_no_Sandbox">Execução no Sandbox</h3>
+<h4 id="Applicação_Sandbox">Applicação Sandbox</h4>
+<p>O framework de segurança do Firefox OS usa a técnica de <em>sandboxing</em> como estratégia de defesa para mitigar riscos e proteger o dispositivo, plataforma e dados. Sandboxing é uma forma de impor limites e restrições em torno no aplicativo durante a sua execução. Cada aplicativo é executado no seu próprio espaço e tem acesso somente às Web APIs e dados permitidos, bem como aos recursos associados com o seu espaço de trabalho (banco de dados IndexedDB, cookies, armazenamento offline, etc.)</p>
+<p>A figura a seguir fornece uma visão geral do modelo de segurança.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5025/sandbox.png"></p>
+<p>Ao isolar cada aplicativo, suas tarefas ficam confinadas ao seus espaços de trabalho e não podem inteferir em nada (como outros aplicativos e seus dados) fora do seu limite.</p>
+<h4 id="Execução_do_Sandbox">Execução do Sandbox</h4>
+<p>B2G (Gecko) executa um processo com alto privilégio que tem acesso aos recursos de hardware no dispositivo. Em tempo de execução, cada aplicativo é executado dentro de um ambiente que é um processo filho do processo B2G. Cada processo filho tem um conjunto restrito de privilégios — por exemplo, um processo filho não pode ler ou escrever arbitrariamente no sistema de arquivos. Acessos privilegiados é fornecido através de Web APIs, que são mediadas pelo processo pai B2G, garantindo que quando um processo filho requisita uma API privilegiada, ela tem a permissão necessária para executar a ação.</p>
+<p>Os aplicativos se comunicam somente com o processo principal B2G, e não com outros processos ou aplicativos. Eles não são executados independentes do B2G, nem podem abrir outros aplicativos. A única comunicação possível entre os aplicativos é indireta (por exemplo, quando um aplicativo configura um alarme de sistema e outro aplicativo dispara uma notificação do sistema como resultado da configuração), e é mediada pelo processo B2G.</p>
+<h4 id="Hardware_é_acessado_somente_via_Web_API">Hardware é acessado somente via Web API</h4>
+<p>Os aplicativos somente tem um ponto de entrada para acessar as funcionalidades do telefone: as Web APIs do Firefox OS,  que são implementadas no Gecko. Que fornece o único gateway para o dispositivo e seus serviços. Não há uma API "nativa" e não há outras rotas que contornem esse mecanismo e interaja indiretamente com o hardware ou penetre na camada de baixo nível do software, ou seja: não há "back-doors".</p>
+<h2 id="Infraestrutura_de_Segurança">Infraestrutura de Segurança</h2>
+<p>A figura a seguir mostra os componentes do framework de segurança do Firefox OS:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5027/securityframework.png" style="width: 979px; height: 591px;"></p>
+<ul>
+ <li><strong>Permission Manager</strong>: Um gateway para acessar funcionalidades na Web API, que é o único acesso ao hardware.</li>
+ <li><strong>Access Control List</strong>: Matriz de regras e permissões necessárias para acessar as Web APIs.</li>
+ <li><strong>Credential Validation</strong>: Autenticação de aplicativos e usuários.</li>
+ <li><strong>Permissions Store</strong>: Conjunto de privilégios necessários para acessar as Web APIs.</li>
+</ul>
+<h3 id="Gestão_de_permissões_e_sua_aplicação">Gestão de permissões e sua aplicação</h3>
+<p>O sistema de segurança do Firefox OS é projetado para verificar e fazer cumprir as permissões concedidas às aplicações web..</p>
+<p>O sistema concede uma permissão particular a um aplicativo somente se o mesmo a requisita e se estiver descrita no manifesto do aplicativo. Algumas permissões exigem uma permissão adicional do usuário, normalmente através de uma mensagem na tela do dispositivo (como por exemplo no caso do aplicativo requisitar acesso à localização atual do usuário). Esse framework baseado no aplicativo fornece um controle mais granular sobre as abordagens de permissão baseada no perfil (no qual é atribuído um conjunto de permissões a cada perfis).</p>
+<p>Uma Web API possui um conjutno de ações e destinatários. Cada Web API possui um nível de permissão e cada vez que é chamada o Gecko verifica os requisitos de permissão baseado em:</p>
+<ul>
+ <li>Permissões associadas com o chamada do aplicativo (como especificado no manifesto e baseado no seu tipo).</li>
+ <li>Permissões requisitadas para executar uma determinada operação (chamada à Web API).</li>
+</ul>
+<p>Se a requisição não atender aos critérios de permissão o Gecko a rejeita. Por exemplo, aplicativos não confiáveis não podem executar APIs que são reservadas para aplicativos confiáveis.</p>
+<h3 id="Solicitando_permissão_do_usuário">Solicitando permissão do usuário</h3>
+<p>In addition to permissions that are implicitly associated with the web apps, certain operations require explicit permission from the user before they can be executed (for example, "can the web app access your camera?"). For these operations, web apps are required to specify, in their manifest, their justification for requiring this permission. This <em>data usage intention</em> informs users about what the web app intends to do with this data if permission is granted, as well as any risk involved. This allows users to make informed decisions and maintain control over their data.</p>
+<h3 id="Precesso_de_atualização_de_um_aplicativo_seguro">Precesso de atualização de um aplicativo seguro</h3>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5029/updateprocess.png" style="width: 979px; height: 102px;"></p>
+<p>Para atualizar ou aplicar uma correção de um aplicativo privilegiado, os fornecedores submetem o pacote de atualização a um Marketplace autorizado onde é feita a revisão e se for aprovado é assinado e disponibilizado aos usuários. Nos dispositivos Firefox OS, um utilitário de atualização é executado periodicamente para verificar se há atualizações dos aplicativos. Caso exista, é perguntado ao usuário se deseja instalar a atualização. Antes da instalação é realizada a seguinte verificação no pacote:</p>
+<ul>
+ <li>Origem da atualização (é verificada a fonte protocolo:domínio:porta da atualização e do manifesto)</li>
+ <li>Integridade do arquivo (hash SHA-256)</li>
+ <li>Assinatura do código (verificação do certificado contra uma raiz confiável)</li>
+</ul>
+<p>Controles rigorosos são executados para garantir que a atualização é aplicada corretamente ao dispositivo. O pacote completo de atualização deve ser baixado numa localização específica e segura antes do processo iniciar. A instalação não sobrescreve nenhum dado do usuário.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Para maiores informações sobre atualização de aplicativo verifique esse <a href="https://developer.mozilla.org/pt-BR/Apps/Developing/Updating_apps">artigo</a>.</p>
+</div>
+<h2 id="Segurança_do_Dispositivo_(Hardware)">Segurança do Dispositivo (Hardware)</h2>
+<p>Os mecanismos de segurança para o hardware do dispositivo são tipicamente de responsabiliade do fabricante. Por exemplo, um fabricante pode oferecer uma proteção para o SIM (Subscriber Identity Module) em conjunto com um código PUK (PIN Unlock Key) para desbloquear o cartão SIM travado por um número determinado de erros na senha do cartão. Contacte o fornecedor para maiores detalhes. Firefox OS possibilita aos usuários configurarem senhas e bloqueio de tela, que será tratado na próxima seção.</p>
+<h2 id="Segurança_dos_dados">Segurança dos dados</h2>
+<p>Usuários podem armazenar dados pessoais no seu dispositivo e mantê-los privados como contatos informações financeiras (detalhes de banco e cartões de crédito), senhas, calendários e etc. O Firefox é projetado com proteções contra aplicativos maliciosos que podem roubar, explorar ou destruir dados sensíveis.</p>
+<h3 id="Senha_e_bloqueio_de_tela_por_tempo">Senha e bloqueio de tela por tempo</h3>
+<p>O Firefox OS permite aos usuários definir uma senha para acessar e utilizar o telefone. Também permite bloqueio da tela após um período configurável de inatividade solicitando uma senha para desbloquear o telefone.</p>
+<h3 id="Dados_no_Sandboxe">Dados no Sandboxe</h3>
+<p>Como descrito anteriormente, os aplicativos são executados num <em>sandbox</em>. Isso evita que um aplicativo acesse os dados de outro a não ser que os dados sejam explicitamente compartilhados e o outro aplicativo possua permissões para acessá-los.</p>
+<h3 id="Serialização_de_dados">Serialização de dados</h3>
+<p>Os aplicativos web não possuem acesso direto de leitura ou escrita ao sistema de arquivos. Todo o acesso ao armazenamento é feito através de Web APIs. Que lêem e escrevem via um banco de dados SQLite. Não há um acesso direto de I/O. Cada aplicativo possue seu próprio local de armazenamento de dados que é serializado pelo banco de dados.</p>
+<h3 id="Destruição_dos_dados">Destruição dos dados</h3>
+<p>Quando um usuário desinstala um aplicativo, todos os dados relacionados ao aplicativo (cookies, localStorage, IndexedDB, etc.) são apagados.</p>
+<h3 id="Privacidade">Privacidade</h3>
+<p>A Mozilla está comprometida a proteger a privacidade dos usuários e de seus dados de acordo com seus princípios (<a href="https://www.mozilla.org/privacy/">https://www.mozilla.org/privacy/</a>), que sustenta o Manifesto Mozilla (<a href="http://www.mozilla.org/pt-BR/about/manifesto/">http://www.mozilla.org/pt-BR/about/manifesto/</a>). A política de privacidade Firefox Mozilla descreve como a Mozilla coleta e utiliza as informações dos usuários do navegador Firefox Mozilla, incluindo o que o Firefox envia para os websites, o que a Mozillar faz para proteger os dados, e etc. Para mais informações veja:</p>
+<ul>
+ <li><a href="http://www.mozilla.org/en-US/legal/privacy/firefox.html">http://www.mozilla.org/en-US/legal/privacy/firefox.html</a></li>
+ <li><a href="https://blog.mozilla.org/privacy/">https://blog.mozilla.org/privacy/</a></li>
+ <li><a href="http://support.mozilla.org/en-US/kb/privacy-and-security-settings-firefox-os-phones">http://support.mozilla.org/en-US/kb/privacy-and-security-settings-firefox-os-phones</a></li>
+</ul>
+<p>O Firefox OS implementa esses princípios colocando o controle dos dados dos usuários nas mãos ele, que é quem deve decidir para onde as informações pessoais devem ir. O Firefox OS provê os seguintes recursos:</p>
+<ul>
+ <li>Opção de não rastreamento</li>
+ <li>Possibilidade de desabilitar os cookies no navegador do Firefox OS</li>
+ <li>Possibilidade de apagar o histórico do navegador do Firefox OS</li>
+</ul>

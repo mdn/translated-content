@@ -1,0 +1,179 @@
+---
+title: label
+slug: Web/JavaScript/Reference/Statements/label
+tags:
+  - JavaScript
+  - Statement
+  - Метка
+translation_of: Web/JavaScript/Reference/Statements/label
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<p>Инструкция метки (<strong>label</strong>) используется вместе с {{jsxref("Statements/break", "break")}} или {{jsxref("Statements/continue", "continue")}} для альтернативного выхода из цикла. Оно добавляется перед блочным выражением в качестве ссылки, которая может быть использована в дальнейшем.</p>
+
+<p>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</p>
+
+<div class="blockIndicator note">
+<p><strong>Примечание:</strong> Помеченные циклы используются очень редко. Обычно вместо этого используют вызов функций.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>label</em> :
+   <em>statement</em>
+</pre>
+
+<dl>
+ <dt><code>label</code></dt>
+ <dd>Любой идентификатор JavaScript, который не является ключевым словом.</dd>
+ <dt><code>statement</code></dt>
+ <dd>Инструкция. <code>break</code> может быть использован с любой отмеченной инструкцией, а <code>continue</code> только с метками около начала цикла.</dd>
+</dl>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p>Вы можете применять метки для обозначения циклов, чтобы затем при помощи <code>break</code> или <code>continue</code> выходить из цикла или продолжать его работу с новой итерации.</p>
+
+<p>В JavaScript <em>нет</em> оператора <code>goto</code>, вы можете использовать только метки с <code>break</code> или <code>continue</code>.</p>
+
+<p>В <a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">строгом режиме</a> вы не можете использовать "<code>let</code>" как имя метки. Это генерирует ошибку {{jsxref("SyntaxError")}} (let is a reserved identifier).</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Использование_метки_с_continue_с_циклом_for">Использование метки с <code>continue</code> с циклом <code>for</code></h3>
+
+<pre class="brush: js">var i, j;
+
+loop1:
+for (i = 0; i &lt; 3; i++) {      //Первый цикл, обозначенный меткой "loop1"
+   loop2:
+   for (j = 0; j &lt; 3; j++) {   //Второй цикл, обозначенный меткой "loop2"
+      if (i == 1 &amp;&amp; j == 1) {
+         continue loop1;
+      }
+      console.log("i = " + i + ", j = " + j);
+   }
+}
+
+// Вывод:
+//   "i = 0, j = 0"
+//   "i = 0, j = 1"
+//   "i = 0, j = 2"
+//   "i = 1, j = 0"
+//   "i = 2, j = 0"
+//   "i = 2, j = 1"
+//   "i = 2, j = 2"
+// Обратите внимание на пропуск "i = 1, j = 1" и "i = 1, j = 2"
+</pre>
+
+<h3 id="Example_2" name="Example_2">Другой пример использования метки с <code>continue</code></h3>
+
+<p>На входе массив элементов и массив функций для проверки, в примере вычисляется количество элементов массива, которые проходят все тесты.</p>
+
+<pre class="brush: js"><code>var itemsPassed = 0;
+var i, j;
+
+top:
+for (i = 0; i &lt; items.length; i++) {
+  for (j = 0; j &lt; tests.length; j++) {
+    if (!tests[j].pass(items[i])) {
+      continue top;
+    }
+  }
+
+  itemsPassed++;
+}</code></pre>
+
+<h3 id="Использование_меток_с_break" style="line-height: 24px; font-size: 1.71428571428571rem;">Использование меток с <code>break</code></h3>
+
+<pre class="brush: js" style="font-size: 14px;">var i, j;
+
+loop1:
+for (i = 0; i &lt; 3; i++) {      //Первый цикл, обозначенный меткой "loop1"
+   loop2:
+   for (j = 0; j &lt; 3; j++) {   //Второй цикл, обозначенный меткой "loop2"
+      if (i == 1 &amp;&amp; j == 1) {
+         break loop1;
+      }
+      console.log("i = " + i + ", j = " + j);
+   }
+}
+
+// Вывод:
+//   "i = 0, j = 0"
+//   "i = 0, j = 1"
+//   "i = 0, j = 2"
+//   "i = 1, j = 0"
+// Обратите внимание на аналогичный пример с continue</pre>
+
+<h3 id="Example_3" name="Example_3">Другой пример использования меток с <code>break</code></h3>
+
+<p>Дан массив элементов и массив с функциями для проверки, в примере определяется, проходят ли все элементы первого массива все тесты из второго массива.</p>
+
+<pre class="brush: js">var allPass = true;
+var i, j;
+
+top:
+for (i = 0; items.length; i++)
+  for (j = 0; j &lt; tests.length; i++)
+    if (!tests[j].pass(items[i])){
+      allPass = false;
+      break top;
+    }</pre>
+
+<h3 id="Помеченные_объявления_функция">Помеченные объявления функция</h3>
+
+<p>Начиная с ECMAScript 2015, помеченные объявления функция являются стандартными для нестрогого режима.</p>
+
+<pre class="brush: js">L: function F() {}</pre>
+
+<p>Однако, в <a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">строгом режиме</a> генерируется ошибка {jsxref("SyntaxError")}}:</p>
+
+<p>In <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> code, however, this will throw a {{jsxref("SyntaxError")}}:</p>
+
+<pre class="brush: js"><code>'use strict';
+L: function F() {}
+// SyntaxError: functions cannot be labelled</code></pre>
+
+<p><a href="/ru/docs/Web/JavaScript/Reference/Statements/function*">Функции-генераторы</a> не могут быть помечены ни в том, ни в другом режиме:</p>
+
+<pre class="brush: js"><code>L: function* F() {}
+// SyntaxError: generator functions cannot be labelled</code></pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 3-е Издание.</td>
+   <td>Стандарт</td>
+   <td>Изначальное определение. Реализован в JavaScript 1.2.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-12.12', 'Labelled statement')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-labelled-statements', 'Labelled statement')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{Compat("javascript.statements.label")}}</p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Statements/break", "break")}}</li>
+ <li>{{jsxref("Statements/continue", "continue")}}</li>
+</ul>

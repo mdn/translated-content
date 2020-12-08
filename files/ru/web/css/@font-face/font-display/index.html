@@ -1,0 +1,143 @@
+---
+title: font-display
+slug: Web/CSS/@font-face/font-display
+translation_of: Web/CSS/@font-face/font-display
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Дескриптор <code>font-display</code> определяет то, как шрифт, подключенный через font face будет отображаться в зависимости от того, загрузился ли он и готов ли к использованию.</p>
+
+<h3 id="Временная_шкала_отображения_шрифтов">Временная шкала отображения шрифтов</h3>
+
+<p>Временная шкала отображения шрифтов основывается на таймере, который запускается в момент, когда пользовательский агент начинает попытки по применению загруженного шрифта.  Эта временная шкала разделена на три отрезка, приведенных ниже, которые диктуют поведение рендеринга любых элементов с использованием шрифта.</p>
+
+<dl>
+ <dt>Период блокировки шрифта (Font block period)</dt>
+ <dd>Если шрифт не загружен, любой элемент, который пытается его использовать, должен быть отрендерен с невидимым запасным шрифтом. Если за это время шрифт успешно загружается, то он используется, как обычно.</dd>
+ <dt>Период подмены шрифта (Font swap period)</dt>
+ <dd>Если шрифт не загружен, любой элемент, который пытается его использовать, должен быть отрендерен запасным шрифтом. Если за это время шрифт успешно загружается, то он используется, как обычно.</dd>
+ <dt>Период отказа шрифта (Font failure period)</dt>
+ <dd>Если шрифт не загружен, пользовательский агент воспринимает это как неудачную загрузку и использует запасной шрифт.</dd>
+</dl>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: css;">/* Значения свойства */
+font-display: auto;
+font-display: block;
+font-display: swap;
+font-display: fallback;
+font-display: optional;</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt>auto</dt>
+ <dd>Стратегию загрузки шрифта определяет пользовательский агент.</dd>
+ <dt>block</dt>
+ <dd>Для шрифта задается короткий период блокировки и бесконечный период подмены.</dd>
+ <dt>swap</dt>
+ <dd>Для шрифта не задается период блокировки и задается бесконечный период подмены.</dd>
+ <dt>fallback</dt>
+ <dd>Для шрифта задается очень короткий период блокировки и короткий период подмены.</dd>
+ <dt>optional</dt>
+ <dd>Для шрифта задается очень короткий период блокировки и не задается период подмены.</dd>
+</dl>
+
+<h3 id="Официальный_синтаксис">Официальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: css; highlight[7]">@font-face {
+  font-family: ExampleFont;
+  src: url(/path/to/fonts/examplefont.woff) format('woff'),
+       url(/path/to/fonts/examplefont.eot) format('eot');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Font Rendering', '#font-display-desc', 'font-display')}}</td>
+   <td>{{Spec2('CSS Font Rendering')}}</td>
+   <td>Исходное описание</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(60)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("46.0")}}<sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(36)}}<sup>[1]</sup></td>
+   <td>{{CompatSafari(11.1)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("46.0")}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatOpera(37)}}<sup>[1]</sup></td>
+   <td>{{CompatSafari(11.1)}}</td>
+   <td>{{CompatChrome(59.0)}}<sup>[1]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] За флагом.</p>
+
+<p>[2] Эта возможность доступна, начиная с версии Firefox 46 с настрокой <code>layout.css.font-display.enabled</code>, по умолчанию <code>false</code>.  См. ({{bug(1157064)}}).</p>

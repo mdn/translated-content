@@ -1,0 +1,54 @@
+---
+title: Trwałe dane
+slug: Mozilla/Tech/XUL/Kurs_XUL/Trwałe_dane
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Persistent_Data
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Zaawansowane_reguły" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_arkuszy_stylów">Następny  »</a></p>
+</div>
+<p></p><p>Artykuł ten opisuje w jaki sposób zapisać stan okna XUL.
+</p>
+<h3 id="Stan_pami.C4.99ci" name="Stan_pami.C4.99ci"> Stan pamięci </h3>
+<p>Podczas budowy dużej aplikacji, będziemy chcieli posiadać możliwość zapisu niektórych stanów okna poprzez sesje. Na przykład: Okno mogłoby pamiętać, który paski narzędzi są rozwinięte nawet po tym jak użytkownik zamknął okno. </p><p>Jedyną możliwością byłoby wpisanie skryptu do gromadzenia informacji o tym, co chcielibyśmy zapisać i następnie zapisać to w pliku. Jednakże, mogłoby to szkodliwe dla każdej aplikacji. XUL dostarcza dogodnego mechanizmu do zapisu stanu okna. </p><p>Informacje są gromadzone i magazynowane w pliku RDF (localstore.rdf) w tym samym katalogu jak inne ustawienia użytkownika. Będą przetrzymywać informacje o stanie każdego okna. Ta metoda posiada zalety, które współpracują z profilami użytkownika w Mozilli, dzięki czemu każdy użytkownik posiada inne ustawienia. </p><p>XUL pozwala na zapisanie stanu jakiegokolwiek elementu. Zazwyczaj będziemy chcieli zapisać stan pasków narzędzi, pozycję okna i gdzie są lub nie są wyświetlone pewne panele, ale możemy zapisać prawie wszystko. </p>
+<h4 id="Atrybut_persist" name="Atrybut_persist"> Atrybut <code>persist</code> </h4>
+<p>Aby pozwolić na zapisywanie stanu, w prostu dodajemy atrybut <code>persist</code> do elementu, który podtrzymuje wartości, które chcemy zapisać. Atrybut <code><code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code></code> powinien być ustawiony jako lista atrybutów elementu (które chcemy, aby zostały zapisane) rozdzielonych spacją. Element musi posiadać także atrybut <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> w poleceniu do identyfikacji.
+</p><p>Na przykład, aby zapisać rozmiar okna, powinniśmy postępować następująco:
+</p>
+<pre>&lt;window
+  id="someWindow"
+  width="200"
+  height="300"
+  persist="width height"
+  .
+  .
+  .
+</pre>
+<p>Dwa atrybuty elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>, czyli <code><code id="a-width"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/width">width</a></code></code> i <code><code id="a-height"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/height">height</a></code></code> zostaną zapisane. Możemy dodać dodatkowe atrybuty poprzez dodanie spacji i nazwy następnego atrybutu do atrybutu <code><code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code></code>. Atrybut <code><code id="a-persist"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/persist">persist</a></code></code> możemy dodać do jakiegokolwiek elementu oraz magazynować w nim jakiekolwiek atrybuty. Możemy stosować niezwykłych wartości, jeśli porządkujemy atrybuty stosując skrypt.
+</p>
+<h4 id="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki"> Nasz przykład: &lt;tt&gt;Znajdź pliki&lt;/tt&gt; </h4>
+<div class="highlight">
+<p>Dodajmy atrybut persist do niektórych elementów w okienku dialogowego &lt;tt&gt;Znajdź pliki&lt;/tt&gt;, aby zapisać pozycje okna. Aby to zrobić, potrzebujemy zmodyfikować okno.
+</p>
+<pre class="eval">&lt;window
+  id="findfile-window"
+  title="Find Files"
+  <span class="highlightred">persist="screenX screenY width height"</span>
+  orient="horizontal"
+  xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+<p>Będzie to powodowało, że pozycja x i y okna oraz długość i szerokość okna zostaną zapisane. Możemy to rozszerzać dalej, aby zapisać rozwinięty stan rozdzielacza. Zapisanie bieżącego stanu karty, tak naprawdę nie ma jednak sensu.
+</p><p><span id="Przyk%C5%82ad"><a id="Przyk%C5%82ad"></a><strong>Przykład</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-persist.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-persist.xul">Podgląd</a>
+</p>
+</div>
+<p>Następnie, zobaczymy jak stosuje się <a href="pl/Kurs_XUL/Dodawanie_arkuszy_styl%c3%b3w">arkusze stylów z plikami XUL</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Zaawansowane_reguły" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_arkuszy_stylów">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

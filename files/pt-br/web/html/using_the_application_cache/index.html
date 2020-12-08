@@ -1,0 +1,392 @@
+---
+title: Usando cache de aplicação
+slug: Web/HTML/Using_the_application_cache
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Web/HTML/Using_the_application_cache
+---
+<p>{{DefaultAPISidebar("App Cache")}}{{deprecated_header}}</p>
+
+<div class="warning">
+<p>Usar o recurso de <em>application caching</em> descrito aqui é altamente desencorajado nesse momento; ele <a href="https://html.spec.whatwg.org/multipage/browsers.html#offline">está sendo removido da plataforma Web</a>. Em vez dele use <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service Workers</a>. De fato, a partir do Firefox 44, quando o <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Using_the_application_cache">AppCache</a> é usado para prover suporte offline uma mensagem de alerta é exibida no console, recomendando aos desenvolvedores que usem <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> ({{bug("1204581")}}).</p>
+</div>
+
+<h2 id="Introdução">Introdução</h2>
+
+<p><a href="/en-US/docs/HTML/HTML5" title="HTML/HTML5">HTML5</a> <span>fornece um mecanismo de <em>cache</em> de <em>aplicativo</em> que permite que aplicações baseadas na web sejam executadas offline.</span> <span>Os desenvolvedores podem usar a interface do <strong>cache do aplicativo</strong> <em>(AppCache)</em> para especificar os recursos que o navegador deve armazenar em cache e disponibilizar aos usuários offline.</span> <span>Os aplicativos que estão em cache de carga e funcionam corretamente, mesmo se os usuários clicarem no botão de atualização quando estão offline.</span></p>
+
+<p><span>Usando um cache de aplicativo dá uma aplicação os seguintes benefícios:</span></p>
+
+<ul>
+ <li><span>Navegação off-line: os usuários podem navegar em um site, mesmo quando estão offline.</span></li>
+ <li><span>Velocidade: os recursos são armazenados em cache local, e, portanto, carregam mais rápido.</span></li>
+ <li><span>Redução de carga do servidor: o navegador somente faz download de recursos que foram alterados a partir do servidor.</span></li>
+</ul>
+
+<h2 id="Como_funciona_o_cache_de_aplicativo"><span>Como funciona o cache de aplicativo</span></h2>
+
+<h3 id="Ativando_o_cache_de_aplicativo"><span>Ativando o cache de aplicativo</span></h3>
+
+<p>Para habilitar o cache de aplicativo para um aplicativo, você deve incluir o {{htmlattrxref("manifest", "html")}} atributo na {{HTMLElement("html")}} elemento em páginas de seu aplicativo, como mostrado no exemplo a seguir:</p>
+
+<div>
+<pre class="brush: html"><span class="brush: html">&lt;html manifest="example.appcache"&gt; </span>
+  ...
+&lt;/html&gt;
+</pre>
+
+<p><span>O atributo manifest faz referência a um arquivo de <strong>manifesto cache,</strong> que é um arquivo de texto que lista os recursos (arquivos) que o navegador deve armazenar em cache para sua aplicação.</span></p>
+
+<p><span>Você deve incluir o <code>manifest</code> atributo em todas as páginas do seu aplicativo que você deseja armazenar em cache.</span> <span>O navegador não armazena em cache páginas que não contêm o <code>manifest</code> atributo, a menos que tais páginas são explicitamente listados no próprio arquivo de manifesto.</span> <span>Você não precisa listar todas as páginas que você deseja armazenar em cache no arquivo de manifesto, o navegador adiciona, implicitamente, todas as páginas que o usuário visita e que tem o <code>manifest</code> atributo definido para o cache do aplicativo.</span></p>
+
+<p><span>Alguns navegadores (por exemplo, Firefox) exibem uma barra de notificação a primeira vez que um usuário carrega um aplicativo que usa o cache do aplicativo.</span> <span>A barra de notificação exibe uma mensagem como esta:</span></p>
+
+<p style="margin-left: 40px;">Este site (www.example.com) está pedindo para armazenar dados em seu computador para uso offline. <span>.</span> <span>[Permitir] [Nunca para este Site] [Not Now]</span></p>
+
+<p>O termo "aplicações (habilitados) offline" às vezes se refere especificamente a aplicativos que o usuário tem permissão para usar recursos offline.</p>
+
+<h3 id="Carregando_documentos"><span>Carregando documentos</span></h3>
+
+<p><span>O uso de um cache de aplicação modifica o processo normal de carregamento de um documento:</span></p>
+
+<ul>
+ <li><span>Se um cache de aplicativo existe, o navegador carrega o documento e seus recursos associados diretamente a partir do cache, sem acessar a rede.</span><span>Isso acelera o tempo de carregamento do documento.</span></li>
+ <li><span>O navegador, em seguida, verifica se o manifesto de cache foi atualizado no servidor.</span></li>
+ <li><span>Se o manifesto de cache foi atualizado, o navegador faz o download de uma nova versão do manifesto e os recursos listados no manifesto.</span> <span>Isto é feito no fundo e não afecta o desempenho significativamente.</span></li>
+</ul>
+
+<p><span>O processo para carregamento de documentos e actualizando o cache de aplicação é especificado em maior detalhe abaixo:</span></p>
+
+<ol>
+ <li><span>Quando o navegador visita um documento que inclui o atributo <code>manifest</code>, se nenhum cache do aplicativo existe, o navegador carrega o documento e, em seguida, vai buscar todas as entradas listadas no arquivo de manifesto, criando a primeira versão do cache do aplicativo.</span></li>
+ <li><span>Visitas subseqüentes a esse documento com que o navegador para carregar o documento e outros bens especificados no arquivo de manifesto do cache de aplicativo (e não do servidor).</span> <span>Além disso, o navegador também envia uma <code>checking</code> de eventos para o</span> <code><a href="/en-US/docs/DOM/window.applicationCache" title="DOM/window.applicationCache">window.applicationCache</a></code> objeto, e vai buscar o arquivo de manifesto, seguindo as regras de cache HTTP apropriados.</li>
+ <li><span>Se a cópia atualmente em cache do manifesto é up-to-date, o navegador envia uma <code>noupdate</code> evento ao <code>applicationCache</code> objeto, e o processo de atualização for concluída.</span> <span>Note que se você alterar quaisquer recursos em cache no servidor, você também deve alterar o próprio arquivo de manifesto, de modo que o navegador sabe que precisa buscar todos os recursos novamente.</span></li>
+ <li>Se o arquivo de manifesto <em>mudou,</em> todos os arquivos listados no manifesto-bem como aqueles adicionados ao cache chamando <code><a href="/en-US/docs/nsIDOMOfflineResourceList#add.28.29" title="nsIDOMOfflineResourceList#add.28.29">applicationCache.add()</a></code>— <span>são buscados em um cache temporário, seguindo as regras de cache HTTP apropriados.</span> <span>Para cada arquivo obtidos para este cache temporário, o navegador envia um <code>progress</code> evento ao <code>applicationCache</code> objeto.</span> <span>Se ocorrer algum erro, o navegador envia um <code>error</code>evento, e a atualização para no meio.</span></li>
+ <li><span>Depois que todos os arquivos foram recuperados com sucesso, eles são movidos para o cache off-line reais automaticamente, e um <code>cached</code> evento é enviado para o <code>applicationCache</code> objeto.</span> <span>Uma vez que o documento já tiver sido carregado no browser a partir do cache, o documento atualizado não será processado até que o documento é recarregado (manualmente ou através de programação).</span></li>
+</ol>
+
+<h2 id="Local_de_armazenamento_e_limpando_o_cache_off-line"><span>Local de armazenamento e limpando o cache off-line</span></h2>
+
+<p>No Chrome, você pode limpar o cache off-line selecionando "Limpar dados de navegação ..." nas preferências ou visitando <a title="chrome://appcache-internals/">chrome://appcache-internals/</a>. Safari tem uma configuração semelhante "cache Empty" em suas preferências, mas uma reinicialização do navegador também pode ser necessária.</p>
+
+<p>No Firefox, os dados de cache offline é armazenado separadamente a partir do perfil de próxima ao cache de disco regular Firefox:</p>
+
+<ul>
+ <li>Windows Vista/7: <code>C:\Users\&lt;username&gt;\AppData\<strong>Local</strong>\Mozilla\Firefox\Profiles\&lt;salt&gt;.&lt;profile name&gt;\OfflineCache</code></li>
+ <li>Mac/Linux: <code>/Users/&lt;username&gt;/Library/Caches/Firefox/Profiles/&lt;salt&gt;.&lt;profile name&gt;/OfflineCache</code></li>
+</ul>
+
+<p><span>No Firefox o status atual do cache off-line pode ser inspecionado no <code>about:cache</code> da página (no âmbito do "dispositivo de cache offline" designação).</span> <span>O cache off-line pode ser liberado para cada local separadamente utilizando o botão "Remover ..." em Ferramentas -&gt; Opções -&gt; Avançado -&gt; Rede -&gt; dados offline.</span></p>
+
+<p><span>Antes do Firefox 11, nem Ferramentas -&gt; Limpar histórico recente nem Ferramentas -&gt; Opções -&gt; Avançado -&gt; Rede -&gt; dados off-line -&gt; Limpar agora de limpar o cache offline.</span> <span>Isso foi corrigido.</span></p>
+
+<p>No Linux, você pode encontrar a definição em Editar&gt; Preferências&gt; Avançado&gt; Rede&gt; Off-line de conteúdo da Web e dados de usuário</p>
+
+<p>Veja também <a href="/en-US/docs/DOM/Storage#Storage_location_and_clearing_the_data" title="DOM/Storage#Storage location and clearing the data">a limpeza de dados de armazenamento DOM </a>.</p>
+
+<p><span>Caches de aplicativos também podem se tornar obsoletos.</span> <span>Se o arquivo de manifesto de um aplicativo é removido do servidor, o navegador remove todos os caches de aplicativos que usam esse manifesto, e envia um evento "obsoleto" para o <code>applicationCache</code> objeto.</span> <span>Isso define o estado do cache do aplicativo para <code>OBSOLETE</code> .</span></p>
+
+<h2 id="O_arquivo_de_manifesto_de_cache"><span>O arquivo de manifesto de cache</span></h2>
+
+<h3 id="Fazendo_referência_a_um_arquivo_de_manifesto_de_cache"><span>Fazendo referência a um arquivo de manifesto de cache</span></h3>
+
+<p><span>O <code>manifest</code> atributo em uma aplicação web pode especificar o caminho relativo de um arquivo de manifesto de cache ou um URL absoluto.</span> <span>(Absolute URLs devem ser da mesma origem que a aplicação).</span> <span>Um arquivo de manifesto de cache pode ter qualquer extensão de arquivo, mas ele deve ser servido com o tipo MIME <code>text/cache-manifest</code> .</span></p>
+
+<div class="note"><strong>Nota: </strong>Em servidores Apache, o tipo MIME para manifesto (.appcache) arquivos podem ser definidos pela adição de AddType text/cache-manifest .appcache em um arquivo .htaccess, no o diretório raiz, ou o mesmo diretório do aplicativo.</div>
+
+<h3 id="As_entradas_de_um_arquivo_de_manifesto_de_cache"><span>As entradas de um arquivo de manifesto de cache</span></h3>
+
+<p><span>O arquivo de manifesto cache é um simples arquivo de texto que lista os recursos do navegador deve armazenar em cache para acesso offline.</span> <span>Os recursos são identificados pelo URI.</span> <span>Entradas listadas no manifesto de cache deve ter o mesmo esquema, host e porta que o manifesto.</span></p>
+
+<h3 id="Exemplo_1_um_arquivo_de_manifesto_de_cache_simples"><span>Exemplo 1: um arquivo de manifesto de cache simples</span></h3>
+
+<p>O que se segue é um arquivo de manifesto de cache simples, <code style="font-style: normal;">example.appcache</code> , para um web site imaginário em <span class="nowiki">www.example.com.</span></p>
+
+<pre>CACHE MANIFEST
+# v1 - 2011-08-13
+# This is a comment.
+<span class="nowiki">http://www.example.com/index.html</span>
+<span class="nowiki">http://www.example.com/header.png</span>
+<span class="nowiki">http://www.example.com/blah/blah</span>
+</pre>
+
+<p><span>Um arquivo de manifesto de cache pode incluir três secções ( <code>CACHE</code> , <code>NETWORK</code> , e <code>FALLBACK</code> , discutidas abaixo).</span> <span>No exemplo acima, não há cabeçalho de seção, para que todos os dados linhas estão a ser assumida no explícita ( <code>CACHE</code> seção), o que significa que o navegador deve armazenar em cache todos os recursos listados no cache do aplicativo.</span> <span>Os recursos podem ser especificados usando URLs absoluto ou relativo (por exemplo, <code>index.html</code> ).</span></p>
+
+<p><span>O comentário "v1" no exemplo acima está lá por um bom motivo.</span> <span>Browsers apenas atualizar um cache de aplicativo quando o arquivo de manifesto muda, byte por byte.</span> <span>Se você alterar um recurso de cache (por exemplo, você atualizar o <code>header.png</code> imagem com novo conteúdo), você também deve alterar o conteúdo do arquivo de manifesto, a fim de permitir que os navegadores sabem que precisam para atualizar o cache.</span> <span>Você pode fazer qualquer mudança que você quer o arquivo de manifesto, mas revisando um número de versão é a melhor prática recomendada.</span></p>
+
+<div class="warning"><strong>Importante:</strong> Não especificar a manifestar-se no arquivo de manifesto cache, caso contrário, será quase impossível para informar o navegador de um novo manifesto está disponível.</div>
+
+<h3 id="Seções_em_um_arquivo_de_manifesto_de_cache_CACHE_NETWORK_e_FALLBACK"><span>Seções em um arquivo de manifesto de cache: <code>CACHE</code> , <code>NETWORK</code> , e <code>FALLBACK</code></span></h3>
+
+<p>Um manifesto pode ter três secções distintas: <code style="font-style: normal;">CACHE</code> , <code style="font-style: normal;">NETWORK</code> , e <code style="font-style: normal;">FALLBACK</code> .</p>
+
+<dl>
+ <dt><code>CACHE:</code></dt>
+ <dd><span>Esta é a seção padrão para entradas em um arquivo de manifesto cache.</span> <span>Os arquivos listados sob o <code>CACHE:</code> cabeçalho de seção (ou imediatamente após o <code>CACHE MANIFEST</code> line) são explicitamente em cache depois do download pela primeira vez.</span></dd>
+ <dt><code>NETWORK:</code></dt>
+ <dd><span>Os arquivos listados sob a <code>NETWORK:</code> cabeçalho de seção no arquivo de manifesto de cache são recursos enumerados na lista branca que requerem uma conexão com o servidor.</span> <span>Todas as solicitações para tais recursos ignorar o cache, mesmo se o usuário estiver offline.</span> <span>O caractere curinga <code>*</code> pode ser usado uma vez.</span> <span>A maioria dos sites precisam <code>*</code> .</span></dd>
+ <dt><code>FALLBACK:</code></dt>
+ <dd><span>O <code>FALLBACK:</code> seção especifica páginas fallback o navegador deve usar se um recurso é inacessível.</span> <span>Cada entrada nesta secção enumera duas URIs-o primeiro é o recurso, o segundo é o fallback.</span> <span>Ambos os URIs deve ser relativo e da mesma origem do arquivo de manifesto.</span> <span>Curingas podem ser usados.</span></dd>
+</dl>
+
+<p>Os <code style="font-style: normal;">CACHE</code> , <code style="font-style: normal;">NETWORK</code> e <code style="font-style: normal;">FALLBACK</code> seções podem ser listados em qualquer ordem em um arquivo de manifesto cache, e cada seção pode aparecer mais de uma vez em um único manifesto.</p>
+
+<h3 id="Exemplo_2_um_arquivo_de_manifesto_de_cache_mais_completo"><span>Exemplo 2: um arquivo de manifesto de cache mais completo</span></h3>
+
+<p>O seguinte é um arquivo de manifesto de cache mais completo para o web site imaginário em <span class="nowiki">www.example.com:</span></p>
+
+<pre>CACHE MANIFEST
+# v1 2011-08-14
+# This is another comment
+index.html
+cache.html
+style.css
+image1.png
+
+# Use from network if available
+NETWORK:
+network.html
+
+# Fallback content
+FALLBACK:
+/ fallback.html
+</pre>
+
+<p>Este exemplo usa <code style="font-style: normal;">NETWORK</code> e <code style="font-style: normal;">FALLBACK</code> seções para especificar que o <code style="font-style: normal;">network.html</code> página deve sempre ser recuperada a partir da rede, e que o<code style="font-style: normal;">fallback.html</code> página deve ser servido como um recurso fallback (por exemplo, no caso de uma conexão com o servidor não pode ser estabelecida ).</p>
+
+<h3 id="Estrutura_de_um_arquivo_de_manifesto_de_cache"><span>Estrutura de um arquivo de manifesto de cache</span></h3>
+
+<p><span>Cache arquivos de manifesto deve ser servido com o <code>text/cache-manifest</code> tipo MIME.</span> <span>Todos os recursos servido usando este tipo MIME deve seguir a sintaxe para um manifesto do cache do aplicativo, conforme definido nesta seção.</span></p>
+
+<p><span>Manifestos de cache são UTF-8 arquivos de texto formato, e pode incluir, opcionalmente, um personagem BOM.</span> <span>Newlines pode ser representado por avanço de linha ( <code>U+000A</code> ), retorno de carro ( <code>U+000D</code> ), ou retorno de carro e alimentação de linha ambos.</span></p>
+
+<p><span>A primeira linha do manifesto de cache deve consistir da seqüência de <code>CACHE MANIFEST</code> (com um único <code>U+0020</code> o espaço entre as duas palavras), seguido de zero ou mais espaço ou tabulação caracteres.</span> <span>Qualquer outro texto na linha é ignorado.</span></p>
+
+<p>O restante do manifesto cache deve ser composta de zero ou mais das seguintes linhas:</p>
+
+<dl>
+ <dt><span>Linha em branco</span></dt>
+ <dd><span>Você pode usar linhas em branco composta de zero ou mais de espaço e caracteres de tabulação.</span></dd>
+ <dt><span>Comentário</span></dt>
+ <dd><span>Comentários consistem em zero ou mais abas ou espaços seguidos por um único <code>#</code> caracteres, seguido por zero ou mais caracteres de texto de comentário.</span> <span>Comentários só pode ser utilizado em suas próprias linhas (após a <span style="line-height: 1.572;">linha</span> <span style="font-family: courier new,andale mono,monospace; line-height: normal;">MANIFESTO CACHE</span> <span style="line-height: 1.572;">inicial), e não pode ser adicionado a outras linhas.</span></span> <span><span style="line-height: 1.572;">Isso significa que você não pode especificar identificadores de fragmentos.</span></span></dd>
+ <dt><span>Cabeçalho da seção</span></dt>
+ <dd><span>Cabeçalhos de seção especificar qual seção do manifesto cache está sendo manipulado.</span> <span>Há três cabeçalhos de seção possíveis:</span></dd>
+</dl>
+
+<blockquote>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th><strong style="background-color: rgba(212, 221, 228, 0.498039); font-family: open sans light,sans-serif; font-weight: bold;">Cabeçalho da seção</strong></th>
+   <th><strong style="background-color: rgba(212, 221, 228, 0.498039); font-family: open sans light,sans-serif; font-weight: bold;">Descrição</strong></th>
+  </tr>
+  <tr>
+   <td><code>CACHE:</code></td>
+   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">Muda para a seção explícita do manifesto de cache (esta é a seção padrão).</span></td>
+  </tr>
+  <tr>
+   <td><code>NETWORK:</code></td>
+   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">Muda para a seção whitelist linha do manifesto de cache.</span></td>
+  </tr>
+  <tr>
+   <td><code>FALLBACK:</code></td>
+   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">Muda para a seção de fallback do manifesto de cache.</span></td>
+  </tr>
+ </tbody>
+</table>
+</blockquote>
+
+<dl>
+ <dd><span>A linha de cabeçalho da seção pode incluir espaços em branco, mas deve incluir os dois pontos ( <code>:</code> ) no nome da seção.</span></dd>
+ <dt><span>Seção de dados</span></dt>
+ <dd><span>O formato de linhas de dados varia de uma seção para outra.</span> <span>No explícita ( <code>CACHE:</code> ) seção, cada linha é um URI ou IRI referência válida para um recurso para cache (sem caracteres curinga são permitidos neste seções).</span> <span>Espaços em branco são permitidas antes e depois da URI ou IRI em cada linha.</span> <span>Na secção Fallback cada linha é um URI ou IRI referência válida para um recurso, seguido de um recurso de reversão que é para ser servido para cima quando uma ligação com o servidor não pode ser feito.</span> <span>Na seção de rede, cada linha é um URI ou IRI referência válida para um recurso para buscar a partir da rede (ou o caractere curinga <code>*</code> pode ser usado nesta seção).</span></dd>
+ <dd>
+ <div class="note"><strong>Nota: </strong>Os URIs relativos são em relação ao URI do manifesto de cache, não para o URI do documento que faz referência ao manifesto.</div>
+ </dd>
+</dl>
+
+<p>Cache arquivos de manifesto pode mudar de uma seção para outra à vontade (cada cabeçalho de seção pode ser usada mais de uma vez), e as seções estão autorizados a estar vazio.</p>
+
+<h2 id="Recursos_do_cache_de_aplicativo"><span>Recursos do cache de aplicativo</span></h2>
+
+<p><span>Um cache de aplicativo inclui sempre pelo menos um recurso, identificado por URI.</span> <span>Todos os recursos se enquadrar em uma das seguintes categorias:</span></p>
+
+<dl>
+ <dt><span>Entradas Mestre</span></dt>
+ <dd><span>Trata-se de recursos adicionais para o cache porque um contexto de navegação visitado pelo usuário incluído um documento que indicava que era neste cache usando seu <code>manifest</code> atributo.</span></dd>
+ <dt><span>Entradas explícitas</span></dt>
+ <dd><span>Estes são os recursos expressamente enumeradas no arquivo de manifesto de cache do aplicativo.</span></dd>
+ <dt><span>Entradas de rede</span></dt>
+ <dd><span>Estes são os recursos enumerados no cache de arquivos de manifesto do aplicativo como entradas de rede.</span></dd>
+ <dt><span>Entradas de fallback</span></dt>
+ <dd><span>Estes são os recursos enumerados no cache de arquivos de manifesto do aplicativo como entradas de fallback.</span></dd>
+</dl>
+
+<div class="note"><strong>Nota:</strong> Os recursos podem ser marcados com múltiplas categorias, e pode portanto ser categorizadas como entradas múltiplas. Por exemplo, uma entrada pode ser tanto uma entrada explícita e uma entrada de fallback.</div>
+
+<p>As categorias de recursos são descritos em maior detalhe abaixo.</p>
+
+<h3 id="Entradas_Mestre"><span>Entradas Mestre</span></h3>
+
+<p>Entradas Master são todos os arquivos HTML que incluem um {{htmlattrxref("manifest","html")}} em seu atributo {{HTMLElement("html")}} <span> elemento.</span> <span>Por exemplo, vamos dizer que temos o arquivo HTML</span> <code><a class="linkification-ext external" href="http://www.foo.bar/entry.html" title="Linkification: http://www.foo.bar/entry.html">http://www.example.com/entry.html</a></code>, que se parece com isso:</p>
+
+<pre class="brush: html">&lt;html manifest="example.appcache"&gt;
+  &lt;h1&gt;Application Cache Example&lt;/h1&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Se <code style="font-style: normal;">entry.html</code> não está listado no <code style="font-style: normal;">example.appcache</code> arquivo de manifesto cache, visitando o <code style="font-style: normal;">entry.html</code> página faz com que <code style="font-style: normal;">entry.html</code> a ser adicionado ao cache de aplicativo como uma entrada de mestre.</p>
+
+<h3 id="Entradas_explícitas"><span>Entradas explícitas</span></h3>
+
+<p>Entradas explícitas são recursos que estão listados explicitamente na <code style="font-style: normal;">CACHE</code> seção de um arquivo de manifesto cache.</p>
+
+<h3 id="Entradas_de_rede"><span>Entradas de rede</span></h3>
+
+<p><span>A <code>NETWORK</code> seção de um arquivo de manifesto de cache especifica recursos para que uma aplicação web requer acesso online.</span> <span>Entradas de rede em um cache de aplicativo são essencialmente um -URIs "whitelist on-line" especificadas na <code>NETWORK</code> seção são carregados a partir do servidor em vez do cache.</span><span>Isso permite que o modelo de segurança do navegador proteger o usuário de possíveis violações de segurança, limitando o acesso aos recursos aprovados.</span></p>
+
+<p>Como exemplo, você pode usar as entradas de rede para carregar e executar scripts e outros códigos do servidor em vez do cache:</p>
+
+<pre>CACHE MANIFEST
+NETWORK:
+/api
+</pre>
+
+<p>A seção manifesto de cache listados acima assegura que os pedidos para carregar recursos contidos no <code><a href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> subtree sempre ir para a rede sem tentar acessar o cache.</p>
+
+<div class="note"><strong>Nota</strong>: A simples omissão entradas master (arquivos que têm o manifest atributo definido no html elemento) a partir do arquivo de manifesto não teria o mesmo resultado, pois as entradas de mestre será acrescentado e, posteriormente, servido a partir das-o cache do aplicativo.</div>
+
+<h3 id="Entradas_de_fallback"><span>Entradas de fallback</span></h3>
+
+<p><span>Entradas de fallback são usados ​​quando uma tentativa de carregar um recurso falhar.</span> <span>Por exemplo, digamos que o arquivo de manifesto de cache</span> <code><a href="http://www.example.com/example.appcache" rel="freelink">http://www.example.com/example.appcache</a></code>  inclui o seguinte conteúdo:</p>
+
+<pre>CACHE MANIFEST
+FALLBACK:
+example/bar/ example.html
+</pre>
+
+<p>Qualquer pedido de <code><a href="http://www.example.com/example/bar/" rel="freelink">http://www.example.com/example/bar/</a></code> <span>ou qualquer de seus subdiretórios e seu conteúdo com que o navegador para emitir uma solicitação de rede para tentar carregar o recurso solicitado.</span> <span>Se a tentativa falhar, devido a uma falha de rede ou um erro no servidor de algum tipo, o navegador carrega o arquivo <code>example.html</code>.</span></p>
+
+<h2 id="Estados_do_cache"><span>Estados do cache</span></h2>
+
+<p><span>Cada cache de aplicativo tem um <strong>estado,</strong> o que indica a condição atual do cache.</span> <span>Caches que compartilham o mesmo URI manifesto compartilham o mesmo estado de cache, o que pode ser um dos seguintes procedimentos:</span></p>
+
+<dl>
+ <dt><code>UNCACHED</code></dt>
+ <dd>Um valor especial que indica que um objeto de cache do aplicativo não está totalmente inicializado.</dd>
+ <dt><code>IDLE</code></dt>
+ <dd>O cache de aplicativo não está neste momento em processo de ser atualizado.</dd>
+ <dt><code>CHECKING</code></dt>
+ <dd>O manifesto está sendo buscado e verificado se há atualizações.</dd>
+ <dt><code>DOWNLOADING</code></dt>
+ <dd>Os recursos estão sendo baixados para ser adicionado ao cache, devido a um manifesto de recursos alterado.</dd>
+ <dt><code>UPDATEREADY</code></dt>
+ <dd><span>Há uma nova versão do cache do aplicativo disponível.</span> <span>Há um correspondente <code>updateready</code> evento, que é acionado em vez do <code>cached</code> de eventos quando uma nova atualização já foi baixado, mas ainda não activado através do <code>swapCache()</code> método.</span></dd>
+ <dt><code>OBSOLETE</code></dt>
+ <dd>O grupo de cache do aplicativo é agora obsoleto.</dd>
+</dl>
+
+<h2 id="Testando_se_há_atualizações_para_o_manifesto_de_cache"><span>Testando se há atualizações para o manifesto de cache</span></h2>
+
+<p><span>Você pode programaticamente testar para ver se um aplicativo tem um arquivo de manifesto cache atualizado, usando JavaScript.</span> <span>Uma vez que um arquivo de manifesto de cache pode ter sido atualizado antes de um script atribui ouvintes de eventos para testar atualizações, os scripts deve sempre testar<code>window.applicationCache.status</code> .</span></p>
+
+<pre class="brush: js">function onUpdateReady() {
+  alert('found new version!');
+}
+window.applicationCache.addEventListener('updateready', onUpdateReady);
+if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+  onUpdateReady();
+}</pre>
+
+<p>Para iniciar manualmente o teste para um novo arquivo de manifesto, você pode usar <code style="font-style: normal;">window.applicationCache.update()</code> .</p>
+
+<h2 id="Recomendações">Recomendações</h2>
+
+<ul>
+ <li><span>Nunca acessar os arquivos armazenados em cache utilizando parâmetros GET tradicionais (como o <code>other-cached-page.html?parameterName=value</code>).</span> <span>Isso fará com que o desvio do cache do navegador e tentar obtê-lo a partir da rede.</span> <span>Para conectar-se a recursos armazenados em cache que têm parâmetros analisados ​​em parâmetros de uso de JavaScript na parte hash da ligação, como <code>other-cached-page.html#whatever?parameterName=value</code> .</span></li>
+ <li><span>Quando os aplicativos são armazenados em cache, simplesmente atualizar os recursos (arquivos) que são usados ​​em uma página da web não é suficiente para atualizar os arquivos que foram armazenados em cache.</span> <span>É necessário atualizar o arquivo de manifesto de cache em si antes de o navegador recuperar e usar os arquivos atualizados.</span> <span>Você pode fazer isso por meio de programação usando <code>window.applicationCache.swapCache()</code> , embora que os recursos que já foram carregados não serão afetados.</span> <span>Para certificar-se de que os recursos são carregados a partir de uma nova versão do cache do aplicativo, atualizar a página é o ideal.</span></li>
+ <li><span>É uma boa idéia para definir cabeçalhos expira em seu servidor web para <code>*.appcache</code> arquivos para expirar imediatamente.</span> <span>Isso evita o risco de cache dos arquivos de manifesto.</span> <span>Por exemplo, no Apache é possível especificar uma configuração tal como se segue:</span> <code>ExpiresByType text/cache-manifest "access plus 0 seconds"</code></li>
+</ul>
+
+<h2 id="Compatibilidade_do_navegador"><span>Compatibilidade do navegador</span></h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div>
+<div id="compat-desktop">
+<table class="compat-table" style="height: 57px; width: 763px;">
+ <tbody>
+  <tr>
+   <th>Recurso</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Suporte básico</td>
+   <td>4.0</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[1]</sup></td>
+   <td>10.0</td>
+   <td>10.6</td>
+   <td>4.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table" style="height: 57px; width: 765px;">
+ <tbody>
+  <tr>
+   <th>Recurso</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Suporte básico</td>
+   <td>2.1</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>1.0.1<sup>[2]</sup></td>
+   <td>11.0<sup>[3]</sup></td>
+   <td>11.0</td>
+   <td>3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+
+<div> </div>
+
+<p>Nota: [1] As versões do Firefox antes de 3,5 ignora as seções da rede e fallback do arquivo de manifesto cache.<br>
+           [2] Quando usar AppCache para prover compatibilidade offline no FirefoxOS hosted App, você necessita declarar no arquivo manifest.webapp . Procure mais informações no campo <a href="/pt-BR/Apps/Manifest">appcache_path</a>.<br>
+           [3] Recarregar a página no Internet Explorer móvel irá limpar o cache da aplicação, então a página irá falhar. No entanto, fechar a página e abrir via favoritos, funcionará novamente.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a href="http://www.html5rocks.com/pt/tutorials/appcache/beginner/" title="http://www.html5rocks.com/en/tutorials/appcache/beginner/">HTML5Rocks - Um Guia do Iniciante para Usar o Cache da Aplicação</a></li>
+ <li><a href="https://translate.google.com/translate?hl=en&amp;sl=eu&amp;tl=pt&amp;u=http%3A%2F%2Falistapart.com%2Farticle%2Fapplication-cache-is-a-douchebag" title="http://alistapart.com/article/application-cache-is-a-douchebag">A List Apart: Cache de aplicação é um Douchebag</a></li>
+ <li><a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;tl=pt&amp;u=https%3A%2F%2Fhacks.mozilla.org%2F2010%2F01%2Foffline-web-applications%2F" title="http://hacks.mozilla.org/2010/01/offline-web-applications/">Mozilla hacks </a>- Demos de aplicativos offline e explanação de como funciona.</li>
+ <li><a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;tl=pt&amp;u=https%3A%2F%2Fhtml.spec.whatwg.org%2Fmultipage%2Fbrowsers.html%23offline" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#offline">HTML 5 - Rascunho de Trabalho: Aplicações web offline</a></li>
+ <li><a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;tl=pt&amp;u=http%3A%2F%2Fwww.w3.org%2FTR%2Foffline-webapps%2F" title="http://www.w3.org/TR/offline-webapps/">W3C Grupo de Trabalho - Nota: Aplicações web Offline</a></li>
+ <li><a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;tl=pt&amp;u=http%3A%2F%2Fdeveloper.teradata.com%2Fblog%2Fjs186040%2F2011%2F11%2Fhtml5-cache-manifest-an-off-label-usage" title="http://developer.teradata.com/blog/js186040/2011/11/html5-cache-manifest-an-off-label-usage">HTML5 Cache do Manifesto: Um uso do Off-label</a></li>
+ <li><a href="http://manifest-validator.com" title="http://manifest-validator.com">Validador do Manifesto do Cache</a></li>
+ <li><a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;tl=pt&amp;u=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Ftopics%2Foffline%2520mobile%2520app%2520example%2F">IBM developerWorks</a> - Diversos artigos relacionados ao cache de aplicação.</li>
+ <li>{{interface("nsIApplicationCache")}}</li>
+ <li>{{interface("nsIApplicationCacheNamespace")}}</li>
+ <li>{{interface("nsIApplicationCacheContainer")}}</li>
+ <li>{{interface("nsIApplicationCacheChannel")}}</li>
+ <li>{{interface("nsIApplicationCacheService")}}</li>
+ <li>{{interface("nsIDOMOfflineResourceList")}}</li>
+</ul>
+
+<div>{{HTML5ArticleTOC}}</div>
+</div>

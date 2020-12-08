@@ -1,0 +1,155 @@
+---
+title: Repositório Add-on
+slug: Mozilla/Add-ons/Repositorio_Add-on
+translation_of: Mozilla/JavaScript_code_modules/Add-on_Repository
+---
+<p>{{ gecko_minversion_header("2") }}{{LegacyAddonsNotice}}</p>
+
+<p>The Add-on Repository is responsible for finding available add-ons; it provides an interface for interacting with the <a class="external" href="http://addons.mozilla.org" title="http://addons.mozilla.org/">addons.mozilla.org</a> (AMO) site. Its API provides URLs that can be visited to browse the repository's add-ons. The API also offers two ways to search for and retrieve an array of <a href="/pt-BR/docs/Mozilla/Add-ons/Add-on_Manager/Addon">Addon</a> instances: {{ manch("retrieveRecommendedAddons") }}, which returns a list of recommended add-ons, and {{ manch("searchAddons") }}, which performs a search of the repository.</p>
+
+<p>These searches are asynchronous; results are passed to the provided <code><a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a></code> object when the search is completed. Results passed to the <code><a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a></code> object only include add-ons that are compatible with the current application and are not already installed or in the process of being installed. <code>AddonRepository</code> can only process one search at a time. A new search will immediately fail if the <code>AddonRepository</code> is already handling another search request.</p>
+
+<p>To import the Add-on Repository code module, use:</p>
+
+<pre>Components.utils.import("resource://gre/modules/AddonRepository.jsm");
+</pre>
+
+<h2 id="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>string <a href="#getRecommendedURL()">getRecommendedURL</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>string <a href="#getSearchURL()">getSearchURL</a>(in string searchTerms)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#cancelSearch()">cancelSearch</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#retrieveRecommendedAddons()">retrieveRecommendedAddons</a>(in integer maxResults, in <a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a> callback)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#searchAddons()">searchAddons</a>(in string searchTerms, in integer maxResults, in <a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a> callback)</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Properties">Properties</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>homepageURL</code></td>
+   <td><code>string</code></td>
+   <td>The URL of the repository site's home page.</td>
+  </tr>
+  <tr>
+   <td><code>isSearching</code></td>
+   <td><code>boolean</code></td>
+   <td><code>true</code> if a search is currently in progress; otherwise <code>false</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="getRecommendedURL()">getRecommendedURL()</h3>
+
+<p>Returns the URL that can be visited to see recommended add-ons.</p>
+
+<pre>string getRecommendedURL();</pre>
+
+<h6 id="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value">Return value</h6>
+
+<p>An URL indicating the repository's page of recommended add-ons.</p>
+
+<h3 id="getSearchURL()">getSearchURL()</h3>
+
+<p>Returns an URL of a web page that can be visited to see search results for the specified search terms.</p>
+
+<pre>string getSearchURL(
+  in string searchTerms
+);</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>searchTerms</code></dt>
+ <dd>Search terms used to search the repository.</dd>
+</dl>
+
+<h6 id="Return_value_2">Return value</h6>
+
+<p>The URL of the search results page for the specified search terms.</p>
+
+<h3 id="cancelSearch()">cancelSearch()</h3>
+
+<p>Cancels the search in progress. Does nothing if there is no search in progress.</p>
+
+<pre>void cancelSearch();</pre>
+
+<h6 id="Parameters_3">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="retrieveRecommendedAddons()">retrieveRecommendedAddons()</h3>
+
+<p>Begins a search for recommended add-ons in the repository. The list of recommended add-ons frequently changes. Results will be passed to the given <code><a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a></code> callback.</p>
+
+<pre>void retrieveRecommendedAddons(
+  in integer maxResults,
+  in SearchCallback callback
+);</pre>
+
+<h6 id="Parameters_4">Parameters</h6>
+
+<dl>
+</dl>
+
+<dl>
+ <dt><code>maxResults</code></dt>
+ <dd>The maximum number of results to return.</dd>
+ <dt><code>callback</code></dt>
+ <dd>The <code><a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a></code> callback to which results will be delivered.</dd>
+</dl>
+
+<h3 id="searchAddons()">searchAddons()</h3>
+
+<p>Begins a search for add-ons in this repository. Results will be passed to the given callback.</p>
+
+<pre>string searchAddons(
+  in string searchTerms,
+  in integer maxResults,
+  in SearchCallback callback
+);</pre>
+
+<h6 id="Parameters_5">Parameters</h6>
+
+<dl>
+</dl>
+
+<dl>
+ <dt><code>searchTerms</code></dt>
+ <dd>The search terms to pass to AMO. The results will match what you would get if you typed this string in the search box on the AMO web site.</dd>
+ <dt><code>maxResults</code></dt>
+ <dd>The maximum number of results to return.</dd>
+ <dt><code>callback</code></dt>
+ <dd>The <code><a href="/en/Addons/Add-on_Repository/SearchCallback" title="en/Addons/Add-on Repository/SearchCallback">SearchCallback</a></code> callback to pass results to.</dd>
+</dl>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en/Addons/Interfacing_with_the_Add-on_Repository" title="en/Addons/Interfacing with the Add-on Repository">Interfacing with the Add-on Repository</a></li>
+</ul>

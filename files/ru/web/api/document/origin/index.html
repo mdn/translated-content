@@ -1,0 +1,109 @@
+---
+title: Document.origin
+slug: Web/API/Document/origin
+tags:
+  - API
+  - DOM
+  - Read-only
+  - Интерфейс
+  - Свойство
+  - Эксперементальный
+translation_of: Web/API/Document/origin
+---
+<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+
+<div> </div>
+
+<p><strong>Document.origin — </strong>это свойство, доступное только для чтения, которое возвращает <strong>origin </strong>документа. В большинстве случаев это свойство эквивалентно  <code><strong>document.defaultView.location.origin</strong>.</code></p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">var origin = document.origin;
+// На этой странице вернёт:'https://developer.mozilla.org'
+
+var origin = document.origin;
+// Для "about:blank" вернёт:'null'
+
+var origin = document.origin;
+// Для "data:text/html,&lt;b&gt;foo&lt;/b&gt;" вернёт:'null'
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-document-origin', 'Document.origin')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Начальное определение (выставляется во время инициализации DOM).</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#origin:document', 'origin for Document objects')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Начальное определение (выставляется во время инициализации DOM).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(41)}}</td>
+   <td>{{CompatNo}} {{bug(931884)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Свойство {{domxref("URLUtils.origin")}}.</li>
+</ul>

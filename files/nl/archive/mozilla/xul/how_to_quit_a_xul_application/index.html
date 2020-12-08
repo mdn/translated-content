@@ -1,0 +1,38 @@
+---
+title: How to Quit a XUL Application
+slug: Archive/Mozilla/XUL/How_to_Quit_a_XUL_Application
+tags:
+  - XULRunner
+translation_of: Archive/Mozilla/XUL/How_to_quit_a_XUL_application
+---
+<p>Een script kan de applicatie de opdrachtgeven netjes af te sluiten of deze na een fatale fout geforceerd af te sluiten. Dit kan met de <a href="nl/NsIAppStartup">nsIAppStartup</a> interface.
+</p>
+<pre class="eval">&lt;script&gt;
+function quit (aForceQuit)
+{
+  var appStartup = Components.classes[<a class=" link-mailto" href="mailto:'@mozilla.org" rel="freelink">'@mozilla.org</a>/toolkit/app-startup;1'].
+    getService(Components.interfaces.nsIAppStartup);
+
+  // eAttemptQuit will try to close each XUL window, but the XUL window can cancel the quit
+  // process if there is unsaved data. eForceQuit will quit no matter what.
+  var quitSeverity = aForceQuit ? Components.interfaces.nsIAppStartup.eForceQuit :
+                                  Components.interfaces.nsIAppStartup.eAttemptQuit;
+  appStartup.quit(quitSeverity);
+}
+&lt;/script&gt;
+</pre>
+<p>Als je de functie zo aanroept zal hij geforceerd worden gesloten. Dit gebruik je na bv een fatale fout.
+</p>
+<pre class="eval">&lt;script&gt;
+try {
+  doSomething();
+}
+catch (e) {
+  quit(true);
+}
+&lt;/script&gt;
+</pre>
+<p>Bij het "Quit" menuitem wat de gebruiker gebruikt moet er normaal gesproken gevraagt worden om niet opgeslagen gegevens op te slaan. De gebruiker kan deze afsluiting anuleren.
+</p>
+<pre class="eval">&lt;menuitem label="Quit" oncommand="quit(false);"/&gt;
+</pre>{{ languages( { "en": "en/How_to_Quit_a_XUL_Application" } ) }}

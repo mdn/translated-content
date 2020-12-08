@@ -1,0 +1,105 @@
+---
+title: Szczegóły modelu pudełkowego
+slug: Mozilla/Tech/XUL/Kurs_XUL/Szczegóły_modelu_pudełkowego
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Box_Model_Details
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_elementów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pola_grup">Następny  »</a></p>
+</div>
+<p></p><p>Widzieliśmy już dużo własności modelu pudełkowego. Tutaj znajdziemy trochę szczegółów z przykładami. </p>
+<h3 id="Wi.C4.99cej_szczeg.C3.B3.C5.82.C3.B3w_uk.C5.82adu_graficznego" name="Wi.C4.99cej_szczeg.C3.B3.C5.82.C3.B3w_uk.C5.82adu_graficznego"> Więcej szczegółów układu graficznego </h3>
+<p>Własności stylu, takie jak <code>min-width</code> i <code>max-height</code>, mogą być dodawane do każdego elementu. Wstawialiśmy je już do przycisków i pól tekstowych, ale możemy je również dodać do pól odstępu czy pudełek. Dodatkowo do każdego elementu może być dodany atrybut <code>flex</code>.
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_1.xul">Podgląd</a>
+</p>
+<pre>&lt;hbox flex="1"&gt;
+  &lt;button label="Lewo" style="min-width: 100px;" flex="1"/&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;button label="Prawo" style="min-width: 100px;" flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p>W powyższym przykładzie wszystkie trzy elementy zmieniają swój rozmiar, ponieważ mają ustawiony atrybut <code>flex</code>. Obydwa przyciski maja ustawioną minimalną szerokość 100 pikseli i nigdy się nie zmniejszą poniżej tej wartości, ale mogą się powiększać. Okno powinno być niewiele szersze niż 200 pikseli. Jest to szerokość wystarczająca, aby wyświetlić oba przyciski, dlatego wstępnie elastyczność nie zmieni ich rozmiaru.
+</p>
+<div class="float-right"><img alt="grafika:boxdet1.png"></div>
+<p>Jak widać na obrazku obok, znajdują się tam dwa przyciski, które są rozciągnięte w pionie, aby wypełnić pudełko, które w tym przypadku jest typu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code>. Można zapobiec nadmiernemu rozciąganiu się pudełka poprzez ustawianie maksymalnej wysokości elementów w jego wnętrzu lub lepiej, samego pudełka. Jeśli ta wartość zostanie ustawiona, wszystkie elementy pudełka będą nim ograniczane. W tym wypadku pojawia się problem, gdyż musimy wiedzieć z góry, ile miejsca potrzebujemy, aby pomieścić wszystkie elementy w pudełku.
+Atrybut <code><code id="a-align"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/align">align</a></code></code> kontroluje zachowanie się poziomego pudełka. Poniższy przykład demonstruje jego działanie.
+</p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_2.xul">Podgląd</a>
+</p>
+<pre>&lt;hbox flex="1" align="top"&gt;
+  &lt;button label="Lewo" style="min-width: 100px;" flex="1"/&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;button label="Prawo" style="min-width: 100px;" flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<h4 id="Podsumowanie_modelu_pude.C5.82kowego" name="Podsumowanie_modelu_pude.C5.82kowego"> Podsumowanie modelu pudełkowego </h4>
+<p>Realizując skomplikowane układy graficzne, trzeba zazwyczaj zagnieżdżać wiele pudełek, określać minimalne i maksymalne wymiary elementów oraz tworzyć pewne elementy jako elastyczne. Najlepszym układem jest taki, który można wyświetlić bezproblemowo w oknie o różnej wielkości. Model pudełkowy może być trudny do zrozumienia bez samodzielnego wypróbowania różnych kombinacji i możliwości. </p><p>Poniżej są wypisane najważniejsze cechy dostępnych pudełek: </p><p><b>Pudełka poziome</b>
+</p>
+<ol><li> Elementy potomne układane są obok siebie w poziomie (w rzędzie).
+</li><li> Elementy elastyczne są rozciągane w poziomie.
+</li><li> Pakowanie (<code>pack</code>) kontroluje ułożenie elementów potomnych w poziomie.
+</li><li> Wyrównanie (<code>align</code>) kontroluje, w jaki sposób rząd elementów jest wyrównywany w pionie.
+</li></ol>
+<p><b>Pudełka pionowe</b>
+</p>
+<ol><li> Elementy potomne układane są jeden pod drugim (w kolumnie).
+</li><li> Elementy elastyczne są rozciągane w pionie.
+</li><li> Pakowanie (<code>pack</code>) kontroluje pionowe ułożenie elementów potomnych.
+</li><li> Wyrównanie (<code>align</code>) kontroluje, w jaki sposób kolumna elementów jest wyrównywana w poziomie.
+</li></ol>
+<p>Pudełka mogą być wstawiane w dowolnym miejscu pliku XUL, w tym także wewnątrz elementów HTML (np. jako tabele). Jednakże ich układ graficzny będzie wtedy częściowo kontrolowany przez element HTML, do którego zostały wstawione. Oznacza to, że atrybut <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code> może nie działać w sposób, jaki byśmy sobie tego życzyli. Należy pamiętać, że elastyczność dotyczy tylko tych elementów, które są bezpośrednio zastosowane wewnątrz pudełka lub elemencie dziedziczącym z pudełka.
+</p>
+<h3 id="Przyk.C5.82ady_uk.C5.82adu_graficznego" name="Przyk.C5.82ady_uk.C5.82adu_graficznego"> Przykłady układu graficznego </h3>
+<h5 id="Zastosowanie_odst.C4.99p.C3.B3w" name="Zastosowanie_odst.C4.99p.C3.B3w"> Zastosowanie odstępów </h5>
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_3.xul">Podgląd</a>
+</p>
+<pre>&lt;hbox&gt;
+  &lt;button label="Jeden"/&gt;
+  &lt;spacer style="width: 5px"/&gt;
+  &lt;button label="Dwa"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p>Tutaj <code><code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> (odstęp) został użyty jako separator pomiędzy dwoma przyciskami, odstęp jest stały i wynosi 5 pikseli. To samo mogliśmy osiągnąć ustawiając marginesy używając własności CSS <code>margin</code>.
+</p>
+<h4 id="Wy.C5.9Brodkowanie_przycisk.C3.B3w" name="Wy.C5.9Brodkowanie_przycisk.C3.B3w"> Wyśrodkowanie przycisków </h4>
+<p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_4.xul">Podgląd</a>
+</p>
+<pre>&lt;hbox pack="center" align="center" flex="1"&gt;
+  &lt;button label="Look at Me!"/&gt;
+  &lt;button label="Push Me!"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p>W tym przykładzie mamy elastyczne pudełko z dwoma przyciskami wewnątrz. Pudełko posiada atrybut <code><code id="a-pack"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/pack">pack</a></code></code>, dzięki któremu możemy wyśrodkować przyciski w poziomie. Atrybut <code><code id="a-align"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/align">align</a></code></code> wyrównuje przyciski w pionie. W efekcie przyciski będą wyśrodkowane w obu kierunkach. Jeśli zamiast pudełka typu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> użyte zostało by pudełko <code><code><a href="/pl/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code>, efekt byłby ten sam z tą różnicą, że przyciski były by ustawione jeden pod drugim a nie obok siebie.
+</p>
+<h4 id="Okno_dialogowe_Znajd.C5.BA_tekst" name="Okno_dialogowe_Znajd.C5.BA_tekst"> Okno dialogowe &lt;tt&gt;Znajdź tekst&lt;/tt&gt; </h4>
+<p><span id="Przyk%C5%82ad_5"><a id="Przyk%C5%82ad_5"></a><strong>Przykład 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_5.xul">Podgląd</a>
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="findtext" title="Znajdź tekst" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;vbox flex="3"&gt;
+    &lt;label control="t1" value="Szukaj tekstu:"/&gt;
+    &lt;textbox id="t1" style="min-width: 100px;" flex="1"/&gt;
+  &lt;/vbox&gt;
+
+  &lt;vbox style="min-width: 150px;" flex="1" align="start"&gt;
+    &lt;checkbox id="c1" label="Uwzględnij wielkość liter"/&gt;
+    &lt;spacer flex="1" style="max-height: 30px;"/&gt;
+    &lt;button label="Znajdź"/&gt;
+  &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+<div class="float-right"><img alt="grafika:boxdet-ex3.png"></div>
+<p>Okno składa się z dwóch pudełek, jedno dla pola tekstowego, drugie dla pola wyboru oraz przycisku. Oba pudełka są elastyczne, lecz elastyczność lewego pudełko jest trzykrotnie większa od prawego, co sprawia, że podczas zmiany rozmiaru okna otrzymuje trzy razy więcej dodatkowego miejsca. Minimalna wielkość prawego pudełka jest wyznaczona i wynosi 150 pikseli. </p><p>Pole tekstowe jest elastyczne, więc zmienia swoją wielkość podczas zmiany rozmiaru okna. Pole to również ma wyznaczoną minimalna szerokość, która wynosi 100 pikseli. Pole wyboru pojawi się w prawym pudełku wraz ze swoją etykietą. Poniżej pola wyboru wstawiamy pustą przestrzeń, która będzie zmieniała swój rozmiar podczas zmiany wielkości okna, jednak nie będzie ona większa niż 30 pikseli. W rezultacie pole wyboru i przycisk &lt;tt&gt;Znajdź&lt;/tt&gt; będą rozdzielone od siebie pustą przestrzenią nie większą niż 30 pikseli. </p><p>Drugie pudełko zostało utworzone z atrybutem <code>start</code>. Powoduje to wyrównanie elementów potomnych do lewej krawędzi. Jeśli nie zdefiniujemy wartości tego atrybutu, to domyślnym ustawieniem jest <code>stretch</code>, powodujące rozciąganie elementów potomnych w poziomie. Ponieważ nie chcemy, aby przycisk &lt;tt&gt;Znajdź&lt;/tt&gt; zmieniał rozmiar, musimy ustawić wyrównanie. </p><p>Następnie dowiemy się więcej o specjalnych typach pudełka - <a href="pl/Kurs_XUL/Pola_grup">polach grupy</a>. </p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_elementów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pola_grup">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

@@ -1,0 +1,237 @@
+---
+title: Настройка среды разработки
+slug: XUL_School/Настройка_среды_разработки
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Setting_Up_a_Development_Environment
+---
+<p>{{ PreviousNext("XUL_School/The_Essentials_of_an_Extension", "XUL_School/Adding_menus_and_submenus") }}</p>
+
+<h2 id="Выбираем_правильные_инструменты">Выбираем правильные инструменты</h2>
+
+<p>Есть три основных инструмента, которые на наш взгляд необходимы для эффективной разработки дополнения: редактор исходного кода, сиcтема управления версиями и система сборки.</p>
+
+<p>Что касается редактирования кода, официальной интегрированной среды разработки от компании Mozilla нет. С другой стороны, расширения используют те же (или похожие) языки, используемые для веб-разработки, поэтому для этой задачи подойдут большинство текстовых редакторов или интегрированных сред разработки. Большинство XUL-инструментов и плагинов, которые вы найдете в сети Интернет, являются простыми шаблонами, которые создают структуру папок проекта, и это не очень помогает.</p>
+
+<p>Мы рекомендуем текстовый редактор <a class="external" href="http://www.activestate.com/komodo_edit/" title="http://www.activestate.com/komodo_edit/">Komodo Edit</a>. Он бесплатный, с открытым исходным кодом и кроссплатформенный. Он основан на платформе Mozilla XULRunner, поэтому поддерживает некоторые особенности при разработке расширений Firefox. Komodo Edit поддерживает автодополнение тегов и аттрибутов XUL, расширение <a href="/en-US/docs/Web/CSS/Mozilla_Extensions" title="en/Mozilla CSS Extensions">Mozilla's CSS extensions</a> (CSS значения и свойства, начинающиеся на "-moz"). У редактора есть система дополнений, схожая с той, что используется в браузере Firefox, и есть несколько Komodo расширений, которые предоставляют дополнительную помощь в разработке. Это приложение предоставляет больше возможностей, по сравнении с множеством других редакторов, поэтому мы рекомендуем вам попровать его. Все наши примеры исходных кодов разрабатываются на Komodo Edit, поэтому если в скачанных файлах с примерами вы увидете расширения <em>.kpf</em> или <em>.komodoproject</em> , то знайте, что это файлы проекта Komodo.</p>
+
+<p>Что касается системы управления версиями, мы рекомендует лишь чтобы она у вас была. Самая распространенная система - это GitHub, но подойдет и любая другая.</p>
+
+<p>Для упаковки XPI-файлов мы используем утилиту <a class="external" href="http://www.gnu.org/software/make/">make</a>. Мы выбрали этот способ, потому что он используется компанией Mozilla для сборки Firefox, и доступен для большинства операционных систем. Утилита <em>make</em> - это стандартный инструмент для Unix-совместимых операционных систем. Она может быть установлена на Mac OS X в составе пакета программ XCode Tools и на Windows с пакетом программ <a class="external" href="http://www.cygwin.com/">cygwin</a>. При установке <em>cygwin</em> у вас будет возможность явно выбрать утилиты <em>make</em> и <em>zip</em> из длинного списка для скачивания и установки.</p>
+
+<p>Также убедитесь в том, что утилита <em>make</em> корректно прописалась в системную директорию для запуска. Для этого после ее установки выполните команду "make -ver" в командной строке, и если все сделано правильно - на экран будет выведена версия утилиты <em>make</em>.</p>
+
+<p>Мы рекомендуем установить утилиту <em>make</em> в вашей операционной системе, поскольку все наши примеры предоставляются со всеми необходимыми файлами для сборки и установки получившегося XPI-файла используя этот инструмент. Это сбережет вам время при упаковке. Или вы можете создать свою собственную систему, используя бат-файл, утилиту Ant или любую другую в зависимости от ваших предпочтений. В конечном счете, вы можете просто сжимать содержимое папки <em>src</em> используя любой zip-архиватор или любой другой, и получить аналогичный результат.</p>
+
+<h2 id="Build_system">Build system</h2>
+
+<p>Let's start by downloading the project used to build the second version of Hello World, from the exercise in the last section.</p>
+
+<p><a href="/@api/deki/files/5142/=HelloWorld2.zip" title="https://developer.mozilla.org/@api/deki/files/5142/=HelloWorld2.zip">Hello World 2 Project</a>.</p>
+
+<p>Unzip the file anywhere you want. Inside the <em>HelloWorld2</em> directory, you'll see two directories: <em>bin</em> and <em>src</em>. The <em>bin</em> directory should be empty. This is where all the resulting build files will be created, and where you'll find the extension XPI file once you get it to build.</p>
+
+<p>Open the project file (<em>HelloWorld2.komodoproject</em>) from the <em>src</em> directory in Komodo Edit. In the Projects tab you should be able to see the directory structure inside the <em>src</em> directory. This structure should be familiar, as it is almost identical to the unpacked XPI from the previous section.</p>
+
+<p>The only notable additions is a file named <em>Makefile</em> under <em>src</em>. This is the file that <em>make</em> uses to build the XPI. You should take some time to read it and understand it, or at least identify the parts that you should change to get a project of your own going. This <a class="external" href="http://www.chemie.fu-berlin.de/chemnet/use/info/make/make_toc.html">GNU Make Manual</a> is a very good reference to get to know <em>make</em> and Makefiles.</p>
+
+<p>In most cases you'll only need to change the first lines in <em>Makefile</em>. These define the extension name, the extension id (as specified in <em>install.rdf</em>) and the name of the profile directory where the extension will be installed during development and testing. More about this further ahead.</p>
+
+<p>Let's try and build the XPI from the command line first. Open the command line program in your system and navigate to the <em>src</em> directory in your project. Run the following command:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">make</pre>
+</div>
+</div>
+
+<p>That's it. If everything went well, you should see an output similar to this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">Creating XPI file.
+  adding: install.rdf (deflated 50%)
+  adding: chrome.manifest (deflated 50%)
+  adding: content/browserOverlay.js (deflated 42%)
+  adding: content/browserOverlay.xul (deflated 69%)
+  adding: skin/browserOverlay.css (stored 0%)
+  adding: locale/en-US/browserOverlay.dtd (deflated 52%)
+  adding: locale/en-US/browserOverlay.properties (stored 0%)
+Creating XPI file. Done!
+
+Build finished successfully.
+</pre>
+</div>
+</div>
+
+<p>If you inspect the <em>bin</em> directory, you should see the <em>xulschoolhello2.xpi</em> file.</p>
+
+<p>If you run <em>make</em> again, you'll only see the last line of the build process. That is because <em>make</em> can tell that the file in the <em>bin</em> directory is up to date, and nothing needs to be done. Making changes on source files will make <em>make</em> run the necessary steps to build the XPI again.</p>
+
+<p>You can clean up the <em>bin</em> directory by just running the following command (again, from the <em>src</em> directory):</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">make clean</pre>
+</div>
+</div>
+
+<p>You can also run these commands from Komodo. Click on Tools &gt; Run Command.... In the "Run" textbox you should type this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">bash -c <span class="code-quote">"make"</span></pre>
+</div>
+</div>
+
+<p>Or replace "make" with "make clean" for the clean command. The "bash -c" part forces Komodo to use <em>bash</em>, which for some reason can't be set properly as the default command shell. It isn't necessary to add this, but it's better so that it is consistent with the <em>make</em> command we'll see next.</p>
+
+<p>In the "Start in" textbox you should choose <em>%p </em>(directory path of active project). If you don't see this textbox, click on the "More" button. You also have the option to save the command, by clicking on the "Add to Toolbox" checkbox. To see the Toolbox, click on View &gt; Tabs &gt; Toolbox, from the main menu. With that, you should now have a very easy way to build your XPI, by just double clicking on the created commands.</p>
+
+<p>We can make it even better. Once you're testing and debugging your code, you'll find that constantly building and installing an XPI can be very tedious. This is the reason why we introduced "make install". This only works if your extension is already installed in a Firefox profile. Just like in the provided project, you need the add-on id and profile location set in the file <em>Makefile</em>. We use this information to locate the installation path of the extension and overwrite the installed files. If Firefox is open at the time you run "make install", you'll have to restart it in order to see the changes. It's still better than installing the XPI all over again.</p>
+
+<p>In order to set the profile location to the right value, you should read the <a class="external" href="http://support.mozilla.com/en-US/kb/Profiles">support article on profiles</a>, at the Mozilla Support site. We'll also delve deeper in this topic later on in this section.</p>
+
+<p>To make "make install" work on non-Windows systems, you need an extra step. The install process requires using an environment variable called <em>OSTYPE</em>, which is not exported. Long story short, if you want to run it from a command line, you need to run:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">export OSTYPE; make install</pre>
+</div>
+</div>
+
+<p>And in the command in Komodo, you should enter the following:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">bash -c <span class="code-quote">"export OSTYPE; make install"</span></pre>
+</div>
+</div>
+
+<p>The <em>export</em> command won't work correctly unless you use "bash -c".</p>
+
+<div class="note">The file <em>Makefile</em> specifies which profile folder the add-on will be reinstalled to. This is set in the <em>profile_dir</em> variable (set to "xulschool-dev" in this case). When creating a development profile for your add-on, make sure you choose an easy name for the profile folder, and set it in your <em>Makefile</em> in order to take advantage of the install command.</div>
+
+<h3 id="Building_IDL_files">Building IDL files</h3>
+
+<p>Some extensions require developing XPCOM components to add certain advanced functions. There's a section dedicated to XPCOM in this tutorial, but we'll briefly discuss the impact it has on building the extension. You can skip this section and keep it present as a reference in case you do need to use XPCOM in your project.</p>
+
+<p>XPCOM interfaces are defined using IDL files. These are text files that define the attributes and methods in one or more interfaces. These IDL files are compiled into binary form and included in the extension as XPT files.</p>
+
+<p>To compile an IDL file to XPT, you need a command line tool called <em>xpidl</em>. This tool is included in the Mozilla <a href="/en/Gecko_SDK" title="en/Gecko SDK">Gecko SDK</a>. If you need to compile IDLs, go to the SDK page and download a compiled version for your system. Also note any prerequisites you may need. If your system is not listed in the supported builds, you'll have to build the SDK yourself from the Mozilla source. Good luck with that.</p>
+
+<p>You should also set up your environment so that <em>xpidl.exe</em> (or just <em>xpidl</em> on other systems) is in the default executable path, and also add a variable called GECKO_SDK, that points to your SDK build:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">export GECKO_SDK=/path/to/your/sdk</pre>
+</div>
+</div>
+
+<p>Our build system should pick it up from there. To make it work in Komodo in Unix-based systems, we add the command to the <em>.bash_login</em> file in the home directory, and we modify the commands to this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">bash -c <span class="code-quote">". ~/.bash_login; make"</span></pre>
+</div>
+</div>
+
+<p>An example project with XPCOM components is included in the XPCOM section. There is also a mention about building C++ XPCOM, which is something much more complicated.</p>
+
+<h3 id="Signing_extensions">Signing extensions</h3>
+
+<p>In order to provide additional security for your users, you can choose to <a href="/en/Signing_an_extension" title="en/Signing an extension">add a signature to your extension</a>. The signature verifies that you are the author of this extension, and it can only be done if you have a valid certificate provided by a trusted Certificate Authority.</p>
+
+<p>The only noticeable difference for the user is that the XPI installation dialog will say that the extension was created by you, making the dialog a little easier to trust. It's not common to sign extensions because most users will trust the official add-ons site (<a class="link-https" href="https://addons.mozilla.org" title="https://addons.mozilla.org">AMO</a>) rather than rely on extension signatures. On the other hand, it is standard practice for big companies to sign their extensions.</p>
+
+<p>You'll need to download some libraries in order to be able to sign your extension. Follow the <a href="/en/Signing_an_extension" title="en/Signing an extension"><span class="external">instructions</span></a>, and add something like the following to your Makefile:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java"># The directory where the signature sources are located.
+signature_dir := signature
+
+# The signing key /certificate file.
+signature_extra_files := $(build_dir)/META-INF/manifest.mf \
+                         $(build_dir)/META-INF/zigbert.sf
+# The signing key /certificate file.
+signature_rsa_file = $(build_dir)/META-INF/zigbert.rsa# The signing key /certificate file.
+signature_files := $(signature_extra_files) \
+                   $(signature_rsa_file)
+
+$(signature_files): $(build_dir) $(xpi_built)
+  @signtool -d $(signature_dir) -k $(cert_name) \
+  -p $(cert_password) $(build_dir)</pre>
+</div>
+</div>
+
+<p>Keep in mind that your password should not be in your Makefiles, and you must be very careful with the certificate information. Ideally this should be handled by a single person, and only done near the end of the release process. You should also have a different <em>make</em> command, such as <em>make signed</em> in order to distinguish the signed and unsigned development builds.</p>
+
+<h2 id="Firefox_profile_management">Firefox profile management</h2>
+
+<p>It is good development practice to keep your test environment separate from everything else. You don't want unstable extensions to break your everyday Firefox profile, risking data loss. It's much better to have a different "version" of Firefox for testing. This is what Firefox profiles are for.</p>
+
+<p>You can learn about setting up multiple Firefox profiles in the Mozilla Support article <a class="external" href="http://support.mozilla.com/en-US/kb/Managing+profiles">Managing Profiles</a>. You can have as many profiles as you like. You can also mix them with multiple Firefox installations. For instance, you may want to test your extension in Firefox 3.5 and Firefox 3.6, or test it in a localized version of Firefox. You can install as many Firefox versions as you want, and mix profiles and versions.</p>
+
+<p>On Windows and Linux it's easy to create shortcuts for every profile you create, using the commands mentioned in the support article.</p>
+
+<p>For Mac OS X developers, there is also a way to set up "shortcuts". You can do this by opening the Automator application, choosing Run Shell Script and then entering the profile-loading script in the textbox:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -p MyProfile &gt; /dev/<span class="code-keyword">null</span> &amp;</pre>
+</div>
+</div>
+
+<p>You can change "/dev/null" to a file location, in case you want to see <em>dump</em> output from Firefox, or other extensions. The last <em>&amp;</em> prevents Automator from waiting for your Firefox session to finish. Save this as an Application, not a Workflow. And you probably want to have these on your Desktop or Dock, for easy access.</p>
+
+<p>There are also some configuration changes you should make in your testing profiles, so that you get detailed error information in case something fails. The Firefox <a href="/en/Error_Console" title="en/Error Console">Error Console</a> (Tools &gt; Error Console) normally displays JavaScript errors that occur on web pages, but with some tweaking you can get error information from your extension. Read this piece on <a href="/en/Setting_up_extension_development_environment#Development_preferences" title="en/Setting up extension development environment#Development preferences"><span class="external">Development preferences</span></a>.</p>
+
+<h2 id="Developer_extensions">Developer extensions</h2>
+
+<p>There's a wide variety of Firefox extensions that aid web development and add-on development. A good place to look for them is the <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/browse/type:1/cat:4">Mozilla Add-ons site</a>, and there's also a good <a href="/en/Setting_up_extension_development_environment#Development_extensions" title="en/Setting up extension development environment#Development extensions"><span class="external">development extension list</span></a> here. You should also take some time to play around with the Web Developer tools that are included in Firefox. Some of them can be very useful for add-on development and overlap with the add-ons listed. In this section we'll cover a few that we have found to be very useful.</p>
+
+<h3 id="DOM_Inspector">DOM Inspector</h3>
+
+<p>The <a href="/en/DOM_Inspector" title="en/DOM Inspector"><span class="external">DOM Inspector</span></a> used to be part of Firefox as an installer option, but since Firefox 3 it has been separated as another add-on you can add and remove. It's a very useful inspection tool that lets you look into the DOM of HTML and XUL documents, as well as applied CSS rules and associated JavaScript objects. <a href="/en/DOM_Inspector/Introduction_to_DOM_Inspector" title="en/Introduction to DOM Inspector">Introduction to DOM Inspector</a> is a good guide on how to get started using it.</p>
+
+<p>The DOM inspector is particularly useful in finding out how to overlay a window, and how to replace default CSS style rules. You can see the names of the files involved, which gives you a good starting point when looking into the <a class="external" href="http://mxr.mozilla.org/">Mozilla source</a>. You can even change styles, attributes and execute Javascript code in it, although that's not completely reliable.</p>
+
+<h3 id="JavaScript_Debugger">JavaScript Debugger</h3>
+
+<p>The name says it all. The <a href="/en/Venkman" title="en/Venkman">Venkman JavaScript Debugger</a> is a great way to trace execution of your JavaScript code.</p>
+
+<p>To debug extension and browser code, right-click on the Loaded Scripts panel and uncheck Exclude Browser Files. The list of loaded scripts will grow long to include all of the scripts in Firefox. Having our file naming conventions prove very useful in this case. You can set breakpoints, step in and out of methods, and even get profiling information from Javascript execution. You can inspect variables, keep track of watch expressions, and evaluate arbitrary JS at any point in execution.</p>
+
+<p>This extension has seen little maintenance in quite some time, so it is very buggy. It is specially unreliable when debugging code in Javascript XPCOM and XBL files. Nevertheless, it is a valuable tool when trying to figure out why a certain function is misbehaving.</p>
+
+<h3 id="Tamper_Data">Tamper Data</h3>
+
+<p><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/966" title="https://addons.mozilla.org/en-US/firefox/addon/966">Tamper Data</a> intercepts HTTP requests and their responses. It allows you to cancel them and even replace payload data before it is sent. There are several similar extensions, such as <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/3829">Live HTTP Headers</a>, but Tamper Data is the one that we use the most. We'll cover more on HTTP debugging later on.</p>
+
+<h3 id="Firebug">Firebug</h3>
+
+<p>The <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1843" title="https://addons.mozilla.org/en-US/firefox/addon/1843">Firebug</a> extension includes pretty much all tools mentioned so far, but it's mostly focused on web development. The <a class="external" href="http://getfirebug.com/wiki/index.php/Chromebug_User_Guide" title="http://getfirebug.com/wiki/index.php/Chromebug_User_Guide">Chromebug</a> extension helps in making Firebug more useful for extension development, but it may still not be powerful enough to replace all of the previously mentioned add-ons.</p>
+
+<p>On the other hand, Firebug has a very friendly, integrated user interface, and sees much more development that its counterparts. It's definitely worth a try.</p>
+
+<h3 id="Leak_Monitor">Leak Monitor</h3>
+
+<p>Memory leaks have always been a big criticism drawn against Firefox. Mozilla has proven with time that they take memory usage seriously, improving performance on several critical areas and removing all kinds of memory leaks.</p>
+
+<p>However, extensions are also capable of causing memory leaks. If you want your extension to be included in the Mozilla Add-ons site, you better not have any memory leaks. <a href="/en/Using_XPCOM_in_JavaScript_without_leaking" title="en/Using XPCOM in JavaScript without leaking"><span class="external">Using XPCOM in JavaScript</span></a> has some guidelines you should follow to avoid them. One of the most common errors developers make is to register a JS event listener or observer, and never removing it. The simple practice of always including removal code for everything you add makes a big difference.</p>
+
+<p>To make sure your extension doesn't leak, you should use the <a href="/en/Leak_Monitor" title="en/Leak Monitor"><span class="external">Leak Monitor extension</span></a> when testing it. Always test opening and closing windows. Leaks usually surface when doing this.</p>
+
+<h2 id="Exercise">Exercise</h2>
+
+<ul>
+ <li>Set up a new Firefox profile for XUL School. Make sure you can open and close your XUL School Firefox without having to close the instance of Firefox you use to browse normally (you <em>use</em> Firefox, don't you?). Make any modifications you want to the XUL School project, and use <em>make</em> and <em>make install</em> to see the extension work with your changes.</li>
+ <li>Install DOM Inspector. Use it to locate the menu you created. Inspect the CSS rules Firefox applies to it by default. Look at the final, computed style for the menu items. Browse around the rest of the Firefox DOM, and try to figure out what the nodes correspond to in the Firefox UI.</li>
+ <li>Install the Tamper Data extension. Open the Tamper Data window and go to a AJAX-heavy page such as Gmail or Facebook (don't click on the Start Tamper button, it's not necessary for this). Try to identify what is going on with some of the requests being sent.</li>
+</ul>
+
+<p>Now that you know how to quickly monitor your project and test changes, we'll learn how to add new UI elements to Firefox, through overlays and new windows.</p>
+
+<p>{{ PreviousNext("XUL_School/The_Essentials_of_an_Extension", "XUL_School/Adding_menus_and_submenus") }}</p>
+
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast._</span></p>

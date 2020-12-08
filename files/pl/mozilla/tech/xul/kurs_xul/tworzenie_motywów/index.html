@@ -1,0 +1,171 @@
+---
+title: Tworzenie motywów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Tworzenie_motywów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Skin
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Modyfikacja_domyślnego_motywu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Lokalizacja">Następny  »</a></p>
+</div><p></p>
+
+<p>Artykuł opisuje jak utworzyć prosty motyw. Dla prostoty, tylko zastosujemy to do okna dialogowego <code>Znajdź pliki</code>.</p>
+
+<h2 id="Proste_motywy" name="Proste_motywy">Proste motywy</h2>
+
+<div class="float-right"><img alt="Grafika:cskin1.jpg"></div>
+
+<p>Obrazek poniżej ukazuje aktualne okno dialogowe Znajdź pliki. Utworzymy motyw, który będziemy mogli dodać do niego. Normalnie, motyw znalazłaby zastosowanie do całej aplikacji, ale my się tylko skupimy na oknie dialogowym Znajdź pliki, aby nasza praca stała się łatwiejsza. Z tego powodu, zmienimy tylko plik findfile.css&lt;/code&gt; a nie cały plik &lt;tt&gt;global.css. Rozdział ten zaczynamy posiadając klasyczny motyw. Powinieneś wykonać kopię zapasową plików użytych w oknie dialogowym Znajdź pliki, zanim zaczniesz je edytować.</p>
+
+<p>Będziesz potrzebować do utworzenia motywu pliku findfile.css z ustawionymi danymi motywu podstawowego. Możesz tymczasowo umieścić te wartości w katalogu i zdefiniować go używając dyrektywy w pliku stylów kaskadowych. Możesz modyfikować istniejący plik findfile.css i natychmiast zobaczyć jak wygląda on zmieniony, lub możesz utworzyć zwykły motyw i podać ścieżkę do niego. Aby utworzyć motyw, musisz wykonać:</p>
+
+<ol>
+ <li>Utworzyć katalog, gdzie kolwiek będziesz chciał umieścić pliki motywu.</li>
+ <li>Skopiuj listę plików (condents.rdf) z klasycznej lub nowoczesnego motywu do nowego katalogu.</li>
+ <li>Zmodyfikuj wzmianki w pliku listy, ze zwykłego motywu do twojego motywu. Na przykład, zmień wzmiankę 'classic/1.0' na 'blueswayedshoes/1.0'.</li>
+ <li>Dodaj linię do pliku 'chrom/installed-chrom.txt z następującymi zmianami:<br>
+  <code><a class="external" href="skin,install,url,file:///stuff/blueswayedshoes/" rel="freelink">skin,install,url,file:///stuff/blueswayedshoes/</a></code><br>
+  gdzie ostatnia para wskazuje do twojego nowo utworzonego katalogu. Upewnij się czy dodałeś slash na końcu ścieżki.</li>
+</ol>
+
+<p>Skopiuj oryginalny plik findfile.css do nowego katalogu. Użyjemy go jako bazy dla nowego motywu. Potem możemy kierować do niego używając URL <code>'<a class="external" rel="freelink">chrome://findfile/skin/findfile.css</a>'</code>. Po pierwsze, zdecydujmy, jaki rodzaj zmian chcemy wprowadzić. My zrobimy prostą zmianę kolorów, zmodyfikujemy style przycisków, i zmodyfikujemy trochę rozmieszczenie. Zacznijmy od menu, paska narzędzi i powłoki tabulacji.</p>
+
+<p>Następne reguły stylu dodawane do pliku findfile.css będą powodować zmiany w wyświetlaniu załączonego obrazu.</p>
+
+<pre>window &gt; box {
+  background-color: #0088CC;
+}
+
+menubar,menupopup,toolbar,tabpanels {
+  background-color: lightblue;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #666666;
+  border-left: 1px solid white;
+  border-right: 1px solid #666666;
+}
+
+caption {
+  background-color: lightblue;
+}
+</pre>
+
+<div class="float-right"><img alt="Grafika:Cskin2.jpg"></div>
+
+<p>Wewnętrzne okno pudełka, (który aktualnie otacza całą zawartość okna) zostało zmienione na kolor średnio-niebieski. Możesz zobaczyć ten niebieski, pomiędzy pasem kart i u samego dołu okna. Cztery elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> są koloru jasno niebieskiego. Obramowanie wokół tych czterech elementów zostało zmienione na cięższy widok 3D. Możesz zobaczyć, jeśli przyjrzysz się bliżej. Tło <code><code><a href="/pl/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> po zmianie jest bardziej ciemne.</p>
+
+<p>Pierwsza reguła powyżej (dla 'window &gt; box') określa, że potomek-dziecko box, okna posiada inny kolor. Prawdopodobnie nie jest to dobre rozwiązanie w tym przypadku. Powinniśmy naprawdę zmienić użyte tutaj klasy stylu. Zróbmy to. Idąc tą drogą, możemy zmodyfikować XUL bez potrzeby trzymania pudełka jako pierwszego potomka okna.</p>
+
+<pre class="eval">.findfilesbox {
+  background-color: #0088CC;
+}
+
+<strong>XUL:</strong>
+
+&lt;vbox <span class="highlightred">class="findfilesbox"</span> orient="vertical" flex="100%"&gt;
+&lt;toolbox&gt;
+</pre>
+
+<p>Następnie, zmodyfikujmy karty. Zrobimy zaznaczone kartę, pogrubimy i zmienimy zaokrąglenia na nich.</p>
+
+<pre>tab:first-child {
+  -moz-border-radius: 4px 0px 0px 0px;
+}
+
+tab:last-child {
+  -moz-border-radius: 0px 4px 0px 0px;
+}
+
+tab[selected="true"] {
+  color: #000066;
+  font-weight: bold;
+  text-decoration: underline;
+}
+</pre>
+
+<div class="float-right"><img alt="Grafika:Cskin3.jpg"></div>
+
+<p>Druga reguła zmienia wygląd normalnej karty, pierwsze ustawienia zaokrąglenia pierwszej karty i ustawienia drugiej zaokrągla, gdyż jest to ostatnia karta. Użyte tutaj są specjalne reguły stylów Mozilli, <code><a href="pl/CSS/-moz-border-radius">-moz-border-radius</a></code>, które tworzą zaokrąglone obramowanie rogów. Górne lewe obramowanie pierwszej karty i górne prawe obramowanie drugiej karty, są zaokrąglone czterema pikselami i pozostałe rogi mają również wartość równą zero pikseli, które są równoważne nie zaokrąglaniu. Powiększenie wartości tutaj powodują większe zaokrąglenie i zmniejszają widok ich jako prostokątnych.</p>
+
+<p>Ostatnia reguła nakłada tylko kartę, że posiadają atrybut <code><code id="a-selected"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/selected">selected</a></code></code> ustawiony na <code>true</code>. To stwarza tekst w zaznaczonej karcie jako pogrubiony, podkreślony i koloru ciemno niebieskiego. Uwaga, w obrazku w tym przykładzie styl ten został zastosowany tylko do pierwszej karty, ponieważ jest zaznaczony jako jedyny.</p>
+
+<p>Przyciski paska narzędzi z menu commands poniekąd są trudne do wyróżnienia. Dodamy kilka ikon do przycisków robiąc je bardziej przejrzystymi. Mozilla Compresor dostarcza ikony przycisków Otwórz i Zapisz, które będą użyte tutaj do zapisania czasu. Potrafimy ustawić obrazek dla przycisku poprzez właściwość CSS <code><a href="pl/CSS/list-style-image">list-style-image</a></code>.</p>
+
+<pre>#opensearch {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif");
+  -moz-image-region: rect(48px 16px 64px 0);
+  -moz-box-orient: vertical;
+}
+
+#savesearch {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif");
+  -moz-image-region: rect(80px 16px 96px 0);
+  -moz-box-orient: vertical;
+}
+</pre>
+
+<div class="float-right"><img alt="Grafika:Cskin4.jpg"></div>
+
+<p>Mozilla dostarcza własności zwykłych stylów <code><a href="pl/CSS/-moz-image-region">-moz-image-region</a></code>, które potrafi zostać użyte do zrobienia części elementu obrazka. Możesz myśleć o tym , jako, że jest to spięty region obrazka. Ustawiasz właściwości pozycji i rozmiaru obrazka i przycisk będzie wyświetli tylko ten kawałek obrazka. Uznane to zostaje jako ten sam obrazek dla wielokrotnego przycisków i ustawia inne regiony dla każdego. Kiedy masz kilka przycisków, ze statusem najechany, aktywny i wyłączony, to zachowuje miejsce, które normalnie jest okupowane przez wielokrotne obrazki. W kodzie powyżej, używamy tego samego obrazka dla każdego przycisku, ale ustawiamy inne regiony dla każdego jednego. Jeśli widzisz ten obrazek (btn1.gif), powinieneś spostrzec, że stanowi to kratkę z małymi obrazkami, każdy jeden o wymiarach 16 na 16 pikseli.</p>
+
+<p><br>
+ Własność <code><a href="pl/CSS/-moz-box-orient">-moz-box-orient</a></code> jest użyta do orientacji pionowej przycisku, więc obrazek ten stanowi powyższą etykietę. Ta cecha ma te same znaczenie jako atrybut <code><code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code></code> . To jest wygodne, ponieważ motyw nie zmieni XUL-a. Wiele atrybutów box ma właściwość korespondencji.</p>
+
+<p>Następnie, zrobimy kilka zmian dotyczących przycisków znajdujących się wzdłuż dołu, ponownie użyjemy kilku ikon z Mozilli do zapisania w czasie. Jeśli tworzysz swój własny motyw, będziesz potrzebować nowych ikon lub skopiuj ikony nowych plików. Jeśli pójdziemy za przykładem w tym rozdziale, to tylko kopia plików do Twojej nowego motywu i odpowiednia zmiana URL-a.</p>
+
+<pre>#find-button {
+  list-style-image: url("chrome://global/skin/checkbox/images/cbox-check.jpg");
+  font-weight: bold;
+}
+
+#cancel-button {
+  list-style-image: url("chrome://global/skin/icons/images/close-button.jpg");
+}
+
+button:hover {
+  color: #000066;
+}
+</pre>
+
+<p> </p>
+
+<div class="float-right"><img alt="Grafika:Cskin5.jpg"></div>
+
+<p>Dodamy obrazki do przycisków i zrobimy przycisk <strong>Znajdź</strong>, który będzie posiadał pogrubiony tekst wskazujący, że jest to przycisk domyślny. Ostatnia zasada nakłada na przycisk zasadę, że jeśli kursor myszy ma się zmieniać nad przyciskiem. Ustawiamy kolor tekstu na ciemny niebieski w tym przypadku. Na koniec, kilka mniejszych zmian w rozmieszczeniu w oknie znajdujących się tam rzeczy, poprzez ustawienie marginesów:</p>
+
+<div class="float-right"><img alt="Grafika:cskin-fin.jpg"></div>
+
+<pre>tabbox {
+  margin: 4px;
+}
+
+toolbarbutton {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+</pre>
+
+<p>Po tych zmianach, okno dialogowe Znajdź pliki będzie wyglądało w następujący sposób.</p>
+
+<p>Jak możesz zauważyć, proste zmiany w regułach stylu dały rezultat całkiem innego wyglądu okna dialogowego Znajdź pliki. Możemy kontynuować poprzez zmianę menu, chwytając pasek narzędzi i położenie elementu pola wyboru.</p>
+
+<h2 id="Tworzenie_globalnego_motywu" name="Tworzenie_globalnego_motywu">Tworzenie globalnego motywu</h2>
+
+<p>Stworzony motyw powyżej, jest prosty i tylko zastosowanie do okna dialogowego Znajdź pliki. Niektóre zmiany zrobione dla motywu, powinny być umieszczone w pliku globalnych arkuszach stylów (w globalnym katalogu skórek) dla zastosowania we wszystkich aplikacjach. Na przykład, posiadanie innych obrazków dla sprawdzenia pudełka w oknie dialogowym Znajdź pliki, jako inny wygląd okna to trochę dziwaczne. Ta zmiana powinna naprawdę zostać przeniesiona do arkusza stylów globalnych.</p>
+
+<p>Spróbuj przenieść style CSS z pliku findfile.css do pliku global.css i następnie spójrz na niektóre okna dialogowe w Mozilli (Widok cookie jest dobrym przykładem). Zostaniesz powiadomiony, że posiada adoptowane reguły te, co dodałeś. Niektóre reguły popadają w konflikt miedzy sobą w plikach stylów. Na przykład, reguły już zdefiniowane dla przycisków, kart i inne zdefiniowane dodatkowe reguły dla nich. Kiedy zmieniasz skórę global, możesz potrzebować scalenia zmian do istniejących reguł.</p>
+
+<p>Do najlepszych zdolności skórki, to jest deklaracja wyglądu bliskich zasad stylów w katalogu globalnym, raczej niż w indywidualnym pliku stylów. Zawiera on kolory, czcionki i rozmiary wyglądu. Jeśli zmienisz kolor lub coś w lokalnym pliku skóry (takim jak findfile.css), okno dialogowe może wyglądać dziwacznie jeśli użytkownik zmieni swoją skórę globalną. Nie wyklucza to użytkownikowi używania jednej domyślnej.</p>
+
+<div class="highlight">
+<p>Przykład Znajdź pliki wraz z motywem <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.xul">View</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.css">Stylesheet</a></p>
+</div>
+
+<p><small>Zobacz także: <a href="pl/Dokumentacja_CSS/Rozszerzenia_Mozilli">Rozszerzenia CSS Mozilli</a> i <a href="pl/Dokumentacja_CSS">Dokumentacja CSS</a></small></p>
+
+<p>W następnym temacie przedstawiamy dyskusje, <a href="pl/Kurs_XUL/Lokalizacja">jak zrobić lokalizację aplikacji XUL</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Modyfikacja_domyślnego_motywu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Lokalizacja">Następny  »</a></p>
+</div><p></p>

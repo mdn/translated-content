@@ -1,0 +1,134 @@
+---
+title: Cache.matchAll()
+slug: Web/API/Cache/matchAll
+translation_of: Web/API/Cache/matchAll
+---
+<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+
+<p>Метод <strong><code>matchAll()</code></strong> интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: js">cache.matchAll(request,{options}).then(function(response) {
+  //сделать что-ниьудь с массивом ответов
+});
+</pre>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>{{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
+
+<div class="note">
+<p><strong>Замечание</strong>: {{domxref("Cache.match()")}} в основном идентичен <code>Cache.matchAll()</code>, за исключением того, что последний разрешается с <code>response[0]</code> (т.е., первым совпадающим ответом) вместо <code>response</code> (всех совпадающих ответов в массиве).</p>
+</div>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>request</dt>
+ <dd>Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.</dd>
+ <dt>options {{optional_inline}}</dt>
+ <dd>Объект options, разрешающий вам установить особые команды контроля поиска соответствий ключа, выполняемого операцией <code>match</code>. Доступные параметры:
+ <ul>
+  <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое говорит должен ли  процесс сопоставления ключей игнорировать строку запроса в url.  Если равно <code>true</code>, часть <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет игнорироваться при поиске соответствий ключа . По умолчанию равно <code>false</code>.</li>
+  <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, если равно <code>true</code>, предотвращает проверку метода <code>http</code> для запроса {{domxref("Request")}} (обычно разрешены лишь <code>GET и</code> <code>HEAD</code>). По умолчанию равно <code>false</code>.</li>
+  <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true,</code> говорит процессу сопоставления ключей не проверять соответствие заголовка <code>VARY</code> — т.е., если URL совпадает, то вы получите соответствие независимо от того, содержит ли объект {{domxref("Response")}} заголовок <code>VARY, или нет</code>. По умолчанию равно <code>false</code>.</li>
+  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, которая представляет собой имя кеша для поиска. <strong>Заметьте, что этот параметр игнорируется методом <code>Cache.matchAll()</code>.</strong></li>
+ </ul>
+ </dd>
+</dl>
+
+<h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
+
+<pre class="brush: js">caches.open('v1').then(function(cache) {
+  cache.matchAll('/images/').then(function(response) {
+    response.forEach(function(element, index, array) {
+      cache.delete(element);
+    });
+  });
+})</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(47.0)}} <sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop(44)}}<sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>34</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(47.0)}}<sup>[1]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Параметр options поддерживает только <code>ignoreSearch и</code> <code>cacheName</code>.</p>
+
+<p>[2] Сервис воркеры (и <a href="/en-US/docs/Web/API/Push_API">Push</a>) были отключены в <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование сервис воркеров</a></li>
+ <li>{{domxref("Cache")}}</li>
+ <li>{{domxref("WorkerGlobalScope.caches")}}</li>
+</ul>

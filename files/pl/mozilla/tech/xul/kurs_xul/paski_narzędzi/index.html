@@ -1,0 +1,85 @@
+---
+title: Paski narzędzi
+slug: Mozilla/Tech/XUL/Kurs_XUL/Paski_narzędzi
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Toolbars
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Paski_przewijania" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Proste_paski_menu">Następny  »</a></p>
+</div><p></p>
+<p>Pasek narzędzi zazwyczaj jest umieszczony wzdłuż góry okna i zawiera parę przycisków, które pełnią przypisane im funkcje. XUL posiada metodę do tworzenia przycisków.</p>
+<h3 id="Dodawanie_paska_narz.C4.99dzi" name="Dodawanie_paska_narz.C4.99dzi">Dodawanie paska narzędzi</h3>
+<p>Tak jak wiele elementów w <a href="pl/XUL">XUL</a>, paski narzędzi są typem pudełka. Zazwyczaj w pasku narzędzi umieszczone są <a href="pl/Kurs_XUL/Dodawanie_przycisk%c3%b3w">przyciski</a>, ale może się w nim znajdować dowolny element. Na przykład okno przeglądarki Mozilla posiada w pasku narzędzi <a href="pl/Kurs_XUL/Kontrolki_wej%c5%9bcia">pole tekstowe</a>, które wyświetla adres URL.</p>
+<p>Paski narzędzi mogą być umieszczone na jakimkolwiek boku okna, albo poziomo albo pionowo. Oczywiście zwykle nie położyłbyś pola tekstowego w pionowym pasku narzędzi. W rzeczywistości, ponieważ paski narzędzi są tylko pudełkami, mogą zostać umieszczone gdziekolwiek chcemy, również pośrodku okna. Zwykle jednakże ustawiamy pasek narzędzi tak, aby pojawił się wzdłuż góry okna. Kiedy więcej niż jeden pasek narzędzi jest położony obok drugiego, to zwykle są one pogrupowane w 'toolbox'.</p>
+<p>Po lewej stronie paska narzędzi znajduje się wcięcie, które, jeśli klikniesz, to zwinie pasek narzędzi i będzie tylko widoczne owe wcięcie. Wcięcie to nazywamy
+ <i>
+  grippy</i>
+ . Kiedy kilka pasków narzędzi umieścimy w tym samym pudełku, uchwyty zostaną zwinięte do pojedynczego rzędu, dzięki czemu mniej miejsca zostanie zajęte. Pionowe paski narzędzi mają uchwyty nad sobą. Zazwyczaj są one zwijane, jeśli użytkownik potrzebuje w oknie więcej przestrzeni dla głównego okna.</p>
+<h5 id="Prosty_toolbar_wewn.C4.85trz_toolbox" name="Prosty_toolbar_wewn.C4.85trz_toolbox">Prosty <code>toolbar</code> wewnątrz <code>toolbox</code></h5>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul">Podgląd</a></p>
+<div class="float-right">
+ <img alt="grafika:toolbar1.png"></div>
+<pre>&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton label="Wstecz"/&gt;
+    &lt;toolbarbutton label="Dalej"/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>Został utworzony pasek narzędzi zawierający dwa przyciski; przycisk <code>Wstecz</code> oraz przycisk <code>Dalej</code>. Pasek został umieszczony wewnątrz elementu <code>toolbox</code>. Zastosowane zostały cztery nowe znaczniki, które są omówione poniżej:</p>
+<dl>
+ <dt>
+  <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code> </dt>
+ <dd>
+  Pudełko zawierające paski narzędzi.</dd>
+ <dt>
+  <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code> </dt>
+ <dd>
+  Pojedynczy pasek narzędzi zawierający elementy, takie jak przyciski. Pasek narzędzi może być zwinięty przy pomocy chwytaka, pojawiającego się po lewej stronie lub powyżej paska.</dd>
+ <dt>
+  <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code> </dt>
+ <dd>
+  Przycisk na pasku narzędzi, który posiada takie same właściwości jak zwykły przycisk, od którego różni się zazwyczaj sposobem wyświetlania.</dd>
+ <dt>
+  <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbargrippy" title="toolbargrippy">toolbargrippy</a></code> </dt>
+ <dd>
+  Element tworzący chwytak, stosowany do zwijania oraz rozwijania paska narzędzi. Nie musimy go dodawać, jako że zostanie dodany automatycznie.</dd>
+</dl>
+<p><code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> jest głównym elementem, który utworzy rzeczywisty pasek narzędzi. Wewnątrz niego są umieszczone oddzielne pozycje paska narzędzi, są to zazwyczaj przyciski, ale mogą to być również elementy innego typu. Pasek narzędzi powinien posiadać atrybut <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code>, w przeciwnym wypadku grippy nie będzie mógł zwinąć lub rozwinąć paska narzędzi w prawidłowy sposób.</p>
+<p>W przykładzie powyżej został stworzony tylko jeden pasek narzędzi. Wiele pasków może zostać utworzonych poprzez dodanie elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> po pierwszym elemencie.</p>
+<p>Element typu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> jest kontenerem dla pasków narzędzi. W niektórych programach znajduje się kilka pasków wzdłuż góry okna. Wszystkie one mogą zostać umieszczone wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>.</p>
+<p>Nie musisz umieszczać elementów <code>toolbar</code> wewnątrz <code>toolbox</code>.</p>
+<p>Grippy jest tworzony poprzez element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/toolbargrippy" title="toolbargrippy">toolbargrippy</a></code></code>. Zastosowanie tego elementu poza paskiem narzędzi mija się z celem, ponieważ nie będzie miał czego zwinąć. Można jednak zmienić jego wygląd. Żeby schować grippy, należy do elementu <code>toolbar</code> dodać atrybut <code><code id="a-grippyhidden"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/grippyhidden">grippyhidden</a></code></code> ustawiony na wartość <code>true</code>.</p>
+<div class="float-right">
+ Te same paski, dwa z nich zwinięte<br>
+ <p><img alt="grafika:toolbar3.jpg"></p>
+</div>
+<p>Poniżej przykład elementu <code>toolbox</code> zawierający wewnątrz trzy paski narzędzi<br>
+ <img alt="grafika:toolbar2.jpg"></p>
+<div class="highlight">
+ <h4 id="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki">Nasz przykład: <code>Znajdź pliki</code></h4>
+ <p>W celach demonstracyjnych dodajmy pasek narzędzi do okna dialogowego <code>Znajdź pliki</code>. Będzie on zawierał dwa przyciski, <code>Otwórz</code> oraz <code>Zapisz</code>, które pozwolą na zapisanie wyników wyszukiwania oraz ich późniejsze otwarcie.</p>
+ <p> </p>
+ <pre class="eval">&lt;vbox flex="1"&gt;
+  <span class="highlightblue">&lt;toolbox&gt;
+    &lt;toolbar id="findfiles-toolbar"&gt;
+      &lt;toolbarbutton id="opensearch" label="Otwórz"/&gt;
+      &lt;toolbarbutton id="savesearch" label="Zapisz"/&gt;
+    &lt;/toolbar&gt;
+  &lt;/toolbox&gt;</span>
+  &lt;tabbox&gt;
+</pre>
+ <p> </p>
+ <div class="float-right">
+  <img alt="grafika:toolbar5.png"></div>
+ <p>Został dodany pasek narzędzi z dwoma przyciskami. Na obrazku można zobaczyć, że zostały umieszczone poziomo na górze okna. Grippy także został wyświetlony po lewej stronie paska narzędzi. Zauważ, że pasek narzędzi został umieszczony wewnątrz pionowego pola powyżej pudełka kart. Jest to spowodowane koniecznością pionowego ułożenia, tak aby pasek narzędzi mógł się pojawić ponad pozostałymi elementami.</p>
+ <p>Nasz przykład: <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul">Podgląd</a></p>
+</div>
+<p>W następnym artykule dowiemy się <a href="pl/Kurs_XUL/Proste_paski_menu">jak dodać do okna pasek menu</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Paski_przewijania" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Proste_paski_menu">Następny  »</a></p>
+</div><p></p>

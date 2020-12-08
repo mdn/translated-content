@@ -1,0 +1,112 @@
+---
+title: Селектор дочерних элементов
+slug: Web/CSS/Child_combinator
+translation_of: Web/CSS/Child_combinator
+---
+<p>{{CSSRef("Selectors")}}</p>
+
+<h2 id="Summary" name="Summary">Описание</h2>
+
+<p><code>Комбинатор &gt;</code> разделяет 2 селектора, находит элементы заданные вторым селектором, являющие <strong>прямыми </strong>потомками для элементов отобранных первым селектором. Напротив, два селектора в <a href="/ru/docs/Web/CSS/Descendant_selectors">селекторе потомков</a>  находят элементы не обязательно являющиеся прямыми потомками, т.е. несмотря на количество "прыжков" до них в DOM.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="eval">selector1 &gt; selector2 { <em>style properties</em> }
+</pre>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="brush: css">span { background-color: white; }
+div &gt; span {
+  background-color: DodgerBlue;
+}
+</pre>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;span&gt;Span 1 в div
+    &lt;span&gt;Span 2 в span, который в div&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;span&gt;Span 3. Не в div вообще&lt;/span&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('Example', 200, 100) }}</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS4 Selectors', '#child-combinators', 'child combinator') }}</td>
+   <td>{{ Spec2('CSS4 Selectors') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Selectors', '#child-combinators', 'child combinators') }}</td>
+   <td>{{ Spec2('CSS3 Selectors') }}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>7.0</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

@@ -1,0 +1,54 @@
+---
+title: StyleSheet.disabled
+slug: Web/API/StyleSheet/disabled
+tags:
+  - Свойство
+  - Стили
+translation_of: Web/API/StyleSheet/disabled
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p class="summary">Свойство <code><strong>disabled</strong></code> интерфейса {{domxref("StyleSheet")}} определяет будет ли таблица стилей защищена от применения в документе</p>
+
+<p>Тааблицу стилей можно отключить, установив для этого свойства значение <code>true</code>, или, если она неактивна, с помощью <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">альтернативной таблице стилей</a>. Заметьте, что <code>disabled == false</code> не гарантирует применение таблице стилей (она может быть удалена из документа, к примеру).</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>bool</em> = stylesheet.disabled
+</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">// Если таблица стилей отключена...
+if (stylesheet.disabled) {
+  // ... применять стили в строке.
+}
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM", "#dom-stylesheet-disabled", "StyleSheet.disabled")}}</td>
+   <td>{{Spec2("CSSOM")}}</td>
+   <td>Нет изменений {{SpecName("DOM2 Style")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 Style", "stylesheets.html#StyleSheets-StyleSheet-disabled", "StyleSheet.disabled")}}</td>
+   <td>{{Spec2("DOM2 Style")}}</td>
+   <td>Первое определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+
+
+<p>{{Compat("api.StyleSheet.disabled")}}</p>

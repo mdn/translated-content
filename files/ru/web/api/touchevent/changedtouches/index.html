@@ -1,0 +1,133 @@
+---
+title: TouchEvent.changedTouches
+slug: Web/API/TouchEvent/changedTouches
+translation_of: Web/API/TouchEvent/changedTouches
+---
+<p>{{ APIRef("Touch Events") }}</p>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+
+<p>{{ domxref("TouchList") }} список точек касания (обьекта {{domxref("Touch")}}), <span id="result_box" lang="ru"><span>смысл которых зависит от типа события</span></span>:</p>
+
+<ul>
+ <li>Для события <code>touchstart</code>, это список точек касания, в которых появилось взаимодействие с поверхностью экрана.</li>
+ <li>Для события <code>touchmove</code>,  это список точек касания, которые изменились с момента последнего события.</li>
+ <li>Для события <code>touchend</code>, это список точек касания, на которых прекратилось взаимодействие с поверхностью экрана (т. е. набор точек,  где прервалось касание пальцами).</li>
+</ul>
+
+<p>Это свойство предназначено {{readonlyInline}}.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="eval">var <em>changes</em> = <em>touchEvent</em>.changedTouches;
+</pre>
+
+<h3 id="Return_Value" name="Return_Value">Возвращаемое значение</h3>
+
+<dl>
+ <dt><code>changes</code></dt>
+ <dd>Список {{ domxref("TouchList") }} обьекта {{ domxref("Touch") }} в котором содержатся все точки касания для данного события.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} обьекта  {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — обьект {{domxref("TouchList")}}, который содержит обьект {{domxref("Touch")}} для каждой точки, где произошло событие.</p>
+
+<p>В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка  <code>changedTouches</code> и выводит в консоль <span id="result_box" lang="ru"><span>идентификатор каждой точки касания, где произошло изменение с последнего события.</span></span></p>
+
+<pre class="brush: js">someElement.addEventListener('touchmove', function(e) {
+   // Iterate through the list of touch points that changed
+   // since the last event and print each touch point's identifier.
+   for (var i=0; i &lt; e.changedTouches.length; i++) {
+     console.log("changedTouches[" + i + "].identifier = " + e.changedTouches[i].identifier);
+   }
+}, false);
+
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#widl-TouchEvent-changedTouches')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>Нестабильная версия.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events','#widl-TouchEvent-changedTouches')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+   <td>Начальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome("22.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup><br>
+    {{CompatGeckoDesktop("52.0")}}<sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("6.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>11</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] События касания были добавлены в Gecko 18.0, но затем удалены в 24.0 {{geckoRelease("24.0")}} в настольной версии Firefox из-за проблем совместимости ({{bug(888304)}}).</p>
+
+<p>[2] Начиная с Gecko 52.0, поддержка событий касания была восстановлена для настольных платформ на базе Windows.</p>

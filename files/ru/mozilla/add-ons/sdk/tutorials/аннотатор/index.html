@@ -1,0 +1,34 @@
+---
+title: Комментатор
+slug: Mozilla/Add-ons/SDK/Tutorials/Аннотатор
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Annotator
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="warning">
+<p>Запрещено в Firefox 29 и удалено в Firefox 38.</p>
+
+<p>Предупреждение: это руководство пологается на впоследствии удалённый Widget API и больше не работает с Firefox.</p>
+
+<p>The widget API is deprecated from Firefox 29 onwards. Please see the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui">ui module</a> for replacements. In particular, for a simple button, try the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#ActionButton">action button</a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#ToggleButton">toggle button</a> APIs, and for a more complex widget try the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#Toolbar">toolbar</a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#Sidebar">sidebar</a> APIs.</p>
+</div>
+
+<p>В этом уроке мы создадим расширение, которое использует множество различных компонентов <a href="/en-US/Add-ons/SDK/High-Level_APIs">высокоуровнего API</a>.</p>
+
+<p>Это расширение (Аннотатор) позволит пользователю выделять элементы веб-страниц и добавлять к ним заметки (аннотации). Аннотатор будет сохранять заметки, добавленные пользователем. Когда пользователь посещает веб-страницу, содержащую элементы с прикрепленными к ним заметками - эти элементы подсвечиваются. Если пользователь наведет курсор на такой элемент страницы, то будет отображена заметка, ассоциированная с этим элементом.</p>
+
+<p>Далее мы кратко рассмотрим архитектуру Аннотатора и поэтапно пройдемся по реализации разных частей расширения.</p>
+
+<p>Завершенное расширение вы можете найти в <a href="https://github.com/mozilla/addon-sdk/tree/master/examples/annotator">папке <code>examples</code> из SDK</a>.</p>
+
+<ul>
+ <li><a href="/ru/docs/Mozilla/Add-ons/SDK/Tutorials/%D0%90%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%82%D0%BE%D1%80/Overview">Краткий обзор архитектуры</a><br>
+   </li>
+ <li><a href="/ru/docs/Mozilla/Add-ons/SDK/Tutorials/%D0%90%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%82%D0%BE%D1%80/Implementing_the_widget">Реализация Виджета</a><br>
+   </li>
+ <li><a href="/ru/docs/Mozilla/Add-ons/SDK/Tutorials/%D0%90%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%82%D0%BE%D1%80/Creating_annotations">Добавление заметок</a><br>
+   </li>
+ <li><a href="/en-US/Add-ons/SDK/Tutorials/Annotator/Storing_annotations">Хранение заметок</a><br>
+   </li>
+ <li><a href="/en-US/Add-ons/SDK/Tutorials/Annotator/Displaying_annotations">Отображение заметок</a></li>
+</ul>

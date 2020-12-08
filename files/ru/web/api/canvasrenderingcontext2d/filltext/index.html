@@ -1,0 +1,172 @@
+---
+title: CanvasRenderingContext2D.fillText()
+slug: Web/API/CanvasRenderingContext2D/fillText
+translation_of: Web/API/CanvasRenderingContext2D/fillText
+---
+<div>{{APIRef}}</div>
+
+<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillText(),</code></strong> предоставляемый Canvas 2D API, рисует (заливает) заданный текст в заданной позиции (<em>x, y</em>). Если указан необязательный четвертый параметр, текст будет масштабироваться в соответветствие с указанной максимальной шириной.</p>
+
+<p>См. также метод {{domxref("CanvasRenderingContext2D.strokeText()")}} для выполнения обводки текста.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate">void <var><em>ctx</em>.fillText(text, x, y [, maxWidth]);</var>
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>text</code></dt>
+ <dd>Текст, использующий для визуализации следующие свойства: {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} и {{domxref("CanvasRenderingContext2D.direction","direction")}}.</dd>
+</dl>
+
+<dl>
+ <dt><code>x</code></dt>
+ <dd>Коодрдината левой нижней точки текста по оси x.</dd>
+ <dt><code>y</code></dt>
+ <dd>Коодрдината левой нижней точки текста по оси y.</dd>
+ <dt><code>maxWidth</code> {{optional_inline}}</dt>
+ <dd>Максимальная ширина текста.  Если ширина надписи больше параметра, текст масштабируется по горизонатли, или, если это невозможно (надпись становится нечитамой), уменьшается размер шрифта.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_метода_fillText">Использование метода fillText</h3>
+
+<p>Ниже представлен простой фрагмент кода, использующий fillText.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush: js; highlight:[5] notranslate">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+ctx.font = "48px serif";
+ctx.fillText("Hello world", 50, 100);
+</pre>
+
+<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+
+<div style="display: none;">
+<h6 id="Playable_code">Playable code</h6>
+
+<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
+&lt;/div&gt;
+&lt;textarea id="code" class="playable-code"&gt;
+ctx.font = "48px serif";
+ctx.fillText("Hello world", 50, 100);&lt;/textarea&gt;
+</pre>
+
+<pre class="brush: js notranslate">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
+var code = textarea.value;
+
+function drawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawCanvas();
+});
+
+edit.addEventListener("click", function() {
+  textarea.focus();
+})
+
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
+</pre>
+</div>
+
+<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">
+    <p>Спецификация</p>
+   </th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-filltext", "CanvasRenderingContext2D.fillText")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
+   <td>{{ CompatIE(9) }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome для Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("1.9.1") }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
+ <li>{{domxref("CanvasRenderingContext2D.strokeText()")}}</li>
+</ul>

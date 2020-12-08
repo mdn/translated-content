@@ -1,0 +1,74 @@
+---
+title: ServiceWorkerRegistration.update()
+slug: Web/API/ServiceWorkerRegistration/update
+translation_of: Web/API/ServiceWorkerRegistration/update
+---
+<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+
+<p>Метод <code><strong>update</strong></code> интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращаетя по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..</p>
+
+<div class="note">
+<p><strong>Заметка</strong>: Эта возможность доступна в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтаксис</h2>
+
+<pre class="syntaxbox" style="font-size: 14px;">ServiceWorkerRegistration.update();</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<p>Нет.</p>
+
+<h3 id="Возвращает">Возвращает</h3>
+
+<p>{{domxref("Промис")}}, который разрешается в объект {{domxref("ServiceWorkerRegistration")}}.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:</p>
+
+<pre class="brush: js">if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
+    // Регистрация произошла
+    console.log('Registration succeeded.');
+    button.onclick = function() {
+      registration.update();
+    }
+  }).catch(function(error) {
+    // Ошибка при регистрации
+    console.log('Registration failed with ' + error);
+  });
+};</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#service-worker-registration-update-method', 'ServiceWorkerRegistration.update()')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Первоначальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div class="hidden">Таблица совместимости на этой странице сгенерирована автоматически. Если вы хотите внести свой вклад в таблицу данных совместимости, пожалуйста обратитесь по адресу <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и сделайте pull request.</div>
+
+<p>{{Compat("api.ServiceWorkerRegistration.update")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Workers</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Service workers базовый пример кода</a> </li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Готов ли ServiceWorker?</a></li>
+ <li>{{jsxref("Промисы")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Использование web workers</a></li>
+</ul>

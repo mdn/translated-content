@@ -1,0 +1,169 @@
+---
+title: Generator comprehensions
+slug: Web/JavaScript/Reference/Operators/Generator_comprehensions
+translation_of: Archive/Web/JavaScript/Generator_comprehensions
+---
+<div>{{JSSidebar("Operators")}}{{Non-standard_Header}}{{Obsolete_Header("gecko58")}}
+<div class="blockIndicator warning">
+<p><strong>Não padronizado. Não use!</strong><br>
+ A sintaxe de generator comprehensions não é padronizada e foi removida a partir do Firefox 58. Para usos futuros, considere o uso de {{JSxRef ("Statements / function *", "generator", "", 1)}}.</p>
+</div>
+</div>
+
+<p>A sintaxe de <strong>generator comprehension</strong> foi uma expressão em JavaScript que permitia montar rapidamente um nova função geradora baseada em um objeto iterável existente. Porém, ela foi removida do padrão e da implementação Firefox. Não a use!</p>
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<pre class="syntaxbox">(for (x of iterable) x)
+(for (x of iterable) if (condition) x)
+(for (x of iterable) for (y of iterable) x + y)
+</pre>
+
+<h2 id="Descrição">Descrição</h2>
+
+<p>Dentro de generator comprehensions, são permitidos dois tipos de componentes:</p>
+
+<ul>
+ <li>{{JSxRef("Statements/for...of", "for...of")}} and</li>
+ <li>{{JSxRef("Statements/if...else", "if")}}</li>
+</ul>
+
+<p>A iteração <code>for-of</code> é sempre o primeiro componente. Várias iterações <code>for-of</code> or declarações <code>if</code> são permitidas.</p>
+
+<p>Uma desvantagem significativa das {{JSxRef("Operators/Array_comprehensions","array comprehensions","","true")}} é que elas causam a construção de um array inteiro na memória. Quando a entrada para a comprehension é em si um pequeno array ,a sobrecarga envolvida é insignificante — mas quando a entrada é um grande array ou um generator custoso (ou mesmo infinito), a criação de um novo array pode ser problemática.</p>
+
+<p>Geradores permitem o cálculo lento de sequências, com items calculados sob demanda conforme a necessidade. Generator comprehensions são sintaticamente quase idênticos aos array comprehensions — elas usam parênteses invés de chaves — mas invés de construir um array, criam um gerador que pode executar lentamente. Eles podem ser considerados como uma sintaxe abreviada para criar geradores</p>
+
+<p>Suponha que temos um interador <code>it</code> que itera sobre uma grande sequência de inteiros. Queremos criar um novo iterador que irá iterar sobre seus dobros. Um array comprehension criaria na memória um array completo contendo os valores dobrados:</p>
+
+<pre class="brush: js">var doubles = [for (i in it) i * 2];
+</pre>
+
+<p>Um generator comprehension por outro lado criaria um novo iterador que criaria valores dobrados sob demanda conforme a necessidade:</p>
+
+<pre class="brush: js">var it2 = (for (i in it) i * 2);
+console.log(it2.next()); // O primeiro valor, duplicado
+console.log(it2.next()); // O segundo valor, duplicado
+</pre>
+
+<p>Quando um generator comprehension é usado como um argumento para uma função, os parênteses usados para a chamada da função significam que os parênteses externos podem ser omitidos:</p>
+
+<pre class="brush: js">var result = doSomething(for (i in it) i * 2);
+</pre>
+
+<p>A diferença significativa entre os dois exemplos começam pelo uso da generator comprehension, você teria apenas que fazer um loop sobre a estrutura 'obj' uma vez, total, ao invés de uma vez ao compreender o array, e mais uma vez ao iterar sobre ele.</p>
+
+<h2 id="Exemplos">Exemplos</h2>
+
+<h3 id="Simples_generator_comprehensions">Simples generator comprehensions</h3>
+
+<pre class="brush:js">(for (i of [1, 2, 3]) i * i );
+// generator function which yields 1, 4, and 9
+
+[...(for (i of [1, 2, 3]) i * i )];
+// [1, 4, 9]
+
+var abc = ['A', 'B', 'C'];
+(for (letters of abc) letters.toLowerCase());
+// generator function which yields "a", "b", and "c"
+</pre>
+
+<h3 id="Generator_comprehensions_com_declaração_if">Generator comprehensions com declaração if</h3>
+
+<pre class="brush: js">var years = [1954, 1974, 1990, 2006, 2010, 2014];
+
+(for (year of years) if (year &gt; 2000) year);
+// generator function which yields 2006, 2010, and 2014
+
+(for (year of years) if (year &gt; 2000) if (year &lt; 2010) year);
+// generator function which yields 2006, the same as below:
+
+(for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year);
+// generator function which yields 2006
+</pre>
+
+<h3 id="Generator_comprehensions_comparadas_à_função_geradora">Generator comprehensions comparadas à função geradora</h3>
+
+<p>Um maneira fácil de entender a sintaxe de generator comprehension, é compará-la com a função geradora.</p>
+
+<p>Exemplo 1: Gerador simples.</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3];
+
+// Generator function
+(function*() {
+  for (let i of numbers) {
+    yield i * i;
+  }
+})();
+
+// Generator comprehension
+(for (i of numbers) i * i );
+
+// Result: both return a generator which yields [1, 4, 9]
+</pre>
+
+<p>Exemplo 2: Usando <code>if</code> no gerador.</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3];
+
+// Generator function
+(function*() {
+  for (let i of numbers) {
+    if (i &lt; 3) {
+      yield i * 1;
+    }
+  }
+})();
+
+// Generator comprehension
+(for (i of numbers) if (i &lt; 3) i);
+
+// Result: both return a generator which yields [1, 2]</pre>
+
+<h2 id="Especificações">Especificações</h2>
+
+<p>As generator comprehensions estavam inicialmente no rascunho do ECMAScript 2015, mas foram removidas na revisão 27 (agosto de 2014). Por favor, veja as revisões mais antigas do ES2015 para a semântica de especificação.</p>
+
+<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+
+<div class="hidden">A tabela de compatibilidade nesta página é gerada a partir de dados estruturados. Se você quiser contribuir com os dados, confira https://github.com/mdn/browser-compat-data e envie-nos uma solicitação de recebimento.</div>
+
+<p>{{Compat("javascript.operators.generator_comprehensions")}}</p>
+
+<h2 id="Diferenças_para_as_antigas_JS1.7JS1.8_comprehensions">Diferenças para as antigas JS1.7/JS1.8 comprehensions</h2>
+
+<div class="blockIndicator warning">Comprehensions das versões JS1.7/JS1.8 foram removidas da Gecko 46 ({{bug(1220564)}}).</div>
+
+<p><strong>Sintaxe antiga das </strong><strong>comprehensions (não use mais!):</strong></p>
+
+<pre class="brush: js example-bad">(X for (Y in Z))
+(X for each (Y in Z))
+(X for (Y of Z))
+</pre>
+
+<p>Diferenças:</p>
+
+<ul>
+ <li>Comprehensions na ES7 criam um escopo para cada nó "for" invés da comprehension como um todo.
+  <ul>
+   <li>Antiga: <code>[...(()=&gt;x for (x of [0, 1, 2]))][1]() // 2</code></li>
+   <li>Nova: <code>[...(for (x of [0, 1, 2]) ()=&gt;x)][1]() // 1, cada iteração cria uma nova ligação para x</code><code>. </code></li>
+  </ul>
+ </li>
+ <li>Comprehensions na ES7 começam com "for" invés da expressão de atribuição.
+  <ul>
+   <li>Antiga: <code>(i * 2 for (i of numbers))</code></li>
+   <li>Nova: <code>(for (i of numbers) i * 2)</code></li>
+  </ul>
+ </li>
+ <li>Comprehensions na ES7 podem ter vários componentes <code>if</code> e <code>for</code>.</li>
+ <li>Comprehensions na ES7 apenas trabalham com <code>{{JSxRef("Statements/for...of", "for...of")}}</code> e não com iterações <code>{{JSxRef("Statements/for...in", "for...in")}}</code>.</li>
+</ul>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li>{{JSxRef("Statements/for...of", "for...of")}}</li>
+ <li>{{JSxRef("Operators/Array_comprehensions", "Array comprehensions")}}</li>
+</ul>

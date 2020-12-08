@@ -1,0 +1,117 @@
+---
+title: Селекторы по ID
+slug: Web/CSS/ID_selectors
+translation_of: Web/CSS/ID_selectors
+---
+<div>{{ CSSRef() }}</div>
+
+<h2 id="Summary" name="Summary">Краткое описание</h2>
+
+<p>В HTML-документах CSS-селекторы по ID производят выборку всех элементов по ID, полностью совпадающих с селектором.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox">#id_value { <em>style properties</em> }</pre>
+
+<p>То же самое  — {{ Cssxref("Attribute_selectors", "селектор по атрибутам") }}:</p>
+
+<pre class="syntaxbox">[id=id_value] { <em>style properties</em> }</pre>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="brush: css">span#identified {
+  background-color: DodgerBlue;
+}
+</pre>
+
+<pre class="brush: html">&lt;span id="identified"&gt;Тут span с каким-то текстом.&lt;/span&gt;
+&lt;span&gt;Здесь тоже span.&lt;/span&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('Example', 200, 50) }}</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table style="font-size: 14px; font-weight: normal; line-height: 1.5;">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS4 Selectors', '#id-selectors', 'ID selectors') }}</td>
+   <td>{{ Spec2('CSS4 Selectors') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Selectors', '#id-selectors', 'ID selectors') }}</td>
+   <td>{{ Spec2('CSS3 Selectors') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'selector.html#id-selectors', 'ID selectors') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS1', '#id-as-selector', 'ID selectors') }}</td>
+   <td>{{ Spec2('CSS1') }}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

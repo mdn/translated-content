@@ -1,0 +1,181 @@
+---
+title: HTMLTrackElement
+slug: Web/API/HTMLTrackElement
+translation_of: Web/API/HTMLTrackElement
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p><strong><code>HTMLTrackElement</code></strong></p>
+
+<p>{{InheritanceDiagram(600, 120)}}</p>
+
+<h2 id="Свойства">Свойства</h2>
+
+<p><em>Наследует свойства своего родителя, {{domxref("HTMLElement")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("HTMLTrackElement.kind")}}</dt>
+ <dd>Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута {{htmlattrxref("kind", "track")}}. Показывает, как будет использоваться текстовый трек. Возможные значения: <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code>, <code>metadata</code> (субтитры, подписи, описания, главы или метаданные).</dd>
+ <dt>{{domxref("HTMLTrackElement.src")}}</dt>
+ <dd>Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута {{htmlattrxref("src", "track")}}. Указывает адрес файла текстового трека.</dd>
+ <dt>{{domxref("HTMLTrackElement.srclang")}}</dt>
+ <dd>Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута {{htmlattrxref("srclang", "track")}}. Указывает язык текстового трека.</dd>
+ <dt>{{domxref("HTMLTrackElement.label")}}</dt>
+ <dd>Тип данных {{domxref("DOMString")}} , так как отображает значение HTML-атрибута {{htmlattrxref("label", "track")}}. Определяет видимый пользователю заголовок трека.</dd>
+ <dt>{{domxref("HTMLTrackElement.default")}}</dt>
+ <dd>Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута {{htmlattrxref("default", "track")}}.  Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.</dd>
+ <dt>{{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}</dt>
+ <dd>Возвращает значение типа <code>unsigned short</code>, которое показывает доступность трека для чтения:
+ <table class="standard-table">
+  <tbody>
+   <tr>
+    <td class="header">Константа</td>
+    <td class="header">Значение</td>
+    <td class="header">Описание</td>
+   </tr>
+   <tr>
+    <td><code>NONE</code></td>
+    <td>0</td>
+    <td>Показывает, что метки текстового трека не получены.</td>
+   </tr>
+   <tr>
+    <td><code>LOADING</code></td>
+    <td>1</td>
+    <td>Показывает, что текстовый трек загружается, и пока не было обнаружено фатальных ошибок. Дополнительные метки могут быть добавлены в трек парсером.</td>
+   </tr>
+   <tr>
+    <td><code>LOADED</code></td>
+    <td>2</td>
+    <td>Указывает, что текстовая дорожка загружена без фатальных ошибок.</td>
+   </tr>
+   <tr>
+    <td><code>ERROR</code></td>
+    <td>3</td>
+    <td>Указывает, что текстовый трек был получен, но когда пользовательский агент попытался его использовать, произошла какая-то ошибка. Некоторые или все метки, вероятно, отсутствуют и не будут получены.</td>
+   </tr>
+  </tbody>
+ </table>
+ </dd>
+ <dt>{{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}</dt>
+ <dd>Возвращает {{Domxref("TextTrack")}} is the track element's text track data.</dd>
+</dl>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>track</code> {{ReadOnlyInline}}</td>
+   <td>{{Domxref("TextTrack")}}</td>
+   <td>The track element's text track data.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Методы">Методы</h2>
+
+<p><em>Нет специфичных методов; наследует методы из родительского элемента, {{domxref("HTMLElement")}}.</em></p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "the-video-element.html#the-track-element", "HTMLTrackElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-track-element", "HTMLTrackElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("24")}}<sup>[1]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>src</code> attribute settable</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("50")}}<sup>[2][3]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("24")}}<sup>[1]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>src</code> attribute settable</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("50")}}<sup>[2][3]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] The <code>HTMLTrackElement</code> interface was added in Firefox 24, but was disabled by default behind the preference {{pref("media.webvtt.enabled")}}. The interface is enabled by default (along with all other WebVTT features) in <a href="/en-US/docs/Mozilla/Firefox/Releases/31">Firefox 31</a>.</p>
+
+<p>[2] Until Firefox 50, the <code>src</code> attribute is settable, but the change does not get handled properly. Starting in Firefox 50, existing track data is properly disposed of, new track data is loaded and put into effect, and so forth.</p>
+
+<p>[3] Prior to Firefox 50, text tracks would only load if the {{HTMLElement("track")}} is in a document. Starting in Firefox 50, this incorrect requirement is lifted.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>The HTML element implementing this interface: {{ HTMLElement("track") }}.</li>
+</ul>

@@ -1,0 +1,78 @@
+---
+title: Pola grup
+slug: Mozilla/Tech/XUL/Kurs_XUL/Pola_grup
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Groupboxes
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Szczegóły_modelu_pudełkowego" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_innych_elementów">Następny  »</a></p>
+</div>
+<p></p><p>Artykuł ten opisuje sposób zawierania elementów w grupach.
+</p>
+<h3 id="Pola_grup" name="Pola_grup"> Pola grup </h3>
+<p>Język HTML dostarcza elementu <code>fieldset</code>, który może być zastosowany do grupowania elementów razem. Granicą jest zazwyczaj obrys wokół elementów, aby pokazać, że są one powiązane. Przykład będzie pole grupowe zawierające pola wyboru. XUL dostarcza odpowiedni element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code>, który może być zastosowany w podobnym celu. </p><p>Jak wskazuje nazwa, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> jest typem pola, oznacza to, że elementy wewnątrz niego ustawione są według reguł pól. Istnieją dwie różnice pomiędzy polami grup a polami regularnymi:
+</p>
+<ul><li> Domyślnie pole grupy jest otoczone elementem bevel. Możesz zmienić to zachowanie przez zmianę stylu CSS,
+</li><li> Pole grupy obsługuje element caption, który jest umieszczony w górnej części obramowania.
+</li></ul>
+<p>Ponieważ pola grup są typami grup, możesz użyć takich samych atrybutów jak <code><code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code></code> i <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code>. Możesz wstawić jakiekolwiek elementy, jakie chcesz wewnątrz pola, chociaż zazwyczaj będą one powiązane w ten sam sposób. </p><p>Etykieta u góry pola grupy może zostać utworzona przy zastosowaniu elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code>. Działa on podobnie jak element <code>legend</code> z języka HTML. Pojedynczy element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> umieszczony jako pierwsze dziecko będzie wystarczające.
+</p>
+<h4 id="Przyk.C5.82ad:_Proste_pole_grupy" name="Przyk.C5.82ad:_Proste_pole_grupy"> Przykład: Proste pole grupy </h4>
+<p>Poniższy przykład pokazuje proste pole grupy:
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:titledbox1.png"></div>
+<pre>&lt;groupbox&gt;
+  &lt;caption label="Odpowiedź"/&gt;
+  &lt;description value="Banany"/&gt;
+  &lt;description value="Tangerine"/&gt;
+  &lt;description value="Budka telefoniczna"/&gt;
+  &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>Spowoduje to, że będą wyświetlone cztery fragmenty tekstu otoczone przez pole z etykietą <code>Odpowiedź</code>. Zwróć uwagę, że pole grupy posiada domyślnie orientacje pionową, która jest konieczna, aby mieć stos elementów tekstu w pojedynczej kolumnie.
+</p>
+<h4 id="Bardziej_z.C5.82o.C5.BCony_element_caption" name="Bardziej_z.C5.82o.C5.BCony_element_caption"> Bardziej złożony element <code>caption</code> </h4>
+<p>Możesz również dodać elementy potomne wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code>, aby stworzyć bardziej złożony <code><code><a href="/pl/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code>. Na przykład; panel preferencji Mozilla Font używa menu rozwijanego jako podpisu. Chociaż może być użyta dowolna zawartość, zazwyczaj będziemy używać pola wyboru lub menu rozwijanego.
+</p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:groupbox2.png"></div>
+<pre>&lt;groupbox flex="1"&gt;
+  &lt;caption&gt;
+    &lt;checkbox label="Włącz kopie zapasową"/&gt;
+  &lt;/caption&gt;
+  &lt;hbox&gt;
+    &lt;label control="dir" value="Folder:"/&gt;
+    &lt;textbox id="dir" flex="1"/&gt;
+  &lt;/hbox&gt;
+  &lt;checkbox label="Kompresuj archiwalne pliki"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>W tym przykładzie, <a href="pl/Kurs_XUL/Kontrolki_wej%c5%9bcia#Pola_wyboru_i_przyciski_opcji">pole wyboru</a> zostały zastosowane jako podpis (caption). Możemy użyć skryptu do włączenia lub wyłączenia zawartości pola grup, kiedy <code><a href="/pl/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code> jest zaznaczony lub odznaczony. Pole grupy zawiera poziome pudełko (<code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code>) z etykietą (<code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>) i polem tekstowym (<code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>). Zarówno pole tekstowe jak i pole grupy mogą być elementami elastycznymi, więc pole tekstowe rozszerza się, kiedy rozszerzamy okno. Poniżej pola tekstowego pojawia się dodatkowe pole wyboru, z powodu pionowej orientacji pola grupy. W kolejnym podpunkcie dodamy pole grupy do okna dialogowego <code>Znajdź pliki</code>.
+</p>
+<h3 id="Grupa_radio" name="Grupa_radio"> Grupa <code>radio</code> </h3>
+<p>Możemy stosować element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> do zgrupowania razem przycisków opcji. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> jest typem pola. Możemy wstawić dowolny element, do wewnątrz niego, z wyjątkiem specjalnej obsługi przycisku <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code>, które działa podobnie jak inne pudełka.
+</p><p>Dowolny przycisk opcji umieszczony wewnątrz grupy przycisków opcji, aby zgrupować je wszystkie razem, nawet, jeśli są one wewnątrz zagnieżdżonych pudełek. Może to być stosowane do dodania dodatkowych elementów wewnątrz struktury, tak jak w tym przykładzie:
+</p><p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul">Podgląd</a>
+</p>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="no" value="no" label="No Number"/&gt;
+  &lt;radio id="random" value="random" label="Random Number"/&gt;
+  &lt;hbox&gt;
+    &lt;radio id="specify" value="specify" label="Specify Number:"/&gt;
+    &lt;textbox id="specificnumber"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>Zauważ, że element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> nie jest otoczony żadnym obramowaniem wokół siebie. Powinniśmy umieścić element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> wokół niego, jeśli obramowanie i podpis (caption) są wymagane.
+</p><p>Następnie będziemy stosować to, czego nauczyliśmy się dotychczas i <a href="pl/Kurs_XUL/Dodawanie_innych_element%c3%b3w">dodamy dodatkowe elementy do okna dialogowego <code>Znajdź pliki</code></a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Szczegóły_modelu_pudełkowego" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_innych_elementów">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

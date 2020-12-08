@@ -1,0 +1,215 @@
+---
+title: AudioBuffer
+slug: Web/API/AudioBuffer
+translation_of: Web/API/AudioBuffer
+---
+<p>{{APIRef("Web Audio API")}}</p>
+
+<div>
+<h2 id="Сводка">Сводка</h2>
+
+<p><code>AudioBuffer</code> - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещенные в AudioBuffer звуковые данные могут быть воспроизведены в  {{ domxref("AudioBufferSourceNode") }}.</p>
+</div>
+
+<p>Объекты этого типа предназначены для хранения небольших звуковых фрагментов, обычно менее 45 секунд. Для более длинных звуков, объекты реализующие {{domxref("MediaElementAudioSourceNode")}} являются более подходящими. Этот буфер содержит данные в формате неперемещаемого IEE754 32-битного линейного ИКМ с номинальным диапазоном от -1 до +1, то есть 32-битный буфер с плавающей точкой каждого звукового фрагмента (samples) от -1.0 до 1.0. Если {{domxref("AudioBuffer")}} имеет несколько каналов, то они хранятся в отдельном буфере.</p>
+
+<h2 id="Конструктор">Конструктор</h2>
+
+<dl>
+ <dt>{{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}</dt>
+ <dd><span style="display: none;"> </span>Создает и возвращает новый объект <code>AudioBuffer</code>.</dd>
+ <dt>
+ <h2 id="Свойства"><span style="display: none;"> </span>Свойства</h2>
+ </dt>
+ <dt>{{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}</dt>
+ <dd>Возвращает число с плавающей точкой - частоту дискретизации (sample rate), хранящих в буфере данных ИКМ в звуковых фрагментах (samples) в секунду.</dd>
+ <dt>{{domxref("AudioBuffer.length")}} {{readonlyInline}}</dt>
+ <dd>Возвращает целое число - длину в кадрах, хранящихся в буфере данных ИКМ.</dd>
+ <dt>{{domxref("AudioBuffer.duration")}} {{readonlyInline}}</dt>
+ <dd>Возвращает целое число или число с плавающей точкой - продолжительность в секундах данных ИКМ, хранящихся в буфере.</dd>
+ <dt>{{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}</dt>
+ <dd>Возвращает целое число - количество аудиоканалов в буфере, описываемых данными ИКМ.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<dl>
+ <dt>{{domxref("AudioBuffer.getChannelData()")}}</dt>
+ <dd>Возвращает {{jsxref("Float32Array")}}, содержащий связанные с каналом данные ИКМ. Определяется параметром канала (с 0 - первого канала).</dd>
+ <dt>{{domxref("AudioBuffer.copyFromChannel()")}}</dt>
+ <dd>Копирует звуковые фрагменты (samples) из указанного канала AudioBuffer в массив.</dd>
+ <dt>{{domxref("AudioBuffer.copyToChannel()")}}</dt>
+ <dd>Копирует звуковые фрагменты (samples) из массива в указанный канал AudioBuffer.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<p>В этом примере показывается как создать объект AudioBuffer и заполнить его случайными белыми шумами. Вы можете найти полный пример в репозитории <a href="https://github.com/mdn/webaudio-examples">webaudio-examples</a>. Так же доступна <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">live версия</a>.</p>
+
+<pre class="brush: js;highlight:[7,14,27]">// Стерео
+var channels = 2;
+
+// Создает пустой двухсекундный стерео-буфер
+// с частотой звука AudioContext (sample rate)
+var frameCount = audioCtx.sampleRate * 2.0;
+var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+
+button.onclick = function() {
+  // Заполняет буфер белыми шумами;
+  // просто случайные значения от -1.0 до 1.0
+  for (var channel = 0; channel &lt; channels; channel++) {
+    // Получаем массив данных канала
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i &lt; frameCount; i++) {
+      // Math.random() находится в [0; 1.0]
+      // аудио должно быть в интервале [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
+  }
+
+  // Получает AudioBufferSourceNode.
+  // AudioNode для проигрывания из AudioBuffer
+  var source = audioCtx.createBufferSource();
+
+  // устанавливает буфер в AudioBufferSourceNode
+  source.buffer = myArrayBuffer;
+
+  // присоединяет AudioBufferSourceNode к
+  // destination, чтобы мы могли слышать звук
+  source.connect(audioCtx.destination);
+
+  // Начать воспроизведение с источника
+  source.start();
+
+}
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#the-audiobuffer-interface', 'AudioBuffer')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td>Исходное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(14.0)}} {{property_prefix("webkit")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(25)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(15)}} {{property_prefix("webkit")}}<br>
+    {{CompatOpera(22)}}</td>
+   <td>6 {{property_prefix("webkit")}}</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>copyFromChannel()</code> и <code>copyToChannel()</code></p>
+   </td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(27)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>constructor</td>
+   <td>{{CompatChrome(55.0)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatOpera(42)}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome для Android</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(25)}}</td>
+   <td>1.2</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>6 {{property_prefix("webkit")}}</td>
+   <td>{{CompatChrome(28.0)}} {{property_prefix("webkit")}}</td>
+  </tr>
+  <tr>
+   <td><code>copyFromChannel() </code>и <code>copyToChannel()</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(27)}}</td>
+   <td> </td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>constructor</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(55.0)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatOperaMobile(42)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(55.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="sect1"> </h2>
+
+<h2 id="См._также">См. также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Использование Web Audio API</a></li>
+</ul>

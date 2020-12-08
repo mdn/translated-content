@@ -1,0 +1,129 @@
+---
+title: HTMLCanvasElement.captureStream()
+slug: Web/API/HTMLCanvasElement/captureStream
+translation_of: Web/API/HTMLCanvasElement/captureStream
+---
+<div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
+
+<p><code><strong>HTMLCanvasElement</strong></code><strong><code>.captureStream()</code></strong> метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate"><var>MediaStream</var> = <var>canvas</var>.captureStream(<var>frameRate</var>);
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>frameRate</code> {{optional_inline}}</dt>
+ <dd>Число двойной точности с плавающей точкой, указывающее частоту захвата каждого фрейма. Если не установлено, новый фрейм будет захватываться каждый раз, как canvas изменится; <code>если установлено в 0</code>, будет захвачен один фрейм.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Ссылка на {{domxref("MediaStream")}} объект.</p>
+
+<h3 id="Исключения">Исключения</h3>
+
+<dl>
+ <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><strong>NotSupportedError</strong></span></font></dt>
+ <dd>Параметр <code>frameRate</code> имеет отрицательное значение.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js notranslate">// Поиск элемента canvas для захвата
+var canvasElt = document.querySelector("canvas");
+
+// Получение потока
+var stream = canvasElt.captureStream(25); // 25 FPS
+
+// Делать что-то с потоком
+// например, отправить что-то другому компьютеру, используя RTCPeerConnection
+//      pc это RTCPeerConnection, созданное где-то еще
+pc.addStream(stream);
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Media Capture DOM Elements', '#widl-HTMLCanvasElement-captureStream-CanvasCaptureMediaStream-double-frameRate', 'HTMLCanvasElement.captureStream()')}}</td>
+   <td>{{Spec2('Media Capture DOM Elements')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(51.0)}}</td>
+   <td>{{CompatGeckoDesktop(43)}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(36.0)}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(51.0)}}</td>
+   <td>{{CompatChrome(51.0)}}</td>
+   <td>{{CompatGeckoMobile(43)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(38)}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] In Firefox 41 and 42, this feature was disabled by default; set the preference <code>canvas.capturestream.enabled</code> to <code>true</code> to enable it.</p>
+
+<h2 id="Смотри_так_же">Смотри так же</h2>
+
+<ul>
+ <li>{{domxref("CanvasCaptureMediaStream")}}, the interface it belongs to.</li>
+ <li>{{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream from a media element.</li>
+ <li>{{domxref("MediaStream")}}</li>
+ <li>{{domxref("Media Capture and Streams API")}}</li>
+</ul>

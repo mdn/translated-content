@@ -1,0 +1,275 @@
+---
+title: JavaScript crypto
+slug: Archive/Mozilla/JavaScript_crypto
+translation_of: Archive/Mozilla/JavaScript_crypto
+---
+<p>{{ Non-standard_header() }}{{deprecated_header}}{{ warning("The features mentioned in this article are deleted proprietary Mozilla extensions, and are not supported in any other browser. They won't work in Firefox 34 or later. Use &lt;keygen&gt; or the future Web Crypto API instead.") }}</p>
+
+<h2 id="Using_the_Mozilla_crypto_object_from_JavaScript">Using the Mozilla <code>crypto</code> object from JavaScript</h2>
+
+<p>Mozilla defines a special JavaScript object to allow web pages access to certain cryptographic-related services. These services are a balance between the functionality web pages need and the requirement to protect users from malicious web sites. Most of these services are available via the DOM {{ domxref("window") }} object as {{ domxref("window.crypto") }}.</p>
+
+<p>Services are provided to enable: smart card events, generating certificate requests, importing user certs, generating random numbers, logging out of your tokens, and signing text.</p>
+
+<h3 id="Handling_smart_card_events">Handling smart card events</h3>
+
+<p>Web sites can make themselves more SmartCard friendly by listening for SmartCard insertion and removal events. To enable your document to receive these events, you must first tell the crypto system you are interested by setting {{ domxref("window.crypto.enableSmartCardEvents") }} to <code>true</code>. You can then register event handlers for these events with the {{ domxref("document.addEventListener()") }} method.</p>
+
+<p>Two smart card related events are generated: <code>smartcard-insert</code> when SmartCards are inserted, and <code>smartcard-remove</code> when SmartCards are removed.</p>
+
+<p>Web sites which use SSL clientAuth login could use the following code to refresh the page on token insertions and removals:</p>
+
+<pre class="brush:html;">&lt;!DOCTYPE html&gt;
+&lt;p&gt;...
+&lt;script&gt;
+function onSmartCardChange() {
+  window.location.reload();
+}
+function register() {
+  window.crypto.enableSmartCardEvents = true;
+  document.addEventListener("smartcard-insert", onSmartCardChange, false);
+  document.addEventListener("smartcard-remove", onSmartCardChange, false);
+}
+function deregister() {
+  document.removeEventListener("smartcard-insert", onSmartCardChange, false);
+  document.removeEventListener("smartcard-remove", onSmartCardChange, false);
+}
+
+document.body.onload = register;
+document.body.onunload = deregister;
+&lt;/script&gt;
+</pre>
+
+<p>With the above example, your web site will automatically reload anytime a SmartCard is inserted or removed. This allows the page to automatically login and logout based on the presence of the SmartCard.</p>
+
+<h4 id="Generating_Keys_and_issuing_User_Certificates" name="Generating_Keys_and_issuing_User_Certificates">Generating keys and issuing user certificates</h4>
+
+<p>There are several crypto object methods used in generating keys for certificates: <a href="/en/JavaScript_crypto/generateCRMFRequest" title="en/JavaScript_crypto/generateCRMFRequest">generateCRMFRequest</a>(), <a href="/en/JavaScript_crypto/importUserCertificates" title="en/JavaScript_crypto/importUserCertificates">importUserCertificates</a>().</p>
+
+<p>The <a href="/en/JavaScript_crypto/generateCRMFRequest" title="en/JavaScript_crypto/generateCRMFRequest">generateCRMFRequest</a>() function generates a key and creates a <a href="/en/CRMF_Request_object" title="en/CRMF_Request_object">CRMF Request object</a>. This object can be passed to a CA using a webform.</p>
+
+<p>The <a href="/en/JavaScript_crypto/importUserCertificates" title="en/JavaScript_crypto/importUserCertificates">importUserCertificates</a>() function loads certificates into the NSS database or SmartCard if the corresponding key is found there.</p>
+
+<p>The <a href="/en/JavaScript_crypto/popChallengeResponse" title="en/JavaScript_crypto/popChallengeResponse">popChallengeResponse</a>() function is not implemented.</p>
+
+<h3 id="Overview_of_New_Cert_Issuing_Process" name="Overview_of_New_Cert_Issuing_Process">Overview of the new cert issuing process</h3>
+
+<ol>
+ <li>User fills out enrollment form</li>
+ <li>User action initiates script</li>
+ <li>Script calls key generation method (<a href="/en/JavaScript_crypto/generateCRMFRequest" title="en/JavaScript_crypto/generateCRMFRequest">generateCRMFRequest</a>)</li>
+ <li>Signing and Encryption keys are generated</li>
+ <li>Encryption Private Key is wrapped with public key of Key Recovery Authority (KRA) (passed in in the form of a certificate as part of the script, and checked against a pre-installed certificate copy in the local certificate database)</li>
+ <li>The public keys, wrapped encryption private key, and text string from the script (possibly containing naming or enrollment info) are signed by the user</li>
+ <li>Signed blob is returned to the script</li>
+ <li>Script submits signed blob and any other necessary info to the CA/RA</li>
+ <li>CA/RA verifies signature on signed blob</li>
+ <li>CA/RA validates identity of user</li>
+ <li>CA/RA sends wrapped encryption private key to KRA</li>
+ <li>KRA sends escrow verification back to CA</li>
+ <li>CA creates and signs certificates</li>
+ <li>CA sends certificates back to the user (<a href="/en/JavaScript_crypto/importUserCertificates" title="en/JavaScript_crypto/importUserCertificates">importUserCertificates</a>)</li>
+</ol>
+
+<h3 id="Typical_use" name="Typical_use">Typical use</h3>
+
+<p>The CA's enrollment page could look something like this:</p>
+
+<pre class="brush:html;">&lt;!DOCTYPE html&gt;
+&lt;h2&gt;Request a cert&lt;/h2&gt;
+&lt;form name="ReqForm" method="post" action="http://your.ra.site.org"&gt;
+&lt;p&gt;&lt;input type=hidden name=cert_request value=""&gt;
+&lt;p&gt;Name: &lt;input type=text name=name value=""&gt;
+&lt;p&gt;Password: &lt;input type=password name="password" value=""&gt;
+&lt;p&gt;&lt;input type=submit Name="Send" value="Submit"&gt;
+&lt;/form&gt;
+&lt;script&gt;
+/* the following values could be filled in by the server CGI */
+var authenticator = "server_magic";
+var keyTransportCert = null;
+var crmfObject = null;
+var form = document.forms[0];
+
+function validate()
+{
+  // generate keys for nsm.
+  if (typeof(crypto.version) != "undefined") {
+    crmfObject = crypto.generateCRMFRequest(
+      "CN=" + form.name.value,
+      form.password.value,
+      authenticator,
+      keyTransportCert,
+      "setCRMFRequest();",
+      1024,
+      null,
+      "rsa-dual-use");
+  }
+  return false;
+}
+
+function setCRMFRequest()
+{
+  form.cert_request.value = crmfObject.request;
+  form.submit();
+}
+
+form.onsubmit = validate;
+&lt;/script&gt;
+</pre>
+
+<p>On completion of the request, the CA may submit a page that looks something like this:</p>
+
+<pre class="brush:html;">&lt;!DOCTYPE html&gt;
+&lt;h2&gt;Certificate Request Successful&lt;/h2&gt;
+&lt;p&gt;Hit 'load' to load your certificate&lt;/p&gt;
+&lt;form name="ReqForm"&gt;
+&lt;p&gt;&lt;input type=submit Name="Load" value="Submit"&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;script&gt;
+/* the following values could be filled in by the server CGI */
+var nickname= "MyCertNickname";
+var cert = "Mkjflakdjfiwjflaksufklasf ...";
+var forceBackup = false;
+
+function LoadCertificate()
+{
+  window.crypto.importUserCertificates(nickname, cert, forceBackup);
+  return false;
+}
+
+document.forms[0].onsubmit = LoadCertificate;
+&lt;/script&gt;
+</pre>
+
+<h4 id="Signing_text" name="Signing_text">Signing text</h4>
+
+<pre class="eval">DOMString signText(DOMString stringToSign,
+                   DOMString caOption /* ... */);
+</pre>
+
+<h4 id="Loading_PKCS_.2311_modules" name="Loading_PKCS_.2311_modules">Loading PKCS #11 modules</h4>
+
+<pre class="eval">long deletemodule(DOMString moduleName);
+long addmodule(DOMString moduleName,
+               DOMString libraryFullPath,
+               long cryptoMechanismFlags,
+               long cipherFlags);
+</pre>
+
+<p>Loads or removes a new PKCS #11 module. In the add case, the module will be placed in the NSS secmod.db database and will be loaded automatically on application restart. In the delete case, the module is removed from the NSS secmod.db. This function will issue a user prompt to confirm the operation before the add or delete actually occurs.</p>
+
+<h6 id="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>moduleName</code></dt>
+ <dd>Name of the module.</dd>
+ <dt><code>libraryFullPath</code></dt>
+ <dd>The filename of the library prepended with its full path.</dd>
+ <dt><code>cryptoMechanismFlags</code></dt>
+ <dd>A bit vector indicating all cryptographic mechanisms should be turned on by default (see below).</dd>
+ <dt><code>cipherFlags</code></dt>
+ <dd>A bit vector indicating all SSL or S/MIME cipher functions supported by the module (see below).</dd>
+</dl>
+
+<h4 id="Mechanism_flag_definitions">Mechanism flag definitions</h4>
+
+<p>In general, most tokens should not set any of the cipher flags. Setting these flags means you want your token to supply the default implementation for these functions. Normally Mozilla uses its own internal module to supply these functions. These flags override that preference. If you choose to implement these flags, your module must supply the following additional functions for each flag:</p>
+
+<ul>
+ <li>PKCS11_MECH_FLAG: must support CKM_RSA_PKCS and CKM_RSA_X_509 and the following functions: C_WRAPKEY, C_ENCRYPT, C_SIGN, C_DECRYPT, C_UNWRAPKEY, C_VERIFYRECOVER, C_VERIFY, C_GENERATEKEYPAIR (2048, 1024, 512) size</li>
+ <li>PKCS11_MECH_DSA_FLAG: must support CKM_DSA and the following functions: C_SIGN, C_VERIFY, C_GENERATEKEYPAIR</li>
+ <li>PKCS11_MECH_RC2_FLAG: must support CKM_RC2_CBC and CKM_RC2_ECB and the following functions: C_GENERATEKEY, C_ENCRYPT, C_DECRYPT, C_WRAPKEY, C_UNWRAPKEY</li>
+ <li>PKCS11_MECH_RC4_FLAG: must support CKM_RC4_CBC and CKM_RC4_ECB and the following functions: C_GENERATEKEY, C_ENCRYPT, C_DECRYPT, C_WRAPKEY, C_UNWRAPKEY</li>
+ <li>PKCS11_MECH_DES_FLAG: must support CKM_CPMF_CBC, CKM_DES_CBC, CKM_DES3_CBC, CKM_CPMF_ECB, CKM_DES_ECB, CKM_DES3_ECB and the following functions: C_GENERATEKEY, C_ENCRYPT, C_DECRYPT, C_WRAPKEY, C_UNWRAPKEY</li>
+ <li>PKCS11_MECH_DH_FLAG: must support CKM_DH_PKCS_DERIVE and CKM_DH_KEY_PAIR_GEN and the following functions: C_DERIVEKEY, C_GENERATEKEYPAIR</li>
+ <li>PKCS11_MECH_MD5_FLAG: Hashing must be able to function without authentication.</li>
+ <li>PKCS11_MECH_SHA1_FLAG: Hashing must be able to function without authentication.</li>
+ <li>PKCS11_MECH_MD2_FLAG: Hashing must be able to function without authentication.*</li>
+ <li>PKCS11_RANDOM_FLAG: Use token's Random Number Generator.
+  <ul>
+   <li>Warning: Must be able to use without authentication. Many hardware random number generators are not as secure as the Netscape internal one. Do not select this value unless you can show that your random number generator is secure. Even so, it's highly discouraged.</li>
+  </ul>
+ </li>
+ <li>PKCS11_PUB_READABLE_CERT_FLAG: This is the only flag most smart tokens should turn on. You can turn this flag on if:
+  <ul>
+   <li>the certs on your token can be read without authentication and,</li>
+   <li>the public key on your token can be found by ID, MODULUS, or VALUE and all your private keys have the associated public key.
+    <ul>
+     <li>Turning this flag on will illuminate a large number of password prompts for your token when looking up certs in Communicator.</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<pre class="eval">PKCS11_MECH_RSA_FLAG           =  0x1&lt;&lt;0;
+PKCS11_MECH_DSA_FLAG           =  0x1&lt;&lt;1;
+PKCS11_MECH_RC2_FLAG           =  0x1&lt;&lt;2;
+PKCS11_MECH_RC4_FLAG           =  0x1&lt;&lt;3;
+PKCS11_MECH_DES_FLAG           =  0x1&lt;&lt;4;
+PKCS11_MECH_DH_FLAG            =  0x1&lt;&lt;5; //Diffie-Hellman
+PKCS11_MECH_SKIPJACK_FLAG      =  0x1&lt;&lt;6; //SKIPJACK algorithm as in Fortezza cards
+PKCS11_MECH_RC5_FLAG           =  0x1&lt;&lt;7;
+PKCS11_MECH_SHA1_FLAG          =  0x1&lt;&lt;8;
+PKCS11_MECH_MD5_FLAG           =  0x1&lt;&lt;9;
+PKCS11_MECH_MD2_FLAG           =  0x1&lt;&lt;10;
+PKCS11_MECH_RANDOM_FLAG        =  0x1&lt;&lt;27; //Random number generator
+PKCS11_PUB_READABLE_CERT_FLAG  =  0x1&lt;&lt;28; //Stored certs can be read off the token w/o logging in
+PKCS11_DISABLE_FLAG            =  0x1&lt;&lt;30; //tell Mozilla to disable this slot by default
+</pre>
+
+<h4 id="Cipher_flags">Cipher flags</h4>
+
+<pre class="eval">Reserved
+</pre>
+
+<p>Important for CryptoMechanismFlags</p>
+
+<p>0x1&lt;&lt;11, 0x1&lt;&lt;12, ... , 0x1&lt;&lt;26, 0x1&lt;&lt;29, and 0x1&lt;&lt;31 are reserved for internal use in Mozilla. Therefore, these bits should always be set to 0; otherwise, Mozilla might exhibit unpredictable behavior.</p>
+
+<p>Important for CipherFlags</p>
+
+<p>All values are reserved for internal use in Mozilla. Therefore, this flag should always be set to 0; otherwise, Mozilla might exhibit unpredictable behavior.</p>
+
+<p>Example of CryptoMechanismFlags and CipherFlags</p>
+
+<pre class="eval">pkcs11MechanismFlags = PKCS11_MECH_DSA_FLAG | PKCS11_MECH_SKIPJACK_FLAG | PKCS11_MECH_RANDOM_FLAG;
+pkcs11CipherFlags = 0;
+</pre>
+
+<p>Return Values</p>
+
+<pre class="eval">JS_OK_ADD_MODULE                  = 3   // Successfully added a module
+JS_ERR_OTHER                      = -1  // Errors other than the following
+JS_ERR_USER_CANCEL_ACTION         = -2  // User aborted an action
+JS_ERR_INCORRECT_NUM_OF_ARGUMENTS = -3  // Calling a method w/ incorrect # of
+                                        // arguments
+JS_ERR_ADD_MODULE                 = -5  // Error adding a module
+JS_ERR_BAD_MODULE_NAME            = -6  // The module name is invalid
+JS_ERR_ADD_MODULE_DUPLICATE       = -10 // The module being installed has the
+                                        // same name as one of the modules that
+                                        // has already been installed
+</pre>
+
+<h4 id="Miscellaneous" name="Miscellaneous">Miscellaneous</h4>
+
+<pre class="eval">DOMString random(in long numBytes);
+</pre>
+
+<p>{{ unimplemented_inline() }}You can use <span><a href="/en/DOM/window.crypto.getRandomValues" title="window.crypto.getRandomValues">window.crypto.getRandomValues</a> instead.</span></p>
+
+<pre class="eval">void logout();
+</pre>
+
+<p>Logs the user out of all the cryptographic tokens. The next private operation on any token will require the user password again. The SSL session cache is also cleared (from Firefox 1.5 upward).</p>
+
+<p>This means the master password will be requested the next time a saved password will be accessed after this function is called. This also means the SSL client authentication state will be erased for SSL sites with client authentication, and a client certificate prompt will appear again the next time the user connects to the site.</p>
+
+<div class="note">
+<p>Note: This function provides a convenient way to erase the SSL session state at the browser level, but in order to really guarantee that the state is erased, it is more secure to do it on the server side whenever possible.</p>
+</div>
+
+<pre class="eval">void disableRightClick();
+</pre>
+
+<p>{{ unimplemented_inline() }}</p>

@@ -1,0 +1,118 @@
+---
+title: XMLHttpRequest.getResponseHeader()
+slug: Web/API/XMLHttpRequest/getResponseHeader
+tags:
+  - API
+  - XHR
+  - XMLHttpRequest
+  - getResponseHeader
+  - метод
+translation_of: Web/API/XMLHttpRequest/getResponseHeader
+---
+<p>{{draft}}{{APIRef('XMLHttpRequest')}}</p>
+
+<p>Метод <strong>XMLHttpRequest.getResponseHeader()</strong> возвращает строку, содержащую текст определённого хэдера (header). Если в наличии несколько хэдеров с одинаковыми именами, то они возвращаются в виде одной строки, где значения отделены друг от друга парой "запятая + пробел". Метод <code>getResponseHeader()</code> возвращает значение в кодировке UTF.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre>var myHeader = getResponseHeader(name);</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>name</dt>
+ <dd>Строка {{domxref("ByteString")}}, представляющая имя хэдера, значение которого необходимо возвратить в виде текста.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Строка {{domxref("ByteString")}}, представляющее текстовое значение хэдера или null, если ответ ещё не был получен или хэдер с именем name отсутствует в ответе.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">var client = new XMLHttpRequest();
+client.open("GET", "unicorns-are-teh-awesome.txt", true);
+client.send();
+client.onreadystatechange = function() {
+  if(this.readyState == this.HEADERS_RECEIVED) {
+    console.log(client.getResponseHeader("Content-Type"));
+  }
+}</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#dom-xmlhttprequest-getresponseheader', 'getResponseHeader()')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>Действующий стандарт WHATWG</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(1)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatIe('5')}}<sup>[1]</sup><br>
+    {{CompatIe('7')}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatSafari('1.2')}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome для Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>1.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Это свойство обеспечивалось посредством ActiveXObject(). Internet Explorer поддерживает стандарт XMLHttpRequest начиная с версии 7.</p>
+
+<h2 id="См._также">См. также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></li>
+</ul>

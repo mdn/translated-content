@@ -1,0 +1,186 @@
+---
+title: JSObject
+slug: Web/JavaScript/Referencje/LiveConnect/JSObject
+tags:
+  - Dokumentacja_JavaScript
+  - Dokumentacje
+  - JavaScript
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+translation_of: Archive/Web/LiveConnect/LiveConnect_Reference/JSObject
+---
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>The public final class <code>netscape.javascript.JSObject</code> extends <code>Object</code>.</p>
+
+<pre>java.lang.Object
+   |
+   +----netscape.javascript.JSObject
+</pre>
+
+<h3 id="Opis" name="Opis">Opis</h3>
+
+<p>Obiekty JavaScript są are wrapped in an instance of the class <code>netscape.javascript.JSObject</code> and passed to Java. <code>JSObject</code> allows Java to manipulate JavaScript objects.</p>
+
+<p>When a JavaScript object is sent to Java, the runtime engine creates a Java wrapper of type <code>JSObject</code>; when a <code>JSObject</code> is sent from Java to JavaScript, the runtime engine unwraps it to its original JavaScript object type. The <code>JSObject</code> class provides a way to invoke JavaScript methods and examine JavaScript properties.</p>
+
+<p>Any JavaScript data brought into Java is converted to Java data types. When the <code>JSObject</code> is passed back to JavaScript, the object is unwrapped and can be used by JavaScript code. Zobacz <a href="pl/Przewodnik_po_j%c4%99zyku_JavaScript_1.5">Przewodnik po języku JavaScript 1.5</a> w celu uzyskania dodatkowych informacji o konwersji typu danych.</p>
+
+<h3 id="Podsumowanie_metod" name="Podsumowanie_metod">Podsumowanie metod</h3>
+
+<p>Klasa <code>netscape.javascript.JSObject</code> posiada następujące metody:</p>
+
+<dl>
+ <dt><code>{{ Anch("call") }}</code> </dt>
+ <dd>Wywołuje metodę JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("equals") }}</code> </dt>
+ <dd>Określa, jeśli dwa obiekty <code>JSObject</code> odnoszą się do tej samej instancji.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("eval") }}</code> </dt>
+ <dd>Wykonuje wyrażenie JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("getMember") }}</code> </dt>
+ <dd>Odzyskuje wartość własności obiektu JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("getSlot") }}</code> </dt>
+ <dd>Odzyskuje wartość elementu tablicy obiektu JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("removeMember") }}</code> </dt>
+ <dd>Usuwa własność obiektu JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("setMember") }}</code> </dt>
+ <dd>Ustawia wartość własności obiektu JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("setSlot") }}</code> </dt>
+ <dd>Ustawia wartość elementu tablicy obiektu JavaScript.</dd>
+</dl>
+
+<dl>
+ <dt><code>{{ Anch("toString") }}</code> </dt>
+ <dd>Konwertuje JSObject do łańcucha znaków.</dd>
+</dl>
+
+<p>Klasa <code>netscape.javascript.JSObject</code> posiada następujące statyczne metody:</p>
+
+<dl>
+ <dt><code>{{ Anch("getWindow") }}</code> </dt>
+ <dd>Pobiera <code>JSObject</code> dla okna stanowiącego dany aplet.</dd>
+</dl>
+
+<h4 id="call" name="call">call</h4>
+
+<p>Metoda. Wywołuje metodę JavaScript. Równoważny z "<code>this.methodName(args{{ mediawiki.external(0) }}, args{{ mediawiki.external(1) }}, ...)</code>" w JavaScript.</p>
+
+<h5 id="Deklaracja" name="Deklaracja">Deklaracja</h5>
+
+<pre>public Object call(String methodName,
+   Object args[])
+</pre>
+
+<h4 id="equals" name="equals">equals</h4>
+
+<p>Metoda. Określona, jeśli dwa obiekty <code>JSObject</code> odnoszą się do tej samej instancji.</p>
+
+<p>Przesłania: <code>equals</code> w klasie <code>java.lang.Object</code></p>
+
+<h5 id="Deklaracja_2" name="Deklaracja_2">Deklaracja</h5>
+
+<pre>public boolean equals(Object obj)
+</pre>
+
+<h5 id="Kompatybilno.C5.9B.C4.87_wsteczna" name="Kompatybilno.C5.9B.C4.87_wsteczna">Kompatybilność wsteczna</h5>
+
+<p><strong>JavaScript 1.3</strong>. W JavaScript 1.3 i wersjach wcześniejszych, możemy zastosować wcześniejsze metody równości <code>java.lang.Object</code> lub operator <code>==</code> do porównania dwóch obiektów <code>JSObject</code>.</p>
+
+<p>W większości ostatnich wersji, samo <code>JSObject</code> potrafi wyświetlić jako obiekt Javy. Można użyć metody equals do określenia gdzie dwa obiekty <code>JSObjects</code> odnoszą się do tej samej instancji.</p>
+
+<h4 id="eval" name="eval">eval</h4>
+
+<p>Metoda. Wykonuje wyrażenia JavaScript. Wyrażenie jest łańcuchem znakowym kodu źródłowego JavaScript, który będzie wykonany w kontekście pobierania przez "this".</p>
+
+<h5 id="Deklaracja_3" name="Deklaracja_3">Deklaracja</h5>
+
+<pre>public Object eval(String s)
+</pre>
+
+<h4 id="getMember" name="getMember">getMember</h4>
+
+<p>Metoda. Odzyskuje wartość własności obiektu JavaScript. Równoważna do "<code>this.name</code>" w JavaScript.</p>
+
+<h5 id="Deklaracja_4" name="Deklaracja_4">Deklaracja</h5>
+
+<pre>public Object getMember(String name)
+</pre>
+
+<h4 id="getSlot" name="getSlot">getSlot</h4>
+
+<p>Metoda. Odzyskuje wartość elementu tablicy obiektu w JavaScript. Równoważna do "<code>this{{ mediawiki.external('index') }}</code>" w JavaScript.</p>
+
+<h5 id="Deklaracja_5" name="Deklaracja_5">Deklaracja</h5>
+
+<pre>public Object getSlot(int index)
+</pre>
+
+<h4 id="getWindow" name="getWindow">getWindow</h4>
+
+<p>Metoda statyczna. Zwraca <code>JSObject</code> dla okna stanowiącego dany aplet. Ta metoda jest użyteczna tylko po stronie klienta (client-side) w JavaScripcie.</p>
+
+<h5 id="Deklaracja_6" name="Deklaracja_6">Deklaracja</h5>
+
+<pre>public static JSObject getWindow(Applet applet)
+</pre>
+
+<h4 id="removeMember" name="removeMember">removeMember</h4>
+
+<p>Metoda. Usuwa własność obiektu w JavaScript.</p>
+
+<h5 id="Deklaracja_7" name="Deklaracja_7">Deklaracja</h5>
+
+<pre>public void removeMember(String name)
+</pre>
+
+<h4 id="setMember" name="setMember">setMember</h4>
+
+<p>Metoda. Ustala wartość własności obiektu JavaScript. Równoważna do "<code>this.name = value</code>" w JavaScript.</p>
+
+<h5 id="Deklaracja_8" name="Deklaracja_8">Deklaracja</h5>
+
+<pre>public void setMember(String name,
+   Object value)
+</pre>
+
+<h4 id="setSlot" name="setSlot">setSlot</h4>
+
+<p>Metoda. Ustala wartość elementu tablicy obiektu JavaScript. Równoważna "<code>this{{ mediawiki.external('index') }} = value</code>" w JavaScript.</p>
+
+<h5 id="Deklaracja_9" name="Deklaracja_9">Deklaracja</h5>
+
+<pre>public void setSlot(int index,
+   Object value)
+</pre>
+
+<h4 id="toString" name="toString">toString</h4>
+
+<p>Metoda. Konwertuje <code>JSObject</code> na <code>String</code>.</p>
+
+<p>Przesłania: <code>toString</code> w klasie <code>java.lang.Object</code></p>
+
+<h5 id="Deklaracja_10" name="Deklaracja_10">Deklaracja</h5>
+
+<pre>public String toString()
+</pre>

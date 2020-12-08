@@ -1,0 +1,395 @@
+---
+title: How to convert an overlay extension to restartless
+slug: Mozilla/Add-ons/How_to_convert_an_overlay_extension_to_restartless
+translation_of: Archive/Add-ons/How_to_convert_an_overlay_extension_to_restartless
+---
+<div class="note">
+<p>This article is a step-by-step tutorial on how to convert an old <a href="https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions">overlay-based extension</a> into a <a href="https://developer.mozilla.org/en-US/Add-ons/Bootstrapped_extensions">restartless (bootstrapped) extension</a> that is also extractionless.</p>
+</div>
+
+<h2 id="Requirements">Requirements</h2>
+
+<p>First off, what kind of <a href="https://developer.mozilla.org/en-US/Add-ons">add-on</a> are we talking about here? Well, <a href="https://developer.mozilla.org/en-US/docs/XUL_Overlays">XUL overlays</a> and windows, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules">JSM files</a>, <a href="https://developer.mozilla.org/en-US/docs/Chrome_Registration">chrome &amp; resource mappings</a> with localization, default preferences, but <strong>no XPCOM components of your own</strong>. Some of that will have to be replaced and the rest will need to be loaded differently.</p>
+
+<p>Next, what's the minimum version of Firefox we should require (preferably an <a href="https://www.mozilla.org/firefox/organizations/">ESR</a>)? This guide targets <strong>Firefox 17 ESR or later</strong> (or anything else Gecko 17+, such as SeaMonkey 2.14+). This is<em>two</em> ESRs back (as of this writing), which should be plenty. Using the current Firefox ESR, stable version, or Nightly is generally a better idea if given the option, but some users take forever to upgrade.</p>
+
+<p>There will be no usage of the <a href="/en-US/Add-ons/SDK">Add-on SDK</a> or any other external libraries here. Everything will use APIs available in Firefox 17+ or code provided here.</p>
+
+<h2 id="Step_1_Use_Services.jsm">Step 1: Use Services.jsm</h2>
+
+<p>If you load one of Mozilla's internal <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules">JSM files</a>, for example <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm">Services.jsm</a>, you'll do so via privileged JavaScript code like this:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Services.jsm");</pre>
+
+<p>From here on out, it is assumed you've imported Services.jsm somewhere at the top of whatever file you're in and will be using it in all code examples. The examples will also assume that you know how to properly add instructions to your add-on's <a href="https://developer.mozilla.org/en-US/docs/Chrome_Registration">chrome.manifest</a> to add and remove resource, chrome, locale, &amp; etc. mappings, so that you can access your files with custom paths such as:</p>
+
+<pre>resource://myAddon/filename.ext
+chrome://myAddon/content/filename.ext</pre>
+
+<h2 id="Step_2_No_more_resource_URIs_for_files_internal_to_your_bundle">Step 2: No more resource:// URIs for files internal to your <a href="/en-US/docs/Bundles">bundle</a></h2>
+
+<p>Unfortunately, resource mappings in your chrome.manifest are <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=675372">still not usable</a> in restartless add-ons, which looks bad, but only because Mozilla is still using resource:// URIs internally and in examples. Resource mappings for files in the mozilla distribution, such as Services.jsm (above), will continue to work. In overlay extensions, you can place a resource mapping in the chrome.manifest for your add-on and load your own JSM from resource:// URIs. It's a great way to modularize your code that's been available since Firefox 3. You can use chrome:// URIs with "<a href="https://developer.mozilla.org/en-US/docs/Components.utils.import">Components.utils.import()</a>" just fine; in fact you've been able to since Firefox 4. However, because it was implemented first for only file:// and resource:// but not chrome://, everyone who learned of this new feature learned that you had to load JSM from resource:// URIs and just stuck with that forever. It does still work if you don't have restartlessness to worry about, though the protocol (or scheme, or whatever term you prefer) really should be avoided at this point. The resource:// protocol actually <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903959">bleeds into content</a> which allows webpages to detect installed add-ons using the protocol, which is not particularly fantastic (just the static file contents, not any loaded script/data).</p>
+
+<h3 id="Step_2a_Load_your_JSM_from_chrome">Step 2a: Load your JSM from chrome://</h3>
+
+<p>Now with that preface out of the way, this part is easy: drop support for Firefox 3.x if you haven't already, move your JSM files to wherever you've got your <a href="https://developer.mozilla.org/en-US/docs/Chrome_Registration#content">chrome mapping</a> to for your XUL overlay and/or windows, import your files from that new chrome mapped path instead of the old resource one, and remove your "resource" line from your chrome.manifest file. It's probably a good idea to do this even if you aren't going fully restartless / extractionless due to the previously mentioned exposure to content of resource mappings.</p>
+
+<p>Also, drop support for Firefox 4 through 9 while you're at it. Prior to Firefox 10, the chrome.manifest file you rely on wasn't loaded automatically for restartless add-ons. Hacks were required, and probably a bad idea.</p>
+
+<h3 id="Step_2b_Audit_any_remaining_resource_URI_usage_internal_to_your_extension">Step 2b: Audit any remaining resource:// URI usage internal to your extension</h3>
+
+<p>If you don't need resource:// URIs for anything else, then you may be able to skip the next step. If not, see if you still can't do things any other way. As with JSMs, a chrome:// URI may be more appropriate. If you want to also make your add-on extractionless then you may need "step 3" if you're loading files with nsIFileInputStream or something similar, or a jar: URI might work. If not, a file:// URI might be fine for you. Restartless add-ons can easily get a <a href="https://developer.mozilla.org/en-US/Add-ons/Bootstrapped_extensions#Bootstrap_data">URI for their install location</a> on startup, so you should look into what you can do with that.</p>
+
+<h2 id="Step_3_No_more_nsIFile_access_for_files_internal_to_your_bundle">Step 3: No more <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile">nsIFile</a> access for files internal to your bundle</h2>
+
+<p>For an extractionless extension, access to files internal to your bundle will not be possible using the nsIFile interface.</p>
+
+<p>If you need to read data, or otherwise access files within your bundle, there are two options. The first is to use the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIZipReader">nsIZipReader</a> interface which permits continuing to use <a href="/en-US/docs/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a>s, etc. The second is to re-code to use <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>.</p>
+
+<p>A file:// URI to the install location, or .xpi file, is available in <code>installPath</code> property of the <a href="https://developer.mozilla.org/en-US/Add-ons/Bootstrapped_extensions#Bootstrap_data">bootstrap data structure</a> passed to the <code>startup()</code>, <code>shutdown()</code>, <code>install()</code>, and <code>uninstall()</code> functions in what will be your bootstrap.js file <em>(see below)</em>.</p>
+
+<p>How to get and load the data of of your add-on's files using the <a href="https://developer.mozilla.org/en-US/Add-ons/Add-on_Manager/AddonManager">Add-on Manager API</a>:</p>
+
+<pre class="brush: js">// This is the OLD way of getting one of your files
+const myAddonID = ...;  // Just store a constant with your ID
+Components.utils.import("resource://gre/modules/AddonManager.jsm");
+AddonManager.getAddonByID(myAddonID,function(addon) {
+    var file = Services.io.newURI("resource://myAddon/filename.ext",null,null)
+                          .QueryInterface(Components.interfaces.nsIFileURL)
+                          .file;
+    var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                           .createInstance(Components.interfaces.nsIFileInputStream)
+                           .QueryInterface(Components.interfaces.nsISeekableStream);
+    stream.init(file, 0x01, 0444, 0);  // read-only, read by owner/group/others, normal behavior
+    /* do stuff */
+});</pre>
+
+<p>This bit of code is paraphrased and probably not to be recommended as-is, but it should work. (note that the usage of an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Integers">octal integer literal</a>, while standard for handling permissions, is dangerous and deprecated; usage of use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Converting_mistakes_into_errors">ES5 strict mode</a> to disable this and other foot-guns is recommended) If you need to read/manipulate binary data, a <a href="/en-US/docs/XPCOM_Interface_Reference/nsIBinaryInputStream">nsIBinaryInputStream</a> instance is what you'll use on that stream (e.g. 32-bit integers, or fun stuff like <a href="https://flagfox.wordpress.com/2011/02/12/apparently-javascript-cant-do-64-bit-math/">48-bit integers</a>). Not ideal, but it works and performs more than sufficiently well. All of that code above is no longer viable if you also go extractionless (which you should).</p>
+
+<h3 id="Step_3a_Option_1_Use_nsIZipReader">Step 3a: Option 1: Use <a href="/en-US/docs/XPCOM_Interface_Reference/nsIZipReader">nsIZipReader</a></h3>
+
+<pre class="brush: js">let zipReader = Components.classes["@mozilla.org/libjar/zip-reader;1"]
+                          .createInstance(Components.interfaces.nsIZipReader);
+zipReader.open(addonData.installPath);
+...
+</pre>
+
+<p>From there you can open <a href="/en-US/docs/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a>s, extract files, or perform some other functions. Worst case would be that you extract a file to a temporary location and then use nsIFile operations upon the extracted file.</p>
+
+<h3 id="Step_3b_Option_2_Use_XMLHttpRequest">Step 3b: Option 2: Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></h3>
+
+<p>Now, how do we replace that? The answer to that question is to <strong>load your file from a chrome:// URI using XMLHttpRequest</strong>. You may now have another question: wait, what does this have to do with <a href="/en-US/docs/XML">XML</a> or <a href="/en-US/docs/Web/HTTP">HTTP</a>? The answer to that question is, of course, <em>nothing</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> is an API created by Microsoft, adopted by Mozilla and other vendors, and hacked into a Swiss Army knife of file loading. You can use it in a web page to fetch a file from your server and you can use it in your add-on to fetch a local file from your installation. The name is a vestigial structure that just makes things confusing. It is nonetheless the "Correct" and best way to do things. It's available in the global for a window, but in JSM you'll need to fetch it from an interface:</p>
+
+<pre class="brush: js">const XMLHttpRequest = Components.Constructor("@mozilla.org/xmlextras/xmlhttprequest;1",
+                                              "nsIXMLHttpRequest");</pre>
+
+<p>Here's how to load a file using it:</p>
+
+<pre class="brush: js">function loadFile(url,type,returnresult)
+{
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);  // async=true
+    request.responseType = type;
+    request.onerror = function(event) {
+        logErrorMessage("Error attempting to load: " + url);
+        returnresult(null);
+    };
+    request.onload = function(event) {
+        if (request.response)
+            returnresult(request.response);
+        else
+            request.onerror(event);
+    };
+    request.send();
+}
+loadFile("chrome://myAddon/content/filename.ext",dataType,function(data) {
+    /* do stuff with data */
+});</pre>
+
+<p>Note: When using XMLHttpRequest to access a file:// URL the <code>request.status</code> is not properly set to <code>200</code> to indicate success. In such cases, <code>request.readyState == 4</code>, <code>request.status == 0</code> and <code>request.response</code> will evaluate to true.</p>
+
+<p>If your file is text, use "text" as your data type. If you're getting <a href="https://developer.mozilla.org/en-US/docs/JSON">JSON</a> this way make sure to explicitly set the type as "text" if you intend to parse it yourself. Even though it says that the default type is "text", Firefox will attempt to autodetect and fail, resulting in an error message in the console. This doesn't seem to break anything, but it is easily avoidable by being explicit with the type. <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties">MDN says</a> you can set the type to "json" instead, if you prefer to have it parse things for you.</p>
+
+<p>If your file is not text or JSON, then you're going to want to read binary data. The new way to do this is to use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a>. Specify "arraybuffer" as your data type to get one from your XMLHttpRequest. To access that data you're going to need a data view to look at your typed array with. Data that's homogeneous might get away with using something like Uint32Array or one of the other standard typed array views, but it's probably a bad idea. <strong>The basic typed array views are not endian-safe.</strong> This is incredibly stupid. You'd think such an important new JavaScript feature made available for web content and chrome alike would at least have a way to set and keep track of <a href="https://en.wikipedia.org/wiki/Endianness">endianness</a>, but no, it doesn't. Don't use any of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ArrayBufferView#Typed_array_subclasses">basic typed arrays</a> for any data you did not earlier write into them in the same program session. Also, they're not particularly helpful if your data isn't all of the exact same type (which it probably isn't).</p>
+
+<p>The solution to read arbitrary binary data, of various sizes, in an endian-safe way, is to use <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataView">DataView</a>. The other typed array stuff is viable in Firefox 4+. This wasn't added until Firefox 15. If you were using nsIBinaryInputStream or anything similar, figuring out DataView will be fairly straightforward. Just read the docs and it's pretty simple. It will probably be notably faster than whatever you were doing before.</p>
+
+<p>Reportedly <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Using_XMLHttpRequest_from_JavaScript_modules_.2F_XPCOM_components">XMLHttpRequest doesn't work reliably when used in JSM under versions of Firefox less than 16</a>, however as previously mentioned, this guide should be taken as requiring Firefox 17+.</p>
+
+<h2 id="Step_4_Manually_handle_default_preferences">Step 4: Manually handle default preferences</h2>
+
+<p>Normal extensions load <a href="https://developer.mozilla.org/en-US/docs/Default_Preferences">default preferences</a> from a standardized file automatically. Restartless extensions <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=564675">don't</a> (for no good reason). This part is fairly easy to implement yourself, at least. Here are some functions to handle this:</p>
+
+<pre class="brush: js">function getGenericPref(branch,prefName)
+{
+    switch (branch.getPrefType(prefName))
+    {
+        default:
+        case 0:   return undefined;                      // PREF_INVALID
+        case 32:  return getUCharPref(prefName,branch);  // PREF_STRING
+        case 64:  return branch.getIntPref(prefName);    // PREF_INT
+        case 128: return branch.getBoolPref(prefName);   // PREF_BOOL
+    }
+}
+function setGenericPref(branch,prefName,prefValue)
+{
+    switch (typeof prefValue)
+    {
+      case "string":
+          setUCharPref(prefName,prefValue,branch);
+          return;
+      case "number":
+          branch.setIntPref(prefName,prefValue);
+          return;
+      case "boolean":
+          branch.setBoolPref(prefName,prefValue);
+          return;
+    }
+}
+function setDefaultPref(prefName,prefValue)
+{
+    var defaultBranch = Services.prefs.getDefaultBranch(null);
+    setGenericPref(defaultBranch,prefName,prefValue);
+}
+function getUCharPref(prefName,branch)  // Unicode getCharPref
+{
+    branch = branch ? branch : Services.prefs;
+    return branch.getComplexValue(prefName, Components.interfaces.nsISupportsString).data;
+}
+function setUCharPref(prefName,text,branch)  // Unicode setCharPref
+{
+    var string = Components.classes["@mozilla.org/supports-string;1"]
+                           .createInstance(Components.interfaces.nsISupportsString);
+    string.data = text;
+    branch = branch ? branch : Services.prefs;
+    branch.setComplexValue(prefName, Components.interfaces.nsISupportsString, string);
+}</pre>
+
+<p>Just grab the above, move your default preferences file to your chrome mapping, and then do the following line once during your startup:</p>
+
+<pre class="brush: js">Services.scriptloader.loadSubScript("chrome://myAddon/content/defaultprefs.js",
+                                    {pref:setDefaultPref} );
+</pre>
+
+<p>That's it. Once you've got the machinery to load and save preferences without having to jump through the various pref type hoops the actual preferences API sends you through, loading the actual preferences file is one line. I'd generally still recommend using the type specific functions for each pref individually, but to load the defaults just use the generic functions above and it's quite simple. The other generic functions are provided above in case you need them. Unfortunately, the built in APIs for dealing with preferences are missing this basic stuff, and its plain text handling doesn't work with Unicode properly.</p>
+
+<h3 id="Step_4a_Another_way_to_handle_default_preferences">Step 4a: Another way to handle default preferences</h3>
+
+<p>If you want to keep your preference file in <strong>defaults/preferences/</strong>, the approach above only works as long as your extension is unpacked. For packed extensions (the default), you can either load a module similar to Firebug’s <a href="https://github.com/firebug/firebug/blob/master/extension/modules/prefLoader.js">prefLoader.js</a> or load this <a href="https://gist.github.com/oshybystyi/8cf882bc8b0c9a95a116">workaround module</a>.</p>
+
+<h2 id="Step_5_No_more_internal_JAR_files">Step 5: No more internal JAR files</h2>
+
+<p>You know how I've been mentioning extractionless add-ons every once in a while thus far? Well, you should probably consider switching to be extractionless when you go restartless. An old-style add-on installer is packaged something like this:</p>
+
+<pre>myAddon.xpi file (glorified ZIP)
+└─ chrome.manifest
+└─ install.rdf
+└─ chrome folder
+  └─ myAddon folder
+    └─ content.jar file
+      └─ content folder (most files go here)
+      └─ locale folder (your locale files go here)</pre>
+
+<p>In versions of Firefox prior to 4.0 (Gecko 2.0), the XPI would be extracted into a folder in your profile's extensions folder. In current versions it stays unextracted as an XPI. If you were using input streams you already had to deal with this because they weren't an option without extraction. Opting-out to extractionlessness is done via the "unpack" flag in <a href="https://developer.mozilla.org/en-US/Add-ons/Install_Manifests">install.rdf</a>.</p>
+
+<p>Why the internal JAR? Well, two reasons:</p>
+
+<ol>
+ <li>Prior to extractionless add-ons, all of your files got extracted. Putting them in one single JAR file made all your stuff load in one file read, which was faster. Extractionless XPIs are bascially a standardization of this idea.</li>
+ <li>XPI files are glorified ZIPs, and ZIP compression is horrible. Doing an<em>uncompressed</em> internal JAR (aka, another ZIP) acts like a poor-man's <a href="https://en.wikipedia.org/wiki/Solid_archive">solid archive</a> and significantly boosts the overall compression ratio of the XPI, resulting in smaller installers and updates.</li>
+</ol>
+
+<p>So, it's pretty much internal JAR<em>or</em> extractionless XPI. Well, <strong>you can't use an internal JAR anymore</strong>. Firefox aggressively caches add-on data a bit too much. Your restartless add-on won't actually reload some types of files if they are in a JAR and the add-on is updated without a restart. The big culprits are JSM files and locale files (namely property files), though in some situations this is true for dynamically loaded image files too. You're still going to have to manually clear the chrome cache on add-on shutdown to work around this, but that doesn't seem to be enough with an internal JAR. So, time to switch to extractionless, too. See <a href="https://developer.mozilla.org/en-US/Add-ons/Install_Manifests#unpack">here</a> for the list of stuff you can't have in addition to no resource:// URIs or file:// URIs to files inside your XPI.</p>
+
+<p>If you actually can't find a way to go fully extractionless, you could hack together some combination of internal JAR(s) and extracted files. It can be done. However, you really should go extractionless. Firefox profiles aren't the pristine environment they're supposed to be. Software that pretends to be designed to protect security or privacy that some users have installed will sometimes delete files. There have been plenty of reports of add-on franken-installs with files of two versions mixed together. This might be due to malware or a bug in Firefox. In any case, I have noticed a significant improvement in reliability by going fully extractionless. Installing and updating a single file is far more idiot-proof.</p>
+
+<h2 id="Step_6_No_more_XUL_overlays">Step 6: No more XUL overlays</h2>
+
+<p>Ok, now we're getting into some more drastic changes. You won't be able to use your chrome.manifest to load XUL overlays anymore with a restartless add-on. You could look into <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.loadOverlay">dynamically loading</a> and unloading your overlay, however dynamically manipulating the DOM of your XUL window is usually the more straightforward route.</p>
+
+<p>Figure out what XUL elements you need to create for your add-on to add your interface, where it needs to go into a XUL window, and how to do it. Docs: <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.getElementById">document.getElementByID()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.createElement">document.createElement()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/element">Element reference</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node">Node reference</a> (DOM elements are also nodes).</p>
+
+<p>You'll need to write two functions. One to take a XUL window object and then create and add your elements, and then another to find your elements and remove them from the window object. The former will need to be run on add-on startup and the later on add-on shutdown. Until you get your bootstrap.js running you should use a basic overlay onto the XUL window with an event listener for "load" to catch overlay load and then run your manual UI construction function.</p>
+
+<h3 id="Step_6a._Details_on_adding_elements_dynamically_to_chrome_XUL_window">Step 6a. Details on adding elements dynamically to chrome XUL window</h3>
+
+<p>There is a way that makes constructing of UI a lot similar to the way it was made with XUL overlay. It involves using <a href="https://github.com/firebug/firebug.sdk/blob/master/lib/core/xul.js">firebug.sdk</a>. The next is example of the code:</p>
+
+<pre class="brush: js">var overlay =
+  TOOLBARBUTTON(toolbarButtonAttrs,
+    PANEL({'id': 'thepanel', 'type': 'arrow'},
+      HBOX({'align': 'start'},
+        VBOX(
+          HBOX({'class': 'pixel-hbox'},
+            DESCRIPTION({'value': this.stringBundle.GetStringFromName('firexPixel.opacity')}),
+            HTMLINPUT({'id': 'opacity-range', 'type': 'range', 'min': '0', 'max': '10'})
+          ),
+          HBOX({'id': 'pixel-coords', 'class': 'pixel-hbox'},
+            LABEL({'control': 'coord-x', 'value': 'X:'}),
+            TEXTBOX({'id': 'coord-x', 'class': 'coord-box', 'placeholder' : '0'}),
+            LABEL({'control': 'coord-y', 'value': 'Y:'}),
+            TEXTBOX({'id': 'coord-y', 'class': 'coord-box', 'placeholder': '0'})
+         ...
+</pre>
+
+<p>That way you build elements hierarchy with not much interaction with DOM, plus you can see tag properties and it children in a nice, structured way, just like in overlay.xul. You can find working example <a href="https://github.com/oshybystyi/FireX-Pixel-Perfect/blob/issue-5-make-addon-restartless/content/ui.jsm#L94">here</a>. It involves using of firebug.sdk xul.js with <a href="https://github.com/oshybystyi/FireX-Pixel-Perfect/blob/issue-5-make-addon-restartless/content/lib/xul.js">few modifications</a>.</p>
+
+<h2 id="Step_7_Manually_handle_global_CSS_Stylesheets">Step 7: Manually handle global CSS Stylesheets</h2>
+
+<p>Any Global CSS style sheets which you are using will need to be registered upon load and unregistered when your extension is unloaded. Any CSS files used in any of your own XUL files will function normally without any extra work needed.</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Services.jsm");
+var styleSheets = ["chrome://myExtension/skin/myStyleSheet.css"];
+
+function startup(data,reason)
+{
+...
+    // Load stylesheets
+    let styleSheetService= Components.classes["@mozilla.org/content/style-sheet-service;1"]
+                                     .getService(Components.interfaces.nsIStyleSheetService);
+    for (let i=0,len=styleSheets.length;i&lt;len;i++) {
+        let styleSheetURI = Services.io.newURI(styleSheets[i], null, null);
+        styleSheetService.loadAndRegisterSheet(styleSheetURI, styleSheetService.<code>AUTHOR_SHEET</code>);
+    }
+...
+}
+
+function shutdown(data,reason)
+{
+...
+    // Unload stylesheets
+    let styleSheetService = Components.classes["@mozilla.org/content/style-sheet-service;1"]
+                                      .getService(Components.interfaces.nsIStyleSheetService);
+    for (let i=0,len=styleSheets.length;i&lt;len;i++) {
+        let styleSheetURI = Services.io.newURI(styleSheets[i], null, null);
+        if (styleSheetService.sheetRegistered(styleSheetURI, styleSheetService.<code>AUTHOR_SHEET</code>)) {
+            styleSheetService.unregisterSheet(styleSheetURI, styleSheetService.<code>AUTHOR_SHEET</code>);
+        }
+    }
+...
+</pre>
+
+<h2 id="Step_8_Window_icons">Step 8: Window icons</h2>
+
+<p>Firefox does not scan the <code>chrome/icons/default</code> directory of restartless or extrationless extensions for <a href="/en-US/docs/Window_icons">window icons</a>.  If you are using custom window icons, they will need to be moved to <code>%MozDir%/icons/default/</code> upon load of your extension.  Removal upon unload is not required, but you must be able to handle overwriting them upon load.  This is because your <code>unload()</code> will not always be called prior to an upgrade (e.g. upgrade might take place while the application is not running). Further, this is a generic location for icons and the icon may still be in use by a different profile.  Thus, you will probably want to use version numbers in the icon name (the ID of the window for which the icon exists).</p>
+
+<h2 id="Step_9_bootstrap.js">Step 9: bootstrap.js</h2>
+
+<p>A <a href="/en-US/docs/Extensions/bootstrap.js">bootstrap.js</a> file in the root of your XPI, next to your chrome.manifest and install.rdf, will be the <a href="https://developer.mozilla.org/en-US/Add-ons/Bootstrapped_extensions#Bootstrap_entry_points">heart</a> of your restartless add-on. Think of it as main.c, but for JavaScript based Firefox restartless add-ons. A basic bootstrap.js file:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Services.jsm");
+function startup(data,reason) {
+    Components.utils.import("chrome://myAddon/content/myModule.jsm");
+    myModule.startup();  // Do whatever initial startup stuff you need to do
+
+    forEachOpenWindow(loadIntoWindow);
+    Services.wm.addListener(WindowListener);
+}
+function shutdown(data,reason) {
+    if (reason == APP_SHUTDOWN)
+        return;
+
+    forEachOpenWindow(unloadFromWindow);
+    Services.wm.removeListener(WindowListener);
+
+    myModule.shutdown();  // Do whatever shutdown stuff you need to do on addon disable
+
+    Components.utils.unload("chrome://myAddon/content/myModule.jsm");  // Same URL as above
+
+    // HACK WARNING: The Addon Manager does not properly clear all addon related caches on update;
+    //               in order to fully update images and locales, their caches need clearing here
+    Services.obs.notifyObservers(null, "chrome-flush-caches", null);
+}
+function install(data,reason) { }
+function uninstall(data,reason) { }
+function loadIntoWindow(window) {
+/* call/move your UI construction function here */
+}
+function unloadFromWindow(window) {
+/* call/move your UI tear down function here */
+}
+function forEachOpenWindow(todo)  // Apply a function to all open browser windows
+{
+    var windows = Services.wm.getEnumerator("navigator:browser");
+    while (windows.hasMoreElements())
+        todo(windows.getNext().QueryInterface(Components.interfaces.nsIDOMWindow));
+}
+var WindowListener =
+{
+    onOpenWindow: function(xulWindow)
+    {
+        var window = xulWindow.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                              .getInterface(Components.interfaces.nsIDOMWindow);
+        function onWindowLoad()
+        {
+            window.removeEventListener("load",onWindowLoad);
+            if (window.document.documentElement.getAttribute("windowtype") == "navigator:browser")
+                loadIntoWindow(window);
+        }
+        window.addEventListener("load",onWindowLoad);
+    },
+    onCloseWindow: function(xulWindow) { },
+    onWindowTitleChange: function(xulWindow, newTitle) { }
+};
+</pre>
+
+<p>As mentioned above, <a href="https://developer.mozilla.org/en-US/docs/Components.utils.unload">Components.utils.unload()</a> will not work properly if the JSM file it is unloading is in a JAR. Also make sure to only unload your own JSM files to avoid accidentally breaking things horribly.</p>
+
+<p>For tearing down and cleaning up on a per-window basis, there is another route you can take. Instead of directly calling your tear down function, make your <code>unloadFromWindow()</code> something like this:</p>
+
+<pre class="brush: js">function unloadFromWindow(window)
+{
+    var event = window.document.createEvent("Event");
+    event.initEvent("myAddonName-unload",false,false);
+    window.dispatchEvent(event);
+}
+</pre>
+
+<p>In each window you can then register on startup to listen for your custom "myAddonName-unload" event and just tear down and clean up when that event or a regular "unload" event comes in.</p>
+
+<h2 id="Step_10_Bypass_cache_when_loading_properties_files">Step 10: Bypass cache when loading properties files</h2>
+
+<p>The above will get you a working add-on that will install without a Firefox restart. It will even get you a working add-on that will update without a Firefox restart... usually. Some parts work only if you don't look too closely; localization is one of them. As mentioned in the previous section, you'll need to clear the chrome caches on add-on shutdown, namely for chrome images and properties files. Doing this will get an update's new properties file to load, however sometimes this will instead produce an error on the next property access. It just doesn't seem that it can reliably clear the cache correctly, for whatever reason. String changes seem to be fine, however the addition or removal of strings can<em>sometimes</em> produce this error. It's not reliably reproducible, but it does happen.<em>Yes, this is a pain in the ass.</em></p>
+
+<p>The suggestion that seems to work is to use a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=719376#c0">hack</a> to bypass the string bundle cache. You should still be caching a reference to your string bundle on add-on startup, preferably using <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter%28%29">XPCOMUtils.jsm</a> to lazily load the file. For example:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Services.jsm");
+Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+XPCOMUtils.defineLazyGetter(this, "strings", function() {
+    return loadPropertiesFile("chrome://myAddon/locale/mystrings.properties");
+});
+function loadPropertiesFile(path)
+{
+    /* HACK: The string bundle cache is cleared on addon shutdown, however it doesn't appear to do so reliably.
+       Errors can erratically happen on next load of the same file in certain instances. (at minimum, when strings are added/removed)
+       The apparently accepted solution to reliably load new versions is to always create bundles with a unique URL so as to bypass the cache.
+       This is accomplished by passing a random number in a parameter after a '?'. (this random ID is otherwise ignored)
+       The loaded string bundle is still cached on startup and should still be cleared out of the cache on addon shutdown.
+       This just bypasses the built-in cache for repeated loads of the same path so that a newly installed update loads cleanly. */
+    return Services.strings.createBundle(path + "?" + Math.random());
+}
+</pre>
+
+<p>Just do <code>strings.GetStringFromName(stringID)</code> as you normally would. The <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter%28%29">lazy getter magic</a> will cause the file to be automatically loaded the first time it is needed, after which point a reference to the loaded string bundle will be stored in "strings" for future accesses. You still need to clear the cache on add-on shutdown, however it will now also load cleanly on add-on updates. The old file <em>should</em> still be cleared.</p>
+
+<h2 id="Put_it_all_together">Put it all together</h2>
+
+<p>That should be all the pieces. Your chrome.manifest will have just chrome and locale (and possibly skin) mappings in it now. No resource mappings or chrome overlays. The new entry point for your add-on is via <code>bootstrap.js:startup()</code> rather than a "load" handler in a XUL overlay.</p>
+
+<p>Your localization handling should be unaffected by your transition to a restartless/extractionless add-on so long as you properly clear the chrome cache on add-on shutdown and load your properties files using the method listed above. Your property files and DTD files loaded from chrome:// URIs should work just as before. This is all assuming a minimum version of Firefox 17+ (or other Gecko 17+ application) which you should remember to state explicitly in your install.rdf.</p>
+
+<p><strong>Just remember that whatever you start you also need to have the ability to undo. In order for your add-on to reliably update without a restart it needs to be able to shutdown/disable cleanly.</strong></p>
+
+<p>Also note that once you do get this all up and running, your users will still have to restart Firefox once to install your first restartless update. While your new add-on may not need a restart to install, if you're updating from an old version that is not restartless then it will need a restart to<em>uninstall</em> that first.</p>
+
+<div class="note">
+<p>This tutorial was originally written by Dave Garrett from his experience <a href="https://flagfox.wordpress.com/2014/01/19/writing-restartless-addons/">porting the Flagfox extension</a>.</p>
+</div>
+
+<h2 id="Further_reading">Further reading</h2>
+
+<ul>
+ <li>Author <a href="https://flagfox.wordpress.com/2014/01/19/writing-restartless-addons/">original article.</a></li>
+ <li>Another real-world example of porting overlay-based extension into restartless (<a href="https://github.com/oshybystyi/FireX-Pixel-Perfect/compare/v1.4...oshybystyi:issue-5-make-addon-restartless">git diff</a>).</li>
+ <li>Another <a href="https://github.com/firebug/pixel-perfect/blob/master/lib/pixel-perfect-popup.js#L197">example</a> of using firebug.sdk xul.js to construct ui.</li>
+</ul>

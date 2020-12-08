@@ -1,0 +1,44 @@
+---
+title: Создание веб-приложений для Firefox OS
+slug: Archive/B2G_OS/Apps/Writing_a_web_app_for_Firefox_OS_ru
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>Приложения для Firefox OS представляют собой обычные Web-приложения, написанные с использованием HTML, CSS и JavaScript. Они публикуются в Web подобно обычным Web-сайтам. Чтобы сделать Web-сайт инсталлируемым на мобильные устройства в качестве Web-приложения, Вам нужно лишь добавить к нему файл манифеста и кнопку "install", как описывается ниже.</p>
+<p>Для начала рекомендуется прочесть следующие статьи:</p>
+<ul>
+  <li><a href="/en-US/docs/Web/Apps/Getting_Started">Getting started with making apps</a></li>
+  <li><a href="/en-US/docs/Web/Apps/Manifest">App manifest</a></li>
+</ul>
+<p>И, конечно же, Вы вольны <a href="/en-US/docs/Web/Apps">dive even further into Open Web Apps</a>!</p>
+<h2 id="Инсталляция_Web-приложения">Инсталляция Web-приложения</h2>
+<p>Манифест-файл прилагается к веб-приложению для того, чтобы Gecko смог его должным образом обработать при инсталляции. В процессе инсталляции Gecko "читает" файл манифеста и вносит при необходимости дополнительные записи в домашний экран (home screen) и т.п.</p>
+<p>Для инсталляции приложения служит <a href="/en-US/docs/Web/API/Apps.install"><code>navigator.mozApps.install</code> API</a>. Ниже приведён пример кнопки "Install", которую можно встроить в Ваше приложение, если Вы хостите его самостоятельно:</p>
+<pre class="brush: html">&lt;button id="install"&gt;
+  Install this awesome app on your homescreen!
+&lt;/button&gt;
+
+&lt;script&gt;
+(function(){
+  function install(ev) {
+    ev.preventDefault();
+    // define the manifest URL
+    var manifest_url = "http://my.webapp.com/manifest.webapp";
+    // install the app
+    var myapp = navigator.mozApps.install(manifest_url);
+    myapp.onsuccess = function(data) {
+      // App is installed, remove button
+      this.parentNode.removeChild(this);
+    };
+    myapp.onerror = function() {
+      // App wasn't installed, info is in this.error.name
+      console.log('Install failed, error: ' + this.error.name);
+     };
+  };
+  // get a reference to the button and call install() on click
+  var button = document.getElementById('install');
+  button.addEventListener('click', install, false);
+})();
+&lt;/script&gt;
+</pre>
+<p>Примечание: кнопка "Install" может быть расположена и в магазине приложений, например, в <a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Firefox Marketplace</a>, но зачастую весьма удобно иметь кнопку "Install as web app" на главной странице Вашего сайта.</p>
+<p>Теперь при заходе на Ваш сайт броузером из Firefox OS, его можно будет установить как приложение, нажав кнопку "Install".</p>

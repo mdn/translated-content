@@ -1,0 +1,18 @@
+---
+title: Gecko SDK
+slug: Gecko_SDK
+translation_of: Mozilla/Gecko/Gecko_SDK
+---
+<h3 id="Geral" name="Geral">Geral</h3>
+<p>O Gecko SDK é um conjunto de arquivos XPIDL, cabeçalhos e ferramentas para desenvolver XPCOM componentes, que pode, então, por sua vez, por exemplo, Ser acessado a partir de XUL usando JavaScript.</p>
+<p>Note-se que, a fim de desenvolver esses componentes, você não precisa ter a plena fontes de eg Firefox, uma vez que você não acessar partes do front end dentro de um componente. Além disso, uma vez que contém um componente funcionalidade básica, que se destina a executar com todos os produtos da Mozilla plataforma. Portanto, não faz sentido usar um produto específico para construir geral funcionalidade. Essa é a razão pela qual o Gecko SDK foi concebido.</p>
+<p>Não confundir com o Gecko SDK XULRunner. O Gecko SDK é um conjunto de cabeçalho arquivos e ferramentas utilizadas para desenvolver geral XPCOM componentes que acrescentam funcionalidades à plataforma existente, que XULRunner é um quadro que pode ser usada para executar autônomo ou incorporados aplicações baseadas na Mozilla quadro.</p>
+<p>O Gecko SDK contém todas as ferramentas necessárias para fazer script e cabeçalhos NPAPI plugins incluindo o compilador xpidl / linker e as última</p>
+<h3 id="Receba_o_SDK" name="Receba_o_SDK">Receba o SDK</h3>
+<hr>
+<h3 id="Atualiza.C3.A7.C3.B5es" name="Atualiza.C3.A7.C3.B5es">Atualizações</h3>
+<hr>
+<p>Não há necessidade de fazer o download ou reconstruir o Gecko SDK correspondentes às atualizações de segurança do Mozilla (por exemplo, o Mozilla 1.7.3), uma vez que os cabeçalhos e cola libs no Gecko SDK geralmente não são alteradas como resultado de atualizações de segurança. Você tem que fazer para receber e distribuir o mais recente Gecko componentes (gklayout.dll etc)</p>
+<h3 id="Baixando" name="Baixando">Baixando</h3>
+<hr>
+<p>Ao fazer o download do SDK Gecko, é importante escolher a versão que corresponde à versão do Mozilla mais rapidamente que você deseja atingir. Em outras palavras, você não deve fazer o download do SDK 1,7 Gecko se pretender utilizar o componente com 1,6 Mozilla. Isto é importante porque a compatibilidade binária é assegurada apenas com versões futuras do Gecko runtime. Para este tutorial, vamos estar usando a versão 1,7 do Gecko SDK para que o nosso componente binário é compatível com Mozilla 1.7 (e quaisquer produtos derivados, tais como Firefox 1,0 ou Netscape 7.2).</p>

@@ -1,0 +1,130 @@
+---
+title: animation-play-state
+slug: Web/CSS/animation-play-state
+translation_of: Web/CSS/animation-play-state
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Свойство <strong><code>animation-play-state</code></strong> определяет состояние анимации, паузы или проигрыша. Это можно использовать, чтобы определить текущее состояние анимации, например, в скриптах.</p>
+
+<p>Если возобновить приостановленную анимацию, то она запустит её с того места, где она была поставлена на паузу, а не начнется с начала.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: css">/* Одна анимация */
+animation-play-state: running;
+animation-play-state: paused;
+
+/* Несколько анимаций */
+animation-play-state: paused, running, running;
+
+/* Глобальный значения */
+animation-play-state: inherited;
+animation-play-state: initial;
+animation-play-state: unset;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>running</code></dt>
+ <dd>Анимация проигрывается.</dd>
+ <dt><code>paused</code></dt>
+ <dd>Анимация поставлена на паузу.</dd>
+</dl>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox"><code>{{csssyntax}}</code>
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>См. <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS_animations">CSS animations</a>.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#animation-play-state', 'animation-play-state')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Начальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
+    {{CompatChrome(43.0)}}</td>
+   <td>{{CompatGeckoDesktop("5.0")}}{{property_prefix("-moz")}}<br>
+    {{CompatGeckoDesktop("16.0")}}</td>
+   <td>10</td>
+   <td>12 {{property_prefix("-o")}}<br>
+    12.10</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS анимаций</a></li>
+ <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
+</ul>

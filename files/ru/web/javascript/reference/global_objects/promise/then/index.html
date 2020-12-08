@@ -1,0 +1,158 @@
+---
+title: Promise.prototype.then()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/then
+tags:
+  - ECMAScript6
+  - JavaScript
+  - метод
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
+---
+<div>{{JSRef}}</div>
+
+<p>Метод <code><strong>then()</strong></code> возвращает {{jsxref("Promise")}}. Метод может принимать два аргумента: колбэк-функции для случаев выполнения и отклонения промиса.</p>
+
+<div class="note">
+<p> Если один или оба аргумента отсутсвуют или их значения не функции, то <code>then</code> пропустит их и не выбросит ошибку. Если для <code>Promise</code>, который переходит в состояние <code>выполнен</code> или <code>отклонен</code> вызван метод <code>then</code>, и у данного метода нет нужного обработчика, то в таком случае <code>then</code> просто возвращает промис с состоянием начального <code>Promise</code>, для которого <code>then</code> был вызван.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate"><var>p.then(onFulfilled[, onRejected])</var>;
+
+p.then(value =&gt; {
+  // выполнение
+  }, reason =&gt; {
+  // отклонение
+});
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>onFulfilled</code> {{optional_inline}}</dt>
+ <dd>{{jsxref("Function")}} вызывается, когда <code>Promise</code> выполнен. Эта функция принимает один аргумент, значение с которым промис был выполнен. Если значение onFulfilled не функция, то оно автоматически заменяется на "Identity" функцию (возвращает полученный аргумент)</dd>
+ <dt><code>onRejected</code> {{optional_inline}}</dt>
+ <dd>{{jsxref("Function")}} вызывается, когда <code>Promise</code>  отклонен. Эта функция принимает один аргумент, значение с которым промис был отклонен. Если значение onRejected не функция, то оно автоматически заменяется на "Thrower" функцию (выбрасывает полученный аргумент как ошибку)</dd>
+</dl>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Так как и метод <code>then</code>, и метод {{jsxref("Promise.prototype.catch()")}} возвращают <code>Promise</code>, их можно вызвать цепочкой — эта операция называется <em>соединение</em>.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_метода_then">Использование метода <code>then</code></h3>
+
+<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+  resolve("Успех!");
+  // или
+  // reject("Ошибка!");
+});
+
+p1.then(function(value) {
+  console.log(value); // Успех!
+}, function(reason) {
+  console.log(reason); // Ошибка!
+});
+</pre>
+
+<h3 id="Соединение">Соединение</h3>
+
+<p>Так как метод <code>then</code> возвращает <code>Promise</code> (обещание), вы можете объединить несколько вызовов <code>then</code> в цепочку. Значения возвращаемые из onFulfilled или onRejected коллбэков будут автоматически обернуты в обещание.</p>
+
+<pre class="brush: js notranslate">var p2 = new Promise(function(resolve, reject) {
+  resolve(1);
+});
+
+p2.then(function(value) {
+  console.log(value); // 1
+  return value + 1;
+}).then(function(value) {
+  console.log(value); // 2
+});
+
+p2.then(function(value) {
+  console.log(value); // 1
+});
+</pre>
+
+<p>Вы также можете соединить одну функцию, имеющую подобную с обещаниями API, с другой функцией.</p>
+
+<pre class="brush: js notranslate">function fetch_current_data() {
+  // API функции fetch() возвращает обещание. Эта функция
+  // имеет аналогичный API, за исключением значения в случае выполнения
+  return fetch("current-data.json").then((response) =&gt; {
+    if (response.headers.get("content-type") != "application/json") {
+      throw new TypeError();
+    }
+    var j = response.json();
+    // можем что-нибудь делать с j
+    return j; // в случае выполнения обещания, значение
+              // передается в fetch_current_data().then()
+  });
+}
+</pre>
+
+<p>Если onFulfilled возвращает обещание, возвращаемое значение может быть выполнено (resolved) / отклонено (rejected) обещанием.</p>
+
+<pre class="brush: js notranslate">function resolveLater(resolve, reject) {
+  setTimeout(function () {
+    resolve(10);
+  }, 1000);
+}
+function rejectLater(resolve, reject) {
+  setTimeout(function () {
+    reject(20);
+  }, 1000);
+}
+
+var p1 = Promise.resolve("foo");
+var p2 = p1.then(function() {
+  // Возвращает обещание, которое будет разрешено значением 10 через 1 секунду
+  return new Promise(resolveLater);
+});
+p2.then(function(v) {
+  console.log("resolved", v);  // "resolved", 10
+}, function(e) {
+  // не вызвано
+  console.log("rejected", e);
+});
+
+var p3 = p1.then(function() {
+// Возвращает обещание, которое будет отброшено значением 20 через 1 секунду
+  return new Promise(rejectLater);
+});
+p3.then(function(v) {
+  // не
+  console.log("resolved", v);
+}, function(e) {
+  console.log("rejected", e); // "rejected", 20
+});</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение в стандарте ECMA.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{Compat("javascript.builtins.Promise.then")}}</p>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+ <li>{{jsxref("Promise.prototype.catch()")}}</li>
+</ul>

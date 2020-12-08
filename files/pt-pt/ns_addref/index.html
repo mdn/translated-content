@@ -1,0 +1,21 @@
+---
+title: NS_ADDREF
+slug: NS_ADDREF
+tags:
+  - Macros_XPCOM
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference/NS_ADDREF
+---
+<p> </p>
+<h3 id="Sum.C3.A1rio" name="Sum.C3.A1rio">Sumário</h3>
+<p><b>Macro</b></p>
+<p>Addrefs the argument. Não se deve usar quando o apontador poderá ser null; Nesses casos deve-se usar o <a href="pt/NS_IF_ADDREF">NS_IF_ADDREF</a>.</p>
+<p><code>NS_ADDREF(foo)</code> é equivalente a</p>
+<pre class="eval">foo-&gt;AddRef();
+</pre>
+<p>Esta macro existe principalmente por motivos históricos mas por consistência e por simetria com <a href="pt/NS_RELEASE">NS_RELEASE</a> ela também deve ser usada.</p>
+<h3 id="Sintaxe" name="Sintaxe">Sintaxe</h3>
+<pre class="eval">NS_ADDREF(foo);
+</pre>
+<h3 id="Ver_Tamb.C3.A9m" name="Ver_Tamb.C3.A9m">Ver Também</h3>
+<p><a href="pt/NS_IF_ADDREF">NS_IF_ADDREF</a> <a href="pt/NS_RELEASE">NS_RELEASE</a></p>

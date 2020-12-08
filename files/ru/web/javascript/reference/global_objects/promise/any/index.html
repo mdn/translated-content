@@ -1,0 +1,81 @@
+---
+title: Promise.any()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/any
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
+---
+<div>{{JSRef}}</div>
+
+<p><code>Метод Promise.any()</code> принимает итерируемый объект содержащий объекты "обещаний" {{JSxRef("Promise")}}. Как только одно из "обещаний"(<code>Promise)</code> выполнится успешно(<code>fullfill</code>), метод возвратит единственный объект <code>Promise</code> со значением выполненного "обещания". Если ни одно из "обещаний" не завершится успешно(если все "обещания" завершатся с ошибкой, т.е. <code>rejected</code>), тогда возвращенный объект promise будет отклонен(<code>rejected</code>) с одним из значений: массив содержащий причины ошибки(отклонения), или {{JSxRef("AggregateError")}} — подкласс {{JSxRef("Error")}}, который объединяет выброшенные ошибки вместе. По-существу, метод <code>Promise.any()</code> является противоположностью для {{JSxRef("Promise.all()")}}.</p>
+
+<div class="blockIndicator warning">
+<p><strong>Warning!</strong> The <code>Promise.any()</code> method is experimental and not fully supported by all browsers. It is currently in the <a href="https://github.com/tc39/proposal-promise-any" rel="external">TC39 Candidate stage (Stage 3)</a>.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre>Promise.any(<var>iterable</var>);</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>iterable</code></dt>
+ <dd>Итерируемый(<a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>) объект, например {{JSxRef("Array")}}.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<ul>
+ <li><strong>Исполненный</strong> {{JSxRef("Promise")}}, если переданный итерируемый объект пуст.</li>
+ <li><strong>Исполненный асинхронно</strong> {{JSxRef("Promise")}}, если переданный итерируемый объект не содержит "обещаний"(promises).</li>
+ <li>Во всех других случаях {{JSxRef("Promise")}} со статусом ожидания(<strong>pending)</strong>. Возвращенное "обещание" будет <strong>исполнено</strong>(resolved/rejected) <strong>асинхронно</strong> (как только стэк вызовов окажется пустым), когда одно(любое) "обещание" из  <em>переданного итерируемого объекта исполнится</em>, либо все "обещания" будут отклонены.</li>
+</ul>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Метод полезен, когда нужно вернуть первое исполненное "обещание". После того как одно из "обещаний" будет исполнено, метод не будет дожидаться исполнения остальных. В отличие от {{JSxRef("Promise.all()")}}, который содержит <em>массив(Array)</em> значений исполненных обещаний, <code>Promise.any()</code> содержит только одно значение (при условии, что хотя бы одно из "обещаний" исполнено успешно). Такой подход может быть выгодным, когда нужно, чтобы выполнилось только одно "обещание", неважно какое. Также, в отличие от {{JSxRef("Promise.race()")}}, который возвращает "обещание", содержащее значение первого <strong>завершенного(resolved или rejected)</strong>, этот метод возвращает "обещание" содержащее значение первого <strong>успешно выполненного(resolved) </strong>"обещания". Метод будет игнорировать исполнение обещаний с ошибкой(rejection) вплоть до первого исполненного успешно(fullfilment).</p>
+
+<h3 id="Успешное_исполнениеFullfilment">Успешное исполнение(Fullfilment)</h3>
+
+<p>Если одно из "обещаний" исполнится успешно, возвращенное "обещание" асинхронно исполнится успешно со значением выполненного "обещания", независимо от завершения остальных "обещаний".</p>
+
+<ul>
+ <li>Если передан пустой итерируемый объект, тогда метод возвращает (синхронно) выполненное "обещание".</li>
+ <li>Если одно из переданных обещаний исполнится успешно, или в переданном итерируемом объекте не содержится "обещаний", "обещание" возвращенное из метода <code>Promise.any</code> асинхронно исполнится успешно.</li>
+</ul>
+
+<h3 id="Исполнение_с_ошибкойRejection">Исполнение с ошибкой(Rejection)</h3>
+
+<p>Елси все переданные "обещания" будут отклонены(rejected), <code>Promise.any</code> асинхронно будет отклонено в одном из двух вариантов (которые еще не были согласованы): либо</p>
+
+<ul>
+ <li>Массив(Array) содержащий причины отклонения всех "обещаний" переданных в итерируемом объекте, либо</li>
+ <li>Объект {{JSxRef("AggregateError")}}, расширяющий {{JSxRef("Error")}}, который содержит указатель на массив(Array) исключений.</li>
+</ul>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td><a href="https://tc39.es/proposal-promise-any/#sec-promise.any">ESNext Promise.any Proposal</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+
+
+<p>{{Compat("javascript.builtins.Promise.any")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{JSxRef("Promise")}}</li>
+ <li>{{JSxRef("Promise.allSettled()")}}</li>
+ <li>{{JSxRef("Promise.all()")}}</li>
+ <li>{{JSxRef("Promise.race()")}}</li>
+</ul>

@@ -1,0 +1,78 @@
+---
+title: Fazendo alterações no código do Gaia
+slug: Archive/B2G_OS/Desenvolvendo_Gaia/Fazendo_alteracoes_codigo_Gaia
+tags:
+  - Alterações
+  - Desenvolvimento
+  - Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+---
+<div class="summary">
+<p><span class="seoSummary">Agora que você tem o Gaia rodando no seu Desktop e já entende de alguma forma o funcionamento do codebase, você deve estar pronto para começar a contribuir com o projeto. Esse artigo descreve como fazer alterações e como descobrir bugs e trabalhar para resolvê-los.</span></p>
+</div>
+
+<h2 id="Melhores_práticas_para_trabalhar_com_Git">Melhores práticas para trabalhar com Git</h2>
+
+<ol>
+ <li>Quando fizer alterações no Gaia, você deve primeiro baixar a última versão do branch master:
+  <pre class="brush: bash">cd path/to/gaia
+git checkout master
+git pull upstream master</pre>
+ </li>
+ <li>Depois, faça um <em>chekcout</em> de um novo <em>branch</em> para criar suas correções:
+  <pre class="brush: bash">git checkout -b my-code-fix</pre>
+ </li>
+ <li>Finalmente, vá para o seu diretório <code>gaia/apps</code> e faça nesse diretório as alterações nos aplicativos.</li>
+</ol>
+
+<div class="note">
+<p><strong>Nota</strong>: No seu diretório <code>gaia/profile-debug/</code> você encontrará <code>webapps/</code>, mas lá somente contém os arquivos de manifesto apontando para os aplicativos a serem executados, que na verdade estão armazenados em <code>gaia/apps/</code>.</p>
+</div>
+
+<h2 id="Exemplo_simples_de_alteração_de_código"><a name="Simple_code_change_example"></a>Exemplo simples de alteração de código</h2>
+
+<p>Você pode fazer as alterações desejadas no código, salvá-las e recarregar a tab que está executando o Gaia no seu Firefox Desktop para ver o resultado. Vamos então, fazer algo simples como trocar a cor do texto do relógio na tela bloqueada:</p>
+
+<p><img alt="Gaia lockscreen showing the clock display in white text" src="https://mdn.mozillademos.org/files/7929/gaia-lockscreen-clock.png" style="width: 369px; height: 623px; margin: 0px auto; display: block;"></p>
+
+<ol>
+ <li>A melhor forma de descobrir como esse estilo é definido é usando a ferramenta de desenvolvimento. Clique no relógio no Firefox Desktop e ao mesmo tempo pressione a tecla Ctrl da direita e selecione <em>Inspect Element</em> no menu de contexto.</li>
+ <li>Você pode descobrir qual o arquivo CSS você deve editar — Nesse caso, <code>gaia/apps/system/style/lockscreen.css</code> — e então fazer suas alterações nos estilos no lado direito da tela para ficar da forma que você quiser.</li>
+ <li>Quando estiver satisfeito com a alteração, altere diretamente o arquivo.</li>
+ <li>A seguir, recarregue a tab (ou use o botão Reload Application) e o servidor HTTP vai mostrar a alteração instantaneamente:</li>
+</ol>
+
+<p><img alt="Gaia lockscreen showing the clock display modified from white to red text" src="https://mdn.mozillademos.org/files/7931/gaia-lockscreen-clock-modified.png" style="width: 366px; height: 622px; margin: 0px auto; display: block;"><br>
+ <br>
+ <br>
+ Limitações de renderização do Gaia Desktop:</p>
+
+<ul>
+ <li>Os aplicativos são bastante precisos em relação a como eles funcionam em um telefone real, mas você pode notar algumas diferenças aqui e ali..</li>
+ <li>Nem todas as APIs específicas de dispositivos são suportadas no Firefox Desktop; você pode encontrar uma lista das que são habilitadas em <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/preferences.js#L106">preferences.js</a>.</li>
+</ul>
+
+<h2 id="Onde_encontrar_bugs_para_trabalhar">Onde encontrar bugs para trabalhar</h2>
+
+<p>A melhor maneira de encontrar bugs do Firefox OS é consultando o <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">aplicativo Bugs Ahoy desenvolvido por Josh Matthews</a> — que pega os bugs diretamente do Bugzilla e mostra de uma forma fácil e com forma simples de busca. Uma vez que tenha encontrado um bug no qual queira trabalhar, vá para a página do Bugzilla, faça seu logon, entre com o seu nome em "assigned to" e comece o trabalho como indicado acima.</p>
+
+<h3 id="Dicas_úteis">Dicas úteis</h3>
+
+<ul>
+ <li>Quando você trabalha em bugs com mentor ("mentored bugs"), alguém do time principal do Gaia irá monitorar seu progresso e fornecer ajuda com o código e o processo. Se você é um iniciante no processo de contribuição do Firefox OS, inscrever-se em um desses bugs pode ser útil. Eles são identificados na página do Bugzilla com o campo "Mentors" preenchido. O sistema Bugs Ahoy lista os bugs com mentor.</li>
+ <li>Se você é um usuário novato do Bugzilla, talvez você não consiga atribuir o bug a você próprio. Se esse for o caso, peça a um mentor para atribuir o bug a você ou simplesmente peça para alguém o atribuir no campo de comentários.</li>
+ <li>Depois de adquirir um pouco mais de experiência, você pode pedir a alguém uma permissão no sistema que possibilite você atribuir um bug a si próprio.</li>
+ <li>Se você é novato e quer começar com algo simples, procure no campo whiteboard por <code>[good first bug]</code>. Você pode listar apenas "good first bugs" usando <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1">http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1</a>.</li>
+ <li>Você pode salvar uma pesquisa para projetos que você deseje contribuir. Por exemplo, o link abaixo pesquisa por bugs no aplicativo Clock do Gaia:</li>
+</ul>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=10497922">https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=9776392</a></p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a href="https://mozilla.app.box.com/s/wzgsb3lkqglv0dnfdgzs">Documentos de especificação visual/interação do Gaia</a></li>
+ <li><a href="https://etherpad.mozilla.org/gaia-meeting-notes">Etherpad do encontro semanal do Gaia</a></li>
+ <li><a href="https://datazilla.mozilla.org/">Datazilla</a>: Utilitário de teste de performance da Mozilla<br>
+   </li>
+</ul>

@@ -1,0 +1,107 @@
+---
+title: NetworkInformation
+slug: Web/API/NetworkInformation
+translation_of: Web/API/NetworkInformation
+---
+<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+
+<p>Интерфейс <code><strong>NetworkInformation</strong></code> содержит методы и свойства, связанные с типом сети браузера.</p>
+
+<p>В нем нет объектов типа  <code>NetworkInformation</code>, но другие интерфейсы, такие как {{domxref("Navigator")}}, реализуют его.</p>
+
+<h2 id="Свойства">Свойства</h2>
+
+<p><em><code>Интерфейс NetworkInformation</code></em><em> не наследует других свойств.</em></p>
+
+<dl>
+ <dt>{{domxref("NetworkInformation.connection")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("Connection")}} предоставляет информацию о сетевом соединении устройства.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<p><code>Интерфейс NetworkInformation</code><em> ничего не предоставляет и не наследует других методов.</em></p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Коментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Network Information', '#idl-def-NetworkInformation', 'NetworkInformation') }}</td>
+   <td>{{ Spec2('Network Information') }}</td>
+   <td>Изначальная спецификация</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>базовая поддержка</td>
+   <td>20? {{ property_prefix("webkit") }}</td>
+   <td>12.0 {{ property_prefix("moz") }} (see notes)</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatNo() }}</td>
+   <td>12.0 {{ property_prefix("moz") }} (see notes)</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Заметки_для_Gecko"><span class="short_text" id="result_box" lang="ru"><span class="hps">Заметки для Gecko</span></span></h3>
+
+<ul>
+ <li>Сетевое API может быть отключено с помощьюc <code>dom.network.enabled</code>.</li>
+ <li>Как и в Gecko 12.0, сетевое API реализованно только для Android. Поддержка для Linux ({{ bug("712442") }}) и Windows ({{ bug("721306") }}) систем находится в процессе разработки.</li>
+</ul>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Информация о API сети.</a></li>
+ <li><a href="/en/Online_and_offline_events" title="en/Online_and_offline_events">Онлайн и оффлайн события.</a></li>
+ <li>Интерфейс {{domxref("Navigator")}} который реализует его.</li>
+</ul>

@@ -1,0 +1,157 @@
+---
+title: Cross Process Object Wrappers
+slug: Mozilla/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers
+---
+<div>{{FirefoxSidebar}}</div><div class="summary">
+<p>Este documento descreve <em>Cross Process Object Wrappers</em> (CPOWs), que permite ao código de <em>chrome </em>aceder sincronamente ao conteúdo no 'Multiprocessos do Firefox'.</p>
+</div>
+
+<div class="warning">
+<p>Note that from Firefox 47 onwards, <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers#Safe_and_unsafe_CPOWs">unsafe CPOW usage</a> is no longer permitted in browser code. If browser code tries an unsafe CPOW operation, the browser will throw an exception and you'll see an "unsafe CPOW usage forbidden” error in the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>.</p>
+
+<p>Add-on code is still allowed to use CPOWs "unsafely". However, if an add-on passes a CPOW into a platform API, and that platform API then attempts an unsafe operation on it, this will throw an exception. So as a general rule, add-ons should avoid passing CPOWs into non-addon code.</p>
+</div>
+
+<p>In multiprocess Firefox, chrome code runs in a different process from web content. So chrome code can't directly interact with web content: instead, it must factor out the code that interacts with web content into separate scripts that are called frame scripts.</p>
+
+<p>Chrome code can load frame scripts into the content process using the message manager, and can then communicate with them using a message-passing API. To learn more about this, see the documentation on using the <a href="/en-US/docs/The_message_manager">message manager</a>.</p>
+
+<p><strong>Chrome to content messaging must be asynchronous</strong>. This is because the chrome process runs the Firefox UI, so if it were blocked by the content process, then a slow content process could cause Firefox to become unresponsive to users.<br>
+ <br>
+ Converting synchronous code to be asynchronous can be difficult and time-consuming. As a migration aid, the messaging framework enables frame scripts to make content objects available to chrome through a wrapper called a Cross Process Object Wrapper, also known as a CPOW. However, although CPOWs are convenient, they have <a href="/en-US/docs/Cross_Process_Object_Wrappers#Limitations_of_CPOWs">serious limitations and can cause responsiveness problems</a>, so should only be used when necessary and only as a migration aid.</p>
+
+<h2 id="Passagem_de_CPOWs_de_frame_scripts">Passagem de CPOWs de <em>frame scripts</em></h2>
+
+<p>Frame scripts can send messages to chrome using one of two global functions: <a href="/en-US/docs/The_message_manager#Content_to_chrome"><code>sendAsyncMessage()</code> or <code>sendSyncMessage()</code></a>. The optional third parameter to each of these functions is an object whose properties are objects to wrap. For example, this frame script sends a DOM node to chrome when the user clicks it, as the <code>clicked</code> property of the third argument:</p>
+
+<pre class="brush: js">// frame script
+addEventListener("click", function (event) {
+  sendAsyncMessage("my-e10s-extension-message", {}, { clicked : event.target });
+}, false);</pre>
+
+<p>In the chrome script, the DOM node is now accessible through a Cross Process Object Wrapper, as a property of the <code>objects</code> property of the message. The chrome script can get and set the wrapped object's properties and call its functions:</p>
+
+<pre class="brush: js">// chrome script
+windowMM.addMessageListener("my-e10s-extension-message", handleMessage);
+
+function handleMessage(message) {
+  let wrapper = message.objects.clicked;
+  console.log(wrapper.innerHTML);
+  wrapper.innerHTML = "&lt;h2&gt;Modified by chrome!&lt;/h2&gt;"
+  wrapper.setAttribute("align", "center");
+}</pre>
+
+<h2 id="CPOWs_gerados_automaticamente">CPOWs gerados automaticamente</h2>
+
+<p>Add-ons that have not declared themselves multiprocess compatible are set up with a number of <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts#Compatibility_shims">compatibility shims</a>. One of these shims provides the following behavior: whenever chrome code tries to access content directly (for example, through <a href="/en/docs/Working_with_windows_in_chrome_code#The_content_shortcut"><code>window.content</code></a> or <a href="/en-US/docs/Mozilla/Tech/XUL/browser#p-contentDocument"><code>browser.contentDocument</code></a>), it is given back a CPOW that wraps the content object. This means that examples like this will actually work, even in multiprocess Firefox:</p>
+
+<pre class="brush: js">gBrowser.selectedBrowser.contentDocument.body.innerHTML = "replaced by chrome code";</pre>
+
+<p>It's still important to keep in mind, though, that this is access through a CPOW and not direct access to content.</p>
+
+<h2 id="CPOWs_bidirecionais">CPOWs bidirecionais</h2>
+
+<p>A common pattern is for chrome code to access content objects and add event listeners to them. To deal with this, CPOWs are bidirectional. This means that if content passes a CPOW to the chrome process, the chrome process can synchronously pass objects (such as event listener functions) into functions defined in the CPOW.</p>
+
+<p>This means you can write code like this:</p>
+
+<pre class="brush: js">// frame script
+
+/*
+On mouseover, send the button to the chrome script as a CPOW.
+*/
+
+var button = content.document.getElementById("click-me");
+
+button.addEventListener("mouseover", function (event) {
+  sendAsyncMessage("my-addon-message", {}, { element : event.target });
+}, false);</pre>
+
+<pre class="brush: js">// chrome script
+
+/*
+Load the frame script, then listen for the message.
+When we get the message, extract the CPOW and add
+a function as a listener to the button's "click" event.
+*/
+
+  browserMM.loadFrameScript("chrome://my-addon/content/frame-script.js", false);
+  browserMM.addMessageListener("my-addon-message", function(message) {
+    let wrapper = message.objects.element;
+    wrapper.addEventListener("click", function() {
+      console.log("they clicked");
+    });
+  });
+</pre>
+
+<h2 id="Mapear_conteúdo_de_documentos_para_navegadores_XUL">Mapear conteúdo de documentos para navegadores XUL</h2>
+
+<p>A common pattern is to get the XUL <a href="/en-US/docs/XUL/browser"><code>&lt;browser&gt;</code></a> that corresponds to a content document. To enable this, <code>gBrowser.getBrowserForDocument</code> and <code>gBrowser.getBrowserForContentWindow</code> can be passed a CPOW for the content document and content window, respectively, and return the XUL  <code>&lt;browser&gt; </code>that these documents / windows belong to. Both return <code>null</code> if no such browser can be found.</p>
+
+<h2 id="Limitações_de_CPOWs">Limitações de CPOWs</h2>
+
+<p>Although CPOWs can be convenient they have several major limitations, which are listed below.</p>
+
+<h3 id="CPOWs_e_APIs_de_plataforma">CPOWs e APIs de plataforma</h3>
+
+<p>You can't pass CPOWs into platform APIs that expect to receive DOM objects. For example, you can't pass a CPOW into <a href="http://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIFocusManager.idl"><code>nsIFocusManager.setFocus()</code></a>.</p>
+
+<p>Also, from Firefox 47 onwards, browser code can no longer perform <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers#Safe_and_unsafe_CPOWs">unsafe CPOW operations</a>. This means that as an add-on developer, you should not pass CPOWs into browser APIs.</p>
+
+<h3 id="Reação_de_Chrome">Reação de <em>Chrome</em></h3>
+
+<p>The lack of a synchronous API on the chrome side is intentional: because the chrome process runs the Firefox UI, any responsiveness problems affect the whole browser. By making the chrome process block on the content process, CPOWs break this principle and allow unresponsive content process to make the whole browser unresponsive.</p>
+
+<p>Consulte em baixo <strong>CPOWs seguros e inseguros</strong> para mais sobre isto.</p>
+
+<h3 id="Desempenho">Desempenho</h3>
+
+<p>Although the wrapper looks just like an object completely contained in the chrome script scope, it's really just a reference to an object in the content process. When you access a property of the wrapper, it sends a synchronous message to the content process and returns the result. This means it is many times slower to use than an object.</p>
+
+<h3 id="Ordenação_de_mensagem">Ordenação de mensagem</h3>
+
+<p>CPOWs can violate assumptions you might make about message ordering. Consider this code:</p>
+
+<pre class="brush: js">mm.addMessageListener("GotLoadEvent", function (msg) {
+  mm.sendAsyncMessage("ChangeDocumentURI", {newURI: "hello.com"});
+  let uri = msg.objects.document.documentURI;
+  dump("Received load event: " + uri + "\n");
+});
+</pre>
+
+<p>This sends a message asking the frame script to change the current document URI, then accesses the current document URI via a CPOW. You might expect the value of <code>uri</code> to come back as "hello.com". But it might not: in order to avoid deadlocks, CPOW messages can bypass normal messages and be processed first. It’s possible that the request for the documentURI property will be processed before the "ChangeDocumentURI" message, in which case <code>uri</code> will have its previous value.<br>
+ <br>
+ For this reason, it’s best not to mix CPOWs with normal message manager messages. It’s also a bad idea to use CPOWs for anything security-related, since you may get results that are not consistent with surrounding code that might use the message manager.</p>
+
+<h2 id="CPOWs_seguros_e_inseguros">CPOWs seguros e inseguros</h2>
+
+<p>The main reason CPOWs can be bad for responsiveness is that they make the chrome process block on the content process.</p>
+
+<p>Essentially, the problem is this: suppose the content process is busy with some long-running operation (for example, garbage collection). In multiprocess Firefox, the browser UI is still responsive, because it's running in a different process. But if the chrome process then tries to use a CPOW, the chrome process will block until the content process is ready to respond. Suddenly, what looked like a simple property access could block the UI for a noticeable amount of time:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12485/unsafe-cpow.svg" style="display: block; height: 579px; margin-left: auto; margin-right: auto; width: 897px;"></p>
+
+<p>There is one scenario, though, in which this is not a problem: when the content process is already blocking on a synchronous message it sent to the chrome process.</p>
+
+<p>The content process is blocked anyway waiting for the chrome process, so there's no chance, in this situation, that the CPOW call will block on some long-running activity in the content process. The content process can respond immediately to the CPOW call:</p>
+
+<p><br>
+ <img alt="" src="https://mdn.mozillademos.org/files/12481/safe-cpow.svg" style="display: block; height: 472px; margin-left: auto; margin-right: auto; width: 640px;"></p>
+
+<p>There is still a performance cost to the CPOW in this situation, because the CPOW call is an IPC call instead of a simple property access in the same process. However, the potential impact on responsiveness is much smaller.</p>
+
+<p>Also, in this situation, the content process is in a known state. We know it's blocked waiting for the synchronous message to return, and we know that won't change during the CPOW call. This makes the CPOW call much safer than it would otherwise be.</p>
+
+<p>This situation is thus called "safe CPOW usage". All other uses of CPOWs are called "unsafe CPOW usage".</p>
+
+<p>Consulyat também:</p>
+
+<ul>
+ <li><a href="https://mikeconley.ca/blog/2015/02/17/on-unsafe-cpow-usage-in-firefox-desktop-and-why-is-my-nightly-so-sluggish-with-e10s-enabled/">https://mikeconley.ca/blog/2015/02/17/on-unsafe-cpow-usage-in-firefox-desktop-and-why-is-my-nightly-so-sluggish-with-e10s-enabled/</a></li>
+ <li><a href="http://blog.lassey.us/2015/01/10/unsafe-cpow-usage/">http://blog.lassey.us/2015/01/10/unsafe-cpow-usage/</a></li>
+</ul>
+
+<p> </p>
+
+<p> </p>

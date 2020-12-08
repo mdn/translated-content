@@ -1,0 +1,140 @@
+---
+title: Generator.prototype.throw()
+slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
+---
+<div>{{JSRef}}</div>
+
+<p>Метод <code><strong>throw()</strong></code> возобновляет выполнение тела генератора кидая внутри исключение  <code>и возвращает объект со свойствами done и value</code>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><var>gen</var>.throw(exception)</code></pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>exception</code></dt>
+ <dd>Исключение, которое будет брошено. Во время отладки бывает полезно сделать его <code>instanceof</code> {{jsxref("Error")}}.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Объект с двумя свойствами:</p>
+
+<ul>
+ <li><code>done</code> (boolean)
+
+  <ul>
+   <li>Имеет значение <code>true</code> если iterator прошел конец итерируемой последовательности. В этом случае <code>value</code> опционально определяется выражением <em>return value</em> внутри итератора .</li>
+   <li>Имеет значение <code>false</code> если iterator имеет возможность вернуть следующее значение последовательности. Это равносильно когда свойство done не указано.</li>
+  </ul>
+ </li>
+ <li><code>value</code> - любое JavaScript значение,  возвращенное итератором. Может быть проигнорировано, когда <em><code>done</code> === <code>true</code></em>.</li>
+</ul>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_throw()">Использование <code>throw()</code></h3>
+
+<p>В этом примере показан простой генератор и исключение,  которое выбрасывается используя метод <code>throw</code>. Исключение может быть поймано, используя, как обычно, блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>.</p>
+
+<pre class="brush: js">function* gen() {
+  while(true) {
+    try {
+       yield 42;
+    } catch(e) {
+      console.log('Error caught!');
+    }
+  }
+}
+
+var g = gen();
+g.next();
+// { value: 42, done: false }
+g.throw(new Error('Something went wrong'));
+// "Error caught!"
+// { value: 42, done: false }
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>13</td>
+   <td>{{CompatGeckoDesktop(26)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatSafari(10)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>5.1</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(26)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
+</ul>

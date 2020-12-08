@@ -1,0 +1,258 @@
+---
+title: 'Прежде, чем собрать Firefox OS'
+slug: Archive/B2G_OS/Firefox_OS_build_prerequisites
+translation_of: Archive/B2G_OS/B2G_OS_build_prerequisites
+---
+<p>Перед получением исходного кода для сборки Firefox OS, Вам понадобится правильно сконфигурированная <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions">система сборки</a>. В настоящее время поддерживается сборка на 64-битных дистрибутивах Linux и на Mac OS X.</p>
+<h2 id="Приобретите_совместимое_устройство_либо_используйте_эмулятор">Приобретите совместимое устройство либо используйте эмулятор</h2>
+<p><span id="answer_long0" style="display: block;">Хотя мы поддерживаем несколько различных типов мобильных устройств, некоторые из них выпускаются в различных модификациях. В настоящее время мы поддерживаем лишь отдельные модификации, поэтому некоторые устройства будут обеспечивать лучшую совместимость по сравнению с другими: </span></p>
+<h3 id="Первая_очередь_(Tier_1)">Первая очередь (Tier 1)</h3>
+<p>Устройства первой очереди - наша основная целевая платформа и они, как правило, будут первыми получать багфиксы и обновления функционала.</p>
+<dl>
+  <dt>
+    Keon</dt>
+  <dd>
+    Keon - это устройство <a href="http://www.geeksphone.com/" title="http://www.geeksphone.com/">Geeksphone</a> Keon, одно из первых мобильных устройств для компьютерных фанатов (гиков). Обратите внимание, что сборки для этих устройств предоставляются Geeksphone.</dd>
+  <dt>
+    Inari</dt>
+  <dd>
+    Inari  - ещё одно тестовое устройство.</dd>
+  <dt>
+    Unagi</dt>
+  <dd>
+    Unagi - это мобильные устройства, используемые в качестве тестовой платформы при разработке смартфонов нижней и средней ценовой категории. Многие основные разработчики Firefox OS работают с Unagi.</dd>
+  <dt>
+    Otoro</dt>
+  <dd>
+    Otoro - это мобильные устройства, используемые в качестве тестовой платформы при разработке смартфонов нижней и средней ценовой категории. Многие основные разработчики Firefox OS работают с Otoro.</dd>
+  <dt>
+    <a href="/en-US/docs/Mozilla/Firefox_OS/Pandaboard" title="/en-US/docs/Mozilla/Firefox_OS/Pandaboard">Pandaboard</a></dt>
+  <dd>
+    Pandaboard - это development board на базе архитектуры OMAP 4, используемая для разработки под мобильные платформы.</dd>
+  <dt>
+    <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators" title="en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators">Эмулятор (ARM и x86)</a></dt>
+  <dd>
+    Доступны два типа эмуляторов: один для эмуляции ARM и второй для x86.</dd>
+  <dt>
+    <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Desktop</a></dt>
+  <dd>
+    Вы также можете собрать десктопную версию Firefox OS; она запускает <a href="/en-US/docs/Mozilla/Gecko" title="/en-US/docs/Mozilla/Gecko">Gecko</a> в приложении <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a>, после чего Вы можете внутри него пользоваться опытом работы с <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Introduction_to_Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Introduction_to_Gaia">Gaia</a>.</dd>
+</dl>
+<p>Вы всегда можете, конечно же, собрать <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">десктопный клиент</a> или один из <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators" title="en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators">эмуляторов</a>, не имея вообще никакого мобильного устройства.</p>
+<h3 id="Вторая_очередь_(Tier_2)">Вторая очередь (Tier 2)</h3>
+<p><span id="answer_long1" style="display: block;">Устройства второй очереди обладают необходимой функциональностью и многие разработчики (особенно разработчики прикладных приложений) используют их, таким образом, устройства из этого ряда будут получать обновления вторыми по очереди.</span></p>
+<dl>
+  <dt>
+    <a href="/en-US/docs/Mozilla/Firefox_OS/Samsung_Nexus_S" title="/en-US/docs/Mozilla/Firefox_OS/Samsung_Nexus_S"><span class="link-https">Samsung Nexus S</span></a></dt>
+  <dd>
+    Гарантированно поддерживаемыми моделями устройств Nexus S являются модели GT-I9020A и GT-I9023 (другие модели тоже могут работать).</dd>
+  <dt>
+    Samsung Nexus S 4G</dt>
+  <dd>
+    SPH-D720 поддерживается как устройство второй очереди.</dd>
+</dl>
+<h3 id="Третья_очередь_(Tier_3)">Третья очередь (Tier 3)</h3>
+<p><span id="answer_long1" style="display: block;">Firefox OS может быть собрана для этих устройств, но они не относятся к числу целевых платформ для основных разработчиков. Они могут существенно отличаться в меньшую сторону в плане надёжности и функционала от устройств первой и второй очередей.</span></p>
+<dl>
+  <dt>
+    Samsung Galaxy S2</dt>
+  <dd>
+    Единственная поддерживаемая модель - i9100; никакие другие официально не совместимы (i9100P может работать, поскольку его единственное отличие заключается в дополнительном NFC чипе).</dd>
+  <dt>
+    Samsung Galaxy Nexus</dt>
+  <dd>
+    В настоящее время нам не известно о какой-либо несовместимости данных устройств с Firefox OS.</dd>
+  <dt>
+    Tara</dt>
+  <dd>
+    Tara - ещё одно тестовое устройство. Manifest для Tara лежит только в бранче master. Скрипт для получения Tara-кода: "BRANCH=master ./config.sh tara".</dd>
+</dl>
+<div class="warning">
+  <strong>Важно</strong>: Поддерживаются только устройства с как минимум <strong>Android 4</strong> (aka <strong>Ice Cream Sandwich</strong>). Если Ваше устройство находится в одном из списков выше, но снабжено более старой версией ОС Android, пожалуйста, предварительно обновите ОС.</div>
+<div class="note">
+  <h2 id="У_устройств_очереди_2_и_3_отсутствует_кнопка_Home">У устройств очереди 2 и 3 отсутствует кнопка Home</h2>
+  <p>У всех устройств первой очереди есть хардварная кнопка Home, возвращающая пользователя на стартовый экран. Большинство современных ICS Android-устройств для навигации используют экранные тач-кнопки. При отсутствии кнопки Home Вы не сможете выйти из некоторых приложений, например, их приложения для работы с камерой. Это делает Firefox OS неподходящей для повседневного использования на таких устройствах.</p>
+</div>
+<h2 id="Системные_требования_для_Linux">Системные требования для Linux</h2>
+<p>Для сборки на Linux Вам требуется следующая конфигурация:</p>
+<ul>
+  <li>Установленный <strong>64-битный GNU/Linux</strong> дистрибутив (мы рекомендуем Ubuntu 12.04).</li>
+  <li>Не менее <strong>4 GB</strong> RAM/swap space.</li>
+  <li>Не менее <strong>20 GB</strong> свободного места на жёстком диске.</li>
+</ul>
+<p>Это более чем необходимый минимум, но иногда сборка падает тупо по причине нехватки ресурсов.</p>
+<p>Вам потребуются также следующие предустановленные инструменты:</p>
+<ul>
+  <li><strong>autoconf 2.13</strong></li>
+  <li><strong>bison</strong></li>
+  <li><strong>bzip2</strong></li>
+  <li><strong>ccache</strong></li>
+  <li><strong>curl</strong></li>
+  <li><strong>flex</strong></li>
+  <li><strong>gawk</strong></li>
+  <li><strong>git</strong></li>
+  <li><strong>gcc / g++ / g++-multilib</strong></li>
+  <li><strong>make</strong></li>
+  <li><strong>OpenGL headers</strong></li>
+  <li><strong>patch</strong></li>
+  <li><strong>X11 headers</strong></li>
+  <li><strong>32-bit ncurses</strong></li>
+  <li><strong>32-bit zlib</strong></li>
+</ul>
+<h3 id="Примеры_64-битной_инсталляции"><strong>Примеры 64-битной инсталляции:</strong></h3>
+<p><strong>Ubuntu 12.04 / Linux Mint 13 / Debian 6</strong></p>
+<pre>$ sudo apt-get install autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev libgl1-mesa-dev libx11-dev make zip</pre>
+<p class="note">При сборке на 64-битной Ubuntu Вам может потребоваться добавить симлинки на 32-битные версии <code>libX11.so</code> и <code>libGL.so</code>:</p>
+<pre class="note">$ sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
+$ sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so</pre>
+<p><strong>Ubuntu 12.10</strong></p>
+<pre>$ sudo apt-get install autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib gcc-4.6 g++-4.6 g++-4.6-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev libgl1-mesa-dev libx11-dev make zip</pre>
+<p class="note">Дополнительно к описанным выше шагам по фику косяков с 32-битными версиями <code>libX11.so</code> и <code>libGL.so</code> библиотек, после скачивания исходников Вам также придётся также прописать GCC 4.6 как дефолтный компилятор (default host compiler), см. <a href="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_default_host_compiler" title="en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_default_host_compiler">здесь</a> как это сделать.</p>
+<p class="note">На свежей инсталляции Ubuntu 12.10 вываливается ошибка по поводу неудовлетворённых зависимостей для ia32-libs. Лечится так:</p>
+<pre>sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install ia32-libs</pre>
+<p><strong>Ubuntu 13.04</strong></p>
+<pre>$ sudo apt-get install --no-install-recommends autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib gcc-4.6 g++-4.6 g++-4.6-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev zlib1g:amd64 zlib1g-dev:amd64 zlib1g:i386 zlib1g-dev:i386 libgl1-mesa-dev libx11-dev make zip</pre>
+<p>Все прочие инструкции для предыдущих версий остаются в силе.</p>
+<p><strong>Fedora 17/18:</strong></p>
+<pre class="note">$ sudo yum install autoconf213 bison bzip2 ccache curl flex gawk gcc-c++ git glibc-devel glibc-static libstdc++-static libX11-devel make mesa-libGL-devel ncurses-devel patch zlib-devel ncurses-devel.i686 readline-devel.i686 zlib-devel.i686 libX11-devel.i686 mesa-libGL-devel.i686 glibc-devel.i686 libstdc++.i686 libXrandr.i686 zip perl-Digest-SHA</pre>
+<p>Дополнительно для компиляции проекта Вам потребуется GCC 4.4. Прекомпилированную версию можно найти <a href="http://people.mozilla.org/~gsvelto/gcc-4.4.7-bin.tar.xz">здесь</a>. Скачайте её и проинсталлируйте в <code>/opt</code> следующим образом:</p>
+<pre class="note">$ wget http://people.mozilla.org/~gsvelto/gcc-4.4.7-bin.tar.xz
+$ sudo tar -x -a -C /opt -f gcc-4.4.7-bin.tar.xz
+</pre>
+<p>После скачивания исходников нужно будет указать данный компилятор как дефолтный (default host compiler), см. <a href="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_default_host_compiler" title="en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_default_host_compiler">здесь</a> как это сделать.</p>
+<p><strong>Arch Linux:</strong></p>
+<pre class="note">$ sudo <span style=""><span style="">pacman -S --needed </span></span><span style=""><span style="">alsa-lib </span></span><span style=""><span style="">autoconf2.13</span></span><span style=""><span style=""> bison</span></span><span style=""><span style=""> ccache</span></span><span style=""><span style=""> </span></span><span style=""><span style="">curl firefox </span></span><span style=""><span style="">flex </span></span><span style=""><span style="">gcc-multilib </span></span><span style=""><span style="">git </span></span><span style=""><span style="">gperf </span></span><span style=""><span style="">libnotify </span></span><span style=""><span style="">libxt </span></span><span style=""><span style="">libx11 mesa multilib-devel </span></span><span style=""><span style="">wget wireless_tools </span></span><span style=""><span style="">yasm</span></span><span style=""><span style=""> zip </span></span><span style=""><span style="">lib32-mesa </span></span>lib32-mesa-libgl <span style=""><span style="">lib32-ncurses lib32-readline</span></span><span style=""><span style=""> </span></span><span style=""><span style="">lib32-zlib</span></span></pre>
+<p>По умолчанию Arch Linux использует Python3. Вам придётся заставить его использовать старый добрый python2:</p>
+<pre><span style=""><span style="">$ cd /usr/bin</span></span>
+
+<span style=""><span style="">$ sudo ln -fs python2 python</span></span></pre>
+<h2 id="Системные_требования_для_Mac_OS_X">Системные требования для Mac OS X</h2>
+<p>Для сборки Firefox OS на Mac OS X Вам нужно установить Xcode's Command Line Utilities.</p>
+<p>Можно загрузить <em>только</em> Command Line Utilities с <a href="https://developer.apple.com/downloads/" title="https://developer.apple.com/downloads/">Apple's developer downloads page</a> для Вашей версии OS X.</p>
+<p>Впрочем, если Вам нравится использовать полный пакет Xcode при разработке приложений, можете <a class="external" href="http://itunes.apple.com/us/app/xcode/id497799835?mt=12" style="line-height: 1.572;" title="http://itunes.apple.com/us/app/xcode/id497799835?mt=12">install Xcode</a><span style="line-height: 1.572;"> из Mac App Store.</span></p>
+<p><strong>Установка Command Line Utilities через XCode 4.3.1 и выше</strong></p>
+<p>Xcode 4.3.1 (OS X 10.7 "Lion") и прочие более новые версии такие, как 4.4.1+ (т.е., Mac OS X10.8 "Mountain Lion"), не обязательно включают в свою дефолтную установку Command Line Utilities. После установки Xcode не поленитесь зайти в Preferences, оттуда в Downloads и установить Command Line Utilities. Убедитесь, что у Вас есть не менее 20 GB свободного дискового пространства.</p>
+<p><img alt="Screenshot of Xcode Downloads Command Line Tools" src="/files/4557/xcode_downloads_command_line_tools.png" style="width: 750px; height: 528px;"></p>
+<div class="note">
+  <strong>Примечание:</strong> Эмулятор Firefox OS требует процессора Core 2 Duo или мощнее; т.е., система должна быть совместима с Mac OS X 10.7 "Lion." И хотя Вам не обязательно запускать Lion, Вам просто нужно быть с ним совместимым. Впрочем, Вы можете собрать любой Firefox OS билд на большинстве более старых Маков.</div>
+<p><font face="Georgia, Times, Times New Roman, serif"><span style="font-size: 20px; line-height: 31px;"><b>Firefox OS Mac Bootstrap</b></span></font></p>
+<p>В терминале запустите следующую команду:</p>
+<pre class="brush: bash">curl -fsSL https://raw.github.com/mozilla-b2g/B2G/master/scripts/bootstrap-mac.sh | bash</pre>
+<p>Она вытянет и запустит bootstrap-скрипт, который проверит все необходимые для сборки эмулятора зависимости. Он также запросит Ваше разрешение на инсталляцию любого отсутствующего компонента. Скрипт проверяет наличие в системе следующих вещей:</p>
+<ul>
+  <li><code>git</code></li>
+  <li><code>gpg</code></li>
+  <li><code>ccache</code></li>
+  <li><code>yasm</code></li>
+  <li><code>autoconf-213</code></li>
+  <li><code>gcc-4.6</code></li>
+  <li><code>homebrew</code></li>
+</ul>
+<div>
+  <p>Xcode</p>
+  <p>Если Вы уже обновили Xcode до версии 4.4+ но всё равно получаете сообщение о том, что Ваша версия Xcode слишком стара, проверьте Xcode path:</p>
+  <pre>xcode-select -print-path</pre>
+  Если он всё ещё указывает на <code>/Developer</code>, отредактируйте path:
+  <pre>sudo xcode-select -switch /Applications/Xcode.app</pre>
+  Следующее, в чём нужно убедиться, - наличие Mac OS X 10.6 SDK:
+  <pre>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/</pre>
+  <p>При отсутствии SDK в указанном месте придётся вытащить и скопировать его из архива Xcode 4.3 DMG, который можно взять на портале <a class="external" href="https://developer.apple.com/downloads/index.action">Apple Developer</a>. Для извлечения 10.6 SDK из архива можно воспользоваться утилитой Pacifist. Не забудьте создать симлинк на него в директории <code>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/</code>. (После фикса <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=784227" title="https://bugzilla.mozilla.org/show_bug.cgi?id=784227">bug 784227</a> этот шаг можно будет пропустить, и наша версия <a href="https://github.com/mozilla-b2g/B2G/issues/189" title="https://github.com/mozilla-b2g/B2G/issues/189">platform_build has been updated</a>.)</p>
+  <h3 id="Чувствительность_к_регистру_файловой_системы_Mac">Чувствительность к регистру файловой системы Mac</h3>
+  <p>По умолчанию Mac OS X поставляется с файловой системой, нечувствительной к регистру текста. Проблема в том, что в ядре Linux присутствует некоторое количество файлов с одинаковыми названиями, отличающихся только регистром букв.  См., например, заголовочные файлы <code>xt_CONNMARK.h</code> и <code>xt_connmark.h</code>.  В итоге в<code> /kernel</code> модифицируется изрядное количество файлов после <code>./config.sh</code>.</p>
+  <p>Несмотря на это, в большинстве случаев сборка может пройти успешно. Однако, на некоторых платформах Вы можете столкнуться со следующей ошибкой:</p>
+  <pre><span class="quote">ERROR: You have uncommited changes in kernel
+You may force overwriting these changes
+with |source build/envsetup.sh force|
+
+ERROR: Patching of kernel/ failed.</span></pre>
+  <p><span class="quote">См. дальнейшие дискуссии и возможные решения данной проблемы в <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=867259" title="https://bugzilla.mozilla.org/show_bug.cgi?id=867259">bug 867259</a></span>.</p>
+  <p>В качестве альтернативного решения всегда можно безопасно собрать и на файловой системе, чувствительной к регистру. Самый простой способ - создать отдельный монтируемый образ диска с нечувствительной к регистру файловой системой. Можно воспользоваться приложением Apple's Disk Utility из командной строки:</p>
+  <pre>hdiutil create -volname 'firefoxos' -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size 40g ~/firefoxos.sparseimage</pre>
+  <p>Подмонтируйте диск:</p>
+  <pre>open ~/firefoxos.sparseimage</pre>
+  <p>Перейдите на смонтированный диск:</p>
+  <pre>cd /Volumes/firefoxos/</pre>
+  <p>Теперь можно скачать исходный код и начать его компиляцию, не беспокоясь о проблеме чувствительности к регистру.</p>
+  <h3 id="Mountain_Lion">Mountain Lion</h3>
+  <div>
+    <p>При сборке на OS X 10.8 "Mountain Lion" (Xcode 4.4.1 или выше) может вывалиться следующая ошибка:</p>
+    <pre style="font-size: 14px;">external/qemu/android/skin/trackball.c:130:25: error: 'M_PI' undeclared (first use in this function)</pre>
+    Отредактируйте файл: <code style="font-size: 14px;">B2G/external/qemu/Makefile.android</code> в строке 78:<br>
+    <pre style="font-size: 14px;">MY_CFLAGS += -DM_PI=3.14159265358979323846264338327950288   #/* B2G_fix: not finding M_PI constant */
+</pre>
+    <div>
+      Также на Mountain Lion в процессе инсталляции зависимостей через homebrew может вывалиться и такая ошибка:</div>
+  </div>
+</div>
+<div>
+  <pre>clang: error: unable to execute command: Segmentation fault: 11</pre>
+  ... в таком случае попробуйте переустановить зависимости, выставив флаг --use-gcc flag, например:
+  <pre>brew install mpfr --use-gcc</pre>
+</div>
+<h3 id="Samsung_Galaxy_S2">Samsung Galaxy S2</h3>
+<p>Для сборки на Samsung Galaxy S2 нужно установить heimdall. См. {{ anch("Установка heimdall") }}. Bootstrap-скрипт этого <strong>не</strong> сделает за Вас!</p>
+<div class="note">
+  <strong>Примечание:</strong> Если у Вас установлен <a class="external" href="http://www.samsung.com/us/kies/" title="http://www.samsung.com/us/kies/">Samsung Kies</a>, используемый для контент-менеджмента на многих телефонах Samsung, придётся его удалить перед инсталляцией Firefox OS на Ваше устройство. Под Windows можно использовать стандартную процедуру деинсталляции; на Mac специальная утилита для удаления содержится на инсталляционном образе диска Kies. Flashing <strong>не будет работать</strong> с установленным Kies. Если Вы забудете удалить Kies перед сборкой, система сборки это заметит и напомнит Вам о необходимости его удаления. Обратите внимание, что утилита удаления не удаляет корректно папку <code>~/Library/Application Support/.FUS</code>, и оставляет ссылку на неё в пользовательском меню. Всё это придётся удалить вручную.</div>
+<h3 class="note" id="Починка_libmpc_зависимости_(если_сломана)">Починка libmpc зависимости (если сломана)</h3>
+<p>gcc 4.6 изначально собран с libmpc 0.9; если для апдейта пакетов Вы используете homebrew, libmpc обновится до версии 1.0, но homebrew не пересоберёт gcc 4.6 после апдейта этой библиотеки. Так что придётся создать симлинк, чтобы всё снова заработало:</p>
+<pre>cd /usr/local/lib/
+ln -s libmpc.3.dylib libmpc.2.dylib</pre>
+<h3 id="По_желанию_Установка_HAX">По желанию: Установка HAX</h3>
+<p>Intel поставляет специальный драйвер, позволяющий B2G вместо эмуляции кода запускать его нативно на Mac, если Вы используете эмулятор x86. При желании можете <a class="external" href="http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/" title="http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/">скачать и установить</a> этот драйвер. Это не обязательно, но может повысить производительность и стабильность работы эмулятора.  </p>
+<p>Перед инсталляцией HAX нужно установить <a href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">Android SDK</a>.</p>
+<h2 class="note" id="Установка_adb">Установка adb</h2>
+<p>При сборке B2G понадобятся некоторые бинарные файлы из ОС Android, установленной на телефоне (если, конечно, Вы не собираете в эмуляторе). Для того, чтобы получить эти файлы, нужен <code>adb</code>, Android Debug Bridge.</p>
+<p>Установите <a class="external" href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">Android SDK starter package</a> для Вашей платформы (Вам нужен <em>ADT Bundle</em>, а не опция <em>SDK Tools Only</em>). Затем запустите менеджер пакетов, <code>$SDK_HOME/tools/android</code>, и используйте GUI для инсталляции "Android SDK Platform-tools".</p>
+<p><code>adb</code> устанавливается в <code>$SDK_HOME/platform-tools</code>. Не забудьте добавить эту директорию в <code>PATH</code> в файле <code>~/.bashrc</code> или аналогичном<code>:</code></p>
+<pre>PATH=$SDK_HOME/platform-tools:$PATH</pre>
+<p>где <code>$SDK_HOME</code> - фактическое место расположения android sdk.</p>
+<h2 class="note" id="Установка_heimdall">Установка heimdall</h2>
+<p>Heimdall - это утилита для flashing Samsung Galaxy S2. Она используется при Boot to Gecko flash utility для замещения контента телефона с Firefox OS, а также для flash updated versions of B2G and Gaia onto the device. Вам потребуется эта утилита, если Вы хотите установить Firefox OS на Galaxy S2; она <strong>не</strong> нужна для любых других устройств. Для всех прочих устройств используется утилита fastboot.</p>
+<div class="note">
+  <strong>Примечание:</strong> Опять же, важно отметить, что это <strong>требуется только для установки Firefox OS на Samsung Galaxy S2</strong>.</div>
+<p>Установить heimdall можно двумя способами:</p>
+<ul>
+  <li>Можно <a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">скачать исходники</a> с GitHub и собрать самостоятельно.</li>
+  <li>Можно установить с помощью менеджера пакетов:
+    <ul>
+      <li>В Linux: <code>sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev</code></li>
+      <li>Для Maка: <a class="link-https" href="https://github.com/downloads/Benjamin-Dobell/Heimdall/heimdall-suite-1.3.2-mac.dmg" title="https://github.com/downloads/Benjamin-Dobell/Heimdall/heimdall-suite-1.3.2-mac.dmg">скачать инсталлятор</a>.</li>
+    </ul>
+  </li>
+</ul>
+<h2 id="Конфигурирование_ccache">Конфигурирование ccache</h2>
+<p>По умолчанию размер кэша для ccache равен 1GB; сборка B2G легко первышает этот порог. Изменить размер кэша можно таким образом:</p>
+<pre><code>$ ccache --max-size 3GB</code></pre>
+<h2 id="Настройка_udev_rule_для_Вашего_телефона">Настройка udev rule для Вашего телефона</h2>
+<p>Чтобы узнать USB vendor ID, запустите <code>lsusb</code>, но, как правило, это <code>18d1</code> для Google, <code>04e8</code> для Samsung, <code>19d2</code> для ZTE, <code>05c6</code> для Qualcomm, таким образом, все вопросы в данном случае решаются добавлением такой строки в <code>/etc/udev/rules.d/android.rules</code> (создайте этот файл, если его еще нет, заменив <code>XXXX</code> нужным ID):</p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="XXXX", MODE="0666", GROUP="plugdev"</pre>
+<p>Например, для ZTE содержимое android.rules будет следубщим:</p>
+<pre style="font-size: 14px;">SUBSYSTEM=="usb", ATTR{idVendor}=="19d2", MODE="0666", GROUP="plugdev"</pre>
+<p><span style="line-height: 1.572;">Закончив редактирование файла и сохранив изменения, выставьте ему права на чтение:</span></p>
+<pre>$ sudo chmod a+r /etc/udev/rules.d/android.rules
+</pre>
+<p>Теперь можно проверить, выведется ли список устройств командой adb:</p>
+<pre style="font-size: 14px;">$ adb devices
+List of devices attached
+123456          device</pre>
+<p>Если устройство не обнаружено, убедитесь, что имя файла и скрипта корректны, после чего перезагрузите компьютер и снова введите команду adb. Имейте в виду, что, если Вы используете fastboot, загрузчик может идентифицироваться с другим vendor ID, нежели используется при нормальной загрузке устройства.</p>
+<h2 id="Переведите_телефон_в_developer_mode">Переведите телефон в developer mode</h2>
+<p>Прежде, чем подключить телефон к USB порту, переведите его в  USB developer mode. Это позволит отлаживаться на телефоне и flash the phone. Для перевода в этот режим: Settings app -&gt; <code>Device information</code> -&gt; <code>Mode Information</code> -&gt; <code>Developer</code> -&gt; (enable) <code>Developer mode</code></p>
+<h2 id="Архивация_системного_раздела_телефона">Архивация системного раздела телефона</h2>
+<p>Рекомендуеься предварительно сделать архивную копию всего системного раздела с Android. В таком случае позже Вы всегда сможете вернуться к старой операционной системе после удаления B2G. Для архивации запустите:</p>
+<pre>adb pull /system &lt;backup target dir&gt;/system
+</pre>
+<p>В зависимости от модели телефона, может также потребоваться:</p>
+<pre>adb pull /data &lt;backup target dir&gt;/data
+adb pull /vendor &lt;backup target dir&gt;/vendor
+</pre>
+<p>Если цказанная команда вывалит ошибку "insufficient permission", попробуйте следующее:</p>
+<ul>
+  <li>остановите и перезапустите adb сервер, если же это не удастся,</li>
+  <li>перепроверьте, что у 'adb' tool выставлены права <em>root</em> в пределах Вашего кастомного ROM (т.е. в CyanogenMod, поменяйте 'Settings &gt; System &gt; Developer Options &gt; Root Access' на 'Apps и ADB' либо 'ADB only').</li>
+  <li>Убедитесь в правильной конфигурации udev rule (см. {{ anch("Настройка udev rule для Вашего телефона") }}.</li>
+</ul>
+<h2 id="Что_дальше">Что дальше?</h2>
+<p>А вот теперь можно <a href="/en-US/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build" title="en-US/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build">получить код Firefox OS</a>!</p>

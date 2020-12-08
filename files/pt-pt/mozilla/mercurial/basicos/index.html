@@ -1,0 +1,61 @@
+---
+title: Básicos sobre Mercurial
+slug: Mozilla/Mercurial/Basicos
+tags:
+  - Desenvolvendo o Mozilla
+  - Mercurial
+translation_of: Mozilla/Mercurial/Basics
+---
+<p>I am about to tell you some stuff about <a href="/en/Mercurial" title="en/Mercurial">Mercurial</a> that will save you a lot of frustration. This page is cynical and survival-oriented. But I still claim Mercurial is a lot better than CVS. —<a href="/User:Jorend" title="User:Jorend">jorendorff</a> 16:06, 12 May 2008 (PDT)</p>
+
+<h3 id="Expectations" name="Expectations">Expetativas</h3>
+
+<p><strong>Mercurial não é CVS.</strong> Os comandos não são os mesmos. Os conceitos não são os mesmos. <a href="/en/Mozilla/Mercurial/How_Is_Mercurial_different_from_CVS" title="en/Mozilla/Mercurial/How_Is_Mercurial_different_from_CVS">Como é Mercurial diferente de CVS?</a></p>
+
+<p><strong>This gun is loaded.</strong> You can shoot yourself in the foot. You can lose work. The tool tries to protect you, but it can happen anyway. The two common failure modes are: (a) you run a command without knowing what it's going to do; (b) you <code>hg commit</code> or <code>hg qrefresh</code> with a mistaken understanding of the state of your working directory. So you accidentally commit changes that you didn't want to commit; or you accidentally commit a broken merge; etc. Often it's not immediately obvious that anything is wrong.</p>
+
+<p>Forewarned is forearmed. Don't do these things. Don't run commands without knowing what they're going to do—<code>hg help</code> is your friend. Don't commit without diffing and thinking. And don't let yourself get into "play mode" and stop paying attention to the fact that what you're playing with is your own uncommitted work.</p>
+
+<p><strong>Mercurial is not magic dust.</strong> Mercurial is flexible, powerful, and fun. It lets you attempt stuff you never would have tried in CVS. But of course not everything turns out to have been a good idea. (For example, we tried sharing patch queues. It sort of sucked.)</p>
+
+<h3 id="Avoiding_trouble" name="Avoiding_trouble">Evite problemas</h3>
+
+<p><strong>Utilize o último lançamento estável do Mercurial.</strong></p>
+
+<p><strong>Learn how to get your bearings.</strong> Use read-only commands (like <code>hg status</code>, <code>hg head</code>, <code>hg parents</code>, <code>hg log</code>, <code>hg diff</code>, <code>hg outgoing</code>) to check the status of your repository. This is a key skill.</p>
+
+<p><strong>Configure a <a class="external" href="http://mercurial.selenic.com/wiki/MergeToolConfiguration">merge program</a> and make sure you know how to use it. DO IT NOW.</strong> Otherwise you will likely screw up your repository at some point.</p>
+
+<p>Mercurial doesn't leaves conflict markers in your files; instead, it wants you to fix the conflicts <em>immediately</em>, using a merge program (like <code>kdiff3</code>) which it can launch for you.</p>
+
+<p>This can be error-prone. By default, Mercurial uses the first merge program it finds on your system, and merge programs can have a learning curve. Mercurial does not do a good job of detecting busted merges and refusing to proceed, so just by closing a window you can unwittingly put yourself in a bad state. Bad merges may lead to seemingly inexplicable Mercurial behavior in the future.</p>
+
+<p><strong>If a merge fails, make sure Mercurial knows that it has failed.</strong> When you're first learning the ropes, merges often go wrong. You might see this message:</p>
+
+<pre class="eval">0 files updated, 0 files merged, 0 files removed, 1 files unresolved
+There are unresolved merges, you can redo the full merge using:
+  hg update -C 2
+  hg merge 1
+</pre>
+
+<p>This means some conflicts weren't resolved during the merge. If you don't know exactly what they are and how to fix them, use that <code>hg update -C</code> command to tell Mercurial that you've given up on that merge.</p>
+
+<p>If you don't, Mercurial won't know, and the next time you commit, it'll make a merge changeset. This is bad. The result can look a lot like accidentally destroying a bunch of work, actually, but the damage can be undone.</p>
+
+<p>If <code>hg parents</code> shows two parents, you're merging.</p>
+
+<p><strong>If you use <a href="/en/Mercurial_Queues" title="Mercurial_Queues">Mercurial Queues</a>, back up your work.</strong> <code>hg qrefresh</code> destructively replaces the old patch with the new one! Use <code>hg qinit -c</code> to create a separate backup repository for your patches and <code>hg commit --mq -m backup</code> regularly.</p>
+
+<p><strong>Don't use Mercurial Queues in a repository that someone might pull from since applied (non-public) patches would also be pulled.</strong></p>
+
+<h3 id="Recovering" name="Recovering">Recuperação</h3>
+
+<p>Ups! Mercurial cortou o seu braço!</p>
+
+<p><strong>Don't randomly try stuff to see if it'll magically fix it.</strong> Remember what you stand to lose, and <em>set down the chainsaw</em> while you still have one good arm.</p>
+
+<p><strong>Obtenha ajuda no IRC.</strong> Tente <a class="link-irc" href="irc://irc.mozilla.org/hg">#hg</a> ou <a class="link-irc" href="irc://irc.mozilla.org/developers">#developers</a> no Mozilla IRC ou <a class="link-irc" href="irc://irc.freenode.net/mercurial">#mercurial no freenode</a>.</p>
+
+<p> </p>
+
+<p>{{ languages( { "es": "es/Lo_b\u00e1sico_de_Mercurial", "fr": "fr/Les_bases_de_Mercurial", "ja": "ja/Mercurial_basics" } ) }}</p>

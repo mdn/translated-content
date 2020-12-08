@@ -1,0 +1,386 @@
+---
+title: window/utils
+slug: Mozilla/Add-ons/SDK/Low-Level_APIs/window_utils
+translation_of: Archive/Add-ons/Add-on_SDK/Low-Level_APIs/window_utils
+---
+<div class="note">
+<p>Unstable</p>
+</div>
+
+<div class="note">
+<p>Note that this module includes functions that give you direct access to web content. These functions are not safe to call in multiprocess Firefox. See <a href="/en-US/Add-ons/SDK/Guides/Multiprocess_Firefox_and_the_SDK">Multiprocess Firefox and the SDK</a> for more details.</p>
+</div>
+
+<p><span class="seoSummary">Functions for working with browser windows.</span></p>
+
+<h2 id="Usage">Usage</h2>
+
+<h3 id="Private_windows">Private windows</h3>
+
+<p>With this module your add-on will see private browser windows even if it has not explicitly opted into private browsing, so you need to take care not to store any user data derived from private browser windows.<br>
+ <br>
+ The exception is the windows() function which returns an array of currently opened windows. Private windows will not be included in this list if your add-on has not opted into private browsing.<br>
+ <br>
+ To learn more about private windows, how to opt into private browsing, and how to support private browsing, refer to the documentation for the private-browsing module.</p>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Functions">Functions</h3>
+
+<h4 class="addon-sdk-api-name" id="getMostRecentBrowserWindow()"><code>getMostRecentBrowserWindow()</code></h4>
+
+<p>Get the topmost browser window, as an nsIDOMWindow instance.</p>
+
+<h5 id="Returns">Returns</h5>
+
+<p><strong>nsIDOMWindow</strong>: the topmost browser window.</p>
+
+<h4 class="addon-sdk-api-name" id="getInnerId(window)"><code>getInnerId(window)</code></h4>
+
+<p>Returns the ID of the specified window's current inner window. This function wraps nsIDOMWindowUtils.currentInnerWindowID.</p>
+
+<h5 id="Parameters">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong><br>
+ The window whose inner window we are interested in.</p>
+
+<h5 id="Returns_2">Returns</h5>
+
+<p><strong>ID</strong>: the given window's ID.</p>
+
+<h4 class="addon-sdk-api-name" id="getOuterId(window)"><code>getOuterId(window)</code></h4>
+
+<p>Returns the ID of the specified window's outer window. This function wraps nsIDOMWindowUtils.outerWindowID.</p>
+
+<h5 class="addon-sdk-api-name" id="Parameters_2">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong><br>
+ The window whose outer window we are interested in.</p>
+
+<h5 id="Returns_3">Returns</h5>
+
+<p><strong>ID</strong>: the outer window's ID.</p>
+
+<h4 class="addon-sdk-api-name" id="getXULWindow(window)"><code>getXULWindow(window)</code></h4>
+
+<p>Returns the nsIXULWindow for the given nsIDOMWindow:</p>
+
+<pre class="brush: js">var { Ci } = require('chrome');
+var utils = require('sdk/window/utils');
+var active = utils.getMostRecentBrowserWindow();
+active instanceof Ci.nsIXULWindow // =&gt; false
+utils.getXULWindow(active) instanceof Ci.nsIXULWindow // =&gt; true</pre>
+
+<h5 id="Parameters_3">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_4">Returns</h5>
+
+<p><strong>nsIXULWindow</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getBaseWindow(window)"><code>getBaseWindow(window)</code></h4>
+
+<p>Returns the nsIBaseWindow for the given nsIDOMWindow:</p>
+
+<pre class="brush: js">var { Ci } = require('chrome');
+var utils = require('sdk/window/utils');
+var active = utils.getMostRecentBrowserWindow();
+active instanceof Ci.nsIBaseWindow // =&gt; false
+utils.getBaseWindow(active) instanceof Ci.nsIBaseWindow // =&gt; true</pre>
+
+<h5 id="Parameters_4">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_5">Returns</h5>
+
+<p><strong>nsIBaseWindow</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getToplevelWindow(window)"><code>getToplevelWindow(window)</code></h4>
+
+<p>Returns the toplevel nsIDOMWindow for the given child nsIDOMWindow:</p>
+
+<pre class="brush: js">var { Ci } = require('chrome');
+var utils = require('sdk/window/utils');
+var browserWindow = utils.getMostRecentBrowserWindow();
+var window = browserWindow.content; // `window` object for the current webpage
+utils.getToplevelWindow(window) == browserWindow // =&gt; true</pre>
+
+<h5 id="Parameters_5">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_6">Returns</h5>
+
+<p><strong>nsIDOMWindow</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getWindowDocShell(window)"><code>getWindowDocShell(window)</code></h4>
+
+<p>Returns the nsIDocShell for the tabbrowser element.</p>
+
+<h5 id="Parameters_6">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_7">Returns</h5>
+
+<p><strong>nsIDocShell</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getWindowLoadingContext(window)"><code>getWindowLoadingContext(window)</code></h4>
+
+<p>Returns the nsILoadContext.</p>
+
+<h5 id="Parameters_7">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_8">Returns</h5>
+
+<p><strong>nsILoadContext</strong></p>
+
+<h4 class="addon-sdk-api-name" id="open(uri_options)"><code>open(uri, options)</code></h4>
+
+<p>This function is used to open top level (application) windows. It takes the uri of the window document as its first argument and an optional hash of options as its second argument.</p>
+
+<pre class="brush: js">var { open } = require('sdk/window/utils');
+var window = open('data:text/html,Hello Window');</pre>
+
+<p>This function wraps <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWindowWatcher">nsIWindowWatcher</a>.openWindow.</p>
+
+<h5 id="Parameters_8">Parameters</h5>
+
+<p><strong>uri : string</strong><br>
+ URI of the document to be loaded into the window.  Only chrome, resource, and data schemes are accepted.</p>
+
+<p><strong>options : object</strong><br>
+ Options for the function, with the following properties:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>parent</td>
+   <td>nsIDOMWindow</td>
+   <td>Parent for the new window. Optional, defaults to null.</td>
+  </tr>
+  <tr>
+   <td>name</td>
+   <td>string</td>
+   <td>Name that is assigned to the window. Optional, defaults to null.</td>
+  </tr>
+  <tr>
+   <td>features</td>
+   <td>object</td>
+   <td>
+    <p>Map of features to set for the window, defined like this: { width: 10, height: 15, chrome: true }.</p>
+
+    <p>See the window.open features documentation for more details.</p>
+
+    <p>Optional, defaults to an empty map: {}.</p>
+
+    <pre class="brush: js">
+var { open } = require('sdk/window/utils');
+var window = open('data:text/html,Hello Window', {
+  name: 'jetpack window',
+  features: {
+    width: 200,
+    height: 50,
+    popup: true
+  }
+});</pre>
+   </td>
+  </tr>
+  <tr>
+   <td>args</td>
+   <td>object</td>
+   <td>Extra argument(s) to be attached to the new window as the window.arguments property.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="Returns_9"><br>
+ Returns</h5>
+
+<p><strong>nsIDOMWindow</strong></p>
+
+<h4 class="addon-sdk-api-name" id="openDialog(options)"><code>openDialog(options)</code></h4>
+
+<p>Opens a top level window and returns its nsIDOMWindow representation. This is the same as open, but you can supply more features. It wraps window.openDialog.</p>
+
+<h5 id="Parameters_9">Parameters</h5>
+
+<p><strong>options : object</strong><br>
+ Options for the function, with the following properties:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>url</td>
+   <td>string</td>
+   <td>URI of the document to be loaded into the window. Defaults to "chrome://browser/content/browser.xul".</td>
+  </tr>
+  <tr>
+   <td>name</td>
+   <td>string</td>
+   <td>Optional name that is assigned to the window. Defaults to "_blank".</td>
+  </tr>
+  <tr>
+   <td>features</td>
+   <td>string</td>
+   <td>
+    <p>Map of features to set for the window, defined like: { width: 10, height: 15, chrome: true }.</p>
+
+    <p>For the set of features you can set, see the window.openDialog documentation.</p>
+
+    <p>Optional, defaults to: 'chrome,all,dialog=no'.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>args</td>
+   <td>object</td>
+   <td>Extra argument(s) to be attached to the new window as the window.arguments property.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="Returns_10">Returns</h5>
+
+<p><strong>nsIDOMWindow</strong></p>
+
+<h4 class="addon-sdk-api-name" id="windows()"><code>windows()</code></h4>
+
+<p>Returns an array of all currently opened windows. Note that these windows may still be loading.</p>
+
+<p>In order to see private windows in this list, your add-on must have <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing#Opting_into_private_browsing">opted into private browsing</a> and you must include the <code>includePrivate</code> key in the list of options:</p>
+
+<pre class="brush: js">  var allWindows = window_utils.windows(null, {includePrivate:true});
+</pre>
+
+<h5 id="Parameters_10">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ String identifying the type of window to return. This is passed directly into <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWindowMediator#getEnumerator()"><code>nsIWindowMediator.getEnumerator()</code></a>, so its possible values are the same as those expected by that function. In particular:</p>
+
+<ul>
+ <li><code>null</code>: get all window types</li>
+ <li><code>navigator:browser</code>: get "normal" browser windows</li>
+ <li><code>devtools:scratchpad</code>: get <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a> windows</li>
+ <li><code>navigator:view-source</code>: get <a href="/en-US/docs/View_source">view source</a> windows</li>
+</ul>
+
+<p>If you're not also passing options, you can omit this, and it's the same as passing <code>null</code>.</p>
+
+<p><strong>options : object</strong><br>
+ Options object containing the following property:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>includePrivate</td>
+   <td>boolean</td>
+   <td>Whether to include private windows. Defaults to false. The add-on must also have opted into private windows for this to have an effect.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="Returns_11">Returns</h5>
+
+<p><strong>Array</strong>: array of nsIDOMWindow instances.</p>
+
+<h4 class="addon-sdk-api-name" id="isDocumentLoaded(window)"><code>isDocumentLoaded(window)</code></h4>
+
+<p>Check if the given window's document is completely loaded. This means that its "load" event has been fired and all content is loaded, including the whole DOM document, images, and any other sub-resources.</p>
+
+<h5 id="Parameters_11">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_12">Returns</h5>
+
+<p><strong>boolean</strong>: true if the document is completely loaded.</p>
+
+<h4 class="addon-sdk-api-name" id="isBrowser(window)"><code>isBrowser(window)</code></h4>
+
+<p>Returns true if the given window is a Firefox browser window: that is, its document has a "windowtype" of "chrome://browser/content/browser.xul".</p>
+
+<h5 id="Parameters_12">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_13">Returns</h5>
+
+<p><strong>boolean</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getWindowTitle(window)"><code>getWindowTitle(window)</code></h4>
+
+<p>Get the title of the document hosted by the given window</p>
+
+<h5 id="Parameters_13">Parameters</h5>
+
+<p><strong>window: nsIDOMWindow</strong></p>
+
+<h5 id="Returns_14">Returns</h5>
+
+<p><strong>string</strong>: this document's title.</p>
+
+<h4 class="addon-sdk-api-name" id="isXULBrowser(window)"><code>isXULBrowser(window)</code></h4>
+
+<p>Returns true if the given window is a XUL window.</p>
+
+<h5 id="Parameters_14">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_15">Returns</h5>
+
+<p><strong>boolean</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getFocusedWindow()"><code>getFocusedWindow()</code></h4>
+
+<p>Gets the child window within the topmost browser window that is focused. See nsIFocusManager for more details.</p>
+
+<h5 id="Returns_16">Returns</h5>
+
+<p><strong>nsIDOMWindow</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getFocusedElement()"><code>getFocusedElement()</code></h4>
+
+<p>Get the element that is currently focused. This will always be an element within the document loaded in the focused window, or null if no element in that document is focused.</p>
+
+<h5 id="Returns_17">Returns</h5>
+
+<p><strong>nsIDOMElement</strong></p>
+
+<h4 class="addon-sdk-api-name" id="getFrames(window)"><code>getFrames(window)</code></h4>
+
+<p>Get the frames contained by the given window.</p>
+
+<h5 id="Parameters_15">Parameters</h5>
+
+<p><strong>window : nsIDOMWindow</strong></p>
+
+<h5 id="Returns_18">Returns</h5>
+
+<p><strong>array</strong>: array of frames.<br>
+  </p>

@@ -1,0 +1,133 @@
+---
+title: title
+slug: Archive/RSS/Elementy/title
+tags:
+  - Dokumentacje
+  - RSS
+  - 'RSS:Dokumentacje'
+  - Wszystkie_kategorie
+translation_of: Archive/RSS_elements/title
+---
+<p>
+</p>
+<h2 id="Element_RSS_-_title" name="Element_RSS_-_title"> Element RSS - <i>title</i></h2>
+<p><b>&lt;title&gt;...&lt;/title&gt;</b> - element RSS tytułu ma cztery zastosowania, które są sprecyzowane dla elementu <i>title</i>. Jest stosowany w elementach; <a href="pl/RSS/Elementy/Channel">&lt;channel&gt;</a>, <a href="pl/RSS/Elementy/image">&lt;image&gt;</a>, <a href="pl/RSS/Elementy/item">&lt;item&gt;</a> lub <a href="pl/RSS/Elementy/textinput">&lt;textinput&gt;</a>.
+</p><p>Tytuł elementu RSS stanowią dane typu <i>plain text</i>.
+</p>
+<div class="note">
+<p><b>Uwaga</b>: w wersji <a href="pl/RSS/Wersje/0.91/Userland">Userland RSS 0.91</a> znajduje się maksymalny limit znaków, który wynosi 100.
+</p>
+</div>
+<p><b>Przykład <a href="pl/RSS/Wersje/0.91/Netscape/Wersja_3">Netscape RSS 0.91 Wersja 3</a></b>
+</p>
+<pre class="eval">   <span class="nowiki">
+    &lt;?xml version="1.0"?&gt;
+    &lt;!DOCTYPE rss SYSTEM "http://my.netscape.com/publish/formats/rss-0.91.dtd"&gt;
+
+    &lt;rss version="0.91"&gt;
+        &lt;channel&gt;
+            </span><b><span class="highlightred"><span class="nowiki">&lt;title&gt;Advogato&lt;/title&gt;</span></span></b><span class="nowiki">
+            &lt;link&gt;http://www.advogato.org/article/&lt;/link&gt;
+            &lt;description&gt;Recent Advogato articles&lt;/description&gt;
+            &lt;language&gt;en-us&lt;/language&gt;
+            &lt;image&gt;
+                &lt;link&gt;http://www.advogato.org/&lt;/link&gt;
+                </span><b><span class="highlightred"><span class="nowiki">&lt;title&gt;Advogato&lt;/title&gt;</span></span></b><span class="nowiki">
+                &lt;url&gt;http://www.advogato.org/image/tinyadvogato.png&lt;/url&gt;
+            &lt;/image&gt;
+            &lt;item&gt;
+                </span><b><span class="highlightred"><span class="nowiki">&lt;title&gt;Why can I not get any tang?!&lt;/title&gt;</span></span></b><span class="nowiki">
+                &lt;link&gt;http://www.advogato.org/article/10101.html&lt;/link&gt;
+                &lt;description&gt;Seriously.  Why can't I get any tang?&lt;/description&gt;
+            &lt;/item&gt;
+        &lt;/channel&gt;
+    &lt;/rss&gt;
+    </span>
+</pre>
+<h3 id="Atrybuty" name="Atrybuty"> Atrybuty </h3>
+<dl><dd> <i>brak</i>
+</dd></dl>
+<h3 id="Pod_elementy" name="Pod_elementy"> Pod elementy </h3>
+<dl><dd> <i>brak</i>
+</dd></dl>
+<h3 id="Element_b.C4.99d.C4.85cy_rodzicem" name="Element_b.C4.99d.C4.85cy_rodzicem"> Element będący rodzicem </h3>
+<p>Tabela poniżej pokazuje listę <a href="pl/RSS/Elementy">elementów RSS</a>, które są elementami potomnymi tego elementu.
+</p>
+&lt;center&gt;
+
+&lt;tr&gt;
+&lt;th&gt;Nazwa&lt;/td&gt;
+&lt;th&gt;Tag&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.90">0.90</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.91/Netscape/Wersje_1">N 0.91 R1</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.91/Netscape/Wersje_3">N 0.91 R3</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.91/Userland">U 0.91</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.92">0.92</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.93">0.93</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/0.94">0.94</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/1.0">1.0</a>&lt;/td&gt;
+&lt;th&gt;<a href="pl/RSS/Wersje/2.0">2.0</a>&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/Channel">Element RSS: channel</a>&lt;/td&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/Channel">&lt;channel&gt;</a>&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/image">Element RSS: image</a>&lt;/td&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/image">&lt;image&gt;</a>&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/item">Element RSS: item</a>&lt;/td&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/item">&lt;item&gt;</a>&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/textinput">Element RSS: textinput</a>&lt;/td&gt;
+&lt;td&gt;<a href="pl/RSS/Elementy/textinput">&lt;textinput&gt;</a>&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;✔&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt; <h3 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe"> Zobacz także </h3><dl><dd> <i>brak</i>
+</dd></dl><p>{{ RSS:Element_Navigation() }}
+</p><p><span class="comment">Interwiki Language Links</span>
+</p><table class="standard-table">
+<tbody><tr>
+<th colspan="2" style="text-align: center;"><a href="pl/RSS/Elementy">Elementy RSS</a>&lt;/td&gt;
+&lt;th colspan="9" style="text-align:center"&gt;<a href="pl/RSS/Wersje">Wersje RSS</a></th>
+</tr>
+
+</tbody></table>&lt;/center&gt;{{ languages( { "en": "en/RSS/Element/title" } ) }}

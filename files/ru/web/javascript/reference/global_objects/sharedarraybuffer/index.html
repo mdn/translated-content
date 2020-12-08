@@ -1,0 +1,209 @@
+---
+title: SharedArrayBuffer
+slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+---
+<div>{{JSRef}}</div>
+
+<p>Объект <strong><code>SharedArrayBuffer</code></strong> используется для создания разделенного буфера фиксированной длины для хранения примитивных бинарных данных, подобно объекту {{jsxref("ArrayBuffer")}}, но могут быть использованы для создания обзора на разделенную память. В отличие от <code>ArrayBuffer</code>, <code>SharedArrayBuffer</code> не может быть отсоединен.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">new SharedArrayBuffer(length)
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>length</code></dt>
+ <dd>Размер, в байтах, для создания буферного массива.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Новый объект <code>SharedArrayBuffer</code> указаной длины. Его содержимое после инициализаци равно 0.</p>
+
+<h2 id="Описание">Описание</h2>
+
+<h3 id="Распределение_и_разделение_память">Распределение и разделение память</h3>
+
+<p>Для разделения памяти с помощью объекта {{jsxref("SharedArrayBuffer")}} между одним агентом в кластере и другим (агент может быть как основной программой web-страницы, так и одним из web-workers), используются <code><a href="/en-US/docs/Web/API/Worker/postMessage">postMessage</a></code> и <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured cloning</a>.</p>
+
+<p>Алгоритм структурированного клонирования принимает <code>SharedArrayBuffers</code> и <code>TypedArrays,</code> отображенный в <code>SharedArrayBuffers</code>. В обоих случаях, объект  <code>SharedArrayBuffer</code> передается получателю, результируя в новый, приватный объект SharedArrayBuffer внутри агента-получателя (так же как для {{jsxref("ArrayBuffer")}}). Однако, блок общих данных, на который ссылаются оба объекта <code>SharedArrayBuffer, </code>это один и тот же блок данных, и сторонние эффекты в блоке в одном из агентов в итоге станут заметны в другом агенте.</p>
+
+<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+worker.postMessage(sab);
+</pre>
+
+<h3 id="Обновление_и_синхронизация_разделенной_памяти_с_помощью_Атомарных_операций">Обновление и синхронизация разделенной памяти с помощью Атомарных операций</h3>
+
+<p>Разделенная память может быть создана и изменена одновременно в  workers или основном потоке. В зависимости от системы (ЦПУ, ОС, браузер) может уйти время пока изменения будут распространены по всем контекстам. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .</p>
+
+<h3 id="API_принимающие_объекты_SharedArrayBuffer">API, принимающие объекты <code>SharedArrayBuffer</code></h3>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.bufferData()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.bufferSubData()")}}</li>
+ <li>{{domxref("WebGL2RenderingContext.getBufferSubData()")}}</li>
+</ul>
+
+<h3 id="Конструкции_требуют_оператор_new">Конструкции требуют оператор <code>new</code></h3>
+
+<p>Конструторы <code>SharedArrayBuffer</code> необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора <code>SharedArrayBuffer</code> как функции без указания <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
+
+<pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
+// TypeError: вызов встроенного конструктора SharedArrayBuffer
+// без new запрещено</pre>
+
+<pre class="brush: js example-good">var sab = new SharedArrayBuffer(1024);</pre>
+
+<h2 id="Свойства">Свойства</h2>
+
+<dl>
+ <dt><code>SharedArrayBuffer.length</code></dt>
+ <dd>Длина конструктора <code>SharedArrayBuffer,</code> чье значение равно 1.</dd>
+ <dt>{{jsxref("SharedArrayBuffer.prototype")}}</dt>
+ <dd>Позволяет дополнительные свойства для всех объектов <code>SharedArrayBuffer</code>.</dd>
+</dl>
+
+<h2 id="SharedArrayBuffer_объект_prototype"><code>SharedArrayBuffer</code> объект prototype</h2>
+
+<p>Все экземпляры <code>SharedArrayBuffer</code> наследуются от {{jsxref("SharedArrayBuffer.prototype")}}.</p>
+
+<h3 id="Свойства_2">Свойства</h3>
+
+<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype','Properties')}}</p>
+
+<h3 id="Методы">Методы</h3>
+
+<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype','Methods')}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-sharedarraybuffer-objects', 'SharedArrayBuffer')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td>Initial definition in ES2017.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES8', '#sec-sharedarraybuffer-objects', 'SharedArrayBuffer')}}</td>
+   <td>{{Spec2('ES8')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}} [2]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("55")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatSafari("10.1")}}</td>
+  </tr>
+  <tr>
+   <td><code>slice()</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("52")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatSafari("10.1")}}</td>
+  </tr>
+  <tr>
+   <td>SAB in DataView</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("53")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatSafari("10.1")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("55")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatSafari("10.1")}}</td>
+  </tr>
+  <tr>
+   <td><code>slice()</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("52")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatSafari("10.1")}}</td>
+  </tr>
+  <tr>
+   <td>SAB in DataView</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("53")}} [1]</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatSafari("10.1")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Enabled by default in Firefox 55. In Firefox version 46 until version 54, this feature is disabled by a preference setting (in about:config, set <code>javascript.options.shared_memory</code> to <code>true</code>). </p>
+
+<p>[2] The implementation is under development and needs these runtime flags: <code>--js-flags=--harmony-sharedarraybuffer --enable-blink-feature=SharedArrayBuffer</code></p>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li>{{jsxref("Atomics")}}</li>
+ <li>{{jsxref("ArrayBuffer")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+ <li><a href="https://github.com/lars-t-hansen/parlib-simple">parlib-simple </a>– a simple library providing synchronization and work distribution abstractions.</li>
+ <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
+ <li>
+  <p><a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks</a></p>
+ </li>
+</ul>

@@ -1,0 +1,146 @@
+---
+title: Zabawa językiem XUL
+slug: Zabawa_językiem_XUL
+tags:
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+  - XUL
+translation_of: Archive/Mozilla/XUL/The_Joy_of_XUL
+---
+<p>Intended audience: Application developers and development managers who seek to better understand XUL and why the Mozilla platform is built with it.</p>
+
+<h3 id="Wprowadzenie" name="Wprowadzenie">Wprowadzenie</h3>
+
+<p><a href="/pl/XUL" title="pl/XUL">XUL</a> (wym. "zul"; ang. <em>XML-based User-interface Language</em>) jest opartym na XML-u językiem opisu interfejsu użytkownika autorstwa Mozilli, pozwalającym budować bogate aplikacje między platformowe, które mogą działać podłączone i odłączone od Internetu. Takie aplikacje można łatwo profilować ze zmodyfikowanym tekstem, grafikami i warstwą prezentacji, tak, aby łatwo było przygotować je i zlokalizować na konkretny rynek. Autorzy stron, którzy znają Dynamiczny HTML (<a href="../../../../../pl/DHTML" rel="internal">DHTML</a>) mogą szybko nauczyć się języka XUL i zacząć budować aplikacje praktycznie od zaraz.</p>
+
+<p>This document will describe the compelling reasons for application developers to leverage XUL and Mozilla technology for building cross-platform applications. This same investigation will provide sufficient explanation of Mozilla's motivation to build XUL and why the Mozilla platform is constructed using it. The key features and benefits of XUL will be explored followed by an examination of supporting Mozilla technologies. Finally, a mini case study of a Calendar application written in XUL will reinforce the benefits of building applications with Mozilla.</p>
+
+<h3 id="Key_Features_and_Benefits" name="Key_Features_and_Benefits">Key Features and Benefits</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>Powerful widget-based markup language</td>
+   <td>The goal of XUL is to build cross platform applications, in contrast with DHTML which is intended for developing web pages. For this reason, XUL is oriented toward application artifacts such as windows, labels and buttons instead of pages, heading levels, and hypertext links.
+    <p>In fact, many developers invest a significant amount of effort to achieve these results in their DHTML web applications but at the cost of complexity and performance and without any supporting standards.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Based on existing standards</td>
+   <td>XUL is an XML language based on W3C standard XML 1.0. Applications written in XUL are based on additional W3C standard technologies featuring HTML 4.0; Cascading Style Sheets (CSS) 1 and 2; Document Object Model (DOM) Levels 1 and 2; JavaScript 1.5, including ECMA-262 Edition 3 (ECMAscript); XML 1.0.
+    <p>mozilla.org is going a step further by seeking W3C standardization for the eXtensible Binding Language (XBL) (see "Supporting Technologies", below).</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Platform portability</td>
+   <td>Like HTML, XUL is designed to be platform-neutral, making applications easily portable to all of the operating systems on which Mozilla runs. Considering the broad range of platforms that currently support Mozilla, this may be one of the most compelling features of XUL as a technology for building applications.
+    <p>Since XUL provides an abstraction of user interface components, it delivers on the promise of write-once, run-anywhere. The user interface for all of Mozilla's core applications (Browser, Messenger, Address Book, etc.) is written in XUL with one single code base supporting all Mozilla platforms.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Separation of presentation from application logic</td>
+   <td>One of the major downfalls of most web applications is the tight coupling of user interface elements with client application logic. This poses a significant problem in team environments because the skills required to develop these two parts are often satisfied by different people.
+    <p>XUL provides a clear separation among the client application definition and programmatic logic ("content" consisting of XUL, XBL, and JavaScript), presentation ("skin" consisting of CSS and images), and language-specific text labels ("locale" consisting of DTDs and string bundles in .properties files). The layout and appearance of XUL applications can be altered independently of the application definition and logic. Further, the application can be localized for different languages and regions independently of its logic or presentation.</p>
+
+    <p>This degree of separation results in applications that are easier to maintain by programmers and readily customized by designers and language translators. The work flow of these interdependent activities is more easily coordinated than with HTML-based web applications, with less impact on the overall stability and quality of the system.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Easy customization, localization, or branding</td>
+   <td>Another highly practical benefit of the separation that XUL provides among application logic, presentation, and language text is the ease of customizing for different customers or groups of users.
+    <p>A developer can maintain one primary code base for their application and customize the logo and branding for each of their customers by supplying different skins. An application that is written and deployed with an English language user interface can be translated to French for the same customer. While such changes are extensive and affect most (if not all) of the application, they are also isolated from one another enabling the core XUL definition and application logic to be shared among all of the custom versions.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Wspomagaj.C4.85ce_technologie" name="Wspomagaj.C4.85ce_technologie">Wspomagające technologie</h3>
+
+<p>There are number of other technologies introduced by Mozilla that complement XUL for building cross platform web applications.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><a href="/pl/XBL" title="pl/XBL">XBL</a></td>
+   <td>The eXtensible Bindings Language (XBL) is a markup language that defines special new elements, or "bindings" for XUL widgets. With XBL, developers can define new content for XUL widgets, add additional event handlers to a XUL widget, and add new interface properties and methods. Essentially, XBL empowers developers with the ability to extend XUL by customizing existing tags and creating new tags of their own.
+    <p>By using XBL, developers can easily build custom user interface widgets such as progress meters, fancy pop-up menus, and even toolbars and search forms. These custom components can then be used in XUL applications by specifying the custom tag and associated attributes.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/pl/Nak%C5%82adki_XUL" title="pl/Nakładki_XUL">Nakładki XUL</a></td>
+   <td>Overlays are XUL files used to describe extra content for the UI. They are a general mechanism for adding UI for additional components, overriding small pieces of a XUL file without having to resupply the whole UI, and reusing particular pieces of the UI.
+    <p>Overlays are a powerful mechanism for customizing and extending existing applications because they work in two related but highly different ways. In one respect, Overlays are synonymous with "include" files in other languages because an application may specify that an Overlay be included in its definition. But Overlays can also be specified externally, enabling the designer to superimpose them upon an application without changing the original source.</p>
+
+    <p>In practical terms, this enables developers to maintain one code stream for a given application, then apply custom branding or include special features for customers with a completely independent code base. This leads to an overall solution that is easier and less costly to maintain in the long run.</p>
+
+    <p>There is an additional benefit to Overlays for software developers who intend to add features to Mozilla that they wish to keep proprietary. The Netscape Public License (NPL) and Mozilla Public License (MPL) require developers who alter original work (source code files that are provided with Mozilla) to release the source code for these changes to their customers. Overlays can be used to add features to Mozilla without contaminating the original open source code with proprietary alterations.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/pl/XPCOM" title="pl/XPCOM">XPCOM</a>/<a href="/pl/XPConnect" title="pl/XPConnect">XPConnect</a></td>
+   <td>XPCOM and XPConnect are complementary technologies that enable the integration of external libraries with XUL applications.
+    <p>XPCOM, which stands for Cross Platform Component Object Model, is a framework for writing cross-platform, modular software. XPCOM components can be written in C, C++, and JavaScript, and they can be used from C, C++, JavaScript, <a href="/pl/Python" title="pl/Python">Python</a>, Java, and Perl.</p>
+
+    <p>XPConnect is a technology which enables simple interoperation between XPCOM and JavaScript. XPConnect allows JavaScript objects to transparently access and manipulate XPCOM objects. It also enables JavaScript objects to present XPCOM compliant interfaces to be called by XPCOM objects.</p>
+
+    <p>Together, XPCOM and XPConnect enable developers to create XUL applications that require the raw processing power of compiled languages (C/C++) or access to the underlying operating system.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/pl/XPInstall" title="pl/XPInstall">XPInstall</a></td>
+   <td>XPInstall, Mozilla's Cross Platform Install facility, provides a standard way of packaging XUL application components with an install script that Mozilla can download and execute.
+    <p>XPInstall enables users to effortlessly install new XUL applications over the Internet or from corporate intranet servers. To install a new application the user need only click a hypertext link on a web page or in an email message and accept the new package through a Mozilla install dialog.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span class="comment">todo: describe cool toolkit and xul runner features</span></p>
+
+<h3 id="Case_Study:_A_Mozilla_Calendar_Application" name="Case_Study:_A_Mozilla_Calendar_Application">Studium przypadku: Aplikacja Mozilla Calendar</h3>
+
+<p>To mini studium przypadku opisuje jak OEone Corporation (<a class="external" href="http://www.oeone.com" rel="freelink">http://www.oeone.com</a>) zintegrowało swoją aplikacje Kalendarza z rdzeniem produktu Mozilli. The Calendar application is comprised of a XUL front end and an XPCOM component that leverages libical, a native library written in C, for date operations and calendar data storage. The Calendar was initially developed exclusively for Linux but was successfully ported to both Macintosh and Windows within a week.</p>
+
+<p><em>XUL provides a rich set of UI components.</em> The user interface for the Calendar is written entirely in XUL, JavaScript, and CSS, which is a testament to the power and flexibility of this application building framework. It uses simple XUL components like boxes, grids, and stacks to compose views for the weeks, days, and months. The initial implementation of Calendar did not exploit XBL because the developers involved were not experienced with this complementary technology. But future plans for the Calendar include converting many of these UI components to XBL widgets to further simplify their implementation.</p>
+
+<p><em>XPCOM/XPConnect enables integration of native code.</em> A fully-featured open source calendar library, libical (<a class="external" href="http://www.softwarestudio.org/libical/" rel="freelink">http://www.softwarestudio.org/libical/</a>), was harvested for the Calendar project. Libical is an Open Source implementation of the IETF's iCalendar Calendaring and Scheduling protocols. (<a class="external" href="http://tools.ietf.org/html/rfc2445" title="http://tools.ietf.org/html/rfc2445">RFC 2445</a>, 2446, and 2447). It parses iCal components and provides a C API for manipulating the component properties, parameters, and subcomponents. The library was initially integrated by writing an XPCOM wrapper to adapt its interface. To improve performance a greater proportion of application logic was migrated from JavaScript to the XPCOM component.</p>
+
+<p><em>Separation of presentation from logic makes applications resilient to change.</em> The original UI implementation made extensive use of graphics for rendering the month and week views. Later, as the developers learned more about XUL and the implementation of the basic components matured, better ways were identified to simplify the composition of the UI. This lead to increased screen drawing performance and reduced memory and disk footprint requirements of the application. The UI for the month and week views was practically rewritten while the application logic remained virtually unchanged.</p>
+
+<p><em>Porting XUL applications to other platforms is trivial.</em> The Calendar originated as a Linux application with no consideration given to porting it to other platforms. But later, when the original developer (OEone Corporation) contributed the source to the Mozilla project, the Calendar had to be migrated to the Windows and Macintosh platforms. The UI for the XUL application required zero porting effort because it worked with almost no alteration on both new platforms. Similarly, since the UI code is written in JavaScript, the interaction logic worked with no effort. However, since the libical library is written in C, more significant effort was required to migrate this component to the other platforms.</p>
+
+<p>Fortunately an implementation of the libical library was already available for Macintosh so, with the cross platform nature of XPCOM, a Macintosh calendar implementation was working within a few days. However, there was no existing Win32 port available, so developers had to undertake a porting effort to migrate libical to Windows. Within a week this too was complete and Mozilla had a working calendar for all three primary platforms: Linux, Macintosh, and Windows.</p>
+
+<p><em>XPInstall is easy for developers and for users.</em> The Calendar is not a planned deliverable for the Mozilla 1.0 release, and therefore is not included as a standard component in regular nightly and milestone release builds. Developers who are equipped with the software and knowledge required to compile Mozilla can set an optional environment variable and build the Calendar themselves. But many Mozilla users who want to try out the Calendar can't afford this luxury. Using XPInstall it was easy for the developers to package a version of Calendar that could be installed directly over the Internet by clicking a link.</p>
+
+<h3 id="Wnioski" name="Wnioski">Wnioski</h3>
+
+<p>Mozilla, featuring XUL, delivers a compelling technology for developing cross platform applications with the same rich user interface and end user experience as native desktop applications. Designers who are experienced in building web applications using W3C standard technologies can leverage this experience from the browser directly to the desktop.</p>
+
+<p>Before the web became the standard for delivering applications to users across disparate desktops, this problem was solved with cross platform client-server tools. But these offerings were invariably proprietary, cost a substantial amount of money per developer, and had runtime license fees that kept you humble and tightly tethered to the vendor. Mozilla delivers much of the same value as these cross platform tools, but with an open source license.</p>
+
+<p>As a rapidly maturing cross platform technology, XUL could fill an interesting void for technologies such as Java J2EE and Microsoft .Net which focus on enabling network access to distributed objects. Dynamic application logic can benefit significantly from a UI presentation layer that is standards-based, scriptable, extensible, and similarly distributable over the Internet.</p>
+
+<p>XUL blurs the distinction between desktop application and Internet browser apps because it is firmly entrenched in both worlds. Some web applications will benefit from being migrated to XUL because of the enhanced UI capabilities, consistent implementation of the specification across supported platforms, and access to native resources such as shared libraries and the local file system.</p>
+
+<p>Whether you need to migrate an existing web application to the desktop, are looking for a technology that will enable you to easily port your applications to multiple platforms, or want to integrate your own cool features into the browser, XUL warrants serious consideration.</p>
+
+<h3 id="Dokumentacja" name="Dokumentacja">Dokumentacja</h3>
+
+<ol>
+ <li>Dokumentacja <a href="/pl/XUL" title="pl/XUL">XUL</a>-a na MDC włącznie z <a href="/pl/Kurs_XUL" title="pl/Kurs_XUL">kursem XUL</a> oraz <a href="/pl/Dokumentacja_XUL" title="pl/Dokumentacja_XUL">dokumentacją XUL</a></li>
+ <li><a href="/pl/Nak%C5%82adki_XUL" title="pl/Nakładki_XUL">Nakładki XUL</a></li>
+ <li>Dokumentacja <a href="/pl/XBL" title="pl/XBL">XBL</a>-a: <a href="/pl/Kurs_XUL/Wprowadzenie_do_XBL" title="pl/Kurs_XUL/Wprowadzenie_do_XBL">Wprowadzenie do XBL</a>, <a href="/pl/XBL/Dokumentacja_XBL_1.0" title="pl/XBL/Dokumentacja_XBL_1.0">Dokumentacja XBL</a></li>
+ <li>Dokumentacja <a href="/pl/XPCOM" title="pl/XPCOM">XPCOM</a></li>
+ <li>Dokumentacja <a href="/pl/XPConnect" title="pl/XPConnect">XPConnect</a> (Scriptable components). Zobacz także <a class="external" href="http://www.mozilla.org/scriptable/" rel="freelink">http://www.mozilla.org/scriptable/</a></li>
+ <li>Dokumentacja <a href="/pl/Rozszerzenia" title="pl/Rozszerzenia">rozszerzeń</a> włącznie z przykładem wprowadzającym <a href="/pl/Tworzymy_rozszerzenie" title="pl/Tworzymy_rozszerzenie">Tworzymy rozszerzenie</a></li>
+ <li><a class="external" href="http://www.mozilla.org/projects/calendar/">Strona projektu kalendarza Mozilli</a></li>
+</ol>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author: Peter Bojanic</li>
+</ul>
+</div>

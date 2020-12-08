@@ -1,0 +1,130 @@
+---
+title: Novas funcionalidades do JavaScript 1.8.5
+slug: Web/JavaScript/New_in_JavaScript/1.8.5
+tags:
+  - ECMAScript5
+  - Firefox 4
+  - JavaScript
+  - JavaScript 1.8.5
+  - Versões
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8.5
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>Segue um changelog para JavaScript 1.8.5. Esta versão foi incluída no <a href="/en-US/Firefox/Releases/4">Firefox 4</a>.</p>
+
+<h2 id="Novas_funcionalidades_do_JavaScript_1.8.5">Novas funcionalidades do JavaScript 1.8.5</h2>
+
+<h3 id="Novas_Funções">Novas Funções</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Function</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Object.create()")}}</td>
+   <td>Cria um novo o objeto de protótipo especificado e de propriedades. {{bug("492840")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.defineProperty()")}}</td>
+   <td>Adiciona a propriedade chamada descrito a um objeto.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.defineProperties()")}}</td>
+   <td>Adiciona as propriedades nomeadas described a um objeto.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}</td>
+   <td>Retorna um descriptor para uma propriedade chamada em um objeto.{{bug("505587")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.keys()")}}</td>
+   <td>Retorna um array de todas as propriedades numéricas sobre um objeto. {{bug("307791")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.getOwnPropertyNames()")}}</td>
+   <td>Retorna um array de todas as propriedades numéricas e não-numéricas sobre um objeto. {{bug("518663")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.preventExtensions()")}}</td>
+   <td>Impede todas as extensões de um objeto. {{bug("492849")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isExtensible()")}}</td>
+   <td>Verifica se o objeto é extensível. {{bug("492849")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.seal()")}}</td>
+   <td>Impede que outro código de modifique propriedades de um objeto. {{bug("492845")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isSealed()")}}</td>
+   <td>Determina que novas propriedades não podem ser adicionadas. {{bug("492845")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.freeze()")}}</td>
+   <td>Congela/trava um objeto: outro código não pode excluir ou alterar as propriedades.{{bug("492844")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isFrozen()")}}</td>
+   <td>Verifica se um objeto foi congelado/travado. {{bug("492844")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Array.isArray()")}}</td>
+   <td>Verifica se uma variável é um array. {{bug("510537")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Date.prototype.toJSON()")}}</td>
+   <td>Retorna um formato JSON para um objeto <code>Date</code>.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Function.prototype.bind()")}}</td>
+   <td>O metodos <code><strong>bind()</strong></code> cria uma nova função que, quando chamada, tem o seu próprio this palavra-chave para o valor fornecido, com uma dada sequência dos argumentos que precedem um fornecido quandoa nova função é chamada. {{bug("429507")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Novas_características_do_ECMAScript5">Novas características do ECMAScript5</h3>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/get" title="JavaScript/Reference/Operators/Special Operators/get Operator">get</a></code> e <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/set" title="JavaScript/Reference/Operators/Special Operators/set Operator">set</a></code> agora identificam se é numérico ou string.  {{bug("520696")}}</li>
+ <li>{{jsxref("Function.apply()")}} pode aceitar qualquer objeto array-like como a lista de argumentos, em vez de apenas os arrays verdadeiros.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">suporte ao modo strict</a></li>
+ <li>{{jsxref("Array.toString()")}} agora funciona mesmo em no-arrays, retornando o resultado e chama o método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" title="JavaScript/Reference/Global Objects/Array/join"><code>join()</code></a> se estiver disponível, ou o método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" title="JavaScript/Reference/Global Objects/Object/toString"><code>toString()</code></a></li>
+</ul>
+
+<h3 id="Outras_normalizações">Outras normalizações</h3>
+
+<p>Various non-standard syntaxes for defining getters and setters have been removed; ECMAScript 5 defined syntax has not been changed. These were all pretty esoteric and rarely used; if this affects you, see <a class="external" href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/" title="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">this blog post</a> for details.</p>
+
+<p>Várias sintaxes não default para a definição de getters e setters foram removidas; sintaxe definadas na ECMAScript 5 não foram alteradas. As excluídas eram raramente usadas; se isso afeta você, veja <a class="external" href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/" title="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">esta dica</a> no blog para mais detalhes.</p>
+
+<h3 id="Novos_objetos">Novos objetos</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Objeto</th>
+   <th scope="col">Descrição</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Proxy")}}</td>
+   <td>Oferece suporte para a criação de <code>Objetos</code> e <code>Funções</code> de proxies que permitem meta-programming em JavaScript.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Changed_functionality_in_JavaScript_1.8.5">Changed functionality in JavaScript 1.8.5</h2>
+
+<ul>
+ <li>ISO 8601 support in <code>Date</code>: The {{jsxref("Date")}} object's <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date/parse">parse()</a> method now supports simple ISO 8601 format date strings.</li>
+ <li>Global objects made read only: The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="JavaScript/Reference/Global Objects/NaN"><code>NaN</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="JavaScript/Reference/Global Objects/Infinity"><code>Infinity</code></a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="JavaScript/Reference/Global Objects/undefined"><code>undefined</code></a> global objects have been made read only, per the ECMAScript 5 specification.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent" title="JavaScript/Reference/Global Objects/Object/Parent"><code>obj.__parent__</code></a> and <code>obj.__count__</code> become obsolete. Some information about why: <a class="external" href="http://whereswalden.com/2010/05/07/spidermonkey-change-du-jour-the-special-__parent__-property-has-been-removed/" title="http://whereswalden.com/2010/05/07/spidermonkey-change-du-jour-the-special-__parent__-property-has-been-removed/">SpiderMonkey change du jour: the special __parent__ property has been removed</a> {{bug("551529")}} &amp; {{bug("552560")}}.</li>
+ <li>Trailing commas no longer accepted in {{jsxref("JSON.parse()")}}.</li>
+</ul>

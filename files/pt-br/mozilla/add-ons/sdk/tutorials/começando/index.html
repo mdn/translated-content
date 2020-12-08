@@ -1,0 +1,206 @@
+---
+title: Começando
+slug: Mozilla/Add-ons/SDK/Tutorials/Começando
+tags:
+  - Add-on SDK
+  - Tutorial
+translation_of: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29
+---
+<p>Este tutorial percorre a criação de um add-on simples usando o SDK.</p>
+
+<h2 id="Pré-requisitos">Pré-requisitos</h2>
+
+<p>Para criar add-ons para Firefox usando SDK, você primeiro precisará seguir as instruções para <a href="/en-US/Add-ons/SDK/Tutorials/Installation">instalar e ativar o SDK</a>. Uma vez que você fez isso, você estará olhando para um prompt de comando.</p>
+
+<h2 id="Inicializando_um_add-on_vazio">Inicializando um add-on vazio</h2>
+
+<p>No prompt de comando, crie um novo diretório. O diretório não precisa estar no diretório principal do SDK: você pode criar ele em qualquer lugar que você quiser. Navegue para ele, digite cfx init, e tecle enter:</p>
+
+<pre>mkdir my-addon
+cd my-addon
+cfx init
+</pre>
+
+<p>Você verá uma saída como esta:</p>
+
+<pre>* lib directory created
+* data directory created
+* test directory created
+* doc directory created
+* README.md written
+* package.json written
+* test/test-main.js written
+* lib/main.js written
+* doc/main.md written
+Your sample add-on is now ready for testing:
+try "cfx test" and then "cfx run". Have fun!"
+</pre>
+
+<h2 id="Implementando_o_add-on">Implementando o add-on</h2>
+
+<p>Agora você pode escrever o código do add-on, que vai no arquivo "main.js" em diretório "lib". Esse arquivo foi criado para você no passo anterior. Abra ele e adicione o seguinte código:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visite Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://www.mozilla.org/");
+}
+</pre>
+
+<p>Salve o arquivo.</p>
+
+<p>Próximo, salve estes ícones no diretório "data" de seu add-on:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="height: 16px; width: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="height: 32px; width: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="height: 64px; width: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Volte ao prompt de comando, digite:</p>
+
+<pre>cfx run
+</pre>
+
+<p>Este é o comando SDK para executar uma nova instância do Firefox com seu add-on instalado. Quando o Firefox inicia, no canto de cima do lado direito do navegador você verá um ícone com o logotipo do Firefox. Clique nele, e uma nova tab abrirá com o site <a href="https://www.mozilla.org/">https://www.mozilla.org/</a> carregado nela.</p>
+
+<p>Isso é tudo que esse add-on faz. Ele usa dois módulos SDK: o módulo <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a>, que permite a você adicionar botões ao navegador, e o módulo <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs">tabs</a>, que permite a você realizar operações básicas com <em>tabs</em>. Nesse caso, nós criamos uma botão cujo ícone é o íncone do Firefox, e adicionamos um manipulador de clique que carrega a home page da Mozilla na nova tab.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="display: block; height: 221px; margin-left: auto; margin-right: auto; width: 382px;">Tente editar esse arquivo. Por exemplo, nós poderíamos mudar a página que é carregada:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+
+<p>No promp de comando, execute novamente cfx run. Desta vez clicando levará você para <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+
+<h2 id="Empacotando_o_add-on">Empacotando o add-on</h2>
+
+<p>Quando você termina o add-on e está preparado para distribui-lo, você precisa empacotá-lo como um arquivo XPI. Esse é um formato de arquivo instalável para add-ons de Firefox.  Você pode distribuir arquivos XPI ou publicá-los em <a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a> assim outros usuários podem baixar e instalá-los.</p>
+
+<p>Para construir um XPI, apenas execute o comando cfx xpi do diretório do add-on:</p>
+
+<pre>cfx xpi
+</pre>
+
+<p>Você deve ver uma mensagem como:</p>
+
+<pre>Exporting extension to my-addon.xpi.
+</pre>
+
+<p>Para testar que funcionou, tente instalar o arquivo XPI em sua própria instalação do Firefox. Você pode fazer isso pressionando Ctrl+O (Cmd+O no Mac) de dentro do Firefox, ou selecionando o item "Abrir arquivo" do menu "Arquivo" do Firefox. Isso trará uma caixa de seleção; navegue até o arquivo "my-addon.xpi", abra-o e siga o prompt para instalar o add-on.</p>
+
+<h2 id="Resumo">Resumo</h2>
+
+<p>Neste tutorial nós construímos e empacotamos um add-on usando três comandos:</p>
+
+<ul>
+ <li><code>cfx init</code> para inicializar um modelo vazio do add-on</li>
+ <li><code>cfx run</code> para executar uma nova instância do Firefox com o add-on instalado, não nós testamos ele</li>
+ <li><code>cfx xpi</code> para empacotar o add-on dentro do arquivo XPI para distribuição</li>
+</ul>
+
+<p>Esses são os três principais comandos que você usará quando desenvolver add-ons no SDK. Há uma abrangente <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/cfx">documentação de referência</a> cobrindo todos os comandos que você pode usar e todas as opções que eles possuem.</p>
+
+<p>O próprio código do add-on usa dois módulos do SDK, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> e <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a>. Há documentação de referência para toda a API do SDK, de <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs">alto</a> e <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs">baixo nível</a>.</p>
+
+<h2 id="O_que_vem_a_seguir">O que vem a seguir?</h2>
+
+<p>Para sentir algumas das coisas que você pode fazer com a API do SDK, tente trabalhar através de alguns dos <a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">tutorials</a>.</p>
+
+<h2 id="Técnicas_avançadas">Técnicas avançadas</h2>
+
+<h3 id="Sobreescrevendo_os_módulos_embutidos">Sobreescrevendo os módulos embutidos</h3>
+
+<p>Os módulos do SDK que você usa para implementar seu add-on estão embutidas no Firefox. Quando você executa ou empacota um add-on usando <code>cfx run</code> ou <code>cfx xpi</code>, o add-on usará as versões dos módulos na versão do Firefox que hospeda elas.</p>
+
+<p>Como um desenvolvedor de add-on, isso é normalmente o que você quer. Mas se você está desenvolvendo os módulos SDK por si mesmo, claro, não será. Nesse caso assumimos que você pegou o SDK de seu <a href="https://github.com/mozilla/addon-sdk">repositório GitHub</a> e executará o script <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation">bin/activate</a> desse diretório raiz de trabalho.</p>
+
+<p>Então quando você invoca <code>cfx run</code> ou <code>cfx xpi</code>, você passa a opçao "-o":</p>
+
+<pre>cfx run -o
+</pre>
+
+<p>Isso instrui o cfx a usar a cópia local dos módulos do SDK, não aqueles existentes no Firefox.</p>
+
+<h3 id="Desenvolvendo_sem_cfx_run">Desenvolvendo sem cfx run</h3>
+
+<p>Porque <code>cfx run</code> reinicia o navegador cada vez que você invoca ele, ele pode ser um pouco pesado se você está fazendo mudanças frequentes em um add-on. Um modelo de desenvolvimento alternativo é usar o add-on <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/">Extension Auto-Installer</a>: este escuta para novos arquivos XPI em uma porta específica e instala-os automaticamente. Dessa maneira você pode testar novas mudanças sem precisar reiniciar o navegador:</p>
+
+<ul>
+ <li>faça uma mudança em seu add-on</li>
+ <li>execute cfx xpi</li>
+ <li>posta o add-on para uma porta especificada</li>
+</ul>
+
+<p>Você poderia até mesmo automatizar esse fluxo com um script simples. Por exemplo:</p>
+
+<pre>while true ; do cfx xpi ; wget --post-file=codesy.xpi http://localhost:8888/ ; sleep 5 ; done
+</pre>
+
+<p>Note que o nível de registro definido para o console é diferente quando você usa esse método, comparado com o nível de registro usado quando um add-on está executando usando <code>cfx run</code>. Isso significa que se você quiser ver a saída de mensagens do <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Logging">console.log()</a>, você terá que ajustar uma configuração. Veja a documentação no <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/console#Logging_Levels">nível de registros</a> para mais detalhes sobre isso.</p>
+
+<p>Um outro exemplo usando <a href="http://gruntjs.com/">grunt</a> e <a href="https://www.npmjs.com/package/grunt-shell">grunt-shell</a>:</p>
+
+<pre class="brush: js">module.exports = function(grunt) {
+  'use strict';
+  require('matchdep').filterDev('grunt-!(cli)').forEach(grunt.loadNpmTasks);
+  grunt.initConfig({
+    shell: {
+      xpi: {
+        command: [
+          'cd pluginpath',
+          'cfx xpi',
+          'wget --post-file=pluginname.xpi http://localhost:8888/ || echo&gt;/dev/null'
+        ].join('&amp;&amp;')
+      }
+    },
+    watch: {
+      xpi: {
+        files: ['pluginpath/**'],
+        tasks: ['shell:xpi']
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.registerTask('default', ['watch']);
+};</pre>

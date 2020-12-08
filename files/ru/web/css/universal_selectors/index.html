@@ -1,0 +1,132 @@
+---
+title: Универсальные селекторы
+slug: Web/CSS/Universal_selectors
+translation_of: Web/CSS/Universal_selectors
+---
+<p><span class="s1">{{CSSRef("Selectors")}}</span></p>
+
+<h2 id="Краткое_описание">Краткое описание</h2>
+
+<p>Звездочка (*) - универсальный селектор для CSS. Соответствует любому тегу. Убирая звездочки с простых селекторов имеет тот же эффект. Например, <em>* .warning</em> и <em>.warning</em> считаются равными.</p>
+
+<p>В CSS 3, звездочка (<code>*</code>) может использоваться в комбинации с пространством имён</p>
+
+<ul>
+ <li><code>ns|*</code> - вхождения всех элементов в пространстве имён ns</li>
+ <li><code>*|*</code> - находит все элементы</li>
+ <li><code>|*</code> - ищет все элементы без объявленного пространства имён</li>
+</ul>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="brush: css">*[lang^=en]{color:green;}
+*.warning {color:red;}
+*#maincontent {border: 1px solid blue;}
+</pre>
+
+<pre class="brush: html">&lt;p class="warning"&gt;
+  &lt;span lang="en-us"&gt;Зелёный span&lt;/span&gt; в красном параграфе.
+&lt;/p&gt;
+&lt;p id="maincontent" lang="en-gb"&gt;
+  &lt;span class="warning"&gt;Красный span&lt;/span&gt; в зеленом параграфе.
+&lt;/p&gt;</pre>
+
+<p>{{ EmbedLiveSample('Example', 250, 100) }}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS4 Selectors', '#the-universal-selector', 'universal selector') }}</td>
+   <td>{{ Spec2('CSS4 Selectors') }}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Selectors', '#universal-selector', 'universal selector') }}</td>
+   <td>{{ Spec2('CSS3 Selectors') }}</td>
+   <td>Определено поведение в отношении пространств имен и добавлена подсказка, что разрешено пренебрегать селектором для псевдо-элементов</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'selector.html#universal-selector', 'universal selector') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop("1") }}</td>
+   <td>7</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>Поддержка пространств имён</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop("1") }}</td>
+   <td>9</td>
+   <td>8</td>
+   <td>1.3</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("1") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>Поддержка пространств имён</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

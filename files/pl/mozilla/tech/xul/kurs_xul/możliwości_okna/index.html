@@ -1,0 +1,74 @@
+---
+title: Możliwości okna
+slug: Mozilla/Tech/XUL/Kurs_XUL/Możliwości_okna
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Features_of_a_Window
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Przykład_XBL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_okien_dialogowych">Następny  »</a></p>
+</div><p></p>
+
+<p>Do tej pory zobaczyliśmy niektóre możliwości okien. W tym artykule przyjrzymy się jeszcze innym.</p>
+
+<h2 id="Tworzenie_kolejnego_okna" name="Tworzenie_kolejnego_okna">Tworzenie kolejnego okna</h2>
+
+<p>Możesz stworzyć drugie okno swojej aplikacji w ten sam sposób, w jaki tworzyłeś pierwsze. Po prostu stwórz drugi plik XUL z kodem okna. Tak jak w języku HTML możesz użyć funkcji <code><a href="/pl/DOM/window.open" title="pl/DOM/window.open">window.open()</a></code> do otwarcia drugiego okna. Ta funkcja zwróci odnośnik do nowo otwartego okna. Możesz używać tego odnośnika, aby wywoływać funkcje w drugim oknie.</p>
+
+<p>Funkcja otwarcia wymaga trzech argumentów. Pierwszy to adres URL pliku, który chcesz otworzyć. Kolejny to wewnętrzna nazwa okna. Ostatni to lista wyświetlanych flag. Flaga "chrome" jest ważna, gdy chcemy otworzyć okno jako plik chrome. Jeśli nie dodasz flagi <a href="/pl/DOM/window.open#Toolbar_and_chrome_features" title="pl/DOM/window.open#Toolbar_and_chrome_features">chrome</a>, to plik otworzy się jako zawartość okna przeglądarki.</p>
+
+<p>Przykład:</p>
+
+<pre>var myWin = window.open("chrome://findfile/content/findfile.xul","findfile","chrome");
+</pre>
+
+<h2 id="Okre.C5.9Blenie_szeroko.C5.9Bci_i_wysoko.C5.9Bci" name="Okre.C5.9Blenie_szeroko.C5.9Bci_i_wysoko.C5.9Bci">Określenie szerokości i wysokości</h2>
+
+<p>Powinieneś zauważyć, że kiedy tylko elementy zostały dodane do okna, to jego szerokość zmienia się tak, żeby zmieścić wszystkie elementy. Okno to naprawdę pudełko o ruchomych ściankach i nastawione domyślnie na orientację pionową. Możesz także podać dokładne wymiary bezpośrednio w znaczniku <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>. To oczywiście sprawi, że okno zostanie wyświetlone w tym właśnie rozmiarze. Jeśli jednak nie zdefiniujesz rozmiarów, wielkość okna będzie zdeterminowana przez jego wewnętrzne elementy.</p>
+
+<pre>&lt;window
+  id="findfile-window"
+  title="Znajdź pliki"
+  width="400"
+  height="450"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>W tym przykładzie okno będzie miało 400 pikseli szerokości i 450 pikseli wysokości. Nawet, jeśli nie ma w nim wystarczająco dużo elementów, żeby wypełnić całą przestrzeń, okno nadal będzie miało takie wymiary i puste pole będzie widniało tam, gdzie brakuje elementów. Jeśli byłoby zbyt dużo elementów, okno będzie za małe, żeby pomieścić wszystkie elementy. Użytkownik będzie musiał zmienić rozmiar okna. Trzeba być uważnym, gdy definiuje się szerokość i wysokość, tak żeby okno nie było za małe albo za duże.</p>
+
+<p>Zauważ, że musisz podać zarówno szerokość i wysokość. Jeśli zdefiniujesz tylko jeden wymiar, drugi będzie automatycznie ustawiony na zerową wartość. Aby okno samo się dopasowywało do elementów, pozostaw obydwa wymiary niezdefiniowane.</p>
+
+<p>Wysokość i szerokość określają tylko początkową wielkość okna. Użytkownik może nadal zmieniać jego wymiary, jeśli oczywiście mu na to pozwolimy.</p>
+
+<h2 id="Inne_mo.C5.BCliwo.C5.9Bci_okna" name="Inne_mo.C5.BCliwo.C5.9Bci_okna">Inne możliwości okna</h2>
+
+<p>Poniższe flagi mogą być wpisywane w miejsce trzeciego argumentu funkcji window.open. Twój system operacyjny nie musi jednak wszystkich obsługiwać. Możesz także używać jakiejkolwiek z wcześniej zdefiniowanych flag, które można znaleźć w odnośnikach JavaScript. Możesz wyłączyć cechę przez przestawienie ją na "no", np. 'dialog=no'.</p>
+
+<dl>
+ <dt>alwaysLowered </dt>
+ <dd>Okno będzie zawsze pojawiało się za pozostałymi otwartymi oknami.</dd>
+ <dt>alwaysRaised </dt>
+ <dd>Okno będzie zawsze pojawiało się ponad pozostałymi otwartymi oknami.</dd>
+ <dt>centerscreen </dt>
+ <dd>Okno będzie zawsze pojawiało się w centrum ekranu.</dd>
+ <dt>dependent </dt>
+ <dd>Okno będzie zawsze połączone z oknem, z którego zostało otwarte. Jeśli ruszymy oknem pierwotnym, to nowo otwarte też się odpowiednio przesunie.</dd>
+ <dt>dialog </dt>
+ <dd>Okno dialogowe.</dd>
+ <dt>modal </dt>
+ <dd>Okno dialogowe jest modalne. Okno, z którego zostało otwarte okno modalne (dialogowe), nie może odpowiadać dopóki nie zostanie zamknięte pochodne okno dialogowe.</dd>
+ <dt>resizable </dt>
+ <dd>Użytkownik może zmieniać wymiary okna.</dd>
+</dl>
+
+<p><small>Zobacz także dokumentację <a href="/pl/DOM/window.open" title="pl/DOM/window.open">DOM window.open()</a></small></p>
+
+<p><span class="comment">'''"Odrobaczanie" (debugging) okna''' Kolejną przydatną cechą jest umożliwienie trybu debug dla danego okna. Aby tego dokonać dodaj atrybut ''debug'' do okna i ustaw go na &lt;code&gt;true&lt;/code&gt;. To sprawi, że okno będzie wyświetlało obramowania i puste pola, więc będziesz wiedział co się dzieje. Poniższy przykład ilustruje sposób użycia tej metody: &lt;window id="findfile-window" title="Znajdź pliki" debug="true" xmlns:html="<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>" xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt; Poniższy rysunek przedstawia efekt takiej komendy na przykładzie prostego okna: Grafika: XUL_rys_1.jpg *Niebieskie ramki oznaczają poziome okienka. *Czerwone ramki oznaczają pionowe okienka. Można zobaczyć, że całe okno jest również pionowym oknem. *Zygzaki pokazują elementy dopasowujące się. W tym przypadku pole puste jest rozciągliwe, więc nad nim widoczny jest zygzak. *Linie pokazują miejsca, gdzie znajdują się elementy nierozciągliwe. Na tym przykładowym rysunku są to: tekst, pole do wypełniania i przyciski. *Białe kwadraty oznaczają krawędzie elementu. Na obrazku można zauważyć kilka dodatkowych pól. Dzieje się tak, ponieważ każdy element XUL sam składa się z kilku pól, zdefiniowanych przez XBL. Zwyczajowo można je pominąć. Można zdefiniować atrybut ''debug'' dla każdego pola, a nie tylko okna.</span></p>
+
+<p>W następnym artykule zajmiemy się <a href="/pl/Kurs_XUL/Tworzenie_okien_dialogowych" title="pl/Kurs_XUL/Tworzenie_okien_dialogowych">otwieraniem podrzędnych okien dialogowych</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Przykład_XBL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Tworzenie_okien_dialogowych">Następny  »</a></p>
+</div><p></p>

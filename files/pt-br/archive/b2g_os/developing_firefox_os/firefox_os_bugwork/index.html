@@ -1,0 +1,153 @@
+---
+title: Registrando bugs do Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Firefox_OS_bugwork
+tags:
+  - Bugs
+  - Bugzilla
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+ <p><span class="seoSummary">Este artigo fornece um gua para apresentação e manipulação de bugs relacionados com o projeto Firefox OS.</span></p>
+</div>
+<h2 id="Bugzilla">Bugzilla</h2>
+<p>Assim como a maioria dos projetos na Mozilla, nós usamos o <a href="/pt-BR/docs/Mozilla/Bugzilla">Bugzilla</a> para rastrear o status de bugs e outras questões relacionadas a problemas encontrados. Você pode registrar os bugs que você encontrar no <a href="https://bugzilla.mozilla.org/">bugzilla</a> -- Nós temos um <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">projeto separado para o Firefox OS</a>, que contém componentes abrangendo o <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia">Gaia</a>, <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gonk">Gonk</a> e o <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Gecko">Gecko</a> do Firefox OS.</p>
+<div class="note">
+ <p><strong>Observação</strong>: A página da <a href="https://wiki.mozilla.org/B2G/QA">Wiki B2G QA</a> também tem alguns recursos úteis para manipular bugs no Firefox OS. As páginas mais úteis são <a href="https://wiki.mozilla.org/B2G/QA/Bugzilla">O uso do Bugzilla</a>, e <a href="https://wiki.mozilla.org/Bugmasters/Projects/FirefoxOS">Triagem de erros de entrada para o Firefox OS</a>.</p>
+</div>
+<h3 id="Registrando_bugs">Registrando bugs</h3>
+<p>Para arquivar um bug de forma eficaz, você pode seguir as instruões em <a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines">Diretrizes para o registro de Bugs</a>.</p>
+<h3 id="Campos_obrigatórios_e_opcionais">Campos obrigatórios e opcionais</h3>
+<p>Ao criar um bug, alguns campos são obrigatórios:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Campo</strong></th>
+   <th scope="col"><strong>Descrição</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Component</td>
+   <td>Escolha a categoria a qual o bug deve pertencer. Se você não tem ideia de qual categoria este problema pertence, inclua em "General".</td>
+  </tr>
+  <tr>
+   <td>Summary</td>
+   <td>Escreva um resumo para descrever brevemente o bug.</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td>Descreva a situação claramente. Um bom bug deve conter: STR (Passos para Reproduzir ou Step to reproduce - em inglês), Resultado esperado, Resultado Atual, e número de Versão. Um número de versão pode ser um commit do Gaia/Gecko ou uma identificação do Build (disponível em servidores privados de compilação ou versões públicas).</td>
+  </tr>
+ </tbody>
+</table>
+<p>Os campos a seguir são opcionais:</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Campo</strong></th>
+   <th scope="col"><strong>Descrição</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Attachment (Anexos)</td>
+   <td>Qualquer anexo pode ajudar a analisar o problema. Vídeo, imagens, testcases ou logs são bons para analisar.</td>
+  </tr>
+  <tr>
+   <td>Depends/Block</td>
+   <td>Exibe as dependencias entre bugs.</td>
+  </tr>
+  <tr>
+   <td>Keywords</td>
+   <td>Palavras chave para o bugzilla. Isso ajudará ao grupo específico rastrear bugs semelhantes.</td>
+  </tr>
+  <tr>
+   <td>Whiteboard</td>
+   <td>Contém tags.  Adicione qualquer tag para o bug para rastreá-lo. Você não deve remover outras tags de outras pessoas sem permissão.</td>
+  </tr>
+  <tr>
+   <td>See Also</td>
+   <td>As vezes, dois problemas estão relacionados e você pode especificar isto nesta área.</td>
+  </tr>
+  <tr>
+   <td>Flags</td>
+   <td>Flags para rastrear o status; A flag mais usada nos bugs do FireFox OS é a blocking-b2g. Isso significa que nós devemos dar mais atenção a ele, uma vez que ameaça a liberação do release.</td>
+  </tr>
+  <tr>
+   <td>Security</td>
+   <td>Se um bug está relacionado a segurança de dados pessoais, If a bug is related to personal data security, perda de rendimento, e outras questões desse cunho, você deve marcar este checkbox e este será visivel somente às pessoas diretamente envolvidas.</td>
+  </tr>
+ </tbody>
+</table>
+<p>Para saber mais sobre os campos do bugzilla, consulte essaa <a href="https://bugzilla.mozilla.org/page.cgi?id=fields.html">página</a>.</p>
+<h3 id="Palavras-chave_comuns">Palavras-chave comuns</h3>
+<p>A tabela a seguir fornece informações sobre as palavras-chave mais comuns utilizadas nos bugs do Firefox OS.</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Palavra-chave</strong></th>
+   <th scope="col"><strong>Descrição</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td>Indica que o bug está num status de "tracking". Mozilla usa essa  tag para rastrear múltiplos bugs ou o histórico de status de implementação. Uma vez marcado como meta, desenvolvedores não devem lançar patches (correções) desses bugs. Por favor, tenha em mente que os gerentes de projeto e as equipes de qualidade usam meta bugs para rastreamento.</td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td>Use essa palavra-chave para bugs que impedem o prosseguimento de testes (testes manuais ou automáticos de um recurso) e precisam ser corrigidos para o próximo marco Beta ou RC.</td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td>Use essa palavra-chave para bugs que necessitam de maiores informações, requerem ser reproduzidos ou de casos de testes, ou são duplicados (mas você não consegue encontrar o bug original). Requisição do trabalho da equipe de QA é registrado no whiteboard, você deve remover essa palavra-chave quando o trabalho de QA foi finalizado.</td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>
+    <p>Essa palavra-chave indica que o problema foi corrigido, mas por uma regressão e o bug em questão é um novo bug, registrado para rastrear a regressão. Também pode se referir a problemas que não os identificados nos testes <em>pre-checked </em>ou <em>smoke tests</em>, que foram encontrados em compilações correntes e que são conhecidos em versões anteriores. Rastrear esses bugs nos ajuda a identificar áreas mais frágeis propensos à ruptura e são bons candidatos para adoção de smoke tests e pré-check.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>Indica que o bug é uma regressão e é utilizado para qualquer um identificar o período no qual ocorreu. Ideal para verificações específicas.</td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td>Identifica um bug que deve ter um passo-a-passo para reproduzi-lo.</td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td>
+    <p>Significa que esse bug está pronto para ser verificado com o a última compilação B2G por alguém que não seja o representante indicado do time de QA. O bug tem o detalhamento de uma configuração específica de máquina para verificar a correção. Você pode tentar reproduzir a falha e se você concordar que a resolução do problema está correta, altere o <em>Status</em> como <em>Verified</em>.<br>
+     <br>
+     Você sempre deve indicar nos comentários o build/OS/plataforma(s) utilizados, antes de alterar o status para <em>Verified</em>. Se o bug foi reportado em todas as tres plataformas e você somente possui uma plataforma para verificar a correção, vá em frente e anote isso no bug, mas não altere o bug como <em>Verified.</em> Todas as plataformas devem ser verificadas antes de alterar o staus para <em>Verified</em>.<br>
+     <br>
+     Finalmente, se outros bugs foram marcados como duplicatas do bug que você está analisando, certifique-se de mencionar isso também. Geralmente desenvolvedores marca bugs relacionados — mas não identicos — como duplicados e esses serão revistos se não for marcado.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Qual_a_diferença_entre_status_tracking_e_bugs_da_engenharia">Qual a diferença entre status <em>tracking</em> e bugs da engenharia?</h2>
+<p>Mozilla possui um perfil especial chamado <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Developer_guide/Committing_Rules_and_Responsibilities">Sheriff</a>. Sheriffs têm a responsabilidade do <em>merge</em> de códigos e manter os status dos <em>branches</em>. Uma vez que nós temos um número limitado de Sheriffs para testes de falhas nas equipes do Firefox OS, fica difícil para eles are in charge of merging code and maintaining branch status. Since we have limited sheriffs scouting for test failures in Firefox OS teams, voltar o processo de todas as correções imperfeitas.</p>
+<p>Portanto, no Firefox OS, ao examinar se uma correção funciona ou não preferimos abrir um novo bug para lançar novas correções para consertar o novo problema. Do contrário pode trazer problemas no status de rastreamento para as equipes de QA e de gerenciamento de projetos.</p>
+<p>Assim, nós separamos os bugs em dois status: <em>tracking</em> bugs e <em>engineering</em> bugs.</p>
+<ul>
+ <li>Bugs com Status <em>tracking</em> devem ser identificados com a palavra-chave "meta". O bug pode ser reaberto se ele não cumprir os critérios de aceitação ou falhou durante os passos para reproduzir.</li>
+ <li>Um bug "<em>engineering</em>" pode ser reaberto <strong>somente</strong> se falhou nos testes automáticos ou a correção não funciona como um todo. Se um patch corrige um <em>engineering bug</em> parcialmente, você deve clonar o bug e use o campo "See also" para referenciar o bug original descrevendo o ponto de falha.</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Se também for um bug "story bug", o gerente de projeto deve regsitrar o campo user story com o histórico e o critério de aceitação.</p>
+</div>
+<h3 id="Como_eu_recupero_se_acidentalmente_lançar_uma_correçaão_no_bug_com_status_tracking">Como eu recupero se acidentalmente lançar uma correçaão no bug com status <em>tracking</em>?</h3>
+<p>Não entre em pânico! Se você acidentalmente lançou uma correção, tem um review+, lançou no tunk ou tem reportado como nada corrigido, a seguir o que você precisa fazer:</p>
+<ol>
+ <li>Pressione "Clone this bug" no canto inferior direito da tela para criar um novo bug, clonando a maioria dos campos originais. Verifique os os campos: witheboard, keyword e STR/User Story foram copiados para o novo bug.</li>
+ <li>Marque o novo bug como bloqueado pelo bug anterior. O novo bug terá o novo status <em>tracking bug</em>.</li>
+ <li>Use a flag <em>needinfo</em> para alertar o gerente de projeto. Você pode pode <a href="https://wiki.mozilla.org/FirefoxOS/Teams">encontrar os endereços de e-mail dos gerentes de projeto do Firefox OS </a>na nossa Wiki.</li>
+ <li>Crie um novo <em>engineer bug</em> para descrever o passo com a falha ou o critério de aceitação. Também use o novo bug para bloquear o status <em>tracking bug</em>.</li>
+ <li>Tente consertar o novo bug.</li>
+</ol>
+<h2 id="Promovendo_correções_para_branches_antigos">Promovendo correções para branches antigos</h2>
+<p>Você pode encontrar versões diferentes de tags nos bugs. Se você deseja promover correções para branches antigos do Firefox OS, certifique-se que preencham as regras para lançamento de uma correção. Maiores detalhes nessa <a href="https://wiki.mozilla.org/Release_Management/B2G_Landing">página</a>.</p>

@@ -1,0 +1,37 @@
+---
+title: Modificando o arquivo hosts
+slug: Archive/B2G_OS/modifying_hosts_file
+tags:
+  - Android
+  - B2G
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+---
+<p>Em alguns momentos é necessário editar o arquivo hosts em sua maquina, por causa de um ataque, para bloquear conexões indesejadas, para redirecionar requisições para IPs especificos, entre outros. Esse artigo explica como modificar o arquivo hosts do seu telefone Firefox OS. O arquivo está localizado dentro do diretório <code>/system/etc</code> no Linux, e simplesmente <code>etc/</code> nas novas versões do Mac OSX.</p>
+<h2 id="Preparando_seu_telefone">Preparando seu telefone</h2>
+<p>No aparelho, vá para <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Debugging/Developer_settings#Painel_do_Desenvolvedor">Painel de configurações de desenvolvedor</a> e marque:</p>
+<ul>
+ <li>"Depuração Remota" (No Firefox OS 1.4 ou posterior, selecione "ADB e Devtools")</li>
+ <li>"Console Habilitado"</li>
+</ul>
+<p>Conecte seu celular no computador.</p>
+<p>A partir desse ponto os passos para modificar o arquivo hosts são os mesmos usados para o Android. Os desenvolvedores Android irão facilmente realizar a configuração.</p>
+<h2 id="Passos_no_terminal">Passos no terminal</h2>
+<p>Abra a janela do terminal.</p>
+<ol>
+ <li>Remonte a partição <code>/system</code> do dispositivo para obter as permissões de leitura / escrita<br>
+  <code>adb remount</code></li>
+ <li>Pegue o arquivo hosts no seu computador<br>
+  <code>adb pull /system/etc/hosts /tmp</code></li>
+ <li>Modifique o arquivo hosts em <code>/tmp/hosts</code> conforme a necessidade e salve o arquivo, por exemplo:<br>
+  <pre>127.0.0.1         localhost
+ip.to.re.direct   hostName</pre>
+ </li>
+ <li>Envie o arquivo hosts modificado para o dispositivo<br>
+  <code>adb push /tmp/hosts /system/etc/hosts</code></li>
+</ol>
+<p>Pronto!</p>
+<div class="note">
+ <p><strong>Nota</strong>: Quer aprender mais sobre ADB? Consulte a <a href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">Documentação ADB</a>.</p>
+</div>
+<h3 id="sect1"> </h3>

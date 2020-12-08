@@ -1,0 +1,198 @@
+---
+title: XForms Accessibility
+slug: Web/Accessibility/XForms
+tags:
+  - Accessibility
+  - NeedsTranslation
+  - Obsolete
+  - TopicStub
+  - XForms
+translation_of: Mozilla/Tech/Accessibility/XForms
+---
+<p> </p>
+
+<h2 id="Intoduction" name="Intoduction">Intoduction</h2>
+
+<p><span class="seoSummary">This article provides a quick guide to how accessibility is handled in Gecko for XForms.</span>. Assistive technologies API for XForms is supported starting from Firefox 3 (Gecko 1.9). Implementation of accessible objects for XForms elements is based on top of the existing object hierarchy introduced in the Mozilla accessibility module. XForms elements behavior is implemented in accordance with <a class="external" href="http://www.mozilla.org/access/toolkit-checklist">accessible toolkit checklist</a>.</p>
+
+<p>In general, when elements are similar to HTML elements, they are exposed to MSAA/ATK in a similar way.</p>
+
+<h2 id="Get_Build" name="Get_Build">Get Build</h2>
+
+<p>Subsections below explain how you can obtain accessible XForms-enabled build. These are either downloading latest build of firefox or building it yourself.</p>
+
+<h3 id="Downloading_Builds" name="Downloading_Builds">Downloading Builds</h3>
+
+<div class="note">Notion: XForms is no longer distributed with Firefox build. You must build it yourself. See section below.</div>
+
+<p>For Firefox, you may directly download the nighly "trunk" build of Firefox and install the XForms extension which lives in 'xpi' directory of the build. Note, XForms accessibility is implemented only on trunk. Trunk builds are not considered stable and should not be installed on top of the Firefox used for daily browsing. Currently we have verified that XForms accessibility is working on the Windows platform, and Linux testing has not yet been done, although everything should work and is ready to be tested. You will find trunk builds of Firefox at <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">ftp.mozilla.org</a>, trunk builds of XForms extension (Windows) at <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/windows-xpi/">ftp.mozilla.org</a> or trunk builds of XForms extension (Linux) <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/linux-xpi/">ftp.mozilla.org</a>.</p>
+
+<h3 id="Build_It_Yourself" name="Build_It_Yourself">Build It Yourself</h3>
+
+<p>If you would like to build firefox/seamonkey yourself then please ensure your .mozconfig file has the following option:</p>
+
+<ul>
+ <li>ac_add_options --enable-extensions=default,xforms,schema-validation</li>
+</ul>
+
+<h2 id="How_To_Test" name="How_To_Test">How To Test</h2>
+
+<p>There are two approaches to test XForms accessibility. The first is to use and assistive technology such as a screen reader, or an accessibility testing tool, to make sure XForms elements have proper accessible objects. Or you may be guided by <a class="external" href="http://www.mozilla.org/access/toolkit-checklist">toolkit checklist</a> to check keyboard navigation for XForms controls.</p>
+
+<p>You can try the following link to test XForms accessibility:</p>
+
+<ul>
+ <li>visual XForms elements in XHTML document at <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=251493">bugzilla.mozilla.org</a></li>
+ <li>visual XForms elements in XUL document at <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=251497">bugzilla.mozilla.org</a></li>
+ <li>you can see XForms sample tests at <a class="external" href="http://www.mozilla.org/projects/xforms/samples.html">Mozilla XForms project</a></li>
+ <li>there are set of tests at <a class="external" href="http://beaufour.dk/xftst/">beaufour.dk</a></li>
+ <li>W3C's XForms test at <a class="external" href="http://www.w3.org/MarkUp/Forms/Test/XForms1.0/Edition2/front_html/XF102edTestSuite.html">w3.org</a></li>
+</ul>
+
+<h2 id="Keyboard_Navigation_Issues" name="Keyboard_Navigation_Issues">Keyboard Navigation Issues</h2>
+
+<h3 id="Navigation_Sequence" name="Navigation_Sequence">Navigation Sequence</h3>
+
+<p>Though XForms spec declares <code>navindex</code> attribute to define the navigation sequence (see <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#attrs-ui-common">1.0 specs</a> or <a class="external" href="http://www.w3.org/TR/xforms11/#attrs-ui-common">1.1 specs</a>) but Rich Schwerdtfeger (<small>Distinguished Engineer, SWG Accessibility Architect/Strategist Chair, IBM Accessibility Architecture Review Board</small>) gave some clarification about <code>navindex</code>. He wrote:</p>
+
+<blockquote>Navindex was in XForms - it was stripped out as it was believed the focus model was dependent on the content which used it. So, yes we don't care about navindex in XForms. If you use xhtml1.x use tabindex. If you use Xhtml2 use nextfocus.</blockquote>
+
+<p>Therefore since Mozilla XForms works in XHTML (1.x) or XUL documents only then we use <code>tabindex</code> instead. Note, we support <code>-moz-user-focus</code> style neither for XHTML or XUL.</p>
+
+<h2 id="AT_API" name="AT_API">AT API</h2>
+
+<h3 id="Accessible_properties" name="Accessible_properties">Accessible properties</h3>
+
+<p>This section describes common rules how accessibility properties are formed for forms control elements.</p>
+
+<h4 id="name" name="name">name</h4>
+
+<p>It is formed from value of child XForms <code>label</code> element if the element doesn't have <code>labelledby</code> attribute.</p>
+
+<h4 id="description" name="description">description</h4>
+
+<p>It is formed from value of child XForms <code>hint</code> element if the element doesn't have <code>describedby</code> attribute.</p>
+
+<h4 id="state" name="state">state</h4>
+
+<p>It is formed as well from model item properties (MIPs) of instance node that XForms element is bound to as from valid/invalid or in-range/out-of-range states of instance node. Instance node states are mapped to accessibility state constants declared in <code>nsIAccessibleStates</code> interface like it shown below:</p>
+
+<ul>
+ <li>relevant - <a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/States#STATE_UNAVAILABLE">STATE_UNAVAILABLE</a></li>
+ <li>readonly - <a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/States#STATE_READONLY">STATE_READONLY</a></li>
+ <li>required - <a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/States#STATE_REQUIRED">STATE_REQUIRED</a></li>
+ <li>invalid - <a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/States#STATE_INVALID">STATE_INVALID</a></li>
+ <li>out of range - <a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/States#STATE_INVALID">STATE_INVALID</a></li>
+</ul>
+
+<h4 id="attributes" name="attributes">attributes</h4>
+
+<p>Redefines <code><a class="external" href="http://www.w3.org/TR/aria-state/#datatype">datatype</a></code> ARIA attribute. Its value is XML Schema <a class="external" href="http://www.w3.org/TR/xmlschema-2/#built-in-datatypes">builit-in datatype</a> of instance node that XForms element is bound to.</p>
+
+<h4 id="children" name="children">children</h4>
+
+<p>Mozilla XForms implementation allows form control elements to have child elements. Therefore accessible children are formed from any accessible child elements of form control element and from elements that are introduced by its presentation.</p>
+
+<h3 id="Forms_Controls_Module" name="Forms_Controls_Module">Forms Controls Module</h3>
+
+<p>Some of form control elements may be represented in few ways by different widgets. This section lists accessible presentations for form control elements.</p>
+
+<h4 id="input" name="input">input</h4>
+
+<p>A key xforms element to show and change the instance data to which it is bound (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-input">spec</a>, the <a href="en/XForms/User_Interface_Elements/Input">docs</a>). The follwoing representations <code>input</code> element are accessible:</p>
+
+<ul>
+ <li><a href="en/Accessibility/XForms/TextField#text_field">text field</a> - see the <a href="en/XForms/User_Interface_Elements/Input">docs</a>.</li>
+ <li><a href="en/Accessibility/XForms/Checkbox#checkbox">checkbox</a> - see the <a href="en/XForms/User_Interface_Elements/Input">docs</a></li>
+ <li><a href="en/Accessibility/XForms/Datepicker#datepicker">datepicker</a> - see the <a href="en/XForms/User_Interface_Elements/Input">docs</a>.</li>
+ <li><a href="en/Accessibility/XForms/Calendar#calendar">calendar</a> - see the <a href="en/XForms/User_Interface_Elements/Input">docs</a>.</li>
+ <li><a href="en/Accessibility/XForms/DaysList#days_list_docs">days list</a> - see the <a href="en/XForms/User_Interface_Elements/Input">docs</a>.</li>
+ <li><a href="en/Accessibility/XForms/MonthsList#months_list">months list</a> - see the <a href="en/XForms/User_Interface_Elements/Input">docs</a>.</li>
+</ul>
+
+<h4 id="secret" name="secret">secret</h4>
+
+<p>Used for inputting passwords (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-secret">spec</a>, the <a href="en/XForms/User_Interface_Elements/Secret">docs</a>). This element is represented by <a href="en/Accessibility/XForms/PasswordField">password field</a>.</p>
+
+<h4 id="textarea" name="textarea">textarea</h4>
+
+<p>Serves to show/change multiline text (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-textarea">spec</a>, the <a href="en/XForms/User_Interface_Elements/Textarea">docs</a>). This element is represented by multiline <a href="en/Accessibility/XForms/TextField">text field</a>.</p>
+
+<h4 id="output" name="output">output</h4>
+
+<p>Serves to show instance data that the element is bound to (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-output">spec</a>, the <a href="en/XForms/User_Interface_Elements/Output">docs</a>). It can have the following presentations:</p>
+
+<ul>
+ <li><a href="en/Accessibility/XForms/Text">text</a> - see the <a href="en/XForms/User_Interface_Elements/Output#text">docs</a>.</li>
+ <li><a href="en/Accessibility/XForms/Calendar">calendar</a> - see the <a href="en/XForms/User_Interface_Elements/Output#calendar">docs</a>.</li>
+</ul>
+
+<h4 id="upload" name="upload">upload</h4>
+
+<p>Provides a means for the user to select a file (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-upload">spec</a>, the <a href="en/XForms/User_Interface_Elements/Upload">docs</a>). This element is represented by <a href="en/Accessibility/XForms/Upload">upload</a>.</p>
+
+<h4 id="range" name="range">range</h4>
+
+<p>Allows the user to choose a value from within a specific range of values (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-range">spec</a>, the <a href="en/XForms/User_Interface_Elements/Range">docs</a>). Currently it is represented by a <a href="en/Accessibility/XForms/Slider">slider</a> only.</p>
+
+<h4 id="trigger" name="trigger">trigger</h4>
+
+<p>Allows the user to initiate actions (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-trigger">spec</a>, the <a href="en/XForms/User_Interface_Elements/Trigger">docs</a>). This element is represented by <a href="en/Accessibility/XForms/Button">button</a>.</p>
+
+<h4 id="submit" name="submit">submit</h4>
+
+<p>Invokes the submission of the selected instance data to its target destination (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-submit">spec</a>, the <a href="en/XForms/User_Interface_Elements/Submit">docs</a>). This element is represented by <a href="en/Accessibility/XForms/Button">button</a>.</p>
+
+<h4 id="select" name="select">select</h4>
+
+<p>Allows the user to choose one or multiple values from a list of pre-defined values (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-selectMany">spec</a>, the <a href="en/XForms/User_Interface_Elements/Select">docs</a>). It can have the following representations:</p>
+
+<ul>
+ <li><a href="en/Accessibility/XForms/Listbox">listbox</a></li>
+ <li><a href="en/Accessibility/XForms/Checkgroup">checkboxes group</a></li>
+</ul>
+
+<h4 id="select1" name="select1">select1</h4>
+
+<p>Allows the user to choose a single value from a list of pre-defined values (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-label">spec</a>, the <a href="en/XForms/User_Interface_Elements/Select1">docs</a>). It can have the following representations:</p>
+
+<ul>
+ <li><a href="en/Accessibility/XForms/Combobox">combobox</a></li>
+ <li><a href="en/Accessibility/XForms/Listbox">listbox</a></li>
+ <li><a href="en/Accessibility/XForms/Radiogroup">radio group</a></li>
+</ul>
+
+<h3 id="Additional_Elements" name="Additional_Elements">Additional Elements</h3>
+
+<p>These elements may be used as child elements to the form controls described above. Some of these elements are not accessible itself but they makes accessibility properties for XForms elements that hold them.</p>
+
+<h4 id="label" name="label">label</h4>
+
+<p>Specifies the label for the xforms control (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-selectMany">spec</a>, the <a href="en/XForms/User_Interface_Elements/Label">docs</a>). Every form control other than the <code>output</code> element must contain a <code>label</code> element. The value of <code>label</code> element is used as name of accessible object.</p>
+
+<h4 id="help" name="help">help</h4>
+
+<p>Specifies contextual help for the containing form control (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-help">spec</a>, the <a href="en/XForms/User_Interface_Elements/Help">docs</a>). The <code>help</code> element has <code><a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ALERT">ROLE_ALERT</a></code> role.</p>
+
+<h4 id="hint" name="hint">hint</h4>
+
+<p>Similar to a tooltip (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">spec</a>, the <a href="en/XForms/User_Interface_Elements/Hint">docs</a>). The value of <code>hint</code> element is used as description of accessible object.</p>
+
+<h4 id="alert" name="alert">alert</h4>
+
+<p>This message will be shown when the form control cannot properly bind to instance data or when the instance data value is invalid or out of the specified range of selectable values (see the <a class="external" href="http://www.w3.org/TR/xforms/slice8.html#ui-common-elements-alert">spec</a>, the <a href="en/XForms/User_Interface_Elements/Alert">docs</a>). The <code>alert</code> element has <code><a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ALERT">ROLE_ALERT</a></code> role for both usual and inline <code>alert</code> elements.</p>
+
+<h4 id="message" name="message">message</h4>
+
+<p>Used in combination with event listeners to display a message to the user when the specified event occurs (see the <a class="external" href="http://www.w3.org/TR/xforms/slice10.html#action-info">spec</a>, the <a href="en/XForms/User_Interface_Elements/Message">docs</a>). The <code>message</code> element has <code><a href="/pt-BR/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ALERT">ROLE_ALERT</a></code> role.</p>
+
+<h2 id="Resources" name="Resources">Resources</h2>
+
+<p>Below you will find a list of XForms/Accessiblity resources:</p>
+
+<ul>
+ <li>Mozilla accessibility project at <a class="external" href="http://www.mozilla.org/access/">mozilla.org</a></li>
+ <li>XForms specification at <a class="external" href="http://www.w3.org/TR/xforms/">w3.org</a></li>
+ <li>Mozilla XForms project at <a class="external" href="http://www.mozilla.org/projects/xforms/">mozilla.org</a></li>
+ <li>UI XForms elements references at <a href="en/XForms/User_Interface_Elements">this site</a></li>
+</ul>

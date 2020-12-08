@@ -1,0 +1,179 @@
+---
+title: Pudełko kart
+slug: Mozilla/Tech/XUL/Kurs_XUL/Pudełko_kart
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tabboxes
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_stosu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Siatki">Następny  »</a></p>
+</div><p></p>
+
+<p>W oknie właściwości często występują strony z kartami. W tym artykule dowiemy się, jak je zrobić.</p>
+
+<h2 id="Pude.C5.82ko_kart" name="Pude.C5.82ko_kart">Pudełko kart</h2>
+
+<p>Pudełka kart zazwyczaj stosujemy w aplikacjach i w oknach właściwości. Seria kart dostępna jest u góry okna i umieszczona wzdłuż niego. Użytkownik może kliknąć każdą z tych kart i zobaczyć ustawienia różnych opcji. Jest to bardzo użyteczne rozwiązanie w przypadku, gdy mamy więcej opcji niż miejsca w jednym oknie.</p>
+
+<p>XUL dostarcza metod do utworzenia takiego okna dialogowego. Można przy tym użyć pięć nowych elementów, z których każdy jest omówiony pokrótce poniżej:</p>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></dt>
+ <dd>Pudełko zewnętrzne, które zawiera karty przez całą swoją górę i osobne strony kart.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></dt>
+ <dd>Pudełko wewnętrzne, które stanowi pojedynczą kartę. Innymi słowami, jest to wiersz kart.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></dt>
+ <dd>Określona karta. Kliknij w kartę, aby pojawiła się ona jako pierwsza strona.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></dt>
+ <dd>Kontener dla strony.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></dt>
+ <dd>Ciało pierwszej strony. Za pomocą tego elementu możemy umieścić zawartość dla strony karty. Pierwszy tabpanel zostanie przypisany do pierwszej karty, drugi do drugiej i tak dalej z pozostałymi przypisaniami.</dd>
+</dl>
+
+<p><code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> jest zewnętrznym elementem. Składa się z dwóch potomków, elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code>, który określa wiersz kart oraz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code>, który składa się ze stron karty.</p>
+
+<p>Poniżej pokazana została ogólna składnia pudełka kart:</p>
+
+<pre>&lt;tabbox id="tablist"&gt;
+  &lt;tabs&gt;
+    &lt;!-- elementy tab będą tu --&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;!-- elementy tabpanel będą tu --&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+
+<p>Elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code> są umieszczone wewnątrz elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code>, które są bardziej jak regularne pudełka. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> sam został umieszczony w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code>. Element <code>tabbox</code> także składa się z elementu <code>tabpanels</code>, który będzie dostępny poniżej karty stosowanej do orientacji poziomej wokół pudełka kart.</p>
+
+<p><span class="comment">element which will appear below the tabs due to the vertical orientation on the whole tabbox. [hmm troche to dziwne, musze spr. to (ptaszor)]</span></p>
+
+<p>Naprawdę to tu nic specjalnego nie ma o elementach karty, które by tworzyły inne elementy poza pudełkami kart. Tak jak pudełka, karty także składają się z jakiś elementów. Różnica jest taka, że karty renderują nieco inaczej swoją treść i tylko jeden panel treści karty/kart jest widoczny w danym momencie, coś jak <code><code><a href="/pl/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code>.</p>
+
+<p>Treść pojedynczej strony karty powinna być wewnątrz każdego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code>. Nie powinna zostać umieszczona w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code>, gdyż znajdowałby się tam, gdzie treść karty jest wyświetlana wzdłuż góry.</p>
+
+<p>Każdy element <code>tabpanels</code> staje się stroną wyświetloną na pudełku karty. Pierwszy panel powiązany jest z pierwszą kartą, drugi z drugą kartą i tak dalej. Jest to związek jeden-na-jeden pomiędzy elementem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code> i elementem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code>.</p>
+
+<p>Kiedy decydujemy o rozmiarze <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code>, to zastosowany zostanie największy możliwy rozmiar. Znaczy to tyle, że, jeśli będzie dziesięć pól tekstowych na jednej karcie i tylko jedno na kolejnej, strona będzie dopasowana rozmiarem do jednej z dziesięciu na niej występujących. Obszar wzięty przez obszar nowej karty nie zmieni się, kiedy użytkownik stworzy nową stronę karty.</p>
+
+<p>Spójrz na poniższy przykład:</p>
+
+<h3 id="Przyk.C5.82ad_tabbox" name="Przyk.C5.82ad_tabbox">Przykład <code>tabbox</code></h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabpanel_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabpanel_1.xul">Podgląd</a></p>
+
+<div class="float-right"><img alt="grafika:tabpanel1.png"></div>
+
+<pre>&lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="Poczta"/&gt;
+    &lt;tab label="Nowości"/&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel id="mailtab"&gt;
+      &lt;checkbox label="Automatycznie sprawdź pocztę"/&gt;
+    &lt;/tabpanel&gt;
+    &lt;tabpanel id="newstab"&gt;
+      &lt;button label="Wyczyść bufor nowości"/&gt;
+    &lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+
+<p><br>
+ Tutaj zostały dodane dwie karty, pierwsza z etykietą &lt;tt&gt;Poczta&lt;/tt&gt; oraz druga z etykietą &lt;tt&gt;Nowości&lt;/tt&gt;. Kiedy użytkownik kliknie kartę 'Poczta', to zostanie wyświetlona zawartość pierwszej karty. W tym przypadku strona będzie dostępna z etykietą pola wyboru &lt;tt&gt;Automatycznie sprawdź pocztę&lt;/tt&gt;. Kiedy klikniemy w drugą kartę, strona będzie zawierała przycisk z etykietą &lt;tt&gt;Wyczyść bufor nowości&lt;/tt&gt;.</p>
+
+<p>Obecnie zaznaczony element <code>tab</code> posiada dodatkowy atrybut <code>selected</code>, który jest ustawiony na wartość <code>true</code>. Ta przeróbka wyglądu aktualnie zaznaczonej karty tworzy ją jakby była zaznaczona. W jednym momencie tylko jedna karta może posiadać wartość <code>true</code> tego atrybutu.</p>
+
+<h3 id="Rozmieszczenie_kart" name="Rozmieszczenie_kart">Rozmieszczenie kart</h3>
+
+<p>Kończąc, możemy zmienić pozycję kart, więc będzie dostępne na jakiejkolwiek stronie karty. Nie ma jakiejś specjalnej składni do zrobienia tego. Możemy w prosty sposób ustawić atrybuty <code>orient</code> oraz <code>dir</code> jako atrybuty wymagane. Pamiętaj, że elementy kart są bardzo regularnymi polami w obszarze graficznym strony. Oprócz tego element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> jest bardzo podobny do regularnych kontenerów pola z domyślną pionową orientacją, gdzie element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> jest bardzo podobny do kontenerów pola z domyślną orientacją w poziomie.</p>
+
+<p>Na przykład, umieść karty wzdłuż lewej strony, zmień orientację elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> na pionową, aby utworzyć karty dostępne na poziomym stosie. Następnie uporządkuj <code>tabbox</code>, więc niech posiada orientację poziomą. Utworzona zostanie karta dostępna z lewej strony karty (nie powyżej). Zwróć uwagę, że ta zmiana orientacji elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> nie będzie miała żadnego efektu do momentu, aż strony kart są ułożone jedna na drugiej.</p>
+
+<p>Możemy wstawić karty po prawej lub u dołu strony poprzez przeniesienie elementu <code>tabs</code> za element <code>tabpanels</code> w twoim kodzie. Po kolei możemy ustawiać atrybut <code>dir</code> na atrybut <code>reverse</code> w <code>tabbox</code>. Jednakże powinieneś prawdopodobnie zostawić kartę na górze, w innym przypadku może nie wyglądać za dobrze w określonym motywie.</p>
+
+<div class="highlight">
+<h2 id="Dodawanie_karty_do_okna_Znajd.C5.BA_pliki" name="Dodawanie_karty_do_okna_Znajd.C5.BA_pliki">Dodawanie karty do okna &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h2>
+
+<p>Dodajmy drugą kartę do okna dialogowego &lt;tt&gt;Znajdź pliki&lt;/tt&gt;. Utworzymy kartę &lt;tt&gt;Opcje&lt;/tt&gt; (oraz zaznaczymy ją jako domyślną do wyświetlenia), która będzie składać się z kilku opcji służących do szukania. Może to nie jest najlepszy interfejs, aby to wykonać, ale użyjemy go, aby zademonstrować karty. Etykieta na górze karty i pudełko kryteriów szukania będzie nam potrzebne do zrobienia pierwszej karty. Dodajmy także kilka opcji do kolejnej karty. Pasek postępu i przyciski zostały w oknie głównym, na zewnątrz kart.</p>
+
+<pre class="eval">&lt;vbox flex="1"&gt;
+
+<span class="highlightred">&lt;tabbox selectedIndex="1"&gt;
+  &lt;tabs&gt;
+    &lt;tab label="Szukaj"/&gt;
+    &lt;tab label="Opcje"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+   &lt;tabpanel id="searchpanel" orient="vertical"&gt;</span>
+
+    &lt;description&gt;
+      Wpisz poniżej swoje kryteria szukania i naciśnij przycisk Znajdź,
+      aby rozpocząć szukanie.
+    &lt;/description&gt;
+
+    &lt;spacer style="height: 10px"/&gt;
+
+    &lt;groupbox orient="horizontal"&gt;
+      <span class="nowiki">&lt;caption label="Kryteria szukania"/&gt;</span>
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Nazwa"/&gt;
+          &lt;menuitem label="Rozmiar"/&gt;
+          &lt;menuitem label="Data modyfikacji"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      &lt;spacer style="width: 10px;"/&gt;
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Jest"/&gt;
+          &lt;menuitem label="Nie jest"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      &lt;spacer style="height: 10px"/&gt;
+      &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+
+    &lt;/groupbox&gt;
+   <span class="highlightred">&lt;/tabpanel&gt;
+
+   &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+    &lt;checkbox id="casecheck" label="Wyszukuj szczegółowo"/&gt;
+    &lt;checkbox id="wordscheck" label="Dopasuj całą nazwę"/&gt;
+   &lt;/tabpanel&gt;
+
+ &lt;/tabpanels&gt;
+&lt;/tabbox&gt;</span>
+</pre>
+
+<div class="float-right"><img alt="grafika:tabpanel2.png"></div>
+
+<p>Elementy karty są umieszczone wokół głównej treści okna. Możemy zobaczyć dwie karty &lt;tt&gt;Szukaj&lt;/tt&gt; oraz &lt;tt&gt;Opcje&lt;/tt&gt;. Kliknięcie na którejś wywoła pokazanie się jednej ze stron wspomnianych kart. Pierwsza karta wygląda lepiej niż wyglądała wcześniej, poza kartami wzdłuż góry.</p>
+
+<h3 id="Przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Przyk.C5.82ad:_Znajd.C5.BA_pliki">Przykład: &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-tabpanel.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-tabpanel.xul">Podgląd</a></p>
+</div>
+
+<p>Następnie, zobaczymy jak się <a href="pl/Kurs_XUL/Siatki">tworzy zawartość siatki</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_stosu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Siatki">Następny  »</a></p>
+</div><p></p>

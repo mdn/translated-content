@@ -1,0 +1,303 @@
+---
+title: Janelas
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/windows
+tags:
+  - Add-on SDK
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/windows
+---
+<div class="note">
+<p>Stable</p>
+</div>
+
+<p><span class="seoSummary">Enumera e examina janelas do navegador abertas, abre novas janelas, e escuta por eventos de janela.</span></p>
+
+<h2 id="Uso">Uso</h2>
+
+<p>O módulo <code>windows</code> fornece funções básicas para trabalhar janelas de navegador. Com este módulo, você pode:</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#open(options)">enumerar as janeals abertas atualmente</a></li>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#open(options)">abrir novas janelas do navegador</a></li>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#Events">criar escutas para eventos comuns de janela tais como open e close</a></li>
+</ul>
+
+<h3 id="Janelas_Privadas">Janelas Privadas</h3>
+
+<p>Se seu add-on não optou pela navegação privada, então você não verá qualquer janela de navegação privada. Janelas de navegação privada não aparecerão na propriedade <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#browserWindows"><code>browserWindows</code></a>, você não receberá qualquer evento de janela, e você não será capaz de abrir janelas privadas.</p>
+
+<p>Para aprender mais sobre navegação privada, como optar pela navegação privada, e como suportar navegação privada dirija-se à <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">documentação para o módulo <code>private-browsing</code></a>.</p>
+
+<h3 id="Converção_para_as_Janelas_Chrome">Converção para as Janelas Chrome</h3>
+
+<p>Para converter do objeto <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow"><code>BrowserWindow</code></a> usando nesta API para o objeto chrome <a href="/en-US/docs/Web/API/Window"><code>window</code></a> usado na API <a href="/en-US/Add-ons/SDK/Low-Level_APIs/window_utils"><code>window/utils</code></a>, use a função <code>viewFor()</code> expotada pelo módulo <code>viewFor()</code>.</p>
+
+<p>Para converter de vola, de uma janela chrome para um objeto <code>BrowserWindow</code>, use a função  <code>modelFor()</code>, exportada pelo módulo <code>modelFor</code>.</p>
+
+<p>Aqui está um exemplo convertendo do alto nível <code>BrowserWindow</code> para uma janela chrome, e então voltando para o outro modo:</p>
+
+<pre class="brush: js">var { modelFor } = require("sdk/model/core");
+var { viewFor } = require("sdk/view/core");
+
+var browserWindows = require("sdk/windows").browserWindows;
+
+function convertToChromeAndBack(browserWindow) {
+  // get the chrome window for this BrowserWindow
+  var chromeWindow = viewFor(browserWindow);
+  // now we can use the chrome window API
+  console.log(chromeWindow.document.location.href);
+  // -&gt; "chrome://browser/content/browser.xul"
+
+  // convert back to the high-level window
+  var highLevelWindow = modelFor(chromeWindow);
+  // now we can use the SDK's high-level window API
+  console.log(highLevelWindow.title);
+}
+
+browserWindows.on("open", convertToChromeAndBack);</pre>
+
+<p>Note que acessar diretamente os objetos chrome de baixo nível significa que você não está protegido pelas garantias de compatibilidade das APIs de alto nível do SDK. Em particular, dependendo de o que você faz com estes objetos, seu código não deve trabalhar com <a href="http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/">multiprocess Firefox</a>.</p>
+
+<h2 id="Globais">Globais</h2>
+
+<h3 id="Funções">Funções</h3>
+
+<h4 class="addon-sdk-api-name" id="open(options)"><code>open(options)</code></h4>
+
+<p>Abre uma nova janela.</p>
+
+<pre class="brush: js">var windows = require("sdk/windows").browserWindows;
+
+// Open a new window.
+windows.open("http://www.example.com");
+
+// Open a new window and set a listener for "open" event.
+windows.open({
+  url: "http://www.example.com",
+  onOpen: function(window) {
+    // do stuff like listen for content
+    // loading.
+  }
+});</pre>
+
+<p>Retorna a janela que foi aberta:</p>
+
+<pre class="brush: js">var windows = require("sdk/windows").browserWindows;
+var example = windows.open("http://www.example.com");
+
+require("sdk/ui/button/action").ActionButton({
+  id: "read",
+  label: "Read",
+  icon: "./read.png",
+  onClick: function() {
+    example.close();
+  }
+});
+</pre>
+
+<div class="note">
+<p>Este exemplo usa a API <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a>, que está disponível somente do Firefox 29 em frente.</p>
+</div>
+
+<h5 id="Parâmetros">Parâmetros</h5>
+
+<p><strong>options : object</strong><br>
+ Opções requeridas:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>url</td>
+   <td>string</td>
+   <td>
+    <p>String com a URL a ser aberta na nova janela. É uma propriedade necessária.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>isPrivate</td>
+   <td>boolean</td>
+   <td>
+    <p>Boleano que determinará se a nova janela seria privada ou não. Se seus add-ons não suportam navegação privada isto não terá efeito. Veja a documentação sobre <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">private-browsing</a> para mais informação.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Opções opcionais:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>onOpen</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de retorno que é chamada quando a janela está aberta. Isto não significa que o conteúdo da URL foi carregado, somente que a janela por si está inteiramente funcional e suas propriedades podem ser acessadas. Isto é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onClose</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de retorno que é chamada quando a janela será chamada. Isto é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onActivate</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de retorno que é chamada quando a janela está ativa. Isto é uma propriedade opcional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onDeactivate</td>
+   <td>function</td>
+   <td>
+    <p>Uma função de retorno que é chamada quando a janela não está ativa. Isto é uma propriedade opcional.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="Retorna">Retorna</h5>
+
+<p><strong>BrowserWindow</strong> :</p>
+
+<h3 id="Properties">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="browserWindows"><code>browserWindows</code></h4>
+
+<p><code>browserWindows</code> fornece acesso a todas as janelas de navegadores abertas com os objetos <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow">BrowserWindow</a>.</p>
+
+<pre class="brush: js">var windows = require("sdk/windows");
+for (let window of windows.browserWindows) {
+  console.log(window.title);
+}
+
+console.log(windows.browserWindows.length);</pre>
+
+<p>Este objeto emite todos os eventos listados na seção "Eventos':</p>
+
+<pre class="brush: js">var windows = require("sdk/windows").browserWindows;
+
+// add a listener to the 'open' event
+windows.on('open', function(window) {
+  myOpenWindows.push(window);
+});
+
+// add a listener to the 'close' event
+windows.on('close', function(window) {
+  console.log("A window was closed.");
+});
+
+// add a listener to the 'activate' event
+windows.on('activate', function(window) {
+  console.log("A window was activated.");
+});
+
+// add a listener to the 'deactivate' event
+windows.on('deactivate', function(window) {
+  console.log("A window was deactivated.");
+});</pre>
+
+<p>A janela ativa atual é data pelo <code>BrowserWindows.activeWindow</code>:</p>
+
+<pre class="brush: js">var windows = require("sdk/windows").browserWindows;
+
+windows.on('activate', function(window) {
+  console.log("A window was activated.");
+  var activeWindowTitle = windows.activeWindow.title;
+  console.log("Active window title is: " + activeWindowTitle);
+});</pre>
+
+<h3 id="Eventos">Eventos</h3>
+
+<h4 class="addon-sdk-api-name" id="open"><code>open</code></h4>
+
+<p>Evento emitido quando uma nova janela é aberta. Isso não significa que o conteúdo foi carregado, somente que a janela do navegador por si só está inteiramente visível ao usuário.</p>
+
+<h5 id="Argumentos">Argumentos</h5>
+
+<p><strong>Window</strong> : Escutas são passadas para o objeto <code>window</code> que desencadeou o evento.</p>
+
+<h4 class="addon-sdk-api-name" id="close"><code>close</code></h4>
+
+<p>Evento emitido quando uma janela é fechada. Você não pode sempre confiar na recepção do evento close para todas as janelas abertas. Em particular, se o usuário fechar o navegador de forma preciptada o que pode fechar o add-on antes das janelas serem fechadas.</p>
+
+<h5 id="Argumentos_2">Argumentos</h5>
+
+<p><strong>Window</strong> : escutas são passadas para o objeto <code>window</code> lançou o evento.</p>
+
+<h4 class="addon-sdk-api-name" id="activate"><code>activate</code></h4>
+
+<p>Evento emitido quando uma janela inativa é tornada ativa.</p>
+
+<h5 id="Argumentos_3">Argumentos</h5>
+
+<p><strong>Window</strong> : Escutas são passadas para o objeto <code>window</code> que torna ativa.</p>
+
+<h4 class="addon-sdk-api-name" id="deactivate"><code>deactivate</code></h4>
+
+<p>Evento emitido quando a janela ativa se torna inativa.</p>
+
+<h5 id="Arguments">Arguments</h5>
+
+<p><strong>Window</strong> : Escutas são passadas para o objeto<code> window</code> que se tornou inativa.</p>
+
+<h2 id="BrowserWindow">BrowserWindow</h2>
+
+<p>Uma instância <code>BrowserWindow</code> representa uma única janela aberta. Elas podem ser recuperadas da propriedade <code>browserWindows</code> exportadas pelo módulo.</p>
+
+<pre class="brush: js">var windows = require("sdk/windows").browserWindows;
+
+//Print how many tabs the current window has
+console.log("The active window has " +
+            windows.activeWindow.tabs.length +
+            " tabs.");
+
+// Print the title of all browser windows
+for (let window of windows) {
+  console.log(window.title);
+}
+
+// close the active window
+windows.activeWindow.close(function() {
+  console.log("The active window was closed");
+});</pre>
+
+<h3 id="Métodos">Métodos</h3>
+
+<h4 class="addon-sdk-api-name" id="activate()"><code>activate()</code></h4>
+
+<p>Torna a janela ativa, que focará aquela janela e trará ela para o primeiro plano.</p>
+
+<h4 class="addon-sdk-api-name" id="close(callback)"><code>close(callback)</code></h4>
+
+<p>Fecha a janela.</p>
+
+<h5 id="Parâmetros_2">Parâmetros</h5>
+
+<p><strong>callback : function</strong><br>
+ Uma função chamada quando a janela termina seu processo de fechamento. É um argumento opcional.</p>
+
+<h3 id="Propriedades">Propriedades</h3>
+
+<h4 class="addon-sdk-api-name" id="title"><code>title</code></h4>
+
+<p>O título atual da janela. Normalmente o título da tab ativa, mais um identificador da app. Esta propriedade é somente leitura.</p>
+
+<h4 class="addon-sdk-api-name" id="tabs"><code>tabs</code></h4>
+
+<p>Uma lista ao vivo das tabs na janela. Esse objeto tem as mesma interface da API <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a>, exceto que ele contem somente as tabs nesta janela, não todas as tabs em todas as janelas. Esta propriedade é somente leitura.</p>

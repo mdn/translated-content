@@ -1,0 +1,164 @@
+---
+title: Estruturas de um Pacote de Instalação
+slug: Pacotes
+translation_of: Archive/Mozilla/Bundles
+---
+<p><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">Aplicações XULRunner</a>, <a href="/en/Extensions" title="en/Extensions">extensões</a>, e <a href="/en/Themes" title="en/Themes">temas</a> Compartilham uma mesma estrutura de arquivos, e em alguns casos o mesmo pacote pode ser usado como uma aplicação XULRunner independente, Por Exemplo, a instalação de uma aplicação ou extensão.</p>
+
+<h3 id="Basic_Structure_of_a_Bundle" name="Basic_Structure_of_a_Bundle">Estrutura Básica de um Pacote</h3>
+
+<p>A bundle may include any of the following files:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Path from the root of the bundle</th>
+   <th>Description</th>
+   <th>Version information</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>/<a href="/en/Install_Manifests" title="en/Install_Manifests">install.rdf</a></code></td>
+   <td>Extension/Theme Install Manifest</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>/<a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">application.ini</a></code></td>
+   <td>Application Launch Manifest</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>/<a href="/en/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped extensions">bootstrap.js</a></code></td>
+   <td>The bootstrap script for extensions not requiring a restart (those with <code>&lt;em:bootstrap&gt;true&lt;/em:bootstrap&gt;</code> in their <code>install.rdf</code>). Note that other files and directories (e.g. <code>chrome.manifest</code>, <code>components</code>, <code>defaults</code>) in bootstrapped extensions are not processed by a supporting application.</td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=2.0)</a></td>
+  </tr>
+  <tr>
+   <td><code>/<a href="/en/Chrome_Registration#The_Chrome_Registry" title="en/Chrome_Registration#The_Chrome_Registry">chrome.manifest</a></code></td>
+   <td>Chrome Registration Manifest</td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.8)</a></td>
+  </tr>
+  <tr>
+   <td><code>/components/*</code></td>
+   <td>XPCOM components (*.js, *.dll), and interface files from *.xpt</td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.7)</a></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/Building_an_Extension#Defaults_Files" title="en/Building_an_Extension#Defaults_Files">/defaults/preferences/*.js</a></code></td>
+   <td>Default Preferences</td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.7)</a></td>
+  </tr>
+  <tr>
+   <td><code>/plugins/*</code></td>
+   <td><a href="/en/Plugins" title="en/Plugins">NPAPI Plugins</a></td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.8)</a></td>
+  </tr>
+  <tr>
+   <td><code>/<a href="/en/Window_icons" title="en/Window_icons">chrome/icons/default/*</a></code></td>
+   <td>Window Icons</td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.8)</a></td>
+  </tr>
+  <tr>
+   <td><code>/<a href="/en/Extensions/Inline_Options" title="/en/Extensions/Inline_Options">options.xul</a></code></td>
+   <td>Extension options, for display in the Add-ons Manager</td>
+   <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=7.0)</a></td>
+  </tr>
+  <tr>
+   <td>...</td>
+   <td>Additional resources (such as chrome:// or resource:// providers can be registered in the <a href="/en/Chrome_Registration" title="en/Chrome registration">chrome.manifest</a>)</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <th colspan="3">Application-specific</th>
+  </tr>
+  <tr>
+   <td><code>/searchplugins/*.src</code></td>
+   <td>Sherlock search plugins</td>
+   <td><a href="/en/Firefox_1.5_for_developers" title="en/Firefox_1.5_for_developers">Firefox 1.5</a> and greater.</td>
+  </tr>
+  <tr>
+   <td><code>/searchplugins/*.xml</code></td>
+   <td><a href="/en/Creating_MozSearch_plugins" title="en/Creating_MozSearch_plugins">MozSearch and OpenSearch plugins</a></td>
+   <td><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> and greater</td>
+  </tr>
+  <tr>
+   <td><code>/dictionaries/*.{aff|dic}</code></td>
+   <td>Myspell dictionaries</td>
+   <td><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> and greater</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Of course, an extension need not (and normally won't) have all of these directories. Themes are limited for security reasons, and can normally only provide a <a href="/en/Chrome_Registration" title="en/Chrome_Registration">chrome.manifest</a> which registers the theme and a JAR file.</p>
+
+<h3 id="Platform-specific_files">Platform-specific files</h3>
+
+<p>Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) removed support for platform-specific subdirectories, described below. Instead, you need to use manifest flags, such as the <a href="/en/Chrome_Registration#os" title="en/Chrome Registration#os"><code>OS</code></a> and <a href="/en/Chrome_Registration#abi" title="en/Chrome Registration#abi"><code>ABI</code></a> flags, in your <a href="/en/Chrome_Registration" title="en/Chrome Registration">chrome manifest</a> to specify components that should be loaded for specific platforms.</p>
+
+<p>For example:</p>
+
+<pre>binary-component components/windows/mycomponent.dll ABI=WINNT_x86-msvc
+binary-component components/mac/mycomponent.dylib ABI=Darwin_x86-gcc3
+binary-component components/mac/mycomponent64.dylib ABI=Darwin_x86_64-gcc3
+binary-component components/linux/mycomponent.so ABI=Linux_x86-gcc3
+</pre>
+
+<p>This also means you can no longer have platform-specific preference files in your bundle.</p>
+
+<h4 id="Platform-specific_subdirectories_Gecko_1.9.2.x_and_earlier">Platform-specific subdirectories: Gecko 1.9.2.x and earlier</h4>
+
+<div class="note">
+<p><strong>Note:</strong> Platform-specific subdirectory support was removed in <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span>. See the section <a href="/en/Bundles#Platform-specific_files" title="en/Bundles#Platform-specific files">Platform-specific files</a> to learn how to use platform-specific files.</p>
+</div>
+
+<p>In some cases a single extension or application may wish to include binary component or plugins for multiple platforms, or theme authors might want to include multiple platform-specific JAR files. To facilitate the first case, the extension/app loader has special sub-directories specifically for platform-specific files (starting with Toolkit/Gecko 1.8, Firefox/Thunderbird 1.5). The platform string is defined during the toolkit build process to a value unique for the combination of operating system, processor architecture and compiler. The format of the platform string is:</p>
+
+<pre class="eval"><em>{<a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a>}</em>_<em>{<a href="/en/XPCOM_ABI" title="en/XPCOM_ABI">TARGET_XPCOM_ABI</a>}</em>
+</pre>
+
+<p>All of the files which are loaded from the main extension directory are loaded from the subdirectory</p>
+
+<pre class="eval">/platform/<em>{platform string}</em>
+</pre>
+
+<p>if it exists. For example, if a plugin vendor wanted to make a plugin available for consumer computers running Linux(of the form: /platform/Linux*/), Macintosh(of the form: /platform/Darwin*/), and Windows(of the form: /platform/WIN*/), it would provide the following files:</p>
+
+<pre class="eval">/platform/Linux_x86-gcc3/plugins/libMyPlugin.so
+/platform/WINNT_x86-msvc/plugins/MyPlugin.dll
+/platform/Darwin_ppc-gcc3/plugins/libMyPlugin.dylib
+</pre>
+
+<p>Because XPT files are not platform-specific, any associated XPT files would go in the generic components directory:</p>
+
+<pre class="eval">/components/MyPlugin.xpt
+</pre>
+
+<p>If an extension has non-binary platform-specific code (such as code which uses the windows registry from script), it can also use just the operating system identifier as a platform-subdirectory:</p>
+
+<pre class="eval">/platform/WINNT/components/registerDoctype.js
+</pre>
+
+<p>When platform-specific JAR files are used, each platform directory should have its own <code>chrome.manifest</code> file:</p>
+
+<pre class="eval">chrome.manifest
+chrome/mytheme-base.jar
+platform/Darwin/chrome.manifest
+platform/Darwin/chrome/mytheme-mac.jar
+platform/WINNT/chrome.manifest
+platform/WINNT/chrome/mytheme-win.jar
+</pre>
+
+<p>The app/extension loader processes the base directory first, followed by the applicable platform directories (first /{OS_TARGET}/, then /{<a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a>}_{<a href="/en/XPCOM_ABI" title="en/XPCOM_ABI">TARGET_XPCOM_ABI</a>}/). When default preferences are defined in several directories, the ones loaded later overwrite the earlier ones.</p>
+
+<h3 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official references for <a href="/en/Toolkit_API" title="en/Toolkit_API">toolkit API</a></h3>
+
+<p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>

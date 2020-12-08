@@ -1,0 +1,86 @@
+---
+title: Network Stats
+slug: WebAPI/Network_Stats
+translation_of: Archive/B2G_OS/API/Network_Stats_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="Sumário">Sumário</h2>
+<p>A API do Estado de Rede permite monitorar utilização de dados e expor esses dados para aplicações certificadas.</p>
+<p>Os dados podem ser acessados através de {{domxref("window.navigator.mozNetworkStats","navigator.mozNetworkStats")}} que é uma instância da interface {{domxref("MozNetworkStatsManager")}}.</p>
+<h2 id="Acessando_os_dados">Acessando os dados</h2>
+<p>Informações sobre o volume de dados recebidos e enviados é automaticamente guardado no sistema.  É possível acessá-los utilizando o método {{domxref("MozNetworkStatsManager.getNetworkStats()")}}. Este método espera um objeto de configuração como seu primeiro parâmetro, que deve conter as seguintes propriedades:</p>
+<ul>
+ <li><code>start</code>: Um objeto data representando o começo dos dados mensurados.</li>
+ <li><code>end</code>: Um objeto data representando o final dos dados mensurados.</li>
+ <li><code>connectionType</code>: A origem dos dados. Pode ser  <code>wifi</code>, <code>mobile</code>, ou <code>null</code>. Se for <code>null</code>, os dados mensurados de ambas origens são fundidos. Para saber com antecedência qual tipo de origem está disponível, a propriedade {{domxref("MozNetworkStatsManager.connectionTypes")}} returna um <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> de strings representando cada origem suportada.</li>
+</ul>
+<p>Quando chamada, este método retorna um {{domxref("DOMRequest")}} para lidar com o sucesso ou falha das informações requisitadas. Em caso de sucesso o <code>result</code> requisitado é um objeto {{domxref("MozNetworkStats")}}.</p>
+<pre class="brush: js">var manageWifi   = navigator.mozNetworkStats.connectionTypes.indexOf('wifi')   &gt; -1;
+var manageMobile = navigator.mozNetworkStats.connectionTypes.indexOf('mobile') &gt; -1;
+
+var config = {
+  start: new Date(),
+  end  : new Date(),
+  connectionType: manageWifi ? 'wifi' : null
+};
+
+var request = navigator.mozNetworkStats.getNetworkStats(config);
+
+request.onsuccess = function () {
+  console.log("Data received: " + request.result.data[0].rxBytes + " bytes");
+  console.log("Data sent: " + request.result.data[0].txBytes + " bytes")
+}
+
+request.onerror = function () {
+  console.log("Something goes wrong: ", request.error);
+}
+</pre>
+<h2 id="Amostragem_ao_longo_do_tempo">Amostragem ao longo do tempo</h2>
+<p>Para ter uma visão dos dados utilizados ao longo do tempo, as informações sobre a quantidade de dados é armazenada em blocos. Cada bloco é um valor representando a quantidade de dados trocados desde que o último bloco foi armazenado.</p>
+<p>Quando requisitar os estados, o resultado do objeto {{domxref("MozNetworkStats")}} contém quantos o maior número de dados possíveis para um intervalo definido entre as datas de <code>start</code> e <code>end</code>. O número total de blocos depende de dois parâmetros (note que os parâmetros são apenas para leitura):</p>
+<ul>
+ <li>{{domxref("MozNetworkStatsManager.sampleRate")}}, que representa o tempo em segundos entre dois blocos.</li>
+ <li>{{domxref("MozNetworkStatsManager.maxStorageSamples")}}, que representa o número máximo de blocos de cada tipo de conexão.</li>
+</ul>
+<p>Cada bloco é um objeto {{domxref("MozNetworkStatsData")}}, e <span id="result_box" lang="pt"><span class="hps">todos os</span> <span class="hps">blocos de dados</span> <span class="hps">para um determinado</span> <span class="hps">período de tempo</span> <span class="hps">estão disponíveis</span> <span class="hps">através da propriedade</span></span> {{domxref("MozNetworkStats.data")}}, que são um <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> de objetos {{domxref("MozNetworkStatsData")}}.</p>
+<pre class="brush: js">var rate = navigator.mozNetworkStats.sampleRate;
+var max  = navigator.mozNetworkStats.maxStorageSample;
+
+var config = {
+  start: new Date() - (rate * max), // This allows to get all the available data chunks.
+  end  : new Date(),
+  connectionType: 'mobile'
+};
+
+var request = navigator.mozNetworkStats.getNetworkStats(config);
+
+request.onsuccess = function () {
+  var total = {
+    receive: 0,
+    send   : 0
+  };
+
+  this.result.forEach(function (chunk) {
+    total.receive += chunk.rxBytes;
+    total.send    += chunk.txBytes;
+  });
+
+  console.log("Since: " + config.start.toString());
+  console.log("Data received: " + (total.receive * 1000).toFixed(2) + "Ko");
+  console.log("Data sent: " + (total.send * 1000).toFixed(2) + "Ko")
+}
+
+request.onerror = function () {
+  console.log("Something goes wrong: ", request.error);
+}</pre>
+<h2 id="Especificações">Especificações</h2>
+<p>Não faz parte de uma especificação</p>
+<h2 id="Veja_também">Veja também</h2>
+<ul>
+ <li>{{domxref("window.navigator.mozNetworkStats","navigator.mozNetworkStats")}}</li>
+ <li>{{domxref("MozNetworkStats")}}</li>
+ <li>{{domxref("MozNetworkStatsData")}}</li>
+ <li>{{domxref("MozNetworkStatsManager")}}</li>
+ <li><a href="/en-US/docs/WebAPI/Network_Stats_2_0_proposal" title="/en-US/docs/WebAPI/Network_Stats_2_0_proposal">NetworkStats API 2.0 proposal</a></li>
+</ul>

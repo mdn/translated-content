@@ -1,0 +1,191 @@
+---
+title: Notifications API
+slug: Web/API/Notifications_API
+translation_of: Web/API/Notifications_API
+---
+<p>{{DefaultAPISidebar("Web Notifications")}}</p>
+
+<p class="summary">Notifications API позволяют web-страницам контролировать отображение системных уведомлений для конечного пользователя — они находятся вне контекста окна браузера верхнего уровня, поэтому могут отображаться даже если пользователь сменил вкладку или перешел к другому приложению. API были разработаны таким образом, чтобы поддерживать совместимость с существующими системами уведомлений на различных платформах.</p>
+
+<h2 id="Концепция_и_использование">Концепция и использование</h2>
+
+<p>На поддерживаемых платформах, отображение системных уведомлений обычно включает две вещи. Во-первых, пользователь должен разрешить текущему источнику отображать уведомления, что, как правило, происходит, при первичной загрузке приложения или сайта, используя метод  {{domxref("Notification.requestPermission()")}}. Далее будет вызван диалог со следующим текстом:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10819/notification-bubble.png" style="display: block; height: 205px; margin: 0 auto; width: 453px;"></p>
+
+<p>Здесь пользователь может выбрать разрешить уведомления от источника, заблокировать их или решить позже. Как только выбор будет сделан, для текущей сессии будут установлены настройки. </p>
+
+<div class="note">
+<p><strong>Заметка</strong>: Для Firefox 44, разрешения для Notifications и <a href="/en-US/docs/Web/API/Push_API">Push</a> объединяются. Если было установлено разрешение для уведомлений, push так же будут разрешены .</p>
+</div>
+
+<p>Затем создается новое уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}. В функцию должен быть передан аргумент заголовка и, по желанию, объект настроек, чтобы определить опции, такие как направление и тело текста, иконка, звук уведомления и т.д.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<p>В дополнение, спецификация Notifications API определет несколько дополнений для <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>, чтобы позволить им отправлять уведомления.</p>
+
+<div class="note">
+<p><strong>Заметка</strong>: Чтобы найти больше об использовани уведомлений в вашем приложении, читайте <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Использование Notifications API</a>.</p>
+</div>
+
+<h2 id="Интерфейс_уведомлений">Интерфейс уведомлений</h2>
+
+<dl>
+ <dt>{{domxref("Notification")}}</dt>
+ <dd>Определяет объект уведомления.</dd>
+</dl>
+
+<h3 id="Дополнение_для_Service_worker">Дополнение для Service worker</h3>
+
+<dl>
+ <dt>{{domxref("ServiceWorkerRegistration")}}</dt>
+ <dd>Включает {{domxref("ServiceWorkerRegistration.showNotification()")}} и {{domxref("ServiceWorkerRegistration.getNotifications()")}} методы для контролирования отображения уведомлений.</dd>
+ <dt>{{domxref("ServiceWorkerGlobalScope")}}</dt>
+ <dd>Включает обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} для вызова встроенных функций, когда был выполнен клик на уведомлении.</dd>
+ <dt>{{domxref("NotificationEvent")}}</dt>
+ <dd>Особый тип объекта событий, осованный на {{domxref("ExtendableEvent")}}, который представляет уведомление, которое было вызвано.</dd>
+</dl>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Notifications')}}</td>
+   <td>{{Spec2('Web Notifications')}}</td>
+   <td>Living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
+    22</td>
+   <td>{{CompatGeckoDesktop("2.0")}}{{property_prefix("moz")}}<sup>[2]</sup><br>
+    {{CompatGeckoDesktop("22.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>25</td>
+   <td>6<sup>[3]</sup></td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("41.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Service worker additions</td>
+   <td>
+    <p>{{CompatChrome(42.0)}}</p>
+   </td>
+   <td>{{CompatGeckoDesktop("42.0")}}<sup>[4]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>{{CompatVersionUnknown}}</p>
+   </td>
+   <td>{{CompatGeckoMobile(2.0)}}{{property_prefix("moz")}}<sup>[2]</sup><br>
+    {{CompatGeckoMobile(22.0)}}</td>
+   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
+    1.2</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>
+    <p>{{CompatVersionUnknown}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile(41.0)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Service worker additions</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(42.0)}}<sup>[4]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(42.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Before Chrome 22, the support for notification followed an <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">old prefixed version of the specification</a> and used the {{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} object to instantiate a new notification. Before Chrome 32, {{domxref("Notification.permission")}} was not supported.</p>
+
+<p>[2] Prior to Firefox 22 (Firefox OS &lt;1.2), the instantiation of a new notification was done with the {{domxref("window.navigator.mozNotification", "navigator.mozNotification")}} object through its <code>createNotification()</code> method. In addition, the Notification was displayed when calling the <code>show()</code> method and supported only the <code>click</code> and <code>close</code> events (Nick Desaulniers wrote a <a href="https://github.com/nickdesaulniers/fxos-irc/blob/master/js/notification.js">Notification shim</a> to cover both newer and older implementations.)</p>
+
+<p>[3] Safari started to support notification with Safari 6, but only on Mac OSX 10.8+ (Mountain Lion).</p>
+
+<p>[4] Firefox 42 has shipped with web notifications from Service Workers disabled.</p>
+
+<h2 id="Firefox_OS_разрешения">Firefox OS разрешения</h2>
+
+<p>Когда используете уведомления в приложении на Firefox OS, убедитесь, что <code>desktop-notification</code> установленно в вашем фаине манифеста. Уведомления могут быть использованы для любомого уровня разрешения, равного или выше:</p>
+
+<pre class="brush: json">"permissions": {
+  "desktop-notification": {}
+}</pre>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Использование Notifications API</a></li>
+</ul>

@@ -1,0 +1,48 @@
+---
+title: '-moz-binding'
+slug: Web/CSS/-moz-binding
+tags:
+  - CSS
+  - Non-standard
+translation_of: Archive/Web/CSS/-moz-binding
+---
+<p>{{Non-standard_header}}{{ CSSRef() }}</p>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p><code>-moz-binding</code> jest używany przez aplikacje bazujące na Mozilli, by dołączyć wiązanie <a href="/pl/XBL" title="pl/XBL">XBL</a> do elementu DOM.</p>
+
+<ul>
+ <li>Wartość początkowa: <code>none | {{ mediawiki.external(',') }}* &lt;uri&gt; | inherit</code></li>
+ <li>Dotyczy: wszystkich elementów (oprócz zawartości generowanej lub pseudoelementów)</li>
+ <li>Dziedziczony: nie</li>
+ <li>Procenty: niedostępne</li>
+ <li>Wartość wyliczona: jako określone</li>
+</ul>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="eval">-moz-binding: <em>uri</em> | none
+</pre>
+
+<h3 id="Warto.C5.9Bci" name="Warto.C5.9Bci">Wartości</h3>
+
+<dl>
+ <dt>uri</dt>
+ <dd>Identyfikator URI dla wiązania XBL (włączając w to identyfikator fragmentaryczny).</dd>
+ <dt>none</dt>
+ <dd>Żadne wiązanie XBL nie jest stosowane do elementu.</dd>
+</dl>
+
+<h2 id="Przyk.C5.82ad" name="Przyk.C5.82ad">Przykład</h2>
+
+<pre>.exampleone {
+	-moz-binding: url("http://www.mozilla.org/xbl/htmlBindings.xml#checkbox");
+}
+</pre>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<p><a href="/pl/XBL/Dokumentacja_XBL_1.0/Binding_Attachment_and_Detachment" title="pl/XBL/Dokumentacja_XBL_1.0/Binding_Attachment_and_Detachment">Dokumentacja XBL: Binding Attachment and Detachment</a></p>
+
+<p><a href="/pl/Kurs_XUL/Wprowadzenie_do_XBL" title="pl/Kurs_XUL/Wprowadzenie_do_XBL">Kurs XUL:Wprowadzenie do XBL</a></p>

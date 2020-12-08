@@ -1,0 +1,56 @@
+---
+title: Dziedziczenie XBL
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dziedziczenie_XBL
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XBL_Inheritance
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_funkcji_obsługi_zdarzenia" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Przykład_XBL">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule, zobaczymy jak rozszerzyć istniejące definicje języka <a href="pl/XBL">XBL</a>.</p>
+
+<h2 id="Dziedziczenie" name="Dziedziczenie">Dziedziczenie</h2>
+
+<p>Czasami możesz chcieć utworzyć widget XBL, który jest podobny do już istniejącego. Na przykład, powiedzmy, że chcemy utworzyć przycisk w wyskakującym okienku. Jednym sposobem jest utworzenie duplikatu już istniejącego kodu XBL dla naszego przycisku. Jednakże, byłoby lepiej rozszerzyć już istniejący kod przycisku.</p>
+
+<p>Jakiekolwiek wiązanie może być powiększone o następne. Wiązanie - dziecko może dodać właściwości, metody i zdarzenia uchwytów. Wiązanie - potomne będzie miało wszystkie cechy, jakie zdefiniowane są podczas dodawania cech do wiązania, które otrzymuje w wyniku dziedziczenia (i jakieś wiązanie dziedziczy z wyższych wartości drzewa).</p>
+
+<p>Do rozszerzenia istniejącego wiązania, dodaj atrybut rozszerzenia (<code>extends</code>) do tagu <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#binding">binding</a></code></code>. Na przykład, następnie rozszerzenie wiązania tworzy pole tekstowe, które dodaje tekst <span class="nowiki">http://www</span> do początku wpisanej wartości, dzieje się tak, kiedy naciśniemy klawisz F4.</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblinherit_1.xml.txt">Źródła</a></p>
+
+<pre>&lt;binding id="textboxwithhttp"
+         extends="chrome://global/content/bindings/textbox.xml#textbox"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" keycode="VK_F4"&gt;
+      this.value="http://www"+value;
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Tutaj XBL powiększa element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> z języka XUL. URL daje nam atrybut <code>extends</code> powyżej jest powiązany adresem URL z wiązaniem pola tekstowego. To znaczy, że dziedziczy wszystkie wartości i zachowania dostarczone przez wiązanie pola tekstowego. W dodatku, dodajemy uchwyt, który odpowiada na zdarzenie klawisza (keypress).</p>
+
+<h2 id="Automatyczne_uzupe.C5.82nianie_p.C3.B3l_tekstowych" name="Automatyczne_uzupe.C5.82nianie_p.C3.B3l_tekstowych">Automatyczne uzupełnianie pól tekstowych</h2>
+
+<p><span class="comment">poniżej treść już jest ok</span> Przykład powyżej jest podobny do sposobu jak cechy automatycznego uzupełnia pracują w Mozilli. Pola tekstowe, które obsługują automatyczne uzupełnianie jest tylko z jednym wiązaniem XBL, które rozszerza podstawowe pole tekstowych.</p>
+
+<p><a href="pl/XUL/textbox_(Mozilla_-_automatyczne_uzupe%c5%82nianie)">Automatyczne uzupełnianie pól tekstowych</a> dodaje dodatkowy uchwyt zdarzenia, tak, że kiedy adres URL jest wpisywany, to menu będzie się pokazywać prawdopodobnie automatycznie do końca. Możemy też użyć własnych aplikacji. Wystarczy, że utworzymy pole tekstowe wraz z dwoma dodatkowymi atrybutami.</p>
+
+<pre>&lt;textbox type="autocomplete" searchSessions="history"/&gt;
+</pre>
+
+<p>Ustaw <code>type</code> na <code>autocomplete</code>, aby dodać możliwość automatycznego uzupełniania do istniejącego pola tekstowego. Ustaw <code>searchSessions</code>, aby zasygnalizować jaki typ danych szukamy. W tym przypadku, została użyta wartość <code>history</code>, który szuka adresów URL w historii (możemy także użyć wartości <code>addrbook</code>, aby poszukać adresów w książce adresów).</p>
+
+<div class="note">Firefox używa innego mechanizmu automatycznego uzupełniania, niż Mozilla Suite, zobacz <a href="pl/XUL/textbox_(Firefox_-_automatyczne_uzupe%c5%82nianie)">XUL:textbox (Firefox - automatyczne uzupełnianie)</a></div>
+
+<p>W następnym artykule, zobaczymy <a href="pl/Kurs_XUL/Przyk%c5%82ad_XBL">przykład widgetu zdefiniowanego przy pomocy języka XBL</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_funkcji_obsługi_zdarzenia" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Przykład_XBL">Następny  »</a></p>
+</div><p></p>

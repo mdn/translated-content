@@ -1,0 +1,883 @@
+---
+title: jpm
+slug: Archive/Add-ons/Add-on_SDK/Tools/jpm
+translation_of: Archive/Add-ons/Add-on_SDK/Tools/jpm
+---
+<div>
+<div class="warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+
+<p>Add-ons using the techniques described in this document are considered a legacy technology in Firefox. Don't use these techniques to develop new add-ons. Use <a href="/en-US/Add-ons/WebExtensions">WebExtensions</a> instead. If you maintain an add-on which uses the techniques described here, consider migrating it to use WebExtensions.</p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 53</a>, no new legacy add-ons will be accepted on addons.mozilla.org (AMO) for desktop Firefox and Firefox for Android.</strong></p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 57</a>, only extensions developed using WebExtensions APIs will be supported on Desktop Firefox and Firefox for Android. </strong></p>
+
+<p>Even before Firefox 57, changes coming up in the Firefox platform will break many legacy extensions. These changes include multiprocess Firefox (e10s), sandboxing, and multiple content processes. Legacy extensions that are affected by these changes should migrate to use WebExtensions APIs if they can. See the <a href="https://blog.mozilla.org/addons/2017/02/16/the-road-to-firefox-57-compatibility-milestones/">"Compatibility Milestones" document</a> for more information.</p>
+
+<p>A wiki page containing <a href="https://wiki.mozilla.org/Add-ons/developer/communication">resources, migration paths, office hours, and more</a>, is available to help developers transition to the new technologies.</p>
+</div>
+
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions"><strong>Browser extensions</strong></a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#Getting_started">Getting started</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">What are extensions?</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of an extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">What next?</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#Concepts">Concepts</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs">Using the JavaScript APIs</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">Working with files</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices">Security best practices</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#User_Interface">User interface</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">User Interface</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">Toolbar button</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebars</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items">Context menu items</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options page</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">Notifications</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">Address bar suggestions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">Developer tools panels</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#How_to">How to</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Insert external content</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API">Work with the Tabs API</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API">Work with the Bookmarks API</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API">Work with the Cookies API</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">Work with contextual identities</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#Porting">Porting</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android">Differences between desktop and Android</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#Firefox_workflow">Firefox workflow</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices">User Experience</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features">Testing persistent and restart features</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android">Developing for Firefox for Android</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensions and the Add-on ID</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a></li>
+  </ol>
+ </li>
+ <li data-default-state="closed"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms">alarms</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData">browsingData</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard">clipboard</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands">commands</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts">contentScripts</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities">contextualIdentities</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network">devtools.network</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns">dns</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events">events</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes">extensionTypes</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find">find</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">history</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity">identity</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/idle">idle</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management">management</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search">search</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions">sessions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">sidebarAction</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">theme</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites">topSites</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types">types</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">Manifest keys</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">chrome_url_overrides</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito">incognito</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol_handlers</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name">version_name</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Themes"><strong>Themes</strong></a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts">Browser themes</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts">Browser theme concepts</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Lightweight_themes">Lightweight themes</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Lightweight_themes">Lightweight themes</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Lightweight_Themes/FAQ">Lightweight themes FAQ</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution"><strong>Publishing and Distribution</strong></a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution">Publishing add-ons</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distribution overview</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Package_your_extension_">Package your extension</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">Submit an add-on</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Source_Code_Submission">Source code submission</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers">Resources for publishers</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Listing">Creating an appealing listing</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Review policies</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Agreement">Developer agreement</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Featured">Featured add-ons</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension">Retiring your extension</a></li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options">Distributing add-ons</a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons">For sideloading</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_for_desktop_apps">For desktop apps</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise">For an enterprise</a></li>
+  </ol>
+ </li>
+ <li><a href="https://discourse.mozilla.org/c/add-ons"><strong>Community and Support</strong></a></li>
+ <li><a href="#">Channels</a>
+  <ol>
+   <li><a href="https://blog.mozilla.org/addons">Add-ons blog</a></li>
+   <li><a href="https://discourse.mozilla.org/c/add-ons">Add-on forums</a></li>
+   <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li>
+   <li><a href="/en-US/docs/Mozilla/Add-ons/#Contact_us">Contact us</a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+</div>
+
+<p><span class="seoSummary">jpm is a command-line tool that enables you to test, run, and package add-ons.</span></p>
+
+<p>This is the reference page for jpm. See also <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29">jpm tutorial</a> for getting started.</p>
+
+<p>jpm <span class="tlid-translation translation" lang="pl"><span title="">użyj go</span></span> :</p>
+
+<pre class="brush: bash">jpm [command] [options]
+</pre>
+
+<p>jpm <span class="tlid-translation translation" lang="pl"><span title="">obsługuje następujące opcje globalne</span></span> :</p>
+
+<pre class="brush: bash">-h, --help        - show a help message and exit
+-V, --version     - print the jpm version number
+--addon-dir       - directory for your source code,
+                    defaulting to the current directory
+</pre>
+
+<h2 id="Instalacja"><span class="tlid-translation translation" lang="pl"><span title="">Instalacja</span></span></h2>
+
+<p>jpm is distributed with the node package manager <a class="external external-icon" href="https://www.npmjs.org/package/jpm">npm</a>.</p>
+
+<h3 id="Instalowanie_npm"><span class="tlid-translation translation" lang="pl"><span title="">Instalowanie</span></span>  npm</h3>
+
+<p>  <span class="tlid-translation translation" lang="pl"><span title="">Istnieją dwa sposoby uzyskania</span></span> npm.</p>
+
+<ul>
+ <li><span class="tlid-translation translation" lang="pl"><span class="alt-edited" title="">Pobierz i zainstaluj</span></span> Node.js z <a class="external external-icon" href="https://nodejs.org/">nodejs.org</a>. Node.js <span class="tlid-translation translation" lang="pl"><span title="">zawiera</span></span> npm.</li>
+ <li><span class="tlid-translation translation" lang="pl"><span title="">Lub</span></span> , <span class="tlid-translation translation" lang="pl"><span title="">jeśli masz</span></span> <span class="tlid-translation translation" lang="pl"><span title="">menedżer pakietów, taki jak APT</span></span>, zainstaluj npm <span class="tlid-translation translation" lang="pl"><span title="">przez to</span></span>. <span class="tlid-translation translation" lang="pl"><span title="">Na przykład</span></span>, <span class="tlid-translation translation" lang="pl"><span title="">w oknie terminalu Ubuntu lub Debian</span></span>, <span class="tlid-translation translation" lang="pl"><span class="alt-edited" title="">wpisz</span></span> <code>sudo apt-get install nodejs nodejs-legacy npm</code>.</li>
+</ul>
+
+<p><span class="tlid-translation translation" lang="pl"><span title="">Aby przetestować instalację, uruchom</span></span>:</p>
+
+<pre class="lang-js prettyprint prettyprinted">/usr/bin/env node -v</pre>
+
+<p><span class="tlid-translation translation" lang="pl"><span title="">Jeśli pojawi się komunikat o błędzie z informacją</span></span>  <em>/usr/bin/env: node: No such file or directory</em> and you have installed nodejs through a package manager, <span class="tlid-translation translation" lang="pl"><span title="">nodejs mógł zostać zainstalowany pod inną nazwą wykonywalną</span></span>. <span class="tlid-translation translation" lang="pl"><span title="">Aby zapewnić zgodność z jpm</span></span>,  <span class="tlid-translation translation" lang="pl"><span title="">jednak musi znajdować się w Twoim PATH pod nazwą</span></span> <code>node</code>. <span class="tlid-translation translation" lang="pl"><span title="">W Debianie i Ubuntu można temu zaradzić, zapewniając zainstalowanie pakietu zgodności</span></span>, <code>nodejs-legacy</code>:</p>
+
+<pre class="brush:bash">sudo apt-get install nodejs-legacy</pre>
+
+<p><span class="tlid-translation translation" lang="pl"><span title="">W innych dystrybucjach konieczne może być ręczne utworzenie lokalnego dowiązania symbolicznego do nodejs:</span></span></p>
+
+<pre class="brush:bash">sudo ln -s "$(which nodejs)" /usr/local/bin/node</pre>
+
+<h3 id="Instalowanie_jpm"><span class="tlid-translation translation" lang="pl"><span title="">Instalowanie</span></span> jpm</h3>
+
+<p>After you have npm installed and <code>node</code> on your PATH, install jpm just as you would any other npm package.</p>
+
+<h4 id="Installing_jpm_globally">Installing jpm globally</h4>
+
+<pre class="brush: bash">npm install jpm --global</pre>
+
+<p>Depending on your setup, you might need to run this as an administrator: <code>sudo npm install jpm --global</code></p>
+
+<h4 id="Installing_jpm_locally">Installing jpm locally</h4>
+
+<p>If you do not wish to, or are unable to, install jpm globally, you may instead install it locally:</p>
+
+<pre class="brush: bash">cd $HOME &amp;&amp; npm install jpm</pre>
+
+<p>To run <code>jpm</code> from a terminal when installed locally, you must add the directory <code>"$HOME/node_modules/.bin/"</code> to your terminal's PATH first. Add the following line to the end of the file <code>$HOME/.profile</code> to add it to your PATH permanently (as the file <code>.profile</code> is executed every time a new terminal is opened):</p>
+
+<pre class="brush: bash">export PATH="$HOME/node_modules/.bin/:$PATH"</pre>
+
+<h4 id="Installing_jpm_from_git">Installing jpm from git</h4>
+
+<p>Alternatively, you can also get the latest version of jpm using git:</p>
+
+<pre class="brush:bash">git clone https://github.com/mozilla-jetpack/jpm.git
+cd jpm
+npm install
+npm link
+</pre>
+
+<h3 id="After_installing_jpm">After installing jpm</h3>
+
+<p>After installation, at the command prompt, type:</p>
+
+<pre class="brush: bash">jpm</pre>
+
+<p>You should see a screen summarizing the available jpm commands. Note that unlike cfx, jpm is available in every command prompt you start, as long as you installed it with the <code>--global</code> flag.</p>
+
+<h3 id="Install_a_different_version_of_Firefox">Install a different version of Firefox</h3>
+
+<p>As of Firefox 48, it is not possible to use <a href="/en-US/docs/Mozilla/Add-ons/Distribution">unsigned add-ons</a> (i.e. any add-on which you are in the process of developing) in the branded release or beta versions of Firefox. Thus, you will need to download and install a different version of Firefox. Assuming you don't want an <a href="ftp.mozilla.org/pub/firefox/releases/">old version</a> of Firefox, your options are <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a>, <a href="https://nightly.mozilla.org/">Firefox Nightly</a>, <a href="https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds">Unbranded Beta, or Unbranded Release</a>.</p>
+
+<p>When testing your add-on, you will need to use the <code>-b</code> option to <code>jpm run.</code> See <a href="/en-US/Add-ons/SDK/Tools/jpm#Selecting_a_browser_version">Selecting a browser version</a>.</p>
+
+<h3 id="Problems">Problems?</h3>
+
+<p>If you do not see this, ask for help. SDK users and project team members discuss problems and proposals on the <a class="external external-icon" href="https://groups.google.com/forum/#!forum/mozilla-labs-jetpack">project mailing list</a>. Someone else may have had the same problem you do, so try searching the list. You are welcome to post a question, too. You can also chat with other SDK users in <a class="external external-icon" href="https://mibbit.com/?channel=%23jetpack&amp;server=irc.mozilla.org">#jetpack</a> on <a class="external external-icon" href="http://irc.mozilla.org/">Mozilla's IRC network</a>.</p>
+
+<h2 id="Command_reference">Command reference</h2>
+
+<p>jpm supports the following commands:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;"><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_init"><code>jpm init</code></a></td>
+   <td>Create a skeleton add-on as a starting point for your add-on.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_run"><code>jpm run</code></a></td>
+   <td>Launch an instance of Firefox with your add-on installed.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_test"><code>jpm test</code></a></td>
+   <td>Runs your add-on's unit tests.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_xpi"><code>jpm xpi</code></a></td>
+   <td>Package your add-on as an <a href="/en-US/docs/XPI">XPI</a> file, which is the install file format for Firefox add-ons.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_post"><code>jpm post</code></a></td>
+   <td>Package your add-on as an <a href="/en-US/docs/XPI">XPI</a> file, and then post it to some URL.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_watchpost"><code>jpm watchpost</code></a></td>
+   <td>Package your add-on as an <a href="/en-US/docs/XPI">XPI</a> file whenever there is a file change and post that to some URL.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_sign"><code>jpm sign</code></a></td>
+   <td>Package your add-on as an <a href="/en-US/docs/XPI">XPI</a> file, and then retrieve a new XPI signed by Mozilla.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_init">jpm init</h3>
+
+<p>This command initializes a new add-on from scratch.</p>
+
+<p>Create a new directory, change into it, and run <code>jpm init</code>.</p>
+
+<pre class="brush: bash">mkdir my-addon
+cd my-addon
+jpm init</pre>
+
+<p>You'll then be asked to supply some information about your add-on: this will be used to create your add-on's <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> file.</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#title">title</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#name">name</a>: this defaults to the name of the directory in which you are running <code>jpm init</code>. Unless an <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#id"><code>id</code></a> field is present in package.json, jpm prepends "@" to <code>name</code> and use the result as the <a href="/en-US/Add-ons/Install_Manifests#id"><code>id</code> field in the add-on's install manifest</a>.</li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#version">version</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#description">description</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#main">entry point</a> (which maps to "main" in package.json)</li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#author">author</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#engines">engines</a> (supported applications)</li>
+ <li><a href="/en-US/Add-ons/SDK/Tools/package_json#license">license</a></li>
+</ul>
+
+<p>Most of these fields have a default, which is shown in brackets after the question. If you just press Enter, your add-on gets the default value.</p>
+
+<p>Once you've supplied a value or accepted the default for these properties, you'll be shown the complete contents of "package.json" and asked to accept it.</p>
+
+<p>Then jpm creates a skeleton add-on, as a starting point for your add-on development, with the following file structure:</p>
+
+<ul class="directory-tree">
+ <li>my-addon
+  <ul>
+   <li>index.js</li>
+   <li>package.json</li>
+   <li>test
+    <ul>
+     <li>test-index.js</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="jpm_run">jpm run</h3>
+
+<p>This command runs a new instance of Firefox with the add-on installed:</p>
+
+<pre class="brush: bash">jpm run</pre>
+
+<p><code>jpm run</code> accepts the following options:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%;"><code>-b --binary BINARY</code></td>
+   <td>
+    <p>Use the version of Firefox specified in BINARY. BINARY may be specified as a full path or as a path relative to the current directory.</p>
+
+    <pre class="brush: bash">
+jpm run -b /path/to/Firefox/Nightly</pre>
+    See <a href="/en-US/Add-ons/SDK/Tools/jpm#Selecting_a_browser_version">Selecting a browser version</a>.</td>
+  </tr>
+  <tr>
+   <td><code>--binary-args CMDARGS</code></td>
+   <td>
+    <p>Pass <a href="/en-US/docs/Mozilla/Command_Line_Options">extra arguments</a> to Firefox.</p>
+
+    <p>For example, to pass the <code>-jsconsole</code> argument to Firefox and launch the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>, try the following:</p>
+
+    <pre class="brush: bash">
+jpm run --binary-args -jsconsole</pre>
+
+    <p>To pass multiple arguments, or arguments containing spaces, quote them:</p>
+
+    <pre class="brush: bash">
+jpm run --binary-args '-url mzl.la -jsconsole'</pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--debug</code></td>
+   <td>Run the <a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a> attached to the add-on.</td>
+  </tr>
+  <tr>
+   <td><code>-o --overload PATH</code></td>
+   <td>
+    <p>Rather than use the SDK modules built into Firefox, use the modules found at PATH. If <code>-o</code> is specified and PATH is omitted, jpm looks for the JETPACK_ROOT environment variable and use its value as the path.</p>
+
+    <p>See <a href="/en-US/Add-ons/SDK/Tools/jpm#Overloading_the_built-in_modules">Overloading the built-in modules</a> for more information.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-p --profile=<code> PROFILE</code></code></td>
+   <td>
+    <p>By default, jpm uses a clean temporary Firefox <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">profile</a> each time you call jpm run. Use the <code>--profile</code> option to instruct jpm to launch Firefox with an existing profile.</p>
+
+    <p>The PROFILE value may be a profile name or the path to the profile.</p>
+
+    <p>See <a href="#Using_profiles">Using profiles</a> for more information.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>Verbose operation.</td>
+  </tr>
+  <tr>
+   <td><code>--no-copy</code></td>
+   <td>
+    <div class="warning">Use with caution because <code>jpm run|test</code> changes many preferences, never use with your main profile.</div>
+
+    <div class="note">This only applies when <code>--profile</code> is used.</div>
+    Disables the copying of the profile used, which allows one to reuse a profile.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_test">jpm test</h3>
+
+<p>Use this command to run an add-on's unit tests. The command:</p>
+
+<ul>
+ <li>Looks for a directory called "test" within the current directory (or <code>--addon-dir</code>).</li>
+ <li>Opens every file in there whose name starts with "test-". Make note of the hyphen after "test" in the filename. <code>jpm test</code> include a file called "test-myCode.js", but will exclude files called "test_myCode.js" or "testMyCode.js")</li>
+ <li>call every function exported from that file whose name starts with "test".</li>
+</ul>
+
+<pre class="brush: bash">jpm test
+</pre>
+
+<p>See the <a href="/en-US/Add-ons/SDK/Tutorials/Unit_testing">tutorial on unit testing</a> and the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/test_assert">reference documentation for the <code>assert</code> module</a> for more details on this.</p>
+
+<p><code>jpm test</code> accepts the following options:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td><code>-b --binary BINARY</code></td>
+   <td>
+    <p>Use the version of Firefox specified in BINARY. BINARY may be specified as a full path or as a path relative to the current directory.</p>
+
+    <pre class="brush: bash">
+jpm test -b /path/to/Firefox/Nightly</pre>
+
+    <p>See <a href="/en-US/Add-ons/SDK/Tools/jpm#Selecting_a_browser_version">Selecting a browser version</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--binary-args CMDARGS</code></td>
+   <td>
+    <p>Pass <a href="http://kb.mozillazine.org/Command_line_arguments">extra arguments</a> to Firefox.</p>
+
+    <p>For example, to pass the <code>-jsconsole</code> argument to Firefox, which will launch the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>, try the following:</p>
+
+    <pre class="brush: bash">
+jpm test --binary-args -jsconsole</pre>
+
+    <p>To pass multiple arguments, or arguments containing spaces, quote them:</p>
+
+    <pre class="brush: bash">
+jpm test --binary-args '-url mzl.la -jsconsole'</pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--debug</code></td>
+   <td>Run the <a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a> attached to the add-on.</td>
+  </tr>
+  <tr>
+   <td style="width: 30%;"><code>-f --filter FILE[:TEST]</code></td>
+   <td>
+    <p>Only run tests whose filenames match FILE and optionally match TEST, both regexps.</p>
+
+    <pre class="brush: bash">
+jpm test --filter base64:btoa</pre>
+
+    <p>The above command only runs tests in files whose names contain "base64", and in those files only runs tests whose names contain "btoa".</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 30%;"><code>-o --overload PATH</code></td>
+   <td>
+    <p>Rather than use the SDK modules built into Firefox, use the modules found at PATH. If <code>-o</code> is specified and PATH is omitted, jpm will look for the JETPACK_ROOT environment variable and use its value as the path.</p>
+
+    <p>See <a href="/en-US/Add-ons/SDK/Tools/jpm#Overloading_the_built-in_modules">Overloading the built-in modules</a> for more information.</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 30%;"><code>-p --profile<code> PROFILE</code></code></td>
+   <td>
+    <p>By default, jpm uses a clean temporary Firefox <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">profile</a> each time you call jpm run. Use the <code>--profile</code> option to instruct jpm to launch Firefox with an existing profile.</p>
+
+    <p>The PROFILE value may be a profile name or the path to the profile.</p>
+
+    <p>See <a href="#Using_profiles">Using profiles</a> for more information.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--stop-on-error</code></td>
+   <td>
+    <p>By default, jpm test keeps running tests even after tests fail. Specify <code>--stop-on-error</code> to stop running tests after the first failure:</p>
+
+    <pre class="brush: bash">
+jpm test --stop-on-error</pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--tbpl</code></td>
+   <td>Print test output in <a href="https://treeherder.mozilla.org/">Treeherder</a> format</td>
+  </tr>
+  <tr>
+   <td><code>--times NUMBER</code></td>
+   <td>
+    <p>Run tests NUMBER of times:</p>
+
+    <pre class="brush: bash">
+jpm test --times 2</pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>Verbose operation.</td>
+  </tr>
+  <tr>
+   <td><code>--no-copy</code></td>
+   <td>
+    <div class="warning">Use with caution because <code>jpm run|test</code> changes many preferences, never use with your main profile.</div>
+
+    <div class="note">This only applies when <code>--profile</code> is used.</div>
+    Disables the copying of the profile used, which allows one to reuse a profile.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_xpi">jpm xpi</h3>
+
+<p>This command packages the add-on as an <a href="/en-US/docs/XPI">XPI</a> file, which is the install file format for Mozilla add-ons.</p>
+
+<pre class="brush: bash">jpm xpi</pre>
+
+<p>It looks for a file called <code>package.json</code> in the current directory (or <code>--addon-dir</code>) and creates the corresponding XPI file. It ignores any ZIPs or XPIs in the add-on's root, and any test files. It includes all other files. If you want to exclude extra files, see <a href="/en-US/Add-ons/SDK/Tools/jpmignore">the .jpmignore file</a>.</p>
+
+<p>Once you have built an XPI file, you can distribute your add-on by submitting it to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>.</p>
+
+<p><code>jpm xpi</code> accepts the following option:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td><code>--dest-dir</code></td>
+   <td>
+    <p>Optional destination directory for the generated XPI file. The current working directory is the default destination.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>
+    <p>Verbose operation:</p>
+
+    <pre class="brush: bash">
+jpm xpi -v</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_post">jpm post</h3>
+
+<p>This command packages the add-on as an <a href="/en-US/docs/XPI">XPI</a> file then posts it to some URL.</p>
+
+<pre class="brush: bash">jpm post</pre>
+
+<p>It looks for a file called <code>package.json</code> in the current directory (or <code>--addon-dir</code>) and creates an XPI file with which to post to the <code>--post-url</code>.</p>
+
+<p><code>jpm post</code> accepts the following options:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td><code>--post-url URL</code></td>
+   <td>
+    <p>The URL to post the extension to after creating an XPI.</p>
+
+    <pre class="brush: bash">
+jpm post --post-url http://localhost:8888/</pre>
+
+    <p>See <a href="https://www.npmjs.com/package/jpm#using-post-and-watchpost">Using Post and Watchpost</a> for more information.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>
+    <p>Verbose operation:</p>
+
+    <pre class="brush: bash">
+jpm post --post-url http://localhost:8888/ -v</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_watchpost">jpm watchpost</h3>
+
+<p>This command packages the add-on as an <a href="/en-US/docs/XPI">XPI</a> file then posts it to some URL whenever a file in the current working directory changes.</p>
+
+<pre class="brush: bash">jpm watchpost</pre>
+
+<p>Creates an XPI whenever a file changes in the current working directory (or <code>--addon-dir</code>) and posts that to the <code>--post-url</code>.</p>
+
+<p><code>jpm watchpost</code> accepts the following options:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td><code>--post-url URL</code></td>
+   <td>
+    <p>The URL to post the extension to after creating an XPI.</p>
+
+    <pre class="brush: bash">
+jpm watchpost --post-url http://localhost:8888/</pre>
+
+    <p>See <a href="https://www.npmjs.com/package/jpm#using-post-and-watchpost">Using Post and Watchpost</a> for more information.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>
+    <p>Verbose operation:</p>
+
+    <pre class="brush: bash">
+jpm watchpost --post-url http://localhost:8888/ -v</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_sign">jpm sign</h3>
+
+<div class="note">
+<p>This feature is only supported from jpm 1.0.4 onwards.</p>
+</div>
+
+<p>This command retrieves a new <a href="/en-US/docs/XPI">XPI</a> for your add-on signed by Mozilla. This allows you to <a href="#Supporting_updates_for_self-hosted_add-ons">self-host your add-on</a> so that users can install it without error when <a href="https://wiki.mozilla.org/Add-ons/Extension_Signing">signed add-ons are required</a>.</p>
+
+<p>You can sign an XPI you've already generated by passing the XPI file in the <code>--xpi</code> argument, like this:</p>
+
+<pre class="bz_comment_text" id="comment_text_2">jpm sign --api-key ${JWT_ISSUER} --api-secret ${JWT_SECRET} --xpi &lt;xpi file&gt;</pre>
+
+<p>Alternatively, you can omit the <code>--xpi</code> argument, in which case <code>jpm sign</code> will generate an XPI from the current directory (or <code>--addon-dir</code>).</p>
+
+<pre class="brush: bash">jpm sign --api-key ${JWT_ISSUER} --api-secret ${JWT_SECRET}</pre>
+
+<p>This submits an <a href="/en-US/docs/XPI">XPI</a> it to the <a href="https://addons.mozilla.org/">addons.mozilla.org</a> <a href="https://olympia.readthedocs.org/en/latest/topics/api/signing.html">signing API</a>, then downloads a signed XPI to the working directory if it passes validation.</p>
+
+<p>To get values for <code>--api-key</code> and <code>--api-secret</code>, you will need to <a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">create API credentials on addons.mozilla.org</a>. On the AMO key management page, these values are labeled "JWT_Issuer" and "JWT_Secret".</p>
+
+<p>Here are some possible outcomes of running the <code>sign</code> command:</p>
+
+<ul>
+ <li>Your add-on passed validation, was signed by Mozilla, and a new signed <a href="/en-US/docs/XPI">XPI</a> was downloaded to your working directory.</li>
+ <li>Your add-on failed validation, was not signed, and you got a link to a detailed report. After fixing the validation errors, you can run the command again.</li>
+ <li>You add-on passed validation but it could not be automatically signed because your add-on is <a href="/en-US/Add-ons/Distribution">listed</a>. Listed add-ons will require a manual review before they can be signed.</li>
+ <li>Your add-on at this exact version number already exists, so it was not signed. Increment the version number in your <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> file and run the command again.</li>
+</ul>
+
+<p>Under the hood, <code>jpm sign</code> creates an unlisted add-on inside <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, which means you must distribute the XPI file yourself for your users to install it. If you need to create a listed add-on, just <a href="https://addons.mozilla.org/en-US/developers/addon/submit/2">submit it directly to addons.mozilla.org</a> where it is signed automatically. See the <a href="/en-US/docs/Extension_Versioning%2C_Update_and_Compatibility#Debugging_and_solving_problems">debugging</a> section if you are experiencing difficulty installing a signed add-on.</p>
+
+<p><code>jpm sign</code> accepts the following options:</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td><code>--api-key=JWT_ISSUER</code></td>
+   <td>
+    <p>API access key (string) generated on the <a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">addons.mozilla.org key management page</a>.</p>
+
+    <p>On the AMO key management page, this value is labeled "JWT Issuer".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--api-secret=JWT_SECRET</code></td>
+   <td>
+    <p>API access secret (string) generated on the <a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">addons.mozilla.org key management page</a>. This value should be guarded with care and never checked into version control. If your secret is compromised, another developer could upload add-ons to your account. You should revoke and regenerate compromised API credentials immediately.</p>
+
+    <p>On the AMO key management page, this value is labeled "JWT Secret".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--api-url-prefix=http://.../api</code></td>
+   <td>
+    <p>An optional API URL prefix in case you'd like to use a pre-production signing API.</p>
+
+    <p>For example, you could pass <code>https://addons-dev.allizom.org/api/v3</code> to use the dev instance of <a href="https://addons.mozilla.org/">addons.mozilla.org</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--xpi=/path/to/file.xpi</code></td>
+   <td>
+    <p>An <a href="/en-US/docs/XPI">XPI</a> file to sign. When no file is specified, a new XPI will be generated from the current directory (or <code>--addon-dir</code>).</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Techniques">Techniques</h2>
+
+<h3 id="Selecting_a_browser_version">Selecting a browser version</h3>
+
+<p>By default, <code>jpm run</code> and <code>jpm test</code> runs the release version of Firefox. You can instruct jpm to use a different version in one of two ways:</p>
+
+<ul>
+ <li>
+  <p>You can use the <code>-b</code> or <code>--binary</code> option to instruct jpm to run a different version of Firefox. You can supply a path to a specific binary:</p>
+
+  <pre class="brush: bash">jpm run -b /path/to/Firefox/Nightly</pre>
+
+  <p>As a shorthand for this, you can pass "nightly", "firefoxdeveloperedition", "aurora", "beta", or "firefox" and jpm will look in the default location for these Firefox versions [Note: As of Firefox 48, the shorthands "firefox" and "beta" will resolve to versions of Firefox which will not run your add-on. This is due to Firefox 48, and later, not having the option to run add-ons which are <a href="/en-US/docs/Mozilla/Add-ons/Distribution">unsigned</a>.]:</p>
+
+  <pre class="brush: bash">jpm run -b nightly</pre>
+ </li>
+ <li>
+  <p>You can set the <code>JPM_FIREFOX_BINARY</code> environment variable with the path to the version of Firefox you want to run. When you invoke <code>jpm run</code> or <code>jpm test</code> without the <code>-b</code> option, jpm first checks <code>JPM_FIREFOX_BINARY</code>, and use this as the path if it is set.</p>
+ </li>
+</ul>
+
+<h3 id="Using_.jpmignore_to_ignore_files">Using <code>.jpmignore</code> to ignore files</h3>
+
+<p>Using <code>.jpmignore</code> is similar to using <code>.gitignore</code> with <code>git</code>, <code>.hgignore</code> with Mercurial, or <code>.npmignore</code> with <code>npm</code>. By using this file, you can let <code>jpm</code> know which files you would like it to ignore when building a <code>.xpi</code> file with <code>jpm xpi</code>.</p>
+
+<p>Here is an example:</p>
+
+<pre class="brush: bash"># Ignore .DS_Store files created by mac
+.DS_Store
+
+# Ignore any zip or xpi files
+*.zip
+*.xpi
+</pre>
+
+<p>A <code>.jpmignore</code> file with the above contents would ignore all zip files and <code>.DS_Store</code> files from the xpi generated by <code>jpm xpi</code>.</p>
+
+<h3 id="Using_profiles">Using profiles</h3>
+
+<p>By default, <code>jpm run</code> uses a new profile each time it is executed. This means that any profile-specific data entered from one run of <code>jpm</code> is not, by default, available in the next run.</p>
+
+<p>This includes, for example, any extra add-ons you installed, or your history, or any data stored using the <a href="/en-US/Add-ons/SDK/High-Level_APIs/simple-storage">simple-storage</a> API.</p>
+
+<p>To make <code>jpm</code> use a specific profile, pass the <code>--profile</code> option, specifying the name of the profile you wish to use, or the path to the profile.</p>
+
+<pre class="brush: bash">jpm run --profile boogaloo
+</pre>
+
+<pre class="brush: bash">jpm run --profile path/to/boogaloo</pre>
+
+<p>Use the <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">profile manager</a> to create a new profile if needed.</p>
+
+<p>If you need changes to the profile to persist, add the <code>--no-copy</code> argument. However beware that jpm might also apply changes to the profile, setting some preferences that will make it unusable for daily usage.</p>
+
+<h3 id="Developing_without_browser_restarts">Developing without browser restarts</h3>
+
+<p>Because <code>jpm run</code> restarts the browser each time you invoke it, it can be a little cumbersome if you are making very frequent changes to an add-on. An alternative development model is to use the <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/" rel="noreferrer">Extension Auto-Installer</a> add-on: this listens for new XPI files on a specified port and installs them automatically. That way you can test new changes without needing to restart the browser:</p>
+
+<ul>
+ <li>make a change to your add-on</li>
+ <li>run <code>jpm post --post-url http://localhost:8888/</code>, to make an XPI and post it.</li>
+</ul>
+
+<p>You could even automate this workflow with a simple script. For example:</p>
+
+<pre class="brush: bash">jpm watchpost --post-url http://localhost:8888/
+</pre>
+
+<p>Note that the logging level defined for the console is different when you use this method, compared to the logging level used when an add-on is run using <code>jpm run</code>. This means that if you want to see the output from <a href="/en-US/Add-ons/SDK/Tutorials/Logging" rel="noreferrer"><code>console.log()</code></a> messages, you have to tweak a setting. See the documentation on <a href="/en-US/Add-ons/SDK/Tools/console#Logging_Levels" rel="noreferrer">logging levels</a> for the details on this.</p>
+
+<h3 id="Overloading_the_built-in_modules">Overloading the built-in modules</h3>
+
+<p>The SDK modules you use to implement your add-on are built into Firefox. When you run or package an add-on using <code>jpm run</code> or <code>jpm xpi</code>, the add-on uses the versions of the modules in the version of Firefox that hosts it.</p>
+
+<p>As an add-on developer, this is usually what you want. But if you're developing the SDK modules themselves, of course, it isn't. In this case you need to:</p>
+
+<ul>
+ <li>Get a local copy of the SDK modules that you want: this usually means checking out the SDK from its <a href="https://github.com/mozilla/addon-sdk" rel="noreferrer">GitHub repo</a></li>
+ <li>Set the <code>JETPACK_ROOT</code> environment variable to your local copy</li>
+ <li>Pass the <code>-o</code> option to <code>jpm run</code> or <code>jpm xpi</code>:</li>
+</ul>
+
+<pre class="brush:bash">jpm run -o
+</pre>
+
+<p>This instructs jpm to use the local copies of the SDK modules, not the ones in Firefox. If you do not want to set the <code>JETPACK_ROOT</code> environment variable, you can pass the location of your copy of the SDK modules along with <code>-o</code>:</p>
+
+<pre class="brush:bash">jpm run -o "/path/to/addon-sdk/"</pre>
+
+<p>The path must be an absolute path and point to the SDK's root (not <code>addon-sdk/sdk</code> or <code>addon-sdk/sdk/lib</code>, for instance).</p>
+
+<h3 id="Supporting_updates_for_self-hosted_add-ons">Supporting updates for self-hosted add-ons</h3>
+
+<div class="note">
+<p>This feature is only supported from jpm 1.0.3 onwards.</p>
+</div>
+
+<p>When you make updates to your add-on to add features or fix bugs, you'll want any previously installed versions of the add-on to update themselves to the new version.</p>
+
+<p>If you list your add-on on <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, then all you have to do here is submit the new version; add-ons default to checking <a href="https://addons.mozilla.org/">addons.mozilla.org</a> for new versions of themselves. You can stop reading this section.</p>
+
+<p>If you do not list your add-on on <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, you need to generate a Mozilla-signed XPI and tell Firefox where it can find new versions of your add-on. The way this works is:</p>
+
+<ul>
+ <li>you run <a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_sign">jpm sign</a> anytime you need to create a new version</li>
+ <li>you host the signed add-on XPI and update it when you need to</li>
+ <li>you host an "update manifest", which, among other things, contains a URL pointing to the XPI</li>
+ <li>your add-on tells Firefox where it can find the update manifest</li>
+</ul>
+
+<p>To do this, include two extra keys in package.json:</p>
+
+<ul>
+ <li><code><a href="/en-US/Add-ons/SDK/Tools/package_json#updateURL">updateURL</a></code>: This URL is included in the <a href="/en-US/docs/Mozilla/Add-ons/Install_Manifests">install manifest</a> of the XPI file that <code>jpm xpi</code> builds. It points to your update manifest. The <code>updateURL</code> value <em>may</em> be HTTPS. If it is not, then you'll also need to sign the update manifest, and then include the public key using the <code><a href="/en-US/Add-ons/SDK/Tools/package_json#updateKey">updateKey</a></code> field in package.json. See <a href="/en-US/docs/Extension_Versioning%2C_Update_and_Compatibility#Securing_Updates">Securing updates</a> for more on this.</li>
+ <li><code><a href="/en-US/Add-ons/SDK/Tools/package_json#updateLink">updateLink</a></code>: This URL is included in the update manifest file. It points to the XPI, and <em>must</em> be an HTTPS URL.</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11847/addons-update.svg" title="[https://mdn.mozillademos.org]"></p>
+
+<p>If you include <code>updateURL</code> and <code>updateLink</code> (and also <code>updateKey</code> in case <code>updateURL</code> is not HTTPS), then <code>jpm xpi</code> will:</p>
+
+<ul>
+ <li>Embed the value you supplied for <code>updateURL</code> in the XPI it generates.</li>
+ <li>Generate an update manifest alongside the XPI, and embed the value you supplied for <code>updateLink</code> in the manifest.</li>
+</ul>
+
+<p>You then host the update manifest at <code>updateURL</code>, and host new versions of the XPI at <code>updateLink</code>.</p>
+
+<p>For some more details on this, see <a href="/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Automatic_Add-on_Update_Checking">Automatic Add-on Update Checking</a>.</p>

@@ -1,0 +1,361 @@
+---
+title: Building apps for Firefox OS
+slug: Archive/B2G_OS/Firefox_OS_apps/Building_apps_for_Firefox_OS
+tags:
+  - Firefox OS
+  - Installation
+  - Layout
+  - Manifest
+  - NeedsTranslation
+  - TopicStub
+  - distribution
+  - packaging
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_apps_for_Firefox_OS
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/pt-PT/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/pt-PT/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/pt-PT/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>Firefox OS apps are essentially no different to standard websites or web apps. They are built using standard open web technologies — HTML, CSS, JavaScript, etc. — and can be accessed using a web browser. The main differences lie in their ability to be installed on devices and work offline, access to advanced APIs that allow interaction with device features such as camera, gyroscope and address book, and the existence of a solid developer ecosystem — including a Marketplace for distribution of free and paid apps. Generally, they provide users with an "app experience", while still being based on open, cross platform technologies.</p>
+</div>
+
+<p>Firefox OS apps have a low barrier for entry, especially for existing web developers and mobile developers; they are also a lot more portable across platforms than native equivalents, and not locked into walled gardens. As we've already mentioned Firefox OS apps are based on web technologies — HTML, CSS, and JavaScript — so if you've written a web page you already know the basics. Even if you don't have the basics you'll be able to easily follow this guide, but you may want to check out our list of <a href="/en-US/docs/Web/Tutorials">Beginner's tutorials</a> to learn more about developing with open web technologies.</p>
+
+<p>This section of MDN provides a detailed reference on web app development topics specific to creating apps that are installable on Firefox OS (and other Firefox-supported platforms like Android), including app manifests, writing install functionality, permissions for using device APIs, and more. It is targeted towards experienced developers that are just looking to create or port an existing app to Firefox OS.</p>
+
+<div class="note">
+<p><strong>Note</strong>: There is also a very useful screencast series available, if you prefer watching videos — <a href="/en-US/Firefox_OS/Screencast_series:_App_Basics_for_Firefox_OS">App Basics for Firefox OS</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If you are a complete beginner to web apps (perhaps you just know a bit of HTML/CSS/JS) and want a very simple guide to building up an app, check out our <a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS app beginners tutorial</a>.</p>
+</div>
+
+<h2 id="Firefox_OS">Firefox OS</h2>
+
+<p><a href="/en-US/Firefox_OS">Firefox OS</a> (also referred to by its codename <strong>Boot to Gecko</strong> — or <strong>B2G</strong>) is Mozilla's open source mobile operating system. It's based on a Linux kernel, which boots into a <a href="/en-US/docs/Mozilla/Gecko">Gecko</a>-based runtime that lets users install and run open web apps<strong>, </strong>Gecko being the rendering engine that the Firefox browser uses to render and display web content.</p>
+
+<p>Firefox OS comes with <a href="/en-US/Firefox_OS/Platform/Gaia">Gaia</a>, which forms the entire UI layer of Firefox OS and the default suite of apps that handle the fundamental functions of the phone such as settings, calls, SMS, taking and storing photos, etc.</p>
+
+<p>Mozilla's open web apps are installable on Firefox OS, and other Firefox-supported platforms via Mozilla's web run time technology. For more details, see <a href="/en-US/Marketplace/Options/Open_web_apps_for_android">Open web apps for Android</a>, and <a href="/en-US/Marketplace/Options/Open_web_apps_for_desktop">Open web apps for Desktop</a>.) In future, the technologies should be standardized and adopted across a wider range of platforms.</p>
+
+<h2 id="Installable_app_workflow">Installable app workflow</h2>
+
+<p>An installable open web app is very similar to a normal web app or web site — it is built using familiar web technologies like HTML, CSS and JavaScript. The difference is in the additional features the Firefox (OS) platform has available. The following diagram illustrates how those features work together.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8493/installable-apps-flowchart-rough.png" style="display: block; height: 358px; margin: 0px auto; width: 520px;"></p>
+
+<ol>
+ <li>Start with a fairly standard web application, built using your favourite toolchain.</li>
+ <li>Identify this as an installable web app by adding a <a href="/en-US/Apps/Build/Manifest">manifest.webapp</a> file to the web app root directory. This defines a number of things about the app such as its name, icons, localization information, and probably most importantly the <a href="/en-US/Apps/Build/App_permissions">permissions the app needs</a> to access device APIs such as <a href="/en-US/docs/WebAPI/Camera">Camera</a>, <a href="/en-US/docs/Web/API/Device_Storage_API">Device Storage</a>, <a href="/en-US/docs/WebAPI/WebBluetooth">Bluetooth</a> and <a href="/en-US/docs/WebAPI/WebSMS">SMS</a>.</li>
+ <li>Create any functionality you require that makes use of special device APIs.</li>
+ <li>Create the assets your app needs, such as the <a href="/en-US/Apps/Build/Icon_implementation_for_apps">icons</a>.</li>
+ <li>Package and distribute your app. This can be done in a variety of ways, from simple self-published <a href="/en-US/Marketplace/Options/Hosted_apps">hosted apps</a> (in which case you'd have to write your own install functionality), to <a href="/en-US/Marketplace/Options/Packaged_apps">packaged apps</a> distributed via the <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> (which handles the install functionality for you.)</li>
+</ol>
+
+<h2 id="Recommendations">Recommendations</h2>
+
+<p>This section provides recommendations and best practices for creating installable open web apps.</p>
+
+<h3 id="Web_app_manifest_files">Web app manifest files</h3>
+
+<p>Your app's <code>manifest.webapp</code> file should be placed in the root of your app directory, and contain a simple JSON structure, as explained in detail in our <a href="/en-US/Apps/Build/Manifest">App Manifest</a> reference. A simple App Manifest JSON looks like so:</p>
+
+<pre class="brush: json">{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/index.html",
+  "icons": {
+    "512": "/img/icon-512.png",
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}</pre>
+
+<p>For simple apps, this is all you'll need, but you may also need other fields, as discussed in appropriate places below.</p>
+
+<h3 id="Functionality_Device_APIs_and_permissions">Functionality, Device APIs, and permissions</h3>
+
+<p>One of the main strengths of the Firefox OS platform is the provision of <a href="/en-US/docs/WebAPI">new Web APIs</a> to access key device services like the contacts, and hardware like NFC, Bluetooth and SMS. There are many examples of the different new APIs available along with examples throughout our App Center Build section, but in this section we'll give you some specific pointers towards tasks you might want to accomplish with them. Common task categories include:</p>
+
+<ul>
+ <li><a href="/en-US/Apps/Build/gather_and_modify_data">Gathering and modifying data</a>: Retrieving data from files, device hardware (e.g. <a href="/en-US/docs/Web/API/Battery_Status_API">battery</a>, <a href="/en-US/docs/Web/API/Proximity_Events">proximity</a>, <a href="/en-US/docs/Web/API/DeviceLightEvent/Using_light_events">light sensor</a>, <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">GPS</a>) and key services (e.g. <a href="/en-US/docs/WebAPI/Camera">camera</a>, <a href="/en-US/docs/Web/API/Contacts_API">contacts</a>).</li>
+ <li><a href="/en-US/Apps/Build/User_notifications">Giving the user notifications</a>: With <a href="/en-US/docs/Web/API/Notification/Using_Web_Notifications">system notifications</a>, <a href="/en-US/docs/Web/API/Alarm_API">alarms</a>, and <a href="/en-US/docs/Web/Guide/API/Vibration">vibration</a> APIs.</li>
+ <li><a href="/en-US/Apps/Build/Offline">Making your app work offline</a>: With APIs like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, <a href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>, and the Firefox OS-specific <a href="/en-US/docs/Web/API/Data_Store_API">Data Store</a> API.</li>
+ <li><a href="/en-US/Apps/Build/User_input_methods">Implementing control mechanisms</a>: Mouse, keyboard, pointer lock, touch inputs, drag and drop, and more.</li>
+ <li>Push Notifications: invoked using the <a class="external external-icon" href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush Web API</a>, these are a way to make applications wake up when a device receives a certain message.</li>
+ <li><a class="external external-icon" href="https://wiki.mozilla.org/WebAPI/WebActivities">Web Activities</a>: A way to get applications to talk to each other and share capabilities, for example taking pictures or recording video. This often provides easier ways to share capabilities.</li>
+ <li>Controlling device communication functionality: Such as <a href="/en-US/docs/WebAPI/WebSMS">SMS</a>, <a href="/en-US/docs/WebAPI/WebBluetooth">Bluetooth</a>, Dialer, and <a href="/en-US/docs/Web/API/NFC_API">NFC</a>.</li>
+</ul>
+
+<p>Different APIs have different levels of security, with some APIs being limited in who can access them. This makes sense — it would be really insecure to just let any app have access to say, a device's SMS and dialer functionality. The different levels are as follows:</p>
+
+<ul>
+ <li>Common: Common APIs like <a href="/en-US/docs/Web/API/Notification/Using_Web_Notifications">Notification</a>, <a href="/en-US/docs/NavigatorUserMedia.getUserMedia">getUserMedia</a>, <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, and <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation</a> don't need any special privileges to use them. Some of these APIs have an extra level of security anyway, for example a getUserMedia or Geolocation call will result in the user being shown a confirmation box to ask if they are happy with an app accessing their GPS or web cam.</li>
+ <li>Privileged: Privileged APIs have more security implications than common ones, and as such can only be used by packaged apps that have been verified by the <a href="/en-US/Marketplace">Firefox Marketplace</a> (see below). These include the <a href="/en-US/docs/WebAPI/Camera">Camera</a>, <a href="/en-US/docs/Web/API/Using_the_Browser_API">Browser</a>, <a href="/en-US/docs/Web/API/Contacts_API">Contacts</a> and <a href="/en-US/docs/Web/API/TCP_Socket_API">TCP Socket</a> APIs.</li>
+ <li>Certified: Certified APIs are generally critical in terms of device security, and therefore only usable in apps pre-installed on the device by Mozilla or the device vendor. These include the <a href="/en-US/docs/WebAPI/WebSMS">SMS</a>, <a href="/en-US/docs/WebAPI/WebBluetooth">Bluetooth</a>, and Dialer APIs.</li>
+</ul>
+
+<p>To request permission to use a restricted API, you have to include a <code>permissions</code> field in your manifest file, and set the type field to privileged in the case of privileged APIs. These fields will look something like this:</p>
+
+<pre class="brush: json">"type" : "privileged",
+"permissions": {
+  "contacts": {
+    "description": "Required for autocompletion in the share screen",
+    "access": "readcreate"
+    },
+  "alarms": {
+    "description": "Required to schedule notifications"
+  }
+}</pre>
+
+<div class="note">
+<p><strong>Note</strong>: You can find out exactly what permissions (if any) each API requires by looking at our <a href="/en-US/Apps/Build/App_permissions">App permissions reference</a>; this reference also lists which version of Firefox OS supports each API. To find out what API features are new as of each version of Firefox OS, consult our <a href="/en-US/Firefox_OS/Releases">Firefox OS developer release notes</a>.</p>
+</div>
+
+<p>Using <a href="/en-US/docs/Web/API/Web_Activities">Web activities</a> also requires that you specify their type and required data in the <code>activities</code> field, for example:</p>
+
+<pre class="brush: json">"activities": {
+  "share": {
+    "filters": {
+      "type": [ "image/png", "image/gif" ]
+    },
+    "href": "foo.html",
+    "disposition": "window",
+    "returnValue": true
+  }
+}</pre>
+
+<p>Lastly, some APIs such as the <a href="/en-US/Apps/Build/User_notifications/Using_Alarms_to_notify_users">Alarm and Notification APIs</a> also require you to specify a <code>messages</code> field, which details what kind of system messages are to be captured by the app, and what page(s) will handle them:</p>
+
+<pre class="brush: json">"messages": [
+    { "alarm": "/index.html" },
+    { "notification": "/index.html" }
+  ]</pre>
+
+<h3 id="Icons_and_other_design_best_practices">Icons and other design best practices</h3>
+
+<p>The best practices you would use for creating a Firefox OS app are pretty much the same as those you would use for creating any standard web app, in terms of both coding and design.</p>
+
+<ol>
+ <li>You should use <a href="/en-US/Apps/app_layout/responsive_design_building_blocks">responsive design techniques</a> to make sure your app layout will work well on a variety of screen sizes, especially <a href="/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a> and <a href="/en-US/docs/Web/CSS/@viewport">viewport</a>. Because many devices have high resolution screens these days, this should include use of <code>resolution</code> media queries to optimize for different resolutions.</li>
+ <li>You should take advantage of the building blocks and design patterns we've made available (see our app <a href="/en-US/Apps/Design">Design section</a>.)</li>
+ <li>You should also make sure to optimize your code as much as possible so it is more likely to work on <a href="/en-US/Apps/Build/Performance/Apps_for_low-memory_Firefox_OS_devices">low-memory devices</a>, which many Firefox OS devices are (see our <a href="/en-US/Apps/Build/Performance">Performance topic</a>).</li>
+ <li>For the visual design of Firefox apps, you are free to follow your own path, but you could certainly get some useful pointers from our <a href="https://www.mozilla.org/en-US/styleguide/products/firefox-os/">Firefox OS style guide</a>.</li>
+ <li>For your app icons, you should make sure to include at least a 512x512 icon and a 128x128 icon. Read <a href="/en-US/Apps/Build/Icon_implementation_for_apps">Icon implementation for Apps</a> for more information.</li>
+</ol>
+
+<h3 id="App_packaging_installation_and_distribution">App packaging, installation and distribution</h3>
+
+<p>When an App is ready to be distributed, you have a few options of how to publish them:</p>
+
+<ul>
+ <li>You can <a href="/en-US/Marketplace/Options/Self_publishing">self-publish</a> a <a href="/en-US/Marketplace/Options/Hosted_apps">hosted app</a>. This requires you to simply upload your app to a web server, just like you would for a normal web site, and include the manifest, icons, etc. that the installable app needs. In addition, you need to include some code to install your app on a Firefox OS device or other device where Firefox is present. This will generally take the form of a <a href="/pt-PT/docs/Web/HTML/Element/button" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;button&gt;</code></a> element that when pressed invokes the <a href="/pt-PT/docs/Web/API/Apps/install" title="The documentation about this has not yet been written; please consider contributing!"><code>Apps.install</code></a> method, passing it the URL of the manifest file. Note that hosted apps, even when installed, are always run from the web site they are hosted on, so don't confer the ability to run offline, unless you provide this ability using a technology like <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> (or soon, <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service Workers</a>.)</li>
+ <li>You can <a href="/en-US/Marketplace/Options/Self_publishing">self-publish</a> a <a href="/en-US/Marketplace/Options/Packaged_apps">packaged app</a>. This requires you to zip your app up, and upload your zip to a web server, after making sure you've included the manifest, icons, etc. that the installable app needs. In addition, you need to include a <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing#Mini-manifest_fields">mini-manifest</a> file in the same directory as the zip to reference the app, and some code to install your app on a Firefox OS device or other device where Firefox is present. This will generally take the form of a <a href="/pt-PT/docs/Web/HTML/Element/button" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;button&gt;</code></a> element that when pressed invokes the <a href="/pt-PT/docs/Web/API/Apps/installPackage" title="The documentation about this has not yet been written; please consider contributing!"><code>Apps.installPackage</code></a> method, passing it the URL of the mini-manifest file.</li>
+ <li>You can publish a packaged app on the Firefox Marketplace. The process for doing this is <a href="/en-US/Marketplace/Publishing/Submit/Overview">well documented over at our Marketplace zone</a>.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: Self-published apps don't have the ability to access privileged APIs, for security reasons.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Another common cause of failure in app installation is incorrect paths in manifests and install code. These paths should be relative to the origin of the server location. So for example, if your example's root is at <code>http://www.mysite.com/myapp/</code>, and your icon is at <code>http://www.mysite.com/myapp/manifest.webapp</code>, the install path would be <code>/myapp/manifest.webapp</code>, not <code>/manifest.webapp</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Installable open web apps used to have a "single app per origin" security policy, but this was lifted as of Firefox 34/Firefox OS 2.1 (read <a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps_for_Firefox_OS/App_manifest_FAQ#Can_I_have_more_than_one_app_at_my_origin.3F">this FAQ entry</a> for more information). If you still need to support older versions, consider hosting your apps at separate origins; one strategy is to <a href="/en-US/Marketplace/Publishing/Adding_a_subdomain">create different subdomains</a> for your apps.</p>
+</div>
+
+<h3 id="Multi-locale_apps">Multi-locale apps</h3>
+
+<p>You can create multi-locale apps quite easily. This is done by:</p>
+
+<ol>
+ <li>Adding special <code>data-l10n-id</code> attributes to each HTML element that requires localization, the value of which should be an identifier for that string. For example:</li>
+ <li><code>&lt;h1 data-l10n-id="app-title"&gt;My app&lt;/h1&gt;</code>.</li>
+ <li>Including the <a href="https://github.com/fabi1cazenave/webL10n/blob/master/l10n.js">l10n.js</a> library in your page using a regular <a href="/pt-PT/docs/Web/HTML/Element/script" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;script&gt;</code></a> element.</li>
+ <li>Creating a <code>locales</code> folder inside your app directory containing a folder for each separate locale, then placing an <code>app.properties</code> file inside each one containing that language's translations, each one on a new line. For example <code>app-title = Mon application</code> for French.</li>
+ <li>Creating a <code>locales.ini</code> file inside the locales folder, which specifies the default locale and the path to each <code>app.properties</code> file. This will look like so:
+  <pre>@import url(en/app.properties)
+
+[es]
+@import url(fr/app.properties)</pre>
+ </li>
+ <li>Referencing <code>locales.ini</code> from your HTML file using a <a href="/pt-PT/docs/Web/HTML/Element/link" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;link&gt;</code></a> element, like so:
+  <pre class="brush: html">&lt;link rel="resource" type="application/l10n" href="locales/locales.ini" /&gt;</pre>
+ </li>
+ <li>Updating your manifest file to include a default locale and locales field containing information about your supported locales:
+  <pre class="brush: json">"default_locale": "en",
+"locales": {
+  "fr": {
+    "name" : "Mon application",
+    "description" : "Mon application description"
+  }
+}</pre>
+ </li>
+</ol>
+
+<p>For more details, begin with our <a href="/en-US/Apps/Build/Localization/Getting_started_with_app_localization">Getting started with app localization</a> article, then check out the rest of our articles about <a href="/en-US/Apps/Build/Localization">app localization</a>.</p>
+
+<h3 id="Debugging_apps">Debugging apps</h3>
+
+<p>Mozilla provides a number of tools to help you test Firefox OS apps.</p>
+
+<h4 id="Testing_on_Firefox_desktop">Testing on Firefox desktop</h4>
+
+<p>The quickest way to test your app's basic functionality is to simply load it in Firefox desktop (open the <code>index.html</code> file in the browser) — this supports most of the features you'll be using to develop your app (with the exception of some of the device APIs.) From here you can use the standard <a href="/en-US/docs/Tools/Browser_Toolbox">Firefox Toolbox</a> to debug your code, and the <a href="/en-US/docs/Tools/Responsive_Design_View">Responsive Design View</a> to test responsive/mobile layouts.</p>
+
+<h4 id="Testing_in_the_Firefox_OS_simulator">Testing in the Firefox OS simulator</h4>
+
+<p>You can also test the app in a Firefox OS simulator via our <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> tool. This will give you a more realistic idea of how it will look on a real device.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Our new <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> tool is currently only available in Firefox Nightly, but will be rolled out across all versions soon. It does everything App Manager does and more, including in-app code editing, creation of new apps, and tools like the <a href="/en-US/docs/Tools/WebIDE/Monitor">Monitor</a>, which enables to track performance across an app's lifespan.</p>
+</div>
+
+<h4 id="Testing_on_a_Firefox_OS_device">Testing on a Firefox OS device</h4>
+
+<p>Some device APIs — such as the vibration API — can't be tested successfully on a simulator. To fully test this you'll need to get hold of a real Firefox OS device. If you've got one, you can connect it to your computer and install apps contained on your local drive straight onto it via the App Manager/WebIDE.</p>
+
+<h4 id="Logcat">Logcat</h4>
+
+<p>The Android <a href="/en-US/Firefox_OS/Debugging/On-device_console_logging#Using_logcat">adb logcat tool</a> is very useful for getting debugging output from a Firefox OS device, if you are comfortable with command line tools. For example, you can get info on dying apps using the following:</p>
+
+<pre class="brush: bash">adb logcat GeckoConsole:* *:F | grep -vE "parsing value|Unknown property|declaration|invalid source| but found |pseudo-"</pre>
+
+<h3 id="Supporting_cross-Firefox_OS_versions">Supporting cross-Firefox OS versions</h3>
+
+<p></p><p>Note that when developing apps for Firefox OS, you need to bear in mind what platform versions will be available on the devices your customers will have (see our <a href="/en-US/Firefox_OS/Developer_phone_guide/Phone_specs#Firefox_OS_phones_available">available phones table</a> for a list.) Remember that it is not as simple to update phone platform software as it is desktop software — users tend to be at the mercy of the network providers. You therefore need to develop apps to support these versions. As an example, multiline Flexbox doesn't work on Firefox OS versions below 1.3, so you may need to use a simpler layout method or provide a fallback for older versions.</p>
+
+<p>This issue should go away soon, as more consumer Firefox OS devices appear, equipped with newer versions of Firefox OS out of the box.</p>
+
+<div class="warning">
+<p>The current baseline platform we recommended developing for is <a href="/en-US/Firefox_OS/Releases/1.1">Firefox OS 1.1</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: MDN's <a href="/en-US/docs/Web">web platform reference pages</a> include browser/platform support information, plus you can find support information for more App-specific technologies on our <a href="/en-US/Apps/Reference">Apps API Reference</a>.</p>
+</div><p></p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>You can find many examples throughout the App Center <a href="/en-US/Apps/Build">Build section</a>; there are also some examples in our <a href="/en-US/Apps/Reference_apps">Reference apps</a> section.</p>
+
+<h2 id="Tutorials">Tutorials</h2>
+
+<h3 id="Installable_app_basics">Installable app basics</h3>
+
+<dl>
+ <dt><a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS app beginners tutorial</a></dt>
+ <dd>A complete beginner's guide to creating a Firefox OS app.</dd>
+ <dt><a href="/en-US/Marketplace/Options/Packaged_apps">Packaged apps</a></dt>
+ <dd>A packaged app is an Open Web App that has all of its resources contained in a zip file, instead of having its resources on a Web server. In here you'll learn all you need to know about packaged apps.</dd>
+ <dt><a href="/en-US/Marketplace/Options/Hosted_apps">Hosted apps</a></dt>
+ <dd>A hosted app is an Open Web App that has all of its resources (HTML, CSS, JavaScript, app manifest and so on) stored on a Web server. This article will tell you all you need to know about hosted apps.</dd>
+ <dt><a href="/en-US/Marketplace/Options/Packaged_or_hosted_">Packaged or hosted?</a></dt>
+ <dd>Should you make your app hosted or packaged? This article will help you decide.</dd>
+ <dt><a href="/en-US/Marketplace/Options/Self_publishing">Self-publishing apps</a></dt>
+ <dd>This guide explains how to write the code that controls publishing apps, should you wish to write it yourself rather than use the <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>.</dd>
+</dl>
+
+<h3 id="Advanced_topics">Advanced topics</h3>
+
+<dl>
+ <dt><a href="/en-US/Apps/Build/Icon_implementation_for_apps#Firefox_OS">Icon implementation for apps</a></dt>
+ <dd>Implementation specifics for implementing Firefox app icons, including different sizes needed.</dd>
+ <dt><a href="/en-US/docs/Web/Apps/Updating_apps" title="/en-US/docs/Web/Apps/Updating_apps">Updating apps</a></dt>
+ <dd>How app updates are handled.</dd>
+</dl>
+
+<div class="section">
+<h2 id="Reference">Reference</h2>
+
+<dl>
+ <dt><a href="/en-US/Apps/Reference/Firefox_OS_app_tools">Firefox OS app tools</a></dt>
+ <dd>This page provides a list of useful tools, libraries and examples that are useful for Firefox OS app developers, whether you want an code template to copy, or need help with adding a specific feature to your Firefox OS app.</dd>
+ <dt><a href="/en-US/docs/Web/Apps/Build/Manifest" title="/en-US/docs/Web/Apps/Manifest">App manifest</a></dt>
+ <dd>A detailed guide to Open Web App manifest files, and the different options they can contain.</dd>
+ <dt><a href="/en-US/docs/Web/Apps/App_permissions">App permissions</a></dt>
+ <dd>Access to device APIs is key to creating many useful apps. Here is what's available and how to access them.
+ <div class="note">
+ <p><strong>Note</strong>: you can use the <a href="https://github.com/mozilla-b2g/fxos-appgen">Firefox OS App Generator</a> to automatically generate and install FxOS apps with particular permissions, message-listeners, types, etc.</p>
+ </div>
+ </dd>
+ <dt><a href="/en-US/Firefox_OS/API_support_table">Firefox OS API support table</a></dt>
+ <dd>A list of the different APIs available to Firefox OS, and what support is available for them.</dd>
+ <dt><a href="/en-US/docs/Web/Apps/JavaScript_API" title="/en-US/docs/Web/Apps/JavaScript_API">App installation and management APIs</a></dt>
+ <dd>A reference for the installation and management APIs that control installation and other functions of installable Open Web Apps.</dd>
+ <dt><a href="/en-US/docs/Web/Apps/Platform-specific_details">Platform-specific details of app installation</a></dt>
+ <dd>There are some differences in how apps are installed across the various platforms that support Open Web Apps; this article will help you to understand them.</dd>
+ <dt><a href="/en-US/Apps/Build/installable_apps_for_Firefox_OS/CSP">CSP for open web apps</a></dt>
+ <dd>Unlike traditional web sites, privileged and certified apps enforce a CSP (content security policy) by default. This may cause quite a bit of existing code to break while porting and cause a significant amount of confusion if developers are unaware that the CSP exists. This article explains what the restrictions imposed by the open web app CSP are.</dd>
+</dl>
+
+<h2 id="FAQ">FAQ</h2>
+
+<dl>
+ <dt><a href="/en-US/Apps/Build/installable_apps/App_manifest_FAQ" title="/en-US/docs/Web/Apps/FAQs/About_app_manifests">App manifests FAQ</a></dt>
+ <dd>Manifest frequently asked questions.</dd>
+</dl>
+</div>
+
+<dl>
+ <dt> </dt>
+</dl>

@@ -1,0 +1,117 @@
+---
+title: Drzewa
+slug: Mozilla/Tech/XUL/Kurs_XUL/Drzewa
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Przykłady_XPCOM" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_drzewa">Następny  »</a></p>
+</div><p></p>
+<p>XUL umożliwia tworzenie tabelarycznych lub hierarchicznych list przy użyciu drzewa.</p>
+<h3 id="Drzewo" name="Drzewo">Drzewo</h3>
+<p><a href="/pl/XUL/tree" title="pl/XUL/tree">Drzewo</a> w XUL jest jednym z najbardziej złożonych elementów. Drzewo może być użyte w celu wyświetlenia wierszy tekstu w kolumnach, na liście lub hierarchicznie. Drzewo umożliwia zmiany wyglądu, rozmiaru czy ukrywanie poszczególnych kolumn. Przykładami drzew są między innymi te zawierające listę wiadomości w programie pocztowym lub w okno zakładek w Mozilli.</p>
+<p>W wielu sytuacjach drzewo posiada wiele wspólnych cech z polami listy (<code><a href="/pl/XUL/listbox" title="pl/XUL/listbox">listbox</a></code>). Oba mogą być użyte do utworzenia tabel z danymi, zawierających wiele wierszy i kolumn oraz nagłówków. Jednak drzewa umożliwiają zagnieżdżanie wierszy, czego nie umożliwiają pola list. Przewagą pól list jest to, że można w nich zawrzeć dowolny typ zawartości, podczas gdy drzewa mogą zawierać tylko obrazy i tekst (stosując zaawansowane możliwości, możemy dodać do drzewa paski postępu lub pola wyboru).</p>
+<p>Drzewo składa się z dwóch części, ciała drzewa i ustawienia kolumn:</p>
+<ul> <li>Zestawu kolumn, który jest zdefiniowany przez pewną liczbę elementów <code><a href="/pl/XUL/treecol" title="pl/XUL/treecol">treecol</a></code>, po jednym na każdą kolumnę. Każda kolumna będzie widoczna w postaci nagłówka na szczycie drzewa.</li> <li>Druga cześć, ciało drzewa (tree body), które zawiera dane ukazujące się w drzewie i jest ono tworzone przy użyciu znacznika <code><a href="/pl/XUL/treechildren" title="pl/XUL/treechildren">treechildren</a></code>.</li>
+</ul>
+<p>Drzewo jest wyjątkowym elementem. Ciało drzewa składa się z pojedynczego widgetu, który wyświetla wszystkie dane w drzewie. To kontrastuje z polem listy, gdzie pojedynczy znacznik <code><a href="/pl/XUL/listitem" title="pl/XUL/listitem">listitem</a></code> i <code><a href="/pl/XUL/listcell" title="pl/XUL/listcell">listcell</a></code> jest stosowany by wyszczególnić wiersze w polu listy. W drzewie wszelkie dane do wyświetlenia są dostarczane przez oddzielny obiekt zwany widokiem drzewa. Gdy przyjdzie kolej na pokazanie komórki, widget drzewa określi, co jest do wyświetlenia i wyśle taką informację do widoku drzewa, co następnie będzie wyświetlone przez drzewo. Drzewo jest zdolne do tego, by wyciągać informacje z widoku, które wiersze mają być wyświetlone. To umożliwia optymalizację widoku w taki sposób, by pobierał informacje tylko o tym, co ma być wyświetlone. Dla przykładu, drzewo może mieć tysiące wierszy, dodatkowo większość z nich rozwiniętych poza granice widoku, tak że nie są widoczne. To znaczy, że drzewo jest skalowalne do dowolnych rozmiarów bez problemów z wydajnością.</p>
+<p>Widok drzewa jest obiektem implementującym interfejs <a href="/pl/NsITreeView" title="pl/NsITreeView">nsITreeView</a>. Interfejs ten zawiera trzydzieści własności i funkcji, które można zaimplementować. Funkcje te będą wywoływane przez drzewo zawsze, kiedy będzie konieczne uzyskać dane o stanie drzewa. Na przykład funkcja <code>getCellText()</code> będzie wywoływana w celu pobrania etykiety dla konkretnej komórki drzewa.</p>
+<p>Korzyścią z używania widoku jest w pewnym stopniu możliwość przechowywania w widoku danych w sposób dla nich odpowiedniejszy lub ładowania danych na żądanie (tak jak wiersze są wyświetlane). To umożliwia uzyskanie większej elastyczności podczas używania drzew.</p>
+<p>Naturalnie, próba implementacji widoku drzewa z trzydziestoma lub więcej własnościami i metodami może być bardzo niewygodna, w szczególności dla prostych drzew. Na szczęście XUL dostarcza kilka wbudowanych rozwiązań, które wykonają najtrudniejsze zadania za Ciebie. Dla większości drzew (szczególnie, gdy zaczynasz prace z drzewami), możesz użyć jednego z gotowych, wbudowanych typów. Jednak nic nie stoi na przeszkodzie, aby utworzyć całkowicie nowy wygląd. Jeżeli chcesz możesz przechowywać dane w tablicy lub w strukturze danych JavaScript<span class="comment"><a href="/pl/A_re-introduction_to_JavaScript#Arrays">array</a></span>, bądź wczytywać dane z pliku XML.</p>
+<p>Ponieważ całe ciało drzewa to pojedynczy widget, nie można zmienić stylu podanego wiersza lub komórki normalną drogą dlatego, że nie ma tam elementów, które wyświetlają pojedyncze komórki, jak to ma miejsce przy <code><a href="/pl/XUL/listbox" title="pl/XUL/listbox">listbox</a></code>. Zamiast tego całość jest rysowana przez ciało drzewa przy użyciu danych dostarczanych przez widok. To jest ważny punkt i wielu programistów XUL ma problem w zrozumieniu tego aspektu. By zmodyfikować wygląd pojawiającej się komórki, widok musi połączyć zestaw słów kluczowych dla wiersza i komórki. Używana jest specjalna składnia CSS. W pewien sposób to wygląda jak używanie klas CSS. Stylizacja drzew będzie omówiona bardziej szczegółowo <a href="/pl/Kurs_XUL/Nadawanie_stylu_drzewa" title="pl/Kurs_XUL/Nadawanie_stylu_drzewa">nieco później</a>.</p>
+<h3 id="Elementy_drzewa" name="Elementy_drzewa">Elementy drzewa</h3>
+<p>Drzewa mogą być tworzone przy użyciu elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code>, które są opisane w następnych artykułach. Są też tam dwa elementy używane przy definiowaniu kolumn, które są wyświetlone w drzewie.</p>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></dt> <dd>Zewnętrzny element drzewa.</dd>
+</dl>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></dt> <dd>Element wypełniający zestaw <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code>.</dd>
+</dl>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></dt> <dd>Jest używany do deklarowania pojedynczej kolumny drzewa. Używając tego elementu, można określić dodatkową informację o tym, jak dane w kolumnach maja być posortowane, a także czy użytkownik może zmieniać rozmiar kolumn. Zawsze powinno się umieszczać atrybut <code><a href="/pl/XUL/Atrybut/id" title="pl/XUL/Atrybut/id">id</a></code> na kolumnie. Mozilla stosuje <code><a href="/pl/XUL/Atrybut/id" title="pl/XUL/Atrybut/id">id</a></code> do identyfikacji kolumn przy ich ponownej aranżacji lub ich ukrywaniu. Od wersji 1.8 Mozilla już tego nie wymaga, jednak mimo wszystko dobrze jest używać atrybutu <code>id</code> do oznaczania kolumn.</dd>
+</dl>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></dt> <dd>Zawiera główne ciało drzewa, w którym są wyświetlane pojedyncze wiersze danych.</dd>
+</dl>
+<h5 id="Przyk.C5.82ad_drzewa_z_dwoma_kolumnami" name="Przyk.C5.82ad_drzewa_z_dwoma_kolumnami">Przykład drzewa z dwoma kolumnami</h5>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_1.xul">Podgląd</a></p>
+<pre>&lt;tree flex="1"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="nameColumn" label="Nazwa" flex="1"/&gt;
+    &lt;treecol id="addressColumn" label="Adres" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren/&gt;
+
+&lt;/tree&gt;
+</pre>
+<p>Cała tabela otoczona elementem <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code>. To deklaruje element, który jest użyty jako tabela lub drzewo. Podobnie jak z tabelami HTML, dane w drzewie są zorganizowane w wierszach. Kolumny są określone przy pomocy znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></code>.</p>
+<p>W drzewie możesz umieścić tyle kolumn ile sobie życzysz. Tak jak w przypadku <a href="/pl/Kurs_XUL/Kontrolki_list" title="pl/Kurs_XUL/Kontrolki_list">listy pól</a>, wiersz nagłówka pojawia się wraz z etykietami kolumn na samej górze. Rozwijane menu ukazuje się w prawym górnym rogu drzewa. Użytkownik może go używać do ukrywania i wyświetlania wybranych kolumn. Każda kolumna jest utworzona przy pomocy elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code>. Możesz ustawić etykietę używając jej atrybutu <code>label</code>. Możesz stworzyć elastyczne kolumny, jeśli drzewo będzie elastyczne, to pozwoli ono zmieniać szerokości kolumn. W tym przykładzie druga kolumna jest dwa razy szersza do pierwszej. Wszystkie kolumny powinny być umieszczone wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></code>.</p>
+<p>W tym przypadku nie określiliśmy widoku w celu dostarczeniu danych drzewa, więc zobaczymy tylko nagłówki kolumn i puste ciało drzewa. Można zmieniać rozmiar okna dopóki nie ma tam żadnych danych do wyświetlenia. Dopóki drzewo było oznaczone jako elastyczne, ciało rozciągało się na całej dostępnej powierzchni. Czyniąc drzewo elastycznym, jak to się zwykle robi, pokazywane są tylko najbardziej istotne dane, więc drzewo jest tak rozciągane, żeby je dopasować. Jednak można wyszczególnić pewną liczbę wierszy (<code><code id="a-rows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/rows">rows</a></code></code>) do pokazania w drzewie (<code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code>) przez umieszczenie rzędów w atrybucie elementu. Atrybut ten określa jak wiele wierszy jest wyświetlanych w interfejsie użytkownika, a nie ile wierszy tam się znajduje. Całkowita liczba <code><code id="a-rows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/rows">rows</a></code></code> jest dostarczana przez widok drzewa. Jeżeli w drzewie znajduje się więcej wierszy, przejrzenie pozostałych umożliwia pasek przewijania. Jeżeli nie nadasz atrybutowi <code><code id="a-rows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/rows">rows</a></code></code> wartości 0, znaczy to, że żaden z wierszy się nie pojawi. W tym przypadku można by zrobić drzewo elastyczne, jeżeli tak uczyniłeś to nie będzie potrzebny atrybut <code><code id="a-rows"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/rows">rows</a></code></code>, ponieważ urośnie on do maksymalnej dostępnej powierzchni.</p>
+<h3 id="Tre.C5.9B.C4.87_widoku_drzewa" name="Tre.C5.9B.C4.87_widoku_drzewa">Treść widoku drzewa</h3>
+<p>Mówiliśmy, że dane, by być pokazanymi w drzewie, pochodzą z widoku, a nie ze znaczników XUL, zdarza się, że wbudowany widok drzewa otrzymuje dane właśnie ze znaczników XUL. To może być nieco mylące, ale zasadniczo jeden z wbudowanych widoków drzewa używa zestawu znaczników, które mogą być zastosowane do określenia informacji na temat danych w drzewie. Następujące znaczniki są używane:</p>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></dt> <dd>Zawiera pojedynczy górny poziom wiersza i jego pochodne. Element ten służy także jako element, który może być wybrany przez użytkownika. Znacznik <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> powinien być umieszczony dookoła wiersza, tak, że może być wybrany jako całość.</dd>
+</dl>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></dt> <dd>Pojedynczy rząd drzewa, który powinien być umieszczony wewnątrz znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code>.</dd>
+</dl>
+<dl> <dt><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></dt> <dd>Pojedyncza komórka drzewa. Winien być umieszczony wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code>.</dd>
+</dl>
+<p>Znaczniki te powinny być umieszczone bezpośrednio wewnątrz znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>, zagnieżdżone powyżej. Znaczniki definiują dane do umieszczenia w ciele drzewa. W tym przypadku drzewo używa wbudowanego widoku drzewa, zwanego treścią widoku drzewa, który używa etykiet i wartości określonych w tych elementach jako dane dla drzewa. Kiedy drzewo wymaga wyświetlenia wiersza, drzewo zażąda etykietę komórki, od okna widoku używając widoku funkcji getCellText, która otrzymuje dane od etykiety odpowiedniego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code>.</p>
+<p>Jednak są tam trzy wylistowane elementy, które nie są bezpośrednio pokazywane. Są używane jako źródło danych widoku. Są garścią atrybutów dodawanych do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> i powiązanych elementów. Na przykład, nie możesz zmienić wyglądu pojawiających się wierszy drzewa stosując atrybuty <code><code id="a-style"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/style">style</a></code></code>, albo z innymi własnościami CSS i odpowiednio powiązanymi cechami, takimi jak elastyczność i orientacja.</p>
+<p>Faktycznie, oprócz kilku specyficznych atrybutów drzewa, tylko atrybuty, które będą przynosiły jakikolwiek efekt, będą atrybutem tekstu etykiety ustawianym przez <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> dla komórki i <code><code id="a-src"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/src">src</a></code></code> w celu umieszczeniu i obrazu. Są jednak specjalne sposoby tytułowania drzewa i umieszczania innych cech, które zobaczymy w kolejnych artykułach.</p>
+<p>Zdarzenia nie są wysyłane do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> i ich dzieci, zamiast tego są wysyłane do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code>.</p>
+<p>Jako że pozycje drzewa są niepodobne do elementów XUL, są one źródłem wspólnych nieporozumień dla programistów XUL. Widok drzewa treści widoku jest widoczny tam, gdzie dane dla komórek są dostarczone do znaczników umieszczonych wewnątrz drzewa. Naturalnie, jeżeli używasz widoku innego rodzaju, dane będą dostarczone z innego źródła i nie będzie tam żadnych elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code>.</p>
+<p>Zobaczmy, jak utworzyć proste drzewo z wieloma kolumnami używając treści widoku drzewa. Można tego użyć do stworzenia listy wiadomości e-mail. Może się tam znaleźć wiele kolumn, takich jak nadawca i temat.</p>
+<h4 id="Przyk.C5.82ad_drzewa_z_treechildren" name="Przyk.C5.82ad_drzewa_z_treechildren">Przykład drzewa z <code>treechildren</code></h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_2.xul">Podgląd</a></p>
+<div class="float-right"><img alt="grafika:trees1.png" class=" internal" src="/@api/deki/files/2513/=Trees1.png"></div>
+<pre>&lt;tree flex="1"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="sender" label="Nadawca" flex="1"/&gt;
+    &lt;treecol id="subject" label="Temat" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="joe@somewhere.com"/&gt;
+        &lt;treecell label="Ściśle tajne plany"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="mel@whereever.com"/&gt;
+        &lt;treecell label="Zróbmy obiad"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+</pre>
+<p>Jak widać na obrazku, drzewo zostało utworzone z dwoma wierszami danych.</p>
+<p>Drzewo to ma dwie kolumny, z których druga zajmie więcej miejsca niż ta pierwsza. Zazwyczaj będziemy tworzyć elastyczne kolumny. Możemy także dostarczyć informację o szerokościach za pomocą atrybutu <code><code id="a-width"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/width">width</a></code></code>. Powinno się zawrzeć taką samą liczbę elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code>, ile jest kolumn w drzewie. W przeciwnym przypadku może to powodować powstawanie dziwnych, nieoczekiwanych sytuacji.</p>
+<p>Wiersz nagłówka jest tworzony automatycznie. Przycisk w prawym górnym rogu może być użyty w celu ukrycia i pokazania kolumn. Można umieścić atrybut <code><code id="a-hidecolumnpicker"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/hidecolumnpicker">hidecolumnpicker</a></code></code> w drzewie i ustawić go jako <code>true</code> w celu ukrycia tego przycisku. Jeżeli przycisk zostanie tak ukryty, użytkownik nie będzie miał możliwości chowania kolumn.</p>
+<p>Można być pewnym, że ustawiony atrybut <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> przy każdej kolumnie, albo ukrywanie i pokazywanie kolumn nie będzie pracować z wszystkimi wersjami przeglądarki Mozilla.</p>
+<p>Element <code>treechildren</code> otacza wszystkie wiersze. Wewnątrz ciała są wiersze, które mogą z kolei zawierać kolejne wiersze. Dla prostszego drzewa każdy wiersz jest tworzony przez <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code>. Element <code>treerow</code> otacza wszystkie komórki w pojedynczym wierszu, podczas gdy element <code>treeitem</code> otaczałby wiersz i wszystkie jego dzieci. Drzewa z zagnieżdżonymi wierszami są opisane w następnym artykule.</p>
+<p>Wewnątrz wierszy możemy umieścić pojedyncze komórki drzewa. Te są tworzone przy użyciu elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code>. Można umieścić tekst komórki używając atrybutu <code>label</code>. Pierwszy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> w wierszu określa zawartość, która ukaże się w pierwszej kolumnie, drugi <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> określa zawartość drugiej kolumny itd.</p>
+<p>Użytkownik może wybrać pozycje drzewa klikając na nie myszką lub podświetlając je przy życiu klawiatury. Można wybierać wiele pozycji na raz, przytrzymując klawisz SHIFT lub CTRL, a następnie klikając w kolejny wiersz, jaki chcemy zaznaczyć. W celu uniemożliwienia wielokrotnego zaznaczenia (wyboru), należy umieścić atrybut <code><code id="a-seltype"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/seltype">seltype</a></code></code> w drzewie i ustawić jego wartość na <code>single</code>. Dzięki temu użytkownik może dokonać zaznaczenia (wyboru) tylko jednej pozycji w danym momencie.</p>
+<div class="highlight">
+<h4 id="Dodajemy_drzewo_do_przyk.C5.82adu_Znajd.C5.BA_pliki" name="Dodajemy_drzewo_do_przyk.C5.82adu_Znajd.C5.BA_pliki">Dodajemy drzewo do przykładu <code>Znajdź pliki</code></h4>
+<p>Dodajemy drzewo do okna wyszukiwania plików, gdzie są wyświetlane wyniki. Drzewo użyje treści widoku drzewa. Następujący kod powinien zająć miejsce <a href="/pl/Kurs_XUL/Panele_treści#Przyk.C5.82ad_iframe" title="pl/Kurs_XUL/Panele_treści#Przyk.C5.82ad_iframe">iframe</a>.</p>
+<pre class="eval"><span class="highlightred">&lt;tree flex="1"&gt;   &lt;treecols&gt;     &lt;treecol id="name" label="Nazwa pliku" flex="1"/&gt;     &lt;treecol id="location" label="Lokalizacja" flex="2"/&gt;     &lt;treecol id="size" label="Rozmiar" flex="1"/&gt;   &lt;/treecols&gt;    &lt;treechildren&gt;    &lt;treeitem&gt;      &lt;treerow&gt;        &lt;treecell label="mozilla"/&gt;        &lt;treecell label="/usr/local"/&gt;        &lt;treecell label="2520 bajtów"/&gt;      &lt;/treerow&gt;    &lt;/treeitem&gt;   &lt;/treechildren&gt; &lt;/tree&gt;</span>
+
+&lt;splitter collapse="before" resizeafter="grow"/&gt;
+</pre>
+<p>Dodaliśmy drzewo z trzema kolumnami dla nazwy pliku, lokalizacji i rozmiaru. Druga kolumna będzie dwa razy szersza z powodu większej elastyczności. Pojedynczy wiersz został dodany, by zobrazować, jak wygląda tabela z wierszem. W rzeczywistości, wiersze byłby dodane przez skrypt zależnie od wyników wyszukiwania lub byłby stworzony własny widok do przetrzymania danych.</p>
+<p>Przykład <code>Znajdź pliki</code>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-trees.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-trees.xul">Podgląd</a></p>
+</div>
+<p>Następnie nauczymy się, jak stworzyć <a href="/pl/Kurs_XUL/Dodatkowe_możliwości_drzewa" title="pl/Kurs_XUL/Dodatkowe_możliwości_drzewa">bardziej zaawansowane drzewa</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Przykłady_XPCOM" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_drzewa">Następny  »</a></p>
+</div><p></p>
+<p><span class="comment">Tłumaczenie: PHP.pl</span></p>
+<p> </p>
+
+<p></p>

@@ -1,0 +1,141 @@
+---
+title: Zastosowanie odstępów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Zastosowanie_odstępów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Using_Spacers
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_elementów_HTML" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_przycisku">Następny  »</a></p>
+</div><p></p>
+
+<p>Artykuł pokazuje jak dodać odstępy pomiędzy elementami jakie stworzyliśmy.</p>
+
+<h2 id="Dodawanie_odst.C4.99p.C3.B3w" name="Dodawanie_odst.C4.99p.C3.B3w">Dodawanie odstępów</h2>
+
+<p>Jednym z problemów przy programowaniu interfejsów użytkownika jest to, że każdy użytkownik posiada inny monitor. Niektórzy użytkownicy posiadają monitory o dużej rozdzielczości, natomiast inni mają monitory o małej rozdzielczości. W dodatku, różne platformy mają określone wymagania, jeśli dodamy obsługę wielu języków, tekst w jednym języku może wymagać więcej miejsca, niż inny język.</p>
+
+<p><br>
+ Aplikacje, które potrzebują obsługę wielu platform i języków zazwyczaj posiadają własne okna z dużą przestrzenią pozwalającą na to. Niektóre platformy i zestawy narzędziowe interfejsu użytkownika dostarczają komponentów, które są wystarczająco eleganckie na zmianę rozmiaru i możliwość zmiany swojej pozycji, tak, aby dopasować się do potrzeb użytkownika (dla przykładu Java używa menedżera układu rozmieszczenia).</p>
+
+<p>XUL dostarcza możliwości do automatycznego pozycjonowania i zmiany rozmiaru elementów. Jak widzieliśmy, okno znajdowania plików pojawia się w takim rozmiarze, że dopasowuje elementy w swoim wnętrzu. Za każdym razem, gdy dodajemy kolejny element, okno staje się większe.</p>
+
+<p>XUL używa systemu rozkładu elementów nazwanego 'Model pudełkowy'. Pomówimy o tym w <a href="pl/Kurs_XUL/Model_pude%c5%82kowy">kolejnym rozdziale</a>, ale zasadniczo pozwala podzielić okno na szereg pól przechowujących elementy. Pola będą pozycjonowane, a ich rozmiar zmieniany w oparciu o specyfikację jaką możesz zdefiniować. Teraz wiesz, że element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> jest typem pola.</p>
+
+<p>Zanim przejdziemy do szczegółów pól, wprowadzimy inny element XUL użyteczny dla rozkładu, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>. Odstęp jest bardzo prosty i wymaga tylko jednego atrybutu, jaki wyjaśnimy za chwilę. Najprostszy odstęp wygląda następująco:</p>
+
+<pre class="eval">&lt;spacer flex="1"/&gt;
+</pre>
+
+<p><code><code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> jest stosowany do umieszczenia pustej przestrzeni w oknie. Najbardziej użyteczną możliwością jest to, że może rosnąć lub się kurczyć, jeśli użytkownik zmienia rozmiar okna. Byłoby to jak gdyby umieszczenie przycisków z prawej strony lub u dołu okna i przymocowanie ich do prawego lub dolnego brzegu bez względu na to, jaki jest rozmiar okna. Jak zobaczymy, można użyć szeregu odstępów do stworzenia kliku efektów rozkładu elementów.</p>
+
+<p>W powyższej składni odstęp ma jeden atrybut nazwany <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code>. Jest on używany do definiowania elastyczności odstępu. W powyższym przypadku odstęp ma flex równy 1, czyni to element odstępu rozciągniętym. Jeśli umieścisz odstęp bezpośrednio wewnątrz okna, jego rozmiar będzie rósł, gdy będzie zmieniał się rozmiar okna.</p>
+
+<p>Wkrótce dodamy odstęp do naszego okna dialogowego <code>Znajdź pliki</code>. Najpierw, spójrzmy na to, co stanie się, kiedy bieżące okno dialogowe zmieni swój rozmiar.</p>
+
+<p><img alt="Grafika:springs1.png"></p>
+
+<p>Jeśli zmienisz rozmiar okna znajdowania plików, zobaczysz, że elementy pozostały tam, gdzie były na początku. Żaden z nich nie został przesunięty lub nie zmienił się jego rozmiar, mimo że okno ma więcej miejsca. Zobaczmy, co się zdarzy, kiedy dodamy odstęp pomiędzy polem tekstowym a przyciskiem <code>Znajdź</code>.</p>
+
+<p><img alt="Grafika:springs2.png"></p>
+
+<p>Po dodaniu odstępu i zmianie rozmiaru okna widać, że odstęp wypełnił przestrzeń. Przyciski zostały przesunięte.</p>
+
+<div class="highlight">
+<h5 id="Przyk.C5.82ad_okna:_Znajd.C5.BA_pliki" name="Przyk.C5.82ad_okna:_Znajd.C5.BA_pliki">Przykład okna: <code>Znajdź pliki</code></h5>
+
+<p>Kod dodający odstęp został podany poniżej. Wstaw go przed przyciskiem <code>Znajdź</code>.</p>
+
+<pre class="eval"><span class="highlightred">&lt;spacer flex="1"/&gt;</span>
+
+&lt;button id="find-button" label="Znajdź"/&gt;
+</pre>
+</div>
+
+<h2 id="Wi.C4.99cej_o_elastyczno.C5.9Bci" name="Wi.C4.99cej_o_elastyczno.C5.9Bci">Więcej o elastyczności</h2>
+
+<p>XUL rozkłada elementy w oknie poprzez obliczenie odpowiedniej szerokości i wysokości dla elementów, a potem dodaje przestrzeń, gdzie są elastyczne. O ile nie określisz informacji o szerokości i wysokości elementu, domyślny rozmiar elementu jest określony przez jego zawartość. Zauważ, że przycisk <code>Anuluj</code> w okienkach dialogowych jest zawsze ustawiony na taką szerokość aby zmieścił się wewnątrz niego cały tekst. Jeśli tworzysz przycisk z bardzo długą etykietą, domyślny rozmiar przycisku będzie dosyć duży aby przechować całą etykietę. Pozostałe elementy takie jak pole tekstowe mają wybrany odpowiedni domyślny rozmiar.</p>
+
+<p>Atrybut <code>flex</code> jest używany do określenia, czy element może zmienić rozmiar odpowiedniego pola (w tym przypadku, okna). Już widzieliśmy, że atrybut flex stosuje się do odstępów, ale może być zastosowany do dowolnego elementu. Na przykład możesz chcieć zmienić rozmiar przycisku <code>Znajdź</code>.</p>
+
+<p><img alt="Grafika:springs3.png"></p>
+
+<p>Jak widzisz na obrazku, przez umieszczenie atrybutu <code>flex</code> w przycisku <code>Znajdź</code>, zmienia on rozmiar, kiedy zmieniany jest rozmiar okna. Odstęp nie jest w rzeczywistości niczym specjalnym. Właściwie może być rozpatrywany jako ukryte okno. Działa w ten sam sposób, co przycisk z wyjątkiem tego, że nie jest odrysowywany na ekranie.</p>
+
+<p>Na powyższym rysunku można zauważyć jeszcze jedną rzecz. Nie tylko przycisk <code>Znajdź</code> zmienia rozmiar, ale także przestrzeń pojawiająca się pomiędzy etykietą główną a przyciskiem. Oczywiście jest to odstęp, jaki wstawiliśmy wcześniej. Również on zmienia rozmiar sam. Jeśli spojrzysz dokładnie, powinieneś zauważyć, że zmiana w rozmiarze dokonała się równo pomiędzy odstępem a przyciskiem. Odstęp odebrał połowę wolnej przestrzeni a przycisk druga połowę.</p>
+
+<p>Przyczyna takiego efektu jest to, że zarówno odstęp jak i przycisk <code>Znajdź</code> mają atrybut <code>flex</code>. Ponieważ oba są elastyczne. Zarówno przycisk jak i odstęp równo zmieniają rozmiar.</p>
+
+<p>A co jeśli chcesz ustawić jeden element rosnący dwukrotnie w stosunku do innego? Możesz zastosować większą liczbę jako wartość atrybutu <code>flex</code>. Wartości elementu flex są współczynnikami. jeśli jeden element ma flex równy 1 a kolejny ma flex równy 2 drugi element wzrasta dwukrotnie w stosunku do pierwszego. W efekcie, flex równy 2 mówi, że ten element ma flex który jest dwa razy większy niż elementy mające flex równy 1.</p>
+
+<p>Atrybut <code>flex</code> jest używany do określenia aktualnego rozmiaru. Zamiast tego określa, jak pusta przestrzeń dzieli się miedzy potomkami pola kontenera. Przyjrzymy się polom w kolejnym rozdziale. Jeśli domyślny rozmiar potomków został określony, wartości elastyczności są używane do dzielenia pozostałej pustej przestrzeni pola. Na przykład jeśli pole ma 200 pikseli szerokości i zawiera dwa elastyczne przyciski, pierwszy na 50 pikseli a drugi na 90 pikseli będzie 60 pikseli przestrzeni między nimi, jeśli oba przyciski mają wartość flex równą 1, przestrzeń będzie dzielona równo z 30 dodatkowymi pikselami szerokości dla każdego przycisku. Jeśli elastyczność drugiego przycisku wzrosła do 2, pierwszy przycisk odbierze 20 pikseli dodatkowej przestrzeni a drugi przycisk odbierze 40 pikseli dodatkowej przestrzeni.</p>
+
+<p>Atrybuty <code>flex</code> może być umieszczony w dowolnym elemencie, jednak ma znaczenie tylko wtedy, gdy umieścimy go w elemencie bezpośrednio wewnątrz pola XUL. Oznacza to, że chociaż możesz umieścić flex w elemencie HTML-a, nie uzyskasz takiego efektu, jeśli ten element jest wewnątrz elementu, nie - pola.</p>
+
+<p>Spójrz na te przykłady:</p>
+
+<h5 id="Przyk.C5.82ady_flex" name="Przyk.C5.82ady_flex">Przykłady <code>flex</code></h5>
+
+<pre class="eval">Przykład 1:
+  &lt;button label="Znajdź" flex="1"/&gt;
+  &lt;button label="Anuluj" flex="1"/&gt;
+
+Przykład 2:
+  &lt;button label="Znajdź" flex="1"/&gt;
+  &lt;button label="Anuluj" flex="10"/&gt;
+
+Przykład 3:
+  &lt;button label="Znajdź" flex="2"/&gt;
+  &lt;button label="Zastąp"/&gt;
+  &lt;button label="Anuluj" flex="4"/&gt;
+
+Przykład 4:
+  &lt;button label="Znajdź" flex="2"/&gt;
+  &lt;button label="Zastąp" flex="2"/&gt;
+  &lt;button label="Anuluj" flex="3"/&gt;
+
+Przykład 5:
+  &lt;html:div&gt;
+    &lt;button label="Znajdź" flex="2"/&gt;
+    &lt;button label="Zastąp" flex="2"/&gt;
+  &lt;/html:div&gt;
+
+Przykład 6:
+  &lt;button label="Znajdź" flex="145"/&gt;
+  &lt;button label="Zastąp" flex="145"/&gt;
+</pre>
+
+<dl>
+ <dt>Przykład 1 </dt>
+ <dd>W tym przypadku elastyczność jest dzielona równo pomiędzy oba przyciski. Oba przyciski zmienią rozmiar równo</dd>
+ <dt>Przykład 2 </dt>
+ <dd>Tu oba przyciski będą rosły, ale przycisk <code>Anuluj</code> będzie rósł 10 razy bardziej, niż przycisk <code>Znajdź</code> ponieważ ma wartość flex, która jest 10 razy większa od wartości flex przycisku <code>Znajdź</code>. Dostępna przestrzeń będzie dzielona na jedną część dla przycisku <code>Znajdź</code> i 10 części dla przycisku <code>Anuluj</code>.</dd>
+ <dt>Przykład 3 </dt>
+ <dd>Tylko dwa z tych przycisków są tu oznaczone jako elastyczne. Przycisk replace nigdy nie zmieni rozmiaru ale pozostałe dwa tak. Przycisk <code>Anuluj</code> zawsze będzie zmieniał rozmiar dwukrotnie w stosunku do przycisku <code>Znajdź</code> ponieważ jego wartość flex jest dwukrotnie większa.</dd>
+ <dt>Przykład 4 </dt>
+ <dd>W tym przypadku, wszystkie trzy przyciski są elastyczne. Przyciski Find i Replace będą tego samego rozmiaru ale przycisk <code>Anuluj</code> będzie nieco większy (dokładnie 50% większy)</dd>
+ <dt>Przykład 5 </dt>
+ <dd>Tu, dwa przyciski, są umieszczone wewnątrz elementu <code>div</code>. Elastyczność jest tu bez znaczenia ponieważ przyciski nie są bezpośrednio w polu. Efekt będzie taki sam, jeśli zostanie pominięty atrybut <code>flex</code>.</dd>
+ <dt>Przykład 6 </dt>
+ <dd>Ponieważ wartości flex są takie same w obu przyciskach, będą równo rozwijane. Działałoby to również z wartościami flex równymi jeden zamiast 145. Nie ma różnic w tym przypadku. Zalecane jest używanie mniejszych liczb dla zwiększenia czytelności.</dd>
+</dl>
+
+<p>Zauważ, że pozostałe czynniki, takie jak etykiety przycisków i minimalne rozmiary przycisków będą wpływały na aktualny rozmiar przycisków. Na przykład przycisk nie zostanie zmniejszony mniej niż do przestrzeni potrzebnej do przechowania jego etykiety.</p>
+
+<p>Określenie wartości flex na 0 ma taki sam efekt, jak całkowite pominięcie atrybutu flex. Oznacza to, że elementy nie są wcale elastyczne. Czasami możesz zobaczyć wartość flex określoną w procentach. Nie ma to specjalnego znaczenia i jest traktowane tak, jak gdyby nie było tam znaku procenta.</p>
+
+<p>Możesz zauważyć, że kiedy zmieniasz rozmiar okna dialogowego pionowo, przyciski zmieniają rozmiar same dopasowując się do wysokości okna. Jest tak ponieważ wszystkie przyciski mają wbudowany pionowy flex dodany im przez okno. W kolejnym rozdziale nauczymy się jak to zmienić.</p>
+
+<div class="highlight">
+<h5 id="Przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Przyk.C5.82ad:_Znajd.C5.BA_pliki">Przykład: <code>Znajdź pliki</code></h5>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul">Podgląd</a></p>
+</div>
+
+<p>W następnym artykule dowiemy się kilku <a href="pl/Kurs_XUL/Dodatkowe_mo%c5%bcliwo%c5%9bci_przycisku">dodatkowych możliwościach przycisku</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_elementów_HTML" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_przycisku">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,86 @@
+---
+title: DOMApplicationsManager
+slug: Web/API/DOMApplicationsManager
+tags:
+  - API
+  - Apps
+  - Apps API
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/Marketplace/API/DOMApplicationsManager
+---
+<p>{{ ApiRef("Apps") }}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>Provides support for managing, and Open Web apps in a browser. A manager can be accessed via {{domxref("DOMApplicationsRegistry.mgmt", "Navigator.mozApps.mgmt")}}</p>
+
+<h2 id="Property">Property</h2>
+
+<dl>
+ <dt>{{domxref("DOMApplicationsManager.oninstall")}}</dt>
+ <dd>Is an {{domxref("EventManager")}} call when <code>install</code> event is received.</dd>
+ <dt>{{domxref("DOMApplicationsManager.onuninstall")}}</dt>
+ <dd>Is an {{domxref("EventManager")}} call when <code>uninstall</code> event is received.</dd>
+ <dt>{{domxref("DOMApplicationsManager.onenablestatechange")}}</dt>
+ <dd>Is an {{domxref("EventManager")}} call when <code>enablestatechange</code> event is received.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{ domxref("DOMApplicationsManager.getAll()") }}</dt>
+ <dd>Returns all applications.</dd>
+</dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>16.0</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>16.0</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>

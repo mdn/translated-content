@@ -1,0 +1,175 @@
+---
+title: Interfejsy XPCOM
+slug: Mozilla/Tech/XUL/Kurs_XUL/Interfejsy_XPCOM
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Interfaces
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Obiekty_pudełka" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Przykłady_XPCOM">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule krótko przyjrzymy się XPCOM (Wieloplatformowy Model Obiektów Składowych), który jest systemem Object, jakiego używa Mozilla.</p>
+
+<h2 id="Wywo.C5.82ywanie_obiekt.C3.B3w_wewn.C4.99trznych" name="Wywo.C5.82ywanie_obiekt.C3.B3w_wewn.C4.99trznych">Wywoływanie obiektów wewnętrznych</h2>
+
+<p>Przez zastosowanie XUL możemy zbudować złożony interfejs użytkownika. Możemy dołączyć skrypty, które modyfikują interfejs i wykonują zadania. Jednakże, jest kilka rzeczy, których nie można wykonać bezpośrednio w JavaScript. Na przykład, jeśli chcielibyśmy stworzyć aplikację pocztową musielibyśmy napisać skrypt, dzięki któremu połączymy się z serwerem pocztowym dla wyszukania i wysłania mail. JavaScript nie ma możliwości wykonania takich rzeczy.</p>
+
+<p>Jedynym sposób wykonania tego byłoby napisanie kodu wewnętrznego, który pobrałby pocztę. Musimy również posiadać sposób, aby w łatwy sposób nasze skrypty wywoływały kod wewnętrzny Mozilla dostarcza takiej metody wymagającej zastosowania <a href="pl/XPCOM">XPCOM</a>(Wieloplaformowego modelu obiektów składowych)</p>
+
+<h2 id="O_XPCOM" name="O_XPCOM">O XPCOM</h2>
+
+<p>Mozilla jest złożona ze zbioru komponentów, każdy wykonujący pewne zadanie. Na przykład jest komponent dla każdego menu, przycisku i elementu. Komponenty są złożone z kilku definicji nazywanych interfejsami Interfejs w Mozilli jest definicją zbioru funkcjonalności, które mogą być zaimplementowane przez komponenty.</p>
+
+<p>Komponenty są tym, co implementuje kod, w Mozilli dla wykonania różnych rzeczy. Każdy komponent implementuje funkcjonalność opisaną przez interfejsy. Pojedynczy komponent może zaimplementować wiele interfejsów. A wiele komponentów może zaimplementować ten sam interfejs.</p>
+
+<p>Weźmy za przykład komponent plik. Interfejs potrzebowałby opisu właściwości i funkcji, jakie mogą być wykonywane na plikach. Plik potrzebuje właściwości dla swojej nazwy, daty modyfikacji i swojego rozmiaru. Funkcje pliku mogą obejmować jego przenoszenie, kopiowanie i usuwanie.</p>
+
+<p>Interfejs Plik opisuje tylko cechy charakterystyczne pliku, nie implementuje go Implementację interfejsu Plik pozostawiono komponentowi. Komponent będzie miał kod, który może odnaleźć nazwę pliku, datę i rozmiar. Dodatkowo, będzie miał kod, który kopiuje i zmienia jego nazwę.</p>
+
+<p>Nie musimy się martwić jak komponent go implementuje tak długo jak implementuje interfejs poprawnie. Oczywiście, będziemy mieli różne implementacje, po jednej dla każdej platformy Wersje komponentu plik dla Windows i Macintosh byłyby znacząco różne. Jednak obie implementują ten sam interfejs. A zatem możemy użyć komponentu przez udostępnienie korzystania z funkcji, jakie znamy z interfejsu.</p>
+
+<p>W Mozilli interfejsy są poprzedzone, ‘nsI’ aby były łatwo rozpoznawalne jako interfejsy. Na przykład nsIAddressBook jest to interfejs dla interaktywności z książka adresową, nsISound jest używany do odgrywania plików a nsILocalFile jest używany do plików.</p>
+
+<p>Komponenty XPCOM są zazwyczaj zaimplementowane wewnętrznie, co oznacza, że generalnie wykonują rzeczy, których nie może zrobić sam JavaScript. Jednak sposób, w jaki można je wywołać zobaczymy wkrótce. Możemy wywołać dowolną funkcję dostarczoną przez komponent, opisaną przez interfejsy go implementujące. Na przykład jeśli mamy komponent, możemy sprawdzić czy jest zaimplementowany jako nsISOund,a jeśli tak, możemy odegrać przez niego dźwięk.</p>
+
+<p>Proces wywoływania XPCOM ze skryptów jest nazywany XPConnect, który jest warstwą tłumaczącą obiekty skryptowe na obiekty wewnętrzne.</p>
+
+<h2 id="Tworzenie_obiekt.C3.B3w_XPCOM" name="Tworzenie_obiekt.C3.B3w_XPCOM">Tworzenie obiektów XPCOM</h2>
+
+<p>Mamy trzy kroki dla wywołania komponentu XPCOM</p>
+
+<ol>
+ <li>Pobranie komponentu.</li>
+ <li>Pobranie części komponentu, która implementuje interfejs, jaki chcemy użyć.</li>
+ <li>Wywołanie potrzebnej nam funkcji.</li>
+</ol>
+
+<p>Kiedy wykonasz pierwsze dwa kroki, możesz powtarzać ostatni krok tak często jak to konieczne. Powiedzmy, że chcesz zmienić nazwę pliku. Możemy użyć interfejsu nsILocalFile. Pierwszym krokiem jest pobranie komponentu plik. Drugim jest wykonanie zapytania do komponentu plik i pobranie jego części ,która implementuje interfejs nsILocalFile. W końcu wywołujemy funkcje dostarczone przez ten interfejs. Interfejs ten jest użyty do przedstawienia pojedynczego pliku.</p>
+
+<p>Widzieliśmy ,że interfejsy są zawsze nazywane zaczynając od 'nsI' Komponenty ,jednak, odwołują się do stosowania składni URI. Mozilla przechowuje listę wszystkich komponentów, które są dostępne w swoim własnym rejestrze. Poszczególni użytkownicy mogą instalować nowe komponenty jeśli ich potrzebują. Działają one jako plug-iny.</p>
+
+<p>Mozilla dostarcza komponentu plik, to znaczy komponent implementujący nsILocalFile. Do tego komponentu można odnieść się używając URI <a class="link-mailto" href="mailto:'@mozilla.org" rel="freelink">'@mozilla.org</a>/file/local;1' Komponent: Schemat URI jest używany do określenia komponentu, Do pozostałych komponentów odnosimy się w podobny sposób.</p>
+
+<p>URI komponentu może być użyte dla pobrania komponentu. Możesz pobrać komponent używając kodu JavaScript podobnego do poniższego:</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+</pre>
+
+<p>Komponent plik jest wyszukiwany i przechowywany w zmiennej aFile. <code>Components</code> w tym powyższym przykładzie odnosi się do obiektu ogólnego, który dostarcza pewnego komponentu pokrewnego funkcjom. Tutaj pobraliśmy klasę komponentu z właściwości <code>classes</code>. Własność <code>classes</code> jest to tablica wszystkich dostępnych komponentów. Aby uzyskać inny komponent, zastąp URI wewnątrz nawiasów kwadratowych na URI komponentu jakiego chcesz użyć. Na końcu jest egzemplarz funkcja <code>createInstance</code></p>
+
+<p>Powinieneś sprawdzić wartość zwracaną z <code>createInstance</code>aby upewnić się ,że nie jest to wartość zerowa, która wskazywała by, że komponent nie istnieje.</p>
+
+<p>Jednakże, w tym miejscu, mamy tylko referencję do samego komponentu plik. Żeby wywołać z niego funkcje potrzebujemy pobrać jeden z jego interfejsów, w tym przypadku nsILocalFile. Druga linia jaką potrzeba dodać jest następująca:</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile) aFile.QueryInterface(Components.interfaces.nsILocalFile);
+</pre>
+
+<p><br>
+ Funkcja <code>QueryInterface</code> jest funkcją dostarczaną przez wszystkie komponenty, które mogą użyte do pobrania określonego interfejsu tego komponentu. Funkcja ta pobiera jedne parametr, interfejs jaki chcesz uzyskać. Właściwość <code>interfaces</code> obiektu <code>Components</code> zawiera listę wszystkich tych interfejsów, które są dostępne. Tu używamy interfejsu nsiLocalFile i przekazujemy go jako parametr do <code>QueryInterface</code>. Wynik jest taki ,że aFile będzie się odnosił do tej części komponentu, który implementuje interfejs nsiLocalFile.</p>
+
+<p>Te dwie powyższe linie JavaScript mogą być użyte do pobrania dowolnego interfejsu dowolnego komponentu. Wystarczy zastąpić nazwę komponentu nazwą tego komponentu jakiego chcemy użyć i zmienić nazwę interfejsu. Możesz oczywiście również użyć dowolnej nazwy zmiennej. Na przykład aby pobrać interfejs sound, możesz zrobić coś takiego:</p>
+
+<pre>var sound = Components.classes["@mozilla.org/sound;1"].createInstance();
+if (sound) sound.QueryInterface(Components.interfaces.nsISound);
+</pre>
+
+<p>Interfejsy XPCOM mogą dziedziczyć z innych interfejsów. Interfejsy które dziedziczą z innych mają swoje własne funkcje i funkcje wszystkich tych interfejsów z których dziedziczą. Wszystkie interfejsy dziedziczą z interfejsu najwyższego poziomu nazwanego nsISupport. Ma on jedną funkcję dostosowaną do JavaScript, QueryInterface, którą już widzieliśmy. Ponieważ interfejs nsISupport zaimplementowały wszystkie komponenty, funkcja QueryInterface jest dostępna w każdym komponencie.</p>
+
+<p>Kilka komponentów może zaimplementować ten sam interfejs. Zazwyczaj, mogą być podklasami oryginału ale nie koniecznie. Dowolny komponent może zaimplementować funkcjonalność nsILocalFile. Dodatkowo komponent może zaimplementować kilka interfejsów. Jest tak z powodu tego, że dwa kroki są wymagane w celu uzyskania interfejsu wywołującego funkcje.</p>
+
+<p>Jednakże jest skrót jakiego możemy użyć ponieważ często będziemy stosować te linie razem:</p>
+
+<pre>var aLocalFile = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+</pre>
+
+<p>Wykonuje to tą samą rzecz jak dwie linie ale w jednej linii kodu. Eliminuje to potrzebę tworzenia egzemplarza a potem zapytania go o interfejs w dwóch oddzielnych krokach.</p>
+
+<p>Jeśli wywołujesz QueryInterface w obiekcie a żądany interfejs nie jest obsługiwany przez ten obiekt, pojawi się wyjątek. Jeśli nie jesteś pewny czy interfejs jest obsługiwany przez komponent możesz użyć do sprawdzenia tego operatora instanceof:</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  // do something
+}
+</pre>
+
+<p>Operator instanceof zwraca prawdę jeśli aFile implementuje interfejs nsILocalFile. Wywoływanie QueryInterface ma również efekt uboczny, w ten sposób aFile będzie potem ważnym nsiLocalFile.</p>
+
+<h2 id="Wywo.C5.82ywanie_funkcji_z_interfejsu" name="Wywo.C5.82ywanie_funkcji_z_interfejsu">Wywoływanie funkcji z interfejsu</h2>
+
+<p>Teraz kiedy mamy obiekt, który odnosi się do komponentu z interfejsem nsiLocalFile, możemy wywołać przez niego wywołać funkcje nsiLocalFile. Poniższa tabela pokazuje kilka z właściwości i metod interfejsu nsiLocalFile.</p>
+
+<dl>
+ <dt>initWithPath </dt>
+ <dd>Ta metoda jest używana do zainicjalizowania ścieżki dostępu i nazwy pliku dla nsiLocalFile. Pierwszy parametr powinien być ścieżką do pliku np: '/usr/local/mozilla'.</dd>
+ <dt>leafName </dt>
+ <dd>Nazwa pliku bez części z katalogiem.</dd>
+ <dt>fileSize </dt>
+ <dd>Nazwa pliku bez części z katalogiem.</dd>
+ <dt>isDirectory() </dt>
+ <dd>Zwraca prawdę jeśli nsiLocalFile przedstawia katalog.</dd>
+ <dt>remove(recursive) </dt>
+ <dd>Usuwa plik. Jeśli parametr recursive to prawda, katalog i wszystkie jego pliki i podkatalogi również będą usunięte.</dd>
+ <dt>copyTo(directory,newname) </dt>
+ <dd>Kopiuje plik do innego katalogu, opcjonalnie zmieniając nazwę pliku. Ten katalog powinien być nsILOcalFile mieszczącym katalog dla kopiowanego pliku.</dd>
+ <dt>moveTo(directory,newname) </dt>
+ <dd>Przenosi plik do innego katalogu, lub zmienia nazwę pliku. Katalog powinien być nsILocalFile mieszczącym katalog dla przenoszonego pliku.</dd>
+</dl>
+
+<p>Aby usunąć plik najpierw musimy przypisać plik do nsiLOcalFile. Możemy wywołać metodę <code>initWithPath</code> wskazującą, jaki plik mamy na myśli. Potem przypisujemy ścieżkę pliku do tej właściwości. Następnie wywołujemy funkcję <code><b>remove</b></code>. Pobiera ona jeden parametr który wskazuje czy usuwanie jest rekurencyjne. Poniższy kod demonstruje te dwa kroki:</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  aFile.initWithPath("/mozilla/testfile.txt");
+  aFile.remove(false);
+}
+</pre>
+
+<p>Ten kod pobiera plik /mozilla/testfile.txt i usuwa go. Wypróbuj ten przykład przez dodanie tego kodu do programu obsługi zdarzeń. Powinieneś zmienić nazwę istniejącego pliku jaki chciał być usunąć.</p>
+
+<p>W powyższej tablicy funkcji, zobaczysz dwie funkcje <code>copyTo</code> i <code>moveTo</code>. Te dwie funkcje mogą być użyte, odpowiednio, do skopiowania plików i przeniesienia plików. Zauważ ,że nie pobierają one parametru ciągu dla katalogu do którego kopiujemy lub usuwamy, ale zamiast tego pobierają nsILocalFile. Oznacza to ,że musisz pobrać dwa komponenty plik. Poniższy przykład pokazuje jak skopiowac plik.</p>
+
+<pre>function copyFile(sourcefile,destdir)
+{
+  // get a component for the file to copy
+  var aFile = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aFile) return false;
+
+  // get a component for the directory to copy to
+  var aDir = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aDir) return false;
+
+  // next, assign URLs to the file components
+  aFile.initWithPath(sourcefile);
+  aDir.initWithPath(destdir);
+
+  // finally, copy the file, without renaming it
+  aFile.copyTo(aDir,null);
+}
+
+copyFile("/mozilla/testfile.txt","/etc");
+</pre>
+
+<h2 id="Us.C5.82ugi_XPCOM" name="Us.C5.82ugi_XPCOM">Usługi XPCOM</h2>
+
+<p>Niektóre komponenty XPCOM są specjalnymi komponentami nazwanymi usługami. Nie stworzysz ich egzemplarzy ponieważ istnieje tylko jeden. Usługi dostarczają funkcji ogólnych, które albo pobierają albo ustawiają dane globalne lub wykonują działania na innych obiektach. Zamiast wywołania <code>createInstance</code>, wywołujesz <code>getService</code> dla pobrania referencji do komponentu usługi. Usługi nie różnią się bardzo od innych komponentów.</p>
+
+<p>Jedną z takich dostarczonych usług z Mozillą jest usługa zakładek. Pozwala ona dodawać zakładki do bieżącej listy zakładek użytkownika. Przykład jest pokazany poniżej:</p>
+
+<pre>var bmarks = Components.classes["@mozilla.org/browser/bookmarks-service;1"].getService();
+bmarks.QueryInterface(Components.interfaces.nsIBookmarksService);
+bmarks.addBookmarkImmediately("http://www.mozilla.org","Mozilla",0,null);
+</pre>
+
+<p>Najpierw jest wyszukiwany komponent"@mozilla.org/browser/bookmarks-service;1" a jego usługa jest umieszczona w zmiennej <code>bmarks</code>. Użyjemy <code>QueryInterface</code> dla pobrania interfejsu nsIBookmarksService. Funkcja <code>addBookmarkImmediately</code> dostarczana przez ten interfejs może być używana dla dodawania zakładek .Pierwsze dwa parametry tej funkcji są URL'ami zakładek i ich tytułami. Trzeci parametr jest typem zakładki, którym zazwyczaj będzie 0,a ostatni parametr jest typem kodowania znaków dokumentu będącego dodawanym do zakładek, który może być zerem.</p>
+
+<p>Następnie zobaczymy niektóre z interfejsów dostarczanych z Mozillą, jakie możemy zastosować.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Obiekty_pudełka" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Przykłady_XPCOM">Następny  »</a></p>
+</div><p></p>

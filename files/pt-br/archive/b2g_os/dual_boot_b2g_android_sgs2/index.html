@@ -1,0 +1,73 @@
+---
+title: Dual Boot do B2G e Android no SGS2
+slug: Archive/B2G_OS/Dual_Boot_B2G_Android_SGS2
+translation_of: Archive/B2G_OS/Building
+---
+<div class="blockIndicator warning">
+    <p><strong>Warning:</strong> Esse procedimento não funciona mais. Ele somente funciona com Android 4 (Ice Cream Sandwich) e Siyah Kernel v 5.0.1. Em versões posteriores não funcionará. Considere esse guia arquivado, e use-o sob seu próprio risco.</p>
+</div>
+<p>If you want to test B2G from time to time but continue using Android as your main OS and you have a Samsung Galaxy S2, you can choose to install B2G in a separate partition (which is already present on the phone) and choose where to boot into when your device starts.</p>
+<h2 id="Prerequisites">Prerequisites</h2>
+<p>In order to dual boot Android and B2G, you have to meet these prerequisites:</p>
+<ul>
+ <li>You have to have built B2G for the Galaxy S2</li>
+ <li>You have to download the <a href="http://d-h.st/AEZ" title="http://d-h.st/users/siyah/s2">Siyah kernel</a> v. 5.0.1 for the Galaxy S2</li>
+ <li>You need the tool simg2img, that you get automatically if you build B2G following the guide on MDN</li>
+ <li>You need the heimdall tool, best if version 1.3.1 as you may encounter problems with version 1.3.2</li>
+</ul>
+<h2 id="One-time_operations">One-time operations</h2>
+<p>There are several operations to do in order to get a working dual boot. The following ones need to be done the first time only.</p>
+<p>In order to use heimdall without requiring root access, you should create a file called android.rules (the portion of the name before the .rules extension is arbitrary) and place it in /etc/udev/rules.d. The file should contain a line line the following:</p>
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", MODE="0666"</pre>
+<p>In order to activate this rule, you should restart udev:</p>
+<pre>sudo service udev restart</pre>
+<p>and then unplug and replug in the phone. The above rule will also allow adb to access the SGS2 without requiring root privlidges.</p>
+<h3 id="Flashing_the_Siyah_kernel">Flashing the Siyah kernel</h3>
+<p>The Siyah kernel is mandatory for the dual boot, because it is this kernel that manages it. Once you have downloaded and decompressed the tar file, you'll be left with a file named zImage. In order to flash it on your phone you have to follow these steps:</p>
+<ol>
+ <li>Switch off your phone</li>
+ <li>Reboot in download mode (press together volume down + home + power buttons and then, when asked, volume up button)</li>
+ <li>Use heimdall to flash the kernel with the following command (your phone needs to be connected to your PC):
+  <pre>heimdall flash --kernel /path/to/zImage</pre>
+ </li>
+</ol>
+<p>Once the kernel is flashed the phone will reboot.</p>
+<h3 id="Preparing_the_B2G_rom_environment">Preparing the B2G rom environment</h3>
+<p>Once you've installed the Siyah kernel, it's time to use its functions to prepare the environment to install your B2G image in the secondary partition. Follow these steps:</p>
+<ol>
+ <li>Switch off your phone</li>
+ <li>Reboot in recovery mode (press together volume up + home + power buttons)</li>
+ <li>In the CWMR Touch interface, go to dual-boot options -&gt; Wipe 2ndROM data/cache -&gt; Yes - Wipe. This operation will take some time</li>
+</ol>
+<p>Once the operation is finished, select Go Back and then reboot system now to reboot your phone. If you check, inside the internal SD card of your phone you'll now have a .secondrom directory with inside two files named cache.img and data.img.</p>
+<h2 id="B2G_update_operations">B2G update operations</h2>
+<p>The following operations need to be done every time you build a new version of B2G.</p>
+<p>In order to simplify command line instructions, it's advised to copy all needed files in a same folder of your choice. These are the files that need to be copied inside the folder:</p>
+<ul>
+ <li>simg2img, found in B2G/out/target/product/galaxys2/system/bin/</li>
+ <li>system.img, found in B2G/out/target/product/galaxys2/</li>
+ <li>userdata.img, found in B2G/out/target/product/galaxys2/</li>
+</ul>
+<p>Once you have all the files in one place, do the following:</p>
+<ol>
+ <li>Create a data.img file out of the sparse file userdata.img. You can do it with the following command:
+  <pre>simg2img userdata.img data.img</pre>
+ </li>
+ <li>Put the data.img file on your phone's .secondrom folder. You can do this either by enabling file storage mode on your phone and connecting it to your PC or, if you have USB Debug active, you can use adb:
+  <pre>adb push /path/to/data.img /sdcard/.secondrom/data.img</pre>
+ </li>
+ <li>Switch off your phone</li>
+ <li>Reboot in download mode (press together volume down + home + power buttons and then, when asked, volume up button)</li>
+ <li>Use heimdall to flash B2G firmware inside the second partition:
+  <pre>heimdall flash --hidden system.img</pre>
+ </li>
+</ol>
+<p>Once the flash is finished, your phone will reboot and at boot time you can boot into your second rom (the B2G one) by pressing the home button during the bootloader countdown. If everything has gone right, once you've finished booting B2G you'll have a black screen on your phone. You now have to install Gaia.</p>
+<div class="note">
+ <strong>Note:</strong> Depending on how you want to test B2G, you may not want to put a new data.img file on the phone every time you update B2G, as it will wipe all of your preferences, installed applications and in general pretty much everything you've done while using B2G.</div>
+<h2 id="Boot_operations">Boot operations</h2>
+<p>The following operations need to be done every time you boot inside B2G.</p>
+<p>Unfortunately, there's no simple way to put Gaia inside the system.img B2G image, and it get lost when you switch off your phone, so you'll need to install Gaia again every time you boot inside B2G. To install Gaia, type the following on a console after you've booted your phone inside B2G (so you have a black screen) and have connected your phone to your PC:</p>
+<pre>cd B2G/gaia
+GAIA_DOMAIN=foo.org make install-gaia</pre>
+<p>After the upload of Gaia is completed, on your phone's screen the B2G interface will appear.</p>

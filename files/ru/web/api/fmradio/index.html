@@ -1,0 +1,94 @@
+---
+title: FMRadio
+slug: Web/API/FMRadio
+translation_of: Archive/B2G_OS/API/FMRadio
+---
+<p>{{ APIRef("FMRadio API")}}{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('installed') }}</p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>WebFM API предоставляет доступ к модулю FM радио устройства. Этот интерфейс поможет Вам включить или выключить FM радио и настроить его на нужную станцию. Это достижимо с помощью параметра {{domxref("window.navigator.mozFMRadio","navigator.mozFMRadio")}}.</p>
+
+<h2 id="Обзор_API">Обзор API</h2>
+
+<pre>interface FMRadio : EventTarget {
+   readonly attribute boolean enabled;
+   readonly attribute boolean antennaAvailable;
+   readonly attribute double frequency;
+   readonly attribute double frequencyUpperBound;
+   readonly attribute double frequencyLowerBound;
+   readonly attribute double channelWidth;
+
+   attribute Function onantennaavailablechange;
+   attribute Function onfrequencychange;
+   attribute Function onenabled;
+   attribute Function ondisabled;
+
+   DOMRequest enable(double frequency);
+   DOMRequest disable();
+   DOMRequest setFrequency(double frequency);
+   DOMRequest seekUp();
+   DOMRequest seekDown();
+   DOMRequest cancelSeek();
+}</pre>
+
+<h2 id="Параметры">Параметры</h2>
+
+<dl>
+ <dt>{{domxref("FMRadio.enabled")}}</dt>
+ <dd>Показывает играет ли радио</dd>
+ <dt>{{domxref("FMRadio.antennaAvailable")}}</dt>
+ <dd>Показывает доступна ли антенна</dd>
+ <dt>{{domxref("FMRadio.frequency")}}</dt>
+ <dd>Текущая частота радио.</dd>
+ <dt>{{domxref("FMRadio.frequencyUpperBound")}}</dt>
+ <dd>Максимальная частота по которой можно найти радиостанцию</dd>
+ <dt>{{domxref("FMRadio.frequencyLowerBound")}}</dt>
+ <dd>Минимальная частота по которой можно найти радиостанцию</dd>
+ <dt>{{domxref("FMRadio.channelWidth")}}</dt>
+ <dd>Частота текущей радиостанции, в МГц.</dd>
+</dl>
+
+<h3 id="Event_handlers">Event handlers</h3>
+
+<dl>
+ <dt>{{domxref("FMRadio.onenabled")}}</dt>
+ <dd>A handler for the {{event("enabled")}} event; It is triggered when the radio has been turned on</dd>
+ <dt>{{domxref("FMRadio.ondisabled")}}</dt>
+ <dd>A handler for the {{event("disabled")}} event; It is triggered when the radio has been turned off</dd>
+ <dt>{{domxref("FMRadio.onantennaavailablechange")}}</dt>
+ <dd>A handler for the {{event("antennaavailablechange")}} event; It is triggered when an antenna is plugged or unplugged</dd>
+ <dt>{{domxref("FMRadio.onfrequencychange")}}</dt>
+ <dd>A handler for the {{event("frequencychange")}} event; It is triggered whenever the radio frequency is changed</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<dl>
+ <dt>{{domxref("FMRadio.enable()")}}</dt>
+ <dd>Turns on the radio on the given frequency. This function throws if called with no argument. Returns a {{domxref("DOMRequest")}} for the success or error of the operation.</dd>
+ <dt>{{domxref("FMRadio.disable()")}}</dt>
+ <dd>Turns the radio off. Returns a {{domxref("DOMRequest")}} which success indicates that the radio has properly been disabled</dd>
+ <dt>{{domxref("FMRadio.setFrequency()")}}</dt>
+ <dd>Asynchronously changes the radio frequency. The value has to be between <code>frequencyLowerBound</code> and <code>frequencyUpperBound</code>. Trying to set outside the bounds results in an error.</dd>
+ <dd>Returns a {{domxref("DOMRequest")}} which success indicates the frequency has properly been changed.</dd>
+ <dt>{{domxref("FMRadio.seekUp()")}}</dt>
+ <dd>Asks the radio to find a new frequency (usually greater than the current one). If one is successfully found, a <code>frequencychange</code> event is fired. Returns a {{domxref("DOMRequest")}} which success indicates that the search has started. The search circles back to lower frequencies when the highest frequency has been reached.</dd>
+ <dt>{{domxref("FMRadio.seekDown()")}}</dt>
+ <dd>Same as above, but searching in frequencies lower than the current one. The search cirlces back to higher frequencies when the lowest frequency has been reached.</dd>
+ <dt>{{domxref("FMRadio.cancelSeek()")}}</dt>
+ <dd>Cancels the radio seek if one was happening. Returns a {{domxref("DOMRequest")}} which success indicates that the frequency search has been cancelled.</dd>
+</dl>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<p>Ещё нет спецификаций.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/ru/docs/WebAPI/WebFM_API" title="/ru/docs/WebAPI/WebFM_API">WebFM API</a></li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/fm" title="https://github.com/mozilla-b2g/gaia/tree/master/apps/fm">Gaia radio app</a></li>
+</ul>

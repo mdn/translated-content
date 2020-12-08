@@ -1,0 +1,214 @@
+---
+title: request
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/request
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/request
+---
+<div class="note">
+<p>Stable</p>
+</div>
+
+<p><span class="seoSummary">Faça requesições simples de rede. Para uso mais avançado, cheque os módulos</span> <a href="/en-US/Add-ons/SDK/Low-Level_APIs/net_xhr">net/xhr</a>, baseado no objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> do navegador.</p>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Constructors">Constructors</h3>
+
+<h4 class="addon-sdk-api-name" id="Request(options)"><code>Request(options)</code></h4>
+
+<p>Este construtor cria um objeto request que pode ser usado para fazer requisições de rede. O construtor leva um único parâmetro <code>options</code> que é usado para configurar várias propriedades no resultado do <code>Request</code>.</p>
+
+<h5 id="Parâmetros">Parâmetros</h5>
+
+<p><strong>options : object</strong><br>
+ Opções opcionais:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>url</td>
+   <td>string,url</td>
+   <td>
+    <p>This is the url to which the request will be made. Can either be a <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String">String</a> or an instance of the SDK's <a href="/en-US/Add-ons/SDK/High-Level_APIs/url">URL</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onComplete</td>
+   <td>function</td>
+   <td>
+    <p>This function will be called when the request has received a response (or in terms of XHR, when <code>readyState == 4</code>). The function is passed a <code>Response</code> object.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>headers</td>
+   <td>object</td>
+   <td>
+    <p>An unordered collection of name/value pairs representing headers to send with the request.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>content</td>
+   <td>string,object</td>
+   <td>
+    <p>The content to send to the server. If <code>content</code> is a string, it should be URL-encoded (use <code>encodeURIComponent</code>). If <code>content</code> is an object, it should be a collection of name/value pairs. Nested objects &amp; arrays should encode safely.</p>
+
+    <p>For <code>GET</code> <span style="line-height: 1.5;">and </span><code style="font-style: normal; line-height: 1.5;">HEAD</code><span style="line-height: 1.5;"> requests, the query string (</span><code style="font-style: normal; line-height: 1.5;">content</code><span style="line-height: 1.5;">) will be appended to the URL. For </span><code style="font-style: normal; line-height: 1.5;">POST</code><span style="line-height: 1.5;"> and </span><code style="font-style: normal; line-height: 1.5;">PUT</code><span style="line-height: 1.5;"> requests, it will be sent as the body of the request.</span></p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentType</td>
+   <td>string</td>
+   <td>
+    <p>The type of content to send to the server. This explicitly sets the <code>Content-Type</code> header. The default value is <code>application/x-www-form-urlencoded</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>overrideMimeType</td>
+   <td>string</td>
+   <td>
+    <p>Use this string to override the MIME type returned by the server in the response's Content-Type header. You can use this to treat the content as a different MIME type, or to force text to be interpreted using a specific character.</p>
+
+    <p>For example, if you're retrieving text content which was encoded as ISO-8859-1 (Latin 1), it will be given a content type of "utf-8" and certain characters will not display correctly. To force the response to be interpreted as Latin-1, use <code>overrideMimeType</code>:</p>
+
+    <pre class="brush: js">
+var Request = require("sdk/request").Request;
+var quijote = Request({
+  url: "http://www.latin1files.org/quijote.txt",
+  overrideMimeType: "text/plain; charset=latin1",
+  onComplete: function (response) {
+    console.log(response.text);
+  }
+});
+
+quijote.get();</pre>
+   </td>
+  </tr>
+  <tr>
+   <td>anonymous</td>
+   <td>boolean</td>
+   <td>If <code>true</code>, the request will be sent without cookies or authentication headers. This option sets the <a href="/en/docs/Web/API/XMLHttpRequest#Non-standard_properties"><code>mozAnon</code></a> property in the underlying XMLHttpRequest object. Defaults to <code>false</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Request">Request</h2>
+
+<p>The <code>Request</code> object is used to make <code>GET</code>, <code style="font-style: normal; line-height: 1.5;"><code style="font-style: normal;">HEAD</code></code>, <code style="font-style: normal; line-height: 1.5;"><code style="font-style: normal;">POST</code></code><span style="line-height: 1.5;">, </span><code style="font-style: normal; line-height: 1.5;">PUT</code><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">or </span><code style="font-style: normal; line-height: 1.5;">DELETE</code><span style="line-height: 1.5;"> network requests. It is constructed with a URL to which the request is sent. Optionally the user may specify a collection of headers and content to send alongside the request and a callback which will be executed once the request completes.</span></p>
+
+<p>Once a <code>Request</code> object has been created a <code>GET</code> request can be executed by calling its <code>get()</code> method, a <code>POST</code> request by calling its <code>post()</code> method, and so on.</p>
+
+<p>When the server completes the request, the <code>Request</code> object emits a "complete" event. Registered event listeners are passed a <code>Response</code> object.</p>
+
+<p>Each <code>Request</code> object is designed to be used once. Attempts to reuse them will throw an error.</p>
+
+<p>Since the request is not being made by any particular website, requests made here are not subject to the same-domain restriction that requests made in web pages are subject to.</p>
+
+<p>With the exception of <code>response</code>, all of a <code>Request</code> object's properties correspond with the options in the constructor. Each can be set by simply performing an assignment. However, keep in mind that the same validation rules that apply to <code>options</code> in the constructor will apply during assignment. Thus, each can throw if given an invalid value.</p>
+
+<p>The example below shows how to use Request to get the most recent tweet from the <a href="https://twitter.com/mozhacks">@mozhacks</a> account:</p>
+
+<pre class="brush: js">var Request = require("sdk/request").Request;
+var latestTweetRequest = Request({
+  url: "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=mozhacks&amp;count=1",
+  onComplete: function (response) {
+    var tweet = response.json[0];
+    console.log("User: " + tweet.user.screen_name);
+    console.log("Tweet: " + tweet.text);
+  }
+});
+
+// Be a good consumer and check for rate limiting before doing more.
+Request({
+  url: "http://api.twitter.com/1/account/rate_limit_status.json",
+  onComplete: function (response) {
+    if (response.json.remaining_hits) {
+      latestTweetRequest.get();
+    } else {
+      console.log("You have been rate limited!");
+    }
+  }
+}).get();</pre>
+
+<h3 id="Methods">Methods</h3>
+
+<h4 class="addon-sdk-api-name" id="get()"><code>get()</code></h4>
+
+<p>Make a <code>GET</code> request.</p>
+
+<h4 class="addon-sdk-api-name" id="head()" style="line-height: 18px; font-size: 1.28571428571429rem;"><code>head()</code></h4>
+
+<p>Make a <code>HEAD</code> request.</p>
+
+<h4 class="addon-sdk-api-name" id="post()"><code>post()</code></h4>
+
+<p>Make a <code>POST</code> request.</p>
+
+<h4 class="addon-sdk-api-name" id="put()"><code>put()</code></h4>
+
+<p>Make a <code>PUT</code> request.</p>
+
+<h4 class="addon-sdk-api-name" id="delete()"><span style="font-family: courier new,andale mono,monospace; font-size: 1.28571428571429rem; font-style: inherit; font-weight: inherit;">delete()</span></h4>
+
+<p>Make a <code>DELETE</code> request.</p>
+
+<h3 id="Properties">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="url"><code>url</code></h4>
+
+<h4 class="addon-sdk-api-name" id="headers"><code>headers</code></h4>
+
+<h4 class="addon-sdk-api-name" id="content"><code>content</code></h4>
+
+<h4 class="addon-sdk-api-name" id="contentType"><code>contentType</code></h4>
+
+<h4 class="addon-sdk-api-name" id="response"><code>response</code></h4>
+
+<h3 id="Events">Events</h3>
+
+<h4 class="addon-sdk-api-name" id="complete"><code>complete</code></h4>
+
+<p>The <code>Request</code> object emits this event when the request has completed and a response has been received.</p>
+
+<h5 id="Arguments">Arguments</h5>
+
+<p><strong>Response</strong> : Listener functions are passed the response to the request as a <code>Response</code> object.</p>
+
+<h2 id="Response">Response</h2>
+
+<p>The Response object contains the response to a network request issued using a <code>Request</code> object. It is returned by the <code>get()</code>, <code style="font-style: normal; line-height: 1.5;">head()</code><span style="line-height: 1.5;">, </span><code style="font-style: normal; line-height: 1.5;">post()</code><span style="line-height: 1.5;">, </span><code style="font-style: normal; line-height: 1.5;">put()</code><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">or </span><code style="font-style: normal; line-height: 1.5;">delete()</code><span style="line-height: 1.5;"> method of a </span><code style="font-style: normal; line-height: 1.5;">Request</code><span style="line-height: 1.5;"> object.</span></p>
+
+<p>All members of a <code>Response</code> object are read-only.</p>
+
+<h3 id="Properties_2">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="text"><code>text</code></h4>
+
+<p>The content of the response as plain text.</p>
+
+<h4 class="addon-sdk-api-name" id="json"><code>json</code></h4>
+
+<p>The content of the response as a JavaScript object. The value will be <code>null</code> if the document cannot be processed by <code>JSON.parse</code>.</p>
+
+<h4 class="addon-sdk-api-name" id="status"><code>status</code></h4>
+
+<p>The HTTP response status code (e.g. <em>200</em>).</p>
+
+<h4 class="addon-sdk-api-name" id="statusText"><code>statusText</code></h4>
+
+<p>The HTTP response status line (e.g. <em>OK</em>).</p>
+
+<h4 class="addon-sdk-api-name" id="headers_2"><code>headers</code></h4>
+
+<p>The HTTP response headers represented as key/value pairs.</p>
+
+<p>To print all the headers you can do something like this:</p>
+
+<pre class="brush: js">for (var headerName in response.headers) {
+  console.log(headerName + " : " + response.headers[headerName]);
+}</pre>

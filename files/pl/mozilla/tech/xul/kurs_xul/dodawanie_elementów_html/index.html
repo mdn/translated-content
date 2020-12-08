@@ -1,0 +1,124 @@
+---
+title: Dodawanie elementów HTML
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_elementów_HTML
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_HTML_Elements
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Paski_postępu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Zastosowanie_odstępów">Następny  »</a></p>
+</div><p></p>
+<p>Wiemy już, jak się dodaje przyciski, więc pora na dodanie kilku innych elementów.</p>
+<h3 id="Dodawanie_element.C3.B3w_j.C4.99zyka_HTML_do_okna" name="Dodawanie_element.C3.B3w_j.C4.99zyka_HTML_do_okna">Dodawanie elementów języka HTML do okna</h3>
+<p>Dodatkowo do wszystkich elementów XUL, które są dostępne, możemy dodać elementy języka HTML, bezpośrednio do wewnątrz pliku XUL. Aktualnie możemy zastosować dowolny element języka HTML w pliku XUL, co oznacza, że aplety Javy lub tabele mogą zostać umieszczone w naszym oknie. Powinniśmy unikać stosowania elementów HTML w plikach XUL, jeśli jest to tylko możliwe. Jednakże w tym artykule został opisany sposób ich stosowania. Zapamiętaj, że XML uwzględnia wielkość liter, więc musimy wprowadzać znaczniki oraz atrybuty z małej litery.</p>
+<h4 id="Przestrze.C5.84_nazw_XHTML" name="Przestrze.C5.84_nazw_XHTML">Przestrzeń nazw XHTML</h4>
+<p>Chcąc zastosować elementy języka HTML w pliku XUL, musimy zadeklarować, że to robimy, więc do tego celu stosujemy przestrzeń nazw XHTML. W ten sposób przeglądarka Mozilli będzie mogła odróżnić znaczniki HTML od znaczników XUL. Poniższy atrybut powinien zostać dodany do elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> w pliku XUL lub do znajdującego się najdalej na zewnątrz elementu HTML.</p>
+<pre class="eval"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span>
+</pre>
+<p>Jest to deklaracja języka HTML i jest bardzo podobna do tej, jaką zastosujemy w deklaracji XUL. Musimy ją wpisać dokładnie tak, jak pokazano poniżej, bo inaczej nie będzie ona działała poprawnie. Zwróć uwagę, że przeglądarka Mozilli nie pobierze tego adresu URL, lecz uzna go jako początek języka HTML.</p>
+<p>Tu mamy przykład jaki może być dodany do okna <code>Znajdź pliki</code>:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window
+   id="findfile-window"
+   title="Znajdź pliki"
+   orient="horizontal"
+   <span class="highlightred"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span></span>
+   xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+<p>Następnie możemy stosować znaczniki HTML trzymając się następujących reguł:</p>
+<ul>
+ <li>Musisz dodać prefiks <code>html:</code> na początku każdego znacznika, zakładając, że zadeklarowałeś przestrzeń nazw HTML, jak zostało to pokazane powyżej.</li>
+ <li>Znaczniki
+  <i>
+   muszą być wprowadzone z małej litery</i>
+  .</li>
+ <li>"Cudzysłowy" muszą być umieszczone wraz ze wszystkimi wartościami atrybutów.</li>
+ <li>XML wymaga zamykającego znaku slash (/) na końcu znaczników, które nie posiadają żadnej zawartości. Wytłumaczone jest to w poniższym przykładzie.</li>
+</ul>
+<h4 id="Zastosowanie_element.C3.B3w_HTML" name="Zastosowanie_element.C3.B3w_HTML">Zastosowanie elementów HTML</h4>
+<p>Możemy stosować jakikolwiek znacznik HTML, lecz niektóre znaczniki, takie jak <code>head</code> i <code>body</code>, nie są w rzeczywistości potrzebne. Przykłady zastosowania elementów HTML są pokazane poniżej:</p>
+<pre>&lt;html:img src="banner.jpg"/&gt;
+
+&lt;html:input type="checkbox" value="true"/&gt;
+
+&lt;html:table&gt;
+  &lt;html:tr&gt;
+    &lt;html:td&gt;
+      Prosta tabela
+    &lt;/html:td&gt;
+  &lt;/html:tr&gt;
+&lt;/html:table&gt;
+</pre>
+<p>W tym przykładzie utworzony zostanie obrazek z pliku <code>banner.jpg</code>, pole wyboru oraz pojedyncza komórka tabeli. Powinniśmy zawsze stosować własności XUL-a, jeśli są one dostępne i najprawdopodobniej nie powinniśmy stosować tabelek do układu graficznego w XUL (ponieważ są elementy XUL do tworzenia układu graficznego). Zwróć uwagę, że prefiks <code>html:</code> został dodany z przodu każdego znacznika. Dzięki temu przeglądarka Mozilli wie, że są to znaczniki HTML-a, a nie XUL-a. Jeśli opuścimy część <code>html:</code>, przeglądarka pomyśli, że element był elementem XUL i nie będą wyświetlone, ponieważ elementy img, input, table nie są poprawnymi znacznikami XUL.</p>
+<p>W XUL możesz dodać etykiety za pomocą elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> lub <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code>. Powinniśmy stosować te elementy jak najczęściej. Możemy również dodawać etykiety do kontrolek poprzez zastosowanie elementu HTML - <code>label</code> lub możemy po prostu wstawiać tekst do wewnątrz innego bloku elementów HTML (takich jak <code>p</code> lub <code>div</code>) w sposób pokazany poniżej:</p>
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul">Podgląd</a></p>
+<pre>&lt;html:p&gt;
+  Szukaj dla:
+  &lt;html:input id="find-text"/&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/html:p&gt;
+</pre>
+<p>Ten kod spowoduje, że będzie wyświetlony tekst <code>Szukaj dla:</code>, następnie element <code>input</code> i przycisk <code>OK</code>. Zwróć uwagę, że przycisk XUL może się pojawić wewnątrz elementu HTML, jak jest to tu pokazane. Tekst będzie tylko wyświetlony, jeśli umieścimy go wewnątrz znacznika, który normalnie pozwala na wyświetlenie tekstu (takiego znacznika jak <code>p</code>). Tekst na zewnątrz nie będzie wyświetlony, chyba że element XUL-a, w którym się on znajduje, pozwala na to (na przykład element <code>description</code>). Przykład poniżej pomoże w zrozumieniu tego:</p>
+<h3 id="Przyk.C5.82ady_element.C3.B3w_HTML" name="Przyk.C5.82ady_element.C3.B3w_HTML">Przykłady elementów HTML</h3>
+<p>Tutaj mamy kilka przykładów dodawania elementów HTML do okien. W każdym przypadku okno i inne zwykłe informacje zostaną pominięte dla uproszczenia przykładu.</p>
+<h4 id="Okno_dialogowe_z_polem_wyboru" name="Okno_dialogowe_z_polem_wyboru">Okno dialogowe z polem wyboru</h4>
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul">Podgląd</a></p>
+<div class="float-right">
+ <img alt="Grafika:htmlelem-ex1.png"></div>
+<pre>&lt;html:p&gt;
+  Zaznacz poniższe pole, aby zapamiętać tą decyzje.
+  &lt;html:p&gt;
+    &lt;html:input id="rtd" type="checkbox"/&gt;
+    &lt;html:label for="rtd"&gt;Zapamiętaj tą decyzję&lt;/html:label&gt;
+  &lt;/html:p&gt;
+&lt;/html:p&gt;
+</pre>
+<p>W tym przypadku znacznik <code>p</code> został zastosowany do umieszczenia tekstu, a inne zostały zastosowane do podzielenia tekstu na wiele linii.</p>
+<h4 id="Tekst_poza_blokami_HTML" name="Tekst_poza_blokami_HTML">Tekst poza blokami HTML</h4>
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul">Podgląd</a></p>
+<div class="float-right">
+ <img alt="grafika:htmlelem-ex2.png"></div>
+<pre>&lt;html:div&gt;
+    Chciałbyś zapisać następujące dokumenty?
+    &lt;html:hr/&gt;
+&lt;/html:div&gt;
+Kosztorys 1
+Co robiłem ostatniego lata
+&lt;button id="yes" label="Tak"/&gt;
+&lt;button id="no" label="Nie"/&gt;
+</pre>
+<p>Jak widać na tym obrazku, tekst wewnątrz znacznika <code>div</code> został wyświetlony, ale pozostały tekst (
+ <i>
+  Kosztorys 1</i>
+ i
+ <i>
+  Co robiłem ostatniego lata</i>
+ ) już nie. Jest tak, ponieważ nie ma otaczającego go elementu HTML-a lub elementu XUL zdolnego do wyświetlenia tekstu. Mając taki tekst, powinniśmy wstawić go wewnątrz znacznika <code>div</code> lub otoczyć tekst znacznikiem <code>description</code>.</p>
+<h4 id="Niepoprawne_zastosowanie_element.C3.B3w_HTML" name="Niepoprawne_zastosowanie_element.C3.B3w_HTML">Niepoprawne zastosowanie elementów HTML</h4>
+<pre>&lt;html:po&gt;Przypadek 1&lt;/html:po&gt;
+&lt;div&gt;Przypadek 2&lt;/div&gt;
+&lt;html:description value="Przypadek 3"/&gt;
+</pre>
+<p>Wszystkie powyższe trzy przypadki nie zostaną wyświetlone, każdy z innego powodu:</p>
+<dl>
+ <dt>
+  Przypadek 1 </dt>
+ <dd>
+  <code>po</code> nie jest poprawnym znacznikiem HTML-a, a przeglądarka Mozilli nie wie, jak odczytać ten znacznik.</dd>
+ <dt>
+  Przypadek 2 </dt>
+ <dd>
+  <code>div</code> jest poprawny, ale tylko w HTML-u. Aby działał i tu, musimy dodać kwalifikator <code>html:</code>.</dd>
+ <dt>
+  Przypadek 3 </dt>
+ <dd>
+  Element <code>description</code> jest poprawny tylko w XUL-u, a nie w HTML-u. Nie powinniśmy mieć kwalifikatora <code>html:</code> przed tym elementem.</dd>
+</dl>
+<p>W następnym artykule zobaczymy, <a href="pl/Kurs_XUL/Zastosowanie_odst%c4%99p%c3%b3w">jak dodać odstęp pomiędzy elementami</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Paski_postępu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Zastosowanie_odstępów">Następny  »</a></p>
+</div><p></p>

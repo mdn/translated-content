@@ -1,0 +1,113 @@
+---
+title: Add-on SDK
+slug: Mozilla/Add-ons/SDK
+tags:
+  - Dodatek SDK
+translation_of: Archive/Add-ons/Add-on_SDK
+---
+<p> </p>
+
+<div class="warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+
+<p>Add-ons using the techniques described in this document are considered a legacy technology in Firefox. Don't use these techniques to develop new add-ons. Use <a href="/en-US/Add-ons/WebExtensions">WebExtensions</a> instead. If you maintain an add-on which uses the techniques described here, consider migrating it to use WebExtensions.</p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 53</a>, no new legacy add-ons will be accepted on addons.mozilla.org (AMO) for desktop Firefox and Firefox for Android.</strong></p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 57</a>, only extensions developed using WebExtensions APIs will be supported on Desktop Firefox and Firefox for Android. </strong></p>
+
+<p>Even before Firefox 57, changes coming up in the Firefox platform will break many legacy extensions. These changes include multiprocess Firefox (e10s), sandboxing, and multiple content processes. Legacy extensions that are affected by these changes should migrate to use WebExtensions APIs if they can. See the <a href="https://blog.mozilla.org/addons/2017/02/16/the-road-to-firefox-57-compatibility-milestones/">"Compatibility Milestones" document</a> for more information.</p>
+
+<p>A wiki page containing <a href="https://wiki.mozilla.org/Add-ons/developer/communication">resources, migration paths, office hours, and more</a>, is available to help developers transition to the new technologies.</p>
+</div>
+
+<p>za pomocą dodatku sdk można tworzyć dodatki dla firefoksa. można użyć różnych standardowych technologii internetowych: javascript, html i css, aby utworzyć dodatki. sdk zawiera javascript apis, które można wykorzystać do tworzenia dodatków i narzędzi do tworzenia, uruchamiania, testowania i pakowania dodatków.</p>
+
+<hr>
+<h3 id="sect1"></h3>
+
+<p>samouczki</p>
+
+<p>zacząć</p>
+
+<p>    jak zainstalować sdk i używać narzędzia jpm do tworzenia, testowania i dodawania pakietów.</p>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt>
+ <div class="column-half">
+ <dl>
+  <dt>
+  <p>Współpracuj z przeglądarką</p>
+
+  <p>    Otwieranie stron internetowych, słuchanie stron wczytywania i wyświetlania otwartych stron.</p>
+
+  <p>Techniki rozwoju</p>
+
+  <p>    Dowiedz się więcej o wspólnych technikach rozwoju, takich jak testowanie jednostkowe, logowanie, tworzenie modułów wielokrotnego użytku, lokalizacja i rozwój mobilny.</p>
+
+
+
+  <p>Utwórz składniki interfejsu użytkownika</p>
+
+  <p>    Utwórz elementy interfejsu użytkownika, takie jak przyciski paska narzędzi, menu kontekstowe, pozycje menu i okna dialogowe.</p>
+
+  <p>Modyfikuj strony internetowe</p>
+
+  <p>    Modyfikuj strony pasujące do wzoru adresu URL lub dynamicznie modyfikuj określoną kartę.</p>
+
+  <p>Łącząc je razem</p>
+
+  <p>    Przykład dodatku do przykładu adnotatora</p>
+  </dt>
+ </dl>
+ </div>
+ </dt>
+</dl>
+</div>
+</div>
+
+<hr>
+<p>Przewodniki</p>
+
+<p>Przewodnik dla współtwórców<br>
+     Dowiedz się, jak rozpocząć wkład do pakietu SDK oraz o najważniejsze idiom użyte w kodzie SDK, takie jak moduły, klasy i dziedziczenie, właściwości prywatne i procesy zawartości.<br>
+ Infrastruktura SDK<br>
+     Aspekty technologii bazującej na technologii SDK: moduły, identyfikator programu i reguły określające zgodność z Firefoksem.<br>
+ Skrypty zawartości<br>
+     Szczegółowy przewodnik po pracy z skryptami zawartości.</p>
+
+<p>Idiomy SDK<br>
+     Ramka zdarzeń SDK i rozróżnienie między dodatkowymi skryptami a skryptami zawartości.<br>
+ Migracja XUL<br>
+     Przewodnik po przenoszeniu dodatków XUL do pakietu SDK. W tym przewodniku znajdziesz porównanie obu zestawów narzędzi i przykładowy przykład przenoszenia dodatku XUL.<br>
+ Multiprocess Firefox i SDK<br>
+     Jak sprawdzić, czy dodatek jest zgodny z wieloma procesorami Firefox, czy nie, i odpowiednio go naprawić.</p>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dd></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<p>Odniesienie</p>
+
+
+
+<p>API wysokiego poziomu</p>
+
+<p>    Dokumentacja dla interfejsów API SDK wysokiego poziomu.</p>
+
+<p>Narzędzie odniesienia</p>
+
+<p>    Dokumentacja referencyjna narzędzia jpm służącego do tworzenia, testowania i dodawania pakietów, konsoli globalnej używanej do logowania i pliku package.json.</p>
+
+<p>API niskiego poziomu</p>
+
+<p>    Dokumentacja dla interfejsów API SDK niskiego poziomu.</p>
+
+<hr>

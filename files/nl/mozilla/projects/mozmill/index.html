@@ -1,0 +1,53 @@
+---
+title: Mozmill
+slug: Mozilla/Projects/Mozmill
+translation_of: Mozilla/Projects/Mozmill
+---
+<p>MozMill is een testhulpmiddel en framework voor het schrijven van geautomatiseerde tests voor op Gecko gebaseerde applicaties. (Firefox, Thunderbird, Songbird, enz.). Het is gebouwd als een <a class="external" href="http://pypi.python.org/pypi?%3Aaction=search&amp;term=mozmill&amp;submit=search" title="http://pypi.python.org/pypi?:action=search&amp;term=mozmill&amp;submit=search">commandolijn-cliënt</a> om je tests te laten uitvoeren en debuggen. MozMill heeft een uitbreidbare API om je te helpen nuttige tests te schrijven die gebruikersinteractie simuleren. Ook heeft het een volledige <a class="internal" href="/en/Mozmill/Mozmill_Unit_Test_Framework" title="en/Mozmill Tests/Mozmill Unit Test Framework">test API</a>.</p>
+<p>Het <a class="link-https" href="https://wiki.mozilla.org/QA/Mozmill_Test_Automation" title="https://wiki.mozilla.org/QA/Mozmill_Test_Automation">Mozmill test automatieproject</a> is gestart in Januari 2009 en beschikt over het automatiewerk voor Firefox. Neem een kijkje op de <a class="link-https" href="https://wiki.mozilla.org/QA/Mozmill_Test_Automation" title="https://wiki.mozilla.org/QA/Mozmill_Test_Automation">projectpagina</a> of de <a href="/en/Mozmill_Tests" title="en/Mozmill Tests">Mozmill Tests</a> documentatie om een indruk te krijgen van hoe je deel kunt uitmaken van het schrijven en uitvoeren van Mozmill tests. Bestaande tests worden uitgevoerd in de <a href="/en/Mozmill/Release_Testing" title="en/Mozmill/Release Testing">Uitgavetesting</a>scyclus voor nieuwe grote of beveiligingsuitgaves van Firefox.</p>
+<p>Ook het Mozilla Messaging team heeft een actief project dat <a href="/en/Thunderbird/Thunderbird_MozMill_Testing" title="en/Thunderbird/Thunderbird MozMill Testing">Thunderbird testing met Mozmill</a> behandelt.</p>
+<div class="note">
+ <p>Als je vragen of problemen hebt met Mozmill, kan je een mail sturen naar de <a href="http://groups.google.com/group/mozmill-dev?pli=1" title="http://groups.google.com/group/mozmill-dev?pli=1">mozmill-dev mailing list</a>. Voor bugs, vraag alsjeblieft een ticket aan op <a href="https://bugzilla.mozilla.org" title="https://bugzilla.mozilla.org">bugzilla.mozilla.org</a> onder de <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing&amp;component=Mozmill" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing&amp;component=Mozmill">Testing/Mozmill component</a>.</p>
+</div>
+<h2 id="Installatie">Installatie</h2>
+<p>Mozmill is een Pythonpakket gehost op <a href="http://pypi.python.org/pypi/mozmill" title="http://pypi.python.org/pypi/mozmill">PyPI</a>. Het kan geinstalleerd worden met <a class="external" href="http://pypi.python.org/pypi/pip" title="http://pypi.python.org/pypi/pip">pip</a> of <a class="external" href="http://pypi.python.org/pypi/setuptools" title="http://pypi.python.org/pypi/setuptools">setuptools</a> (easy_install).</p>
+<h3 id="Windows">Windows</h3>
+<p>De makkelijkste manier om Mozmill werkend te krijgen op Windows is door deze <a href="http://mozqa.com/mozmill-env/" title="http://mozqa.com/mozmill-env/">mozmill-env</a> te downloaden. Pak het uit en voer elke keer <em>cmd.run</em> uit als je Mozmill wilt gebruiken. Dit opent een soort van Unix console met Mozmill voorgeïnstalleerd.</p>
+<h3 id="Mac_OS_X">Mac OS X</h3>
+<p>Als je Mac OS X 10.4 (of hoger) hebt, moet je eerst minstens Python 2.5 van <a class="external" href="http://python.org/download/">python.org</a> downloaden. Daarna installeer je Mozmill met de setuptools.</p>
+<pre>$ curl -O https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+$ sudo python ez_setup.py
+$ sudo easy_install pip
+$ sudo pip install mozmill</pre>
+<h3 id="Debian(of_soortgelijke)_GNU-Linux_distributies_(Debian_Ubuntu_enz.)">Debian(of soortgelijke) GNU-Linux distributies (Debian, Ubuntu, enz.)</h3>
+<p>Om Mozmill te installeren op Ubuntu hoef je alleen maar deze twee commando's uit te voeren in de terminal:</p>
+<pre>$ sudo apt-get install python-pip
+$ sudo pip install mozmill</pre>
+<h2 id="Mozmill-versies">Mozmill-versies</h2>
+<p>Je kunt je Mozmill-versie achterhalen door het volgende commando uit te voeren:</p>
+<pre>$ mozmill --v
+</pre>
+<p>De huidige stabiele versie van Mozmill is 2.0. Waarschijnlijk heb je deze versie met de bovenstaande stappen geïnstalleerd. Als de bug waar je aan werkt geen 2.0 nodig heeft, voer dan alsjeblieft het volgende commando uit om de laatste versie van de 1.5 branch te krijgen:</p>
+<pre>$ sudo pip install --upgrade mozmill==1.5.24
+</pre>
+<p>Voor de ontwikkeling van Mozmill 2.0 adviseren wij jou om een virtuele omgeving te gebruiken en <a href="https://github.com/mozilla/mozmill" title="https://github.com/mozilla/mozmill">deze stappen</a> te volgen.</p>
+<h2 id="Zie_ook">Zie ook</h2>
+<p>We hebben een paar andere pagina's om je te helpen het meeste uit Mozmill te halen. Het is misschien handig om deze op te slaan voor later.</p>
+<ul>
+ <li><a href="/en/Mozmill_Tests" title="https://developer.mozilla.org/en/Mozmill_Tests">Mozmill tests voor Firefox</a>  - hoe voer je de Mozmill tests voor Firefox uit</li>
+ <li><a href="/en/Mozmill/Using_The_Driver" title="https://developer.mozilla.org/en/Mozmill/Using_the_Driver">Het gebruiken van de Driver</a> - hoe gebruik je Mozmill's driver in je extensie zonder dat je je druk hoeft te maken over de delen van 'test harness'.</li>
+</ul>
+<h3 id="Referenties">Referenties</h3>
+<ul>
+ <li><a href="/en/Mozmill/Mozmill_Controller_Object" title="en/Mozmill/Mozmill Controller Object">controller object reference</a></li>
+ <li><a href="/en/Mozmill/Mozmill_Elements_Library_Object" title="en/Mozmill/Mozmill Elements Library Object">elementslib object reference</a> (afgekeurd in Mozmill 2.0 - zie <a href="/en/Mozmill/Finding_Mozmill_Elements" title="Finding_Mozmill_Elements">finding mozmill elements</a>)</li>
+ <li><a href="/en/Mozmill/Mozmill_Element_Object" title="element object reference">element object reference</a> (Mozmill 2.0+)</li>
+ <li><a href="/en/Mozmill/Finding_Mozmill_Elements" title="Finding Mozmill Elements">finding mozmill elements</a> (Mozmill 2.0+)</li>
+ <li><a href="/en/Mozmill/Mozmill_Base_Object_Interfaces" title="en/Mozmill Tests/Mozmill Base Object Interfaces">mozmill object reference</a></li>
+ <li><a class="external" href="/en/Mozmill/Mozmill_Unit_Test_Framework" title="https://developer.mozilla.org/en/Mozmill/Mozmill_Unit_Test_Framework">unit test API reference </a><span class="external">(gestopt in Mozmill 2.0 - gebruik in plaats daarvan de <a class="link-https" href="https://github.com/mozautomation/mozmill/blob/master/mozmill/mozmill/extension/resource/modules/assertions.js" title="https://github.com/mozautomation/mozmill/blob/master/mozmill/mozmill/extension/resource/modules/assertions.js">assertions API</a>)</span></li>
+ <li><a href="/en/Mozmill/Mozmill_Element_Object/Extending_the_MozMill_element_hierarchy" title="https://developer.mozilla.org/en/Mozmill/Mozmill_Element_Object/Extending_Element_Hierarchy">extending the element hierarchy</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozmill_Tests/Shared_Modules">Mozmill shared modules</a></li>
+</ul>
+<h2 id="Bugs">Bugs</h2>
+<p>Mozmill wordt nog ontwikkeld, net zoals de meeste testsystemen in het Mozilla-project. Als je denkt dat je een bug gevonden hebt, controleer dan alsjeblieft de lijst met<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=JSBridge&amp;component=Mozmill&amp;component=MozRunner&amp;product=Testing" title="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=JSBridge&amp;component=Mozmill&amp;component=MozRunner&amp;product=Testing"> bestaande bugs</a>. Als je bug hier niet instaat, <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing">rapporteer dan alsjeblieft een nieuwe bug</a> onder het "<code>Testing</code>" Product en "<code>Mozmill</code>" Component. Geef alsjeblieft zoveel mogelijk details en stuur het liefst ook de Mozmill test mee, die het probleem laat zien. Bedankt!</p>
+<p>like most test systems in the Mozilla project. If you think you've found a bug, please check the list of <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=JSBridge&amp;component=Mozmill&amp;component=MozRunner&amp;product=Testing" title="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=JSBridge&amp;component=Mozmill&amp;component=MozRunner&amp;product=Testing">existing bugs</a>. If your found bug is not listed there, please <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing">file a new bug</a> under the "<code>Testing</code>" Product and "<code>Mozmill</code>" Component. Please provide as much as possible details and attach the Mozmill test if available, which shows the problem. Thanks for filing!</p>

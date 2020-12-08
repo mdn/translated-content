@@ -1,0 +1,143 @@
+---
+title: Tworzenie kreatora
+slug: Mozilla/Tech/XUL/Kurs_XUL/Tworzenie_kreatora
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Wizard
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Okna_otwierania_i_zapisywania_plików" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_kreatorów">Następny  »</a></p>
+</div><p></p>
+
+<p>Wiele aplikacji używa kreatorów aby pomóc użytkownikowi przejść złożone zadania. XUL dostarcza łatwego sposobu na tworzenie kreatorów</p>
+
+<h2 id="Kreator" name="Kreator">Kreator</h2>
+
+<p>Kreator jest specjalnym typem okna dialogowego, które zawiera kilka stron. Na dole tego okna dialogowego pojawiają się przyciski nawigacyjne do przełączania między stronami. Kreatory są zazwyczaj używane do pomocy użytkownikom przy wykonywaniu złożonych zadań. Każda strona zawiera pojedyncze pytanie lub zbiór powiązanych pytań. Po ostatniej stronie jest wykonywane działanie XUL dostarcza elementu wizard który może być użyty do stworzenia kreatora.</p>
+
+<p>Zawartość wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> obejmuje całą zawartość każdej strony kreatora. Atrybutu umieszczone w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> są używane do sterowania nawigacją kreatora. Kiedy tworzymy kreator, użyjemy znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> zamiast znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>.</p>
+
+<p><em>Zauważ, że kreatory obecnie pracują poprawnie z chrom URL.</em></p>
+
+<div class="note">Note that wizards currently only work properly from chrome URLs.</div>
+
+<p>Kreator składa się składa się z kilku sekcji, chociaż dokładny rozkład będzie różny dla każdej platformy. Kreator będzie generalnie wyświetlany jak te na platformie użytkownika. Typowy rozkład będzie obejmował tytuł na górze, zbiór przycisków nawigacyjnych na dole i zawartość strony po środku.</p>
+
+<p>Tytuł u góry jest stworzony przy zastosowaniu atrybutu <code><code id="a-title"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/title">title</a></code></code>, podobnie jak robi się to w zwykłym oknie. Przyciski nawigacyjne są tworzone automatycznie. Strony kreatora są tworzone przy użyciu elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code>. Możesz umieścić jakąkolwiek zawartość jaką chcesz wewnątrz każdego <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code>.</p>
+
+<h3 id="Przyk.C5.82ad_kreatora" name="Przyk.C5.82ad_kreatora">Przykład kreatora</h3>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_wizard_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="example-window" title="Select a Dog Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;wizardpage&gt;
+    &lt;description&gt;
+      This wizard will help you select the type of dog that is best for you."
+    &lt;/description&gt;
+    &lt;label value="Why do you want a dog?"/&gt;
+    &lt;menulist&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem label="To scare people away"/&gt;
+        &lt;menuitem label="To get rid of a cat"/&gt;
+        &lt;menuitem label="I need a best friend"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menulist&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage description="Dog Details"&gt;
+    &lt;label value="Provide additional details about the dog you would like:"/&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Size"/&gt;
+      &lt;radio value="small" label="Small"/&gt;
+      &lt;radio value="large" label="Large"/&gt;
+    &lt;/radiogroup&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Gender"/&gt;
+      &lt;radio value="male" label="Male"/&gt;
+      &lt;radio value="female" label="Female"/&gt;
+    &lt;/radiogroup&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+
+<div class="float-right"><img alt="grafika:wizard1.jpg"></div>
+
+<p>Ten kreator ma dwie strony, jedną z menu rozwijanym i drugą ze zbiorem przycisków opcji. Kreator będzie sformatowany automatycznie, z tytułem na górze i zbiorem przycisków na dole. Użytkownik może nawigować pomiędzy stronami kreatora przyciskami Wstecz oraz Dalej. Przyciski te włączają się i wyłączają same w odpowiedniej chwili. Dodatkowo na ostatniej stronie pojawia się przycisk Zakończ. Wszystko to jest automatyczne, więc nie musisz robić niczego aby manipulować stronami.</p>
+
+<p>Atrybut <code><code id="a-description"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/description">description</a></code></code> może opcjonalnie umieścić element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> dostarczający podnagłówków dla tej strony. W powyższym przykładzie będzie umieszczony na drugiej stronie, ale nie na pierwszej.</p>
+
+<h2 id="Obs.C5.82uga_zmian_strony" name="Obs.C5.82uga_zmian_strony">Obsługa zmian strony</h2>
+
+<p>Generalnie chcesz zrobić coś po tym jak naciśniesz przycisk Zakończ. Możesz ustawić atrybut <code>onwizardfinish</code> w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> aby to wykonać. Ustaw go w skrypcie który wykonuje jakieś zadanie jakie chcesz a potem zwraca prawdę. Ten skrypt może być używany do zapisania informacji, jaką użytkownik wprowadził podczas pracy z kreatorem.</p>
+
+<pre>&lt;wizard id="example-window" title="Select a Dog Wizard"
+  onwizardfinish="return saveDogInfo();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>Kiedy użytkownik nacisnął przycisk Zakończ, będzie wywołana funkcja <code>saveDogInfo()</code>, będąca zdefiniowaną w pliku skryptu zapisującym informację jaka została wprowadzona. Jeśli funkcja zwraca <code>true</code>, kreator zostanie zamknięty. Jeśli zwróci <code>false</code>, wtedy kreator się nie zamknie, co może wystąpić, jeśli funkcja <code>saveDogInfo()</code> napotka niepoprawną daną wejściową, na przykład.</p>
+
+<p>Są również powiązane atrybuty <code><code id="a-onwizardback"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onwizardback">onwizardback</a></code></code>, <code><code id="a-onwizardnext"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onwizardnext">onwizardnext</a></code></code> i <code><code id="a-onwizardcancel"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onwizardcancel">onwizardcancel</a></code></code>, które są wywoływane, kiedy są naciśnięte przyciski Wstecz, Dalej i Anuluj. Te funkcje są wywoływane bez względu na to jaka strona jest aktualnie wyświetlana.</p>
+
+<p>Aby mieć różny kod wywoływany w zależności od strony na jakiej jesteś, użyj atrybutów <code><code id="a-onpagerewound"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onpagerewound">onpagerewound</a></code></code> lub <code><code id="a-onpageadvanced"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onpageadvanced">onpageadvanced</a></code></code> w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code>. Pracują one podobnie do innych funkcji z wyjątkiem tego, że możesz użyć różnego kodu dla każdej strony. Pozwala Ci to sprawdzenie poprawności wprowadzonych danych wejściowych zanim użytkownik będzie kontynuował.</p>
+
+<p>Trzecią metodą jest zastosowanie atrybutów <code><code id="a-onpagehide"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onpagehide">onpagehide</a></code></code> i <code><code id="a-onpageshow"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onpageshow">onpageshow</a></code></code> w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code>. Będą one wywoływane kiedy strona jest ukrywana lub pokazywana bez względu na to jaki przycisk naciśnięto (z wyjątkiem, kiedy naciśnięto przycisk Anuluj -- musisz użyć <code><code id="a-onwizardcancel"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onwizardcancel">onwizardcancel</a></code></code>, aby to sprawdzić).</p>
+
+<p>Te trzy metody powinny dostarczyć dosyć elastyczności dla obsługi nawigacji jakiej potrzebujemy. Poniżej mamy podsumowanie funkcji atrybutów, które są wywoływane, kiedy użytkownik naciśnie Dalej, w porządku, w jakim będą sprawdzane. Jeśli tylko jedna zwróci <code>false</code>, nawigacja zostaje przerwana.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Atrybuty</th>
+   <th>Miejsce na znacznik</th>
+   <th>Moment wywoływana</th>
+  </tr>
+  <tr>
+   <td>pagehide</td>
+   <td>wizardpage</td>
+   <td>Wywoływana na stronie, którą użytkownik opuszcza.</td>
+  </tr>
+  <tr>
+   <td>pageadvanced</td>
+   <td>wizardpage</td>
+   <td>Wywoływana na stronie opuszczonej przez użytkownika.</td>
+  </tr>
+  <tr>
+   <td>wizardnext</td>
+   <td>wizard</td>
+   <td>Wywoływana w kreatorze.</td>
+  </tr>
+  <tr>
+   <td>pageshow</td>
+   <td>wizardpage</td>
+   <td>Wywoływana na stronie, którą użytkownik wpisał.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Podobny proces wystąpi dla przycisku Wstecz.</p>
+
+<div class="note">Próbując kiedykolwiek użyć w funkcji zdarzenia, takiej jak pageadvanced, powinniśmy zastosować:
+<p><code>return funcName()</code> zamiast samego wywołania <code>funcName()</code><br>
+ Nie będzie to działało jak oczekiwano np.</p>
+
+<pre class="eval"> &lt;wizardpage pageadvanced='return funcName()'&gt;&lt;/wizardpage&gt;&lt;/code&gt;
+</pre>
+</div>
+
+<p>W kolejnym artykule, zobaczymy kilka <a href="pl/Kurs_XUL/Dodatkowe_mo%c5%bcliwo%c5%9bci_kreator%c3%b3w">dodatkowych możliwości kreatorów</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Okna_otwierania_i_zapisywania_plików" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_kreatorów">Następny  »</a></p>
+</div><p></p>
+
+<p> </p>

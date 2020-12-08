@@ -1,0 +1,50 @@
+---
+title: Разработка Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS
+tags:
+  - Developing
+  - Firefox OS
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/B2G_OS/Developing_Firefox_OS
+---
+<div class="summary">
+<p><span class="seoSummary"><span id="result_box" lang="ru"><span class="hps">Этот раздел содержит</span> <span class="hps">полезную документацию</span>, охватывающую различные <span class="hps">способы</span>, в которых <span class="hps">Firefox OS</span> <span class="hps">(кодовое имя</span> <span class="hps">Boot2Gecko</span> <span class="hps">или</span> <span class="hps">B2G</span>) <span class="hps">могут быть изменены</span><span class="hps">/настроить</span> <span class="hps">в процессе сборки</span>, <span class="hps">и как вы можете</span> <span class="hps">помочь в разработке</span> низкоуровневых частей <span class="hps">платформы</span>, такие как <span class="hps">Gecko</span> <span class="hps">и</span> <span class="hps">Gonk.</span></span></span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Если вы хотите помочь в разработке Gaia, пользовательского интерфейса Firefox OS, вам следует поситить страницу <a href="/en-US/Firefox_OS/Developing_Gaia">Разрабока Gaia</a>.</p>
+</div>
+
+<h2 id="General_contribution_notes">General contribution notes</h2>
+
+<p>Since Gecko is an integral part of the Firefox browser, contributing to Firefox OS-related parts of Gecko is a pretty similar process to Gecko in general; contributing to Gonk is also pretty similar. Basically, you need to get to know the community, learn how the codebase works, and find bugs to work on. A good place to start earning about the contribution process is <a href="/en-US/docs/Introduction">Contributing to the Mozilla codebase</a>.</p>
+
+<p>You should learn about Gecko — how it works and how it is structured. The <a href="/en-US/docs/Mozilla/Gecko">MDN Gecko homepage</a> has some useful notes on this, as does the <a href="https://wiki.mozilla.org/Gecko:Overview">Gecko:Overview</a> page on the Mozilla Wiki. For information on (Firefox OS-specific) APIs, see the <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> Mozilla Wiki page for an overview of the work, and the <a href="/en-US/docs/WebAPI">MDN WebAPI</a> page for an index of all documented APIs.</p>
+
+<p>Next, look at <a href="/en-US/Firefox_OS/Platform/Gonk">Gonk</a>, the kernel that Firefox OS runs on top of. Gonk is basically another porting target for Gecko, just like Mac OS X, Windows and Linux are in the case of Desktop Firefox versions. Gonk itself is really just a stripped down version of the Android Open Source Project — we tend not to change much of Gonk itself since most of the source code isn't under our control, and the device partners we work with to create Firefox OS devices usually provide device-specific code to interface between the device and Gecko/Gonk.</p>
+
+<p>There is still work to be done on APIs, however. Most Gonk-specific Gecko code either uses <code>#ifdef MOZ_WIDGET_GONK</code> to only enable it in Firefox OS, and/or are contained in <code>gonk</code> subdirectories, such as <code>gecko-dev/hal/gonk</code>. Try cloning the <a href="https://github.com/mozilla/gecko-dev">gecko-dev</a> repo locally and having a look around. Our <a href="/en-US/docs/Mozilla_Source_Code_Directory_Structure">Mozilla Source Code Directory Structure</a> article is also useful.</p>
+
+<p>Next, you should learn more about <a href="/en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture</a>, how to <a href="/en-US/Firefox_OS/Building">Build Firefox OS</a> (start with the <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_build_process_summary">Firefox OS build process summary</a>), and how to <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Porting">Port Firefox OS</a> to other devices.</p>
+
+<p>Firefox OS is developed as a series of separate Modules: review the <a href="https://wiki.mozilla.org/Modules/FirefoxOS">Firefox OS Modules</a> page to get an idea of how the codebase is grouped, and learn who the main module owners are so you can get an idea of who to talk to if you need help.</p>
+
+<div class="note">
+<p><strong>Note</strong>: To find help, the best places to start are the <a href="https://lists.mozilla.org/listinfo/dev-b2g">dev-b2g mailing list</a>, and the #b2g chatroom on <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>.</p>
+</div>
+
+<h2 id="Specific_Firefox_OS_development_topics">Specific Firefox OS development topics</h2>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS">Filing bugs against Firefox OS</a></dt>
+ <dd>This article provides a guide to filing bugs against any aspect of Firefox OS.</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Tips_and_tricks/modifying_hosts_file" title="/en-US/docs/Mozilla/Firefox_OS/Tips_and_tricks/modifying_hosts_file">Modifying the hosts file</a></dt>
+ <dd>A guide to what can be achieved by modifying the Firefox OS hosts file.</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a></dt>
+ <dd>How to customize the build and execution of Firefox OS by changing the <code>.userconfig</code> file.</dd>
+ <dt><a href="/en-US/Firefox_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script">Customizing the b2g.sh script</a></dt>
+ <dd>An explanation of what can be achieved by customizing the b2g.sh script, which runs the b2g application and controls many aspects of the system.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Porting" title="/en-US/docs/Mozilla/Firefox_OS/Porting">Porting Firefox OS</a></dt>
+ <dd>Information about how to port Firefox OS to new devices.</dd>
+</dl>

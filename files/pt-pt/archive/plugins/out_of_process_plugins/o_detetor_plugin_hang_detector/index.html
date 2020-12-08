@@ -1,0 +1,46 @@
+---
+title: O detetor de falhas de plug-ins
+slug: Archive/Plugins/Out_of_process_plugins/O_detetor_plugin_hang_detector
+tags:
+  - Extras
+  - Plug-ins
+  - Plugins
+translation_of: Archive/Plugins/Out_of_process_plugins/The_plugin_hang_detector
+---
+<p>Para ajudar a proteger os utilizadores contra <em>plug-ins</em> e <em>scripts</em> de <em>plug-ins</em> que deixam de responder, o Firefox agora inclui um "detector de falhas", que vigia os <em>plug-ins</em> que deixam de funcionar.</p>
+
+<h2 id="Como_é_que_este_funciona">Como é que este funciona</h2>
+
+<p>When Firefox makes an <a href="/en/NPAPI" title="en/NPAPI">NPAPI</a> call to a plugin which is running in its own process, the NPAPI call is translated into an inter-process communication (IPC) request that is posted to the process. Firefox then waits for the response. If a response is not received within a given amount of time (by default, this is 45 seconds), the plugin is assumed to have locked up, and Firefox terminates the plugin by following these steps:</p>
+
+<ol>
+ <li>The plugin's process is stopped and a plugin-process "crash" mini-dump is retrieved.</li>
+ <li>A "crash" mini-dump is collected from the main browser process.</li>
+ <li>The plugin's process is terminated.</li>
+ <li>The crashed plugin user interface is displayed; this interface lets the user choose to reload the page and try again.</li>
+</ol>
+
+<h2 id="O_que_ativa_o_detetor_de_falhas">O que ativa o detetor de falhas</h2>
+
+<p>There are several possible situations that can trigger the hang detector:</p>
+
+<ul>
+ <li>A plugin script—such as ActionScript code running in the Flash plugin—may be in an infinite loop or is performing an extremely long computation without yielding control.</li>
+ <li>The plugin itself may have a bug such as a threading deadlock, which caused it to stop responding.</li>
+ <li>The plugin isn't deadlocked, but isn't processing events quickly enough, causing a backlog that eventually causes an event to wait too long to be processed.</li>
+ <li>The implementation of Firefox out-of-process plugins has a bug causing a deadlock.</li>
+</ul>
+
+<h2 id="O_que_acontece_com_o_relatório_de_falhas">O que acontece com o relatório de falhas?</h2>
+
+<p>When the hang detector catches a problem, it gathers up the mini-dumps and submits the data to <a class="external" href="http://crash-stats.mozilla.com" title="http://crash-stats.mozilla.com/">crash-stats</a>, providing handy debugging information to developers so that the problem can be categorized and, if possible, corrected. The <a class="external" href="http://crash-stats.mozilla.com/query#" title="http://crash-stats.mozilla.com/query#">advanced query page</a> makes it possible to differentiate between crash reports and hang reports, and lets search results be limited to either the browser process or the plugin process. In addition, the browser hang report and the corresponding plugin hang report are automatically cross-linked for you.</p>
+
+<h2 id="E_se_eu_não_quiser_terminar_a_falha_de_plug-ins">E se eu não quiser terminar a falha de <em>plug-ins</em>?</h2>
+
+<p>Sometimes developers may want to prevent hung plugins from being terminated; this could be useful, for example, while debugging script code in Flash or if you're using a debugger that causes event processing to be delayed (such as the Flash debugger).</p>
+
+<p>You can change the timeout period used by the hang detector by changing the value of the <code>dom.ipc.plugins.timeoutSecs</code> preference. The value of this preference indicates the number of seconds an event response must take before the plugin is considered to be hung.</p>
+
+<p>Setting this preference to -1 disables the plugin hang detector entirely.</p>
+
+<p>See <a class="external" href="http://kb.mozillazine.org/About:config" title="http://kb.mozillazine.org/About:config">about:config on MozillaZine</a> for information on changing preferences like this one.</p>

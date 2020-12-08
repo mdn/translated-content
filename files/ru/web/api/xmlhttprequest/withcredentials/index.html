@@ -1,0 +1,104 @@
+---
+title: XMLHttpRequest.withCredentials
+slug: Web/API/XMLHttpRequest/withCredentials
+tags:
+  - AJAX
+  - API
+  - XMLHttpRequest
+  - Свойство
+  - Справка
+translation_of: Web/API/XMLHttpRequest/withCredentials
+---
+<p>{{APIRef('XMLHttpRequest')}}</p>
+
+<p>Свойство<strong> XMLHttpRequest.withCredentials </strong>это {{jsxref("Boolean")}} который определяет, должны ли создаваться кросс-доменные <code>Access-Control</code> запросы с использованием таких идентификационных данных как cookie, авторизационные заголовки или TLS сертификаты. Настройка <code>withCredentials</code> бесполезна при запросах на тот же домен.</p>
+
+<p>Вдобавок, этот флаг также используется для определения, будут ли проигнорированы куки переданные в ответе. Значение по умолчанию - <code>false</code>. XMLHttpRequest с другого домена не может установить cookie на свой собственный домен в случае, если перед созданием этого запроса флаг <code>withCredentials</code> не установлен в <code>true</code>. Сторонние cookies, полученные с помощью установки <code>withCredentials</code> в true, всё равно будут соблюдать политику одинакового домена и, следовательно, не могут быть получены запрашивающим скриптом через <a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a> или из заголовков ответа.</p>
+
+<div class="note">
+<p><strong>Примечание: </strong>Это свойство не влияет на запросы, отправленные на тот же домен.</p>
+</div>
+
+<div class="note">
+<p><strong>Примечание: </strong><font face="Consolas, Liberation Mono, Courier, monospace">О</font>тветы с другого домена не могут установить куки для своего собственного домена в случае, если перед созданием запроса флаг <code>withCredentials</code> не установлен в <code>true</code>, несмотря на значение заголовков <code>Access-Control-</code>.</p>
+</div>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js notranslate">var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://example.com/', true);
+xhr.withCredentials = true;
+xhr.send(null);</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>Действующий стандарт WHATWG</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatChrome(3)}}</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[2]</sup></td>
+   <td>{{CompatIe(10)}}<sup>[1]</sup></td>
+   <td>{{CompatOpera(12)}}</td>
+   <td>{{CompatSafari("4")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Internet Explorer версий 8 и 9 поддерживает кросс-доменные запросы (CORS) используя <a href="https://msdn.microsoft.com/en-us/library/cc288060%28VS.85%29.aspx">XDomainRequest</a>.</p>
+
+<p>[2] Начиная с Gecko 11.0 (Firefox 11.0 / Thunderbird 11.0 / SeaMonkey 2.8), Gecko больше не позволяет использовать аттрибут <code>withCredentials</code> при проведении синхронных запросов. Попытки это сделать выбросят исключение <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code>.</p>

@@ -1,0 +1,87 @@
+---
+title: Session store API
+slug: Archive/Add-ons/Session_store_API
+translation_of: Archive/Add-ons/Session_store_API
+---
+<p>{{ Fx_minversion_header(2) }} Session store makes it possible for <a href="/en-US/docs/Extensions" title="en/Extensions">extensions</a> to easily save and restore data across Firefox sessions. There is a simple API that lets extensions access the session store feature.</p>
+<p>One key scenario in which supporting this feature can be crucial for an extension: Firefox 2 lets users undo the closing of tabs. In order to properly restore your extension's state when a tab is restored, it needs to use the session store API's <code>setTabValue()</code> method to save any data it will need in order to restore its state, and then call <code>getTabValue()</code> to retrieve the previous setting when the tab is restored.</p>
+<p>The Session Store API is implemented using the {{ Interface("nsISessionStore") }} interface.</p>
+<h2 id="Knowing_when_to_restore" name="Knowing_when_to_restore">Knowing when to restore</h2>
+<p>Each time Firefox is about to restore a tab, an event of type <code>SSTabRestoring</code> is sent. If your extension wants to be able to restore data when tabs are restored, you can install a listener like this:</p>
+<pre>function myExtensionHandleRestore(aEvent) {
+  var tab = event.originalTarget;        /* the tab being restored */
+  var uri = tab.linkedBrowser.contentDocument.location;  /* the tab's URI */
+
+  Components.classes["@mozilla.org/consoleservice;1"]
+            .getService(Components.interfaces.nsIConsoleService)
+            .logStringMessage("restoring tab: " + uri);
+};
+
+document.addEventListener("SSTabRestoring", myExtensionHandleRestore, false);
+</pre>
+<p>Simply replace the contents of the function <code>myExtensionHandleRestore()</code> with whatever you need to do when the tab is restored. In this example, <code><a href="/en-US/docs/nsIConsoleService" title="en/nsIConsoleService">nsIConsoleService</a></code> is used to display a message to the <a href="/en-US/docs/Error_Console" title="en/Error_Console">console</a>.</p>
+<p>This event is sent just before a tab is restored. An event of type <code>SSTabRestored</code> fires each time a tab has finished restoring. It's worth noting that this event is sent even if tab loading at startup is deferred until the user selects the tab.</p>
+<p>{{ fx_minversion_note("3", 'In Firefox 3 and later, if you need to detect when a tab is about to be closed so that you can update data associated with the tab before it is closed, you can watch for the "SSTabClosing" event, which is sent to the tab.') }}</p>
+<h3 id="Restoring_without_restarting">Restoring without restarting</h3>
+<p>{{ fx_minversion_note("3.6", "This section applies to Firefox 3.6 and later.") }}</p>
+<p>Firefox 3.6 knows how to save session store data when the last browser window closes, even if there are still other windows open. Similarly, it can now restore the user's session while in that state. In other words, it's now possible for sessions to be restored even without the browser quitting and being relaunched. This is something you may need to keep in mind if you rely on the behavior of the session store system.</p>
+<h2 id="The_session_restore_process" name="The_session_restore_process">The session restore process</h2>
+<p>The exact sequence of events that occurs when a session is being restored is:</p>
+<ol>
+  <li>A session state is about to be restored. This can be on startup or in response to Undo Close Tab, since closed tabs are restored as single-tab sessions.</li>
+  <li>New windows are opened as required (one for each window that was saved in the session store), and cookies and the list of recently closed tabs are restored.</li>
+</ol>
+<p>After that, the following steps are taken for each tab being restored:</p>
+<ol>
+  <li>Either an existing tab is reused or a new tab is created. In the latter case, a <code>TabOpen</code> event is sent.</li>
+  <li>The tab's persistent XUL attributes (those saved due to calls to <code><a href="/en-US/docs/nsISessionStore#persistTabAttribute.28.29" title="en/nsISessionStore#persistTabAttribute.28.29">persistTabAttribute()</a></code>) and permissions are restored.</li>
+  <li>The <code>SSTabRestoring</code> event is sent.</li>
+  <li>The tab is told to load the URL it should be displaying.</li>
+  <li>When the page is finished loading, text fields and scroll state are restored.</li>
+  <li>Finally, the <code>SSTabRestored</code> event is sent.</li>
+</ol>
+<p>If you want to set permissions or otherwise manipulate a restored tab before the page is loaded into it, you should watch <code>SSTabRestoring</code>. If you want to do something after the page is loaded, you should watch <code>SSTabRestored</code>.</p>
+<p>Both events are always sent for each tab being restored. You can determine which tab is being restored by looking at the event's <code>originalTarget</code> field.</p>
+<p>There's not really a way to determine when the last tab has been restored unless you determine how many tabs need to be restored then count the <code>SSTabRestored</code> events.</p>
+<h2 id="Using_the_session_store_API" name="Using_the_session_store_API">Using the session store API</h2>
+<p>This section provides a few simple examples of how to make use of the session store API.</p>
+<h3 id="Saving_a_value_with_a_tab" name="Saving_a_value_with_a_tab">Saving a value with a tab</h3>
+<p>The following code will attach a key/value pair to a tab, so that when the tab is restored, that pair is still associated with it.</p>
+<pre class="eval"> var ss = Components.classes["@mozilla.org/browser/sessionstore;1"]
+                    .getService(Components.interfaces.nsISessionStore);
+ var currentTab = gBrowser.selectedTab;
+ var dataToAttach = "I want to attach this";
+ ss.setTabValue(currentTab, "key-name-here", dataToAttach);
+</pre>
+<p>This code sets the value of the key "key-name-here" to <var>dataToAttach</var>. You may use any JavaScript object as the data.</p>
+<h3 id="Fetching_a_saved_value" name="Fetching_a_saved_value">Fetching a saved value</h3>
+<p>You can fetch a value associated with a tab at any time (whether the tab is in the process of being restored or not), using code similar to the following:</p>
+<pre class="eval"> var ss = Components.classes["@mozilla.org/browser/sessionstore;1"]
+                    .getService(Components.interfaces.nsISessionStore);
+ var currentTab = gBrowser.selectedTab;
+ var retrievedData = ss.getTabValue(currentTab, "key-name-here");
+</pre>
+<p>After this code executes, the variable <var>retrievedData</var> contains the value saved for the key "key-name-here". <var>retrievedData</var> is undefined if there is no value saved for that key name.</p>
+<h3 id="Deleting_a_value_associated_with_a_tab" name="Deleting_a_value_associated_with_a_tab">Deleting a value associated with a tab</h3>
+<p>To delete a value from a tab, you can use code similar to the following:</p>
+<pre class="eval"> var ss = Components.classes["@mozilla.org/browser/sessionstore;1"]
+                    .getService(Components.interfaces.nsISessionStore);
+ var currentTab = gBrowser.selectedTab;
+ ss.deleteTabValue(currentTab, "key-name-here");
+</pre>
+<h3 id="Remarks" name="Remarks">Remarks</h3>
+<p>The window value save and restore functions work exactly like the tab-based functions by similar names.</p>
+<p>Starting in Firefox 3.5, notifications are sent after reading session store data and before using it, as well as immediately before writing it back to disk. <a class="internal" href="/en-US/docs/Observer_Notifications#Session_Store" title="en/Observer Notifications#Session Store">See the list in Observer Notifications</a>.</p>
+<h2 id="Using_the_session_store_API" name="Using_the_session_store_API">Using the session store API in SeaMonkey</h2>
+<p>There are a number of differences between the session store API in Firefox and the API in SeaMonkey 2.0:</p>
+<ul>
+  <li>The class name is <strong><span style="font-family: Courier New;">@mozilla.org/suite/sessionstore;1</span></strong></li>
+</ul>
+<pre class="eval">var ss = Components.classes["@mozilla.org/suite/sessionstore;1"]
+                   .getService(Components.interfaces.nsISessionStore);</pre>
+<ul>
+  <li>When restoring a window, closed tabs in that window are not currently restored.</li>
+  <li>When closing a tab, SeaMonkey does not generate SSTab events. This means that you cannot currently tell if a tab has been saved or restored. However SeaMonkey reuses the browser element (up to the undo close tab limit) which means that you can set state on the browser element and it will be restored with the tab.</li>
+</ul>
+<h2 id="See_also" name="See_also">See also</h2>
+<p>{{interface("nsISessionStore")}}</p>

@@ -1,0 +1,143 @@
+---
+title: RegExp.prototype.test()
+slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
+tags:
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - регулярные выражения
+translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
+---
+<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+
+<p>Метод <strong><code>test()</code></strong> выполняет поиск сопоставления регулярного выражения указанной строке. Возвращает <code>true</code> или <code>false</code>.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre><code><var>regexObj</var>.test(str)</code></pre>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+
+<dl>
+ <dt><code>str</code></dt>
+ <dd>Строка, с которой сопоставляется регулярное выражение.</dd>
+</dl>
+
+<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+
+<p>Логическое значение: <code>true</code> или <code>false</code>.</p>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p>Используйте метод <code>test()</code>, если вы просто хотите узнать, находится ли шаблон в строке (он почти аналогичен методу {{jsxref("String.prototype.search()")}}, только вместо индекса шаблона возвращает <code>true</code> или <code>false</code>); для получения дополнительной информации о сопоставлении (но за счёт более медленного выполнения) используйте метод {{jsxref("RegExp.prototype.exec()", "exec()")}} (он аналогичен методу {{jsxref("String.prototype.match()")}}). Как и при вызове метода {{jsxref("RegExp.prototype.exec()", "exec()")}} (или при совместном с ним вызове), метод <code>test()</code>, вызванный несколько раз на одном и том же экземпляре глобального регулярного выражения, будет начинать проверку с конца предыдущего сопоставления.</p>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<h3 id="Example_Using_test" name="Example:_Using_test">Пример: использование метода <code>test()</code></h3>
+
+<p>Следующий пример печатает сообщение, в зависимости от того, была ли проверка успешной:</p>
+
+<pre class="brush: js">function testinput(re, str){
+  var midstring;
+  if (re.test(str)) {
+    midstring = ' содержит ';
+  } else {
+    midstring = ' не содержит ';
+  }
+  console.log(str + midstring + re.source);
+}
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 3-е издание.</td>
+   <td>Стандарт</td>
+   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome для Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Gecko-specific_notes" name="Gecko-specific_notes">Примечания по Gecko</h3>
+
+<p>До Gecko 8.0 {{geckoRelease("8.0")}} метод <code>test()</code> был реализован неправильно; когда он вызывался без параметров, он проверял на сопоставление предыдущее проверенное значение (свойство <code>RegExp.input</code>) вместо сопоставления со строкой <code>"undefined"</code>. Это поведение было исправлено; теперь <code>/undefined/.test()</code> правильно вернёт <code>true</code> вместо ошибки.</p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>Глава про <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">регулярные выражения</a> в <a href="/ru/docs/Web/JavaScript/Guide">руководстве по JavaScript</a></li>
+ <li>{{jsxref("Global_Objects/RegExp", "RegExp")}}</li>
+</ul>

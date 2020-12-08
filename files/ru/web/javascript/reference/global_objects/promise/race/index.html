@@ -1,0 +1,115 @@
+---
+title: Promise.race()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+tags:
+  - ECMAScript6
+  - Promise
+  - Обещание
+  - метод
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
+---
+<div>{{JSRef}}</div>
+
+<p>Метод<strong> Promise.race(iterable)</strong> возвращает выполненное или отклоненное обещание, в зависимости от того, с каким результатом завершится первое из переданных обещаний, со значением или причиной отклонения этого обещания.</p>
+
+<p>{{EmbedInteractiveExample("pages/js/promise-race.html")}}</p>
+
+<h2 id="Синтакс">Синтакс</h2>
+
+<pre class="brush: js"><var>Promise.race(iterable)</var>;</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>iterable</code></dt>
+ <dd>Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Выполненный или отклоненный {{jsxref("Promise")}} в зависимости от результата первого завершенного из переданных в итерируемом объекте обещаний.</p>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Метод <code>race</code>  возвращает <code>Обещание </code>(<code>Promise</code>) с результатом, первого завершенного из переданных обещаний. Т.е. возвратит resolve или reject, в зависимости от того, что случится первым.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_Promise.race_–_пример_с_setTimeout">Использование <code>Promise.race</code> – пример с <code>setTimeout</code></h3>
+
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 500, "один");
+});
+var p2 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, "два");
+});
+
+Promise.race([p1, p2]).then(function(value) {
+  console.log(value); // "два"
+  // Оба вернули resolve, однако p2 вернул результат первым
+});
+
+var p3 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, "три");
+});
+var p4 = new Promise(function(resolve, reject) {
+    setTimeout(reject, 500, "четыре");
+});
+
+Promise.race([p3, p4]).then(function(value) {
+  console.log(value); // "три"
+  // p3 быстрее, поэтому выведется значение его resolve
+}, function(reason) {
+  // Не вызывается
+});
+
+var p5 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 500, "пять");
+});
+var p6 = new Promise(function(resolve, reject) {
+    setTimeout(reject, 100, "шесть");
+});
+
+Promise.race([p5, p6]).then(function(value) {
+  // Не вызывается
+}, function(reason) {
+  console.log(reason); // "шесть"
+  // p6 быстрее, выводится его rejects
+});
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-promise.race', 'Promise.race')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Изначальное определение в стандарте ECMA.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Promise.race")}}</p>
+
+<p> </p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+</ul>

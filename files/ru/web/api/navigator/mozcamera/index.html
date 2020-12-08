@@ -1,0 +1,43 @@
+---
+title: Navigator.mozCamera
+slug: Web/API/Navigator/mozCamera
+translation_of: Archive/B2G_OS/API/Navigator/mozCamera
+---
+<p>{{APIRef("Firefox OS")}}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>{{B2GOnlyHeader2('privileged')}}</p>
+
+<h2 id="Summary" name="Summary">Резюме</h2>
+
+<p>Возвращает объект {{ domxref("CameraManager") }} который вы можите использовать для доступа к камере доступной на устройстве пользователя.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="eval">var camera = window.navigator.mozCamera;
+</pre>
+
+<h2 id="Value" name="Value">Значение</h2>
+
+<p><code>navigator.mozCamera</code> это объект {{domxref("CameraManager")}} который вы можете использовать для доступа к камере доступной на устройстве.</p>
+
+<h2 id="Specification" name="Specification">Спецификация</h2>
+
+<p>Не является еще частю какой-либо спецификации;<span id="result_box" lang="ru"><span class="hps"> Оно</span><span>, вероятно, будет</span> <span class="hps">заменен</span>о на <span class="hps">WebRTC</span><span>, когда</span> <span class="hps">оно получит</span> <span class="hps">более</span> <span class="hps">широкую поддержку</span> <span class="hps">на мобильных устройствах</span><span>.</span></span></p>
+
+<h2 id="Права_доступа">Права доступа</h2>
+
+<p>До Firefox OS 1.4,  API камеры было сертифицированным API, недоступным для сторонних приложений. С Firefox OS 2.0 и далее,  Уровень доступа был понижен до привелигированного, так что теперь доступно для разработчиков сторонних приложений.</p>
+
+<pre class="brush: json">"permissions": {
+  "camera": {
+    "description": "Required for accessing cameras on the device."
+  }
+}</pre>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC API</a></li>
+</ul>

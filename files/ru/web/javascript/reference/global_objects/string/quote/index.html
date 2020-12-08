@@ -1,0 +1,124 @@
+---
+title: String.prototype.quote()
+slug: Web/JavaScript/Reference/Global_Objects/String/quote
+tags:
+  - JavaScript
+  - Method
+  - Obsolete
+  - Prototype
+  - Reference
+  - Référence(2)
+  - String
+translation_of: Archive/Web/JavaScript/String.quote
+---
+<div>{{obsolete_header("37")}}</div>
+
+<div>{{JSRef("Global_Objects", "String")}} {{non-standard_header}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+
+<p>Нестандартный метод <strong><code>quote()</code></strong> возвращает копию строки, заменяя различные специальные символы в строке их управляющими последовательностями и заключая результат в двойные кавычки (<code>"</code>).</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><var>str</var>.quote()</code></pre>
+
+<h2 id="Examples" name="Examples">Примеры</h2>
+
+<p>В таблице ниже метод <code>quote()</code> заменяет любые специальные символы и заключает строку в двойные кавычки. Также обратите внимание на третью колонку, в которой функция {{jsxref("Global_Objects/eval", "eval()")}} снова вычисляет управляющие последовательности.</p>
+
+<table class="fullwidth-table">
+ <thead>
+  <tr>
+   <th class="header" scope="col"><code>str</code></th>
+   <th class="header" scope="col"><code>str.quote()</code></th>
+   <th class="header" scope="col"><code>eval(str.quote())</code></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>Hello world!</code></td>
+   <td><code>"Hello world!"</code></td>
+   <td><code>Hello world!</code></td>
+  </tr>
+  <tr>
+   <td><code style="white-space: pre;">Hello<br>
+    world!</code></td>
+   <td><code>"Hello\n\tworld!"</code></td>
+   <td><code style="white-space: pre;">Hello<br>
+    world!</code></td>
+  </tr>
+  <tr>
+   <td><code>" \ — '</code></td>
+   <td><code>"\" \\ \u2014 '"</code></td>
+   <td><code>" \ — '</code></td>
+  </tr>
+  <tr>
+   <td><code>Привет, мир!</code></td>
+   <td><code>"\u041F\u0440\u0438\u0432\u0435\u0442, \u043C\u0438\u0440!"</code></td>
+   <td><code>Привет, мир!</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<p>Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome для Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{jsxref("JSON.stringify()")}}</li>
+</ul>

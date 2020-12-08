@@ -1,0 +1,201 @@
+---
+title: flex
+slug: Web/CSS/flex
+translation_of: Web/CSS/flex
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Свойство <a href="/ru/docs/CSS" title="CSS">CSS</a> <strong><code>flex</code></strong> - это <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Shorthand_properties">сокращенное свойство</a>, определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает <a href="https://developer.mozilla.org/ru/docs/Web/CSS/flex-grow">flex-grow</a>, <a href="https://developer.mozilla.org/ru/docs/Web/CSS/flex-shrink">flex-shrink</a> и <a href="https://developer.mozilla.org/ru/docs/Web/CSS/flex-basis"> flex-basis</a>.</p>
+
+<p>{{cssinfo}}</p>
+
+<p>Для более полной информации читайте <a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes">Использование flex-контейнеров CSS</a>.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="brush:css">/* 0 0 auto */
+flex: none;
+
+/* Одно значение, число без единиц: flex-grow */
+flex: 2;
+
+/* Одно значение, ширина/высота: flex-basis */
+flex: 10em;
+flex: 30px;
+flex: auto;
+flex: content;
+
+/* Два значения: flex-grow | flex-basis */
+flex: 1 30px;
+
+/* Два значения: flex-grow | flex-shrink */
+flex: 2 2;
+
+/* Три значения: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;
+
+/* Глобальные значения */
+flex: inherit;
+flex: initial;
+flex: unset;
+</pre>
+
+<h3 id="Values" name="Values">Значения</h3>
+
+<dl>
+ <dt><code>&lt;'flex-grow'&gt;</code></dt>
+ <dd>Определяет <code>{{cssxref("flex-grow")}}</code> для флекс элемента. Смотри {{cssxref("&lt;number&gt;")}} для большей информации. Негативные значения считаются недействительными. Значение по умолчанию  <code>0</code>, если не указано.</dd>
+ <dt><code>&lt;'flex-shrink'&gt;</code></dt>
+ <dd>Определяет <code>{{cssxref("flex-shrink")}}</code> для флекс элемента. Смотри {{cssxref("&lt;number&gt;")}} для большей информации. Негативные значения считаются недействительными. Значение по умолчанию  <code>1</code>, если не указано.</dd>
+ <dt><code>&lt;'flex-basis'&gt;</code></dt>
+ <dd>Определяет <code>{{cssxref("flex-basis")}}</code> для флекс элемента. Любое корректное значение для высоты(height) и ширины(width) - корректно и для данного свойства. Предпочтительный размер 0 должен иметь единицу измерения, чтобы не восприниматься как гибкий. Значение по умолчанию  <code>0%</code>, если не указано.</dd>
+ <dt><code>none</code></dt>
+ <dd>Размер элемента устанавливается в соответствии с его свойствами <code>width</code> и <code>height</code>. Он полностью негибкий: не сжимается и не увеличивается по отношению к гибкому контейнеру. Эквивалентно значению "<code>flex: 0 0 auto</code>".</dd>
+ <dt>
+ <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+ </dt>
+</dl>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: css">#flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+#flex-container &gt; .flex-item {
+	-webkit-flex: auto;
+	flex: auto;
+}
+
+#flex-container &gt; .raw-item {
+	width: 5rem;
+}
+</pre>
+
+<pre class="brush: html">&lt;div id="flex-container"&gt;
+    &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
+    &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<div class="hidden">
+<pre class="brush: js">var flex = document.getElementById("flex");
+var raw = document.getElementById("raw");
+flex.addEventListener("click", function() {
+	raw.style.display = raw.style.display == "none" ? "block" : "none";
+});
+</pre>
+
+<pre class="brush: css">#flex-container {
+	width: 100%;
+	font-family: Consolas, Arial, sans-serif;
+}
+
+#flex-container &gt; div {
+	border: 1px solid #f00;
+	padding: 1rem;
+}
+
+#flex-container &gt; .raw-item {
+	border: 1px solid #000;
+}
+</pre>
+</div>
+
+<h3 id="Результат">Результат</h3>
+
+<p>{{EmbedLiveSample('%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80','100%','60')}}</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Спецификация</th>
+   <th>Статус</th>
+   <th>Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Flexbox', '#flex', 'flex')}}</td>
+   <td>{{Spec2('CSS3 Flexbox')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable()}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Firefox (Gecko)</th>
+   <th>Chrome</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatGeckoDesktop("18.0")}} (behind a pref) <sup><a href="#bc1">[1]</a> <a href="#bc2">[2]</a></sup><br>
+    {{CompatGeckoDesktop("20.0")}} <sup><a href="#bc2">[2]</a><a href="#bc3">[3]</a></sup></td>
+   <td>21.0{{property_prefix("-webkit")}}<br>
+    29.0</td>
+   <td>10.0{{property_prefix("-ms")}} <sup><a href="#flexbug8">[3]</a></sup><sup><a href="#flexbug4">[4]</a></sup><br>
+    11.0 <sup><a href="#flexbug8">[3]</a></sup><sup><a href="#flexbug4">[4]</a></sup></td>
+   <td>12.10</td>
+   <td>6.1{{property_prefix("-webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Android</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown()}}</td>
+   <td>4.4</td>
+   <td>11</td>
+   <td>12.10</td>
+   <td>7.1{{property_prefix("-webkit")}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p><sup><a name="bc1">[1]</a></sup>  Для активации flexbox для Firefox 18 и 19 пользователю неободимо внести следующее изменение:<br>
+ свойство конфигурации "layout.css.flexbox.enabled" в<code>true</code>.</p>
+
+<p><sup><a name="bc2">[2]</a></sup> Multi-line flexbox поддерживается Firefox 28.</p>
+
+<p><sup><a name="flexbug8">[3]</a></sup> Internet Explorer 10-11 (кроме 12+) игонорируют использование <a href="/en-US/docs/Web/CSS/calc"><code>calc()</code></a> во flex-basis части <code>flex</code> синтаксиса. Это можно обойти, используя свойства longhand вместо сокращения. Дополнительную информацию см. В <a href="https://github.com/philipwalton/flexbugs#8-flex-shorthand-doesnt-support-calc">Flexbug # 8</a>.</p>
+
+<p><sup><a name="flexbug4">[4]</a></sup> В Internet Explorer 10-11 (кроме 12+),  объявление <code>flex</code> без единичного значения в его <em>flex-basis</em> части считается синтаксически недействительным и поэтому игнорируется. Обходной путь состоит в том, чтобы всегда включать единицу в <em>flex-basis </em>часть <code>flex</code> . Дополнительную информацию см. В <a href="https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored">Flexbug #4</a>.</p>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/CSS/Flexible_boxes" title="CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
+</ul>

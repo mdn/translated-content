@@ -1,0 +1,42 @@
+---
+title: XMLHttpRequest.responseURL
+slug: Web/API/XMLHttpRequest/responseURL
+translation_of: Web/API/XMLHttpRequest/responseURL
+---
+<div>{{APIRef('XMLHttpRequest')}}</div>
+
+<p>Свойство <code><strong>XMLHttpRequest.responseURL</strong></code> доступно только для чтения, возвращает сериализованный URL ответа или пустую строку,  если URL равен <code>null</code>. Если URL возвращен, любой URL фрагмент в URL будет стерт. Значение <code>responseURL</code> станет окончательным URL, получаемым после любых редиректов.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://example.com/test', true);
+xhr.onload = function () {
+  console.log(xhr.responseURL); // http://example.com/test
+};
+xhr.send(null);</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-responseurl-attribute')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+
+
+
+<p>{{Compat("api.XMLHttpRequest.responseURL")}}</p>

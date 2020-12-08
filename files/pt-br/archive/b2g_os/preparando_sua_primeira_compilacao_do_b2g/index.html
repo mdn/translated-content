@@ -1,0 +1,215 @@
+---
+title: Preparando sua primeira compilação do B2G
+slug: Archive/B2G_OS/Preparando_sua_primeira_compilacao_do_B2G
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<div class="summary">
+<p>Antes de você compilar o B2G, você precisa criar um clone do repositório e configurar sua árvore de compilação. Esse artigo explica como fazer isso.</p>
+</div>
+
+<p>Dependendo da sua conexão de internet, a etapa de configuração leva uma boa quantidade de horas para baixar os arquivos necessários para compilar o Firefox OS (com uma conexão medíocre de 150 kBps, baixar gigabytes de repositórios Android pode levar dezenas de horas). Uma vez que esperar não é uma tarefa muito divertida, depois de ler essa página e iniciar o <em>script</em> de configuração considere usar seu tempo para configurar e utilizar o <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator" title="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator">Simulador do Firefox OS</a>, familiarizar-se com a <a class="vt-p" href="/pt-BR/docs/Apps" title="/en-US/docs/Apps">Documentação para desenvolvedores de aplicativos</a> incluindo Projeto e Compilação de Aplicativos ou até mesmo ler sobre os próximos passos.</p>
+
+<div class="note">
+<p>Você precisará ter uma outra tarefa para fazer, ou um amigo disponível para um café enquanto são executadas as tarefas de configurar e compilar o B2G. Elas podem levar um bom tempo.</p>
+</div>
+
+<h2 id="Clonar_o_repositório_B2G">Clonar o repositório B2G</h2>
+
+<p>O primeiro passo, antes de iniciar sua primeira compilação, é clonar o repositório B2G. Não será baixado tudo! Ao invés disso, somente o sistema de compilação e utilitários de configuração. A maioria do código real do B2G está no repositório principal da Mozilla: <a class="vt-p" href="/pt-BR/docs/Mercurial" title="Mercurial">Mercurial</a>.</p>
+
+<p>Para clonar o repositório use o git:</p>
+
+<pre>git clone git://github.com/mozilla-b2g/B2G.git</pre>
+
+<p>Após clonar (o que somente levará um minuto numa conexão rápida), vá para o diretório B2G:</p>
+
+<pre>cd B2G
+</pre>
+
+<h2 id="Configurando_o_B2G_para_seu_dispositivo">Configurando o B2G para seu dispositivo</h2>
+
+<div class="warning"><span style="color: #ffffff;"><strong>Importante</strong>: Lembre-se que somente dispositivos rodando <strong>Android 4.0.4</strong> (também conhecido como <strong>Ice Cream Sandwich), 4.3 (Jelly Bean) e 4.4 (KitKat)</strong>)  e plataformas baseadas nessas versões são suportadas (como o caso do Firefox OS atual). Por favor verifique se seu telefone está rodando alguma dessas versões, do contrário essa etapa provavelmente irá falhar uma vez que alguns drives vêm de dispositivos "Não-Nexus". Observe também que se você for copiar o sistema (flash) para seu telefone com alguma dessas versões, alguns HUBs USB não funcionam bem com ferramentas de cópia de sistema, então conecte seu dispositivo numa porta USB do seu computador (sem usar HUBs).</span></div>
+
+<div class="warning"><span style="color: #ffffff;"><strong>Importante</strong>: Se você está compilando no Ubuntu 12.10+ ou Fedora, você precisa indicar o GCC 4.6 como o compilador padrão depois de baixar os fontes do B2G para que a compilação funcione (essas distros usam GCC 4.7 como padrão). Leia o artigo</span> <a class="vt-p" href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_default_host_compiler">Modificando o compilador padrão</a> <span style="color: #ffffff;">para descobrir como fazer isso.</span></div>
+
+<div class="note"><strong>Nota:</strong> <strong>Por favor leia todas as instruções abaixo </strong>antes de executar qualquer comando do processo de compilação para certificar-se de que você está fazendo a coisa certa!</div>
+
+<p>Uma vez que você tenha baixado o núcelo do sistema de compilação do B2G, você precisa configurá-lo para o dispositivo que você deseja instalar. Para conseguir uma lista dos dispositivos suportados, você pode usar o utilitário <code>config.sh</code> — execute o seguinte comando no diretório B2G:</p>
+
+<pre>./config.sh
+</pre>
+
+<p>Vai ser apresentada uma lista dos dispositivos suportados, como essa:</p>
+
+<pre>Usage: ./config.sh [-cdflnq] (device name)
+Flags are passed through to |./repo sync|.
+
+Valid devices to configure are:
+- galaxy-s2
+- galaxy-nexus
+- nexus-4
+- nexus-4-kk
+- nexus-5
+- nexus-5-l
+- nexus-s
+- nexus-s-4g
+- flo (Nexus 7 2013)
+- otoro
+- unagi
+- inari
+- keon
+- peak
+- hamachi
+- helix
+- tarako
+- dolphin
+- dolphin-512
+- pandaboard
+- vixen
+- flatfish
+- flame
+- flame-kk
+- flame-l
+- rpi (Revision B)
+- emulator
+- emulator-jb
+- emulator-kk
+- emulator-l
+- emulator-x86
+- emulator-x86-jb
+- emulator-x86-kk
+- emulator-x86-l
+&gt; Sony Xperia devices
+- aries (Z3 Compact KK)
+- aries-l (Z3 Compact L)
+- leo-kk (Z3 KK)
+- leo-l (Z3 L)
+- scorpion-l (Z3 Tablet Compact L)
+- sirius-l (Z2 L)
+- tianchi-l (T2U L)
+- flamingo-l (E3 L)</pre>
+
+<p>Se o seu dispositivo não estiver na lista, você deve parar agora ou ajudar a portar o B2G para o seu dispositivo, ou ainda esperar que alguém o faça. Nós preferimos que você ajude!</p>
+
+<div class="note"><strong>Nota:</strong> Você pode encontrar o nome do seu telefone na página <a href="/pt-BR/docs/Mozilla/Boot_to_Gecko/Boot_to_Gecko_developer_phone_guide/Especificacoes_Telefones">Telefones Firefox</a>.</div>
+
+<div class="note"><strong>Nota: A Configuração e Compilação do B2G para o Keon no Mac NÃO FUNCIONA!</strong>. Você precisa de um Linux para compilar para esse aparelho.</div>
+
+<div class="note"><strong>Nota</strong>: Se, por alguma razão, você desejar compilar usando uma versão específica<br>
+do Gecko, veja <a href="#Compilando_um_Gecko_customizado">Compilando um Gecko customizado</a> antes de<br>
+prosseguir. Se você desejar compilar um branch que não seja o padrão para o<br>
+seu dispositivo (por exemplo, para compilar uma versão específica do B2G),<br>
+veja <a href="#Compilando_um_branch">Compilando um branch</a>. Nota: o branch padrão varia conforme o<br>
+dispositivo e <strong>não é necessariamente o trunk</strong></div>
+
+<p>Agora pode ser um ótimo momento para um café, já que a partir desse ponto você começará a baixar o código necessário para compilar o <em>Boot to Gecko</em>. Executar as etapas de configuração como indicado abaixo tomará um longo tempo. Você poderá parar a execução com Ctrl-C e reiniciar um tempo depois. Se você achar que alguma parte do processo terminou sem ter todas as tarefas completadas, execute <code>./repo sync</code> para reparar possíveis problemas.</p>
+
+<h3 id="Configurando_a_compilação_do_B2G_para_um_dispositivo_móvel">Configurando a compilação do B2G para um dispositivo móvel</h3>
+
+<p>Neste ponto, conecte seu dispositivo caso ele ainda não esteja conectado, uma vez que o processo de configuração vai precisar acessá-lo.</p>
+
+<p>Se o seu dispositivo estava listado nos resultados mostrados acima, você pode iniciar o processo de configuração executando novamente <code>config.sh</code>, mas dessa vez especificando o nome do seu dispositivo. Por exemplo, para compilar para o aparelho Samsung Google Nexus S, você vai executar:</p>
+
+<pre>./config.sh nexus-s
+</pre>
+
+<div class="note"><strong>Nota:</strong> Se você receber uma mensagem de erro como essa: <code>fatal: manifest 'nexus-s.xml' not available</code>, possivelmente basta especificar o branch que você quer usar. Veja o artigo <a href="#Compilando_um_branch">Compilando um branch</a> para mais detalhes.</div>
+
+<div class="note"><strong>Nota:</strong> Se a etapa de configuração apresentar um erro como esse: <code>error: manifest required for this command -- please run init</code>, indica que as alterações realizadas no arquivo manifesto para o repo (localizado em  <code>B2G/.repo/manifest.xml</code>) não foi criado corretamente. Você deve tentar executar <code>config.sh</code> novamente indicando explicitamente o arquivo manifesto dessa forma: <code>./config.sh &lt;device&gt; -m path/to/manifest.</code></div>
+
+<p>Próximo de iniciar a configuracão você precisa configurar a opção para o uso da cor, após isso o processo continua. Você pode apenas selecionar 'y' aqui, já que você provavelmente vai querer a compilação com essa opção.</p>
+
+<h3 id="Configurando_uma_compilação_usando_uma_cópia_de_segurança_do_sistema">Configurando uma compilação usando uma cópia de segurança do sistema</h3>
+
+<p>Se o seu telefone não possui mais o Android, e a árvore B2G não tem os BLOBs binários, mas você sabiamente <a class="vt-p" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites#Fa.C3.A7a_uma_c.C3.B3pia_de_seguran.C3.A7a_da_parti.C3.A7.C3.A3o_de_sistema_do_telefone" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition">fez uma cópia de segurança da partição <code>/system</code></a>, você pode executar a compilação no sistema dessa forma:</p>
+
+<pre>ANDROIDFS_DIR=&lt;absolute path to parent dir of system dir&gt; ./config.sh &lt;target&gt;
+</pre>
+
+<p>A compilação por padrão procurará em algum lugar como <code>backup-inari/system</code> (dependendo da configuração do dispositivo); se você colocar os arquivos no local esperado não será necessário especificar o diretório.</p>
+
+<p>Observe que se seu telefone sempre teve o Firefox OS e nunca rodou o Android, mesmo assim é bom copiar a partição <code>/system</code> conforme as instruções acima — isso trará os arquivos corretos.</p>
+
+<h3 id="Configurando_a_compilação_do_B2G_para_um_emulador">Configurando a compilação do B2G para um emulador</h3>
+
+<p>Se você quiser compilar para um emulador no lugar de um telefone real, você pode especificar <code>emulator*</code> para um emulador de dispositivo ARM, ou <code>emulator-x86</code>* para um emulador x86. Esse último é mais rápido, mas não tão preciso na representação de um dispositivo móvel real e também não é suportado. Assim, não é aconselhável sua utilização.</p>
+
+<p>Por exemplo, para compilar o emulador ARM Jellybean, você pode usar o seguinte comando:</p>
+
+<pre>./config.sh emulator-jb
+</pre>
+
+<p>A partir desse ponto você está pronto para <a class="vt-p" href="/pt-BR/docs/Mozilla/Firefox_OS/Compilando_O_Firefox_OS" title="Mozilla/Firefox_OS/Building">iniciar a compilação</a>, a menos que você precisa informações mais detalhadas como as descritas abaixo.</p>
+
+<div class="note">
+<p><strong>Importante</strong>: A compilação para emulador no Linux 64-bit pode não funcionar.</p>
+
+<div class="note"><strong>Nota:</strong> Desenvolvedores que utilizam Mac OS X 10.9 ou superiores devem utilizar o emulator-jb ou emulator-kk, porque emuladores baseados em AOSC ICS não podem ser compilados no Mac OS 10.9. Veja <a class="vt-p" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Requirements_for_Mac_OS_X" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Requirements_for_Mac_OS_X">Requisitos para Mac OS X</a> para maiores informações.</div>
+</div>
+
+<h2 id="Compilando_um_Gecko_customizado">Compilando um Gecko customizado</h2>
+
+<p>Pode haver momentos que você queira ou precisa compilar o B2G baseado numa versão do Gecko diferente da padrão atualmente utilizada (como especificado no manifesto). Você pode fazer isso editando o arquivo <code>.userconfig</code>. Por exemplo, se você quiser compilar o mozilla-central:</p>
+
+<pre>export GECKO_PATH=/path/to/mozilla-central
+export GECKO_OBJDIR=/path/to/mozilla-central/objdir-gonk
+</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: se você for compilar um Gecko customizado no Mac OS X, o diretório mozilla-centra deve estar num sistema de arquivos case sensitive.</p>
+</div>
+
+<p>Observe que você pode fazer isso antes de você baixar o repositório (ou seja, antes da etapa <code>config.sh</code> descrita acima) ou em qualquer momento mais tarde. Você também pode manter múltiplas compilações (com modo de depuração ligado ou não, etc)</p>
+
+<p id="Building_a_branch">Note that you can do this either before you pull the repository (i.e. before the <code>config.sh</code> step above) or at any later point.  You can also keep multiple builds (with debugging on or not, etc) tendo vários arquivos <code>userconfig</code> (obviamente com diferentes configurações cada um necessita um diferente OBJDIR) e fazer um link simbólico do <code>.userconfig</code> que aponta para qual configuração você deseja compilar naquele momento.</p>
+
+<p>Para maiores informações, leia o artigo <a class="vt-p" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Customizacao_com_o_arquivo_.userconfig_file#Alterando_a_.C3.A1rvore_fonte_do_Gecko" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_Gecko_source_tree">Alterando a árvore fonte do Gecko</a>.</p>
+
+<h2 id="Compilando_um_branch">Compilando um branch</h2>
+
+<p>Se você quiser compilar para um outro <em>branch </em>que não o <em>branch</em> padrão (<strong>atenção: o <em>branch</em> padrão pode não ser o "master"!</strong>), você precisa inserir um prefixo na chamada do script <code>config.sh</code> com o nome do branch:</p>
+
+<pre>BRANCH=branch-name ./config.sh &lt;device&gt;</pre>
+
+<p>Os nomes dos <em>branches</em> seguem uma lógica e em grande parte seguem os nomes dos produtos/versões, por exemplo, <code>v1-train</code>, <code>v1.0.0</code>, <code>v1.0.1</code>, <code>v1.1</code>, <code>v1.1.0hd</code>, <code>v1.2, v1.3, v1.4, v2.0</code>  e assim será no futuro. Como exemplo, para compilar o B2G Firefox 1.2 para o emulador ARM você deve usar o comando:</p>
+
+<pre>BRANCH=v1.2 ./config.sh emulator</pre>
+
+<p>Se você já executou o <code>config.sh</code>, você pode ver os nomes dos <em>branches</em>, indo ao diretório <code>B2G/.repo/manifests</code> e executando "<code>git branch -a</code>" (esse não é preenchido até então). <strong>O nome do <em>branch</em> pode ser visto no final da linha</strong>:</p>
+
+<pre>  remotes/origin/master
+  remotes/origin/v1-train
+  remotes/origin/v1.0.0
+  remotes/origin/v1.0.1</pre>
+
+<p>Veja o artigo <a class="vt-p" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Customizacao_com_o_arquivo_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customização com o arquivo .userconfig</a> para customizações adicionais que você pode fazeror additional customizations you can do.</p>
+
+<h2 id="Copiando_a_árvore_B2G_para_uma_nova_máquina">Copiando a árvore B2G para uma nova máquina</h2>
+
+<p>Se você já configurou uma árvore B2G e tem um novo computador (sorte para você!) sua vida será bem mais fácil se você simplestmente migrar a árvore B2G inteira do seu computador antigo para o novo, ao invés de configurar tudo novamente. Para fazer isso, monte o disco do seu computador antigo no novo computador e execute o seguinte comando:</p>
+
+<pre>rsync -a <em>source</em>/ <em>dest</em>/
+</pre>
+
+<p>Onde <code>source</code> é o caminho completo (incluindo a barra final) da árvore origem e  <code>dest</code> é o local onde para onde você quer copiar o conteúdo. (a barra final também é importante!).</p>
+
+<div class="note"><strong>Nota:</strong> Se você vai copiar os arquivos de um computador para outro de outra plataforma, certifique-se de executar '<em>./build.sh clean'</em> antes de iniciar o processo de compilação. Se não fizer isso pode encontrar problemas na compilação.</div>
+
+<p>Se você fizer isso, pode pular todo o resto desse artigo e ir direto para o artigo <a class="vt-p" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Firefox_OS/Compilando_O_Firefox_OS" title="Mozilla/Firefox_OS/Building">building</a>.</p>
+
+<h2 id="Alterando_a_árvore_B2G">Alterando a árvore B2G</h2>
+
+<p>Quando o repositório é alterado com uma nova versão do B2G, você pode querer alterar sua árvore B2G. Para fazer isso, execute os seguintes comandos:</p>
+
+<pre>git fetch origin
+git checkout origin/master</pre>
+
+<p>Você pode verificar se tudo funcionou corretamente executando:</p>
+
+<pre>git show HEAD</pre>
+
+<p>e verificando que o commit <em>mostrado</em> corresponde ao mais recente em: <a class="vt-p" href="https://github.com/mozilla-b2g/B2G/commits/master" title="https://github.com/mozilla-b2g/B2G/commits/master">https://github.com/mozilla-b2g/B2G/commits/master</a></p>
+
+<h2 id="Próximo_passo">Próximo passo</h2>
+
+<p>Agora, você está pronto para <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Building">compilar o Firefox OS</a>.</p>

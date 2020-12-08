@@ -1,0 +1,274 @@
+---
+title: Meu primeiro Aplicativo
+slug: Archive/B2G_OS/Quickstart/meu_primeiro_app
+tags:
+  - Apps
+  - Desenvolvimento
+  - Ferramentas de testes
+  - Firefox Edição para Desenvolvedores
+  - Guía
+  - Iniciante
+  - Manifesto
+  - Simulador do Firefox OS
+translation_of: Archive/B2G_OS/Quickstart/Your_first_app
+---
+<article class="brush: js">
+<div class="summary">
+<p>Aplicações Web abertas dão aos desenvolvedores web exatamente o que eles queriam por anos: um ambiente multi-plataforma<span id="result_box" lang="pt"> <span class="hps">dedicado</span> <span class="hps">a</span> <span class="hps">aplicativos</span> <span class="hps">instaláveis</span> <span class="hps">​​criados com</span> <span class="hps">apenas</span> <span class="hps">HTML</span></span>, CSS, e JavaScript — com o Firefox OS sendo a primeira plataforma dedicada as aplicações web abertas. Este guia destina-se a levá-lo a trabalhar <span id="result_box" lang="pt"><span class="hps">rapidamente</span> <span class="hps">com uma</span> <span class="hps">arquitetura básica</span> <span class="hps">com</span>  instruções de criação <span class="hps">para que você possa</span> <span class="hps">criar seu próprio aplicativo!</span></span></p>
+</div>
+
+<p><span class="short_text" id="result_box" lang="pt"><span class="hps">Se você quiser</span> <span class="hps">seguir junto com</span> <span class="hps">este guia</span></span>, baixe nosso <a href="https://github.com/chrisdavidmills/mdn-app-template">modelo de início rápido</a>. Encontre mais sobre o que há aqui, lendo nosso <a href="/pt-BR/docs/Project:MDN/Style_guide/Sample_app_coding_guidelines">guia de modelo para aplicativos</a>.</p>
+
+<h2 id="Estrutura_do_Aplicativo">Estrutura do Aplicativo</h2>
+
+<h3 id="Packaged_vs._Hosted_Apps">Packaged vs. Hosted Apps</h3>
+
+<p>Existem dois tipos de aplicações web abertas: <code>packaged</code> e <code>hosted</code>. Aplicações Packaged são essencialmente arquivos <code>zip</code> que contém todos os  recursos da aplicação : HTML, CSS, JavaScript, imagens, arquivos de manifesto, etc. Aplicações Hosted <span id="result_box" lang="pt"><span class="hps">são executados</span> <span class="hps">a partir de</span> <span class="hps">um servidor de</span> <span class="hps">um determinado domínio</span></span>, assim como um website padrão. Ambos tipos de aplicação requerem um manifesto válido. Quando chega a hora de listar sua aplicação no Firefox Marketplace, você poderá fazer o upload da sua aplicação como um arquivo .zip ou fornecer a URL de onde sua aplicação esta hospedada.</p>
+
+<div style="width: 480px; margin: 0 auto;">
+<p> </p>
+
+<div class="video-caption">
+<p>Feito em parceria com a Treehouse:  <a class="button" href="http://teamtreehouse.com/?cid=1154">Conheça!</a></p>
+</div>
+</div>
+
+<p><span id="result_box" lang="pt"><span class="hps">Para os</span> <span class="hps">propósitos deste guia</span><span>, <span id="result_box" lang="pt"><span>você vai</span> <span class="hps">criar um</span> <span class="hps">aplicativo hospedado</span></span></span></span> em seu endereço<code> localhost</code>. Uma vez que seu aplicativo estiver pronto para ser listado no Firefox Marketplace, você pode fazer a decisão de "empacotá-lo" como um aplicativo zip ou fornecer a URL em que o aplicativo esta hospedado.</p>
+
+<h3 id="Manisfesto_App">Manisfesto App</h3>
+
+<p>Todo aplicativo Firefox requer um arquivo manifest.webapp na raiz da aplicação. O arquivo <a href="/pt-BR/Apps/Manifest"><code>manifest.webapp</code></a> fornece informações importantes sobre a aplicação, tal como a versão, nome, descrição, localização do ícone, sequência de caracteres, <span id="result_box" lang="pt"><span class="hps">domínios</span> <span class="hps">de onde o</span> <span class="hps">aplicativo pode ser</span> <span class="hps">instalado</span></span>, e muito mais. Apenas o nome e a descrição são obrigatórios. O manifesto simples incluído dentro do template do aplicativo é semelhante ao que se segue:</p>
+
+<pre class="brush: js">{
+  "version": "0.1",
+  "name": "Open Web App",
+  "description": "Seu novo incrível Open Web App",
+  "launch_path": "/app-template/index.html",
+  "icons": {
+    "16": "/app-template/app-icons/icon-16.png",
+    "48": "/app-template/app-icons/icon-48.png",
+    "128": "/app-template/app-icons/icon-128.png"
+  },
+  "developer": {
+    "name": "Seu nome",
+    "url": "http://yourawesomeapp.com"
+  },
+  "locales": {
+    "es": {
+      "description": "Su nueva aplicación impresionante Open Web",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    },
+    "it": {
+      "description": "Il vostro nuovo fantastico Open Web App",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    }
+  },
+  "default_locale": "en"
+}</pre>
+
+<div style="width: 480px; margin: 0 auto;">
+<p> </p>
+
+<div class="video-caption">
+<p>Feito em parceria com a Treehouse: <a class="button" href="http://teamtreehouse.com/?cid=1154">Conheça!</a></p>
+</div>
+</div>
+
+<p> </p>
+
+<p>Um manifesto básico é tudo que você precisa para começar. Para mais detalhes sobre manifesto, leia <a href="/pt-BR/Apps/Manifest">Manifesto</a>.</p>
+
+<h2 id="Design_Layout_do_Aplicativo">Design &amp; Layout do Aplicativo</h2>
+
+<p>O design responsivo se tornou cada vez mais importante <span id="result_box" lang="pt"><span class="hps">à medida que mais</span> <span class="hps">resoluções de tela</span> <span class="hps">se tornaram padrão</span> <span class="hps">em dispositivos diferentes.</span></span> Mesmo se o alvo principal do seu aplicativo seja plataforma mobile tal como o Firefox OS, outros dispositivos provavelmente terão acesso a ele também. <a href="/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries">CSS media queries </a><span id="result_box" lang="pt"> <span class="hps">lhe permitem</span> <span class="hps">adaptar</span> <span class="hps">o layout</span> <span class="hps">para o dispositivo</span><span>, como mostrado</span> <span class="hps">neste exemplo</span> <span class="hps">CSS</span><span>:</span></span></p>
+
+<pre class="brush: css">/* Exemplos de diferentes CSS media queries */
+
+/* Detector básico de largura para desktop*/
+@media only screen and (min-width : 1224px) {
+  /* estilos */
+}
+
+/* Largura do iPhone tradicional */
+@media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+  /* estilos */
+}
+
+/* Configurações de dispositivo em diferentes orientações */
+@media screen and (orientation:portrait) {
+  /* estilos */
+}
+@media screen and (orientation:landscape) {
+  /* estilos */
+}</pre>
+
+<p>Existem vários frameworks  JavaScript e CSS disponíveis <span class="short_text" id="result_box" lang="pt"><span class="hps">para auxiliar no</span> <span class="hps">design responsivo</span></span> e no desenvolvimento do aplicativo (<a href="http://getbootstrap.com/">Bootstrap (em inglês)</a>, etc.) Escolha o(s) framework(s) que melhor se encaixa em seu aplicativo e estilo de desenvolvimento.</p>
+
+<h2 id="Web_APIs">Web APIs</h2>
+
+<p><span id="result_box" lang="pt"><span class="hps">APIs JavaScript</span> <span class="hps">estão sendo criadas e</span> aprimoradas <span class="hps">tão rapidamente quanto as plataformas estão</span><span>.</span></span> O empenho do  <a href="https://wiki.mozilla.org/WebAPI">WebAPI (em inglês)</a> do Mozilla <span id="result_box" lang="pt"><span class="hps">traz</span> <span class="hps">dezenas de recursos</span> <span class="hps">móveis padrão</span> <span class="hps">de</span> <span class="hps">APIs JavaScript</span><span>.</span></span> Uma lista de suporte aos dispositivos e status está disponivel na página <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a><span id="result_box" lang="pt"><span class="hps">. A detecção de recursos JavaScript</span> <span class="hps">ainda é a melhor</span> <span class="hps">prática</span><span>, como mostrado</span> <span class="hps">no exemplo a seguir</span><span>:</span></span></p>
+
+<pre class="brush: js">// Se o dispositivo suportar a vibrate API...
+if('vibrate' in navigator) {
+    // ... vibrar por um segundo
+    navigator.vibrate(1000);
+}</pre>
+
+<p>No exemplo a seguir, <span id="result_box" lang="pt"><span class="hps">o estilo de uma</span> <span class="hps">&lt;div&gt;</span> <span class="hps">é modificada</span> <span class="hps">com base nas mudanças</span> <span class="hps">no estado</span> <span class="hps">da bateria do dispositivo</span><span>:</span></span></p>
+
+<pre class="brush: java">// Cria o listener no indicador da bateria
+(function() {
+  var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery,
+      indicator, indicatorPercentage;
+
+  if(battery) {
+    indicator = document.getElementById('indicador'),
+    indicatorPercentage = document.getElementById('indicador-porcentagem');
+
+    // configura listeners para mudanças
+    battery.addEventListener('chargingchange', updateBattery);
+    battery.addEventListener('levelchange', updateBattery);
+
+    // Atualiza imediatamente
+    updateBattery();
+  }
+
+  function updateBattery() {
+    // Atualiza a largura e texto o texto da porcentagem
+    var level = (battery.level * 100) + '%';
+    indicatorPercentage.style.width = level;
+    indicatorPercentage.innerHTML = 'Bateria: ' + level;
+    // Update charging status
+    indicator.className = battery.charging ? 'carregando' : '';
+  }
+})();</pre>
+
+<p><span id="result_box" lang="pt"><span class="hps">No exemplo de código</span> <span class="hps">acima</span><span>,</span> <span class="hps">uma vez que você</span> <span class="hps">confirmar que a</span> <span class="hps">API</span> <span class="hps">da bateria</span> <span class="hps">é suportada</span><span>, você pode adicionar</span> <span class="hps">eventos</span> <span class="hps">ouvintes para <code>chargingchange</code></span><span class="hps"> e a</span> <code>charginglevel</code> <span class="hps">para atualizar</span> a  <span class="hps">exibição</span> <span class="hps">do elemento.</span> <span class="hps">Tente adicionar</span> <span class="hps">a seguir n</span><span class="hps">o template de início rápido</span><span>, e veja se</span> <span class="hps">você pode</span> <span class="hps">fazê-lo funcionar</span><span>.</span></span></p>
+
+<p>Verifique a página <a href="https://wiki.mozilla.org/WebAPI"> WebAPI</a> frequentemente para<span id="result_box" lang="pt"><span class="hps"> manter-se</span> <span class="hps">atualizado com o</span> <span class="hps">status</span> <span class="hps">do <span id="result_box" lang="pt"><span class="hps">dispositivo</span></span> API</span><span class="hps">.</span></span></p>
+
+<h3 id="A_API_de_instalação">A API de instalação</h3>
+
+<p><span id="result_box" lang="pt"><span class="hps">Em nosso</span> <span id="result_box" lang="pt"><span class="hps">exemplo </span></span>do template <span class="hps">de início rápido</span><span>, temos</span> <span class="hps">implementado um</span> <span class="hps">botão de instalação</span> <span class="hps">que você pode clicar</span> <span class="hps">ao visualizar</span> <span class="hps">o aplicativo</span> <span class="hps">como uma página</span> <span class="hps">da Web padrão</span><span>, para instalar</span> <span class="hps">o site</span> <span class="hps">no Firefox</span> <span class="hps">OS</span> <span class="hps">como um aplicativo</span><span>.</span> <span class="hps">A marcação</span> <span class="hps">do botão</span> <span class="hps">não tem</span> <span class="hps">nada de especial</span><span>:</span></span></p>
+
+<pre class="brush: html">&lt;button id="install-btn"&gt;Instalar app&lt;/button&gt;</pre>
+
+<p><span id="result_box" lang="pt"><span class="hps">Esta funcionalidade</span> <span class="hps">do</span> <span class="hps">botão</span> <span class="hps">é implementada</span> <span class="hps">utilizando a API</span> <span class="hps">de instalação</span> <span class="atn hps">(</span><span>ver</span> <span class="hps">install.js</span><span>)</span><span>:</span></span></p>
+
+<pre class="brush: js">var manifest_url = location.href + 'manifest.webapp';
+
+function install(ev) {
+  ev.preventDefault();
+  // define a URL do manifesto
+  // instala o app
+  var installLocFind = navigator.mozApps.install(manifest_url);
+  installLocFind.onsuccess = function(data) {
+    // O App está instalado, faz alguma coisa
+  };
+  installLocFind.onerror = function() {
+    // O app não foi instalado, a informação está em
+    // installapp.error.name
+    alert(installLocFind.error.name);
+  };
+};
+
+// pega a referencia para o botão e chama a função install() ao clicar se o app ainda não está instalado, se estiver, esconde o botão.
+var button = document.getElementById('install-btn');
+
+var installCheck = navigator.mozApps.checkInstalled(manifest_url);
+
+installCheck.onsuccess = function() {
+  if(installCheck.result) {
+    button.style.display = "none";
+  } else {
+    button.addEventListener('click', install, false);
+  };
+};
+</pre>
+
+<p>Vamos explicar brevemente o que está acontecendo:</p>
+
+<ol>
+ <li>Nós obtemos uma referência do botão de instalação "install-btn" e o armazenamos na variável <code>button</code>.</li>
+ <li>Nós usamos <code>navigator.mozApps.checkInstalled</code> para checar se o aplicativo definido pelo manifest em <code>http://people.mozilla.com/~cmills/location-finder/manifest.webapp</code> já está instalado no dispositivo. Este teste é armazenado na variável <code>installCheck</code>.</li>
+ <li>Quando o teste é realizado com sucesso, o evento de sucesso é disparado, portanto <code>installCheck.onsuccess = function() { ... }</code> é executado.</li>
+ <li>Testamos então a existência de <code>installCheck.result</code> usando uma condicional <code>if</code> . Se existir, significa que o app está instalado, então escondemos o botão. Um botão de instalação não é necessário se o app já estiver instalado.</li>
+ <li>Se o app não está instalado, adicionamos um evento de click ao botão, então a função <code>install()</code> é chamada quando o botão é clicado.</li>
+ <li>Quando o botão é clicado e a função <code>install()</code> é chamada, armazenamos a localização do arquivo de manifesto em uma variável chamada <code>manifest_url</code>, então instalamos o app usando <code>navigator.mozApps.install(manifest_url)</code>, guardando uma referência para esta instalação na variável <code>installLocFind</code> . Você verá que esta instalação também dispara eventos de sucesso e erro, então poderá disparar eventos dependendo do sucesso ou falha da instalação.</li>
+</ol>
+
+<p>Você pode querer verificar o <a href="/pt-BR/Apps/JavaScript_API">estado de implementação da API</a> na primeira visita aos apps instaláveis.</p>
+
+<div class="note">
+<p>Nota: aplicativos web instaláveis possuem uma política de segurança "um aplicativo por origem"; basicamente, você não pode hospedar mais de um aplicativo por origem. Isto faz com que testes sejam um pouco mais complicados, mas ainda há diversas formas de contornar isto, como criar diferentes sub-dom[inios para aplicativos, testa-los usando o Firefox OS Simulator, ou testar a funcionalidade de instalação no Firefox Aurora/Nightly, que permite instalar web apps no desktop. Veja as<a href="/pt-BR/docs/Web/Apps/Developing/installable_apps/FAQ-do-Manifesto-do-Aplicativo"> questões sobre o manifesto</a> para mais informações sobre origens.</p>
+</div>
+
+<h2 id="WebRT_APIs_(API_de_Permissão_Básica)">WebRT APIs (API de Permissão Básica)</h2>
+
+<p>Há um número de WebAPIs disponíveis, mas requerem permissões para uma função específica ser habilitada. Apps podem registrar requisitos de permissões no arquivo <code>manifest.webapp</code> como por exemplo:</p>
+
+<pre class="brush: js">// nova chave no manifesto: "permissions"
+// Requisição de acesso a qualquer número de APIs
+// Here we request permissions to the systemXHR API
+"permissions": {
+    "systemXHR": {}
+}</pre>
+
+<p>Os três níveis de permissão são os seguintes:</p>
+
+<ul>
+ <li>Normal — APIs que não precisam de nenhum tipo de permissão de acesso especial.</li>
+ <li>Privileged — APIs disponíveis para desenvolvedores usarem em suas aplicações, contanto que eles configurem as permissões de acesso no arquivo de manifesto e distribuam a partir de uma fonte confiável.</li>
+ <li>Certified — APIs que controlam funções críticas no dispositivo, como chamadas ou serviço de mensagens. Geralmente não estão disponíveis para desenvolvedores de empresas não certificadas pela Mozilla.</li>
+</ul>
+
+<p>Para mais informações sobre níveis de permissões de apps, leia <a href="/pt-BR/Apps/Apps_empacotado#Tipos_de_aplicativos_empacotados" title="/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps">Tipos de aplicativos empacotados</a>. Você pode encontrar informações sobre quais APIs requerem permissões, e quais permissões necessárias em <a href="/pt-BR/docs/Web/Apps/Developing/permisoes_app">Permissões de aplicativos</a>.</p>
+
+<div class="note">
+<p>É importante notar que nem todas as APIs estão implementadas no Firefox OS Simulator.</p>
+</div>
+
+<h2 id="Ferramentas_Testes">Ferramentas &amp; Testes</h2>
+
+<p>Testes são extremamente importantes ao desenvolver para dispositivos móveis, e existem muitas opções para testar apps instaláveis.</p>
+
+<h3 id="Simulador_do_Firefox_OS_e_WebIDE">Simulador do Firefox OS e WebIDE</h3>
+
+<p>Instalando e usando o <a href="https://marketplace.firefox.com/developers/docs/firefox_os_simulator">Firefox OS Simulator</a> é a forma mais fácil de testar seu app. Depois de instalar o simulador, ele está disponível a partir do menu Ferramentas -&gt; Desenvolvedor -&gt; Firefox OS Simulator. O simulador executa como um console Javascript para depurar a aplicação (disponível até o Firefox 33).</p>
+
+<p><span id="result_box" lang="pt"><span class="hps">A partir do Firefox 34, a nova ferramenta de desenvolvimento chamada </span><a href="/pt-BR/docs/Tools/WebIDE"><span class="hps">WebIDE</span></a><span> veio substituir o Firefox Simulator.</span> <span class="hps">Ela</span> <span class="hps">permite que você conecte</span> <span class="hps">no </span><span class="hps">Firefox</span> para computadores pessoais <span class="hps">um dispositivo compatível</span> <span class="hps">via</span> <span class="hps">USB</span> <span class="hps">(ou</span> <span class="hps">um simulador</span> <span class="hps">do Firefox</span> <span class="hps">OS)</span><span>, carregando os</span> <span class="hps">aplicativos</span> <span class="hps">diretamente n</span><span class="hps">o dispositivo</span><span>.</span> Permite <span class="hps">validar</span><span class="hps">,</span> <span class="hps">e</span> <span class="hps">depurá-los</span> <span class="hps">como</span> <span class="hps">eles são executados</span> <span class="hps">no dispositivo.</span></span></p>
+
+<p>A Mozilla vem inovando, e para chamar mais a atenção de seus desenvolvedores a fundação criou uma versão exclusiva de seu navegador chamada de <a href="/pt-BR/firefox/developer/">Firefox Developer Edition</a>. Ela já traz todos os recursos para os desenvolvedores se aventurarem. Prefira instalá-lo ao invés dos já citados nos dois parágrafos anteriores, assim você economiza tempo.</p>
+
+<h3 id="Gerenciador_de_Aplicativos">Gerenciador de Aplicativos</h3>
+
+<p>A ferramentas de teste <a href="/pt-BR/Firefox_OS/Usando_o_App_Manager">App Manager</a> está gradualmente sendo substituída pela <a href="/pt-BR/docs/Tools/WebIDE">WebIDE</a>.</p>
+
+<h3 id="Testes_Unitários">Testes Unitários</h3>
+
+<p>Testes unitários são extremamente valiosos quando se desenvolve para diferentes dispositivos e arquiteturas. O <a href="http://qunitjs.com">QUnit</a> do JQuery é um popular utilitário de testes client-side, mas você pode usar a ferramenta de sua preferência.</p>
+
+<h3 id="Instalando_o_Firefox_OS_em_um_Dispositivo">Instalando o Firefox OS em um Dispositivo</h3>
+
+<p>Como o Firefox OS  é uma plataforma livre, o código fonte e ferramentas estão disponíveis para compilar e instalar o Firefox Os em seu próprio dispositivo. As instruções para a instalação, bem como a lista de dispositivos compatíveis estão disponíveis no <a href="/pt-BR/Firefox_OS/Platform">MDN</a>.</p>
+
+<p>Consulte o <a href="/pt-BR/Firefox_OS/Developing_Firefox_OS">guia de desenvolvimento para celulares</a> com suporte ao Firefox OS.</p>
+
+<h2 id="Enviar_e_Distribuir_o_Aplicativo">Enviar e Distribuir o Aplicativo</h2>
+
+<p>Uma vez que o app está completo, você pode hospedá-lo como uma página própria ou app (leia <a href="/pt-BR/docs/Mozilla/Marketplace/Publishing/Opcoes_de_publicacao">Apps auto-publicados</a> para mais informações), ou ele pode ser <a href="https://marketplace.firefox.com/developers/submit/app/manifest">enviado (em inglês)</a> para o <a href="https://marketplace.firefox.com">Firefox Marketplace (em inglês)</a>. O manifesto do seu app será validado e você poderá escolher com quais dispositivos seu aplicatívo será compatível. (por exemplo: Firefox OS, Desktop Firefox, Firefox Mobile, Firefox Tablet). Uma vez validado, você pode colocar detalhes adicionais sobre o app (screenshots, descrição, preço, etc.) e oficialmente enviar o app para a lista informativa do Marketplace. Uma vez aprovado, seu app estará disponível para compra e instalação.</p>
+
+<h3 id="Mais_Marketplace_Lista_Informativa">Mais Marketplace &amp; Lista Informativa</h3>
+
+<ol>
+ <li><a href="/pt-BR/Apps/Submitting_an_app">Enviando um app para o Firefox OS Marketplace</a></li>
+ <li><a href="/pt-BR/docs/Mozilla/Marketplace/Publishing/criterio-de-revisao-loja-de-aplicativos">Critérios de avaliação do Marketplace</a></li>
+ <li><a href="http://s.vid.ly/embeded.html?link=8k2n4w&amp;autoplay=false">Video Tutorial de Envio de App (em inglês)</a></li>
+</ol>
+</article>

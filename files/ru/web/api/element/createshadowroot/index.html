@@ -1,0 +1,91 @@
+---
+title: Element.createShadowRoot()
+slug: Web/API/Element/createShadowRoot
+translation_of: Web/API/Element/createShadowRoot
+---
+<p>{{draft}}</p>
+
+<p>{{deprecated_header()}}</p>
+
+<p>Используйте <code>Element.createShadowRoot</code> чтобы создать  экземпляр <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a>. После создания shadow DOM, он всегда будет привязан к существующему элементу. После создания shadowDOM, элемент к которому он привязан будет называться Теневой корень (shadowRoot) {{glossary("shadow root")}}.</p>
+
+<div class="note">
+<p>This method has been deprecated in favor of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow">attachShadow</a>.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>shadowroot =</em><em> element</em>.createShadowRoot();
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<p>Отсутствуют</p>
+
+<h3 id="Значение_результата">Значение результата</h3>
+
+<p>Возвращает {{domxref("ShadowRoot")}}.</p>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<p>Эта функция больше не определяется никакими спецификациями</p>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(35.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>22</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div class="note">
+<p>В Chrome 45, возможность иметь несколько теневых корней устарела.</p>
+</div>

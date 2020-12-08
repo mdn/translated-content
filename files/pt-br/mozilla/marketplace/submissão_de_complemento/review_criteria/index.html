@@ -1,0 +1,113 @@
+---
+title: Add-on review criteria
+slug: Mozilla/Marketplace/Submissão_de_complemento/Review_criteria
+tags:
+  - Add-ons
+  - Firefox Marketplace
+  - Revisores de apps
+  - Revisão
+translation_of: Archive/Mozilla/Marketplace/Add-on_submission/Review_criteria
+---
+<div class="warning">
+<p>This document is a working draft - it is not final.  Do not rely on this document to be correct, consistent or stable.</p>
+</div>
+
+<div class="note">
+<p>This page relates to Add-ons for <strong>FirefoxOS</strong>. See <a href="/docs/Mozilla/Add-ons/AMO/Policy/Reviews">AMO Review Policy</a> for Add-ons for desktop Firefox and Firefox for Android.</p>
+</div>
+
+<div class="summary">
+<p>Este artigo descrve o conjunto de requisitos que um add-on precisa reunir para ser distribuído através do Firefox Marketplace. Estes requisitos são desenhados para balancear as necessidades de ambos desenvolvedores e usuários de add-ons do Firefox Marketplace. Desenvolvedores desejam justo, consistente, não draconiano requisitos que eles podem confiar para construir um negócio. Por outro lado, usuários desejam que que seja garantido a segurança dos add-ons. Trabalharão no dispositivo, e que o add-on fará o que diz que faz. Os requisitos do add-on do alvo abaixo cotado para o delicado balanceamento entre estas necessidades.</p>
+
+<p>Por causa do grande potencial dos add-ons seja comparado a outros mercados como webapps, a segurança e a confiabilidade está em alta - Nós escolheremos proteger o usuário e a experiência além de facilidades para o desenvolvedor de desenvolver ou monetizar.</p>
+
+<p>Aqui está a expectativa de o quê a revisão do add-on é ou não é:</p>
+</div>
+
+<ul>
+ <li>Os critérios serão aplicados de forma justa, compassivo, e de maneira consistente. A revisão do processo de add-on não pretende ser um porteiro, mas de preferência um ponto de toque confiável queprovê feedback para ajudar os desenvolvedores a ser um sucesso.</li>
+ <li>Revisores não são um equipe QA! Durante o processo de revisão, alguém inspecionará o código fonte do add-on e gastará algum tempo usando os componentes que o add-on providencia como um usuário normal usaria.</li>
+ <li>Se um add-on falha na revisão, o desenvolvedor aodesenvolvedor será dado uma clara explicação do problema encontrado, passos para reproduzir, e onde onde for possível, o revisor deve pontuar o desenvolvedor na direção certa para providenciar links relevantes para suportar a documentação ou fazer recomendações no que é necessário mudar para ser feito.</li>
+ <li>Nós sempre daremos aos desenvolvedores o benefício do dúvida. Se inseguro se um add-on deve ser rejeitado. Add-ons não serão (conscientemente) rejeitado por problemas de plataforma que são fora do controle dos desenvolvedores; no entanto nós podemos reter a aprovação se nós não pudermos alcançar o add-on para trabalhar.</li>
+</ul>
+
+<h2 id="Segurança">Segurança</h2>
+
+<p>Add-ons no FirefoxOS pode rodar  junto ao nível do sistema e modificar built-in e precarregar apps dos sistemas.  Como tal eles tem significantemente mais escopo para abris a segurança e vulnerabilidades do que webapps, webpages e add-ons em alguma outra plataforma. Nós esperamos que todos os add-ons para ser seguros, não somente em manipularos próprios dados deles, e de usar dados, mas também in todo interacão com a web e sistema operacional. Especilamente, add-ons não necessitam:</p>
+
+<ul>
+ <li>Criar ou expôr vulnerabilidades na segurança</li>
+ <li>Sabotagem com o sistema operacional/add-on código atualizado, ou funções bloqueadas em blocos</li>
+ <li>Executa código remoto</li>
+ <li>Degrada a segurança de sites HTTPS</li>
+ <li>Instalar add-ons adicionais ou apps sem o consentimento do usuário</li>
+ <li>Bloqueia, interfere ou faz chamadas telefônicasou sms sem o consentimento do usuário</li>
+ <li>Faz alguma conexão remota no sistema do app</li>
+</ul>
+
+<h2 id="Privacidade_e_Consentimento_do_usuário">Privacidade e Consentimento do usuário</h2>
+
+<ul>
+ <li>Se o add-on processar ou transmitir dados do usuário uma política de privacidade deve ser ligada na descrição; Não há requisitos para o formato e conteúdo dessa política de privacidade. Sinta-se livre para usar nosso <a href="https://github.com/flamsmark/privacy-policy-template">exemplo de política de privacidade</a>. Também olhe nossas <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies">diretrizes da política de privacidade.</a></li>
+ <li>A respeito da política estabelecida, nós esperamos que todos os add-ons respeitem as escolhas dos usuários e razoável expectativa de privacidade.</li>
+ <li>Add-ons não precisam mandar dados sensíveis para servidores remotos desprotegidos.</li>
+ <li>O add-on não precisa prevenir o acesso para o gerenciador do add-on (configurações|Add-ons)  ou por outro lado prevenir o usuário de desabilitar ou desinstalar o add-on.</li>
+ <li>O usuário não precisa ser prevenido de reversão de mudanças feitas pelo add-on.</li>
+ <li>O add-on não pode fazer inexperadas ou não reveladas mudanças no sistema. apps ou webpages.</li>
+ <li>O sistema de preferência não pode ser mudado sem o consentimento do usuário</li>
+</ul>
+
+<h2 id="Consentimento">Consentimento</h2>
+
+<ul>
+ <li>Alguns add-ons que violam nossas diretrizes de conteúdo abaixo não são permitidos. Se você acha que tem um problema para resolver deste tipo, por favor peça a equipe de revisão para clarificação, até mesmo se o add-on não estiver ainda pronto para ser submetido. Nós desejamos ajudar você na trilha certa, em vez de investir tempo de desenvolvimento em um conteúdo que será rejeitado.</li>
+ <li>Telas printadas e descrições submetidas para a loja  Firefox Marktplace tem que precisamente representar o add-on. Nós recomendamos que a última tela printada do add-on em ação, assim os usuários terão um prévia daquilo que realmente eles estão pegando. Como alguns add-on podem ter mudanças não visuais onde uma tela printada não é relevante nós não requeremos uma.</li>
+ <li>Nós recomendamos você um ícone para ficar fora do Marketplace e no gerenciador add-on. Mas isto não é requisito. No entanto, se você providenciar um deverá ser relevante para o add-on e não enganoso.</li>
+</ul>
+
+<h3 id="Diretrizes_de_conteúdo"><strong>Diretrizes de conteúdo</strong></h3>
+
+<p>Essa lista descreve tipos de conteúdo que são inapropriados para o Firefox Marktplace. Essa lista é ilustrativa, não definitiva, e pode ser atualizada. Se um add-on for encontrado violando estas diretrizes, Mozilla tem o direito de imediatamente remover o add-on do Firefox Marketblace.</p>
+
+<ul>
+ <li>Material pornográfico ou obsceno é probido, ou representação gráficade sexualidade ou violência.</li>
+ <li>Nenhum conteúdo que infringe direitos autorais, incluindo propriedade intelectual ou direitos proprietário ou direitos de privacidade ou pubicidade.</li>
+ <li>Nenhum conteúdo que é desenhado para prejudicar Mozilla ou usuários (tais como código malicioso, vírus, spyware ou malware).</li>
+ <li>Nenhum conteúdo que é ilegal ou promove as atividades ilegais.</li>
+ <li>Nenhum conteúdo enganador, fraudulento ou feito para hackear ou realizar roubo de identidades.</li>
+ <li>Nenhum conteúdo que promova jogos de azar.</li>
+ <li>Nenhum conteúdo que engage na propaganda de ilegais ou controlados produtos e serviços.</li>
+ <li>Nenhum conteúdo que explora crianças.</li>
+ <li>Nenhum conteúdo que degrade, intimide, incite a violência contra, ou encorage ações prejudiciais contraalguém ou um grupo baseado na idade, gênero, raça, etnia, nacionalidade,religiâo, localização geográfica ou outras categorias ou discursos baseados no ódio.</li>
+ <li>Nenhum conteúdo que engana um usuário a fazer uma decisão de compra.</li>
+</ul>
+
+<h2 id="Funcionalidade">Funcionalidade</h2>
+
+<ul>
+ <li>O revisor deve ser capaz de realizar recursos adicionais anunciandos no add-on. Falhas estéticas e menores incoveniências serão reportadas para o desenvolvedor, mas não prevenirá um add-on de ser aprovado.</li>
+ <li> O add-on não pode comprometer a performance do sistema ou estabilidade.</li>
+ <li>Add-ons não podem baixar uma grande quantidade de dados sem o usuário estar ciente.</li>
+ <li>Mudanças feitas por add-ons não precisam persistir depois que o add-on foi desabilitado ou desinstalado.</li>
+</ul>
+
+<h2 id="Política_da_lista_de_bloqueio">Política da lista de bloqueio</h2>
+
+<p>Nós esperamos que nunca use isso mas nós nos reservamos ao direito de remover ("Lista de bloqueio") qualquer add-on publicado que posteriormente for encontrado violandoqualquer segurança, privacidade, ou requisito de conteúdo, ou add-ons que seriamente degrada a performance de sistema ou da rede. Desenvolvedores serão informados da situação antes de um add-on ser bloquado, assumiremos ser um bom cidadão à menos que nós tenhamos achado evidências ao contrário, e receberá total assistência do time de revisão para comunicar o que está havendo e em como resolver este problema. Examplos espcíficos da situação onde a lista de bloqueio é garantido, inclusive:</p>
+
+<ul>
+ <li>Phishing</li>
+ <li>Spamming</li>
+ <li>Severo mau comportamento do add-on por grande percentual de usuários - degradação da performance do celular, causando reboots, causando useretc. Perda de dados, onde usuários não podem dizer se por causa do add-on e onde não é resolvido pelo reboot do aparelho.</li>
+ <li>Um add-on usado para attacks na rede, tais como um negação distribuída de serviço (DDOS).</li>
+ <li>An add-on being used for attacks on the network, such as a distributed denial of service (DDOS).</li>
+</ul>
+
+<h2 id="Mais_Informações">Mais Informações</h2>
+
+<p>O seguinte recurso providencia mais informações no processo de revisão e revisão de add-ons.</p>
+
+<ul>
+ <li><a href="https://wiki.mozilla.org/Marketplace/Reviewers/FxOSAdd-ons/Testing">Revisores de teste por critério</a> - Esta página descreve os testes que os revisores de add-ons realizarão em seus add-ons.</li>
+ <li><a href="https://wiki.mozilla.org/Marketplace/Reviewers/Apps">Revisores de FxOS Add-on</a> - Como contatar a equipe de revisão de mercado (mesmo que revisores de apps).</li>
+</ul>

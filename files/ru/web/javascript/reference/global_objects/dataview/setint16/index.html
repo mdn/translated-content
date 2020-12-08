@@ -1,0 +1,80 @@
+---
+title: DataView.prototype.setInt16()
+slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
+tags:
+  - DataView
+  - JavaScript
+  - TypedArrays
+  - метод
+  - прототип
+translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
+---
+<div>{{JSRef}}</div>
+
+<div>Метод <strong><code>setInt16()</code></strong> содержит 16-битное целое (short) значение в байте, смещённым по указанному числу от начала {{jsxref("DataView")}}.</div>
+
+<div>{{EmbedInteractiveExample("pages/js/dataview-setint16.html")}}</div>
+
+<p class="hidden">Исходный код для этого интерактивного примера содержится на репозитории в GitHub. Если вы хотите внести вклад в проект интерактивных примеров, пожалуйста, зайдите на <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/interactive-examples</a> и отправьте нам pull request.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>dataview</var>.setInt16(byteOffset, value [, littleEndian])</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>byteOffset</dt>
+ <dd>Смещение в байтах от старта до этого значения, где будут храниться данные.</dd>
+ <dt>value</dt>
+ <dd>Устанавливаемое значение.</dd>
+ <dt>littleEndian</dt>
+ <dd>{{optional_inline}} Указывает, сохранять ли 16-bit целое в {{Glossary("Endianness", "little- or big-endian")}} формате. Если значение false или undefined, записывает значение big-endian.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>{{jsxref("undefined")}}.</p>
+
+<h3 id="Возвращаемые_ошибки">Возвращаемые ошибки</h3>
+
+<dl>
+ <dt>{{jsxref("RangeError")}}</dt>
+ <dd>Выдана, если <code>byteOffset</code> установлен так, что целое бы хранилось после конца.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_метода_setInt16">Использование метода <code>setInt16</code></h3>
+
+<pre class="brush:js">var buffer = new ArrayBuffer(8);
+var dataview = new DataView(buffer);
+dataview.setInt16(1, 3);
+dataview.getInt16(1); // 3
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.setint16', 'DataView.prototype.setInt16')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div class="hidden">Таблица совместимости на этой странице сгенерирована из структурированных данных. Если вы хотите внести вклад в данные, пожалуйста, зайдите на <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам pull request.</div>
+
+<p>{{Compat("javascript.builtins.DataView.setInt16")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также </h2>
+
+<ul>
+ <li>{{jsxref("DataView")}}</li>
+ <li>{{jsxref("ArrayBuffer")}}</li>
+</ul>

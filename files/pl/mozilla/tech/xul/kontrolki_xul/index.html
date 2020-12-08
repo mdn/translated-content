@@ -1,0 +1,145 @@
+---
+title: Kontrolki XUL
+slug: Mozilla/Tech/XUL/Kontrolki_XUL
+tags:
+  - Wszystkie_kategorie
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_controls
+---
+<p>Poniższa tabela przedstawia listę kontrolek dostarczanych przez język XUL użytkownikowi. Zobacz <a href="/pl/Kurs_XUL" title="pl/Kurs_XUL">Kurs XUL</a>, by dowiedzieć się, w jaki sposób są one używane oraz <a href="/pl/Dokumentacja_XUL" title="pl/Dokumentacja_XUL">dokumentację XUL</a>.</p>
+<table> <tbody> <tr> <td><strong>&lt;button&gt;</strong> <p>Przycisk, który może być naciśnięty przez użytkownika.</p> <pre>
+&lt;button label="Save" accesskey="S"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Dodawanie_przycisków" title="pl/Kurs_XUL/Dodawanie_przycisków">Więcej informacji o elemencie button</a>.</li> <li><a href="/pl/XUL/button" title="pl/XUL/button">Dokumentacja przycisków</a></li> </ul> </td> <td><img alt="Grafika:Controlsguide-button.png" class=" internal" src="/@api/deki/files/2289/=Controlsguide-button.png"></td> </tr> <tr> <td><strong>&lt;button type="menu"&gt;</strong> <p>Przycisk, który posiada dołączone rozwijane menu. Naciskając przycisk otworzymy menu.</p> <pre>
+&lt;button type="menu" label="View"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="List"/&gt;
+    &lt;menuitem label="Details"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Dodatkowe_możliwości_przycisku#Przycisk_z_menupopup" title="pl/Kurs_XUL/Dodatkowe_możliwości_przycisku#Przycisk_z_menupopup">Więcej informacji o tym typie menu w elemencie button</a>.</li> <li><a href="/pl/XUL/button" title="pl/XUL/button">Dokumentacja przycisków</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><img alt="Grafika:Controlsguide-button-menu.png" class=" internal" src="/@api/deki/files/2288/=Controlsguide-button-menu.png"></td> </tr> <tr> <td><strong>&lt;button type="menu-button"&gt;</strong> <p>Przycisk, który posiada odrębną strzałkę z załączonym do niej menu. W przeciwieństwie do przycisku typu "menu", po naciśnięciu na główną jego część może zostać wykonana oddzielna akcja.</p> <pre>
+&lt;button type="menu-button" label="New"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="New Document"/&gt;
+    &lt;menuitem label="New Image"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Dodatkowe_możliwości_przycisku#Przycisk_z_menupopup" title="pl/Kurs_XUL/Dodatkowe_możliwości_przycisku#Przycisk_z_menupopup">Więcej informacji o tym typie menu w elemencie button</a>.</li> <li><a href="/pl/XUL/button" title="pl/XUL/button">Dokumentacja przycisków</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><span class="comment">Grafika:Controlsguide-button-menubutton.png</span></td> </tr> <tr> <td><strong>&lt;checkbox&gt;</strong> <p>Kontrolka, która może być włączona lub wyłączona, zazwyczaj stosujemy ją do utworzenia opcji, która może być włączona lub wyłączona.</p> <pre>
+&lt;checkbox label="Show Toolbar Labels" checked="true"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_wejścia#Checkboxes_and_Radio_Elements" title="pl/Kurs_XUL/Kontrolki_wejścia#Checkboxes_and_Radio_Elements">Więcej informacji o elemencie checkbox</a>.</li> <li><a href="/pl/XUL/checkbox" title="pl/XUL/checkbox">Dokumentacja pola wyboru</a></li> </ul> </td> <td><img alt="Grafika:Controlsguide-checkbox.png" class=" internal" src="/@api/deki/files/2290/=Controlsguide-checkbox.png"></td> </tr> <tr> <td><strong>&lt;colorpicker&gt;</strong> <p>Kontrolka pozwalająca użytkownikowi na wybór koloru.</p> <pre>
+&lt;colorpicker color="#FF0000"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/colorpicker" title="pl/XUL/colorpicker">Dokumentacja kontrolki Colorpicker</a></li> </ul> </td> <td><span class="comment">Grafika:Controlsguide-colorpicker.png</span></td> </tr> <tr> <td><strong>&lt;colorpicker type="button"&gt;</strong> <p>Specjalny typ kontrolki colorpicker, który pokazuje tylko przycisk, lecz po jego naciśnięciu wyświetli się okienko z możliwością wyboru koloru.</p> <pre>
+&lt;colorpicker type="button" color="#CC0080"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/colorpicker" title="pl/XUL/colorpicker">Dokumentacja kontrolki Colorpicker</a></li> </ul> </td> <td><img alt="Grafika:Controlsguide-colorpicker-button.png" class=" internal" src="/@api/deki/files/2291/=Controlsguide-colorpicker-button.png"></td> </tr> <tr> <td><strong>&lt;datepicker&gt;</strong> <p><strong><span class="highlightred"><small>Nowość w Mozilli 1.9 / Firefox 3</small></span></strong></p> <p>Ustawienie pola tekstowego, które może być zastosowane do wprowadzenia daty.</p> <pre>
+&lt;datepicker value="2007/03/26"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/datepicker" title="pl/XUL/datepicker">Dokumentacja kontrolki Datepicker</a></li> </ul> </td> <td><img alt="Grafika:Controlsguide-datepicker.png" class=" internal" src="/@api/deki/files/2293/=Controlsguide-datepicker.png"></td> </tr> <tr> <td><strong>&lt;datepicker type="grid"&gt;</strong> <p><strong><span class="highlightred"><small>Nowość w Mozilli 1.9 / Firefox 3</small></span></strong></p> <p>Element datepicker, który wyświetla siatkę z wyborem daty.</p> <pre>
+&lt;datepicker type="grid" value="2007/02/20"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/datepicker" title="pl/XUL/datepicker">Dokumentacja kontrolki Datepicker</a></li> </ul> </td> <td><img alt="Grafika:Controlsguide-datepicker-grid.png" class=" internal" src="/@api/deki/files/2292/=Controlsguide-datepicker-grid.png"></td> </tr> <tr> <td><strong>&lt;datepicker type="popup" &gt;</strong> <p><strong><span class="highlightred"><small>Nowość w Mozilli 1.9 / Firefox 3</small></span></strong></p> <p>Element datepicker, który wyświetla zbiór pól tekstowych do wprowadzenia daty, lecz posiada również przycisk, po którego naciśnięciu wyświetla się siatka kalendarza.</p> <pre>
+&lt;datepicker type="popup" value="2008/08/24"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/datepicker" title="pl/XUL/datepicker">Dokumentacja kontrolki Datepicker</a></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;description&gt;</strong> <p>Element description jest stosowany do tekstu opisowego.</p> <pre>
+&lt;description&gt;
+  Select a time for the event to start
+&lt;/description&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Dodawanie_etykiet_i_obrazków#Element_Description" title="pl/Kurs_XUL/Dodawanie_etykiet_i_obrazków#Element_Description">Więcej informacji o elemencie description</a>.</li> <li><a href="/pl/XUL/description" title="pl/XUL/description">Dokumentacja elementu Description</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-description.png" class=" internal" src="/@api/deki/files/2266/=Controlguide-description.png"></td> </tr> <tr> <td><strong>&lt;groupbox&gt;</strong> <p>Element groupbox wyświetla pudełko z etykietą wokoło interfejsu kontrolek.</p> <pre>
+&lt;groupbox&gt;
+  &lt;caption label="Network"/&gt;
+&lt;/groupbox&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Pola_grup" title="pl/Kurs_XUL/Pola_grup">Więcej informacji o elemencie groupbox</a>.</li> <li><a href="/pl/XUL/groupbox" title="pl/XUL/groupbox">Dokumentacja elementu groupbox</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-groupbox.png" class=" internal" src="/@api/deki/files/2267/=Controlguide-groupbox.png"></td> </tr> <tr> <td><strong>&lt;image&gt;</strong> <p>Obrazek określony przez adres URL.</p> <pre>
+&lt;image src="start.png"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Dodawanie_etykiet_i_obrazków#Obrazki" title="pl/Kurs_XUL/Dodawanie_etykiet_i_obrazków#Obrazki">Więcej informacji o elemencie image</a>.</li> <li><a href="/pl/XUL/image" title="pl/XUL/image">Dokumentacja elementu Image</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-image.png" class=" internal" src="/@api/deki/files/2268/=Controlguide-image.png"></td> </tr> <tr> <td><strong>&lt;label&gt;</strong> <p>Etykieta jest stosowana do tworzenia tekstu, który jest etykietą pobliskiej kontrolki.</p> <pre>
+&lt;label control="volume" value="Volume:"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Dodawanie_etykiet_i_obrazków#Element_label" title="pl/Kurs_XUL/Dodawanie_etykiet_i_obrazków#Element_label">Więcej informacji o elemencie label</a>.</li> <li><a href="/pl/XUL/label" title="pl/XUL/label">Dokumentacja etykiety</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-label.png" class=" internal" src="/@api/deki/files/2269/=Controlguide-label.png"></td> </tr> <tr> <td><strong>&lt;listbox&gt;</strong> <p>Element listbox jest stosowany do zaznaczenia pozycji z listy pozycji będących etykietami.</p> <pre>
+&lt;listbox&gt;
+  &lt;listitem label="Chocolate"/&gt;
+  &lt;listitem label="Jelly Beans"/&gt;
+&lt;/listbox&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_list#Pola_listy" title="pl/Kurs_XUL/Kontrolki_list#Pola_listy">Więcej informacji o elemencie listbox</a>.</li> <li><a href="/pl/XUL/listbox" title="pl/XUL/listbox">Dokumentacja elementu Listbox</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-listbox.png" class=" internal" src="/@api/deki/files/2270/=Controlguide-listbox.png"></td> </tr> <tr> <td><strong>&lt;menulist&gt;</strong> <p>Element menulist (lub combobox) jest stosowany do tworzenia kontrolki wyboru z rozwijanym menu.</p> <pre>
+&lt;menulist&gt;
+  &lt;menupopup&gt;
+    &lt;menulist label="Lions" value="l"/&gt;
+    &lt;menuitem label="Tigers" value="t"/&gt;
+    &lt;menuitem label="Bears" value="b"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_list#Listy_rozwijane" title="pl/Kurs_XUL/Kontrolki_list#Listy_rozwijane">Więcej informacji o elemencie menulist</a>.</li> <li><a href="/pl/XUL/menulist" title="pl/XUL/menulist">Dokumentacja elementu menulist</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-menulist.png" class=" internal" src="/@api/deki/files/2272/=Controlguide-menulist.png"></td> </tr> <tr> <td><strong>&lt;menulist editable="true"&gt;</strong> <p>Edytowalna lista menu jest jak standardowa lista menu oprócz tego, że zaznaczona wartość jest wyświetlana w polu tekstowym, gdzie może ona zostać bezpośrednio zmodyfikowana lub posłużyć do wpisania nowej wartości, której nie ma w menu po jego rozwinięciu.</p> <pre>
+&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Elephants" value="Elephants"/&gt;
+    &lt;menuitem label="Kangaroos" value="Kangaroos"/&gt;
+    &lt;menuitem label="Bats" value="Bats"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_list#Lista_menu_do_edycji" title="pl/Kurs_XUL/Kontrolki_list#Lista_menu_do_edycji">Więcej informacji o elemencie listy menu do edycji</a>.</li> <li><a href="/pl/XUL/menulist" title="pl/XUL/menulist">Dokumentacja elementu Menulist</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-menulist-editable.png" class=" internal" src="/@api/deki/files/2271/=Controlguide-menulist-editable.png"></td> </tr> <tr> <td><strong>&lt;progressmeter&gt;</strong> <p>Pasek postępu jest stosowany do wyświetlenia postępu długości zadania.</p> <pre>
+&lt;progressmeter value="40"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Paski_postępu" title="pl/Kurs_XUL/Paski_postępu">Więcej informacji o elemencie progressmeter</a>.</li> <li><a href="/pl/XUL/progressmeter" title="pl/XUL/progressmeter">Dokumentacja elementu progressmeter</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-progressmeter.png" class=" internal" src="/@api/deki/files/2273/=Controlguide-progressmeter.png"></td> </tr> <tr> <td><strong>&lt;radio&gt;</strong> <p>Przycisk opcji jest stosowany, gdy tylko jedna z zestawu opcji może zostać wybrana za jednym razem.</p> <pre>
+&lt;radiogroup&gt;
+  &lt;radio label="Light" value="light"/&gt;
+  &lt;radio label="Heavy" value="heavy"/&gt;
+&lt;/radiogroup&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_wejścia#Pola_wyboru_i_przyciski_opcji" title="pl/Kurs_XUL/Kontrolki_wejścia#Pola_wyboru_i_przyciski_opcji">Więcej informacji o elemencie radio</a>.</li> <li><a href="/pl/XUL/radio" title="pl/XUL/radio">Dokumentacja przycisku opcji</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-radio.png" class=" internal" src="/@api/deki/files/2274/=Controlguide-radio.png"></td> </tr> <tr> <td><strong>&lt;richlistbox&gt;</strong> <p>Element richlistbox wyświetla listę pozycji, gdzie jedna lub więcej z nich może zostać zaznaczona. W przeciwieństwie do elementu listbox, który został zaprojektowany, aby wyświetlać tylko tekst, richlistbox może wyświetlać dowolny typ zawartości.</p> <pre>
+&lt;richlistbox&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="happy.png"/&gt;
+  &lt;/richlistitem&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="sad.png"/&gt;
+  &lt;/richlistitem&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="angry.png"/&gt;
+  &lt;/richlistitem&gt;
+&lt;/richlistbox&gt;
+</pre> <ul> <li><a href="/pl/XUL/richlistbox" title="pl/XUL/richlistbox">Dokumentacja Richlistbox</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/richlistitem" title="richlistitem">richlistitem</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-richlistbox.png" class=" internal" src="/@api/deki/files/2275/=Controlguide-richlistbox.png"></td> </tr> <tr> <td><strong>&lt;scale&gt;</strong> <p><strong><span class="highlightred"><small>Nowość w Mozilli 1.9 / Firefox 3</small></span></strong></p> <p>Element scale wyświetla pasek z uchwytem, który może być przesuwany wzdłuż paska, aby wybrać wartości z określonego zakresu.</p> <pre>
+&lt;scale min="1" max="10"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/scale" title="pl/XUL/scale">Dokumentacja elementu Scale</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-scale.png" class=" internal" src="/@api/deki/files/2278/=Controlguide-scale.png"></td> </tr> <tr> <td><strong>&lt;textbox&gt;</strong> <p>Element textbox, który pozwala wprowadzić pojedynczą linię tekstu.</p> <pre>
+&lt;textbox value="firefox"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_wejścia#Pola_tekstowe" title="pl/Kurs_XUL/Kontrolki_wejścia#Pola_tekstowe">Więcej informacji o elemencie textbox</a>.</li> <li><a href="/pl/XUL/textbox" title="pl/XUL/textbox">Dokumentacja elementu Textbox</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-textbox.png" class=" internal" src="/@api/deki/files/2283/=Controlguide-textbox.png"></td> </tr> <tr> <td><strong>&lt;textbox multiline="true"&gt;</strong> <p>Element textbox, który pozwala na wprowadzenie wieloliniowego tekstu.</p> <pre>
+&lt;textbox multiline="true"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Kontrolki_wejścia#Wieloliniowy_textbox" title="pl/Kurs_XUL/Kontrolki_wejścia#Wieloliniowy_textbox">Więcej informacji o wieloliniowym elemencie textbox</a>.</li> <li><a href="/pl/XUL/textbox" title="pl/XUL/textbox">Dokumentacja elementu textbox</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-textbox-multiline.png" class=" internal" src="/@api/deki/files/2279/=Controlguide-textbox-multiline.png"></td> </tr> <tr> <td><strong>&lt;textbox type="autocomplete"&gt;</strong> <p>Element textbox, który dostarcza rozwijane menu pokazujące podpowiedzi, które mogłyby pasować do wpisywanego przez użytkownika tekstu. Użytkownik może zaznaczyć jedną z podpowiedzi, aby wstawić ją do pola tekstowego.</p> <pre>
+&lt;textbox type="autocomplete" autocompletesearch="history"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/textbox" title="pl/XUL/textbox">Dokumentacja elementu textbox</a></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;textbox type="number"&gt;</strong> <p><strong><span class="highlightred"><small>Nowość w Mozilli 1.9 / Firefox 3</small></span></strong></p> <p>Element textbox dla wprowadzanych liczb. Dwa przyciski strzałek są wyświetlane do przechodzenia między wartościami.</p> <pre>
+&lt;textbox type="number" min="1" max="20"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/textbox" title="pl/XUL/textbox">Dokumentacja elementu Textbox</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-textbox-number.png" class=" internal" src="/@api/deki/files/2281/=Controlguide-textbox-number.png"></td> </tr> <tr> <td><strong>&lt;textbox type="password"&gt;</strong> <p>Element textbox, który ukrywa typ znaków, stosowany w polach z hasłami.</p> <pre>
+&lt;textbox type="password"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/textbox" title="pl/XUL/textbox">Dokumentacja elementu textbox</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-textbox-password.png" class=" internal" src="/@api/deki/files/2282/=Controlguide-textbox-password.png"></td> </tr> <tr> <td><strong>&lt;timepicker&gt;</strong> <p><strong><span class="highlightred"><small>Nowość w Mozilli 1.9 / Firefox 3</small></span></strong></p> <p>Element timepicker wyświetla zbiór pól tekstowych do wprowadzenia czasu.</p> <pre>
+&lt;timepicker value="12:05"/&gt;
+</pre> <ul> <li><a href="/pl/XUL/timepicker" title="pl/XUL/timepicker">Dokumentacja elementu timepicker</a></li> </ul> </td> <td><img alt="Grafika:Controlguide-timepicker.png" class=" internal" src="/@api/deki/files/2285/=Controlguide-timepicker.png"></td> </tr> <tr> <td><strong>&lt;toolbarbutton&gt;</strong> <p>Przycisk, który jest wyświetlany na pasku narzędzi.</p> <pre>
+&lt;toolbarbutton label="Reload"/&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Paski_narzędzi" title="pl/Kurs_XUL/Paski_narzędzi">Więcej informacji o elemencie toolbarbutton</a>.</li> <li><a href="/pl/XUL/toolbarbutton" title="pl/XUL/toolbarbutton">Dokumentacja elementu toolbarbutton</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-toolbarbutton.png" class=" internal" src="/@api/deki/files/2286/=Controlguide-toolbarbutton.png"></td> </tr> <tr> <td><strong>&lt;toolbarbutton type="menu"&gt;</strong> <p>Przycisk, który jest wyświetlony z załączonym rozwijalnym menu w sobie.</p> <pre>
+&lt;toolbarbutton type="menu" label="Show"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Toolbars"/&gt;
+    &lt;menuitem label="Status Bar"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbarbutton&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Paski_narzędzi" title="pl/Kurs_XUL/Paski_narzędzi">Więcej informacji o tym typie menu jest w elemencie toolbarbutton</a>.</li> <li><a href="/pl/XUL/toolbarbutton" title="pl/XUL/toolbarbutton">Dokumentacja elementu Toolbarbutton</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;toolbarbutton type="menu-button"&gt;</strong> <p>Przycisk na pasku narzędzi, który posiada odrębną strzałkę z załączonym do niej menu. W przeciwieństwie do przycisku typu "menu", po naciśnięciu na główną jego część może zostać wykonana oddzielna akcja.</p> <pre>
+&lt;toolbarbutton type="menu-button" label="Open"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Open Changed Files"/&gt;
+    &lt;menuitem label="Open All"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbarbutton&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Paski_narzędzi" title="pl/Kurs_XUL/Paski_narzędzi">Więcej informacji na temat tego typu elementów menu paska narzędzi</a>.</li> <li><a href="/pl/XUL/toolbarbutton" title="pl/XUL/toolbarbutton">Dokumentacja przycisków paska narzędzi</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;tree&gt;</strong> <p>Drzewo wyświetla hierarchię pozycji w wielu kolumnach.</p> <pre>
+&lt;tree&gt;
+  &lt;treecols&gt;
+    &lt;treecol label="Name" flex="1"/&gt;
+    &lt;treecol label="Size" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Popcorn"/&gt;
+        &lt;treecell label="Large"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Root Beer"/&gt;
+        &lt;treecell label="Small"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre> <ul> <li><a href="/pl/Kurs_XUL/Drzewa" title="pl/Kurs_XUL/Drzewa">Więcej informacji o elemencie drzewa</a>.</li> <li><a href="/pl/XUL/tree" title="pl/XUL/tree">Dokumentacja drzewa</a></li> <li>Podobne elementy: <code><a href="/pl/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> <code><a href="/pl/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></li> </ul> </td> <td><img alt="Grafika:Controlguide-tree.png" class=" internal" src="/@api/deki/files/2287/=Controlguide-tree.png"></td> </tr> </tbody>
+</table>
+<p> </p>
+
+<p></p>

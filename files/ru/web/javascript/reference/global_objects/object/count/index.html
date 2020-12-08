@@ -1,0 +1,83 @@
+---
+title: Object.prototype.__count__
+slug: Web/JavaScript/Reference/Global_Objects/Object/count
+tags:
+  - JavaScript
+  - Object
+  - Obsolete
+  - Property
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.count
+---
+<div>{{JSRef("Global_Objects", "Object")}} {{obsolete_header("2")}}</div>
+
+<h2 id="Summary" name="Summary">Сводка</h2>
+<p>Свойство <strong><code>__count__</code></strong> использовалось для хранения количества перечисляемых свойств объекта, но было удалено.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code><var>obj</var>.__count__</code></pre>
+
+<h2 id="Description" name="Description">Пример</h2>
+<pre class="brush: js">{ 1: 1 }.__count__              // 1
+[].__count__                    // 0
+[1].__count__                   // 1
+[1, /* дыра */, 2, 3].__count__ // 3
+</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<p>Не является частью какой-либо спецификации.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<div>{{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Возможность</th>
+    <th>Android</th>
+    <th>Chrome для Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Базовая поддержка</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatNo}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+<ul>
+ <li><a class="external" href="http://whereswalden.com/2010/04/06/more-changes-coming-to-spidermonkey-the-magical-__count__-property-of-objects-is-being-removed/">[Запись в блоге] В SpiderMonkey грядут большие изменения: магическое свойство __count__ будет удалено</a> (англ.)</li>
+</ul>

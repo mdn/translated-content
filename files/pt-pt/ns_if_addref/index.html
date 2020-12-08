@@ -1,0 +1,21 @@
+---
+title: NS_IF_ADDREF
+slug: NS_IF_ADDREF
+tags:
+  - Macros_XPCOM
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference/NS_IF_ADDREF
+---
+<p> </p>
+<h3 id="Sum.C3.A1rio" name="Sum.C3.A1rio">Sumário</h3>
+<p><b>Macro</b></p>
+<p>Faz addref ao argumento se ele for não-null. Não faz nada a um apontador null. Usar apenas caso o apontador possa ser NULL; Use <a href="pt/NS_ADDREF">NS_ADDREF</a> caso não possa.</p>
+<p><code>NS_IF_ADDREF(foo)</code> equivale a</p>
+<pre class="eval">if (foo)
+  foo-&gt;AddRef();
+</pre>
+<h3 id="Sintaxe" name="Sintaxe">Sintaxe</h3>
+<pre class="eval">NS_IF_ADDREF(foo);
+</pre>
+<h3 id="Ver_Tamb.C3.A9m" name="Ver_Tamb.C3.A9m">Ver Também</h3>
+<p><a href="pt/NS_ADDREF">NS_ADDREF</a></p>

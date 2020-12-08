@@ -1,0 +1,384 @@
+---
+title: Tradução e Plurais
+slug: Mozilla/Localization/Localizacao_e_Plurais
+tags:
+  - Internacionalização
+  - Localização
+  - Tradução
+translation_of: Mozilla/Localization/Localization_and_Plurals
+---
+<p>Provavelmente está aqui porque está a traduzir um ficheiro .properties e este tinha uma hiperligação para esta página. Esta página é para ajudar a explicar como localizar essas entradas de carateres para que a forma correta do plural seja mostrada ao utilizador. Por exemplo, "1 página" vs. "2 páginas".</p>
+
+<p>Se está aqui para criar o seu código (por exemplo, extensões) localizável para as formas de plural, pode ir diretamente para <a href="#Developing_with_PluralForm">Programar com <em>PluralForm</em></a>. Também poderá ter que localizar as entradas iniciais para o seu código, por isso também seria bom que lê-se pelo menos a secção 'Utilização'.</p>
+
+<h2 id="Utilização">Utilização</h2>
+
+<p>Aqui tem alguns termos utilizados nesta página para o ajudar a manter as coisas simples:</p>
+
+<ul>
+ <li><strong>regra de plural</strong>: para um determinado idioma, existe uma regra gramatical sobre como alterar as palavras, dependendo do número que qualifica a palavra. Idiomas diferentes podem ter regras diferentes.</li>
+ <li><strong>forma de plural</strong>: para uma regra de plural específica, pode haver várias formas de uma palavra, como "página" e "páginas". Neste caso, existem 2 formulários, mas outros idiomas podem ter 1 ou mais.</li>
+</ul>
+
+<p>If you're here for <code>pluralRule</code> in the <code>chrome/global/intl.properties</code> file, you'll need to figure out what <em>plural rule</em> to choose for your localization. This plural rule is used to determine how many <em>plural forms</em> are needed for each word that needs to be localized, with plurals in mind.</p>
+
+<p>For all other properties files that link to this page, you'll need to provide enough plural forms of the desired word, and separate them with semi-colons (;). If you don't know how many plural forms you need, check the <code>pluralRule</code> number in <code>chrome/global/intl.properties</code>, and look up the corresponding entry in the following list of plural rules.</p>
+
+<h2 id="Lista_das_Regras_de_Plural">Lista das Regras de Plural</h2>
+
+<p>Esta secção contém uma lista de regras plurais ordenadas pelo seu número de regra de plural. Cada entrada indica quantas formas de plural são necessárias ao localizar uma palavra. Para cada entrada, há uma lista de famílias e idiomas nessas famílias, para ajudá-lo a descobrir se é a regra que deve escolher para <code>pluralRule</code>. Além disso, há uma breve descrição de cada forma de plural, seguida por alguns números de amostra que se enquadram nessa forma específica.</p>
+
+<p>For a given plural rule, the order in which the plural forms are listed is the same order you need to localize a word, separated by semi-colons. For example, English uses plural rule 1, and localizing <code>plurals</code> would require a string of "plural;plurals" where the first word is the singular form and the second is the general plural form.</p>
+
+<h3 id="Regra_de_plural_0_1_forma">Regra de plural #<em><strong>0</strong></em> (1 forma)</h3>
+
+<p><strong>Famílias</strong>: Asiáticas (chinês, japonês, coreano), persa, turco/altaico (turco), Thai, Lao<br>
+ <strong>tudo</strong>: <small>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, …</small></p>
+
+<h3 id="Regra_de_plural_1_2_formas">Regra de plural #<em><strong>1</strong></em> (2 formas)</h3>
+
+<p><strong>Famílias</strong>: Germânico (dinarmaquês, holandês, inglês, Faroese, Frisian, alemão, norueguês, sueco ), Finno-Ugric (Estonian, Finnish, Hungarian), Language isolate (Basque), Latin/Greek (Greek), Semitic (Hebrew), Românico (italiano, português, espanhol, catalão), e vietnamita<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>tudo o resto</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, …</small></p>
+
+<h3 id="Regra_de_plural_2_2_formas">Regra de plural #<em><strong>2</strong></em> (2 formas)</h3>
+
+<p><strong>Famílias</strong>: Românico (francês, português (Brasil)), Lingala<br>
+ <strong>é 0 ou 1</strong>: <small>0, 1</small><br>
+ <strong>tudo o resto</strong>: <small>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h3 id="Regra_de_plural_3_3_formas">Regra de plural #<strong><em>3</em></strong> (3 formas)</h3>
+
+<p><strong>Famílias</strong>: Baltic (Latvian, Latgalian)<br>
+ <strong>termina em 0</strong>: <small>0</small><br>
+ <strong>termina em 1, excluindo 11</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>tudo o resto</strong>: <small>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 44, 45, 46, 47, 48, 49, 52, 53, …</small></p>
+
+<h3 id="Regra_de_plural_4_4_formas">Regra de plural #<em><strong>4</strong></em> (4 formas)</h3>
+
+<p><strong>Famílias</strong>: Celtic (Scottish Gaelic)<br>
+ <strong>é 1 ou 11</strong>: <small>1, 11</small><br>
+ <strong>é 2 ou 12</strong>: <small>2, 12</small><br>
+ <strong>is 3-10 ou 13-19</strong>: <small>3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19</small><br>
+ <strong>tudo o resto</strong>: <small>0, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h3 id="Regra_de_plural_5_3_formas">Regra de plural #<em><strong>5</strong></em> (3 formas)</h3>
+
+<p><strong>Famílias</strong>: Romanic (Romanian)<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>é 0 ou termina em 01-19, excluindo 1</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, …</small><br>
+ <strong>tudo o resto</strong>: <small>20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, …</small></p>
+
+<h3 id="Regra_de_plural_6_3_formas">Regra de plural #<em><strong>6</strong></em> (3 formas)</h3>
+
+<p><strong>Famílias</strong>: Baltic (Lithuanian)<br>
+ <strong>termina em 1, excluindo 11</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>termina em 0 ou termina em 11-19</strong>: <small>0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, …</small><br>
+ <strong>tudo o resto</strong>: <small>2, 3, 4, 5, 6, 7, 8, 9, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 44, 45, 46, 47, 48, 49, 52, 53, 54, 55, 56, 57, 58, 59, 62, 63, 64, 65, 66, 67, 68, 69, 72, 73, …</small></p>
+
+<h3 id="Regra_de_plural_7_3_formas">Regra de plural #<em><strong>7</strong></em> (3 formas)</h3>
+
+<p><strong>Famílias</strong>: Belarusian, Russian, Ukrainian<br>
+ <strong>termina em 1, excluindo 11</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>termina em 2-4, excluindo 12-14</strong>: <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+ <strong>tudo o resto</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 39, 40, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 69, 70, 75, 76, 77, …, 112, 113, ..., 212, 213, ...</small></p>
+
+<h3 id="Regra_de_plural_8_3_formas">Regra de plural #<em><strong>8</strong></em> (3 formas)</h3>
+
+<p><strong>Famílias</strong>: Eslavo (eslovaco, checo)<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>é 2-4</strong>: <small>2, 3, 4</small><br>
+ <strong>tudo o resto</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, …</small></p>
+
+<h3 id="Regra_de_plural_9_3_formas">Regra de plural #<em><strong>9</strong></em> (3 formas)</h3>
+
+<p><strong>Famílias</strong>: Eslavo (polaco)<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>termina em 2-4, excluindo 12-14</strong>: <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+ <strong>tudo o resto</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 25, 26, 27, 28, 29, 30, 31, 35, 36, 37, 38, 39, 40, 41, 45, 46, 47, 48, 49, 50, 51, 55, 56, 57, 58, 59, 60, 61, 65, 66, 67, 68, …</small></p>
+
+<h3 id="Plural_rule_10_4_forms">Plural rule #<em><strong>10</strong></em> (4 forms)</h3>
+
+<p><strong>Famílias</strong>: Eslavo (esloveno, sérbio)<br>
+ <strong>termina em 01</strong>: <small>1, 101, 201, …</small><br>
+ <strong>termina em 02</strong>: <small>2, 102, 202, …</small><br>
+ <strong>termina em 03-04</strong>: <small>3, 4, 103, 104, 203, 204, …</small><br>
+ <strong>tudo o resto</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, …</small></p>
+
+<h3 id="Plural_rule_11_5_forms">Plural rule #<em><strong>11</strong></em> (5 forms)</h3>
+
+<p><strong>Famílias</strong>: Celtic (Irish Gaelic)<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>é 2</strong>: <small>2</small><br>
+ <strong>is 3-6</strong>: <small>3, 4, 5, 6</small><br>
+ <strong>is 7-10</strong>: <small>7, 8, 9, 10</small><br>
+ <strong>tudo o resto</strong>: <small>0, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, …</small></p>
+
+<h3 id="Plural_rule_12_6_forms">Plural rule #<em><strong>12</strong></em> (6 forms)</h3>
+
+<p><strong>Famílias</strong>: Semitic (Arabic)<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>é 2</strong>: <small>2</small><br>
+ <strong>termina em 03-10</strong>: <small>3, 4, 5, 6, 7, 8, 9, 10, 103, 104, 105, 106, 107, 108, 109, 110, 2</small><small>03, 204, 205, 206, 207, 208, 209, 210, </small><small>…</small><br>
+ <strong>tudo o resto but é 0 and termina em 00-02, excluding 0-2</strong>: <small>11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, … </small><br>
+ <strong>termina em 00-02, excluding 0-2</strong>: <small>100, 101, 102, 200, 201, 202, …</small><br>
+ <strong>é 0</strong>: <small>0</small></p>
+
+<h3 id="Plural_rule_13_4_forms">Plural rule #<em><strong>13</strong></em> (4 forms)</h3>
+
+<p><strong>Famílias</strong>: Semitic (Maltese)<br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>é 0 ou termina em 01-10, excluindo 1</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, …</small><br>
+ <strong>termina em 11-19</strong>: <small>11, 12, 13, 14, 15, 16, 17, 18, 19, 111, 112, 113, 114, 115, 116, 117, 118, 119, 211, 212, 213, 214, 215, 216, 217, 218, 219, …</small><br>
+ <strong>tudo o resto</strong>: <small>20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, …</small></p>
+
+<h3 id="Plural_rule_14_3_forms">Plural rule #<em><strong>14</strong></em> (3 forms)</h3>
+
+<p><strong>Famílias</strong>: unused<br>
+ <strong>ends in 1</strong>: <small>1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191, 201, 211, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>ends in 2</strong>: <small>2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122, 132, 142, 152, 162, 172, 182, 192, 202, 212, 222, 232, 242, 252, 262, 272, 282, 292, …</small><br>
+ <strong>tudo o resto</strong>: <small>0, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 23, 24, 25, 26, 27, 28, 29, 30, 33, 34, 35, 36, 37, 38, 39, 40, 43, 44, 45, 46, 47, 48, 49, 50, 53, 54, 55, 56, 57, 58, 59, 60, 63, …</small></p>
+
+<h3 id="Plural_rule_15_2_forms">Plural rule #<em><strong>15</strong></em> (2 forms)</h3>
+
+<p><strong>Famílias</strong>: Icelandic, Macedonian<br>
+ <strong>termina em 1, excluindo 11</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>tudo o resto</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45, 46, 47, 48, 49, 50, 52, 53, 54, …</small></p>
+
+<h3 id="Plural_rule_16_5_forms">Plural rule #<em><strong>16</strong></em> (5 forms)</h3>
+
+<p><strong>Famílias</strong>: Celtic (Breton)<br>
+ <strong>termina em 1, excluindo 11, 71, 91</strong>: <small>21, 31, 41, 51, 61, 81, 101, 121, 131, 141, 151, 161, 181, 201, 221, 231, 241, 251, 261, 281, ...</small><br>
+ <strong>ends in 2, excluindo 12, 72, 92</strong>: <small>2, 22, 32, 42, 52, 62, 82, 102, 122, 132, 142, 152, 162, 182, 202, 222, 232, 242, 252, 262, 282, ...</small><br>
+ <strong>ends in 3, 4 or 9 excluindo 13, 14, 19, 73, 74, 79, 93, 94, 99</strong>: <small>3, 4, 9, 23, 24, 29, 33, 34, 39, 43, 44, 49, 53, 54, 59, ...</small><br>
+ <strong>termina em 1000000</strong>: <small>1000000: 1000000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000, 9000000, 10000000, ...</small><br>
+ <strong>tudo o resto</strong>: <small>0, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 30, 35, 36, 37, 38, 40, ...</small></p>
+
+<h3 id="Plural_rule_17_2_forms">Plural rule #17 (2 forms)</h3>
+
+<p><strong>Famílias</strong>: Ecuador indigenous languages (Shuar)<br>
+ <strong>é 0</strong>: <small>0</small><br>
+ <strong>tudo o resto</strong>: <small>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h3 id="Plural_rule_18_6_forms">Plural rule #18 (6 forms)</h3>
+
+<p><strong>Famílias</strong>: Welsh<br>
+ <strong>é 0</strong>: <small>0</small><br>
+ <strong>é 1</strong>: <small>1</small><br>
+ <strong>é 2</strong>: <small>2</small><br>
+ <strong>is 3</strong>: <small>3</small><br>
+ <strong>é 6</strong>: <small>6</small><br>
+ <strong>tudo o resto</strong>: <small>4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h3 id="Plural_rule_19_3_forms">Plural rule #<em><strong>19</strong></em> (3 forms)</h3>
+
+<p><strong>Famílias</strong>: Slavic (bósnio, croata, sérvio)<br>
+ <strong>termina em 1, excluindo 11</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>termina em 2-4, excluindo 12-14</strong>: <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+ <strong>tudo o resto</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 39, 40, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 69, 70, 75, 76, 77, …, 112, 113, ..., 212, 213, ...</small></p>
+
+<h2 id="Exemplos">Exemplos</h2>
+
+<p>A seguir tem alguns exemplos para vários idiomas e um breve processo de reflexão.</p>
+
+<h3 id="Francês">Francês</h3>
+
+<p>Some French speaking places treat 0 as plural while others treat it as singular. The only other singular é 1 while tudo o resto is plural. So pick either plural rule #1 or #2.</p>
+
+<p><code>pluralRule=2<br>
+ seconds=seconde;secondes<br>
+ minutes=minute;minutes<br>
+ hours=heure;heures<br>
+ days=jour;jours </code></p>
+
+<p>Like many other times when localizing words, gender agreement might force you to rearrange words in a way that the gender is always the same. (seconde vs jour)</p>
+
+<h3 id="Chinês">Chinês</h3>
+
+<p>A word doesn't change if there is a different number in front of it, so all numbers use the same plural form. With just one plural form, it has to be plural rule #0. For each word to localize, it's just like localizing a single word with no semi-colons needed.</p>
+
+<p><code>pluralRule=0<br>
+ seconds=秒<br>
+ minutes=分<br>
+ hours=時<br>
+ days=日 </code></p>
+
+<h3 id="Polaco">Polaco</h3>
+
+<p>There's a singular form fou 1, a plural form for 2-4, and another for 5-21 at which point 22 is the same as 2. Plural rule #7 has a "termina em 2-4, not 12-14" but the singular form includes everything ending in 1 except 11. Plural rule #9 has the correct singular form for only 1.</p>
+
+<p><code>pluralRule=9<br>
+ seconds=sekunda;sekundy;sekund<br>
+ minutes=minuta;minuty;minut<br>
+ hours=godzina;godziny;godzin<br>
+ days=dzień;dni;dni </code></p>
+
+<p>Even though the last 2 plural forms of "day" are the same, both are still needed, because there needs to be 3 plural forms for each word.</p>
+
+<h3 id="Sérbio">Sérbio</h3>
+
+<p>There are 4 plural forms: nominative singular, nominative dual, nominative plural, genitive plural. These match up with plural rule #10.</p>
+
+<p><code>pluralRule=10<br>
+ seconds=sekunda;sekundźe;sekundy;sekundow<br>
+ minutes=mjeńšina;mjeńšinje;mjeńšiny;mjeńšin<br>
+ hours=hodźina;hodźinje;hodźiny;hodźin<br>
+ days=dźeń;dnjej;dny;dnjow </code></p>
+
+<h2 id="Extensão_de_Teste">Extensão de Teste</h2>
+
+<p>Para ajudar a ter a certeza de que escolhe a regra de plural correta e fornecer formas de plural suficientes para as sequências de carateres, deveria utilizar a extensão "pluralForm Checker". Depois de instalar a extensão, esta deverá estar disponível no menu de "Ferramentas".</p>
+
+<p>To use it, list off the property files and properties that you want to check and click the button. The extension will load each property and display the plural forms in a table. Selecting a table entry will populate the bottom box with sample uses of the word for some numbers.</p>
+
+<p><img alt="Image:pluralForm-checker.0.3.png" class="internal" src="/@api/deki/files/804/=PluralForm-checker.0.3.png"></p>
+
+<p><a class="external" href="https://ed.agadak.net/firefox/pluralForm-checker.xpi">Instalar a extensão Checker v0.3 de <em>pluralForm</em></a></p>
+
+<h3 id="Entrada_de_extensão">Entrada de extensão</h3>
+
+<p>Seria bom manter esta lista atualizada com todas as palavras que precisam de formas plurais. As pessoas que utilizam a extensão podem copiar/colar esta entrada.</p>
+
+<p><code><small><a class="external" rel="freelink">chrome://mozapps/locale/downloads/do...tes,hours,days</a><br>
+ <a class="external" rel="freelink">chrome://mozapps/locale/downloads/do...dsTitlePercent</a><br>
+ <a class="external" rel="freelink">chrome://browser/locale/browser.prop...ausedDownloads</a> </small></code></p>
+
+<h3 id="Histórico_de_versão">Histórico de versão</h3>
+
+<p>0.1: Initial version with pluralRule check, properties input loading, table generation, sample output display<br>
+ 0.2: Use PluralForm.numForms() to get the number of forms instead of figuring out locally to better support future rules - <strong>Requires build from 2007/01/27 or later</strong><br>
+ 0.3: Generate a list of what numbers fall into which plural form to minimize the sample output to at most 3 of each form</p>
+
+<h2 id="Programar_com_PluralForm">Programar com <em>PluralForm</em></h2>
+
+<p>The functionality for getting the correct plural forms is provided by a JavaScript Module, <code>PluralForm.jsm</code>. This module provides a couple methods for localizing to the browser's current locale as well as getting methods to localize to a desired plural rule. The latter ability of specifying a plural rule is useful for extensions because the extension doesn't necessarily have to be localized to the browser's locale.</p>
+
+<h3 id="Carregar_PluralForm.jsm">Carregar <code>PluralForm.jsm</code></h3>
+
+<p>Loading the PluralForm module from JavaScript is simple with <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.import" title="Components.utils.import">Components.utils.import</a>. Just put the following line somewhere that will be evaluated before you want to use PluralForm. At the top of your JavaScript file is fine.</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");</pre>
+
+<h3 id="Métodos_get">Métodos: <em><code>get</code></em></h3>
+
+<p>Estes métodos utilizam o idioma atual do navegador especificado pelo valor <code><a class="external" rel="freelink">chrome://global/locale/intl.properties</a></code>'s <code>pluralRule</code>.</p>
+
+<pre>/**
+ * Get the correct plural form of a word based on the number
+ *
+ * @param aNum
+ *        The number to decide which plural form to use
+ * @param aWords
+ *        A semi-colon (;) separated string of words to pick the plural form
+ * @return The appropriate plural form of the word
+ */
+string pluralForm
+get(int aNum, string aWords)</pre>
+
+<p>Aqui tem um exemplo de utilização deste método:</p>
+
+<pre>// Load PluralForm and for this example, assume English
+Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+// PluralForm.get expects a semi-colon separated list of words
+let downloads = "download;downloads";
+// Pretend this number came from somewhere else
+let num = 10;
+
+// Display the correct plural form fou 10 downloads: "You have 10 downloads.")
+print("You have " + num + " " + PluralForm.get(num, downloads) + ".");
+
+// Try again with a different value: "You have 1 download."
+num = 1;
+print("You have " + num + " " + PluralForm.get(num, downloads) + ".")</pre>
+
+<p>The above example works, but is still difficult to localize, because we're concatenating strings assuming a particular grammatical structure. The following would be better:</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+let downloads = "You have one download.;You have #1 downloads.";
+let num = 10;
+
+// For English, this would display "You have 10 downloads."
+print(PluralForm.get(num, downloads).replace("#1", num);</pre>
+
+<p>Notice in the above example that the code can be written to support placeholders or not use placeholders in some forms of the string. Additionally, the localizer has control over where the placeholder is, in relation to the rest of the text.</p>
+
+<p>Of course, the strings to be localized will be placed in a separate file, such as yourextension.properties, instead of being hardcoded in the JavaScript code file.</p>
+
+<p>The following 3 file snippets show how to use PluralForm with your <code>.xul</code>, <code>.properties</code>, <code>.js</code> files.</p>
+
+<p><code>downloads.xul</code>:</p>
+
+<pre>&lt;stringbundleset&gt;
+  &lt;stringbundle id="strings" src="chrome://downloads.properties"/&gt;
+&lt;/stringbundleset&gt;</pre>
+
+<p><code>downloads.properties</code>:</p>
+
+<pre># LOCALIZATION NOTE (downloadsTitleFiles): Semi-colon list of plural forms.
+# See: https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals
+# #1 number of files
+# example: 111 files - Downloads
+downloadsTitleFiles=#1 file - Downloads;#1 files - Downloads
+
+# LOCALIZATION NOTE (timePair): #1 time number; #2 time unit
+# example: 1 second; 11 seconds
+timePair=#1 #2
+seconds=second;seconds
+minutes=minute;minutes
+hours=hour;hours
+</pre>
+
+<p><code>downloads.js</code>:</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+let getStr = function(string) document.getElementById("strings").getString(string);
+
+// Get the correct plural form for the title
+let numDownloads = 3;
+let title = PluralForm.get(numDownloads, getStr("downloadsTitleFiles"));
+// Put in the correct number of downloads
+print(title.replace("#1", numDownloads));
+
+// Get the correct plural form of seconds
+let timeLeft = 55;
+let seconds = PluralForm.get(timeLeft, getStr("seconds"));
+// Print the localized string for "55 seconds"
+print(getStr("timePair").replace("#1", timeLeft).replace("#2", seconds));</pre>
+
+<h3 id="Método_makeGetter">Método: <code>makeGetter</code></h3>
+
+<p>If you're writing an extension, you'll want to use <code>makeGetter</code> instead of <code>PluralForm.get()</code> or <code>PluralForm.numForms()</code>. This is because someone installing the extension on a different locale will be using the strings provided by your default extension locale. For example, your extension localized for English with plural rule #1, which expects 2 plural forms, is installed on a localized version of Firefox with plural rule #4, which expects 3 forms:</p>
+
+<pre>/**
+ * Create a pair of plural form functions for the given plural rule number.
+ *
+ * @param aRuleNum
+ *        The plural rule number to create functions
+ * @return A pair: [function that gets the right plural form,
+ *                  function that returns the number of plural forms]
+ */
+[string pluralForm get(int aNum, string aWords), int numForms numForms()]
+makeGetter(int aRuleNum)</pre>
+
+<p>Aqui tem um exemplo de utilização de <code>makeGetter</code>:</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+// Let's get Irish (plural rule #11)
+let [get, numForms] = PluralForm.makeGetter(11);
+
+// Make up some values to use with "get"
+let dummyText = "form 1;form 2;form 3;form 4;form 5";
+let dummyNum = 10;
+
+// In the case of Irish, the value 10 uses plural form #4, so "form 4" is printed
+print(get(dummyNum, dummyText));</pre>
+
+<p>In this example, the Irish plural rule was hardcoded, but this could be a value specified in the .properties file. So for your extension, specify a pluralRule value in the .properties, and call <code>PluralForm.makeGetter(pluralRuleFromProperties),</code> making sure to save the 2 returned functions. (You can use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="Destructuring assignment">destructured assignment</a> in JavaScript 1.7 to keep things clean.) The returned functions act just like <code>PluralForm.get()</code> and <code>PluralForm.numForms()</code>, except for the specified plural rule instead of the default plural rule.</p>
+
+<h2 id="Créditos">Créditos</h2>
+
+<p>Inicialmente, o código da "Forma de Plural" foi implementado por {{ Bug(394516) }} - <em>Figure out a remaining-time rounding scheme for minutes -&gt; hours/days</em><br>
+ As regras de plural e as familias derivadas da <a class="external" href="https://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms">documentação <code>gettext</code> da GNU</a>.</p>

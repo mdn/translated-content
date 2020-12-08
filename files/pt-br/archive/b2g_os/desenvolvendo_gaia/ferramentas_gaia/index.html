@@ -1,0 +1,13 @@
+---
+title: Referência de ferramentas Gaia
+slug: Archive/B2G_OS/Desenvolvendo_Gaia/Ferramentas_Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Gaia_tools_reference
+---
+<p>{{ draft() }}</p>
+<div class="summary">
+ <p><span class="seoSummary">Existem diversas ferramentas úteis no diretório <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a>. Esse artigo verifica cada uma.</span></p>
+</div>
+<h2 id="png_recompress.sh">png_recompress.sh</h2>
+<p>Essa ferramenta é um compressor de imagem. Você pode executá-la com o seguinte comando:</p>
+<pre class="brush: bash">$ ./tools/png_recompress.sh -v bg.png</pre>
+<p>Essa ferramenta remove metadados desnecessários e comprime o png. Pode economizar 99,5% do tamanho que é um grande impacto no tamanho dos aplicaitivos compactados (Zip) e no consumo de memória.</p>

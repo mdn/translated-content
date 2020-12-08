@@ -1,0 +1,169 @@
+---
+title: Using nsILoginManager
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager/Using_nsILoginManager
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager/Using_nsILoginManager
+---
+<div>
+  </div>
+<h2 id="Working_with_the_Login_Manager" name="Working_with_the_Login_Manager">Working with the Login Manager</h2>
+<p>Extensions often need to securely store passwords to external sites, web applications, and so on. To do so securely, they can use <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager" title="en-US/docs/nsILoginManager">nsILoginManager</a></code>, which provides for secure storage of sensitive password information and <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code>, which provides a way of storing login information.</p>
+<h2 id="Getting_nsILoginManager" name="Getting_nsILoginManager">Getting <code>nsILoginManager</code></h2>
+<p>To get a component implementing <code>nsILoginManager</code>, use the following:</p>
+<div style="margin-right: 270px;">
+  <pre class="brush: js">var passwordManager = Components.classes["@mozilla.org/login-manager;1"].getService(
+	Components.interfaces.nsILoginManager
+);</pre>
+</div>
+<p>Most Login Manager functions take an <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code> object as a parameter. An <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code> object contains the following attributes: hostname, form submit URL, HTTP realm, username, username field, password, and password field. The hostname, username and password attributes are mandatory, while the other fields are set based on whether the login is for a web page form or an HTTP/FTP authentication site login. See the <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code> attribute definitions for more details. Defining an <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code> object is simple:</p>
+<div style="margin-right: 270px;">
+  <pre class="brush: js">var nsLoginInfo = new Components.Constructor(
+	"@mozilla.org/login-manager/loginInfo;1",
+	Components.interfaces.nsILoginInfo,
+	"init"
+);
+
+var loginInfo = new nsLoginInfo(
+	hostname, formSubmitURL, httprealm, username, password, usernameField, passwordField
+);
+</pre>
+</div>
+<h2 id="Examples" name="Examples">Examples</h2>
+<h3 id="Creating_a_login_for_a_web_page" name="Creating_a_login_for_a_web_page">Creating a login for a web page</h3>
+<pre class="brush: js">var formLoginInfo = new nsLoginInfo(
+	'http://www.example.com',
+	'http://login.example.com',
+	null,
+	'joe',
+	'SeCrEt123',
+	'uname',
+	'pword'
+);</pre>
+<p>This login would correspond to a HTML form such as:</p>
+<pre class="brush: html">&lt;form action="http://login.example.com/foo/authenticate.cgi"&gt;
+	&lt;div&gt;Please log in.&lt;/div&gt;
+	&lt;label&gt;Username:&lt;/label&gt; &lt;input type="text" name="uname"&gt;
+	&lt;label&gt;Password:&lt;/label&gt; &lt;input type="password" name="pword"&gt;
+&lt;/form&gt;
+</pre>
+<h3 id="Creating_a_site_authentication_login" name="Creating_a_site_authentication_login">Creating a site authentication login</h3>
+<pre class="brush: js">var authLoginInfo = new nsLoginInfo(
+	'http://www.example.com',
+	null,
+	'ExampleCo Login',
+	'alice',
+	'SeCrEt321',
+	"",
+	""
+);
+</pre>
+<p>This would correspond to a login on <span class="nowiki">http://www.example.com</span> when the server sends a reply such as:</p>
+<pre class="eval"> HTTP/1.0 401 Authorization Required
+ Server: Apache/1.3.27
+ WWW-Authenticate: Basic realm="ExampleCo Login"
+
+</pre>
+<h3 id="Creating_a_local_extension_login" name="Creating_a_local_extension_login">Creating a local extension login</h3>
+<pre class="brush: js">var extLoginInfo = new nsLoginInfo(
+	'chrome://firefoo',
+	null,
+	'User Registration',
+	'bob',
+	'123sEcReT',
+	"",
+	""
+);</pre>
+<p>From a component creating a new info block is done slightly differently:</p>
+<pre>var nsLoginInfo = <span class="k"><span class="s0">new</span></span> <a class="r" title='Search for references of "Components"'>Components</a>.<a class="r" title='Search for references of "Constructor"'>Constructor</a>("@<a class="r" title='Search for references of "mozilla"'>mozilla</a>.<a class="r" title='Search for references of "org"'>org</a>/<a class="r" title='Search for references of "login"'>login</a>-<a class="r" title='Search for references of "manager"'>manager</a>/<a class="r" title='Search for references of "loginInfo"'>loginInfo</a>;1", <a class="r" title='Search for references of "Ci"'>Ci</a>.<a class="r" title='Search for references of "nsILoginInfo"'>nsILoginInfo</a>, "<a class="r" title='Search for references of "init"'>init</a>");
+<span class="k">var</span> extLoginInfo = <span class="k"><span class="s0">new</span></span> <a class="r" title='Search for references of "nsLoginInfo"'><span class="s1">nsLoginInfo</span></a>('<a class="r" title='Search for references of "chrome"'>chrome</a>:<span class="c">//firefoo',</span> null, 'User Registration', 'bob', '123sEcReT', '', '');
+//var extLoginInfo = new nsLoginInfo(<a class="r" title='Search for references of "aHostname"'>aHostname</a>, <a class="r" title='Search for references of "aFormSubmitURL"'>aFormSubmitURL</a>, <a class="r" title='Search for references of "aHttpRealm"'>aHttpRealm</a>, <a class="r" title='Search for references of "aUsername"'>aUsername</a>, <a class="r" title='Search for references of "aPassword"'>aPassword</a>, <a class="r" title='Search for references of "aUsernameField"'>aUsernameField</a>, <a class="r" title='Search for references of "aPasswordField"'>aPasswordField)</a>
+</pre>
+<p>The Login Manager treats this as if it was a web site login. You should use your extension's chrome:// URL to prevent conflicts with other extensions, and a realm string which briefly denotes the login's purpose.</p>
+<h2 id="Storing_a_password" name="Storing_a_password">Storing a password</h2>
+<p>To store a password in the Login Manager, you first need to create an <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code> object as defined above. Then you simply need to call the <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager" title="en-US/docs/nsILoginManager">nsILoginManager</a></code> method <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager#addLogin.28.29" title="en-US/docs/nsILoginManager#addLogin.28.29">addLogin()</a></code>.</p>
+<pre class="brush: js">myLoginManager.addLogin(loginInfo);
+</pre>
+<p></p><div class="blockIndicator note"><strong>Примечание:</strong> This will throw an exception if both the <code>httprealm</code> and <code>formSubmitURL</code> parameters are <code>NULL</code>. One must be specified when storing a password. The <code>hostname</code>, <code>username</code> and <code>password</code> parameters are also mandatory.</div><p></p>
+<h2 id="Retrieving_a_password" name="Retrieving_a_password">Retrieving a password</h2>
+<p>Retrieving a password from the Login Manager is slightly more difficult. In order to locate a password, the <code>hostname</code>, <code>formSubmitURL</code> and <code>httprealm</code> must <strong>match exactly</strong> what is stored for the password to be found. The only exception is that if the stored <code>formSubmitURL</code> is blank, in which case the <code>formSubmitURL</code> parameter is ignored. Note that the <code>hostname</code> and <code>formSubmitURL</code> arguments should not include the path from the full URL. The example below should serve as a starting point for matching form logins:</p>
+<pre class="brush: js">var hostname = 'http://www.example.com';
+var formSubmitURL = 'http://www.example.com';  // not http://www.example.com/foo/auth.cgi
+var httprealm = null;
+var username = 'user';
+var password;
+
+try {
+	// Get Login Manager
+	var myLoginManager = Components.classes["@mozilla.org/login-manager;1"].
+		getService(Components.interfaces.nsILoginManager);
+
+	// Find users for the given parameters
+	var logins = myLoginManager.findLogins({}, hostname, formSubmitURL, httprealm);
+
+	// Find user from returned array of nsILoginInfo objects
+	for (var i = 0; i &lt; logins.length; i++) {
+		if (logins[i].username == username) {
+			password = logins[i].password;
+			break;
+		}
+	}
+}
+
+catch(ex) {
+	// This will only happen if there is no nsILoginManager component class
+}</pre>
+<p>Note that the user will be prompted for their master password if they have chosen to set one to secure their passwords.</p>
+<h2 id="Removing_a_password" name="Removing_a_password">Removing a password</h2>
+<p>Removing a password is simple:</p>
+<pre class="brush: js">myLoginManager.removeLogin(loginInfo);
+</pre>
+<p>When removing a password the specified <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="en-US/docs/nsILoginInfo">nsILoginInfo</a></code> object must <strong>exactly match</strong> what was stored or an exception will be thrown. This includes the password attribute. Here's an example on how to remove the password without actually knowing what the password is:</p>
+<pre class="brush: js">// example values
+var hostname = 'http://www.example.com';
+var formSubmitURL = 'http://www.example.com';
+var httprealm = null;
+var username = 'user';
+
+try {
+	// Get Login Manager
+	var passwordManager = Components.classes["@mozilla.org/login-manager;1"].
+		getService(Components.interfaces.nsILoginManager);
+
+	// Find users for this extension
+	var logins = passwordManager.findLogins({}, hostname, formSubmitURL, httprealm);
+
+	for (var i = 0; i &lt; logins.length; i++) {
+		if (logins[i].username == username) {
+			passwordManager.removeLogin(logins[i]);
+			break;
+		}
+	}
+}
+catch(ex) {
+	// This will only happen if there is no nsILoginManager component class
+}</pre>
+<h2 id="Changing_stored_login_information" name="Changing_stored_login_information">Changing stored login information</h2>
+<p>Changing a password is rather simple. Since all this does is make a <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager#removeLogin.28.29" title="en-US/docs/nsILoginManager#removeLogin.28.29">removeLogin()</a></code> call followed by an <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager#addLogin.28.29" title="en-US/docs/nsILoginManager#addLogin.28.29">addLogin()</a></code> call, it has the same caveats as both of them: namely that the <code>oldLogin</code> must match an existing login exactly (see above) and that the <code>newLogin</code> attributes must be set correctly.:</p>
+<pre class="brush: js">myLoginManager.modifyLogin(oldLogin, newLogin);</pre>
+<h2 id="Debugging" name="Debugging">Login Manager notifications</h2>
+<p></p><div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ru/docs/Mozilla/Firefox/Releases/3.5">Замечание по Firefox 3.5</a></p>
+    <p style="font-weight: 400;">The Login Manager notifications were added in Firefox 3.5.</p>
+</div><p></p>
+<p>Firefox 3.5 and later send assorted notifications when various Login Manager related events occur, including when form autofill does not occur for various reasons, as well as when changes are made to the Login Manager's database. See the <a class="internal" href="/en-US/docs/Observer_Notifications#Login_Manager" title="en-US/docs/Observer Notifications#Login Manager">Login Manager</a> section of the article on observer notifications for details.</p>
+<h2 id="Debugging" name="Debugging">Debugging</h2>
+<p>The login manager implementation has the ability to send debug messages to the Error Console, which can provide some visibility into what it's doing. To enable the debug logging, see <a class="external" href="http://wiki.mozilla.org/Firefox:Password_Manager_Debugging" rel="freelink">http://wiki.mozilla.org/Firefox:Pass...ager_Debugging</a>.</p>
+<h2 id="Supporting_older_versions_of_Firefox" name="Supporting_older_versions_of_Firefox">Supporting older versions of Gecko</h2>
+<p>If you want your extension to support both Gecko 1.9 (Firefox 3, Thunderbird 3, SeaMonkey 2) and older versions it will need to implement both the <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager" title="en-US/docs/nsILoginManager">nsILoginManager</a></code> and <code><a href="/en-US/docs/nsIPasswordManager" title="en-US/docs/nsIPasswordManager">nsIPasswordManager</a></code> components. A simple method to do this is as follows:</p>
+<pre class="brush: js">if ("@mozilla.org/passwordmanager;1" in Components.classes) {
+	// Password Manager exists so this is not Firefox 3 (could be Firefox 2, Netscape, SeaMonkey, etc).
+	// Password Manager code
+} else if ("@mozilla.org/login-manager;1" in Components.classes) {
+	// Login Manager exists so this is Firefox 3
+	// Login Manager code
+}</pre>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+  <li><code><a href="/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager" title="">nsILoginManager</a></code></li>
+  <li><code><a href="/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code></li>
+  <li><a href="/en-US/docs/Creating_a_Login_Manager_storage_module" title="en-US/docs/Creating_a_Login_Manager_storage_module">Creating a Login Manager storage module</a></li>
+</ul>

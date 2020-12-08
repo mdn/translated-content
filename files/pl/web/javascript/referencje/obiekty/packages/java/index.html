@@ -1,0 +1,49 @@
+---
+title: java
+slug: Web/JavaScript/Referencje/Obiekty/Packages/java
+tags:
+  - Dokumentacja_JavaScript
+  - Dokumentacje
+  - JavaScript
+  - Wszystkie_kategorie
+translation_of: Archive/Web/LiveConnect_Reference/Packages/java
+---
+<p> </p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>Dowolna klasa Javy z pakietu <code>java.*</code>.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td class="header" colspan="2">Własność obiektu: <a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Packages">Packages</a></td>
+  </tr>
+  <tr>
+   <td>Zaimplementowana w:</td>
+   <td>JavaScript 1.1, NES2.0</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+
+<p><code>Packages.java </code></p>
+
+<h3 id="Opis" name="Opis">Opis</h3>
+
+<p>Własność <code>java</code> stosuje się by uzyskać dostęp do dowolnej klasy Javy z pakietu <code>java</code> z poziomu JavaScriptu. Warto pamiętać, że obiekt najwyższego rzędu <code><a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/java">java</a></code> jest synonimem <code>Packages.java</code>.</p>
+
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady">Przykłady</h3>
+
+<h4 id="Przyk.C5.82ad:_Zastosowanie_Packages.java" name="Przyk.C5.82ad:_Zastosowanie_Packages.java">Przykład: Zastosowanie <code>Packages.java</code></h4>
+
+<p>Poniższy kod wywołuje konstruktor klasy <code>java.awt.Frame</code>:</p>
+
+<pre>var ramka = new Packages.java.awt.Frame();
+</pre>
+
+<p>Kod ten można uprościć stosując obiekt najwyższego rzędu <code>java</code>:</p>
+
+<pre>var ramka = new java.awt.Frame();
+</pre>

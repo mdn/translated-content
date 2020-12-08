@@ -1,0 +1,154 @@
+---
+title: HTMLTableElement.insertRow()
+slug: Web/API/HTMLTableElement/insertRow
+tags:
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - Reference
+translation_of: Web/API/HTMLTableElement/insertRow
+---
+<div>
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
+</div>
+
+<p>Метод <strong><code>HTMLTableElement.insertRow()</code></strong><code>добавляет новую строку в таблицу и возвращает на неё ссылку.</code></p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>row</em> = <em>HTMLTableElement</em>.insertRow(<em>optional index = -1</em>);</pre>
+
+<ul>
+ <li><a href="/en-US/docs/DOM/HTMLTableElement"><code>HTMLTableElement</code></a> — ссылка на <em>HTML table</em> элемент.</li>
+ <li><code>index</code> — индекс новой строки</li>
+ <li><code>row</code> присваивается ссылка на новую строку. Ссылка на <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>.<br>
+  Если значение <code>index</code> равно -1 или количеству строк, то строка добавляется как последняя. Если значение <code>index</code> превышает количество строк, <em>выбрасывается</em> исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.</li>
+ <li>Если таблица содержит несколько элементов <code>tbody</code>, то, по умолчанию, новая строка будет добавлена в последний элемент <code>tbody</code>. Добавить строку в определённый элемент <code>tbody</code>:<br>
+  <code>var <em>specific_tbody</em>=document.getElementById(<em>tbody_id</em>);<br>
+  var <em>row</em>=specific_tbody.insertRow(<em>index</em>)</code></li>
+</ul>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush:html">&lt;table id="TableA"&gt;
+&lt;tr&gt;
+&lt;td&gt;Old top row&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;script type="text/javascript"&gt;
+
+function addRow(tableID) {
+  // Get a reference to the table
+  var tableRef = document.getElementById(tableID);
+
+  // Insert a row in the table at row index 0
+  var newRow = tableRef.insertRow(0);
+
+  // Insert a cell in the row at index 0
+  var newCell = newRow.insertCell(0);
+
+  // Append a text node to the cell
+  var newText = document.createTextNode('New top row');
+  newCell.appendChild(newText);
+}
+
+// Call addRow() with the ID of a table
+addRow('TableA');
+
+&lt;/script&gt;</pre>
+
+<p>Чтобы быть валидным HTML документом, элемент TR должен содержать хотя бы один TD элемент.</p>
+
+<p>Обратите внимание, что <code>insertRow</code> добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. Строку не нужно добавлять отдельно, как в случае с методом<code><a href="/en-US/docs/DOM/document.createElement">document.createElement()</a>,</code> для создания нового TR элемента.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Спецификации</th>
+   <th>Статус</th>
+   <th>Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "tables.html#dom-table-insertrow", "HTMLTableElement.insertRow()")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 HTML", "html.html#ID-93995626", "HTMLTableElement.insertRow()")}}</td>
+   <td>{{Spec2("DOM2 HTML")}}</td>
+   <td>Specifies in more detail where the row is inserted.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM1", "level-one-html.html#ID-39872903", "HTMLTableElement.insertRow()")}}</td>
+   <td>{{Spec2("DOM1")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>4</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>3<sup>[1]</sup></td>
+   <td>5.5</td>
+   <td>10</td>
+   <td>4</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Начиная с Gecko 20.0 {{geckoRelease("20.0")}} аргумент index опционален и значением по умолчанию является -1 согласно спецификации HTML.</p>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li>{{domxref("HTMLTableRowElement.insertCell()")}}</li>
+</ul>

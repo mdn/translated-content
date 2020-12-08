@@ -1,0 +1,133 @@
+---
+title: TypedArray.prototype.join()
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
+tags:
+  - JavaScript
+  - Prototype
+  - TypedArray
+  - Массив
+translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
+---
+<div>{{JSRef}}</div>
+
+<p>Метод <code><strong>join()</strong></code> объединяет все элементы массива в строку. Метод работает по тому же алгоритму, что и  {{jsxref("Array.prototype.join()")}}<em>.</em> <em>TypedArray</em> это один из типизированных массивов: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">типы массивов</a>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><var>typedarray</var>.join(<code>[<var>separator</var> = ',']</code>);</code></pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>разделитель</code></dt>
+ <dd>Необязательный параметр. Определяет строку, разделяющую элементы массива. Разделитель приводится к строке в случае необходимости. Если он опущен, элементы массива разделяются запятой (",").</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Строка, соединяющая все элементы массива.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
+uint8.join();      // '1,2,3'
+uint8.join(' / '); // '1 / 2 / 3'
+uint8.join('');    // '123'
+</pre>
+
+<h2 id="Glossary('Polifill'_'Полифил')">{{Glossary('Polifill', 'Полифил')}}</h2>
+
+<p>Поскольку теперь нет глобального объекта с именем <em>TypedArray</em>, то полифиллинг доджен быть выполнен "по требованию".</p>
+
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
+if (!Uint8Array.prototype.join) {
+  Object.defineProperty(Uint8Array.prototype, 'join', {
+    value: Array.prototype.join
+  });
+}
+</pre>
+
+<p>Если вам нужна поддержка устаревшего JavaScript-дфижка, который не поддерживает свойство <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, то лучше не создавать полифилы новых методов <code>Array.prototype</code>, так как вы не сможете сделать их неперечислимыми.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Первоначальное определение.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("37")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("37")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("TypedArray")}}</li>
+ <li>{{jsxref("Array.prototype.join()")}}</li>
+</ul>

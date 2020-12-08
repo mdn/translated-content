@@ -1,0 +1,237 @@
+---
+title: MediaDevices
+slug: Web/API/MediaDevices
+tags:
+  - API
+  - Devices
+  - Interface
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaDevices
+  - NeedsTranslation
+  - Reference
+  - TopicStub
+  - WebRTC
+translation_of: Web/API/MediaDevices
+---
+<div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
+
+<p><span class="seoSummary">Интерфейс <strong><code>MediaDevices</code></strong> предоставляет доступ к подключенным медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.</span></p>
+
+<h2 id="Свойства">Свойства</h2>
+
+<p><em>Наследует свойство родителя {{domxref("EventTarget")}}.</em></p>
+
+<h3 id="Handlers" name="Handlers">Обработчики событий</h3>
+
+<dl>
+ <dt>{{ domxref("MediaDevices.ondevicechange") }}</dt>
+ <dd>Это обработчик события {{event("devicechange")}}. Это событие доставляется в объек <code>MediaDevices</code> когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<p><em>Наследуемый метод родителя {{domxref("EventTarget")}}.</em></p>
+
+<dl>
+ <dt>{{ domxref("EventTarget.addEventListener()") }}</dt>
+ <dd>Регистрирует обработчик событий для определенного типа событий.</dd>
+ <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
+ <dd>Получает массив информации о медиа-устройстве ввода-вывода.</dd>
+ <dt>{{domxref("MediaDevices.getSupportedConstraints()")}}</dt>
+ <dd>Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.</dd>
+ <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
+ <dd>С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку. </dd>
+</dl>
+
+<dl>
+ <dt>{{ domxref("EventTarget.removeEventListener()") }}</dt>
+ <dd>Удаляет обработчик событий.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush:js">'use strict';
+
+// Помещаем переменные в глобальную область видимости, чтобы сделать их доступными для консоли браузера
+var video = document.querySelector('video');
+var constraints = window.constraints = {
+  audio: false,
+  video: true
+};
+var errorElement = document.querySelector('#errorMsg');
+
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(stream) {
+  var videoTracks = stream.getVideoTracks();
+  console.log('Получил поток с ограничениями:', constraints);
+  console.log('Использую видео-устройство: ' + videoTracks[0].label);
+  stream.onended = function() {
+    console.log('Трансляция закончилась');
+  };
+  window.stream = stream; // Делаем переменную доступной для консоли браузера
+  video.srcObject = stream;
+})
+.catch(function(error) {
+  if (error.name === 'ConstraintNotSatisfiedError') {
+    errorMsg('Разрешение ' + constraints.video.width.exact + 'x' +
+        constraints.video.height.exact + ' px не поддерживается устройством.');
+  } else if (error.name === 'PermissionDeniedError') {
+    errorMsg('Разрешения на использование камеры и микрофона не были предоставлены. ' +
+      'Вам нужно разрешить странице доступ к вашим устройствам,' +
+      ' чтобы демо-версия работала.');
+  }
+  errorMsg('getUserMedia error: ' + error.name, error);
+});
+
+function errorMsg(msg, error) {
+  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
+  if (typeof error !== 'undefined') {
+    console.error(error);
+  }
+}</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
+   <td>{{Spec2('Media Capture')}}</td>
+   <td>Основная спецификация</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Microsoft Edge</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("36.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>enumerateDevices()</code></td>
+   <td>{{CompatChrome(51.0)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>getSupportedConstraints()</code></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(50)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>ondevicechange</code> and <code>devicechange</code> events</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(51)}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("36.0")}}</td>
+   <td>2.2</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>enumerateDevices()</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>getSupportedConstraints()</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile(50)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>[1] Поддержка события <code>devicechange</code> и {{domxref("MediaDevices.ondevicechange")}} появилась Firefox 51, но <em>только для Mac </em>и по умолчанию отключена. Её можно включить, установив параметру <code>media.ondevicechange.enabled</code> значение ИСТИНА. Для Linux и Windows поддержка добавлена и включена по умолчанию с Firefox 52.</p>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: API, частью которого является этот интерфейс.</li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+ <li>{{domxref("Navigator.mediaDevices")}}: Возвращает ссылку на объект <code>MediaDevices</code>, который можно использовать для доступа к устройствам.</li>
+ <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> HTML5 захват и воспроизведение видео с помощью <code>MediaDevices</code> и MediaStream Recording API (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">исходный код на GitHub</a>)</li>
+</ul>

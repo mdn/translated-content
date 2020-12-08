@@ -1,0 +1,58 @@
+---
+title: DeviceStorage.get
+slug: Web/API/DeviceStorage.get
+tags:
+  - API
+  - B2G
+  - Device Storage
+  - Firefox OS
+  - Method
+  - Non Standard
+  - Non-standard
+  - Não Padrão
+  - Reference
+  - Referencia
+  - WebAPI
+  - metodo
+translation_of: Archive/B2G_OS/API/DeviceStorage/get
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+<h2 id="Sumário">Sumário</h2>
+<p>O metodo <code>get</code> é usado para obter um arquivo somente-leitura de uma dada área de armazenamento.</p>
+<p>Caso o pedido seja bem-sucedido, o resultado do pedido <code>result</code> é um objeto {{domxref("File")}} contendo os dados do arquivo original do dispositivo.</p>
+<h2 id="Sintaxe">Sintaxe</h2>
+<pre>var <em>instanciaDeDOMRequest</em> = <em>instanciaDeDeviceStorage</em>.get(<em>nomeDoArquivo</em>);</pre>
+<h3 id="Parametros">Parametros</h3>
+<dl>
+ <dt>
+  <code>nomeDoArquivo</code></dt>
+ <dd>
+  Uma string representando o nome completo (caminho + nome do arquivo) do arquivo a ser obtido.</dd>
+</dl>
+<h3 id="Retorno">Retorno</h3>
+<p>Retorna um objeto {{domxref("DOMRequest")}} para manipular o sucesso ou o erro da operação.</p>
+<h2 id="Exemplo">Exemplo</h2>
+<pre class="brush: js"><code class="language-js"><span class="token keyword">var</span> sdcard <span class="token operator">=</span> navigator<span class="token punctuation">.</span>getDeviceStorage<span class="token punctuation">(</span><span class="token string">"sdcard"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> pedido <span class="token operator">=</span> sdcard<span class="token punctuation">.</span>get<span class="token punctuation">("meuArquivo.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+pedido<span class="token punctuation">.</span>onsuccess <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">  var</span> name <span class="token operator">=</span> this<span class="token punctuation">.</span>result<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span>log<span class="token punctuation">(</span><span class="token string">'O arquivo "'</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">'" foi obtido com sucesso da área de armazenamento do sdcard'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+request<span class="token punctuation">.</span>onerror <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">'Nao foi possivel obter o arquivo: '</span> <span class="token operator">+</span> this<span class="token punctuation">.</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code>
+</pre>
+<h2 id="Specification" name="Specification">Especificação</h2>
+<p>Não é parte de nenhuma especificação.</p>
+<h2 id="Veja_também">Veja também</h2>
+<ul>
+ <li>{{domxref("DeviceStorage")}}</li>
+ <li>{{domxref("File")}}</li>
+ <li>{{domxref("DOMRequest")}}</li>
+ <li><a href="/en-US/docs/WebAPI/Device_Storage" title="/en-US/docs/WebAPI/Device_Storage">Device Storage API</a></li>
+ <li><a href="/en-US/docs/WebAPI/FileHandle" title="/en-US/docs/WebAPI/FileHandle">FileHandle API</a></li>
+</ul>

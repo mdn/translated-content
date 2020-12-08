@@ -1,0 +1,85 @@
+---
+title: Introductie Firefox OS
+slug: Archive/B2G_OS/Introduction
+translation_of: Archive/B2G_OS/Introduction
+---
+<p><strong>Firefox OS</strong> (ook wel bij zijn  codename "Boot to Gecko" or "B2G" genoemd) is Mozilla's mobile openbron besturings systeem gebaseerd op Linux en Mozilla's Gecko technologie. Firefox OS is een mobiel besturings systeem dat vrij is van eigen technologie. Terwijl het toch nog steeds een platform aan applicatieontwerpers biedt die daardoor uitstekende produkten kan ontwikkelen. Bovendien is het sterk en draagbaar genoeg om de eindgebruiker tevreden te stellen.</p>
+<p>Voor Web ontwerpers, het belangrijkste om te onthouden is dat de hele user interface een Web app is, een die in staat is om andere Web apps te laten starten en draaien. Elke verandering die je aan de user interface en de aan de applicaties doet, dan creeer je in feite een soort van run van webpagina`s op  Firefox OS, Zei het met een verbeterde toegang tot de hardware en functies van het mobiele apparaat.</p>
+<p><a href="/en-US/docs/docs/Mozilla_OS/Firefox_OS/Building_and_Installing_Firefox_OS" title="/en-US/docs/docs/Mozilla_OS/Firefox_OS/Building_and_Installing_Firefox_OS">In onze handige gids</a> leer je hoe Firefox OS moet bouwen en instaleren.</p>
+<h2 id="Hardware_eisen">Hardware eisen</h2>
+<p>De meeste ARM-based mobiele apparaten zijn sterk genoeg om te kunnen dokken met Firefox OS. Dit gedeelt is genoeg om aan zowel aan de basis hardware eisen te voldoen, als zowel aan de hardware minimale toekomstige eisen.</p>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Onderdeel</th>
+      <th scope="col">Minimum</th>
+      <th scope="col">Aanbevolen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">CPU</th>
+      <td>ARMv6</td>
+      <td>Cortex A5 klasse of hoger<br>
+        ARMv7a met NEON</td>
+    </tr>
+    <tr>
+      <th scope="row">GPU</th>
+      <td>—</td>
+      <td>Adreno 200 klasse of hoger</td>
+    </tr>
+    <tr>
+      <th scope="row">Connectivity</th>
+      <td>—</td>
+      <td>WiFi<br>
+        3G</td>
+    </tr>
+    <tr>
+      <th scope="row">Sensoren</th>
+      <td>—</td>
+      <td>Versneller<br>
+        Omgeving<br>
+        Ambient light<br>
+        A-GPS</td>
+    </tr>
+  </tbody>
+</table>
+<p>Voor een goede gebruikers ervaring, is het een goed idee om een toestel te nemen dat een goed kleurenprofiel biedt (uitgevoerd door de grafische driver) en over een hoofdtelefoonaansluiting die over mute beschikt voor het afspelen van media. De smartfones van tegenwoordig beschikken hier allemaal over.</p>
+<h2 id="Gebruiks_tips">Gebruiks tips</h2>
+<p>Dit gedeelte zal je van tips voorzien als je daadwerkelijk Firefox OS gaat gebruiken. Zie dit als een soort van tijdelijke oplossing, tot we daadwerkelijk een handleiding hebben.</p>
+<h3 id="Telefoon_ontgrendelen">Telefoon ontgrendelen</h3>
+<p>Als je bouw naar Firefox OS om een code gaat vragen om je toestel te ontgrendelen, is de code 0000. Sommige toestellen zullen hier later omvragen, wanneer we bezig zijn met bouwen en testen van de schermbeveiliging.</p>
+<h3 id="Nemen_van_een_screenshot">Nemen van een screenshot</h3>
+<p>Het nemen van een screenshot, is niet meer dan het indrukken van de aan/uitknop en en navigatieknop tegelijkertijd. Het screenshot zal in <code>/sdcard/screenshots</code> op je toestel opgeslagen worden. Je kan er ook bij via de gallerij op je toestel.</p>
+<p>Als om een of andere reden dit niet werkt. Dan kun je dit ook via de terminal op de Linux or Mac OS X computer doen dat een Firefox OS bouwsysteem heeft geinstaleerd.</p>
+<p>Zorg dat je ffmpeg hebt geinstaleerd.</p>
+<ol>
+  <li>Op Mac, als je de Macports gebruikt, doe je dat via <code>sudo port install ffmpeg</code>.</li>
+  <li>Voor homebrew, gebruik  <code>brew install ffmpeg</code></li>
+  <li>Op Linux (Ubuntu/Debian), gebruik je <code>sudo apt-get install ffmpeg</code>.</li>
+  <li>Sluit je telefoon aan via een USB kabel.</li>
+  <li>Doe met je telefoon wat je dan ook wilt doen voor je screenshot.</li>
+  <li><code>cd</code> in de <code>B2G/gaia</code> directory</li>
+  <li><code>make screenshot</code></li>
+  <li>Je hebt nu een screenshot onder de naam <code>screenshot.png</code>.</li>
+</ol>
+<h3 id="Remote_debugging_met_ADB">Remote debugging met ADB</h3>
+<p>Om USB Debugging via adb mogelijk te maken, open Settings App en navigaeer naar  Toestel Informatie &gt; Meer Informatie &gt; Fabrikant. Van de lijst, list, zet een vinkje bij Remote Debugging. Eindelijk, sluit het toestel via de USB met de computer.</p>
+<h3 id="Toetsen_en_knoppen">Toetsen en knoppen</h3>
+<p>Een typisch Firefox OS toestel heeftr een paar physical hardware knoppen:</p>
+<dl>
+  <dt>
+    Home button</dt>
+  <dd>
+    Dit is meestal de knop onder je scherm. Als je hier op drukt, zal het je terug brengen naar je app launcher. Ingedrukt houden opent het gedeelte voor het veranderen van je zicht. switching view;Om te stoppen met de app wrijf je omhoog over het scherm.</dd>
+  <dd>
+     </dd>
+  <dt>
+    Volume regelaar</dt>
+  <dd>
+    Aan de linker kant bevindt volumeknop zich; Druk op de bovenste helft voor harder en druk op de onderste helft van de volumeknop voor zachter.</dd>
+  <dt>
+    Aan/uit knop</dt>
+  <dd>
+    De aan/uitknop bevindt zich aan de rechter bovenkant van het toestel.</dd>
+</dl>

@@ -1,0 +1,183 @@
+---
+title: Портирование Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Портирование
+translation_of: Archive/B2G_OS/Porting_B2G_OS/basics
+---
+<div class="summary">
+<p>Firefox OS (также Boot to Gecko) использует ядро выделенное из <a href="http://www.android.com/" title="http://www.android.com/">Android</a> с пользовательским интерфейсом, основанным на <a href="/en-US/docs/Gecko" title="Gecko">Gecko</a>, поверх него. Данная статья является руководством по портированию ОС на новые устройства.</p>
+</div>
+
+<p>Данное руководство предполагает, что вы портируете на Android устройство; если вы портируйте на другое устройство, работа будет сложнее.</p>
+
+<h2 id="Подготовка_системы_сборки">Подготовка системы сборки</h2>
+
+<p>Первым делом необходимо настроить систему сборки; как это сделать написано в этом руководстве <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a>.</p>
+
+<h2 id="Создание_резервной_копии_существующей_системы_Android">Создание резервной копии существующей системы Android</h2>
+
+<p>Далее вы должны сделать резервную копию вашего Android устройства, прежде чем информация удалится тестовыми сборками B2G. Кроме того, некоторые части оригинальной системы потребуются в процессе сборки и установки. При выборе имени идентификатора устройства (device id name) мы рекомендуем использовать '_' вместо '-'.</p>
+
+<pre>mkdir my_device_backup
+cd my_device_backup
+adb pull /system system</pre>
+
+<h2 id="Клонирование_B2G_репозитария">Клонирование B2G репозитария</h2>
+
+<p>Первым делом необходимо склонировать репозитарии B2G, а так же хранилище манифестов.</p>
+
+<pre>git clone https://github.com/mozilla-b2g/B2G.git
+git clone https://github.com/mozilla-b2g/b2g-manifest.git</pre>
+
+<h2 id="Добавление_нового_устройства_в_config.sh">Добавление нового устройства в config.sh</h2>
+
+<p>Далее нужно добавить новое устройство в <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> в репозитарии B2G. Вы можете воспользоваться существующими в качестве шаблона. В основном это сводится к обеспечению инструкций для выборки правильных файлов для сборки. (This basically involves providing the instructions for fetching the correct files to do the build.)</p>
+
+<h2 id="Создание_манифеста_для_нового_устройства">Создание манифеста для нового устройства</h2>
+
+<p>Вам необходимо добавить файл манифеста для нового устройства. Опирайтесь на существующий в качестве шаблона. Вы можете использовать <a href="https://github.com/mozilla-b2g/b2g-manifest/blob/master/hamachi.xml" title="https://github.com/mozilla-b2g/b2g-manifest/blob/master/hamachi.xml">hamachi</a> в качестве справки. Когда закончите, можете добавить и прикоммитить ваш новый манифест к вашему локальному b2g-manifest репозитарию.</p>
+
+<pre>git add my-new-device.xml
+git commit
+</pre>
+
+<p>Затем вам понадобится файл <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> чтобы использовать ваш локальный b2g-manifest репозитарий вместо оффициального. Чтобы это сделать укажите путь к вашему локальному хранилищу и соответствующую ветку в переменных GITREPO и BRANCH в файле <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a>, например:</p>
+
+<pre><span class="nv">GITREPO</span><span class="o">=</span><span class="k">${</span><span class="nv">GITREPO</span><span class="k">:-</span><span class="s2">"file:///home/yourname/b2g-manifest"</span><span class="k">}</span>
+<span class="nv">BRANCH</span><span class="o">=</span><span class="k">${</span><span class="nv">BRANCH</span><span class="k">:-master</span><span class="k">}</span></pre>
+
+<h2 id="Создание_дерева_конфигурации_нового_устройства">Создание дерева конфигурации нового устройства</h2>
+
+<p>Создание нового дерева конфигурации для нового устройства. Оно должно находится в дирректории <code>device/<em>&lt;manufacturer&gt;</em>/<em>&lt;device_id&gt;</em></code>. И включать в себя как минимум:</p>
+
+<ul>
+ <li><code>AndroidBoard.mk</code></li>
+ <li><code>AndroidProducts.mk</code></li>
+ <li><code>BoardConfig.mk</code></li>
+ <li><code>extract-files.sh</code></li>
+ <li><code>full_&lt;device_id&gt;.mk</code></li>
+ <li>idc files for touchscreen</li>
+ <li>init files (<code>init.rc</code>, <code>init.&lt;target&gt;.rc</code>, <code>uevent.rc</code>, ...)</li>
+</ul>
+
+<p>Содержимое списока может сильно меняться от устроства к устроству. В частности BoardConfig.mk и extract-files.sh могут существенно отличаться. Эта часть требует много усилий по аддаптации, тестированию и дебагу, чтобы выяснить какие бинарные части (binary blobs) необходимо извлечь. Чтобы получить более полное представление о том что должно находится здесь, взгляните на <a href="https://github.com/mozilla-b2g/android-device-hamachi" title="https://github.com/mozilla-b2g/android-device-hamachi">конфигурацию устройства hamachi</a>. Не забывайте составлять вашу конфигурацию в соотвествии с манифестом устройства, который вы создали.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Если вам удастся найти справку по <a href="http://www.cyanogenmod.com/" title="http://www.cyanogenmod.com/">CyanogenMod</a> для вашего устройства, это ускорит процесс портирования. <a href="http://forum.xda-developers.com/" title="http://forum.xda-developers.com/">Форум XDA</a> также хорошее место для обсуждения и поиска ресурсов.</p>
+</div>
+
+<h2 id="Пересборка_boot.img">Пересборка boot.img</h2>
+
+<p>После того как все сделано вам потребуется пересобрать загрузочный образ. Как правило это нужно не для самого ядра, а для принятия правок в <strong>init.rc</strong>.</p>
+
+<h3 id="Изменения_в_init.rc">Изменения в init.rc</h3>
+
+<p>init.rc который вы используйте <strong>не</strong> поставляется с B2G, поэтому вам следует извлечь его из устройства.</p>
+
+<p>Основные вещи которые вам нужно исправить:</p>
+
+<h4 id="Импорт_init.b2g.rc">Импорт init.b2g.rc</h4>
+
+<p>Добавьте следующий код, чтобы импортировать <code>init.b2g.rc</code>:</p>
+
+<pre>on early-init
+    start ueventd
+    import /init.b2g.rc</pre>
+
+<h4 id="Исправление_прав_доступа">Исправление прав доступа</h4>
+
+<p>Исправьте права доступа к файлам <code>/system/b2g/b2g</code>, <code>/system/b2g/updater</code>, <code>/system/b2g/plugin-container</code>; это должно быть сделано после строк, которые монтируют файловую систему в режим read/write:</p>
+
+<pre>chmod 0755 /system/b2g/b2g
+chmod 0755 /system/b2g/updater
+chmod 0755 /system/b2g/plugin-container</pre>
+
+<p>Вы можете начать с правки <code>init.rc</code>, извлеченного из устройства, вместо использования <code>init.rc</code> включенного в систему сборки. Если так, важно не забыть задать <code>TARGET_PROVIDES_INIT_RC</code> в <code>BoardConfig.mk</code>.</p>
+
+<h3 id="Пре-собранное_ядро_vs._сборка_ядра_из_исходников">Пре-собранное ядро vs. сборка ядра из исходников</h3>
+
+<p>Вы можете воспользоваться пре-собранным ядром или собрать ядро из исходников. Чтобы собрать ядро из исходников добавьте AndroidKernel.mk и конфиг ядра в дерево конфигурации.</p>
+
+<p>В качестве примера использующего сборку ядра из исходников сотри <a href="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro" title="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro">maguro</a> из старой системы сборки.</p>
+
+<h3 id="Извлечение_и_правка_существующего_загрузочного_образа">Извлечение и правка существующего загрузочного образа</h3>
+
+<p>Существует возможность восстановить загрузочный образ телефона сделав дамп содержимого устройств <code>/dev/mtd/mtd1</code> или <code>/dev/mtd/mtd2</code>, полученный файл образа может быть легко восстановлен:</p>
+
+<pre>adb shell 'cat /dev/mtd/mtd1 &gt; /sdcard/boot.img'
+adb pull /sdcard/boot.img
+</pre>
+
+<p>После извлечения файл загрузочного образа можно распаковать вспомогательной утилитой <a href="http://whiteboard.ping.se/Android/Unmkbootimg" title="Unmkbootimg">unmkbootimg</a>. Утилита извлечет образ ядра (zImage) и ramdisk (initramfs.cpio.gz), а также распечатает команды пересобирающие образ с теми же параметрами, что и оригинальный, например:</p>
+
+<pre>$ unmkbootimg boot.img
+Kernel size 3872576
+Kernel address 0x208000
+Ramdisk size 265102
+Ramdisk address 0x1500000
+Secondary size 0
+Secondary address 0x1100000
+Kernel tags address 0x200100
+Flash page size 2048
+Board name is ""
+Command line "androidboot.hardware=aphone"
+Extracting kernel to file zImage ...
+Extracting root filesystem to file initramfs.cpio.gz ...
+All done.
+---------------
+To recompile this image, use:
+  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o new_boot.img
+---------------
+</pre>
+
+<p>Чтобы модифицировать файл виртуального диска, создайте директорию и распакуйте его туда:</p>
+
+<pre>mkdir initramfs_dir
+cd initramfs_dir
+gunzip -c ../initramfs.cpio.gz | cpio -i
+</pre>
+
+<p>Сделайте все необходимые изменения (например в init.rc) и перепакуйте виртуальный диск используя <code>mkbootfs</code>, убедитесь, что используйте версию собранную с хост утилитами B2G:</p>
+
+<pre>/path/to/your/B2G/out/host/linux-x86/bin/mkbootfs . | gzip &gt; ../newinitramfs.cpio.gz
+</pre>
+
+<p>В завершении вернитесь в корнево каталог и перепакуйте загрузочный образ используя <code>mkbootimg</code>, также убедитесь, что используйте версию собранную с хост утилитами B2G:</p>
+
+<pre>/path/to/your/B2G/out/host/linux-x86/bin/mkbootimg --kernel zImage --ramdisk newinitramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o newboot.img
+</pre>
+
+<p>Теперь, если скопировать новый загрузочный образ в <code>out/target/product/$DEVICE/boot.img</code> (где $DEVICE имя вашего устройства) он автоматический прошиваться при выполнении <code>flash.sh</code>. Вы также можете прошить образ вручную, используя следующие команды:</p>
+
+<pre>adb reboot bootloader
+fastboot flash boot newboot.img
+fastboot reboot
+</pre>
+
+<h2 id="Добавление_нового_устройства_в_flash.sh">Добавление нового устройства в flash.sh</h2>
+
+<p>Добавление нового устройства в <code>flash.sh</code>; специфика того как это сделать зависит от того какие утилиты должны быть использованы для прошивки нового устройства.</p>
+
+<h2 id="Конфигурация_сборка_и_прошивка_нового_устройства">Конфигурация, сборка, и прошивка нового устройства</h2>
+
+<p>Теперь вы можете попробовать собрать прошивку и прошить ваше новое устройство:</p>
+
+<pre>ANDROIDFS_DIR=my_device_backup ./config.sh &lt;device_id&gt; '../b2g-manifest/default.xml'
+./build.sh
+./flash.sh</pre>
+
+<h2 id="Тест_и_дебаг">Тест и дебаг</h2>
+
+<p>We need some details added here; indeed, this entire article could use some help.</p>
+
+<h2 id="FAQ">FAQ</h2>
+
+<p>Forthcoming</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS" title="en-US/docs/Mozilla/Firefox_OS">Firefox OS</a></li>
+ <li><a href="https://github.com/mozilla-b2g/B2G" title="https://github.com/mozilla-b2g/B2G">B2G source code on Github</a></li>
+ <li><a href="http://www.android.com/" title="http://www.android.com/">Android web site</a></li>
+ <li><a href="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/" title="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/">A list of existing projects on Dietrich Ayala's blog</a> to port Firefox OS on some devices</li>
+</ul>

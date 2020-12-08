@@ -1,0 +1,103 @@
+---
+title: Gonk
+slug: Archive/B2G_OS/Platform/Gonk
+translation_of: Archive/B2G_OS/Platform/Gonk
+---
+<div class="summary">
+<p>Gonk это низкоуровневый слой платформы <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>, состоящий из ядра Linux на базе <a class="external" href="http://source.android.com/">Android Open Source Project</a> (AOSP) и cлоя абстрагирования от аппаратных средств (HAL). <span id="result_box" lang="ru"><span class="alt-edited hps">Цель данной статьи</span> <span class="hps">объяснить, что</span> <span class="hps">представляет собой</span> <span class="hps">Gonk</span><span>.</span> <span class="hps">Подробнее об</span> <span class="hps">общей архитектуре</span> <span class="hps">Firefox</span> <span class="hps">OS</span> <span class="hps">и как </span><span class="hps">Gonk в неё</span> <span class="hps">вписывается</span><span class="hps">,</span> написано в</span> руководстве <a href="/en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture</a>.</p>
+</div>
+
+<h2 id="Описание_Gonk">Описание Gonk</h2>
+
+<p>Gonk это компонент уровня ядра в стэке Firefox OS который служит интерфейсом между Gecko и аппаратным обеспечением. Gonk контроллирует аппаратное обеспечение и предоставляет доступ к нему различным Web API встроенным в Gecko. Gonk можно рассматривать как "черный ящик" который, обрабатывая запросы, "за кулисами" делает всю комплексную, детализированную работу по управлению мобильным устройством на аппаратном уровне.</p>
+
+<p>Gonk это простой дистрибутив Linux включающий в себя компоненты из Android (такие как GPS и Камера) и расширенный Mozilla стандартными open source проектами такими как libusb, bluez и так далее, чтобы интегрировать со всеми слоями в архитектуре Firefox OS. Такая структура позволяет OEM производителям проще портировать программные компоненты из других реализаций Android (драйверы устройств, микропрограммы(firmware), service-level демоны и т.д.) для развертывания на смартфонах Firefox OS.</p>
+
+<p>Gonk это слой портируемый на устройства: адаптер между аппаратурой и Gecko. Gonk относительно простой дистрибутив Linux который можно рассматривать как разновидность Порта Gecko в паре со слоями портирования Gecko — тоесть Gonk это объект(цель) для портирования по отношению к <a href="/en-US/docs/Gecko">Gecko</a>, как например есть порты Gecko для OS X, Windows, and Android.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Поскольку различные устройства могут отличатся по набору микросхем и другим аппаратным особенностям, устройства могу содержать разные дистибутивы Gonk.</p>
+</div>
+
+<p>Поскольку проект Firefox OS имеет полный контроль над Gonk, мы можем реализовывать интерфейсы для Gecko которые не могут быть реализованы в других операционных системах. Например под Gonk у Gecko есть прямой доступ к полному стеку телефонии и фрейм-буфферу дисплея.</p>
+
+<h2 id="Архитектура_Gonk">Архитектура Gonk</h2>
+
+<p>Каждая модель мобильного телефона имеет специальную комбинацию компонентов Gonk на основе системных библиотек, драйверов и микропрограмм необходимых для работы устройства. Эти компоненты выпускаются OEM/ODM-производителями и производителями наборов микосхем. На следующей схеме показан пример реализации Gonk:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9489/gonk-architecture.png" style="display: block; height: 329px; margin: 0px auto; width: 987px;"></p>
+
+<p><span id="result_box" lang="ru"><span class="hps">Этот пример</span> <span class="hps">показывает</span> <span class="hps">следующие основные компоненты</span> <span class="atn hps">(</span><span>которые представляют</span> <span class="hps">только часть</span> <span class="hps">из возможных</span> <span class="hps">компонентов в</span> <span class="hps">каждой</span> <span class="hps">конкретной реализации</span> <span class="hps">Gonk</span><span>)</span><span>:</span></span></p>
+
+<ul>
+ <li><strong>Ядро ОС Linux</strong>: Использует библиотеки из Android (GPS, камера, т.д.) и другие open-source проекты (Linux, libusb, bluez, and so on).</li>
+ <li><strong>Radio Interface Layer (RIL)</strong>: Взаимодействует с аппаратурой модема (телефония) в смартфоне. Состоит из двух компонентов:
+  <ul>
+   <li><strong>rild daemon</strong>: Общается с прошивкой модема.</li>
+   <li><strong>rilProxy</strong>: Пересылает сообщения между rild и b2g процессом.</li>
+  </ul>
+ </li>
+ <li><strong>mediaserver process</strong>: Управляет воспроизведением аудио и видео. Gecko взаимодействует с медиа-сервером через Android RPC.</li>
+ <li><strong>netd process</strong>: <span id="result_box" lang="ru"><span class="hps">Сетевой</span> <span class="hps">демон, который</span> <span class="hps">взаимодействует непосредственно с</span> <span class="hps">сетевыми интерфейсами</span> <span class="hps">(WiFi)</span> на аппаратном уровне<span class="hps">.</span></span></li>
+ <li><strong>Bluetooth, т.п.</strong>: Bluetooth и другие service-level демоны обеспечивают доступ к аппаратным ресурсам.</li>
+</ul>
+
+<p>Gonk также запускает, обслуживает и останавливает B2B процесс, являющийся слоем Gecko в Firefox OS. B2G процесс выступает в качестве клиента для service-level демонов в Gonk, которые взаимодействуют непосредственно с аппаратным обеспечением и предоставляют Gecko аппаратную функциональность телефона. Gecko общается с этими демонами через межпроцессное взаимодействие (IPC). Эти компоненты совместно обменивают команды и протоколы для запроса и предоставления сервисов.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Чтобы узнать больше о архитектуре Gonk, смотри <a href="/en-US/Firefox_OS/Platform/Architecture">Руководство по архитектуре Firefox OS</a>.</p>
+</div>
+
+<h2 id="Портирование_Gonk">Портирование Gonk</h2>
+
+<p>Поскольку Firefox OS базируется на ядре Android, существующие драверы, прошивка, service демоны, и другие компоненты могут быть портированы для работы с Firefox OS, Как правило с минимальными усилиями. Если необходим особый компонент (например нестандартный RIL или новый демон), или требуется внести изменения в эталонный дизайн ODM-производителя, возможно потребуется произвести дополнительную интеграцию и тестирование.</p>
+
+<p>В b2g, клиенты взаимодействуют с service-level демонами через межпроцессное взаимодействие (IPC). Клиенты инициируют соединение через сокет к service-level демону, отправляет запрос (используя протокол запросов сервера) через это соединение, принимает ответ и закрывает соединение. <span id="result_box" lang="ru"><span class="hps">OEM-производители</span> <span class="alt-edited hps">ответственны</span> <span class="hps">за разработку и реализацию</span> <span class="hps">этого</span> </span>межпроцессного взаимодействия<span lang="ru"> <span class="hps">между клиентами</span> <span class="hps">и серверами</span><span>.</span></span></p>
+
+<div class="note">
+<p><strong>Note</strong>: Чтобы узнать больше о том как производится портирование, смотри <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Porting">Портирование Firefox OS</a>.</p>
+</div>
+
+<h3 id="Как_Mozilla_работает_над_портами_Gonk_с_OEM_и_производителями_телефонов">Как Mozilla работает над портами Gonk с OEM и производителями телефонов</h3>
+
+<p><span id="result_box" lang="ru"><span class="hps">Каждая реализация</span> <span class="hps">Gonk</span> <span class="hps">является результатом</span> <span class="hps">сотрудничества между</span> <span class="hps">Mozilla</span><span>,</span> OEM-<span class="hps">производителями</span> <span class="hps">и</span> <span class="hps">сопутсвующими</span> <span class="atn hps">производителями (</span><span class="atn">ODM-</span><span>производителями, производителями</span></span><span lang="ru"> <span class="hps">чипсетов</span><span>)</span><span>.</span></span></p>
+
+<p>Mozilla предоставляет репозитарии с исходным кодом и осуществляет поддержку файлов Gonk в дистрибутивах Firefox OS. Репозитарии с исходным кодом включают базовое ядро Linux (с незначительными изменениями) и хуки (hooks) в Gecko.</p>
+
+<p><span id="result_box" lang="ru">OEM-<span class="hps">производители</span></span> в свою очередь ответственны за сборку, компиляцию, тестирование, сертификацию и распространение системного образа Firefox OS для конкретной модели устройства. Для Gonk в рамках системного образа, <span id="result_box" lang="ru">OEM-<span class="hps">производители</span></span> <span id="result_box" lang="ru"><span class="alt-edited hps">ответственны</span> <span class="hps">за большую часть</span> <span class="hps">усилий</span> <span class="hps">по обеспечению</span> <span class="hps">интеграции</span> <span class="hps">между вызовами</span> <span class="hps">Web API</span> <span class="hps">и</span> <span class="hps">аппаратным обеспечением телефона.</span></span> Тип и объем необходимых усилий сильно зависит от особенностей набора микросхем и других аппаратных компонентов используемых в телефоне.</p>
+
+<h3 id="Компоненты_устройства">Компоненты устройства</h3>
+
+<p>OEM-производители сотрудничают с производителями наборов микросхем и ODM-производителями чтобы обеспечить все, специфические для конкретной аппаратуры, компоненты, необходимые для функционирования мобильного устройства. Например производитель Wi-Fi обеспечивает набор микросхем и сопутсвующее ПО. Компоненты могут включать:</p>
+
+<ul>
+ <li>Драйверы — Для поддержки периферии телефона, такой как модем (данные и голос), Wi-fi, Bluetooth, дисплей, камера, аудио и т.д.</li>
+ <li>Микрокоды — Некоторая аппаратура (сетевая карта например) может загружать свою прошивку с flash диска.</li>
+ <li>Service-level демоны — Для вызова и управления работой различных аппаратных компонентов. <span id="result_box" lang="ru"><span class="hps">Могут</span> <span class="hps">включать в себя</span> <span class="alt-edited hps">вспомогательные</span> <span class="hps">библиотеки</span> <span class="hps">и скрипты</span> <span class="hps">запуска.</span></span></li>
+</ul>
+
+<h3 id="Интеграция_между_Gonk_и_Gecko">Интеграция между Gonk и Gecko</h3>
+
+<p>OEM-производители должны гарантировать, что аппаратные возможности мобильного устройства корректно и полностью совместимы с Web API реализованный в Gecko. Для этого необходимо осуществить:</p>
+
+<ul>
+ <li>сборку или адаптацию (в Gonk) service-level демонов, а так же все необходимые драйверы или микрокоды, необходимые для управделия аппаратурой</li>
+ <li>настройку или создание (in b2g) всех методов необходимых для взаимодействия с service-level демонами</li>
+</ul>
+
+<h2 id="Исходный_код_Gonk">Исходный код Gonk</h2>
+
+<p>Главный <a href="https://github.com/mozilla-b2g/B2G">B2G репозитарий на Github</a> содержит официально поддерживаемые порты Gonk для различных устройств, так что можно считать его репозитарием Gonk’а. Список поддерживаемых устройств находится в <code>B2G/config.sh</code>.</p>
+
+<p>B2G процесс (наряду с прочим), определяемый в Gonk, можно найти на <a href="https://github.com/mozilla-b2g/gonk-misc">mozilla-b2g/gonk-misc</a>. Изменения исходного кода B2G производятся здесь.</p>
+
+<div class="note">
+<p><strong>Note</strong>: В <a href="https://github.com/mozilla/gecko-dev">исходном коде Gecko</a> есть директория <code>b2g/,</code> которая содержит модификацию Gecko для Gonk: она включает ядро Linux, HAL, и специфические OEM библиотеки.</p>
+</div>
+
+<p>Большая часть ежедневной работы проделанной над Gonk заключается в портировании системы на различные платы и будте уверены, Gecko может хорошо работать на различных устройствах.</p>
+
+<dl>
+</dl>
+
+<p> </p>

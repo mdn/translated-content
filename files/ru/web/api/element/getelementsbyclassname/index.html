@@ -1,0 +1,117 @@
+---
+title: Element.getElementsByClassName()
+slug: Web/API/Element/getElementsByClassName
+tags:
+  - API
+  - Класс
+  - Коллекция
+  - Элемент
+translation_of: Web/API/Element/getElementsByClassName
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><strong><code>Element.getElementsByClassName()</code></strong> метод возвращает объект {{domxref("HTMLCollection")}}, содержащий в себе все дочерние элементы, которые имеют заданные имена классов. Если вызван на объекте document, будут возвращены все элементы, содержащиеся в документе.</p>
+
+<p>Так же, как метод {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} действует на весь документ; это вернет элементы, которые являются потомками корневого элемента, содержащие в себе указанные классы.</p>
+
+<p>Syntax</p>
+
+<pre class="syntaxbox"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
+
+<ul>
+ <li><em><var>elements</var></em> — {{ domxref("HTMLCollection") }} содержащий найденные элементы</li>
+ <li><em><var>names</var></em> — строка, содержащая в себе имена классов; имена разделяются пробелами</li>
+ <li><em>element</em> — любой {{domxref("Element")}} в документе (в котором осуществляется выборка)</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Получить все элементы с классом test:</p>
+
+<pre class="brush: js">element.getElementsByClassName('test');</pre>
+
+<p>Получить все элементы с классами test и red:</p>
+
+<pre class="brush: js">element.getElementsByClassName('red test');</pre>
+
+<p>Получить все элементы с классом test, которые находятся в элементе с id main:</p>
+
+<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+
+<p>Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом  {{ domxref("HTMLCollection") }} путем передачи <code><var>HTMLCollection</var></code> в метод как значение <var>this</var>. Так мы найдем все {{HTMLElement("div")}} элементы, которые имеют класс test:</p>
+
+<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+var testDivs = Array.prototype.filter.call(testElements, function(testElement){
+    return testElement.nodeName === 'div';
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }} [1]</td>
+   <td>9</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }} [2]</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }} [1]</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Prior to Firefox 19, this method was returning a {{domxref("NodeList")}}; it was then changed to reflects the change in the spec.</p>
+
+<p>[2] Safari on iOS 8 and OS X 10.10 returns a {{domxref("NodeList")}}.</p>

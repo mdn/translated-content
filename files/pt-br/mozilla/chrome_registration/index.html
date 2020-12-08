@@ -1,0 +1,347 @@
+---
+title: Chrome registration
+slug: Mozilla/Chrome_Registration
+translation_of: Mozilla/Chrome_Registration
+---
+<h2 id="What_is_Chrome.3F" name="What_is_Chrome.3F">What is chrome?</h2>
+
+<p><a href="/en/Chrome" title="en/Chrome">Chrome</a> is the set of user interface elements of the application window that are outside the window's content area. Toolbars, menu bars, progress bars, and window title bars are all examples of elements that are typically part of the chrome.</p>
+
+<p>Mozilla locates and reads the root <code>chrome.manifest</code> file for extensions and themes.</p>
+
+<div class="note">
+<p><strong>Note:</strong> With {{Gecko("1.9.2")}} and older, Mozilla reads <code>chrome/*.manifest</code> files from applications. Starting with {{Gecko("2.0")}}, the root <code>chrome.manifest</code> is the only manifest used; you can add <a href="/en/Chrome_Registration#manifest" title="en/Chrome Registration#manifest"><code>manifest</code></a> commands to that file to load secondary manifests.</p>
+</div>
+
+<h2 id="Chrome_Providers" name="Chrome_Providers">Chrome providers</h2>
+
+<p>A supplier of chrome for a given window type (e.g., for the browser window) is called a chrome provider. The providers work together to supply a complete set of chrome for a particular window, from the images on the toolbar buttons to the files that describe the text, content, and appearance of the window itself.</p>
+
+<p>There are three basic types of chrome providers:</p>
+
+<dl>
+ <dt>Content</dt>
+ <dd>The main source file for a window description comes from the content provider, and it can be any file type viewable from within Mozilla. It will typically be a XUL file, since XUL is designed for describing the contents of windows and dialogs. The JavaScript files that define the user interface are also contained within the content packages, as well as most XBL binding files.</dd>
+ <dt>Locale</dt>
+ <dd>Localizable applications keep all their localized information in locale providers. This allows translators to plug in a different chrome package to translate an application without altering the rest of the source code. The two main types of localizable files are DTD files and Java-style properties files.</dd>
+ <dt>Skin</dt>
+ <dd>A skin provider is responsible for providing a complete set of files that describe the visual appearance of the chrome. Typically a skin provider will provide CSS files and images.</dd>
+</dl>
+
+<div class="note">
+<p><strong>Note:</strong> Scripts (including those found in <a href="/en/XBL" title="en/XBL">XBL</a>) loaded from skin packages will not execute.</p>
+</div>
+
+<h2 id="The_Chrome_Registry" name="The_Chrome_Registry">The chrome registry</h2>
+
+<p>The Gecko runtime maintains a service known as the chrome registry that provides mappings from chrome package names to the physical location of chrome packages on disk.</p>
+
+<p>This chrome registry is configurable and persistent, and thus a user can install different chrome providers, and select a preferred skin and locale. This is accomplished through xpinstall and the extension manager.</p>
+
+<p>In order to inform the chrome registry of the available chrome, a text manifest is used: this manifest is "chrome.manifest" in the root of an extension, or theme, or XULRunner application.</p>
+
+<p>The plaintext chrome manifests are in a simple line-based format. Each line is parsed individually; if the line is parsable the chrome registry takes the action identified by that line, otherwise the chrome registry ignores that line (and prints a warning message in the runtime error console).</p>
+
+<pre class="eval" style="white-space: pre-wrap;">locale packagename localename path/to/files
+skin packagename skinname path/to/files
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> The characters @ # ; : ? / are not allowed in the packagename.</p>
+</div>
+
+<p></p><div class="warning">Firefox 2, Thunderbird 2, and SeaMonkey 1.1 will not find the chrome when <code>packagename</code> is mixed case. If the above example had a <code>packagename</code> of <strong>C</strong>amel<strong>C</strong>ase<strong>P</strong>ackage, you would get an error message similar to "No chrome registered for chrome://<strong>c</strong>amel<strong>c</strong>ase<strong>p</strong>ackage/path/to/files". Firefox 3, Thunderbird 3, and SeaMonkey 2 support mixed case. Bug resolved in Mozilla 1.9; see {{bug(132183)}}.</div><p></p>
+
+<h2 id="Manifest_Instructions" name="Manifest_Instructions">Manifest instructions</h2>
+
+<h3 id="comments" name="comments">comments</h3>
+
+<p>A line is a comment if it begins with the character '#'; any other character in the line is ignored.</p>
+
+<pre class="eval" style="white-space: pre-wrap;"># this line is a comment - you can put whatever you want here
+</pre>
+
+<h3 id="manifest" name="manifest">manifest</h3>
+
+<p>{{ gecko_minversion_inline("2.0b4") }}</p>
+
+<pre>manifest <em>subdirectory/foo.manifest [flags]</em>
+</pre>
+
+<p>This will load a secondary manifest file. This can be useful for separating component and chrome registration instructions, or separate platform-specific registration data.</p>
+
+<h3 id="binary-component">binary-component</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>binary-component <em>components/mycomponent.dll [flags]</em>
+</pre>
+
+<p>Instructs Mozilla to register and use a binary component. It should be combined with the abi flag, since binary components are ABI-specific. <a href="/en/XPCOM/XPCOM_changes_in_Gecko_2.0" title="en/XPCOM/XPCOM changes in Gecko 2.0">Prior to Firefox 4</a>, files in the components directory were registered automatically.</p>
+
+<h3 id="interfaces">interfaces</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>interfaces <em>component/mycomponent.xpt [flags]</em>
+</pre>
+
+<p>Instructs Mozilla to load interface information from a typelib file produced by XPIDL. <a href="/en/XPCOM/XPCOM_changes_in_Gecko_2.0" title="en/XPCOM/XPCOM changes in Gecko 2.0">Prior to Firefox 4</a>, files in the components directory were registered automatically.</p>
+
+<h3 id="component">component</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>component <em>{00000000-0000-0000-0000-000000000000} components/mycomponent.js [flags]</em>
+</pre>
+
+<p>Informs Mozilla about a component CID implemented by an XPCOM component implemented in JavaScript (or another scripting language, if applicable). The ClassID {0000...} must match the ClassID implemented by the component. To generate a unique ClassID, use a UUID generator program or site.</p>
+
+<h3 id="contract">contract</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>contract <em>@foobar/mycontract;1 <em>{00000000-0000-0000-0000-000000000000} [flags]</em></em>
+</pre>
+
+<p>Maps a contract ID (a readable string) to the ClassID for a specific implementation. Typically a contract ID will be paired with a component entry immediately preceding.</p>
+
+<h3 id="category">category</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>category <em>category entry-name value [flags]</em>
+</pre>
+
+<p>Registers an entry in the <a href="/en/XPCOM_Interface_Reference/nsICategoryManager" title="en/XPCOM Interface Reference/nsICategoryManager">category manager</a>. The specific format and meaning of category entries depend on the category.</p>
+
+<h3 id="content" name="content" style="min-height: 0;">content</h3>
+
+<p>A content package is registered with the line</p>
+
+<pre>content <em>packagename</em> <em>uri/to/files/</em> <em>[flags]</em>
+</pre>
+
+<p>This will register a location to use when resolving the URI <code>chrome://<em>packagename</em>/content/...</code>. The URI may be absolute or relative to the location of the manifest file. Note: it must end with a '/'.</p>
+
+<h3 id="locale" name="locale">locale</h3>
+
+<p>A locale package is registered with the line</p>
+
+<pre class="eval" style="white-space: pre-wrap;">locale <em>packagename</em> <em>localename</em> <em>uri/to/files/</em> <em>[flags]</em>
+</pre>
+
+<p>This will register a locale package when resolving the URI chrome://<em>packagename</em>/locale/... . The <em>localename</em> is usually a plain language identifier "en" or a language-country identifier "en-US". If more than one locale is registered for a package, the chrome registry will select the best-fit locale using the user's preferences.</p>
+
+<h3 id="skin" name="skin">skin</h3>
+
+<p>A skin package is registered with the line</p>
+
+<pre class="eval" style="white-space: pre-wrap;">skin <em>packagename</em> <em>skinname</em> <em>uri/to/files/</em> <em>[flags]</em>
+</pre>
+
+<p>This will register a skin package when resolving the URI <a class="external" rel="freelink">chrome://packagename/skin/</a>... . The <em>skinname</em> is an opaque string identifying an installed skin. If more than one skin is registered for a package, the chrome registry will select the best-fit skin using the user's preferences.</p>
+
+<h3 id="style" name="style">style</h3>
+
+<p>Style overlays (custom CSS which will be applied to a chrome page) are registered with the following syntax:</p>
+
+<pre class="eval" style="white-space: pre-wrap;">style chrome://<em>URI-to-style</em> chrome://<em>stylesheet-URI</em> <em>[flags]</em>
+</pre>
+
+<div class="note"><strong>Note:</strong> Only stylesheets at chrome URIs can be applied in this way.</div>
+
+<h3 id="override" name="override">override</h3>
+
+<p>In some cases an extension or embedder may wish to override a chrome file provided by the application or XULRunner. In order to allow for this, the chrome registration manifest allows for "override" instructions:</p>
+
+<pre class="eval" style="white-space: pre-wrap;">override chrome://<em>package</em>/<em>type</em>/<em>original-uri.whatever</em> <em>new-resolved-URI</em> <em>[flags]</em>
+</pre>
+
+<p>Note: overrides are not recursive (so overriding <a class="external" rel="freelink">chrome://foo/content/bar/</a> with <a class="external" rel="freelink">file:///home/john/blah/</a> will not usually do what you want or expect it to do). Also, the path inside overridden files is relative to the overridden path, not the original one (this can be annoying and/or useful in CSS files, for example).</p>
+
+<div class="note">
+<p><strong>Note:</strong> There was a bug in {{Gecko("1.8.1.5")}} (Firefox 2.0.0.5) and earlier where you could not use a relative URL for the <em>new-resolved-URI</em> parameter. You needed to provide an absolute URL. See {{ Bug(323455) }}.</p>
+</div>
+
+<h3 id="resource" name="resource">resource</h3>
+
+<p>{{ Fx_minversion_inline("3") }}</p>
+
+<p>Aliases can be created using the <code>resource</code> instruction:</p>
+
+<pre class="eval" style="white-space: pre-wrap;">resource <em>aliasname</em> <em>uri/to/files/</em> <em>[flags]</em>
+</pre>
+
+<p>This will create a mapping for <code>resource://&lt;aliasname&gt;<span style="font-family: Verdana,Tahoma,sans-serif;">/</span></code> URIs to the path given.</p>
+
+<div class="note">
+<p><strong>Note:</strong> There are no security restrictions preventing web content from including content at resource: URIs, so take care what you make visible there.</p>
+</div>
+
+<h2 id="Manifest_Flags" name="Manifest_Flags">Manifest flags</h2>
+
+<p>Manifest lines can have multiple, space-delimited flags added at the end of the registration line. These flags mark special attributes of chrome in that package, or limit the conditions under which the line is used.</p>
+
+<h3 id="application" name="application">application</h3>
+
+<p>Extensions may install into multiple applications. There may be chrome registration lines which only apply to one particular application. The flag</p>
+
+<pre class="eval" style="white-space: pre-wrap;">application=<em>app-ID</em>
+</pre>
+
+<p>indicates that the instruction should only be applied if the extension is installed into the application identified by <em>app-ID</em>. Multiple application flags may be included on a single line, in which case the line is applied if any of the flags match.</p>
+
+<p>This example shows how a different overlay can be used for different applications:</p>
+
+<pre style="white-space: pre-wrap;">overlay chrome://browser/content/browser.xul chrome://myaddon/content/ffOverlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://myaddon/content/tbOverlay.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+overlay chrome://songbird/content/xul/layoutBaseOverlay.xul chrome://myaddon/content/sbOverlay.xul application=songbird@songbirdnest.com
+</pre>
+
+<h3 id="appversion" name="appversion">appversion</h3>
+
+<p>Extensions may install into multiple versions of an application. There may be chrome registration lines which only apply to a particular application version. The flag</p>
+
+<pre class="eval" style="white-space: pre-wrap;">appversion=<em>version</em>
+appversion&lt;<em>version</em>
+appversion&lt;=<em>version</em>
+appversion&gt;<em>version</em>
+appversion&gt;=<em>version</em>
+</pre>
+
+<p>indicates that the instruction should only be applied if the extension is installed into the application version identified. Multiple <code>appversion</code> flags may be included on a single line, in which case the line is applied if any of the flags match. The version string must conform to the <a href="/en/Toolkit_version_format" title="en/Toolkit_version_format">Toolkit version format</a>.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Versions of Gecko before {{Gecko("1.8.0.13")}} and {{Gecko("1.8.1.5")}} contained a bug where if you use the comparisons &lt;, &gt; or =, the version string had be two or more characters long. If not, you would get a message in the error console that the <code>appversion</code> flag was not recognized. See {{ Bug(380398) }}.</p>
+</div>
+
+<h3 id="platformversion" name="platformversion">platformversion</h3>
+
+<p>{{ gecko_minversion_inline("8.0") }} When supporting more then one application, it is often more convenient for an extension to specify which Gecko version it is compatible with. This is particularly true for binary components. If there are chrome registration lines which only apply to a particular Gecko version, the flag</p>
+
+<pre class="eval" style="white-space: pre-wrap;">platformversion=<em>version</em>
+platformversion&lt;<em>version</em>
+platformversion&lt;=<em>version</em>
+platformversion&gt;<em>version</em>
+platformversion&gt;=<em>version</em>
+</pre>
+
+<p>indicates that the instruction should only be applied if the extension is installed into an application using the Gecko version identified. Multiple <code>platformversion</code> flags may be included on a single line, in which case the line is applied if any of the flags match.</p>
+
+<h3 id="contentaccessible" name="contentaccessible">contentaccessible</h3>
+
+<p>{{ Fx_minversion_inline("3") }} Chrome resources can no longer be referenced from within &lt;img&gt;, &lt;script&gt;, or other elements contained in, or added to, content that was loaded from an untrusted source. This restriction applies to both elements defined by the untrusted source and to elements added by trusted extensions. If such references need to be explicitly allowed, set the <code>contentaccessible</code> flag to <code>yes</code> to obtain the behavior found in older versions of Firefox. <span class="comment">See {{ bug("436989") }}.</span></p>
+
+<p>The <code>contentaccessible</code> flag applies only to content packages: it is not recognized for locale or skin registration. However, the matching locale and skin packages will also be exposed to content.</p>
+
+<p><strong>n.b.:</strong> Because older versions of Firefox do not understand the <code>contentaccessible</code> flag, any extension designed to work with both Firefox 3 and older versions of Firefox will need to provide a fallback. For example:</p>
+
+<pre style="white-space: pre-wrap;">content packagename chrome/path/
+content packagename chrome/path/ contentaccessible=yes
+</pre>
+
+<h3 id="os" name="os">os</h3>
+
+<p>{{ Fx_minversion_inline("3") }} Extensions (or themes) may offer different features depending on the operating system on which Firefox is running. The value is compared to the value of <a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a> for the platform.</p>
+
+<pre class="eval" style="white-space: pre-wrap;">os=WINNT
+os=Darwin
+</pre>
+
+<p>See <a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a> for a more complete list of os names. The os name is case insensitive.</p>
+
+<h3 id="osversion" name="osversion">osversion</h3>
+
+<p>{{ Fx_minversion_inline("3") }} An extension or theme may need to operate differently depending on which version of an operating system is running. For example, a theme may wish to adopt a different look on Mac OS X 10.5 than 10.4:</p>
+
+<pre class="eval" style="white-space: pre-wrap;">osversion&gt;=10.5
+</pre>
+
+<h3 id="platform_.28Platform-specific_packages.29" name="platform_.28Platform-specific_packages.29">abi</h3>
+
+<p>{{ Fx_minversion_inline("4") }} If a component is only compatible with a particular ABI, it can specify which ABI/OS by using this directive. The value is taken from the <a href="/en/XPCOM_Interface_Reference/nsIXULRuntime" title="https://developer.mozilla.org/en/nsIXULRuntime">nsIXULRuntime</a> OS and XPCOMABI values (concatenated with an underscore). For example:</p>
+
+<pre>binary-component component/myLib.dll abi=WINNT_<code>x86-MSVC
+</code>binary-component component/myLib.so abi=Linux_<code>x86-gcc3 </code>
+</pre>
+
+<p>See <a href="/en/XPCOM_ABI" title="en/XPCOM ABI">XPCOM ABI</a> for more details.</p>
+
+<h3 id="platform_.28Platform-specific_packages.29" name="platform_.28Platform-specific_packages.29">platform (Platform-specific packages)</h3>
+
+<p>Some packages are marked with a special flag indicating that they are platform specific. Some parts of content, skin, and locales may be different based on the platform being run. These packages contain three different sets of files, for Windows and OS/2, Macintosh, and Unix-like platforms. For example, the order of the "OK" and "Cancel" buttons in a dialog is different, as well as the names of some items.</p>
+
+<p>The "platform" modifier is only parsed for content registration; it is not recognized for locale or skin registration. However, it applies to content, locale, and skin parts of the package, when specified.</p>
+
+<p>To indicate that a package is platform-specific, add the "platform" modifier to the "content" line after the path, for example:</p>
+
+<pre class="eval" style="white-space: pre-wrap;">content global-platform jar:toolkit.jar!/toolkit/content/global-platform/ platform
+</pre>
+
+<p>Once that is specified in your manifest you then ensure that under the directory global-platform are subdirectories <code>win</code> (Windows/OS2), <code>mac</code> (OS9/OSX), or <code>unix</code> (Everything Else). Anything residing outside of these subdirectories will be ignored.</p>
+
+<h3 id="xpcnativewrappers" name="xpcnativewrappers">xpcnativewrappers</h3>
+
+<p>Chrome packages can decide whether to use the <a href="/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a> security mechanism to automatically protect their code against malicious content that they might access. See <a href="/en/Safely_accessing_content_DOM_from_chrome" title="en/Safely_accessing_content_DOM_from_chrome">Safely accessing content DOM from chrome</a> for details.</p>
+
+<p>This flag is enabled by default since Firefox 1.5. Disabling it manually was possible by specifying <code>xpcnativewrappers=no</code> until Firefox 4.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Support for this flag has been removed in {{Gecko("2.0")}}. You can no longer disable <code>XPCNativeWrapper</code>s. To update your add-on to work without this flag:</p>
+
+<ul>
+ <li>If your add-on depends upon XBL bindings attached to content objects (that is, it needs to be able to call functions or get and set properties created by the XBL binding), you'll need to use the object's <a href="/en/wrappedJSObject" title="en/wrappedJSObject"><code>wrappedJSObject</code></a> property to obtain a wrapped object.</li>
+ <li>If you need to call functions or access properties defined by the content -- for example, if your add-on wants to add a button to the page that calls a JavaScript function defined by the page.</li>
+</ul>
+</div>
+
+<p>The <code>xpcnativewrappers</code> flag applies only to content packages; it is not recognized for locale or skin registration.</p>
+
+<h2 id="Example_Chrome_Manifest" name="Example_Chrome_Manifest">Example chrome manifest</h2>
+
+<pre class="eval" style="white-space: pre-wrap;">content       necko                   jar:comm.jar!/content/necko/
+locale        necko       en-US       jar:en-US.jar!/locale/en-US/necko/
+content       xbl-marquee             jar:comm.jar!/content/xbl-marquee/
+content       pipnss                  jar:pipnss.jar!/content/pipnss/
+locale        pipnss      en-US       jar:en-US.jar!/locale/en-US/pipnss/
+# Firefox-only
+overlay <a class="external" rel="freelink">chrome://browser/content/pageInfo.xul</a>           <a class="external" rel="freelink">chrome://pippki/content/PageInfoOverlay.xul</a> application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+# SeaMonkey-only
+overlay <a class="external" rel="freelink">chrome://navigator/content/pageInfo.xul</a>         <a class="external" rel="freelink">chrome://pippki/content/PageInfoOverlay.xul</a> application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+overlay <a class="external" rel="freelink">chrome://communicator/content/pref/preftree.xul</a> <a class="external" rel="freelink">chrome://pippki/content/PrefOverlay.xul</a>
+content       pippki                  jar:pippki.jar!/content/pippki/
+locale        pippki      en-US       jar:en-US.jar!/locale/en-US/pippki/
+content       global-platform         jar:toolkit.jar!/content/global-platform/ platform
+skin          global      classic/1.0 jar:classic.jar!/skin/classic/global/
+override <a class="external" rel="freelink">chrome://global/content/netError.xhtml</a> jar:embedder.jar!/global/content/netError.xhtml
+content       inspector               jar:inspector.jar!/content/inspector/
+</pre>
+
+<h2 id="Instructions_supported_in_bootstrapped_add_ons" name="Instructions_supported_in_bootstrapped_add_ons">Instructions supported in bootstrapped add-ons</h2>
+
+<p>The following instructions are supported in <a href="/en/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped extensions">Bootstrapped extensions</a>:</p>
+
+<ul>
+ <li><code>manifest</code></li>
+ <li><code>content</code></li>
+ <li><code>locale</code></li>
+ <li><code>skin</code></li>
+ <li><code>override</code></li>
+</ul>
+
+<h2 id="Debugging_a_Chrome_Manifest_file" name="Debugging_a_Chrome_Manifest_file">Debugging a chrome manifest file</h2>
+
+<p>The <a class="link-https" href="https://addons.mozilla.org/firefox/addon/chrome-list">Chrome List</a> extension (for Firefox 3.6 and older) shows all registered chrome. This is very helpful when trying to write a <code>chrome.manifest</code> file as you can inspect where the files are being mapped from (jar files, local directory, etc.)</p>
+
+<h2 id="Old-style_contents.rdf_manifests" name="Old-style_contents.rdf_manifests">Old-style contents.rdf manifests</h2>
+
+<p>Before the plaintext manifests were introduced (which happened in Firefox 1.5, Toolkit 1.8), RDF manifests named "contents.rdf" were used to register chrome. This format is deprecated; however, SeaMonkey versions before version 2 do not support the plaintext manifest format yet, so <code>contents.rdf</code> manifests are required for extensions that wish to maintain backwards compatibility with Firefox 1.0 or the suite.</p>
+
+<p>{{ gecko_minversion_note("1.9.2", "The <code>contents.rdf</code> manifest format is no longer supported at all starting with Gecko 1.9.2; add-ons already installed using this format will continue to work but can no longer be installed. Be sure to remove your add-on and reinstall it to ensure that it installs correctly after updating it to use a plaintext manifest.") }}</p>
+
+<h2 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official references for <a href="/en/Toolkit_API" title="en/Toolkit_API">Toolkit API</a></h2>
+
+<p>{{ page("en-US/docs/Toolkit_API/Official_References") }}</p>
+
+<p>{{ languages( { "fr": "fr/Enregistrement_chrome", "ja": "ja/Chrome_Registration", "pl": "pl/Rejestracja_Chrome" ,"zh-cn":"zh-cn/Chrome_Registration"} ) }}</p>

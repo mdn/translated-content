@@ -1,0 +1,252 @@
+---
+title: Compilando o Firefox OS
+slug: Archive/B2G_OS/Compilando_O_Firefox_OS
+tags:
+  - B2G
+  - Compilação B2G
+  - Erros no Mac OSX
+translation_of: Archive/B2G_OS/Building
+---
+<div>
+ </div>
+<div class="summary">
+ <p>Uma vez que você já <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">preparou seu sistema</a> e <a href="/pt-BR/docs/Mozilla/Firefox_OS/Preparando_sua_primeira_compilacao_do_B2G" title="Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build">baixou os arquivos e fez a configuração</a> do código, você agora pode compilar o <em>Boot to Gecko</em>. Esse artigo vai explicar como fazer isso.</p>
+</div>
+<h2 id="Atualize_seu_código">Atualize seu código</h2>
+<p>Se esta não é sua primeira compilação do B2G, você talvez queira baixar a última versão do código antes de iniciar a compilação. Para fazer isso, você deve atualizar as ferramentas B2G e as dependências, usando os seguintes comandos:</p>
+<pre>git pull
+./repo sync -d
+</pre>
+<p>Você pode atualizar um repositório específico especificando o nome:</p>
+<pre>./repo sync gaia
+</pre>
+<p>O comando <code>repo</code> tem outras opções que podem ser interessantes: digite <code>repo help</code> para a lista completa de opções.</p>
+<h2 id="Compilando">Compilando</h2>
+<div class="note">
+ <p><strong>Nota:</strong> Se você quiser customizar a compilação, você deve configurar o arquivo .<code>userconfig</code>. Veja o artigo <a href="/pt-BR/Firefox_OS/Customizacao_com_o_arquivo_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customização com o arquivo .userconfig</a> para maiores detalhes.</p>
+</div>
+<p>Para compilar, basta executar o script <code>build.sh</code>:</p>
+<pre>cd B2G
+./build.sh
+</pre>
+<p>Hora de mais uma pausa para um café, ou talvez um cochilo (especialmente se for sua primeira compilação). Assim como na etapa de configuração, na página anterior, se você está usando o sistema de arquivos do Android previamente extraído, você deve configurar a variável <code>ANDROIDFS_DIR</code> antes de executar <code>build.sh</code>.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Para mais instruções de como fazer um flashing de um novo binário no telefone, leia <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Installing_on_a_mobile_device">Instalando o Firefox OS em dispositivo móvel</a>.</p>
+</div>
+<h3 id="Compilando_módulos_específicos">Compilando módulos específicos</h3>
+<p>Se você quer compilar um módulo específico, como o Gecko, você deve incluir o nome do módulo como parâmetro da chamada do script:</p>
+<pre>./build.sh gecko
+</pre>
+<p>Para atualizar apenas um aplicativo, você pode compilar apenas módulo <code>gaia</code>, por exemplo, usando a variável de ambiente BUILD_APP_NAME:</p>
+<pre>BUILD_APP_NAME=calendar ./build.sh gaia</pre>
+<p>Para saber quais módulos você pode compilar, execute o comando:</p>
+<pre>./build.sh modules
+</pre>
+<h3 id="Configurando_o_número_de_processadores_a_ser_usado">Configurando o número de processadores a ser usado</h3>
+<p>Por padrão, os scripts de compilação B2G usa o número de núcleos do processador do seu sistema mais dois como um número de tarefas paralelas a ser executada. Você pode alterar esse valor especificando o parâmetro <code>-j</code> quando executa <code>build.sh</code>. Isso pode ser útil se você estiver usando o sistema para outras coisas enquanto compila em segundo plano e precisa reduzir um pouco a carga da CPU. Também é útil quando você está tendo problemas na compilação, Isso pode fazer a leitura da saída de erros do processo de compilação mais fácil se você tem apenas uma tarefa por vez!</p>
+<p>Por exemplo, para compilar usando apenas duas tarefas em paralelo:</p>
+<pre>./build.sh -j2
+</pre>
+<p>O caso mais comum para isso, é evitar compilações executando em paralelo. Isso faz a saída do processo muito mais fácil de ser interpretada, tornando mais fácil a resolução dos problemas de compilação. Para fazer isso execute:</p>
+<pre>./build.sh -j1
+</pre>
+<h3 id="Compilando_uma_imagem_multilíngue">Compilando uma imagem multilíngue</h3>
+<p>Para compilar uma imagem multilingue, siga esses passos:</p>
+<h4 id="Gaia">Gaia</h4>
+<ol>
+ <li>Determine quais idiomas do Gaia serão utilizados. Atualmente usamos os arquivos de idiomas <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-dev.json"><code>locales/languages_dev.json</code></a> e <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-all.json"><code>locales/languages_all.json</code></a> como nossos arquivos Gaia de idiomas.</li>
+ <li>Clone as localizações apropriadas do endereço <a href="http://hg.mozilla.org/gaia-l10n">http://hg.mozilla.org/gaia-l10n</a> dentro de um diretório, nós o nomeamos <code>gaia-l10n/</code>. Você pode nomear o diretório como <code>locales/</code>. Será necessário clonar um repo para cada localização listada no arquivo de idiomas.</li>
+ <li>No seu ambiente, configure a variável de ambiente <code>LOCALE_BASEDIR</code> como o caminho completo para o diretório configurado no item 2. Configure <code>LOCALES_FILE</code> para o caminho completo configurado no item 1.</li>
+ <li>Você também pode configurar a variável <code>GAIA_DEFAULT_LOCALE</code> para informar a localização padrão.</li>
+</ol>
+<pre style="font-size: 12px;">cd gaia/locales/
+hg clone https://hg.mozilla.org/releases/gaia-l10n/v1_2/es</pre>
+<div>
+ Configure suas variáveis de ambiente:</div>
+<div>
+  </div>
+<pre>export LOCALE_BASEDIR=$PWD/locales
+export LOCALES_FILE=$PWD/locales/languages_dev.json
+export GAIA_DEFAULT_LOCALE=es
+</pre>
+<p>O arquivo <code>languages-dev.json</code> pode ser substituído pelo seu próprio <code>languages-own.json</code>, que pode ser formado como esse. Você precisa adicionar uma entrada para cada repo clonado em seus diretórios de localização<span style="line-height: 1.5;">:</span></p>
+<pre>{
+  "en-US"     : "English (US)",
+  "es"        : "Español"
+}
+</pre>
+<div>
+ <p>Desde que o <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=884752">bug 884752</a> foi solucionado (novembro de 2013), você pode usar o parâmetro <code>GAIA_KEYBOARD_LAYOUTS </code>para adicionar <a href="https://github.com/mozilla-b2g/gaia/tree/v1.2/keyboard/layouts">configurações de teclado</a> (se disponível no Gaia) . </p>
+ Por exemplo, para adicionar configurações de teclado espanhol e italiano, execute os comandos ateriores incluindo<br>
+ <pre>  GAIA_KEYBOARD_LAYOUTS=en,es,it</pre>
+ <p>Nesse ponto, você está pronto para copiar (<em>flash</em>) o Gaia para seu telefone pela primeira vez. Conecte o telefone e certifique-se que a Depuração remota está ativada em <span style="line-height: 1.5;">Settings &gt; Device Information &gt; More Information &gt; Developer.  Você precisa fazer isso somente a primeira vez, para sua própria compilação ter essa opção atvida como padrão, configure <code>REMOTE_DEBUGGER=1</code>:</span></p>
+ <pre> make clean &amp;&amp; make production LOCALES_FILE=locales/languages-own.json</pre>
+ <div class="note">
+  <p>Se você quiser clonar e/ou atualizar todos os idiomas suportados, você pode usar <a href="https://gist.github.com/TheoChevalier/254461892d8bf118e1bc">esse script</a></p>
+ </div>
+ <h4 id="Gecko">Gecko</h4>
+ <ol>
+  <li>Determine qual arquivo de idioma do Gecko vai usar. Nós atualmente usamos <a href="http://hg.mozilla.org/releases/mozilla-b2g18/file/default/b2g/locales/all-locales">b2g/locales/all-locales</a> como nosso arquivo de idioma.</li>
+  <li>Clone as localizações apropriadas dentro de um diretório, o nome do diretório pode ser <code>gecko-l10n/</code> .
+   <ul>
+    <li>Para mozilla-central, use <a href="http://hg.mozilla.org/l10n-central/">http://hg.mozilla.org/l10n-central/</a></li>
+    <li>Para mozilla-aurora, use <a href="http://hg.mozilla.org/releases/l10n/mozilla-aurora/">http://hg.mozilla.org/releases/l10n/mozilla-aurora/</a></li>
+    <li>Para mozilla-beta ou mozilla-b2g18 ou mozilla-b2g26_v1_2, use <a href="http://hg.mozilla.org/releases/l10n/mozilla-beta/">http://hg.mozilla.org/releases/l10n/mozilla-beta/</a></li>
+   </ul>
+  </li>
+  <li>Clone <a href="http://hg.mozilla.org/build/compare-locales">compare-locales</a>.</li>
+  <li>
+   <p>No seu ambiente configure a variável <code>L10NBASEDIR</code> como o caminho completo do diretório do item 2. Configure <code>MOZ_CHROME_MULTILOCALE</code> como uma <em>string</em> delimitadas por espaço com as localizações do item 1.</p>
+   <p>Inclua o diretório <code>compare-locales/scripts</code> à variável <code>PATH</code>, e <code>compare-locales/lib</code> à variável <code>PYTHONPATH</code>.</p>
+   Por exemplo,
+   <pre>export L10NBASEDIR=$PWD/gecko-l10n
+export MOZ_CHROME_MULTILOCALE="ja zh-TW"
+export PATH="$PATH:$PWD/compare-locales/scripts"
+export PYTHONPATH="$PWD/compare-locales/lib"
+</pre>
+   <p>Uma vez que a configuração acima estiver pronta, você pode executar <code>build.sh</code>.</p>
+   <p>Você pode usar <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=818560#c9/">.userconfig</a> também:</p>
+   <pre>## Gaia
+export GAIA_DEFAULT_LOCALE=es
+export LOCALE_BASEDIR=/b2g/gaia-l10n-transifex-v1.2/
+export LOCALES_FILE=/b2g/languages_propio.json
+
+## Gecko
+export L10NBASEDIR='/b2g/gecko-l10n-v1.2'
+export MOZ_CHROME_MULTILOCALE="es-ES eu ca gl pt-BR"
+export PATH="$PATH:/b2g/compare-locales/scripts"
+export PYTHONPATH="/b2g/compare-locales/lib"
+  </pre>
+  </li>
+ </ol>
+ <div class="note">
+  <p>Existe algum mapeamento entre os idiomas do Gaia e do Gecko. Por exemplo, no Gaia, Espanhol é "es", mas no Gecko é traduzido para "Espanhol da Espanha" (es-ES)</p>
+ </div>
+ <p>Essas instruções podem mudar a medida que as coisas melhorarem.</p>
+ <h2 id="Erros_conhecidos">Erros conhecidos</h2>
+ <h3 id="Build_failed!">"Build failed!"</h3>
+ <p><span id="cke_bm_81S" style="display: none;"> </span>Se você receber uma mensagem genérica "Build failed" (A Compilação falhou), você sempre deve tentar reconectar seu telefone ao seu computador, algumas vezes o telefone pode perder a conexão por uma variedade de razões.</p>
+ <div class="note">
+  <p><strong>Note que configurar e compilar o B2G para Keon NÃO FUNCIONA no Mac</strong>. Você precisará de um Linux para compilar para esse telefone.</p>
+ </div>
+ <h3 id="Erros_específicos_do_Mountain_Lion">Erros específicos do Mountain Lion</h3>
+ <div>
+  <p>1. Se você está compilando no OS X 10.8 "Mountain Lion" (Xcode 4.4.1 ou superior) e encontrar o seguinte erro:</p>
+  <pre style="font-size: 14px;">external/qemu/android/skin/trackball.c:130:25: error: 'M_PI' undeclared (first use in this function)</pre>
+  Edite o arquivo: <code style="font-size: 14px;">B2G/external/qemu/Makefile.android</code> e inclua na linha 78:<br>
+  <pre style="font-size: 14px;">MY_CFLAGS += -DM_PI=3.14159265358979323846264338327950288   #/* B2G_fix: not finding M_PI constant */
+</pre>
+ </div>
+ <div>
+  2. Se você está no Mountain Lion o seguinte erro durante a execução do script <code>./build.sh</code>:</div>
+ <div>
+  <pre>/System/Library/Frameworks/IOKit.framework/Headers/usb/USB.h:797:9: error: too many #pragma options align=reset</pre>
+  <p>Substitua todas as ocorrências de '<code>#pragma options align=reset</code>' por '<code>#pragma pack()</code>' no arquivo <code>/System/Library/Frameworks/IOKit.framework/Headers/usb/USB.h</code></p>
+ </div>
+ <h3 id="Undefined_symbols__sqlite3_androidopt_handle_pragma_and__sqlite3_androidopt_open">Undefined symbols "_sqlite3_androidopt_handle_pragma" and "_sqlite3_androidopt_open"</h3>
+ <p>Esse erro aparece se você está compilando no OS X 10.7 ou superior com Xcode 4.5 or superior. Para resolver isso, aplique a correção <a href="https://groups.google.com/forum/#!msg/android-building/yAfPyUqCsiQ/7zvICk4GWjYJ">https://groups.google.com/forum/#!msg/android-building/yAfPyUqCsiQ/7zvICk4GWjYJ</a> no arquivo external/sqlite/dist/Android.mk.</p>
+ <h3 id="KeyedVector.h19331_error_indexOfKey_was_not_declared_in_this_scope">KeyedVector.h:193:31: error: indexOfKey was not declared in this scope</h3>
+ <p>Esse erro aparece quando a versão do gcc é muito recente. Instale a versão 4.6.x dos aplicativos gcc/g++/g++-multilib. Veja <a href="/pt-BR/docs/Mozilla/Firefox_OS/Customizacao_com_o_arquivo_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customização com o arquivo .userconfig file</a> para mais informações.</p>
+ <div class="note">
+  <p><strong>Nota da comunidade:</strong> É possível usar o 4.7.x com pequenas modificações no código B2G (as mensagens do gcc guiará você) mas você não conseguirá nenhuma ajuda! Seja na modificação do código ou na resolução dos bugs que você encontrar.</p>
+ </div>
+ <h3 id="arm-linux-androideabi-g_Internal_error_Killed_program_cc1plus">arm-linux-androideabi-g++: Internal error: Killed (program cc1plus)</h3>
+ <p>Se você receber essa mensagem, é provável que você esteja com pouca memória disponível. Certifique-se que existe memória suficiente antes de executar <code>./build.sh</code>. Para executar sem problemas o sistema de ter 4GB de memória RAM.</p>
+ <h3 id="...is_referenced_by_DSO_error">"...is referenced by DSO" error</h3>
+ <p>Se durante a compilação do emulador, você receber o erro:<code> /usr/bin/ld: out/host/linux-x86/obj/EXECUTABLES/triangleCM_intermediates/triangleCM: hidden symbol `_XGetRequest' in out/host/linux-x86/obj/STATIC_LIBRARIES/libSDL_intermediates/libSDL.a(SDL_x11dyn.o) is referenced by DSO</code>.</p>
+ <p>Esse erro pode aparecer em algumas versões do <code>binutils</code>. Se você está executando num Debian estável, você pode usar o "gold linker" instalando o pacote <code>binutils-gold</code>. Observe que o <em>gold</em> linker é instalado pelo <code>binutils</code>, mas não é utilizado como padrão. <code>binutils-gold</code> faz exatamente isso.</p>
+ <h3 id="Se_você_receber_erros_de_compilação_durante_a_execução_de_testes">Se você receber erros de compilação durante a execução de testes</h3>
+ <p>Algumas vezes (principalmente após atualização da ferramenta de compilação ou do sistema operacional) você pode receber erros estranhos como esses após a etapa de compilação durante os testes pós-compilação:</p>
+ <pre>Generating permissions.sqlite...
+test -d profile || mkdir -p profile
+run-js-command  permissions
+WARNING: permission unknown:offline-app
+WARNING: permission unknown:indexedDB-unlimited
+build/permissions.js:122: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPermissionManager.add]
+make[1]: *** [permissions] Error 3
+make: *** [gaia/profile.tar.gz] Error 2</pre>
+ <p>Nessa situação, tente apagar o diretório <code>gaia/xulrunner-sdk</code> e baixar o código novamente:</p>
+ <pre>rm -r gaia/xulrunner-sdk
+</pre>
+ <p>Isso apaga a cópia baixada e pré-compilada do <a href="/pt-BR/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> mas o sistema de compilação recupera automaticamente. Na sua próxima compilação uma nova cópia do XULRunner será automaticamente recuperada.</p>
+ <h3 id="Cannot_fetch_platformlibcore">Cannot fetch platform/libcore</h3>
+ <p>Se você tentar configurar sua compilacão B2G para o Nexus S (<code>./config.sh nexus-s</code>) e receber um erro relacionado com o <code>libcore</code>, isso é devido a um problema com o git <code>linaro</code> que o alimenta. Para resolver isso, baixe o manifesto B2G:</p>
+ <pre class="brush: bash">git clone https://github.com/mozilla-b2g/b2g-manifest.git</pre>
+ <p>Edite o arquivo <code>nexus-s.xml</code> nesse repo, substituindo a entrada do <code>git linaro </code>por uma referência ao aosp, que deve ser lido como:</p>
+ <pre class="brush: xml">&lt;default revision="refs/tags/android-4.0.4_r1.2"
+              remote="aosp"
+              sync-j="4" /&gt;</pre>
+ <p>Faça um <em>Commit</em> dessas alterações (<code>git commit -a</code>) e altere o arquivo <code>config.sh</code> no <em>branch master</em> do repo principal do B2G que você baixou apontando para o seu manifesto local alterado no lugar do manifesto da Mozilla:</p>
+ <pre class="brush: bash">GITREPO=${GITREPO:-"file:///home/path/to/my/b2g-manifest"}</pre>
+ <h3 id="Erros_clang_quando_compliar_com_Xcode_5_no_Mac">Erros "clang" quando compliar com Xcode 5 no Mac</h3>
+ <p>Se você estiver usando o Mac OS X 10.8 com Xcode 5, é provável que você receba erros como esse:</p>
+ <pre class="brush: bash">clang: error: argument unused during compilation: '-include system/core/include/arch/darwin-x86/AndroidConfig.h'
+clang: error: argument unused during compilation: '-U DEBUG'
+clang: error: argument unused during compilation: '-U DEBUG'
+clang: error: argument unused during compilation: '-MF out/host/darwin-x86/obj/EXECUTABLES/obbtool_intermediates/Main.d'
+make: *** [out/host/darwin-x86/obj/EXECUTABLES/obbtool_intermediates/Main.o] Error 1</pre>
+ <p>Isso é devido ao fato do Xcode 5 alterar o compilador g++ em <code>/usr/bin</code>, que interrompe o processo de compilação se você tentar usá-lo para compilar. Uma solução de contorno para esse problema é editar a seguinte linha em <code>build/core/combo/HOST_darwin-x86.mk:</code></p>
+ <p>de</p>
+ <pre class="brush: bash">HOST_CXX := g++</pre>
+ <p>para</p>
+ <pre class="brush: bash">HOST_CXX := g++-4.6
+ifeq (,$(wildcard /usr/local/bin/g++-4.6))
+ HOST_CXX := g++
+endif</pre>
+ <p>Após isso, desinstale o gcc usando brew (assumindo que você executou o <a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites#Instalando_o_Bootstrap_do_Firefox_OS_no_Mac">script de insalação do bootstrap no Mac OS</a>) — se não executou, você precisa completar essa tarefa antes de continuar:</p>
+ <pre class="brush: bash">brew uninstall gcc-4.6</pre>
+ <p>Agora reinstale o gcc com suporte ao multilib e c++:</p>
+ <pre class="brush: bash">brew install --enable-cxx https://gist.github.com/artlogic/6988658/raw/aeb9d1ea098274ad3f3fe2637b9df7f308a8a120/gcc-4.6.rb</pre>
+ <p>Certifique-se que <code>/usr/local/bin</code> esteja no sua variável de ambiente <code>PATH</code>. Você pode fazer isso temporariamente digitando o seguinte comando:</p>
+ <pre class="brush: bash">export PATH=/usr/local/bin:$PATH</pre>
+ <p>Para incluir o diretório na variável PATH definitivamente inclua essa linha no arquivo<code> .bash_profile</code> no seu diretório <code>home</code>.</p>
+ <p>Após configurar a variável <code>PATH</code>, certifique-se de que você consegue executar os seguintes comandos:</p>
+ <pre class="brush: bash">gcc-4.6 -v
+
+g++-4.6 -v</pre>
+ <p>Se algum desses comandos falhar, você vai precisar fazer um novo <em>link</em> usando brew com o seguinte comando:</p>
+ <pre class="brush: bash">brew link --overwrite gcc-4.6</pre>
+ <p>Também é possível que <code>/usr/bin/c++</code> não está apontando para <code>clang++</code> como deveria ser com o Xcode5 instalado. Você pode verifique isso digitando:</p>
+ <pre class="brush: bash">ls -l /usr/bin/c++</pre>
+ <p>O comando retornará alguma coisa como isso:</p>
+ <pre class="brush: bash">lrwxr-xr-x 1 root admin 7 Sep 19 11:40 /usr/bin/c++ -&gt; clang++
+</pre>
+ <p>Se <code>c++</code> estiver apontando para alguma coisa diferente que <code>clang++</code>, resolva isso com os seguintes comandos:</p>
+ <pre class="brush: bash">sudo rm /usr/bin/c++
+
+sudo ln -s /usr/bin/clang++ /usr/bin/c++</pre>
+ <h3 id="Não_consegue_copiar_os_arquivos_do_diretório_de_backup">Não consegue copiar os arquivos do diretório de backup</h3>
+ <p>Isso pode acontecer se perder conexão USB durante o processo de backup do dispositivo.</p>
+ <p>Quando for executar o script novamente, você pode receber o erro abaixo: (no exemplo o dispositivo é o peak).</p>
+ <p><code>Pulling files from ../../../backup-peak<br>
+  cat: ../../../backup-peak/system/build.prop: No such file or directory<br>
+  Found firmware with build ID<br>
+  Pulling "libaudioeq.so"<br>
+  cp: cannot stat `../../../backup-peak/system/lib/libaudioeq.so': No such file or directory<br>
+  Failed to pull libaudioeq.so. Giving up.<br>
+  <br>
+  &gt; Build failed! &lt;<br>
+  <br>
+  Build with |./build.sh -j1| for better messages<br>
+  If all else fails, use |rm -rf objdir-gecko| to clobber gecko and |rm -rf out| to clobber everything else.</code></p>
+ <p>Para resolver isso não é necessário remover os diretórios objdir-gecko ou out. Basta remover o diretório de backup:</p>
+ <p><code>$rm -rf backup-peak</code></p>
+ <h2 id="Próximas_etapas">Próximas etapas</h2>
+ <p>Após compilar, sua próxima etapa depende para onde você compilou o Boot to Gecko. Para algum emulador ou para um dispositível móvel real. Veja os seguintes artigos para detalhes:</p>
+ <ul>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators" title="Mozilla/Firefox_OS/Using_the_B2G_emulators">Usando emuladores B2G</a></li>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client" title="Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Usando o cliente B2G para desktop</a></li>
+  <li><a href="/pt-BR/docs/Mozilla/Firefox_OS/Instalando_FirefoxOS_dispositivo_movel" title="Mozilla/Firefox_OS/Installing_on_a_mobile_device">Instalando Firefox OS em dispositivo móvel</a></li>
+  <li><a href="/pt-BR/docs/Mozilla/Firefox_OS/Instalando_B2G_Pandaboard" title="Mozilla/Firefox_OS/Pandaboard">Instalando o Boot to Gecko na pandaboard</a></li>
+ </ul>
+</div>
+<h3 id="Enviando_bugs_no_B2GFirefox_OSGaia">Enviando bugs no B2G/Firefox OS/Gaia</h3>
+<p>Uma vez que você conseguiu compilar o B2G/Firefox OS, você provavelmente vai querer começar a registrar os <em>bugs</em> de uma determinada versão. A comunidade do Firefox OS pode incrementar as coisas tão eficientemente quanto possível. Você vai querer <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">registrar o bug no Bugzilla</a>, no projeto"Firefox OS", mas você deve incluir detalhes específios da versão:</p>
+<ol>
+ <li>Para começar, diga-nos o número da versão principal. Por exemplo, e.g. <em>1.4.0.0-prerelease</em>. Isso pode ser facilmente encontrado no seu dispositivo em <em>Settings &gt; Device Information</em>.</li>
+ <li>Você pode fornecer mais identificadores específicos da versão retornando os hashes atuais dos repositórios do gaia e do gecko. Isso pode ser feito assim:
+  <pre class="brush: bash">#!/bin/bash
+(cd gaia;  echo "gaia  $(git rev-parse HEAD)")
+(cd gecko; echo "gecko $(git rev-parse HEAD)")</pre>
+ </li>
+</ol>

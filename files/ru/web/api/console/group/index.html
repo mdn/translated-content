@@ -1,0 +1,147 @@
+---
+title: Console.group()
+slug: Web/API/Console/group
+translation_of: Web/API/Console/group
+---
+<div>{{APIRef("Console API")}}</div>
+
+<div>Создает новую группу сообщений в <a href="/en-US/docs/Tools/Web_Console">веб-консоли</a>. После вызова последующие сообщения, выводимые в консоль, будут иметь дополнительный уровень отступа, до тех пор пока не будет вызван метод {{domxref("console.groupEnd()")}}.</div>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">console.group([label]);
+</pre>
+
+<h2 id="Аргументы">Аргументы</h2>
+
+<dl>
+ <dt><code>label</code></dt>
+ <dd>Опциональный заголовок группы. (Протестировано в Chrome 59). Не работает с <code>console.groupEnd()</code>.</dd>
+</dl>
+
+<p>{{h3_gecko_minversion("Использование в веб-консоли", "9.0")}}</p>
+
+<p>Использование групп помогает упорядочить вывод в консоль благодаря визуальной группировке связанных сообщений. Чтобы начать новый блок нужно вызвать <code>console.group()</code>. Метод <code>console.groupCollapsed()</code> работает аналогичным образом, но выведенная группа будет свернута до тех пор, пока не будет развернута по клику.</p>
+
+<p><strong>Примечание:</strong>  Начиная с 9 по 51 версию Gecko, метод <code>groupCollapsed()</code> работал как метод <code>group()</code>. Свернутые группы поддерживаются с версии Gecko 52. См. {{bug("1088360")}}.</p>
+
+<p>Чтобы прекратить вывод в группу, требуется вызвать <code>console.groupEnd()</code>. К примеру, следующий код:</p>
+
+<pre class="brush: js">console.log("This is the outer level");
+console.group();
+console.log("Level 2");
+console.group();
+console.log("Level 3");
+console.warn("More of level 3");
+console.groupEnd();
+console.log("Back to level 2");
+console.groupEnd();
+console.log("Back to the outer level");
+</pre>
+
+<p>выведет следующий результат:</p>
+
+<p><img alt="A screenshot of messages nested in the console output." src="/@api/deki/files/6082/=nesting.png"></p>
+
+<p>Для дополнительной информации смотрите <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">Использование групп в консоли</a>.</p>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#group", "console.group()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td>Первоначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>2</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>11</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>4.0<sup>[1]</sup></td>
+  </tr>
+  <tr>
+   <td>Доступно в Web Workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("38.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("2.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Доступно в Web Workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("38.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Реализовано в <a href="http://trac.webkit.org/changeset/35421">http://trac.webkit.org/changeset/35421</a>.</p>
+
+<h2 id="См._также">См. также</h2>
+
+<ul>
+ <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+</ul>

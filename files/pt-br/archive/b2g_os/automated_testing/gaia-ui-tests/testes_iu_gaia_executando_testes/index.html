@@ -1,0 +1,242 @@
+---
+title: 'Testes da Interface do Usuario (IU) Gaia: Executando os Testes'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Testes_IU_Gaia_Executando_Testes
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests
+---
+<div class="boxed translate-display">
+ <div class="summary">
+  <p><span class="seoSummary">Esse artigo fornece um resumo detalhado de como executar a suíte  gaia-ui-tests incluída no próprio Gaia, B2G Desktop e dispositivos reais com Firefox OS. O projeto Gaia usa <a href="https://travis-ci.org/">Travis CI</a> para realizar a integração contínua e testes de <em>pull requests</em>.</span></p>
+ </div>
+ <div class="note">
+  <p><strong>Nota</strong>: Você pode encontrar uma <a href="https://travis-ci.org/mozilla-b2g/gaia/builds">lista de mais de 32000 compilações</a> (e crescendo) executada via Travis. Ao lado de testes unitários e testes do marionette js, Gaia também executa testes de scripts de compilação via Travis. Os detalhes da execução dos scripts são definidos em <a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/travis_ci">tests/travis_ci</a>. Se você encontrar um erro no gaia_ui_tests pelo Travis e quiser reproduzí-lo localmente verifique <a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/travis_ci/gaia_ui_tests">tests/travis_ci/gaia_ui_tests/</a>.</p>
+ </div>
+ <p>O testes do Gaia gaia-ui-tests foi desenvolvido com a capacidade de ser executado em dispositivos reais, emuladores e no cliente <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>. A propósito o método mais fácil de executar o teste é no B2G Desktop. Observe que você <u><strong>deve escolher o branch correto</strong></u> do Gaia para executar a versão do Firefox OS que estiver usando.</p>
+ <h2 id="Testando_no_B2G_Desktop">Testando no B2G Desktop</h2>
+ <p>O cliente B2G desktop é exatamente o que diz: uma versão desktop do B2G que você pode usar para executar testes das aplicações web do Firefox OS no conforto do seu desktop. Se você não é familiar com ele, descubra mais sobre ele no artigo <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client">Usando o cliente B2G desktop</a>. Essa seção irá mostrar como executar os testes gaia-ui-tests no B2G desktop.</p>
+ <div>
+  <h3 id="Pré-requisitos">Pré-requisitos</h3>
+  <ul>
+   <li>Uma imsagem do B2G desktop. Você pode <a href="http://nightly.mozilla.org/">baixá-la</a> e descompactá-la em um diretório do seu computador ou uma máquina virtual ou  <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client#Building_the_desktop_client">compilar uma você mesmo</a>, adicionando <code>ENABLE_MARIONETTE=1</code> no seu.</li>
+   <li>Um <a href="https://github.com/mozilla-b2g/gaia/">repositório Gaia</a> clonado do Github.</li>
+   <li>Um <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Testes_IU_Gaia_Executando_Testes#testvars">arquivo testvars.json</a> criado (como explicado na importante seção abaixo).</li>
+  </ul>
+ </div>
+ <p>O cliente desktop B2G é ideal para testes de desenvolvimento quando um dispositivo real não está disponível e não há a necessidade de testes das funções do próprio telefone. É rápido e acessível, podendo ser executado no Linux, Mac ou Windows!</p>
+ <h3 id="Executando_os_testes">Executando os testes</h3>
+ <p>Nós vamos instalar a versão que vem na própria árvore do repositório Gaia. Dessa forma nossas alterações serão usadas imediatamente. Na sua versão clonada do Gaia, navege o diretório <code>gaia/tests/python/gaia-ui-tests</code> e execute o seguinte comando de configuração:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">python setup.py develop</code></pre>
+ <p>Via Marionette, o gaiatest pode chamar o B2G Desktop quando iniciarmos o teste. Para fazer isso, você precisa passar o caminho do arquivo binário B2G bem como do perfil. No exemplo abaixo, nós incluímos a variável <code>$HOME</code> como o caminho tanto para o binário quanto para o perfil. Simplesmente é o local no qual você descompactou o B2G Desktop depois de ter baixado. O comando para executar todos os testes é:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">gaiatest --binary=$HOME/b2g/b2g-bin --profile=$HOME/b2g/gaia/profile --testvars=testvars.json --restart --type=b2g ./gaiatest/tests/functional/manifest.ini</code></pre>
+ <p>Testes que forem incompaíveis com o B2G Desktop — por exemplo, aqueles que fazem chamadas ou enviam SMS — são automaticamente ignorados pelo script de teste.</p>
+ <p>Você pode executar um teste diretamente chamando o arquivo na linha de comando:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">gaiatest --binary=$HOME/b2g/b2g-bin --profile=$HOME/b2g/gaia/profile --testvars=testvars.json --restart ./gaiatest/tests/functional/clock/test_clock_set_alarm.py</code></pre>
+ <h2 id="Testando_em_um_dispositivo_Firefox_OS">Testando em um dispositivo Firefox OS</h2>
+ <p>O teste em dispositivos reais Firefox OS é mais complicado, mas de longe fornece resultados mais precisos, pois acessa todos as características reais do dispositivo.</p>
+ <div>
+  <h3 id="Pré-requisitos_2">Pré-requisitos</h3>
+  <ul>
+   <li><a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Debugging/Installing_ADB">Android Debug Bridge instalado</a> e o arquivo de <a href="https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">udev rules configurado.</a></li>
+   <li>Um dispositivo Firefox OS com uma compilação com o Marionette habilitado</li>
+   <li>O <em>branch</em><em> </em>d<em>o</em> <a href="https://github.com/mozilla-b2g/gaia/">repositório Gaia no Github</a> referente ao seu dispositivo Firefox OS clonado e atualizado.</li>
+   <li>Um arquivo <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Testes_IU_Gaia_Executando_Testes#testvars">testvars.json file</a> criado.</li>
+  </ul>
+ </div>
+ <h3 id="Executando_os_testes_2">Executando os testes</h3>
+ <p>O pacote gaiatest é necessário para a execução dos testes. Nós precisamos instalá-lo para o <em>branch</em> o qual queremos executar o testes. Navegue no diretório <code>gaia/tests/python/gaia-ui-tests/</code> e instale o gatatest com o seguinte comando:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">python setup.py develop</code></pre>
+ <div class="note">
+  <p><strong>Nota</strong>: Antes de começar a executar o teste, leia <a href="https://developer.mozilla.org/pt-BR/docs/Gaia_Test_Runner#Risks" title="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks">este aviso</a> a fim de certificar-se de que a execução dos testes gaia-ui-tests em um dispositivo pode apagar os dados do mesmo.</p>
+ </div>
+ <p>O Marionette que está rodando no dispositivo, aguarda comandos na porta 2828. Devido a isso, precisamos direcionar nossa porta local para a porta remota no dispositivo usando o adb. Execute o seguinte comando:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">adb forward tcp:2828 tcp:2828</code></pre>
+ <p>Você pode usar o seguinte comando para executar todos os testes gaia-ui-tests:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">gaiatest --address=localhost:2828 --testvars=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TESTVARS_FILE</span><span class="token punctuation">&gt;</span></span> --restart --type=b2g gaiatest/tests/functional/manifest.ini</code></pre>
+ <p>Ou use o comando a seguir se você quiser executar um teste simples (substituindo a última parte pelo teste real que você quer fazer):</p>
+ <pre class="brush: bash  language-html"><code class="language-html">gaiatest --address=localhost:2828 --testvars=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TESTVARS_FILE</span><span class="token punctuation">&gt;</span></span> --restart gaiatest/tests/functional/clock/test_clock_create_new_alarm.py</code></pre>
+ <p>Após o teste, você verá todos os resultados e registro de rastreamento para cada arquivo.</p>
+ <div class="note">
+  <p><strong>Nota</strong>: Você pode receber um erro ao executar esses testes — <code>ImportError: No module named bluetooth</code>. Se isso acontecer, substitutua a seguinte parte do comando <code>--type=b2g</code> por <code>--type=b2g-bluetooth</code> para excluir os testes de bluetooth. Alternativamente você pode instalar o pacote PyBluez python que possibilita executar o teste do dispositivo via bluetooth.</p>
+ </div>
+ <h2 id="Executando_os_testes_usando_Travis_para_desenvolvedores_Gecko_and_Gaia_developers">Executando os testes usando Travis para desenvolvedores Gecko and Gaia developers</h2>
+ <p><a href="https://travis-ci.com/">Travis</a> é uma plataforma de integração contínua utilizada para executar os testes gaia-ui-tests (e outras coisas). Nessa seção nós vamos explorar como você você se benefica se pretende executar um grande número de testes.</p>
+ <p>Executando os testes usando nossa configuração do Travis é bastante simples — o script de instlação baixará o Gecko e preparará um perfil Gaia para você. O script de instalação usa o mozilla-download que por sua vez usa <a href="http://nodejs.org/download/">nodejs</a> e npm para baixar a última versão do Gecko.</p>
+ <div>
+  <h3 id="Pré-requisitos_3">Pré-requisitos</h3>
+  <ul>
+   <li>O repositório <a href="https://github.com/mozilla-b2g/gaia/">Gaia no Github</a> (para preparar o perfil Gaia e instalar o gaiatest e arquivos de teste).</li>
+   <li>Um <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Testes_IU_Gaia_Executando_Testes#testvars">arquvo testvars.json</a> criado (como explicado na importante seção abaixo).</li>
+   <li>nodejs e npm instalados (são usado para baixar o Gecko.)</li>
+  </ul>
+ </div>
+ <h3 id="Instalando_o_Gecko_e_compilando_o_Gaia_usando_nosso_script_do_Travis">Instalando o Gecko e compilando o Gaia usando nosso script do Travis</h3>
+ <div class="note">
+  <p><strong>Nota</strong>: Se você já tem um diretório b2g/ no Gaia então o script de instlação do  Travis ignorará essa etapa. Se você precisa da última versão do Gecko, apague o diretório b2g/ antes de executar o script.</p>
+ </div>
+ <p>O script Travis deve ser executado a partir do diretório raiz do <code>gaia/</code>. Execute o seguinte comando:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">tests/travis_ci/gaia_ui_tests/install</code></pre>
+ <p>O script criará um ambiente virutal do Python (<em>package sandbox</em>) bem como os pacotes necessários para executar o gaia-ui-tests, incluindo uma nova versão do B2G desktip e uma <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Gaia/Hacking#Debug_desktop_make">compilação desktop do Gaia</a>. O ambiente virtual será instalado no diretóri <code>travis_venv</code>.</p>
+ <h3 id="Executando_os_testes_3">Executando os testes</h3>
+ <p>A execução dos testes fica a cargo do arquivo <code>script</code>, que envolve a linha de comando padão:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">tests/travis_ci/gaia_ui_tests/script</code></pre>
+ <p>Esse comando executa:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">$ export GAIATEST_ACKNOWLEDGED_RISKS=true
+$ export GAIATEST_SKIP_WARNING=true
+$ root=tests/python/gaia-ui-tests/gaiatest
+$ b2g=`find b2g -follow -name "b2g-bin" | tail -n 1`
+$ python $root/cli.py --app=b2gdesktop \
+--binary=$b2g \
+--profile=profile \
+--type=b2g \
+--timeout=10000 \
+tests/python/gaia-ui-tests/gaiatest/tests/accessibility/lockscreen/test_a11y_un\
+lock_to_homescreen.py</code></pre>
+ <p>O arquivo <code>script</code> pode ser editado para direcionar para arquivos ou diretórios de testes específicos e adicionar parâmetros de linha de comando — especifcamente a linha que executa cli.py.</p>
+ <div class="warning">
+  <p><strong>Importante</strong>: Quando usar o B2G Desktop ou um Emulator, tente manter o cursor do mouse longe da janela do B2G para que eventos de ponteiro não atrapalhem a execução dos testes.</p>
+ </div>
+ <div class="note">
+  <p><strong>Nota</strong>: Você pode executar o comando <code>deactivate</code> para voltar para o console normal quando o teste finalizar.</p>
+ </div>
+ <h2 id="Encontrando_o_relatório_HTML_em_um_trabalho_finalizado_do_Travis">Encontrando o relatório HTML em um trabalho finalizado do Travis</h2>
+ <p>A final dos testes do Travis é produzido um relatório HTML e feito um upload para um espaço público da web.</p>
+ <ol>
+  <li>Abra o trabalho gaia-ui-tests job para um <em>pull request</em> ou <em>commit</em></li>
+  <li>Role a tela para baixo até a seção "after_script" e expanda o texto</li>
+  <li>Próximo do final do "after_script", a saída do console mostra a localização do relatório na Amazon AWS</li>
+ </ol>
+ <p>Quando os testes são executados localmente você pode encontrar o relatório em <code>gaia/artifacts/gaia_ui_tests_report.html</code></p>
+ <div class="note">
+  <p><strong>Nota</strong>: Até o momento isso só funciona para commits de merge, mas esperamos usar isso em pull requests no futuro.</p>
+ </div>
+ <h2 id="Testando_localmente_com_configuração_TBPL_para_desenvolvedores_Gecko_e_Gaia"><a name="RunningTBPL"></a>Testando localmente com configuração TBPL para desenvolvedores Gecko e Gaia</h2>
+ <p>Nesta seção, vamos nos concentrar em replicar um teste TBPL localmente. Antes disso você precisa estar ciente de que é construído um perfil Gaia separado. O perfil que vem empacotado com a compilação TBPL não é o mesmo perfil que o TBPL utiliza.</p>
+ <div>
+  <h3 id="Pré-requisitos_4">Pré-requisitos</h3>
+  <ul>
+   <li>Uma compilação B2G desktop. Você pode <a href="http://nightly.mozilla.org/">baixá-la</a> and descompactá-la em um diretório do seu computador ou em uma máquina virtual ou <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client#Building_the_desktop_client">compilar uma você mesmo</a>, incluindo <code>ENABLE_MARIONETTE=1</code> no seu  mozconfig.</li>
+   <li>O <a href="https://github.com/mozilla-b2g/gaia/">reposiório Gaia do Github</a> (para prepara o perfil Gaia e instalar o gaiatest e os arquivos de testes).</li>
+   <li>Um <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Testes_IU_Gaia_Executando_Testes#testvars">arquivo testvars.json</a> criado.</li>
+  </ul>
+ </div>
+ <h3 id="Compilando_um_perfil_Gaia_com_as_configurações_TBPL's">Compilando um perfil Gaia com as configurações TBPL's</h3>
+ <p>Antes de compilar um perfil nós necessitamos verificar as variáveis de ambiente usadas para compilar o perfil. Procurando no "brief log" do teste Gu, encontre esse bloco de comando:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">Using env: {'DEBUG': '0',
+            'DESKTOP': '0',
+            'DESKTOP_SHIMS': '1',
+            'NOFTU': '0'}</code></pre>
+ <p>Essas configurações podem alterar drasticamente o comportamento do B2G. É muito importante fazer coincidir as configurações do TBPL.</p>
+ <p>O próximo passo é fazer o <em>checkout</em> do <em>commit</em> do git que coincide com o commit do hg que roda no TBPL. Você também pode encontrar o commit do hg no "brief log" do TBPL, mas você próprio vai precisar correlacionar com <em>commit</em> do git.</p>
+ <p>O reposiório de teste do gaia inclui um script <code>make</code> para compilar um perfil Gaia. Navegue no reposiório do Gaia que você clonou localmente e compile o perfil usando as variáveis de ambiente que nós encontramos no TBPL:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">DEBUG=0 DESKTOP=0 DESKTOP_SHIMS=1 NOFTU=0 make</code></pre>
+ <h3 id="Executando_os_testes_4">Executando os testes</h3>
+ <p>Use o mesmo commit do git que o TBPL usou para executar o teste, vá para o diretório <code>gaia/tests/python/gaia-ui-tests</code> e instale o gaiatest usando o seguinte comando:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">python setup.py develop</code></pre>
+ <p>Agora que você tem o perfil Gaia, a única diferença significante para executar esses testes é que você deve direcionar o gaiatest para os locais do binário do B2G e do profile. Como o TBPL é executado em um ambiente isolado, ele usa o próprio conjunto de testes, configurado em <code>tbpl-manifest.ini</code>.</p>
+ <p>Dentro do diretório <code>gaia-ui-tests</code> directory, execute o comando a seguir, com as seguintes substituições:</p>
+ <ul>
+  <li><code>$BINARY_PATH</code>: O caminho para o arquivo <code>b2g-bin</code> no diretório que você compilou ou descompactou o B2G.</li>
+  <li><code>$PROFILE_PATH</code>: O caminho para o seu perfil Gaia compilado localmente. Se compilado a partir do repositório Gaia será <code>~/gaia/profile</code>.</li>
+ </ul>
+ <pre class="brush: bash  language-html"><code class="language-html">gaiatest --binary $BINARY_PATH/b2g/b2g-bin --profile $PROFILE_PATH/profile --restart --testvars testvars.json gaiatest/tests/tbpl-manifest.ini --type=b2g</code></pre>
+ <div class="note">
+  <p><strong>Nota</strong>: Não há necessidade de direcionar a porta 2828 a menos que você tenha configurado o servidor do Marionette para usar uma porta padrão diferente.</p>
+ </div>
+ <div class="warning">
+  <p><strong>Important</strong>e: Tente manter o cursor do seu mouse longe da janela do b2g uma vez que pode atrapalhar na execução dos testes.</p>
+ </div>
+ <h3 id="Encontrando_um_relatório_HTML_do_trabllho_realizado_pelo_TBPL">Encontrando um relatório HTML do trabllho realizado pelo TBPL</h3>
+ <p>Todos os trabalhos TBPL (os que passaram e os que falharam) possuí um relatório gerado e armazenado.</p>
+ <ol>
+  <li>Para o commit, clique <em>Gu</em>.</li>
+  <li>Na barra de status, abaixo do TBPL procure a seção entitulada <em>TinderboxPrint: Uploaded output.html</em>.</li>
+  <li>Copie o link para um navegador e veja o relatório.</li>
+ </ol>
+ <h2 id="Teste_em_um_binário_que_já_esteja_sendo_executado">Teste em um binário que já esteja sendo executado</h2>
+ <p>Nessa seção nós vamos verificar como realizar testes em um Desktop B2G em execução com código fonte modificado.</p>
+ <div>
+  <h3 id="Pré-requisitos_5">Pré-requisitos</h3>
+  <ul>
+   <li>Uma compilação B2G desktop com suas alterações no Gecko. Você pode <a href="http://nightly.mozilla.org/">baixá-la</a> and descompactá-la em um diretório do seu computador ou em uma máquina virtual ou <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Using_the_B2G_desktop_client#Building_the_desktop_client">compilar uma você mesmo</a>, incluindo <code>ENABLE_MARIONETTE=1</code> no seu  mozconfig.</li>
+   <li>Um depurador a sua escolha conectado ao binário B2G</li>
+   <li>O <a href="https://github.com/mozilla-b2g/gaia/">reposiório Gaia do Github</a> (para prepara o perfil Gaia e instalar o gaiatest e os arquivos de testes).</li>
+   <li>Um <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Testes_IU_Gaia_Executando_Testes#testvars">arquivo testvars.json</a> criado.</li>
+  </ul>
+ </div>
+ <h3 id="Running_the_tests">Running the tests</h3>
+ <p>Running tests against an existing b2g process is quite easy — you've already gone through the hard parts to build B2G!</p>
+ <p>If you have not already installed gaiatest then do so now by going to <code>gaia/tests/python/gaia-ui-tests</code> and running the following:</p>
+ <pre class="brush: bash  language-html"><code class="language-html">python setup.py develop</code></pre>
+ <p>Once you have started the b2g binary process and attached your debugger you need to direct gaiatest to the port using the <code>--address</code> command. Do not use <code>--binary</code> or <code>--profile</code>, otherwise gaiatest will just send commands directly to the port without attempting to start or close the binary.</p>
+ <pre class="brush: bash  language-html"><code class="language-html">gaiatest --testvars testvars.json gaiatest/tests/functional/test_that_is_being_debugged.py</code></pre>
+ <div class="note">
+  <p><strong>Note</strong>: We have omitted the <code>--restart</code> command too. As gaiatest does not attempt to stop or start the binary some data from your test run may be left behind in Firefox OS databases or even in the DOM. It is your responsibility to reset B2G back to a basic state before trying to run the test for a second time.</p>
+ </div>
+ <h2 id="Variáveis_de_teste_(testvars.json)"><a name="testvars">Variáveis de teste (testvars.json)</a></h2>
+ <p>O gaia-ui-tests vai limpar os banco de dados do seu aparelho para fornecer um perfil limpo para as rotinas de teste. Gaiatest tem uma proteção contra a execução e apagamento dos dados do seu dispositivo. Leia <a href="https://developer.mozilla.org/pt-br/docs/Gaia_Test_Runner#Risks" title="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks">esse aviso</a> antes de configurar seu arquivo de variáveis de teste.</p>
+ <p>Podemos usar a opção <code>--testvars</code> para passar variáveis locais, particularmente aquelas que não podem ser verificadas no repositório. Por exemplo, no gaia-ui-tests existem variáveis que podem ser suas credenciais privadas, número de telefone ou detalhes da sua conexção WiFi.</p>
+ <p>Para usar isso, copie <code>testvars_template.json</code> para um outro arquivo e não esqueça de adicioná-lo ao arquivo <code>.gitignore</code> para que não seja enviado ao seu repositório remoto.</p>
+ <p>E quando for executar seus testes adicione o argumento: <code>--testvars=(filename).json</code></p>
+ <h3 id="Como_configurar_o_WiFi_usando_o_arquivo_testvars.json_(para_dispositivos)"><strong>Como configurar o WiFi usando o arquivo </strong>testvars.json (para dispositivos)</h3>
+ <p>Para que as rotinas de teste consigam utilizar a sua conexão WiFi é necessário registar no arquivo <code>testvars.json</code>.</p>
+ <p>Sem autenticação WiFi:</p>
+ <pre class="language-html"><code class="brush: bash language-html">"wifi": { "ssid": "MyNetwork"} </code></pre>
+ <p>autenticação WEP:</p>
+ <pre class="language-html"><code class="language-html">"wifi": { "ssid": "MyNetwork", "keyManagement": "WEP", "wep": "MyPassword" } </code></pre>
+ <p>autenticação WPA-PSK:</p>
+ <pre class="language-html"><code class="language-html">"wifi": { "ssid": "MyNetwork", "keyManagement": "WPA-PSK", "psk": "MyPassword" } </code></pre>
+ <div class="note">
+  <p>Devido ao <a href="http://bugzil.la/775499">Bug 775499</a>, conexões WiFi via WPA-EAP não são possíveis nesse momento.</p>
+ </div>
+ <p> </p>
+ <h2 id="Resolução_de_problemas">Resolução de problemas</h2>
+ <p>Essa seção detalha algumas mensagens comuns de erro e algumas dicas de como resolver os problemas.</p>
+ <h3 id="Problemas_comuns_antes_do_início_do_teste">Problemas comuns antes do início do teste</h3>
+ <table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col" style="text-align: center;"><strong>Mensagem de erro </strong></th>
+    <th scope="col" style="text-align: center;"><strong>Ações correspondentes</strong></th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>error: [Errno 111] Connection refused</td>
+    <td>
+     <p>Execute novamente o comando "adb forward tcp:2828 tcp:2828"<br>
+      <br>
+      O processo B2G não está rodando</p>
+    </td>
+   </tr>
+   <tr>
+    <td>Element ... not visible before timeout</td>
+    <td>
+     <p>Certifique-se de que o elemento deveria ser exibido no aplicativo que você está testando.</p>
+    </td>
+   </tr>
+   <tr>
+    <td>TimeoutException: Condition timed out</td>
+    <td>Certifique-se de que a condição no aplicativo é a mesma que você espera.</td>
+   </tr>
+   <tr>
+    <td>marionette.errors.MarionetteException: localhost:2828 is unavailable.</td>
+    <td>Algo está bloqueando a porta, normalmente o comando `adb forward`. `adb kill-server` pode resolver. Ou o aplicativo pode ter sido fechado mantendo a porta aberta.</td>
+   </tr>
+   <tr>
+    <td>ImportError: No module named bluetooth</td>
+    <td>
+     <p>Substitua no comando <code>--type=b2g</code> por <code>--type=b2g-bluetooth</code><br>
+      OU<br>
+      Instale o pacote pybluez Python bluetooth<br>
+       </p>
+    </td>
+   </tr>
+   <tr>
+    <td>OSError: [Errno 2] No such file or directory: '~/moz/gaia/profile'</td>
+    <td>Não utilize ~ na linha de comando significando $HOME. Escreva o caminho completo</td>
+   </tr>
+  </tbody>
+ </table>
+ <p> </p>
+</div>
+<p> </p>

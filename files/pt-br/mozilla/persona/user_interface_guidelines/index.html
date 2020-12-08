@@ -1,0 +1,64 @@
+---
+title: User Interface guidelines
+slug: Mozilla/Persona/User_interface_guidelines
+translation_of: Archive/Mozilla/Persona/User_interface_guidelines
+---
+<p>Presenting sign-in options to users without confusing them can be difficult, especially if your site offers multiple sign-in options. This article aims to provide guidance about the best way to present Persona sign-in to your users. It covers four different possible approaches, depending on the different sign-in options the website supports:</p>
+<ul>
+ <li><a href="#persona-only">only Persona</a></li>
+ <li><a href="#persona_plus_traditional">Persona + "traditional sign-in"</a> (that is, sign in with a username and password stored on the site)</li>
+ <li><a href="#persona_plus_federated">Persona + one or more other federated sign-in options</a> such as Facebook Connect</li>
+ <li><a href="#persona_plus_traditional_plus_federated">Persona + "traditional sign-in" + one or more other federated sign-in options</a></li>
+</ul>
+<p>In each approach there are three user interface elements to consider:</p>
+<ul>
+ <li>the Sign in/Sign up link, displayed on pages when the user is not signed in</li>
+ <li>the Sign up view: the interface that appears when the user clicks "Sign up"</li>
+ <li>the Sign in view: the interface that appears when the user clicks "Sign in"</li>
+</ul>
+<p>None of the recommendations here are mandatory.</p>
+<h2 id="Persona_only"><a name="persona-only">Persona only</a></h2>
+<p>If Persona is the only sign-in option presented to users, this offers the least confusing user experience, because the user has fewer choices to make.</p>
+<h3 id="Sign_upSign_in_link">Sign up/Sign in link</h3>
+<p>You can show just show a single link labeled "Sign up/Sign in". It's recommended that you also include the Persona icon, as this helps users know what to expect when they click the link:<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/6773/persona-only-signin-link.png" style="width: 323px; height: 132px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_up_view">Sign up view</h3>
+<p>You don't need to implement the sign up view at all, as Persona takes care of it for you.</p>
+<h3 id="Sign_in_view">Sign in view</h3>
+<p>Similarly, you don't need to implement the Sign in view, as Persona takes care of it.</p>
+<h2 id="Persona_traditional_sign-in"><a name="persona_plus_traditional">Persona + traditional sign-in</a></h2>
+<p>In this case you support Persona alongside traditional sign-in, where you ask users for a username and password which you then store yourself.</p>
+<h3 id="Sign_upSign_in_link_2">Sign up/Sign in link</h3>
+<p>You can show the text "Sign up/Sign in", with separate links for each choice:<img alt="" src="https://mdn.mozillademos.org/files/6775/persona-plus-signin-link.png" style="width: 296px; height: 142px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_up_view_2">Sign up view</h3>
+<p>When a user clicks "Sign up" you'll need to offer them the choice to sign up using Persona or to create a new username and password on your site.</p>
+<p>In this case it's recommended that the button for the Persona option includes the Persona icon and is labeled "Email" rather than "Persona". Users don't know what "Persona" means and won't see it as a valid sign-up option:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6777/persona-plus-trad-signup.png" style="width: 274px; height: 387px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_in_view_2">Sign in view</h3>
+<p>When the user clicks "Sign in" you'll offer them the choice to sign in with Persona or the account they created on your site. This can be just like the "Sign up view", except you won't include the password confirmation field:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6779/persona-plus-trad-signin.png" style="width: 273px; height: 349px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h2 id="Persona_federated_sign-in"><a name="persona_plus_federated">Persona + federated sign-in</a></h2>
+<p>In this case you support Persona alongside one or more other federated sign-in options such as Facebook Connect or Google+.</p>
+<h3 id="Sign_upSign_in_link_3">Sign up/Sign in link</h3>
+<p>You can show the text "Sign up/Sign in", with separate links for each choice:<img alt="" src="https://mdn.mozillademos.org/files/6775/persona-plus-signin-link.png" style="width: 296px; height: 142px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_up_view_3">Sign up view</h3>
+<p>When a user clicks "Sign up" you'll need to offer them the choice to sign up using Persona or to sign up using one of the other federated identity options.</p>
+<p>In this case it's recommended that the button for the Persona option includes the Persona icon and is labeled "Email" rather than "Persona". Users don't know what "Persona" means and won't see it as a valid sign-up option:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6783/persona-plus-fed-signup.png" style="width: 275px; height: 185px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_in_view_3">Sign in view</h3>
+<p>When the user clicks "Sign in" you'll offer them the choice to sign in with Persona or one of the other federated sign-in options. This can be just like the "Sign up view":</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6785/persona-plus-fed-signin.png" style="width: 275px; height: 187px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h2 id="Persona_traditional_sign-in_federated_sign-in"><a name="persona_plus_traditional_plus_federated">Persona + traditional sign-in + federated sign-in</a></h2>
+<p>In this case you support everything: Persona, traditional sign-in, and one or more additional federated sign-in options.</p>
+<h3 id="Sign_upSign_in_link_4">Sign up/Sign in link</h3>
+<p>You can show the text "Sign up/Sign in", with separate links for each choice:<img alt="" src="https://mdn.mozillademos.org/files/6775/persona-plus-signin-link.png" style="width: 296px; height: 142px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_up_view_4">Sign up view</h3>
+<p>When a user clicks "Sign up" you'll need to offer them the choice to sign up using Persona, to create a new username and password on your site, or to sign up using one of the other federated identity options.</p>
+<p>In this case it's recommended that the button for the Persona option includes the Persona icon and is labeled "Email" rather than "Persona". Users don't know what "Persona" means and won't see it as a valid sign-up option:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6787/persona-plus-everything-signup.png" style="width: 275px; height: 411px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="Sign_in_view_4">Sign in view</h3>
+<p>When the user clicks "Sign in" you'll offer them the choice to sign in with Persona, one of the other federated options, or the account they created on your site. This can be just like the "Sign up view", except you won't include the password confirmation field:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/6789/persona-plus-everything-signin.png" style="width: 275px; height: 375px; display: block; margin-left: auto; margin-right: auto;"></p>
+<h2 id="More_Info">More Info</h2>
+<p>You can find more information about Persona's visual design in <a href="http://people.mozilla.org/~smartell/persona/" title="http://people.mozilla.org/~smartell/persona/">Sean Martell's style primer</a>.</p>

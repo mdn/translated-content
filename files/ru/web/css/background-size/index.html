@@ -1,0 +1,250 @@
+---
+title: background-size
+slug: Web/CSS/background-size
+translation_of: Web/CSS/background-size
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Значение <strong><code>background-size</code></strong> в <a href="/en-US/docs/CSS" title="CSS">CSS</a> позволяет задавать размер фонового изображения. Изображение может быть оставлено в исходном размере, растянуто, или подогнано под размеры доступного пространства.</p>
+
+<div class="note"><strong>Предупреждение:</strong> Если значение этого свойства не задано в сокращенном свойстве {{cssxref("background")}}, которое применяется к элементу после CSS свойства <code>background-size</code>, то значение этого свойства затем сбрасывается до исходного значения c помощью сокращеного свойства.</div>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: css">/* Ключевые слова */
+background-size: cover;
+background-size: contain;
+
+/* Указано одно значение - ширина изображения, */
+/* высота в таком случае устанавливается в auto */
+background-size: 50%;
+background-size: 3em;
+background-size: 12px;
+background-size: auto;
+
+/* Указаны два значения - */
+/* ширина и высота соответственно */
+background-size: 50% auto;
+background-size: 3em 25%;
+background-size: auto 6px;
+background-size: auto auto;
+
+/* Значения для нескольких фонов */
+/* Не путайте такую запись с background-size: auto auto */
+background-size: auto, auto;
+background-size: 50%, 25%, 25%;
+background-size: 6px, auto, contain;
+
+/* Глобальные значения */
+background-size: inherit;
+background-size: initial;
+background-size: unset;
+</pre>
+
+<h3 id="Значения">Значения</h3>
+
+<dl>
+ <dt><code>&lt;размер&gt;</code></dt>
+ <dd>Значение <code>{{cssxref("&lt;length&gt;")}}</code> позволяет масштабировать размер фонового изображения в заданном измерении. Отрицательный размер не допускается.</dd>
+ <dt><code>&lt;проценты&gt;</code></dt>
+ <dd>Значение <code>{{cssxref("&lt;percentage&gt;")}}</code>, которое масштабирует фоновое изображение в соответствующем измерении до указанного процента области расположения фона, которое определяется значением {{cssxref("background-origin")}}. Область расположения фона по умолчанию является областью, содержащей содержимое поля и его отступы; область также может быть изменена на содержимое или область, содержащую границы, отступы и содержимое. Если {{cssxref("background-attachment","attachment")}} фона является <code>fixed</code>, область позиционирования фона вместо этого является всей областью окна браузера, не включая область, покрытую полосами прокрутки, если они присутствуют. Отрицательные проценты не допускаются.</dd>
+ <dt><code>auto</code></dt>
+ <dd>Значение позволяет изменять размер фонового изображения в соответствии с заданным направлением, сохраняя его пропорции.</dd>
+ <dt><code>contain</code></dt>
+ <dd>Масштабирует картинку так, чтобы она максимально накрыла собой весь блок. Картинка при этом не обрезается, а вписывается в блок с сохранением пропорций.</dd>
+ <dt><code>cover</code></dt>
+ <dd>Ключевое слово, обратное <code>contain</code>. Масштабирует изображение как можно больше c сохранением пропорций изображения (изображение не становится сплющенным). Когда изображение и контейнер имеют разные размеры, <em>изображение обрезается</em> либо влево / вправо, либо сверху / снизу.</dd>
+</dl>
+
+<p>Интерпретация возможных значений зависит от внутренних размеров изображений (ширина и высота) и внутренней пропорции (соотношение ширины и высоты). Растровое изображение всегда имеет внутренние размеры и внутреннюю пропорцию. Векторное изображение может иметь оба внутренних размера (и, следовательно, должно иметь внутреннюю пропорцию). Он также может иметь одно или не иметь внутренних размеров, и в любом случае он может иметь или не иметь внутреннюю пропорцию. Градиенты обрабатываются как изображения без внутренних размеров или внутренней пропорции.</p>
+
+<div class="note">
+<p><strong>Предупреждение: </strong>Это поведение изменилось в Gecko 8.0 {{geckoRelease("8.0")}}. До этого, градиенты обрабатывались как изображения без внутренних размеров, с внутренней пропоцией, идентичной пропорции области расположения фона.</p>
+</div>
+
+<p>Фоновые изображения, сгенерированные из элементов с использованием {{cssxref("-moz-element")}} (которые фактически соответсвуют элементу) в настоящее время обрабатываются как изображения с размерами элемента, или как область расположения фона, если элементом является SVG, с соответсвующей внутренней пропорцией.</p>
+
+<div class="note"><strong>Предупреждение:</strong> Это не определенное в настоящее время поведение, которое заключается в том, что внутренние размеры и пропорция должны быть такими же как у элемента во всех случаях.</div>
+
+<p>Визуализированный размер фоного изображения затем вычисляется следующим способом:</p>
+
+<dl>
+ <dt><font face="Open Sans, Arial, sans-serif">Если оба атрибута в </font><code>background-size</code> заданы и различны от <code>auto</code>:</dt>
+ <dd>Фоновое изображение отображается в указанном размере.</dd>
+ <dt>Если <code>background-size</code> содержит <code>contain</code> или <code>cover</code>:</dt>
+ <dd>Изображение визуализируется с сохранением его внутренней пропорции при наибольшем размере, который содержится внутри области размещения фона или покрывает ее. Если изображение не имеет внутренней пропорции, оно отображается с размером области расположения фона.</dd>
+ <dt>Если <code>background-size</code> установлен как <code>auto</code> или <code>auto auto</code>:</dt>
+ <dd>Если изображение имеет оба внутренних размера, оно отображается с таким размером. Если оно не имеет внутренних размеров и внутренней пропорции, оно отображается с размером области расположения фона. Если оно не имеет размеров, но имеет пропорцию, оно отображается так, если был был бы указан <code>contain</code>. Если изображение имеет один внутренний размер и пропорцию, оно отображается с размером, определенным этим одним размером и пропорцией. Если изображение имеет один внутренний размер, но не имеет пропоцию, оно отображается с использованием внутреннего размера и соответсвующим размером области позиционирования фона.</dd>
+ <dt>Если background-size содержит один атрибут <code>auto</code> и один не-<code>auto</code>:</dt>
+ <dd>Если изображение имеет внутреннюю пропорцию, то визуализируйте его используя указанный размер, и вычислите другой размер из указанного размера и внутренней пропорции. Если изображение не имет внутренней пропорции, используйте указанный размер для этого размера. Для другого размера, используйте соответсвующее внутреннее измерение изображения, если оно есть. Если такого внутреннего размера нет, используйте соответствующий размер области расположения фона.</dd>
+</dl>
+
+<p>Обратите внимание, что изменение размера фона для векторных изображений, в которых отсутствуют внутренние размеры или пропорции, еще не полностью реализовано во всех браузерах. Будьте осторожны, полагаясь на поведение, описанное выше, и тестируйте в нескольких браузерах (в частности, включая версии Firefox 7 или более ранней версии и Firefox 8 или более поздней версии), чтобы убедиться, что различные визуализации приемлемы.</p>
+
+<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+
+<pre class="syntaxbox">{{csssyntax}}
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p><a href="http://whereswalden.com/files/mozilla/background-size/page-cover.html">Эта демонстрация <code>background-size: cover</code></a> и <a href="http://whereswalden.com/files/mozilla/background-size/page-contain.html">эта демонстрация <code>background-size: contain</code></a> предназначены для открытия в новых окнах, чтобы вы могли видеть, как <code>contain</code> и <code>cover</code> ведут себя, когда размеры области расположения фона изменяются. <a href="http://whereswalden.com/files/mozilla/background-size/more-examples.html">Эта серия демонстраций, как работает <code>background-size</code> и взаимодействует с другими свойствами <code>background-*</code></a>, должна в значительной степени охватить оставшуюся основу в том, как использовать <code>background-size</code> отдельно и в сочетании с другими свойствами.</p>
+
+<h2 id="Замечания">Замечания</h2>
+
+<p>Если вы указываете градиент в качестве фона и указали <code>background-size</code>, который будет использоваться вместе с ним, лучше не указывать размер, который использует единственную автоматическую составную часть, или задается с использованием только значения ширины (для примера, <code>background-size: 50%</code>). Рендеринг градиентов в таких случаях изменился в Firefox 8, и в настоящее время он обычно несовместим во всех браузерах, которые не реализуют рендеринг в соответствии с <a href="http://www.w3.org/TR/css3-background/#the-background-size" title="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 спецификацией <code>background-size</code> </a>и с <a href="http://dev.w3.org/csswg/css3-images/#gradients" title="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 спецификацией градиента значений изображения</a>.</p>
+
+<pre class="brush: css">.bar {
+       width: 50px; height: 100px;
+       background-image: gradient(...);
+
+       /* Лучше не использовать */
+       background-size: 25px;
+       background-size: 50%;
+       background-size: auto 50px;
+       background-size: auto 50%;
+
+       /* Допускается */
+       background-size: 25px 50px;
+       background-size: 50% 50%;
+}
+</pre>
+
+<p>Обратите внимание, что особенно не рекомендуется использовать размер в пикселях и размер <code>auto</code> с градиентом, потому что невозможно воспроизвести рендеринг в версиях Firefox до 8 и в браузерах, не реализующих рендеринг Firefox 8, без знания точного размера элемента, фон которого указывается.</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Первоначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th colspan="3">Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td rowspan="2">Базовая поддержка</td>
+   <td>1.0{{property_prefix("-webkit")}} [2]</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}{{property_prefix("-moz")}} [4]</td>
+   <td rowspan="2">9.0 [5]</td>
+   <td>9.5{{property_prefix("-o")}}<br>
+    with some bugs [1]</td>
+   <td>3.0 (522){{property_prefix("-webkit")}}<br>
+    but from an older CSS3 draft [2]</td>
+  </tr>
+  <tr>
+   <td>3.0</td>
+   <td>{{CompatGeckoDesktop("2.0")}}</td>
+   <td>10.0</td>
+   <td>4.1 (532)</td>
+  </tr>
+  <tr>
+   <td>Поддержка значений<br>
+    <code>contain</code> и <code>cover</code></td>
+   <td>3.0</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
+   <td>9.0 [5]</td>
+   <td>10.0</td>
+   <td colspan="3">4.1 (532)</td>
+  </tr>
+  <tr>
+   <td>Поддержка SVG фонов</td>
+   <td>44.0</td>
+   <td>{{CompatGeckoDesktop("8.0")}}</td>
+   <td>9.0</td>
+   <td>31.0</td>
+   <td colspan="3">{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Особенность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Windows Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
+    2.3</td>
+   <td>1.0{{property_prefix("-moz")}}<br>
+    4.0</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>5.1 (maybe earlier)</td>
+  </tr>
+  <tr>
+   <td>Поддержка SVG фонов</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("8.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<ul>
+ <li>[1] В Opera 9.5 вычисление области расположения фона некорректно для фиксированных фонов. Opera 9.5 также интерпретирует форму с двумя значениями как горизонтальный масштабный коэффициент и, по-видимому, вертикальное измерение <em>отсечения</em>. Это было исправлено в Opera 10.</li>
+ <li>[2] Браузеры на основе WebKit изначально реализовали более старый черновик  CSS3 <code>background-size</code>, в котором пропущенное второе значение рассматривается как <em>дублирующее</em> первое значение; этот черновик не включает в себя ключевые слова <code>contain</code> или <code>cover</code>.</li>
+ <li>[3] Konqueror 3.5.4 поддерживает <code>-khtml-background-size</code>.</li>
+ <li>[4] Хотя это свойство является новым в Gecko 1.9.2 (Firefox 3.6), в Firefox 3.5 можно полностью растянуть изображение поверх фона, используя {{cssxref("-moz-border-image")}}.
+  <pre class="brush:css">.foo {
+  background-image: url(bg-image.png);
+
+  -webkit-background-size: 100% 100%;           /* Safari 3.0 */
+     -moz-background-size: 100% 100%;           /* Gecko 1.9.2 (Firefox 3.6) */
+       -o-background-size: 100% 100%;           /* Opera 9.5 */
+          background-size: 100% 100%;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+
+  -moz-border-image: url(bg-image.png) 0;    /* Gecko 1.9.1 (Firefox 3.5) */
+}</pre>
+ </li>
+ <li>[5] Хотя Internet Explorer 8 не поддерживает значение <code>background-size</code>, с помощью нестандартного атрибута <code>-ms-filter</code>  возможно воспроизвести некоторые его возможности:
+  <pre class="brush:css">-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";</pre>
+  Это имитирует значение <code>cover</code>.</li>
+</ul>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/CSS_Reference" title="CSS Reference">Справочник по CSS</a></li>
+ <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Несколько фонов</a></li>
+ <li><a href="/en-US/docs/CSS/Scaling_background_images" title="CSS/Scaling_background_images">Масштабирование фонового изображения</a></li>
+</ul>

@@ -1,0 +1,40 @@
+---
+title: Criação de uma barra lateral do Firefox
+slug: Mozilla/Criacao_barra_lateral_Firefox
+tags:
+  - Extensões
+  - Extras
+  - Firefox
+translation_of: Mozilla/Creating_a_Firefox_sidebar
+---
+<p>Os publicadores da Web podem oferecer aos visitantes uma <strong>barra lateral do Firefox</strong> para encorajar à sua participação. Existem duas maneiras de criar uma barra lateral para os utilizadores do Firefox: a API Social e uma extensão. Pode escolher dependendo das suas necessidades e recursos.</p>
+
+<h2 id="A_API_Social">A API Social</h2>
+
+<div class="geckoVersionNote">
+<p>Este conteúdo abrange as funcionalidades introduzidas no <a href="/en-US/docs/Mozilla/Firefox/Releases/17">Firefox 17</a>.</p>
+</div>
+
+<p>A <a href="/pt-PT/docs/Social_API">API Social</a> é uma nova API da Mozilla que permite aos serviços de redes sociais integrar o seu conteúdo na jabela do navegador. De momento, o <a href="https://blog.mozilla.org/blog/2013/05/14/stay-social-with-firefox/">Cliqz, </a><a href="https://blog.mozilla.org/blog/2012/12/03/firefox-gets-social-w-facebook/">Facebook</a>, <a href="https://blog.mozilla.org/blog/2013/05/14/stay-social-with-firefox/">mixi e a MSN</a> têm uma parceria com a Mozilla, como provedores sociais. Agora que a <a href="https://blog.mozilla.org/futurereleases/2013/06/27/social-api-for-all/">API está disponível para todos os programadores da Web</a>, então vale a pena conferir se está a oferecer um serviço social.</p>
+
+<h2 id="Uma_extensão">Uma extensão</h2>
+
+<p>An <a href="/en-US/docs/Extensions">extension</a> is a kind of <a href="/en-US/docs/Mozilla/Add-ons">add-ons</a> that adds new functionalities to Firefox. There is a wide range of extensions available, and <a href="https://addons.mozilla.org/en-US/firefox/search/?q=sidebar">some of them provide a sidebar</a>. Such kind of sidebar can be a simple Web panel or a full-featured extension that is completely integrated with the browser. There are some ways to create an extension:</p>
+
+<ul>
+ <li>The <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_sidebar">new sidebar API</a> has been implemented in Firefox 29 as part of the <a href="/en-US/Add-ons/SDK">Add-on SDK</a>. It's the easiest way to create an extension with a sidebar.</li>
+ <li>You can also build a <a href="/en-US/Add-ons/Bootstrapped_extensions">restartless extension</a> yourself without the SDK. A <a href="https://github.com/kyoshino/simple-sidebar">sample extension to add a Web panel</a> is available as a starter.</li>
+ <li>If you'd like to have a deeper integration with the browser to offer more complex features, a <a href="/en-US/docs/Creating_a_Firefox_sidebar_extension">traditional overlay extension</a> can be an option. The document might be obsolete, though.</li>
+</ul>
+
+<h2 id="A_API_window.sidebar">A API <code>window.sidebar</code></h2>
+
+<p>{{ obsolete_header(23) }}</p>
+
+<p>As of <a href="/en-US/docs/Mozilla/Firefox/Releases/23">Firefox 23</a>, the <code>addPanel</code> and <code>addPersistentPanel</code> functions have been removed from the deprecated, Netscape-derived {{ domxref("window.sidebar") }} object. That means the ability to add a traditional sidebar panel is no longer available from Web content. The new Social API or an extension can be used instead as described above.</p>
+
+<h2 id="Consulte_Também">Consulte Também</h2>
+
+<ul>
+ <li>Bootstrap addon demo which adds a sidebar with browser for HTML content: <a href="https://gist.github.com/Noitidart/8728393">https://gist.github.com/Noitidart/8728393</a></li>
+</ul>

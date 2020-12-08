@@ -1,0 +1,82 @@
+---
+title: Dodawanie przycisków
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_przycisków
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Buttons
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_okna" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_etykiet_i_obrazków">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule zajmiemy się dodawaniem przycisków do okna.
+</p>
+<h3 id="Dodawanie_przycisk.C3.B3w_do_okna" name="Dodawanie_przycisk.C3.B3w_do_okna"> Dodawanie przycisków do okna </h3>
+<p>Okno, które utworzyliśmy, jest puste, więc niezbyt ciekawe. W tym rozdziale dodamy dwa przyciski, Znajdź oraz Anuluj. Nauczymy się też w prosty sposób układać je w oknie.
+</p><p>Podobnie jak HTML, XUL posiada wiele znaczników, które mogą zostać użyte do tworzenia elementów interfejsu użytkownika. Najprostszym z nich jest znacznik <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>, który jest używany do tworzenia prostych przycisków.
+</p><p>Element <code>button</code> posiada dwie główne własności: <code>label</code> (etykietę) oraz <code>image</code> (obrazek). Możesz skorzystać z jednej lub z obu. Zatem przycisk może posiadać tylko etykietę, tylko obrazek lub obie własności jednocześnie. Przyciski najczęściej stosuje się do tworzenia przycisków &lt;tt&gt;OK&lt;/tt&gt; i &lt;tt&gt;Anuluj&lt;/tt&gt; wykorzystanych w oknach dialogowych.
+</p>
+<h4 id="Sk.C5.82adnia_przycisk.C3.B3w" name="Sk.C5.82adnia_przycisk.C3.B3w"> Składnia przycisków </h4>
+<p>Znacznik <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> ma następującą składnię:
+</p>
+<pre>&lt;button
+    id="identifier"
+    class="dialog"
+    label="OK"
+    image="images/image.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+<p>Znaczenie poszczególnych atrybutów (wszystkie są opcjonalne):
+</p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code> </dt><dd> Unikatowy identyfikator, za pomocą którego można odwoływać się do przycisku. Ten atrybut posiadają wszystkie elementy. Będziemy z niego korzystać za każdym razem, gdy będziemy chcieli się odwołać do przycisku w arkuszu stylów lub w skrypcie. Powinno się go używać we wszystkich elementach., ale w tym kursie czasami został on pominięty dla zwiększenia czytelności.
+</dd><dt> <code id="a-class"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/class">class</a></code> </dt><dd> Klasa stylu przycisku. Działa na tej samej zasadzie jak w HTML-u. Atrybutu używa się do wskazania stylu, który będzie wyświetlony w przycisku. W tym przypadku nadano mu wartość <code>dialog</code>. W większości przypadków nie będziemy używali klasy dla przycisku.
+</dd><dt> <code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code> </dt><dd> Etykieta, która pojawi się na przycisku, np. &lt;tt&gt;OK&lt;/tt&gt; lub &lt;tt&gt;Anuluj&lt;/tt&gt;. Jeśli atrybut zostanie pominięty, na przycisku nie pojawi się żaden tekst. </dd><dt> <code id="a-image"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/image">image</a></code> </dt><dd> URL obrazka pojawiającego się na przycisku. Jeśli atrybut zostanie pomięty, przycisk pozostanie bez obrazka. Obrazek również można przypisać w arkuszu stylów używając do tego własności <code><a href="pl/CSS/list-style-image">list-style-image</a></code>.
+</dd><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code> </dt><dd> Jeśli ten atrybut zostanie ustawiony na <code>true</code>, przycisk zostanie wyłączony. Objawia się to zwykle jego "wyszarzeniem". Jeśli jest wyłączony, nie może być wykonana powiązana z nim funkcja. Domyślnie przycisk jest włączony. Do zmiany stanu przycisku można użyć języka <a href="pl/JavaScript">JavaScript</a>.
+</dd><dt> <code id="a-accesskey"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/accesskey">accesskey</a></code> </dt><dd> Wartością tego atrybutu powinna być litera używana w skrócie klawiaturowym. Litera ta powinna występować w etykiecie przycisku, wówczas zostanie wyróżniona - zwykle poprzez podkreślenie. Kiedy użytkownik naciśnie ALT (lub analogiczny klawisz, w zależności od używanej platformy systemowej) i klawisz skrótu, wybrany przycisk zostanie wywołany z jakiegokolwiek miejsca w oknie.
+</dd></dl>
+<p>Przycisk obsługuje więcej atrybutów poza tymi, które zostały wymienione powyżej. Zostaną one omówione w <a href="pl/Kurs_XUL/Dodatkowe_mo%c5%bcliwo%c5%9bci_przycisku">dalszej części kursu</a>.
+</p>
+<h4 id="Kilka_przyk.C5.82ad.C3.B3w_przycisk.C3.B3w" name="Kilka_przyk.C5.82ad.C3.B3w_przycisk.C3.B3w"> Kilka przykładów przycisków </h4>
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="grafika:buttons1.png"></div>
+<pre>&lt;button label="Normaly"/&gt;
+&lt;button label="Wyłączony" disabled="true"/&gt;
+</pre>
+<p>W przykładzie przedstawionym powyżej pierwszy przycisk jest normalnym przyciskiem. Drugi natomiast jest wyłączony, co jest widoczne poprzez jego "wyszarzenie".
+</p><p><br>
+Rozpoczynamy od utworzenia zwykłego przycisku &lt;tt&gt;Znajdź&lt;/tt&gt;, który znajdzie się w oknie narzędzia do szukania plików. Poniżej znajduje się kod, który dodamy do przykładu &lt;tt&gt;findfile.xul&lt;/tt&gt;.
+</p>
+<pre>&lt;button id="find-button" label="Znajdź"/&gt;
+</pre>
+<div class="note">W Firefoksie 1.0 nie jest dozwolone otwieranie okien chrome z sieci WWW, więc odnośniki &lt;tt&gt;Podgląd&lt;/tt&gt; w tym kursie będą otwierane w zwykłych oknach przeglądarki. Z tego też powodu przyciski zostaną rozciągnięte do pełnego rozmiaru okna przeglądarki. Aby zapobiec rozciągnięciu się naszego przykładu, dodaj ten fragment kodu <code>align="start"</code> do znacznika window.</div>
+<div class="highlight">
+<h5 id="Przyk.C5.82ad_findfile.xul" name="Przyk.C5.82ad_findfile.xul"> Przykład &lt;tt&gt;findfile.xul&lt;/tt&gt; </h5>
+<p>Dodajmy kod do pliku &lt;tt&gt;findfile.xul&lt;/tt&gt;, który utworzyliśmy w poprzednim artykule. Kod musi być wstawiony pomiędzy znacznikami <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>. Fragment kodu zaznaczony na czerwono dodajmy do naszego przykładu: </p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window
+   id="findfile-window"
+   title="Znajdź pliki"
+   orient="horizontal"
+   xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+   <span class="highlightred">&lt;button id="find-button" label="Znajdź"/&gt;</span>
+   <span class="highlightred">&lt;button id="cancel-button" label="Anuluj"/&gt;</span>
+
+&lt;/window&gt;
+</pre>
+<div class="float-right"><img alt="grafika:buttons2.png"></div>
+Dodany został również przycisk &lt;tt&gt;Anuluj&lt;/tt&gt;. Ponieważ w oknie została określona orientacja pozioma, oba przyciski umieszczone są obok siebie. Jeśli otworzymy plik z przykładowym kodem w przeglądarce Mozilla, powinniśmy otrzymać podobne okno do obrazka z boku.</div>
+<div class="note">Nie powinno się umieszczać etykiety bezpośrednio w pliku XUL. Zamiast tego <a href="pl/Kurs_XUL/Lokalizacja">powinniśmy używać encji, aby tekst mógł być łatwo tłumaczony</a>.</div>
+<p>W następnym temacie nauczymy się <a href="pl/Kurs_XUL/Dodawanie_etykiet_i_obrazk%c3%b3w">umieszczać w oknie etykiety i obrazki</a>.
+</p><p><small>Zobacz także <a href="pl/Kurs_XUL/Dodatkowe_mo%c5%bcliwo%c5%9bci_przycisku">Dodatkowe możliwości przycisku</a></small>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Tworzenie_okna" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_etykiet_i_obrazków">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

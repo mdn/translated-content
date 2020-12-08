@@ -1,0 +1,687 @@
+---
+title: Arquitetura do Firefox OS
+slug: Archive/B2G_OS/Platform/Architecture
+translation_of: Archive/B2G_OS/Architecture
+---
+<p> </p>
+
+<div class="overheadIndicator draft">
+<p><strong>Rascunho</strong><br>
+ Esta página está incompleta.</p>
+</div>
+
+<p> </p>
+
+<p>Este artigo traz uma visão geral da arquitetura da plataforma Firefox OS, introduzindo conceitos chaves e explicações básicas de como os componentes se interagem.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Lembre-se que o Firefox OS ainda é um produto tipo <em>pre-release</em>, ou seja, a arquitetura não é final e está sujeita a mudanças.</p>
+</div>
+
+<h2 id="Terminologia_Firefox_OS">Terminologia Firefox OS</h2>
+
+<p>Existem alguns termos que você precisa saber para entender melhor o Firefox OS.</p>
+
+<dl>
+ <dt>B2G</dt>
+ <dd>Versão abreviada para <em>Boot to Gecko</em>.</dd>
+ <dt>Boot to Gecko</dt>
+ <dd>O codinome do projeto Firefox OS que era o termo anteriormente utilizado antes do nome oficial, Firefox OS, ser lançado. É comum ver o termo B2G ser utilizado em casos que não são específicos ao Firefox OS, por exemplo quando desenvolvedores estão interessados na infra estrutura geral e usos que não estão atrelados com a agenda ou as prioridades do Firefox OS.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Gaia">Gaia</a></dt>
+ <dd>É a interface visual do Firefox OS, que apresenta a experiência do sistema ao usuário. A camada Gaia contém várias aplicações padrão como Tela de Bloqueio e Tela Inicial, e várias aplicações que são esperadas em um <em>smartphone</em>. O Gaia é completamente implementado com padrões web como HTML, CSS, JavaScript, dentre outros. As interfaces entre a camada web e os recursos do sistema operacional são feitas via APIs web — algumas abertas e outras que estão em desenvolvimento na camada Gecko. O Gaia oferece maneiras para a instalação de aplicações de terceiros.</dd>
+ <dt><a href="/en-US/docs/Gecko" title="/en-US/docs/Accessibility/AT-APIs/Gecko">Gecko</a></dt>
+ <dd>Este é o <em>runtime</em> web específico para as aplicações do Firefox OS. O Gecko oferece uma infra estrutura de padrões web como HTML5, CSS, SVG, WebGL, JavaScript, dentre outros. Ele também oferece recursos do sistema como <em>device API </em>assim permitindo que aplicações web possam acessar serviços do dispositivo móvel, como por exemplo o GPS e câmera. O Gecko também carrega várias funcionalidades básicas que são importantes para que aplicações web possam rodar corretamente, como a camada de rede e segurança, a camada de gráficos, o motor máquina virtual JavaScript, o <em>engine </em>de layout, dentre outros.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Gonk" title="/en-US/docs/Mozilla/Firefox_OS/Gonk">Gonk</a></dt>
+ <dd>O Gonk é a camada mais baixa do sistema operacional e consiste em um kernel Linux (baseado no <a href="http://source.android.com/">Android Open Source Project</a> (AOSP)) e o HAL (<em>hardware abstraction layer). </em>O kernel e várias das bibliotecas são ligados a projetos de código aberto conhecidos: Linux, libusb, bluez, dentre outros. Algumas outras partes do HAL são compartilhadas com o projeto Android: GPS, camera, dentre outros. Pode-se dizer que o Gonk é uma distribuição Linux simplificada. O Gonk é uma plataforma alvo (<em><strong>porting target</strong></em>) do Gecko, ou seja, existe o <em>target </em>Gonk assim como existem plataformas de saída para Mac OS X, Windows, e Android. Uma vez que o projeto do Firefox OS tem controle sobre o Gonk, é possível que interfaces baixo nível sejam expostas ao Gecko, por exemplo, o acesso direto para a pilha de serviços de telefonia e também o acesso direto ao <em>frame buffer </em>gráfico. Estas características são novas e não ocorrem no caso de outros sistemas operacionais.</dd>
+ <dt><a name="Jank">Jank</a></dt>
+ <dd>Esse termo, geralmente usado no mundo dos aplicativos móveis, refere-se ao efeito dos códigos que geram demora ou ineficiência na operação dos aplicativos, bloqueando a atualização da Interface do Usuário causando travamentos ou demora na resposta. Nossos engenheiros que trabalham no Gaia usam diversas técnicas de otimização para tentar evitar isso.</dd>
+</dl>
+
+<h2 id="Diagrama_da_arquitetura">Diagrama da arquitetura</h2>
+
+<p><img alt="Firefox OS Architecture" src="https://developer.mozilla.org/files/4605/FirefoxOS.png" style="display: block; height: 915px; margin: 0px auto; width: 754px;"></p>
+
+<dl>
+ <dt> </dt>
+ <dt style="text-align: center;"> </dt>
+</dl>
+
+<h2 id="Procedimento_de_bootup_do_Firefox_OS"><a name="Firefox_OS_bootup_procedure"></a>Procedimento de <em>bootup</em> do Firefox OS</h2>
+
+<p>Essa seção descreve o processo pelo qual o dispositivo Firefox OS inicializa, que partes são envolvidas e onde. Como uma referência rápida, o sistema geral de <em>bootup</em> flui dos <em>bootloaders</em> no <em>Kernel space</em>, para iniciar no código nativo, para o B2G e então para o Gecko no <em>userspace</em>, e finalmente na aplicação do sistema, gerenciador de janelas e na tela inicial dentro do Gecko. Os demais aplicativos são executados em cima dessa estrutura.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7491/bootup.png" style="display: block; height: 1979px; margin: 0px auto; width: 2112px;"></p>
+
+<h3 id="O_processo_de_inicialização_bootstrapping">O processo de inicialização <em>bootstrapping</em></h3>
+
+<p>Quando um dispositivo com o Firefox OS é ligado, a execução dá inicio no <em>bootloader</em> primário. A partir deste ponto é carregado o sistema operacional da forma tradicional. A partir desse momento, o processo e carga do sistema continua da forma típica; uma sucessão de <em>bootloaders</em> com nível cada vez mais alto inicializa a próxima carga na cadeia. Ao final desse processo, a execução é transferida para o kernel do Linux.</p>
+
+<p>Existem alguns pontos que merecem destaque no processo de inicialização:</p>
+
+<ul>
+ <li>Os <em>bootloaders</em> normalmente apresentam uma tela inicial vista pelo usuário durante a inicialização; normalmente um logo do fabricante.</li>
+ <li>As implementações de <em>bootloaders</em> normalmente são feitas copiando uma imagem para a memória flash do dispositivo. Diferentes dispositivos, utilizam diferentes protocolos; muitos dispositivos utilizam o <a href="http://android-dls.com/wiki/index.php?title=Fastboot" title="http://android-dls.com/wiki/index.php?title=Fastboot">protocolo fastboot</a>, mas o Samsung Galaxy S II, por exemplo, utiliza o protocolo odin.</li>
+ <li>Ao final do processo de inicialização, a imagem do modem é normalmente carragada e executada no processador do modem. Como isso acontece é uma característica muito específica do dispositivo e costuma ser uma tecnologia proprietária.</li>
+</ul>
+
+<h3 id="O_kernel_do_Linux">O kernel do Linux</h3>
+
+<p>O(s) kernel(s) do Linux utilizado(s) pelo Gonk é muito similar ao original do Linux, do qual é derivado. Existem algumas alterações feitas pelo AOSP (<a href="http://source.android.com/" title="http://source.android.com/">Android Open Source Project</a>) que ainda não foram migradas. Adicionalmente, fabricantes alteram o kernel e geram essas alterações no seu próprio cronograma. Em geral, porém, o kernel do Linux está próximo do original.</p>
+
+<p>O <a href="http://en.wikipedia.org/wiki/Linux_startup_process" title="http://en.wikipedia.org/wiki/Linux_startup_process">processo de inicialização do Linux</a> está bem documentado em diversos lugares da internet, assim esse artigo não irá cobrí-lo.</p>
+
+<p>O Kernel do Linux executará processos essenciais definidos em <code>init.rc</code> e o sucessor <a href="https://github.com/mozilla-b2g/gonk-misc/blob/master/init.b2g.rc">init.b2g.rc</a> para inicializar processos como <code>b2g</code> (processo básico do FirefoxOS, que contém o Gecko) e <code>rild</code> (processos relacionados à telefonia e que possuem diversos <em>chipsets</em> proprietários) — veja abaixo para maiores detalhes. Ao final desse processo, um novo processo do <em>userspace</em> chamado <code>init</code> é iniciado, como na maioria do sistemas tipo UNIX.</p>
+
+<p>Neste ponto da execução, o único "disco" montado é a <em>RAM disk</em>. Que é compilada durante o processo de compilação do Firefox OS, e contém programas utilitários críticos, como o <code>init</code>, assim como outros scripts de inicialização e módulos carregáveis do kernel.</p>
+
+<p>Uma vez que o processo <code>init</code> é iniciado, o kernel do Linux manipula as chamadas do sistema do <em>userspace</em> e as interrupções vindas dos dispositivos de hardware. Muitas características do hardware são apresentadas ao <em>userspace</em> através do <a href="http://en.wikipedia.org/wiki/Sysfs" title="http://en.wikipedia.org/wiki/Sysfs"><code>sysfs</code></a>. Por exemplo, a seguir um <a href="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277" title="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277">trecho do código</a> que lê o estado de carga da bateria a partir do Gecko:</p>
+
+<pre>FILE *capacityFile = fopen("/sys/class/power_supply/battery/capacity", "r");
+double capacity = dom::battery::kDefaultLevel * 100;
+if (capacityFile) {
+  fscanf(capacityFile, "%lf", &amp;capacity);
+  fclose(capacityFile);
+}</pre>
+
+<h3 id="O_processo_de_inicialização">O processo de inicialização</h3>
+
+<p><span class="author-g-ivm1l4nswhut8ons">No Gonk, o processo <code>init</code> faz a montagem dos sistemas de arquivos e dispara os serviços do sistema</span> operacional. Após isso, ele funciona como um gerenciador de processos. Esse processo é semelhante ao <code>init</code> em outros sistemas operacionais tipo UNIX. Ele interpreta scripts (ou seja, os arquivos <code>init*.rc</code>) que consistem em comandos que descrevem o que deve ser feito para iniciar vários serviços. O arquivo <code>init.rc</code> do Firefox OS é basicamente o arquivo <code>init.rc</code> do Android para o dispositivo com as correções necessárias para incluir as funcionalidades exigidas pelo <code>kick-start</code> do Firefox OS, e varia de acordo com o dispositivo.</p>
+
+<p>Uma tarefa chave que o processo <code>init</code> gerencia é a inicialização do processo <code>b2g</code>; que é o núcleo do sistema operacional Firefox OS.</p>
+
+<p>O código no arquivo <code>init.rc</code> que faz a inicialização parece com isso:</p>
+
+<pre>service b2g /system/bin/b2g.sh
+    class main
+    onrestart restart media</pre>
+
+<div class="note">
+<p><strong>Nota:</strong> A maneira exata de como o <code>init.rc</code> difere da versão do Android varia de um dispositivo para o outro; algumas vezes o arquivo <code>init.b2g.rc</code> é simplesmente adicionado, outras vezes as correções são mais significantes.</p>
+</div>
+
+<h2 id="A_arquitetura_do_userspace_de_processos">A arquitetura do <em>userspace</em> de processos</h2>
+
+<p>Agora é útil uma visão geral de como os vários compontes do Firefox OS se encaixam e interagem uns com os outros. Esse diagrama mostra o processo primário do <em>userspace</em> no Firefox OS.</p>
+
+<p><a href="/files/3849/B2G userspace architecture.svg"><img alt="Userspace diagram" src="/files/3849/B2G%20userspace%20architecture.svg" style="float: right; height: 491px; position: relative; width: 520px;"></a></p>
+
+<div class="note">
+<p><strong>Nota:</strong> Tenha em mente que o Firefox OS encontra-se sob desenvolvimento, esse diagrama pode sofrer alterações e pode não estar totalmente correto.</p>
+</div>
+
+<p>O processo <code>b2g</code> é o processo primário de sistema. Ele roda sob alto privilégio; com acesso a maioria dos dispositivos de hardware. <code>b2g</code> comunica-se com o modem, escreve no buffer de tela, interage com GPS, câmeras e outras funcionalidades do hardware. Internamente <code>b2g</code> executa a camada Gecko (implementada por <code>libxul.so</code>). Veja <a href="#Gecko">Gecko</a> para conhecer os detalhes de como a camada Gecko funciona, e como o <code>b2g</code> comunica-se com ele.</p>
+
+<h3 id="b2g">b2g</h3>
+
+<p>O processo <code>b2g</code> é responsável por disparar um número de processos de baixo privilégio. Esses processos estão onde as aplicações web e outros conteúdos web são carregados. Eles comunicam-se com o processo principal do servidor Gecko através do <a href="/pt-BR/docs/IPDL" title="/en-US/docs/IPDL">IPDL</a>, um sistema de transmissão de mensagens.</p>
+
+<p>O processo <code>b2g</code> executa libxul, que faz referência a <code>b2g/chrome/app/b2g.js</code> para obter as preferências padrão. A partir das preferências será aberto o arquivo HTML <code>b2g/chrome/content/shell.html</code>, que é compilado dentro do arquivo <code>omni.ja</code>. <code>shell.html</code> inclui o arquivo <code>b2g/chrome/content/shell.js</code>, que dispara o aplicativo Gaia <code>system</code>.</p>
+
+<h3 id="rild">rild</h3>
+
+<p>O processo <code>rild</code> é a interface com o processador do modem. <code>rild</code> é um serviço que implementa a <strong><em>Radio Interface Layer</em></strong> (RIL). É um código proprietário implementado pelo fornecedor do hardware que conversa com o hardware do modem. O <code>processo</code> rild possibilita a conexão com um socket UNIX-domain com o qual é vinculado. O processo é iniciado por um código no script <code>init</code> como descrito abaixo.</p>
+
+<pre>service ril-daemon /system/bin/rild
+    socket rild stream 660 root radio</pre>
+
+<h3 id="rilproxy">rilproxy</h3>
+
+<p>No Firefox OS, o cliente do processo <code>rild</code> é o processo <code>rildproxy</code>. Atua como um <em>dumb forwarding proxy</em> entre o <code>rild</code> e o <code>b2g</code>. A necessidade desse proxy é um detalhe de implementação; por enquanto podemos resumir que ele é realmente necessário. The <a href="https://github.com/mozilla-b2g/rilproxy" title="https://github.com/mozilla-b2g/rilproxy">o código do <code>rilproxy</code> pode ser encontrado no GitHub</a>.</p>
+
+<h3 id="mediaserver">mediaserver</h3>
+
+<p>O processo <a href="https://github.com/android/platform_frameworks_base/tree/ics-mr0-release/media/libmediaplayerservice"><code>mediaserver</code></a> controla a execução de vídeo e audio. O Gecko comunica-se com esse processo através de um mecanismo RPC (<em>Remote Procedure Call</em>) do Android. Algumas das mídias que o Gecko pode executar (audio OGG Vorbis, vídeo OGG Theora, e vídeo <a href="http://www.webmproject.org/about/" title="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDUQFjAA&amp;url=http%3A%2F%2Fwww.webmproject.org%2F&amp;ei=8Q84UOnoMoHH6wHZ44DwBA&amp;usg=AFQjCNHK9j6wyhUful5RmKCpU6b8GDfpYQ&amp;sig2=tCl8VxL3mCvrH86EyOwO_A">WebM</a>) são decodificadas pelo Gecko e enviadas diretamente para o processo <code>mediaservice</code>. Outros arquivos de mídia são decoficiados pelo <code>libstagefright</code>, que é capaz de acessar <em>codecs</em> proprietários e <em>encoders</em> de hardware.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> O processo <code>mediaserver</code> é um componente "temporário" do Firefox OS; ele faz parte do projeto para ajudar o trabalho inicial do desenvolvimento, mas há a expectativa de não ser mais utilizado. Mas provavelmente isso não acontecerá antes do lançamento do Firefox OS 2.0.</p>
+</div>
+
+<h3 id="netd">netd</h3>
+
+<p>O processo <code>netd</code> é utilizado para configurar interfaces de rede.</p>
+
+<h3 id="wpa_supplicant">wpa_supplicant</h3>
+
+<p>O processo <code>wpa_supplicant</code> é um serviço padrão UNIX que gerencia a conectividade com os pontos de acesso WiFi.</p>
+
+<h3 id="dbus-daemon">dbus-daemon</h3>
+
+<p>O processo <code>dbus-daemon</code> implementa <a href="http://www.freedesktop.org/wiki/Software/dbus" title="http://www.freedesktop.org/wiki/Software/dbus">D-Bus</a>, um sistema de barramento de mensagens utilizado pelo Firefox OS para comunicação Bluetooth.</p>
+
+<h2 id="Gecko">Gecko</h2>
+
+<p>O <a href="/pt-BR/docs/Mozilla/Gecko" title="/en-US/docs/Gecko">Gecko</a>, como já mencionado, é o responsável pela implementação dos padrões web (<a href="/pt-BR/docs/Web/HTML" title="/en-US/docs/HTML">HTML</a>, <a href="/pt-BR/docs/CSS" title="/en-US/docs/CSS">CSS</a>, and <a href="/pt-BR/docs/Javascript" title="/en-US/docs/JavaScript">JavaScript</a>) <span class="author-g-ivm1l4nswhut8ons">que é a infraestrutura que implementa tudo que o usuário vê no Firefox OS.</span></p>
+
+<div class="note">
+<p><strong>Nota</strong>: Para procurar o Gecko codebase, você pode usar <a href="http://dxr.mozilla.org">http://dxr.mozilla.org</a>. É mais elegante e fornece boas referências futuras, mas com repositórios limitados. Ou você pode tentar o tradicional <a href="http://mxr.mozilla.org">http://mxr.mozilla.org</a>, que contém mais projetos Mozilla.</p>
+</div>
+
+<h3 id="Arquivos_Gecko_relacionados_com_Firefox_OS">Arquivos Gecko relacionados com Firefox OS</h3>
+
+<h5 id="b2g_2">b2g/</h5>
+
+<p>O diretório b2g contém principalmente funções relacionadas com o Firefox.</p>
+
+<h5 id="b2gchromecontent">b2g/chrome/content</h5>
+
+<p>Contém arquivos JavaScript que são executados acima do aplicativo <em>system</em>.</p>
+
+<h5 id="b2gchromecontentshell.html">b2g/chrome/content/shell.html</h5>
+
+<p>É o ponto de entrada do Gaia — o HTML para o aplicativo system. <code>shell.html</code> chamado em <code>settings.js</code> e <code>shell.js</code>:</p>
+
+<pre class="brush: html  language-html"><code class="language-html"><span class="script token"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/javascript;version<span class="punctuation token">=</span>1.8<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>chrome://browser/content/settings.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span> <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></span>
+<span class="script token"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/javascript;version<span class="punctuation token">=</span>1.8<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>chrome://browser/content/shell.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span> <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></span></code></pre>
+
+<p><code>settings.js</code> contém parâmetros padrão do sistema.</p>
+
+<h5 id="b2gchromecontentshell.js">b2g/chrome/content/shell.js</h5>
+
+<p><code>shell.js</code> é o primeiro script a carregar no aplicativo Gaia <code>system</code>.</p>
+
+<p><code>shell.js</code> importa todos os módulos necessários, registra <em>listeners</em> chave, define <code>sendCustomEvent</code> e <code>sendChromeEvent</code> para comunicar com o Gaia e fornece a instalação de programas de ajuda de aplicativos web: <code>indexedDB quota</code>, <code>RemoteDebugger</code>, <code>keyboard helper</code> e <code>screenshot tool</code>.</p>
+
+<p>Mas a função mais importante do <code>shell.js</code> é iniciar o aplicativo Gaia <code>system</code>, em seguida, entregar os sistemas relacionados à gestão para o aplicativo <code>system</code>.</p>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">let</span> systemAppFrame <span class="operator token">=</span>
+  document<span class="punctuation token">.</span><span class="function token">createElementNS<span class="punctuation token">(</span></span><span class="string token">'http://www.w3.org/1999/xhtml'</span><span class="punctuation token">,</span> <span class="string token">'html:iframe'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+  container<span class="punctuation token">.</span><span class="function token">appendChild<span class="punctuation token">(</span></span>systemAppFrame<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<h5 id="b2gchromeappb2g.js">b2g/chrome/app/b2g.js</h5>
+
+<p>Esse script contém configurações pré-definidas, como about:config no navegador, e o mesmo <code>pref.js </code>do Gaia. Essas configurações podem ser alteradas do aplicativos Configurações e podem ser sobre-escritas pelo <code>user.js</code> do Gaia no script de compilação do Gaia.</p>
+
+<h5 id="domAPI">dom/{API}</h5>
+
+<p>Novas implementações de API (post-b2g) ficará no diretório <code>dom/</code>. APIs velhas ficarão em <code>dom/base</code>, por examplo <code>navigator.cpp</code>.</p>
+
+<h5 id="domapps">dom/apps</h5>
+
+<p><code>.jsm</code> será carregado — <code>.js</code> implementações API como instalação <code>webapp.js</code>, <code>getSelf</code>, etc.</p>
+
+<h5 id="domappssrc">dom/apps/src/</h5>
+
+<p>Todas as permissões são definidas em <a href="http://mxr.mozilla.org/mozilla-central/source/dom/apps/src/PermissionsTable.jsm">PermissionsTable.jsm</a></p>
+
+<h5 id="domwebidl">dom/webidl</h5>
+
+<p>WebIDL é a linguagem usada para definir APIs web. Para os atributos suportados veja <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings">WebIDL_bindings</a>.</p>
+
+<h5 id="mozillacentralhalgonk">mozilla/central/hal/gonk</h5>
+
+<p>Esse diretório contém arquivos relacionados à camada de portabilidade do gonk.</p>
+
+<h4 id="Generated_files">Generated files</h4>
+
+<h5 id="modulelibprefsrcinitall.js">module/libpref/src/init/all.js</h5>
+
+<p>Contém todos os arquivos de configuração.</p>
+
+<h5 id="systemb2g_omni.ja_and_omni.js">/system/b2g/ omni.ja and omni.js</h5>
+
+<p>Contém o pacote de estilos para recursos do dispositivo.</p>
+
+<h3 id="Processando_eventos_de_entrada">Processando eventos de entrada</h3>
+
+<p>Muitas ações dentro do Gecko são desencadeadas por ações de usuários. Essas ações são representadas por eventos (como pressionar botões, toques na tela, assim por diante). Esses eventos entram no Gecko através da <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">implementação do Gonk</a> na <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppShell" title="">nsIAppShell</a></code>, uma interface Gecko que é usada para representar o ponto primário de entrada para uma aplicação Gecko; ou seja, o driver do dispositivo de entrada deve chamar métodos no objeto <code>nsAppShell</code> que representa o subsistema Gecko a fim de enviar eventos para a interface do usuário.</p>
+
+<p>Por exemplo:</p>
+
+<pre>void GeckoInputDispatcher::notifyKey(nsecs_t eventTime,
+                                     int32_t deviceId,
+                                     int32_t source,
+                                     uint32_t policyFlags,
+                                     int32_t action,
+                                     int32_t flags,
+                                     int32_t keyCode,
+                                     int32_t scanCode,
+                                     int32_t metaState,
+                                     nsecs_t downTime) {
+  UserInputData data;
+  data.timeMs = nanosecsToMillisecs(eventTime);
+  data.type = UserInputData::KEY_DATA;
+  data.action = action;
+  data.flags = flags;
+  data.metaState = metaState;
+  data.key.keyCode = keyCode;
+  data.key.scanCode = scanCode;
+  {
+    MutexAutoLock lock(mQueueLock);
+    mEventQueue.push(data);
+  }
+  gAppShell-&gt;NotifyNativeEvent();
+}</pre>
+
+<p>Esses eventos vêm do sistema padrão do Linux <code>input_event</code>. O Firefox OS usa uma <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/InputReader.cpp" rel="custom">light abstraction layer</a> sobre ela que provê algumas funcionalidades interessantes como filtro de evento. Você pode ver o código que cria os eventos de entrada no método <code>EventHub::getEvents()</code>em <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/EventHub.cpp" rel="custom">EventHub.cpp</a></code>.</p>
+
+<p>Uma vez que os eventos são recebidos pelo Gecko, eles são despacahdos para dentro do DOM por <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">nsAppShell</a></code>:</p>
+
+<pre>static nsEventStatus sendKeyEventWithMsg(uint32_t keyCode,
+                                         uint32_t msg,
+                                         uint64_t timeMs,
+                                         uint32_t flags) {
+    nsKeyEvent event(true, msg, NULL);
+    event.keyCode = keyCode;
+    event.location = nsIDOMKeyEvent::DOM_KEY_LOCATION_MOBILE;
+    event.time = timeMs;
+    event.flags |= flags;
+    return nsWindow::DispatchInputEvent(event);
+}
+</pre>
+
+<p>Depois disso, os eventos ou são consumidos pelo próprio Gecko ou são enviados para as aplicações Web como <a href="/pt-BR/docs/DOM_Client_Object_Cross-Reference/DOM_Events" title="/en-US/docs/DOM_Client_Object_Cross-Reference/DOM_Events">os eventos DOM</a> <span class="author-g-ivm1l4nswhut8ons">que serão processados posteriormente, nas páginas.</span></p>
+
+<h3 id="Gráficos">Gráficos</h3>
+
+<p>No nível mais baixo, o Gecko usa <a href="http://www.khronos.org/opengles/2_X/" title="http://www.khronos.org/opengles/2_X/">OpenGL ES 2.0</a> para desenhar em um contexto do GL que empacota os buffers de <em>hardware frame</em>. Isso é executado na implementação Gonk em <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsWindow.cpp" rel="custom">nsWindow</a></code> por um código semelhante a esse:</p>
+
+<pre class="brush:cpp;">gNativeWindow = new android::FramebufferNativeWindow();
+sGLContext = GLContextProvider::CreateForWindow(this);</pre>
+
+<p>A classe <code>FramebufferNativeWindow</code> veio diretamente do Android; veja <a href="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp" title="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp"><code>FramebufferNativeWindow.cpp</code></a>. Utiliza a API <strong>gralloc</strong> API para acessar os drivers gráficos a fim de mapear os buffers dos dispositivos <em>framebuffer</em> na memória.</p>
+
+<p>O Gecko utiliza o seu sistema de camadas <a href="https://developer.mozilla.org/en-US/docs/Gecko/Layers" title="/en-US/docs/Gecko/Layers">(Layers system)</a> para desenhar um sistema composto na tela. Em resumo, o que acontece é isso:</p>
+
+<ol>
+ <li>O Gecko desenha regiões separadas das páginas em buffers de memória. Algumas vezes esses buffers ficam na memória do sistema, outras vezes, são texturas mapeadas no espaço de endereços do Gecko, o que significa que o Gecko desenha diretamente na memória de vídeo. Essa tarefa é feita no método <a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#83" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201"><code>BasicThebesLayer::PaintThebes()</code></a>.</li>
+ <li>O Gecko então compõe todas essas texturas para a tela usando comandos OpenGL. Esse composição ocorre em <a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/opengl/ThebesLayerOGL.cpp#124" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201"><code>ThebesLayerOGL::RenderTo()</code></a>.</li>
+</ol>
+
+<p>Os detalhes de como o Gecko lida com a renderização do conteúdo web está fora do escopo desse documento.</p>
+
+<h3 id="Hardware_Abstraction_Layer_(HAL)">Hardware Abstraction Layer (HAL)</h3>
+
+<p>O HAL é uma das camadas de portabilidade do Gecko. Ele manipula acessos de baixo nível às interfaces de sistema através de múltiplas plataformas usando uma API C++ que é acessível aos níveis mais altos do Gecko. Essas APIs são implementadas baseadas na plataforma dentro do próprio HAL no Gecko. Essa camada de abstração do hardware (HAL) não é acessível diretamente pelo código JavaScript no Gecko.</p>
+
+<h4 id="Como_o_HAL_funciona">Como o HAL funciona</h4>
+
+<p>Vamos considerar a API de <a href="/pt-BR/docs/Web/API/Window/navigator/vibrate" title="The documentation about this has not yet been written; please consider contributing!"><code>Vibração</code></a> como um exemplo. O HAL do Gecko para essa API é definida em <a href="https://dxr.mozilla.org/mozilla-central/source/hal/Hal.h" rel="custom">hal/Hal.h</a>. Em essência (simplificando a assinatura do método por uma questão de clareza), você tem esta função:</p>
+
+<pre>void Vibrate(const nsTArray&lt;uint32&gt; &amp;pattern);</pre>
+
+<p>Essa é a função chamada pelo código do Gecko para acionar a vibração do dispositivo de acordo com o padrão especificado, uma função correspondente existe para cancelar qualquer vibração em curso. A implementação Gonk desse método está em <a href="https://dxr.mozilla.org/mozilla-central/source/hal/conk/GonkHal.cpp" rel="custom">hal/conk/GonkHal.cpp</a>:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt; &amp;pattern) {
+  EnsureVibratorThreadInitialized();
+  sVibratorRunnable-&gt;Vibrate(pattern);
+}
+</pre>
+
+<p>Esse código envia uma requisicão ao dispositivo para iniciar a vibração em outra thread, a qual é implementada em <code>VibratorRunnable::Run()</code>. O loop principal dessa thread pode ser vista aqui:</p>
+
+<pre class="brush:cpp;">while (!mShuttingDown) {
+  if (mIndex &lt; mPattern.Length()) {
+    uint32_t duration = mPattern[mIndex];
+    if (mIndex % 2 == 0) {
+      vibrator_on(duration);
+    }
+    mIndex++;
+    mMonitor.Wait(PR_MillisecondsToInterval(duration));
+  }
+  else {
+    mMonitor.Wait();
+  }
+}
+</pre>
+
+<p><code>vibrator_on()</code>é uma API do HAL do Gonk que liga o motor que vibra o dispositivo. Internamente esse método envia uma mensagem para o drive do kernel gravando um valor específico o objeto do kernel usando <code>sysfs</code>.</p>
+
+<h4 id="Implementações_de_API_de_Fallback_do_HAL">Implementações de API de <em>Fallback</em> do HAL</h4>
+
+<p>As APIs (<span class="st">Application Programming Interface) HAL do Gecko são suportadas por todas as plataformas. Quando o Gecko é compilado para uma plataforma que não existe um motor para vibração (por exemplo, no caso de computadores de mesa), então uma rotina de <em>fallback</em> é usada. Para vibração é usada: </span> <a href="https://dxr.mozilla.org/mozilla-central/source/hal/fallback/FallbackVibration.cpp" rel="custom">hal/fallback/FallbackVibration.cpp</a>.</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt; &amp;pattern) {
+}</pre>
+
+<h4 id="Implementações_de_Sandbox">Implementações de <em>Sandbox</em></h4>
+
+<p>Devido ao fato de muitos conteúdos web são executados em processos com poucos privilégios, nós não podemos assumir que esses processos tem os privilégios necessários para, por exemplo, ligar e desligar o motor de vibração de um dispositivo. Adicionalmente, nós queremos ter um local central para lidar com algumas condições específicas em tempo de execução. No HAL do Gecko isso é feito através da implementação de uma <em>sandbox</em> que funciona como um <em>proxy</em> entre as requisições dos processos de conteúdo e as encaminha para o servidor Gecko. As requisições ao <em>proxy</em> são enviadas usando IPDL.</p>
+
+<p>Para a vibração é utilizada função <code>Vibrate()</code> em <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a>:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt;&amp; pattern, const WindowIdentifier &amp;id) {
+  AutoInfallibleTArray&lt;uint32_t, 8&gt; p(pattern);
+
+  WindowIdentifier newID(id);
+  newID.AppendProcessID();
+  Hal()-&gt;SendVibrate(p, newID.AsArray(), GetTabChildFrom(newID.GetWindow()));
+}</pre>
+
+<p>Essa função envia uma mensagem definida pela interface <code>PHal</code>, descrita pelo IPDL em <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/PHal.ipdl" rel="custom">hal/sandbox/PHal.ipdl</a>. Esse método é descrito mais ou menos dessa forma:</p>
+
+<pre>Vibrate(uint32_t[] pattern);</pre>
+
+<p>O receptor dessa mensagem é o método <code>HalParent::RecvVibrate()</code> em <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a>:</p>
+
+<pre class="brush:cpp;">virtual bool RecvVibrate(const InfallibleTArray&lt;unsigned int&gt;&amp; pattern,
+            const InfallibleTArray&lt;uint64_t&gt; &amp;id,
+            PBrowserParent *browserParent) MOZ_OVERRIDE {
+
+  hal::Vibrate(pattern, newID);
+  return true;
+}</pre>
+
+<p>Estão omitidos alguns detalhes que não são relevantes para essa discussão, porém mostra o caminho da mensagem desde o processo de conteúdo através do Gecko para o Gonk, então para a implementação <code>Vibrate()</code> do HAL no Gonk e eventualmente para os drivers gráficos.</p>
+
+<h3 id="APIs_do_DOM_(Document_Object_Model)">APIs do DOM (<em>Document Object Model</em>)</h3>
+
+<p><strong>Interfaces DOM</strong> são, em essência, como o conteúdo web comunica-se com o Gecko. Na verdade, existe muito mais coisa relacionada com esse assunto e para saber maiores detalhes verifique <a href="https://developer.mozilla.org/pt-BR/docs/DOM/About_the_Document_Object_Model" title="/en-US/docs/DOM/About_the_Document_Object_Model">esse artigo</a>. As interfaces DOM são definidas usando <a href="https://developer.mozilla.org/pt-BR/docs/XPIDL" title="/en-US/docs/XPIDL">IDL</a>, que inclui tanto a FFI (<em>Foreign Funtion Interface</em>) quanto OM (<em>Object Model</em>) entre JavaScript e C++.</p>
+
+<p>A API de vibração está disponível para o conteúdo web através da interface IDL em <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIDOMNavigator.idl" rel="custom">nsIDOMNavigator.idl</a>:</code></p>
+
+<pre>[implicit_jscontext] void mozVibrate(in jsval aPattern);</pre>
+
+<p>O argumento <a href="https://developer.mozilla.org/pt-BR/docs/SpiderMonkey/JSAPI_Reference/Jsval" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JSVAL_IS_OBJECT"><code>jsval</code></a> indica que <code>mozVibrate()</code>aceita como parâmetro de entrada qualquer valor JavaScript. O compilador IDL, <a href="https://developer.mozilla.org/en-US/docs/XPIDL/xpidl" title="/en-US/docs/XPIDL/xpidl"><code>xpidl</code></a>, gera uma interface C++ que é implementada pela classe <code>Navigator</code> em <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/base/Navigator.cpp" rel="custom">Navigator.cpp</a></code>.</p>
+
+<pre class="brush:cpp;">NS_IMETHODIMP Navigator::MozVibrate(const jsval&amp; aPattern, JSContext* cx) {
+  // ...
+  hal::Vibrate(pattern);
+  return NS_OK;
+}</pre>
+
+<p>Existe muito mais código nesse método, mas não aprofundaremos por não ser o propósito dessa discussão. O ponto é que a chamada para <code>hal::Vibrate()</code> transfere o controle do DOM para o HAL Gecko. A partir disso, nós entramos na implementação do HAL discutido na seção anterior e trabalhamos em direção ao <em>driver</em> gráfico.</p>
+
+<p><span id="result_box" lang="pt"><span class="hps">Acima disso</span><span>, a implementação</span> <span class="hps">DOM</span> <span class="hps">não se importa</span> <span class="hps">em qu</span><span class="hps">al plataforma</span> <span class="hps">que está sendo executado</span> <span class="atn hps">(</span><span>Gonk</span><span>, Windows,</span> <span class="hps">Mac</span> <span class="hps">OS X,</span> <span class="hps">ou</span> <span class="hps">qualquer outra)</span><span>.</span> <span class="hps">Ele também</span> <span class="hps">não se importa se</span> <span class="hps">o</span> <span class="hps">código está sendo executado</span> <span class="hps">em um processo de</span> <span class="hps">conteúdo ou</span> <span class="hps">no processo do servidor</span> <span class="hps">Gecko.</span> <span class="hps">Esses</span> <span class="hps">detalhes são</span> tratados em <span class="hps">níveis mais baixos</span> <span class="hps">do sistema</span><span class="hps">.</span></span></p>
+
+<p>A API de vibração é uma API muito simples, o que a torna um bom exemplo. The <a href="https://developer.mozilla.org/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">SMS API</a> é um exemplo de uma API mais complexa que usa sua própria camada "remota" conectado o processo de contéudo ao servidor.</p>
+
+<h2 id="Radio_Interface_Layer_(RIL)">Radio Interface Layer (RIL)</h2>
+
+<p>A interface RIL foi mencionada na seção <a href="#A_arquitetura_do_userspace_de_processos">A arquitetura do userspace de processos</a>. Essa seção examina como as várias peças dessa camada interage com um maior detalhe.</p>
+
+<p>Os principais componentes envolvidos no RIL são:</p>
+
+<dl>
+ <dt><code>rild</code></dt>
+ <dd>O processo que conversa com o firmware do modem proprietário.</dd>
+ <dt><code>rilproxy</code></dt>
+ <dd>O processo que intermedeia as mensagem entre o <code>rild</code> e o Gecko (que é implementado no processo <code>b2g</code>). Isso supera o problema de permissão que aparece quando tentamos acessar o <code>rild</code> diretamente, uma vez que <code>rild</code> somente pode comunicar-se através do grupo <code>radio</code>.</dd>
+ <dt><code>b2g</code></dt>
+ <dd>Esse processo também conhecido como <strong>processo chrome</strong>, implementa o Gecko. As porções desses processo que se relaciona com o RIL (<em>Radio Interface Layer</em>) são <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a> (que implementa ma thread que conversa com o <code>rild</code> através do <code>rilproxy</code> e implementa o <em>radio state machine</em>. A interface <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code>, que é a thread principal do serviço <a href="https://developer.mozilla.org/en-US/docs/XPCOM" title="/en-US/docs/XPCOM">XPCOM</a> que atua primariamente como uma troca de mensagens entre a thread <code>ril_worker.js</code> e os vários componentes Geko, incluindo o próprio processo de conteúdo Gecko.</dd>
+ <dt>Processo Gecko de conteúdo</dt>
+ <dd>Dentro do processo Gecko de conteúdo, a interface <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code> provê um serviço XPCOM que permite ao código implementar partes do DOM, como as APIs de <a href="https://developer.mozilla.org/en-US/docs/API/WebTelephony" title="/en-US/docs/API/WebTelephony">Telefonia</a> e <a href="https://developer.mozilla.org/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">SMS</a> conversar com a interface de radio, que está no processo chrome.</dd>
+</dl>
+
+<h3 id="Exemplo_Comunicando_do_rild_para_o_DOM">Exemplo: Comunicando do <code>rild</code> para o DOM</h3>
+
+<p>Vamos ver um exemplo de como as partes de baixo nível do sistema comunicam-se com o código DOM. Quando o modem recebe uma chamada, o <code>rild</code> é notificado usando um mecanismo proprietário. <code>rild</code> então prepara uma mensagem para seu cliente de acordo com o protocolo "aberto", que é descrito em <a href="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h" title="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h"><code>ril.h</code></a>. No caso do recebimento de uma chamada, uma mensagem <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code> é gerada e envida pelo <code>rild</code> ao <code>rilproxy</code>.</p>
+
+<p><code>rilproxy</code>, implementado em <a href="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c" title="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c"><code>rilproxy.c</code></a>, recebe essa mensagem em seu loop principal, que direciona a conexão para o <code>rild</code> usando um código como esse:</p>
+
+<pre class="brush:cpp;">ret = read(rilproxy_rw, data, 1024);
+
+if(ret &gt; 0) {
+  writeToSocket(rild_rw, data, ret);
+}</pre>
+
+<p>Assim que a mensagem é recebida do <code>rild</code> é encaminda ao Gecko pelo socket que conecta <code>rilproxy</code> ao Gecko. Essa mensagem é recebida pelo Gecko no <a href="https://dxr.mozilla.org/mozilla-central/source/ipc/ril/Ril.cpp" rel="custom">IPC thread</a>:</p>
+
+<pre class="brush:cpp;">int ret = read(fd, mIncoming-&gt;Data, 1024);
+// ... handle errors ...
+mIncoming-&gt;mSize = ret;
+sConsumer-&gt;MessageReceived(mIncoming.forget());
+</pre>
+
+<p>O consumidor dessas mensagens é <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/SystemWorkerManager.cpp" rel="custom">SystemWorkerManager</a>, que decompõe a mensagem e despacha para <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">ril_worker.js</a></code> uma thread que implementa o estado de máquina RIL. Isso é ocorre no método <code>RILReceiver::MessageReceived()</code>:</p>
+
+<pre class="brush:cpp;">virtual void MessageReceived(RilRawData *aMessage) {
+  nsRefPtr&lt;DispatchRILEvent&gt; dre(new DispatchRILEvent(aMessage));
+  mDispatcher-&gt;PostTask(dre);
+}</pre>
+
+<p>A tarefa enviada para essa thread, por sua vez chama a função <code>onRILMessage ()</code>, implementada em JavaScript. Isso é feito usando a função da API JavaScript <code><a href="https://developer.mozilla.org/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>()</code>:</p>
+
+<pre>return JS_CallFunctionName(aCx, obj, "onRILMessage", NS_ARRAY_LENGTH(argv),
+                           argv, argv);</pre>
+
+<p><code>onRILMessage()</code>é implementada em <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a>, processo no qual processa a mensagem dividindo seus bytes em pedaços (parcelas). Cada pedaço completo é enviada para métodos apropriados para que sejam manipulados individualmente:</p>
+
+<pre class="brush:js;">handleParcel: function handleParcel(request_type, length) {
+  let method = this[request_type];
+  if (typeof method == "function") {
+    if (DEBUG) debug("Handling parcel as " + method.name);
+    method.call(this, length);
+  }
+}
+</pre>
+
+<p>Esse código funciona obtendo o tipo de solicitação do objeto, certificando-se que é definido como uma função no código JavaScript, em seguida, chamando o método. Uma vez que <code>ril_worker.js</code> implementa cada tipo de pedido em um método com o mesmo nome que o tipo de solicitação, isso é muito simples.</p>
+
+<p>No nosso exemplo, <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code>, e o método chamado:</p>
+
+<pre class="brush:js;">RIL[UNSOLICITED_RESPONSE_CALL_STATE_CHANGED] = function UNSOLICITED_RESPONSE_CALL_STATE_CHANGED() {
+  this.getCurrentCalls();
+};</pre>
+
+<p>Como você pode ver no código acima, quando for recebida uma notificação de que o estado de chamada mudou, a máquina de estado simplesmente busca o estado da chamada atual chamando o método <code>getCurrentCall ()</code>:</p>
+
+<pre class="brush:js;">getCurrentCalls: function getCurrentCalls() {
+  Buf.simpleRequest(REQUEST_GET_CURRENT_CALLS);
+}</pre>
+
+<p>É enviada de volta uma requisição para <code>rild</code> para solicitar o estado de todas as chamadas ativas no momento. A requisição volta ao longo de um caminho similar ao caminho seguido por <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code>, mas numa direção oposta (ou seja, de <code>ril_worker.js</code> para <code>SystemWorkerManager</code> para <code>Ril.cpp</code>, então <code>rilproxy</code> e finalmente para o socket <code>rild</code>). <code>rild</code> então responde de volta pelo mesmo caminho, eventualmente chegando em <code>ril_worker.js</code> que manipula a mensagem <code>REQUEST_GET_CURRENT_CALLS</code>. E assim ocorre a comunicação bidirecional.</p>
+
+<p>O estado de chamada é então processada e comparada com o estado anterior. Se é identificada uma mudança no estado, ril_worker.js notifica o serviço<code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> na thread principal:</p>
+
+<pre class="brush:js;">_handleChangedCallState: function _handleChangedCallState(changedCall) {
+  let message = {type: "callStateChange",
+                 call: changedCall};
+  this.sendDOMMessage(message);
+}</pre>
+
+<p><code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> é implementada em <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/RadioInterfaceLayer.js" rel="custom">dom/system/gonk/RadioInterfaceLayer.js</a>; a mensagem é recebida pelo método <code>onmessage()</code>:</p>
+
+<pre class="brush:js;"> onmessage: function onmessage(event) {
+   let message = event.data;
+   debug("Received message from worker: " + JSON.stringify(message));
+   switch (message.type) {
+     case "callStateChange":
+       // This one will handle its own notifications.
+       this.handleCallStateChange(message.call);
+       break;
+   ...
+</pre>
+
+<p>O que tudo isso realmente faz é enviar a mensagem para o processo de conteúdo usando o <em>Parent Process Message Manager</em> (PPMM):</p>
+
+<pre class="brush:js;">handleCallStateChange: function handleCallStateChange(call) {
+  [some internal state updating]
+  ppmm.sendAsyncMessage("RIL:CallStateChanged", call);
+}</pre>
+
+<p>No processo de conteúdo a mensagem é recebida pelo método <code>receiveMessage()</code>no serviço <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code>, do <em>Child Process Message Manager</em> (CPMM):</p>
+
+<pre class="brush:js;">receiveMessage: function receiveMessage(msg) {
+  let request;
+  debug("Received message '" + msg.name + "': " + JSON.stringify(msg.json));
+  switch (msg.name) {
+    case "RIL:CallStateChanged":
+      this._deliverTelephonyCallback("callStateChanged",
+                                     [msg.json.callIndex, msg.json.state,
+                                     msg.json.number, msg.json.isActive]);
+      break;</pre>
+
+<p>Esse, por sua vez, chama os métodos <code><a href="https://developer.mozilla.org/pt-BR/docs/XPCOM_Interface_Reference/nsIRILTelephonyCallback#callStateChanged()">nsIRILTelephonyCallback.callStateChanged()</a></code> em todo objeto registrado como <em>telephony callback</em>. Toda aplicação web que acessa a API <a href="/pt-BR/docs/Web/API/Window/navigator/mozTelephony" title="The documentation about this has not yet been written; please consider contributing!"><code>window.navigator.mozTelephony</code></a> tem registado um objeto de retorno de chamada que despacha eventos para o código JavaScript na aplicação web, como uma mudança de estado de um objeto chamada existente ou um novo evento de chamada recebida (<code>incoming</code>).</p>
+
+<pre class="brush:cpp;">NS_IMETHODIMP Telephony::CallStateChanged(PRUint32 aCallIndex, PRUint16 aCallState,
+                                          const nsAString&amp; aNumber, bool aIsActive) {
+  [...]
+
+  if (modifiedCall) {
+    // Change state.
+    modifiedCall-&gt;ChangeState(aCallState);
+
+    // See if this should replace our current active call.
+    if (aIsActive) {
+      mActiveCall = modifiedCall;
+    }
+
+    return NS_OK;
+  }
+
+  nsRefPtr&lt;TelephonyCall&gt; call =
+          TelephonyCall::Create(this, aNumber, aCallState, aCallIndex);
+  nsRefPtr&lt;CallEvent&gt; event = CallEvent::Create(call);
+  nsresult rv = event-&gt;Dispatch(ToIDOMEventTarget(), NS_LITERAL_STRING("incoming"));
+  NS_ENSURE_SUCCESS(rv, rv);
+  return NS_OK;
+}</pre>
+
+<p>Aplicações podem receber esses eventos e atualizar sua interface de usuário e assim por diante:</p>
+
+<pre class="brush:js;">handleEvent: function fm_handleEvent(evt) {
+  switch (evt.call.state) {
+    case 'connected':
+      this.connected();
+      break;
+    case 'disconnected':
+      this.disconnected();
+      break;
+    default:
+      break;
+  }
+}</pre>
+
+<p>Verifique a implementação de <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js" title="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js"><code>handleEvent()</code> na aplicação de discagem</a> como um exemplo.</p>
+
+<h3 id="Dados_3G">Dados 3G</h3>
+
+<p>Existe uma mensagem RIL que inicia uma chamada de dados para o serviço celular. Isso habilita o modo de transferência de dados no modem. Esta chamada de dados acaba criando e ativando uma interface com Protocolo Ponto-a-Ponto <a href="https://pt.wikipedia.org/wiki/Point-to-Point Protocol" title="Point-to-Point Protocol">Point-to-Point Protocol</a> (PPP) no Kernel do Linux que pode ser configurado utilizando interfaces comuns.</p>
+
+<div class="note">
+<p><strong>Note:</strong> This section needs to be written.</p>
+</div>
+
+<h3 id="APIs_DOM_relacionadas">APIs DOM relacionadas</h3>
+
+<p>Essa seção lista as APIs DOMs que são relacionadas com a comunicação RIL</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/API/WebTelephony/Introduction_to_WebTelephony" title="/en-US/docs/API/WebTelephony/Introduction_to_WebTelephony">Telephony API</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/API/WebSMS/Introduction_to_WebSMS" title="/en-US/docs/API/WebSMS/Introduction_to_WebSMS">SMS API</a></li>
+ <li>Mobile Connection API</li>
+</ul>
+
+<h2 id="WiFi">WiFi</h2>
+
+<p>No Firefox OS o <em>backend</em> do WiFi simplesment usa <code>wpa_supplicant</code> para realizar a maioria do trabalho. Isso significa que o principal trabalho do <em>backend</em> é gerenciar o <code>supplicant</code> e fazer outras tarefas auxiliares como carregar o driver do WiFi e habilitar ou desabilitar a interface de rede. Em essência, isso significa que o <em>backend</em> é uma máquina de estados cujos estados seguem o estado do <code>supplicant</code>.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Muitas das coisas interessantes que acontecem no WiFi depende profundamente das mudanças de estados no processo <code>wpa_supplicant</code>.</p>
+</div>
+
+<p>A implementação do componente WiFi é dividido em dois arquivos:</p>
+
+<dl>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/DOMWifiManager.js" rel="custom">dom/wifi/DOMWifiManager.js</a></dt>
+ <dd>Implementa o API que é accessível pelo conteúdo web, como definido em <code><a href="/pt-BR/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifi.idl" title="">nsIWifi.idl</a></code>.</dd>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/WifiWorker.js" rel="custom">dom/wifi/WifiWorker.js</a></dt>
+ <dd>Implementa a máquina de estados e o código que aciona o <code>supplicant</code>.</dd>
+</dl>
+
+<p>Esses dois arquivos comunicam-se entre sim usando o <a href="https://developer.mozilla.org/en-US/docs/The_message_manager" title="/en-US/docs/The_message_manager">gerenciador de mensagens</a>. O backend escuta as mensagens solicitando determinadas ações, como um "associado", e responde com uma mensagem quando a ação solicitada foi concluída.</p>
+
+<p>O lado do DOM escuta os métodos de resposta bem como muitas mensagens de eventos que indica a alteração de estado e atualizações de informações.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Quaisquer APIs DOM síncronas são implementadas por cache de dados no lado do "pipe". Mensagens síncronas são evitadas sempre que possível.</p>
+</div>
+
+<h3 id="WifiWorker.js">WifiWorker.js</h3>
+
+<p>Esse arquivo implementa a lógica principal por trás da interface WiFi. Ele é executado no processo chrome (em compilações multiprocessadas) e é instanciada pelo SystemWorkerManager. O arquivo é geralmente dividido em duas seções: uma função "gigante" anônima e o <code>WifiWorker</code> (e seu protótipo). A função anônima acaba sendo o <code>WifiManager</code> fornecido pela API local, incluindo notificações para eventos como a conexção ao <code>supplicant</code> e pesquisa de resultados disponíveis. Em geral contém pouca lógica e deixa exclusivamente o controle de suas ações ao consumidor enquanto ele simplesmente responde com as informações solicitadas controlando os detalhes da conexão com o <code>supplicant</code>.</p>
+
+<p>Os objetos <code>WifiWorker</code> ficam entre o <code>WifiManager</code> e o DOM. Repondem a eventos e os encaminham ao DOM, depois recebe as requisições do DOM e executa as ações apropriadas no <code>supplicant</code>. Também mantém a informação do estado do <code>supplicant</code> e o que é necessário fazer em seguida.</p>
+
+<h3 id="DOMWifiManager.js">DOMWifiManager.js</h3>
+
+<p>Implementa a API DOM, transmitindo as mensagens para/de os chamadores e o real WiFi <em>worker</em>. Tem pouca lógica envolvida.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> A fim de evitar mensagens síncronas para o processo chrome, o Gerenciador de Wi-Fi não precisa armazenar o estado com base no evento recebido.</p>
+</div>
+
+<p>Existe uma mensagem síncrona que é enviada no momento que a API DOM é instanciada, a fim de obter o estado atual do <code>supplicant</code>.</p>
+
+<h3 id="DHCP">DHCP</h3>
+
+<p>DHCP e DNS são gerenciados pelo <code>dhcpcd</code>, o cliente DHCP padrão do Linux. Portanto, não é capaz de responder quando a conexão da rede é perdida. Por causa disso, o Firefox OS derruba e reinicia o processo <code>dhcpcd</code> assim que é conectado a uma rede wireless.</p>
+
+<p><code>dhcpcd</code> também é responsável por definir a rota padrão, chamando no gerenciador de rede para informar ao kernel sobre os servidores DNS.</p>
+
+<h2 id="Gerenciador_de_Rede">Gerenciador de Rede</h2>
+
+<p>O Gerenciador de Rede configura as interfaces de rede abertas pelos Dados 3G e os componentes WiFi.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Isso precisa ser escrito.</p>
+</div>
+
+<h2 id="Processos_e_threads">Processos e threads</h2>
+
+<p>Firefox OS usa threads POSIX para implementar as threads de aplicações, isso inclui a thread principal de cada aplicação bem como as <code>Web workers</code> e <code>helper threads</code>. Valores "Nice" são usados para priorizar os processos e a execução das threads confiando no agendador padrão do kernel do Linux. Dependendo do status do processo nós atribuimos um diferente valor "Nice" do nível. Temos atualmente 7 níveis:</p>
+
+<table class="standard-table">
+ <caption>Process priority levels</caption>
+ <thead>
+  <tr>
+   <th scope="col">Priority</th>
+   <th scope="col">Nice</th>
+   <th scope="col">Used for</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>MASTER</code></td>
+   <td>0</td>
+   <td>main b2g process</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_HIGH</code></td>
+   <td>0</td>
+   <td>applications holding a CPU wakelock</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND</code></td>
+   <td>1</td>
+   <td>foreground applications</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_KEYBOARD</code></td>
+   <td>1</td>
+   <td>keyboard application</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_PERCEIVABLE</code></td>
+   <td>7</td>
+   <td>background applications playing audio</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_HOMESCREEN</code></td>
+   <td>18</td>
+   <td>homescreen application</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND</code></td>
+   <td>18</td>
+   <td>all other applications running in the background</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Alguns níveis possuem os mesmos "<em>nice values</em>", isso acontece porque esses níveis diferem da forma que são tratados pelo "out-of-memory killer". Todas as prioridades podem ser ajustadas em tempo de compilação via "Preferências". Os valores relevantes podem ser encontrados no arquivo <a href="http://hg.mozilla.org/mozilla-central/file/54e8c6492dc4/b2g/app/b2g.js#l610"><code>b2g/app/b2g.js</code></a>.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: para mais informações sobre out-of-memory killer, e como o Firefox OS gerencia situações com baixa memória, leia o artigo <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Out_of_memory_management_on_Firefox_OS">Gerenciamento de falta de memória no Firefox OS</a>.</p>
+</div>
+
+<p>Dentro de um processo a thread principal herda o "<em>nice value</em>" do processo, enquanto às threads do <code>web worker</code> é atribuido um "<em>nice value</em>" um ponto maior que a thread principal que roda na menor prioridade. Isso é feito para evitar que processos que utilizem muita CPU degradem a performance da thread principal. Prioridades de processos são alterados sempre que acontece um grande evento como quando uma aplicação é enviada para rodar em background ou foreground, uma nova aplicação é iniciada, ou uma aplicação existente executa uma <em>wake-lock </em>da CPU. Toda vez que a prioridade de um processo é ajustada todas as prioridades de suas threads também são ajustadas em conformidade.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> cgroups não são usadas atualmente para gerenciamento de recursos por não serem confiáveis em certos dispositivos e kernels.</p>
+</div>
+
+<p> </p>

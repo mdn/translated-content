@@ -1,0 +1,79 @@
+---
+title: Diferentes formas de executar o Gaia
+slug: Archive/B2G_OS/Desenvolvendo_Gaia/Diferente_formas_executar_Gaia
+tags:
+  - Desenvolvimento
+  - Emulador
+  - Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+---
+<div class="summary">
+ <p><span class="seoSummary">Você pode executar o Gaia em um simulador via App Manager, diretamente do Firefox Desktop, como um binário dedicado (B2G Desktop), em um emulador, ou em um dispositivo móvel compatível. Esse artigo fornece um resumo de como fazer com cada uma das opções, com links para maiores informações.</span></p>
+</div>
+<h2 id="O_quão_próximo_cada_opção_está_de_uma_coisa_real">O quão próximo cada opção está de uma coisa real?</h2>
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac65-2c23-a6c9-cc3bc3dc3cd5">Algumas das soluções para executar o Gaia nesse artigo está mais próxima da experiência em um dispositivo real do que em outras. A ordem do quão fácil é executar cada uma é a seguinte:</p>
+<ol dir="ltr">
+ <li>Gaia no simulador</li>
+ <li>Gaia no Desktop Firefox</li>
+ <li>Gaia no B2G Desktop</li>
+ <li>Gaia no Emulador</li>
+ <li><em>Flashing</em> do Gaia no telefone</li>
+ <li><em>Flashing</em> do Gaia+Gecko no telefone</li>
+</ol>
+<p>A ordem de "O quão próximo cada opção está de um produto comercializado" é exatamente a oposta da mostrada acima. Dependendo do recurso no qual você está trabalhando, você terá que encontrar o ambiente adequado à resolução do problema.</p>
+<h2 id="Usando_o_Gaia_no_Simulador_App_ManagerFirefox_OS">Usando o Gaia no Simulador App Manager/Firefox OS</h2>
+<p>A forma mais rápida de experimentar o Gaia é via o <a href="/pt-BR/Firefox_OS/Using_the_App_Manager">Firefox App Manager</a>.<br>
+ <br>
+ App Manager é uma ferramenta de desenvolvimento disponível no Firefox Desktop. Fornece diversas ferramentas úteis que o ajudarão a testar, instalar e depurar Aplicativos web HTML5 nos dispositivos Firefox OS e no Simulador diretamente do seu navegador.<br>
+ <br>
+ No navegador Firefox versões 26 e superiores, abra o App Manager usando <em>Tools &gt; Web Developer &gt; App Manager</em>. Clique em Iniciar Simulador (uma vez que esteja instalado) e você está pronto para testar o Firefox OS.</p>
+<h2 id="B2G_Desktop">B2G Desktop</h2>
+<p>B2G Desktop é um binário para executar no desktop do <em>app runtime</em> utilizado nos dispositivos Firefox OS que você pode usar para executar o Gaia no seu computador.</p>
+<p>Você pode baixá-lo diretamente em <a href="http://nightly.mozilla.org/#Desktop%20Boot2Gecko">versão nightly do B2G desktop</a> do <a href="http://nightly.mozilla.org/">site do Firefox Nightly</a>. Dependendo de qual versão você está trabalhando, você querer uma versão específica do latest-mozilla-b2g18. Existem binários para Linux (32 bit and 64 bit), Mac OS X e Windows.</p>
+<p>Os binários Nightly vêm com a versão mais recente do Gaia. Uma vez que você tenha baixado o arquivo, tudo o que você precisa fazer é descompactá-lo em um diretório e executar o binário b2g.</p>
+<pre class="brush: bash">$ cd b2g
+$ ./b2g</pre>
+<p>Para executar o B2G com sua própria versão do Gaia para fins de desenvolvimento, antes você precisa compilar um perfil a partir do seu clone:</p>
+<pre class="brush: bash">$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+<p>Isso irá gerar um subdiretório no seu diretório <code>gaia</code> chamado <code>profile</code>. O parâmetro <code>DEBUG</code> executa o Gaia como aplicativos hospedados em um servidor web interno, ao invés do padrão que são os aplicativos empacotados, que devem ser reempacotados a cada alteração. Você vai saber qual o diretório criado observando a última linha da saída do comando acima, que vai se paracer como:</p>
+<pre class="brush: bash">Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+<p>Então, você pode executar o B2G Desktop com o seu perfil compilado executando:</p>
+<pre class="brush: bash">$ ./b2g /path/to/gaia/profile</pre>
+<p>Você também pode criar o seu próprio binário do B2G desktop a partir do fonte.</p>
+<div class="note">
+ <p><strong>Nota:</strong> No Mac OS X, o binário <code>b2g</code> fica em um subdiretório do B2G.app. Para executar o B2G Desktop nessa plataforma, execute o seguinte comando:<br>
+  <code>./B2G.app/Contents/MacOS/b2g /path/to/gaia/profile</code></p>
+</div>
+<h2 id="Usando_o_Gaia_no_Firefox_Desktop">Usando o Gaia no Firefox Desktop</h2>
+<p>Também é possível executar o Gaia no navegador Firefox. A grande vantagem é que você terá um ciclo de desenvolvimento rápido bem como ferramentas com padrões abertos para o desenvolvimento e depuração. Veja o artigo <a href="/pt-BR/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase">Executando o codebase do Gaia</a> para detalhes de como fazer isso.</p>
+<div class="note">
+ <p><strong>Nota</strong>: FoxBox é um binário do Firefox OS executado em uma VM (Virtual Machine),  is a Firefox OS build environment contained in a VM (Virtual Machine), executado pelo Vagrant and VirtualBox. Isso traz diversas vantagens, dentro das quais a prinicipal é que diversas configurações já vêm prontas, o que faz com que você se preocupe apenas com o trabalho de desenvolvimento. Para instruções completas, leaia <a class="external external-icon" href="https://github.com/gasolin/foxbox">o arquivo README no repositório do FoxBox no GitHub</a>.</p>
+</div>
+<h2 id="Fazendo_um_Flashing_do_Gaia_em_um_dispositivo_real">Fazendo um <em>Flashing</em> do Gaia em um dispositivo real</h2>
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac6a-0884-5265-76e0fe740fa6">Para o flash do Gaia no dispositivo real:</p>
+<ol dir="ltr">
+ <li>Certifique-se de ter clonado o repo do Gaia no seu computador e ter o <a href="/pt-BR/Firefox_OS/Debugging/Installing_ADB">ADB</a> instalado.</li>
+ <li>Habilite a opção de <a href="/pt-BR/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">Depuração via USB</a>.</li>
+ <li>Conecte o dispositivo ao computador via USB.</li>
+ <li>Se houver um dispositivo conectado, você pode executar os seguintes comendos. Se o seu sistema operacional for Windows ou Linux você pode precisar verificar os drivers do USB para configurar corretamente a conexão no seu computador.</li>
+ <li>Execute o seguinte comando no repo Gaia para atualizar o código fonte do Gaia:
+  <pre class="brush: bash">$ make reset-gaia</pre>
+ </li>
+ <li>Para testar os aplicativos que não forem do sistema, você pode instalá-los sem a necessidade de reinicializar o dispositivo usando o seguinte comando:
+  <pre class="brush: bash" dir="ltr">$ make install-gaia</pre>
+ </li>
+ <li>Se você quiser instalar apenas um aplicativo específico, você pode usar a variável APP, como o exemplo seguir:
+  <pre class="brush: bash">$ make install-gaia APP=browser</pre>
+ </li>
+</ol>
+<div class="note">
+ <p dir="ltr"><strong>Nota</strong>: Para copiar o Gaia para o seu dispositivo use <code>make install-gaia</code> / <code>make reset-gaia</code> para compilar o Gaia com resolução 1x por padrão. Para especificar resoluções mais altas, você precisa usar a opção do make <code>GAIA_DEV_PIXELS_PER_PX</code> ou <code>GAIA_DPPX</code> (veja <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Developing_Gaia/make_options_reference#High_resolution_image_assets">Opção de Imagens de alta resolução</a> para maiores detalhes dessa opção) Quando copiar o Gaia para o seu dispositivo dessa forma, você deve especificar a opção que mais se adeque ao seu dispositivo, por exemplo, <code>make install-gaia GAIA_DEV_PIXELS_PER_PX=1.5</code> para o dispositivo Flame (ou 2, or 2,5, etc, veja os valores na tabela "<a href="https://developer.mozilla.org/en-US/Apps/Build/Icon_implementation_for_apps#512_icon_for_device_display">512 icon for device display</a>".)</p>
+</div>
+<p dir="ltr">Para verificar se o seu dispositivo está corretamente conecatado ao seu computador via USB, você pode executar:</p>
+<pre class="brush: bash" dir="ltr">$ adb devices</pre>
+<p dir="ltr">Que apresentará um resultado como esse:</p>
+<pre class="brush: bash" dir="ltr">List of devices attached
+emulator-5554  device</pre>
+<h2 id="Compilando_o_Gecko_e_o_Gaia_usando_em_um_emulador_ou_num_dispositivo_real">Compilando o Gecko e o Gaia usando em um emulador ou num dispositivo real</h2>
+<p>Se você tem um dispositivo compatível, você pode<a href="/pt-BR/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS"> compilar ou instalar sua própria versão do Firefox OS</a> e então executá-lo no Emulador ou copiá-lo para seu dispositivo.</p>

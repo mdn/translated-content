@@ -1,0 +1,237 @@
+---
+title: Criando e aplicando pacotes de atualização do Firefox OS
+slug: >-
+  Archive/B2G_OS/Construindo_e_instalando_o_Firefox_OS/Criando_e_aplicando_pacotes_de_atualizacao_Firefox_OS
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages
+---
+<div class="summary">
+ <p>Se você deseja possibilitar que os usuários do Firefox OS facilmente atualize a versão do sistema em seus dispositivos, você precisa criar um pacote de atualização para eles usarem. Este artigo apresenta os diferentes tipos de pacote de atualização disponível e abrange a compilação do pacote, hospedagem das atualizações (e como o sistema faz o <em>polling</em> das atualizações disponíveis),  aplicação e verificação das atualizações.</p>
+</div>
+<p>Essa atividade é dividida em quatro tarefas:</p>
+<ol>
+ <li>Compilar um pacote de atualização incremental da versão(ões) anteriores para uma nova versão em uma máquina de compilacão.</li>
+ <li>Encontrar o pacote de atualização correto.</li>
+ <li>Baixar a atualização.</li>
+ <li>Aplicar a atualização dos arquivos existentes no dispositivo.</li>
+</ol>
+<p>Cada uma das etapas está descrita abaixo.</p>
+<h2 id="Tipos_de_atualização"><span class="mw-headline" id="Types_of_updates">Tipos de atualização</span></h2>
+<p>São dois tipos de atualização a saber: FOTA e Gecko/Gaia OTA. Vamos verificar a diferença entre elas</p>
+<h3 id="Atualização_FOTA"><span class="mw-headline" id="FOTA_updates">Atualização FOTA</span></h3>
+<p><span class="mw-headline">É possível atualizar o Firefox OS inteiro através da <strong>atualização FOTA</strong>, a tecnologia usada é compartilhada do projeto Android. Os locais no disco rígido do telefone podem ser alterados usando a alteração incluindo a partição do sistema, kernel, modem, imagem de recuperação usada para atualização, ou qualquer outro arquivo no dispositivo.</span></p>
+<p>Firefox OS não depende de um cliente FOTA em particular, a interface é abstraída através de uma API que chamamos <a class="externallink" href="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD" rel="nofollow" title="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD">librecovery</a>. Portanto nós recomendamos usar o cliente de recuperação GOTA (veja abaixo para mais detalhes), e assumiremos a utilização do FOTA a partir de agora.</p>
+<p>O pacote de atualização FOTA consiste-se principalmente de um arquivo chamado <code>update.zip</code>. Esse pacote possui:</p>
+<ul>
+ <li>Um conjunto de "<em>diffs</em>" binários e novos arquivos necessários para a atualizção do cliente para a nova versão do software</li>
+ <li>Um script de atualização que controla como os "<em>diffs</em>" e novos arquivos serão carregados no cliente</li>
+ <li>Uma assinatura interna usada para verificar o pacote de atualização</li>
+</ul>
+<p>O formato e o conjunto de arquivo são os mesmos que os usados em uma atualização normal do Android, exceto pelo fato de que o Firefox OS adicionamente envolve o pacote <code>update.zip</code>  em um invólucro <code>mar</code> (MAR é o acrônimo de <strong>Mozilla ARchive</strong>). Esse invólucro <code>mar</code> possibilita um nível adicional de verificação que será explicado abaixo.</p>
+<h3 id="Atualização_GeckoGaia_OTA"><span class="mw-headline" id="Gecko.2FGaia_OTA_updates">Atualização Gecko/Gaia OTA</span></h3>
+<p><span class="mw-headline">A outra opção é atualizar <strong>apenas</strong> os arquivos do Gecko e o Gaia em um dispositivo Firefox OS</span> através de um mecanismo que nós chamamos <strong>atualizações Gecko/Gaia OTA</strong><strong>.</strong> Todos os arquivos Gecko e Gaia <span class="mw-headline">— </span>compreendendo o Gecko <em>runtime core</em> e as interfaces de usuário do dispositivo <span class="mw-headline">— estão no diretório do dispositivo <code>/system/b2g</code>.</span> Esse é o único diretório que o OTA pode fazer alterações.</p>
+<p>As atualizações Gecko/Gaia OTA utilizam a mesma tecnologia utilizada pela atualização do navegador Firefox para desktop. Muito parecido com os pacotes  FOTA <code>update.zip</code> discutidos acima, as atualizações OTA consiste-se de um arquivo MAR contendo um conjunto de <em>diffs</em> binários e novos arquivos necessários para atualizar o cliente com uma nova versão.</p>
+<p>O cliente Gecko verifica a integridade dos arquvios <code>MARs</code> que foram baixados e os <code>MARs</code> podem ser assinados por múltiplas partes.</p>
+<h3 id="Por_que_ter_duas_tecnologias_de_atualizações"><span class="mw-headline" id="Why_have_two_update_technologies.3F">Por que ter duas tecnologias de atualizações?</span></h3>
+<p>Atualizações OTA não são tão abrangentes as atualizações FOTA, mas são muito mais amigáveis e fáceis de usar, e geralmente o processo de atualização funciona bem.</p>
+<ul>
+ <li>Atualizações Gecko/Gaia OTA podem ser aplicadas "em segundo plano", enquanto o Firefox OS continua a funcionar normalmente. Isso proporciona um experiência do usuário muito melhor uma vez que não é necessário reiniciar o telefone e esperar enquanto a atualização é aplicada. Quando o processo termina a única coisa que o usuário precisa fazer é concordar em reiniciar o processo principal <code>b2g</code>. Isso leva apenas alguns segundos, em vez dos minutos normalmente necessários para aplicar as atualizações FOTA.</li>
+ <li>Normalmente, mas nem sempre, os pacotes de atualização Gecko/Gaia OTA são menores que os pacotes FOTA. Isso significa que os usuários podem ter menos dados para baixar.</li>
+</ul>
+<p>É claro que se você precisar atualizar arquivos fora do Gecko/Gaia, você terá que usar o roteiro do pacote completo FOTA.</p>
+<p>Seguindo, vamos verificar o processo de compilação do pacote.</p>
+<h2 id="Compilando_os_pacotes_de_atualização"><span class="mw-headline" id="Building_updates_for_multiple_software_versions">Compilando os pacotes de atualização</span></h2>
+<p>A compilação das atualizações é o processo de gerar os arquivos necessários para atualizar os clientes Firefox OS da <em>versão X</em> do software para a nova <em>versão Y</em>. O pacote de atualização necessário depende de quais arquivos foram alterados entre a versão X e a versão Y.</p>
+<ul>
+ <li>se <b>somente</b> arquivos do diretório <code>/system/b2g</code> foram alterados, vamos gerar uma atualização Gecko/Gaia OTA</li>
+ <li>Se algum arquivo que não seja do diretório <code>/system/b2g</code> é alterado, nós vamos gerar uma atualização FOTA</li>
+</ul>
+<p>Para gerar um pacote de atualização incremental (seja para atualização FOTA ou Gecko/Gaia OTA), nossas ferramentas necessitam compilações completas de ambas as versões X e Y (nova e a anterior). Compilação completa significa que o pacote inclui todos os arquivos necessários para fazer o <em>flash</em> no cliente. Quando nós produzimos uma compilação completa da versão X, nós não sabemos quais as futuras versões nós atualizaremos a partir da versão X. Por isso, nós compilamos ambos os pacotes para cada versão. Isso possibilita criar pacotes incrementais.</p>
+<p>Numa visão geral, o processo de compilação é semalhante a isso:</p>
+<ol>
+ <li>Com o software <em>versão X</em>
+  <ul>
+   <li>Gerar um arquivo completo <code>MAR</code> do Gecko/Gaia OTA para o conteúdo do diretório <code>/system/b2g</code>.</li>
+   <li>Gerar arquivo completo <code>update.zip</code> do FOTA e arquivos zip específicos para as partições do dispositivo.</li>
+  </ul>
+ </li>
+ <li>Com o software <em>versão Y</em>
+  <ul>
+   <li>Gerar um arquivo completo  <code>MAR</code> do Gecko/Gaia OTA do diretório <code>/system/b2g</code>.</li>
+   <li>Gerar um arquivo completo <code>update.zip</code> do FOTA e arquivos zip específicos para as partições do dispositivo.</li>
+  </ul>
+ </li>
+ <li>Se apenas os arquivos do diretório <code>/system/b2g</code> foram alterados, gerar uma atualização incremental Gecko/Gaia OTA <code>MAR</code> da versão X para a versão <em>Y</em>.</li>
+ <li>Caso contrário, gerar um arquivo <code>update.zip</code> da atualização incremental FOTA da versão X para a versão Y. Empacote a atualização incremental FOTA <code>update.zip</code> em um <code>MAR</code> para entrega ao cliente B2G.</li>
+ <li>Assine os pacotes como exigido pelos acordos de entrega.</li>
+</ol>
+<p>A sub-sessão abaixo descreve como usar as ferramentas do B2G para implementar cada uma dessas etapas.</p>
+<div class="note">
+ <p><strong>Nota</strong>: para executar as etapas a seguir assumimos que você já configurou um ambiente de compilação b2g na localização <code>$b2g</code>. Os comandos abaixo fazem referência ao script de ajuda <code>$b2g/build.sh</code>, mas o <code>make</code> também pode ser usado.</p>
+</div>
+<h3 id="Gerando_uma_atualização_GeckoGaia_OTA"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Gerando uma atualização Gecko/Gaia OTA </span></h3>
+<h3 id="completa_em_MAR"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">completa em MAR</span></h3>
+<p>Execute <code>gecko-update-full</code> para gerar um <code>MAR</code> completo da última compilação bem sucedida do <code>b2g</code>. Para colocar o MAR em <code>$b2g/objdir-gecko/dist/b2g-update/b2g-gecko-update.mar</code>, use os seguintes comandos:</p>
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-full
+$ cp objdir-gecko/dist/b2g-update/b2g-gecko-update.mar &lt;destination&gt;
+</pre>
+<h3 id="Gerando_uma_atualização_FOTA_zip_completa_e_arquivos_de_destino"><span class="mw-headline" id="Generating_a_complete_FOTA_update_zip_and_target_files_zip">Gerando uma atualização FOTA zip completa e arquivos de destino</span></h3>
+<p>O alvo padrão no sistema de compilação <code>b2g</code> irá gerar um FOTA <code>update.zip</code> / arquivos de destino zip quando o kernel binário tiver sido copiado para a localização apropriada embaixo do diretório <code>vendor/</code>. Isso habilita a imagem de <em>boot</em>, imagem de recuperação e a geração do update.zip.</p>
+<ul>
+ <li>O arquivo completo do FOTA <code>update.zip</code> é gerado em <code>out/target/product/$DEVICE/$DEVICE-ota-$VARIANT.$USER.zip</code></li>
+ <li>O arquivo zip de destino é gerado em <code>out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/$DEVICE-target_files-$VARIANT.$USER.zip</code></li>
+</ul>
+<p>Os comandos a seguir realizam essa etapa:</p>
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh target-files-package
+$ cp out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/$DEVICE-target_files-$VARIANT.$USER.zip &lt;destination&gt;
+</pre>
+<p>Os valores das variáveis nos comandos listados acima devem ser preenchidos dessa forma:</p>
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$DEVICE</code></td>
+   <td>O nome do dispositvo para o produto AOSP</td>
+  </tr>
+  <tr>
+   <td><code>$VARIANT</code></td>
+   <td><code>eng</code>, <code>user</code>, ou <code>userdebug</code></td>
+  </tr>
+  <tr>
+   <td><code>$USER</code></td>
+   <td>O nome do usuário de compilaçãoThe build username</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Gerando_um_MAR_da_atualização_incremental_OTA"><span class="mw-headline" id="Generating_an_incremental_OTA_update_MAR">Gerando um MAR da atualização incremental OTA</span></h3>
+<p>Nesse exemplo, nós assumimos que estamos gerando uma atualização do software versão X para versão Y. A localização do MAR completo da compilação Gecko/Gaia OTA da versão X usando as instruções acima será chamado de <code>$MAR_X</code>. Isso deve ser um caminho no servidor de compilacão como por exemplo<code> /home/build/b2g/versions/X/update.mar</code>. De forma similiar, a localização do <code>MAR</code> completo da versão Y será chamado de <code>$MAR_Y</code>.</p>
+<p>A ferramenta <code>build-gecko-mar.py</code> vair gerar uma MAR da atualização incremental usando <code>$MAR_X</code> e <code>$MAR_Y</code>. Nós chamaremos o destino do arquivo gerado de <code>$GENERATED_INCREMENTAL_MAR_X_Y</code>. Use os seguintes comandos para essa etapa:</p>
+<pre class="brush: bash">$ cd $b2g
+$ ./tools/update-tools/build-gecko-mar.py --from $MAR_X --to $MAR_Y $GENERATED_INCREMENTAL_MAR_X_Y
+</pre>
+<h3 id="Gerando_um_update.zip_da_atualização_incremental_FOTA"><span class="mw-headline" id="Generating_an_incremental_FOTA_update_zip">Gerando um update.zip da atualização incremental FOTA</span></h3>
+<p>Nesse exemplo, nós assumimos que estamos gerando uma atualização do software versão X para versão Y. A localização do arquivo zip completo do FOTA compilado do software vesrão X usando as instruções acima será chamado<code> $TARGET_FILES_X</code>. Esse deve ser o caminho no servidor de compilação como <code>/home/build/b2g/versions/X/target_files.zip</code>. De forma semelhante, a localização do zip destino do FOTA completo construido da versão Y será chamado <code>$TARGET_FILES_Y</code>.</p>
+<p>A ferramenta <code>build/tools/releasetools/ota_from_target_files</code> irá gerar um FOTA incremental no arquivo update.zip usando <code>$TARGET_FILES_X</code> e <code>$TARGET_FILES_Y</code>. Nós chamamos o arquivo intermediário de  <code>$INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y</code>.</p>
+<p>Depois do arquivo <code>update.zip</code> ter sido gerado, a última etapa é empacotá-lo em um arquvio <code>MAR</code> para entrega ao cliente b2g. A ferramenta <code>tools/update-tools/build-fota-mar.p</code> executa essa etapa. Nós chamaremos o destino desse arquivo gerado de <code>$GENERATED_INCREMENTAL_FOTA_X_Y</code>. Use os seguintes comandos para completar essa etapa:</p>
+<pre class="brush: bash">$ cd $b2g
+$ ./build/tools/releasetools/ota_from_target_files -v \
+    -i $TARGET_FILES_X \
+    -p out/host/$HOST_ARCH \
+    -k $FOTA_SIGNING_KEY \
+    $TARGET_FILES_Y \
+    $INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y
+$ ./tools/update-tools/build-fota-mar.py $INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y --output=$GENERATED_INCREMENTAL_FOTA_X_Y
+</pre>
+<p>Os valores das variáveis nos comandos listados acima devem ser preenchidos dessa forma:</p>
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$TARGET_FILES_X</code></td>
+   <td>Os arquivos zip destino do <em>para a versão X</em></td>
+  </tr>
+  <tr>
+   <td><code>$TARGET_FILES_Y</code></td>
+   <td>Os arquivos zip destino do <em>para a versão Y</em></td>
+  </tr>
+  <tr>
+   <td><code>$GENERATED_INCREMENTAL_FOTA_X_Y</code></td>
+   <td>
+    <p>O destino da atualização incremental em zip empacotado num <code>MAR</code> para entrega aos clientes</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>$HOST_ARCH</code></td>
+   <td>A combinação do <em>host</em> e arquitetura (i.e. <code>linux-x86</code> ou <code>darwin-x86</code>)</td>
+  </tr>
+  <tr>
+   <td><code>$FOTA_SIGNING_KEY</code></td>
+   <td>Caminho para o prefixo para uma chave privada e o certificado público para assinatura do arquivo update zip. Ambos os arquivo <code>$FOTA_SIGNING_ZIP.pk8</code> e <code>$FOTA_SIGNING_ZIP.x509.pem</code> devem existir no sistema</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Hospedagem_e_polling_de_atualizações_no_lado_do_cliente"><span class="mw-headline" id="Hosting_updates_.28respectively.2C_polling_for_updates_on_the_client_side.29">Hospedagem e <em>polling</em> de atualizações no lado do cliente</span></h2>
+<p>Clientes Firefox OS fazem <em>polling</em> das atualizações através de um parsing do <strong>manifesto de atualização</strong>: <code>update.xml</code>. Os clientes Firefox OS são configurados para fazer o <em>polling</em> de atualizações em servidores específicos — eles consultam um caminho especialmente construído no servidor. HTTPS é o protocolo recomendado para consultar o servidor, embora HTTP também é suportado. O servidor e o caminho utilizado pelos clientes podem ser alterados entregando uma atualização para clientes existentes que altera o código do polling.</p>
+<p>Nos exemplos abaixo, assumimos que as atualizações estão hospedadas no servidor <code>updates.b2g.com</code>.</p>
+<p>A URL pesquisada pelo cliente comumente contém os seguintes parâmetros:</p>
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Parameter</th>
+   <th scope="col">Explanation</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>PRODUCT_MODEL</code></td>
+   <td>O nome do modelo do dispositivo. É o valor da propriedade  <code>ro.product.model</code> no banco de dados do B2G.</td>
+  </tr>
+  <tr>
+   <td><code>CHANNEL</code></td>
+   <td>O "canal" da atualização. Isso é útil para teste: servidores podem ser configurados para hospedar, por exemplo, os canais "nightly", "beta" e "release".</td>
+  </tr>
+  <tr>
+   <td><code>VERSION</code></td>
+   <td>A versão do software do cliente. Por exemplo, "18.0.2".</td>
+  </tr>
+  <tr>
+   <td><code>BUILD_ID</code></td>
+   <td>O ID unívoco como um <em>timestamp</em>, configurado para uma compilação em particular</td>
+  </tr>
+ </tbody>
+</table>
+<p>Entretando, existem mais valores que podem ser consultados para construir a consulta de URL de atualização.</p>
+<p>O cliente Firefox usa os valores de onde as atualizações estão hospedadas para construir a URL para o <em>polling</em> em tempo de execução. Um exemplo dessa URL é:</p>
+<pre class="brush: xml">https://updates.b2g.com/release/unagi1/18.0/20121203123456/update.xml</pre>
+<p>Se o servidor retornar um erro "404 Not Found" em resposta à requisição do cliente, então não há atulização disponível. Se o servidor retornar "200" e o arquivo manifesto, então há uma atualizacão disponível. O manifesto descreve a compilação recem-disponível, ou seja, a <strong>atualização que o cliente deve usar</strong>. Um exemplo de manifesto:</p>
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;updates&gt;
+  &lt;update type="major" appVersion="19.0" version="19.0" extensionVersion="19.0" buildID="20121210123456"
+          licenseURL="http://www.mozilla.com/test/sample-eula.html"
+          detailsURL="http://www.mozilla.com/test/sample-details.html"&gt;
+    &lt;patch type="partial" URL="https://updates.b2g.com/release/unagi1/18.0/20121203123456/update.mar"
+           hashFunction="SHA512" hashValue="5111e033875752b7d9b32b4795152dea5ef954cb8a9d4a602dd19a923b464c43521287dcb5781faf3af76e6dc5e8a3dd9c13edea18c1f2c8f3bd89e17d103d6f"
+           size="41901319"/&gt;
+  &lt;/update&gt;
+&lt;/updates&gt;
+</pre>
+<p>Os campos no manifesto descrevem:</p>
+<ul>
+ <li>metadata usado para mostrar a interface no cliente</li>
+ <li>metadata sobre a versão recém-disponível</li>
+ <li>a localização do pacote de atualização</li>
+ <li>metadata usado para verificar o <em>download</em> do pacote de atualização</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: O dispositivo do cliente ou o próprio usuário pode recusar a atualização.</p>
+</div>
+<p>Usando os mecanismos acima descritos, os servidores podem hospedar pacotes de atualização para atualizar qualquer versão antiga cliente para a versão mais recente. Ou podem hospedar somente uma "atualização linear" na qual os clientes devem atualizar através de um caminho simples.</p>
+<p>Os detalhes da interação entre os servidores de compilação e de atualização estão fora do escopo desse documento. E são altamente dependentes no ambiente produtivo.</p>
+<h2 id="Verificando_e_aplicando_as_atualizações"><span class="mw-headline" id="Verifying_and_applying_updates">Verificando e aplicando as atualizações</span></h2>
+<p>Após o cliente Firefox OS ter baixado a atualização e verificado a integridade do pacote, a etapa final é aplicar a atualização.</p>
+<p>A primeira etapa consiste-se em verificar as assinaturas embutidas nos pacotes <code>MAR</code>. Isso é feito pelo próprio cliente Firefox OS após checar a integridade do pacote. O código usado para isso é o mesmo para atualizações FOTA ou Gecko/Gaia OTA.</p>
+<p>Após as assinaturas terem sido verificadas, o processo de aplicar uma atualização diverge entre os tipos de pacotes. Vamos ver as diferenças entre os dois a partir de agora.</p>
+<h3 id="Aplicando_atualizações_GeckoGaia_OTA"><span class="mw-headline" id="Applying_Gecko.2FGaia_OTA_updates">Aplicando atualizações Gecko/Gaia OTA</span></h3>
+<p>O cliente Firefox OS usa o executável <code>updater</code> para aplicar as atualizações. É parte da distribuição Gecko e é o mesmo código usado para aplicar as atualizações do Firefox Desktop. Como descrito acima, a atualização é aplicada enquanto o Firefox OS continua a rodar normalmente. Usuários podem fazer e receber ligações, executar aplicativos, navegar na internet, etc durante o processo de atualização.</p>
+<p>Os detalhes específicos do <code>updater</code> estão além do escopo desse documento, mas seu funcionamento é aproximadamente descrito abaixo:</p>
+<ul>
+ <li>Faz uma cópia do diretório <code>/system/b2g</code>.</li>
+ <li>Aplica os <em>patches</em> binários, removendo arquivos antigos, e incluindo os novos como especificado no arquivo <code>MAR</code>.</li>
+ <li>Reinicia o processo principal <code>b2g</code> para que utilize os novos arquivos.</li>
+</ul>
+<p>Após reiniciar o processo <code>b2g</code> o usuário já está executando a nova versão do software cliente B2G.</p>
+<h3 id="Aplicando_atualizações_FOTA"><span class="mw-headline" id="Applying_FOTA_updates">Aplicando atualizações FOTA</span></h3>
+<p>O cliente FOTA é o responsável por aplicar a atualização. O cliente Gecko não interefer no processo que será aplicado chamando a API <a class="externallink" href="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD" rel="nofollow" title="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD">librecovery</a>. O que acontece após essa etapa é específico de cada cliente FOTA.</p>
+<p>Na implementação do <code>librecovery</code> usado pelo cliente FOTA, o pacote de atualização baixado é armazenado para ser aplicado e comandos especiais são enfileirados para recuperar o cliente. <code>librecovery</code> então inicializa o dispositivo no modo recovery no qual é executado o <em>script</em> que está dentro do arquivo <code>update.zip</code> que atualiza os arquivos e as partições necessárias. O cliente recovery pode necessitar reinicar o dispositivo diversas vezes para atualizar todos os arquivos.</p>
+<p>Na inicialização final, o dispositivo estará com a nova versão do Firefox OS instalado.</p>

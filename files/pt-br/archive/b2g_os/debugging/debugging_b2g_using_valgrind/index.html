@@ -1,0 +1,88 @@
+---
+title: Depurando o B2G usando Valgrind
+slug: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+---
+<p><span style="position: fixed ! important; top: 0px ! important; left: 0px ! important; font-size: xx-small ! important; line-height: 130% ! important; border-color: black ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; background-color: rgb(214, 227, 254) ! important; display: none;">S</span></p>
+<div class="summary">
+ <p><a href="http://valgrind.org">Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSS</span></a> dá acesso aos desenvolvedores à informações sobre alocação de memória, threads/processos, e outras coisas relevantes à performance do programa. Está incluído na árvore do Firefox OS, e pode ser executado por telefones que tem os recursos adequados. Esse artigo explica como usá-lo.</p>
+</div>
+<h2 id="Requisitos">Requisitos</h2>
+<p>Antes de executar o Valgrind no Firefox OS, é recomendado que os desenvolvedores familiarizem-se com o artigo <a href="/pt-BR/docs/Debugging_Mozilla_with_Valgrind">Depurando Mozilla com Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSD</span><span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSD</span><span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSG</span></a>. Muitas das informações desse artigo são relevantes ao executar o Valgrind no Firefox OS, embora muitas das etapas de compilação e linhas de comando são atendidos pela imagem Firefox OS e os scripts de execução.</p>
+<p>Para rodar o Valgrind no telefone com Firefox OS, é necessário um aparelho com especificações maiores que o normal. Valgrind é um recurso que consome muita memória, geralmente causando falhas de falta de memória em aparelhos com menos de 1GB de RAM. Nesse artigo (de 2013-12-04), Valgrind foi testado em um aparelho Nexus 4 rodando Firefox OS com 2GB de RAM, mas pode ser executado em aparelhos Geeksphone Keons ou similares. Verifique em <a href="/pt-BR/Firefox_OS/Phones">Especificações de Telefones</a> para maiores detalhes dos aparelhos disponíveis.</p>
+<h2 id="Executando_Valgrind_em_telefones_com_FxOS">Executando Valgrind em telefones com FxOS</h2>
+<h3 id="Compilando">Compilando</h3>
+<p>Para compilar o Firefox OS com o valgrind habilitado, inclua no arquivo<a href="/pt-BR/Firefox_OS/Customization_with_the_.userconfig_file"><code>.userconfig</code></a>.</p>
+<pre>export B2G_VALGRIND=1 </pre>
+<p>Compilar com debug (<code>B2G_DEBUG</code>) também é recomendado. Compilação sem otimizações (<code>B2G_NOOPT</code>) torna a usabilidade um pouco mais lenta, e não é reomendado a não ser nos casos onde as otimizações podem ofuscar os erros.</p>
+<h3 id="Executando">Executando</h3>
+<div class="note">
+ <p><strong>Nota:</strong> A execução do Valgrind em um telefone Firefox OS é realizada no contexto do telefone, não no sistema operacional hospedeiro. Isso siginifica que os desenvolvedores podem usar qualquer plataforma com o <a href="/pt-BR/Firefox_OS/Debugging/Installing_ADB">adb</a> disponível e executar o script <code>run-valgrind.sh</code> para iniciar o valgrind no telefone.</p>
+</div>
+<p>Para executar o Firefox OS sob o valgrind, use o script <a href="https://github.com/mozilla-b2g/B2G/blob/master/run-valgrind.sh"><code>run-valgrind.sh</code></a> a partir do diretório B2G. Esse script faz o seguinte:</p>
+<ol>
+ <li>Remonta o sistema de arquivos do telefone com r/w.</li>
+ <li>Copia a biblioteca atual <code>libxul.so</code> com os símbolos completos do telefone. Como esse arquivo tem centenas de MB esse passo leva muito tempo para terminar. E precisa ser refeito a cada vez que uma nova compilação é feita. Para executar o valgrind sem copiar <code>libxul</code> execute esse comando:<br>
+  <pre class="brush: bash">run-valgrind.sh nocopy</pre>
+ </li>
+ <li>Reinicia o telefone.</li>
+ <li>Encerra os processos b2g que foram iniciados.</li>
+ <li>Executa o seu próprio processo b2g sob o valgrind.</li>
+</ol>
+<p>Toda a saída do valgrind é escrita em <code>stdout</code> do terminal que executou o script <code>run-valgrind.sh</code>. Essa saída pode ser lida no terminal ou direcionada para um arquivo.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Uma vez que o script <code>run-valgrind.sh</code> é o proprietário do processo adb que executa o processo b2g, ao encerrar o script, os processos b2g e valgind também serão encerrados no telefone. É recomendado que o telefone seja reiniciado após o término de uma sessão do valgrind, para evitar problemas.</p>
+</div>
+<h2 id="Executando_Valgrind_no_Firefox_OS_Desktop">Executando Valgrind no Firefox OS Desktop</h2>
+<p>Executar o valgrind no Firefox OS Desktop funciona da mesma forma que excutar o Firefox (navegador). Consulte o artigo <a href="/pt-BR/docs/Debugging_Mozilla_with_Valgrind">Depurando o  Mozilla com Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DDS</span></a> para mais informações. Todos os flags de compilação relevantes necessários a ser incluídos no <code>mozconfig</code>, e todos os problemas específicos das plataformas descritos na página devem ser aplicados.</p>
+<p>Observe que ao executar Valgrind no desktop em modo <em>OOP/process-per-tab </em>requer adicionar as seguintes opções para certificar-se que os processos-filho também estão sendo monitorados:</p>
+<pre class="brush: bash">--trace-children=yes</pre>
+<h2 id="Mantendo_e_atualizando_o_Firefox_OS_Valgrind">Mantendo e atualizando o Firefox OS Valgrind</h2>
+<p>Durante as liberações de correções, Valgrind para Firefox OS é mantido em um repositório <em>forked</em> para mantê-lo o mais atualizado possível enquanto as excentricidades do Firefox OS são adequadas às mais novas versões.</p>
+<h3 id="Atualizando_Repositórios_Valgrind">Atualizando Repositórios Valgrind</h3>
+<div class="warning">
+ <p><strong>AVISO:</strong> NECESSÁRIO EXPERIÊNCIA COM GIT. Não tente atualizar o repositório Valgrind se você não dominar operações complexas do Git. Qualquer atualização no repositório do GitHub será refletida em <code>git.mozilla.org</code>, que por sua vez irão para os desenvolvedores que usam o HEAD dos repositórios de manifesto.</p>
+</div>
+<p>Os repositórios principais do Firefox OS valgrind e VEX são</p>
+<ul>
+ <li><a href="http://github.com/mozilla-b2g/valgrind">http://github.com/mozilla-b2g/valgrind</a></li>
+ <li><a href="http://github.com/mozilla-b2g/vex">http://github.com/mozilla-b2g/vex</a></li>
+</ul>
+<p>O <em>master branch </em>é uma versão antiga do <em>trunk</em> SVN de cada um desses repos, enquanto que o <em>branch</em> Firefox OS contém correções específicas do Firefox OS baseadas no topo do <em>trunk</em>.</p>
+<div class="note">
+ <p><strong>Nota: SEMPRE ATUALIZE AMBOS OS REPOS NO MESMO MOMENTO</strong>. Apesar de serem dois repos separados, VEX normalmente é um submódulo do Valgrind, e o HEAD do Valgrind normalmente aponta para o HEAD do VEX.</p>
+</div>
+<p>Esses estão replicados no domínio <code>git.mozilla.org</code> para se usado nos manifestos  B2G:</p>
+<ul>
+ <li><a href="http://git.mozilla.org/?p=b2g/valgrind.git;a=summary">http://git.mozilla.org/?p=b2g/valgrind.git;a=summary</a></li>
+ <li><a href="http://git.mozilla.org/?p=b2g/valgrind.git;a=summary">http://git.mozilla.org/?p=b2g/vex.git;a=summary</a></li>
+</ul>
+<ol>
+ <li>Os repos principais são mantidos em sincronismo com o valgrind SVN com git svn. Para carregar as atualizações nos repos, clone os repos valgrind e vex do github, então execute o comando abaixo:
+  <pre class="brush: bash">git svn init -s [subversion repo url]
+</pre>
+ </li>
+ <li>Envira as alterações para o SVN pode levar horas, mas quando for feito sua árvore deve estar sincronizada com a árvore principal do SVN.</li>
+ <li>Para enviar futuras atualizações, utilize o seguinte grupo de comandos:
+  <pre class="brush: bash">git checkout master
+git svn fetch
+git svn rebase
+git push [github-remote-name] master
+git checkout fxos
+git rebase master
+</pre>
+ </li>
+ <li>Existe a chance de existir conflitos entre as correções durante o <em>rebase</em> do <em>branch</em> do Firefox OS. Se não conseguir resolver os conflitos, envie um email para o autor para que ele resolva os conflitos encontrados.</li>
+ <li>Depois do <em>rebase</em>, execute uma compilação completa do Firefox OS com a opção <code>B2G_VALGRIND</code> para certificar-se que ainda funciona. Os consertos mais comuns são listados na seção a seguir.</li>
+ <li>Uma vez feito o <em>rebase</em> E TESTADA a compilação contra a árvore Firefox OS, você deve forçar um <em>push</em> para o branch Firefox OS devido à alteração do head.
+  <pre>git push -f [github-remote-name] fxos</pre>
+ </li>
+</ol>
+<h3 id="Scripts_de_compilação_instalação_e_execução">Scripts de compilação, instalação e execução</h3>
+<p>Existem diversos scripts que fazem parte do <em>branch</em> Valgrind Firefox OS ou do repo B2Gque podem necessitar serem alterados após um <em>fetch</em> do repo.</p>
+<h4 id="externalvalgrindandroid.mk">external/valgrind/android.mk</h4>
+<p>Esse é um script de compilação do sistema Android. As alterações nesse script são devido ao de arquivos que são adicionados ou removidos da árvore Valgrind. Use uma compilação com <code>-j1</code> para verificar quais os alvos falham na compilação e se foi esquecido algum arquivo ou há alguma referência a um arquivo inexistente.</p>
+<h4 id="externalvalgrindvalgrind.mk">external/valgrind/valgrind.mk</h4>
+<p>Contém uma lista de pacotes que necessitam ser compilados e adicionados à imagem do FxOS, referenciada por <code>gonk-misc/b2g.mk</code>. Normalmente esse script não necessita ser alterado uma vez que é raro que o Valgrind inclua novos pacotes, mas se isso acontecer, informe nesse arquivo.</p>
+<h4 id="run-valgrind.sh">run-valgrind.sh</h4>
+<p>Script para executar o Valgrind no telefone. Se exitem novos argumentos na linha de comando necessários para rodar o Valgrind no telefone, inclua-os aqui. Isso também é utilizado quando nós copiamos a biblioteca com depuração, assim qualquer ajuste ou alteração a esse processo deve acontecer aqui.</p>

@@ -1,0 +1,68 @@
+---
+title: nsIIdleService
+slug: nsIIdleService
+tags:
+  - Interfaces
+  - PrecisaDeConteúdo
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIIdleService
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/nsIIdleService.idl" rel="custom">widget/nsIIdleService.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+The idle service lets you monitor how long the user has been 'idle', that is they have not used their mouse or keyboard.
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 9.523809428571429%;"></div>
+
+<div style="height: 8px; top: 16px; left: 9.523809428571429%; background: #00dd00; position: absolute; width: 90.47619057142857%;" title="Introduced in Gecko 1.9.1 (Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 9.523809428571429%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 9.523809428571429%;">Gecko 1.9.1</div>
+
+    <div style="height: 8px; top: 16px; left: 28.07142857142857%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 16 (Firefox 16 / Thunderbird 16 / SeaMonkey 2.13)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/pt-PT/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 16 (Firefox 16 / Thunderbird 16 / SeaMonkey 2.13)</span></div>
+</div><p></p>
+<p> O serviço de inatividade deixa-o monitorar por quanto tempo o usuário esteve 'ausente', i.e. não usado o seu mouse ou teclado. Você pode pegar o tempo de inatividade diretamente, mas na maioria dos casos você vai querer registrar um observador para um intervalo predefinido. <span class="comment">Documentação e predefinições de interfaces a serem escritas... </span></p>
+<p>Atualmente as implementações no <code>nsIIdleService</code> existem para Windows, Mac OS X e Linux (via XScreenSaver).</p>
+<p>Exemplo 1:</p>
+<pre class="eval">var idleService = Components.classes["@mozilla.org/widget/idleservice;1"]
+                            .getService(Components.interfaces.nsIIdleService)
+setTimeout(function() { alert(idleService.idleTime) }, 1000)
+// se você não usar o mouse ou o teclado depois de rodar este fragmento,
+// você verá um número próximo de 1000 na caixa de alerta.
+</pre>
+<p>Exemplo 2:</p>
+<pre class="eval">var idleService = Components.classes["@mozilla.org/widget/idleservice;1"]
+                            .getService(Components.interfaces.nsIIdleService)
+var idleObserver = {
+  observe: function(subject, topic, data) {
+    alert("topic: " + topic + "\ndata: " + data);
+  }
+};
+idleService.addIdleObserver(idleObserver, 60); // one minute
+// ...
+// Não se esqueça de remover o observador usando removeIdleObserver!
+idleService.removeIdleObserver(idleObserver, 60);
+</pre>
+<h3 id="M.C3.A9todos" name="M.C3.A9todos">Métodos</h3>
+<pre class="eval">void addIdleObserver(in nsIObserver observer, in unsigned long time);
+void removeIdleObserver(in nsIObserver observer, in unsigned long time);
+</pre>
+<h3 id="Atributos" name="Atributos">Atributos</h3>
+<pre class="eval">readonly attribute unsigned long idleTime;
+</pre>
+<p><span class="comment">Categorias</span></p>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p></p>

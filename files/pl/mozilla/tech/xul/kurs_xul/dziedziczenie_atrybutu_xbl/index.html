@@ -1,0 +1,115 @@
+---
+title: Dziedziczenie atrybutu XBL
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dziedziczenie_atrybutu_XBL
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XBL_Attribute_Inheritance
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Treść_anonimowa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_własności">Następny  »</a></p>
+</div><p></p>
+
+<p>W tym artykule zobaczymy jak atrybuty mogą być dziedziczone.</p>
+
+<h2 id="Dziedziczenie_atrybut.C3.B3w" name="Dziedziczenie_atrybut.C3.B3w">Dziedziczenie atrybutów</h2>
+
+<p><a href="pl/XBL">XBL</a> pozwala nam na zbudowanie połączonych widgetów podczas ukrywania ich rzeczywistej implementacji. Jednakże z właściwościami wzmiankowanymi dotychczas, anonimowa zawartość jest zawsze tworzona w ten sam sposób. Byłoby to użyteczne do dodawania atrybutów do elementów granicznych które modyfikują wewnętrzne elementy. Na przykład:</p>
+
+<pre class="eval"><b>XUL:</b>
+
+&lt;searchbox/&gt;
+
+<b>XBL:</b>
+
+&lt;binding id="searchBinding"&gt;
+  &lt;content&gt;
+    &lt;xul:textbox/&gt;
+    &lt;xul:button label="Search"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>W tym przykładzie, atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> umieszczono bezpośrednio w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>. Problem z tym jest taki, że etykieta powinna być taka sama za każdym razem, kiedy stosujemy dowiązanie. W tym przypadku byłoby to bardziej pożądane gdyby atrybut mógł być określony w polu wyszukiwania. XBL dostarcza atrybutu <code>inherits</code>, który może być użyty do dziedziczenia atrybutów z elementu granicznego. Powinien być umieszczony w elemencie, który powinien dziedziczyć atrybut z zewnętrznego elementu, w tym przypadku przycisku. Ta wartość powinna być ustawiona jako lista oddzielona przecinkami atrybutów nazwy, których są dziedziczone.</p>
+
+<pre>&lt;xul:textbox xbl:inherits="flex"/&gt;
+&lt;xul:button xbl:inherits="label"/&gt;
+</pre>
+
+<p>Kiedy zawartość jest generowana, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> korzysta z atrybutu <code>flex</code> pola wyszukiwania a <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> korzysta z atrybutu <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> pola wyszukiwania. Pozwala to elastyczności pola tekstowego i etykiety przycisku być różnymi dla każdego zastosowania dowiązania. Dodatkowo, zmieniając wartość tego atrybutu w polu wyszukiwania skryptem zaktualizujemy również pole tekstowe i przycisk. Możesz dodać atrybut inherits do tylu elementów ile sobie życzysz, dziedzicząc kilka atrybutów.</p>
+
+<p>Zauważ, że atrybut <code>inherits</code> jest umieszczony w przestrzeni nazw XBL, poprzez poprzedzenie go 'xbl:'. Przestrzeń nazw powinna być zadeklarowana gdzieś wcześniej, zazwyczaj w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code></code>. Demonstruje to kolejny przykład:</p>
+
+<pre>&lt;bindings xmlns:xbl="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;xbl:binding id="buttonBinding"&gt;
+  &lt;xbl:content&gt;
+    &lt;xul:button label="OK" xbl:inherits="label"/&gt;
+  &lt;/xbl:content&gt;
+&lt;/xbl:binding&gt;
+</pre>
+
+<p>W tym przykładzie, przycisk dziedziczy atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code>, ale ten atrybut jest również podaną wartością bezpośrednio w XBL. Ta technika jest używana do ustawienia domyślnej wartości jeśli atrybuty nie jest obecny przycisk ten odziedziczy atrybut <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> z elementu zewnętrznego jednak, jeśli nie ma <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code>, będzie podana domyślna wartość <code>OK</code>.</p>
+
+<p>Może być to stosowane tam gdzie dwa wygenerowane elementy muszą dziedziczyć z atrybutu który ma taką samą nazwę. Na przykład, tworząc etykietowane pole tekstowe (pole tekstowe z tekstem opisującym obok niego) z elementami <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>, etykieta będzie musiała dziedziczyć tekst z atrybutu <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code> a pole tekstowe również będzie dziedziczyło domyślną wartość z atrybutu <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code>. Do rozwiązania tego będziemy musieli użyć innego atrybutu odwzorować go do tego samego. Poniżej to demonstruje:</p>
+
+<pre class="eval"><b>XUL:</b>
+
+&lt;box class="labeledtextbox" title="Enter some text:" value="OK"/&gt;
+
+<b>CSS:</b>
+
+box.labeledtextbox {
+    -moz-binding: url('<a class="external" rel="freelink">chrome://example/skin/example.xml#labeledtextbox'</a>);
+}
+
+<b>XBL:</b>
+
+&lt;binding id="labeledtextbox"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:textbox xbl:inherits="value"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p><code><code><a href="/pl/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> dziedziczy atrybut <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code> bezpośrednio. Aby ustawić atrybut <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code> w etykiecie, musimy użyć innej nazwy atrybutu i od wzorować go do tej wartości. Atrybut <code>inherits</code> w etykiecie wykorzystuje atrybut <code>title</code> z etykietowanego pola tekstowego i odwzorowuje go do atrybutu <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code> elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code>. Składnia <code>&lt;inner attribute&gt;=&lt;outer attribute&gt;</code> jest używana do odwzorowania jednego atrybutu do innego. Tu mamy inny przykład:</p>
+
+<pre class="eval"><b>XUL:</b>
+
+&lt;box class="okcancel" oktitle="OK" canceltitle="Cancel" image="happy.png"/&gt;
+
+<b>CSS:</b>
+
+box.okcancel {
+    -moz-binding: url('<a class="external" rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<b>XBL:</b>
+
+&lt;binding id="okcancel"&gt;
+  &lt;content&gt;
+    &lt;xul:button xbl:inherits="label=oktitle,image"/&gt;
+    &lt;xul:button xbl:inherits="label=canceltitle"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Wartość atrybutu <code>oktitle</code> jest odwzorowana do atrybutu <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> pierwszego przycisku. Atrybut <code>canceltitle</code> jest odwzorowany do atrybutu <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> drugiego przycisku. Pierwszy przycisk również dziedziczy atrybut <code><code id="a-image"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/image">image</a></code></code> a wynik jest następujący:</p>
+
+<pre>&lt;box class="okcancel" oktitle="OK" canceltitle="Cancel" image="happy.png"&gt;
+  &lt;button label="OK" image="happy.png"/&gt;
+  &lt;button label="Cancel"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Zauważ, że atrybuty są powielone z wewnętrznej (anonimowej) zawartości. Zmieniając atrybuty w polu z klasy <code>okcancel</code> będzie automatycznie zmieniana wartość w przycisku. Możesz również do notować, że możemy wymyślić swoje własne nazwy atrybutów. Jest to poprawne w XUL.</p>
+
+<p>W następnym artykule, zobaczymy w jaki sposób <a href="pl/Kurs_XUL/Dodawanie_w%c5%82asno%c5%9bci">dodamy do wiązania własności, metody i zdarzenia</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Treść_anonimowa" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_własności">Następny  »</a></p>
+</div><p></p>

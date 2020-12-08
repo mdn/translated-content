@@ -1,0 +1,61 @@
+---
+title: Протоколирование (Логирование)
+slug: Mozilla/Add-ons/SDK/Tutorials/Протоколирование
+tags:
+  - Логирование
+  - Протоколирование
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Logging
+---
+<div class="blockIndicator warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<p>{{LegacyAddonsNotice}}{{AddonSidebar}}</p>
+
+<div class="note"><span>Перед использованием, вам нужно изучить <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29">основы <code>jpm</code></a>. </span></div>
+
+<p><a href="https://developer.mozilla.org/en/DOM/console">Консоль для DOM-объекта</a> полезна для отладки JavaScript. Так как DOM-объекты недоступны для главного кода дополнения (add-on), то SDK предоставляет свой собственный глобальный <code>объект</code> <code>"консоль" (console)</code> с большинством таких же методов, как и у DOM-<code>консоли</code>, включая методы для протоколирвоания ошибок (error), предупреждений (warning) или информационных сообщений. Для доступа к консоли не нужно получать что-либо, используя <code>require()</code>. Она уже доступна автоматически.</p>
+
+<p>Метод <code>console.log()</code> выводит информационное сообщение:</p>
+
+<pre class="brush: js">console.log("Hello World");
+</pre>
+
+<p>Попробуйте:</p>
+
+<ul>
+ <li>создайте новую папку и перейдите в неё</li>
+ <li>выполните jpm init со значениями по умолчанию</li>
+ <li>откройте "index.js" и добавьте строку, указанную в примере выше</li>
+ <li>выполните <code>jpm run</code></li>
+</ul>
+
+<p>Firefox запустится, и в терминале, где вы ввели <code>jpm run</code>, появится следующая строка:</p>
+
+<pre>info: Hello World!
+</pre>
+
+<h2 id="Консоль_в_скриптах_Content_Scripts"><code>Консоль</code> в скриптах <code>Content Scripts</code></h2>
+
+<p>Вы можете использовать консоль в скриптах <code><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">content scripts</a></code> так же, как и вашем главном коде дополнения. Следующий аддон (add-on) выведет в лог HTML-содержимое каждой закладки, загруженной пользователем, используя <code>console.log()</code> изнутри скрипта <code>content script</code>:</p>
+
+<pre class="brush: js">require("sdk/tabs").on("ready", function(tab) {
+  tab.attach({
+    contentScript: "console.log(document.body.innerHTML);"
+  });
+});
+</pre>
+
+<h2 id="Консоль_Output">Консоль Output</h2>
+
+<p>Если вы запускаете дополнение из терминала (например, выполня <code>jpm run</code> или <code>jpm test</code>), тогда сообщения консоли появятся в этом же терминале.</p>
+
+<p>Если вы установили расширение в Firefox тогде сообщения появятся в <a href="/en-US/docs/Tools/Browser_Console">консоли браузера</a> Firefox.</p>
+
+<p>Но обратите внимание, что <strong>по умолчанию вызовы <code>console.log()</code> не отобразят ничего в Error Console для любых установленных дополнений</strong>. Это правило работает и для дополнений, установленных с использованием Add-on Builder, и для установленных с помощью утилит, таких как <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/">Extension Auto-installer</a>.</p>
+
+<p>Смотрите <a href="/en-US/Add-ons/SDK/Tools/console#Logging_Levels">"Уровни логирования"</a> в справочной документации для более подробной информации.</p>
+
+<h2 id="Дальнейшее_изучение">Дальнейшее изучение</h2>
+
+<p>Полное <code>API консоли</code> смотри в <a href="/en-US/Add-ons/SDK/Tools/console">API-справочнике</a>.</p>

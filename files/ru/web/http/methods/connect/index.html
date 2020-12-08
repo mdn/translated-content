@@ -1,0 +1,82 @@
+---
+title: CONNECT
+slug: Web/HTTP/Methods/CONNECT
+translation_of: Web/HTTP/Methods/CONNECT
+---
+<div>{{HTTPSidebar}}</div>
+
+<p><strong>HTTP <code>CONNECT</code> method</strong> <span id="result_box" lang="ru"><span>запускает двустороннюю связь с запрошенным ресурсом.</span> <span>Метод можно использовать для открытия туннеля</span></span>.</p>
+
+<p>К примеру, метод CONNECT может использоваться для доступа к сайту, который использует {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Клиент <span id="result_box" lang="ru"><span>запрашивает HTTP-прокси-сервер для туннелирования TCP-соединения с желаемым назначением</span></span>. За тем сервер <span id="result_box" lang="ru"><span>переходит к подключению от имени клиента.</span> <span>После того, как соединение установлено сервером, прокси-сервер продолжает проксировать поток TCP к клиенту и от него.</span></span></p>
+
+<p><code>CONNECT</code> is a hop-by-hop method.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Запрос имеет тело</th>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <th scope="row">Успешный ответ имеет тело</th>
+   <td>Да</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Безопасный")}}</th>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Идемпотентный")}}</th>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Кэшируемый")}}</th>
+   <td>Нет</td>
+  </tr>
+  <tr>
+   <th scope="row">Допускается в <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML формах</a></th>
+   <td>Нет</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate">CONNECT www.example.com:443 HTTP/1.1
+</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Некоторые прокси сервера могут запросить авторизацию для создания туннеля. Смотрите так же {{HTTPHeader("Proxy-Authorization")}}.</p>
+
+<pre class="line-numbers  language-html notranslate">CONNECT server.example.com:80 HTTP/1.1
+Host: server.example.com:80
+Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Title</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "CONNECT", "4.3.6")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузером"><span class="short_text" id="result_box" lang="ru"><span>Совместимость с браузером</span></span></h2>
+
+<p class="hidden"><span id="result_box" lang="ru"><span>Таблица совместимости на этой странице создается из структурированных данных.</span> <span>Если вы хотите внести свой вклад в данные, ознакомьтесь с <a href="/en-US/docs/">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос на перенос.</span></span></p>
+
+<p>{{Compat("http.methods.CONNECT")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{Glossary("Proxy server")}}</li>
+ <li>{{HTTPHeader("Proxy-Authorization")}}</li>
+</ul>

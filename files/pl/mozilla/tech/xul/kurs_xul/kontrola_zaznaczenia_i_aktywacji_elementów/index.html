@@ -1,0 +1,166 @@
+---
+title: Kontrola zaznaczenia i aktywacji elementów
+slug: Mozilla/Tech/XUL/Kurs_XUL/Kontrola_zaznaczenia_i_aktywacji_elementów
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Focus_and_Selection
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Skróty_klawiaturowe" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Polecenia">Następny  »</a></p>
+</div><p></p>
+
+<p>Ten artykuł opisuje, jak obsługiwać kontrolę zaznaczenia i aktywacji elementów.</p>
+
+<h2 id="Elementy_aktywne" name="Elementy_aktywne">Elementy aktywne</h2>
+
+<p>Elementy skupione odnoszą się do elementów, które aktualnie otrzymują zdarzenia wejścia (input events). Jeśli istnieją trzy textboxy w jednym oknie, skupionym nazywamy tego, w którym użytkownik jest aktualnie w stanie wpisać text. Tylko jeden element może być w tej samej chwili skupiony dla danego okna.</p>
+
+<p>Użytkownik może zmienić skupienie poprzez kliknięcie na elemencie przy pomocy myszy lub wciśnięcie klawisza tabulacji TAB. W chwili przyciśnięcia klawisza TAB kolejne elementy okna przejmują skupienie. W celu powrotu do poprzedniego elementu należy użyć kombinacji klawiszy Shifh i Tab.</p>
+
+<h3 id="Rearranging_the_tab_order" name="Rearranging_the_tab_order">Rearranging the tab order</h3>
+
+<p>Możemy także zmienić porządek w którym zmieniać się będzie skupienie elementów danego okna poprzez dodanie atrybutu tabindex dla konkretnego elementu. Ten atrybut powinien być ustawiony jako wartość liczbowa. W chwili przyciśnięcia klawisza TAB, skupienie zostanie przeniesione na element o następnym wyższym indeksie tabulacji. Zazwyczaj jednak nie ma potrzeby ustalania atrybutu tabindex. Jeśli tego nie zrobimy, wciśnięcie TAB ustawi skupienie na kolejnym wyświetlanym elemencie. Poniżej przykład:</p>
+
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul">Podgląd</a></p>
+
+<pre>&lt;button label="Button 1" tabindex="2"/&gt;
+&lt;button label="Button 2" tabindex="1"/&gt;
+&lt;button label="Button 3" tabindex="3"/&gt;
+</pre>
+
+<h3 id="The_focus_event" name="The_focus_event">The focus event</h3>
+
+<p>Zdarzenie skupienia jest wywoływane w odpowiedzi na ustawienie skupienia dla danego elementu. Zdarzenie rozmycia używane jest natomiast kiedy skupienie zostaje usunięte z danego elementu. Jesteśmy w stanie odpowiedzieć a zmianę skupienie poprzez wykorzystanie atrybutów onfocus i onblur dla konkretnego elementu. Działają one zupełnie jak ich HTML-owi krewni. Wykorzystuje się je najczęściej w celu podświetlania elementów lub wyświetlania tekstu pomocniczego w pasku statusu. Poniższy przykład obrazuje obsługę zdarzenia skupienia.</p>
+
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul">Podgląd</a></p>
+
+<pre>&lt;script&gt;
+
+function displayFocus(){
+  var elem=document.getElementById('sbar');
+  elem.setAttribute('value','Enter your phone number.');
+}
+
+&lt;/script&gt;
+
+&lt;textbox id="tbox1"/&gt;
+&lt;textbox id="tbox2" onfocus="displayFocus();"/&gt;
+&lt;description id="sbar" value=""/&gt;
+</pre>
+
+<p>Kiedy pojawia się zdarzenie skupienia, zostaje wywołana funkcja displayFocus. Ta funkcja będzie zmieniać wartość pola tekstowego. Można również rozszerzyć ten przykład o usunięcie tekstu w chwili zajścia zdarzenia rozmycia. Typowo, będziemy ustalać zdarzenia skupienia i rozmycia, w celu uaktualniania części interfejsu, w chwili w której użytkownik wybiera elementy. Przykładowo, jesteśmy w stanie uaktualniać pewne pola, w chwili w której wypełniamy inne. Możemy także posłużyć się wspomnianymi zdarzeniami w celu walidacji pewnych wprowadzanych wartości. Nie wyświetlaj alertu w trakcie zdarzeń skupienia bądź rozmycia, ponieważ będzie to odwracało uwagę użytkownika oraz nie spełnia to podstawowych założeń projektowania interfejsu.</p>
+
+<p>Możemy także dynamicznie dodać obsługę zdarzenia, przy użyciu funkcji DOM, a mianowicie <code><a href="pl/DOM/element.addEventListener">addEventListener</a></code>. Możemy jej użyć dla dowolnego elementu i typu zdarzenia. Pobiera ona trzy parametry: typ zdarzenia, funkcję która będzie wykonywana w chwili zajścia zdarzenia oraz wartość boolean określającą czy przejąć zdarzenie czy nie.</p>
+
+<h3 id="Getting_the_currently_focused_element" name="Getting_the_currently_focused_element">Getting the currently focused element</h3>
+
+<p>Element, który aktualnie posiada skupienie jest przetrzymywany w obiekcie zwanym command dispatcher, który istnieje tylko jeden dla danego okna. Command dispatcher jest odpowiedzialny za utrzymywanie skupienia na elemencie, w chwili w której użytkownik korzysta z interfejsu. Command dispatcher posiada także inne zadania, które będą omawiane w poźniejszych sekcjach. Teraz poznamy natomiast cechy command dispatchera powiązane ze skupieniem.</p>
+
+<p>Możemy odzyskiwać command dispatchera z okna, przy użyciu własności dokumentu o nazwie <code>commandDispatcher</code>. Mamy również dostęp do elementu skupienia za pomocą własności dispatchera o nazwie focusedElement. Przykład poniżej.</p>
+
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul">Podgląd</a></p>
+
+<pre>&lt;window id="focus-example" title="Focus Example"
+        onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init(){
+  addEventListener("focus",setFocusedElement,true);
+}
+
+function setFocusedElement(){
+  var focused = document.commandDispatcher.focusedElement;
+  document.getElementById("focused").value = focused.tagName;
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;label control="username" value="User Name:"/&gt;
+  &lt;textbox id="username"/&gt;
+&lt;/hbox&gt;
+
+&lt;button label="Hello"/&gt;
+&lt;checkbox label="Remember This Decision"/&gt;
+
+&lt;label id="focused" value="-No focus-"/&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>W tym przykładzie, obsługa zdarzenia skupienia dodana jest do okna. Chcemy użyć obsługi zdarzenia przejęcia, więc będzie nam potrzebna metoda addEventListener. Rejestruje ona obsługę zdarzenia przejęcia dla okna, która to wywoła metodę setFocusedElement. Ta metoda pobiera element skupienia z command dispatchera i ustala etykietę zgodną z nazwą jego znacznika. Kiedy element skupienia się zmienia, etykieta pokaże nazwę znacznika elementu. Warto wspomnieć tu o paru rzeczach. Po pierwsze, kiedy skupienie jest na polu tekstowym nazwa znacznika to "html:input", nie textbox jak można by się spodziewać. Dzieje się tak ponieważ textboxy w języku XUL są zaimplementowane przy pomoc widgetów wejścia HTML. Po drugie, kliknięcie na etykiecie textbox'u zmienia skupienie okna i ustala je na ten właśnie element. Wynika to z faktu, że etykieta posiada atrybut control wskazujący na id textboxu. W końcu, inne etykiety wyświetlające nazwę znacznika nie posiadają atrybutu control, więc klikanie na nie, nie spowoduje żadnego efektu.</p>
+
+<h3 id="Making_a_label_focusable" name="Making_a_label_focusable">Making a label focusable</h3>
+
+<p>Jeśli chcielibyśmy utworzyć szczególne elementy, możemy potrzebować możliwości zmian dotyczących skupienia danego elementu. W tym celu, możemy wykorzystać specjalną własność stylu -moz-user-focus. Ta własność kontroluje możliwość skupienia dla elementu. Przykładowo, można utworzyć etykietę posiadającą możliwość skupienia:</p>
+
+<p><span id="Example_4"><a id="Example_4"></a><strong>Example 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul">Podgląd</a></p>
+
+<pre>&lt;label id="focused" style="-moz-user-focus: normal;"
+          onkeypress="alert('Label Focused');" value="Focus Me"/&gt;
+</pre>
+
+<p>Własność stylu jest ustalona na wartość normal. Możemy także ustawić ją tak, aby ignorować skupienie lub wyłączyć możliwość skupienia dla danego elementu. Nie powinna być jednak używana dla dezaktywacji elementu. W tym celu używamy wspomnianych już atrybutu lub własności disabled, ponieważ te opcje projektowane były właśnie z myślą o możliwości dezaktywacji elementu. Wracając do przykładu, kiedy nasza etykieta otrzyma nareszcie skupienie, jest w stanie odpowiadać na wciskanie klawiszy. Naturalnie, nie daje ona oznak skupienia, ponieważ tego typu elementy rzadko są przewidziane do tej właśnie czynności.</p>
+
+<h3 id="Changing_the_focus" name="Changing_the_focus">Changing the focus</h3>
+
+<p>Istnieje kilka sposobów na zmianę skupienia dla danych elementów. Najprostszą jest wywołanie metody focus dla elementu XUL, na którym mamy ustawić wspomniane skupienie. Natomiast, metoda blur może być wykorzystana dla usunięcia skupienia dla danego elementu. Poniżej przykład:</p>
+
+<p><span id="Example_5"><a id="Example_5"></a><strong>Example 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul">Podgląd</a></p>
+
+<pre>&lt;textbox id="addr"/&gt;
+
+&lt;button label="Focus" oncommand="document.getElementById('addr').focus()"/&gt;
+</pre>
+
+<p>Możemy również użyć metody advanceFocus oraz rewindFocus na command dispatcherze. Metody te przesuwają skupienie na następny lub poprzedni element w pewnej sekwencji. Właśnie z tych metod korzystamy w chwili w której zostaje wciśnięty TAB lub Shift+Tab.</p>
+
+<p>Dla textboxów, natomiast, istnieje specjalny atrybut focused, który jest dodany zawsze kiedy element posiada skupienie. Można również sprawdzić czy w danej chwili wspomniany atrybut jest obecny. Możemy to zrobić dzięki skryptom, bądź arkuszom stylów. Atrybut ten będzie posiadał wartość true, jeśli textbox posiada skupienie, w przeciwnym przypadku atrybut będzie zwyczajnie nieobecny.</p>
+
+<p><b>Suppose you wanted to move the focus from where it currently is, to the next place the browser thinks it should be. A user typically does this by hitting the "Tab" key. You can do this anywhere you have a XUL browser document by simply:</b></p>
+
+<pre>      document.commandDispatcher.advanceFocus();
+</pre>
+
+<p><b>In fact, the commandDispatcher simply implements the nsIDOMXULCommandDispatcher interface. There are other functions that may be of interested to you when dealing with focus.</b></p>
+
+<h2 id="Obs.C5.82uga_zmiany_tekstu" name="Obs.C5.82uga_zmiany_tekstu">Obsługa zmiany tekstu</h2>
+
+<p>Istnieją dwa zdarzenia, które mogą być użyte kiedy użytkownik zmienia wartość znajdującą się w polu tekstowym. Naturalnie, zdarzenia te będą wysyłane tylko do tego textboxa, który aktualnie posiada skupienie. Zdarzenia wejścia (input) są uruchamiane zawsze kiedy tekst jest modyfikowany. Nowe wartości będą różniły się od starych. Możemy także chcieć skorzystać z tych wydarzeń, zastępując nimi zdarzenia związane z klawiszami (key), ponieważ niektóre z klawiszy (np: Shift) nie zmieniają wartości. Także zdarzenie wejścia (input) nie zostanie uruchomione w przypadku, kiedy wciśnięty zostanie klawisz danego znaku oraz kiedy istnieje już maksymalna liczba znaków mieszczących się w polu tekstowym.</p>
+
+<p>Natomiast zdarzenie zmiany (change event) działa podobnie. I ono jest uruchamiane tylko wtedy kiedy zachodzą jakieś zmiany dla danego pola. Jednak rozpoczyna swoją pracę tylko raz kiedy pole tekstowe traci skupienie. Jedno uruchomienie dla zestawu zmian.</p>
+
+<h2 id="Zaznaczanie_tekstu" name="Zaznaczanie_tekstu">Zaznaczanie tekstu</h2>
+
+<p>Podczas pracy z textboxem, możemy chcieć odzyskać część zawartości pola, tą którą zaznaczył użytkownik. Możemy również chcieć zmienić obecne zaznaczenie.</p>
+
+<p>Textboxy XUL, wspierają sposób na odzyskiwanie i modyfikację zaznaczenia. Najprostszym jest zaznaczenie całości tekstu w polu tekstowym. Robimy to dzięki metodzie select wywoływanej dla textboxa.</p>
+
+<pre>tbox.select();
+</pre>
+
+<p>Jednak, możemy sobie zażyczyć wyboru tylko części tekstu. W tym celu korzystamy z funkcji setSelectionRange. Pobiera ona dwa parametry, pierwszy to znak rozpoczynający, a drugi to znak, który następuje po ostatnim znajdującym się w zaznaczeniu. Wartości porządkowe zaczynają się od zera, tak więc pierwszy znak ma wartość 0, drugi 1 itd.</p>
+
+<pre>tbox.setSelectionRange(4,8);
+</pre>
+
+<p>Ten przykład zaznaczy piąty wyświetlany znak, oraz 6, 7 oraz 8. Jeśli było tylko 6 znaków wprowadzonych do pola, tylko 5 oraz 6 znak będą zaznaczone. Nie wystąpi natomiast żaden błąd.</p>
+
+<p>Jeśli ustalisz tą samą wartość dla obu parametrów, start i koniec zaznaczenia, zmieniają pozycję na tą samą zgodną z powyższą wartością. W rezultacie daje nam to zmiany pozycji kursora wewnątrz textboxu. Przykładowo, poniższa linijka kodu przenosi kursor na początek tekstu.</p>
+
+<pre>tbox.setSelectionRange(0,0);
+</pre>
+
+<p>Jesteśmy w stanie odzyskać obecne zaznaczenie poprzez użycie własności <code>selectionStart</code> i <code>selectionEnd</code>. Te własności są ustawione na pozycje początkową i końcową zaznaczenie. W przypadku jeśli obie ustawione są na tą samą wartość, nie istnieje zaznaczenie, ale za to otrzymujemy informację na temat obecnej pozycji kursora. Kiedy mamy dostęp do pozycji startowej i końcowej, jesteśmy w stanie pobrać substring z całego tekstu.</p>
+
+<p>Zawartość pola tekstowego możemy odzyskiwać oraz modyfikować poprzez wykorzystanie własności <code>value</code>.</p>
+
+<p>Jedną z dodatkowych i przydatnych własności pola tekstowego jest <code>textLength</code>, która przetrzymuje całkowitą liczbę znaków znajdujących się w polu.</p>
+
+<p>Następnie, dowiemy się jak stosować <a href="pl/Kurs_XUL/Polecenia">polecenia</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Skróty_klawiaturowe" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Polecenia">Następny  »</a></p>
+</div><p></p>

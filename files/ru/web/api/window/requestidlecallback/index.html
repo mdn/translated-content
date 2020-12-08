@@ -1,0 +1,121 @@
+---
+title: window.requestIdleCallback()
+slug: Web/API/Window/requestIdleCallback
+translation_of: Web/API/Window/requestIdleCallback
+---
+<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
+
+<p>Метод <code><strong>window.requestIdleCallback()</strong></code> ставит в очередь функцию, которая будет вызываться во время периодов простоя браузера. Это позволяет разработчикам выполнять фоновую и низкоприоритетную работу в цикле основного события, без воздействия такими критично долгими событиями, как анимация и обработка ввода. Функции, обычно, вызываются в порядке очереди "первый вошёл - первый вышел"; однако функции обратного вызова с заданными <code>timeout</code>, могут быть вызваны не по порядку, если необходимо запустить их до истечения таймаута.</p>
+
+<p>Вы можете вызвать <code>requestIdleCallback()</code> внутри callback-функции в режиме ожидания для планирования другого callback'а, который произойдёт не раньше, чем следующий проход через цикл событий.</p>
+
+<div class="note">Опция <code>timeout</code> настоятельно рекомендована для работы, в противном случае может пройти несколько секунд прежде, чем будет вызван обратный вызов.</div>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
+
+<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+
+<p>Возвращает ID, который может быть использован для отмены callback'а, передав значение в метод {{domxref("window.cancelIdleCallback()")}}.</p>
+
+<h3 id="Parameters" name="Parameters">Параметры</h3>
+
+<dl>
+ <dt><code>callback</code></dt>
+ <dd>Ссылка на функцию, что должна быть вызвана в ближайшем будущем, когда цикл событий в режиме ожидания. Функции передаётся объект {{domxref("IdleDeadline")}} описывающий общее количество доступного времени и был ли выполнен callback, потому что таймаут истёк.</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>Содержит опциональные параметры конфигурации. На текущий момент, определено только одно свойство:
+ <ul>
+  <li><code>timeout</code>: Если задан <code>timeout</code> и имеет положительное значение, а callback ещё не был вызван по времени наступления миллисекундного <em>timeout</em>, callback будет вызван в течение следующего периода простоя, даже если это может привести к негативному влиянию на производительность.</li>
+ </ul>
+ </dd>
+</dl>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<p>Посмотрите наш <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">готовый пример</a> в статье <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+
+<h2 id="Specifications" name="Specifications">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Спецификация</th>
+   <th>Статус</th>
+   <th>Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Background Tasks')}}</td>
+   <td>{{Spec2('Background Tasks')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(47)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop(55)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(34)}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(47)}}</td>
+   <td>{{CompatChrome(47)}}</td>
+   <td>{{CompatGeckoMobile(55)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p><code>requestIdleCallback()</code> включён в Firefox 53 но по умолчанию отключён. По умолчанию включён, начиная с Firefox 55.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("window.cancelIdleCallback()")}}</li>
+ <li>{{domxref("IdleDeadline")}}</li>
+ <li>{{domxref("window.setTimeout()")}}</li>
+ <li>{{domxref("window.setInterval()")}}</li>
+</ul>

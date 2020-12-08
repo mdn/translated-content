@@ -1,0 +1,63 @@
+---
+title: Security preferences
+slug: Midas/Security_preferences
+translation_of: Mozilla/Projects/Midas/Security_preferences
+---
+<p>To protect users' private information, unprivileged scripts cannot invoke the Cut, Copy, and Paste commands in the Mozilla rich text editor, so the corresponding buttons on the Mozilla Rich Text Editing demo page will not work. To enable these functions for purposes of the demo, you must modify your browser preferences.</p>
+
+<p>For Firefox:</p>
+
+<ol>
+ <li>Quit Firefox. If you have Quick Launch running (in Windows, an icon in the toolbar), quit that too.</li>
+ <li><a class="external" href="http://support.mozilla.com/en-US/kb/Profiles">Find your Firefox profile directory</a>.</li>
+ <li>Open the <code class="filename">user.js</code> file from that directory in a text editor. If there's no user.js file, create one.</li>
+ <li>Add these lines to <code class="filename">user.js</code>:
+  <pre class="code"><span class="diff_sub">u</span><span class="diff_sub">ser_pref("capability.policy.policynames", "allowclipboard");
+user_pref("capability.policy.allowclipboard.sites",
+"https://www.mozilla.org");
+user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
+user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</span><span class="diff_sub">ser_pref("capability.policy.policynames", "allowclipboard");
+</span><span class="diff_sub">user_pref("capability.policy.allowclipboard.sites",
+"https://www.mozilla.org</span><span class="diff_sub">");
+</span><span class="diff_sub">user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "</span><span class="diff_sub">allAccess");</span>
+<span class="diff_sub">user_pref("capability.policy.allowclipboard.Clipboard.paste", "al</span><span class="diff_sub">lAccess");</span></pre>
+ </li>
+ <li>Change the url <span class="external"><code class="url">https://www.mozilla.org</code></span> to the site for which you want to enable this function.</li>
+ <li>Save the file, and restart Firefox. The Clipboard buttons should now function.</li>
+</ol>
+
+<div class="note"><strong>Note:</strong> The preference is site as well as protocol specific. For example:
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "http://www.mozilla.org")</pre>
+
+<p>is not the same as:</p>
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org")</pre>
+
+<p>This is because the first uses HTTP while the second uses HTTPS.</p>
+</div>
+
+<p>If you want to allow multiple URLs to access the Paste operation, separate the URLs with a space. For example:</p>
+
+<pre>user_pref("capability.policy.allowclipboard.sites",
+ "https://www.mozilla.org https://developer.mozilla.org")
+</pre>
+
+<dl>
+ <dt>For more information about security policies, see <a class="external" href="http://www.mozilla.org/projects/security/components/ConfigPolicy.html">http://www.mozilla.org/projects/security/components/ConfigPolicy.html</a>.</dt>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul>
+</ul>

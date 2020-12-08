@@ -1,0 +1,56 @@
+---
+title: Firefox для Android
+slug: Mozilla/Firefox_для_Android
+tags:
+  - Fennec
+  - Firefox
+  - Андроид
+  - Мобильный
+translation_of: Mozilla/Firefox_for_Android
+---
+<p>Всебольше и больше людей используют мобильные устройства как основной или даже единственный способ получить доступ к Интернету.<a class="link-https" href="https://www.mozilla.org/en-US/mobile/"> Firefox for Android</a> (codenamed Fennec) является открытым, основанным на тех же стандартах браузер, что и тот, который на вашем рабочем столе Firefox.</p>
+<p>Firefox для Android строит свой пользовательский интерфейс из родных Android виджетов вместо XUL: это значительно повышает производительность при запуске, и потребление памяти.</p>
+<h2 id="Содействие_Firefox_для_Android">Содействие Firefox для Android</h2>
+<p>Отправной точкой для получения информации о проекте Firefox дляAndroid, является проект <a class="link-https" href="https://wiki.mozilla.org/Mobile/Get_Involved">"Get Involved" page</a>.</p>
+<p>Вы можете помочь нам создать и улучшить Firefox for Android:</p>
+<ul>
+ <li>Помогите нам с <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android/Compatibility_Testing" title="https://developer-new.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android/Compatibility_Testing">compatibility testing</a></li>
+ <li>Подпишитесь на <a href="https://mail.mozilla.org/listinfo/mobile-firefox-dev">mobile-firefox-dev mailing list</a></li>
+ <li>Свяжитесь с командой на <a class="link-irc" href="irc://irc.mozilla.org/#mobile">IRC</a></li>
+ <li>Регистрация в нашем <a class="link-https" href="https://wiki.mozilla.org/Mobile/Notes">Wednesday development meeting</a></li>
+ <li>Будьте в курсе новостей проекта по <a class="external" href="http://planet.firefox.com/mobile/">Planet Firefox Mobile</a>, <a href="http://fennecnightly.tumblr.com/">Tumblr</a> и <a class="link-https" href="https://twitter.com/FennecNightly" title="https://twitter.com/#!/mozmobile">Twitter</a></li>
+ <li><a href="https://wiki.mozilla.org/Mobile/Fennec/Android" title="https://wiki.mozilla.org/Mobile/Fennec/Android">Build and hack on Firefox for Android</a> (Fennec)</li>
+</ul>
+<h2 id="Разработка_для_мобильного_Интернета">Разработка для мобильного Интернета</h2>
+<p>Мы начали совместное руководство по <a href="/En/Mobile" title="En/Mobile">designing web sites for mobile devices</a>.</p>
+<p>С Firefox for Android, у вас есть доступ к нескольким API, которые предоставляют основные возможности устройства, закрывая разрыв между веб и родными приложениями:</p>
+<ul>
+ <li><a class="external" href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/" title="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Battery</a></li>
+ <li><a href="/en/DOM/Using_the_Camera_API" title="Using the Camera API">Camera</a></li>
+ <li><a href="/en/API/WebTelephony/Introduction_to_WebTelephony" title="Introduction to WebTelephony">WebTelephony</a></li>
+ <li><a href="/en/API/WebSMS/Introduction_to_WebSMS" title="Introduction to WebSMS">WebSMS</a></li>
+ <li><a href="/En/Using_geolocation" title="Using geolocation">Geolocation</a></li>
+ <li><a href="/en/Detecting_device_orientation" title="https://developer.mozilla.org/en/detecting_device_orientation">Orientation</a></li>
+ <li><a href="/en/WebAPI/Web_Activities" title="Web Activities">Web Activities</a></li>
+</ul>
+<p>Чтобы проверить веб-сайт на Firefox для Android, вы можете <a class="link-https" href="https://www.mozilla.org/en-US/mobile/">install it on an Android device</a> или <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">run it on your desktop using the Android Emulator</a>.</p>
+<h2 id="Создание_мобильных_дополнений">Создание мобильных дополнений</h2>
+<p><a href="/en/Extensions/Mobile" title="en/Extensions/Firefox_on_Android">Firefox for Android supports add-ons</a> использует точно такой же <a href="/en/Extensions" title="en/Extensions">extension system</a> как и во всех других приложениях на основе Gecko. Мы не изобретали новую дополнительную систему. Это означает, что для создания дополнения для Firefox на Android является <a href="/en/Building_an_Extension" title="en/Building_an_Extension">same process</a> которые будут использованы для рабочего стола Firefox. Дополнения, которые работают с настольным Firefox не смогут работать в Firefox на Android. Пользовательские которых просто слишком разные.</p>
+<div class="note">
+ Firefox на Android имеет уникальный идентификатор приложения, которые должны быть использованы в <code>install.rdf</code>.  Идентификатор <code>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</code></div>
+<p>Как классическое Restart-требобание так и новое <a href="/en/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped_extensions">restartless  </a>является дополнением поддержки. Использование restartless предпологает выполнить деуствие когда оно возможно, потому что пользователь на много раньше заставляет приложение выполнить restart при установке или удалении дополнение.</p>
+<h3 id="Краткая_информация">Краткая информация</h3>
+<ul>
+ <li>Там не видно XUL в UI(интерфейс пользователя), так что использование накладки, в попытке добавления или изменения UI бесполезно.</li>
+ <li>Внутренний код и объекты, такие как <code>gBrowser</code>, не существуют. Посмотрите на Firefox on Android <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js" title="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js"><code>browser.js</code></a> чтобы узнать о внутренностях. Большая часть своей фундаментальной функциональностью существует.</li>
+ <li>Такие услуги, как <code>nsIPromptService</code> and <code>nsIAlertsService</code> предполагают использовать родной Android UI.</li>
+ <li>Существует простой JavaScript объект, называемый <a href="/en/Extensions/Mobile/API/NativeWindow" title="en/Extensions/Mobile/NativeWindow"><code>NativeWindow</code></a>, что позволяет манипулировать частями родной Android UI.</li>
+</ul>
+<h2 id="Получить_помощь_с_Firefox_for_Android">Получить помощь с Firefox for Android</h2>
+<p>Документация и учебные пособия для использования и поиска неисправностей Firefox for Android доступны на <a class="external" href="http://support.mozilla.org/mobile" title="http://support.mozilla.org/mobile">Mozilla Support website</a>.</p>
+<div id="__if72ru4rkjahiuyi_once" style="display: none;">
+  </div>
+<div id="__hggasdgjhsagd_once" style="display: none;">
+  </div>
+<div id="__if72ru4rkjahiuyi_once" style="display: none;">
+  </div>

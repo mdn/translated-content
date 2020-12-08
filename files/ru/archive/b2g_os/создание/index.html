@@ -1,0 +1,410 @@
+---
+title: Сборка Firefox OS
+slug: Archive/B2G_OS/Создание
+tags:
+  - B2G
+  - Build documentation
+  - Firefox OS
+  - Guide
+  - Документация построения
+translation_of: Archive/B2G_OS/Building
+---
+<div></div>
+
+<div class="summary">
+<p>После того как вы запустили <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">set up your build system</a> и выполняется ваш процесс <a href="/en-US/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build" title="Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build">initial pull and configure</a> кода, вы можете построить загрузки для Gecko. Это руководство объясняет, как.</p>
+</div>
+
+<h2 id="Обновление_кода">Обновление кода</h2>
+
+<p>Если это ваш не первый раз сборки B2G, вы, возможно, захотите, вытащить последний код, прежде чем начать собирать. Чтобы сделать это, вы должны обновить оба инструмента B2G и зависимости, используя следующие две команды:</p>
+
+<pre>git pull
+./repo sync -d
+</pre>
+
+<p>-d Опция включает различные проекты заголовка, для пересмотра Android манифеста (т.е. мейнстрим версию из хранилища по умолчанию). Это полезно, если вы сделали изменения в репозиториях (и связанные с этим изменения исходных), но вы хотите вернуться к главной версии временно. Это действительно придаст вашей постановке или рабочий каталог изменяется нетронутым (см <a href="http://stackoverflow.com/questions/11448864/what-is-the-usage-for-repo-sync-d-in-android-source-repository">the following SO question</a> для полного объяснения). Если вы не трогал исходный код, вы можете использовать команду нормально:</p>
+
+<pre>git pull
+./repo sync</pre>
+
+<p>Вы можете обновить конкретной цели make, указав её имя:</p>
+
+<pre>./repo sync gaia
+</pre>
+
+<p>У команда repo есть и другие варианты, которые могут быть интересны; repo help даст вам много информации.</p>
+
+<h2 id="Создание">Создание</h2>
+
+<div class="note">
+<p>Примечание: Перед созданием, вы можете настроить <code>.userconfig</code> фаил сборку. Увидеть <a href="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a> для получения дополнительной информации.</p>
+</div>
+
+<p>Создать загрузочные для Gecko, просто используйте инструмент build.sh:</p>
+
+<pre>cd B2G
+./build.sh
+</pre>
+
+<p>Время для другого перерыва на кофе или, возможно, сон (особенно, если это ваш первый билд, оно займет около 30 минут на Core i7 с 8 Гб оперативной памяти). Как и в шаге настроить, на предыдущей странице, если вы используете каталог ранее извлеченных системных файлов Android, вы должны установить ANDROIDFS_DIR перед запуском <code>build.sh</code>.</p>
+
+<div class="note">
+<p>Примечание: Для более подробных инструкций по перепрограммированию новой сборки на телефон, читать <a href="/en-US/Firefox_OS/Installing_on_a_mobile_device">Installing Firefox OS on a mobile device</a>.</p>
+</div>
+
+<h3 id="Создание_специальных_модулей">Создание специальных модулей,</h3>
+
+<p>Если вы хотите построить только конкретный модуль, такой как Gecko, вы можете задать его по имени:</p>
+
+<pre>./build.sh gecko
+</pre>
+
+<p>Для того, чтобы обновить только одну заявку, вы можете построить только <code>gaia</code> модуль с помощью <code>BUILD_APP_NAME</code> переменная среды:</p>
+
+<pre>BUILD_APP_NAME=calendar ./build.sh gaia</pre>
+
+<p>Чтобы получить список модулей, которые вы можете построить, вы можете сделать:</p>
+
+<pre>./build.sh modules
+</pre>
+
+<h3 id="Установка_количества_процессорных_ядер_для_использования">Установка количества процессорных ядер для использования</h3>
+
+<p>По умолчанию, B2G построение сценария использует количество ядер вашей системмы, плюс два, как число параллельных задач для запуска. Вы можете изменить это, задав параметр -j при запуске <code>build.sh</code>. Это может быть удобно, если вы используете вашу систему для других вещей, а созданию на заднем плане нужно немного уменьшить нагрузку на процессор. Это также удобно, когда вы испытываете при построении проблеммы, это может сделать вывод Ошибки при чтении из процесса сборки легче, когда у вас есть только одна задача процесса в это время!</p>
+
+<p>Например, чтобы построить с помощью всего двух параллельных задач:</p>
+
+<pre>./build.sh -j2
+</pre>
+
+<p>Наиболее распространенным примером использования этого, заключается в предотвращении построения  работающего параллельно для остальных. Это делает вывод процесса намного проще для чтения, и позволяет легче разобраться с проблеммой сборки. Для этого:</p>
+
+<pre>./build.sh -j1
+</pre>
+
+<p> </p>
+
+<h2 id="Создание_multilocale">Создание multilocale</h2>
+
+<p>Чтобы создать multilocale сборки, выполните следующие действия:</p>
+
+<h4 id="Gaia">Gaia</h4>
+
+<ol>
+ <li>Определите, какие Gaia языки использовать. Мы в настоящее время используюем <a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_dev.json"><code>locales/languages_dev.json</code></a> и <a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json"><code>locales/languages_all.json</code></a> как наши Gaia языковые файлы.</li>
+ <li>Клонирование соответствующие локали <a href="http://hg.mozilla.org/gaia-l10n">http://hg.mozilla.org/gaia-l10n</a> в каталоге; мы используем <code>gaia-l10n/</code>. You could use the <code>locales/</code> directory . Вы должны будете клонировать репо для каждого региона, указанного в файле языках.</li>
+ <li>В вашей среде, установите <code>LOCALE_BASEDIR</code> к абсолютному пути каталога в шаге 2. Set <code>LOCALES_FILE</code>  к абсолютному пути к файлу на шаге 1.</li>
+ <li>Кроме того, вы можете установить <code>GAIA_DEFAULT_LOCALE</code> Если вы хотите установить локаль по умолчанию.</li>
+</ol>
+
+<pre style="font-size: 12px;">cd gaia/locales/
+hg clone https://hg.mozilla.org/releases/gaia-l10n/v1_2/es</pre>
+
+<div>Установите переменные окружения:</div>
+
+<div> </div>
+
+<pre>export LOCALE_BASEDIR=$PWD/locales
+export LOCALES_FILE=$PWD/locales/languages_dev.json
+export GAIA_DEFAULT_LOCALE=es
+</pre>
+
+<p>И <code>languages-dev.json</code> может быть заменен самостоятельно <code>languages-own.json</code>  Путь, который мог быть сформирован как этот. Вы должны добавить запись на каждый репо клонированных в каталоге локали .:</p>
+
+<pre>{
+  "en-US"     : "English (US)",
+  "es"        : "Español"
+}
+</pre>
+
+<div>
+<p>Ошибка 884752(ноябрь 2013), чтобы добавить раскладки клавиатуры (если имеются в Gaia) используйте параметр                               GAIA_KEYBOARD_LAYOUTS</p>
+
+<p>Ошибка: https://bugzilla.mozilla.org/show_bug.cgi?id=884752</p>
+
+<p>Макеты: https://github.com/mozilla-b2g/gaia/tree/v1.2/keyboard/layouts</p>
+
+<p>Например, чтобы добавить на испанском и итальянском языках раскладку клавиатуры, выполните предыдущую команду добавления</p>
+
+<pre>  GAIA_KEYBOARD_LAYOUTS=en,es,it</pre>
+
+<p><span style="line-height: 1.5;">В этот момент вы готовы подключать Gaia к телефону в первый раз. Подключите телефон и убедитесь, что удаленная отладка проверяется  Settings &gt; Device Information &gt; More Information &gt; Developer.  Вы должны сделать это один раз, для собственного телосложения Gaia прив включен благодаря REMOTE_DEBUGGER=1:</span></p>
+
+<pre> make clean &amp;&amp; make production LOCALES_FILE=locales/languages-own.json</pre>
+
+<div class="note">
+<p>Если вы хотите клонировать и / или обновить все поддерживаемые языки для той или иной отрасли, вы можете использовать <a href="https://gist.github.com/TheoChevalier/254461892d8bf118e1bc">this script</a></p>
+</div>
+
+<h4 id="Gecko">Gecko</h4>
+
+<ol>
+ <li>Определите, какие Gecko языки добавить в использовании. Мы в настоящее время используем <a href="http://hg.mozilla.org/releases/mozilla-b2g18/file/default/b2g/locales/all-locales">b2g/locales/all-locales</a> как  Gecko язык файла.</li>
+ <li>Клонирование соответствующих локали в каталоге; это может быть gecko <code>-l10n/</code> .
+  <ul>
+   <li>Для Mozilla-central, используйте <a href="http://hg.mozilla.org/l10n-central/">http://hg.mozilla.org/l10n-central/</a></li>
+   <li>Для mozilla-aurora, используйте <a href="http://hg.mozilla.org/releases/l10n/mozilla-aurora/">http://hg.mozilla.org/releases/l10n/mozilla-aurora/</a></li>
+   <li>Для mozilla-beta или mozilla-b2g18 или mozilla-b2g26_v1_2, используйте <a href="http://hg.mozilla.org/releases/l10n/mozilla-beta/">http://hg.mozilla.org/releases/l10n/mozilla-beta/</a></li>
+  </ul>
+ </li>
+ <li>Клон <a href="http://hg.mozilla.org/build/compare-locales">compare-locales</a>. Если вы предпочитаете Git, пожалуйста, убедитесь, что используете RELEASE_0_9_7 tag.</li>
+ <li>
+  <p>В вашей среде, установите <code>L10NBASEDIR</code> к абсолютному пути каталога в шаге 2. Set <code>MOZ_CHROME_MULTILOCALE</code> в строку разделенных пробелами районов на шаге 1.</p>
+
+  <p>Добавить <code>compare-locales/scripts</code> dir в вашем <code>PATH</code>, и <code>compare-locales/lib</code> на ваш <code>PYTHONPATH</code>.</p>
+  Например,
+
+  <pre>export L10NBASEDIR=$PWD/gecko-l10n
+export MOZ_CHROME_MULTILOCALE="ja zh-TW"
+export PATH="$PATH:$PWD/compare-locales/scripts"
+export PYTHONPATH="$PWD/compare-locales/lib"
+</pre>
+
+  <p>После того как выше написанное настроено, вы можете запустить build.sh.</p>
+
+  <p>Вы можете <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=818560#c9/">use .userconfig</a> а также:</p>
+
+  <pre>## Gaia
+export GAIA_DEFAULT_LOCALE=es
+export LOCALE_BASEDIR=/b2g/gaia-l10n-transifex-v1.2/
+export LOCALES_FILE=/b2g/languages_propio.json
+
+## Gecko
+export L10NBASEDIR='/b2g/gecko-l10n-v1.2'
+export MOZ_CHROME_MULTILOCALE="es-ES eu ca gl pt-BR"
+export PATH="$PATH:/b2g/compare-locales/scripts"
+export PYTHONPATH="/b2g/compare-locales/lib"
+  </pre>
+ </li>
+</ol>
+
+<div class="note">
+<p>Есть некоторые различия между Gaia языком и Gecko . Например, в Gaia, Spanish "es", а на Gecko tranlated к "Spanish of Spain" (es-ES)</p>
+</div>
+
+<p>Эти инструкции помогут нам сгладить многие вещи.</p>
+
+<h2 id="Известные_ошибки">Известные ошибки</h2>
+
+<h3 id="Построить_не_удалось!">"Построить не удалось!"</h3>
+
+<p><span id="cke_bm_81S" style="display: none;"> </span>Если вы получаете общем "Построить не удалось" сообщение, вы всегда должны попытаться восстановить подключение телефона к компьютеру; Иногда телефон может быть демонтирована по множеству причин.</p>
+
+<div class="note">
+<p>Обратите внимание, что настройки и создание B2G для Keon не работает на Mac. Вы должны будете использовать Linux для создания для этого устройства.<span id="cke_bm_81E" style="display: none;"> </span></p>
+</div>
+
+<h3 id="Mountain_Lion_конкретных_ошибок_сборки">Mountain Lion конкретных ошибок сборки</h3>
+
+<div>
+<p>1. Если вы строите на OS X 10.8 "Mountain Lion" (Xcode 4.4.1или выше)  и следующая ошибка:</p>
+
+<pre style="font-size: 14px;">external/qemu/android/skin/trackball.c:130:25: error: 'M_PI' undeclared (first use in this function)</pre>
+Отредактируйте файл: <code style="font-size: 14px;">B2G/external/qemu/Makefile.android</code> and add in line 78:
+
+<pre style="font-size: 14px;">MY_CFLAGS += -DM_PI=3.14159265358979323846264338327950288   #/* B2G_fix: not finding M_PI constant */
+</pre>
+</div>
+
+<div>2.  Если вы находитесь на Mountain Lion, и вы получаете ошибка во время ./build.sh like:</div>
+
+<div>
+<pre>/System/Library/Frameworks/IOKit.framework/Headers/usb/USB.h:797:9: error: too many #pragma options align=reset</pre>
+
+<p>Замените все экземпляры на '#pragma options align=reset' with '#pragma pack()' inside /System/Library/Frameworks/IOKit.framework/Headers/usb/USB.h</p>
+</div>
+
+<h3 id="Неопределенные_символы__sqlite3_androidopt_handle_pragma_и__sqlite3_androidopt_open">Неопределенные символы "_sqlite3_androidopt_handle_pragma" и "_sqlite3_androidopt_open"</h3>
+
+<p>Эта ошибка появляется, если вы строите на OS X 10.7  или более новую версию с Xcode 4.5  или более поздней версии. Чтобы исправить это, примените патч на <a href="https://groups.google.com/forum/#!msg/android-building/yAfPyUqCsiQ/7zvICk4GWjYJ">https://groups.google.com/forum/#!msg/android-building/yAfPyUqCsiQ/7zvICk4GWjYJ</a> для external/sqlite/dist/Android.mk файл.</p>
+
+<h3 id="KeyedVector.h19331_error_indexOfKey_не_был_объявлен_в_этой_области">KeyedVector.h:193:31: error: indexOfKey не был объявлен в этой области</h3>
+
+<p>Эта ошибка появляется, когда ваша версия GCC слишком новая. Установите gcc/g++/g++-multilib 4.6.x versions. Увидеть <a href="/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customizing with the .userconfig file</a> для получения дополнительной информации.</p>
+
+<div class="note">
+<p>Сообщество Примечание: Можно использовать gcc 4.7.x  с небольшими изменениями в коде B2G (GCC поможет вам), но вы не получите никакой помощи! Ни с изменения кода, ни с ошибками не встретите.</p>
+</div>
+
+<h3 id="arm-linux-androideabi-g_Internal_error_Killed_program_cc1plus">arm-linux-androideabi-g++: Internal error: Killed (program cc1plus)</h3>
+
+<p>Если вы видите это сообщение, скорее всего это означает, что свободной памяти не хватает. Убедитесь, что имеется достаточно свободной памяти перед запуском <code>./build.sh</code>. Это должен работать нормально, если ваша система имеет 4GB of RAM.</p>
+
+<h3 id="...is_referenced_by_DSO_ошибка">"...is referenced by DSO" ошибка</h3>
+
+<p>При создании эмулятора, если вы получаете /usr/bin/ld: out/host/linux-x86/obj/EXECUTABLES/triangleCM_intermediates/triangleCM:  скрытый символ `_XGetRequest' in out/host/linux-x86/obj/STATIC_LIBRARIES/libSDL_intermediates/libSDL.a(SDL_x11dyn.o)  ссылается DSO.</p>
+
+<p>Вы можете получить это с некоторыми версиями в Binutils. Если вы запустите Debian Stable, вы можете использовать <em>gold</em> линкер путем установки пакета <code>binutils-gold</code>.  Следует отметить, что <em>gold</em> линкер уже установлены <code>binutils</code>, но это не используется default; <code>binutils-gold</code>  делает именно это.</p>
+
+<h3 id="Если_вы_получаете_ошибки_построения_в_то_время_как_система_сборки_выполняет_тесты">Если вы получаете ошибки построения в то время как система сборки выполняет тесты</h3>
+
+<p>Иногда (особенно после сборки инструмента или обновления операционной системы) вы получите странные ошибки, как это, когда система сборки работает его испытания после сборки:</p>
+
+<pre>Generating permissions.sqlite...
+test -d profile || mkdir -p profile
+run-js-command  permissions
+WARNING: permission unknown:offline-app
+WARNING: permission unknown:indexedDB-unlimited
+build/permissions.js:122: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPermissionManager.add]
+make[1]: *** [permissions] Error 3
+make: *** [gaia/profile.tar.gz] Error 2</pre>
+
+<p>В этой ситуации, попробуйте удалить <code>gaia/xulrunner-sdk</code> каталог и повторно потянув код:</p>
+
+<pre>rm -r gaia/xulrunner-sdk
+</pre>
+
+<p>Это удаляет загруженный, предварительно скомпилированную копию <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> которую система сборки извлекает автоматически; на следующей сборке, новой копии XULRunner будет автоматически восстановлен.</p>
+
+<h3 id="Не_удалось_получить_platformlibcore">Не удалось получить platform/libcore</h3>
+
+<p>Если вы пытались настроить ваш B2G построенный для Nexus S (<code>./config.sh nexus-s</code>) и получили ошибку, связанную с libcore, это из-за проблем с Линаро Git, которая кормится тут. Это исправит, проверка на B2G манифест, вот так:</p>
+
+<pre class="brush: bash">git clone https://github.com/mozilla-b2g/b2g-manifest.git</pre>
+
+<p>Редактировать <code>nexus-s.xml</code> подать в этом репо, заменяя запись Линаро Git со ссылкой на AOSP ходом, который следует читать както так:</p>
+
+<pre class="brush: xml">&lt;default revision="refs/tags/android-4.0.4_r1.2"
+              remote="aosp"
+              sync-j="4" /&gt;</pre>
+
+<p>Фиксировать эти изменения (<code>git commit -a</code>) а затем изменить <code>config.sh</code> подать в главном отделении главного B2G репо, что вы проверили, чтобы указать на модифицированной местного манифеста вместо Mozilla одного:</p>
+
+<pre class="brush: bash">GITREPO=${GITREPO:-"file:///home/path/to/my/b2g-manifest"}</pre>
+
+<h3 id="Clang_ошибки_при_сборке_Xcode_5_on_Mac">Clang ошибки при сборке Xcode 5 on Mac</h3>
+
+<p>Если вы строите на Mac OS X 10.8 with Xcode 5,  Вы, вероятно, увидите следующие ошибки:</p>
+
+<pre class="brush: bash">clang: error: argument unused during compilation: '-include system/core/include/arch/darwin-x86/AndroidConfig.h'
+clang: error: argument unused during compilation: '-U DEBUG'
+clang: error: argument unused during compilation: '-U DEBUG'
+clang: error: argument unused during compilation: '-MF out/host/darwin-x86/obj/EXECUTABLES/obbtool_intermediates/Main.d'
+make: *** [out/host/darwin-x86/obj/EXECUTABLES/obbtool_intermediates/Main.o] Error 1</pre>
+
+<p>Это происходит потому, Xcode 5 changes the g++ compiler in <code>/usr/bin</code>, который тормозит процесс сборки, если вы пытаетесь использовать его для компиляции. Для того, чтобы обойти эту проблему, измените следующую строку в <code>build/core/combo/HOST_darwin-x86.mk:</code></p>
+
+<pre class="brush: bash">HOST_CXX := g++</pre>
+
+<p>для</p>
+
+<pre class="brush: bash">HOST_CXX := g++-4.6
+ifeq (,$(wildcard /usr/local/bin/g++-4.6))
+ HOST_CXX := g++
+endif</pre>
+
+<p>Далее необходимо удалить gcc, используя настройку (это предполагает, вы запустите <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Run_Firefox_OS_Mac_Bootstrap">Mac OS bootstrap script</a> —  если нет, то вы должны будете заполнить этот шаг, прежде чем продолжить):</p>
+
+<pre class="brush: bash">brew uninstall gcc-4.6</pre>
+
+<p>Теперь тоже самое gcc с мультибиблиотеки и c++  поддержка:</p>
+
+<pre class="brush: bash">brew install --enable-cxx https://gist.github.com/artlogic/6988658/raw/aeb9d1ea098274ad3f3fe2637b9df7f308a8a120/gcc-4.6.rb</pre>
+
+<p>Убедитесь /usr/local/bin  на вашей PATH.  Вы можете сделать это временно, набрав следующую команду в командной  подсказке:</p>
+
+<pre class="brush: bash">export PATH=/usr/local/bin:$PATH</pre>
+
+<p>Вы можете сделать выше изложенное изменение постоянными, добавив его  <code>.bash_profile</code> файл в домашнем каталоге.</p>
+
+<p>После того как вы установите PATH, убедитесь, что вы можете запустить обе из следующих команд:</p>
+
+<pre class="brush: bash">gcc-4.6 -v
+
+g++-4.6 -v</pre>
+
+<p>Если какой-либо из этих команд выпадет, то Вам потребуется заново связать ваш gcc using brew с помощью следующей команды:</p>
+
+<pre class="brush: bash">brew link --overwrite gcc-4.6</pre>
+
+<p>Это также возможно, что <code>/usr/bin/c++</code> не указывает на clang++ как это и должно быть с Xcode 5 installed. Вы можете определить это, введя следующее:</p>
+
+<pre class="brush: bash">ls -l /usr/bin/c++</pre>
+
+<p>Она должна возвращать что-то вроде этого:</p>
+
+<pre class="brush: bash">lrwxr-xr-x 1 root admin 7 Sep 19 11:40 /usr/bin/c++ -&gt; clang++
+</pre>
+
+<p>Если c++ указывает на нечто иное, чем clang++, обновить с помощью следующих команд:</p>
+
+<pre class="brush: bash">sudo rm /usr/bin/c++
+
+sudo ln -s /usr/bin/clang++ /usr/bin/c++</pre>
+
+<h3 id="Невозможно_вытянуть_файлы_из_резервной_копии_каталога">Невозможно вытянуть файлы из резервной копии каталога</h3>
+
+<p>Это может произойти, когда соединение USB не работает, а сценарий извлекает данные от устройства к компьютеру.</p>
+
+<p>Когда вы запустите скрипт еще раз, вы, вероятно, получите следующее (пример для пик устройства):</p>
+
+<pre class="brush: bash"><code>Pulling files from ../../../backup-peak
+cat: ../../../backup-peak/system/build.prop: No such file or directory
+Found firmware with build ID
+Pulling "libaudioeq.so"
+cp: cannot stat `../../../backup-peak/system/lib/libaudioeq.so': No such file or directory
+Failed to pull libaudioeq.so. Giving up.
+
+&gt; Build failed! &lt;
+
+Build with |./build.sh -j1| for better messages
+If all else fails, use |rm -rf objdir-gecko| to clobber gecko and |rm -rf out| to clobber everything else.</code></pre>
+
+<p>Чтобы решить эту проблему, это не нужно вынимать всю objdir-gecko  из каталогов. Просто удалите каталог для резервного копирования, как это (для примера выше):</p>
+
+<pre class="brush: bash"><code class="brush: bash">$rm -rf backup-peak</code></pre>
+
+<h3 id="Вопросы_Эмулятор_сборки"><strong>Вопросы Эмулятор сборки</strong></h3>
+
+<p>Если вы делаете эмулятор построение, нужно обратить внимание на эти вопросы:</p>
+
+<div class="note">
+<p><strong>Во-первых, обратите внимание, что вы не должны использовать эмулятор x86 - это трудно установить и не очень хорошо поддерживается.</strong></p>
+</div>
+
+<p>Далее, сборка-система для эмулятора строит как 32-битные, так и 64-битные версии эмулятора. Так, как эмулятор зависит от OpenGL, означает, что вы должны иметь как 32-битные, так и 64-битные версии OpenGL  библиотеки установленые в вашей системе. Смотрите обсуждение в <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=897727" title="https://bugzilla.mozilla.org/show_bug.cgi?id=897727">bug 897727</a>.</p>
+
+<p>Есть два способа, которыми вы можете решить эту проблему:</p>
+
+<h4 id="Решение_1_оба_32bit_и_64bit_OpenGL_установлен_LIBS_с_правом_символические_ссылки">Решение #1: оба 32bit и 64bit OpenGL  установлен LIBS, с правом  символические ссылки</h4>
+
+<p>Если ваш Linux дистрибутив имеет мультибиблиотечные пакеты для OpenGL libraries, вы можете попытаться установить их. Затем вам придется вручную создать некоторые символические ссылки.</p>
+
+<p>Например, вот ситуация на Ubuntu 12.04 LTS x86-64. На этом распределении, <code>libgl1-mesa-dev</code> package  не может быть установлен одновременно в x86-64 и i386 версии, но вы можете иметь следующая комбинация пакетов одновременно установлены:</p>
+
+<pre class="bz_comment_text" id="comment_text_12">sudo apt-get install libgl1-mesa-dev libglapi-mesa:i386 libgl1-mesa-glx:i386</pre>
+
+<p>После выполнения этой команды вам все равно придется вручную создать несколько символических ссылок для эмулятора, строят, чтобы добиться успеха:</p>
+
+<pre class="note">sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so</pre>
+
+<h4 id="Решение_2_просто_патч_эмулятор_так_это_только_создает_64bit">Решение #2:  просто патч эмулятор так это только создает 64bit</h4>
+
+<p>Просто внесите <a href="https://bug897727.bugzilla.mozilla.org/attachment.cgi?id=786280" title="https://bug897727.bugzilla.mozilla.org/attachment.cgi?id=786280">this patch</a> для sdk/ git repository под B2G repo.  Это приведет B2G emulator к попыткам построить 64bit emulator только если вы находитесь на 64bit system,  Таким образом, избегая каких-либо проблем с мультибиблиотекой. 32bit emulator в любом случае не должен использоваться на 64bit system. Это не простое решение, до этого патча в конечном итоге bit-rots.</p>
+
+<h2 id="Следующий_шаг">Следующий шаг</h2>
+
+<p>После создания, ваш следующий шаг зависит от того, как вы построили Boot на Gecko или эмулятор или для реального мобильного устройства; детали в следующих статьях:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators" title="Mozilla/Firefox_OS/Using_the_B2G_emulators">Using the B2G emulators</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Using the B2G desktop client</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device" title="Mozilla/Firefox_OS/Installing_on_a_mobile_device">Installing Boot to Gecko on a mobile device</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Pandaboard" title="Mozilla/Firefox_OS/Pandaboard">Installing Boot to Gecko on a pandaboard</a></li>
+</ul>
+</div>
+
+<h3 id="Отправка_ошибок_на_B2GFirefox_OSGaia">Отправка ошибок на B2G/Firefox OS/Gaia</h3>
+
+<p>После того как вы получили B2G/Firefox OS построение работает, вы начнете подавать ошибки против этой конкретной версии, Firefox OS сообщество может улучшить положение вещей как можно более эффективно. Вы хотите, чтобы <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">file the bug on Bugzilla</a>, вместе "Firefox OS" проект, дадут включить специфику версии:</p>
+
+<ol>
+ <li>Для начала, расскажите основной номер версии, e.g. <em>1.4.0.0-prerelease</em>. Это может быть найдено на устройстве  <em>Settings &gt; Device Information</em>.</li>
+ <li>Вы можете предоставить более конкретные идентификаторы версий, вернувшихся из текущих хэшей в gaia и gecko repositories. Это может быть сделано как так:
+  <pre class="brush: bash">#!/bin/bash
+(cd gaia;  echo "gaia  $(git rev-parse HEAD)")
+(cd gecko; echo "gecko $(git rev-parse HEAD)")</pre>
+ </li>
+</ol>

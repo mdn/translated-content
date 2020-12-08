@@ -1,0 +1,72 @@
+---
+title: Depuração no Firefox OS
+slug: Archive/B2G_OS/Debugging
+translation_of: Archive/B2G_OS/Debugging
+---
+<div class="summary">
+ <p><span class="seoSummary">Existe dois tipos de depuração que você pode utilizar no Firefox OS: depuração de aplicativos e depuração de outros apectos do sistema. Essa seção do site provê artigos cobrindo as diferentes ferramentas disponíveis para depurar o seu código Firefox OS.</span></p>
+</div>
+<h2 id="Depurando_aplicativos">Depurando aplicativos</h2>
+<p>Quando depurar aplicativos web, a melhor ferramenta a sua disposição é o <a href="/pt-BR/Firefox_OS/Using_the_App_Manager">App Manager</a>, que possibilita você executar seus aplicativos diretamente em um dispositivo real ou em um simulador, atualiza qualquer alteração instantaneamente e depura diretamente no dispositivo usando as <a href="https://developer.mozilla.org/pt-BR/docs/Tools" title="en-US/docs/Tools">ferramentas de desenvolvimento da Mozilla</a>. Essa pode ser a sua primeira escolha especiamente para depurações de aplicativos e do Gaia.</p>
+<dl>
+ <dt>
+  <a href="/pt-BR/Firefox_OS/Using_the_App_Manager">Usando o App Manager</a></dt>
+ <dd>
+  O App Manager é uma nova ferramenta disponível do Firefox Desktop que fornece diversas funcionalidades que o ajudarão a testar, instalar e depurar os aplicativos HTML5 nos dispositivos Firefox OS e no Simulador do Firefox OS diretamente do seu navegador</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Debugging_OOMs">Depurando erros de falta de memória no Firefox OS</a></dt>
+ <dd>
+  Esse artigo descreve como a arquitetura multiprocesso do B2G é afetada quando ocorre um erro de falta de memória e como entender e depurar nessas situações.</dd>
+</dl>
+<h2 id="Depurando_o_GaiaB2G">Depurando o Gaia/B2G</h2>
+<p>Se você quiser depurar o código da suíte de aplicativos Gaia ou o próprio B2G as seguintes ferramentas são úteis para você.</p>
+<dl>
+ <dt>
+  <a href="/pt-BR/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_using_the_desktop_B2G_client">Depurando usando o cliente B2G Desktop</a></dt>
+ <dd>
+  Você pode usar a aplicação B2G Desktop (e suas ferramentas associadas) para depurar diversos aspectos do B2G e do Gaia.</dd>
+ <dt>
+  <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Developing_Firefox_OS/Guia_rapido_desenvolvimento_Gaia">Guia rápido para desenvolvimento Gaia</a></dt>
+ <dd>
+  Esse guia fornece um guia para desenvolver e depurar aplicativos Gaia, incluindo as instruções de como rodar o Gaia a partir do Firefox Desktop e depurar o Gaia com o App Manager.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_gdb" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_gdb">Depurando o B2G usando gdb</a></dt>
+ <dd>
+  O depurador popular gdb pode ser utilizado para depurar o Firefox OS e os apliciativos web executados em um dispositivo ou no emulador. Esse guia mostra como fazer isso.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_valgrind" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_B2G_using_gdb">Depurando o B2G usando Valgrind</a></dt>
+ <dd>
+  Valgrind dá aos desenvolvedores acesso a informações sobre alocação de memória, threads e outras informações importantes sobre performance. Esse guia mostra como executar o Valgrind no B2G Desktop ou no dispositivo.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Debugging/HTTP_logging#Firefox_OS_phones" title="/en-US/docs/Mozilla/Debugging/HTTP_logging#Firefox_OS_phones">Conseguindo logs do NSPR no B2G</a></dt>
+ <dd>
+  Você pode usar os logs do NSPR logs para registrar o HTTP e outras operações da rede.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Debugging/Debugging_OpenGL" title="/en-US/docs/Mozilla/Debugging/Debugging_OpenGL">Depurando OpenGL</a></dt>
+ <dd>
+  Como depurar código OpenGL no Firefox OS.</dd>
+</dl>
+<h2 id="Configuração_geral_e_informações"><strong>Configuração geral e informações</strong></h2>
+<p>Os artigos a seguir fornecem informações ou aspectos específicos de configurações para desenvolvimento no Firefox OS. É possível que você não precise disso, especialmente se você estiver depurando apenas aplicativos usando o App Manager. Mas estão disponíveis caso você precise.</p>
+<dl>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Developer_settings" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Configurações do desenvolvedor do Firefox OS</a></dt>
+ <dd>
+  Existe um número de configurações disponíveis para os desenvolvedores do Firefox OS. Esse guia explica quais são e como utilizá-las.</dd>
+ <dt>
+  <a href="/pt-BR/Firefox_OS/Debugging/Installing_ADB">Instalando e usando o ADB</a></dt>
+ <dd>
+  Em muitos aspectos do desenvolvimento do Firefox OS você vai precisar instalar o <code>adb</code> (Android Debug Bridge). Esse artigo explica como fazer isso e apresenta os comandos mais comuns.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">Log no console do dispositivo</a></dt>
+ <dd>
+  Como fazer um log no console de um dispositivo Firefox OS e como acessar esse registro para examiná-lo no seu computador.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Debugging_Firefox_OS_apps_in_desktop_Firefox">Conectando um dispositivo Firefox OS no seu computador</a></dt>
+ <dd>
+  Esse pequeno guia explica como configurar seu dispositivo Firefox OS e seu computador para conetctá-los através da porta USB.</dd>
+ <dt>
+  <a href="/pt-BR/docs/Mozilla/Firefox_OS/Debugging/Setting_up" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Setting_up">Configurando para depurar o código do Firefox OS</a></dt>
+ <dd>
+  Antes de você usar a maioria das ferramentas integradas ao Firefox OS para depurar o código, você precisa um pequeno trabalho de configuração. Esse artigo explica como fazer isso.</dd>
+</dl>

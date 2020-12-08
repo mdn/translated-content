@@ -1,0 +1,90 @@
+---
+title: ':blank'
+slug: 'Web/CSS/:-moz-only-whitespace'
+tags:
+  - ':blank'
+  - CSS
+  - Псевдо-класс
+  - Экспериментальное
+  - селектор
+translation_of: 'Web/CSS/:-moz-only-whitespace'
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<p><a href="/en-US/docs/Web/CSS">CSS псевдо класс</a>  <strong><code>:blank</code></strong> находит элементы, у которых либо вообще нет дочерних узлов, либо только пустые текстовые узлы, либо только текстовые узлы, содержащие только пробельные символы.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">{{CSSSyntax}}</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html;">&lt;div&gt; &lt;/div&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<div class="hidden">
+<pre class="brush: css;">:root {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+div {
+  background-color: #ccc;
+  box-sizing: border-box;
+  height: 100vh;
+  min-height: 16px;
+  min-height: 1rem;
+}
+
+:-moz-only-whitespace {
+  border-color: lime;
+}</pre>
+</div>
+
+<pre class="brush: css;">div {
+  border: 4px solid red;
+}
+
+:blank {
+  border-color: lime;
+}</pre>
+
+<h3 id="Результат">Результат</h3>
+
+<p>{{EmbedLiveSample("Example", "100%", "50")}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}}</td>
+   <td>{{Spec2("CSS4 Selectors")}}</td>
+   <td>Определен впервые</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div class="hidden">Таблица совместимости на этой странице сгенерирована из структурированных данных. Если вы хотите содействовать в пополнении данных, пройдите по ссылке <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос.</div>
+
+<p>{{Compat("css.selectors.blank")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{CSSxRef(":empty")}}</li>
+</ul>

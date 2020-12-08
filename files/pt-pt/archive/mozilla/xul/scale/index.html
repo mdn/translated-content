@@ -1,0 +1,235 @@
+---
+title: scale
+slug: Archive/Mozilla/XUL/scale
+tags:
+  - PrecisaDeConteúdo
+---
+<p>
+<span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/pt-PT/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">Examples</a> |
+ <a href="#Attributes">Attributes</a> |
+ <a href="#Properties">Properties</a> |
+ <a href="#Methods">Methods</a> |
+ <a href="#Related">Related</a> ]
+</span>
+</p><p>Uma escala permite ao usuário selecionar um valor de uma faixa. Uma barra exibida horizontalmente ou verticalmente permite ao usuário selecionar um valor arrastando um ponteiro na barra.
+</p><p>Use o atributo de orientação para especificar a orientação da escala. O valor padrão é &lt;tt&gt;horizontal&lt;/tt&gt;, que exibe uma escala horizontal. Valores pequenos são para a esquerda e valores maiores para a direita. Configure o atributo <code>orient</code> para &lt;tt&gt;vertical&lt;/tt&gt; para usar uma escala vertical.
+</p><p>O usuário pode usar as teclas de flecha para incrementar ou decrementar o valor em uma unidade, ou as teclas de "page up" e "page down" para incrementar ou decrementar uma página, como especificado pelo atributo <code>pageincrement</code>. As teclas "home" e "end" configuram o valor da escala para os valores mínimo e máximo, respectivamente.
+</p>
+<dl><dt> Atributos
+</dt><dd> <a href="#a-disabled">disabled</a>, <a href="#a-increment">increment</a>, <a href="#a-max">max</a>, <a href="#a-min">min</a>, <a href="#a-pageincrement">pageincrement</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a>
+</dd></dl>
+<dl><dt> Propriedades
+</dt><dd> <a href="#p-disabled">disabled</a>, <a href="#p-max">max</a>, <a href="#p-min">min</a>, <a href="#p-increment">increment</a>, <a href="#p-pageIncrement">pageIncrement</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a>, </dd></dl>
+<dl><dt> Métodos
+</dt><dd> <a href="#m-decrease">decrease</a>, <a href="#m-decreasePage">decreasePage</a>, <a href="#m-increase">increase</a>, <a href="#m-increasePage">increasePage</a>,
+</dd></dl>
+<h3 id="Examples" name="Examples"> Examples </h3>
+<p>Escala horizontal:
+</p>
+<pre>&lt;scale min="1" max="10"/&gt;
+</pre>
+<p><img alt="Image:Controlguide-scale.png">
+</p><p>Escala vertical:
+</p>
+<pre>&lt;scale min="1" max="10" orient="vertical"/&gt;
+</pre>
+<h3 id="Atributos" name="Atributos"> Atributos </h3>
+<p>
+</p><div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Indicates whether the element is disabled or not. If this attribute is set, the element is disabled. Disabled elements are usually drawn with grayed-out text. If the element is disabled, it does not respond to user actions, it cannot be focused, and the <code>command</code> event will not fire. In the case of form elements, it will not be submitted. Do not set the attribute to <code>true</code>, as this will suggest you can set it to <code>false</code> to enable the element again, which is not the case.
+
+ <div>The <code>disabled</code> attribute is allowed only for form controls. Using it with an anchor tag (an <code>&lt;a&gt;</code> link) will have no effect.</div>
+
+ <div>
+ The element will, however, still respond to mouse events. To enable the element, leave this attribute out entirely.</div>
+ </dd>
+ <dd>Visible controls have a <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disabled">disabled</a></span></code> property which, except for menus and menuitems, is normally preferred to use of the attribute, as it may need to update additional state.</dd>
+</dl>
+
+
+</div>
+<div id="a-increment">
+
+<dl>
+  <dt>
+    <code id="a-increment"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The amount by which the <code id="a-curpos"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code> (for scroll bars) or <code id="a-value"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> (for number boxes and scale) attribute changes when the arrows are clicked(or scales are dragged). The default value is 1.</dd>
+</dl>
+</div>
+<div id="a-min">
+
+<dl>
+  <dt>
+    <code id="a-min"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The minimum value the control's value may take. The default value is 0.</dd>
+</dl>
+<p> </p>
+</div>
+<div id="a-max">
+
+<dl>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The maximum value that the scale or number box may be set to. The default value is 100 for scales and Infinity for number boxes.</dd>
+</dl>
+
+<p> </p>
+</div>
+<div id="a-pageincrement">
+
+
+<dl>
+ <dt><code id="a-pageincrement"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/pageincrement">pageincrement</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The amount by which the value of the <code>curpos</code> or <code>value</code> attribute changes when the tray of the scroll bar (the area in which the scroll bar thumb moves) is clicked, or when the page up or page down keys are pressed. The default value is 10.</dd>
+</dl>
+</div>
+<div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The tab order of the element. The tab order is the order in which the focus is moved when the user presses the "<code>tab</code>" key. Elements with a higher <code>tabindex</code> are later in the tab sequence.</dd>
+</dl>
+</div>
+<div id="a-value">
+
+
+<dl>
+ <dt><code id="a-value"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The string attribute allows you to associate a data value with an element. It is not used for any specific purpose, but you can access it with a script for your own use. Be aware, however, that some elements, such as textbox will display the value visually, so in order to merely associate data with an element, you could 1) Use another attribute like "value2" or "data-myAtt" (as in the HTML5 draft), as XUL does not require validation (less future-proof); 2) Use <a href="/en/DOM/element.setAttributeNS" title="en/DOM/element.setAttributeNS">setAttributeNS()</a> to put custom attributes in a non-XUL namespace (serializable and future-proof); 3) Use <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData()</a> (future-proof and clean, but not easily serializable). For user editable <code><a href="/en-US/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> elements, the contents, as visible to the user, are read and set using the Menulist.value syntax. For those elements, <a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttributeNS">setAttribute("value", myValue)</a> and <a href="/en/DOM/element.setAttribute" title="en/DOM/element.getAttributeNS">getAttribute("value")</a> do not access or affect the contents displayed to the user.</dd>
+</dl>
+
+
+
+<p> </p>
+</div>
+
+<h3 id="Propriedades" name="Propriedades"> Propriedades </h3>
+<p>
+</p><div id="p-disabled">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disabled">disabled</a></span></code></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-disabled"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> attribute.</dd>
+</dl>
+</div>
+<div id="p-increment">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/increment">increment</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-increment"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code> attribute.</dd>
+</dl></div>
+<div id="p-min">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/min">min</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-min"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code> attribute.</dd>
+</dl></div>
+<div id="p-max">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/max">max</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-max"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code> attribute.</dd>
+</dl></div>
+<div id="p-pageIncrement">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/pageIncrement">pageIncrement</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-pageincrement"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/pageincrement">pageincrement</a></code> attribute.</dd>
+</dl></div>
+<div id="p-tabIndex">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabIndex">tabIndex</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    Gets and sets the value of the <code id="a-tabindex"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> attribute.</dd>
+</dl></div>
+<div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/value">value</a></span></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  Gets and sets the value of the <code id="a-value"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> attribute. For <code><a href="/en-US/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> and user editable <code><a href="/en-US/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> elements, the contents, as visible to the user, are read and set using the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/Textbox.value">Textbox.value</a></span></code> and Menulist.value syntax.</dd>
+</dl>
+
+<p> </p></div>
+
+<h3 id="M.C3.A9todos" name="M.C3.A9todos"> Métodos </h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited Methods</strong><br> <small><code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a class="internal" href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/pt-PT/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a class="internal" href="/En/DOM/Node.getFeature" title="En/DOM/Node.getFeature">getFeature</a>, <a class="internal" href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a class="internal" href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a class="internal" href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.isSupported">isSupported()</a></code>, <a class="internal" href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a class="internal" href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/pt-PT/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a class="internal" href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p> </td> </tr> </tbody>
+</table>
+<dl>
+  <dt>
+    <span id="m-decrease"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/decrease">decrease()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Decreases the value of the scale or number box by the <code id="a-increment"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code>.</dd>
+</dl>
+<dl>
+  <dt>
+    <span id="m-decreasePage"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/decreasePage">decreasePage()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Decreases the value of the scale by the <code id="a-pageincrement"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/pageincrement">pageincrement</a></code>.</dd>
+</dl>
+<dl>
+  <dt>
+    <span id="m-increase"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/increase">increase()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Increases the value of the scale or number box by the <code id="a-increment"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code>.</dd>
+</dl>
+<dl>
+  <dt>
+    <span id="m-increasePage"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/increasePage">increasePage()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Increases the value of the scale by the page increment.</dd>
+</dl>
+
+<h3 id="Relacionado" name="Relacionado"> Relacionado </h3>
+<dl><dt> Interfaces
+</dt><dd> <a href="pt/NsIDOMXULControlElement">nsIDOMXULControlElement</a>
+</dd></dl>
+<p><span class="comment">Categorias</span>
+</p><p><span class="comment">Interwiki Language Links</span>
+</p>

@@ -1,0 +1,110 @@
+---
+title: Temas de fundo
+slug: Mozilla/Add-ons/Temas/Background
+tags:
+  - Aparência do Firefox
+  - Complementos
+  - Firefox
+  - Personalização
+  - Tema
+translation_of: Mozilla/Add-ons/Themes/Lightweight_themes
+---
+<h2 id="Como_criar_o_seu_próprio_tema">Como criar o seu próprio tema</h2>
+
+<div class="primary auto" id="getting-started">
+<p>Os temas são feitos de arquivos gráficos de imagens, para o cabeçalho, semelhantes ao utilizado como aparência padrão de fundo do Firefox UI.</p>
+
+<p>Acabou seu projeto? Você pode <a href="https://addons.mozilla.org/pt-BR/developers/theme/submit">enviá-lo agora mesmo!</a></p>
+
+<h3 id="Criando_um_tema_Imagem_de_Cabeçalho">Criando um tema: Imagem de Cabeçalho</h3>
+
+<p>A imagem do cabeçalho é mostrada no topo da janela do navegador, aninhada atrás da barra de ferramentas, barra de endereço, barra de pesquisa e barra de abas. Ela é <strong>ancorada no canto superior direito</strong> da janela do navegador.</p>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9929/header-step.jpg" style="height: 215px; width: 1059px;"></p>
+
+<ul>
+ <li><a href="https://addons.cdn.mozilla.net/static/img/docs/themes/header.jpg">Veja um exemplo de tema de cabeçalho aqui.</a></li>
+</ul>
+
+<h4 id="Requisitos_de_Imagem">Requisitos de Imagem</h4>
+
+<ul>
+ <li>As dimensões devem ser <strong>3000px de largura </strong>x<strong> 200px de altura</strong></li>
+ <li>Nos formatos de arquivo PNG ou JPG</li>
+ <li>A imagem não deve ter tamanho maior que 300KB</li>
+</ul>
+
+<h4 id="Dicas">Dicas</h4>
+
+<ul>
+ <li>Imagens sutis, de baixo contraste e gradientes funcionam melhor; imagens altamente detalhadas podem competir com a UI do navegador.</li>
+ <li>O Firefox pode revelar mais da parte inferior da imagem, se outra barra de ferramentas ou elemento da UI for adicionado ao topo da janela.</li>
+ <li>O lado superior direito da imagem (na tela) deve ter a informação mais importante — à medida que a largura da janela é ampliada, o navegador revela mais do lado esquerdo da imagem.</li>
+</ul>
+
+<h4 id="Recursos_de_Editores_de_Imagem_Em_Linha">Recursos de Editores de Imagem Em Linha</h4>
+
+<ul>
+ <li><a href="http://www.pixlr.com">Pixlr</a> — Este aplicativo oferece ferramentas profissionais e fáceis de usar, para criação e edição de imagens com o navegador.</li>
+ <li><a href="http://www.photoshop.com">Photoshop</a> — Ajuste, gire e retoque fotos com o Photoshop® Express, um editor de fotos <em>online</em> e gratuito.</li>
+</ul>
+
+<h3 id="Criando_um_tema_Imagem_de_Rodapé">Criando um tema: Imagem de Rodapé</h3>
+
+<p>Em versões antigas do Firefox, ou em versões recentes com certas extensões instaladas, a imagem de rodapé é mostrada como o fundo da parte inferior da janela do navegador, atrás de extensões e barras de pesquisa. Ela é ancorada no canto inferior esquerdo da janela do navegador. Imagens de rodapé são opcionais.</p>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9935/footer-step.jpg" style="height: 56px; width: 1249px;"></p>
+
+<ul>
+ <li><a href="https://addons.cdn.mozilla.net/static/img/docs/themes/footer.jpg">Veja um exemplo de tema de rodapé aqui.</a></li>
+</ul>
+
+<h4 id="Requisitos_de_Imagem_2">Requisitos de Imagem</h4>
+
+<ul>
+ <li>As dimensões devem ser <strong>3000px de largura x 100px de altura</strong></li>
+ <li>Nos formatos de arquivo PNG, ou JPG</li>
+ <li>A imagem não deve ter tamanho maior que 300KB</li>
+</ul>
+
+<h4 id="Dicas_2">Dicas</h4>
+
+<ul>
+ <li>Imagens sutis, de baixo contraste e gradientes funcionam melhor; imagens altamente detalhadas competem com a UI do navegador.</li>
+ <li>O Firefox pode revelar mais da porção superior da imagem, se a barra de pesquisa está aberta, ou se uma extensão adiciona mais altura à parte inferior da janela.</li>
+ <li>O lado esquerdo da imagem deve ter a informação mais importante — à medida que a largura da janela for ampliada, o navegador revela mais do lado direito da imagem.</li>
+</ul>
+
+<h3 id="Submentendo_as_Imagens_de_seus_Temas">Submentendo as Imagens de seus Temas</h3>
+
+<p>Para enviar suas imagens, vá para a página de  <a href="https://addons.mozilla.org/developers/theme/submit">Submissão de Temas</a>:</p>
+
+<ol class="itemized">
+ <li><strong>Nomeie seu tema</strong> — aplique um nome único ao seu tema. Nomes duplos não são permitidos, então, talvez, você precise tentar algumas vezes, até encontrar um nome único disponível.</li>
+ <li><strong>Escolha uma categoria e as etiquetas</strong> — selecione uma categoria e insira algumas etiquetas para melhor descrever o seu tema. Tenha em mente que o revisor poderá rejeitá-lo se, obviamente, a categoria e/ou etiquetas não estiverem relacionadas a ele corretamente.</li>
+ <li><strong>Descreva o seu tema</strong> — escreva uma descrição curta do seu tema. Tenha em mente que o revisor poderá rejeitá-lo, se essa descrição não for uma representação exata dele.</li>
+ <li><strong>Selecione uma licença para seu tema</strong> — decida sobre uma licença de direitos autorais para seu trabalho. <a href="http://creativecommons.org/licenses/">Leia mais sobre os tipos de licenças Creative Commons.</a>
+  <ul>
+   <li><strong>Importante:</strong> Por favor, certifique-se que você tem o direito de usar a imagem em seu tema!</li>
+  </ul>
+ </li>
+ <li><strong>Envie suas imagems</strong> — certifique-se que elas têm menos de 300KB de tamanho e estão no formato JPG, ou PNG!</li>
+ <li><strong>Seleciona a cor do texto e abas</strong> — você pode escolher a cor ("de fundo") da aba e a cor do texto que melhor combinam com sua imagem de cabeçalho.</li>
+ <li><strong>Visualize seu tema</strong> — tudo pronto para você experimentar o seu tema! Simplesmente passe o cursor sobre a imagem acima do botão "Enviar tema" e veja como ele fica, instantaneamente: )</li>
+ <li><strong>Envie seu tema</strong> —  se tudo parece certo, clique no botão Enviar tema e pronto! Você pode ver todos os temas que escreveu na sua página de perfil.
+  <ul>
+   <li><strong>Dica:</strong> para garantir que o seu tema será aprovado para a galeria, certifique-se que ele está em conformidade com as diretrizes de conteúdo e termos de serviço!</li>
+  </ul>
+ </li>
+</ol>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9933/submission-step.jpg" style="height: 1800px; width: 785px;"></p>
+
+<p class="call-to-submit"><a class="button prominent" href="https://addons.mozilla.org/en-US/developers/theme/submit">ENVIE SEu TemA AGORA</a></p>
+
+<p class="call-to-submit"> </p>
+
+<h2 class="call-to-submit" id="Mais_Tutoriais">Mais Tutoriais</h2>
+
+<p><a href="http://vanillaorchidstutorials.blogspot.com/2015/11/mozilla-themes-focal-point-sizing.html">Mozilla Themes Focal Point on Sizing</a> - Um tutorial sobre os temas, com foco em dimensões, por VanillaOrchids.</p>
+</div>

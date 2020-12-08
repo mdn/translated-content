@@ -1,0 +1,378 @@
+---
+title: Skróty klawiaturowe
+slug: Mozilla/Tech/XUL/Kurs_XUL/Skróty_klawiaturowe
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Keyboard_Shortcuts
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Więcej_funkcji_obsługi_zdarzeń" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrola_zaznaczenia_i_aktywacji_elementów">Następny  »</a></p>
+</div><p></p>
+
+<p>XUL umożliwia także użycie obsługi zdarzeń związanych z klawiaturą. Jednak byłoby to nudne w odniesieniu do każdego przycisku oraz każdej pozycji znajdującej się w menu.</p>
+
+<h3 id="Tworzenie_skr.C3.B3tu_klawiaturowego" name="Tworzenie_skr.C3.B3tu_klawiaturowego">Tworzenie skrótu klawiaturowego</h3>
+
+<p>XUL dostarcza metod, za pomocą których jesteśmy w stanie zdefiniować skróty klawiaturowe. Widzieliśmy już <a href="pl/Kurs_XUL/Proste_paski_menu">w artykule o menu</a>, że jesteśmy w stanie zdefiniować atrybut zwany <code>accesskey</code>, który określa klawisz po wciśnięciu którego aktywowane będzie menu lub też któraś z jego pozycji. W poniższym przykładzie, menu Plik może zostać wybrane poprzez wciśnięcie Alt i F (lub innej kombinacji dla danej platformy). Kiedy otworzy się menu Plik, jesteśmy w stanie wybrać pozycję Zakończ za pomocą wciśnięcia klawisza Z.</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul">Podgląd</a></p>
+
+<pre>&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="file-menu" label="Plik" accesskey="p"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem id="close-command" label="Zakończ" accesskey="z"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p>Można także zastosować atrybut <code><code id="a-accesskey"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/accesskey">accesskey</a></code></code> dla przycisków. W tym przypadku kiedy klawisz zostanie wciśnięty, przycisk zostanie wybrany.</p>
+
+<p>Możesz jednak zechcieć ustawić więcej skrótów klawiaturowych. Przykładowo, wciśnięcie Control+C, które spowoduje skopiowanie tekstu do schowka. Chociaż skróty takie jak ten mogą nie zawsze być poprawne, to zazwyczaj działają w dowolnej chwili, w której okno jest otwarte. Skrót klawiaturowy będzie dostępny przez większość czasu, w ciągu którego możemy sprawdzić czy w jakimś sensie wykorzystuje skrypt. Przykładowo, kopiowanie tekstu do schowka powinno działać tylko w chwili, w której tekst jest zaznaczony.</p>
+
+<h3 id="Element_key" name="Element_key">Element <code>key</code></h3>
+
+<p>XUL dostarcza element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code>, który pozwala nam na zdefiniowanie skrótów klawiaturowych dla okna. Posiada atrybuty określające klawisz, który powinien zostać wciśnięty, wraz z którym klawiszem modyfikującym (takie jak - Shifth lub Control). Przykład poniżej:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="sample-key" modifiers="shift" key="R"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>Ten przykład definiuje skrót klawiaturowy, który jest aktywowany w chwili, w której użytkownik wciśnie klawisze Shift i R. Atrybut <code><code id="a-key"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/key">key</a></code></code> (warto zaznaczyć, że posiada taką samą nazwę jak sam element) może być użyty w celu wykrycia, który klawisz powinien zostać wciśnięty. W tym przypadku jest to R. Możemy także dla tego atrybutu dodać dowolny znak, który ma być wciśnięty. Klawisze modyfikujące, które należy wcisnąć określa natomiast atrybut <code><code id="a-modifiers"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/modifiers">modifiers</a></code></code> (możesz podać kilka rozdzielając spacją). Poniżej lista klawiszy modyfikujących.</p>
+
+<dl>
+ <dt>alt </dt>
+ <dd>The user must press the Alt key. On the Macintosh, this is the Option key.</dd>
+ <dt>control </dt>
+ <dd>The user must press the Control key.</dd>
+ <dt>meta </dt>
+ <dd>The user must press the Meta key. This is the Command key on the Macintosh.</dd>
+ <dt>shift </dt>
+ <dd>The user must press the Shift key.</dd>
+ <dt>accel </dt>
+ <dd>The user must press the special accelerator key. The key used for keyboard shortcuts on the user's platform. Usually, this would be the value you would use.</dd>
+</dl>
+
+<p>Twoja klawiatura niekoniecznie musi posiadać wszystkie klawisze. W tym przypadku będą one dostosowane do klawiszy modyfikujących, które posiadamy.</p>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> musi zostać umieszczony wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/keyset" title="keyset">keyset</a></code></code>. Ten element został zaprojektowany z myślą o przechowywaniu zestawu elementów <code>key</code> i służy do do grupowania wszystkich definicji klawiszy w jednym miejscu (jednym pliku). Jakiekolwiek elementy <code>key</code> poza elementem <code>keyset</code> nie będą funkcjonować.</p>
+
+<p>Każda platforma używa innych klawiszy dla skrótów klawiaturowych. Przykładowo Windows używa klawisza Control, natomiast Macintosh używa klawisza Command. Byłoby zapewne niewygodne definiować oddzielnie elementy <code>key</code> da każdej platformy. Na szczęście, istnieje rozwiązanie. Modyfikator <code>accel</code>, odnosi się do specjalnego i specyficznego dla danej platformy klawisza używanego dla skrótów. Działa jak każdy inny modyfikator, ale nie dla każdej platformy tak samo.</p>
+
+<p>Poniżej kilka dodatkowych przykładów:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="control" key="C"/&gt;
+  &lt;key id="explore-key" modifiers="control alt" key="E"/&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>Atrybut <code><code id="a-key"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/key">key</a></code></code> jest używany w celu określenia klawisza, który powinien zostać wciśnięty. Jednak, istnieją przypadki w których chcemy się odwołać do klawiszy które nie mogą zostać określone za pomocą znaków (np: klawisze funkcyjne lub klawisz Enter). Atrybut <code>key</code> może zostać używa dla znaków dających się wyświetlić. Natomiast dla nie możliwych do wyświetlenia znaków służy nam atrybut <code><code id="a-keycode"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/keycode">keycode</a></code></code>.</p>
+
+<p>Atrybut <code><code id="a-keycode"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/keycode">keycode</a></code></code> powinien być ustawiony zgodnie ze specjalnym kodem, który reprezentuje klawisz jaki chcesz wykorzystać. Poniżej przedstawiamy tablicę klawiszy. Nie wszystkie z wymienionych klawiszy są dostępne dla każdej klawiatury.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>VK_CANCEL</td>
+   <td>VK_BACK</td>
+   <td>VK_TAB</td>
+   <td>VK_CLEAR</td>
+  </tr>
+  <tr>
+   <td>VK_RETURN</td>
+   <td>VK_ENTER</td>
+   <td>VK_SHIFT</td>
+   <td>VK_CONTROL</td>
+  </tr>
+  <tr>
+   <td>VK_ALT</td>
+   <td>VK_PAUSE</td>
+   <td>VK_CAPS_LOCK</td>
+   <td>VK_ESCAPE</td>
+  </tr>
+  <tr>
+   <td>VK_SPACE</td>
+   <td>VK_PAGE_UP</td>
+   <td>VK_PAGE_DOWN</td>
+   <td>VK_END</td>
+  </tr>
+  <tr>
+   <td>VK_HOME</td>
+   <td>VK_LEFT</td>
+   <td>VK_UP</td>
+   <td>VK_RIGHT</td>
+  </tr>
+  <tr>
+   <td>VK_DOWN</td>
+   <td>VK_PRINTSCREEN</td>
+   <td>VK_INSERT</td>
+   <td>VK_DELETE</td>
+  </tr>
+  <tr>
+   <td>VK_0</td>
+   <td>VK_1</td>
+   <td>VK_2</td>
+   <td>VK_3</td>
+  </tr>
+  <tr>
+   <td>VK_4</td>
+   <td>VK_5</td>
+   <td>VK_6</td>
+   <td>VK_7</td>
+  </tr>
+  <tr>
+   <td>VK_8</td>
+   <td>VK_9</td>
+   <td>VK_SEMICOLON</td>
+   <td>VK_EQUALS</td>
+  </tr>
+  <tr>
+   <td>VK_A</td>
+   <td>VK_B</td>
+   <td>VK_C</td>
+   <td>VK_D</td>
+  </tr>
+  <tr>
+   <td>VK_E</td>
+   <td>VK_F</td>
+   <td>VK_G</td>
+   <td>VK_H</td>
+  </tr>
+  <tr>
+   <td>VK_I</td>
+   <td>VK_J</td>
+   <td>VK_K</td>
+   <td>VK_L</td>
+  </tr>
+  <tr>
+   <td>VK_M</td>
+   <td>VK_N</td>
+   <td>VK_O</td>
+   <td>VK_P</td>
+  </tr>
+  <tr>
+   <td>VK_Q</td>
+   <td>VK_R</td>
+   <td>VK_S</td>
+   <td>VK_T</td>
+  </tr>
+  <tr>
+   <td>VK_U</td>
+   <td>VK_V</td>
+   <td>VK_W</td>
+   <td>VK_X</td>
+  </tr>
+  <tr>
+   <td>VK_Y</td>
+   <td>VK_Z</td>
+   <td>VK_NUMPAD0</td>
+   <td>VK_NUMPAD1</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD2</td>
+   <td>VK_NUMPAD3</td>
+   <td>VK_NUMPAD4</td>
+   <td>VK_NUMPAD5</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD6</td>
+   <td>VK_NUMPAD7</td>
+   <td>VK_NUMPAD8</td>
+   <td>VK_NUMPAD9</td>
+  </tr>
+  <tr>
+   <td>VK_MULTIPLY</td>
+   <td>VK_ADD</td>
+   <td>VK_SEPARATOR</td>
+   <td>VK_SUBTRACT</td>
+  </tr>
+  <tr>
+   <td>VK_DECIMAL</td>
+   <td>VK_DIVIDE</td>
+   <td>VK_F1</td>
+   <td>VK_F2</td>
+  </tr>
+  <tr>
+   <td>VK_F3</td>
+   <td>VK_F4</td>
+   <td>VK_F5</td>
+   <td>VK_F6</td>
+  </tr>
+  <tr>
+   <td>VK_F7</td>
+   <td>VK_F8</td>
+   <td>VK_F9</td>
+   <td>VK_F10</td>
+  </tr>
+  <tr>
+   <td>VK_F11</td>
+   <td>VK_F12</td>
+   <td>VK_F13</td>
+   <td>VK_F14</td>
+  </tr>
+  <tr>
+   <td>VK_F15</td>
+   <td>VK_F16</td>
+   <td>VK_F17</td>
+   <td>VK_F18</td>
+  </tr>
+  <tr>
+   <td>VK_F19</td>
+   <td>VK_F20</td>
+   <td>VK_F21</td>
+   <td>VK_F22</td>
+  </tr>
+  <tr>
+   <td>VK_F23</td>
+   <td>VK_F24</td>
+   <td>VK_NUM_LOCK</td>
+   <td>VK_SCROLL_LOCK</td>
+  </tr>
+  <tr>
+   <td>VK_COMMA</td>
+   <td>VK_PERIOD</td>
+   <td>VK_SLASH</td>
+   <td>VK_BACK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_OPEN_BRACKET</td>
+   <td>VK_BACK_SLASH</td>
+   <td>VK_CLOSE_BRACKET</td>
+   <td>VK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_HELP</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Na przykład, aby stworzyć skrót, który jest aktywowany w chwili, w której użytkownik naciśnie Alt i F5, należy użyć poniższego kodu:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="test-key" modifiers="alt" keycode="VK_F5"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>Poniższy przykład demonstruje więcej skrótów klawiaturowych:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C"/&gt;
+  &lt;key id="find-key" keycode="VK_F3"/&gt;
+  &lt;key id="switch-key" modifiers="control alt" key="1"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>Pierwszy klawisz został wywołany w chwili, w której użytkownik wcisnął określony dla swojej platformy klawisz skrótu i C. Drugi został wywołany poprzez wciśnięcie F3. Trzeci jest wywołany poprzez wciśnięcie klawisza Control, klawisza Alt i 1. Jeśli chcesz oddzielić klawiszze głównej części klawiatury i klawisze numeryczne, zastosuj klawisze VK_NUMPAD (takie jak VK_NUMPAD1).</p>
+
+<div class="note">
+<p>Po więcej informacji na temat skrótów klawiaturowych zajrzyj do <a class="external" href="http://www.mozilla.org/access/keyboard/">Mozilla Keyboard Planning FAQ and Cross Reference</a>.</p>
+</div>
+
+<h3 id="Zastosowanie_skr.C3.B3t.C3.B3w_klawiaturowych" name="Zastosowanie_skr.C3.B3t.C3.B3w_klawiaturowych">Zastosowanie skrótów klawiaturowych</h3>
+
+<p>Kiedy już wiemy jak zdefiniować skróty klawiaturowe, nauczymy się jak ich używać. Istanieją dwa sposoby. Pierwszy, najprostrzy, wymaga skorzystania z obsługi zdarzenia keypress dla elementu key. Kiedy użytkownik wciśnie klawisz, skrypt zostanie wywołany. Przykład poniżej:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C" oncommand="DoCopy();"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>Funkcja <code>DoCopy</code> będzie wywołana w chwili w której użytkownik wciśnie klawisz wyspecyfikowany przez element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code>. W tym przypadku są to klawisze przewidziane do operacji kopiowania do schowka (takie jak Control i C). Będzie to działać jeśli tylko okno jest otwarte. Funkcja <code>DoCopy</code> powinna sprawdzać czy text jest zaznaczony, a następnie kopiować go do schowka. Zauważmy, że pola tekstowe posiadają wbudowane skróty klawiaturowe, więc nie musimy ich sami implementować.</p>
+
+<h4 id="Przypisanie_skr.C3.B3tu_w_menu" name="Przypisanie_skr.C3.B3tu_w_menu">Przypisanie skrótu w menu</h4>
+
+<p>Jeśli przypisujemy skróty klawiaturowe, które wykonują komendy, które także znajdują się w menu, jesteśmy w stanie powiązać element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> bezpośrednio z menu command. Aby to zrobić, dodajemy atrybut <code><code id="a-key"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/key">key</a></code></code> dla pozycji w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>. Przypiszmy jej wartość <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> klawisza, którego chcemy użyć. Poniżej przykład:</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul">Podgląd</a></p>
+
+<div class="float-right"><img alt="grafika:keyshort1.png"></div>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"
+          oncommand="alert('Paste invoked')"/&gt;
+&lt;/keyset&gt;
+
+&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem id="paste-command"
+         accesskey="p" key="paste-key"
+         label="Paste" oncommand="alert('Paste invoked')"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p>Atrybut <code><code id="a-key"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/key">key</a></code></code> przypisany do pozycji w menu, który w tym przypadku jest klawiszem odpowiadającym z opcję wklejenia, jest równy id zdefiniowanego klawisza. Możemy go użyć dla dodatkowych klawiszy, jak i dla zdefiniowania skrótów klawiaturowych dowolnej liczby pozycji znajdujących się w menu.</p>
+
+<p>Warto także zauważyć na obrazku, że tekst został umieszczony zaraz przy polecanie Paste (znajdującym się w menu), w celu wykrycia czy klawisze Control i V zostały wciśnięte, aby wywołać polecenie menu. Skróty klawiaturowe dodane do menu będą działać nawet jeśli menu nie jest otwarte.</p>
+
+<p>Kolejną dodaktową cechą definicji klawiszy jest prosta możliwość ich dezaktywacji. Aby to zrobić wystarczy dodać atrybut <code><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code></code> do elementu <code>key</code> i ustawić jego wartość na <code>true</code>. Wyłącza to skrót klawiaturowy, pozbawiając go możliwości wywołania. Wygodnie jest zmieniać wartość atrybutu <code>disabled</code> poprzez użycie skryptów.</p>
+
+<div class="highlight">
+<h5 id="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Znajd.C5.BA_pliki">Nasz przykład: Znajdź pliki</h5>
+
+<p>Dodajmy skróty klawiaturowe do naszego przykładu okna dialogowego Znajdź pliki. Dodamy ich cztery, po jednym dla poleceń Wytnij, Kopiuj, Wklej i Zamknij (kiedy użytkownik wciśnie Escape).</p>
+
+<pre class="eval"><span class="highlightred">&lt;keyset&gt;
+  &lt;key id="cut_cmd" modifiers="accel" key="X"/&gt;
+  &lt;key id="copy_cmd" modifiers="accel" key="C"/&gt;
+  &lt;key id="paste_cmd" modifiers="accel" key="V"/&gt;
+  &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+ &lt;toolbox&gt;
+  &lt;menubar id="findfiles-menubar"&gt;
+   &lt;menu id="file-menu" label="Plik" accesskey="f"&gt;
+     &lt;menupopup id="file-popup"&gt;
+       &lt;menuitem label="Otwórz szukanie..." accesskey="o"/&gt;
+       &lt;menuitem label="Zapisz szukanie..." accesskey="s"/&gt;
+       &lt;menuseparator/&gt;
+       &lt;menuitem label="Zakończ" accesskey="c" <span class="highlightred">key="close_cmd"</span>
+         oncommand="window.close();"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+   &lt;menu id="edit-menu" label="Edycja" accesskey="e"&gt;
+     &lt;menupopup id="edit-popup"&gt;
+       &lt;menuitem label="Wytnij" accesskey="t" <span class="highlightred">key="cut_cmd"</span>/&gt;
+       &lt;menuitem label="Kopiuj" accesskey="c" <span class="highlightred">key="copy_cmd"</span>/&gt;
+       &lt;menuitem label="Wklej" accesskey="p" <span class="highlightred">key="paste_cmd"</span> disabled="true"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+</pre>
+
+<p>Teraz możemy użyć tych skrótów klawiaturowych w celu aktywacji komend. Oczywiście, komendy schowka, nie robią na razie nic, ponieważ nie napisaliśmy na razie żadnych skryptów.</p>
+</div>
+
+<h3 id="Zdarzenia_klawiszy" name="Zdarzenia_klawiszy">Zdarzenia klawiszy</h3>
+
+<p>Istnieją trzy zdarzenia związane z klawiaturą, które mogą zostać użyte w przypadku, w którym cechy klawiszy opisane wyżej nie są odpowiednie. Tymi zdarzeniami są:</p>
+
+<dl>
+ <dt>keypress </dt>
+ <dd>Wywoływany gdy klawisz został wciśnięty i puszczony na aktywnym elemencie. Można wykorzystać do weryfikacji dozwolonych znaków w polu.</dd>
+ <dt>keydown </dt>
+ <dd>Wywoływany gdy klawisz został wciśnięty na aktywnym elemencie. Zwróć uwagę, że zostanie wywołany jak tylko przycisk zostanie wciśnięty, nawet jeśli nie został puszczony.</dd>
+ <dt>keyup </dt>
+ <dd>Wywoływany gdy klawisz został puszczony na aktywnym elemencie.</dd>
+</dl>
+
+<p>Zdarzenia klawiszy będą wysyłane tylko do tych elementów na których skupiona jest uwaga (focus). Typowo, będą to textboxy, przyciski, checkboy itp. Jeśli uwaga nie jest skupiona na żadnym z elementów to zdarzenie klawisza, będzie się odnosiło w stosunku do dokumentu XUL. W tym przypadku, można dodać nasłuch zdarzenia do znacznika <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> . Jeśli jednak chcesz odpowiadać na działanie klawiszy globalnie, będziesz zmuszony do wykorzystania skrótów klawiaturowych, zgodnie z powyższymi wskazówkami.</p>
+
+<p>Obiekt zdarzenia klawisza posiada dwie własności, które przechowują klawisz, który został wciśnięty. Własność keyCode przetrzymuje kod klawisza i może posłużyć do porównania z jedną ze stałych wymienionych w tabelce powyżej. Natomiast charCode, jest używana dla możliwych do wyświetlenia znaków i przechowuje kod znaku wciśniętego klawisza.</p>
+
+<p>Następnie dowiemy się <a href="pl/Kurs_XUL/Kontrola_zaznaczenia_i_aktywacji_element%c3%b3w">jak podtrzymać zaznaczenie i aktywację elementu</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Więcej_funkcji_obsługi_zdarzeń" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Kontrola_zaznaczenia_i_aktywacji_elementów">Następny  »</a></p>
+</div><p></p>

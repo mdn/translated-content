@@ -1,0 +1,130 @@
+---
+title: '<head>: элемент метаданных документа'
+slug: Web/HTML/Element/head
+tags:
+  - Element
+  - HTML
+  - Web
+  - Веб
+  - Справка
+  - метаданные
+  - метаданные документа HTML
+translation_of: Web/HTML/Element/head
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;head&gt;</code></strong> содержит машиночитаемую информацию ({{glossary("metadata")}}) о документе, например его <a href="/ru/docs/Web/HTML/Element/title">заголовок</a>, <a href="/ru/docs/Web/HTML/Element/script">скрипты</a> и <a href="/ru/docs/Web/HTML/Element/style">страницы стилей</a>.</span></p>
+
+<div class="blockIndicator note">
+<p><strong>Заметка:</strong> <code>&lt;head&gt;</code> в основном содержит информацию для машинной обработки, а не для восприятия человеком. Информацию, видимую человеком, такую как заголовки верхнего уровня и перечисленные авторы, смотрите в элементе {{HTMLElement("header")}}.</p>
+</div>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
+   <td>Отсутствуют.</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешенное содержимое</th>
+   <td>
+    <p>Если документ является документом {{HTMLElement("iframe")}} с атрибутом {{htmlattrxref("srcdoc", "iframe")}}, или если информация о заголовке доступна из протокола более высокого уровня (например, строки темы в электронном письме HTML), то ноль или более элементов содержащих метаданные.</p>
+
+    <p>Иначе, один или более элементов содержащих метаданные, один из которых является элементом {{HTMLElement("title")}}.</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Пропуск тега</th>
+   <td>Открывающий тег может быть пропущен, если первым, что находится внутри элемента <code>&lt;head&gt;</code> является другой элемент.<br>
+    Закрывающий тег может быть пропущен, если первое, что следует за элементом <code>&lt;head&gt;</code> не является пробелом или комментарием.</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешённые родительские элеметны</th>
+   <td>Элемент {{HTMLElement("html")}} (<code>&lt;head&gt;</code> является его первым дочерним элементом).</td>
+  </tr>
+  <tr>
+   <th scope="row">Разрешенные роли ARIA</th>
+   <td>Отсутствуют.</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM-интерфейс</th>
+   <td>{{domxref("HTMLHeadElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Атрибуты">Атрибуты</h2>
+
+<p>К этому элементу применимы <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+
+<dl>
+ <dt>{{htmlattrdef("profile")}} {{obsolete_inline}}</dt>
+ <dd>{{glossary("URI")}} одного или более профилей метаданных, разделенных пробелами.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="Примечание">Примечание</h2>
+
+<p>HTML5-совместимые браузеры автоматически создают элемент <code>&lt;head&gt;</code>, если его теги пропущены в разметке. <a class="external" href="https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/">Такое поведение не гарантируется в старых браузерах</a>.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Нет изменений с последнего "snapshot" (состояние сохраненное в определенный момент времени)</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Атрибут <code>profile</code> больше не поддерживается</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p class="hidden">Таблица совместимости на этой странице генерируется из структурированных данных. Если вы хотите внести свой вклад в эти данные, пожалуйста проверьте https://github.com/mdn/browser-compat-data и отправьте нам "pull request" (предложение изменения кода в чужом репозитории).</p>
+
+<p>{{Compat("html.elements.head")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Элементы, которые могут использоваться внутри <code>&lt;head&gt;</code>:
+
+  <ul>
+   <li>{{HTMLElement("title")}}</li>
+   <li>{{HTMLElement("base")}}</li>
+   <li>{{HTMLElement("link")}}</li>
+   <li>{{HTMLElement("style")}}</li>
+   <li>{{HTMLElement("meta")}}</li>
+   <li>{{HTMLElement("script")}}</li>
+   <li>{{HTMLElement("noscript")}}</li>
+   <li>{{HTMLElement("template")}}</li>
+  </ul>
+ </li>
+</ul>

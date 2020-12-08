@@ -1,0 +1,126 @@
+---
+title: unescape()
+slug: Web/JavaScript/Reference/Global_Objects/unescape
+translation_of: Web/JavaScript/Reference/Global_Objects/unescape
+---
+<div>
+<div>
+<div>{{jsSidebar("Objects")}} {{deprecated_header()}}</div>
+</div>
+</div>
+
+<h2 id="Summary" name="Summary">Описание</h2>
+
+<p>Устаревший метод <code><strong>unescape(str)</strong></code> создает новую строку в которой шестнадцатиричная последовательность симоволов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.</p>
+
+<p>Последовательность может быть результатом работы функции вроде {{jsxref("Global_Objects/escape", "escape")}}. Т.к. {{jsxref("Global_Objects/decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("Global_Objects/decodeURI", "decodeURI")}} или {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} вместо неё.</p>
+
+<div class="note"><strong>Обратите внимание:</strong> Не рекомендуется использовать <code>unescape</code> чтобы декодировать URI, используйте <code>decodeURI</code> вместо него.</div>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><code>unescape(str)</code></pre>
+
+<h3 id="Parameters" name="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>str</code></dt>
+ <dd>Строка которую необходимо преобразовать</dd>
+</dl>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p><code>Функция unescape</code> это свойство <em>глабального объекта</em>.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">unescape("abc123");     // "abc123"
+unescape("%E4%F6%FC");  // "äöü"
+unescape("%u0107");     // "ć"
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1st Edition.</td>
+   <td>Standard</td>
+   <td>Начальное определние.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>Определено в (информативно) Compatibility Annex B</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-unescape-string', 'unescape')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Определено в (нормативно) Annex B for Additional ECMAScript Features for Web Browsers</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_Also" name="See_Also">Смотрите так же</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/decodeURI", "decodeURI")}}</li>
+ <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}}</li>
+</ul>

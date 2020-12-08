@@ -1,0 +1,116 @@
+---
+title: HTMLHyperlinkElementUtils.origin
+slug: Web/API/HTMLHyperlinkElementUtils/origin
+tags:
+  - API
+  - Experimental
+  - HTMLHyperlinkElementUtils
+  - Property
+  - Read-only
+  - Reference
+  - URL API
+translation_of: Web/API/HTMLHyperlinkElementUtils/origin
+---
+<p>{{APIRef("URL API")}}</p>
+
+<p>Свойство только для чтения <strong><code>HTMLHyperlinkElementUtils.origin</code></strong> <span class="st">–</span> это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:</p>
+
+<ul>
+ <li>для URL, начинающегося с <code>http</code> или <code>https</code>, <span class="st">–</span> протокол, <code>'://'</code>, домен, <code>':'</code>, порт (порт по умолчанию, <code>80</code> и <code>443</code> соответственно, если указаны явно);</li>
+ <li>для URL, начинающегося с <code>file:</code>, <span class="st">–</span> значение зависит от браузера;</li>
+ <li>для URL, начинающегося с <code>blob:</code>, <span class="st">–</span> основа URL следующего за <code>blob:</code>. Т.е. для <code>"blob:https://mozilla.org"</code> будет <code>"https://mozilla.org".</code></li>
+</ul>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>string</em> = <em>object</em>.origin;
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">// На этой странице
+var result = window.location.origin; // Вернет: 'https://developer.mozilla.org'
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-origin', 'HTMLHyperlinkElementUtils.origin')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown()}}</td>
+   <td>{{CompatGeckoDesktop("26.0")}}<sup> [2][3]</sup></td>
+   <td>{{CompatNo}} [1]</td>
+   <td><span style="font-size: 12px; line-height: 16.3636360168457px;">{{CompatNo}}</span> [1]</td>
+   <td>{{CompatNo}} [1]</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatGeckoMobile("26.0")}}<sup> [2][3</sup>]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Хотя оно и не включено в один абстрактный интерфейс, это свойство напрямую доступно в интерфейсах, которые его реализуют.</p>
+
+<p>[2] С Gecko 26 по Gecko 44, это свойство находилось в <code>URLUtils</code>. Оно было перемещено или в <code>HTMLHyperlinkElementUtils</code>, или напрямую в интерфейс.</p>
+
+<p>[3] До Gecko 49, для URL, начинающихся с <code>blob,</code> ошибочно возвращался <code>null</code>.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
+</ul>

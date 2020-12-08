@@ -1,0 +1,29 @@
+---
+title: Empacotando Extensões
+slug: Empacotando_Extensões
+tags:
+  - Extensões
+  - Toolkit API
+translation_of: Archive/Add-ons/Extension_Packaging
+---
+<p>Extensões são uma forma de <a href="/en-US/docs/Bundle">Installable Bundle</a> (Pacotes Instaláveis) os quais podem ser baixados e instalados por um usuário, ou proporcionado por um pré-pacote com a aplicação ou por um programa externo. Extensões usam uma <a href="/en-US/docs/Bundles">directory structure</a> (estrutura de diretórios) que podem proporcionar chrome, componentes e outros arquivos para extender a funcionalidade de um programa XUL.</p>
+<p>Toda extensão deve proporcionar um arquivo <a href="/pt-PT/docs/install.rdf" title="install.rdf">install.rdf</a> que contém metadados sobre a extensão, como IDs únicos, versão, autor e informações sobre compatibilidade.</p>
+<p>Depois dos arquivos da extensão e o install.rdf estarem preparados, existem vários caminhos para preparar uma extensão para instalação: comprima o diretório da extensão dentro de um arquivo <a href="/en-US/docs/XPI">XPI</a> (XPInstall), desempacote a extensão diretamente dentro da aplicação do usuário ou diretório do perfil, ou registre a extensão no registro do Windows.</p>
+
+<h2 id="Fazendo_uma_Extens.C3.A3o_XPI" name="Fazendo_uma_Extens.C3.A3o_XPI">Fazendo uma Extensão XPI</h2>
+<p>Um arquivo <a href="/en-US/docs/XPI">XPI</a> (XPInstall) é simplesmente um arquivo ZIP contendo os arquivos da extensão, com o arquivo <a href="/pt-PT/docs/install.rdf" title="install.rdf">install.rdf</a> no raiz do ZIP. Usuários podem baixar e instalar os arquivos XPI de um website ou de uma pasta local, abrindo-o ou arrastando-o para uma janela de Gerenciamento de Extensões.</p>
+<p>O tipo MIME reconhecido pelo Firefox pelos arquivos XPI é <em>application/x-xpinstall</em>. A maioria dos servidores de HTTP não está configurada por padrão para retornar este tipo MIME para a extensão .xpi, você provavelmente precisará configurar seu servidor HTTP. No Servidor Apache HTTP, isto pode ser feito adicionando as seguintes diretrizes ao arquivo de configuração ou ao .htaccess:</p>
+<pre class="eval">AddType application/x-xpinstall .xpi
+</pre>
+
+<h2 id="Instalar_Arquivos_de_Extens.C3.A3o_Diretamente" name="Instalar_Arquivos_de_Extens.C3.A3o_Diretamente">Instalar Arquivos de Extensão Diretamente</h2>
+<p>Se você sabe a localização da aplicativos (se você estiver instalando uma extensão como parte de um instalador de aplicativos, por exemplo), você pode instalar os arquivos da extensão diretamente em &lt;appdir&gt;/extensions/&lt;extensionID&gt;. A extensão será encontrada automaticamente pelo Gerenciador de Extensões da próxima vez que o aplicativo for iniciado.</p>
+<p>Quando usando este método você deve verificar se as permissões do arquivo de sistema para os diretórios e arquivos da extensão estejam postas adequadamente. Contrariamente, o Gerenciador de Extensões pode não funcionar adequadamente com a extensão ou ela pode não funcionar adequadamente.</p>
+<h2 id="Registrar_um_Local_de_Extens.C3.A3o_Usando_o_Registro_do_Windows" name="Registrar_um_Local_de_Extens.C3.A3o_Usando_o_Registro_do_Windows">Registrar um Local de Extensão Usando o Registro do Windows</h2>
+<p>Instaladores externos (como o Java runtime)podem desejar instalar pontos de integração da aplicação como extensão mesmo se o aplicativo ainda não está instalado. Isto pode ser efetuado no Windows usando o registro (<a href="/en-US/docs/Adding_Extensions_using_the_Windows_Registry">Adding Extensions using the Windows Registry</a>).</p>
+
+<h2 id="Extens.C3.B5es_Multi-Item_XPI" name="Extens.C3.B5es_Multi-Item_XPI">Extensões Multi-Item XPI</h2>
+<p>Em alguns casos um simples arquivo XPI podem desejar instalar múltiplas extensões/temas. Um tipo especial de extensão XPI chamado de <a href="/en-US/docs/Multiple_Item_Packaging">Multiple Item Package</a> que explica como criar este tipo de pacote. (Firefox 1.5/XULRunner 1.8 é requerido.)</p>
+
+<h2 id="Refer.C3.AAncias_Oficiais_para_Toolkit_API" name="Refer.C3.AAncias_Oficiais_para_Toolkit_API">Referências Oficiais para <a href="/pt-PT/docs/Toolkit_API" title="Toolkit_API">Toolkit API</a></h2>
+<div>{{page("/pt-PT/docs/Toolkit_API/Official_References")}}</div>

@@ -1,0 +1,138 @@
+---
+title: NavigatorLanguage.language
+slug: Web/API/NavigatorLanguage/language
+translation_of: Web/API/NavigatorLanguage/language
+---
+<p>{{ APIRef("HTML DOM") }}</p>
+
+<p><span id="result_box" lang="ru"><span>Свойство <code><strong>NavigatorLanguage.language</strong></code></span> <span class="hps">только для чтения, оно</span> <span class="hps">возвращает</span> <span class="hps">строку, представляющую</span> <span class="hps">предпочтитаемый</span> <span class="hps">пользователем язык</span><span>, как правило это</span><span class="hps"> язык</span> <span class="hps">пользовательского интерфейса</span> <span class="hps">браузера</span><span>.</span></span></p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="eval"><em>lang</em> = <em>globalObj</em>.navigator.language
+</pre>
+
+<h3 id="Parameters" name="Parameters">Значение</h3>
+
+<p>Строка представляющая версию языка которая определена в <a class="external" href="http://tools.ietf.org/html/rfc4646" title="http://tools.ietf.org/html/rfc4646">RFC 4646</a>. <span id="result_box" lang="ru"><span class="hps">Пример</span>ы <span class="hps">валидных</span> языковых кодов <span class="hps">включают </span><span class="atn hps">"</span><span>en</span><span>"</span><span>,</span> <span class="atn hps">"</span><span>EN-US</span><span>"</span><span>,</span> <span class="hps">"FR</span><span class="atn">", "</span><span>es</span><span>-ES"</span> <span class="hps">и т.д.</span></span></p>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="brush: js">if ( window.navigator.language.slice(0, 2) !== "en" ) {
+ doLangSelect(window.navigator.language);
+}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Коментарий</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5 Web application', '#dom-navigator-language', 'navigator.language') }}</td>
+   <td>{{ Spec2('HTML5.1') }}</td>
+   <td>Начальное описание.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>
+    <p>{{ CompatVersionUnknown() }}</p>
+
+    <p>Возвращает язык пользовательского интерфейса, но не значение<span style="line-height: 1.5;"> </span><code style="font-size: 12px;">Accept-Language</code><span style="line-height: 1.5;"> </span><a href="/en/HTTP/Headers" style="line-height: 1.5;" title="en/HTTP/Headers">HTTP header</a><span style="line-height: 1.5;">.</span></p>
+   </td>
+   <td>
+    <p>{{ CompatGeckoDesktop(1.0) }}</p>
+
+    <p>До Gecko 2.0 {{ geckoRelease("2.0") }}, значение этого свойства было частью строки пользовательского агента, таким как передает {{ domxref("window.navigator.userAgent", "navigator.userAgent") }}.</p>
+
+    <p>Начиная с Gecko 5.0 {{ geckoRelease("5.0") }}, значение этого свойства основыванно на значении <code>Accept-Language</code> <a href="/en/HTTP/Headers" title="en/HTTP/Headers">HTTP header</a>.</p>
+   </td>
+   <td>
+    <p><span style="font-size: 12px; line-height: 18px;">11.0</span></p>
+
+    <p>Ближайщее доступное(не стандартиризованное) свойство<a href="http://msdn.microsoft.com/en-us/library/ie/ms534713.aspx" title="http://msdn.microsoft.com/en-us/library/ie/ms534713.aspx">userLanguage</a> и <a href="http://msdn.microsoft.com/en-us/library/ie/ms533542.aspx" title="http://msdn.microsoft.com/en-us/library/ie/ms533542.aspx">browserLanguage</a>.</p>
+   </td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>{{CompatGeckoDesktop("35")}}</p>
+   </td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Свойство</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoMobile(1.0) }}</td>
+   <td>
+    <p>{{ CompatNo() }}</p>
+
+    <p>Ближайщее доступное(не стандартиризованное) свойство <a href="http://msdn.microsoft.com/en-us/library/ie/ms534713.aspx" title="http://msdn.microsoft.com/en-us/library/ie/ms534713.aspx">userLanguage</a> и <a href="http://msdn.microsoft.com/en-us/library/ie/ms533542.aspx" title="http://msdn.microsoft.com/en-us/library/ie/ms533542.aspx">browserLanguage</a>.</p>
+   </td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>{{CompatGeckoDesktop("35")}}</p>
+   </td>
+   <td>
+    <p>{{ CompatNo() }}</p>
+   </td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("NavigatorLanguage.languages","navigator.languages")}}</li>
+ <li>{{domxref("navigator")}}</li>
+</ul>

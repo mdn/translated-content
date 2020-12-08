@@ -1,0 +1,160 @@
+---
+title: Создание скина для Firefox/Начало работы
+slug: Creating_a_Skin_for_Firefox_Getting_Started
+tags:
+  - Для новичков
+  - Начало работы
+  - Начальные файли дя работы
+  - Первый сайт
+  - Темы
+translation_of: Archive/Mozilla/Creating_a_sking_for_Firefox_Getting_Started
+---
+<p>Скачайте и установите последнюю версию Firefox. Также Вам понадобится расширение DOM Inspector, убедитесь, что оно установлено.</p>
+
+<h4 id="Extract_Theme" name="Extract_Theme">Извлечение темы</h4>
+
+<p>Предполагается, что начать работу можно с любой темы, которая уже создана для Firefox, поэтому мы будем говорить о редактировании предзаданной темы Firefox.  Она находится в файле <code>classic.jar</code>, хранящемся в каталоге установки Firefox. Файл .jar, по сути является переименованным архивом zip. При открытии файлов .jar через менеджер архивов он автоматически распознается как zip-архив. Однако, если ваше приложение не распознает  <code>classic.jar</code> как стандартный архив zip, переименуйте в <code>classic.zip</code> и продолжите извлечение.</p>
+
+<div class="note">
+<p><strong>Примечание:</strong> Начиная с {{Gecko ("2.0") }}, скин содержится в новом файле <code>omni.jar</code>. См. <a href="/en/Theme_changes_in_Firefox_4" title="en/Theme changes in Firefox 4">Theme changes in Firefox 4</a> подробнее о том, как извлечь файлы skin из Firefox 4 или более поздней версии.</p>
+</div>
+
+<h4 id="Classic.jar_locations" name="Classic.jar_locations">Пути к Classic.jar</h4>
+
+<p><strong>Linux:</strong> /usr/lib/MozillaFirefox/chrome/classic.jar <em>or</em> /usr/lib/firefox-*.*.*/chrome/classic.jar</p>
+
+<p><strong>Windows:</strong> \Program Files\Mozilla Firefox\chrome\classic.jar</p>
+
+<p><strong>Для Mac OS X:</strong></p>
+
+<ul>
+ <li>Перейдите в applications</li>
+ <li>Удерживая Control, кликните мышью на иконку приложения (Firefox icon), Выберите Show Package Contents.</li>
+ <li>Перейдите в contents/MacOS/Chrome/classic.jar</li>
+</ul>
+
+<p>Скопируйте <code>classic.jar</code> в другую более доступную папку -- мы рекомендуем <code>Classic</code>  -- извлеките содержимое этой папки, сохранив при этом структуру каталога.</p>
+
+<h4 id="Directories" name="Directories">Каталоги</h4>
+
+<p>В архиве <code>classic.jar</code> находится один каталог — <code>skin</code>, и два файла — <code>preview.png</code> и <code>icon.png</code>.</p>
+
+<dl>
+ <dt><code>skin</code></dt>
+ <dd>Этот файл содержит еще один каталог - <code>classic</code>, в котором находится много нужных каталогов.</dd>
+ <dt><code>skin\classic</code></dt>
+ <dd>В нем содержатся следующие каталоги:</dd>
+ <dt><code>skin\classic\browser</code></dt>
+ <dd>Тут находятся все иконки панели инструментов, а также иконки для менеджера закладок и окна предварительных настроек.</dd>
+ <dt><code>skin\classic\communicator</code></dt>
+ <dd>Не играет большой роли и не стоит внимания.</dd>
+ <dt><code>skin\classic\global</code></dt>
+ <dd>Содержит в себе почти все важные файлы CSS, которые определяют стиль и оформление браузера. <strong>Это самый важный каталог в теме</strong>.</dd>
+ <dt><code>skin\classic\help</code></dt>
+ <dd>Содержит все файлы для оформления диалогового окна справки.</dd>
+ <dt><code>skin\classic\mozapps</code></dt>
+ <dd>Тут лежат все стили и иконки для периферии браузера, таких как менеджер расширений или мастер обновлений.</dd>
+</dl>
+
+<h4 id="Install_Your_New_Theme" name="Install_Your_New_Theme">Создание собственной новой темы</h4>
+
+<p>Прежде чем отследить созданные в теме Firefox изменения (т.к. изменения достаточно сложно добавлять в интерактивном режиме), изучим, как переархивировать классическую тему так, чтобы ее можно было установить. Можно назвать вашу собственную тему "My_Theme", или любым другим именем.</p>
+
+<h4 id="Copying_The_Necessary_Files" name="Copying_The_Necessary_Files">Копирование необходимых файлов</h4>
+
+<p>Первым делом необходимо переместить все файлы в нужный каталог.  Для этого создадим новый каталог с именем <code>My_Theme</code>.  В него поместим каталоги <code>browser</code>, <code>global</code>, <code>communicator</code>, <code>help</code>, и <code>mozapps</code> , а также файлы <code>icon.png</code> и <code>preview.png</code>(да, это значит, что струтура нашего каталога будет немного отличаться от структуры каталога <code>classic.jar</code>).</p>
+
+<h4 id="Creating_the_Install_Files" name="Creating_the_Install_Files">Создание файлов установки</h4>
+
+<h4 id="Contents.rdf" name="Contents.rdf">Contents.rdf</h4>
+
+<p>Скопируйте <a href="/en/Creating_a_Skin_for_Firefox/contents.rdf" title="en/Creating_a_Skin_for_Firefox/contents.rdf">contents.rdf</a>, поместите его в <code>\My_Theme</code> и откройте в текстовом редакторе. Это небольшой файл XML Database, который используется для описния skin.</p>
+
+<p>В коде найдите все сущности "My_Theme" и замените их на название вашей темы.</p>
+
+<p>В разделе пакетов перечислено, какие компоненты браузера вы редактируете. Если у нас также есть скины для Chatzilla, нужно добавить еще одну похожую строку, ведущую на Chatzilla. Но данный список включает в себя все модификации, поэтому достаточно изменить текст, подсвеченный синим так, чтобы он совпадал с именем/версией, которую вы использовали выше.</p>
+
+<pre class="syntaxbox">&lt;RDF:li resource="urn:mozilla:skin:<strong style="color: #0000dd; font-weight: bold;">My_Theme</strong>:communicator"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<strong style="color: #0000dd; font-weight: bold;">My_Theme</strong>:editor"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<strong style="color: #0000dd; font-weight: bold;">My_Theme</strong>:global"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<strong style="color: #0000dd; font-weight: bold;">My_Theme</strong>:messenger"/&gt;
+&lt;RDF:li resource="urn:mozilla:skin:<strong style="color: #0000dd; font-weight: bold;">My_Theme</strong>:navigator"/&gt;
+</pre>
+
+<p>Сохраните файл и закройте текстовый редактор.</p>
+
+<h4 id="install.rdf" name="install.rdf">install.rdf</h4>
+
+<p>Скопируйте <a href="/en/Creating_a_Skin_for_Firefox/install.rdf" title="en/Creating_a_Skin_for_Firefox/install.rdf">install.rdf</a> в каталог <code>My_Theme</code> и также откройте его в текстовом редакторе. Данный файл представляет собой небольшую базу данных XML, которая описывает скин.</p>
+
+<pre>  &lt;Description about="urn:mozilla:install-manifest"&gt;
+  &lt;em:id&gt;{Themes_UUID}&lt;/em:id&gt;
+  &lt;em:version&gt;Themes_Version&lt;/em:version&gt;
+</pre>
+
+<p>В первой секции необходимо определить <a href="/en/Creating_a_Skin_for_Firefox/UUID" title="en/Creating_a_Skin_for_Firefox/UUID">UUID</a> для вашей темы и номер версии.</p>
+
+<p>Также, в следующей секции необходимо обновить минимальную и максимальную совместимые версии для целевого приложения (Firefox):</p>
+
+<pre>  &lt;em:targetApplication&gt;
+    &lt;Description&gt;
+      &lt;!-- Firefox's UUID --&gt;
+      &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+      &lt;em:minVersion&gt;Min_FF_Version&lt;/em:minVersion&gt;
+      &lt;em:maxVersion&gt;Max_FF_Version&lt;/em:maxVersion&gt;
+    &lt;/Description&gt;
+  &lt;/em:targetApplication&gt;
+</pre>
+
+<p>Указав минимальную и максимальную совместимые версии, вы сможете избежать конфликтов с версиями Firefox, для которых ваша тема не была разработана или протестирована.</p>
+
+<p>См. подробнее о фале <code>install.rdf</code> в <a href="/en/Install_Manifests" title="en/Install_Manifests">Install Manifests</a>.</p>
+
+<h4 id="Файлы_CSS">Файлы CSS</h4>
+
+<p>Файлы CSS в данных каталогах сообщают браузеру как отображать кнопки и другие элементы управления, где вставить изображения, какую границу или отступ использовать вокруг них и прочее.</p>
+
+<p>Давайте в качестве примера изменим стандартную кнопку.</p>
+
+<p>Перейдите в глобальный каталог <code>global</code> и откройте файл стилей - <code>button.css</code> в любом текстовом редакторе. Прокрутите текст вниз до секции "<code>button {"</code>.  Эта секция определяет базовые настройки кнопки(например, такие как: цвет самой кнопки, цвет и расположение текста на самой кнопке, дизайн, размещение, активна или вовсе отключена).</p>
+
+<div class="blockIndicator note">
+<p>Совет: для быстрого нахождения нужных строк и значений используйте обычный поиск по файлу(практически во всех редакторах это сочетание клавиш Ctrl + F для Linux/Windows и Command + F для Mac OS)</p>
+</div>
+
+<p>Измените значение <code>background-color:</code> на <code>DarkBlue</code>, а значение <code>color:</code> на <code>White</code>, и сохраните файл.</p>
+
+<h4 id="Repackaging_JAR" name="Repackaging_JAR">Переархивирование JAR</h4>
+
+<p>Теперь осталось только переархивировать файл JAR со следующей структурой каталогов и создать zip архив, используя любой менеджер архивов:</p>
+
+<pre>/browser/*
+/communicator/*
+/global/*
+/help/*
+/mozapps/*
+/contents.rdf
+/install.rdf
+/icon.png
+/preview.png
+  </pre>
+
+<p>Убедитесь, что вы не просто добавляете в zip-архив родительский каталог <code>My_Theme</code>, <span id="result_box" lang="ru"><span>так как это приведет к тому, что простая установка перетаскиванием в следующем шаге пройдет неудачно, но сообщений об ошибках не будет.</span> <span>После того, как вы поместили файлы в папку zip, переименуйте ее в My_Theme.jar. </span></span></p>
+
+<h4 id="Triggering_the_install_from_the_web" name="Triggering_the_install_from_the_web">Запуск установки из сети</h4>
+
+<p>Чтобы установить тему из файла JAR из сети, вопользуйтесь командой.</p>
+
+<pre class="eval">&lt;a href='javascript:InstallTrigger.installChrome(InstallTrigger.SKIN,
+ "<strong style="color: #0000dd; font-weight: bold;">myskin.jar</strong>", "<strong style="color: #0000dd; font-weight: bold;">My Skin Theme</strong>")'&gt;install My Skin&lt;/a&gt;
+</pre>
+
+<p>Если файлы JAR на жестком диске, скачайте/используйте для установки <a href="http://developer.mozilla.org/samples/installjar.html">эту форму</a>.</p>
+
+<p>Также, можно открыть окно тем в Mozilla и перетащить туда ваш файл .jar.</p>
+
+<p>Теперь, чтобы снова переархивировать ваши папки в .jar, просто поместите ваши папки в файл .zip, а затем после сжатия переименуйте .zip в .jar.</p>
+
+
+
+<p>{{ languages( { "de": "de/Theme_erstellen/Einf\u00fchrung", "es": "es/Creando_un_skin_para_Firefox/Como_empezar", "fr": "fr/Cr\u00e9er_un_th\u00e8me_pour_Firefox//Premiers_pas", "ja": "ja/Creating_a_Skin_for_Firefox/Getting_Started", "pl": "pl/Tworzenie_sk\u00f3rek_dla_Firefoksa/Zaczynamy", "pt": "pt/Criando_um_visual_para_o_Firefox/Iniciando", "zh-tw": "zh_tw/\u88fd\u4f5c_Firefox_\u4f48\u666f\u4e3b\u984c/\u4e0a\u624b\u7bc7" } ) }}</p>

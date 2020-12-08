@@ -1,0 +1,132 @@
+---
+title: ':not()'
+slug: 'Web/CSS/:not'
+translation_of: 'Web/CSS/:not'
+---
+<div>{{ CSSRef() }}</div>
+
+<h2 id="Summary" name="Summary">Описание</h2>
+
+<p><strong>Отрицательный </strong><a href="/ru/docs/CSS/Pseudo-classes" title="Pseudo-classes">CSS псевдо-класс</a>, <code>:not(X)</code> - функция, принимающая простой селектор <var>X</var> в качестве аргумента. Он находит элементы, не соответствующие селектору. <var>X</var> не должен содержать других отрицательных селекторов.</p>
+
+<div class="note"><strong>Замечания:</strong>
+
+<ul>
+ <li>С этого псевдокласса можно написать бесполезные селекторы. Например, <code>:not(*)</code> найдёт любой элемент, являющийся не любым, то есть правило не применится ни к одному элементу.</li>
+ <li>Возможно переписать другие правила. Например <code>foo:not(bar)</code> найдёт тот же элемент, что и простой <code>foo</code>. Тем не менее <a href="/ru/docs/CSS/Specificity" title="Specificity">специфичность</a> первого выше.</li>
+ <li><code>:not(foo){} </code>найдёт что угодно, что не <code>foo</code>, <strong>включая {{HTMLElement("html")}} и {{HTMLElement("body")}}.</strong></li>
+ <li>Это селектор применяется только к одному элементу. Вы не можете использовать его, чтобы исключить всех родителей. Например, <code>body :not(table) a</code> применится к ссылкам внутри таблицы, тогда как {{HTMLElement("tr")}} будет соответствовать <code>:not()</code> части селектора.</li>
+</ul>
+</div>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox">:not(selector) { <em>style properties</em> }</pre>
+
+<h2 id="Examples" name="Examples">Пример</h2>
+
+<pre class="brush: css">p:not(.classy) { color: red; }
+body :not(p) { color: green; }</pre>
+
+<p>CSS выше и HTML ниже...</p>
+
+<pre class="brush: html">&lt;p&gt;Некоторый текст.&lt;/p&gt;
+&lt;p class="classy"&gt;Какой-то другой текст.&lt;/p&gt;
+&lt;span&gt;Ещё текст&lt;span&gt;
+</pre>
+
+<p>Выведет это:</p>
+
+<p>{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:not') }}</p>
+
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS4 Selectors', '#negation', ':not()') }}</td>
+   <td>{{ Spec2('CSS4 Selectors') }}</td>
+   <td>Аргумент расширен до поддержки нескольких непростых селекторов.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Selectors', '#negation', ':not()') }}</td>
+   <td>{{ Spec2('CSS3 Selectors') }}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1.0</td>
+   <td>{{ CompatGeckoDesktop("1") }}</td>
+   <td>9.0</td>
+   <td>9.5</td>
+   <td>3.2</td>
+  </tr>
+  <tr>
+   <td>Расширенные аргументы</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>2.1</td>
+   <td>{{ CompatGeckoMobile("1") }}</td>
+   <td>9.0</td>
+   <td>10.0</td>
+   <td>3.2</td>
+  </tr>
+  <tr>
+   <td>Расширенные аргументы</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>

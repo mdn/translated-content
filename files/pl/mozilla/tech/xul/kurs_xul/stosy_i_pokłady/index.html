@@ -1,0 +1,77 @@
+---
+title: Stosy i pokłady
+slug: Mozilla/Tech/XUL/Kurs_XUL/Stosy_i_pokłady
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Stacks_and_Decks
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_innych_elementów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_stosu">Następny  »</a></p>
+</div>
+<p></p><p>Może wystąpić potrzeba wyświetlenia elementów jako zbioru nakładających się kart. Do tego celu mogą być zastosowane elementy stosu i pokładu.
+</p>
+<h3 id="Kontenery" name="Kontenery"> Kontenery </h3>
+<p>Każde pudełko XUL jest kontenerem mogącym zawierać jakiś inny element. Jest kilka elementów, które są wyspecjalizowanym typem pudełek, takich jak <a href="pl/Kurs_XUL/Paski_narz%c4%99dzi">paski narzędzi</a> oraz <a href="pl/Kurs_XUL/Pude%c5%82ko_kart">panele kart</a>. Znacznik <code><code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> tworzy najprostsze pudełko bez określonych własności. Jednakże wyspecjalizowane typy pudełek pracują jak regularne pudełka w sposób zorientowany (<code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code>) na elementy znajdujące się wewnątrz nich, ale posiadają także dodatkowe cechy.
+</p><p>Faktycznie wiele komponentów może zawierać inne elementy. Widzieliśmy już, że przyciski mogą zawierać inne rzeczy poza domyślnymi. Pasek przewijania jest właśnie specjalnym typem pudełka, które tworzy swoje własne elementy, jeśli ich nie dostarczymy. Może być przesuwany także za pomocą uchwytu, poprzez złapanie i przesunięcie paska.
+</p><p>W kolejnych kilku rozdziałach wprowadzimy pewne elementy, które zostały zaprojektowane do przechowywania innych elementów. Są to wszystkie specjalne typy pudełek i pozwalają zastosować wszystkie atrybuty pudełka w sobie.
+</p>
+<h3 id="Stosy" name="Stosy"> Stosy </h3>
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> jest prostym pudełkiem. Działa jak inne pudełka, ale posiada specjalną własność, która jest dzieckiem położonym na górze pozostałych elementów. Pierwsze dziecko stosu jest ustawiane na spodzie, drugie dziecko na nim, następnie w taki sam sposób trzecie i tak dalej kolejne. Na stosie może być ułożonych wiele elementów.
+</p><p>Własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/orient">orient</a></span></code></code> ma mniejsze znaczenie na stosie jako potomek, niż jakby były ułożone jeden obok drugiego. Rozmiar stosu jest określony przez
+największego potomka, ale możemy zastosować własności CSS <code>width</code>, <code>height</code>, <code>min-width</code> i inne podobne własności zarówno ze stosem, jak i jego potomkami.
+</p><p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> może być zastosowany dla przypadku, gdzie status wskazuje konieczność dodania ponad istniejący element. Na przykład, pasek postępu może zostać stworzony przy użyciu paska i etykiety umieszczonej na jego górze.
+</p><p>Jednym dogodnym zastosowaniem elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> jednak jest to, że możemy zastosować na nim pewną liczbę własności CSS. Na przykład, możemy stworzyć podobny efekt do własności cieniowania tekstu w bardzo prosty sposób: </p>
+<h4 id="Przyk.C5.82ad_stosu" name="Przyk.C5.82ad_stosu"> Przykład stosu </h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul">Podgląd</a>
+</p>
+<pre>&lt;stack&gt;
+  &lt;description value="Cieniowany" style="padding-left: 1px; padding-top: 1px; font-size: 15pt"/&gt;
+  &lt;description value="Cieniowany" style="color: red; font-size: 15pt;"/&gt;
+&lt;/stack&gt;
+</pre>
+<div class="float-right"><img alt="grafika:stacks1.png"></div>
+<p>Oba elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> tworzą tekst o rozmiarze 15 punktów. Pierwszy jednak jest przesunięty w prawo oraz w dół o jeden piksel przez dodanie odstępu z lewej strony i góry. Wynikiem będzie uzyskanie tego samego wyrazu 'Cieniowanie' po raz drugi, lecz już lekko przesuniętego względem poprzedniego elementu. Drugi element <code>description</code> został napisany na czerwono, aby zobaczyć efekt w sposób bardzo wyraźny.
+</p><p>Metoda ta ma przewagę nad zastosowaniem <code>text-shadow</code>, ponieważ możesz całkowicie dodać styl cienia z wyjątkiem tekstu głównego. Możesz mieć swoje własne czcionki, podkreślenia lub rozmiar (możesz nawet stworzyć cień migający). Jest również użyteczny, ponieważ Mozilla nie może aktualnie obsługiwać cieniowania tekstu CSS. Wadą jest to, że obszar objęty cieniem stwarza większy rozmiar stosu. Cieniowanie jest bardzo użyteczne dla tworzenia nieaktywnego pojawienia się przycisków.
+</p>
+<h4 id="Cieniowanie_z_przyk.C5.82adem_pok.C5.82adu" name="Cieniowanie_z_przyk.C5.82adem_pok.C5.82adu"> Cieniowanie z przykładem pokładu </h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul">Podgląd</a>
+</p>
+<pre>&lt;stack style="background-color: #C0C0C0"&gt;
+  &lt;description value="Wyłączony" style="color: white; padding-left: 1px; padding-top: 1px;"/&gt;
+  &lt;description value="Wyłączony" style="color: grey;"/&gt;
+&lt;/stack&gt;
+</pre>
+<div class="float-right"><img alt="grafika:stacks10.png"></div>
+<p>Ten układ tekstu i kolory cienia tworzą nieaktywność na dowolnej platformie.
+</p><p>Zauważ, że zdarzenia, takie jak kliknięcie myszką i naciskanie klawiszy, są przekazywane do elementu na szczycie stosu, to znaczy, do ostatniego elementu na stosie. Oznacza to, że przyciski będą działały poprawnie tylko jako ostatni element stosu.
+</p>
+<h3 id="Pok.C5.82ady" name="Pok.C5.82ady"> Pokłady </h3>
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> również wystawia swoich potomków jeden nad drugim podobnie jak element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>, jednak pokład wyświetla tylko jeden ze swoich potomków w jednym czasie. Byłoby to użyteczne dla interfejsu kreatora, gdzie szereg podobnych paneli jest wyświetlanych w kolejności. Zamiast tworzenia oddzielnych okien i dodania przycisków nawigacyjnych do każdego z nich, stworzysz jedno okno i użyjesz podkładu, gdzie zawrzesz zmiany.
+</p><p>Podobnie jak stosy, bezpośredni potomek elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> formuje strony pokładu. Jeśli jest trzech potomków elementu <code>deck</code>, pokład będzie miał trzech potomków. Wyświetlana strona pokładu może być zmieniona przez ustawienie atrybutu <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/selectedIndex">selectedIndex</a></code></code> elementu <code>deck</code>. Indeks jest to liczba, która identyfikuje, jaka strona jest wyświetlana. Strony są ponumerowane poczynając od zera. Więc pierwszy potomek pokładu to strona o indeksie 0, druga jest to strona o indeksie 1 i tak dalej.
+</p><p>Poniżej mamy przykład pokładu:
+</p>
+<h4 id="Przyk.C5.82ad_pok.C5.82adu" name="Przyk.C5.82ad_pok.C5.82adu"> Przykład pokładu </h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul">Podgląd</a>
+</p>
+<pre>&lt;deck selectedIndex="2"&gt;
+  &lt;description value="To jest pierwsza strona"/&gt;
+  &lt;button label="To jest druga strona"/&gt;
+  &lt;box&gt;
+    &lt;description value="To jest trzecia strona"/&gt;
+    &lt;button label="To jest także trzecia strona"/&gt;
+  &lt;/box&gt;
+&lt;/deck&gt;
+</pre>
+<p>Tu mamy trzy strony (pokłady), domyślnie będąc trzecią. Trzecia strona jest pudełkiem z dwoma elementami wewnątrz. Zarówno pudełko, jak i jego elementy wewnątrz stanowią stronę.
+Pokład będzie tak duży jak największy potomek, którym tu będzie strona trzecia.
+</p><p>Możesz przełączać strony stosując skrypt do modyfikacji atrybutu <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/selectedIndex">selectedIndex</a></code></code>. Więcej o tym dowiesz się w rozdziale o zdarzeniach i DOM.
+</p><p>Następny artykuł opisuje, jak stos może być zastosowany do <a href="pl/Kurs_XUL/Pozycjonowanie_stosu">pozycjonowania elementów dziecka</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_innych_elementów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_stosu">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

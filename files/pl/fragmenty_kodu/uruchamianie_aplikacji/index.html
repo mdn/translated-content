@@ -1,0 +1,59 @@
+---
+title: Uruchamianie aplikacji
+slug: Fragmenty_kodu/Uruchamianie_aplikacji
+tags:
+  - Dodatki
+  - Rozszerzenia
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+translation_of: Archive/Add-ons/Code_snippets/Running_applications
+---
+<div class="blockIndicator warning">
+<p>SupAdded a note about documentation removal as extensions using XUL/XPCOM or the Add-on SDK are no longer supported in Firefox.port for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<p>{{LegacyAddonsNotice}} Poniższy artykuł opisuje jak uruchamiać inne programy z kodu JavaScriptu używając interfejsów XPCOM Mozilli. Istnieją dwa sposoby na uruchamianie programów. Pierwszy to użycie metody <code><a href="pl/NsILocalFile/launch">nsILocalFile:launch</a></code>, a drugi to użycie interfejsu <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIProcess.html">nsIProcess</a></code>.</p>
+
+<h3 id="U.C5.BCycie_nsILocalFile.launch.28.29" name="U.C5.BCycie_nsILocalFile.launch.28.29">Użycie nsILocalFile.launch()</h3>
+
+<p>Ta metoda posiada taki sam efekt jak podwójne kliknięcie na pliku tak więc dla plików wykonywalnych—zostanie po prostu wykonany dany plik bez parametrów. Może być ona nie dająca się implementować na niektórych platformach tak więc upewnij się, że nie ma to miejsca na twojej platformie docelowej.</p>
+
+<p>Więcej informacji odnośnie <code><a href="pl/NsIFile">nsIFile</a></code>/<code><a href="pl/NsILocalFile">nsILocalFile</a></code>, uzyskasz w artykule <a href="pl/Fragmenty_kodu/Plik_I%2f%2fO">File I/O</a>.</p>
+
+<pre class="eval">var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath("c:\\myapp.exe");
+file.launch();
+</pre>
+
+<h3 id="U.C5.BCycie_nsIProcess" name="U.C5.BCycie_nsIProcess">Użycie nsIProcess</h3>
+
+<p>Rekomendowane użycie interfejsu <a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIProcess.html">nsIProcess</a>:</p>
+
+<pre class="eval">// create an nsILocalFile for the executable
+var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath("c:\\myapp.exe");
+
+// create an nsIProcess
+var process = Components.classes["@mozilla.org/process/util;1"]
+                        .createInstance(Components.interfaces.nsIProcess);
+process.init(file);
+
+// Run the process.
+// If first param is true, calling thread will be blocked until
+// called process terminates.
+// Second and third params are used to pass command-line arguments
+// to the process.
+var args = ["argument1", "argument2"];
+process.run(false, args, args.length);
+</pre>
+
+<h3 id="Odno.C5.9Bniki" name="Odno.C5.9Bniki">Odnośniki</h3>
+
+<ul>
+ <li><a href="pl/NsILocalFile">nsILocalFile interface</a></li>
+ <li><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIProcess.html">interfejs nsIProcess</a></li>
+ <li>If you need to launch an executable bundled in your XPI, see <a href="pl/Fragmenty_kodu/Plik_I%2f%2fO#Pobieranie_swojego_folderu_rozszerze.C5.84">Fragmenty kodu:Plik I/O#Pobieranie swojego folderu rozszerzeń</a>.</li>
+ <li><a class="external" href="http://groups.google.com/group/mozilla.dev.extensions/browse_frm/thread/947e63c95c14b5a5">Launching an executable process from a web page</a></li>
+</ul>

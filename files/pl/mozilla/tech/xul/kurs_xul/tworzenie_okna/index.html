@@ -1,0 +1,103 @@
+---
+title: Tworzenie okna
+slug: Mozilla/Tech/XUL/Kurs_XUL/Tworzenie_okna
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pliki_manifestu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_przycisków">Następny  »</a></p>
+</div><p></p>
+
+<p>Przez cały kurs będziemy tworzyć proste narzędzie do wyszukiwania plików. Najpierw jednak powinniśmy zapoznać się z podstawową składnią pliku XUL.</p>
+
+<h3 id="Tworzenie_pliku_XUL" name="Tworzenie_pliku_XUL">Tworzenie pliku XUL</h3>
+
+<p>Plik XUL może posiadać dowolną nazwę, ale powinien mieć rozszerzenie <code>.xul</code>. Prosty plik XUL ma następującą postać:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window
+    id="findfile-window"
+    title="Znajdź pliki"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+ ...
+&lt;/window&gt;
+</pre>
+
+<p>To okno pozostanie puste dopóty, dopóki nie będzie zawierało jakichkolwiek elementów interfejsu użytkownika. Elementy te dodamy w kolejnych artykułach. Poniżej znajduje się analiza powyższego przykładu kodu, linijka po linijce:</p>
+
+<h3 id="Otwieranie_okna" name="Otwieranie_okna">Otwieranie okna</h3>
+
+<p>Istnieje kilka metod, których możemy użyć do otwarcia okna XUL. Jeśli znajdujesz się w okresie programowania, wystarczy tylko wpisać URL (czy to<em>chrome:</em>,<em>file:</em> czy inny typ URL) do paska adresu w oknie przeglądarki Mozilla. Powinieneś być także zdolnym do podwójnego kliknięcia w plik w swoim menedżerze plików, który przypisze pliki XUL do połączenia z Mozillą. Okno XUL wyświetli się w oknie przeglądarki jako nowe okno, lecz jest też często dostatecznie, podczas stawiania pierwszych kroków w programowaniu.</p>
+
+<p>Poprawnym sposobem do otworzenia okna jest zastosowanie JavaScript. Nie potrzebna jest żadna nowa składnia, jako, że możemy zastosować funkcję <a href="pl/DOM/window.open">window.open()</a> jako jeden dokument <a href="pl/HTML">HTML</a>. Jednakże, jedna dodatkowa flaga, nazywająca się 'chrome' jest potrzebna do wskazania przeglądarce dokument <a href="pl/DOM/window.open#Window_functionality_features">chrome</a> do otwarcia. Otworzymy okno bez paska narzędzi i menu, reszta okna będzie wyświetlana jak w normalnym oknie przeglądarki. Składnia została opisana poniżej:</p>
+
+<pre>window.open(url,windowname,flags);
+
+gdzie: flags stanowi flagę "chrome", tak jak w tym przykładzie:
+
+window.open("chrome://navigator/content/navigator.xul", "bmarks", "chrome,width=600,height=300");
+</pre>
+
+<div class="highlight">
+<h5 id="Przyk.C5.82ad_findfile.xul" name="Przyk.C5.82ad_findfile.xul">Przykład <code>findfile.xul</code></h5>
+
+<p>Zacznijmy tworzenie prostego pliku okna dialogowego <code>Znajdź pliki</code>. Po pierwsze nazywamy ten plik <code>findfile.xul</code> i umieszczamy jego zawartość w określonym pliku w <code>findfile.manifest</code>, (który został utworzony w poprzednim artykule). Dodaj szablon XUL do pliku, który pokazaliśmy na górze tej strony, a następnie wszystko zapisz.</p>
+</div>
+
+<p>Możemy użyć parametru linii poleceń '-chrome' do określenia pliku XUL, który zostanie otwarty w momencie uruchomienia Mozilli. Jeśli nie zostało to określone, zostanie otwarte okno domyślne (zazwyczaj jest to okno przeglądarki). Na przykład, możemy otworzyć okno dialogowe <code>Znajdź pliki</code> na dwa następujące sposoby:</p>
+
+<pre>mozilla -chrome chrome://findfile/content/findfile.xul
+
+mozilla -chrome resource:/chrome/findfile/content/findfile.xul
+</pre>
+
+<p>Jeśli uruchomisz tą komendę z linii poleceń (w zależności od tego, jakiej platformy używasz), okienko dialogowe <code>Znajdź pliki</code> zostanie otwarte domyślnie zamiast okna przeglądarki Mozilla. Oczywiście, ponieważ nie mamy dodanych jakichkolwiek elementów UI do okna, zobaczysz tylko okno. W kolejnych tematach dodamy różne dodatkowe elementy.</p>
+
+<p>Zobacz, chociaż efekt następującego otwarcia okna zakładek:</p>
+
+<pre class="eval">mozilla -chrome <a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a>
+
+<span class="highlightred">Jeśli używasz Firefoksa, sprawdź:</span>
+firefox -chrome <a class="external" rel="freelink">chrome://browser/content/bookmarks/b...rksManager.xul</a>
+</pre>
+
+<p>Argument '-chrome' nie nadaje plikowi jakichkolwiek dodatkowych uprawnień. Zamiast, to powód określający plik do otwarcia jako okno bez jakiegokolwiek przeglądarkowego chrome, takich jak pole adresowe lub menu. Tylko URL chrome posiada dodatkowe przywileje.</p>
+
+<div class="note"><a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Rozszerzenie programisty</a> będące edytorem XUL, który pozwala na pisanie w języku XUL oraz pozwala na przeglądanie wyników w czasie rzeczywistym za pomocą Mozilli!</div>
+
+<p>W następnym artykule <a href="pl/Kurs_XUL/Dodawanie_przycisk%c3%b3w">dodamy przyciski do okna</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Pliki_manifestu" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dodawanie_przycisków">Następny  »</a></p>
+</div><p></p>
+
+<div class="noinclude"> </div>
+
+<ol>
+ <li><strong>&lt;?xml version="1.0"?&gt;</strong><br>
+  Deklaracja pliku XML. Dodajemy tą linijkę na początku każdego pliku XUL, tak jak znacznik HTML wstawiamy na początku pliku HTML.</li>
+ <li><strong>&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</strong><br>
+  Linijka ustalająca arkusz stylów używany dla pliku. Jest to składnia, którą plik XML używa do importowania arkuszy stylów. W tym przypadku importuje style znajdujące się w <code><a class="external" rel="freelink">chrome://global/skin</a></code>. Nie odwołując się do konkretnego pliku przeglądarka Mozilla, w tym przypadku, wybierze plik <strong>all-important</strong> <code>global.css</code>. Plik ten zawiera wszystkie domyślne deklaracje wszystkich elementów XUL. Ponieważ XML nie posiada żadnej dokumentacji dotyczącej sposobu, w jaki sposób powinny być jego elementy wyświetlane. Ogólnie, umieszczamy tą linię na samej górze każdego pliku XUL. Możemy także importować inne arkusze stylów stosując prostą składnię. Zauważ, że normalnie zaimportowany zostanie globalny arkusz stylów, z wewnątrz Twojego własnego pliku arkusza stylu.</li>
+ <li><strong>&lt;window</strong><br>
+  Deklarujemy, że będziemy opisywać okno <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>. Znacznik ten ma analogiczne znaczenie do BODY z języka HTML, który otacza całą zawartość strony. W znaczniku <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> można umieścić wiele atrybutów (w przykładzie zawarte są cztery). Każdy z nich umieszczony został w oddzielnej linii, głównie po to, aby kod był przejrzysty.</li>
+ <li>'<strong>id="findfile-window"'</strong><br>
+  Atrybut <code>id</code> jest używany jako identyfikator, dzięki któremu skrypty mogą odwoływać się do okna. Przeważnie <code>id</code> dodaje się do każdego elementu. Nazwa identyfikatora może być dowolna.</li>
+ <li><strong>title="Znajdź pliki"</strong><br>
+  Atrybut <code>title</code> określa tekst, który jest umieszczony na pasku tytułowym okna. W tym przypadku zostanie wyświetlone: <code>Znajdź pliki</code>.</li>
+ <li><strong>orient="horizontal"</strong><br>
+  Atrybut <code>orient</code> określa położenie elementów w oknie. Wartość <code>horizontal</code> ustala poziome położenie elementów w oknie. Wartością domyślną <code>orient</code> jest <code>vertical</code>, które to określa położenie elementów w kolumnie.</li>
+ <li><strong>xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;</strong><br>
+  Deklaracja przestrzeni nazw (<em>namespace</em>) w języku XUL, którą powinieneś umieścić w elemencie <code>window</code>, aby wskazać, że wszyscy jego potomkowie należą do XUL-a. W rzeczywistości URL ten nie jest nigdy wczytany. Stanowi informację dla przeglądarki Mozilla, że ma do czynienia ze standardową składnią języka XUL.</li>
+ <li><strong>...</strong><br>
+  W tym miejscu deklarowane będą elementy takie jak: przyciski, menu lub inne komponenty interfejsu użytkownika.</li>
+ <li><strong>&lt;/window&gt;</strong><br>
+  Na końcu pliku zamykamy znacznik <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>.</li>
+</ol>
+
+<p></p>

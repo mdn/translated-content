@@ -1,0 +1,130 @@
+---
+title: Смежные селекторы
+slug: Web/CSS/Adjacent_sibling_combinator
+translation_of: Web/CSS/Adjacent_sibling_combinator
+---
+<p>{{CSSRef("Selectors")}}</p>
+
+<p>Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определенным в первой части элементом.</p>
+
+<h2 id="Синтакс">Синтакс</h2>
+
+<pre class="syntaxbox">former_element + target_element { <em>style properties</em> }
+</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<div id="Example_1">
+<pre class="brush: css">li:first-of-type + li {
+  color: red;
+}
+</pre>
+
+<pre class="brush: html">&lt;ul&gt;
+  &lt;li&gt;Один&lt;/li&gt;
+  &lt;li&gt;Два&lt;/li&gt;
+  &lt;li&gt;Три&lt;/li&gt;
+&lt;/ul&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample('Example_1', 200, 100)}}</p>
+
+<p>Так же может использоваться для задания стиля определенного класса "caption span" следующих {{HTMLElement("img")}} вложенных элементов:</p>
+
+<pre class="brush: css">img + span.caption {
+  font-style: italic;
+}
+</pre>
+
+<p>сработает только на тех тегах span, для которых задан класс caption:</p>
+
+<pre class="brush: html">&lt;img src="photo1.jpg"&gt;&lt;span class="caption"&gt;Первая фотка&lt;/span&gt;
+&lt;img src="photo2.jpg"&gt;&lt;span class="caption"&gt;Вторая&lt;/span&gt;
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>7.0<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>2.1</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] <span class="short_text" id="result_box" lang="ru"><span class="hps">Интернет эксплорер</span></span> 7 не обновляет стили корректно, когда элемент динамически размещается до элемента, отобранном селектором. А в <span class="short_text" id="result_box" lang="ru"><span class="hps">Интернет эксплорер</span></span> 8, если вставлен динамически кликом на ссылку, стиль превдокласса first-child не применяется до того, как ссылка потеряет фокус.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/CSS/General_sibling_selectors">Селекторы следующего элемента</a></li>
+</ul>

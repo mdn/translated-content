@@ -1,0 +1,205 @@
+---
+title: Console.table()
+slug: Web/API/Console/table
+tags:
+  - API
+  - Дебаг
+  - консоль
+translation_of: Web/API/Console/table
+---
+<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+
+<p><span class="seoSummary">Отображает наборы данных в виде таблицы.</span></p>
+
+<p><code><font face="Open Sans, Arial, sans-serif">Данная функция принимает один обязательный аргумент </font>data</code>, который должен быть представлен в виде массива или объекта, и один дополнительный параметр <code>columns</code>.</p>
+
+<p>функция логгирует аргумент <code>data</code> в виде таблицы. Каждый элемент массива (или каждое свойство, если <code>data -</code> это объект) будет представлять строку таблицы.</p>
+
+<p>Первая колонка таблицы будет озаглавлена как <code>(index)</code>. Если <code>data</code> представлена массивом, тогда значения первой колонки будут представлять индексы массива. Если <code>data <font face="Open Sans, Arial, sans-serif">-</font></code><code> объект</code>, тогда значения первой колонки будут представлять свойства объекта.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h3 id="Простые_наборы">Простые наборы</h3>
+
+<p>Аргумент <code>data</code> может быть массивом или объектом.</p>
+
+<pre class="brush: js">// массив строк
+
+console.table(["apples", "oranges", "bananas"]);</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8567/console-table-array.png"></p>
+
+<pre class="brush: js">// объект, чьи свойства содержат строки
+
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+var me = new Person("John", "Smith");
+
+console.table(me);</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8559/console-table-simple-object.png"></p>
+
+<h3 id="Наборы_смешанных_типов">Наборы смешанных типов</h3>
+
+<p>Если элементы массива, либо свойства объекта, в свою очередь сами являются массивами или объектами, тогда эти элементы или свойства перечисляются построчно, перечисляя вложенные элементы/свойства в колонках:</p>
+
+<pre class="brush: js">// массив массивов
+
+var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+console.table(people);</pre>
+
+<p><img alt="Table displaying array of arrays" src="https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png"></p>
+
+<pre class="brush: js">// массив объектов
+
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+var john = new Person("John", "Smith");
+var jane = new Person("Jane", "Doe");
+var emily = new Person("Emily", "Jones");
+
+console.table([john, jane, emily]);</pre>
+
+<p>Обратите внимание,  что если массив состоит из объектов, колонки таблицы будут озаглавленны названиями свойств объекта.</p>
+
+<p><img alt="Table displaying array of objects" src="https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png"></p>
+
+<pre class="brush: js">// объект, свойства которого являются объектами
+
+var family = {};
+
+family.mother = new Person("Jane", "Smith");
+family.father = new Person("John", "Smith");
+family.daughter = new Person("Emily", "Smith");
+
+console.table(family);</pre>
+
+<p><img alt="Table displaying object of objects" src="https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png"></p>
+
+<h3 id="Ограничение_видимости_колонок">Ограничение видимости колонок</h3>
+
+<p>По умолчанию, <code>console.table()</code> отображает все элементы в каждой строке. Вы можете использовать опциональный параметер <code>columns</code> чтобы указать набор отображаемых колонок:</p>
+
+<pre class="brush: js">// массив объектов, логгируется только свойство firstName
+
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+var john = new Person("John", "Smith");
+var jane = new Person("Jane", "Doe");
+var emily = new Person("Emily", "Jones");
+
+console.table([john, jane, emily], ["firstName"]);</pre>
+
+<p><img alt="Table displaying array of objects with filtered output" src="https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png"></p>
+
+<h3 id="Сортировка_колонок">Сортировка колонок</h3>
+
+<p>Вы можете отсортировать необходимую колонку, кликнув по её заголовку.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">console.table(data [, <em>columns</em>]);
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>data</code></dt>
+ <dd>Данные для отображения. Могут быть представленны массивом или объектом.</dd>
+ <dt><code>columns</code></dt>
+ <dd>Массив названий колонок, которые следует отобразить.</dd>
+</dl>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#consoletabledata-columns", "console.table()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("34.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("38.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("34.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("38.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

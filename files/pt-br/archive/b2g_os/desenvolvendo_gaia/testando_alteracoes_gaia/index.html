@@ -1,0 +1,115 @@
+---
+title: Testando as alterações no Gaia
+slug: Archive/B2G_OS/Desenvolvendo_Gaia/Testando_alteracoes_gaia
+tags:
+  - Gaia
+  - Integração
+  - Testes
+translation_of: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+---
+<div class="summary">
+ <p><span class="seoSummary">Quando você terminar de fazer as alterações no codebase do Gaia e parecer que tudo funciona bem, o seu próximo passo será executar um procedimento de testes para certificar-se de que tudo realmente funciona — e está funcionando com o restante do Gaia — antes de submeter a correção para o projeto. Esse artigo explica como fazer isso.</span></p>
+</div>
+<p>O procedimento de teste geralmente consiste-se de:</p>
+<ul>
+ <li>Procedimento padrão de depuração</li>
+ <li>Execução de testes automatizados</li>
+</ul>
+<p>Vamos examinar essas áreas agora.</p>
+<h2 id="Depuração_padrão">Depuração padrão</h2>
+<p>Se você é um desenvolvedor web experiente, então depurar um código Gaia pode ser um processo bem familiar. Nós já discutimos como <a href="/pt-BR/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase#Running_Gaia_in_Desktop_Firefox">executar o Gaia no Firefox Desktop</a>, e como <a href="/pt-BR/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes#Simple_code_change_example">fazer uma alteração básica</a>. Para alterações mais complexas, você deve fazer muito mais uso das ferramentas de depuração do Firefox disponíveis no Firefox Desktop.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Para instruções de como usar essas ferramentas, consulte <a href="/pt-BR/docs/Tools">a seção de Ferramentas</a>.</p>
+</div>
+<h2 id="Testes_automatizados">Testes automatizados</h2>
+<p>Você também pode executar as suites padrões de testes automatizados antes de submeter uma correção, para certificar-se que as alterações no código não afetarão as funcionalidades essenciais do telefone. Os testes que podem ser executados são:</p>
+<ul>
+ <li>testes unitário</li>
+ <li>teste de performance</li>
+ <li>testes da interface do usuário</li>
+</ul>
+<p>Nós geralmente pedimos que esses testes sejam executados antes de submeter uma correção, se essa é sua primeira contribuição então você pode submeter sem os testes, mas você deve pedir ajuda para executar os testes no futuro. Você deve atualizar o repo do Gaia antes de executar os testes, para certificar-se que você tem a última versão.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Você encontra mais informações de como funcionam os testes no artigo <a href="/pt-BR/Firefox_OS/Platform/Automated_testing">Testes automatizados do Firefox OS</a>.</p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: Você deve considerar executar cada conjunto de testes num dispositivo real se disponível (algumas características de hardware não são suportadas pelo emulador), ou no emulador B2G Destop, ou no Firefox Nightly caso não possua o dispositivo real.</p>
+</div>
+<h3 id="Testes_unitários">Testes unitários</h3>
+<p>Testes unitários são testes em unidades individuais do código em uma aplicação maior — no caso do Gaia, aplicativos individuais. O Gaia usa para os testes:</p>
+<ul>
+ <li><a href="http://visionmedia.github.io/mocha/">mocha</a> para seus testes de framework</li>
+ <li><a href="http://chaijs.com/api/assert/">chai</a> como uma biblioteca assert</li>
+ <li><a href="http://sinonjs.org/">sinon.js</a> para uma biblioteca <em>mock &amp; stub</em></li>
+ <li><a href="http://blanketjs.org/">blanket.js</a> como uma ferramenta de teste de cobertura</li>
+</ul>
+<p>Você pode executar o seguinte comando para baixar, instalar e hospedar o servidor unittest (sua execução leva alguns minutos, portanto pode ser um bom momento para uma xícara de café ou chá):</p>
+<pre class="brush: bash">make test-agent-server</pre>
+<p>A seguir, abra um novo terminal e carregue o aplicativo <code>test-agent</code> no Nightly:</p>
+<ol>
+ <li>Execute esses comandos, se você ainda não completou essa etapa enquanto o comando anterior está sendo executado:
+  <pre class="brush: bash">make DEBUG=1
+/Applications/FirefoxNightly.app/Contents/MacOS/firefox -profile /Users/bob/git/gaia/profile-debug -no-remote</pre>
+ </li>
+ <li>Clique no Aplicativo Test Agent na tela inicial</li>
+</ol>
+<p>Agora você pode executar todos os testes com o seguinte comando:</p>
+<pre class="brush: bash">make test-agent-test</pre>
+<div class="note">
+ <p><strong>Nota</strong>: Isso pode levar muito tempo, uma vez que existem muitos testes para serem executados (possivelmente uma hora ou mais), porém, provavelmente você vai querer executar os testes apenas para o aplicaitvo que você modificou. Você pode fazer isso incluindo  <code>APP=&lt;app folder name&gt;</code> no comando, por exemplo <code>APP=settings</code>.</p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: Você também pode ler<a href="/pt-BR/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests"> Testes unitários do Gaia</a> para mais informações sobre testes unitários.</p>
+</div>
+<h3 id="Testes_integrados">Testes integrados</h3>
+<p>Testes integrados envolvem testes de diferentes unidades agrupadas para verificar como elas trabalham em conjunto e esse é o próximo passo após o teste unitário. Os testes de integração no Gaia são conduzidas pelo script marionette escrito em JavaScript e com um servidor baseado em python. Ele pode comunicar-se com o Gecko assim é possível controlar tanto o navegador como o dispositivo Firefox OS e fazê-los interagir um com o outro.</p>
+<p>Você pode executar o seguinte comando para iniciar os testes integrados:</p>
+<pre class="brush: bash">make test-integration</pre>
+<div class="note">
+ <p><strong>Nota</strong>: Da mesma forma que nos testes unitários, a execução completa dos testes integrados pode consumir muito tempo, então você pode incluir <code>APP=&lt;app folder name&gt;</code> no comando acima para testar um único aplicativo, por exemplo <code>APP=calendar</code>.</p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: para saber mais sobre testes integrados, leia <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Testes integrados do Gaia</a>.</p>
+</div>
+<h3 id="Testes_de_performance">Testes de performance</h3>
+<p>Os testes de performance Gaia dispara o B2G Desktop, que por sua vez lança aplicativos diversas vezes e calcula uma média de tempo de carga dos aplicativos. Depois de executar um teste, o framework também coleta a utilização de memória do aplicativo e do sistema (<code>b2g</code>).</p>
+<p>Para executar os testes, você precisa ter o B2G Desktop instalado e executar o seguinte comando:</p>
+<pre class="brush: bash">make test-perf</pre>
+<div class="note">
+ <p><strong>Nota</strong>: Assim como nos outros tipos de testes, você pode incluir <code>APP=&lt;app folder name&gt;</code> ao comando acima para testar um único aplicativo, por exemplo<code> APP=settings</code>.</p>
+</div>
+<p>A média geral será apresentada como um valor de <code>mozPerfDurationsAverage</code>:</p>
+<pre class="brush: json">"mozPerfDurationsAverage": 225.5</pre>
+<p>Isso indica a média do tempo de carga de um aplicativo em milisegundos, para um bom resultado o valor deve ser inferior a 1 segundo. Os testes de performance também retorna alguns detalhes da utilização de memória:</p>
+<pre class="brush: json">{
+  "app": {
+    "name": "Settings",
+    "uss": 16.6,
+    "pss": 19.5,
+    "rss": 32.9,
+    "vsize": 73.3
+  },
+  "system": {
+    "name": "b2g",
+    "uss": 50.1,
+    "pss": 53.2,
+    "rss": 67,
+    "vsize": 148.1
+  }
+},</pre>
+<p>A regra de ouro para os testes de performance é: "Números baixos são melhores". Abaixo o significado de cada um:</p>
+<ul>
+ <li><code>uss</code>: unique set size</li>
+ <li><code>pss</code>: proportional set size</li>
+ <li><code>rss</code>: resident set size</li>
+ <li><code>vsize</code>: virtual set size</li>
+</ul>
+<p>Geralmente <code>vsize</code> &gt;= <code>rss</code> &gt;= <code>pss</code> &gt;= <code>uss</code> . <code>vsize</code> e <code>rss</code> não reflete com precisão a utilização de um processo quando compartilhado com outros. Então, os dois números que irão interessar são: <code>pss</code> and <code>uss</code>.<br>
+ <br>
+ <code>uss</code> é a memória que é completamente destinada àquele processo. É a quantidade de memória que deve ser liberada se o aplicativo for terminado nesse momento. É um valor chave para ser avaliado.<br>
+ <br>
+ <code>pss</code> é o tamanho proporcional das bibliotecas compartilhadas do processo. Essa é a quantidade de memória que deve ser liberada se o processo for terminado.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Para saber mais sobre testes de performance, leia <a href="https://developer.mozilla.org/pt-BR/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests">Testes de Performance do Gaia</a>.</p>
+</div>
+<p> </p>

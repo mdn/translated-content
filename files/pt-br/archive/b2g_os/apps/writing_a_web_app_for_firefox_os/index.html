@@ -1,0 +1,47 @@
+---
+title: Escrevendo aplicações web para o Firefox OS
+slug: Archive/B2G_OS/Apps/Writing_a_web_app_for_Firefox_OS
+tags:
+  - Apps
+  - Firefox OS
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>As aplicações para o Firefox OS são apenas aplicações Web escritas em HTML, CSS e JavaScript. Você publica a aplicação na web como você publica qualquer outro site web. Para fazer o site web instalável como uma aplicação web no dispositivo, você só tem que adicionar um manifest e disponibilizar o botão de instalação como o exemplo a seguir:</p>
+<p>Os tópicos a seguir são pontos de partida recomendados:</p>
+<ul>
+  <li><a href="/en-US/docs/Web/Apps/Getting_Started">Começando a criar aplicações</a></li>
+  <li><a href="/en-US/docs/Web/Apps/Manifest">Manifest da aplicação</a></li>
+</ul>
+<p>Claro, sinta-se a vontade para <a href="/en-US/docs/Web/Apps">se aprofundar nas aplicações com Open Web</a>!</p>
+<h2 id="Instalando_as_aplicações_web">Instalando as aplicações web</h2>
+<p>Com a aplicação e manifest publicado na Web, você precisa deixar o Gecko ciente disso. No momento da instalação, o Gecko procura o manifest e adiciona as entradas necessárias na tela inicial (home), etc.</p>
+<p>Para instalar uma aplicação, chame a API<span style="line-height: inherit;"> </span><a href="/en-US/docs/Web/API/Apps.install" style="line-height: inherit;"><code>navigator.mozApps.install</code></a><span style="line-height: inherit;">. Aqui está um exemplo para o botão instalar que pode ser adicionado na sua aplicação quando você mesmo a hospeda:</span></p>
+<pre class="brush: html">&lt;button id="install"&gt;
+  Instale está incrível aplicação na sua tela inicial!
+&lt;/button&gt;
+
+&lt;script&gt;
+(function(){
+  function install(ev) {
+    ev.preventDefault();
+    // define a URL do manifest
+    var manifest_url = "http://my.webapp.com/manifest.webapp";
+    // install the app
+    var myapp = navigator.mozApps.install(manifest_url);
+    myapp.onsuccess = function(data) {
+      // A aplicação está instalada, remove o botão
+      this.parentNode.removeChild(this);
+    };
+    myapp.onerror = function() {
+      // A aplicação não instalou, as informações estão no this.error.name
+      console.log('Install failed, error: ' + this.error.name);
+     };
+  };
+  // obtém uma referência para o botão e chama a função install() no click.
+  var button = document.getElementById('install');
+  button.addEventListener('click', install, false);
+})();
+&lt;/script&gt;
+</pre>
+<p>Nota: o botão instala também pode estar na aplicação de market, como o <a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app" style="line-height: inherit;">Marketplace do Firefox</a><span style="line-height: inherit;">, mas muitas vezes é muito útil ter um botão "Instalar como aplicação web" na página principal do seu site.</span></p>
+<p>Agora visite seu site web no navegador do Firefox OS e pressione o botão instalar.</p>

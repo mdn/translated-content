@@ -1,0 +1,126 @@
+---
+title: Model pudełkowy
+slug: Mozilla/Tech/XUL/Kurs_XUL/Model_pudełkowy
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Box_Model
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_przycisku" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_elementów">Następny  »</a></p>
+</div>
+<p></p><p>W tym artykule zobaczymy, jak XUL radzi sobie z zarządzaniem układem strony.
+</p>
+<h3 id="Wprowadzenie" name="Wprowadzenie"> Wprowadzenie </h3>
+<p>Główna forma do zarządzania układem strony w XUL jest nazywana 'Modelem pudełkowym'. Model ten pozwala podzielić okno na kilka pudełek. Elementy wewnątrz pudełka będą zorientowane (<code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code>) względem siebie poziomo lub pionowo. Łącząc szereg pudełek, pustych przestrzeni i elementów z atrybutami <code><code id="a-flex"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/flex">flex</a></code></code>, pozwala użytkownikowi zarządzać układem okna.
+</p><p>Mimo że pudełko jest zasadniczą częścią elementu układu zarządzania w XUL, to kieruje się kilkoma bardzo prostymi regułami. Pudełko możemy ułożyć poza swoimi potomkami w jednej lub dwóch orientacjach, albo poziomej albo pionowej. Linie poziome pudełka ustawiają elementy horyzontalnie oraz pionowe pudełka ustawiają swoje elementy pionowo. Możemy myśleć o pudełku jako o jednym wierszu oraz jednej kolumnie z tabeli w HTML. Rozmaite atrybuty umieszczone jako elementy potomne w dodatku własności stylów CSS kontrolują pozycję i rozmiar elementu potomnego.
+</p><p>Prosta składnia pudełka pokazana jest poniżej:
+</p>
+<pre>&lt;hbox&gt;
+  &lt;!-- elementy poziome --&gt;
+&lt;/hbox&gt;
+
+&lt;vbox&gt;
+  &lt;!-- Elementy pionowe --&gt;
+&lt;/vbox&gt;
+</pre>
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> jest stosowany do tworzenia pudełka zorientowanego poziomo. Każdy element umieszczony w <code>hbox</code> będzie umieszczony poziomo w wierszu. Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> jest stosowany do tworzenia pudełka zorientowanego pionowo. Dodane elementy będą umieszczone pod każdym innym w kolumnie.
+</p><p>Jest także ogólny element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>, który domyślnie posiada orientację poziomą, co oznacza, że jest on odpowiednikiem <code>hbox</code>. Jednak możemy zastosować atrybut <code><code id="a-orient"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/orient">orient</a></code></code>, aby zmienić orientację pudełka. Możemy ustawić ten atrybut na wartość <code>horizontal</code>, aby utworzyć poziome pudełko, a jeśli ustawimy wartość na <code>vertical</code>, to utworzymy pionowe pudełko. </p><p>Tak więc poniższe dwie linie oznaczają to samo:
+</p>
+<pre>&lt;vbox&gt;&lt;/vbox&gt;
+
+&lt;box orient="vertical"&gt;&lt;/box&gt;
+</pre>
+<h4 id="Przyk.C5.82ad:_Umieszczenie_przycisk.C3.B3w_w_pionie" name="Przyk.C5.82ad:_Umieszczenie_przycisk.C3.B3w_w_pionie"> Przykład: Umieszczenie przycisków w pionie </h4>
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="Grafika:boxes-ex1.png"></div>
+<pre>&lt;vbox&gt;
+  &lt;button id="yes" label="Tak"/&gt;
+  &lt;button id="no" label="Nie"/&gt;
+  &lt;button id="maybe" label="Może"/&gt;
+&lt;/vbox&gt;
+</pre>
+<p>Trzy przyciski są zorientowane pionowo, tak jak zasygnalizowaliśmy w pudełku. Chcąc zmienić przyciski tak, aby były zorientowane poziomo, będzie potrzebna zmiana elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> na element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code>.
+</p><p>Możemy dodać do pudełka tyle elementów, ile tylko będziemy chcieli, włączając w to inne pudełka. W przypadku pudełka poziomego każdy dodatkowy element będzie umieszczony po prawej stronie wcześniejszego elementu. Elementy nie będą zawijane do nowej linii, więc dodanie większej ilości elementów rozszerzy okno. Podobnie każdy element dodany do pionowego pudełka będzie umieszczony pod wcześniejszym elementem. Przykład poniżej pokazuje proste okno logowania:
+</p>
+<h4 id="Przyk.C5.82ad:_Okienko_logowania" name="Przyk.C5.82ad:_Okienko_logowania"> Przykład: Okienko logowania </h4>
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_2.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="Grafika:boxes-ex2.png"></div>
+<pre>&lt;vbox&gt;
+  &lt;hbox&gt;
+    &lt;label control="login" value="Login:"/&gt;
+    &lt;textbox id="login"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox&gt;
+    &lt;label control="pass" value="Hasło:"/&gt;
+    &lt;textbox id="pass"/&gt;
+  &lt;/hbox&gt;
+  &lt;button id="ok" label="OK"/&gt;
+  &lt;button id="cancel" label="Anuluj"/&gt;
+&lt;/vbox&gt;
+</pre>
+<p><br>
+Tutaj cztery elementy są zorientowane pionowo - dwa wewnętrzne znaczniki <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> i dwa elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> - <i>OK</i> i <i>Anuluj</i>. Zwróć uwagę, że tylko elementy potomne są skierowane do pudełka zorientowanego pionowo. Etykiety i pola tekstowe są wewnątrz elementów <code>hbox</code>, więc są zorientowane odpowiednio do tych pudełek, które są poziome. Możemy zobaczyć na obrazku, że każda etykieta i pole tekstowe jest zorientowane poziomo.
+</p><p>Jeśli przyjrzysz się uważnie naszemu obrazkowi, zobaczysz, że dwa pola tekstowe nie są wyrównane poziomo, gdzie każdy jest w innym szeregu. Prawdopodobnie byłoby lepiej, jeśli byłyby. W zasadzie potrzebujemy dodać dodatkowe pudełka.
+</p>
+<h4 id="Przyk.C5.82ad:_Bardziej_zaawansowane_okienko_logowania" name="Przyk.C5.82ad:_Bardziej_zaawansowane_okienko_logowania"> Przykład: Bardziej zaawansowane okienko logowania </h4>
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_3.xul">Podgląd</a>
+</p>
+<div class="float-right"><img alt="Grafika:boxes-ex3.png"></div>
+<pre>&lt;vbox&gt;
+  &lt;hbox&gt;
+    &lt;vbox&gt;
+      &lt;label control="login" value="Login:"/&gt;
+      &lt;label control="pass" value="Hasło:"/&gt;
+    &lt;/vbox&gt;
+    &lt;vbox&gt;
+      &lt;textbox id="login"/&gt;
+      &lt;textbox id="pass"/&gt;
+    &lt;/vbox&gt;
+  &lt;/hbox&gt;
+  &lt;button id="ok" label="OK"/&gt;
+  &lt;button id="cancel" label="Anuluj"/&gt;
+&lt;/vbox&gt;
+</pre>
+<p>Zwróć uwagę, jak teraz jest wyrównane każde z pól tekstowych. Aby tak zrobić, potrzebujemy dodać pudełko do wewnątrz głównego pudełka. Dwie etykiety i dwa pola tekstowe są umieszczone wewnątrz poziomego pudełka. Następnie, etykiety są umieszczone wewnątrz kolejnego pudełka, tym razem pionowo, tak jak są pola tekstowe. To jest wewnętrzne pudełko, co tworzy elementy zorientowane pionowo. Poziome pudełko jest potrzebne, jeśli chcemy etykiety vbox i kontrolki vbox umieścić poziomo z każdą inną. Jeśli to pudełko zostałoby usunięte, oba pola tekstowe wyświetlane byłyby poniżej obiema etykietami.
+</p><p>Problemem jest teraz etykieta 'Hasło', która jest za wysoko. Powinniśmy tutaj, tak naprawdę zastosować element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code>, aby naprawić ten problem, o którym przeczytasz w <a href="pl/Kurs_XUL/Siatki">następnych rozdziałach</a>.
+</p>
+<div class="highlight">
+<h5 id="Nasz_przyk.C5.82ad:_Okienko_dialogowe_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Okienko_dialogowe_Znajd.C5.BA_pliki"> Nasz przykład: Okienko dialogowe &lt;tt&gt;Znajdź pliki&lt;/tt&gt; </h5>
+<p>Dodajmy pudełko do okna dialogowego &lt;tt&gt;Znajdź pliki&lt;/tt&gt;. Pudełko pionowe będzie dodane wokół wszystkich elementów, a pudełko poziome będzie dodane wokół pola tekstowego i przycisków. Rezultat widoczny jest na poniższym obrazku. Przyciski wyświetlone zostaną poniżej pola tekstowego. </p>
+<pre class="eval"><span class="highlightred">&lt;vbox flex="1"&gt;
+
+  &lt;description&gt;
+    Wpisz poniżej swoje kryteria szukania i naciśnij przycisk Znajdź, aby rozpocząć
+    szukanie.
+  &lt;/description&gt;
+
+  &lt;hbox&gt;</span>
+    &lt;label value="Szukaj dla:" control="find-text"/&gt;
+    &lt;textbox id="find-text"/&gt;
+  <span class="highlightred">&lt;/hbox&gt;
+
+  &lt;hbox&gt;
+    &lt;spacer flex="1"/&gt;</span>
+
+    &lt;button id="find-button" label="Znajdź"/&gt;
+    &lt;button id="cancel-button" label="Anuluj"/&gt;
+  <span class="highlightred">&lt;/hbox&gt;
+&lt;/vbox&gt;</span>
+</pre>
+<div class="float-right"><img alt="Grafika:boxes1.png"></div>
+<p>Pionowe pudełko sprawi, że główny tekst, pudełko z polem tekstowym i pudełko z przyciskami są zorientowane pionowo. Wewnętrzne pudełka są zorientowane poziomo. Jak widać na obrazku obok, etykiety i kontrolki input są umieszczone jedna przy drugiej. Przestrzeń i dwa przyciski są umieszczone poziomo w swoim pudełku. Zwróć uwagę, jak <code><code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> spowoduje, aby przyciski zostały wyświetlone po prawej stronie, ponieważ są elastyczne.
+</p><p>Przykład: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxes.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxes.xul">Podgląd</a>
+</p>
+</div>
+<p>W następnym artykule zobaczymy <a href="pl/Kurs_XUL/Pozycjonowanie_element%c3%b3w">jak ustawiać stałe wymiary dla elementów</a> oraz jak te wymiary zablokować.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodatkowe_możliwości_przycisku" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Pozycjonowanie_elementów">Następny  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

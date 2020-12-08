@@ -1,0 +1,72 @@
+---
+title: ECMAScript 7 support in Mozilla
+slug: Archive/Web/JavaScript/ECMAScript_7_support_in_Mozilla
+tags:
+  - ECMAScript 2016
+  - Firefox
+  - JavaScript
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>ECMAScript 2016 is de volgende ontwikkelversie van de ECMA-262 standaard, (bekend als <a href="/en-US/docs/Web/JavaScript">JavaScript</a>). Nog voordat ECMAScript 2015 was voltooid op 17 juni 2015 werden er al nieuwe voorstellen tot uitbreiding gedaan. De meest recente voorstellen zijn in te zien in de <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> GitHub repository.</p>
+
+<p>Huidige issues aangaande het specificatieproces zullen worden opgelost door de introductie van <em>stages</em> and <em>champions</em> voor feature sets. Er is tevens voorgesteld een tweejarig release-schema in te voeren. Voor meer informatie over het specificatieproces na ES2015, wordt verwezen naar <a href="http://slides.com/rafaelweinstein/tc39-process">deze presentatie door Rafael Weinstein</a>.</p>
+
+<p>Een kanaal voor het versturen van reacties met betrekking tot ECMAScript standaarden is <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a>.</p>
+
+<h2 id="Experimentele_features">Experimentele features</h2>
+
+<p>The volgende features zijn al geïmplementeerd, maar uitsluitend beschikbaar op het <a href="http://nightly.mozilla.org/">Firefox Nightly channel</a>:</p>
+
+<h3 id="Toevoegingen_aan_het_Array_object">Toevoegingen aan het <em><code>Array</code></em> object</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (<a href="https://github.com/domenic/Array.prototype.includes/blob/master/spec.md">spec</a>)</li>
+</ul>
+
+<h3 id="Toevoegingen_aan_het_ArrayBuffer_object">Toevoegingen aan het<code> <em>ArrayBuffer</em></code> object</h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spec</a>)</li>
+</ul>
+
+<h3 id="Nieuwe_TypedObject_objecten">Nieuwe <em>TypedObject</em> objecten</h3>
+
+<ul>
+ <li><a href="https://github.com/dslomov-chromium/typed-objects-es7"><em>Typed Objects</em> ontwerpversie</a></li>
+</ul>
+
+<h3 id="Nieuwe_SIMD_objecten">Nieuwe <em>SIMD</em> objecten</h3>
+
+<ul>
+ <li><a href="https://github.com/johnmccutchan/ecmascript_simd">ontwerpversie <em>SIMD</em>-specificatie en polyfill</a></li>
+</ul>
+
+<h2 id="Uitvoering_van_stabilisatie_van_features">Uitvoering van stabilisatie van features </h2>
+
+<p>De volgende features worden ondersteund buiten de <em>Nightly channel</em>, maar de verdere specificatie en implementatie is nog in uitvoering. Features die oorspronkelijk in de ontwerpversie van ECMAScript 2015 waren opgenomen en zijn uitgesteld naar ECMAScript 2016 verschijnen waarschijnlijk hier.</p>
+
+<h3 id="Expressies">Expressies</h3>
+
+<ul>
+ <li><em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">Array comprehensions</a></em> (<a href="/en-US/Firefox/Releases/30">Firefox 30</a>)</li>
+ <li><em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">Generator comprehensions</a></em> (<a href="/en-US/Firefox/Releases/30">Firefox 30</a>)</li>
+ <li>{{jsxref("Operators/Arithmetic_Operators", "Machtsverheffings-operator", "#Exponentiation", 1)}} (<a href="/en-US/Firefox/Releases/42">Firefox 42</a>)</li>
+</ul>
+
+<h2 id="Features_die_nog_niet_ondersteund_worden">Features die nog niet ondersteund worden</h2>
+
+<p>De volgende features zijn nog niet geïmplementeerd, maar worden opgelijnd voor ECMAScript 2016.</p>
+
+<ul>
+ <li><code>Object.observe()</code> ({{bug(800355)}})</li>
+</ul>
+
+<h2 id="Meer_informatie">Meer informatie</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">ECMAScript website</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Mozilla ES2016 tracking bug</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/" title="http://kangax.github.io/es5-compat-table">ECMAScript 2016 ondersteuning voor browsers</a></li>
+</ul>

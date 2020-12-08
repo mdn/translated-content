@@ -1,0 +1,146 @@
+---
+title: Manipulowanie listami
+slug: Mozilla/Tech/XUL/Kurs_XUL/Manipulowanie_listami
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Manipulating_Lists
+---
+<p>
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Modyfikowanie_interfejsu_XUL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Obiekty_pudełka">Następny  »</a></p>
+</div>
+<p></p><p>Pudełko listy XUL posiada kilka specjalnych metod.
+</p>
+<h3 id="Manipulowanie_listami" name="Manipulowanie_listami"> Manipulowanie listami </h3>
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code> dostarcza licznych metod do wyszukiwania i manipulowania swoimi pozycjami. Chociaż <a href="pl/Kurs_XUL/Kontrolki_list">pudełka listy</a> mogą być manipulowane przy zastosowaniu standardowych funkcji <a href="pl/DOM">DOM</a>, zalecane jest, żeby stosować specjalne funkcje pudełka list, gdy to jest możliwe. Funkcje te są trochę prostsze i będą poprawnie wykonywały swoje zadanie. </p><p>Funkcja <code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/appendItem">appendItem()</a></code></span></code> jest stosowana do dołączania nowej pozycji na końcu listy. Podobna jest do funkcji <code><a href="pl/DOM/element.appendChild">DOM appendChild()</a></code> z wyjątkiem tego, że pobiera etykietę w postaci łańcucha znaków, a Ty nie musisz się martwić o to, gdzie ją dodać w strukturze listy. Poniżej mamy przykład:
+</p><p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul">Podgląd</a>
+</p>
+<pre>&lt;script&gt;
+function addItem(){
+  document.getElementById('thelist').appendItem("Czwartek", "czw");
+}
+&lt;/script&gt;
+
+&lt;listbox id="thelist"/&gt;
+
+&lt;button label="Dodaj" oncommand="addItem();"/&gt;
+</pre>
+<p>Metoda <code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/appendItem">appendItem()</a></code></span></code> pobiera dwa argumenty; argument <code>label</code>, w tym przypadku 'Czwartek' oraz argument <code>value</code> 'czw'. Te dwa argumenty są przesyłane do atrybutu <code><code id="a-label"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/label">label</a></code></code> i atrybutu <code><code id="a-value"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/value">value</a></code></code> dla elementu w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>. Ta wartość jest używana tylko jako dodatkowa opcjonalna wartość powiązana z pozycją, którą można by było zastosować w skrypcie. </p><p>Podobnie jest również z funkcją <code><span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/insertItemAt">insertItemAt()</a></code></span></code> i <code><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/removeItemAt">removeItemAt()</a></code></span></code>, które odpowiednio wstawiają nową pozycję i usuwają poszczególne istniejące pozycje. Składnia jest następująca:
+</p>
+<pre>list.insertItemAt(3, "Czwartek", "czw");
+list.removeItemAt(3);
+</pre>
+<p>Funkcja <code><span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/insertItemAt">insertItemAt()</a></code></span></code> pobiera dodatkowy argument, pozycję do wstawienia nowej pozycji. Nowa pozycja jest włożona do tego indeksu, więc w przykładzie nowa pozycja będzie dodana na pozycji 3, podczas gdy wcześniejsza pozycja z tego miejsca będzie teraz pod numerem 4. Pamiętaj, że pierwszą pozycją jest 0. Funkcja <code><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/removeItemAt">removeItemAt()</a></code></span></code> będzie usuwała pozycję o określonym indeksie.
+</p><p>Te trzy metody są również dostępne dla kilku innych elementów XUL i działają w ten sam sposób. Faktycznie, te metody są częścią interfejsu <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULSelectControlElement.html">nsIDOMXULSelectControlElement</a>, więc dowolny element XUL, który implementuje ten interfejs, posiada te metody. Obejmuje to elementy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>, <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> i <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code>. Na przykład, dodając nową pozycję do <a href="pl/Kurs_XUL/Proste_paski_menu">menulist</a>, możemy zastosować ta samą składnię jak dla <a href="pl/Kurs_XUL/Kontrolki_list">listbox</a>. Poprawny rodzaj elementu będzie mógł zostać dołączony w każdej sytuacji.
+</p>
+<h3 id="Zaznaczenie_listy" name="Zaznaczenie_listy"> Zaznaczenie listy </h3>
+<p>Interfejs nsIDOMXULSelectControlElement posiada dwie dodatkowe własności: <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedIndex">selectedIndex</a></span></code></code> i <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedItem">selectedItem</a></span></code></code>. Pierwsza zwraca index zaznaczonej pozycji, podczas gdy druga zwraca zaznaczony element. Dla przykładu selectedItem listy menu będzie to pozycja <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>, która jest zaznaczona. Jeśli nie zostanie zaznaczona żadna pozycja, własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedIndex">selectedIndex</a></span></code></code> zwróci -1, podczas gdy własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedItem">selectedItem</a></span></code></code> zwróci null.
+</p>
+<h4 id="Pobieranie_zaznaczonej_pozycji" name="Pobieranie_zaznaczonej_pozycji"> Pobieranie zaznaczonej pozycji </h4>
+<p>Te dwie własności są powszechnie sprawdzane podczas zdarzenia wyboru, jak pokazano w poniższym przykładzie:
+</p><p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul">Podgląd</a>
+</p>
+<pre>&lt;listbox id="thelist" onselect="alert(this.selectedItem.label);"&gt;
+  &lt;listitem label="Niski"/&gt;
+  &lt;listitem label="Średni"/&gt;
+  &lt;listitem label="Wysoki"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>Zdarzenie zaznaczenia jest odpalane dla elementu <code><a href="/pl/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code>, kiedy pozycja w liście jest zaznaczona. Obsługa wyboru wyświetla alarm zawierający etykietkę wybranej pozycji z listy. Jeśli wyzwolono zdarzenie wyboru, możemy założyć, że pozycja została wybrana. W innych przypadkach możesz życzyć sobie sprawdzenia, aby upewnić się przed kontynuowaniem, że selectedItem nie jest null.
+</p><p>Zdarzenie zaznaczenia jest także odpalane, kiedy jest zaznaczony przycisk opcji w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> i kiedy jest zaznaczona karta w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code>. Jednak <code><a href="pl/XUL/menulist">menulists</a></code> nie odpala zdarzenia zaznaczenia, zamiast tego można nasłuchiwać zdarzenia polecenia do obsługi, kiedy pozycja jest zaznaczona.
+</p><p>Dla elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> często bardziej dogodnymi do użycia funkcjami elementu są funkcje elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code>. Posiada on również funkcję <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedIndex">selectedIndex</a></span></code></code>, która będzie zwracała index zaznaczonej karty. Jednakże do pobrania zaznaczonej pozycji użyj zamiast tego własności elementu tabbox <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedTab">selectedTab</a></span></code></code> lub użyj własności <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedPanel">selectedPanel</a></span></code></code> do pobrania zaznaczonego panelu, to znaczy, że zwraca zawartość powiązanego z nim elementu <code><a href="/pl/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code>.
+</p>
+<h4 id="Zmienianie_zaznaczenia" name="Zmienianie_zaznaczenia"> Zmienianie zaznaczenia </h4>
+<p>Wszystkim podobnym własnościom zaznaczenia, które zostały opisane powyżej, mogą również być przydzielone nowe wartości do zmiany zaznaczenia. W następnym przykładzie właściwość <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedIndex">selectedIndex</a></span></code></code> elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> jest zmieniana w oparciu o wartość wprowadzoną w polu tekstowym. Kod ten nie jest niestety niezawodny; na przykład nie sprawdza się, jeśli wprowadzona wartość jest poza zakresem. Będziemy chcieli mieć pewność, że dodany zostanie właściwy sposób sprawdzenia tego błędu.
+</p><p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul">Podgląd</a>
+</p>
+<pre>&lt;script&gt;
+function doSelect(){
+  var val = document.getElementById('number').value;
+  val = Number(val);
+  if (val != null)
+    document.getElementById('level').selectedIndex = val - 1;
+}
+&lt;/script&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Wprowadź liczbę od 1 do 3:"/&gt;
+  &lt;textbox id="number"/&gt;
+  &lt;button label="Zaznacz" oncommand="doSelect();"/&gt;
+&lt;/hbox&gt;
+
+&lt;radiogroup id="level"&gt;
+  &lt;radio label="Wyśmienite"/&gt;
+  &lt;radio label="Dobre"/&gt;
+  &lt;radio label="Słabe"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>Pudełko listy również obsługuje wielokrotne zaznaczenie oraz funkcje interfejsu <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a>. Interfejs ten posiada kilka sprecyzowanych funkcji obsługujących wielokrotne zaznaczenie. Na przykład własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedItems">selectedItems</a></span></code></code> przechowuje listę pozycji, które są zaznaczone, podczas gdy własność <code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/selectedCount">selectedCount</a></span></code> przechowuje liczbę zaznaczonych pozycji. Zazwyczaj te własności będą używane do iteracji przez tą listę i wykonywania jakiś operacji dla każdej pozycji. Bądźmy ostrożni, kiedy iterujemy przez zaznaczone pozycje; jeśli modyfikujemy pozycje w liście podczas trwania iteracji, lista będzie zmieniana i własność zaznaczenia może zwrócić różne wartości. Jest to jeden z powodów dla których jest to użyteczny sposób manipulowania listą poprzez pozycje raczej niż poprzez index.
+</p>
+<h4 id="Usuwanie_zaznaczonych_pozycji" name="Usuwanie_zaznaczonych_pozycji"> Usuwanie zaznaczonych pozycji </h4>
+<p>Poniższy przykład pokazuje metodę właściwego usuwania zaznaczonej pozycji:
+</p><p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul">Podgląd</a>
+</p>
+<pre>&lt;script&gt;
+function deleteSelection(){
+  var list = document.getElementById('thelist');
+  var count = list.selectedCount;
+  while (count--){
+    var item = list.selectedItems[0];
+    list.removeItemAt(list.getIndexOfItem(item));
+  }
+}
+&lt;/script&gt;
+
+&lt;button label="Delete" oncommand="deleteSelection();"/&gt;
+
+&lt;listbox id="thelist" seltype="multiple"&gt;
+  &lt;listitem label="Cheddar"/&gt;
+  &lt;listitem label="Cheshire"/&gt;
+  &lt;listitem label="Edam"/&gt;
+  &lt;listitem label="Gouda"/&gt;
+  &lt;listitem label="Havartie"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>Wewnątrz pętli <code>while</code> możemy:
+</p>
+<ul><li> pobierać selecteItem o indeksie 0. Pierwsza zaznaczona pozycja jest zawsze otrzymywana jako rozmiar tablicy będącej zmniejszonej o usunięte pozycje,
+</li><li> usuwać pozycję używając funkcji <code><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/removeItemAt">removeItemAt()</a></code></span></code>. Od momentu, gdy ta funkcja żąda indeksu. </li><li> konwertować pomiędzy pozycją a indeksem stosując funkcję <code><span id="m-getIndexOfItem"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getIndexOfItem">getIndexOfItem()</a></code></span></code>. Jest to także przesyłanie funkcji <code><span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/getItemAtIndex">getItemAtIndex()</a></code></span></code> do swojej odwrotności.
+</li></ul>
+<p>Interfejs <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a> posiada również metody do modyfikacji zaznaczonych pozycji. Dla przykładu funkcja <code><span id="m-addItemToSelection"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/addItemToSelection">addItemToSelection()</a></code></span></code> dodaje nową pozycję do zbioru zaznaczonych pozycji, bez czyszczenia istniejącego zaznaczenia. Funkcja <code><span id="m-removeItemFromSelection"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/removeItemFromSelection">removeItemFromSelection()</a></code></span></code> usuwa pojedynczą pozycję z zaznaczonych pozycji.
+</p>
+<h3 id="Przewijanie_listy" name="Przewijanie_listy"> Przewijanie listy </h3>
+<p>Jeśli jest więcej wierszy w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>, niż może być wyświetlonych, pojawi się pasek przewijania pozwalający użytkownikowi przewinąć listę. Pozycja przewijania może być modyfikowana przy użyciu paru metod pola listy.
+</p><p>Metoda <code><span id="m-scrollToIndex"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/scrollToIndex">scrollToIndex()</a></code></span></code> przewija do danego wiersza. To pole listy będzie przewijane tak, że wiersz, do którego chcemy przewinąć listę, będzie widocznym górnym wierszem, chyba że wiersz jest wierszem tuż przed końcem listy pozycji. Metoda <code><span id="m-ensureIndexIsVisible"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/ensureIndexIsVisible">ensureIndexIsVisible()</a></code></span></code> jest podobna w tym, że również przewija pokazując wiersz, ale metoda ta nie przewija, jeśli ta pozycja jest aktualnie widoczna. Zatem pierwsza funkcja jest używana do przewijania do określonego wiersza podczas, gdy druga jest używana tylko do upewnienia się, że wiersz jest widoczny. Jest również metoda <code><span id="m-ensureIndexIsVisible"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/ensureIndexIsVisible">ensureIndexIsVisible()</a></code></span></code>, która pobiera pozycje jako argument zamiast jako index. Rezultat porównania obu funkcji przy różnych pozycjach przewinięcia jest w tym przykładzie:
+</p><p><span id="Przyk%C5%82ad_5"><a id="Przyk%C5%82ad_5"></a><strong>Przykład 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul">Podgląd</a>
+</p>
+<pre>&lt;button label="scrollToIndex"
+           oncommand="document.getElementById('thelist').scrollToIndex(4);"/&gt;
+&lt;button label="ensureIndexIsVisible"
+           oncommand="document.getElementById('thelist').ensureIndexIsVisible(4);"/&gt;
+
+&lt;listbox id="thelist" rows="5"&gt;
+  &lt;listitem label="1"/&gt;
+  &lt;listitem label="2"/&gt;
+  &lt;listitem label="3"/&gt;
+  &lt;listitem label="4"/&gt;
+  &lt;listitem label="5"/&gt;
+  &lt;listitem label="6"/&gt;
+  &lt;listitem label="7"/&gt;
+  &lt;listitem label="8"/&gt;
+  &lt;listitem label="9"/&gt;
+  &lt;listitem label="10"/&gt;
+  &lt;listitem label="11"/&gt;
+  &lt;listitem label="12"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>W następnym artykule przeczytamy o <a href="pl/Kurs_XUL/Obiekty_pude%c5%82ka">obiektach pudełka XUL</a>.
+</p><p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Modyfikowanie_interfejsu_XUL" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Obiekty_pudełka">Następny  »</a></p>
+</div>
+<p></p><p><br>
+</p>
+<div class="noinclude">
+</div>

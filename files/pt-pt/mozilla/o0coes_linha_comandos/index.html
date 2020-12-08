@@ -1,0 +1,486 @@
+---
+title: Opções da Linha de Comandos
+slug: Mozilla/O0coes_Linha_Comandos
+tags:
+  - Administração
+  - Desenvolvimento da Mozilla
+  - Documentação do Utilizador
+  - Extensões
+  - Extras
+  - Firefox
+  - Linha de Comandos
+  - Mozilla
+  - Perguntas e Respostas
+  - Precisa de Atualização
+translation_of: Mozilla/Command_Line_Options
+---
+<p>{{FirefoxSidebar}}</p>
+
+<p><span class="seoSummary">As opções da linha de comandos são utilizadas para especificar várias opções de arranque para as aplicações da Mozilla. Por exemplo, pode utilizar as opções de configuração da linha de comandos para ignorar o 'Gestor de Perfis' e abrir um perfil específico (se tiver vários perfis). Também pode controlar como as aplicações da Mozilla são abertas, quais os componentes que são abertos inicialmente, e o que os componentes fazem quando são abertos. Esta página descreve as opções mais utilizadas e como utilizá-las. Pode abrir a interface da linha de comandos pressionando "Shift + F2".</span></p>
+
+<h2 id="Syntax_Rules" name="Syntax_Rules">Regras de Sintaxe</h2>
+
+<p>But first, let's describe the syntax rules that apply for all options.</p>
+
+<ul>
+ <li>Command parameters containing spaces must be enclosed in quotes; for example, "Joel User".</li>
+ <li>Command actions are not case sensitive.</li>
+ <li>Command parameters except profile names are not case sensitive.</li>
+ <li>Blank spaces ( ) separate commands and parameters.</li>
+ <li>Each message option follows the syntax <code><var>field</var>=<var>value</var></code>, for example:
+  <ul>
+   <li><code>to=</code><span class="nowiki"><code>foo@nowhere.net</code></span></li>
+   <li><code>subject=cool page</code></li>
+   <li><code>attachment=www.mozilla.org</code></li>
+   <li><code>attachment='<span class="nowiki">file:///c:/test.txt</span>'</code></li>
+   <li><code>body=check this page or also in Thunderbird 52 and newer: body=c:\path\to\file.txt</code></li>
+  </ul>
+ </li>
+ <li>Multiple message options are separated by comma (,), for example: <code>"<span class="nowiki">to=foo@nowhere.net,subject=cool page</span>"</code> . Comma separators must not follow or precede spaces ( ). To assign multiple values to a field, enclose the values in single quotes ('), for example: <code>"<span class="nowiki">to='foo@nowhere.net,foo@foo.de',subject=cool page</span>"</code> .</li>
+</ul>
+
+<h2 id="How_to_use_command_options" name="How_to_use_command_options">Utilizar as opções da linha de comandos</h2>
+
+<p>Command line options are entered after the command to start the application. Some options have arguments. These are entered after the command line option. Some options have abbreviations. For example, the command line option "-editor" can be abbreviated as "-edit". (Where abbreviations are available, they are described in the text below.) In some cases option arguments must be enclosed in quotation marks. (This is noted in the option descriptions below.) Multiple command line options can be specified. In general, the syntax is as follows:</p>
+
+<pre class="brush: bash;">application -option -option "argument" -option argument
+</pre>
+
+<h3 id="Exemplos">Exemplos</h3>
+
+<p>The following examples show the use of the "-ProfileManager" command, which will open the Profile Manager prior to starting Firefox or Thunderbird:</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>Select Run from Windows Start menu. Type:</p>
+
+<pre class="brush: bash;">firefox -ProfileManager
+</pre>
+
+<h4 id="Mac_OS_X">Mac OS X</h4>
+
+<p>Go to Applications &gt; Utilities. Open Terminal and type:</p>
+
+<pre class="brush: bash;">cd /Applications/Firefox.app/Contents/MacOS
+./firefox -ProfileManager
+</pre>
+
+<p>If you use Firefox Nightly, you can type:</p>
+
+<pre class="brush: bash;">cd /Applications/FirefoxNightly.app/Contents/MacOS
+./firefox -ProfileManager
+</pre>
+
+<h4 id="Linux">Linux</h4>
+
+<p>Open Terminal and type:</p>
+
+<pre class="brush: bash;">cd <em>Thunderbird</em><var> installation directory</var>
+./thunderbird -ProfileManager
+</pre>
+
+<p>The example above invokes the "-ProfileManager" command line option with Mozilla's Thunderbird mail client.</p>
+
+<h2 id="User_Profile" name="User_Profile">Perfil do Utilizador</h2>
+
+<h3 id="-CreateProfile_profile_name" name="-CreateProfile_profile_name"><code>-CreateProfile <var>profile_name</var></code></h3>
+
+<p>Create a new profile in the default directory, but do not start application. The profile will be named <code><var>profile_name</var></code> in the profile manager. <var>profile_name</var> must not contain spaces ( ). To use this successfully no instance of the application must be running, or the <code>-no-remote</code> options must be used.</p>
+
+<pre class="brush: bash;">firefox -CreateProfile JoelUser
+</pre>
+
+<h3 id="-CreateProfile_.22profile_name_profile_dir.22" name="-CreateProfile_.22profile_name_profile_dir.22"><code>-CreateProfile "<var>profile_name</var> <var>profile_dir</var>"</code></h3>
+
+<p>Creates a new profile in the <code><var>profile_dir</var></code> directory, but do not start application. The profile will be named <code>profile_name</code> in the profile manager. Note <code><var>profile_name</var></code> and <code><var>profile_dir</var></code> are quoted together, and are separated by exactly 1 space (as with the previous syntax, <code>profile_name</code> must not contain spaces).</p>
+
+<p>To use this successfully no instance of the application must be running, or the <code>-no-remote</code> options must be used.</p>
+
+<p>NOTE: <code><var>profile_dir</var></code> must not exist and you must not already have a profile called <code><var>profile_name</var></code>.</p>
+
+<pre class="brush: bash;">firefox -CreateProfile "JoelUser c:\internet\joelusers-moz-profile"
+</pre>
+
+<h3 id="-migration" name="-migration"><code>-migration</code></h3>
+
+<p>Start with Import Wizard.</p>
+
+<h3 id="-new-instance" name="-new-instance"><code>-new-instance</code></h3>
+
+<p>Open new instance, not a new window in running instance, which allows multiple copies of application to be open at a time.</p>
+
+<pre class="brush: bash;">firefox -new-instance -P "Another Profile"
+</pre>
+
+<div class="blockIndicator note">
+<p><strong>Nota: </strong>Not available for Windows, see {{bug(855899)}}.</p>
+</div>
+
+<h3 id="-no-remote" name="-no-remote"><code>-no-remote</code></h3>
+
+<p></p>
+
+<p>Do not accept or send remote commands; implies -new-instance.</p>
+
+<pre class="brush: bash;">firefox -no-remote -P "Another Profile"
+</pre>
+
+<div class="blockIndicator note">
+<p><strong>Nota: </strong>Since Firefox 9, this does really mean what its name implies on all platforms, i.e. instances created with this parameter do not accept or send remote commands, see {{bug(650078)}}. That means that such instances won't be re-used. Also when using this argument a new instance is created in any case.</p>
+</div>
+
+<h3 id="-override_.2Fpath.2Fto.2Foverride.ini" name="-override_.2Fpath.2Fto.2Foverride.ini"><code>-override <em>/path/to/</em>override.ini</code></h3>
+
+<p>Load the specified <code>override.ini</code> file to override <code>application.ini</code> ({{Source("browser/app/application.ini")}}). This can be used to suppress the Migration Wizard at startup by loading the following <code>override.ini</code>. <strong>Firefox</strong> only.</p>
+
+<pre class="brush: ini;">[XRE]
+EnableProfileMigrator=0</pre>
+
+<h3 id="-ProfileManager_or_-P" name="-ProfileManager_or_-P"><code>-ProfileManager</code></h3>
+
+<p>Start with Profile Manager. Short form: <strong>-P</strong> without a profile name.</p>
+
+<h3 id="-P_.22profile_name.22" name="-P_.22profile_name.22"><code>-P "<var>profile_name</var>"</code></h3>
+
+<p>Bypass Profile Manager and launch application with the profile named <var>profile_name</var>. Useful for dealing with multiple profiles. Note <var>profile_name</var> is case sensitive. If you don't specify a profile name then the profile manager is opened instead. You must use an upper case P on Linux with versions older than 7.x, as there lower case invokes Purify mode (memory and leak detection). Other platforms accept both upper and lower case.</p>
+
+<pre class="brush: bash;">firefox -P "Joel User"
+</pre>
+
+<h3 id="-profile_.22.2Fpath.2Fto.2Fprofile.22" name="-profile_.22.2Fpath.2Fto.2Fprofile.22"><code>-profile "<var>profile_path</var>"</code></h3>
+
+<p>Start with the profile with the given path. <strong>Firefox</strong>, <strong>Thunderbird</strong> and <strong>SeaMonkey2.x</strong> only.</p>
+
+<p><code>"profile_path"</code> can either be an absolute path (<code>"<var>/path/to/profile</var>"</code>) or a relative path <code>("<var>path/to/profile</var>"</code>).</p>
+
+<div class="blockIndicator note">
+<p><strong>Nota: </strong>On Mac OS X specifying a relative path is not supported anymore from Firefox 4.0 and up due to a regression, see {{bug(673955)}}.</p>
+</div>
+
+
+<h2 id="Browser" name="Browser">Navegador</h2>
+
+<h3 id="-browser" name="-browser"><code>-browser</code></h3>
+
+<p>Start with the browser component. <strong>Firefox</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<h3 id="-foreground" name="-foreground"><code>-foreground</code></h3>
+
+<p>Make this instance the active application.</p>
+
+<h3 id="-headless"><code>-headless</code></h3>
+
+<p>Runs Firefox in <a href="/en-US/docs/Mozilla/Firefox/Headless_mode">headless mode</a>, which is very useful for purposes such as debugging and automated testing. Available in Firefox 55+ on Linux, and Firefox 56+ on Windows/Mac OS X.</p>
+
+<h3 id="-new-tab_URL" name="-new-tab_URL"><code>-new-tab <var>URL</var></code></h3>
+
+<p>Open <var>URL</var> in a new tab. <strong>Firefox</strong> and <strong>SeaMonkey2.x</strong> only.</p>
+
+<h3 id="-new-window_URL" name="-new-window_URL"><code>-new-window <var>URL</var></code></h3>
+
+<p>Open <var>URL</var> in a new window. <strong>Firefox</strong> and <strong>SeaMonkey2.x</strong> only.</p>
+
+<h3 id="-preferences" name="-preferences"><code>-preferences</code></h3>
+
+<p>Open Options/Preferences window. <strong>Firefox</strong> and <strong>SeaMonkey2.x</strong> only.</p>
+
+<h3 id="-private" name="-private"><code>-private</code></h3>
+
+<p>Opens Firefox in permanent private browsing mode. <strong>Firefox 3.6</strong> and later only.</p>
+
+<p>May not be applicable in older Ubuntu for <strong>Firefox 20 </strong>and later, confirmed to work in 14.04</p>
+
+<h3 id="-private-toggle" name="-private-toggle"><code>-private-window</code></h3>
+
+<p>Opens a new private browsing window in an existing instance of Firefox. <strong>Firefox 20</strong> and later only.</p>
+
+<h3 id="-private-toggle_URL" name="-private-toggle_URL"><code>-private-window URL</code></h3>
+
+<p>Open URL in a new private browsing window. If a private browsing window is already open, a new tab is opened in the existing window.<strong> Firefox 29 </strong>and later only. Does not work in <strong>Firefox 31</strong> on linux mint 17 nor on <strong>Firefox 48</strong> on Windows 7. URL opens in a non-private window.</p>
+
+<h3 id="-search_term" name="-search_term"><code>-search <var>term</var></code></h3>
+
+<p>Search <var>term</var> with your default search engine. <strong>Firefox</strong> and <strong>SeaMonkey 2.1</strong> and later only.</p>
+
+<h3 id="-setDefaultBrowser" name="-setDefaultBrowser"><code>-setDefaultBrowser</code></h3>
+
+<p>Set the application as the default browser. <strong>Firefox</strong> only.</p>
+
+<h3 id="-url_URL" name="-url_URL"><code>-url <var>URL</var></code></h3>
+
+<p>Open <var>URL</var> in a new tab or window, depend on the browser option. <code>-url</code> can be omitted. You may list multiple URLs, separated by spaces. <strong>Firefox</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note: </strong>When opening multiple URLs, Firefox always opens them as tabs in a new window.</p>
+</div>
+
+<pre class="brush: bash;">firefox www.mozilla.com
+firefox www.mozilla.com developer.mozilla.org</pre>
+
+<h2 id="Mail.2FNews" name="Mail.2FNews">Correio/Notícias</h2>
+
+<h3 id="-addressbook" name="-addressbook"><code>-addressbook</code></h3>
+
+<p>Start with address book. <strong>Thunderbird</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<h3 id="-compose_message_options" name="-compose_message_options"><code>-compose <var>message_options</var></code></h3>
+
+<p>Start with mail composer. See <a href="#Syntax_Rules">syntax rules</a>. <strong>Thunderbird</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<pre class="brush: bash;">thunderbird -compose "<span class="nowiki">to=foo@nowhere.net</span>"</pre>
+
+<h3 id="-mail" name="-mail"><code>-mail</code></h3>
+
+<p>Start with the mail client. <strong>Thunderbird</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<h3 id="-news_news_URL" name="-news_news_URL"><code>-news</code> <var>news_URL</var></h3>
+
+<p>Start with the news client. If <var>news_URL</var> (optional) is given, open the specified newsgroup. <strong>Thunderbird</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<pre class="brush: bash;">thunderbird -news <span class="nowiki">news://server/group</span>
+</pre>
+
+<h3 id="-options" name="-options"><code>-options</code></h3>
+
+<p>Open Options/Preferences window. <strong>Thunderbird</strong> only.</p>
+
+<h3 id="-offline" name="-offline"><code>-offline</code></h3>
+
+<p>Start with the offline mode. <strong>Thunderbird</strong> and <strong>SeaMonkey</strong> only.</p>
+
+<h3 id="-setDefaultMail" name="-setDefaultMail"><code>-setDefaultMail</code></h3>
+
+<p>Set the application as the default email client. <strong>Thunderbird</strong> only.</p>
+
+<h2 id="Calendar" name="Calendar">Calendário</h2>
+
+<h3 id="-calendar" name="-calendar"><code>-calendar</code></h3>
+
+<p>Start with the calendar client. <strong>Sunbird</strong> only.</p>
+
+<h3 id="-showdate_date" name="-showdate_date"><code>-showdate <var>date</var></code></h3>
+
+<p>Show your schedule of the given <var>date</var>. <strong>Sunbird</strong> only.</p>
+
+<pre class="brush: bash;">sunbird -showdate 08/04/2008
+</pre>
+
+<h3 id="-subscribe_URL_or_-url_URL" name="-subscribe_URL_or_-url_URL"><code>-subscribe <var>URL</var></code> or <code>-url <var>URL</var></code></h3>
+
+<p>Subscribe to the given <var>URL</var>. <strong>Sunbird</strong> only.</p>
+
+<h2 id="Other_Components" name="Other_Components">Outros Componentes</h2>
+
+<h3 id="-chat"><code>-chat</code></h3>
+
+<p>Start with the IRC client, <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/16">ChatZilla</a>, if installed.</p>
+
+<h3 id="-devtools" name="-devtools"><code>-devtools</code></h3>
+
+<p>Start with native <a href="/en-US/docs/Tools">Developer Tools</a> opened.</p>
+
+<h3 id="-editor_URL_or_-edit_URL" name="-editor_URL_or_-edit_URL"><code>-editor <var>URL</var></code> or <code>-edit <var>URL</var></code></h3>
+
+<p>Start with editor (Composer) for the given <var>URL</var> (where <var>URL</var> is optional). <strong>SeaMonkey</strong> only.</p>
+
+<pre class="brush: bash;">seamonkey -edit www.mozilla.org
+</pre>
+
+<h3 id="-inspector_URL" name="-inspector_URL"><code>-inspector <var>URL</var></code></h3>
+
+<p>Start with the <a href="/en-US/docs/DOM_Inspector" title="DOM_Inspector">DOM Inspector</a>, if installed, and inspect the given <var>URL</var> (where <var>URL</var> is optional).</p>
+
+<h3 id="-jsconsole" name="-jsconsole"><code>-jsdebugger</code></h3>
+
+<p>Start application with <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a> (formerly Browser Debugger). That is different to Venkman debugger (see option -venkman).</p>
+
+<h3 id="-jsconsole" name="-jsconsole"><code>-jsconsole</code></h3>
+
+<p>Start application with the <a href="/en-US/docs/Error_Console" title="Error_Console">Error Console</a>, or, in Firefox, the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>.</p>
+
+<h3 id="-purgecaches"><code>-purgecaches</code></h3>
+
+<p>Gecko (layout engine) has a javascript cache, which is not reset on startup. This clears it.</p>
+
+<h3 id="-start-debugger-server_port"><code>-start-debugger-server port</code></h3>
+
+<p>Firefox only. Start the debugger server on <code>port</code>. This will enable another instance of Firefox to connect the Firefox Developer Tools to this Firefox instance. See the article on <a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_Desktop">remotely debugging Firefox Desktop</a>.</p>
+
+<p>The <code>port</code> argument is optional, and if it is omitted, the server will listen on port 6000.</p>
+
+<h3 id="-venkman" name="-venkman"><code>-venkman</code></h3>
+
+<p>Start with the JavaScript debugger, <a href="/en-US/docs/Venkman" title="Venkman">Venkman</a>, if installed.</p>
+
+<h2 id="XULRunner" name="XULRunner">XULRunner</h2>
+
+<h3 id="-app_.2Fpath.2Fto.2Fapplication.ini" name="-app_.2Fpath.2Fto.2Fapplication.ini"><code>-app <em>/path/to/</em>application.ini</code></h3>
+
+<p>Start a new process running the <a href="/en-US/docs/XULRunner" title="XULRunner">XULRunner</a> application at <em>path/to</em>. Also works with Firefox version 3 and above.</p>
+
+<h3 id="--install-app_pathtomyapplication.(xpixulapp)"><code>--install-app path/to/myapplication.(xpi|xulapp)</code></h3>
+
+<p>Installs the XULRunner application at path/to onto the system. Applications are installed into the default location for your system (program files|Applications|usr/lib) at vendorname/applicationName.  Applications may be uninstalled per usual methods for your system.</p>
+
+<pre class="brush: bash;">"C:\Program Files\Mozilla XULRunner\1.8.0.4\xulrunner\xulrunner.exe" --install-app "C:\Users\Billdo\Desktop\myapplication.xpi"</pre>
+
+<pre class="brush: bash;">/opt/xulrunner/1.8.0.4/xulrunner/xulrunner --install-app ~/Desktop/myapplication.xulapp</pre>
+
+<pre class="brush: bash;">/Library/Frameworks/XUL.framework/xulrunner-bin --install-app ~/Desktop/myapplication.xpi</pre>
+
+<h3 id="--register-global"><code>--register-global</code></h3>
+
+<p>Registers XULRunner on the system for all users. Must be run as admin / root.</p>
+
+<h3 id="--register-user"><code>--register-user</code></h3>
+
+<p>Registers XULRunner for a single user.</p>
+
+<h3 id="--unregister-global"><code>--unregister-global</code></h3>
+
+<p>Unregisters XULRunner for all users.</p>
+
+<h3 id="--unregister-user"><code>--unregister-user</code></h3>
+
+<p>Unregisters XULRunner for a single user.</p>
+
+<h2 id="Chrome" name="Chrome">Chrome</h2>
+
+<h3 id="-chrome_chrome_URL" name="-chrome_chrome_URL"><code>-chrome <var>chrome_URL</var></code></h3>
+
+<p>Load the specified chrome.</p>
+
+<pre class="brush: bash;">firefox -chrome chrome://inspector/content
+</pre>
+
+<h3 id="-register_chrome_URL" name="-register_chrome_URL"><code>-register <var>chrome_URL</var></code></h3>
+
+<p>Register the specified chrome, but do not start application.</p>
+
+<h2 id="Add-ons" name="Add-ons">Extras</h2>
+
+<p>{{Gecko_MinVersion_Note(1.9.2, "-install-global-extension and -install-global-theme have been removed from Gecko 1.9.2 and upwards.")}}</p>
+
+<h3 id="-install-global-extension_.2Fpath.2Fto.2Fextension" name="-install-global-extension_.2Fpath.2Fto.2Fextension"><code>-install-global-extension <var>/path/to/extension</var></code></h3>
+
+<p>Installs the extension into the application directory. The parameter is the path to the extension. You must have administrative privileges.</p>
+
+<h3 id="-install-global-theme_.2Fpath.2Fto.2Ftheme" name="-install-global-theme_.2Fpath.2Fto.2Ftheme"><code>-install-global-theme <var>/path/to/theme</var></code></h3>
+
+<p>Same as above, but for themes. You must have administrative privileges.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note: </strong>Since Firefox 2.0.0.7, use of the <code>-install-global-extension</code> and <code>-install-global-theme</code> command line arguments have been restricted to only allow installing add-ons that are on local disks or mapped drives. Installing from a network share directly will no longer succeed.</p>
+</div>
+
+<h3 id="-safe-mode" name="-safe-mode"><code>-safe-mode</code></h3>
+
+<p>Launches the application with all extensions disabled, for that launch only. (Extensions are not loaded, but are not permanently disabled in the Extension Manager data source).</p>
+
+<h2 id="Remote_Control" name="Remote_Control">Controlo remoto</h2>
+
+<h3 id="-remote_remote_command" name="-remote_remote_command"><code>-remote <var>remote_command</var></code><var> {{Obsolete_Inline}}</var></h3>
+
+<div class="blockIndicator note">
+<p><var>This feature was removed in Firefox 36.0, restored in 36.0.1 and removed again in 39.0. S</var>ee {{bug(1080319)}}.</p>
+</div>
+
+<p>Execute the specified <code><var>remote_command</var></code> in an already running application process.</p>
+
+<pre class="brush: bash;">firefox -remote "openURL(www.mozilla.org, new-tab)"
+</pre>
+
+<div class="blockIndicator note">
+<p>This option is only available on X-Windows Unix platforms.</p>
+</div>
+
+<h2 id="Miscellaneous" name="Miscellaneous">Diversos</h2>
+
+<h3 id="-attach-console"><code>-attach-console</code></h3>
+
+<p>Write messages for the debugging console into the window which launched the application instead of opening a new window for the debugging messages. Only supported on the Windows operating system.</p>
+
+<h3 id="-console" name="-console"><code>-console</code></h3>
+
+<p>Start application with a debugging console. Note: Windows only.</p>
+
+<h3 id="-h_or_-help_or_-.3F" name="-h_or_-help_or_-.3F"><code>-h</code> or <code>-help</code> or <code>-?</code></h3>
+
+<p>Print the list of all available command line options. Note that on Windows this only works with a redirection such as <code><span class="nowiki">|more</span></code> ({{Bug(355889)}}). This option is available only in a command console.</p>
+
+<h3 id="-osint" name="-osint"><code>-osint</code></h3>
+
+<p>Tells the application that it is being launched by the OS shell. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application ({{Bug(384384)}}).</p>
+
+<h3 id="-requestPending" name="-requestPending"><code>-requestPending</code></h3>
+
+<p>Tells the application that there will be a Windows DDE request to open the same url specified on the command line. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application ({{Bug(354005)}}).</p>
+
+<h3 id="-silent" name="-silent"><code>-silent</code></h3>
+
+<p>Don't open default windows. Useful with those command-line arguments that open their own windows but don't already prevent default windows from opening. <strong>Firefox</strong>, <strong>Thunderbird3.x</strong> and <strong>SeaMonkey2.x</strong> only.</p>
+
+<h3 id="-tray" name="-tray"><code><strong>-tray</strong></code></h3>
+
+<p>Start application minimized to system tray. Useful with autorun.</p>
+
+<h3 id="-v_or_-version" name="-v_or_-version"><code>-v</code> or <code>-version</code></h3>
+
+<p>Print application version. Note that on Windows this only works with a redirection such as <code><span class="nowiki">|more</span></code> ({{Bug(355889)}}). This option is available only in a command console.</p>
+
+<h3 id="X11_options">X11 options</h3>
+
+<p>These options are only available for an application build for and running atop the X11/X.org display and window system to be found on Linux and other Unix-based systems.</p>
+
+<h4 id="--classWM_CLASS"><code>--class=WM_CLASS</code></h4>
+
+<p>Set the WM_CLASS resource class of the X11 windows created by the application.</p>
+
+<h4 id="--displayDISPLAY"><code>--display=DISPLAY</code></h4>
+
+<p>Set the X display to use.</p>
+
+<h4 id="--g-fatal-warnings"><code>--g-fatal-warnings</code></h4>
+
+<p>Make all warnings fatal.</p>
+
+<h4 id="--sync"><code>--sync</code></h4>
+
+<p>Make X calls synchronous.</p>
+
+<h2 id="Other_options_need_to_be_documented" name="Other_options_need_to_be_documented">Outras opções que precisam de ser documentadas</h2>
+
+<ul>
+ <li><code>-print-xpcom-dir</code></li>
+ <li><code>-print-xpcom-dirlist</code></li>
+ <li><code>-kill</code></li>
+ <li><code>-killAll</code></li>
+ <li><code>-f</code></li>
+ <li><code>-ftimeout</code></li>
+ <li><code>-fwait</code></li>
+ <li><code>-unsetDefaultMail</code></li>
+ <li>GTK options</li>
+</ul>
+
+<h2 id="References" name="References">Referências</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Chrome/Command_Line" title="Chrome/Command_Line">Chrome: Command Line</a></li>
+ <li><a class="external" href="http://www-archive.mozilla.org/quality/browser/front-end/testcases/cmd-line/">Test Documentation for Command-line Features</a> (mozilla.org)</li>
+ <li>{{Source("toolkit/xre/nsAppRunner.cpp")}}</li>
+ <li>{{Source("browser/components/nsBrowserContentHandler.js")}}</li>
+ <li>{{Source("suite/browser/nsBrowserContentHandler.js")}}</li>
+ <li>{{Source("mail/components/nsMailDefaultHandler.js")}}</li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/Installer:Command_Line_Arguments">Installer command line options</a></li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Informação do Documento Original</h2>
+
+<ul>
+ <li>Author(s): Ben Goodger, Steffen Wilberg, Seth Spitzer, Daniel Wang</li>
+ <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>
+
+<p> </p>

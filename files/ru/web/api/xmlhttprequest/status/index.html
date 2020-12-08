@@ -1,0 +1,77 @@
+---
+title: XMLHttpRequest.status
+slug: Web/API/XMLHttpRequest/status
+tags:
+  - API
+  - Error
+  - Property
+  - Reference
+  - XMLHttpRequest
+  - XMLHttpRequest Status
+  - result
+  - status
+translation_of: Web/API/XMLHttpRequest/status
+---
+<div>{{APIRef('XMLHttpRequest')}}</div>
+
+<p>Доступное только для чтения свойство <code><strong>XMLHttpRequest.status</strong></code>, возвращает числовой <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">код состояния</a> HTTP ответа <code>XMLHttpRequest</code>.</p>
+
+<p>До завершения запроса значение <code>status</code> равно 0. Браузеры также сообщают о состоянии 0 в случае ошибок <code>XMLHttpRequest</code>.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: js">var xhr = new XMLHttpRequest;
+console.log('UNSENT: ', xhr.status);
+
+xhr.open('GET', '/server');
+console.log('OPENED: ', xhr.status);
+
+xhr.onprogress = function () {
+  console.log('LOADING: ', xhr.status);
+};
+
+xhr.onload = function () {
+  console.log('DONE: ', xhr.status);
+};
+
+xhr.send();
+
+/**
+ * Outputs the following:
+ *
+ * UNSENT: 0
+ * OPENED: 0
+ * LOADING: 200
+ * DONE: 200
+ */
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-status-attribute')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG живой стандарт</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+
+<div class="hidden">Таблица совместимости на этой странице генерируется из структурированных данных. Если вы хотите внести свой вклад в эти данные, просмотрите <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос на извлечение.</div>
+
+<p>{{Compat("api.XMLHttpRequest.status")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Список <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
+ <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>

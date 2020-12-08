@@ -1,0 +1,143 @@
+---
+title: while
+slug: Web/JavaScript/Reference/Statements/while
+tags:
+  - JavaScript
+  - Оператор
+  - Цикл
+translation_of: Web/JavaScript/Reference/Statements/while
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<p><strong>Оператор while</strong> создает цикл, выполняющий заданную инструкцию, пока истинно проверяемое условие. Логическое значение условия вычисляется перед исполнением тела цикла.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">while (<em>условие</em>) {
+  <em>инструкция</em>
+}</pre>
+
+<dl>
+ <dt><code>условие</code></dt>
+ <dd>Выражение, логическое значение которого проверяется каждый раз перед заходом в цикл. Если значение истинно, то исполняется <code>инструкция</code>. Когда значение становится ложным, выполняется код, следующий за циклом <code>while</code>.</dd>
+ <dt><code>инструкция</code></dt>
+ <dd>Инструкция, которая исполняется каждый раз, пока истинно условие. Чтобы выполнить несколько инструкций в цикле, используйте <a href="/ru/docs/Web/JavaScript/Reference/Statements/block">блочный</a> оператор (<code>{ ... }</code>) для их группировки.</dd>
+</dl>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Следующий цикл <code>while</code> исполняется, пока <code>n</code> не превышает трёх.</p>
+
+<pre class="brush:js">var n = 0;
+var x = 0;
+
+while (n &lt; 3) {
+  n++;
+  x += n;
+}</pre>
+
+<p>На каждой итерации цикла <code>n</code> увеличивается на единицу и прибавляется к <code>x</code>. Таким образом, <code>x</code> и <code>n</code> принимают следующие значения:</p>
+
+<ul>
+ <li>После первого прохода: <code>n</code> = 1 и <code>x</code> = 1</li>
+ <li>после второго прохода: <code>n</code> = 2 и <code>x</code> = 3</li>
+ <li>После третьего прохода: <code>n</code> = 3 и <code>x</code> = 6</li>
+</ul>
+
+<p>После окончания третьей итерации условие<code> n</code> &lt; 3 больше не является истинным, поэтому цикл завершается.</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-while-statement', 'while statement')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-while-statement', 'while statement')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3', '#sec-12.6.2', 'while statement')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1', '#sec-12.6.1', 'while statement')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/do...while"><code>do...while</code></a></li>
+ <li>{{jsxref("Statements/for", "for")}}</li>
+</ul>

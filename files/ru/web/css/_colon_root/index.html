@@ -1,0 +1,101 @@
+---
+title: ':root'
+slug: 'Web/CSS/:root'
+tags:
+  - CSS
+  - CSS Pseudo-class
+  - Layout
+  - Reference
+  - Web
+  - Псевдоклассы
+translation_of: 'Web/CSS/:root'
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a> <code>:root</code> находит корневой элемент дерева документа. Применимо к HTML, <code>:root</code> находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу <code>html</code>, но его <a href="/ru/docs/Web/CSS/Specificity">специфичность</a> выше.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Использование <code>:root</code> полезно для объявления <a href="/ru/docs/Web/CSS/--*">CSS Переменных</a>:</p>
+
+<pre class="brush: css">:root {
+  --main-color: hotpink;
+  --pane-padding: 5px 42px;
+}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификации</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#root-pseudo', ':root')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Без изменений</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#root-pseudo', ':root')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Изначальное определение</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>1</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>9</td>
+   <td>9.5</td>
+   <td>1.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

@@ -1,0 +1,42 @@
+---
+title: Emscripten
+slug: Mozilla/Projects/Emscripten
+tags:
+  - C++
+  - Emscripten
+  - JavaScript
+  - LLVM
+translation_of: Mozilla/Projects/Emscripten
+---
+<p><span class="seoSummary">Emscripten é um compilador LLVM para JavaScript. </span>Este utiliza <em>bytecode</em> do LLVM (por exemplo, gerado a partir de C/C++, utilizando Clang, ou de outra linguagem) e o compila no JavaScript, que pode ser executado na Web<span class="seoSummary">.</span></p>
+
+<div class="warning">
+<p><strong>Importante</strong>: esta página fornece uma breve introdução sobre o que Emscripten é. Para começar com Emscripten, vá para a <a href="http://kripken.github.io/emscripten-site/index.html">Wiki oficial do Emscripten</a>.</p>
+</div>
+
+<p>Ao utilizar o Emscripten, pode</p>
+
+<ul>
+ <li>Compilar código C e C++ para JavaScript</li>
+ <li>Compilar qualquer tipo de código que consegue ser traduzido para LLVM <em>bytecode</em>para JavaScript.</li>
+ <li>Compilar <em>runtimes</em> de C/C++ de outras linguagens para JavaScript e depois correr código nessas outras linguagens de uma maneira indireta (Isto foi feito para Python e Lua)!</li>
+</ul>
+
+<p>Emscripten produz código nativo imediatamente disponível na Web: uma plataforma que é padrão, tem inúmeras implementações independentes e é interpretada em todo o lado desde PC's a iPad's.</p>
+
+<p>Com Emscripten, programadores de C/C++ não têm o alto custo de transcrever o código manualmente para JavaScript — ou ter que aprender JavaScript sequer. Programadores web também beneficiam, dado que podem usar milhares de bibliotecas nativas já existentes nos seus sites.</p>
+
+<p>Praticamente qualquer base de código portátil de C ou C++ pode ser compilada para JavaScript usando Emscripten, variando desde jogos de alto performance que precisam de renderizar gráficos, tocar sons, carregar e processar ficheiros até aplicações de <em>frameworks</em> como Qt.</p>
+
+<p>Emscripten gera código rápido — o formato de saída é <a href="/en-US/docs/Games/Tools/asm.js">asm.js</a>, um <em>subset</em> de JavaScript que consegue executar perto de velocidades nativas em muitos casos.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Parece interessante? <a href="http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html">Ler mais sobre Emscripten e experimentar algumas demonstrações</a>, e depois <a href="http://kripken.github.io/emscripten-site/docs/getting_started/index.html">começar a usar</a>.</p>
+</div>
+
+<h2 id="Outros_artigos_de_interesse_na_MDN">Outros artigos de interesse na MDN</h2>
+
+<ul>
+ <li>A nossa <a href="/en-US/docs/Games">zona de jogos </a>contém conteúdo útil relacionado com o desenvolvimento de jogos, que é um caso de uso comum para o Emscripten.</li>
+ <li>A nossa página com <a href="/en-US/docs/Mozilla/Projects/Emscripten/Techniques">técnicas de Emscripten</a> é um lugar para guardar ideias úteis relacionadas com Emscripten, que conseguiram ser introduzidas na Wiki do Emscripten.</li>
+</ul>

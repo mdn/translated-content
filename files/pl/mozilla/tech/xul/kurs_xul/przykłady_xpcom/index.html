@@ -1,0 +1,155 @@
+---
+title: Przykłady XPCOM
+slug: Mozilla/Tech/XUL/Kurs_XUL/Przykłady_XPCOM
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Examples
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Interfejsy_XPCOM" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Drzewa">Następny  »</a></p>
+</div><p></p>
+
+<p>Ten artykuł dostarczy kilku przykładów użycia XPCOM wraz z dodatkowymi interfejsami.</p>
+
+<h2 id="Zarz.C4.85dzanie_oknem" name="Zarz.C4.85dzanie_oknem">Zarządzanie oknem</h2>
+
+<div class="note">
+<p>This example contains RDF datasource that will be seen in the <a href="pl/Kurs_XUL/Szablony">later section</a>. You might skip this example for the time being, except when you have already had that knowledge.</p>
+</div>
+
+<h4 id="Tworzenie_menu_okna" name="Tworzenie_menu_okna">Tworzenie menu okna</h4>
+
+<p>Lista aktualnie otwartych okien w przeglądarce Mozilli, może być użyta jako <a href="pl/Kurs_XUL/%c5%b9r%c3%b3d%c5%82a_danych_RDF">źródło danych RDF</a>. Pozwala ci to stworzyć menu okna razem z listą aktualnie otwartych okien w aplikacji. Źródłem danych do tego jest <code>rdf:window-mediator</code>. Możemy użyć tego jak w poniższym przykładzie:</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xpcomex_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;toolbox&gt;
+ &lt;menubar id="windowlist-menubar"&gt;
+  &lt;menu label="Window"&gt;
+   &lt;menupopup id="window-menu" datasources="rdf:window-mediator" ref="NC:WindowMediatorRoot"&gt;
+    &lt;template&gt;
+     &lt;rule&gt;
+      &lt;menuitem uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+     &lt;/rule&gt;
+    &lt;/template&gt;
+   &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>W oknie menu zostanie stworzone z listy wszystkich otwartych okien. Wypróbuj ten przykład przez otwarcie kilku okien przeglądarki a zobaczysz, że są one jako lista w menu.</p>
+
+<h3 id="Komponent_Window_mediator" name="Komponent_Window_mediator">Komponent Window mediator</h3>
+
+<p>Jest to dobre dla wyświetlania listy otwartych okien, ale chcielibyśmy poprawić to, aby klikając na pozycję w menu przełączyć się do tego okna. Jest to osiągnięte przez zastosowanie komponentu, window mediator. Implementuje on interfejs nsiWindowDataSource. Poniższy kod pokazuje jak stworzyć komponent, który go implementuje:</p>
+
+<pre>var wmdata = Components.classes["@mozilla.org/rdf/datasource;1?name=window-mediator"].getService();
+wmdata.QueryInterface(Components.interfaces.nsIWindowDataSource);
+</pre>
+
+<p>Kod ten wyszukuje komponent źródła danych window mediator. Komponent używany tu jest taki sam jak ten obsługujący źródło danych bazy RDF window-mediator. Możesz również uzyskać ten komponent przez serwis RDF, który jest kolejnym serwisem, który zarządza źródłami danych RDF.</p>
+
+<p>Interfejs <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIWindowDataSource.html">nsIWindowDataSource</a> ma funkcję <code>getWindowForResource</code>, która może być użyta do pobrania zasobu danego okna. We wcześniejszym przykładzie wygenerowaliśmy listę okien i dodaliśmy ją do menu przez szablon. Szablon generuje atrybut <code>id</code> każdego elementu z pozycji <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>. Wartość tego atrybutu może być użyta jako zasób. Oznacza to,że aby przełączyć się do aktywnego okna musimy wykonać następujące czynności:</p>
+
+<ol>
+ <li>Określić element, jaki kliknie użytkownik.</li>
+ <li>Uzyskać wartość atrybutu <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> z tego elementu.</li>
+ <li>Przekazać tą wartość do <code>getWindowForResource()</code> uzyskanego obiektu okna.</li>
+ <li>Przełączyć się na aktywność tego okna.</li>
+</ol>
+
+<p>Przykład poniżej pokazuje jak możemy to zrobić:</p>
+
+<pre>&lt;toolbox&gt;
+ &lt;menubar id="windowlist-menubar"&gt;
+  &lt;menu label="Window" oncommand="switchFocus(event.target);"&gt;
+   &lt;menupopup id="window-menu" datasources="rdf:window-mediator" ref="NC:WindowMediatorRoot"&gt;
+    &lt;template&gt;
+     &lt;rule&gt;
+      &lt;menuitem uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+     &lt;/rule&gt;
+    &lt;/template&gt;
+   &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;
+&lt;/toolbox&gt;
+
+&lt;script&gt;
+function switchFocus(elem)
+{
+  var mediator = Components.classes["@mozilla.org/rdf/datasource;1?name=window-mediator"].getService();
+  mediator.QueryInterface(Components.interfaces.nsIWindowDataSource);
+
+  var resource = elem.getAttribute('id');
+  switchwindow = mediator.getWindowForResource(resource);
+
+  if (switchwindow){
+    switchwindow.focus();
+  }
+}
+&lt;/script&gt;
+</pre>
+
+<p>Do elementu menu zostało dodane polecenie obsługi programu, które wywołuje funkcję switchFocus() z parametrem elementu, jaki został wybrany z menu. Funkcja <code>switchFocus()</code>:</p>
+
+<ul>
+ <li>Najpierw pobiera referencję do komponentu implementującego interfejs window mediator.</li>
+ <li>Następnie pobieramy atrybut <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> dla elementu. Możemy użyć tej wartości atrybutu <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code> jako zasobu.</li>
+ <li>Funkcja <code>getWindowForResource()</code> pobiera zasób i zwraca okno dopasowane do niego.</li>
+ <li>Okno to, przechowywane w zmiennej <code>switchwindow</code> jest takie samo jak obiekt okna, JavaScript.</li>
+ <li>Oznacza to,że możesz wywołać dowolną z funkcji dostarczoną przez nie, z których jedną jest funkcja <code><span id="m-focus"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/focus">focus()</a></code></span></code>.</li>
+</ul>
+
+<h2 id="Ciasteczka" name="Ciasteczka">Ciasteczka</h2>
+
+<p>Następnie pobierzemy listę ciasteczek, zapisanych w przeglądarce. Usługa cookies może być użyta do tego celu. Implementuje interfejs <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsICookieManager.html">nsICookieManager</a></code>, który może być używany do wyliczania wszystkich ciasteczek. Tutaj mamy przykład, który zapełnia listę menu nazwami wszystkich ciasteczek zebranych z MozillaZine.</p>
+
+<pre>&lt;script&gt;
+
+function getCookies()
+{
+  var menu = document.getElementById("cookieMenu");
+  menu.removeAllItems();
+
+  var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"]
+                        .getService(Components.interfaces.nsICookieManager);
+
+  var iter = cookieManager.enumerator;
+  while (iter.hasMoreElements()){
+    var cookie = iter.getNext();
+    if (cookie instanceof Components.interfaces.nsICookie){
+      if (cookie.host == "www.mozillazine.org")
+        menu.appendItem(cookie.name,cookie.value);
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;menulist id="cookieMenu" onpopupshowing="getCookies();"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>Funkcja getCookies() będzie wywoływana, gdy tylko otwarto menu jak wskazuje atrybut <code><code id="a-onpopupshowing"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/onpopupshowing">onpopupshowing</a></code></code> w <code><code><a href="/pl/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>. Pierwsze dwie linie getCookies() pobierają menulist (listę menu) i usuwają wszystkie istniejące pozycje w menu. Jest to wykonywane, ponieważ getCookies() jest wywoływana za każdym razem, kiedy otwarto menu a nie chcemy pozostawić tam starych pozycji za każdym razem.</p>
+
+<p>Następnie jest wyszukiwany menadżer ciasteczek. Menadżer cookie ma metodę, <code>enumerator</code>, która zwraca obiekt implementujący <code><a href="pl/NsISimpleEnumerator">nsISimpleEnumerator</a></code>. Może być to używane do przechodzenia przez wszystkie cookies. Numerator ma metodę <code>hasMoreElements()</code> zwracającą prawdę dopóki nie pobierzemy ostatniego cookie. Metoda getNext() pobiera cookie i przesuwa indeks numeratora na następne cookie. Ponieważ numerator właściwie zwraca obiekt ogólny, musimy go <code>QueryInterface()</code> do <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsICookie.html">nsICookie</a></code> zanim możemy go zastosujemy. W tym przypadku użyjemy operatora <code>instanceof</code> aby to osiągnąć.</p>
+
+<p>W końcu, dla ciastek, dodajemy pozycję w menu. Do tego używamy właściwości ciastek – nazwy hosta i wartości. Menu mają funkcję <code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/appendItem">appendItem()</a></code></span></code>, której możemy używać do dodawania pozycji w menu, daną etykietkę i wartość.</p>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<p>Więcej przykładów jest dostępnych:</p>
+
+<ul>
+ <li><a href="pl/Fragmenty_kodu">Fragmenty kodu</a></li>
+ <li><a class="external" href="http://kb.mozillazine.org/Category:XPCOM_example_code" rel="freelink">http://kb.mozillazine.org/Category:XPCOM_example_code</a></li>
+</ul>
+
+<p>Następnie, zobaczymy <a href="pl/Kurs_XUL/Drzewa">jak utworzyć drzewa</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Interfejsy_XPCOM" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Drzewa">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,375 @@
+---
+title: Interação entre páginas privilegiadas e não privilegiadas
+slug: Archive/Add-ons/Interaction_between_privileged_and_non-privileged_pages
+tags:
+  - Code snippets
+  - Extensões
+  - Extras
+translation_of: Archive/Add-ons/Interaction_between_privileged_and_non-privileged_pages
+---
+<h2 id="Sending_data_from_unprivileged_document_to_chrome" name="Sending_data_from_unprivileged_document_to_chrome">Enviar dados de um documento sem privilégios para o chrome</h2>
+
+<p>An easy way to send data from a web page to an extension is by using custom DOM events. In your extension's browser.xul overlay, write code which listens for a custom DOM event. Here we call the event <code>MyExtensionEvent</code>.</p>
+
+<pre class="brush: js">var myExtension = {
+  myListener: function(evt) {
+    alert("Received from web page: " +
+          evt.target.getAttribute("attribute1") + "/" +
+          evt.target.getAttribute("attribute2"));
+  }
+}
+document.addEventListener("MyExtensionEvent", function(e) { myExtension.myListener(e); }, false, true);
+// The last value is a Mozilla-specific value to indicate untrusted content is allowed to trigger the event.
+</pre>
+
+<p>The data from the web page (unprivileged code) will be the values of <code>attribute1</code> and <code>attribute2</code>. To trigger the <code>alert()</code> in the listener and pass the data from the web page, write code such as this in the web page:</p>
+
+<pre class="brush: js">var element = document.createElement("MyExtensionDataElement");
+element.setAttribute("attribute1", "foobar");
+element.setAttribute("attribute2", "hello world");
+document.documentElement.appendChild(element);
+
+var evt = document.createEvent("Events");
+evt.initEvent("MyExtensionEvent", true, false);
+element.dispatchEvent(evt);
+</pre>
+
+<p>This code creates an arbitrary element -- <code>&lt;MyExtensionDataElement/&gt;</code> -- and inserts it into the web page's DOM. Values are set for two arbitrary attributes on the element. These can also be named anything you like, but we've chosen <code>attribute1</code> and <code>attribute2</code>. Finally, the code creates and dispatches a custom event named <code>MyExtensionEvent</code> -- similar to the standard DOM <code>click</code> event you catch with <code>onclick</code> handlers. The event bubbles up from the web page and reaches the extension (privileged code) where your listener catches it and reads the attribute values from the DOM element where the event originated.</p>
+
+<p>(To better ensure others do not also implement the same event with a different meaning, one might either attach a namespace to <code>&lt;MyExtensionDataElement/&gt;</code>  and check on the event handler for the correct namespaceURI property, or as per the DOM specification, use initEvent() with an event name that is itself namespaced (XML Name characters only): "It is also strongly recommended that third parties adding their own events use their own prefix to avoid confusion and lessen the probability of conflicts with other new events.")</p>
+
+<p>In the case where your extension's overlay does not interact directly with browser.xul, such as in a <a href="/en-US/docs/Creating_a_Firefox_sidebar" title="/en-US/docs/Creating_a_Firefox_sidebar">sidebar</a>, it might be easier to add the event listener to the top-level document directly as shown below (also see: <a href="/en-US/docs/Working_with_windows_in_chrome_code#Accessing_the_elements_of_the_top-level_document_from_a_child_window" title="/en-US/docs/Working_with_windows_in_chrome_code#Accessing_the_elements_of_the_top-level_document_from_a_child_window">accessing the elements of the top-level document from a child window</a>).</p>
+
+<pre class="brush: js">var mainWindow = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                  .getInterface(Components.interfaces.nsIWebNavigation)
+                  .QueryInterface(Components.interfaces.nsIDocShellTreeItem)
+                  .rootTreeItem
+                  .QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                  .getInterface(Components.interfaces.nsIDOMWindow);
+mainWindow.document.addEventListener("MyExtensionEvent", function(e) { myExtension.myListener(e); }, false, true);
+</pre>
+
+<p>If you need to to pass lots of data, consider using CDATA sections instead of the simple attributes on a custom element.</p>
+
+<p>Note: If you're using HTML5's postMessage() to send a message from unprivileged code to privileged code, adding 'true' to the end of your event listener in your privileged chrome code will allow the message to be received.</p>
+
+<p> </p>
+
+<pre class="brush: js" style="font-size: 14px;">document.addEventListener("message", function(e) { yourFunction(e); }, false, true);</pre>
+
+<h2 id="Sending_data_from_chrome_to_unprivileged_document" name="Sending_data_from_chrome_to_unprivileged_document">Enviar dados do chrome para um documento sem privilégios</h2>
+
+<p>To "answer" the web page (e.g., return code), your extension can set an attribute or attach child elements on the event target element (<code>&lt;MyExtensionDataElement/&gt;</code> in this example).</p>
+
+<p>You can optionally clean up the created element, or create it once when the web page loads then re-use it each time.</p>
+
+<p>Another option is to send a return event from the extension to the web page. This can be done using the same principle as the above example.</p>
+
+<p>There is only one extension, but there can be many active web pages. So to trigger the right event on the right page we have to tell the extension which page to call. The information we need for that is contained in evt.target.ownerDocument.</p>
+
+<p>We can extend the above example with some data transfer from the extension to the web page. In the following code sample 2 methods are combined: Setting an extra attribute in the original event target element, and creating a new event message with a new event target element. For this to work we need to define the original target element globally. We need a new event trigger in the web page and some code to show the event message actually arrived. In the extension we have to dispatch an event message to the right web page.</p>
+
+<p>The code containing the callback could look like this:</p>
+
+<p>In the extension:</p>
+
+<pre class="brush: js">var myExtension =
+{
+  myListener: function(evt)
+  {
+    alert("Received from web page: " +
+           evt.target.getAttribute("attribute1") + "/" +
+           evt.target.getAttribute("attribute2"));
+
+/* the extension answers the page*/
+    evt.target.setAttribute("attribute3", "The extension");
+
+    var doc = evt.target.ownerDocument;
+
+    var AnswerEvt = doc.createElement("MyExtensionAnswer");
+    AnswerEvt.setAttribute("Part1", "answers this.");
+
+    doc.documentElement.appendChild(AnswerEvt);
+
+    var event = doc.createEvent("HTMLEvents");
+    event.initEvent("MyAnswerEvent", true, false);
+    AnswerEvt.dispatchEvent(event);
+  }
+}
+
+document.addEventListener("MyExtensionEvent", function(e) { myExtension.myListener(e); }, false, true);
+// The last value is a Mozilla-specific value to indicate untrusted content is allowed to trigger the event.
+</pre>
+
+<p>In the web page:</p>
+
+<pre class="brush: js">document.addEventListener("MyAnswerEvent",function(e) { ExtensionAnswer(e); },false);
+
+var element;
+
+function CallExtension()
+{
+  var element = document.createElement("MyExtensionDataElement");
+  element.setAttribute("attribute1", "foobar");
+  element.setAttribute("attribute2", "hello world");
+  document.documentElement.appendChild(element);
+  var evt = document.createEvent("Events");
+  evt.initEvent("MyExtensionEvent", true, false);
+  element.dispatchEvent(evt);
+}
+
+function ExtensionAnswer(EvtAnswer)
+{
+  alert(element.getAttribute("attribute3") + " " +
+        EvtAnswer.target.getAttribute("Part1"));
+}
+</pre>
+
+<p>Basic example of similar idea, extension passes information via attributes and fires event on div in page, <a class="external" href="http://forums.mozillazine.org/viewtopic.php?p=3192410#3192410">here</a>.</p>
+
+<h2 id="Chromium-like_messaging_json_request_with_json_callback">Chromium-like messaging: json request with json callback</h2>
+
+<p>Web page:</p>
+
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+      var something = {
+        send_request: function(data, callback) { // analogue of chrome.extension.sendRequest
+          var request = document.createTextNode(JSON.stringify(data));
+
+          request.addEventListener("something-response", function(event) {
+            request.parentNode.removeChild(request);
+
+            if (callback) {
+              var response = JSON.parse(request.nodeValue);
+              callback(response);
+            }
+          }, false);
+
+          document.head.appendChild(request);
+
+          var event = document.createEvent("HTMLEvents");
+          event.initEvent("something-query", true, false);
+          request.dispatchEvent(event);
+        },
+
+        callback: function(response) {
+          return alert("response: " + (response ? response.toSource() : response));
+        }
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="return something.send_request({foo: 1}, something.callback)"&gt;send {foo: 1} with callback&lt;/button&gt;
+    &lt;button onclick="return something.send_request({baz: 3}, something.callback)"&gt;send {baz: 3} with callback&lt;/button&gt;
+    &lt;button onclick="return something.send_request({mozilla: 3})"&gt;send {mozilla: 3} without callback&lt;/button&gt;
+    &lt;button onclick="return something.send_request({firefox: 4}, something.callback)"&gt;send {firefox: 4} with callback&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Overlay on <code>browser.xul</code> in your extension:</p>
+
+<pre class="brush: js">var something = {
+  listen_request: function(callback) { // analogue of chrome.extension.onRequest.addListener
+    document.addEventListener("something-query", function(event) {
+      var node = event.target;
+      if (!node || node.nodeType != Node.TEXT_NODE)
+        return;
+
+      var doc = node.ownerDocument;
+      callback(JSON.parse(node.nodeValue), doc, function(response) {
+        node.nodeValue = JSON.stringify(response);
+
+        var event = doc.createEvent("HTMLEvents");
+        event.initEvent("something-response", true, false);
+        return node.dispatchEvent(event);
+      });
+    }, false, true);
+  },
+
+  callback: function(request, sender, callback) {
+    if (request.foo) {
+      return setTimeout(function() {
+      callback({bar: 2});
+      }, 1000);
+    }
+
+    if (request.baz) {
+      return setTimeout(function() {
+      callback({quux: 4});
+      }, 3000);
+    }
+
+    if (request.mozilla) {
+      return alert("alert in chrome");
+    }
+
+    return callback(null);
+  }
+}
+
+something.listen_request(something.callback);
+</pre>
+
+<p><a class="external" href="http://code.google.com/chrome/extensions/messaging.html" title="Message Passing in Chromium">Message Passing in Chromium</a></p>
+
+<h2 id="Enviar_dados_estruturados">Enviar dados estruturados</h2>
+
+<p>The above mechanisms use element attributes and are thus only strings. You may want to transfer objects. Gecko prevents chrome to access custom object properties added by the content, because that can create security holes. A workaround is to treat the communication between webpage and chrome as a normal network protocol and use XML.</p>
+
+<p>With element attributes and <a href="/en-US/docs/E4X" title="/en-US/docs/E4X">E4X</a>, this is fairly easy. You do need to convert your data to/from E4X objects, though. And your chrome needs to carefully check every value passed (you need to do that either way).</p>
+
+<pre class="brush: js">var targetDoc = null;
+
+function onLoad() {
+  var iframe = document.getElementById("contentiframe");
+  targetDoc = iframe.contentDocument;
+  iframe.contentWindow.addEventListener("newStuff", receiveStuffFromPage, false);
+}
+
+function receiveStuffFromPage(event) {
+  var uc = getEventData(event); // uc = unchecked data in form of E4X XML
+  var stuff = {};
+  stuff.id = sanitize.integer(uc.@id);
+  stuff.name = sanitize.label(uc.@name);
+}
+
+function sendSomethingToPage (something) {
+  var somethingXML = &lt;something/&gt;; // |something| object as E4X XML
+  somethingXML.@id = something.id;
+  somethingXML.@weight = something.weight;
+  sendMsg("sendSomething", somethingXML);
+}
+
+/**
+ * Send msgs from chrome to the page
+ * @param type {String} the event type. The receiver needs to use that
+ * when doing addEventListener(type, ...)
+ * @param dataXML {E4X} the data or detail
+ */
+function sendMsg(type, dataXML) {
+  var el = targetDoc.body;
+  el.setAttribute("eventDataToPage", dataXML ? dataXML.toString() : "");
+  var event = targetDoc.createEvent("Event")
+  event.initEvent(type, true, true);
+  el.dispatchEvent(event);
+}
+
+/**
+ * Verifies that the event is indeed coming from our page
+ * as expected, and returns the data for that event.
+ * @returns {E4X} the (unchecked) detail data from the page.
+ * You must check the data.
+ * @see &lt;https://developer.mozilla.org/en-US/docs/Code_snippets/
+ * Interaction_between_privileged_and_non-privileged_pages#Security_notes&gt;
+ */
+function getEventData(event) {
+  if (event.target.ownerDocument != targetDoc)
+    throw "event from unexpected source";
+  return new XML(event.target.getAttribute("eventDataFromPage"));
+}
+</pre>
+
+<h2 id="Security_notes" name="Security_notes">Notas de segurança</h2>
+
+<ul>
+ <li>Never invoke the web page's JavaScript functions from your extension - doing this increases the chance of creating a security hole, where a malicious web page can trick the browser to run its code with extended privileges (just like your extension) with, for example, the ability to delete local files.</li>
+ <li>It is highly recommended to check the source of the event (via <code>event.target.ownerDocument.location</code>) and make your extension ignore any events from pages not from your server.</li>
+</ul>
+
+<h2 id="Resources" name="Resources">Recursos</h2>
+
+<p><a class="external" href="http://forums.mozillazine.org/viewtopic.php?p=2955601">Fórum de Discussão de Mozillazine</a></p>
+
+<p><a href="/pt-PT/docs/Communication_between_HTML_and_your_extension" title="/en-US/docs/Communication between HTML and your extension">Comunicação entre HTML e a sua extensão</a></p>
+
+<h2 id="Consulte_também">Consulte também</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/CustomEvent" title="/en-US/docs/Web/API/CustomEvent">CustomEvent</a></li>
+ <li><a href="/en-US/docs/Web/API/window.postMessage" title="/en-US/docs/Web/API/window.postMessage">Window.postMessage</a></li>
+ <li><a class="external" href="http://hyperstruct.net/2006/08/18/exchanging-data-between-chrome-and-content/" title="http://hyperstruct.net/2006/08/18/exchanging-data-between-chrome-and-content/">http://hyperstruct.net/2006/08/18/exchanging-data-between-chrome-and-content/</a></li>
+</ul>
+
+<div id="SL_balloon_obj" style="display: block;">
+<div id="SL_shadow_translation_result2" style="display: none;"> </div>
+
+<div id="SL_shadow_translator" style="display: none;">
+<div id="SL_planshet">
+<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_Bproviders">
+<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
+</div>
+
+<div id="SL_alert_bbl" style="display: none;">
+<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_alert_cont"> </div>
+</div>
+
+<div id="SL_TB">
+<table id="SL_tables">
+ <tbody>
+  <tr>
+   <td class="SL_td"><input></td>
+   <td class="SL_td"><select><option value="auto">Detectar idioma</option><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+   <td class="SL_td">
+    <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Alternar Idiomas"> </div>
+   </td>
+   <td class="SL_td"><select><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option selected value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+   <td class="SL_td">
+    <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ouça"> </div>
+   </td>
+   <td class="SL_td">
+    <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Copiar"> </div>
+   </td>
+   <td class="SL_td">
+    <div id="SL_bbl_font_patch"> </div>
+
+    <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Tamanho da fonte"> </div>
+   </td>
+   <td class="SL_td">
+    <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ajuda"> </div>
+   </td>
+   <td class="SL_td">
+    <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Fixar a janela de pop-up"> </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+
+<div id="SL_shadow_translation_result" style=""> </div>
+
+<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_player2"> </div>
+
+<div id="SL_alert100">A função de fala é limitada a 200 caracteres</div>
+
+<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
+<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<table id="SL_tbl_opt" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><input></td>
+   <td>
+    <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Mostrar o botão do ImTranslator 3 segundos"> </div>
+   </td>
+   <td><a class="SL_options" title="Mostrar opções">Opções</a> : <a class="SL_options" title="Histórico de tradução">Histórico</a> : <a class="SL_options" title="Comentários">Comentários</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Faça sua contribuição">Donate</a></td>
+   <td><span id="SL_Balloon_Close" title="Encerrar">Encerrar</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+</div>

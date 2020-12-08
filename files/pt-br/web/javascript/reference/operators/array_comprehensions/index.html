@@ -1,0 +1,207 @@
+---
+title: Array comprehensions
+slug: Web/JavaScript/Reference/Operators/Array_comprehensions
+tags:
+  - Array
+  - ECMAScript7
+  - JavaScript
+  - Operador
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<p>{{jsSidebar("Operators")}}</p>
+
+<h2 id="Sumário">Sumário</h2>
+
+<p> </p>
+
+<p><span class="seoSummary"><span style="line-height: 19.0909080505371px;">A sintaxe de </span><strong style="line-height: 19.0909080505371px;">array comprehension</strong><span style="line-height: 19.0909080505371px;"> trata-se de uma expressão JavaScript que lhe permite rapidamente montar um novo array com base em outro já existente. As comprehensions já existem em várias outras linguagens e estarão então presentes no padrão ECMAScript 7.</span></span></p>
+
+<p>Veja abaixo as diferenças para a antiga implementação no SpiderMOnkey, baseado nas propostas para o ECMAScript 4.</p>
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<pre class="syntaxbox">[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+</pre>
+
+<h2 id="Descrição">Descrição</h2>
+
+<p>Dentro de array comprehensions dois tipos de components são permitidos: </p>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> e</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a></li>
+</ul>
+
+<p>A iteração por for-of deve sempre, ser a primeira componente. Multiplos <code>for-of</code> ou <code>if</code>s podem  também ser permitidos.</p>
+
+<h2 id="Exemplos">Exemplos</h2>
+
+<h3 id="Array_comprehensions_simples">Array comprehensions simples</h3>
+
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
+
+var abc = [ "A", "B", "C" ];
+[for (letters of abc) letters.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
+
+<h3 id="Array_comprehensions_com_if">Array comprehensions com <code>if</code></h3>
+
+<pre class="brush: js">var years = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+[for (year of years) if (year &gt; 2000) year];
+// [ 2006, 2010, 2014 ]
+[for (year of years) if (year &gt; 2000) if(year &lt; 2010) year];
+// [ 2006], the same as below:
+[for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year];
+// [ 2006]
+</pre>
+
+<h3 id="Array_comprehensions_comparado_a_map_e_filter">Array comprehensions comparado a <code>map</code> e <code>filter</code></h3>
+
+<p>Um modo fácil de entender a sintaxe de array comprehension é comparar com os métodos {{jsxref("Array.map", "map")}} e {{jsxref("Array.filter", "filter")}}:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+numbers.map(function (i) { return i * i });
+[for (i of numbers) i*i ];
+// both is [ 1, 4, 9 ]
+
+numbers.filter(function (i) { return i &lt; 3 });
+[for (i of numbers) if (i &lt; 3) i];
+// both is [ 1, 2 ]
+</pre>
+
+<h3 id="Array_comprehensions_com_dois_arrays">Array comprehensions com dois arrays</h3>
+
+<p>Utilizando dois iteradores <code>for-of, com dois arrays:</code></p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+var letters = [ "a", "b", "c" ];
+
+var cross = [for (i of numbers) for (j of letters) i+j];
+// [ "1a", "1b", "1c", "2a", "2b", "2c", "3a", "3b", "3c" ]
+
+var grid = [for (i of numbers) [for (j of letters) i+j]];
+// [
+//  ["1a", "1b", "1c"],
+//  ["2a", "2b", "2c"],
+//  ["3a", "3b", "3c"]
+// ]
+
+[for (i of numbers) if (i &gt; 1) for (j of letters) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"], the same as below:
+
+[for (i of numbers) for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]
+
+[for (i of numbers) if (i &gt; 1) [for (j of letters) if(j &gt; "a") i+j]]
+// [["2b", "2c"], ["3b", "3c"]], not the same as below:
+
+[for (i of numbers) [for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]]
+// [[], ["2b", "2c"], ["3b", "3c"]]
+</pre>
+
+<h2 id="Especificações">Especificações</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>Proposed for ECMAScript 7</td>
+   <td>No draft available yet</td>
+   <td>Estava inicialmente no rascunho para o ES6, porém foi removido na revisão 27 (Agosto, 2014). Veja as revisões antigas do ES6 para especificações de semântica. Uma versão atualizada estará de volta em um novo rascunho do ES7.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidade">Compatibilidade</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatGeckoDesktop("30") }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatGeckoMobile("30") }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Notas_sobre_implementações_para_o_SpiderMonkey">Notas sobre implementações para o SpiderMonkey</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> como um idenficador não é suportado, assim let está recentemente disponível somente para JS versão 1.7 e tags de scripts XUL.</li>
+ <li>Destruturação em comprehensions ainda não é suportado ({{bug(980828)}}).</li>
+</ul>
+
+<h3 id="Diferenças_para_as_antiga_JS1.7JS1.8_comprehensions">Diferenças para as antiga JS1.7/JS1.8 comprehensions</h3>
+
+<ul>
+ <li>Comprehensions no ES7 criam um escopo para cada nó de <font face="Courier New, Andale Mono, monospace">for<code> ao invés da comprehension toda</code></font>
+
+  <ul>
+   <li>Antigo: <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>Novo: <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, cada iteração cria uma nova binding para o </code>x.</li>
+  </ul>
+ </li>
+ <li>Comprehensions no ES7 iniciam com <code>for</code> ao invés de expressão de assinalamento.
+  <ul>
+   <li>Antigo: <code>[i * 2 for (i of numbers)]</code></li>
+   <li>Novo: <code>[for (i of numbers) <code>i * 2</code>]</code></li>
+  </ul>
+ </li>
+ <li>Comprehensions no ES7 podem ter multiplos <code>if</code> e <code>for</code>.</li>
+ <li>Comprehensions no ES7 funcionam apenas com <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> e não com iterações <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a>.</code></li>
+</ul>
+
+<h2 id="See_also" name="See_also">Veja Também</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a></li>
+ <li>{{jsxref("Operators/Generator_comprehensions", "Generator comprehensions", "" ,1)}}</li>
+</ul>

@@ -1,0 +1,288 @@
+---
+title: Dodawanie preferencji do rozszerzenia
+slug: Dodawanie_preferencji_do_rozszerzenia
+tags:
+  - Dodatki
+  - Rozszerzenia
+  - Strony_wymagające_dopracowania
+  - System_preferencji
+  - Wszystkie_kategorie
+  - XUL
+translation_of: Archive/Adding_preferences_to_an_extension
+---
+<p>{{ PreviousNext("Tworzenie rozszerzenia dynamicznego paska stanu", "Lokalizacja rozszerzenia") }} Poniższy artykuł rozszerza <a href="pl/Tworzenie_rozszerzenia_dynamicznego_paska_stanu">Tworzenie rozszerzenia dynamicznego paska stanu</a> poprzez dodanie wyskakującego menu that lets you quickly switch between multiple stocks to watch. It also adds a preference dialog that lets you switch to a stock other than one of the ones included in the popup menu.</p>
+
+<p>As before, concepts covered in the previous articles in this series won't be rehashed here, so if you haven't already seen them:</p>
+
+<ul>
+ <li><a href="pl/Tworzenie_rozszerzenia_paska_stanu">Tworzenie rozszerzenia paska stanu</a></li>
+ <li><a href="pl/Tworzenie_rozszerzenia_dynamicznego_paska_stanu">Tworzenie rozszerzenia dynamicznego paska stanu</a></li>
+</ul>
+
+<p>Also, for reference, you may want to take a look at <a href="pl/System_preferencji">System preferencji</a>.</p>
+
+<h2 id="Pobieranie_przyk.C5.82adu" name="Pobieranie_przyk.C5.82adu">Pobieranie przykładu</h2>
+
+<p>Możesz pobrać przykład, aby użyć go do stworzenia własnego rozszerzenia.</p>
+
+<p><a class="external" href="http://developer.mozilla.org/samples/extension-samples/stockwatcher2.zip">Pobierz przykład</a></p>
+
+<h2 id="Aktualizacja_manifestu" name="Aktualizacja_manifestu">Aktualizacja manifestu</h2>
+
+<p>Musi zostać zaktualizowany manifest instalacyjny oraz <a href="pl/Chrome">Chrome</a>. Zmiany dotyczą przede wszystkim zmiany ID rozszerzenia. Jednakże musimy dodać dodatkową linię do pliku <code>install.rdf</code>:</p>
+
+<pre class="eval"> <span class="nowiki">&lt;em:optionsURL&gt;chrome://stockwatcher2/content/options.xul&lt;/em:optionsURL&gt;</span>
+</pre>
+
+<p>Powyższa linia określa adres URL pliku XUL, który opisuje opcje dialogu.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><span id="result_box" lang="pl"><span class="hps">Należy pamiętać, że</span> <span class="hps">jeśli używasz</span> <span class="hps">kodu z</span> <span class="hps">tego tutoriala</span><span>, aby dodać</span> <span class="hps">do istniejącego</span> <span class="hps">rozszerzenia</span><span>,</span> <span class="hps">należy odinstalować</span> <span class="hps">i ponownie zainstalować</span> <span class="hps">rozszerzenia</span><span>, aby włączyć przycisk</span> <span class="hps">Preferencje</span> <span class="hps">dla</span> <span class="hps">rozszerzenia</span> <span class="hps">na liście</span> <span class="hps">dodatków.</span></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Okre.C5.9Blanie_warto.C5.9Bci_domy.C5.9Blnych" name="Okre.C5.9Blanie_warto.C5.9Bci_domy.C5.9Blnych">Określanie wartości domyślnych</h3>
+
+<p>W celu ustawienia domyślnych preferencji należy dodać nowy katalog do paczki rozszerzenia nazwanej "defaults", która będzie zawierał katalog "preferences". Wewnątrz niego tworzymy plik <code>defaults.js</code> opisujący wartości domyślne preferencji:</p>
+
+<pre class="eval"> pref("extensions.stockwatcher2.symbol", "GOOG");
+</pre>
+
+<p>By dowiedzieć się więcej o systemie preferencji przeczytaj <a href="pl/API_Preferencji">API Preferencji</a>.</p>
+
+<h2 id="Kod_JavaScript" name="Kod_JavaScript">Kod JavaScript</h2>
+
+<p>In order to monitor changes to our preferences, we need to install an observer using the <a href="pl/NsIPrefBranch2">nsIPrefBranch2</a> interface. To do that, we need to reimplement our code into an object.</p>
+
+<p>That involves turning each function into a member of the <code>StockWatcher</code> class. Let's take a look at each function in the class.</p>
+
+<h3 id="startup.28.29" name="startup.28.29">startup()</h3>
+
+<p>The <code>StockWatcher.startup()</code> function is called when our extension is first loaded. Its job is to start up the observer to watch for changes to our preferences, instantiate an object to use to manage our preferences, and install an interval routine to update the stock information periodically.</p>
+
+<pre class="eval"> var StockWatcher = {
+   prefs: null,
+   tickerSymbol: "",
+
+   // Initialize the extension
+
+   startup: function()
+   {
+     // Register to receive notifications of preference changes
+
+     this.prefs = Components.classes["@mozilla.org/preferences-service;1"]
+         .getService(Components.interfaces.nsIPrefService)
+         .getBranch("stockwatcher2.");
+     this.prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
+     this.prefs.addObserver("", this, false);
+
+     this.tickerSymbol = this.prefs.getCharPref("symbol").toUpperCase();
+
+     this.refreshInformation();
+     window.setInterval(this.refreshInformation, 10*60*1000);
+   },
+</pre>
+
+<p>Our object has two member variables. <code>prefs</code> is configured by <code>startup()</code> to reference our extension's preferences, while <code>tickerSymbol</code> indicates the stock symbol to monitor.</p>
+
+<p>The first thing the <code>startup()</code> function does is to get a reference to the preferences for our extension. This is done in two steps:</p>
+
+<ul>
+ <li>First, we get the Preferences service. This component handles preference management for Firefox and any extensions.</li>
+</ul>
+
+<ul>
+ <li>Second, we call <code><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html#method_getBranch">nsIPrefService.getBranch()</a></code>. This lets us specify a specific branch of the preference tree to access. By default, we would have access to all preferences, but we only want access to those belonging to our own extension, so we specify that we want to access the "stockwatcher2" branch.</li>
+</ul>
+
+<p>After getting the preference branch for our extension, we call the <code><a href="pl/NsISupports/QueryInterface">QueryInterface()</a></code> method on it to be able to use the methods of the <code>nsIPrefBranch2</code> interface.</p>
+
+<p>The next step is to register a preference observer by calling the <code>addObserver()</code> method to establish that whenever any events occur on the preferences, our object (<var>this</var>) receives notification. When events occur, such as a preference being altered, our <code>observe()</code> method will be called automatically.</p>
+
+<p>Now that we're monitoring the preferences, we can set up to watch the stock information and display it in the status bar panel.</p>
+
+<p>The first thing we need to do is get the currently configured stock symbol to watch from the preferences. To do so, we call the <code>nsIPrefBranch.getCharPref()</code> method, specifying that we want the preference named "symbol", which is where we store the user's selection for the stock to watch. We forcibly convert the symbol to upper-case since that's the way stock symbols are normally displayed.</p>
+
+<p>Next, we call our own <code>refreshInformation()</code> method to immediately fetch and display the current information about the stock the extension is configured to monitor. We'll look at the details of how this method works later.</p>
+
+<p>The last thing the <code>startup()</code> method does is to call the <code><a href="pl/DOM/window.setInterval"> window.setInterval()</a></code> DOM method to set up a callback that will automatically run our <code>refreshInformation()</code> method every 10 minutes. The interval time is specified in milliseconds.</p>
+
+<h3 id="shutdown.28.29" name="shutdown.28.29">shutdown()</h3>
+
+<p>The <code>StockWatcher.shutdown()</code> method deactivates the observer on the preferences. This is also where we would add any other shutdown tasks we need to perform.</p>
+
+<pre class="eval">  shutdown: function()
+  {
+    this.prefs.removeObserver("", this);
+  },
+</pre>
+
+<h3 id="observe.28.29" name="observe.28.29">observe()</h3>
+
+<p>The <code>StockWatcher.observe()</code> function is called whenever an event occurs on the preference branch we're watching. For details on how observers work, read up on the <a href="pl/NsIObserver">nsIObserver</a> interface.</p>
+
+<pre class="eval">   observe: function(subject, topic, data)
+   {
+     if (topic != "nsPref:changed")
+     {
+       return;
+     }
+
+     switch(data)
+     {
+       case "symbol":
+         this.tickerSymbol = this.prefs.getCharPref("symbol").toUpperCase();
+         this.refreshInformation();
+         break;
+     }
+   },
+</pre>
+
+<p>The <code>topic</code> parameter indicates what type of event occurred. If it's not <code>nsPref:changed</code>, we simply ignore the event, since all we're interested in is changes to the values of our preferences.</p>
+
+<p>Once we've established that the event is in fact a preference change, we look at the <code>data</code> parameter, which contains the name of the preference that changed. In our example, we only have one preference, but you can monitor as many preferences as you wish here.</p>
+
+<p>If the changed preference is "symbol", we grab the updated value of the preference by calling the <code>nsIPrefBranch.getCharPref()</code> method, and stash it in our <code>tickerSymbol</code> variable.</p>
+
+<p>Once we've gotten the updated preference, we call <code>refreshInformation()</code> to immediately update the display with the new stock's information.</p>
+
+<h3 id="watchStock.28.29" name="watchStock.28.29">watchStock()</h3>
+
+<p>While we're at it, let's add a method that sets which stock we want to be watching, changing the preference and immediately requesting a refresh of the display. This method will be used when the user uses the popup menu we'll be adding to change what stock they're watching.</p>
+
+<pre class="eval">   watchStock: function(newSymbol)
+   {
+     this.prefs.setCharPref("symbol", newSymbol);
+   },
+</pre>
+
+<p>The only new information for us here is the call to the preference object's <code>setCharPref()</code> function, which sets the value of the "symbol" preference.</p>
+
+<p>Note that this call results in our <code>StockWatcher.observe()</code> method being invoked and displayed stock information being updated.</p>
+
+<h3 id="refreshInformation.28.29" name="refreshInformation.28.29">refreshInformation()</h3>
+
+<p>This method is slightly revised from previous versions, in that it needs to fetch the preference for the stock to watch and use that to construct the URL to monitor, as well as to construct the string to be displayed in the status bar panel.</p>
+
+<pre class="eval">   refreshInformation: function()
+   {
+     // Because we may be called as a callback, we can't rely on
+     // "this" referring to the right object, so we need to reference
+     // it by its full name
+
+     var symbol = StockWatcher.tickerSymbol;
+
+     var fullUrl = "<span class="nowiki">http://quote.yahoo.com/d/quotes.csv?f=sl1d1t1c1ohgv&amp;e=.csv&amp;s=</span>"
+         + symbol;
+
+     function infoReceived()
+     {
+       var samplePanel = document.getElementById('stockwatcher2');
+       var output = httpRequest.responseText;
+
+       if (output.length)
+       {
+         // Remove any whitespace from the end of the string
+         output = output.replace(/\W*$/, "");
+
+         // Build the tooltip string
+         var fieldArray = output.split(",");
+         samplePanel.label = symbol + ": " + fieldArray[1];
+         samplePanel.tooltipText = "Chg: " + fieldArray[4] + " | " +
+             "Open: " + fieldArray[5] + " | " +
+             "Low: " + fieldArray[6] + " | " +
+             "High: " + fieldArray[7] + " | " +
+             "Vol: " + fieldArray[8];
+       }
+     }
+
+     var httpRequest = new XMLHttpRequest();
+
+     httpRequest.open("GET", fullUrl, true);
+     httpRequest.onload = infoReceived;
+     httpRequest.send(null);
+   }
+ }
+</pre>
+
+<p>Note that we use <code>StockWatcher.tickerSymbol</code> here instead of <code>this.tickerSymbol</code> to get the stock symbol to watch. We do this because since <code>refreshInformation()</code> is usually called as a callback from <code>setInterval</code>. In such cases <code>this</code> doesn't refer to the right object. See <a href="pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_this#Wi.C4.85zanie_metod">Wiązanie metod</a> for detailed explanation.</p>
+
+<p>Once we have the symbol in the local variable <code>symbol</code>, we use that to construct the URL and the string to display in the status bar panel.</p>
+
+<h3 id="Instalowanie_nas.C5.82uchu_zdarze.C5.84" name="Instalowanie_nas.C5.82uchu_zdarze.C5.84">Instalowanie nasłuchu zdarzeń</h3>
+
+<p>The only thing left to do is to install the event listeners needed to run the <code>startup()</code> and <code>shutdown()</code> routines automatically when the browser window is loaded and unloaded.</p>
+
+<pre class="eval">window.addEventListener("load", function(e) { StockWatcher.startup(); }, false);
+window.addEventListener("unload", function(e) { StockWatcher.shutdown(); }, false);
+</pre>
+
+<h2 id="Design_the_preference_dialog" name="Design_the_preference_dialog">Design the preference dialog</h2>
+
+<p>Now that we've written all the code, we need to build the XUL file for the options dialog.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<span class="nowiki">chrome://global/skin/</span>" type="text/css"?&gt;
+
+&lt;prefwindow id="stockwatcher2-prefs"
+     title="StockWatcher 2 Options"
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;prefpane id="sw2-stock-pane" label="Stock Settings"&gt;
+  &lt;preferences&gt;
+    &lt;preference id="pref_symbol" name="stockwatcher2.symbol" type="string"/&gt;
+  &lt;/preferences&gt;
+
+  &lt;hbox align="center"&gt;
+    &lt;label control="symbol" value="Stock to watch: "/&gt;
+    &lt;textbox preference="pref_symbol" id="symbol" maxlength="4"/&gt;
+  &lt;/hbox&gt;
+&lt;/prefpane&gt;
+
+&lt;/prefwindow&gt;
+</pre>
+
+<p>The <code>&lt;preferences&gt;</code> block establishes all the settings we implement as well as their types. In our case, we have a single preference, the stock symbol to monitor. Preferences are identified by name; in this case, the name is "stockwatcher2.symbol".</p>
+
+<p>The actual user interface is described in the <code>&lt;prefpane&gt;</code> block. The <code>&lt;hbox&gt;</code> element is used to lay out the user interface by indicating that the widgets inside it should be positioned horizontally, next to each other in the window.</p>
+
+<p>Our dialog has two widgets in it. The first is a label describing the textbox. The second is the textbox itself, in which the user enters the symbol. The <code>preference</code> property ties the textbox to the "pref_symbol" &lt;preference&gt; element and to the "stockwatcher2.symbol" preference. This lets the preference value automatically be updated to reflect the content of the textbox.</p>
+
+<h2 id="Dodanie_kontekstowego_menu" name="Dodanie_kontekstowego_menu">Dodanie kontekstowego menu</h2>
+
+<p>Adding the contextual menu is easy; all the work that needs doing is done in the stockwatcher2.xul file. The first step is to add the <code>context</code> attribute to the status bar panel:</p>
+
+<pre class="eval"> &lt;statusbar id="status-bar"&gt;
+   &lt;statusbarpanel id="stockwatcher2"
+     label="Loading..."
+     context="stockmenu"
+     onclick="StockWatcher.refreshInformation()"
+   /&gt;
+ &lt;/statusbar&gt;
+</pre>
+
+<p>Now when the user clicks on the status bar panel, the stock information refreshes, but when they right-click on it, a context menu pops up.</p>
+
+<p>Defining the menu is also easy. All we need to do is add a <code>popupset</code> describing the menu to the statusbar, as follows:</p>
+
+<pre class="eval"> &lt;popupset&gt;
+   &lt;menupopup id="stockmenu"&gt;
+     &lt;menuitem label="Refresh Now" default="true"
+               oncommand="StockWatcher.refreshInformation()"/&gt;
+     &lt;menuseparator/&gt;
+     &lt;menuitem label="Apple (AAPL)" oncommand="StockWatcher.watchStock('AAPL')"/&gt;
+     &lt;menuitem label="Google (GOOG)" oncommand="StockWatcher.watchStock('GOOG')"/&gt;
+     &lt;menuitem label="Microsoft (MSFT)" oncommand="StockWatcher.watchStock('MSFT')"/&gt;
+     &lt;menuitem label="Yahoo! (YHOO)" oncommand="StockWatcher.watchStock('YHOO')"/&gt;
+   &lt;/menupopup&gt;
+ &lt;/popupset&gt;
+</pre>
+
+<p>Each item in the menu has a <code>label</code> property, which specifies the text displayed in the menu, as well as an <code>oncommand</code> property, which indicates the JavaScript code to execute when the user selects that item.</p>
+
+<p>The Refresh Now option calls the <code>StockWatcher.refreshInformation()</code> function, to refresh the display. The rest of the options call the <code>StockWatcher.watchStock()</code> function to start watching a different stock.</p>
+
+<p>For a more detailed tutorial on creating popup menus, zobacz <a href="pl/Kurs_XUL/Wyskakuj%c4%85ce_menu">Kurs XUL:Wyskakujące menu</a>. {{ PreviousNext("Tworzenie rozszerzenia dynamicznego paska stanu", "Lokalizacja rozszerzenia") }}</p>

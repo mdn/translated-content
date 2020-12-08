@@ -1,0 +1,80 @@
+---
+title: Tworzenie instalatora
+slug: Mozilla/Tech/XUL/Kurs_XUL/Tworzenie_instalatora
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_an_Installer
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Nakładki_dla_wielu_pakietów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Skrypty_instalacyjne">Następny  »</a></p>
+</div><p></p>
+<p>W tym artykule opisane jest, jak umieścić aplikację XUL w instalatorze.</p>
+<h3 id="Paczki_XPInstall" name="Paczki_XPInstall">Paczki XPInstall</h3>
+<p>Mozilla dostarcza mechanizm, który może zostać użyty do umieszczenia okien XUL, skryptów, skórek i innych plików w pojedynczych plikach instalatora. Możesz umieścić gdziekolwiek plik instalatora, aby użytkownik mógł go pobrać. Wystarczy prosty skrypt do tego, by paczka została pobrana i zainstalowana. Ten mechanizm nazywa się <a href="pl/XPInstall">XPInstall</a> (Cross Platform Install).</p>
+<p>Instalator XPInstall jest spakowany w pliku JAR. Do pliku JAR można dodawać pliki, które mają być zainstalowane. W dodatku instalator powinien być zawarty w skryptach instalacyjnych (plik install.js), używanych w procesie instalacji. Skrypt ma dostęp do różnych funkcji instalacji, które mogą posłużyć do instalacji plików i komponentów.</p>
+<p>Pliki instalatora JAR zwykle mają rozszerzenie .xpi (wymawiamy zippy), by odróżnić je od innych archiwów. Zwykle instalatory będą używane do instalacji komponentów Mozilli, takich jak motywy, wtyczki i inne paczki.</p>
+<p>Jest kilka następujących po sobie kroków wymaganych do instalacji. Opisane poniżej (krok po kroku):</p>
+<ol>
+ <li>Stwórz stronę WWW, z której użytkownik może pobrać oprogramowanie do instalacji. Strona będzie zawierała wyzwalacz, który jest częścią skryptu, który zainicjuje proces instalacji.</li>
+ <li>Użytkownik otrzyma okno dialogowe z informacją o tym, jaka paczka będzie instalowana. Może być to użyte do uruchomienia wielu instalatorów. W tym przypadku będą one przedstawione na liście. Użytkownik będzie mógł wybrać między kontynuacją lub anulowaniem instalacji.</li>
+ <li>Jeżeli użytkownik zdecyduje się na kontynuację, plik XPI jest pobierany. Pasek postępu jest wyświetlany podczas całego procesu.</li>
+ <li>Plik install.js jest wypakowywany z archiwum skryptu i uruchamiany. Skrypt ten wywoła funkcje instalacyjne, które wskażą, które pliki z archiwum powinny zostać zainstalowane</li>
+ <li>Gdy skrypt się zakończy, instalacja nowej paczki jest gotowa. W przypadku rozbudowanych paczek skrypty będą uruchamiane kolejno po sobie.</li>
+</ol>
+<h3 id="Wyzwalacze_instalatora" name="Wyzwalacze_instalatora">Wyzwalacze instalatora</h3>
+<p>Jak widać na powyższym przykładzie, proces instalacji jest inicjowany przez umieszczony na stornie wyzwalacz instalatora. To pociąga za sobą użycie specjalnego, globalnego obiektu InstallTrigger. Zawiera pewną liczbę metod, które mogą zostać użyte, by zacząć proces instalacji. Możesz użyć obiektu o lokalnej lub zdalnej zawartości, to znaczy pobieranej z jakiegoś miejsca w sieci.</p>
+<p>Stwórzmy przykładowy wyzwalacz instalatora. Pociąga to za sobą użycie funkcji <code>InstallTrigger.install()</code>, która pobiera dwa argumenty, pierwszy to lista paczek do instalacji, a druga jest funkcją wywołania zwrotnego, która będzie wywołana, gdy instalacja dobiegnie końca. Na przykład:</p>
+<pre>function doneFn ( name , result ){
+  alert("The package " + name + " was installed with a result of " + result);
+}
+
+var xpi = new Object();
+xpi["Calendar"] = "calendar.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+<p>Najpierw definiujemy funkcję zwrotną doneFn(), która będzie wywołana, gdy instalacja będzie kompletna. Możesz oczywiście nazwać funkcję, jak ci się podoba. Funkcja ma dwa argumenty. Pierwszy jest nazwą paczki aktualnie zainstalowanej. Jest to istotne, gdy instalujesz wiele składników. Drugi jest kodem wynikowym. Jeżeli ma wartość 0, to znaczy, że instalacja przebiegła pomyślnie. Jeżeli wartość jest inna niż 0, wartość jest kodem błędu. Funkcja doneFn() pokazuje właśnie okienko z alertem.</p>
+<p>Następnie tworzymy tablice xpi, która będzie przetrzymywać nazwę (Calendar) i adres URL (calendar.xpi) dla instalatora. Robisz tak samo dla każdej paczki, którą chcesz zainstalować. W końcu wywołujemy funkcję instalacyjną.</p>
+<p>Kiedy ta część skryptu zostanie wykonana, calendar.xpi będzie zainstalowane.</p>
+<div class="highlight">
+ <h4 id="Nasz_przyk.C5.82ad:_Okienko_dialogowe_Znajd.C5.BA_pliki" name="Nasz_przyk.C5.82ad:_Okienko_dialogowe_Znajd.C5.BA_pliki">Nasz przykład: Okienko dialogowe &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h4>
+ <p>Wypróbujmy to z wyszukiwaniem plików:</p>
+ <pre>function doneFn ( name , result ){
+  if (result) alert("An error occured: " + result);
+}
+
+var xpi = new Object();
+xpi["Find Files"] = "findfile.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+</div>
+<h3 id="Archiwum_XPI" name="Archiwum_XPI">Archiwum XPI</h3>
+<div class="note">
+ <b>Uwaga</b>: Jeśli chcesz stworzyć nową <a href="pl/XULRunner">aplikację XULRunner</a>, <a href="pl/Rozszerzenia">rozszerzenie</a> lub <a href="pl/Motywy">motyw</a>, zobacz <a href="pl/Paczki">Paczki</a>.</div>
+<p>Plik instalatora XPI jest konieczny, by zawrzeć plik zwany install.js, który jest plikiem <a href="pl/JavaScript">JavaScript</a>, wykonywanym podczas instalacji. Pozostałe pliki są plikami do instalacji. Zwykle te pliki umieszczone są w katalogu, wewnątrz archiwum, ale niekoniecznie. Dla plików chrome może mieć strukturę podobną do katalog chrome.</p>
+<p>Często tylko pliki umieszczone w archiwum XPI zostaną zainstalowane, a będą to skrypty instalacji (install.js) i pliki JAR. JAR przechowuje pliki używane przez twoja aplikację. Komponenty dostarczone wraz z Mozillą są przechowywane w ten sam sposób.</p>
+<p>Ponieważ plik XPI jest specjalnym plikiem ZIP, możemy tworzyć i dodawać pliki do niego używając do tego programów archiwizujących.</p>
+<div class="highlight">
+ <h4 id="Nasz_przyk.C5.82ad:_Okienko_dialogowe_Znajd.C5.BA_pliki_2" name="Nasz_przyk.C5.82ad:_Okienko_dialogowe_Znajd.C5.BA_pliki_2">Nasz przykład: Okienko dialogowe &lt;tt&gt;Znajdź pliki&lt;/tt&gt;</h4>
+ <p>Dla okienka dialogowego &lt;tt&gt;Znajdź pliki&lt;/tt&gt; stworzymy strukturę w archiwum następująco:</p>
+ <pre>install.js
+findfile
+  content
+    contents.rdf
+    findfile.xul
+    findfile.js
+  skin
+    contents.rdf
+    findfile.css
+  locale
+    contents.rdf
+    findfile.dtd
+</pre>
+</div>
+<p>Katalog został dodany dla każdego części paczki, z zawartością, motywów i lokalizacji. Plik contents.rdf posiada także ten dodatek, ponieważ będzie potrzebny do rejestracji plików chrome.</p>
+<p>Następne spojrzenie w przyszłość z <a href="pl/Kurs_XUL/Skrypty_instalacyjne">zainstalowanymi skryptami</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Nakładki_dla_wielu_pakietów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Skrypty_instalacyjne">Następny  »</a></p>
+</div><p></p>

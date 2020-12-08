@@ -1,0 +1,170 @@
+---
+title: Polecenia
+slug: Mozilla/Tech/XUL/Kurs_XUL/Polecenia
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Commands
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrola_zaznaczenia_i_aktywacji_elementów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Aktualizacja_poleceń">Następny  »</a></p>
+</div><p></p>
+
+<p>Polecenia to rodzaj operacji, która może być przywoływana.</p>
+
+<h2 id="Elementy_polecenia" name="Elementy_polecenia">Elementy polecenia</h2>
+
+<p>Element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> jest stosowany w celu stworzenia poleceń, które będą służyły przeprowadzaniu operacji. Nie potrzebujemy używać poleceń, od kiedy można je zastąpić wywołaniem skryptu obsługującego pewne zdarzenia. Jednak, polecenia posiadają pewną przewagę. Mowa tu o ich zdolności do automatycznej dezaktywacji, kiedy zajdzie taka potrzeba oraz mogą być wywoływane zewnętrznie bez znajomości szczegółów implementacji samego polecenia. Zapewniają one możliwość stworzenia pewnego abstraktu oddzielającego operacje od samego kodu. Polecenia są przydatne szczególnie w większych aplikacjach. Przykładem jest implementacja poleceń menu związanych ze schowkiem, takich jak; &lt;tt&gt;wytnij&lt;/tt&gt;, &lt;tt&gt;kopiuj&lt;/tt&gt;, &lt;tt&gt;wklej&lt;/tt&gt;. Jeśli nie korzystaliśmy z poleceń, będziemy potrzebowali określić, które pola posiadają skupienie, a następnie upewnić się, że operacja jest odpowiednia dla danego elementu. Dodatkowo, polecenia menu, potrzebują opcji aktywacji oraz dezaktywacji w zależności od tego czy element posiadający skupienie, zawiera zaznaczony teksy, czy też nie. Również do operacji wklejenia, w zależności, czy w schowku znajduje się odpowiednia do wklejenia zawartość. Jak można zauważyć, zaczyna się to komplikować. Wykorzystanie poleceń oszczędza w tym przypadku wiele pracy.</p>
+
+<p>Można używać poleceń dla każdej operacji. Mozilla wykorzystuje je do niemal każdego polecenia menu. Dodatkowo, pola tekstowe oraz inne elementy posiadają pewną liczbę wspierających je i gotowych do wywołania poleceń. Powinno się je używać w przypadku operacji zależnych od tego, na którym elemencie występuje skupienie.</p>
+
+<p>Polecenie jest identyfikowane poprzez jej atrybut <code><code id="a-id"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/id">id</a></code></code>. Mozilla używa konwencji, w której jej id rozpoczyna się przedrostkiem '&lt;tt&gt;cmd_&lt;/tt&gt;'. W celu zapobiegnięcia konfliktom w nazwach poleceń, można umieszczać nazwę aplikacji w wewnątrz id polecenia. Przykład poniżej:</p>
+
+<h3 id="Przyk.C5.82ad:_Proste_polecenie_command" name="Przyk.C5.82ad:_Proste_polecenie_command">Przykład: Proste polecenie <code>command</code></h3>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul">Podgląd</a></p>
+
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Pomoc!');"/&gt;
+&lt;button label="Pomoc" command="cmd_openhelp"/&gt;
+</pre>
+
+<p>W tym przykładzie, zamiast umieszczania atrybutu <code><code id="a-oncommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/oncommand">oncommand</a></code></code> w elemencie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>, wstawiamy element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code>. Są one połączone za pomocą atrybutu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code>, który posiada wartość id polecenia. W rezultacie w chwili wciśnięcia przycisku, polecenie zostaje wywoływane.</p>
+
+<p>Istnieją dwie zalety używania tego podejścia:</p>
+
+<ul>
+ <li>Pierwsza, to przesunięcie wszystkich naszych operacji do poleceń, które mogą być pogrupowane razem w sekcje w plikach XUL. Znaczy to, że ów kod, jest skupiony w jednym miejscu, nie natomiast rozproszony po kodzie całego interfejsu użytkownika,</li>
+ <li>Inną zaletą jest fakt, że kilka przycisków i innych elementów UI (interfejs użytkownika), może być "podpiętych" do tego samego polecenia. Przykładowo, możemy posiadać pewną <a href="pl/Kurs_XUL/Proste_paski_menu">pozycję menu</a>, <a href="pl/Kurs_XUL/Paski_narz%c4%99dzi">przycisk paska narzędzi</a> i <a href="pl/Kurs_XUL/Skr%c3%b3ty_klawiaturowe">skrót klawiaturowy</a> podłączony do tego samego polecenia. Dużo wygodniejszym rozwiązaniem, niż powtarzanie tego samego kodu dla każdego z tych trzech elementów, jest wspomniane "podpięcie" ich pod to samo polecenie. Zazwyczaj, podłączane są tylko elementy, które wysyłają zdarzenie polecenia.</li>
+</ul>
+
+<p>Dodatkowo:</p>
+
+<ul>
+ <li>Jeśli ustalimy także atrybut <code><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code></code> dla polecenia, będzie ono dezaktywowane i nie będzie możliwości jego wywołania,</li>
+ <li>Każdy przycisk oraz pozycja menu "podpięte" do niego, będą również automatycznie dezaktywowane,</li>
+ <li>Jeśli ponownie aktywujesz polecenie to przyciski i inne elementy ponownie staną się aktywne.</li>
+</ul>
+
+<h3 id="Przyk.C5.82ad:_Prze.C5.82.C4.85czenie_wy.C5.82.C4.85czenia_command" name="Przyk.C5.82ad:_Prze.C5.82.C4.85czenie_wy.C5.82.C4.85czenia_command">Przykład: Przełączenie wyłączenia <code>command</code></h3>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul">Podgląd</a></p>
+
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Pomoc');"/&gt;
+&lt;button label="Pomoc" command="cmd_openhelp"/&gt;
+&lt;button label="Więcej pomocy" command="cmd_openhelp"/&gt;
+
+&lt;button label="Wyłącz"
+        oncommand="document.getElementById('cmd_openhelp').setAttribute('disabled','true');"/&gt;
+&lt;button label="Włącz"
+        oncommand="document.getElementById('cmd_openhelp').removeAttribute('disabled');"/&gt;
+</pre>
+
+<p>W tym przykładzie oba przyciski używają tego samego polecenia. Kiedy przycisk "Wyłącz" zostanie naciśnięty, polecenie zostaje dezaktywowane poprzez ustalenie jego atrybutu <code><code id="a-disabled"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/disabled">disabled</a></code></code>. W tym przypadku oba przyciski zostaną dezaktywowane.</p>
+
+<p>Szeroko stosowanym zabiegiem jest grupowanie poleceń w elementy o nazwie <code><code><a href="/pl/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code></code>. Znajdują się one zazwyczaj na początku pliku XUL. Przykład poniżej:</p>
+
+<pre>&lt;commandset&gt;
+  &lt;command id="cmd_open" oncommand="alert('Otwórz!');"/&gt;
+  &lt;command id="cmd_help" oncommand="alert('Pomoc!');"/&gt;
+&lt;/commandset&gt;
+</pre>
+
+<p>Polecenie jest wywoływane, kiedy użytkownik aktywuje (włączy) przycisk lub inny element połączony z tą metodą. Możemy, także wywoływać polecenia poprzez zastosowanie metody <code><span id="m-doCommand"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/doCommand">doCommand</a></code></span></code> dla samego elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> lub dla elementu, który jest bezpośrednio połączony z tym poleceniem, takiego jak np. przycisk.</p>
+
+<h2 id="Dyspozytor_polece.C5.84" name="Dyspozytor_polece.C5.84">Dyspozytor poleceń</h2>
+
+<p>Możemy także używać poleceń bez korzystania z elementów <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> lub przynajmniej, bez dodawania atrybutu <code><code id="a-oncommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/oncommand">oncommand</a></code></code> dla danego polecenia. W tym przypadku, polecenie nie będzie wywoływało bezpośrednio skryptu, ale w zamian, będzie wyszukiwało element lub funkcję, która obsłuży polecenie. Funkcja ta może być oddzielona od języka XUL oraz może być obsługiwane wewnętrznie. W celu znalezienia czegoś do obsługi poleceń, XUL używa obiektu o nazwie dyspozytor poleceń (
+
+ <i>ang. command dispatcher</i>
+ ). Obiekt ten lokalizuje obsługę dla poleceń. Polecenie obsługiwane jest przez tzw. kontroler (
+
+ <i>ang. controller</i>
+ ). Tak więc, kiedy wywoływane jest polecenie, dyspozytor poleceń lokalizuje kontroler, który obsłuży dane polecenie. Możemy wyobrazić sobie element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code>, jako pewien typ kontrolera dla polecenia.</p>
+
+<p>Dyspozytor poleceń lokalizuje kontroler, przeszukując element posiadający aktualnie skupienie, pod kątem wspomnianego kontrolera, który jest w stanie obsłużyć zadane polecenie. Elementy XUL posiadają własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/controllers">controllers</a></span></code></code>, która służy do ich sprawdzania. Możemy wykorzystać własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/controllers">controllers</a></span></code></code> w celu dodania własnych kontrolerów. Przykładowo, możemy wykorzystać to w celu obsługi odpowiedzi pola list na polecenia &lt;tt&gt;wytnij&lt;/tt&gt;, &lt;tt&gt;kopiuj&lt;/tt&gt; i &lt;tt&gt;wklej&lt;/tt&gt;. W dalszej części artykułu będziemy analizować przykład obrazujący powyższą czynność. Domyślnie, tylko pola tekstowe posiadają robiący to wszystko kontroler. Obsługuje on operacje schowka, selekcji, cofania, przywracania oraz pewne operacje edycji. Warto zauważyć, że element może także posiadać wiele kontrolerów, które będą sprawdzane.</p>
+
+<p>Jeśli element posiadający aktualnie skupienie nie posiada odpowiedniego kontrolera, okno jest sprawdzane w następnej kolejności. Okno także posiada własność <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/controllers">controllers</a></span></code></code>, którą możemy modyfikować wedle uznania. Jeśli skupienie znajduje się wewnątrz ramki, każda z nich prowadzi do okna znajdującego się na wyższym poziomie, które także jest sprawdzane. Oznacza to, że polecenia będą działać nawet, jeśli skupienie znajduje się wewnątrz ramki. Powyższa teza jest również prawdziwa dla przeglądarki, ze względu na mówiący o tym, że polecenia edycji wywoływane z głównego menu, będą działać wewnątrz obszaru z zawartością. Warto zaznaczyć, że HTML także posiada system poleceń i kontrolerów, chociaż nie można go wykorzystywać na nieuprzywilejowanych stronach, ale można użyć dla np. rozszerzeń przeglądarki. Jeśli okno nie zapewnia kontrolera zdolnego do obsługi poleceń, nic się nie stanie.</p>
+
+<p>Możemy także sprawić, aby dyspozytor poleceń, używał własności dokumentu o nazwie <code>commandDispatcher</code>. Jesteśmy również w stanie go odzyskiwać z listy kontrolerów dla elementu lub okna. Dyspozytor poleceń zawiera metody służące pobieraniu kontrolerów dla poleceń oraz służące pobieraniu oraz modyfikacji skupienia.</p>
+
+<h3 id="Dodawanie_kontroler.C3.B3w" name="Dodawanie_kontroler.C3.B3w">Dodawanie kontrolerów</h3>
+
+<p>Możemy również zaimplementować własne kontrolery odpowiadające na polecenia. Możemy nawet zmienić domyślną obsługę polecenia, poprzez umiejętne umieszczenie kontrolera. Kontroler powinien implementować cztery metody, przedstawione poniżej:</p>
+
+<dl>
+ <dt>supportsCommand (command) </dt>
+ <dd>Ta metoda powinna zwracać wartość <code>true</code>, jeśli kontroler wspiera polecenie. Jeśli natomiast zwraca <code>false</code>, znaczy to, że polecenie nie jest obsługiwane i dyspozytor poleceń będzie szukał innego kontrolera. Pojedynczy kontroler może wspierać wiele poleceń.</dd>
+ <dt>isCommandEnabled (command) </dt>
+ <dd>Ta metoda powinna zwracać wartość <code>true</code>, kiedy polecenie jest aktywne lub <code>false</code> w przeciwnym przypadku. Korespondujące przyciski będą dezaktywowane automatycznie.</dd>
+ <dt>doCommand (command) </dt>
+ <dd>Uruchamia polecenia. W tym miejscu umieszczamy kod obsługujący polecenie.</dd>
+ <dt>onEvent (event) </dt>
+ <dd>Ta metoda obsługuje zdarzenia.</dd>
+</dl>
+
+<h4 id="Przyk.C5.82ad:_Implementacja_kontrolera" name="Przyk.C5.82ad:_Implementacja_kontrolera">Przykład: Implementacja kontrolera</h4>
+
+<p>Przyjmijmy, że chcemy zaimplementować pole listy, które będzie obsługiwało polecenie &lt;tt&gt;usuń&lt;/tt&gt;. Kiedy użytkownik wybierze &lt;tt&gt;usuń&lt;/tt&gt; z menu, pole listy skasuje zaznaczony wiersz. W tym przypadku, wystarczy tylko dołączyć kontroler do pola wyboru, który wykona metoda <code>doCommand</code>.</p>
+
+<p>Spróbujmy otworzyć poniższy przykład (<a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul.txt">Źródła</a> <a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul">Podgląd</a>) w oknie przeglądarki i wybrać pewne elementy z listy. Zauważmy, że polecenie <code>Usuń</code> w menu Edycja przeglądarki jest aktywne i jej wybór usunie wiersz.</p>
+
+<pre>&lt;window id="controller-example" title="Przykład kontrolera" onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init()
+{
+  var list = document.getElementById("theList");
+
+  var listController = {
+    supportsCommand : function(cmd){ return (cmd == "cmd_delete"); },
+    isCommandEnabled : function(cmd){
+      if (cmd == "cmd_delete") return (list.selectedItem != null);
+      return false;
+    },
+    doCommand : function(cmd){
+      list.removeItemAt(list.selectedIndex);
+    },
+    onEvent : function(evt){ }
+  };
+
+  list.controllers.appendController(listController);
+}
+&lt;/script&gt;
+
+&lt;listbox id="theList"&gt;
+  &lt;listitem label="Ocean"/&gt;
+  &lt;listitem label="Desert"/&gt;
+  &lt;listitem label="Jungle"/&gt;
+  &lt;listitem label="Swamp"/&gt;
+&lt;/listbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Kontroler (listControler) implementuje cztery metody opisane wyżej. Metoda <code>supportsCommand</code> zwraca <code>true</code> dla polecenia <code>cmd_delete</code>, które jest zastosowane w chwili wyboru opcji &lt;tt&gt;Usuń&lt;/tt&gt; z menu. Dla innych poleceń, zwracany jest <code>false</code>. Dzieje się tak dlatego, że kontrolery nie obsługują żadnego innego polecenia.</p>
+
+<p>Metoda <code>isCommandEnabled</code> zwraca wartość <code>true</code>, kiedy polecenie powinno być aktywne. W tym przypadku sprawdzamy czy w polu listy istnieje zaznaczony element i jeśli istnieje zwraca wartość <code>true</code>. W przeciwnym przypadku zwraca <code>false</code>. Jeśli usuniemy wszystkie wiersze, opcja &lt;tt&gt;Usuń&lt;/tt&gt; stanie się nieaktywna. W naszym prostym przykładzie może zajść możliwość kliknięcia na polu listy w celu jego uaktualnienia. Metoda <code>doCommand</code> będzie wywoływana, w chwili wyboru opcji &lt;tt&gt;Usuń&lt;/tt&gt; z menu. Spowoduje to, że zaznaczony wiersz pola listy zostanie usunięty. Natomiast metoda <code>onEvent</code> nie musi powodować żadnych efektów, więc nie dodajemy do niej żadnego kodu.</p>
+
+<h3 id="Przes.C5.82anianie_domy.C5.9Blnego_kontrolera" name="Przes.C5.82anianie_domy.C5.9Blnego_kontrolera">Przesłanianie domyślnego kontrolera</h3>
+
+<p>Dodajmy ten kontroler do pola listy, poprzez wywołanie metody <code>appendController</code> dla <code><code><span><a href="https://developer.mozilla.org/pl/docs/XUL/Własność/controllers">controllers</a></span></code></code> pola listy. <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIControllers.html">Obiekt kontrolera</a> posiada pewną liczbę metod, które mogą być używane do manipulowania kontrolerami. Przykładowo, istnieje także metoda <code>insertControllerAt</code>, która "wkłada" kontroler do elementu przed inne kontrolery. Może to być użyteczne w celu utworzenia komendy nadrzędnej. Poniższy przykład wyłącza opcję wklejenia dla danego pola tekstowego.</p>
+
+<pre>var tboxController = {
+  supportsCommand : function(cmd){ return (cmd == "cmd_paste"); },
+  isCommandEnabled : function(cmd){ return false; },
+  doCommand : function(cmd){ },
+  onEvent : function(evt){ }
+};
+
+document.getElementById("tbox").controllers.insertControllerAt(0,tboxController);
+</pre>
+
+<p>W tym przykładzie, wkładamy kontroler ma pozycję o numerze 0, co oznacza, że będzie on się znajdował przed wszystkimi innymi. Nowy kontroler wspiera polecenie 'cmd_paste' i zawsze wskazuje, że polecenie jest wyłączone, dezaktywowane. Domyślny kontroler pola tekstowego, nigdy nie zostanie wywołany ponieważ, dyspozytor poleceń znajdzie w pierwszej kolejności inny kontroler do obsługi, znajdujący się wyżej.</p>
+
+<p>Następnie, dowiemy się <a href="pl/Kurs_XUL/Aktualizacja_polece%c5%84">jak aktualizować polecenia</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Kontrola_zaznaczenia_i_aktywacji_elementów" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Aktualizacja_poleceń">Następny  »</a></p>
+</div><p></p>

@@ -1,0 +1,106 @@
+---
+title: HTMLHyperlinkElementUtils.pathname
+slug: Web/API/HTMLHyperlinkElementUtils/pathname
+tags:
+  - API
+  - Experimental
+  - HTMLHyperlinkElementUtils
+  - Property
+  - URL API
+translation_of: Web/API/HTMLHyperlinkElementUtils/pathname
+---
+<p>{{ApiRef("URL API")}}</p>
+
+<p>Свойство <strong><code>HTMLHyperlinkElementUtils.pathname</code></strong> <span class="st">–</span> это {{domxref("USVString")}}, содержащий первый <code>'/'</code> после хоста с последующим текстом URL.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><em>string</em> = <em>object</em>.pathname;
+<em>object</em>.pathname = <em>string</em>;
+</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname"&gt;
+var anchor = document.getElementById("myAnchor");
+var result = anchor.pathname; // Вернет: '/en-US/docs/HTMLHyperlinkElementUtils.pathname'
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-pathname', 'HTMLHyperlinkElementUtils.pathname')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Изначальное определение.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatGeckoDesktop("22")}} [2]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatGeckoMobile("22")}} [2]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [1]</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Хотя оно и не включено в один абстрактный интерфейс, это свойство напрямую доступно в интерфейсах, которые его реализуют.</p>
+
+<p>[2] С Gecko 22 по Gecko 44, это свойство находилось в <code>URLUtils</code>. Оно было перемещено или в <code>HTMLHyperlinkElementUtils</code>, или напрямую в интерфейс.</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
+</ul>

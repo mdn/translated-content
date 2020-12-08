@@ -1,0 +1,77 @@
+---
+title: WebGLRenderingContext.getShaderInfoLog()
+slug: Web/API/WebGLRenderingContext/getShaderInfoLog
+translation_of: Web/API/WebGLRenderingContext/getShaderInfoLog
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p><strong>WebGLRenderingContext.getShaderInfoLog</strong> возвращает логи для указаной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">gl.getShaderInfoLog(shader);</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>shader</dt>
+ <dd>Шейдер {{domxref("WebGLShader")}} чьи логи мы запрашиваем.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>{{domxref("DOMString")}} может содержать диагностические сообщения, предупреждения и другую информацию о последней операции компиляции. Когда {{domxref("WebGLShader")}} объект создан, его информационный журнал будет строкой длинной 0.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Проверить_сообщения_компиляции">Проверить сообщения компиляции</h3>
+
+<pre class="brush: js">/* Загружаем исходный код программы. */
+gl.shaderSource(shader, shaderCode);
+
+/* Компилируем программу. */
+gl.compileShader(shader);
+
+/* Получаем список сообщений */
+var message = gl.getShaderInfoLog(shader);
+
+if (message.length &gt; 0) {
+  /* Сообщение может быть ошибкой или предупреждением */
+  throw message;
+}
+</pre>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарии</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.9", "getShaderInfoLog")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glGetShaderInfoLog.xml", "glGetShaderInfoLog")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>Man page of the OpenGL API.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с https://github.com/mdn/browser-compat-data и отправить нам запрос на слияние.</p>
+
+<p>{{Compat("api.WebGLRenderingContext.getShaderInfoLog")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}} – использование с <code>gl.COMPILE_STATUS</code> для проверки ошибок компиляции.</li>
+ <li>{{domxref("WebGLRenderingContext.getError()")}}</li>
+</ul>

@@ -1,0 +1,49 @@
+---
+title: install.rdf
+slug: Criando_um_visual_para_o_Firefox/install.rdf
+translation_of: Archive/Themes/Creating_a_Skin_for_Firefox/install.rdf
+---
+<p> </p>
+
+<p>Copie o texto seguinte e cole em um arquivo de texto, então salve este arquivo como "<code>install.rdf</code>":</p>
+
+<p> </p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{UUID_do_Tema}&lt;/em:id&gt;
+    &lt;em:version&gt;Versao_do_Tema&lt;/em:version&gt;
+
+    &lt;!-- Aplicação em que esta extensão pode ser instalada,
+          com suporte a versões entre mínima e máxima. --&gt;
+
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;!-- UUID do Firefox --&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;Versao_Minima_do_Firefox&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;Versao_Maxima_do_Firefox&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- MetaData do Extremo Inicial --&gt;
+    &lt;!-- Meu_Tema --&gt;
+    &lt;em:name&gt;Meu_Tema&lt;/em:name&gt;
+    &lt;em:description&gt;Descricao_do_Seu_Tema&lt;/em:description&gt;
+    &lt;em:creator&gt;Seu_Nome&lt;/em:creator&gt;
+    &lt;em:contributor&gt;Nomes_dos_Colaboradores&lt;/em:contributor&gt;
+    &lt;em:homepageURL&gt;Site_do_Tema&lt;/em:homepageURL&gt;
+    &lt;em:updateURL&gt; Url_para_Localizar_Atualizacao &lt;/em:updateURL&gt;
+    &lt;em:aboutURL&gt; Url_para_Página_Sobre &lt;/em:aboutURL&gt;
+
+    &lt;!-- Ganchos de Integração do Extremo Incial
+          (utilizado pelo Gerenciador de Complementos/Temas)--&gt;
+    &lt;em:internalName&gt;Meu_Tema&lt;/em:internalName&gt;
+  &lt;/Description&gt;
+
+&lt;/RDF&gt;
+</pre>

@@ -1,0 +1,63 @@
+---
+title: Поддержка ECMAScript 7 в Mozilla
+slug: Archive/Web/JavaScript/ECMAScript_7_support_in_Mozilla
+tags:
+  - ECMAScript7
+  - JavaScript
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<p>{{jsSidebar("New_in_JS")}}</p>
+
+<p>ECMAScript Next является следующей ступенью развития стандарта ECMA-262. Новые возможности языка уже включались в черновик <a href="/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">6-й редакции</a>, в которую больше не добавляются новые возможности и работа над ней близка к завершению. Вы можете посмотреть список предложений в репозитории <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> на GitHub.<br>
+ Текущие недочёты в процессе спецификации планируется разрешить в несколько <em>этапов</em> и <em>чемпионатов</em>. Также, предлагается соблюдать цикл публикации стандарта в 2 года. Для просмотра информации о ходе процесса спецификации после выпуска ES2015 смотрите <a href="http://slides.com/rafaelweinstein/tc39-process">презентацию Rafael Weinstein</a>.</p>
+
+<p>Для получения обратной связи по стандартам ECMAScript используется канал <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a>.</p>
+
+<h2 id="Экспериментальные_возможности">Экспериментальные возможности</h2>
+
+<p>Следующие возможности уже реализованы, но доступны только в <a href="http://nightly.mozilla.org/">ночных сборках Firefox</a>:</p>
+
+<h3 id="Расширения_объекта_Array">Расширения объекта <code>Array</code></h3>
+
+<ul>
+ <li><a href="http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism">Параллельный JavaScript</a> (<code>scatterPar, scanPar, reducePar, mapPar, filterPar</code>)</li>
+</ul>
+
+<h3 id="Новые_объекты_TypedObject">Новые объекты TypedObject</h3>
+
+<ul>
+ <li><a href="https://github.com/dslomov-chromium/typed-objects-es7">Черновик типизированных объектов</a></li>
+</ul>
+
+<h3 id="Новые_объекты_SIMD">Новые объекты SIMD</h3>
+
+<ul>
+ <li><a href="https://github.com/johnmccutchan/ecmascript_simd">Черновик спецификации SIMD и полифилл</a></li>
+</ul>
+
+<h2 id="Стабилизируемые_возможности">Стабилизируемые возможности</h2>
+
+<p>Следующие возможности доступны в ночных сборках Firefox, но процесс их спецификации и реализации не завершён. Здесь также перечислены возможности, предполагавшиеся к включению в черновик ECMAScript 2015 и переместившиеся в ECMAScript 2016.</p>
+
+<h3 id="Выражения">Выражения</h3>
+
+<ul>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">Включение массивов</a> (<a href="/en-US/Firefox/Releases/30">Firefox 30</a>)</li>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">Включение генераторов</a> (<a href="/en-US/Firefox/Releases/30">Firefox 30</a>)</li>
+</ul>
+
+<h2 id="Не_реализованные_возможности">Не реализованные возможности</h2>
+
+<p>Следующие возможности не реализованы, но планируются в ECMAScript 2016.</p>
+
+<ul>
+ <li><code>Object.observe()</code> ({{bug(800355)}})</li>
+</ul>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">Сайт ECMAScript web site</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Система отслеживания ошибок Mozilla ES2016</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/" title="http://kangax.github.io/es5-compat-table">Поддержка ECMAScript 2016 в различных браузерах</a></li>
+</ul>

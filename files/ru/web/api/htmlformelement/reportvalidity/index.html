@@ -1,0 +1,79 @@
+---
+title: HTMLFormElement.reportValidity()
+slug: Web/API/HTMLFormElement/reportValidity
+translation_of: Web/API/HTMLFormElement/reportValidity
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p>Метод <strong><code>HTMLFormElement.reportValidity()</code></strong> возвращает<span style="line-height: 1.5;"> </span><strong><code style="font-style: normal; line-height: 1.5;">true</code></strong><span style="line-height: 1.5;"> если все дочерние элементы прошли проверку. Когда возвращается </span><strong><code style="font-style: normal; line-height: 1.5;">false</code></strong><span style="line-height: 1.5;">, по каждому дочернему элементу не прошедшему проверку генерируется событие</span><span style="line-height: 1.5;"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> и пользователю сообщаются проблемы проверки.</span></p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="eval"><em>HTMLFormElement</em>.reportValidity()
+</pre>
+
+<h2 id="Example" name="Example">Пример</h2>
+
+<pre class="eval">document.forms["myform"].addEventListener('invalid', function() {
+  //Опциональный ответ здесь.
+}, false);
+
+document.forms["myform"].addEventListener('submit', function() {
+  document.forms["myform"].reportValidity();
+}, false);</pre>
+
+<h2 id="Specifications" name="Specifications">Спецификация</h2>
+
+<p><a class="external" href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api">HTML 5.1 Forms: The Constraint Validation API</a></p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+
+<p>{{ CompatibilityTable }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatChrome(40.0) }}</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Возможность</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatChrome(40.0) }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

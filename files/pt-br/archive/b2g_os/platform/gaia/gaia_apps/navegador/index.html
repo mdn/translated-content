@@ -1,0 +1,137 @@
+---
+title: Navegador
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Navegador
+tags:
+  - Apps
+  - Browser
+  - Firefox OS
+  - Gaia
+  - Guía
+  - Navegador
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Browser
+---
+<div class="summary">
+<p><span class="seoSummary">O <a href="https://github.com/mozilla-b2g/gaia/tree/v1.4/apps/browser">app Browser </a> (que agora faz parte do sistema) fornece a funcionalidade do tipo navegador onde ele é necessário</span> — <span class="seoSummary"> incluindo navegação de página, pesquisa, e bookmarks. Este artigo explica como a funcionalidade básica do aplicativo do navegador funciona, e como ele se encaixa no sistema maior.</span></p>
+</div>
+
+<p>Já que o Gaia é feito para rodar a partir do Gecko, foi possível projetar um navegador app/System Browser para navegação regular de páginas web com base nessa instância Gecko. Este pode ser manipulado pela <a href="https://developer.mozilla.org/pt-BR/docs/DOM/Using_the_Browser_API">API mozBrowser</a>.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: DoFirefox OS 2.1 em diante, o app Browser é parte do System app. Isto significa que a navegação na web pode ser feita tanto clicando no ícone do Browser para abrir o aplicativo do navegador ou acessando o recurso de pesquisa e navegação universal. As abas de aplicativos e de navegação são então unificadas para uma experiência comum e existem na visão do gerenciador de tarefas e folhas (por gestos de ponta), como parte da <a href="https://wiki.mozilla.org/FirefoxOS/Haida">experiência do usuário Haida</a>.</p>
+</div>
+
+<h2 id="Navegador_do_sistema_(Navegador_Chrome)">Navegador do sistema (Navegador Chrome)</h2>
+
+<p>Quando um usuário Firefox OS marca uma página web para que ela apareça na tela inicial, a página web será posteriormente aberta no Navegador do sistema, ao invés do aplicativo Browser. Ele inclui uma barra de ferramentas na parte inferior contendo as funções gerais voltar/avançar/atualizar. Em Gaia isso é chamado de navegador Chrome ou wrapper. Você pode ver isso em ação no lado direito da imagem abaixo.</p>
+
+<p><img alt="A diagram showing that when a web page is opened in the system browser, it is given a toolbar." src="https://mdn.mozillademos.org/files/7869/browser-app.png" style="display: block; height: 500px; margin: 0px auto; width: 738px;"></p>
+
+<p>Se você quer que sua página da web ainda apresente as funções voltar/avançar/atualizar, você pode declarar o seguinte no manifesto do aplicativo que habilita o navegador Chrome.</p>
+
+<pre class="brush: json">declare { chrome: { navigation: true } }</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: A barra de ferramentas do navegador Chrome afeta a altura do conteúdo, de modo que este precisa ser levado em consideração para seus layouts de páginas web.</p>
+</div>
+
+<h3 id="O_fluxo_de_código">O fluxo de código</h3>
+
+<p>Ao abrir uma nova página web no Firefox OS, o fluxo de chamadas é</p>
+
+<pre>Gecko &gt; WrapperFactory &gt; Window Manager &gt; AppWindow &gt; BrowserFrame</pre>
+
+<p>Wrappers herdados a partir do <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/wrapper_factory.js">system/js/wrapper_factory</a> receberão o evento <code>mozbrowseropenwindow</code> para uma página Web marcada.</p>
+
+<p>Na seção <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/wrapper_factory.js#L15">handleEvent</a>, o manipulador irá verificar o evento para decidir se a página web deve ser aberta como um aplicativo ou no browser chrome.</p>
+
+<p>Finalmente, o <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/wrapper_factory.js#L115">launchWrapper</a> é chamado para abrir a janela correspondente.</p>
+
+<h2 id="Navegação_Busca_Universais">Navegação &amp; Busca Universais</h2>
+
+<p>Com a nova barra de pesquisa e navegação, os usuários podem acessar seus favoritos, digitar uma URL, ou descobrir um novo aplicativo, a partir de qualquer lugar no Firefox OS. A barra de pesquisa vive no topo da tela, e os usuários podem simplesmente tocar ou arrastar para abri-la.<br>
+ <br>
+ Pense nisso como uma combinação do <a href="https://support.mozilla.org/pt-BR/kb/awesome-bar-find-your-bookmarks-history-and-tabs">Awesome Bar</a> do navegador e o <a href="https://support.mozilla.org/pt-BR/kb/use-adaptive-search-discover-personalized-apps">app de pesquisa adaptativa</a> do homescreen. Já que o Firefox OS usa aplicativos da web, quando você encontrar o que deseja, mesmo que seja um novo aplicativo, ele abrirá imediatamente. Você não precisa instalar nada, porque tudo é instantâneo e web-like.</p>
+
+<h2 id="App_Browser">App Browser</h2>
+
+<p>O aplicativo Browser é um webapp certificado que proporciona uma experiência geral de navegador web. A função principal está localizada no <a href="https://github.com/mozilla-b2g/gaia/tree/v1.4/apps/browser/js/browser.js">apps/browser/js/browser.js</a>:</p>
+
+<pre class="brush: js">var Browser = {
+  init: function browser_init() {
+    this.getAllElements();
+      ...
+    BrowserDB.init((function() {
+      ...
+    }
+  }
+};
+
+window.addEventListener('load', function browserOnLoad(evt) {
+  window.removeEventListener('load', browserOnLoad);
+  Browser.init();
+});</pre>
+
+<p>O navegador irá chamar sua função <code>init()</code>, enquanto o DOM é carregado.</p>
+
+<pre class="brush: js">getAllElements: function browser_getAllElements() {
+  var elementIDs = [
+    'toolbar—start', ... 'danger—dialog'];
+
+  // Loop and add element with camel style name to Modal Dialog attribute.
+  elementIDs.forEach(function createElementRef(name) {
+    this[this.toCamelCase(name)] = document.getElementById(name);
+  }, this);
+},</pre>
+
+<p>A função <code>getAllElements</code> é usada para obter todos os manipuladores de elementos camelCase, após o qual o <a href="https://github.com/mozilla-b2g/gaia/tree/v1.4/apps/browser/js/browser_db.js">apps/browser/js/browser_db.js</a> é chamado, para se preparar para adicionar o mecanismo de pesquisa padrão e bookmarks.</p>
+
+<h2 id="Bookmarks">Bookmarks</h2>
+
+<p>Do Firefox OS 2.0, o <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/bookmark">apps/bookmark</a> é usado para lidar com atividades bookmark salvar/remover.</p>
+
+<p>A parte mais interessante <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/bookmark/manifest.webapp">apps/bookmark/webapp.manifest,</a> é:</p>
+
+<pre class="brush: json">"activities": {
+  "save—bookmark": {
+    "filters": {
+      "type": "url",
+      "url": { "required":true, "pattern":"https?:.{1,16384}" }
+    },
+    "disposition": "inline",
+    "href": "/save.html",
+    "returnValue": true
+  },
+  "remove—bookmark": {
+    "filters": {
+      "type": "url",
+      "url": { "required":true, "pattern":"https?:.{1,16384}" }
+    },
+    "disposition": "inline",
+    "href": "/remove.html",
+    "returnValue": true
+  }
+},</pre>
+
+<p>Conforme visto acima, a atividade é tratada pelo save.html e remove.html. Ambas as operações são delegadas para <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/bookmark/js/activity_handler.js">apps/bookmark/js/activity_handler.js</a>:</p>
+
+<pre class="brush: js">var ActivityHandler = {
+  'save—bookmark': function ah_save(activity) {
+  },
+
+  'remove—bookmark': function ah_remove(activity) {
+  }
+};
+
+navigator.mozSetMessageHandler('activity', function onActivity(activity) {
+  var name = activity.source.name;
+  switch (name) {
+    case 'save—bookmark':
+    case 'remove—bookmark':
+      if (activity.source.data.type === 'url') {
+        ActivityHandler[name](activity);
+      }
+    ...
+  }
+}</pre>
+
+<p>Quando o manipulador ouvinte de mensagem <code>navigator.mozSetMessageHandler('activity')</code> recebe as atividades salvar-bookmark ou remover-bookmark, a função <code>ActivityHandler</code> é acionada para lidar com operações correspondentes.</p>

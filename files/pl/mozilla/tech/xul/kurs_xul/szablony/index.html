@@ -1,0 +1,201 @@
+---
+title: Szablony
+slug: Mozilla/Tech/XUL/Kurs_XUL/Szablony
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Templates
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Wprowadzenie_do_RDF" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Drzewa_i_szablony">Następny  »</a></p>
+</div> W tym artykule, przekonamy się jak wypełnić elementy kodem źródłowym.<p></p>
+
+<h3 id="Wype.C5.82nianie_elementami" name="Wype.C5.82nianie_elementami">Wypełnianie elementami</h3>
+
+<p>XUL dostarcza metody, w których możemy tworzyć elementy za pomocą kodu RDF, albo pochodzące z pliku RDF lub pochodzące z własnych źródeł. Liczne źródła danych są dostarczane z Mozilli także jako podręczniki, historia i wiadomości e-mail. Więcej informacji znajduje się w <a href="/pl/Kurs_XUL/Drzewa_i_szablony" title="pl/Kurs_XUL/Drzewa_i_szablony">następnym artykule</a>.</p>
+
+<p>Często, elementy takie jak elementy drzewa i elementy menu będą wypełnione danymi. Jednakże, będziesz chciał używać jej zdefiniowanej dla specjalnych warunków. Niemniej jednak, rozpoczniemy z tymi innymi elementami, ponieważ drzewa i menu potrzebują więcej kodu.</p>
+
+<p>Pozwolenie na tworzenie elementów opartych na kodzie źródłowym, potrzebujesz przygotować prosty szablon, który będzie tworzony jako duplikat na każdym elemencie. Istotnie, tworzymy pierwszy element, który pozostanie jako konstrukcja na pozostałych elementach.</p>
+
+<p>Szablon jest tworzony używając elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/template" title="template">template</a></code></code>. Wewnątrz, możesz położyć te elementy, które chcesz użyć do skonstruowania elementu. Elementy <code>template</code> powinny być umieszczone wewnątrz zbioru, który stanowi stworzone elementy. Na przykład jeśli używasz drzewa, powinieneś położyć element <code>template</code> do wewnątrz elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code>.</p>
+
+<h4 id="Simple_Template_Example" name="Simple_Template_Example">Przykład prostego szablonu</h4>
+
+<p>Lepiej będzie to wytłumaczyć na przykładzie. Weźmy prosty przykład gdzie chcemy utworzyć przycisk dla każdej górnego-poziomu zakładki. Mozilla dostarcza kod źródłowy zakładek tak więc mogą być one użyte do pobrania danych. Ten przykład będzie potrafił tylko pobrać zakładek górnego-poziomu (lub folderów zakładek) jakie będziemy chcieli używać jako przyciski. Dla potomnych zakładek, będziemy potrzebować do użycia elementu do wyświetlenia hierarchii takiej jak drzewo lub menu.</p>
+
+<div class="note">Ten przykład i jakikolwiek inny, który powołuje się na wewnętrzny kod RDF, będzie działał poprawnie jeśli wgrasz go z adresu URL chrome. Z przyczyn bezpieczeństwa. Mozilla nie pozwala na dostęp z innych źródeł.</div>
+
+<p>Aby obejrzeć ten przykład, utwórz pakiet chrome i wczytaj z niego pliki. Możesz teraz potwierdzić adres URL chrom wpisując go do przeglądarki URL.</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_1.xul.txt">Źródła</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:templates1.jpg" class="internal" src="/@api/deki/files/2505/=Templates1.jpg"></div>
+
+<p>Powyżej zostało stworzone pionowe pole okna, które stanowi kolumnę przycisków, każda jedna zakładka jest wyrównywana do górnego poziomu. Możesz zobaczyć jak <code>template</code> stanowi pojedynczy <code><code><a href="/pl/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>. Używany jest w liczbie mnogiej dla wszystkich potrzebnych przycisków do tworzenia. Możesz obejrzeć grafikę gdyż ustawienia przycisków zostały utworzone, jeden dla każdej zakładki.</p>
+
+<p>Spróbuj dodać zakładkę do przeglądarki podczas gdy masz otwarte okno przykładu. Zostaniemy natychmiast powiadomieni, że przyciski z przykładu zostały zaktualizowane (możesz skupić się na tej zmianie).</p>
+
+<h4 id="Container_and_Datasources" name="Container_and_Datasources">Kontener i źródła danych</h4>
+
+<p>Szablon samoczynnie umieści się w pionowym polu. Pole posiada dwa specjalne atrybuty używane w szablonach, które są użyte tam skąd pochodzą dane. Pierwszy atrybut pola jest to atrybut <code>datasources</code>. Jest on użyty do deklaracji w co kod źródłowy RDF będzie zaopatrywał tworzony element. W tej sytuacji, są użyte <code>rdf:bookmarks</code>. Możemy prawdopodobnie przypuszczać jakie znaczenie ma użyty kod źródłowy, który został dostarczony przez Mozillę. Aby użyć własnego kodu źródłowego, używamy określonego adresu URL dla pliku RDF zawierającego atrybut <code>datasources</code>, jak pokazuje poniższy przykład:</p>
+
+<pre>&lt;box datasources="chrome://zoo/content/animals.rdf"
+     ref="http://www.some-fictitious-zoo.com/all-animals"&gt;
+</pre>
+
+<p>Możesz podać wiele źródeł danych poprzez oddzielnie ich za pomocą spacji w wartości atrybutu. Używa się tego do wyświetlenia danych z wielu źródeł.</p>
+
+<p>Atrybut <code>ref</code> oznacza, z którego źródła chcesz pobierać dane. W przypadku zakładek wartość <code>NC:BookmarksRoot</code> jest użyta do wskazania podstawy hierarchii zakładek. Inne wartości do użycia zależą od źródła danych. Jeśli używasz jako źródło własnego pliku RDF wartość ta odpowiadała będzie zwykle wartości atrybutu <code>about</code> w RDF-ie <code>Bag</code>, <code>Seq</code> lub elementowi <code>Alt</code>.</p>
+
+<h4 id="Inside_the_Template" name="Inside_the_Template">Wewnątrz szablonu</h4>
+
+<p>By adding these two attributes to the box above, it allows the generation of elements using the template. However, the elements inside the template need to be declared differently. You may notice in the example above that the <code>button</code> has a <code>uri</code> attribute and an unusual value for the <code>label</code> attribute.</p>
+
+<p>An attribute value inside the template that begins with 'rdf:' indicates that the value should be taken from the datasource. In the example earlier, this is the case for the <code>label</code> attribute. The remainder of the value refers to the name property in the datasource. It is constructed by taking the namespace URL used by the datasource and appending the property name. If you don't understand this, try re-reading the last part of <a href="/pl/Kurs_XUL/Wprowadzenie_do_RDF" title="pl/Kurs_XUL/Wprowadzenie_do_RDF">the previous section</a>. It explains how resources in RDF can be referred to. Here, we only use the name of the bookmark but numerous other fields are available.</p>
+
+<p>The <code>label</code> of the buttons is set to this special URI because we want the labels on the buttons to be set to the names of the bookmarks. We could have put a URI in any of the attributes of the <code>button</code>, or any other element. The values of these attributes are replaced with data supplied by the datasource which, in this case, is the bookmarks. So we end up with the labels on the buttons set to the names of the bookmarks.</p>
+
+<p>The example below shows how we might set other attributes of a button using a datasource. Of course, this assumes that the datasource supplies the appropriate resources. If a particular one is not found, the value of the attribute will be set to an empty string.</p>
+
+<pre>&lt;button class="rdf:http://www.example.com/rdf#class"
+        uri="rdf:*"
+        label="rdf:http://www.example.com/rdf#name"
+        crop="rdf:http://www.example.com/rdf#crop"/&gt;
+</pre>
+
+<p>As you can see, you can dynamically generate lists of elements with the attributes provided by a separate datasource.</p>
+
+<p>The uri attribute is used to specify the element where content generation will begin. Content earlier will only be generated once whereas content inside will be generated for each resource. We'll see more about this when we get to <a href="/pl/Kurs_XUL/Drzewa_i_szablony" title="pl/Kurs_XUL/Drzewa_i_szablony">creating templates for trees</a>.</p>
+
+<p><span class="comment">Atrybut '''uri''' jest użyty w stosunku do specyficznych elementów gdzie zawartość wygenerowana będzie na początku. Zawartość</span></p>
+
+<h4 id="Wi.C4.99cej_przyk.C5.82ad.C3.B3w" name="Wi.C4.99cej_przyk.C5.82ad.C3.B3w">Więcej przykładów</h4>
+
+<p>Poprzez dodawanie tych funkcjonalności do kontenera będącego w szablonie (który w tym przypadku jest prostokątem) i do elementów szablonu, możemy wygenerować różnorodne spisy treści zewnętrznej. Oczywiście, możemy umieścić więcej niż jeden element wewnątrz szablonu i dodać specjalnie referencje RDF do atrybutów elementów. Poniższy przykład demonstruje to.</p>
+
+<p><span id="Przyk%C5%82ad_2"><a id="Przyk%C5%82ad_2"></a><strong>Przykład 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_2.xul.txt">Źródła</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;vbox uri="rdf:*"&gt;
+      &lt;button label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+      &lt;label value="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+    &lt;/vbox&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Przykład ten utworzy pionowy box z przyciskiem i etykietą dla każdej zakładki. Przycisk posiada nazwę zakładki, a etykieta to jest URL.</p>
+
+<p>Nowe elementy są utworzone jako funkcjonalne, jedyne, nie inne potrafią wpisać się bezpośrednio w plik XUL. Atrybut <code>id</code> jest dodawany do każdego elementu utworzonego poprzez szablon, który jest ustawiony na wartość, która identyfikuje zasoby kodu. Możesz używać tego do identyfikacji swoich zasobów.</p>
+
+<p>Możesz także wyszczególnić wielokrotną wartość źródła w tym samym atrybucie poprzez odseparowanie go spacją, jak w przykładzie poniżej. <a class="external" href="http://www.xulplanet.com/tutorials/xultu/templateex.html">Więcej o składni źródła</a> (XULPlanet).</p>
+
+<p><span id="Przyk%C5%82ad_3"><a id="Przyk%C5%82ad_3"></a><strong>Przykład 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_3.xul.txt">Źródła</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot"
+     flex="1"&gt;
+  &lt;template&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h3 id="Jak_s.C4.85_budowane_szablony" name="Jak_s.C4.85_budowane_szablony">Jak są budowane szablony</h3>
+
+<p>Kiedy element posiada atrybut <code>datasources</code>, to sygnalizuje, że ten element oczekuje na budowę poprzez formularz szablonu. Note that it isn't the <code>template</code> tag that determines whether content is built, it is the <code>datasources</code> attribute. When this attribute is present, an object called a Builder is added to the element. It is this object that is responsible for building the content from the template. In JavaScript you can access the builder object with the <code>builder</code> property, although usually you would only need to do this to have the builder regenerate the content in situations where it is not done automatically.</p>
+
+<p>Istnieją dwa rodzaje kreatorów. Pierwszym, najczęściej używanym, jest kreator treści, natomiast drugi to kreator drzewek stosowany jedynie do drzewek.</p>
+
+<h4 id="Content_Builder" name="Content_Builder">Kreator treści</h4>
+
+<p>The content builder takes the content inside the <code>template</code> element and duplicates it for each row. For instance, if the user had ten bookmarks in the example above, ten <code><code><a href="/pl/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> elements would be created and added as children of the <code><code><a href="/pl/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> element. If you were to use DOM functions to traverse the tree, you will find these elements there and can query their properties. These elements get displayed, but the <code>template</code> itself is not displayed, although it still exists the the document tree. In addition, the <code>id</code> of each of the labels will be set to the RDF resource for that row.</p>
+
+<p>Kreator treści zawsze rozpoczyna pracę od miejsca gdzie wyspecyfikowany jest uri="rdf:*". Jeśli atrybut <code>uri</code> jest umieszczony na niższym elemencie w drzewku, zewnętrze elementy są stworzone tylko raz. W poniższym przykładzie, jeden <code><code><a href="/pl/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> będzie stworzony i wypełniony napisem dla każdej pozycji.</p>
+
+<pre>&lt;template&gt;
+  &lt;hbox&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/hbox&gt;
+&lt;/template&gt;
+</pre>
+
+<p>Jeśli treść znajduje się wewnątrz elementu z atrybutem <code>datasources</code> i na zewnątrz szablonu, treść także się ukaże. Idąc tą drogą, możesz mieszać stałą i dynamiczną treść szablonu.</p>
+
+<h4 id="Tree_Builder" name="Tree_Builder">Kreator drzewek</h4>
+
+<p>The tree builder, on the other hand, doesn't generate the DOM elements for the rows. Instead, it gets the data directly from the RDF datasource whenever it needs it. Since trees are often expected to display thousands of rows of data, this is much more efficient. Creating an element for every cell would be too costly. However, the tradeoff is that trees may only display text, and, since no elements are created, you can't use CSS properties to style tree cells in the same way.</p>
+
+<p>Kreator drzewek jest używany wyłącznie do drzewek. Inne elementy są tworzone poprzez kreator treści. To nie powinno być problemem, choć inne elementy - jak na przykład menu - nie powinny wyświetlać zbyt dużo składników. Możliwe jest także użycie kreatora drzewek, stosując element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> i inne, odnoszące się do tego elementy będą stworzone w każdym rzędzie.</p>
+
+<h3 id="Zasady" name="Zasady">Zasady</h3>
+
+<p>In the image of the earlier example, you may have noticed that the third button is simply a button with hyphens on it. This is a separator in the bookmark list. In the way that we have been using it, the RDF bookmarks datasource supplies the separators as if they were just regular bookmarks. What we would really like to do is add a small amount of spacing instead of a button for separator resources. That means that we want to have two different types of content be created, one type for regular bookmarks and a second type for separators.</p>
+
+<p>Możemy zrobić to dzięki użyciu elementu <code><code><a href="/pl/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code></code>. Definiujemy reguły dla każdego odchylenia elementów, które chcielibyśmy stworzyć. W naszym przypadku, potrzebujemy regułę dla zakładek i regułę dla separatorów. Atrybuty umiejscowiono na elemencie <code>rule</code> określają które reguły należy zaakceptować przy zasobach RDF.</p>
+
+<p>When scanning for which rule applies to the data, each <code>rule</code> element is checked in sequence for a match. That means that the order in which you define rules is important. Earlier rules will override later rules.</p>
+
+<h4 id="Rule_Example" name="Rule_Example">Przykład użycia zasady</h4>
+
+<p>Przedstawiony przykład demonstruje wcześniejszy przykład z dwiema zasadami:</p>
+
+<p><span id="Przyk%C5%82ad_4"><a id="Przyk%C5%82ad_4"></a><strong>Przykład 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_4.xul.txt">Źródła</a></p>
+
+<pre>&lt;window
+  id="example-window"
+  title="Bookmarks List"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+ &lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+   &lt;template&gt;
+
+    &lt;rule rdf:type="http://home.netscape.com/NC-rdf#BookmarkSeparator"&gt;
+     &lt;spacer uri="rdf:*" height="16"/&gt;
+    &lt;/rule&gt;
+
+    &lt;rule&gt;
+      &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+ &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:templates2.jpg" class="internal" src="/@api/deki/files/2506/=Templates2.jpg"></div>
+
+<p>By using two rules, we have allowed the contents of the template to be selectively generated. In the first <code>rule</code>, bookmark separators are selected, as can be seen by the <code>rdf:type</code> attribute. The second <code>rule</code> does not have any attributes so all data matches it.</p>
+
+<p>All of the attributes placed on the <code>rule</code> tag are used as match criteria. In this case, the bookmarks datasource supplies a <code>rdf:type</code> property to distinguish separators. This attribute is set to a special value for separators in the RDF bookmarks datasource. This is how we can distinguish them from non-separators. You can use a similar technique for any attribute that might be on an RDF <code>Description</code> element.</p>
+
+<p>The special URL value given in the example above for the first rule is used for separators. That means that separators will follow rule one and generate a <code><code><a href="/pl/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> element, which will display a 16 pixel gap. Elements that are not separators will not match rule one and will fall through to rule two. Rule two does not have any attributes on it. This means that it will match all data. This is, of course, what we want to have happen to the rest of the data.</p>
+
+<p>You should also have noticed that because we wanted to get an attribute from the RDF namespace (<code>rdf:type</code>), we needed to add the namespace declaration to the <code><code><a href="/pl/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> tag. If we didn't do this, the attribute would be looked for in the XUL namespace. Because it does not exist there, the rule will not match. If you use attributes in your own custom namespace, you need to add the namespace declaration in order to match them.</p>
+
+<p>You should be able to guess what would happen if the second rule was removed. The result would be a single spacer displayed but no bookmarks because they don't match any of the rules.</p>
+
+<p>Put simply, a rule matches if all of the attributes placed on the <code>rule</code> element match the corresponding attributes on the RDF resource. In the case of an RDF file, the resources would be the <code>Description</code> elements.</p>
+
+<p>There are some small exceptions however. You cannot match based on the attributes id, <code>rdf:property</code> or <code>rdf:instanceOf</code>. Because you can just use your own attributes with your own namespace, it probably doesn't really matter anyway.</p>
+
+<p>Note that a template with no rules in it, as in the first example, is really equivalent functionally to a template with a single rule with no attributes.</p>
+
+<p>Następny artykuł pokazuje nam jak <a href="/pl/Kurs_XUL/Drzewa_i_szablony" title="pl/Kurs_XUL/Drzewa_i_szablony">stosować szablony z drzewami</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Wprowadzenie_do_RDF" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Drzewa_i_szablony">Następny  »</a></p>
+</div><p></p>

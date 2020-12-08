@@ -1,0 +1,152 @@
+---
+title: Dodawanie funkcji obsługi zdarzenia
+slug: Mozilla/Tech/XUL/Kurs_XUL/Dodawanie_funkcji_obsługi_zdarzenia
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_metod" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dziedziczenie_XBL">Następny  »</a></p>
+</div><p></p>
+
+<p>Następnie, dowiemy się jak dodać uchwyt zdarzenia do definiowanego elementu XBL.</p>
+
+<h3 id="Uchwyt_zdarzenia" name="Uchwyt_zdarzenia">Uchwyt zdarzenia</h3>
+
+<p>Jak możemy się spodziewać, kliknięcie myszką, naciśnięcie klawisza i inne zdarzenia są przypisane do każdego z elementów posiadających wewnątrz pewną wartość. Jednakże, are passed to each of the elements inside the content. However, you may wish to trap the events and handle them in a special way. You can add event handlers to the elements inside the content if needed. The last example in the previous section demonstrated this. In that example, <code><code id="a-oncommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/oncommand">oncommand</a></code></code> handlers were added to some buttons.</p>
+
+<h4 id="Handler_Element" name="Handler_Element">Handler Element</h4>
+
+<p>However, you may want to add an event handler to the entire contents, that is, all the elements defined in the <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#content">content</a></code></code> tag. This could be useful when trapping the focus and blur events. To define an event XBLElem|handler, use the <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#handler">handler</a></code></code> element. Each will describe the action taken for a single event handler. You can use more than one handler if necessary. If an event does not match any of the <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#handler">handler</a></code></code> events, it is simply passed to the inner content as usual.</p>
+
+<p>Generalna składnia uchwytu wygląda następująco:</p>
+
+<pre>&lt;binding id="binding-name"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="event-name" action="script"/&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Połóż wszystkie moje uchwyty wewnątrz elementu <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#handlers">handlers</a></code></code>. Każdy element <code><code><a href="/pl/docs/XBL/Dokumentacja_XBL_1.0/Elementy#handler">handler</a></code></code> definiuje akcję pobrania szczegółowego zdarzenia określonego atrybutem <code>event</code>. Prawidłowymi typami zdarzenia są utrzymywane poprzez XUL i JavaScript, także jako <code>click</code> i <code>focus</code>. Użyj nazwy zdarzenia bez początku 'on'.</p>
+
+<p>A common reason to set handlers is to modify the custom properties when an event occurs. For example, a custom checkbox might have a checked property which needs to be changed when the user clicks the checkbox:</p>
+
+<pre>&lt;handlers&gt;
+  &lt;handler event="mouseup" action="this.checked=!this.checked"/&gt;
+&lt;/handlers&gt;
+</pre>
+
+<p>When the user clicks and releases the mouse button over the check box, the <code>mouseup</code> event is sent to it, and the handler defined here is called, causing the state of the checked property to be reversed. Similarly, you may wish to change a property when the element is focused. You might have a need to change whether an element can have the focus or not. For this, you can use a special style property <code>-moz-user-focus</code>. This property controls whether an element can be focused. (see <a href="pl/Kurs_XUL/Kontrola_zaznaczenia_i_aktywacji_element%c3%b3w">Kontrola zaznaczenia i aktywacji elementów</a>)</p>
+
+<h4 id="Handling_Mouse_Events" name="Handling_Mouse_Events">Handling Mouse Events</h4>
+
+<p>For mouse events, you can use the <code>button</code> attribute to have the handler only trap events that occur from a certain button. Without this attribute, the handler traps all events regardless of the button that was pressed. The <code>button</code> attribute should be set to either <code>0</code> for the left mouse button, <code>1</code> for the middle mouse button or <code>2</code> for the right mouse button.</p>
+
+<pre>&lt;handlers&gt;
+  &lt;handler event="click" button="0" action="alert('Left button pressed');"/&gt;
+  &lt;handler event="mouseup" button="1" action="alert('Middle button pressed')"/&gt;
+  &lt;handler event="click" button="2" action="alert('Right button pressed');"/&gt;
+&lt;/handlers&gt;
+</pre>
+
+<h4 id="Handling_Key_Events" name="Handling_Key_Events">Handling Key Events</h4>
+
+<p>For key events, you can use a number of attributes similar to those for the <code><code><a href="/pl/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> element to match a specific key and match only when certain modifer keys are pressed. The previous example could be extended so that the checked property of the check box is changed when the space bar is pressed.</p>
+
+<pre>&lt;handlers&gt;
+  &lt;handler event="keypress" key=" " action="this.checked=!checked"/&gt;
+&lt;/handlers&gt;
+</pre>
+
+<p>You can also use the <code>keycode</code> attribute to check for non-printable keys. Artykuł o <a href="pl/Kurs_XUL/Skr%c3%b3ty_klawiaturowe">skrótach klawiaturowych</a> dostarczy dodatkowych informacji. The modifier keys can be checked by adding a <code>modifiers</code> attribute. This should be set to one of the values set below:</p>
+
+<dl>
+ <dt>alt</dt>
+ <dd>Użytkownik musi nacisnąć klawisz Alt.</dd>
+</dl>
+
+<dl>
+ <dt>control</dt>
+ <dd>Użytkownik musi nacisnąć klawisz Control.</dd>
+</dl>
+
+<dl>
+ <dt>meta</dt>
+ <dd>Użytkownik musi nacisnąć klawisz Meta.</dd>
+</dl>
+
+<dl>
+ <dt>shift</dt>
+ <dd>Użytkownik musi nacisnąć klawisz Shift.</dd>
+</dl>
+
+<dl>
+ <dt>accel</dt>
+ <dd>Użytkownik musi nacisnąć specjalny the special modifier key that is usually used for keyboard shortcuts on their platform.</dd>
+</dl>
+
+<p>If set, the handler is only called when the modifier is pressed. You can require multiple modifier keys by separating them with spaces.</p>
+
+<p>The following alternate syntax can be used when the code in a handler is more complex:</p>
+
+<pre>&lt;binding id="binding-name"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="event-name"&gt;
+      -- handler code goes here --
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<h3 id="Przyk.C5.82ad_uchwytu" name="Przyk.C5.82ad_uchwytu">Przykład uchwytu</h3>
+
+<p>Następujący przykład dodaje uchwyty kluczy, tworząc bardzo prymitywny lokalny clipboard:</p>
+
+<p><span id="Przyk%C5%82ad_1"><a id="Przyk%C5%82ad_1"></a><strong>Przykład 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblevents_1.xml.txt">Źródła</a></p>
+
+<pre>&lt;binding id="clipbox"&gt;
+  &lt;content&gt;
+    &lt;xul:textbox/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;field name="clipboard"/&gt;
+  &lt;/implementation&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" key="x" modifiers="control"
+      action="this.clipboard=document.getAnonymousNodes(this)[0].value; document.getAnonymousNodes(this)[0].value='';"/&gt;
+    &lt;handler event="keypress" key="c" modifiers="control"
+      action="this.clipboard=document.getAnonymousNodes(this)[0].value;"/&gt;
+    &lt;handler event="keypress" key="v" modifiers="control"
+      action="document.getAnonymousNodes(this)[0].value=this.clipboard ? this.clipboard : '';"/&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>The content is a single textbox. A field <code>clipboard</code> has been added to it to store the clipboard contents. This does mean that the clipboard operations are limited to this single textbox. However, each one will have its own buffer.</p>
+
+<p>Three handlers have been added, one for cut, one for copy and the other for paste. Each has its own keystroke that invokes it. The first handler is the cut operation and is invoked when the Control key is pressed along with the x key. The script within the <code>action</code> attribute is used to cut the text from the textbox and put it into the clipboard field. For simplicity, the entire text is cut and not just the selected text. The code works as follows:</p>
+
+<ol>
+ <li>
+  <pre>this.clipboard=document.getAnonymousNodes(this)[0].value;
+</pre>
+  The first element of the anonymous content array is retrieved which gives a reference to the textbox element, which happens to be the first (and only) element within the content element. The value property is retrieved which will provide the text within the textbox. This is then assigned to the clipboard field. The result is copying the text in the textbox into this special clipboard.</li>
+ <li>
+  <pre>document.getAnonymousNodes(this)[0].value=''
+</pre>
+  The text of the textbox is then assigned a value of a null string. This effectively clears the text in the textbox.</li>
+</ol>
+
+<p>A copy operation is similar but does not the clear the text afterwards. Pasting is the opposite where the value of the textbox is assigned from the value in the clipboard field. If we were creating a real implementation of these clipboard keyboard shortcuts, we would probably use the real clipboard interface and handle the current selection as well.</p>
+
+<p>W następnym temacie, zobaczymy jak są zdefiniowane okna rozszerzeń XBL.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Dodawanie_metod" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Dziedziczenie_XBL">Następny  »</a></p>
+</div><p></p>

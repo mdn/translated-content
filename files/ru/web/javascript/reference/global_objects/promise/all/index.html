@@ -1,0 +1,122 @@
+---
+title: Promise.all()
+slug: Web/JavaScript/Reference/Global_Objects/Promise/all
+tags:
+  - ECMAScript6
+  - JavaScript
+  - Обещание
+  - метод
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
+---
+<div>{{JSRef}}</div>
+
+<h2 id="Summary" name="Summary">Общее описание</h2>
+
+<p>Метод <code><strong>Promise.all(iterable)</strong></code> возвращает обещание, которое выполнится тогда, когда будут выполнены все обещания, переданные в виде перечисляемого аргумента, или отклонено любое из переданных обещаний.</p>
+
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+
+<pre class="syntaxbox"><var>Promise.all(iterable)</var>;</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt>iterable</dt>
+ <dd>Перечисляемый объект, например, массив ({{jsxref("Array")}}). Смотрите <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
+</dl>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>{{jsxref("Promise")}}, который будет выполнен когда будут выполнены все обещания, переданные в виде перечисляемого аргумента, или отклонен, если будет отклонено хоть одно из переданных обещаний.</p>
+
+<h2 id="Description" name="Description">Описание</h2>
+
+<p><strong>Promise.all</strong> возвращает массив значений от всех обещаний, которые были ему переданы. Возвращаемый массив значений сохраняет порядок оригинального перечисляемого объекта, но не порядок выполнения обещаний. <code>Если какой-либо элемент перечисляемого объекта не является обещанием, то он будет преобразован с помощью метода </code>{{jsxref("Promise.resolve")}}<code>.</code></p>
+
+<p>Если одно из переданных обещаний будет отклонено, <code><strong>Promise.all </strong></code>будет немедлено отклонен со значением отклоненного обещания, не учитывая другие обещания, независимо выполнены они или нет. Если в качестве аргумента будет передан пустой массив, то <code><strong>Promise.all</strong> </code>будет выполнен немедленно<code>. </code></p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<h3 id="Использование_Promise.all">Использование <code>Promise.all</code></h3>
+
+<p><strong>Promise.all </strong>ждет выполнения всех обещаний (или первого метода <code><strong>reject</strong>()</code>).</p>
+
+<pre><code>var p1 = Promise.resolve(3);
+var p2 = 1337;
+var p3 = new Promise((resolve, reject) =&gt; {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([p1, p2, p3]).then(values =&gt; {
+  console.log(values);
+});
+
+//Выведет:
+// [3, 1337, "foo"] </code>
+</pre>
+
+<h3 id="Promise.all_поведение_немедленного_отклонения"><code>Promise.all</code> поведение немедленного отклонения</h3>
+
+<p><strong><code>Promise.all</code></strong> будет немедленно отклонен если одно из переданных обещаний будет отклонено: если у вас есть четыре обещания которые будут выполнены с задержкой и одно, которое будет отклонено немедленно - тогда <strong><code>Promise.all</code></strong> будет немедленно отклонен.</p>
+
+<pre><code>var p1 = new Promise((resolve, reject) =&gt; {
+  setTimeout(resolve, 1000, "one");
+});
+var p2 = new Promise((resolve, reject) =&gt; {
+  setTimeout(resolve, 2000, "two");
+});
+var p3 = new Promise((resolve, reject) =&gt; {
+  setTimeout(resolve, 3000, "three");
+});
+var p4 = new Promise((resolve, reject) =&gt; {
+  setTimeout(resolve, 4000, "four");
+});
+var p5 = new Promise((resolve, reject) =&gt; {
+// Это обещание прервет Promise.all
+  reject("reject");
+});
+
+Promise.all([p1, p2, p3, p4, p5]).then(value =&gt; {
+  console.log(value);
+}, reason =&gt; {
+  console.log(reason)
+});
+
+//Выведет:
+//"reject"</code>
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Пояснение</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-promise.all', 'Promise.all')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Первоначальный вариант в стандарте ECMA.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{Compat("javascript.builtins.Promise.all")}}</p>
+
+<div id="compat-mobile"> </div>
+
+<h2 id="Родственные_темы">Родственные темы</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+ <li>{{jsxref("Promise.race()")}}</li>
+</ul>

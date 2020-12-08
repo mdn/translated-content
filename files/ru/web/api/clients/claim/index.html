@@ -1,0 +1,114 @@
+---
+title: Clients.claim()
+slug: Web/API/Clients/claim
+translation_of: Web/API/Clients/claim
+---
+<p>{{APIRef("Service Worker Clients")}}</p>
+
+<p>Метод <strong><code>claim()</code></strong> интерфейса {{domxref("Clients")}} позволяет активному сервис-воркеру установить себя {{domxref("ServiceWorkerContainer.controller", "контролирующим воркером")}} для всех клиентских страниц в своей {{domxref("ServiceWorkerRegistration.scope", "области видимости")}}. Вызывает событие "<code>controllerchange</code>" на {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} всех клиентских страниц, контролируемых сервис-воркером.</p>
+
+<p>После регистрации сервис-воркера страницы не начнут использовать его, пока не загрузятся вновь. Метод <code>claim()</code> позволяет установить контроль над страницами немедленно. Имейте в виду, что в этом случае ваш сервис-воркер будет контролировать все загружаемые по сети страницы этого origin, в т. ч. из других сервис-воркеров.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: js">await clients.claim();
+</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<p>Нет.</p>
+
+<h3 id="Результат">Результат</h3>
+
+<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:">Promise</a></code> с <code>undefined</code>.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>В примере ниже внутри обработчика события "<code>activate</code>" сервис-воркера используется метод <code>claim()</code>, что позволяет клиентской странице, загруженной в той же области видимости, обходиться без перезагрузки для использования сервис-воркером.</p>
+
+<pre class="brush: js">self.addEventListener('activate', event =&gt; {
+  event.waitUntil(clients.claim());
+});</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Initial definition. It is still under development (see <a href="https://github.com/slightlyoff/ServiceWorker/issues/414">issue 414</a> and <a href="https://github.com/slightlyoff/ServiceWorker/issues/423">issue 423</a>).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(42.0)}}</td>
+   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>24</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatGeckoMobile("44.0") }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</p>
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers">Использование Service Worker</a></li>
+ <li><a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle">The service worker lifecycle</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li>{{jsxref("Promise", "Promises")}}</li>
+ <li>{{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} — переключайте состояние ожидания сервис-воркера</li>
+</ul>

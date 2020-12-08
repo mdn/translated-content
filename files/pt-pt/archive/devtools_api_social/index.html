@@ -1,0 +1,213 @@
+---
+title: Utilizar Firefox Devtools com a API Social
+slug: Archive/Devtools_API_Social
+translation_of: Archive/Social_API_Devtools
+---
+<p>O Firefox tem um número de <a href="/pt-PT/docs/Tools">ferramentas de desenvolvimento</a> que podem ser utilizadas para ajudar com o desenvolvimento dos provedores de <a href="/pt-PT/docs/Social_API">API Social</a>. Contudo, até que o <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839959" title="https://bugzilla.mozilla.org/show_bug.cgi?id=839959"><em>bug</em> 839959</a> termine, o processo não é tão simples como deveria ser. Enquanto isso, esta página descreve algumas soluções alternativas.</p>
+
+<h2 id="Ativar_Devtools_do_Chrome">Ativar Devtools do Chrome</h2>
+
+<p>Both of the techniques below require the chrome devtools to be manually enabled. To do this, open <code>about:config</code> in a tab, and after verifying that you will be careful, toggle the boolean value <code>devtools.chrome.enabled</code> to true.</p>
+
+<h2 id="Utilizar_o_Inspetor_de_DOM_e_Profiler">Utilizar o Inspetor de DOM e <em>Profiler</em></h2>
+
+<ul>
+ <li>From the "Web Developer" menu, select "<a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a>". In the newly created scratchpad window, select the <em>Environment</em> menu and select the <em>Browser</em> option.</li>
+ <li>Paste the following code into the new scratchpad:</li>
+</ul>
+
+<pre class="brush: js">// Uncomment one of the following lines. NOTE: You must ensure the element you
+// want to inspect has been created - e.g., the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow;
+
+// The "notification" panel - this will show the most-recently-used panel
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>
+
+<ul>
+ <li>Review the top few lines of the script, and ensure exactly one of the "<code>let w = ...</code>" lines is uncommented, depending on which social element you wish to inspect.</li>
+ <li>Press Ctrl+R (or Execute-&gt;Run) to run the scratchpad.</li>
+ <li>A developer toolbox window should appear - the "<a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>", "<a href="/en-US/docs/Tools/Style_Editor">Style Editor</a>", and "<a href="/en-US/docs/Tools/Profiler">Profiler</a>" tabs should all be showing the social element you enabled in the script. Executing the scratchpad a second time will hide the toolbox.</li>
+ <li><strong>Note that the Debugger and Web Console tabs are not showing the social content.</strong> This is currently expected - see below for how to enable the debugger.</li>
+</ul>
+
+<h2 id="Utilizar_o_'Depurador'_com_os_elementos_sociais.">Utilizar o 'Depurador' com os elementos sociais.</h2>
+
+<ul>
+ <li>From the "Web Developer" menu, select "Browser Debugger". Wait a few seconds for a new debugger window to open and initialize. You will probably be asked to confirm that a new debugging session should be started.</li>
+ <li>In the "Filter Scripts" box, start typing the name of the script you wish to debug (for example, enter the name of your sidebar URL to debug the sidebar).</li>
+ <li>In the script, add breakpoints etc. to the code in question, and start debugging!</li>
+</ul>
+
+<pre style="position: fixed; left: -1000px;">// want to inspect has been created - eg, the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar:
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel.
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow
+
+// The "notification" panel - this will show the most-recently-used panel.
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>
+
+<pre style="position: fixed; left: -1000px;">// Uncomment one of the following lines.  NOTE: You must ensure the element you
+// want to inspect has been created - eg, the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar:
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel.
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow
+
+// The "notification" panel - this will show the most-recently-used panel.
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>
+
+<pre style="position: fixed; left: -1000px;">// Uncomment one of the following lines.  NOTE: You must ensure the element you
+// want to inspect has been created - eg, the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar:
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel.
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow
+
+// The "notification" panel - this will show the most-recently-used panel.
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>
+
+<pre style="position: fixed; left: -1000px;">// Uncomment one of the following lines.  NOTE: You must ensure the element you
+// want to inspect has been created - eg, the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar:
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel.
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow
+
+// The "notification" panel - this will show the most-recently-used panel.
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>
+
+<pre style="position: fixed; left: -1000px;">// Uncomment one of the following lines.  NOTE: You must ensure the element you
+// want to inspect has been created - eg, the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar:
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel.
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow
+
+// The "notification" panel - this will show the most-recently-used panel.
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>
+
+<pre style="position: fixed; left: -1000px;">// Uncomment one of the following lines.  NOTE: You must ensure the element you
+// want to inspect has been created - eg, the sidebar must be visible, the flyouts
+// must have been opened once, etc.
+
+// The sidebar:
+let w = document.getElementById("social-sidebar-browser").contentWindow;
+
+// The "flyout" panel.
+// let w = document.getElementById("social-flyout-panel").firstChild.contentWindow
+
+// The "notification" panel - this will show the most-recently-used panel.
+// let w = document.getElementById("social-notification-panel").firstChild.contentWindow;
+
+
+if (!w) {
+    alert("This window is yet to be created");
+} else {
+    XPCOMUtils.defineLazyModuleGetter(this, "Toolbox",
+      "resource:///modules/devtools/Toolbox.jsm");
+    XPCOMUtils.defineLazyModuleGetter(this, "TargetFactory",
+      "resource:///modules/devtools/Target.jsm");
+    let target = TargetFactory.forWindow(w);
+    let toolbox = gDevTools.getToolbox(target);
+    toolbox ? toolbox.destroy() : gDevTools.showToolbox(target, undefined, "window");
+}</pre>

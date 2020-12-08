@@ -1,0 +1,133 @@
+---
+title: Aktualizacja poleceń
+slug: Mozilla/Tech/XUL/Kurs_XUL/Aktualizacja_poleceń
+tags:
+  - Kurs_XUL
+  - Przewodniki
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Updating_Commands
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Polecenia" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Rozgłaszacze_oraz_obserwatory">Następny  »</a></p>
+</div>
+
+<p>W tym artykule zajmiemy się aktualizacją poleceń.</p>
+
+<h2 id="Wywo.C5.82ywanie_komend" name="Wywo.C5.82ywanie_komend">Wywoływanie komend</h2>
+
+<p>Jeśli element <code><code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> posiada atrybut <code><code id="a-oncommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/oncommand">oncommand</a></code></code>, możesz po prostu ją wywołać używając metody <code><code id="a-oncommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/oncommand">oncommand</a></code></code> na komendę albo element przypisany do niej. Dla innych komend będziesz musiał użyć kilka dodatkowych linii kodu, np. gdy wywołujesz komendę zaimplementowaną przez kontroler. Dodatkowo będziesz musiał tego użyć, gdy tworzysz własne menu komend, np. żeby zaimplementować menu edytowania komend w swojej aplikacji.</p>
+
+<p>Na szczęście dodatkowy kod jest w miarę prosty. Wszystko czego potrzebujesz to pobrać potrzebny kontroler i wywołać komendę. Oto prosty sposób aby to wykonać:</p>
+
+<p><span class="comment">If a &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/command" title="command">command</a></code>&lt;/code&gt; has an &lt;code&gt;<code id="a-oncommand"><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Atrybut/oncommand">oncommand</a></code>&lt;/code&gt; attribute, you can just invoke it by using the &lt;code&gt;<span id="m-doCommand"><code><a href="https://developer.mozilla.org/pl/docs/Mozilla/Tech/XUL/Metoda/doCommand">doCommand</a></code></span>&lt;/code&gt; method of the command or an element which is attached to it. For other commands, you will need to use a couple of additional lines of code. You will need to use these extra steps when invoking commands implemented by a controller. In addition, you will need to do this when creating your own menu commands, for instance to implement the edit menu commands in your own application. Fortunately, the extra code is fairly simple. All we need to do is get the needed controller and call the command. A simple way of doing this is the following:</span></p>
+
+<pre>var controller = document.commandDispatcher.getControllerForCommand("cmd_paste");
+if (controller &amp;&amp; controller.isCommandEnabled("cmd_paste")){
+  controller.doCommand(command);
+}
+</pre>
+
+<p>Powyższy kod najpierw odzyskuje kontrolera dla polecenia &lt;tt&gt;cmd_paste&lt;/tt&gt; z rozdzielacza poleceń. Następnie, sprawdza czy polecenie jest włączone i wykonuje polecenie używając metody kontrolera <code>doCommand</code> . Zauważmy, że nie potrzebujemy zgadywać którego elementu albo którego kontrolera musimy użyć. Rozdzielacz komend zajmie się tym sam. Moglibyśmy również po prostu wywołać
+
+ <i>doCommand</i>
+ bez sprawdzania czy komenda jest dostępna, choć prawdopodobnie nie powinniśmy tak robić.</p>
+
+<p>Powyższy kod jest wystarczająco ogólny, że może być funkcją wykonującą komendę, z komendą jako argumentem. Taka funkcja mogłaby być użyta wielokrotnie dla wielu komend. W rzeczywistości jest to bardzo częste, więc w Mozilli zawarta jest biblioteka, która właśnie to robi. Jeśli zawrzesz skrypt "<a class="external" rel="freelink">chrome://global/content/globalOverlay.js</a>" w pliku XUL, możesz wywoływać metodę
+
+ <i>goDoCommand</i>
+ , która wykonuje komendę przekazaną w argumencie. Kod tej funkcji to tylko kilka linijek, więc możesz zawrzeć go bezpośrednio w swoim kodzie, jeśli z pewnych powodów nie chcesz importować biblioteki.</p>
+
+<p><span class="comment">The code above first retrieves the controller for the '&lt;tt&gt;cmd_paste&lt;/tt&gt;' command from the command dispatcher. Then, it checks to see whether the command is enabled, and then executes the command using the &lt;code&gt;doCommand&lt;/code&gt; method of the controller. Note that we don't need to figure out which element to use or which controller to use. The command dispatcher handles that part. Also, we could just call &lt;code&gt;doCommand&lt;/code&gt; without checking if the command was enabled or not, although we probably shouldn't do that. The code above is generic enough that it can be a function that takes a command as an argument and executes that command. This function could then be reused for all commands. In fact, this is common enough that Mozilla includes a library which does just that. If you include the script '&lt;tt&gt;<a class="external" rel="freelink">chrome://global/content/globalOverlay.js</a>&lt;/tt&gt;' in a XUL file, you can call the &lt;code&gt;goDoCommand&lt;/code&gt; method which executes the command passed as the argument. The code for this function is only a few lines long so you could include it directly in your code if for some reason you didn't want to include the library.</span></p>
+
+<pre>&lt;script src="chrome://global/content/globalOverlay.js"/&gt;
+
+&lt;command id="cmd_paste" oncommand="goDoCommand('cmd_paste');"/&gt;
+&lt;button label="Paste" command="cmd_paste"/&gt;
+</pre>
+
+<p>Przykład powyżej zaimplementuje przycisk "Wklej" (
+ <i>Paste</i>
+ ). Jest on dołączony do komendy, która wywoła komendę z określonego kontrolera. Kod ten to wszystko czego potrzebujesz, aby zaimplementować funkcjonalną komendę wklejania do swojej aplikacji. Jedyna inna rzecz, której potrzebujesz to upewnić się, czy status dostępności komendy wklej, a także przycisku, jest update'owany w odpowiednim czasie, co jest opisane poniżej.</p>
+
+<p><span class="comment">The example above will implement a Paste button. It is attached to the command which will invoke the command on the necessary controller when called. The code above is all you need to implement the functionality of the paste command in your application. The only other thing you need to do is ensure that the enabled status of the paste command, and therefore the button, is updated at the right time, which is described below.</span></p>
+
+<h2 id="Command_Updaters" name="Command_Updaters">Command Updaters</h2>
+
+<p>Edytor komend to dodatkowa cecha elementu &lt;commandset&gt;, która pozwala edytować dostępne statusy jednej lub więcej komend, gdy zaszła pewna akcja. Musisz się zastanowić kiedy komenda jest ważna, a kiedy nie. Dodatkowo musisz rozważyć kiedy status może się zmienić i kiedy komenda powinna zostać edytowana.</p>
+
+<p>Na przykład komenda "wklej" jest ważna, gdy coś dzieje się w oknie tekstowym i schowek nie jest pusty. Komenda stanie się dostępna za każdym razem, gdy kursor będzie w polu tekstowym i gdy zmieni się zawartość schowka. Edytor komend będzie wyczekiwał na te sytuacje i kod włączający lub wyłączający dostępność komend będzie wykonany.</p>
+
+<p>Prosty edytor wygląda tak:</p>
+
+<p><span class="comment">A command updater is an extra feature of the &lt;code&gt;<code><a href="/pl/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code>&lt;/code&gt; element which allows it to update the enabled status of one or more commands when certain events happen. You will need to think about when a command is valid and when it is not. In addition, you will need to consider when the state could change and when the commands should be updated. For example, the paste command is valid when a textbox has the focus and there is something on the clipboard to paste. The command will become enabled whenever a textbox is focused and when the clipboard contents change. A command updater will listen for these situations and code can be executed which enables and disables commands as necessary. A simple command updater looks like this:</span></p>
+
+<pre>&lt;commandset id="updatePasteItem"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateCommand('cmd_paste');"/&gt;
+</pre>
+
+<p>Edytor jest oznaczony przez atrybut
+ <i>commandupdater</i>
+ , który powinien mieć wartość
+
+ <i>true</i>
+ . Atrybut
+
+ <i>events</i>
+ jest używany aby wypisać sytuacje, w które wsłuchuje się edytor. Możesz wyszczególnić wiele wydarzeń, przedzielając je przecinkiem. W powyższym przykładzie edytor czeka na wydarzenie, gdy kursor znajdzie się w odpowiednim polu (
+
+ <i>focus event</i>
+ ). Sprawi to, że komenda zostanie edytowana.</p>
+
+<p>Gdy pojawi się oczekiwane wydarzenie, zostanie wywołany kod w atrybucie
+ <i>oncommandupdate</i>
+ . W przykładzie wywołana jest metoda
+
+ <i>goUpdateCommand</i>
+ , która jest funkcją dostarczaną przez skrypt globalOverlay.js opisany wcześniej. Wyedytuje on komendę i dostosuje dostępność odpowiednich przycisków i elementów menu. Stojący za tym kod jest w miarę łatwy. Po prostu bierze wymaganego kontrolera, wywołuje jego metodę
+
+ <i>isCommandEnabled</i>
+ i dostosowuje dostępność komendy. Jeśli masz kilka komend do wyedytowania, wywołaj metodę
+
+ <i>goUpdateCommand</i>
+ dla każdej z nich.</p>
+
+<p>Zauważmy, że edytor komendy otrzyma powiadomienia o wszystkich wydarzeniach z wszystkich elementów, nawet jeśli inny słuchacz wydarzeń na nie odpowiada. Tak więc edytor komend jest jak globalny słuchacz wydarzeń (
+ <i>event handler</i>
+ ).</p>
+
+<p>Edytorzy mają kilka wydarzeń, na które odpowiadają, wymienione poniżej. Można też stworzyć własne wydarzenia.</p>
+
+<ul>
+ <li><b>focus</b>: pojawia się, gdy zmienia się miejsce kursora;</li>
+ <li><b>select</b>: pojawia się, gdy zmienia się zaznaczony tekst;</li>
+ <li><b>undo</b>: pojawia się, gdy buffer cofnięcia zmian się zmienia;</li>
+ <li><b>clipboard</b>: pojawia się, gdy zmienia się zawartość schowka.</li>
+</ul>
+
+<p>Następujący przykład pokazuje edytorów komend używanych w Mozilli do edytowania komend menu edycji. Użyte tu funkcje możecie znaleźć w skrypcie "<a class="external" rel="freelink">chrome://communicator/content/utilityOverlay.js</a>".</p>
+
+<pre>&lt;commandset id="globalEditMenuItems"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateGlobalEditMenuItems()"/&gt;
+&lt;commandset id="selectEditMenuItems"
+            commandupdater="true"
+            events="select"
+            oncommandupdate="goUpdateSelectEditMenuItems()"/&gt;
+&lt;commandset id="undoEditMenuItems"
+            commandupdater="true"
+            events="undo"
+            oncommandupdate="goUpdateUndoEditMenuItems()"/&gt;
+&lt;commandset id="clipboardEditMenuItems"
+            commandupdater="true"
+            events="clipboard"
+            oncommandupdate="goUpdatePasteMenuItems()"/&gt;
+</pre>
+
+<p>Następnie dowiemy się <a href="pl/Kurs_XUL/Rozg%c5%82aszacze_oraz_obserwatory">jak używać obserwatorów</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/pl/docs/Kurs_XUL:Polecenia" style="float: left;">« Poprzedni</a><a href="/pl/docs/Kurs_XUL:Rozgłaszacze_oraz_obserwatory">Następny  »</a></p>
+</div>

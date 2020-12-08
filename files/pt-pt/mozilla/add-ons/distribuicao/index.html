@@ -1,0 +1,78 @@
+---
+title: Assinar e distribuir os seus extras
+slug: Mozilla/Add-ons/Distribuicao
+tags:
+  - Extensões
+  - Extensões da Web
+  - Extras
+  - assinatura
+  - distribuição
+  - publicação
+  - revisões
+translation_of: Mozilla/Add-ons/Distribution
+---
+<div>{{AddonSidebar}}</div>
+
+<p>Os extras precisam de ser assinados antes de serem instalados nas versões beta e de lançamento do Firefox. Este processo de assinatura ocorre via addons.mozilla.org (AMO), independentemente de optar por distribuir o seu extra via AMO ou por si mesmo.</p>
+
+<p>Nós aqui analisamos os requisitos de assinatura e as revisões relacionadas, antes de discutir como escolher entre o distribuir no AMO ou distribuir um extra por si mesmo. Nós também analisamos os canais disponíveis no AMO e respondemos a questões sobre propriedade e disputas de código.</p>
+
+<h2 class="brush: js" id="Assinar_os_seus_extras">Assinar os seus extras</h2>
+
+<p>Starting with Firefox 43, add-on extensions and multi-item add-ons that include extensions need to be signed by Mozilla before they can install in release and beta versions of Firefox. Themes, and other types of add-ons such as spelling dictionaries, don't need to be signed.</p>
+
+<p>Unsigned extensions can be installed in <a href="/en-US/Firefox/Developer_Edition">Developer Edition</a>, Nightly, and <a href="/en-US/Firefox/Enterprise_deployment">ESR</a> versions of Firefox, after toggling the <em>xpinstall.signatures.required</em> preference in <code>about:config</code>.</p>
+
+<p>Mozilla signs add-ons through the <a href="https://addons.mozilla.org/developers/addon/submit">AMO</a> website and provides three methods for submitting your add-on for signing:</p>
+
+<ul>
+ <li>upload your add-on through the <a href="/en-US/Add-ons/Distribution/Submitting_an_add-on">Developer Hub on AMO</a>.</li>
+ <li>use the <a href="http://addons-server.readthedocs.io/en/latest/topics/api/signing.html">addons.mozilla.org signing API</a>.</li>
+ <li>use <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign">web-ext sign.</a></li>
+</ul>
+
+<p>All the signing options are subject to the <a href="/en-US/Add-ons/AMO/Policy/Agreement">Firefox Add-on Distribution Agreement</a>.</p>
+
+<p>Using the signing API or web-ext returns you signed add-ons, with no distribution listing created on AMO. If you take the option to upload your add-on through the AMO Developer Hub, you're given a choice between listing on AMO or self-distribution. If you choose self-distribution, at the end of the process you download signed copies of your add-on.</p>
+
+<p>Regardless of the method used all add-ons must pass an automated validation before they are signed. They may also be subject to a manual code review. The review criteria applied to add-ons are found in the <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Add-on Policies</a>.</p>
+
+<h2 id="Distributir_o_seu_extra">Distributir o seu extra</h2>
+
+<p>You aren't required to list or distribute your add-on through AMO. You'll, therefore, need to decide if you want to distribute and list your add-on through AMO or distribute it yourself. Here are some things you should consider:</p>
+
+<ul>
+ <li>AMO is a very popular distribution platform, with millions of monthly visitors and installations. It's integrated into the Firefox Add-ons Manager, allowing for easy installation of add-ons published on AMO.</li>
+ <li>When an add-on is listed on AMO, updates to installed copies are handled automatically by Firefox each time a new version is listed on AMO.<br>
+  To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's <a href="/en-US/Add-ons/Updates">update_link</a> key. Self-distributed add-ons that don't have an update URL check AMO for updates and are updated to a listed version, if one is available.</li>
+</ul>
+
+<p>For more information on how to submit an add-on for distribution on AMO or self-distribution, see <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">Submitting an add-on.</a></p>
+
+<h2 id="Mais_informação_sobre_AMO">Mais informação sobre AMO</h2>
+
+<h3 id="Propriedade">Propriedade</h3>
+
+<p>Os extras no AMO podem ter vários utilizadores com permissão para atualizar e gerir a listagem. Os autores de um extra podem transferir a propriedade e adicionar programadores à listagem de um extra por meio do <em>Hub </em>do Programdor. Não é necessária nenhuma interação com os representantes da Mozilla para uma transferência de propriedade.</p>
+
+<p> </p>
+
+<h4 id="Para_transferir_propriedade">Para transferir propriedade</h4>
+
+<ul>
+ <li>Make sure the new owner has an account on <a href="https://addons.mozilla.org/">addons.mozilla.org</a>. New accounts can be created using the "Register or Log in" button, after which the owner must confirm their email address.</li>
+ <li>Sign into your account on the <a href="https://addons.mozilla.org/developers/">Add-on Developer Hub</a>, and click "Edit Listing" for the extension you want to transfer.</li>
+ <li>On the left-hand side of the screen, you will see a blue box labeled "Edit Information". Click "Manage Authors &amp; License" — from the resulting page you can add and remove authors.</li>
+ <li>One you have added the new author's email address, set that person as the extension owner and make sure the "Listed" box has a checkmark. Now you can remove yourself by clicking the "x" next to your email address.</li>
+ <li>When you're done, click "Save Changes". The new owner will be able to manage updates, listing information, etc., when logged in.</li>
+</ul>
+
+<p> </p>
+
+<h3 id="Disputas_de_códogo">Disputas de códogo</h3>
+
+<p>Many add-ons allow their source code to be viewed. This does not mean that the source code is open source or available for use in another add-on. The original author of an add-on retains copyright of their work unless otherwise noted in the add-on's license.</p>
+
+<p>If we're notified of a copyright or license infringement, we will take steps to address the situation per the DMCA, which may include taking down the add-on listing. Details about this process and how to report trademark or licensing issues can be <a href="https://www.mozilla.org/en-US/about/legal/report-abuse/">found here</a>.</p>
+
+<p>If you are unsure of the current copyright status of an add-on's source code, you must contact the author and get explicit permission before using the source code.</p>

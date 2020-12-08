@@ -1,0 +1,121 @@
+---
+title: Portando o Boot to Gecko
+slug: Archive/B2G_OS/Porting
+translation_of: Archive/B2G_OS/Porting_B2G_OS/basics
+---
+<p>O Firefox OS (Boot to Gecko) usa um kernel derivado do <a href="http://www.android.com/" title="http://www.android.com/">Android</a>, com uma interface do usuário baseado no <a href="/en-US/docs/Gecko" title="Gecko">Gecko</a> no seu topo. Esse artigo fornece um guia básico de como portar o sistema operacional para novos dispositivos.</p>
+<p>Esse guia assume que você está portando para um novo dispositivo que já roda Android. Se você estiver portando para um outro dispositivo o trabalho será mais compilcado.</p>
+<h2 id="Configurando_o_sistema_de_compilação">Configurando o sistema de compilação</h2>
+<p>O primeiro passo é configurar seu ambiente e o sistema de compilação. Você pode seguir o guia no artigo <a href="/pt-BR/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Pré-requisitos para compilar o Firefox OS</a>.</p>
+<h2 id="Crie_uma_cópia_de_segurança_local_do_sistema_Android_original">Crie uma cópia de segurança local do sistema Android original</h2>
+<p>O próximo passo deve ser criar uma cópia de segurança do seu dispositivo Android antes de começar a realizar os testes de compilação do B2G. Adicionalmente alguns desses bits salvos serão úteis no processo de compilação e instalação.</p>
+<pre>mkdir my_device_backup
+cd my_device_backup
+adb pull /system system</pre>
+<h2 id="Clone_os_repositórios_B2G">Clone os repositórios B2G</h2>
+<p>Para clonar o repositório B2G e os seus manifestos execute os comandos:</p>
+<pre>git clone https://github.com/mozilla-b2g/B2G.git
+git clone https://github.com/mozilla-b2g/b2g-manifest.git</pre>
+<h2 id="Adicione_o_novo_dispositivo_ao_arquivo_config.sh">Adicione o novo dispositivo ao arquivo config.sh</h2>
+<p>O próximo passo é adicionar o novo dispositivo ao arquivo <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> no repositório B2G. Você pode utilizar algum já existente como modelo. Essa tarefa basicamente consiste em fornecer as instruções para buscar os arquivos corretos para a compilação.</p>
+<h2 id="Crie_um_arquivo_de_manifesto_para_o_novo_dispositivo">Crie um arquivo de manifesto para o novo dispositivo</h2>
+<p>Agora você precisa incluir um arquivo de manifesto para o novo dispositivo. Utilze um manifesto existente como modelo. Você pode usar o manifesto <a href="https://github.com/mozilla-b2g/b2g-manifest/blob/master/hamachi.xml" title="https://github.com/mozilla-b2g/b2g-manifest/blob/master/hamachi.xml">hamachi</a> como referência. Uma vez pronto, adicione e faça o <em>commit</em> seu novo arquivo no repositório local <code>b2g-manifest</code>:</p>
+<pre>git add my-new-device.xml
+git commit
+</pre>
+<p>Nesse momento, você vai precisar que o script <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> utilize seu repositório local <code>b2g-manifest</code> no lugar do oficial. Para fazer isso, altere os valores das variáveis <code>GITREPO</code> e <code>BRANCH</code> no arquivo <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> para o seu repositório local e o <code>branch</code> desejeado,  por exemplo:</p>
+<pre><span class="nv">GITREPO</span><span class="o">=</span><span class="k">${</span><span class="nv">GITREPO</span><span class="k">:-</span><span class="s2">"file:///home/yourname/b2g-manifest"</span><span class="k">}</span>
+<span class="nv">BRANCH</span><span class="o">=</span><span class="k">${</span><span class="nv">BRANCH</span><span class="k">:-master</span><span class="k">}</span></pre>
+<h2 id="Crie_uma_árvore_de_configuração_para_o_novo_dispositivo">Crie uma árvore de configuração para o novo dispositivo</h2>
+<p>Isso deve estar em <code>device/<em>&lt;manufacturer&gt;</em>/<em>&lt;device_id&gt;</em></code>. Essa árvore deve incluir no mínimo:</p>
+<ul>
+ <li><code>AndroidBoard.mk</code></li>
+ <li><code>AndroidProducts.mk</code></li>
+ <li><code>BoardConfig.mk</code></li>
+ <li><code>extract-files.sh</code></li>
+ <li><code>full_&lt;device_id&gt;.mk</code></li>
+ <li>arquivos idc para <em>touchscreen</em></li>
+ <li>arquivos de inicialização (<code>init.rc</code>, <code>init.&lt;target&gt;.rc</code>, <code>uevent.rc</code>, ...)</li>
+</ul>
+<p>O conteúdo aqui pode ser muito diferente de um dispositivo para outro. Em particular<code> BoardConfig.mk</code> e <code>extract-files.sh</code> devem ser significativamente diferentes. Essa parte requer um bom conhecimento técnico, investigação, testes de depuração para descobrir quais BLOBs devem ser extraídos. Para ter uma melhor ideia do que supostamente essa árvore deve conter dê uma olhada em <a href="https://github.com/mozilla-b2g/android-device-hamachi" title="https://github.com/mozilla-b2g/android-device-hamachi">configuração para o dispositivo hamachi</a>. Lembre-se de referenciar corretamente sua própria árvore de configuração no manifesto que você criou para o seu novo dispositivo.</p>
+<div class="note">
+ <p><strong>Nota:</strong> Se você encontrar uma referência existente no <a href="http://www.cyanogenmod.com/" title="http://www.cyanogenmod.com/">CyanogenMod</a> para seu dispositivo, isso acelerará o processo. O <a href="http://forum.xda-developers.com/" title="http://forum.xda-developers.com/">Forum XDA</a> é um outro bom local para discussão e conseguir informações.</p>
+</div>
+<h2 id="Recompile_o_boot.img">Recompile o boot.img</h2>
+<p>Uma vez que tudo está pronto, você precisa recompilar a imagem de inicialização (boot.img). Isso normalmente não é necessário para o kernel, mas pegar as alterações realizadas no arquivo <code>init.rc</code>.</p>
+<h3 id="Alterações_no_arquivo_init.rc">Alterações no arquivo <code>init.rc</code></h3>
+<p>O arquivo <code>init.rc</code> que você vai usar <strong>não é fornecido</strong> pelo B2G, então você deve utilizar o que existe no seu dispositivo.</p>
+<p>As principais coisas que você necessita modificar são:</p>
+<h4 id="Importar_init.b2g.rc">Importar init.b2g.rc</h4>
+<p>Adicione as seguintes linhas para importar <code>init.b2g.rc</code>:</p>
+<pre>on early-init
+    start ueventd
+    import /init.b2g.rc</pre>
+<h4 id="Corrigir_permissões">Corrigir permissões</h4>
+<p>Corrija as permissões nos arquivos <code>/system/b2g/b2g</code>, <code>/system/b2g/updater</code>, <code>/system/b2g/plugin-container</code>. Isso deve ser feito após as linhas que montam o sistema de arquivos. Use a permissão <code>0755</code>:</p>
+<pre>chmod 0755 /system/b2g/b2g
+chmod 0755 /system/b2g/updater
+chmod 0755 /system/b2g/plugin-container</pre>
+<p>Você deve começar modificando o arquivo <code>init.rc</code> do seu dispositivo ao invés de usar o arquivo <code>init.rc</code> fornecido pelo sistema de compilação. Para isso, você deve lembrar de configurar <code>TARGET_PROVIDES_INIT_RC</code> em <code>BoardConfig.mk</code>.</p>
+<h3 id="Utilização_de_um_kernel_pré-compilado_versus_compilar_o_kernel_desde_o_fonte.">Utilização de um kernel pré-compilado <em>versus</em> compilar o kernel desde o fonte.</h3>
+<p>Para compilar um kernel desde o fonte, inclua <code>AndroidKernel.mk</code> e a configuração do kernel à árvore de configuração do dispositivo.</p>
+<p>O <a href="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro" title="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro">maguro</a> no sistema de compilação antigo é um exemplo de compilação do kernel a partir do fonte.</p>
+<h3 id="Extraindo_e_modificando_uma_imagem_de_incialização_(boot_image)">Extraindo e modificando uma imagem de incialização (<em>boot image</em>)</h3>
+<p>É possível recuperar a imagem de inicialização de um telefone analisando o conteúdo dos dispositivos <code>/dev/mtd/mtd1</code> ou <code>/dev/mtd/mtd2</code>, a imagem pode ser facilmente recuperada:</p>
+<pre>adb shell 'cat /dev/mtd/mtd1 &gt; /sdcard/boot.img'
+adb pull /sdcard/boot.img
+</pre>
+<p>Uma vez que a imagem foi obtida ela pode ser descompactada via uma ferramenta como <a href="http://whiteboard.ping.se/Android/Unmkbootimg" title="Unmkbootimg">unmkbootimg</a>. A ferramente irá extrair tanto a imagem do kernel (<code>zimage</code>) como o <em>ramdisk</em> (<code>initramfs.cpio.gz</code>) bem como irá apresentar o comando para recompilar a imagem com os mesmos parâmetros usados na compilação original, por exemplo:</p>
+<pre>$ unmkbootimg boot.img
+Kernel size 3872576
+Kernel address 0x208000
+Ramdisk size 265102
+Ramdisk address 0x1500000
+Secondary size 0
+Secondary address 0x1100000
+Kernel tags address 0x200100
+Flash page size 2048
+Board name is ""
+Command line "androidboot.hardware=aphone"
+Extracting kernel to file zImage ...
+Extracting root filesystem to file initramfs.cpio.gz ...
+All done.
+---------------
+To recompile this image, use:
+  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o new_boot.img
+---------------
+</pre>
+<p>Para modificar o arquivo <em>ramdisk</em>, crie um diretório de saída e faça a extração lá:</p>
+<pre>mkdir initramfs_dir
+cd initramfs_dir
+gunzip -c ../initramfs.cpio.gz | cpio -i
+</pre>
+<p>Faça todas as alterações necessárias (como a modificação no init.rc) e reempacote o ramdisk usando <code>mkbootfs</code>. Certifique-se de usar a versão compilada com as outras ferramentas do B2G atual:</p>
+<pre>/path/to/your/B2G/out/host/linux-x86/bin/mkbootfs . | gzip &gt; ../newinitramfs.cpio.gz
+</pre>
+<p>Finalmente volte ao diretório de nível mais alto e reempacote a imagem de inicializacão usando <code>mkbootimg</code>, certifique-se também que você está usando a mesma versão compilada com as outras ferramentas do B2G atual:</p>
+<pre>/path/to/your/B2G/out/host/linux-x86/bin/mkbootimg --kernel zImage --ramdisk newinitramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o newboot.img
+</pre>
+<p>Se agora você copiar a nova imagem de inicializacão em <code>out/target/product/$DEVICE/boot.img</code> (onde <code>$DEVICE</code> é o nome do dispositivo) ele automaticamente irá copiar (<em>flash</em>) quando você executar <code>flash.sh</code>. Alternativamente você poderá copiar (<em>flash</em>) manualmente com os seguintes comandos:</p>
+<pre>adb reboot bootloader
+fastboot flash boot newboot.img
+fastboot reboot
+</pre>
+<h2 id="Adicione_o_novo_dispositivo_ao_flash.sh">Adicione o novo dispositivo ao flash.sh</h2>
+<p>Os detalhes de como fazer isso irá depender das ferramentas necessárias para fazer a cópia para o novo dispositivo.</p>
+<h2 id="Configure_compile_e_copie_(flash)_para_o_novo_dispositivo">Configure, compile e copie (flash) para o novo dispositivo</h2>
+<p>Agora você pode tentar executar os seguintes comandos:</p>
+<pre>ANDROIDFS_DIR=my_device_backup ./config.sh &lt;device_id&gt; '../b2g-manifest/default.xml'
+./build.sh
+./flash.sh</pre>
+<h2 id="Teste_e_depure">Teste e depure</h2>
+<p>Nós precisamos incluir detalhes aqui, mas esse artigo já pode ser alguma ajuda.</p>
+<h2 id="Perguntas_frequentes">Perguntas frequentes</h2>
+<p>Em breve</p>
+<h2 id="Veja_também">Veja também</h2>
+<ul>
+ <li><a href="/pt-BR/docs/Mozilla/Firefox_OS" title="en-US/docs/Mozilla/Firefox_OS">Firefox OS</a></li>
+ <li><a href="https://github.com/mozilla-b2g/B2G" title="https://github.com/mozilla-b2g/B2G">Arquivos fonte do B2G no Github</a></li>
+ <li><a href="http://www.android.com/" title="http://www.android.com/">Página oficial do Android</a></li>
+ <li><a href="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/" title="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/">Uma lista de projetos existentes no blog do Dietrich Ayala</a> de portabilidade do Firefox OS em alguns dispositivos</li>
+</ul>

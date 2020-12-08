@@ -1,0 +1,53 @@
+---
+title: Suporte ao ECMAScript 5 no Mozilla
+slug: Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla
+tags:
+  - ECMAScript6
+  - JavaScript
+  - Versões
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<div>ECMAScript 5.1, a última versão padrão à qual o JavaScript se baseia, foi aprovada em Junho de 2011.</div>
+
+<p>O JavaScript runtime usado nas últimas versões dos projetos Mozilla, incluindo ambos Firefox e Thunderbird, possuem amplo suporte às <em>features </em>do ECMAScript. Este artigo cobre as <em>features </em>suportadas por diferentes versões do JavaScript runtime da Mozilla.</p>
+
+<blockquote>
+<p>NT: Resolvi manter o termo <em>feature</em> nesta tradução porque é o termo mais utilizado entre os desenvolvedores brasileiros. Uma <em>feature</em> nada mais é do que as características ou funcionalidades da linguagem.</p>
+</blockquote>
+
+<h2 id="Features_Suportadas">Features Suportadas</h2>
+
+<h3 id="Adicionado_ao_JavaScript_1.8.5_(Gecko_2_Firefox_4_e_posteriores)">Adicionado ao JavaScript 1.8.5 (Gecko 2, Firefox 4 e posteriores)</h3>
+
+<p>Firefox 4 possui amplo suporte ao ECMAScript 5, incluindo o método <code>Object.* </code>e strict mode. Veja <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.8.5">Novo em JavaScript 1.8.5</a>*.</p>
+
+<blockquote>
+<p>*NT: ainda sem traduções para português.</p>
+</blockquote>
+
+<h3 id="Adicionado_ao_JavaScript_1.8.1_(Gecko_1.9.1_Firefox_3.5)">Adicionado ao JavaScript 1.8.1 (Gecko 1.9.1, Firefox 3.5)</h3>
+
+<ul>
+ <li>Suporte <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">Nativo JSON</a>.</li>
+ <li>Método <a class="internal" href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf" title="En/Core JavaScript 1.5 Reference/Global Objects/Object/GetPrototypeOf"><code>Object.getPrototypeOf()</code></a>.</li>
+ <li>Método  <a class="internal" href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim" title="En/Core JavaScript 1.5 Reference/Global Objects/String/Trim"><code>String.trim()</code></a>, que remove os espaços em branco de ambos os lados das strings (começo e fim).</li>
+ <li>Gecko 1.9.1.4 atualizou a implementação do <a href="/en-US/docs/Web/JavaScript/Guide/Using_native_JSON#Converting_objects_into_JSON" title="En/Using native JSON#Converting objects into JSON"><code>JSON.stringify()</code></a> para ser compátivel com o ECMAScript 5.</li>
+</ul>
+
+<p dir="ltr" id="tw-target-text">Melhorias estabelecidas pelo ECMAScript 5 foram feitas no algoritmo de análise que impede a avaliação de XHTML como código JavaScript em determinadas circunstâncias.</p>
+
+<h3 id="Adicionado_ao_JavaScript_1.6_(Gecko_1.8_Firefox_1.5)">Adicionado ao JavaScript 1.6 (Gecko 1.8, Firefox 1.5)</h3>
+
+<p>Novos métodos <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> oferem métodos melhorados para manipulá-las -- tem sido parte do JavaScript deste o <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.6">JavaScript 1.6</a>. Agora, eles foram padronizados como parte do ECMAScript 5.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">Site do ECMAScript</a></li>
+ <li><a href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">Especificação do ECMAScript</a></li>
+ <li>Post do John Resig sobre <a class="external" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">Object.getPrototypeOf</a></li>
+ <li>Implementação das <a href="http://frugalcoder.us/post/2010/01/07/EcmaScript-5s-Date-Extensions.aspx">Datas em ECMAScript 5 para o JavaScript</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es5/">Suporte do ECMAScript entre os browsers</a></li>
+</ul>

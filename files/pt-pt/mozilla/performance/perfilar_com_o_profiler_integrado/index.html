@@ -1,0 +1,356 @@
+---
+title: Perfilar com o Gecko Profiler
+slug: Mozilla/Performance/Perfilar_com_o_Profiler_integrado
+tags:
+  - Desempenho
+  - Desenvolvimento da Mozilla
+  - Perfilar
+translation_of: Mozilla/Performance/Profiling_with_the_Built-in_Profiler
+---
+<p>{{ gecko_minversion_header("16.0") }}</p>
+
+<div class="summary">
+<p><span class="seoSummary">O Gecko Profiler é um <em>profiler</em> que está integrado no Firefox. </span>Possui uma integração mais apertada com o Firefox do que os <em>profilers</em> externos, e também pode ser utilizado em situações em que os <em>profilers</em> externos não estão disponíveis, tal como numa máquina de não desenvolvimento ou num dispositivo Android bloqueado<span class="seoSummary">.  </span></p>
+</div>
+
+<div class="note">
+<p>The Gecko Profiler has been previously known as "SPS" and "the built-in profiler". We have changed as many references to the old names as possible, but there may still be some around.</p>
+</div>
+
+<h2 id="Obter_o_Extra_Gecko_Profiler">Obter o Extra Gecko Profiler</h2>
+
+<p>First things first, you want to make sure you are using the correct build of Firefox.  An official Nightly or Beta or Release build would work.  If you are using a local build, make sure you have the --enable-profiling option turned on in your mozconfig.</p>
+
+<p>The Gecko Profiler has two interfaces:</p>
+
+<ol>
+ <li>for Web developers there is a simplified profiler that can be opened from the menu Tools &gt; Web Developer &gt; Performance.</li>
+ <li>a more advanced interface for developers of Mozilla's internals can be accessed by installing the <a href="https://perf-html.io/">Gecko Profiler add-on</a> (more <a href="/en-US/docs/Mozilla/Performance/Reporting_a_Performance_Problem#Setting_up_the_Gecko_Profiler_extension">details on installation are available</a>).</li>
+</ol>
+
+<div class="note">
+<p><a href="/en-US/docs/Performance/Reporting_a_Performance_Problem">Reporting a Performance Problem</a> has a step-by-step guide for obtaining a profile when requested by Firefox developers.</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Reporting_a_Thunderbird_Performance_Problem_with_G">Reporting a Thunderbird Performance Problem</a> has a step-by-step guide for obtaining a profile when requested by Thunderbird developers.</p>
+</div>
+
+<h2 id="Compreender_os_Perfis">Compreender os Perfis</h2>
+
+<p>You can check out some <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Gecko_Profiler_FAQ">frequently asked questions</a> about the Gecko Profilers.</p>
+
+<p>Here's a video of Ehsan examining some profiles:</p>
+
+<p>
+ <video controls src="https://vid.ly/e6v7s4?content=video&amp;format=hd_webm">Your browser doesn't appear to support WebM video playback.</video>
+</p>
+
+<div class="note">
+<p>If there are features you would find helpful, please <a href="https://github.com/mstange/Gecko-Profiler-Addon/">file a bug with details</a>.</p>
+</div>
+
+<h3 id="Interface">Interface</h3>
+
+<h4 id="1._Timeline">1. Timeline</h4>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14877/profiler-timeline.png" style="height: 327px; width: 1751px;"></p>
+
+<p>The timeline has several rows of tracing markers (colored segments) which indicate interesting events. Hover over them to see more information. Below the tracing markers are rows corresponding with activity on a variety of threads.</p>
+
+<div class="note">
+<p><strong>Tip</strong>: Threads that are annotated with "[default]" are in the parent (aka "UI", aka "browser chrome", aka "main") process and those annotated with "[tab]" are in the Web content (aka "child") processes.</p>
+</div>
+
+<div class="note">
+<p><strong>Tip</strong>: Long-running tasks in the parent process will block all input or drawing with the browser UI (aka "UI jank") whereas long-running tasks in the content process will block interactivity with the page but still allowing the user to pan and zoom around thanks to APZ.</p>
+</div>
+
+<h5 id="Tracing_markers">Tracing markers</h5>
+
+<ul>
+ <li>Red: These indicate that the event loop is being unresponsive. Note that high priority events such as vsync are not included here. Also note that this indicates what would have happened had there been an event waiting and not necessarily that there was an event pending for that long.</li>
+ <li>Black: These indicate synchronous IPC calls.</li>
+</ul>
+
+<h5 id="Ranges">Ranges</h5>
+
+<p><img alt="Timeline showing ranged breadcrumbs and zoom icon" src="https://mdn.mozillademos.org/files/14893/profiler-breadcrumbsandzoom.png" style="height: 490px; width: 2450px;"></p>
+
+<p>Ranges of time can be zoomed in on by clicking and dragging anywhere in the tracing marker or thread areas. Once a range is selected, a magnifying glass appears which zooms into that range. Clicking on a tracing marker will create a selection corresponding with its duration allowing for easy zooming in on interesting time ranges. As you zoom in on ranges, breadcrumbs are created allowing you to easily navigate back to previously-selected ranges or the entire profile (denoted as "Full Range").</p>
+
+<div class="note">
+<p><strong>Tip</strong>: While zooming out to a previously-selected range deletes the narrower range, the browser back button can be used to restore the narrower range.</p>
+</div>
+
+<h5 id="Thread_Timeline(s)">Thread Timeline(s)</h5>
+
+<p><strong>Thread/Process Timelines</strong>: Below the tracing markers we have a list of profiled threads. These threads may come from different processes. In this case, we have the 'GeckoMain [default]' process' main thread, a content process' main thread, and the main thread of the compositor process. Each of these timelines is aligned with wall clock time. So, for example, when a thread is blocked, like 'GeckoMain [tab]', on a thread like 'GeckoMain [default]', we can see what's occurring on the latter thread that is preventing it from responding to the former.</p>
+
+<p><strong>X (Time) axis</strong>: The timelines go from left to right as wall clock time increases along the X axis. Elements in the timeline are spaced at the sampling frequency with an attempt to align them with time. Factors such as sampling or stack-walking variance and system load can lead to sampling delays which manifest as gaps in the timeline.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> because this is a sampling profiler, be cautious when examining running time that is equal to the sampling interval. For very time-sensitive profiling, you may want to consider a non-sampling profiler.</p>
+</div>
+
+<p><strong>Y (Stack) axis: </strong>The Y axis is the stack depth, not the CPU activity. The change in stack height is useful to find patterns like long blocking calls (long flatlines) or very tall spiky blocks (recursive calls and JS). With more experience you can read profiles faster by recognizing patterns. Also note that you can click on timeline elements (the selected element gets darker when selected) and the tree view (see below) reflects the selected element.</p>
+
+<ul>
+</ul>
+
+<h4 id="2._Call_Tree">2. Call Tree</h4>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14895/profiler-calltree.png" style="height: 726px; width: 1751px;"></p>
+
+<p>The Call Tree shows the samples organized by 'Running Time' which will show the data by wall clock time. There are lighter grey names to the right of tree elements that indicate where the code comes from. Be aware that elements can be from JavaScript, Gecko, or system libraries. Note that if some functions are not yet named properly, symbolication may not yet be finished.</p>
+
+<div class="note">
+<p>Dica: You can right-click on a function name to get an option to copy its name to the clipboard.</p>
+</div>
+
+<p>A significant portion of time can be spent in idle, blocking calls like waiting for events. This is ideal for a responsive application to be ready to service incoming events. There are OS-specific waiting functions like <code>NtWaitForMultipleObjects </code>seen in the example above taken on Windows or <code>mach_msg_trap</code> on macOS.</p>
+
+<div class="note">
+<p>Dica: You can quickly go deeper into the call tree by holding down your right arrow key. Alternatively, expand an entire tree segment by holding Alt and clicking on the arrow to the left of the collapsed tree segment.</p>
+</div>
+
+<p>As we progress into a more specific part of the tree, you'll notice that the 'Running time' decreases. This happens when a function has 2 or more non-trivial calls: the running time will be split between its children.</p>
+
+<div class="note">
+<p>Dica: Focus on one section of the tree by clicking on the "arrow-in-a-circle" icon that appears to the right of the tree element as you hover over it. A "tree breadcrumb" will appear similar to the range breadcrumbs noted above.</p>
+</div>
+
+<p>Clicking the "JavaScript only" option will only show JavaScript code in the Call Tree. You could compare the time with this option checked and the total time to get an idea of how much time was spent running JS. Note that long-running JS function execution may not actually be taking as long as you think because further down the call stack there may be something like painting happening.</p>
+
+<p>Clicking the "Invert call stack" option will sort by the time spent in a function in descending order. Note that the running time here is only the running time of that particular frame and not the total of all called instances of that function. You can see the samples in the Timeline get darker as you select different functions in the Call Tree; these are samples that were taken when the selected function was running.</p>
+
+<p>"Filter stacks" will allow you to search for functions by name. One of the easiest ways to find slowness caused by a page's JS is to type its URL into the "Filter stacks" box. You can then select corresponding Call Tree entries and watch the Timeline for entries in the content process main thread that get darker as you select Call Tree entries.</p>
+
+<div class="note">
+<p>Tip: If things are blank elsewhere in the UI, you may have text entered into the "Filter stacks" box.</p>
+</div>
+
+<h5 id="Custom_Annotations">Custom Annotations</h5>
+
+<p>In <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1334218">bug 1334218</a> an annotation was added to <code>PresShell::Paint</code> to show the URL of the document being painted. These annotations are not too complex to add so if you would like something added, <a href="https://bugzilla.mozilla.org/enter_bug.cgi">file a bug</a>.</p>
+
+<h4 id="3._Partilhar_o_perfil">3. Partilhar o perfil</h4>
+
+<p>Click "Share..." &gt; Share acknowledging that the URLs you had open and your Firefox extensions will be included in the profile data sent to the server. If you select a different time range, the URL revealed by pressing "Permalink" will change so that you can be sure the recipient of the URL will see the same things you are seeing.</p>
+
+<h3 id="Dicas">Dicas</h3>
+
+<p>Understanding profiles can be difficult. If you're unfamiliar with Gecko's internals, you can click the <em>JavaScript only</em> button to see where your JavaScript code is slow. Each entry in the Call Tree shows a call stack and how much time is spent in that call stack. For example:<img alt="" src="https://mdn.mozillademos.org/files/14905/profiler-timespent.png" style="display: block; height: 382px; margin: 0px auto; width: 1180px;">In the results above we can see that we're spending ~287 milliseconds in <code>Startup::XRE_InitChildProcess</code>, 194 ms of which are spent in <code>PVsync::Msg_Notify</code> and <strong>all</strong> child functions that it calls. It is useful to scan down the "Running Time" column and look for when the time changes. While looking for performance problems, you're looking for the processes that are taking the most time; then you can figure out how to optimize them.</p>
+
+<h3 id="Erros_(Bugs)_de_Desempenho_Comuns_no_Firefox">Erros (Bugs) de Desempenho Comuns no Firefox</h3>
+
+<p>Inefficient code that is on the reflow or restyle paths is often to blame for jank. So is code that is run often in the parent process or in parts of the codebase that apply to many users.</p>
+
+<p>Synchronous re-flow can be caused by JS that, for example, makes changes to the page content in a loop and queries about the layout of the page in that same loop.</p>
+
+<p>A PresShell:Flush means that we are either recomputing styles or recomputing layout. These sorts of flushes should be avoided if possible, as they can be quite expensive. Keep your eyes out for flushes like this that are blocking the main thread for a long time. If you notice these things happening in a loop, that's a bug to be fixed, since we're likely "layout thrashing".</p>
+
+<p>Some more tips and answers to common questions are available in a <a href="/en-US/docs/Mozilla/Performance/Gecko_Profiler_FAQ">mid-2017 FAQ document</a>.</p>
+
+<p>It's a good idea to search <a href="https://bugzilla.mozilla.org/">bugzilla</a> before filing a bug about a performance problem in Firefox but sometimes it's hard to find issues that have already been reported. Therefore, it's usually a good idea to <a href="https://bugzilla.mozilla.org/enter_bug.cgi">file a bug</a>.</p>
+
+<h2 id="Perfilar_compilações_(builds)_locais_do_Windows">Perfilar compilações (builds) locais do Windows</h2>
+
+<p>If you built Firefox for Windows <strong>locally</strong> and you would like to use the local symbols with the profiler, you will need to run an additional tool; see <a href="/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler_and_Local_Symbols_on_Windows" title="/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler_and_Local_Symbols_on_Windows">Profiling with the Gecko Profiler and Local Symbols on Windows</a>.</p>
+
+<h2 id="Perfilar_compilações_(builds)_Try">Perfilar compilações (builds) Try</h2>
+
+<p>The profiler currently doesn't really support symbolication for profiles from Try builds. For Linux builds, there seem to be symbols inside the binaries, which the profiler should pick up correctly. But on Windows and macOS, you'll have to do some tricks to make it work:</p>
+
+<ol>
+ <li><span>Put your firefox build into a directory with the name <code>dist</code>.</span></li>
+ <li><span>Download the crashreporter symbols zip for your build. It should be one of the "artifacts" of the build job of your try build.</span></li>
+ <li><span>Unzip the crashreporter symbols into <code>dist/crashreporter-symbols/</code>.</span></li>
+ <li><span>Now profile as usual.</span></li>
+</ol>
+
+<p>(This abuses the symbolication logic for local builds. It's at <a href="http://searchfox.org/mozilla-central/rev/51b3d67a5ec1758bd2fe7d7b6e75ad6b6b5da223/browser/components/extensions/ext-geckoProfiler.js#172">ext-geckoProfiler.js</a> and may stop working at any time.)</p>
+
+<h2 id="Perfilar_móvel_Firefox">Perfilar móvel Firefox</h2>
+
+<ol>
+ <li>For local builds of Fennec, you should build with optimization and <code>STRIP_FLAGS="--strip-debug"</code> but <strong>NOT</strong> with <code>--enable-profiling</code>. Nightly builds are already built with the appropriate flags.</li>
+ <li>You'll need to have <code>adb</code> and <code>arm-eabi-addr2line</code> (which is part of the <a href="http://developer.android.com/tools/sdk/ndk/index.html#Installing" title="http://developer.android.com/tools/sdk/ndk/index.html#Installing">Android NDK</a>) in your bash <code>PATH</code>, so use <code>locate arm-eabi-addr2line</code> (on Linux) or<code> mdfind name:arm-eabi-addr2line</code> (on OS X) and stick an export to its location in <code>~/.bash_profile</code>. The extension will invoke bash to use <code>adb</code> and <code>addr2line</code>.</li>
+ <li>Install the <a href="https://github.com/bgirard/Gecko-Profiler-Addon/raw/master/geckoprofiler.xpi" title="https://github.com/bgirard/Gecko-Profiler-Addon/raw/master/geckoprofiler.xpi">latest pre-release build</a> in your host machine's Firefox browser that has your phone reachable via <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a>. This will add a icon in the top right of the browser.</li>
+ <li>Set <code>devtools.debugger.remote-enabled</code> to <code>true</code> in <code>about:config</code> for Fennec.</li>
+ <li>Select target <em>Mobile USB</em> and press <em>Connect</em>. The first run will take an additional 1 minute or so to pull in the required system libraries.</li>
+</ol>
+
+<h2 id="Profiling_Firefox_Startup">Profiling Firefox Startup</h2>
+
+<ol>
+ <li>Start your Firefox with the environment variable <code>MOZ_PROFILER_STARTUP=1</code> set. This way the profiler is started as early as possible during startup.</li>
+ <li>Then capture the profile using the add-on as usual.</li>
+</ol>
+
+<p>Startup profiling does not use the settings that you configured in the add-on's panel. It uses settings that can be configured with the environment variables <code>MOZ_PROFILER_STARTUP_ENTRIES</code> and <code>MOZ_PROFILER_STARTUP_INTERVAL</code>:</p>
+
+<ul>
+ <li>If it looks like the buffer is not large enough, you can tweak the buffer size with the env var <code>MOZ_PROFILER_STARTUP_ENTRIES</code>. This defaults to 1000000, which is 9MB. If you want 90MB use 10000000, and 20000000 for 180MB, which are good values to debug long startups.</li>
+ <li>If you'd like a coarser resolution, you can also choose a different interval using <code>MOZ_PROFILER_STARTUP_INTERVAL</code>, which defaults to 1 (unit is millisecond). You can't go below 1 ms but you can use e.g. 10 ms.</li>
+</ul>
+
+<h2 id="Profiling_JS_benchmark_(xpcshell)">Profiling JS benchmark (xpcshell)</h2>
+
+<ol>
+ <li>To profile the script <code>run.js</code> with IonMonkey (<code>-I</code>), type inference (<code>-n</code>) and JäegerMonkey (<code>-m</code>). Thgis requires the following command:
+
+  <pre><code class="brush: bash">$ xpcshell -m -I -n -e '
+    const Ci = Components.interfaces;
+    const Cc = Components.classes;
+    var profiler = Cc["@mozilla.org/tools/profiler;1"].getService(Ci.nsIProfiler);
+    profiler.StartProfiler(
+      10000000 /* = profiler memory */,
+      1 /* = sample rate: 100µs with patch, 1ms without */,
+      ["stackwalk", "js"], 2 /* = features, and number of features. */
+    );
+  ' -f ./run.js -e '
+    var profileObj = profiler.getProfileData();
+    print(JSON.stringify(profileObj));
+  ' | tail -n 1 &gt; run.cleo</code></pre>
+  The xpcshell output all benchmark information and on its last line it output the result of the profiling, you can filter it with <code>tail -n 1</code> and redirect it to a file to prevent printing it in your shell.  The expected size of the output is around 100 of MB.</li>
+ <li>To add symbols to your build, you need to call <code>./scripts/profile-symbolicate.py</code> available in B2G repository.
+  <pre><code>$ GECKO_OBJDIR=&lt;objdir&gt; PRODUCT_OUT=&lt;objdir&gt; TARGET_TOOLS_PREFIX= \
+    ./scripts/profile-symbolicate.py -o run.symb.cleo run.cleo</code></pre>
+ </li>
+ <li><a href="https://github.com/bgirard/cleopatra" title="https://github.com/bgirard/cleopatra">Clone Cleopatra</a> and start the server with <code>./run_webserver.sh</code>.</li>
+ <li>Access Cleopatra from your web browser by loading the page <code>localhost:8000</code>, and upload <code>run.symb.cleo</code> to render the profile with most of the symbol information.</li>
+</ol>
+
+<h2 id="Native_stack_vs._Pseudo_stack">Native stack vs. Pseudo stack</h2>
+
+<p>The profiler periodically samples the stack(s) of thread(s) in Firefox, collecting a stack trace, and presents the aggregated results using the Cleopatra UI.  Stack traces can be collected into two different ways: Pseudostack (the default) or Nativestack.</p>
+
+<h3 id="Native_stack">Native stack</h3>
+
+<p>Native stacks are the normal stacks most developers are used. They are the default.</p>
+
+<h3 id="Pseudostack">Pseudostack</h3>
+
+<p>The pseudostack uses function entry/exit tags added by hand to important points in the code base.  The stacks you see in the UI are chains of these tags.  This is good for highlighting particularly interesting parts of the code, but they miss out on un-annotated areas of the code base, and give no visibility into system libraries or drivers.</p>
+
+<p>Tagging is done by adding macros of the form <code>AUTO_PROFILER_LABEL("NAMESPACE", "NAME")</code>. These add RAII helpers, which are used by the profiler to track entries/exits of the annotated functions.  For this to be effective, you need to liberally use <code>AUTO_PROFILER_LABEL</code> throughout the code. See <code>GeckoProfiler.h</code> for more variations like <code>AUTO_PROFILER_LABEL_DYNAMIC</code>.</p>
+
+<p>Because of the non-zero overhead of the instrumentation, the sample label shouldn't be placed inside hot loops.  A profile reporting that a large portion is spent in "Unknown" code indicates that the area being executed doesn't have any sample labels.  As we focus on using this tool and add additional sample labels coverage should improve.</p>
+
+<h2 id="Sharing_saving_and_loading_profiles">Sharing, saving and loading profiles</h2>
+
+<p>After capturing and viewing a profile you will see "Share..." and "Save as file..." buttons in the top-right of the window. Sharing will upload your profile to perf-html.io and make it public. More <a href="/en-US/docs/Mozilla/Performance/Reporting_a_Performance_Problem#Capturing_and_sharing_a_profile">information on sharing profiles</a> is available.</p>
+
+<h2 id="Profiling_a_hung_process">Profiling a hung process</h2>
+
+<p>It is possible to get profiles from hung Firefox processes using lldb<sup><a href="http://mikeconley.ca/blog/2015/04/04/things-ive-learned-this-week-march-30-april-3-2015/#fn1-2699" rel="footnote" title="Unfortunately, this technique will not work for Windows.  ">1</a></sup>.</p>
+
+<ol>
+ <li>After the process has hung, <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html#//apple_ref/doc/uid/TP40012917-CH4-SW5">attach lldb</a>.</li>
+ <li>Type in<sup><a href="http://mikeconley.ca/blog/2015/04/04/things-ive-learned-this-week-march-30-april-3-2015/#fn2-2699" rel="footnote" title="Assuming you’re running a build after this revision landed.">2</a></sup>, :
+  <pre>p (void)<code id="line-232">profiler_save_profile_to_file</code>("somepath/profile.txt")</pre>
+ </li>
+ <li><a href="https://github.com/mstange/analyze-tryserver-profiles">Clone mstange’s handy profile analysis repository.</a></li>
+ <li>Run:
+  <pre>python symbolicate_profile.py somepath/profile.txt</pre>
+
+  <p>To graft symbols into the profile. mstange’s scripts do some fairly clever things to get those symbols – if your Firefox was built by Mozilla, then it will retrieve the symbols from the Mozilla symbol server. If you built Firefox yourself, it will attempt to use some cleverness<sup><a href="http://mikeconley.ca/blog/2015/04/04/things-ive-learned-this-week-march-30-april-3-2015/#fn3-2699" rel="footnote" title="A binary called dump_syms_mac in mstange’s toolkit, and nm on Linux">3</a></sup> to grab the symbols from your binary.</p>
+
+  <p>Your profile will now, hopefully, be updated with symbols. Upload it for further analysis!</p>
+
+  <p>I haven’t yet had the opportunity to try this, but I hope to next week. I’d be eager to hear people’s experience giving this a go – it might be a great tool in determining what’s going on in Firefox when it’s hung!</p>
+ </li>
+</ol>
+
+<h2 id="Profiling_Threads">Profiling Threads</h2>
+
+<p>The Gecko Profiler has rudimentary support for profiling multiple threads. To enable it, check the 'Multi-Thread' box then enter one or more thread names into the textbox beside it. Thread names are the strings passed to the base::Thread class at initialization. At present there is no central list of these thread names, but you can find them by grepping the source.</p>
+
+<p>Examples: <a href="http://mxr.mozilla.org/mozilla-central/source/ipc/glue/BrowserProcessSubThread.cpp#24">1</a> <a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/ipc/CompositorParent.cpp#133">2</a></p>
+
+<p>If the filter you entered is invalid, no threads will be profiled. You can identify this by hitting Analyze (Cleopatra will show you an error message). If the filter is left empty, only the main thread is captured (as if you had not enabled Multi-Thread.)</p>
+
+<h2 id="Profiler_Features">Profiler Features</h2>
+
+<p>The profiler supports several features. These are options to gather additional data in your profiles. Each option will increase the performance overhead of profiling so it's important to activate only options that will provide useful information for your particular problem to reduce the distortion.</p>
+
+<h3 id="Stackwalk">Stackwalk</h3>
+
+<p>When taking a sample the profiler will attempt to unwind the stack using platform specific code appropriate for the ABI. This will provide an accurate callstack for most samples. On ABIs where framepointers are not avaiable this will cause a significant performance impact.</p>
+
+<h3 id="JS_Profiling">JS Profiling</h3>
+
+<p>Javascript callstacks will be generated and interleaved with the c++ callstacks. This will introduce an overhead when running JS.</p>
+
+<h3 id="GC_Stats">GC Stats</h3>
+
+<p>Will embed GC stats from 'javascript.options.mem.notify' in the profile.</p>
+
+<h3 id="Main_Thread_IO">Main Thread IO</h3>
+
+<p>This will interpose file I/O and report them in the profiles.</p>
+
+<h3 id="Multi-Thread">Multi-Thread</h3>
+
+<p>This will sample other threads. This fields accept a comma seperated list of thread names. A thread can only be profiled if it is registered to the profiler.</p>
+
+<h3 id="GPU">GPU</h3>
+
+<p>This will insert a timer query during compositing and show the result in the Frames view. This will appropriate how much GPU time was spent compositing each frame.</p>
+
+<h3 id="Layers_Texture">Layers &amp; Texture</h3>
+
+<p>The profiler can be used to view the layer tree at each composite, optionally with texture data. This can be used to debug correctness problems.</p>
+
+<h4 id="Viewing_the_Layer_Tree">Viewing the Layer Tree</h4>
+
+<p>To view the layer tree, the <code>layers.dump</code> pref must be set to <code>true</code> in the Firefox or B2G program being profiled.</p>
+
+<p>In addition, both the compositor thread and the content thread (in the case of B2G, the content thread of whichever app you're interested in) must be profiled. For example, on B2G, when profiling the Homescreen app, you might start the profiler with:</p>
+
+<pre>./profile.sh start -p b2g -t Compositor &amp;&amp; ./profile.sh start -p Homescreen
+</pre>
+
+<p>Having gotten a profile this way, the layer tree for a composite can be seen by clicking on a composite in the "Frames" section of Cleopatra (you may need to a sub-range of samples to make individual composites large enough to be clicked). This will activate the "LayerTree" tab:</p>
+
+<p><img alt="Screenshot of layer tree view in Cleopatra, with no textures." src="https://mdn.mozillademos.org/files/10327/cleopatra-layer-tree-hilite.png" style="height: 1029px; width: 1923px;"></p>
+
+<p>In this screenshot, Composite #143 has been selected. The layer tree structure can be seen in the left panel. It contains, for each layer, the type of the layer, and various metrics about the layer, such as the visible region and any transforms. In the right panel, a visualization of the layer tree (based entirely on the aforementioned metrics) is shown. Hovering over a layer in the left panel highlights the layer in the right panel. This is useful for identifying what content each layer corresponds to. Here, I'm hovering over the last layer in the layer tree (a PaintedLayerComposite), and a strip at the top of the right panel is highlighted, telling me that this layer is for the system notification bar in B2G.</p>
+
+<h4 id="Viewing_Textures">Viewing Textures</h4>
+
+<p>Sometimes, it's useful to see not only the structure of the layer tree for each composite, but also the rendered textures for each layer. This can be achieved by additionally setting the <code>layers.dump-texture</code> pref to <code>true</code>, or by adding <code>-f layersdump </code>to the profiler command line (the latter implies both the <code>layers.dump</code> and <code>layers.dump-texture</code> prefs).</p>
+
+<div class="warning">
+<p><strong>Warning</strong>: Dumping texture data slows performance considerably, and requires a lot of storage for the profile files. Expect rendering to happen at a significantly reduced frame rate when profiling this way, and keep the duration of the capture short, to ensure the samples of interest aren't overwritten.</p>
+</div>
+
+<p>Here's how the Layer Tree view looks in Cleopatra with texture data:</p>
+
+<p><img alt="Screenshot of layer tree view in Cleopatra, with textures." src="https://mdn.mozillademos.org/files/10329/cleopatra-layer-tree-textures.png" style="height: 1037px; width: 1920px;"></p>
+
+<p>This time, the visualization in right panel shows the actual textures rather than just the outlines of the layers. This can be very useful for debugging correctness problems such as a temporary visual/rendering glitch, because it allows you to find the precise composite that shows the glitch, and look at the layer tree for that composite.</p>
+
+<h4 id="Visualizing_a_layer_tree_without_a_profile">Visualizing a layer tree without a profile</h4>
+
+<p>If you have a layer dump from somewhere (such as from <code>adb logcat</code> on B2G), you can get Cleopatra to visualize it (just the structure of course, not textures) without needing a profile. To do so, paste the layer dump into the "Enter your profile data here" text field on the front page of Cleopatra:</p>
+
+<p><img alt="Screenshot of front page of Cleopatra, with pasted layer dump." src="https://mdn.mozillademos.org/files/10331/cleopatra-layer-tree-noprofile.png" style="height: 596px; width: 1020px;"></p>
+
+<p>The resulting "profile" will have the Layer Tree view enabled (but nothing else). This is useful in cases where you want to gain a quick visual understanding of a layer dump without having to take a profile.</p>
+
+<div class="note">
+<p>On B2G, each line of a layer dump in <code>adb logcat</code> output is prefixed with something like <code>I/Gecko   (30593):</code>. Cleopatra doesn't currently understand this prefix, so it needs to be removed before pasting.</p>
+</div>
+
+<h3 id="Display_List">Display List</h3>
+
+<p>Dump the display list after each refresh with the texture data. This can be used to debug correctness problems.</p>
+
+<h2 id="Contribuir">Contribuir</h2>
+
+<ul>
+ <li>Source is located in {{ Source("tools/profiler") }}.</li>
+ <li>The Bugzilla component is Core::Gecko Profile.</li>
+ <li>The profiler add-on repository can be found here: <a class="link-https" href="https://github.com/bgirard/Gecko-Profiler-Addon" rel="freelink">https://github.com/mstange/Gecko-Profiler-Addon</a>.</li>
+ <li>The Cleopatra repository can be found here: <a class="link-https" href="https://github.com/devtools-html/perf.html" rel="freelink">https://github.com/devtools-html/perf.html</a></li>
+</ul>
