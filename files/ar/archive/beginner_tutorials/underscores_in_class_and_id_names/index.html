@@ -1,0 +1,61 @@
+---
+title: الشرطات السفلية (_) في اسماء محددات الاصناف والمعرفات (Class & ID)
+slug: Archive/Beginner_tutorials/Underscores_in_class_and_ID_Names
+translation_of: Archive/Beginner_tutorials/Underscores_in_class_and_ID_Names
+---
+<div class="note" dir="rtl">
+<p><strong>ملاحظة: </strong>لقد تم تحسين دعم المتصفح للشرطة السفلية (_) في CSS بشكل كبير منذ تاريخ نشر هذه المقالة في عام 2001 ولم تعد التوصية التالية دقيقة بالنسبة لمعظم الظروف</p>
+</div>
+
+<p dir="rtl"><span class="comment">Summary: The use of the underscore character in CSS can lead to major display problems in multiple browsers. Learn why this is so, and how to keep your sites from being bitten by this problem.</span> تدرس هذه المذكرة التقنية استخدام الشرطات السفلية (_) في CSS ، ولماذا يجب تجنب استخدامها في معظم الظؤوف</p>
+
+<p dir="rtl">يعد استخدام الشرطة السفلية (_)  في اسماء المتغيرات والدوال (الوظائف)  امراً شائعاَ نوعا ما في العديد من لغات البرمجة. على سبيل المثال دالة وظيفتها "الحصول على طول سلسلة نصية" قد تتم تسميتها <code>get_string_length</code> او متحول يمثل عدد الاشخاص الذين قالمو بالتصويت قد يسمى <code>voted_Republican</code> </p>
+
+<p dir="rtl">نظرا لهذه الحقيقة، غالبا مايحاول المطورين الذين يكتبون CSS استخدام الشرطة السفلية باسلوب مماثل في تسمية المعرفات ومحددات الاصناف (Class &amp; ID). <strong>ولا ينبغي القيام بذلك. </strong>على الرغم من ان الشرطة السفلية (_) مسموح بها تقنيا في اسماء المعرفات ومحددات الاصناف حتى تاريخ كتابة هذه السطور، هناك العديد من الاسباب التاريخة والعملية التي توضح اسباب وجوب تجنب استخدام الشرطة السفلية (_)</p>
+
+<p dir="rtl">مواصفات CSS1 التي تم اصدرت في شكلها النهائي عام 1996 لا تسمح باستخدام الشرطة السفلية (_) في اسماء المعرفات ومحددات الاصناف مالم تستخدم حرف الهروب (escaped) على النحو التالي:</p>
+
+<pre>p.urgent\_note {color: maroon;}</pre>
+
+<p dir="rtl">هذا لم يكن مدعوما جيدا من المتصفحات في ذلك الوقت ومع ذلك هذه الممارسة لم يسبق لها مثيل. </p>
+
+<p dir="rtl">CSS2 التي تم اصدرت في عام 1998 ايضا منعت استخدام الشرطة السفلية (_) في أسماء المعرفات ومحددات الاصناف ومع ذلك فان تصحيح الاخطاء في المواصفات التي تم اصدارها عام 2001 جعلت استخدام الشرطة السفلية مسموحاً لاول مرة. مما ادى للاسف لتعقيد المشهد المعقد بالفعل </p>
+
+<h3 dir="rtl" id="Support_realities" name="Support_realities">دعم الحقائق</h3>
+
+<p dir="rtl">بين الاخطاء في التفيذ والتغيرات في المواصفات، سلوك المتصفحات في ما يتعلق باستخدام الشرطات السفلية معقد الى حد ما.</p>
+
+<ul dir="rtl">
+ <li>Netscape 6.x يسمح بالشرطات السفلية والشرطات السفلية الهاربة (escaped)</li>
+ <li>Navigator 4.X قام بدعم فرض قيود على استخدام الشرطات السفلية وبالتالي سيقوم بتجاهل اي اسماء معرفات او محددات اصناف تحتوي شرطة سفلية وبذلك لن يتم تطبيق انماط CSS المرتبطة بها. كما انه يتجاهل الشرطات السفلية الهاربة (escaped)</li>
+ <li>Internet Explorer 4.x and 5.x للويندوز (Microsoft Windows) سمح باستخدام الشرطة السفلية عن طريق الخطأ وكذلك كلا الاصدارين غير متوافقين في هذه النقطة حتى تم نشر تصحيح  الاخطاء. وكذلك ينطبق الامر نفسه على كلا الاصدراين للماكنتوش (Mac)</li>
+ <li>Internet Explorer 6 للويندوز (Microsoft Windows) تم اصداره بعد تصحيح الاخطاء، يسمح بالشرطات السفلية والشرطات السفلية الهاربة (escaped)</li>
+ <li>
+  <p>Opera 3.x الى Opera 5.x لا يعترف بالشرطة السفلية ولا الشرطة السفلية الهاربة (ecsaped) حيث انه يتصرف مثل Navigator 4.x في هذا الصدد</p>
+ </li>
+</ul>
+
+<h3 dir="rtl" id="Recommendation" name="Recommendation">التوصية</h3>
+
+<p dir="rtl">لان دعم الشرطة السفلية غير متناسق للغاية في المتصفحات الحالية وكذلك الاصدارات القديمة منها، ينصح المؤلفون بشدة بتجبن استخدام الشرطة السفلية في اسماء المعرفات ومحددات الاصناف.</p>
+
+<p dir="rtl">البديل الشائع لها هو الحرف الواصلة (<code>-</code>)  كما في:</p>
+
+<pre>p.urgent-note {color: maroon;}</pre>
+
+<p dir="rtl"> يختار العديد من المطورين الكتابة بطريقة حالة الجمل (Camle Case) مثال:</p>
+
+<pre>p.urgentNote {color: maroon;}</pre>
+
+<p>If the initial-cap approach is used, however, remember that class and ID names are also supposed to be case-sensitive. See the tech note "<a href="/en-US/docs/Case_Sensitivity_in_class_and_id_Names">Case Sensitivity in <code>class</code> and <code>id</code> Names</a>" for more details.</p>
+
+<div class="originaldocinfo">
+<h3 dir="rtl" id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author(s): Eric A. Meyer, Netscape Communications</li>
+ <li>Last Updated Date: Published 05 Mar 2001</li>
+ <li>Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.</li>
+ <li>Note: This reprinted article was originally part of the DevEdge site.</li>
+</ul>
+</div>

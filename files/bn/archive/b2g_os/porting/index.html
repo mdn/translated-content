@@ -1,0 +1,77 @@
+---
+title: বুট টু গিকো পোর্ট করা
+slug: Archive/B2G_OS/Porting
+tags:
+  - B2G
+  - Firefox OS
+  - Mobile
+translation_of: Archive/B2G_OS/Porting_B2G_OS/basics
+---
+<p>বুট টু গিকো (ফায়ারফক্স ওএস) একটি <a href="/en-US/docs/Gecko" title="Gecko">গিকো</a> ভিত্তিক ইউজার ইন্টারফেসের নিচে <a href="http://www.android.com/" title="http://www.android.com/">এন্ড্রয়েড</a> হতে তৈরি একটি কার্নেল ব্যবহার করে। এই আর্টিকেলে নতুন ডিভাইসে অপারেটিং সিস্টেমটি পোর্ট করার পদ্ধতির ওপর আলোকপাত করা হয়েছে।</p>
+<p>এই গাইডটি ধরে নিচ্ছে আপনি এমন একটি নতুন ডিভাইসে পোর্ট করছেন যাতে ইতোমধ্যে এন্ড্রয়েড চলছে, আপনি যদি অন্য একটি ডিভাইসে পোর্ট করে থাকেন তবে পদ্ধতিটি আরেকটু বিস্তৃত হবে।</p>
+<h2 id="বিল্ড_সিস্টেম_সেটআপ_করা">বিল্ড সিস্টেম সেটআপ করা</h2>
+<p>প্রথম ধাপ হল আপনার বিল্ড সিস্টেম কনফিগার করা; <a href="/en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites" title="Mozilla/Boot_to_Gecko/B2G_build_prerequisites">B2G build prerequisites</a> এর গাইডটি অনুসরণ করতে পারেন।</p>
+<h2 id="B2G_রেপোজিটরি_ক্লোন_করা">B2G রেপোজিটরি ক্লোন করা</h2>
+<p>এর পরের ধাপ হল B2G রেপোজিটরী ক্লোন করা।</p>
+<pre>git clone https://github.com/mozilla-b2g/B2G.git</pre>
+<h2 id="আপনার_আসল_এন্ড্রয়েড_সিস্টেমের_লোকাল_ব্যাকআপ_রাখা">আপনার আসল এন্ড্রয়েড সিস্টেমের লোকাল ব্যাকআপ রাখা</h2>
+<p>পরবর্তীতে, এটি নিয়ে খেলাধুলা করার পূর্বে আপনাকে আপনার এন্ড্রয়েড ডিভাইসের ব্যাকআপ নেয়া উচিৎ। তাছাড়া কয়েকটি জিনিস বিল্ড এবং ইন্সটল প্রক্রিয়ায়ও লাগবে।</p>
+<pre>mkdir my_device_backup
+cd my_device_backup
+adb pull /system system</pre>
+<h2 id="config.sh_এ_নতুন_ডিভাইস_যুক্ত_করা">config.sh এ নতুন ডিভাইস যুক্ত করা</h2>
+<p>পরবর্তী ধাপ হল <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> ফাইলে একটি নতুন ডিভাইস যুক্ত করা; আপনি বর্তমানগুলোকে টেমপ্লেট হিসেবে ব্যবহার করতে পারেন। এটি মূলত বিল্ডের জন্য সঠিক ফাইল সংগ্রহ করতে সাহায্য করবে।</p>
+<h2 id="নতুন_ডিভাইসের_জন্য_ম্যানিফেস্ট_তৈরি_করা">নতুন ডিভাইসের জন্য ম্যানিফেস্ট তৈরি করা</h2>
+<p>এখন আপনাকে দরকার নতুন  মেনিফেস্ট ডিভাইস ফাইলের জন্য প্রয়োজনীয় রেপস ; এই মেনিফেস্ট ফাইল্কে বলা হয়ে থাকে default.xml।সুপারিশকৃত <a href="https://github.com/mozilla-b2g/b2g-manifest" title="https://github.com/mozilla-b2g/b2g-manifest"><code>b2g-manifest</code></a> ফাইল একটি টেম্পলেট গিথাব।প্রত্যেক ডিভাইসের নিজস্ব শাখা আছে;আপনি <a href="https://github.com/mozilla-b2g/b2g-manifest/tree/galaxy-s2" title="https://github.com/mozilla-b2g/b2g-manifest/tree/galaxy-s2"><code>galaxy-s2</code></a> ব্যবহার করতে পারেন রেফারেন্স হিসেবে ।</p>
+<h2 id="নতুন_ডিভাইসের_জন্য_কনফিগারেশন_ট্রি_তৈরি_করা">নতুন ডিভাইসের জন্য কনফিগারেশন ট্রি তৈরি করা</h2>
+<p>নতুন ডিভাইসের জন্য নতুন কন ফিগারেশন তৈরি করুন।এটা ডিভাইসে <code>device/<em>&lt;manufacturer&gt;</em>/<em>&lt;device_id&gt;</em></code>. তে থাকা উচিত।এটা আরো সংযুক্ত করবে যে ,কমপক্ষেঃ</p>
+<ul>
+ <li><code>AndroidBoard.mk</code></li>
+ <li><code>AndroidProducts.mk</code></li>
+ <li><code>BoardConfig.mk</code></li>
+ <li><code>extract-files.sh</code></li>
+ <li><code>full_&lt;device_id&gt;.mk</code></li>
+ <li>idc files for touchscreen</li>
+ <li>init files (<code>init.rc</code>, <code>init.&lt;target&gt;.rc</code>, <code>uevent.rc</code>, ...)</li>
+</ul>
+<p>এখানে যে প্রধান বিষয় টি পার্থক্য তৈরি করেছে তা হল একটি ডিভাইস থেকে অন্য ডিভাইসে নেয়া । বিশেষভাবে, BoardConfig.mk এবংextract-files.sh সুনির্দিষ্টভাবে পার্থক্য করা যায়।এই অংশের দরকার প্রচুর পরিমানে হ্যাকিং,টেস্টিং,এবং ডিবাগিং ফিগারটি সঠিকভাবে বের করে আনতে বাইনারি ব্লব।</p>
+<div class="note">
+ <p><strong>নোটঃযদি আপনি একটি  বিদ্যমান  রেফারেন্স </strong> <a href="http://www.cyanogenmod.com/" title="http://www.cyanogenmod.com/">CyanogenMod</a>  এর জন্য ডিভাইস রাখেন,এই  তথ্য প্রক্রিয়া পোর্টিং করার জন্য গতি এনে দিবে।  <a href="http://forum.xda-developers.com/" title="http://forum.xda-developers.com/">XDA Forum</a> হল আরেকটি ভাল জায়গা আলোচনা এবং সম্পদ চেক করার জন্য ।</p>
+ <h2 id="পুনরায়_গঠন_boot.img">পুনরায় গঠন boot.img</h2>
+</div>
+<p>একদা হয়ে গেলে সব কিছু ,আপনাকে  boot image পুনরায় গঠন করতে হবে এটা সাধারনত  kernel এর নিজের প্রয়োজন পরে না ,কিন্তু <code>init.rc তে পরিবর্তন আনতে তুলে আনা হয়ে থাকে।</code></p>
+<h3 id="init.rc_তে_পরিবর্তন">init.rc তে পরিবর্তন</h3>
+<p>init.rc যা আপনি দেখছেন তা B2G দ্বারা প্রদান করা নয়;এর পরিবর্তে,আপনাকে ডিভাইস থেকে এটি নেয়া দরকার ।</p>
+<p>প্রধান যে জিনিস আপনাকে মোডিফাই করা দরকারঃ</p>
+<h4 id="init.b2g.rc_ইম্পোর্ট">init.b2g.rc ইম্পোর্ট</h4>
+<p><code>init.b2g.rc ইম্পোর্টের পরবর্তী লাইন গুলো যোগ করুনঃ</code>:</p>
+<pre>on early-init
+    start ueventd
+    import /init.b2g.rc</pre>
+<h4 id="ফিক্স_পারমিশন">ফিক্স পারমিশন</h4>
+<p>files <code>/system/b2g/b2g</code>, <code>/system/b2g/updater</code>, <code>/system/b2g/plugin-container ফাইলের অনুমতি ঠিক করুন</code>; এটা করা উচিত হবে যখন লাইন গুলো ফাইল সিস্টেম এর লেখ/পড়া র ক্ষেত্রে লাইঙ্গুলো মাউন্টকরে থাকেঃ</p>
+<pre>chmod 0755 /system/b2g/b2g
+chmod 0755 /system/b2g/updater
+chmod 0755 /system/b2g/plugin-container</pre>
+<p>নতুন ডিভাইস <code>init.rc</code> ব্যবহারের পরিবর্তে <code>init.rc</code> মোডিফাইং এর মাধ্যমে বিল্ড সিস্টেম প্রদান করে থাকে ;যদি তাই হয়ে থাকে তবে মনে রাখতে হবে যে সেট করা হয়  <code>TARGET_PROVIDES_INIT_RC</code> in <code>BoardConfig.mk</code>.</p>
+<h3 id="Prebuilt_kernel_বনাম_সোর্স_থেকে_the_kernel_গঠন">Prebuilt kernel বনাম সোর্স থেকে the kernel গঠন</h3>
+<p>আপনি একটি প্রিবিল্ট kernel ব্যবহার করতে পারেন,অথবা আপনি সোর্স থেকে kernel গঠন করতে পারেন।সোর্স থেকে kernel গঠন করতে ,যোগ করুন AndroidKernel.mk এবং kernel যা ডিভাইস কনফিগারেশনে কনফিগ করে।</p>
+<p><a href="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro" title="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro">maguro</a> হল পুরানো গঠন সিস্টেমের একটি উদাহরণ যা সোর্স থেকে kernel গঠন করে ।</p>
+<h2 id="flash.sh_তে_নতুন_ডিভাইস_যোগ_করুন">flash.sh তে নতুন ডিভাইস যোগ করুন</h2>
+<p><code>flash.sh</code> তে নতুন ডিভাইস যোগকরুন; নতুন ডিভাইস ফ্লাস ব্যবহার  করার জন্য কি দরকার হবে তা কিভাবে কি করতে হবে তা বিশেষ ভাবে জানা যায় ।</p>
+<h2 id="কনফিগারগঠনএবং_ফ্ল্যাশ_নতুন_ডিভাইস">কনফিগার,গঠন,এবং ফ্ল্যাশ নতুন ডিভাইস</h2>
+<p>এখন আপনি গঠনের জন্য এবং নতুন ডিভাইসের ফ্ল্যাশিং এর জন্য চেষ্টা করুনঃ</p>
+<pre>ANDROIDFS_DIR=my_device_backup ./config.sh &lt;device_id&gt; default.xml
+./build.sh
+./flash.sh</pre>
+<h2 id="টেস্ট_এবং_ডিবাগ">টেস্ট এবং ডিবাগ</h2>
+<p>আমাদের কিছু বিস্তারিত যোগ করা দরকার এখানে;সত্যিকার অর্থে ,এটা সম্পুর্ন অনুচ্ছেদে কিছু সাহায্য করতে পারে।</p>
+<h2 id="FAQ">FAQ</h2>
+<p>ফোর্থকামিং</p>
+<h2 id="আরো_দেখুন">আরো দেখুন</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko" title="Mozilla/Boot_to_Gecko">Boot to Gecko</a></li>
+ <li><a href="https://github.com/mozilla-b2g/B2G" title="https://github.com/mozilla-b2g/B2G">B2G source code on Github</a></li>
+ <li><a href="http://www.android.com/" title="http://www.android.com/">Android web site</a></li>
+ <li><a href="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/" title="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/">A list of existing projects on Dietrich Ayala's blog</a> Firefox OS একই ডিভাইসে পোর্ট করতে</li>
+</ul>

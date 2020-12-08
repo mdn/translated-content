@@ -1,0 +1,190 @@
+---
+title: 'Gaia Build System: Grundlagen'
+slug: Archive/B2G_OS/Gaia_Entwickeln/Build_System_Primer
+tags:
+  - Building
+  - Firefox OS
+  - Gaia Grundlagen
+  - Gaia build
+translation_of: Archive/B2G_OS/Developing_Gaia/Build_System_Primer
+---
+<div class="summary">
+<p><span class="seoSummary">Dieser Artikel beschreibt die grundlegende Funktionsweise des Gaia Build Systems inklusive make-Datei, Build-Prozess, Umgebungsvariablen und Anpassungsmöglichkeiten</span>.</p>
+</div>
+
+<p>Die wichtigen Schritte eines Builds werden größtenteils von den im Gaia-Unterverzeichnis <code>build/</code> liegenden Skripten erledigt. Augerufen werden diese mit make, node.js und <a href="https://developer.mozilla.org/en-US/docs/XPConnect/xpcshell" title="https://developer.mozilla.org/en-US/docs/XPConnect/xpcshell">XPCShell</a> (auch bekannt als JS Shell), einer Laufzeitumgebung von <a href="/de/docs/Mozilla/Projects/XULRunner">XULRunner</a>. Das Gaia Build System enthält viele Werkzeuge zum Installieren, Testen und Lokalisieren von Apps und um diese als Paket auf ein Gerät zu bringen. Zudem können Entwickler das Gaia-Paket anpassen, z.B. können Hintergrundbilder, Klingeltöne, Apps und Einstellungen geändert werden.</p>
+
+<div class="note">
+<p><strong>Hinweis</strong>: XPCShell ist ähnlich wie node.js, bietet aber zusätzlich die Möglichkeit zum Ausführen von Mozilla-spezifischen javascripts. Zudem können Gaia-Skripte mit Hilfe von XPCShell in einer Firefox Erweiterung laufen.</p>
+</div>
+
+<h2 id="Die_make-Datei">Die make-Datei</h2>
+
+<p>Die make-Datei enthält eine Menge nützlicher Funktionen. Dieses Kapitel bechreibt die nützlichsten davon.</p>
+
+<h3 id="install-gaia">install-gaia</h3>
+
+<p>Gestartet mit dieser Option installiert make alle Apps auf Deinem Gerät. Wenn Du nur eine bestimmte App installieren möchtest, dann starte make wie folgt mit der <code>APP</code> Option:</p>
+
+<pre class="brush: bash">APP=calendar make install-gaia</pre>
+
+<p>Dieses Verzeichnis muss im Gaia-Verzeichnisbaum existieren (z.B. <code>apps</code>).</p>
+
+<h3 id="reset-gaia">reset-gaia</h3>
+
+<p>Funktioniert genauso wie <code>install-gaia</code> mit dem Unterschied, dass zuerst alle Apps deinstalliert und anschließend wieder mit den Standard-Zugriffsrechten installiert werden. Die Apps befinden sich in <code>/data/local</code> wie bei den Entwickler-Builds. Test- und Debugging-Apps werden hier ebenfalls installiert.</p>
+
+<div class="warning">
+<p><strong>Vorsicht</strong>: Wenn beim Aufruf von make mit der Option <code>reset-gaia</code> die Umgebungsvariable <code>APP</code> gesetzt ist, dann wird dies Dein Gerät in einen unbrauchbaren Zustand versetzen (das kann allerdings behoben werden durch Aufruf von make mit der Option <code>reset-gaia</code> ohne die <code>APP</code> Umgebungsvariable). Also mach das bitte nicht.</p>
+</div>
+
+<h3 id="production">production</h3>
+
+<p>Genauso wie <code>reset-gaia</code>, aber der Quellcode wird optimiert. Das ermöglicht grundsätzlich die Emulation von User Builds (stabilen Builds). Mit dieser Option werden dieselben Apps installiert wie bei User Builds.</p>
+
+<div class="warning">
+<p><strong>Vorsicht</strong>: Wenn beim Aufruf von make mit der Option <code>production</code> die Umgebungsvariable <code>APP</code> gesetzt ist, dann wird dies Dein Gerät in einen unbrauchbaren Zustand versetzen (das kann allerdings behoben werden durch Aufruf von make mit der Option <code>production</code> ohne die <code>APP</code> Umgebungsvariable). Also mach das bitte nicht.</p>
+</div>
+
+<h3 id="reference_workloads">reference workloads</h3>
+
+<p>Diese Option installiert unterschiedlich große Pakete für Laufzeittests auf dem Gerät, um eventuell auftretende Geschwindigkeits- und Skalierungsprobleme debuggen und beheben zu können. Diese Option akzeptiert die APP Umgebungsvariable und auch die APPS Umgebungsvariable mit mehreren durch Leerzeichen voneinander getrennten App-Namen, z.B.:</p>
+
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Weitere Informationen findest Du auf <a href="/de/Firefox_OS/Platform/Gaia/Hacking#Reference_Workloads">Hacking Gaia: Reference workloads</a>.</p>
+</div>
+
+<h2 id="Umgebungsvariablen">Umgebungsvariablen</h2>
+
+<p>Mit einigen Umgebungsvariablen kannst Du den Build und die Installation auf dem Gerät steuern, z.B.:</p>
+
+<h4 id="P1">P=1</h4>
+
+<p>Das ermöglicht parallele Build-Erzeugungen auf Multikern CPU Architekturen und verkürzt die Laufzeit von Build-Erzeugungen, der Standardwert ist <strong>0</strong>.</p>
+
+<div class="warning">
+<p><strong>Vorsicht</strong>: Parallele Build-Erzeugung ist noch in der Test-Phase und somit vielleicht nicht stabil.</p>
+</div>
+
+<h4 id="GAIA_OPTIMIZE1">GAIA_OPTIMIZE=1</h4>
+
+<p>Hiermit wird eine Optimierung der JavaScript Dateien angestossen. Diese Umgebungsvariable wird automatisch beim Ausführen von <code>make production</code> gesetzt. Die Variable kann für <code>install-gaia</code> und <code>reset-gaia</code> verwendet werden.</p>
+
+<h4 id="PRODUCTION1">PRODUCTION=1</h4>
+
+<p>Das ist im Grunde ein Alias für <code>make production</code>.</p>
+
+<h4 id="DEBUG1">DEBUG=1</h4>
+
+<p>Mit dieser Umgebungsvariablen wird eine Debugging-Umgebung aufgebaut, die Du für Gaia <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">unit tests</a> oder für die Entwicklung eigener Apps in Firefox OS nutzen kannst. Du musst ein bereits bestehendes Debugging-Profilverzeichnis löschen, bevor Du ein neues generieren kannst.</p>
+
+<h4 id="DEVICE_DEBUG1">DEVICE_DEBUG=1</h4>
+
+<p>Deaktiviert die Bildschirmsperre auf dem Gerät.</p>
+
+<h4 id="GAIA_DEVICE_TYPEphone">GAIA_DEVICE_TYPE=phone</h4>
+
+<p>Diese Umgebungsvariable ermöglicht eine individuelle Installation mit mehreren 'app.list' Dateien. Alle 'app.list' Dateien müssen in /build/config/$(GAIA_DEVICE_TYPE)/  Verzeichnissen liegen.</p>
+
+<p>Der Standardwert von GAIA_DEVICE_TYPE ist <strong>phone</strong>.</p>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Weitere Details und optionen findest Du auf <a href="/de/Firefox_OS/Platform/Gaia/Hacking#Make_options">Hacking Gaia make options</a>.</p>
+</div>
+
+<h2 id="Build-Prozess">Build-Prozess</h2>
+
+<p>Das Ablaufdiagramm, wie ein Build für Gaia erzeugt wird:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8635/gaia-build-system-seq-diagram.png" style="height: 1497px; width: 2222px;"></p>
+
+<p>pre-app.js, app.js &amp; post-app.js werden von make gestartet und die meisten Build-Schritte werden in den xpcshell Skripten ausgeführt, make ermittelt das Betriebssystem und lädt den b2g-desktop herunter. Wir planen, mehr Build-Schritte von make in die xpcshell Skripte zu migrieren.</p>
+
+<p>Vielleicht fragst Du Dich, warum wir pre-app, app and post-app nutzen. Das liegt daran, dass wir immer mehr Abhängigkeiten von make in die xpcshell Skripte verlagern. Deshalb entwickelten wir pre-app.js und post-app.js basierend auf  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021051">bug 1021051</a>, um den Großteil der Abhängigkeiten in die xpcshell Skripte zu verlagern. Am Ende werden dann app.js, pre-app.js und post-app.js auf Basis von  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053703">bug 1053703</a> migriert.</p>
+
+<p>Wir haben drei Typen von Verzeichnissen in einem Gaia Build System:</p>
+
+<ol>
+ <li>Source-Verzeichnisse: apps, dev_apps, gemeinsame Verzeichnisse</li>
+ <li>Stage-Verzeichnis: build_stage (stage = Plattform)</li>
+ <li>Profil-Verzeichnisse: profile, profile-debug oder profile-test</li>
+</ol>
+
+<p>Unser Ziel ist es, keine Dateien in die Source-Verzeichnisse hinein zu generieren. Leider haben wir immer noch ein paar Stellen, an denen Dateien in die Source-Verzeichnisse generiert werden. Wir planen, diese Probleme zu beheben. Die folgende Tabelle listet auf, von welchen Modulen Dateien ins Source-, ins Stage- und in die Profil-Verzeichnisse generiert werden.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8653/file-accessing.png" style="height: 1250px; width: 1136px;"></p>
+
+<p>Der Build-Prozess führt bei Aufruf von <code>make</code> im Gaia-Verzeichnis die folgenden Schritte in der angegebenen Reihenfolge aus:</p>
+
+<ol>
+ <li><strong>b2g_sdk</strong>: b2g-desktop startet die xpcshell Skripte in <code>GAIA_DIR/build/</code>.</li>
+ <li><strong>svoperapps</strong>: Download der Apps und Generieren der Konfigurations-Dateien der App-Installation pro SIM-Karten-Anbieter und Land.</li>
+ <li><strong>webapp-manifests</strong>: Generieren der Metadaten der Web-Apps für den Build.</li>
+ <li><strong>keyboard-layouts</strong>: Generieren der Layout-Konfiguration der Standard-Tastatur.</li>
+ <li><strong>settings.json (settings.js)</strong>: Dieses JavaScript generiert die Standard-Einstellungen für Firefox OS, die von Gaia gelesen werden.</li>
+ <li><strong>webapp-shared</strong>: Kopieren der von den Apps benötigten Dateien vom gemeinsamen Source-Verzeichnis ins Stage-Verzeichnis.</li>
+ <li><strong>preferences</strong>: Generiert die Standard-Umgebung für Firefox OS; generiert die Datei <code>user.js</code> und kopiert diese auf das Gerät, wo sie von Gecko gelesen wird. Bitte beachte, dass die Standard-Umgebung abhängig von den Umgebungsvariablen (wie z.B. <code>DEBUG=1</code>) variieren kann.</li>
+ <li><strong>app.js</strong>: make-Dateien in den jeweiligen <code>app</code> Verzeichnissen: Sie werden ausgeführt, wenn sie existieren. Für jede App ohne eigene make-Datei kopiert die Gaia make-Datei das App-Verzeichnis ins Stage-Verzeichnis <code>build_stage</code> und führt <code>[app-directory]/build/build.js</code> aus, falls vorhanden. Siehe {{ anch("Build script for apps") }} für weitere Details.</li>
+ <li><strong>test-agent-bootstrap &amp; test-agent-config</strong>: Einrichten der zwei make Regeln <code>test-agent-config</code> &amp; <code>test-agent-bootstrap-apps</code>, welche für den Aufbau von Test-Umgebungen pro App benötigt werden.</li>
+ <li><strong>webapp-optimize</strong>: Dieses Skript enthält verschiedene Optimierungs-Prozeduren inklusive JavaScript Minimierung, Zusammenfügen von Lokalisierungs-Dateien in die JSON-Dateien und Generieren von HTML-Dateien für die Standard-Sprache, falls nötig.</li>
+ <li><strong>webapp-zip</strong>: Hier wird jede App in eine eigene zip-Datei komprimiert und diese im Verzeichnis <code>profile/</code> abgelegt.</li>
+ <li><strong>optimize-clean</strong>: <code>optimize-clean</code> bereinigt die HTML-Dateien für die Standard-Sprache.</li>
+ <li><strong>contacts</strong>: Kopiert eine vorgefertigte Kontakte-Datei in Dein Profil in <code>GAIA_DISTRIBUTION_DIR</code>, falls vorhanden.</li>
+ <li><strong>extensions</strong>: Kopiert die in <code>GAIA_DIR/tools/extensions</code> liegenden Erweiterungen in Dein Profil-Verzeichnis; verschiedene Konfigurationen ermöglichen das Kopieren verschiedener Erweiterungen.</li>
+ <li><strong>installed-extensions.json (additional-extensions.js)</strong>: Zu guter Letzt: Dieses Skript kopiert per Download verschiedene zusätzliche Erweiterungen in Dein Profil-Verzeichnis.</li>
+</ol>
+
+<h2 id="Build-Skript_für_Apps">Build-Skript für Apps</h2>
+
+<p>Standardmäßig wird als App Build Skript <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">[app directory]/build/build.js</span><span style="line-height: 1.5;"> von  app.js </span><span style="line-height: 1.5;">ausgeführt, falls vorhanden. Wenn $APP/build/build.js nicht vorhanden ist, dann kopiert app.js die App ins Stage-Verzeichnis build_stage.</span></p>
+
+<p>Die Dateien im App-Verzeichnis sollten vom App Build-Skript ins Stage-Verzeichnis build_stage kopiert werden; denn app.js kopiert sie nicht, wenn ein App Build-Skript existiert. Beispiel: Die App "Kalender" hat ein Skript build/build.js und <a href="https://github.com/mozilla-b2g/gaia/blob/a0fa29db8e9e15afe3b1787bf494caa86a033f10/apps/calendar/build/build.js#L8">utils.copyToStage()</a> sollte in build.js für die "Kalender" App aufgerufen werden.</p>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Sourcen, die nicht zu Deiner App gehören (wie in shared/) kannst Du in der index.html in den &lt;head&gt; Bereich einfügen, damit sie von shared/ in Deine App kopiert werden.</p>
+</div>
+
+<p>Build-Skripte für Apps benötigen möglicherweise alle Build Module im Verzeichnis  $GAIA_DIR/build; speziell das utils Modul, ein sehr nützliches Modul für den Build von Apps, kannst Du require('utils') verwenden um das Modul einzubinden.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8651/flow-diagram.png" style="height: 952px; width: 1004px;"></p>
+
+<h2 id="Anpassen_der_Voreinstellungen">Anpassen der Voreinstellungen</h2>
+
+<p>Wenn Du eine eigene Konfiguration mit Einstellungen und Apps immer wieder beim Flashen Deines Gerätes benötigst, dann kannst Du eine Datei namens <code>custom-prefs.js</code> mit all Deinen Präferenzen im Verzeichnis <code>build/config</code> ablegen. Dort ist sie vor Überschreiben geschützt und unterliegt nicht der Source-Steuerung.</p>
+
+<p>Hier sind einige sinnvolle Voreinstellungen:</p>
+
+<pre class="brush: js">// Aktivieren von marionette für Performance-Tests
+// siehe https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_performance_tests
+user_pref("marionette.defaultPrefs.enabled", true);
+
+// Setzen des Ports für remote Debugging Deiner Anwendung auf Deinem Gerät
+user_pref("devtools.debugger.remote-port", 60000);
+
+// Aktivieren des remote Debuggers
+user_pref("devtools.debugger.remote-enabled", true);
+
+// Ausgeben der Debug-Meldungen über den Radio Interface Layer in logcat
+user_pref("ril.debugging.enabled", true);
+</pre>
+
+<p>Diese Datei wird immer gelesen, wenn Du ein Profil generierst. Der sicherste Weg sicherzustellen, dass alles generiert wurde ist das vorherige Löschen des vorhandenen Profils:</p>
+
+<pre class="brush: bash">rm -rf profile &amp;&amp; make profile</pre>
+
+<p>Anschließend kannst Du beruhigt die <code>install-gaia </code>Option von make verwenden.</p>
+
+<h2 id="FAQ">FAQ</h2>
+
+<h3 id="Das_Display_bleibt_Schwarz_nach_einem_flash">Das Display bleibt Schwarz nach einem flash</h3>
+
+<p>Das kann manchmal passieren, wenn das Gerät im Ruhemodus geflasht wird. Um das Problem zu beheben starte B2G einfach durch das folgende Kommando neu:</p>
+
+<pre class="brush: bash">adb shell stop b2g &amp;&amp; adb shell start b2g</pre>
+
+<p><br>
+  </p>

@@ -1,0 +1,85 @@
+---
+title: JavaScript-Umgebung
+slug: Tools/Scratchpad
+tags:
+  - Tools
+translation_of: Archive/Tools/Scratchpad
+---
+<div>{{ToolsSidebar}}</div>
+
+<p>Das Werkzeug „JavaScript-Umgebung“ bietet eine Umgebung zum Experimentieren mit JavaScript-Quelltext. Sie können Quelltext schreiben und testen, der mit den Inhalten der Webseite interagiert und dann zu Ihren gewohnten Entwicklungwerkzeugen wechseln, wo Sie Ihre Arbeit verfeinern und fertigstellen.</p>
+
+<p>Anders als die <a href="/de/Tools/Web_Console" title="Verwenden der Web-Konsole">Web-Konsole</a>, die nur eine Zeile Quelltext auf einmal interpretieren soll, können Sie mit der JavaScript-Umgebung größere Blöcke JavaScript-Quelltext bearbeiten und diese dann auf vielfältige Weise ausführen, je nachdem, wie Sie das Ergebnis verwenden möchten.</p>
+
+<p>{{EmbedYouTube("lvQf2u3rmkw")}}</p>
+
+<h2 id="Verwenden_der_JavaScript-Umgebung">Verwenden der JavaScript-Umgebung</h2>
+
+<p>Um ein Fenster der JavaScript-Umgebung zu öffnen, drücken Sie Umschalt+F4 oder öffnen Sie das Menü „Web-Entwickler“ (dieses ist unter Mac OS X und Linux ein Untermenü des Menüs „Extras“) und wählen Sie „JavaScript-Umgebung“. Dies öffnet ein Editorfenster der JavaScript-Umgebung mit einem Kommentar, der einige kurze Hinweise zur Verwendung der JavaScript-Umgebung liefert. Von dort aus können Sie direkt JavaScript-Quelltext eingeben und ausprobieren.</p>
+
+<p>Das Fenster der JavaScript-Umgebung sieht ungefähr so aus (unter Mac OS X ist die Menüleiste am oberen Bildschirmrand):</p>
+
+<p><img alt="German Scratchpad screenshot" src="https://mdn.mozillademos.org/files/7351/scratchpad-de.png" style="height: 289px; width: 678px;"></p>
+
+<p>Unter <a href="https://developer.mozilla.org/de/docs/tools/Keyboard_shortcuts#Quelltext-Editor" title="Verwenden des Quelltext-Editors">Verwenden des Quelltext-Editors</a> finden Sie eine Dokumentation zum Editor selbst, einschließlich nützlicher Tastaturkürzel.</p>
+
+<p>Im Datei-Menü finden Sie Optionen zum Speichern und Laden von Ausschnitten von JavaScript-Quelltext, so dass Sie Quelltext bei Gefallen später wiederverwenden können.</p>
+
+<h3 id="Ausführen_Ihres_Quelltexts">Ausführen Ihres Quelltexts</h3>
+
+<p class="note">Sobald Sie Ihren Quelltext geschrieben haben, wählen Sie den Quelltext aus, den Sie ausführen möchten. Wenn Sie nichts auswählen, wird der gesamte Quelltext im Fenster ausgeführt. Klicken Sie dann mit der rechten Maustaste (oder verwenden Sie das Menü „Ausführen“ in der Menüleiste) und wählen Sie, wie Ihr Quelltext ausgewählt werden soll. Es gibt vier Möglichkeiten zur Ausführung.<strong> </strong></p>
+
+<h4 id="Ausführen">Ausführen</h4>
+
+<p>Wenn Sie die Option „Ausführen“ wählen, wird der gewählte Quelltext ausgeführt. Dies können Sie verwenden, wenn Sie eine Funktion oder Quelltext ausführen möchten, der den Inhalt Ihrer Seite verändert, ohne dass Sie das Ergebnis sehen müssen.</p>
+
+<h4 id="Untersuchen">Untersuchen</h4>
+
+<p>Mit der Option „Untersuchen“ wird der Quelltext ebenso ausgeführt wie bei der Option „Ausführen“; anschließend wird allerdings ein Objektinspektor geöffnet, mit dem Sie den Ergebniswert untersuchen können.</p>
+
+<p>Wenn Sie beispielsweise diesen Quelltext eingeben:</p>
+
+<pre>window
+</pre>
+
+<p>und dann „Untersuchen“ wählen, öffnet sich der Objektinspektor und zeigt in etwa folgendes :</p>
+
+<p><img alt="German Scratchpad inspection screenshot" src="https://mdn.mozillademos.org/files/7353/scratchpad-inspect-de.png" style="height: 289px; width: 678px;"></p>
+
+<p> </p>
+
+<h4 id="Anzeigen">Anzeigen</h4>
+
+<p>Die Option „Anzeigen“ führt den gewählen Quelltext aus und fügt das Ergebnis direkt als Kommentar in das Editor-Fenster Ihrer JavaScript-Umgebung ein. Dies ist ein bequemer Weg, um während Ihrer Arbeit ein fortlaufendes Protokoll Ihrer Testergebnisse zu erstellen. Zur Not können Sie dies auch als Taschenrechner verwenden, aber wenn Sie schon keinen Taschenrechnerprogramm haben, haben Sie vielleicht größere Probleme.</p>
+
+<h4 id="Neu_laden_und_ausführen">Neu laden und ausführen</h4>
+
+<p>Die Option „Neu laden und ausführen“ lädt erst die Seite neu und fürt dann den Quelltext aus, wenn das „load“-Ereignis der Seite ausgelöst wird. Dies ist hilfreich, wenn der Quelltext in einer sauberen Umgebung ausgeführt werden soll.</p>
+
+<h2 id="Wann_ist_es_sinnvoll_Scratchpad_zu_benutzen">Wann ist es sinnvoll, Scratchpad zu benutzen?</h2>
+
+<p>Es gibt viele Möglichkeiten, die JavaScript-Umgebung sinnvoll einzusetzen. In diesem Abschnitt finden Sie einige davon.</p>
+
+<h3 id="Testen_von_neuem_Quelltext">Testen von neuem Quelltext</h3>
+
+<p>Die JavaScript-Umgebung ist besonders nützlich, um neuen Quelltext in einer laufenden Browser-Umgebung zu testen; Sie können den Quelltext, den Sie debuggen, in die JavaScript-Umgebung kopieren, ihn ausführen und dann anpassen, bis er funktioniert. Sobald er funktioniert, kopieren Sie ihn wieder in die Hauptdatei Ihres Quelltexts und schon sind Sie fertig. Oftmals können Sie Ihren Quelltext schreiben, debuggen und testen, ohne jemals die Seite laden zu müssen.</p>
+
+<h3 id="Wiederverwendbare_Quelltext-Ausschnitte">Wiederverwendbare Quelltext-Ausschnitte</h3>
+
+<p>Die Menüleiste der JavaScript-Umgebung bietet Befehle zum Speichern und Laden von JavaScript-Quelltext. Dies kann genutzt werden, um Teile von JavaScript-Quelltext aufzubewahren, den Sie häufig verwenden. Wenn Sie beispielsweise an einer Website arbeiten, die Daten mit AJAX-Anfragen lädt, können Sie Ausschnitte aufbewahren, die diese Ladeoperationen ausführen, um die Daten zu testen oder zu verifizieren. Ebenso können Sie hilfreiche allgemeine Debugging-Funktionen aufbewahren, wie solche, die bestimmte Arten von Informationen über das DOM liefern.</p>
+
+<h2 id="Umgebung_der_JavaScript-Umgebung">Umgebung der JavaScript-Umgebung</h2>
+
+<p>Quelltext, den Sie in der JavaScript-Umgebung ausführen, wird in der globalen Umgebung des zum Zeitpunkt der Ausführung gewählten Tabs ausgeführt. Variablen, die Sie außerhalb einer Funktion deklarieren, werden dem globalen Objekt für diesen Tab hinzugefügt.</p>
+
+<h2 id="Verwenden_der_JavaScript-Umgebung_zum_Zugriff_auf_Firefox-interne_Funktionen">Verwenden der JavaScript-Umgebung zum Zugriff auf Firefox-interne Funktionen</h2>
+
+<p>Wenn Sie an Firefox selbst arbeiten oder Add-ons entwickeln, finden Sie es möglicherweise hilfreich, über die JavaScript-Umgebung auf alle internen Funktionen des Browsers zuzugreifen. Um dies zu tun, müssen Sie in <code>about:config</code> die Einstellung <code>devtools.chrome.enabled</code> auf <code>true</code> setzen. Sobald dies geschehen ist, hat das Menü der Umgebung eine Option „Browser“; sobald Sie diese aktiviert haben, ist Ihre Umgebung nicht mehr nur der Inhalt der Seite, sondern der gesamte Browser.</p>
+
+<h2 id="Tastaturkürzel">Tastaturkürzel</h2>
+
+<p>{{ Page ("de/docs/tools/Keyboard_shortcuts", "scratchpad") }}</p>
+
+<h3 id="Tastaturkürzel_des_Quelltext-Editors">Tastaturkürzel des Quelltext-Editors</h3>
+
+<p>{{ Page ("de/docs/tools/Keyboard_shortcuts", "source-editor") }}</p>

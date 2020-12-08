@@ -1,0 +1,65 @@
+---
+title: ':-moz-system-metric(windows-default-theme)'
+slug: 'Web/CSS/:-moz-system-metric(windows-default-theme)'
+tags:
+  - CSS
+  - CSS Pseudoklasse
+  - CSS Referenz
+  - NeedsMobileBrowserCompatibility
+  - Non-standard
+translation_of: 'Archive/Web/CSS/:-moz-system-metric/windows-default-theme'
+---
+<div>{{Non-standard_header}}{{CSSRef}}</div>
+
+<h2 id="Übersicht">Übersicht</h2>
+
+<p>Die <code>:-moz-system-metric(windows-default-theme)</code> CSS <a href="/de/docs/Web/CSS/Pseudo-classes">Pseudoklasse</a> matcht ein Element, falls der Benutzer aktuell eines der folgenden Themes in Windows verwendet: Luna, Royale, Zune oder Aero (d. h. Vista Basic, Vista Standard oder Aero Glass). Dies schließt sowohl Windows Classic Themes als auch Drittanbieterthemes aus.</p>
+
+<p>Dieser Selektor ist hauptsächlich für die Verwendung durch Themeentwickler gedacht.</p>
+
+<h2 id="Beispiel">Beispiel</h2>
+
+<h3 id="HTML_Inhalt">HTML Inhalt</h3>
+
+<pre class="brush: html">&lt;p id="defaultThemes"&gt;
+  This paragraph should have a green background with Luna/Royale/Zune/Aero
+  Windows themes and red with other themes.
+&lt;/p&gt;
+
+&lt;p id="nonDefaultThemes"&gt;
+  This paragraph should have a green background with Windows Classic or
+  third-party themes and red with other themes.
+&lt;/p&gt;
+
+&lt;p id="notSupported"&gt;Theme detection is not supported.&lt;/p&gt;</pre>
+
+<h3 id="CSS_Inhalt">CSS Inhalt</h3>
+
+<pre class="brush: css">#defaultThemes,
+#nonDefaultThemes {
+  background-color: #FFA0A0;
+}
+
+#defaultThemes:-moz-system-metric(windows-default-theme) {
+  background-color: #A0FFA0;
+}
+
+#nonDefaultThemes:not(-moz-system-metric(windows-default-theme)) {
+  background-color: #A0FFA0;
+}
+
+#notSupported:-moz-system-metric(windows-default-theme),
+#notSupported:not(:-moz-system-metric(windows-default-theme)) {
+  display: none;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Beispiel", "100%", 170)}}</p>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Nicht Teil einer Spezifikation.</p>
+
+<h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
+
+{{Compat("css.selectors.-moz-system-metric.windows-default-theme")}}

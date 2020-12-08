@@ -1,0 +1,56 @@
+---
+title: Function.prototype.isGenerator()
+slug: Web/JavaScript/Reference/Global_Objects/Function/isGenerator
+tags:
+  - Function
+  - JavaScript
+  - Method
+  - Non-standard
+  - Obsolete
+translation_of: Archive/Web/JavaScript/Function.isGenerator
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Die nicht standardisierte <code><strong>isGenerator()</strong></code> Methode wird benutzt, um festzustellen, ob eine Funktion ein <a href="/de/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators.3A_a_better_way_to_build_Iterators">Generator</a> ist. In Firefox Version 58 wurde diese Methode entfernt.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code><var>fun</var>.isGenerator()</code></pre>
+
+<h3 id="Rückgabewert">Rückgabewert</h3>
+
+<p>Ein {{jsxref("Boolean")}} Welcher angibt, ob eine Funktion ein <a href="/de/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators.3A_a_better_way_to_build_Iterators">Generator</a> ist.</p>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>Die <code>isGenerator()</code> Methode stellt fest, ob eine Funktion <em><code>fun</code></em> ein <a href="/de/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators.3A_a_better_way_to_build_Iterators">Generator</a> ist. Diese war in einem frühen Vorschlag, wurde jedoch nicht in der ECMAScript 2015 Spezifikation eingefügt.</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<pre class="brush: js">function f() {}
+
+function* g() {
+  yield 42;
+}
+
+console.log('f.isGenerator() = ' + f.isGenerator()); // f.isGenerator() = false
+console.log('g.isGenerator() = ' + g.isGenerator()); // g.isGenerator() = true
+</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Ist in keiner Spezifikation vorhanden. Implementiert in JavaScript 1.8.6.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Function.isGenerator")}}</p>
+</div>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li><a href="/de/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iteratoren und Generatoren</a></li>
+</ul>

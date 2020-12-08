@@ -1,0 +1,41 @@
+---
+title: Connecting a Firefox OS device to the desktop
+slug: Archive/B2G_OS/Debugging/Verbinden_eines_Firefox_OS_Geräts_mit_dem_Rechner
+tags:
+  - ADB
+  - Firefox OS
+translation_of: Archive/B2G_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop
+---
+<div class="summary">
+ <p><span class="seoSummary">Diese Anleitung erklärt, wie man ein Firefox OS  Gerät mit dem Rechner über USB verbindet.</span></p>
+</div>
+<div class="note">
+ <p><strong>Achtung</strong>: Um Apps auf einem Firefox OS Gerät zu debuggen und wenn auf dem Gerät Firefox 1.2+ läuft, ist der beste Weg den App Manager zu benutzen. Details können unter <a href="/en-US/Firefox_OS/Using_the_App_Manager">Benutzung des App Mangers</a> nachgelesen werden. Wird eine Version von Firefox OS kleiner 1.2 benutzt, kann man unter <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Setting_up">Einrichtung des Firefox OS Debugging Modus unter Verwendung der Entwickler Tools</a> mehr über das Standard Remote Debugging  erfahren.</p>
+</div>
+<h2 id="Einrichtung_des_Geräts">Einrichtung des Geräts</h2>
+<p>Auf deinem Firefox OS Gerät (<a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings#The_Developer_panel">see the layout</a>):</p>
+<ol>
+ <li>öffnen der App Einstellungen, dann <code>Geräteinformationen</code> &gt; <code>Weitere Informationen</code> &gt; Entwickler.</li>
+ <li>Im Entwickler Menü  "Debugging über USB" aktivieren.</li>
+</ol>
+<h2 id="Einrichtung_des_Rechners">Einrichtung des Rechners</h2>
+<p>Um ein Gerät mit dem Rechner zu verbinden muss die <a class="external" href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">Android Debug Bridge (adb)</a> installiert sein. Beachte dass das <a href="/en-US/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS Simulator</a> add-on eine adb mitbringt.</p>
+<p>Instructions for setting up your desktop are specific to your operating system and are detailed in point 3 of <a class="external" href="https://developer.android.com/tools/device.html" title="https://developer.android.com/tools/device.html">"Setting up a Device for Development"</a> on the Android developer site. We've listed some additional instructions below.</p>
+<h3 id="Spezielle_Anweisungen_für_Mac_OS_X">Spezielle Anweisungen für Mac OS X</h3>
+<p>If you're running Mac OS X, you have downloaded a package which has a name along <code>adt-bundle-mac-x86_64-20130522</code>. Put that folder into the Applications folder, so that you get <code>/Applications/adt-bundle-mac-x86_64-20130522/</code> which contains two directories: <code>eclipse</code> and <code>sdk</code>. Then you can edit your <code>~/.bashrc</code> and add</p>
+<pre>export PATH="/Applications/adt-bundle-mac-x86_64-20130522/sdk/platform-tools:$PATH"</pre>
+<p>(It will be ready for the next time you start your shell). You can now type on the CLI of the shell:</p>
+<pre>adb devices
+</pre>
+<p>and it will return a list of connected devices such as:</p>
+<pre>List of devices attached
+AA:BB:A5:B5:AA:BB    device</pre>
+<h3 id="Spezielle_Anweisungen_für_Linux">Spezielle Anweisungen für Linux</h3>
+<p>If you're running Linux, the vendor ID to use for Firefox OS Geeksphone devices is <code>05c6</code>, so your <code>/etc/udev/rules.d/51-android.rules</code> file should contain an entry similar to:</p>
+<pre class="bash" style="font-family: monospace;"><span style="color: #007800;">SUBSYSTEM</span>=="usb", ATTR<span style="color: #7a0874; font-weight: bold;">{</span>idVendor<span style="color: #7a0874; font-weight: bold;">}</span>=="05c6", <span style="color: #007800;">MODE</span>="0666", <span style="color: #007800;">GROUP</span>="plugdev"</pre>
+<h3 id="Spezielle_Anweisungen_für_Windows">Spezielle Anweisungen für Windows</h3>
+<p>You can download Windows drivers for the Geeksphone from the <a href="http://www.geeksphone.com/downloads/fos/fos_usb_driver.zip" title="http://www.geeksphone.com/downloads/fos/fos_usb_driver.zip">Geeksphone website</a>.</p>
+<p>Windows 8 by default will not let you install unsigned drivers. See this tutorial on <a href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"How to install an unsigned driver on Windows 8"</a>.</p>
+<p>Since Windows XP Home Edition doesn't include <code>tasklist.exe</code>, Simulator won't detect the device. This can be solved downloading that file from <a href="http://www.computerhope.com/download/winxp.htm">ComputerHope website</a> and putting it in <code>Windows\System32</code> folder.</p>
+<h2 id="Einrichtung_überprüfen">Einrichtung überprüfen</h2>
+<p>Once you've followed these instructions, attach the device to the desktop using a USB cable, open a command prompt and type "<code>adb devices</code>" (ensuring that adb is in your path). You should see your Firefox OS device listed in the output.</p>

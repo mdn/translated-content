@@ -1,0 +1,29 @@
+---
+title: Firefox OS App-Architektur
+slug: Archive/B2G_OS/Platform/App_Architektur
+tags:
+  - Anleitung
+  - Apps
+  - B2G
+  - Firefox OS
+translation_of: Archive/B2G_OS/Platform/Apps_architecture
+---
+<div class="summary">
+ <p>Dieser Artikel beschreibt die Details, wie Apps in Firefox OS gestartet und verwaltet werden. Diese Informationen sind hilfreich sowohl für Firefox OS-Plattformentwickler als auch für Gruppen, die das Betriebssystem auf neue Hardware portieren. Als App-Entwickler benötigt man diesen Artikel nicht unbedingt, aber er könnte trotzdem interessant sein.</p>
+</div>
+<h2 id="Der_App-Startprozess">Der App-Startprozess</h2>
+<p>Wenn der Nutzer eine App, die er starten möchte, auswählt oder eine App auf andere Weise gestartet werden soll, startet die  Home-Screen-App, indem sie sich eine App-Referenz von der {{domxref("App")}}-API holt  und dann die Methode {{domxref("App.launch()")}} aufruft, um die App zu starten.</p>
+<p>Gecko empfängt diese Anforderung und sendet das {{domxref("mozChromeEvent")}} mit den App-Details zur System-App. Die System-App verarbeitet dieses Ereignis, indem sie ein neues {{HTMLElement("iframe")}}-Element in den DOM-Baum einfügt und die App in dieses neue {{HTMLElement("iframe")}}-Element lädt. Dieser Rahmen ist dann die Heimat der App, bis sie beendet wird.</p>
+<p>Jede App benötigt ein Manifest, das sie beschreibt, und hat eine spezielle Dateihierarchie im Paket. Details stehen im Artikel <a href="/en-US/docs/Web/Apps/App_Manifest">App manifest</a>.</p>
+<h2 id="Kommunikation_mit_Gecko">Kommunikation mit Gecko</h2>
+<p>Die Kommunikation zwischen Gecko und Gaia's System-App passiert über {{domxref("mozChromeEvent")}} und {{domxref("mozContentEvent")}}. <code>mozChromeEvent</code>s werden von Chrome zum Inhalt und <code>mozContentEvent</code>s vom Inhalt zu Chrome gesendet. Diese Kommunikation wird benutzt, um die Erzeugung und das Schließen der vertrauten Benutzeroberfläche zu steuern und die benötigten Funktionen für Benachrichtigungen und andere Aufgaben bereitzustellen, dazu gehört auch, der System-App mitzuteilen, dass eine App gestartet werden soll.</p>
+<div class="note">
+ <p><strong>Anmerkung:</strong> Mehr dazu, wie diese Ereignisse funktionieren, findet man in der <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System-App-Dokumentation</a>. Eine andere Quelle, wie man die Ereignisse benutzt, findet man im Quellcode in {{source("b2g/chrome/content/shell.js")}}.</p>
+</div>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/en-US/docs/Web/Apps">Apps</a></li>
+ <li>{{domxref("App")}}</li>
+ <li><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app</a></li>
+ <li><a href="/en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture</a></li>
+</ul>

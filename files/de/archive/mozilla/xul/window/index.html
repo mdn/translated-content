@@ -1,0 +1,209 @@
+---
+title: window
+slug: Archive/Mozilla/XUL/Window
+tags:
+  - XUL Elemente
+  - XUL Referenz
+translation_of: Archive/Mozilla/XUL/window
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/de/docs/XUL_Referenz">XUL Referenz Startseite</a>    [
+ <a href="#Beispiele">Beispiele</a> |
+ <a href="#Attribute">Attribute</a> |
+ <a href="#Eigenschaften">Eigenschaften</a> |
+ <a href="#Methoden">Methoden</a> |
+ <a href="#Verwandte_Themen">Verwandte Themen</a> ]
+</span></div>
+<p>Beschreibt die Struktur eines Fensters. Dieses Element ist der Wurzelknoten eines XUL Dokuments. Das Fenster ist standardmäßig eine horizontal ausgerichtete Box und daher können alle <a href="/De/XUL/Box" title="De/XUL/Box">box</a> Attribute verwendet werden. Per Voreinstellung liegt um das Fenster ein plattform-spezifischer Rahmen.</p>
+<p>Um ein Icon für das Fenster festzulegen, muss eine plattform-spezifische Icon-Datei <var>&lt;windowid&gt;</var><code>.ico</code> und/oder <var>&lt;windowid&gt;</var><code>.xpm</code> erstellt und in das <var>&lt;mozilla-verzeichnis&gt;</var><code>/chrome/icons/default/</code> Verzeichnis platziert oder installiert werden. Die <var>&lt;windowid&gt;</var> ist der Wert des id Attributs des Fensters. Dadurch wird für jedes Fenster ein unterschiedliches Icon ermöglicht.</p>
+<p>Ohne die CSS Datei unter "<a class=" external" rel="freelink">chrome://global/skin/</a>" einzubinden, wird das Fenster nicht durch CSS formatiert, unsichtbar und funktioniert nicht einwandfrei, wenn es als Dialog geöffnet wird.</p>
+<p>Weitere Informationen sind im <a href="/de/XUL_Tutorial/Ein_Fenster_erzeugen" title="de/XUL_Tutorial/Ein_Fenster_erzeugen">XUL Tutorial</a> verfügbar.</p>
+<dl> <dt>Attribute</dt> <dd><a href="#a-accelerated">accelerated</a>, <a href="#a-drawintitlebar">drawintitlebar</a>, <a href="#a-height">height</a>, <a href="#a-hidechrome">hidechrome</a>, <a href="#a-id">id</a>, <a href="#a-lightweightthemes">lightweightthemes</a>, <a href="#a-lightweightthemesfooter">lightweightthemesfooter</a>, <a href="#a-screenX">screenX</a>, <a href="#a-screenY">screenY</a>, <a href="#a-sizemode">sizemode</a>, <a href="#a-title">title</a>, <a href="#a-width">width</a>, <a href="#a-windowtype">windowtype</a></dd>
+</dl>
+<h3 id="Beispiele">Beispiele</h3>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+&lt;!-- Extremely recommended to keep this css include!! --&gt;
+&lt;window id="rootWnd" title="Register Online!"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;vbox&gt;
+    &lt;hbox&gt;
+      &lt;image src="application_form.png"/&gt;
+      &lt;description&gt;Register Online!&lt;/description&gt;
+    &lt;/hbox&gt;
+    &lt;groupbox align="start"&gt;
+      &lt;caption label="Your Information"/&gt;
+      &lt;radiogroup&gt;
+        &lt;vbox&gt;
+          &lt;hbox&gt;
+            &lt;label control="your-fname" value="Enter first name:"/&gt;
+            &lt;textbox id="your-fname" value="Johan"/&gt;
+          &lt;/hbox&gt;
+          &lt;hbox&gt;
+            &lt;label control="your-lname" value="Enter last name:"/&gt;
+            &lt;textbox id="your-lname" value="Hernandez"/&gt;
+          &lt;/hbox&gt;
+          &lt;hbox&gt;
+            &lt;button oncommand="alert('save!')"&gt;
+              &lt;description&gt;Save&lt;/description&gt;
+            &lt;/button&gt;
+          &lt;/hbox&gt;
+        &lt;/vbox&gt;
+      &lt;/radiogroup&gt;
+    &lt;/groupbox&gt;
+  &lt;/vbox&gt;
+&lt;/window&gt;
+</pre>
+<h3 id="Attribute">Attribute</h3>
+<p> </p><div id="a-accelerated">
+<dl><dt><code id="a-accelerated"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/accelerated">accelerated</a></code> </dt><dd>Type: <em>boolean</em></dd><dd>Set this attribute to <code>true</code> to allow hardware layer managers to accelerate the window.</dd></dl>
+</div> <div id="a-activetitlebarcolor">
+
+<dl> <dt><code id="a-activetitlebarcolor"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/activetitlebarcolor">activetitlebarcolor</a></code> </dt> <dd>Typ: <em>color string</em></dd> <dd>Bestimmt die Hintergrundfarbe der Titelleiste eines Fensters, wenn es aktiv ist (Vordergrund). Außerdem versteckt dies die Trennlinie zwischen Titelleiste und Fensterinhalt. Dies trifft nur auf Mac OS Systeme zu.</dd>
+</dl>
+
+</div> <div id="a-drawintitlebar">
+
+<dl> <dt><code id="a-drawintitlebar"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/drawintitlebar">drawintitlebar</a></code> </dt> <dd>Type: <em>boolean</em></dd> <dd>If this attribute is <code>true</code>, the top of the window's content area will begin at the top edge of the title bar, instead of below the title bar. This allows the window to draw in the title bar. This is supported only from <code><a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> elements, and is ignored on platforms that don't support drawing into the title bar.</dd>
+</dl>
+</div> <div id="a-height">
+
+
+<dl>
+ <dt><code id="a-height"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></dt>
+ <dd>Type: <em>string</em> (representing an integer)</dd>
+ <dd>The preferred height of the element in pixels. The actual displayed height may be different if the element or its contents have a minimum or maximum height. The CSS height property may also be used.</dd>
+</dl>
+</div> <div id="a-hidechrome">
+
+
+<dl>
+ <dt><code id="a-hidechrome"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/hidechrome">hidechrome</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Set this attribute to <code>true</code> to have the chrome including the titlebar hidden.</dd>
+</dl>
+</div> <div id="a-id">
+
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>Type: <em>unique id</em></dd>
+ <dd>A unique identifier so that you can identify the element with. You can use this as a parameter to <code><a href="/en-US/docs/DOM/document.getElementById" title="/en-US/docs/DOM/document.getElementById">getElementById()</a></code> and other DOM functions and to reference the element in style sheets.</dd>
+</dl>
+
+
+</div> <div id="a-inactivetitlebarcolor">
+
+
+<dl>
+ <dt><code id="a-inactivetitlebarcolor"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/inactivetitlebarcolor">inactivetitlebarcolor</a></code> </dt>
+ <dd>Type: <em>color string</em></dd>
+ <dd>Specify background color of the window's titlebar when it is inactive (background). Moreover this hides separator between titlebar and window contents. <em>This affects only on Mac OS X.</em></dd>
+</dl>
+</div> <div id="a-lightweightthemes">
+
+<dl> <dt><code id="a-lightweightthemes"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/lightweightthemes">lightweightthemes</a></code> </dt> <dd>Type: <em>boolean</em></dd> <dd><code>true</code> if the window supports <a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">lightweight themes</a>, otherwise <code>false</code>.</dd>
+</dl>
+</div> <div id="a-lightweightthemesfooter">
+
+<dl> <dt><code id="a-lightweightthemesfooter"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/lightweightthemesfooter">lightweightthemesfooter</a></code> </dt> <dd>Type: <em>id</em></dd> <dd>Specifies the ID of an element to which a <a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">lightweight theme</a>'s footer image will be applied.</dd>
+</dl>
+</div> <div id="a-screenX">
+
+
+<dl>
+ <dt><code id="a-screenX"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/screenX">screenX</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The horizontal position at which the window appears on the screen.</dd>
+</dl>
+</div> <div id="a-screenY">
+
+
+<dl>
+ <dt><code id="a-screenY"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/screenY">screenY</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The vertical position at which the window appears on the screen.</dd>
+</dl>
+</div> <div id="a-sizemode">
+
+
+<dl>
+ <dt><code id="a-sizemode"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/sizemode">sizemode</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>The state of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>. It can have one of the following values:</dd>
+ <dd>
+ <dl>
+  <dt><code>maximized</code></dt>
+  <dd>The window is maximized, and occupies the full size of the screen.</dd>
+  <dt><code>normal</code></dt>
+  <dd>The window appears in a normal state at the desired size.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<p>This attribute is used to save and restore the state of a window (together with the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/persist">persist</a></span></code> attribute) and for CSS styles (e.g. to hide the resizer grippy on maximized windows).</p>
+
+<div class="note"><strong>Note:</strong> When a window is minimized, the <code>sizemode</code> attribute is not updated. This is done so that if a window is closed while minimized, its persisted <code>sizemode</code> attribute wouldn't be <code>minimized</code>.</div>
+
+<p>Setting this attribute does not change the window state. Use <a href="/en-US/docs/Web/API/Window/maximize" title="The documentation about this has not yet been written; please consider contributing!"><code>window.maximize()</code></a>, <a href="/en-US/docs/Web/API/Window/restore" title="This method is currently not working, but you can use:"><code>window.restore()</code></a>, or <a href="/en-US/docs/Web/API/Window/minimize" title="The Window.minimize() method sets the window to a minimized state."><code>window.minimize()</code></a> to change the window state.</p>
+
+<p>To get the window state from JavaScript code, use <a href="/en-US/docs/Web/API/Window/windowState" title="The windowState read-only property of the Window interface returns the window's current state."><code>window.windowState</code></a>. Listen to the <a href="/en/XUL/Events#Window_events" title="en/XUL/Events#Window_events"><code>sizemodechange</code> event</a> dispatched to the DOM window to get notified when the window state changes.</p>
+
+
+</div> <div id="a-title">
+
+
+<dl>
+ <dt><code id="a-title"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The text to appear in the title bar of the window.</dd>
+</dl>
+</div> <div id="a-width">
+
+
+<dl>
+ <dt><code id="a-width"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></dt>
+ <dd>Type: <em>string</em> (representing an integer)</dd>
+ <dd>The preferred width of the element. The value should not include a unit as all values are in pixels. The actual displayed width may be different if the element or its contents have a minimum or maximum width, or the size is adjusted by the flexibility or alignment of its parent. The CSS width property may also be used.</dd>
+</dl>
+
+
+</div> <div id="a-windowtype">
+
+<dl>
+ <dt>
+  <code id="a-windowtype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/windowtype">windowtype</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  Set to a string which can be used to identify the type of window. This might be used, for example, to distinguish between a browser window and an editor window. Some of Mozilla's window handling functions use this attribute to group windows of the same type together.</dd>
+</dl>
+<div class="note">
+ <p>Values for window type as found on MXR: <a href="http://mxr.mozilla.org/mozilla-release/search?string=windowtype">http://mxr.mozilla.org/mozilla-release/search?string=windowtype</a></p>
+ <p><strong>navigator:browser </strong>- Looks like if window has gBrowser it has this window type</p>
+ <p><strong>devtools:scratchpad </strong>- Scratchpad windows</p>
+ <p><strong>navigator:view-source</strong> - The view source windows</p>
+</div>
+
+<p> </p>
+</div>
+<h3 id="Eigenschaften">Eigenschaften</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Geerbte Eigenschaften</strong><br> <small> <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/align">align</a></span></code>, , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/allowEvents">allowEvents</a></span></code>, , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/boxObject">boxObject</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/builder">builder</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/className">className</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/collapsed">collapsed</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/contextMenu">contextMenu</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/controllers">controllers</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/database">database</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/datasources">datasources</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/dir">dir</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/flex">flex</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/height">height</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/hidden">hidden</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/id">id</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/left">left</a></span></code>, , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/maxHeight">maxHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/maxWidth">maxWidth</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/menu">menu</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/minHeight">minHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/minWidth">minWidth</a></span></code>, , , , , , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/observes">observes</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/ordinal">ordinal</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/orient">orient</a></span></code>, , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/pack">pack</a></span></code>, , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/persist">persist</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/ref">ref</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/resource">resource</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/statusText">statusText</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/style">style</a></span></code>, ,, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/tooltip">tooltip</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/tooltipText">tooltipText</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/top">top</a></span></code>, <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/width">width</a></span></code></small></p> </td> </tr> </tbody>
+</table>
+<h3 id="Methoden">Methoden</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Geerbte Methoden</strong><br> <small><code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.addEventListener">element.addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.appendChild">node.appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.cloneNode">node.cloneNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.compareDocumentPosition">node.compareDocumentPosition()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.dispatchEvent">element.dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttribute">element.getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNode">element.getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNodeNS">element.getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNS">element.getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getBoundingClientRect">element.getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getClientRects">element.getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByClassName">element.getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagName">element.getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagNameNS">element.getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getFeature">node.getFeature()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getUserData">node.getUserData()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttribute">element.hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttributeNS">element.hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasAttributes">nodes.hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasChildNodes">nodes.hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.insertBefore">node.insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isDefaultNamespace">node.isDefaultNamespace()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isEqualNode">node.isEqualNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSameNode">node.isSameNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSupported">node.isSupported()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupNamespaceURI">node.lookupNamespaceURI()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupPrefix">node.lookupPrefix()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.normalize">node.normalize()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelector">element.querySelector()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelectorAll">element.querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttribute">element.removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNode">element.removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNS">element.removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.removeChild">node.removeChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeEventListener">element.removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.replaceChild">node.replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttribute">element.setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNode">element.setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNodeNS">element.setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNS">element.setAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.setUserData">node.setUserData()</a></code></small></p> </td> </tr> </tbody>
+</table>
+<h3 id="Hinweise">Hinweise</h3>
+<p>Die Fehlermeldung "<em>XML Parsing Error: undefined entity...&lt;window</em>" kann durch eine fehlende oder nicht erreichbare DTD Datei, die in der XUL Datei angegeben wurde, verursacht werden. Ein Dateiname mit einem SYSTEM Schlüsselwort in einer DOCTYPE Deklaration kann unter Umständen auch nicht geladen werden, ohne dass eine solche Fehlermeldung ausgegeben wird. In diesem Fall kann die Fehlermeldung ein nicht definierter Entity Fehler am nächsten XUL Element sein.</p>
+<h3 id="Verwandte_Themen">Verwandte Themen</h3>
+<dl> <dt>Elemente</dt> <dd><code><a href="/de/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>, <code><a href="/de/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code>, <code><a href="/de/docs/Mozilla/Tech/XUL/dialogheader" title="dialogheader">dialogheader</a></code></dd>
+</dl>
+<dl><a href="/de/Fenster_in_Chrome" title="de/Fenster_in_Chrome">Fenster in Chrome</a></dl> <h4 id="Benutzerhinweise">Benutzerhinweise</h4> <p>Um das Icon der Fenstertitelleiste zu ändern siehe: <a href="/de/Fenster_Icons" title="de/Fenster_Icons">Fenster Icons</a>.</p> <p>Um ein Favicon zur Adressleiste und zum Tab hinzufügen, kann der folgende Codeschnipsel verwendet werden.</p> <pre>&lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;!-- Icon from chrome --&gt;
+&lt;html:link rel="icon" href="chrome://myExtension/content/path/to/favicon.png"/&gt;
+
+&lt;!-- From a remote site --&gt;
+&lt;html:link rel="icon" href="http://www.mozilla.org/favicon.ico"/&gt;
+</pre>

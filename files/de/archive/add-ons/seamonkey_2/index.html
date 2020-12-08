@@ -1,0 +1,281 @@
+---
+title: Extensions support in SeaMonkey 2
+slug: Archive/Add-ons/SeaMonkey_2
+translation_of: Archive/Add-ons/SeaMonkey_2
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Starting with SeaMonkey 2 Alpha 1 SeaMonkey supports toolkit/-style extensions. These type of extensions have many advantages for both users and developers compared to the old xpinstall/-style extensions.</p>
+
+<h3 id="The_Basics">The Basics</h3>
+
+<p>To support SeaMonkey 2 as a target application, you need to add it to the list of target applications in the extension's<a class="internal" href="/en/Install_Manifests" title="En/Install Manifests"> install.rdf</a> file. The code for that will look something like this:</p>
+
+<pre>&lt;em:targetApplication&gt;
+  &lt;!-- SeaMonkey --&gt;
+  &lt;Description&gt;
+    &lt;em:id&gt;{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}&lt;/em:id&gt;
+    &lt;em:minVersion&gt;2.0&lt;/em:minVersion&gt;
+    &lt;em:maxVersion&gt;2.*&lt;/em:maxVersion&gt;
+  &lt;/Description&gt;
+&lt;/em:targetApplication&gt;</pre>
+
+<p>The install.js is not supported any more and should be removed.</p>
+
+<h3 id="Differences_as_compared_to_other_toolkit-based_applications">Differences as compared to other toolkit/-based applications</h3>
+
+<ul>
+ <li>
+  <p>You need to overlay/open different chrome URLs as compared to Firefox. Some URLs are listed below:</p>
+
+  <table style="height: 69px; width: 100%;">
+   <tbody>
+    <tr style="background-color: rgb(204, 255, 204);">
+     <td>URL in Firefox</td>
+     <td>URL in SeaMonkey</td>
+     <td>Overlays</td>
+    </tr>
+    <tr>
+     <td><a class="external" rel="freelink">chrome://browser/content/browser.xul</a></td>
+     <td><a class="external" rel="freelink">chrome://navigator/content/navigator.xul</a></td>
+     <td>Main browser window</td>
+    </tr>
+    <tr>
+     <td><a class="external" rel="freelink">chrome://browser/content/pageinfo/pageInfo.xul</a></td>
+     <td><a class="external" rel="freelink">chrome://navigator/content/pageinfo/pageInfo.xul</a></td>
+     <td>Page Info window</td>
+    </tr>
+    <tr>
+     <td><a class="external" rel="freelink">chrome://browser/content/preferences/permissions.xul</a></td>
+     <td><a class="external" rel="freelink">chrome://communicator/content/permis...onsManager.xul</a></td>
+     <td>Permissions Manager dialog</td>
+    </tr>
+   </tbody>
+  </table>
+
+
+  <table style="width: 100%;">
+   <caption>URLs added in 2.1</caption>
+   <tbody>
+    <tr style="background-color: rgb(204, 255, 204);">
+     <td>URL in Firefox</td>
+     <td>URL in Seamonkey</td>
+    </tr>
+    <tr>
+     <td><a class="external" rel="freelink">chrome://browser/content/bookmarks/bookmarksPanel.xul</a></td>
+     <td><a class="external" rel="freelink">chrome://communicator/content/bookmarks/bm-panel.xul</a></td>
+    </tr>
+    <tr>
+     <td><a class="external" rel="freelink">chrome://browser/content/places/places.xul</a></td>
+     <td><a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a></td>
+    </tr>
+   </tbody>
+  </table>
+  <strong>Thunderbird</strong> uses mostly the same chrome URLs for overlaying as SeaMonkey. There are exceptions, but these are few and far between.</li>
+ <li>
+  <p>SeaMonkey also uses different IDs for the menu items. Some important menu IDs are listed below, menu IDs are based on Firefox 3 source code:</p>
+
+  <table style="height: 223px; width: 800px;">
+   <tbody>
+    <tr style="background-color: rgb(204, 255, 255);">
+     <td><strong>Menu id in Firefox</strong></td>
+     <td><strong>Menu id in SeaMonkey 1.x and 2.0</strong></td>
+     <td><strong>SeaMonkey 2.1</strong></td>
+     <td><strong>Overlays</strong></td>
+    </tr>
+    <tr>
+     <td>menu_FilePopup</td>
+     <td>menu_FilePopup</td>
+     <td>menu_FilePopup</td>
+     <td>File menu popup</td>
+    </tr>
+    <tr>
+     <td>menu_EditPopup</td>
+     <td>menu_Edit_Popup</td>
+     <td>menu_EditPopup</td>
+     <td>Edit menu popup</td>
+    </tr>
+    <tr>
+     <td>menu_viewPopup</td>
+     <td>menu_View_Popup</td>
+     <td>menu_View_Popup</td>
+     <td>View menu popup</td>
+    </tr>
+    <tr>
+     <td>-</td>
+     <td>goPopup</td>
+     <td>goPopup</td>
+     <td>Go menu popup</td>
+    </tr>
+    <tr>
+     <td>placesPopup</td>
+     <td>-</td>
+     <td>-</td>
+     <td>History menu popup</td>
+    </tr>
+    <tr>
+     <td>bookmarksMenuPopup</td>
+     <td>menu_BookmarksPopup</td>
+     <td>menu_BookmarksPopup</td>
+     <td>Bookmarks menu popup</td>
+    </tr>
+    <tr>
+     <td>menu_ToolsPopup</td>
+     <td>taskPopup</td>
+     <td>taskPopup</td>
+     <td>Tools menu popup</td>
+    </tr>
+    <tr>
+     <td>-</td>
+     <td>windowPopup</td>
+     <td>windowPopup</td>
+     <td>Window menu popup</td>
+    </tr>
+    <tr>
+     <td>menu_HelpPopup</td>
+     <td>helpPopup</td>
+     <td>helpPopup</td>
+     <td>Help menu popup</td>
+    </tr>
+   </tbody>
+  </table>
+ </li>
+</ul>
+
+<h3 id="URLbar_Icons">URLbar Icons</h3>
+
+<p>To display a button with a menupopup in the urlbar-icons for both Firefox and SeaMonkey 2.0, use this code:</p>
+
+<p><code>    &lt;hbox id="urlbar-icons"&gt;<br>
+         &lt;image popup="myExt-menu"/&gt;<br>
+     &lt;/hbox&gt;<br>
+      &lt;window id="main-window"&gt;<br>
+         &lt;menupopup id="myExt-menu"&gt;<br>
+             &lt;menuitem label="menuitem"/&gt;<br>
+             &lt;menuitem label="menuitem"/&gt;<br>
+         &lt;/menupopup&gt;<br>
+     &lt;/window&gt;</code></p>
+
+<p>Instead of</p>
+
+<p><span style="font-family: helvetica;"><code>    &lt;hbox id="urlbar-icons"&gt;<br>
+         &lt;button type="menu"&gt;<br>
+             &lt;menupopup&gt;<br>
+                 &lt;menuitem label="menuitem"/&gt;<br>
+                 &lt;menuitem label="menuitem"/&gt;<br>
+                 &lt;menuitem label="menuitem"/&gt;<br>
+             &lt;/menupopup&gt;<br>
+         &lt;/button&gt;<br>
+    &lt;/hbox&gt;</code></span></p>
+
+<p><strong>Technical Note:</strong> The code that opens the URL history popup just looks for any menupopup, so it goes wrong if you add your own. Ordinary popups are fine of course.</p>
+
+<h3 id="The_Statusbar">The Statusbar</h3>
+
+<p>In Firefox 3 a new <code>vbox</code> has been added, called "browser-bottombox", which encloses the find bar and status bar at the bottom of the browser window. Although this doesn't affect the appearance of the display, it may affect your extension if it overlays chrome relative to these elements.</p>
+
+<p>For example, if you overlay some chrome before the status bar, like this:</p>
+
+<pre>&lt;vbox id="browser-bottombox"&gt;
+  &lt;something insertbefore="status-bar" /&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Use the following technique to make your overlay work on both SeaMonkey 2 and Firefox 3:</p>
+
+<pre>&lt;window id="main-window"&gt;
+  &lt;vbox id="browser-bottombox" insertbefore="status-bar"&gt;
+    &lt;something insertbefore="status-bar" /&gt;
+  &lt;/vbox&gt;
+&lt;/window&gt;
+</pre>
+
+<h3 id="Thunderbird_3">Thunderbird 3</h3>
+
+<h4 id="gFolderDisplay_API">gFolderDisplay API</h4>
+
+<p>SeaMonkey 2.0 only supports a reduced set of methods:</p>
+
+<ul>
+ <li>selectedCount</li>
+ <li>selectedMessage</li>
+ <li>selectedMessageIsFeed</li>
+ <li>selectedMessageIsImap</li>
+ <li>selectedMessageIsNews</li>
+ <li>selectedMessageIsExternal</li>
+ <li>selectedIndices</li>
+ <li>selectedMessages</li>
+ <li>selectedMessageUris</li>
+ <li>messageDisplay</li>
+</ul>
+
+<h4 id="gMessageDisplay_API">gMessageDisplay API</h4>
+
+<p>SeaMonkey 2.0 only supports a reduced set of methods:</p>
+
+<ul>
+ <li>displayedMessage</li>
+ <li>visible</li>
+</ul>
+
+<h3 id="JavaScript_Tweaks">JavaScript Tweaks</h3>
+
+<p>Firefox supports some shorthand in various places. These are so commonly available that developers often forget that they are not built-ins. SeaMonkey on the other hand defaults to not support them so they either need to be expanded to their proper forms or matching constants/variables need to be defined in custom code.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr style="background-color: rgb(204, 255, 204);">
+   <td>Shorthand</td>
+   <td>Expansion</td>
+  </tr>
+  <tr>
+   <td>Cc</td>
+   <td>Components.classes</td>
+  </tr>
+  <tr>
+   <td>Ci</td>
+   <td>Components.interfaces</td>
+  </tr>
+  <tr>
+   <td>Cr</td>
+   <td>Components.results</td>
+  </tr>
+  <tr>
+   <td>Cu</td>
+   <td>Components.utils</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Multi-browser_compatibility">Multi-browser compatibility</h3>
+
+<p>To make an extension compatible with SeaMonkey as well as Firefox/Thunderbird, you may need to do different things depending on which application is running the extension.</p>
+
+<h4 id="In_JavaScript_code">In JavaScript code</h4>
+
+<p>You can use the following technique to detect the application:</p>
+
+<pre class="brush: js">const FIREFOX_ID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
+const THUNDERBIRD_ID = "{3550f703-e582-4d05-9a08-453d09bdfdc6}";
+const SEAMONKEY_ID = "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}";
+var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+                        .getService(Components.interfaces.nsIXULAppInfo);
+if(appInfo.ID == FIREFOX_ID) {
+  // running under Firefox
+} else if(appInfo.ID == THUNDERBIRD_ID) {
+  // running under Thunderbird
+} else if(appInfo.ID == SEAMONKEY_ID) {
+  // running under SeaMonkey
+} else {
+  // another app
+}</pre>
+
+<p>See <a href="/en-US/docs/Using_nsIXULAppInfo">Using nsIXULAppInfo</a> for more details.</p>
+
+<h4 id="In_manifest_file">In manifest file</h4>
+
+<p>SeaMonkey uses different overlays than other applications. You can use the application flag to select which overlay should be used with which application:</p>
+
+<pre class="brush: js"><code class="language-html">overlay chrome://browser/content/browser.xul chrome://myaddon/content/ffOverlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://myaddon/content/tbOverlay.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+overlay </code>chrome://navigator/content/navigator.xul<code class="language-html"> chrome://myaddon/content/smOverlay.xul application=</code>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</pre>

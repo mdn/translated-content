@@ -1,0 +1,155 @@
+---
+title: 'Firefox OS Build Prozess: Übersicht'
+slug: Archive/B2G_OS/Building_and_installing_Firefox_OS/Firefox_OS_build_overview
+tags:
+  - Firefox OS
+  - build
+  - install
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary
+---
+<div class="summary">
+<p>Firefox OS zu kompilieren und zu installieren erfordert eine erhebliche Menge Zeit, Netzwerkbandbreite und Rechenleistung. Leider können auch Dinge schiefgehen. Dieser Artikel beschreibt die Ziele und Schritte des Build-Prozesses, um Benutzern während der Firefox OS Installation zu helfen. Details der einzelnen Schritte werden in den verlinkten Seiten erläutert.</p>
+</div>
+
+<div class="note">
+<p><strong style="font-weight: bold;">Anmerkung:</strong> Der Firefox OS Build Prozess ist voll von Bezügen zu 'B2G' oder 'Boot2Gecko'. 'Boot2Gecko' war der ursprüngliche Codename des Firefox OS Projekts.</p>
+</div>
+
+<h2 id="Das_Ziel_vier_'image'-Dateien">Das Ziel: vier 'image'-Dateien</h2>
+
+<p>Der grundsätzliche Zweck des Build Prozesses ist es vier Dateien zu erzeugen, die auf das Firefox OS-Gerät kopiert werden können.</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>boot.img</strong></td>
+   <td>Der Linux-Kernel und ein Image des root-Dateisystems, wobei letzteres ein Set von grundlegenden UNIX-Tools zur Verfügung stellt.</td>
+  </tr>
+  <tr>
+   <td><strong>system.img</strong></td>
+   <td>Der Kern von Firefox OS inklusive einiger Teile von Gonk, der Portierung von Gecko, und dem ausführbaren Programm b2g.</td>
+  </tr>
+  <tr>
+   <td><strong>userdata.img</strong></td>
+   <td>Das Gecko-Profil des Benutzers und die Gaia Web-Anwendungen für das Gerät.</td>
+  </tr>
+  <tr>
+   <td><strong>recovery.img</strong></td>
+   <td>Ein Linux-Kernel und ein Image des root-Dateisystems zusammen mit einem einfachen Werkzeug, um eine defekte Installation zu reparieren.</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<p>Wenn diese 4 Images erzeugt wurden, können sie auf das Gerät übertragen werden.</p>
+
+<p>Firefox OS setzt auf dem Android Open Source Project (AOSP) auf. Die AOSP-Werkzeuge <code>adb</code> und <code>fastboot</code> bieten Möglichkeiten auf ein Gerät zuzugreifen und es zu verändern. Insbesondere kann das Kommando <code>adb reboot-bootloader</code> ein angeschlossenes Gerät dazu bringen, neu zu starten und in einem frühen Bootloaderstadium zu pausieren, während das Kommando <code>fastboot flash $partition $image</code> dazu benutzt werden kann, ein Image auf das Gerät zu kopieren.</p>
+
+<h3 id="Das_Boot-Image">Das Boot-Image</h3>
+
+<p>Das Boot-Image (<code>boot.img</code>) ist eine Kombination aus dem Linux-Kernel und einer initialen root Partition, die die grundlegenden Werkzeuge und Initialisierungs-Skripte bereit stellt. Letzteres wird für eine effektive Nutzung durch das Gerät in den Gerätespeicher kopiert und wird deshalb als "ramdisk" (RAM-Disk) bezeichnet. Das Boot-Image wird in die boot Partition des Gerätes kopiert und die Inhalte der RAM-Disk erscheinen unter dem root-Verzeichnis, wenn zur Laufzeit auf das Geräte-Dateisystem zugegriffen wird; zum Beispiel beim Ausführen von <code>adb shell</code>.</p>
+
+<p>Das Boot-Image richtet auch die Berechtigungen des root-Benutzers in der Datei <code>default.prop</code> im root-Verzeichnis ein.</p>
+
+<p>Es ist auch möglich vorhandene Boot-Images zu verändern, indem man die Datei untersucht, sie in Kernel und RAM-Disk trennt, die Inhalte der RAM-Disk extrahiert, diese ändert, das RAM-Disk-Image neu zusammenstetzt und daraus eine funktionierende boot.img-Datei erzeugt. Ein Beispiel findet man auf der <a href="http://k.japko.eu/alcatel-otf-hackers-guide-1.html">Alcatel One Touch Fire Hacking (Mini) Guide</a>-Seite.</p>
+
+<p>Boot-Images können vor der Installation getestet werden, indem man sie dem Gerät "unterschiebt" (sideload). Der Geräte-Start kann im Bootloader angehalten werden. Im Bootloader-Modus kann man dann mit <code>fastboot</code> von einem eigenen Boot-Image booten, indem man das Kommando <code>fastboot boot /some/path/to/boot.img</code> verwendet.</p>
+
+<h3 id="Das_System-Image">Das System-Image</h3>
+
+<p>Das System-image (<code>system.img</code>) stellt die Grundfunktionen von Firefox OS bereit:</p>
+
+<ul>
+ <li><strong>Gonk</strong>: systemnahe Komponenten des Betriebssystems</li>
+ <li><strong>Gecko</strong>: Laufzeitumgebung für HTML, CSS und JavaScript</li>
+ <li><strong>B2G</strong>: Laufzeitkomponenten des Betriebssystems</li>
+ <li><strong>Gaia</strong>: User Interface (UI) für Apps</li>
+</ul>
+
+<div class="note">
+<p>Siehe <a href="https://developer.mozilla.org/de/Firefox_OS/Platform">Firefox OS platform guide</a> für nähere Informationen zur System-Architektur.</p>
+</div>
+
+<p>Das System-Image wird in die <code>system</code> Partition des Geräts kopiert und ist im laufenden Betrieb im Verzeichnis <code>/system/</code> zu sehen wenn das Dateisystem gemountet wurde.</p>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Das System-Image stellt zudem vom Gerät genutze Binär-Programme zur Verfügung, insbesondere den RIL (Radio Interface Layer) für die Funk-Verbindungen.</p>
+</div>
+
+<h3 id="Das_User_Data_Image">Das User Data Image</h3>
+
+<p>Das User Data Image (<code>userdata.img</code>) enthält die Gaia Apps des Anwenders.</p>
+
+<p>Das User Data Image wird in die <code>userdata</code> Partition des Gerätes kopiert. Der Inhalt ist im laufenden Betrieb im Verzeichnis <code>/data/</code> zu sehen wenn das Dateisystem gemountet wurde. Das Verzeichnis <code>/data/b2g/</code> enthält das Mozilla Gecko Profil des Anwenders, das Verzeichnis <code>/data/local/webapps/</code> enthält die verfügbaren Apps.</p>
+
+<h3 id="Das_Recovery_Image">Das Recovery Image</h3>
+
+<p>Das Recovery Image (<code>recovery.img</code>) enthält denselben Kernel und eine vergleichbare RAM-Disk wie die Boot Image Partition. Das Recovery Image verwendet allerdings ein anderes Initialisierungs-Skript, welches dem Anwender verschiedene Recovery-Funktionen zur Verfügung stellt die mit den Tasten des Gerätes bedient werden können.</p>
+
+<p>Das Recovery Image wird in die <code>recovery</code> Partition des Gerätes kopiert, welche im Normalbetrieb nicht ins Dateisystem gemountet wird.</p>
+
+<h2 id="Der_Build_Prozess_setup_configure_build_install">Der Build Prozess: setup, configure, build, install</h2>
+
+<p>Build Prozess und Installation von Firefox OS  bestehen aus 4 Schritten:</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>Setup</strong></td>
+   <td>Bereitstellen aller für den Build Prozess benötigten Programme wie z.B. Compiler und Bibliotheken.</td>
+  </tr>
+  <tr>
+   <td><strong>Configure</strong></td>
+   <td>Download des Quellcodes und Erzeugen einer <code>configure</code> Datei welche Umgebungsvariablen definiert in denen die benötigten Pfade und Parameter gespeichert werden.</td>
+  </tr>
+  <tr>
+   <td><strong>Build</strong></td>
+   <td>Erzeugen des Gecko Anwender-Profils und der Gaia Anwendungen des Gerätes.</td>
+  </tr>
+  <tr>
+   <td><strong>Install</strong></td>
+   <td>Installieren der Dateien auf dem Gerät.</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<p> </p>
+
+<h3 id="Setup">Setup</h3>
+
+<p>Die Setup-Phase ist notwendig um sicher zu stellen dass sämtliche für den Build Prozess benötigte Software zur Verfügung steht, z.B. Compiler und Build Tools.</p>
+
+<p>Dieser Schritt kann manuell oder per Skript durchgeführt werden. Details hierzu findest Du auf <a href="/de/Firefox_OS/Firefox_OS_build_prerequisites" title="Firefox OS build prerequisites">Firefox OS build prerequisites</a>.</p>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Auf UNIX und UNIX-artigen Computern kann man mit dem Kommando which prüfen, ob ein für den Build Prozess benötigtes Programm vorhanden ist. Als Parameter erwartet which den Namen des benötigten Programms.</p>
+</div>
+
+<h3 id="Configuration">Configuration</h3>
+
+<p>Der eigentliche Build Prozess startet mit dem Erstellen einer Kopie der Firefox OS (bzw. B2G) Software, gewöhnlich wird ein Git Clone des <code>B2G</code> Projekts erstellt. Der Schritt Configuration kopiert den gesamten benötigten Quellcode und erzeugt eine <code>config</code> Datei, welche die benötigten Installations-Parameter enthält.</p>
+
+<p>Ausgeführt wird dieser Schritt mit dem <code>config.sh</code> Skript. Details findest Du auf der <a href="/en-US/Firefox_OS/Preparing_for_your_first_B2G_build" title="Preparing for your first B2G build">Preparing for your first B2G build</a> Seite.</p>
+
+<p>Das Configure Skript benötigt einen Parameter mit dem der Gerätetyp spezifiziert wird. Diese sogenannten Code Names fliessen in den Build Namen ein und stehen für eine bestimmte CPU Architektur und nicht für ein spezielles Gerät. Momentan kann man also nicht anhand des Build Names bestimmen ob ein Build auf einem bestimmten Gerät lauffähig ist.  Eine Liste der verfügbaren Code Names findest Du <a href="/de/Firefox_OS/Phone_guide/Phone_specs">hier</a>.</p>
+
+<p>Der Schritt Configure nutzt <code>repo</code>, ein Tool des Android Open Source Projekts, für den Download der für den Build benötigten Software. Die Software wird gespeichert im Verzeichnis <code>repo/projects</code>. Aufgrund der herunter zu ladenden Datenmenge und der durchzuführenden Schritte kann der Schritt Configure länger dauern.</p>
+
+<h3 id="Build">Build</h3>
+
+<p>Im Schritt Build wird der Quellcode kompiliert und die Image-Dateien werden erzeugt.</p>
+
+<p>Hierzu wurd das <code>build.sh</code> Skript ausgeführt. Details hierzu findest Du in <a href="/de/Firefox_OS/Building" title="Building">Building Firefox OS</a>.</p>
+
+<p>Das Skript versucht alle Quellcodes in einem Schritt zu kompilieren: Die Android Open Source Project Tools, den Linux Kernel und die Gaia Web Anwendungen. Wenn dieser Schritt fehl schlägt ist nicht immer klar, an welcher Stelle der Build ein Problem hatte.</p>
+
+<p>Es ist möglich, nur einzelne Komponenten des Gesamtpakets zu kompilieren. Z.B. kann Gecko einzeln kompiliert werden, indem das Build Skript mit dem <code>gecko</code> Parameter aufgerufen wird. Das gleiche gilt für Gaia, wo das Build Skript mit dem  <code>gaia</code> Parameter gestartet wird. Diese Pakete können einzeln installiert werden,wie im folgenden beschrieben Abschnitt wird.</p>
+
+<p>Ebenso ist es möglich die oben beschriebenen Image-Dateien zu erzeugen. Z.B. kann man das System-Image mit <code>./build.sh out/platform/$target/system.img</code> erzeugen, wobei der Parameter <code>$target</code> derselbe ist wie im Schritt Configuration.</p>
+
+<h3 id="Install">Install</h3>
+
+<p>Im Schritt Install wird der neu kompilierte Code auf das Gerät kopiert. Hierzu wird das Skript <code>flash.sh</code> ausgeführt.</p>
+
+<p>Es können auch gezielt einzelne Komponenten des neu erstellten Build-Pakets installiert werden, indem das Flash Skript mit den entsprechenden Parametern gestartet wird . Zum Beispiel können die Gaia Web Anwendungen durch <code>./flash.sh gaia</code> installiert werden.</p>

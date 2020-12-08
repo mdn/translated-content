@@ -1,0 +1,89 @@
+---
+title: Customizing build-time apps
+slug: Archive/B2G_OS/Developing_Gaia/Customizing_build-time_apps
+tags:
+  - Apps
+  - B2G
+  - Customization
+  - Firefox OS
+  - Gaia
+  - Guide
+  - NeedsReview
+  - 'l10n:priority'
+translation_of: Archive/B2G_OS/Developing_Gaia/Customizing_build-time_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">ডেভেলপার অথবা ডিভাইস ভেন্ডার হিসেবে,আপনাকে অ্যাপসটি কাস্টমাইজ করতে চাইবেন যা একটি Firefox OS  ডিভাইসের উপরে বিভিন্ন কারণে প্রথম বার কাজ করে।এই অনুচ্ছেদ এটা করার বিভিন্ন প্রক্রিয়ার উপরে আলোচনা করে।</span></p>
+</div>
+<h2 id="গায়ার_ভিতরে_অ্যাপ_লোকেশন">গায়ার ভিতরে অ্যাপ লোকেশন</h2>
+<p>অ্যাপস Firefox OS এর উপর কাজ করে সেগুলো গায়া সোর্স ট্রী এর ভিতরে থাকে,দুটা লোকেশনের মাঝে একটিঃ</p>
+<ul>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">gaia/apps/</a>:এটা সেখানে যেখানে ডিফল্ট সিস্টেম অ্যাপস পাওয়া যায়,যেমন দিন পঞ্জিকা,ই-মেইল,সেটিংস ইত্যাদি।</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/dev_apps">gaia/dev-apps</a>:এটা সেখানে যেখানে অন্য অ্যাপস পাওয়া যায়,যেমন ঐগুলো কাস্টমাইজেশন প্রক্রিয়ায় যোগ হয়।</li>
+</ul>
+<p>যদি আপনি আপনার  গায়া/B2G নির্মাণে এসব অ্যাপস বাদ দিতে /যোগ করতে চান,আপনি নিচে দেখানো বেশ কিছু পথে এটি করতে পারেন।</p>
+<h2 id="Brute_force_কাস্টমাইজেশন_প্রক্রিয়া">Brute force কাস্টমাইজেশন প্রক্রিয়া</h2>
+<p> "brute force"প্রক্রিয়া হল সাধারনভাবে অ্যাপস মুছে ফেলা যা আপনি গঠনের সময় উপস্থিত রাখতে চান,গঠনের পু্বে।</p>
+<h2 id="এডিটিং_কনফিগ_লিস্টস">এডিটিং কনফিগ লিস্টস</h2>
+<p>সবচেয়ে বিশুদ্ধ প্রক্রিয়া হল  <code>apps-*.list</code> ফাইল এডিট করাf (খুজেন বিভিন্ন নির্দেশনামুলক ডিভাইসে খুজেন  <a href="https://github.com/mozilla-b2g/gaia/tree/master/build/config">gaia/build/config/</a>, যেমন <code>phone/</code>  এবং <code>tablet/ এর ভিতরে</code>) গঠনের সময় আপনি অ্যাপস এর পথ যোগ করে চান। উদাহরন হিসেবে, <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-production.list">gaia/build/config/phone/apps-production.list</a> দেখতে কিছুটা এর মতঃ</p>
+<pre class="brush: bash">apps/bluetooth
+apps/bookmark
+apps/browser
+apps/calendar
+apps/callscreen
+etc.</pre>
+<p>নোট করুন যে আপনি আরো সরাসরি ভাবে সকল অ্যাপস নির্দিষ্ট করতে পারেন,এর মতঃ</p>
+<pre class="brush: bash">apps/*</pre>
+<p>প্রক্রিয়া পছন্দের জন্য যা <code>apps-*.list</code> ফাইল ব্যবহার করে যা সহজেপ্রাপ্ত  <a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile">gaia/Makefile</a> এর ভিতরে গঠনের সময় অ্যাপস নির্দিষ্ট করে,এবং এর মত কিছু দেখায়ঃ</p>
+<pre class="brush: cpp"><span class="nv">GAIA_DEVICE_TYPE</span><span class="o">?=</span>phone
+  ...
+GAIA_APP_TARGET?=engineering
+  ...
+ifeq ($(MAKECMDGOALS), demo)
+GAIA_DOMAIN=thisdomaindoesnotexist.org
+GAIA_APP_TARGET=demo
+else ifeq ($(MAKECMDGOALS), dogfood)
+DOGFOOD=1
+else ifeq ($(MAKECMDGOALS), production)
+PRODUCTION=1
+endif
+  ...
+ifeq ($(PRODUCTION), 1)
+GAIA_OPTIMIZE=1
+GAIA_APP_TARGET=production
+endif
+
+ifeq ($(DOGFOOD), 1)
+GAIA_APP_TARGET=dogfood
+endif
+  ...
+ifndef GAIA_APP_CONFIG
+GAIA_APP_CONFIG=build$(SEP)config$(SEP)apps-$(GAIA_APP_TARGET).list
+endif</pre>
+<p>প্রাথমিকভাবে , <code>GAIA_APP_TARGET</code> পরিবর্তন সেট হয় <code>engineering</code> তে এবং <code><span class="nv">GAIA_DEVICE_TYPE</span></code> পরিবর্তন সেট হয়  <code>phone তে</code>,সোর্স থেকে ডিফল্ট গায়া গঠনে  <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-engineering.list">gaia/config/phone/app-engineering.list</a> ব্যবহার করবে(যা সকল টেস্ট,ডেমোস,ইত্যাদি যোগ করে)</p>
+<p>বিভিন্ন অ্যাপস লিস্টের ব্যবহার নির্দেশনা দিতে আপনি নির্দিষ্ট করেন বিভিন্ন অপশন যখন  <code>make</code> কমান্ড চলমান থাকে .  <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-production.list">gaia/build/config/phone/apps-production.list</a> গঠনের সাথে উদাহরণ হিসেবে,আপনি ব্যবহার করবেন</p>
+<pre class="brush: bash">PRODUCTION=1 গঠন</pre>
+<p>যদি আপনি বিশেষভাবে  <code>DEMO=1</code> গঠনের সাথে নির্দেশনা দেন তখন ইহা <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-demo.list">apps-demo.list</a>.ব্যবহার করবে।আপনি বিশেষভাবে  <code>DOGFOOD=1</code> গঠনের সাথে নির্দিষ্ট করেন,তখন ইহা <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-dogfood.list">apps-dogfood.list</a> ব্যবহার করবে।</p>
+<p> <code>GAIA_APP_CONFIG</code> ইডিটিং দ্বারা  <a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile">gaia/Makefile</a> এ আপনি সম্পুর্ন ভাবে সিদ্ধান্ত নিতে পারেন এবং আপনার নিজের <code>apps-*.list</code> ফাইল প্রদান করেন ।</p>
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/Android.mk#L24-L28">gaia/Android.mk</a> বহন করে এইসব লাইন গুলোঃ</p>
+<pre class="brush: cpp">ifneq ($(filter user userdebug, $(TARGET_BUILD_VARIANT)),)
+GAIA_MAKE_FLAGS += PRODUCTION=1
+B2G_SYSTEM_APPS := 1
+endif</pre>
+<p>যখন আপনি গঠন করবেন,যদি <code>VARIANT=user</code> অথবা <code>VARIANT=userdebug</code> সেট হয় (এইগুলো  <code>TARGET_BUILD_VARIANT</code> এ পরিবর্তনে  প্রতিসৃত হয়ে থাকে), <code>PRODUCTION=1</code> হল সয়ংক্রিয়ভাবে সেট যখন গায়া গঠন ।</p>
+<div class="note">
+ <p><strong>নোটঃ খুজে বের করুন যা তৈরি করে অন্য অপশন যা </strong>আমাদের <a href="/en-US/Firefox_OS/Developing_Gaia/make_options_reference">make options reference</a> এ সহজে প্রাপ্ত।</p>
+</div>
+<h2 id="বাজার_কাস্টমাইজেশনের_ব্যবহার">বাজার কাস্টমাইজেশনের ব্যবহার</h2>
+<p>তৃতীয়,এবংসবচেয়ে পুনরায় বিশুদ্ধ(কিন্তু সবচেয়ে জটিল) উপায় হল কাস্টমাইজেশন ব্যবহার করা।এগুলো আপনাকে ব্যতিচারের সময় গঠনের কাস্টমাইজেশন প্রক্রিয়া নির্দেশ করে থাকে,গায়া কোর রিপু পরিবর্তন ছাড়া। আপনি আপনার নিজের দূরের নির্দেশনায় কাস্টমাইজেশন যোগ করতে পারেন,অথবা ব্যবহার করেন পুর্বে বিদ্যমান নির্দেশনা যা  সোর্স থেকে আসে।</p>
+<p>উদাহরন হিসেবে,<code>GAIA_DISTRIBUTION_DIR</code> পরিবেশের পরিবর্তনের সাথে কাস্টমাইজেশনের স্থান নির্দেশ করা,এর মতঃ</p>
+<pre class="brush: bash"><code class="language-html">GAIA_DISTRIBUTION_DIR=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DISTRIBUTION_PATH</span><span class="token punctuation">&gt;</span></span> make production</code></pre>
+<p>আরো বেশি কাস্টমাইজেশনের উদাহরনের প্রক্রিয়া বিভক্তিকরনের জন্য,দয়া করে  <a href="https://github.com/mozilla-b2g/gaia/tree/master/customization">https://github.com/mozilla-b2g/gaia/tree/master/customization</a> নির্দেশ করুন।</p>
+<p> ইহার নিজের আলাদা ভিতরের বিষয় হল কাস্টমাইজেশন।ইহা সম্পর্কে আর বেশি জানার জন্য,আমাদের <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide">Market Customizations guide</a> পড়ূন।</p>
+<div class="note">
+ <p><strong>নোটঃযদি তুমি তোমার গাইয়া বিল্ডের অংশ হিসেবে কাস্টম এক্সটারনাল অ্যাপ যোগ করতে চাও, তোমাকে একটি্ নির্দেষট পথে তাদের তৈরি করা প্রয়োজন,এবং তারপরে তাদের স্থাপন কর  </strong> <code>gaia/dev-apps/</code> ফোল্ডারে। <a href="https://developer.mozilla.org/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide#Building_Prebundled_web_apps">Building Prebundled web apps</a>  পড়ো আমাদের  আরো খুজে বার করতে ।</p>
+</div>
+<div class="warning">
+ <p><strong>গুরুত্বপুর্ণঃযদি তুমি  ভাগ করার জন্য একতি কাসট্ম তৈরি করে ডিভাইস ভেন্ডার হওI ,তোমাকে  তোমার ফোন/ট্যাব্লেট/ইত্যাদি তে ফায়ারফক্স মার্কেট প্ল্যাচ  যোগ করার আগে প্তোমাকে খুশি হতে হবে বিচারের মান দন্ডের প্রয়োজন।মোযিলার সাথে যোগাযোগ কর  আরো বিস্তারিত  জানতে। </strong></p>
+</div>
+<p> </p>

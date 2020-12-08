@@ -1,0 +1,68 @@
+---
+title: ECMAScript 7 Unterstützung in Mozilla
+slug: Archive/Web/JavaScript/ECMAScript_7_support_in_Mozilla
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>ECMAScript 2016 ist die nächste Erweiterung des ECMA-262 Standards. Neue Sprachfeatures sind bereits im Entwurf der 6. Edition vorgeschlagen und nähern sich der Vollendung. Die aktuellen Vorschläge lassen sich unter dem folgenden GitHub Repository ansehen <a href="https://github.com/tc39/ecma262">tc39/ecma262</a>.<br>
+ Aktuelle Probleme mit dem Spezifikationsprozess sollen durch die Einführung von Stages und Champions gelöst werden. Außerdem ist ein zweijähriger Release-Zyklus von dem Standard vorgeschlagen.<br>
+ <br>
+  <a href="http://slides.com/rafaelweinstein/tc39-process">Link</a> für weitere Informationen über den post-ES6 Spezifikationsprozess.</p>
+
+<p>Mailing-Liste zur Diskussion von ECMAScript standards: <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a></p>
+
+<h2 id="Experimentale_Features">Experimentale Features</h2>
+
+<p>Die folgenden Features sind bereits implementiert, jedoch nur zugänglich in <a href="http://nightly.mozilla.org/">Firefox Nightly channel</a>:</p>
+
+<h3 id="Zusätze_zu_dem_Array_Objekt">Zusätze zu dem <code>Array</code> Objekt</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (<a href="https://github.com/domenic/Array.prototype.includes/blob/master/spec.md">spec</a>)</li>
+</ul>
+
+<h3 id="Zusätze_zu_dem_ArrayBuffer_Objekt">Zusätze zu dem <code>ArrayBuffer</code> Objekt</h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spec</a>)</li>
+</ul>
+
+<h3 id="Neue_TypedObject_Objekte">Neue TypedObject Objekte</h3>
+
+<ul>
+ <li><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects draft</a></li>
+</ul>
+
+<h3 id="Neue_SIMD_Objekte">Neue SIMD Objekte</h3>
+
+<ul>
+ <li><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD specification draft and polyfill</a></li>
+</ul>
+
+<h2 id="Features_mit_zunehmender_Stabilität">Features mit zunehmender Stabilität</h2>
+
+<p>The following features are supported beyond the Nightly channel, but ongoing specification and implementation work is happening. Features which were originally in the ECMAScript 6 draft and got postponed to ECMAScript 2016 are likely to appear here.</p>
+
+<h3 id="Ausdrücke">Ausdrücke</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">Array comprehensions</a> (<a href="/en-US/Firefox/Releases/30">Firefox 30</a>)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">Generator comprehensions</a> (<a href="/en-US/Firefox/Releases/30">Firefox 30</a>)</li>
+</ul>
+
+<h2 id="Noch_nicht_unterstütze_Features">Noch nicht unterstütze Features</h2>
+
+<p>The following features are not yet implemented, but targeted for ECMAScript 2016.</p>
+
+<ul>
+ <li><code>Object.observe()</code> ({{bug(800355)}})</li>
+</ul>
+
+<h2 id="Weiterführend">Weiterführend</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">ECMAScript web site</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Mozilla ES2016 tracking bug</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/" title="http://kangax.github.io/es5-compat-table">ECMAScript 2016 support across browsers</a></li>
+</ul>

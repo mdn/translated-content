@@ -1,0 +1,68 @@
+---
+title: Making Gaia code changes
+slug: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+tags:
+  - B2G
+  - Contributing
+  - Firefox OS
+  - Gaia
+  - GitHub
+  - Guide
+  - code changes
+  - 'l10n:priority'
+translation_of: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+---
+<div class="summary">
+ <p><span class="seoSummary">এখন আপনার গায়া আপনার Desktop এ চলে এবং আপনার কিভাবে  codebase  কাজ করে তাতে কিছু লেভেল বুঝতে হয়, আপনাকে প্রজেক্টে কাজ করার জন্য প্রস্তুত হতে হবে ,এই অনুচ্ছেদে কিভাবে কাজ করে এবং কোথায় আছে তা খুজে বের করেন।</span></p>
+</div>
+<h2 id="Git_এর_সবচেয়ে_ভাল_অনুশীলন">Git এর সবচেয়ে ভাল অনুশীলন</h2>
+<ol>
+ <li>যখন গায়াতে পরিবর্তন আনা হয় ,আপনাকে প্রথমে Grab করা উচিত  latest  master থেকে :
+  <pre class="brush: bash">cd path/to/gaia
+git checkout master
+git pull upstream master</pre>
+ </li>
+ <li>পরবর্তীতে ,আপনার নতুন অবস্থানের জন্য  একটি শাখা খুলতে হবে:
+  <pre class="brush: bash">git checkout -b my-code-fix</pre>
+ </li>
+ <li>অবশেষে,আপনার <code>gaia/apps যান সরাসরি,এবং আপনার</code> app files এ পরিবর্তন আনুন।</li>
+</ol>
+<h2 id="Simple_code_উদাহরণ_পরিবর্তন_করে"> Simple code উদাহরণ পরিবর্তন করে</h2>
+<p>কোড পরিবর্তন দেখতেঃ</p>
+<p>       ১। Gaia codebaseএ প্রয়োজনের জন্য পরিবর্তন আনুন,এবং পরিবর্তনটা সেভ কর</p>
+<p>      ২।Firefox Mulet বন্ধ করুন,অথবা আপনার সিমুলেটর WebIDE এ চলে</p>
+<p>      ৩।আপনার Gaia profile using <code>make পুন<em>রায় থাকে</em></code></p>
+<p><code><em>৪।</em></code>Firefox Mulet নতুন শুরু করুন,অথবা আপনার সিমুলেটর WebIDE এ কাজ করে</p>
+<p> চলুন lock screen আ কিছু পরিবর্তন আনতে রঙের কিছু পরিবর্তন ঘটাই  :</p>
+<p><img alt="Gaia lockscreen showing the clock display in white text" src="https://mdn.mozillademos.org/files/7929/gaia-lockscreen-clock.png" style="width: 369px; height: 623px; margin: 0px auto; display: block;"></p>
+<p>১।ডেভেলপার টুলস এর ব্যবহারের পথ সহজ করে দেয় । Ctrl/right + click  Firefox Desktop এর ঘড়িতে ক্লিক করে থাকে এবং <em>Inspect Element</em> বাচাই করে  context menu থেকে।</p>
+<ol>
+ <li>আপনি  CSS ফাইলে এডিট করতে যা file to edit — <code>gaia/apps/system/lockscreen/style/lockscreen.css</code>  তে কাজ করে থাকে  —এবং তখন  CSS স্টাইলে ডান দিকে ডিস্পলে তে আপনার পরিবর্তন আনে যা আপনি চান ।</li>
+ <li>যখন আপনি খুশি চলে যান এবং ফাইলে নতুন পরিবর্তন আনুন সরাসরিভাবে।</li>
+ <li>পরবর্তিতে , আপনার পরিবর্তন দেখতে কিছু ধাপ পরিলক্ষিত করুন।</li>
+</ol>
+<p><img alt="Gaia lockscreen showing the clock display modified from white to red text" src="https://mdn.mozillademos.org/files/7931/gaia-lockscreen-clock-modified.png" style="width: 366px; height: 622px; margin: 0px auto; display: block;"></p>
+<p> Gaia Firefox Mulet প্রদানের লিমিটেশনঃ</p>
+<p>,Desktop Firefox প্রদান করা, অয়াপ্স  গুলো বিশেষভাবে কাজ করে থাকে যদি কোন নতুন রিয়েল ফোনে কাজ করি ,কিন্তু আপনি এখানে আর সেখানে কিছু পরিবর্তন দেখতে পারবেন।</p>
+<ul>
+ <li>সকল ডিভাইস না  APIs কে সাপোর্ট করা হয়  Firefox ডেক্সটপে; <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/preferences.js">preferences.js</a> এ আপনি একটি নতুন লিস্টে করতে পারেন।</li>
+</ul>
+<h2 id="কিভাবে_কাজ_করার_জন্য_bugs_খোজা_হয়">কিভাবে কাজ করার জন্য bugs খোজা হয়</h2>
+<h2 id="sect1"> </h2>
+<p> Firefox OS bugs খোজার সবচেয়ে ভাল পথ হল এটাকে  <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">Josh Matthews' Bugs Ahoy app</a> কন্সাল্টে কাজ করা হয়  — এই বাগের পুলগুলো সরাসরি Mozilla's Bugzilla থেকে এবং দেখানো হয় তাদের দেখানো হয় খুজতে এবং ব্রাউজ করতে সবচেয়ে সহজ উপায়।একদা আপনি একটি বাগ পেয়েছিলেন যা  তে আপনি একটি কাজ করতে চান,  Bugzilla page এ যান,  "assigned to"  ক্ষেত্রে নিজেকে প্রবেশ করান ,এবং কাজ শুরু করেন ,উপরের মত।</p>
+<h3 id="সাহায্যকারী_হিন্টস">সাহায্যকারী হিন্টস</h3>
+<ul>
+ <li>যখন আপনি মেন্টর বাগ এ কাজ করবেন,  Gaia core দল আপনার উন্নতি মনিটর করবেন এবং  the code and progress এর সাহায্যে সাহায্য প্রদান করবে . যদি আপনি  Firefox OS এর উন্নতি প্রক্রিয়ার নতুন শুরুকারী হন,যা সাহায়্যকারী হয় এমন কিছুতে সাইন করুন।এগুলো  Firefox OS Bugzilla পেজে "Mentors" ক্ষেত্রে প্রবেশের দ্বারা চিহ্নিত হয়।Bugs Ahoy লিস্ট করে মেন্টর বাগ ।</li>
+ <li>যদি আপনি একজিন নতুন Bugzilla ব্যবহার কারী হন,আপনি বাগে কাজ করা হিসেবে নিজেকে প্রমান করতে পারবেন না।যদি আপনি না পারেন , মেন্টর কে জিজ্ঞাসা করেন বাগে দায়িত্ব অর্পন করার জন্য ,অথবা অন্য জায়গায় বাগ কমেন্টের জন্য ।</li>
+ <li>আপনার অভিজ্ঞতা হওয়ার পরে আপনাকে বাগে কাজ করার জন্য অনুমতি দেয়ার জন্য বলা হয়ে থাকবে ।</li>
+ <li> <code>[good first bug] খোজার জন্য আরেকটি ভাল সাদাবোর্ড প্রবেশ করানো হয়,যদি আপনি একটি নতুন প্রদানকারী হন এবং কিছু সাধারন করতে চান,আপনি ভাল বাগ ব্যবহারকারী হিসেবে লিস্টে আসতে পারেন </code> <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1">http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1</a> ব্যবহারে ।</li>
+ <li>আপনি যে প্রযেক্ট  দিতে চান তার জন্য  আপনাকে প্রজেক্ট খুজতে হবে।উদাহরন হিসেবে অনুসারীরা আপনাকে  Gaia Clock app bug  search দিবে:</li>
+</ul>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=10497922">https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=9776392</a></p>
+<h2 id="আরো_দেখুন"> আরো দেখুন</h2>
+<ul>
+ <li><a href="https://mozilla.app.box.com/s/wzgsb3lkqglv0dnfdgzs">Gaia powerpoints for visual/interaction specifications</a></li>
+ <li><a href="https://etherpad.mozilla.org/gaia-meeting-notes">Weekly Gaia meeting Etherpad</a></li>
+ <li><a href="https://datazilla.mozilla.org/">Datazilla</a>: Mozilla's পারফরমেন্স পরীক্ষা ব্যবহার<br>
+   </li>
+</ul>

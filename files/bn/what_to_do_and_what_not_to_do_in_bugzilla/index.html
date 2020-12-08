@@ -1,0 +1,131 @@
+---
+title: বাগজিলায় কি করা যাবে এবং কি করা যাবে না
+slug: What_to_do_and_what_not_to_do_in_Bugzilla
+tags:
+  - Bugzilla
+  - QA
+  - বাগজিলা
+translation_of: Mozilla/Bugzilla/What_to_do_and_what_not_to_do_in_Bugzilla
+---
+<div class="summary">
+ <p><span class="seoSummary">এই নিবন্ধে বাগজিলায় (<span class="seoSummary"><a class="link-https" href="https://bugzilla.mozilla.org/">bugzilla.mozilla.org</a></span>) অধিকার/সুবিধা থেকে শুরু করে বাগ চিহ্নিত করা ও সমাধান করার সকল ধাপে করণীয় ও করা উচিত নয়, সেসব বিষয় বিস্তারিত বর্ণনা করা হয়েছে।</span></p>
+</div>
+<h2 id="Getting.2FUpgrading_Bugzilla_privileges" name="Getting.2FUpgrading_Bugzilla_privileges">বাগজিলায় অধিকার পাওয়া/বাড়ানো</h2>
+<p>যদি আপনি বাগজিলায় সুবিধা বা অধিকার পেতে চান, (যেমনটি নিচে বর্ণনা করা হয়েছে) তাহলে <a href="https://bugzilla.mozilla.org/page.cgi?id=get_permissions.html" title="https://bugzilla.mozilla.org/page.cgi?id=get_permissions.html">এই পাতা</a>টি দেখতে পারেন। এর মদ্ধে প্রয়োজনীয় বিষয় ও যোগাযোগের জন্য ই-মেইলের তালিকা রয়েছে।</p>
+<p>যদি আপনি দ্রুত canconfirm অথবা editbugs অধিকার পেতে চান, বিশেষতঃ বাগ টেস্ট করার জন্য অথবা বাগ ডে'তে অংশগ্রহণ করার জন্য, তাহলে আপনি irc তে <span style="line-height: inherit;">lizzard কে বলতে পারেন, অথবা মেইল করতে পারেন</span><a href="mailto: lhenry@mozilla.com?subject=Increased%20permissions%20on%20bugzilla.mozilla.org" style="line-height: inherit;" title="mailto: lhenry@mozilla.com?subject=Increased%20permissions%20on%20bugzilla.mozilla.org"> lhenry@mozilla.com</a><span style="line-height: inherit;">. ইমেইলে আপনার <a href="https://bugzilla.mozilla.org/page.cgi?id=user_activity.html" title="https://bugzilla.mozilla.org/page.cgi?id=user_activity.html">Bugzilla activity page</a> এর লিঙ্ক দিয়ে দেবেন। canconfirm সুবিধা পাওয়ার আগে, আপনি বাগ টেস্ট করতে পারেন এবং মন্তব্য করতে পারেন। এভাবেও আপনি একটি বাগ সমাধানে সাহায্য করতে পারেন। editbugs এর ক্ষেত্রেও একই কথা প্রযোজ্যঃ আপনি ওই বাগে যা যুক্ত করতে বাঁ সম্পাদনা করতে চান, সেটা মন্তব্যের মাদ্ধমে বলতে পারেন। এতে করে আপনি আপনার যোগ্যতা প্রমাণ করতে পারবেন, এবং দ্রুত editbugs এর অধিকার পাবেন। </span></p>
+<h2 id="Canconfirm_privilege" name="Canconfirm_privilege">Canconfirm অধিকার</h2>
+<p>The canconfirm privilege allows you to confirm bugs and also to start your bug reports in the confirmed state (NEW). It also governs which bug entry form you are presented with first (either the <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided" title="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided">guided</a> or <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?format=__default__" title="https://bugzilla.mozilla.org/enter_bug.cgi?format=__default__">advanced</a> forms).</p>
+<h3 id="Confirming_unconfirmed_bugs" name="Confirming_unconfirmed_bugs">অননুমোদিত বাগ অনুমোদন করা</h3>
+<ul>
+ <li>A useful <a href="/en/Confirming_unconfirmed_bugs" title="en/Confirming_unconfirmed_bugs">general guide for confirming unconfirmed bugs</a>.</li>
+ <li>A <a class="external" href="http://groups.google.com/groups?selm=mailman.1069274340.867.mozilla-layout%40mozilla.org">guide for confirming layout bugs</a> (bugs in web page rendering)</li>
+</ul>
+<h3 id="Reporting_new_bugs" name="Reporting_new_bugs">নতুন বাগ রিপোর্ট করা</h3>
+<p>You should report a bug in the NEW state after going through the triaging process as described in the two above-mentioned guides.</p>
+<p>You should look at all the open bugs you've reported (see the "My Bugs" link at the bottom of every Bugzilla page) at least every two months and test whether they still exist.</p>
+<h3 id="Editbugs_privilege" name="Editbugs_privilege">Editbugs অধিকার</h3>
+<p>The more powerful editbugs privilege gives you the privileges of <a href="#Canconfirm_privilege">canconfirm</a> and also the ability to edit most aspects of a bug. Therefore, don't abuse your privileges.</p>
+<h3 id="Resolving_bugs" name="Resolving_bugs">বাগ সমাধান</h3>
+<p>Some general rules:</p>
+<ul>
+ <li>When you resolve a bug, CC yourself so that you are informed when new facts come up.</li>
+ <li>The conditions for <strong>not resolving</strong> a bug always overrule the conditions for resolving a bug.</li>
+ <li>When in doubt about resolving a bug, leave it alone!</li>
+</ul>
+<h4 id="Resolving_bugs_as_DUPLICATE" name="Resolving_bugs_as_DUPLICATE">নকল হিসেবে বাগ চিহ্নিত করা</h4>
+<p>See this <a class="external" href="http://www.mozilla.org/quality/help/screening-duplicates.html">guide for screening <code>DUPLICATE</code> bugs</a>. In general newer bugs should be marked as <code>DUPLICATE</code>s of older bugs, except when the newer bug contains more information (bug description clearer, patch already attached, lots of people already CC'ed, etc.).</p>
+<h4 id="Resolving_bugs_as_WORKSFORME" name="Resolving_bugs_as_WORKSFORME"><code>WORKSFORME</code> হিসেবে বাগ চিহ্নিত করা</h4>
+<p>You can resolve a bug as <code>WORKSFORME</code> (WFM) if it can't be reproduced on the reported hardware/OS.</p>
+<p>You <strong>should not</strong> resolve a bug as WFM if:</p>
+<ul>
+ <li>the bug reporter uses a different hardware/operating system (e.g. bug appears on Linux and you can't reproduce it on Windows).</li>
+ <li>the bug has been reproduced by some people but can't be reproduced by other people.</li>
+</ul>
+<p>In general you can resolve a bug as WFM if:</p>
+<ul>
+ <li>three or more people with a similar/the same setup can't reproduce the bug and the bug is only seen by the bug reporter. In this case you shouldn't just mark it WFM instantly, but ask the reporter for more details first. When marking it WFM you should tell the bug reporter that he should reopen the bug if he can still see it with a recent build.</li>
+ <li>the build the bug is reported against is more than one stable release old and the bug can't be reproduced with a current build.</li>
+ <li>the bug reporter has not responded to questions for one month and the bug can't be reproduced with a current build.</li>
+ <li>the bug reporter reports that he can no longer see the bug and no other people report that they are still seeing the bug.</li>
+</ul>
+<h4 id="Resolving_bugs_as_INCOMPLETE" name="Resolving_bugs_as_INCOMPLETE">অসম্পূর্ণ বাগ চিহ্নিত করা</h4>
+<p>The problem is vaguely described with no steps to reproduce, or is a support request. The reporter should be directed to the product's support page for help diagnosing the issue. If there are only a few comments in the bug, it may be reopened only if the original reporter provides more info, or confirms someone else's steps to reproduce. If the bug is long, when enough info is provided a new bug should be filed and the original bug marked as a duplicate of it.</p>
+<h4 id="Resolving_bugs_as_INVALID" name="Resolving_bugs_as_INVALID">বাতিল বাগ চিহ্নিত করা</h4>
+<p>You should resolve a bug as <code>INVALID</code> if the issue described in the bug is clearly not a Mozilla bug or if the issue is intended behavior. The exceptions are bugs in other software which we have to work around and bugs that involve certain core Gecko modules. Bugs covered by this exception should not be <code>INVALID</code>ated by anyone other than the <a class="external" href="http://www.mozilla.org/owners.html">module owner or module peer</a>; for bugs involving modules like Layout or Content, attach a test case to the bug and then CC one of the owners or peers. Reports of problems with specific websites that result from bad coding practices already determined to be “tech evangelism” cases by the module owner or peer, or problems that result from the use of proprietary technology, should be be moved to the Tech Evangelism product rather than being resolved as <code>INVALID</code>.</p>
+<h4 id="Resolving_bugs_as_FIXED" name="Resolving_bugs_as_FIXED">সমাধানকৃত বাগ চিহ্নিত করা</h4>
+<p>Resolve a bug as <code>FIXED</code> if the bug has been fixed by a checkin into the Mozilla Mercurial code repository. Bugs which can no longer be reproduced should be marked <code>WORKSFORME</code> instead of <code>FIXED</code> if they can't be linked to a single checkin.</p>
+<h4 id="Resolving_bugs_as_WONTFIX" name="Resolving_bugs_as_WONTFIX">সমাধানের অযোগ্য বাগ চিহ্নিত করা</h4>
+<p>Bugs should not be marked <code>WONTFIX</code> by the normal bug triager. The decision to mark a bug <code>WONTFIX</code> is reserved for module owners or module peers.</p>
+<h3 id="Verifying_bugs" name="Verifying_bugs">বাগ যাচাই করা</h3>
+<p>Only <code>RESOLVED</code> bugs can be verified. To verify a bug, you will need to be the bug reporter, assignee, qa_contact, or in the 'editbugs' permission group. You should verify a bug if it has been proven that the resolution of the bug was correct. When verifying a bug, you should remember the following:</p>
+<ul>
+ <li>Verifying <code>DUPLICATE</code>s is the easiest task, so start with that. Note that in general it's impossible to verify a <code>DUPLICATE</code> until the original has been resolved.</li>
+ <li>Verifying <code>WONTFIX</code> or <code>INVALID</code> bugs is relatively easy if a developer or a trusted <abbr title="Quality Assurance">QA</abbr> person has <code>WONTFIX</code>ed or <code>INVALID</code>ated them. Bugs that were <code>INVALID</code>ated or <code>WONTFIX</code>ed by someone else must be verified by a module owner or module peer or someone who has been explicitly told by a module owner or module peer that they are able to do so for that module.</li>
+ <li>Before verifying <code>FIXED</code> bugs, make sure that you can verify them on every hardware/OS they were reported on. If that's impossible, try to cooperate with multiple people to verify the bug.</li>
+ <li>There are no clear rules for verifying <code>WORKSFORME</code>. In general you should make sure that the bug has been resolved for a few months and no complaints about the resolution have come up.</li>
+</ul>
+<div class="note">
+ <p><strong>Note:</strong> Because of how duplicate detection works in Bugzilla, you should try not to verify bugs immediately after they're marked fixed; instead, let a little time pass first. This isn't mandatory, but can help prevent accidental filing of duplicates of a bug that's already been fixed.</p>
+</div>
+<h3 id="Changing_the_bug_information_fields" name="Changing_the_bug_information_fields">বাগের তথ্যের ফিল্ডে পরিবর্তন করা</h3>
+<h4 id="Summary" name="Summary">সারাংশ</h4>
+<p>You should change the summary if the current one is unclear or does not correctly describe the issue covered by the bug. You <strong>should not change</strong> the summary in order to morph the bug to describe a different issue. In this case the bug should be resolved and another bug should be opened.</p>
+<h4 id="OS.2FHardware" name="OS.2FHardware">অপারেটিং সিস্টেম/হার্ডওয়্যার</h4>
+<p>Make sure that the OS or Hardware fields correctly display the systems that are affected. If a bug is Windows-only, change the field to the oldest affected operating system. If the bug is present on Linux and Windows, change the fields to Hardware = PC and OS = ALL. If another hardware platform like Mac or DEC is also affected, change Hardware to ALL.</p>
+<h4 id="Severity" name="Severity">প্রবলতা</h4>
+<p>This field describes the impact of a bug.</p>
+<table>
+ <tbody>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">blocker</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">Blocks development and/or testing work</td>
+  </tr>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">critical</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">crashes, loss of data, severe memory leak</td>
+  </tr>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">major</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">major loss of function</td>
+  </tr>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">normal</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">regular issue, some loss of functionality under specific circumstances</td>
+  </tr>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">minor</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">minor loss of function, or other problem where easy workaround is present</td>
+  </tr>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">trivial</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">cosmetic problem like misspelled words or misaligned text</td>
+  </tr>
+  <tr>
+   <th style="font-family: Verdana, sans-serif; font-size: small; font-weight: bold; vertical-align: top; white-space: nowrap;">enhancement</th>
+   <td style="font-family: Verdana, sans-serif; font-size: small;">Request for enhancement</td>
+  </tr>
+ </tbody>
+</table>
+<p>The blocker severity should be used very seldomly, because only a fraction of the hundreds of thousands bugs really block the development of mozilla and these are normally fixed very quickly. As a result, bugs which are <code>UNCONFIRMED</code> for more than a few days do not qualify for the blocker severity. The exceptions to this rule are platform-specific or compiler-specific bugs. Basically, anything that prevents builds from building, running, or being used for dogfood (able to use <a href="/en/Bugzilla" title="en/Bugzilla">Bugzilla</a>, <a href="/en/Tinderbox" title="en/Tinderbox">Tinderbox</a>, <a class="external" href="http://lxr.mozilla.org/">LXR</a>, etc.) is a blocker.</p>
+<p>Bug reports about crashes, hangs, data-loss, or severe security exploits (e.g. remote execution of arbitrary code) get the critical severity.</p>
+<h4 id="Priority.2FTarget_Milestone" name="Priority.2FTarget_Milestone">অগ্রাধিকার/অভীষ্ট মাইলস্টোন</h4>
+<p>As stated in the <a class="external" href="http://bugzilla.mozilla.org/page.cgi?id=etiquette.html">Bugzilla Etiquette</a>, you must not change the Target Milestone and Priority fields. These fields are reserved for the developers. <strong>This also applies to bugs with Target Milestones in the past.</strong></p>
+<h3 id="Reassigning_bugs" name="Reassigning_bugs">বাগ স্থানান্তর</h3>
+<p>If a bug belongs to a different Product or Component it should be reassigned. When performing bug reassignments, keep the following things in mind:</p>
+<ul>
+ <li>Always remember to check the <strong>Reassign to default owner and QA Contact</strong> radio button under the comment textbox.</li>
+ <li>Mozilla applications like the <a class="external" href="http://www.mozilla.org/releases/">Application Suite</a>, <a class="external" href="http://www.mozilla.com/thunderbird/">Thunderbird</a>, or <a class="external" href="http://www.mozilla.com/firefox/">Firefox</a> share most of their program code and all of the backend code including things like <a href="/en/Necko" title="en/Necko">network connectivity</a> (FTP, HTTP, IMAP) and <a href="/en/Gecko" title="en/Gecko">HTML rendering</a>. Make sure that you also test Thunderbird or Firefox bugs with the Application Suite and move the bug to one of the core products, if the bug also exists in the Application Suite.</li>
+ <li>If you don't know where a bug belongs, don't touch it! For example, don't move bugs into the JS engine Component unless you really know they are JS engine bugs, and don't leave bugs in the JS engine Component if you know that the malfunction being described is a DOM problem.</li>
+</ul>
+<h3 id="Bug_flags" name="Bug_flags">বাগ ফ্ল্যাগ সমূহ</h3>
+<p>Mozilla <a class="external" href="http://www.mozilla.org/about/roles.html#Drivers">drivers</a> use flags to identify bugs blocking a release. You may only use the <code>blocking?</code> flag to nominate bugs for blocking status. The use of the <code>blocking-</code> flag and the <code>blocking+</code> flag is <strong>prohibited</strong>. Continued abuse will result in revocation of your Bugzilla privileges.</p>
+<h3 id="Mass_changes" name="Mass_changes">বড় ধরনের পরিবর্তন</h3>
+<p>Mass changes (changes to more than one bug simultaneously) are discouraged. Don't do it!</p>
+<div class="originaldocinfo">
+ <h3 id="Original_Document_Information" name="Original_Document_Information">আসল ডকুমেন্টের তথ্য</h3>
+ <ul>
+  <li>Author(s): Simon Paquet</li>
+  <li>Other Contributors: Andreas Kunz, Boris Zbarsky, Christian Biesinger, Daniel Wang, Fantasai, Ian Hickson, James Graham, and Michael Lefevre</li>
+ </ul>
+</div>
+<p>{{ languages( { "ja": "ja/What_to_do_and_what_not_to_do_in_Bugzilla" } ) }}</p>

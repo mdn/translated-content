@@ -1,0 +1,96 @@
+---
+title: Installations-Skripte
+slug: Archive/Mozilla/XUL/XUL_Tutorial/Installations-Skripte
+translation_of: Archive/Mozilla/XUL/Tutorial/Install_Scripts
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/de/docs/XUL_Tutorial/Erstellen_eines_Installers" style="float: left;">« zurück</a><a href="/de/docs/XUL_Tutorial/Zusätzliche_Installationseigenschaften">weiter  »</a></p>
+</div>
+<p>Dieser Abschnitt beschreibt das Installationsskript.</p>
+<h3 id="Erstellen_eines_Installationsskripts">Erstellen eines Installationsskripts</h3>
+<div class="note">
+ <strong>Hinweis</strong>: Für Firefox Erweiterungen, werden <code>install.js</code> Dateien nicht weiter verwendet. Es sollte ein <code><a href="/de/Installationsmanifest" title="de/Installationsmanifest">install.rdf</a></code> stattdessen erstellt werden.</div>
+<p>In der Regel möchten Sie den Installationsprozess steuern können. Zum Beispiel möchten Sie vielleicht Datei-Versionen überprüfen und nur aktualisierte Dateien installieren oder Sie möchten Fehler in existierenden Dateien beheben. Das Installationsskript ist flexibel genug, um sogar Dateien zu deinstallieren. Aus diesen Gründen sollten Installationen ein Installationsskript an Board haben, um den Installationsprozess zu regeln.</p>
+<p>Das Installationsskript muss "install.js" genannt werden und muss im Wurzelverzeichnis des Installationsverzeichnisses platziert werden. Das Skript wird JavaScript Code enthalten, welcher eine Reihe von Installationsfunktionen aufruft.</p>
+<p>In einem HTML Dokument oder einem XUL Dokument ist das "window" Objekt das Wurzelobjekt. Das bedeutet, dass Sie die Methoden des window-Objekts ohne einem Qualifier davor aufrufen können, zum Beipiel kann statt <code>window.open()</code> einfach <code>open()</code> geschrieben werden. In einem Installationsskript gibt es kein Fenster, jedoch ist das globale Objekt das <em>Install</em> Objekt, welches eine Reihe von Funktionen zur Anpassung des Installationsprozess mit sich bringt. Einige der Install-Ojekt Funktionen werden weiter unter beschrieben.</p>
+<p>Das Installationsskript sollte die folgenden Schritte ausführen:</p>
+<ol>
+ <li>Initialisiere die Installation in dem festgelegt wird, welche Version und Paket installiert werden soll.</li>
+ <li>Benutze die Installationsfunktionen, um zu bestimmen, welche Dateien und Verzeichnisse installiert werden müssen. Sie können außerdem Dateien festlegen, die gelöscht oder verschoben werden sollen.</li>
+ <li>Starte den Installationsprozess der nötigen Dateien.</li>
+</ol>
+<p>Es ist wichtig zu beachten, dass während Schritt zwei, nur angegeben wird, welche Dateien installiert werden sollen und welche weiteren Operationen ausgeführt werden sollen. Es werden keine Dateien bis zum dritten Schritt kopiert. Sie können daher sehr einfach eine Reihe von Dateien festlegen, die installiert werden sollen, stolpern eventuell über einen Fehler und können den Prozess abbrechen, ohne dass das System des Benutzers verändert wird.</p>
+<h3 id="Die_Komponentenregistrierung">Die Komponentenregistrierung</h3>
+<p>Mozilla verfügt über eine Registrierungsdatei, welche alle Komponenten enthält, die momentan installiert sind. Komponenten sind Chrome Pakete, Skins und Plugins. Wird eine neue Komponente installiert, wird die Registrierungsdatei aktualisiert. Die Registrierung speichert auch Dateisets und Versionsinformationen über die installierten Komponenten. Daher ist es sehr einfach die Versionen Ihrer Komponente zu prüfen und zu ermitteln, ob die Komponente bereits verfügbar ist und eventuell aktualisiert werden muss.</p>
+<p>Die Komponentenregistrierung arbeit ähnlich wie die Windows Registrierung. Sie besteht aus der hierarchischen Anordnung von Schlüsseln und Werten. Dabei müssen Sie nicht viel darüber wissen, um XUL Anwendungen zu erstellen, es sei denn Sie wollen eigene <a href="/de/XUL_Tutorial/XPCOM-Schnittstellen" title="de/XUL Tutorial/XPCOM-Schnittstellen">XPCOM</a> Komponenten erstellen.</p>
+<p>Was Sie für eine Installation wissen müssen, ist, dass die Registrierung eine Reihe von Informationen über Ihre Anwendung speichert, zum Beispiel eine Liste der Dateien und Versionen. Die gesamten Informationen werden in einem Schlüssel gespeichert (und in Unter-Schlüsseln), welche Sie im Installationsskript angeben (in Schritt eins oben genannt).</p>
+<p>Dieser Schlüssel ist wie in Verzeichnissen in der folgenden Form strukturiert:</p>
+<pre>/Autor/Paketname
+</pre>
+<p>Ersetzen Sie das Wort "Author" mit Ihrem Name und "Paketname" mit dem Namen Ihres Pakets, welches Sie installieren möchten. Zum Beispiel:</p>
+<pre>/Xulplanet/Find Files
+
+/Netscape/Personal Security Manager
+</pre>
+<p>Das erste Beispiel werden wir für den Dateisuche-Dialog verwenden. Das zweite Beispiel wird vom Personal Security Manager benutzt.</p>
+<h3 id="Initialisierung_der_Installation">Initialisierung der Installation</h3>
+<p>Das Install Objekt hat eine Funktion, <code>initInstall(), welche</code> zur Initialisierung der Installation gebraucht wird. Es sollte am Anfang des Installationsskript aufgerufen werden. Die Syntax dieser Funktion ist die folgende:</p>
+<pre>initInstall( ''packageName'' , ''regPackage'' , ''version'' );</pre>
+<p>Ein Beispiel</p>
+<pre>initInstall("Find Files","/Xulplanet/Find Files","0.5.0.0");</pre>
+<ul>
+ <li>Das erste Argument ist der Name des Paketes in einer lesbaren Form.</li>
+ <li>Das zweite Argument ist der Registrierungsschlüssel, welcher die Paketinformationen speichert.</li>
+ <li>Das dritte Argument ist die Version des Pakets, welches installiert werden soll.</li>
+</ul>
+<p>Als nächstes müssen wir das Verzeichnis festlegen, wo die Dateien installiert werden sollen. Es gibt zwei Möglichkeiten.</p>
+<ul>
+ <li>Die einfache Methode ist, ein Installationsverzeichnis festzulegen und alle Datei dort zu installieren.</li>
+ <li>Die zweite Methode erlaubt Ihnen ein Zielverzeichnis für einzelne Dateien zu bestimmen. Die erste Methode wird nun beschrieben.</li>
+</ul>
+<p>Die Funktion <code>setPackageFolder()</code> legt ein Installationsverzeichnis fest. Für den Dateisuche-Dialog werden wir die Dateien in das Chrome-Verzeichnis installieren. (Wir könnten sie überall speichern). Die Funktion <code>setPackageFolder()</code> nimmt ein Argument an, das Installationsverzeichnis. Für maximale Portabilität kann kein String-Name für das Verzeichnis festgelegt werden. Stattdessen wird ein Identifier eines bekannten Verzeichnis verwendet und dann werden dort Unterverzeichnisse erstellt. Falls Ihre Anwendung Systembibliotheken installieren muss, brauchen Sie den Pfad dieser Verzeichnisse nicht zu wissen.</p>
+<p>Die Verzeichnis-Identifiers sind in der <a class="external" href="http://www.xulplanet.com/references/elemref/ref_Install.html#prop_getFolder">XULPlanet Referenz</a> aufgelistet. Für das Chrome-Verzeichnis ist der Identifier 'Chrome'. Die <code>getFolder()</code> Funktion kann verwendet werden, um eine der speziellen Verzeichnisse zu bekommen. Diese Funktion nimmt zwei Argumente, das erste ist der Identifier und das zweite ist ein Unterverzeichnis. Zum Beispiel:</p>
+<pre>findDir = getFolder("Chrome","findfile");
+setPackageFolder(findDir);
+</pre>
+<p>Hier bekommen wir das "findfile" Verzeichnis im Chrome-Ordner und reichen dies an die <code>setPackageFolder()</code> Funktion weiter. Das zweite Argument für <code>getFolder()</code> ist das Unterverzeichnis in dem wir installieren werden, was nicht bedeutet, dass es existieren muss. Dieses Argument kann weggelassen werden, wenn Sie kein Unterverzeichnis benötigen.</p>
+<h3 id="Setting_Install_Files" name="Setting_Install_Files">Installationsdateien festlegen</h3>
+<p>Als nächstes müssen die Dateien festgelegt werden, die installiert werden sollen. Das erfordert die Verwendung der Funktionen <code>addDirectory()</code> und <code>addFile()</code>. Die <code>addDirectory()</code> Funktion teilt dem Instller mit, dass ein Verzeichnis aus dem XPI Archiv (und alle Inhalte darin) in ein bestimmtes Verzeichnis installiert werden soll. Die Funktion <code>addFile()</code> ist ähnlich, aber für eine einzelne Datei.</p>
+<p>Beide Funktionen <code>addDirectory()</code> und <code>addFile()</code> haben unterschiedliche Formen. Die einfachste Form nimmt nur ein Argument: Das Verzeichnis, welches von der Installation erstellt werden soll.</p>
+<pre class="eval">addDirectory ( <em>dir</em> );
+addFile ( <em>dir</em> );
+
+<strong>Beispiel:</strong>
+
+addDirectory("findfile");
+</pre>
+<p>Das obige Beispiel legt ein Verzeichnis "findfile" für die Installation fest. Diese Funktionen können mehrmals aufgerufen werden, um mehrere Verzeichnisse und Dateien zu installieren.</p>
+<p>Als nächstes wollen wir die Dateien im Chrome System registrieren, sodass diese mit einer Chrome-URL verwendet werden können. Das kann mit der <code>registerChrome()</code> Funktion erledigt werden. Die Funktion nimmt zwei Argumente an, als erstes den Chrome-Typ, der registriert werden soll (content, skin oder locale). Ein zweites Argument ist das Verzeichnis, welches die contents.rdf Datei enthält. Weil der Dateisuche-Dialog content, eine Skin-Datei und eine locale-Datei enthält, muss <code>registerChrome()</code> dreimal aufgerufen werden.</p>
+<pre>registerChrome(Install.CONTENT | Install.DELAYED_CHROME, getFolder(findDir, "content"));
+registerChrome(Install.SKIN | Install.DELAYED_CHROME, getFolder(findDir, "skin"));
+registerChrome(Install.LOCALE | Install.DELAYED_CHROME, getFolder(findDir, "locale"));
+</pre>
+<p> DELAYED_CHROME wird verwendet, um anzuzeigen, dass es beim nächsten Mozilla-Start installiert werden soll.</p>
+<h3 id="Abschluss_der_Installation">Abschluss der Installation</h3>
+<p>Die <code>addDirectory()</code> und <code>addFile()</code> Funktions kopieren keine Dateien. Sie geben nur an, welche Dateien installiert werden sollen. Ebenfalls gibt <code>registerChrome()</code> nur an, dass diese im chrome-System registriert werden sollen. Um den Prozess zu vervollständigen und Dateien zu kopieren, muss die <code><span style="font-family: Verdana,Tahoma,sans-serif;">p</span>erformInstall()</code> Funktion aufgerufen werden. Diese Funktionen erwartet keine Argumente.</p>
+<p>Das finale Skript zur Installation der "Dateisuche"-Komponente ist unten aufgeführt:</p>
+<div class="highlight">
+ <p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_xpiscript_1.js.txt">Datei</a></p>
+ <pre>initInstall("Find Files","/Xulplanet/Find Files","0.5.0.0");
+
+findDir = getFolder("Chrome","findfile");
+setPackageFolder(findDir);
+
+addDirectory("findfile");
+
+registerChrome(Install.CONTENT | Install.DELAYED_CHROME, getFolder(findDir, "content"));
+registerChrome(Install.SKIN | Install.DELAYED_CHROME, getFolder(findDir, "skin"));
+registerChrome(Install.LOCALE | Install.DELAYED_CHROME, getFolder(findDir, "locale"));
+
+performInstall();
+</pre>
+</div>
+<p>Als nächstes schauen wir uns <a href="/de/XUL_Tutorial/Zusätzliche_Installationseigenschaften" title="de/XUL Tutorial/Zusätzliche Installationseigenschaften">zusätzliche Installationsfunktionen</a> an.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/de/docs/XUL_Tutorial/Erstellen_eines_Installers" style="float: left;">« zurück</a><a href="/de/docs/XUL_Tutorial/Zusätzliche_Installationseigenschaften">weiter  »</a></p>
+</div>

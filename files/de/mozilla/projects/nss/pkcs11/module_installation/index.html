@@ -1,0 +1,32 @@
+---
+title: Installation des PKCS11-Moduls
+slug: Mozilla/Projects/NSS/PKCS11/Module_Installation
+translation_of: Mozilla/Projects/NSS/PKCS11/Module_Installation
+---
+<p><span class="seoSummary"><a class="internal" href="/en/PKCS11" title="en/PKCS11">PKCS #11</a> Module sind externe Module, die Firefox-Unterstützung für Smartcard-Lesegeräte, biometrische Sicherheitsgeräte und externe Zertifikatspeicher ergänzen. Dieser Artikel behandelt die beiden Methoden zum Installieren von PKCS-#11 Modulen in Firefox.</span><font> Benutzer können das Einstellungsdialogfeld verwenden, um PKCS #11-Modul zu installieren oder zu entfernen. Erweiterungen können PKCS-#11 Module nsIPKCS11 programmgesteuert verwalten.</font></p>
+
+<div class="note"><strong>Hinweis:</strong> Die Informationen in diesem Artikel sind spezifisch für Firefox 3.5 und neuer. Ältere Versionen von Firefox unterstützen möglicherweise die <a class="internal" href="/en/DOM/window.pkcs11" title="en/DOM/window.pkcs11">window.pkcs11-Eigenschaft</a> für die Installation von PKCS #11 Modulen.</div>
+
+<h2 id="Verwenden_der_Firefox-Einstellungen_zum_Installieren_von_PKCS-11_Modulen">Verwenden der Firefox-Einstellungen zum Installieren von PKCS-#11 Modulen</h2>
+
+<ol>
+ <li>Speichern des PKCS-#11-Moduls an einem dauerhaften Speicherort auf Ihrem lokalen Computer</li>
+ <li>Öffnen Sie das Dialogfeld Firefox-Einstellungen. Wählen Sie "Erweitert" &gt; "Verschlüsselung" &gt; "Sicherheitsgeräte"</li>
+ <li>Wählen Sie "Load"</li>
+ <li>Geben Sie einen Namen für das Sicherheitsmodul ein, z. B. "Meine Clientdatenbank". HINWEIS: Es gibt derzeit einen Fehler in Firefox, bei dem internationale Zeichen Probleme verursachen können.</li>
+ <li>Wählen Sie "Durchsuchen..." , um den Speicherort des PKCS-#11-Moduls auf Ihrem lokalen Computer zu finden, und wählen Sie "OK", wenn Sie fertig sind.</li>
+</ol>
+
+<h2 id="Bereitstellen_von_PKCS-11-Modulen_mithilfe_der_pkcs11-API">Bereitstellen von PKCS-#11-Modulen mithilfe der pkcs11-API</h2>
+
+<p><font>Ab Firefox 58 können Erweiterungen die Browsererweiterungs-API verwenden, um PKCS-#11 Module aufzuzählen und sie dem Browser als Schlüssel- und Zertifikatquellen zugänglich zu machen.</font><code><a href="/en-US/Add-ons/WebExtensions/API/pkcs11">pkcs11</a></code></p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Security">Websicherheit</a></li>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11">PKCS11</a></li>
+ <li>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a> <a href="/en-US/docs/User:bram/Add-ons/WebExtensions">WebExtensions</a> API</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule">pkcs11.installModule()</a></code></li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled">pkcs11.isModuleInstalled()</a></code></li>
+</ul>

@@ -1,0 +1,147 @@
+---
+title: Web QA  স্বয়ংক্রিয় পরীক্ষা চালানো
+slug: Mozilla/QA/Running_Web_QA_automated_tests
+translation_of: Mozilla/QA/Running_Web_QA_automated_tests
+---
+<div class="entry-content" style="word-wrap: break-word; margin-bottom: 1em; font-family: Georgia, Times, serif; font-size: 12.7272720336914px; line-height: 18.176362991333px;">
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">আপনি  <a href="https://wiki.mozilla.org/QA/Execution/Web_Testing" style="color: rgb(227, 114, 14); font-weight: bold;">Web QA</a> পরীক্ষা চালাতে চান , কিন্তু জানেন না কোথা থেকে শুরু করতে হবে ? This doc will help you get up and running a set of tests locally.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">We have a separate project for each web site that we test, so the first step is to choose a project. You can look at the list of our <a href="https://wiki.mozilla.org/QA/Execution/Web_Testing/Automation#Web_QA_Projects" style="color: rgb(227, 114, 14); font-weight: bold;">automation projects</a>, or you could simply use the <a href="https://github.com/mozilla/Addon-Tests" style="color: rgb(227, 114, 14); font-weight: bold;">Addon-Tests</a> project to start. Once you’ve decided which project you’d like to work on, follow this guide to run the existing tests.</p>
+
+<p style="margin-bottom: 1.4em;"><font color="#333333">You should join us on IRC</font><font color="#333333"> at <a href="/en-US/docs/">http://irc.mozilla.org</a>, #mozwebqa and #qa. You can say hello there, and get help if you get stuck on these instructions.</font></p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">All of our projects use Selenium/WebDriver and a fairly similar set of software requirements. However some projects may have specific requirements. If the any of these steps does not work as expected you may want to check out the README file in the project’s root to see if there’s anything special needed.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">All of the following commands are performed from a terminal window (Linux/Mac) or shell (Windows).</p>
+
+<h2 id="Step_1_Install_required_software" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 1: Install required software</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">In order to run and work on our tests you need both <strong>Git</strong> and <strong>Python</strong> installed. You will also need<strong>pip</strong>, which is a package manager for Python.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Excellent instructions for installing Git on all platforms can be found at <a href="https://help.github.com/articles/set-up-git" style="color: rgb(227, 114, 14); font-weight: bold;">Github</a>.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Python can be downloaded from <a href="https://www.python.org/downloads/" style="color: rgb(227, 114, 14); font-weight: bold;">here</a>. Select the appropriate version for your platform and run the installer, we recommend the highest version 2 package that is available.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">You can verify that Python has been successfully installed by running the following command:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">python --version</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><strong>Windows only:</strong><br>
+ After installing Python, install SetupTools from <a href="http://pypi.python.org/pypi/setuptools" style="color: rgb(227, 114, 14); font-weight: bold;">here</a>. Once that is done you’ll need to add the Python folder (e.g., C:\Python26) and the Python scripts folder (e.g., C:\Python26\Scripts) into your path via System Variables: <em>System Properties-&gt;Environment Variables-&gt;System Variables-&gt; Path</em>.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><strong>Linux only:</strong><br>
+ If you are running on Ubuntu/Debian, after installing Python, install SetupTools via</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">sudo apt-get install python-setuptools</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">After Python is successfully installed, install pip by running the following command:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">easy_install pip</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">You now have all of the software required to run Web QA tests!</p>
+
+<h2 id="Step_2_Clone_the_project" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 2: Clone the project</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">If you want to make any changes to tests, or add your own tests, you’ll need to <em>fork</em> the repository (repo) first, to obtain your own copy. To do this simply visit the repo page for <a href="https://wiki.mozilla.org/QA/Execution/Web_Testing/Automation#Web_QA_Projects" style="color: rgb(227, 114, 14); font-weight: bold;">one of the automation projects</a>, and click the fork button which you’ll find near the upper right-hand corner of the page:<br>
+ <img alt="Screen Shot 2013-10-18 at 11.26.33 AM" class="alignnone size-full wp-image-46129" src="https://quality.mozilla.org/qmo_content/uploads/Screen-Shot-2013-10-18-at-11.26.33-AM.png" style="height: 40px; width: 113px;"></p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">You can then <em>clone</em> the repo (which means to create a working copy of all the code locally) to your machine. Switch to the folder on your machine in which you’d like to store the project, and issue the following command:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">git clone --recursive git@github.com:[your username]/[project].git</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">For example:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">git clone --recursive git@github.com:bobsilverberg/Addon-Tests.git</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><em>Pro tip</em>: You can find the url to use to clone the project via the project’s Github page. Look for this area on the right-hand side of the page, and click on the little clipboard icon to copy the url to your clipboard:<br>
+ <img alt="Screen Shot 2013-10-18 at 11.29.15 AM" class="alignnone size-full wp-image-46130" src="https://quality.mozilla.org/qmo_content/uploads/Screen-Shot-2013-10-18-at-11.29.15-AM.png" style="height: 112px; width: 209px;"> If you don’t already have an SSH key set up to work with github, try clicking “https”, then copy the url for the repo to use in your git clone command.</p>
+
+<h2 id="Step_3_Install_required_Python_packages" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 3: Install required Python packages</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Each project has its own requirements.txt which lists Python packages needed for running the tests.<br>
+ Install them using:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">pip install -Ur requirements.txt</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><strong>[Optional/Intermediate level]</strong><br>
+ While most of us have had some experience using virtual machines, <a href="http://pypi.python.org/pypi/virtualenv" style="color: rgb(227, 114, 14); font-weight: bold;">virtualenv</a> is something else entirely. It’s used to keep libraries that you install from clashing and messing up your local environment. After installing virtualenv, installing <a href="http://www.doughellmann.com/projects/virtualenvwrapper/" style="color: rgb(227, 114, 14); font-weight: bold;">virtualenvwrapper</a> will give you some nice commands to use with virtualenv.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">For a more detailed discussion of virtualenv and virtualenvwrapper, check out <a href="https://wiki.mozilla.org/QA/Execution/Web_Testing/Automation/Virtual_Environments" style="color: rgb(227, 114, 14); font-weight: bold;">our quickstart guide</a> and also <a href="http://www.silverwareconsulting.com/index.cfm/2012/7/24/Getting-Started-with-virtualenv-and-virtualenvwrapper-in-Python" style="color: rgb(227, 114, 14); font-weight: bold;">this blog post</a>.</p>
+
+<h2 id="Step_4_Create_a_credentials_file" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 4: Create a credentials file</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Most of our projects include tests that need to log in to the web site. In order to do this we store the credentials for the site in a file called credentials.yaml. You can find a sample credentials.yaml file in the root of the project. In order to run tests that need to log in, you will need to update this file with some valid credentials. First you’ll need a username and password for the site in question, which you can generally obtain by registering for the site, then you can add that information to the credentials file on your machine.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">If you do not see a sample credentials.yaml file in the root of the project then you can skip this step!</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><em>Pro tip</em>: If you do not want Git to think that your credentials.yaml file has changed from the one in the project repo, create a new copy of the file in a different location and then point to it from the command line. For example, you can create a file in your home folder called “amo_credentials.yaml” and then point to that.</p>
+
+<h2 id="Step_5_Choose_an_execution_environment" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 5: Choose an execution environment</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Most of the web sites we test have multiple environments, so before running the tests you need to choose where you want them to run. In general, a project will have one or more of the following environments available:</p>
+
+<ul style="color: rgb(51, 51, 51); margin-bottom: 1.4em; margin-left: 1.6em; padding-left: 0px;">
+ <li style="margin-bottom: 0.25em; padding-bottom: 0px;">Production – this is the “live” environment, the site which is actually visited by the site’s users. The url generally contains “mozilla.org” in it. For example, for addons it would be<a href="https://addons.mozilla.org/" style="color: rgb(227, 114, 14); font-weight: bold;">https://addons.mozilla.org</a>.</li>
+ <li style="margin-bottom: 0.25em; padding-bottom: 0px;">Staging – this is an environment where code lives after it has graduated from development but before going to production. The url generally contains “allizom.org” in it. For example, for addons it would be <a href="https://addons.allizom.org/" style="color: rgb(227, 114, 14); font-weight: bold;">https://addons.allizom.org</a>.</li>
+ <li style="margin-bottom: 0.25em; padding-bottom: 0px;">Development – this is the environment that developers use to test their code. The url generally contains “dev-” in it. For example, for addons it would be <a href="https://addons.allizom.org/" style="color: rgb(227, 114, 14); font-weight: bold;">https://dev-addons.allizom.org</a>.</li>
+</ul>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><em>Pro tip</em>: There is a file in the root of each project, called “mozwebqa.cfg” that contains some defaults for running the tests. It usually specifies a default environment for the tests using the “baseurl” setting. For example, mozwebqa.cfg in the addon-tests project contains the line:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">baseurl = https://addons-dev.allizom.org</pre>
+
+<h2 id="Step_6_Run_the_tests!" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 6: Run the tests!</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Once you have all the above in place, you are ready to start running some tests locally. Let’s give it a try: open a console and make sure you’re in the project’s directory.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">To run all the tests:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --driver=firefox</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">To run all the tests with a credentials file:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --driver=firefox --credentials=/path/to/credentials.yaml</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">To run all of the tests in one file:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --driver=firefox tests/test_file.py</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">To run one test in a file:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --driver=firefox tests/test_file.py -k name_of_test_to_run</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">To run tests on an environment other than the default, specify the “–baseurl” option:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --driver=firefox --baseurl=https://addons.allizom.org</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">If you are running tests on the development or staging environments and was to run tests that change data (hint: you ususally do), you will need to also specify the “–destructive” command line option. For example:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --driver=firefox --baseurl=https://addons.allizom.org --destructive</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">The pytest-mozwebqa plugin has advanced command line options for reporting and using browsers. To see the options available, try running:</p>
+
+<pre style="color: rgb(51, 51, 51); margin-bottom: 1.4em; padding: 0px;">py.test --help</pre>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Also see the documentation on <a href="https://github.com/davehunt/pytest-mozwebqa" style="color: rgb(227, 114, 14); font-weight: bold;">the plugin’s project page</a>.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><strong>[Optional/Intermediate level]</strong><br>
+ A Selenium Grid can be used to run and Webdriver tests across many different browsers. The Web QA team also has a project which holds a Selenium Grid configuration for Windows and Mac OS.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Follow our <a href="https://github.com/mozilla/moz-grid-config/wiki/Quick-Start" style="color: rgb(227, 114, 14); font-weight: bold;">quick start guide</a> to get Selenium Grid up and running.</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Now you’re ready to contribute!</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">If you’d like to learn more, the next post in this series is on <a href="https://quality.mozilla.org/2014/03/automated-testing-analyzing-results/" style="color: rgb(227, 114, 14); font-weight: bold;">Automated Tests: Analyzing Results.</a></p>
+
+<h2 id="Step_7_Get_the_Badge!" style="color: rgb(42, 126, 0); margin-bottom: 0.5em; font-weight: normal; line-height: 1.2; font-size: 1.69em;">Step 7: Get the Badge!</h2>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Once you have completed the steps above, you are eligible for the new Web QA badge! You can see the badge here:</p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;"><a href="https://badges.mozilla.org/en-US/badges/badge/Running--Web-QA-Automation" style="color: rgb(227, 114, 14); font-weight: bold;">https://badges.mozilla.org/en-US/badges/badge/Running–Web-QA-Automation</a></p>
+
+<p style="color: rgb(51, 51, 51); margin-bottom: 1.4em;">Log in using Persona to nominate yourself, or someone else who has Web QA tests up and running. Make sure to include your GitHub username or email in your profile. Congratulations!</p>
+
+<div style="color: rgb(51, 51, 51);"> </div>
+</div>
+
+<p> </p>

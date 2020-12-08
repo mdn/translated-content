@@ -1,0 +1,184 @@
+---
+title: Gepackte Apps
+slug: Archive/Mozilla/Marketplace/Publishing/Packaged_apps
+translation_of: Archive/Mozilla/Marketplace/Options/Packaged_apps
+---
+<p>Eine <strong>gepackte App </strong>ist eine Offene Web App die all ihre Ressourcen (HTML, CSS, JavaScript, app mainfest und so weiter) komprimiert in einer zip Datei hat, anstatt die Dateien auf einem Webserver zu hosten. EIne gepackte App ist einfach einezip Datei, welche die <a href="/de/docs/Apps/Manifest">App Mainfest </a>in dem Hauptverzeichniss trägt. Die App Mainfest muss den Namen <code>manifest.webapp</code> tragen.</p>
+<p>Einer der unterschiede zu einer gehosteten App ist, dass eine gepackte App den <code><a href="/de/docs/Apps/Manifest#launch_path">launch_path</a> </code>in der Mainfest eingetragen haben muss. Dennoch ist es optional den Pfad auch in einer gehosteten App einzutragen.</p>
+<div class="note">
+ <p><strong><span class="short_text" id="result_box" lang="de"><span class="hps">Anmerkung</span></span>:</strong> Der Firefox Marktplatz unterstützt momentan nur gepackte App´s für Firefox OS.</p>
+</div>
+<h2 id="Zweck_einer_gepackten_App">Zweck einer gepackten App</h2>
+<p>Der Zweck einer gepackten App ist, das man einen <span class="short_text" id="result_box" lang="de"><span class="hps">verarbeitbaren</span></span> Weg hat, um Zugriff auf die sensitiven API´s der Geräte zu haben. Die App muss von dem Store (Wie der Firefox Marktplatz), von dem die App´s verteilt werden geprüft werden. Der Store prüft die App, sobald diese für akzeptabel befunden wird, wird die App <span class="short_text" id="result_box" lang="de"><span class="hps">kryptographisch mit einem privatem Schlüssel versehen. Das gebit den Verbrauchern der App mehr Sicherheit, dass die App </span></span>sorgsam auf Sicherheit, Datenschutz und Leistungsfähigkeit geprüft wurde.</p>
+<p> </p>
+<h2 id="Typen_einer_gepackten_App">Typen einer gepackten App</h2>
+<p>Es gibt 3 Typen einer gepackten App:</p>
+<dl>
+ <dt>
+  Privilegierte App</dt>
+ <dd>
+  Eine privilegierte App wurde durch ein spezielles Verfahren von dem Firefox Marktplatz genehmigt. Dadurch soll mehr Sicherheit für den Benutzer gewährleistet werden, wenn eine App spezielle sensitiven APIs des Gerätes benutzen möchte. Es ist mit nativen Apps auf Plattformen wie iOS oder Android zu vergleichen. Um eine App als privilegierte App zu kennzeichnen muss das <a href="/en-US/docs/Web/Apps/Manifest#type" style="line-height: 1.5;"><code>type</code></a><span style="line-height: 1.5;"> Feld in der der Datei </span><code style="font-size: 14px;">manifest.webapp</code><span style="line-height: 1.5;"> auf </span><code style="font-size: 14px;">privileged</code><span style="line-height: 1.5;"> gesetzt werden.</span></dd>
+ <dd>
+  Eine priviligierte App hat folgende Eigenschaften:
+  <ul>
+   <li>Freigegeben durch einen App Store nach einem Code Review oder einer vergleichbraen Prüfung.</li>
+   <li>Alle resourcen einer App's werden durch den App Store signiert.</li>
+   <li>Zugriff auf spezielle, sensible Web APIs, auf die nicht vertrauenswürdiger Inhalt nicht zugreifen darf.</li>
+   <li>Erzwingt eine sogenannte <a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">Content Security Policy</a> (CSP). Eine privilegierte App benutz folgende CSP:
+    <pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+   </li>
+   <li>Implementiert weitere Anforderungen an die Sicherheit. Siehe <a href="https://wiki.mozilla.org/Apps/Security">Security</a> für mehr Informationen.</li>
+  </ul>
+ </dd>
+ <dt>
+  Zertifizierte App</dt>
+ <dd>
+  <span id="result_box" lang="de"><span class="hps">Ein zertifiziertes</span> <span class="hps">App ist für</span> <span class="hps">einen kritischen</span> <span class="hps">Systemfunktion</span> <span class="hps">wie die</span> <span class="hps">Standard</span> <span class="hps">Dialer oder</span> <span class="hps">die</span> <span class="hps">Systemeinstellungen</span> <span class="hps">App</span> <span class="hps">auf einem Smartphone</span> <span class="hps">gedacht.</span> <span class="hps">Diese Art von</span> <span class="hps">App</span> könnte <span class="hps">für kritische</span> <span class="hps">Funktionen auf einem</span> <span class="hps">Firefox</span> <span class="hps">OS</span> <span class="hps">Phone</span> <span class="hps">verwendet werden .</span> <span class="hps">Es ist nicht für</span> <span class="hps">Anwendungen von Drittanbietern</span> <span class="hps">vorgesehen</span><span>,</span> <span class="hps">so dass die meisten</span> <span class="hps">App</span><span class="hps"> nich mit anderen Apps funktionieren </span><span>.</span> <span class="hps">Ein zertifiziertes</span> <span class="hps">App ist</span> <span class="hps">eine verpackte</span> <span class="hps">App</span><span>, die ähnlich</span> <span class="hps">einer privilegierten</span> <span class="hps">App ist</span><span>, mit der Ausnahme</span><span>, dass alle</span> <span class="hps">Geräteberechtigungen</span><span class="hps"> implizit sind</span><span>,</span> <span class="hps">das heißt, sie</span> <span class="hps">ist ohne ausdrückliche</span> <span class="hps">Genehmigung durch den Benutzer</span> <span class="hps">aktiviert sind.</span> <span class="hps">Ein zertifiziertes</span> <span class="hps">App</span> <span class="hps">muss</span> <span class="hps">für ein Gerät</span></span><span id="result_box" lang="de"><span class="hps"> genehmigen</span></span><span id="result_box" lang="de"> <span class="hps">vom OEM</span> <span class="hps">oder Träger</span><span>, um diese</span> <span class="hps">implizite</span> <span class="hps">Zustimmung</span> <span class="hps">zu kritischen</span> <span class="hps">APIs</span> <span class="hps">verwenden zu können</span> <span class="hps">.</span> <span class="hps">Um anzugeben</span><span>, dass</span> <span class="hps">dies eine zertifizierter</span> <span class="hps">App ist</span><span>, fügen Sie den</span> <span class="hps">Feldtyp </span></span><a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a><span id="result_box" lang="de"> <span class="hps">auf seine</span> <code>manifest.webapp </code><span>-Datei und</span> <span class="hps">legen Sie es auf</span> <span class="hps">zertifiziert.</span></span></dd>
+ <dd>
+  <span id="result_box" lang="de"><span class="hps">Das folgende ist die</span> <span class="hps">CSP</span> <span class="hps">für eine</span> <span class="hps">zertifizierte</span> <span class="hps">App, die</span> <span class="hps">geringfügig von der</span> <span class="hps">CSP</span> <span class="hps">für eine privilegierte</span> <span class="hps">App abweicht</span><span>:</span></span>
+  <pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+  <span id="result_box" lang="de"><span class="hps">Dies hat den Effekt</span> <span class="hps">von etwas</span> <span class="hps">lockerere</span> <span class="hps">Regeln</span> <span class="hps atn">für die Inline-</span><span>CSP</span> <span class="hps">für privilegierte</span> <span class="hps">Apps</span> <span class="hps">im Vergleich zu</span> <span class="hps">zertifizierten</span> <span class="hps">Apps.</span> <span class="hps">Wenn Sie</span> <span class="hps">mehr von der</span> <span class="hps">Überlegung dahinter</span> <span class="hps">möchten,</span> <span class="hps">finden Sie unter Standard</span> </span><a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">Default CSP policy</a><span id="result_box" lang="de"><span class="hps"> und</span> </span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">Bug 768029</a>.<span id="result_box" lang="de"> </span></dd>
+ <dt>
+  Plain packaged app</dt>
+ <dd>
+  You can also make a regular app that is simply packaged in a zip file. The Marketplace signs it, but does not perform the special authentication process used for privileged or certified apps. This plain packaged app cannot use certain sensitive Web APIs. It is not subject to the CSPs described for privileged and certified apps. This type of app could be useful if you want all of your app's resources available on the device when the user first uses it, with no downloading. This type of packaged app does not require the <code>type</code> field in its <code>manifest.webapp</code> file, because the default value for <code>type</code> (<code>web</code>) is correct.</dd>
+</dl>
+<h2 id="Using_sensitive_Web_APIs">Using sensitive Web APIs</h2>
+<p>There are Web APIs that could be used maliciously, so access to them must be controlled. For every sensitive API you want your app to access, you must add an entry to the <code>permissions</code> field in the <a href="/en-US/docs/Web/Apps/Manifest">app's manifest</a>.</p>
+<p>Some sensitive APIs can be accessed by normal hosted apps, but other APIs require that you use a packaged app (privileged or certified). See <a href="/en-US/docs/Web/Apps/App_permissions">App permissions</a> for a table that describes the requirements.</p>
+<h2 id="Packaged_apps_and_the_Firefox_Marketplace">Packaged apps and the Firefox Marketplace</h2>
+<p>The Firefox Marketplace handles packaged apps differently from hosted apps. When you submit your packaged app, its zip file is stored on the Marketplace servers, and the Marketplace generates a new manifest called the "mini-manifest" that is based on the app manifest in your packaged app's zip file. When a user installs your app, the mini-manifest is passed to the <code>installPackage()</code> function to install the app. The mini-manifest exists for installation and update purposes and is not used when your app runs.</p>
+<h2 id="Testing_packaged_app_installation">Testing packaged app installation</h2>
+<p>To install a packaged app on a Firefox OS device using the Simulator for testing purposes, see the <a href="/en-US/docs/Tools/Firefox_OS_Simulator#Push_to_device">section on "Push to Device" in the Simulator guide</a>. To test a packaged app without the Simulator, you can install it on a device from a regular web server by following the steps below, in the Self-publishing packaged apps section.</p>
+<h2 id="Self-publishing_packaged_apps">Self-publishing packaged apps</h2>
+<p>You can self-publish a packaged app by hosting it on a server along with a mini-manifest in the same directory that identifies the app and is used in the install process. This section covers how to do this detail.</p>
+<p>Note that you can also host a packaged app locally and test it on a real device. The Web server and the phone must be on the same network, and the server must be able to serve requests from the local network. You just need to include the absolute path to the referenced files, in the same way as the absolute paths are included normally (see below.) Remember to include the port information if you are using a non-standard port, for example <code><a class="LinkyMobile-ext" href="http://10.10.12.1:8080/package.zip" title="Linkification: http://10.10.12.1:8080/package.zip">http://10.10.12.1:8080/package.zip</a></code>.</p>
+<h3 id="Steps">Steps</h3>
+<ol>
+ <li>
+  <p>Zip up your app's contents and give it the name <code>package.zip</code>. This file should contain all the app's resource files, including the manifest.</p>
+  <div class="warning">
+   <p>Caution: You must be also careful to zip the contents you wish to appear in the packaged app, and not the directory they are contained in. If you zip up the parent directory, the manifest will end up in the wrong place, and the packaged app will be invalid.</p>
+  </div>
+ </li>
+ <li>Create a file called <code>package.manifest</code> and give it the contents below. This is a mini-manifest used for packaged app installation purposes. It is not the main manifest of your app that is inside the zip file. See <a href="#Mini-manifest_fields">Mini-manifest fields</a> if you want more detailed information about mini-manifests.
+  <pre class="brush: js">{
+    "name": "My sample app",
+    "package_path" : "<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/my-app.zip" title="Linkification: http://my-server.com/my-app-directory/my-app.zip">http://my-server.com/my-app-directory/my-app.zip</a>",
+    "version": "1",
+    "developer": {
+        "name": "Chris Mills",
+        "url": "<a class="LinkyMobile-ext" href="http://my-server.com" title="Linkification: http://my-server.com">http://my-server.com</a>"
+    }
+}</pre>
+ </li>
+ <li>Create a file named <code>index.html</code> with the following contents. This contains sample JavaScript that calls the packaged app (<a href="/en-US/docs/Web/API/Apps.installPackage"><code>installPackage()</code></a>) and callbacks for success and failure notification.
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;Packaged app installation page&lt;/p&gt;
+    &lt;script&gt;
+      // This URL must be a full url.
+      var manifestUrl = '<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/package.manifest</a>';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li>Copy <code>package.zip</code>, <code>package.manifest</code>, and <code>index.html</code> into your app root directory (<code>my-app-directory</code> in my examples).</li>
+ <li>Using a compatible device (such as a Firefox OS phone), navigate to the location on your server where you put the example files and confirm the prompt to install the app. The script will give an indication of installation success or failure.</li>
+</ol>
+<div class="note">
+ <p><strong>Note:</strong> You can not install <code>privileged</code> or <code>certified</code> apps with installations from hosted packages, as they need to be signed. Use the Simulator to test <code>privileged</code> apps.</p>
+</div>
+<h2 id="Mini-manifest_fields">Mini-manifest fields</h2>
+<p>Here is a more in-depth example of a mini-manifest:</p>
+<pre class="brush: js">{
+  "name": "My app",
+  "package_path": "<a class="LinkyMobile-ext" href="http://thisdomaindoesnotexist.org/myapp.zip" title="Linkification: http://thisdomaindoesnotexist.org/myapp.zip">http://thisdomaindoesnotexist.org/myapp.zip</a>",
+  "version": "1.0",
+  "size": 172496,
+  "release_notes": "First release",
+  "developer": {
+    "name": "Developer Name",
+    "url": "<a class="LinkyMobile-ext" href="http://thisdomaindoesnotexist.org/" title="Linkification: http://thisdomaindoesnotexist.org/">http://thisdomaindoesnotexist.org/</a>"
+  },
+  "locales": {
+    "fr-FR": {
+      "name": "Mon application"
+    },
+    "se-SE": {
+      "name": "Min balla app"
+    }
+  },
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "256": "/icons/256.png"
+  }
+}
+</pre>
+<p>When the Firefox Marketplace generates a mini-manifest for your app, it pulls information from your app's manifest for some of the fields. You can find documentation for these fields at <a href="/en-US/docs/Web/Apps/Manifest">App manifest</a>. The fields unique to the mini-manifest are <code>package_path</code>, <code>release_notes</code>, and <code>size</code>. The <code>name</code>, <code>version</code>, <code>developer</code>, and <code>locales</code> fields in your app manifest must be exactly the same as in your mini-manifest.</p>
+<p>Here is information on the mini-manifest that relates to using it locally for your own testing:</p>
+<dl>
+ <dt>
+  <code>name</code></dt>
+ <dd>
+  (required) The app's name. Maximum length is 128 characters.</dd>
+ <dt>
+  <code>package_path</code></dt>
+ <dd>
+  (required) The URL where the app's zip file can be found. You need to make sure the <code>package_path</code> is absolute to where the ZIP file is located.</dd>
+ <dt>
+  <code>version</code></dt>
+ <dd>
+  The version of the app.</dd>
+ <dt>
+  <code>size</code></dt>
+ <dd>
+  The size of the app's zip file in bytes. This is not necessary for local testing, but provide it to get a progressbar during installation.</dd>
+ <dt>
+  <code>release_notes</code></dt>
+ <dd>
+  Information about this release of the app. On the Marketplace this information comes from a Web page that is part of the submission process.</dd>
+ <dt>
+  <code>developer</code></dt>
+ <dd>
+  Information about the developer, contains the <code>name</code> and <code>url</code> fields. The developer info needs to match between the mini-manifest and the main manifest file in the ZIP.</dd>
+ <dt>
+  <code>locales</code></dt>
+ <dd>
+  Localization information. Keys should be in <code>xx-YY</code> format.</dd>
+ <dt>
+  <code>icons</code></dt>
+ <dd>
+  Icons for use by the app.</dd>
+</dl>
+<div class="note">
+ <p><strong>Note:</strong> Values in <code>package</code> and <code>webapp.manifest</code> need to be the same, otherwise installation will fail. The safest way is to copy <code>manifest.webapp</code> into <code>package.manifest</code> and just add the <code>package_path</code>.</p>
+</div>
+<h2 id="Differences_from_hosted_apps">Differences from hosted apps</h2>
+<p>Packaged apps have the same capabilites as normal website-style Open Web Apps ("hosted" apps), but packaged apps have a few differences:</p>
+<ul>
+ <li>They have no Internet origin. The one-app-per-origin policy that governs hosted apps does not apply to packaged apps.</li>
+ <li>They use a special protocol internal to the zip file: <code>app://&lt;uuid&gt;</code>. Example: When you load the content <code>/index.html</code> in a packaged app, you are actually loading something like the following (the UUID will be different):
+  <pre class="brush: js">app://550e8400-e29b-41d4-a716-446655440000/index.html</pre>
+  <p>The UUID is randomly generated at install time, which means that it is unique per device it is installed on. The <code>app://</code> protocol will be useful in future releases of the Web runtime for some identity, payment and OAuth flows.</p>
+ </li>
+ <li>Their resources are accessed from the zip file, which is stored on the device where the app is installed.</li>
+ <li>For a self-hosted packaged app, you need to include an additional mini-manifest in the same directory as the zipped packaged app, which doesn't need to be called <code>manifest.webapp</code> (you might call it something like <code>package.webapp</code>). See {{ anch("Self-publishing packaged apps") }} above for more details.</li>
+ <li>They are installed with a different <code>mozApps</code> API function, <code>installPackage()</code>, which for a self-hosted packaged app must point to the mini-manifest.</li>
+ <li>They enforce a specific <a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">CSP</a> for all application content (a hosted app could also use a CSP, but it is not required).</li>
+ <li>They can embed remote content in iframes, but that content will not have access to privileged APIs nor will it have the default CSP applied to it.</li>
+ <li>They have an update process for getting new versions of the app to users. Hosted apps do not need this process.</li>
+</ul>
+<p>The packaged app can still do things like access a database on a Web server, like a regular hosted app.</p>
+<h2 id="Updating_packaged_apps">Updating packaged apps</h2>
+<p>For information on updating apps, see <a href="/en-US/docs/Web/Apps/Updating_apps">Updating apps</a>.</p>
+<h2 id="Packaged_app_example">Packaged app example</h2>
+<p><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS Boilerplate App</a></p>

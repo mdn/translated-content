@@ -1,0 +1,94 @@
+---
+title: ডেভেলপারদের জন্য ফায়ারফক্স অপারেটিং সিস্টেম 1.1
+slug: Archive/B2G_OS/Releases/1.1
+tags:
+  - NeedsReview
+translation_of: Archive/B2G_OS/Releases/1.1
+---
+<p>ফায়ারফক্স ওএস ১.১ হল ফায়ারফক্স ওএস এর পূর্ববর্তী সংস্করণ , যা অক্টোবর ২১ ,২০১৩ এ প্রথম প্রকাশের জন্য সহযোগীদের কাছে প্রস্তাব করা হয়। এর গেকো উপাদানসমূহ ফায়ারফক্স ১৮(<span style="line-height: 1.5;"> </span><a href="/en-US/docs/Mozilla/Firefox/Releases/18" style="line-height: 1.5; text-decoration: underline;" title="/en-US/docs/Mozilla/Firefox/Releases/24">ডেভেলোপারদের জন্য ফায়ারফক্স ১৮</a> দেখুন<span style="line-height: 1.5;">) এর উপর ভিত্তি করে করা হয়েছে যা </span><span style="line-height: 1.5;"> </span><a href="/en-US/Firefox_OS/Releases/1.0.1" style="line-height: 1.5; text-decoration: underline;">ফায়ারফক্স ওএস ১.০১</a><span style="line-height: 1.5;"> এর মতই, কিন্তু</span><span style="line-height: 1.5;"> এতে কিছু ফিক্স করা বাগ এবং অতিরিক্ত </span><span style="line-height: 1.5;">এপিআই সংযুক্ত করা হয়ছে।</span><span style="line-height: 1.5;">.</span></p>
+<div class="note">
+ <p>ফায়ারফক্স ওএস এর ডকুমেন্ট তৈরিতে সাহায্য করতে চান ? <a href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=b2g" style="line-height: 1.5em; text-decoration: underline;" title="http://beta.elchi3.de/doctracker/#list=fx&amp;version=b2g">লেখা প্রয়োজন এমন B2G সম্পর্কিত বাগের তালিকা দেখুন</a><span style="line-height: 1.5em;"> এবং  এখনি শুরু করুন !</span></p>
+</div>
+<h2 id="এইচটিএমএল">এইচটিএমএল</h2>
+<p>ফায়ারফক্স ওএস ভিত্তিক:</p>
+<ul>
+ <li><code>&lt;input type="file"&gt;</code> enabled (বিস্তারিত জানতে <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=832923" title="FIXED: Implement &lt;input type='file'> on B2G">bug 832923</a> দেখুন ) ।</li>
+</ul>
+<p>সাধারণ Gecko:</p>
+<h2 id="JavaScript">JavaScript</h2>
+<p>ফায়ারফক্স ওএস ভিত্তিক:</p>
+<ul>
+ <li>বিভিন্ন ফরম্যাটের জন্য &lt;video&gt; সমর্থন সনাক্ত করা হলে , <code>HTMLMediaElement.prototype.canPlayType </code>সঠিকভাবে রিপোর্ট  করবে h.264 video এর জন্য <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">false।</span></li>
+</ul>
+<h2 id="DOMAPI">DOM/API</h2>
+<p>ফায়ারফক্স ওএস ভিত্তিক:</p>
+<p><span id="summary_alias_container"><span id="short_desc_nonedit_display">Device Storage API: যখন cursor callback করা হয় তখন  <code>navigator.getDeviceStorage("sdcard").enumerate</code>, <code><span id="summary_alias_container"><span id="short_desc_nonedit_display">this.done</span></span></code> এটি অসংজ্ঞায়িত হয়। (দেখুন <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=902565" title='this.done in cursor callback of naviagtor.getDeviceStorage("sdcard").enumerate is undefined'>bug 902565</a>). যা ফায়ারফক্স ১.২ তে ঠিক করা হয়েছে। চিহ্নিত ত্রুটি এর জন্য সম্ভাব্য সামঞ্জস্যতা নিরীক্ষণ / সমাধান নীচে আলোচনা করা হল</span></span></p>
+<ul>
+ <li>SMS, MMS and MobileMessage-relrelated APIs গুলো সম্পন্ন হয়েছে
+  <ul>
+   <li><a href="/bn-BD/docs/Web/API/Window/navigator/mozMobileMessage" title="The documentation about this has not yet been written; please consider contributing!"><code>window.navigator.mozMobileMessage</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/Window/navigator/mozSms" title="The documentation about this has not yet been written; please consider contributing!"><code>window.navigator.mozSms</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozMmsEvent" title="The documentation about this has not yet been written; please consider contributing!"><code>MozMmsEvent</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozMmsMessage" title="The documentation about this has not yet been written; please consider contributing!"><code>MozMmsMessage</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozMobileMessageManager" title="The documentation about this has not yet been written; please consider contributing!"><code>MozMobileMessageManager</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozMobileMessageThread" title="The documentation about this has not yet been written; please consider contributing!"><code>MozMobileMessageThread</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozSmsEvent" title="The documentation about this has not yet been written; please consider contributing!"><code>MozSmsEvent</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozSmsFilter" title="The documentation about this has not yet been written; please consider contributing!"><code>MozSmsFilter</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozSmsManager" title="The documentation about this has not yet been written; please consider contributing!"><code>MozSmsManager</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozSmsMessage" title="The documentation about this has not yet been written; please consider contributing!"><code>MozSmsMessage</code></a></li>
+   <li><a href="/bn-BD/docs/Web/API/MozSmsSegmentInfo" title="The documentation about this has not yet been written; please consider contributing!"><code>MozSmsSegmentInfo</code></a></li>
+   <li>nsIMobileMessageCallback (Gecko Internal API)</li>
+   <li>nsIMobileMessageCursorCallback (Gecko Internal API)</li>
+   <li>nsIMobileMessageService (Gecko Internal API)</li>
+   <li>nsIMobileMessageDatabaseService (Gecko Internal API)</li>
+   <li>nsIMmsService (Gecko Internal API)</li>
+   <li>
+    <div>
+     nsISmsService (Gecko Internal API</div>
+   </li>
+  </ul>
+ </li>
+ <li><a href="/en-US/docs/WebAPI/Simple_Push">Simple Push</a> (Push Notifications API) সম্পন্ন হয়েছে</li>
+ <li><a href="http://help.vodafone.co.nz/app/answers/detail/a_id/3230">WAP Push</a> সম্পন্ন হয়েছে</li>
+</ul>
+<h2 id="Firefox_OS_HD_support">Firefox OS HD support</h2>
+<p><span id="result_box" lang="bn"><span class="hps">যেহুতু ফায়ারফক্স</span> <span class="hps">ওএস</span> <span class="hps">1.1 </span>থেকেই  <span class="hps">উচ্চ</span> <span class="hps">DPI</span> <span class="hps">ডিভাইসের জন্য</span> <span class="hps">HD সহযোগিতা</span> <span class="hps">প্রদান</span> <span class="hps">করা হচ্ছে তাই এর</span> <span class="hps">এইচডি</span> <span class="hps">সংস্করণ আছে। এটি শুধুমাত্র একটি বাহ্যিক পরিবর্তন, এমনভাবে করা হয়েছে ঠিক যেমনি ভাবে আপনি ভিন্ন ভিন্ন resolution এর ডিভাইসের সাথে মানিয়ে নিতে পারেন, এবং আপনি এই ক্ষেত্রে খুব বেশি পরিমানে platform</span></span> ভিন্নতার সম্মুখীন হবেন না।</p>
+<h2 id="Fixed_Firefox_OS_Issue_s">Fixed Firefox OS Issue s</h2>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=817972">817972</a>: [Bluetooth][File-Transfer] একাধিক ফাইল হস্তান্তর সমর্থন করে।</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834672">834672</a>: AppProtocolHandler.js কখনো throw করা উচিত নয়।.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839500">839500</a>: Gaia‘s identity.js browser process চালু করে যেটি foreground এ প্রলম্বিত হয়। তাই, আপনি যদি marketplace app চালু করেন, তখন প্রাপ্য app memory এর প্রায় ১০% ক্ষয় হতে থাকে যতক্ষন পর্যন্ত না আপনি ফোন পুনরায় চালু করেন।</li>
+ <li><span style="line-height: 1.5;">Persona logins এর জন্য রয়েছে Memory fix।</span></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834773">834773</a>:</li>
+ <li> pick activity ব্যবহার করে এবং গ্যালারি এর জন্য একটি ছবি নিশ্চিত করে — app gets hung with no perceived perf for 5–10 seconds</li>
+</ul>
+<p><a href="http://mzl.la/1bqXGXS">Resolved crashes</a></p>
+<h2 id="Feature_highlights_for_Firefox_OS_1.1">Feature highlights for Firefox OS 1.1</h2>
+<ul>
+ <li>মাল্টিমিডিয়া মেসেজিং (এমএমএস) সমর্থন বার্তা অ্যাপ্লিকেশন যোগ করা হয়েছে যাতে আপনি একই সময়ে একাধিক মানুষকে ছবি, ভিডিও, এবং পরিচিতি অডিও, বা একটি পাঠ্য বার্তা পাঠাতে পারেন।</li>
+ <li>ব্রাউজার থেকে বর্তমানে সংরক্ষিত ছবি, ভিডিও, এবং  অডিও সমর্থন করে ।</li>
+ <li>ইমেইল একাউন্ট পরিচিতি এখন জিমেইল এবং উইন্ডোজ লাইভ মেইল ​​(আউটলুক) থেকে আমদানি করা যেতে পারে।</li>
+ <li>ইমেইল ইমেজ, অডিও এবং ভিডিও সংযুক্তি ডাউনলোড বাস্তবায়িত হয়েছে।</li>
+ <li>বর্তমানে সংযুক্তি এবং গ্যালারিতে ইমেজ পাঠানো সমর্থন করে ।</li>
+ <li>ইমেল ড্রাফট প্রয়োগ করা হয়েছে ।</li>
+ <li>ডায়ালার এবং contacts উন্নত করা হয়েছে, যেমন  সহজে বিদ্যমান ডায়াল নাম্বার খুঁজে সংযুক্ত করা এবং ডায়ালার পরামর্শে একটি dialed নম্বর যোগ করা হয় যাতে সহজে contacts খুঁজে পাওয়া যায়।</li>
+ <li>সেল ব্রডকাস্ট সাবস্ক্রাইব ব্যবহারকারীদের জরুরী বার্তার যুগপত হস্তান্তরের জন্য বাস্তবায়িত।</li>
+ <li>অ্যাপ্লিকেশন প্রকাশের সময় এবং স্ক্রলিংএ ভালই উন্নতি হয়েছে।</li>
+ <li>সঙ্গীত অনুসন্ধান  অ্যালবাম বা গান শিরোনাম অনুসারে সঙ্গীত খোঁজা হয় । </li>
+ <li>ফায়ারফক্স ওএস এ যেমন ক্যালেন্ডার বৈশিষ্ট্য উপলব্ধ করা হয়:
+  <ul>
+   <li>বিস্তারিত বিষয়সমূহের পৃথকিকরন এবং views কে সম্পাদনা করে।</li>
+   <li>এলার্ম শব্দের notification নির্বাচন করা ।</li>
+   <li>নির্দিষ্ট তারিখ / সময়ে ডাইরেক্ট ইভেন্ট সৃষ্টি.</li>
+  </ul>
+ </li>
+</ul>
+<h2 id="আরো_দেখুন">আরো দেখুন</h2>
+<ul>
+ <li><a href="http://www.mozilla.org/en-US/firefox/os/notes/1.1/" title="http://www.mozilla.org/en-US/firefox/os/notes/1.1/">ফায়ারফক্স ওএস ১.১</a></li>
+</ul>
+<h2 id="পূর্বের_সংস্করণসমূহ">পূর্বের সংস্করণসমূহ</h2>
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>

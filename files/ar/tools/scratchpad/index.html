@@ -1,0 +1,96 @@
+---
+title: Scratchpad
+slug: Tools/Scratchpad
+translation_of: Archive/Tools/Scratchpad
+---
+<p><font><font>تقدم المسودة بيئة لتجريب شفرة جافا سكريبت. </font><font>يمكنك كتابة، تشغيل، وفحص النتائج من التعليمات البرمجية التي تتفاعل مع صفحة الويب.</font></font></p>
+
+<p><font><font>على عكس </font></font><a href="/en-US/docs/Tools/Web_Console" title="EN / استخدام وحدة تحكم ويب"><font><font>وحدة تحكم </font></font></a><font><font>ويب، </font><font>الذي تم تصميمه لتفسير سطر واحد من التعليمات البرمجية في وقت واحد، يتيح لك تطبيق المسودة تعديل قطع أكبر من شفرة جافا سكريبت، ثم تنفيذه بطرق مختلفة اعتمادا على الطريقة التي تريد استخدام الإخراج.</font></font></p>
+
+<p><font><font>{{EmbedYouTube ("Pt7DZACyClM ')}}</font></font></p>
+
+<h2 id="استعمال"><font><font>استعمال</font></font></h2>
+
+<h3 id="المسودة_افتتاح"><font><font>المسودة افتتاح</font></font></h3>
+
+<p><font><font>لفتح نافذة المسودة، اضغط </font></font><kbd><font><font>شيفت</font></font></kbd><font><font> + </font></font><kbd><font><font>F4، أو انتقل إلى القائمة مطور ويب (وهو الفرعية في القائمة أدوات على OS X و Linux)، ثم حدد المسودة. </font></font></kbd><font><font>هذا وسوف تفتح نافذة محرر المسودة، والذي يتضمن التعليق الذي يوفر بعض معلومات موجزة عن كيفية استخدام تطبيق المسودة. </font><font>من هناك يمكنك أن تبدأ على الفور كتابة بعض شفرة جافا سكريبت لمحاولة.</font></font></p>
+
+<h3 id="التحرير"><font><font>التحرير</font></font></h3>
+
+<p><font><font>نافذة المسودة يبدو شيئا من هذا القبيل (على OS X شريط القوائم في الجزء العلوي من الشاشة):</font></font></p>
+
+<p><img alt="لقطة من المسودة" src="https://mdn.mozillademos.org/files/5983/scratchpad.png"></p>
+
+<p><font><font>من القائمة ملف يوفر خيارات لحفظ وتحميل جافا سكريبت مقتطفات الشفرة، حتى تتمكن من إعادة استخدام التعليمات البرمجية في وقت لاحق إذا أردت.</font></font></p>
+
+<h4 id="إنجاز_قانون_وثائق_مضمنة"><font><font>إنجاز قانون وثائق مضمنة</font></font></h4>
+
+<div class="geckoVersionNote">
+<p><font><font>إنجاز قانون ونوع المعلومات غير متاح إلا من فايرفوكس 32 وما بعده.</font></font></p>
+</div>
+
+<p><font><font>من فايرفوكس 32 فصاعدا المسودة يدمج </font></font><a href="http://ternjs.net/"><font><font>محرك تحليل رمز </font></font></a><font><font>الخرشنة، </font><font>ويستخدم ذلك لتقديم اقتراحات الإكمال التلقائي والنوافذ المنبثقة التي تحتوي على معلومات عن الرمز الحالي. </font><font>لإدراج اقتراحات الإكمال التلقائي، اضغط </font></font><kbd><font><font>على Ctrl</font></font></kbd><font><font> + </font><font>الفضاء. </font><font>لإظهار المنبثقة، اضغط </font><kbd><font>شيفت</font></kbd><font> + </font><kbd><font>الفضاء</font></kbd><font> في فايرفوكس 32 أو </font><kbd><font>السيطرة</font></kbd><font> + </font><kbd><font>التحول</font></kbd><font> + </font><kbd><font>الفضاء</font></kbd><font> في فايرفوكس 33+.</font></font></p>
+
+<p><font><font>على سبيل المثال، حاول كتابة </font></font><kbd><font><font>D، ثم الضغط </font></font></kbd><kbd><font><font>على Ctrl</font></font></kbd><font><font> + </font><font>الفضاء. </font><font>سترى هذا:</font></font></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7933/scratchpad-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;"><font><font>الرمز الموجود بجانب كل اقتراح إلى نوع، واقتراح المميز حاليا يحصل منبثقة مع مزيد من المعلومات. </font></font><kbd><font><font>↑</font></font></kbd><font><font> </font></font><kbd><font><font>و↓</font></font></kbd><font><font> دورة من خلال الاقتراحات </font></font><kbd><font><font>وأدخل</font></font></kbd><font><font> أو </font></font><kbd><font><font>تبويب</font></font></kbd><font><font> حدد خيار تسليط الضوء عليها.</font></font></p>
+
+<p><font><font>إذا قمت بتحديد </font></font><code><font><font>المستند،</font></font></code><font><font> ثم </font></font><code><font><font>addEventListener، ثم اضغط على </font></font></code><kbd><font><font>التحول</font></font></kbd><font><font>  + </font></font><kbd><font><font>الفضاء</font></font></kbd><font><font> سترى المنبثقة التي تظهر ملخصا لتركيب وظيفة وصفا موجزا:</font></font></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7935/scratchpad-symbolinfo.png" style="display: block; margin-left: auto; margin-right: auto;"><font><font>و"[مستندات]" وصلة يأخذك إلى وثائق MDN للرمز.</font></font></p>
+
+<h3 id="تنفيذ"><font><font>تنفيذ</font></font></h3>
+
+<p class="note"><font><font>بمجرد كتابة التعليمات البرمجية الخاصة بك، حدد الرمز الذي تريد تشغيله. </font><font>إذا لم تقم بتحديد أي شيء، سيتم تشغيل كافة التعليمات البرمجية في الإطار. </font><font>ثم اختيار الطريقة التي تريد رمز لتشغيل باستخدام أزرار على طول الجزء العلوي، وذلك باستخدام القائمة تنفيذ، أو باستخدام قائمة السياق. </font><font>يتم تنفيذ التعليمات البرمجية في نطاق التبويب المحدد حاليا. </font><font>ستضاف أية متغيرات قمت بتعريف خارج وظيفة إلى وجوه العالمي لعلامة التبويب هذه.</font></font></p>
+
+<p class="note"><font><font>هناك أربعة خيارات التنفيذ المتاحة.</font></font><strong> </strong></p>
+
+<h4 id="اركض"><font><font>اركض</font></font></h4>
+
+<p><font><font>عند اختيار خيار تشغيل، يتم تنفيذ التعليمات البرمجية المحددة. </font><font>هذا هو ما كنت تستخدم لتنفيذ وظيفة أو رمز الأخرى التي تعالج محتوى الصفحة الخاصة بك دون الحاجة لمعرفة النتيجة.</font></font></p>
+
+<h4 id="فحص"><font><font>فحص</font></font></h4>
+
+<p><font><font>الخيار فحص تنفيذ التعليمات البرمجية تماما مثل الخيار تشغيل. </font><font>ومع ذلك، بعد بإرجاع رمز، يتم فتح مفتش الكائن لتمكنك من دراسة القيمة التي تم إرجاعها.</font></font></p>
+
+<p><font><font>على سبيل المثال، إذا قمت بإدخال رمز:</font></font></p>
+
+<pre class="brush:css"><font><font>نافذة
+</font></font></pre>
+
+<p><font><font>ثم اختر فحص، يظهر مفتش الكائن ويبدو أن شيئا من هذا القبيل:</font></font></p>
+
+<p><img alt="تفتيش كائن في المسودة" src="https://mdn.mozillademos.org/files/5985/scratchpad-inspect.png"></p>
+
+<h4 id="عرض"><font><font>عرض</font></font></h4>
+
+<p><font><font>خيار عرض تنفيذ التعليمات البرمجية المحددة، ثم إدراج نتيجة مباشرة إلى حسابك في المسودة محرر نافذة كتعليق، لذلك يمكنك استخدامه بمثابة </font><font>REPL.</font></font></p>
+
+<h4 id="تحديث_وتشغيل"><font><font>تحديث وتشغيل</font></font></h4>
+
+<p><font><font>متوفر فقط في القائمة تنفيذ خيار تحديث وتشغيل. </font><font>لأول مرة تعيد تحميل الصفحة، ثم تنفيذ التعليمات البرمجية عند "تحميل" وقع الحدث الصفحة. </font><font>وهذا مفيد لتشغيل التعليمات البرمجية في بيئة البكر.</font></font></p>
+
+<h2 id="تشغيل_المسودة_في_سياق_المتصفح"><font><font>تشغيل المسودة في سياق المتصفح</font></font></h2>
+
+<p><font><font>يمكنك تشغيل تطبيق المسودة في سياق متصفح ككل بدلا من صفحة ويب معينة. </font><font>وهذا مفيد إذا كنت تعمل على فايرفوكس نفسها أو تطوير إضافات. </font><font>للقيام بذلك الاختيار "تمكين الكروم وإضافة على التصحيح" في </font></font><a href="/en-US/docs/Tools/Tools_Toolbox#Settings_2"><font><font>إعدادات أداة </font></font></a><font><font>المطور. </font><font>مرة واحدة كنت قد فعلت هذا، القائمة البيئة لديها خيار المتصفح. </font><font>وبمجرد أن اختيار، النطاق الخاص بك هو متصفح كامل وليس مجرد محتوى الصفحة، كما سترون من دراسة بعض جلوبل:</font></font></p>
+
+<pre class="brush: js"><font><font>نافذة</font></font>
+/*<font><font>
+[كائن ChromeWindow]</font></font><font><font>
+*/</font></font>
+<font><font>
+gBrowser</font></font><font><font>
+/*</font></font><font><font>
+[كائن XULElement]</font></font><font><font>
+*/</font></font></pre>
+
+<p><font><font>تم تعيين سياق التنفيذ المسودة إلى المتصفح عندما ملف قصاصة له </font><code><font>// -sp السياق: المتصفح</font></code><font> في السطر الأول.</font></font><br>
+  </p>
+
+<h2 id="اختصارات_لوحة_المفاتيح"><font><font>اختصارات لوحة المفاتيح</font></font></h2>
+
+<p><font><font>{{صفحة ("EN-US / مستندات / أدوات / Keyboard_shortcuts"، "المسودة")}}</font></font></p>
+
+<h3 id="اختصارات_محرر_المصدر"><font><font>اختصارات محرر المصدر</font></font></h3>
+
+<p><font><font>{{صفحة ("EN-US / مستندات / أدوات / Keyboard_shortcuts"، "مصدر محرر")}}</font></font></p>

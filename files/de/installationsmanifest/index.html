@@ -1,0 +1,328 @@
+---
+title: Installationsmanifest
+slug: Installationsmanifest
+tags:
+  - Add-ons
+  - Erweiterungen
+  - Toolkit API
+translation_of: Archive/Add-ons/Install_Manifests
+---
+<h2 id="Einführung">Einführung</h2>
+<p>Ein Installationsmanifest ist eine Datei, die von einer XUL-Anwendung mit einem Add-on Manager benutzt wird, um Information über das zu installierende Add-on zu erhalten. Es enthält Metadaten zur Identifikation des Add-ons und gibt Auskunft darüber, wer es erstellt hat, wo weiterführende Informationen zu finden sind, welche Versionen mit welcher Anwendung kompatibel ist, wie das Add-on zu aktualisieren ist, usw.</p>
+<p>Das Format eines Installationsmanifests ist RDF/XML.</p>
+<p>Die Datei muss den Namen <code>install.rdf</code> haben und sich auf der obersten Verzeichnisebene in der XPI-Datei eines Add-ons befinden.</p>
+<h2 id="Aufbau">Aufbau</h2>
+<p>Der grundlegende Aufbau eines Installationsmanifests sieht folgendermaßen aus:</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- Eigenschaften --&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>Einige Eigenschaften sind erforderlich, andere sind optional. Einige sind einfache Zeichenketten, während andere komplexe Ressourcen sind.</p>
+<h2 id="Referenz_erforderlicher_Eigenschaften">Referenz erforderlicher Eigenschaften</h2>
+<p>Diese Eigenschaften müssen in Ihrem Installationsmanifest korrekt angegeben werden, andernfalls wird Ihr Add-on eventuell nicht installiert.</p>
+<h3 id="id">id</h3>
+<p>Die ID der Erweiterung, nämlich entweder eine:</p>
+<ul>
+ <li><a href="/de/docs/GUIDs_generieren" title="GUIDs generieren">GUID</a> (Firefox 1.0)</li>
+ <li>{{ Fx_minversion_inline(1.5) }} Eine Zeichenkette folgender Form: <code><a class="link-mailto" href="mailto:extensionname@organization.tld" rel="freelink">extensionname@organization.tld</a></code></li>
+</ul>
+<p>Letztere Form ist deutlich einfacher zu erzeugen und zu verändern. Firefox 1.5 ist in der Lage sicherzustellen, dass Ihre ID dem einen oder anderen Format entspricht und wird die Installation eines Add-ons verweigern, sollte die ID nicht wohlgeformt sein.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:id&gt;<a class="link-mailto" href="mailto:myextension@mysite.com" rel="freelink">myextension@mysite.com</a>&lt;/em:id&gt;
+
+&lt;em:id&gt;{daf44bf7-a45e-4450-979c-91cf07434c3d}&lt;/em:id&gt;
+</pre>
+<h3 id="version">version</h3>
+<p>Eine Zeichenkette, welche die Version des vorliegendenAdd-ons angibt.</p>
+<p>Für Firefox/Thunderbird 1.0 muss das Format den Regeln genügen, die in "<a href="/de/docs/Versionen,_Aktualisierung_und_Kompatibilität_von_Add-ons" title="Versionen, Aktualisierung und Kompatibilität von Add-ons">Versionen, Aktualisierung und Kompatibilität von Add-ons</a>" beschrieben sind.<br>
+ Für Firefox/Thunderbird 1.5, siehe <a href="/de/docs/Toolkit_Versionsformate" title="Toolkit Versionsformate">Toolkit Versionsformate</a>.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:version&gt;2.0&lt;/em:version&gt;
+
+&lt;em:version&gt;1.0.2&lt;/em:version&gt;
+
+&lt;em:version&gt;0.4.1.2005090112&lt;/em:version&gt;
+
+</pre>
+<p><strong>Firefox 1.5 / XULRunner 1.8</strong> - Add-ons mit einem ungültigen Versionsformat werden nicht installiert. Das Format unterscheidet sich vom 1.0er, ist jedoch dazu abwärtskompatibel.</p>
+<p><strong>Für auf addons.mozilla.org bereitgestellte Add-ons</strong> - Mozillas Aktualisierungswebseite verpackt Ihr Add-on möglicherweise neu und berichtigt Versionszeichenketten oder weist sie zurück.</p>
+<h3 id="type">type</h3>
+<p>Ein ganzzahliger Wert, der für den Typ des Add-ons steht.</p>
+<table>
+ <tbody>
+  <tr>
+   <td>2</td>
+   <td>Erweiterungen</td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td>Theme</td>
+  </tr>
+  <tr>
+   <td>8</td>
+   <td>Lokalisierung</td>
+  </tr>
+  <tr>
+   <td>32</td>
+   <td><a href="/en/Multiple_Item_Packaging" title="en/Multiple Item Packaging">Multiple Item Package</a></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:type&gt;2&lt;/em:type&gt;
+</pre>
+<p>{{ Fx_minversion_inline(1.5) }} Diese Eigenschaft wurde in Firefox 1.5 hinzugefügt und ist nur erforderlich für Add-on Typen, die keine Erweiterungen und Themen sind.</p>
+<p>{{ Fx_minversion_inline(3) }} Firefox 2 und früher unterstützen einen Wert von "16", welcher Plug-ins repräsentierte. In Firefox 3 wurde dies entfernt.</p>
+<h3 id="targetApplication">targetApplication</h3>
+<p>Ein Objekt, welches eine Ziel-Applikation des Add-ons festlegt. Das bedeutet, dass das Add-on mit der Anwendung arbeitet, welche mit der ID Eigenschaft (<code>&lt;em:id&gt;</code>) festgelegt wurde (eine Liste von Anwendungs-IDs und gültigen min/maxVersions für diese, siehe <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/pages/appversions">Valid application versions for add-on developers</a>[engl.]) und welche der minimalen Version (<code>&lt;em:minVersion&gt;</code>) bis und einschließlich der maximalen Version (<code>&lt;em:maxVersion&gt;</code>) entspricht. Diese Versionsangaben sind in der gleichen Weise formatiert, wie auch die <a href="/de/docs/Installationsmanifest#version" title="Installationsmanifest#version"><code>version</code> Eigenschaft</a> und wird mit der Anwendungsversion verglichen. Das erlaubt dem Erweiterungsautor, festzulegen, welche Version von Firefox getestet wurde.</p>
+<div class="note">
+ Erweiterungen, die kompatibel mit Firefox 3.5 sind, sollten eine <code>maxVersion</code> von <code>3.5.*</code> festlegen, sodass sie automatisch kompatibel mit Sicherheitsupdates sind. Für Firefox 3.0 sollte eine <code>maxVersion</code> von<code> 3.0.*</code> verwendet werden. Erweiterungen, die nur mit Firefox oder Thunderbird 2 kompatibel sind, sollten eine <code>maxVersion</code> von <code>2.0.0.*</code> festlegen.</div>
+<p>Das Installationsmanifest muss wenigsten eine dieser Objekte festlegen und kann weitere festlegen, wenn das Add-on auf mehrere Anwendungen zielt, die der Add-on Manager unterstützt (z.B. Firefox and Thunderbird).</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:targetApplication&gt;
+ &lt;Description&gt;
+  &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt; <span class="comment">Firefox</span>
+  &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+  &lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
+ &lt;/Description&gt;
+&lt;/em:targetApplication&gt;
+</pre>
+<p>{{ Fx_minversion_inline(3) }} Auf Gecko 1.9 basierte Anwendungen erlauben Ihnen eine spezielle <code>targetApplication </code>ID <code class="plain">toolkit@mozilla.org</code> zu verwenden, um auszudrücken, dass das Add-on kompatibel mit jeder Toolkit-Anwendung ist, die auf die <code>minVersion</code> und <code>maxVersion</code> passt.</p>
+<h3 id="name">name</h3>
+<p>Der Name des Add-ons - vorgesehen für die Anzeige auf der Benutzeroberfläche.</p>
+<p><strong>Beispiele </strong></p>
+<pre>&lt;em:name&gt;Meine Erweiterung&lt;/em:name&gt;
+</pre>
+<h2 id="Referenz_optionaler_Eigenschaften">Referenz optionaler Eigenschaften</h2>
+<p>Abhängig von den Fähigkeiten Ihres Add-ons müssen diese Eigenschaften gegebenenfalls angegeben werden.</p>
+<h3 id="bootstrap">bootstrap</h3>
+<p>{{ Fx_minversion_inline(4) }} Ein boolescher Wert, welcher der Anwendung mitteilt, ob die Erweiterung ohne Neustart installiert, deinstalliert oder aktualisiert werden kann. Das funktioniert zur Zeit nur für Add-ons mit em:type="2". Der Standardwert ist <code>false</code>. Für weitere Informationen, siehe <a href="/de/docs/Erweiterungen/Bootstrapped_Extensions" title="Erweiterungen/Bootstrapped Extensions">Bootstrapped Extensions</a>.</p>
+<h3 id="unpack">unpack</h3>
+<p>{{ Fx_minversion_inline(4) }} Ein boolescher Wert, welcher angibt, ob die Erweiterung es erfordert, dass die ihre Dateien in ein Verzeichnis entpackt werden müssen, damit diese funktioniert oder ob die Erweiterung direkt vom XPI geladen werden kann. In Versionen vor Gecko 2.0 werden alle Erweiterungen entpackt, in Gecko 2.0 und später wird standardmäßig nicht entpackt. Falls eine Erweiterung folgendes enthält, muss diese entpackt werden:</p>
+<ul>
+ <li>Binäre XPCOM Komponenten</li>
+ <li>DLLs von ctypes geladen</li>
+ <li>Suchplugins</li>
+ <li>Wörterbücher</li>
+ <li>Fenster-Icons</li>
+</ul>
+<h3 id="localized">localized</h3>
+<p>{{ Fx_minversion_inline(3) }} Den Namen, die Beschreibung, die Namen von Mitwirkenden und weitere Metadaten können Sie hiermit sprachlich anpassen. Mindestens ein <code>em:locale</code> muss von der angepassten Beschreibung spezifiziert werden, um anzuzeigen für welche Sprachregionen die Information genutzt werden soll.</p>
+<p><strong>Beispiele</strong></p>
+<p>Dies legt ein Reihe von Add-on Metadaten fest, die angezeigt werden, wenn die Anwendung im de-DE Sprachpaket läuft.</p>
+<pre>&lt;em:localized&gt;
+  &lt;Description&gt;
+    &lt;em:locale&gt;de-DE&lt;/em:locale&gt;
+    &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+    &lt;em:description&gt;Zeigt in einer Sidebar Vorschaubilder der Inhalte aller offenen Tabs an.&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/em:localized&gt;
+</pre>
+<p>Die folgenden Eigenschaften, die auch auf dieser Seite genannt werden, können in die Eigenschaft "localized" eingefügt werden:</p>
+<ul>
+ <li>name</li>
+ <li>description</li>
+ <li>creator</li>
+ <li>homepageURL</li>
+ <li>developer</li>
+ <li>translator</li>
+ <li>contributor</li>
+</ul>
+<p>Weitere Dokumentation lässt sich unter <a href="/de/docs/Lokalisierung_von_Erweiterungsbeschreibungen" title="Lokalisierung von Erweiterungsbeschreibungen">Lokalisierung von Erweiterungsbeschreibungen</a> finden.</p>
+<h3 id="description">description</h3>
+<p>Eine Kurzbeschreibung des Add-ons - vorgesehen für die Anzeige auf der Benutzeroberfläche. Die Beschreibung sollte in einer kurzen Textzeile Platz finden.</p>
+<p><strong>Beispiele</strong></p>
+<pre>MegaInternetPhoneCall;em:description&gt;Fortgeschrittene foo-Werkzeuge.&lt;/em:description&gt;
+</pre>
+<h3 id="creator">creator</h3>
+<p>Der Name des Erstellers/Hauptentwicklers - vorgesehen für die Anzeige auf der Benutzeroberfläche.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:creator&gt;John Doe&lt;/em:creator&gt;
+</pre>
+<p>oder</p>
+<pre>&lt;em:creator&gt;CoolExtension Team&lt;/em:creator&gt;
+</pre>
+<h3 id="developer">developer</h3>
+<p>{{ Fx_minversion_inline(2) }} Entwicklername(n). Sie können diesen Wert mehrfach angeben, um die Namen mehrerer Entwickler anzugeben.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:developer&gt;Jane Doe&lt;/em:developer&gt;
+&lt;em:developer&gt;Koos van der Merwe&lt;/em:developer&gt;
+</pre>
+<h3 id="translator">translator</h3>
+<p>{{ Fx_minversion_inline(2) }} Übersetzername(n). Sie können diesen Wert mehrfach angeben, um die Namen mehrerer Übersetzer anzugeben.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:translator&gt;Janez Novak&lt;/em:translator&gt;
+&lt;em:translator&gt;Kari Nordmann&lt;/em:translator&gt;
+</pre>
+<h3 id="contributor">contributor</h3>
+<p>Name(n) zusätzliche(r) Mitwirkende(r). Sie können diesen Wert mehrfach angeben, um die Namen mehrerer Mitwirkender anzugeben.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+
+&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Jane Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Elvis Presley&lt;/em:contributor&gt;
+</pre>
+<h3 id="homepageURL">homepageURL</h3>
+<p>Eine Verknüpfung zur Seite des Zusatzes - vorgesehen für die Anzeige auf der Benutzeroberfläche.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:homepageURL&gt;<span class="nowiki">http://www.foo.com/</span>&lt;/em:homepageURL&gt;
+</pre>
+<h3 id="updateURL">updateURL</h3>
+<p>Ein Link zu einer Aktualisierungsdatei des Manifests, welches verfügbare Updates für das Add-on festlegt. Das Format ist unten beschrieben. Wenn aktiviert, überprüft der Add-on Manager regelmäßig diese Manifestdatei, um festzustellen, ob neuere Versionen verfügbar sind.</p>
+<div class="note">
+ <strong>Hinweis:</strong> Es wird stark empfohlen, dass die <code>updateURL</code> ein HTTPS (sicherer) Link ist. Nicht sicherere Aktualisierungs-URLs können von Malware infiziert werden und führen dazu, dass Malware auf den Computer des Benutzers geschleust wird. <strong>Alternativ können Sie Ihre Erweiterung auf </strong><a class="external" href="http://addons.mozilla.org"><strong>AMO</strong></a><strong> bereitstellen und <code>updateURL</code> komplett weglassen.</strong> Sicherheitsupdates werden automatisch bereitgestellt.</div>
+<p>{{ Fx_minversion_inline(3) }} Aus Sicherheitsgründen erfordern Gecko 1.9 Anwendungen, dass Sie eine HTTPS <code>updateURL</code> oder einen <code><a href="#updateKey">updateKey</a></code>angeben müssen.</p>
+<p>Ihr Server muss diese Datei als <code>text/rdf</code>, <code>text/xml</code> oder <code>application/xml+rdf</code> ausliefern, sonst funktioniert der Update-Checker nicht.</p>
+<p>Der Add-on Manager wird die folgenden Werte in der URLersetzen, falls Sie das RDF dynamisch generieren wollen, z.B. mit PHP oder CGI:</p>
+<table>
+ <tbody>
+  <tr>
+   <td><code>%REQ_VERSION%</code></td>
+   <td>Die Version der Anfrage. Aktuell 1</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_ID%</code></td>
+   <td>Die<code> id</code> des Add-ons, welches aktualisiert werden soll</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_VERSION%</code></td>
+   <td>Die <code>version</code> des Add-ons, welches aktualisiert werden soll</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_MAXAPPVERSION%</code></td>
+   <td>Die <code>maxVersion</code> des <code>targetApplication</code> Objekts, im Bezug zur aktuellen Anwendung für das zu aktualisierende Add-on.</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_STATUS%</code></td>
+   <td>{{ Fx_minversion_inline(2) }} Komma-getrennte Liste der Add-on Status in der Applikation. Enthält mindestens entweder <code>userEnabled</code> oder <code>userDisabled</code> plus eine Nummer von <code>incompatible</code>, <code>blockslisted</code> oder <code>needsDependencies</code>.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_ID%</code></td>
+   <td>Die <code>id</code> der aktuellen Anwendung</td>
+  </tr>
+  <tr>
+   <td><code>%APP_VERSION%</code></td>
+   <td>Die <code>Version</code> der Anwendung, um auf Updates zu prüfen</td>
+  </tr>
+  <tr>
+   <td><code>%CURRENT_APP_VERSION%</code></td>
+   <td>{{ Fx_minversion_inline(3.5) }} Die <code><span style="font-family: Verdana,Tahoma,sans-serif;">V</span>ersion</code> der aktuellen Anwendung</td>
+  </tr>
+  <tr>
+   <td><code>%APP_OS%</code></td>
+   <td>{{ Fx_minversion_inline(1.5) }} Der Wert von <code><a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a></code> aus dem Firefox Build-System, welcher das verwendete Betriebssystem identifiziert.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_ABI%</code></td>
+   <td>{{ Fx_minversion_inline(1.5) }} Der Wert von <code><a href="/en/XPCOM_ABI" title="en/XPCOM_ABI">TARGET_XPCOM_ABI</a></code> aus dem Firefox Build-System, welcher die Architektur zur Kompilierung der aktuellen Anwendung enthält.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_LOCALE%</code></td>
+   <td>{{ Fx_minversion_inline(3) }} Die aktuelle Sprache der Anwendung.</td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/update.cgi?id=%ITEM_ID%&amp;amp;version=%ITEM_VERSION%</span>&lt;/em:updateURL&gt;
+&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/extension/windows.rdf</span>&lt;/em:updateURL&gt;
+</pre>
+<p><strong>Für Add-ons, die auf addons.mozilla.org bereitgestellt werden:</strong> Sie müssen keine <code>updateURL</code> Eigenschaft angeben. Standardmäßig werden Mozilla Applikationen über den Addon Manager (wie Firefox und Thunderbird) automatisch Anfragen an <code>addons.mozilla.org</code> senden. Jedes Mal, wenn Sie eine neue Version Ihres Add-ons hochladen oder die Kompatibilitätsparameter ändern, wird Ihr Update-Manifest automatisch generiert. Add-ons, die aktuell als <a class="link-https" href="https://addons.mozilla.org/firefox/pages/experimentalAddons">experimental</a> markiert sind, werden aus Gründen der Sicherheit nicht aktualisiert.</p>
+<p><strong>Format des Update-Manifests:</strong> Das Update-Manifest ist eine RDF/XML Datenquelle. Beispiele eines Update-Manifests, siehe <a href="/de/docs/Versionen,_Aktualisierung_und_Kompatibilität_von_Add-ons" title="Versionen, Aktualisierung und Kompatibilität von Add-ons">Versionen, Aktualisierung und Kompatibilität von Add-ons</a>.</p>
+<h3 id="updateKey">updateKey</h3>
+<p>{{ Gecko_minversion_header(1.9) }} {{ Fx_minversion_header(3) }}</p>
+<p>Um die Sicherheit eines Updates von RDF Daten zu gewährleisten, welches über HTTP empfangen wird, müssen Sie eine digitale Signatur, um die Inhalte der Daten zu verifizieren, hinzufügen. Um dies zu machen, müssen Sie den öffentlichen Teil des kryptographischen Schlüssel in einem updateKey in der install.rdf Datei des Add-ons notieren. Dieser kann über ein Tool generiert werden: <a href="/de/docs/McCoy" title="McCoy">McCoy</a>. Zeilenumbrüche und Leerzeichen werden ignoriert.</p>
+<p><strong>Beispiele</strong></p>
+<pre> &lt;em:updateKey&gt;MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDK426erD/H3XtsjvaB5+PJqbhj
+               Zc9EDI5OCJS8R3FIObJ9ZHJK1TXeaE7JWqt9WUmBWTEFvwS+FI9vWu8058N9CHhD
+               NyeP6i4LuUYjTURnn7Yw/IgzyIJ2oKsYa32RuxAyteqAWqPT/J63wBixIeCxmysf
+               awB/zH4KaPiY3vnrzQIDAQAB&lt;/em:updateKey&gt;
+</pre>
+<h3 id="optionsURL">optionsURL</h3>
+<p>Die <code>chrome://</code> URL des Dialogfensters für die Optionen der Erweiterung. Nur für Erweiterungen von Nutzen. Sofern diese Eigenschaft angegeben ist, wird bei Auswahl dieser Erweiterung in der Erweiterungsliste die Schaltfläche "Einstellungen" auswählbar, welche auf Klick hin dieses Dialogfenster anzeigt.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:optionsURL&gt;<a class="external" rel="freelink">chrome://myext/content/options.xul</a>&lt;/em:optionsURL&gt;
+</pre>
+<h3 id="aboutURL">aboutURL</h3>
+<p>Die <code>chrome://</code>-URL des Dialogfensters für Information über die Erweiterung. Nur für Erweiterungen von Nutzen. Sofern diese Eigenschaft angegeben ist, wird bei Auswahl dieser Erweiterung in der Erweiterungsliste ein entsprechender Eintrag im Kontextmenü der Erweiterung verfügbar, welcher auf Auswahl hin dieses Dialogfenster statt einer vorgegebenen Variante anzeigt.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:aboutURL&gt;<a class="external" rel="freelink">chrome://myext/content/about.xul</a>&lt;/em:aboutURL&gt;
+</pre>
+<h3 id="iconURL">iconURL</h3>
+<p>Eine <code>chrome://</code> URL zu einem 32x32 Icon, welches in der Add-on List angezeigt wird. Wird diese Eigenschaft nicht angegeben, wird das Standardicon verwendet.</p>
+<pre>&lt;em:iconURL&gt;<a class="external" rel="freelink">chrome://myext/skin/icon.png</a>&lt;/em:iconURL&gt;</pre>
+<div class="note">
+ <strong>Hinweis:</strong> Damit das obige Beispiel funktioniert, müssen Sie auch ein <code>skin Paket</code><span style="font-family: monospace;"> in Ihre</span> <code>chrome.manifest</code> Datei hinzufügen. Siehe <a href="/de/docs/Chrome_Registrierung#skin" title="Chrome Registrierung#skin">Chrome Registrierung#skin</a>. Alternativ können Sie Ihr Icon in das Verzeichnis packen, welches Sie in Ihrem <code>content</code> Paket festgelegt haben.</div>
+<p>{{ gecko_minversion_note("1.9.2", "Ab Gecko 1.9.2 (Firefox 3.6) können Sie auch einfach Ihr Icon <code>icon.png</code> nennen und es in das Basisverzeichnis des Add-ons platzieren. Das erlaubt Ihnen Ihr Add-on Icon sogar anzuzeigen, wenn Ihr Add-on deaktiviert ist oder im Manifest kein <code>iconURL</code> Eintrag vorhanden ist.") }}</p>
+<h3 id="targetPlatform">targetPlatform</h3>
+<p>{{ Fx_minversion_inline(1.5) }} Eine Zeichenkette, welche die Plattform angibt, die vom Add-on unterstützt wird. Enthält entweder den Wert von OS_TARGET allein oder in Kombination mit <a href="/en/XPCOM_ABI" title="en/XPCOM_ABI">TARGET_XPCOM_ABI</a>, getrennt durch einen Unterstrich (_).</p>
+<p>Sie können die Eigenschaft targetPlatform je Manifest mehrfach angeben. Passt einer der Werte zu den Parametern, mit denen die Anwendung gebaut wurde, wird das Add-on installiert; anderenfalls erhält der Benutzer eine entsprechende Fehlermeldung.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:targetPlatform&gt;WINNT_x86-msvc&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Linux&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Darwin_ppc-gcc3&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;SunOS_sparc-sunc&lt;/em:targetPlatform&gt;
+</pre>
+<p>Normalerweise verwenden Sie nur den OS Teil für Themes und Erweiterungen, die nicht komplett System-übergreifend sind. Für Erweiterungen mit binären (kompilierten) Komponenten sollten sie aber niemals das OSalleine sonder mit <a href="/de/docs/XPCOM_ABI" title="XPCOM_ABI">ABI (s)</a> angeben, mit welchen Sie die Komponenten kompiliert haben. Wenn Sie mehrere Versionen der Komponenten einbinden wollen, sollten Sie <a href="/de/docs/Bundles#Plattformspezifische_Unterverzeichnisse" title="Bundles#Plattformspezifische Unterverzeichnisse">Plattform-spezifische Unterverzeichnisse</a> verwenden.</p>
+<p><strong>Hinweise</strong></p>
+<ul>
+ <li>In der gleichen Manifestdatei, können Sie sogar Werte mit und ohne ABI mischen. Wenn ein Wert für das OS der Anwendung auf ein bestimmtes ABI stoßt, welches wichtig für das OS ist, wird die Anwendung die Installation ablehnen, wenn die gefundene OS/ABI Kombination nicht passt. Das bedeutet, wenn alle obigen Beispiele in einem Manifest auftreten, wird das Add-on auf jedem Linux Build installiert werden, egal welches ABI, aber nicht auf einem Windows Cygwin Build.</li>
+</ul>
+<ul>
+ <li>Es gibt Builds von Firefox und Thunderbird, welche ihre ABI nicht "wissen" (seltene Plattformen oder keine offiziellen Builds). Diese Builds werden jede Installation eines Add-ons ablehnen, die eine bestimmtes ABI für ihre Plattform erfordern.</li>
+</ul>
+<p>Diese Eigenschaft wurde für Firefox/Thunderbird 1.5 hinzugefügt. Vorherige Versionen dieser Anwendungen werden die Einschränkungen ignorieren und das Add-on ungeachtet der Plattform installieren.</p>
+<h3 id="requires">requires</h3>
+<p>{{ Fx_minversion_inline(2) }} Dieses Tag hat ein ähnliches Syntax wie das <code>&lt;em:targetApplication&gt;</code> Tag. Wenn das Add-on ,von dem <code>&lt;em:id&gt;</code> Tag festgelegt, nicht installiert ist oder eine nicht kompatible Version hat, wird der Erweiterungsmanager die Erweiterung deaktivieren und die Nachricht anzeigen "Erfordert zusätzliche Funktionen". Sie können so viele <code>&lt;em:requires&gt;</code> Tags wie Sie möchten hinzufügen. Ihre Erweiterung wird deaktiviert, wenn eines der festlegten Anforderungen fehlschlägt.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:requires&gt;
+   &lt;Description&gt;
+     &lt;!-- Lightning --&gt;
+     &lt;em:id&gt;{e2fda1a4-762b-4020-b5ad-a41df1933103}&lt;/em:id&gt;
+     &lt;em:minVersion&gt;0.5pre&lt;/em:minVersion&gt;
+     &lt;em:maxVersion&gt;0.5pre&lt;/em:maxVersion&gt;
+   &lt;/Description&gt;
+ &lt;/em:requires&gt;
+</pre>
+<p><strong>Hinweise</strong></p>
+<ul>
+ <li>Aktuell werden nur <code>&lt;em:id&gt;</code>, <code>&lt;em:minVersion&gt;</code> und <code>&lt;em:maxVersion&gt;</code> innerhalb des <code>&lt;em:requires&gt;</code> Tag geparst.</li>
+ <li>Es ist zur Zeit nicht möglich Abhängigkeiten zu einem <code>&lt;em:targetApplication&gt; hinzuzufügen</code>. Siehe {{ interwiki('wikimo', 'Extension_Manager:Extension_Dependencies', 'wikimo:Extension Manager:Extension Dependencies') }} für weitere Details.</li>
+</ul>
+<p>Diese Eigenschaft wurde in Firefox/Thunderbird 2 hinzugefügt. Vorherige Versionen dieser Anwendungen werden diese Einschränkungen ignorieren und das Add-on unabhängig von den Anforderungen installieren.</p>
+<h2 id="Referenz_veralteter_Eigenschaften">Referenz veralteter Eigenschaften</h2>
+<p>Diese Eigenschaften waren in alten Versionen des Add-on Managers vorhanden, wurden aber mittlerweile durch neuere und bessere Mechanismen ersetzt.</p>
+<h3 id="file">file</h3>
+<p><strong>Firefox 1.0</strong> Diese Eigenschaft verwies auf eine chrome <code>.jar</code> Datei, die Chrome-Pakete enthielt, die eine Registrierung mit der Chrome-Registry erforderten.</p>
+<p>Die <code>&lt;em:file&gt;</code> Eigenschaft hat einen komplexen Objektwert. Die uri des Wertes ist <code>urn:mozilla:extension:file:jarFile.jar</code> wobei <code>jarFile.jar</code> derName der jar Datei ist, welche die Dateien des Chrome-Pakets enthält. Das könnte auch der Name eines Verzeichnisses sein, welches die Dateien des Chrome-Pakets enthält, un-jarred (z.B. <code>urn:mozilla:extension:file:directory</code>). In beiden Fällen müssen die Chrome Paketdatei(en) in dem <code><span style="font-family: Verdana,Tahoma,sans-serif;">c</span>hrome</code> Unterverzeichnis des XPI Archivs platziert werden.</p>
+<p>Dieses Objekt hat eine <code>package</code> Eigenschaft (mit einem Pfad in der jar Datei oder Verzeichnis, welches zum Ort der <code>contents.rdf</code> Datei führt, um die das Paket zu registrieren), eine <code>locale</code> Eigenschaft (genauso, registriert aber die Sprache) und eine <code>skin</code> Eigenschaft (genauso, aber registriert das Theme-Material).</p>
+<p>Bei Erweiterungen für Firefox 1.5, ist diese Eigenschaft nicht länger notwendig: Das <code><a href="/de/docs/Chrome_Registration" title="Chrome_Registration">chrome.manifest</a></code> im XPI wird verwendet um die Registrierungsareit zu verrichten. Wenn kein chrome.manifest vorhanden ist, wird diese Eigenschaft vom Addon Manager gelesen und ein chrome.manifest wird generiert.</p>
+<p><strong>Beispiele</strong></p>
+<pre>&lt;em:file&gt;
+ &lt;Description about="urn:mozilla:extension:file:myext.jar"&gt;
+  &lt;em:package&gt;content/myext/&lt;/em:package&gt;
+  &lt;em:locale&gt;locale/en-US/myext/&lt;/em:locale&gt;
+  &lt;em:skin&gt;skin/classic/myext/&lt;em:skin&gt;
+ &lt;/Description&gt;
+&lt;/em:file&gt;
+</pre>
+<p>Ein Installationsmanifest kann mehrere <code>file</code> Eigenschaften festlegen, eine für jede jar Datei oder Unterverzeichnis, welches Chrome zum registrieren enthält.</p>
+<h3 id="hidden">hidden</h3>
+<p><strong>Firefox 1.0</strong><strong> - 3.5</strong> Ein boolscher Wert, falls <code>true</code> wird das Add-on nicht in der Add-on Liste angezeigt, vorausgesetzt, dass das Add-on in einer {{ Anch("Restricted access area") }} installiert ist. (sodass es nicht für installierte Add-ons im Profil arbeitet).</p>
+<div class="note">
+ <strong>Hinweis:</strong> Diese Eigenschaft wird nicht mehr von Gecko 1.9.2 (Firefox 3.6)oder später unterstützt, um zu verhindern, dass Erweiterungen installiert werden, von denen der Benutzer nichts mitbekommt.</div>
+<p><strong>Beispieie</strong></p>
+<pre>&lt;em:hidden&gt;true&lt;/em:hidden&gt;
+</pre>
+<h2 id="Glossar">Glossar</h2>
+<h2 id="Restricted_access_area">Restricted access area</h2>
+<p>Ein <em>restricted access area</em> ist ein Installationort, welcher durch einen restricted-access Account eingeschränkt werden kann, unabhängig ob der Ort mit den aktuellen Benutzerrechten eingeschränkt ist oder nicht (siehe {{ Source("toolkit/mozapps/extensions/public/nsIExtensionManager.idl#80", "nsIInstallLocation::restricted") }}). Zur Zeit sind die <code>($APPDIR)/extensions</code> Ordner und die Registry Installationsorte unter <code>HKEY_LOCAL_MACHINE</code> (siehe <a href="/de/docs/Erweiterungen_über_die_Windows_Registrierung_hinzufügen" title="Erweiterungen über die Windows Registrierung hinzufügen">Erweiterungen über die Windows Registrierung hinzufügen</a> für Details) eingeschränkt</p>
+<p>Die <code>($PROFILE)/extensions</code> und <code>HKEY_CURRENT_USER</code> Installationsorte sind hingegen nicht beschränkt.</p>

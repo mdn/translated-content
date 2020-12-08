@@ -1,0 +1,48 @@
+---
+title: Chrome registration
+slug: Mozilla/Chrome_Registration
+translation_of: Mozilla/Chrome_Registration
+---
+<h2 id="What_is_Chrome.3F" name="What_is_Chrome.3F">Was ist chrome?</h2>
+
+<p><a href="/en/Chrome" title="en/Chrome">Chrome</a> <span id="result_box" lang="de"><span style="background-color: transparent;">ist eine Gruppe von Benutzeroberflächenelementen des Anwendungsfensters, die sich außerhalb des Inhaltsbereichs des Fensters befinden.</span> <span style="background-color: transparent;">Symbolleisten, Menüleisten, Fortschrittsleisten und Fenstertitelleisten sind Beispiele für Elemente, die normalerweise zum Chrom gehören.</span></span></p>
+
+<p><span id="result_box" lang="de"><span style="background-color: transparent;">Mozilla sucht und liest die root-Datei </span></span><code>chrome.manifest</code> <span id="result_box" lang="de"><span style="background-color: transparent;">nach Erweiterungen und Designs.</span></span></p>
+
+<div class="note">
+<p><strong>Note:</strong> With {{Gecko("1.9.2")}} and older, Mozilla reads <code>chrome/*.manifest</code> files from applications. Starting with {{Gecko("2.0")}}, the root <code>chrome.manifest</code> is the only manifest used; you can add <a href="/en/Chrome_Registration#manifest" title="en/Chrome Registration#manifest"><code>manifest</code></a> commands to that file to load secondary manifests.</p>
+</div>
+
+<h2 id="Chrome_Providers" name="Chrome_Providers">Chrome Anbieter</h2>
+
+<p><span id="result_box" lang="de"><span title="A supplier of chrome for a given window type (e.g., for the browser window) is called a chrome provider.">Ein Anbieter von Chrom für einen bestimmten Fenstertyp (z. B. für das Browserfenster) wird als Chromanbieter bezeichnet. </span><span title="The providers work together to supply a complete set of chrome for a particular window, from the images on the toolbar buttons to the files that describe the text, content, and appearance of the window itself.
+
+">Die Anbieter arbeiten zusammen, um einen vollständigen Chromsatz für ein bestimmtes Fenster bereitzustellen, von den Bildern auf den Symbolleistenschaltflächen bis zu den Dateien, die den Text, den Inhalt und das Erscheinungsbild des Fensters selbst beschreiben.</span><br>
+ <br>
+ <span title="There are three basic types of chrome providers:
+
+">Es gibt drei grundlegende Arten von Chromanbietern:</span><br>
+ <br>
+ <span title="Content
+    "><strong>Inhalt</strong><br>
+     </span><span title="The main source file for a window description comes from the content provider, and it can be any file type viewable from within Mozilla.">Die Hauptquelldatei für eine Fensterbeschreibung stammt vom Inhaltsanbieter und kann von jedem Dateityp sein, der in Mozilla angezeigt werden kann. </span><span title="It will typically be a XUL file, since XUL is designed for describing the contents of windows and dialogs.">Normalerweise handelt es sich um eine XUL-Datei, da XUL zur Beschreibung des Inhalts von Fenstern und Dialogen gedacht ist. </span><span title='The JavaScript files that define the user interface are also contained within the content packages, as well as most {{Glossary("XBL")}} binding files.
+'>Die JavaScript-Dateien, die die Benutzeroberfläche definieren, sind auch in den Inhaltspaketen sowie in den meisten {{Glossary ("XBL")}} - Bindungsdateien enthalten.</span></span></p>
+
+<p><span lang="de"><span title="Locale
+    "><strong>Gebietsschema</strong><br>
+     </span><span title="Localizable applications keep all their localized information in locale providers.">Lokalisierbare Anwendungen speichern alle lokalisierten Informationen in Gebietsschemaanbietern. </span><span title="This allows translators to plug in a different chrome package to translate an application without altering the rest of the source code.">Dadurch können Übersetzer ein anderes Chrome-Paket zum Übersetzen einer Anwendung einstecken, ohne den Rest des Quellcodes zu ändern. </span><span title='The two main types of localizable files are {{Glossary("DTD")}} files and Java-style properties files.
+'>Die zwei Haupttypen von lokalisierbaren Dateien sind {{Glossary ("DTD")}} - Dateien und Java-Eigenschaftendateien.</span></span></p>
+
+<p><span lang="de"><span title="Skin
+    "><strong>Skin</strong><br>
+     </span><span title="A skin provider is responsible for providing a complete set of files that describe the visual appearance of the chrome.">Ein Skin-Anbieter ist dafür verantwortlich, einen vollständigen Satz von Dateien bereitzustellen, der das optische Erscheinungsbild des Chroms beschreibt. </span><span title='Typically a skin provider will provide {{Glossary("CSS")}} files and images.
+
+'>Normalerweise stellt ein Skin-Provider Dateien und Bilder {{Glossary ("CSS")}} bereit.</span></span></p>
+
+<p> </p>
+
+<div class="note">
+<p><strong>Hinweis:</strong> <span id="result_box" lang="de"><span style="background-color: transparent;" title="Note: Scripts (including those found in XBL) loaded from skin packages will not execute.">Aus Skin-Paketen geladene Skripts </span></span> ( <span id="result_box" lang="de"><span style="background-color: transparent;" title="Note: Scripts (including those found in XBL) loaded from skin packages will not execute.">einschließlich der in </span></span> <a href="/en/XBL" title="en/XBL">XBL</a> gefundenen) werden nicht ausgeführt.</p>
+</div>
+
+<p> </p>

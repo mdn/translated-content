@@ -1,0 +1,75 @@
+---
+title: Settings
+slug: Archive/B2G_OS/Platform/গায়া/Gaia_apps/Settings
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Settings
+---
+<div class="summary">
+ <p><span class="seoSummary">অ্যাপ সেটিংস  অনুমোদন দেয় ব্যবহারকারীদের ডিভাইস সেটিংসের বাহ্যিক আকার দিতে এবং আর ও সাড়া  দেয় আগত কার্যক্রমে যা  অ্যাপ থেকে নির্দিষ্ট সেটিংস দর্শন  প্রদর্শন  করাতে অ্যাপ উন্নতকারীদের অনুমোদন দেয়।(বি দ্র ওয়াই ফাই সেটিংস প্যানেল দেখাও যদি ডাটা সংযোগ না পাওয়া যায়)।এই অনিচ্ছেদ ব্যাখা করে কিভাবে এটি কাজ করে।</span></p>
+</div>
+<h2 id="মোয_সেটিংস_অ্যাপি_এবং_ডাটা_বাইণ্ডিং">মোয সেটিংস অ্যাপি এবং ডাটা বাইণ্ডিং</h2>
+<p>কৌশলগতভাবে বলতে ,সেটিংস অ্যাপ হল  UI যা ব্যবহারকারীদের   <a href="/en-US/docs/Web/API/Navigator.mozSettings">window.navigator.mozSettings API</a> পরীক্ষণের সুবিধা প্রদান করে।</p>
+<p>অ্যাপ সেটিংস  সয়ংক্রীয়ভাবে প্রধান সেটিংস অপারেশন যেমন ডাটা বাইন্ডিং ক্ষেত্র এবং মোয সেটিংস ভ্যালুস নিয়ন্ত্রন করে-সকল প্রধান অপারেশন যেমন টগলিং এ সেটিংস অথবা ইনপুট ভ্যালু পরিবর্তন ওমোয সেটিংস ভ্যালুসের পরিবর্তনে ও ফলাফল আনবে।</p>
+<p> <code>window.navigator.mozSettings</code> অ্যাপি গেক থেকে সেটিংস সুবিধা দেয়।ব্যবহিত এরকম কিছু দেখেঃ</p>
+<pre class="brush: js">navigator.mozSettings.createLock().set(values);</pre>
+<p>ডাটা সেটের জন্য।</p>
+<div class="note">
+ <p><strong>নোটঃ আমাদের </strong>  <code>createLock()ব্যবহার করা দরকার কোনো</code>  <code>mozSettings</code> ভ্যালুর সেটিংস পড়া অথবা লেখার আগে  তা বন্ধ করতে।</p>
+</div>
+<p>ডাটা সরাতে,আমরা  গেট এবং সেট এ কলব্যাক ফাংশন নিচের ডাটার মত কিছু অপারেশন শুরু করতে ব্যবহার করতে পারিঃ</p>
+<pre class="brush: js">var reqTimerGoBack =
+window.navigator.mozSettings.createLock().get('icc.goBackTimeout');
+reqTimerGoBack.onsuccess = function icc_getTimerGoBackSuccess() {
+  goBackTimer.timeout = reqTimerGoBack.result['icc.goBackTimeout'];
+    ...
+};</pre>
+<p>ডাটা জমা থাকেএকটি <code>instance.result</code>  ডিক্টে।</p>
+<p>ফায়ারফক্স  ২.0, একটি একক  <code>mozSettings</code>যা তৎক্ষনাৎপুনরায় ব্যবহার করা যায়  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_cache.js">js/modules/settings_cache.js</a> এর মধ্য দিয়েঃ</p>
+<pre class="brush: js">var SettingsCache = require('modules/settings_cache');
+
+SettingsCache.getSettings(function(result){
+  var onlineSupportTitle = result['support.onlinesupport.title'];
+    ...
+});</pre>
+<h2 id="নেভিগেশন"> নেভিগেশন</h2>
+<p> যখন ব্যবহা্রকারী অ্যাপ  সেটিংস ওপেন করে,তারা উপরের  পৃষ্ঠায় কিছু প্যানেলের তালিকা দেখে,   যেগুলো  স্বাধীন পৃষঠা হিসেবে কাজ করে। <code>SettingsService.navigate</code> (<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_service.js">js/module/settings_service.js</a>) ঐ সব  পৃষ্ঠার মধ্যে ন্যাভিগেশন নিয়ন্ত্রণ করে।</p>
+<p><strong>নোট</strong>: উত্তরাধীকার সূত্রেপ্রাপ্ত প্যানেলের জন্য ( যেগুলো নতুন রূপে  এখনো খোলা হয়নি),  সেটিংস। বর্তমান  প্যানেল সেটিংস সার্ভিসের পরিবর্তে  ব্যবহার হয়।  প্যানেল গুলোর  মধ্যে  নেভিগেশন থেকে নেভিগেশন করে।</p>
+<p>  যেহেতু ফায়ারফক্স ওস ট্যাবলেট ডিভাইস এবং মোবাইল   সমর্থন করে, অ্যাপ সেটিংস দুটি ভিন্ন রকমের নেভিগেশন রূপ বাস্তবায়িত করেছেঃ</p>
+<ul>
+ <li> প্রথম কলাম(মোবাইলের জন্য)</li>
+ <li>দ্বিতীয় কলাম(ট্যা্বলেটের জন্য)</li>
+</ul>
+<p> যখন বলা হয়, <code>SettingsService.navigate</code>  কোন নেভিগেশন রূপ ব্যবহার করে তা নিচের  কোডের  মাধ্যমে নির্দেশ করেঃ</p>
+<pre class="brush: js">if (_isTabletAndLandscape()) {
+  PageTransitions.twoColumn(oldPanel, newPanel, callback);
+} else {
+  PageTransitions.oneColumn(oldPanel, newPanel, callback);
+}</pre>
+<h2 id="প্যানেল">প্যানেল</h2>
+<p>ফায়ারফক্স ও এস ২.0 সামনেরদিকে থেকে, প্রধান প্যানেল গঠন বর্ণনা করা হয়েছে <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel.js">js/modules/panel.js</a> এ।এটা ৬ টি ধাপে জীবন চক্র বর্ণনা করেঃ</p>
+<ul>
+ <li><code>init</code></li>
+ <li><code>beforeShow</code></li>
+ <li><code>show</code></li>
+ <li><code>hide</code></li>
+ <li><code>beforeHide</code></li>
+ <li><code>uninit</code></li>
+</ul>
+<p>সকল নতুন সেটিংস প্যানেল গুলো উত্তরাধীকারসূত্রে  <code>SettingsPanel</code> থেকে প্রাপ্ত,যা <code>Panel</code>  এর কার্যক্রমকে বর্ধিত করে। কোডটি  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_panel.js">js/modules/settings_panel.js</a>  বহন করেছেঃ</p>
+<pre class="brush: js">onInit: function(panel, initOptions) {
+  ...
+
+  PanelUtils.activate(panel);
+},
+
+onBeforeShow: function(panel, beforeShowOptions) {
+  // Preset the panel every time when it is presented.
+  PanelUtils.preset(panel);
+  _addListeners(panel);
+  ...
+},</pre>
+<p><code>PanelUtils.activate</code> — বর্ণিত  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel_utils.js">js/modules/panel_utils.js</a>এ-প্যানেলের মধ্যের সকল লিংকের সাথে সংযোগ স্থাপন করতে ব্যবহার করা হয়েছে এবং প্রতিনিধিত্বকারী প্রশিক্ষক  <code>onInit</code>ধাপে সংযোগ করে,<code>PanelUtils.preset ব্যবহার করা হয়েছে</code> <code>onBeforeShow</code> ধাপে মূল্যবান সেটিংসের সাথে উপাদান গুলোকে পুনরায় স্থাপন করতে।</p>
+<p>সকল নতুন সেটিংস প্যানেল গুলো বর্ণিত হয়েছে  <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings/js/panels">js/panels</a> অংশে।</p>
+<h2 id="এ_এম_ডি_মডিউল_এবং_অনুকূল_সময়_গঠন">এ এম ডি মডিউল এবং অনুকূল সময় গঠন</h2>
+<p>ফায়ারফক্স ওএস ২.0 সামনেরদিকে থেকে,সেটিংস অ্যাপ  <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD modules pattern</a> ব্যবহার করে  প্রতিটি প্যানেলকে বাস্তবায়িত করতে।এ এম ডি পূর্ণকৃত হয়  <a href="https://github.com/requirejs/alameda">Alemeda</a>   এর মধ্য দিয়ে  (একটি সহজ  মাধ্যম <a href="http://requirejs.org/">RequireJS </a>এর) এবং গঠিত/শুভসূচিত হয়  <code>r.js</code> (রিকুইয়ার যে এস  অপ্টিমাইজার)ব্যবহারের মাধ্যমে। সেটিংস অ্যাপ এর তখনো ও নথিপত্ত্রের উপর নির্ভরশীলতা ছিল (<a href="https://github.com/mozilla-b2g/gaia/tree/master/shared/js">shared/js</a>) যেগুলো এ এম ডি মডিউল নয়। ঐসবের জন্য এটা  <code>shim</code>  অপশন বর্ণিত <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/config/require.js">settings/js/config/require.js</a> এ ব্যবহার করে।</p>
+<h2 id="আরো_দেখো">আরো দেখো</h2>
+<p> <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings">Settings app has a build-in README</a>  যা সেটিংসের অনেক  তথ্য পড়তে উপকারী(প্রধানত আরথার চেন এবং ফ্রেড লিনের দ্বারা লিখিত)।</p>

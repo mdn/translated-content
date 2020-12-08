@@ -1,0 +1,27 @@
+---
+title: XPCOM reference
+slug: Mozilla/Tech/XPCOM/Reference
+tags:
+  - Add-ons
+  - Extensions
+  - Landing
+  - Mozilla
+  - NeedsTranslation
+  - Reference
+  - TopicStub
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference
+---
+<p>This reference describes the interfaces and functions provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM">XPCOM</a> library. In addition, it details the various helper classes and functions, as well as the components, provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Glue">XPCOM glue</a> library. The contents herein are oriented primarily toward extension developers and people embedding XPCOM in other projects.</p>
+
+<div class="warning">
+<p><strong>WebExtensions are becoming the new standard for creating add-ons. </strong>Eventually support for XPCOM add-ons will be deprecated, so you should begin to investigate porting your add-ons to use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> API, and <a href="https://mzl.la/webext-feature-needed">report any missing functionality</a> so we can be sure to address your concerns. Work is ongoing on WebExtension capabilities, so your input will help prioritize and plan the work. To learn more about the kinds of changes that will be needed, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a>. In addition, any binaries you use will then need to be converted for use with the WebExtensions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a> API, or compiled using <a href="https://webassembly.github.io/">WebAssembly</a> or <a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>.</p>
+</div>
+
+<div class="note">
+<p>If you're working on a module in the Mozilla codebase that's compiled with the <code>MOZILLA_INTERNAL_API</code> flag set, some of these APIs -- the string functions and classes in particular -- are not the ones you should be using. See the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Internal_strings">XPCOM internal string guide</a> for documentation of the internal string API used within the Mozilla codebase.</p>
+</div>
+
+<p>{{LandingPageListSubpages}}</p>
+
+<p>Many XPCOM pages return an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Core_functions/nsresult">nsresult</a></code>. Prior to Gecko 19 {{geckoRelease(19)}}, this was an integer that simply returned an error code. It is now a strongly typed <code>enum</code> when XPCOM is built using a C++11 compiler. This causes compile-time errors to occur when improper values are returned as nsresult values, thereby making it easier to catch many bugs.</p>

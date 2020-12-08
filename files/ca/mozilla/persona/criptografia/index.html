@@ -1,0 +1,21 @@
+---
+title: Criptografia
+slug: Mozilla/Persona/Criptografia
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona/Crypto
+---
+<p>El sistema d'identitat de persona utilitza el xifrat de clau pública per assegurar la confiança i seguretat en el procés d'autenticació.</p>
+<p>Per què funciona el sistema descrit a <span style="line-height: inherit;"><a href="/ca/docs/Persona/Proveidors_d_Identitat" title="https://developer.mozilla.org/en-US/docs/Mozilla/Persona/Identity_Provider_Overview?redirectlocale=en-US&amp;redirectslug=Persona%2FIdentity_Provider_Overview">Panoràmica de proveïdors d'identitat</a>?</span></p>
+<h3 id="Cadena_de_confiança">Cadena de confiança</h3>
+<p>El navegador de l'usuari emmagatzema localment petites peces d'informació per a cadascuna de les identitats de l'usuari: una adreça de correu electrònic, un parell de claus, i un certificat de l'IdP (Identity Provider) associat.</p>
+<p>El parell de claus de l'usuari és un parell criptogràfic DSA o RSA estàndard que és generat i guardat localment en el navegador de l'usuari. El certificat és signat per l'IdP associat a la identitat de l'usuari escollida. Aquests certificats estan dissenyats per no durar més de 24 hores i poden ser proporcionats de nou quan caduquen, sempre que l'usuari tingui una sessió activa a l'IdP. Els parells de claus mai són compartits entre ordinadors ni entre navegadors.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/6299/=Persona_chain_of_trust.png" style="width: 901px; height: 282px;"></p>
+<p>Com es descriu a la <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Persona/Protocol_Overview?redirectlocale=en-US&amp;redirectslug=Persona%2FProtocol_Overview" title="https://developer.mozilla.org/en-US/docs/Mozilla/Persona/Protocol_Overview?redirectlocale=en-US&amp;redirectslug=Persona%2FProtocol_Overview">Panoràmica del protocol</a>, el navegador de l'usuari és capaç de generar i signar assercions d'identitat efímeres especifíques per al lloc. Quan es disposa d'aquestes assercions i de la informació del certificat de l'usuari, el lloc és capaç de verificar la identitat d'aquest usuari. L'autenticitat dels certificats ha de ser verificada obtenint la clau pública de l'IdP, la qual és publicada en un document disponible sobre SSL.</p>
+<p>D'aquesta manera, la seguretat de Persona depèn de que la clau privada de l'usuari i la clau privada del domini es mantinguin en secret i de que la connexió SSL al IdP sigui segura. Si es trenca la seguretat en qualsevol d'aquests punts, la seguretat de la identitat de l'usuari es pot veure compromesa.</p>
+<h3 id="Generant_parells_de_claus_IdP">Generant parells de claus IdP</h3>
+<p>Per als IDPs (Identity Providers), el <a href="https://github.com/mozilla/jwcrypto" title="https://github.com/mozilla/jwcrypto">paquet jwcrypto</a> proporciona una eina de línia de comandes, generate-keypair, la qual genera les claus adequades per a l'ús amb Persona. Com que les claus generades ja estan serializadas a JSON, la clau pública és adequada per a la seva inclusió directa al camp de claus públiques de l'arxiu <a href="https://developer.mozilla.org/en-US/docs/BrowserID/.well-known-browserid">/.well-known/browserid</a> de l'IdP.</p>
+<h3 id="Certificat_i_format_d'asserció">Certificat i format d'asserció</h3>
+<p>Si us plau, consulteu la <a href="https://github.com/mozilla/id-specs/blob/prod/browserid/index.md" title="https://github.com/mozilla/id-specs/blob/prod/browserid/index.md">especificació BrowserID</a> per a informació més detallada, però a grans trets, tant els certificats com les assercions són cadenes amb tres parts: una capçalera, un cos i una signatura criptogràfica. Cada part està codificada separadament en <a href="https://tools.ietf.org/html/rfc4648#section-5" title="https://tools.ietf.org/html/rfc4648#section-5">base64url</a>, i concatenada delimitant cada part amb caràcters ".". El cos no està xifrat, és text pla que es pot llegir si es decodifica en base64url.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/6300/=JWT.png" style="width: 595px; height: 111px;"></p>
+<p>Els certificats i les assercions són empaquetats junts en una "asserció recolzada" quan l'usuari s'intenta autenticar en un lloc. El paquet és creat concatenant un certificat i una asserció, separats per un "~".</p>

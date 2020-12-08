@@ -1,0 +1,86 @@
+---
+title: Firefox-OS-Simulator
+slug: Archive/B2G_OS/Simulator
+translation_of: Archive/B2G_OS/Simulator
+---
+<div class="note">
+<p>Diese Seite beschreibt den Firefox-OS-Simulator für Entwickler für Firefox OS 1.2 oder neuer. Wenn Sie Apps für Firefox OS 1.1 entwickeln, sollten Sie sich stattdessen die Dokumentation für <a href="/docs/Tools/Firefox_OS_1.1_Simulator">Firefox-OS-1.1-Simulator</a> ansehen.</p>
+</div>
+
+<p><span style="line-height: 1.5;">Der Firefox-OS-Simulator ist eine Version der höheren Schichten von Firefox OS, die ein Firefox-OS-Gerät simuliert, aber auf dem Desktop läuft</span><span style="line-height: 1.5;">. Dies bedeutet, dass Sie in vielen Fällen kein echtes Gerät benötigen, um Ihre App zu testen und zu debuggen. Er läuft in einem Fenster mit der selben Größe wie ein Firefox-OS-Gerät, enthält die Benutzeroberfläche sowie die integrierten Apps von <span style="line-height: 1.5;">FirefoxOS</span> und simuliert viele der APIs eines Firefox-OS-Geräts</span><span style="line-height: 1.5;">.</span></p>
+
+<p><span style="line-height: 1.5;">Der Simulator wird als Firefox-Add-on gepackt und verteilt. Sobald Sie ihn heruntergeladen und in Firefox installiert haben, können Sie ihn ausführen, Apps darauf laden und mit dem</span><span style="line-height: 1.5;"> </span><a href="/Firefox_OS/Using_the_App_Manager" style="line-height: 1.5;">App-Manager</a><span style="line-height: 1.5;"> Entwicklerwerkzeuge einsetzen.</span></p>
+
+<h2 id="Installation"><span style="line-height: 1.5;">Installation</span></h2>
+
+<p><span style="line-height: 1.5;">Um den Simulator zu installieren, klicken Sie auf die folgende Schaltfläche. (Es stehen mehrere Versionen zur Verfügung und zwecks maximaler Flexibilität sollten Sie alle installieren):</span></p>
+
+<p><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" style="margin-bottom: 20px; padding: 10px; color: white; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; display: inline-block; background-color: rgb(129, 188, 46); white-space: nowrap; text-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px, rgba(0, 0, 0, 0.298039) 0px -1px 0px 0px inset;">Simulator installieren</a></p>
+
+<p>Um den Simulator zu starten, lesen sie die <a href="/Firefox_OS/Using_the_App_Manager#Using_a_Firefox_OS_Simulator_Add-on" style="font-size: 14px; font-weight: normal; line-height: 1.5;">Anweisungen in der Dokumentation des App-Managers</a>. Sobald der Simulator läuft, können Sie Apps darauf laden und dann mit dem App-Manager debuggen, genau wie mit einem echten Gerät. Ich habe unter Windows 7, Firefox 37.0.1 und mit Firefox OS Simulator die Erfahrung gemacht, dass erster Start in der WebIDE klappt nicht, dafür funktioniert 2. oder 3. Start. Auch dann, wenn eine Meldung: <em>"Zeitüberschreitung bei der operation: connecting to runtime Firefox OS 2.0</em>" in der WebIDE angezeigt wird.</p>
+
+<h2 id="Die_Simulator-Oberfläche" style="line-height: 30px;">Die Simulator-Oberfläche</h2>
+
+<p><span style="line-height: 22.00800132751465px;">Der Simulator erscheint als eigenes Fenster, so dass der simulierte Bildschirm 320×480 Pixel groß ist. Um Berührereignisse zu simulieren, können Sie mit der Maustaste klicken und die Maus bei gedrückter Taste ziehen. Durch Klicken und Ziehen von rechts nach links vom Startbildschirm aus sehen Sie also die integrierten Apps, sowie solche, die Sie hinzugefügt haben</span><span style="line-height: 22.00800132751465px;">:</span></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7569/simulator-1.2_de.png" style="width: 810px; height: 625px; display: block; margin: 0px auto;"></p>
+
+<p>Der Simulator verfügt am unteren Rand über deine Symbolleiste mit zwei Schaltflächen:</p>
+
+<ul>
+ <li>Die linke Schaltfläche bringt Sie zum Startbildschirm oder schaltet den Simulator aus, wenn Sie sie gedrückt halten,</li>
+ <li>die rechte Schaltfläche ändert die Ausrichtung des Simulator zwischen Hoch- und Querformat. Dies erzeugt das Ereignis <a href="https://developer.mozilla.org/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/docs/WebAPI/Detecting_device_orientation">orientationchange</a>.</li>
+</ul>
+
+<h2 id="Einschränkungen_des_Simulators">Einschränkungen des Simulators</h2>
+
+<p>Beachten Sie, dass der Firefox-OS-Simulator keine perfekte Simulation ist.</p>
+
+<h3 id="Hardware-Einschränkungen">Hardware-Einschränkungen</h3>
+
+<p>Abgesehen von der Bildschirmgröße simuliert der Simulator keine hardwareseitigen Einschränkungen eines Firefox-OS-Geräts, wie den verfügbaren Speicher oder die CPU-Geschwindigkeit.</p>
+
+<h3 id="Audio-Video-Codecs">Audio-/Video-Codecs</h3>
+
+<p>Die folgenden Codecs hängen von hardwarebeschleunigter Dekodierung ab und werden daher noch nicht unterstützt:</p>
+
+<ul>
+ <li>MP3</li>
+ <li>AAC</li>
+ <li>H.264 (MP4)</li>
+ <li>WebM</li>
+</ul>
+
+<p>Dies bedeutet, dass es nicht möglich ist,  mit dem Simulator die Wiedergabe von Videos in Apps und Websites wie YouTube zu testen, die diese Codecs benötigen.</p>
+
+<h3 id="Nicht_unterstützte_APIs"><a name="Unsupported-APIs">Nicht unterstützte APIs</a></h3>
+
+<p>Bestimmte APIs, die auf dem Gerät funktionieren, funktionieren nicht im Simulator, was meist daran liegt, weil die unterstützende Hardware auf dem Desktop nicht verfügbar ist. Wir haben Simulationen für bestimmte APIs, wie Geolokation, eingebaut und fügen in zukünftigen Versionen vermutlich weitere hinzu. Derzeug werden die folgenden APIs allerdings nicht unterstützt. Deren Verwendung kann zu Fehlermeldungen oder einfach falschen Ergebnissen führen:</p>
+
+<ul>
+ <li><a href="/WebAPI/WebTelephony" title="/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="/docs/WebAPI/WebSMS" title="/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/docs/WebAPI/WebBluetooth" title="/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/docs/WebAPI/Using_Light_Events" title="/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/docs/WebAPI/Proximity" title="/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/docs/WebAPI/Network_Information" title="/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/docs/Online_and_offline_events" title="/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/docs/WebAPI/Vibration" title="/docs/WebAPI/Vibration">Vibration</a></li>
+</ul>
+
+<h2 id="Hilfe_erhalten"><a name="Simulator-help"></a>Hilfe erhalten</h2>
+
+<p><span style="line-height: 1.5;">Wenn Sie eine Frage haben, versuchen Sie, uns auf der </span><a href="https://lists.mozilla.org/listinfo/dev-developer-tools" style="line-height: 1.5;">Mailingliste dev-developer-tools</a><span style="line-height: 1.5;"> oder in </span><a href="irc://irc.mozilla.org/#devtools" style="line-height: 1.5;">#devtools auf irc.mozilla.org</a><span style="line-height: 1.5;"> zu erreichen.</span></p>
+
+<h3 id="Ausführliche_Protokollierung_aktivieren"><a name="Simulator-verbose-logging"></a>Ausführliche Protokollierung aktivieren</h3>
+
+<p>In der <a href="/docs/Tools/Web_Console">Web-Konsole</a>, die Sie über den <a href="/Firefox_OS/Using_the_App_Manager#Debugging">App-Manager</a> mit Ihrer App verknüpfen können, werden Nachrichten, von Ihrer App aufgezeichnet. Wenn Sie Nachrichten frühzeitig erfassen möchten, die während des Starts erscheinen, bevor die Konsole verbunden wird und funktioniert, können Sie im Simulator die ausführliche Protokollierung aktivieren.</p>
+
+<p>Öffnen Sie about:config und erstellen Sie ein neue Einstellung. Der Name der Einstellung hängt von der Version des Simulators ab:</p>
+
+<ul>
+ <li>extensions.fxos_1_3_simulator@mozilla.org.sdk.console.logLevel für Firefox OS 1.3</li>
+ <li>extensions.fxos_1_2_simulator@mozilla.org.sdk.console.logLevel für Firefox OS 1.2</li>
+</ul>
+
+<p>Setzen Sie den String-Wert auf „all“ und deaktivieren und reaktivieren Sie das Add-on im Add-ons-Manager. Jetzt erscheinen zusätzliche Nachrichten über die Ausführung des Simulators in der <a href="/docs/Tools/Browser_Console">Browser-Konsole</a>.</p>

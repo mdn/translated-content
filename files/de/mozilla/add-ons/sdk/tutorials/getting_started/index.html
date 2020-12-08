@@ -1,0 +1,214 @@
+---
+title: Getting started
+slug: Mozilla/Add-ons/SDK/Tutorials/Getting_started
+translation_of: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29
+---
+<p>This tutorial walks through creating a simple add-on using the SDK.</p>
+
+<h2 id="Prerequisites">Prerequisites</h2>
+
+<p>To create add-ons for Firefox using the SDK, you'll first need to follow the instructions to <a href="/en-US/Add-ons/SDK/Tutorials/Installation" rel="noreferrer">install and activate the SDK</a>. Once you've done that, you'll be looking at a command prompt.</p>
+
+<h2 id="Initializing_an_empty_add-on">Initializing an empty add-on</h2>
+
+<p>In the command prompt, create a new directory. The directory doesn't have to be under the SDK root: you can create it anywhere you like. Navigate to it, type <code>cfx init</code>, and hit enter:</p>
+
+<pre>mkdir my-addon
+cd my-addon
+cfx init
+</pre>
+
+<p>You'll see some output like this:</p>
+
+<pre>* lib directory created
+* data directory created
+* test directory created
+* doc directory created
+* README.md written
+* package.json written
+* test/test-main.js written
+* lib/main.js written
+* doc/main.md written
+Your sample add-on is now ready for testing:
+try "cfx test" and then "cfx run". Have fun!"
+</pre>
+
+<h2 id="Implementing_the_add-on">Implementing the add-on</h2>
+
+<p>Now you can write the add-on's code, which goes in the "main.js" file in your "lib" directory. This file was created for you in the previous step. Open it and add the following code:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://www.mozilla.org/");
+}
+</pre>
+
+<p>Save the file.</p>
+
+<p>Next, save these three icon files to the "data" directory:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="width: 16px; height: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="width: 32px; height: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="width: 64px; height: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Back at the command prompt, type:</p>
+
+<pre>cfx run
+</pre>
+
+<p>This is the SDK command to run a new instance of Firefox with your add-on installed. When Firefox launches, in the top-right corner of the browser you'll see an icon with the Firefox logo. Click the icon, and a new tab will open with <a href="https://www.mozilla.org/" rel="noreferrer">https://www.mozilla.org/</a> loaded into it.</p>
+
+<div class="note">
+<p>You might see an error message like this when you type cfx run:</p>
+
+<pre class="bz_comment_text" id="comment_text_0">A given cfx option has an inappropriate value:
+  ZIP does not support timestamps before 1980</pre>
+
+<p>If so, you've run into <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1005412">bug 1005412</a>, meaning that the icon files you downloaded are given a timestamp of 1970. Until this bug is fixed, the workaround is to use the <a href="http://www.linfo.org/touch.html"><code>touch</code></a> command to update the timestamps:</p>
+
+<pre>touch icon-16.png</pre>
+</div>
+
+<p>That's all this add-on does. It uses two SDK modules: the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> module, which enables you to add buttons to the browser, and the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> module, which enables you to perform basic operations with tabs. In this case, we've created a button whose icon is the Firefox icon, and added a click handler that loads the Mozilla home page in a new tab.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="width: 382px; height: 221px; display: block; margin-left: auto; margin-right: auto;">Try editing this file. For example, we could change the page that gets loaded:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+
+<p>At the command prompt, execute <code>cfx run</code> again. This time clicking it takes you to <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+
+<h2 id="Packaging_the_add-on">Packaging the add-on</h2>
+
+<p>When you've finished the add-on and are ready to distribute it, you'll need to package it as an XPI file. This is the installable file format for Firefox add-ons. You can distribute XPI files yourself or publish them to <a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a> so other users can download and install them.</p>
+
+<p>To build an XPI, just execute the command <code>cfx xpi</code> from the add-on's directory:</p>
+
+<pre>cfx xpi
+</pre>
+
+<p>You should see a message like:</p>
+
+<pre>Exporting extension to my-addon.xpi.
+</pre>
+
+<p>To test that this worked, try installing the XPI file in your own Firefox installation. You can do this by pressing the Ctrl+O key combination (Cmd+O on Mac) from within Firefox, or selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection dialog; navigate to the "my-addon.xpi" file, open it and follow the prompts to install the add-on.</p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>In this tutorial we've built and packaged an add-on using three commands:</p>
+
+<ul>
+ <li><code>cfx init</code> to initialize an empty add-on template</li>
+ <li><code>cfx run</code> to run a new instance of Firefox with the add-on installed, so we can try it out</li>
+ <li><code>cfx xpi</code> to package the add-on into an XPI file for distribution</li>
+</ul>
+
+<p>These are the three main commands you'll use when developing SDK add-ons. There's comprehensive <a href="/en-US/Add-ons/SDK/Tools/cfx" rel="noreferrer">reference documentation</a> covering all the commands you can use and all the options they take.</p>
+
+<p>The add-on code itself uses two SDK modules, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> and <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a>. There's reference documentation for all the <a href="/en-US/Add-ons/SDK/High-Level_APIs" rel="noreferrer">high-level</a> and <a href="/en-US/Add-ons/SDK/Low-Level_APIs" rel="noreferrer">low-level</a> APIs in the SDK.</p>
+
+<h2 id="What's_next">What's next?</h2>
+
+<p>To get a feel for some of the things you can do with the SDK APIs, try working through some of the <a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">tutorials</a>.</p>
+
+<h2 id="Advanced_techniques">Advanced techniques</h2>
+
+<h3 id="Overriding_the_built-in_modules">Overriding the built-in modules</h3>
+
+<p>The SDK modules you use to implement your add-on are built into Firefox. When you run or package an add-on using <code>cfx run</code> or <code>cfx xpi</code>, the add-on will use the versions of the modules in the version of Firefox that hosts it.</p>
+
+<p>As an add-on developer, this is usually what you want. But if you're developing the SDK modules themselves, of course, it isn't. In this case it's assumed that you have checked out the SDK from its <a href="https://github.com/mozilla/addon-sdk" rel="noreferrer">GitHub repo</a> and will have run the <a href="/en-US/Add-ons/SDK/Tutorials/Installation" rel="noreferrer">bin/activate</a> script from the root of your checkout.</p>
+
+<p>Then when you invoke <code>cfx run</code> or <code>cfx xpi</code>, you pass the "-o" option:</p>
+
+<pre>cfx run -o
+</pre>
+
+<p>This instructs cfx to use the local copies of the SDK modules, not the ones in Firefox.</p>
+
+<h3 id="Developing_without_cfx_run">Developing without cfx run</h3>
+
+<p>Because <code>cfx run</code> restarts the browser each time you invoke it, it can be a little cumbersome if you are making frequent changes to an add-on. An alternative development model is to use the <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/" rel="noreferrer">Extension Auto-Installer</a> add-on: this listens for new XPI files on a specified port and installs them automatically. That way you can test new changes without needing to restart the browser:</p>
+
+<ul>
+ <li>make a change to your add-on</li>
+ <li>run cfx xpi</li>
+ <li>post the add-on to the port specified</li>
+</ul>
+
+<p>You could even automate this workflow with a simple script. For example:</p>
+
+<pre>while true ; do cfx xpi ; wget --post-file=codesy.xpi http://localhost:8888/ ; sleep 5 ; done
+</pre>
+
+<p>Note that the logging level defined for the console is different when you use this method, compared to the logging level used when an add-on is run using <code>cfx run</code>. This means that if you want to see output from <a href="/en-US/Add-ons/SDK/Tutorials/Logging" rel="noreferrer"><code>console.log()</code></a> messages, you'll have to tweak a setting. See the documentation on <a href="/en-US/Add-ons/SDK/Tools/console#Logging_Levels" rel="noreferrer">logging levels</a> for the details on this.</p>
+
+<p>Another example using <a href="http://gruntjs.com/">grunt</a> and <a href="https://www.npmjs.com/package/grunt-shell">grunt-shell</a>:</p>
+
+<pre class="brush: js">module.exports = function(grunt) {
+  'use strict';
+  require('matchdep').filterDev('grunt-!(cli)').forEach(grunt.loadNpmTasks);
+  grunt.initConfig({
+    shell: {
+      xpi: {
+        command: [
+          'cd pluginpath',
+          'cfx xpi',
+          'wget --post-file=pluginname.xpi http://localhost:8888/ || echo&gt;/dev/null'
+        ].join('&amp;&amp;')
+      }
+    },
+    watch: {
+      xpi: {
+        files: ['pluginpath/**'],
+        tasks: ['shell:xpi']
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.registerTask('default', ['watch']);
+};</pre>

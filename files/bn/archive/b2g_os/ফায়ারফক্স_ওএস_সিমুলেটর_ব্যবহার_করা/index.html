@@ -1,0 +1,62 @@
+---
+title: ফায়ারফক্স ওএস সিমুলেটর ব্যবহার করা
+slug: Archive/B2G_OS/ফায়ারফক্স_ওএস_সিমুলেটর_ব্যবহার_করা
+translation_of: Archive/B2G_OS/Simulator
+---
+<p>ফায়ারফক্স ওএস সিম্যুলেটর হলো একটি ডেস্কটপে ব্যবহার উপযোগী একটি টুল যা আপনাকে দেবে একটি ফায়ারফক্স ওএস চালিত মুঠোফোনে আপনার অ্যাপটিকে পরীক্ষা করে দেখার অনুভূতি। ফায়ারফক্স মার্কেটপ্লেস এ জমা দানের পূর্বে অ্যাপগুলোকে যাচাই করে নেবার জন্য এটাই সবচাইতে সহজ ও উপযোগী পদ্ধতি। ফায়ারফক্স ওএস সিম্যুলেটরকে পূর্বে "r2d2b2g" নামে ডাকা হতো, কিন্তু ওটা বড্ড খটমটে শোনাত।</p>
+<p>সিম্যুলেটরটিকে ডেস্কটপ ফায়ারফক্সের একটি অ্যাড-অন হিসেবে প্যাকেজ করা আছে। ফায়াফক্স ১৭ এবং  তার পরবর্তী ভার্সনগুলোর যে কোনটিতে আপনি এটা ব্যবহার করতে পারেন।</p>
+<p>যদিওবা ফায়ারফক্স ওএস ডেস্কটপে চালাবার অন্যান্য ব্যবস্থা রয়েছে তবুও অ্যাপ ডেভেলপারদের জন্য এটাই সবচাইতে ভালো আর উপযোগী। যদি আপনি ফায়ারফক্স ওএস এর একজন কোর ওএস প্লাটফর্ম ডেভেলপার হয়ে থাকেন কিংবা অনুবাদক হিসেবে কাজ করেন তো আপনার চাহিদা আরও ভালোভাবে মেটাতে আরো বিভিন্ন টুল রয়েছে। সিম্যুলেটর এ্যাড-অনটিতে অন্তর্ভূক্ত রয়েছে টেস্ট এনভায়রনমেন্টে অ্যাপ যুক্ত করার ব্যবস্থা এবং এটিতে রিমোট ডিবাগিং, ওয়েব কনসোল এবং অন্যান্য ফিচারের সমর্থন রয়েছে। এটাতে আরো আছে একটি দৃশ্যমান হোম বাটন যা আপনি ক্লিক করতে পারেন এবং এটি ইউজার এজেন্ট স্ট্রিংকে ফায়ারফক্স ওএস ডিভাইসে ব্যবহৃত স্ট্রিংয়ের ন্যায় সেট করে। ফলে, একজন অ্যাপ ডেভেলপারকে প্রায় সব ধরণের স্বাচ্ছন্দ্যময় আর উপযোগী পরিবেশই তৈরী করে দেয়া হচ্ছে।</p>
+<h2 id="ফায়ারফক্স_ওএস_সিম্যুলেটর_ইন্সটল_করা">ফায়ারফক্স ওএস সিম্যুলেটর ইন্সটল করা</h2>
+<ol>
+  <li>ফায়ারফক্স ব্রাউজার ব্যবহার করে, এই লিংকটিতে যান: <a href="https://addons.mozilla.org/bn-BD/firefox/addon/firefox-os-simulator/" title="/bn-BD/firefox/addon/firefox-os-simulator/">https://addons.mozilla.org/addon/firefox-os-simulator/</a></li>
+  <li><strong>Add to Firefox (ফায়ারফক্সে যুক্ত করুন)</strong> - তে ক্লিক করুন। এটা বেশ বড় আকারের ফাইল। ডাউনলোড করা শেষ হলে স্ক্রিনের নির্দেশনাগুলো অনুসরণ করুন।</li>
+</ol>
+<div class="warning">
+  <p>অ্যাড-অনটির আকার বেশ বড় হবার কারনে ইনস্টল করার সময় কিছু সময়ের জন্য ফায়ারফক্স থেমে যেতে পারে এবং আনরেসপন্সিভ স্ক্রিপ্ট (unresponsive script) উইন্ডো দেখাতে পারে। এটার কারন অবশ্য <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814505" title="https://bugzilla.mozilla.org/show_bug.cgi?id=814505">বাগ ৮১৪৫০৫</a>. যদি এমনটা ঘটে তবে Continue (<em>অবিরত থাকুন)</em> বোতামটি চাপুন, এবং তাতে ফায়ারফক্স অ্যাড-অনটির ইনস্টল করতে থাকবে।</p>
+</div>
+<h2 id="সিম্যুলেটর_চালু_করা">সিম্যুলেটর চালু করা</h2>
+<ol>
+  <li><strong>ফায়ারফক্স</strong> মেন্যু (Windows) কিংবা <strong>Tools (সরঞ্জামাদি) </strong>মেন্যু (ম্যাক, লিনাক্স), থেকে <strong>Web Developer (ওয়েব মানোন্নয়নকারী</strong>) তে যান এবং <strong>Firefox OS Simulator (ফায়ারফক্স ওএস সিম্যুলেটর) </strong>এ ক্লিক করুন। ড্যাশবোর্ডটি সামনে চলে আসবে।
+    <p><img alt="Dashboard" height="378" src="/files/4487/dashboard.jpg" width="502"></p>
+  </li>
+  <li><strong>বন্ধ করা রয়েছে</strong> বোতামটিতে ক্লিক করুন। এটা <strong>চালু রয়েছে</strong> বোতামে পরিবর্তিত হবে এবং ফায়ারফক্স ওএস নিজস্ব উইন্ডো নিয়ে চালু হবে। প্রদর্শিত উইন্ডোটি পূর্বনির্ধারিত ৩২০x৪৮০ মাপে দেখা যাবে।<br>
+    <p><img alt="Simulator" src="/files/4485/simulator.jpg" style="width: 336px; height: 552px;"></p>
+    <p>সিম্যুলেটরটিকে বন্ধ করে দিতে ড্যাশবোর্ড থেকে <strong>Running (চালু রয়েছে)</strong> বোতামে চাপ দিন অথবা সিম্যুলেটর উইন্ডো বন্ধ করে দিন।</p>
+  </li>
+</ol>
+<div class="note">
+  <p><strong>উল্লেখ্য:</strong> আপনি Developer Tools (মানোন্নয়নকারী সরঞ্জামাদি) থেকে কমান্ড লাইন ব্যবহার করে যথাক্রমে <code>firefoxos start</code> এবং <code>firefoxos stop</code> কমান্ড দিয়ে সিম্যুলেটরটিকে চালু এবং বন্ধ করতে পারবেন।</p>
+</div>
+<h2 id="সিম্যুলেটরের_অভ্যন্তরে_পরিচালনা">সিম্যুলেটরের অভ্যন্তরে পরিচালনা</h2>
+<p>সোয়াইপ মোশন অনুকরণ করতে চাইলে মাউস দিয়ে ক্লিক ও ড্র্যাগ করুন। মাউসের স্ক্রল হুইলটি এ্যাপকে উপরে নিচে ওঠানামা করাবে, যেমন Settings এ্যাপ। লং প্রেস (long press) সিম্যুলেট করার জন্য মাউসের বাটন চেপে ধরে রাখুন।</p>
+<p>হোম স্ক্রিনে ফিরে যেতে চাইলে সিম্যুলেটরের নিচের হোম বাটনে চাপ দিন, অথবা আপনার কীবোর্ডের <strong>Home</strong> কী-তে চাপ দিন। যেসকল ম্যাক কীবোর্ডের <strong>Home</strong> কী নেই, সেখানে <strong>Fn + বাম এ্যারো</strong> ব্যবহার করা যেতে পারে।</p>
+<h2 id="কনসোল_চেকবক্স">কনসোল চেকবক্স</h2>
+<p>আপনার এ্যাপ নিয়ে কাজ করার সময় উদ্ভুত এরর বা ত্রুটিগুলো খুঁজে পাবার জন্য সিম্যুলেটর চালু করার পূর্বে Console চেকবক্সে ক্লিক করে নিন, এতে একটি এরর কনসোল (Error Console) চালু হয় উদ্ভুত এররসমূহ প্রদর্শন করবে।</p>
+<h2 id="সিমুলেটরে_অন্তর্ভুক্ত_ওয়েব_এপিআই(Web_API)_সমূহ">সিমুলেটরে অন্তর্ভুক্ত ওয়েব এপিআই(Web API) সমূহ</h2>
+<p>মোজিলা নেটিভ প্লাটফর্মের সুযোগ সুবিধা ওপেন ওয়েব এ্যাপে প্রদান করার জন্য বিভিন্ন ওয়েব এপিআই (WebAPI) নিয়ে কাজ করছে। বর্তমান সিম্যুলেটরে সমর্থিত ওয়েব এপিআইসমূহ হল:</p>
+<ul>
+  <li>Contacts API</li>
+  <li>Settings API</li>
+  <li><span style="color: #ff0000;"><span style="background-color: #ffff00;">? আর কোন কোন এপিআই ?</span></span></li>
+</ul>
+<h2 id="সিম্যুলেটরে_একটি_অ্যাপ_ইনস্টল_করা">সিম্যুলেটরে একটি অ্যাপ ইনস্টল করা</h2>
+<p>সিম্যুলেটরে হোস্টেড এ্যাপ (Hosted App) ইন্সটল করতে চাইলে, URL বক্সে এ্যাপটির ম্যানিফেস্টের URL টি লিখুন এবং  <strong>Add Manifest</strong> বাটনে চাপ দিন। এর ফলে এ্যাপটি সিম্যুলেটরে ইন্সটল হবে। আপনার পরীক্ষা করার জন্য নিচে একটি পরীক্ষামূলক আবহাওয়া পূর্বাভাসের এ্যাপের ম্যানিফেস্টের লিংক দেওয়া হল।</p>
+<pre>http://jlongster.github.com/weatherme/manifest.webapp</pre>
+<p>এ্যাপের আইকনটি হোমস্ক্রিনগুলোর যেকোন একটিতে যুক্ত হবে।</p>
+<p>You can also install a plain website in the same way. Just type the website's URL in the box and click <strong>Add URL</strong>, and an icon for the site will be added to a home screen. Autocompletion works if you have the website open in another tab.</p>
+<p>To install a packaged app in the Simulator, click the <strong>Add Directory</strong> button, then select the mini-manifest of the app on your local filesystem.</p>
+<p>To remove an app from the Simulator, click the <strong>Remove</strong> link for the app in the dashboard. You may have to restart the Simulator to see it gone.</p>
+<h2 id="একটি_অ্যাপ_আপডেট_করা">একটি অ্যাপ আপডেট করা</h2>
+<p>If you are working on an app and need to update it in the Simulator, click the app's Update button in the dashboard. You will have to restart the Simulator. Hosted apps follow the usual rules for Website caching and working with appcache.</p>
+<h2 id="বাগ_রিপোর্ট_করা">বাগ রিপোর্ট করা</h2>
+<p>মনে রাখবেন এই সিমুলেটরটি একেবারেই নতুন একটি টুল এবং বর্তমানে ডেভেলপমেন্ট পর্যায়ে রয়েছে। যদি আপনি এতে কোনরূপ ত্রুটি / বাগ দেখতে পেলে অনুগ্রহ করে <a href="https://github.com/mozilla/r2d2b2g/issues?state=open" title="https://github.com/mozilla/r2d2b2g/issues?state=open">আমাদেরকে জানিয়ে দিন</a>।</p>
+<h2 id="অতিরিক্ত_তথ্য">অতিরিক্ত তথ্য</h2>
+<p>সিমুলেটরটি <a href="/bn-BD/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client" title="/bn-BD/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client">ফায়ারফক্স ওএস ডেস্কটপ ক্লায়েন্ট </a> (যা বিটুজি(B2G)  ডেস্কটপ ক্লায়েন্টও বলা হয়),<br>
+  ফায়ারফক্স ওএস এর একটি বিল্ড যা উইন্ডোজ,ম্যাক এবং লিনাক্সে চলে। ফায়ারফক্স ওএস সিমুলেটর<br>
+  ফায়ারফক্স ওএস ডেস্কটপ এ অ্যাপ নিরীক্ষা করা সহজ করে দিয়েছে কারণ এটি পরিবেশ(environment)এ অ্যাপ যোগের বৈশিষ্ট্য অর্ন্তভুক্ত করেছে এবং অ্যাপ ডেভেলপারদের<br>
+  দরকার অনুযায়ী এটিকে কনফিগার/বিস্তৃত করা সম্ভব।<br>
+  যদিও সিমুলেটরটি ফায়ারফক্স ওএস ডেস্কটপ ক্লায়েন্ট ব্যবহার করে করে ,বিটুজি(B2G) ডেস্কটপ<br>
+  গায়া এবং বিটুজি(B2G) এর ক্ষেত্রে প্রযোজ্য ডকুমেন্টেশন সিমুলেটর এর ক্ষেত্রেও কিছু ক্ষেত্রে<br>
+  প্রযোজ্য। এখানে সে সমস্ত ডক এর কিছু দেওয়া হল :</p>
+<p><a href="/bn-BD/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client" title="/bn-BD/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client">ফায়ারফক্স ওএস এর ডেস্কটপ ক্লায়েন্ট ব্যবহার করা</a></p>
+<p><a href="https://wiki.mozilla.org/Gaia/Hacking" title="https://wiki.mozilla.org/Gaia/Hacking">গায়া (Gaia) হ্যাক করা</a></p>

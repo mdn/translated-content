@@ -1,0 +1,36 @@
+---
+title: Preferences System
+slug: Preferences_System
+tags:
+  - XUL
+translation_of: Mozilla/Preferences/Preferences_system
+---
+<p>Dieses Dokument beschreibt das neue Aviary Toolkit Einstellungssystem. Mit der Verwendung dieses Systems ist es möglich Einstellungsfenster zu erstellen, die auf verschiedenen Plattformen (Windows, MacOS X und GNOME) angezeigt und ausgeführt werden können.</p>
+<p><strong>Hinweis:</strong> Das Einstellungssystem ist erst ab Firefox/Thunderbird 1.5 (und deren alpha und beta Releases) verfügbar. Es kann nicht in Firefox 1.0-basierenden Anwendungen und Erweiterungen benutzt werden.</p>
+<p>Das neue System ist durch einige <a href="/en/XUL" title="en/XUL">XUL</a> Elemente und Attribute implementiert. Referenzinformationen über diese sind unter den folgenden Links verfügbar:</p>
+<div class="moreinfo">  <p><strong><a href="/de/docs/Preferences_System">Einstellungssystem</a>dokumentation:</strong></p>  <ul>    <li>Einführung: <a href="/de/docs/Preferences_System/Erste_Schritte">Erste Schritte</a> | <a href="/de/docs/Preferences_System/Beispiele">Beispiele</a> | <a href="/de/docs/Preferences_System/Fehlerbehebung">Fehlerbehebung</a></li>    <li>Referenz: <code><a href="/de/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/de/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/de/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/de/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/de/docs/Preferences_System/Neue_Attribute">XUL Attribute</a></li>  </ul></div>
+<h3 id="Verwendung">Verwendung</h3>
+<p>Der Code für ein typisches Einstellungsfenster könnte in etwa so aussehen:</p>
+<pre>&lt;prefwindow id="appPreferences"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;prefpane id="pane1" label="&amp;pane1.title;"&gt;
+    &lt;preferences&gt;
+      &lt;preference id="pref1" name="pref.name" type="bool"/&gt;
+    &lt;/preferences&gt;
+
+   .. UI elements that refer to the preferences above, e.g.:
+    &lt;checkbox id="check1" preference="pref1"
+              label="&amp;check1.label;" accesskey="&amp;check1.accesskey;"/&gt;
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="pane2" label="&amp;pane2.title;" src="chrome://uri/to/pane.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p>Die pane Inhalte können inline festgelegt werden oder eine externe chrome URI sorgt für die Inhalte über ein dynamisches Overlay. Die <a class=" external" href="http://en.wikipedia.org/wiki/Human_interface_guidelines" title="http://en.wikipedia.org/wiki/Human_interface_guidelines">HIGs</a> sollten für die angestrebten Plattformen gründlich gelesen werden und der XUL Präprozessor sollte, wenn nötig, verwendet werden, um unterschiedlich passende Fenstertitel festzulegen. Außerdem sollte man vorsichtig sein, wenn man die Breite des Fensters (in em) angibt, genau wie die Höhe des Fenster (in em), denn bei einigen Plattformen verändert sich die Fenstergröße nicht so wie das ausgewählte Panel verändert wird (z.B. Windows).</p>
+<h3 id="Verwendung_in_XULRunner_Anwendungen">Verwendung in XULRunner Anwendungen</h3>
+<p>Wird <code>openDialog()</code> aufgerufen, um einen Einstellungsdialog zu öffnen, sollte "toolbar" im <code>features</code> String enthalten sein. Beispiel:</p>
+<pre class="eval">var features = "chrome,titlebar,toolbar,centerscreen,modal";
+window.openDialog(url, "Preferences", features);
+</pre>
+<h3 id="Bugzilla">Bugzilla</h3>
+<p>Die Komponente für Bugs in den „Preferences bindings“ (aber nicht in den Options UIs von Firefox/Thunderbird) ist »Toolkit:Preferences« (<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit">Fehler melden</a> <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Toolkit&amp;component=Preferences&amp;resolution=---&amp;chfieldto=Now">Offene Bugs auflisten</a>).</p>

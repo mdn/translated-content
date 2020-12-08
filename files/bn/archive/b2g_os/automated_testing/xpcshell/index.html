@@ -1,0 +1,55 @@
+---
+title: XPCShell
+slug: Archive/B2G_OS/Automated_testing/XPCShell
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Guide
+  - XPCOM
+  - XPCShell
+  - automated
+  - tests
+translation_of: Archive/B2G_OS/Automated_testing/XPCShell
+---
+<div class="summary">
+ <p><span class="seoSummary"><a href="/en-US/docs/Writing_xpcshell-based_unit_tests" title="/en-US/docs/Writing_xpcshell-based_unit_tests">XPCShell tests</a> are headless tests of Gecko XPCOM APIs. You can run XPCShell tests on B2G; in this article we will look at how to do so. Currently, these are mainly tested on the emulator, but should in theory run on devices as well. </span></p>
+</div>
+<div class="note">
+ <p><strong>নোটঃএই অনুচ্ছেদে  </strong><code>$B2G_HOME</code> সুপারিশ করে থাকে  B2G রেস্পেরোটরি ক্লোন করে থাকে ।</p>
+</div>
+<h2 id="Prerequisites">Prerequisites</h2>
+<ul>
+ <li>You need to build B2G for the target you're testing (see: <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS" title="/en-US/Firefox_OS/Building_and_installing_Firefox_OS">Building and installing Firefox OS</a>).</li>
+ <li>You need to install some Python packages, either in a virtualenv or otherwise:
+  <pre>cd $GECKO_DIR/testing/mozbase
+python setup_development.py
+cd $GECKO_DIR/testing/marionette/client
+python setup.py develop
+</pre>
+ </li>
+ <li>Either make sure <code>adb</code> is on your path or specify it with <code>--adbpath</code> (on Linux it is found at <code>$B2G_HOME/out/host/linux-x86/bin/adb</code><em>.</em>)</li>
+ <li>Have a local copy of <a href="http://busybox.net/downloads/binaries/latest/busybox-armv6l">Busybox</a> (this isn't strictly necessary but greatly reduces the setup time required.)</li>
+</ul>
+<h2 id="Running_the_tests">Running the tests</h2>
+<p>You can then run xpcshell tests using one of the following sets of terminal commands:</p>
+<p>If you are using an emulator:</p>
+<pre>cd $B2G_HOME/objdir-gecko
+make package-tests
+cd dist/test-stage/xpcshell
+python runtestsb2g.py --b2gpath $B2G_HOME --adbpath $ADB_PATH --emulator arm --use-device-libs --manifest &lt;<a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests#Adding_your_tests_to_the_xpcshell_manifest">path_to_xpcshell_manifest</a>&gt; --testing-modules-dir &lt;path_to_testing_modules_dir&gt; --busybox &lt;path_to_busybox_binary&gt;</pre>
+<p>If you are using a real device:</p>
+<pre>cd $B2G_HOME/objdir-gecko
+make package-tests
+cd dist/test-stage/xpcshell
+python runtestsb2g.py --b2gpath $B2G_HOME --adbpath $ADB_PATH --use-device-libs --manifest &lt;<a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests#Adding_your_tests_to_the_xpcshell_manifest">path_to_xpcshell_manifest</a>&gt; --testing-modules-dir &lt;path_to_testing_modules_dir&gt;</pre>
+<p>You can optionally add <code>--total-chunks</code> and <code>--this-chunks</code> arguments as you would with regular desktop xpcshell tests. Use:</p>
+<pre>python runtestsb2g.py --help</pre>
+<p>for a full list of supported arguments.</p>
+<p><strong>Important:</strong> The manifest path you supply must be under the <code>dist/test-stage/xpcshell</code> directory. Don't use a path to the original source location of the manifest in the tree.</p>
+<p>After you invoke <code>runtestsb2g.py</code>, the test runner will launch the emulator for you (if you're running the tests on an emulator) or reboot your device (if you're running the tests on a device), and start running the tests. Because the emulator is slow, and it is necessary to push a test profile to the emulator and restart B2G, the tests can take a few minutes to start. Before they start, you will just see a black or white screen. After they start, you should see the test log being dumped to the console.</p>
+<p>When the tests are done, the emulator is shut down for you, or if you're using a device, the device is rebooted.</p>
+<h3 id="Installing_busybox_manually">Installing busybox manually</h3>
+<p>When running xpcshell tests on devices there is no <code>--busybox</code> option, so setting up the test run can take a very long time. Fortunately you can still install it manually prior to running the tests. For an example of how to do this see <a href="https://github.com/mozilla/Negatus/blob/master/setup-tools.sh" title="https://github.com/mozilla/Negatus/blob/master/setup-tools.sh">https://github.com/mozilla/Negatus/blob/master/setup-tools.sh</a>.</p>
+<h2 id="Running_xpcshell_tests_with_a_downloaded_emulator">Running xpcshell tests with a downloaded emulator</h2>
+<p>If you've built B2G for another config (like otoro) and want to run the tests on an emulator, you can do so without building an emulator yourself.  Just download the latest trunk arm emulator, and use the same instructions as above, replacing the <code>--b2gpath $B2G_HOME</code> argument for <code>runreftestb2g.py</code> with <code>--b2gpath /path/to/unpacked/emulator</code>.</p>

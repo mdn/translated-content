@@ -1,0 +1,122 @@
+---
+title: Testing Gaia code changes
+slug: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+tags:
+  - B2G
+  - Contributing
+  - Firefox OS
+  - Gaia
+  - Guide
+  - Integration
+  - Testing
+  - UI
+  - 'l10n:priority'
+translation_of: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+---
+<div class="summary">
+ <p><span class="seoSummary">যখন আপনি গায়া ডাটাবেসে নতুন কোন পরিবর্তন আনবেন তখন এবং এটি কাজ করবে , পরবর্তি স্টেপ হল টেস্টিং প্রক্রিয়া থেকে আপনার কাজ হল পরিবর্তন  — এবং গায়ার বাকি কিছুর সাথে কাজ করে থাকে  — প্রজেক্ট এর প্যাচ জমা দেয়ার পুর্বে  দেখে নেয় ।এই অনুচ্ছেদ তা ব্যাখা করে থাকে। </span></p>
+</div>
+<p>টেস্টিং প্রক্রিয়া সাধারন্ত গঠিত হয়ঃ</p>
+<ul>
+ <li>সট্যান্ডার্ড ডিবাগিং প্রক্রিয়া</li>
+ <li> automated tests চালানো</li>
+</ul>
+<p>চলুন পরীক্ষা করি কিছু নতুন এলাকা এখন ।</p>
+<h2 id="Standard_ডিবাগিং">Standard ডিবাগিং</h2>
+<p>যদি আপনি একজন অভিজ্ঞ ওয়েব ডেভেলপার হয়ে থাকেন তবে গায়া কোড আপনার কাছে একটি স্বাভাবিক প্রক্রিয়া আমরা ইতিমধ্যে কিভাবে <a href="/en-US/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase#Running_Gaia_in_Desktop_Firefox">run Gaia in your Desktop Firefox installation</a> কাজ করে তা জানিয়েছি এবং <a href="/en-US/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes#Simple_code_change_example">make a basic change</a> কিভাবে করে ।আরো জটিল ডাটাবেসের কারনে ,আপনাকে একটি Firefox ডিবাগিং টুলস  Desktop Firefox এ দেখতে হবে ।<br>
+ <br>
+ <strong>নোটঃ</strong> <a href="/en-US/docs/Tools">Tools zone</a> তে টুলস ব্যবহারের অনেক তথ্য পাওয়া যাবে ।</p>
+<h2 id="Automated_tests">Automated tests</h2>
+<p>আপনাকে স্ট্যান্ডার্ড অটোমেটেড টেস্ট ঠিক করে যে একটি প্যাচ যা গায়া কোড  জমা দেয়ার আগে রান করাতে হয়ে থাকে ,নিশ্চিত করতে হবে যে আপনার কোড কোন ফোনের ফাংশনে জরুরী কাজে বাধা প্রদান করে না ।টেস্টগুলো আপনি রান করতে পারেনঃ</p>
+<ul>
+ <li>unit tests</li>
+ <li>integration tests</li>
+ <li>performance tests</li>
+ <li>UI tests</li>
+</ul>
+<p>আমরা সাধারনত জিজ্ঞাসা করে থাকি যে আপনি টেস্ট রান করুন একটি প্যাচ জমা দেয়া শেখানো  হয়ে থাকে ; আপনি যদি নতুন কন্ট্রিবুটর হয়ে থাকেন তবে সেক্ষেত্রে আপনি ভবিষ্যতে একজন ভাল কন্ট্রিবিউটর হতে জিজ্ঞাসা করতে হবে । আপনাকে গায়া  রেপু আপডেটেড করতে হবে টেস্টটি রান করার আগে , এবং নিশ্চিত করুন যে আপনি একজন নতুন কন্ট্রিবিউটর হোয়ার আগে ।</p>
+<div class="note">
+ <p><strong>নোটঃ আপনি আরো বেশি তথ্য  কিভাবে </strong> <a href="/en-US/Firefox_OS/Platform/Automated_testing">Firefox OS Automated testing page</a> এর উপরে কাজ করে তা  দেখুন ।</p>
+</div>
+<div class="note">
+ <p><strong>নোটঃ যদি সব সময় পাওয়া যায় তবে আপনাকে একটি অ্যাপ রান করা হয়ে থাকে একটি রিয়াল ডিভাইসের উপরে ( কিছু ফিচারস /হার্ডোয়্যার এমুলেটরেরের উপরে সাপোর্টেড নয়) </strong>অথবা B2G Desktop emulator অথবা  Firefox Nightly iযদি নয় ।</p>
+</div>
+<h3 id="Unit_tests">Unit tests</h3>
+<p>উনিট টেস্ট গুলো হল নিজস্ব কোডের বড় অ্যাপলিকেশনের জন্য —গায়ার ক্ষেত্রে ,নির্দিষ্ট অ্যাপ।গায়া ব্যবহার করেঃ</p>
+<ul>
+ <li><a href="http://visionmedia.github.io/mocha/">mocha</a> ফ্রেম ওয়ার্কের জন্য</li>
+ <li><a href="http://chaijs.com/api/assert/">chai</a>  এসেট লাইব্রেরি হিসেবে</li>
+ <li><a href="http://sinonjs.org/">sinon.js</a> মক এবং স্টাব লাইব্রেরির জন্য</li>
+ <li><a href="http://blanketjs.org/">blanket.js</a> টেস্ট কাভারেজের টুল</li>
+</ul>
+<p>আপনি ডাউনলোড করতে নিচেরটা কমান্ড করতে পারেন , ইন্সটল এবং হোস্ট একটি উনিটেস্ট সার্ভার  (কিছুক্ষন এটি রান করুন ,সুতরাং একটি কাপ চা করতে যে সময় লাগে)ঃ</p>
+<pre class="brush: bash">DEBUG=1 make
+export FIREFOX=/Applications/FirefoxNightly.app/Contents/MacOS/firefox
+bin/gaia-test</pre>
+<p>এটা একটি নতুন ওয়েব পেজ খুলে দিবে একটি নতুন উনিট টেস্টের সাথে ।রান করুনঃ</p>
+<ul>
+ <li> পেজের টেস্টটি রান করুন লিস্ট থেকে  (একটি এস্টারিস্ক তাদের পাশে থাকে )</li>
+ <li> "Execute" বাটনে চাপুন ।</li>
+ <li>রেজাল্ট দেখতে পেজের প্রথমে স্ক্রল করুন ।</li>
+</ul>
+<p>উইন্ডোটী খুলে দিয়ে ,আপনি ফুল টেস্ট রান করতে পারেন একটি নতুন টারমিনাল উইন্ডো থেকেঃ</p>
+<pre class="brush: bash">make test-agent-test</pre>
+<div class="note">
+ <p><strong>নোটঃ এটা অনেক বিশাল সময় , যেহেতু অনেক টেস্ট আছে রান করার জন্য </strong> (বিশেষ ভাবে একটি ঘন্টা অথবা আরো বেশি ), যেহেতু আপনাকে সম্ভবত টেস্টটি রান করানো জন্য অ্যাপটি মোটিভেটেড করতে হবে ।আপনাকে  <code>APP=&lt;app folder name&gt;</code> উপরে কমান্ড করতে হবে ,উদাহরন হিসেবে <code>APP=settings</code>.</p>
+</div>
+<div class="note">
+ <p><strong>নোটঃআপনাকে আরো পড়তে হবে  </strong> <a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests">Gaia Unit Tests</a>  আরো উনিট টেস্ট তথ্যের জন্য।</p>
+</div>
+<h3 id="ইন্ট্রেগেশন_টেস্ট">ইন্ট্রেগেশন টেস্ট</h3>
+<p>ইন্ট্রেগেশন টেস্টিং বিভিন্ন কোডের একত্রে একটি গ্রুপে কাজ করে থাকে তারা কিভাবে কাজ করে তা দেখার জন্য ,এবং লজিকাল নেক্সট স্টেপ উনিট টেস্টিং এর পরে ।গায়া  JavaScript এ লেখা হয়ে থাকে মেরিঅনেটের স্ক্রিপ্ট ইন্ত্রেগাশনের দ্বারা এবং একটি python-based সার্ভার ।এটা গেটকো এর সাথে যোগাযোগ করতে পারে সুতরাং ইহা সম্ভব ব্রাউজারে কন্ট্রলের জন্য এবং Firefox OS ডিভাইস,এবং তাদের প্রত্যেকের সাথে সংযুক্ত ।</p>
+<p>আপনি ট্রিগারটি ইন্ট্রেগাশন টেস্টের জিন্য কমান্ড দিতে পারেনঃ</p>
+<pre class="brush: bash">make test-integration</pre>
+<div class="note">
+ <p><strong>নোটঃ উনিট টেস্ট হিসেবে সকল ইন্টারোগেশন  টেস্ট রান কর যা ঐ সময়ে সময় গ্রহন করে থাকে ,সুতরাং আপনি প্রকাশ করতে পারেন </strong> <code>APP=&lt;app ফোল্ডার  name&gt;</code>  এর উপরে  একটি টেস্ট সিঙ্গেলে  অ্যাপ।উদাহরন হিসেবে ,<code>APP=calendar</code>.</p>
+</div>
+<div class="note">
+ <p><strong>নোটঃ আরো বেশি ইনটেগ্রাশনের জন্য ,পড়ুন </strong><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia integration tests</a>.</p>
+</div>
+<h3 id="Performance_tests">Performance tests</h3>
+<p>গায়া পারফরমেন্স ট্রিগার করবে B2G Desktop,কিছু সময়ে অ্যাপ উদ্বোধন করবে এবং ক্যাল্কুলেট করবে একটি গড় গড় লোড সময় । একটি রানিং টেস্ট করার জন্য ,পারফরমেন্স ফ্রেমোয়ার্ক মেমোরি ব্যবহারের সংগ্রহ করবে অ্যাপটি এবং সিস্টেম প্রসেস(<code>b2g</code>).</p>
+<p>টেস্টটি রান করার জন্য আপনাকে প্রয়োজন B2G Desktop ইন্সটল্ড করা ,এবং কমাণ্ড গুলো দেখুন</p>
+<pre class="brush: bash">make টেস্ট -পারফ</pre>
+<div class="note">
+ <p><strong>নোটঃ অন্যান্য টেস্ট টাইপ অনুসারে , আপনি </strong> <code>APP=&lt;app folder name&gt;</code> একটি সিঙ্গেল অ্যাপ এ দেখাতে সম্ভব ।উদাহরন হিসেবে<code>APP=settings</code>.</p>
+</div>
+<p>সম্পুর্ন গড় একটি  <code>mozPerfDurationsAverage</code>ভ্যালু হিসেবে রিটার্ন দিবে,যেমনঃ</p>
+<pre class="brush: json">"mozPerfDurationsAverage": 225.5</pre>
+<p>গড় অ্যাপের লোড সময় হল মিলিসেকেন্ড ; অপ্টিমাল ব্যবহারের জন্য আপনাকে ১ সেকেন্ড সময় নিতে হবে । এই পারফমেন্স কিছু বিস্তারিত ব্যবহারের ভ্যালু আপনাকে ফেরত দিবেঃ</p>
+<pre class="brush: json">{
+  "app": {
+    "name": "Settings",
+    "uss": 16.6,
+    "pss": 19.5,
+    "rss": 32.9,
+    "vsize": 73.3
+  },
+  "system": {
+    "name": "b2g",
+    "uss": 50.1,
+    "pss": 53.2,
+    "rss": 67,
+    "vsize": 148.1
+  }
+},</pre>
+<p>টেস্ট পারফরের সবচেয়ে মুল নিয়ম হল "lower numbers are better"; উপরের সংখ্যাগুলো নিচের গুলোকে দেখায়ঃ</p>
+<ul>
+ <li><code>uss</code>: unique set size</li>
+ <li><code>pss</code>: proportional set size</li>
+ <li><code>rss</code>: resident set size</li>
+ <li><code>vsize</code>: virtual set size</li>
+</ul>
+<p>সাধারনত Generally <code>vsize</code> &gt;= <code>rss</code> &gt;= <code>pss</code> &gt;= <code>uss</code> . <code>vsize</code> এবং <code>rss প্রসেসরের অন্য প্রসেসরের ব্যবহারের সাথে কোন কিছু শেয়ারের প্রতিচ্ছবি দেয় না।</code>সুতরাং দুটি সংখ্যা যা আপনি দেখতে চান তা হল  <code>pss</code> এবং <code>uss</code>.<br>
+ <br>
+ <code>uss হল ইউনিক প্রসেসের সম্পুর্ন মেমোরি । যদি সঠিক সময়ে মেমোরি টারমিনেটেড হয়ে থাকে তবে এটা মেমোরির পরিমান এটা বিবর্তনের চাবিকাঠি।</code><br>
+ <br>
+ <code>pss</code> হল প্রসেসরেরলাইব্রেরি শেয়ারের প্রফেসনাল আকার। এটা মনে করায় যে প্রসেস যদি টারমিনেটেড হয় তবে এটা বাহির হবে না।</p>
+<div class="note">
+ <p><strong>নোটঃআরো বেশি পারফরমেন্সের জন্য,পড়ুন </strong><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests">Gaia performance tests</a>.</p>
+</div>
+<h3 id="UI_tests">UI tests</h3>
+<p>দেখুন   <a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">Gaia UI Tests Introduction</a>.</p>

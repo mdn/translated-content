@@ -1,0 +1,103 @@
+---
+title: Site Compatibility Testing for Firefox for Android
+slug: Mozilla/Firefox_fuer_Android/Compatibility_Testing
+translation_of: Mozilla/Firefox_for_Android/Compatibility_Testing
+---
+<h2 id="Overview">Overview</h2>
+<p>Our goal, is to <strong>open up the Web to all mobile browsers via promotion of standards and best practices</strong>.</p>
+<p>However, some websites serve content either that doesn't function well or that is different than that served to some specific popular mobile browsers of the moment. This content may be:</p>
+<ul>
+  <li>A basic mobile site</li>
+  <li>A traditional desktop site</li>
+  <li>A WAP (Wireless Application Protocol) site designed for a feature phone</li>
+  <li>A touch-optimized mobile site that is broken visibly or functionally</li>
+</ul>
+<p>We refer to this category of issues as <strong>Web compatibility issues</strong>. Web compatibility issues (for Firefox for Android, Firefox OS and other browsers with limited market share in one or more regions) typically result from one or more of several causes:</p>
+<dl>
+  <dt>
+    User-agent sniffing</dt>
+  <dd>
+    Identifying the browser by its user-agent string and sending different content.</dd>
+  <dt>
+    Use of non standard (typically Webkit) CSS properties</dt>
+  <dd>
+    Using non standard CSS properties that the browser does not recognize, causing layout or style issues</dd>
+  <dt>
+    Use of non standard (typically Webkit) DOM properties</dt>
+  <dd>
+    Using non standard DOM properties in JavaScript that the browser does not recognize, causing functional issues</dd>
+  <dt>
+    Browser limitations</dt>
+  <dd>
+    Using standard CSS and DOM properties that the browser does not currently implement or that have functional or performance issues</dd>
+</dl>
+<p>For <strong>Firefox</strong> specifically, we need your help to identify sites that do not work well by reporting the specific issues that you find in your investigation. Other browsers vendors have bug reporting systems, where you can report the issues as well for their specific browser.</p>
+<p>Outlined below are steps that you can follow to identify and report site issues.</p>
+<h2 id="Setup">Setup</h2>
+<p>To start, let's set up your hardware and software for compatibility testing.</p>
+<ol>
+  <li>An Android phone is a prerequisite for testing Firefox for Android. See our <a href="http://www.mozilla.org/firefox/mobile/platforms/" title="http://www.mozilla.org/firefox/mobile/platforms/">list of supported devices for Firefox for Android</a> to ensure that your phone is supported.</li>
+  <li>Install <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox for Android from Google Play</a>.</li>
+  <li>Install the <a href="https://addons.mozilla.org/en-US/android/addon/phony/">Phony</a> Add-on for Firefox on Android. This add-on lets Firefox for Android pretend to be another browser by changing the <a href="https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent" title="https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent">user-agent</a> string that is sent with each HTTP request.</li>
+  <li><a href="https://bugzilla.mozilla.org/createaccount.cgi" title="https://bugzilla.mozilla.org/createaccount.cgi">Set up an account on bugzilla</a> so that you can report issues.</li>
+</ol>
+<p><strong>Optional steps:</strong></p>
+<ul>
+  <li>Install Firefox for Android for a different release channel: <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta" title="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta">Beta</a>, <a href="http://www.mozilla.org/en-US/mobile/aurora/" title="http://www.mozilla.org/en-US/mobile/aurora/">Aurora</a>, or <a href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nightly</a>.</li>
+  <li>You can try to reproduce and debug issues that you discover in Desktop Firefox. Install Desktop Firefox for Windows, Linux or Mac OS X and an <a href="https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/?src=search" title="https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/? data-cke-saved-src=search src=search">add-on like Phony for the desktop</a>.</li>
+</ul>
+<div class="note">
+  <p>Note: See the article<a href="https://developer.mozilla.org/en/Browser_detection_using_the_user_agent"> Browser detection using the user agent</a> for an in-depth explanation about browser user-agents.</p>
+</div>
+<h2 id="Compatibility_Testing">Compatibility Testing</h2>
+<p>The following steps walk you through the method that Mozilla QA uses for compatibility testing:</p>
+<ol>
+  <li>Select a site to test.
+    <ul>
+      <li>This may be a site that you already visited and saw that something is wrong in your daily browser usage.</li>
+      <li>Alternatively, you can select one of the top sites listed on the <a href="http://arewecompatibleyet.com" title="http://arewecompatibleyet.com">Are We Compatible Yet report</a>. Sites that have not yet been investigated are shown in white.</li>
+    </ul>
+  </li>
+  <li>Open the site that you selected in Firefox for Android. Test the functionality of the site by exploring different areas of the site. For example, if the site displays articles, pictures, and videos, you should explore all three areas of the site. Click on links, use forms, create accounts, sign in, and question:
+    <ol>
+      <li>Is the site a desktop site? If so, skip to #3 and #4 to determine if Safari on iPhone and the Android browser are served the same desktop content.</li>
+      <li>Does the site have obvious layout problems? Are elements positioned on top of one another? Is there missing content? Do menus display correctly? Are header background colors correct? Are areas of the page shown correctly? Does the site simply look bad?<br>
+         </li>
+    </ol>
+  </li>
+  <li>Visit the same website using your device’s Android browser, using the same exploration methods in #2, and question:
+    <ol>
+      <li>Is the site a desktop site? Does the content greatly differ than what you saw on Firefox for Android? If so, how is it different? Is it a mobile optimized site?</li>
+      <li>Are there any similar layout issues as seen in Firefox for Android? If so, what problems do you see with Firefox for Android that you do not see in the Android browser?<br>
+         </li>
+    </ol>
+  </li>
+  <li>Make Firefox for Android appear to the site as though it is Safari on iPhone by clicking Menu-&gt;Phony and selecting iPhone. After selecting iPhone click Menu-&gt;Reload. Visit the same site again and continue with the same exploration methods in #2 and question:
+    <ol>
+      <li>Is the site a desktop site? Does the content greatly differ than what you previously saw in Firefox for Android? If so, how is it different? Is it a mobile optimized site?</li>
+      <li>Does the site have any layout problems? If so, what are those problems?</li>
+    </ol>
+  </li>
+</ol>
+<h2 id="Reporting_Results">Reporting Results</h2>
+<p>For any site that looks or functions differently in Firefox for Android, the Android browser, or Safari on iPhone you should report each issue in Bugzilla. To report an issue, file a bug in the <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20for%20Android&amp;component=Evangelism&amp;rep_platform=ARM&amp;op_sys=Android">Firefox for Android Evangelism component</a> and provide as much information about the issue as you can. Here are some pieces of information that are typically helpful to submit with your report:</p>
+<dl>
+</dl>
+<dl>
+  <dt>
+    Summary</dt>
+  <dd>
+    Summarize the issue that you have identified with the site. It is helpful to include the domain name, such as mozilla.org, in the summary.</dd>
+  <dt>
+    Description</dt>
+  <dd>
+    Describe the issue as best as you can. Include details such as how the content differs between Firefox for Android, Android browser, and Safari on iPhone, the specific places (titles, article list, options menu) where the site does not look correct, and what parts of the site (articles are unreadable, videos don't play, can't click on links) that do not function as you expected that they would.<br>
+    <br>
+    If you have some knowledge of HTML, CSS, and JavaScript, it is also very helpful to have references to the lines of code that are the root cause of the issue.</dd>
+  <dt>
+    Attachments</dt>
+  <dd>
+    It is also valuable to attach a screen capture that shows the problem in Firefox for Android. How to take a screenshot on Android differs based on your version of the operating system.</dd>
+</dl>
+<h2 id="Contact_Information">Contact Information</h2>
+<p>If you have any questions about compatibility testing or want to become involved in Mozilla’s mobile web compatibility effort, please sign up for the <a href="https://lists.mozilla.org/listinfo/compatibility">compatibility@lists.mozilla.org</a> mailing list.</p>

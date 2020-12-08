@@ -1,0 +1,64 @@
+---
+title: Adding a Button to the Toolbar
+slug: Mozilla/Add-ons/SDK/Tutorials/Adding_a_Button_to_the_Toolbar
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Adding_a_Button_to_the_Toolbar
+---
+<div class="note">
+ <p>এই  টিউটরিআল বুঝতে হলে আপনাকে প্রথমে <a href="/en-US/Add-ons/SDK/Tutorials/Installation" style="line-height: 1.5;">এস ডি কে</a><span style="line-height: 1.5;"> ইন্সটল করতে হবে এবং </span><a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx" style="line-height: 1.5;">সি এফ এক্স এর প্রাথমিক </a><span style="line-height: 1.5;"> জিনিস গুলা শিখতে হবে ।</span></p>
+ <p><span style="line-height: 1.5;">এই টিউটোরিয়াল  </span><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action" style="line-height: 1.5;">এক্সশন বাটন </a> এ পি আই <span style="line-height: 1.5;">ব্যাবহার করে, যে শুধু মাত্র ফায়ার ফক্স ২৯ বা এর পরের ভারশন গুলোতে কাজ করে ।</span></p>
+ <p> </p>
+</div>
+<p><span style="line-height: 1.5;">কোন বাটন টুলবারের সাথে  সংযুক্ত করতে হলে </span><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action" style="line-height: 1.5;"> এক্সন বাটন</a><span style="line-height: 1.5;"> বা </span><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_toggle" style="line-height: 1.5;">টগল বাটন </a>মডিউলগুলো ব্যাবহার করুন ।</p>
+<p>একটি নতুন ডিরেক্টরি তৈরি করুন, তার ভেতরে ডুকুন এবং সিএফএক্স ইনিট চালান ।</p>
+<p>তার পর নিচের আইকন তিনটি "ডাটা" ডিরেক্টরিতে সেভ করুন ।</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="width: 16px; height: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="width: 32px; height: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="width: 64px; height: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+<p>Then open the file called "main.js" in the "lib" directory and add the following code to it:</p>
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://www.mozilla.org/");
+}</pre>
+<p>Now run the add-on with <code>cfx run</code>. The button is added to the toolbar at the top of the browser window:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7641/mozilla-button.png" style="width: 382px; height: 221px; display: block; margin-left: auto; margin-right: auto;">You can't set the initial location for the button, but the user can move it using the browser's customization feature. The <code>id</code> attribute is mandatory, and is used to remember the position of the button, so you should not change it in subsequent versions of the add-on.</p>
+<p>Clicking the button loads <a href="https://www.mozilla.org/en-US/">https://www.mozilla.org/</a> into a new tab.</p>
+<h2 id="Specifying_the_icon">Specifying the icon</h2>
+<p>The icon property may specify a single icon or a collection of icons in different sizes, as in the example above. If you specify a collection of icons in different sizes the browser will automatically choose the best fit for the screen resolution and the place in the browser UI that hosts the button. <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#ActionButton(options)">Read more about specifying multiple icons</a>.</p>
+<p>The icon file must be packaged with your add-on: it may not refer to a remote file.</p>
+<p>You can change the icon at any time by setting the button's <code>icon</code> property. You can change the icon, and the other state attributes, either globally, for a specific window, or for a specific tab. <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Updating_state">Read more about updating state</a>.</p>
+<h2 id="Attaching_a_panel">Attaching a panel</h2>
+<p>If you need to attach a panel to a button, use the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">toggle button</a> API. This is just like the action button API except it adds a boolean <code>checked</code> property which is toggled whenever the button is checked. To attach the panel, pass the button to the panel's <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/panel#show(options)"><code>show()</code></a> method. For more details on this, see the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_toggle#Attaching_panels_to_buttons">toggle button's documentation</a>.</p>
+<h2 id="Displaying_richer_content">Displaying richer content</h2>
+<p>To create more complex user interface content than is possible with just a button, use the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_toolbar">toolbar</a> API. With the toolbar API you get a complete horizontal strip of user interface real estate. You can add buttons to the toolbar and also <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_frame">frames</a>, that can host HTML, CSS, and JavaScript.</p>
+<h2 id="Learning_more">Learning more</h2>
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button reference</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">toggle button reference</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_toolbar">toolbar reference</a></li>
+</ul>

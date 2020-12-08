@@ -1,0 +1,81 @@
+---
+title: B2G এমুলেটরের ব্যবহার
+slug: Archive/B2G_OS/Using_the_B2G_emulators
+tags:
+  - NeedsReview
+translation_of: Archive/B2G_OS/Using_the_B2G_emulators
+---
+<div class="summary">
+ <p><span class="seoSummary"> <span id="result_box" lang="bn"><span class="hps">এই নিবন্ধটি</span> <span class="hps">গেকো</span> <span class="hps">এমুলেটর</span> <span class="hps">থেকে</span> <span class="hps">বুট</span> <span class="hps">ব্যবহার করার সময়</span> <span class="hps">আপনার জানা</span> <span class="hps">উচিত</span> <span class="hps">কিছু কি</span> <span class="hps">জিনিষ</span> <span class="hps">একটি সংক্ষিপ্ত</span> <span class="hps">গাইড</span> <span class="hps">উপলব্ধ করা হয়। </span></span> <span id="result_box" lang="bn"><span class="hps">এটি একটি</span> <span class="hps">সম্পূর্ণ</span> <span class="hps">ব্যবহারকারী ম্যানুয়াল</span> <span class="hps">হতে</span> <span class="hps">সারমর্ম</span> <span class="hps">না;</span></span></span><span id="result_box" lang="bn"><span class="hps">পরিবর্তে,</span> <span class="hps">এটা শুধু</span> <span class="hps">আপনি</span> <span class="hps">যে আপনি</span> <span class="hps">আপনার নিজের উপর</span> <span class="hps">জানতে</span> <span class="hps">না পারে</span> <span class="hps">যে কয়েক</span> <span class="hps">দরকারী</span> <span class="hps">জিনিস</span> <span class="hps">বলে ।</span></span></p>
+</div>
+<p><span id="result_box" lang="bn"><span class="hps">এই সহায়িকার</span> <span id="result_box" lang="bn"><span class="hps">অনুমান,</span></span> <span class="hps">আপনি ইতিমধ্যে</span> <span class="hps">এক এমুলেটর</span> <span class="hps">তৈরি করেছেন</span> <span>;</span></span> যদি না করে থাকেন, তাহলে ঘুরে আসুন <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="en/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Building and installing Firefox OS</a> থেকে !</p>
+<h2 id="B2G_এমুলেটর_সম্পর্কে">B2G এমুলেটর <span class="short_text" id="result_box" lang="bn"><span class="hps">সম্পর্কে</span></span></h2>
+<p><span class="short_text" id="result_box" lang="bn"><span class="hps">এখানে দুই ধরনের </span><span class="hps">B2G</span> এমুলেটর <span class="hps">আছে।</span></span><span id="result_box" lang="bn"><span class="hps">প্রথমত,</span> <span class="hps">config.sh</span> <span class="hps">যখন চলমান</span> <span class="hps atn">"</span><span>এমুলেটর</span><span>" জন্য</span> <span class="hps">কনফিগার</span> <span class="hps">দ্বারা</span> <span class="hps">নির্মিত</span><span>, একটি</span> <span class="hps">এআরএম</span> <span class="hps">ডিভাইস</span> <span class="hps">এমুলেটর। যদিও x86 প্রসেসসরের তুলনায় এটি ধিরে চলে</span></span>, তবে <span id="result_box" lang="bn"><span>এটি</span> <span class="hps">আরো স্থিতিশীল</span></span> <span id="result_box" lang="bn"><span class="hps">এবং একটি আসল ডিভাইস যেভাবে কাজ করে এটি সেভাবে উপস্থাপন করতে পারে ।</span></span> <code>config.sh এটি আপনাকে x86 ডিভাইসের পরিবর্তে "এমুলেটর x86" এ চলতে সাহায্য করবে।</code></p>
+<div class="note">
+ <strong>Note:<span id="result_box" lang="bn"><span class="hps">সাম্প্রতিক কয়েক মাসে</span> <span class="hps">অটোমেশন</span> <span class="hps">টিম</span> <span class="hps">স্থায়িত্ব</span> <span class="hps">বিষয়</span> <span class="hps">কারণে</span> <span class="hps">x86</span> <span class="hps">এমুলেটর</span> <span class="hps">ব্যবহার</span> <span class="hps">করা বন্ধ করে দিয়েছে</span><span>.</span></span></strong> এর কারনে এমুলেটর x86 এ এতি কায না অ করতে পারে । <span id="result_box" lang="bn"><span class="hps">অন্যথায় </span></span><span id="result_box" lang="bn"><span class="hps">আপনি <span id="result_box" lang="bn"><span class="hps">এআরএম</span> <span class="hps">এমুলেটর</span> <span class="hps">ব্যবহার করুন.</span></span></span></span></div>
+<p>একবার আপনি <span class="short_text" id="result_box" lang="bn"><span class="hps">নির্বাচিত করলেন, কনফিগার করলেন এবং একটি এমুলেটর বানালেন, </span></span><span id="result_box" lang="bn"><span class="hps">বাকি</span>টা <span class="hps">একটি ব্যবহারকারী</span> <span class="hps">দৃষ্টিকোণ থেকে</span> <span class="hps">একই ভাবে</span> <span class="hps">কাজ করতে থাকবে । </span></span>আর <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="so the rest of this guide is common to both.">তাই এই সহায়িকার বাকি টুকু ২টার জন্য এক।</span></span></p>
+<div class="note">
+ <strong>Note: ম্যাক </strong> OS X এ B2G এমুলেটরের জন্য Core 2 Duo প্রসেসর অথবা তার থেকে বেশি কিছু দরকার ; অর্থাৎ ,এমন একটা সিস্টেম যা Mac OS X 10.7 "Lion." এর সাথে <span class="short_text" id="result_box" lang="bn"><span class="hps">সামঞ্জস্যপূর্ণ ।</span></span> আপনাকে আসলে Lion চলমান রাখার দরকার নেই ,এর সাথে <span class="short_text" id="result_box" lang="bn"><span class="hps">সামঞ্জস্যপূর্ণ  থাকলেই হবে ।</span></span></div>
+<h2 id="এমুলেটর_চালু_করা">এমুলেটর চালু করা</h2>
+<p><span id="result_box" lang="bn"><span class="hps">B2G</span> <span class="hps">এমুলেটর</span> <span class="hps">শুরু</span> <span class="hps">করার জন্য নিম্নলিখিত</span> <span class="hps">কমান্ডটি ব্যবহার করুন:</span></span></p>
+<pre>./run-emulator.sh
+</pre>
+<p><span id="result_box" lang="bn"><span class="hps">এটি আপনার জন্য</span> <span class="hps">সব</span> <span class="hps">এমুলেটর</span> <span class="hps">সূচনার</span> <span class="hps">কাজগুলো</span> <span class="hps">ব্যবস্থা</span> <span class="hps">করবে .</span></span> যতক্ষণ পর্যন্ত এমুলেটর চালু না হয় এবং এটিতে গেকো বুট না হয় ততক্ষণ একটু ধৈর্য ধরুন। <span class="short_text" id="result_box" lang="bn"><span class="hps">কয়েক মিনিট</span> <span class="hps">সময় লাগবে</span><span>, তাই</span> <span class="hps">ধৈর্য ধরুন</span></span></p>
+<h2 id="যখন_এমুলেটর_কাজ_করে_না"><span class="short_text" id="result_box" lang="bn"><span class="hps">যখন</span></span><span class="short_text" id="result_box" lang="bn"><span class="hps"> এমুলেটর</span> <span class="hps">কাজ করে না</span> </span></h2>
+<p>কখনো কখনো এমুলেটর চালু হতে ব্যর্থ হয়। যন্ত্রনাগ্রস্থ প্রযুক্তির যুগে আপনাকে স্বাগতম ! <span class="short_text" id="result_box" lang="bn"><span class="hps">এখানে</span> <span class="hps">সমস্যার সমাধানের</span> <span class="hps">জন্য কিছু টিপস</span> <span class="hps">আছে.</span></span></p>
+<h2 id="আপনি_কি_VM_এ_কাজ_করার_চেষ্টা_করছেন">আপনি কি <strong>VM </strong>এ কাজ করার চেষ্টা করছেন  ?</h2>
+<p><strong>VirtualBox </strong>এবং<strong> Parallels </strong>এর আগাম ঘটানো গ্রাফিক্স সাপোর্টের কিছু সমস্যা রয়েছে যার কারণে এমুলেটর বুট নিতে ব্যর্থ হতে পারে, এটা কিছুটা <strong>OpenGL </strong>ডিভাইস এর মতো। বুট নেওয়া শুরু করবে, বুট নিতে ব্যর্থ হবে এবং এইপ্রক্রিয়া চলতেই থাকবে অথবা এটি চালু হবে কিন্তু এমুলেটরে কিছুই দেখাবে না।দুর্ভাগ্যজনকবশতং এই সমস্যার কোনো সমাধান নেই (VirtualBox- এর জন্য একটি <a href="http://www.digitalmihailo.com/setting-up-ubuntu-12-04-virtual-machine-for-firefox-os-build/">workaround</a> আছে), আপনাকে VMWare Player (Freeware), Workstation or Fusion ব্যবহার করতে হবে  ।VirtualBox এর জন্য - হয় আপনি Guest Addonsইন্সটল না করেন নতুবা vboxvideo module অকেজো (disable) করে দিন ।</p>
+<h2 id="ADB_server_চলছে_কিনা_এটি_নিশ্চিত_করুন">ADB server চলছে কিনা এটি নিশ্চিত করুন</h2>
+<p>এটি সচরাচরই হয় কারণ যে ADB server টি এমুলেটেড ডিভাইসটিকে নিয়ন্ত্রণ করছে হয় ওটি চলছে না অথবা স্বাভাবিকভাবে কাজ করতে পারছে না।</p>
+<div class="note">
+ <p><strong>Note:</strong> =যদিআপনি B2G সিস্টেম দ্বারা নির্মিত <code>ADB </code><code>ব্যবহার করেন</code><code> (</code><code>যেটি সম্ভবত আপনি করছেন</code><code>) এটি </code> <code>$B2G/out/host/&lt;platform&gt;/bin</code> <code>bin </code><code>এই নির্দেশিকাতে রয়েছে</code><code>।</code> <code>ম্যাক</code><code>-</code><code>এর জন্য এটি </code><code>$B2G/out/host/darwin-x86/bin</code>,<code>এই নির্দেশিকাতে রয়েছে</code><code> (</code><code>উদাহরণ</code><code>)</code></p>
+</div>
+<p><code>ADB </code><code>চলছে কিনা ওটা চেক করার করুন এভাবে</code></p>
+<pre>ps aux | grep adb
+</pre>
+<p>যদি এটা এখানে থাকে তবে সারভারটি kill করার জন্য নিচের কাজটি করুন, কারণ সম্ভবত এটি ঠিক ভাবে কাজ করছে না ।</p>
+<pre>adb kill-server
+</pre>
+<p>যদি এটা ওখানে না থাকে তাহলে নিচের কাজটি করুন</p>
+<pre>adb start-server
+</pre>
+<p>এখন আবার এমুলেটরটি চালু করার চেষ্টা করুন । যদি এটি এখনো কাজ না করে, তাহলে সাহায্যের জন্য <a href="irc://irc.mozilla.org/b2g" title="irc://irc.mozilla.org/b2g">#b2g</a>, irc.mozilla.org তে দিয়ে দিন।</p>
+<h2 id="কনফিগারেশন_সেটিংস_মুছে_ফেলা">কনফিগারেশন সেটিংস মুছে ফেলা</h2>
+<p>কখনো কখনো এমুলেটরের অনেক পুরোনো অপ্রয়োজনীয় কনফিগারেশন সেটিংস কাজে অনেক ঝামেলা করতে পারে । নিচের জিনিসটি করে আপনি এর IndexedDB ডাটাবেস ডিলিট করে এই ঝামেলা থেকে মুক্তি পেতে পারেন ।</p>
+<ol>
+ <li>ADB server চলছে কিনা এটি নিশ্চিত করুন, যেটি  <a href="#Make_sure_the_adb_server_is_running">Make sure the adb server is running</a> এ বর্ণনা করা হয়েছে।.</li>
+ <li>
+  <p style="margin-left: .25in;">এমুলেটর চালু করা</p>
+ </li>
+ <li>হোষ্ট কম্পিউটারের টার্মিনালে, আপনার এমুলেটরের জন্য রুট কোডের ভিতরের নির্দেশিকাতে যান, তারপর লিখুন :  <code>out/host/&lt;platform&gt;/bin/adb -e shell</code>; ম্যাক-এর জন্য, এটি হবে   <code>out/host/darwin-x86/bin/adb -e shell</code>.</li>
+ <li>এখন আপনি ADB সেল-এ প্রবেশ করেছেন এবং আপনি আপনার এমুলেটেড ডিভাইসে সেল কমান্ড কার্যকর করতে পারবেন। B2G ডিভাইসটিকে বন্ধ করি :  <code>stop b2g</code>.</li>
+ <li>IndexedDB database কে ডিলিট করি : <code>rm -rf /data/local/indexedDB</code>.</li>
+ <li>এমুলেটেড ডিভাইসটিকে পুনরায় চালু করি : <code>start b2g</code>.</li>
+</ol>
+<p>এই ধাপে এসে আশা করা যায় যে, আপনিGAIA interface – এর শেষ ধাপে চলে এসেছেন এবং সব কিছু ঠিক আছে।</p>
+<h2 id="যদি_এমন_হয়_এমুলেটরটি_চালু_হলো_কিন্তু_MOZILLA_TECHNOLOGY_স্প্লাশ_স্ক্রীন_আসার_আগে_অথবা_পরে_স্ক্রীন_কালো_হয়ে_গেলো">যদি এমন হয়, এমুলেটরটি চালু হলো কিন্তু "MOZILLA TECHNOLOGY" স্প্লাশ স্ক্রীন আসার আগে অথবা পরে স্ক্রীন কালো হয়ে গেলো</h2>
+<p>এমন হওয়ার কারণ হতে পারে মেশিনের ড্রাইভারের ত্রুটির জন্য যেটি এমুলেটরটি চালাচ্ছে । লিনাক্স- এরওপেনসোর্স “NOUVEAU”ড্রাইভারসএ এটিপর্যবেক্ষণকরাহয়েছে । এটার সহজ সমাধান হতে পারে মেশিনের ড্রাইভারস গুলো বদলে ফেলা। এই ক্ষেত্রে “NOUVEAU” ড্রাইভারের বিকল্প হিসেবে আরো অতিরিক্ত কিছু ড্রাইভার ইন্সটল করা যেতে পারে। অন বোর্ড গ্রাফিক্স চিপসেটের ক্ষেত্রে, ডিফল্ট লিনাক্স ওপেন সোর্স ড্রাইভার এমুলেটর এরর “'eglMakeCurrent failed”দেখাতে পারে যেটি “OpenGL” এর ২.০ ভার্সন সাপোর্ট করে যেটি  GPUএমুলেশনের জন্য দরকার । এর সমাধান হলো GPU কে ডিঅ্যাক্টিভেট করা । করার জন্য <code>run-emulator.sh</code> script লিখতেহবে (এটা কিছুটা ধীরে হবে) ।</p>
+<h2 id="এমুলেটর_কনফিগার_করার_পদ্ধতি"><span class="short_text" id="result_box" lang="bn"><span class="hps">এমুলেটর</span> <span class="hps">কনফিগার করার পদ্ধতি</span></span></h2>
+<p>এখানে অনেক অপশন আছে যার মাধ্যমে আপনি যেই ডিভাইসটিকে এমুলেট করতে চান তার মতো করে আপনি আপনার এমুলেটরটিকে খাপ খাইয়ে নিতে পারেন। এটা কিভাবে করবেন এই বিভাগ এই সম্পর্কে আপনাকে কিছু প্রাথমিক তথ্য প্রদান করবে।  আপনি আপনার এমুলেটর কনফিগারেশন অ্যাডজাস্ট করতে পারেন run-emulator.sh স্কিপ্টটি এডিট করে (অথবা, আদর্শিকভাবে, এটার অনুলিপি করে)। অল্প কিছু প্রয়োজনীয় জিনিস এখানে আলোচনা করা হয়েছে ;  অন্য বিষয়ে আরও বিস্তারিত জানার জন্য  <a class="external" href="http://www.qemu.org/" title="http://www.qemu.org/">look at the qemu site</a> যেতে পারেন ।</p>
+<div class="note">
+ <strong>Tip:</strong>সিমুলেটটের জন্য প্রত্যেকটি ডিভাইসের run-emulator.shএকএকটিকপিতৈরিকরুন । এটা আলাদা আলাদা কনফিগারেশনে চালু হওয়ার কাজটা সহ্জ করে দেয় ।</div>
+<h2 id="স্কিনস_পরিবর্তন"><span class="short_text" id="result_box" lang="bn"><span class="hps">স্কিনস</span></span><span class="short_text" id="result_box" lang="bn"><span class="hps"> পরিবর্তন</span> </span></h2>
+<p>প্রথমে এমুলেটর অটোম্যাটিক “HVGA” মোডে চালু হয় ; এটা অর্ধেক VGA ,অথবা ৩২০x ৪৮০ পিক্সেলের হয় । যখন এমুলেটরটি চালু হয় তখন তা –skin প্যারামিটারে বলা থাকে । আপনি run-emulator.sh স্কিপ্টটি এডিট করে বিভিন্ন ডিসপ্লে তে সুইচ করতে পারেন (অথবা, আদর্শিকভাবে, এটার অনুলিপি করে) .প্রভাইডেড স্কিন গুলো হলো :</p>
+<ul>
+ <li>HVGA (320x480)</li>
+ <li>QVGA (240x320)</li>
+ <li>WQVGA (240x400)</li>
+ <li>WQVGA432 (240x432)</li>
+ <li>WSVGA (1024x600)</li>
+ <li>WVGA800 (480x800)</li>
+ <li>WVGA854 (480x854)</li>
+ <li>WXGA720 (1280x720)</li>
+ <li>WXGA800 (1280x800)</li>
+</ul>
+<p>এই স্কিনগুলো <code>B2G/development/tools/emulator/skins</code> ডাইরেক্টরিতে রয়েছে । স্কিন গুলো অনেক সিম্পল ; যদি আপনি এদের দিকে তাকান, তারা এক্তি ফোলডারে রয়েছে যা PNG ফাইলে পরিপূর্ণ এবং যা বিভিন্ন <span class="short_text" id="result_box" lang="bn"><span class="hps">ইউজার ইন্টারফেস</span> অবজেক্ট</span> এবং <span class="short_text" id="result_box" lang="bn"><span class="hps">একটি টেক্সট ফাইল যার নাম</span></span> <code>layout যা </code><span class="short_text" id="result_box" lang="bn"><span class="hps">ইন্টারফেস এবং</span> <span class="hps">স্কিন</span> আরিয়া <span class="hps"> লেআউট</span> <span class="hps">বর্ণনা করে</span> </span>. <span class="short_text" id="result_box" lang="bn"><span class="hps">প্রয়োজন হলে</span> <span class="hps">কাস্টম</span> <span class="hps">স্কিনস</span> <span class="hps">তৈরি</span> করুন যা <span class="hps">মোটামুটি</span> <span class="hps">সহজ</span></span> ।</p>
+<h2 id="মেমরি_Size_পরিবর্তন"><span class="short_text" id="result_box" lang="bn"> <span class="hps">মেমরি Size</span></span><span class="short_text" id="result_box" lang="bn"><span class="hps"> পরিবর্তন</span></span></h2>
+<p>মেমোরি সাইজ কনফিগার করার জন্য আনার আর একটা অপশন দরকার  . <span class="short_text" id="result_box" lang="bn"><span class="hps">ডিফল্ট</span> <span class="hps">512</span> <span class="hps">মেগাবাইট </span></span>; <span class="short_text" id="result_box" lang="bn"><span class="hps">কিন্তু</span></span>, যে ডিভাইস্টি আপনি ব্যবহার করছেন তার মেমোরি যদি বেশি অথবা কম হয়, তখন খাপ খায়িয়ে নেওয়ার জন্য সেটিংস পরিবর্তন করাটা জরুরি, যা নিশ্চিত করবে আপনি যে অ্যাপ টা রান করাবেন সেটি আপনার ডিভাইসের সাহে যায়। <span class="short_text" id="result_box" lang="bn"><span class="hps">এটি করার জন্য</span></span>, <code>প্রয়োজন হলে -memory প্যারামিটারের মান মেগাবাইটে পরিবর্তন করে নিন</code> . তাছাড়া ডিফল্ট ৫১২এমবি, ২৫৬এমবি এবং ১০২৪এমবি দিয়েওয়াপ্নি টেস্ট করতে পারেন। </p>
+<p>ডিভাইসের এমুলেটেড <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="storage capacity">স্টোরেজ ক্ষমতা পরিবর্তনের জন্য</span></span> ( <span class="short_text" id="result_box" lang="bn">লোকাল ডাঁটা <span class="hps">জন্য</span> <span class="hps">স্টোরেজ স্পেস</span></span>, যেমনটা <span id="result_box" lang="bn"><span class="hps">একটি মোবাইল</span> <span class="hps">ফোনে</span> <span class="hps">ফ্ল্যাশ</span> <span class="hps">স্টোরেজ বা</span> <span class="hps">একটি কম্পিউটারে</span> <span class="hps">হার্ড</span> <span class="hps">ড্রাইভ</span></span>), <code>-partition-size</code> প্যারামিটার বদল করুন। ডিফল্ট ৫১২এমবি, কিন্তু টেস্ট করার জন্য আপনি যেকোনো সাইজ বলে দিতে পারবেন।</p>
+<h2 id="নেটওয়ার্ক_কানেকটিভিটি">নেটওয়ার্ক কানেকটিভিটি</h2>
+<p>যদি কোনো কারণে আপনি আপনার এমুলেটরটিকে ইন্টারনেট-এর না সংযুক্ত না করাতে পারেন তাহলে কমান্ডলাইন-এ নিচের কমান্ডটি প্রবেশ করান</p>
+<pre>adb shell setprop net.dns1 10.0.2.3</pre>

@@ -1,0 +1,230 @@
+---
+title: Referenz der User-Agent-Strings für Gecko
+slug: Gecko_user_agent_string_referenz
+translation_of: Web/HTTP/Headers/User-Agent/Firefox
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+<p>Dieses Dokument beschreibt den User-Agent-String (Browsertyp-Indefitizierungstext), der seit Firefox 4 und in <a href="/en-US/docs/Mozilla/Gecko" title="/en-US/docs/Mozilla/Gecko">Gecko</a> 2.0 (oder höher) -basierenden Programmen verwendet wird. Bezüglich des Verlaufs der Änderungen auf dem Text in Gecko 2.0, konsultiern Sie den Blog-Post <a class="external" href="http://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/" title="Final User Agent string for Firefox 4">Final User Agent string for Firefox 4</a>. Schauen Sie auch in unserer Dokumentation zu <a href="/en-US/docs/Browser_detection_using_the_user_agent" title="/en-US/docs/Browser_detection_using_the_user_agent">user agent sniffing (Erkennen von Browsertypen)</a> und <a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/" title="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">den Blog-Post über die Hacks</a>.</p>
+<h2 id="Allgemeine_Form"><span id="proposal">Allgemeine Form</span></h2>
+<p>AU-String von Firefox besteht aus vier Teilen:</p>
+<p style="margin-left: 40px;"><span style="font-size: medium;"><strong>Mozilla/5.0 (<em>Platform</em>; rv:<em>geckoversion</em>) Gecko/<span style="font-style: italic;">geckotrail</span> Firefox/<em>firefoxversion</em></strong></span></p>
+<ul>
+ <li><em><strong>Mozilla/5.0</strong></em> ist ein allgemeiner Wert, der besagt, dass der Browser Mozilla-kompatibel ist und das sind heutzutage fast alle Browser.</li>
+ <li><strong><em>platform</em></strong> describes the native platform the browser is running on (e.g. Windows, Mac, Linux or Android), and whether or not it's a mobile phone. Firefox OS phones simply say "Mobile"; the web is the platform. Note that <strong><em>platform</em></strong> can consist of multiple "; "-separated tokens. See below for further details and examples.</li>
+ <li><em><strong>Firefox/firefoxversion</strong></em> indicates the browser is Firefox, and provides the version (such as "<em>17.0"</em>).</li>
+ <li><strong>rv:<em>geckoversion</em></strong> indicates the release version of Gecko (such as <em>"17.0"</em>). In recent browsers, <strong><em>geckoversion</em></strong> is the same as <strong><em>firefoxversion</em></strong>.</li>
+ <li><strong><em>Gecko/geckotrail</em></strong> indicates that the browser is based on Gecko.</li>
+ <li>On Desktop, <span style="font-style: italic;"><span style="font-weight: bold;">geckotrail</span></span> is the fixed string "20100101"</li>
+ <li>{{ gecko_minversion_inline("10.0") }} from Firefox 10 on mobile, <span style="font-style: italic;"><span style="font-weight: bold;">geckotrail</span></span> is the same as <strong><em>firefoxversion</em></strong></li>
+</ul>
+<div class="note">
+ <strong>Note:</strong> The recommended way of sniffing for Gecko-based browsers (if you <em>have to</em> sniff for the browser engine instead of using feature detection) is by the presence of the "<em>Gecko</em>" and "<em>rv:</em>" strings, since some other browsers include a "<em>like Gecko</em>" token.</div>
+<p>For other products based on Gecko, the string can take one of two forms, where the tokens have the same meaning except those noted below:</p>
+<p style="margin-left: 40px;"><span style="font-size: medium;"><strong>Mozilla/5.0 (<em>platform</em>; rv:<em>geckoversion</em>) Gecko/<em>geckotrail </em></strong></span><span style="font-size: medium;"><strong><em>appname</em>/<em>appversion</em></strong><br>
+ <strong>M</strong></span><span style="font-size: medium;"><strong>ozilla/5.0 (<em>platform</em>; rv:<em>geckoversion</em>) Gecko/<em>geckotrail</em></strong></span><span style="font-size: medium;"><strong> Firefox/<em>firefoxversion</em></strong></span><span style="font-size: medium;"><strong> <em>appname</em>/<em>appversion</em></strong></span></p>
+<ul>
+ <li><strong><em>appname/appversion</em></strong> indicates the application name and version. For instance, this could be "<em>Camino/2.1.1</em>", or "<em>SeaMonkey/2.7.1</em>".</li>
+ <li>
+  <p><em><strong>Firefox/firefoxversion</strong></em> is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox.  <em><strong>firefoxversion</strong></em> will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox! Whether this token appears is controlled by the <em>"general.useragent.compatMode.firefox"</em> boolean pref.</p>
+ </li>
+</ul>
+<p>{{ h2_gecko_minversion("Mobile and Tablet indicators", "11.0") }}</p>
+<p>The <strong><em>platform</em></strong> part of the UA string indicates if Firefox is running on a phone-sized or tablet device. When Firefox runs on a device that has the phone form factor, there is a <strong>Mobile;</strong> token in the <strong><em>platform</em></strong> part of the UA string. When Firefox runs on a tablet device, there is a <strong>Tablet;</strong> token in the platform part of the UA string instead. For example:</p>
+<p style="margin-left: 40px;"><span style="font-size: medium;">Mozilla/5.0 (Android; <strong>Mobile</strong>; rv:13.0) Gecko/13.0 Firefox/13.0</span></p>
+<p style="margin-left: 40px;"><span style="font-size: medium;">Mozilla/5.0 (Android; <strong>Tablet</strong>; rv:13.0) Gecko/13.0 Firefox/13.0</span></p>
+<p>The preferred way to target content to a device form factor is to use CSS Media Queries. However, if you use UA sniffing to target content to a device form factor, please look for <strong>Mobi</strong> (to include Opera Mobile, which uses "Mobi") for the phone form factor and do <strong>not</strong> assume any correlation between "Android" and the device form factor. This way, your code will work if/when Firefox ships on other phone/tablet operating systems or Android is used for laptops. Also, please use touch detection to find touch devices rather than looking for "Mobi" or "Tablet" - there may be touch devices which are not tablets.</p>
+<div class="note">
+ <strong>Note:</strong> Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.</div>
+<h2 id="Windows">Windows</h2>
+<p>Windows user agents have the following variations, where <em>x.y</em> is the Windows NT version (for instance, Windows NT 6.1).</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Windows version</th>
+   <th scope="col">Gecko user agent string</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Windows NT on x86</td>
+   <td>Mozilla/5.0 (Windows NT <em>x</em>.<em>y</em>; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+  <tr>
+   <td>Windows NT, Win64 on x64</td>
+   <td>Mozilla/5.0 (Windows NT <em>x</em>.<em>y</em>; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+  <tr>
+   <td>Windows NT, WOW64</td>
+   <td>Mozilla/5.0 (Windows NT <em>x</em>.<em>y</em>; WOW64; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Macintosh">Macintosh</h2>
+<p>Here, <em>x.y</em> is the version of Mac OS X (for instance, Mac OS X 10.6).</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Mac OS X version</th>
+   <th scope="col">Gecko user agent string</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Mac OS X on Intel x86 or x86_64</td>
+   <td>Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+  <tr>
+   <td>Mac OS X on PowerPC</td>
+   <td>Mozilla/5.0 (Macintosh; PPC Mac OS X <em>x.y</em>; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Linux">Linux</h2>
+<p>Linux is a more diverse platform. A few common examples are given below.</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Linux version</th>
+   <th scope="col">Gecko user agent string</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Linux desktop, i686</td>
+   <td>Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+  <tr>
+   <td>Linux desktop, x86_64</td>
+   <td>Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+  <tr>
+   <td>Linux desktop, i686 running on x86_64</td>
+   <td>Mozilla/5.0 (X11; Linux i686 on x86_64; rv:10.0) Gecko/20100101 Firefox/10.0</td>
+  </tr>
+  <tr>
+   <td>Nokia N900 Linux mobile, on the Fennec browser</td>
+   <td>Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0) Gecko/20100101 Firefox/10.0 Fennec/10.0</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Android">Android</h2>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Form factor</th>
+   <th scope="col">Gecko user agent string</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Phone</td>
+   <td>Mozilla/5.0 (Android; Mobile; rv:26.0) Gecko/26.0<span class="Object" id="OBJ_PREFIX_DWT935_com_zimbra_ymaps"><span class="Object" id="OBJ_PREFIX_DWT936_com_zimbra_ymaps"> Firefox/26.0</span></span></td>
+  </tr>
+  <tr>
+   <td>Tablet</td>
+   <td>Mozilla/5.0 (Android; Tablet; rv:26.0) Gecko/26.0<span class="Object" id="OBJ_PREFIX_DWT935_com_zimbra_ymaps"><span class="Object" id="OBJ_PREFIX_DWT936_com_zimbra_ymaps"> Firefox/26.0</span></span></td>
+  </tr>
+  <tr>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Firefox_OS">Firefox OS</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Form factor</th>
+   <th scope="col">Gecko user agent string</th>
+  </tr>
+  <tr>
+   <td>Phone</td>
+   <td>Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0</td>
+  </tr>
+  <tr>
+   <td>Tablet</td>
+   <td>Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0</td>
+  </tr>
+  <tr>
+   <td>Device-specifc</td>
+   <td>Mozilla/5.0 (Mobile; <em><strong>nnnn;</strong></em> rv:26.0) Gecko/26.0 Firefox/26.0</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Device-specific_user_agent_strings">Device-specific user agent strings</h3>
+<p>Although it is discouraged by Mozilla, some handset manufacturers include a token in their device's UA string that represents their device id. <span style="line-height: 1.572;">If this is the case, the Firefox OS UA string will look like the device-specific string in the table above, w</span><span style="line-height: 1.572;">here </span><em><strong>nnnn;</strong></em><span style="line-height: 1.572;"> is the manufacturer's code for the device. This code could be something like </span><strong style="line-height: 1.572;">NexusOne;</strong><span style="line-height: 1.572;"> or </span><strong style="line-height: 1.572;">ZTEOpen;</strong><span style="line-height: 1.572;">. </span><span style="line-height: 1.572;">We provide this information to assist with your UA detection logic, but Mozilla discourages the detection of a device id in UA strings.</span></p>
+<p>Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:</p>
+<pre>/mobi/i</pre>
+<p>The <code>i</code> makes it case-insensitive, and <code>mobi</code> matches all mobile browsers.</p>
+<h3 id="Firefox_OS_version_number">Firefox OS version number</h3>
+<p>While the version number for Firefox OS is not included in the UA string, it is possible to infer version information from the Gecko version number present in the UA string. Beginning with Firefox OS 1.2, each minor version should correspond to two major Gecko revisions.</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Firefox OS version number</th>
+   <th scope="col">Gecko version number</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1.0.1</td>
+   <td>18.0</td>
+  </tr>
+  <tr>
+   <td>1.1</td>
+   <td>18.1</td>
+  </tr>
+  <tr>
+   <td>1.2</td>
+   <td>26.0</td>
+  </tr>
+  <tr>
+   <td>1.3</td>
+   <td>28.0</td>
+  </tr>
+ </tbody>
+</table>
+<p>Firefox OS has a 4 digit version number: <samp>X.X.X.Y</samp>. The first 2 digits are owned by the Mozilla product team and will denote versions with new features (eg: v1.1, 1.2, etc). The third digit will be incremented with regular version tags (~every 6 weeks) for security updates, and the fourth will be OEM owned.</p>
+<h2 id="Other_Gecko-based_browsers">Other Gecko-based browsers</h2>
+<p>These are some sample UA strings from other Gecko-based browsers on various platforms. Note that many of these have not yet been released on Gecko 2.0!</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Browser</th>
+   <th scope="col">Gecko user agent string</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Firefox for Maemo (Nokia N900)</td>
+   <td>Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1</td>
+  </tr>
+  <tr>
+   <td>Camino on Mac</td>
+   <td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Camino/2.2.1</td>
+  </tr>
+  <tr>
+   <td>SeaMonkey on Windows</td>
+   <td>Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1</td>
+  </tr>
+  <tr>
+   <td>SeaMonkey on Mac</td>
+   <td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1</td>
+  </tr>
+  <tr>
+   <td>SeaMonkey on Linux</td>
+   <td>Mozilla/5.0 (X11; Linux i686; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Implementation_notes_for_applications_vendors_and_extensions"><span><span id="implementation">Implementation notes for applications, vendors, and extensions</span></span></h2>
+<p>Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the <code>general.useragent.extra.<em>identifier</em></code> preferences, (see the <a href="/En/User_Agent_Strings_Reference" title="https://developer.mozilla.org/en/User_Agent_Strings_Reference"><span class="moz-txt-link-freetext">obsolete User Agent Strings Reference</span></a><span class="moz-txt-citetags">).</span> But that has not been possible since {{ Bug(581008) }}.</p>
+<p>In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to <a href="/en/Setting_HTTP_request_headers" title="https://developer.mozilla.org/en/Setting_HTTP_request_headers">set a custom HTTP header</a>.</p>
+<h2 id="See_Also">See Also</h2>
+<ul>
+ <li><a href="http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/" title="http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/">Firefox OS User Agent String</a> (blog post w/<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=777710" title="https://bugzilla.mozilla.org/show_bug.cgi?id=777710">bug 777710</a> reference)</li>
+ <li><a class="external" href="http://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/" title="Final User Agent string for Firefox 4">Final User Agent string for Firefox 4</a> (blog post)</li>
+ <li>Recommendations on <a href="/en/Browser_Detection_and_Cross_Browser_Support" title="en/Browser_Detection_and_Cross_Browser_Support">sniffing the UA string for cross-browser support</a></li>
+ <li><a href="../../../../en/DOM/window.navigator.userAgent" rel="internal">window.navigator.userAgent</a></li>
+</ul>
+<hr>
+<p>Comments to <a class="link-news" href="news://news.mozilla.org/netscape.public.mozilla.netlib">mozilla.dev.platform</a></p>
+<p>{{ languages( { "ja": "ja/Gecko_user_agent_string_reference"} ) }}</p>

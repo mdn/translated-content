@@ -1,0 +1,66 @@
+---
+title: স্ক্রীনশট নেয়া
+slug: Archive/B2G_OS/Debugging/taking_screenshots
+tags:
+  - Debugging
+  - Firefox OS
+  - NeedsReview
+  - Screenshots
+translation_of: Archive/B2G_OS/Debugging/taking_screenshots
+---
+<div class="summary">
+ <p><span class="seoSummary">Taking screenshots of your application can be useful in many circumstances, for example showing your work to a client, or when publishing your app on the Marketplace. This article explains how to take screenshots on your Firefox OS phone.</span></p>
+</div>
+<div class="note">
+ <p><strong>টীকা</strong>: এন্ড্রয়েড ডেভেলপারগন এটা আগেই জেনে থাকবেন। ধাপ গুলো একই।</p>
+</div>
+<h2 id="আপনার_ফোন_তৈরি">আপনার ফোন তৈরি</h2>
+<ol>
+ <li>On your phone, go to the <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer Settings</a> and check <em>Remote Debugging</em> &amp; <em>Console Enabled</em>.</li>
+ <li>Make sure you phone has <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB installed</a> and working.</li>
+ <li>Connect your phone to your computer via USB.</li>
+</ol>
+<h2 id="একটি_স্ক্রীনশট_নেয়া"> একটি স্ক্রীনশট নেয়া</h2>
+<p>You now have four choices: using the Terminal, using DDMS in Eclipse, using the dedicated button combination on the phone, or using the App Manager.</p>
+<h3 id="টার্মিনাল">টার্মিনাল</h3>
+<p>Open a terminal window, then enter the follwing three commands:</p>
+<ol>
+ <li>Take the screenshot using the following command (you can change <code>screenshot.png</code> if you want to call it something else):<br>
+  <code>adb shell screencap -p /sdcard/screenshot.png</code></li>
+ <li>Pull the picture onto your computer:<br>
+  <code>adb pull /sdcard/screenshot.png</code></li>
+ <li>Remove the screenshot from your device:<br>
+  <code>adb shell rm /sdcard/screenshot.png</code></li>
+</ol>
+<p>Alternatively, you can use ffmpeg:</p>
+<ol>
+ <li>Make sure you have ffmpeg installed:
+  <ol>
+   <li>On Mac, if you use MacPorts, you can do this with <code>sudo port install ffmpeg</code>. For homebrew, do <code>brew install ffmpeg</code>.</li>
+   <li>On Linux (Ubuntu/Debian), use <code>sudo apt-get install ffmpeg</code>.</li>
+  </ol>
+ </li>
+ <li><code>cd</code> into the <code>B2G/gaia</code> directory.</li>
+ <li>Use the <code>make screenshot</code> command to take a screenshot.</li>
+ <li>You now have a screenshot called <code>screenshot.png</code>.</li>
+</ol>
+<h3 id="DDMS">DDMS</h3>
+<p>Open Eclipse.</p>
+<ol>
+ <li>Open DDMS: <em>Window &gt; Open Perspective &gt; Other &gt; DDMS</em>.</li>
+ <li>On the left side panel, in the <em>Devices</em> tab, click the <em>Screen capture</em> button.</li>
+ <li>A new window appears with several options; click on <em>Save</em> button to save your screenshot.</li>
+</ol>
+<div class="note">
+ <p><strong>Note</strong>: To learn more about DDMS, have a look at the <a href="http://developer.android.com/tools/debugging/ddms.html" title="DDMS documentation">DDMS documentation</a> .</p>
+</div>
+<h3 id="ফোনার_বাটনের_কম্বিনেশন">ফোনার বাটনের কম্বিনেশন</h3>
+<ol>
+ <li>Simultaneously hold down the <em>Home</em> and <em>Power</em> buttons for a few seconds. This takes a screenshot, which is saved in your Gallery.</li>
+ <li>Copy the picture from your SDCard to your computer using whatever method suits you best.</li>
+</ol>
+<h3 id="এপ_ম্যানেজারসিমুলেটর"> এপ ম্যানেজার/সিমুলেটর</h3>
+<ol>
+ <li>Go to the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>, connect to your phone, and navigate to the <strong>Device</strong> tab on the left.</li>
+ <li>Click on the <strong>Screenshot</strong> button above <em>Installed Apps</em>.</li>
+</ol>

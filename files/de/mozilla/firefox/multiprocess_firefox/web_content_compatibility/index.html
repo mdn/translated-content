@@ -1,0 +1,32 @@
+---
+title: Web content compatibility
+slug: Mozilla/Firefox/Multiprocess_Firefox/Web_content_compatibility
+tags:
+  - Electrolysis
+  - Firefox
+  - Guide
+  - Multiprocess
+  - e10s
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Web_content_compatibility
+---
+<div>{{FirefoxSidebar}}</div><p><span class="seoSummary">While the introduction of multi-process capabilities to Firefox should be seamless and invisible to Web content, there are some exceptions and subtle changes from past behavior. This article discusses the known differences you may encounter.</span></p>
+
+<h2 id="Events">Events</h2>
+
+<p>Here you'll find information about events whose behaviors have changed due to multiprocess Firefox's implementation.</p>
+
+<h3 id="No_bubbling_of_events_from_&lt;option>_to_&lt;select>">No bubbling of events from <code>&lt;option&gt;</code> to <code>&lt;select&gt;</code></h3>
+
+<p>Historically, Firefox has allowed keyboard and mouse events to bubble up from the <code>&lt;option&gt;</code> element to the parent {{HTMLElement("select")}} element. This doesn't happen in Chrome, however, although this behavior is inconsistent across many browsers. For better Web compatibility (and for technical reasons), when Firefox is in multi-process mode and the <code>&lt;select&gt;</code> element is displayed as a drop-down list. This behavior is unchanged if the <code>&lt;select&gt;</code> is presented inline and it has either the <code>multiple</code> attribute defined or a <code>size</code> attribute set to more than 1.</p>
+
+<p>Rather than watching <code>&lt;option&gt;</code> elements for events, you should watch for {event("change")}} events on {{HTMLElement("select")}}. See {{bug(1090602)}} for details.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>Multiprocess Firefox</li>
+ <li>{{HTMLElement("option")}}</li>
+ <li>{{HTMLElement("select")}}</li>
+ <li>{{domxref("HTMLOptionElement")}}</li>
+ <li>{{domxref("HTMLSelectElement")}}</li>
+</ul>

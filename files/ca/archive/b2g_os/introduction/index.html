@@ -1,0 +1,106 @@
+---
+title: Introducció a Firefox OS
+slug: Archive/B2G_OS/Introduction
+translation_of: Archive/B2G_OS/Introduction
+---
+<p><strong>Firefox OS</strong> (també conegut amb el nom en codi "Boot to Gecko" o "B2G") és el sistema mòbil de codi obert desenvolupat per Mozilla basat en la Linux i la tecnologia Mozilla Gecko. Firefox OS és un sistema operatiu per mòbils lliure de tecnologia propietària mentre és una potent plataforma que prové als desenvolupadors d'aplicacions la oportunitat de crear productes excel·lents. A més, és flexible i prou capaç de fer feliç a l’usuari final.</p>
+<p>Per als desenvolupadors web, la part més important d'entendre és que la interfície d'usuari sencera és una aplicació web, que és capaç de mostrar i llançar altres aplicacions web. Qualsevol modificació que es faci en la interfície d'usuari i l'aplicació que es crea per córrer sota Firefox OS son pàgines web, tot i que amb un accés millorat al maquinari del dispositiu mòbil i els seus serveis.</p>
+<p>Pots aprendre com compilar i instal·lar Firefox OS <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">seguint la nostra guia pràctica</a>.</p>
+<div>
+  <h2 id="Necessitats_de_maquinari"><strong>Necessitats de maquinari</strong></h2>
+</div>
+<p>Pot ser possible transportar a Firefox OS els dispositius més actuals basats en ARM. Aquesta secció cobreix les necessitats bàsiques de maquinari i també les característiques recomanades.</p>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p align="center"><strong>Component</strong></p>
+      </th>
+      <th>
+        <p align="center"><strong>Mínim</strong></p>
+      </th>
+      <th>
+        <p align="center"><strong>Recomanat</strong></p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <p align="center"><strong>CPU</strong></p>
+      </td>
+      <td>
+        <p>ARMv6</p>
+      </td>
+      <td>
+        <p>Cortex classe A5 o superior<br>
+          ARMv7a amb NEON</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center"><strong>GPU</strong></p>
+      </td>
+      <td>
+        <p>—</p>
+      </td>
+      <td>
+        <p>Adreno classe 200 o superior</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center"><strong>Connectivitat</strong></p>
+      </td>
+      <td>
+        <p>—</p>
+      </td>
+      <td>
+        <p>WiFi<br>
+          3G</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="center"><strong>Sensors</strong></p>
+      </td>
+      <td>
+        <p>—</p>
+      </td>
+      <td>
+        <p>Acceleròmetre<br>
+          Proximitat<br>
+          Lluminositat ambient<br>
+          A-GPS</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>També és recomana que el dispositiu ofereixi un perfil de color uniforme (que serà implementat per el driver gràfic del dispositiu) i suport als auriculars amb funcions silenci/so i atura/reprodueix. Aquestes son unes característiques comuns en la majoria de smarthphones moderns.</p>
+<div>
+  <h2 id="Consells_d'ús"><strong>Consells d'ús</strong></h2>
+  <p>Aquesta secció proporciona alguns consells alguns consells que t’ajudaran realment utilitzen Firefox OS. Això és una cosa d'un marcador de posició fins que tinguem documentació d'ús real.</p>
+  <h3 id="Desbloquejant_el_Telèfon"><strong>Desbloquejant el Telèfon</strong></h3>
+  <p>Si la teva versió de Firefox OS s'inicia sol · licitant un codi d'accés per desbloquejar el dispositiu, el codi predeterminat és 0000. Algunes versions és fan mentre es desenvolupa i prova la pantalla de bloqueig.</p>
+  <h3 id="Captura_d'una_captura_de_pantalla"><strong>Captura d'una captura de pantalla</strong></h3>
+  <p>Capturar una imatge és tan senzill com prémer el botó d'alimentació i Inici al mateix temps. La imatge de la pantalla estarà en / sdcard / captures de pantalla del seu dispositiu.</p>
+  <p>Si per alguna raó això no funciona, també pot fer-ho des de la terminal de Linux o Mac OS X que tingui un Firefox OS sistema de generació instal·lada.</p>
+</div>
+<p> </p>
+<p>1.    Assegurat que tens ffmpeg instal·lat.</p>
+<p>1.    A Mac, si utilitzes els ports del Mac, ho pots fer amb sudo port install ffmpeg. Per homebrew, fes brew install ffmpeg.</p>
+<p>2.    A Linux (Ubuntu/Debian), utilitza sudo apt-get install ffmpeg.</p>
+<p>2.    Connecta el teu telèfon a l’ordinador mitjançant un cable USB.</p>
+<p>3.    Navega per el teu telèfon fins on vulguis la captura de pantalla.</p>
+<p>4.    cd dins el directori B2G/gaia </p>
+<p>5.    make screenshot (fes captura de pantalla)</p>
+<p>6.    Ara disposaràs duna captura de pantalla anomenada screenshot.png.</p>
+<h3 id="Botons_i_controls"><strong>Botons i controls</strong></h3>
+<p>Un dispositiu típic Firefox OS te un petit nombre de botons físics.</p>
+<p><em>Botó Home</em></p>
+<p style="margin-left: 36.0pt;">Aquest botó normalment està centrat sota la pantalla. Pressionant-lo et retornarà al llançador d’aplicacions. Mantenint-lo obre la commutació de vista; llisca a munt sobre una aplicació per tancar-la.</p>
+<p><em>Control rotatiu de volum</em></p>
+<p style="margin-left: 36.0pt;">Al llarg de la part esquerra està el control de volum; pressionant la part superior augmenta el volum i pressionant la part inferior disminuirà el volum.</p>
+<p><em>Botó d'encesa</em></p>
+<p style="margin-left: 36.0pt;">El botó d'encesa està situat a la part superior dreta del dispositiu.</p>
+<p> </p>

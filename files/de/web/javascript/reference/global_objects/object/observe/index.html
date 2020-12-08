@@ -1,0 +1,199 @@
+---
+title: Object.observe()
+slug: Web/JavaScript/Reference/Global_Objects/Object/observe
+tags:
+  - Beobachter
+  - Data-Binding
+  - Deprecated
+  - JavaScript
+  - Méthode
+  - Object
+  - Veraltet
+translation_of: Archive/Web/JavaScript/Object.observe
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>Die <strong><code>Object.observe()</code></strong> Methode kann genutzt werden, um auf Änderungen an einem Objekt asynchron zu reagieren. Sie bietet einen Stream der Änderungen in der Reihenfolge ihres Auftretens. Da die Methode veraltet ist und Beschränkungen aufweist, sollte lieber ein {{jsxref("Proxy")}} Objekt verwendet werden.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>Object.observe(<var>obj</var>, <var>callback</var>[, <var>acceptList</var>])</code></pre>
+
+<h3 id="Parameter">Parameter</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>Das Objekt, das beobachtet werden soll.</dd>
+ <dt><code>callback</code></dt>
+ <dd>Eine Callback-Funktion, die jedes mal aufgerufen wird, wenn eine Änderung am Objekt vorgenommen wird
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Ein Array von Objekten, die die vorgenommenen Änderungen repräsentieren. Die Eigenschaften der Objekte sind jeweils
+  <ul>
+   <li><strong><code>name</code></strong>: Der Name der Eigenschaft, welche geändert wurde</li>
+   <li><strong><code>object</code></strong>: Das (bereits) geänderte Objekt.</li>
+   <li><strong><code>type</code></strong>: Ein String der Angibt, welcher Art die vorgenommene Änderung war. Entspricht <code>"add"</code>, <code>"update"</code>, oder <code>"delete"</code>.</li>
+   <li><strong><code>oldValue</code></strong>: Existiert nur, wenn der type <code>"update"</code> oder <code>"delete"</code> ist. Der ursprüngliche Wert vor der Änderung.</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+ <dt><code>acceptList</code></dt>
+ <dd>Eine Liste von Änderungstypen die für das gegebene Objekt und jeweilige Callback beobachtet werden sollen. Standardmäßig <code>["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"]</code> .</dd>
+</dl>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p><code>callback</code> wird jedes mal aufgerufen, wenn das <code>obj</code> geändert wird. Die Funktion erhält dabei die Liste aller Änderungen in chronologischer Reihenfolge ihres Auftretens.</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Ausgabe_aller_sechs_Änderungsarten">Ausgabe aller sechs Änderungsarten</h3>
+
+<pre class="brush: js">var obj = {
+  foo: 0,
+  bar: 1
+};
+
+Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+obj.baz = 2;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'add'}]
+
+obj.foo = 'hello';
+// [{name: 'foo', object: &lt;obj&gt;, type: 'update', oldValue: 0}]
+
+delete obj.baz;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'delete', oldValue: 2}]
+
+Object.defineProperty(obj, 'foo', {writable: false});
+// [{name: 'foo', object: &lt;obj&gt;, type: 'reconfigure'}]
+
+Object.setPrototypeOf(obj, {});
+// [{name: '__proto__', object: &lt;obj&gt;, type: 'setPrototype', oldValue: &lt;prototype&gt;}]
+
+Object.seal(obj);
+// [
+//   {name: 'foo', object: &lt;obj&gt;, type: 'reconfigure'},
+//   {name: 'bar', object: &lt;obj&gt;, type: 'reconfigure'},
+//   {object: &lt;obj&gt;, type: 'preventExtensions'}
+// ]
+</pre>
+
+<h3 id="Data_Binding">Data Binding</h3>
+
+<pre class="brush: js">// A user model
+var user = {
+  id: 0,
+  name: 'Brendan Eich',
+  title: 'Mr.'
+};
+
+// Create a greeting for the user
+function updateGreeting() {
+  user.greeting = 'Hello, ' + user.title + ' ' + user.name + '!';
+}
+updateGreeting();
+
+Object.observe(user, function(changes) {
+  changes.forEach(function(change) {
+    // Any time name or title change, update the greeting
+    if (change.name === 'name' || change.name === 'title') {
+      updateGreeting();
+    }
+  });
+});
+</pre>
+
+<h3 id="Eigens_definierter_Änderungstyp">Eigens definierter Änderungstyp</h3>
+
+<pre class="brush: js">// A point on a 2D plane
+var point = {x: 0, y: 0, distance: 0};
+
+function setPosition(pt, x, y) {
+  // Performing a custom change
+  Object.getNotifier(pt).performChange('reposition', function() {
+    var oldDistance = pt.distance;
+    pt.x = x;
+    pt.y = y;
+    pt.distance = Math.sqrt(x * x + y * y);
+    return {oldDistance: oldDistance};
+  });
+}
+
+Object.observe(point, function(changes) {
+  console.log('Distance change: ' + (point.distance - changes[0].oldDistance));
+}, ['reposition']);
+
+setPosition(point, 3, 4);
+// Distance change: 5
+</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal for ECMAScript 7</a>.</p>
+
+<h2 id="Browserunterstützung">Browserunterstützung</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [2]</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}} [1]</td>
+   <td>{{CompatNo}} [2]</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1]: See {{bug(800355)}}</p>
+
+<p>[2]: See relevant <a href="https://dev.modern.ie/platform/status/objectobserve/">MS Edge platform status entry</a></p>
+
+<h2 id="Siehe_Auch">Siehe Auch</h2>
+
+<ul>
+ <li>{{jsxref("Object.unobserve()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Array.observe()")}} {{experimental_inline}}</li>
+</ul>

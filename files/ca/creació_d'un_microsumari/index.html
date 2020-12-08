@@ -1,0 +1,207 @@
+---
+title: Creació d'un microsumari
+slug: Creació_d'un_microsumari
+translation_of: Archive/Mozilla/Creating_a_microsummary
+---
+<p>
+	Un generador de microsumaris és un conjunt d'instruccions per a crear un microsumari a partir del contingut d'una pàgina. Les pàgines web poden fer referència als generadors a través d'elements <code>&lt;link rel="microsummary"&gt;</code> en llurs elements de capçalera &lt;head&gt;. Els generadors també poden baixar-se i instaŀlar-se de forma independent pels usuaris si aquests inclouen una llista de les pàgines a les quals s'apliquen.</p>
+<p>
+	En aquest tutorial crearem un generador de microsumaris per a la <a class="external" href="http://www.spreadfirefox.com/">pàgina d'inici d'Spread Firefox</a>. Es mostrarà el recompte actual de baixades del Firefox juntament amb l'etiqueta <cite>baixades del Firefox</cite>; per exemple: <cite>174475447 baixades del Firefox</cite>.</p>
+<p>
+	També crearem un full de transformació XSLT que converteix la pàgina en el seu microsumari, aprendrem com especificar que el generador s'apliqui en aqueixa pàgina, i esbrinarem com fer el generador disponible perquè pugui baixar-se i instaŀlar-se.</p>
+<p>
+	En cada pas de la revisió del full de transformació, com altre codi del tutorial, el text que s'afegeixi es mostrarà <b>en negreta</b> perquè el procés pugui seguir-se més fàcilment.</p>
+<h2 id="Inici" name="Inici">
+	Inici</h2>
+<p>
+	Els generadors són documents XML que tenen com element arrel l'etiqueta <code>&lt;generator&gt;</code> en l'espai de noms <cite><a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a></cite>. Per a començar a crear un generador, partim d'un nou fitxer de text buit i li afegim una declaració XML i un element &lt;generator&gt; buit:</p>
+<pre class="eval"><b>&lt;?xml version="1.0" encoding="UTF-8"?&gt; </b>
+<b>&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"&gt; </b>
+<b>&lt;/generator&gt;</b>
+</pre>
+<h2 id="Donant-li_un_nom" name="Donant-li_un_nom">
+	Donant-li un nom</h2>
+<p>
+	Els generadors cal que tinguin atributs de nom que són descripcions arbitràries dels microsumaris que el generador crea. Cal que els noms siguin suficientment descriptius perquè els usuaris puguin fer-se una idea de quina informació es proporciona des dels microsumaris. Atès que el nostre generadpr crearà microsumaris que mostren el recompte baixades del Firefox, un nom adequat pot ser «Recompte de baixades del Firefox»:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          <b>name="Recompte de baixades del Firefox"</b>&gt;
+&lt;/generator&gt;
+</pre>
+<h2 id="Addici.C3.B3_d.27un_full_de_transformaci.C3.B3_XSLT" name="Addici.C3.B3_d.27un_full_de_transformaci.C3.B3_XSLT">
+	Addició d'un full de transformació XSLT</h2>
+<p>
+	Els generadors han d'incloure un full de transformació XSLT (també conegut com full d'estil XSLT) que transformi el contingut de la pàgina en el seu microsumari. L'XLST és un potent llenguatge per a transformar documents en diferents representacions de la mateixa informació.</p>
+<p>
+	Afegiu el full de transformació XSLT al generador incloent-hi l'element <code>&lt;template&gt;</code>:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          name="Recompte de baixades del Firefox"&gt;
+ <b>&lt;template&gt;</b>
+   <b>&lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;</b>
+   <b>&lt;/transform&gt;</b>
+ <b>&lt;/template&gt;</b>
+&lt;/generator&gt;
+</pre>
+<p>
+	Tingueu en compte que mentre els generadors de microsumaris poden incloure codi XSLT arbitrari, si incorporeu XSLT que produeixi sortida en text ric, el Firefox actualment només podrà mostrar-la en text net.</p>
+<h2 id="Especificaci.C3.B3_d.27un_tipus_de_sortida" name="Especificaci.C3.B3_d.27un_tipus_de_sortida">
+	Especificació d'un tipus de sortida</h2>
+<p>
+	Atès que el full de transformació XSLT generarà un microsumari en format text, cal que ho indiquem amb l'element &lt;output&gt;:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          name="Recompte de baixades del Firefox"&gt;
+ &lt;template&gt;
+   &lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;
+     &lt;output method="text"/&gt;
+   &lt;/transform&gt;
+ &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<h2 id=".C3.9As_d.27una_plantilla_d.27XSLT_simple.2C_.3Ctemplate.3E" name=".C3.9As_d.27una_plantilla_d.27XSLT_simple.2C_.3Ctemplate.3E">
+	Ús d'una plantilla d'XSLT simple, &lt;template&gt;</h2>
+<p>
+	El processador d'XSLT transforma els documents comparant cada element XSLT en el full de transformació amb el conjunt de nodes del document. Quan un atribut de &lt;template&gt; coincideix amb el d'un node, el processador realitza les transformacions que s'especifiquen en el contingut de l'element.</p>
+<p>
+	Aquest és un potent mecanisme, perquè us permet recòrrer l'àrbol de nodes d'un document, generant recursivament una sortida basada en els continguts del document. Per a generar un microsumari per a la pàgina d'Spread Firefox page, només ens cal un únic element &lt;template&gt; que coincideixi amb el node arrel del document i que es processi d'una vegada:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          name="Recompte de baixades del Firefox"&gt;
+ &lt;template&gt;
+   &lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;
+     &lt;output method="text"/&gt;
+     &lt;template match="/"&gt;
+     &lt;/template&gt;
+   &lt;/transform&gt;
+ &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<h2 id="Incloure_el_recompte_de_baixades" name="Incloure_el_recompte_de_baixades">
+	Incloure el recompte de baixades</h2>
+<p>
+	Per a incloure el recompte de baixades en la sortida del full de transformació XSLT, cal que afegim l'element XSLT <code>&lt;value-of&gt;</code> a la plantilla del qual l'atribut de selecció <code>select</code> conté una expressió XPath que apunta al node que conté el recompte.</p>
+<p>
+	L'XPath és un llenguatge per a identificar nodes en documents HTML/XML. També conté funcions bàsiques per a manipular aqueixos nodes i llur contingut. La forma més fàcil d'obtenir una expressió XPath que apunti al node en qüestió és utilitzar l'[<a class="link-https" href="https://addons.mozilla.org/firefox/1095/">extensió XPath Checker</a>.</p>
+<p>
+	Instaŀleu l'extensió (reinicie el Firefox per a completar la instaŀlació), a continuació aneu a la <a class="external" href="http://www.spreadfirefox.com/">pàgina d'inici d'Spread Firefox</a>, cerqueu el recompte de baixades del Firefox (un gran número a sota de la columna dreta), cliqueu amb el botó secondari al número, i seleccioneu <cite>Visualitza l'XPath</cite> des del menú contextual.</p>
+<p>
+	L'XPath Checker obrirà una nova finestra. Aquesta inclourà un camp d'XPath que conté l'expressió <cite>XPath</cite> que a punta al node del recompte de baixades: <cite>id('download-count')</cite>.</p>
+<p>
+	Afegeix un element <code>&lt;value-of&gt;</code> a l'element XSLT <code>&lt;template&gt;</code>, el qual el seu atribut <code>&lt;select&gt;</code> conté l'expressió XPath:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          name="Recompte de baixades del Firefox"&gt;
+ &lt;template&gt;
+   &lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;
+     &lt;output method="text"/&gt;
+     &lt;template match="/"&gt;
+       <b>&lt;value-of select="id('download-count')"/&gt;</b>
+     &lt;/template&gt;
+   &lt;/transform&gt;
+ &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<h2 id="Addici.C3.B3_d.27un_text" name="Addici.C3.B3_d.27un_text">
+	Addició d'un text</h2>
+<p>
+	Per a incloure l'etiqueta de baixades del Fx en el microsumari, cal que afegim un element XSLT a l'element XSLT <code>&lt;template&gt;</code>, el contingut del qual és el text que volem afegir.</p>
+<p>
+	Afegeix un element <code>&lt;text&gt;</code> a la plantilla XSLT amb el contingut de <cite>baixades del Firefox</cite>:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          name="Recompte de baixades del Firefox"&gt;
+ &lt;template&gt;
+   &lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;
+     &lt;output method="text"/&gt;
+     &lt;template match="/"&gt;
+       &lt;value-of select="id('download-count')"/&gt;
+       <b>&lt;text&gt;Baixades del Firefox&lt;/text&gt;</b>
+     &lt;/template&gt;
+   &lt;/transform&gt;
+ &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<p>
+	Tingueu en compte que l'espai en blanc entre les etiquetes XSLT no apareix a la sortida de l'XSLT, a diferència de l'HTML, on aquell espai en blanc esdevé un espai simple. Per això, assegureu-vos llavors d'incloure un espai a la frase per a separar-la del recompte de baixades.</p>
+<p>
+	Amb aquesta addició, hem acabat d'escriure el full de transformació XSLT que permet crear un microsumari a partir de la pàgina d'inici de l'Spread Firefox.</p>
+<h2 id="Especifar_en_quina_p.C3.A0gina_s.27aplica_el_generador" name="Especifar_en_quina_p.C3.A0gina_s.27aplica_el_generador">
+	Especifar en quina pàgina s'aplica el generador</h2>
+<p>
+	Ara que ja hem escrit un full de transformació, hem d'especificar la pàgina on s'aplica. Si fóssim els webmestres d'Spread Firefox, podríem simplement referenciar el generador dins de la mateixa pàgina afegint l'etiqueta <code>&lt;link rel="microsummary"&gt;</code> dins de l'element <code>&lt;head&gt;</code>:</p>
+<pre class="eval">&lt;head&gt;
+ ...
+ <b>&lt;link rel="microsummary" href="camí/al/nostre/generador.xml"&gt;</b>
+&lt;/head&gt;
+</pre>
+<p>
+	Atès que no en som els webmestres, podem especificar la pàgina on s'aplica dins del mateix generador i fer-lo disponible perquè pugui baixar-se i instaŀlar-se. Per a especificar les pàgines on s'aplica el generador, utilitzem l'element <code>&lt;pages&gt;</code> dins de l'element <code>&lt;generator&gt;</code>:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>"
+          name="Recompte de baixades del Firefox"&gt;
+ &lt;template&gt;
+   &lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;
+     &lt;output method="text"/&gt;
+     &lt;template match="/"&gt;
+       &lt;value-of select="id('download-count')"/&gt;
+       &lt;text&gt;Baixades del Firefox&lt;/text&gt;
+     &lt;/template&gt;
+   &lt;/transform&gt;
+ &lt;/template&gt;
+ <b>&lt;pages&gt;</b>
+ <b>&lt;/pages&gt;</b>
+&lt;/generator&gt;
+</pre>
+<p>
+	L'element <code>&lt;pages&gt;</code> pot contenir una seqüència d'elements <code>&lt;include&gt;</code> i <code>&lt;exclude&gt;</code> que especifica les pàgines on el generador s'aplica i no s'aplica, respectivament.</p>
+<p>
+	Per a fer que un generador s'apliqui a una pàgina, afegiu un element <code>&lt;include&gt;</code> el contingut del qual sigui una expressió regular que coincideixi amb la pàgina. Per a fer que el generador no s'apliqui a una pàgina, afegiu un element <code>&lt;exclude&gt;</code> el contingut del qual sigui una expressió regular que també coincideixi amb la pàgina.</p>
+<p>
+	Per defecte, els generadors no s'apliquen a cap pàgina, per això heu de llistar-les explícitament a les pàgines on s'apliquen, i no heu d'excloure cap pàgina excepte si les haguéssiu inclós anteriorment.</p>
+<p>
+	Afegiu un element <code>&lt;include&gt;</code> que coincideixi amb la pàgina d'Spread Firefox:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a>" name="Recompte de baixades del Firefox"&gt;
+ &lt;template&gt;
+   &lt;transform xmlns="<a class="external" href="http://www.w3.org/1999/XSL/Transform" rel="freelink">http://www.w3.org/1999/XSL/Transform</a>" version="1.0"&gt;
+     &lt;output method="text"/&gt;
+     &lt;template match="/"&gt;
+       &lt;value-of select="id('download-count')"/&gt;
+       &lt;text&gt; Fx downloads&lt;/text&gt;
+     &lt;/template&gt;
+   &lt;/transform&gt;
+ &lt;/template&gt;
+ &lt;pages&gt;
+   <b>&lt;include&gt;<a class="external" href="http://(www" rel="freelink">http://(www</a>\.)?spreadfirefox\.com/(index\.php)?&lt;/include&gt;</b>
+ &lt;/pages&gt;
+&lt;/generator&gt;
+</pre>
+<h2 id="Fer_el_generador_disponible_per_a_baixar-se" name="Fer_el_generador_disponible_per_a_baixar-se">
+	Fer el generador disponible per a baixar-se</h2>
+<p>
+	Ara que el generador s'aplica a la pàgina d'inici de l'Spread Firefox, només queda fer-lo disponible per a ser descarregat. Per a fer-ho, cal que el posem al web i creem un enllaç Javascript en alguna pàgina web que faci una crida al mètode del Firefox <cite>window.sidebar.addMicrosummaryGenerator()</cite> per a baixar i instaŀlar el generador.</p>
+<p>
+	Per exemple, si posem el fitxer del generador a <a class="external" href="http://people.mozilla.com/~myk/microsummaries/tutorial/sfx-generator.xml" rel="freelink">http://people.mozilla.com/~myk/micro...-generator.xml</a>, i volguéssim que els usuaris poguessin instaŀlar-lo de from <a class="external" href="http://people.mozilla.com/~myk/microsummaries/tutorial/index.html" rel="freelink">http://people.mozilla.com/~myk/micro...ial/index.html</a>, podríem afegir el següent codi a la pàgina <cite>index.html</cite>:</p>
+<pre class="eval"><b>&lt;a href="javascript:window.sidebar.addMicrosummaryGenerator('<span class="nowiki">http://people.mozilla.com/~myk/microsummaries/tutorial/sfx-generator.xml</span>')"&gt;Instaŀla el microsumari de la pàgina d'inici de l'Spread Firefox!&lt;/a&gt;</b>
+</pre>
+<p>
+	En clicar aquest enllaç, es generarà un error de JavaScript en els navegadors que no permeten utilitzar microsumaris, no obstant això, per a millorar la navegació d'aqueixos usuaris, hauríem de comprovar si utilitzen un navegador que accepti microsumaris, i per altra banda, mostrar un missatge explicatiu si no. Podem fer-ho amb aquest codi:</p>
+<pre class="eval"><b> &lt;script&gt;</b>
+<b>  const warning = "Us cal un navegador que permeti utilitzar microsumaris, com ara el Firefox 2.0, per a instaŀlar i utilitzar generadors de microsumaris.";</b>
+<b>  function addGenerator(url) {</b>
+<b>    if (typeof window.sidebar == "object" &amp;&amp;</b>
+<b>        typeof window.sidebar.addMicrosummaryGenerator == "function")</b>
+<b>      window.sidebar.addMicrosummaryGenerator(url);</b>
+<b>    else</b>
+<b>     alert(warning);</b>
+<b>  }</b>
+<b> &lt;/script&gt;</b>
+<b>&lt;a href="javascript:addGenerator('<span class="nowiki">http://people.mozilla.com/~myk/microsummaries/tutorial/sfx-generator.xml</span>')"&gt;Instaŀla el microsumari de la pàgina d'inici de l'Spread Firefox!&lt;/a&gt;</b>
+</pre>
+<h2 id="Conclusi.C3.B3" name="Conclusi.C3.B3">
+	Conclusió</h2>
+<p>
+	Ara ja hauríeu de tenir un generador de microsumaris que mostri el recompte de baixades del Firefox quan l'instaŀleu. Afegiu la pàgina d'inici de l'Spread Firefox a les adreces d'interès, i seleccioneu-ne el microsumari del menú desplegable en el diàleg <cite>Afegeix a les adreces d'interès</cite>.</p>
+<p>
+	Per a més informació, consulteu la <a class="external" href="http://wiki.mozilla.org/Microsummaries">pàgina d'inici dels microsumaris</a> (en anglès).</p>

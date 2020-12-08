@@ -1,0 +1,82 @@
+---
+title: ZTE OPEN C
+slug: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+tags:
+  - Update
+  - Upgrade
+  - ZTE Open C
+  - reagiert nicht mehr
+translation_of: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+---
+<div class="summary">
+ <p><span class="seoSummary">Das ZTE Open C Firefox OS Handy ist ein fortgeschrittenes Firefox OS Gerät von ZTE das über bessere Hardware verfügt, die unter anderem eine 3MP Kamera und einen 4-inch WVGA Display umfasst und bei dem Firefox OS 1.3 vorinstalliert ist. Dieser Artikel enthält Informationen über das Gerät, darunter Anleitungen zum Updaten und zur Fehlerbeseitigung.</span></p>
+</div>
+<div class="note">
+ <p><strong>Bitte Beachten: </strong>Diese Anleitungen sind<strong> nicht </strong>für das ZTE Open. Wenn Sie ein ZTE Open haben, sollten Sie stattdessen zu unterer <a href="/en-US/Firefox_OS/Developer_phone_guide/ZTE_OPEN">ZTE Open</a> Seite gehen.</p>
+</div>
+<div class="note">
+ <p><strong>Bitte beachten</strong>: Das Upgrade-Programm welches Sie benötigen, um das Handy zu entsprechen (s.u.) ist derzeit nur für Windows erhältlich. Kaufen Sie das Handy nicht, wenn Sie nicht über ein Windows-System verfügen und trotzdem selbst Ihre eigenen Versionen von Firefox OS installieren wollen.</p>
+</div>
+<p>Das ZTE Open C ist das erste Handy mit dem jüngsten<a href="http://blog.mozilla.org/futurereleases/2014/05/08/firefox-os-update-adds-new-features-including-dual-sim-support-and-enhancements-for-music-lovers-and-gamers"> update für Firefox OS</a>. Es bietet viele neue Funktionen, darunter den Direktzugriff auf den Musikplayer vom Sperrbildschirm oder dem Benachrichtigungsfeld aus und Bluetooth sharing, mit dem dem Sie mehrere Dateien gleichzeitig übertragen können. Nutzer können jetzt schneller durch die Menüs navigieren mithilfe von intelligenten Ordnern, die automatisch Apps oder die Suche nach Apps nach Kategorien ordnen mit verbesserter Geschwindigkeit beim Scrollen und einem schnelleren Start von Systen-Apps wie Kalender, Addressbuch und Kamera.</p>
+<h2 id="Der_Kauf_eines_Geräts">Der Kauf eines Geräts</h2>
+<p>Das Gerät kostet US$99.99, es ist bei eBay erhältlich:</p>
+<ul>
+ <li><a href="http://item.ebay.com/291125433026">ZTE eBay US store</a></li>
+ <li><a href="http://item.ebay.co.uk/171301269724">ZTE eBay UK store</a> (Kunden aus Frankreich und einiger angrenzender Länder sollten diesen Store benutzen)</li>
+ <li><a href="http://cgi.ebay.de/ws/eBayISAPI.dll?ViewItem&amp;item=131151681046&amp;ssPageName=STRK:MESE:IT">ZTE eBay DE store</a></li>
+ <li><a href="http://www.ebay.com/itm/111326263156">ZTE eBay RU and EU stores</a></li>
+</ul>
+<div class="note">
+ <p><strong>Bitte beachten</strong>: Sie erhalten das Gerät ohne dass irgendwelche Netzwerk-spezifischen Apps oder Dienste installert wären. Es handelt sich um eine entsperrte, global erhältliche Variante, die für early Adopters gedacht ist.</p>
+</div>
+<h2 id="Einzelheiten_zum_Handy">Einzelheiten zum Handy</h2>
+<p>Siehe <a href="/en-US/Firefox_OS/Developer_phone_guide/Phone_specs">Phone and device specs</a>.</p>
+<h2 id="Wie_Sie_Firefox_OS_upgraden">Wie Sie Firefox OS upgraden</h2>
+<p>Der einfachste Weg, um die Software Ihres Open C upzugraden ist es, die Dateien von der ZTE-Webseite zu verwenden. Um die richtige Datei zu finden, gehen Sie zu <a href="http://www.ztedevices.com/support/selectproduct.html?type=software">ZTE's Software support page</a>, wählen Sie Ihre Region aus der Liste auf der linken Seite, wählen Sie <em>Smart Phones</em> in der mittleren Liste und Open C(European Standard) bzw. Open C(American Standard), je nachdem, wo Sie das Gerät gekauft haben. Klicken Sie dann auf <em>Selected</em> um zu Ihrer Download-Seite zu gelangen.</p>
+<p>Sobald Ihr Download beendet ist, finden Sie ein PDF in der ZIP-Datei, das Ihnen erklärt, wie das Upgrade zu installieren ist.</p>
+<h2 id="Manuelle_Updates">"Manuelle" Updates</h2>
+<p>Wenn Sie selbst Gecko oder Gaia updaten wollen, ist der Vorgang etwas verzwickter, weil das Handy standardmäßig gesperrt ist und Sie keinen Root-Zugang haben. Um das Gerät zu entsperren, können Sie folgendes Programm von comebuy.com benutzen:<a href="http://en.comebuy.com/developer-firefox-os-open-c.html">Open_C_upgrade_Tool</a>. Durch die Installation dieses Programms wird die Fimware Ihres Geräts so verändert, dass der Root-Zugang Fastboot aktiviert werden und Sie die Möglichkeit haben, Ihr Telefon mit neuen Softwarekomponenten zu flashen.</p>
+<div class="note">
+ <p><strong>Bitte beachten</strong>: Dieses Upgrade-Programm ist derzeit nur für Windows verfügbar.</p>
+</div>
+<h3 id="Gecko_und_Gaia_upgraden">Gecko und Gaia upgraden</h3>
+<p>Sobald Sie Fastboot aktiviert haben, können Sie neue Firefox OS/B2G Gecko und Gaia Komponenten erstellen und installieren: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">build and install new Firefox OS/B2G</a>.</p>
+<ol>
+ <li>Beginnen Sie mit folgender Anleitung: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">build prerequisite</a>, wobei Sie das Open C zum Zwecke der Konfiguration wie ein Flame behandeln: Beide, Flame und Open C basieren auf dem Android Jellybean Basissystem.</li>
+ <li>Während der Konfiguration müssen Sie ein sog. "Custom Manifest File" für das Open C referenzieren. Laden Sie den Anhang zur Fehlermeldung auf folgender Seite herunter: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016867">Download the attachment on this bug</a> und speichern Sie ihn an einem Ort auf ihrem Computer, den Sie leicht wiederfinden unter dem Dateinamen openc.xml.</li>
+ <li>Räumen Sie das B2G Verzeichnis auf und löschen Sie nicht benötigte Unterverzeichnisse:<br>
+  <pre class="brush: bash" id="comment_text_2">rm -rf objdir-gecko/ out/ backup-flame/</pre>
+ </li>
+ <li>Konfigurieren Sie jetzt Firefox OS mit dem nachfolgenden Befehl:<br>
+  <pre class="brush: bash  language-html">./config.sh flame /PATH/TO/openc.xml</pre>
+ </li>
+ <li>Sie können jetzt die Gecko Komponenten mit den nachfolgenden Befehlen bauen und auf Ihr Gerät flashen:
+  <pre class="brush: bash  language-html">./build.sh gecko
+./flash.sh gecko</pre>
+ </li>
+ <li>Jetzt sollten Sie auch Gaia upgraden, damit die upgegradete Version von Gecko mit der Gaia-Version auf Ihrem Gerät zusammenarbeietet:
+  <pre class="brush: bash  language-html">cd gaia
+make reset-gaia</pre>
+ </li>
+</ol>
+<div class="warning">
+ <p><strong>Achtung</strong>: Der Versuch, ein Image für das Flame auf Ihr Gerät zu flashen würde dieses unbrauchbar machen, weswegen hiervon abgeraten wird.</p>
+</div>
+<h3 id="Gaia_upgraden">Gaia upgraden</h3>
+<p>Wenn Sie nur ein Update von Gaia und nicht auch von Gecko durchführen wollen, müssen Sie zunächst das Gaia Repo auf Github forken und klonen und das Ergebnis auf Ihr Gerät flashen.</p>
+<ol dir="ltr">
+ <li>Stellen Sie sicher dass <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> installiert ist.</li>
+ <li>Gehen Sie zu <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a>, klicken Sie dann auf den "fork" button in der oben rechten Ecke um in Ihr eigenes Repo zu forken.</li>
+ <li>Klonen Sie den Code von ihrem geforkten Repo auf Ihren eigenen Rechner, indem Sie folgenden Befehl ausführen:
+  <pre class="brush: bash  language-html">git clone https://github.com/your-github-username/gaia.git</pre>
+ </li>
+ <li><code>Wechseln Sie in das hierdurch erstellte Verzeichnis.</code></li>
+ <li>Schalten Sie auf ihrem Gerät <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">remote debugging</a> ein (wählen Sie die ADB und Devtools option).</li>
+ <li>Verbinden Sie jetzt Ihr Handy per USB mit Ihrem Computer, stellen Sie sicher, dass das Gerät erkannt wird, indem Sie den Befehl <code>adb devices</code> im terminal eingeben.</li>
+ <li>Führen Sie folgenden Befehl aus, um Ihr Handy neu zu starten und es mit dem neuesten Gaia Sourcecode upzudaten
+  <pre class="brush: bash  language-html">make reset-gaia</pre>
+ </li>
+</ol>
+<h2 id="Mein_Handy_reagiert_nicht_mehr">Mein Handy reagiert nicht mehr</h2>
+<p>Wenn Ihr Gerät nicht mehr reagiert, ist es unter Umständen möglich, es mit der unter  <a href="http://www.ztedevices.com/support/smart_phone/65229ec9-3165-424e-a7dd-3759356325fd.html">ZTE Open C user manual</a> auf der Webseite von ZTE verfügbaren Anleitung und der  Anleitung auf dieser Seite wieder zum  Leben zu erwecken.</p>
+<p>Weitere Informationen sind unter Umständen hier: <a href="https://support.mozilla.org/en-US/questions/1003136">reference this support entry</a> verfügbar.</p>

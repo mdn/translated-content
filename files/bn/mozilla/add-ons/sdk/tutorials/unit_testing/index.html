@@ -1,0 +1,114 @@
+---
+title: ইউনিট টেস্টিং
+slug: Mozilla/Add-ons/SDK/Tutorials/Unit_testing
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Unit_testing
+---
+<div class="note">
+ <p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এই tutorial আপনার থাকতে দরকার হবে অনুসরন করতে</span><span> <a href="/en-US/Add-ons/SDK/Tutorials/Installation">installed the SDK</a>, </span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">জ্ঞানী </span><span><a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">basics of <code>cfx</code></a>, </span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">আর অনুসরন করা tutorial</span><span> <a href="/en-US/Add-ons/SDK/Tutorials/Creating_reusable_modules">writing reusable modules</a>.</span></p>
+</div>
+<div class="note">
+ <p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">যদি আপনি ব্যবহার করতেন</span> <a href="/en-US/Add-ons/SDK/Tools/jpm">jpm</a> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">cfx বদলে, cfx থেকে স্থানান্তর করতে গাইড দেখে</span>, in particular <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">সেকশান</span> <a href="/en-US/Add-ons/SDK/Tools/cfx_to_jpm#Requiring_modules_from_test_code">loading modules from test code</a>.</p>
+</div>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">sdk দেয় একটি কাঠামো সাহায্য করতে বানায় আর আপনার কোড-এর জন্য অংশ পরীক্ষা দৌড়ায়</span>. <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এটা হাতেকলমে দেখাতে কাজ করে আমরা একটি সাদাসিধে-এর জন্য কিছু অংশ পরীক্ষা লিখব</span> <a href="http://en.wikipedia.org/wiki/Base64">Base64</a> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">মডিউল সঙ্কেতাক্ষরে লিখতে</span>.</p>
+<h2 id="একটি_সাদাসিধে_base64_মডিউল"><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">একটি  সাদাসিধে  base64  মডিউল</span></h2>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">একটি ওয়েব পাতায়, আপনি base64 সম্পাদন করতে পারেন ( -rrb- আর atob -lrb- ) কাজ ব্যব‌হার সঙ্কেতাক্ষরে লিখতে আর btoa ব্যবহার করা সন্কেত উদঘাটন করতে।</span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">দুর্ভাগ্যক্রমে এই কাজ ব্যব‌হার জানালা জিনিষে সংযুক্ত করা হয়: যেহেতু এই জিনিষ না উপস্থিত আপনার প্রধান add-on কোডে, atob ( -rrb- আর btoa -lrb- ) নেই উপস্থিত either।</span> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">তাই আমরা একটি base64 মডিউল বানাবো প্ল্যাটফর্ম থেকে এই কাজ ব্যব‌হার অনাবৃত করতে।</span></p>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">শুরুতে, একটি নতুন ডিরেক্টরি বানাতে, এটায় পথ খোঁজতে, আর cfx init দৌড়াতে।</span> Now create a new file in "lib" called "base64.js", and give it the following contents:<span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এখন `` libে '' `` "base64.js" ডাকা একটি নতুন ফাইল বানান।</span></p>
+<pre class="brush: js">const { atob, btoa } = require("chrome").Cu.import("resource://gre/modules/Services.jsm", {});
+
+exports.atob = a =&gt; atob(a);
+exports.btoa = b =&gt; btoa(b); </pre>
+<p><code><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এই কোড দুটো কাজ ব্যব‌হার, যা মাত্র প্ল্যাটফর্ম-এর btoa ডাকে রপ্তানি করে</span>()</code> and <code>atob()</code> functions. <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">ব্যবহারে মডিউল দেখাতে, সম্পাদন করতে</span> "main.js"<span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">দাখিল করুন যেহেতু  এটি অনুসরন করে:</span></p>
+<pre class="brush: js">var base64 = require("./base64");
+
+var button = require("sdk/ui/button/action").ActionButton({
+  id: "base64",
+  label: "base64",
+  icon: "./icon-16.png",
+  onClick: function() {
+    encoded = base64.btoa("hello");
+    console.log(encoded);
+    decoded = base64.atob(encoded);
+    console.log(decoded);
+  }
+});</pre>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">আপনার add-ons `` ডাটা '' ডিরেক্টরিতে বাঁচাতে </span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;"> উপরন্তু দৃষ্টান্ত  একটি প্রতিমা উল্লেখ করে `` icon-16 দাখিল করে থাকতে হবে। । আপনি এই প্রতিমা ডাউনলোড করতে পারতেন:</span> <img alt="" src="https://mdn.mozillademos.org/files/7661/icon-16.png" style="width: 16px; height: 16px;">.</p>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এখন</span> "main.js" <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">আমদানি base64 মডিউল আর ডাক এটার দুটো exported কাজ ব্যব‌হার।</span></p>
+<table style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 12px; line-height: normal; overflow: auto; width: 400px; height: 40px;">
+ <tbody>
+  <tr>
+   <td><span style="font-size: 16px;">যদি আমরা add-on দৌড়াতাম আর বাটন ক্লিক করি, আমরা অনুসরন করা লগ করা আউটপুট দেখা উচিত</span></td>
+  </tr>
+ </tbody>
+</table>
+<p>:</p>
+<pre>info: aGVsbG8=
+info: hello
+</pre>
+<h2 id="পরীক্ষা_করে_base64_মডিউল"><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">পরীক্ষা করে  base64  মডিউল</span></h2>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">navigate এ্যাডঅন-এর-এর</span> <code>test</code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">directory আর delete</span> <code>test-main.js</code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">ফাইল</span>. <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এটার জায়গায় বানান একটি ফাইল যা ডাকা হলো</span> <code>test-base64.js</code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">অনুসরন করা অভ্যন্তরস্থ বস্তু-এর সাথে</span>:</p>
+<pre class="brush: js">var base64 = require("./base64");
+
+exports["test atob"] = function(assert) {
+      assert.ok(base64.atob("aGVsbG8=") == "hello", "atob works");
+}
+
+exports["test btoa"] = function(assert) {
+  assert.ok(base64.btoa("hello") == "aGVsbG8=", "btoa works");
+}
+
+exports["test empty string"] = function(assert) {
+  assert.throws(function() {
+                  base64.atob();
+                },
+                "empty string check works");
+}
+
+require("sdk/test").run(exports); </pre>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এটা দাখিল করে</span>: <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">রপ্তানি করে তিন কাজ ব্যব‌হার, যার each একটি একাকী যুক্তি পেতে আশা করে যা হচ্ছে একটি</span> <code>assert</code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">জিনিষ</span>. <code>assert</code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">যোগান দেয়া হয়</span> <a href="/en-US/Add-ons/SDK/Low-Level_APIs/test_assert"><code>test/assert</code></a> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">module আর বাস্তবায়িত করে</span><a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.1">CommonJS Unit Testing specification</a>.</p>
+<ul>
+ <li>
+  <p><code><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">প্রথম দুটো কাজ ব্যব‌হার atob ডাকে</span>()</code> <code><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">আর btoa</span>()</code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">আর ব্যবহার</span> <a href="/en-US/Add-ons/SDK/Low-Level_APIs/test_assert#ok(guard.2C_message)"><code>assert.ok()</code></a> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">যাচাই করতে যে হচ্ছে as আশা করা আউটপুট।</span></p>
+ </li>
+ <li>
+  <p><code><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">দ্বিতীয় কাজ ব্যব‌হার একটি খালি সূতা পাশ করতে দ্বারা মডিউল-এর error-handling কোড পরীক্ষা করে</span>atob()</code> <code><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">আর ব্যবহার করতে</span><a href="/en-US/Add-ons/SDK/Low-Level_APIs/test_assert#throws(block.2C_error.2C_message)">assert.throws()</a></code> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">যাচাই করতে যে ওঠানো হয় প্রত্যাশিত ব্যতিক্রম।</span></p>
+ </li>
+</ul>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এই মুহূর্তে আপনার add-on ought এই মত দেখতে:</span></p>
+<pre>  /base64
+      package.json
+      README.md
+      /doc
+          main.md
+      /lib
+          main.js
+          base64.js
+      /test
+          test-base64.js
+</pre>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এখন cfx নির্বাহ করুন-- এ্যাডঅন-এর মূল ডিরেক্টরি থেকে verbose পরীক্ষা করুন। আপনি এখন এর মত কিছু দেখা পাবেন:</span></p>
+<pre>Running tests on Firefox 13.0/Gecko 13.0 ({ec8030f7-c20a-464f-9b0e-13a3a9e97384}) under darwin/x86.
+info: executing 'test-base64.test atob'
+info: pass: atob works
+info: executing 'test-base64.test btoa'
+info: pass: btoa works
+info: executing 'test-base64.test empty string'
+info: pass: empty string check works
+
+3 of 3 tests passed.
+Total time: 5.172589 seconds
+Program terminated successfully.
+</pre>
+<table style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 12px; line-height: normal; overflow: auto; width: 400px; height: 40px;">
+ <tbody>
+  <tr>
+   <td><span style="font-size: 16px;">কি ঘটে এখানে হচ্ছে সে cfx পরীক্ষা</span></td>
+  </tr>
+ </tbody>
+</table>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">যোজক চিহ্ন নোট করুন</span><span> "test" </span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">module নামে।</span><span> <code>cfx test</code></span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">will অন্তর্ভুক্ত করে একটি মডিউল যা ডাকা হলো</span><span> "test-myCode.js", </span><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">কিন্তু, অভিলাষ মডিউল ছাঁটাই করে যা ডাকা হলো</span><span> "test_myCode.js" or "testMyCode.js".</span></p>
+<ul>
+ <li><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">পরীক্ষা ডিরেক্টরিতে রূপ আপনার প্যাকেজ-এর</span></li>
+ <li><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">যেকোনো মডিউল যার নাম শব্দ পরীক্ষার সাথে শুরু করে loads-</span></li>
+ <li><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">প্রত্যেক exported কাজ ব্যব‌হার যার নাম শুরু করে calls</span>"test", <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এটা একটি পাশ করতে</span> <a href="/en-US/Add-ons/SDK/Low-Level_APIs/test_assert#Assert"><code>assert</code></a> <span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">এটার একমাত্র যুক্তি হিসেবে আপত্তি করুন।</span></li>
+</ul>
+<p><span style="color: rgb(0, 0, 0); font-family: Georgia; font-size: 16px; line-height: normal;">স্পষ্টত, আপনার-- verbose অপশন পাশ করতে cfx যদি আপনি চাইতেন না হবে না; এত মাত্র করতে আউটপুট আরো সহজ পড়তে বানায়।</span></p>

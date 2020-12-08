@@ -1,0 +1,161 @@
+---
+title: Eine Entwicklungsumgebung einrichten
+slug: >-
+  Archive/Mozilla/XUL/School_tutorial/Eine_Entwicklungsumgebung_einrichten_Environment
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Setting_Up_a_Development_Environment
+---
+<p>{{ PreviousNext("XUL_School/The_Essentials_of_an_Extension", "XUL_School/Adding_menus_and_submenus") }}</p>
+<h2 id="Eine_Entwicklungsumgebung_einrichten">Eine Entwicklungsumgebung einrichten</h2>
+<p>Es gibt 3 Tools von denen wir denken das diese essentiell für eine effektive Add-on-Entwicklung sind (oder ehrlich gesagt für jede Art von Entwicklung): ein Quellcodeeditor, ein Versionskontrollsystem und eine Entwicklungsumgebung.</p>
+<p>Im Bezug auf das Codeediting, es gibt keine offizelle Mozilla IDE. Mit anderen Worten, Erweiterungen benutzen die selben (oder ähnlichen) Sprachen die auch für die Webentwicklung genutzt werden, von daher könnnen die meisten Texteditoren und IDE`s eingesetzt werden. Die meisten XUL-Tools und Plugin`s die Sie Online finden werden sind lediglich Templates die die Ordnerstruktur füre das Projekt erzeugen, und das ist nicht viel Hilfe.</p>
+<p>WIe empfehlen <a class="external" href="http://www.activestate.com/komodo_edit/" title="http://www.activestate.com/komodo_edit/">Komodo Edit</a>. Es ist kostenlos, OpenSource und Cross-Platform-Unabhängig. Es basiert auf der Mozilla XULRunner Platform, von daher unterstützt einige der Besonderheiten in der Firefoxerweiterungsentwicklung. Komodo Edit bietet eine Autovercollständigung für XUL-Tags und Attribute und es unterstützt Mozilla`s CSS-Erweiterungen (CSS-Werte und Einstellungen beginnen mit "-moz"). Es besitzt ein Add-on System ähnlich dem im Firefox, und es gibt einige Komodo-Erweiterungen die zusätzliche Hilfe bei der Erweiterungsentwicklung bieten. Das ist mehr als die meisten andern Editoren bieten, von daher empfehlen wir Ihnen ihm eine Chance zu geben. Alle unsere Beispiel wurden mit Komodo Edit erstellt, also wenn Sie eine .<em>kpf</em> oder <em>.komodoproject</em> fi Datei in einem Beispieldownload sehen ist das eine Komodoprojektdatei.</p>
+<p><img alt="" height="479" src="https://mdn.mozillademos.org/files/8435/screenshot%20-%20komodo_edit.png" width="657"></p>
+<p>Wir empfehlen <a href="http://git-scm.com/" title="http://git-scm.com/">Git</a> und <a href="https://github.com/" title="https://github.com/">GitHub</a> für die Versionskontrolle, aber jedes anständige <span class="st"><em><a href="http://en.wikipedia.org/wiki/Software_configuration_management" title="http://en.wikipedia.org/wiki/Software_configuration_management">Software-Configuration-Management</a></em></span> System kann hier eingesetzt werden.</p>
+<p>Um XPI-Dateien zu packen, nutzen wir make. Wir haben <em>make</em> gewählt weil dieses System von Mozilla genutzt wird um Firefox zu bauen und es ist für alle Betriebssysteme verfügbar. <em>make</em> ist das Standard Tool in den meisten UNIX-basierten Systemen. Es kann unter Mac OS X als Teil von des XCode Tool-Paketes installiert werden und unter Windows mit <a class="external" href="http://www.cygwin.com/">cygwin</a>. In einer <em>cygwin</em>-Installation werden Sie explizit die <em>make</em> und <em>zip</em> utilities aus der langen Liste der Pakete auswählen müssen um diese herunterzuladen und installieren.</p>
+<p>Sorgen Sie des weiteren dafür das <em>make</em> sich im ausführbaren Systempfad befindet. Nach der Einrichtung von <em>make</em>, sollten Sie in der Lage sein ein Kommandozeildenfenster zu öffnen, führen Sie "make-ver" aus, und Sie bekommen die installierte Version von <em>make</em> als Ausgabe.</p>
+<p>Wir empfehlen Ihnen <em>make</em> auf Ihrem System einzurichten, da unsere Beispiele beinhalten alle notwendigen Dateien um die daraus entstehende XPI mit diesem Toolzu bauen und installieren. Es wird Ihnen einiges an Zeit für das packen ersparen. Oder Sie können ein vergleichbares System unter der Verwendung von Batch aufsetzen, machen Sie es wie auch immer Sie bevorzugen. Letztlich können Sie auch einfach jeden Zip oder Archivierungs Tool verwenden um den Inhalt des <em>src</em> Verzeichnisses zu komprimieren um ein identisches Ergebniss zu ereichen.</p>
+<h2 id="Build_system">Build system</h2>
+<p>Beginnen wir mit dem Herunterladen des Projekts mit dem die zweite Version von Hello World aufgebaut wurde, aus der Übung der letzten Lektion</p>
+<p><a href="/@api/deki/files/5142/=HelloWorld2.zip" title="https://developer.mozilla.org/@api/deki/files/5142/=HelloWorld2.zip">Hello World 2 Project</a>.</p>
+<p>Entpacken die Datei wohin Sie wollen. Innerhalb des <em>HelloWorld2</em> Verzeichnisses weden Sie zwei Verzeichnisse sehen: <em>bin</em> und <em>src</em>. Das <em>bin</em> Verzeichnis sollte leer sein. Dort werden alle enstehenden build-Dateien erstellt und dort werden Sie die Erweiterungs XPI-Datei finden wenn sie erstellt wurde.</p>
+<p>Öffnen Sie die Projektdatei (<em>HelloWorld2.komodoproject</em>) in the <em>src </em>Verzeichnis in Komodo Edit. In dem Projektreiter sollten Sie nun in der Lage sein die Verzeichnisstruktur innerhalbt des <em>src-</em>Verzeichnises sehen. Dies Struktur solle ihnen vertraut sein, da Sie beinahe identisch mit der ungepackten XPI von der vorherigen Lektion ist.</p>
+<p>Die einzige bemwerkswerte Änderung ist eine Datei mit der Bezeichnung <em>Makefile</em> unter <em>src</em>. Das ist die Datei die <em>make</em> nutzt  um die XPI zu erstellen. Sie sollten sich etwas Zeit nehmen um diese zu lesen und zu verstehen., oder zumindest die Teile untersuchen die Sie ändern müssen um Ihr projekt zu beginnen. Die <a class="external" href="http://www.chemie.fu-berlin.de/chemnet/use/info/make/make_toc.html">GNU Make Manual</a> ist eine sehr gute Refernz um sich mit <em>make</em> und der <em>Makefile</em>-Datei vertraut zu machen.</p>
+<p>In den meisten Fällen müssen Sie nur ein paar der ersten Zeilen in der <em>Makefile</em>-Datei ändern. Diese definieren den Erweiterungsnamen, die Erweiterungs ID (wie in <em>install.rdf</em> festgelegt) und der Name des profile-Verzeichnisses wohin die Erweiterung während der Entwicklung und des testens installiert wird. Mehr über das später.</p>
+<p>Versuchen wir zuerst die XPI über die Kommandozeile zu erstellen. Öffnen Sie das Kommandozeilenprogramm in Ihrem System und naviergien Sie zum <em>src</em> Verzeichnis in Ihrem Projekt. Führen Sie folgenden Befehl aus:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">make</pre>
+ </div>
+</div>
+<p>Das ist es. Wenn alles gut läuft sollten Sie eine Ausgabe wie diese sehen:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">Creating XPI file.
+  adding: install.rdf (deflated 50%)
+  adding: chrome.manifest (deflated 50%)
+  adding: content/browserOverlay.js (deflated 42%)
+  adding: content/browserOverlay.xul (deflated 69%)
+  adding: skin/browserOverlay.css (stored 0%)
+  adding: locale/en-US/browserOverlay.dtd (deflated 52%)
+  adding: locale/en-US/browserOverlay.properties (stored 0%)
+Creating XPI file. Done!
+
+Build finished successfully.
+</pre>
+ </div>
+</div>
+<p>Wenn Sie das <em>bin</em> Verzeichnis untersuchen, sollten Sie die <em>xulschoolhello2.xpi</em> Datei sehen.</p>
+<p>Wenn Sie <em>make </em>ausführen, werden Sie die letzte Zeilde des Erstellungsprozesses sehen. Das ist so weil <em>make</em> mitteilt das die Datei im <em>bin</em> Verzeichnis aktuell ist und es nichts zu machen gibt. Änderungen an der Quelldatei werden <em>make</em> dazu bringen die notwendigen Schritte erneut auszuführen um XPI erneut zu erstellen.</p>
+<p>Sie können das <em>bin </em>Verzeichnis aufräumen indem Sie einfach den folgenden Befehl ausführen (nochmal, innerhalb des <em>src</em> Verzeichnises)<br>
+  </p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">make clean</pre>
+ </div>
+</div>
+<p>Sie können diese Befehle auch in Komodo ausführen. Klicken Sie auf Tools &gt; Befehl ausführen... In das "Ausführen" Textfeld sollten Sie das eingeben:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">bash -c <span class="code-quote">"make"</span></pre>
+ </div>
+</div>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8439/screenshot%20-%20komodo_edit%20Run%20Command.png"></p>
+<p>Oder ersetzen Sie "make" mit "make clean" für das aufräumen. Der "basc -c" Teil zwingt Komodo <em>bash</em> zu nutzen, welches aus einigen Gründen nicht als das Standard Kommandozeile gesetzt werden kann. Es ist nicht notwendig dies zu tun, aber es ist besser so das mit dem <em>make</em>-Befehl übereinstimmt den wir als nächstes sehen werden.</p>
+<p>In em "Start in" Textfeld sollten Sie %p wählen (Verzeichnispfad des aktiven Projektes. Wenn Sie dieses Textfeld nicht sehen können dann klicken Sie auf den "More" Schalter. Sie besitzen auch die Möglichkeit den Befehl zu speichern, durch einen Klick auf das "Add to Toolbox" Auswahlfeld. Um die Toolbox zu sehen, klicke auf View &gt; Tabs &gt; Toolbox, über das Hauptmenü. Damit sollten Sie einen sehr einfachen Weg haben um Ihre XPI zu erstellen, indem Sie nur den Erstellungsbefehl Doppelklicken.</p>
+<p>Wir können es sogar noch besser machen. Wenn Sie einmal Ihren Code testen und debuggen, werden Sie feststellen, dass das ständige erstellen und installieren einer XPI sehr ermüdend sein kann. Das ist der Gründ warum wir "make install" eingeführt haben. Dies funktioniert nur wenn die Erweiterung bereits in einem Firefoxprofil installiert ist. Wie in den vorgestellten Projekt, benötigen Sie die Add-on-ID und die gesetzte Profillokation die in der <em>Makefile</em>-Datei. Wir nutzen diese Informationen um den Installationspfad  von der Erweiterung  und überschreiben die installierten Dateien. Wenn Firefox geöffnet ist können Sie den "make install"-Befehl ausführen, Sie müssen Firefox neustarten um die Änderungen zu sehen. Es ist immernoch besser als die XPI andauernd neu zu installieren.</p>
+<p>Möglicherweise möchten Sie die Profillokation in Ihrem <em>Makefile</em>-Datei ändern. . Um die Profilloaktion auf den richtigen Wert zu setzen, sollten Sie den Artikel <a class="external" href="http://support.mozilla.com/en-US/kb/Profiles">support article on profiles</a> auf der Mozilla Support Seite lesen. Auch werden wir später tiefer in dieses Thema eintauchen.</p>
+<p>Um "make install" auf nicht WIndowssystemen einzusetzen, benötigen Sie einen extra Schritt. Der Installationsprozess benötigt eine Umgebungsvariable mit dem Namen <em>OSTYPE</em>, welche nicht exportiert wird. Lange Geschichte kurzer Sinn, über Kommandozeile müssen Sie folgendes ausführen:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">export OSTYPE; make install</pre>
+ </div>
+</div>
+<p>Und in Komodo sollten Sie fogenden Befehl eingeben:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">bash -c <span class="code-quote">"export OSTYPE; make install"</span></pre>
+ </div>
+</div>
+<p>Der <em>export</em>-Befehl wird nicht korrekt funktionieren wenn Sie nicht "bach-c" verwenden.</p>
+<div class="note">
+ The file <em>Makefile</em> specifies which profile folder the add-on will be reinstalled to. This is set in the <em>profile_dir</em> variable (set to "xulschool-dev" in this case). When creating a development profile for your add-on, make sure you choose an easy name for the profile folder, and set it in your <em>Makefile</em> in order to take advantage of the install command.</div>
+<h3 id="Building_IDL_files">Building IDL files</h3>
+<p>Einige Erweiterungen setzen die Entwicklung von XPCOM-Komponeten voraus um gewisse fortgeschritten Funktionen hinzuzufügen. Es gibt eine Lektion die für XPCOM in diesem Tutorial vorgesehen ist, aber wie gehen kaum auf den Einflussdie es auf die Entwicklung von Erweiterungen hat ein. Sie können diesen Teil überspringen und es als Refernenz zu nutzen wenn Sie XPCOM in Ihrem Projekt benötigen.</p>
+<p>XPCOM Schnittstellen werden mit IDL-Dateien definiert. Das sind Textdateien die Attribute definieren und Methoden in einem oder mehren Schnittstellen. Diese IDL-Dateien werden in Binarydateien kompiliert und werden in die Erweiterung als XPT-Dateien eingebunden.</p>
+<p>Um eine IDL-Dateizu XPT zu komplieren, benötigen Sie ein Kommandozeilen Tool, xpidl. Dieses Tool ist im Mozilla <a href="/en/Gecko_SDK" title="en/Gecko SDK">Gecko SDK</a> enthalen. Wenn Sie IDL`s kompilieren möchten, gehen Sie zur SDK-Seite und laden Sie eine kompilierte Version für Ihr System herunter. Beachte auch mögliche Anforderungen. Wenn Ihr System nicht bei den unterstützen Systemen aufgelistet ist, müssen Sie das SDK selbständig aus dem Mozilla Quellcode erstellen. Viel Glück damit.</p>
+<p>Sie sollten auch Ihre Umgebung so aufbauen das die <em>xpidl.exe</em> (oder nur <em>xpidl</em> in anderen Systemen) dich in dem standardmäßige auführbaren Pfad befindet und fügen Sie auch eine Variable mit der Bennung Gecko_SDK hinzu, die auf Ihren SDK-Build verweist:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">export GECKO_SDK=/path/to/your/sdk</pre>
+ </div>
+</div>
+<p>Ihr Buildsystem sollte dort darauf zugreifen. Um es in Komodo unter UNIX-basierten Systemen einsetzen zu können, fügen wir den Befehl in die<em> .bash_login</em>-Datei im Homeverzeichnis hinzu und wir passen den Befehl folgendermasen an.</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">bash -c <span class="code-quote">". ~/.bash_login; make"</span></pre>
+ </div>
+</div>
+<p>Ein Beispiel Projekt mit XPCOM-Komponeten ist in der XPCOM-Lektion enthalten. Dort wird auch XPCOM Erstellung mit C++ angesprochen, was sehr viel schwieriger ist.</p>
+<h3 id="Signing">Signing</h3>
+<p>Um zusätzliche Sicherheit für Ihre Nutzer bereitzustellen, können Sie sich entscheiden <a href="/en/Signing_an_extension" title="en/Signing an extension">eine Signature zu Ihrer Erweiterung hinzuzufügen</a>. Die Signatur verfiziert das Sie der Autor dieser Erweiterung sind und das kann nur gemacht werden wenn Sie ein gültiges Zertifikat einer vertrauswürdigen Zertifizierungsstelle besitzen.</p>
+<p>Der einzige wahrnehmbare Unterschied für den Benutzer ist das der XPI-Installationsdialog mitteilen wird das die Erweiterung von Ihnen erstellt wurde, was den Dialog vertrauswürdiger macht. Es is nicht üblich Erweiterungen zu signieren weil die meisten Anwender der offizellen Add-on-Seite (<a class="link-https" href="https://addons.mozilla.org" title="https://addons.mozilla.org">AMO</a>) vertrauen anstatt sich auf die Erweiterungssignaturen zu verlassen. Auf der anderen Seite, ist es gängie Praxis für große Unternehmen ihre Erweiterungen zu signieren.</p>
+<p>Sie werden einige libraries herunterladen müssen damit Sie in der Lage sind Ihre Erweiterungen zu signieren. Folgen Sie dieser <a href="/en/Signing_an_extension" title="en/Signing an extension"><span class="external">Anleitung</span></a> und fügen etwas ähnliches wie das der Makefile-Datei hinzu:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java"># The directory where the signature sources are located.
+signature_dir := signature
+
+# The signing key /certificate file.
+signature_extra_files := $(build_dir)/META-INF/manifest.mf \
+                         $(build_dir)/META-INF/zigbert.sf
+# The signing key /certificate file.
+signature_rsa_file = $(build_dir)/META-INF/zigbert.rsa# The signing key /certificate file.
+signature_files := $(signature_extra_files) \
+                   $(signature_rsa_file)
+
+$(signature_files): $(build_dir) $(xpi_built)
+  @signtool -d $(signature_dir) -k $(cert_name) \
+  -p $(cert_password) $(build_dir)</pre>
+ </div>
+</div>
+<p>Behalten Sie im Hinterkopf ds Ihr Passwort sollte nicht in Ihren Makefile-Dateien enthalten sein und Sie müssen sehr vorsichtig mit den Zertifkatsinformationen sein. Idealerweise sollte das von einer Person erledigt werden und nur Kurz vor Abschluss des Releaseprozess erledigt werden. Sie sollten auch einen abweichenden <em>make</em>-Befehl hierfür haben, wie z.B. <em>make signed </em>um die signierten und unsignierten Entwicklungs builds unterscheiden zu können.</p>
+<h2 id="Firefox_profile_management">Firefox profile management</h2>
+<p>Es ist gute Entwicklungspraxis die Testumgebung von allem anderen zu seperieren. Sie wollen bestimmt nicht das unstabilen Erweiterungen Ihr Firefoxprofil zu schädigen und einen Datenverlust zu riskieren. Es ist viel Besser eine weitere Firefox-"Version" für die Tests zu haben. Hierfür gibt es de Firefoxprofile.</p>
+<p>Sie können in dem Mozillasupport-Artikeln <a class="external" href="http://support.mozilla.com/en-US/kb/Managing+profiles">Managing Profiles</a> lernen wie man mehrere Firefoxprofile aufsetzt. Sie können soviele Profile anlegen wie Sie möchten. Sie können diese auch mit mehreren Firefoxinstallationen mischen. Als Beispiel, Sie möchten möglicherweise Ihre Erweiterungen in Firefox 3.5 und Firefox 3.6 oder in unterschiedlichen regionalen Versionen von Firefox testen. Sie können soviele Firefoxversionen installieren wie Sie möchten und die Profile und Versionen mischen.</p>
+<p>Unter Windows und Linux ist es einfach Verknüpfungen für jedes angeleget Profil zu erstellen, unter der Verwendung der Befehle beschrieben in http://kb.mozillazine.org/Command_line_arguments ..</p>
+<p>Für Mac OS X Entwickler, gibt es auch eine Möglichkeit "Verknüpfungen" zu erstellen. Sie können dies erledigen, indem Sie eine Automator-Anwendung öffnen, indem Sie Run Shell Script auswählen und anschließend das Profillade-Skript in das Textfeld eingeben:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="code-java">/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -p MyProfile &gt; /dev/<span class="code-keyword">null</span> &amp;</pre>
+ </div>
+</div>
+<p>Sie können "/dev/null" auf einen Dateispeicherort ändern, in dem Fall das Sie eine <em>dump</em>-Ausgabe in Firefox sehen möchten oder ander Erweiterungen. last &amp; prevents hindert Automator daran auf das beenden Ihrer Firefoxsitzung zu warten. Speicher Sie das als eine Anwendung nicht als einen Workflow. Un möglicherweise wollen Sie diese auf Ihrem Desktop oder Dock, für einen einfachen Zugriff.</p>
+<p>Es sollten auch noch Konfigurationsänderungen in Ihrem Testprofil vorgenommen werden, sodass Sie im falls etwas schief geht detailierte Informationen erhalten. Die Firefox <a href="/en/Error_Console" title="en/Error Console">Error Console</a> (Extras &gt; Error Console) zeigt normalerweise JavaScripte Fehler an die auf der Webseite auftretten, aber mit etwas Optimierung können Sie Fehlerinformationen aus Ihrer Erweiterungen erhalten. Lesen hierfür Sie diesen Beitrag über<a href="/en/Setting_up_extension_development_environment#Development_preferences" title="en/Setting up extension development environment#Development preferences"><span class="external"> Development preferences</span></a>.</p>
+<h2 id="Developer_extensions">Developer extensions</h2>
+<p>Es gibt ein große Bandbreite an Firefoxerweiterungen die die Web- und Add-on-Entwicklung untersützen. Ein guter Ort um danach zu suchen ist die <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/browse/type:1/cat:4">Mozilla Add-ons Seite</a> auch gibt es hier ein gute <a href="/en/Setting_up_extension_development_environment#Development_extensions" title="en/Setting up extension development environment#Development extensions"><span class="external">Entwicklungserweiterungsliste</span></a>. Sie sollten sich etwas Zeit nehmen und mit den Webentwicklungstools die in Firefox enthalten sind herumspielen. Einige von diesen können sehr hilfreich für die Add-on-Entwicklung sein und überschneiden sich mit den aufgeführen Add-on`s. in dieser Lektion werden wir ein paar wenige ansprechen die wir als sehr hilfreich empfunden haben.</p>
+<h3 id="DOM_Inspector">DOM Inspector</h3>
+<p>Der <a href="/en/DOM_Inspector" title="en/DOM Inspector"><span class="external">DOM Inspector</span></a> war früher ein Teil von Firefox als eine Installationsoption, aber seit Firefox 3 ist von Firefox abgetrennt als ein weiteres Add-on Sie können es hinzufügen und entfernen. Es ist ein sehr nützliches Tool für Untersuchungen das Sie in das DOM von HTML und XUL-Dokumenten sehen lässt, genauso wie eingesetzte CSS-Regeln und zugehörige JavaScript Objekte. <a href="/en/DOM_Inspector/Introduction_to_DOM_Inspector" title="en/Introduction to DOM Inspector">Introduction to DOM Inspector</a> ist eine gute Einführung um mit der Verwendung zu beginnen.</p>
+<p>Der DOM Inspector ist besonders hilfreich um heruauszufinden wie Sie ein Fenster überblenden, und wie Sie standard CSS-Style-Regeln ersetzen. Sie können die Namen der beteiligten Dateien sehen, was Ihnen einen guten Startpunkt gibt wenn Sie in die <a class="external" href="http://mxr.mozilla.org/">Mozilla source</a> sehen. Sie können sogar Styles, Attribute ändern und JavaScript Code ausführen, obwohl dies nicht vollständig zuverlässig ist.</p>
+<h3 id="JavaScript_Debugger">JavaScript Debugger</h3>
+<p>Der Name sagt alles. Der <a href="/en/Venkman" title="en/Venkman">Venkman JavaScript Debugger</a> ist ein größartiger Weg um die Ausführung von JavaScript zu verfolgen.</p>
+<p>Um Erweiterungen und Browsercod zu debuggen, klicken Sie mit der rechten Maustaste auf die geladene Scriptkonsole und entfernen Sie die Auswahl von Exclude Browser Files. Die Liste der geladenen Skripte wird anwachsen um alle Skripte in Firefox zu beinhalten. Unsere Dateinamenkonventionen erweisen sich hierbei als sehr hilfreich. Sie können Unterbrechngspunkte setzen, aus und in Methoden springen und sogar Profilinformationen aus der JavaScriptausführung erhlaten. Sie können Variablen untersuchen, Überwachungsausdrücke verfolgen, und nach Ermessen JS an jedem Punkt der Ausführung auswerten.</p>
+<p>Diese Erweiterungen ist seit einiger Zeit nicht mehr gewartet werden, daher ist sie sehr buggy. Es ist besonders unzuverlässig wenn es Code in XPCOM und XBL-Dateien debuggen soll. Dennoch, ist ein wertvolles Tool wenn man versucht herauszufinden warum sich eine bestimmte Funktion ungewünscht verhält.</p>
+<h3 id="Tamper_Data">Tamper Data</h3>
+<p><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/966" title="https://addons.mozilla.org/en-US/firefox/addon/966">Tamper Data</a> fängt HTTP-Anfragen und ihren -Antworten ab. Dies erlaubt Ihnen diese zu unterbrechen und sogar die Payload-Daten zu ersetzten bevor diese gesendet werden. Es gibt einige ähnliche Erweiterungen, wie z.B. <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/3829">Live HTTP Headers</a>, aber Tamper Data ist das eine das wir am meisten einsetzen. Wir werden mehr über HTTP debugging später erfahren.</p>
+<h3 id="Firebug">Firebug</h3>
+<p>Die <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1843" title="https://addons.mozilla.org/en-US/firefox/addon/1843">Firebug</a> Erweiterung enthält fast alle Tools die bisher angesprochen wurden, aber sie ist hauptsächlich auf die Webentwicklung ausgerichtet. Die <a class="external" href="http://getfirebug.com/wiki/index.php/Chromebug_User_Guide" title="http://getfirebug.com/wiki/index.php/Chromebug_User_Guide">Chromebug</a> Erweiterung hilft Firebug nützlicher im Bezug auf die Erweiterungsentwicklung, aber sie ist möglicherweise nicht stark genug um alle alle angesprochen Add-ons zu ersetzen.</p>
+<p>Auf der anderen Seite, bietet Firebug eine sehr benutzerfreundliches integriertes Oberfläche und wirdurch stärker weiterentwickelt als seine Gegenstücke. Es ist definitiv einen Versuch wert.</p>
+<h3 id="Leak_Monitor">Leak Monitor</h3>
+<p>Memoryleaks sind immer ein großer Kritikpunkt an Firefox gewesen. mozilla hat über die Zeit bewiesen das es die Arbeitsspeicher nutzung ernst nimmt, durch die Verbesserung der Performance an besonders kritischen Bereichen und durch das entfernen aller Memoryleaks.</p>
+<p>Wie auch immer, Erweiterung können auch die Ursache von Memoryleaks sein. Wenn Sie Ihre Erweiterung in die Mozilla Add-on Seite aufgenommen haben möchten, sollten Sie besser keine Memoryleaks haben. In <a href="/en/Using_XPCOM_in_JavaScript_without_leaking" title="en/Using XPCOM in JavaScript without leaking"><span class="external">Using XPCOM in JavaScript</span></a> sind einige Richtlinien erfastt die Sie befolgen sollten um diese zu vermeiden. Einer der häufigsten Fehler die Entwicklern machen, ist einen JS event listener oder observer zu registrieren und diesen niemals zu entfernen. Die einfache Praxis immer Code für das Entfernen für alles was Sie hinzuzufügen anzufügen macht einen großen Unterschied.</p>
+<p>Um sicher zugehen das Ihre Erweiterungen keine Leaks beinhaltet, Sie sollten die <a href="/en/Leak_Monitor" title="en/Leak Monitor"><span class="external">Leak Monitor Erweiterung</span></a> verwenden wenn Sie das testen. Testen Sie immer öffnende und schließende Fenster. Gewöhnlicherweise tretten diese Leaks bei diesem Vorgang auf.</p>
+<h2 id="Exercise">Exercise</h2>
+<ul>
+ <li>Setzen Sie ein neues Firefoxprofil für die XUL-Schule auf. Stellen Sie sicher das Sie Ihr XUL-Schulen Firefox öffnen und schließen können, ohne dass SIe die Instance von Fireox mit der Sie normalerweise surfen schließen mussen. Machen Sie irgendwelche beliebigen Änderungen an Ihrem XUL-Schulen Projekt, führen Sie make install aus und starten Sie Firefox neu um zu sehen das die Erweiterung nach Ihren Änderungen noch funktioniert.</li>
+ <li>Installiere den DOM Inspector. Benutze ihn um das von Ihnen erstellte Menü zu finden. <em>Hinweis: Sie können mit der ID nach einem Element suchen.</em> Untersuchen Sie CSS-Regel die Firefox standardmäßig verwendet. Sehen Sie sich den endgültigen berechneten Style für die Menüelemente an. Sehen Sie sich im Rest der Firefox DOM um, und versuchen Sie herauszufinden welche Knoten mit der Firefox UI in Verbindung stehen.</li>
+ <li>Installiere die Firebug Erweiterung. Öffne das Firebugfenster und gehe zu einer AJAX-lastigen Webseitewie z.B. Gmail oder Facebook. Öffne und aktviere den <em>Net </em>Reiter. Versuche herauszufinden was passiert wenn einige Anfragen gesendet werden.</li>
+</ul>
+<p>Jetzt das Sie wissen wie man schnell Ihr Projekt und Test-Änderungen überprüft, werden wir lernen wie man neue UI-Elemente zu Firefox durch Overlays und neuer Fenster hinzufügt.</p>
+<p>{{ PreviousNext("XUL_School/The_Essentials_of_an_Extension", "XUL_School/Adding_menus_and_submenus") }}</p>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

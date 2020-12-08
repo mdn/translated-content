@@ -1,0 +1,69 @@
+---
+title: Tree
+slug: Codeschnipsel/Tree
+translation_of: Archive/Add-ons/Code_snippets/Tree
+---
+<h3 id="AufklappenZuklappen_aller_Baumknoten">Aufklappen/Zuklappen aller Baumknoten</h3>
+<p>Um alle Baumknoten aufzuklappen:</p>
+<pre class="eval"> var treeView = tree.treeBoxObject.view;
+ for (var i = 0; i &lt; treeView.rowCount; i++) {
+   if (treeView.isContainer(i) &amp;&amp; !treeView.isContainerOpen(i))
+     treeView.toggleOpenState(i);
+ }
+</pre>
+<p>Um alle Baumknoten zu zuklappen, wird die Bedingung einfach umgekehrt:</p>
+<pre class="eval"> var treeView = tree.treeBoxObject.view;
+ for (var i = 0; i &lt; treeView.rowCount; i++) {
+   if (treeView.isContainer(i) &amp;&amp; treeView.isContainerOpen(i))
+     treeView.toggleOpenState(i);
+ }
+</pre>
+<h3 id="Text_der_ausgewählten_Zeile_abrufen">Text der ausgewählten Zeile abrufen</h3>
+<p>Ausgehend von gegebenem Baum:</p>
+<pre class="eval"> &lt;tree id="my-tree" seltype="single" onselect="onTreeSelected()"&gt;
+</pre>
+<p>Wird das folgende JavaScript verwendet:</p>
+<pre class="eval"> function onTreeSelected(){
+   var tree = document.getElementById("my-tree");
+   var cellIndex = 0;
+   var cellText = tree.view.getCellText(tree.currentIndex, tree.columns.getColumnAt(cellIndex));
+   alert(cellText);
+ }
+</pre>
+<h3 id="Das_Baum-Item_einer_fokussierten_Zeile_abrufen">Das Baum-Item einer fokussierten Zeile abrufen</h3>
+<p>Ausgehend von <code>&lt;tree id="my-tree"&gt;</code>, kann der folgende Codeausschnitt verwendet werden, um das <a href="/en/XUL/treeitem" title="en/XUL/treeitem">tree item</a> abzurufen:</p>
+<pre class="eval">var view = document.getElementById("my-tree").view;
+var sel = view.selection.currentIndex; //returns -1 if the tree is not focused
+var treeItem = view.getItemAtIndex(sel);
+</pre>
+<p>Zu beachten ist, dass der aktuelle Index unter Umständen nicht ausgewählt sein (z.B. in einem Baum mit mehrfach-Auswahl).</p>
+<h3 id="Einen_treecell_von_einem_Mausklick_abrufen">Einen treecell von einem Mausklick abrufen</h3>
+<p>Die erste Wahl ist <code>&lt;treecell onclick="yourfunc();"/&gt;</code> oder etwas ähnliches auszuprobieren. das funktioniert nicht. Es können keine Event-Handler zum <code>&lt;treecell&gt;</code> Element hinzugefügt werden. Stattdessen kann ein Event-Handler zum <code>&lt;tree&gt;</code> Element hinzugefügt werden. Dann können <code>event-</code> und andere Methoden benutzt werden, um das <code>&lt;treecell&gt;</code> Element zu finden. Zum Beispiel, ausgehend von:</p>
+<pre class="eval">&lt;tree id="my-tree" onclick="onTreeClicked(event)"&gt;
+</pre>
+<p>Wird das folgende JavaScript verwendet:</p>
+<pre>function onTreeClicked(event){
+  var tree = document.getElementById("my-tree");
+  var tbo = tree.treeBoxObject;
+
+  // get the row, col and child element at the point
+  var row = { }, col = { }, child = { };
+  tbo.getCellAt(event.clientX, event.clientY, row, col, child);
+
+  var cellText = tree.view.getCellText(row.value, col.value);
+  alert(cellText);
+}
+</pre>
+<h3 id="Ausgewählte_Indizes_eines_mehrfach_ausgewählten_Baumes_abrufen">Ausgewählte Indizes eines mehrfach ausgewählten Baumes abrufen</h3>
+<pre>  var start = {}, end = {}, numRanges = tree.view.selection.getRangeCount(), selectedIndices = [];
+
+  for (var t = 0; t &lt; numRanges; t++){
+    tree.view.selection.getRangeAt(t, start, end);
+    for (var v = start.value; v &lt;= end.value; v++)
+      selectedIndices.push(v);
+  }
+</pre>
+<h3 id="Weitere_Ressourcen">Weitere Ressourcen</h3>
+<ul> <li><a href="/de/XUL/tree" title="de/XUL/tree">XUL: Tree Dokumentation</a></li> <li><a href="/de/XUL_Tutorial/Tree_Auswahl" title="de/XUL_Tutorial/Tree_Auswahl">XUL Tutorial: Tree Auswahl</a></li>
+</ul>
+<p>{{ languages( { "fr": "fr/Extraits_de_code/Tree", "en": "en/Code_snippets/Tree" } ) }}</p>

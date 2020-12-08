@@ -1,0 +1,78 @@
+---
+title: Installation
+slug: Mozilla/Add-ons/SDK/Tutorials/Installation
+tags:
+  - ইন্সটলেশন
+  - স্থাপন করা
+translation_of: Mozilla/Add-ons/SDK/Tools/jpm#Installation
+---
+<p id="Prerequisites">পূর্বশর্ত</p>
+<p>Add-on SDK-র মাধ্যমে উন্নয়ন করতে চাইলে আপনের লাগবেঃ</p>
+<ul>
+ <li><a href="http://www.python.org/">Python</a> 2.5, 2.6 or 2.7. বিঃদ্রঃ Version 3.x of Python কোন Platform এ গ্রহণযোগ্য হবে না।নিশ্চিত করেন যে Python আপনার গতিপথে আছে।</li>
+ <li>Firefox.</li>
+ <li>SDK নিজেঃ আপনি এসডিকের সর্বশেষ স্থায়ী সংস্করণ পেতে পারেন tarball অথবা zip file হিসেবে, অথবা আপনি সর্বশেষ উন্নয়ন সংস্করণ পেতে পারেন GitHub repository থেকে।যদি আপনি সর্বশেষ উন্নয়ন সংস্করণ ব্যবহার করে থাকেন, তবে আপনাকে অবশ্যই এটি ব্যবহার করতে হবে Nightly version of Firefox এর সাথে।</li>
+</ul>
+<h2 id="Git_Sources_থেকে_Extention_Building_করা_AMO_এর_জন্য">Git Sources থেকে Extention Building করা AMO এর জন্য</h2>
+<p>শুধুমাত্র addon-sdk sources এর সর্বশেষ git release tag ব্যবহার করা যেতে পারে যদি AMO তে উপস্থাপন করা হয়।</p>
+<p>The git archive command প্রয়োজন হয়  git clone working directory এর কিছু git attribute placeholders বিশ্লেষণ করার জন্য।</p>
+<pre>1 git checkout 1.16
+2
+3 git archive 1.16 python-lib/cuddlefish/_version.py | tar -xvf -
+</pre>
+<h2 id="FreeBSD_OS_X_Linux_এ_স্থাপন_করা">FreeBSD/ OS X / Linux এ স্থাপন করা</h2>
+<p>যে স্থানটি আপনি নির্বাচন করেছেন সে স্থানের File Contents Extract করুন, এবং  shell/command prompt এর মাধ্যমে SDK এর root directory navigate করুন। উদাহরণস্বরূপঃ</p>
+<pre>1 tar -xf addon-sdk.tar.gz
+2 cd addon-sdk
+</pre>
+<p>যদি আপনি Bash user হন তবে চালু করুন (অধিকাংশ মানুষ)</p>
+<pre>source bin/activate
+</pre>
+<p>এবং আপনি যদি non-Bash user হন ,আপনার চালু করা উচিতঃ</p>
+<pre>bash bin/activate
+</pre>
+<p><span id="result_box" lang="bn"><span class="hps">আপনার কমান্ড</span> <span class="hps">প্রম্পট</span> <span class="hps">এখন</span> <span class="hps">SDK এর</span> <span class="hps">মূল</span> <span class="hps">ডিরেক্টরির নাম</span> <span class="hps">ধারণকারী একটি</span> <span class="hps">নতুন</span> <span class="hps">উপসর্গ</span> <span class="hps">থাকতে হবে</span></span></p>
+<pre>(addon-sdk)~/mozilla/addon-sdk &gt;
+</pre>
+<h2 id="Homebrew_ব্যবহার_করে_Mac_Install_করা">Homebrew ব্যবহার করে Mac Install করা</h2>
+<p>যদি আপনি Mac user হন তবে SDK install করতে আপনি Homebrew ব্যবহার করতে পারেন, নিম্নোক্ত নির্দেশ ব্যবহার করেঃ</p>
+<pre>brew install mozilla-addon-sdk</pre>
+<p>একবার সফলতার সাথে এটি সম্পূর্ণ হলে, আপনি cfx program আপনার command line এ ব্যবহার করতে পারেন যে কোন সময় । আপনার bin/activate চালু করার প্রয়োজন নেই।</p>
+<h2 id="Windows_এ_install_করা">Windows এ install করা</h2>
+<p>যে স্থানটি আপনি নির্বাচন করেছেন সে স্থানের File Contents Extract করুন, এবং shell/command prompt এর মাধ্যমে SDK এর root directory navigate করুন। উদাহরণস্বরূপঃ</p>
+<pre>7z.exe x addon-sdk.zip
+cd addon-sdk
+</pre>
+<p>তারপর চালু করুনঃ</p>
+<pre>bin\activate
+</pre>
+<p><span id="result_box" lang="bn"><span class="hps">আপনার কমান্ড</span> <span class="hps">প্রম্পট</span> <span class="hps">এখন</span> <span class="hps">SDK এর</span> <span class="hps">এর</span> <span class="hps">রুট ডিরেক্টরি</span> <span class="hps">সম্পূর্ণ পাথ</span> <span class="hps">ধারণকারী একটি</span> <span class="hps">নতুন</span> <span class="hps">উপসর্গ</span> <span class="hps">থাকতে হবে</span></span> :</p>
+<pre>(C:\Users\mozilla\sdk\addon-sdk) C:\Users\Work\sdk\addon-sdk&gt;
+</pre>
+<h2 id="সক্রিয়_করা"> সক্রিয় করা</h2>
+<p>সক্রিয় কমান্ড কিছু environment variables set করে যেটা SDK এর জন্য প্রয়োজন। এটি শুধুমাত্র variables set করে current command prompt এর জন্য। <code>যদি আপনি নতুন command prompt </code><code>চালু করেন,</code>SDK নতুন prompt এ সক্রিয় হতে পারবে না যতক্ষণ না পর্যন্ত আপনি activate type না করেন।</p>
+<p>এটা মানে হল আপনার SDK এর অনেক কপি আপনার disk এর বিভিন্ন স্থানে থাকতে পারে এবং তাদের মধ্যে switch থাকতে পারে, <span id="result_box" lang="bn"><span class="hps">অথবা এমনকি তাদের</span> <span class="hps">উভয়ে</span> <span class="hps">একই সময়ে বিভিন্ন</span> <span class="hps">কমান্ড লিখতে </span><span class="hps">সক্রিয়</span> <span class="hps">থাকে।</span></span></p>
+<h3 id="সক্রিয়করণ_স্থায়ী_করা">সক্রিয়করণ স্থায়ী করা</h3>
+<p>এই variables গুলো আপনার পরিমণ্ডলে set করলে আপনার সকল  নতুন prompt তাদের নির্ণয় করে ফেলবে, আপনি সক্রিয়করণকে স্থায়ী করতে পারবেন। <span id="result_box" lang="bn"><span class="hps">তারপর আপনি</span> <span class="hps">একটি নতুন কমান্ড</span> <span class="hps">প্রম্পট</span> <span class="hps">খুলুন</span> <span class="hps">প্রত্যেক সময়</span> <span class="hps">সক্রিয়</span> <span class="hps">টাইপ</span> <span class="hps">করার প্রয়োজন হবে না</span><span>।</span></span></p>
+<p>কারন নতুন মুক্তিপ্রাপ্ত SDK এর সাথে সঠিক variables set পরিবর্তন হতে পারে,activation scripts পড়া উচিত কোন variables set করা প্রয়োজন তা ঠিক করার জন্য।  সক্রিয়করণ ব্যবহার করে বিভিন্ন Scripts এবং sets করে বিভিন্ন variables bash environment এর জন্য (Linux and OS X) এবং Windows environments এর জন্য।</p>
+<h4 id="Windows">Windows</h4>
+<p>Windows এ, <code>bin\activate</code> uses <code>activate.bat</code>, এবং আপনি command line ব্যবহার করে  <code>setx</code> tool or the Control Panel সক্রিয়করণ স্থায়ী করতে পাড়েন।</p>
+<h4 id="Linux_OS_X">Linux / OS X</h4>
+<p>Linux and OS X এ, <code>source bin/activate</code>  <code>activate</code> bash script ব্যবহার করে, এবং আপনি সক্রিয়করণ স্থায়ী করতে পারবেন <code>~/.bashrc</code> (on Linux) or <code>~/.bashprofile</code> (on OS X) ব্যবহার করে।</p>
+<p>এটির পরিবর্তে আপনার directory তে আপনি cfx program এ সাংকেতিক চিহ্ন তৈরি করতে পারেনঃ</p>
+<p> </p>
+<pre>ln -s PATH_TO_SDK/bin/cfx ~/bin/cfx
+</pre>
+<p>SDK install করার করার জন্য যদি আপনি Homebrew ব্যবহার করেন,environment variables আপনার জন্য স্থায়ীভাবে স্থাপন হয়ে থাকবে।</p>
+<h2 id="বৈধতা_পরীক্ষা">বৈধতা পরীক্ষা</h2>
+<p>আপনার shell prompt এর মাধ্যমে চালু করেনঃ</p>
+<pre>cfx
+</pre>
+<p>এটির নির্গমন এমন হতে হবে যে এটির প্রথম লাইন দেখতে এটির মত,অনেক লাইন তথ্য অনুসরণ করেঃ</p>
+<pre>Usage: cfx [options] [command]
+</pre>
+<p>এটি হয় <a href="/en-US/Add-ons/SDK/Tools/cfx"><code>cfx</code> command-line program</a>। এটি আপনার Add-on SDK এর প্রাথমিক interface। Firefox চালাতে আপনি এটি ব্যবহার করেন এবং আপনার add-on পরীক্ষা করেন, আপনার add-on package করুন বিতরণ করার জন্য, দলিল পরিদর্শন করুন এবং unit tests চালু করুন</p>
+<h2 id="সমস্যাসমূহ">সমস্যাসমূহ ?</h2>
+<p><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Troubleshooting">Troubleshooting</a> page এ চেষ্টা করুন।</p>
+<h2 id="পরবর্তী_পদক্ষেপ">পরবর্তী পদক্ষেপ</h2>
+<p>পরবর্তীতে <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">Getting Started With cfx</a> tutorial দেখুন,সেখানে <span class="gt-card-ttl-txt" style="direction: ltr;">ব্যাখ্যা করা আছে যে কেমন করে</span> <code>cfx</code> tool ব্যবহার করে add-ons তৈরি করা যায়।</p>

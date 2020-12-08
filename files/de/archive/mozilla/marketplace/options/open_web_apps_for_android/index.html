@@ -1,0 +1,142 @@
+---
+title: Open Web Apps for Android
+slug: Archive/Mozilla/Marketplace/Options/Open_web_apps_for_android
+translation_of: Archive/Marketplace/Options/Open_web_apps_for_android
+---
+<div class="summary">
+ <p>Users of Firefox for Android install Marketplace apps as 'normal' Android apps, gaining the benefit of powerful open web features. This ability is enabled by the creation of APKs by the APK Factory. Installed apps are run by the <strong>Web Runtime for Android,</strong> which is included in Firefox for Android. By making your apps accessible to Firefox for Android users, you gain an additional distribution opportunity, expanding the potential audience for your work.</p>
+</div>
+<h2 id="What_is_Open_Web_Apps_for_Android">What is Open Web Apps for Android?</h2>
+<p>Open Web Apps for Android enables free Marketplace apps to be packaged into an APK (Android installation package), which is then installed and run in the same way as any other Android app. The APK package consists of web content (in the case of packaged apps) or a pointer to web content (in the case of hosted apps). This content is then enclosed in a thin Java/Android wrapper, which provides the integration with the Android OS. Once installed on an Android device the app is executed by Web Runtime for Android, a component of Firefox for Android.</p>
+<p>These packages are created by the <a href="https://github.com/mozilla/apk-factory-service">APK Factory Service</a>, which is run as a web service by Marketplace. The APK Factory Service makes use of the <a href="https://github.com/mozilla/apk-factory-library">APK Factory Library</a> to create the actual package and the <a href="https://github.com/mozilla/apk-signer">APK Signer</a> to digitally sign the APK. This service is available to <a href="/en-US/Marketplace/Publishing/Creating_a_store">your own Marketplace</a>, should you choose to create one.</p>
+<p>You don't need any knowledge of Android development, or to take any extra development steps, to use Open Web Apps for Android: you simply select the option for distribution to Firefox Mobile or Firefox Tablet when submitting your apps to the <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>.</p>
+<div class="note">
+ <p><strong>Note</strong>: Open Web Apps for Android provides support for hosted apps in Firefox for Android xx or later, packaged apps are supported in Firefox for Android 29 or later. Only free apps are available for Android from the Firefox Marketplace at this time.</p>
+</div>
+<p>Web Runtime for Android supports 12 APIs to access device capabilities, such as vibration, geolocation and battery status. You can see a <a href="https://wiki.mozilla.org/WebAPI#APIs">complete list of supported APIs here</a>: APIs showing "A" under "Availability" are those APIs available on Android, with green cells indicating that the API is available in full. You can also mouseover individual cells to get tooltips containing more information.</p>
+<p>Web Runtime for Android will continue to add support for other APIs in future releases. Some of the APIs planned are:</p>
+<ul>
+ <li>Alarm API</li>
+ <li>SimplePush API</li>
+ <li>Web Activities</li>
+</ul>
+<div class="note">
+ <p><strong>Note</strong>: Android users may be using devices with higher resolutions, greater pixel densities (DPI) and larger screen sizes than those found on Firefox OS devices. Apps that haven't used responsive design may therefore provide a poor experience, and you may want to design your apps with this in mind. For more information on responsive design see the <a href="/en-US/docs/Apps/Design">Design section of the App Center</a>.</p>
+</div>
+<h2 id="Using_Open_Web_Apps_for_Android_from_Firefox_Marketplace">Using Open Web Apps for Android from Firefox Marketplace</h2>
+<p>This section provides details on how you make use of Open Web Apps for Android from Firefox Marketplace, how they affect the Marketplace experience, and information on app updates.</p>
+<h3 id="Submitting_an_app">Submitting an app</h3>
+<p>When you <a href="/en-US/Marketplace/Submission/Submitting_an_app">submit an app to the Firefox Marketplace</a>, you choose the option of making your app available for Firefox Mobile or Firefox Tablet. Choosing either or both of these options will automatically deliver your app as an APK on Android devices.</p>
+<h3 id="Approving_an_app">Approving an app</h3>
+<p>When your app is reviewed, the reviewer installs your app from the reviewer section in Firefox Marketplace. When they do this from an Android device, the "review" instance of the APK Factory service is invoked to create an APK signed in Android debug mode. This version of the APK is then installed on the app reviewer's device and they complete the review process.</p>
+<p>If the app is approved, the "release" instance of the APK Factory service is invoked to generate and sign the APK with a unique APK Signing Key. The resulting signed APK is then cached for delivery when a user chooses to install the app.</p>
+<h3 id="Installing_an_app">Installing an app</h3>
+<p>When a user selects your app in the Marketplace on their Android device, installation works as follows:</p>
+<ol>
+ <li><a href="https://marketplace.firefox.com/">Firefox Marketplace</a> displays the app's details and <strong>Free</strong> install button as normal.</li>
+ <li>When the user taps <strong>Free</strong>, {{ domxref("Apps.install") }} or {{ domxref("Apps.installPackage") }} is invoked as usual (depending on whether it's a hosted or packaged app) and a call is made to the APK Factory service to request the APK.</li>
+ <li>The APK is downloaded to the Android device and the standard Android app installation process invoked.</li>
+ <li>If the user hasn't enabled the <strong>Security</strong> setting <strong>Unknown sources</strong>, Android will alert the user and give them the option to cancel the installation or open <strong>Settings</strong>.</li>
+ <li>Once <strong>Unknown sources</strong> is enabled, the user is shown an install confirmation dialog. The dialog lists the permissions requested by privileged apps.</li>
+ <li>If the user taps <strong>Install</strong> the app is installed.</li>
+ <li>Once the app has been installed, the user is given the option to <strong>Open</strong> the app and in Firefox Marketplace the <strong>Free</strong> button is replaced with a <strong>Launch</strong> button.</li>
+</ol>
+<p>Subsequently the user will find the application in their Apps screen. In addition, the process to use and remove the app is the same as they'd expect for other Android apps. Firefox for Android provides a list of installed apps under <strong>Apps</strong> on the <strong>Tools</strong> menu as well.</p>
+<h3 id="Keeping_apps_up_to_date">Keeping apps up to date</h3>
+<p>Firefox for Android provides a mechanism installing update apps.</p>
+<p>If your app is hosted, whenever you make a change on its server, users will pick up changes the next time they run your app.</p>
+<p>For all other changes, you need to add a new version to the Firefox Marketplace:</p>
+<ul>
+ <li>For a hosted app, the link to the app's hosting server containing the updated manifest file.</li>
+ <li>For a packaged app a zip file containing the updated app manifest and app content.</li>
+</ul>
+<p>Firefox for Android makes a daily check on the version number in the app’s manifest and if it has changed silently applies the update.</p>
+<h2 id="Using_Open_Web_Apps_for_Android_from_your_own_Marketplace">Using Open Web Apps for Android from your own Marketplace</h2>
+<p>You're able to create <a href="/en-US/Marketplace/Publishing/Creating_a_store">your own Marketplace</a>. Such a Marketplace consists of either a directory of apps in Firefox Marketplace or your own hosted content (app descriptions with the main manifest of hosted apps or the mini manifest with app zip archive in the case of packaged apps).</p>
+<p>Your Marketplace will pass the URL of the manifest to be installed to {{ domxref("Apps.install") }} / {{ domxref("Apps.installPackage") }} that then invokes APK Factory, meaning you don't have to do anything to enable Open Web Apps for Android in your Marketplace. You do however need to ensure that your Marketplace only serves apps that include APIs supported by the Web Runtime for Android.</p>
+<h2 id="How_the_APK_Factory_works">How the APK Factory works</h2>
+<p>This section describes how the APK Factory works.</p>
+<ul>
+ <li>When the APK Factory is invoked, as described above, it determines whether there is a cached copy of the app's APK file. If a cached copy isn't available, APK Factory:
+  <ol>
+   <li>Requests the app's manifest file from the hosting server (the Firefox Marketplace, or wherever else the app is hosted):
+    <ul>
+     <li>The main manifest in the case of hosted apps.</li>
+     <li>The mini manifest in the case of packaged apps.</li>
+    </ul>
+   </li>
+   <li>Detects whether the app is hosted or packaged.</li>
+   <li>If the app is packaged, APK Factory requests the app's zip archive from the Marketplace or other hosting server.</li>
+   <li>Creates the APK by performing some metadata transcoding for elements such as icons and security requirements, after which it:
+    <ul>
+     <li>Wraps the hosting URL in an Android Java container for hosted apps.</li>
+     <li>Wraps the app's content in an Android Java container for packaged apps.</li>
+    </ul>
+   </li>
+   <li>Passes the APK to be signed by the secure <strong><a href="https://github.com/mozilla/apk-signer">APK Signer</a></strong> service:
+    <ul>
+     <li>"Review" APKs are signed in Android debug mode.</li>
+     <li>"Release" APKs are signed with an <strong>APK signing key</strong>.</li>
+    </ul>
+   </li>
+   <li>Caches the signed APK.</li>
+  </ol>
+ </li>
+ <li>Delivers the signed APK file to the device for installation.</li>
+</ul>
+<p>The following diagrams offer an alternative representation of the workflow of the APK Factory:</p>
+<p style="text-align: center;"><img alt="Web Sequence diagram showing the operation of the APK factory" src="https://mdn.mozillademos.org/files/7849/APK%20factory%20operation.png" style="width: 749px; height: 827px;"></p>
+<h2 id="Package_naming_and_APK_signing_keys">Package naming and APK signing keys</h2>
+<p>On installation of an APK the Android device checks the Java package name and signature. It verifies the signature the first time an app is installed (there is no central authority it checks with). Future updates must then have the same package name and signature. If the package name and signature aren't the same the Android device won't update the installation.</p>
+<h3 id="Package_naming">Package naming</h3>
+<p>The package name for an APK consists of the hosting site and a unique serial number, for example:</p>
+<ul>
+ <li>For a hosted app: org.mykzilla.p362b12c70d0556c124908a3c125d3d02:</li>
+ <li>For a packaged app: com.firefox.marketplace.p0604c71abc0d4091829d19be9a50453c</li>
+</ul>
+<h3 id="APK_signing_keys">APK signing keys</h3>
+<p>Each APK needs to be identified by an APK signing key before it can be installed on an Android device. APK signing keys are created and owned by the <strong><a href="https://github.com/mozilla/apk-signer">APK Signer</a></strong> service. These signing keys are sensitive, and stored securely in the APK Signer.</p>
+<p>This service creates a unique key for each app, applying it to the original release and subsequent updates. The reuse of the key on updated app APKs is important, as without a match in the package name and key Android won't install an update over an earlier version of the app. If you create your own Marketplace the APK will retain the same name and keys, so that either version will be able to update the other.</p>
+<div class="note">
+ <p><strong>Note</strong>: Mozilla assumes no responsibility for the credibility of the APK signing keys. That is, the keys provide no information about the authenticity of the app or developer beyond the fact that they have been approved for release in Marketplace, if the app is hosted there. The service is not tied to Google or any other central authority.</p>
+</div>
+<h2 id="FAQ">FAQ</h2>
+<p>Here are answers to some frequently asked questions about APKs for Open Web Apps for Android.</p>
+<h3 id="What_about_re-installation_of_apps_installed_as_bookmarks">What about re-installation of apps installed as bookmarks?</h3>
+<p>When a user updates to Firefox for Android version 29 or later, their bookmark-style apps will continue to work, and Firefox will prompt users to update apps to their Open Web Apps for Android version.</p>
+<h3 id="How_will_in-app_purchases_work">How will in-app purchases work?</h3>
+<p>The APK is given access to the trusted UI, <a href="/en-US/docs/Web/API/Navigator.mozPay">mozPay</a>, and all payment processes for in-app purchases, so in-app payments will function as normal.</p>
+<h3 id="How_do_I_download_a_copy_of_my_app's_APK">How do I download a copy of my app's APK?</h3>
+<p>You can download a copy of your app from the APK Factory service by retrieving a URL in the format:</p>
+<p style="margin-left: 40px;"><code>https://controller.apk.firefox.com/application.apk?manifestUrl=ESCAPED_URL_TO_MANIFEST</code></p>
+<p>where <code>ESCAPED_URL_TO_MANIFEST</code> is an escaped URL to the app's manifest or mini-manifest. That URL causes the APK Factory to return the cached copy of the APK, or create a new one if the app hasn't been submitted to Marketplace.</p>
+<h4 id="Examples">Examples</h4>
+<p>For a hosted app:</p>
+<p><code>&gt; wget https://controller.apk.firefox.com/application.apk?manifestUrl=http%3A%2F%2Fmykzilla.org%2Fapp%2Fmanifest.webapp -O mykzilla.apk</code></p>
+<p>For a packaged app:</p>
+<p><code>&gt; wget https://controller.apk.firefox.com/application.apk?manifestUrl=https%3A%2F%2Fmarketplace.firefox.com%2Fapp%2Fa22e0277-35bc-434d-9371-1568c75fc726%2Fmanifest.webapp -O cuttherope.apk</code><br>
+  </p>
+<h3 id="Can_I_generate_an_APK_manually_from_a_different_URL">Can I generate an APK manually from a different URL?</h3>
+<p>Yes, by providing the URL to any location for your manifest or mini-manifest files. However, be aware that because the APK is generated from a different URL the package name will differ from that created when you submit the app to Firefox Marketplace, so the Firefox Marketplace version will be installed as a separate app.</p>
+<h3 id="If_I_setup_my_own_copy_of_the_APK_Factory_can_I_use_the_APKs_it_generates">If I setup my own copy of the APK Factory can I use the APKs it generates?</h3>
+<p>You can, but be aware that the signing keys will differ from those assigned to the APKs generated by Firefox Marketplace. As a result Android will refuse to install whichever version the user tries to install second. (See <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Open_web_apps_for_android#If_I_also_have_an_Android_native_version_of_my_app.2C_can_both_be_installed_on_an_Android_device.3F">If I also have an Android native version of my app, can both be installed on an Android device?</a> for more information.)</p>
+<h3 id="Can_I_submit_an_APK_created_by_the_APK_Factory_to_Google_Play_or_other_Android_store">Can I submit an APK created by the APK Factory to Google Play or other Android store?</h3>
+<p>You can submit an APK generated by APK Factory to Google Play or an alternative Android store. However, it's your responsibility to:</p>
+<ul>
+ <li>Confirm that your app complies with the policies of the store you're submitting it to. Approval for distribution in Firefox Marketplace doesn't imply any approval for Google Play or another Android marketplace.</li>
+ <li>When you update your app you'll have to update the APK on any stores you have submitted the APK to; there is no automatic process to deliver updated APKs to Android stores.</li>
+</ul>
+<h3 id="Can_I_use_my_Android_signing_keys_to_sign_the_APK_and_choose_the_package_name">Can I use my Android signing keys to sign the APK and choose the package name?</h3>
+<p>At present you cannot use your own signing keys to sign an APK generated by APK Factory or choose the package name. This is an option being considered. If this is of interest to you, join the discussion on the <a href="https://lists.mozilla.org/listinfo/dev-marketplace">dev-marketplace mailing list</a>, or the <a href="irc://irc.mozilla.org/marketplace">Marketplace IRC channel</a>.</p>
+<h3 id="If_I_also_have_an_Android_native_version_of_my_app_can_both_be_installed_on_an_Android_device">If I also have an Android native version of my app, can both be installed on an Android device?</h3>
+<p>Unless you choose to use the APK package name created by APK Factory for your native Android app, both can be installed on an Android device. If you choose to use the same package name for your native Android app (which you'll sign with your own key) Android will refuse to install whichever version the user tries to install second. This is because the package names are the same but the signing keys are different, so Android considers the apps to be the same, but from different sources. Therefore Android will refuse to update one app with the other, since that would allow one developer to override another's app. The user will end up with the first version installed on their device.</p>
+<div class="warning">
+ <p>Because of the issues it may cause for users, it's highly recommended that you don't reuse the package name the APK Factory assigns to your app for a native Android version of your app.</p>
+</div>
+<h3 id="How_can_I_testdebug_APKs">How can I test/debug APKs?</h3>
+<p>We're working on a toolchain for testing and debugging an app on an Android device. The initial version will include a Node-based command-line tool for generating an APK you can install on the device and debug using Firefox's Remote Developer Tools.</p>
+<h2 id="Also_see">Also see</h2>
+<ul>
+ <li>Hacks blog: <a href="https://hacks.mozilla.org/2014/06/firefox-os-apps-run-on-android/">Firefox OS Apps run on Android</a></li>
+ <li>Hack blog: <a href="https://hacks.mozilla.org/2014/06/testing-your-native-android-app/" rel="bookmark" title="Permanent link to “Testing Your Native Android App”">Testing Your Native Android App</a></li>
+</ul>

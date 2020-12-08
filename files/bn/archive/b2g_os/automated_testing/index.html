@@ -1,0 +1,104 @@
+---
+title: ফায়ারফক্স OS এর স্বয়ংক্রিয় পরীক্ষা
+slug: Archive/B2G_OS/Automated_testing
+tags:
+  - Automated testing
+  - B2G
+  - QA
+  - Testing
+  - টেস্টিং
+  - পরীক্ষা
+translation_of: Archive/B2G_OS/Automated_testing
+---
+<div class="summary">
+<p><span id="result_box" lang="bn"><span class="hps">ফায়ারফক্স</span> OS <span class="hps"><span id="result_box" lang="bn"><span class="hps">এখনও <span id="result_box" lang="bn"><span class="alt-edited hps">উন্নয়নাধীন,<span id="result_box" lang="bn"><span class="hps">এবং নতুন</span> <span class="hps">হার্ডওয়্যারের</span> <span class="hps">জন্য সমর্থন</span> <span class="hps">খুব দ্রুত-ই দেওয়া হবে। </span><span><span id="result_box" lang="bn"><span class="hps">কিভাবে <span id="result_box" lang="bn"><span class="alt-edited hps">এটি</span> <span class="hps">পরীক্ষা করতে </span></span></span></span></span></span></span></span></span></span></span></span>হয় তা জানা <span id="result_box" lang="bn"><span class="hps">গুরুত্বপূর্ণ।</span></span><span id="result_box" lang="bn"><span class="alt-edited hps">এই পৃষ্ঠাটি কিছু নিবন্ধ প্রস্তাব করে <span id="result_box" lang="bn"><span class="alt-edited hps">যা <span id="result_box" lang="bn"><span class="hps">চলমান <span id="result_box" lang="bn"><span class="hps">বিভিন্ন</span> <span class="hps">পরীক্ষা,</span> <span class="hps">অটোমেশন</span><span>, এবং <span id="result_box" lang="bn"><span class="hps">ফলাফল <span id="result_box" lang="bn"><span class="hps">রিপোর্ট এবং</span> <span class="hps">ট্র্যাকিং সহ <span id="result_box" lang="bn"><span class="hps">ফায়ারফক্স</span> OS <span class="hps">বিভিন্ন দিক</span> <span class="hps">সম্পর্কে তথ্য</span> <span class="hps">প্রদান করে।</span></span></span></span></span></span></span></span></span></span></span></span> </span></span><span class="seoSummary"> </span></p>
+</div>
+
+<h2 id="শুরু_করুন!">শুরু করুন!</h2>
+
+<h2 id="ফায়ারফক্স_OS_এর_পরীক্ষা_চালানো_ডেভেলপারদের_জন্য_একটি_নির্দেশিকা"><a href="/bn-BD/Firefox_OS/Running_Tests_on_Firefox_OS_for_Developers" style="font-size: 14px; line-height: 1.5;">ফায়ারফক্স OS এর পরীক্ষা চালানো :  ডেভেলপারদের জন্য একটি  <span id="result_box" lang="bn"><span class="hps">নির্দেশিকা</span></span></a></h2>
+
+<dl>
+ <dd><span id="result_box" lang="bn"><span class="hps">পরীক্ষা</span> <span class="alt-edited hps">চালানো <span id="result_box" lang="bn"><span class="alt-edited hps">শুরু </span></span></span></span>করার ওপর একটি ছোট, এবং ডেভেলপারদের-জন্য-লিখা গাইড।<span id="result_box" lang="bn"><span class="hps"> আপনি</span> <span class="hps">মজিলা</span> <span class="hps">এর</span> <span class="alt-edited hps">টেস্ট এবং</span> <span class="hps">স্বয়ংক্রিয়তা</span> <span class="alt-edited hps">সিস্টেম</span> <span class="alt-edited hps">চালানো</span> <span class="hps">অভিজ্ঞ</span> <span class="hps">না হলে </span></span>আপনার এখান থেকে শুরু করা উচিত। আপনি যদি অভিজ্ঞ হন, তাহলে সম্ভবত আপনার <span id="result_box" lang="bn"><span class="hps">একটি ধারণা</span> <span class="hps">আছে যে আপনি কি টেস্ট, কিভাবে পরিচালনা করতে চান, <span id="result_box" lang="bn"><span>এবং আপনি</span> <span class="hps">নীচের</span> <span class="hps">আরো নির্দিষ্ট, </span> <span class="hps">বিস্তারিত</span> <span class="hps">গাইড</span> <span class="hps">এড়িয়ে</span> <span class="hps"><span id="result_box" lang="bn"><span class="hps">যেতে </span></span>পারেন।</span></span></span></span></dd>
+</dl>
+
+<h2 id="গায়া_পরীক্ষাসমূহ"><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span class="hps">পরীক্ষা</span></span>সমূহ</h2>
+
+<p><span><span class="null">এই নিবন্ধগুলোতে গায়া টেস্ট কওয়ার  প্রাথমিক </span></span>পদ্ধতিগুলো বর্ণনা করেছে।</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests"><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span class="alt-edited hps">UI</span> <span class="hps">পরীক্ষা</span></span></a></dt>
+ <dd><span id="result_box" lang="bn"><span class="hps"><span id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span class="atn hps">UI এর <span id="result_box" lang="bn"><span class="alt-edited">পারস্পরিক ক্রিয়া</span> (ইন্টারেকশন) <span class="hps">এবং</span> <span class="alt-edited hps">ফিচারগুলো পাইথনে টেস্ট করুন।</span></span></span></span></span></span></dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests"><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span class="hps">ইন্টিগ্রেশন</span> <span class="hps">পরীক্ষা</span></span></a></dt>
+ <dd>গায়ার <span id="result_box" lang="bn"><span class="hps">জাভাস্ক্রিপ্ট</span>-<span class="hps">ইন্টিগ্রেশন টেস্ট করা</span></span>, Marionette এর উপর ভিত্তি করে।</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests"><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span id="result_box" lang="bn"><span class="alt-edited hps">ইউনিট</span></span>-<span class="hps">টেস্ট</span></span></a></dt>
+ <dd><span id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span class="alt-edited hps">ইউনিট</span> টেস্ট</span> কোন UI <span id="result_box" lang="bn"><span class="alt-edited">ইন্টারঅ্যাকশন ছাড়া </span></span>; <span id="result_box" lang="bn"><span class="hps">জাভাস্ক্রিপ্ট</span> এ <span class="hps">লেখা</span><span>,</span> <span class="alt-edited hps">Marionette</span> <span class="hps">ভিত্তিক</span> <span class="alt-edited hps">নয়</span></span>।</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests"><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">গায়া</span> <span class="alt-edited hps">কার্যকারিতা</span> (পার্ফর্মেন্স) <span class="hps">পরীক্ষা</span></span></a></dt>
+ <dd><span id="result_box" lang="bn"><span class="alt-edited hps"><span id="result_box" lang="bn"><span class="alt-edited hps"><span id="result_box" lang="bn"><span class="hps">অভ্যন্তরীণ</span> <span class="hps">যন্ত্রানুষঙ্গের</span> <span class="hps">উপর ভিত্তি </span></span></span></span>করে গায়া</span> <span class="hps">অ্যাপ্লিকেশনের</span> <span class="alt-edited hps">কর্মক্ষমতা পরিমাপ করে</span></span>। in-tree হচ্ছে এর টেস্টিং পদ্ধতি (হারনেস)।</dd>
+</dl>
+
+<h2 id="B2G_পরীক্ষাসমূহ">B2G <span class="short_text" id="result_box" lang="bn"><span class="hps">পরীক্ষা</span></span>সমূহ</h2>
+
+<p><span class="short_text" id="result_box" lang="bn"><span class="hps">নিচের</span></span> <span class="short_text" id="result_box" lang="bn"><span class="hps">নির্দেশনাগুলো <span class="short_text" id="result_box" lang="bn"><span class="hps">B2G</span> এর বিভিন্ন <span class="hps">কার্যকারিতা</span> <span class="hps">পরীক্ষা করার বিভিন্ন পদ্ধতি নিয়ে </span></span> আলোচনা</span></span> করে<span class="short_text" id="result_box" lang="bn"><span class="hps">। </span></span></p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests">Mochitests</a></dt>
+ <dd>Gecko এর ফাংশনাল বা কার্যকারিতা<span id="result_box" lang="bn"> <span class="hps">এবং</span> <span class="hps">এপিআই</span> <span class="hps">পরীক্ষা  </span></span>- HTML &amp; JS <span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">ভিত্তিক</span></span>।  <span class="short_text" id="result_box" lang="bn"><span class="hps">কোন</span> <span class="alt-edited hps">গায়া</span> ইন্টারেকশন<span class="alt-edited hps"> নেই।</span></span></dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests">Reftests</a></dt>
+ <dd>Gecko <span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">রেন্ডার ঠিকমত হচ্ছে কিনা তার পরীক্ষা<span class="short_text" id="result_box" lang="bn"><span class="hps">।</span></span></span></span></dd>
+ <dt><a href="/en-US/docs/Marionette/Marionette_JavaScript_Tests" title="/en-US/docs/Marionette/Marionette_JavaScript_Tests">WebAPI টেস্ট</a></dt>
+ <dd>Gecko JS-<span class="short_text" id="result_box" lang="bn"><span class="hps">ভিত্তিক</span> <span class="hps">WebAPI</span> <span class="hps">পরীক্ষা</span></span>। <span id="result_box" lang="bn"><span class="alt-edited hps">এগুলোর অনেকগুলোই এমুলেটরে করতে হয়। </span></span></dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/XPCShell" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/XPCShell">xpcshell টেস্ট</a></dt>
+ <dd>Gecko XPCOM APIs এর <span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">হেডলেস</span> <span class="hps">পরীক্ষা।</span></span></dd>
+ <dt><a href="https://github.com/mozilla/b2gperf" title="https://github.com/mozilla/b2gperf">B2GPerf</a></dt>
+ <dd><span id="result_box" lang="bn"><span class="alt-edited hps"><span id="result_box" lang="bn"><span class="hps">অভ্যন্তরীণ</span> <span class="hps">যন্ত্রানুষঙ্গের</span> <span class="alt-edited hps">উপর ভিত্তি করে </span></span>গায়া</span> <span class="hps">অ্যাপ্লিকেশন</span> এর <span class="alt-edited hps">কর্মক্ষমতা পরিমাপ করে </span></span>।</dd>
+ <dt><a href="https://wiki.mozilla.org/Project_Eideticker" title="https://github.com/mozilla/eideticker">Eideticker</a></dt>
+ <dd><span id="result_box" lang="bn"><span class="hps"><span id="result_box" lang="bn"><span class="hps">ধারনকৃত</span></span> <span id="result_box" lang="bn"><span class="hps">ভিডিও এর উপর ভিত্তি করে </span></span>ফায়ারফক্স</span> <span class="hps">ওএস</span> </span>এর জন্য <span id="result_box" lang="bn"><span class="hps">কর্মক্ষমতা</span> <span class="hps">পরিমাপ করে</span></span><span id="result_box" lang="bn"><span class="hps">।</span></span></dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/endurance_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/endurance_tests">Endurance tests</a></dt>
+ <dd><span id="result_box" lang="bn"><span class="alt-edited hps"><span id="result_box" lang="bn"><span class="alt-edited hps">দীর্ঘ সময় ধরে এবং পুনঃপুনঃ চলতে পারে (repetitive) এমন <span id="result_box" lang="bn"><span class="hps">পরীক্ষা</span></span></span></span></span></span><span id="result_box" lang="bn"><span class="hps"><span id="result_box" lang="bn"><span class="alt-edited hps"> যা <span id="result_box" lang="bn"><span class="hps">মেমরি</span> <span class="alt-edited hps">অপচয়</span> <span class="hps">এবং স্টেবিলিটি বা স্থায়িত্ব</span> <span class="hps">সমস্যা</span> <span class="alt-edited hps">বের করতে ব্যবহৃত হয়।</span></span></span></span></span></span></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/MTBF_tests">MTBF টেস্ট</a></dt>
+ <dd>রিস্টার্ট করে না এমন গায়া-ui-টেস্ট এর ভিত্তি করে বানানো টেস্ট ফ্রেমওয়ার্ক। This is a test framework based on non-restart gaia-ui-test. It tries to locate all kinds of issue prevents tests from running in a long time. (বর্তমানে তাইওয়ান এর QA টিম দ্বারা এটি নির্মিত হচ্ছে)</dd>
+ <dt><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">মেমরি</span> <span class="alt-edited hps">টেস্ট</span> <span class="hps">-</span> <span class="hps">শীঘ্রই আসছে</span></span></dt>
+ <dd><span id="result_box" lang="bn"><span class="alt-edited hps">মজিলা</span><span class="atn">-</span><span>সেন্ট্রাল এর <span id="result_box" lang="bn"><span class="hps">কমিট <span id="result_box" lang="bn"><span class="alt-edited hps">দ্বারা <span id="result_box" lang="bn"><span class="hps">পুনরাবৃত্তিমূলক</span> <span class="hps">পরীক্ষা চলে,</span></span></span></span></span></span></span></span> <a href="https://areweslimyet.com/" title="https://areweslimyet.com/">https://areweslimyet.com/</a> এ <span id="result_box" lang="bn"><span class="hps">রিপোর্ট করে</span></span>, <span id="result_box" lang="bn"><span class="hps">মেমরির ব্যবহার</span> <span class="alt-edited hps">করতে সমস্যা</span> <span class="alt-edited hps">খুঁজে বের</span> <span class="alt-edited hps">করার জন্য <span id="result_box" lang="bn"><span class="alt-edited hps">নির্মিত।</span></span></span></span></dd>
+</dl>
+
+<div class="almost_half_cell" id="gt-res-content">
+<h2 dir="ltr" id="সহায়তামূলক_ডকুমেন্টেশন" style="zoom: 1;"><span class="short_text" id="result_box" lang="bn"><span class="hps">সহায়তামূলক</span> <span class="hps"><span class="short_text" id="result_box" lang="bn"><span class="hps">ডকুমেন্টেশন</span></span></span></span></h2>
+</div>
+
+<p><span id="result_box" lang="bn"><span class="hps">এই বিভাগ <span id="result_box" lang="bn"><span class="alt-edited hps">সহায়তাকারী</span> <span class="hps">প্রযুক্তির</span> <span class="hps">কিছু</span> <span class="hps">লিঙ্ক</span> <span class="hps">প্রদান করে</span></span></span></span> <span id="result_box" lang="bn"><span class="alt-edited hps">যা <span id="result_box" lang="bn"><span class="hps">মজিলা</span> <span class="hps">এর</span> <span class="hps">পরীক্ষা</span></span></span></span> <span id="result_box" lang="bn"><span class="hps">সমর্থন করে, <span id="result_box" lang="bn"><span class="alt-edited hps">যার <span id="result_box" lang="bn"><span class="alt-edited hps">সম্পর্কে আপনি</span> <span class="hps">আরও তথ্য পেতে</span> <span class="hps">চাইতে পারেন।</span></span></span></span></span></span></p>
+
+<dl>
+ <dt><a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a></dt>
+ <dd><span id="result_box" lang="bn"><span class="hps">একটি</span> <span class="alt-edited hps">রিমোট</span> <span class="alt-edited hps">টেস্ট</span> <span class="hps">ড্রাইভার, <span id="result_box" lang="bn"><span class="hps">সেলেনিয়াম</span> <span class="hps">WebDriver </span></span></span></span>ভিত্তিক।</dd>
+ <dt><a href="/en-US/docs/Marionette/Marionette_JavaScript_Tools" title="/en-US/docs/Marionette/Marionette_JavaScript_Tools">Marionette JavaScript tests</a></dt>
+ <dd><span class="short_text" id="result_box" lang="bn"><span class="hps">একটি</span> <span class="hps">node.js</span> <span class="hps">ভিত্তিক</span> <span class="hps">রানার <span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">Marionette</span> <span class="alt-edited hps">এর জন্য।</span></span></span></span></dd>
+ <dt><a href="/en-US/docs/Marionette/Python_Marionette" title="/en-US/docs/Marionette/Python_Marionette">Marionette Python tests</a></dt>
+ <dd> <span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">একটি</span> <span class="hps">পাইথন</span> <span class="hps">রানার </span></span>Marionette <span class="short_text" id="result_box" lang="bn"><span class="hps"><span class="short_text" id="result_box" lang="bn"><span class="alt-edited hps">এর জন্য।</span></span></span></span></dd>
+ <dt> </dt>
+ <dt>খেয়াল করুনঃ যদি আপনি কোন প্রোডাকশন বিল্ডে  Marionette চালাতে চান (গায়া ইন্ট্রিগেশন টেস্ট, গায়া ui টেস্ট ইত্যাদি চালানোর জন্য। ) আপনই <a href="https://github.com/mozilla-b2g/marionette-extension">Marionette কে এক্সটেনশন হিসেবে ইন্সটল করতে পারেন</a> (বর্তমানে এটি শুধু ১.৩ বিল্ডগুলোর জন্যই প্রযোজ্য তবে আরও সাপোর্ট ভবিষ্যতে যোগ করা হবে।)</dt>
+</dl>
+
+<h2 id="ক্রমাগত_ইন্টিগ্রেশন_এবং_ফলাফল_রিপোর্টিং"><span class="short_text" id="result_box" lang="bn"><span class="hps">ক্রমাগত</span> <span class="hps">ইন্টিগ্রেশন</span> <span class="alt-edited hps">এবং ফলাফল</span> <span class="hps">রিপোর্টিং</span></span></h2>
+
+<p><span id="result_box" lang="bn"><span class="hps">নিম্নলিখিত</span> <span class="hps">নিবন্ধ</span>গুলো <span class="alt-edited hps">ধারাবাহিক</span> <span class="hps">ইন্টিগ্রেশন সম্পন্ন, ফলাফল রিপোর্ট, সংরক্ষণ এবং এসব ফলাফলের বিশ্লেষণ করতে মজিলা'র পদ্ধতিগুলো নিয়ে আলোচনা করে।</span></span></p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/TBPL">TBPL</a></dt>
+ <dd> TBPL ভিত্তিক টেস্ট এবং বিল্ড বোঝার জন্য।</dd>
+ <dt><a href="https://wiki.mozilla.org/QA/Execution/Web_Testing/Automation/Jenkins">Jenkins</a></dt>
+ <dd><span id="result_box" lang="bn"><span class="alt-edited hps">জেনকিন্সের</span> <span class="hps">মাধ্যমে</span> <span class="hps">প্রকৃত</span> <span class="alt-edited hps">ডিভাইসের উপর চালানো</span> <span class="alt-edited hps">হয় যে</span> <span class="alt-edited hps">টেস্ট</span></span>।</dd>
+ <dt><a href="https://wiki.mozilla.org/B2G/Datazilla" title="https://wiki.mozilla.org/B2G/Datazilla">Datazilla</a></dt>
+ <dd><a href="https://datazilla.mozilla.org/b2g/" title="https://datazilla.mozilla.org/b2g/">Datazilla dashboard</a> এ কোন <span id="result_box" lang="bn"><span class="alt-edited hps">কার্যকারিতা</span> <span class="alt-edited hps">টেস্ট <span id="result_box" lang="bn"><span class="alt-edited hps">রিপোর্ট করা হচ্ছে তা বোঝে</span></span></span></span> , এবং <span id="result_box" lang="bn"><span class="alt-edited hps">সেই</span> <span class="alt-edited hps">টেস্টগুলো কি <span id="result_box" lang="bn"><span class="alt-edited hps">পদক্ষেপ নেয়।</span></span></span></span></dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Test_Execution_Chart" title="/en-US/docs/Mozilla/Firefox_OS/Testing/Test_Execution_Chart">Test execution chart</a></dt>
+ <dd><span id="result_box" lang="bn"><span class="hps">একটি</span> <span class="hps">চার্ট যা দেখায় কোন টেস্ট পরিচালনা করা হচ্ছে</span></span> — কোন <span id="result_box" lang="bn"><span class="hps">ডিভাইস নিয়ে এবং কোথায়</span></span> — এবং কোন <span id="result_box" lang="bn"><span class="alt-edited hps">প্ল্যাটফর্ম</span> <span class="hps">প্রতিটি পরীক্ষার</span> <span class="hps">জন্য</span> <span class="hps">সমর্থিত।</span></span></dd>
+</dl>
+
+<h2 class="Community" id="Community" name="Community"><span class="short_text" id="result_box" lang="bn"><span class="hps">ইউনিট</span> <span class="hps">টেস্টিং</span> <span class="alt-edited hps">ফ্রেমওয়ার্কের</span> <span class="hps">ভিডিও</span></span></h2>
+
+<div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/LxnRIm0wLLo?rel=0&amp;html5=1"></iframe></div></div>
+
+<dl>
+ <dt> </dt>
+ <dd> </dd>
+</dl>

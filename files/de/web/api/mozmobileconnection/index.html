@@ -1,0 +1,134 @@
+---
+title: MozMobileConnection
+slug: Web/API/MozMobileConnection
+translation_of: Archive/B2G_OS/API/MozMobileConnection
+---
+<p>{{APIRef("Firefox OS")}} {{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+
+<div class="summary">
+<p><span class="seoSummary">This API is used to get information about the current mobile voice and data connection states of the device. It is accessible through {{domxref("window.navigator.mozMobileConnections","navigator.mozMobileConnections")}}, which returns an array of <code>MozMobileConnection</code> objects.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: The syntax used to be <code>window.navigator.mozMobileConnection</code>, returning a single <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozMobileConnection" title="This API is used to get information about the current mobile voice and data connection states of the device. It is accessible through navigator.mozMobileConnection."><code>MozMobileConnection</code></a> object, but this was updated in Firefox 1.3 due to the introduction of Multi-SIM support (Dual-SIM-Dual-Standby or DSDS).</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Interface overview</h2>
+
+<pre class="eval">callback EventHandler = any (Event event);
+
+interface MozMobileConnection : EventTarget
+{
+  const long ICC_SERVICE_CLASS_VOICE = (1 &lt;&lt; 0);
+  const long ICC_SERVICE_CLASS_DATA = (1 &lt;&lt; 1);
+  const long ICC_SERVICE_CLASS_FAX = (1 &lt;&lt; 2);
+  const long ICC_SERVICE_CLASS_SMS = (1 &lt;&lt; 3);
+  const long ICC_SERVICE_CLASS_DATA_SYNC = (1 &lt;&lt; 4);
+  const long ICC_SERVICE_CLASS_DATA_ASYNC = (1 &lt;&lt; 5);
+  const long ICC_SERVICE_CLASS_PACKET = (1 &lt;&lt; 6);
+  const long ICC_SERVICE_CLASS_PAD = (1 &lt;&lt; 7);
+  const long ICC_SERVICE_CLASS_MAX = (1 &lt;&lt; 7);
+
+  readonly attribute MozMobileConnectionInfo voice;
+  readonly attribute MozMobileConnectionInfo data;
+  readonly attribute DOMString networkSelectionMode;
+  readonly attribute DOMString iccId;
+
+  DOMRequest getNetworks();
+  DOMRequest selectNetwork(MozMobileNetworkInfo network);
+  DOMRequest selectNetworkAutomatically();
+  DOMRequest sendMMI(DOMString mmi);
+  DOMRequest cancelMMI();
+  DOMRequest setCallForwardingOption(MozMobileCFInfo CFInfo);
+  DOMRequest getCallForwardingOption(unsigned short reason);
+
+  attribute EventHandler onvoicechange;
+  attribute EventHandler ondatachange;
+  attribute EventHandler onussdreceived;
+  attribute EventHandler ondataerror;
+  attribute EventHandler oncfstatechange;
+};
+</pre>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt> </dt>
+ <dt>{{domxref("MozMobileConnection.voice")}} {{readonlyinline}}</dt>
+ <dd>A {{domxref("MozMobileConnectionInfo")}} object that gives access to information about the voice connection.</dd>
+ <dt>{{domxref("MozMobileConnection.data")}} {{readonlyinline}}</dt>
+ <dd>A {{domxref("MozMobileConnectionInfo")}} object that gives access to information about the data connection.</dd>
+ <dt>{{domxref("MozMobileConnection.iccId")}} {{readonlyinline}}</dt>
+ <dd>A string that indicates the Integrated Circuit Card Identifier of the SIM this mobile connection corresponds to.</dd>
+ <dt>{{domxref("MozMobileConnection.networkSelectionMode")}} {{readonlyinline}}</dt>
+ <dd>A string that indicates the selection mode of the voice and data networks.</dd>
+ <dt>{{domxref("MozMobileConnection.oncfstatechange")}}</dt>
+ <dd>A handler for the {{event("cfstatechange")}} event. This event is fired when the call forwarding state changes.</dd>
+ <dt>{{domxref("MozMobileConnection.ondatachange")}}</dt>
+ <dd>A handler for the {{event("datachange")}} event. This event is fired whenever the {{domxref("MozMobileConnection.data","data")}} connection object changes values.</dd>
+ <dt>{{domxref("MozMobileConnection.ondataerror")}}</dt>
+ <dd>A handler for the {{event("dataerror")}} event. This event is fired whenever the {{domxref("MozMobileConnection.data","data")}} connection object receive an error from the <abbr title="Radio Interface Layer">RIL</abbr>.</dd>
+ <dt>{{domxref("MozMobileConnection.onussdreceived")}}</dt>
+ <dd>A handler for the {{event("ussdreceived")}} event. This event is fired whenever a new <abbr title="Unstructured Supplementary Service Data">USSD</abbr> message is received.</dd>
+ <dt>{{domxref("MozMobileConnection.onvoicechange")}}</dt>
+ <dd>A handler for the {{event("voicechange")}} event. This event is fired whenever the {{domxref("MozMobileConnection.voice","voice")}} connection object changes.</dd>
+</dl>
+
+<h3 id="Constants">Constants</h3>
+
+<ul>
+ <li><code>ICC_SERVICE_CLASS_VOICE</code></li>
+ <li><code>ICC_SERVICE_CLASS_DATA</code></li>
+ <li><code>ICC_SERVICE_CLASS_FAX</code></li>
+ <li><code>ICC_SERVICE_CLASS_SMS</code></li>
+ <li><code>ICC_SERVICE_CLASS_DATA_SYNC</code></li>
+ <li><code>ICC_SERVICE_CLASS_DATA_ASYNC</code></li>
+ <li><code>ICC_SERVICE_CLASS_PACKET</code></li>
+ <li><code>ICC_SERVICE_CLASS_PAD</code></li>
+ <li><code>ICC_SERVICE_CLASS_MAX</code></li>
+</ul>
+
+<h2 id="Methods">Methods</h2>
+
+<div class="note">
+<p><strong>Note:</strong> All original methods from the <code>MozMobileConnection</code> interface are fully asynchronous. They all return a {{domxref("DOMRequest")}} which has a <code>onsuccess</code> and <code>onerror</code> event handler to handle the success or failur of the method call.</p>
+</div>
+
+<dl>
+ <dt>{{domxref("MozMobileConnection.cancelMMI()")}}</dt>
+ <dd>Cancel the current <abbr title="Man Machine Interface">MMI</abbr> request if one exists.</dd>
+ <dt>{{domxref("MozMobileConnection.getCallForwardingOption()")}}</dt>
+ <dd>Queries current call forward options.</dd>
+ <dt>{{domxref("MozMobileConnection.getNetworks()")}}</dt>
+ <dd>Search for available networks.</dd>
+ <dt>{{domxref("MozMobileConnection.selectNetwork()")}}</dt>
+ <dd>Manually selects a network, overriding the radio's current selection.</dd>
+ <dt>{{domxref("MozMobileConnection.selectNetworkAutomatically()")}}</dt>
+ <dd>Tell the radio to automatically select a network.</dd>
+ <dt>{{domxref("MozMobileConnection.sendMMI()")}}</dt>
+ <dd>Send a <abbr title="Man Machine Interface">MMI</abbr> message.</dd>
+ <dt>{{domxref("MozMobileConnection.setCallForwardingOption()")}}</dt>
+ <dd>Configures call forward options.</dd>
+</dl>
+
+<p>The <code>MozMobileConnection</code> interface also inherit from the {{domxref("EventTarget")}} interface</p>
+
+<p>{{page("/en-US/docs/DOM/EventTarget","Methods")}}</p>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p>Not part of any specification</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("window.navigator.mozMobileConnection","navigator.mozMobileConnection")}}</li>
+ <li>{{domxref("MozMobileConnectionInfo")}}</li>
+ <li>{{domxref("MozIccManager")}}</li>
+ <li>{{domxref("MozMobileNetworkInfo")}}</li>
+ <li>{{domxref("MozMobileCFInfo")}}</li>
+ <li>{{domxref("MozMobileCellInfo")}}</li>
+ <li>{{domxref("EventTarget")}}</li>
+</ul>

@@ -1,0 +1,79 @@
+---
+title: ডেভেলপারদের জন্য ফায়ারফক্স ওএস ১.৪
+slug: Archive/B2G_OS/Releases/1.4
+tags:
+  - B2G
+  - Firefox OS
+  - Release Notes
+translation_of: Archive/B2G_OS/Releases/1.4
+---
+<div class="summary">
+ <p><strong>ফায়ারফক্স ওএস ১.৪</strong> বর্তমানে প্রকাশের অপেক্ষায় আছে। এর গেকো অংশটি ফায়ারফক্স ৩০ এর উপর নির্ভর করে তৈরি করা হয়েছে (<a href="/en-US/docs/Mozilla/Firefox/Releases/30" title="/en-US/docs/Mozilla/Firefox/Releases/28">ডেভেলপারদের জন্য ফায়ারফক্স ৩০ রিলিজ নোট সমূহ</a> দেখুন)</p>
+</div>
+<div class="note">
+ <p>ফায়ারফক্স ওএস ১.৪ এর জন্য ডকুমেন্টেশন তৈরিতে সহায়তা করতে চান ? <a href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=b2g" title="http://beta.elchi3.de/doctracker/#list=fx&amp;version=b2g">B2G-সংশ্লিষ্ট যেসব বাগ রয়েছে এবং সেগুলো সম্পর্কে লেখা প্রয়োজন</a>, তার তালিকা দেখুন এবং যুক্ত হউন!</p>
+</div>
+<h2 id="সিএসএস">সিএসএস</h2>
+<p>সাধারন গেকোঃ</p>
+<ul>
+ <li><a href="/bn-BD/docs/Web/CSS/background-blend-mode" title="The documentation about this has not yet been written; please consider contributing!"><code>background-blend-mode</code></a> প্রপার্টি টি ডিফল্ট ভাবে সক্রিয় করা হয়েছে (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=970600" title="FIXED: Enable background-blend-mode by default">bug 970600</a>)।</li>
+ <li>শুধুমাত্র UA স্টাইলশিটে ব্যবহারের জন্য আদর্শ মানের বাইরে থাকা <a href="/bn-BD/docs/Web/CSS/overflow-clip-box" title="The documentation about this has not yet been written; please consider contributing!"><code>overflow-clip-box</code></a> প্রোপার্টি ব্যবহার করা হয়েছে (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=966992" title="FIXED: Implement overflow-clip-box: content-box">bug 966992</a>)।</li>
+ <li><a href="/bn-BD/docs/Web/CSS/line-height" title="On block level elements, the line-height CSS property specifies the minimal height of line boxes within the element."><code>line-height</code></a> প্রোপার্টি এখন এক লাইনের টেক্সট ইনপুট সমূহে কাজ করে। (<code>&lt;input type=text|password|email|search|tel|url|unknown&gt;</code> types) যদিও এটা টেক্সটকে 1.0 এর নিচের লাইন হাইটে সঙ্কুচিত করতে পারেনা (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=349259" title="FIXED: CSS Property 'line-height' has no effects on input text fields">bug 349259</a>)।</li>
+ <li><a href="/bn-BD/docs/Web/CSS/line-height" title="On block level elements, the line-height CSS property specifies the minimal height of line boxes within the element."><code>line-height</code></a> প্রোপার্টি এখন কোন প্রকার বিধি-নিষেধ ছাড়াই <code>type=button</code> এ কাজ করে(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451" title='FIXED: Allow use of line-height for &amp;amp;lt;input type="reset|button|submit">'>bug 697451</a>)।</li>
+</ul>
+<h2 id="জাভাস্ক্রিপ্ট">জাভাস্ক্রিপ্ট</h2>
+<p>সাধারন গেকোঃ</p>
+<p>EcmaScript 6.0 এর সমর্থন আরও বর্ধিত করা হয়েছেঃ</p>
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">অ্যারে কম্প্রিহেনশন সমূহকে</a> নতুন সিমানটিক্স অনুসরন করার জন্য গ্রহন করা হয়েছে (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=979865" title="FIXED: Implement ES6 array and generator comprehensions">bug 979865</a>):
+  <ul>
+   <li>তারা প্রতি <a href="/bn-BD/docs/Web/JavaScript/Reference/for" title="The documentation about this has not yet been written; please consider contributing!"><code>for</code></a> নোডে একটি করে স্কোপ তৈরি করে।</li>
+   <li>অ্যাসাইনমেন্ট এক্সপ্রেশনের বদলে তারা <a href="/bn-BD/docs/Web/JavaScript/Reference/for" title="The documentation about this has not yet been written; please consider contributing!"><code>for</code></a> শুরু হয়।</li>
+   <li>ওয়েব মোড কোডে এরা বৈধ এবং <a href="/bn-BD/docs/Web/JavaScript/Reference/let" title="The documentation about this has not yet been written; please consider contributing!"><code>let</code></a> আইডেন্টিফায়ার কে অগ্রাহ্য করে।</li>
+   <li>তারা ডিস্ট্রাকচারিং সমর্থন করছে না।</li>
+   <li>তাদের একাধিক <em>comprehensionIf</em> উপাদান থাকতে পারে।</li>
+   <li>তারা শুধু <a href="/bn-BD/docs/Web/JavaScript/Reference/for…of" title="The documentation about this has not yet been written; please consider contributing!"><code>for…of</code></a> পুনরাবৃত্তির কাজ করে, <a href="/bn-BD/docs/Web/JavaScript/Reference/for…in" title="The documentation about this has not yet been written; please consider contributing!"><code>for…in</code></a> না।</li>
+   <li>তাদের সবসময় প্যারেন্থেসিস ( &lt; &gt; ) এর প্রয়োজন হয়।</li>
+   <li>এরা হচ্ছে EcmaScript 6.0 সিমানটিক্স এর পর্যায়ের। পুরাতন গুলোর পর্যায়ের নয়।</li>
+  </ul>
+ </li>
+ <li>টাইপড অ্যারে সমূহ এখন আরও পরিবর্ধন যোগ্য এবং নতুন নাম ওয়ালা প্রোপার্টি সমর্থন করে(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=695438" title="FIXED: TypedArrays don't support new named properties">bug 695438</a>)।</li>
+</ul>
+<h2 id="ইন্টারফেসএপিআইDOM">ইন্টারফেস/এপিআই/DOM</h2>
+<p>গেকো সাধারনঃ</p>
+<ul>
+ <li><a href="/bn-BD/docs/Web/API/Navigator/sendBeacon" title="The documentation about this has not yet been written; please consider contributing!"><code>Navigator.sendBeacon</code></a> যুক্ত করা হয়েছে। এতে করে টেলিমেট্রি সংগ্রহ আরও সহজ হয়েছে (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=936340" title="FIXED: Implement navigator.sendBeacon">bug 936340</a>)</li>
+ <li>Added a <code>relList</code> property returning a <a href="/bn-BD/docs/Web/API/DOMTokenList" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMTokenList</code></a> to <a href="/bn-BD/docs/Web/API/HTMLLinkElement" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLLinkElement</code></a>, <a href="/bn-BD/docs/Web/API/HTMLAreaElement" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLAreaElement</code></a> এবং <a href="/bn-BD/docs/Web/API/HTMLAnchorElement" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLAnchorElement</code></a> এ <a href="/bn-BD/docs/Web/API/DOMTokenList" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMTokenList</code></a> প্রদান করার জন্য একটি <code>relList</code> প্রোপার্টি যুক্ত করা হয়েছে (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=968637" title="FIXED: add the DOMTokenList relList to HTMLLinkElement, HTMLAreaElement and HTMLAnchorElement">bug 968637</a>)</li>
+ <li>সাম্প্রতিক বৈশিষ্ট্য অনুযায়ী <a href="/bn-BD/docs/Web/API/OscillatorNode/start" title="The documentation about this has not yet been written; please consider contributing!"><code>OscillatorNode.start</code></a> এবং <a href="/bn-BD/docs/Web/API/OscillatorNode/stop" title="The documentation about this has not yet been written; please consider contributing!"><code>OscillatorNode.stop</code></a> এর প্রথম আর্গুমেন্ট এখন ঐচ্ছিক এবং ডিফল্ট ভাবে ০ থাকে (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982541" title="FIXED: Update OscillatorNode.{start, stop} to have the first argument optional and default to zero">bug 982541</a>)। The method <a href="/bn-BD/docs/Web/API/Navigator/requestWakeLock" title="The documentation about this has not yet been written; please consider contributing!"><code>Navigator.requestWakeLock()</code></a> and the non-standard <a href="/bn-BD/docs/Web/API/MozWakeLock" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWakeLock</code></a> are no longer available from the Web on Desktop (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=963366" title="FIXED: Hide navigator.requestWakeLock and MozWakeLock from the web except on Firefox OS">bug 963366</a>).</li>
+ <li>The <code>DOM_VK_ENTER</code> constant has been removed from <a href="/bn-BD/docs/Web/API/KeyboardEvent" title="The documentation about this has not yet been written; please consider contributing!"><code>KeyboardEvent</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=969247" title="FIXED: Get rid of related code of NS_VK_ENTER and nsIDOMKeyEvent::DOM_VK_ENTER">bug 969247</a>).</li>
+ <li>Web components' <a href="/bn-BD/docs/Web/API/Document/register" title="The documentation about this has not yet been written; please consider contributing!"><code>Document.register</code></a> has been adapted to follow the behavior described in the latest version of the specification (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=856140" title="FIXED: Update document.register to adhere to the latest Custom Element spec">bug 856140</a>).</li>
+ <li>Basic support for Hit regions on canvas has been added: the methods <a href="/bn-BD/docs/Web/API/CanvasRenderingContext2D/addHitRegion" title="The documentation about this has not yet been written; please consider contributing!"><code>CanvasRenderingContext2D.addHitRegion()</code></a> and <a href="/bn-BD/docs/Web/API/CanvasRenderingContext2D/removeHitRegion" title="The documentation about this has not yet been written; please consider contributing!"><code>CanvasRenderingContext2D.removeHitRegion()</code></a> have been added. These are disabled by default; to activate them set the preference <code>canvas.hitregions.enabled</code> to <code>true</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=966591" title="FIXED: Add basic support for Hit regions in Canvas">bug 966591</a>)</li>
+ <li>The non-standard, and deprecated since Firefox 15, <a href="/bn-BD/docs/Web/API/Blob/mozSlice" title="The documentation about this has not yet been written; please consider contributing!"><code>Blob.mozSlice</code></a> is no longer supported (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=961804" title="FIXED: Drop support for Blob.mozSlice">bug 961804</a>).</li>
+ <li>The non-standard <a href="/bn-BD/docs/Web/API/ArchiveReader" title="The documentation about this has not yet been written; please consider contributing!"><code>ArchiveReader</code></a> and <a href="/bn-BD/docs/Web/API/ArchiveRequest" title="The documentation about this has not yet been written; please consider contributing!"><code>ArchiveRequest</code></a> are no longer exposed to the Web (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=968883" title="FIXED: ArchiveReader and ArchiveRequest should not be exposed interfaces">bug 968883</a>).</li>
+ <li>Constructors cannot be called as functions anymore. They need to be preceded by the keyword <code>new</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916644" title="FIXED: Disallow calling WebIDL constructors as functions on the web">bug 916644</a>)</li>
+ <li>Added support for a new value (<code>alpha</code>) for the second, optional, parameter of the <a href="/bn-BD/docs/Web/API/Canvas/getContext" title="The documentation about this has not yet been written; please consider contributing!"><code>Canvas.getContext()</code></a> method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always <code>1.0</code>. This allows the back-end to implement a fast-track. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982480" title="FIXED: Add support for the alpha option to the canvas context options">bug 982480</a>)</li>
+</ul>
+<h2 id="SVG">SVG</h2>
+<p>Gecko general:</p>
+<ul>
+ <li><a href="/bn-BD/docs/Web/SVG/Element/feDropShadow" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;feDropShadow&gt;</code></a>, and its interface <a href="/bn-BD/docs/Web/API/SVGFEDropShadowElement" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGFEDropShadowElement</code></a>, from the Filter Effects Module are now supported (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=964200" title="FIXED: Implement Filter Effects Module feDropShadow filter">bug 964200</a>).</li>
+</ul>
+<h2 id="AudioVideo">Audio/Video</h2>
+<p>Gecko general:</p>
+<ul>
+ <li>On Linux, Gstreamer 1.0 is now supported (instead of 0.10) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=806917" title="FIXED: support GStreamer 1.0">bug 806917</a>).</li>
+</ul>
+<h2 id="Manifest">Manifest</h2>
+<ul>
+ <li>The <a href="/en-US/Apps/Build/Manifest#precompile">precompile</a> manifest field is now supported, which specifies that asm.js code contained within the app should be compiled at install time, install of during first run.</li>
+</ul>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li>Firefox OS 1.4 Notes (will be linked to once they are published.)</li>
+</ul>
+<h2 id="Older_versions">Older versions</h2>
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.3">Firefox OS 1.3 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.2">Firefox OS 1.2 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.1">Firefox OS 1.1 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>
+<p> </p>

@@ -1,0 +1,81 @@
+---
+title: Date.prototype.toLocaleFormat()
+slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat
+tags:
+  - Date
+  - Java
+  - Method
+  - Non-standard
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Date.toLocaleFormat
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Die nicht standardisierte Methode <strong><code>toLocaleFormat()</code></strong> konvertiert einen {{jsxref("date")}} Objekt zu einem String im übergebenen Format. {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} ist einen standardisierte Alternative zum Formatieren von {{jsxref("Date")}} Objekten. Siehe auch die neuere Version der {{jsxref("Date.prototype.toLocaleDateString()")}} Methode an.</p>
+
+<div><strong>Diese Funktion wurde Entfernt und wird ab Firefox 58 nicht mehr Funktionieren.</strong> Für mehr Information un Migrationshilfe siehe in den Artikel {{jsxref("Errors/Deprecated_toLocaleFormat","Warning: Date.prototype.toLocaleFormat is deprecated")}}.</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>dateObj</var>.toLocaleFormat(<var>formatString</var>)</pre>
+
+<h3 id="Parameter">Parameter</h3>
+
+<dl>
+ <dt><code>formatString</code></dt>
+ <dd>Ein Formatstring, welche im selben Format sein muss, wie es die C Funktion <a class="external" href="http://www.opengroup.org/onlinepubs/007908799/xsh/strftime.html"><code>strftime()</code></a> erwartet.</dd>
+</dl>
+
+<h3 id="Rückgabewert">Rückgabewert</h3>
+
+<p>Einen String, der das gegebenen {{jsxref("Date")}} Objekt im spezifizierten Format repräsentiert.</p>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>Die <code>toLocaleFormat()</code> Methode ermöglicht es eine größere Kontrolle über das Formatieren von generierten Daten und/oder Zeiten zu haben. Namen für Monate und Wochentage werden mit den Spracheinstellungen des Betriebssystem formatiert. Die Anordnung von Tagen, Monaten und anderen Bestandteilen in der Formatierung wird nicht automatisch vorgenommen. Sie sind von den Angaben in dem Formatierungsstring abhängig. Man muss dafür sorgen, dass der Formatierungsstring zu richtigen Ergebnissen auf dem Benutzersystem führt. Man sollte vorsichtig sein, weil die Spracheinstellungen im Browser nicht die gleichen sein müssen, wie die des Betriebssystems.</p>
+
+<p>Extension und XULRunner Entwickler wissen, dass das Laden von Formatstring aus <code>.dtd</code> oder <code>.properties</code> Dateien mit dem Einsatz von URIs (z. B. <code>chrome://<em>somedomain</em>/locale/<em>somefile.ext</em></code>) <strong>vermieden werden sollte</strong>, weil <code>.dtd</code>/<code>.properties</code> Dateien und die <code>toLocaleFormat()</code> Methode nicht notwendiger Weise der gleichen Sprache folgen. Dieses kann zu nicht lesbaren oder merkwürdig formatierten Daten führen.</p>
+
+<p>Außerdem ist zu beachten, dass der Einsatz von Formatierungen abhängig von der Plattform und den benutzerdefinierten Einstellungen des Benutzers nicht immer gewollt ist. Man sollte stattdessen die allgemeineren <code>toLocale*</code> Methoden des {{jsxref("Global_Objects/Date", "Date")}} Objektes nutzen oder ein eigenes Format mit den <code>get*</code> Methoden einer {{jsxref("Global_Objects/Date", "Date")}} Instanz erstellen.</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Einsatz_von_toLocaleFormat()">Einsatz von <code>toLocaleFormat()</code></h3>
+
+<pre class="brush: js example-bad">var today = new Date();
+var date = today.toLocaleFormat('%A, %B %e, %Y'); // Schlechtes Beispiel
+</pre>
+
+<p>Im Beispiel gibt <code>toLocaleFormat()</code> einen String wie "Mittwoch, Oktober 3, 2007" zurück. Zu beachten ist, dass der String nicht unbedingt den Sprachegegebenheiten angepasst ist, was auf die oben genannten Probleme zurückzuführen ist.</p>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>Wenn die <a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a> Bibliothek benutzt wird, kann folgender Polyfill benutzt werden:</p>
+
+<pre class="brush: js">if (!Date.prototype.toLocaleFormat) {
+    (function() {
+        Date.prototype.toLocaleFormat = function(formatString) {
+            return this.format(formatString);
+        };
+    }());
+}</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Nicht spezifiziert. Implementiert in JavaScript 1.6.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Date.toLocaleFormat")}}</p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+</ul>

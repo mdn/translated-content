@@ -1,0 +1,264 @@
+---
+title: Benutzung des App Managers
+slug: Archive/B2G_OS/Benutzung_des_App_Managers
+translation_of: Archive/B2G_OS/Using_the_App_Manager
+---
+<div class="summary">
+<p>Der App Manager ist ein neues Tool, das in Firefox für Desktop integriert wurde. Es stellt einige nützliche Werkzeuge zum Testen, Verteilen und Debuggen von HTML5-Webapps mit Firefox OS Smartphones und dem Firefox OS Simulator bereit, welche direkt im Browser benutzt werden können.</p>
+
+<p>Der App Manager ist an Entwickler, die Firefox OS Version 1.2 oder später entwickeln, gerichtet. Wenn Sie Apps für Firefox OS 1.1 entwickeln, werfen Sie stattdessen einen Blick auf die Dokumentation für den <a href="/de/docs/Tools/Firefox_OS_1.1_Simulator">Firefox OS Simulator 1.1</a>.</p>
+</div>
+
+<p style="text-align: center;">{{EmbedYouTube("z1Bxg1UJVf0")}}</p>
+
+<p>Der App Manager besteht aus folgenden Komponenten:</p>
+
+<ul>
+ <li>Ein <a href="#Apps_panel"><em>Apps-Panel</em></a> zur Verwaltung von lokalen Apps (Source Code ist auf dem eigenen Computer gespeichert) und Apps, die extern gehostet sind. Diese können paketiert, auf einem Gerät oder im Simulator installiert und mit Toolboxes getestet werden.</li>
+ <li>Ein <a href="#Device_panel"><em>Device-Panel</em></a>, welches Informationen über das verbundene Gerät, wie installierte Firefox OS Version, benötigte Rechte für die Benutzung der APIs auf dem Gerät und installierte Apps anzeigt.</li>
+ <li><a href="/en-US/docs/Tools_Toolbox"><em>Toolboxes</em></a>, die sich aus Komponenten der Entwickler-Werkzeuge zusammensetzen (Web-Konsole, Inspektor, Debugger, etc.) und über das Apps-Panel mit einer laufenden App verbunden werden können, um Debugging zu betreiben.</li>
+</ul>
+
+<h2 id="Schnelleinstieg"><a name="Configuring_device">Schnelleinstieg:</a></h2>
+
+<p>Dieser Abschnitt soll einen möglichst schnellen Einstieg ermöglichen. Falls genauere Erklärungen benötigt werden, überspringen Sie bitte diesen Abschnitt und lesen Sie {{ anch("Device and system configuration") }}. Bei Problemen könnte außerdem der Abschnitt {{ anch("Troubleshooting") }} weiterhelfen.</p>
+
+<ol>
+ <li>Stellen Sie sicher, dass Firefox Desktop 26+ installiert ist.</li>
+ <li>Öffnen Sie den App Manager (tippen Sie <code>about:app-manager</code> in die URL-Leiste).</li>
+ <li>Falls kein echtes Gerät mit Firefox OS zur Verfügung steht:
+  <ol>
+   <li><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">Installieren Sie den Firefox OS Simulator</a></li>
+   <li>Klicken Sie auf <em>Start Simulator</em> in der unteren Werkzeugleiste des App Managers und anschließend auf den Namen des installierten Simulators.</li>
+  </ol>
+ </li>
+ <li>Falls Sie ein echtes Gerät besitzen:
+  <ol>
+   <li>Stellen Sie sicher, dass auf dem Gerät Firefox OS 1.2+ läuft.</li>
+   <li>Wenn Sie unter Windows arbeiten, stellen Sie sicher, dass Sie die bereitgestellten Treiber Ihres Handys installiert haben.</li>
+   <li>Deaktivieren Sie die Bildschirmsperre in den Einstellungen des Geräts (<code>Settings &gt; <code>Screen Lock) </code></code>und aktivieren Sie Remote Debugging (<code>Settings &gt; Device information &gt; More information &gt; Developer</code>).</li>
+   <li><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">Installieren Sie das ADB Helper Add-on</a> in Firefox Desktop.</li>
+   <li>Verbinden Sie ihr Gerät über ein USB-Kabel mit dem Computer.</li>
+   <li>Der Name des Geräts sollte nun in der unteren Leiste des App Managers erscheinen. Klicken Sie den Namen an.</li>
+  </ol>
+ </li>
+ <li>Die untere Leiste sollte anzeigen "Connected to: xxx".</li>
+ <li>Klicken Sie auf das <em>Apps-Panel</em> und fügen Sie eine App hinzu (paketiert oder gehostet).</li>
+ <li>Der <em>Refresh</em>-Button validiert Ihre App und installiert sie auf dem Simulator/Gerät.</li>
+ <li>Der <em>Debug</em>-Button verbindet die Entwickler-Tools mit der laufenden App.</li>
+</ol>
+
+<h2 id="Geräte-_und_System-Konfiguration">Geräte- und System-Konfiguration</h2>
+
+<p>Bei der Benutzung des App Manager sollte man zuerst sicherstellen, dass System und Gerät korrekt konfiguriert sind. Dieser Abschnitt beschreibt alle dafür nötigen Schritte.</p>
+
+<h3 id="Firefox_1.2_wird_benötigt">Firefox 1.2+ wird benötigt</h3>
+
+<p>Stellen Sie sicher, dass auf Ihrem Gerät Firefox OS 1.2/Boot2Gecko 1.2 oder höher läuft. Die Versionsnummer von Firefox OS wird unter <code>Settings &gt; Device Information &gt; Software</code> angezeigt.</p>
+
+<p>Falls die installierte Version nicht hoch genug ist, muss je nachdem welches Gerät Sie verwenden, eine der verfügbaren Nightly-Builds von Firefox 1.2+ installiert oder eine Version selbst kompiliert werden.</p>
+
+<p>Verfügbare Builds:</p>
+
+<ul>
+ <li><a href="http://downloads.geeksphone.com/">Geeksphone Keon/Peak Builds</a> (für mehr Informationen lesen Sie <a href="/en-US/docs/Mozilla/Firefox_OS/Developer_phone_guide/Updating_and_Tweaking_Geeksphone">Updating and Tweaking your Firefox OS Developer Preview phone/Geeksphone</a>).</li>
+ <li>Weitere Builds folgen später.</li>
+</ul>
+
+<div class="note">
+<p>Hinweis: Für die Erstellung eines eigenen Builds von Firefox OS 1.2+, folgen Sie den Anweisungen unter <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Building and installing Firefox OS</a> und starten Sie mit <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a>.</p>
+</div>
+
+<h3 id="Remote-Debugging">Remote-Debugging</h3>
+
+<p>Als nächstes muss Remote Debugging in Firefox OS aktiviert werden. Navigieren Sie zu <code>Settings &gt; Device information &gt; More information &gt; Developer</code> und aktivieren Sie die Checkbox bei Remote Debugging.</p>
+
+<h3 id="Adb_Helper_Add-on" name="Adb_Helper_Add-on">ADB oder ADB Helper</h3>
+
+<p>Über die Android Debug Bridge (ADB) wird die Verbindung und Kommunikation zwischen Gerät und Computer geregelt. Es gibt zwei Möglichkeiten ADB einzusetzen:</p>
+
+<ul>
+ <li>
+  <p>Lassen Sie Firefox die Kontrolle über ADB übernehmen (empfohlen). <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">Installieren Sie das ADB Helper Add-on</a>, welches den Vorgang vereinfacht. Auf diese Weise brauchen Sie weder ADB installieren noch den Befehl <code>adb forward</code> ausführen - alles wird automatisch vom Add-on erledigt.</p>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" style="margin-bottom: 20px; padding: 10px; text-align: center; border-radius: 4px; display: inline-block; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;" title="https://addons.mozilla.org">Download ADB Helper Add-on</a></li>
+ <li>Benutzen Sie ADB manuell. Hierfür muss ADB auf dem Computer installiert sein - downloaden und installieren Sie <code>adb</code> (genauer erläutert unter: <a href="/de/Firefox_OS/Debugging/Installing_ADB">Installieren von ADB</a>). Damit die Verbindung funktioniert, muss die Port-Weiterleitung mit folgendem Terminal-Befehl aktiviert werden:
+  <pre>adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+  Der Befehl muss nach jedem Neustart des Telefons oder Aus- und wieder Einstecken erneut ausgeführt werden.</li>
+</ul>
+
+<div class="note">
+<p>Achtung: Es ist nicht nötig diesen Befehl auszuführen, wenn Sie das ADB Helper Add-on installiert haben.</p>
+</div>
+
+<h2 id="Verbinden_des_Geräts_mit_dem_App_Manager">Verbinden des Geräts mit dem App Manager</h2>
+
+<p>Nachdem alles konfiguriert wurde, ist es nun an der Zeit, das Gerät mit dem Computer zu verbinden und den App Manager zu starten:</p>
+
+<ol>
+ <li>Verbinden Sie das Gerät via USB mit dem Computer.</li>
+ <li>Deaktivieren Sie Screen lock auf dem Gerät, indem Sie zu <code>Settings &gt; Screen Lock</code> navigieren und die Checkbox bei <code>Lock Screen</code> deaktivieren. Dieses Vorgehen ist sehr ratsam, da die Verbindung abbricht, sobald sich die Bildschirmsperre aktiviert.</li>
+ <li>Starten Sie den App Manager — klicken Sie in der Menüleiste von Firefox Desktop <code>Extras &gt; Web-Entwickler &gt; App Manager</code> an oder tippen Sie <code>about:app-manager</code> in die URL-Leiste.</li>
+ <li>An der Unterseite des App Manager Tabs sehen Sie nun eine Anzeige für den Verbindungsstatus (siehe Screenshot unten). Es sollte nun möglich sein das Gerät durch einen Klick auf den "Connect to localhost:6000" Button zu verbinden.</li>
+ <li>Falls die Verbindung erfolgreich hergestellt wurde, erscheint eine Frage auf dem Gerät: "An incoming request to permit remote debugging connection was detected. Allow connection?". Bestätigen Sie mit dem OK-Button (evtl. müssen Sie den Power-Button am Gerät betätigen, damit Sie die Frage sehen können). Der Verbindungsstatus in der Leiste sollte dann "Connected to B2G" und einen Disconnect-Button zum Abbruch der Verbindung anzeigen.</li>
+</ol>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6263/connection-status.png" style="display: block; height: 30px; margin: 0px auto; width: 600px;"></p>
+
+<div class="note">
+<p>Die anderen Bedienelemente in der Verbindungstatus-Leiste ermöglichen die Verbindung eines Simulators mit dem App Manager. Dies wird im nächsten Abschnitt behandelt, wobei der Port für die Verbindung geändert wird. Wenn der Port gewechselt wird, muss auch Portweiterleitung für diesen Port aktiviert werden, wie unter {{anch("Enable port forwarding")}} beschrieben.</p>
+</div>
+
+<h2 id="Firefox_OS_Simulator_Add-on"><a name="Simulator">Firefox OS Simulator Add-on</a></h2>
+
+<p>Steht kein echtes Gerät zur Verfügung, das mit dem App Manager benutzt werden kann, kann es dennoch zusammen einem Firefox OS Simulator Add-on ausprobiert werden. Installieren Sie hierzu einen Simulator, passend für Ihr Betriebssystem (mehrere Versionen verfügbar, es ist ratsam alle zu installieren, für maximale Flexibilität):</p>
+
+<p><a class="download-button external ignore-external" href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" rel="noopener">Simulator installieren</a></p>
+
+
+<p>Nach der Installation des Simulators/der Simulatoren gehen Sie auf about:app-manager und klicken Sie in der Verbindungsstatus-Leiste unten den "Start Simulator"-Button. Daraufhin erscheinen drei weitere Buttons:</p>
+
+<ul>
+ <li>"Firefox OS 1.2" ... etc (oder ähnliches): Der Button ganz links zeigt den Namen der installieten Version des Simulators an. Klicken Sie hier, um die Verbindung mit dem Simulator aufzubauen.</li>
+ <li>"Add": der mittlere Button verweist auf die Links zur Installation der Simulatoren in diesem Artikel zum Hinzufügen neuer Simulatoren (Firefox OS 1.2, Firefox OS 1.3, ...).</li>
+ <li>"Cancel": Der Button mit der rechten Hand bricht die Verbindung ab.</li>
+</ul>
+
+<h2 id="Apps-Panel"><a name="Apps_panel">Apps-Panel</a></h2>
+
+<p>Da nun alles soweit funktionert, wird nun die Funktionalität des App Managers beschrieben, beginnend mit dem Apps Panel. Von hier aus können Sie eine bereits existierende App importieren, auf Ihr Gerät übertragen und debuggen:</p>
+
+<ul>
+ <li>Für die Installation einer lokalen App, klicken Sie auf das Plus neben "Add Packaged App"-Label und wählen Sie über den Datei-Auswahldialog den Ordner aus, in dem die App gespeichert ist.</li>
+ <li>Um eine extern gehostete App zu installieren, geben Sie die vollständige URL zur Manifest-Datei der App in das Textfeld in der "Add Hosted App" Box ein und klicken Sie den Plus-Button.</li>
+</ul>
+
+<p>Ist dieser Schritt gelungen, sollten auf der rechten Seite des Fensters Informationen über die App angezeigt werden:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6261/apps-panel.png" style="display: block; height: 375px; margin: 0px auto; width: 600px;"></p>
+
+<h3 id="Manifest_Editor">Manifest Editor</h3>
+
+<p>Mit Firefox 28 und später findet sich im Apps Panel ein Editor für das App-Manifest:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6613/apps-panel-fx-28.png" style="display: block; margin: 0px auto; width: 600px;"></p>
+
+<h3 id="Debugging">Debugging</h3>
+
+<p>Ein Klick auf <em>"Update"</em> überträgt (installiert) die App auf das Gerät. Mit einem Klick auf <em>"Debug"</em>  wird eine Toolbox mit der App verbunden, womit die App getestet werden kann:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6265/debug.png" style="display: block; height: 375px; margin: 0px auto; width: 600px;"></p>
+
+<div class="note">
+<p>Anmerkung: Es wird Ihnen gefallen mit der Toolbox herumzuspielen - ändern Sie den DOM, CSS etc. und Sie werden sehen, dass die Änderung in Echtzeit auf dem Gerät ablaufen. Die Änderungen werden im Code der installierten App gespeichert und beim nächsten Öffnen der App auf dem Gerät wieder angezeigt.</p>
+</div>
+
+<p>Before Firefox 28, the tools are launched in a separate window. From Firefox 28 onwards, the tools are launched in a separate tab in the App Manager itself, alongside the Apps and Device tabs. The tab is given your app's icon so it's easy to find:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6615/toolbox-fx-28.png" style="display: block; height: 375px; margin: 0px auto; width: 600px;"></p>
+
+<h3 id="Fehler">Fehler</h3>
+
+<p>Falls eine App nicht erfolgreich hinzugefügt werden konnte - zum Beispiel weil die angegebene URL nicht korrekt ist oder ein gepackter App-Ordner ausgewählt wurde - wird dennoch ein Eintrag für die App hinzugefügt, dieser enthält jedoch Fehlermeldungen.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6259/apps-error.png" style="display: block; height: 375px; margin: 0px auto; width: 600px;"></p>
+
+<p>Bei dieser Ansicht ist es auch möglich, eine installierte App zu deinstallieren. Halten Sie hierfür den Mauszeiger über den Namen oder die Beschreibung der jeweiligen App auf der linken Seite und klicken Sie den X-Button an. Die App wird dadurch jedoch nicht vom Gerät entfernt. Um dies zu tun, muss das Gerät selbst benutzt werden.</p>
+
+<h2 id="Device-Panel"><a name="Device_panel">Device-Panel</a></h2>
+
+<p>Im Tab unter <em>Device</em> werden Informationen zum verbundenen Gerät angezeigt. Von dem Fenster "Installed Apps" aus können die Apps auf dem Gerät gestartet und gedebuggt werden.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6267/device-tab.png" style="display: block; height: 375px; margin: 0px auto; width: 600px;"></p>
+
+<div class="note">
+<p>Anmerkung: Zertifizierte Apps werden standardmäßig nicht aufgelistet. <a href="#Debugging_Certified_Apps">Weitere Informationen zum Debuggen von zertifizierten Apps</a>.</p>
+</div>
+
+<p>Das Fenster "Permissions" zeigt die benötigten Rechte für verschiedene <a href="/en-US/docs/WebAPI">Web-APIs</a> des Geräts:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6269/permissions.png" style="display: block; height: 375px; margin: 0px auto; width: 600px;"></p>
+
+<p>Abschließend können Sie einen Screenshot mit dem Bildschirminhalt des Geräts erstellen, indem Sie den Screenshot-Button anklicken. Der Screenshot wird dann in einem neuen Tab in Firefox geöffnet und kann von dort aus gespeichert oder verworfen werden.</p>
+
+<h2 id="Debuggen_von_zertifizierten_Apps"><a name="Debugging_Certified_Apps">Debuggen von zertifizierten Apps</a></h2>
+
+<p>Bis dato können nur Geräte, welche mit einem Development-Build von Firefox OS 1.2 laufen, für das Debuggen von zertifizierten Apps benutzt werden. Falls auf ihrem Gerät ein Development-Build installiert ist, können Sie das Debuggen von zertifzierten Apps erlauben, indem Sie die Einstellung <code>devtools.debugger.forbid-certified-apps</code> in ihrem Firefox-Profil auf <code>false</code> setzen. Gehen sie hierfür wie folgt vor:</p>
+
+<ol>
+ <li>
+  <p>Geben Sie auf ihrem Computer den folgenden Befehl in ein Terminal/Konsole ein, um über die Shell auf das Dateisystem des Geräts zuzugreifen:</p>
+
+  <pre class="brush: bash">adb shell</pre>
+
+  <p>Daraufhin sollte sich der Prompt zu <code>root@android </code>ändern.</p>
+ </li>
+ <li>
+  <p>Als nächstes stoppen sie B2G mit dem Befehl:</p>
+
+  <pre class="brush: bash">stop b2g</pre>
+ </li>
+ <li>
+  <p>Wechseln Sie mit folgenden Befehl zum Profilordner:</p>
+
+  <pre>cd /data/b2g/mozilla/*.default/</pre>
+ </li>
+ <li>
+  <p>Und fügen Sie mit folgendem Befehl eine Zeile für die Einstellung in die Datei prefs.js ein:</p>
+
+  <pre class="brush: js">echo 'user_pref("devtools.debugger.forbid-certified-apps", false);' &gt;&gt; prefs.js</pre>
+ </li>
+ <li>
+  <p>Nachdem die Datei bearbeitet und gespeichert wurde, starten Sie B2G erneut:</p>
+
+  <pre class="brush: bash">start b2g</pre>
+ </li>
+ <li>
+  <p>Verlassen Sie das Android-Dateisystem mit der Eingabe des Befehls <code>exit</code>. Damit kehren Sie zum normalen Terminal-Prompt zurück.</p>
+ </li>
+ <li>
+  <p>Stellen Sie nun eine Verbindung mit dem App Manger her. Die zertifizierten Apps sollten nun angezeigt werden.</p>
+ </li>
+</ol>
+
+<div class="note">
+<p>Anmerkung: Falls Sie diese Einstellung ihrem Gaia build hinzufügen möchten, sodass sie aktiv ist auch wenn ihr Telefon zurückgesetzt wird, fügen Sie die Einstellung in der Datei <code>build/custom-prefs.js</code> hinzu und führen Sie <code>make reset-gaia</code> aus.</p>
+</div>
+
+<h2 id="Running_custom_builds_in_the_App_Manager">Running custom builds in the App Manager</h2>
+
+<p>You can run custom B2G Desktop and Gaia builds in the App Manager via the simulator. Read <a href="https://developer.mozilla.org/en-US/Firefox_OS/Running_custom_builds_in_the_App_Manager">Running custom Firefox OS/Gaia builds in the App Manager</a> for more details.</p>
+
+<h2 id="Fehlerbehandlung"><a name="Troubleshooting">Fehlerbehandlung</a></h2>
+
+<p id="My_device_is_not_recognized">Falls das Gerät nicht gefunden wird:</p>
+
+<ul>
+ <li>Lesen Sie den Abschnitt <a href="#Configuring_device">Device and system configuration</a> sorgfältig und überprüfen Sie, ob alle Schritte korrekt durchgeführt wurden:</li>
+ <li>Läuft auf dem Gerät mindestens Firefox OS 1.2?</li>
+ <li>Fehlen Apps? Ist <a href="https://developer.mozilla.org/de/docs/Mozilla/Firefox_OS/Benutzung_des_App_Managers#Debugging_Certified_Apps">Debuggen von zertifizierten Apps</a> aktiviert?</li>
+ <li>Ist "Remote Debugging" in den Einstellungen des Telefons aktiviert?</li>
+ <li>Falls Sie das <a href="#Adb_Helper_Add-on">ADB Helper add-on</a> nicht verwenden:
+  <ul>
+   <li>Wurde der Befehl <code>adb forward</code> erfolgreich ausgeführt?</li>
+  </ul>
+ </li>
+ <li>Falls Sie das <a href="#Adb_Helper_Add-on">ADB Helper add-on</a> verwenden und das Gerät in der unteren Leiste nicht angezeigt wird:
+  <ul>
+   <li>Falls Sie Linux als Betriebssystem einsetzen, vergewissern Sie sich<a href="http://developer.android.com/tools/device.html#setting-up"> dass udev korrekt konfiguriert ist.</a></li>
+   <li>Falls Sie Windows als Betriebssystem einsetzen, <a href="http://developer.android.com/tools/device.html#setting-up">stellen Sie sicher, dass die benötigten Treiber installiert sind.</a></li>
+  </ul>
+ </li>
+ <li>You can also enable verbose logging to gather diagnostics:
+  <ul>
+   <li>Use about:config to set the pref "<span class="message"><span class="content"><span class="email">extensions.adbhelper@mozilla.org.sdk</span>.console.logLevel"</span></span> to the string value "all"</li>
+   <li>Disable and re-enable the ADB Helper add-on from the add-ons manager, or restart Firefox</li>
+   <li>Open the App Manager again</li>
+   <li>In the <a href="https://developer.mozilla.org/docs/Tools/Browser_Console">Browser Console</a>, you should now see additional output lines that mention "adbhelper"</li>
+   <li>If you see them but aren't sure what they mean, stop by the <a href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">#devtools room on IRC</a> or <a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;attach_text=&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_ignored=0&amp;bug_severity=normal&amp;bug_status=NEW&amp;cf_blocking_b2g=---&amp;cf_crash_signature=&amp;cf_status_b2g18=---&amp;cf_status_b2g_1_1_hd=---&amp;cf_status_b2g_1_2=---&amp;cf_status_firefox24=---&amp;cf_status_firefox25=---&amp;cf_status_firefox26=---&amp;cf_status_firefox27=---&amp;cf_status_firefox_esr17=---&amp;cf_status_firefox_esr24=---&amp;cf_tracking_b2g18=---&amp;cf_tracking_firefox24=---&amp;cf_tracking_firefox25=---&amp;cf_tracking_firefox26=---&amp;cf_tracking_firefox27=---&amp;cf_tracking_firefox_esr17=---&amp;cf_tracking_firefox_esr24=---&amp;cf_tracking_firefox_relnote=---&amp;cf_tracking_relnote_b2g=---&amp;comment=&amp;component=Developer%20Tools%3A%20App%20Manager&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-203=X&amp;flag_type-37=X&amp;flag_type-41=X&amp;flag_type-5=X&amp;flag_type-607=X&amp;flag_type-720=X&amp;flag_type-721=X&amp;flag_type-737=X&amp;flag_type-748=X&amp;flag_type-781=X&amp;flag_type-787=X&amp;flag_type-791=X&amp;flag_type-799=X&amp;flag_type-800=X&amp;flag_type-802=X&amp;flag_type-803=X&amp;flag_type-809=X&amp;flag_type-825=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Firefox&amp;qa_contact=developer.tools%40firefox.bugs&amp;rep_platform=x86&amp;requestee_type-203=&amp;requestee_type-41=&amp;requestee_type-5=&amp;requestee_type-607=&amp;requestee_type-748=&amp;requestee_type-781=&amp;requestee_type-787=&amp;requestee_type-791=&amp;requestee_type-800=&amp;short_desc=&amp;status_whiteboard=&amp;target_milestone=---&amp;version=Trunk">file a bug</a> with the log output</li>
+  </ul>
+ </li>
+ <li>See <strong>"???????"</strong> instead of the device name on Linux? You have permissions issues. <a href="http://developer.android.com/tools/device.html#setting-up">Make sure to setup udev correctly</a>.</li>
+ <li>Ist die Bildschirmsperre deaktiviert?</li>
+</ul>
+
+<p>Die Verbindung des Geräts mit dem App Manager funktioniert nicht oder der Simulator kann nicht gestartet werden? <a href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">Lassen Sie es uns wissen </a>oder <a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;attach_text=&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_ignored=0&amp;bug_severity=normal&amp;bug_status=NEW&amp;cf_blocking_b2g=---&amp;cf_crash_signature=&amp;cf_status_b2g18=---&amp;cf_status_b2g_1_1_hd=---&amp;cf_status_b2g_1_2=---&amp;cf_status_firefox24=---&amp;cf_status_firefox25=---&amp;cf_status_firefox26=---&amp;cf_status_firefox27=---&amp;cf_status_firefox_esr17=---&amp;cf_status_firefox_esr24=---&amp;cf_tracking_b2g18=---&amp;cf_tracking_firefox24=---&amp;cf_tracking_firefox25=---&amp;cf_tracking_firefox26=---&amp;cf_tracking_firefox27=---&amp;cf_tracking_firefox_esr17=---&amp;cf_tracking_firefox_esr24=---&amp;cf_tracking_firefox_relnote=---&amp;cf_tracking_relnote_b2g=---&amp;comment=&amp;component=Developer%20Tools%3A%20App%20Manager&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-203=X&amp;flag_type-37=X&amp;flag_type-41=X&amp;flag_type-5=X&amp;flag_type-607=X&amp;flag_type-720=X&amp;flag_type-721=X&amp;flag_type-737=X&amp;flag_type-748=X&amp;flag_type-781=X&amp;flag_type-787=X&amp;flag_type-791=X&amp;flag_type-799=X&amp;flag_type-800=X&amp;flag_type-802=X&amp;flag_type-803=X&amp;flag_type-809=X&amp;flag_type-825=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Firefox&amp;qa_contact=developer.tools%40firefox.bugs&amp;rep_platform=x86&amp;requestee_type-203=&amp;requestee_type-41=&amp;requestee_type-5=&amp;requestee_type-607=&amp;requestee_type-748=&amp;requestee_type-781=&amp;requestee_type-787=&amp;requestee_type-791=&amp;requestee_type-800=&amp;short_desc=&amp;status_whiteboard=&amp;target_milestone=---&amp;version=Trunk">schreiben Sie einen Bugreport</a>.</p>

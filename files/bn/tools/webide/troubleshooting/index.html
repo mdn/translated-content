@@ -1,0 +1,81 @@
+---
+title: WebIDE ট্রাবলশুটিং
+slug: Tools/WebIDE/Troubleshooting
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<div>{{ToolsSidebar}}</div><h2 id="একটি_Firefox_OS_ডিভাইসের_সাথে_সংযুক্ত_হওয়া">একটি Firefox OS ডিভাইসের সাথে সংযুক্ত হওয়া</h2>
+
+<p>যদি এমন হয় যে, আপনি একটি Firefox OS ডিভাইস WebIDE এর সাথে সংযুক্ত করার চেষ্টা করছেন, কিন্তু সেটি দেখাচ্ছে না, তাহলে এখানে কিছু উপায় বলা আছে, যা আপনি চেষ্টা করতে পারেন:</p>
+
+<ul>
+ <li>বর্তমান Firefox OS সংস্করণ: নিশ্চিত করুন যে আপনার ডিভাইসে Firefox OS 1.2/Boot2Gecko 1.2 বা তার পরবর্তী সংস্করণ ইনস্টল করা। সংস্করণ জানার জন্য আপনার ডিভাইসে থাকা সেটিংস অ্যাপ চালু করুন, তারপর Device Information থেকে Software এ ট্যাপ করলেই পেয়ে যাবেন। যদি আপনার যথেষ্ট উন্নত সংস্করণ না থাকে, তাহলে আপনার ডিভাইস <a href="/bn-BD/Firefox_OS/Developer_phone_guide">ডেভেলপার ফোন গাইড</a> থেকে খুঁজে বের করুন এবং আপগ্রেড করার জন্য নির্দেশনা সমূহ অনুসরণ করুন।</li>
+ <li>রিমোট ডিবাগিং চালু করুন: সেটিংস অ্যাপে থেকে প্রথমে Device information তারপর More information এবং সেখান থেকে Developer এ গেলে:
+  <ul>
+   <li>Firefox OS 1.3 এবং তার আগের সংস্করণের জন্য: "Remote Debugging" নামে একটি সাধারণ চেকবক্স পাবেন; সেটাতে ট্যাপ করে টিক দিলেই হয়ে যাবে।</li>
+   <li>Firefox OS 1.4 এবং তার পরবর্তী সংস্করণ: "Remote Debugging" আপনাকে জিজ্ঞেস করবে যে, শুধু ADB এর জন্য ইনস্টল করবেন, নাকি ADB এবং DevTools উভয়ের জন্য। এখান থেকে "ADB এবং DevTools" নির্বাচন করুন।</li>
+  </ul>
+ </li>
+ <li>আপনার ডিভাইসে স্ক্রিনলক বন্ধ করুন: ডিভাইসের সেটিংস অ্যাপে, Screen Lock এ যান এবং Lock Screen চেক বক্সে একবার ট্যাপ করে টিক চিহ্নটি তুলে দিন। এটা একটি ভালো বুদ্ধি, কারন যখন স্ক্রিন লক হয়ে যায়, ফোনের সাথে সংযোগও তখন বন্ধ হয়ে যায়। ফলে আর ডিবাগ করতে পারবেন না।</li>
+ <li>নিশ্চিত হউন যে Firefox OS ফোনের পাশাপাশি আপনার কম্পিউটারে অন্য কোন অ্যান্ড্রয়েড ফোন সংযুক্ত নয়।</li>
+ <li>যে USB কেবল ব্যবহার করছেন, সেটি পরীক্ষা করে দেখুন:
+  <ul>
+   <li>একবার খুলে আবার লাগাতে পারেন।</li>
+   <li>ইউএসবি কেবলটি আপনার কম্পিউটারের অন্য পোর্টে লাগিয়ে দেখুন। আপনার হয়ত পোর্ট পরিবর্তন করা লাগতে পারে।</li>
+   <li>অন্য একটি ইউএসবি কেবল ব্যবহার করুন। ফোনের সাথে দেয়া কেবলগুলো অনেক সময় নিম্নমানের হয় এবং মাঝে মাঝে কাজ করেনা।</li>
+   <li>ছোট USB কেবল ব্যবহার করে দেখতে পারেন। লম্বা গুলো অনেক সময় ঠিক মতো কাজ করে না।</li>
+  </ul>
+ </li>
+ <li>ডিভাইসের সেটিংস অ্যাপে রিমোট ডিবাগিং বন্ধ করে আবার চালু করে দেখতে পারেন।</li>
+ <li>যদি আপনি <a href="https://developer.mozilla.org/bn-BD/docs/Tools/WebIDE#Custom_runtimes">ADB Addon Helper ডিজ্যাবল করে থাকেন</a>, আপনি কি সঠিকভাবে <code>adb forward</code> কমান্ড চালাতে পেরেছেন?</li>
+ <li>যদি আপনি লিনাক্স ব্যবহারকারী হয়ে থাকেন, তাহলে নিশ্চিত করুন যে <a href="http://developer.android.com/tools/device.html#setting-up">অ্যান্ড্রয়েড ডিভাইস সেটাপ</a> গাইডের ৩ নং ধাপের বর্ণনা অনুযায়ী একটি udev রুলস ফাইল যুক্ত করেছেন। গিকসফোনের জন্য idVendor অ্যাট্রিবিউট হচ্ছে "05c6", এবং <a href="http://developer.android.com/tools/device.html#VendorIds">এই পাতায় </a>অন্যান্য idVendor মানের তালিকা দেয়া আছে।</li>
+ <li>যদি আপনি উইন্ডোজ ব্যবহারকারী হন:
+  <ul>
+   <li> <a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">অ্যান্ড্রয়েড ডিভাইস সেটাপ</a> গাইডের ৩ নং ধাপের বর্ণনা  অনুযায়ী আপনাকে ড্রাইভার ইনস্টল করতে হবে। আপনি গিকসফোন ডিভাইসের জন্য ড্রাইভার <a class="external-icon external" href="http://downloads.geeksphone.com/">গিকসফোনের ওয়েবসাইট</a> থেকে ডাউনলোড করতে পারবেন। ডিফল্টভাবে উইন্ডোজ ৮ সাইন ছাড়া ড্রাইভার ইনস্টল করতে দিবে না। <a class="external-icon external" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"How to install an unsigned driver on Windows 8"</a> এই টিউটোরিয়ালটি দেখুন।</li>
+   <li>যদি উপরোক্ত সব উপায় ব্যবহার করার পরও WebIDE আপনার ডিভাইস দেখতে না পায়, তাহলে আপনাকে <a class="external-icon external" href="http://blog.fh-kaernten.at/wehr/?p=1182">adb_usb.ini সম্পাদনা</a> করা লাগতে পারে।</li>
+  </ul>
+ </li>
+ <li>যদি আপনি EasyTether ব্যবহারকারী (OS X) হয়ে থাকেন, তাহলে আপনাকে EasyTether আন-ইনস্টল বা ডিজাবল করতে হবে: <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></li>
+</ul>
+
+<h3 id="ইচ্ছামত_ডিবাগ_করা_(প্রত্যায়িত_অ্যাপ_বিল্ট-ইন_অ্যাপ_ডিভাইসে_ইতোমধ্যে_ইনস্টল_করা_অ্যাপ)">ইচ্ছামত ডিবাগ করা (প্রত্যায়িত অ্যাপ, বিল্ট-ইন অ্যাপ, ডিভাইসে ইতোমধ্যে ইনস্টল করা অ্যাপ)</h3>
+
+<p>যদি এমন হয় যে আপনি প্রত্যায়িত অ্যাপ, বিল্ট-ইন অ্যাপ বা একটি বাস্তব ডিভাইসে ইতোমধ্যে ইনস্টল করা অ্যাপ ডিবাগ করতে পারছেন না, তাহলে হয়ত আপনি WebIDE এর নিয়ন্ত্রিত ক্ষমতার নিরাপত্তা নিয়মের ভেতর রয়েছেন। আরও জানতে <a href="/en-US/docs/Tools/WebIDE#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29">ইচ্ছেমত ডিবাগ করা (প্রত্যায়িত অ্যাপ, মূল প্রক্রিয়া ইত্যাদি সহ)</a> দেখুন।</p>
+
+<h2 id="অন্যান্য_ব্রাউজারে_সংযোগ_স্থাপন_(ক্রোম_সাফারি)">অন্যান্য ব্রাউজারে সংযোগ স্থাপন (ক্রোম, সাফারি)</h2>
+
+<p>অন্যান্য ব্রাউজার যেমন- ক্রোম, সাফারি এর সাথে WebIDE সংযোগ স্থাপনের জন্য <a href="/en-US/docs/Tools/Firefox_Tools_Adapter">Valence (formerly Firefox Tools Adapter)</a> ব্যবহার করে।</p>
+
+<p>যদি আপনার উপরে উল্লেখিত ব্রাউজারে সংযোগ স্থাপনে সমস্যা হয়, তাহলে <a href="/en-US/docs/Tools/Firefox_Tools_Adapter">Valence page</a> এর সেটাপের ধাপগুলো এবং অন্যান্য নোট সমূহ অনুসরণ করুন।</p>
+
+<h2 id="প্রজেক্ট_লিস্ট_লোড_করা_সম্ভব_হচ্ছে_না">প্রজেক্ট লিস্ট লোড করা সম্ভব হচ্ছে না</h2>
+
+<p>যদি আপনি ফায়ারফক্সের একটি সংস্করণে WebIDE চালু করেন, এবং তারপর একটি পুরাতন সংস্করণে একই প্রোফাইল দিয়ে ব্যবহার করেন, তাহলে আপনি "Unable to load project list" বা "প্রজেক্ট লিস্ট লোড করা সম্ভব হচ্ছে না" এমন ইরর মেসেজ দেখতে পাবেন।</p>
+
+<p>WebIDE যে স্টোরেজ সিস্টেম ব্যবহার করে (<a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>) সেটা নতুন ফায়ারফক্স সংস্করণের জন্য স্থানান্তর বা পুনরায় কাঠামো তৈরির প্রয়োজন হলে এমনটি হতে পারে। The project list then becomes effectively inaccessible to older versions of Firefox.</p>
+
+<p>No data has been lost, but you will need to keep using the newest version of Firefox that was used with your profile to get the project list back.</p>
+
+<p>If really want to use the older version of Firefox, you can attempt to delete just the project list in the following way, but this is unsupported and could result in the further problems or additional data loss:</p>
+
+<ol>
+ <li>Close Firefox</li>
+ <li>Find your Firefox profile directory</li>
+ <li>Find the <code>storage</code> folder inside the profile directory</li>
+ <li>Under some part of this file tree, there should be files and/or directories that start with <code>4268914080AsptpcPerjo</code> (a hashed name of the database)</li>
+ <li>Remove any such files and directories</li>
+ <li>Start Firefox and WebIDE again</li>
+</ol>
+
+<h2 id="Enable_logging">Enable logging</h2>
+
+<p>You can also enable verbose logging to gather diagnostics:</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li>Open <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>, and add a new preference called <code>extensions.adbhelper@mozilla.org.sdk.console.logLevel</code>, with the string value <code>all</code>, and set <code>extensions.adbhelper@mozilla.org.debug</code> to <code>true</code>.</li>
+ <li>In the <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons">Add-ons Manager</a>, disable and then re-enable the ADB Helper add-on.</li>
+ <li>Open the <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">Browser Console</a> and you'll now see console messages prefixed with <code>adb</code>. If the messages don't mean anything to you, <a href="/en-US/docs/Tools/WebIDE/Troubleshooting#Get_help">ask for help</a>.</li>
+</ol>
+
+<h2 id="Get_help">Get help</h2>
+
+<p>Go to the <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">#devtools room on IRC</a> and we will try to help.</p>

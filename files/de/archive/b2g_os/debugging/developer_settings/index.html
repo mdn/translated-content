@@ -1,0 +1,197 @@
+---
+title: Developer settings for Firefox OS
+slug: Archive/B2G_OS/Debugging/Developer_settings
+translation_of: Archive/B2G_OS/Debugging/Developer_settings
+---
+<div class="summary">
+ <p><span class="seoSummary">Die Entwicklereistellungen befinden sich in den Firefox OS Einstellungen. Dieses Panel bietet eine Vielzahl an Optionen, die das Debugging deiner Open Web Anwendung für Firefox OS erleichtern.</span> Dieser Artikel beschreibt die verfügbaren Optionen und erklärt wie diese benutzt werden können.</p>
+</div>
+<p>Der Einstellungsbereich für die Entwickler-Optionen wurde bewusst in einem Untermenüpunkt versteckt, um ein versehentliches Aktivieren durch unerfahrene Benutzer zu vermeiden, was eine Beeinträchtigung der Performance oder Auswirkungen auf die visuelle Darstellung von Firefox haben kann. Das Entwicklermenü sieht ähnlich aus wie auf der folgenden Darstellung gezeigt (dieses Bild wurde mit einem Geeksphone Keon mit einer im April 2014 erzeugten Version von Firefox OS 2.0 erstellt):</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7801/developermenu-short.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<p>Das Entwicklermenü kann folgendermaßen erreicht werden:</p>
+<ul>
+ <li>In Firefox OS &lt; 1.4 befindet sich das Entwicklermenü unter <em>Settings &gt; Device information &gt; More Information &gt; Developer</em>.</li>
+ <li>In Firefox &gt; 1.4  befindet sich das Entwicklermenü unter <em>Settings &gt; Device information &gt; More Information &gt; Check the Developer Menu checkbox</em>.  Sobald das Menü aktiviert wurde, kann es direkt unter <em>Settings &gt; Developer</em> aufgerufen werden.</li>
+</ul>
+<p>Im folgenden Abschnitt werden alle Optionen einzeln vorgestellt und erklärt wie diese verwendet werden können.</p>
+<div class="warning">
+ <p><strong>Wichtig</strong>: Diese Tools sind hilfreich, aber können Probleme im normalen Gebrauch des Telefons versursachen. Einstellungen, die dafür bekannt sind, dass sie Probleme verursachen können, sind per default abgeschaltet. Falls du Probleme mit den Funktionen feststellen solltes, versuche die entsprechenden Funktionen wieder zu deaktivieren.</p>
+</div>
+<h2 id="Einstellungen_der_Developer_Tools">Einstellungen der Developer Tools</h2>
+<h3 id="Debugging_via_USB">Debugging via USB</h3>
+<p>Die "Remote debugging" Option aktiviert das <a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">ferngesteuerte debugging</a> deines Firefox OS Gerätes. Außerdem wird die <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> Kommando-Eingabe aktiviert.<strong> </strong>In Firefox &lt; 1.4 gibt es dafür nur ein aktivierbares Kontrollkästchen; ab Firefox 1.4 sind es drei Optionen:</p>
+<ul>
+ <li>Inaktiv: ferngesteuertes debugging ist ausgeschaltet (default.)</li>
+ <li>ADB only: Erlaubt Zugriff zum Gerät durch ADB.</li>
+ <li>ADB and Devtools: Erlaubt Zugriff zum Gerät durch ADB und Firefox Devtools, wie den <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>.</li>
+</ul>
+<h3 id="Developer_HUD">Developer HUD</h3>
+<p>Ab Firefox OS 1.4, öffnet ein Berühren des Menüeintrages <strong>Developer HUD </strong>folgendes Auswahlmenü:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8361/Firefox%20OS%202.1%20Developer%20HUD.png" style="width: 320px; display: block; margin: 0px auto; height: 569px;"></p>
+<p>Die beiden ersten Kontrollboxen (immer aktiv) sind:</p>
+<ul>
+ <li><strong>Frames per second</strong>: Zeigt die frames pro Sekunde, wie im späteren Abschnitt <em>Frames per second</em> erklärt.</li>
+ <li><strong>Time to load</strong>: Zeigt die Zeit zum Laden von Information an, wie im späteren Abschnitt <em>Time to load</em> erklärt.</li>
+</ul>
+<p>Anschließend folgt ein Slider, mit dem weitere Entwickler-Optionen ('Developer Tools') aktiviert werden können , auch weitere Checkboxen sind verfügbar:</p>
+<ul>
+ <li><strong>Log changes in adb</strong>: Enables logging of device changes to adb logcat.</li>
+ <li><strong>Show system HUD</strong>: When checked, enables the display of several different pieces of information overlaid on top of the device display.</li>
+ <li><strong>Warnings</strong>: Displays console warnings.</li>
+ <li><strong>Errors</strong>: Displays console errors.</li>
+ <li><strong>Security issues</strong>: Displays potential security issues.</li>
+ <li><strong>Reflows</strong>: Displays reflows as they occur.</li>
+ <li><strong><a href="/en-US/Firefox_OS/Platform/Architecture#Jank">Jank</a>/Jank threshold</strong>: Notify the phone user about occurrences of unacceptably high jank, the threshold for which can be customised.</li>
+ <li><strong>Unique set size</strong>: This is a measure of the memory used by an application that is unique to that application. This is the most important measurement to inform memory usage optimizations (trying to reduce the memory apps are using), but there are others. See this <a href="/en-US/Firefox_OS/Developing_Gaia/Testing_Gaia_code_changes#Performance_tests">Performance tests</a> section for more information.</li>
+ <li><strong>App memory</strong>: Displays information on how much memory the app is using, and allows you to enable or disable the different memory usage factors. See {{ anch("App_memory") }} below for more details.</li>
+</ul>
+<h4 id="Frames_per_second">Frames per second</h4>
+<p>Enabling this option reports three numbers in the top left of the Firefox OS display; the values reported are an average of recent results within a sliding window, meant to be "instantaneous" but fairly accurate. As such, all numbers are "guesses":</p>
+<ul>
+ <li>The left number is the <strong>composition rate</strong>: the estimated number of times per second Firefox OS is drawing frames to the hardware framebuffer. This is an estimate of the user-perceived framerate, and only an estimate. For example, the counter may report 60 compositions per second even if the screen is not changing. In that case the user-perceived framerate would be 0. However, when used with this caveat in mind and corroborated with other measurements, the monitor can be a useful and simple tool.</li>
+ <li>The middle number is the <strong>layer transaction rate</strong>, the estimated number of times per second processes are repainting and notifying the compositor. This number is mostly useful for Gecko platform engineers, but it should be less than or equal to the composition rate number on the left.</li>
+ <li>The right hand number is a measure of the number of pixels drawn as a percentage of the screen size. A number of 273 means the screen was painted 2.73 times. Ideally this number should be as close to 100 as possible.</li>
+</ul>
+<p><img alt="A screenshot of Firefox OS, showing three numbers in the top left hand corner that are measurements of app framerate." src="https://mdn.mozillademos.org/files/6889/framerate-fxos.jpg" style="width: 357px; height: 640px; display: block; margin: 0px auto;"></p>
+<h4 id="Time_to_load">Time to load</h4>
+<p>Firefox OS also has a tool that can help measure startup time, specifically the "first paint" time. The value shown by the tool — in the top right of the Firefox OS display — is the elapsed time between when the most recent application was launched, and an estimate of the first time that application painted its UI, in milliseconds. This number only approximates the real "first paint" time, and in particular underestimates it. However, lowering this number almost always correlates to improvements in real startup time, so it can be useful to quickly measure optimization ideas.</p>
+<p><img alt="A screenshot of Firefox OS, showing a number in the top right hand corner that is a measurement of the current app startup time, in milliseconds." src="https://mdn.mozillademos.org/files/6891/startup-time-fxos.jpg" style="width: 378px; height: 640px; display: block; margin: 0px auto;"></p>
+<h4 id="App_memory">App memory</h4>
+<p>Displays information on how much memory the app is using, and allows you to enable or disable the different items that use memory to show much each one is using in the current app. For example, the screen shot below only has <em>App memory</em> and <em>JS objects</em> checked, and the indicator on the bottom right is showing that the Settings app is using 414.77KB for JS objects.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7731/memory-usage.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<h3 id="Pseudo-localization">Pseudo-localization</h3>
+<p>When enabled, pseudo-languages like <em>Accented English</em> and <em>Mirrored English</em> are available for selection in <em>Settings &gt; Languages</em>.  With pseudo-localizations, you can test the localizability of your code in regular Gaia builds without having to add real language resources nor having to speak a foreign language.  For instance, you can make sure the layout scales well with longer strings, you can preview the app in a fake RTL language, or spot HTML elements wihout the <code>data-l10n-id</code> attribute (they will be displayed in regular English).</p>
+<p><img alt="Screenshot of pseudolocales" src="http://informationisart.com/images/qps.png" style="width: 600px; height: 440px; display: block; margin: 0px auto;"></p>
+<p>You can turn pseudo-localizations on by default when you build Gaia by adding the following line into <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/common-settings.json">gaia/build/config/common-settings.json</a>:</p>
+<pre class="brush: json"> "devtools.qps.enabled": true</pre>
+<p><strong>Note:</strong> Pseudo-localizations are generated completely dynamically, each time an app is launched.  The performance and memory characteristics may be different than those of regular localizations.  If you specifically want to test performance of non-English languages, <a href="/en-US/Firefox_OS/Building#Building_multilocale">build multilocale Gaia</a> with real locales.</p>
+<h2 id="Graphics_settings">Graphics settings</h2>
+<h3 id="Flash_repainted_area">Flash repainted area</h3>
+<p>In this mode, every time a region of the screen is painted by Gecko, Gecko blits a random translucent color over the painted region. Ideally, only parts of the screen that visually change between frames will "flash" with a new color. But sometimes more area than is needed is repainted, causing large areas to "flash". This symptom may indicate that application code is forcing too much of its scene to update. It may also indicate bugs in Gecko itself.</p>
+<p><img alt="A screenshot of Firefox OS with a number of transparent overlays, showing the parts of the screen repainted with each new animation frame." src="https://mdn.mozillademos.org/files/6893/paint-update-fxos.jpg" style="width: 378px; height: 640px; display: block; margin: 0px auto;"></p>
+<h3 id="Enable_APZ_for_all_content_(Async_PanZoom)">Enable APZ for all content (Async Pan/Zoom)</h3>
+<p>When enabled, the Async Pan/Zoom module allows panning and zooming to be performed on asynchronously, on another thread, with some noticeable differences to rendering behaviour. To find out more, read the <a href="https://wiki.mozilla.org/Platform/GFX/APZ">MozillaWiki APZ</a> article.</p>
+<h3 id="Overscrolling">Overscrolling</h3>
+<p>This enables and disables the behaviour in Firefox 2.1+ where the display stretches in an elastic manner when you scroll past the end of a page, then shrinks back again when you stop dragging the display. The behaviour's full name is <em>elastic overscroll</em>.</p>
+<h3 id="Tiling_(was_Layers_Enable_tiles)">Tiling (was Layers: Enable tiles)</h3>
+<p>Introduced in Firefox OS 1.4, this feature enables the painting of content to the screen in smaller chunks ("tiles") rather than painting the whole screen at once. This is mainly useful for platform QA work involving reducing checkerboarding and finding regression windows.</p>
+<h3 id="Simple_tiling_(was_Layers_Simple_tiles)">Simple tiling (was Layers: Simple tiles)</h3>
+<p>This flips between the two different content painting implementations described in the section above.</p>
+<h3 id="Low-precision_painting">Low-precision painting</h3>
+<p>Enabling this option makes Gecko paint a low-precision (blurry) version of the content when scrolling really fast. This is useful because it's quicker to paint, and so helps us avoid displaying blank areas (i.e. checkerboarding) while scrolling quickly. It should only be visible to the user temporarily; once the user stops scrolling we fill in the low-precision areas with high-precision content.</p>
+<h3 id="Low-precision_transparency">Low-precision transparency</h3>
+<p>This is an additional flag for low-precision painting, which makes the low-precision content half transparent. This makes it a little more subtle and less jarring for the user.</p>
+<h3 id="Hardware_composer_(was_Enable_hardware_compositing)">Hardware composer (was Enable hardware compositing)</h3>
+<p>When enabled, this setting causes the device to use its <a href="https://source.android.com/devices/graphics.html#hwc">Hardware Composer</a> to composite visual elements (surfaces) to the screen.</p>
+<h3 id="Draw_tile_borders_(was_Layers_Draw_tile_borders)">Draw tile borders (was Layers: Draw tile borders)</h3>
+<p>This is very similar to the {{ anch("Draw layer borders") }} option, the difference being that it also draws the borders for individual tiles as well as the borders around layers.</p>
+<h3 id="Draw_layer_borders">Draw layer borders</h3>
+<p>When this setting is enabled, a brightly colored border is added around all the different layers painted to the display — great for diagnosing layout issues.</p>
+<p><img alt="A screenshot from Firefox OS showing an opened select form with the draw layers borders option enabled, resulting in colored borders being drawn on all the different rendered layers." src="https://mdn.mozillademos.org/files/6897/paint-layers-borders.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<h3 id="Dump_layers_tree">Dump layers tree</h3>
+<p>This option enables <code>layers.dump</code>, which causes a copy of the compositor's layer tree to be dumped to logcat on every frame composited to the screen; this is mainly useful for platform graphics performance work, rather than regular web development.</p>
+<h3 id="Cards_View_Screenshots">Cards View: Screenshots</h3>
+<p>When enabled, this specifies that app screenshots will be taken when the open apps are displayed in card view. If disabled, app icons are shown in the center of blank cards for the card view instead.</p>
+<h2 id="Window_management_settings">Window management settings</h2>
+<h3 id="Software_home_button">Software home button</h3>
+<p>Enabling this option creates a software home button that can provide the same functionality as the equivalent hardware button if it is not available. This is intended for future use on devices that are likely to not have hardware home buttons, like tablets.</p>
+<h3 id="Home_gesture">Home gesture</h3>
+<p>Enabling this option allows you to swipe upwards towards the center from outside the screen to bring up the homescreen. Again, this can provide the same functionality as the equivalent hardware button if it is not available, and is intended for future use on devices that are likely to not have hardware home buttons, like tablets.</p>
+<h3 id="Continuous_transition">Continuous transition</h3>
+<p>This setting allows you to decide whether app keyboards open immediately or continuously (with a  transition). Disabling such transition effects are useful on low end devices, when they cause performance to suffer.</p>
+<h3 id="App_transition">App transition</h3>
+<p>Turn this on and then off again and you will disable all app closing/opening transitions: all apps will now just show immediately, without the smooth animation, and keyboards will also open/close without animation. Like "Continuous transition enabled", this is meant for improving performance on low end devices, but it has more of an effect.</p>
+<h3 id="App_suspending">App suspending</h3>
+<p>If enabled, this specifies that when an app is killed in the background, it will be kept in history and reopened when you open it from homescreen/card view. If disabled, such apps are not kept in history/card view.</p>
+<h2 id="Debug_settings">Debug settings</h2>
+<h3 id="Log_slow_animations">Log slow animations</h3>
+<p>This tool tries to help developers understand why animations are not offloaded to the compositor to be run efficiently as possible. It reports "bugs" like trying to animate elements that are too large, or trying to animate CSS properties that can't be offloaded. The messages you'll get on the device will look like the following:</p>
+<pre>I/Gecko   ( 5644): Performance warning: Async animation disabled because frame size (1280, 410) is bigger than the viewport (360, 518) [div with id 'views']
+</pre>
+<h3 id="Geolocation_output_in_ADB">Geolocation output in ADB</h3>
+<p>Enables logging of geolocation data to adb logcat. This helps with debugging both the GPS stack (namely we get NMEA callback) and MLS use.</p>
+<h3 id="Wi-Fi_output_in_adb">Wi-Fi output in adb</h3>
+<p>Enabling this option adds information about Wi-Fi to the adb logs (error logs from the console can be accessed using <code>adb logcat | grep "Error"</code> in the Terminal.)</p>
+<h3 id="Bluetooth_output_in_adb">Bluetooth output in adb</h3>
+<p>Enabling this option adds information about Bluetooth to the adb logs (error logs from the console can be accessed using <code>adb logcat | grep "Error"</code> in the Terminal.)</p>
+<h3 id="Console_enabled">Console enabled</h3>
+<p>When enabled, this option lets you use the <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console">Web Console</a> in Firefox to remotely access the console output on the device; without this option enabled, the {{domxref("console.log()")}} function does nothing.</p>
+<h3 id="Gaia_debug_traces">Gaia debug traces</h3>
+<p>Enabling this directly enables DEBUG traces in Gaia; see {{ bug("881672") }} for more details.</p>
+<div class="note">
+ <p><strong>Note</strong>: Unfortunately, not every app supports this mechanism to print their debug log. Instead, they control a "DEBUG" flag in code directly, so enabling this flag does NOT ensure that you'll see all debug logs.</p>
+</div>
+<h3 id="Show_accessibility_settings">Show accessibility settings</h3>
+<p>This enables the accessibility settings menu, subsequently found at <em>Settings &gt; Accessibility</em>. The options contained within the accessibility settings are as follows:</p>
+<h4 id="Screen_reader">Screen reader</h4>
+<p>Enabling this option turns on Firefox OS's screen reader. This is technology that allows a blind person to use a Firefox OS device. Currently at a very early stage, it changes the way the standard touch events work. When the screen reader is on, you must interact with the screen as follows:</p>
+<ul>
+ <li>Touch somewhere to focus that app (or whatever) and be alerted as to what it is. This is indicated both by audible speech output and a rectangle around the selected item. Double tap anywhere on the screen (two taps in rapid succession) to activate the item that has the rectangle around it.</li>
+ <li>Swipe from left to right to move sequentially through items on the screen. Items are moved through from left to right, then top to bottom, including scrolling the screen vertically if there are more items to display, and you will be alerted as to each one's name via speech output and a rectangle. Swiping right to left moves through the items in reverse order. Again, double-tap the screen to execute the currently highlighted item.</li>
+ <li>Do a swipe with two fingers — left, right, up or down — to scroll the screen in that direction. This is equivalent to swiping one finger across the screen in the given direction when the screen reader is not running. For example, a two-finger swipe left on the first home screen will flip to the second one, and a two-finger swipe upwards on a home screen or browser would cause the screne to scroll downwards to show more content.</li>
+</ul>
+<div class="note">
+ <p><strong>Note</strong>: If you have turned the screen reader on and wish to disable it again, you must navigate back to the setting via these new gestures and double-tap the checkbox once it is highlighted to turn it off again. That will restore the touch screen functionality to its default behaviour.</p>
+</div>
+<p><strong>Note</strong>: In Firefox 1.4 and above, there is a quick toggle for the screen reader. Press volume up, then down, three times (up, down, up, down, up, down). The screen reader will instruct you to perform this same action again (volume up, down, up, down, up, down) to turn it on if it is not running, or to turn it off if it is already running. If you do not want to change the current toggle state, simply do something else. That way, you can turn it on and off at will to test your web application for accessibility without having to navigate the accessibility settings menu each time.</p>
+<h4 id="Speech_volume">Speech volume</h4>
+<p>A slider that controls how loud the speech is delivered.</p>
+<h4 id="Speech_rate">Speech rate</h4>
+<p>A slider that controls how fast the speech is delivered.</p>
+<h3 id="Use_Marketplace_reviewer_certs">Use Marketplace reviewer certs</h3>
+<p>TBD</p>
+<h3 id="Shake_to_save_system_log">Shake to save system log</h3>
+<p>TBD</p>
+<h3 id="Verbose_app_permissions">Verbose app permissions</h3>
+<div class="note">
+ <p><strong>Note</strong>: Introduced with Firefox 2.1</p>
+</div>
+<p>When this is enabled, developers (and privacy enthusiasts) may modify all permissions granted to installed privileged apps, using The "App Permission" pane in the Settings app. The app sub-pages under here are updated upon enabling the setting to provide a list of each API permission is requested for in the app's manifest file, along with choices to set that permission to. For example, "Schedule Alarms" appears with choices of <em>Ask</em>, <em>Deny</em> and <em>Grant</em>. Note that some apps may be unable to deal with changed permissions. If you experience any odd behavior, consider resetting the permission or re-installing the app.</p>
+<h3 id="Launch_first_time_use">Launch first time use</h3>
+<p>The "Launch first time use" button runs the "First-Time Use" (FTU) program; this lets you go through the initial setup and tutorial process, and is useful when trying to debug that process, or if you want to re-configure your device from scratch.</p>
+<h2 id="Software_updates">Software updates</h2>
+<h3 id="Update_channel">Update channel</h3>
+<p>Enables you to specify different update channels to get software updates from when your device receives OTA updates. Options are <code>nightly</code>, <code>aurora</code> ... (others?)</p>
+<h3 id="Update_URL">Update URL</h3>
+<p>Enables you to specify different URLs from which to receive your updates.</p>
+<h2 id="Obsolete_settings">Obsolete settings</h2>
+<p>This section lists settings that are no longer provided, or no longer exist in the same state, but might still be interesting if you are running an older version of Firefox OS.</p>
+<h3 id="Accessibility">Accessibility</h3>
+<p>In versions of Firefox earlier than newer 1.4 versions, this controls the accessibility settings, as explained in the {{ anch("Show_accessibility_settings") }} section above.</p>
+<h3 id="Grid">Grid</h3>
+<p>The "Grid" option, when enabled, causes the Firefox OS display to be overlaid with a grid pattern to help you gauge positioning and alignment of items. For example, below we see the Browser app running with the Grid option enabled:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5071/Grid.png" style="width: 320px; height: 480px; display: block; margin: 0px auto;"></p>
+<p>The grid's heavier lines are 32 pixels apart, both horizontally and vertically.</p>
+<h3 id="Show_frames_per_second">Show frames per second</h3>
+<p>In Firefox OS versions older than newer 1.4, enabling this displays frames per second, as explained in the {{ anch("Frames_per_second") }} section above.</p>
+<h3 id="Show_time_to_load">Show time to load</h3>
+<p>In Firefox OS versions older than newer 1.4, enabling this displays time to load information, as explained in the {{ anch("Time_to_load") }} section above.</p>
+<h3 id="Rocketbar_enabled">Rocketbar enabled</h3>
+<p>In Firefox OS versions older than newer 1.4, this option enables the new <a href="https://groups.google.com/forum/#!topic/mozilla.dev.gaia/Nlfbrq1KMP0">Firefox Rocketbar</a> on your device, which provides a useful new way to switch between apps, search, and more. When enabled, you'll find a search icon at the top left of the device, and the RocketBar can be brought up by swiping from the top left of the device towards the bottom left.</p>
+<div class="note">
+ <p><strong>Note</strong>: In newer versions of Firefox OS, Rocketbar is enabled automatically and cannot be turned off.</p>
+</div>
+<h3 id="Contacts_debugging_output_in_adb">Contacts debugging output in adb</h3>
+<p>Enabling this option adds debugging information about contacts to the adb logs (error logs from the console can be accessed using <code>adb logcat | grep "Error"</code> in the Terminal.)</p>
+<h3 id="Progressive_paint_(was_Layers_Progressive_paint)">Progressive paint (was Layers: Progressive paint)</h3>
+<p>This was introduced to help with debugging of the <a href="https://wiki.mozilla.org/Platform/GFX/APZ">Async Panning/Zoom module</a> (APZ) during its implementation. Now APZ implementation is complete, this option is deprecated, and will be removed from future versions (see {{ Bug("1003228") }}).</p>
+<h3 id="Displayport_Heuristics">Displayport Heuristics</h3>
+<ul>
+ <li>Default</li>
+ <li>Center displayport</li>
+ <li>Assume perfect paints</li>
+ <li>Taller displayport</li>
+ <li>Faster paints</li>
+ <li>No checkerboarding</li>
+</ul>
+<p>These options were introduced to help with debugging of the <a href="https://wiki.mozilla.org/Platform/GFX/APZ">Async Panning/Zoom module</a> (APZ) during its implementation, specifically to allow QA to experiment with different repainting heuristics to see which resulted in the least amount of checkboarding.. Now APZ implementation is complete, these options are deprecated, and will be removed from future versions (see {{ Bug("1003228") }}).</p>
+<h3 id="Edges_gesture">Edges gesture</h3>
+<p>Enabling this option allows you to swipe left and right from outside the screen towards the center, to navigate to the next and previous sheets (either web pages in the browser, or views inside another app.) This basically works like the browser navigator bar in Firefox, but is enabled by default in Firefox 2.1+.</p>
+<h2 id="Keyboard_layouts">Keyboard layouts</h2>
+<p>In addition to the developer-specific options listed above, Firefox OS &lt; 1.4's developer settings featured keyboard layout options. These let you toggle on and off the then-experimental Chinese input methods:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5079/InputMethods.png"></p>
+<p>As of Firefox 1.4, these options have been removed. This is because the Chinese keyboard layout implementations (zhuyin and pinyin) have now been completed.</p>
+<div class="note">
+ <p><strong>Note</strong>: For other keyboard layouts still under development, such as Japanese, we now have a build-time config to opt them in.</p>
+</div>
+<p> </p>

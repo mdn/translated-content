@@ -1,0 +1,84 @@
+---
+title: 'Lokalisierung: Vorbereitung'
+slug: Quickstart_Lokalisierung/Initial_setup
+tags:
+  - Lokalisierung
+  - Vorbereiten
+translation_of: Mozilla/Localization/Quick_start_guide/Initial_setup
+---
+<p>Eine Voraussetzung zum Lokalisieren ist der Zugriff auf Code und Werkzeuge und eine entsprechend konfigurierte lokale Arbeitsumgebung (d.h., auf Deinem Computer). Zudem musst Du herausfinden, ob für Deine Sprache bereits eine Lokalisierungs-Community existiert. An dieser Stelle beschäftigen wir uns mit den benötigten Benutzer-Konten sowie den verwendeten Werkzeugen und deren Konfigurationen, die für das Lokalisieren benötigt werden.</p>
+
+<h3 id="Neu_oder_bereits_vorhanden">Neu oder bereits vorhanden</h3>
+
+<p>Als Erstes musst Du wissen, ob Du eine neue Lokalisierungs-Community gründen oder einer bereits vorhandenen beitreten möchtest. Davon hängt ab, welche Informationen in dieser Anleitung für Dich nützlich sind.</p>
+
+<p>Das hast Du zu tun:</p>
+
+<p>Prüfe im <a class="link-https" href="https://wiki.mozilla.org/L10n:Teams" title="https://wiki.mozilla.org/L10n:Teams">Localization Community Directory</a>, ob zu Deiner Sprache bereits eine Community existiert.</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+ <li><span style="color: #0000cd;">Wenn bereits eine Community existiert: Melde Dich dort und frag wie Du helfen kannst.</span></li>
+ <li><span style="color: #ff8c00;">Wenn noch keine Community existiert: Sende eine <a class="link-https" href="https://groups.google.com/forum/?fromgroups#!forum/mozilla.dev.l10n.new-locales" title="https://groups.google.com/forum/?fromgroups#!forum/mozilla.dev.l10n.new-locales">e-Mail an die new-locales newsgroup</a> für weitere Unterstützung</span><span style="color: #ff8c00;">.</span></li>
+</ol>
+
+<h3 id="Benutzer-Konten">Benutzer-Konten</h3>
+
+<p>Es gibt eine Handvoll Benutzer-Konten, die Du zu Beginn Deiner Lokalisierungs-Arbeit kennen solltest. Sie sind nicht notwendig, um an der Lokalisierung mitzuwirken. Aber sie werden notwendig, wenn Du Deine Arbeiten veröffentlichen möchtest. Momentan sollst Du nur wissen, dass sie für Deine Arbeit wichtig sein werden. Unter diesen Benutzer-Konten werden Dein Code und Deine anderen Tätigkeiten gespeichert und sie werden Dir bei der Veröffentlichung Deiner Lokalisierungs-Arbeiten helfen.</p>
+
+<dl>
+ <dt style="margin-left: 40px;">hg (Mercurial)</dt>
+ <dd>Mercurial ist eine Umgebung zum Verwalten von Software-Versionen und besteht hauptsächlich aus Mozilla Quellcode, es enthält aber auch lokalisierten Code für jede offizielle Mozilla Lokalisation. Du wirst es brauchen, um Mozilla Anwendungen zu lokalisieren. Eine Berechtigung zum Speichern ist zu Beginn Deiner Arbeit <u>nicht</u> notwendig in hg. Wenn Du etwas Erfahrung mit hg gesammelt hast, dann wirst Du vielleicht eine Speicher-Berechtigung haben wollen. Dazu besuchst Du bitte die <a class="external" href="http://www.mozilla.org/hacking/committer/" title="http://www.mozilla.org/hacking/committer/">Mozilla Commiter Page</a> und folgst dem dort beschriebenen Prozess. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=741305" title="https://bugzilla.mozilla.org/show_bug.cgi?id=741305">Hier ist eine Beispiel-Meldung</a>, die den Prozess verdeutlicht. Nutze <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;component=Repository%20Account%20Requests&amp;rep_platform=All&amp;op_sys=All&amp;cc=l10n%40mozilla.com&amp;short_desc=l10n%20hg%20account%20for%20John%20Doe%20(ab-CD)" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;component=Repository%20Account%20Requests&amp;rep_platform=All&amp;op_sys=All&amp;cc=l10n%40mozilla.com&amp;short_desc=l10n%20hg%20account%20for%20John%20Doe%20(ab-CD)">diese Vorlage</a> zum Ausfüllen Deiner hg Registrierungs-Anfrage. Lege eine Meldung zu Deinem neuen Lokalisierungs-Projekt in der<span> <a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics">new locales newsgroup</a> an.</span></dd>
+ <dt style="margin-left: 40px;">SVN</dt>
+ <dd style="margin-left: 40px;">SVN ist eine Umgebung zum Verwalten von Software-Versionen, die Mozilla zum Betreiben seiner eigenen Quellcode-Webseiten und deren offiziellen Lokalisierungen verwendet. Auf <a class="link-https" href="https://wiki.mozilla.org/SVN#SVN_account_for_localizers" title="https://wiki.mozilla.org/SVN#SVN_account_for_localizers">dieser Wiki-Seite</a> ist der Registrierungs-Prozess von SVN beschrieben. Die <a href="https://developer.mozilla.org/en-US/docs/SVN_guide_for_localizers" title="https://developer.mozilla.org/en-US/docs/SVN_guide_for_localizers">Anleitung für SVN Lokalisierer</a> hilft Dir beim Lernen der wichtigsten SVN Kommandos für l10n. Lege eine Meldung zu Deinem neuen Lokalisierungs-Projekt in der<span> <a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics"><u><font color="#0066cc">new locales newsgroup</font></u></a> an.</span></dd>
+</dl>
+
+<dl>
+ <dt style="margin-left: 40px;">Web-basierte L10n Werkzeuge</dt>
+ <dd style="margin-left: 40px;">Darüber werden wir später ein paar Worte verlieren. Für den Moment reicht es zu wissen, dass Du zum Nutzen dieser Werkzeuge einen eigenen Benutzer-Zugang benötigst.</dd>
+ <dt style="margin-left: 40px;">Mozilla LDAP</dt>
+ <dd style="margin-left: 40px;">Du wirst einen LDAP Benutzer brauchen, wenn Du Deine Lokalisierung im Lokalisierungs-Verzeichnis von Mozilla registrieren möchtest. Lege eine Meldung zu Deinem neuen LDAP Zugang in der<span> <a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics"><u><font color="#0066cc">new locales newsgroup</font></u></a> an.</span></dd>
+ <dt style="margin-left: 40px;"><span>Lokalisierungsspezifische Bugzilla Kompenente</span></dt>
+ <dd style="margin-left: 40px;"><span>Eine eigene Bugzilla "Component" für Deine Lokalisierung hilft uns beim Nachverfolgen Deines Lokalisierungs-Prozesses von den ersten Schritten bis zur Veröffentlichung. Zudem werden wir so informiert falls Du Probleme hast, die eindeutig Deiner Lokalisierungs-Arbeit zuzuordnen sind. </span>Lege eine Meldung zu Deiner neuen Bugzilla Component in der<span> <a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics"><u><font color="#0066cc">new locales newsgroup</font></u></a> an.</span></dd>
+</dl>
+
+<h3 id="Lokale_Werkzeuge">Lokale Werkzeuge</h3>
+
+<p>Ähnlich wie bei den Benutzer-Konten gibt es auch einige lokale Werkzeuge, die auf Deinem Computer installiert werden sollten. Diese Werkzeuge dienen dem Speichern Deiner Arbeit, dem Erzeugen von Mozilla Anwendungen, dem Erzeugen von Sprachpaketen und dem Testen.</p>
+
+<dl>
+ <dt style="margin-left: 40px;">Hg (Mercurial)</dt>
+ <dd style="margin-left: 40px;">Wie oben erwähnt nutzen wir Mercurial zum Pflegen von Mozilla Quellcode und lokalisiertem Code. Du wirst nicht nur ein Lokalisierungs-Repository zum Speichern Deiner Objekte brauchen, sondern es muss auch auf Deinem Rechner installiert und konfiguriert sein. <a href="/en/Localizing_with_Mercurial#Install_Mercurial" title="https://developer.mozilla.org/en/L10n_on_Mercurial#Install_Mercurial">Hier</a> findest Du alles, was Du zum Installieren und Konfigurieren von Mercurial wissen musst.</dd>
+</dl>
+
+<dl>
+ <dt style="margin-left: 40px;">compare-locales</dt>
+ <dd style="margin-left: 40px;">compare-locales ist ein Python Skript zum Prüfen Deiner Arbeit, ohne dass Firefox oder eine andere Anwendung laufen muss. Installationsanweisungen findest Du <a href="/en/Compare-locales" title="https://developer.mozilla.org/en/Compare-locales">hier</a>.</dd>
+ <dt style="margin-left: 40px;">L10n checks</dt>
+ <dd style="margin-left: 40px;">L10n checks ist ein weiteres Python Skript zum Prüfen Deiner Arbeit, ohne dass Firefox oder eine andere Anwendung laufen muss. Installationsanweisungen findest Du <a href="/en/L10n_Checks" title="https://developer.mozilla.org/en/L10n_Checks">hier</a>.</dd>
+ <dt style="margin-left: 40px;">autoconf 2.13</dt>
+ <dd style="margin-left: 40px;">autoconf ist ein Hilfsmittel zum manuellen Erzeugen von Mozilla Anwendungs-Builds und Sprachpaketen. Wir verwenden Version 2.13 und höher für diese Builds. Installationsdateien und -anleitungen findest Du <a class="external" href="http://www.gnu.org/software/autoconf/" title="http://www.gnu.org/software/autoconf/">hier</a>.</dd>
+ <dt style="margin-left: 40px;">wget</dt>
+ <dd style="margin-left: 40px;">wget ist ein Kommandozeilen-Werkzeug zum Laden von Dateien über Internet-Protokolle. Wir nutzen es zum Laden von Dateien aus Repositories. Installationsdateien und -anleitungen findest Du <a href="http://www.gnu.org/software/wget/">hier</a>.</dd>
+ <dt style="margin-left: 40px;">Perl</dt>
+ <dd style="margin-left: 40px;">Perl ist eine Programmiersprache, mit der Du Mozilla Anwendungs-Builds und Sprachpakete erstellen kannst. Installationsdateien und -anleitungen findest Du <a class="external" href="http://www.perl.org/" title="http://www.perl.org/">hier</a>.</dd>
+ <dt style="margin-left: 40px;">Python</dt>
+ <dd style="margin-left: 40px;">Python ist eine Programmiersprache, in der viele unserer L10n Test-Skripte geschrieben sind. Installationsdateien und -anleitungen findest Du <a class="external" href="http://python.org/" title="http://python.org/">hier</a>.</dd>
+ <dt style="margin-left: 40px;">Locale Switcher oder Quick Locale Switcher</dt>
+ <dd style="margin-left: 40px;">Sowohl Locale Switcher als auch Quick Locale Switcher sind Add-Ons für Mozilla Anwendungen. Eines von beiden brauchst Du zum Anzeigen Deiner Lokalisierungen in einer Mozilla Anwendung. Du kannst sie über den Add-On Manager im Firefox Browser installieren oder über <a class="link-https" href="https://addons.mozilla.org/de/firefox/addon/locale-switcher/" title="https://addons.mozilla.org/en-US/firefox/addon/locale-switcher/">diese Links</a>.</dd>
+ <dt style="margin-left: 40px;">Einen guten, unicode-basierten Text-Editor</dt>
+ <dd style="margin-left: 40px;">Hier einige Empfehlungen:
+ <ul>
+  <li style="margin-left: 40px;">Windows: <a class="external" href="http://notepad-plus.sourceforge.net/uk/site.htm" rel="external nofollow" title="http://notepad-plus.sourceforge.net/uk/site.htm">Notepad++</a> oder <a class="external" href="http://www.flos-freeware.ch/notepad2.html" rel="external nofollow" title="http://www.flos-freeware.ch/notepad2.html">Notepad2</a></li>
+  <li style="margin-left: 40px;">GNU/Linux: <a class="external" href="http://en.wikipedia.org/wiki/Vim_%28text_editor%29" rel="external nofollow" title="http://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>, <a class="external" href="http://projects.gnome.org/gedit/" rel="external nofollow" title="http://projects.gnome.org/gedit/">gedit</a> oder <a class="external" href="http://www.kate-editor.org/kate" rel="external nofollow" title="http://www.kate-editor.org/kate">Kate</a></li>
+  <li style="margin-left: 40px;">Mac OS X: <a class="external" href="http://www.barebones.com/products/TextWrangler/" rel="external nofollow" title="http://www.barebones.com/products/TextWrangler/">TextWrangler</a></li>
+ </ul>
+ </dd>
+ <dt style="margin-left: 40px;">GNU make</dt>
+ <dd style="margin-left: 40px;"><span class="external">Make ist ein Werkzeug zur Versions-Verwaltung von ausführbaren Dateien. Du findest die Version </span>3.79.1 oder höher <a class="external" href="http://www.gnu.org/software/make/" title="http://www.gnu.org/software/make/">hier</a>. Andere Varianten von <code>make</code> funktionieren leider nicht.</dd>
+</dl>
+
+<h2 id="Ende_der_Vorbereitungen">Ende der Vorbereitungen</h2>
+
+<p>Nun, nachdem alle Vorbereitungen getroffen sind, ist es Zeit für den schönsten Teil: Übersetzen!</p>
+
+<p>{{ PreviousNext("Localization_Quick_Start_Guide", "Localization_Quick_Start_Guide/Translation_phase") }}</p>

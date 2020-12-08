@@ -1,0 +1,95 @@
+---
+title: Debugging B2G using Valgrind
+slug: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+tags:
+  - B2G
+  - Debugging
+  - Firefox OS
+  - Mobile
+  - valgrind
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+---
+<p><span style="position: fixed ! important; top: 0px ! important; left: 0px ! important; font-size: xx-small ! important; line-height: 130% ! important; border-color: black ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; background-color: rgb(214, 227, 254) ! important; display: none;">S</span></p>
+<div class="summary">
+ <p><a href="http://valgrind.org">Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSS</span></a> মেমোরি সম্পর্কে জানার জন্য মেমোরি সুবিধা দিয়ে থাকে , যোগসুত্র/প্রক্রিয়া ,এবং অন্যান্য জিনিস এর সাথে সংযুক্ত যা একটি প্রোগ্রামের পারফরমেন্সের মধ্যে আছে।Firefox OS tree তে ইহা সংযুক্ত করে থাকে,এবং ফোনে যা চালানো যায় যা সঠিক সম্পদ এই অনুচ্ছেদ দেখায় কিভাবে ব্যবহার করতে হয় ইহা।</p>
+</div>
+<h2 id="প্রয়োজনীয়তা">প্রয়োজনীয়তা</h2>
+<p>Firefox OS এর বিপক্ষে  Valgrind চালানোর আগে,এটা রিকমান্ডেড করা হয়ে থাকে যে <a href="/en-US/docs/Debugging_Mozilla_with_Valgrind">Debugging Mozilla with Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSD</span><span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSD</span><span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSG</span></a> এর সাথে ডেভেলপাররা তাদেরকে পরিচিত করে থাকে ।বেশির ভাগ তথ্য এটা বহন করে যা Firefox OS এর বিপক্ষে কাজ করায় সংযুক্ত, যা বেশির ভাগ গঠন এবং কমান্ড লাইন স্টেপ এর Firefox OS গঠনের দ্বারা এবং বাতিল স্ক্রীপ্ট দ্বারা পরিচালিত হয়ে থাকে।</p>
+<p>Firefox OS বিপক্ষে  Valgrind একটি ফোনে চালাতে,একটি ফোন সাধারন জায়গার থেকে বেশে জায়গা সহ বেশি দরকার।Valgrind হল জায়গার ইন্টেন্সিভ,এবং সাধারনত কারন হয়ে থাকে Out Of Memory errors  এর যা ফোনে 1GB of RAM এর চেয়ে কমে হয়ে থাকে .লেখা অনুসারে(২০১৪-১২-০৪), Valgrind পরীক্ষা চালানো হয়ে থাকে Firefox OS এর Nexus 4 ফোনে 2GB of RAM এর সাথে চলার উপরে ,কিন্তু এটা হবে Geeksphone Keons এবং একই spec ফোনে ।দেখুন <a href="/en-US/Firefox_OS/Phones">Phone and device data</a> ারো বেশি ফোনের সম্পর্কের জানার জন্য।</p>
+<h2 id="Valgrind_চালানো_FxOS_ফোনে">Valgrind চালানো FxOS ফোনে</h2>
+<p>চলুন Valgrind চালানো প্রক্রিয়া দেখি।</p>
+<h3 id="Compiling">Compiling</h3>
+<p>Firefox OS এর সাথে with valgrind এর সক্ষ্মতা তৈরি করতে, নিচের <a href="/en-US/Firefox_OS/Customization_with_the_.userconfig_file"><code>.userconfig</code> file</a> যোগ করুন।</p>
+<pre>export B2G_VALGRIND=1 </pre>
+<p>Building debug (<code>B2G_DEBUG</code>) আরো রিকমান্ডেড।Building কোন অপ্টিমাইজেশন ছাড়া (<code>B2G_NOOPT</code>)  তৈরি করে জিনিস যা সাধারনত অব্যবহারযোগ্য ভাভে ধীরে চলে, এবং রিকমান্ডেড না বিশেষ কেস ছাড়া যেখাকে ইহাকে ভাবা হয়ে থাকে অপ্টিমাইজেশনে অন্ধকার ভুল রুপে।</p>
+<h3 id="Running">Running</h3>
+<div class="note">
+ <p>নোটঃRunning Valgrind  একটি Firefox OS ফোনে হয়ে থাকে ফোনের কন্টেক্সট এর উপরে,অপারেটিং সিস্টেমের উপরে নয়।এটা মনে করা হয়ে থাকে যে কোন প্লাটফর্ম যা ডেভেলপ ঘটিয়ে থাকে  <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">adb</a> এর যা সবসময় পাওয়া যায় এবং<code>run-valgrind.sh</code> script to runবাতিল করে  valgrind ফোনে চালাতে ।</p>
+</div>
+<p>valgrindএর মধ্যে Firefox OS চালাতে,ব্যবহার করুন <a href="https://github.com/mozilla-b2g/B2G/blob/master/run-valgrind.sh">the <code>run-valgrind.sh</code> script from the B2G directory</a>।স্ক্রিপ্ট নিচে দেয়াঃ</p>
+<ol>
+ <li>r/w হিসেবে ফোনের ফাইল সিস্টেম পুনআহোরন করুন ।</li>
+ <li>বর্তমান <code>libxul.so</code> ডিবাগ কপি করুন সম্পুর্ন চিহ্ন দিতে যা ফোনে আছে।যেহেতু শত শত MB দিয়ে ফাইলটা পরিপুর্ন,এই ধাপে বিভিন্ন সময় নেয়া হয়ে থাকে যা শেষ করতে প্রয়োজনীয়,এটা প্রতিটি নতুন তৈরির সময়ে প্রস্তুত করা হয়ে থাকে।valgrind চালাতে <code>libxul</code> এর কপি ধাপ ছাড়া,নির্দেশটা চালানঃ<br>
+  <pre class="brush: bash">run-valgrind.sh nocopy</pre>
+ </li>
+ <li>ফোনটি পুন্রায় রিবুট করুন।</li>
+ <li>Kills the b2g প্রক্রিয়া চালান যা ফোনে শুরু হয়ে থাকে ।</li>
+ <li>ইহার নিজের b2g প্রক্রিয়া valgrind এর মধ্যে চালান।</li>
+</ol>
+<p>সকল valgrind output লেখ হবে টার্মিনালে <code>stdout</code> এ যা <code>run-valgrind.sh</code> script এর বের হওয়ার টার্মিনাল যা পড়া যায় অথবা ফাইলে উকি মারে।</p>
+<div class="note">
+ <p><strong>নোটঃ<code>যেহেতু </code></strong><code>run-valgrind.sh</code> script নিজের adb প্রক্রিয়ায় b2g process তে চলমান ,killing the script আরো kill b2g নষ্ট করবে এবং valgrind ফোনে নষ্ট হবে ।এটা প্রদর্শন করে যে ফোনটি চালানোর পরে রিবুটেড হয় একটি  valgrind সেসনের উপরে ,যেহেতু এটি যেকোন কিছু একটি অড স্টেট এ থেকে ত্যাগ করতে পারে।</p>
+</div>
+<h2 id="Valgrind_এর_উপরে_Firefox_OS_Desktop_চালানো">Valgrind এর উপরে Firefox OS Desktop চালানো</h2>
+<p>valgrind চালানো Firefox OS Desktop এর কাজের বিপক্ষে যেহেতু এটা চালানো হয়ে থাকে একই পথে যা desktop Firefox এর বিপক্ষে কাজ করে থাকে।<a href="/en-US/docs/Debugging_Mozilla_with_Valgrind">Debugging Mozilla with Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DDS</span></a> পেজে আলোচনা করুন আরও বেশি তথ্যের জন্য ।সকল পতাকার page for more information. All of the relevant build flags will need to be added to <code>mozconfig যোগ করা উচিত</code>,এবং সকল প্লাটফর্ম  and all platform-বিশেষ ইস্যু যা পেজে প্রয়োগ করা হয়ে থাকে ।specific issues in the page will apply.</p>
+<p>নোট করুন যে Valgrind চালানো ডেস্কটপের উপরে যা OOP/process-per-tab mode এ যোগ করার জন্য নিচের প্রক্রিয়ায় child processes গুলো ট্রাক করে থাকে নিশ্চিত করার জন্যঃ</p>
+<pre class="brush: bash">--trace-children=yes</pre>
+<h2 id="Firefox_OS_Valgrind_পরিচালনা_করা_এবং_আপডেটিং_করা">Firefox OS Valgrind পরিচালনা করা এবং আপডেটিং করা</h2>
+<p>যখন প্যাচেস আপ্সট্রিম ব্যবহার করা হয়ে থাকে ,Valgrind forহল Firefox OS এর জন্য পরিচালিত যা একটি ফর্ক রেপসেটরিতে রাখা হয়ে থাকে উওন্নতি ঘটানোর জন্য যা সম্ভব হয়ে থাকে Firefox OS এর গঠনের ট্রি এবং ভার্সনের এর সাথে যোগাযোগের কারনে।</p>
+<h3 id="Valgrind_Repos_আপডেটিং">Valgrind Repos আপডেটিং</h3>
+<div class="warning">
+ <p><strong>ওয়ার্নিংঃ</strong>GIT এর সাথে অভিজ্ঞতাও দরকার। valgrind repos উন্নত করারা চেষ্টা করবেন না ,যদি আপনি জটিল Git operations চালানোতে দক্ষ না হোন।কোন আপডেট  github repoদর্পন হবে  <code>git.mozilla.org এর যা পুল করা হবে ডেভেলপারদের </code>,HEAD of the manifests repo ব্যবহার দ্বারা ।যখন Valgrind ভাঙ্গা হবে তা কোন কিছুর উপর ভাংবেনা যা  Valgrind এর সক্ষমতা নেই(বি দ্র. tbpl), ইহা হবে অনেক বেশি বিরক্তকর ডেভেলপারস যারা এটি ব্যবহারের চেষ্টা করে।</p>
+</div>
+<p>প্রধান Firefox OS valgrind এবং VEX repos হল</p>
+<ul>
+ <li><a href="http://github.com/mozilla-b2g/valgrind">http://github.com/mozilla-b2g/valgrind</a></li>
+ <li><a href="http://github.com/mozilla-b2g/vex">http://github.com/mozilla-b2g/vex</a></li>
+</ul>
+<p>প্রধান শাখা হল SVN ট্রাঙ্কের প্রিন্সিটিভ ভার্সনের শাখাএইসব প্রত্যেক রেপুস,যখন Firefox OS শাখা বহন করবে Firefox OS- এর বিশেষ প্রক্রিয়া ট্রাঙ্কের উপরে যা রিবেস করা।</p>
+<div class="note">
+ <p><strong>নোটঃALWAYS</strong> <strong>UPDATE BOTH REPOS AT THE SAME TIME</strong>.যখন তারা দূটা পৃথক রেপস,VEX  হল সাধারনত  Valgrind এরএকটি সাবমডিউল এবং HEAD of valgrind সাধারনত  HEAD of VEX এর বিন্দু।.</p>
+</div>
+<p><code>git.mozilla.org</code> ডোমেইনের প্রতিলিপি  B2G মেনিফেস্টে ব্যবহারের জন্যঃ</p>
+<ul>
+ <li><a href="http://git.mozilla.org/?p=b2g/valgrind.git;a=summary">http://git.mozilla.org/?p=b2g/valgrind.git;a=summary</a></li>
+ <li><a href="http://git.mozilla.org/?p=b2g/valgrind.git;a=summary">http://git.mozilla.org/?p=b2g/vex.git;a=summary</a></li>
+</ul>
+<ol>
+ <li>প্রধান রেপ হল sync এর সাথে valgrind SVN কে git svn এর সাথে রাখা।আপডেটেড রেপস কে পুল করতে ,valgrind কে ক্লোন করুন এবং vex repos নেয়া হয় github থেকে , তার পরে নিচেরটা রান করুনঃ<br>
+  <pre class="brush: bash">git svn init -s [subversion repo url]
+</pre>
+ </li>
+ <li>SVN info পুল করুন যা  কয়েক ঘন্টা সময় নিবে,কিন্তু যখন এটা হয়ে যাবে আপনার ট্রি sync করবে প্রধান Valgrind SVN এর সাথে।</li>
+ <li>আরো আপডেট পুল করুন,নিচের নির্দেশের সেট ব্যবহার করেঃ<br>
+  <pre class="brush: bash">git checkout master
+git svn fetch
+git svn rebase
+git push [github-remote-name] master
+git checkout fxos
+git rebase master
+</pre>
+ </li>
+ <li>একটি ভাল সুযোগ আছে যা বাধাকে দেখবে Firefox OS শাখার রিবেস ধাপে।যদি আপনার ইস্যু ভালভাবে কাজ না করে,লেখককে ইমেইল করেন যিনি বাধার  কমেন্ট করে।</li>
+ <li>রিবেসিং এর পরে একটি পুর্ন Firefox OS build রান করুন  <code>B2G_VALGRIND</code> flag এর সাথে নিশ্চিত করতে যা ইহা গঠন করে থাকে।সবচেয়ে গুরুত্বপুর্ন হল এর স্ক্রীপ্ট শাখা।</li>
+ <li>একদা আপনি রিবেস করে AND TESTED যা Firefox OS tree এর বিপক্ষে একটি গঠন ,আপনাকে Firefox OS শাখার প্রধান পরিবর্তনের জন্য ধাক্কা দিতে হবে।<br>
+  <pre>git push -f [github-remote-name] fxos</pre>
+ </li>
+</ol>
+<h3 id="গঠনইন্সটলএবং_বাতিল_করা_স্ক্রিপ্ট">গঠন,ইন্সটল,এবং বাতিল করা স্ক্রিপ্ট</h3>
+<p>কিছু মাল্টিপল স্ক্রীপ্ট আছে যা Valgrind Firefox OS এর অংশের শাখা অথবা B2G রেপও যা একটি রেপো ফেস আপদেট করারজন্য দরকার।</p>
+<h4 id="অতিরিক্তvalgrindandroid.mk">অতিরিক্ত/valgrind/android.mk</h4>
+<p>এটি  Android গঠন সিস্টেমের স্ক্রীপ্ট।তখন থেকেই নয় বেশির ভাগ সময়, এটি সেটিই যেটাতে পরিবর্তনের প্রয়োজন পরে থাকে ,ফাইলের যোগ/সরানোর  কারনে Valgrind tree থেকে ।একটি <code>-j1</code> গঠন ব্যবহার করুন যা টার্গেট তা গঠন করতে ব্যর্থ হলে তবে তা দেখতে,এবং যদি ইহা একটি ফাইল অথবা একটি অবিদ্যমান রেফারেন্সিং ফাইল হারিয়ে ফেলে ,ফাইল লিস্ট আপডেট করুন ।</p>
+<h4 id="অতিরিক্তvalgrindvalgrind.mk">অতিরিক্ত/valgrind/valgrind.mk</h4>
+<p>এটি বহন করে থাকে প্যাকেজের লিস্ট যা প্রয়োজন হয় গঠন করতে এবং যোগ করতে FxOS সিস্টেম ইমেজ,<code>gonk-misc/b2g.mk দ্বারা রেফারেন্স করা।</code>Valgrind নতুন প্যাকেজে যোগ করার জন্য কম পাওয়া যায় বলে এটি সাধারনত আপডেট করার দরকার পরেনা।কিন্তু যদি লাগে তবে এতে রাখুন।</p>
+<h4 id="run-valgrind.sh">run-valgrind.sh</h4>
+<p>Valgrind ফোনে চালানোর স্ক্রীপ্ট।যদি  Valgrind ফোনে চালানোর জন্য নতুন কমান্ড লাইন থাকে যা যুক্তি প্রদর্শন করে থাকে,তাদের এখানে রাখুন।এটা সেখানে যা আমরা কপি করি লাইব্রেরি ফোনে চিহ্নটি ডিবাগের সাথে থাকে,সুতরাং কোন এডজাস্টমেন্ট /পরিবর্তন প্রক্রিয়াটিতে হওইয়া উচিত ।</p>

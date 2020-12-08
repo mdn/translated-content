@@ -1,0 +1,28 @@
+---
+title: Disabled
+slug: Archive/Mozilla/XUL/Attribute/Disabled
+tags:
+  - XUL Attribute
+  - XUL Referenz
+translation_of: Archive/Mozilla/XUL/Attribute/disabled
+---
+<div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/de/docs/XUL_Referenz">XUL-Referenz Startseite</a></span></div>
+<dl> <dt><code id="a-disabled"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt> <dd>Typ: <em>boolean</em></dd> <dd>Kennzeichnet, ob ein Element deaktiviert ist oder nicht. Wenn das Element auf  <code>true</code> gesetzt ist, ist das Element deaktiviert. Deaktivierte Elemente sind gewöhnlich mit einem grauen Text dargestellt. Wenn ein Element deaktiviert ist, wird es auf Anwenderaktionen nicht reagieren, es kann den Fokus nicht erlangen und das <code>command</code> Ereignis wird nicht ausgelöst. Das Element wird allerdings noch auf Mausereignisse antworten. Um das Element zu aktivieren, ist es besser das Attribut zu entfernen als es auf den Wert <code>false</code> zu setzen. Um den Wert dieses Attributs mittels JavaScript zu setzen oder abzurufen, sollte besser die <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/disabled">disabled</a></span></code> Eigenschaft verwendet werden.</dd>
+</dl>
+<div class="noinclude">
+<pre class="brush: js">// Deaktiviere ein Element.
+document.getElementById('buttRemove').setAttribute("disabled", "true");
+
+// Reaktiviere ein Element, während das "disabled" Attribute beibehalten wird.
+document.getElementById('buttRemove').setAttribute("disabled", "");
+
+// Reaktiviere ein Element, in dem das "disabled" Attribut entfernt wird.
+document.getElementById('buttRemove').removeAttribute("disabled");
+</pre>
+<div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/de/docs/Mozilla/Firefox/Releases/3.5">Hinweis zu Firefox 3.5</a></p>
+    <p style="font-weight: 400;">Seit Firefox 3.5 wird dieses Attribut für Keyset Elemente unterstützt.</p>
+</div></div>
+<div class="noinclude">
+
+</div>

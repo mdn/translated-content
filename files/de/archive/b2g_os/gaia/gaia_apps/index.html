@@ -1,0 +1,86 @@
+---
+title: Gaia apps
+slug: Archive/B2G_OS/Gaia/Gaia_apps
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+---
+<div class="summary">
+<p><span class="seoSummary">Gaia is the front-end of Firefox OS, which contains system administration functionality and the built-in suite of apps shipped with Firefox OS devices. All the Gaia source code — even the system, and keyboard IMEs — is fully implemented with HTML5 (HTML + CSS + JavaScript) &amp; Open WebAPIs. This set of documents contains information on how each of the default apps available in the Gaia family works.</span></p>
+</div>
+
+<h2 id="Gaia_functionality_categories">Gaia functionality categories</h2>
+
+<p>The different apps inside Gaia can be roughly categorized into the groups listed below.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Many of the pages linked to for more explanation of how the individual apps work are README pages inside the <a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repo</a>. This is because many of the apps are on rapid development cycles and therefore subject to rapid (often daily) change, so it would make little sense to try to keep MDN pages updated with these changes. The engineer-maintained README pages are currently the most accurate source of information.</p>
+</div>
+
+<h3 id="Platform">Platform</h3>
+
+<p>Including the System, Settings, Lockscreen, build scripts, and Bluetooth apps.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7503/platform_team.png" style="display: block; height: 269px; margin: 0px auto; width: 355px;"></p>
+
+<h4 id="Platform_apps_further_explanation">Platform apps: further explanation</h4>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System</a></dt>
+ <dd>The System app is the first web app loaded by Gecko during the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Architecture#Firefox_OS_bootup_procedure">Firefox OS bootup procedure</a>, and it handles numerous responsibilities that are required generally for the running of the system, and are therefore not scoped per individual web app.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/Browser">Browser</a></dt>
+ <dd>The Browser app (which is now part of System) provides browser-like functionality where it is needed — including page navigation, search and bookmarks.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/Window_Management">Window Management</a></dt>
+ <dd>Firefox OS's window management functionality — including app life cycle and interaction, notifications, animations and much more — is handled by a specific part of the System app. This article looks at Firefox OS Window Management in detail.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/Settings">Settings</a></dt>
+ <dd>The Settings app allows Firefox OS users to configure device settings, and responds to incoming activities (<a href="/en-US/docs/WebAPI/Web_Activities">Web activities</a> with a name of <code>configure</code>), which allows other apps to jump to different panels inside the Settings app to handle configuration as required (for example showing the wifi settings panel if no data connection is available.)</dd>
+</dl>
+
+<h3 id="Communication">Communication</h3>
+
+<p>Including the Dialer, Contact, SMS apps and FTU apps.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7499/comms_team.png" style="display: block; height: 246px; margin: 0px auto; width: 317px;"></p>
+
+<h4 id="Communication_apps_further_explanation">Communication apps: further explanation</h4>
+
+<p>TBD</p>
+
+<h3 id="Productivity">Productivity</h3>
+
+<p>Including the Email, Calendar, and Clock apps.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7505/productivity_team.png" style="display: block; height: 178px; margin: 0px auto; width: 303px;"></p>
+
+<h4 id="Productivity_apps_further_explanation">Productivity apps: further explanation</h4>
+
+<dl>
+ <dt><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/calendar/README.md">Calendar</a></dt>
+ <dd>The Firefox OS built-in calendar app.</dd>
+ <dt><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/clock/README.md">Clock</a></dt>
+ <dd>Firefox OS's default Clock app, which includes alarm, timer and stopwatch functionality.</dd>
+ <dt><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/email/README.md">Email</a></dt>
+ <dd>The Gaia e-mail app.</dd>
+</dl>
+
+<h3 id="Media">Media</h3>
+
+<p>Including the Camera, Gallery, Music, and Video apps, and some media related functions such as forward lock DRM and wallpapers.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7501/media_team.png" style="display: block; height: 250px; margin: 0px auto; width: 386px;"></p>
+
+<h4 id="Media_apps_further_explanation">Media apps: further explanation</h4>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Gaia_apps/Video">Video</a></dt>
+ <dd>Video is a simple video player app that will play videos present on your Firefox OS device's storage media.</dd>
+ <dt><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/camera/README.md">Camera</a></dt>
+ <dd>Camera allows Firefox OS users to capture and manage videos and photos from the device camera(s), and responding the <a href="/en-US/docs/WebAPI/Web_Activities">Web activities</a> of type <code>pick</code> from other apps that want to grab media using Camera's functionality.</dd>
+</dl>
+
+<h3 id="Other_Gaia_features">Other Gaia features</h3>
+
+<p>Besides these functions, there are several other major features such as browser, homescreen, marketplace, test framework, PDF viewer, and app manager, which are developed closely alongside Gaia.</p>
+
+<dl>
+ <dt><a href="https://github.com/mozilla/pdf.js/blob/master/README.md">pdf.js</a></dt>
+ <dd>pdf.js is an HTML5-based PDF viewer, used inside Gaia for viewing PDFs. Note that the codebase for pdf.js is maintained in a separate repo, outside Gaia.</dd>
+</dl>

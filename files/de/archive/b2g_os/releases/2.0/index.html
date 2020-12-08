@@ -1,0 +1,112 @@
+---
+title: Firefox OS 2.0 for developers
+slug: Archive/B2G_OS/Releases/2.0
+translation_of: Archive/B2G_OS/Releases/2.0
+---
+<div class="summary">
+<p>This page details the developer features newly implemented in Gecko that are specific to Firefox OS 2.0.</p>
+</div>
+
+<div class="note">
+<p>Firefox OS 2.0's Gecko component is based on Firefox 31/32.</p>
+</div>
+
+<h2 id="New_product_features">New product features</h2>
+
+<p>This section provides a summary of the new features available in Firefox OS 2.0. For more details on specific platform changes (API additions, etc.), see the <a href="#Platform_additions_in_detail">Platform additions in detail</a> section.</p>
+
+<dl>
+ <dt>NFC</dt>
+ <dd><span class="author-g-x59co88jbi1y2uah b i">This release includes support for device-to-device content sharing support with NFC <span class="author-g-x59co88jbi1y2uah b i">(Near Field Communication)</span>. You can pair your device with another, then <a href="/en-US/docs/Web/API/NFC_API/Using_the_NFC_API#The_P2P_Sharing_UI">swipe to share</a> your contacts, media, or favorite URLs with others.</span></dd>
+ <dt>Telephony</dt>
+ <dd><span class="author-g-x59co88jbi1y2uah b i">Firefox OS now supports both IPv4 and IPv6 addresses</span> in the network manager.</dd>
+ <dt>Find My Device</dt>
+ <dd><span class="author-g-9k649z122zgh819oqmty">If you’ve lost your Firefox OS smartphone, Find My Device can help you find it (see the <span class="author-g-9k649z122zgh819oqmty url"><a href="http://find.firefox.com">http://find.firefox.com</a> website</span>). You can see it on a map, make it play a sound and have it display a message. You can also remotely lock it or delete your personal info.</span><span class="author-g-9k649z122zgh819oqmty"> To get started, create a Firefox Account (<em>Settings &gt; Firefox Accounts</em> on your device) and enable Find My Device (<span class="author-g-9k649z122zgh819oqmty"><em>Settings &gt; Find My Device</em></span>).</span></dd>
+ <dt>Media</dt>
+ <dd><span class="author-g-4iwx7wjdkbf2wjjv b">You can now create your own ringtones using your own music collection, or songs you download from the Web.</span></dd>
+ <dt>Camera</dt>
+ <dd><span class="author-g-4iwx7wjdkbf2wjjv b">The Camera app now supports various focus modes: Touch, Continuous Auto and Face tracking</span>.</dd>
+ <dt>Productivity</dt>
+ <dd>We've done a visual refresh of the Email, Calender, and Clock apps.</dd>
+ <dt>Homescreen</dt>
+ <dd><span class="author-g-4f4wmtjtu8s4fjq7 b i">Firefox OS 2.0 introduces a simpler vertical-scrolling homescreen with larger icons.</span></dd>
+ <dt>Edge-gesture app switching</dt>
+ <dd><span class="author-g-4f4wmtjtu8s4fjq7 b i">Edge gestures are now available for switching between apps (swipe your thumb from the left edge of the screen to the right and vice versa, to switch between multiple open apps.)</span></dd>
+</dl>
+
+<h2 id="New_partner_features">New partner features</h2>
+
+<dl>
+ <dt>E.ME integration</dt>
+ <dd>E.ME integration provides direct access to web apps while configurable search providers can search the web at the same time.</dd>
+</dl>
+
+<h2 id="New_DevTools_features">New DevTools features</h2>
+
+<p>The Firefox <a href="/en-US/docs/Tools">Developer Tools</a> have had a large number of features added in Firefox versions 31 and 32; these aren't Firefox OS-specific, but you can take advantage of them when debugging your Firefox OS apps through <a href="/en-US/docs/Tools/WebIDE">WebIDE</a>. To find out more, read:</p>
+
+<ul>
+ <li><a href="https://hacks.mozilla.org/2014/05/editable-box-model-multiple-selection-sublime-text-keys-much-more-firefox-developer-tools-episode-31/">Firefox Developer Tools Episode 31</a></li>
+ <li><a href="https://hacks.mozilla.org/2014/06/toolbox-inspector-scratchpad-improvements-firefox-developer-tools-episode-32/">Firefox Developer Tools Episode 32</a></li>
+</ul>
+
+<h2 id="Platform_additions_in_detail">Platform additions in detail</h2>
+
+<div class="note">
+<p><strong>Note</strong>: Our list here includes features most important to Firefox OS. For an expanded list of general Gecko feature additions (which are generally also present in Firefox OS 2.0), consult the <a href="/en-US/docs/Mozilla/Firefox/Releases/31" title="/en-US/docs/Mozilla/Firefox/Releases/31">Firefox 31 release notes for developers</a> and <a href="/en-US/docs/Mozilla/Firefox/Releases/32" title="/en-US/docs/Mozilla/Firefox/Releases/32">Firefox 32 release notes for developers</a>.</p>
+</div>
+
+<h3 id="Web_API">Web API</h3>
+
+<ul>
+ <li>The parameters of the <a href="/de/docs/Web/API/MozMobileNetworkInfo" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben; bitte erwäge, mitzuwirken!"><code>MozMobileNetworkInfo</code></a> constructor have been made nullable (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1026727" title="FIXED: Unknown state is displayed instead of Connected during manual network selection">Bug 1026727</a>).</li>
+ <li>WebRTC: <span class="author-g-41mtsa1hor7b107c i"><a href="/de/docs/Web/API/MozGetUserMedia" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben; bitte erwäge, mitzuwirken!"><code>mozGetUserMedia</code></a>, <a href="/de/docs/Web/API/MozRTCPeerConnection" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben; bitte erwäge, mitzuwirken!"><code>mozRTCPeerConnection</code></a>, and <a href="/de/docs/Web/API/DataChannels" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben; bitte erwäge, mitzuwirken!"><code>DataChannels</code></a> are supported by default</span>.</li>
+ <li>New constraints for <a href="https://developer.mozilla.org/en-US/docs/Glossary/WebRTC">WebRTC</a>'s <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUserMedia.getUserMedia" title="The documentation about this has not yet been written; please consider contributing!"><code>getUserMedia()</code></a>, <code>width</code>, <code>height</code>, and <code>framerate</code>,  have been added, to limit stream dimensions and frame rate (<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=907352" title="FIXED: Implement width/height/framerate gUM constraints">bug 907352</a>):
+  <pre class="brush: json  language-json"><code class="language-json"><span class="token punctuation">{</span>
+  mandatory<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token punctuation">{</span> min<span class="token punctuation">:</span> <span class="token number">640</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token punctuation">{</span> min<span class="token punctuation">:</span> <span class="token number">480</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  optional<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> width<span class="token punctuation">:</span> <span class="token number">650</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> width<span class="token punctuation">:</span> <span class="token punctuation">{</span> min<span class="token punctuation">:</span> <span class="token number">650</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> frameRate<span class="token punctuation">:</span> <span class="token number">60</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> width<span class="token punctuation">:</span> <span class="token punctuation">{</span> max<span class="token punctuation">:</span> <span class="token number">800</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+ </li>
+ <li>RTSP streaming support is now available (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=929372" title="FIXED: [RTSP][User Story]Support basic RTSP streaming function.">Bug 929372</a>).</li>
+ <li>The Resource Statistics API is implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=951976" title="FIXED: API for Resource Statistics">Bug 951976</a>).</li>
+ <li>The Resource Timing API is implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=822480" title="FIXED: Add in the Resource Timing API">Bug 822480</a>).</li>
+ <li>fastSeek API is now available for media elements (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=778077" title="FIXED: Implement fastSeek API on media elements (and switch the built-in controls over to it)">Bug 778077</a>).</li>
+ <li><span class="author-g-41mtsa1hor7b107c i">The <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a> is now exposed to Firefox OS (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=960426" title="FIXED: Support Network Information API in Firefox OS">Bug 960426</a>).</span></li>
+ <li><span class="author-g-41mtsa1hor7b107c i"><span class="author-g-41mtsa1hor7b107c i">The Wifi capabilities of the device can now be returned using <code>WifiManager.getCapabilities()</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1002314" title="FIXED: [B2G]To have a webapi providing WIFI capabilities of device">Bug 1002314</a>).</span></span></li>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.vibrate" title="The Navigator.vibrate() method pulses the vibration hardware on the device, if such hardware exists. If the device doesn't support vibration, this method has no effect. If a vibration pattern is already in progress when this method is called, the previous pattern is halted and the new one begins instead."><code>Navigator.vibrate()</code></a> method behavior has been adapted to the latest specification: too long vibrations are now truncated (<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014581" title="FIXED: Update Vibration API to conform to latest W3C spec">bug 1014581</a>).</li>
+ <li><span class="author-g-41mtsa1hor7b107c i">The <a href="/en-US/docs/Web/API/Device_Storage_API">Device Storage API</a> now has mount and unmount capabilities (privileged) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=971612" title='FIXED: Implement "mount", "unmount" API for device storage'>Bug 971612</a>).</span></li>
+ <li><span class="author-g-41mtsa1hor7b107c i"><span class="author-g-41mtsa1hor7b107c i">The Feature Detection API is now available (privileged) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=983502" title="FIXED: Implement and expose the feature detection API to privileged apps">Bug 983502</a>).</span></span></li>
+ <li> The <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/MSISDN_Verification_API">MSISDN Verification API</a> has been added (privileged) (<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=988469" title="FIXED: MSISDN verification API for privileged apps">bug 988469</a>).</li>
+ <li>A new CameraControl API is now available (privileged) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=909542" title="FIXED: Camera Control API clean-up/streamline">Bug 909542</a>).</li>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Data_Store_API">Data Store API</a> has been made available to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> (certified) (<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=949325" title="FIXED: C++ wrapper to support DataStore API on the worker">bug 949325</a>).</li>
+ <li>The <a href="/en-US/docs/Web/API/Device_Storage_API">Device Storage API</a> now uses the File System API spec (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=910412" title="FIXED: Change DeviceStorage API to use FileSystem API spec">Bug 910412</a>).</li>
+ <li><span class="author-g-41mtsa1hor7b107c i">The deprecated Audio Data API has been removed</span> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=927245" title="FIXED: Remove deprecated Audio Data API implementation">Bug 927245</a>).</li>
+</ul>
+
+<h3 id="CSS">CSS</h3>
+
+<ul>
+ <li><code>position:sticky</code> is now supported, and used in Gaia app layout (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=886646" title="FIXED: implement position:sticky">Bug 886646</a>).</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" title="The CSS flex-grow property specifies the flex grow factor of a flex item."><code>flex-grow</code></a> and  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" title="The CSS flex-shrink property specifies the flex shrink factor of a flex item."><code>flex-shrink</code></a> can now to transition between zero and non-zero values (<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=996945" title="FIXED: Allow flex-grow / flex-shrink to transition between zero and nonzero values">bug 996945</a>).</li>
+</ul>
+
+<h3 id="Technology_support_improvements">Technology support improvements</h3>
+
+<ul>
+ <li>Firefox OS 2.0 now supports H.264 video hardware, allowing you to create and playback video encoded using this codec much more efficiently. See <a href="https://developer.mozilla.org/en-US/Firefox_OS/Media_support">Media support on Firefox OS</a> for details.</li>
+</ul>
+
+<h2 id="Older_versions">Older versions</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.4">Firefox OS 1.4 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.3">Firefox OS 1.3 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.2">Firefox OS 1.2 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.1">Firefox OS 1.1 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>

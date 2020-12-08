@@ -1,0 +1,154 @@
+---
+title: JavaScript code modules
+slug: Mozilla/JavaScript_code_modules
+tags:
+  - Add-ons
+  - Extensions
+  - JavaScript
+  - Modules
+  - NeedsTranslation
+  - TopicStub
+  - XPCOM
+translation_of: Mozilla/JavaScript_code_modules
+---
+<div>
+ {{gecko_minversion_header("1.9")}}</div>
+<p>JavaScript code modules let multiple privileged JavaScript scopes share code. For example, a module could be used by Firefox itself as well as by extensions, in order to avoid code duplication.</p>
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="General_topics">General topics</h2>
+    <dl>
+     <dt>
+      <a href="/en-US/docs/JavaScript_code_modules/Using" title="./Using">Using JavaScript code modules</a></dt>
+     <dd>
+      An introduction to how to use JavaScript code modules.</dd>
+     <dt>
+      <a href="/en-US/docs/Components.utils.import" title="Components.utils.import">Component.utils.import</a></dt>
+     <dd>
+      How to import a JavaScript code module.</dd>
+     <dt>
+      <a href="/en-US/docs/Components.utils.unload" title="Components.utils.unload">Component.utils.unload</a> {{gecko_minversion_inline("7.0")}}</dt>
+     <dd>
+      How to unload a JavaScript code module.</dd>
+     <dt>
+      <a href="/en-US/docs/Code_snippets/Modules" title="Code_snippets/Modules">Code snippets: Modules</a></dt>
+     <dd>
+      Examples of how to use code modules.</dd>
+     <dt>
+      <a class="external" href="http://wiki.mozilla.org/Labs/JS_Modules">Mozilla Labs JS Modules</a></dt>
+     <dd>
+      This page features a list of JS modules, along with download links and documentation, that extension developers can use in their code.</dd>
+    </dl>
+    <dl>
+    </dl>
+   </td>
+   <td>
+    <h2 id="Standard_code_modules">Standard code modules</h2>
+    <dl>
+     <dt>
+      <a href="/en-US/docs/Addons/Add-on_Manager" title="Addons/Add-on_Manager">AddonManager.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>
+      Interface to install, manage, and uninstall add-ons.</dd>
+     <dt>
+      <a href="/en-US/docs/Addons/Add-on_Repository" title="Addons/Add-on Repository">AddonRepository.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>
+      Allows searching of the add-ons repository.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Assert.jsm" title="./Assert.jsm">Assert.jsm</a> {{gecko_minversion_inline("28.0")}}</dt>
+     <dd>
+      Implements the <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.1" title="http://wiki.commonjs.org/wiki/Unit_Testing/1.1">CommonJS Unit Testing specification version 1.1</a>, which provides a basic, standardized interface for performing in-code logical assertions with optional, customizable error reporting.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/js-ctypes" title="./ctypes.jsm">ctypes.jsm</a> {{fx_minversion_inline("3.6")}}</dt>
+     <dd>
+      Provides an interface that allows JavaScript code to call native libraries without requiring the development of an XPCOM component.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm" title="./DeferredTask.jsm">DeferredTask.jsm</a> {{gecko_minversion_inline("18.0")}}</dt>
+     <dd>
+      Run a task after a delay.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm" title="./Dict.jsm">Dict.jsm</a> {{gecko_minversion_inline("5.0")}}</dt>
+     <dd>
+      Provides an API for key/value pair dictionaries.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/DownloadLastDir.jsm" title="./DownloadLastDir.jsm">DownloadLastDir.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>
+      Provides the path to the directory into which the last download occurred.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm" title="./Downloads.jsm">Downloads.jsm</a> {{gecko_minversion_inline("23.0")}}</dt>
+     <dd>
+      Provides a single entry point to interact with the downloading capabilities of the platform.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/FileUtils.jsm" title="./FileUtils.jsm"><span style="font-weight: bold;">FileUtils.jsm</span></a> {{gecko_minversion_inline("1.9.2")}}</dt>
+     <dd>
+      Provides helpers for dealing with files.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Geometry.jsm" title="./Geometry.jsm">Geometry.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>
+      Provides routines for performing basic geometric operations on points and rectangles.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/ISO8601DateUtils.jsm" title="./ISO8601DateUtils.jsm">ISO8601DateUtils.jsm</a></dt>
+     <dd>
+      Provides routines to convert between JavaScript <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/ Reference/Global Objects/Date"><code>Date</code></a> objects and ISO 8601 date strings.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Log.jsm">Log.jsm</a> (formerly log4moz) {{gecko_minversion_inline("27.0")}}</dt>
+     <dd>
+      Provides a <a href="https://en.wikipedia.org/wiki/Log4j">log4j</a> style API for logging log messages to various endpoints, such as the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> or a file on disk. This module was formerly</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.jsm" title="./NetUtil.jsm"><span style="font-weight: bold;">NetUtil.jsm</span></a></dt>
+     <dd>
+      Provides helpful networking utility functions, including the ability to easily copy data from an input stream to an output stream asynchronously.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/openLocationLastURL.jsm" title="./openLocationLastURL.jsm">openLocationLastURL.jsm</a> {{gecko_minversion_inline("1.9.1.4")}}</dt>
+     <dd>
+      Provides access to the last URL opened using the "Open Location" option in the File menu.</dd>
+     <dt>
+      <a href="/en-US/docs/JavaScript_OS.File" title="/en-US/docs/JavaScript_OS.File">osfile.jsm</a> {{gecko_minversion_inline("16.0")}}</dt>
+     <dd>
+      Provides routines to access files. Read, write, rename, create directories, ...</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/PerfMeasurement.jsm" title="./PerfMeasurement.jsm">PerfMeasurement.jsm</a> {{fx_minversion_inline("4.0")}}</dt>
+     <dd>
+      Provides access to low-level hardware and OS performance measurement tools.</dd>
+     <dt>
+      <a href="/en-US/docs/Localization_and_Plurals" title="Localization and Plurals">PluralForm.jsm</a></dt>
+     <dd>
+      Provides an easy way to get the correct plural forms for the current locale, as well as ways to localize to a specific plural rule.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/PopupNotifications.jsm" title="./PopupNotifications.jsm">PopupNotifications.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>
+      Provides an easy way to present non-modal notifications to users.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm" title="./Promise.jsm">Promise.jsm</a> {{gecko_minversion_inline("25.0")}}</dt>
+     <dd>
+      Implements the <a class="external" href="https://github.com/promises-aplus/promises-spec/blob/1.0.0/README.md" title="https://github.com/promises-aplus/promises-spec/blob/1.0.0/README.md">Promises/A+</a> proposal as known in April 2013.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm" title="./Services.jsm">Services.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>
+      Provides getters for conveniently obtaining access to commonly-used services.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm" title="./source-editor.jsm">source-editor.jsm</a> {{fx_minversion_inline("11.0")}}</dt>
+     <dd>
+      The Source Editor is used by developer tools such as the Style Editor; this interface implements the editor and lets you interact with it.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Sqlite.jsm" title="./Sqlite.jsm">Sqlite.jsm</a> {{gecko_minversion_inline("20.0")}}</dt>
+     <dd>
+      A Promise-based API to {{ interface("mozIStorage") }}/SQLite.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Task.jsm" title="./Task.jsm">Task.jsm</a> {{gecko_minversion_inline("17.0")}}</dt>
+     <dd>
+      Implements a subset of <a class="external" href="http://taskjs.org/" title="http://taskjs.org/">Task.js</a> to make sequential, asynchronous operations simple, using the power of JavaScript's <code>yield</code> operator.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm" title="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm </a>{{gecko_minversion_inline("22.0")}}</dt>
+     <dd>
+      A pure JS implementation of <code>window.setTimeout</code>.</dd>
+     <dt>
+      <a href="/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm" title="./XPCOMUtils.jsm">XPCOMUtils.jsm</a></dt>
+     <dd>
+      Contains utilities for JavaScript components loaded by the JS component loader.</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>

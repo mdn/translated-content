@@ -1,0 +1,97 @@
+---
+title: overflow-clip-box
+slug: Web/CSS/overflow-clip-box
+tags:
+  - CSS
+  - CSS Eigenschaft
+  - CSS Referenz
+  - Referenz
+  - Web
+translation_of: Mozilla/Gecko/Chrome/CSS/overflow-clip-box
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<h2 id="Übersicht">Übersicht</h2>
+
+<p>Die <code>overflow-clip-box</code> <a href="/de/docs/Web/CSS">CSS</a> Eigenschaft bestimmt, bezogen auf welche Box die Zuschnitt erfolgt, wenn ein Überlauf stattfindet.</p>
+
+<div class="note">
+<p>In Gecko wird standardmäßig <code>padding-box</code> überall verwendet, aber <code>&lt;input type="text"&gt;</code> und ähnliche Elemente verwenden den Wert <code>content-box</code>. Vor Firefox 29 war das Verhalten fest kodiert; seitdem benutzt Firefox diese Eigenschaft, die auch an anderen Stellen verwendet werden kann. Beachte, dass diese Eigenschaft nur in {{Glossary("User Agent")}} Stylesheets und dem Chrome Kontext standardmäßig aktiviert ist.</p>
+</div>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css">/* Schlüsselwortwerte */
+overflow-clip-box: padding-box;
+overflow-clip-box: content-box;
+
+/* Globale Werte */
+overflow-clip-box: inherited;
+overflow-clip-box: initial;
+overflow-clip-box: unset;
+</pre>
+
+<h3 id="Werte">Werte</h3>
+
+<dl>
+ <dt><code>padding-box</code></dt>
+ <dd>Diese Schlüsselwort gibt an, dass der Zuschnitt relativ zur <a href="/de/docs/Web/CSS/Boxmodell">Paddingbox</a> erfolgt.</dd>
+ <dt><code>content-box</code></dt>
+ <dd>Diese Schlüsselwort gibt an, dass der Zuschnitt relativ zur <a href="/de/docs/Web/CSS/Boxmodell">Contentbox</a> erfolgt.</dd>
+</dl>
+
+<h3 id="Formale_Syntax">Formale Syntax</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="padding-box">padding-box</h3>
+
+<pre class="brush: html">&lt;div class="things"&gt;
+  &lt;input value="ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ" class="scroll padding-box"&gt;
+  &lt;div class="scroll padding-box"&gt;&lt;span&gt;ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.scroll {
+  overflow: auto;
+  padding: 0 30px;
+  width: 6em;
+  border: 1px solid black;
+  background: lime content-box;
+}</pre>
+
+<pre class="brush: css">.padding-box {
+  overflow-clip-box: padding-box;
+}
+</pre>
+
+<pre class="brush: js">function scrollSomeElements() {
+  var elms = document.querySelectorAll('.scroll');
+  for (i=0; i &lt; elms.length; ++i) {
+    elms[i].scrollLeft=80;
+  }
+}
+var elt = document.queryElementsByTagName('body')[0];
+
+elt.addEventListener("load", scrollSomeElements, false);
+</pre>
+
+<p>{{EmbedLiveSample('padding-box')}}</p>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Diese Eigenschaft wurde der W3C CSSWG vorgeschlagen; sie ist noch nicht standardisiert, aber, falls sie akzeptiert wird, sollte sie in {{SpecName("CSS3 Overflow")}} erscheinen.</p>
+
+<h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
+
+{{Compat("css.properties.overflow-clip-box")}}
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>Ähnliche CSS Eigenschaften: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
+</ul>

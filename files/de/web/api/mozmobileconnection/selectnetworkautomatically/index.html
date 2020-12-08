@@ -1,0 +1,57 @@
+---
+title: MozMobileConnection.selectNetworkAutomatically
+slug: Web/API/MozMobileConnection/selectNetworkAutomatically
+translation_of: Archive/B2G_OS/API/MozMobileConnection/selectNetworkAutomatically
+---
+<p>{{APIRef("Firefox OS")}} {{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>The <code>selectNetworkAutomatically</code> method is used to tell the radio to automatically select a network.</p>
+
+<div class="note">
+<p><strong>Note:</strong> If the network is actually changed by this request, the <code>voicechange</code> and <code>datachange</code> events are fired.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre>var request = navigator.mozMobileConnection.selectNetworks();</pre>
+
+<h3 id="Return">Return</h3>
+
+<p>A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.</p>
+
+<p>If the request fails, the request's <code>error</code> is one of:</p>
+
+<ul>
+ <li><code>RadioNotAvailable</code></li>
+ <li><code>RequestNotSupported</code></li>
+ <li><code>IllegalSIMorME</code></li>
+ <li><code>GenericFailure</code></li>
+</ul>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">var switchNetwork = navigator.mozMobileConnection.selectNetworkAutomatically();
+
+switchNetwork.onsuccess = function () {
+  console.log('Successful switch');
+}
+
+switchNetwork.onerror = function () {
+  console.log('Unable to switch: ' + this.error.name);
+}
+</pre>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p>Not part of any specification.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("MozMobileConnection")}}</li>
+ <li>{{domxref("DOMRequest")}}</li>
+</ul>

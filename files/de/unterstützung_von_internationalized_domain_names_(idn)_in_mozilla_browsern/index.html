@@ -1,0 +1,95 @@
+---
+title: Unterstützung von Internationalized Domain Names (IDN) in Mozilla Browsern
+slug: Unterstützung_von_Internationalized_Domain_Names_(IDN)_in_Mozilla_Browsern
+tags:
+  - MDC Archiv
+translation_of: Mozilla/Internationalized_domain_names_support_in_Mozilla
+---
+<h3 id="Einführung">Einführung</h3>
+
+<p>Netscape 7.1 ist der erste kommerzielle Browser, der eine eingebaute Unterstützung für Internationalized Domain Name nach dem neuen IETF RFC von 2003 hat.</p>
+
+<p>Ein Internationalized Domain Name (IDN) ist eine Domain oder ein host name, der andere Buchstaben als nur die in ASCII definierten nutzt. Bis vor kurzem erlaubten Domainnamen nur eine Teilmenge von Buchstaben (der 7-bit ASCII Charset). Durch die Verbreitung des Internet in weitere Länder der Erde, in denen kein Englisch gesprochen wird, wurde es immer mehr klar, dass die Beschränkung der Nutzung von Domainnamen auf eine Teilmenge des Latin alphabet nicht ideal ist.</p>
+
+<p>Viele der europäischen Sprachen benutzen das lateinische Alphabet mit zusätzlichen akzentuierten Buchstaben zum Schreiben, konnten diese aber nicht in Domainnamen benutzen. Sprecher dieser Sprachen war es nicht möglich bekannte Namen in ihrer jeweiligen Sprache als Teil eines Domainnames zu verwenden.</p>
+
+<p>In den letzten paar Jahren gab es eine Menge an IETF Aktivitäten um die Protokolle, die beim Handling von nicht-ASCII Buchstaben in Domainnamen beteiligt sind zu standardisieren. Im März 2003 wurden drei wichtige RfCs dazu vom IETF akzeptiert (<a class="external" href="http://www.ietf.org/rfc/rfc3490.txt">3490</a>, <a class="external" href="http://www.ietf.org/rfc/rfc3491.txt">3491</a>, <a class="external" href="http://www.ietf.org/rfc/rfc3492.txt">3492</a>). Diese drei neuen RfCs machen es nun für DNS Server möglich, dass diese nicht-ASCII Domains registrieren und ermöglichen es für Hersteller von Anwendungen, dass diese standardisierten Support für die Behandlung von nicht-ASCII Buchstaben in Domainnamen einbauen.</p>
+
+<h3 id="Wie_IDN_funktioniert">Wie IDN funktioniert</h3>
+
+<p>Wenn ein Webbrowser einen host name wie <em><a class="external" href="http://developer.mozilla.org" rel="freelink">http://developer.mozilla.org</a></em> sieht, gibt er eine Anfrage an den DNS Resolver Service (ist meistens im Betriebssystem eingebaut) weiter, welcher wiederum eine Anfrage zum nächsten DNS Server sendet, der eine IP Adresse zurück liefert, die zum Hostnamen passt. Diese IP Adresse wird dann dazu benutzt um zum fraglichen Webserver zu verbinden.</p>
+
+<p>IDN erlaubt Host- und Domainnamen mit nicht-ASCII Zeichen als Usereingabe in die Adressleiste eines Browsers oder für URLs, die einer Website eingebunden sind. Auf der Netzwerkprotokoll-Ebene ergibt sich keine Änderung an der Einschränkung, dass nur eine Teilmenge des ASCII-Zeichensatzes verwendet werden kann. Wenn die Eingabe des Benutzers nicht-ASCII Zeichen als Teil eines Domainnamens enthält oder eine Website einen Link enthält, der nicht-ASCII Zeichen verwendet muss die Anwendung dies in eine spezielles Format umwandeln welches nur die übliche Teilmenge des ASCII Zeichensatzes verwendet. <a class="external" href="http://tools.ietf.org/html/rfc3490" title="http://tools.ietf.org/html/rfc3490">RFC 3490</a> (Internationalizing Domain Names in Applications (IDNA)) definiert die Zeichen die in IDN benutzt werden. Auch definiert dieser wie eine Anwendung nicht-ASCII Zeichen auf so eine Weise verarbeiten soll, dass diese im Einklang steht mit bestehenden Restriktionen in Hinblick auf host names.</p>
+
+<h3 id="Wie_die_Mozilla_Browser_nicht-ASCII_Domainnamen_behandeln">Wie die Mozilla Browser nicht-ASCII Domainnamen behandeln</h3>
+
+<h4 id="Unicode_und_Nameprep">Unicode und Nameprep</h4>
+
+<p>Wenn Mozilla von einem Benutzer eine IDN Eingabe über die Adressleiste empfängt oder eine Anfrage nicht-ASCII host name links zu verarbeiten vorliegt, wandelt es zuerst diese Eingabe in Unicode um. Anschließend normalisiert und validiert es diese Eingabe um diese konform zu den Anforderungen an einen URI zu machen.</p>
+
+<p>Der Prozess wandelt Großbuchstaben in Kleinbuchstaben um, vereinheitlicht Zeichen mit mehreren Darstellungsweisen, z.B. die Umwandlung von Kana Zeichen halber Breite im Japanischen in Zeichen mit voller Breite, entfernt verbotene Zeichen (z.B. Leerzeichen), eliminiert Zweideutigkeiten in bidirektionalem Text (z.B. Arabisch und Hebräisch) und prüft ob nicht zugewiesene Zeichen aus dem Unicode Zeichenraum verwendet werden - diese werden für "query strings" erlaubt, sind aber bei "stored strings" wie z.B. bei der Dateneingabe für eine Domainregistrierung verboten.</p>
+
+<p>Dieser Prozess wird "Nameprep" genannt und wird nach dem <a class="external" href="http://tools.ietf.org/html/rfc3491" title="http://tools.ietf.org/html/rfc3491">RFC 3491</a> (en) (Nameprep: A Stringprep Profile for Internationalized Domain Names (IDN)) und dem <a class="external" href="http://tools.ietf.org/html/rfc3454" title="http://tools.ietf.org/html/rfc3454">RFC 3454</a> (en) (Preparation of Internationalized Strings ("stringprep")) ausgeführt.</p>
+
+<h4 id="ASCII-kompatible_Kodierung_(ACE)">ASCII-kompatible Kodierung (ACE)</h4>
+
+<p>Der nächste Schritt ist die Umwandlung der 8-Bit Zeichen in Unicode zu 7-Bit Zeichen, die nur bestimmte ASCII Zeichen verwenden dürfen. Während der Diskussionsphase von der Entwicklung des IDN Protokolls gab es ein paar konkurrierende, ASCII-kompatible Kodierungsschema (aka ASCII-compatible encoding (ACE)), aber man konnte sich schließlich darauf einigen einen Typ von ACE, der "Punnycode" genannt wird, zu standardisieren. Dieser ist definiert im <a class="external" href="http://tools.ietf.org/html/rfc3492" title="http://tools.ietf.org/html/rfc3492">RFC 3492</a> (en) (Punycode: A Bootstring encoding of Unicode for Internationalized Domain Names in Applications (IDNA)).</p>
+
+<p>Der Punnycode Vorschlag nutzt nur eine beschränkte Anzahl von ASCII Zeichen und Nummern (a-z0-0) und den Bindestrich (-). Er wurde als sprachunabhängig, überlegen in der Kompression, kompakt in Hinsicht auf die Codegröße, <em>round-trip safe</em> und überlegen in Hinsicht auf die Kodierung von chinesischen/japanischen/koreanischen Zeichen dargestellt.</p>
+
+<p>Der letzte Schritt des Prozesses ist es, dass ACE Präfix der Ausgabe der Nameprep/stringprep und Punnycode Verarbeitung voranzustellen. Da Punnycode nur ASCII Zeichen enthält, ist es möglich, dass sich diese Ausgabe, wenn auch unwahrscheinlich, mit einem existierenden Domainnamen deckt. Um so eine Kollision zu vermeiden definiert <a class="external" href="http://tools.ietf.org/html/rfc3490" title="http://tools.ietf.org/html/rfc3490">RFC 3490</a> ein spezielles Präfix, nämlich "xn--", für die Ausgabe des ACE (Punnycode). Andere Kodierungen benutzen andere Präfixe, z.B. "bq--" bei RACE, aber all diese außer dem Standard Präfix "xn--" für ACE sind jetzt in IDN verboten.</p>
+
+<h3 id="Domainnamen-Registrierung">Domainnamen-Registrierung</h3>
+
+<p>Nachdem die technischen Standards vom IETF eingeführt wurden, war das letzte noch verbleibende Problem, dass sich die Registrare auf eine internationale Richtlinie zur Verwendung von IDN Zeichen einigen müssen. Dies wurde mit der Veröffentlichung der <a class="external" href="http://www.icann.org/announcements/announcement-20jun03.htm">ICANN Richtlinie für IDN (en)</a> im Juni 2003 bewerkstelligt. Diese Richtlinie erlaubt es Domainnamen Registraren in jedem Land die Nutzung von bestimmten Zeichen in Domainnamen zu beschränken. Da das Unicode Repertoire Zeichen enthält, die in keiner lebenden Sprache mehr verwendet werden und es auch Zeichen gibt, die in den meisten Sprachen nicht für die Erstellung von URIs/URLs geeignet sind, erlaubt die ICANN Richtlinie dem <em>governing body</em> den Registraren jedes Landes angemessene Beschränkungen für die Benutzung solcher Zeichen zu setzen.</p>
+
+<p>Da dieses letzte Hindernis für eine Standardisierung nun aus dem Weg geräumt wurde, wird erwartet, dass die Registrare schnell voranschreiten um diese neuen RFCs für existierende und kommende IDN Registrierungen einzuführen.</p>
+
+<p>Der JPRS (<a class="external" href="http://jprs.jp/en/">Japan Registry Service (en)</a>) hat sich dazu entschieden <a class="external" href="http://jprs.jp/en/topics/030623.html">die neue RFC Implementierung (en)</a> am 10. Juli 2003, nur ein paar Wochen nachdem die Richtlinie des ICANN veröffentlich wurde, einzuführen. Dies macht es für Netscape 7.1/Mozilla 1.4 User möglich japanische Domainnamen unter der Topleveldomain .jp ohne weitere Änderungen nur mit der eingebauten IDN-Funktionalität aufzurufen.</p>
+
+<p> </p>
+
+<h3 id="Beispiele_aus_der_Wirklichkeit">Beispiele aus der Wirklichkeit</h3>
+
+<h4 id="Punycode">Punycode</h4>
+
+<p>Es gibt einige Beispiele von IDN, die Sie mit Netscape 7.1 testen können, welcher Punycode als standardmäßiges IDN Encoding nutzt. Zum Beispiel können die meisten Beispiellinks auf den folgenden Testseiten ohne weitere Einstellungen benutzt werden:</p>
+
+<ul>
+ <li><a class="external" href="http://www.nunames.nu/eu-lang-test.htm" rel="freelink">http://www.nunames.nu/eu-lang-test.htm</a> (Domain names mit Latin 1)</li>
+ <li><a class="external" href="http://www.nunames.nu/lldemo/default.htm" rel="freelink">http://www.nunames.nu/lldemo/default.htm</a> (Domain names in anderen Sprachen)</li>
+</ul>
+
+<p>Seit July 10, 2003 und danach, kann man eine Vielzahl von japanischen Domain name Seiten unter der .jp Toplevel-Domain ohne weitere Einstellungen in Netscape 7.1/Mozilla 1.4 erreichen:</p>
+
+<ul>
+ <li><a class="external" href="http://mitsuketa-nihongo.jp" rel="freelink">http://mitsuketa-nihongo.jp</a></li>
+</ul>
+
+<h4 id="RACE_(Row-based_ASCII_Compatible_Encoding)">RACE (Row-based ASCII Compatible Encoding)</h4>
+
+<p>Fast alle IDN Registrierungsdaten werden zu Punycode bis zum Ende 2003 verändert. Einige Länder werden schnell dabei sein, z.B. Japan wie oben genannt, aber andere wie .com und .net Toplevel-Domains werden länger brauchen.</p>
+
+<p>Die meisten der existierenden Seiten nutzen das ASCII-kompatible Encoding, welches als RACE oder "Row-based ASCII Compatible Encoding" bekannt ist, welches allerdings  kein akzeptierter Standard von IETF. Wenn Sie IDN Testseiten unter .com und .net Toplevel-Domains finden und wenn Sie nicht auf diese Seiten zugreifen können, sollten Sie den folgenden Workaround nutzen, bis Punycode komplett vorhanden ist:</p>
+
+<p>Netscape 7.1 oder Mozilla 1.4:</p>
+
+<ol>
+ <li>Tippen Sie <strong>about:config</strong> in die Adressleiste. Es werden alle Präferenzen für Ihr System angezeigt. Diese Einstellungen können geändert werden oder neue können erstellt werden ohne, dass der Browser beendet werden muss.</li>
+ <li>Erstellen Sie einen neuen Eintrag über <strong>Neu &gt; String</strong> über einen rechts-Klick. Der Name lautet: <strong>network.IDN_prefix</strong>. Der Wert sollte "bq--" lauten. Das wird von Puncycode auf RACE umschalten.</li>
+ <li>Als nächstes erstellen Sie einen weiteren Eintrag über rechts-Klick <strong>Neu &gt; Boolean</strong>. Der Name lautet: <strong>network.IDN_testbed</strong>. Der Wert sollte "true" lauten.</li>
+ <li>Jetzt wechseln Sie auf eine IDN Seite unter <em>.com</em> und <em>.net</em> Toplevel-Domain. Sie sollten erfolgreich auf eine dieser Beispielseiten landen.</li>
+ <li>Vergessen Sie nicht den Wert dieser Einstellungen auf "default" zu setzen, wenn Sie mit dem Testen fertig sind!</li>
+</ol>
+
+<h3 id="Vorbehalte_und_Rückschlüsse">Vorbehalte und Rückschlüsse</h3>
+
+<p>Netscape 7.1/Mozilla 1.4 verfügt über eine gute Unterstützung von Internationalized Domain Names und ist der erste Browser mit eingebautem Support für neue RFC's für IDN vom IETF. Das bedeutet, dass es nicht länger notwendig ist, dass ein Plug-in für nicht-ASCII Domain names installiert werden muss.</p>
+
+<p>Netscape/Mozillas Unterstützung für IDN ist nicht ohne Fehler. Ein bemerkenswerter Fehler ist, dass nicht-ASCII names nicht immer richtig in allen UI Bereichen angezeigt werden. Nicht-ASCII names werden nicht immer in der Adresszeile dargestellt, da ACE zu Unicode Umwandlung noch nicht implementiert ist.</p>
+
+<p>IDN ist ein globaler Trend und wird von einer Großzahl von Seiten angenommen und machen es für durchschnittliche Internetuser außerdem einfacher Webseiten zu finden. Viele Webseiten rund um die Welt sind werden ihre host names mit der entsprechenden Domain name Registrierung für ihre Toplevel-Domains einrichten. Netscape 7.1 und Mozilla 1.4 spielen dabei eine signifikante Rolle, damit IDN weiter entwickelt wird.</p>
+
+<p>Original author: Katsuhiko Momoi</p>
+
+<p> </p>

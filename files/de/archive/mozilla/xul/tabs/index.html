@@ -1,0 +1,123 @@
+---
+title: tabs
+slug: Archive/Mozilla/XUL/tabs
+tags:
+  - XUL Elemente
+  - XUL Referenz
+translation_of: Archive/Mozilla/XUL/tabs
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/de/docs/XUL_Referenz">XUL Referenz Startseite</a>    [
+ <a href="#Beispiele">Beispiele</a> |
+ <a href="#Attribute">Attribute</a> |
+ <a href="#Eigenschaften">Eigenschaften</a> |
+ <a href="#Methoden">Methoden</a> |
+ <a href="#Verwandte_Themen">Verwandte Themen</a> ]
+</span></div>
+<p>Behälter für einzelne Reiter. Ein <code>tabs</code>-Element kann innerhalb einer <code><a href="/de/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> benutzt werden und nimmt selbst <code><a href="/de/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code>-Elemente auf.</p>
+<p>Mehr Information im <a href="/de/XUL_Tutorial/Karteikarten" title="de/XUL_Tutorial/Karteikarten">XUL Tutorial</a>.</p>
+<dl> <dt>Attribute</dt> <dd><a href="#a-closebutton">closebutton</a>, <a href="#a-disableclose">disableclose</a>, <a href="#a-disabled">disabled</a>, <a href="#a-onclosetab">onclosetab</a>, <a href="#a-onnewtab">onnewtab</a>, <a href="#a-tabs.onselect">onselect</a>, <a href="#a-setfocus">setfocus</a>, <a href="#a-tabbox">tabbox</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-tooltiptextnew">tooltiptextnew</a>, <a href="#a-value">value</a>,</dd>
+</dl>
+<dl> <dt>Eigenschaften</dt> <dd><a href="#a-accessibleType">accessibleType</a>, <a href="#p-disabled">disabled</a>, <a href="#a-itemCount">itemCount</a>, <a href="#p-selectedIndex">selectedIndex</a>, <a href="#p-selectedItem">selectedItem</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a>,</dd>
+</dl>
+<dl> <dt>Methoden</dt> <dd><a href="#m-advanceSelectedTab">advanceSelectedTab</a>, <a href="#m-appendItem">appendItem</a>, <a href="#m-getIndexOfItem">getIndexOfItem</a>, <a href="#m-getItemAtIndex">getItemAtIndex</a>, <a href="#m-insertItemAt">insertItemAt</a>, <a href="#m-removeItemAt">removeItemAt</a></dd>
+</dl>
+<h3 id="Beispiele" name="Beispiele">Beispiele</h3>
+<p>(Beispiel benötigt)</p>
+<h3 id="Attribute" name="Attribute">Attribute</h3>
+<p> </p><div id="a-closebutton">
+
+<dl>
+  <dt>
+    <code id="a-closebutton"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/closebutton">closebutton</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)">Obsolete since Gecko 1.9.2</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    If this attribute is set to <code>true</code>, the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> row will have a "new tab" button and "close" button on the ends. This feature is used by the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> to provide the facilities for adding and closing tabs. You can set an image to the "new tab" and "close" buttons by applying them to the <code><a href="https://developer.mozilla.org/en-US/docs/XUL/Style/tabs-newbutton">tabs-newbutton</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/XUL/Style/tabs-closebutton">tabs-closebutton</a></code> classes respectively.</dd>
+</dl>
+</div> <div id="a-disableclose">
+
+
+<dl>
+ <dt><code id="a-disableclose"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disableclose">disableclose</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If this attribute is <code>true</code> the close button will be disabled.</dd>
+</dl>
+</div> <div id="a-disabled">
+
+<dl> <dt><code id="a-disabled"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt> <dd>Typ: <em>boolean</em></dd> <dd>Kennzeichnet, ob ein Element deaktiviert ist oder nicht. Wenn das Element auf  <code>true</code> gesetzt ist, ist das Element deaktiviert. Deaktivierte Elemente sind gewöhnlich mit einem grauen Text dargestellt. Wenn ein Element deaktiviert ist, wird es auf Anwenderaktionen nicht reagieren, es kann den Fokus nicht erlangen und das <code>command</code> Ereignis wird nicht ausgelöst. Das Element wird allerdings noch auf Mausereignisse antworten. Um das Element zu aktivieren, ist es besser das Attribut zu entfernen als es auf den Wert <code>false</code> zu setzen. Um den Wert dieses Attributs mittels JavaScript zu setzen oder abzurufen, sollte besser die <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/disabled">disabled</a></span></code> Eigenschaft verwendet werden.</dd>
+</dl>
+
+
+</div> <div id="a-onclosetab">
+
+
+<dl>
+ <dt><code id="a-onclosetab"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/onclosetab">onclosetab</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This script will be called when the close tab button is clicked.</dd>
+</dl>
+</div> <div id="a-onnewtab">
+
+
+<dl>
+ <dt><code id="a-onnewtab"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/onnewtab">onnewtab</a></code></dt>
+ <dd><strong><span class="highlightred">Not in Firefox</span></strong></dd>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This script will be called when the new tab button is clicked.</dd>
+</dl>
+</div> <div id="a-tabs.onselect">
+
+
+<dl>
+ <dt><code id="a-tabs.onselect"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabs.onselect">onselect</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event is sent to the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> element when this tab is changed.</dd>
+</dl>
+
+
+</div> <div id="a-setfocus">
+
+
+<dl>
+ <dt><code id="a-setfocus"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/setfocus">setfocus</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code> or omitted, the focus will be given to the first element in the corresponding <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code> when the tabs are navigated via the keyboard. If this attribute is <code>false</code>, the focus does not change during navigation.</dd>
+</dl>
+
+
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The tab order of the element. The tab order is the order in which the focus is moved when the user presses the "<code>tab</code>" key. Elements with a higher <code>tabindex</code> are later in the tab sequence.</dd>
+</dl>
+</div> <div id="a-tooltiptextnew">
+
+
+<dl>
+ <dt><code id="a-tooltiptextnew"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tooltiptextnew">tooltiptextnew</a></code></dt>
+ <dd><strong><span class="highlightred">Not in Firefox</span></strong></dd>
+ <dd>Type: <em>string</em></dd>
+ <dd>Used to set the text which appears in the tooltip when the user moves the mouse over the new button in the tab row.</dd>
+</dl>
+</div>
+<h3 id="Eigenschaften" name="Eigenschaften">Eigenschaften</h3>
+<p> </p><div id="p-accessibleType"></div> <div id="p-disabled"></div> <div id="p-itemCount"></div> <div id="p-selectedIndex"></div> <div id="p-selectedItem"></div> <div id="p-tabbox"></div> <div id="p-tabIndex"></div> <div id="p-value"></div>
+<h3 id="Methoden" name="Methoden">Methoden</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Geerbte Methoden</strong><br>
+<small><code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.addEventListener">element.addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.appendChild">node.appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.cloneNode">node.cloneNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.compareDocumentPosition">node.compareDocumentPosition()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.dispatchEvent">element.dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttribute">element.getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNode">element.getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNodeNS">element.getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNS">element.getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getBoundingClientRect">element.getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getClientRects">element.getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByClassName">element.getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagName">element.getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagNameNS">element.getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getFeature">node.getFeature()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getUserData">node.getUserData()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttribute">element.hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttributeNS">element.hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasAttributes">nodes.hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasChildNodes">nodes.hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.insertBefore">node.insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isDefaultNamespace">node.isDefaultNamespace()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isEqualNode">node.isEqualNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSameNode">node.isSameNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSupported">node.isSupported()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupNamespaceURI">node.lookupNamespaceURI()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupPrefix">node.lookupPrefix()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.normalize">node.normalize()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelector">element.querySelector()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelectorAll">element.querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttribute">element.removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNode">element.removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNS">element.removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.removeChild">node.removeChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeEventListener">element.removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.replaceChild">node.replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttribute">element.setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNode">element.setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNodeNS">element.setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNS">element.setAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.setUserData">node.setUserData()</a></code></small></p>
+
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Verwandte_Themen" name="Verwandte_Themen">Verwandte Themen</h3>
+<dl> <dt>Elemente</dt> <dd><code><a href="/de/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>, <code><a href="/de/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code>, <code><a href="/de/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code>, <code><a href="/de/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code>.</dd> <dt>Schnittstellen</dt> <dd><a href="/de/NsIAccessibleProvider" title="de/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="/de/NsIDOMXULSelectControlElement" title="de/NsIDOMXULSelectControlElement">nsIDOMXULSelectControlElement</a></dd>
+</dl>

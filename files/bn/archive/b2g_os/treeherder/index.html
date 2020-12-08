@@ -1,0 +1,50 @@
+---
+title: Treeherder
+slug: Archive/B2G_OS/Treeherder
+tags:
+  - Automation
+  - Jenkins
+  - Treeherder
+  - tests
+translation_of: Archive/B2G_OS/Automated_testing/Treeherder
+---
+<div class="summary">
+ <p><a href="https://treeherder.mozilla.org/" title="https://treeherder.mozilla.org/">Treeherder</a> হল সেটাই যেখানে বিল্ড বোটে ধারাবাহিক কাজ করার জন্য টেস্ট রেসাল্ট রান করার টেস্ট রিপোর্ট দেয়া হয়ে থাকে। আমরা সকল চেষ্টা এবং ট্রাঙ্ক শাখা এর সাথে b2g-inbound,মোযিলা সেন্ট্রাল,এবং Firefox OSএর প্রকাশ পাওয়া শাখার বিপক্ষে টেস্ট বিল্ড করি এবং রান করি।এই অনুচ্ছেদ আমাদের একটী বিস্তারিত ব্যাখা দিবে ট্রিহারডার এর সম্পর্কে এবং উপকারী টারমেনোলজী প্রদান করবে।</p>
+</div>
+<div class="note">
+ <p><strong>নোটঃদেখুন </strong><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Test_Execution_Chart" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Test_Execution_Chart">Test Execution Chart</a> টেস্ট কোথায় বেশি করে রান করে তা খুজে বের করার জন্য।</p>
+</div>
+<h2 id="Gaia-Try_Git_রিকুয়েস্ট_পুল_করে_এবং_Treeherder">Gaia-Try: Git রিকুয়েস্ট পুল করে এবং Treeherder</h2>
+<p>mozilla-b2g এর গায়া রেস্পেটরির বিপক্ষে যখন একটি পুল রিকুয়েস্ট করে থাকে , Mozilla সেই শাখা তুলে নেয় এবং রান করে থাকে Gaia suite এর টেস্ট ইহার বিপক্ষে ।কিভাবে Travis কাজ করে তা খুব একই রকম এর সাথে।</p>
+<p> <a href="https://github.com/try-server-hook">Try Server Hook</a>  আপনার পুল্ল রিকুয়েস্টে একটি লিঙ্কের সাথে Treeherder জবে কমেন্ট করে থাকবে যা আপনার পুল্ রিকুয়েস্টের বিপক্ষে কাজ করে থাকে।এখান থেকে আপনি আপনার প্যাচের স্থায়িত্ব পুনরায় দেখতে পারেন এবং সীমা টানার জন্য এটা উপযোগী।</p>
+<h2 id="Firefox_OS_গঠন_Device_এবংand_DesktopB2G_এর_জন্য">Firefox OS  গঠন Device এবংand DesktopB2G এর জন্য</h2>
+<p>প্রতিটি ক্ষেত্রে, Treeherder  উদ্যোগ নিবে কিছু ভিন্ন ডিভাইসের জন্য বিল্ড তৈরি করতে,Hamachi এবং Flameএবং আরো  desktopb2g বিল্ড যা linux64 এবং macos64 এর জন্য।</p>
+<h2 id="GIP_Device_টেস্ট_করে_Jenkins_রিপোর্ট_করতে">GIP Device টেস্ট করে Jenkins রিপোর্ট করতে</h2>
+<p>বিভিন্ন কারণে (বিশেষ করে টেস্ট রান টাইমে) ডিভাইস টেস্টটি Treeherder এর সাথে সঠিক ভাবে পরিষ্কার হতে পারেনা।এর পরিবর্তে,একটি বিদ্যমান  Jenkins কঞ্জিউম Treeherder এর বিল্ড এবং ডিভাইস টেস্ট রান করে থাকে,কিন্তু কম কম্পন এবং কম ট্রি গুলো  এর সাথে।এই ফলাফল এবং আর্টিফ্যাক্টস আউটপুট রিপোর্ট এর মত এবনহ লুকানো লগক্যাট পুনরায় রিপোর্টেড।আপনার  Treeherde এর "Show hidden jobs" বাটনে ক্লিক করুন রেসাল্ট দেখতে।</p>
+<h2 id="Treeherder_Try_jobs_রান_করা_Gaia_গঠন_এর_বিপক্ষে">Treeherder Try jobs রান করা Gaia গঠন এর বিপক্ষে</h2>
+<p>গেটকো প্যাচ টেস্ট করার জন্য Firefox OS এর বিপক্ষে এবংগায়া আপনি  Try তে স্বাভাবিক ভাবে পুশ করতে পারেন কিন্তু ব্যবহার করেন সঠিক ট্রাইচুসার সিন্টেক্স যা  Firefox OS এবং গায়া টেস্ট রান করা নিশ্চিত করে থাকে।একটি বৃদ্ধিকারক উপকারী হল আপনি গেটকো এবং গায়া প্যাচ টেস্ট করতে পারেন <a href="https://wiki.mozilla.org/ReleaseEngineering/TryServer#Using_a_custom_Gaia">pointing Try to your own Gaia fork </a>এর দ্বারা একযোগে এহা ব্যবহার করে ।যদি আপনি সরাসরি এটা ব্যবহার করতে না চান ,আপনি  <a href="https://github.com/mozilla/moz-git-tools">moz-git-tools</a> ব্যবহার করতে পারেন।<br>
+ <br>
+ যদি আপনি কখন  Try তে পুশ না করেন,আপনাকে প্রথমে  <a href="https://wiki.mozilla.org/ReleaseEngineering/TryServer#How_to_push_to_try">How to push to Try</a> এর প্রধান ধারনা পড়তে হবে।<br>
+ <br>
+ সকল ট্রাই জবস এর মত,এগুলোর দরকার লেভেল ১  <a href="http://www.mozilla.org/hacking/commit-access-policy/">commit access</a>।যদি আপনি সকল টেস্ট B2G Desktop বিল্ড রান করতে চান আপনার কাস্টম গায়া ফর্কের সাথে,সঠিক ট্রাইচুসার সিন্টেক্স হবে নিচের মতঃ</p>
+<pre>try: -b o -p linux64_gecko,linux32_gecko,macosx64_gecko -u all -t none</pre>
+<h2 id="Treeherder_glossary">Treeherder glossary</h2>
+<p>এই শখা কিছু সাধারন কাজ এবং সিন্টেক্স এর লিস্ট করে থাকে।</p>
+<h3 id="Builds_এর_ধরণ">Builds এর ধরণ</h3>
+<ul>
+ <li><strong><span class="os b2g-linux32">"B2G Desktop</span> &lt;platform&gt;" rows: </strong>এটা সুপারিশ করে থাকে b2g desktop বিল্ডে।</li>
+ <li><strong><span class="os b2g-device-image">"B2G Device Image" row</span></strong>: এগুলো গঠন করা হয়ে থাকে  b2g এর ছবি এর জন্য ,ডিভাইস(যেমন ফ্ল্যাম)এবং ইমুলেটর।</li>
+</ul>
+<h3 id="টেস্টের_ধরন">টেস্টের ধরন</h3>
+<ul>
+ <li><strong>Gu</strong>: এগুলো হল <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia unit tests</a></li>
+ <li><strong>Gij</strong>: এগুলো হল <a href="/en-US/docs/Trash/Gaia_integration_tests">Gaia integration tests</a> যা লেখা হয়ে থাকে JavaScript তে.</li>
+ <li><strong>Gip</strong>: এগুলো হল  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests">Gaia UI tests</a> যা লেখা হয়ে থাকে Python তে।</li>
+ <li><b>M</b>: এগুলো হল  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests">Mochitests</a>. এগুলর সাথে কিছু নাম্বার সংযুক্ত আছে যাতে তারা চাঙ্কে টেস্ট দেখা যায় ।</li>
+ <li><b>R, J and C</b>: এগুলো হল <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests">Reftests</a>, JSreftests, এবং Crashtests। এগুলোর নাম্বার  চাঙ্কের সাথে সংযুক্ত আছে।</li>
+ <li><b>X</b>:এগুলো হল  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/XPCShell" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/XPCShell">XPCShell</a> টেস্ট।</li>
+ <li><b>Mn</b>: এগুলো হল <a href="https://developer.mozilla.org/en/Marionette" title="https://developer.mozilla.org/en/Marionette">Marionette</a> এর উনিট টেস্ট (Marionette framework নিজেই টেস্ট  করে থাকে)।</li>
+ <li><strong>Mnw</strong>:Marionette এর উনিট এবংWebAPI টেস্টের এর মধ্যে এগুলো।</li>
+</ul>
+<h2 id="হ্যাকিং_Treeherder_এর_উপরে">হ্যাকিং Treeherder এর উপরে</h2>
+<p><a href="https://wiki.mozilla.org/Sheriffing/TBPL">https://wiki.mozilla.org/Sheriffing/TBP</a>  তে কিছু ডেভেলপমেন্ট নোট এবং সোর্স কোড আছে।</p>

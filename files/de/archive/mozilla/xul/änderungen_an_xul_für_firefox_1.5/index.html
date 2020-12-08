@@ -1,0 +1,44 @@
+---
+title: Änderungen an XUL für Firefox 1.5
+slug: Archive/Mozilla/XUL/Änderungen_an_XUL_für_Firefox_1.5
+tags:
+  - Firefox 1.5
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_Changes_for_Firefox_1.5
+---
+<p>Diese Seite liefert eine Übersicht über die wichtigsten Änderungen an <a href="/de/XUL" title="de/XUL">XUL</a> in <a href="/de/Firefox_1.5_für_Entwickler">Firefox 1.5</a> (<a href="/de/Gecko" title="de/Gecko">Gecko</a> 1.8). Weitere Änderungen, von denen man wissen sollte, beschreibt die Seite <a href="/de/XUL_Anwendungen_für_Firefox_1.5_anpassen" title="de/XUL_Anwendungen_für_Firefox_1.5_anpassen">XUL Anwendungen für Firefox 1.5 anpassen</a>.</p>
+<h3 id="&lt;scrollcorner>"><code>&lt;scrollcorner&gt;</code></h3>
+<p>Es wurde das Element <code>&lt;scrollcorner&gt;</code> hinzugefügt, welche für den kleinen Kasten an der Überkreuzung von horizontalen und vertikalen Scrollbalken benutzt wird.</p>
+<h3 id="&lt;richlistbox>_und_&lt;richlistitem>"><code>&lt;richlistbox&gt;</code> und <code>&lt;richlistitem&gt;</code></h3>
+<p>Die Elemente <code>&lt;richlistbox&gt;</code> und <code>&lt;richlistitem&gt;</code> werden zur Darstellung von Listen beliebigen Inhalts benutzt. Das erst genannte funktioniert ähnlich wie <code>&lt;listbox&gt;</code>, welches vorwiegend für Listen mit Texteinträgen entworfen wurde. Die <code>&lt;richlistbox&gt;</code> hat größtenteils die gleiche API wie <code>&lt;listbox&gt;</code> und einzelne Einträge, die mithilfe von <code>&lt;richlistitem&gt;</code> erzeugt wurden, können ausgewählt werden. Siehe <a href="/de/XUL/Richlistbox">Richlistbox</a> für weiterführende Information.</p>
+<h3 id="System_für_Voreinstellungen">System für Voreinstellungen</h3>
+<p>Einige Elemente wurden hinzugefügt, mit denen Voreinstellungsfenster erzeugt werden können. Diese Fenster sind spezielle Typen von Dialogfenstern, die mehrere Panels unterstützen, welche jeweils zusammen in der gleichen Datei oder in einer eigenen Datei gespeichert werden können. Ein Satz von Icons wird am oberen Rand des Dialogfensters angezeigt und erlaubt dem Benutzer das Umschalten zwischen den Panels. Zusammen mit den neuen Elementen und einigen zusätzlichen Attributen für bestehende Elemente ermöglichen sie auf einfache Weise das Setzen von Voreinstellungen, ohne dafür Code benutzen zu müssen. Für weiterführende Information, siehe <a href="/de/Preferences_System" title="de/Preferences_System">Preferences System</a>.</p>
+<h3 id="bfcache"><code>bfcache</code></h3>
+<p>Mozilla speichert nun das DOM der Seite zwischen. Daher führt das Navigieren vor und zurück nicht zu einem Neuladen der Seite, was die Navigation sehr viel effizienter macht. Die Ereignisse <code>pageshow</code> und <code>pagehide</code> treten beim Umschalten von einer Seite im Zwischenspeicher auf, wohingegen die Ereignisse <code>load</code> und <code>unload</code> nur beim Laden und Entladen einer Seite auftreten.</p>
+<p>Für weiterführende Information siehe: <a href="/de/Benutzen_des_Zwischenspeichers_in_Firefox_1.5_(caching)">Benutzen des Zwischenspeichers in Firefox 1.5</a>.</p>
+<h3 id="tabIndex"><code>tabIndex</code></h3>
+<p>Die Eigenschaft <code>tabIndex</code> wird nun auf die meisten Elemente angewendet.</p>
+<h3 id="&lt;radiogroup>"><code>&lt;radiogroup&gt;</code></h3>
+<p>Das Setzen der <code>value</code> Eigenschaft eines <code>&lt;radiogroup&gt;</code> Elements führt zur Auswahl des <code>&lt;radio&gt;</code> Elements in der Gruppe mit dem entsprechenden Wert.</p>
+<h3 id="Dialog_defaultButton_Eigenschaft">Dialog: <code>defaultButton</code> Eigenschaft</h3>
+<p>Die Bindung des <code>&lt;dialog&gt;</code> Elements besitzt nun die Eigenschaft <code>defaultButton</code>. Das Setzen dieser Eigenschaft ändert die Standardschaltfäche des Dialogfensters. Die eine Möglichkeit ist die Angabe einer der Schaltflächen der <code>&lt;dialog&gt;</code>-Bindung (anhand des Namens); die andere ist <code>none</code>, dann ist keine Schaltfläche die Standardschaltfläche.</p>
+<h3 id="Schaltfläche_icon_Eigenschaft">Schaltfläche: <code>icon</code> Eigenschaft</h3>
+<p>Die <code>icon</code> Eigenschaft einer Schaltfläche ermöglicht die Verwendung vordefinierter Icons als Bild der Schaltfläche. Beispielsweise erzeugt<code> &lt;button icon="help"&gt;</code> eine Schaltfläche mit einem Hilfe-Icon. Dies wird typischerweise auf Systemen mit GNOME eingesetzt, die möglichen Werte sind hier: <code>accept</code>, <code>cancel</code>, <code>help</code>, <code>open</code>, <code>save</code>, <code>find</code>, <code>clear</code>, <code>yes</code>, <code>no</code>, <code>apply</code>, <code>close</code>, <code>print</code>, <code>add</code>, <code>remove</code>, <code>refresh</code>, <code>go-forward</code>, <code>go-back</code>, <code>properties</code>, <code>select-font</code>, <code>select-color</code>, <code>network</code>.</p>
+<h3 id="&lt;menulist>"><code>&lt;menulist&gt;</code></h3>
+<p>Einträge in einer <code>&lt;menulist&gt;</code> können ein <code>description</code> Attribut haben, um zusätzlich beschreibenden Text neben dem Namen eines Eintrags anzuzeigen. Die Änderungsmethoden <code>appendItem</code> und<code> insertItemAt </code>von <code>menulist</code> verlangen ein zusätzliches <code>description</code> Argument, wenn Einträge auf diese Weise erzeugt werden.</p>
+<h3 id="&lt;listbox>"><code>&lt;listbox&gt;</code></h3>
+<p>Die Methode <code>removeItemAt</code> war augrund eines Fehlers ({{ Bug(236068) }}) manchmal nicht nullbasiert. Dies wurde in Firefox 1.5 behoben und Code, der sich auf dieses nicht nullbasierte Verhalten verlässt, sollte entsprechend geändert werden.</p>
+<h3 id="&lt;stringbundle>"><code>&lt;stringbundle&gt;</code></h3>
+<p>Das <code>&lt;stringbundle&gt;</code> Element hat eine Eigenschaft <code>strings</code> dazu bekommen, die eine Aufzählung aller im Bündel enthaltenen Zeichenketten ermöglicht.</p>
+<h3 id="Ziehbare_Reiter">Ziehbare Reiter</h3>
+<p>Von jetzt an erlaubt der Tab-Browser ein Neuanordnen der Reiter durch einfaches Ziehen.</p>
+<h3 id="&lt;tabbox>"><code>&lt;tabbox&gt;</code></h3>
+<p>Das <code>&lt;tabbox&gt;</code> Element besitzt nun ein Attribut <code>selectedIndex</code> zur Angabe desjenigen Reiters, der standardmäßig gewählt sein soll.</p>
+<h3 id="Überlagerungen_dynamisch_laden">Überlagerungen dynamisch laden</h3>
+<p>XUL untersützt nun das dynamische Laden von <a href="/de/XUL_Overlays" title="de/XUL_Overlays">Überlagerungen</a> mithilfe der Funktion <code><a href="/de/DOM/document.loadOverlay" title="de/DOM/document.loadOverlay">document.loadOverlay</a></code>.</p>
+<div class="originaldocinfo">
+<h3 id="Information_zum_Originaldokument">Information zum Originaldokument</h3>
+<ul> <li>Autor: Neil Deakin</li>
+</ul>
+</div>
+<p>{{ languages( { "en": "en/XUL_Changes_for_Firefox_1.5", "fr": "fr/Modifications_XUL_pour_Firefox_1.5", "ja": "ja/XUL_Changes_for_Firefox_1.5", "pl": "pl/Zmiany_w_XUL-u_w_Firefoksie_1.5" } ) }}</p>

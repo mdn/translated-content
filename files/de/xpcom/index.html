@@ -1,0 +1,66 @@
+---
+title: XPCOM
+slug: XPCOM
+tags:
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM
+---
+<div class="callout-box"><strong>Einführung in XPCOM</strong>
+<p>Ein fünfteiliges Tutorial auf <a class="external" href="http://www.ibm.com/developerworks/">IBM developerWorks</a>: <a class="external" href="http://www.ibm.com/developerworks/webservices/library/co-xpcom.html">Teil I</a>, <a class="external" href="http://www.ibm.com/developerworks/webservices/library/co-xpcom2.html">Teil II</a>, <a class="external" href="http://www.ibm.com/developerworks/webservices/library/co-xpcom3.html">Teil III</a>, <a class="external" href="http://www.ibm.com/developerworks/webservices/library/co-xpcom4/">Teil IV</a>, <a class="external" href="http://web.archive.org/web/20080201111622/http://www.ibm.com/developerworks/webservices/library/co-xpcom5.html" title="http://web.archive.org/web/20080201111622/http://www.ibm.com/developerworks/webservices/library/co-xpcom5.html">Teil V</a></p>
+</div>
+
+<div class="warning">
+<p><strong>XPCOM is no longer available for use by Firefox extensions. Use <a href="/en-US/Add-ons/WebExtensions">WebExtensions</a> instead.</strong></p>
+</div>
+
+<div>
+<p>Das <strong>Cross Platform Component Object Model (XPCOM)</strong> ist ein plattformübergreifendes Komponentenmodell, vergleichbar mit Microsoft COM. Es verfügt über mehrere <a href="/de/docs/XPCOM/Sprachbindungen" title="de/XPCOM/Sprachbindungen">Sprachbindungen</a>, die es ermöglichen XPCOM Komponenten in JavaScript, Java, und Python neben C++ zu implementieren. Die Schnittstellen sind im IDL-Dialekt <a href="/de/docs/XPIDL" title="de/XPIDL">XPIDL</a> definiert.</p>
+
+<p>XPCOM bietet selbst eine Reihe von Kernkomponenten und Klassen an, z.B. Datei- und Speichermanagement, Threads, Grundlegende Datenstrukturen (Strings, Arrays, Variants), etc. Der Großteil der XPCOM-Komponenten ist kein Teil des Kerns und wird durch andere Plattformteile (z.B. <a href="/de/docs/Gecko" title="de/Gecko">Gecko</a> oder <a href="/de/docs/Necko" title="de/Necko">Necko</a>) oder durch eine Anwendung oder sogar durch eine Erweiterung bereit gestellt.</p>
+</div>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 class="Documentation" id="Dokumentation" name="Dokumentation">Dokumentation</h2>
+
+    <dl>
+     <dt><a href="/de/docs/XPCOM_API_Referenz" title="de/XPCOM_API_Referenz">XPCOM API Referenz</a></dt>
+     <dd>Dokumentation der Kernkomponenten, Schnittstellen und Funktionen von XPCOM.</dd>
+     <dt><a href="/de/docs/XPCOM/XPCOM_Änderungen_in_Gecko_2.0" title="de/XPCOM/XPCOM_Änderungen_in_Gecko_2.0">XPCOM Änderungen in Gecko 2.0</a></dt>
+     <dd>Es gab eine Reihe von Änderungen in Gecko 2.0 die die Kompatibilität von XPCOM Komponenten betreffen. Dieser Artikel gibt detailliertere Auskunft darüber.</dd>
+     <dt><a href="/de/docs/XPCOM/Interne_Strings" title="de/XPCOM/Interne_Strings">Strings</a>, <a href="/de/docs/XPCOM/Hashtable" title="de/XPCOM/Hashtable">Hashtable</a>, und <a href="/de/docs/XPCOM/Arrays" title="de/XPCOM/Arrays">Arrays</a></dt>
+     <dd>Verwendung von grundlegenden Datenstrukturen.</dd>
+     <dt><a href="/de/docs/XPCOM_Glue" title="de/XPCOM_Glue">XPCOM Glue</a></dt>
+     <dd>XPCOM Glue ermöglicht die Verwendung von XPCOM Hilfsfunktionen und -Klassen ohne eine Abhängigkeit zu Teilen von XPCOM (xpcom_core.{dll,so,dylib}) herzustellen.</dd>
+     <dt><a href="/de/docs/XPCOM_Komponenten_erstellen" title="de/XPCOM_Komponenten_erstellen">XPCOM Komponenten erstellen</a></dt>
+     <dd>Dieser Artikel erklärt wie man eine XPCOM Komponente baut, die das Browserverhalten kontrolliert.</dd>
+     <dt><a href="/de/docs/XPCOM_Komponenten_in_JavaScript" title="de/XPCOM_Komponenten_in_JavaScript">XPCOM Komponenten in JavaScript</a></dt>
+     <dd>Schnelleinstieg in das Schreiben von JavaScript Komponenten.</dd>
+     <dt><a href="/de/docs/Erstellen_von_Firefox_Erweiterungen_mit_dem_Mozilla_Build_System" title="de/Erstellen_von_Firefox_Erweiterungen_mit_dem_Mozilla_Build_System">Erstellen von Firefox Erweiterungen mit dem Mozilla Build System</a></dt>
+     <dd>Das Erstellen von <em>»Erweiterungen«</em> soll nicht verwirren, es geht in diesem Artikel hauptsächlich um binäre Komponenten.<br>
+     <a class="external" href="http://www.iosart.com/firefox/xpcom/">Linux und Windows</a>, <a class="external" href="http://starkravingfinkle.org/blog/2006/10/mozilla-platform-xpcom-in-c/">Windows</a>, <a class="external" href="http://wanderingstan.com/2007-11-16/geekout_how_to_make_a_c_xpcom_component">Redux</a>, <a class="external" href="http://rcrowley.org/2007/07/17/cross-platform-xpcom-a-howto/">OS/X</a> (en)</dd>
+     <dt><a href="/de/docs/XPCOM_in_JavaScript_ohne_Leaks_verwenden" title="de/XPCOM_in_JavaScript_ohne_Leaks_verwenden">XPCOM in JavaScript ohne Leaks verwenden</a></dt>
+     <dd>XPCOM in JavaScript (auch als <a href="/de/docs/XPConnect" title="de/XPConnect">XPConnect</a> bekannt) ist eine Umgebung in der Speicherlecks nicht offensichtlich sind. Es kommt schon mal vor, dass der JavaScript-Code Leaks aufweist.</dd>
+    </dl>
+
+    <p><span class="alllinks"><a href="/de/docs/tag/XPCOM" title="/tag/XPCOM">Alle anzeigen...</a></span></p>
+   </td>
+   <td>
+    <h2 class="Tools" id="Tools" name="Tools">Tools</h2>
+
+    <ul>
+     <li><a class="external" href="http://ted.mielczarek.org/code/mozilla/jscomponentwiz/">JavaScript Komponentenassistent </a></li>
+     <li><a class="external" href="http://www.mytools360.com-a.googlepages.com/home#XPComPro" title="http://www.mytools360.com-a.googlepages.com/home#XPComPro">Visual C++ Komponentenassistent</a></li>
+    </ul>
+
+    <h2 class="Related_Topics" id="Verwandte_Themen">Verwandte Themen</h2>
+
+    <ul>
+     <li><a href="/de/docs/XPCOM/Sprachbindungen" title="de/XPCOM/Sprachbindungen">Sprachbindungen</a>, <a href="/de/docs/JavaXPCOM" title="de/JavaXPCOM">JavaXPCOM</a>, <a href="/de/docs/XPConnect" title="de/XPConnect">XPConnect</a>, <a href="/de/docs/PlXPCOM" title="de/PlXPCOM">PlXPCOM</a>, <a href="/de/docs/PyXPCOM" title="de/PyXPCOM">PyXPCOM</a>, <a href="/de/docs/RbXPCOM" title="de/RbXPCOM">RbXPCOM</a>, <a href="/de/docs/JavaScript" title="de/JavaScript">JavaScript</a></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>

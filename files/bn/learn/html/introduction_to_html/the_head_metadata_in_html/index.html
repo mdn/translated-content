@@ -1,0 +1,286 @@
+---
+title: What’s in the head? Metadata in HTML
+slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+---
+<div><font><font>{{LearnSidebar}}</font></font></div>
+
+<div><font><font>{{পূর্ববর্তীমেনেক্সট ("শিখুন / এইচটিএমএল / ভূমিকা_ টুটোঅ্যাপ / গেটিং_স্টার্ট" "" শিখুন / এইচটিএমএল / পরিচিতি_ টুআউটএইচএমএল / এইচটিএমএল_পাঠন_ফান্ডমেন্টস ")," শিখুন / এইচটিএমএল / ভূমিকা_to_HTML ")}</font></font></div>
+
+<p class="summary"><font><font>এইচটিএমএল ডকুমেন্টের {। শব্দকোষ ("প্রধান", "মাথা")} এমন অংশ যা পৃষ্ঠাটি লোড হওয়ার পরে ওয়েব ব্রাউজারে প্রদর্শিত হয় না। </font><font>এটিতে {t htmlelement ("শিরোনাম")} page পৃষ্ঠা, {{গ্লসারি ("CSS")) links (আপনি যদি CSS এর সাথে আপনার HTML বিষয়বস্তু স্টাইল করতে পছন্দ করেন), কাস্টম ফেভিকনগুলির লিঙ্ক এবং অন্যান্য সম্পর্কিত তথ্য রয়েছে মেটাডেটা (এইচটিএমএল সম্পর্কিত ডেটা, যেমন লেখক, এবং গুরুত্বপূর্ণ কীওয়ার্ড যা দস্তাবেজ বর্ণনা করে mark) আপনাকে নিবন্ধের সাথে কাজ করার জন্য একটি ভাল ভিত্তি দেওয়ার জন্য এই নিবন্ধে আমরা উপরের এবং আরও অনেকগুলি কভার করব।</font></font></p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row"><font><font>পূর্বশর্ত:</font></font></th>
+   <td><font><font>এইচটিএমএল দিয়ে </font></font><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"><font><font>শুরু করার ক্ষেত্রে</font></font></a><font><font> কভার হিসাবে বেসিক এইচটিএমএল পরিচিতি </font><font>।</font></font></td>
+  </tr>
+  <tr>
+   <th scope="row"><font><font>উদ্দেশ্য:</font></font></th>
+   <td><font><font>এইচটিএমএল হেড, তার উদ্দেশ্য, এটিতে থাকা সবচেয়ে গুরুত্বপূর্ণ আইটেমগুলি এবং এটি HTML ডকুমেন্টে কী প্রভাব ফেলতে পারে তা সম্পর্কে জানতে।</font></font></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="এইচটিএমএল_প্রধান_কি"><font><font>এইচটিএমএল প্রধান কি?</font></font></h2>
+
+<p><font><font>আসুন </font></font><a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document"><font><font>আমরা আগের প্রবন্ধে কভার করা</font></font></a><font><font> সাধারণ </font><a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document"><font>HTML নথিটি আবার</font></a><font> ঘুরে দেখি </font><font>:</font></font></p>
+
+<pre class="notranslate">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;My test page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is my page&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p><font><font>এইচটিএমএল হেড হ'ল t t এইচটিএম্লেলেটমেন্ট ("মাথা")}} উপাদানটির বিষয়বস্তু - {t এইচটিএমলেলেট ("বডি")}} উপাদান (যা ব্রাউজারে লোড করার সময় পৃষ্ঠায় প্রদর্শিত হয়) এর বিপরীতে, মাথার সামগ্রীটি পৃষ্ঠায় প্রদর্শিত হয় না। </font><font>পরিবর্তে, দস্তাবেজের বিষয়ে প্রধানের কাজটি ss। শব্দকোষ ("মেটাডাটা", "মেটাডেটা") contain contain থাকা। </font><font>উপরের উদাহরণে, মাথাটি বেশ ছোট:</font></font></p>
+
+<pre class="notranslate">&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;My test page&lt;/title&gt;
+&lt;/head&gt;</pre>
+
+<p><font><font>বড় পৃষ্ঠাগুলিতে তবে মাথা বেশ পূর্ণ হতে পারে। </font><font>আপনার পছন্দের কয়েকটি ওয়েবসাইটে যাওয়ার চেষ্টা করুন এবং </font></font><a href="/en-US/docs/Learn/Discover_browser_developer_tools"><font><font>বিকাশকারী সরঞ্জামগুলি</font></font></a><font><font> তাদের মাথার সামগ্রীগুলি পরীক্ষা করতে </font><font>ব্যবহার করুন </font><font>। </font><font>এখানে আমাদের উদ্দেশ্যটি আপনাকে যে কীভাবে সম্ভবত মাথার মধ্যে রাখা যেতে পারে সেগুলি কীভাবে ব্যবহার করবেন তা আপনাকে দেখানো নয়, বরং আপনাকে কীভাবে প্রধান উপাদানগুলিকে মাথার মধ্যে অন্তর্ভুক্ত করতে চাইবেন এবং কীভাবে আপনাকে কিছুটা পরিচয় দিতে হবে তা কীভাবে ব্যবহার করবেন তা শেখানো। </font><font>চল শুরু করি.</font></font></p>
+
+<h2 id="একটি_শিরোনাম_যুক্ত_করা_হচ্ছে"><font><font>একটি শিরোনাম যুক্ত করা হচ্ছে</font></font></h2>
+
+<p><font><font>আমরা ইতিমধ্যে ক্রিয়াকলাপে {t htmlelement ("শিরোনাম")}} উপাদানটি দেখেছি - এটি নথিতে একটি শিরোনাম যুক্ত করতে ব্যবহার করা যেতে পারে। </font><font>তবে এটি আপনার শরীরের সামগ্রীতে শীর্ষ স্তরের শিরোনাম যুক্ত করতে ব্যবহৃত which t htmlelement ("h1")}} উপাদানটির সাথে বিভ্রান্ত হতে পারে - এটি কখনও কখনও পৃষ্ঠা শিরোনাম হিসাবেও উল্লেখ করা হয়। </font><font>তবে এগুলি আলাদা জিনিস!</font></font></p>
+
+<ul>
+ <li><font><font>ব্রাউজারে লোড করার সময় {t htmlelement ("h1")}} উপাদানটি পৃষ্ঠায় উপস্থিত হয় - সাধারণত আপনার পৃষ্ঠার সামগ্রীর শিরোনাম চিহ্নিত করার জন্য এটি প্রতি পৃষ্ঠায় একবার ব্যবহার করা উচিত (গল্পের শিরোনাম, বা সংবাদ শিরোনাম, বা আপনার ব্যবহারের জন্য যা উপযুক্ত তা।)</font></font></li>
+ <li><font><font>T t এইচটিএমলেলেট ("শিরোনাম")}} উপাদানটি মেটাডেটা যা সামগ্রিক এইচটিএমএল ডকুমেন্টের শিরোনামকে উপস্থাপন করে (দস্তাবেজের সামগ্রী নয়))</font></font></li>
+</ul>
+
+<h3 id="সক্রিয়_শেখা_একটি_সাধারণ_উদাহরণ_পরিদর্শন_করা"><font><font>সক্রিয় শেখা: একটি সাধারণ উদাহরণ পরিদর্শন করা</font></font></h3>
+
+<ol>
+ <li><font><font>এই সক্রিয় শেখার শুরু করতে, আমরা চাই আপনি আমাদের গিটহাব রেপোতে গিয়ে আমাদের </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html"><font><font>শিরোনাম-উদাহরণ</font></font></a><font><font> । </font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html"><font>Html পৃষ্ঠাটির</font></a><font> একটি অনুলিপি ডাউনলোড করুন </font><font>। </font><font>এটি করার জন্য, হয়</font></font>
+
+  <ol>
+   <li><font><font>পৃষ্ঠার বাইরে কোডটি অনুলিপি করুন এবং আপনার কোড সম্পাদকে একটি নতুন পাঠ্য ফাইলে আটকান, তারপরে এটি কোনও বোধগম্য জায়গায় সংরক্ষণ করুন।</font></font></li>
+   <li><font><font>গিটহাব পৃষ্ঠায় "কাঁচা" বোতাম টিপুন, যার ফলে কাঁচা কোড প্রদর্শিত হবে (সম্ভবত একটি নতুন ব্রাউজার ট্যাবে)। </font><font>এরপরে, আপনার ব্রাউজারের  </font></font><em><font><font>ফাইল&gt; পৃষ্ঠা হিসাবে সংরক্ষণ করুন ...</font></font></em><font><font> মেনু চয়ন করুন এবং ফাইলটি সংরক্ষণ করার জন্য একটি বুদ্ধিমান জায়গা চয়ন করুন।</font></font></li>
+  </ol>
+ </li>
+ <li><font><font>এখন আপনার ব্রাউজারে ফাইলটি খুলুন। </font><font>আপনার এইরকম কিছু দেখতে পাওয়া উচিত:</font></font>
+  <p><img alt="&lt;শিরোনাম> উপাদানটিতে শিরোনামযুক্ত একটি সাধারণ ওয়েব পৃষ্ঠা এবং &lt;h1> উপাদানটিকে &lt;h1> সেট করা আছে।" src="https://mdn.mozillademos.org/files/12323/title-example.png" style="display: block; margin: 0 auto;"><font><font>এটি এখন সম্পূর্ণ স্পষ্ট হওয়া উচিত যেখানে </font></font><code>&lt;h1&gt;</code><font><font>সামগ্রীটি প্রদর্শিত হবে এবং যেখানে </font></font><code>&lt;title&gt;</code><font><font>সামগ্রী প্রদর্শিত হবে!</font></font></p>
+ </li>
+ <li><font><font>আপনার কোড সম্পাদকে কোডগুলি খোলার চেষ্টা করা উচিত, এই উপাদানগুলির বিষয়বস্তু সম্পাদনা করে, তারপরে আপনার ব্রাউজারে পৃষ্ঠাটি রিফ্রেশ করুন। </font><font>এটা দিয়ে কিছু মজা আছে।</font></font></li>
+</ol>
+
+<p><code>&lt;title&gt;</code><font><font>উপাদান বিষয়বস্তু অন্যান্য উপায়ে ব্যবহার করা হয়। </font><font>উদাহরণস্বরূপ, আপনি যদি পৃষ্ঠাটি বুকমার্ক করার চেষ্টা করেন ( </font></font><em><font><font>বুকমার্কস&gt; এই পৃষ্ঠাটি</font></font></em><font><font> বুকমার্ক করুন </font><font>বা ফায়ারফক্সের URL বারে তারকা আইকন), আপনি </font></font><code>&lt;title&gt;</code><font><font>প্রস্তাবিত বুকমার্কের নাম হিসাবে ভরাট সামগ্রী </font><font>দেখতে পাবেন </font><font>।</font></font></p>
+
+<p><img alt="ফায়ারফক্সে একটি ওয়েবপেজ বুকমার্ক করা হচ্ছে;  বুকমার্কের নামটি &lt;শিরোনাম> উপাদানটির সামগ্রীতে স্বয়ংক্রিয়ভাবে পূর্ণ হয়ে গেছে filled" src="https://mdn.mozillademos.org/files/12337/bookmark-example.png" style="display: block; margin: 0 auto;"></p>
+
+<p><code>&lt;title&gt;</code><font><font>বিষয়বস্তু এছাড়াও, অনুসন্ধান ফলাফল ব্যবহার করা হয় যেমন আপনি নীচের দেখতে পাবেন।</font></font></p>
+
+<h2 id="মেটাডেটা_&lt;মেটা>_উপাদান"><font><font>মেটাডেটা: &lt;মেটা&gt; উপাদান</font></font></h2>
+
+<p><font><font>মেটাডেটা এমন ডেটা যা ডেটা বর্ণনা করে এবং এইচটিএমএল একটি নথিতে মেটাডেটা যুক্ত করার একটি "অফিসিয়াল" উপায় রয়েছে - {{htmlelement ("meta")}। উপাদান। </font><font>অবশ্যই, আমরা এই নিবন্ধটিতে অন্যান্য জিনিসগুলির কথা বলছি তাও মেটাডেটা হিসাবে বিবেচনা করা যেতে পারে। </font><font>বিভিন্ন ধরণের </font></font><code>&lt;meta&gt;</code><font><font>উপাদান রয়েছে যা আপনার পৃষ্ঠার &lt;হেড&gt; এ অন্তর্ভুক্ত করা যেতে পারে তবে আমরা এ পর্যায়ে সেগুলি ব্যাখ্যা করার চেষ্টা করব না, কারণ এটি কেবল খুব বিভ্রান্ত হবে। </font><font>পরিবর্তে, আমরা আপনাকে কিছু ধারণা দেবো যা আপনি সাধারণত দেখতে পারেন, কেবল আপনাকে ধারণা দেওয়ার জন্য।</font></font></p>
+
+<h3 id="আপনার_নথির_অক্ষর_এনকোডিং_নির্দিষ্ট_করা"><font><font>আপনার নথির অক্ষর এনকোডিং নির্দিষ্ট করা</font></font></h3>
+
+<p><font><font>আমরা উপরের উদাহরণে দেখেছি, এই লাইনটি অন্তর্ভুক্ত ছিল:</font></font></p>
+
+<pre class="notranslate">&lt;meta charset="utf-8"&gt;</pre>
+
+<p><font><font>এই উপাদানটি কেবল নথির অক্ষর এনকোডিং নির্দিষ্ট করে - নথিটি ব্যবহারের জন্য অনুমোদিত এমন অক্ষর সেট। </font></font><code>utf-8</code><font><font>একটি সর্বজনীন চরিত্র সেট যা কোনও মানব ভাষা থেকে যে কোনও চরিত্রকে অন্তর্ভুক্ত করে। </font><font>এর অর্থ হ'ল আপনার ওয়েব পৃষ্ঠাটি যে কোনও ভাষা প্রদর্শিত হ্যান্ডেল করতে সক্ষম হবে; </font><font>সুতরাং আপনার তৈরি প্রতিটি ওয়েব পৃষ্ঠায় এটি সেট করা ভাল ধারণা! </font><font>উদাহরণস্বরূপ, আপনার পৃষ্ঠাটি ইংলিশ এবং জাপানিদের ঠিক জরিমানা করতে পারে:</font></font></p>
+
+<p><img alt="ইংরেজি এবং জাপানি অক্ষর সমন্বিত একটি ওয়েব পৃষ্ঠা, সর্বজনীন বা utf-8 এ অক্ষর এনকোডিং রয়েছে with  উভয় ভাষা সূক্ষ্ম প্রদর্শন করে," src="https://mdn.mozillademos.org/files/12343/correct-encoding.png" style="display: block; margin: 0 auto;"><font><font>আপনি যদি নিজের চরিত্রের এনকোডিং সেট করেন </font></font><code>ISO-8859-1</code><font><font>, উদাহরণস্বরূপ (লাতিন বর্ণমালার জন্য বর্ণচিহ্ন সেট করা), আপনার পৃষ্ঠার রেন্ডারিং সমস্ত গোলমেলে প্রদর্শিত হতে পারে:</font></font></p>
+
+<p><img alt="ইংরাজী এবং জাপানি অক্ষর সমন্বিত একটি ওয়েব পৃষ্ঠাতে লাতিনে অক্ষর এনকোডিং রয়েছে।  জাপানি চরিত্রগুলি সঠিকভাবে প্রদর্শিত হয় না" src="https://mdn.mozillademos.org/files/12341/bad-encoding.png" style="display: block; height: 365px; margin: 0px auto; width: 604px;"></p>
+
+<div class="note">
+<p><strong><font><font>দ্রষ্টব্য</font></font></strong><font><font> : কিছু ব্রাউজার (যেমন ক্রোম) স্বয়ংক্রিয়ভাবে ভুল এনকোডিংগুলি ঠিক করে দেয়, তাই আপনি কোন ব্রাউজারটি ব্যবহার করেন তার উপর নির্ভর করে আপনি যেভাবেই এই সমস্যাটি দেখতে পাবেন না। </font></font><code>utf-8</code><font><font>অন্য ব্রাউজারগুলিতে কোনও সম্ভাব্য সমস্যা এড়াতে আপনার পাতায় </font><font>এখনও কোনও এনকোডিং সেট করা উচিত </font><font>।</font></font></p>
+</div>
+
+<h3 id="সক্রিয়_শেখা_চরিত্রের_এনকোডিংয়ের_পরীক্ষা"><font><font>সক্রিয় শেখা: চরিত্রের এনকোডিংয়ের পরীক্ষা</font></font></h3>
+
+<p><font><font>এটি চেষ্টা করার জন্য, পূর্ববর্তী বিভাগে </font></font><code>&lt;title&gt;</code><font><font>( </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html"><font><font>শিরোনাম-উদাহরণ html পৃষ্ঠা</font></font></a><font><font> ) </font><font>আপনি প্রাপ্ত সাধারণ এইচটিএমএল টেমপ্লেটটি আবার ঘুরে দেখুন </font><font>, মেটা চরসেট মানটিতে পরিবর্তন করার চেষ্টা </font></font><code>ISO-8859-1</code><font><font>করুন এবং আপনার পৃষ্ঠায় জাপানিদের যুক্ত করুন। </font><font>এটি আমরা ব্যবহার করা কোড:</font></font></p>
+
+<pre class="brush: html notranslate"><font><font>&lt;p&gt; জাপানি উদাহরণ: ভাত গরম। </font><font>? &lt;/ P&gt;</font></font></pre>
+
+<h3 id="একজন_লেখক_এবং_বিবরণ_যুক্ত_করা_হচ্ছে"><font><font>একজন লেখক এবং বিবরণ যুক্ত করা হচ্ছে</font></font></h3>
+
+<p><font><font>অনেক </font></font><code>&lt;meta&gt;</code><font><font>উপাদান অন্তর্ভুক্ত </font></font><code>name</code><font><font>এবং </font></font><code>content</code><font><font>বৈশিষ্ট্য:</font></font></p>
+
+<ul>
+ <li><code>name</code><font><font>এটি হ'ল মেটা এলিমেন্টের ধরণ নির্দিষ্ট করে; </font><font>এটিতে কী ধরণের তথ্য রয়েছে।</font></font></li>
+ <li><code>content</code><font><font> প্রকৃত মেটা সামগ্রী নির্দিষ্ট করে।</font></font></li>
+</ul>
+
+<p><font><font>আপনার পৃষ্ঠায় অন্তর্ভুক্ত করতে দরকারী এমন দুটি মেটা উপাদান পৃষ্ঠার লেখককে সংজ্ঞায়িত করে এবং পৃষ্ঠার একটি সংক্ষিপ্ত বিবরণ সরবরাহ করে। </font><font>আসুন একটি উদাহরণ তাকান:</font></font></p>
+
+<pre class="brush: html notranslate"><font><font>&lt;মেটা নাম = "লেখক" সামগ্রী = "ক্রিস মিলস"&gt;</font></font><font><font>
+&lt;মেটা নাম = "বিবরণ" সামগ্রী = "এমডিএন ওয়েব ডক্স লার্নিং এরিয়া সরবরাহ করার লক্ষ্য</font></font><font><font>
+ওয়েবে তাদের জানতে প্রয়োজনীয় সমস্ত কিছুর সাথে ওয়েবে শুরু করুন</font></font><font><font>
+ওয়েব সাইট এবং অ্যাপ্লিকেশন বিকাশ করে শুরু হয়েছে ""&gt;</font></font></pre>
+
+<p><font><font>কোনও লেখককে নির্দিষ্ট করে দেওয়া বিভিন্ন উপকারে: এই পৃষ্ঠাটি কে লিখেছেন তা বুঝতে সক্ষম হওয়া কার্যকর, যদি বিষয়বস্তু সম্পর্কে আপনার কোনও প্রশ্ন থাকে এবং আপনি তাদের সাথে যোগাযোগ করতে চান। </font><font>কিছু কন্টেন্ট ম্যানেজমেন্ট সিস্টেমে পৃষ্ঠা লেখকের তথ্য স্বয়ংক্রিয়ভাবে আহরণের এবং এ জাতীয় উদ্দেশ্যে এটি উপলব্ধ করার সুবিধা রয়েছে facilities</font></font></p>
+
+<p><font><font>আপনার পৃষ্ঠার সামগ্রীর সাথে সম্পর্কিত কীওয়ার্ড সহ একটি বিবরণ উল্লেখ করা দরকারী কারণ এটি আপনার পৃষ্ঠায় অনুসন্ধান ইঞ্জিনগুলিতে সম্পাদিত প্রাসঙ্গিক অনুসন্ধানগুলিতে উচ্চতর প্রদর্শিত হওয়ার সম্ভাবনা রয়েছে (এই জাতীয় ক্রিয়াকলাপটিকে </font></font><a href="/en-US/docs/Glossary/SEO"><font><font>অনুসন্ধান ইঞ্জিন অপ্টিমাইজেশন</font></font></a><font><font> বা "এসইও" বলা হয়) )}}।)</font></font></p>
+
+<h3 id="সক্রিয়_শিক্ষণ_অনুসন্ধান_ইঞ্জিনগুলিতে_বর্ণনার_ব্যবহার"><font><font>সক্রিয় শিক্ষণ: অনুসন্ধান ইঞ্জিনগুলিতে বর্ণনার ব্যবহার</font></font></h3>
+
+<p><font><font>বর্ণনাটি অনুসন্ধান ইঞ্জিনের ফলাফল পৃষ্ঠাগুলিতেও ব্যবহৃত হয়। </font><font>এটি এক্সপ্লোর করার জন্য অনুশীলনের মধ্য দিয়ে যাওয়া যাক</font></font></p>
+
+<ol>
+ <li><a href="https://developer.mozilla.org/en-US/"><font><font>মজিলা বিকাশকারী নেটওয়ার্কের প্রথম পৃষ্ঠায়</font></font></a><font><font> যান </font><font>।</font></font></li>
+ <li><font><font>পৃষ্ঠার উত্স দেখুন (পৃষ্ঠায় ডান / </font></font><kbd>Ctrl</kbd><font><font>+ ক্লিক করুন, </font><font>প্রসঙ্গ মেনু থেকে </font></font><em><font><font>পৃষ্ঠা উত্স দেখুন</font></font></em><font><font> চয়ন করুন </font><font>)</font></font></li>
+ <li><font><font>বর্ণনা মেটা ট্যাগ সন্ধান করুন। </font><font>এটি এর মতো কিছু দেখবে (যদিও এটি সময়ের সাথে সাথে এটি পরিবর্তিত হতে পারে):</font></font>
+  <pre class="brush: html notranslate"><font><font>&lt;মেটা নাম = "বিবরণ" সামগ্রী = "এমডিএন ওয়েব ডক্স সাইট </font></font><font><font>
+  ওপেন ওয়েব প্রযুক্তি সম্পর্কিত তথ্য সরবরাহ করে </font></font><font><font>
+  এইচটিএমএল, সিএসএস এবং উভয় ওয়েব সাইট এবং এর জন্য এপিআই সহ </font></font><font><font>
+  প্রগতিশীল ওয়েব অ্যাপ্লিকেশন ""&gt;</font></font></pre>
+ </li>
+ <li><font><font>এখন আপনার পছন্দসই সার্চ ইঞ্জিনে "MDN ওয়েব ডক্স" অনুসন্ধান করুন (আমরা গুগল ব্যবহার করেছি)) আপনি অনুসন্ধানের ফলাফলটিতে ব্যবহৃত বিবরণ </font></font><code>&lt;meta&gt;</code><font><font>এবং </font></font><code>&lt;title&gt;</code><font><font>উপাদান সামগ্রীটি </font><font>লক্ষ্য করবেন </font><font>- অবশ্যই তা মূল্যবান!</font></font>
+  <p><img alt='"মজিলা বিকাশকারী নেটওয়ার্ক" এর জন্য ইয়াহু অনুসন্ধানের ফলাফল' src="https://mdn.mozillademos.org/files/16074/mdn-search-result.png" style="border-style: solid; border-width: 1px; display: block; height: 982px; margin: 0px auto; width: 1302px;"></p>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong><font><font>দ্রষ্টব্য</font></font></strong><font><font> : গুগলে আপনি মূল হোমপেজ লিঙ্কের নীচে তালিকাভুক্ত MDN ওয়েব ডক্সের কিছু প্রাসঙ্গিক উপ পৃষ্ঠা দেখতে পাবেন - এগুলিকে সাইটলিঙ্কস বলা হয় এবং </font></font><a href="http://www.google.com/webmasters/tools/"><font><font>গুগলের ওয়েবমাস্টার সরঞ্জামগুলিতে</font></font></a><font><font> কনফিগার করা যায় </font><font>- গুগল অনুসন্ধান ইঞ্জিনে আপনার সাইটের অনুসন্ধানের ফলাফলকে আরও উন্নত করার একটি উপায়।</font></font></p>
+</div>
+
+<div class="note">
+<p><strong><font><font>দ্রষ্টব্য</font></font></strong><font><font> : অনেকগুলি </font></font><code>&lt;meta&gt;</code><font><font>বৈশিষ্ট্য আর ব্যবহার করা হয় না। </font><font>উদাহরণস্বরূপ, কীওয়ার্ড </font></font><code>&lt;meta&gt;</code><font><font>এলিমেন্ট ( </font></font><code>&lt;meta name="keywords" content="fill, in, your, keywords, here"&gt;</code><font><font>) - যা বিভিন্ন অনুসন্ধানের পদগুলির জন্য সেই পৃষ্ঠার প্রাসঙ্গিকতা নির্ধারণের জন্য অনুসন্ধান ইঞ্জিনগুলির জন্য কীওয়ার্ড সরবরাহ করার কথা ছিল - অনুসন্ধান ইঞ্জিনগুলি দ্বারা উপেক্ষা করা হয়, কারণ স্প্যামাররা কেবলমাত্র শত শত কীওয়ার্ড সহ কীওয়ার্ডের তালিকাটি পূরণ করছিল, বাইসিং ফলাফলগুলি ।</font></font></p>
+</div>
+
+<h3 id="অন্যান্য_ধরণের_মেটাডেটা"><font><font>অন্যান্য ধরণের মেটাডেটা</font></font></h3>
+
+<p><font><font>আপনি যখন ওয়েবে ঘুরে দেখেন, আপনি অন্যান্য ধরণের মেটাডেটাও দেখতে পাবেন। </font><font>ওয়েবসাইটগুলিতে আপনি দেখতে পাবেন এমন অনেকগুলি বৈশিষ্ট্য হ'ল মালিকানাধর্মী সৃজন, নির্দিষ্ট সাইটগুলি (যেমন সোশ্যাল নেটওয়ার্কিং সাইটগুলি) তারা ব্যবহার করতে পারেন এমন নির্দিষ্ট তথ্য সরবরাহ করার জন্য ডিজাইন করা।</font></font></p>
+
+<p><font><font>উদাহরণস্বরূপ, </font></font><a href="http://ogp.me/"><font><font>ওপেন গ্রাফ ডেটা</font></font></a><font><font> এমন একটি মেটাডেটা প্রোটোকল যা ফেসবুক ওয়েবসাইটগুলির জন্য আরও সমৃদ্ধ মেটাডেটা সরবরাহ করার জন্য আবিষ্কার করেছিল। </font><font>MDN ওয়েব ডক্স সোর্সকোডে আপনি এটি পাবেন:</font></font></p>
+
+<pre class="notranslate">&lt;meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"&gt;
+&lt;meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
+&lt;meta property="og:title" content="Mozilla Developer Network"&gt;</pre>
+
+<p><font><font>এর একটি প্রভাব হ'ল আপনি যখন ফেসবুকে MDN ওয়েব ডক্সের সাথে লিঙ্ক করেন, লিঙ্কটি একটি চিত্র এবং বর্ণনার সাথে উপস্থিত হয়: ব্যবহারকারীদের জন্য আরও সমৃদ্ধ অভিজ্ঞতা।</font></font></p>
+
+<p><img alt="ফেসবুকে প্রদর্শিত হিসাবে এমডিএন হোমপেজ থেকে গ্রাফ প্রোটোকল ডেটা খুলুন, একটি চিত্র, শিরোনাম এবং বিবরণ দেখায়।" src="https://mdn.mozillademos.org/files/12349/facebook-output.png" style="display: block; margin: 0 auto;"></p>
+
+<p><font><font>টুইটারের নিজস্ব </font></font><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards"><font><font>টুইটার কার্ড</font></font></a><font><font> নামে নিজস্ব মালিকানাধীন মেটাডেটাও </font><font>রয়েছে, যা সাইটের ইউআরএল টুইটার ডটকমে প্রদর্শিত হলে একই প্রভাব ফেলে। </font><font>উদাহরণ স্বরূপ:</font></font></p>
+
+<pre class="notranslate">&lt;meta name="twitter:title" content="Mozilla Developer Network"&gt;</pre>
+
+<h2 id="আপনার_সাইটে_কাস্টম_আইকন_যুক্ত_করা_হচ্ছে"><font><font>আপনার সাইটে কাস্টম আইকন যুক্ত করা হচ্ছে</font></font></h2>
+
+<p><font><font>আপনার সাইটের নকশাটিকে আরও সমৃদ্ধ করতে, আপনি আপনার মেটাডেটাতে কাস্টম আইকনগুলিতে উল্লেখ যুক্ত করতে পারেন এবং এগুলি নির্দিষ্ট প্রসঙ্গে প্রদর্শিত হবে। </font><font>এর মধ্যে সর্বাধিক ব্যবহৃত হ'ল </font></font><strong><font><font>ফেভিকন</font></font></strong><font><font> (ব্রাউজারগুলিতে "ফেভারিট" বা "বুকমার্কস" তালিকায় এর ব্যবহারের উল্লেখ করে "ফেভারিট আইকন" এর জন্য সংক্ষিপ্ত)।</font></font></p>
+
+<p><font><font>নম্র ফ্যাভিকন প্রায় বহু বছর ধরে রয়েছে। </font><font>এটি এই ধরণের প্রথম আইকন: একাধিক জায়গায় ব্যবহৃত 16 পিক্সেল বর্গ আইকন। </font><font>আপনি প্রতিটি ব্রাউজার পাতায় থাকা ব্রাউজার ট্যাবে এবং বুকমার্ক প্যানেলে বুকমার্কযুক্ত পৃষ্ঠাগুলির পাশে ফ্যাভিকনগুলি (ব্রাউজারের উপর নির্ভর করে) দেখতে পাবেন।</font></font></p>
+
+<p><font><font>আপনার পৃষ্ঠায় একটি ফেভিকন যুক্ত করা যেতে পারে:</font></font></p>
+
+<ol>
+ <li><font><font>সাইটের সূচক পাতা, সংরক্ষিত হিসাবে একই ডিরেক্টরির মধ্যে সংরক্ষণ </font></font><code>.ico</code><font><font>বিন্যাস (অধিকাংশ ব্রাউজারের মতো আরো সাধারণ বিন্যাসে ফ্যাবিকনগুলি সমর্থন করবে </font></font><code>.gif</code><font><font>বা </font></font><code>.png</code><font><font>, কিন্তু ICO ফরম্যাটে ব্যবহার করে এটি পর্যন্ত ফিরে ইন্টারনেট এক্সপ্লোরার 6. যেমন হিসাবে কাজ করে তা নিশ্চিত হবে)</font></font></li>
+ <li><font><font>এটি উল্লেখ করার জন্য আপনার এইচটিএমএল এর M {এইচটিএমলেমেন্ট ("প্রধান")}} ব্লকটিতে নিম্নলিখিত লাইনটি যুক্ত করা:</font></font>
+  <pre class="notranslate">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
+ </li>
+</ol>
+
+<p><font><font>এখানে একটি বুকমার্ক প্যানেলে ফ্যাভিকনের উদাহরণ রয়েছে:</font></font></p>
+
+<p><img alt="ফায়ারফক্স বুকমার্কস প্যানেল, পাশে একটি ফ্যাভিকন সহ একটি বুকমার্কড উদাহরণ দেখায়।" src="https://mdn.mozillademos.org/files/12351/bookmark-favicon.png" style="display: block; margin: 0 auto;"></p>
+
+<p><font><font>এই দিনগুলিতেও বিবেচনার জন্য প্রচুর অন্যান্য আইকন ধরণের রয়েছে। </font><font>উদাহরণস্বরূপ, আপনি এটি MDN ওয়েব ডক্স হোমপেজের উত্স কোডে পাবেন:</font></font></p>
+
+<pre class="notranslate">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png"&gt;
+&lt;!-- iPhone with high-resolution Retina display: --&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png"&gt;
+&lt;!-- first- and second-generation iPad: --&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png"&gt;
+&lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
+&lt;link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png"&gt;
+&lt;!-- basic favicon --&gt;
+&lt;link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png"&gt;</pre>
+
+<p><font><font>প্রতিটি আইকন কীসের জন্য ব্যবহৃত হয় তা মন্তব্যগুলিতে ব্যাখ্যা করা হয় - ওয়েবসাইটগুলি যখন কোনও আইপ্যাডের হোম স্ক্রিনে সংরক্ষণ করা হয় তখন এই উপাদানগুলি ব্যবহার করার জন্য একটি দুর্দান্ত উচ্চ রেজোলিউশন আইকন সরবরাহ করার মতো জিনিসগুলিকে আবরণ দেয়।</font></font></p>
+
+<p><font><font>এই মুহূর্তে আইকন এই ধরণের বাস্তবায়িত সম্পর্কে খুব বেশি চিন্তা করবেন না - এটি একটি মোটামুটি উন্নত বৈশিষ্ট্য, এবং আপনি কোর্সের মাধ্যমে অগ্রগতি সম্পর্কে এই জ্ঞান আশা করা হবে না। </font><font>এখানে মূল উদ্দেশ্য হ'ল অন্যান্য ওয়েবসাইটগুলির উত্স কোড ব্রাউজ করার সময় আপনি যদি সেগুলি জুড়ে আসেন তবে এই জাতীয় জিনিসগুলি কী তা আপনাকে জানানো।</font></font></p>
+
+<div class="note">
+<p><strong><font><font>দ্রষ্টব্য:</font></font></strong><font><font> আপনার সাইটটি এর সুরক্ষা বাড়ানোর জন্য যদি কোনও বিষয়বস্তু সুরক্ষা নীতি (সিএসপি) ব্যবহার করে, তবে নীতিটি ফেভিকনে প্রযোজ্য। </font><font>যদি আপনার ফেভিকনটি লোড না হওয়ার সমস্যা হয়, তবে যাচাই করুন যে {{HTTPHeader ("বিষয়বস্তু-সুরক্ষা-নীতি")}। শিরোনামের </font></font><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src"><code>img-src</code><font><font>নির্দেশিকা এতে</font></font></a><font><font> অ্যাক্সেস রোধ করছে না।</font></font></p>
+</div>
+
+<h2 id="এইচটিএমএলে_সিএসএস_এবং_জাভাস্ক্রিপ্ট_প্রয়োগ_করা_হচ্ছে"><font><font>এইচটিএমএলে সিএসএস এবং জাভাস্ক্রিপ্ট প্রয়োগ করা হচ্ছে</font></font></h2>
+
+<p><font><font>আপনি আধুনিক দিনে যে সমস্ত ওয়েবসাইট ব্যবহার করবেন সেগুলি সম্পর্কে {গ্লসারি ("সিএসএস")} emplo তাদের দুর্দান্ত দেখানোর জন্য এবং ভিডিও প্লেয়ারের মতো ইন্টারেক্টিভ কার্যকারিতা পাওয়ার জন্য {{গ্লসারি ("জাভাস্ক্রিপ্ট") y emplo নিযুক্ত করবে , মানচিত্র, গেমস এবং আরও অনেক কিছু। </font><font>এগুলি যথাক্রমে page t htmlelement ("লিঙ্ক")}} উপাদান এবং {{htmlelement ("স্ক্রিপ্ট")}} উপাদান ব্যবহার করে কোনও ওয়েব পৃষ্ঠায় সাধারণত প্রয়োগ করা হয়।</font></font></p>
+
+<ul>
+ <li>
+  <p><font><font>Document t htmlelement ("লিঙ্ক")}। উপাদানটি সর্বদা আপনার দস্তাবেজের মাথার অভ্যন্তরে প্রবেশ করা উচিত। </font></font><code>rel="stylesheet"</code><font><font>এটিতে </font><font>দুটি বৈশিষ্ট্য লাগে, </font><font>এটি নির্দেশ করে যে এটি নথির স্টাইলশিট এবং </font></font><code>href</code><font><font>, এতে স্টাইলশিট ফাইলের পথ রয়েছে:</font></font></p>
+
+  <pre class="notranslate">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
+ </li>
+ <li>
+  <p><font><font>T t এইচটিএমলেলেট ("স্ক্রিপ্ট")}} উপাদানটিও মাথার মধ্যে যেতে হবে এবং </font></font><code>src</code><font><font>আপনার যে জাভাস্ক্রিপ্টটি লোড করতে চান তার পথ সম্বলিত </font><font>একটি </font><font>বৈশিষ্ট্য </font><font>অন্তর্ভুক্ত করা উচিত এবং </font><font>এটি </font></font><code>defer</code><font><font>মূলত ব্রাউজারকে একই সাথে জাভাস্ক্রিপ্ট লোড করার নির্দেশ দেয় which পৃষ্ঠার এইচটিএমএল হিসাবে। </font><font>এটি জাভাস্ক্রিপ্ট চলার আগে এইচটিএমএল সমস্ত লোড হয়েছে কিনা তা নিশ্চিত করে তোলে, যাতে আপনি জাভাস্ক্রিপ্টের ফলে এমন কোনও HTML উপাদান অ্যাক্সেস করার চেষ্টা করছেন যা এখনও পৃষ্ঠায় বিদ্যমান নেই ত্রুটি পেতে না পারেন। </font><font>আপনার পৃষ্ঠায় জাভাস্ক্রিপ্ট লোড হ্যান্ডেল করার বেশ কয়েকটি উপায় রয়েছে তবে আধুনিক ব্রাউজারগুলির জন্য এটি ব্যবহার করা সবচেয়ে বোকামী (অন্যদের জন্য </font></font><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies"><font><font>স্ক্রিপ্ট লোডিং কৌশলগুলি পড়ুন</font></font></a><font><font> )। </font></font></p>
+
+  <pre class="notranslate">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
+
+  <div class="blockIndicator note">
+  <p><strong><font><font>দ্রষ্টব্য</font></font></strong><font><font> : </font></font><code>&lt;script&gt;</code><font><font>উপাদানটি খালি উপাদানের মতো দেখতে পারে তবে এটি তা নয় এবং তাই একটি ক্লোজিং ট্যাগের প্রয়োজন। </font><font>কোনও বাহ্যিক স্ক্রিপ্ট ফাইলের দিকে ইঙ্গিত করার পরিবর্তে, আপনি নিজের স্ক্রিপ্টটিকে </font></font><code>&lt;script&gt;</code><font><font>উপাদানটির </font><font>ভিতরে রাখার পছন্দ করতে পারেন </font><font>।</font></font></p>
+  </div>
+ </li>
+</ul>
+
+<h3 id="সক্রিয়_শিক্ষা_একটি_পৃষ্ঠায়_সিএসএস_এবং_জাভাস্ক্রিপ্ট_প্রয়োগ_করা"><font><font>সক্রিয় শিক্ষা: একটি পৃষ্ঠায় সিএসএস এবং জাভাস্ক্রিপ্ট প্রয়োগ করা</font></font></h3>
+
+<ol>
+ <li><font><font>এই সক্রিয় শেখা শুরু করার জন্য, আমাদের একটি কপি দখল </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html"><font><font>মেটা-example.html</font></font></a><font><font> , </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js"><font><font>script.js</font></font></a><font><font> এবং </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css"><font><font>style.css</font></font></a><font><font> ফাইল, এবং একই ডিরেক্টরির মধ্যে আপনার কম্পিউটারে সংরক্ষণ করুন। </font><font>এগুলি সঠিক নাম এবং ফাইল এক্সটেনশনের সাহায্যে সংরক্ষিত হয়েছে তা নিশ্চিত করুন।</font></font></li>
+ <li><font><font>আপনার ব্রাউজার এবং আপনার পাঠ্য সম্পাদক উভয়ই HTML ফাইল খুলুন।</font></font></li>
+ <li><font><font>উপরের বর্ণিত তথ্য অনুসরণ করে আপনার HTML এ t t htmlelement ("লিঙ্ক")}} এবং {{htmlelement ("স্ক্রিপ্ট")}} উপাদান যুক্ত করুন, যাতে আপনার সিএসএস এবং জাভাস্ক্রিপ্ট আপনার HTML এ প্রয়োগ হয়।</font></font></li>
+</ol>
+
+<p><font><font>যদি সঠিকভাবে সম্পন্ন করা হয়, আপনি যখন আপনার এইচটিএমএল সংরক্ষণ করেন এবং আপনার ব্রাউজারটি রিফ্রেশ করেন তখন আপনাকে দেখতে পারা উচিত যে জিনিসগুলি পরিবর্তিত হয়েছে:</font></font></p>
+
+<p><img alt="সিএসএস এবং জাভাস্ক্রিপ্ট সহ কোনও পৃষ্ঠা দেখানো উদাহরণ এটিতে প্রয়োগ করা হয়েছে।  সিএসএস পৃষ্ঠাটিকে সবুজ করে তুলেছে, যেখানে জাভাস্ক্রিপ্ট পৃষ্ঠায় একটি গতিশীল তালিকা যুক্ত করেছে।" src="https://mdn.mozillademos.org/files/12359/js-and-css.png" style="display: block; margin: 0 auto;"></p>
+
+<ul>
+ <li><font><font>জাভাস্ক্রিপ্ট পৃষ্ঠাটিতে একটি খালি তালিকা যুক্ত করেছে। </font><font>এখন আপনি যখন তালিকার যে কোনও জায়গায় ক্লিক করুন, একটি ডায়ালগ বক্স পপ আপ হবে যাতে আপনাকে একটি নতুন তালিকা আইটেমের জন্য কিছু পাঠ্য লিখতে বলবে। </font><font>আপনি যখন ওকে বোতাম টিপেন, পাঠ্যযুক্ত তালিকায় একটি নতুন তালিকা আইটেম যুক্ত হবে। </font><font>আপনি যখন বিদ্যমান তালিকা আইটেমটিতে ক্লিক করেন, তখন একটি ডায়ালগ বক্স পপ আপ হয়ে যায় যা আপনাকে আইটেমটির পাঠ্য পরিবর্তন করতে দেয়।</font></font></li>
+ <li><font><font>সিএসএসের ফলে পটভূমি সবুজ হয়ে গেছে এবং পাঠ্যটি আরও বড় হয়েছে। </font><font>এটি জাভাস্ক্রিপ্ট পৃষ্ঠাটিতে যুক্ত করা কিছু সামগ্রীর স্টাইলও করেছে (কালো সীমান্তের সাথে লাল বারটি স্টাইলিংটি সিএসএস জেএস-উত্পন্ন তালিকাতে যুক্ত করেছে।)</font></font></li>
+</ul>
+
+<div class="note">
+<p><strong><font><font>দ্রষ্টব্য</font></font></strong><font><font> : আপনি যদি এই অনুশীলনে আটকে যান এবং সিএসএস / জেএস প্রয়োগ করতে না পারেন তবে আমাদের </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html"><font><font>সিএসএস এবং জেএসএইচটিএমএল</font></font></a><font><font> উদাহরণ পৃষ্ঠাটি পরীক্ষা করে দেখুন।</font></font></p>
+</div>
+
+<h2 id="নথির_প্রাথমিক_ভাষা_সেট_করা_হচ্ছে"><font><font>নথির প্রাথমিক ভাষা সেট করা হচ্ছে</font></font></h2>
+
+<p><font><font>শেষ অবধি, এটি উল্লেখ করার মতো যে আপনি নিজের পৃষ্ঠার ভাষা সেট করতে (এবং সত্যই হওয়া উচিত)। </font><font>খোলার এইচটিএমএল ট্যাগে </font></font><a href="/en-US/docs/Web/HTML/Global_attributes/lang"><font><font>ল্যাং বৈশিষ্ট্য</font></font></a><font><font> যুক্ত করে এটি করা যেতে পারে </font><font>( </font></font><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html"><font><font>মেটা-উদাহরণ html তে</font></font></a><font><font> দেখানো হয়েছে এবং নীচে দেখানো হয়েছে))</font></font></p>
+
+<pre class="brush: html notranslate"><font><font>&lt;html lang = "en-US"&gt;</font></font></pre>
+
+<p><font><font>এটি বিভিন্ন উপায়ে কার্যকর। </font><font>আপনার এইচটিএমএল ডকুমেন্টটি অনুসন্ধানের ইঞ্জিনগুলির দ্বারা আরও কার্যকরভাবে ইনডেক্স করা হবে যদি এটির ভাষা সেট করা থাকে (উদাহরণস্বরূপ ভাষা-নির্দিষ্ট ফলাফলগুলিতে এটি সঠিকভাবে উপস্থিত হতে দেয়), এবং স্ক্রিন পাঠক ব্যবহার করে ভিজ্যুয়াল অক্ষমতাযুক্ত ব্যক্তিদের জন্য এটি দরকারী (উদাহরণস্বরূপ, শব্দটি "ছয়" ফরাসি এবং ইংরেজি উভয় ক্ষেত্রেই বিদ্যমান, তবে এটি আলাদাভাবে উচ্চারণ করা হয়))</font></font></p>
+
+<p><font><font>আপনি আলাদা আলাদা ভাষা হিসাবে স্বীকৃতি পেতে আপনার দস্তাবেজের সাব-বিভাগগুলিও সেট করতে পারেন। </font><font>উদাহরণস্বরূপ, আমরা আমাদের জাপানি ভাষার বিভাগটি জাপানি হিসাবে স্বীকৃতি হিসাবে সেট করতে পারি:</font></font></p>
+
+<pre class="notranslate">&lt;p&gt;Japanese example: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
+
+<p><font><font>এই কোডগুলি </font></font><a href="https://en.wikipedia.org/wiki/ISO_639-1"><font><font>আইএসও 639-1</font></font></a><font><font> স্ট্যান্ডার্ড </font><font>দ্বারা সংজ্ঞায়িত করা হয়েছে </font><font>। </font><font>আপনি </font></font><a href="https://www.w3.org/International/articles/language-tags/"><font><font>এইচটিএমএল এবং এক্সএমএলে ভাষা ট্যাগগুলিতে</font></font></a><font><font> তাদের সম্পর্কে আরও জানতে পারেন </font><font>।</font></font></p>
+
+<h2 id="সারসংক্ষেপ"><font><font>সারসংক্ষেপ</font></font></h2>
+
+<p><font><font>এটি এইচটিএমএল হেডের আমাদের কুইকফায়ার সফরের সমাপ্তি চিহ্নিত করে - আপনি এখানে আরও অনেক কিছু করতে পারেন তবে একটি বিস্তৃত ভ্রমণ এই পর্যায়ে বিরক্তিকর এবং বিভ্রান্তিকর হবে এবং আমরা আপনাকে সর্বাধিক সাধারণ বিষয় সম্পর্কে ধারণা দিতে চাইছিলাম আপনি আপাতত সেখানে খুঁজে পাবেন! </font><font>পরবর্তী নিবন্ধে আমরা এইচটিএমএল পাঠ্যের মূল বিষয়গুলি খুঁজছি।</font></font></p>
+
+<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}</p>
+
+<h2 id="এই_মডিউলটিতে"><font><font>এই মডিউলটিতে</font></font></h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"><font><font>এইচটিএমএল দিয়ে শুরু করা</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"><font><font>মাথায় কি আছে? </font><font>এইচটিএমএলে মেটাডেটা</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"><font><font>এইচটিএমএল পাঠ্য মৌলিক</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"><font><font>হাইপারলিঙ্ক তৈরি করা</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"><font><font>উন্নত পাঠ্য বিন্যাস</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"><font><font>নথি এবং ওয়েবসাইট কাঠামো</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML"><font><font>ডিবাগিং এইচটিএমএল</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter"><font><font>একটি চিঠি চিহ্নিত করা</font></font></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content"><font><font>সামগ্রীর একটি পৃষ্ঠা গঠন</font></font></a></li>
+</ul>

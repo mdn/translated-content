@@ -1,0 +1,75 @@
+---
+title: Mit Firefox Erweiterungen beginnen
+slug: Archive/Mozilla/XUL/School_tutorial/Getting_Started_with_Firefox_Extensions
+tags:
+  - Erweiterungen
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Getting_Started_with_Firefox_Extensions
+---
+<p>{{ PreviousNext("XUL_School/Introduction", "XUL_School/The_Essentials_of_an_Extension") }}</p>
+<h2 id="Was_ist_eine_Firefox_Erweiterung">Was ist eine Firefox Erweiterung?</h2>
+<blockquote>
+ <p>Extensions add new functionality to Mozilla applications such as Firefox and Thunderbird. They can add anything from a toolbar button to a completely new feature. They allow the application to be customized to fit the personal needs of each user if they need additional features, while keeping the applications small to download.</p>
+</blockquote>
+<p>Auszug aus der <a href="/en/Extensions" title="en/Extensions">Erweiterungs-Seite</a>.</p>
+<p>Wie es das Zitat beschreibt, ist eine Erweiterung eine kleine Anwendung, die etwas Neues zu einer oder mehreren Mozilla-Anwendungen hinzufügt. Dieses Tutorial konzentriert sich auf Erweiterungen für Firefox. Dieselben (oder sehr ähnliche) Prinzipien gelten auch für die Entwicklung von Erweiterungen zu anderen Anwendungen wie Thunderbird, Seamonkey oder Flock.</p>
+<p>Bitte beachten Sie, dass es es einen Unterschied zwischen der Definiton einer <em>Erweiterung</em> und einem <em>Add-on</em> gibt. Alle Erweiterungen sind Add-ons, aber ein Add-on kann auch eine Theme, ein Plug-in oder ein Sprachpaket sein. Der Inhalt dieses Tutorials behandelt die Entwicklung von Erweiterungen. Themes und Sprachpakete werden in einer sehr ähnlichen Art und Weise entwickelt. Plug-ins sind gänzlich anders und sie werden in diesem Tutorial nicht behandelt. Sie können mehr über Plug-ins und deren Entwicklung auf der <a href="/en/Plugins">Plug-in-Seite</a> erfahren.</p>
+<p>Firefox bietet eine sehr reiche und flexible Architektur. Diese erlaubt es den Entwicklern von Erweiterungen fortgeschrittene Funktionalitäten hinzuzufügen, sich der Benutzererfahrung anzupassen und Teile des Browsers vollständig zu ersetzen oder zu entfernen.</p>
+<p>Das <a href="https://addons.mozilla.org/">Mozilla Add-on</a> Repository (AMO) beinhaltet eine umfassende Anzahl von Erweiterungen mit einer großen Bandbreite an Funktionen: Inhaltsfilterung (<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1865" title="https://addons.mozilla.org/en-US/firefox/addon/1865">AdBlock Plus</a>, <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/722" title="https://addons.mozilla.org/en-US/firefox/addon/722">NoScript</a>), Interaktion mit Webanwendungen (<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/3615" title="https://addons.mozilla.org/en-US/firefox/addon/3615">Delicious Bookmarks</a>, <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5202" title="https://addons.mozilla.org/en-US/firefox/addon/5202">eBay Companion</a>) und Webentwicklung (<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6622" title="https://addons.mozilla.org/en-US/firefox/addon/6622">DOM Inspector</a>, <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1843" title="https://addons.mozilla.org/en-US/firefox/addon/1843">Firebug</a>). Dabei handelt es sich um sehr fortgeschrittene und komplexe Erweiterungen. Sie werden in diesem Tutorial das meiste erlernen, was benötigt wird, um derartige Erweiterungen zu erzeugen (genau genommen basiert Glaxstar auf drei von den hier aufgezählten).</p>
+<p>Erweiterungen gibt es im Moment in drei verschiedenen Ausprägungen: <a class="link-https" href="https://addons.mozilla.org/en-US/developers/builder" title="https://addons.mozilla.org/en-US/developers/builder">Add-ons SDK extensions</a> (auch bekannt als Jetpacks), <a href="/en/Extensions/Bootstrapped_extensions" title="https://developer.mozilla.org/en/Extensions/Bootstrapped_extensions">bootstrapped-Erweiterungen </a>und traditionelle Erweiterungen. Wenn Sie gerade beginnen, Add-ons zu entwickeln, bietet das <a href="https://developer.mozilla.org/de/Add-ons/SDK">Add-on SDK</a> einen fantastischen Weg, um schnell Erweiterungen zu entwickeln und auf diesen aufzubauen. Dieses Tutorial konzentriert sich auf traditionelle Erweiterungen, welche auf eine andere Art entwickelt werden. Bootstrapped-Erweiterungen sind eine Stufe komplexer, als die traditionellen. Von daher sollten Sie zuerst dieses Tutorial durchgehen, bevor Sie sich diese ansehen.</p>
+<p>Wir werden dieses Tutorial mit der Analyse einer sehr einfachen Erweiterung beginnen.</p>
+<h2 id="Die_Hallo_Welt_Erweiterung">Die Hallo Welt Erweiterung</h2>
+<p>Unsere Beispielerweiterung und dieses Tutorial im Allgemeinen sind ausgelegt für moderne Versionen des Firefox, aber die meisten von ihnen funktionieren auch auf älteren Versionen.</p>
+<p>Wir werden nun mit einer einfachen "Hallo Welt"-Erweiterung beginnen. WIr beginnen mit seiner Installation. Dafür klicken Sie auf den folgenden Link.</p>
+<p><a href="/@api/deki/files/5139/=xulschoolhello1.xpi" title="https://developer.mozilla.org/@api/deki/files/5139/=xulschoolhello1.xpi">Install Hello World</a></p>
+<p>Hierbei wird entweder eine Installation oder ein Datei-Download angestoßen, abhängig von dem Inhaltstyp, der auf dem Webserver abgelegt ist. Der entsprechende Inhaltstyp, um eine Installation zu veranlassen, ist <strong>application/x-<strong>xpinstall</strong></strong>. Im Fall dieses Wiki`s, ist der Inhaltstyp entsprechend gesetzt und ein Installationsfenster sollte erscheinen.</p>
+<p>Wenn der Inhaltstyp richtig gesetzt ist, werden Sie ordnungsgemäß gewarnt, dass es dieser Seite nicht erlaubt ist Add-ons zu installieren. Hierbei handelt es sich um eine Sicherheitsbarriere, die Seiten daran hindert, Erweiterungen ohne Benutzerzustimmung zu installieren. Dies ist vonnöten, weil bösartige Erweiterungen den gleichen Schaden verursachen können, wie jedes anderes Schadprogramm: Datenklau, das Löschen oder das Austauschen von Daten oder sonstiges unerwünschtes Verhalten. <a class="link-https" href="https://addons.mozilla.org/" title="https://addons.mozilla.org/">AMO</a> ist die einzige Seite mit einer generellen Erlaubnis. Dies liegt daran, dass die auf <a class="link-https" href="https://addons.mozilla.org/" title="https://addons.mozilla.org/">AMO</a> veröffentlichten Add-ons einem Überprüfungsprozess unterzogen werden, der Sicherheitsüberprüfungen beinhaltet.</p>
+<p>Nach dem Herunterladen der Datei, können Sie diese, per Drag and Drop in den Firefox Inhaltsbereich ziehen und die Installation sollte beginnen.</p>
+<p>Sie werden ein Fenster sehen, welches Ihnen mitteilt, dass sie dabei sind eine Erweiterung zu installieren. In diesem sind einige zusätzliche Informationen enthalten, wie unter anderem der Name des Authors. Sie werden benachrichtigt, dass der Author nicht verfiziert werden kann. Nur Erweiterungen, die mit einem digitalen Zertifkat signiert sind, können die Autorschaft verifizieren. Signierte Erweiterungen sind selten, aber wir werden das Signieren von Erweiterungen später behandeln.</p>
+<p>Klicken Sie auf die "Jetzt Installieren"-Schaltfläche. Nach der Installation der Erweiterung, werden Sie gefragt ob Sie Firefox neu starten wollen. Installation, Deinstallation, Aktivierung und Deaktiverung von Add-ons erfordern einen Neustart für die Ausführung (außer von NPAPI-Plug-ins, Add-on SDK Erweiterungen und Bootstrapped Erweiterungen). Dies ist ein wichtiger Punkt, den Sie im Hinterkopf behalten sollten, wenn Sie Erweiterungen entwickeln, die andere Erweiterungen oder Themes manipulieren.</p>
+<p>Sehen Sie nach der Installation in das Firefox Hauptfenster und schauen Sie, ob Sie eine Veränderung feststellen können.</p>
+<p>Haben Sie es gesehen? Dort ist ein neues Menü im Hauptmenü, bezeichnet "Hello World!".</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8421/menu_item%20-%20helloworld.png" style="width: 383px; height: 117px;"></p>
+<p>Wenn Sie dieses Menü öffnen und den darunter liegenden Menüpunkt, werden Sie eine nette Mitteilung sehen ("nett" im weitesten Sinne). Klicken Sie auf die OK-Schaltfläche um die Mitteilung zu schließen.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8419/alert_message%20-%20helloworld.png" style="width: 364px; height: 132px;"></p>
+<p>Das ist alles was die Erweiterung macht. Sehen wir uns das jetzt mal genauer an.</p>
+<h2 id="Erweiterungsinhalte">Erweiterungsinhalte</h2>
+<p>Sie werden vielleicht bemerkt haben, dass die von Ihnen installierte Erweiterungsdatei mit <em>xulschoolhello1.xpi</em> benannt ist. <a href="/en/XPI" title="en/XPI">XPI</a> (ausgesprochen "zippy") steht für Cross-Plattform Installer. Diese Installationsdatei funktioniert auf allen Plattformen, die Firefox unterstützen. XPIs sind einfache ZIP-Dateien, aber Firefox erkennt die XPI-Erweiterung und veranlasst den Installationprozess, wenn die XPI-Datei geladen wird<em>.</em></p>
+<p>Um in die XPI-Datei zu sehen, müssen Sie diese zuerst herunterladen, ohne sie zu installieren. Anstatt eine Installation durch einen Klick auf einen Link oder eine Schaltfläche auszulösen, führen sie einen Rechtsklick <a href="https://developer.mozilla.org/@api/deki/files/5139/=xulschoolhello1.xpi">darauf</a> aus und wählen Sie die <em>Ziel speichern unter...</em> Option.</p>
+<p>Entpacken Sie die XPI-Datei an einen gewünschten Ort. Unter Linux oder Mac OS X führen Sie den folgenden Befehl aus, um die Datei  zu entpacken:</p>
+<pre class="syntaxbox">unzip xulschoolhello1.xpi -d xulschoolhello1
+</pre>
+<p>Unter Windows können Sie die Dateierweiterung von xpi zu zip ändern oder die Datei direkt öffnen und anschließend mit einem ZIP-Tool entpacken.</p>
+<p>Sie sollten die folgendene Dateistruktur sehen:</p>
+<ul>
+ <li>xulschoolhello1
+  <ul>
+   <li>chrome.manifest</li>
+   <li>install.rdf</li>
+   <li>content
+    <ul>
+     <li>browserOverlay.xul</li>
+     <li>browserOverlay.js</li>
+    </ul>
+   </li>
+   <li>skin
+    <ul>
+     <li>browserOverlay.css</li>
+    </ul>
+   </li>
+   <li>locale
+    <ul>
+     <li>en-US
+      <ul>
+       <li>browserOverlay.dtd</li>
+       <li>browserOverlay.properties</li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p>Das ist eine große Anzahl an Dateien, für etwas so einfaches! In der nächsten Lektion werden wir die Dateien und was sie machen genauer analysieren .</p>
+<p>{{ PreviousNext("XUL_School/Introduction", "XUL_School/The_Essentials_of_an_Extension") }}</p>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

@@ -1,0 +1,86 @@
+---
+title: যে ব্রাউজার গুলোকে সাপোর্ট করে
+slug: Mozilla/Persona/Browser_compatibility
+translation_of: Archive/Mozilla/Persona/Browser_compatibility
+---
+<h2 id="যে_ব্রাউজার_গুলোকে_সাপোর্ট_করে">যে ব্রাউজার গুলোকে সাপোর্ট করে</h2>
+<p>পারসোনা তৈরি করে টেস্ট করা হয়েছে এবং তা নিচের ব্রাউজার গুলোকে সাপোর্ট করে। পারসোনা ব্যবহার এর জন্য কোন এডস্-অন এর প্রয়োজন নেই, এজন্য পারসোনার অন্যতম প্লাটফর্ম জাভাস্ক্রিপ্ট লাইব্রেরিকে ধন্যবাদ।</p>
+<table>
+ <tbody>
+  <tr>
+   <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><b>ডেক্সটপ ব্রাউজার</b></th>
+  </tr>
+  <tr>
+   <th scope="row"><b>ইন্টারনেট এক্সপ্লোরার</b></th>
+   <td colspan="2" rowspan="1" style="background-color: #8ae234;">৮.০<sup>*</sup>, ৯.০<sup>†</sup>, ১০.০<sup>*</sup><sup>*</sup> ( নিচের <a href="https://developer.mozilla.org/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22" title="https://developer.mozilla.org/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22">কম্প্যাটিবিলিটি মোড</a> দেখুন)</td>
+  </tr>
+  <tr>
+   <th scope="row"><b>ফায়ারফক্স</b></th>
+   <td colspan="2" style="background-color: #8ae234;">Current Stable, Beta, Aurora, Nightly, and Extended Support Releases<br>
+    Previous Stable Release</td>
+  </tr>
+  <tr>
+   <th scope="row"><b>ক্রোম</b></th>
+   <td colspan="2" style="background-color: #8ae234;">Latest Stable Release</td>
+  </tr>
+  <tr>
+   <th scope="row"><b>সাফারি</b></th>
+   <td colspan="2" style="background-color: #8ae234;">Latest Stable Release</td>
+  </tr>
+  <tr>
+   <th scope="row"><b>অপেরা</b></th>
+   <td colspan="2" style="background-color: #8ae234;">Latest Stable Release<sup>‡</sup></td>
+  </tr>
+  <tr>
+   <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><b>আইওএস ব্রাউজার</b></th>
+  </tr>
+  <tr>
+   <th scope="row"><b>মোবাইল সাফারি</b></th>
+   <td colspan="2" rowspan="1" style="background-color: #8ae234;">iOS 5.x — 6.x</td>
+  </tr>
+  <tr>
+   <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><b>অ্যানড্রইড ব্রাউজার</b></th>
+  </tr>
+  <tr>
+   <th scope="row"><b>ডিফল্ট ব্রাউজার</b></th>
+   <td colspan="2" rowspan="1" style="background-color: #8ae234;">2.2 — 4.x</td>
+  </tr>
+  <tr>
+   <th scope="row"><b>ফায়ারফক্স</b></th>
+   <td colspan="2" style="background-color: #8ae234;">Current Stable, Beta, Aurora, and Nightly Releases<br>
+    Previous Stable Release</td>
+  </tr>
+  <tr>
+   <th scope="row"><b>ক্রোম</b></th>
+   <td colspan="2" style="background-color: #8ae234;">Latest Stable Release</td>
+  </tr>
+ </tbody>
+</table>
+<p><sup>*</sup>: For Windows XP. <sup>†</sup>: For Windows Vista and Windows 7. <sup>*</sup><sup>*</sup>Windows 8.<sup>  </sup><sup>‡</sup>: As time allows</p>
+<h2 id="যে_ব্রাউজার_গুলোকে_সাপোর্ট_করেনা">যে ব্রাউজার গুলোকে সাপোর্ট করেনা</h2>
+<ul>
+ <li>Internet Explorer versions 6.0 and 7.0 are not supported. Users will be prompted to upgrade their browser. Also see the section below on <a href="https://developer.mozilla.org/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22" title="https://developer.mozilla.org/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22">IE "Compatibility Mode"</a>.</li>
+ <li>Google Chrome Frame is not supported and will not function. Support may be added later (<a href="https://github.com/mozilla/browserid/issues/796" title="https://github.com/mozilla/browserid/issues/796">Issue #796</a>).</li>
+ <li>Third party browsers on iOS are not supported and will not function. Support may be added later (<a href="https://github.com/mozilla/browserid/issues/2034" title="https://github.com/mozilla/browserid/issues/2034">Issue #2034</a>).</li>
+</ul>
+<h2 id="ইন্টারনেট_এক্সপ্লোরার_কম্প্যাটিবিলিটি_মোড">ইন্টারনেট এক্সপ্লোরার "কম্প্যাটিবিলিটি মোড"</h2>
+<p>From version 8.0 onwards Internet Explorer supports a feature called Compatibility Mode, in which the browser may be instructed to emulate a pre-8.0 version when rendering a page. This feature may be controlled in three different ways</p>
+<ol>
+ <li>as a local setting in the browser</li>
+ <li>based on the presence and value of the <a href="https://developer.mozilla.org/docs/Quirks_Mode_and_Standards_Mode" title="https://developer.mozilla.org/docs/Quirks_Mode_and_Standards_Mode">DOCTYPE</a> declaration in the page</li>
+ <li>as an instruction sent from the site, using the <a href="http://msdn.microsoft.com/library/cc288325%28v=vs.85%29.aspx" title="http://msdn.microsoft.com/library/cc288325%28v=vs.85%29.aspx">"X-UA-Compatible"</a> header either as an HTTP header or as a <a href="https://developer.mozilla.org/docs/HTML/Element/meta" title="https://developer.mozilla.org/docs/HTML/Element/meta"><code>&lt;meta&gt;</code></a> tag in the page. This method overrides the other two.</li>
+</ol>
+<p>Because versions of Internet Explorer earlier than 8.0 are not supported by Persona, any version of Internet Explorer which is configured to emulate a pre-8.0 version will also not function with Persona. This is typically for one of the following reasons:</p>
+<ul>
+ <li>your site is using "X-UA-Compatible" to explicitly instruct the browser to emulate a pre-8.0 version</li>
+ <li>your site's pages omit the DOCTYPE, do not have the DOCTYPE as the first line of the page, or set the browser to quirks mode, and your site is not setting "X-UA-Compatible" to IE version 8.0 or higher</li>
+ <li>the browser is locally configured to use a pre-8.0 Compatibility Mode, and your site is not overriding this by setting "X-UA-Compatible" to IE version 8.0 or higher</li>
+</ul>
+<p>For more information, see <a href="https://blogs.msdn.com/b/askie/archive/2009/03/23/understanding-compatibility-modes-in-internet-explorer-8.aspx?Redirected=true" title="https://blogs.msdn.com/b/askie/archive/2009/03/23/understanding-compatibility-modes-in-internet-explorer-8.aspx?Redirected=true">"Understanding Compatibility Modes in Internet Explorer 8"</a> and <a href="http://hsivonen.iki.fi/doctype/index.html#ie8" title="http://hsivonen.iki.fi/doctype/index.html#ie8">"IE8 and IE9 Complications"</a>.</p>
+<h2 id="অন্যান্য_ব্রাউজার_গুলো">অন্যান্য ব্রাউজার গুলো</h2>
+<p>Despite not being explicitly supported, any browser that includes both {{ domxref("window.postMessage()") }} and {{ domxref("Storage", "localStorage") }} should work. These APIs have been available in all major browsers since March 2010.</p>
+<h2 id="যেসব_তথ্য_জানা_প্রয়োজন">যেসব তথ্য জানা প্রয়োজন</h2>
+<ul>
+ <li>Browsers must accept third party cookies for full functionality (<a href="https://github.com/mozilla/browserid/issues/1352" title="https://github.com/mozilla/browserid/issues/1352">Issue #1352</a>).</li>
+ <li>Android 2.x users without a default browser selected may be unable to log in (<a href="https://github.com/mozilla/browserid/issues/1854" title="https://github.com/mozilla/browserid/issues/1854">Issue #1854</a>).</li>
+</ul>

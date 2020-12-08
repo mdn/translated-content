@@ -1,0 +1,91 @@
+---
+title: Performance best practices in extensions
+slug: Mozilla/Add-ons/Performance_best_practices_in_extensions
+translation_of: Archive/Add-ons/Performance_best_practices_in_extensions
+---
+<p> ফায়ারফক্সের একটি সব চেয়ে বড় সুবিধা হল is its extreme extensibility. Extensions can do almost anything. There is a down side to this: poorly written extensions can have a severe impact on the browsing experience, including on the overall performance of Firefox itself. This article offers some best practices and suggestions that can not only improve the performance and speed of your extension, but also of Firefox itself.</p>
+<h2 id="Improving_startup_performance">Improving startup performance</h2>
+<p>Extensions are loaded and run whenever a new browser window opens. That means every time a window opens, your extension can have an impact on how long it takes the user to see the content they're trying to view. There are several things you can do to reduce the amount of time your extension delays the appearance of the user's desired content.</p>
+<h3 id="Load_only_what_you_need_when_you_need_it">Load only what you need, when you need it</h3>
+<p>Don't load things during startup that are only needed if the user clicks a button, or if a given preference is enabled when it's not. If your extension has features that only work when the user has logged into a service, don't load the resources for those features until the user actually logs in.</p>
+<h3 id="Use_JavaScript_code_modules">Use JavaScript code modules</h3>
+<p>You can create your own <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Using" title="/en-US/docs/Mozilla/JavaScript_code_modules/Using">JavaScript code modules</a> incorporating sets of features that are only needed under specific circumstances. This makes it easy to load chunks of your extension on the fly as needed, instead of loading everything all at once.</p>
+<p>This has an advantage over XPCOM modules, which are always loaded when your extension starts up.</p>
+<p>Of course, for extremely simple extensions it may not make sense to modularize your code.</p>
+<h3 id="Defer_everything_that_you_can">Defer everything that you can</h3>
+<p>Most extensions have a load event listener in the main overlay that runs their startup functions. Do as little as possible here. The browser window is blocked while your add-on's load handler runs, so the more it does, the slower Firefox will appear to the user.</p>
+<p>If there is <em>anything</em> that can be done even a fraction of a second later, you can use an {{ interface("nsITimer") }} or the {{ domxref("window.setTimeout()") }} method to schedule that work for later.  Even a short delay can have a big impact.</p>
+<h2 id="General_Performance_Tips">General Performance Tips</h2>
+<h3 id="Avoid_Creating_Memory_Leaks">Avoid Creating Memory Leaks</h3>
+<p>Memory leaks require the garbage collector and the cycle collector to work harder, which can significantly degrade performance.</p>
+<p>Zombie compartments are a particular kind of memory leak that you can detect with minimal effort.  See the<a href="/en/Zombie_compartments" title="en/Zombie_compartments"> </a><a href="/en/Zombie_compartments" title="en/Zombie_compartments">Zombie compartments page</a>, especially the <a href="/en/Zombie_compartments#Proactive_checking_of_add-ons" title="en/Zombie_compartments#Proactive_checking_of_add-ons">Proactive checking of add-ons</a> section.</p>
+<p>See <a href="/en/Extensions/Common_causes_of_memory_leaks_in_extensions" title="en/Extensions/Common_causes_of_zombie_compartments_in_extensions">Common causes of memory leaks in extensions</a> for ways to avoid zombie compartments and other kinds of leaks.</p>
+<p>As well as looking for these specific kinds of leaks, it's worth exercising your extension's functionality and checking the contents of about:memory for any excessive memory usage.  For example, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=719601" title="https://bugzilla.mozilla.org/show_bug.cgi?id=719601">bug 719601</a> featured a "System Principal" JavaScript compartment containing 100s of MBs of memory, which is <em>much</em> larger than usual.</p>
+<h3 id="Use_JavaScript_Modules">Use JavaScript Modules</h3>
+<p>JavaScript modules are just like any other JavaScript, with the exception that they are singletons and Firefox can cache the compiled code for faster use the next time the browser is started. Any time your add-on loads JavaScript from an {{ HTMLElement("script") }} element you should consider using a JavaScript Module instead. For more on how JavaScript modules work, see the <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Using" title="/en-US/docs/Mozilla/JavaScript_code_modules/Using">Using JavaScript Code Modules page</a>.</p>
+<h3 id="Avoid_Writing_Slow_CSS">Avoid Writing Slow CSS</h3>
+<ul>
+ <li>Read the <a href="/en/CSS/Writing_Efficient_CSS" title="en/CSS/Writing_Efficient_CSS">"writing efficient CSS"</a> guide.</li>
+ <li>Remember that any selector in your rule which might match many different nodes is a source of inefficiency during either selector matching or dynamic update processing. This is especially bad for the latter if the selector can dynamically start or stop matching. Avoid unqualified ":hover" like the plague.</li>
+</ul>
+<h3 id="Avoid_DOM_mutation_event_listeners">Avoid DOM mutation event listeners</h3>
+<p>Adding DOM mutation listeners to a document disables most DOM modification optimizations and <a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1">profoundly degrades the performance</a> of further DOM modifications to that document. Moreover, removing the listeners does not reverse the damage. For these reasons, the following events should be avoided wherever possible: <code>DOMAttrModified</code>, <code>DOMAttributeNameChanged</code>, <code>DOMCharacterDataModified</code>, <code>DOMElementNameChanged</code>, <code>DOMNodeInserted</code>, <code>DOMNodeInsertedIntoDocument</code>, <code>DOMNodeRemoved</code>, <code>DOMNodeRemovedFromDocument</code>, <code>DOMSubtreeModified</code></p>
+<p>For more on these events and their deprecation, see <a href="/en-US/docs/Web/Guide/DOM/Events/Mutation_events" title="en-US/docs/Web/Guide/DOM/Events/Mutation_events">Mutation events</a>. Use <a href="/en-US/docs/Web/API/MutationObserver" title="en-US/docs/Web/API/MutationObserver">Mutation Observers</a> instead if possible.</p>
+<h3 id="Lazily_load_services">Lazily load services</h3>
+<p>The <a href="/en/JavaScript_code_modules/XPCOMUtils.jsm#Methods" title="en/JavaScript_code_modules/XPCOMUtils.jsm#Methods">XPCOMUtils JavaScript module</a> provides two methods for lazily loading things:</p>
+<ul>
+ <li><code>defineLazyGetter()</code> defines a function on a specified object that acts as a getter which will be created the first time it's used. <a class="external" href="http://mxr.mozilla.org/mozilla-central/search?string=defineLazyGetter">See examples</a>.</li>
+ <li><code>defineLazyServiceGetter()</code> defines a function on a specified object which acts as a getter for a service. The service isn't obtained until the first time it's used. {{ LXRSearch("ident", "string", "defineLazyServiceGetter", "Look through the source") }} for examples.</li>
+</ul>
+<p>As of Firefox 4.0, many common services are already cached for you in <a href="/en/JavaScript_code_modules/Services.jsm" title="en/JavaScript_code_modules/Services.jsm">Services.jsm</a>.</p>
+<h3 id="Reduce_file_IO">Reduce file I/O</h3>
+<p>TODO: Give examples below, link to code, bugs, docs.</p>
+<ul>
+ <li>If you're targeting Firefox 3.6 and earlier, or if you're specifying <code>em:unpack</code> then use chrome JARs!</li>
+ <li>Combine CSS</li>
+ <li>Combine pref files</li>
+ <li>Combine interfaces into a single .idl to reduce xpt files</li>
+ <li>Combine toolbar icons in a single file.</li>
+</ul>
+<h3 id="Use_the_right_compression_level_for_JAR_and_XPI_files">Use the right compression level for JAR and XPI files</h3>
+<p>Reading data from compressed archives costs time. The higher the compression level of the archive, the higher also the performance cost of reading the data from it. So any JAR files in your extension should always be packed with compression level 0 (no compression) for better performance. It may seem counter-intuitive, but doing this will increase the JAR file size and actually <em>decrease</em> the XPI file size as it allows for compression between files inside the JAR to be done when compressing the XPI (essentially a poor-man's <a class="external" href="http://en.wikipedia.org/wiki/Solid_archive" title="http://en.wikipedia.org/wiki/Solid_archive">solid archive</a> effect).</p>
+<p>If your extension doesn't specify <code>em:unpack</code> then its XPI file will not be unpacked in Firefox 4 and used directly instead. This makes choosing a low compression level preferable; we recommend using compression level 1. It will increase the download size only a small amount, even compared to maximum compression.</p>
+<h3 id="Use_asynchronous_IO">Use asynchronous I/O</h3>
+<p>This cannot be stressed enough: never do synchronous I/O on the GUI thread.</p>
+<ul>
+ <li>Never use synchronous XMLHttpRequests (XHR). Use asynchronous requests instead and show a throbber image or message in case you need the user to wait.</li>
+ <li><a href="/en/JavaScript_code_modules/NetUtil.jsm" title="en/JavaScript_code_modules/NetUtil.jsm">NetUtils.jsm</a> provides helpers for asynchronous reading and copying of files.</li>
+ <li>Never access a SQLite database synchronously. Use the <a href="/en/Storage#Asynchronously" title="en/Storage#Asynchronously">asynchronous API</a> instead.</li>
+</ul>
+<h3 id="Unnecessary_onreadystatechange_in_XHR">Unnecessary onreadystatechange in XHR</h3>
+<p><code>addEventListener</code>(load/error) and/or xhr.onload/.onerror are usually sufficient for most uses and will only be called once, contrary to <code>onreadystatechange</code>. When using XHR in websites people tend to use <code>onreadystatechange</code> (for compatiblity reasons). Often it is enough to just load the resource or handle errors. load/error event listener are far less often called than <code>onreadystatechange</code>, i.e. only once, and you don't need to check <code>readyState</code> or figure out if it is an error or not. Only use <code>onreadystatechange</code> if you want to process the response while it is still arriving.</p>
+<h3 id="Removing_Event_Listeners">Removing Event Listeners</h3>
+<p>Remove event listener if they are not needed any more. It is better to actually remove event listener instead of just having some flag to check if the listener is active which is checked every time when an event is propagated. Abandon schemes like: <code>function onMouseOver(evt) { if (is_active) { /* doSomeThing */ } }</code> Also, remove "fire-once" listeners again:</p>
+<pre class="brush: js"> function init() {
+   var largeArray;
+   addEventListener('load', function onLoad() {
+        removeEventListener('load', onLoad, true);
+        largeArray.forEach();
+ }, true);
+</pre>
+<p>Else a lot of closure stuff might be still referenced (<code>largeArray</code> in this example). And the listener will sit idle in some internal table.</p>
+<h3 id="Populate_menus_as_needed">Populate menus as needed</h3>
+<p>Populate "context" menus (page, tabs, tools) as needed and keep computation to a minimum (UI responsiveness). There is no need to populate the context menu every time something changes. It is enough to populate it once the user actually needs it. Add a listener to the "popupshowing" event and compute there.</p>
+<h3 id="Avoid_mouse_movement_events">Avoid mouse movement events</h3>
+<p>Avoid mouse movement events (enter/over/exit) or at least keep computation to a minimum. Mouse movement events, especially the <code>mouseover</code> event, usually happen at high frequency. Best would be to only store the new information and compute "stuff" once the user actually requests it (e.g. in a <code>popupshowing</code> event). Also don't forget to remove the event listeners when no longer needed (see above).</p>
+<h3 id="Avoid_polling">Avoid polling</h3>
+<p>Use {{ interface("nsIObserverService") }} functionality instead. Everybody is free to post "custom" notifications via {{ interface("nsIObserverService") }}, but few extensions actually use this. However, a lot of other services also provide observer functionality, such as nsIPrefBranch2.</p>
+<h3 id="aPNGaGIF_inappropriate_in_a_lot_of_cases">aPNG/aGIF inappropriate in a lot of cases</h3>
+<p>Animations require a lot of time to set up, as a lot of images are decoded (the frames). Animated images may have their cached representations evicted quite often, causing the frames of your animated images to be reloaded lots of times, not just once. {{ interface("nsITree") }} / {{ XULElem("tree") }} seems to be extra special in this regard, as it doesn't seem to cache animations at all under certain circumstances.</p>
+<h3 id="base64md5sha1_implementations">base64/md5/sha1 implementations</h3>
+<p>Do not ship your own base64/md5/sha1 implementations. Regarding base64 there are the built-in <code>atob</code>/<code>btoa</code> functions that do the job just well and are available in overlay script as well as in in JavaScript modules and components. Hashes can be computed using {{ interface("nsICryptoHash") }}, which accepts either a string or an {{ interface("nsIInputStream") }}.</p>
+<h3 id="Image_sprites">Image sprites</h3>
+<p>You may combine multiple images into one (sprites). See {{ cssxref("-moz-image-region") }}. Most XUL widgets that are used to display some image (incl. {{ XULElem("button") }} and {{ XULElem("toolbarbutton") }}) allow to use {{ cssxref("list-style-image") }}. Avoid the <code>imagesrc</code>/<code>src</code> attributes to define images where possible.</p>
+<h3 id="Consider_using_Chrome_Workers">Consider using Chrome Workers</h3>
+<p>You can use a {{ domxref("ChromeWorker") }} to execute long running tasks or do data processing.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/en/Performance/Measuring_add-on_startup_performance" title="en/Measuring Add-on Startup Performance">Measuring Add-on Startup Performance</a></li>
+ <li><a class="external" href="http://blog.mozilla.com/addons/2010/06/14/improve-extension-startup-performance/" title="http://blog.mozilla.com/addons/2010/06/14/improve-extension-startup-performance/">How to Improve Extension Startup Performance</a></li>
+ <li><a href="/en-US/docs/Performance">General information about measuring and improving performance in Mozilla code</a></li>
+</ul>

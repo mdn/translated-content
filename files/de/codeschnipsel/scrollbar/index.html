@@ -1,0 +1,32 @@
+---
+title: Scrollbar
+slug: Codeschnipsel/Scrollbar
+translation_of: Archive/Add-ons/Code_snippets/Scrollbar
+---
+<p>Dieses Beispiel zeigt, wie die Scrollbars in einer XUL-Applikation verändert werden können.  Scrollbars im Browser werden auch gestylt. <br>
+(Auf Windows XP getestet)</p>
+<p>Das Beispiel setzt die folgende Struktur voraus:</p>
+<pre class="eval">app/chrome/chrome.manifest
+app/chrome/skin/global/
+</pre>
+<p>Kopieren Sie die scrollbars.css von <code>xulrunner/chrome/classic.jar/skin/classic/global</code> nach <code>app/chrome/skin/global/scrollbars.css</code></p>
+<p>Öffnen Sie <code>app/chrome/chrome.manifest</code> und fügen Sie folgende Zeilen hinzu:</p>
+<pre class="eval">skin app-global standard/1.0 skin/global/
+override <a class=" external" rel="freelink">chrome://global/skin/xulscrollbars.css</a> <a class=" external" rel="freelink">chrome://app-global/skin/scrollbars.css</a>
+</pre>
+<p><code>xulscrollbars.css</code> wird für Windows XP benutzt, <code>nativescrollbars.css</code> auf OSX. Für OSX, fügen Sie noch folgendes an:</p>
+<pre class="eval">override <a class=" external" rel="freelink">chrome://global/skin/nativescrollbars.css</a> <a class=" external" rel="freelink">chrome://app-global/skin/scrollbars.css</a>
+</pre>
+<p>Ändern Sie nun ein paar Farbwerte in <code>app/chrome/skin/global/scrollbars.css</code> um zu testen, ob das CSS benutzt wird.</p>
+<p>Beispielfenster in XUL:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window id="sampleWindow" width="320" height="240"
+   xmlns="<a class=" external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+&lt;hbox flex="1"&gt;
+   &lt;browser type="content" src="<a class=" external" href="http://mozilla.org" rel="freelink">http://mozilla.org</a>" flex="1"/&gt;
+   &lt;scrollbar orient="vertical"/&gt;
+&lt;/hbox&gt;
+&lt;/window&gt;
+</pre>
+<p>{{ languages( { "en": "en/Code_snippets/Scrollbar" } ) }}</p>

@@ -1,0 +1,44 @@
+---
+title: Troubleshooting Firefox OS
+slug: Archive/B2G_OS/Troubleshooting
+translation_of: Archive/B2G_OS/Troubleshooting
+---
+<div class="summary">
+<p>This article provides tips for resolving common problems you may have while using Firefox OS. Please feel free to add more content to this page!</p>
+</div>
+
+<h2 id="Networking_problems">Networking problems</h2>
+
+<p>If you are having trouble connecting to Wi-Fi networks, it may be helpful to delete the Wi-Fi configuration file:</p>
+
+<pre>adb shell rm /data/misc/wifi/wpa_supplicant.conf
+adb reboot
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> These instructions assume you have <a href="/en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device" title="en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device">configured the udev settings</a> for your device.</p>
+</div>
+
+<h2 id="Bricked_Phone">Bricked Phone</h2>
+
+<p>If you happen to brick the phone, by, for example, trying to flash wrong images on it,  try rebooting into the bootloader (fastboot or heimdal depending on your phone). The exact sequence varies depending on the phone. Try removing the usb cable, removing and then re-inserting the battery. For the Unagi and Otoro, press and hold volume up and power for several seconds until you see the splash screen. Verify that the phone is in bootloader mode by using <code>fastboot devices</code> (or <code>heimdall devices</code> for some Samsung phones). Once you can see your phone using <code>fastboot devices</code>, you can use <code>./flash.sh </code>to flash your image for Unagi.</p>
+
+<h2 id="Flashing_Red_LED_(otorounagi)">Flashing Red LED (otoro/unagi)</h2>
+
+<p>This means that the battery is too low to boot the phone. You can let it charge for a while (until the red LED stops flashing and a little bit longer), or you can unplug the USB cable, remove the battery, insert the USB cable, and re-insert the battery.</p>
+
+<h2 id="Failure_to_receive_SMS_after_switching_over_from_iPhone">Failure to receive SMS after switching over from iPhone</h2>
+
+<p>If you have switched your SIM card over from an iPhone to a Firefox OS (or another different platform) device, you may run into a problem whereby you can no longer receive text messages from iPhone users. This is because iPhone to iPhone SMS messages are sent using <a href="https://www.apple.com/ios/messages/">iMessage</a>, which works by routing iPhone-to-iPhone messages through Apple's servers instead of sending them as actual text messages, saving iPhone users money. Unfortunately when you leave iPhone, iMessage has no way of knowing you've left and SMS from other iPhone users will still go through iMessage, meaning that you won't receive them.</p>
+
+<p>To fix this you have to turn off iMessage for your SIM; there is a guide on how to do this at imore.com — read <a href="http://www.imore.com/text-issues-switching-iphone-android-heres-fix">Here's how to turn off iMessage</a>.</p>
+
+<h2 id="Device_not_appearing_to_ADB_on_OSX">Device not appearing to ADB on OSX</h2>
+
+<p>When running adb devices in OSX, some devices may simply not appear in the device list, for a variety of reasons. This can be fixed by adding your device's vendor ID to your <code>~/.android/adb_usb.ini</code> file, to provide a hint to ADB for finding your device.</p>
+
+<div class="note">
+<p><strong>Note</strong>: See <a href="http://stackoverflow.com/a/7136003/1027966">this stackoverflow post</a> for a lot more detail, including how to find the vendor ID of the attached device, and how to add it into <code>adb_usb.ini</code>.</p>
+</div>
+
+<p> </p>

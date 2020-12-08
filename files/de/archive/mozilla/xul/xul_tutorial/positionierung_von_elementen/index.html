@@ -1,0 +1,259 @@
+---
+title: Positionierung von Elementen
+slug: Archive/Mozilla/XUL/XUL_Tutorial/Positionierung_von_Elementen
+tags:
+  - XUL
+  - XUL Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/de/docs/XUL_Tutorial/Das_Box-Modell" style="float: left;">« zurück</a><a href="/de/docs/XUL_Tutorial/Details_zum_Box-Modell">weiter  »</a></p>
+</div>
+
+<p>Schauen wir uns die Steuerung von Positionen und Größen von XUL Elementen an.</p>
+
+<h2 id="Positionierung_in_Boxen">Positionierung in Boxen</h2>
+
+<p>Bis jetzt wissen wir, dass Elemente entweder horizontal oder vertikal innerhalb einer Box positioniert werden können. Meistens brauchen wir aber weitere Steuerungsmöglichkeiten zur Position und Größe von Elementen in der Box. Dazu müssen wir uns zunächst anschauen wie eine Box arbeitet.</p>
+
+<p>Die Position eines Elementes wird vom Layout des Containers bestimmt. Zum Beispiel ist die Position einer Schaltfläche in einer horizontalen Box rechts von der vorherigen Schaltfläche, sofern diese existiert. Die Größe eines Elements wird von zwei Faktoren beeinflusst: Die Größe, die das Element an Größe braucht und die Größe, die Sie festlegen. Die Größe, die das Element braucht, hängt vom dem ab, was sich innerhalb des Elements befindet. Zum Beispiel wird die Breite einer Schaltfläche anhand des Textes, welcher sich darauf befindet, berechnet.</p>
+
+<p>Ein Element wird generell so groß wie es Inhalt vorschreibt und nicht größer. Einige Elemente verfügen über eine Standardgröße (z.B. Textboxen), welche verwendet wird. Eine horizontale Box mit drei Schaltflächen darin, wird so groß wie die drei Schaltflächen plus einem kleinen zusätzlichen Abstand.</p>
+
+<div class="float-right"><img alt="Image:boxstyle1n.png" class="internal" src="/@api/deki/files/571/=Boxstyle1n.png"></div>
+
+<p>Im Bild wurde den ersten beiden Schaltflächen eine passende Größe vorgeschrieben, um den Text anzuzeigen. Die dritte Schaltfläche ist größer, weil sie mehr Inhalt enthält. Die Breite der umschließenden Box ist die Summe der Breite der drei Schaltflächen plus einem zusätzlichen Abstand zwischen ihnen. Die Höhe der Schaltflächen ist passend zur Textgröße berechnet worden.</p>
+
+<h3 id="Width_und_height_Attribute">Width und height Attribute</h3>
+
+<p>Sie möchten sicher mehr Einfluss auf die Größe eines Elements in einem Fenster nehmen können. Es gibt eine Reihe von Features, die Ihnen erlauben die Größe eines Elementes festzulegen. Der schnellste Weg ist, einfach die <code><code id="a-width"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code> und <code><code id="a-height"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></code> Attribute festzulegen, genauso wie Sie es vielleicht von HTML kennen. Ein Beispiel dazu:</p>
+
+<p><span id="Beispiel_1"><a id="Beispiel_1"></a><strong>Beispiel 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">Ansehen</a></p>
+
+<pre>&lt;button label="OK" width="100" height="40"/&gt;
+</pre>
+
+<p>Es ist jedoch nicht empfohlen, das so zu machen. Es ist passt nicht in einige Themes und ist umständlicher anpassbar. Ein besserer Weg ist, CSS Eigenschaften zu verwenden, welche wie in HTML arbeiten. Die folgenden CSS Eigenschaften können dazu verwendet werden:</p>
+
+<dl>
+ <dt><a href="/de/docs/Web/CSS/width" title="Die width CSS Eigenschaft legt die Breite des Inhaltsbereichs eines Elements fest. Der Inhaltsbereich ist innerhalb des Innenabstands, Rahmens und Außenabstands des Elements."><code>width</code></a></dt>
+ <dd>Legt die Breite eines Elementes fest.</dd>
+ <dt><a href="/de/docs/Web/CSS/height" title="Die height CSS Eigenschaft bestimmt die Höhe des Inhaltsbereichs eines Elements. Der Inhaltsbereich ist innerhalb des Innenabstands, der Rahmen und des Außenabstands des Elements."><code>height</code></a></dt>
+ <dd>Legt die Höhe eines Elementes fest.</dd>
+</dl>
+
+<p>Werden beide Eigenschaften festgelegt, wird das Element mit dieser Breite und Höhe erstellt. Wird nur eines der beiden angegeben, wird die andere Eigenschaft nach dem benötigten Platz berechnet. Die Größe sollte als Zahl gefolgt von einer Einheit angegeben werden.</p>
+
+<h3 id="Flexible_Elemente">Flexible Elemente</h3>
+
+<p>Die Größen der Elemente sind ziemlich einfach zu berechnen für nicht-flexible Elemente. Sie folgen einfach der festgelegten Breiten und Höhen und sobald eine Größe nicht festgelegt wurde, wird das Element so groß wie es für den Inhalt erforderlich ist. Für flexible Elemente ist die Berechnung allerdings nicht ganz so einfach.</p>
+
+<p>Flexible Elemente sind solche, die über ein <code><code id="a-flex"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> Attribut verfügen und einen Wert größer als 0 haben. Flexible Elemente passen sich an den verfügbaren Freiraum an. Die Standardgröße wird trotzdem genauso berechnet wie für nicht-flexible Elemente. Das folgende Beispiel soll dies verdeutlichen:</p>
+
+<p><span id="Beispiel_2"><a id="Beispiel_2"></a><strong>Beispiel 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">Ansehen</a></p>
+
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;hbox&gt;
+  &lt;button label="Yes" flex="1"/&gt;
+  &lt;button label="No"/&gt;
+  &lt;button label="I really don't know one way or the other"/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Das Fenster wird zunächst so erscheinen wie im vorherigen Bild. Die ersten beiden Schaltflächen werden auf eine passende Breite und die dritte Schaltfläche auf längere Breite skaliert, weil diese über eine längere Aufschrift verfügt. Die erste Schaltfläche ist flexibel und alle Elemente wurde in eine Box getan. Die Breite dieser Box wird auf die Startgröße aller drei Schaltflächen gesetzt (ca. 430 Pixel in dem Bild).</p>
+
+<p>Wenn Sie nun das Fenster vergrößern, wird überprüft, ob Elemente flexibel sind, um den entstehenden Freiraum zu füllen, der entstehen würde. Da die erste Schaltfläche das einzig flexible Element ist, sollte es größer werden. Das geschieht in diesem Fall jedoch nicht, da die Box in dem sich die Schaltfläche befindet nicht flexibel ist. Ein unflexibles Element kann niemals seine Größe ändern, wenn der Platz verfügbar ist. Die Schaltfläche kann also nicht größer werden.</p>
+
+<p>Die Lösung ist, die Box ebenfalls flexibel zu machen. Wird dann das Fenster größer gemacht, ist zusätzlicher Raum verfügbar und die Box wird diesen Raum füllen. Weil die Box größer ist, ist auch mehr Platz innerhalb verfügbar und die flexible Schaltfläche kann diesen Platz einnehmen. Dieser Prozess wird für jede Verschachtelung wiederholt.</p>
+
+<h2 id="Minimale_und_maximale_Größen_festlegen">Minimale und maximale Größen festlegen</h2>
+
+<p>Vielleicht möchten Sie, dass ein Element eine bestimmte Größe besitzt, aber dennoch flexibel ist. Es können Größen festgelegt werden, die auch flexible Elemente nicht über- oder unterschreiten sollen. Diese Einstellung erreicht man mit diesen vier Attributen:</p>
+
+<dl>
+ <dt><code id="a-minwidth"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code></dt>
+ <dd>Legt die minimale Breite eines Elements fest.</dd>
+ <dt><code id="a-minheight"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/minheight">minheight</a></code></dt>
+ <dd>Legt die minimale Höhe eines Elements fest.</dd>
+ <dt><code id="a-maxwidth"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code></dt>
+ <dd>Legt die maximale Breite eines Elements fest.</dd>
+ <dt><code id="a-maxheight"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/maxheight">maxheight</a></code></dt>
+ <dd>Legt die maximale Höhe eines Elements fest.</dd>
+</dl>
+
+<p>Die Werten werden immer in Pixeln angegeben. Es können auch die zugehörigen CSS Eigenschaften angegeben werden: <code>min-width</code>, <code>min-height</code>, <code>max-width</code> und <code>max-height</code>.</p>
+
+<p>Diese Eigenschaften sind nur für flexible Elemente sinnvoll. Wird zum Beispiel eine maximale Höhe festgelegt, wird eine Schaltfläche nur bis zu einer bestimmten Größe skaliert. Sie können das Fenster weiterhin vergrößern, die Schaltfläche wird jedoch nicht weiter vergrößert werden. Die Box, in der sich die Schaltfläche befindet wird sich weiterhin anpassen, wenn Sie keine maximale Höhe festgelegt haben.</p>
+
+<p>Wenn zwei Schaltflächen flexibel sind, werden sich normalerweise beide den freien Platz gleichermaßen teilen. Falls eine Schaltfläche eine maximale Breite hat, wird die zweite Schaltfläche den restlichen Freiraum mit einnehmen.</p>
+
+<p>Wenn eine Box über eine maximale Breite oder Höhe verfügt, können die darin enthaltenen Kindelemente nicht größer als die festgelegte Größe der Box werden. Wenn eine minimale Breite oder Höhe vorliegt, können die Kindelemente ebenfalls nicht kleiner werden.</p>
+
+<h5 id="Beispiele_zur_Festlegung_von_Breiten_und_Höhen">Beispiele zur Festlegung von Breiten und Höhen</h5>
+
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-width: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;This is some boring but simple
+wrapping text.&lt;/description&gt;
+</pre>
+
+<dl>
+ <dt>Beispiel 1 </dt>
+ <dd>Die erste Schaltfläche wird mit einer Breite von 100 Pixeln (px bedeutet Pixel) angezeigt. Die Einheit muss angegeben werden, sonst wird die Breite ignoriert.</dd>
+ <dt>Beispiel 2 </dt>
+ <dd>Die zweite Schaltfläche wird mit einer Höhe von 10 Pixeln und einer Breite von 100em (ein em ist die Größe eines Zeichens der aktuellen Schrift) angezeigt.</dd>
+ <dt>Beispiel 3 </dt>
+ <dd>Die dritte Schaltfläche ist flexibel, sie wird also auf Basis der Größe Box der angezeigt. Die Schaltfläche wird jedoch niemals kleiner als 50 Pixel breit. Andere flexible Komponenten wie z.B. Spacer werden den verbleibenden Platz einnehmen.</dd>
+ <dt>Beispiel 4 </dt>
+ <dd>Die vierte Schaltfläche is flexibel und wird niemals eine Höhe haben, die kleiner als 2 ex ist (ein ex ist normalerweise die Höhe des Buchstaben x der aktuellen Schrift) oder größer als 100 Pixel ist.</dd>
+ <dt>Beispiel 5 </dt>
+ <dd>Das Texteingabefeld ist flexibel, wird aber niemals größer als 10em werden. Sie werden vermehrt em verwenden wollen, da Sie Größen für Elemente festlegen, die Text enthalten. Diese Einheit ist hilfreich für Textboxen, da die Schrift geändert werden kann und die Textbox immer eine passende Größe hat, auch wenn der Text mal ganz groß werden sollte.</dd>
+ <dt>Beispiel 6 </dt>
+ <dd>Das <code><code><a href="/de/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> Element wird gezwungen eine maximale Breite von 50 Pixeln zu besitzen. Der Text innerhalb wird in eine neue Zeile verschoben, wenn die 50 Pixel erreicht sind.</dd>
+</dl>
+
+<div class="highlight">
+<h5 id="Unser_Dateisuche-Dialog">Unser Dateisuche-Dialog</h5>
+
+<p>Fügen wir einige dieser Möglichkeiten zu unserem Dateisuche-Dialog hinzu. Wir werden es so machen, dass die Textbox auf das gesamte Fenster ausgestreckt wird.</p>
+
+<pre>&lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxstyle1.png" class="internal" src="/@api/deki/files/570/=Boxstyle1.png"></div>
+
+<p>Hier wurde das Texteingabefeld flexibel gemacht. Demnach wird es sich anpassen, wenn der Benutzer die Fenstergröße ändert. Das ist sehr hilfreich, wenn der Benutzer einen langen Text einfügen möchte. Außerdem wurde eine minimale Breite von 15em festgelegt, damit immer zumindest 15 Zeichen zu sehen sind. Verkleinert der Benutzer den Dialog sehr stark, wird das Texteingabefeld nur bis 15em verkleinert. Es wird so gezeichnet werden, als wenn es sich auch außerhalb des Fensters ausbreitet. Beachten Sie, dass das Bild ein Texteingabefeld zeigt, welches auf die maximale Fenstergröße ausgebreitet wurde.</p>
+</div>
+
+<h2 id="Anordnung_in_Boxen">Anordnung in Boxen</h2>
+
+<p>Wenn Sie eine Box mit zwei Kindelementen haben, beide nicht flexibel, die Box ist aber flexibel. Zum Beispiel:</p>
+
+<p><span id="Beispiel_3"><a id="Beispiel_3"></a><strong>Beispiel 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">Ansehen</a></p>
+
+<pre>&lt;box flex="1"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Wenn Sie nun das Fenster vergrößern, wird die Box auf die Fenstergröße ausgedehnt. Die Schaltflächen sind nicht flexibel, sie werden also nicht ihre Breiten ändern. Das Ergebnis ist zusätzlicher Platz, der auf der rechten Seite der Fensters (innerhalb der Box) erscheint. Sie möchten aber unter Umständen, dass dieser freie Platz auf der linken Seite erscheint, sodass die Schaltflächen auf der rechten Seite des Fensters ausgerichtet werden.</p>
+
+<p>Sie könnten das lösen, in dem Sie ein <code><code><a href="/de/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> Element innerhalb der Box platzieren, aber das wird umständlich, wenn Sie es für eine Vielzahl von Elementen machen müssen. Ein besserer Weg ist, ein zusätzliches Attribut <code><code id="a-pack"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> dem <code><code><a href="/de/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> Element hinzuzufügen</code>. Dieses Attribut gibt an, wie die Kindelemente innerhalb der Box angeordnet werden sollen. Für horizontal orientierte Boxen wird die horizontale Position der Kindelemente gesteuert. Für vertikal orientierte Boxen wird die die vertikale Position der Kindelemente gesteuert. Es können die folgenden Werte verwendet werden:</p>
+
+<dl>
+ <dt>start</dt>
+ <dd>Positioniert Elemente an der linken Seite für horizontale Boxen und an der oberen Seite für vertikale Boxen. Dies ist der Standardwert.</dd>
+ <dt>center</dt>
+ <dd>Zentriert Kindelemente in der Box.</dd>
+ <dt>end</dt>
+ <dd>Positioniert Elemente an der rechten Seite für horizontale Boxen und an der unteren Seite für vertikale Boxen.</dd>
+</dl>
+
+<p>Das <code><code id="a-pack"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> Attribut wird in der Box festgelegt, die die auszurichteten Elemente enthält, nicht in den Elementen selbst.</p>
+
+<p>Wir können das vorherige Beispiel ändern, sodass die Elemente wie folgt zentriert werden:</p>
+
+<p><span id="Beispiel_4"><a id="Beispiel_4"></a><strong>Beispiel 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">Ansehen</a></p>
+
+<pre>&lt;box flex="1" pack="center"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Jetzt, wenn das Fenster verändert wurde, werden die Schaltflächen horizontal zentriert. Vergleichen Sie das Verhalten zum vorherigen Beispiel.</p>
+
+<h2 id="Box_Ausrichtung">Box Ausrichtung</h2>
+
+<p>Wenn das Fenster im Happy-Sad Beispiel oben horizontal verändern, wird die Box in der Breite wachsen. Wenn Sie das Fenster vertikal verändern, werden jedoch die Schaltflächen in ihrer Höhe mitwachsen. Das kommt daher weil, die Flexibilität standardmäßig für die vertikale Richtung aktiviert ist.</p>
+
+<p>Dieses Verhalten kann mit dem <code><code id="a-align"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> Attribut gesteuert werden. Für horizontale Boxen werden die vertikalen Positionen der kindelemente gesteuert. Für vertikale Boxen werden die horizontalen Positionen der Kindelemente gesteuert. Die möglichen Werte sind ähnlich zu denen de<code><span style="font-family: Verdana,Tahoma,sans-serif;">s {</span>{XULAttr("pack")}}</code> Attributs.</p>
+
+<dl>
+ <dt>start</dt>
+ <dd>Richtet Elemente an der oberen Seite für horizontal Boxen und an der linken Seite für vertikale Boxen aus.</dd>
+ <dt>center</dt>
+ <dd>Zentriert Kindelemente in der Box.</dd>
+ <dt>end</dt>
+ <dd>Richtet Elemente an der unteren Seite für horizontale Boxen und an der rechten Seite für vertikale Boxen aus.</dd>
+ <dt>baseline</dt>
+ <dd>Richtet Elemente an der Textlinie aus. Nur für horizontale Boxen sinnvoll.</dd>
+ <dt>stretch</dt>
+ <dd>Standardwert. Sorgt dafür, dass die Elemente auf die Größe der Box ausgedehnt werden, wie ein flexibles Element nur in die andere Richtung.</dd>
+</dl>
+
+<p>Im Gegensatz zum <code><code id="a-pack"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> Attribut, wird das <code><code id="a-align"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> Attribut auf die beinhalteten Elemente der Box angewendet, nicht auf das Element selbst.</p>
+
+<p>Zum Beispiel, die erste Box unten wird die Kindelemente ausdehnen, weil das die Standardeinstellung ist. Die zweite Box hat ein <code><code id="a-align"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> Attribut, seine Kindelemente werden also zentriert platziert.</p>
+
+<p><span id="Beispiel_5"><a id="Beispiel_5"></a><strong>Beispiel 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">Ansehen</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="yesno" title="Question" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Yes"/&gt;
+    &lt;button label="No"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Maybe"/&gt;
+    &lt;button label="Perhaps"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxstyle2-b.png" class="internal" src="/@api/deki/files/572/=Boxstyle2-b.png"></div>
+
+<p>Es können auch die CSS Eigenschaften: <code><a href="/de/CSS/-moz-box-pack" title="de/CSS/-moz-box-pack">-moz-box-pack</a></code> und <code><a href="/de/CSS/-moz-box-align" title="de/CSS/-moz-box-align">-moz-box-align</a></code> anstatt von Attributen verwendet werden.</p>
+
+<div class="note">Vielleicht finden Sie auch das <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/aligner.xul">Ausrichtungsbeispiel</a> hilfreich, um die verschiedenen Eigenschaften auszuprobieren.</div>
+
+<h2 id="Text_und_Schaltflächen_abschneiden">Text und Schaltflächen abschneiden</h2>
+
+<p>Sie können eine Schaltfläche erstellen, die eine Beschriftung hat, die länger als die maximale Breite der Schaltfläche ist. Eine Lösung wäre sicher die Breite zu erhöhen, jedoch verfügen Schaltflächen (und andere Elemente mit einer Beschriftung) über ein spezielles Attribut. Das Attribut <code>"crop"</code> erlaubt Ihnen wie ein Text abgeschnitten wird, wenn dieser zu lang ist.</p>
+
+<p>Wenn der Text abgeschnitten wird, wird ein Auslassungszeichen (...) dort eingefügt, wo der Text ausgeschnitten wurde. Vier mögliche Werte sind dazu gültig:</p>
+
+<dl>
+ <dt>left</dt>
+ <dd>Der Text wird auf der linken Seite abgeschnitten.</dd>
+ <dt>right</dt>
+ <dd>Der Text wird auf der rechten Seite abgeschnitten.</dd>
+ <dt>center</dt>
+ <dd>Der Text wird in der Mitte abgeschnitten.</dd>
+ <dt>none</dt>
+ <dd>Der Text wird nicht abgeschnitten. Das ist das Standardverhalten.</dd>
+</dl>
+
+<p>Dieses Attribut ist wirklich nur dann sinnvoll, wenn ein Dialog so entworfen wurde, dass er verwendbar in jeder Große sein soll. Das <code>crop</code> Attribut kann auch bei anderen Elementen verwendet werden, die ein <code><span style="font-family: Verdana,Tahoma,sans-serif;">l</span>abel</code> Attribut für Beschriftungen verwenden. Das folgende Beispiel zeigt das Attribut in Aktion:</p>
+
+<p><span id="Beispiel_6"><a id="Beispiel_6"></a><strong>Beispiel 6</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">Ansehen</a></p>
+
+<div class="float-right"><img alt="Image:boxstyle2.png" class="internal" src="/@api/deki/files/573/=Boxstyle2.png"></div>
+
+<pre>&lt;button label="Push Me Please!" crop="right" flex="1"/&gt;
+</pre>
+
+<p>Beachten Sie, wie der Text der Schaltfläche auf der rechten Seiten abgeschnitten wird, wenn das Fenster verkleinert wird.</p>
+
+<div class="highlight">
+<p><span id="Aktueller_Dateisuche-Dialog"><a id="Aktueller_Dateisuche-Dialog"></a><strong>Aktueller Dateisuche-Dialog</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">Datei</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">Ansehen</a></p>
+</div>
+
+<p>Als nächstes eine Zusammenfassung und einige <a href="/de/XUL_Tutorial/Details_zum_Box-Modell" title="de/XUL Tutorial/Details zum Box-Modell">zusätzliche Details zum Box-Modell</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/de/docs/XUL_Tutorial/Das_Box-Modell" style="float: left;">« zurück</a><a href="/de/docs/XUL_Tutorial/Details_zum_Box-Modell">weiter  »</a></p>
+</div>

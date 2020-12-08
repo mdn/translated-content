@@ -1,0 +1,122 @@
+---
+title: for each...in
+slug: Web/JavaScript/Reference/Statements/for_each...in
+tags:
+  - Deprecated
+  - JavaScript
+  - Statement
+translation_of: Archive/Web/JavaScript/for_each...in
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<div class="warning">
+<p>The <code>for each...in</code> statement is deprecated as the part of ECMA-357 (<a href="/de/docs/Archive/Web/E4X" title="/en-US/docs/E4X">E4X</a>) standard. E4X support has been removed, but for each...in will not be disabled and removed because of backward compatibility considerations. Consider using {{jsxref("Statements/for...of", "for...of")}} instead. (Please refer to {{bug("791343")}}.)</p>
+</div>
+
+<p>Die<code> <strong>for each...in</strong></code><strong> </strong>Schleife wiederholt die definierteVariable in jeder Instanz eines Objekts. Für jedes einzelne Vorkommen wird der bestimmte Befehl ausgeführt.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>for each (<em>variable</em> in <em>object</em>) {
+  <em>statement</em>
+}</code></pre>
+
+<dl>
+ <dt><code>variable</code></dt>
+ <dd>die Variable, die innerhalb des durchsuchten Projekts gesucht wird. Diese kann durch das Schlüsselwort var bestimmt werden. Die Variable wird Lokal innerhalb der Funktion definiert, nicht für die ganze Schleife.</dd>
+</dl>
+
+<dl>
+ <dt><code>object</code></dt>
+ <dd>das Objekt, innerhalb dessen die Werte gesucht werden.</dd>
+</dl>
+
+<dl>
+ <dt><code>statement</code></dt>
+ <dd>am Befehl, der bei jedem auftreten der gesuchten Eigenschaft ausgeführt wird. Um mehrere Befehle innerhalb der Schleife auszuführen, nutzen Sie für deren Gruppierung das {{jsxref("Statements/block", "Block")}} statement (<code>{ ... }</code>) .</dd>
+</dl>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>einige Eigenschaften werden nicht in der Schleife durchsucht. Diese umfassen alle standardmäßigen Methoden von Objekten, beispielsweise die String-Methode indexOf. Es werden jedoch alle vom Nutzer definierten Werte durchsucht.</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Nutzung_von_for_each...in">Nutzung von <code>for each...in</code></h3>
+
+<p>Warnung: Nutzen Sie eine derartige Schleife niemals in Arrays. Nutzen Sie diese nur für Objekte. Weitere Einzelheiten bei {{jsxref("Statements/for...in", "for...in")}}.</p>
+
+<p>der folgende Code Ausschnitt durchsucht die Eigenschaften eines Objektes und errechnet ihre Summe:</p>
+
+<pre class="brush:js">var sum = 0;
+var obj = {prop1: 5, prop2: 13, prop3: 8};
+
+for each (var item in obj) {
+  sum += item;
+}
+
+console.log(sum); // logs "26", which is 5+13+8</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Kein teil der ECMA-262 Spezifikation. Implementiert in JavaScript 1.6 und deprecated.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("1.8")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("1.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...in", "for...in")}} -  ein ähnlicher Befehl, der die Namen der Eigenschaften durchsucht.</li>
+ <li>{{jsxref("Statements/for...of", "for...of")}} - a similar statement that iterates over the property <em>values</em> but can only be used for iteratable types, so not for generic objects</li>
+ <li>{{jsxref("Statements/for", "for")}}</li>
+</ul>

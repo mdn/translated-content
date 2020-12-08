@@ -1,0 +1,44 @@
+---
+title: ফায়ারফক্স ওএসের জন্য ওয়েব অ্যাপ লেখা
+slug: Archive/B2G_OS/Apps/Writing_a_web_app_for_Firefox_OS
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>ফায়ারফক্স ওএসের অ্যাপ মূলত সাধারণ HTML, CSS এবং জাভাস্ক্রিপ্টে লেখা ওয়েব অ্যাপ ছাড়া আর কিছুই না। অন্যান্য ওয়েবসাইটের মত এগুলোও আপনি ওয়েবে পাবলিশ করবেন। আপনার ওয়েবসাইটকে মোবাইলে ইন্সটল করার উপযোগী করতে চাইলে আপনাকে শুধুমাত্র একটি ম্যানিফেস্ট যুক্ত করতে হবে এবং একটি "ইন্সটল" বাটন যুক্ত করে দিতে হবে (যা নিয়ে নিচে বিস্তারিত আলোচনা করা হয়েছে।)</p>
+<p>শুরু করার জন্য নিচের আর্টিকেলগুলো দারুণ!</p>
+<ul>
+  <li><a href="/bn-BD/docs/Apps/Getting_Started">অ্যাপ বানানো শুরু করা</a></li>
+  <li><a href="/bn-BD/docs/Apps/Manifest">অ্যাপ ম্যানিফেস্টt</a></li>
+</ul>
+<p>এছাড়াও চাইলে <a href="/bn-BD/docs/Apps">ওপেন ওয়েব অ্যাপের জগতে</a> ঘুরে আসতে পারেন।</p>
+<h2 id="ওয়েব_অ্যাপটি_ইন্সটল_করা">ওয়েব অ্যাপটি ইন্সটল করা</h2>
+<p>অ্যাপ এবং অ্যাপ ম্যানিফেস্ট ওয়েবে পাবলিশ করেই কাজ শেষ হয়ে যায়নি, গিকোকে তো জানাতে হবে যে আপনার ওয়েবসাইটটি আসলে একটি অ্যাপ এবং এর ম্যানিফেস্ট আছে! ইন্সটল করার সময় গিকো ম্যানিফেস্ট থেকে অ্যাপের যাবতীয় তথ্য জেনে নেয় এবং হোমস্ক্রিনসহ অন্যান্য জায়গার প্রয়োজনীয় কাজগুলো সেরে নেয়।</p>
+<p>অ্যাপ ইন্সটল করার জন্য <a href="/bn-BD/docs/DOM/Apps.install"><code>navigator.mozApps.install</code> API</a> টি কল করুন। আপনার সেলফ-হোস্টেড অ্যাপের জন্য নিচে উদাহরণস্বরুপ একটি ইন্সটল বাটনের কোড দেয়া হয়, যা আপনি আপনার অ্যাপে এম্বেড করে দিতে পারেন।</p>
+<pre class="brush: html">&lt;button id="install"&gt;
+  Install this awesome app on your homescreen!
+&lt;/button&gt;
+
+&lt;script&gt;
+(function(){
+  function install(ev) {
+    ev.preventDefault();
+    // define the manifest URL
+    var manifest_url = "http://my.webapp.com/manifest.webapp";
+    // install the app
+    var myapp = navigator.mozApps.install(manifest_url);
+    myapp.onsuccess = function(data) {
+      // App is installed, remove button
+      this.parentNode.removeChild(this);
+    };
+    myapp.onerror = function() {
+      // App wasn't installed, info is in
+      // installapp.error.name
+     };
+  };
+  // get a reference to the button and call install() on click
+  var button = document.getElementById('install');
+  button.addEventListener('click', install, false);
+})();
+&lt;/script&gt;
+</pre>
+<p>উল্লেখ্য, ইন্সটল বাটনটি একটি অ্যাপ মার্কেটেও থাকতে পারে, যেমন ধরুণ <a href="/en-US/docs/Apps/Submitting_an_app">ফায়ারফক্স মার্কেটপ্লেস</a>, তারপরেও আপনার ওয়েবসাইটের মূল পাতায় একটি "ইন্সটল" বাটন থাকা ভালো।</p>
+<p>এবার ফায়ারফক্স ওএসের ব্রাউজার অ্যাপের সাহায্যে আপনার সাইটে গিয়ে "ইন্সটল" বাটনে চাপ দিয়ে দেখুন!</p>

@@ -1,0 +1,48 @@
+---
+title: Eine App für Firefox OS schreiben
+slug: Archive/B2G_OS/Apps/eine_app_für_firefox_os_schreiben
+tags:
+  - Apps
+  - Firefox OS
+  - Handy
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>Firefox OS Apps sind Web-Apps, die in HTML, CSS und JavaScript geschrieben sind. Die App wird im Internet publiziert, wie Sie es mit jeder anderen Website auch tun. Um die Website als installierbare Web-App auf dem Gerät zu erstellen, müssen Sie die App mit einem <span id="cke_bm_77S" style="display: none;"> </span><em>manifest</em><span id="cke_bm_77E" style="display: none;"> </span> und einem <em>hock up</em>, einem Installations-Button, wie nachfolgend erläutert, versehen.<span id="cke_bm_78E" style="display: none;"> </span></p>
+<p>Die folgenden Themen können als Ausgangspunkt genutzt werden:</p>
+<ul>
+  <li><a href="/en-US/docs/Web/Apps/Getting_Started">Starten Web-Apps zu schreiben (en)</a></li>
+  <li><a href="/en-US/docs/Web/Apps/Manifest">App manifest (en)</a></li>
+</ul>
+<p>Natürlich können Sie auch tiefer in die Technologie von Web-Apps eintauchen.</p>
+<h2 id="Die_Web-App_installieren">Die Web-App installieren</h2>
+<p>Mit der App und dem <em>manifest</em> im Internet, müssen Sie es Gecko bekannt machen. Während der Installationsphase schaut Gecko nach dem <em>manifest </em>und fügt die wichtigsten Einträge dem HomeScreen u.a. hinzu.</p>
+<p>Um die App zu installieren, müssen sie die <a href="/en-US/docs/Web/API/Apps.install"><code>navigator.mozApps.install</code> API</a> aufrufen. Hier finden Sie ein Beispiel für einen Installations-Button, den Sie in ihre App einbinden können, wenn Sie sie selbst hosten.</p>
+<pre class="brush: html">&lt;button id="install"&gt;
+  Installieren Sie diese App auf Ihrem HomeScreen!
+&lt;/button&gt;
+
+&lt;script&gt;
+(function(){
+  function install(ev) {
+    ev.preventDefault();
+    // Definierung der Manifest URL
+    var manifest_url = "http://my.webapp.com/manifest.webapp";
+    // App installieren
+    var myapp = navigator.mozApps.install(manifest_url);
+    myapp.onsuccess = function(data) {
+      // App ist installiert, Entfernen-Button
+      this.parentNode.removeChild(this);
+    };
+    myapp.onerror = function() {
+      // App war noch nicht installiert, Info ist in this.error.name definiert
+      console.log('Es ist ein Fehler bei der Installation aufgetreten., error: ' + this.error.name);
+     };
+  };
+  // Ein Verweis auf den Button und Aufruf von install() beim betätigen.
+  var button = document.getElementById('install');
+  button.addEventListener('click', install, false);
+})();
+&lt;/script&gt;
+</pre>
+<p>Tipp: DenInstallations-Button können Sie auch in App-Stores, wie zum Beispiel dem <a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Firefox Marketplace</a>, einbinden, aber es ist oft sehr praktisch den Installations-Button auf der Startseite des Projekts zu haben.</p>
+<p>Nun besuchen Sie Ihre Website mit der Firefox OS Browser App und benutzen Sie den Installations-Button.</p>

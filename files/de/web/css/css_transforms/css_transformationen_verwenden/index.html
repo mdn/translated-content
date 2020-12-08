@@ -1,0 +1,248 @@
+---
+title: CSS Transformationen verwenden
+slug: Web/CSS/CSS_Transforms/CSS_Transformationen_verwenden
+tags:
+  - CSS
+  - CSS Transformationen
+  - CSS3
+  - Fortgeschritten
+  - Guide
+translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
+---
+<div>{{CSSRef}}</div>
+
+<p>Durch Modifizierung des Koordinatenraums ändern <strong>CSS Transformationen</strong> den Umriss und die Position des betreffenden Inhalts ohne den normalen Dokumentfluss zu unterbrechen. Diese Anleitung bietet eine Einführung in die Verwendung von Transformationen.</p>
+
+<p>CSS Transformationen sind als eine Reihe von CSS Eigenschaften implementiert, die es erlauben, affine lineare Transformationen auf HTML Elemente anzuwenden. Diese Transformationen beinhalten Drehung, Verzerrung, Skalierung und Verschiebung sowohl im ebenen als auch im 3D Raum.</p>
+
+<h2 id="CSS_Transformationseigenschaften">CSS Transformationseigenschaften</h2>
+
+<p>Zwei Haupteigenschaften werden dazu verwendet, CSS Transformationen zu definieren: {{cssxref("transform")}} und {{cssxref("transform-origin")}}.</p>
+
+<dl>
+ <dt>{{cssxref("transform-origin")}}</dt>
+ <dd>Bestimmt die Position des Ursprungs. Standardmäßig ist dieser in der Mitte des Elements und kann verschoben werden. Er wird von mehreren Transformationen verwendet wie Drehung, Skalierung oder Verzerrung, die einen bestimmten Punkt als Parameter benötigen.</dd>
+ <dt>{{cssxref("transform")}}</dt>
+ <dd>Bestimmt die Transformationen, die auf das Element angewendet werden. Sie ist eine leerzeichenseparierte Liste von Transformationen, welche eine nach der anderen angewendet werden, wie durch die Zusammensetzungsoperation verlangt.</dd>
+</dl>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Drehung">Drehung</h3>
+
+<p>Dieses Beispiel erstellt einen iframe, der Googles Homepage beinhaltet, die um 90 Grad um die linke untere Ecke gedreht wurde.</p>
+
+<p><a class="button liveSample" href="/@api/deki/files/2921/=rotated-google-sample.html" title="/@api/deki/files/2921/=rotated-google-sample.html">Livebeispiel ansehen</a> <a class="button liveSample" href="/@api/deki/files/2920/=google-rotated.png" title="/@api/deki/files/2920/=google-rotated.png">Screenshot des Beispiels ansehen</a></p>
+
+<pre class="brush: html">&lt;div style="transform: rotate(90deg); transform-origin: bottom left;"&gt;
+  &lt;iframe src="http://www.google.com/" width="500" height="600"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</pre>
+
+<h3 id="Verzerrung_und_Verschiebung">Verzerrung und Verschiebung</h3>
+
+<p>Dieses Beispiel erstellt einen iframe, der Googles Homepage beinhaltet, verzerrt um 10 Grad und verschoben um 150 Pixel auf der x-Achse.</p>
+
+<p><a class="button liveSample" href="/@api/deki/files/2922/=skewed-google-sample.html" title="http://developer.mozilla.org/editor/fckeditor/core/editor/@api/deki/files/2922/=skewed-google-sample.html">Livebeispiel ansehen</a>  <a class="button liveSample" href="/@api/deki/files/2923/=skewed-google.png" title="/@api/deki/files/2923/=skewed-google.png">Screenshot des Beispiels ansehen</a></p>
+
+<pre class="brush: html">&lt;div style="transform: skewx(10deg) translatex(150px);
+            transform-origin: bottom left;"&gt;
+  &lt;iframe src="http://www.google.com/" width="600" height="500"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</pre>
+
+<h2 id="3D-spezifische_CSS_Eigenschaften">3D-spezifische CSS Eigenschaften</h2>
+
+<p>Die Anwendung von CSS Transformationen im dreidimensionalen Raum ist ein wenig komplexer. Zunächst muss der 3D Raum konfiguriert werden, indem ihm eine Perspektive gegeben wird. Anschließend muss konfiguriert werden, wie die 2D Elemente sich in diesem Raum verhalten.</p>
+
+<h3 id="Eine_Perspektive_einrichten">Eine Perspektive einrichten</h3>
+
+<p>Das erste Element ist das Setzen der <em>Perspektive</em>. Die Perspektive ist, was den dreidimensionalen Eindruck vermittelt. Je weiter weg Elemente vom Betrachter sind, desto kleiner sind sie.</p>
+
+<p>Wie schnell sie kleiner werden, wird durch die {{cssxref("perspective")}} Eigenschaft bestimmt. Je kleiner deren Wert ist, desto tiefer ist die Perspektive.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th><code>perspective:0;</code></th>
+   <th><code>perspective:250px;</code></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <div class="container" style="width: 200px; height: 200px; margin: 75px 0 0 75px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 0; -webkit-perspective: 0; perspective: 0; -moz-transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -moz-perspective-origin: 150% 150%; -webkit-perspective-origin: 150% 150%; perspective-origin: 150% 150%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+   <td>
+    <div class="container" style="width: 200px; height: 200px; margin: 75px 0 0 75px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 250px; -webkit-perspective: 250px; perspective: 250px; -moz-transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -moz-perspective-origin: 150% 150%; -webkit-perspective-origin: 150% 150%; perspective-origin: 150% 150%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th><code>perspective:300px;</code></th>
+   <th><code>perspective:350px;</code></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <div class="container" style="width: 200px; height: 200px; margin: 75px 0 0 75px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 300px; -moz-transform-style: preserve-3d; -moz-perspective-origin: 150% 150%; -webkit-perspective: 300px; -webkit-transform-style: preserve-3d; -webkit-perspective-origin: 150% 150%; perspective: 300px; transform-style: preserve-3d; perspective-origin: 150% 150%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+   <td>
+    <div class="container" style="width: 200px; height: 200px; margin: 75px 0 0 75px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 350px; -moz-transform-style: preserve-3d; -moz-perspective-origin: 150% 150%; -webkit-perspective: 350px; -webkit-transform-style: preserve-3d; -webkit-perspective-origin: 150% 150%; perspective: 350px; transform-style: preserve-3d; perspective-origin: 150% 150%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Das zweite Element ist die Konfiguration der Position des Betrachters mittels der {{cssxref("perspective-origin")}} Eigenschaft. Standardmäßig ist die Perspektive auf den Betrachter zentriert, was nicht immer passend ist.</p>
+
+<div>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th><code>perspective-origin:150px 150px;</code></th>
+   <th><code>perspective-origin:50% 50%;</code></th>
+   <th><code>perspective-origin:-50px -50px;</code></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <div class="container" style="width: 100px; height: 100px; margin: 25px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 300px; -moz-transform-style: preserve-3d; -moz-perspective-origin: 150% 150%; -webkit-perspective: 300px; -webkit-transform-style: preserve-3d; -webkit-perspective-origin: 150% 150%; perspective: 300px; transform-style: preserve-3d; perspective-origin: 150% 150%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+   <td>
+    <div class="container" style="width: 100px; height: 100px; margin: 25px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 300px; -moz-transform-style: preserve-3d; -moz-perspective-origin: 50% 50%; -webkit-perspective: 300px; -webkit-transform-style: preserve-3d; -webkit-perspective-origin: 50% 50%; perspective: 300px; transform-style: preserve-3d; perspective-origin: 50% 50%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+   <td>
+    <div class="container" style="width: 100px; height: 100px; margin: 25px; border: none;">
+    <div class="cube" style="width: 100%; height: 100%; -moz-perspective: 300px; -moz-transform-style: preserve-3d; -moz-perspective-origin: -50% -50%; -webkit-perspective: 300px; -webkit-transform-style: preserve-3d; -webkit-perspective-origin: -50% -50%; perspective: 300px; transform-style: preserve-3d; perspective-origin: -50% -50%;">
+    <div class="middle" style="display: block; position: absolute; width: 100px; height: 100px; border: 1px dashed black; line-height: 100px; font-family: arial, sans-serif; font-size: 60px; color: white; text-align: center; background: transparent;">   </div>
+
+    <div class="front">1</div>
+
+    <div class="back">2</div>
+
+    <div class="right">3</div>
+
+    <div class="left">4</div>
+
+    <div class="top">5</div>
+
+    <div class="bottom">6</div>
+    </div>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>Sobald dies getan ist, kann mit der Arbeit am Element im dreidimensionalen Raum begonnen werden.</p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li><a href="/de/docs/Web/Guide/Events/Gerätausrichtung_mit_3D_Transformationen_verwenden">Gerätausrichtung mit 3D Transformationen verwenden</a></li>
+ <li><a href="http://desandro.github.com/3dtransforms/">Einführung in CSS 3D Transformationen</a> (Blogeintrag von David DeSandro in Englisch)</li>
+</ul>

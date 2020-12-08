@@ -1,0 +1,60 @@
+---
+title: আন্তর্জাতিকায়ন
+slug: Mozilla/Persona/আন্তর্জাতিকায়ন
+translation_of: Archive/Mozilla/Persona/Internationalization
+---
+<h2 id="পারসোনাতে_স্থানিয়করন_কি">পারসোনাতে স্থানিয়করন কি</h2>
+
+<p>ভবিষ্যতে ব্যাবহারকারিদের পারসোনার মাধ্যমে বিভিন্ন সাইটে সাইন-ইনের ইন্টারফেস সরাসরি ব্রাউজারের অন্তর্গত থাকবে, এবং এইভাবেই ব্রাউজারের মাধ্যমে সাইটগুলোও স্থানীয়করন হয়ে যাবে। যেসব ব্রাউজারে পারসোনা অন্তর্গত থাকবে না, সেসব ব্রাউজার<a href="https://login.persona.org" title="https://login.persona.org">ে login.persona.org</a> এই লিঙ্কটি চলে আসবে। এই উক্তিগুলো অনুবাদ করেছে <span class="short_text" id="result_box" lang="bn"><span class="hps">কমিউনিটি স্বেচ্ছাসেবকদের একটি দল</span></span>, এবং ৪৫ এর বেশি স্থানীয় বর্তমান <a href="https://github.com/mozilla/browserid/blob/dev/config/l10n-prod.json">এখানে কর্মরত আছেন</a>।</p>
+
+<h2 id="How_Persona_chooses_localizations">How Persona chooses localizations</h2>
+
+<p>The Persona service selects a language using the <code>Accept-Language</code> header sent alongside the browser's requests. The algorithm used to map an <code>Accept-Language</code> header to a language is the same as that used by <code>mozilla.org</code>:</p>
+
+<ol>
+ <li>For each language tag in the <code>Accept-Language</code> header:
+
+  <ul>
+   <li>check if we have an exact match for the language identified by the language tag</li>
+   <li>check if we have an exact match for the language identified by the first part of the language tag</li>
+  </ul>
+ </li>
+ <li>If a match can't be made using rule (1), fall back to en-US. However, en or en-US is almost always the last accept-lang header sent by most browsers.</li>
+</ol>
+
+<p>For example, the table below lists the language selected for various <code>Accept-Language</code> headers, if the following locales were supported: <code>en-US, es, es-MX</code>:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Accept-Language Header</strong></th>
+   <th scope="col"><strong>Selected language</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>es-AR,es;q=0.8,en-us;q=0.5</code></td>
+   <td><code>es</code></td>
+  </tr>
+  <tr>
+   <td><code>es-MX,es;q=0.8,en-us;q=0.5</code></td>
+   <td><code>es-MX</code></td>
+  </tr>
+  <tr>
+   <td><code>e</code><code>s-es,en-us;q=0.5</code></td>
+   <td><code>en-US</code></td>
+  </tr>
+  <tr>
+   <td><code>e</code><code>s-es</code></td>
+   <td><code>en-US</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>There is currently no way for a website to force the dialogs to appear in another language. This is because the Persona UI is logically (and in future native implementations will actually be) part of the browser UI, so its language should be consistent with the language selected for the browser.</p>
+
+<h2 id="আপনি_যেভাবে_সাহায্য_করতে_পারেন">আপনি যেভাবে সাহায্য করতে পারেন</h2>
+
+<p>পারসোনা নতুন অনুবাদে <span class="short_text" id="result_box" lang="bn"><span class="hps">স্বেচ্ছাসেবকদের সাহায্য করতে</span></span> Mozilla Verbatim ব্যবহার করে। যদি আপনি সাহায্য করতে চান তাহলে <a href="https://developer.mozilla.org/en-US/docs/Localizing_with_Verbatim" title="https://developer.mozilla.org/en-US/docs/Localizing_with_Verbatim">getting started with Verbatim </a>পড়ুন এবং Verbatim এ  <a href="https://localize.mozilla.org/projects/browserid/" title="https://localize.mozilla.org/projects/browserid/">"BrowserID" project</a> দেখুন।</p>
+
+<p> </p>

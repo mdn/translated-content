@@ -1,0 +1,334 @@
+---
+title: textbox
+slug: Archive/Mozilla/XUL/Textbox
+tags:
+  - XUL Elemente
+  - XUL Referenz
+translation_of: Archive/Mozilla/XUL/textbox
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/de/docs/XUL_Referenz">XUL Referenz Startseite</a>    [
+ <a href="#Beispiele">Beispiele</a> |
+ <a href="#Attribute">Attribute</a> |
+ <a href="#Eigenschaften">Eigenschaften</a> |
+ <a href="#Methoden">Methoden</a> |
+ <a href="#Verwandte_Themen">Verwandte Themen</a> ]
+</span></div>
+<p>Ein Eingabefeld, in dem der Benutzer einen Text eingeben kann. Die <code>textbox</code> ist ähnlich wie das HTML <code>input</code> Element. Nur eine Textzeile wird im Standardverhalten angezeigt. Das <code id="a-multiline"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/multiline">multiline</a></code> Attribut kann das Feld auch mit mehreren Zeilen ausstatten.</p>
+<p>Weitere Informationen sind im <a href="/de/XUL_Tutorial/Eingabeelemente" title="de/XUL_Tutorial/Eingabeelemente">XUL Tutorial</a> verfügbar.</p>
+<dl> <dt>Attribute</dt> <dd><a href="#a-cols">cols</a>, <a href="#a-decimalplaces">decimalplaces</a>, <a href="#a-disabled">disabled</a>, <a href="#a-emptytext">emptytext</a>, <a href="#a-hidespinbuttons">hidespinbuttons</a>, <a href="#a-increment">increment</a>, <a href="#a-textbox.label">label</a>, <a href="#a-max">max</a>, <a href="#a-maxlength">maxlength</a>, <a href="#a-min">min</a>, <a href="#a-multiline">multiline</a>, <a href="#a-newlines">newlines</a>, <a href="#a-textbox.onchange">onchange</a>, <a href="#a-oninput">oninput</a>, <a href="#a-placeholder">placeholder</a>, <a href="#a-preference">preference</a>, <a href="#a-readonly">readonly</a>, <a href="#a-rows">rows</a>, <a href="#a-searchbutton">searchbutton</a>, <a href="#a-size">size</a>, <a href="#a-spellcheck">spellcheck</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-timeout">timeout</a>, <a href="#a-textbox.type">type</a>, <a href="#a-textbox.value">value</a>, <a href="#a-wrap">wrap</a>, <a href="#a-wraparound">wraparound</a></dd>
+</dl>
+<dl> <dt>Eigenschaften</dt> <dd><a href="#p-accessibleType">accessibleType</a>, <a href="#p-clickSelectsAll">clickSelectsAll</a>, <a href="#p-decimalPlaces">decimalPlaces</a>, <a href="#p-decimalSymbol">decimalSymbol</a>, <a href="#p-defaultValue">defaultValue</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editor">editor</a>, <a href="#p-emptyText">emptyText</a>, <a href="#p-increment">increment</a>, <a href="#p-inputField">inputField</a>, <a href="#p-textbox.label">label</a>, <a href="#p-max">max</a>, <a href="#p-maxLength">maxLength</a>, <a href="#p-min">min</a>, <a href="#p-placeholder">placeholder</a>, <a href="#p-readOnly">readOnly</a>, <a href="#p-searchButton">searchButton</a>, <a href="#p-selectionEnd">selectionEnd</a>, <a href="#p-selectionStart">selectionStart</a>, <a href="#p-size">size</a>, <a href="#p-spinButtons">spinButtons</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-textLength">textLength</a>, <a href="#p-timeout">timeout</a>, <a href="#p-type">type</a>, <a href="#p-textbox.value">value</a>, <a href="#p-valueNumber">valueNumber</a>, <a href="#p-wrapAround">wrapAround</a></dd>
+</dl>
+<dl> <dt>Methoden</dt> <dd><a href="#m-decrease">decrease</a>, <a href="#m-increase">increase</a>, <a href="#m-reset">reset</a>, <a href="#m-select">select</a>, <a href="#m-setSelectionRange">setSelectionRange</a></dd>
+</dl>
+<dl> <dt>Styleklassen</dt> <dd><a href="#s-plain">plain</a></dd>
+</dl>
+<h3 id="Besipiele">Besipiele</h3>
+<div class="float-right"><img alt="Image:XUL_ref_textbox.png" class="internal" src="/@api/deki/files/471/=XUL_ref_textbox.png"></div>
+<pre>&lt;vbox&gt;
+&lt;label control="your-name" value="Enter your name:"/&gt;
+&lt;textbox id="your-name" value="John"/&gt;
+&lt;/vbox&gt;
+</pre>
+<h3 id="Attribute">Attribute</h3>
+<p> </p><div id="a-cols">
+
+<dl> <dt><code id="a-cols"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/cols">cols</a></code></dt> <dd>Typ: <em>integer</em></dd> <dd>Stellt die Anzahl an Spalten für mehrzeilige Textboxen dar.</dd>
+</dl>
+
+</div> <div id="a-decimalplaces">
+
+<dl> <dt><code id="a-decimalplaces"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/decimalplaces">decimalplaces</a></code> </dt> <dd>Typ: <em>integer</em></dd> <dd>Die Anzahl an Dezimalstellen, die angezeigt werden sollen. Der Standardwert ist 0, was bedeutet, dass keine Dezimalstellen angezeigt werden. Der Wert<code> infinity</code> kann dazu verwendet werden, keine Begrenzung der Dezimalstellen bei Zahlen anzuzeigen. Hinweis: Dezimalzahlen werden als Floats gespeichert.</dd>
+</dl>
+
+</div> <div id="a-disabled">
+
+<dl> <dt><code id="a-disabled"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt> <dd>Typ: <em>boolean</em></dd> <dd>Kennzeichnet, ob ein Element deaktiviert ist oder nicht. Wenn das Element auf  <code>true</code> gesetzt ist, ist das Element deaktiviert. Deaktivierte Elemente sind gewöhnlich mit einem grauen Text dargestellt. Wenn ein Element deaktiviert ist, wird es auf Anwenderaktionen nicht reagieren, es kann den Fokus nicht erlangen und das <code>command</code> Ereignis wird nicht ausgelöst. Das Element wird allerdings noch auf Mausereignisse antworten. Um das Element zu aktivieren, ist es besser das Attribut zu entfernen als es auf den Wert <code>false</code> zu setzen. Um den Wert dieses Attributs mittels JavaScript zu setzen oder abzurufen, sollte besser die <code><span><a href="https://developer.mozilla.org/de/docs/XUL/Eigenschaften/disabled">disabled</a></span></code> Eigenschaft verwendet werden.</dd>
+</dl>
+
+
+</div> <div id="a-emptytext">
+
+<dl> <dt><code id="a-emptytext"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/emptytext">emptytext</a></code>  <span class="inlineIndicator deprecated deprecatedInline" title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Unerwünscht Gecko 2</span></dt> <dd>Typ: <em>string</em></dd> <dd>Ein String, der in der <a class="internal" href="/De/XUL/Textbox" title="de/XUL/textbox">Textbox</a> angezeigt wird, falls diese keinen Wert besitzt. Dieses Attribut wurde vom <code id="a-placeholder"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/placeholder">placeholder</a></code> Attribut in Gecko 2 ersetzt. Der alte Name bleibt zur Kompatibilität bestehen, aber Sie sollten Ihren Code aktualisieren.</dd>
+</dl>
+
+</div> <div id="a-hidespinbuttons">
+
+<dl> <dt><code id="a-hidespinbuttons"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/hidespinbuttons">hidespinbuttons</a></code></dt> <dd>Typ: <em>boolean</em></dd> Falls der Wert auf <code>true</code> gesetzt wird, werden keine Buttons mit Pfeilen angezeigt, um den Wert des Feldes anzupassen. Der Wert kann dann ausschließlich per Tastatur eingegeben werden. Standardmäßig ist der Wert <code>false</code>.</dl>
+</div> <div id="a-increment">
+
+<dl>
+  <dt>
+    <code id="a-increment"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The amount by which the <code id="a-curpos"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code> (for scroll bars) or <code id="a-value"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> (for number boxes and scale) attribute changes when the arrows are clicked(or scales are dragged). The default value is 1.</dd>
+</dl>
+</div> <div id="a-textbox.label">
+
+
+<dl>
+ <dt><code id="a-textbox.label"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.label">label</a></code> </dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>If present and not empty, this will be exposed to screen readers through the <a href="/en/XUL/Property/textbox.label" title="en/XUL/Property/textbox.label">label</a> property.</dd>
+</dl>
+</div> <div id="a-max">
+
+<dl>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The maximum value that the scale or number box may be set to. The default value is 100 for scales and Infinity for number boxes.</dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-maxlength">
+
+
+<dl>
+ <dt><code id="a-maxlength"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/maxlength">maxlength</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The maximum number of characters that the textbox allows to be entered.</dd>
+</dl>
+</div> <div id="a-min">
+
+<dl>
+  <dt>
+    <code id="a-min"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The minimum value the control's value may take. The default value is 0.</dd>
+</dl>
+<p> </p>
+</div> <div id="a-multiline">
+
+
+<dl>
+ <dt><code id="a-multiline"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/multiline">multiline</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code>, the textbox displays multiple lines. If the user presses Enter, a new line is started. If <code>false</code>, the textbox only allows entry of one line.</dd>
+</dl>
+</div> <div id="a-newlines">
+
+
+<dl>
+ <dt><code id="a-newlines"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/newlines">newlines</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>How the text box handles pastes with newlines in them.</dd>
+ <dd>Possible values:
+ <dl>
+  <dt><code>pasteintact</code></dt>
+  <dd>Paste newlines unchanged</dd>
+  <dt><code>pastetofirst</code></dt>
+  <dd>Paste text up to the first newline, dropping the rest of the text</dd>
+  <dt><code>replacewithcommas</code></dt>
+  <dd>Pastes the text with the newlines replaced with commas</dd>
+  <dt><code>replacewithspaces</code></dt>
+  <dd>Pastes the text with newlines replaced with spaces</dd>
+  <dt><code>strip</code></dt>
+  <dd>Pastes the text with the newlines removed</dd>
+  <dt><code>stripsurroundingwhitespace</code></dt>
+  <dd>Pastes the text with newlines and adjacent whitespace removed</dd>
+ </dl>
+ </dd>
+</dl>
+</div> <div id="a-textbox.onchange">
+
+
+<dl>
+ <dt><code id="a-textbox.onchange"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.onchange">onchange</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event is sent when the value of the textbox is changed. The event is not sent until the focus is moved to another element.</dd>
+</dl>
+
+
+</div> <div id="a-oninput">
+
+
+<dl>
+ <dt><code id="a-oninput"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/oninput">oninput</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event is sent when a user enters text in a <code><a href="/en-US/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>. This event is only called when the text displayed would change, thus it is not called when the user presses non-displayable keys.</dd>
+</dl>
+
+
+</div> <div id="p-placeholder"></div> <div id="a-preference">
+
+
+<dl>
+ <dt><code id="a-preference"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/preference">preference</a></code></dt>
+ <dd>Type: <em>id</em></dd>
+ <dd>Connects the element to a corresponding <code><a href="/en-US/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code>. This attribute only has any effect when used inside a <code><a href="/en-US/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>. More information is available in the <a href="../../../../en/Preferences_System" rel="internal">Preferences System</a> article.</dd>
+</dl>
+</div> <div id="a-readonly">
+
+
+<dl>
+ <dt><code id="a-readonly"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/readonly">readonly</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If set to <code>true</code>, then the user cannot change the value of the element. However, the value may still be modified by a script.</dd>
+</dl>
+</div> <div id="a-rows">
+
+<dl>
+  <dt>
+    <code id="a-rows"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The number of rows to display in the element. If the element contains more than this number of rows, a scrollbar will appear which the user can use to scroll to the other rows. To get the actual number of rows in the element, use the <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getRowCount">getRowCount</a></code></span> method.</dd>
+</dl>
+</div> <div id="a-searchbutton">
+
+
+<dl>
+ <dt><code id="a-searchbutton"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/searchbutton">searchbutton</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code>, the search field will only fire a command event when the user presses the search button or presses the <code>Enter</code> key. Otherwise, the command event is fired whenever the user modifies the value. This attribute only applies to textboxes with the type <code>search</code>.</dd>
+</dl>
+</div><div id="a-size">
+
+
+<dl>
+ <dt><code id="a-size"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/size">size</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The number of characters that can be displayed in the textbox.</dd>
+</dl>
+</div> <div id="a-spellcheck">
+
+
+<dl>
+ <dt><code id="a-spellcheck"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/spellcheck">spellcheck</a></code> </dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code>, spell checking is enabled by default for the text box; if <code>false</code>, spell checking is disabled by default.</dd>
+ <dd>If not specified, this defaults to <code>false</code></dd>
+</dl>
+
+<p><span style="font-family: Georgia,Times,'Times New Roman',serif; font-size: 1.628em; font-style: inherit; font-variant: inherit; line-height: 1.1em;">The HTML</span></p>
+
+<article style="margin: 0px; padding: 0px; border: 0px; font-family: 'Open Sans', Arial, sans-serif; line-height: 16px; font-size: 16px; vertical-align: baseline; position: relative;">
+<p style="margin: 0px 0px 0.8em; padding: 0px; border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: 1.6em; vertical-align: baseline;">The <code style="margin: 0px; padding: 2px 7px; border: 0px; font-family: monospace, sans-serif; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; font-size: 16px; vertical-align: baseline; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">spellcheck</code> attribute uses values of true or false (you cannot simply add the spellcheck attribute to a given element):</p>
+
+<pre class="html language-html" style="margin-top: 0.5em; margin-bottom: 0.5em; padding: 1em; border: 0px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-style: inherit; font-variant: inherit; line-height: 1.6em; font-size: 0.8em; vertical-align: baseline; background-color: rgb(245, 242, 240); color: black; text-shadow: white 0px 1px; direction: ltr;"><code class="language-html" style="margin: 0px; padding: 0px; border: 0px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-style: inherit; font-variant: inherit; line-height: inherit; font-size: 13px; vertical-align: baseline; text-shadow: white 0px 1px; direction: ltr;"><span class="comment token" style="border: 0px; color: #708090; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;!-- spellcheck everything! --&gt;</span>
+<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>input</span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">type</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>text<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">spellcheck</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>true<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span> <span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">/&gt;</span></span><span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>br</span> <span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">/&gt;</span></span>
+<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>textarea</span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">spellcheck</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>true<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span><span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;/</span>textarea</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span>
+<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>div</span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">contenteditable</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>true<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">spellcheck</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>true<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span>I am some content<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;/</span>div</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span>
+
+<span class="comment token" style="border: 0px; color: #708090; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;!-- spellcheck nothing! --&gt;</span>
+<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>input</span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">type</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>text<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">spellcheck</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>false<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span> <span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">/&gt;</span></span><span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>br</span> <span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">/&gt;</span></span>
+<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>textarea</span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">spellcheck</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>false<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span><span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;/</span>textarea</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span>
+<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;</span>div</span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">contenteditable</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>true<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span> <span class="attr-name token" style="border: 0px; color: #669900; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">spellcheck</span><span class="attr-value token" style="border: 0px; color: #0077aa; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">=</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span>false<span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">"</span></span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span>I am some content<span class="tag token" style="border: 0px; color: #990055; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="tag token" style="border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&lt;/</span>div</span><span class="punctuation token" style="border: 0px; color: #999999; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&gt;</span></span></code></pre>
+
+<p style="margin: 0px 0px 0.8em; padding: 0px; border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: 1.6em; vertical-align: baseline;">You can use spellcheck on <code style="margin: 0px; padding: 2px 7px; border: 0px; font-family: monospace, sans-serif; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; font-size: 16px; vertical-align: baseline; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">INPUT</code>, <code style="margin: 0px; padding: 2px 7px; border: 0px; font-family: monospace, sans-serif; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; font-size: 16px; vertical-align: baseline; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">TEXTAREA</code>, and <code style="margin: 0px; padding: 2px 7px; border: 0px; font-family: monospace, sans-serif; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; font-size: 16px; vertical-align: baseline; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">contenteditable</code> elements.  The<code style="margin: 0px; padding: 2px 7px; border: 0px; font-family: monospace, sans-serif; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; font-size: 16px; vertical-align: baseline; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">spellcheck</code> attribute works well paired with the <font face="inherit"><span style="font-style: inherit; font-variant: inherit; line-height: inherit;">autocomplete, autocapitalize, and autocorrect attributes</span></font> too!</p>
+
+<p style="margin: 0px 0px 0.8em; padding: 0px; border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; line-height: 1.6em; vertical-align: baseline;">Added from David Walsh's article on <a href="http://davidwalsh.name/spellcheck">Spell Check</a>.</p>
+</article>
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The tab order of the element. The tab order is the order in which the focus is moved when the user presses the "<code>tab</code>" key. Elements with a higher <code>tabindex</code> are later in the tab sequence.</dd>
+</dl>
+</div> <div id="a-timeout">
+
+
+<dl>
+ <dt><code id="a-timeout"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>For autocomplete textboxes, the number of milliseconds before the textbox starts searching for completions. The default is 50 milliseconds. For search textboxes, the number of milliseconds before the timer fires a command event. The default is 500 milliseconds. For timed textboxes, the number of milliseconds before the timer fires a command event. There is no default. The timer starts after the user types a character. If the user types another character, the timer resets.</dd>
+</dl>
+</div> <div id="a-textbox.type">
+
+
+<dl>
+ <dt><code id="a-textbox.type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.type">type</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>You can set the type attribute to one of the values below for a more specialized type of textbox. Don't set the type if you wish to use a regular textbox.</dd>
+ <dd>
+ <dl>
+  <dt><code>autocomplete</code></dt>
+  <dd>A textbox that supports autocomplete. For more information about autocomplete textboxes, see the autocomplete documentation (<a href="/En/XUL/Textbox_(XPFE_autocomplete)" title="En/XUL/Textbox (XPFE autocomplete)">XPFE</a> [Thunderbird/SeaMonkey]) (<a href="/En/XUL/Textbox_(Toolkit_autocomplete)" title="en/XUL/textbox_(Firefox_autocomplete)">Firefox</a>)</dd>
+  <dt><code>number</code></dt>
+  <dd> A textbox that only allows the user to enter numbers. In addition, arrow buttons appear next to the textbox to let the user step through values. There are several attributes that allow the number textbox to be configured, including <code id="a-decimalplaces"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/decimalplaces">decimalplaces</a></code>, <code id="a-min"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code>, <code id="a-max"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code>, <code id="a-increment"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code>, <code id="a-wraparound"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/wraparound">wraparound</a></code>, <code id="a-hidespinbuttons"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/hidespinbuttons">hidespinbuttons</a></code>, and <code id="a-textbox.value"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.value">textbox.value</a></code>.</dd>
+  <dt><code>password</code></dt>
+  <dd>A textbox that hides what is typed, used for entering passwords.</dd>
+  <dt><code>search</code></dt>
+  <dd> A textbox intended for searching. The command event will fire as the user modifies the value. A listener for the command event should update search results. If the <code id="a-searchbutton"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/searchbutton">searchbutton</a></code> attribute is set to <code>true</code>, the command event is only fired if the user presses the search button or presses the <code>Enter </code>key. You may specify grey text to appear when the search box is empty using the <code id="a-emptytext"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/emptytext">emptytext</a></code> attribute, and a timeout may be set for the command event using the <code id="a-timeout"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code> attribute (defaults to 500).</dd>
+  <dt><code>timed</code></dt>
+  <dd><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> This textbox will fire a command event after the user types characters and a certain time has passed. The delay is set with the <code id="a-timeout"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code> attribute. The command event will fire if the user presses the <code>Enter </code>key. The <code>timed</code> type is deprecated in Gecko 1.9.1 and the <code>search</code> textbox may be used instead.</dd>
+ </dl>
+ </dd>
+</dl>
+
+
+</div> <div id="a-textbox.value">
+
+
+<dl>
+ <dt><code id="a-textbox.value"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.value">value</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The default value entered in a textbox. The attribute only holds the default value and is never modified when the user enters text. To get the updated value, use the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/value">value</a></span></code> property. For number boxes, the default is 0 or the minimum value returned by the <code>min</code> property, whichever is higher.</dd>
+</dl>
+
+
+</div> <div id="a-wrap">
+
+
+<dl>
+ <dt><code id="a-wrap"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/wrap">wrap</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>Set this attribute to the value <code>off</code> to disable word wrapping in the textbox. If this attribute is not specified, word wrapping is enabled.</dd>
+</dl>
+</div> <div id="a-wraparound">
+
+
+<dl>
+ <dt><code id="a-wraparound"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/wraparound">wraparound</a></code> </dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code>, the value of the number box will wrap around when the maximum or minimum value is exceeded. The minimum and maximum values must both not be infinity.</dd>
+</dl>
+</div>
+<h3 id="Eigenschaften">Eigenschaften</h3>
+<p> </p><div id="p-accessibleType"></div> <div id="p-clickSelectsAll"></div> <div id="p-decimalPlaces"></div> <div id="p-decimalSymbol"></div> <div id="p-defaultValue"></div> <div id="p-disabled"></div> <div id="p-editor"></div> <div id="p-emptyText"></div> <div id="p-increment"></div> <div id="p-inputField"></div> <div id="p-textbox.label"></div> <div id="p-max"></div> <div id="p-maxLength"></div> <div id="p-min"></div> <div id="a-placeholder">
+
+
+<dl>
+ <dt><code id="a-placeholder"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/placeholder">placeholder</a></code> </dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>A string that appears in the textbox when it has no value.</dd>
+</dl>
+</div> <div id="p-readOnly"></div> <div id="p-searchButton"></div> <div id="p-selectionEnd"></div> <div id="p-selectionStart"></div> <div id="p-size"></div> <div id="p-spinButtons"></div> <div id="p-tabIndex"></div> <div id="p-textLength"></div> <div id="p-timeout"></div> <div id="p-type"></div> <div id="p-textbox.value"></div> <div id="p-valueNumber"></div> <div id="p-wrapAround"></div>
+<h3 id="Methoden">Methoden</h3>
+<p>     </p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Geerbte Methoden</strong><br> <small><code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.addEventListener">element.addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.appendChild">node.appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.cloneNode">node.cloneNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.compareDocumentPosition">node.compareDocumentPosition()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.dispatchEvent">element.dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttribute">element.getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNode">element.getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNodeNS">element.getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNS">element.getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getBoundingClientRect">element.getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getClientRects">element.getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByClassName">element.getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagName">element.getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagNameNS">element.getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getFeature">node.getFeature()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getUserData">node.getUserData()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttribute">element.hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttributeNS">element.hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasAttributes">nodes.hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasChildNodes">nodes.hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.insertBefore">node.insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isDefaultNamespace">node.isDefaultNamespace()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isEqualNode">node.isEqualNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSameNode">node.isSameNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSupported">node.isSupported()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupNamespaceURI">node.lookupNamespaceURI()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupPrefix">node.lookupPrefix()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.normalize">node.normalize()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelector">element.querySelector()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelectorAll">element.querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttribute">element.removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNode">element.removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNS">element.removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.removeChild">node.removeChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeEventListener">element.removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.replaceChild">node.replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttribute">element.setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNode">element.setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNodeNS">element.setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNS">element.setAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.setUserData">node.setUserData()</a></code></small></p> </td> </tr> </tbody>
+</table>
+<h3 id="Styleklassen">Styleklassen</h3>
+<p>Folgende Klassen können benutzt werden, um den Stil des Elements zu bestimmen. Statt den Stil des Elements direkt zu ändern, sollten diese Klassen zu Hilfe genommen werden, da sie sich natürlicher in das vom Benutzer gewählte Theme der Benutzeroberfläche einfügen.</p>
+<dl>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/XUL/Style/plain">plain</a></code></dt>
+ <dd>This class causes the element to be displayed with no border or margin.</dd>
+</dl>
+<h3 id="Hinweise">Hinweise</h3>
+<p>Das <code>maxlength</code> Attribut funktioniert nicht, wenn man im Mehrzeilenmodus ist. Ein Workaround mittels JavaScript und dem <code>onkeypress</code> Eventhandler stellt eine Lösung dar.</p>
+<p>Das XUL script:</p>
+<pre class="brush: xml">&lt;textbox id="pnNote" multiline="true" rows="2" cols="70" onkeypress="return pnCountNoteChars(event);"/&gt;
+</pre>
+<p>Das Javascript:</p>
+<pre class="brush: js">function pnCountNoteChars(evt) {
+    //Erlaube Tasten, die keine Zeichen sind (Entfernen, Backspace etc.)
+    if ((evt.charCode == 0) &amp;&amp; (evt.keyCode != 13))
+      return true;
+
+    if(evt.target.value.length &lt; 10) {
+        return true;
+    } else {
+        return false;
+    }
+}</pre>
+<h3 id="Verwandte_Themen">Verwandte Themen</h3>
+<dl> <dt>Schnittstellen</dt> <dd><a href="/de/XPCOM_Interface_Referenz/nsIAccessibleProvider" title="de/XPCOM_Interface_Referenz/nsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="/de/NsIDOMXULTextboxElement" title="de/NsIDOMXULTextboxElement">nsIDOMXULTextboxElement</a></dd>
+</dl>

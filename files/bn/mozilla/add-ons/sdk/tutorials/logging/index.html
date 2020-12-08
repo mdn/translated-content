@@ -1,0 +1,38 @@
+---
+title: লগিং
+slug: Mozilla/Add-ons/SDK/Tutorials/Logging
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Logging
+---
+<div class="note">
+ To follow this tutorial you'll need to have <a href="/en-US/Add-ons/SDK/Tutorials/Installation">installed the SDK</a> and learned the <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">basics of <code>cfx</code></a>.</div>
+<p> <a href="https://developer.mozilla.org/en/DOM/console">ডম<code> কনসোল অবজেক্ট</code> </a> জাভাস্ক্রিপ্ট ডিবাগ করার জন্য ব্যবহৃত হয়। কারণ ডম অবজেক্ট গুলো মেইন অ্যাড-অন কোডে পাওয়া যায় না । SDK এর নিজেস্ব গ্লোবাল কনসোল অবজেক্ট আছে যার অধিকাংশ মেথড ডম কনসোল এর মত , যার মধ্যে আছে লগ এরর, ওয়ার্নিং অথবা ইনফরমেশনাল ম্যাসেজ। কনসোল এ এক্সেস করার জন্য আপনার কোন কিছুর প্রয়োজন<code>()নেই।</code> এটি automatically আপনার জন্য দেয়া আছে ।</p>
+<p>The <code>console.log()</code> method prints an informational message:</p>
+<pre class="brush: js">console.log("Hello World");
+</pre>
+<p>Try it out:</p>
+<ul>
+ <li>create a new directory, and navigate to it</li>
+ <li>execute <code>cfx init</code></li>
+ <li>open "lib/main.js" and add the line above</li>
+ <li>execute <code>cfx run</code>, then <code>cfx run</code> again</li>
+</ul>
+<p>Firefox will start, and the following line will appear in the command window you used to execute <code>cfx run</code>:</p>
+<pre>info: Hello World!
+</pre>
+<h2 id="console_in_Content_Scripts"><code>console</code> in Content Scripts</h2>
+<p>You can use the console in <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">content scripts</a> as well as in your main add-on code. The following add-on logs the HTML content of every tab the user loads, by calling <code>console.log()</code> inside a content script:</p>
+<pre class="brush: js">require("sdk/tabs").on("ready", function(tab) {
+  tab.attach({
+    contentScript: "console.log(document.body.innerHTML);"
+  });
+});
+</pre>
+<h2 id="console_Output"><code>console</code> Output</h2>
+<p>If you are running your add-on from the command line (for example, executing <code>cfx run</code> or <code>cfx test</code>) then the console's messages appear in the command shell you used.</p>
+<p>If you've installed the add-on in Firefox then the messages appear in Firefox's <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>.</p>
+<p>But note that <strong>by default, calls to <code>console.log()</code> will not result in any output in the Error Console for any installed add-ons</strong>: this includes add-ons installed using the Add-on Builder or using tools like the <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/">Extension Auto-installer</a>.</p>
+<p>See <a href="/en-US/Add-ons/SDK/Tools/console#Logging_Levels">"Logging Levels"</a> in the console reference documentation for more information on this.</p>
+<h2 id="Disabling_strict_mode">Disabling strict mode</h2>
+<p class="note">By default, <code>cfx</code> enables JavaScript strict mode, which will cause a lot of JavaScript warnings to be logged to the console. If this makes it harder to interpret logging output, you can disable strict mode by opening the file at python-lib/cuddlefish/prefs.py  and setting "javascript.options.strict" to <code>False</code>.</p>
+<h2 id="Learning_More">Learning More</h2>
+<p>For the complete <code>console</code> API, see its <a href="/en-US/Add-ons/SDK/Tools/console">API reference</a>.</p>

@@ -1,0 +1,167 @@
+---
+title: B2G ডেস্কটপ ক্লায়েন্ট ব্যবহারবিধি
+slug: Archive/B2G_OS/Using_the_B2G_desktop_client
+tags:
+  - NeedsReview
+translation_of: Archive/B2G_OS/Building_the_B2G_OS_simulator
+---
+<div class="summary">
+ <p>ফায়ারফক্স ওএস ডেস্কটপ ক্লায়েন্ট (যা B2G ডেস্কটপ ক্লায়েন্ট নামেও পরিচিত)  আপনাকে গেকো ভিত্তিক বা মূল ডিভাইসের মত পরিবেশে গায়া এবং ওয়েব অ্যাপস রান করার সুযোগ দেয় । এটি ডিভাইস হার্ডওয়্যারকে এমুলেট করে না, তাই এটি ডিভাইস এপিআই পরীক্ষার জন্য যথাযথ নয় । তাছাড়া, এটি মূল হার্ডওয়্যারে পরীক্ষার বিকল্পও নয় । তবে, এতে <a href="/en-US/docs/WebAPI/Contacts">কন্ট্যাক্টস</a> এবং <a href="/en-US/docs/WebAPI/Settings">সেটিংস</a> এপিআই এর মত কিছু এপিআই চালু আছে, যা ফায়ারফক্সে নেই । ফলে, এটা আপনার <span style="line-height: 1.5;">অ্যা</span><span style="line-height: 1.5;">প্লিকেশন ডেভেলপমেন্ট অথবা গায়া ইউজার ইন্টারফেসে কাজ করার ক্ষেত্রে সহায়ক হবে । এই লেখাটিতে কীভাবে ফায়ারফক্স ওএস ডাউনলোড অথবা তৈরি করতে হয় ; একইসাথে কীভাবে ব্যবহার করতে হয়, তা দেখানো হবে ।</span></p>
+</div>
+<div class="note">
+ <p><strong>দ্রষ্টব্য:</strong> ফায়ারফক্স ওএস ডেস্কটপ  ক্লায়েন্ট ব্যবহারের সহজতম পন্থা হল <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_Firefox_OS_simulator" title="/en-US/docs/Mozilla/Boot_to_Gecko/Using_Firefox_OS_simulator">ফায়ারফক্স ওএস সিমুলেটর</a> ।  এর জন্য আপনাকে আলাদাভাবে ডেস্কটপ ক্লায়েন্ট তৈরি করা লাগবে না ।</p>
+</div>
+<h2 id="সর্বশেষতম_নির্মাণ_ডাউনলোড">সর্বশেষতম নির্মাণ ডাউনলোড</h2>
+<p><a href="http://nightly.mozilla.org" title="http://nightly.mozilla.org">ফায়ারফক্স নাইটলিজ</a> এর মতই ফায়ারফক্স ওএস ডেস্কটপ ক্লায়েন্ট প্রতিদিনই সর্বশেষ সোর্স কোড থেকে স্বয়ংক্রিয়ভাবে তৈরি হয় । সর্বশেষটি পাবেন <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">মজিলা এফটিপি সার্ভারে</a> । আপনার অপারেটিং সিস্টেমের জন্য সর্বশেষ সংস্করণ ও উপযুক্ত আর্কাইভ নির্বাচন করতে ভুলবেন না । ফলে আপনি এটি আলাদাভাবে তৈরির ব্যপারটি উপেক্ষা করতে পারবেন । তাছাড়া, এতে আপনাকে গায়াও ডাউনলোড করতে হবে না ।</p>
+<p>আপনি এখন সরাসরি ডেস্কটপ ক্লায়েন্ট রান করায় (<a href="https://developer.mozilla.org/bn-BD/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client$edit#Running_the_desktop_client" style="line-height: 1.5;">Running the desktop client</a><span style="line-height: 1.5;">)</span><span style="line-height: 1.5;"> চলে যেতে পারেন, যদি না আপনি এটি নিজ থেকে তৈরি করতে চান ।  কোডবেস-এ পরিবর্তন আনতে ও তা পরীক্ষা করতে চাইলে এটি দরকার ।</span></p>
+<h2 id="ডেস্কটপ_ক্লায়েন্ট_তৈরি">ডেস্কটপ ক্লায়েন্ট তৈরি</h2>
+<p>আপনাকে প্রথমেই একটি <a href="https://developer.mozilla.org/En/Developer_Guide/Build_Instructions#Build_prerequisites" title="En/Developer_Guide/Build_Instructions#Build_prerequisites">প্রমাণ মজিলা নির্মাণ পরিবেশ</a> তৈরি করে নিতে হবে । কাজটি হয়ে গেলে আপনি প্রয়োজনমত কোড নিয়ে ও পরিবর্তন করে ফায়ারফক্স ওএস ডেস্কটপ ক্লায়েন্ট তৈরি করতে পারবেন ।</p>
+<h3 id="প্রথমবার_কোড_ডাউনলোড">প্রথমবার কোড ডাউনলোড</h3>
+<p>যে ডিরেক্টরিতে সোর্স কোডটি পাঠাতে চান, সেটিতে সকল গেকো সমৃদ্ধ <code>mozilla-central</code> রিপোজিটরি ক্লোন করুন :</p>
+<pre class="brush: bash"> hg clone http://hg.mozilla.org/mozilla-central</pre>
+<p>একই কোড আপনি গিটহাব থেকেও নামাতে পারেন :</p>
+<p> </p>
+<pre class="brush: bash" style="font-size: 12px;"> git clone https://github.com/mozilla/gecko-dev
+</pre>
+<h3 id="কোড_নবায়ন">কোড নবায়ন</h3>
+<p>ক্রম-নির্মাণের ক্ষেত্রে আপনার সর্বশেষ পরিবর্তনগুলো আনা উচিত :</p>
+<pre class="brush: bash">cd mozilla-central
+hg pull -u
+</pre>
+<p>অথবা,</p>
+<pre class="brush: bash">cd gecko-dev
+git pull
+</pre>
+<h3 id="mozconfig_তৈরি">mozconfig তৈরি</h3>
+<p>এরপর, ফায়ারফক্সের বদলে গেকো ক্লায়েন্টে বুট তৈরি করার সিস্টেম কনফিগার করতে <code>mozilla-central</code> ডিরেক্টরিতে <code>mozconfig</code> নামের একটি ফাইল তৈরি করুন । ফাইলটিতে যা থাকবে :</p>
+<pre class="brush: bash">. "$topsrcdir/b2g/config/mozconfigs/common"
+
+mk_add_options MOZ_OBJDIR=../build
+mk_add_options MOZ_MAKE_FLAGS="-j9 -s"
+
+ac_add_options --enable-application=b2g
+ac_add_options --disable-libjpeg-turbo
+
+# This option is required if you want to be able to run Gaia's tests
+ac_add_options --enable-tests
+
+# turn on mozTelephony/mozSms interfaces
+# Only turn this line on if you actually have a dev phone
+# you want to forward to. If you get crashes at startup,
+# make sure this line is commented.
+#ac_add_options --enable-b2g-ril</pre>
+<p>B2G ডেস্কটপ ক্লায়েন্টে  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests">Mochitests</a> (হয় <code>mochitest-b2g-desktop</code> নাহলে <code>mochitest-plain</code>) অথবা <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests">গায়া ইউনিট টেস্টস</a> রান করাতে আপনাকে <code>ENABLE_MARIONETTE=1</code> যুক্ত করতে হবে ।</p>
+<h3 id="প্রস্তুতকরণ"><span style="font-family: Vrinda; font-size: 18pt; line-height: 115%;">প্রস্তুতকরণ</span></h3>
+<p><span style="line-height: 1.5;">এখন আপনি নিচের কমান্ডটি দিয়ে ডেস্কটপ ক্লায়েন্ট তৈরি করতে পারেন (এটিকে </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">mozilla-central</span><span style="line-height: 1.5;"> ডিরেক্টরি থেকে রান করান) :</span></p>
+<pre class="brush: bash">./mach build
+</pre>
+<p>এই তৈরিকৃত ক্লায়েন্টটি <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">../build/dist</span> ডিরেক্টরিতে থাকবে (এটি নির্ভর করবে <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">mozconfig </span>ফাইলের <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">MOZ_OBJDIR</span> তে আপনি যে মানটি উল্লেখ করেছেন, তার উপর) ।</p>
+<div class="note">
+ <p>দ্রষ্টব্য : কোন সমস্যা হলে প্রথমেই <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions#Build_prerequisites" style="line-height: 1.5em;">এখানে</a><span style="line-height: 1.5em;"> আপনার ডিপেন্ডেন্সিস পরীক্ষা করুন ।</span></p>
+</div>
+<h2 id="গায়া_ডাউনলোড" style="margin-bottom: 20px; line-height: 28px; font-size: 28px;">গায়া ডাউনলোড</h2>
+<p><span style="line-height: 1.5;">ডেস্কটপ ক্লায়েন্টটি স্বাভাবিকভাবেই একটি খালি স্ক্রিন দেখায় । কারণ এটি কোন ওয়েব অ্যাপটি স্বয়ংক্রিয়ভাবে ইন্সটল করা লাগবে, তা জানে না । এজন্য গায়া ডাউনলোড করতে হবে, যা ফায়ারফক্স ওএসের সাথে আসা সিস্টেম অ্যাপস ও ডিফল্ট অ্যাপসের সংগ্রহ ।</span></p>
+<p><span style="line-height: 1.5;">প্রথমবার গায়া ডাউনলোডের সময় সোর্সকোড রিপজিটরি-টি গিটহাবে ক্লোন করুন :</span></p>
+<pre class="brush: bash">git clone https://github.com/mozilla-b2g/gaia
+cd gaia</pre>
+<p>ইতিমধ্যে থাকা গায়া ক্লোনটি নবায়ন করতে আপনি গিটহাব থেকে সর্বশেষ পরিবর্তনগুলো আনতে পারেন :</p>
+<pre class="brush: bash">cd gaia
+git pull
+</pre>
+<h2 id="একটি_custom-settings.json_তৈরি">একটি custom-settings.json তৈরি</h2>
+<p>আপনি যদি জেনে থাকেন যে আপনি কি করছেন এবং বিভিন্ন config অপশান তৈরি করতে চান, তাহলে <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">gaia/build/config/custom-settings.json </span><span style="line-height: 1.5;">ফাইলটি তৈরি করুন এবং সেখানে অপশানগুলো যুক্ত করুন । উদাহরণস্বরূপ :</span></p>
+<pre><span class="brush: js">{
+  "lockscreen.enabled": false,
+  "lockscreen.locked": false,
+  "devtools.debugger.remote-enabled": true
+}</span></pre>
+<p><span style="line-height: 1.5;">উদাহরণটি লকস্ক্রিনটি বাইপাস করতে কাজ দেয়, যেটি অন্য কোনভাবে ডেস্কটপে বাইপাস করা অসম্ভব, কারণ এটি মাউস বা ট্র্যাকপ্যাড দ্বারা আনলক করা যায় না ।</span></p>
+<h2 id="একটি_প্রোফাইল_তৈরি">একটি প্রোফাইল তৈরি</h2>
+<p>এখন আমাদের ডেস্কটপ ক্লায়েন্টটির জন্য গায়ার অ্যাপগুলো সেটআপ করা লাগবে । ঠিক যেভাবে গায়া অ্যাপগুলো ডিভাইসে ইন্সটল করার কথা, সেভাবে প্যাকেজ করা, একইসাথে অগ্রাধিকারপ্রাপ্ত সিস্টেম অ্যাপগুলোর জন্য অনুমতি সেটআপ করা এর অন্তর্ভুক্ত । একটি প্রোফাইল তৈরির মাধ্যমে আমরা কাজগুলো করি । নিচের কমান্ডটিই (ডাউনলোড করা <code>gaia</code> ডিরেক্টরিতে রান করান ) এর জন্য যথেষ্ট : </p>
+<pre class="brush: bash">DESKTOP_SHIMS=1 NOFTU=1 DEBUG=1 make
+</pre>
+<p>এটি <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">gaia ডিরেক্টরির নিচে</span><span style="line-height: 1.5;"> </span><code style="font-size: 14px;">profile-debug</code><span style="line-height: 1.5;"> নামে একটি ডিরেক্টরি তৈরি করবে ।</span><span style="line-height: 1.5;"> এই নতুন প্রোফাইলে B2G ঠিকমত রান করানোর জন্য প্রয়োজনীয় একটি কাস্টমাইজড এক্সটেনশন এবং অন্যান্য কনফিগারেশন ডিটেলস</span><span style="line-height: 1.5;"> যুক্ত আছে ।</span></p>
+<h2 id="ডেস্কটপ_ক্লায়েন্টটি_রান_করানো">ডেস্কটপ ক্লায়েন্টটি রান করানো</h2>
+<p>একবার যদি আপনি ক্লায়েন্টটি তৈরি করে থাকেন (অথবা নাইটলি ডেস্কটপ অ্যাপলিকেশনটি ডাউনলোড এবং ইন্সটল করে থাকেন) এবং গায়া ডাউনলোড করে থাকেন, তাহলে আপনি ফায়ারফক্স ওএস ডেস্কটপ ক্লায়েন্ট চালু করার জন্য তৈরি ।</p>
+<h3 id="লিনাক্সে_রান_করানো">লিনাক্সে রান করানো</h3>
+<p>এমবেডেড গায়া প্রোফাইল ব্যবহার করে ডেস্কটপ ক্লায়েন্টটি লিনাক্সে রান করানোর জন্য স্রেফ <code>b2g</code> এক্সিকিউটেবলটি রান করান । যদি আপনি একটি ভিন্ন গায়া প্রোফাইল উল্লেখ করতে চান (যেমন উপরেরটি ব্যতীত পৃথকভাবে ডাউনলোডকৃত গায়া), আপনাকে <code>b2g</code> র‍্যাপার প্রোগ্রামটি বাইপাস করতে হবে এবং <code>b2g-bin</code> বাইনারিটি রান করাতে হবে । বাইনারিটি আপনার ডাউনলোডকৃত আর্কাইভে অথবা, আপনার তৈরি করা ক্লায়েন্ট হলে <code>../build/dist/bin</code> ডিরেক্টরিতে আছে ।</p>
+<pre class="brush: bash">.../b2g-bin -profile gaia/profile-debug
+</pre>
+<p>আপনি বিরক্তিকর রেন্ডারিং সমস্যার সম্মুখীন হতে পারেন । এটি উপেক্ষা করতে নিচের লাইনটি আপনার <code>gaia/profile/user.js</code> ফাইলে যুক্ত করুন :</p>
+<pre>user_pref("layers.acceleration.disabled", true);
+</pre>
+<h3 id="ম্যাকে_রান_করানো">ম্যাকে রান করানো</h3>
+<p>আপনি যদি নাইটলি বিল্ড ডাউনলোড করে থাকেন, আপনি বরাবরের মতই ফাইন্ডার থেকে খুব সহজেই এটি চালু করতে পারেন । ম্যাকের সাথে যুক্ত প্রমাণ কন্সোল ইউটিলিটি প্রোগ্রাম রান করলেই যেকোন কন্সোল আউটপুট দৃশ্যমান হয় ।</p>
+<p><span style="line-height: 1.5;">যদি আপনি একটি ভিন্ন গায়া প্রোফাইল উল্লেখ করতে চান (যেমন উপরেরটি ব্যতীত পৃথকভাবে ডাউনলোডকৃত গায়া), আপনাকে </span><code style="font-size: 14px;">b2g</code><span style="line-height: 1.5;"> র‍্যাপার প্রোগ্রামটি বাইপাস করতে হবে এবং </span><code style="font-size: 14px;">b2g-bin</code><span style="line-height: 1.5;"> বাইনারিটি রান করাতে হবে ।</span> <code>b2g-bin</code> বাইনারিটির লোকেশনের কারণে এবং প্রোফাইল ডিরেক্টরি নির্দেশের সময় নিখুঁত পথনির্দেশের প্রয়োজনে কমান্ড লাইনটি একটু বেশি জটিল :</p>
+<pre>.../B2G.app/Contents/MacOS/b2g-bin -profile /full/path/to/gaia/profile-debug
+</pre>
+<h3 id="উইন্ডোজে_রান_করানো">উইন্ডোজে রান করানো</h3>
+<p><code><font face="Open Sans, sans-serif"><span style="line-height: 21px;">উইন্ডোজে নাইটলি বিল্ড রান করানো </span></font>b2g.exe চালু করার মতই সহজ ।</code> আপনি চাইলে এক্সিকিউটেবল <code>b2g-bin.exe</code> রান করিয়ে এক্সিকিউশনটি কাস্টমাইজ করতে পারেন; এটি স্বয়ংক্রিয়ভাবে বান্ডেলকৃত গায়া ব্যবহারকারি র‍্যাপার প্রোগ্রামটি বাইপাস করে দেয় ।</p>
+<h2 id="কমান্ড_লাইন_বিকল্প">কমান্ড লাইন বিকল্প</h2>
+<p>ডেস্কটপ ক্লায়েন্ট ব্যবহারের সময় পছন্দমত রানটাইম অভিজ্ঞতা পাল্টাতে আপনি কিছু কমান্ড লাইন বিকল্প ব্যবহার করতে পারেন । <code>-help</code> অপশান ব্যবহার করে আপনি একটি লিস্ট পেতে পারেন । নিচে তাদের মধ্যে আকর্ষণীয় কিছুর উল্লেখ আছে ।</p>
+<h3 id="option-screen" name="option-screen">স্ক্রিন সাইজ উল্লেখকরণ</h3>
+<p>আপনি <code style="font-size: 14px;">--screen অপশান ব্যবহার করে যে ডিভাইসটি সিমুলেট করতে চান, তার স্ক্রিন সাইজ উল্লেখ করতে পারেন :</code></p>
+<pre class="brush: bash">b2g --screen=<em>&lt;width&gt;</em>x<em>&lt;height&gt;</em>@<em>&lt;dpi&gt;</em></pre>
+<p>এখানে <em>&lt;width&gt;</em>, <em>&lt;height&gt;</em>, এবং <em>&lt;dpi&gt;</em> মূলত নিজ নাম অনুযায়ী প্যারামিটার: এখানে ডিভাইস স্ক্রিনের দৈর্ঘ্য ও প্রস্থ হল পিক্সেল এককে এবং ডিভাইস রেজ্যুলেশন হল DPI এককে । কিছু বাস্তব উদাহরণ :</p>
+<pre class="brush: bash">b2g --screen=320x480
+b2g --screen=320x480@160
+</pre>
+<p>বিকল্প হিসাবে কিছু ডিভাইসের নাম উল্লেখ করে আপনি তাদের স্ক্রিন সাইজ এবং রেজ্যুলেশন সিমুলেট করতে পারবেন :</p>
+<ul>
+ <li><code>iphone</code></li>
+ <li><code>ipad</code></li>
+ <li><code>nexus_s</code></li>
+ <li><code>galaxy_nexus</code></li>
+ <li><code>galaxy_tab</code></li>
+ <li><code>wildfire</code></li>
+ <li><code>tattoo</code></li>
+ <li><code>salsa</code></li>
+ <li><code>chacha</code></li>
+</ul>
+<h3 id="option-console" name="option-console">জাভাস্ক্রিপ্ট কন্সোল খোলা</h3>
+<p>কমান্ড লাইন থেকে<span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;"> -jsconsole</span><span style="line-height: 1.5;"> ব্যবহার করে আপনি B2G ক্লায়েন্ট চালু করার সময় জাভাস্ক্রিপ্ট কন্সোল খুলতে পারবেন । তৈরির পর স্রেফ নিচের কাজ করুন :</span></p>
+<pre class="brush: bash">.../b2g -jsconsole -profile <em>/path/to/your/profile</em></pre>
+<p>আপনি ম্যাকে নাইটলি বিল্ড ইন্সটল করে থাকলে নিচের কাজ করতে পারেন :</p>
+<pre class="brush: bash">/Applications/B2G.app/Contents/MacOS/b2g-bin -jsconsole -profile <em>/path/to/your/profile-debug</em></pre>
+<div class="note">
+ <p><strong>দ্রষ্টব্য :</strong> উৎপাদন নির্মাণের সময় আগে থেকেই কন্সোল লগিং (যেমন {{domxref("console.log()")}}) বন্ধ করা থাকে । এটি চালু করতে, <a href="/en-US/Firefox_OS/Debugging/Developer_settings">ডেভেলপার সেটিংসে</a> গিয়ে <em>Console Enabled</em> preference চালু করে দিন ।</p>
+</div>
+<h3 id="option-runapp" name="option-runapp">B2G আরম্ভ হওয়ার সময় নির্দিষ্ট অ্যাপলিকেশন চালু করা</h3>
+<p>ডেস্কটপ ক্লায়েন্টে B2G  আরম্ভ হওয়ার সময় স্বয়ংক্রিয়ভাবে চালু হওয়ার জন্য আপনি একটি অ্যাপলিকেশন উল্লেখ করতে পারেন । বাকি সিস্টেম লোড হওয়ার সাথে সাথেই কাজটা হয়ে যাবে । এটি করতে, স্রেফ <code>--runapp</code> অপশনটি ব্যবহার করুন, যেটি চালু করার জন্য একটি অ্যাপলিকেশনের নামকে প্যারামিটার হিসেবে নেয় । উদাহরণস্বরূপ :</p>
+<pre class="brush: bash"> .../b2g-bin -profile <em>/path/to/your/gaia/profile-debug</em> --runapp email</pre>
+<div class="note">
+ <p><b>দ্রষ্টব্য </b>: উল্লেখিত নামটিকে ছোট হাতের অক্ষরে পরিবর্তিত করে এবং সকল ড্যাশ ও স্পেস মুছে দিয়ে স্বাভাবিক করা হয় । এরপর এই স্বাভাবিককৃত নামটিকে প্রাপ্ত অ্যাপগুলোর manifestগুলোর সাথে তুলনা করা হয় । যেমন, ইমেইল অ্যাপটির বর্তমান নাম "E-mail", কিন্তু <code>--runapp email</code> কাজ করবে এই স্বাভাবিককরণের কারণে ।</p>
+</div>
+<p>আপনি যদি কোনো আর্গুমেন্ট ছাড়া অথবা একটি শূন্য আর্গুমেন্ট নিয়ে <code>--runapp</code> অপশানটি উল্লেখ করেন, b2g ক্লায়েন্ট আপনার টার্মিনালে একটি জানা অ্যাপলিকেশনের লিস্ট দেখাবে, সংক্ষিপ্ত ব্যবহারবিধিসহ ।</p>
+<div class="note">
+ <p><strong>দ্রষ্টব্য :</strong> <code>--runapp</code> অপশনটি পার্শ্বপ্রতিক্রিয়া হিসেবে লকস্ক্রিন বন্ধ করে দেয় এবং পুনরায় চালু করে না । এটি ধরে নেয়া হয় যে, আপনি লকস্ক্রিন পরীক্ষার সময় একই প্রোফাইলে, এই কমান্ডটি ব্যবহার করবেন না, অথবা <em>Settings &gt; Screen Lock এ গিয়ে আপনি ম্যানুয়ালি এটিকে পুনরায় চালু করবেন ।</em> এটি যদি একটি সমস্যা হয়, নিঃসংকোচে এই আচরণ পরিবর্তনের জন্য একটি প্যাচ দান করুন ।</p>
+</div>
+<h2 id="ব্যবহারের_জন্য_টিপস">ব্যবহারের জন্য টিপস</h2>
+<p>এই ধাপটি B2G ডেস্কটপ ক্লায়েন্ট ব্যবহারে জন্য কিছু গুরুত্বপূর্ণ টিপস দিচ্ছে ।</p>
+<ul>
+ <li> Esc চাবিটি "back" বোতামের মতই কাজ করে ।</li>
+ <li> Home চাবিটি "home" বোতামের মতই কাজ করে; আপনি যদি ম্যাকে থাকেন, Home চাবিটি Fn + ← (Fn + Left Arrow) এ পাবেন ।</li>
+ <li>End চাবিটি ঠিক "power" বোতামের মতই কাজ করে; আপনি যদি ম্যাকে থাকেন , End চাবিটি Fn + → (Fn + Right Arrow) এ পাবেন ।</li>
+ <li> Page Up এবং Page Down চাবিগুলো যথাক্রমে "Volume Up" এবং "Volume Down" বোতামের মত কাজ করে; আপনি যদি ম্যাকে হন, Page Up চাবিটি Fn + ↑ (Fn + Up Arrow) এ এবং Page Down চাবিটি Fn + ↓ (Fn + Down Arrow) এ পাবেন ।</li>
+ <li>লম্বা সময় ধরে Home চাবি চেপে রাখলে "Card View" খোলে; আপনি ম্যাকে থাকলে, Cmd + Fn + ← (Cmd + Fn + Left Arrow) ই "Card View" খুলবে ।</li>
+</ul>
+<h2 id="ট্রাবলশ্যুটিং_B2G_ডেস্কটপ_চালুর_সময়_ফাঁকা_স্ক্রিন">ট্রাবলশ্যুটিং: B2G ডেস্কটপ চালুর সময় ফাঁকা স্ক্রিন</h2>
+<p><code>b2g -profile gaia/profile ব্যবহার করে b2g চালুর সময় </code>"Cannot reach app://system.gaiamobile.org" এরর সহ একটি ফাঁকা স্ক্রিন দেখা যেতে পারে । এটি ঠিক করার জন্য কিছু জিনিস পরীক্ষা করে দেখতে পারেন :</p>
+<ul>
+ <li><code><font face="Open Sans, sans-serif"><span style="line-height: 21px;">গায়া ডিরেক্টরিতে </span></font>DEBUG=1 make</code> প্রোফাইল ব্যবহার করে পুনরায় গায়া প্রোফাইলটি তৈরি করুন ।</li>
+ <li>b2g আবারও রান করান ।</li>
+ <li>যদি এতে সমাধান না হয়, 8080 পোর্টে আর কোনো কাজ চলছে কিনা দেখুন । গায়ার ডিফল্ট প্রোফাইল শুরু হয় <code>httpd.js দিয়ে</code>, যেটি 8080 পোর্টে কাজ করে । একটি ডিবাগ প্রোফাইল রান হওয়ার সময়, B2G localhost:8080 তে সংযুক্ত হয় । যদি 8080 পোর্টে অন্য কাজ চলতে থাকে, b2g গায়ার হোমস্ক্রিন দেখাতে ব্যর্থ হবে ।
+  <ol>
+   <li>এটিই সেই সমস্যা কিনা বুঝতে <code>httpd.js এ লগইন চালু করুন ।</code> প্রোফাইলের মধ্যে <code>httpd.js থাকে</code> <code>gaia/profile/extensions/httpd/content/httpd.js লোকেশনে ।</code> সংশোধনের জন্য ফাইলটি খুলুন ।</li>
+   <li> <code>var DEBUG=false;</code> লাইনটি মুছে <code>var DEBUG=true; লিখুন ।</code></li>
+   <li>ফাইলটি সেভ করে B2G বন্ধ করে পুনরায় চালু করুন । এখন আপনি কন্সোলে httpd এর লগ দেখতে পাবেন ।</li>
+  </ol>
+ </li>
+</ul>
+<h2 id="পরবর্তী_ধাপগুলো">পরবর্তী ধাপগুলো</h2>
+<p>এখন আপনার গেকো রান করানোর জন্য বুটের একটি ডেস্কটপ বিল্ড আছে, আপনি এখন এটিতে পরীক্ষা, উন্নয়ন এবং অন্যান্য কাজ করতে পারেন ।</p>
+<ul>
+ <li><a href="/en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">বুট থেকে গেকোতে ডিবাগ</a></li>
+ <li><a href="/en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko">বুট থেকে গেকো পরীক্ষা</a></li>
+ <li><a href="http://blog.johnford.org/desktop-b2g-include-gaia/" style="text-decoration: underline;">ডেস্কটপ B2Gতে এখন গায়া যুক্ত</a></li>
+</ul>

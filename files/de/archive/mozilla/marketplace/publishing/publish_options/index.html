@@ -1,0 +1,67 @@
+---
+title: Veröffentlichungsoptionen Ihrer App
+slug: Archive/Mozilla/Marketplace/Publishing/Publish_options
+translation_of: Archive/Mozilla/Marketplace/Options/Self_publishing
+---
+<div class="summary">
+ <p>Once you have finished your app, you need to deploy it and publish it. This involves making it available for users to consume (whether they are going to just navigate to it in a browser and use it like a regular web page, or download it and install it on a device like a Firefox OS phone.), letting people know it is available, and providing supporting information such as usage instructions and help resources. This article looks briefly at the options available to you.</p>
+</div>
+<h2 id="Publishing_on_the_Firefox_Marketplace">Publishing on the Firefox Marketplace</h2>
+<p>The <a href="https://marketplace.firefox.com/" title="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Firefox Marketplace</a> is our own dedicated app store for distributing free and paid apps. <a href="/de/Marketplace/Submission/Submitting_an_app">Submitting an app to the Firefox Marketplace</a> is a simple process, involving uploading the app itself plus surrounding information, and waiting for it to go through our thorough review process to make sure it is high quality and not malicious. Submitting to the Firefox Marketplace also confers other advantages such as increased publicity, no need to implement special APIs on your own web site, and the possibility of publishing paid apps more easily. You can submit both hosted apps and packaged apps to the Firefox Marketplace.</p>
+<h3 id="Hosted_apps">Hosted apps</h3>
+<p>A hosted app is basically an app hosted on a web server just like a regular web page. If you want to let people install a hosted app straight from the site, you must <a href="//developer.mozilla.org/docs/Apps/Apps_JavaScript_API">implement some JavaScript code</a> on your Web site to manage installing and updating your app into users' browsers, and make sure your app code includes a valid manifest file. Please see our writeups of <a href="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Manifest" title="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Manifest">manifest files</a> and <a href="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Install_API_functionality" title="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Install_API_functionality">Install API functionality</a> for how simple these steps are to implement.</p>
+<p>Where you host the app is really up to you, but the two options listed below are probably the most common and easiest.</p>
+<h4 id="GitHub">GitHub</h4>
+<p>If the Web app is purely static (HTML/CSS/JavaScript, but no server-side processing), <a href="http://pages.github.com" rel="external">GitHub Pages</a> is a solid hosting option. It will serve your manifest with the <a href="//developer.mozilla.org/docs/Apps/Manifest#Serving_from_GitHub">correct MIME type</a> if you give it a <code>.webapp</code> extension.</p>
+<h4 id="Generic_hosting_solutions">Generic hosting solutions</h4>
+<p>For dynamic websites, use a generic hosting option (like a Web server you may already own or have access to) with the right capabilities or a hosting provider specifically tailored to the needs of your app, like <a href="http://www.heroku.com" rel="external">Heroku</a> or <a href="http://code.google.com/appengine" rel="external">Google App Engine</a>.</p>
+<div class="note">
+ <p><strong>Note</strong>: Installable open web apps have a "single app per origin" security policy; basically, you can't host more than one installable app per origin. This makes testing a bit more tricky, but there are still ways around this, such as creating different sub-domains for apps, testing them using the Firefox OS Simulator, or testing the install functionality on Firefox Aurora/Nightly, which allow installable web apps to install on the desktop. See <a href="/en-US/docs/Web/Apps/FAQs/About_app_manifests">FAQs about apps manifests</a> for more information on origins.</p>
+</div>
+<h3 id="Packaged_apps">Packaged apps</h3>
+<p>A packaged app is an Open Web App that has all of its resources (HTML, CSS, JavaScript, app manifest, and so on) contained in a zip file, instead of having its resources on a Web server. A packaged app is simply a zip file with the <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest">app manifest</a> in its root directory. The manifest must be named <code>manifest.webapp</code>.</p>
+<p>One difference from a hosted app is that a packaged app must specify a <code><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#launch_path">launch_path</a></code> in the manifest, whereas it's an optional manifest field for a hosted app. For more information, check out our <a href="/en-US/docs/Web/Apps/Publishing/Packaged_Apps" title="/en-US/docs/Web/Apps/Publishing/Packaged_Apps">Packaged Apps</a> article.</p>
+<h2 id="Self-publishing_apps">Self-publishing apps</h2>
+<p>You can also choose to self-publish apps. For hosted apps, this just involves putting them up on web hosting, as detailed above.</p>
+<p>You can self-publish a packaged app by hosting it on a server along with a mini-manifest in the same directory that identifies the app and is used in the install process. Let's run through this process:</p>
+<ol>
+ <li>Have your packaged app's zip file available and give it the name <code>package.zip</code>. This file contains all the app's resource files, including the manifest.</li>
+ <li>Create a file called <code>package.manifest</code> and give it the contents below. This is a mini-manifest used for packaged app installation purposes. It is not the main manifest of your app that is inside the zip file.<br>
+  <pre class="brush: js">{
+    "name": "My sample app",
+    "package_path" : "http://my-server.com/my-app-directory/my-app.zip",
+    "version": "1",
+    "developer": {
+        "name": "Chris Mills",
+        "url": "http://my-server.com"
+    }
+}</pre>
+ </li>
+ <li>Create a file named <code>index.html</code> with the following contents. This contains sample JavaScript that calls the packaged app (<a href="/en-US/docs/Web/API/Apps.installPackage"><code>installPackage()</code></a>) and callbacks for success and failure notification.
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;Packaged app installation page&lt;/p&gt;
+    &lt;script&gt;
+      // This URL must be a full url.
+      var manifestUrl = 'http://my-server.com/my-app-directory/package.manifest';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li>Copy <code>package.zip</code>, <code>package.manifest</code>, and <code>index.html</code> into your app root directory (<code>my-app-directory</code> in my examples).</li>
+ <li>Using a compatible device (such as a Firefox OS phone), navigate to the location on your server where you put the example files and confirm the prompt to install the app. The script will give an indication of installation success or failure.</li>
+</ol>
+<div class="note">
+ <p><strong>Note:</strong> You can't install <code>privileged</code> or <code>certified</code> apps from self-hosted packages, as they need to be signed via the Firefox Marketplace submission process.</p>
+</div>
+<div class="note">
+ <p><strong>Note</strong>: You can even <a href="/en-US/docs/Web/Apps/Creating_a_store" title="/en-US/docs/Web/Apps/Creating_a_store">create your own apps store</a>, which has a number of options available to it.</p>
+</div>
+<p> </p>

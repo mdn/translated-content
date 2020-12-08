@@ -1,0 +1,37 @@
+---
+title: Building B2G for QEMU Emulator
+slug: Archive/B2G_OS/Building_B2G_for_QEMU_Emulator
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS
+---
+<p>{{obsolete_header()}}</p>
+
+<p></p><div class="warning">অনুচ্ছেদটি অবসুলেট।দেখুন  <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Building and installing Boot to Gecko</a>, Firefox OS.</div> তৈরির জন্য সম্পুর্ন গাইড হিসেবে<p></p>
+
+<p>এটা মনে করা হয়ে থাকে আপনার ইতিমধ্যে  <a href="/en/Mozilla/Boot_to_Gecko/Setting_Up_Boot_to_Gecko_Build_Environment" title="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Setting_Up_Boot_to_Gecko_Build_Environment">setup your build environment and cloned the repositories</a> আছে।</p>
+
+<p>আপনার পরবর্তী স্টেপ <strong>হল build - and run - B2G on your emulator</strong>।রুট হিসেবে রান করবেন না।</p>
+
+<p><span style="font-family: inherit;"><span style='font-family: "Courier New",Courier,monospace;'>$ cd B2G</span></span><br>
+ <span style="font-family: inherit;"><span style='font-family: "Courier New",Courier,monospace;'>$ make sync</span></span></p>
+
+<p><a class="external" href="http://3.bp.blogspot.com/-5o6HoCR0xE0/Tydf8jj-UPI/AAAAAAAAAMk/EfcvWBaWv-w/s320/Make+Sync.tiff"><img alt="" class="default" src="http://3.bp.blogspot.com/-5o6HoCR0xE0/Tydf8jj-UPI/AAAAAAAAAMk/EfcvWBaWv-w/s320/Make+Sync.tiff"></a></p>
+
+<p>QEMU এর জন্য কনফারমেশন তৈরি করুনঃ<br>
+ <code>$ make config-qemu</code></p>
+
+<p>পরবর্তীতে,গঙ্কের ব্যাকেন্ড তৈরি করুন এবং ইহার সিস্টেমঃ<br>
+ <code>$ make gonk<br>
+ $ make</code><br>
+ <br>
+ নোটঃযদি  if ./emu.sh -আপনার ইমুলেটর  -প্রথমে রান না করে ,আপনাকে ইহা এক্সেকিউটেবল করতে হবেঃ<br>
+ <code>$ chmod +x emu.sh</code><br>
+ <br>
+ অবশেষে,ইমুলেটরটি রান করুনঃ<br>
+ <code>$ ./emu.sh</code></p>
+
+<p>নোটঃআপনার রেপসিটরস অথরা আপনার প্রথম তৈরি ক্লোনিং করার পরে ,আপনি তাদের  "clean" করতে পারেন-বি.দ্র তাদের স্টেটের কাছে রাখুন যাতে আধুনিক পুল নতুন ক্লোনের মত হয়ে থাকে ।</p>
+
+<p>আপনার রেপ রুট থেকে এটি করুনঃ<br>
+ <span style='font-family: "Courier New",Courier,monospace;'>$ make sync; git clean -xfd; git submodule foreach "git clean -xfd"</span><br>
+ অন্যভাবে আপনি চেষ্টা করতে পারেন ;<br>
+ <span style='font-family: "Courier New",Courier,monospace;'><span style="font-family: inherit;"><span style='font-family: "Courier New",Courier,monospace;'>$ make mrproper</span></span></span></p>

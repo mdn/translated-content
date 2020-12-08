@@ -1,0 +1,37 @@
+---
+title: হোস্ট ফাইলস সংশোধনকরন
+slug: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+---
+<div class="summary">
+ <p>মাঝেমধ্যে আপনাকে আপনার মেশিনের কিছু হোস্ট ফাইলস ঠিক করা  লাগতে পারে যখন কোন কিছু আক্রমন করবে , কোন অবাঞ্চিত সংযোগ  ব্লক করতে , কোন নির্দিষ্ট আইপি ঠিকানায় সরাসরি যাওয়ার নির্দেশ করার জন্য ইত্যাদি । এই প্রবন্ধে কিভাবে ফায়ারফক্স ওএস ফোন এর হোস্ট ফাইলস সংশোধন করা যায় সে সম্পর্কে বলা হয়েছে । এটি আছে  /system/etc এর অধীনে ।</p>
+</div>
+<h2 id="আপনার_ফোনকে_প্রস্তুত_করা">আপনার ফোনকে প্রস্তুত করা</h2>
+<p>এই ফোনের <a href="/en-US/Firefox_OS/Debugging/Developer_settings#The_Developer_panel">Developer settings panel</a>  যান এবং চেক করেন :</p>
+<ul>
+ <li>"রিমোট ডিবাগিং" ( ফায়ারফক্স ওএস ১.৪ এবং এর উপরের ফোনে , "ADB এবং ডেভ টুলস" নির্বাচন করতে হবে নির্বাচন মেনু  থেকে )</li>
+ <li>"কনসল এনাবেল্ড"</li>
+</ul>
+<p>এরপর আপনার ফোন কম্পিউটার এর সাথে সংযুক্ত করেন ।</p>
+<p>এই পর্যায়ে অ্যান্ড্রয়েডে যেভাবে হোস্ট ফাইলস সংশোধন করা হয় সেইভাবে করা হয় । অ্যান্ড্রয়েড ডেভলাপাররা সহজেই এটি ধরতে পারবে ।</p>
+<h2 id="টার্মিনালের_ধাপসমূহ">টার্মিনালের ধাপসমূহ</h2>
+<ol>
+ <li>একটি টার্মিনাল উইন্ডস খুলতে হবে । /system অংশটি ডিভাইসে পুনরারোহণ করতে হবে যাতে করে পুনোরাই লেখার অনুমতি পায়<br>
+  <pre class="brush: bash">adb remount</pre>
+ </li>
+ <li>হোস্ট ফাইলগুলো কম্পিউটারে নেন<br>
+  <pre class="brush: bash">adb pull /system/etc/hosts /tmp</pre>
+ </li>
+ <li>  হোস্ট ফাইলস সংশোধন করতে হবে এখানে /tmp/hosts এবং সংরক্ষণ করতে হবে । যেমন -<br>
+  <pre class="brush: bash">127.0.0.1         localhost
+ip.to.re.direct   hostName</pre>
+ </li>
+ <li>পরিবর্তিত হোস্ট ফাইলগুলো ডিভাইসে push করতে হবে<br>
+  <pre class="brush: bash">adb push /tmp/hosts /system/etc/hosts</pre>
+ </li>
+</ol>
+<p>এখানেই শেষ ; আপনার  হোস্ট ফাইলসগুলো এখন আপডেটেড হয়ে যাওয়া উচিত ।</p>
+<div class="note">
+ <p><strong>মন্তব্য</strong> : ADB সম্পর্কে আর জানতে চান ? এখানে  দেখতে পারেন  <a href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">ADB documentation</a>.</p>
+</div>
+<p> </p>

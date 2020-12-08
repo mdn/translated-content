@@ -1,0 +1,165 @@
+---
+title: WebIDE Problemlösung
+slug: Tools/WebIDE/Problemlösung
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<div>{{ToolsSidebar}}</div><h2 id="Mit_einem_Firefox-OS-Gerät_verbinden">Mit einem Firefox-OS-Gerät verbinden</h2>
+
+<p>Wenn du mit dem WebIDE eine Verbindung zu deinem Firefox-OS-Gerät herstellen möchtest, das Gerät aber nicht angezeigt wird, prüfe folgendes:</p>
+
+<ul>
+ <li>Überprüfe die Firefox OS-Version:<br>
+  Stell sicher, dass auf Deinem Gerät <strong>Firefox OS 1.2/ Boot2Gecko 1.2</strong> oder höher läuft. Um die Version zu prüfen, starte die SettingsApp (Einstellungen) und gehe zu <code>Device Information &gt; Software (Geräteinformationen &gt; Software)</code>. Wenn Deine Version zu alt ist, finde dein Gerät im <a href="/de/Firefox_OS/Developer_phone_guide">Developer Phone Guide</a> und folge den Anweisungen zum Upgraden.</li>
+ <li>Erlaube das Remote Debugging (Externes Debuggen):
+  <ul>
+   <li>Gehe in der SettingsApp (Einstellungen) zu <code>Device Information &gt; More information &gt; Developer &gt; Debugging via USB (Geräteinformation &gt; Weitere Informationen &gt; Entwickler &gt; Debuggen über USB)</code>
+    <ul>
+     <li>in Firefox OS 1.3 und früher: "Remote Debugging" ist eine einfache Checkbox um dieses zu aktivieren.</li>
+     <li>in Firefox OS 1.4 und später: "Remote Debugging" fragt ob nur ADB oder ADB und DevTools erlaubt werden sollen. Wähle hier "ADB und DevTools"</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Deaktiviere das Abschalten des Bildschirms:<br>
+  Gehe in den Einstellungen auf deines Gerätes (Settings-App) auf "Bildschirm sperren" und entferne das Häkchen. Warum? Wenn der Bildschirm gesperrt wird, verliert das Gerät die Verbindung und steht für das Remote Debugging nicht mehr zur Verfügung.</li>
+ <li>Achte darauf, dass kein anderes Android-Gerät zur selben Zeit mit dem Computer verbunden ist, ausser dem Firefox-OS-Gerät.</li>
+ <li>Überprüfe das USB-Kabel:
+  <ul>
+   <li>Zieh das USB-Kabel heraus und verbinde es erneut.</li>
+   <li>Prüfe das Kabel an einem anderen Rechner und auch an anderen USB-Anschlüssen.</li>
+   <li>Versuche ein anderes USB-Kabel. Die mit dem Gerät mitgelieferten Kabel sind meist von minderer Qualität und fallen oft aus.</li>
+   <li>Versuche ein kürzeres USB-Kabel. Es ist bekannt, dass längere Kabel nicht so gut arbeiten.</li>
+  </ul>
+ </li>
+ <li>Deaktiviere und aktiviere erneut das Remote Debugging auf dem Firefox-OS-Gerät.</li>
+ <li><a href="/de/docs/Tools/WebIDE#Custom_runtimes">Wenn du das "ADB Addon Helper" deaktiviert hast</a>. Kannst du erfolgreich den Befehl <code>adb forward</code> ausführen?</li>
+ <li>Wenn du Linux nutzt:
+  <ul>
+   <li>Stelle sicher, dass du die <code>udev rules</code> so angepasst hast, wie im dritten Schritt der Anleitung <a href="http://developer.android.com/tools/device.html#setting-up">Gerät zum Entwickeln vorbereiten</a>. Die <code>idVendor</code>-Eigenschaft für Geeksphone ist "05c6". Weitere Werte für <code>idVendor</code> findest du auf <a href="http://developer.android.com/tools/device.html#VendorIds">dieser Seite</a>. Starte nun <code>adb devices</code> um sicher zu gehen, dass das Gerät gelistet wird. Wenn du "keine Berechtigung"  hast, starte den adb-Server neu (z.B. <code>adb kill-server;adb start-server</code>).</li>
+   <li>Wenn du das <code>android-tools-adb</code>-Paket von Debian nutzt, kann es sein, dass der ADB Helper verlangt alle existierenden ADB-Server zu schließen. Dieses Paket deaktiviert die TCP-Verbindung, die ADB Helper nutzt.</li>
+  </ul>
+ </li>
+ <li>Wenn du Windows nutzt:
+  <ul>
+   <li>Du musst alle Treiber wie in Schritt 3 der Anleitung <a href="http://developer.android.com/tools/device.html#setting-up">Gerät zum Entwickeln vorbereiten</a> installiert haben. Treiber für Geekphones findest auf der Geeksphone-Website und für Google-Geräte auf der Google-Website.<br>
+    Windows 8-Benutzer: Standardmäßig verweigert Windows 8 das Installieren von nicht-signierten Treibern. Bei Problemen, schau dir dieses Tutorial an: <a href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"Wie installiert man unsignierte Treiber in Windows 8"</a>.</li>
+   <li>Wenn das WebIDE dein Gerät nach all diesen Schritten immer noch nicht erkennt, wirst du wohl die <a href="http://blog.fh-kaernten.at/wehr/?p=1182">adb_usb.ini editieren</a> müssen.</li>
+  </ul>
+ </li>
+ <li>Wenn du Mac OS X nutzt:
+  <ul>
+   <li>Treten Timeout-Fehler beim Verbinden mit einem Simulator und dem realen Gerät auf, kannst du dich vermutlich aufgrund einer fehlenden oder falschen /etc/hosts-Datei nicht mit localhost verbinden. Erstelle die Datei und lösche den DNS-Cache, <a href="https://discussions.apple.com/thread/2729411?tstart=0">wie hier beschrieben</a>.</li>
+   <li>
+    <p>Bist du ein EasyTether-User, musst du EasyTether deaktivieren oder deinstallieren: <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></p>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Über_Wi-Fi_mit_Firefox_OS_verbinden">Über Wi-Fi mit Firefox OS verbinden</h2>
+
+<ul>
+ <li>Überprüfe deine Firefox Version: Wi-Fi-Debugging setzt Firefox 39 oder höher voraus, sowie ein Firefox OS-Gerät mit laufendem Firefox OS 3.0 vom 27.03.2015 oder später.</li>
+ <li>Sowohl der Computer als auch das Firefox OS-Gerät müssen mit dem selben Wi-Fi-Netzwerk verbunden werden
+  <ul>
+   <li>Der Computer darf <strong>nicht </strong>über Kabel an den Router angeschlossen sein. Beide Geräte müssen über Wi-Fi verbunden werden.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Über_USB_mit_Firefox_für_Android_verbinden">Über USB mit Firefox für Android verbinden</h2>
+
+<p>Wenn du versucht dich mit einer laufenden Firefox Anwendung auf deinem Android-Gerät zu verbinden und dieses nicht angezeigt wird, versuche folgendes:</p>
+
+<ul>
+ <li>Überprüfe deine Firefox-Version: Firefox für Android muss in Version 36 oder höher vorliegen. Das WebIDE kann ältere Versionen nicht automatisch erkennen, dafür muss Port Forwarding aktiviert werden und mit dem Geräte-Port verbunden werden - folge <a href="/de/docs/Tools/Remote_Debugging/Firefox_for_Android">dieser Anleitung</a>.</li>
+ <li>Überprüfe, ob Externes Debugging aktiviert ist, gehe hierzu in die Einstellungen &gt; Entwicklerwerkzeuge &gt; Externes Debuggen und setzte ein Häkchen.</li>
+ <li>Überprüfe, ob USB Debugging in den Entwickler-Einstellungen deines Gerätes aktiviert ist.</li>
+ <li>Wenn du dein Gerät im WebIDE-Fenster immernoch nicht siehst, versuche Externes Debuggen auf dem Gerät erneut zu aktivieren:
+  <ul>
+   <li>Entferne die Verbindung zwischen deinem Computer und dem Gerät und schalte Externes Debuggen aus.</li>
+   <li>Verbinde das Gerät erneut und schalte Externes Debuggen ein -  das startet die Debugger-Instanz auf dem Gerät neu.</li>
+   <li>Versuche erneut eine WebIDE-Verbindung herzustellen.</li>
+  </ul>
+ </li>
+ <li>Wenn du Linux nutzt:
+  <ul>
+   <li>Stelle sicher, dass du die <code>udev rules</code> so angepasst hast, wie im dritten Schritt der Anleitung <a href="http://developer.android.com/tools/device.html#setting-up">Gerät zum Entwickeln vorbereiten</a>. Die <code>idVendor</code>-Eigenschaft für Geeksphone ist "05c6". Weitere Werte für <code>idVendor </code>findest du auf <a href="http://developer.android.com/tools/device.html#VendorIds">dieser Seite</a>. Starte nun <code>adb devices</code> um sicher zu gehen, dass das Gerät gelistet wird. Wenn du "keine Berechtigung"  hast, starte den adb-Server neu (z.B. <code>adb kill-server;adb start-server</code>).</li>
+   <li>Wenn du das <code>android-tools-adb</code>-Paket von Debian nutzt, kann es sein, dass der ADB Helper verlangt alle existierenden ADB-Server zu schließen. Dieses Paket deaktiviert die TCP-Verbindung, die ADB Helper nutzt.</li>
+  </ul>
+ </li>
+ <li>Wenn du Windows nutzt:
+  <ul>
+   <li>Überprüfe, ob das Gerät richtig verbunden ist und das es den Google USB Treiber benutzt, der im Android SDK enthalten ist.</li>
+  </ul>
+ </li>
+ <li>Wenn du Mac OS X nutzt:
+  <ul>
+   <li>
+    <p>Bist du ein EasyTether-User, musst du EasyTether deaktivieren oder deinstallieren: <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></p>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Über_Wi-Fi_mit_Firefox_für_Android_verbinden">Über Wi-Fi mit Firefox für Android verbinden</h2>
+
+<ul>
+ <li>Überprüfe deine Firefox Version: Wi-Fi-Debugging setzt Firefox 42 oder höher voraus, sowie ein Android-Gerät mit installiertem Firefox in Version 42 oder höher.</li>
+ <li>Sowohl der Computer als auch das Firefox OS-Gerät müssen mit dem selben Wi-Fi-Netzwerk verbunden werden
+  <ul>
+   <li>Der Computer darf <strong>nicht </strong>über Kabel an den Router angeschlossen sein. Beide Geräte müssen über Wi-Fi verbunden werden.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Verbindung_zu_anderen_Browsern_herstellen_(Chrome_Safari_iOS)">Verbindung zu anderen Browsern herstellen (Chrome, Safari, iOS)</h2>
+
+<p>WebIDE nutzt <a href="/de/docs/Tools/Valence">Valence (Firefox Tools Adapter)</a>, um sich mit anderen Browsern, wie Chrome, Safari oder iOS, zu verbinden.</p>
+
+<p>Wenn du Probleme bei der Verbindung mit anderen Browsern hast, überprüfe die Installationsschritte und andere Hinweise für diese Browser auf der <a href="/de/docs/Tools/Valence">Valence-Seite</a>.</p>
+
+<h2 id="Manche_Apps_sind_nicht_debuggbar">Manche Apps sind nicht debuggbar</h2>
+
+<p>Wenn du der Meinung bist, dass zertifizierte Apps, eingebaute Apps oder bereits auf einem echten Gerät installierte Apps nicht debuggbar sind, dann kann dies durch die Restricted Privileges Security Policies des WebIDE (dt.: Sicherheitsrichtlinien für beschränkte Berechtigungen) ausgelöst werden. Für mehr Informationen sieh dir <a href="/de/docs/Tools/WebIDE#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29">Unrestricted app debugging (including certified apps, main process, etc.)</a> (dt.: Unbeschränktes App-Debugging) an.</p>
+
+<h2 id="Die_Projekt-Liste_kann_nicht_geladen_werden">Die Projekt-Liste kann nicht geladen werden</h2>
+
+<p>Wenn du das WebIDE in einer Firefox-Version öffnest und dann zu einer früheren Version von Firefox mit dem selben Profil wechselst, kann es passieren, dass der Fehler "Die Projekt-Liste kann nicht geladen werden" beim Öffnen des WebIDE mit der früheren Version auftritt.</p>
+
+<p>Dieser Fehler tritt auf, da das vom WebIDE genutzte Speicherungssystem in neuere Versionen die Daten verschiebt und restrukturiert. Somit wird die Projekt-Liste unbenutzbar für frühere Versionen</p>
+
+<p>Die Daten gehen dabei nicht verloren, aber du wirst die neueste Version von Firefox nutzen müssen, um deine Projekt-Liste nutzen zu können.</p>
+
+<p>Wenn du wirklich eine ältere Version von Firefox benutzen willst, kannst du versuchen einfach die Projekt-Liste zu löschen, dieser Weg wird jedoch nicht empfohlen und wird nicht unterstützt. Es können Probleme auftreten und Daten verloren gehen.</p>
+
+<p>Anleitung:</p>
+
+<ol>
+ <li>Schließe Firefox.</li>
+ <li>Öffne den Firefox-Profil-Ordner.</li>
+ <li>Öffne den darin enthaltenen <code>storage</code>-Ordner.</li>
+ <li>An manchen Stellen des Dateibaums sollten Dateien oder Ordner mit folgendem Namen beginnen: <code>4268914080AsptpcPerjo</code>  (gehashter Name der Datenbank).
+  <ul>
+   <li>Beispielsweise kann solch eine Datei im Ordner <code>/storage/permanent/indexeddb+++fx-devtools/idb</code> sein.</li>
+  </ul>
+ </li>
+ <li>Lösche alle so aussehenden Dateien und Ordner.</li>
+ <li>Starte Firefox und WebIDE neu.</li>
+</ol>
+
+<h2 id="Logging_aktivieren">Logging aktivieren</h2>
+
+<p>Du kannst auch die ausführliche Protokollierung aktivieren, um eine genauere Diagnose zu erhalten:</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li>Öffne <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>.</li>
+ <li>Erstelle eine neue Einstellung, die <code>extensions.adbhelper@mozilla.org.sdk.console.logLevel</code> heißt. und den String-Inhalt <code>all </code>enthält.</li>
+ <li>Setze den Wert von <code>extensions.adbhelper@mozilla.org.debug</code> auf <code>true</code>.</li>
+ <li>Öffne den <a href="/de/kb/disable-or-remove-add-ons">AddOns-Manager</a>, deaktivere und reaktiviere das ADB Helper-AddOn.</li>
+ <li>Öffne die <a href="/de/docs/Tools/Browser_Console">Browser-Konsole</a>, dort kannst du nun Eintragungen mit dem Präfix <code>adb</code> sehen. Wenn dir diese Eintragungen nichts sagen, dann <a href="#Get_help">frage bitte nach Hilfe</a>.</li>
+</ol>
+
+<h2 id="Hilfe_bekommen">Hilfe bekommen</h2>
+
+<p>Gehe in den <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">#devtools room on IRC</a> und es wird versucht dir zu helfen (Vorwiegend englischer IRChat).</p>

@@ -1,0 +1,181 @@
+---
+title: Hacking Gaia
+slug: Archive/B2G_OS/Gaia/Hacking
+translation_of: Firefox_OS/Developing_Gaia
+---
+<p>Gaia ist die Sammlung von Webapps, die das Front-End des Firefox OS (Codename Boot to Gecko) bilden.</p>
+<p>Alles was Sie auf dem Bildschirm von Firefox OS sehen, inklusive dem Homescreen, wurde nur mit Hilfe von freien Web-Technologien erstellt, </p>
+<p> </p>
+<h2 id="Quellcode_besorgen" style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Quellcode besorgen</h2>
+<p>To get the source code for Gaia, <a href="https://github.com/mozilla-b2g/gaia" title="https://github.com/mozilla-b2g/gaia">fork us on GitHub</a> and then clone your fork using <a href="http://git-scm.com/" title="http://git-scm.com/">git</a>.</p>
+<pre>$ git clone https://github.com/<span style="color: #a9a9a9;">username</span>/gaia.git</pre>
+<h2 id="Gaia_starten" style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Gaia starten</h2>
+<p>Sie können Gaia entweder auf Ihrem Desktop nutzen oder mit einem kompatiblem mobilen Gerät.</p>
+<p> </p>
+<p><span style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 1.428em; line-height: inherit;">B2G Desktop</span></p>
+<p><span style="color: rgb(68, 68, 68); font-family: Arial, sans-serif; line-height: 20px;">B2G Desktop is a desktop build of the app runtime used on Firefox OS devices which you can use to run Gaia on your desktop computer.</span></p>
+<p>You can download a nightly build of B2G Desktop from <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">here</a>. Currently we recommend installing the latest <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-beta/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-beta/">beta build</a> for your platform. There are builds for Linux (32 bit and 64 bit), OS X and Windows.</p>
+<p><span style="line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Nightly builds come packaged with a recent version of gaia. Once you've downloaded the archive, all your need to do is extract it to a folder and run the b2g binary from the extracted folder.</span></p>
+<p><strong>Note:</strong> 64 bit Linux builds do not currently work on some distributions, this is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812484" title="https://bugzilla.mozilla.org/show_bug.cgi?id=812484">bug </a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812484" title="https://bugzilla.mozilla.org/show_bug.cgi?id=812484">812484</a>. If you have problems try a 32-bit build instead.</p>
+<pre>$ cd b2g
+$ ./b2g</pre>
+<p>To run B2G with your own version of Gaia for development purposes you first need build a profile from your clone:</p>
+<pre>$ cd <span style="color: #a9a9a9;">/path/to/gaia</span>
+$ DEBUG=1 make</pre>
+<p>This will generate a directory in your gaia directory called "profile". The DEBUG part runs Gaia as hosted apps on a built-in web server, rather than the default packaged apps which have to be re-packaged after every change.</p>
+<p><strong>Note: </strong>Debug builds are currently broken on B2G Desktop, so until <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=816957" title="https://bugzilla.mozilla.org/show_bug.cgi?id=816957">bug 816957</a> is fixed you need to run "make" without the "DEBUG=1" part, then re-run make every time you make a change to Gaia.</p>
+<p> </p>
+<p>You can then run B2G Desktop with your generated profile like so:</p>
+<pre>$ <span style="color: #a9a9a9;">/path/to/b2g/</span>b2g-bin -profile <span style="color: #a9a9a9;">/path/to/gaia/</span>profile</pre>
+<p>If you want to you can build your own B2G Desktop from source.</p>
+<h3 id="B2G_Device">B2G Device</h3>
+<p> </p>
+<p>If you have a compatible mobile device you can also run Gaia by flashing it with Firefox OS. Please see <a href="https://github.com/mozilla-b2g/B2G/blob/master/README.md" rel="nofollow">documentation here</a>.</p>
+<p>There is also <a href="https://wiki.mozilla.org/B2G/DeveloperPhone#Gaia.2FB2G_Development_Environment" rel="nofollow">documentation here</a> about testing changes on your device.</p>
+<h2 id="Unit_Tests">Unit Tests</h2>
+<p> </p>
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests" rel="nofollow">here</a> for information about writing and running unit tests for Gaia.</p>
+<h2 id="Filing_Bugs">Filing Bugs</h2>
+<p> </p>
+<p>Bugs are filed on Bugzilla under <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---" rel="nofollow">Boot2Gecko &gt; Gaia</a>.</p>
+<p>File a new bug under the Gaia component (or one of the sub-components) <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Boot2Gecko" rel="nofollow">here</a>.</p>
+<h2 id="Contributing_Code">Contributing Code</h2>
+<p> </p>
+<p>Mozilla depends on contributions from the open source community to help develop Gaia apps and we'd love you to get involved.</p>
+<p>Some great places to find some bugs to start hacking on:</p>
+<ul>
+  <li><a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component:gaia%20sw:polish%20@nobody;list_id=4566236" rel="nofollow">Unowned Gaia polish bugs on Bugzilla</a></li>
+  <li><a href="http://www.joshmatthews.net/bugsahoy/?b2g=1" rel="nofollow">Mentored bugs</a></li>
+</ul>
+<h3 id="Coding_Style">Coding Style</h3>
+<p> </p>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Background:
+    <ul style="margin: 0px 0px 0px 10px; padding: 0px; line-height: 1.4;">
+      <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;"><a class="extiw" href="https://developer.mozilla.org/en/Developer_Guide/Coding_Style#General_practices" style="margin: 0px; padding: 0px; line-height: 1.4; color: rgb(0, 51, 153);" title="mdc:Developer Guide/Coding Style">MDC:Developer Guide/Coding Style#General practices</a></li>
+      <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;"><a class="extiw" href="https://developer.mozilla.org/en/Developer_Guide/Coding_Style#JavaScript_practices" style="margin: 0px; padding: 0px; line-height: 1.4; color: rgb(0, 51, 153);" title="mdc:Developer Guide/Coding Style">MDC:Developer Guide/Coding Style#JavaScript practices</a></li>
+      <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;"><a class="extiw" href="https://developer.mozilla.org/en/Developer_Guide/Coding_Style#Naming_and_Formatting_code" style="margin: 0px; padding: 0px; line-height: 1.4; color: rgb(0, 51, 153);" title="mdc:Developer Guide/Coding Style">MDC:Developer Guide/Coding Style#Naming and Formatting code</a></li>
+    </ul>
+  </li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">make sure HTML files are declared &lt;!DOCTYPE html&gt; (i.e., HTML5). IE9+ will load them in compatibility mode otherwise.</li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">add a <code style="margin: 0px; padding: 0px; line-height: 1.4; font-size: 15px;">"use strict";</code> statement (exactly that!) to the top of your JS files</li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">2 spaces for indentation - do not use tab.</li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Line break are free (I promise) don't hesitate to use them to separate logical block inside your functions.</li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Files are named <code style="margin: 0px; padding: 0px; line-height: 1.4; font-size: 15px;">like_this.js</code>.</li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Use single quote instead of double quotes.</li>
+</ul>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Additional rules:</li>
+</ul>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Bad:</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);">if (expression) doSomething();
+</pre>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Correct:</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);">if (expression)
+  doSomething();</pre>
+<p> </p>
+<p>If you're working on the system app, check out the guidance listed <a href="See_here_for_some_rules._https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ" title="See_here_for_some_rules._https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">here</a>.</p>
+<p>Before submitting a patch we recommend you run gjslint on it to check for any style errors:</p>
+<p> </p>
+<pre>gjslint --nojsdoc <span style="color: #a9a9a9;">my_file.js</span></pre>
+<p> </p>
+<h3 id="Submitting_a_Patch">Submitting a Patch</h3>
+<p>First file or assign a bug to yourself on <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---">Bugzilla</a>, you'll need a Bugzilla account.</p>
+<p>Then create a branch on your fork of Gaia:</p>
+<pre>$ git branch <span style="color: #a9a9a9;">branchname</span>
+$ git checkout <span style="color: #a9a9a9;">branchname</span></pre>
+<p>Commit your changes:</p>
+<pre>$ git add <span style="color: #a9a9a9;">/file/to/add</span>
+$ git commit -m "<span style="color: #a9a9a9;">commit message including bug number</span>"</pre>
+<p>Push your branch:</p>
+<pre>$ git push origin <span style="color: #a9a9a9;">branchname</span></pre>
+<p>Send a pull request by navigating to the branch in your fork on GitHub and finding the pull request button.</p>
+<p>To request a review of your patch, add an attachment to the bug in Bugzilla referencing the URL of the pull request and set the review ("r") flag to "?" and enter the bugzilla ID of one of the module owners and peers listed <a href="https://wiki.mozilla.org/Modules/Boot2Gecko" title="https://wiki.mozilla.org/Modules/Boot2Gecko">here</a>.</p>
+<p>The reviewer may ask you to make some changes. Once they're is happy with your patch, they will merge it into the master branch for you. Before they do this they would prefer it if you could squash all your changes into a single commit and add "r=<span style="color: rgb(169, 169, 169);">reviewername</span>" to the end of the commit message.</p>
+<h2 id="Contacting_the_Team">Contacting the Team</h2>
+<p> </p>
+<ul>
+  <li><a href="https://lists.mozilla.org/listinfo/dev-gaia" rel="nofollow">Gaia Mailing List</a></li>
+  <li>#gaia IRC channel on irc.mozilla.org</li>
+</ul>
+<h2 id="Tips">Tips</h2>
+<h3 id="Linux_B2G_Desktop_support">Linux B2G Desktop support</h3>
+<p> </p>
+<h4 id="The_homescreen_is_empty_2" style="margin: 0.85em 0px; padding: 0px; line-height: 1.4; color: rgb(42, 42, 42); font-family: MetaBold, 'Trebuchet MS', sans-serif; font-size: 15px;"><span class="mw-headline" id="The_homescreen_is_empty" style="margin: 0px; padding: 0px; line-height: 1.4;">The homescreen is empty</span></h4>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Currently, under Linux, OOP frame aren't rendered properly. The homescreen isn't actually rendered here...</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">If you just want to happily hack on pure UI (css and JS) you can safely run with OOP disabled and avoid those issues. Change the line in build/settings.py</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);"> "debug.oop.disabled": False,
+</pre>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">to</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);"> "debug.oop.disabled": True,
+</pre>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">To the profile/user.js in your gaia directory.</p>
+<h3 id="Port_Forwarding">Port Forwarding</h3>
+<p> </p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">To forward the socket on the phone to the desktop (for desktop development), you first need to get rilproxy to expose it as such, rather than exposing it to Gecko. In the gaia directory:</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);"> $ make forward
+</pre>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">This runs the commands:</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);">$ adb shell touch /data/local/rilproxyd
+$ adb shell killall rilproxy
+$ adb forward tcp:6200 localreserved:rilproxyd
+</pre>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">The file located at /data/local/rilproxyd will be deleted once the rilproxy daemon will start again. As a consequence you have to do this manipulation every time your device restarts.</p>
+<h3 id="Restarting_B2G_on_a_device_from_the_desktop">Restarting B2G on a device from the desktop</h3>
+<p> </p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);">adb shell killall b2g
+</pre>
+<h3 id="B2G_Desktop_JavaScript_Console">B2G Desktop JavaScript Console</h3>
+<p> </p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">You can run B2G Desktop with the JavaScript console by using the -jsconsole flag</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);">$ /path/to/b2g-bin -jsconsole
+</pre>
+<h3 id="Launching_an_app_directly">Launching an app directly</h3>
+<p> </p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">A "--runapp" option has been added to the B2G Desktop command-line to automatically start an application. The system app is loaded and everything happens like normal; this is not like the old trick where we loaded your app instead of the system app.</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">"--runapp" takes an argument that it normalizes by lower-casing and removing dashes and spaces, and then checks the argument against the similarly normalized app names from app manifests. For example, the name of the e-mail app is currently "E-Mail", but "--runapp email" will run it. Partial matching is not supported right now, but you can enhance b2g/chrome/content/runapp.js if your app name is unwieldy.</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">If you invoke "--runapp" without an argument (or an empty argument), the command will print out a list of all the apps it knows about as well as a brief usage message.</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">One important note is that this command disables the lock-screen as part of its magic and does not re-enable it. The assumption is that you won't use this command on a profile where you are testing the lock screen, or will turn it back on manually. Feel free to enhance the command to behave better if this is a problem for you.</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">In summary:</p>
+<pre style="margin-right: 1em; margin-left: 1em; padding: 1em; line-height: 1.4; background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(204, 204, 204); color: rgb(68, 68, 68);">./b2g -profile /path/to/your/gaia/profile --runapp email
+</pre>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">runs the e-mail app.</p>
+<h3 id="reset-gaia_and_install-gaia_make_targets">reset-gaia and install-gaia make targets</h3>
+<p> </p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">The reset-gaia and install-gaia make targets can be used interchangeably. reset-gaia will purge all the existing profiles, database before push Gaia from your working directory (new setting database will also be initialized); install-gaia will just push updates of Gaia.</p>
+<h3 id="Blank_screen_when_B2G_Desktop_starts">Blank screen when B2G Desktop starts</h3>
+<p> </p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">When you start b2g using b2g -profile $GAIA/profile a blank screen shows up and you see an error Cannot reach app://system.gaiamobile.org. To fix this there are a couple of things you can check</p>
+<ul style="margin: 10px 0px 1em 25px; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Rebuild the gaia profile using DEBUG=1 make profile in the $GAIA directory</li>
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">Run b2g again</li>
+  <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">If this doesn't fix it, check if there is any other process listening on port 8080. The default profile of gaia starts httpd.js, which listens on port 8080. When running a debug profile, b2g connects to localhost:8080. If some other process is running on port 8080, b2g will fail to display the home screen of gaia
+    <ul style="margin: 0px 0px 0px 10px; padding: 0px; line-height: 1.4;">
+      <li style="margin: 0px; padding: 0px 0px 0px 5px; line-height: 1.4;">To find out if this is the case, you can enable logging on httpd.js. The httpd.js in the profile resides in this location - $GAIA/profile/extensions/httpd/content/httpd.js. Edit the variable var DEBUG=false; to change the DEBUG to true. Save the file and restart b2g. On the console now, you will be able to view the httpd's logs</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="Diagnosing_OOM_problems">Diagnosing OOM problems</h3>
+<p> </p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;"><a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=798747#c7" rel="nofollow" style="margin: 0px; padding: 0px; line-height: 1.4; color: rgb(0, 51, 153);">From Cjones</a>:</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">Another way to diagnose possible OOMs is to open a terminal and run</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">$ watch -n 1 'adb shell b2g-procrank'</p>
+<p style="margin: 0px 0px 1em; padding: 0px; line-height: 20px; color: rgb(68, 68, 68); font-family: Arial, sans-serif;">If you see the "USS" of one of the app processes go up near 100MB and then that process disappear from the process list (accompanied by some sort of visual crash in gaia), then you've almost certainly seen an OOM kill.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>

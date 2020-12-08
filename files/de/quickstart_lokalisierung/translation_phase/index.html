@@ -1,0 +1,122 @@
+---
+title: 'Lokalisierung: Übersetzung'
+slug: Quickstart_Lokalisierung/Translation_phase
+tags:
+  - Lokalisation
+  - Werkzeuge
+  - Übersetzung
+translation_of: Mozilla/Localization/Quick_start_guide/Translation_phase
+---
+<p>Glückwunsch zur erfolgreichen Vorbereitung Deiner Lokalisierung! Als Belohnung für Deine Mühen kommen wir nun zum eigentlichen Grund Deiner Mitarbeit: Mozilla Projekte lokalisieren. "Wo ist da die Belohnung?" fragst Du Dich natürlich!</p>
+
+<p>Ab hier unterteilt sich der technische Part des Prozesses. Bei Mozilla lokalisieren wir viele verschiedene Projekte, die in drei Gruppen unterteilt werden können. Jede dieser Gruppen benötigt einen anderen Typ l10n Werkzeug zum, Du ahnst es, Lokalisieren des Projekts. Die l10n Werkzeuge sollen Dir helfen, den lokalisierten Inhalt von Version zu Version zu pflegen und bereits lokalisierte Objekte beim Lokalisieren neuer Inhalte zu beeinflussen.</p>
+
+<p>Wir identifizieren hier diese Gruppen von Projekten und die mit ihnen verbundenen l10n Werkzeuge. Auf diesem Weg werden wir Dich auf die technischen Grundlagen-Tutorien zum Lokalisieren der jeweiligen Projekt-Gruppe hinweisen. Es ist an Dir und Deiner Lokalisierungs-Community herauszufinden, welche l10n Werkzeuge am besten Euren Bedürfnissen entsprechen. Mit zunehmender Erfahrung möchtest Du vielleicht unabhängig von den von Mozilla entwickelten l10n Werkzeugen lokalisieren, auch das werden wir hier behandeln.</p>
+
+<h2 id="Projekte">Projekte</h2>
+
+<p>Die Mozilla-Projekte und ihre l10n Abläufe werden in diese Gruppen unterteilt: Mozilla Anwendungen, Mozilla Webseiten und Add-Ons. Weiter unten findest Du eine Liste mit Mozilla-Projekten, ihren zugeordneten l10n Werkzeugen und Links zu Tutorien mit Beschreibungen zu den jeweiligen Abläufen.</p>
+
+<h3 id="Mozilla_Anwendungen">Mozilla Anwendungen</h3>
+
+<p>Du bist also am Lokalisieren von Mozilla Anwendungen interessiert. Jedes l10n Werkzeug folgt einem anderen Ablauf zum Lokalisieren von Mozilla Anwendungs-Projekten. Zu jedem unten angegebenen l10n Werkzeug haben wir einen Link zu einem Einweisungs-Tutorial eingefügt. Folge den Tutorien und entscheide selbst, welches l10n Werkzeug Deinen speziellen Bedürfnissen entspricht.</p>
+
+<p>Das sind die l10n Werkzeuge, die wir zum Lokalisieren von Mozilla Anwendungen nutzen:</p>
+
+<dl>
+ <dt style="margin-left: 40px;"><a class="external" href="http://translate.sourceforge.net/wiki/guide/mozilla" title="http://translate.sourceforge.net/wiki/guide/mozilla">Pootle</a></dt>
+ <dd style="margin-left: 40px;">Ein benutzerfreundliches Web-Portal basierend auf dem Translate Toolkit API. Diese Anwendung enthält Arbeitsbereiche zum Übersetzen und Überprüfen von Strings und Projekt-Dashboards. Siehe <a class="external" href="http://pootle.locamotion.org/" title="http://pootle.locamotion.org/">Beispiel für die Lokalisierung von Mozilla Anwendungen mit Pootle</a>.</dd>
+</dl>
+
+<dl>
+ <dt style="margin-left: 40px;"><a href="/en/Localizing_with_Koala" title="https://developer.mozilla.org/en/Localizing_with_Koala">Koala</a></dt>
+ <dd style="margin-left: 40px;">Ein l10n Add-On für den nicht netzwerkfähigen Komodo Edit Text-Editor.</dd>
+ <dt style="margin-left: 40px;"><a class="external" href="/en/Localizing_with_Mozilla_Translator" title="https://developer.mozilla.org/en/Localizing_with_Mozilla_Translator">Mozilla Translator</a></dt>
+ <dd style="margin-left: 40px;">Ein nicht netzwerkfähiges, Java-basiertes l10n Werkzeug zum Übersetzen, welches die eigenen Repositories integriert. Schaue auf der <a class="external" href="http://kenai.com/projects/moztrans/downloads" title="http://kenai.com/projects/moztrans/downloads">Mozilla Translator (MT) Download Seite</a> zum Herunterladen eines MT Clients. Version 5.26 ist die aktuelle Version.</dd>
+ <dt style="margin-left: 40px;">Virtaal</dt>
+ <dd style="margin-left: 40px;">Eine nicht netzwerkfähige Version von Pootle, ebenfalls auf dem Translate Toolkit API basierend.</dd>
+</dl>
+
+<p>Die folgenden Mozilla Anwendungen wurden mit den oben vorgestellten l10n Werkzeugen lokalisiert:</p>
+
+<dl>
+ <dt style="margin-left: 40px;">Firefox</dt>
+ <dd style="margin-left: 40px;">Der preisgekrönte Firefox® Web Browser ist sicher, schnell und hat neue Features, die Deine Art der Web-Nutzung verändern werden. <span style="color: #daa520;">Siehe diese <a class="external" href="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/firefox.phaselist" title="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/firefox.phaselist">Liste der kritischsten zu lokalisierenden Strings in Firefox</a></span><span style="color: #daa520;"> und ebenso die <a class="external" href="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/phases" title="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/phases">Beschreibung um zu verstehen, wie diese organisiert sind</a></span><span style="color: #daa520;">.</span></dd>
+ <dt style="margin-left: 40px;">Thunderbird</dt>
+ <dd style="margin-left: 40px;">Geniesse sicheres, schnelles und einfaches Mailen nach Art von Mozilla. Der Thunderbird® E-Mail Client enthält intelligente Spam-Filter, leistungsfähige Suchmöglichkeiten und individuell anpassbare Ansichten.</dd>
+ <dt style="margin-left: 40px;">Seamonkey</dt>
+ <dd style="margin-left: 40px;">SeaMonkey® ist die Alles-in-Einem Anwendung, früher bekannt als die "Mozilla Application Suite", mit einem Web Browser, einem E-Mail und einem Newsgroups Client, einem HTML-Editor, Werkzeugen für Web-Entwickler und einem IRC Chat Client.</dd>
+ <dt style="margin-left: 40px;">Firefox Mobile</dt>
+ <dd style="margin-left: 40px;">Durch das Hinzufügen von Firefox® zu Deinem Smartphone hast Du Zugriff auf unzählige Web-Inhalte und Du kannst Deine bevorzugten Firefox Features überall geniessen.</dd>
+ <dt style="margin-left: 40px;">Lightning</dt>
+ <dd style="margin-left: 40px;">Lightning ist eine beliebte Erweiterung für Kalender-, Terminverwaltungs- und Aufgabenplanungs-Anwendungen.</dd>
+</dl>
+
+<p><span style="color: #0000ff;">Falls für Deine Sprache ein hg Repository im Mozilla-Netzwerk existiert, kannst Du Deine aktuellen Lokalisierungsarbeiten in den l10n Dashboards verfolgen</span><span style="color: #0000ff;">.</span></p>
+
+<div class="note">
+<p><strong>Hinweis:</strong> <span style="color: #ff8c00;">Wenn Du eine neue Lokalisierung startest und Dich für ein Offline-Werkzeug zum Lokalisieren von Mozilla Anwendungen entscheidest, dann solltest Du Dich mit der Bedienung von Mercurial (hg) vertraut machen. Lese hierfür das </span><a href="https://developer.mozilla.org/en-US/docs/Localizing_with_Mercurial" title="https://developer.mozilla.org/en-US/docs/Localizing_with_Mercurial"><span style="color: #ff8c00;">hg Anwender-Tutorial</span></a><span style="color: #ff8c00;">. </span></p>
+</div>
+
+<h3 id="Mozilla_Webseiten">Mozilla Webseiten</h3>
+
+<p>Du bist also am Lokalisieren von Mozilla Webseiten interessiert. Jedes l10n Werkzeug folgt einem anderen Ablauf zum Lokalisieren von Mozilla Webprojekten. Zu jedem unten angegebenen l10n Werkzeug haben wir einen Link zu einem Einweisungs-Tutorial eingefügt. Folge den Tutorien und entscheide selbst, welches l10n Werkzeug Deinen speziellen Bedürfnissen entspricht.</p>
+
+<p>Das sind die l10n Werkzeuge, die wir zum Lokalisieren von Mozilla Webprojekten nutzen:</p>
+
+<dl>
+ <dt style="margin-left: 40px;"><a href="/en/Localizing_with_Verbatim" title="https://developer.mozilla.org/en/Localizing_with_Verbatim">Verbatim</a></dt>
+ <dd style="margin-left: 40px;">Eine angepasste, von Mozilla betriebene Pootle-Version zum Lokalisieren von Mozilla Webseiten, speziell von Mozilla Mitmach-Kampagnen. Zudem beinhaltet es Funktionen zur Projektverwaltung, um den Projekt-Fortschritt zu kontrollieren. Besuche <a class="link-https" href="https://localize.mozilla.org/" title="https://localize.mozilla.org/">Verbatim</a> hier.</dd>
+ <dt style="margin-left: 40px;"><a href="/en-US/docs/Localizing_with_Pontoon" title="/en-US/docs/Localizing_with_Pontoon">Pontoon</a></dt>
+ <dd style="margin-left: 40px;">Ein Web-basiertes What-You-See-Is-What-You-Get (WYSIWYG) l10n Werkzeug zum Lokalisieren von Mozilla Webseiten innerhalb der Seite selbst. Besuche <a class="external" href="https://pontoon.mozilla.org" title="http://horv.at/pontoon/">Pontoon</a> hier. Bitte beachte, dass Pontoon zur Zeit noch nicht für alle Webprojekte verfügbar ist.</dd>
+</dl>
+
+<p>Die folgenden Mozilla Webprojekte wurden mit den oben vorgestellten l10n Werkzeugen lokalisiert:</p>
+
+<dl>
+ <dt style="margin-left: 40px;">mozilla.org</dt>
+ <dd style="margin-left: 40px;">Der Einstieg für alle.</dd>
+ <dt style="margin-left: 40px;">addons.mozilla.org (AMO)</dt>
+ <dd style="margin-left: 40px;">Ein Portal für alle, die Add-Ons für ihre Mozilla Anwendungen finden wollen. Lese die <a class="link-https" href="https://addons.mozilla.org/en-US/localizers/" title="https://addons.mozilla.org/en-US/localizers/">Anleitungen zum Lokalisieren von AMO</a> direkt vom AMO Team.</dd>
+ <dt style="margin-left: 40px;">developer.mozilla.org (MDN)</dt>
+ <dd style="margin-left: 40px;">Wo Du gerade bist! Helfe beim Lokalisieren der MDN Benutzeroberfläche für alle in Deiner Region.</dd>
+ <dt style="margin-left: 40px;">support.mozilla.com (SUMO)</dt>
+ <dd style="margin-left: 40px;">Ein Portal für alle, die technische Unterstützung für ihre Mozilla Anwendungen brauchen. Helfe beim Lokalisieren der SUMO Benutzeroberfläche für alle in Deiner Region.</dd>
+ <dt style="margin-left: 40px;">Mozilla Mitmach-Kampagnen</dt>
+ <dd style="margin-left: 40px;">Individuelle Mozilla Kampagnen zum Gewinnen neuer Mitwirkender.</dd>
+ <dt style="margin-left: 40px;">hacks.mozilla.org</dt>
+ <dd style="margin-left: 40px;">Für alle, die an den technisch tiefer gehenden Sachen interessiert sind, die die Anwender mit Mozilla Firefox und dem Open Web so machen.</dd>
+ <dt style="margin-left: 40px;">In-product Seiten</dt>
+ <dd style="margin-left: 40px;">Eine Sammlung von Seiten zum Kommunizieren mit den Anwendern und zum Informieren der Anwender bei deren Einstieg in Mozilla Anwendungen.</dd>
+</dl>
+
+<p><span style="color: #ff8c00;">Wenn Du Deine eigene Lokalisation anlegst, dann gibt es eine Fülle von Mozilla Webseiten die lokalisiert werden müssen bevor Deine Arbeit eine offiziell freigegebene Lokalisation wird. Siehe </span><span style="color: #ff8c00;"><a class="link-https" href="https://wiki.mozilla.org/L10n:Web_parts#Firefox_in-product_pages" title="https://wiki.mozilla.org/L10n:Web_parts#Firefox_in-product_pages">Liste der lokalisierten Mozilla Webseiten</a>. </span></p>
+
+<p>Ausserdem solltest Du <a class="link-https" href="https://wiki.mozilla.org/L10n:Web_parts" title="https://wiki.mozilla.org/L10n:Web_parts">mehr Informationen über das Lokalisieren von Mozilla Webprojekten</a> lesen.</p>
+
+<dl>
+ <dt> </dt>
+</dl>
+
+<h3 id="Add-Ons">Add-Ons</h3>
+
+<p>l10n für Add-Ons wird von mindestens zwei weiteren Organisationen/Teams namens Babelzilla und Adofex durchgeführt. Beide haben umfangreiche Projekte und l10n Werkzeuge aufgebaut, zum Lokalisieren aller eigenen Add-ons und aller Add-Ons von Drittanbietern für Mozilla Anwendungen. Besuche ihre Webseiten um zu sehen, wie Du Dich einbringen kannst.</p>
+
+<ul>
+ <li><a class="external" href="http://babelzilla.org" title="http://babelzilla.org">Babelzilla</a></li>
+ <li><a class="external" href="http://adofex.clear.com.ua/" title="http://adofex.clear.com.ua/">Adofex</a></li>
+</ul>
+
+<h2 id="Werkzeug-unabhängige_Lokalisation">Werkzeug-unabhängige Lokalisation</h2>
+
+<p>Du bist ein Meister der Kommandozeilen? Du bevorzugst Unicode Text-Editoren vor allen anderen Anwendungen auf diesem Planeten? Dein Liebling ist ein CAT (computer-assisted translation) Werkzeug wie OmegaT? Dann bist Du vielleicht nicht interessiert daran, eines der oben vorgestellten Werkzeuge für Deine Lokalisierungen zu benutzen. Wenn das der Fall ist,  dann ist dieser Abschnitt für Dich!</p>
+
+<p>Für Lokalisierer, die das Lokalisieren ohne spezielle Werkzeuge bevorzugen ist der Ablauf zum Lokalisieren von Mozilla Anwendungen und Mozilla Webseiten grundsätzlich gleich.<a href="/en/Localizing_without_a_specialized_tool" title="https://developer.mozilla.org/en/Localizing_without_a_specialized_tool"> Dieses Tutorial</a> sollte Dich mit allen benötigten technischen Informationen zum Erhalt und zur Pflege Deiner Unabhängigkeit versorgen.</p>
+
+<h2 id="Produktisierung">Produktisierung</h2>
+
+<p>Produktisierung ist ein unverzichtbarer Teil beim Lokalisieren von Mozilla Produkten. In diesem Schritt implementierst Du die zu verwendenden Plug-Ins für die Suche, die Content- und Protokoll-Steuerung, Lesezeichen und die Links zu den empfohlenen Stellen in den in-product Seiten, die die Anwender in Deiner Sprache zu den jeweiligen Mozilla Produkten benötigen.</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Productization_guide" title="https://developer.mozilla.org/en/Productization_patches">Dieses Tutorial geht mit Dir die einzelen Produktisierungs-Schritte durch</a>, also durch das Anlegen von Produktisierungs-Patches und deren Weiterleitung an die Qualitätssicherung.</p>
+
+<p>{{ PreviousNext("Localization_Quick_Start_Guide/Initial_setup", "Localization_Quick_Start_Guide/QA_phase") }}</p>

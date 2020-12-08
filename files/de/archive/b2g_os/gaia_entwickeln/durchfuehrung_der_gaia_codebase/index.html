@@ -1,0 +1,71 @@
+---
+title: Durchführung der Gaia codebase
+slug: Archive/B2G_OS/Gaia_Entwickeln/Durchfuehrung_der_Gaia_codebase
+tags:
+  - B2G
+  - Firefox
+  - Firefox OS
+  - Firefox OS lokal ausführen
+  - Gaia
+  - beitragen
+  - 'l10n:priority'
+translation_of: Archive/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase
+---
+<div class="summary">
+<p><span class="seoSummary">Dieser Artikel beschreibt im Detail die lokale Durchführung der Gaia Codebase und welche Werkzeuge in diesem Setup verfügbar sind.</span></p>
+</div>
+
+<p>Zuerst sei erwähnt, dass Du NICHT Gecko oder B2G erstellen musst, um zu Gaia beizutragen. Du musst lediglich den Gaia Quellcode herunterladen und die Möglichkeit haben, diesen auszuführen und zu editieren.<br>
+ <br>
+ Es gibt verschiedene Möglichkeiten, Gaia auszuführen:</p>
+
+<ul>
+ <li>Flashe Dein Smartphone mit der aktuellen Gaia Version.</li>
+ <li>Starte Gaia innerhalb einer B2G Desktop Version.</li>
+ <li>Führe Gaia innerhalb von WebIDE aus.</li>
+ <li>Starte Gaia innerhalb Deines Firefox Mulet Tools aus, um Gaia auf dem Desktop auszuführen.</li>
+</ul>
+
+<p>Du findest auf der <a href="/en-US/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a> Seite kurzgefasste Informationen über jede der genannten Möglichkeiten, zusammen mit Links zu detailierten Beschreibungen - je nach Bedarf. Generell sind diese nach Komplexität geordnet, absteigend von der komplexesten zur einfachsten (aber unwahrscheinlichsten) Methode.</p>
+
+<p>In diesem Artikel konzentrieren wir uns auf das Ausführen von Gaia innerhalb von Firefox Mulet oder in WebIDE. Für die meisten Änderungen, die Du in der Gaia Codebase machen möchtest, bietet dies den schnellsten Mechanismus, Updates zu testen aber offensichtlich gibt es einige Funktionen (z. B. das Testen von Geräte-APIs oder Interaktion mit der Smartphone Hardware ), für die ein physisches Gerät benötigt wird.</p>
+
+<div class="note">
+<p><strong>Info</strong>: Um weitere Hilfe zu Gaia zu bekommen, der beste Platz ist der #gaia IRC Channel (siehe auch <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> für weitere Informationen hierzu) und die <a href="https://lists.mozilla.org/listinfo/dev-gaia">dev-gaia mailing list</a>.</p>
+</div>
+
+<h2 id="Ausführen_der_eigenen_Gaia_Version">Ausführen der eigenen Gaia Version</h2>
+
+<ol>
+ <li>Erstelle zuerst eine Verzweigung von der <a href="https://github.com/mozilla-b2g/gaia">Gaia repo on Github</a>.</li>
+ <li>Als nächstes, klone Deine Verzweigung lokal:
+  <pre class="brush: bash">git clone https://github.com/your-username/gaia.git</pre>
+ </li>
+ <li>Füge den Upstream wie folgt hinzu:
+  <pre class="brush: bash">cd gaia
+git remote add upstream https://github.com/mozilla-b2g/gaia</pre>
+ </li>
+ <li>Nun musst Du ein Gaia Profil anlegen. Führe <code>make</code> innerhalb Deines repo Ordners aus, um ein Profil in der <code>profile</code> Directory anzulegen, die für optimales Debugging konfiguriert ist. Dies erzeugt ungepackte (hosted) Versionen der Gaia Apps, welche dazu fungieren, gebündelt und direkt über den lokalen HTTPD Server -zusammen als Erweiterung für Firefox Desktop- übertragen zu werden. Wenn Du Änderungen gemacht hast, musst Du nur Dein Browser Fenster aktualisieren, um das Ergebnis zu sehen (wie Du es später sehen wirst), statt Dein Profil erneuern zu müssen, erneut auf das Gerät übertragen u.s.w..<br>
+  Dies ist sehr gut für schnelles CSS/JS/HTML Hacking.</li>
+ <li>Mit Deinem angelegten Debug Profil, führe es in <a href="/en-US/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_in_Firefox_Mulet">Mulet</a> or <a href="/en-US/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_inside_WebIDE_with_a_Firefox_OS_Simulator">WebIDE</a> aus, mithilfe der Anleitungen hinter den Links.</li>
+</ol>
+
+<h2 id="Troubleshooting_und_bekannte_Probleme">Troubleshooting und bekannte Probleme</h2>
+
+<h3 id="Error_Python_executable_python3_is_v3.x_which_is_not_supported_by_gyp.">Error: Python executable "python3" is v3.x, which is not supported by gyp.</h3>
+
+<p>In manchen Linux Versionen (eg: Archlinux), ist <code>python3</code> der Standard <code>python</code>. Dadurch scheitert <code>npm</code> beim Ausführen mancher Befehle (z B. beim Testen). Um dies permanent zu beheben, führe folgenden Befehl aus:</p>
+
+<pre>npm config set python python2</pre>
+
+<p>Weiter Lösungen findest Du auch auf dieser Seite: <a href="http://stackoverflow.com/questions/20454199/how-to-use-a-different-version-of-python-duing-npm-install">Stack Overflow page</a>.</p>
+
+<p>Danach solltest Du Deine <code>node_modules</code> Directory löschen und den gescheiterten Befehl erneut ausführen.</p>
+
+<h3 id="Please_Install_NodeJS_--_(use_aptitude_on_linux_or_homebrew_on_osx)">Please Install NodeJS -- (use aptitude on linux or homebrew on osx)</h3>
+
+<p>Nun bekommst Du diesen Fehler obwohl Du NodeJS installiert hast. Möglicherweise benutzt Du Debian oder andere Debian-basierende Versionen wie zum Beispiel Ubuntu. Bei diesen Versionen ist NodeJS im <code>nodejs</code> Paket und Du kannst das <code>nodejs-legacy</code> Paket folgendermaßen installieren, um alles korrekt aufzusetzen:</p>
+
+<pre>sudo aptitude install nodejs-legacy</pre>
+
+<p>Solltest Du bei der Installation des Paketes Probleme haben, benutzt Du eventuell <a href="http://www.ubuntuupdates.org/ppa/chris_lea_nodejs">Chris Lea's PPA for Node</a>; bitte entferne diese bevor Du weitermachst.</p>

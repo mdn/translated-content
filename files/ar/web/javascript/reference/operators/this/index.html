@@ -1,0 +1,381 @@
+---
+title: this
+slug: Web/JavaScript/Reference/Operators/this
+translation_of: Web/JavaScript/Reference/Operators/this
+---
+<div><font><font>{{jsSidebar ("عوامل التشغيل")}}</font></font></div>
+
+<p><font><font>A </font></font><strong><font><font>الدالة </font></font><code>this</code><font><font>الكلمة</font></font></strong><font><font> تتصرف بشكل مختلف قليلا في جافا سكريبت بالمقارنة مع اللغات الأخرى. </font><font>كما أن لديها بعض الاختلافات بين </font></font><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode"><font><font>الوضع الصارم والوضع</font></font></a><font><font> غير الصارم.</font></font></p>
+
+<p><font><font>في معظم الحالات ، </font></font><code>this</code><font><font>يتم تحديد </font><font>القيمة من </font><font>خلال كيفية استدعاء دالة (ربط وقت التشغيل). </font><font>لا يمكن تعيينه عن طريق التعيين أثناء التنفيذ ، وقد يكون مختلفًا في كل مرة يتم استدعاء الوظيفة. </font><font>قدم ES5 طريقة {{jsxref ("Function.prototype.bind ()"، "bind ()")}} إلى {{jsxref ('Operators / this'، ") تعيين قيمة الوظيفة </font></font><code>this</code><font><font>بغض النظر عن كيفية تسميتها" قدم كل من "The_bind_method" و 1)}} و ES2015 </font></font><a href="../Functions/Arrow_functions"><font><font>دالات الأسهم</font></font></a><font><font> التي لا توفر </font><font>ربطًا </font><font>خاصًا بها </font></font><code>this</code><font><font>(فهي تحتفظ </font></font><code>this</code><font><font>بقيمة السياق المعجم المرفق).</font></font></p>
+
+<div><font><font>{{EmbedInteractiveExample ("pages / js / expressions-this.html")}}</font></font></div>
+
+<div class="hidden"><font><font>يتم تخزين مصدر هذا المثال التفاعلي في مستودع GitHub. </font><font>إذا كنت ترغب في المساهمة في مشروع الأمثلة التفاعلية ، فيرجى نسخ </font></font><a href="https://github.com/mdn/interactive-examples"><font><font>https://github.com/mdn/interactive-examples</font></font></a><font><font> وإرسال طلب سحب إلينا.</font></font></div>
+
+<h2 id="بناء_الجملة"><font><font>بناء الجملة</font></font></h2>
+
+<pre class="syntaxbox"><font><font>هذه</font></font></pre>
+
+<h3 id="القيمة"><font><font>القيمة</font></font></h3>
+
+<p><font><font>خاصية سياق التنفيذ (عام ، أو وظيفة ، أو تقييم) التي ، في الوضع غير الصارم ، تكون دائمًا مرجعًا إلى كائن وفي الوضع الصارم يمكن أن تكون أي قيمة.</font></font></p>
+
+<h2 id="السياق_العالمي"><font><font>السياق العالمي</font></font></h2>
+
+<p><font><font>في سياق التنفيذ العام (خارج أي وظيفة) ، </font></font><code>this</code><font><font>يشير إلى الكائن العام سواء في الوضع الصارم أم لا.</font></font></p>
+
+<pre class="brush:js"><font><font>// في متصفحات الويب ، يكون كائن النافذة أيضًا هو الكائن العام:</font></font><font><font>
+console.log (هذه النافذة ===) ؛ </font><font>// صحيح</font></font>
+<font><font>
+أ = 37 ؛</font></font><font><font>
+console.log (window.a) ؛ </font><font>// 37</font></font>
+<font><font>
+this.b = "MDN" ؛</font></font><font><font>
+console.log (window.b) // "MDN"</font></font><font><font>
+console.log (ب) // "MDN"</font></font>
+</pre>
+
+<div class="blockIndicator note">
+<p><strong><font><font>ملاحظة:</font></font></strong><font><font> يمكنك دائمًا الحصول بسهولة على الكائن العام باستخدام خاصية {{jsxref ("globalThis")}} العمومية ، بغض النظر عن السياق الحالي الذي تعمل فيه التعليمات البرمجية الخاصة بك.</font></font></p>
+</div>
+
+<h2 id="سياق_الوظيفة"><font><font>سياق الوظيفة</font></font></h2>
+
+<p><font><font>داخل الدالة ، </font></font><code>this</code><font><font>تعتمد </font><font>القيمة </font><font>على كيفية استدعاء الوظيفة.</font></font></p>
+
+<h3 id="مكالمة_بسيطة"><font><font>مكالمة بسيطة</font></font></h3>
+
+<p><font><font>نظرًا لأن الشفرة التالية ليست في </font></font><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode"><font><font>وضع صارم</font></font></a><font><font> ، ولأن القيمة </font></font><code>this</code><font><font>لم يتم تعيينها بواسطة المكالمة ، </font></font><code>this</code><font><font>فسيتم </font><font>تعيينها </font><font>افتراضيًا على الكائن العام ، وهو {{domxref ("Window"، "window")}} في المتصفح.</font></font></p>
+
+<pre class="brush:js"><font><font>الدالة f1 () {</font></font><font><font>
+  أعد هذا ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+// في متصفح:</font></font><font><font>
+f1 () === نافذة ؛ </font><font>// صحيح</font></font>
+<font><font>
+// في العقدة:</font></font><font><font>
+f1 () === عام ؛ </font><font>// صحيح</font></font></pre>
+
+<p><font><font>ومع ذلك ، في الوضع الصارم ، إذا </font></font><code>this</code><font><font>لم يتم تعيين </font><font>القيمة </font><font>عند إدخال سياق التنفيذ ، فإنها تظل كما </font></font><code>undefined</code><font><font>هو موضح في المثال التالي:</font></font></p>
+
+<pre class="brush:js"><font><font>الدالة f2 () {</font></font><font><font>
+  "استخدام صارم" ؛ </font><font>// انظر الوضع الصارم</font></font><font><font>
+  أعد هذا ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+f2 () === غير معرّف ؛ </font><font>// صحيح</font></font>
+</pre>
+
+<div class="note"><font><font>في المثال الثاني ، </font></font><code>this</code><font><font>يجب أن يكون {{jsxref ("undefined")}} ، لأنه </font></font><code>f2</code><font><font>تم استدعاؤه مباشرةً وليس كطريقة أو خاصية لكائن (مثل </font></font><code>window.f2()</code><font><font>). </font><font>لم يتم تنفيذ هذه الميزة في بعض المتصفحات عندما بدأوا في دعم </font></font><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode"><font><font>الوضع الصارم</font></font></a><font><font> لأول مرة </font><font>. </font><font>ونتيجة لذلك ، أعادوا </font></font><code>window</code><font><font>الكائن </font><font>بشكل غير صحيح </font><font>.</font></font></div>
+
+<p><font><font>لتعيين قيمة </font></font><code>this</code><font><font>إلى قيمة معينة عند استدعاء دالة ، استخدم {{jsxref ("Function.prototype.call ()" أو "call ()")}} أو {{jsxref ("Function.prototype.apply ( ) "،" Apply () ")}} كما في الأمثلة التالية.</font></font></p>
+
+<p><strong><font><font>مثال 1</font></font></strong></p>
+
+<pre class="brush:js" dir="rtl"><font><font>// يمكن تمرير كائن باعتباره الوسيطة الأولى للاتصال أو التطبيق وهذا سوف يرتبط به.</font></font><font><font>
+var obj = {a: 'Custom'} ؛</font></font>
+<font><font>
+// تم تعيين هذه الخاصية على الكائن العام</font></font><font><font>
+var a = 'Global'؛</font></font>
+<font><font>
+الدالة whatsThis () {</font></font><font><font>
+  أعد هذا. </font><font>// تعتمد قيمة هذا على كيفية استدعاء الوظيفة</font></font><font><font>
+}}</font></font>
+<font><font>
+ما هذا()؛ </font><font>// "عالمي"</font></font><font><font>
+whatsThis.call (obj) ؛ </font><font>// 'مخصص'</font></font><font><font>
+whatsThis.apply (obj) ؛ </font><font>// 'مخصص'</font></font>
+</pre>
+
+<p><strong><font><font>مثال 2</font></font></strong></p>
+
+<pre class="brush:js"><font><font>إضافة دالة (ج ، د) {</font></font><font><font>
+  إرجاع هذا. a + this.b + c + d ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+var o = {a: 1، b: 3} ؛</font></font>
+<font><font>
+// المعلمة الأولى هي الكائن المطلوب استخدامه كـ</font></font><font><font>
+// 'this' ، يتم تمرير المعلمات اللاحقة كـ </font></font><font><font>
+// الوسيطات في استدعاء الوظيفة</font></font><font><font>
+add.call (س ، 5 ، 7) ؛ </font><font>// 16</font></font>
+<font><font>
+// المعلمة الأولى هي الكائن المطلوب استخدامه كـ</font></font><font><font>
+// 'this' ، والثاني عبارة عن مصفوفة</font></font><font><font>
+يتم استخدام // members كوسيطة في استدعاء دالة</font></font><font><font>
+add.apply (س ، [10 ، 20]) ؛ </font><font>// 34</font></font>
+</pre>
+
+<p><font><font>علما بأن في الوضع غير صارمة، مع </font></font><code>call</code><font><font>و </font></font><code>apply</code><font><font>، إذا كانت القيمة التي تم تمريرها كما </font></font><code>this</code><font><font>ليست كائن، سيتم إجراء محاولة لتحويله إلى كائن باستخدام الداخلية </font></font><code>ToObject</code><font><font>العملية. </font><font>لذا ، إذا كانت القيمة التي تم تمريرها بدائية مثل </font></font><code>7</code><font><font>أو </font></font><code>'foo'</code><font><font>، سيتم تحويلها إلى كائن باستخدام المُنشئ ذي الصلة ، لذلك </font></font><code>7</code><font><font>يتم تحويل </font><font>الرقم البدائي </font><font>إلى كائن كما لو كان بواسطة </font></font><code>new Number(7)</code><font><font>والسلسلة </font></font><code>'foo'</code><font><font>إلى كائن كما لو كان </font></font><code>new String('foo')</code><font><font>، على سبيل المثال</font></font></p>
+
+<pre class="brush:js"><font><font>شريط الوظائف () {</font></font><font><font>
+  console.log (Object.prototype.toString.call (this)) ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+bar.call (7) ؛ </font><font>// [رقم الكائن]</font></font><font><font>
+bar.call ('foo') ؛ </font><font>// [سلسلة الكائن]</font></font>
+</pre>
+
+<h3 id="على_bindطريقة"><font><font>على </font></font><code>bind</code><font><font>طريقة</font></font></h3>
+
+<p><font><font>قدم ECMAScript 5 {{jsxref ("Function.prototype.bind ()")}}}. </font></font><code>f.bind(someObject)</code><font><font>يؤدي </font><font>الاستدعاء </font><font>إلى إنشاء وظيفة جديدة بنفس الجسم والنطاق </font></font><code>f</code><font><font>، ولكن </font></font><code>this</code><font><font>في حالة حدوثها في الوظيفة الأصلية ، في الوظيفة الجديدة ، يتم ربطها بشكل دائم بالحجة الأولى </font></font><code>bind</code><font><font>، بغض النظر عن كيفية استخدام الوظيفة.</font></font></p>
+
+<pre class="brush:js"><font><font>دالة f () {</font></font><font><font>
+  أعد هذا.</font></font><font><font>
+}}</font></font>
+<font><font>
+var g = f.bind ({a: 'azerty'}) ؛</font></font><font><font>
+console.log (g ()) ؛ </font><font>// azerty</font></font>
+<font><font>
+var h = g.bind ({a: 'yoo'}) ؛ </font><font>// bind يعمل مرة واحدة فقط!</font></font><font><font>
+console.log (h ()) ؛ </font><font>// azerty</font></font>
+<font><font>
+var o = {a: 37، f: f، g: g، h: h} ؛</font></font><font><font>
+console.log (oa، of ()، og ()، oh ())؛ </font><font>// 37،37، azerty، azerty</font></font>
+</pre>
+
+<h3 id="وظائف_السهم"><font><font>وظائف السهم</font></font></h3>
+
+<p><font><font>في </font></font><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"><font><font>دوال السهم</font></font></a><font><font> ، </font></font><code>this</code><font><font>يحتفظ بقيمة السياق المعجم المتضمن </font></font><code>this</code><font><font>. </font><font>في الكود العام ، سيتم تعيينه على الكائن العام:</font></font></p>
+
+<pre class="brush: js"><font><font>var globalObject = هذا ؛</font></font><font><font>
+var foo = (() =&gt; this) ؛</font></font><font><font>
+console.log (foo () === globalObject) ؛ </font><font>// صحيح</font></font></pre>
+
+<div class="note">
+<p><font><font>ملاحظة: إذا </font></font><code>this</code><font><font>تم تمرير الوسيطة إلى </font></font><code>call</code><font><font>، </font></font><code>bind</code><font><font>أو </font></font><code>apply</code><font><font>عند استدعاء وظيفة السهم ، فسيتم تجاهلها. </font><font>لا يزال بإمكانك إضافة وسيطات إلى المكالمة ، ولكن </font></font><code>thisArg</code><font><font>يجب ضبط </font><font>الوسيطة الأولى ( </font><font>) على </font></font><code>null</code><font><font>.</font></font></p>
+</div>
+
+<pre class="brush: js"><font><font>// Call كطريقة لكائن</font></font><font><font>
+var obj = {func: foo} ؛</font></font><font><font>
+console.log (obj.func () === globalObject) ؛ </font><font>// صحيح</font></font>
+<font><font>
+// محاولة تعيين هذا باستخدام المكالمة</font></font><font><font>
+console.log (foo.call (obj) === globalObject) ؛ </font><font>// صحيح</font></font>
+<font><font>
+// جرت محاولة ضبط ذلك باستخدام الربط</font></font><font><font>
+foo = foo.bind (obj) ؛</font></font><font><font>
+console.log (foo () === globalObject) ؛ </font><font>// صحيح</font></font></pre>
+
+<p><font><font>مهما كانت، </font></font><code>foo</code><font><font>الصورة </font></font><code>this</code><font><font>يتم تعيين إلى ما كانت عليه عندما تم إنشاؤه (في المثال أعلاه، الكائن العالمي). </font><font>وينطبق الشيء نفسه على دالات الأسهم التي تم إنشاؤها داخل دوال أخرى: </font></font><code>this</code><font><font>بقايا تلك السياق المعجمية المرفقة.</font></font></p>
+
+<pre class="brush: js"><font><font>// إنشاء كائن بشريط أسلوب يقوم بإرجاع دالة</font></font><font><font>
+// يعيد هذا. </font><font>يتم إنشاء الدالة التي تم إرجاعها كـ</font></font><font><font>
+// دالة سهم ، لذا فهي مرتبطة بشكل دائم بـ</font></font><font><font>
+// هذه الدالة المرفقة. </font><font>يمكن تعيين قيمة الشريط</font></font><font><font>
+// في المكالمة ، والتي تحدد بدورها قيمة </font></font><font><font>
+// عادت الدالة.</font></font><font><font>
+var obj = {</font></font><font><font>
+  شريط: الوظيفة () {</font></font><font><font>
+    var x = (() =&gt; this) ؛</font></font><font><font>
+    العودة س ؛</font></font><font><font>
+  }}</font></font><font><font>
+} ؛</font></font>
+<font><font>
+// Call bar كطريقة للهدف ، وضبط هذا الأمر على obj</font></font><font><font>
+// تعيين مرجع للدالة التي تم إرجاعها إلى fn</font></font><font><font>
+var fn = obj.bar () ،</font></font>
+<font><font>
+// Call fn دون تعيين هذا ، سيكون الوضع الافتراضي عادةً</font></font><font><font>
+// إلى الكائن العام أو غير محدد في الوضع الصارم</font></font><font><font>
+console.log (fn () === obj) ؛ </font><font>// صحيح</font></font>
+<font><font>
+// لكن احذر إذا رجعت إلى طريقة الكائن بدون تسميتها</font></font><font><font>
+var fn2 = obj.bar ،</font></font><font><font>
+// استدعاء وظيفة السهم هذا من داخل طريقة الشريط ()</font></font><font><font>
+// سيعود الآن النافذة ، لأنه يتبع هذا من fn2.</font></font><font><font>
+console.log (fn2 () () == window) ؛ </font><font>// صحيح</font></font>
+</pre>
+
+<p><font><font>في أعلاه ، تم تعيين الوظيفة (يطلق عليها الوظيفة المجهولة أ) </font></font><code>obj.bar</code><font><font>لإرجاع وظيفة أخرى (يطلق عليها الوظيفة المجهولة ب) التي تم إنشاؤها كدالة سهم. </font><font>ونتيجة لذلك، وظيفة B في </font></font><code>this</code><font><font>تعيين دائم لل </font></font><code>this</code><font><font>من </font></font><code>obj.bar</code><font><font>(وظيفة A) عندما دعا. </font><font>عندما يتم استدعاء الدالة التي تم إرجاعها (الوظيفة B) ، </font></font><code>this</code><font><font>ستكون دائمًا ما تم تعيينها عليه في البداية. </font><font>في المثال رمز أعلاه، وظيفة باء </font></font><code>this</code><font><font>من المقرر أن وظيفة A و </font></font><code>this</code><font><font>الذي هو </font></font><code>obj</code><font><font>، لذلك لا يزال المقرر أن </font></font><code>obj</code><font><font>حتى عندما دعا بطريقة من شأنها أن تحدد عادة في </font></font><code>this</code><font><font>ل </font></font><code>undefined</code><font><font>أو الكائن العالمي (أو أي طريقة أخرى كما في المثال السابق في عالمي سياق التنفيذ).</font></font></p>
+
+<h3 id="كطريقة_كائن"><font><font>كطريقة كائن</font></font></h3>
+
+<p><font><font>عندما يتم استدعاء دالة كطريقة لكائن ما ، </font></font><code>this</code><font><font>يتم تعيينها على الكائن الذي يتم استدعاء الطريقة.</font></font></p>
+
+<p><font><font>في المثال التالي ، عندما </font></font><code>o.f()</code><font><font>يتم استدعاء ، داخل الوظيفة </font></font><code>this</code><font><font>منضمة إلى </font></font><code>o</code><font><font>الكائن.</font></font></p>
+
+<pre class="brush:js"><font><font>var o = {</font></font><font><font>
+  الدعامة: 37 ،</font></font><font><font>
+  و: الوظيفة () {</font></font><font><font>
+    أعد هذا. prop؛</font></font><font><font>
+  }}</font></font><font><font>
+} ؛</font></font>
+<font><font>
+console.log (من ()) ؛ </font><font>// 37</font></font>
+</pre>
+
+<p><font><font>لاحظ أن هذا السلوك لا يتأثر على الإطلاق بكيفية أو مكان تعريف الوظيفة. </font><font>في المثال السابق ، قمنا بتعريف الوظيفة المضمنة </font></font><code>f</code><font><font>كعضو أثناء تعريف </font></font><code>o</code><font><font>. </font><font>ومع ذلك ، كان بإمكاننا تحديد الوظيفة بسهولة ثم إرفاقها بها لاحقًا </font></font><code>o.f</code><font><font>. </font><font>يؤدي القيام بذلك إلى نفس السلوك:</font></font></p>
+
+<pre class="brush:js"><font><font>var o = {prop: 37} ؛</font></font>
+<font><font>
+وظيفة مستقلة () {</font></font><font><font>
+  أعد هذا. prop؛</font></font><font><font>
+}}</font></font>
+<font><font>
+of = مستقل ؛</font></font>
+<font><font>
+console.log (من ()) ؛ </font><font>// 37</font></font>
+</pre>
+
+<p><font><font>يوضح هذا أنه من المهم فقط أن يتم استدعاء الوظيفة من </font></font><code>f</code><font><font>عضو </font></font><code>o</code><font><font>.</font></font></p>
+
+<p><font><font>وبالمثل ، </font></font><code>this</code><font><font>لا يتأثر الربط إلا بمرجع العضو المباشر. </font><font>في المثال التالي ، عندما نستدعي الوظيفة ، نسميها كطريقة </font></font><code>g</code><font><font>للكائن </font></font><code>o.b</code><font><font>. </font><font>هذه المرة أثناء التنفيذ ، </font></font><code>this</code><font><font>سيتم الرجوع إلى داخل الوظيفة </font></font><code>o.b</code><font><font>. </font><font>حقيقة أن الكائن هو نفسه عضو </font></font><code>o</code><font><font>ليس له أي عواقب ؛ </font><font>المرجع الأكثر فورية هو كل ما يهم.</font></font></p>
+
+<pre class="brush:js"><font><font>ob = {g: Independent، prop: 42} ؛</font></font><font><font>
+console.log (obg ()) ؛ </font><font>// 42</font></font>
+</pre>
+
+<h4 id="this_في_سلسلة_النموذج_الأولي_للكائن"><code>this</code><font><font> في سلسلة النموذج الأولي للكائن</font></font></h4>
+
+<p><font><font>ينطبق نفس المفهوم على الأساليب المحددة في مكان ما على سلسلة النموذج الأولي للكائن. </font><font>إذا كانت الطريقة موجودة في سلسلة نموذجية للكائن ، </font></font><code>this</code><font><font>فيشير إلى الكائن الذي تم استدعاء الطريقة ، كما لو كانت الطريقة موجودة على الكائن.</font></font></p>
+
+<pre class="brush:js"><font><font>var o = {f: function () {return this.a + this.b؛ </font><font>}} ؛</font></font><font><font>
+var p = Object.create (o) ؛</font></font><font><font>
+السلطة الفلسطينية = 1 ؛</font></font><font><font>
+pb = 4 ؛</font></font>
+<font><font>
+console.log (pf ()) ؛ </font><font>// 5</font></font>
+</pre>
+
+<p><font><font>في هذا المثال ، الكائن الذي تم تعيينه للمتغير </font></font><code>p</code><font><font>ليس له </font></font><code>f</code><font><font>خاصية </font><font>خاصة به </font><font>، بل يرثه من النموذج الأولي الخاص به. </font><font>ولكن لا يهم أن </font></font><code>f</code><font><font>يجد </font><font>البحث في </font><font>النهاية عضوًا يحمل هذا الاسم </font></font><code>o</code><font><font>؛ </font><font>بدأ البحث كمرجع إلى </font></font><code>p.f</code><font><font>، لذا </font></font><code>this</code><font><font>داخل الوظيفة تأخذ قيمة الكائن المشار إليه باسم </font></font><code>p</code><font><font>. </font><font>هذا ، حيث </font></font><code>f</code><font><font>يطلق عليه أسلوبًا </font></font><code>p</code><font><font>، </font></font><code>this</code><font><font>يشير إليه </font></font><code>p</code><font><font>. </font><font>هذه ميزة مثيرة للاهتمام في وراثة النموذج الأولي لجافا سكريبت.</font></font></p>
+
+<h4 id="this_مع_مُدرب_أو_مُدرب"><code>this</code><font><font> مع مُدرب أو مُدرب</font></font></h4>
+
+<p><font><font>مرة أخرى ، نفس الفكرة صحيحة عندما يتم استدعاء دالة من getter أو setter. </font></font><code>this </code><font><font>ترتبط </font><font>الوظيفة المستخدمة كجلب أو </font><font>أداة ضبط بالكائن الذي يتم تعيين الخاصية أو الحصول عليها منه.</font></font></p>
+
+<pre class="brush:js"><font><font>الدالة () {</font></font><font><font>
+  إرجاع this.a + this.b + this.c ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+var o = {</font></font><font><font>
+  أ: 1 ،</font></font><font><font>
+  ب: 2 ،</font></font><font><font>
+  ج: 3 ،</font></font><font><font>
+  الحصول على المتوسط ​​() {</font></font><font><font>
+    العودة (this.a + this.b + this.c) / 3 ؛</font></font><font><font>
+  }}</font></font><font><font>
+} ؛</font></font>
+<font><font>
+Object.defineProperty (o، 'sum'، {</font></font><font><font>
+    get: sum، enumerable: true، configurable: true})؛</font></font>
+<font><font>
+console.log (o. avage، o.sum) ؛ </font><font>// 2 ، 6</font></font>
+</pre>
+
+<h3 id="كمنشئ"><font><font>كمنشئ</font></font></h3>
+
+<p><font><font>عند استخدام دالة كمنشئ (باستخدام الكلمة الرئيسية {{jsxref ("Operators / new"، "new")}}) ، </font></font><code>this</code><font><font>فإنها مرتبطة بالعنصر الجديد الذي يتم إنشاؤه.</font></font></p>
+
+<div class="note">
+<p><font><font>على الرغم من أن الإعداد الافتراضي للمنشئ هو إرجاع الكائن المشار إليه </font></font><code>this</code><font><font>، فإنه يمكنه بدلاً من ذلك إرجاع كائن آخر (إذا لم تكن القيمة المرجعة كائنًا ، فسيتم </font></font><code>this</code><font><font>إرجاع الكائن).</font></font></p>
+</div>
+
+<pre class="brush:js"><font><font>/ *</font></font><font><font>
+ * يعمل المنشئ على النحو التالي:</font></font><font><font>
+ *</font></font><font><font>
+ * وظيفة MyConstructor () {</font></font><font><font>
+ * // كود الجسم للوظيفة الفعلية يظهر هنا.  </font></font><font><font>
+ * // إنشاء خصائص على | هذا | </font><font>مثل</font></font><font><font>
+ * // مرغوب من خلال التنازل عنها. </font><font>على سبيل المثال ،</font></font><font><font>
+ * this.fum = "nom" ؛</font></font><font><font>
+ * // إلى آخره...</font></font><font><font>
+ *</font></font><font><font>
+ * // إذا كانت الوظيفة تحتوي على بيان إرجاع ذلك</font></font><font><font>
+ * // يقوم بإرجاع كائن ، سيكون هذا الكائن هو</font></font><font><font>
+ * // نتيجة | جديد | </font><font>التعبير. </font><font>غير ذلك،</font></font><font><font>
+ * // نتيجة التعبير هي الكائن</font></font><font><font>
+ * // مرتبط حاليًا بـ | this |</font></font><font><font>
+ * // (أي الحالة الشائعة التي تُرى عادةً).</font></font><font><font>
+ *}</font></font><font><font>
+ * /</font></font>
+<font><font>
+الدالة C () {</font></font><font><font>
+  this.a = 37 ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+var o = new C () ،</font></font><font><font>
+Console.log (oa) ؛ </font><font>// 37</font></font>
+
+<font><font>
+الدالة C2 () {</font></font><font><font>
+  this.a = 37 ؛</font></font><font><font>
+  العودة {أ: 38} ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+o = C2 () جديد ؛</font></font><font><font>
+Console.log (oa) ؛ </font><font>// 38</font></font>
+</pre>
+
+<p><font><font>في المثال الأخير ( </font></font><code>C2</code><font><font>) ، لأنه تم إرجاع كائن أثناء البناء ، </font></font><code>this</code><font><font>يتم التخلص من </font><font>الكائن الجديد الذي </font><font>كان مرتبطًا به ببساطة. </font><font>(هذا يجعل العبارة " </font></font><code>this.a = 37;</code><font><font>" رمزًا ميتًا بشكل </font><font>أساسي </font><font>. ليس ميتًا تمامًا لأنه يتم تنفيذه ، ولكن يمكن إزالته بدون أي تأثيرات خارجية.)</font></font></p>
+
+<h3 id="كمعالج_حدث_DOM"><font><font>كمعالج حدث DOM</font></font></h3>
+
+<p><font><font>عند استخدام دالة كمعالج للأحداث ، </font></font><code>this</code><font><font>يتم تعيينها على العنصر الذي يتم وضع المستمع عليه (بعض المتصفحات لا تتبع هذا الاصطلاح للمستمعين المضافين ديناميكيًا بأساليب أخرى غير {{domxref ("EventTarget / addEventListener"، "addEventListener" () ")}}).</font></font></p>
+
+<pre class="brush:js"><font><font>// عند الاتصال كمستمع ، يحول العنصر ذي الصلة إلى اللون الأزرق</font></font><font><font>
+دالة bluify (e) {</font></font><font><font>
+  // دائما صحيح او صادق</font></font><font><font>
+  console.log (هذا === e.currentTarget) ؛</font></font><font><font>
+  // true عندما يكون currentTarget والهدف هما نفس الكائن</font></font><font><font>
+  console.log (هذا === e.target) ؛</font></font><font><font>
+  this.style.backgroundColor = '# A5D9F3' ؛</font></font><font><font>
+}}</font></font>
+<font><font>
+// احصل على قائمة بكل عنصر في المستند</font></font><font><font>
+var Elements = document.getElementsByTagName ('*') ؛</font></font>
+<font><font>
+// أضف bluify كمستمع فوق حتى عندما</font></font><font><font>
+تم النقر على عنصر // ، ويتحول إلى اللون الأزرق</font></font><font><font>
+for (var i = 0؛ i &lt;element.length؛ i ++) {</font></font><font><font>
+  العناصر [i] .addEventListener ('click'، bluify، false) ؛</font></font><font><font>
+}}</font></font></pre>
+
+<h3 id="في_معالج_حدث_مضمن"><font><font>في معالج حدث مضمن</font></font></h3>
+
+<p><font><font>عندما يتم استدعاء الرمز من </font></font><a href="/en-US/docs/Web/Guide/Events/Event_handlers"><font><font>معالج</font></font></a><font><font> مضمّن </font><a href="/en-US/docs/Web/Guide/Events/Event_handlers"><font>في الحدث</font></a><font> ، </font></font><code>this</code><font><font>يتم تعيينه على عنصر DOM الذي يتم وضع المستمع عليه:</font></font></p>
+
+<pre class="brush:js"><font><font>&lt;button onclick = "alert (this.tagName.toLowerCase ())؛"&gt;</font></font><font><font>
+  تظهر هذه</font></font><font><font>
+&lt;/button&gt;</font></font>
+</pre>
+
+<p><font><font>يظهر التنبيه أعلاه </font></font><code>button</code><font><font>. </font><font>لاحظ أن الكود الخارجي فقط هو الذي تم </font></font><code>this</code><font><font>ضبطه بهذه الطريقة:</font></font></p>
+
+<pre class="brush:js"><font><font>&lt;button onclick = "alert ((function () {return this؛}) ())؛"&gt;</font></font><font><font>
+  أظهر هذا الداخلية</font></font><font><font>
+&lt;/button&gt;</font></font>
+</pre>
+
+<p><font><font>في هذه الحالة ، </font></font><code>this</code><font><font>لم يتم تعيين </font><font>الوظيفة الداخلية ، </font><font>لذا فإنها تُرجع الكائن العام / النافذة (أي الكائن الافتراضي في الوضع غير الصارم حيث </font></font><code>this</code><font><font>لا يتم تعيينه بواسطة المكالمة).</font></font></p>
+
+<h2 id="مواصفات"><font><font>مواصفات</font></font></h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><font><font>تخصيص</font></font></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><font><font>{{SpecName ('ESDraft'، '# sec-this-keyword'، 'The this keyword')}}</font></font></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="التوافق_المتصفح"><font><font>التوافق المتصفح</font></font></h2>
+
+<div class="hidden"><font><font>يتم إنشاء جدول التوافق في هذه الصفحة من البيانات المنظمة. </font><font>إذا كنت ترغب في المساهمة في البيانات ، يرجى مراجعة </font></font><a href="https://github.com/mdn/browser-compat-data"><font><font>https://github.com/mdn/browser-compat-data</font></font></a><font><font> وإرسال طلب سحب إلينا.</font></font></div>
+
+<p><font><font>{{Compat ("javascript.operators.this")}}</font></font></p>
+
+<h2 id="أنظر_أيضا"><font><font>أنظر أيضا</font></font></h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode"><font><font>الوضع الصارم</font></font></a></li>
+ <li><a href="https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/"><font><font>شرح لطيف لكلمة "هذا" في جافا سكريبت</font></font></a></li>
+ <li><font><font>الحصول على السياق العالمي: {{jsxref ("globalThis")}}</font></font></li>
+</ul>

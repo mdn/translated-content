@@ -1,0 +1,45 @@
+---
+title: Firefox for Android
+slug: Mozilla/Firefox_for_Android
+translation_of: Mozilla/Firefox_for_Android
+---
+<p>For more and more people mobile devices are the primary way, or even the only way, to access the Web.<a class="link-https" href="https://www.mozilla.org/en-US/mobile/"> Firefox for Android</a> (codenamed Fennec) is an open, hackable, standards-based browser, just like the desktop Firefox.</p>
+<p>Firefox for Android constructs its user interface from native Android widgets instead of XUL: this greatly improves performance, especially startup time, and memory consumption.</p>
+<h2 id="Contribute_to_Firefox_for_Android">Contribute to Firefox for Android</h2>
+<p>The main starting point for information about the Firefox for Android project itself is the project <a class="link-https" href="https://wiki.mozilla.org/Mobile/Get_Involved">"Get Involved" page</a>.</p>
+<p>You can help us to create and improve Firefox for Android:</p>
+<ul>
+ <li>Help us with <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android/Compatibility_Testing" title="https://developer-new.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android/Compatibility_Testing">compatibility testing</a></li>
+ <li>Subscribe to the <a href="https://mail.mozilla.org/listinfo/mobile-firefox-dev">mobile-firefox-dev mailing list</a></li>
+ <li>Contact the team over <a class="link-irc" href="irc://irc.mozilla.org/#mobile">IRC</a></li>
+ <li>Join in our <a class="link-https" href="https://wiki.mozilla.org/Mobile/Notes">Wednesday development meeting</a></li>
+ <li>Keep up to date with project news on <a class="external" href="http://planet.firefox.com/mobile/">Planet Firefox Mobile</a>, <a href="http://fennecnightly.tumblr.com/">Tumblr</a> and <a class="link-https" href="https://twitter.com/FennecNightly" title="https://twitter.com/#!/mozmobile">Twitter</a></li>
+ <li><a href="https://wiki.mozilla.org/Mobile/Fennec/Android" title="https://wiki.mozilla.org/Mobile/Fennec/Android">Build and hack on Firefox for Android</a> (Fennec)</li>
+</ul>
+<h2 id="Develop_for_the_mobile_web">Develop for the mobile web</h2>
+<p>We've started putting together a guide to <a href="/En/Mobile" title="En/Mobile">designing web sites for mobile devices</a>.</p>
+<p>With Firefox for Android, you've got access a number of APIs that expose the underlying capabilities of the device, closing the gap between the Web and native applications:</p>
+<ul>
+ <li><a class="external" href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/" title="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Battery</a></li>
+ <li><a href="/en/DOM/Using_the_Camera_API" title="Using the Camera API">Camera</a></li>
+ <li><a href="/en/API/WebTelephony/Introduction_to_WebTelephony" title="Introduction to WebTelephony">WebTelephony</a></li>
+ <li><a href="/en/API/WebSMS/Introduction_to_WebSMS" title="Introduction to WebSMS">WebSMS</a></li>
+ <li><a href="/En/Using_geolocation" title="Using geolocation">Geolocation</a></li>
+ <li><a href="/en/Detecting_device_orientation" title="https://developer.mozilla.org/en/detecting_device_orientation">Orientation</a></li>
+ <li><a href="/en/WebAPI/Web_Activities" title="Web Activities">Web Activities</a></li>
+</ul>
+<p>To test your web site on Firefox for Android, you can <a class="link-https" href="https://www.mozilla.org/en-US/mobile/">install it on an Android device</a> or <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">run it on your desktop using the Android Emulator</a>.</p>
+<h2 id="Build_mobile_add-ons">Build mobile add-ons</h2>
+<p><a href="/en/Extensions/Mobile" title="en/Extensions/Firefox_on_Android">Firefox for Android supports add-ons</a> using the exact same <a href="/en/Extensions" title="en/Extensions">extension system</a> used by all other Gecko-based applications. We did not invent a new add-on system. This means that building an add-on for Firefox on Android is the <a href="/en/Building_an_Extension" title="en/Building_an_Extension">same process</a> that would be used for desktop Firefox. Add-ons that work with desktop Firefox <strong>do not</strong> automatically work in Firefox on Android. The user interfaces are just too different.</p>
+<div class="note">
+ Firefox on Android has a unique application identifier which must be used in <code>install.rdf</code>. The identifier is <code>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</code></div>
+<p>Both classic restart-required and newer <a href="/en/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped_extensions">restartless</a> add-on approaches are supported. Using the restartless approach is preferred whenever possible because the user experience is far superior to forcing an application restart when installing or removing an add-on.</p>
+<h3 id="Quick_Overview">Quick Overview</h3>
+<ul>
+ <li>There is no visible XUL in the UI, so using overlays to try to add or change UI is useless.</li>
+ <li>Internal code and objects, like <code>gBrowser</code>, do not exist. Look at the Firefox on Android <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js" title="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js"><code>browser.js</code></a> file to learn about the internals. Much of the same fundamental functionality exists.</li>
+ <li>Services like <code>nsIPromptService</code> and <code>nsIAlertsService</code> are implemented to use native Android UI.</li>
+ <li>There is a simple JavaScript object, called <a href="/en/Extensions/Mobile/API/NativeWindow" title="en/Extensions/Mobile/NativeWindow"><code>NativeWindow</code></a>, that allows you to manipulate parts of the native Android UI.</li>
+</ul>
+<h2 id="Get_help_with_Firefox_for_Android">Get help with Firefox for Android</h2>
+<p>Documentation and tutorials for using and troubleshooting Firefox for Android are available on the <a class="external" href="http://support.mozilla.org/mobile" title="http://support.mozilla.org/mobile">Mozilla Support website</a>.</p>

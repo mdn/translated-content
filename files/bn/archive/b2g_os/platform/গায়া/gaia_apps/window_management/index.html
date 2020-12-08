@@ -1,0 +1,287 @@
+---
+title: Window Management
+slug: Archive/B2G_OS/Platform/গায়া/Gaia_apps/Window_Management
+tags:
+  - Apps
+  - B2G
+  - Firefox OS
+  - NeedsReview
+  - Window Management
+  - system
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Window_Management
+---
+<div class="summary">
+ <p><span class="seoSummary"> সাধারণ ভাবে,একটি  উইন্ডো  ম্যানেজার একটি আবেদনের অংশ  যে, স্থানের এবং ভৌগলিকভাবে  সাধারণ ক্ষেত্রে ব্যবহারকারীদের মধ্যে উইন্ডোর আবির্ভাব ঘটানো নিয়ন্ত্রণ করে।এই অনুচ্ছেদ দেখায় কিভাবে ফায়ারফক্স ওএস উইন্ডো ম্যানেজমেন্ট নিয়ন্ত্রণ  করে।</span></p>
+</div>
+<p>  ফায়ারফক্স  ওএস  এ , উইন্ডো  ম্যানেজমেন্ট  সিস্টেম  অ্যাপের  একটি অংশ ( সিস্টেম অ্যাপ পৃষঠার লিংক)  এবং দায়িত্বশীলঃ</p>
+<ul>
+ <li>অ্যাপ  জীবনচক্র  এবং  মিথস্ক্রিয়া অ্যাপের মধ্যে</li>
+ <li> নকশা,জানানো,উদ্বোধন,দর্শন  এবং সজীবতা/পরিবর্তন  ইউ এল এর উপাদান সমূহ।</li>
+ <li> সিস্টেম ওয়াইড ইউ এল  লজিক যেমন ওয়েবের  কাজকর্ম,অ্যাপের  বিজ্ঞাপন, এবং টাস্ক ম্যানেজার।</li>
+ <li>অ্যাপ এস্পেচিফিক ইউ এল ফিচার  যেমন পপুস, রচনার  কোনো অংশের বিষয়সমূহ ,বাতিল পৃষ্ঠা।</li>
+</ul>
+<p> এসব বিষয়ে  বিস্তারিত যাওয়ার আগে,চলো দেখি কিভাবে গাইয়াতে  অ্যাপ  শুরু হয় ।</p>
+<h2 id="কিভাবে_গায়াতে_অ্যাপ_শুরু_হয়েছে"> কিভাবে গায়াতে অ্যাপ শুরু  হয়েছে</h2>
+<h4 id="একটি_অ্যাপ_ফায়ারফক্স_os_এ_শুরু_হতে_পারেউদাহরণ_হিসেবে_অন্য_অ্যাপের_মধ্যে_দিয়ে_একটি_সিস্টেমের_তথ্য_তৈরির_মাধ্যমে_অথবা_হোমস্ক্রীনে_আইকন_এর_সঙ্কেত_দেয়ার_মাধ্যমে।">  একটি  অ্যাপ  ফায়ারফক্স os  এ শুরু হতে পারে,উদাহরণ  হিসেবে  অন্য  অ্যাপের  মধ্যে দিয়ে একটি সিস্টেমের তথ্য তৈরির  মাধ্যমে, অথবা হোমস্ক্রীনে আইকন এর সঙ্কেত দেয়ার  মাধ্যমে। </h4>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7709/app-launch-flow.png" style="width: 728px; height: 414px; display: block; margin: 0px auto;"></p>
+<p> ইভেন্টটি  যা  গেটকো  ইজিনের  এবং সিস্টেম অ্যাপের দ্বারা  অ্যাপের   উদ্বোধনের পরিচালনা নিয়ন্ত্রণ  করে ,এবং নিচে আর ও  বিস্তারিত ভাবে ব্যাখা করেছে ।</p>
+<h3 id="অ্যাপ_গঠন"> অ্যাপ  গঠন</h3>
+<p> সকল  গায়া ওয়েব পেজ হল  <a href="/en-US/Marketplace/Publishing/Packaged_apps">packaged apps</a>,যেগুলো গুরুত্বপূর্ণ ভাবে সকল আবেদন সম্পদের জিপ ফাইল  ধারণ করেঃHTML,CSS, JavaScript, images সুস্পষ্টতা ইত্যাদি। গায়াতে  প্রতি ওয়েবঅ্যাপ নিচের প্রধান গঠনের মাধ্যমে পরিচালনা হয়েছেঃ</p>
+<div class="code-block">
+ <div class="highlight">
+  <pre><code class="brush: bash">apps</code><code class="o">/</code><code class="p">[</code><code class="n">app</code> <code class="n">name</code><code class="p">]</code><code class="o">/</code>
+ <code class="o">-</code> <code class="n">js</code>
+ <code class="o">-</code> <code class="n">styles</code>
+ <code class="o">-</code> <code class="n">locales</code>
+ <code class="o">-</code> <code class="n">test</code>
+ <code class="o">-</code> <code class="n">index</code><code class="p">.</code><code class="n">html</code>
+ <code class="o">-</code> <code class="n">manifest</code><code class="p">.</code><code class="n">webapp</code>
+</pre>
+ </div>
+</div>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7497/app_load_process.png" style="width: 2262px; height: 1979px; margin: 0px auto; display: block;"></p>
+<p>যখন হোম স্ক্রীনে থেকে গায়ার একটি অ্যাপ শুরু হয়েছে,গেটকো   <code>manifest://[app name].gaiamobile.org:8080 এর একটি ইউ আর এল খোলার চেষ্টা করবে</code>,  <code>manifest.webapp</code> ঐ স্থানে পারস্পারিক সম্পর্কের  সৃষ্টি করে,তারপরে  <code>launch_path</code> — যা <code>index.html</code>  এ সূচিপত্র এর সুস্পষ্টতা ব্যাখাকরে পরিচালনা করে সকল ওয়েব অ্যাপ গঠনের জন্য।  <code>index.html ফাইলে সকল প্রয়োজনীয় স্টাইল এবং</code>JavaScript<code>  রাখা হবে।</code></p>
+<div class="note">
+ <p><strong>নোটঃ </strong>একটি  অনাষ্ঠুনিক  আলাপচারিতা হিসেবে,গায়া অ্যাপের জন্য সাধারণত   <code>[app name].js</code> or <code>main.js</code>. হল প্রধান JavaScript এর ঢূকার  পথ</p>
+</div>
+<h3 id="অ্যাপ_শুরুর_ধারা">অ্যাপ  শুরুর ধারা</h3>
+<p>  ইভেন্টটি গেটকোর দ্বারা পাঠানো হয়।একবার গে্টকো প্রস্তুত হলে,  অ্যাপ <code>windowFactory</code>  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/app_window_factory.js">system/js/app_window_factory.js</a>  থেকে  গ্রহন করবে একটি <code>webapps-launch</code>  একটি অ্যাপের জন্য একটি ইভেন্ট,অথবা একটি   <code>open-app </code>ইভেন্ট  একটি ঝুলন্ত খবর সিস্টেম পরিচালনা করার জন্য।</p>
+<pre class="brush: js">window.addEventListener('applicationready', function appReady(e) {
+  window.removeEventListener('applicationready', appReady);
+  window.addEventListener('webapps-launch', self);
+  window.addEventListener('webapps-close', self);
+  window.addEventListener('open-app', self);
+});</pre>
+<p><span style="background-color: #ffff00;">ইভেন্ট শাখায় পরিচালনায় বিস্তারিত, </span><code><span style="background-color: #ffff00;">this.launch(config)</span></code><span style="background-color: #ffff00;"> একটি অ্যাপ উইন্ডো   অথবা একটি কাজকর্ম শুরু করবে।একবার অ্যাপটি বন্ধ হলে, </span><code><span style="background-color: #ffff00;">Appwindow</span></code><span style="background-color: #ffff00;">  গ্রহন করবে একটি  </span><code><span style="background-color: #ffff00;">webapps-close</span></code><span style="background-color: #ffff00;"> ইভেন্ট।</span></p>
+<p>প্রধান প্রক্রিয়া  <code>launch()</code> নিয়মেঃ</p>
+<pre class="brush: js">var app = AppWindowManager.getApp(config.origin);
+if (app) {
+  app.reviveBrowser();
+} else if (config.origin !== homescreenLauncher.origin) {
+  new AppWindow(config);
+} else if (config.origin == homescreenLauncher.origin) {
+  homescreenLauncher.getHomescreen().ensure();
+}</pre>
+<p> প্রথম কোডটি দেখে যদি অ্যাপ এর মান বিদ্যমান থাকে এবং চেষ্টা করে পুনরায় পরিচালনা করে এটি গেটকোতে নিতে। অন্য দিকে যদি এটি একটি সাধারণ অ্যাপ হয়,আমরা তৎক্ষনাৎ অ্যাপের জন্য  <code>AppWindow</code> তৈরি করি। অন্য বিশেষ ক্ষেত্র হল is the <code>homescreenLauncher</code> —এই ক্ষে্ত্রে আমরা প্রয়োজনীয় অপারেশন  করি।</p>
+<h3 id="অ্যাপ_উইন্ডো">অ্যাপ উইন্ডো</h3>
+<p>অ্যাপের মত ওয়েব পৃষ্ঠা তৈরি করতে ফায়ারফক্স ও এস একটি বিশেষ <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Browser">mozBrowser API</a>  ব্যবহার করে।উইন্ডো ম্যানেজমেন্টের ভিত্তি হল মাত্র একটি  <code>mozBrowser</code> অ্যাপি র‌্যাপার ইনার আই ফ্রেম (উইনডো) পরিচালনা করতে। একটি  বিশেষ ধরণের আইফ্রেম <code>moz-browser</code>  তৈরি করা হয়েছে একটি আসল ব্রাউজার উইন্ডোর মত আইফ্রেম তৈরি করতে।</p>
+<p><code>AppWindow</code> তৈরি করে,বহন করে ,এবং পরিচালনা করে একটি <code>mozBrowser</code> আইফ্রেম। <code>AppWindow পরিচালনা করবে সকল</code> <code>mozBrowser</code> ইভেন্ট <code>mozBrowser</code> আইফ্রেম নিজ থেকে বাতিল হওয়া  এবং দেখায় নিযুক্ত ইউ এল ফিচার।</p>
+<h2 id="অ্যাপ_জীবন_চক্রের_ম্যানেজমেন্ট">অ্যাপ জীবন চক্রের ম্যানেজমেন্ট</h2>
+<p>অ্যাপের সম্পুর্ন জীবন চক্র  নিচেঃ</p>
+<p>         অ্যাপ  শুরু</p>
+<ul>
+ <li>সিস্টেম ডি ও এম ট্রী তে আই ফ্রেম পরিশেষে যোগ করা</li>
+ <li>শুরু করা অ্যাপ এর সজীবতার উদ্বোধন</li>
+ <li>অ্যাপ  খোলা</li>
+ <li>অ্যাপের  সজ়ীবতা বন্ধ করা</li>
+ <li>অ্যাপ বন্ধ</li>
+ <li>ডি ও এম ট্রী থেকে আইফ্রেম সরানো</li>
+ <li>অ্যাপ স্থাপন</li>
+</ul>
+<h3 id="অ্যাপের_উদ্বোধন">অ্যাপের উদ্বোধন</h3>
+<p> যখন  একজন  ব্যবহারকারী আইকন খুলে হোমস্ক্রীনের উপর,হোমস্ক্রীন  <a href="/en-US/docs/Web/API/Navigator.mozApps">mozApps API</a> ব্যবহার করে গেকো ইঞ্জিনকে প্রতিনিধিত্বকারী অ্যাপ খুলতে বিজ্ঞপ্তি দিতে।যখন গেকো প্রস্তুত ,এটি সিস্টেমঅ্যাপে উপযুক্ত ইভেন্ট পাঠায়।</p>
+<h3 id="অ্যাপ_ধ্বংস"> অ্যাপ ধ্বংস</h3>
+<p>  অ্যাপ নিচের বিষ্যের কারণে ধ্বংস হতে পারেঃ</p>
+<ul>
+ <li> একটি অ্যাপ বিধস্ত হয়</li>
+ <li> <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Debugging_OOMs#Process_priorities">OOM killer</a>  ধ্বংস করে এটি</li>
+ <li> টাস্ক ম্যানেজারের মাধ্যমে অ্যাপটি বন্ধ হয়</li>
+ <li><code>window.close()</code> বাতিল হয়েছে</li>
+</ul>
+<p>কার্যকারী অ্যাপের জন্য ,সজীবতার কার্যক্রম বন্ধ হওয়ার পরে,ডি ও এম থেকে ধ্বংস্কারী অ্যাপের আইফ্রেম  সরিয়ে ফেলা হয়ে থাকে। অকার্যকারী অ্যাপের জন্য,তাদের ধ্বংস করার পরে তৎক্ষনাৎ আইফ্রেম সরিয়ে ফেলা হয়।</p>
+<p> অ্যাপ গুলো বিঘ্নিত হবে নিচের বিষ্যের কারণেঃ</p>
+<ul>
+ <li>ওয়েব কার্যক্রমের জন্যঃযখন কার্যকারী কলার খুলা হয়ে থাকে</li>
+ <li>পপুসঃযখন উইন্ডো ওপেন কলার খোলা হয়ে থাকে</li>
+ <li>অ্যাপঃকিছুই করেনা</li>
+</ul>
+<h3 id="পুনরায়_অ্যাপ_শুরু_করা">পুনরায় অ্যাপ শুরু করা</h3>
+<p>অ্যাপগুলো পুনরায় নিচেরভাবে শুরু করতে হবেঃ</p>
+<ul>
+ <li> হোমস্ক্রীন অ্যাপঃযখন হোম বোতাম চাপ দেয়া হয়ে থাকে</li>
+ <li> জোম্বী অ্যাপ পুনরায় ব্যবহারের উপযোগী করা হয়ে থাকে একই ইউ আর এল  দিয়ে যদি টাস্ক ম্যানেজার থেকে এটি খুলে অথবা কিনারের অংগভঙ্গি থেকে সরিয়ে ফেলা  হয়।(অভিজ্ঞতাসম্পুর্ন ফিচার)</li>
+</ul>
+<h2 id="অ্যাপ_কিভাবে_প্রতিদান_দিয়ে_থাকে">অ্যাপ কিভাবে  প্রতিদান দিয়ে থাকে</h2>
+<p>যখন আমরা একটি অ্যাপ শুরু করি, স্ক্রীনটি নিচের ব্লকের মাধ্যমে প্রতিদান দিয়ে থাকবে</p>
+<ul>
+ <li> সিস্টেম হেডার</li>
+ <li>অ্যাপ আইফ্রেম</li>
+ <li>নিচের র‌্যাপার বার(যদি ক্রোমিতাম  ব্রাউজার মোডে)</li>
+</ul>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7711/app-window-layout.png" style="width: 393px; height: 348px; display: block; margin: 0px auto;"></p>
+<h3 id="অ্যাপের_নকশা">অ্যাপের নকশা</h3>
+<p> অ্যাপ ফ্রেমের প্রধান বহনকারী হল নিচেঃ</p>
+<pre class="brush: html">&lt;iframe id="browser2" mozallowfullscreen="true" mozbrowser="true" remote="true"...
+... src="", data-url="" data-frame-type="window" data-frame-origin="..."&gt;
+&lt;/iframe&gt;</pre>
+<p> আইফ্রেম ধারণ করেঃ</p>
+<ul>
+ <li>শুরুর পথ (<code>data-url</code>, <code>data-frame-origin</code>)</li>
+ <li>মোব ব্রাউজার আইফ্রেম আরোপকরা (<code>mozallowfullscreen="true"</code>, <code>mozbrowser="true"</code>)</li>
+ <li>ধারণকারী,উপরে শোয়া, অ্যাপের বিশেষ ইউ এল</li>
+</ul>
+<h3 id="অ্যাপ_উইন্ডো_রিসাইজিং">অ্যাপ উইন্ডো রিসাইজিং</h3>
+<p>অ্যাপ উইন্ডো কিছু ঘটনার কারণে রিসাইজিং হয়ে থাকবেঃ</p>
+<ul>
+ <li> সিস্টেম অ্যাপ উদ্বোধনের পরিবর্তনের আগ  পর্যন্ত পুনরায় গঠন হবে না।</li>
+ <li>সাধারণ অ্যাপের জন্য,পুনরায়  গঠন ঘটে যখনঃ
+  <ul>
+   <li> সিস্টেম অ্যাপ পুনরায় গঠন করে</li>
+   <li>কীবোর্ড প্রানবন্ততা খোলা/বন্ধ শেষ করে</li>
+   <li> স্টাটাস বার পরিবর্তন করে</li>
+   <li><code>window.resizedBy()</code> or <code>window. পুনরায় গঠন করা resizeTo()</code>তে বলা হয়েথাকে is called</li>
+   <li>সফট ওয়ার হোম বোতাম টগল করা হয়ে থাকে</li>
+  </ul>
+ </li>
+</ul>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7713/app-area.png" style="width: 715px; height: 305px; margin: 0px auto; display: block;"></p>
+<p>সারাংশে,উইন্ডো সাইজ আক্রান্ত হয়ে থাকেঃ</p>
+<ul>
+ <li> উদ্বোধন ধাপ</li>
+ <li>কীবোর্ড ধাপ</li>
+ <li> আকর্ষন স্ক্রীন ধাপ(কল,খবর,ইত্যাদি)</li>
+ <li>ক্রমিয়ামের তরলতার ধাপে</li>
+ <li>সম্পুর্ণ স্ক্রীন ধাপ <code>manifest.fullscreen</code> / <code>parentWindow</code></li>
+ <li>সফট ওয়ার হোম বোতাম ধাপ দ্বারা</li>
+</ul>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7715/app-area2.png" style="width: 687px; height: 330px; margin: 0px auto; display: block;"></p>
+<h3 id="অ্যাপ_উইন্ডো_ওরিয়েন্টেশন"> অ্যাপ উইন্ডো ওরিয়েন্টেশন</h3>
+<p> অ্যাপের   ওরিয়েন্টেশন  প্রতিটি আলাদা অ্যাপের থেকে নিয়ন্ত্রন করে যেতে পারে,অথবা সিস্টেমের দ্বারা বৈশ্বিকভাবে।তুমি অ্যাপে ওরিয়েন্টেশন সেট করতে পারো  <code>manifest.webapp</code>  নথিতে    <code>orientation</code> দ্বারা সঠিকভাবে,উদাহরণ হিসেবেঃ</p>
+<pre class="brush: json">"orientation": "default",</pre>
+<p>তুমি আরো সক্ষম ওরিয়েন্টেশন অ্যাপি  লক অথবা আন লক করতে ওরিয়েন্টেশনঃ</p>
+<pre class="brush: js">screen.mozLockOrientation([‘portrait-primary’]);
+
+screen.mozUnlockOrientation();</pre>
+<p>কিছু প্যারামিটারের মান আছে যা ব্যবহার করা যেতে পারে ওরিয়েন্টেশন কে বাধা দিতেঃ</p>
+<ul>
+ <li><code>default</code>: সিস্টেম বাধাগ্রস্ত ওরিয়েন্টেশন</li>
+ <li><code>portrait</code>: স্ক্রীনের ছবিতে প্রতিদান দিতে বাধা প্রদান করা</li>
+ <li><code>landscape</code>: সমতলে স্ক্রীনে প্রতিদান দিতে বাধা দেয়া</li>
+</ul>
+<p>  আরো বিস্তারিত পাওয়া যায়  <a href="/en-US/docs/Web/API/Screen.lockOrientation">Screen.lockOrientation</a>  তে উল্লেখ, এবং তুমি  <a href="https://github.com/mozilla-b2g/gaia/blob/master/test_apps/uitest/js/API/orientation.js">gaia/test_apps/uitest/js/API/orientation.js</a> তে একটি উদাহরণ দেখতে পারো।</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7717/app-orientation.png" style="width: 745px; height: 530px; margin: 0px auto; display: block;"></p>
+<h3 id="অ্যাপ_দর্শন"> অ্যাপ দর্শন</h3>
+<p>কেবল যখন স্ক্রীন বন্ধ হয়ে যায় সিস্টেম অ্যাপটি পিছনের দিকে যায় যখন সাধারন কিছু বিষয়ের উপর নির্ভর করে অ্যাপগুলো পিছনেরদিকে যায়ঃ</p>
+<ul>
+ <li>শ্রবণ প্রতিযোগিতা</li>
+ <li> নীতি প্রক্রিয়া</li>
+ <li>প্রতিদান দেয়া</li>
+</ul>
+<div class="note">
+ <p><strong>নোটঃপৃষ্ঠা  দর্শন আচ্ছাদিত থাকে  যখন  পূর্ববর্তী আইফ্রেম  অকার্যকরী  থাকে।</strong></p>
+</div>
+<p> অ্যাপগুলো সবসময় সুস্পষ্টভাবে থাকে যখনঃ</p>
+<ul>
+ <li> অ্যানিমেশন শুরু খোলে</li>
+ <li> অ্যানিমেশন শেষ হওয়া সরিয়ে ফেলে</li>
+ <li> লক স্ক্রীন কে আনলক করা হয়ে থাকে</li>
+</ul>
+<p> অ্যাপ সবসময় পিছনেরদিকে  থাকেঃ</p>
+<ul>
+ <li> যখন  বন্ধ  হওয়া  অ্যানিমেশন শেষ করে</li>
+ <li> ৩ সেকেন্ড পরে কলস্ক্রীন দৃশ্যমান হয়</li>
+ <li> যখন স্ক্রীনটি বন্ধ</li>
+</ul>
+<p> উপরের নিয়মের কিছু ব্যতিক্রম আছেঃ</p>
+<ul>
+ <li> সাধারণ চ্যানেলে অডিও বাজানোর সাথে কার্যকরী অ্যাপ</li>
+ <li>ওয়েব কার্যক্রমে অ্যাপ কলিং</li>
+ <li>অ্যাপগুলো  খোলা  <code>window.open('', '', 'dialog')</code></li>
+</ul>
+<h3 id="অ্যাপ_উইন্ডো_অ্যানিমেশন_এবং_পরিবর্তনমূলক"> অ্যাপ উইন্ডো অ্যানিমেশন এবং পরিবর্তনমূলক</h3>
+<p>গায়া উইন্ডো ম্যানেজার আরো অ্যাপ উইন্ডো অ্যানিমেশন প্রদান করে এবং একটি স্লিকের ব্যবহারকারী অভিজ্ঞতা তৈরি করার জন্য পরিবর্তন করে।</p>
+<p> অ্যাপ উইন্ডো অ্যানিমেশন এবং পরিবর্তন কিছু ধাপের মাধ্যমে পরিচালনা করা হয়ে থাকেঃ</p>
+<ul>
+ <li><code>displayedApp</code> — বর্তমান অ্যাপ</li>
+ <li><code>runningApps</code> / <code>numRunningApps</code> — চলমান অ্যাপের সেট</li>
+ <li><code>openFrame</code> / <code>closeFrame</code> —খোলা/বন্ধ অ্যানিমেশনের জন্য পরিবর্তনমূলক  ফ্রেম</li>
+</ul>
+<p>যখন  <code>setDisplayedApp()</code> প্রক্রিয়া কল করা হয়, নিচের চিত্রের  দ্বারা  চিত্রের দ্বারা ব্যাখার মাধ্যমে অ্যাপটি শুরু করা হবে।</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7719/app-animations-state-manchine.png" style="width: 704px; height: 358px; display: block; margin: 0px auto;"></p>
+<p> ফায়ারফক্স ও এস অ্যানিমেশন ধারা পরিচালনা করতে কিছু বুদ্ধি নিমগ্ন আছেঃ</p>
+<ul>
+ <li> একটি অ্যাপ খোলার আগে,আমাদের  পিছনের ধাপে থেকে এর পুনরূদ্ধার নিশ্চিত করা প্রয়োজন।আমরা সাধারণত   ১ x ১ স্ক্রীনশট নিই  বল প্রয়োগ করে পুনরায়  আঁকতে।</li>
+ <li> অ্যাপটি খোলার জন্য প্রস্তুত হওয়ার পরে, আমরা পরবর্তী অ্যাপের উদ্বোধন অ্যানিমেশনের নৈপূন্যতা প্রদর্শন করি এবং একই সময়ে বর্তমান অ্যাপের বন্ধ অ্যানিমেশন ।</li>
+ <li> আমরা কোড চালাই  অ্যাপ খোলা এবং বন্ধ  উভয় সময়ে স্ক্রীন উদ্বোধনের লক/আনলক করতে।</li>
+ <li> কেবল যদি একটি অ্যাপ একবার পুনর্গঠন হয়ে গেলে উদ্বোধনে আমরা অ্যাপটির নৈপূণ্যতা দেখাই।অন্যদিকে,আমরা পুনরায় গঠন ধাপ বাদ দিয়ে যাই।</li>
+ <li> আমরা পৃষ্ঠা দর্শন পরিবর্তন করতে পারি আবারএকটি   ১ x ১ স্ক্রীনশট নেয়ার মাধ্যমে (উপরে দেখো)</li>
+</ul>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7721/app-switching-flow.png" style="width: 530px; height: 258px; display: block; margin: 0px auto;"></p>
+<h2 id="সুনির্দিষ্ট_UI_অ্যাপ_উইন্ডো"> সুনির্দিষ্ট UI অ্যাপ উইন্ডো</h2>
+<p> কিছু ইউএল উপাদান আছে যেগুলো কেবল সুনির্দিষ্ট অ্যাপের সাথে সংযুক্ত,যেমন ক্রোমিয়াম ব্রাউজার, মোডাল ডায়ালগ,সূচিপত্রের মেন্যু,পপুস এবং বাতিল পৃষ্ঠাগুলো।</p>
+<p>চলো এগুলোর কিছু আলোচনা করি।</p>
+<h3 id="মোডাল_ডায়ালগ"> মোডাল ডায়ালগ</h3>
+<p> ফায়ারফক্স ডেক্সটপে, যদি তুমি ব্রাউজার ডেভলপার কনসোল খোলো এবং নির্দেশ প্রবেষ করো যেমন <code>alert()</code>, <code>confirm()</code>,এবং  <code>prompt()</code>,তুমি একটি কেন্দ্রীয় ডায়ালগ স্ক্রীনের উপর পাবে যা সূচিকে বন্ধ করে।ফায়ারফক্স ওএস এর সমতুল্যতা হল মোডাল ডায়ালগ।<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7723/modal-dialogs.png" style="width: 715px; height: 357px; margin: 0px auto; display: block;"></p>
+<h3 id="প্রসংগ_মেন্যু_ডায়ালগ"> প্রসংগ মেন্যু ডায়ালগ</h3>
+<p> প্রসংগ মেন্যু(অথবা লম্বা চাপের মেন্যু) মোবাইল ডেভেলপারদের কাছে পরিচিত ধারণা।সাধারণ অ্যাপের নকশায়,প্রায়শই ব্যবহিত ক্রিয়া ব্যবহার কারীদের কাছে দেখানো উচিত যাতে তারা সহজে অ্যাপ নিয়ন্ত্রন করতে পারে।প্রসংগ মেন্যু ক্রিয়া বহনের একটি স্থান দেয় যা তৎক্ষনাৎ ইউ আই স্থাপন করতে পারে না কিন্তু এখন ও সহজে পাওয়া যায়। <br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7725/context-menu-dialogs.png" style="width: 722px; height: 360px; display: block; margin: 0px auto;"></p>
+<p> </p>
+<h2 id="খাঁটি(https)ডায়ালগ">খাঁটি(https)ডায়ালগ</h2>
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/app_authentication_dialog.js">system/js/app_authentication_dialog.js</a>  তে ব্যাখা করা।</p>
+<h3 id="মান_বাছাইসময়তারিখ_ডায়ালগ"> মান বাছাই,সময়,তারিখ ডায়ালগ</h3>
+<p> <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/system/js/value_selector">system/js/value_selector/</a> তে ব্যাখা করা।</p>
+<h3 id="অনুমতি_ডায়ালগ"> অনুমতি ডায়ালগ</h3>
+<p> <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/permission_manager.js">system/js/permission_manager.js</a>  তে এবং <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/media_recording.js">system/js/media_recording.js</a> তে ব্যাখা ( ব্যবহার ট্রে প্যানেলের জন্য) </p>
+<h2 id="বিশেষ_অ্যাপস"> বিশেষ অ্যাপস</h2>
+<p> কিছু অ্যাপের দরকার একটি বিশেষ  <code>appWindow জিনিস যা তারা বহন করে এমন  কিছু ফাঙ্কশন</code>  সংযোগ স্থাপনের জন্য।উদাহরন দেয়াঃ</p>
+<ul>
+ <li>  হোমস্ক্রীন</li>
+ <li> এফ টি ইউ</li>
+ <li> কীবোর্ড</li>
+ <li> খরচ নিয়ন্ত্রণ</li>
+ <li> নিরাপদ ক্যামেরা</li>
+ <li> লক্স্ক্রীন</li>
+</ul>
+<h3 id="sect1"> </h3>
+<h2 id="Child_উইন্ডো_ম্যানেজমেন্ট">Child উইন্ডো ম্যানেজমেন্ট</h2>
+<p> Child অ্যাপ উইন্ডো প্রত্যক্ষ অথবা পরোক্ষ ভাবে খোলা হয়ে থাকে অন্যান্য অ্যাপ/পৃষ্ঠা দ্বারা।উদাহরণ গূলো হলঃ</p>
+<ul>
+ <li>আকর্ষন উইন্ডো</li>
+ <li> পপুপ উইন্ডো</li>
+ <li>কার্যকরী উইন্ডো</li>
+ <li> বিশ্বাসী ইউ আই/বিশ্বাসী উইন্ডো</li>
+</ul>
+<p> যখন একটি ক্ষুদ্র উইন্ডো সাধারনভাবে শেষ হয়,এর প্রধান উইন্ডো পুনরায় খোলা উচিত।কিছু ক্ষুদ্র উইন্ডো এর অংশ অন্য ক্ষুদ্র উইন্ডো তে থাকতে পারে। প্রসেস প্রায়ওরিটি ম্যানেজমেন্ট হল একটি প্রধান বিষয় প্রধান এবং ক্ষুদ্রের মধ্যে।</p>
+<h2 id="আকর্ষণ_উইন্ডো"> আকর্ষণ উইন্ডো</h2>
+<p> আকর্ষন উইন্ডো তোমার আকর্ষন পেতে ব্যবহার হয়ে থাকেঃ</p>
+<ul>
+ <li>  কলস্ক্রীন-ডায়ালার</li>
+ <li> আলার্ম স্ক্রীন-ঘড়ি</li>
+ <li> অনুমতি নিশ্চিত</li>
+</ul>
+<p> বর্তমানে ঐ সব আকর্ষন উইন্ডো ভুলে ব্যবহার করা হইয়ে থাকে জোর দেয়া(  প্রাথমিক  পরটড়াঈট )ওরিয়েন্টেশনশ্বাসী বিস</p>
+<h2 id="বিশ্বাসী_UI">বিশ্বাসী UI</h2>
+<h2 id="sect2"> </h2>
+<p> পারসোনা এবং mozPay অ্যাপি ব্যবহার করে বিশ্বাসী UI।তারা ব্যবহার করে বিশেষ আকারঃ৮০%।হোমস্ক্রীন বিশেষ ভাবে দেখায় যখন বিশ্বাসী ইউ আই চলমান থাকে।<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7727/trusted-ui.png" style="width: 737px; height: 516px; display: block; margin: 0px auto;"></p>
+<h2 id="ইতিহাস_ম্যানেজমেন্ট"> ইতিহাস ম্যানেজমেন্ট</h2>
+<p>  এই অংশে  আমরা কিছু উপাদানের দিকে তাকাবো যা ফায়ারফক্স ও এস এর ইতিহাস ম্যানেজমেন্ট পরিচালনা করে।</p>
+<h3 id="টাস্ক_ম্যানেজার"> টাস্ক ম্যানেজার</h3>
+<p> টাস্ক ম্যানেজার (কার্ড ভিউ )  লম্বা চাপের হোম বাটনের দ্বারা আগ্নেয়াস্ত্র হিসেবে ব্যবহার হতে পারে।এটি অ্যাপের ইতিহাস ডিভাইসে দেখাতে পারে,এবংএকটি  অ্যাপের কাযকর্ম ধৰংস করতে সক্ষম।</p>
+<p> ফায়ারফক্স ও এস ভার্সন  ২.০,  এখানে একটি অভিজ্ঞতা সম্পন্ন ফিচার আছে জাম্বল অ্যাপ বর্তমান রাখতে এবং দেখায় যে তারা এখন ও বিদ্যমান।</p>
+<h3 id="ওয়েব_কার্যক্রম_অন্যত্র">  ওয়েব কার্যক্রম অন্যত্র</h3>
+<p>  ইনলাইন এক্টিভীটিস একটি নতুন  উল্লেখ পৃষ্ঠার  আর সূচনা করেছে কার্যক্রমে ডাটা প্রদান করতে।<br>
+ <br>
+  ঊইন্ডো এক্টীভীটী বিদ্যমান অ্যাপ পুনরায় ব্যবহার করবে ডাটা এক্টীভীটি গ্রহন করতে।</p>
+<h3 id="শেষের_ভঙ্গিমা_(অভিজ্ঞতা_সম্পন্ন)"> শেষের ভঙ্গিমা (অভিজ্ঞতা সম্পন্ন)</h3>
+<p> অভিজ্ঞতাসম্পন্ন ইদজ গেসচার ফিচার ফায়ারফক্স ওএস ২.০ + এর ডেভেলপার মুডে সহজপ্রাপ্ত,এবং ফিঙ্গার সুইপ ডান/বামে ব্যবহার করতে তোমাকে অনুমোদন দেয় অ্যাপ এবং ওয়েব পৃষ্ঠার মধ্যে নেভিগেট করতে ডিভাইসের শেষ থেকে ।</p>
+<h4 id="কিভাবে_পরের_অ্যাপ_দেখতে_পছন্দ_করা_যায়">কিভাবে পরের অ্যাপ দেখতে পছন্দ করা যায়?</h4>
+<ul>
+ <li>একটীভীটী অ্যাপের ক্ষুদ্র উইন্ডো</li>
+ <li> শুরুর সময় নতুন</li>
+ <li> পরবর্তী অ্যাপ স্টাক এর প্রধান উইন্ডো খুজে বের কর</li>
+</ul>
+<h4 id="কিভাবে_আগের_অ্যাপ_পছন্দ_করতে_হয়"> কিভাবে আগের অ্যাপ পছন্দ করতে হয়?</h4>
+<ul>
+ <li> কার্যকরী অ্যাপের প্রধান উইন্ডো</li>
+ <li>শুরুর সময় পুরানো</li>
+ <li>আগের অ্যাপ স্টাকের আসল উইন্ডো খুজে বের করা</li>
+</ul>
+<h3 id="স্ক্রীনশট_ম্যানেজমেন্ট">স্ক্রীনশট ম্যানেজমেন্ট</h3>
+<h4 id="টাস্ক_ম্যানেজারের(কার্ড_দেখা)_মাধ্যমে_স্ক্রীন_শট_ব্যবহার_করা_হয়ে_থাকে_ইতিহাসে_অ্যাপ_কি_দেখায়_তা_দেখতে।একটি_অ্যাপের_স্ক্রীনশট_নেয়া_হয়ে_থাকে_যখন_অ্যাপটির_সজীবতা_বন্ধ_শেষ_হয়েছে।">টাস্ক ম্যানেজারের(কার্ড দেখা)  মাধ্যমে স্ক্রীন শট ব্যবহার করা হয়ে থাকে ইতিহাসে  অ্যাপ কি দেখায় তা দেখতে।একটি অ্যাপের স্ক্রীনশট নেয়া হয়ে থাকে যখন অ্যাপটির সজীবতা বন্ধ শেষ হয়েছে।</h4>
+<h2 id="আরো_দেখুন">আরো দেখুন</h2>
+<p><a href="http://alivedise.github.io/blog/2013/02/23/from-browser-to-browser/">From Browser to Browser</a></p>

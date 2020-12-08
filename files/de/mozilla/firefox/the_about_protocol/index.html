@@ -1,0 +1,190 @@
+---
+title: Firefox und das "about"-Protokoll
+slug: Mozilla/Firefox/The_about_protocol
+tags:
+  - Einstellungen
+  - Firefox
+  - Guide
+  - Protokolle
+  - Referenz
+  - 'about:'
+translation_of: Mozilla/Firefox/The_about_protocol
+---
+<div>{{FirefoxSidebar}}</div>
+
+<div class="syntaxbox">Es gibt eine Menge wichtiger Informationen über Firefox, die sich hinter dem <code>about:</code> URL-Protokoll verbergen. Am wichtigsten ist die URL <code>about:config</code>, die Einstellungen anzeigt, die sich dort betrachten und ändern lassen. Hier ist eine komplette Liste mit allen URLs  des <code>about:</code>-Pseudo-Protokolls::</div>
+
+<div class="syntaxbox"> </div>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><code>about:</code> Seite</th>
+   <th scope="col">Beschriebung</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>about:</code></td>
+   <td>Zeigt die Versionsnummer, Buildinformationen, Links zu den Beitragenden, Lizenzinformationen und Einstellungen zur Build-Konfiguration an.</td>
+  </tr>
+  <tr>
+   <td><code>about:about</code></td>
+   <td>Zeigt einen Überblick über alle about:-Seiten an.</td>
+  </tr>
+  <tr>
+   <td><code>about:accounts</code></td>
+   <td>Zeigt Informationen zur <a href="https://www.mozilla.org/en-US/firefox/sync/">Sync-Funktion </a>an.</td>
+  </tr>
+  <tr>
+   <td><code>about:addons</code></td>
+   <td>Öffnet den Add-ons-Manager</td>
+  </tr>
+  <tr>
+   <td><code>about:app-manager</code></td>
+   <td>Öffnet den App-Manager</td>
+  </tr>
+  <tr>
+   <td><code>about:buildconfig</code></td>
+   <td>Zeigt die für die Version von Firefox verwendete Konfiguration und Plattform an.</td>
+  </tr>
+  <tr>
+   <td><code>about:cache</code></td>
+   <td>Zeigt Informationen zum Speicher, Speichermedium und Arbeitsspeicher an.</td>
+  </tr>
+  <tr>
+   <td><code>about:compartments</code></td>
+   <td>
+    <div class="note">
+    <p>Seit Firefox 26 können diese Informationen unter "Other Measurements" in about:memory gefunden werden.</p>
+    </div>
+
+    <p>Zeigt Informationen zu einzelnen "<a href="/en-US/docs/SpiderMonkey/SpiderMonkey_compartments">Compartments"</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>about:config</code></td>
+   <td>Bietet eine Möglichkeit, Einstellungen in Firefox zu untersuchen und zu ändern.</td>
+  </tr>
+  <tr>
+   <td><code>about:crashes</code></td>
+   <td>Listet alle Abstürze, die während der gesamten Lebenszeit von Firefox passierten, auf.</td>
+  </tr>
+  <tr>
+   <td><code>about:credits</code></td>
+   <td>Listet alle Ünterstützer und Mitwirkenden des Firefox-Projektes auf.</td>
+  </tr>
+  <tr>
+   <td><code>about:customizing</code></td>
+   <td>Wechselt zur Anpassungsseite, die Anpassungen der Benutzeroberfläche von Firefox erlaubt.</td>
+  </tr>
+  <tr>
+   <td><code>about:downloads</code></td>
+   <td>Listet alle Downloads von Firefox aus auf.</td>
+  </tr>
+  <tr>
+   <td><code>about:healthreport</code></td>
+   <td>Zeigt Leistungsinformationen von Firefox an (nur wenn der Nutzer dies aktiviert hat).</td>
+  </tr>
+  <tr>
+   <td><code>about:home</code></td>
+   <td>Öffnet die Startseite, die beim Öffnen eines neuen Fensters erscheint.</td>
+  </tr>
+  <tr>
+   <td><code>about:license</code></td>
+   <td>Zeigt Lizenzinformationen an.</td>
+  </tr>
+  <tr>
+   <td><code>about:logo</code></td>
+   <td>Zeigt das Firefox-Logo an.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Performance/about%3Amemory">about:memory</a></td>
+   <td>Bietet eine Möglichkeit, die Speicherverwendung anzuzeigen, als Bericht zu speichern oder GC und CC auszuführen.</td>
+  </tr>
+  <tr>
+   <td><code>about:mozilla</code></td>
+   <td>Diese Sonderseite zeigt eine Nachricht aus dem "The Book of Mozilla".</td>
+  </tr>
+  <tr>
+   <td><code>about:networking</code></td>
+   <td>Zeigt Netzwerk-Informationen an.</td>
+  </tr>
+  <tr>
+   <td><code>about:newtab</code></td>
+   <td>Öffnet die Startseite für einen neuen Tab.</td>
+  </tr>
+  <tr>
+   <td><code>about:permissions</code></td>
+   <td>
+    <div class="warning">
+    <p>Wurde mit Firefox 45 entfernt. ({{bug(933917)}})</p>
+    </div>
+
+    <p>Bietet eine Möglichkeit, Berechtigungen anzuzeigen und verwalten zu lassen.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>about:plugins</code></td>
+   <td>Zeigt Informationen zu installierten Plugins an.</td>
+  </tr>
+  <tr>
+   <td><code>about:preferences</code></td>
+   <td>Öffnet die Einstellungen zu Firefox (auch erreichbar über das Firefox-Menü &gt; <em>Optionen</em>)</td>
+  </tr>
+  <tr>
+   <td><code>about:privatebrowsing</code></td>
+   <td>Öffnet die Startseite, die beim Öffnen eines privaten Tabs angezeigt wird.</td>
+  </tr>
+  <tr>
+   <td><code>about:profiles</code></td>
+   <td>Zeigt und verwaltet Firefox-Profile.</td>
+  </tr>
+  <tr>
+   <td><code>about:rights</code></td>
+   <td>Zeigt rechtliche Informationen an.</td>
+  </tr>
+  <tr>
+   <td><code>about:robots</code></td>
+   <td>Diese Sonderseite zeigt Informationen zu Robots an.</td>
+  </tr>
+  <tr>
+   <td><code>about:serviceworkers</code></td>
+   <td>Zeigt aktuell laufende Service Workers an.</td>
+  </tr>
+  <tr>
+   <td><code>about:sessionrestore</code></td>
+   <td>Öffnet die Sitzungswiederherstellungsseite (wird nach einem Absturz angezeigt).</td>
+  </tr>
+  <tr>
+   <td><code>about:support</code></td>
+   <td>Öffnet die Fehlerbehebungsseite (auch erreichbar über das Firefox-Menü &gt; <em>? (Fragezeichen)</em> &gt; <em>Informationen zur Fehlerbehebung</em>)</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-log</code></td>
+   <td>Zeigt ein Synchronisations-Protokoll bezogen auf die <a href="https://www.mozilla.org/en-US/firefox/sync/">Sync</a>-Funktion an.</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-progress</code></td>
+   <td>Zeigt die Seite, die nach der Einrichtung der <a href="https://www.mozilla.org/en-US/firefox/sync/">Sync</a>-Funktion aufgerufen wird.</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-tabs</code></td>
+   <td>Zeigt synchronisierbare Tabs an (für die <a href="https://www.mozilla.org/en-US/firefox/sync/">Sync</a>-Funktion).</td>
+  </tr>
+  <tr>
+   <td><code>about:telemetry</code></td>
+   <td>Zeigt die von Firefox gesammelten und an Mozilla gesendeten telemetrischen Daten an (nur wenn der Nutzer Telemetrie aktiviert hat).</td>
+  </tr>
+  <tr>
+   <td><code>about:webrtc</code></td>
+   <td>Zeigt Informationen zur Verwendung von WebRTC an.</td>
+  </tr>
+  <tr>
+   <td><code>about:welcomeback</code></td>
+   <td>Zeigt die Seite, die nach einer Zurücksetzung aufgerufen wird.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Diese URLs wurden in {{source("docshell/base/nsAboutRedirector.cpp")}} innerhalb des <code>kRedirMap</code>-Arrays definiert. Der Array zeigt die meisten der URLs, wie <code>config</code> in URLs im <code>chrome:</code>-Pseudo-Protokoll, wie <code>chrome://global/content/config.xul an</code>.  Der Ort der about:-Informationen wurde aus {{source("docshell/build/nsDocShellModule.cpp")}} kopiert..</p>

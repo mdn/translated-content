@@ -1,0 +1,49 @@
+---
+title: Implementació_de_suggeriments_en_els_connectors_de_cerca
+slug: Archive/Add-ons/Implementació_de_suggeriments_en_els_connectors_de_cerca
+tags:
+  - Complements
+  - Connectors_de_cerca
+translation_of: Archive/Add-ons/Supporting_search_suggestions_in_search_plugins
+---
+<h2 id="Implementaci.C3.B3_de_suggeriments_en_el_connector_de_cerca" name="Implementaci.C3.B3_de_suggeriments_en_el_connector_de_cerca">Implementació de suggeriments en el connector de cerca</h2>
+<p>Per a utilitzar suggeriments de cerca, un connector de cerca cal que defineixi un element addicional <code>&lt;Url&gt;</code> amb el seu atribut <code>type</code> definit com <code>"application/x-suggestions+json"</code>. (Això vol dir que el connector d'un motor que implementi els suggeriments tindrà dos elements <code>&lt;Url&gt;</code>, essent l'altre l'URL de cerca <code>text/html</code> principal.)
+</p><p>Per exemple, el connector de cerca de Yahoo té aquesta entrada <code>&lt;Url&gt;</code>:
+</p>
+<pre>&lt;Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}"/&gt;
+</pre>
+<p>Si l'usuari tecleja «fir» a la barra de cerca, i llavors s'atura, el Firefox inserirà «fir» en comptes de <code>{searchTerms}</code> i ho trametrà a aqueix URL:
+</p>
+<pre>&lt;Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command=fir"/&gt;
+</pre>
+<p>Els resultats s'utilitzaran per a construir el diàleg de la llista de suggeriments.
+</p><p>Vegeu <a href="ca/Creaci%c3%b3_de_connectors_MozSearch">Creació de connectors MozSearch</a> per a aprendre més sobre com implementar connectors de cerca.
+</p>
+<h2 id="Implementaci.C3.B3_de_suggeriments_de_cerca_en_el_servidor" name="Implementaci.C3.B3_de_suggeriments_de_cerca_en_el_servidor">Implementació de suggeriments de cerca en el servidor</h2>
+<p>Gran bona part de la feina de gestionar els suggeriments de cerca s'implementa en el servidor. Si sou dissenyador d'un lloc web i voleu incorporar-hi suggeriments de cerca, cal que hi implementeu la possibilitat que es retornin els suggeriments en <a class="external" href="http://www.json.org/">Notació d'objectes de JavaScript</a> (JSON) havent-hi donat un terme de cerca.
+</p><p>Quan el navegador vulgui recollir les possibles coincidències d'un terme de cerca, s'envia una sol·licitud HTTP GET a l'URL especificat per l'element <code>&lt;Url&gt;</code>.
+</p><p>El vostre servidor haurà llavors de decidir quins suggeriments oferirà amb els mitjans que més s'escaiguin, i construir un JSON que consisteixi com a mínim de dos, i fins a quatre, elements:
+</p>
+<dl><dt> <b>cadena de consulta</b>
+</dt><dd> El primer element en el JSON és la cadena de consulta original. Això permet al Firefox verificar que els suggeriments coincedeixen amb el terme de cerca actual.
+</dd></dl>
+<dl><dt> <b>llista de compleció</b>
+</dt><dd> Una matriu de termes de cerca suggerits. Ha de tancar-se la matriu en claudàtors. Per exemple: &lt;tt&gt;{{ mediawiki.external('\"terme 1\", \"terme 2\", \"terme 3\", \"terme 4\"') }}&lt;/tt&gt;
+</dd></dl>
+<dl><dt> <b>descripcions</b>
+</dt><dd> Aquest element opcional és una matriu de descripcions per a cada un dels suggeriments a la <i>llista de compleció</i>. Pot ser qualsevol informació que el motor de cerca pugui voler retornar quan es mostri en el navegador, com ara el nombre de resultats disponibles per a la cerca.
+</dd></dl>
+<div class="note">Les descripcions no funcionen al Firefox 2, i s'ignoraran si se n'especifica cap.</div>
+<dl><dt> <b>URL de consulta</b>
+</dt><dd> Aquest element opcional és una matriu d'URL alternatius per a cada suggeriment de la <i>llista de compleció</i>. Per exemple, si voleu oferir un enllaç a un mapa en comptes de simplement una pàgina de resultats de cerca per a un suggeriment, podeu retornar un URL al mapa en aquesta matriu.
+</dd></dl>
+<dl><dd> Si no especifiqueu un URL de consulta, la consulta per defecte que s'utilitza es basa en la cerca descrita per l'element <code>&lt;Url&gt;</code> en la descripció XML del connector de cerca.
+</dd></dl>
+<div class="note">Els URL de consulta no funcionen al Firefox 2, i llavors s'ignoraran.</div>
+<p>Per exemple, si el terme de cerca és «fir», i no us cal que es retorni descripcions d'URL alternatius, podeu retorneu el següent JSON:
+</p>
+<pre class="eval">["fir", ["firefox", "first choice", "mozilla firefox"]]
+</pre>
+<p>Tingueu en compte que en aquest exemple només s'especifica la cadena de consulta i la matriu de compleció, excloent-ne els elements opcionals.
+</p><p>La vostra llista de compleció pot incloure tants suggeriments com vulgueu, encara que és recomanable que sigui de fàcil gestió, atès que la mostra de suggeriments s'actualitzarà mentre l'usuari estigui escrivint la seua cadena de cerca. Endemés, el mètode que utilitzeu per a seleccionar els suggeriments és plenament al vostre guts.
+</p>{{ languages( { "en": "en/Supporting_search_suggestions_in_search_plugins", "it": "it/Supportare_i_suggerimenti_nei_plugin_di_ricerca" } ) }}

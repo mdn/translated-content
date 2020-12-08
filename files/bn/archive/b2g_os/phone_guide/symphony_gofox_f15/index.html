@@ -1,0 +1,61 @@
+---
+title: Symphony GoFox F15
+slug: Archive/B2G_OS/Phone_guide/Symphony_GoFox_F15
+translation_of: Archive/B2G_OS/Phone_guide/Symphony_GoFox_F15
+---
+<div class="summary">
+ <p><span class="seoSummary">Symphony GoFox F15 হচ্ছে একটি Firefox OS দ্বারা চালিত ফোন যা Symphony অফার করছে। এতে রয়েছে একক-কোর বিশিষ্ট ১ গিগাহার্টজ প্রসেসর (স্প্রেডট্রাম), ৫১২ মেগাবাইট র‍্যাম, একটি ৩.২ মেগাপিক্সেল পেছন ক্যামেরা এর সাথে রয়েছে একটি ০.৩ মেগাপিক্সেল সম্মুখ ক্যামেরা এবং ৩.৫ ইঞ্চি HVGA বিশিষ্ট পর্দা, এবং এতে Firefox OS 1.4 স্থাপিত হয়েছে। এই নিবন্ধে এটি সম্পর্কিত তথ্য রয়েছে, যাতে রয়েছে এটির হালনাগাদ করন এবং সমস্যা সমাধান সম্পর্কিত বিস্তারিত।</span></p>
+</div>
+<p>সিম্ফোনী এবং গ্রামীণফোন (টেলিনর) এর অংশীদারিত্বে বাংলাদেশে প্রকাশিত Symphony GoFox F15 ফোনটি ফায়ারফক্স ওএস ১.৪ চালিত গ্রাহক পর্যায়ে সর্বপ্রথম বাণিজ্যিক ডিভাইস, এই ডিভাইসটিতে ৩জি ভিডিও কলিং সক্ষমতা রয়েছে, যা এটিতে অন্য সব ফায়ারফক্স ডিভাইস থেকে আলাদা করেছে।</p>
+<h2 id="ফোনের_ফিচারগুলো">ফোনের ফিচারগুলো</h2>
+<p><a href="/en-US/Firefox_OS/Developer_phone_guide/Phone_specs">Phone and device specs</a> দেখুন।</p>
+<h2 id="সাধারন_সমস্যা_এবং_সচরাচর_জিজ্ঞাসিত_প্রশ্ন">সাধারন সমস্যা এবং সচরাচর জিজ্ঞাসিত প্রশ্ন</h2>
+<h2 id="আমার_GoFox_F15_এ_WowBox_খুঁজে_পাচ্ছিনা."><span style="font-size: 14px; line-height: 1.5;">আমার GoFox F15 এ WowBox খুঁজে পাচ্ছিনা.</span></h2>
+<dl>
+ <dd>
+  WowBox হচ্ছে গ্রামীণফোন (টেলিনর) এর একটি অ্যাপ এবং এজন্য এটি ব্যবহার করতে আপনার একটি জিপি সিম ব্যবহার করতে হবে। এর মানে হচ্ছে WowBox এর মত অসাধারন ফিচার উপভোগ করতে হলে আপনার GoFox F15 ডিভাইসে অবশ্যই একটি সক্রিয় জিপি সিম ব্যবহার করতে হবে।</dd>
+ <dt>
+  আমি MDN এ অন্যান্য কিছু ফায়ারফক্স ওএস ডিভাইসে হার্ড রিসেট দেখেছি এবং আমার ডিভাইসটিও হার্ড রিসেট করতে চাই.</dt>
+ <dd>
+  দুর্ভাগ্রক্রমে, GoFox F15 এর জন্য কোনো হার্ড রিসেট সুবিধা নেই। কিন্তু আপনি এখনও আপনার ডিভাইস রিসেট করতে পারবেন সেটিংস (SETTINGS) অপশন থেকে এবং এডিবি ব্যবহার করে লিনাক্স/ম্যাক থেকে ডিবাগ করতে পারবেন।</dd>
+ <dt>
+  আমি আমার GoFox F15 এ স্ক্রিন রিডার চালু করেছি। এবং আমার টাচ্ আগের মত কাজ করছে না।</dt>
+ <dd>
+  আপনি বিভিন্ন ভাবে এটাকে সাধারন করতে পারেন। একটি হচ্ছে ভলিউম চাবি ব্যবহার করে, আরেকটি হচ্ছে ম্যানুয়াল, অন্যটি হচ্ছে gesture ব্যবহার করে যেটা অন্ধ লোকেদের জন্য এবং এছাড়াও আপনি এডিবি দ্বারা ডিবাগিং করতে পারেন। উভয়ই নিছে বর্ণনা করা হল।</dd>
+</dl>
+<h2 id="ভলিউম_চাবি_দ্বারা_স্ক্রিন_রিডার_বন্ধ_করুন">ভলিউম চাবি দ্বারা স্ক্রিন রিডার বন্ধ করুন</h2>
+<p>ভলিউম আপ প্রেস করুন, তারপর ডাউন প্রেস করুন, এভাবে তিনবার করুন (আপ, ডাউন, আপ, ডাউন, আপ, ডাউন)। স্ক্রিন রিডার আপনাকে এট পুনরায় করতে বলবে (ভলিউম আপ, ডাউন, আপ, ডাউন, আপ, ডাউন) এটি চালু করতে যদি এটি চালু না থাকে, অথবা বন্ধ করার জন্য এটি জিজ্ঞাসা করবে যদি এটি চালু থাকে। যদি আপনি বর্তমান অবস্থার কোনো পরিবর্তন করতে না চান তবে শুধু কিছু না করে এড়িয়ে যান।</p>
+<h2 id="ম্যানুয়ালি_স্ক্রিন_রিডার_বন্ধ_করুন">ম্যানুয়ালি স্ক্রিন রিডার বন্ধ করুন</h2>
+<p>আপনাকে প্রথমে কিছু বেসিক জেস্টার পদ্ধতি জানতে হবে। এগুলোকে অন্ধ লোকেদের জন্য ব্যবহৃত জেস্টার নামে আখ্যা দেয়া হয়েছে।</p>
+<ul>
+ <li><strong>Long Tap</strong> : To select any app or object on the content view area, use Long Tap. Long Tap means, tapping for a while till the object gets selected.</li>
+ <li><strong>Double Tap</strong> : To activate or enter into the selected option, app or object use Double Tap.</li>
+ <li><strong>Swipe Left</strong> : To change the position of the current selection from right to left use Swipe Left.</li>
+ <li><strong>Swipe Right</strong> : To change the position of the current selection from left to right use Swipe Right.</li>
+ <li><strong>Two Fingers Swipe</strong> : To swipe use Two Fingers Swipe. The direction will be your desired direction. This is used to scroll any direction or flip the horizontal screen. You have to do it very carefully by must keeping a finger on the current selected object and the other finger should be at anywhere else but in <span>parallel</span> to the first finger. Have a clear look at the video below:</li>
+</ul>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8779/swipe.gif"></p>
+<p>For this you have to select the last object on your desired direction first. So, if you want to swipe left, you have to select the last and right most object. Select the left last for swiping right, bottom last for swiping upwards and top first for swiping downwards. Example screens are serially like these:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8781/mozbd1.jpg"></p>
+<p>Screen Reader is specified only for the people who have shortage on their eye sight. So, using the gestures above blind people can easily use the smartphone. Manual procedure is the procedure blind people will use to turn it off. So, you should also follow these gestures while trying this procedure.</p>
+<p>First, restart your device. Select any of the object on the lockscreen by Long Tap and then try to select the unlock button on right bottom of your screen by using Swipe Left. Then Double Tap anywhere on the screen and this will activate that button. So, you should be on the home screen having the phone unlocked.</p>
+<p>     <img alt="" src="https://mdn.mozillademos.org/files/8785/mozbd2.jpg"></p>
+<p>Now, you have to use Two Fingers Swipe to flip he screen or scroll horizontally. But here you have to do the trick very much carefully to have the desired swipe. First, select the last app on the screen by using Long Tap or Swipe Left gestures. Use Two Fingers Swipe as described above. Now, you should be on the next screen. After that, select the SETTINGS app and enter using the same procedure of selection. Closely look at the placement of your fingers while Two Fingers Swipe.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8787/mozbd3.jpg"></p>
+<p>Now, stop Screen Reader by selecting and entering serially like below.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8789/mozbd4.jpg">     </p>
+<p> </p>
+<h2 id="Debugging_on_Linux_Mac">Debugging on Linux / Mac</h2>
+<p>Open up a Terminal, and issue the following commands.</p>
+<pre>mkdir ~/.android
+<span class="_5yl5"><span class="null">echo "0x1782" &gt; ~/.android/adb_usb.ini</span></span></pre>
+<p>Then restart adb server.</p>
+<pre>adb stop-server &amp;&amp; adb start-server
+</pre>
+<p>Linux users need to add an extra udev rule by issuing the following command as root. (Not requierd by non-Linux users)</p>
+<pre>echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1782", MODE="0666"' &gt; /etc/udev/rules.d/51-android.rules</pre>
+<h2 id="Related_Links">Related Links</h2>
+<ul>
+ <li><a href="/en-US/Firefox_OS/Debugging/Developer_settings#Screen_reader">Screen Reader</a></li>
+ <li><a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a></li>
+</ul>

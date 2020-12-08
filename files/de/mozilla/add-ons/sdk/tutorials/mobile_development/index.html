@@ -1,0 +1,476 @@
+---
+title: Developing for Firefox Mobile
+slug: Mozilla/Add-ons/SDK/Tutorials/Mobile_development
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Mobile_development
+---
+<div class="warning">
+ <p>Developing add-ons for Firefox Mobile is still an experimental feature of the SDK. Although the SDK modules used are stable, the setup instructions and cfx commands are likely to change.</p>
+</div>
+<div class="note">
+ <p><span>To follow this tutorial you'll need to have <a href="/en-US/Add-ons/SDK/Tutorials/Installation">installed the SDK</a> and learned the <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">basics of <code>cfx</code></a>. </span></p>
+</div>
+<p>Firefox for Android implements its UI using native Android widgets instead of XUL. With the add-on SDK you can develop add-ons that run on this new version of Firefox Mobile as well as on the desktop version of Firefox.</p>
+<p>You can use the same code to target both desktop Firefox and Firefox Mobile, and just specify some extra options to <code>cfx run</code>, <code>cfx test</code>, and <code>cfx xpi</code> when targeting Firefox Mobile.</p>
+<p>Right now not all modules are fully functional, but we're working on adding support for more modules. The <a href="/en-US/Add-ons/SDK/Tutorials/Mobile_development#Module_Compatibility">tables at the end of this guide</a> list the modules that are currently supported on Firefox Mobile.</p>
+<p>This tutorial explains how to run SDK add-ons on an Android device connected via USB to your development machine. We'll use the <a href="http://developer.android.com/guide/developing/tools/adb.html">Android Debug Bridge</a> (adb) to communicate between the Add-on SDK and the device.</p>
+<p><img src="https://mdn.mozillademos.org/files/6555/mobile-setup-adb.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>It's possible to use the <a href="http://developer.android.com/guide/developing/tools/emulator.html">Android emulator</a> to develop add-ons for Android without access to a device, but it's slow, so for the time being it's much easier to use the technique described below.</p>
+<h2 id="Setting_up_the_Environment">Setting up the Environment</h2>
+<p>First you'll need an <a href="https://wiki.mozilla.org/Mobile/Platforms/Android#System_Requirements">Android device capable of running the native version of Firefox Mobile</a>. Then:</p>
+<ul>
+ <li>install the <a href="https://wiki.mozilla.org/Mobile/Platforms/Android#Download_Nightly">Nightly build of the native version of Firefox Mobile</a> on the device.</li>
+ <li><a href="http://developer.android.com/guide/developing/device.html#setting-up">enable USB debugging on the device (step 3 of this link only)</a></li>
+</ul>
+<p>On the development machine:</p>
+<ul>
+ <li>install version 1.5 or higher of the Add-on SDK</li>
+ <li>install the correct version of the <a href="http://developer.android.com/sdk/index.html">Android SDK</a> for your device</li>
+ <li>using the Android SDK, install the <a href="http://developer.android.com/sdk/installing.html#components">Android Platform Tools</a></li>
+</ul>
+<p>Next, attach the device to the development machine via USB.</p>
+<p>Now open up a command shell. Android Platform Tools will have installed <code>adb</code> in the "platform-tools" directory under the directory in which you installed the Android SDK. Make sure the "platform-tools" directory is in your path. Then type:</p>
+<pre>adb devices
+</pre>
+<p>You should see some output like:</p>
+<pre>List of devices attached
+51800F220F01564 device
+</pre>
+<p>(The long hex string will be different.)</p>
+<p>If you do, then <code>adb</code> has found your device and you can get started.</p>
+<h2 id="Running_Add-ons_on_Android">Running Add-ons on Android</h2>
+<p>You can develop your add-on as normal, as long as you restrict yourself to the supported modules.</p>
+<p>When you need to run the add-on, first ensure that Firefox is not running on the device. Then execute <code>cfx run</code> with some extra options:</p>
+<pre>cfx run -a fennec-on-device -b /path/to/adb --mobile-app fennec --force-mobile
+</pre>
+<p>See <a href="/en-US/Add-ons/SDK/Tutorials/Mobile_development#cfx_Options_for_Mobile_Development">"cfx Options for Mobile Development"</a> for the details of this command.</p>
+<p>In the command shell, you should see something like:</p>
+<pre>Launching mobile application with intent name org.mozilla.fennec
+Pushing the addon to your device
+Starting: Intent { act=android.activity.MAIN cmp=org.mozilla.fennec/.App (has extras) }
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+Could not read chrome manifest 'file:///data/data/org.mozilla.fennec/chrome.manifest'.
+info: starting
+info: starting
+zerdatime 1329258528988 - browser chrome startup finished.
+</pre>
+<p>This will be followed by lots of debug output.</p>
+<p>On the device, you should see Firefox launch with your add-on installed.</p>
+<p><code>console.log()</code> output from your add-on is written to the command shell, just as it is in desktop development. However, because there's a lot of other debug output in the shell, it's not easy to follow. The command <code>adb logcat</code> prints <code>adb</code>'s log, so you can filter the debug output after running the add-on. For example, on Mac OS X or Linux you can use a command like the below to filter only the lines of console output:</p>
+<pre>adb logcat | grep console
+</pre>
+<p>You can experiment with different filter strings on <code>adb logcat</code> to focus in on the lines relevant to you.</p>
+<p>Running <code>cfx test</code> is identical:</p>
+<pre>cfx test -a fennec-on-device -b /path/to/adb --mobile-app fennec --force-mobile
+</pre>
+<h2 id="cfx_Options_for_Mobile_Development"><a name="cfx-options">cfx Options for Mobile Development</a></h2>
+<p>As you see in the quote above, <code>cfx run</code> and <code>cfx test</code> need four options to work on Android devices.</p>
+<table>
+ <colgroup>
+  <col>
+  <col>
+ </colgroup>
+ <tbody>
+  <tr>
+   <td><code>-a fennec-on-device</code></td>
+   <td>This tells the Add-on SDK which application will host the add-on, and should be set to "fennec-on-device" when running an add-on on Firefox Mobile on a device.</td>
+  </tr>
+  <tr>
+   <td><code>-b /path/to/adb</code></td>
+   <td>
+    <p>As we've seen, <code>cfx</code> uses the Android Debug Bridge (adb) to communicate with the Android device. This tells <code>cfx</code> where to find the <code>adb</code> executable.</p>
+    <p>You need to supply the full path to the <code>adb</code> executable.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--mobile-app</code></td>
+   <td>
+    <p>This is the name of the <a href="http://developer.android.com/reference/android/content/Intent.html"> Android intent</a>. Its value depends on the version of Firefox Mobile that you're running on the device:</p>
+    <ul>
+     <li><code>fennec</code>: if you're running Nightly</li>
+     <li><code>fennec_aurora</code>: if you're running Aurora</li>
+     <li><code>firefox_beta</code>: if you're running Beta</li>
+     <li><code>firefox</code>: if you're running Release</li>
+    </ul>
+    <p>If you're not sure, run a command like this (on OS X/Linux, or the equivalent on Windows):</p>
+    <pre>
+adb shell pm list packages | grep mozilla</pre>
+    <p>You should see "package" followed by "org.mozilla." followed by a string. The final string is the name you need to use. For example, if you see:</p>
+    <pre>
+package:org.mozilla.fennec</pre>
+    <p>...then you need to specify:</p>
+    <pre>
+--mobile-app fennec</pre>
+    <p>This option is not required if you have only one Firefox application installed on the device.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--force-mobile</code></td>
+   <td>
+    <p>This is used to force compatibility with Firefox Mobile, and should always be used when running on Firefox Mobile.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Packaging_Mobile_Add-ons">Packaging Mobile Add-ons</h2>
+<p>To package a mobile add-on as an XPI, use the command:</p>
+<pre>cfx xpi --force-mobile
+</pre>
+<p>Actually installing the XPI on the device is a little tricky. The easiest way is probably to copy the XPI somewhere on the device:</p>
+<pre>adb push my-addon.xpi /mnt/sdcard/
+</pre>
+<p>Then open Firefox Mobile and type this into the address bar:</p>
+<pre>file:///mnt/sdcard/my-addon.xpi
+</pre>
+<p>The browser should open the XPI and ask if you want to install it.</p>
+<p>Afterwards you can delete it using <code>adb</code> as follows:</p>
+<pre>adb shell
+cd /mnt/sdcard
+rm my-addon.xpi
+</pre>
+<p><a name="modules-compatibility"></a></p>
+<h2 id="Module_Compatibility">Module Compatibility</h2>
+<p>Modules not supported in Firefox Mobile are <span>marked</span> in the tables below.</p>
+<h3 id="High-Level_APIs">High-Level APIs</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 200px;">addon-page</td>
+   <td style="background-color: rgb(255, 51, 51); width: 200px;">Not supported</td>
+  </tr>
+  <tr>
+   <td>base64</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc33;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>clipboard</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>context-menu</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>hotkeys</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc33;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>indexed-db</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc66;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>l10n</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc66;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>notifications</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc66;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>page-mod</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc66;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>page-worker</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc66;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>panel</td>
+   <td style="background-color: rgb(255, 51, 51);"><span style="background-color: #ff3333;">Not supported</span></td>
+  </tr>
+  <tr>
+   <td>passwords</td>
+   <td style="background-color: rgb(102, 204, 51);"><span style="background-color: #66cc66;">Supported</span></td>
+  </tr>
+  <tr>
+   <td>private-browsing</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>querystring</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>request</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>selection</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>self</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>simple-prefs</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>simple-storage</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>tabs</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>timers</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>ui</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>url</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>widget</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>windows</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Low-Level_APIs">Low-Level APIs</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 200px;">loader</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>chrome</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>console/plain-text</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>console/traceback</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>content/content</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>content/loader</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>content/mod</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>content/worker</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>core/heritage</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>core/namespace</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>core/promise</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>event/core</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>event/target</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>frame/hidden-frame</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>frame/utils</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>io/byte-streams</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>io/file</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>io/text-streams</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>lang/functional</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>lang/type</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>loader/cuddlefish</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>loader/sandbox</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>net/url</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>net/xhr</td>
+   <td style="width: 200px; background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>places/bookmarks</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>places/favicon</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>places/history</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>platform/xpcom</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>preferences/service</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>stylesheet/style</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>stylesheet/utils</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system/environment</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system/events</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system/globals</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system/runtime</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system/unload</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>system/xul-app</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>tabs/utils</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>test/assert</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>test/harness</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>test/httpd</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>test/runner</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>test/utils</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>ui/button/action</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>ui/button/toggle</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>ui/frame</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>ui/id</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>ui/sidebar</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>ui/toolbar</td>
+   <td style="background-color: rgb(255, 51, 51);">Not supported</td>
+  </tr>
+  <tr>
+   <td>util/array</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>util/collection</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>util/deprecate</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>util/list</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>util/match-pattern</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>util/object</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>util/uuid</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+  <tr>
+   <td>window/utils</td>
+   <td style="background-color: rgb(102, 204, 51);">Supported</td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>

@@ -1,0 +1,216 @@
+---
+title: HTTP Request Header setzen
+slug: XPCOM/HTTP_Request_Header_setzen
+translation_of: Mozilla/Tech/XPCOM/Setting_HTTP_request_headers
+---
+<p><a href="/en-US/docs/HTTP">HTTP</a> ist eine der zentralen Webtechnologien. Neben dem eigentlichen Inhalt werden <a href="/en-US/docs/HTTP/Headers">einige wichtige Informationen</a> sowohl für die HTTP Requests als auch für die Antworten (Responses) gesetzt.</p>
+<p>Du kannst für jedes Request der Anwendung deine eigenen HTTP Header setzen, egal ob das Request dadurch eingeleitet wird, daß dein Code explizit einen HTTP-Kanal öffnet, ob es durch eine <a href="/en-US/docs/nsIXMLHttpRequest">XMLHttpRequest</a> Aktivität entstand, durch ein {{htmlelement("img")}} Element in der Seite generiert oder gar von <a href="/en-US/docs/Web/CSS">CSS</a> aus gestartet wurde.</p>
+<h3 id="HTTP_Kanäle">HTTP Kanäle</h3>
+<p>Wenn du HTTP Anfragen (Requests) und Antworten bearbeites, machst du das typischerweise mit einem <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a></code>. Die <code>nsIHttpChannel</code> Schnittstelle besitzt eine Reihe von Eigenschaften und Methoden, von denen uns hier vor allem <code>setRequestHeader</code> interessiert. Diese Methode erlaubt uns, <em>einen HTTP Request Header zu setzen</em>.</p>
+<p>Es folgt Beispielcode, wie wir einen HTTP Header setzen.</p>
+<pre class="brush: js">// fuegt "X-Hello: World" als Header zum Request hinzu
+httpChannel.setRequestHeader("X-Hello", "World", false);
+</pre>
+<p>Im obenstehenden Bespielcode haben wir eine Variable <code>httpChannel</code>, die auf ein Objekt zeigt, das <code>nsIHttpChannel</code> implementiert. (Die Variable hätte aber auch irgendwie anders heißen können.)</p>
+<p>Die Methode <code>setRequestHeader</code> erwartet 3 Parameter. Der erste Parameter ist der <em>Name</em> des HTTP Request Headers. Der zweite Parameter ist der <em>Wert</em> des HTTP Request Headers. Ignoriere vorläufig den dritten Parameter, und setze ihn erst einmal immer auf <code>false</code>.</p>
+<p>In unserem Beispiel hat der HTTP Request Header, den wir hinzugefügt haben, den <em>Namen</em> <code>X-Hello</code> und den <em>Wert</em> <code>World</code>.</p>
+<div class="note">
+ <p><strike><strong>HINWEIS</strong>: IWenn du deinen eigenen HTTP header einführst, MUST du ein <code>X-</code> vor den Namen setzen. (In unserem Beispiel ist unser neuer HTTP header <code>X-Hello</code> und NICHT <code>Hello</code> weil wir korrekterweise das <code>X-</code> vor unserem Namen hinzugefügt haben.)</strike></p>
+ <p><br>
+  <strong>Dieser Hinweis ist veraltet: <a href="http://tools.ietf.org/html/rfc6648">http://tools.ietf.org/html/rfc6648</a></strong></p>
+</div>
+<h3 id="Notifications" name="Notifications">Benachrichtigungen</h3>
+<p>Du wirst dich jetzt vielleicht fragen, wie man an den <code>nsIHttpChannel</code> kommt, wenn das HTTP Request abgeschickt wurde.</p>
+<p>Wenn dein eigener Code das Request erzeugt hat, dann hast du den HTTP Kanal wahrscheinlich schon. Anders erzeugte Requests fängt man mit Benachrichtigungen (<strong>notifications</strong>) ab, die sehr stark den Ereignissen oder Signalen ähneln, die man in anderen Sprachen und Frameworks findet.</p>
+<p>In diesem Fall müssen wir, um den <code>nsIHttpChannel</code> rechtzeitig vor dem Absenden des HTTP Requests zu bekommen, da<em>s </em><code>"http-on-modify-request"</code> Thema ("topic") beobachten. (Ja, <code>"http-on-modify-request"</code> ist eine Zeichenkette.)</p>
+<div class="note">
+ <p><strong>HINWEIS</strong>: Es gibt viele andere "topics" neben <code>"http-on-modify-request"</code>, zu denen du Benachrichtigungen bekommen kannst. Zum Beispiel <code>"http-on-examine-response"</code> und <code>"xpcom-shutdown"</code>. Du kannst auch deine eigenen "topics" einrichten und selber Benachrichtigungen dazu verschicken..</p>
+ <p>Für nähere Informationen über das Benachrichtigungs-Framework und eine Liste allgemeiner Benachrichtigungs-Topics siehe <a href="/en-US/docs/Observer_Notifications">Observer Notifications</a>.</p>
+</div>
+<h3 id="Observers" name="Observers">Observer (Beobachter)</h3>
+<p>Um zu einem Thema wie <code>"http-on-modify-request"</code> Benachrichtigungen zu empfangen müssen wir einen Beobachter (<strong>observer)</strong> einrichten. Ein Beobachter ist eine Komponente, die die <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserver">nsIObserver</a> Schnittstelle implementiert. Sobald der Beobachter für ein Thema <em>registriert</em> ist, wird es über das Thema benachrichtigt, indem seine <code>observe</code> Methode aufgerufen wird.</p>
+<p>Unten folgt der Quelltext eines Beispiel-Beobachters, der unseren Zusatz-Header "X-Hello" zu dem HTTP-Kanal hinzufügt, der der Benachrichtigung für http-on-modify-request mitgegeben wird:</p>
+<pre class="brush: js">var {Cc, Ci} = require("chrome");
+var httpRequestObserver =
+{
+  observe: function(subject, topic, data)
+  {
+    if (topic == "http-on-modify-request") {
+      var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+      httpChannel.setRequestHeader("X-Hello", "World", false);
+    }
+  }
+};
+</pre>
+<div class="note">
+ <strong>HINWEIS</strong>: Der obenstehende Quelltext wurde verändert um wiederzugeben, daß man in einem Firefox-Add-On die Typen Components.interfaces und Components.classes nicht mehr direkt ansprechen kann, sondern die obere "require"-Codezeile nutzen muß. Deshalb steht auf dieser Seite Ci bzw. Cc, wo man früher Components.interfaces respektive Components.classes verwendet hat.<br>
+ Bitte beachte auch, daß der Code selber normalerweise in einen Block exports.main = function() { ... } eingeschlossen wird.</div>
+<p>Beachte dabei, daß es wichtig ist, wie viele Parameter die <code>observe</code> Method übergeben bekommt. Es sind 3 Parameter (Wie wir oben im Beispielcode gezeigt haben). Für das <code>"http-on-modify-request"</code> Thema enthält der erste Parameter (im oberen Beispiel <code>subject</code> genannt) den <code>nsIHttpChannel</code>. Aus gewissen Gründen wird er uns aber als <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsISupports">nsISupports</a></code> Objekt übergeben. Deshalb müssen wir das <code>nsISupports</code> in ein <code>nsIHttpChannel</code> <em>umwandeln, </em>was der Aufruf von <code>QueryInterface</code> für uns macht. Und sicher - Objekte von einem Typ in einen anderen <em>umzuwandeln</em> ist sehr häßlich und läßt etwas vermissen, was man als 'Syntaktischen Zucker' bezeichnen könnte.</p>
+<p>Die zweite Zeile des Codes im if-Block sollte dir bereits bekannt erscheinen. Es ist der selbe Code, den wir bereits vorher verwendet hatten, um den HTTP Request Header hinzuzufügen.</p>
+<p>Der Name des Objektes -- <code>httpRequestObserver</code> -- ist unwichtig. Wir hätten es benennen können, wie es uns gefällt.</p>
+<h3 id="Registering" name="Registering">Registrierung</h3>
+<p>Nachdem wir den Beobachter aufgesetzt haben, müssen wir ihn registrieren. In unserem Fall möchten wir ihn für das Thema <code>"http-on-modify-request"</code> registrieren. Das können wir mit dem untenstehenden Code tun.</p>
+<pre class="brush: js">var observerService = Cc["@<a class="linkification-ext external" href="http://mozilla.org/observer-service;1">mozilla.org/observer-service;1</a>"]
+                                .getService(Ci.<a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService">nsIObserverService</a>);
+observerService.addObserver(httpRequestObserver, "http-on-modify-request", false);
+</pre>
+<p>Der erste Ausdruck holt das Objekt, das uns Registrierungen zu Themen durchführen läßt, zu denen wir Benachrichtigungen erhalten wollen.</p>
+<p>Der Befehl in der zweiten Zeile führt die eigentliche Registrierung durch. Es bedeutet: Wir wollen, daß <code>httpRequestObserver</code> (durch Aufrufen seiner <code>observe</code> Methode) benachrichtigt wird, wenn ein <code>"http-on-modify-request"</code> Thema stattfindet (von dem wir wissen, daß es direkt vor jedem HTTP Request passiert).</p>
+<h3 id="Unregistering" name="Unregistering">Abmeldung</h3>
+<p>Du solltest den Beobachter vor dem Beenden abmelden, um mögliche Speicherlecks zu vermeiden. Einen Beobachter meldet man mit einem Aufruf von <code>nsIObserverService.removeObserver</code> wie folgt ab:</p>
+<pre class="brush: js">observerService.removeObserver(httpRequestObserver, "http-on-modify-request");</pre>
+<h3 id="Zusammengefaßtes_Beispiel">Zusammengefaßtes Beispiel</h3>
+<p>Hier ist eine leicht andere Variante unseres <code>httpRequestObserver</code> Objektes. Während die vorherige Version die wir gezeigt haben für das Lernen anschaulich sein sollte, möchte man den Code in echten Anwendungen vielleicht eher wie folgt aufbauen:</p>
+<pre class="brush: js">var httpRequestObserver =
+{
+  observe: function(subject, topic, data)
+  {
+    if (topic == "http-on-modify-request") {
+      var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+      httpChannel.setRequestHeader("X-Hello", "World", false);
+    }
+  },
+
+  get observerService() {
+    return Cc["@mozilla.org/observer-service;1"]
+                     .getService(Ci.nsIObserverService);
+  },
+
+  register: function()
+  {
+    this.observerService.addObserver(this, "http-on-modify-request", false);
+  },
+
+  unregister: function()
+  {
+    this.observerService.removeObserver(this, "http-on-modify-request");
+  }
+};
+</pre>
+<p>Dieses Objekt hat benutzerfreundliche <code>register()</code> und <code>unregister()</code> Methoden. Damit braucht man für die Aktivierung nur noch folgendes aufzurufen:</p>
+<pre class="brush: js">httpRequestObserver.register();
+</pre>
+<p>Du solltest auch nicht vergessen, vor den Beenden den Beobachter abzumelden:</p>
+<pre class="brush: js">httpRequestObserver.unregister();
+</pre>
+<p>Und das war's schon.</p>
+<h3 id="XPCOM_components" name="XPCOM_components">XPCOM Komponenten</h3>
+<p>Du mußt den <code>http-on-modify-request</code> Beobachter einmal pro Anwendung registrieren (Nicht einmal pro Fenster!). Das bedeutet, daß du die Implementierung des Beobachters in eine <a href="/en-US/docs/How_to_Build_an_XPCOM_Component_in_Javascript">XPCOM Komponente</a> anstelle eines <a href="/en-US/docs/XUL_Overlays">overlays</a> packen solltest. Wenn du Gecko2 (Firefox4) unterstützen willst, mußt du deine javascript Komponente so registrieren wie hier beschrieben: <a class="linkification-ext" href="/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0#JavaScript_components">https://developer.mozilla.org/en/XPCOM/XPCOM_changes_in_Gecko_2.0#JavaScript_components</a>.</p>
+<pre class="brush: js">var headerName  = "X-hello";
+var headerValue = "world";
+
+function LOG(text)
+{
+    //    var consoleService = Components.classes["@<a class="linkification-ext" href="http://mozilla.org/consoleservice;1">mozilla.org/consoleservice;1</a>"].getService(Components.interfaces.nsIConsoleService);
+    //    consoleService.logStringMessage(text);
+}
+
+function myHTTPListener() { }
+
+myHTTPListener.prototype = {
+
+  observe: function(subject, topic, data)
+  {
+      if (topic == "http-on-modify-request") {
+
+          LOG("----------------------------&gt; (" + subject + ") mod request");
+
+          var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+          httpChannel.setRequestHeader(headerName, headerValue, false);
+          return;
+      }
+
+
+      if (topic == "profile-after-change") {
+
+          LOG("----------------------------&gt; profile-after-change");
+
+          var os = Components.classes["@<a class="linkification-ext" href="http://mozilla.org/observer-service;1">mozilla.org/observer-service;1</a>"]
+                             .getService(Components.interfaces.nsIObserverService);
+
+          os.addObserver(this, "http-on-modify-request", false);
+          return;
+      }
+  },
+
+  QueryInterface: function (iid) {
+        if (iid.equals(Components.interfaces.nsIObserver) ||
+            iid.equals(Components.interfaces.nsISupports))
+            return this;
+
+        Components.returnCode = Components.results.NS_ERROR_NO_INTERFACE;
+        return null;
+    },
+};
+
+var myModule = {
+    registerSelf: function (compMgr, fileSpec, location, type) {
+
+        var compMgr = compMgr.QueryInterface(Components.interfaces.nsIComponentRegistrar);
+        compMgr.registerFactoryLocation(this.myCID,
+                                        this.myName,
+                                        this.myProgID,
+                                        fileSpec,
+                                        location,
+                                        type);
+
+
+          LOG("----------------------------&gt; registerSelf");
+
+        var catMgr = Components.classes["@<a class="linkification-ext" href="http://mozilla.org/categorymanager;1">mozilla.org/categorymanager;1</a>"].getService(Components.interfaces.nsICategoryManager);
+        catMgr.addCategoryEntry("app-startup", this.myName, this.myProgID, true, true);
+    },
+
+
+    getClassObject: function (compMgr, cid, iid) {
+
+          LOG("----------------------------&gt; getClassObject");
+
+        return this.myFactory;
+    },
+
+    myCID: Components.ID("{9cf5f3df-2505-42dd-9094-c1631bd1be1c}"),
+
+    myProgID: "@dougt/myHTTPListener;1",
+
+    myName:   "Simple HTTP Listener",
+
+    myFactory: {
+        QueryInterface: function (aIID) {
+            if (!aIID.equals(Components.interfaces.nsISupports) &amp;&amp;
+                !aIID.equals(Components.interfaces.nsIFactory))
+                throw Components.results.NS_ERROR_NO_INTERFACE;
+            return this;
+        },
+
+        createInstance: function (outer, iid) {
+
+          LOG("----------------------------&gt; createInstance");
+
+          return new myHTTPListener();
+        }
+    },
+
+    canUnload: function(compMgr) {
+        return true;
+    }
+};
+
+function NSGetModule(compMgr, fileSpec) {
+    return myModule;
+}
+</pre>
+<h3 id="Gute_Praktiken_für_Datenschutz_und_Sicherheit">Gute Praktiken für Datenschutz und Sicherheit</h3>
+<p>Ein Anwendungsfall für das Setzen eines anwendungsspezifischen HTTP Request Headers ist, wenn ein bestimmter Webauftritt prüfen können soll, ob der Browser ein bestimmtes Plugin / Add-On / Erweiterung installiert hat.</p>
+<p>Eine gute Praxis dazu ist, wenn man diesen spezifischen HTTP Header (beispielsweise<code> </code>"X-site.net-extension") nicht immer sendet, sondern nur dann, wenn man HTTP Requests an diese eine spezifische Webaddresse schickt. Nicht gleich von vorn herein allen besuchten Webservern mitzuteilen, welche Erweiterungen installiert sind, ist gut sowohl für den Datenschutz (weil so die Identifikation und Nachverfolgung von Nutzern anhand ihres Browserprofils erschwert wird), als auch für die Sicherheit (Angreifer kennen so manche Schwachstelle von bestimmten Browsererweiterungen).</p>
+<p>Bei Beachtung dieser Datenschutz- und Sicherheitspraktiken sieht der Quelltext dann so aus:</p>
+<pre class="brush: js">observe: function(subject, topic, data)
+ {
+   if (topic == "http-on-modify-request") {
+     var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+     if (/site.net/.test(httpChannel.originalURI.host)) {
+          httpChannel.setRequestHeader("X-Hello", "World", false);
+     }
+   }
+ },
+</pre>

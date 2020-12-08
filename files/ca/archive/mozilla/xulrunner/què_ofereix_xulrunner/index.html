@@ -1,0 +1,61 @@
+---
+title: Què ofereix XULRunner
+slug: Archive/Mozilla/XULRunner/Què_ofereix_XULRunner
+translation_of: Archive/Mozilla/XULRunner/What_XULRunner_Provides
+---
+<p> </p>
+<p>El propòsit de <a href="/en/XULRunner" title="en/XULRunner">XULRunner</a> és el de proveir una solució per el desplegament d'aplicacions XUL ( principalment Firefox i Thunderbird ), també proveint un mecanisme d'incrustracio. Les següents característiques ja estan implementades o bé estan planejades :</p>
+<h3 id="Gecko_Features" name="Gecko_Features">Característiques de Gecko</h3>
+<ul>
+ <li><a href="/en/XPCOM" title="en/XPCOM">XPCOM</a></li>
+ <li>Xarxa</li>
+ <li>Motor de renderització Gecko</li>
+ <li>Suport d'edició i transacció DOM (sense Interfície)</li>
+ <li>Criptografia</li>
+ <li><a href="/en/XBL" title="en/XBL">XBL</a> (XBL2 planificat)</li>
+ <li><a href="/en/XUL" title="en/XUL">XUL</a></li>
+ <li><a href="/en/SVG" title="en/SVG">SVG</a></li>
+ <li><a href="/en/XSLT" title="en/XSLT">XSLT</a></li>
+ <li>Extres XML (<code><a href="/en/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code>, <code><a href="/en/DOMParser" title="en/DOMParser">DOMParser</a></code>, etc.)</li>
+ <li>Serveis Web (SOAP)</li>
+ <li>Suport per Auto-actualització <em>(encara no finalitzat)</em></li>
+ <li>Type ahead find toolbar</li>
+ <li>History implementation (the places implementation in the 1.9 cycle)</li>
+ <li>Accessibility support</li>
+ <li>IPC services for communication between gecko-based apps <em>(not yet complete)</em></li>
+ <li><a href="/en/Storage" title="en/Storage">Storage</a>/sqlite interfaces <em>(not yet turned on by default)</em></li>
+</ul>
+<h3 id="User_Interface_Features" name="User_Interface_Features">User Interface Features</h3>
+<p>The following user interface is supplied by XULRunner, and may be overridden by embedders under certain circumstances:</p>
+<ul>
+ <li>APIs and user interface for installing, uninstalling, and upgrading XUL applications. See the {{ interwiki('wikimo', 'XUL:Installation_Story', 'wikimo:XUL:Installation Story') }}.</li>
+ <li>Extension Manager</li>
+ <li>File picker (uses native OS filepicker as appropriate)</li>
+ <li>Find toolbar</li>
+ <li>Helper app dialog/UI</li>
+ <li>Security UI (maintenance of SSL keychains, etc)</li>
+</ul>
+<h3 id="Embedding_APIs" name="Embedding_APIs">Embedding APIs</h3>
+<p>The following embedding APIs are provided by XULRunner:</p>
+<ul>
+ <li>Cross-platform embedding (XRE_InitEmbedding)</li>
+ <li><a href="/en/JavaXPCOM" title="en/JavaXPCOM">JavaXPCOM</a> embedding</li>
+ <li>gtkmozembed (Linux only)</li>
+ <li>ActiveX control (Windows only) <em>(not yet complete)</em></li>
+ <li>NSView-based-widget (Mac OS X only) <em>(not yet complete)</em></li>
+</ul>
+<h3 id="The_.22Maybe.22_List" name="The_.22Maybe.22_List">The "Maybe" List</h3>
+<p>The following features have been discussed and may be included if developer time permits and code size is controlled:</p>
+<ul>
+ <li>LDAP support</li>
+ <li>Spellchecking support (with or without dictionaries provided) see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=285977">bug 285977</a></li>
+ <li>Core support for profile roaming (with application-specific extensibility)</li>
+ <li><a href="/en/PyXPCOM" title="en/PyXPCOM">PyXPCOM</a> embedding <em>(not yet complete)</em> - but it does work, if you compile a custom build that includes the PyXPCOM bindings and there is a working python available. ActiveState uses PyXPCOM in their products.</li>
+</ul>
+<h3 id="What.27s_out" name="What.27s_out">What's out</h3>
+<p>XULRunner will not supply:</p>
+<ul>
+ <li>Bookmarks or History UI (must be managed by the application/embedder)</li>
+ <li>XForms (XForms will be available as an extension)</li>
+</ul>
+<p><span class="comment">Interwiki Language Links</span></p>

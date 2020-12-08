@@ -1,0 +1,88 @@
+---
+title: Plugins
+slug: Plugins
+tags:
+  - Add-ons
+  - Plugins
+translation_of: Archive/Plugins
+---
+<div>
+ <p>Plugins (oder Plug-ins) sind Softwaremodule zur Darstellung von speziellen Inhalten im Browserfenster, die der Browser selbst nicht interpretieren und darstellen kann. Ein bekanntes Beispiel ist das Adobe Reader Plugin, mit dem der Anwender PDF-Dateien direkt im Browserfenster öffnen kann. Mit dem Quicktime und Realplayer Plugin können Videos in verschiedenen Formaten und mit unterschiedlichen Transportprotokollen auf einer Webseite abgespielt werden.</p>
+ <p>Plugins können für Anwendungen nützlich sein, die das Mozilla Framework verwenden. Zum Beispiel benutzt {{ interwiki('wikipedia', 'ActiveState_Komodo', 'ActiveState Komodo') }} Plugins, um den {{ interwiki('wikipedia', 'Scintilla_(editing_component)', 'Scintilla Editor') }} in seine XUL-basierte Benutzeroberfläche einzubetten.</p>
+ <p>Plugins werden mit der <strong>NPAPI</strong> erstellt, der browserübergreifenden API für Plugins. Die NPAPI ist in der <a href="/de/Gecko_Plugin_API_Referenz" title="de/Gecko_Plugin_API_Referenz">Gecko Plugin API Referenz</a> dokumentiert. Um ein Plugin scriptingfähig zu machen, kann die <a href="/de/Gecko_Plugin_API_Referenz/Scripting_plugins" title="de/Gecko_Plugin_API_Referenz/Scripting_plugins">npruntime</a> verwendet werden. Die älteren, <a href="/de/XPCOM" title="de/XPCOM">XPCOM</a>- und <a href="/de/LiveConnect" title="de/LiveConnect">LiveConnect</a>- basierten APIs für Plugins sollten nicht mehr benutzt werden. Die in diesen APIs verwendeten Technologien werden weiterhin benutzt, jedoch nicht mehr für Plugins.</p>
+ <p>Für eine einfachere Erstellung von scriptgesteuerten Grafik- und Animationskomponenten können <a href="/de/SVG" title="de/SVG">SVG</a> und <a href="/de/HTML/Canvas" title="de/HTML/Canvas">Canvas</a> benutzt werden.</p>
+ <p>Plugins unterscheiden sich von <a href="/de/Erweiterungen" title="de/Erweiterungen">Erweiterungen</a>, welche die Funktionalität des Browsers selbst verändern oder erweitern. Weiterhin unterscheiden sich Plugins von <a href="/de/Suche_Plugins" title="de/Suche_Plugins">OpenSearch Plugins</a>, die zusätzliche Suchmaschinen in der Suchleiste implementieren.</p>
+</div>
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h4 id="Dokumentation" name="Dokumentation"><a href="/Special:Tags?tag=Plugins&amp;language=de" title="Special:Tags?tag=Plugins&amp;language=de">Dokumentation</a></h4>
+    <dl>
+     <dt>
+      <a href="/de/Gecko_Plugin_API_Referenz" title="de/Gecko_Plugin_API_Referenz">Gecko Plugin API Referenz</a> (NPAPI)</dt>
+     <dd>
+      <small>Dieses Dokument beschreibt die Schnittstellen für Anwendungsprogramme zur Erstellung von NPAPI Plugins.</small></dd>
+     <dt>
+      <a href="/de/Gecko_Plugin_API_Referenz/Scripting_plugins" title="de/Gecko_Plugin_API_Referenz/Scripting_plugins">Scripting plugins</a> (npruntime)</dt>
+     <dd>
+      <small>Dieses Dokument beschreibt die neuen browserübergreifenden NPAPI-Erweiterungen, mit denen scriptingfähige Plugins erstellt werden können, die auch auf Scriptobjekte im Browser zugreifen können.</small></dd>
+     <dt>
+      <a href="/de/Gecko_SDK" title="de/Gecko_SDK">Gecko Plugin SDK</a></dt>
+     <dd>
+      <small>Das Gecko plugin SDK enthält alle Werkzeuge und Headerdateien die benötigt werden, um scriptingfähige Plugins für Gecko erstellen zu können. Enthalten sind auch der XPIDL Compiler/Linker und die neueste Version der <code>npapi.h</code>.</small></dd>
+     <dt>
+      <a href="/de/Plugins/Out_of_process_Plugins" title="de/Plugins/Out_of_process_Plugins">Out-of-process Plugins</a></dt>
+     <dd>
+      <small>Firefox 3.6.4 führt sogenannte „out-of-process“ Plugins ein, welche in einzelnen Threads ausgeführt werden, sodass der Crash eines Plugins nicht mehr den kompletten Browser betrifft.</small></dd>
+     <dt>
+      <a href="/de/XPInstall_zur_Installation_von_Plugins_verwenden" title="de/XPInstall_zur_Installation_von_Plugins_verwenden">Verwendung von XPInstall zur Installation von Plugins</a></dt>
+     <dd>
+      <small><a href="/de/XPInstall" title="de/XPInstall">XPInstall</a> ermöglicht eine einfache Installation von Plugins durch den Anwender innerhalb der Browseroberfläche, ohne dass ein separates Installationsprogramm gestartet werden muss.</small></dd>
+     <dt>
+      <a class="external" href="http://developer.apple.com/internet/webcontent/detectplugins.html">Plugins finden</a></dt>
+     <dd>
+      <small>"Da es offensichtlich Situationen gibt, in denen es sinnvoll ist, Plugins zu benutzten, stellt sich die Frage, wie zu verfahren ist, wenn das erforderliche Plugin nicht installiert ist."</small></dd>
+     <dt>
+      <a href="/de/Scripting_Plugins/Macromedia_Flash" title="de/Scripting_Plugins/Macromedia_Flash">Scripting Plugins: Macromedia Flash</a></dt>
+     <dd>
+      <small>Dieser Artikel erklärt, wie JavaScript benutzt werden kann, um auf Methoden des Flash-Plugins zuzugreifen und wie man FSCommands verwendet, um auf JavaScript-Funktionen aus der Flash-Animation heraus aufzurufen.</small></dd>
+     <dt>
+      <a href="/de/Plugins/Das_Erstinstallationsproblem" title="de/Plugins/Das_Erstinstallationsproblem">Plugins: Das Erstinstallationsproblem</a></dt>
+     <dd>
+      <small>Das Erstinstallationsproblem tritt auf, wenn ein Plugin oder integrierbare Softwarekomponenten sich auf einem System installieren, bevor irgendein Gecko-basierter Browser vorhanden ist.</small></dd>
+     <dt>
+      <a href="/de/ActiveX_Control_zur_Integration_von_Netscape_Plug-ins_im_IE" title="de/ActiveX_Control_zur_Integration_von_Netscape_Plug-ins_im_IE">ActiveX Control zur Integration von Netscape Plug-ins im IE</a></dt>
+     <dd>
+      <small>Microsoft hat die Unterstützung für Netscape-Plugins aus seinem Browser IE 5.5 SP2 (und höher) entfernt. Für Plugin-Autoren dürfte dieses Projekt eine große Arbeitserleichterung sein!</small></dd>
+     <dt>
+      <a href="/de/Plugins/Beispiele_und_Testfälle" title="de/Plugins/Beispiele_und_Testfälle">Plugins: Beispiele und Testfälle</a></dt>
+     <dd>
+      <small>NPAPI Plugin Beispiele und Testfälle.</small></dd>
+     <dt>
+      <a href="/de/Plugins/Externe_Seiten_zur Plugin-Erstellung">Externe Seiten zur Plugin-Erstellung</a></dt>
+     <dd>
+      <small>Externe Projekte, Frameworks und Blogeinträge, die zur Erstellung von Plugins nützlich sein können.</small></dd>
+     <dt>
+      <a href="/de/XEmbed_Erweiterung_für_Mozilla_Plugins" title="de/XEmbed_Erweiterung_für_Mozilla_Plugins">XEmbed Erweiterung für Mozilla Plugins</a></dt>
+     <dd>
+      <small>Neuere Versionen von Mozilla enthalten eine Erweiterung zum Erstellen von Plugins, die XEmbed verwendet, anstatt der alten Xt-basierten Hauptschleife, die von den meisten Plugins seit der Zeit von Netscape 3.x benutzt wird.</small></dd>
+    </dl>
+    <p><span class="alllinks"><a href="/Special:Tags?tag=Plugins&amp;language=de" title="Special:Tags?tag=Plugins&amp;language=de">Alles ansehen...</a></span></p>
+   </td>
+   <td>
+    <h4 id="Community" name="Community">Community</h4>
+    <ul>
+     <li>Mozillas Plugin Foren:</li>
+    </ul>
+    <p>{{ DiscussionList("dev-tech-plugins", "mozilla.dev.tech.plugins") }}</p>
+    <h4 id=".C3.84hnliche_Themen" name=".C3.84hnliche_Themen">Verwandte Themen</h4>
+    <dl>
+     <dd>
+      <a href="/de/Erweiterungen" title="de/Erweiterungen">Erweiterungen</a>, <a href="/de/SVG" title="de/SVG">SVG</a>, <a href="/de/HTML/Canvas" title="de/HTML/Canvas">Canvas</a></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>{{ languages( { "en": "en/Plugins", "es": "es/Plugins", "fr": "fr/Plugins", "ja": "ja/Plugins", "pl": "pl/Wtyczki", "pt": "pt/Plugins", "ko": "ko/Plugins" } ) }}</p>

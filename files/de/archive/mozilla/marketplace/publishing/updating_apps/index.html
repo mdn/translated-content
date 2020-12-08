@@ -1,0 +1,27 @@
+---
+title: Updating apps
+slug: Archive/Mozilla/Marketplace/Publishing/Updating_apps
+translation_of: Archive/Mozilla/Marketplace/Publishing/Updating_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">Dieser Artikel beschreibt den Prozess, mit dem Sie apps aktualisieren können, die bereits, Selbstveröffentlicht oder veröffentlicht auf dem   <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>  wurden.</span></p>
+</div>
+<div class="note">
+ <p><strong>Hinweis: Wenn Sie den Namen Ihrer Anwendung ändern, wenn es Marketplace genehmigt hat, müssen Sie Ihre app zur Genemigung erneut senden.</strong></p>
+</div>
+<h2 id="Gehostete_apps_zu_aktualisieren">Gehostete apps zu aktualisieren</h2>
+<p>An app respects the normal rules for Web caching, and may optionally use advanced mechanisms for improved start-up, like the <a href="/en-US/docs/HTML/Using_the_application_cache">HTML5 AppCache</a>. Given this, there are no special considerations for updating the normal resources that an app uses.</p>
+<p>Open Web Apps are different, however, in the handling of the manifest. Some changes to a manifest may require user approval. Depending on the implementation of the Web runtime, it may be unclear whether an update has occurred.</p>
+<p>As a clean way to deal with this issue, you can provide a <code>version</code> field in the app manifest. You can later check the version by inspecting the return value of the <a href="/en-US/docs/Web/API/Apps.getInstalled"><code>navigator.mozApps.getInstalled()</code></a> function. If the user's installed version is not up-to-date, you can trigger an update using <a href="/en-US/docs/Web/API/Apps.install"><code>navigator.mozApps.install()</code></a>.</p>
+<p>The value of <code>version</code> is not used by the Web runtime, so you can use whatever versioning scheme you want.</p>
+<p>Also note that changes to a manifest that introduce errors or other breakage will be detected if the manifest has been submitted to Firefox Marketplace. Serious errors will cause the app's listing to be disabled. Less serious errors may automatically flag the app for re-review.</p>
+<h2 id="Updating_packaged_apps">Updating packaged apps</h2>
+<p><a href="/en-US/docs/Web/Apps/Packaged_apps">Packaged apps</a> have a different update process than hosted apps. To update a packaged app, you upload a new version of the app's zip file to the Firefox Marketplace. Then the updated app gets reviewed and published to the Marketplace. This triggers an update on the Firefox OS phone. The phone user can also request an update using the Settings app.</p>
+<p>If you want more detail on the packaged app update process, see below.</p>
+<h3 id="More_details_on_packaged_app_update">More details on packaged app update</h3>
+<p>Here are more details on the update process for packaged apps. You might want to know these things if you are implementing an app marketplace.</p>
+<ul>
+ <li>When the updated packaged app is published, the <a href="/en-US/docs/Web/Apps/Packaged_apps#Packaged_apps_and_the_Firefox_OS_Marketplace">mini-manifest</a> is updated to point to the updated zip file (the mini-manifest is not the main app manifest). The <code>ETag</code> header is changed, and this triggers an update on the Firefox OS phone.</li>
+ <li>Firefox OS on the phone polls once per day for changes to an app. To do this, it polls the URL of the mini-manifest, then polls the URL in the <code>package_path</code> field in the mini-manifest. This is done using the <code>checkForUpdate()</code> method on the <a href="/en-US/docs/Web/API/App"><code>App</code> object</a>. When the <code>ETag</code> header changes, it knows the app has been updated. Then it checks if the zip file has changed.</li>
+ <li>Firefox OS checks in a batch for app updates.</li>
+</ul>

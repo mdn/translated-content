@@ -1,0 +1,219 @@
+---
+title: B2G OS
+slug: Archive/B2G_OS
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/B2G_OS
+---
+<div class="summary"><span class="seoSummary">B2G OS is (was) a complete, standalone operating system for the open web. It is an open source project developed by the Mozilla community and forms the basis of Firefox OS products. As of 2017 it is<strong> no longer maintained</strong>.</span></div>
+
+<p><strong>B2G OS </strong>is a community maintained open source operating system for<strong> </strong>smartphones, tablets, smart TVs and other connected devices. The project was <a href="https://wiki.mozilla.org/Booting_to_the_Web">started</a> in 2011 and is based on the Linux kernel and Gecko rendering engine. The entire user interface is built using web technologies (HTML, CSS and JavaScript) and can be used to launch and use <a href="/en-US/Apps">web applications</a>. Since Mozilla <a href="https://discourse.mozilla-community.org/t/firefox-os-connected-devices-announcement/6864">discontinued</a> their commercial Firefox OS smartphone program the smartphone part of the project is entirely maintained by Mozilla's volunteer community, and branded as B2G OS.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13140/B2g_wordmark.png" style="display: block; margin: 0 auto;"></p>
+
+<h2 id="Index_of_pages">Index of pages</h2>
+
+<dl>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Automated_testing">Automated Testing of B2G OS</a></dt>
+ <dd class="landingPageList">This page offers articles that provide information about various aspects of testing B2G OS, including running different tests, automation, and result reporting and tracking.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Add-ons">B2G OS add-ons</a></dt>
+ <dd class="landingPageList">You should follow the below steps to get set up to start developing extensions.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/API">B2G OS APIs</a></dt>
+ <dd class="landingPageList">List of B2G OS APIs</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Architecture">B2G OS architecture</a></dt>
+ <dd class="landingPageList">This article is a high-level overview of the architecture of the B2G OS platform, introducing key concepts and explaining how its components interact at a basic level.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/B2G_OS_build_prerequisites">B2G OS build prerequisites</a></dt>
+ <dd class="landingPageList">Before obtaining the code to build B2G OS, even if you are simply trying to build Gaia, you need a properly configured <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions">build system</a> — this page shows you how. You can currently build on 64-bit Linux distributions and OS X.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Phone_guide">B2G OS phone guide</a></dt>
+ <dd class="landingPageList">This section contains developer information relevant to specific phones that run B2G OS — both developer and consumer devices.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS">Building and installing B2G OS</a></dt>
+ <dd class="landingPageList">The articles listed on this page will guide you through building and installing B2G OS on an emulator or compatible device, or the <a href="/en-US/docs/Mozilla/B2G_OS/Platform/Gaia/Introduction_to_Gaia" title="Mozilla/B2G_OS/Platform/Gaia/Introduction to Gaia">Gaia</a> user interface in the Firefox browser.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Building">Building B2G OS</a></dt>
+ <dd class="landingPageList">Once you've <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">set up your build system</a> and performed your <a href="/en-US/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build" title="Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build">initial pull and configure</a>  the code, you can build Boot to Gecko. This guide explains how.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Building_the_B2G_OS_simulator">Building the B2G OS Simulator</a></dt>
+ <dd class="landingPageList">Just like <a href="http://nightly.mozilla.org" title="http://nightly.mozilla.org">Firefox Nightlies</a>, the B2G OS simulator desktop client (identified by <em>b2g-</em>) is automatically built every day from the latest source code. The latest build is <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">available from the Mozilla FTP server</a>. Be sure to pick the latest version and the right archive for your operating system. This lets you bypass having to build it yourself. In addition, you don't have to download Gaia on your own either.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G</a></dt>
+ <dd class="landingPageList">Depending on your specific needs, you have an assortment of options to consider when experimenting with Firefox OS or the <a href="/en/Mozilla/Boot_to_Gecko/Introduction_to_Gaia" title="en/Mozilla/Boot_to_Gecko/Introduction_to_Gaia">Gaia</a> user interface. You can choose among the following options; each has its advantages and disadvantages to consider, and some are more flexible than others.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Crash_Reporting_Guide_for_Firefox_OS_Partners">Crash Reporting Guide for Firefox OS Partners</a></dt>
+ <dd class="landingPageList">Mozilla has a world-class system for collecting, analyzing, and fixing crashes and other stability issues such as hangs. Firefox OS partners need to work with Mozilla to correctly enable crash reporting and upload symbols.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a></dt>
+ <dd class="landingPageList">The <code>.userconfig</code> file isn't checked into source code control, so your changes won't be overwritten when you update your source tree. It needs to be created in the <a href="https://github.com/mozilla-b2g/B2G">root of the B2G tree</a>; that is, in the same directory as <code>flash.sh</code>, <code>build.sh</code>, and so forth. You should add this before you run your config and build steps.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Debugging">Debugging on Firefox OS</a></dt>
+ <dd class="landingPageList">There are two main types of debugging you'll want to with Firefox OS: debugging apps, and debugging other aspects of the system.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Developer_Mode">Developer Mode</a></dt>
+ <dd class="landingPageList">The current Firefox OS permissions model precludes modification and installation of certified/internal apps, which makes some device APIs completely unavailable to Marketplace and web apps. <strong>Developer Mode (DM)</strong> allows the user to indicate that they would like to relax the permissions model and expose all device APIs to content, as well as setting a group of related preferences. This article provides a high-level overview.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Developing_Firefox_OS">Developing Firefox OS</a></dt>
+ <dd class="landingPageList">This section provides useful documentation covering different ways in which Firefox OS (codename Boot2Gecko, or B2G) can be modified/customized during the build process, and how you can help to develop the low level platform areas such as <a href="/en-US/docs/Mozilla/Gecko">Gecko</a> and <a href="/en-US/Firefox_OS/Platform/Gonk">Gonk</a>.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Firefox_OS_apps">Firefox OS apps</a></dt>
+ <dd class="landingPageList">This section of the Firefox OS docs covers the specific techniques required — and available tools — for building Firefox OS apps. You'll find a number of details below, from Firefox OS building blocks/web components, to device APIs and App installation.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Board_guide">Firefox OS board guide</a></dt>
+ <dd class="landingPageList">This section contains developer information relevant to specific phones that run Firefox OS — both developer and consumer devices.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Releases">Firefox OS developer release notes</a></dt>
+ <dd class="landingPageList">This section provides articles covering each new release of Gaia and Gecko for Firefox OS, explaining what features were added and bugs eliminated in each update. There is also a linked summary table showing what APIs are supported by each version of Firefox OS.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Security">Firefox OS security</a></dt>
+ <dd class="landingPageList">The following articles cover security-related topics about Firefox OS. This includes overall security features as well as application security and how the install process is kept secure.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Simulator">Firefox OS Simulator</a></dt>
+ <dd class="landingPageList"><span style="line-height: 1.5;">The Firefox OS Simulator is <span style="line-height: 1.5;">a version of the higher layers of Firefox OS</span> that simulates a Firefox OS device, but runs on the desktop</span><span style="line-height: 1.5;">. This means that in many cases, you don't need a real device to test and debug your app. </span><span style="line-height: 1.5;">It runs in a window the same size as a Firefox OS device, includes the Firefox OS user interface and built-in apps, and simulates many of the Firefox OS device APIs.</span></dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Firefox_OS_usage_tips">Firefox OS usage tips</a></dt>
+ <dd class="landingPageList">Explains all of the developer features on the phone and what they do (Settings &gt; Device information &gt; More information &gt; Developer)</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia">Gaia</a></dt>
+ <dd class="landingPageList">Gaia is B2G OS's user interface and suite of default apps: it includes the lock screen, home screen, dialer, and other applications. Essentially, Gaia is a set of complex web apps that runs on top of the B2G OS platform. This set of articles covers all you need to know to contribute to the Gaia project.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></dt>
+ <dd class="landingPageList">Once you've built Boot to Gecko for a <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Have_a_compatible_device_or_use_an_emulator">supported mobile device</a>, you can install it. This article will guide you through the process.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Introduction">Introduction to Firefox OS</a></dt>
+ <dd class="landingPageList">This set of documentation is aimed mainly at web developers and platform developers who want to learn how Firefox OS works, how to contribute to the project, and how to build their own custom versions of the software and install it on devices. For those who want to create and distribute their own web apps, the <a href="/en-US/Apps">App Center</a> and <a href="/en-US/Marketplace">Marketplace Zone</a> are good places to go.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Mulet">Mulet</a></dt>
+ <dd class="landingPageList">Following this guide you're going to run Gaia inside of a special build of Firefox called Firefox Mulet. This gives you the advantages of having a rapid development cycle, as well as standard web development tools and debuggers available to work with. First of all, you need to have the <a class="external external-icon" href="https://github.com/mozilla-b2g/gaia">Gaia</a> repo cloned on your machine and build your own profile. Then, you have to install mulet and run it, passing your Gaia profile as the profile to use.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Quickstart">Open web apps quickstart</a></dt>
+ <dd class="landingPageList">Quickstart information on coding Open Web Apps.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Pandaboard">Pandaboard</a></dt>
+ <dd class="landingPageList">This is a guide to setting up Firefox OS on a <a href="http://pandaboard.org/" title="http://pandaboard.org/">PandaBoard</a>. The PandaBoard is a low-cost OMAP 4 based development board for developing mobile operating systems.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/PasscodeHelper_Internals">PasscodeHelper Internals</a></dt>
+ <dd class="landingPageList">PasscodeHelper is a Gaia helper library for modifying and checking the Firefox OS lockscreen passcode (i.e., pin) from within Gaia, performing functions such as checking whether an entered passcode is correct, and changing the code. This article documents how PasscodeHelper works.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Porting_B2G_OS">Porting B2G OS</a></dt>
+ <dd class="landingPageList">This page lists the available resources for porting B2GOS.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first B2G build</a></dt>
+ <dd class="landingPageList">Depending on your internet connection, the configuration steps may take several hours to download everything you need to build B2G OS. Waiting is not as fun as doing, so after you have read through this page and have kicked off the configure script, consider using the time to set up and try out the <a class="vt-p" href="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator" title="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator">B2G OS simulator</a>, begin familiarizing yourself with <a class="vt-p" href="/en-US/docs/Apps" title="/en-US/docs/Apps">Documentation for app developers</a> including Designing and Building an App, or familiarize yourself with the information on upcoming steps.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Resources">Resources</a></dt>
+ <dd class="landingPageList"><em>Resources for App hackers, as generated from our workshops</em></dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Running_Tests_on_Firefox_OS_for_Developers">Running tests on Firefox OS: A guide for developers</a></dt>
+ <dd class="landingPageList">If you are a Gecko developer, then you should review the Firefox OS-specific documentation for the test automation you are already familar with: <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests">mochitest</a>, <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests">reftest</a>, and <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/XPCShell">xpcshell</a>.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Platform">The B2G OS platform</a></dt>
+ <dd class="landingPageList">The B2G OS platform consists of many components. While you don't need to understand its architecture in order to build applications that run on B2G OS, if you're working on developing or porting the platform — or are simply curious — the following documentation may be of interest to you.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Troubleshooting">Troubleshooting B2G OS</a></dt>
+ <dd class="landingPageList">This article provides tips for resolving common problems you may have while using B2G OS.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Using_the_App_Manager">Using the App Manager</a></dt>
+ <dd class="landingPageList">The App Manager is a tool for Firefox Desktop which provides a number of useful tools to help developers test, deploy and debug HTML5 web apps on Firefox OS phones &amp; Simulator, directly from Firefox browser. This page documents how to use the App Manager.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Using_the_B2G_emulators">Using the B2G emulators</a></dt>
+ <dd class="landingPageList">This article provides a brief guide to some key things you should know when using the boot to Gecko emulators. This doesn't appear to be a complete user manual; instead, it simply tells you a few useful things that you might not learn on your own.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Web_applications">Web applications</a></dt>
+ <dd class="landingPageList">This page is intended to be a first, non thorough, attempt to collect web apps.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Bluetooth_API">Web Bluetooth API (Firefox OS)</a></dt>
+ <dd class="landingPageList">The Web Bluetooth API lets an open web app discover, pair with, and connect to Bluetooth devices. As it is a completely experimental and non-standard API, the Bluetooth API is currently available for certified applications only. However, there is some traction to have such an API available for regular Web content; this will be discussed as part of the <a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a>.</dd>
+ <dt class="landingPageList"><a href="/en-US/docs/Archive/B2G_OS/Web_Telephony_API">Web Telephony API</a></dt>
+ <dd class="landingPageList">Web Telephony is an API that makes it possible for web content to handle voice phone calls using JavaScript.</dd>
+</dl>
+
+<h2 id="Old_page_content">Old page content</h2>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>:  <a href="https://wiki.mozilla.org/B2G/Transition_Project/Call_For_Contribution">Call for contribution</a> &amp; <a href="https://discourse.mozilla-community.org/t/updated-9th-july-call-for-app-maintainers-adopt-an-app/9300/1">Call for App adoption</a> has been made to gather more people, feel free to share it !</p>
+</div>
+
+<div class="column-container">
+<div class="column-third">
+<h2 id="How_you_can_help">How you can help</h2>
+
+<ul>
+ <li>File &amp; fix bugs (meta bug is <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1252143" rel="nofollow">bug 1252143</a>)</li>
+ <li>Help us fix failing <a class="external text" href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing" rel="nofollow">tests</a></li>
+ <li>Port a gaia <a href="https://mozilla-b2g.github.io/gaia/">smartphone app</a>:
+  <ol>
+   <li>Turn it into a webapp (or)</li>
+   <li>Turn it into chrome:// (<a href="https://discourse.mozilla-community.org/t/why-gaia-apps-are-turned-to-chrome/8011">why?</a>) &amp; report back<span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span></li>
+  </ol>
+ </li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Porting_B2G_OS">Port B2G OS to your phone</a> or help us to maintain a port</li>
+ <li>Help improve translate this documentation &amp; wiki</li>
+ <li>Propose &amp; implement new smartphone features</li>
+</ul>
+</div>
+
+<div class="column-third">
+<h2 id="Get_involved">   Get involved</h2>
+
+<ul>
+ <li>Mailing list (<a class="external text" href="https://lists.mozilla.org/listinfo/dev-fxos" rel="nofollow">dev-fxos</a>)</li>
+ <li><a class="external text" href="https://wiki.mozilla.org/IRC" rel="nofollow">IRC</a> (irc.mozilla.org Channel: #b2g)</li>
+ <li><a href="https://discourse.mozilla-community.org/c/b2g-os-participation">Discourse </a></li>
+ <li><a class="external text" href="https://telegram.me/B2GOS" rel="nofollow">Telegram Group</a></li>
+ <li>Follow us on <a href="https://twitter.com/Boot2Gecko">Twitter</a>, or just look for <a href="https://twitter.com/hashtag/B2GOS?src=hash">#B2GOS</a></li>
+ <li><a href="https://wiki.mozilla.org/B2G/Transition_Project/Working_Groups">Working Groups</a></li>
+ <li>Documentation issues tracker on <a href="https://github.com/mozilla-b2g/B2GOS-community/issues">GitHub</a></li>
+ <li><a class="external text" href="https://wiki.mozilla.org/B2G/Meeting" rel="nofollow">B2G Weekly Meeting</a> for engineering status updates</li>
+</ul>
+
+<p>To participate in meetings and community Working Groups meetings, register on this <a href="https://calendar.google.com/calendar/embed?src=mozilla.com_2d3638353137343333373332@resource.calendar.google.com">Calendar</a>. They are announced on <a href="https://discourse.mozilla-community.org/c/b2g-os-participation">Discourse</a>, where you can find information about how to attend &amp; notes.</p>
+</div>
+
+<div class="column-third">
+<h2 id="Compatible_devices">Compatible devices</h2>
+
+<ul>
+ <li><a href="https://discourse.mozilla-community.org/t/building-b2g-os-for-aries-z3c/8082">Sony Xperia Z3C</a> (developer phone)</li>
+ <li><a href="https://discourse.mozilla-community.org/t/flame-builds/8548">Flame </a>(developer phone)</li>
+ <li><a href="https://discourse.mozilla-community.org/t/zte-open-c/8402">ZTE Open C</a></li>
+ <li><a href="https://discourse.mozilla-community.org/t/test-b2gos-on-nexus-5/9405/1">Nexus 5</a></li>
+ <li>WileyFox Swift</li>
+ <li>Nexus 4 (WIP*)</li>
+ <li><a href="https://discourse.mozilla-community.org/t/fairphone-2-support-for-b2g-installer-landed/8334">Fairphone 2 </a> (WIP*)</li>
+ <li><a href="https://discourse.mozilla-community.org/t/b2g-os-flamingo-sony-xperia-e3-builds/8361">Sony Xperia E3 </a> (WIP*)</li>
+ <li><a href="https://discourse.mozilla-community.org/t/support-for-amami-xperia-z1c-building-debugging-providing-builds/8348">Sony Xperia Z1C</a> (WIP*)</li>
+ <li><a href="https://discourse.mozilla-community.org/t/wip-xiaomi-redmi-1s-hongmi-1s/10273">Xiaomi Redmi 1S</a> (WIP*)</li>
+</ul>
+
+<p>For more information see this <a href="/en-US/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">page</a>.<br>
+ Flash you device easily with <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS/B2G_installer_add-on">B2G installer</a>.<br>
+ Your device is not in the list ? Try <a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Mulet">Mulet </a>on desktop.</p>
+
+<p>*WIP = Work In Progress.</p>
+</div>
+</div>
+
+<div class="hidden">
+<h2 id="Subnav">Subnav</h2>
+
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Archive/B2G_OS">B2G OS</a></strong></li>
+ <li><strong><a href="/en-US/docs/Archive/B2G_OS/Firefox_OS_apps">Firefox OS apps</a></strong></li>
+ <li class="toggle">
+  <details><summary><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS">Build and install</a></summary>
+  <ol>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building">Building B2G OS</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary><a href="/en-US/docs/Archive/B2G_OS/Porting_B2G_OS">Porting B2G OS</a></summary>
+  <ol>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia">Developing Gaia</a></summary>
+  <ol>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+   <li><a href="/en-US/docs/Archive/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+  </ol>
+  </details>
+ </li>
+ <li><a href="/en-US/docs/Archive/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section>
+</div>

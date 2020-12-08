@@ -1,0 +1,126 @@
+---
+title: Hacking Gaia
+slug: Archive/B2G_OS/Platform/Gaia/Hacking
+translation_of: Firefox_OS/Developing_Gaia
+---
+<div class="warning">
+ <p>Aquesta pàgina està dirigida a desenvolupadors Gaia. Si busques sobre com crear i arrencar una aplicació Firefox OS, tindries que consultar <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Creant i instal·lant una pàgina Firefox OS</a>.</p>
+</div>
+<p>Gaia és un conjunt <a href="https://developer.mozilla.org/apps" rel="nofollow">d'aplicacions web</a> que formen la cara visible de <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>. Tot el que veus a la pantalla de Firefox OS està creat amb tecnología web de codi obert. Això inclou la pantalla inicial i les seves aplicacions inicials. </p>
+<h2 id="Obtenint_el_codi">Obtenint el codi</h2>
+<p>Per obternir el codi font de Gaia, <a href="https://github.com/mozilla-b2g/gaia" title="https://github.com/mozilla-b2g/gaia">fork us on GitHub</a> and then clone your fork using <a href="http://git-scm.com/" title="http://git-scm.com/">git</a>.</p>
+<pre>$ git clone https://github.com/mozilla-b2g/gaia.git</pre>
+<h2 id="Running_Gaia">Running Gaia</h2>
+<p>You can either run Gaia on the desktop, in Firefox, or on a compatible mobile device.</p>
+<h3 id="B2G_desktop">B2G desktop</h3>
+<p>B2G desktop is a desktop build of the app runtime used on Firefox OS devices which you can use to run Gaia on your desktop computer.</p>
+<p>You can download a nightly build of B2G desktop from <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">here</a>. Depending on what version you are targeting, you may want a specific version of latest-mozilla-b2g18. There are builds for Linux (32 bit and 64 bit), Mac OS X and Windows.</p>
+<p>Nightly builds come packaged with a recent version of gaia. Once you've downloaded the archive, all your need to do is extract it to a folder and run the b2g binary from the extracted folder.</p>
+<pre>$ cd b2g
+$ ./b2g</pre>
+<p>To run B2G with your own version of Gaia for development purposes you first need to build a profile from your clone:</p>
+<pre>$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+<p>This will generate a directory in your <code>gaia</code> directory called <code>profile</code>. The <code>DEBUG</code> part runs Gaia as hosted apps on a built-in web server, rather than the default packaged apps which have to be re-packaged after every change. You can find the path to the profile directory by taking a look at last line of output after running the above command, which should look like:</p>
+<pre>Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+<p>You can then run B2G Desktop with your generated profile like so:</p>
+<pre>$ ./b2g /path/to/gaia/profile</pre>
+<p>If you want to you can build your own B2G desktop from source.</p>
+<h3 id="Using_Gaia_in_Firefox">Using Gaia in Firefox</h3>
+<p>It's also possible to run Gaia inside of Firefox. This gives you the advantages of having a rapid development cycle, as well as standard web development tools and debuggers. See <a href="/en-US/docs/Mozilla/Firefox_OS/Using_Gaia_in_Firefox" title="/en-US/docs/Mozilla/Firefox_OS/Using_Gaia_in_Firefox">Using Gaia in Firefox</a> for details on how to do this.</p>
+<h3 id="Using_Gaia_on_a_device">Using Gaia on a device</h3>
+<p>If you have a compatible mobile device you can also run Gaia by flashing it with Firefox OS. See <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Building and installing Firefox OS</a> for details on how to do this. We also have documentation for <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing">how to test Firefox OS</a>.</p>
+<h2 id="Unit_tests">Unit tests</h2>
+<p>See <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia unit tests</a> for documentation about how to create and run unit tests for Gaia.</p>
+<h2 id="Filing_bugs">Filing bugs</h2>
+<p>Bugs are filed on Bugzilla under <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---" rel="nofollow">Boot2Gecko &gt; Gaia</a>. File a new bug <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Boot2Gecko" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Boot2Gecko">under the Gaia component</a> (or one of the sub-components).</p>
+<h2 id="Contributing_to_Gaia">Contributing to Gaia</h2>
+<p>Mozilla depends on contributions from the open source community to help develop Gaia apps and we'd love you to get involved.</p>
+<p>Some great places to find some bugs to start hacking on:</p>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component:gaia%20sw:polish%20@nobody;list_id=4566236" rel="nofollow">Unowned Gaia polish bugs on Bugzilla</a></li>
+ <li><a href="http://www.joshmatthews.net/bugsahoy/?b2g=1" rel="nofollow">Mentored bugs</a></li>
+</ul>
+<h3 id="Coding_style_basics">Coding style basics</h3>
+<ul>
+ <li>Background:
+  <ul>
+   <li><a href="/en-US/docs/Developer_Guide/Coding_Style#General_practices" title="Developer_Guide/Coding_Style#General_practices">Coding Style: General practices</a></li>
+   <li><a href="/en-US/docs/Developer_Guide/Coding_Style#JavaScript_practices" title="Developer_Guide/Coding_Style#JavaScript_practices">Coding Style: JavaScript practices</a></li>
+   <li><a href="/en-US/docs/Developer_Guide/Coding_Style#Naming_and_formatting_guide" title="Developer_Guide/Coding_Style#Naming_and_formatting_guide">Coding Style: Naming and formatting guide</a></li>
+  </ul>
+ </li>
+ <li>Make sure HTML files are declared <code>&lt;!DOCTYPE html&gt;</code> (that is, as HTML5 documents). If you don't, Internet Explorer 9 and later will load them in compatibility mode.</li>
+ <li>Include the <code>"use strict";</code> statement (just like that, including the quotes) to the top of your JavaScript files to put them into strict mode.</li>
+ <li>Always use two spaces for indentation, rather than tabs.</li>
+ <li>Please use line breaks to separate logical bits of code!</li>
+ <li>Multi-word file names should use the "underscore" character to separate words, <code>like_this.js</code>.</li>
+ <li>Use single quotes instead of double quotes for strings.</li>
+</ul>
+<h4 id="Additional_rules">Additional rules</h4>
+<p>Bad:</p>
+<pre>if (expression) doSomething();
+</pre>
+<p>Correct:</p>
+<pre>if (expression) {
+  doSomething();
+}
+</pre>
+<p>If you're working on the system app, check out the guidance listed <a href="https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ" title="See_here_for_some_rules._https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">here</a>.</p>
+<p>Before submitting a patch we recommend you run <a href="http://closure-linter.googlecode.com/svn/trunk/closure_linter/gjslint.py" title="http://closure-linter.googlecode.com/svn/trunk/closure_linter/gjslint.py">gjslint</a> on it to check for any style errors:</p>
+<pre>gjslint --nojsdoc my_file.js</pre>
+<h3 id="Submitting_a_patch">Submitting a patch</h3>
+<p>First file or assign a bug to yourself on <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?product=Boot2Gecko&amp;component=Gaia&amp;resolution=---">Bugzilla</a>, you'll need a Bugzilla account.</p>
+<p>Then create a branch on your fork of Gaia:</p>
+<pre>$ git branch branchname
+$ git checkout branchname</pre>
+<p>Commit your changes:</p>
+<pre>$ git add /file/to/add
+$ git commit -m "Bug XXXXX - Fix the broken Gaia and save the world"</pre>
+<p>Push your branch:</p>
+<pre>$ git push origin branchname</pre>
+<p>Send a pull request by navigating to the branch in your fork on GitHub and finding the pull request button.</p>
+<p>To request a review of your patch, <a href="http://globau.wordpress.com/2013/10/21/github-pull-requests-and-bugzilla/">attach the pull request</a> to the bug in Bugzilla by referencing the URL of the pull request, and set the review ("r") flag to "?" and enter the bugzilla ID of one of the <a href="https://wiki.mozilla.org/Modules/FirefoxOS" title="https://wiki.mozilla.org/Modules/FirefoxOS">module owners and peers</a> (very important - otherwise your bug will not likely be seem by anyone). The <a href="https://addons.mozilla.org/en-US/firefox/addon/github-tweaks-for-bugzilla/" title="https://addons.mozilla.org/en-US/firefox/addon/github-tweaks-for-bugzilla/">Github tweaks for bugzilla extension on AMO</a> can help automate this process by automatically creating the attachment and adding it to the bug; you will still need to set the review flag on Bugzilla.</p>
+<p>The reviewer may ask you to make some changes; you may need to amend the original commit and force push it to the original branch/pull request. Once they're is happy with your patch, they will merge it into the master branch for you. Before they do this they would prefer it if you could squash all your changes into a single commit, so your contribution can be tracked easily.</p>
+<p>The person who merge the commit (usually the reviewer) would add a <code>r=</code> flag in the comment of the merge commit.</p>
+<h2 id="Make_options">Make options</h2>
+<p>There are many undocumented nor unsupported environment variable presists in the Makefile. Do not depend on them as they may be removed in the future.</p>
+<h3 id="Default">Default</h3>
+<pre>make</pre>
+<p>Make a profile with packaged apps, lunachable by B2G Desktop and can be pushed to device.</p>
+<h3 id="Debug_make">Debug make</h3>
+<pre>DEBUG=1 make</pre>
+<p>The <code>DEBUG</code> part runs Gaia as hosted apps on a built-in web server, rather than the default packaged apps which have to be re-packaged after every change. Launch the profile with the latest Firefox Nightly will also give you nice B2G specific panels on the Firefox Developer Tools.</p>
+<h3 id="Push_to_device">Push to device</h3>
+<pre>make install-gaia
+
+make reset-gaia</pre>
+<p>With <code>adb</code> (Android Debug Bridge) setup, these make targets will push Gaia to the device. <code>reset-gaia</code> will purge the profile and all other webapps before pushing the new Gaia copy.</p>
+<h3 id="Selective_build">Selective build</h3>
+<pre>APP=system make
+
+APP=system make install-gaia</pre>
+<p>With a profile already exists, <code>APP</code> allow you to specify which app to re-package, instead of re-pack and re-push all the Gaia apps.</p>
+<h3 id="High_resolution_image_assets">High resolution image assets</h3>
+<pre>GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+<p>When packaging the app, replace images with their <code>*@1.5x.(gif|jpg|png)</code> ones if such image exists.</p>
+<p>Gaia is currently targetting HBGA (320x240), qHD (540×960) and WVGA (480×800) only; use GAIA_DEV_PIXELS_PER_PX to make sure the images looks sharp on qHD and WVGA devices. see <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">A pixel is not a pixel</a> for more information about device pixels per css pixels.</p>
+<h3 id="Script_compression_and_optimization">Script compression and optimization</h3>
+<pre>GAIA_OPTIMIZE=1 make</pre>
+<p>Concate and optimize build-in app's javascript to improve load time.</p>
+<h3 id="Preference_shortcuts">Preference shortcuts</h3>
+<pre>NOFTU=1
+</pre>
+<p>Disable First time user guide.</p>
+<pre>REMOTE_DEBUGGER=1</pre>
+<p>Enable debug with adb tool</p>
+<pre>DEVICE_DEBUG=1</pre>
+<p>While in OS version &gt; 1.2, specify this param when you want debug FirefoxOS webapp with App Manager</p>
+<h3 id="Distribution_and_market_customization_build">Distribution and market customization build</h3>
+<pre>GAIA_DISTRIBUTION_DIR=./dir</pre>
+<p>Read <a href="https://wiki.mozilla.org/B2G/MarketCustomizations" title="https://wiki.mozilla.org/B2G/MarketCustomizations">Customization Overview</a> for detail.</p>
+<h2 id="Contacting_the_Team">Contacting the Team</h2>
+<ul>
+ <li><a href="https://lists.mozilla.org/listinfo/dev-gaia" rel="nofollow">Gaia Mailing List</a></li>
+ <li>#gaia IRC channel on irc.mozilla.org</li>
+</ul>

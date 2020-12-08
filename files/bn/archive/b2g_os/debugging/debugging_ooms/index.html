@@ -1,0 +1,63 @@
+---
+title: Debugging out of memory errors on Firefox OS
+slug: Archive/B2G_OS/Debugging/Debugging_OOMs
+translation_of: Archive/B2G_OS/Debugging/Debugging_OOMs
+---
+<div class="summary">
+ <p>Firefox OS/B2G runs on severely memory-constrained devices, and it's easy for apps to exhaust the memory available on the system.  When a process exhausts the memory available on the system, the kernel must kill some other processes in order to free up memory.  When the kernel chooses to kill the foreground process, this manifests as an apparent crash of the app you're using. This article describes how B2G's multiprocess architecture affects what the phone does when we run out of memory, and how to understand and debug OOM crashes.</p>
+</div>
+<h2 id="Process_priorities">Process priorities</h2>
+<p>B2G uses multiple processes when it runs on a phone — one "main process" and potentially many "child processes".  Every app runs in its own child process, with one exception: The browser app runs in the main process, while the tabs inside the browser app each run in their own child process. The process we kill when we run out of memory isn't necessarily the one that "caused" the out-of-memory condition.  B2G assigns priorities to each process based on how important it thinks the process is, and when the system runs out of memory, it kills process strictly in order of priority.</p>
+<p>A process's priority is known as its <code>oom_adj</code>.  Smaller <code>oom_adj</code> values correspond to higher priority processes. Killing the main process kills all child processes and effectively reboots the phone, so we never want to kill the main process.  Therefore, the main process runs with <code>oom_adj 0</code>.</p>
+<p>Most child processes run with <code>oom_adj 2</code> while they're in the foreground.  Child processes in the background run with <code>oom_adj</code> between <code>3</code> and <code>6</code> (inclusive).  Exactly what <code>oom_adj</code> a child process while in the background gets depends on a number of factors, such as whether it's playing sound, whether it's the homescreen app, and so on.</p>
+<h2 id="Debugging_an_OOM_crash">Debugging an OOM crash</h2>
+<p>Suppose you have a reproducible crash that you suspect is caused by the phone running out of memory.  The following are steps you can take to understand more about what's going wrong.</p>
+<h3 id="Step_1_Verify_that_it's_actually_an_OOM">Step 1: Verify that it's actually an OOM</h3>
+<p>First, we need to check whether the crash is actually due to the phone running out of memory.  To do this, run <code>adb shell dmesg</code>.  If the app is being killed due to OOM, you'll see something like the following response:</p>
+<pre class="brush: bash">&lt;4&gt;[06-18 07:40:25.291] [2897: Notes+]send sigkill to 2897 (Notes+), adj 2, size 30625</pre>
+<p>This line indicates that the phone's low-memory killer killed the Notes+ app (process id 2897), which had <code>oom_adj 2</code> when it was killed.  The size reported here is in pages, which are 4kb each.  So in this case, the Notes+ app was using 30625 * 4kb = 120mb of memory.</p>
+<h4 id="Digression_If_it's_not_an_OOM">Digression: If it's not an OOM</h4>
+<p>If you don't see a line like this in the <code>dmesg</code> output, your crash is likely not an OOM.  The next step in debugging such a crash is usually to attach <code>gdb</code> to the crashing process and get a backtrace, which can be done like so:</p>
+<pre class="brush: bash">$ cd path/to/B2G/checkout
+$ adb shell b2g-ps
+# Note pid of the app that you're going to crash
+$ ./run-gdb.sh attach &lt;pid&gt;
+(gdb) continue
+# crash the app
+(gdb) bt</pre>
+<p>When reporting the bug, attach this output, along with the output of <code>adb logcat</code>. If your crash is due to OOM, a <code>gdb</code> backtrace is probably not interesting, because an OOM crash is triggered by a signal sent from the kernel, not by bad code that the process executes.</p>
+<h3 id="Step_2_Collect_memory_reports">Step 2: Collect memory reports</h3>
+<p>After you've verified that your crash is actually due to OOM, the next step is to collect a memory report from the phone before the app crashes.  A memory report will help us understand where memory is being used. This step is a bit tricky because once an app crashes, there's no way to collect a memory report from that process.  There's also no way to trigger a memory report when the kernel tries to kill a process — by then, it's too late.</p>
+<p>To pull a memory report from the phone, first update your build tree so you get the latest version of the relevant tool.  <code>repo sync</code> is not sufficient; you must <code>git fetch &amp;&amp; git merge</code> or <code>git pull</code>:</p>
+<pre class="brush: bash">$ cd path/to/B2G/checkout
+$ git fetch origin
+$ git merge --ff-only origin</pre>
+<p>Now you can run the memory reporting tool like so:</p>
+<pre class="brush: bash">$ tools/get_about_memory.py</pre>
+<p>Once you get a memory report you're happy with, you can zip up the directory (named <code>about-memory-N</code>) and attach it to the relevant bug. But again, this is only helpful if you run this command while the app you care about is alive and using a lot of memory.  We have a few options here.</p>
+<h4 id="Step_2_option_1_Get_a_different_device">Step 2, option 1: Get a different device</h4>
+<p>Often the easiest thing to do is to get a device with more RAM.  You know from step 1 above how much memory the process used when it crashed, so you can simply wait until the process is using about that much memory, and then take a memory report. The <code>b2g-info</code> tool shows you how much memory the different B2G processes are using.  You can run this tool in a loop by doing something like the following:</p>
+<pre class="brush: bash">$ adb shell 'while true; do b2g-info; sleep 1; done'</pre>
+<p>If <code>b2g-info</code> isn't available on your device, you can use <code>b2g-procrank</code> instead.</p>
+<h4 id="Step_2_option_2_Fastest_finger">Step 2, option 2: Fastest finger</h4>
+<p>If you don't have access to a device with more RAM, you can try to run <code>get_about_memory.py</code> just before the app crashes.  Again, you can run <code>b2g-info</code> in a loop (as shown in the previous section) to figure out when to run <code>get_about_memory.py</code>. Running a memory report freezes all of the processes on the phone for a few moments, so it's often not difficult to grab a memory report soon before a process OOMs itself.</p>
+<h4 id="Step_2_option_3_Use_a_smaller_testcase">Step 2, option 3: Use a smaller testcase</h4>
+<p>We often hit OOMs when doing something like "loading a file of at least size X in the app."</p>
+<p>If the app crashes very quickly with a testcase of size X, you could try running a similar but smaller testcase (say, size X/2) and capturing a memory report after that succeeds.  The memory report generated this way often gives us good insights into the OOM crash that we ultimately care about.</p>
+<h4 id="Step_2_option_4_Run_B2G_on_your_desktop">Step 2, option 4: Run B2G on your desktop</h4>
+<p>If the worst comes to the worst, you can run B2G on your desktop, which probably has much more RAM than your FxOS phone.  This is tricky because B2G running on a desktop machine is a different in some key ways from B2G running on a phone.</p>
+<p>In particular, B2G on desktop machines has multiprocess disabled by default.  It doesn't really work 100% correctly anywhere, but it works most accurately on Linux and Mac.  (Follow <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=923961">Bug 923961</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=914584">Bug 914584</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=891882">Bug 891882</a>)  You can test on your desktop without multiprocess enabled, but in my experience a lot of our high memory usage issues are caused by our interprocess communication code, so that won't necessarily trigger the bug you're seeing.</p>
+<p>It's also not as convenient to take memory reports from a B2G desktop process.  On Linux, you can send signal 34 to the main B2G process and it'll write <code>memory-report-*.gz</code> files out to <code>/tmp</code>.<br>
+ <br>
+ One advantage to using B2G desktop builds is that you can use your favorite desktop debugging tools, such as Instruments on Mac OSX.  We've had a lot of success with this in the past. To collect a memory report using Instruments on OS X, choose "New -&gt; Mac OS X -&gt; Allocations". Start b2g-desktop and you should see multiple "plugin-container" processes in the activity monitor. You will need 2 Instruments activities: 1 to trace the allocations on the main b2g process and another to trace the allocations on the app you wish to analyze. Attach the instrument activities and execute your test case.</p>
+<p>To analyze how much memory your app is using, analyze call trees. Check the "Invert Call Tree" tick, and sort by bytes used. This will show you which part of your app is using lots of memory. Below is a screenshot of a sample analysis of memory usage for an app:</p>
+<p><img alt="Screen shot of instruments." src="https://mdn.mozillademos.org/files/6439/instrumentsScreenShot.png" style="width: 800px; height: 492px;"><br>
+ <br>
+ For more information on setting up B2G desktop builds, read our <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Hacking">Hacking Gaia</a> page.</p>
+<h3 id="Step_3_Analyze_the_memory_report">Step 3: Analyze the memory report</h3>
+<p>When you run <code>get_about_memory.py</code>, it will open a memory report in Firefox.  This file contains information about the memory usage of all processes on the system. Reading these reports can be a bit overwhelming at first, but it's not so bad once you get the hang of it.  Note that you can hover over any leaf node to get a description of what that node describes. What you're looking for is something "unusually large" in the crashing process.  You can get an idea of what "unusually large" means by capturing a memory report of your app when it's not using a ton of memory and comparing that to the errant memory report.</p>
+<p>Reading memory reports takes some practice, so feel free to ask for help.  The experts on this subject hang out in #memshrink on IRC.</p>
+<h3 id="Step_4_Rebuild_with_DMD_if_necessary">Step 4: Rebuild with DMD, if necessary</h3>
+<p>One common line item to stick out in memory reports captured before apps crash is <code>heap-unclassified</code>.  <code>heap-unclassified</code> counts memory allocated by the process that isn't covered by any other memory reporter.  If you have high <code>heap-unclassified</code>, the memory report can't tell you anything else about what that memory belongs to. Our tool for digging into <code>heap-unclassified</code> is called DMD.  This works on B2G, but you must <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">build B2G</a> yourself in order for it to work because DMD requires local symbols that are only kept on the build machine.</p>
+<p>To find out more information on running DMD and interpreting its output, read the <a href="https://wiki.mozilla.org/Performance/MemShrink/DMD">Mozilla Wiki DMD page</a>.<br>
+  </p>

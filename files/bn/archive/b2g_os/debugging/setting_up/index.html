@@ -1,0 +1,37 @@
+---
+title: Setting up to debug Firefox OS using Firefox developer tools
+slug: Archive/B2G_OS/Debugging/Setting_up
+translation_of: Archive/B2G_OS/Debugging/Setting_up
+---
+<div class="summary">
+ <p>ফায়ারফক্স  ও এস সমর্থন করে দূরবর্তী একই ডিবাগিং চুক্তিপত্র যা ফায়ারফক্স মোবাইল অ্যানড্রয়েডের উপর  সমর্থন করে।এটার মানে তুমি ফায়ারক্স ডেভেলপমেন্ট টুলস ব্যবহার করতে পারো ফায়ারফক্স ডিভাইস অথবা এর থেকে  উন্নত এর উপর গাইয়া অ্যাপলিকেশন চালিয়ে ডিবাগ করতে তোমার ফায়ারফক্স ডিভাইসের উপর অথবা  তোমার ফায়ারফক্স ডিভাইস সিমুলেটরের উপর ডিবাগ করতে,তোমার দরকার ফায়ারফক্স ১৮ অথবা পরেরটি ; আরো ,কিছু সেটিংস আছে যা তোমার ডেক্সটপ ব্রাউজারের কনফিগারেশনের এবং তোমার ফায়ারফক্স ও এস ডিভাইসের অথবা সিমুলেটরের পরিবর্তনে দরকার পরে।</p>
+</div>
+<div class="note">
+ <p><strong>নোটঃ যদি  তুমি ফায়ারফক্স ওএস ডিভাইসের উপর  অ্যাপস ডিবাগ করতে চাও, এবং  তুমি ফায়ারফক্স  </strong> ১.২ চালাচ্ছ  তোমার সবচেয়ে ভালো  অপশন  এখনি   <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a> ব্যবহার করা ।</p>
+</div>
+<h2 id="ফায়ারফক্স_ডেক্সটপ">ফায়ারফক্স ডেক্সটপ</h2>
+<p>তোমাকে নিশ্চিত হতে হবে যে তোমার ফায়ারফক্স ১৮ আর গঠন আছে অথবা পরে হবে ত্রুটি বিচ্যুতি দূর করার যন্ত্র।যদি তোমার ফায়ারফক্সের এইমাত্রের কপি না থেকে ,ডাউনলোড কর সর্বশেষ  <a href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nightly</a> গঠন সকল সর্বশেষ বিষয়ের সুবিধা পেতে।</p>
+<p>একদা তুমি তোমার কম্পিউটারে ফায়ারফক্সের একটি উপযুক্ত মাধ্যমের জন্য ছুটেছ, টাইপ কর, <code>about:config</code> ইউ আর এল বার এবং পরিবর্তন করো <code>devtools.debugger.remote-enabled</code> এর মানের  <code>true তে।তারপরে তোমার ফায়ারফক্সের ত্রুতিবিচ্যুতি দূর করার ক্ষমতা পেতে পুনরায় শুরু করতে হবে।ফায়ারফক্স নতুন করে শুরু করার পরে</code>,ওয়েব ডেভলপের মেনুর নয়ুন একটি অপ্শন হবে,উপাদান&gt;সংযোগ <em>.</em>..</p>
+<h2 id="ডিবাগিং_এর_ক্ষমতা_অর্জন">ডিবাগিং এর ক্ষমতা অর্জন</h2>
+<p>যখন  <a href="/en-US/docs/Tools/Firefox_OS_Simulator" title="Tools/Firefox OS Simulator">Firefox OS Simulator</a>ব্যবহার করা হয়(অথবা  বি ২জি  ডেক্সটপ),ডিবাগিং সেট করা খুব সহজ । তোমাকে সামনের দিকে অগ্রসরের জন্য কোন স্থানের দরকার নেই যেমন তুমি কর যখন একটি  বাস্তব ডিভাইসের ডিবাগিং হয়।সাধারণভাবে তোমার ডিভাইসের <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a>  খোলো এবং রিমুট ডিবাগিং এর   ক্ষমতা অর্জন করো।</p>
+<div class="warning">
+ <p> নোটঃ  ১০জানুয়ারী ,২০১৩  পর্যন্ত এতা ফায়ারফক্স   ও এস  ডিভাইসের  উপর কোনো কাজ করেনি।তারিখ অনুসারে,ফায়ারফক্স  ও এস ডিভাইস গঠন ডিবাগিং এ  অক্ষম হয়েছে।আনুষ্ঠানিকভাবে একটি  পথের তৈরি হবে তোমার নিজের গঠনের এটি  পুনরায় ক্ষমতা অর্জন  গঠন করতে,কিন্তু এটি এখন ও বিদ্যমান নয়।ঐটা ঘটার পরে  এই  দলিল  হালনাগাদ  হয়ে থাকবে।  আর ও যোগে ,প্রক্রিয়ার বাইরে বন্ধ করার  মূল্য  দেয়ার সমর্থন  সরিয়ে ফেলা হয়েছে।বর্তমানের জন্য ,ফায়ারফক্স ও এস সিমুলেটরে  তোমার দরকার  তোমার ডিবাগিং করা।</p>
+</div>
+<p>যদি একটি  বাস্তব ফায়ারফক্স ওএস ডিভাইস  ব্যবহার করা হয়, <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a>   খোলো  এবং :</p>
+<p>      .  রিমুট ডিবাগিং অন করা।</p>
+<p>     . আউট অফ প্রসেস  সমর্থন বন্ধ করা, {{bug(797627)}} ঠিক না হওয়ার পর্যন্ত। তা না করলে ,কেবল নিয়মের স্ক্রিপ্টগুলো ডিবাগ হতে পারে।</p>
+<div class="note">
+ <p><strong>  নোটঃযদি  তুমি  তোমার ডিভাইস ফ্ল্যাস কর , তোমার  এইসব  বাহ্যিক আকার পরিবর্তনের  আবার করা  দরকার পরবে।</strong></p>
+ <p>  এখন তুমি  <a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">use the debugger</a>  করতে প্রস্তুত  !</p>
+</div>
+<h2 id="একটি_ফায়ারফক্সের_ও_এস_ডিভাইসের_ফ্রেমের_গঠনের_জন্য_সক্ষম">একটি ফায়ারফক্সের ও এস ডিভাইসের ফ্রেমের গঠনের জন্য সক্ষম</h2>
+<p> </p>
+<h2 id="ফায়ারফক্স_ও_এস_গঠনের_উৎপাদনেলগিং_এর_ফ্রেম_গঠন_(উদাহরণ_হিসেবেdomxref(console.log()))_ভুলের_মাধ্যমে_অক্ষম_হয়েছে।._এটিকে_সক্ষম_করতেতোমার_ডিভাইসেরI_Developer_settings_এর_কাছে_যাও_এবং_ফ্রেমের_গঠন_সক্ষমকে_সক্ষম_করে।">ফায়ারফক্স  ও এস গঠনের উৎপাদনে,লগিং এর ফ্রেম গঠন (উদাহরণ হিসেবে{{domxref("console.log()")}})  ভুলের  মাধ্যমে অক্ষম হয়েছে।. এটিকে সক্ষম করতে,তোমার ডিভাইসেরI <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a> এর কাছে যাও এবং ফ্রেমের গঠন সক্ষমকে সক্ষম করে।</h2>
+<p> </p>
+<p>নোটঃ কিভাবে ফায়ারফক্স ও এস  এ লগিং গঠন  ব্যবহার করতে হয় সে  সমন্ধে  আরো জানার জন্য<a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">On-device console logging</a> পড়ো ।</p>
+<h2 id="আরো_দেখো">আরো দেখো</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging">Debugging on Firefox OS</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">Debugger</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Developer settings on Firefox OS</a></li>
+</ul>

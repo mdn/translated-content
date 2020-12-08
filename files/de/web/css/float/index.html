@@ -1,0 +1,109 @@
+---
+title: float
+slug: Web/CSS/float
+tags:
+  - CSS
+  - CSS Referenz
+translation_of: Web/CSS/float
+---
+<p>{{ CSSRef() }}</p>
+
+<h2 id="Übersicht">Übersicht</h2>
+
+<p>Die <code>float</code> Eigenschaft bestimmt, ob ein Element aus dem normalen Fluss herausgelöst werden soll und nachfolgende Inhalte auf der linken oder rechten Seite des gefloateten Elements platziert werden sollen.</p>
+
+<ul>
+ <li>Standardwert: <code>none</code></li>
+ <li>Anwendbar auf: alle Elemente</li>
+ <li>Vererbbar: Nein</li>
+ <li>Prozentwerte: Nein</li>
+ <li>Medium: visuell</li>
+ <li>berechneter Wert: wie festgelegt</li>
+</ul>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="eval">float:  left | right | none | inherit
+</pre>
+
+<h2 id="Werte">Werte</h2>
+
+<dl>
+ <dt>none</dt>
+ <dd>Standardwert. Das Element wird nicht umflossen.</dd>
+ <dt>left</dt>
+ <dd>Das Element wird nach links gerückt und die Inhalte des umliegenden Elements (containing block) werden rechts vom Element angeordnet.</dd>
+ <dt>right</dt>
+ <dd>Das Element wird nach rechts gerückt und die Inhalte des umliegenden Elements (containing block) werden links vom Element angeordnet.</dd>
+ <dt>inherit</dt>
+ <dd>Der Wert des Elternelements wird geerbt.</dd>
+</dl>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<p><a href="http://developer.mozilla.org/samples/cssref/float.html" rel="external nofollow">Live Beispiel</a></p>
+
+<pre class="brush: html">&lt;style type="text/css"&gt;
+  div { border: solid red;  max-width: 70ex; }
+  h4  { float: left;  margin: 0; }
+&lt;/style&gt;
+
+&lt;div&gt;
+  &lt;h4&gt;HELLO!&lt;/h4&gt;
+  This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text.
+&lt;/div&gt;
+</pre>
+
+<div style="border: solid red; max-width: 70ex;">
+<h4 id="HELLO!" style="float: left; margin: 0;">HELLO!</h4>
+This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</div>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spezifikation</th>
+   <th scope="col">Status</th>
+   <th scope="col">Kommentar</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
+   <td>{{Spec2('CSS Logical Properties')}}</td>
+   <td>Adds the values <code>inline-start</code> and <code>inline-end</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Box', '#float', 'float')}}</td>
+   <td>{{Spec2('CSS3 Box')}}</td>
+   <td>Lots of new values, not all clearly defined yet. Any differences in behavior, unrelated to new features, are expected to be unintentional; please report.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#float', 'float')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Kompatibilität">Browser <span>Kompatibilität</span></h2>
+
+{{Compat("css.properties.float")}}
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li><a href="/de/CSS/clear"><code>clear</code></a></li>
+ <li><a href="/de/CSS/Boxmodell">Boxmodell</a></li>
+</ul>
+
+<p>{{ languages( {"en": "en/CSS/float", "fr": "en/CSS/float", "es": "es/CSS/float", "pl": "pl/CSS/float"} ) }}</p>

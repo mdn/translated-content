@@ -1,0 +1,47 @@
+---
+title: contents.rdf
+slug: Theme_erstellen/contents.rdf
+tags:
+  - Themes
+translation_of: Archive/Themes/Creating_a_Skin_for_Firefox/contents.rdf
+---
+<p>Kopieren Sie den folgenden Text in ein neues Textdokument und speichern Sie es unter dem Namen »<code>contents.rdf</code>«:</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;!-- List all the skins being supplied by this theme --&gt;
+  &lt;RDF:Seq about="urn:mozilla:skin:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:skin:My_Theme"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:skin:My_Theme"
+        chrome:displayName="My Theme"
+        chrome:accessKey="N"
+        chrome:author="Name des Autors"
+        chrome:authorURL="Webseite des Autors"
+        chrome:description="Beschreibung"
+        chrome:name="My_Theme"
+        chrome:image="vorschaubild.png"&gt;
+   &lt;chrome:packages&gt;
+      &lt;RDF:Seq about="urn:mozilla:skin:My_Theme:packages"&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:browser"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:communicator"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:global"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:mozapps"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:help"/&gt;
+      &lt;/RDF:Seq&gt;
+    &lt;/chrome:packages&gt;
+  &lt;/RDF:Description&gt;
+
+  &lt;!-- Version Information. State that we work only with major version 1 of this package. --&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:browser"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:communicator"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:global"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:mozapps"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:help"/&gt;
+&lt;/RDF:RDF&gt;
+
+</pre>
+<p>{{ languages( { "fr": "fr/Cr\u00e9er_un_th\u00e8me_pour_Firefox/contents.rdf", "ja": "ja/Creating_a_Skin_for_Firefox/contents.rdf", "pl": "pl/Tworzenie_sk\u00f3rek_dla_Firefoksa/contents.rdf", "pt": "pt/Criando_um_visual_para_o_Firefox/contents.rdf", "en": "en/Creating_a_Skin_for_Firefox/contents.rdf", "zh-tw": "zh_tw/\u88fd\u4f5c_Firefox_\u4f48\u666f\u4e3b\u984c/contents.rdf" } ) }}</p>

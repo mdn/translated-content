@@ -1,0 +1,44 @@
+---
+title: b2g.sh স্ক্রিপ্ট নিজের মত করে সাজানো
+slug: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<div class="summary">
+ <p>ফোনে, <code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">বি২জি</a></code> অ্যাপ্লিকেশনটি (যা ফায়ারফক্স ওএস- এর এপিআইগুলোকে অন্যগুলোর ভিতর প্রদান করে) শুরু হয় <code>/system/bin/b2g.sh</code> স্ক্রিপ্টের মাধ্যমে। ফায়ারফক্স ওএস- এর ব্যবহার পরিবর্তন করার জন্য আপনি এই স্ক্রিপ্টটি নিজের মত করে সাজাতে পারবেন, এবং সেটা কিভাবে করবেন তা এই পরিচ্ছেদে বর্ণিত রয়েছে।</p>
+</div>
+<h2 id="ইন্ভাইরোন্মেন্ট_ভেরিয়েবেলগুলো_স্থাপন_করুন">ইন্ভাইরোন্মেন্ট ভেরিয়েবেলগুলো স্থাপন করুন</h2>
+<p>যদি আপনি বি২জি চালানোর জন্য একটি ইন্ভাইরোন্মেন্ট ভেরিয়েবেল স্থাপন করতে চান, তাহলে আপনি নিম্নক্তগুলো অনুসরণ করতে পারেন:</p>
+<pre class="brush: bash">adb shell stop b2g
+adb shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>যদি আপনি একই ইন্ভাইরোমন্ট ভেরিয়েবেলগুলো সব সময় ব্যবহার করতে চান, তাহলে আপনি <code>b2g.sh সম্পাদন করতে পারেন যা পরের শাখাতে বর্ণিত রয়েছে।</code></p>
+<h2 id="b2g.sh_সম্পাদন">b2g.sh সম্পাদন</h2>
+<p>ডিবাগিং এর জন্য, আপনি চাইলে তথ্যের মধ্যে ঢোকার অথবা অন্যথা প্রভাবিত করতে কিভাবে <code>b2g</code> প্রোগ্রাম চলে তার জন্য ইন্ভাইরোন্মেন্ট ভেরিয়েবেলগুলো স্থাপন করতে পারেন। আপনি ইহা করতে পারেন <code>b2g.sh</code> স্ক্রিপ্ট সম্পাদনের মাধ্যমে। ফোনে ফাইলটি সম্পাদন করার জন্য সেখানে কোন টুলস নেই, অতএব আপনাকে প্রথমে ইহা আপনার কম্পিউটারে কপি করতে হবে।</p>
+<ol>
+ <li>ফোনটিকে আপনার কম্পিউটারের সাথে সংযুক্ত করুন, একটি টার্মিনাল উইন্ডো খুলুন, এবং স্ক্রিপ্ট সম্পাদন করতে অনুসারিত আদেশ নির্বাহ করুন:
+  <pre>adb pull /system/bin/b2g.sh</pre>
+ </li>
+ <li>আপনার ইচ্ছানুযায়ী পরিবর্তন আনতে স্ক্রিপ্টটি সম্পাদন করুন। উদাহরণ সরূপ, ধরুন আপনি কিছু লগিং আউটপুট (যাতে একটি ডিবাগ বানানো দরকার হয়) দেখতে চাচ্ছেন, তারপর আপনি হয়তো কিছু যুক্ত করতে চাচ্ছেন যেমন:
+  <pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+ </li>
+ <li>আপনার হালনাগাদ <code>b2g.sh</code> স্ক্রিপ্টটি ফোনে সেভ করতে অনুসারিত আদেশগুলো চালান এবং পুনরায় <code>b2g</code> চালু করুন:
+  <pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+ </li>
+</ol>
+<div class="note">
+ <p><strong>Note:</strong> <code>/data/local/tmp</code> হল ফাইলসিস্টেম এর শুধুই একমাত্র জায়গা যেখানে বিষয়বস্তু প্রক্রিয়াগুলো দ্বারা লেখাযোগ্য।</p>
+</div>
+<h2 id="আরও_দেখুন">আরও দেখুন</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">ফায়ারফক্স ওএস তৈরি এবং সংস্থাপন করা</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">ফায়ারফক্স ওএস- এর স্থাপত্য সারসংক্ষেপ</a></li>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">ফায়ারফক্স ওএস- এ ডিবাগিং</a></li>
+</ul>
+<p> </p>

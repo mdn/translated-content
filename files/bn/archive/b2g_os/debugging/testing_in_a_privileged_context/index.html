@@ -1,0 +1,67 @@
+---
+title: 'Testing in a privileged context: Shipping your own Gaia apps'
+slug: Archive/B2G_OS/Debugging/Testing_in_a_privileged_context
+tags:
+  - Apps
+  - B2G
+  - Firefox OS
+  - Security
+  - Testing
+translation_of: Archive/B2G_OS/Debugging/Testing_in_a_privileged_context
+---
+<p>{{Previous("Mozilla/Firefox_OS/Debugging/Intercepting_traffic_using_a_proxy")}}</p>
+<div class="summary">
+ <p id="Testing_in_a_Privileged_Context.3A_Shipping_your_own_Gaia_Apps">যেহেতু আপনি দেখতে পারেন ,বাতিল জাভা স্ক্রীপ্ট আপনাকে   <a href="https://developer.mozilla.org/en-US/docs/WebAPI">all the shiny WebAPIs  </a>এর সম্পুর্ন সুবিধা দিবে না।এই অ্যাপের কারনে একটি বিশেষ অ্যাপি ব্যবহার করতে ,ইহা রিকুয়েস্ট করে থাকে ঐ অ্যাপির সুবিধা পাওয়ার জন্য  ইহার <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest">manifest</a> তে।এই অনুচ্ছেদ আগে তাদের মার্কেটপ্লেসে জমা দেয়ার আগে আপনাকে অ্যাপ ব্যবহারের সুবিধা দিবে পরীক্ষা করার জন্য।</p>
+</div>
+<p>বর্তমানে চলমান অ্যাপস মেটাডাটা এবং মেনিফেস্ট বিভিন্নতার মাঝে রাখতে ,আপনি এর মত ব্যবহার করতে পারেনঃ</p>
+<pre class="brush: js">navigator.mozApps.getSelf().onsuccess = function(e) {
+  appself = e.result;
+}</pre>
+<p>বিভিন্ন অ্যাপের নিজের মধ্যে এই অ্যাপস মেটাডাটার সমুক্ষীন হন।</p>
+<p>একটি একই নোটে,যদি আপনি ভিন্ন অ্যাপের অনুমতির জন্য দেখতে চান, টেস্ট অ্যাপে "Permissions" তে এক নজর দেখুন ,যা আসে আপনার b2g-desktop টেস্টিং গঠনের সাথে ;এটি সকল বর্তমানে ইন্সটল্ড অ্যাপের জন্য অনুমতি এনে দিবে।</p>
+<p>কিছু বর্তমান ওয়েব অ্যাপি আছে যা সবসময় যেকোন অ্যাপে পাওয়া যায় না। এইসব অ্যাপি ব্যবহার করতে, আপনাকে আপনার একটি অ্যাপ ইন্সটল করতে হবে উচ্চ সুবিধার সাথে(এগুলো হল সার্টিফাইড অ্যাপ) ।এটা আপনি নিজে করুন ,আপনাকে একটি কাস্টম ভার্সন করতে হবে যা  top b2g layer এর,গায়া। প্রয়োজনীয় <code>git</code> টি কাজ করে এবং<code> make</code> পরিবেশ কাজ করে থাকে।দেখুন  <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a> আরো বেশি Firefox OS তে গঠন পরিবেশের জন্য।</p>
+<p>আপনাকে এই ক্ষেত্রে Firefox OS প্রস্তুত করার প্রয়োজন পরেনা,কেবল গায়া।চলুন দেখি কিভাবে তারা কাজ করে থাকে ।</p>
+<h2 id="গায়া_ডাউনলোডিং_এবং_গঠন"><strong>গায়া ডাউনলোডিং এবং গঠন</strong></h2>
+<p>প্রথমে আপনাকে গায়া ডায়নলোড করতে হবে তারপরে আপনাকে ইহা গঠোন করতে হবে।ইটা একটী প্রোফাইল তৈরি করতে হবে যা আপনি b2g desktop এরসাথে লোড করতে পারেন।এগুলো নিচের নির্দেশ অনুযায়ী ব্যবহার করে প্রস্তুত করা যায়ঃ</p>
+<pre class="brush: bash">$ git clone https://github.com/mozilla-b2g/gaia
+$ cd gaia
+$ make
+</pre>
+<div class="warning">
+ <p><strong>ওয়ার্নিংঃগায়া গঠন করুন  </strong>প্রথমবারের জন্য যা <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a>  ডাউনলোড করতে প্রয়োজন যা প্রায় ৫০০এম বি,সুতরাঙ্গিহা নেয় কিছু সময় এবং অনেক জায়গা ।</p>
+</div>
+<p>এটা আপনার জন্য একটি স্ট্যান্ডার্ড গায়া গঠন করবে ,সুতরাং এটা কাজ করার জন্য প্রস্তুত।</p>
+<h3 id="একটি_কাস্টম_অ্যাপ_প্রস্তুত_করা"><strong>একটি কাস্টম অ্যাপ প্রস্তুত করা</strong></h3>
+<p>যখন XULRunner ডাউনলোড করা হয়ে থাকে ,আমি সুপারিশ করেছিলাম <a href="https://github.com/mozilla-b2g/gaia">reading the Gaia source code</a>।আপনিও আপনার কাস্টম অ্যাপ প্রস্তুত পাবেন যখন ডাউনলোড প্রক্রিয়ায় উন্নতি হবে।</p>
+<p>সকল অ্যাপ যা আসে গায়া (সেটিংস,কন্টাক্ট,ব্রাউজার,ইত্যাদি) থেকে সেগুলো অ্যাপ/ডিরেক্টরিতে জমা থাকে ।এটা মনে করা হয়ে থাকে যে আপনার উচ্চ সুবিধা যুক্ত অ্যাপও সেখানে যাবে । অনুচ্ছেদের এই সুবিধায় ,উদাহরন হিসেবে অ্যাপকে বলা হয়ে থাকে  <a href="https://github.com/freddyb/allperms"><em>allperms</em></a> যা গিথাবে সবসময় পাওয়া যাবে।</p>
+<p>আপনার গায়া কোড ট্রিতে অ্যাপ/ডিরেক্টরিতে পরিবর্তন করুন এবং উদাহরন  অ্যাপটি এতে ক্লোন করুনঃ</p>
+<pre>cd apps
+git clone <span class="nolink">https://github.com/freddyb/allperms.git</span></pre>
+<p>একদা আপনার প্রথম গায়া গঠন তৈরি হয়ে গিয়েছিল <code>xulrunner-sdk</code> ডাউনলোড করা হয়ে থাকে ,আপনি এটাকে অ্যাপ/ডিরেক্টরিতে  <code>allpermsএরসাথে গায়ার পুনরায় গঠন করতে পারেন।কিন্তু চিন্তা করবেন না,এই গঠন আরো দ্রুত হবে যেহেতু বেশির ভাগ জিনিস ইতিমধ্যে সম্পুর্ন হয়ে গেছে।এখন কেবল করবেনঃ</code></p>
+<pre>make</pre>
+<h2 id="Load_B2G_desktop_ব্যবহার_করে_নতুন_প্রোফাইল"><span class="mw-headline">Load B2G desktop ব্যবহার করে নতুন প্রোফাইল</span></h2>
+<h5 id="B2G_Desktop_আসে_দুটি_নতুন_এক্সেকিউবল_নিয়েঃ_b2g_এবংand_b2g-binআমরা_পরেরটি_জানিযেহেতু_এটি_বিশেষভাবে_দেখানোর_জন্য_লাইন_আর্গুমেন্ট।"><a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>  আসে দুটি নতুন এক্সেকিউবল নিয়েঃ <code>b2g</code>  এবংand <code>b2g-bin</code>:আমরা পরেরটি জানি,যেহেতু এটি বিশেষভাবে দেখানোর জন্য লাইন আর্গুমেন্ট।</h5>
+<div class="note">
+ <p><strong>নোটঃদেখুন </strong><a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Using the B2G desktop client</a> , B2G Desktop অ্যাপলিকেশন নিয়ে আরো তথ্যের জন্য</p>
+ <p><code>b2g</code> এক্সেকিউবল লোড করুন, the <code>-profile</code> অপ্সহন প্রদান করে গায়া প্রোফাইল পথ দিয়ে যা আপনি কেবল তৈরি করেছেন।</p>
+</div>
+<h3 id="Linux">Linux</h3>
+<pre class="brush: bash">$ b2g-bin -profile /path/to/gaia/profile
+</pre>
+<h3 id="Mac_OS_X">Mac OS X</h3>
+<p>Mac OS X তে,শুরু করার নির্দেশ যা গায়া ডিরেক্টরি থেকে (মনে করা হয়ে থাকে আপনি ইন্সটল করবেন B2G স্ট্যান্ডার্ড অ্যাপলিকেশন ফোল্ডারে) নিচের মতঃ</p>
+<pre class="brush: bash">$ /Applications/B2G.app/Contents/MacOS/b2g-bin -profile /path/to/gaia/profile
+</pre>
+<h3 id="Windows">Windows</h3>
+<p>TBD</p>
+<h3 id="What_to_expect">What to expect</h3>
+<p>মনে করা হয় যে এটা কাজ ছে ,আপনাকে lock screen দেখা উচিত:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5059/lockscreen.png" style="width: 320px; height: 480px;"></p>
+<p> <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client#Command_line_options" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client#Command_line_options">command-line options available</a> হল কিছু দরকারি জিনিস যা ব্যবহার করা হয়ে থাকে B2G Desktop তে।</p>
+<div class="note">
+ <p><strong>নোটঃএই প্রোফাইল শুরু হয়ে থাকে  </strong><strong>default settings</strong> এর সাথে আবার । কোন কাস্টমাইজেশন আপনার আছে যাতে আপনার টেসটিং সেট আপ  আবারো হবে ;এটি আরো যোগ করবে  <a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a> এর কনফিগারেশন এবং সার্টিফিকেট।</p>
+</div>
+<h2 id="Done">Done</h2>
+<p>আপনারYour <code>allperms</code>অ্যাপ এখন ইন্সটল করা উচিত এবং সকল সম্ভব অনুমতি নেয়া হয়ে থাকে।</p>
+<p>এখন আপনাকে একমাত্র বারবার বলা হয়ে থাকে Marionette ধাপে  <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging_and_Security_Testing_with_Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS/Debugging_and_Security_Testing_with_Firefox_OS">Debugging and security testing with Firefox OS</a>  থেকে একটি টেস্টিং পরিবেশ এর জন্য যা WebAPIs এর সুবিধা হয়ে থাকে ।</p>
+<p>{{Previous("Mozilla/Firefox_OS/Debugging/Intercepting_traffic_using_a_proxy")}}</p>

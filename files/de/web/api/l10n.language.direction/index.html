@@ -1,0 +1,63 @@
+---
+title: L10n.language.direction
+slug: Web/API/L10n.language.direction
+translation_of: Archive/B2G_OS/API/L10n/language/direction
+---
+<div class="syntaxbox">{{ non-standard_header() }}</div>
+
+<div class="syntaxbox"> </div>
+
+<div class="summary">
+<p><span class="seoSummary">The <code>language.direction</code> property returns the direction (<code>ltr</code> or <code>rtl</code>) of the currently active language.</span></p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var languageCode = navigator.mozL10n.language.direction;</pre>
+
+<h2 id="Value">Value</h2>
+
+<p>Returns the direction of the currently active language (<code>ltr</code> or <code>rtl</code>).</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">navigator.mozL10n.ready(function() {
+  console.log('The current language's direction is ' + navigator.mozL10n.language.direction);
+});
+</pre>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p>Not part of any specification.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("L10n")}}</li>
+ <li>{{domxref("L10n.language.code")}}</li>
+</ul>
+
+<section id="Quick_Links">
+<ol>
+ <li data-default-state="open"><strong><a href="#">Guides</a></strong>
+
+  <ol>
+   <li><a href="/en-US/Apps/Build/Localization">Localization</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><strong><a href="#">Properties</a></strong>
+  <ol>
+   <li>{{ domxref("L10n.language.code") }}</li>
+   <li>{{ domxref("L10n.language.direction") }}</li>
+   <li>{{ domxref("L10n.readyState") }}</li>
+  </ol>
+ </li>
+ <li data-default-state="open"><strong><a href="#">Methods</a></strong>
+  <ol>
+   <li>{{ domxref("L10n.get") }}</li>
+   <li>{{ domxref("L10n.ready") }}</li>
+   <li>{{ domxref("L10n.once") }}</li>
+  </ol>
+ </li>
+</ol>
+</section>

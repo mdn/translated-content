@@ -1,0 +1,142 @@
+---
+title: Firefox in einem Unternehmen nutzen
+slug: Mozilla/Firefox/Nutzung_in_Unternehmen
+tags:
+  - Administratoren
+  - Anleitung
+  - Bereitstellung
+  - Firefox
+  - Unternehmen
+translation_of: Mozilla/Firefox/Enterprise_deployment_before_60
+---
+<div>{{FirefoxSidebar}}</div>
+
+<p>Diese Seite versucht zu dokumentieren, wie Mozilla Firefox für Windows und Mac in einem Unternehmen genutzt werden kann. Falls Sie Fragen haben, kontaktieren Sie bitte <a href="https://mail.mozilla.org/listinfo/enterprise">enterprise@mozilla.org</a>.</p>
+
+<h2 id="Die_richtige_Variante">Die richtige Variante</h2>
+
+<h3 id="RR_(Rapid_Release)">RR (Rapid Release)</h3>
+
+<p>Mozilla veröffentlicht alle sechs Wochen (und, je nach Bedarf, weitere Sicherheitsupdates dazwischen) neue Versionen mit höheren Versionsnummern, neuen Features und Fehlerbehebungen. Am Tag, an dem ein großes Update veröffentlicht wird, wird Mozilla in den meisten Fällen (Ausnahme, siehe unten) die Veröffentlichung von Fehlerbehebungen für die vorherige Version einstellen.</p>
+
+<p>Die geplanten Veröffentlichungen finden Sie in der Spalte "release date" in der  <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">Future branch dates</a> tabelle in der Mozilla wiki (Englisch).</p>
+
+<h3 id="ESR_(Extended_Support_Release)">ESR (Extended Support Release)</h3>
+
+<p>Jede siebte veröffentlichte Hauptversion von Firefox ist ein Extended Support Release. Diese Versionen werden für 54 Wochen (neun der sechswöchigen Veröffentlichungszyklen) sehr stark auf Probleme hin überprüft. Es überlappen sich 12 Wochen (zwei Veröffentlichungszyklen)  zwischen zwei aufeinanderfolgenden ESR-Veröffentlichungen, in denen beide ESR-Versionen gleichzeitig überprüft werden.</p>
+
+<p>Die ESR-Veröffentlichungen waren bisher die Versionen 10, 17, 24, und 31. </p>
+
+<p>Viele Unternehmen und Organisationen mit zentral organisierten Netzwerksystemen bevorzugen die ESR-Version von Firefox, weil sie dann nicht alle 6 Wochen sondern nur noch alle 42 Wochen die Kompatibilität prüfen müssen. Desweiteren haben sie 12 Wochen mehr Zeit (der Überlappungszeitraum zwischen zwei ESR-Veröffentlichungen) eine Lösung für Probleme zu finden (zusätzlich zu den 6 Wochen die sie bekommen indem sie die Betaversion testen), falls Probleme auftreten.</p>
+
+<p>Nehmen Sie zur Kenntnis, dass unerwünschte Nebeneffekte auftreten können wenn Sie von einer RR-Version zu einer früheren ESR-Version wechseln, wie zum Beispiel von Version 26-RR zurück zu Version 24.2-ESR, selbst wenn sie am gleichen Tag veröffentlicht wurden. Der Grund dafür ist, dass oft neue Features in die RR-Versionen eingebaut werden, auch wenn sie noch unvollendet und deshalb deaktiviert sind. Schlussendlich entscheidet Mozilla die Features in einer bestimmten Version zu aktivieren. Wenn Sie dann auf eine vorherige, ältere Version wechseln, behalten alle Nutzer ihre letzten Einstellungen in ihren Profilordnern. So bleibt die Option nun angestellt, obwohl das Feature noch nicht komplett fehlerfrei läuft. Wenn Sie also von RR auf ESR wechsel wollen, sollten Sie auf eine neue ESR-Version warten.</p>
+
+<h2 id="Installation">Installation</h2>
+
+<ol>
+ <li>Den kompletten, weiterverteilbaren Installer bekommen Sie von  <a href="http://www.mozilla.org/firefox/all/">http://www.mozilla.org/firefox/all/</a> (RR) oder <a href="https://www.mozilla.org/firefox/organizations/all.html">https://www.mozilla.org/firefox/organizations/all.html</a> (ESR).</li>
+ <li>Installieren Sie ihre Version, in dem Sie die Softwareverteilungsmethode ihrer Wahl nutzen. Die Kommand-Zeile für eine stille Installation ist <code>-ms</code>. </li>
+ <li>Optional können Sie eine INI-Datei spezifizieren, um beispielsweise die Nutzung von Tastenkürzeln und die Installation vom MaintenanceService zu verhindern. Nutzen Sie dafür <a href="https://wiki.mozilla.org/Installer:Command_Line_Arguments">Installer Command Line Arguments</a>.</li>
+</ol>
+
+<h2 id="Konfiguration">Konfiguration</h2>
+
+<ol>
+ <li>Finden Sie den Firefox <strong>Programmverzeichnis</strong> in dem Firefox' ausführende Datei liegt. In Windows7x64 ist er meist <code>C:\Program Files (x86)\Mozilla Firefox</code>; in OSX 10.8 zumeist <code>/Applications/Firefox.app/Contents/MacOS</code>. Unterordner die unten genannt werden sind abhängig von diesem Pfad. </li>
+ <li>Erstellen Sie eine Javascript Datei in <code>defaults/pref</code> (für gewöhlich, <code>autoconfig.js</code> - andere Dateinamen funktionieren gleicherweise, doch um beste Resultate zu erzielen sollte es am Anfang des Alphabets stehen.) Der Inhalt dieser Datei zeigt Firefox, wo die konfigurierende Datei zu finden ist (siehe auch <a href="http://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/">Customizing Firefox default preference files/</a>).
+  <p>Die zwei Zeilen die Sie brauchen sind:</p>
+
+  <pre class="brush: js">pref("general.config.obscure_value", 0);
+pref("general.config.filename", "mozilla.cfg");</pre>
+ </li>
+ <li>Erstellen Sie eine .cfg Datei (für gewöhlich, <code>mozilla.cfg</code> — es kann wirklich jeder Name sein; es muss nur zu dem passen, was in  <code>general.config.filename</code> zuvor spezifiziert wurde) im Programmverzeichnis. Überspringen Sie die erste Zeile oder kommentieren Sie sie aus und fangen Sie an ihre Einstellungen vorzunehmen. Um herauszufinden welche Einstellungen Sie nutzen müssen, nutzen Sie about:config in einer Kopie von Firefox, die Sie korrekt eingestellt haben und suchen Sie alle Einstellungen die vom Nutzer eingestellt sind, oder sehen Sie sich das folgende Beispiel an. Jede Einstellung die in about:config auftaucht (und noch einige andere) können mit eine der folgenden Funktionen eingestellt werden:
+  <dl>
+   <dt><strong>pref </strong></dt>
+   <dd>nimmt eine Einstellung vor, als hätte der Benutzer sie eingestellt, jedes Mal wenn der Browser gestartet wird. Nutzer können zwar Änderungen an den Einstellungen vornehmen, jedoch werden diese beim nächsten Start überschrieben. Wenn Sie auf diese Weise Einstellungen vornehmen, wird die Einstellung in about:config als "<strong>vom Benutzer eingestellt</strong>" angezeigt.</dd>
+   <dt><strong>defaultPref</strong></dt>
+   <dd>wird gebraucht um die Standardeinstellung zu ändern, jedoch kann jeder Nutzer die Einstellungen ändern. Die Einstellungen werden zwischen Sitzungen gespeichert. Sollten alle Werte auf ihren Ursprung zurückgesetzt werden, werden die so geänderten Einstellungen auf den von Ihnen gesetzten Wert geändert. Taucht in about:config als "standard" auf.</dd>
+   <dt><strong>lockPref</strong></dt>
+   <dd>wird genutzt um Einstellungen zu blockieren, sodass sie nicht mehr vom Nutzer umgestellt werden können, weder über die Einstellungen, noch über about:config. Das Fenster mit den Einstellungen wird sich ändern um dies zu reflektieren, indem es nicht verstellbare Optionen weglässt oder grau färbt.Taucht in about:config auf als "<strong>blockiert</strong>". <span class="author-g-fer323ku83ypu55t">Manche Einstellungen benötigen <strong>lockPref</strong> um geändert zu werden, wie beispielsweise <strong>app.update.enabled</strong>. Es funktioniert nicht, wenn es nur mit <strong>pref</strong> geändert wird.</span></dd>
+   <dt><span class="author-g-fer323ku83ypu55t">clearPref</span></dt>
+   <dd><span class="author-g-fer323ku83ypu55t">kann benutzt werden um einige Einstellungen auszublenden. Dies kann nützlich sein, um einige Funktionen zu deaktivieren, die darauf basieren Versionsnummern zu vergleichen.</span></dd>
+  </dl>
+ </li>
+</ol>
+
+<p>Sehen Sie sich auch <a href="http://mike.kaply.com/2012/03/16/customizing-firefox-autoconfig-files/">Firefox' autoconfig-Dateien ändern</a> und <a href="http://mike.kaply.com/2012/03/20/customizing-firefox-autoconfig-files-continued/">Firefox' autoconfig-Dateien ändern (Fortführung)</a> an, um mehr zu erfahren. Für tiefergehende Einstellungen, wie beispielsweise das Ausschalten bestimmter Elemente der graphischen Benutzeroberfläche, können Sie die <a href="http://mike.kaply.com/cck2/">CCK2</a>-Extension nutzen.</p>
+
+<h3 id="Beispiel_für_eine_config-Datei">Beispiel für eine config-Datei</h3>
+
+<p>Ihnen mag der Bezug auf "komplexe Einstellungen" auffallen, die in einer anderen Art und Weise eingestellt werden müssen; seit FF31 scheinen alle Einstellungen auf normalem Wege änderbar zu sein, ähnlich wie im folgenden Beispiel.  Für genauere Informationen zu individuellen Einstellungen, durchsuchen Sie die <a href="http://kb.mozillazine.org/Knowledge_Base">Wissensdatenbank</a>.</p>
+
+<pre class="brush: js"><span class="brush: js">// Deaktiviert den Updater
+lockPref("app.update.enabled", false);
+// Stellt sicher dass er tatsächlich abgestellt ist
+lockPref("app.update.auto", false);
+lockPref("app.update.mode", 0);
+lockPref("app.update.service.enabled", false);
+
+// Deaktiviert die Kompatbilitätsprüfung der Add-ons
+clearPref("extensions.lastAppVersion");
+
+// Deaktiviert 'Kenne deine Rechte' beim ersten Start
+pref("browser.rights.3.shown", true);
+
+// Versteckt 'Was ist neu?' beim ersten Start nach jedem Update
+pref("browser.startup.homepage_override.mstone","ignore");
+
+// Stellt eine Standard-Homepage ein - Nutzer können sie ändern
+defaultPref("browser.startup.homepage", "http://home.example.com");
+
+// Deaktiviert den internen PDF-Viewer
+pref("pdfjs.disabled", true);
+
+// Deaktiviert den Flash zu JavaScript Converter
+pref("shumway.disabled", true);
+
+// Verhindert die Frage nach der Installation des Flash Plugins
+pref("plugins.notifyMissingFlash", false);
+
+//Deaktiviert das 'plugin checking'
+lockPref("plugins.hide_infobar_for_outdated_plugin", true);
+clearPref("plugins.update.url");
+
+// Deaktiviert den 'health reporter'
+lockPref("datareporting.healthreport.service.enabled", false);
+
+</span>// Disable all data upload (Telemetry and FHR)
+lockPref("datareporting.policy.dataSubmissionEnabled", false);
+<span class="brush: js">
+// Deaktiviert den 'crash reporter'
+lockPref("toolkit.crashreporter.enabled", false);
+Components.classes["@mozilla.org/toolkit/crash-reporter;1"].getService(Components.interfaces.nsICrashReporter).submitReports = false;</span><em> </em>
+</pre>
+
+<h2 id="Packaging_Extensions">Packaging Extensions</h2>
+
+<ol>
+ <li>Installieren Sie die Erweiterung auf einem Rechner zu Testzwecken. Sehen Sie in about:support unter Extensions nach um die GUID zu fnden. </li>
+ <li>Sehen Sie im <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">Profilverzeichnis</a> (z.B.: <code>%APPDATA%\Mozilla\Firefox\Profiles</code> auf Win7; um diesen zu finden, klicken Sie auf <strong>Ordner anzeigen</strong> in about:support), dann unter "extensions" nach dem Add-On dass Sie suchen. Beachten Sie dass es entweder eine einzelne .xpi Datei (wie eine zip Datei) oder extrahiert zu einem Ordner mit mehreren Dateien.</li>
+ <li>Entscheiden Sie wie Sie sie nutzen wollen. Die einfachste Methode ist, die .xpi Datei oder den Ordner in <strong>Programm<code>verzeichnis</code></strong><code>/distribution/extensions</code> zu legen, jedoch funktioniert dies nur für Profile die Installiert wurden nachdem die Erweiterung installiert wurde. Außerdem, wenn Sie Firefox manuell updaten indem Sie das Programm erneut installieren, wird dieser Programmverzeichnis gelöscht. Vergewissern SIe sich dann, ob Sie die Erweiterung ebenfalls manuell erneut installiert haben. Sehen Sie sich auch <a href="http://mike.kaply.com/2012/02/09/integrating-add-ons-into-firefox/">Integrating add-ons into Firefox/</a> (Englisch) an, um alternative Methoden zu lernen.</li>
+</ol>
+
+<p>Beachten Sie auch: <a href="http://mike.kaply.com/2013/05/03/add-on-scopes-redux/">Add-on scopes redux/</a> (Englisch)</p>
+
+<h2 id="Änderungen_mit_der_Zeit">Änderungen mit der Zeit</h2>
+
+<h3 id="Änderungen_in_der_Verzeichnisstruktur">Änderungen in der Verzeichnisstruktur</h3>
+
+<p>Die Verzeichnisstruktur des Programmpfades wurde zweimal geändert. Sollten Sie einer Anleitung für eine Firefox-Version <strong>vor</strong> Version 21 folgen, dann müssen Sie vermutlich diese Änderungen beachten:</p>
+
+<ul>
+ <li>Seit Version 14, funktionieren einige der pref Einstellungen nicht mehr wenn sie in einer Datei geändert werden, die im Pfad <code>defaults/pref</code> liegt. Sie können das Problem beheben, indem Sie den Pfad <code>defaults/preferences</code> erstellen und die Datei dort ablegen.</li>
+ <li>Seit Version 21 wurde der neue Ordner <code>browser</code> erstellt. Die Datei <code>override.ini</code> und die Pfade <code>defaults/preferences</code>, <code>defaults/profile</code>, <code>extensions</code>, <code>plugins</code>, und <code>searchplugins</code> wurden dorthinein verlegt. Plug-ins im Ordner <code>plugins</code> können reaktiviert werden, indem die Einstellung <code>plugins.load_appdir_plugins</code> zu <strong>true</strong> geändert wird.</li>
+</ul>
+
+<p>Die Einstellungen preferences <code>general.config.filename</code> und <code>general.config.obscure_value</code> zur AutoConfiguration können immer noch in <code>defaults/pref</code> vorgenommen werden, jedoch sollte der Dateiname mit dem Buchstaben 'a' beginnen, wie zum Beispiel <code>autoconfig.js</code>.</p>
+
+<p>Sollte es in <code>defaults/pref</code> in einer zuünftigen Version von Firefox nicht mehr funktionieren, probieren Sie <code>browser/defaults/preferences</code> als den wahrscheinlichsten Platz für die Datei.</p>
+
+<h3 id="Änderungen_in_ESR_24.x_mit_Adobe_PDF_Files">Änderungen in ESR 24.x mit Adobe PDF Files</h3>
+
+<p>Firefox RR 19.x änderte den Standard-Viewer für Adobe PDF Dateien zu dem internen PDF Viewer. Diese Änderung betrifft nun die ESR Versionen seit 24.x, und wird (auf Windows) angewandt, wenn von 17.x auf eine höhere Version geupgradet wird, <em>selbst wenn ein externer Viewer bereits eingestellt wurde</em>. Der Name des Dateitypes wurde von <strong>Adobe Acrobat Document</strong> zu <strong>Portable Document Format (PDF)</strong> geändert, was die Lokalisierung durch die Tools-, Options- oder Applications-Tabs erschwert. Um dies abzustellen, ändern Sie <code>pdfjs.disabled</code> zu true wie auch im oben genannten Beispiel.</p>

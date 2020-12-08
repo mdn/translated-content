@@ -1,0 +1,102 @@
+---
+title: Fent servir mòduls de codi Javascript
+slug: Fent_servir_mòduls_de_codi_Javascript
+translation_of: Mozilla/JavaScript_code_modules/Using
+---
+<p> </p>
+<p> </p>
+<p>{{ Fx_minversion_header(3) }}</p>
+<p>Els mòduls de codi és són un concepte introduït a Firefox 3 (Gecko 1.9) i es poden fer servir per compartir codi entre diferents àmbits. Els mòduls a més es poden fer servir per crear codi Javascript que segueix el patró singleton i que anteriorment hagin necessitat fer servir objectes XPCOM Javascript. Un mòdul és simplement codi Javascript registrat i desat en una localització específica. El mòdul serà carregat en un àmbit Javascript específic segons sigui un script XUL o un script XPCOM fent servir <a href="/en/Components.utils.import" title="en/Components.utils.import">Components.utils.import</a>.</p>
+<p>Un mòdul simple pot ser aquest :</p>
+<pre>var EXPORTED_SYMBOLS = ["foo", "bar"]
+
+function foo() {
+  return "foo";
+}
+
+var bar = {
+  name : "bar",
+  size : "3"
+};
+
+var dummy = "dummy";
+</pre>
+<p>Cal tenir en compte que el mòdul fa servir sintàxi tradicional per crear funcions, objectes, constants i qualsevol altre tipus Javascript. El mòdul també defineix una llista especial anomenada EXPORTED_SIMBOLS que serà exportat desde el codi i s'injectarà en l'àmbit d'importació. Per exemple :</p>
+<pre>Components.utils.import("resource://app/modules/my_module.jsm");
+
+alert(foo());         // displays "foo"
+alert(bar.size + 3);  // displays "6"
+alert(dummy);         // displays "dummy is not defined" because 'dummy' was not exported from the module
+</pre>
+<p>Un comportament extremadament important és el de <a href="/en/Components.utils.import" title="en/Components.utils.import">Components.utils.import</a>, ja que els mòduls són desats en un cache temporal de manera que les següents importacions del mateix no recarregaran el codi si no que faran servir la versió cachejada. Això vol dir que un mòdul pot ser compartit per vàries importacions. Qualsevol modificació que es faci a les funcions, variables o objectes del mòdul en un àmbit d'execució estarà disponible a tots els altres àmbits automàticament. Per exemple en el mòdul simple que hem presentat abans si havessim importat en dos llocs diferents els canvis d'un restarien disponibles en l'altre de manera automàtica.</p>
+<p>Àmbit 1:</p>
+<pre>Components.utils.import("resource://app/modules/my_module.jsm");
+
+alert(bar.size + 3);  // Imprimeix "6"
+
+bar.size = 10;
+</pre>
+<p>Àmbit 2:</p>
+<pre>Components.utils.import("resource://app/modules/my_module.jsm");
+
+alert(foo());         // Imprimeix "foo"
+alert(bar.size + 3);  // Imprimeix "13"
+</pre>
+<p>Aquest comportament de compartir codi es pot fer servir per crear objectes que segueixin el patró singleton per compatir data entre finestres, scripts XUL i components XPCOM.</p>
+<p>{{ Note("Cada àmbit que import aun mòdul el rep per valor els símbols importats en aquest mòdul. Els canvis als símbols no seran propagats a altres àmbits.") }}</p>
+<p>Àmbit 1:</p>
+<pre>Components.utils.import("resource://app/modules/my_module.jsm");
+
+bar = "foo";
+alert(bar);         // Imprimeix "foo"
+</pre>
+<p>Àmbit 2:</p>
+<pre>Components.utils.import("resource://app/modules/my_module.jsm");
+
+alert(bar);         // Imprimeix "[object Object]"
+</pre>
+<p>L'efecte principal de la còpia per valor és que les variables globals o els tipus simples no seràn compartits per els diferents àmbits d'execució disponibles. Posa sempre les variables a dins d'una classe i exporta aquesta ( tal i com fem amb bar en l'exemple anterior ).</p>
+<h4 id="resource:_Protocol" name="resource:_Protocol">resource: Protocol</h4>
+<p>Quan ferm servir <a href="/en/Components.utils.import" title="en/Components.utils.import">Components.utils.import</a>, et donaràs compte que els mòduls són carregats fent servir el protocol "<a class="external" rel="freelink">resource://</a>". La sintàxi bàsica per a un recurs en una URL és la següent :</p>
+<pre class="eval"><a class="external" rel="freelink">resource://</a>&lt;alias&gt;/&lt;cami-relatiu&gt;/&lt;file.js|jsm&gt;
+</pre>
+<p>El <code>&lt;alias&gt;</code> és un àlies al lloc que sempre és un camí relatiu a l'aplicació o al entorn d'execució XUL. Hi ha vàris àlies predefinits que configura l'entorn d'execució XUL automàticament:</p>
+<ul>
+ <li><code>app</code> - Àlies al camí de l'aplicació XUL.</li>
+ <li><code>gre</code> - Àlies al camí de l'entorn d'execució i sdk XUL.</li>
+</ul>
+<p>El <code>&lt;relative-path&gt;</code> pot ser varis nivells més endins i sempre és relatiu al camí ja definit a &lt;alias&gt;. El camí més comú és "modules" tal i com fa servir Firefox i XUL Runner. Els mòduls són fitxers Javascript amb l'extensió .js o .jsm.</p>
+<p>La manera més fàcil d'afegir un mòdul a una aplicació XUL o una extensió Firefox és definir-la amb un àlies en el fitxer <a href="/en/Chrome_Registration" title="en/Chrome_Registration">chrome manifest</a> de la següent manera:</p>
+<pre class="eval">resource <em>aliasname</em> <em>uri/to/files/</em>
+</pre>
+<p>Per exemple, si el XPI per l'extensió <em>foo</em> inclou un directori principal per als mòduls i que conté el <em>bar.js</em>, pots crear un àlies a aquest directori amb la següent instrucció :</p>
+<pre class="eval">resource foo modules/
+</pre>
+<p>Llavors ja podràs importar el mòdul en el teu codi Javascript amb la següent sintàxi :</p>
+<pre class="eval">Components.utils.import("<a class="external" rel="freelink">resource://foo/bar.js</a>");
+</pre>
+<h3 id="Programmatically_adding_aliases" name="Programmatically_adding_aliases">Afegint àlies de manera automatitzada</h3>
+<p>Els àlies es poden afegir de manera automatitzada a través de codi font també. Per exemple :</p>
+<pre>var ioService = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.nsIIOService);
+var resProt = ioService.getProtocolHandler("resource")
+                       .QueryInterface(Components.interfaces.nsIResProtocolHandler);
+
+var aliasFile = Components.classes["@mozilla.org/file/local;1"]
+                          .createInstance(Components.interfaces.nsILocalFile);
+aliasFile.initWithPath("/some/absolute/path");
+
+var aliasURI = ioService.newFileURI(aliasFile);
+resProt.setSubstitution("myalias", aliasURI);
+
+// Assumeix que el codi dels móduls són en el directori de l'àlies i no en cap subdirectori
+Components.utils.import("resource://myalias/file.jsm");
+
+// ...
+</pre>
+<h3 id="See_also" name="See_also">Veure més</h3>
+<ul>
+ <li><a class="external" href="http://wiki.mozilla.org/Labs/JS_Modules">Mozilla Labs JS Modules</a> - Aquesta pàgina conté un llistat de mòduls Javascript, amb la seva documentació i un hipervincle per baixar-los de manera que es puguin fer servir en el nostre codi.</li>
+</ul>
+<p> </p>
+<p>{{ languages( { "ca":"ca/Fent_servir_mòduls_de_codi_Javascript","es": "es/Usando_m\u00f3dulos_de_c\u00f3digo_JavaScript", "fr": "fr/Utilisation_de_modules_de_code_JavaScript", "ja": "ja/Using_JavaScript_code_modules", "pl": "pl/Zastosowanie_modu\u0142\u00f3w_JavaScript" } ) }}</p>

@@ -1,0 +1,60 @@
+---
+title: Localizing XLIFF files for iOS
+slug: Mozilla/Localization/Localizing_XLIFF_files
+translation_of: Mozilla/Localization/Localizing_XLIFF_files
+---
+<p>Firefox for iOS uses the XLIFF XML-based file format to hold and transfer localization data. <a href="https://www.oasis-open.org/committees/xliff/">XLIFF (eXtensible Localisation Interchange File Format)</a> is a localization standard governed by the OASIS standards body. The goal of the standard is to have an XML-based format to use when exchanging localization data between tools without the potential of data loss or corruption. Most translation tools support the XLIFF standard, making localizing the XLIFF files for Firefox for iOS easy to do using translation tools. Editing the raw XLIFF file is also rather easy, especially if you're already familiar with XML. This tutorial will walk you through the steps you need to take to translation strings within an XLIFF file.</p>
+
+<h3 id="String_repository_for_Firefox_on_iOS">String repository for Firefox on iOS</h3>
+
+<p>The firefox-ios.xliff file is located in SVN.</p>
+
+<ol>
+ <li>Decide where on your local computer you will store your copy of the github repo and navigate there in your terminal.</li>
+ <li>Enter the command <code>git clone </code>https://github.com/mozilla-l10n/firefoxios-l10n<code>/your-locale-code/</code></li>
+ <li>You should now see the firefox-ios project in your selected directoy with the <code>firefox-ios.xliff</code> file in it.</li>
+</ol>
+
+<h3 id="Translating_the_XLIFF_file">Translating the XLIFF file</h3>
+
+<ol>
+ <li>Open the firefox-ios.xliff file in your favorite text editor.</li>
+ <li>In the <code>&lt;file&gt;</code> tag, add the <code>target-language</code> attribute with your locale code as the value (e.g., <code>target-language="xx-XX"</code>). Be aware that there may be many <code>&lt;file&gt;</code> tags within one XLIFF document. Each <code>&lt;file&gt;</code> tag requires the <code>target-language</code> attribute with your locale code as the value (e.g., <code>target-language="xx-XX"</code>).</li>
+ <li>Strings are located within <code>&lt;trans-unit&gt;</code> tags. Source English strings are contained in <code>&lt;source&gt;</code> child tags. Here is an example of such a <code>&lt;trans-unit&gt;</code>
+  <pre>&lt;trans-unit id="Add to Bookmarks"&gt;
+    &lt;source&gt;Add to Bookmarks&lt;/source&gt;
+&lt;/trans-unit&gt;
+</pre>
+  Your translations must be contained inside <code>&lt;target&gt;</code> child tags. Go through the full xliff page adding <code>&lt;target&gt;&lt;/target&gt;</code> below each <code>&lt;source&gt;</code> tag set to help you to identify strings that need to be translated. Do not delete the <code>&lt;source&gt;</code> tag sets.
+
+  <pre>&lt;trans-unit id="Add to Bookmarks"&gt;
+    &lt;source&gt;Add to Bookmarks&lt;/source&gt;
+    &lt;target&gt;YOUR_TRANSLATION_HERE&lt;/target&gt;
+&lt;/trans-unit&gt;
+</pre>
+ </li>
+ <li>Provide translations of the strings in the <code>&lt;source&gt;</code> tag sets by placing their translations in the <code>&lt;target&gt;</code> tag sets beneath them. Keep in mind the following sets of characters that need to remain untranslated:
+  <ol>
+   <li><code>$(SOME_TEXT_HERE)</code> is a variable format,</li>
+   <li><code>%1$@</code> is another variable format.</li>
+   <li>&lt;note&gt; tags contain localizer notes from developers and should not be translated.</li>
+  </ol>
+
+  <pre>&lt;trans-unit id="Add to Bookmarks"&gt;
+    &lt;source&gt;Add to Bookmarks&lt;/source&gt;
+    &lt;target&gt;Agregar a marcadores&lt;/target&gt;
+    &lt;note&gt;No comment provided by engineer.&lt;/note&gt;
+&lt;/trans-unit&gt;
+</pre>
+ </li>
+ <li>Save your translations along the way.</li>
+ <li>Once you've completed translation, it's important to make sure the XML in your XLIFF file is valid (e.g., no broken tag sets). Open the file in Firefox to have it run a validity check and correct any errors it might yell about.</li>
+</ol>
+
+<h3 id="Commiting_your_XLIFF_file">Commiting your XLIFF file</h3>
+
+<ol>
+ <li>Using this command, commit your translated XLIFF file into your locale's directory: <code>git commit -m "Commit message here"</code> .</li>
+ <li>Push your commit into the github repo: <code>git push</code></li>
+ <li>Kick up your feet, pop open a cold beer (or soda), and pat yourself on the back for doing something new, different, and exciting!</li>
+</ol>

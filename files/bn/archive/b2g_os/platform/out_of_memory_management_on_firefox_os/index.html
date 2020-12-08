@@ -1,0 +1,61 @@
+---
+title: ফায়ারফক্স ওএস এ মেমোরি ব্যবস্থাপনা না হওয়া
+slug: Archive/B2G_OS/Platform/Out_of_memory_management_on_Firefox_OS
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - LMK
+  - OOM
+  - Out of memory
+  - low memory killer
+  - low memory notifications
+  - oom_adj
+translation_of: Archive/B2G_OS/Platform/Out_of_memory_management_on_Firefox_OS
+---
+<div class="summary">
+ <p><span class="seoSummary">Firefox OS runs on some severely memory-constrained devices, and it's easy for apps to exhaust the memory available on such systems.  When a process exhausts the memory available on the system, the kernel must kill some other processes in order to free up memory. This article describes how the low memory killer and low memory notifications work — the two systems on the device that control what processes are killed to keep the main system running when it has run out of memory.</span></p>
+</div>
+<p>FxOS operation involves multiple processes — one "main process" running basic system services and potentially many "child processes". In general every app runs in its own child process. Since in the FxOS environment applications are rarely closed by the user the system automatically manages their lifetime to make room for new apps or for existing apps requiring additional memory.</p>
+<p>Two subsystems are used to manage this: the <strong>Low memory killer (LMK)</strong> and <strong>Low memory notifications</strong>.</p>
+<h2 id="লো_মেমোরি_কিলার">লো মেমোরি কিলার</h2>
+<p><a href="https://android.googlesource.com/kernel/common.git/+/edd540ea92954f896bfb7ee0ebf5dfdde6e6cb41/drivers/staging/android/lowmemorykiller.txt">The LMK</a> is a subsystem of the Android kernel that automatically kills processes to make room for memory requests. In order to choose which process is killed first for freeing up memory, each process is assigned a priority via the <a href="https://www.kernel.org/doc/Documentation/filesystems/proc.txt">/proc/&lt;pid&gt;/oom_adj or /proc/&lt;pid&gt;/oom_score_adj files</a>. A process's priority is known as its adjustment score, or <code>oom_adj</code>.  Smaller <code>oom_adj</code> values correspond to higher priority processes.</p>
+<p>In general, the larger the adjustment score is, the more likely a process is to be killed. The LMK provides multiple levels, each corresponding to a certain amount of free memory and a minimum adjustment score. Whenever the amount of free memory in the system drops below a certain level, all processes with an adjustment score higher than the minimum specified for that level are eligible to be killed. The LMK will start killing these processes, larger ones first, and keep going until it has freed enough memory to go above the threshold again.</p>
+<div class="note">
+ <p><strong>Note</strong>: The process killed when the device runs out of memory isn't necessarily the one that "caused" the out-of-memory condition.</p>
+</div>
+<h3 id="প্রসেস_অগ্রাধিকার">প্রসেস অগ্রাধিকার</h3>
+<p>In Firefox OS apps are killed in the following priority order policy, which is enforced by giving each application a priority level and associating an OOM adjustment score to these levels (<a href="http://hg.mozilla.org/mozilla-central/file/545c35907eff/b2g/app/b2g.js#l661">the current values are set in prefs</a>):</p>
+<ol>
+ <li>The first apps to be killed will be the background apps, starting with the least recently used.</li>
+ <li>The homescreen application is killed next.</li>
+ <li>Background applications that are perceivable by the user are killed next (for example, a music player playing audio in the background or an app holding a <code>high-priority</code> or <code>cpu</code> wakelock and having a registered handler for system messages.)</li>
+ <li>If the keyboard application is running, it will be killed next.</li>
+ <li>Foreground applications will be killed next.</li>
+ <li>Finally, foreground applications that have requested <code>high-priority</code> or <code>cpu</code> wakelocks are the last to get killed.</li>
+</ol>
+<div class="note">
+ <p><strong>Note</strong>: Most child processes run with <code>oom_adj 2</code> while they're in the foreground.  Child processes in the background run with <code>oom_adj</code> between <code>3</code> and <code>6</code> (inclusive).  Exactly what <code>oom_adj</code> a child process has while in the background depends on a number of factors, such as whether it's playing sound, whether it's the homescreen app, etc.</p>
+</div>
+<p>There's a couple of exceptions to these rules:</p>
+<ul>
+ <li>The main process is never killed by the LMK as doing so would kill all child processes and restart the operating system. The main process runs with <code>oom_adj 0</code>.</li>
+ <li>We keep a process around to speed up the startup of new applications called the <strong>preallocated process</strong>. This process is usually always kept alive because it consumes very little memory and significantly speeds up application startup. The only case under which it can be killed is if there's not enough memory available for the main process to keep running after having killed all other processes.</li>
+</ul>
+<h2 id="লোঅপর্যাপ্ত_মেমোরি_নির্দেশনা">লো/অপর্যাপ্ত মেমোরি নির্দেশনা</h2>
+<p>The second mechanism we use to free memory is low memory notifications. The LMK provides a <a href="https://www.codeaurora.org/cgit/quic/la//kernel/msm/commit/?id=b3f986cba580b14438b77b42070ebbc77b69d4c4">special threshold</a> that, when crossed, can send notifications to the userspace that is running low on memory. Both the system application and regular user apps continuously wait for this condition and will react upon it by sending a <code>memory-pressure</code> event via the observer service. This event is visible only to C++ and chrome JS code and not directly by an application. Through the Gecko codebase we use this event to free as much memory as we can — normally by purging internal caches (images, DNS, sqlite, etc.), dropping assets that can be recreated (WebGL contexts for example) and running the garbage collector and cycle collector.<br>
+ <br>
+ When encountering a low memory condition the first <code>memory-pressure</code> event that will be sent will have the <code>low-memory</code> payload. If after a predefined time (5s) we're still in a low memory condition another <code>memory-pressure </code>event will be fired, but this time with the <code>low-memory-ongoing</code> payload. This payload is used when we continue to experience low-memory conditions and we want to flush caches and do other cheap forms of memory minimization, but know that heavy handed approaches like a GC are unlikely to succeed.</p>
+<h2 id="এলএমকে_এবং_অপর্যাপ্ত_মেমোরির_নির্দেশনা_যেভাবে_একসাথে_কাজ_করে">এলএমকে এবং অপর্যাপ্ত মেমোরির নির্দেশনা যেভাবে একসাথে কাজ করে</h2>
+<p>Currently the <a href="http://hg.mozilla.org/mozilla-central/file/545c35907eff/b2g/app/b2g.js#l722">low memory threshold is set above the LMK level for background applications but below the one for the homescreen</a>. So the aggregated action of the LMK and low memory notifications is as follows when a deivce is running out of memory:</p>
+<ol>
+ <li>Kill background apps in least-recently-used order.</li>
+ <li>If we didn't free enough memory, send <code>memory-pressure</code> events to all remaining applications.</li>
+ <li>If the condition persists resend a <code>memory-pressure</code> event every 5 seconds, but mark them as ongoing so the GC/CC doesn't react to them.</li>
+ <li>Kill the homescreen.</li>
+ <li>Kill perceivable or high-priority background applications</li>
+ <li>Kill the keyboard app, if it is running.</li>
+ <li>Kill foreground applications.</li>
+ <li>Kill high priority foreground applications.</li>
+ <li>Kill the preallocated process.</li>
+</ol>

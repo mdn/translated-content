@@ -1,0 +1,171 @@
+---
+title: Geeksphone
+slug: Archive/B2G_OS/Phone_guide/Geeksphone
+tags:
+  - Building
+  - Firefox OS
+  - Gaia
+  - Geeksphone
+  - Guide
+  - NeedsTranslation
+  - TopicStub
+  - tweaking
+translation_of: Archive/B2G_OS/Phone_guide/Geeksphone
+---
+<div class="summary">
+<p><span class="seoSummary">Developer Preview editions of the Firefox OS phone are now becoming widely available to the community, mainly through <a href="http://www.geeksphone.com/">Geeksphone</a>. Since these are for developers, naturally we want to encourage you to tinker and play with them as much as possible! In this article we cover some basic tips on how to keep your phone up to date and how to tweak the system Gaia applications.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: that these instructions are for the older Keon and Peak, not necessarily the latest Geeksphone Revolution phone.</p>
+</div>
+
+<h2 id="আপনার_গিকসফোনটি_সর্বশেষ_ইমেজ-এ_আপডেট_করুন">আপনার গিকসফোনটি সর্বশেষ ইমেজ-এ আপডেট করুন </h2>
+
+<p>Firefox OS updates can be be downloaded from within the Settings app, listed under Device information. The phone can be set to check for updates daily, weekly, or monthly. In addition a “check now” button is provided. When an update is available you will be prompted to download and install the current version.</p>
+
+<p><img alt="The screen for checking updates on the Firefox OS settings app" src="https://mdn.mozillademos.org/files/6051/checkupate.png" style="display: block; height: 478px; margin: 0px auto; width: 318px;"></p>
+
+<h2 id="আপনার_ফোনটি_ফ্লাশ_করুন">আপনার ফোনটি ফ্লাশ করুন </h2>
+
+<p>The team at Geeksphone is also now providing the latest stable and nightly builds as self contained downloads for flashing your phone.</p>
+
+<h3 id="আপনার_মোবাইল_এবং_কম্পিউটারটি_সেটআপ_করুন">আপনার মোবাইল এবং কম্পিউটারটি সেটআপ করুন</h3>
+
+<p><span style="line-height: 1.572;">Before trying to flash your phone make sure you have set it up as described in the section “Setting Up the Geeksphone Device” in </span><a href="https://hacks.mozilla.org/2013/05/pushing-firefox-os-apps-to-the-geeksphone/" style="line-height: 1.572;">Pushing Firefox OS Apps to the Geeksphone</a><span style="line-height: 1.572;">. This will ensure that you can push data to the phone. In that same section, follow the instructions to make sure your computer has the right USB drivers.</span></p>
+
+<div class="note">
+<p><strong>Note:</strong> It is particularly important that Windows computers be set up with the right USB drivers.</p>
+</div>
+
+<p>The builds are located at the <a href="http://downloads.geeksphone.com/">Geeksphone download site</a>. On this site you will be presented with options for selecting your device and what type of build you want to use.</p>
+
+<p><img alt="Two phone images side by side, the Geeksphone Keon and Peak, with different software download options below each one." src="https://mdn.mozillademos.org/files/6055/geeksphone-download.png" style="display: block; height: 486px; margin: 0px auto; width: 530px;"></p>
+
+<p>Download your particular build and extract the archive to your filesystem. The archive contains the images and commands required to flash the phone using Windows, Mac OS, or Linux. Before attempting to flash the phone make sure that you have enabled Remote debugging on the phone. This option can be set by launching the Settings app and navigating to the <code>Device information -&gt; More information -&gt; Developer</code> tab. Also do not attempt to flash the phone if the power level is below 50%.</p>
+
+<p><img alt="Enabling remote debugging on the Firefox OS Settings app" src="https://mdn.mozillademos.org/files/6049/remote-debugging.png" style="display: block; height: 480px; margin: 0px auto; width: 320px;"></p>
+
+<h3 id="Windows">Windows</h3>
+
+<div class="note">
+<p><strong>Note:</strong> You might need to install USB drivers on Windows. For instructions, see <span style="line-height: 1.572;">the section “Setting Up the Geeksphone Device” in </span><a href="https://hacks.mozilla.org/2013/05/pushing-firefox-os-apps-to-the-geeksphone/" style="line-height: 1.572;">Pushing Firefox OS Apps to the Geeksphone</a><span style="line-height: 1.572;">.</span></p>
+</div>
+
+<p>Open a Command Prompt (<code>start -&gt; type cmd in search -&gt; enter</code> on Windows 7, <code>Windows key + X -&gt; select Command Prompt</code> on Windows 8) and cd to the directory containing the extracted files. Run:</p>
+
+<pre class="brush: bash" lang="bash">flash.bat
+</pre>
+
+<h3 id="Mac_OS">Mac OS</h3>
+
+<p>Open a Terminal (<code>Cmd + space -&gt; type terminal -&gt; enter</code>) window and cd to the directory containing the extracted files. Run:</p>
+
+<pre class="brush: bash" lang="bash">./flash_mac.sh
+</pre>
+
+<h3 id="লিনাক্স">লিনাক্স</h3>
+
+<p>To flash a Keon from Ubuntu add the following rules to /etc/udev/rules.d/51-android.rules</p>
+
+<div>SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", ATTR{idProduct}=="8013", MODE="0666"</div>
+
+<div>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0666"</div>
+
+<div> </div>
+
+<p>Open a Terminal (control-alt-t on Ubuntu) window and cd to the directory containing the extracted files. Run:</p>
+
+<pre class="brush: bash" lang="bash">./flash.sh
+</pre>
+
+<p>This should flash the new image to the phone. The phone will need to be set up again as all data will be cleared. If you want to backup your data and restore afterwards, you can follow the instructions at <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition">Backup the phone system partition</a>.</p>
+
+<h2 id="If_you_have_an_'unagi'_or_developer_preview_phone_that_is_not_a_Geeksphone">If you have an 'unagi' or developer preview phone that is not a Geeksphone</h2>
+
+<p>If you have a developer phone that is not a Geeksphone such as an 'unagi' or a previously Android-based device, you may need to perform the following steps. If this is not you, please skip to the next section.</p>
+
+<p>You will need to install <strong>adb</strong> and <strong>fastboot</strong>. These utilities can be found in the Android Developer Toolkit.</p>
+
+<p>It is not necessary to install the entire toolkit. Download the toolkit from here and extract the contents. adb and fastboot are found in the /platform-tools/ folder. They can be copied to the /usr/bin of your Linux or Mac OS machine, or copied to another folder as long as that folder is added to your $PATH.</p>
+
+<p>If you are attempting to flash your device and have another device plugged in via USB, your phone may not be detected by these utilities correctly. Only have your phone plugged in while trying to flash it.</p>
+
+<h2 id="Tweaking_Gaia">Tweaking Gaia</h2>
+
+<p>If you are the industrious sort, you may want to tweak the default applications in Gaia — the UI in Firefox OS. In this section we will cover some of the basics for cloning Gaia and making changes to the default system apps. Bear in mind these tips are “at your own risk” and may involve you later referring to the section “Ok, I bricked my phone”. Before proceeding make sure that you have adb and fastboot installed on your system. To verify if these are installed open a terminal and type adb devices with your phone connected. You should see your phone listed under the attached devices.</p>
+
+<p>You should also be able to run fastboot from the terminal. If you run fastboot, a set of parameter options should be displayed. If you do not have adb or fastboot installed, a quick Google search with your operating system will return several quick starts on how to install them. In addition to adb and fastboot you will need Git. If you do not currently have Git installed, have a look at this <a href="https://help.github.com/articles/set-up-git">setup guide</a>. Finally make sure your phone is set up for remote debugging as described in the previous section.</p>
+
+<p>Once you have the prerequisites you can open a terminal and cd to the directory you would like to clone the Gaia source code to. Type the following commands:</p>
+
+<pre class="brush: bash" lang="bash">git clone git://github.com/mozilla-b2g/gaia.git gaia
+cd gaia
+</pre>
+
+<p>This will clone the current Gaia code to your system.</p>
+
+<div class="warning">
+<p>If you plan on submitting changes back to the Gaia source, be sure to fork the source before cloning as described in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Hacking">Hacking Gaia</a>.</p>
+</div>
+
+<p>Currently the Geeksphone Keon uses the v1.0.1 branch of Gaia code, so set the proper branch using the following command before you do anything else:</p>
+
+<pre class="brush: bash" lang="bash">git checkout -b v1.0.1 origin/v1.0.1
+</pre>
+
+<p>Most of the system apps are located in the apps subdirectory of gaia. You can now make any changes to these Firefox OS apps you wish. Once you have made changes, make sure your device is mounted properly by first running:</p>
+
+<pre class="brush: bash">adb remount</pre>
+
+<p>Next, run the following command to push the modified apps to your phone. This will by default push all the system apps to the phone:</p>
+
+<pre class="brush: bash" lang="bash">B2G_SYSTEM_APPS=1 make install-gaia
+</pre>
+
+<p>If you only changed one of the apps you can specify the particular app using similar syntax. In this example only the calendar app will be pushed to the phone:</p>
+
+<pre class="brush: bash" lang="bash">APP=calendar B2G_SYSTEM_APPS=1 make install-gaia
+</pre>
+
+<p>If you have issues while making the changes, you can reset the phone to default values using either of the following commands:</p>
+
+<pre class="brush: bash" lang="bash">make production
+make reset-gaia
+</pre>
+
+<div class="note">
+<p><strong>Note</strong>: Bear in mind that either of the above commands will clear any data or apps that you have pushed to the phone. If you want to backup your data and restore afterwards, you can follow the instructions at <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition">Backup the phone system partition</a>.</p>
+</div>
+
+<h2 id="Ok_I_bricked_my_phone">"Ok, I bricked my phone"</h2>
+
+<p>If you are in the process of modifying your phone and it becomes “unresponsive” you should be able to recover it using fastboot with a simple procedure. The following illustrates resetting the Keon but other phones should have a similar process. You will also need to verify that you have fastboot and ADB installed (try typing <code>fastboot</code> and <code>adb</code> in the command line if you are not sure).</p>
+
+<ol>
+ <li>Remove the USB cable and then remove the battery from the phone for 30 seconds.</li>
+ <li>Reinsert the battery and hold down the volume up and power buttons at the same time, for a few seconds, until the system recovery menu appears.</li>
+ <li>Reconnect the USB cable</li>
+ <li>Type in the command run adb reboot bootloader.</li>
+ <li>When the phone reboots and starts to show the Geeskphone logo, you are now in fastboot mode; run the following commands from a terminal window in the directory that contains the latest img files described in the first section of this post:</li>
+</ol>
+
+<pre class="brush: bash" lang="bash">fastboot flash recovery recovery.img
+fastboot flash boot boot.img
+fastboot flash userdata userdata.img
+fastboot flash system system.img
+fastboot reboot
+</pre>
+
+<p>This process should recover your phone. If it doesn't seem to work, you may have to try it a second time.</p>
+
+<h2 id="Go_play!">Go play!</h2>
+
+<p>We hope these instructions are useful to you, and naturally we want you to be as happy about Firefox OS and the possibilities as we are! Feel free to play around with updating your devices, make changes/updates to Gaia apps, and also be inspired to build you own open web apps.</p>
+
+<h2 id="আরও_দেখুন">আরও দেখুন</h2>
+
+<ul>
+ <li><a href="/en-US/Firefox_OS/Developer_phone_guide/Geeksphone/Geeksphone_FAQ">Geeksphone FAQ</a></li>
+ <li><a href="/en-US/Apps/Quickstart/Build/Intro_to_open_web_apps">Introduction to open web apps</a></li>
+</ul>

@@ -1,0 +1,52 @@
+---
+title: Number.toInteger()
+slug: Web/JavaScript/Reference/Global_Objects/Number/toInteger
+tags:
+  - JavaScript
+  - Method
+  - Number
+  - Obsolete
+translation_of: Archive/Web/JavaScript/Number.toInteger
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>Die <strong><code>Number.toInteger()</code></strong> Methode wurde eingesetzt, um den übegebenen Wert zu analysieren und zu einer ganzen Zahl zu konvertieren, jedoch wurde die Implementierung entfernt.</p>
+
+<p>Wenn der übergebene Wert {{jsxref("NaN")}}, {{jsxref("null")}} oder {{jsxref("undefined")}} ist, gibt die Methode <code>0</code> zurück. Wenn der Wert <code>false</code> ist, wird <code>0</code> und bei <code>true</code> wird <code>1</code> zurückgegeben.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Number.toInteger(<var>zahl</var>)</pre>
+
+<h3 id="Parameter">Parameter</h3>
+
+<dl>
+ <dt><code>zahl</code></dt>
+ <dd>Wert der zu einer ganzen Zahl konvertiert werden soll.</dd>
+</dl>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Einsatz_von_toInteger">Einsatz von <code>toInteger</code></h3>
+
+<pre class="brush: js">Number.toInteger(0.1);     // 0
+Number.toInteger(1);       // 1
+Number.toInteger(Math.PI); // 3
+Number.toInteger(null);    // 0
+</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p><code>Number.toInteger()</code> war Teil der des ECMAScript 6 Entwurfesspezifikation, jedoch wurde sie am 23. August 2013 im Draft Rev 17 entfernt.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Number.toInteger")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Number")}}</li>
+</ul>

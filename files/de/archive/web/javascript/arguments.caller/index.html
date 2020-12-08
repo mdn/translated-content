@@ -1,0 +1,55 @@
+---
+title: arguments.caller
+slug: Archive/Web/JavaScript/arguments.caller
+tags:
+  - Functions
+  - JavaScript
+  - Obsolete
+  - Property
+  - arguments
+translation_of: Archive/Web/JavaScript/arguments.caller
+---
+<div>{{jsSidebar("Functions")}}</div>
+
+<p>{{obsolete_header}}</p>
+
+<p>Die veraltete Eigenschaft<strong><code> arguments.caller</code></strong> wird genutzt, um die Funktion, die die aktuelle Funktion ausführt, zu ermittelt. Die Eigenschaft wurde entfernt und kann nicht mehr genutzt werden.</p>
+
+<h2 id="Description" name="Description">Beschreibung</h2>
+
+<p>Die Eigenschaft ist nicht mehr verfügbar, aber man kann {{jsxref("Function.caller")}} benutzen.</p>
+
+<pre class="brush: js notranslate">function whoCalled() {
+   if (whoCalled.caller == null)
+      console.log('I was called from the global scope.');
+   else
+      console.log(whoCalled.caller + ' called me!');
+}</pre>
+
+<h2 id="Examples" name="Examples">Beispiele</h2>
+
+<p>Der folgende Quelltext wurde eingesetzt, um den Wert der Eigenschaft <code>arguments.caller</code> zu prüfen, jedoch funktioniert dieses nicht mehr.</p>
+
+<pre class="brush: js example-bad notranslate">function whoCalled() {
+   if (arguments.caller == null)
+      console.log('I was called from the global scope.');
+   else
+      console.log(arguments.caller + ' called me!');
+}
+</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Wurde in keinem Standard spezifiziert. Wurde in JavaScript 1.1 implementiert und wegen {{bug(7224)}} und <span class="dpf_sent" id="dpfsent_2"><span class="corrected_word" id="dpforth0_npra_2_1" lang="potenziellen">potenziellen</span> </span> Sicherheitsrisiken wieder entfernt.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+
+
+<p>{{Compat("javascript.functions.arguments.caller")}}</p>
+
+<h2 id="See_also" name="See_also">Siehe auch</h2>
+
+<ul>
+ <li>{{jsxref("Function")}}</li>
+</ul>

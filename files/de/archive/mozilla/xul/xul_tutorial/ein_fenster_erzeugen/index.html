@@ -1,0 +1,111 @@
+---
+title: Ein Fenster erzeugen
+slug: Archive/Mozilla/XUL/XUL_Tutorial/Ein_Fenster_erzeugen
+tags:
+  - XUL
+  - XUL Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+---
+<p>{{ PreviousNext("XUL_Tutorial/Manifest_Dateien", "XUL_Tutorial/Buttons_hinzufügen") }}</p>
+
+<p>Zunächst wollen wir uns mit der Syntax einer XUL-Datei beschäftigen.</p>
+
+<h3 id="Eine_XUL_Datei_erstellen">Eine XUL Datei erstellen</h3>
+
+<p>Der Name einer XUL Datei kann frei gewählt werden, es sollte jedoch darauf geachtet werden, dass die Endung .xul verwendet wird. Die einfachste XUL Datei hat folgende Struktur:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+&lt;!-- Other elements go here --&gt;
+&lt;/window&gt;
+</pre>
+
+<p>Dieses Fenster wird keine Funktion haben, da es keine weitere UI-Elemete enthält. Diese werden im nächsten Abschnitt hinzugefügt. Der Code wird im folgenden Zeile für Zeile erklärt:</p>
+
+<ol>
+ <li><strong>&lt;?xml version="1.0"?&gt;</strong><br>
+  Diese Zeile zeigt, dass dies eine XML Datei ist. Diese Zeile sollte in jeder XUL Datei als erstes stehen.</li>
+ <li><strong>&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</strong><br>
+  Diese Zeile wird gebraucht um festzulegen, welches Style Sheet für diese Datei verwendet wird. Dies ist die Syntax wie XML Dateien Style Sheets importieren. In diesem Fall importieren wir ein Style Sheet welches sich im globalen Teil eines Skins befindet. Wir legen keine spezifische Datei fest, so dass Mozilla selbst entscheidet, welche Datei verwendet werden soll. In diesem Fall wird die Datei global.css verwendet. Diese Datei enthält alle Standard-Deklarationen für jedes XUL Element. Weil XML selbst nicht weiß wie die Elemente dargestellt werden sollten, brauch es diese Datei, welche dies festlegt. Normalerweise wird diese Zeile ebenfalls an den Anfang einer jeden XUL Datei geschrieben. Es können auch andere Style Sheets mit der selben Syntax importiert werden. Das globale Style Sheet wird normalerweise aus dem eigenen Style Sheet importiert.</li>
+ <li><strong>&lt;window</strong><br>
+  Diese Zeile gibt an, dass ein {{ XULElem("window") }} beschrieben wird. Jedes User Interface wird in einer eigenen Datei beschrieben. Dieser Tag ist wie ein HTML Tag welcher ein gesamtes HTML Dokument umfasst, mit dem Unterschied dass hier ein User Interface beschrieben wird. <a href="/De/XUL/Window#Attribute" title="de/XUL/window#Attribute">Einige Attribute</a> können im {{ XULElem("window") }} Tag platziert werden, hier sind es vier. In diesem Beispiel wird jedes Attribut in einer eigenen Zeile beschrieben, dies ist jedoch nicht zwingend.</li>
+ <li><strong>id="findfile-window"</strong><br>
+  Das <code>{{ XULAttr("id") }}</code> Attribut wird zur Identifizierung gebraucht, damit später auf das Fenster per Skript zugegriffen werden kann. Im Normalfall sollte ein <code>id</code> Attribut bei allen Elementen vorhanden sein. Der Name kann frei gewählt werden, er sollte jedoch sinnvoll sein.</li>
+ <li><strong>title="Find Files"</strong><br>
+  Das <code>{{ XULAttr("title") }}</code> Attribut beschreibt den Text, welcher in der Titelzeile des Fensters erscheinen soll. In unserem Fall wird es 'Find Files' sein.</li>
+ <li><strong>orient="horizontal"</strong><br>
+  Das <code>{{ XULAttr("orient") }}</code> Attribut beschreibt die Anordnung der Elemente in diesem Fenster. Der Wert <code>horizontal</code> zeigt, dass die Elemente horizontal über dem Fenster verteilt werden. Es kann auch der Wert <code>vertical</code> verwendet werden, welcher meint, dass die Elemente in einer Spalte verteilt werden. Dies ist der Standardwert, das heißt, dass man dieses Attribut weglassen kann, wenn man eine vertikale Ausrichtung möchte.</li>
+ <li><strong>xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;</strong> Diese Zeile deklariert den Namensraum für XUL, welcher im Fenster deklariert sein sollte um festzulegen, dass alle Nachfolger XUL sind. Diese URL wird niemals heruntergeladen. Mozilla wird diese URL intern verarbeiten.</li>
+ <li><strong><span class="nowiki">&lt;!-- Other elements go here --&gt;</span></strong><br>
+  Ersetze diesen Kommentar Block durch andere Elemente (Buttons, Menüs und andere User Interface Komponenten), welche im Fenster angezeigt werden sollten. Wir werden ein paar von ihnen zu einem späteren Zeitpunkt hinzufügen.</li>
+ <li><strong>&lt;/window&gt;</strong><br>
+  Zum Schluss brauchen wir das {{ XULElem("window") }} Tag, um das Ende der Datei anzuzeigen.</li>
+</ol>
+
+<h3 id="Ein_Fenster_öffnen">Ein Fenster öffnen</h3>
+
+<p>Um ein XUL Fenster zu öffnen gibt es verschiedene Methoden. Wenn Sie sich nur in der Entwicklungsphase befinden, können Sie einfach die URL ("chrome:", "file:" oder weitere) in die Adresszeile des Browserfensters eingeben. Sie können auch einfach auf einen Doppelklick auf die Datei ausführen, wenn XUL Dateien mit Mozilla verknüpft sind. Das XUL Fenster erscheint im Browserfenster als neues Fenster, aber das ist meistens ungenügend während der Entwicklung.</p>
+
+<p>Der korrekte Weg ist natürlich ein Fenster über JavaScript zu öffnen. Es ist kein neuer Syntax dazu notwendig, denn die <code><a href="/de/DOM/window.open" title="de/DOM/window.open">window.open()</a></code> Funktion kann genau wie für <a href="/de/HTML" title="de/HTML">HTML</a> Dokumente dazu verwendet werden. Es ist jedoch ein zusätzlicher Parameter "flag" nötig. In diesem Fall muss 'chrome' angeben werden, damit klar ist, dass ein <a href="/de/DOM/window.open#Window_functionality_features" title="de/DOM/window.open#Window functionality features">chrome</a> Dokument geöffnet werden soll. Dieses Stück Code wird dafür sorgen, dass ein Fenster ohne Toolbars und Menüs geöffnet wird:</p>
+
+<pre>window.open(url,windowname,flags);</pre>
+
+<p>wobei "flags" das Schlüsselwort "chrome" wie in diesem Beispiel enthält:</p>
+
+<pre>window.open("chrome://navigator/content/navigator.xul", "bmarks", "chrome,width=600,height=300");
+</pre>
+
+<div class="highlight">
+<p><span class="highlightred">Wenn Sie Firefox verwenden:</span></p>
+
+<pre>window.open("chrome://browser/content/places/places.xul", "bmarks", "chrome,width=600,height=300");
+</pre>
+
+<p>Diese Zeile kann auch in der Fehlerkonsole getestet werden. Wählen Sie Extras -&gt; Fehlerkonsole, tippen Sie die Zeile JavaScript ein und drücken Sie auf Evaluieren oder benutzen Sie die Enter-Taste.</p>
+
+<h5 id="Das_findfile.xul_Beispiel">Das findfile.xul Beispiel</h5>
+
+<p>Fangen wir an die Basisdatei für den Dateisuche-Dialog zu schreiben. Erstellen Sie die Datei findfile.xul und packen Sie diese in das content Verzeichnis, welches von der finndfile.manifest Datei festgelegt wurde (haben wir im vorherigen Abschnitt festgelegt). Fügen Sie die XUL Vorlage von oben zu dieser Datei hinzu und speichern Sie diese ab.</p>
+</div>
+
+<p>Sie können den Kommandozeilenparameter '-chrome' verwenden, um die XUL Datei mit Mozilla zu starten. Wird dies nicht festgelegt, wird das Standardfenster geöffnet (normalerweise das Browserfenster). Wir können zum Beispiel den Dateisuche-Dialog mit einem der folgenden Zeilen öffnen:</p>
+
+<pre>mozilla -chrome chrome://findfile/content/findfile.xul
+
+mozilla -chrome resource:/chrome/findfile/content/findfile.xul
+</pre>
+
+<p>Wenn Sie einen dieser Kommandos in einer Eingabeaufforderung (angenommen Sie verfügen übere eine auf Ihrem System) eingeben, wird der Dateisuche-Dialog standardmäßig geöffnet, anstatt des normalen Mozilla Browserfensters. Da wir allerdings noch keine UI-Elemente in das Fenster gepackt haben, sehen Sie zunächst nichts. Im nächsten Abschnitt werden wir Elemente hinzufügen.</p>
+
+<p>Um den Effekt dennoch zu beobachten, können Sie mit der folgenden Zeile das Lesezeichenfenster öffnen:</p>
+
+<pre>mozilla -chrome chrome://communicator/content/bookmarks/bookmarksManager.xul</pre>
+
+<p><span class="highlightred">Wenn Sie Firefox benutzen:</span></p>
+
+<pre>firefox -chrome <span class="s">chrome://browser/content/places/places.xul</span></pre>
+
+<p>Das '-chrome' Argument gibt der Datei keine gesonderten Rechte. Stattdessen kann es dadurch als Top-level Fenster in jedem Browser angezeigt werden, ohne Adressleiste oder Menüs. Nur chrome: URLs haben diese zusätzlichen Rechte.</p>
+
+<div class="note">Die <a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Erweiterungsentwickler Erweiterung</a> enthält einen XUL Editor, der den eingegebenen XUL-Code in Echtzeit wiedergibt!</div>
+
+<h3 id="Problemlösung">Problemlösung</h3>
+
+<ul>
+ <li>Wenn das XUL Fenster nicht auf dem Desktop angezeigt wird aber ein Icon auf der Desktop-Toolbar zu sehen ist, überprüfen Sie die xml-stylesheet Deklaration. Stellen Sie sicher, dass das Stylesheet korrekt eingebunden wird:</li>
+</ul>
+
+<pre class="eval"> &lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+</pre>
+
+<p>Im nächsten Abschnitt werden wir <a href="/de/XUL_Tutorial/Buttons_hinzufügen" title="de/XUL Tutorial/Buttons hinzufügen">ein paar Buttons zum Fenster hinzufügen</a>.</p>
+
+<p>{{ PreviousNext("XUL_Tutorial/Manifest_Dateien", "XUL_Tutorial/Buttons_hinzufügen") }}</p>
+
+<p>{{ languages( { "en": "en/XUL_Tutorial/Creating_a_Window", "fr": "fr/Tutoriel_XUL/Cr\u00e9er_une_fen\u00eatre", "ja": "ja/XUL_Tutorial/Creating_a_Window", "pl": "pl/Kurs_XUL/Tworzenie_okna", "es": "es/Tutorial_de_XUL/Creando_una_ventana" } ) }}</p>

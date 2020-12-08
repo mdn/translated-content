@@ -1,0 +1,37 @@
+---
+title: Navigator.requestWakeLock()
+slug: Archive/B2G_OS/API/Navigator/requestWakeLock
+translation_of: Archive/B2G_OS/API/Navigator/requestWakeLock
+---
+<p>{{APIRef("Wake Lock API")}}{{ non-standard_header() }}</p>
+
+<p>This <code><strong>Navigator.requestWakeLock()</strong></code> method of the <a href="/en-US/docs/Web/API/Wake_Lock_API">Wake Lock API</a> is used to request a {{ domxref("MozWakeLock") }} on any resource of the device. This means that you can prevent that resource from becoming unavailable as long as your app holds a lock for that resource. For example, a voice recording app can obtain a lock to keep the screen on during recording so that it can give prover visual feedback to the user that recording is progressing.</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the window that requested one or more wake locks is closed or destroyed, any wake locks it acquired are implicitly released; no manual release is necessary.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>lock</em> = window.navigator.requestWakeLock(<em>resourceName</em>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt>resourceName</dt>
+ <dd>A string representing the name of the resource to lock. <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia">Gaia</a> uses four basic resources names: <code>screen</code>, <code>cpu</code>,  <code>wifi</code>, and <a href="/en-US/docs/Web/API/Wake_Lock_API/Keeping_the_geolocation_on_when_the_application_is_invisible">gps</a>, but any certified application can expose new resources.</dd>
+</dl>
+
+<h3 id="Value" name="Value">Return value</h3>
+
+<p>Returns a {{domxref("MozWakeLock")}} object you can use to keep track of or release the lock..</p>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p>W3C tracks <a href="https://www.w3.org/TR/2014/NOTE-wake-lock-use-cases-20140814">Wake Lock: Use cases</a> and is working on the Editor's traft <a href="https://w3c.github.io/wake-lock">API</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("Navigator.mozPower")}}</li>
+</ul>

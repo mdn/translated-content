@@ -1,0 +1,161 @@
+---
+title: iframe
+slug: Archive/Mozilla/XUL/iframe
+tags:
+  - XUL Elemente
+  - XUL Referenz
+translation_of: Archive/Mozilla/XUL/iframe
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/de/docs/XUL_Referenz">XUL Referenz Startseite</a>    [
+ <a href="#Beispiele">Beispiele</a> |
+ <a href="#Attribute">Attribute</a> |
+ <a href="#Eigenschaften">Eigenschaften</a> |
+ <a href="#Methoden">Methoden</a> |
+ <a href="#Verwandte_Themen">Verwandte Themen</a> ]
+</span></div>
+<p>Ein innerer Frame, der in etwa wie das <code>iframe</code>-Element von HTML funktioniert. Das Attribut <code id="a-src"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code> gibt den Inhalt des Frames an. Dieser Inhalt befindet sich in einem separaten Dokument. Jegliche Kindelemente des <code>iframe</code> Elements werden ignoriert.</p>
+<p>Weitere Informationen sind im <a href="/de/XUL_Tutorial/Content_Panels" title="de/XUL_Tutorial/Content_Panels">XUL Tutorial</a> verfügbar.</p>
+<dl> <dt>Attribute</dt> <dd><a href="#a-showcaret">showcaret</a>, <a href="#a-src">src</a>, <a href="#a-browser.type">type</a>, <a href="#a-transparent">transparent</a></dd> <dt>Eigenschaften</dt> <dd><a href="#p-accessibleType">accessibleType</a>, <a href="#p-contentDocument">contentDocument</a>, <a href="#p-contentWindow">contentWindow</a>, <a href="#p-docShell">docShell</a>, <a href="#p-webNavigation">webNavigation</a></dd>
+</dl>
+<h3 id="Beispiele" name="Beispiele">Beispiele</h3>
+<pre>&lt;iframe src="table.php" flex="2" id="browserTable" name="table_frame"/&gt;
+</pre>
+<p>Einen URL aus einem Menü auswählen</p>
+<pre>&lt;menulist oncommand="doNav(this);"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Mozilla" value="http://mozilla.org" /&gt;
+    &lt;menuitem label="Slashdot" value="http://slashdot.org"/&gt;
+    &lt;menuitem label="Sourceforge" value="http://sf.net" /&gt;
+    &lt;menuitem label="Freshmeat" value="http://freshmeat.net"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+
+
+&lt;iframe id="myFrame" flex="1"/&gt;
+
+&lt;script&gt;
+function doNav(obj){
+  var url = obj.selectedItem.value;
+  // note the firstChild is the menupopup element
+  document.getElementById('myFrame').setAttribute('src', url);
+}
+&lt;/script&gt;
+</pre>
+<h3 id="Attribute" name="Attribute">Attribute</h3>
+<div id="a-showcaret">
+
+
+<dl>
+ <dt><code id="a-showcaret"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/showcaret">showcaret</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Whether or not to cause a typing caret to be visible in the content area. Default is <code>false</code>.</dd>
+</dl>
+
+
+</div> <div id="a-src">
+
+<dl>
+  <dt>
+    <code id="a-src"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></dt>
+  <dd>
+    Typ: <em>URL</em></dd>
+  <dd>
+    Die URL des im Element anzuzeigenden Inhalts.</dd>
+</dl>
+
+</div> <div id="a-browser.type">
+
+
+<dl>
+ <dt><code id="a-browser.type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/browser.type">type</a></code></dt>
+ <dd><span class="seoSummary">Type: <em>one of the values below</em>.</span></dd>
+ <dd><span class="seoSummary">The type of browser, which can be used to set access of the document loaded inside the browser.</span> If this is not set, the loaded document has the same access as the window containing the <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code>. More precisely: The document loaded into a chrome window is always of chrome type. Subdocuments of chrome documents are of chrome type, unless the container element (one of iframe, browser or editor) has one of the special type attribute values (the common ones are content, content-targetable and content-primary) indicating that the subdocument is of content type. This boundary has a number of special effects, such as making window.top == window (unless the <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code> is added to a chrome document), and preventing documents from inheriting the principal of the parent document. The type attribute on all frames in content documents is ignored; subdocuments of content documents are always content documents.</dd>
+ <dt>
+ <div class="warning"><strong>Warning: </strong>The type attribute must be set before the element is inserted into the document.</div>
+ </dt>
+ <dd>
+ <dl>
+  <dt><code>content</code></dt>
+  <dd>A browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it.</dd>
+  <dt><code>content-primary</code></dt>
+  <dd>The primary browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it. For instance, in a web browser, this would be the element that displays the web page. The window for the primary content can be retrieved more conveniently using <a href="/en/DOM/window.content" title="en/DOM/window.content">window.content</a>.</dd>
+  <dt><code>content-targetable</code></dt>
+  <dd>One browser among many for content. The content that is loaded inside the browser is not allowed to access the chrome above it. This is the preferred value for any <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code> element in an application, which will use multiple browsers of equal privileges, and is unselected at the moment.</dd>
+  <dt><code>chrome</code></dt>
+  <dd>(default behaviour): A browser, intended to be used for loading privileged content using a chrome:// URI. Don't use for content from web, as this may cause serious security problems!</dd>
+ </dl>
+ </dd>
+</dl>
+
+
+</div> <div id="a-transparent">
+<dl><dt><code id="a-iframe.transparent"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/iframe.transparent">transparent</a></code></dt><dd>Type: <em>one of the values below</em></dd><dd>Set the background of an <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code></code> as transparent.</dd><dd><dl><dt><code>transparent</code></dt><dd>This results in the iframe's background being transparent. This can be used to workaround things like <a class="    link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=540911" title="https://bugzilla.mozilla.org/show_bug.cgi?id=540911">bug 540911</a></dd></dl></dd>
+</dl>
+</div> <table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238);">
+<tbody>
+<tr>
+<td><p><strong>Geerbt von XUL-Element</strong><br> <small>
+<code id="a-align"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code>,
+<code id="a-allowevents"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/allowevents">allowevents</a></code>,
+<code id="a-allownegativeassertions"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/allownegativeassertions">allownegativeassertions</a></code>,
+<code id="a-class"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code>,
+<code id="a-coalesceduplicatearcs"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/coalesceduplicatearcs">coalesceduplicatearcs</a></code>,
+<code id="a-collapsed"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/collapsed">collapsed</a></code>,
+<code id="a-container"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/container">container</a></code>,
+<code id="a-containment"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/containment">containment</a></code>,
+<code id="a-context"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code>,
+<code id="a-contextmenu"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/contextmenu">contextmenu</a></code>,
+<code id="a-datasources"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/datasources">datasources</a></code>,
+<code id="a-dir"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code>,
+<code id="a-empty"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/empty">empty</a></code>,
+<code id="a-equalsize"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/equalsize">equalsize</a></code>,
+<code id="a-flags"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code>,
+<code id="a-flex"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code>,
+<code id="a-height"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code>,
+<code id="a-hidden"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code>,
+<code id="a-id"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code>,
+<code id="a-insertafter"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/insertafter">insertafter</a></code>,
+<code id="a-insertbefore"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/insertbefore">insertbefore</a></code>,
+<code id="a-left"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/left">left</a></code>,
+<code id="a-maxheight"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/maxheight">maxheight</a></code>,
+<code id="a-maxwidth"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code>,
+<code id="a-menu"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/menu">menu</a></code>,
+<code id="a-minheight"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/minheight">minheight</a></code>,
+<code id="a-minwidth"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code>,
+<code id="a-mousethrough"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/mousethrough">mousethrough</a></code>,
+<code id="a-observes"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/observes">observes</a></code>,
+<code id="a-ordinal"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/ordinal">ordinal</a></code>,
+<code id="a-orient"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code>,
+<code id="a-pack"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code>,
+<code id="a-persist"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code>,
+<code id="a-popup"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/popup">popup</a></code>,
+<code id="a-position"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/position">position</a></code>,
+<code id="a-preference-editable"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/preference-editable">preference-editable</a></code>,
+<code id="a-querytype"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/querytype">querytype</a></code>,
+<code id="a-ref"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code>,
+<code id="a-removeelement"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/removeelement">removeelement</a></code>,
+<code id="a-sortDirection"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/sortDirection">sortDirection</a></code>,
+<code id="a-sortResource"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/sortResource">sortResource</a></code>,
+<code id="a-sortResource2"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/sortResource2">sortResource2</a></code>,
+<code id="a-statustext"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/statustext">statustext</a></code>,
+<code id="a-style"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code>,
+<code id="a-template"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/template">template</a></code>,
+<code id="a-tooltip"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/tooltip">tooltip</a></code>,
+<code id="a-tooltiptext"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/tooltiptext">tooltiptext</a></code>,
+<code id="a-top"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/top">top</a></code>,
+<code id="a-uri"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/uri">uri</a></code>,
+<code id="a-wait-cursor"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/wait-cursor">wait-cursor</a></code>,
+<code id="a-width"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code> </small></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Eigenschaften" name="Eigenschaften">Eigenschaften</h3>
+<p> </p><div id="p-accessibleType"></div> <div id="p-contentDocument"></div> <div id="p-contentWindow"></div> <div id="p-docShell"></div> <div id="p-webNavigation"></div>
+<h3 id="Methoden" name="Methoden">Methoden</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Geerbte Methoden</strong><br> <small><code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.addEventListener">element.addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.appendChild">node.appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.cloneNode">node.cloneNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.compareDocumentPosition">node.compareDocumentPosition()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.dispatchEvent">element.dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttribute">element.getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNode">element.getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNodeNS">element.getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getAttributeNS">element.getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getBoundingClientRect">element.getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getClientRects">element.getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Methoden/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByClassName">element.getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagName">element.getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.getElementsByTagNameNS">element.getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getFeature">node.getFeature()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.getUserData">node.getUserData()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttribute">element.hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.hasAttributeNS">element.hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasAttributes">nodes.hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.nodes.hasChildNodes">nodes.hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.insertBefore">node.insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isDefaultNamespace">node.isDefaultNamespace()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isEqualNode">node.isEqualNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSameNode">node.isSameNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.isSupported">node.isSupported()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupNamespaceURI">node.lookupNamespaceURI()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.lookupPrefix">node.lookupPrefix()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.normalize">node.normalize()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelector">element.querySelector()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.querySelectorAll">element.querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttribute">element.removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNode">element.removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeAttributeNS">element.removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.removeChild">node.removeChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.removeEventListener">element.removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.replaceChild">node.replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttribute">element.setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNode">element.setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNodeNS">element.setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.element.setAttributeNS">element.setAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/de/docs/DOM/element.node.setUserData">node.setUserData()</a></code></small></p> </td> </tr> </tbody>
+</table>
+<h3 id="Verwandte_Themen" name="Verwandte_Themen">Verwandte Themen</h3>
+<dl> <dt>Schnittstellen</dt> <dd><a href="/de/NsIAccessibleProvider" title="de/NsIAccessibleProvider">nsIAccessibleProvider</a></dd>
+</dl>

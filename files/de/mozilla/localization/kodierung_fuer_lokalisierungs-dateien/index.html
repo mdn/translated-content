@@ -1,0 +1,137 @@
+---
+title: Kodierungen für Lokalisierungsdateien
+slug: Mozilla/Localization/Kodierung_fuer_Lokalisierungs-Dateien
+tags:
+  - Internationalisierung
+  - Lokalisierung
+translation_of: Mozilla/Localization/Encodings_for_localization_files
+---
+<p>Beim Erstellen einer Lokalisierung für Mozilla Produkte ist es wichtig die Kodierung der Dateien zu beachten, die man generiert.</p>
+
+<p>Im Allgemeinen sind Dateien im Mozilla Repository UTF-8 kodiert. Es gibt allerdings einige wenige Ausnahmen.</p>
+
+<h3 id="Installer" name="Installer">Installer</h3>
+
+<p>Der Windows Installer unterstützt UTF-8 nicht, sondern nur die von Windows vorgegebenen Zeichensatztabellen. Die Einbindung in den Erstellungsprozess ist kompliziert, daher hier einige Hinweise:  </p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td class="header">Datei</td>
+   <td class="header">Kodierung</td>
+   <td class="header">Hinweise</td>
+  </tr>
+  <tr>
+   <td>toolkit/installer/windows/charset.mk</td>
+   <td>ASCII</td>
+   <td>Die Variable WIN_INSTALLER_CHARSET muss eine Kodierung haben, die mit dem Parameter CHARSET= aus toolkit/installer/windows/install.it übereinstimmt. Geeignete Werte siehe in der Tabelle unten. </td>
+  </tr>
+  <tr>
+   <td>toolkit/installer/windows/install.it</td>
+   <td>
+    <p>Eine Zeichensatztabelle von Windows. Der Parameter CHARSET= in dieser Datei und der Parameter WIN_INSTALLER_CHARSET in der Datei charset.mk müssen mit dem Zeichensatz übereinstimmen.</p>
+   </td>
+   <td>Die Parameter FONTNAME/FONTSIZE/CHARSET in dieser Datei müssen geeigete Werte haben. Für die meisten westlichen Zeichensätze sind die Werte "MS Sans Serif" und "8" sinnvolle Standardwerte. Für östliche Schriftsätze müssen geeignete Schriftarten aus dem Lieferumfang von Windows ausgewählt werden. Geeignete Werte für den Parameter CHARSET= siehe in der Tabelle unten.</td>
+  </tr>
+  <tr>
+   <td>browser/installer/installer.inc</td>
+   <td>UTF-8</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>toolkit/installer/unix/install.it</td>
+   <td>UTF-8</td>
+   <td>{{ Deprecated_inline() }}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Native_Windows_encodings" name="Native_Windows_encodings">Native Windows-Kodierungen</h4>
+
+<p>Die nachfolgende Tabelle beinhaltet native Windows-Kodierungen und die jeweiligen Werte für WIN_INSTALLER_CHARSET und CHARSET=:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Kodierungsbezeichnung</td>
+   <td class="header">WIN_INSTALLER_CHARSET (charset.mk)</td>
+   <td class="header">CHARSET= (windows/install.it)</td>
+  </tr>
+  <tr>
+   <td>ANSI_CHARSET</td>
+   <td>CP1252</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td>BALTIC_CHARSET</td>
+   <td>CP1257</td>
+   <td>186</td>
+  </tr>
+  <tr>
+   <td>CHINESEBIG5_CHARSET</td>
+   <td>CP950</td>
+   <td>136</td>
+  </tr>
+  <tr>
+   <td>EASTEUROPE_CHARSET</td>
+   <td>CP1250</td>
+   <td>238</td>
+  </tr>
+  <tr>
+   <td>GB2312_CHARSET</td>
+   <td>CP936</td>
+   <td>134</td>
+  </tr>
+  <tr>
+   <td>GREEK_CHARSET</td>
+   <td>CP1253</td>
+   <td>161</td>
+  </tr>
+  <tr>
+   <td>HANGUL_CHARSET</td>
+   <td>CP949</td>
+   <td>129</td>
+  </tr>
+  <tr>
+   <td>RUSSIAN_CHARSET</td>
+   <td>CP1251</td>
+   <td>204</td>
+  </tr>
+  <tr>
+   <td>SHIFTJIS_CHARSET</td>
+   <td>CP932</td>
+   <td>128</td>
+  </tr>
+  <tr>
+   <td>TURKISH_CHARSET</td>
+   <td>CP1254</td>
+   <td>162</td>
+  </tr>
+  <tr>
+   <td>VIETNAMESE_CHARSET</td>
+   <td>CP1258</td>
+   <td>163</td>
+  </tr>
+  <tr>
+   <td colspan="3"><strong>Windows Sprachversionen Middle East</strong>:</td>
+  </tr>
+  <tr>
+   <td>ARABIC_CHARSET</td>
+   <td>CP1256</td>
+   <td>178</td>
+  </tr>
+  <tr>
+   <td>HEBREW_CHARSET</td>
+   <td>CP1255</td>
+   <td>177</td>
+  </tr>
+  <tr>
+   <td colspan="3"><strong>Windows Sprachversionen Thai</strong>:</td>
+  </tr>
+  <tr>
+   <td>THAI_CHARSET</td>
+   <td>CP874</td>
+   <td>222</td>
+  </tr>
+ </tbody>
+</table>

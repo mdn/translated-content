@@ -1,0 +1,37 @@
+---
+title: Panoràmica dels Proveïdors d'Identitat
+slug: Mozilla/Persona/Proveidors_d_Identitat
+translation_of: Archive/Mozilla/Persona/Identity_Provider_Overview
+---
+<p>Un proveïdor d'identitat Persona (IdP) és un domini que signa i certifica directament la identitat dels seus usuaris. Com les identitats Persona estan basades en direccions de correu electrònic, és un pas natural per a qualsevol domini que ofereixi correu electrònic convertir-se en IdP.</p>
+<p>Si vostè té un nom de domini, pot esdevenir un IdP de Persona implementant el suport per al protocol BrowserID.</p>
+<h2 id="El_document_de_suport_IdP">El document de suport IdP</h2>
+<p>Els dominis anuncien la seva capacitat d'actuar com a IdPs mitjançant la publicació d'un document de suport a <code>/.well-known/browserid</code>. Aquest document formatat amb JSON conté tres valors:</p>
+<ul>
+  <li><code>public-key</code>: La part pública de la clau de xifrat del domini.</li>
+  <li><code>authentication</code>: La pàgina del domini per demanar als usuaris que iniciïn sessió.</li>
+  <li><code>provisioning</code>: La pàgina del domini per certificar la identitat dels seus usuaris.</li>
+</ul>
+<p>Els llocs web utilitzen la clau pública per verificar l'autenticitat de les assercions d'identitat dels usuaris.</p>
+<p>Els navegadors utilitzen els valors autenticació i aprovisionament per obtenir la certificació d'identitat dels usuaris.</p>
+<p>Per obtenir més informació, incloent com els dominis poden delegar a d'altres IdP, vegeu la <a href="https://developer.mozilla.org/en-US/docs/Persona/.well-known-browserid" title="https://developer.mozilla.org/en-US/docs/BrowserID/.well-known-browserid"><code>/.well-known/browserid</code> documentation</a>.</p>
+<h2 id="Com_interactuen_els_navegadors_amb_els_IdPs">Com interactuen els navegadors amb els IdPs</h2>
+<p>Per demostrar com els navegadors i els IdPs interactuen, vegem què passa el primer cop que <code>alice@example.com</code> utilitza Persona per iniciar sessió en un lloc web.</p>
+<ol>
+  <li>El navegador d'Alice obté el document de suport de <code>https://example.com/.well-known/browserid</code>.</li>
+  <li>El navegador d'Alice carrega de manera invisible la pàgina d'aprovisionament d'<code>example.com</code> i li demana que signi una clau pública certificant la identitat d'Alice.</li>
+  <li>Abans de signar la clau, <code>example.com</code> necessita proves de que l'usuari realment és Alice, així que li indica al navegador que ella necessita autenticar-se.</li>
+  <li>El navegador d'Alice li mostra a Alice la pàgina d'autenticació d'<code>example.com</code> i ella inicia sessió, establint una nova sessió a <code>example.com</code>.</li>
+  <li>El navegador d'Alice torna a carregar la pàgina d'aprovisionament i de nou li demana que signi la clau pública que certifica la identitat d'Alice.</li>
+  <li>La pàgina d'aprovisionament pot verificar la identitat d'Alice per la inspecció de la nova sessió. Satisfeta, signa un certificat que conté la clau pública d'Alice, la seva adreça de correu electrònic, i una data de caducitat del certificat.</li>
+</ol>
+<p>Durant la vigència del certificat signat, el navegador d'Alice pot crear assercions d'identitat vàlids per <code>alice@example.com</code> cada vegada que vol accedir a un lloc web amb Persona.</p>
+<p>Els passos 3-5 poden ser omesos si Alice ja té una sessió vàlida amb <code>example.com</code>, per exemple, si ha iniciat sessió al correu web o a un portal d'intranet.</p>
+<h2 id="Com_interactuen_els_llocs_web_amb_els_IdPs">Com interactuen els llocs web amb els IdPs</h2>
+<p>Suposem que Alice vol accedir a <a href="http://123done.org/" title="http://123done.org/">123done.org</a>. El seu navegador generara i signara una asserció d'identitat que conté el certificat de més amunt i que presenta com a prova de la seva identitat.</p>
+<p>En comparar la signatura de l'asserció d'identitat d'Alice amb la clau pública a l'interior del certificat signat, 123done pot estar segur de que el certificat li ha estat emès a la mateixa persona que ha generat l'asserció d'identitat. No obstant això, 123done encara ha de comprovar que el certificat és vàlid examinant la signatura.</p>
+<p>Com que el certificat ha estat emès per a <code>alice@example.com</code>, 123done agafa al document de suport de <code>https://example.com/.well-known/browserid</code>. N'extreu la clau pública i la compara amb la signatura del certificat d'Alice. Si la clau coincideix amb la signatura, 123done sap que el certificat és legítim i pot finalment permetre que que Alice iniciï sessió.</p>
+<p>Tingueu en compte que 123done no "ha trucat mai per telèfon a casa" o d'una altra manera ha revelat la identitat d'Alice quan ella ha iniciat sessió. Tan sols ha necessitat demanar un simple document a <code>example.com </code>que a més pot ser guardat a la memòria cau.</p>
+<h2 id="Seguretat_i_confiança">Seguretat i confiança</h2>
+<p>El protocol BrowserID, i per tant Persona, es basen en tècniques estàndard de criptografia de clau pública.</p>
+<p>Pot consultar la nostra documentació sobre els <a href="/en/Persona/Crypto" title="https://developer.mozilla.org/en/Persona/Crypto">conceptes criptogràfics</a> que hi ha darrera de com funciona un IdP de Persona o pots llegir <a href="/en-US/docs/Persona/Implementing_a_Persona_IdP" title="/en-US/docs/Persona/Implementing_a_Persona_IdP">més detalls de com estan implementats els IdPs</a>.</p>

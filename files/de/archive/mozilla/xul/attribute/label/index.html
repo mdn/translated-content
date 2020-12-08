@@ -1,0 +1,32 @@
+---
+title: label
+slug: Archive/Mozilla/XUL/Attribute/label
+tags:
+  - XUL Attribute
+  - XUL Referenz
+translation_of: Archive/Mozilla/XUL/Attribute/label
+---
+<div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/de/docs/XUL_Referenz">XUL-Referenz Startseite</a></span></div>
+<dl> <dt><code id="a-label"><a href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt> <dd>Typ: <em>string</em></dd> <dd>Die Beschriftung für das Element. Wird das Attribut nicht angegeben, so erscheint auch kein Beschriftungstext.</dd>
+</dl>
+<div class="noinclude">
+<h3 id="Siehe_auch" name="Siehe_auch">Siehe auch</h3>
+<ul> <li><a href="/de/XUL/Attribute/treeitem.label" title="de/XUL/Attribute/treeitem.label">treeitem.label</a>, <code><a href="/de/XUL/label" title="de/XUL/label">&lt;label&gt;</a></code> element</li>
+</ul>
+<h4 id="Beispiele_in_JavaScript" name="Beispiele_in_JavaScript">Beispiele in JavaScript</h4>
+<pre>&lt;label value="Whaw" id="the-big-label" command="the-big-button"/&gt;
+&lt;button id="the-big-button" label="Klick mich"
+	oncommand="alert(document.getElementById('the-big-label').value)"/&gt;
+
+&lt;label id="myLabel" value="Meine Beschriftung"/&gt;
+&lt;button label="Klick mich"
+	oncommand="document.getElementById('myLabel').setAttribute('value','Wert geändert');" /&gt;
+
+&lt;checkbox label="my Checkbox" id="myCheckboX"/&gt;
+&lt;button label="Weiterer Klick"
+	oncommand="document.getElementById('myCheckboX').setAttribute('label','Noch nicht angekreuzt');"/&gt;
+&lt;button label="Beschriftung des Ankreuzfeldes"
+	oncommand="alert( document.getElementById('myCheckboX').getAttribute('label') )"/&gt;
+</pre>
+
+</div>

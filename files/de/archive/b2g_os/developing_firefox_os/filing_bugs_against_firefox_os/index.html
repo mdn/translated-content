@@ -1,0 +1,183 @@
+---
+title: Firefox OS Fehler melden
+slug: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+tags:
+  - Abbruch
+  - Bugs
+  - Bugzilla
+  - Fehler
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+<p>Dieser Artikel enthält eine Anleitung zum Melden von Fehlern zum Firefox OS Projekt, zu Gaia und zu B2G (Boot to Gecko).</p>
+</div>
+
+<h2 id="Bugzilla">Bugzilla</h2>
+
+<p>Wie die meisten Mozilla-Projekte nutzen wir <a href="https://developer.mozilla.org/de/docs/Mozilla/Bugzilla">Bugzilla</a> für die Fehler- und Problemverfolgung. Du kannst Fehler an <a href="https://bugzilla.mozilla.org/">Bugzilla</a> melden, wenn Du Fehler entdeckt hast — wir haben eine <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">eigene Bugzilla Kategorie (Product) für Firefox OS</a> mit Unter-Kategorien (Components) für <a href="https://developer.mozilla.org/de/Firefox_OS/Platform/Gaia">Gaia</a>, <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gonk">Gonk</a> und <a href="https://developer.mozilla.org/de/docs/Mozilla/Gecko">Gecko</a>. Du solltest diese Kategorien verwenden, um Fehler und Probleme bezüglich Firefox OS, Gaia etc. zu melden.</p>
+
+<h3 id="Fehler_melden">Fehler melden</h3>
+
+<p>Zum effektiven Melden von Fehlern und Problemen kannst Du dieses <a href="http://mzl.la/1KL4ktp">Bugzilla Template</a> verwenden. Hinweise zum Ausfüllen des Templates findest Du weiter unten.</p>
+
+<h3 id="Pflichtfelder_und_optionale_Felder">Pflichtfelder und optionale Felder</h3>
+
+<p>Die folgenden Felder in Bugzilla sind immer auszufüllen:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Feld</strong></th>
+   <th scope="col"><strong>Beschreibung</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Component</td>
+   <td>Kategorie, in die der Fehler gehört. Wenn der Fehler in keine der vorhandenen Kategorien passt kannst Du "General" verwenden.</td>
+  </tr>
+  <tr>
+   <td>Summary</td>
+   <td>Zusammenfassung, die den Fehler kurz und treffend beschreibt.</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td>Aussagefähige Beschreibung des Fehlers. Eine gute Fehlermeldung sollte die Schritte zum Reproduzieren (steps to reproduce, STR) des Fehlers, die erwarteten und die tatsächlichen Ergebnisse enthalten. Bitte gib auch an, wie oft dieser Fehler auftritt (z.B. wenn Du die Schritte öfter wiederholst).</td>
+  </tr>
+  <tr>
+   <td>Build Information</td>
+   <td>Gehe zu Einstellungen &gt; Geräteinformationen &gt; Weitere Informationen und füge folgende Informationen in die Fehlermeldung ein: Betriebssystemversion, Plattform-Version, Build-ID, Updatekanal und die Informationen zum Commit auf Git. Falls Du einen Mac oder Linux Computer mit adb hast und dort git installiert ist, dann kannst Du <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/check_versions.py">dieses Skript</a> ausführen und dessen Ergebnis in die Meldung kopieren.</td>
+  </tr>
+  <tr>
+   <td>Screenshots</td>
+   <td>Bitte füge Bildschirmfotos ein. Das kann uns helfen, den Fehler zu analysieren. Auf dem Flame Smartphone drückst Du dafür 2 Sekunden lang gleichzeitig den Ein-/Aus Schalter und die "Lautstärke runter/leiser" Taste bis auf dem Display eine Bestätigung des Bildschirmfotos angezeigt wird. Anschließend überträgst Du dieses Foto via USB auf Deinen Computer.</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>Falls sich Dein Fehler auf ungewöhnliche Veränderungen des Displays bezieht die mit einem Bildschirmfoto nicht dargestellt werden können, dann mach bitte ein Video davon. Dieses Video kannst Du dann als Anhang zur Fehlermeldung hinzufügen. Du kannst das Video auch nach YouTube hochladen und die URL in die Fehlermeldung einfügen.</td>
+  </tr>
+  <tr>
+   <td>ADB logs</td>
+   <td>Falls adb auf Deinem Computer installiert ist: Schließe bitte Dein Smartphone an den Computer an und führe das Kommando |adb logcat| aus. Bitte füge das Ergebnis dieses Kommandos in eine Text-Datei ein und füge diese als Anhang zur Fehlermeldung hinzu.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Die folgenden Felder sind optional:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Feld</strong></th>
+   <th scope="col"><strong>Beschreibung</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Depends/Block</td>
+   <td>Zeige uns Abhängigkeiten zu anderen Fehlermeldungen.</td>
+  </tr>
+  <tr>
+   <td>Keywords</td>
+   <td>Schlüsselwörter für Bugzilla. Bestimmte Support-Abteilungen nutzen diese zur Statusverfolgung von Fehlern.</td>
+  </tr>
+  <tr>
+   <td>Whiteboard</td>
+   <td>Beinhaltet Tags. Füge beliebige Tags zur Statusverfolgung hinzu. Du solltest keine vorhandenen Tags ohne Erlaubnis löschen.</td>
+  </tr>
+  <tr>
+   <td>See Also</td>
+   <td>Hin und wieder haben Fehler Bezug zu einem anderen Fehler. Das kannst Du hier angeben.</td>
+  </tr>
+  <tr>
+   <td>Flags</td>
+   <td>Kennzeichen für die Statusverfolgung; das am häufigsten verwendete Kennzeichen in Firefox OS Fehlern ist blocking-b2g. Wenn eine Meldung als blocking-b2g gekennzeichnet ist, dann kann der Fehler die Veröffentlichung eines Releases gefährden und ist somit besonders zu beachten.</td>
+  </tr>
+  <tr>
+   <td>Security</td>
+   <td>Wenn ein Fehler die Sicherheit der persönlichen Daten gefährdet, monetäre Verluste oder ähnliches verursacht, dann solltest Du dieses Feld ankreuzen. Somit ist die Fehlermeldung nur noch für ausgewählte Mitarbeiter sichtbar.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Nähere Informationen zu den Bugzilla-Feldern findest Du auf <a href="https://bugzilla.mozilla.org/page.cgi?id=fields.html">Bugzilla Fields</a>.</p>
+
+<h3 id="Lokalisierungs-Probleme_melden">Lokalisierungs-Probleme melden</h3>
+
+<p>Wenn Du eine nicht übersetzte Zeichenkette siehst, dann kann das zwei Gründe haben:</p>
+
+<ul>
+ <li>Der Übersetzer hat dies bewußt nicht übersetzt. In diesem Fall melde bitte keinen Fehler!</li>
+ <li>Der Übersetzer konnte dies wegen eines Problems mit der Lokalisierungs-Funktion nicht übersetzen (l12y). In diesem Fall melde bitte einen Fehler.</li>
+</ul>
+
+<h4 id="Wie_Lokalisierungs-Probleme_(l12y)_gemeldet_werden">Wie Lokalisierungs-Probleme (l12y) gemeldet werden</h4>
+
+<ol>
+ <li>Lege eine Meldung in Bugzilla an, als "Product" wählst Du 'Firefox OS'. Wähle unter "Component" die Firefox OS Komponente, in der das Lokalisierungsproblem auftritt. Trage bitte 'l12y' als Schlüsselwort in das Feld "Keyword" ein.</li>
+ <li>Fülle alle anderen Pflichtfelder aus.</li>
+</ol>
+
+<h3 id="Besondere_Schlüsselwörter_(Keywords)">Besondere Schlüsselwörter (Keywords)</h3>
+
+<p>Die folgende Tabelle enthält Informationen zu speziellen Schlüsselwörten, die Du in Firefox OX Fehlermeldungen häufiger finden wirst.</p>
+
+<p><br>
+ Du solltest immer die Kombination Build-Version/Betriebssystem/Plattform, unter der der Fehler behoben ist, ins Kommentarfeld der Fehlermeldung eintragen bevor Du den <em>Status</em> auf <em>Verified </em>setzt. Wenn der Fehler auf allen Plattformen gemeldet ist und Du die Behebung des Fehlers nur auf einer bestimmten Plattform verifizieren kannst, dann gebe dies bitte in der Fehlermeldung an. Bitte setze den <em>Status</em> der Meldung in einem solchen Fall nicht auf <em>Verified</em>. Es müssen erst alle Plattformen erfolgreich getestet worden sein, bevor der <em>Status</em> auf <em>Verified</em> gesetzt wird.<br>
+ <br>
+ Zu guter Letzt: Falls andere Meldungen als Duplikat Deiner Meldung markiert wurden und Du Deine Meldung auf <em>Verified</em> setzt, dann prüfe diese Duplikate bitte ebenfalls und kommentiere diese Meldungen entsprechend. Oftmals markieren Entwickler eine Meldung als Duplikat obwohl der Fehler nur ähnlich, aber nicht identisch ist. Solche Fehlermeldungen können übersehen werden, wenn der Status ungeprüft auf <em>Verified</em> gesetzt wird.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Keyword</strong></th>
+   <th scope="col"><strong>Beschreibung</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td>Zeigt an, dass eine Meldung nur zur Statusverfolgung genutzt wird. Mozilla benutz dies, um die Stati mehrerer Meldungen einer komplexeren Entwicklung in einer einzigen Meldung zu verfolgen. Meldungen mit diesem Keyword sollten von Entwicklern nicht in die Patch-Planung einbezogen werden. Bitte denk daran, dass Projektleiter und Tester dieses Keyword für die Statusverfolgung nutzen.</td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td>Dieses Keyword wird benutzt, wenn eine Meldung das Testen in der Qualitätssicherung blockiert (manueller oder automatisierter Test eine neuen Entwicklung) und der Fehler daher im nächsten Projekt-Meilenstein der Beta-Phase bzw. Release-Veröffentlichung behoben sein muss.</td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td>Nutze dieses Keyword für Meldungen die mehr Informationen, mehr Testfälle oder weitere Informationen zur Reproduzierbarkeit benötigen oder als Duplikat gekennzeichnet sind, ohne dass Du die duplizierte Original-Meldung finden kannst. Der über dieses Keyword angeforderte Qualitätssicherungs-Prozess wird im sogenannten Whiteboard aufgezeichnet. Wenn die Qualitätssicherung ihre Arbeit erledigt hat, sollte dieses Keyword entfernt werden.</td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>Dieses Keyword bedeutet, dass das Problem gelöst war und wieder aufgetreten ist (regressed). Um dieses Wiederauftreten des Problems zu verfolgen wird eine neue Meldung mit Keyword "regression" angelegt. Es wird ebenso für Fehler verwendet, die in früheren Releases behoben waren und im aktuellen Release wieder auftreten. Das Nachverfolgen dieser Probleme hilft uns fehleranfällige und instabile Bereiche zu identifizieren, die beim Testen besonders beachtet werden sollten.</td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>Kennzeichnet eine Meldung als "regression" Meldung bei der es sehr hilfreich wäre zu wissen, wann genau der Fehler aufgetreten ist (Zeitpunkt oder Zeitraum).</td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td>Bei Meldungen mit diesem Keyword wäre es sehr hilfreich zu wissen, wie der Fehler reproduziert werden kann.</td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td>So gekennzeichnete Probleme sollten von einem Dritten zusätzlich verifiziert werden, auch wenn der Fehler für den Melder und die Qualitätssicherung behoben zu sein scheint.  Die Meldung enthält dann spezielle Angaben zur Hardware und zur Konfiguration, für die die Lösung zusätzlich noch verifiziert werden soll. Du solltest versuchen, diesen Fehler zu reproduzieren. Wenn Du dann bestätigen kannst, dass der Fehler bei Dir ebenfalls behoben ist, dann kann der <em>Status</em> von <em>Fixed</em> auf <em>Verified</em> geändert werden.<br>
+     </td>
+  </tr>
+  <tr>
+   <td>crash</td>
+   <td>Nutze dieses Keyword, wenn Du Abbrüche in Firefox OS bekommst.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Weitere Informationen erhälst Du auf der Seite <a href="/de/docs/Mozilla/QA/Bug_writing_guidelines">Bug writing guidelines</a>. Das Mozilla <a href="https://wiki.mozilla.org/B2G/QA">B2G QA Wiki</a> enthält zudem nützliche Informationen zum Melden von Firefox OS Fehlern; die hilfreichsten Seiten sind <a href="https://wiki.mozilla.org/B2G/QA/Bugzilla">Bugzilla Usage</a> und <a href="https://wiki.mozilla.org/Bugmasters/Projects/FirefoxOS">Incoming bug triage for Firefox OS</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Nähere Informationen zum Umgang mit Fehlern in der Gaia-Entwicklung findes Du auf  <a href="/en-US/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a>.</p>
+</div>
+
+<p> </p>

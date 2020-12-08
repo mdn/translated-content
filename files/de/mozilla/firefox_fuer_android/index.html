@@ -1,0 +1,64 @@
+---
+title: Firefox für Android
+slug: Mozilla/Firefox_fuer_Android
+translation_of: Mozilla/Firefox_for_Android
+---
+<p>Für mehr und mehr Menschen sind Mobilgeräte der Hauptweg, oder sogar der einzige Weg, Zugang zum Web zu erlangen. <a class="link-https" href="https://www.mozilla.org/de/mobile/">Firefox für Android</a> (Codename Fennec) ist ein offener, hackbarer, auf Standards basierender Browser, genau wie Firefox für den Desktop.</p>
+
+<p>Firefox für Android erzeugt seine Benutzeroberfläche aus systemeigenen Android Widgets anstatt aus XUL: dies verbessert die Performanz außerordentlich, insbesondere die Zeit des Startvorgangs, und den Speicherbedarf.</p>
+
+<h2 id="Zu_Firefox_für_Android_beitragen">Zu Firefox für Android beitragen</h2>
+
+<p>Die Hauptbezugsquelle für Informationen über das Firefox für Android Projekt selbst ist die <a class="link-https" href="https://wiki.mozilla.org/Mobile">Wikiseite des Projekts</a>.</p>
+
+<p>Sie können uns helfen Firefox für Android zu gestalten und zu verbessern:</p>
+
+<ul>
+ <li>helfen Sie uns <a class="link-https" href="https://wiki.mozilla.org/Mobile/Testdrivers_Program">beim Testen</a>
+
+  <ul>
+   <li>testen Sie Top-Sites auf Kompatibilität mit mobile gecko – siehe <a href="/de/docs/Mozilla/Firefox_for_Android/Compatibility_Testing" title="https://developer-new.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android/Compatibility_Testing">hier</a> für weitere Informationen</li>
+  </ul>
+ </li>
+ <li>wenden Sie sich über <a class="link-irc" href="irc://irc.mozilla.org/#mobile">IRC</a> an das Team oder nehmen Sie an unserem <a class="link-https" href="https://wiki.mozilla.org/Mobile/Notes">mittwöchigen Entwicklertreffen</a> teil</li>
+ <li>verfolgen Sie Projektneuigkeiten auf <a class="external" href="http://planet.firefox.com/mobile/">planet firefox</a> und <a class="link-https" href="https://twitter.com/#!/mozmobile" title="https://twitter.com/#!/mozmobile">Twitter</a></li>
+ <li><a href="https://wiki.mozilla.org/Mobile/Fennec/Android" title="https://wiki.mozilla.org/Mobile/Fennec/Android">build and hack on Firefox for Android</a> (Fennec)</li>
+</ul>
+
+<h2 id="Entwickeln_für_das_mobile_Web">Entwickeln für das mobile Web</h2>
+
+<p>Wir haben begonnen eine Anleitung zum <a href="/de/docs/Mozilla/Mobile" title="En/Mobile">Gestalten von Websites für Mobilgeräte</a> zusammenzuschreiben.</p>
+
+<p>Mit Firefox für Android erhalten Sie Zugang zu einer Reihe von APIs, die das unterliegende Leistungsvermögen des Gerätes zum Vorschein bringen und somit die Lücke zwischen Web und systemeigenen Anwendungen schließen:</p>
+
+<ul>
+ <li><a class="external external-icon" href="https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Akku</a></li>
+ <li><a href="/de/docs/Web/Guide/Introduction_to_the_Camera_API" title="Using the Camera API">Kamera</a></li>
+ <li><a href="/de/docs/Web/Guide/Telephony/Introduction_to_WebTelephony" title="Introduction to WebTelephony">WebTelefonie</a></li>
+ <li><a href="/de/docs/WebAPI/WebSMS/Introduction_to_WebSMS" title="Introduction to WebSMS">WebSMS</a></li>
+ <li><a href="/de/docs/WebAPI/Using_geolocation" title="Using geolocation">Ortung</a></li>
+ <li><a href="/de/docs/WebAPI/Detecting_device_orientation" title="https://developer.mozilla.org/en/detecting_device_orientation">Orientierung</a></li>
+</ul>
+
+<p>Um Ihre Website auf Firefox für Android zu testen, können Sie <a class="external external-icon" href="https://www.mozilla.org/de/firefox/">ihn auf Ihrem Android Gerät installieren</a> oder <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">ihn auf ihrem Desktop mithilfe des Android Emulators laufen lassen</a>.</p>
+
+<h2 id="Erstellen_mobiler_Add-ons">Erstellen mobiler Add-ons</h2>
+
+<p><a href="/de/docs/Extensions/Mobile" title="en/Extensions/Firefox_on_Android">Firefox für Android unterstützt Add-ons</a> durch genau das gleiche <a href="/en/Extensions" title="en/Extensions">Erweiterungssystem</a>, das auch alle anderen Gecko-basierten Anwendungen verwenden. Wir haben kein neues Add-on-System erfunden. Das bedeutet, dass beim Erstellen eines Add-ons für Firefox für Android <a href="/de/docs/Erweiterung_erstellen" title="en/Building_an_Extension">der gleiche Prozess</a> verwendet wird wie für den Desktop Firefox. Add-ons, die im Desktop Firefox laufen, laufen <strong>nicht</strong> automatisch im Firefox auf Android. Die Benutzeroberflächen sind einfach zu unterschiedlich.</p>
+
+<div class="note">Firefox auf Android hat eine eindeutige Anwendungskennung, die in <code>install.rdf</code> angegeben werden muss. Die Kennung ist <code>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</code></div>
+
+<p>Sowohl die klassischen Add-on-Herangehensweisen, die einen Neustart erfordern, als auch die neueren Add-on-Herangehensweisen, die <a href="/de/docs/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped_extensions">ohne Neustart</a> auskommen, werden unterstützt. Die Herangehensweise, die ohne Neustart auskommt, ist wann immer möglich die bevorzugte, weil gegenüber dem erzwungenen Anwendungsneustart beim Installieren und Entfernen von Add-ons das Nutzererlebnis hier weitaus besser ist.</p>
+
+<h3 id="Kurzer_Überblick">Kurzer Überblick</h3>
+
+<ul>
+ <li>Es gibt kein sichtbares XUL in der Benutzeroberfläche, deshalb ist die Verwendung von Overlays zum Hinzufügen von Oberflächen oder das Verändern der Oberfläche wirkungslos.</li>
+ <li>Interner Code und Objekte, wie <code>gBrowser</code>, existieren nicht. Schauen Sie sich die Datei <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js" title="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js"><code>browser.js</code></a> von Firefox für Android an, um über Interna zu erfahren. Much of the same fundamental functionality exists.</li>
+ <li>Dienste wie <code>nsIPromptService</code> und <code>nsIAlertsService</code> sind implementiert um die systemeigene Android-Benutzeroberfläche benutzen zu können.</li>
+ <li>Es gibt ein einfaches JavaScript-Objekt namens <a href="/en/Extensions/Mobile/API/NativeWindow" title="en/Extensions/Mobile/NativeWindow"><code>NativeWindow</code></a>, das einem erlaubt Teile der systemeigenen Android-Benutzeroberfläche zu manipulieren.</li>
+</ul>
+
+<h2 id="Erhalten_Sie_Hilfe_zu_Firefox_für_Android">Erhalten Sie Hilfe zu Firefox für Android</h2>
+
+<p>Dokumentationen und Tutoriale zur Verwendung und Fehlerbehebung von Firefox für Android sind auf der <a class="external" href="http://support.mozilla.org/de/products/mobile" title="http://support.mozilla.org/mobile">Mozilla Support Website</a> verfügbar.</p>

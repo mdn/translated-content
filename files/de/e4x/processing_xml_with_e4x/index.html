@@ -1,0 +1,256 @@
+---
+title: XML verarbeiten mit E4X
+slug: E4X/Processing_XML_with_E4X
+translation_of: Archive/Web/E4X/Processing_XML_with_E4X
+---
+<p>{{ Warning("E4X ist veraltet. Es wurde in Firefox 17 standardmäßig abgeschaltet und aus Firefox 21 schließlich vollständig entfernt.  Benutzen Sie statt dessen DOMParser/DOMSerializer oder ein anderes JXON Verfahren.") }}</p>
+<p><strong><a href="/en/E4X" title="en/E4X">E4X</a></strong> erweitert JavaScript ab Version 1.6 um ein natives XML Objekt und eine Syntax, mit der XML Dokumente direkt in JavaScript Code eingebettet werden können.</p>
+<p>Eine vollständige Definition von E4X findet sich in der <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">ECMA-357 Spezifikation</a>. Dieses Kapitel liefert einen praxisbezogenen Überblick und ist nicht als Referenz gedacht.</p>
+<h2 id="Kompatibilitätsaspekte">Kompatibilitätsaspekte</h2>
+<p>Als das  <code>&lt;script&gt;</code> Element noch nicht von allen Browsern unterstützt wurde, war es üblich, auf einer HTML Seite eingebettetes JavaScript in HTML Kommentare einzuschließen, um so die Anzeige des JavaScript Code durch ungeeignete Browser zu verhindern.  Diese Vorgehensweise ist inzwischen unnötig, aber es existieren noch viele solche HTML-Seiten.  Deshalb ignoriert E4X standardmäßig Kommentare und CDATA Abschnitte.  Sie können jedoch <code>e4x=1</code> im <code>&lt;script&gt;</code> Element verwenden, wenn Sie diese Einschränkung aufheben wollen:</p>
+<pre class="brush: html">&lt;script type="text/javascript;e4x=1"&gt;
+...
+&lt;/script&gt;
+</pre>
+<h2 id="Ein_XML_Objekt_erzeugen">Ein XML Objekt erzeugen</h2>
+<p>E4X bietet im Wesentlichen zwei Wege zum Erzeugen eines XML Objekts an.  Beim ersten wird dem XML Konstructor ein String übergeben:</p>
+<pre class="brush: js">var languages = new XML('&lt;languages type="dynamic"&gt;
+    &lt;lang&gt;JavaScript&lt;/lang&gt;
+    &lt;lang&gt;Python&lt;/lang&gt;
+  &lt;/languages&gt;');
+</pre>
+<p>Beim zweiten Weg wird der XML Code als Literal direkt im Skript eingetragen:</p>
+<pre class="brush: js">var languages = &lt;languages type="dynamic"&gt;
+    &lt;lang&gt;JavaScript&lt;/lang&gt;
+    &lt;lang&gt;Python&lt;/lang&gt;
+  &lt;/languages&gt;;
+</pre>
+<p>In beiden Fällen erhält man ein E4X <code>XML</code> Objekt mit Methoden für den bequemen Zugriff auf seine gekapselten Daten.</p>
+<p>While the XML object looks and behaves in a similar way to a regular JavaScript object, the two are not the same thing. E4X introduces new syntax that only works with E4X XML objects. The syntax is designed to be familiar to JavaScript programmers, but E4X does not provide a direct mapping from XML to native JavaScript objects; just the illusion of one.</p>
+<p>It is possible to interpolate variables into an XML literal to create an element name (or to create content).</p>
+<pre class="brush: js">var h = 'html';
+var text = "Here's some text";
+var doc = &lt;{h}&gt;&lt;body&gt;{text}&lt;/body&gt;&lt;/{h}&gt;;
+alert(doc.toXMLString());
+// Gives
+&lt;html&gt;
+  &lt;body&gt;Here's some text&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h2 id="Working_with_attributes">Working with attributes</h2>
+<p>XML literal syntax has a significant advantage over the <code>XML</code> constructor when you need to create markup dynamically. With E4X it is easy to embed dynamic values in markup. Variables and expressions can be used to create attribute values by simply wrapping them with braces ({}) and omitting quotation marks that would normally go around an attribute value, as the following example illustrates:</p>
+<pre class="brush: js"> var a = 2;
+ var b = &lt;foo bar={a}&gt;"hi"&lt;/foo&gt;;
+</pre>
+<p>Upon execution the variable is evaluated and quotes are automatically added where appropriate. The preceding example would result in an XML object which looks like this: <code>&lt;foo bar="2"&gt;"hi"&lt;/foo&gt;</code>.</p>
+<p>In attribute substitution, quotation marks are escaped as &amp;quot; while apostrophes are handled normally.</p>
+<pre class="brush: js">var b = 'He said "Don\'t go there."';
+var el = &lt;foo a={b}/&gt;;
+alert(el.toXMLString());
+// Gives: &lt;foo a="He said &amp;quot;Don't go there.&amp;quot;"/&gt;
+</pre>
+<p>Less than and ampersand signs are escaped into their entity equivalents. Since a greater than sign is not escaped, it is possible to get an XML error if the <a href="/en/DOM/CDATASection" title="en/DOM/CDATASection">CDATA</a> closing sequence (]]&gt;) is included.</p>
+<p>It is not possible to directly interpolate variables amidst other literal (or variable) attribute content, however (e.g., <code>bar="a{var1}{var2}"</code>). One must instead either calculate the variable with a JavaScript expression (e.g., <code>bar={'a'+var1+var2}</code>), define a new variable before the element literal which includes the full interpolation and then include that variable or retrieve the attribute after the literal to alter it (see below).</p>
+<p>While one can interpolate attribute names as well as attribute values:</p>
+<pre class="brush: js">var a = 'att';
+var b = &lt;b {a}='value'/&gt;;
+alert(b);
+// Gives:
+&lt;b att="value"/&gt;
+</pre>
+<p>...one cannot interpolate a whole expression at once (e.g., &lt;b {a}&gt;.)</p>
+<p>After executing the above example, the variable languages references an XML object corresponding to the <code>&lt;languages&gt;</code> node in the XML document. This node has one attribute, type, which can be accessed and updated in a number of ways:</p>
+<pre class="brush: js"> alert(languages.@type); // Alerts "dynamic"
+ languages.@type = "agile";
+ alert(languages.@type); // Alerts "agile"
+</pre>
+<pre class="brush: js"> alert(languages.toString());
+ /* Alerts:
+   &lt;languages type="agile"&gt;&lt;lang&gt;JavaScript&lt;/lang&gt;&lt;lang&gt;Python&lt;/lang&gt;&lt;/languages&gt;
+ */
+</pre>
+<p>Note that if one wishes to make comparisons of retrieved attributes with other strings, it is necessary to convert the attribute first, even though the attribute may be converted to a string when used in other contexts (such as insertion into a textbox).</p>
+<pre class="brush: js">if (languages.@type.toString() === 'agile') {
+...
+}</pre>
+<p>or, simply:</p>
+<pre class="brush: js">if (languages.@type == 'agile') {
+...
+}
+</pre>
+<h2 id="Working_with_XML_objects">Working with XML objects</h2>
+<p>XML objects provide a number of methods for inspecting and updating their contents. They support JavaScript's regular dot and <code>[]</code> notation, but instead of accessing object properties E4X overloads these operators to access the element's children:</p>
+<pre class="brush: js">var person = &lt;person&gt;
+  &lt;name&gt;Bob Smith&lt;/name&gt;
+  &lt;likes&gt;
+    &lt;os&gt;Linux&lt;/os&gt;
+    &lt;browser&gt;Firefox&lt;/browser&gt;
+    &lt;language&gt;JavaScript&lt;/language&gt;
+    &lt;language&gt;Python&lt;/language&gt;
+  &lt;/likes&gt;
+&lt;/person&gt;;
+
+alert(person.name); // Bob Smith
+alert(person['name']); // Bob Smith
+alert(person.likes.browser); // Firefox
+alert(person['likes'].browser); // Firefox
+</pre>
+<p>If you access something with more than one matching element, you get back an <code>XMLList</code>:</p>
+<pre class="brush: js">alert(person.likes.language.length()); // 2
+</pre>
+<p>As with the DOM, <code>*</code> can be used to access all child nodes:</p>
+<pre class="brush: js">alert(person.likes.*.length()); // 4
+</pre>
+<p>While the <code>.</code> operator accesses direct children of the given node, the <code>..</code> operator accesses all children no matter how deeply nested:</p>
+<pre class="brush: js">alert(person..*.length()); // 11
+</pre>
+<p>The <code>length()</code> method here returns 11 because both elements and text nodes are included in the resulting <code>XMLList</code>.</p>
+<p>Objects representing XML elements provide a number of useful methods, some of which are illustrated below: <span class="comment">TODO: Add all of the methods to the JavaScript reference, link from here</span></p>
+<pre class="brush: js">alert(person.name.text()) // Bob Smith
+
+var xml = person.name.toXMLString(); // A string containing XML
+
+var personCopy = person.copy(); // A deep copy of the XML object
+
+var child = person.child(1); // The second child node; in this case the &lt;likes&gt; element
+</pre>
+<h2 id="Working_with_XMLLists">Working with XMLLists</h2>
+<p>In addition to the XML object, E4X introduces an <code>XMLList</code> object. <code>XMLList</code> is used to represent an ordered collection of XML objects; for example, a list of elements. Continuing the above example, we can access an <code>XMLList</code> of the <code>&lt;lang&gt;</code> elements in the page as follows:</p>
+<pre class="brush: js"> var langs = languages.lang;
+</pre>
+<p><code>XMLList</code> provides a <code>length()</code> method which can be used to find the number of contained elements:</p>
+<pre class="brush: js"> alert(languages.lang.length());
+</pre>
+<p>Note that unlike JavaScript arrays length is a method, not a property, and must be called using <code>length()</code>.</p>
+<p>We can iterate through the matching elements like so:</p>
+<pre class="brush: js"> for (var i = 0; i &lt; languages.lang.length(); i++) {
+     alert(languages.lang[i].toString());
+ }
+</pre>
+<p>Here we are using identical syntax to that used to access numbered items in an array. Despite these similarities to regular arrays, <code>XMLList</code> does not support <code>Array</code> methods such as <code>forEach</code>, and Array generics such as <code>Array.forEach()</code> are not compatible with <code>XMLList</code> objects.</p>
+<p>We can also use the <a href="/en/JavaScript/Reference/Statements/for_each...in" title="en/JavaScript/Reference/Statements/for each...in"><code>for each...in</code> statement</a> introduced in JavaScript 1.6 as part of JavaScript's E4X support:</p>
+<pre class="brush: js"> for each (var lang in languages.lang) {
+     alert(lang);
+ }
+</pre>
+<p><code>for each...in</code> can also be used with regular JavaScript objects to iterate over the values (as opposed to the keys) contained in the object. As with <code><a href="/en/JavaScript/Reference/Statements/for...in" title="en/JavaScript/Reference/Statements/for...in">for...in</a></code>, using it with arrays is <a href="/en/JavaScript/Reference/Statements/for...in#Description" title="en/JavaScript/Reference/Statements/for...in#Description">strongly discouraged</a>.</p>
+<p>It is possible to create an <code>XMLList</code> using XML literal syntax without needing to create a well-formed XML document, using the following syntax:</p>
+<pre class="brush: js"> var xmllist = &lt;&gt;
+   &lt;lang&gt;JavaScript&lt;/lang&gt;
+   &lt;lang&gt;Python&lt;/lang&gt;
+ &lt;/&gt;;
+</pre>
+<p>The <code>+=</code> operator can be used to append new elements to an <code>XMLList</code> within a document:</p>
+<pre class="brush: js"> languages.lang += &lt;lang&gt;Ruby&lt;/lang&gt;;
+</pre>
+<p>Note that unlike node lists returned by regular DOM methods, <code>XMLList</code>s are static and are not automatically updated to reflect changes in the DOM. If you create an <code>XMLList</code> as a subset of an existing <code>XML</code> object and then modify the original <code>XML</code> object, the <code>XMLList</code> will not reflect those changes; you will need to re-create it to get the most recent updates:</p>
+<pre class="brush: js"> var languages = &lt;languages&gt;
+   &lt;lang&gt;JavaScript&lt;/lang&gt;
+   &lt;lang&gt;Python&lt;/lang&gt;
+ &lt;/languages&gt;;
+
+ var lang = languages.lang;
+ alert(lang.length()); // Alerts 2
+
+ languages.lang += &lt;lang&gt;Ruby&lt;/lang&gt;;
+ alert(lang.length()); // Still alerts 2
+
+ lang = languages.lang; // Re-create the XMLList
+ alert(lang.length()); // Alerts 3
+</pre>
+<h2 id="Searching_and_filtering">Searching and filtering</h2>
+<p>E4X provides special operators for selecting nodes within a document that match specific criteria. These filter operations are specified using an expression contained in parentheses:</p>
+<pre class="brush: js">var html = &lt;html&gt;
+  &lt;p id="p1"&gt;First paragraph&lt;/p&gt;
+  &lt;p id="p2"&gt;Second paragraph&lt;/p&gt;
+&lt;/html&gt;;
+
+alert(html.p.(@id == "p1")); // Alerts "First paragraph"
+</pre>
+<p>Nodes matching the path before the expression (in this case the paragraph elements) are added to the scope chain before the expression is evaluated, as if they had been specified using the <a href="/en/JavaScript/Reference/Statements/with" title="en/JavaScript/Reference/Statements/with">with statement</a>.</p>
+<p>Consequently, filters can also run against the value of a single node contained within the current element:</p>
+<pre class="brush: js">var people = &lt;people&gt;
+  &lt;person&gt;
+    &lt;name&gt;Bob&lt;/name&gt;
+    &lt;age&gt;32&lt;/age&gt;
+  &lt;/person&gt;
+  &lt;person&gt;
+    &lt;name&gt;Joe&lt;/name&gt;
+    &lt;age&gt;46&lt;/age&gt;
+  &lt;/person&gt;
+&lt;/people&gt;;
+
+alert(people.person.(name == "Joe").age); // Alerts 46
+</pre>
+<p>Filter expressions can even use JavaScript functions:</p>
+<pre class="brush: js">function over40(i) {
+    return i &gt; 40;
+}
+
+alert(people.person.(over40(parseInt(age))).name); // Alerts Joe
+</pre>
+<h2 id="Handling_namespaces">Handling namespaces</h2>
+<p>E4X is fully namespace aware. Any XML object that represents a node or attribute provides a <code>name()</code> method which returns a <code>QName</code> object, allowing easy inspection of namespaced elements.</p>
+<h3 id="Default">Default</h3>
+<pre class="brush: js">default xml namespace = "http://www.w3.org/1999/xhtml";
+// No need now to specify a namespace in the html tag
+var xhtml = &lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+            &lt;p&gt;text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;;
+alert(xhtml.head); // No need to specify a namespace on subelements here either</pre>
+<h3 id="Non-default">Non-default</h3>
+<pre class="brush: js">var xhtml = &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Embedded SVG demo&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Embedded SVG demo&lt;/h1&gt;
+		&lt;svg xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 100 100"&gt;
+			&lt;circle cx="50"
+				cy="50"
+				r="20"
+				stroke="orange"
+				stroke-width="2px"
+				fill="yellow" /&gt;
+		&lt;/svg&gt;
+	&lt;/body&gt;
+&lt;/html&gt;;
+
+alert(xhtml.name().localName); // Alerts "html"
+alert(xhtml.name().uri); // Alerts "http://www.w3.org/1999/xhtml"
+</pre>
+<p>To access elements that are within a non-default namespace, first create a <code>Namespace</code> object encapsulating the URI for that namespace:</p>
+<pre class="brush: js">var svgns = new Namespace('http://www.w3.org/2000/svg');
+</pre>
+<p>This can now be used in E4X queries by using <code>namespace::localName</code> in place of a normal element specifier:</p>
+<pre class="brush: js">var svg = xhtml..svgns::svg;
+alert(svg); // Shows the &lt;svg&gt; portion of the document
+</pre>
+<h2 id="Using_GeneratorsIterators_with_E4X">Using Generators/Iterators with E4X</h2>
+<p>As of <a href="/en/JavaScript/New_in_JavaScript/1.7" title="en/JavaScript/New in JavaScript/1.7">JavaScript 1.7</a>, it is possible to use <a href="/en/JavaScript/Guide/Iterators_and_Generators" title="en/JavaScript/Guide/Iterators and Generators">generators and iterators</a>, giving more options for traversing E4X.</p>
+<p>In a manner akin to <a href="/en/DOM/document.createTreeWalker" title="en/DOM/document.createTreeWalker">DOM tree walkers</a>, we can define our own walkers for E4X. While the following is already achievable by iterating an E4X object with <code>for each...in</code>, it demonstrates how a more customized one could be created.</p>
+<pre class="brush: js">function xmlChildWalker (xml) {
+    var i = 0;
+    var child = xml.*[0];
+    while (child != undefined) {
+        yield child;
+        child = xml.*[++i];
+    }
+    yield false;
+}
+
+var a = &lt;a&gt;&lt;b/&gt;&lt;c/&gt;&lt;/a&gt;;
+var xcw = xmlChildWalker(a);
+
+var child;
+while ((child = xcw.next()) !== false) {
+    alert(child.toXMLString()); // "&lt;b/&gt;" then "&lt;c/&gt;"
+}
+
+</pre>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+  <li><a href="/en/E4X" title="en/E4X">E4X</a></li>
+  <li><a href="/en/E4X_Tutorial" title="en/E4X_Tutorial">E4X Tutorial</a></li>
+</ul>
+<p>{{ languages( { "zh-cn": "cn/Core_JavaScript_1.5_Guide/Processing_XML_with_E4X", "zh-tw": "zh_tw/E4X/使用_E4X_處理_XML", "fr": "fr/Guide_JavaScript_1.5/Traitement_de_XML_avec_E4X", "ja": "ja/Core_JavaScript_1.5_Guide/Processing_XML_with_E4X" } ) }}</p>

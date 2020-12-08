@@ -1,0 +1,106 @@
+---
+title: .userconfig ফাইলের মাধ্যমে কাস্টোমাইজ করা
+slug: Archive/B2G_OS/Customization_with_the_.userconfig_file
+tags:
+  - B2G
+  - Firefox OS
+  - build
+translation_of: Archive/B2G_OS/Customization_with_the_.userconfig_file
+---
+<div class="summary">
+ <p>আপনার B2G সোর্সের মধ্যে <code>.userconfig</code> ফাইলে কিছু bash কোড যুক্ত করে আপনি বিল্ড প্রক্রিয়ার নির্দিষ্ট কিছু বিষয় কাস্টোমাইজ করতে পারেন। কিভাবে আপনি এই পরিবর্তন করবেন এবং এই পরিবর্তনের ফলে কি কি অর্জন করবেন, সে সম্পর্কে এই নিবন্ধটিতে বিস্তারিত আলোচনা করা হয়েছে।</p>
+</div>
+<p><code>.userconfig</code> ফাইল সোর্স কোড কন্ট্রোলের মধ্যে পরীক্ষা করা হয়না। তাই যখন আপনি আপনার সোর্স ট্রি আপডেট করবেন, তখন এটা ওভার রাইট হবেনা। এটা আপনার B2G ট্রি এর প্রধান ফোল্ডারের মধ্যে তৈরি করতে হবে; অর্থাৎ যে ফোল্ডারের মধ্যে <code>flash.sh</code>, <code>build.sh</code>, ইত্যাদি ফাইল রয়েছে। এটা আপনার কনফিগ এবং বিল্ডের কাজ করার আগে যোগ করতে হবে।</p>
+<p>যদি <code>.userconfig</code> ফাইল থাকে, তবে তা <code>load-config.sh</code> স্ক্রিপ্টের মাধ্যমে লোড হয়। আর এই load-config.sh এর উৎস হচ্ছে এই স্ক্রিপ্ট সমূহঃ <code>flash.sh</code>, <code>build.sh</code> (<code>setup.sh</code> এর মাধ্যমে), <code>run-gdb.sh</code>, এবং <code>run-emulator.sh</code>। আপনার বিল্ডের জন্য গেকো কোথায় রয়েছে, তা নির্ধারণের জন্য <code>run-<em>*</em>.sh</code> স্ক্রিপ্ট সমূহ এটাকে ব্যবহার করে।</p>
+<div class="warning">
+ <p><strong>গুরুত্বপূর্ণঃ</strong> আপনার .userconfig ফাইল অবশ্যই আপনার হোম ফোল্ডারে না, বরং B2G সোর্সের প্রধান ফোল্ডারের মধ্যে থাকতে হবে!</p>
+</div>
+<h2 id="গেকো_সোর্স_ট্রি_পরিবর্তন_করা">গেকো সোর্স ট্রি পরিবর্তন করা</h2>
+<p>ডিফল্ট ভাবে, বিল্ড গেকোর ট্রি ব্যবহার করে, যেটা গিটহাবের একটি ট্রি থেকে ক্লোন করা। তবে কেউ কেউ <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29">mozilla-inbound</a>, বা <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29">mozilla-central</a> ব্যবহার করতে পছন্দ করে। এটা করার জন্য আপনার পছন্দ মত জায়গায় ক্লোন করুন এবং আপনার <code>.userconfig</code> ফাইলে একটি লাইন যুক্ত করুন, যেটা <code>GECKO_PATH</code> নির্দিষ্ট করে। যেমনঃ</p>
+<pre>export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+</pre>
+<div class="note">
+ <p><strong>লক্ষ্য করুনঃ</strong> যদি আপনি ম্যাক ওএস এক্স এ একটি কাস্টম গেকোর বিপরীতে বিল্ডের কাজ করেন, তাহলে <code>mozilla-central</code> ফোল্ডারটি অবশ্যই একটি কেস সেনসিটিভ ফাইল সিস্টেমে থাকতে হবে; নতুবা <code>GECKO_PATH</code> ইগনোর করা হবে। বর্তমান ফাইল সিস্টেমটি কেস সেনসিটিভ কি না, তা পরীক্ষা করার জন্য একটি টার্মিনাল উইন্ডোতে নিচের কমান্ড টাইপ করতে পারেনঃ</p>
+ <pre>echo -n This file system is case-&gt;tmp; echo -n in&gt;&gt;TMP; echo sensitive&gt;&gt;tmp; cat tmp</pre>
+ <p>উপরের মত এভাবে <code>B2G_DIR</code> পাওয়ার কারনে কোন প্রকার হার্ড কোডেড পাথ ছাড়াই আপনার <code>.userconfig</code> কে কাজ করার সুবিধা প্রদান করে।</p>
+</div>
+<h2 id="গায়া_সেটিংস_পরিবর্তন_করা">গায়া সেটিংস পরিবর্তন করা</h2>
+<p>মাঝে মাঝে আপনার গায়ার সেটিংস পরিবর্তন করার ইচ্ছা হতে পারে। যেমনঃ ব্যবহারকারীর বিল্ডে এডিবি সক্ষমতা প্রদান। আপনি যখন <code>build/settings.py</code> কল করেন, তখন গায়া Makefile <code>--override build/custom-settings.json</code> কমান্ড পাস করে; যাতে আমরা কিছু ব্যাশ লিখতে পারি যেটা, <code>custom-settings.json</code> ফাইলের মধ্যে<code>{"devtools.debugger.remote-enabled": true}</code> লিখবে। আমরা প্রয়োজন না হলে <code>custom-settings.json</code> এ পরিবর্তন করা এড়িয়ে চলবো। মানে আমরা লিখবো <code>custom-settings.json.new</code> এর মধ্যে এবং কন্টেন্ট গুলো <code>custom-settings.json</code> থেকে আলাদা হয়, তবে আমরা এটাকে রিপ্লেস করে দেব।</p>
+<pre>export GAIA_PATH=${GAIA_PATH:-$(cd gaia; pwd)}
+export CUSTOM_SETTINGS="${GAIA_PATH}/build/config/custom-settings.json"
+cat &gt; "${CUSTOM_SETTINGS}.new" &lt;&lt;EOF
+{"devtools.debugger.remote-enabled": true}
+EOF
+if [[ -f ${CUSTOM_SETTINGS} ]] &amp;&amp; cmp "${CUSTOM_SETTINGS}" "${CUSTOM_SETTINGS}.new" &gt;&amp; /dev/null; then
+  rm "${CUSTOM_SETTINGS}.new"
+else
+  mv "${CUSTOM_SETTINGS}.new" "${CUSTOM_SETTINGS}"
+fi
+</pre>
+<p>একটি <code>build/config/custom-prefs.js</code> ফাইল কনফিগার করার আরেকটি সহজ পদ্ধতি হচ্ছে গায়া ওয়ার্কিং ডিরেকটোরি অর্থাৎ <code>gaia/build/config/custom-prefs.js</code> যদি আপনি B2G ডিরেকটোরিতে থাকেন। <a href="/bn-BD/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences">গায়া বিল্ড সিস্টেম প্রাইমার, প্রেফারেন্স কাস্টোমাইজ করা</a> দেখুন।</p>
+<div class="note">
+ <p><strong><strong>লক্ষ্য করুনঃ</strong></strong>  বর্তমান বিল্ডটি এখনো এতটা চৌকস নয় যে <code>GAIA_PATH</code> এর উপর ভিত্তি করে বিভিন্ন ডিরেক্টরি খুঁজে দেখবে। <code>GECKO_PATH</code> behaves যেভাবে আচরন করে, এটা তার থেকে আলাদা। যদি আপনি আলাদা একটি গায়া ক্লোন ব্যবহার করতে চান, তাহলে আপনি সেই ডিরেক্টরি থেকে <a href="/bn-BD/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer">ম্যানুয়ালি make চালাতে</a> পারেন।</p>
+</div>
+<h2 id="ডিবাগ_বিল্ড_তৈরি_করা">ডিবাগ বিল্ড তৈরি করা</h2>
+<p>ডিবাগ বিল্ড তৈরি করার জন্য নিচের লাইনটি আপনার <code>.userconfig</code> ফাইলে লিখুনঃ</p>
+<pre>export B2G_DEBUG=1</pre>
+<h2 id="বিল্ড_প্রোফাইল_করা">বিল্ড প্রোফাইল করা</h2>
+<p>প্রোফাইলিং চালু করার জন্য (বিল্ট-ইন (SPS) প্লাটফর্ম প্রোফাইলারের সাথে সর্বোত্তম ফলাফলের জন্য) নিচের লাইন সমূহ আপনার <code>.userconfig</code> ফাইলে লিখুন এবং পুনরায় বিল্ড করুনঃ</p>
+<pre>export MOZ_PROFILING=1</pre>
+<div class="warning">
+ <p>B2G_NOOPT এর সাথে পেয়ার করবেন না। এর ফলাফল অর্থহীন হবে!</p>
+</div>
+<h2 id="অপটিমাইজার_নিষ্ক্রিয়_করা">অপটিমাইজার নিষ্ক্রিয় করা</h2>
+<p>অপটিমাইজার নিষ্ক্রিয় করার জন্য (যেটা এমন বিল্ড তৈরি করবে, যা নিরীক্ষণ তুলনামূলক সহজ) আপনার<code> .userconfig</code> ফাইলে নিম্নোক্ত লাইন লিখুন এবং পুনরায় বিল্ড করুনঃ</p>
+<pre>export B2G_NOOPT=1</pre>
+<h2 id="প্রথমবারের_জন্য_ইউজার_এক্সপেরিয়েন্স_নিষ্ক্রিয়_করা">প্রথমবারের জন্য ইউজার এক্সপেরিয়েন্স নিষ্ক্রিয় করা</h2>
+<p>যদি আপনি অনেক বেশি বিল্ড এবং রিফ্ল্যাশ করেন, তাহলে প্রত্যেকবার "ফাস্ট টাইম ইউজার এক্সপেরিয়েন্স" এর মধ্যে দিয়ে যাওয়াটা বিরক্তিকর লাগতে পারে। নিচের লাইনটি আপনার .userconfig এ যোগ করে আপনি এটা বন্ধ করতে পারেনঃ</p>
+<pre>export NOFTU=1</pre>
+<h2 id="গায়া_ডেভেলপার_মোড_চালু_করা">গায়া ডেভেলপার মোড চালু করা</h2>
+<p>যদি আপনি গায়া অ্যাপ ডেভেলপ বা হ্যাক করার পরিকল্পনা করে থাকেন, তাহলে ডিভাইসের সাথে কাজ করা আরও সহজ করার জন্য আপনি স্বয়ংক্রিয়ভাবে প্রয়োজনীয় বিভিন্ন সেটিংস ও প্রেফারেন্স নির্দিষ্ট করতে পারবেন। যেমনঃ এটা স্বয়ংক্রিয়ভাবে রিমোট ডিবাগিং ফিচার সক্রিয় করবে এবং যখন একটি ইনকামিং ডিবাগিং কানেকশন চালু হবে তখন কোন প্রম্পট দেখাবে না।</p>
+<p>আপনার দরকার শুধু নিচের এই লাইনটুকু আপনার .userconfig এ যোগ করাঃ</p>
+<pre>export DEVICE_DEBUG=1</pre>
+<h2 id="ভালগ্রিন্ড_সক্রিয়_করা">ভালগ্রিন্ড সক্রিয় করা</h2>
+<p>আপনার অ্যাপলিকেশনের সাথে মেমোরি এবং থ্রেডিং সংক্রান্ত সমস্যা নিরীক্ষণের জন্য ভাল্গ্রিন্ড উপকারি। ভাল্গ্রিন্ড চালানো সংক্রান্ত আরও তথ্যের জন্য <a href="/en-US/Firefox_OS/Debugging/Debugging_B2G_using_valgrind">Debugging B2G using valgrind [en-US]</a>দেখুন।</p>
+<p>B2G এর অধীনে ভাল্গ্রিন্ড ব্যবহার করতে আপনার .userconfig এ নিচের লাইন যুক্ত করুনঃ</p>
+<pre>export B2G_VALGRIND=1</pre>
+<h2 id="ডিফল্ট_হোস্ট_কম্পাইলার_পরিবর্তন_করা">ডিফল্ট হোস্ট কম্পাইলার পরিবর্তন করা</h2>
+<p>সামসময়িক কিছু ডিস্ট্রিবিউশন, যেগুলো GCC 4.7 ডিফল্ট কম্পাইলার হিসেবে ব্যবহার করে, বিল্ড করার জন্য সেখানে আপনাকে পুরাতন একটি ভার্শন বলে দিতে হবে। এমনটা করার জন্য আপনার <code>.userconfig</code> এ যথাক্রমে বিকল্প C এবং C++ কম্পাইলার নির্দিষ্ট করতে <code>CC</code> এবং <code>CXX</code> ভ্যারিয়েবল দুইটি যোগ করুন। যেমনঃ উবুন্টু ১২.১০ এ GCC 4.6 কম্পাইলার সেট করার জন্য ব্যবহার করতে হবেঃ</p>
+<pre>export CC=gcc-4.6
+export CXX=g++-4.6
+</pre>
+<p>বা যদি এমন হয় যে, আপনি এমন একটি সংস্করণ ব্যবহার করছেন, যেটার মধ্যে এক্সিকিউটেবল ফাইল সমুহের সম্পূর্ণ পাথ দেয়া আছেঃ</p>
+<pre>export CC=/opt/gcc-4.6.4/bin/gcc
+export CXX=/opt/gcc-4.6.4/bin/g++
+</pre>
+<h2 id="একটি_কাস্টম_গেকো_অবজেক্ট_ট্রি_লোকেশন_নির্দিষ্ট_করা">একটি কাস্টম গেকো অবজেক্ট ট্রি লোকেশন নির্দিষ্ট করা</h2>
+<p>একবার আপনি যখন গেকো সোর্স ট্রি সমূহ এবং অন্যান্য বিল্ড অপশন পরিবর্তন করা শুরু করে দেবেন, আপনি এটাও পরিবর্তন করতে চাইতে পারেন, যে আপনার অবজেক্ট গুলো কোথায় সংরক্ষন করা হবে (যেমনঃ আপনার সকল ডিবাগ অবজেক্ট আপনার নন-ডিবাগ অবজেক্ট থেকে আলাদা ট্রি-তে যাবে)। তাহলে আপনার এমনটি করা লাগতে পারেঃ</p>
+<pre>export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk-debug
+</pre>
+<p><code>${GECKO_PATH}</code> ব্যবহার করাটা গেকো ট্রি গুলোর মধ্যে সুইচ করা সহজ করেছে (যেমনঃ central, beta, aurora ইত্যাদি)।</p>
+<h2 id="ডিবাগ_এবং_নন-ডিবাগ_উভয়_অবজেক্ট_রাখা">ডিবাগ এবং নন-ডিবাগ উভয় অবজেক্ট রাখা</h2>
+<p>প্রত্যেকবার পুনরায় বিল্ড করা ছাড়াই নিরীক্ষণ এবং রিলিজ বিল্ড সমূহের মধ্যে সামনে পেছনে সুইচ করার জন্য আপনি আপনার <code>.userconfig</code> ফাইল ব্যবহার করতে পারেন!</p>
+<dl>
+</dl>
+<pre class="brush:bash;">export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+
+export B2G_DEBUG=1
+echo "B2G_DEBUG = ${B2G_DEBUG}"
+
+export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk
+if [[ "${B2G_DEBUG}" != "0" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-debug
+fi
+if [[ "${GECKO_PATH/*mozilla-inbound*/mozilla-inbound}" == "mozilla-inbound" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-m-i
+fi
+echo "GECKO_OBJDIR = ${GECKO_OBJDIR}"</pre>
+<p><code>echo</code> কমান্ড সমূহ আপনাকে বর্তমান সেটিংস মনে করতে সাহায্য করে। ডিবাগ এবং রিলিজ বিল্ডের মধ্যে সুইচ করার জন্য ৭ নম্বর লাইনে <code>B2G_DEBUG</code> এর মান পরিবর্তন করে দিন।</p>

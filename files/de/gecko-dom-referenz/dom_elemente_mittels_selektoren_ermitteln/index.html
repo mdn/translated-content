@@ -1,0 +1,46 @@
+---
+title: DOM Elemente mittels Selektoren ermitteln
+slug: Gecko-DOM-Referenz/DOM_Elemente_mittels_Selektoren_ermitteln
+translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+---
+<p>Die Selektoren-API stellt Methoden zur Verfügung, mit der man schnell und einfach {{domxref("Element")}}-Knoten im DOM abrufen kann, indem sie mit einer Menge an Selektoren abgeblichen werden. Dies ist viel schneller als bisherige Techniken, bei denen es zum Beispiel notwendig war, eine Schleife im JavaScript-Code zu verwenden, um die spezifischen Elemente zu finden, die Sie suchen.</p>
+
+<h2 id="Die_NodeSelector_Schnittstelle">Die NodeSelector Schnittstelle</h2>
+
+<p>Diese Spezifikation fügt zwei neue Methoden zu jedem Objekt hinzu, welches die {{domxref("Document")}}, {{domxref("DocumentFragment")}} oder {{domxref("Element")}} Schnittstelle implementiert:</p>
+
+<dl>
+ <dt><code>querySelector</code></dt>
+ <dd>Gibt den ersten übereinstimmenden {{domxref("Element")}}-Knoten innerhalb der Teilstruktur des Knotens zurück. Wenn kein übereinstimmender Knoten gefunden wird, wird <code>null</code> zurückgegeben.</dd>
+ <dt><code>querySelectorAll</code></dt>
+ <dd>Gibt eine {{domxref("NodeList")}} zurück, die alle übereinstimmenden <code>Element</code>-Knoten in der Teilstruktur des Knotens enthält oder eine leere <code>NodeList</code>, wenn keine Übereinstimmungen gefunden werden.</dd>
+</dl>
+
+<div class="note">Hinweis: Die {{domxref("NodeList")}}, die von {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} zurückgegeben wird, ist nicht live, was bedeutet, dass Änderungen im DOM sich nicht auf die Sammlung auswirken. Dies unterscheidet sich von anderen DOM-Abfragemethoden, die Live-Knotenlisten zurückgeben.</div>
+
+<p>Beispiele und Details finden Sie in der Dokumentation zu den Methoden {{domxref("Element.querySelector()")}} und {{domxref("Element.querySelectorAll()")}} sowie im Artikel <a href="/de/docs/Code_snippets/QuerySelector">Code-Ausschnitte für querySelector</a>.</p>
+
+<h2 id="Selektoren">Selektoren</h2>
+
+<p>Die Selektormethoden akzeptieren einen oder mehrere durch Kommas getrennte Selektoren, um zu bestimmen, welches Element bzw. welche Elemente zurückgegeben werden sollen. Um beispielsweise alle Absatz-Elemente (<code>p</code>) in einem Dokument auszuwählen, deren CSS-Klasse entweder eine <code>warning</code> oder ein <code>note</code> ist, können Sie folgendes schreiben:</p>
+
+<pre><code>var special = document.querySelectorAll( "p.warning, p.note" );</code></pre>
+
+<p>Sie können auch die ID abfragen. Zum Beispiel:</p>
+
+<pre><code>var el = document.querySelector( "#main, #basic, #exclamation" );</code></pre>
+
+<p>Nachdem der obige Code ausgeführt wurde, enthält <code>el</code> das erste Element im Dokument, dessen ID <code>main</code>, <code>basic</code> oder <code>exclamation</code> ist.</p>
+
+<p>Sie können jegliche CSS Selektoren mit den Methoden <code>querySelector()</code> und <code>querySelectorAll()</code> verwenden.</p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/selectors-api/" title="http://www.w3.org/TR/selectors-api/">Selectors API</a> (Englisch)</li>
+ <li>{{domxref("Element.querySelector()")}}</li>
+ <li>{{domxref("Element.querySelectorAll()")}}</li>
+ <li>{{domxref("Document.querySelector()")}}</li>
+ <li>{{domxref("Document.querySelectorAll()")}}</li>
+ <li><a href="/de/docs/Code_snippets/QuerySelector" title="en-US/docs/Code_snippets/QuerySelector">Code-Ausschnitte für querySelector</a></li>
+</ul>

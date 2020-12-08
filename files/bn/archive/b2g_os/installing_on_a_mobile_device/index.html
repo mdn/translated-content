@@ -1,0 +1,129 @@
+---
+title: মোবাইল ডিভাইসে ফায়ারফক্স ওএস ইনস্টল
+slug: Archive/B2G_OS/Installing_on_a_mobile_device
+tags:
+  - B2G
+  - মোবাইল
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<p><span style="line-height: 1.5;">আপনি যখন একবার </span><a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Have_a_compatible_device_or_use_an_emulator" style="line-height: 1.5;">supported mobile device</a><span style="line-height: 1.5;"> এর জন্য Gecko বুট করে ফেলতে পারবেন তারপর আপনি firefox OS ইনস্টল করতে পারবেন । এই আর্টিকেলটি আপনাকে সাহায্য করবে কিভাবে তা করতে হবে।</span></p>
+
+<div class="note"><strong>Note:</strong> আপনি যখন প্রথমবারের মত আপনার ফোন ফ্ল্যাশ করতে যাবেন তখন অবশ্যই দেখবেন  আপনার ফোনে  <span style="line-height: 1.5;">Android 4 (Ice Cream Sandwich) ইনস্টল করা আছে কিনা । তা না হলে এই প্রসেসটি ঠিকমত কাজ করবে না । আপনি  যদি  একবার B2G ইনস্টল করতে পারেন  তাহলে এরপর  থেকে এটি সহজে এর উপরে গিয়ে আপডেট করতে পারেন ।</span></div>
+
+<h2 id="Installing_ADB">Installing ADB</h2>
+
+<p><strong>On OSX</strong></p>
+
+<p>যদি আপনার সেটে OSX এ Homebrew থাকে:</p>
+
+<pre>brew install android-platform-tools</pre>
+
+<p>না থাকলে ডাউনলোড করুন Android Developer Tools এবং আপনার PATH টি বাইনারীতে সংযুক্তি করুন।</p>
+
+<p><strong>On Ubuntu</strong></p>
+
+<pre>sudo apt-get install android-tools-adb</pre>
+
+<h2 id="Flashing_your_phone">Flashing your phone</h2>
+
+<p>আপনার ফোনটি সম্পূর্ণরূপে Flash করতে টাইপ করুন:</p>
+
+<pre>./flash.sh
+</pre>
+
+<p>এইতো। এখন যে B2G টি আপনার ডিভাইসে পেয়েছেন সেটি স্বয়ংক্রিয়ভাবে ফ্ল্যাশ হবে। </p>
+
+<p><span style="font-size: 24px; letter-spacing: -0.5px; line-height: 24px;">Configuring the udev rule for your device</span></p>
+
+<p>লিনাক্সে যদি আপনি এই লেখাটি দেখতে পানঃ</p>
+
+<pre>&lt; waiting for device &gt;</pre>
+
+<p>তাহলে আপনাকে বুঝতে হবে আপনি এখনো fastboot  এরজন্য udev rule টি সংযুক্ত করেননি যা ADV এর জন্য এক হিসেবে একই নয়। আপনি এখন <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">lsusb রানিং করে </span><span style="line-height: 1.5;">USB vendor ID টি পেতে পারেন । সাধারণত এটি গুগলেও আছেঃ18d1, এর পর </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">/etc/udev/rules.d/51-android.rules</span></p>
+
+<p>এই লাইনটি যুক্ত করলে আশা করা যায় আপনার ডিভাইসটি কাজ করার জন্য উপযুক্তঃ</p>
+
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+
+<div class="note"><strong>Note 1: </strong><em>আপনি যদি লিনাক্সে<strong> </strong><code style="font-size: 14px;">libusb</code><span style="line-height: 1.5;"> error "-3" এইটি দেখতে পান তাহলে আপনাকে ধরে নিতে হবে USB ডিভাইস ব্যবহার করার জন্য আপনাকে এটি রুট করতে হবে। </span></em><code style="font-size: 14px;">sudo </code><em><span style="line-height: 1.5;">লিখে পুরো স্ক্রিপটি পুনরায় রান করান।</span></em></div>
+
+<div class="note"><strong>Note 2</strong>:যদি আপনি <span style="line-height: 1.5;">Unagi অথবা Geeksphone Keon phone ব্যবহার করে থাকেন  তাহলে  আপনার  এই  দুইটি লাইন দরকার- একটি হচ্ছে  </span><span style="line-height: 1.5;">original phone vendor's ID এবং অন্যটি গুগলের জন্য।</span></div>
+
+<h3 id="Special_notes_for_Hamachi_Helix_and_Leo_devices">Special notes for Hamachi, Helix, and Leo devices</h3>
+
+<p><span style="line-height: 1.5;">./flash.sh এই স্ক্রিপ্টটি শুধুমাত্র gecko এবং gaia ডিভাইসের জন্য কাজ করবে । কিন্তু আপনার সেট যদি হয় hamachi, helix or leo device এর তখন কি করবেন ? এই জন্য আমাদের সাজেশন আপনি OEM কে বেস বিল্ড(firmware পাবার জন্য) আর gonk layers ব্যবহার করে ফ্ল্যাশ করবেন।তারপর gecko এবং gaia ফ্ল্যাশ করতে পারেন। যপনি যদি ইমেজ ব্যবহার করে ফ্ল্যাশ করতে চান , তাহলে একটি ওভাররাইড ফাইল আছে যেখানে আপনি পাবেন ./flash.sh -f এইটি। এই ইমেজ ফাইলটি ব্যবহার করে আপনি সহজেই আপনার ডিভাইসটি ফ্ল্যাশ করতে পারেন। </span></p>
+
+<h3 id="Special_notes_for_the_Samsung_Galaxy_S2">Special notes for the Samsung Galaxy S2</h3>
+
+<p><span style="line-height: 1.5;">আপনার সেট যদি হয় Galaxy S2 এবং আপনি যদি heimdall 1.3.2 (the latest version;চেক করুন </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">heimdall version)ব্যবহার করে থাকেন , তাহলে আপনি </span><span style="line-height: 1.5;">alarming</span><span style="line-height: 1.5;"> error হিসেবে "FACTORYFS upload failed!"</span><span style="line-height: 1.5;">followed by "Heimdall flashing failed" and some additional information এই লেখাটি দেখতে পারেন। এটি আসলে সাকসেস কন্ডিশন এবং আপনি নিশ্চিন্তে এইটি ইগনোর করতে পারেন।  </span></p>
+
+<p><span style="line-height: 1.5;">আপনি যদি এইটি থেকে মুক্তি পেতে চান তাহলে </span><a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" style="line-height: 1.5;" title="https://github.com/Benjamin-Dobell/Heimdall">source copy</a><span style="line-height: 1.5;"> থেকে heimdall এর একটি কপি গ্র্যাপ করতে পারেন যা 1.3.1এ রিলিজ হয়েছে</span><span style="line-height: 1.5;"> ("</span><code style="font-size: 14px;">git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06</code><span style="line-height: 1.5;">")।তারপর </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">README অনুসারে কম্পাইল করুন  এরপর ইনস্টল করুন । দেখবেন error গুলো চলে গিয়েছে । যদি ও এই জিনিসটা খুব একটা দরকারী নয় ।</span></p>
+
+<p><span style="line-height: 1.5;">Heimdall সকল সংস্করণ 100MB চেয়ে বড়  system.img ফ্ল্যাশ করতে সক্ষম নয়। তখন এই কাজটি করুনঃ</span></p>
+
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+
+<p><span style="line-height: 1.5;">এইখান থেকে দেখুন আপনারটি কত বড় । যদি আপনারটি এর থেকেও বড় হয় ,IRC তে জিজ্ঞাসা করুন ।এছাড়া দুই পর্যায়ে তা করার উপায় আছে ।</span></p>
+
+<h2 id="Added_step_for_the_Samsung_Galaxy_S2">Added step for the Samsung Galaxy S2</h2>
+
+<p><span style="line-height: 1.5;">আপনি যদি Galaxy S2 ফ্ল্যাশ করে থাকেন তাহলে আপনাকে আরো কিছু কাজ করতে হবে।Gaia </span><code style="font-size: 14px;">flash.sh</code><span style="line-height: 1.5;"> script দ্বারা স্বয়ংক্রিয়ভাবে কখনো ফ্ল্যাশ হয় না । এই জন্য আপনাকে অতিরিক্ত এই কোডটি  লিখতে  হবেঃ</span></p>
+
+<pre>./flash.sh gaia
+</pre>
+
+<h2 id="Flashing_specific_partitions_to_fastboot_phones">Flashing specific partitions to fastboot phones</h2>
+
+<p><span style="line-height: 1.5;">আপনি fastboot phones গুলোতে পার্টিশন নির্দিষ্ট করে দিয়ে ও ফ্ল্যাশ করতে পারেন (Galaxy S2 ছাড়া যেকোন ফোনেই সম্ভব)।উদাহরণস্বরূপঃ</span></p>
+
+<pre>./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+
+<h2 id="Updating_specific_modules">Updating specific modules</h2>
+
+<p><span style="line-height: 1.5;">ফ্ল্যাশ করার সময় আপনি চাইলে যে কোন কিছু আপডেট করতে পারেন শুধুমাত্র তাদের নাম specific করে। উদাহরণস্বরূপঃ</span></p>
+
+<pre>./flash.sh gaia
+./flash.sh gecko</pre>
+
+<p>যদি আপনি শুধু একটি এপ্লিকেশন আপডেট করতে চান তাহলে আপনি BUILD_APP_NAME এর environment variable ব্যবহার করতে পারেন।</p>
+
+<pre>BUILD_APP_NAME=calendar ./flash.sh gaia</pre>
+
+<p><span style="line-height: 1.5;">যদি আপনার ফোনটি ডেভেলাপার ভার্সন না হয় তাহলে আপনি gaia ব্যবহার করে আপডেট করতে পাড়েন।</span></p>
+
+<pre>VARIANT=user ./flash.sh gaia</pre>
+
+<h2 id="Next_steps">Next steps</h2>
+
+<p>এখন আশা করা যায় আপনার ফোন Gecko থেকে বুট চালু হবে! চালু হওয়ার পর চেকিং শুরু করুন। <a href="/en-US/docs/Mozilla/Firefox_OS/Application_development" title="en-US/docs/Mozilla/Firefox_OS/Application_development">write some code</a>, <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing" title="en-US/docs/Mozilla/Firefox_OS/Platform/Testing">test</a>, অথবা <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging" title="en-US/docs/Mozilla/Firefox_OS/Debugging">do some debugging</a>!</p>
+
+<div class="note"><strong>Note:</strong> একটি সহায়ক টিপঃ যদি  আপনার বিল্ডকৃত  B2G শুরু  হবার পরে স্ক্রিণ লক থাকে এবং পাসওয়ার্ড চাই  তাহলে ডিফল্ট কোডটি হল ০০০০।</div>
+
+<h2 class="note" id="Troubleshooting">Troubleshooting</h2>
+
+<p>এইখানে আপনাদের জন্য কিছু টিপস দেওয়া হল যদি B2G ইনস্টল করার পর অথবা আপডেট করার পর আপনার ডিভাইসটি ঠিকমত কাজ না করে।</p>
+
+<p><span style="font-size: 24px; letter-spacing: -0.5px; line-height: 24px;">যদি UI না শুরু হয় </span></p>
+
+<p><span style="line-height: 1.5;">আপনি আপনার ফোন আপডেট করার পর যদি ইউজার ইন্টারফেস আরম্ভ না হয়, আপনি আউট অফ ডেট কনফিগারেশন  থেকে এটি পুনরায় সেট করতে পারেন।  কিভাবে সম্ভব নিচে তা দেখানো হল:</span></p>
+
+<pre>cd gaia
+make reset-gaia
+</pre>
+
+<h3 class="note" id="যদি_আপনি_ডেভেলপার_থেকে_প্রোডাকশন_মোডে_পরিবর্তন_চান">যদি <span class="short_text" id="result_box" lang="bn"><span class="hps">আপনি </span> <span class="hps">ডেভেলপার থেকে</span> প্রোডাকশন মোডে <span class="hps">পরিবর্তন</span> <span class="hps">চান</span></span></h3>
+
+<pre>cd gaia
+make reset-gaia PRODUCTION=1</pre>
+
+<h3 class="note" id="image_is_too_large_error_message_on_.flash.sh_execution">"image is too large" error message on ./flash.sh execution</h3>
+
+<p>এর মানে হল ফ্ল্যাশ করার পূর্বে আপনার ফোনকে রুট করা জরুরী। আপনি যদি b2gতে রুট করতে চান আপনাকে অবশ্যই রুট পার্টিশন করতে হবে। আর ইনস্টল করার জন্য আপনার ফোনকে অবশ্যই রুট করা থাকতে হবে।</p>
+
+<div id="__if72ru4sdfsdfrkjahiuyi_once" style="display: none;"> </div>
+
+<div id="__hggasdgjhsagd_once" style="display: none;"> </div>

@@ -1,0 +1,9 @@
+# FROM-URL	TO-URL
+/bn/docs/IndexedDB	/bn/docs/Web/API/IndexedDB_API
+/bn/docs/MDN/Contribute/Content	/bn/docs/MDN/Guidelines
+/bn/docs/MDN/Contribute/Content/Style_guide	/bn/docs/MDN/Guidelines/Style_guide
+/bn/docs/MDN/Contribute/Structures	/bn/docs/MDN/Structures
+/bn/docs/MDN/Contribute/Structures/Macros	/bn/docs/MDN/Structures/Macros
+/bn/docs/MDN/Getting_started	/bn/docs/MDN/Contribute/Getting_started
+/bn/docs/Web/CSS/element	/bn/docs/Web/CSS/element()
+/bn/docs/en	/en-US/

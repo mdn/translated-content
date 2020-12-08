@@ -1,0 +1,145 @@
+---
+title: Performance
+slug: Mozilla/Performance
+tags:
+  - Add-ons
+  - Debugging
+  - Development
+  - Mozilla
+  - NeedsTranslation
+  - Performance
+  - TopicStub
+translation_of: Mozilla/Performance
+---
+<p>The articles linked to from here will help you improve performance, whether you're developing core Mozilla code or an add-on.</p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h3 id="Documentation">Documentation</h3>
+
+    <dl>
+     <dt><a href="/en/Performance/Reporting_a_Performance_Problem" title="en/Performance/Reporting_a_Performance_Problem">Reporting a Performance Problem</a></dt>
+     <dd>A user friendly guide to reporting a performance problem. A development environment is not required.</dd>
+     <dt><a href="Benchmarking" title="Performance/Benchmarking advice">Benchmarking</a></dt>
+     <dd>Tips on generating valid performance metrics.</dd>
+     <dt><a href="/en/Extensions/Performance_best_practices_in_extensions" title="en/Extensions/Performance best practices in extensions">Performance best practices in extensions</a></dt>
+     <dd>A performance "best practices" guide for extension developers.</dd>
+     <dt><a href="/en/Performance/Measuring_add-on_startup_performance" title="en/Measuring Add-on Startup Performance">Measuring Add-on Startup Performance</a></dt>
+     <dd>A guide for add-on developers on how to set up a performance testing environment.</dd>
+     <dt><a href="/en/XUL_School/Appendix_A:_Add-on_Performance" title="en/XUL School/Appendix A: Add-on Performance">XUL School: Add-on Performance</a></dt>
+     <dd>Tips for add-on developers to help them avoid impairing application performance.</dd>
+     <dt><a href="/en/Performance/GPU_performance" title="en/GPU performance">GPU performance</a></dt>
+     <dd>Tips for profiling and improving performance when using a GPU.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/ScrollLinkedEffects">Scroll-Linked Effects</a></dt>
+     <dd>Information on scroll-linked effects, their effect on performance, related tools, and possible mitigation techniques.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Automated_Performance_Testing_and_Sheriffing">Automated Performance Testing and Sheriffing</a></dt>
+     <dd>Information on automated performance testing and sheriffing at Mozilla.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers">Best practices for Front-end Engineers</a></dt>
+     <dd>Tips for reducing impacts on browser performance in front-end code.</dd>
+    </dl>
+
+    <p><span class="alllinks"><a class="internal" href="/Special:Tags?tag=Performance" title="Special:Tags?tag=Performance">View all pages tagged with "Performance"...</a></span></p>
+
+    <h3 id="Memory_profiling_and_leak_detection_tools">Memory profiling and leak detection tools</h3>
+
+    <dl>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Tools/Memory" title="en/Performance/Profiling with the Built-in Profiler">The Developer Tools "Memory" panel</a></dt>
+     <dd>The memory panel in the devtools supports taking heap snapshots, diffing them, computing dominator trees to surface "heavy retainers", and recording allocation stacks.</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Performance/about:memory">about:memory</a></dt>
+     <dd>about:memory is the easiest-to-use tool for measuring memory usage in Mozilla code, and is the best place to start. It also lets you do other memory-related operations like trigger GC and CC, dump GC &amp; CC logs, and dump DMD reports. about:memory is built on top of Firefox's <a href="/en-US/docs/Mozilla/Performance/Memory_reporting">memory reporting</a> infrastructure.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/DMD">DMD</a></dt>
+     <dd>DMD is a tool that identifies shortcomings in about:memory's measurements, and can also do multiple kinds of general heap profiling.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/AWSY">Are We Slim Yet</a></dt>
+     <dd>areweslimyet.com (a.k.a. AWSY) is a memory usage and regression tracker.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/BloatView">BloatView</a></dt>
+     <dd>BloatView prints per-class statistics on allocations and refcounts, and provides gross numbers on the amount of memory being leaked broken down by class. It is used as part of Mozilla's continuous integration testing.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Refcount_tracing_and_balancing">Refcount tracing and balancing</a></dt>
+     <dd>Refcount tracing and balancing are ways to track down leaks caused by incorrect uses of reference counting. They are slow and not particular easy to use, and thus most suitable for use by expert developers.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/GC_and_CC_logs">GC and CC logs</a></dt>
+     <dd>GC and CC logs can be generated and analyzed to in various ways. In particular, they can help you understand why a particular object is being kept alive.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Testing/Valgrind">Valgrind</a></dt>
+     <dd><a class="external text" href="http://valgrind.org/" rel="nofollow">Valgrind</a> is a tool that detects various memory-related problems at runtime, including leaks. Valgrind is used as <a class="external text" href="/en-US/docs/Valgrind_test_job" rel="nofollow">part</a> of Mozilla's continuous integration testing, though the coverage is limited because Valgrind is slow.</dd>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Testing/Firefox_and_Address_Sanitizer#LeakSanitizer">LeakSanitizer</a></dt>
+     <dd><span class="external text">LeakSanitizer</span> (a.k.a. LSAN) is similar to Valgrind, but it runs faster because it uses static source code instrumentation. LSAN is part of Mozilla's continuous integration testing, with most tests running through it as part of the AddressSanitizer (a.k.a. ASAN) test jobs.</dd>
+     <dt><a href="https://developer.apple.com/documentation/Performance/Conceptual/ManagingMemory/Articles/FindingLeaks.html">Apple tools</a></dt>
+     <dd>Apple provides <span class="external text">some tools</span> for Mac OS X that report similar problems to those reported by LSAN and Valgrind. The "leaks" tool is not recommended for use with SpiderMonkey or Firefox, because it gets confused by tagged pointers and thinks objects have leaked when they have not (see <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=390944" rel="nofollow">bug 390944</a>).</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Leak_Gauge">Leak Gauge</a></dt>
+     <dd>Leak Gauge is a tool that can be used to detect certain kinds of leaks in Gecko, including those involving documents, window objects, and docshells.</dd>
+     <dt><a href="https://dxr.mozilla.org/mozilla-central/source/memory/replace/logalloc/README">LogAlloc</a></dt>
+     <dd>LogAlloc is a tool that dumps a log of memory allocations in Gecko. That log can then be replayed against Firefox's default memory allocator independently or through another replace-malloc library, allowing the testing of other allocators under the exact same workload.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Memory_Profiler">Memory Profiler</a></dt>
+     <dd>The memory profiler samples allocation events and provides different views to analyze the allocation characteristic.</dd>
+    </dl>
+
+    <p>See also the documentation on <a href="/en-US/docs/Mozilla/Performance/Leak-hunting_strategies_and_tips">Leak-hunting strategies and tips.</a></p>
+   </td>
+   <td>
+    <h3 id="Profiling_and_performance_tools">Profiling and performance tools</h3>
+
+    <dl>
+     <dt><a href="https://developer.mozilla.org/en-US/docs/Tools/Performance" title="en/Performance/Profiling with the Built-in Profiler">Profiling with the Developer Tools Profiler</a></dt>
+     <dd>The profiler built into the developer tools has a high-level waterfall, detailed call tree, allocations and GC profiling, and flame graphs. It is available on all platforms and release channels, and also supports remote profiling b2g and Fennec.</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="/en/Performance/Profiling_with_the_Built-in_Profiler" title="en/Performance/Profiling with the Built-in Profiler">Profiling with the Gecko Profiler</a> {{ gecko_minversion_inline("16.0") }}</dt>
+     <dd>The Gecko Profiler is a good tool to start with, particularly for understanding where time is spent within C++ code in Firefox.</dd>
+     <dt><a href="/en/Performance/Profiling_with_Instruments" title="en/Performance/Profiling with Instruments">Profiling with Instruments</a></dt>
+     <dd>How to use Apple's Instruments tool to profile Mozilla code.</dd>
+     <dt><a href="/en/Performance/Profiling_with_Xperf" title="en/Performance/Profiling with Xperf">Profiling with Xperf</a></dt>
+     <dd>How to use Microsoft's Xperf tool to profile Mozilla code.</dd>
+     <dt><a href="/en-US/docs/Performance/Profiling_with_Concurrency_Visualizer" title="en/Performance/Profiling with Concurrency Visualizer">Profiling with Concurrency Visualizer</a></dt>
+     <dd>How to use Visual Studio's Concurrency Visualizer tool to profile Mozilla code.</dd>
+     <dt><a href="/en/Performance/Profiling_with_Zoom" title="en/Performance/Profiling with Zoom">Profiling with Zoom</a></dt>
+     <dd>Zoom is a profiler for Linux done by the people who made Shark</dd>
+     <dt><a href="/en/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module" title="en/Performance/Measuring performance using the PerfMeasurement.jsm code module">Measuring performance using the PerfMeasurement.jsm code module</a> {{ gecko_minversion_inline("2.0") }}</dt>
+     <dd>Using <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm" title="en/JavaScript code modules/PerfMeasurement.jsm"><code>PerfMeasurement.jsm</code></a> to measure performance data in your JavaScript code.</dd>
+     <dt><a href="/en-US/docs/Performance/Adding_a_new_Telemetry_probe" title="https://developer.mozilla.org/en-US/docs/Performance/Adding_a_new_Telemetry_probe">Adding a new Telemetry probe</a></dt>
+     <dd>Information on how to add a new measurement to the Telemetry performance-reporting system</dd>
+     <dt><a href="/en/Performance/Profiling_JavaScript_with_Shark" title="en/Performance/Profiling JavaScript with Shark">Profiling JavaScript with Shark</a> (obsolete - replaced by Instruments)</dt>
+     <dd>How to use the Mac OS X Shark profiler to profile JavaScript code in Firefox 3.5 or later.</dd>
+     <dt><a href="/en/Performance/Profiling_with_Shark" title="en/Performance/Profiling with Shark">Profiling with Shark</a> (obsolete - replaced by Instruments)</dt>
+     <dd>How to use Apple's Shark tool to profile Mozilla code.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Investigating_CSS_Performance">Investigating CSS Performance</a></dt>
+     <dd>How to figure out why restyle is taking so long</dd>
+    </dl>
+
+    <h3 id="Power_profiling">Power profiling</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Power_profiling_overview">Power profiling overview</a></dt>
+     <dd>This page provides an overview of relevant information, including details about hardware, what can be measured, and recommended approaches. It should be the starting point for anybody new to power profiling.</dd>
+     <dt><code><a href="/en-US/docs/Mozilla/Performance/tools_power_rapl">tools/power/rapl</a></code> (Mac, Linux)</dt>
+     <dd><code>tools/power/rapl</code> is a command-line utility in the Mozilla codebase that uses the Intel RAPL interface to gather direct power estimates for the package, cores, GPU and memory.</dd>
+     <dt><code><a href="/en-US/docs/Mozilla/Performance/powermetrics">powermetrics</a></code> (Mac-only)</dt>
+     <dd><code>powermetrics</code> is a command-line utility that gathers and displays a wide range of global and per-process measurements, including CPU usage, GPU usage, and various wakeups frequencies.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/TimerFirings_logging">TimerFirings logging</a> (All platforms)</dt>
+     <dd>TimerFirings logging is a built-in logging mechanism that prints data on every time fired.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Activity_Monitor_and_top">Activity Monitor, Battery Status Menu and <code>top</code></a> (Mac-only)</dt>
+     <dd>The battery status menu, Activity Monitor and <code>top</code> are three related Mac tools that have major flaws but often consulted by users, and so are worth understanding.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Performance/Intel_Power_Gadget">Intel Power Gadget</a> (Windows, Mac, Linux)</dt>
+     <dd>Intel Power Gadget provides real-time graphs for package and processor RAPL estimates. It also provides an API through which those estimates can be obtained.</dd>
+     <dt><code><a href="/en-US/docs/Mozilla/Performance/perf">perf</a></code> (Linux-only)</dt>
+     <dd><code>perf</code> is a powerful command-line utility that can measure many different things, including energy estimates and high-context measurements of things such as wakeups.</dd>
+     <dt><code><a href="/en-US/docs/Mozilla/Performance/turbostat">turbostat</a></code> (Linux-only)</dt>
+     <dd><code>turbostat</code> is a command-line utility that gathers and displays various power-related measurements, with a focus on per-CPU measurements such as frequencies and C-states.</dd>
+     <dt><code><a href="https://01.org/powertop">powertop</a></code> (Linux-only)</dt>
+     <dd><code>powertop</code> is an interactive command-line utility that gathers and displays various power-related measurements.</dd>
+    </dl>
+
+    <h3 id="Related_Topics">Related Topics</h3>
+
+    <dl>
+     <dd><a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>, <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a>, <a href="/En/Developer_Guide" title="en/Developing_Mozilla">Developing Mozilla</a>, <a href="/en/Extensions" title="en/Extensions">Extensions</a>, <a href="/en/Addons" title="en/Addons">Addons</a></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

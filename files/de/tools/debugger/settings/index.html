@@ -1,0 +1,57 @@
+---
+title: Settings
+slug: Tools/Debugger/Settings
+translation_of: Archive/Tools/Debugger_settings
+---
+<div>{{ToolsSidebar}}</div><p>The Debugger has its own settings menu, which you can access from an icon in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#toolbar">toolbar</a>:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9819/debugger-settings.png" style="display: block; margin-left: auto; margin-right: auto;">Each setting is a simple on/off switch:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 40%;"><strong>Auto Prettify Minified Sources</strong></td>
+   <td>With this option enabled, the debugger will automatically detect minified JS files and <a href="/en-US/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file">pretty-print</a> them.</td>
+  </tr>
+  <tr>
+   <td><strong>Pause on Exceptions</strong></td>
+   <td>When this option is enabled, execution of the script will automatically pause whenever a JavaScript exception is thrown.</td>
+  </tr>
+  <tr>
+   <td><strong>Ignore Caught Exceptions</strong></td>
+   <td>
+    <p>If this option is set (it is set by default) and "Pause on exceptions" is set, then execution will pause on an exception only if that exception is not caught.</p>
+
+    <p>This is usually the behavior you want. You don't generally want to pause execution when an exception that is thrown is caught, since that generally indicates that your program is handling it properly.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Show Panes on Startup</strong></td>
+   <td>When this option is enabled, the debugger's <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Variables_pane" title="#variables-pane">variables pane</a> is visible when you first start the debugger.</td>
+  </tr>
+  <tr>
+   <td><strong>Show Only Enumerable Properties</strong></td>
+   <td>Do not display non-enumerable JavaScript properties.</td>
+  </tr>
+  <tr>
+   <td><strong>Show Variables Filter Box</strong></td>
+   <td>Enabling this option adds a "Filter variables" search box to the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Variables_pane" title="#variables-pane">variables pane</a>, so that you can filter the displayed list of variables.</td>
+  </tr>
+  <tr>
+   <td><strong>Show Original Sources</strong></td>
+   <td>Enabling this option will make the debugger use <a class="external external-icon" href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/" title="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>, if they are available, to display the original source for code which has been combined, minified, or even compiled to JavaScript from a language like CoffeeScript. Defaults to true.</td>
+  </tr>
+  <tr>
+   <td><strong>Automatically Black Box Minified Sources</strong></td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>New in Firefox 33.</p>
+    </div>
+
+    <p><span id="summary_alias_container"><span id="short_desc_nonedit_display">Automatically <a href="/en-US/docs/Tools/Debugger/How_to/Black_box_a_source">black box</a> sources whose URL ends with ".min.js". Defaults to true.</span></span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

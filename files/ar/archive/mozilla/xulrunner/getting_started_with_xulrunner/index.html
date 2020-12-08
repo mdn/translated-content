@@ -1,0 +1,266 @@
+---
+title: الشروع في العمل مع XULRunner
+slug: Archive/Mozilla/XULRunner/Getting_started_with_XULRunner
+translation_of: Archive/Mozilla/XULRunner/Getting_started_with_XULRunner
+---
+<p>{{ Next("Windows and menus in XULRunner") }}</p>
+
+<p><span class="short_text" id="result_box" lang="ar"><span class="hps">يستكشف هذا المقال </span></span><a href="https://developer.mozilla.org/en-US/docs/The_Mozilla_platform" title="/en-US/docs/The_Mozilla_platform">منصة موزيلا </a><span id="result_box" lang="ar"><span class="hps">من خلال بناء</span> <span class="hps">تطبيقات سطح المكتب</span> <span class="hps">الأساسي</span> <span class="hps">باستخدام</span> </span><a href="https://developer.mozilla.org/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a><span lang="ar"><span>. </span></span><span class="short_text" id="result_box" lang="ar"><span class="hps">وبالنظر إلى أن</span> <span class="hps">فايرفوكس</span><span>، طائر الرعد، </span></span>وغيرها من التطبيقات المتعددة المكتوبة باستخدام المنصة، فهي رهان آمن أنه يمكن استخدامها لبناء التطبيق الأساسي. <span id="result_box" lang="ar"><span class="hps">هناك</span> <span class="hps">مقال</span> <span class="hps">مع اتباع نهج</span> <span class="hps">أكثر تعقيدا ل</span><span>بناء تطبيقات</span> <span class="hps">XULRunner</span> <span class="hps">في </span></span><a href="https://developer.mozilla.org/en-US/docs/Creating_XULRunner_Apps_with_the_Mozilla_Build_System">إنشاء تطبيقات XULRunner مع موزيلا بناء النظام. </a><span id="result_box" lang="ar"><span class="hps">إذا</span> <span class="hps">كنت بحاجة إلى تغيير</span> <span class="hps">XULRunner</span> <span class="hps">نفسه</span> <span class="hps">أو</span> <span class="hps">دمجه</span> <span class="hps">مع</span> <span class="hps">ثنائيات</span> <span class="hps">الخارجية</span> <span class="hps">قد تحتاج إلى</span> <span class="hps">قراءة</span> <span class="hps">هذه المقال.</span></span><span lang="ar"><span> </span></span><span class="short_text" lang="ar"><span class="hps"> </span></span></p>
+
+<h2 id="Step_1:_Download_XULRunner" name="Step_1:_Download_XULRunner"><span class="short_text" id="result_box" lang="ar"><span class="hps">الخطوة 1</span><span>: تحميل</span> <span class="hps">XULRunner</span></span></h2>
+
+<p><span id="result_box" lang="ar"><span class="hps">يمكنك العثور على</span> <span class="hps">رابط التحميل</span> <span class="hps">في الصفحة</span> <span class="hps">الرئيسية</span> <a href="https://developer.mozilla.org/en-US/docs/XULRunner">XULRunner</a> <span class="hps">هنا</span> <span class="hps">على</span> <span class="hps">MDN</span><span>. </span></span>ومنذ حين أننا لا نخلق أي مكون من مكونات XPCOM الثنائية، نحن بحاجة فقط لتنزيل وتثبيت حزمة وقت التشغيل XULRunner، وليس <a href="https://developer.mozilla.org/en-US/docs/Gecko_SDK">SDK</a>.</p>
+
+<p>تحميل XULRunner لـ ويندوز هو ملف مضغوط، ليس مناسباً تثبيته. كمطور، أنا أحب فكرة أن XULRunner يكون فقط ملفات غير مضغوطة على الجهاز الخاص بي. وأنا على افتراض أنها لا تحتاج إلى ربط في نظام ويندوز الخاص بي، وهذا شيء جيد. وهذا يعني أيضا أن XULRunner هو قابل للحمل كذلك، إذا كنت طورت التطبيقات الخاصة بك لتكون محمولة يمكنك أن تحملها وتحولها على محرك أقراص أو مزامنتها في السحابة.</p>
+
+<p><span id="result_box" lang="ar"><span class="hps">يتم توزيع</span> <span class="hps">نسخة ماك</span> <span class="hps">من</span> <span class="hps">XULRunner</span> <span class="hps">كأرشيف</span> <span class="hps">tar.bz2</span><span>.</span> <span class="hps">يمكنك استخراج</span> <span class="hps">هذه</span> <span class="hps">إلى أي مكان</span> <span class="hps">تريد، </span></span>لكن هناك العديد من المواضيع في الوثائق التي من شأنها أن نفترض أن لديك هذا مثبت في <code>\Library\Frameworks</code>.</p>
+
+<p>في أوبونتو سطح المكتب ومشتقاته (Xubuntu, Kubuntu, ...)، من الإصدار 11.10 (Oneiric Ocelot)، لم تعد تحتفظ بـ XULRunner وغير موجود في مستودع أوبونتو. لذلك، ربما تحتاج إلى تجميع XULRunner يدوياً أو تحميل الأفراج ثنائي من خادم FTP موزيلا. ولتحقيق ذلك، يجب تشغيل السكربيت التالي في كل مرة ترغب بتثبيت نسخة جديدة:</p>
+
+<div class="note"><code>FIREFOX_VERSION=`grep -Po  "\d{2}\.\d+" /usr/lib/firefox/platform.ini`<br>
+ARCH=`uname -p`<br>
+XURL=https://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/$FIREFOX_VERSION/runtimes/xulrunner-$FIREFOX_VERSION.en-US.linux-$ARCH.tar.bz2<br>
+cd /opt<br>
+sudo sh -c "wget -O- $XURL | tar -xj"<br>
+sudo ln -s /opt/xulrunner/xulrunner /usr/bin/xulrunner<br>
+sudo ln -s /opt/xulrunner/xpcshell /usr/bin/xpcshell </code></div>
+
+<p>يمكنك أيضاً حفظ السكربيت إلى ملف لتوفير العناء عليك. ملاحظة: إذا كنت تستخدم Firefox build  من مستودع Ubuntuzilla، استبدال <code>/usr/lib/firefox/platform.ini مع </code> <code>/opt/firefox/platform.ini</code>.</p>
+
+<h2 id="Step_2:__Install_XULRunner" name="Step_2:__Install_XULRunner"><span class="short_text" id="result_box" lang="ar"><span class="hps">الخطوة 2</span><span>: تثبيت</span> <span class="hps">XULRunner</span></span></h2>
+
+<p>على ويندوز، فك الأرشيف في مكان معقول. I فكه إلى ملف جديد في (<code>C:\program files\xulrunner</code> folder).</p>
+
+<p>على ماك، استخراج الأرشيف tar.bz2، الذي يحتوي على XULRunner كما XUL.Framework. نسخ هذا إلى ( <code>/Library/Frameworks</code> directory)، أو موقع آخر من اختيارك.</p>
+
+<p>على لينكس، تحتاج فقط إلى فك الأرشيف إذا كنت تستخدم ما قبل الأفراج XULRunner.</p>
+
+<div class="note">
+<p>في جميع النظم يجب عليك فك الملف <a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">omni.ja</a> إلى الدليل على سبيل المثال وألقاء نظرة عبى محتوياته لترى كم هي مدهشة! ولفعل ذلك عليك تغير أمتداد الملف إلى (zip) و أستخدام أداة الضفط العادية لأستخراج الملفات وفتحه.  محتويات omni.ja المتاحة لتطبيقات XULRunner هي التي تجعل من الممكن لبناء تطبيقات مذهلة بسهولة!</p>
+</div>
+
+<h2 id="Step_3:_Create_the_application_folder_structure" name="Step_3:_Create_the_application_folder_structure"><span class="short_text" id="result_box" lang="ar"><span class="hps">الخطوة 3</span><span>:</span> <span class="hps">إنشاء هيكل</span> <span class="hps">مجلد التطبيق</span></span></h2>
+
+<p>حان الوقت للبدء بمثال بسيط وكشف هيكل التطبيق shell. ونسميها XUL "مرحباً بالعالم" <span id="result_box" lang="ar"><span class="hps">إذا كنت تريد. وكل ما تراه أدناه</span> <span class="hps">يمكن العثور عليها في</span> <span class="hps">وثائق</span> <a href="https://developer.mozilla.org/en-US/docs/XULRunner">XULRunner</a> <span class="hps">هنا</span> <span class="hps">على</span> <span class="hps">MDN</span> <span class="hps">بمزيد</span> <span class="hps">من التفاصيل</span><span>.</span></span></p>
+
+<div class="note">
+<p><strong>تلميح</strong>: تخطي إلى الأمام وتحميل نموذج التطبيق، يمكنك تجربة ذلك و أنت تتابع هذا البرنامج التعليمي. يمكنك تنزيل عينة التطبيق من <a href="https://github.com/matthewkastor/XULRunner-Examples" title="https://github.com/matthewkastor/XULRunner-Examples">https://github.com/matthewkastor/XULRunner-Examples</a>. يرجى مواصلة القراءة لمعرفة "ما"، "لماذا" و "كيف" بناء أجزاء التطبيق في XULRunner.</p>
+</div>
+
+<p>On Windows, I created the root in a new <code>c:\program files\myapp</code> folder, but you can create it wherever you like, using whatever OS you like. The same application structure is used on Windows, Mac and Linux. Here is the subfolder structure:</p>
+
+<pre>+ myapp/
+|
++-+ chrome/
+| |
+| +-+ content/
+| | |
+| | +-- main.xul
+| | |
+| | +-- main.js
+| |
+| +-- chrome.manifest
+|
++-+ defaults/
+| |
+| +-+ preferences/
+|   |
+|   +-- prefs.js
+|
++-- application.ini
+|
++-- chrome.manifest
+</pre>
+
+<p>Notice that there are 5 files in the folder structure: <code>application.ini</code>, <code>chrome.manifest (2)</code>, <code>prefs.js</code>, and <code>main.xul</code>. The <code>/chrome/chrome.manifest</code> file is optional, but might be useful for backward compatibility. See the note below.</p>
+
+<div class="note">
+<p>For more details on the structure of installable bundles in general see: <a href="/en-US/docs/Bundles" title="/en-US/docs/Bundles">Structure of an installable bundle</a>.</p>
+</div>
+
+<div class="note"><strong>Note:</strong> In XULRunner 2.0, the chrome.manifest is now used to register XPCOM components in addition to its previous uses. Part of this change means the <code>/chrome/chrome.manifest</code> is no longer considered the "root" manifest. XULRunner will not check that folder location for a root-level <code>chrome.manifest</code>. You need to move your existing chrome.manifest to the application root folder, remembering to update the relative paths within the file. You could also just create a new application root-level manifest that includes the <code>/chrome/chrome.manifest</code>, which is what this tutorial will do.</div>
+
+<h2 id="Step_4:_Set_up_application.ini" name="Step_4:_Set_up_application.ini">Step 4: <code>Set up application.ini</code></h2>
+
+<p>The<code> <a href="/en-US/docs/XUL_Application_Packaging" title="/en-US/docs/XUL_Application_Packaging">application.ini</a> </code>file acts as the XULRunner entry point for your application. It specifies how your application intends to use the XULRunner platform as well as configure some information that XULRunner uses to run your application. Here is mine:</p>
+
+<pre>[App]
+Vendor=XULTest
+Name=myapp
+Version=1.0
+BuildID=20100901
+ID=xulapp@xultest.org
+
+[Gecko]
+MinVersion=1.8
+MaxVersion=200.*
+</pre>
+
+<div class="note"><strong>Note:</strong> The <code>MinVersion</code> and <code>MaxVersion</code> fields indicate the range of Gecko versions your application is compatible with; make sure that you set them so that the version of XULRunner you're using is in that range, or your application won't work.</div>
+
+<div class="note"><strong>Note</strong>: Make sure your application name is lowercase and longer than 3 characters</div>
+
+<h2 id="Step_5:_Set_up_the_chrome_manifest" name="Step_5:_Set_up_the_chrome_manifest">Step 5: Set up the chrome manifest</h2>
+
+<p>The <a href="/en-US/docs/Chrome_Registration" title="/en-US/docs/Chrome_Registration">chrome manifest</a> file is used by XULRunner to define specific URIs which in turn are used to locate application resources. This will become clearer when we see how the “chrome://” URI is used. Application chrome can be in a single or a few JAR files or uncompressed as folders and files. I am using the uncompressed method for now. Here is the <code>chrome/chrome.manifest</code>:</p>
+
+<pre class="eval"> content myapp content/
+</pre>
+
+<p>As mentioned in Step 3, the default location of the <code>chrome.manifest</code> has changed in XULRunner 2.0, so we also need a simple <code>chrome.manifest</code> in the <strong>application</strong> root which will include the the manifest in our <strong>chrome</strong> root. Here is the application root <code>chrome.manifest</code>:</p>
+
+<pre>manifest chrome/chrome.manifest</pre>
+
+<h2 id="Step_6:_Set_up_preferences" name="Step_6:_Set_up_preferences">Step 6: Set up preferences</h2>
+
+<p>The <a href="/en-US/docs/Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences" title="/en-US/docs/Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences">prefs.js</a> file tells XULRunner the name of the XUL file to use as the main window. Here is mine:</p>
+
+<pre class="eval">pref("toolkit.defaultChromeURI", "<span class="external">chrome://myapp/content/main.xul</span>");
+
+/* debugging prefs, disable these before you deploy your application! */
+pref("browser.dom.window.dump.enabled", true);
+pref("javascript.options.showInConsole", true);
+pref("javascript.options.strict", true);
+pref("nglayout.debug.disable_xul_cache", true);
+pref("nglayout.debug.disable_xul_fastload", true);
+</pre>
+
+<p>XULRunner specific preferences include:</p>
+
+<dl>
+ <dt><code><a href="/en-US/docs/toolkit.defaultChromeURI" title="/en-US/docs/toolkit.defaultChromeURI">toolkit.defaultChromeURI</a></code></dt>
+ <dd>Specifies the default window to open when the application is launched.</dd>
+ <dt><code><a href="/en-US/docs/toolkit.defaultChromeFeatures" title="/en-US/docs/toolkit.defaultChromeFeatures">toolkit.defaultChromeFeatures</a></code></dt>
+ <dd>Specifies the features passed to <code><a href="/en-US/docs/DOM:window.open" title="/en-US/docs/DOM:window.open">window.open()</a></code> when the main application window is opened.</dd>
+ <dt><code><a href="/en-US/docs/toolkit.singletonWindowType" title="/en-US/docs/toolkit.singletonWindowType">toolkit.singletonWindowType</a></code></dt>
+ <dd>Allows configuring the application to allow only one instance at a time.</dd>
+</dl>
+
+<div class="note">
+<p>The toolkit preferences are described in further detail in <a href="/en-US/docs/XULRunner/Specifying_Startup_Chrome_Window" title="/en-US/docs/XULRunner/Specifying_Startup_Chrome_Window">XULRunner:Specifying Startup Chrome Window</a>.</p>
+
+<p>The debugging preferences are discussed in <a href="/en-US/docs/Debugging_a_XULRunner_Application" title="/en-US/docs/Debugging_a_XULRunner_Application">Debugging a XULRunner Application</a></p>
+</div>
+
+<h2 id="Step_7:_Create_some_XUL" name="Step_7:_Create_some_XUL">Step 7: Create some XUL</h2>
+
+<p>Finally, we need to create a simple <a href="/en-US/docs/XUL/window" title="/en-US/docs/XUL/window">XUL window</a>, which is described in the file <code>main.xul</code>. Nothing fancy here, just the minimum we need to make a window. No menus or anything.</p>
+
+<p>main.xul:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="main" title="My App" width="300" height="300" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;script type="application/javascript" src="chrome://myapp/content/main.js"/&gt;
+
+  &lt;caption label="Hello World"/&gt;
+  &lt;separator/&gt;
+  &lt;button label="More &gt;&gt;" oncommand="showMore();"/&gt;
+  &lt;separator/&gt;
+  &lt;description id="more-text" hidden="true"&gt;This is a simple XULRunner application. XUL is simple to use and quite powerful and can even be used on mobile devices.&lt;/description&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="note"><strong>Note:</strong> Make sure there is no extra whitespace at the beginning of the XML/XUL file</div>
+
+<p>The application also has a JavaScript file. Most XUL applications will include some external JavaScript, so the sample application does too, just to show how to include it into the XUL file.</p>
+
+<p>main.js:</p>
+
+<pre>function showMore() {
+  document.getElementById("more-text").hidden = false;
+}
+</pre>
+
+<div class="note">
+<p>For more information about XUL see: <a href="/en-US/docs/XUL" title="/en-US/docs/XUL">XUL</a>.</p>
+
+<p>For information about mixing HTML elements into your XUL read <a href="/en-US/docs/XUL/Tutorial/Adding_HTML_Elements" title="/en-US/docs/XUL/Tutorial/Adding_HTML_Elements">Adding HTML Elements</a>.</p>
+</div>
+
+<h2 id="Step_8:_Run_the_application" name="Step_8:_Run_the_application">Step 8: Run the application</h2>
+
+<p>The moment of truth. We need to get XULRunner to launch the bare-bones application.</p>
+
+<h3 id="Windows">Windows</h3>
+
+<p>From a Windows command prompt opened to the <code>myapp</code> folder, we should be able to execute this:</p>
+
+<pre class="eval"> C:\path\to\xulrunner.exe application.ini
+</pre>
+
+<p>Of course, if you opted to install xulrunner then you could simply do</p>
+
+<pre>​<span style="font-family: courier new,andale mono,monospace; line-height: normal;">%ProgramFiles%\xulrunner.exe application.ini</span></pre>
+
+<p><span style="font-size: 14px; line-height: 1.572;">or on 64 bit systems</span></p>
+
+<pre>​<span style="font-family: courier new,andale mono,monospace; line-height: normal;">%ProgramFiles(x86)%\xulrunner.exe application.ini</span></pre>
+
+<div class="note">
+<p><span style="font-size: 14px; line-height: 1.572;"><strong>Note</strong>: you can also install your application when you're finished debugging it. See <a href="/en-US/docs/XUL_Application_Packaging" title="/en-US/docs/XUL_Application_Packaging">XUL Application Packaging</a> for details.</span></p>
+</div>
+
+<h3 id="Mac">Mac</h3>
+
+<p>On the Mac, before you can run a XULRunner application with everything intact, you must install it using the <code>--install-app</code> xulrunner commandline flag. Installing the application creates an OS X application bundle:</p>
+
+<pre class="eval"> /Library/Frameworks/XUL.framework/xulrunner-bin --install-app /&lt;path&gt;/&lt;to&gt;/myapp.zip
+</pre>
+
+<p>Once installed, you can run the application:</p>
+
+<pre class="eval"> /Library/Frameworks/XUL.framework/xulrunner-bin "/Applications/Finkle/TestApp.app/Contents/Resources/application.ini"
+</pre>
+
+<p>You may run it without installing (but with the menu bar and dock icon missing) in OS X by typing:</p>
+
+<pre>/Library/Frameworks/XUL.framework/xulrunner-bin "/&lt;full path&gt;/TestApp/application.ini"
+</pre>
+
+<div class="note">
+<p>Note: The full path is required or a "Error: couldn't parse application.ini."-message will be returned.</p>
+</div>
+
+<p>This might also be simplified using a very simple shell script (i call mine "run.sh"):</p>
+
+<pre>#!/bin/sh
+/Library/Frameworks/XUL.framework/xulrunner-bin `pwd`/application.ini
+</pre>
+
+<h3 id="Linux">Linux</h3>
+
+<p>On Ubuntu, you can run the application from a terminal. First change into the <code>\myapp</code> folder, then start the application by:</p>
+
+<pre class="eval"> xulrunner application.ini
+</pre>
+
+<p>You should now see a window that looks something like this. This particular screenshot is from Ubuntu 10.</p>
+
+<p><img alt="myapp-screenshot.png" class="default internal" src="/@api/deki/files/4679/=myapp-screenshot.png"></p>
+
+<h3 id="Alternative:_Use_Firefox3_-app_to_run_XUL_apps" name="Alternative:_Use_Firefox3_-app_to_run_XUL_apps">Alternative: Run XUL apps with Firefox</h3>
+
+<p>With Firefox 3 and later, you can tell the Firefox executable to run a XUL application from the command line. The XUL application will run instead of the Firefox browser that normally starts. This is similar to starting a XUL app using XULRunner. See <a href="/en/XULRunner_tips#Using_Firefox_to_run_XULRunner_applications" title="en/XULRunner_tips#Using_Firefox_to_run_XULRunner_applications">Using Firefox to run XULRunner applications</a>. This does not work if Firefox itself was installed as a XUL app - you need to use the installed XULRunner directly.</p>
+
+<h2 id="Further_Reading">Further Reading:</h2>
+
+<p>There are many things you can do with XULRunner. Before you get too far into things you might want to read the <a href="/en-US/docs/XULRunner_tips" title="/en-US/docs/XULRunner_tips">XULRunner tips</a> article. Also, throughout this tutorial you've been introduced to various bits of the <a href="/en-US/docs/Toolkit_API" title="/en-US/docs/Toolkit_API">Toolkit API</a> and it may help you to get familiar with it. Once you've got an application that's ready for the world you'll love our article titled <a href="/en-US/docs/XULRunner/Deploying_XULRunner_1.8" title="/en-US/docs/XULRunner/Deploying_XULRunner_1.8">Deploying XULRunner</a>.</p>
+
+<p>For now, click the "next" link to learn about windows and menus in XULRunner!</p>
+
+<p>{{ Next("Windows and menus in XULRunner") }}</p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author: Mark Finkle, October 2, 2006</li>
+</ul>
+</div>
+
+<p>{{ languages( { "ja": "ja/Getting_started_with_XULRunner", "ko": "ko/Getting_started_with_XULRunner" } ) }}</p>

@@ -1,0 +1,58 @@
+---
+title: Preguntes més freqüents
+slug: Mozilla/Persona/PMF
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona/FAQ
+---
+<h3 id="Quina_és_la_diferència_entre_Mozilla_Persona_i_BrowserID">Quina és la diferència entre Mozilla Persona i BrowserID?</h3>
+<p>Persona és una implementació completa d'un nou sistema d'accés distribuït de Mozilla.</p>
+<p>BrowserID és el protocol obert que regeix el funcionament de Persona.</p>
+<p>Com una analogia: Persona permet als usuaris iniciar sessió en els llocs que implementen BrowserID. De la mateixa manera, Firefox permet als usuaris navegar per la web implementant HTTP.</p>
+<h3 id="Com_es_compara_Persona_amb_OpenID">Com es compara Persona amb OpenID?</h3>
+<p>Persona i OpenID tenen objectius molt similars i una arquitectura similar. Ambdós sistemes redueixen el nombre de contrasenyes que un usuari necessita, i tots dos estan dissenyats per ser descentralitzats. Això vol dir que qualsevol domini pot presentar-se com a proveïdor d'identitat sense dependre d'una autoritat central.</p>
+<p>Malgrat aquestes similituds, Persona és més fàcil d'usar i més fàcil d'afegir als llocs web. Persona també protegeix millor la privadesa dels usuaris. En concret:</p>
+<dl>
+  <dt>
+    Persona és més fàcil per als usuaris</dt>
+  <dd>
+    Persona identifica els usuaris basant-se en les adreces de correu electrònic, que els usuaris ja coneixen, comprenen i associen naturalment amb les identitats en línia. Amb OpenID, els usuaris es veuen obligats a aprendre un nou nom d'usuari: una URL que no és intuïtiva.</dd>
+  <dd>
+    Iniciar sessió mitjançant Persona també és fàcil: després d'haver-se configurat per primera vegada, només son necessaris 2 clics per autenticar-se.</dd>
+  <dt>
+    Persona és més fàcil per als desenvolupadors</dt>
+  <dd>
+    Persona té una {{ domxref("navigator.id", "API simple") }} que només pren una tarda per entendre i començar a usar.</dd>
+  <dd>
+    Les identitats Persona <em>són</em> adreces de correu electrònic, per tant, els llocs web no necessiten demanar als usuaris més informació de contacte durant el registre.</dd>
+  <dd>
+    Atès que els usuaris coneixen i entenen la seva adreça de correu electrònic, els desenvolupadors no han de construir pàgines complexes amb botons d'inici de sessió per a tots els proveïdors populars d'OpenID.</dd>
+  <dt>
+    Persona protegeix millor la privacitat de l'usuari</dt>
+  <dd>
+    Pel seu disseny, OpenID permet als proveïdors d'identitat rastrejar els seus usuaris a la web: cada vegada que un usuari inicia sessió a un lloc web, el seu navegador es redirecciona al proveïdor d'identitat de l'usuari, i després torna a redireccionar-se al lloc. Aquestes redireccions exposen completament al proveïdor d'identitat la informació d'on va l'usuari.</dd>
+  <dd>
+    En contrast, el protocol BrowserID mai filtra informació de seguiment cap al proveïdor d'identitat. Més aviat, es comporta d'una manera similar al d'una targeta d'identificació: els usuaris obtenen credencials signades dels seus proveïdors d'identitat, que es poden presentar als llocs web com prova d'identitat. Els llocs web poden comprovar la validesa de les credencials sense haver de revelar la identitat d'un usuari al seu proveïdor d'identitat.</dd>
+</dl>
+<h3 id="Per_què_Persona_requereix_JavaScript">Per què Persona requereix JavaScript?</h3>
+<p>Persona requereix JavaScript, però hi ha alguns usuaris que opten per bloquejar selectivament el JavaScript mitjançant l'ús de complements del navegador com NoScript. Molts d'aquests usuaris estan preocupats per les implicacions de privacitat de tenir habilitat JavaScript, ja que aquest s'utilitza sovint per rastrejar als visitants a través de llocs web.</p>
+<p>No obstant això, en el cas de Persona, el JavaScript s'utilitza realment per millorar la privacitat de l'usuari, ja que permet al navegador realitzar operacions criptogràfiques en el costat del client. En fer aquestes operacions en el client, Persona evita la necessitat d'emmagatzemar les claus secretes en un altre lloc que no sigui en el propi navegador de l'usuari.</p>
+<h3 id="Persona_garantitza_la_obtenció_d'una_adreça_de_correu_electrònic_vàlida_per_als_meus_usuaris">Persona garantitza la obtenció d'una adreça de correu electrònic vàlida per als meus usuaris?</h3>
+<p>No, Persona només garanteix l'associació de l'usuari amb una adreça. Igual que amb qualsevol adreça de correu electrònic en qualsevol sistema d'inici de sessió, és possible que la direcció ja no funcioni o no sigui comprovada regularment per l'usuari. Per a la majoria dels usuaris, l'adreça de correu electrònic serà funcional.</p>
+<h3 id="Com_verifica_Persona_l'associació_d'un_usuari_amb_una_adreça">Com verifica Persona l'associació d'un usuari amb una adreça?</h3>
+<p>Persona li fa una petició al domini de l'adreça, i aquest és lliure de verificar els seus usuaris de la manera que elegeixi. Si el domini no és un proveïdor d'identitat nadiu, i per tant, no pot verificar els seus propis usuaris, el navegador sol·licita la verificació al proveïdor d'identitat de reserva (<em>fallback</em>) de Persona a <a href="https://login.persona.org" title="https://login.persona.org">https://login.persona.org</a>. Abans de certificar la identitat d'un usuari, el proveïdor d'identitat de reserva prova l'adreça, enviant-li d'un correu electrònic, i demanant-li a l'usuari que faci clic a l'enllaç que aquest conté.</p>
+<h3 id="Com_puc_manejar_la_recuperació_d'un_compte_si_els_usuaris_perden_el_control_del_seu_correu_electrònic">Com puc manejar la recuperació d'un compte si els usuaris perden el control del seu correu electrònic?</h3>
+<p>La millor manera de fer-ho és permetre als usuaris afegir una adreça de correu electrònic secundària en el seu compte. Veure <a href="/en-US/docs/Persona/The_implementor_s_guide/Adding_extra_email_addresses_with_Persona" title="/en-US/docs/Persona/The_implementor_s_guide/Adding_extra_email_addresses_with_Persona">"Addició d'adreces de correu electrònic addicionals amb Persona"</a>.</p>
+<h3 id="Puc_allotjar_jo_mateix_include.js_o_l'he_incloure_des_de_httpslogin.persona.org">Puc allotjar jo mateix include.js, o l'he incloure des de <a class="link-https" href="https://login.persona.org" rel="freelink">https://login.persona.org</a>?</h3>
+<p>El codi a <code>include.js</code> encara està subjecte a canvis. Encara no es recomana que s'allotji en cap servidor propi.</p>
+<h3 id="Puc_verificar_les_afirmacions_a_nivell_local_o_he_de_fer_servir_el_servei_de_verificació_remot">Puc verificar les afirmacions a nivell local, o he de fer servir el servei de verificació remot?</h3>
+<p>Per garantir la privacitat dels usuaris, és important que les assercions d'identitat es verifiquin a nivell local, i no amb el servei de verificació remota. No obstant això, el format de les afirmacions encara està subjecta a canvis, de manera que la verificació local encara no és recomanable. Tot i amb la verificació remota, Persona protegeix a l'usuari de seguiment amb el seu proveïdor d'identitat.</p>
+<p>Una vegada que el protocol s'hagi estabilitzat, les biblioteques estaran disponibles per simplificar la verificació local. Seguiu el <a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">Blog d'Identity</a> per saber quan és recomanable la verificació local.</p>
+<h3 id="Quins_consells_hi_ha_per_a_la_migració_dels_usuaris_que_actualment_utilitzen_altres_mètodes_d'inici_de_sessió">Quins consells hi ha per a la migració dels usuaris que actualment utilitzen altres mètodes d'inici de sessió?</h3>
+<p>Malgrat els beneficis de Persona, mai és fàcil de moure tots els usuaris a un nou sistema d'inici de sessió. Convenientment, l'enfocament que fa Persona amb les adreces de correu electrònic fa que sigui fàcil d'usar juntament amb els sistemes d'accés existents, pel que no han de canviar tots alhora.</p>
+<p>Un enfocament especial de baixa fricció és suggerir Persona a usuaris que no recordin la contrasenya. En lloc de restablir les contrasenyes, els usuaris només cal que accedeixin amb Persona.</p>
+<h3 id="Com_he_d'assenyalar_que_Sign_In_també_permet_la_creació_de_comptes_nous">Com he d'assenyalar que "Sign In" també permet la creació de comptes nous?</h3>
+<h3 id="Com_puc_obtenir_informació_sobre_canvis_importants_en_BrowserID_com_APIs_noves_o_obsoletes">Com puc obtenir informació sobre canvis importants en BrowserID, com APIs noves o obsoletes?</h3>
+<p>Quan un canvi que trenca la compatibilitat cap enrere o una funció queda obsoleta, s'anuncia a la llista de correu <a href="https://mail.mozilla.org/listinfo/persona-notices" title="https://mail.mozilla.org/listinfo/persona-notices">persona-notices</a>. Subscriu-t'hi.</p>
+<p>Per obtenir informació sobre les noves funcions i millores, segueix el <a href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">blog de l'equip identity</a>.</p>
+<p>Per a la discussió de desenvolupament, subscriu-te a la llista de correu <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">dev-identity</a>.</p>

@@ -1,0 +1,93 @@
+---
+title: arguments.caller
+slug: Web/JavaScript/Reference/Functions/arguments/caller
+translation_of: Archive/Web/JavaScript/arguments.caller
+---
+<div>{{jsSidebar("Functions")}}</div>
+
+<p>La propietat obsoleta <strong><code>arguments.caller</code></strong> solia proporcionar la funció que invoca la funció que s'està executant en aquest moment. Aquesta propietat s'ha eleminitat i ja no funciona.</p>
+
+<h2 id="Descripció">Descripció</h2>
+
+<p>La propietat ja no és troba disponible, però encara es pot utilitzar {{jsxref("Function.caller")}}.</p>
+
+<pre class="brush: js">function whoCalled() {
+   if (whoCalled.caller == null)
+      console.log('I was called from the global scope.');
+   else
+      console.log(whoCalled.caller + ' called me!');
+}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>El codi següent s'utilitzava per comprovar el valor de <code>arguments.caller</code> en una funció, però ja no funciona.</p>
+
+<pre class="brush: js">function whoCalled() {
+   if (arguments.caller == null)
+      console.log('I was called from the global scope.');
+   else
+      console.log(arguments.caller + ' called me!');
+}
+</pre>
+
+<h2 id="Especificacions">Especificacions</h2>
+
+<p>No forma part de cap estàndard. Implementat en JavaScript 1.1 i eliminat en {{bug(7224)}} a causa una potencial vulnerabilitat de seguretat.</p>
+
+<h2 id="Compatibilitat_amb_navegadors">Compatibilitat amb navegadors</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Suport bàsic</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome per Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Suport bàsic</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Vegeu_també">Vegeu també</h2>
+
+<ul>
+ <li>{{jsxref("Function")}}</li>
+</ul>

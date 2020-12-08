@@ -1,0 +1,105 @@
+---
+title: >-
+  Auf dieser Seite wird beschrieben, wie Sie ein Wörterbuch für die
+  Rechtschreibprüfung von Hunspell als Firefox-Add-On
+slug: Mozilla/Creating_a_spell_check_dictionary_add-on
+tags:
+  - Deutsch
+  - German Translation
+  - Lesen Sie die Tagging-Anleitung.
+  - Übersetzung
+translation_of: Mozilla/Creating_a_spell_check_dictionary_add-on
+---
+<div class="blockIndicator note">
+<p dir="rtl">This paDieserge describes how to package a Hunspell spell check dictionary as a Firefox add-on, or how to update your existing add-on, so that it can be installed, uninstalled and updated without a restart.</p>
+</div>
+
+<h2 id="Parts_neededdictionary_add-on_you_first_need_two_things">Parts neededdictionary add-on, you first need two things:</h2>
+
+<ul>
+ <li>A spell check dictionary in Hunspell or Myspell format, with a license which allows you to use it. Such a dictionary consists of two files, one with a <code>.dic</code> and one with an <code>.aff</code> file extension.</li>
+ <li>A locale code to describe the language of the dictionary. For example <code>en-US</code>, <code>de-DE</code> or <code>da</code>. It is important to choose the right locale code, or the spell checker will not be able to match the language of your dictionary against the language of a web page in order to select the right dictionary to use.</li>
+</ul>
+
+<p>If you are creating a new dictionary, as opposed to updating an existing one, please make sure that there is not already a <a href="https://addons.mozilla.org/en-US/firefox/language-tools/" title="https://addons.mozilla.org/en-US/firefox/language-tools/">dictionary available</a> for your locale. If there already is one, try contacting the author to get it updated, or contact <a href="https://wiki.mozilla.org/AMO:Editors" title="https://wiki.mozilla.org/AMO:Editors">AMO editors</a> if the author does not respond.</p>
+
+<h2 id="Packaging">Packaging</h2>
+
+<p>A Firefox add-on is a ZIP file renamed to use an <code>.xpi</code> file extension instead of the normal <code>.zip</code> file extension. To create a dictionary add-on, simply create a ZIP file which contains the following files and folders:</p>
+
+<p><code>my-dictionary.xpi</code></p>
+
+<ul>
+ <li><code>install.rdf</code></li>
+ <li><code>dictionaries/</code>
+  <ul>
+   <li><em>locale-code</em><code>.dic</code></li>
+   <li><em>locale-code</em><code>.aff</code></li>
+  </ul>
+ </li>
+</ul>
+
+<p>The <code>.dic</code> and <code>.aff</code> files must be placed in a subfolder named <code>dictionaries</code> within the ZIP file. Both files must have the locale code as their file name. You also have to add a file named <code>install.rdf</code> to the root of the ZIP file. This file contains information about your add-on such as name and version number (see below). In addition to these required files, you may add optional files, for example to give your add-on an <a href="/en-US/docs/Install_Manifests#iconURL" title="/en-US/docs/Install_Manifests#iconURL">icon</a> or to describe the license of the dictionary.</p>
+
+<p>Here is an example of the <code>install.rdf</code> file. You can create and edit it with a plain text editor such as Notepad.</p>
+
+<p><code>&lt;?xml version="1.0"?&gt;<br>
+ &lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"<br>
+      xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;<br>
+   &lt;Description about="urn:mozilla:install-manifest"&gt;<br>
+     &lt;em:id&gt;<span style="color: #ff0000;"><strong><em>locale-code</em></strong></span>@dictionaries.addons.mozilla.org&lt;/em:id&gt;<br>
+     &lt;em:version&gt;<em><strong><span style="color: #ff0000;">version number</span></strong></em>&lt;/em:version&gt;<br>
+     &lt;em:type&gt;64&lt;/em:type&gt;<br>
+     &lt;em:unpack&gt;true&lt;/em:unpack&gt;<br>
+     &lt;em:name&gt;<span style="color: #ff0000;"><em><strong>Name</strong></em></span>&lt;/em:name&gt;<br>
+     <em><strong>&lt;!--<br>
+       Other <a href="/en-US/docs/Install_Manifests" title="/en-US/docs/Install_Manifests">install.rdf metadata</a> such as em:localized, em:description, em:creator,<br>
+       em:developer, em:translator, em:contributor or em:homepageURL<br>
+     --&gt;</strong></em><br>
+ <br>
+     &lt;!-- Firefox --&gt;<br>
+     &lt;em:targetApplication&gt;<br>
+       &lt;Description&gt;<br>
+         &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;<br>
+         &lt;em:minVersion&gt;18.0a1&lt;/em:minVersion&gt;<br>
+         &lt;em:maxVersion&gt;46.0&lt;/em:maxVersion&gt;<br>
+       &lt;/Description&gt;<br>
+     &lt;/em:targetApplication&gt;<br>
+ <br>
+     &lt;!-- Thunderbird --&gt;<br>
+     &lt;em:targetApplication&gt;<br>
+       &lt;Description&gt;<br>
+         &lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;<br>
+         &lt;em:minVersion&gt;18.0a1&lt;/em:minVersion&gt;<br>
+         &lt;em:maxVersion&gt;22.0&lt;/em:maxVersion&gt;<br>
+       &lt;/Description&gt;<br>
+     &lt;/em:targetApplication&gt;<br>
+ <br>
+     &lt;!-- SeaMonkey --&gt;<br>
+     &lt;em:targetApplication&gt;<br>
+       &lt;Description&gt;<br>
+         &lt;em:id&gt;{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}&lt;/em:id&gt;<br>
+         &lt;em:minVersion&gt;2.15a1&lt;/em:minVersion&gt;<br>
+         &lt;em:maxVersion&gt;2.49&lt;/em:maxVersion&gt;<br>
+       &lt;/Description&gt;<br>
+     &lt;/em:targetApplication&gt;<br>
+   &lt;/Description&gt;<br>
+ &lt;/RDF&gt;</code></p>
+
+<p>There are some rules about how you should adapt the <code>install.rdf</code> file:</p>
+
+<ul>
+ <li>If you are creating a new dictionary add-on, we recommend that the <code>em:id</code> consists of your locale code followed by <code>@dictionaries.addons.mozilla.org</code>, but if there is more than one dictionary for your language (for example the German "old spelling" versus "new spelling" dictionaries), you may need to choose another ID, that follows the <a href="/en-US/docs/Install_Manifests#id" title="/en-US/docs/Install_Manifests#id">rules of em:id</a>. If you update an existing dictionary add-on, you must keep the existing <code>em:id</code>, or your users will not be updated to the latest version.</li>
+ <li>The <code>em:version</code> should follow the <a href="/en-US/docs/Toolkit_version_format" title="/en-US/docs/Toolkit_version_format">rules of Mozilla add-on version numbers</a>, and if you update an existing dictionary add-on, the new version number must be greater than the old one.</li>
+ <li>Don't change <code>em:type</code> or <code>em:unpack</code>, and don't add a <code>em:bootstrap</code> element. Type = 64 indicates that the add-on is in the restartless format, and unpack is required for Hunspell to read the dictionary.</li>
+ <li>Although the restartless format for dictionary add-ons were introduced in Gecko 10, dictionary updates only works starting from Gecko 18. The <code>em:minVersion</code> should therefore be the same as in the example above (or greater). If you set <code>em:minVersion</code> to a lower value, Gecko 10-17 will not be able to update your dictionary add-on once the restartless dictionary is installed (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=782118">bug 782118</a>), and Gecko 10-16 may warn the user that your dictionary is not compatible, when users try to update to a newer version of Firefox/Thunderbird (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=782115" title="https://bugzilla.mozilla.org/show_bug.cgi?id=782115">bug 782115</a>).</li>
+ <li>Update the <code>em:maxVersion</code> to the <a href="https://addons.mozilla.org/en-us/firefox/pages/appversions/" title="https://addons.mozilla.org/en-us/firefox/pages/appversions/">greatest versions available</a>.</li>
+</ul>
+
+<p>Once you have added these files to your ZIP file and renamed the file to have the <code>.xpi</code> extension, you can install your add-on in Firefox and test it. After a successful test, you can upload your add-on to <a href="https://addons.mozilla.org/" title="https://addons.mozilla.org/">addons.mozilla.org</a> and ask for it to be included in the <a href="https://addons.mozilla.org/en-US/firefox/language-tools/" title="https://addons.mozilla.org/en-US/firefox/language-tools/">Dictionaries &amp; Language Packs</a> page.</p>
+
+<h2 id="Reference">Reference</h2>
+
+<ul>
+ <li><a href="http://www.suares.com/index.php?page_id=25&amp;news_id=233">Creating a hunspell dictionary</a></li>
+</ul>

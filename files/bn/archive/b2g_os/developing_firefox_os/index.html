@@ -1,0 +1,59 @@
+---
+title: ফায়ারফক্স ওএস অ্যাপ ডেভেলপ করা
+slug: Archive/B2G_OS/Developing_Firefox_OS
+tags:
+  - Developing
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/B2G_OS/Developing_Firefox_OS
+---
+<p><strong>এই বিভাগটিতে রয়েছে বিভিন্ন ক্ষেত্রের ডকুমেন্টশন যার মধ্যে রয়েছে অ্যাপ বানানো অথবা লিখাকালীন সময় ফায়ারফক্স ওএস অভিজ্ঞতার পরিবর্তন/নিজের মতো করে সাজানো, এবং আরও রয়েছে আপনি কিভাবে  প্লাটফর্ম ডেভেলপের জন্য সাহায্য করতে পারবেন।</strong></p>
+<p><strong>গায়া উন্নয়নে কুইকস্টার্ট গাইড</strong></p>
+<p>গায়া ফায়ারফক্স ওস'র সামনে শেষ পর্যন্ত  ওয়েব অ্যাপস হিসেবে  সাজানো হয়েছে। আপনি পর্দায় দেখতে পাবেন ফায়ারফক্স ওএস'র অপারেটিং সিস্টেমে সবকিছু  খোলা ওয়েব প্রযুক্তি হিসেবে ব্যবহার করে তৈরি করা হয়েছে ।  এইতি মূল পর্দায় রয়েছে এবং সমস্ত ডিফল্ট অ্যাপ্লিকেশনেও রয়েছে । গায়া পরিবর্তন শুরু করতে এই সহায়িকা একটি দ্রুত এবং সহজ গাইড  হিসেবে রয়েছে।</p>
+<dl>
+ <dt>
+  <a href="/en-US/Firefox_OS/Platform/Gaia/Build_System_Primer">সিস্টেমের</a> প্রথম পাঠ তৈরি করুন</dt>
+ <dd>
+
+  <p style="margin-left: 40px;">এই আনুচ্ছেদটি  গায়া এর বিল্ড সিস্টেম কিভাবে কাজ করে তা ব্যাখ্যা করে,এতে ম্যাকফাইল সংযুক্ত রয়েছে,<span class="gt-baf-back gt-baf-hl">প্রক্রিয়া </span>নির্মিত হচ্ছে, পরিবেশ পরিবর্তিত হচ্ছে এবং <span style="font-size: 16px;">সম্ভ্যাব্য <span style="font-size: 16px;">কাস্টমাইজেশনস </span></span>।</p>
+  <p style="margin-left: 40px;"><strong>গাইয়া হ্যাকিং</strong></p>
+ </dd>
+</dl>
+<p style="margin-left: 40px;">এই অনুচ্ছেদটি গায়া'র সকল বিষয়বস্ত পরিমিত করতে সহায়তা করে ।</p>
+<h2 id="কাস্টমাইজেশনের_সাথে_দাখিল_করুন"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file"><span style="font-size: 16px;">কাস্টমাইজেশনের সাথে দাখিল করুন</span> </a></h2>
+<dl>
+ <dt>
+  <span style="font-size: 16px;">মার্কেট গাইড কাস্টমাইজেশন</span></dt>
+ <dd>
+  <table>
+   <tbody>
+    <tr>
+     <td> </td>
+     <td>
+      <table>
+       <tbody>
+        <tr>
+         <td>
+          <p>বাজার <span style="font-size: 16px;">কাস্টমাইজেশনস </span>আপনাকে build-টাইম কাস্টমাইজেশান নির্দেশ দেয় (উদাহরনস্বরূপ-এর, অ্যাপ্লিকেশন আপনার বানানোতে  অন্তর্ভুক্ত থাকা উচিত) যা আলাদা ডিরেক্টরিতে উল্লেখ করতে অনুমতি দেয় মূল গায়া রেপও বদলানো ব্যতীত । আপনি স্বতন্ত্র ডিরেক্টরিতে আপনার নিজের <span style="font-size: 16px;">কাস্টমাইজেশনস </span>অন্তর্ভুক্ত করতে পারেন  বা সে preexisting ডিরেক্টরি ব্যবহার করতে পারেন যা উৎস-এর সাথে থাকে। এই <span style="font-size: 16px;">কাস্টমাইজেশনস  </span>অপশন  বানানোর সাথে উল্লেখ করা হয়। এই অনুচ্ছেদে আমরা খুঁটিনাটির দিকে তাকাই যেখানে এই <span style="font-size: 16px;">কাস্টমাইজেশনস  </span>করা হয়েছে।</p>
+          <p><span style="font-size: 16px;">হোষ্ট ফাইল নতুনভাবে</span> পরিবর্তন</p>
+          <p>একটি গাইড কি ফায়ারফক্স ওএস হোষ্টকে ফাইল বদলানো দ্বারা অর্জন করা হয় ।</p>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </dd>
+ <dd>
+  যেভাবে নিজের মতো করে সাজানো যায় এবং ফায়ারফক্স ওএস দ্বারা পরিবর্তিত হয়। দাখিল করুন।</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Hacking_Firefox_OS/Customizing_the_keyboard">কীবোর্ডে নিজের মতো করে ফায়ারফক্স ওএস  অ্যাপ্লিকেশন সাজানt</a></dt>
+ <dd>
+  এই গাইড দেখায় যে কিভবে আপনার ফায়ারফক্স ওএস অ্যাপ্লিকেশনে কীবোর্ড  থেকে নিজের মত করে সাজাবেন</dd>
+ <dt>
+  <a href="/en-US/docs/Firefox_OS/Hacking_Firefox_OS/Localizing_Firefox_OS" title="/en-US/docs/Firefox_OS/Hacking_Firefox_OS/Localizing_Firefox_OS">লোকালাইজিন ফায়ারফক্স ওএস </a></dt>
+ <dd>
+  A guide to localising the Firefox OS platform, making it available in your preferred languages.</dd>
+</dl>

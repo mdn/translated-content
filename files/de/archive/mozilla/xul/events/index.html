@@ -1,0 +1,464 @@
+---
+title: Ereignisse
+slug: Archive/Mozilla/XUL/Events
+tags:
+  - XUL-Ereignisse
+translation_of: Archive/Mozilla/XUL/Events
+---
+<p> </p>
+
+<p><a href="https://developer.mozilla.org/de/docs/XUL_Referenz" title="« Startseite XUL Referenz">« Startseite XUL Referenz</a></p>
+
+<p> </p>
+
+<p>Die folgenden Tabellen beschreiben die Ereignisbehandlungsroutinen, welche die meisten XUL-Elemente betreffen. Die Ereignisse können mit dem Element über »Lauscher« (Listener) verknüpft werden. Der <a href="/de/DOM/element.addEventListener" title="de/DOM/element.addEventListener">addEventListener</a> fügt ein Ereignis hinzu, der <a href="/de/DOM/element.removeEventListener" title="de/DOM/element.removeEventListener"> removeEventListener</a> hebt diese Verknüpfung wieder auf.</p>
+
+<p>Für einige Ereignisse kann die Verknüpfung auch über Attribute erfolgen. Hierbei muss jedoch berücksichtigt werden, dass nur ein Listener gleichzeitig verknüpft werden kann. Eventuell bereits bestehende Verknüpfungen mit Lauschern werden aufgelöst. Der Name des Attributs entspricht dem Namen des Ereignisses mit einem vorangestellten 'on'.</p>
+
+<h3 id="Geerbte_DOM-Ereignisse" name="Geerbte_DOM-Ereignisse">Geerbte DOM Ereignisse</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Ereignis</th>
+   <th>Beschreibung</th>
+  </tr>
+  <tr>
+   <td>
+    <p>blur</p>
+   </td>
+   <td>
+    <p>Das Gegenteil des focus-Ereignisses; das blur-Ereignis tritt auf, nachdem ein Element den Eingabefokus verloren hat.<br>
+     <strong>Attribut:</strong> onblur</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>change</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn der Wert eines Textfelds geändert wird, aber erst wenn der Eingabefokus auf ein anderes Element übergeht.<br>
+     <strong>Attribut:</strong> onchange</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>click</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn eine Maustaste gedrückt und wieder losgelassen wurde. Über die <code>button</code> Eigenschaft des Ereignisobjekts kann ermittelt werden, welche Maustaste gedrückt wurde. Dieses Ereignis wird auch gesendet, wenn der Benutzer einen Doppelklick ausführt. Über die <code>detail</code> Eigenschaft kann festgelegt werden, wie viele Klicks auftreten sollen. So kann auch auf dreifach-Klicks getestet werden. Dieses Ereignis sollte in XUL nicht verwendet werden, um auf Benutzeraktionen zu reagieren. Stattdessen sollte das <code>command</code> Ereignis benutzt werden.<br>
+     <strong>Attribut:</strong> onclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dblclick</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis verhält sich wie das <code>click</code> Ereignis, allerdings wird es nur gesendet, wenn der Benutzer einen Doppelklick ausführt. Das Ereignis kann als eine Alternative zur <code>detail</code> Eigenschaft im <code>click</code> Ereignis verwendet werden.<br>
+     <strong>Attribut:</strong> ondblclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMouseScroll</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn das Mausrad bewegt wird, egal, ob der Inhalt gescrollt wird oder nicht.<br>
+     Ziel dieses Ereignisses ist das Element, welches sich unter dem Mauszeiger befindet, wenn das Mausrad bewegt wird.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>focus</p>
+   </td>
+   <td>
+    <p>Das<code> focus</code> Ereignis wird gesendet, wenn ein Element den Fokus erhält. Wenn das Element fokussiert ist, werden Tastaturereignisse zu diesem Element gesendet. Der Fokus kann geändert werden, indem auf eine anderes Element geklickt wird, die TAB Taste gedrückt wird, um zum nächsten Element zu wechseln, oder die »Zurück TAB« Taste gedrückt wird, um zum vorherigen Element zu wechseln.<br>
+     <strong>Attribut:</strong> onfocus</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keydown</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird zu einem Element gesendet, das den Eingabefokus hat, während eine Taste gedrückt, aber nicht losgelassen wird.<br>
+     <strong>Attribut:</strong> onkeydown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keypress</p>
+   </td>
+   <td>
+    <p>Das <code>keypress</code> Ereignis wird zu einem Element gesendet, das den Eingabefokus hat und eine Taste gedrückt und losgelassen wurde. Wenn der Benutzer eine Taste drückt, wird zuerst das <code>keydown</code> Ereignis gesendet, gefolgt vom <code>keypress</code> Ereignis und schließlich dem <code>keyup</code> Ereignis. In einem Textfeld kann der Benutzer normalerweise eine Taste gedrückt halten, um ein Zeichen wiederholt zu senden. In diesem Fall werden mehrere Ereignispaare gesendet, als ob der Benutzer die gleiche Taste sehr schnell hintereinander drücken würde.<br>
+     <strong>Attribut:</strong> onkeypress</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keyup</p>
+   </td>
+   <td>
+    <p>Das <code>keyup</code> Ereignis wird einem Element gesendet, das den Eingabefokus hat, wenn eine Taste losgelassen wird.<br>
+     <strong>Attribut:</strong> onkeyup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>load</p>
+   </td>
+   <td>
+    <p>Dieses Element wird zum Fenster gesendet, nachdem es vollständig geladen wurde. Die Behandlungsroutine sollte dem <code>window</code> Element zugewiesen werden. Dieses Ereignis kann auch bei Bildelementen oder einem Element, das Bildattribute akzeptiert verwendet werden und wird dann gesendet, wenn das Bild vollständig geladen wurde. Bei Bildern wird dieses Element nicht im Elementenbaum auftauchen, sodass es nicht mit dem <code>load</code> Ereignis des Fensters in Konflikt gerät.<br>
+     <strong>Attribut:</strong> onload</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousedown</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn die Maustaste über einem Element gedrückt, aber nicht losgelassen wird.<br>
+     <strong>Attribut:</strong> onmousedown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousemove</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird wiederholt gesendet, während der Mauszeiger über einem Element bewegt wird.<br>
+     <strong>Attribut:</strong> onmousemove</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseout</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Element gesendet, wenn der Benutzer den Mauszeiger aus dem Bereich des Elements bewegt. Es ist das Gegenstück zum <code>mouseover</code> Ereignis.<br>
+     <strong>Attribut:</strong> onmouseout</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseover</p>
+   </td>
+   <td>
+    <p>Dieses Element wird einem Element gesendet, wenn sich die Maus erstmals über einem Element befindet. Es kann dazu verwendet werden dem Benutzer Rückmeldungen bereitzustellen.<br>
+     <strong>Attribut:</strong> onmouseover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseup</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn die Maustaste über einem Element losgelassen wird.<br>
+     <strong>Attribut:</strong> onmouseup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>select</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einer Listbox bzw. einem Tree bei Auswahl eines Eintrags gesendet.<br>
+     <strong>Attribut:</strong> onselect</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>unload</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Fenster gesendet, wenn das Fenster geschlossen wurde. Das erfolgt nach dem <code>close</code> Ereignis. Die Behandlungsroutine für dieses Ereignis sollte dem <code>window</code> Element zugewiesen werden.<br>
+     <strong>Attribut:</strong> onunload</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Ver.C3.A4nderungs-DOM-Ereignisse" name="Ver.C3.A4nderungs-DOM-Ereignisse">Ereignisse zu Veränderungen am DOM</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Ereignis</th>
+   <th>Beschreibung</th>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMAttrModified</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Element gesendet, wenn eines der Attribute verändert wird. In der Behandlungsroutine kann das Attribut, welches verändert wurde, über die <code>attrName</code> Eigenschaft ermittelt werden. Neue und alte Werte des Attributs können über die <code>prevValue</code> und <code>newValue</code> Eigenschaften abgerufen werden.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeInserted</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein Kontenelement (als ein Kindelement) einem Element hinzugefügt wird. Wenn dieses Element auf dem Dokumentenlevel erfasst wird, können Hinweise zu Dokumentenveränderung auftreten.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeRemoved</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein Kontenelement aus einem Element entfernt wird. Wenn dieses Element auf dem Dokumentenlevel erfasst wird, können Hinweise zu Dokumentenveränderung auftreten.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Es sollte darauf hingewiesen werden, dass die Anwesenheit von Behandlungsroutinen zur Veränderungen am DOM die Performance von nachfolgenden DOM Operationen in dem Dokument stark beeinträchtigt. Das kann bedeuten, dass eine DOM Operation 1,5 bis 7 mal so lange braucht als es ohne einen Eventhandler brauchen würde.</p>
+
+<h3 id="Gebr.C3.A4uchliche_XUL-Ereignisse" name="Gebr.C3.A4uchliche_XUL-Ereignisse">Gebräuchliche XUL Ereignisse</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Ereignis</th>
+   <th>Beschreibung</th>
+  </tr>
+  <tr>
+   <td>
+    <p>broadcast</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis sollte einem Beobachter zugewiesen werden. Das <code>broadcast</code> Ereignis wird gesendet, wenn die Attribute eines Elements verändert oder beobachtet werden.<br>
+     <strong>Attribut:</strong> onbroadcast</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>close</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn eine Anfrage durch den Benutzer getätigt wurde, die das Fenster schließen lassen soll (z.B durch Klick auf den Schließen Button). Wird eine Behandlungsroutine auf das <code>window</code> Element gesetzt, kann das Schließen des Fensters verhindert werden. Wird <code>false</code> vom Close-handler zurückgeliefert, wird das Fenster nicht geschlossen. Eine Rückgabe von <code>true</code> schließt das Fenster normal. Dieses Ereignis wird nur gesendet, wenn der Benutzer den Schließen Button in der Titelleiste anklickt. Das <code>unload</code> Ereignis erfasst alle Versuche das Fenster zu schließen.<br>
+     <strong>Attribut:</strong> onclose</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>command</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein Element aktiv ist. Wie es aktiviert wird, variiert von Element zu Element und in vielen Fällen gibt es mehrere Wege, um eine Element zu aktivieren. Zum Beispiel kann eine Schaltfläche, wenn sie fokussiert ist, durch ein Klick mit der Maus oder durch das Drücken der ENTER Taste aktivert werden. Menüs können durch das Auswählen mit der Maus oder durch das Drücken einer Schnelltaste aktiviert werden. Es sollte immer das<code> command </code>Ereignis, anstatt des <code>click</code> Ereignisses verwendet werden, weil in allen nötigen Fällen aufgerufen wird.<br>
+     <strong>Attribut:</strong> oncommand</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>commandupdate</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis tritt auf, wenn eine Befehlsaktualisierung beim <code>&lt;commandset&gt;</code> Element statt findet. Es wird verwendet, um die ausgeschalteten Befehle zu aktualisieren.<br>
+     <strong>Attribut:</strong> oncommandupdate</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>contextmenu</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Element gesendet, wenn der Benutzer eine Anfrage stellt, die ein Kontextmenü öffnen soll. Die Aktion variiert von Betriebssystem zu Betriebssystem, wird aber typischerweise durch einen Rechtsklick ausgelöst. Diese Behandlungsroutine wird normalerweise verwendet, um dynamische Befehle auszuführen, wenn der Benutzer die Anfrage stellt, das Menü anzuzeigen oder es wird ein Ereignis benutzt, welches ein Popup-Fenster anzeigt. Wird<code> false</code> von diesem Eventhandler zurückgegeben, wird verhindert, dass das Popup-Fenster angezeigt wird.<br>
+     <strong>Attribut:</strong> oncontextmenu</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>drag {{ Fx_minversion_inline(3) }}</p>
+   </td>
+   <td>
+    <p>Das <code>drag</code> Ereignis wird zum Quellknoten (der Knoten, der gezogen wurde) mehrmals pro Sekunde gesendet, während ein Objekt gezogen wird.<br>
+     <strong>Attribut:</strong> ondrag</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragdrop</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird ausgelöst, wenn der Benutzer die Maustaste los lässt, um ein Objekt abzulegen, welches gezogen wurde. Das Element, wenn es das Ablegen akzeptiert, sollte in irgendeiner Weise reagieren (z.B. durch das Hineinlegen des gezogenen Objekten in das Element selbst).<br>
+     <strong>Attribut:</strong> ondragdrop</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragend {{ Fx_minversion_inline(3) }}</p>
+   </td>
+   <td>
+    <p>Das <code><code>dragend</code></code> Ereignis wird zum Quellknoten (der Konten, der gezogen wurde) gesendet, wenn das Objekt nicht mehr gezogen wird.<br>
+     <strong>Attribut:</strong> ondragend</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragenter</p>
+   </td>
+   <td>
+    <p>Das <code>dragenter</code> Ereignis wird gesendet, wenn sich der Mauszeiger erstmals über ein Element befindet in welches ein Objekt gezogen werden soll. Es ist ähnlich zum <code>mouseover</code> Ereignis, tritt aber nur beim Hineinlegen von Objekten auf.<br>
+     <strong>Attribut:</strong> ondragenter</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragexit</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn sich der Mauszeiger aus dem Element entfernt, in welches ein Objekten gezogen werden soll. Es wird auch aufgerufen, wenn ein Objekt in ein Element gezogen wurde. Es ist ähnlich zum <code>mouseout</code> Ereignis, tritt aber nur beim Hineinlegen von Objekten auf.<br>
+     <strong>Attribut:</strong> ondragexit</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>draggesture</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn der Benutzer beginnt ein Element zu ziehen, normalerweise in dem die Maustaste gedrückt und bewegt wird.<br>
+     <strong>Attribut:</strong> ondraggesture</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragover</p>
+   </td>
+   <td>
+    <p>Ähnlich zum <code>mousemove</code> Ereignis wird dieses Ereignis gesendet, während etwas über ein Element gezogen wird. Die Behandlungsroutine sollte angeben, ob das Objekt gezogen wird oder abgelegt werden kann.<br>
+     <strong>Attribut:</strong> ondragover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>input</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn der Benutzer einen Text in ein Textfeld eingibt. Das Ereignis wird nur dann aufgerufen, wenn der angezeigte Text verändert wird, daher wird es nicht aufgerufen, wenn der Benutzer Tasten drückt, die nicht in einem Textfeld dargestellt werden.<br>
+     <strong>Attribut:</strong> oninput</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>overflow</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird nur zu einer Box oder einem anderen Layoutelement gesendet, wenn die CSS <code>overflow</code> Eigenschaft auf einen anderen Wert als '<code>visible</code>' festgelegt wird. Falls nicht genug Platz vorhanden ist, um den Inhalt des Elements vollständig anzuzeigen, wird das <code>overflow</code> Ereignis gesendet. Abhängig vom Wert der <code>overflow</code> Eigenschaft treten eventuell Scrollbalken auf. Wenn zum Beispiel eine Box eine maximale Größe von 100 Pixeln besitzt und nur genug Platz für 80 Pixel verfügbar ist, wird das <code>overflow</code> Ereignis zur Box gesendet. Wenn sich die Größe verändert, zum Beispiel durch den Benutzer, der die Fenstergröße ändert, wird das <code>underflow</code> Ereignis gesendet, wenn genug Platz frei wird.<br>
+     <strong>Attribut:</strong> onoverflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphidden</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Popup gesendet, nachdem er versteckt wurde.<br>
+     <strong>Attribut:</strong> onpopuphidden</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphiding</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Popup gesendet, wenn es versteckt wird.<br>
+     <strong>Attribut:</strong> onpopuphiding</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshowing</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Popup gesendet, bevor dieser angezeigt wird. Diese Behandlungsroutine wird normalerweise verwendet, um Inhalte dynamisch festzulegen, wenn der Benutzer eine Anfrage stellt diese anzuzeigen. Wird <code>false</code> vom Eventhandler zurückgegeben, wird die Anzeige des Popups verhindert.<br>
+     <strong>Attribut:</strong> onpopupshowing</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshown</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Popup gesendet, nachdem er geöffnet wurde, sehr ähnlich zum <code>onload</code> Ereignis, welches gesendet wird, wenn ein Fenster geöffnet wurde.<br>
+     <strong>Attribut:</strong> onpopupshown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>syncfrompreference</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn das Element verändert wurde, weil eine Einstellung geändert wurde oder wenn ein Element von einer Einstellung initialisiert wurde. Dieses Ereignis wird nur an Elemente gesendet, die mit einer Einstellung verbunden sind und in<a href="/de/XUL/prefwindow" title="de/XUL/prefwindow"> prefwindow</a> vorhanden sind. Das ist kein wirkliches Ereignis, es ist ein Funktionsaufruf und muss die Attributschreibweise verwenden. Das Skript kann einen Wert zurück liefern, um dem Element auf einen spezifischen Wert zu geben, als den Wert der Einstellung. Dieses Ereignis wird normalerweise verwendet, um einen Wert einzustellen, sodass es passender für die Anzeige in der Benutzeroberfläche gemacht werden kann.<br>
+     <strong>Attribut:</strong> onsyncfrompreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>synctopreference</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein Element, das mit einer Einstellung verbunden ist, verändert wurde. ieses Ereignis wird nur an Elemente gesendet, die mit einer Einstellung verbunden sind und in<a href="/de/XUL/prefwindow" title="de/XUL/prefwindow"> prefwindow</a> vorhanden sind. Das ist kein wirkliches Ereignis, es ist ein Funktionsaufruf und muss die Attributschreibweise verwenden. Das Skript kann einen Wert zurück liefern, um dem Element auf einen spezifischen Wert zu geben, als den Wert der Einstellung.<br>
+     <strong>Attribut:</strong> onsynctopreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>underflow</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird einem Element gesendet, wenn genug Platz vorhanden ist, um es vollständig anzuzeigen. Das betrifft Boxen und andere Layoutelement mit der CSS <code>overflow</code> Eigenschaft, die einen anderen Wert als '<code>visible</code>' besitzen. Das<code> underflow</code> Ereignis kann verwendet werden, um zu ermitteln, dass ein Scrollmechanismus nicht länger benötigt wird.<br>
+     <strong>Attribut:</strong> onunderflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemActive</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein Menü oder Menüitem hervorgehoben wird oder die Maus darüber schwebt.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemInactive</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein Menü oder Menüitem nicht länger hervorgehoben wird oder die Maus nicht länger darüber schwebt.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Zug.C3.A4nglichkeitsereignisse_.28Accessibility.29" name="Zug.C3.A4nglichkeitsereignisse_.28Accessibility.29">Ereignisse zur Zugänglichkeit (Accessibility)</h3>
+
+<p>Mit diesen Ereignissen wird das Zugänglichkeitssystem über Veränderungen an einem Element benachrichtigt. Sie würden diese normalerweise nicht selbst verwenden.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Ereignis</th>
+   <th>Beschreibung</th>
+  </tr>
+  <tr>
+   <td>
+    <p>CheckboxStateChange</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn eine <a href="/de/XUL/checkbox" title="de/XUL/checkbox"> checkbox</a> angekreuzt oder nicht angekreuzt wird, entweder vom Benutzer oder von einem Skript. Normalerweise würde ein <code>command</code> Ereignis zur Abfrage der <code>checkbox</code> Veränderungen verwendetet werden, das <code>command</code> Ereignis wird aber nur gesendet, wenn der Benutzer den Wert verändert, während das <code>CheckboxStateChange</code> Ereignis auch gesendet wird, wenn ein Skript die <code>checked</code> Eigenschaft einer <code>checkbox</code> verändert. Bei Änderungen vom Benutzer wird das <code>CheckboxStateChange</code> Ereignis vor dem <code>command</code> Ereignis gesendet.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>RadioStateChange</p>
+   </td>
+   <td>
+    <p>Dieses Ereignis wird gesendet, wenn ein <a href="/de/XUL/radio" title="de/XUL/radio">Radiobutton</a> ausgewählt wird, entweder vom Benutzer oder von einem Skript. Normalerweise würde ein <code>command</code> Ereignis zur Abfage der Veränderungen am Radiobutton verwendet werden, das <code>command </code>Ereignis wird aber nur gesendet, wenn der Benutzer den ausgewählten Radiobutton verändert, während das <code>RadioStateChange</code> Ereignis auch gesendet wird, wenn ein Skript die Auswahl verändert. Bei Änderungen vom Benutzer wird das <code>RadioStateChange</code> Ereignis vor dem <code>command</code> Ereignis gesendet.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{ languages( { "en": "en/XUL/Events", "es": "es/XUL/Events", "ja": "ja/XUL/Events", "pl": "pl/XUL/Zdarzenia" } ) }}</p>

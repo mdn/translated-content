@@ -1,0 +1,31 @@
+---
+title: 'Eine Thunderbird-Erweiterung programmieren 2: Erweiterungs-Dateisystem'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Eine_Thunderbird-Erweiterung_programmieren_2:_Erweiterungs-Dateisystem
+translation_of: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_2:_extension_filesystem
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Erweiterungen sind in Archiv-Dateien (Auch <a href="../../../../en/Bundles" rel="internal">Bundles</a> genannt) mit der <code>XPI</code> (<em> “zippy”</em> <em>ausgesprochen</em>)-Dateiendung gepackt und verteilt. Sie enthalten mindestens eine <strong>install.rdf</strong>, ein <strong>chrome.manifest</strong> und einen <em>"</em><strong>chrome/</strong> Ordner. Ein <strong>content/</strong> Ordner enthält manchmal die eigentlichen Kontentdateien. Diese Dateien enthalten den Code, der deine Erweiterung etwas machen lässt. Wenn dieses Tutorial fertig ist, wird unsere Erweiterung so ausschauen:</p>
+
+<pre class="eval">myfirstext.xpi:                                //Erstellt in Schritt 8
+              /install.rdf                     //Erstellt in Schritt 3
+              /chrome.manifest                 //Erstellt in Schritt 4
+              /chrome/
+              /content/
+              /content/myhelloworld.xul        //Erstellt in Schritt 5
+              /content/overlay.js              //Erstellt in Schritt 6
+              /chrome/locale/*                 //<span class="tlid-translation translation"><span title="">Erstellen einer Erweiterungs</span></span><a href="/en/Building_an_Extension#Localization" title="https://developer.mozilla.org/en/Building_an_Extension#Localization">lokalisierung</a>
+              /chrome/skin/
+              /defaults/preferences/           // <span class="tlid-translation translation"><span title="">Erstellen von Erweiterungs-Standarddateien</span></span>
+</pre>
+
+<p>Die folgende Tutorialseiten werden erklären, wie man jede dieser Dateien schreibt (Außer <strong>locale/</strong> und <strong>defaults/</strong>) und sie in eine XPI (zippy) Datei packt. Du kannst Informationen über die <strong>locale/</strong> und <strong>defaults/</strong> Ordner in der allgemeineren "<a href="/en/Building_an_Extension" title="en/Building an Extension"><strong>Building an Extension</strong></a>" Dokumentation.</p>
+
+<p>Um mit dem Tutorial zu starten, <span class="tlid-translation translation"><span title="">erstelle manuell die anfängliche Verzeichnisstruktur für die Erweiterung, wie sie oben in einem Ordner namens <code>myfirstext@jen.zed</code> dargestellt ist.</span></span> <span class="tlid-translation translation"><span title="">Dieses Verzeichnis kann an einem beliebigen Ort im Dateisystem erstellt werden.</span></span></p>
+
+<p><br>
+ {{ Previous("Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension") }}</p>
+
+<p>{{ Next("Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_3:_install_manifest") }}</p>

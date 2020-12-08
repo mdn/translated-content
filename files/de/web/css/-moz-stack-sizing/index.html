@@ -1,0 +1,59 @@
+---
+title: '-moz-stack-sizing'
+slug: Web/CSS/-moz-stack-sizing
+tags:
+  - CSS
+  - CSS Referenz
+  - NeedsCompatTable
+  - NeedsLiveSample
+  - Non-standard
+  - XUL
+translation_of: Archive/Web/CSS/-moz-stack-sizing
+---
+<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.1")}}</div>
+
+<h2 id="Übersicht">Übersicht</h2>
+
+<p><code>-moz-stack-sizing</code> ist eine erweiterte CSS Eigenschaft. Normalerweise ändert ein {{XULElem("stack")}} seine Größe, sodass alle seine Kindelemente komplett sichtbar sind. Zum Beispiel führt das Verschieben eines Kindelements ganz nach rechts innerhalb eines Stacks dazu, dass der Stack verbreitert wird, sodass das Kindelement sichtbar bleibt.</p>
+
+<p>Falls es erwünscht ist, den Stack an der automatischen Größenänderung zur Unterbringung aller Kinder zu hindern, kann <code>-moz-stack-sizing</code> beim Kindelement auf <code>ignore</code> gesetzt werden. Die Eigenschaft wird nicht für den Stack selbst, sondern auf dessen Kindelemente gesetzt. Dies erlaubt es, bestimmte Kindelemente zu ignorieren, die anderen aber nicht.</p>
+
+<p class="note"><strong>Hinweis:</strong> In früheren Gecko Versionen war es möglich, das Problem zu umgehen, indem sehr große negative untere und rechte Außenabstände für das Stackelement angegeben wurden und gleichgroße positive untere und rechte Außenabstände für die Kindelemente, die nicht ignoriert werden sollten. (Das Problem betraf nicht Kindelemente, die über oder links vom Stack verschoben wurden.)</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css">/* Schlüsselwortwerte */
+-moz-stack-sizing: stretch-to-fit;
+-moz-stack-sizing: ignore;
+
+/* Globale Werte */
+-moz-stack-sizing: inherit;
+-moz-stack-sizing: initial;
+-moz-stack-sizing: unset;
+</pre>
+
+<h3 id="Werte">Werte</h3>
+
+<dl>
+ <dt>stretch-to-fit</dt>
+ <dd>Das Kindelement beeinflusst die Größe des Stacks.</dd>
+ <dt>ignore</dt>
+ <dd>Der Stack wird das Kind bei der Berechnung seiner Größe nicht berücksichtigen.</dd>
+</dl>
+
+<h3 id="Formale_Syntax">Formale Syntax</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<pre class="brush:css">.mainsheet {
+  -moz-stack-sizing: ignore;
+}
+</pre>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<p>{{bug("346189")}}</p>
